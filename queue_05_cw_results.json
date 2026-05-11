@@ -1,0 +1,30 @@
+{
+  "SM-like (3 gen \u00d7 1 \u2192 3 fermion, 4 EW boson)": {
+    "n_f": 3,
+    "n_b": 4,
+    "phi_min": 1.6500000000000001,
+    "V_min": -0.005848939863040477,
+    "ssb": "True"
+  },
+  "ICE orbit-like (6 eaten, 3 gauge)": {
+    "n_f": 6,
+    "n_b": 3,
+    "phi_min": 5.0,
+    "V_min": -5.102300774702513,
+    "ssb": "True"
+  },
+  "G\u2082 fundamental fermion (7 f, 3 b)": {
+    "n_f": 7,
+    "n_b": 3,
+    "phi_min": 5.0,
+    "V_min": -6.80306769960335,
+    "ssb": "True"
+  },
+  "Reverse: 1 f, 3 b \u2192 SSB": {
+    "n_f": 1,
+    "n_b": 3,
+    "phi_min": 1.6500000000000001,
+    "V_min": -0.011697879726080947,
+    "ssb": "True"
+  }
+}

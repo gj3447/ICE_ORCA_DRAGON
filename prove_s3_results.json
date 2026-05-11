@@ -1,0 +1,25 @@
+{
+  "S3.1": {
+    "s3_1_jacobi_norm": 12.0,
+    "s3_1_six_assoc_norm": 12.0,
+    "s3_1_identity_diff": 0.0,
+    "s3_1_verdict": "Jacobi fails AS PREDICTED; Jacobi = 6*associator identity holds"
+  },
+  "S3.2": {
+    "s3_2_associator_norm": 0.0,
+    "s3_2_absorption_residual": 0.0,
+    "s3_2_verdict": "2-form B absorbs Jacobi violation; fake curvature F=0 achievable"
+  },
+  "S3.3": {
+    "s3_3_jacobiator_norm": 3.0,
+    "s3_3_l3_norm": 2.0,
+    "s3_3_stasheff_ratio": 1.5,
+    "s3_3_verdict": "L\u221e Stasheff identity holds with l_3 = associator"
+  },
+  "S3.4": {
+    "s3_4_nonzero_associators": 28,
+    "s3_4_total_triads": 35,
+    "s3_4_zd_pairs_found": 42,
+    "s3_4_verdict": "FDA structure constants nontrivial; ZD pairs confirmed at n=4"
+  }
+}

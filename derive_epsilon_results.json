@@ -1,0 +1,102 @@
+{
+  "A: Yukawa_tower (Planck scale)": {
+    "adelberger_pass": true,
+    "observable_scales": []
+  },
+  "B1: Power_law (Planck, \u03b1=2)": {
+    "adelberger_pass": true,
+    "observable_scales": []
+  },
+  "B2: Power_law (\u03bcm, \u03b1=2)": {
+    "adelberger_pass": true,
+    "observable_scales": [
+      {
+        "r": 1e-06,
+        "epsilon": 1.0
+      },
+      {
+        "r": 1e-09,
+        "epsilon": 999999.9999999998
+      },
+      {
+        "r": 1e-12,
+        "epsilon": 1000000000000.0
+      },
+      {
+        "r": 1e-15,
+        "epsilon": 9.999999999999997e+17
+      }
+    ]
+  },
+  "B3: Power_law (nm, \u03b1=2)": {
+    "adelberger_pass": true,
+    "observable_scales": [
+      {
+        "r": 1e-09,
+        "epsilon": 1.0
+      },
+      {
+        "r": 1e-12,
+        "epsilon": 1000000.0000000002
+      },
+      {
+        "r": 1e-15,
+        "epsilon": 1000000000000.0
+      }
+    ]
+  },
+  "C: Logarithmic (Planck)": {
+    "adelberger_pass": true,
+    "observable_scales": []
+  },
+  "D1: Oscillatory (\u03bcm)": {
+    "adelberger_pass": false,
+    "observable_scales": [
+      {
+        "r": 0.001,
+        "epsilon": 0.6003718503718504
+      },
+      {
+        "r": 1e-06,
+        "epsilon": 0.6003718503718504
+      },
+      {
+        "r": 1e-09,
+        "epsilon": 0.6001661143400914
+      },
+      {
+        "r": 1e-12,
+        "epsilon": 0.6003718501660928
+      },
+      {
+        "r": 1e-15,
+        "epsilon": 0.6003718503718503
+      }
+    ]
+  },
+  "D2: Oscillatory (nm)": {
+    "adelberger_pass": false,
+    "observable_scales": [
+      {
+        "r": 0.001,
+        "epsilon": 0.6003718503718504
+      },
+      {
+        "r": 1e-06,
+        "epsilon": 0.6003718503718504
+      },
+      {
+        "r": 1e-09,
+        "epsilon": 0.6003718503718504
+      },
+      {
+        "r": 1e-12,
+        "epsilon": 0.6001661143400914
+      },
+      {
+        "r": 1e-15,
+        "epsilon": 0.6003718501660928
+      }
+    ]
+  }
+}

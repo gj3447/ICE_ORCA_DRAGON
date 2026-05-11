@@ -1,0 +1,211 @@
+{
+  "total_ICE_ratios": 499,
+  "matches": {
+    "Koide_Q": {
+      "observable": "Charged lepton mass ratio",
+      "experimental_value": 0.6666666666666666,
+      "ICE_candidates": [
+        {
+          "formula": "XOR_min_offset/G2_num_roots",
+          "value": 0.6666666666666666,
+          "experimental": 0.6666666666666666,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "SU3_dim/G2_num_roots",
+          "value": 0.6666666666666666,
+          "experimental": 0.6666666666666666,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "XOR_min_offset/G2_Weyl_order",
+          "value": 0.6666666666666666,
+          "experimental": 0.6666666666666666,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        }
+      ]
+    },
+    "sin2_theta_W_GUT": {
+      "observable": "Weinberg angle at GUT scale",
+      "experimental_value": 0.375,
+      "ICE_candidates": [
+        {
+          "formula": "root_length_ratio_sq/XOR_min_offset",
+          "value": 0.375,
+          "experimental": 0.375,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "root_length_ratio_sq/SU3_dim",
+          "value": 0.375,
+          "experimental": 0.375,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "generations/XOR_min_offset",
+          "value": 0.375,
+          "experimental": 0.375,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        }
+      ]
+    },
+    "sin2_Cabibbo": {
+      "observable": "Cabibbo angle sin\u00b2 \u2248 0.0506",
+      "experimental_value": 0.05,
+      "ICE_candidates": [
+        {
+          "formula": "1/20",
+          "value": 0.05,
+          "experimental": 0.05,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "ZD_n6/ZD_n8",
+          "value": 0.050793013451114234,
+          "experimental": 0.05,
+          "abs_diff": 0.0007930134511142314,
+          "rel_diff_pct": 1.586026902228463
+        },
+        {
+          "formula": "G2_adjoint_dim/ZD_n5",
+          "value": 0.047619047619047616,
+          "experimental": 0.05,
+          "abs_diff": 0.0023809523809523864,
+          "rel_diff_pct": 4.7619047619047725
+        }
+      ]
+    },
+    "g3_g2_ratio": {
+      "observable": "g_strong/g_weak coupling ratio",
+      "experimental_value": 1,
+      "ICE_candidates": [
+        {
+          "formula": "U1_dim",
+          "value": 1.0,
+          "experimental": 1,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "ZD_n4/total_ZD_pairs",
+          "value": 1.0,
+          "experimental": 1,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "total_ZD_pairs/ZD_n4",
+          "value": 1.0,
+          "experimental": 1,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        }
+      ]
+    },
+    "g2sq_g1sq": {
+      "observable": "GUT coupling ratio g_2\u00b2/g_1\u00b2",
+      "experimental_value": 1.6666666666666667,
+      "ICE_candidates": [
+        {
+          "formula": "5/3",
+          "value": 1.6666666666666667,
+          "experimental": 1.6666666666666667,
+          "abs_diff": 0.0,
+          "rel_diff_pct": 0.0
+        },
+        {
+          "formula": "G2_num_roots/G2_fundamental_dim",
+          "value": 1.7142857142857142,
+          "experimental": 1.6666666666666667,
+          "abs_diff": 0.04761904761904745,
+          "rel_diff_pct": 2.857142857142847
+        },
+        {
+          "formula": "G2_Weyl_order/G2_fundamental_dim",
+          "value": 1.7142857142857142,
+          "experimental": 1.6666666666666667,
+          "abs_diff": 0.04761904761904745,
+          "rel_diff_pct": 2.857142857142847
+        }
+      ]
+    },
+    "theta_13_neutrino_sq": {
+      "observable": "neutrino \u03b8_13 mixing",
+      "experimental_value": 0.02241,
+      "ICE_candidates": [
+        {
+          "formula": "sin_theta13_sq",
+          "value": 0.022222222222222223,
+          "experimental": 0.02241,
+          "abs_diff": 0.0001877777777777763,
+          "rel_diff_pct": 0.8379195795527724
+        },
+        {
+          "formula": "U1_dim/ZD_n4",
+          "value": 0.023809523809523808,
+          "experimental": 0.02241,
+          "abs_diff": 0.0013995238095238088,
+          "rel_diff_pct": 6.245086164764876
+        },
+        {
+          "formula": "G2_fundamental_dim/ZD_n5",
+          "value": 0.023809523809523808,
+          "experimental": 0.02241,
+          "abs_diff": 0.0013995238095238088,
+          "rel_diff_pct": 6.245086164764876
+        }
+      ]
+    },
+    "CP_phase_rad": {
+      "observable": "CP violation phase \u03b4",
+      "experimental_value": 1.36,
+      "ICE_candidates": [
+        {
+          "formula": "XOR_min_offset/G2_long_roots",
+          "value": 1.3333333333333333,
+          "experimental": 1.36,
+          "abs_diff": 0.02666666666666684,
+          "rel_diff_pct": 1.9607843137255028
+        },
+        {
+          "formula": "SU3_dim/G2_long_roots",
+          "value": 1.3333333333333333,
+          "experimental": 1.36,
+          "abs_diff": 0.02666666666666684,
+          "rel_diff_pct": 1.9607843137255028
+        },
+        {
+          "formula": "XOR_min_offset/G2_short_roots",
+          "value": 1.3333333333333333,
+          "experimental": 1.36,
+          "abs_diff": 0.02666666666666684,
+          "rel_diff_pct": 1.9607843137255028
+        }
+      ]
+    },
+    "Jarlskog": {
+      "observable": "CP asymmetry invariant",
+      "experimental_value": 3.18e-05,
+      "ICE_candidates": [
+        {
+          "formula": "U1_dim/ZD_n8",
+          "value": 3.3460483169376966e-05,
+          "experimental": 3.18e-05,
+          "abs_diff": 1.660483169376966e-06,
+          "rel_diff_pct": 5.221645186720019
+        }
+      ]
+    }
+  },
+  "genuinely_structural": 3,
+  "fitting_suspected": 5,
+  "no_match": 0,
+  "verdict": "Postdictions/fitting, no genuine prediction yet"
+}

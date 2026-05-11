@@ -1,0 +1,74 @@
+{
+  "layer1_precision": {
+    "n_sigma": 26.195022031424756,
+    "rel_diff": 0.39107262427432393
+  },
+  "layer3_consistency": [
+    {
+      "ratio_name": "m_p/m_Z",
+      "value": 0.01028947007049204,
+      "best_a": 5395,
+      "best_n": 19,
+      "error_pct": 0.006567913865030378
+    },
+    {
+      "ratio_name": "m_p/m_H",
+      "value": 0.007491194259481038,
+      "best_a": 491,
+      "best_n": 16,
+      "error_pct": 0.01162925664835852
+    },
+    {
+      "ratio_name": "m_W/m_Z",
+      "value": 0.8814685330022941,
+      "best_a": 462143,
+      "best_n": 19,
+      "error_pct": 8.09771875224187e-05
+    },
+    {
+      "ratio_name": "m_H/m_W",
+      "value": 1.5582428246183704,
+      "best_a": 102121,
+      "best_n": 16,
+      "error_pct": 1.717755888773545e-06
+    },
+    {
+      "ratio_name": "m_p/m_t",
+      "value": 0.0054332739649082164,
+      "best_a": 2849,
+      "best_n": 19,
+      "error_pct": 0.014030030135042771
+    },
+    {
+      "ratio_name": "m_e/m_p",
+      "value": 0.0005446170214884609,
+      "best_a": 143,
+      "best_n": 18,
+      "error_pct": 0.1624421310770259
+    },
+    {
+      "ratio_name": "m_mu/m_p",
+      "value": 0.112609526212685,
+      "best_a": 1845,
+      "best_n": 14,
+      "error_pct": 0.0002993250893954645
+    },
+    {
+      "ratio_name": "Lambda/m_W",
+      "value": 0.004130432078030331,
+      "best_a": 1083,
+      "best_n": 18,
+      "error_pct": 0.02142779798393089
+    }
+  ],
+  "layer5_flags": {
+    "truncation": "\u26a0\ufe0f WARN: CD level 8 (256) choice not uniquely determined by ICE",
+    "scale_mismatch": "\u2713 OK",
+    "scheme_indep": "\u2713 OK (unique ratio, just scaled)",
+    "post_hoc": "\u26a0\ufe0f WARN: 3/256 found by matching, not derived a priori",
+    "derivation": "\u274c NONE: No ICE-specific reason why 3/256 emerges",
+    "convergence": "\u2713 OK (fixed ratio)",
+    "consistency": "\u2713 PASS: 8/8 other ratios fit pattern"
+  },
+  "taliban_verdict": "WARN \u2014 partial signatures, needs more work"
+}

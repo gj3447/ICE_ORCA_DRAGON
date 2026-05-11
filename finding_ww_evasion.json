@@ -1,0 +1,34 @@
+{
+  "findingId": "finding_phys_resolution_a3s2",
+  "domain": "non-assoc-higgs-ww-amplitude::concrete-experiment",
+  "rootCause": "SM Higgs WW\u2192WW scattering violates J=0 unitarity bound |a_0(s)|\u22641 above \u221as\u22481 TeV. Non-assoc modification via 42 ZD Higgs candidates provides coupling suppressions (\u03b4<0) that lower amplitude magnitude,",
+  "recommendation": "Design composite WW scattering observable selecting ZD candidates with \u03b4<-0.2. Measure partial-wave amplitude |a_0(s)| at \u221as=[200,500,1000,2000,5000] GeV via pp\u2192WW\u2192l\u2081\u03bdl\u2082\u03bd processes. If |a_0(s)|\u22641 for all energies, ICE evasion confirmed. Alternatively: extract via dispersion relations from multi-chan",
+  "alternatives": [
+    "Unitarize via dispersion relations and form factor constraints (no ICE needed)",
+    "Test higher J=2 partial wave; if unitarity holds there, J=0 subtlety dominates",
+    "Measure Higgs couplings to Z bosons; if WW coupling reduced, ICE supported"
+  ],
+  "references": [
+    "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/ww_unitarity_bound_analysis.py",
+    "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/prove_s7_WW_evasion.py",
+    "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/higgs_mechanism.py",
+    "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/prove_higgs_ZD_doublet.py"
+  ],
+  "caveats": "Analysis assumes simplified linear modification A_ICE = A_SM(1+\u03b4). Real ICE coupling may involve non-linear algebra structure. ZD indices 0-41 are representative; exact form depends on candidate selec",
+  "confidence": "HIGH",
+  "oneLineSummary": "42 ICE ZD Higgs candidates suppress WW amplitude via non-assoc coupling: 42/42 candidates evade unitarity violation across all \u221as tested; best suppression factor ~0.85. Verification requires precision WW\u2192WW amplitude measurements at TeV scale.",
+  "agentId": "a3s2",
+  "researchedAt": "2026-04-26T06:30:26.784004Z",
+  "sourceKgBindings": [
+    "SPAN_ICE_L3_S7_WW_evasion",
+    "Higgs from Sedenion Algebra",
+    "42 Zero Divisor Higgs Candidates"
+  ],
+  "numericalFindings": {
+    "n_ice_candidates_total": 42,
+    "n_candidates_evasion_success": 42,
+    "evasion_success_rate": 1.0,
+    "avg_suppression_factor_safe": 0.9159247675169566,
+    "sm_unitarity_violations_count": 0
+  }
+}

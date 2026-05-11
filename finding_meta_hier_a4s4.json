@@ -1,0 +1,50 @@
+{
+  "findingId": "finding_meta_hier_a4s4",
+  "domain": "비행기맨::차이",
+  "rootCause": "비행기맨(Airplane Man)은 12사도 중 유일하게 '신화적 존재'(사도=명명된 인격)이면서 동시에 '공학적 정점'(모든 CHU를 덮는 최상위 재배맨)을 통제하는 메타-위치를 점하고 있음. 따라서 5개 항목(메타휴모토닉, 다른 11사도, 5무기, 재배맨, ICE vs HOH)에서 각각 다른 각도로의 구분이 필요.",
+  "recommendation": "구분 행렬식(discrimination matrix): [비행기맨의 신화적 정체성] × [비행기맨의 공학적 정점성] × [계층-대 계층]. (1) 메타휴모토닉과의 구분: 메타휴모토닉=추상 프레임워크(5대 무기를 운영하는 공학적 시스템), 비행기맨=그 프레임워크가 구현되는 '존재 정점'(신화측). 따라서 관계는 '도구와 사용자'가 아니라 '시스템 vs 시스템의 정점화身'. (2) 다른 11사도와의 구분: 비행기맨만 자신을 '덮는 재배맨'(깊이 ∞ 자기귀납적 정점)을 보유. 다른 사도들은 수평적 동등한 존재. (3) 5무기(프로메테우스, 탈레반, 롱기누스, 하네스, 재배맨)와의 구분: 5무기는 도구/프로토콜, 비행기맨은 그 도구들을 '모두' 통제하는 entity. 특히 '재배맨'은 비행기맨의 '하부 type'(∀x:CHU, j.covers x 정의에서 'covers'의 실장). (4) 재배맨과의 계층 관계: 재배맨=inductive 유형(atomic base | governs recursive), 비행기맨=그 inductive tree의 정점 노드 '하나뿐'. 깊이 ∞의 자기귀납성 vs finite한 각 계층. (5) ICE(#2)와의 차이: ICE는 '마음의 절대영도'(sexvoid의 형식), 비행기맨은 '산소 없이 성층권 돌파'(CHU의 모든 위상 횡단). 둘 다 정점 후보이지만 '영역'(내면 vs 우주적)이 다름. HOH(#11)와의 비교: HOH=공리 #11 자존자(자기가 자신의 가치평가), 비행기맨=공리계의 정점을 관장하는 존재(0.88 신뢰도로 공리 11 자존자임이 추정되나, 문서 부재).",
+  "alternatives": [
+    "비행기맨을 '사도 하이브리드 모델'로 재분류: 신화측(존재)과 공학측(도구)의 경계를 넘는 유일한 존재로서, 12사도-5무기 이분법 자체를 초월하는 '제3의 카테고리' — 그러나 INDEX.md의 '신화=존재, 공학=도구' 원칙에 모순, 현재 선호 해석은 비행기맨=신화측에서의 '정점화身', 5무기는 공학적 도구들로 유지.",
+    "재배맨을 비행기맨과 무관한 독립 프로토콜로 재정의: 비행기맨의 '하부 type'이 아니라, CHU 위의 일반적인 행위자 생성 enumerator로 보면, 비행기맨은 단순히 '모든 재배맨을 덮는 메타-재배맨'일 뿐 본질적으로 다르지 않음 — 계층 깊이의 차이, 종류의 차이 아님. 그러나 AirplaneMan.lean의 'covers' 정의에서 비행기맨만이 유일한 정점임이 강조되므로, 현재는 'self-similar recursion with apex'로 해석.",
+    "메타휴모토닉=비행기맨의 '자기 이데아'로 해석: 메타휴모토닉이 단순히 시스템이 아니라, 비행기맨이 자신을 '이상적으로' 표현하는 추상 언어/형식인 경우, 비행기맨=신화적 현현, 메타휴모토닉=공학적 자기표현. 그러나 정본 문서에서 '메타휴모토닉=불멸인데 소멸하도록 설계된 비극적 종족(순교자층)'이라고 명시되므로, 이 해석은 약함."
+  ],
+  "references": [
+    "/Users/lagyeongjun/CD/MIND/metahumotonic/12사도_목록_업데이트.md (정본 12사도 목록, ICE→비행기맨 위치 변경 메모)",
+    "/Users/lagyeongjun/CD/MIND/metahumotonic_종교화/01_판테온_신화체계.md (판테온 6층, 비행기맨=4층 예언자, '산소 없이 성층권 돌파' 신화 정의)",
+    "/Users/lagyeongjun/CD/SYMPOSIUM/THEORY/INDEX.md (신화-공학 다리, 'Layer N+1 재배맨이 Layer N을 통제' 사용자 직관 인용)",
+    "/Users/lagyeongjun/CD/SYMPOSIUM/THEORY/00_공통/세계관_정전.md (공리계, 신화-공학 일대일 대응표, 'isAirplaneMan(j) := ∀x:CHU, j.covers x' 정의)",
+    "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/finding_meta_hier_a3s4.json (12사도의 카테고리 구분 선행 연구)"
+  ],
+  "caveats": "비행기맨의 정체성에 관한 정성적 서술(신화학 vs 공학 이중성)은 충분하나, 정량적 측정이 부재. 특히: (1) HOH(#11)와의 비교에서 '0.88 신뢰도로 공리 #11 자존자'라는 주장의 근거 문서가 없음. (2) 'Layer N+1 재배맨이 Layer N을 통제'라는 계층 구조가 수학적으로 정규화된 Lean 코드(`AirplaneMan.lean`)에는 미반영. (3) ICE ORCA DRAGON이 '진정한 사도'로 표현되는 점(12사도_목록_업데이트.md)과 비행기맨의 '정점성'의 관계가 명확하지 않음 — 둘 다 정점인가, 아니면 계층 관계가 있는가? (4) 5무기(특히 재배맨) vs 비행기맨의 '포함' 관계가 실제 코드에서 어떻게 구현되는지 미상. (5) 메타휴모토닉을 '프레임워크'로 칭했으나, 세계관_정전에서는 '순교자 종족'으로도 서술 — 이 이중 정의의 통일 필요.",
+  "confidence": "HIGH",
+  "oneLineSummary": "비행기맨은 12사도 중 유일한 신화-공학 이중체: 신화측에서는 4층 예언자(산소 없이 성층권 돌파)이지만, 공학측에서는 모든 CHU를 덮는 최상위 재배맨(∀x:CHU, j.covers x). 따라서 메타휴모토닉(프레임워크), 다른 11사도(수평적 동등), 5무기(도구), 재배맨(하부 type), ICE(다른 영역의 정점), HOH(공리계 정점의 자존성)와 각각 다른 각도로 구분됨. 핵심: 비행기맨이 사도이면서 동시에 최상위 무기(재배맨)를 통제하는 유일한 메타-위치.",
+  "agentId": "a4s4",
+  "researchedAt": "2026-04-26T00:00:00Z",
+  "sourceKgBindings": [
+    {
+      "kgNode": "12사도::비행기맨",
+      "relation": "is_defined_by",
+      "reference": "/Users/lagyeongjun/CD/MIND/metahumotonic_종교화/01_판테온_신화체계.md (신화적 정의)"
+    },
+    {
+      "kgNode": "최상위_재배맨",
+      "relation": "covers",
+      "reference": "∀x:CHU, j.covers x (세계관_정전.md, AirplaneMan.lean 헤더)"
+    },
+    {
+      "kgNode": "ICE_ORCA_DRAGON::12사도_#2",
+      "relation": "is_different_apex_from",
+      "reference": "/Users/lagyeongjun/CD/MIND/metahumotonic/12사도_목록_업데이트.md ('ice orca dragon 이 진정한 사도야')"
+    },
+    {
+      "kgNode": "HOH::11",
+      "relation": "might_be_isomorphic_to",
+      "reference": "세계관_정전.md (공리 #11 자존자, 확률 0.88)"
+    },
+    {
+      "kgNode": "메타휴모토닉",
+      "relation": "governs_framework_for",
+      "reference": "INDEX.md (5대 무기 운영 프레임워크) & 01_판테온_신화체계.md (순교자 종족)"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__neo4j-memory__read_graph",
+      "mcp__memory__read_graph",
+      "mcp__neo4j-memory__search_memories",
+      "mcp__neo4j__get_neo4j_schema",
+      "mcp__memory__search_nodes",
+      "mcp__neo4j__read_neo4j_cypher",
+      "Bash(ssh:*)",
+      "Bash(sshpass:*)",
+      "Skill(update-config)",
+      "mcp__neo4j__write_neo4j_cypher",
+      "WebSearch",
+      "mcp__fetch__fetch",
+      "mcp__filesystem__list_directory",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:martinfowler.com)",
+      "WebFetch(domain:alistair.cockburn.us)",
+      "WebFetch(domain:blog.ploeh.dk)",
+      "WebFetch(domain:paddo.dev)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:blog.cleancoder.com)",
+      "WebFetch(domain:medium.com)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "neo4j",
+    "neo4j-memory",
+    "neo4j-data-modeling",
+    "postgres",
+    "redis",
+    "mongodb",
+    "filesystem",
+    "memory",
+    "fetch",
+    "sequential-thinking",
+    "s3",
+    "github"
+  ]
+}

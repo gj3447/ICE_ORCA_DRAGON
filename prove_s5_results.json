@@ -1,0 +1,84 @@
+{
+  "S5.1": {
+    "s5_1_test_cases": 4,
+    "s5_1_all_zero": true,
+    "s5_1_all_bounded": true,
+    "s5_1_results": [
+      {
+        "triad": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "delta_norm": 0.0,
+        "max_term_norm": 2.0,
+        "relative_size": 0.0
+      },
+      {
+        "triad": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "delta_norm": 0.0,
+        "max_term_norm": 2.0,
+        "relative_size": 0.0
+      },
+      {
+        "triad": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "delta_norm": 0.0,
+        "max_term_norm": 2.0,
+        "relative_size": 0.0
+      },
+      {
+        "triad": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "delta_norm": 0.0,
+        "max_term_norm": 2.0,
+        "relative_size": 0.0
+      }
+    ],
+    "s5_1_verdict": "Hochschild 3-cocycle condition structurally satisfied"
+  },
+  "S5.2": {
+    "s5_2_path_norms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "s5_2_max_diff": 0.0,
+    "s5_2_all_in_l3_span": true,
+    "s5_2_verdict": "Pentagon (A\u221e n=4) coherent via l_3 homotopy"
+  },
+  "S5.3": {
+    "s5_3_test_triples": 4,
+    "s5_3_valid_ratios": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "s5_3_consistent_ratio": 1.5,
+    "s5_3_verdict": "Quasi-Poisson Jacobiator = (3/2)\u00b7associator (consistent R-flux)"
+  },
+  "S5.4": {
+    "s5_4_jacobi_norm": 1.6241280737675832,
+    "s5_4_assoc_norm": 1.0827520491783889,
+    "s5_4_coefficient": 1.4999999999999998,
+    "s5_4_master_residual": 1.296292357640769e-16,
+    "s5_4_master_ok": "True",
+    "s5_4_verdict": "BV master equation {S\u2080,S\u2080}=0 satisfied via Stasheff identity"
+  }
+}

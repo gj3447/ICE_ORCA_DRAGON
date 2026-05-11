@@ -1,0 +1,8 @@
+{
+  "total_ICE_ratios": 531,
+  "experimental_ratios_checked": 15,
+  "genuine_predictions": 0,
+  "fitting_suspected_all": true,
+  "verdict": "ICE cannot genuinely derive mass ratios from internal structure",
+  "recommendation": "Pivot to dimensionless structural quantities OR lattice simulation"
+}
