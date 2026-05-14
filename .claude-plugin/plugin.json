@@ -1,0 +1,389 @@
+{
+  "name": "ice-orca-dragon-physics-workbench",
+  "version": "1.0.0",
+  "description": "ICE_ORCA_DRAGON — physics/math computation workbench for SYMPOSIUM apostle #2. 47 Python scripts + 22 JSON results computing Cayley-Dickson breaking (32D↔64D), sedenion (16D) analysis with Der(S)=g₂, Higgs ZD doublet candidates (42 pairs), S₁~S₇ structural proofs, and orbit/custodial/rep/queue investigations. Feeds science-feedback-loop (compute → classify → Fitting Detection → Lakatos → Bayesian → KG).",
+  "author": {
+    "name": "SYMPOSIUM project",
+    "email": "gira@airobotics.im",
+    "url": "https://github.com/gira-airobotics/symposium"
+  },
+  "homepage": "https://github.com/gira-airobotics/symposium/tree/main/METAHUMOTONIC/ICE_ORCA_DRAGON",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gira-airobotics/symposium.git",
+    "directory": "METAHUMOTONIC/ICE_ORCA_DRAGON"
+  },
+  "license": "MIT",
+  "keywords": [
+    "physics",
+    "mathematics",
+    "cayley-dickson",
+    "sedenion",
+    "16d-algebra",
+    "g2-lie-algebra",
+    "higgs-mechanism",
+    "zero-divisor",
+    "standard-model",
+    "custodial-symmetry",
+    "coleman-weinberg",
+    "hosotani",
+    "science-feedback-loop",
+    "lakatos",
+    "bayesian-update",
+    "numerology-detection",
+    "kg-canonical",
+    "symposium-apostle-2"
+  ],
+  "category": "computation-workbench",
+  "tags": [
+    "physics-workbench",
+    "kg-grounded",
+    "feedback-loop",
+    "refutation-discipline",
+    "pre-prediction-vs-post-fitting",
+    "self-refutation-recorded",
+    "mythology-physics-dual"
+  ],
+  "engines": {
+    "claudeCode": ">=2.0.0",
+    "python": ">=3.10"
+  },
+  "dependencies": {
+    "python": {
+      "numpy": "*",
+      "sympy": "*"
+    },
+    "system": {
+      "jq": "recommended"
+    },
+    "weapons": {
+      "apt-sp": "required-on-discovery-reentry"
+    },
+    "infra": {
+      "kg-neo4j": "recommended",
+      "kg-mongodb": "recommended",
+      "kg-redis": "recommended"
+    }
+  },
+  "skills": [
+    {
+      "name": "science-feedback-loop",
+      "displayName": "Science Feedback Loop",
+      "description": "7-step loop: compute → classify (confirmation/refutation/discovery/numerology) → Fitting Detection (pre-prediction vs post-fitting) → Lakatos (progressive/degenerating) → Bayesian update P(H|E) with P(E|~H) discipline → KG write → SA/SP/ST consistency check. Discovery re-enters PH2 by dispatching /apt-sp <new_span_id>.",
+      "path": ".claude/skills/science-feedback-loop.md",
+      "userFacing": true,
+      "version": "1.0"
+    }
+  ],
+  "scriptCatalog": {
+    "totalScripts": 47,
+    "totalJsonResults": 22,
+    "categories": [
+      {
+        "category": "cd_breaking",
+        "description": "Cayley-Dickson algebra breaking: at which CD level does which identity break? Focus on 32D vs 64D.",
+        "scripts": [
+          "cd_breaking_search.py",
+          "cd_breaking_search2.py",
+          "cd_breaking_search3.py",
+          "cd_breaking_final.py",
+          "cd_final_quick.py"
+        ],
+        "canonical": "cd_breaking_final.py",
+        "jsonResults": []
+      },
+      {
+        "category": "cd_embedding",
+        "description": "Cayley-Dickson CD₃ → CD₄ embedding, propagator chain composition, path amplitude.",
+        "scripts": [
+          "cd_embedding.py",
+          "cd_embedding_v2.py",
+          "cd_embedding_verify.py",
+          "cd_embedding_final_check.py",
+          "cd_chain_propagator.py",
+          "cd_path_amplitude.py",
+          "cd_path_amplitude_v2.py"
+        ],
+        "canonical": "cd_embedding_final_check.py",
+        "jsonResults": []
+      },
+      {
+        "category": "dimensional_analysis",
+        "description": "Derive dimensionless physical ratios from ICE-side algebraic invariants. Self-refutation discipline.",
+        "scripts": [
+          "derive_Lstar_from_ICE.py",
+          "derive_dimensionless_ICE.py",
+          "derive_epsilon_ICE.py",
+          "derive_mass_ratios_ICE.py"
+        ],
+        "jsonResults": [
+          "derive_Lstar_results.json",
+          "derive_dimensionless_results.json",
+          "derive_epsilon_results.json",
+          "derive_mass_ratios_results.json"
+        ],
+        "selfRefutations": [
+          {
+            "file": "derive_mass_ratios_results.json",
+            "verdict": "ICE cannot genuinely derive (0/15 genuine)"
+          }
+        ],
+        "numerologyCandidates": [
+          {
+            "file": "derive_dimensionless_results.json",
+            "claim": "Koide Q = 2/3",
+            "reason": "multiple unrelated quantities match (XOR_min_offset / G2_num_roots / ...)"
+          }
+        ]
+      },
+      {
+        "category": "higgs_s_proofs",
+        "description": "Higgs mechanism + S₁~S₇ structural proofs (framing / CCWZ / higher gauge / BV-A∞ / WW evasion).",
+        "scripts": [
+          "higgs_mechanism.py",
+          "prove_higgs_ZD_doublet.py",
+          "prove_s1_framing.py",
+          "prove_s2_CCWZ.py",
+          "prove_s3_higher_gauge.py",
+          "prove_s5_bv_ainfty.py",
+          "prove_s7_WW_evasion.py"
+        ],
+        "jsonResults": [
+          "prove_higgs_results.json",
+          "prove_s3_results.json",
+          "prove_s5_results.json"
+        ],
+        "headlineResults": [
+          {
+            "claim": "42 sedenion ZD pairs as Higgs doublet candidates",
+            "file": "prove_higgs_results.json",
+            "classification": "confirmation",
+            "externalGrounding": "Lygeros 2006 \"42 Assessors\""
+          },
+          {
+            "claim": "S₃ Jacobi = 6·associator",
+            "file": "prove_s3_results.json",
+            "classification": "confirmation"
+          },
+          {
+            "claim": "S₅ BV all_zero + all_bounded",
+            "file": "prove_s5_results.json",
+            "classification": "confirmation"
+          }
+        ],
+        "note": "S₄ and S₆ are intentionally absent — numbering preserves original chronology. S₄ ~ ww_unitarity_bound_analysis; S₆ ~ queue_05_coleman_weinberg."
+      },
+      {
+        "category": "sedenion_16d",
+        "description": "Sedenion (16D non-associative algebra) analysis: Der(S) = g₂ (14D), SU(2) and SU(3) embeddings.",
+        "scripts": [
+          "sedenion_analysis.py",
+          "sedenion_g2_deep.py",
+          "sedenion_g2_investigation.py",
+          "sedenion_su2.py",
+          "sedenion_su2_part2.py",
+          "sedenion_su2_part3.py",
+          "sedenion_su2_final.py",
+          "sedenion_su2_definitive.py",
+          "sedenion_su3_check.py"
+        ],
+        "canonical": "sedenion_g2_deep.py",
+        "jsonResults": [],
+        "headlineResults": [
+          {
+            "claim": "Der(S) = g₂ (14D)",
+            "file": "sedenion_g2_deep.py",
+            "classification": "confirmation_local",
+            "note": "numeric only, no external peer review yet, arXiv preprint recommended"
+          }
+        ]
+      },
+      {
+        "category": "queue_orbit_rep",
+        "description": "Sequential investigation series: orbit, custodial, rep decomposition, Hosotani, Coleman-Weinberg, cooperative vacuum, G₂ adjoint, S₃ action, group-of-6, XOR invariant.",
+        "scripts": [
+          "queue_01_orbit_analysis.py",
+          "queue_02_custodial_check.py",
+          "queue_03_rep_decomposition.py",
+          "queue_03_threshold_sensitivity_scan.py",
+          "queue_04_hosotani_toy.py",
+          "queue_05_coleman_weinberg.py",
+          "queue_06_cooperative_vacuum.py",
+          "queue_08_G2_adjoint.py",
+          "queue_09_S3_action.py",
+          "queue_10_group_of_6.py",
+          "queue_11_xor_invariant.py"
+        ],
+        "jsonResults": [
+          "queue_01_orbit_results.json",
+          "queue_02_custodial_results.json",
+          "queue_03_rep_results.json",
+          "queue_04_hosotani_results.json",
+          "queue_05_cw_results.json",
+          "queue_06_coop_results.json",
+          "queue_08_g2_results.json",
+          "queue_09_s3_results.json",
+          "queue_10_group6_results.json",
+          "queue_11_xor_results.json"
+        ],
+        "headlineResults": [
+          {
+            "claim": "7×6 = 42 orbit",
+            "file": "queue_01_orbit_results.json",
+            "classification": "confirmation"
+          },
+          {
+            "claim": "Custodial SU(2)×SU(2) preservation: 0/42 (max_commutator ~1.9)",
+            "file": "queue_02_custodial_results.json",
+            "classification": "refutation"
+          }
+        ],
+        "note": "queue_07 intentionally absent — preserves chronology."
+      },
+      {
+        "category": "misc_verification",
+        "description": "Miscellaneous: 64D ZD, mp/mW hypothesis, WW unitarity, Friedmann equation.",
+        "scripts": [
+          "zd64_analysis.py",
+          "verify_mp_mW_3_256.py",
+          "ww_unitarity_bound_analysis.py",
+          "orca_friedmann.py"
+        ],
+        "jsonResults": [
+          "verify_mp_mW_results.json",
+          "finding_ww_evasion.json",
+          "finding_meta_hier_a3s4.json",
+          "finding_meta_hier_a4s4.json"
+        ],
+        "numerologyCandidates": [
+          {
+            "file": "verify_mp_mW_results.json",
+            "claim": "mp / mW = 3·256 = 768",
+            "status": "Fitting Detection pending"
+          }
+        ]
+      }
+    ]
+  },
+  "feedbackLoop": {
+    "name": "science-feedback-loop",
+    "version": "1.0",
+    "definition": ".claude/skills/science-feedback-loop.md",
+    "steps": [
+      "compute / verify (Python script execution)",
+      "classify (4-way: confirmation / refutation / discovery / numerology)",
+      "Fitting Detection (pre-prediction vs post-fitting)",
+      "Lakatos evaluation (progressive vs degenerating)",
+      "Bayesian update — P(H|E) with critical P(E|~H) discipline",
+      "KG write (Contract / Span / Possibility / Verdict nodes)",
+      "SA→SP→ST consistency check"
+    ],
+    "discoveryReentry": {
+      "trigger": "classification == 'discovery'",
+      "action": "create :Span {discovered_from: <calc>, status: 'NEW'} + dispatch /apt-sp <span_id>",
+      "effect": "workbench self-extends recursively"
+    },
+    "numerologyGate": {
+      "rule": "P(E|~H) > 0.5 → NUMEROLOGY_HOLD regardless of P(E|H)",
+      "demotion": ":Contract → :Possibility (low confidence)"
+    },
+    "selfRefutationDiscipline": {
+      "principle": "Self-refutation is a first-class outcome",
+      "exemplar": "derive_mass_ratios_results.json verdict: \"ICE cannot genuinely derive (0/15 genuine)\""
+    }
+  },
+  "documentation": {
+    "readme": "../README.md",
+    "userguide": "../docs/USERGUIDE.md",
+    "status": "../docs/STATUS.md",
+    "index": "../docs/index.md",
+    "changelog": "../CHANGELOG.md",
+    "sources": "../SOURCES.md",
+    "feedbackLoopSkill": "../.claude/skills/science-feedback-loop.md"
+  },
+  "classificationLedger": {
+    "confirmations": [
+      "42_sedenion_ZD_pairs (external: Lygeros 2006)",
+      "Der_S_eq_g2_14D (confirmation_local — no peer review)",
+      "S3_Jacobi_eq_6_associator",
+      "S5_BV_all_zero_all_bounded",
+      "7x6_eq_42_orbit",
+      "Wilmot_2025_Moufang_pattern"
+    ],
+    "refutations": [
+      {
+        "claim": "ICE mass_ratios genuine derivation",
+        "source": "derive_mass_ratios_results.json",
+        "verdict": "0/15 genuine (self-refutation)"
+      },
+      {
+        "claim": "Custodial SU(2)xSU(2) preservation under naive embedding",
+        "source": "queue_02_custodial_results.json",
+        "verdict": "0/42 pairs preserve (max_commutator ~1.9)"
+      }
+    ],
+    "discoveries": [
+      "ZD_null_space_structure (triggered new :Span + /apt-sp re-entry)"
+    ],
+    "numerologyHold": [
+      "Koide_Q_2_thirds (multiple unrelated matches)",
+      "c_eq_4_ln_2 (post-hoc fit)",
+      "Bekenstein_connection (post-hoc analogy)",
+      "mp_mW_eq_3_256 (Fitting Detection pending)"
+    ]
+  },
+  "lakatosOverallVerdict": {
+    "status": "progressive",
+    "reason": "confirmations + discoveries > refutations + numerology; program produces novel predictions (42 ZD as Higgs candidates) rather than only re-explaining"
+  },
+  "kgCanon": {
+    "topNode": "ICE_ORCA_DRAGON_apostle_2_physics_workbench",
+    "feedbackLoopOntology": "science-feedback-loop-canonical-ice",
+    "narrativeFeedbackLoopComplement": "narrative-feedback-loop-canonical-2026-04-30",
+    "agentFeedbackLoop": "agent-feedback-loop-canonical-2026-04-27",
+    "mistakeContract": "CONTRACT_AgentMistakeLog_v1_2026-04-27"
+  },
+  "symposiumContext": {
+    "apostle": {
+      "number": 2,
+      "name": "ICE_ORCA_DRAGON",
+      "role": "물리학의 사도 (physics-domain apostle)",
+      "clarification": "User self-claim is apostle #3 (초공동의용사). 'ICE ORCA DRAGON이 진정한 사도야' verdict = '세상의 진정한 본질 = 물리학'.",
+      "canonicalMythSource": "/Users/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md"
+    },
+    "mythologyPhysicsBridge": {
+      "principle": "Mythology layer makes physical claims; this workbench operationally tests them.",
+      "examples": [
+        "마음의 절대영도 동결 ↔ derive_epsilon_ICE.py ε scaling",
+        "sexvoid 형식 ↔ prove_higgs_ZD_doublet.py 42 ZD pairs",
+        "ICED 반복 + SSB 구원기도 ↔ prove_s7_WW_evasion.py",
+        "얼음 + 범고래 + 용 ↔ CD 32D → 64D embedding + propagator chain"
+      ]
+    },
+    "feedbackLoopDual": {
+      "science": "this workbench — truth filter",
+      "narrative": "SYMPOSIUM/.claude/skills/narrative-feedback-loop.md — canonical-layer keeper",
+      "essentialDifferences": [
+        "Science can close on refutation; narrative preserves machloket (Eilu va-Eilu)",
+        "Science uses Bayesian update; narrative uses hermeneutic circle update",
+        "Pre-prediction discipline (science) vs USER_PRIMARY absolute priority (narrative)"
+      ]
+    }
+  },
+  "knownLimitations": [
+    "No automated CI — scripts run manually",
+    "Numerology gate P(E|~H) > 0.5 is heuristic, hard cases need human verdict",
+    "Self-refutation discipline not yet generalized to all 47 scripts (only derive_mass_ratios)",
+    "Der(S) = g₂ has no external peer review (confirmation_local only)",
+    "Custodial refutation has no pivot yet (program locally degenerating in custodial)",
+    "Discovery → /apt-sp re-entry is manual, not auto-dispatched"
+  ],
+  "roadmap": [
+    "arXiv preprint for Der(S) = g₂",
+    "MC p-value tests for Koide Q + mp/mW numerology candidates",
+    "Custodial-preserving embedding search (post-queue_02 pivot)",
+    "Self-verdict field on all 47 scripts (generalize derive_mass_ratios pattern)",
+    "CI integration — weekly auto-re-run",
+    "Auto-dispatch /apt-sp on discovery classification"
+  ]
+}
