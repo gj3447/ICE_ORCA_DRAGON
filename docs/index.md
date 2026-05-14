@@ -44,7 +44,7 @@ description: Physics/math computation workbench — Cayley-Dickson breaking, sed
 | CD breaking | 5 (`cd_breaking_*`, `cd_final_quick.py`) | [`USERGUIDE.md#category-1--cayley-dickson-breaking`](USERGUIDE.md#category-1--cayley-dickson-breaking) |
 | CD embedding & propagator | 7 (`cd_embedding*`, `cd_chain_propagator.py`, `cd_path_amplitude*`) | [`USERGUIDE.md#category-2--cayley-dickson-embedding--propagator`](USERGUIDE.md#category-2--cayley-dickson-embedding--propagator) |
 | Dimensional analysis | 4 (`derive_*_ICE.py`) | [`USERGUIDE.md#category-3--dimensional-analysis`](USERGUIDE.md#category-3--dimensional-analysis) |
-| Higgs / S-proofs | 7 (`higgs_*`, `prove_higgs_*`, `prove_s1_~s7_*`) | [`USERGUIDE.md#category-4--higgs-mechanism--ssss-proofs`](USERGUIDE.md#category-4--higgs-mechanism--ssss-proofs) |
+| Higgs / S-proofs | 7 (`higgs_*`, `prove_higgs_*`, `prove_s1_~s7_*`) | [`USERGUIDE.md#category-4--higgs-mechanism--s₁s₇-proofs`](USERGUIDE.md#category-4--higgs-mechanism--s₁s₇-proofs) |
 | Sedenion (16D) | 9 (`sedenion_*`) | [`USERGUIDE.md#category-5--sedenion-16d-analysis`](USERGUIDE.md#category-5--sedenion-16d-analysis) |
 | Queue / orbit / rep | 11 (`queue_01~11_*`) | [`USERGUIDE.md#category-6--orbit--rep--queue-series`](USERGUIDE.md#category-6--orbit--rep--queue-series) |
 | Misc verification | 4 (`zd64_analysis.py`, `verify_mp_mW_3_256.py`, `ww_unitarity_bound_analysis.py`, `orca_friedmann.py`) | [`USERGUIDE.md#category-7--misc-verification`](USERGUIDE.md#category-7--misc-verification) |

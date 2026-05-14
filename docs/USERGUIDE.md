@@ -11,7 +11,7 @@
 - [Category 1 — Cayley-Dickson breaking](#category-1--cayley-dickson-breaking)
 - [Category 2 — Cayley-Dickson embedding & propagator](#category-2--cayley-dickson-embedding--propagator)
 - [Category 3 — Dimensional analysis](#category-3--dimensional-analysis)
-- [Category 4 — Higgs mechanism & S₁~S₇ proofs](#category-4--higgs-mechanism--ssss-proofs)
+- [Category 4 — Higgs mechanism & S₁~S₇ proofs](#category-4--higgs-mechanism--s₁s₇-proofs)
 - [Category 5 — Sedenion (16D) analysis](#category-5--sedenion-16d-analysis)
 - [Category 6 — Orbit / rep / queue series](#category-6--orbit--rep--queue-series)
 - [Category 7 — Misc verification](#category-7--misc-verification)
