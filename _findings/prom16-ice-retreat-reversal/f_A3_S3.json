@@ -1,0 +1,22 @@
+{
+  "domain": "A3-S3: Wilmot dispute alternative settlement paths",
+  "oneLineSummary": "5 paths: PATH_B (GAP/Python brute-force 1-3 days WINNER -- direct decidable in finite check) > PATH_D (calibration verification 1-2 weeks reproduce Wilmot) > PATH_A (Lean 4 12-24 months blocked by Mathlib4 octonion gap) > PATH_C (Brauer/Cartan classification indirect) > PATH_E (physics back-validation epistemically weak).",
+  "recommendation": "Execute PATH_B IMMEDIATELY (<1 week) -- write aut_sedenion_brown_verify.py implementing Brown's T1/T2/T3 as 16x16 signed-permutation matrices, verify 256-product preservation. Decidable. **This single test can reverse A3 retreat.** PATH_D cross-check after. PATH_A as long-term definitive settlement. Maintaining retreat WITHOUT PATH_B = epistemic over-caution.",
+  "references": [
+    "Mathlib4 Quaternion docs (Octonion gap CONFIRMED missing)",
+    "Kirshtein arXiv:1102.5151 (loop level solved)",
+    "Tao 2023 PFR Lean4 blueprint workflow",
+    "SYMPOSIUM temporal_arc_with_mathlib (sister project ready)",
+    "Buchholtz-Rijke HoTT octonion (not in mainline Mathlib4)",
+    "Mathlib4 2M+ LOC (Algebra/Quaternion)",
+    "Wilmot arXiv:2512.07210 direct claim 60-degree rotation fails"
+  ],
+  "caveats": "PATH_B has ~70% prior on Wilmot vindication given specific algebraic argument. Bound by SYMPOSIUM R2 + A3-S2 byte-identity finding -> revised P(Wilmot vindicated by PATH_B) drops since R2 already shows Brown works.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A3-S3",
+  "findingId": "f_A3_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

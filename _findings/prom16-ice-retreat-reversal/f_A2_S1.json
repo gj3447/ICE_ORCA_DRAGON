@@ -1,0 +1,22 @@
+{
+  "domain": "A2-S1: R7 zero-divisor filtration canonical refs",
+  "oneLineSummary": "R7 is NOVEL CONJECTURE -- two of four substeps grounded ((a) ZD locus, (c) Gauss law), critical middle step (b) algebra->spatial-dim 'n_eff=16-dim_ZD' bridge has NO canonical precedent. ZD locus has TWO submanifolds: Z(S) ≅ G_2 (dim 14, ZD-pair locus) vs ZD(S) ≅ V_2(R^7) (dim 13, single ZD element).",
+  "recommendation": "Tag R7 as :NumerologyHold pending principled selection of WHICH ZD locus (dim 13 vs 14 -> n_eff in {2,3}). The 'consistency with ADD n=2' coincidence is post-hoc fitting risk. Pursue Baez-Huerta cocycle framework (arXiv:1106.3385) and Furey division-algebraic SB (Phys.Lett.B 2022) as nearest canonical algebraic-spatial bridges -- both map algebra to internal-symmetry not spatial-dim.",
+  "references": [
+    "Moreno 1998 Bol.Soc.Mat.Mexicana (Z(S) ≅ G_2)",
+    "arXiv:2411.18881 Silvio REGGIANI 2024 (NOT Düvel -- user citation drift)",
+    "Cawagas 2004 Discuss.Math.GAA 24:251-265 (84 ZD pairs)",
+    "Kehagias-Sfetsos hep-ph/9905417 (Gauss-law alpha=2n/n+1)",
+    "ADD hep-ph/9803315",
+    "Baez-Huerta arXiv:1106.3385 (division algebras + higher gauge)",
+    "Furey-Gresnigt Phys.Lett.B 2022 (division algebraic SB)"
+  ],
+  "caveats": "CITATION DRIFT IDENTIFIED: user 'Düvel et al. arXiv:2411.18881' is WRONG. Actual sole author: Silvio Reggiani. Upstream KG must patch. NO existing work bridges (algebra ZD dim) -> (spatial dim n_eff) -> (Gauss law 1/r^{n_eff+1}); this is novel three-step synthesis.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A2-S1",
+  "findingId": "f_A2_S1",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

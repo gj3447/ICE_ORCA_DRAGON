@@ -1,0 +1,18 @@
+{
+  "domain": "A3-S1: alternative 16D algebras candidate",
+  "oneLineSummary": "Hypothesis C PARTIAL SUPPORT. 6 candidate 16D algebras evaluated. Bioctonion ℂ⊗𝕆 STRONGEST replacement (16D ✓, 3-gen ✓ via Furey Cl(6)-embedding, chiral SU(2)_L native, ZD-FREE — sidesteps sedenion pathology). Cl(4,0) ≅ M₂(ℍ) strict-associative fallback (Spin(4)=SU(2)×SU(2) built-in). ℍ⊗ℍ ≅ M₄(ℝ) signature-variant of (a). Köplinger conic + Cawagas P_k retain sedenion pathology = sibling variants not replacements. Wolf-space g₂⊕ℝ⁸ = 22D ≠ 16D (FAIL dim).",
+  "community_migration": "Furey 2018, Stoica 2018, Dixon-Rosenfeld 2023, MDPI Symmetry 2024 — historical migration sedenion-primary → bioctonion-primary over ~8 years. Evidence FOR hypothesis C in adjacent literature.",
+  "recommendations": [
+    "R1 promote ℂ⊗𝕆/Cl(6) as primary (PRELIMINARY VerdictProposal, user verdict gate)",
+    "R2 retain Cl(4,0)≅M₂(ℍ) as sibling fallback (associative branch)",
+    "R3 demote conic-sedenion/Cawagas P_k to sibling-variant tier",
+    "R4 drop Wolf-space (dimensional mismatch)"
+  ],
+  "confidence": "MEDIUM_HIGH",
+  "agentId": "prom16-meta-A3-S1",
+  "findingId": "f_A3_S1",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

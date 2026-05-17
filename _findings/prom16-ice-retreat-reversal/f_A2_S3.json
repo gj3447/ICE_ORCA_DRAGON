@@ -1,0 +1,22 @@
+{
+  "domain": "A2-S3: R7 alternative methodologies for unique epsilon",
+  "oneLineSummary": "Only TWO algebra-internal candidates for forcing unique epsilon: P2 zero-divisor (baseline, 0.85) + CDM matching (e, 0.75). Holographic bootstrap (b, 0.05) FAILS by associative OPE requirement. Twistor (f, 0.10) FAILS by Penrose transform associativity. Emergent gravity (d, 0.15) algebra-agnostic. RG flow (c, 0.55) + anomaly inflow (a, 0.45) conditional.",
+  "recommendation": "Pursue P2 (baseline) + (e) CDM matching as INDEPENDENT cross-check. If both yield same epsilon -> robustness; if different -> discriminating experiment. Park (a, c) as reserve tracks pending non-associative beta function / anomaly descent breakthroughs. Explicitly reject (b, d, f) on associativity/agnostic grounds.",
+  "references": [
+    "arXiv:gr-qc/0604024 (gravity on octonion algebra)",
+    "Verlinde arXiv:1611.02269 (emergent gravity)",
+    "arXiv:2003.11550 (anomaly inflow p-form)",
+    "arXiv:1308.5075 (Higgs RG flow narrow prediction)",
+    "arXiv:2410.19490 (hypercomplex twistor, hyperkähler only)",
+    "Baez 2002 BAMS octonion survey",
+    "Preprints 2025 hypercomplex operator gravity"
+  ],
+  "caveats": "P2 and CDM matching (e) may be reformulations of same underlying constraint (zero-divisors = 'new structure' at CD-16 step). Worth deriving both and comparing. Lean 4 no-go theorem opportunity: prove CD doubling preserves epsilon kernel iff specific form.",
+  "confidence": "MEDIUM_HIGH",
+  "agentId": "prom16-reversal-A2-S3",
+  "findingId": "f_A2_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

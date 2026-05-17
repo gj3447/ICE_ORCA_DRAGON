@@ -1,0 +1,25 @@
+{
+  "domain": "A4-S1: open experimental anomalies favoring ICE-style predictions",
+  "oneLineSummary": "3 of 5 anomalies RESOLVED 2024-2025 against ICE-favorable direction: muon g-2 (Fermilab final June 2025 + lattice WP25 shift), CDF W-mass (CMS 2024 + ATLAS 2024 reanalysis SM-consistent), R(K)/R(K*) (LHCb late-2022 background re-analysis). 2 LIVE: R(D*) 3.4sigma 13+ years persistent, B+->K+ nu nu Belle II 2.7sigma. Bayesian: prior P(ICE validated)=0.20 -> posterior 0.08.",
+  "recommendation": "Pre-register specific ICE predictions BEFORE 2026-2032 decisive experiments publish to avoid Lakatos post-hoc fitting: (i) R(D*) magnitude + correlated absence of R(K) split, (ii) B->K nu nu / K->pi nu nu ratio, (iii) Yukawa lambda/alpha for epsilon(r). Conditional P(recovery 2030) = 0.45 if pre-registered match.",
+  "references": [
+    "muon-g-2.fnal.gov/result2025.pdf (Fermilab final)",
+    "CERN Courier 'Fermilab's final word'",
+    "muon-gm2-theory.illinois.edu/white-paper-25",
+    "PDG 2025 W-mass review",
+    "Fermilab News 2024-09 CMS W-mass put to rest",
+    "CERN Courier W mass snaps back",
+    "ParticleBites R(K) anomaly fades",
+    "Belle II arXiv:2503.24155 EPPSU",
+    "Springer JHEP06(2024)172 B->K nu nu",
+    "MDPI 16/7/822 R(D*)"
+  ],
+  "caveats": "Lattice-vs-data-driven HVP dispute remains second-order open path for muon g-2 re-opening. CDF 2022 still PDG outlier but most-likely systematic. Short-range gravity Eot-Wash null thru 0.06mm; next-gen 2026-2030 latent.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A4-S1",
+  "findingId": "f_A4_S1",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

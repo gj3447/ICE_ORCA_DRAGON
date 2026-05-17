@@ -1,0 +1,25 @@
+{
+  "domain": "A4-S4: new evidence reversal pitfalls + rigor bar",
+  "oneLineSummary": "7 pitfalls (P_a confirmation bias, P_b god-of-gaps, P_c premature-lift CRITICAL [CDF/CMS W-mass case study], P_d cherry-picking, P_e stale-evidence-drift, P_f mythology-bleed, P_g retreat-sandbagging). Rigor bar MB1-MB6: pre-registration + replication + LEE + Lakatos progressivity + sociological timestamp + mythology firewall.",
+  "recommendation": "CDF/CMS case study LESSON: if ICE had set 'CDF W-mass 2022 = retreat reversal trigger', would be holding degenerated programme NOW (CMS 2024 nullified). MB2 (independent replication) alone would have prevented trap. Apply 6-criterion bar BEFORE accepting any new-evidence reversal claim. Create :RigorBar 'ICE_reversal_trigger_MB1_MB6_2026-05-17' KG node + Stop-hook blocking commit without MB1+MB2+MB5 reference.",
+  "references": [
+    "Fermilab News 2024-09 'CMS put W mass mystery to rest'",
+    "Strassler 2024 'W Boson Falls Back In Line'",
+    "Nature d41586-024-03042-9 'Standard model is not dead'",
+    "CERN Courier 'CDF addresses W-mass doubt'",
+    "Lakatos SEP (progressive/degenerating)",
+    "Roodman 2003 blind analysis arXiv:physics/0312102",
+    "Klein-Roodman 2005 Ann.Rev.Nucl.Part.Sci. 55:141",
+    "Aeon Lakatos essay",
+    "Effectiviology PostHoc 2024",
+    "PNAS preregistration revolution"
+  ],
+  "caveats": "MB5 sociological timestamp tricky for retroactive ICE KG entries (MIND/metahumotonic creative period). Cutoff date + frozen-baseline hash needed. MB6 firewall: physics CAN inform mythology; mythology CANNOT vote on physics. Asymmetric crystallization.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A4-S4",
+  "findingId": "f_A4_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

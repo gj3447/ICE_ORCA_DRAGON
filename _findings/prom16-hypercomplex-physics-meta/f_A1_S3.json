@@ -1,0 +1,20 @@
+{
+  "domain": "A1-S3: distinguishing test pure-math vs physics-loadable",
+  "oneLineSummary": "4 criteria: (a) zero-parameter forced prediction / (b) competitor uniqueness / (c) Bayesian P(E|~H) / (d) reverse-direction (algebra arises from physics requirement). Sedenion FAILS 3.5/4: forced prediction WEAK (Koide G₂ Casimir = post-diction), uniqueness FAIL (≥3 competing algebras give same 3-gen), Bayesian undefined (HARKing), reverse FAIL (CD doubling arises algebraically not from physics).",
+  "verdict": "WEAKLY_CONFIRMED_PROVISIONAL Hypothesis A; status = NUMEROLOGY_HOLD, not REFUTATION",
+  "falsifiers_for_physics_loadable": [
+    "F1: unique forced mass ratio with measurement-precision distinguishability",
+    "F2: pre-predicted CP-violation phase or neutrino hierarchy",
+    "F3: new particle at specific scale observed",
+    "F4: reverse-direction uniqueness theorem (algebra forced by 3-gen + chiral + custodial)"
+  ],
+  "demarcation_principle": "Gell-Mann 8-fold (predicted Ω⁻ before observation, zero params) vs Eddington 137 (post-hoc curve fit) — Castro Perelman 2008 + Hossenfelder 2017 + Nosek PNAS 2018 preregistration revolution",
+  "ice_implication": "Tag ICE sedenion work NUMEROLOGY_HOLD until ≥1 falsifier F1-F4 attempted; demand explicit comparison vs C⊗O (Furey) and Cl(8) (Stoica) competitors",
+  "confidence": "HIGH (0.78)",
+  "agentId": "prom16-meta-A1-S3",
+  "findingId": "f_A1_S3",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

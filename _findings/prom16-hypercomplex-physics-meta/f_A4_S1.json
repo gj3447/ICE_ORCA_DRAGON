@@ -1,0 +1,25 @@
+{
+  "domain": "A4-S1: evidence FOR program-wide degenerating",
+  "oneLineSummary": "Hypothesis D STRONGLY SUPPORTED with refinement: STAGNANT (Tüchsen 2024 EJPS) verging on DEGENERATING (classical Lakatos). 5 programs × 35-50 years = 0 genuinely novel confirmed predictions. Koide G₂ Casimir = post-diction (octonion derivation came AFTER 2024-2025 confirmation, Koide 1981 was preon fit).",
+  "lakatos_signature_count": {
+    "Furey 2015-2026": "0 quantitative confirmed; structural only",
+    "Dixon 1990-2025": "0; ad-hoc hidden-antimatter auxiliary",
+    "Manogue-Dray 1999-2024": "0; structural only",
+    "Köplinger 2006-2023": "0; untestable QG modulus",
+    "Cawagas-descendants 2004-2026": "1 retrodiction (Koide-G₂); 1 partial falsification (Koide preon-quark predictions ruled out)"
+  },
+  "auxiliary_hypotheses_protective_belt": [
+    "Dixon hidden 6D antimatter",
+    "Furey top quark deferred",
+    "Singh Majorana-only neutrinos",
+    "Köplinger untestable QG modulus"
+  ],
+  "ice_implication": "ICE-ORCA-DRAGON is 6th programme in pattern. Pre-register a number absent from PDG or inherit stagnant status.",
+  "confidence": "STRONG",
+  "agentId": "prom16-meta-A4-S1",
+  "findingId": "f_A4_S1",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

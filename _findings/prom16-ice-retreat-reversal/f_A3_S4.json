@@ -1,0 +1,22 @@
+{
+  "domain": "A3-S4: Wilmot dispute resolution pitfalls",
+  "oneLineSummary": "6 pitfalls: (a) waiting trap [5+ year peer review timeline], (b) echo chamber [50-year Brown citation cartel], (c) CONVENTION CONFLATION CRITICAL [tier-1 vs tier-2 dispute per SEP Proof Theory], (d) authority bias [age != correctness], (e) premature claim CRITICAL [R2 treats as global = MT_RubberStampVerdict], (f) single-author symmetric [Wilmot AND SYMPOSIUM both lack independent verification].",
+  "recommendation": "Measured 4-arm stance: (KG) maintain :CompetingVerdict {brown, wilmot, R2-cd-convention}; (citation) always cite both papers in same paragraph + engage Wilmot calibration argument; (scope) ICE retreat reversal MUST NOT use 'Brown vs Wilmot resolved' as load-bearing premise; (Lean 4 track) open Mathlib sister project sedenion-aut formalization as convention-independent resolver -- Leibniz calculemus realized.",
+  "references": [
+    "Lakatos 1976 Proofs and Refutations",
+    "SEP Proof Theory entry (tier-1/tier-2 distinction)",
+    "Yampolskiy 2016 Verifier Theory arXiv:1609.00331",
+    "Tao 2023 PFR blueprint",
+    "CACM Formally Verified Mathematics",
+    "Mathlib 2M+ LOC",
+    "Wikipedia Automated theorem proving (Leibniz calculemus)"
+  ],
+  "caveats": "feedback_external_canonical_referent applies to EXTERNAL referents (physics/theology) -- intramural pure-math dispute does NOT qualify for that escalation. MT mistakes avoided: MT_RubberStampVerdict, MT_OverCautiousFromCorrections, MT_LessonHoarding, MT_PrematureAction.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A3-S4",
+  "findingId": "f_A3_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

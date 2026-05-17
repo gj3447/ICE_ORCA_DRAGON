@@ -1,0 +1,20 @@
+{
+  "domain": "A4-S3: distinguishing test progressive vs degenerating",
+  "oneLineSummary": "5 axes ALL against progressive: (a) novel falsifiable predictions ≈1 sharp Peres test, disfavored / (b) citation echo chamber (4-6 PIs cite each other; SMEFT ATLAS does not cite) / (c) experimental design = 0 designed-to-test octonion-SM vs LQG ≥1 / (d) institutional = 0 centers vs LQG 3+ / (e) worse than CDT on 4 of 5 separators. Refined: STAGNANT (Tüchsen 2024) trajectory toward DEGENERATING.",
+  "operational_5_year_window_2026_2031_P1_P5": [
+    "P1 pre-measurement quantitative prediction by some group",
+    "P2 mainstream BSM review citation as motivating framework",
+    "P3 experimental collaboration motivation citation",
+    "P4 Tier-1 institute program (CERN/Perimeter/KITP/IHES)",
+    "P5 truly independent extending replication outside current 6-PI core"
+  ],
+  "as_of_2026_05": "NONE of P1-P5 satisfied; P4 marginal (PIRSA 2021 single event)",
+  "ice_implication": "SYMPOSIUM should mirror P1-P5 discriminator into ICE-program KG; tag zd64/mp_mW/mass-ratio results NUMEROLOGY_HOLD pending pre-prediction provenance verification (timestamp before measurement)",
+  "confidence": "HIGH (0.82)",
+  "agentId": "prom16-meta-A4-S3",
+  "findingId": "f_A4_S3",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

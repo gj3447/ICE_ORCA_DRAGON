@@ -1,0 +1,24 @@
+{
+  "domain": "A2-S1: evidence FOR wrong-projection hypothesis",
+  "oneLineSummary": "Hypothesis B STRONGLY SUPPORTED (0.78). 6 convergent patterns: P1 Aut(𝕊)=G₂×S₃ genuine math (Brown/Moreno/Reggiani/Wilmot all hit same numbers); P2 3 octonion sub-algebras = 3 generations; P3 Kaluza-Klein historical analog (80 years from algebra to moduli); P4 Calabi-Yau landscape (40 years right-algebra wrong-moduli); P5 ambient-works/quotient-fails is canonical diagnostic signature; P6 ICE-internal R1 fails on ZD null-space (singularity) but R2 SS3TG works on ambient.",
+  "wrong_projection_taxonomy": [
+    "TYPE_A zero-divisor-locus (R1 case)",
+    "TYPE_B subalgebra-collapse (S3 trivialized)",
+    "TYPE_C moduli-unstabilized (KK/CY pattern)",
+    "TYPE_D wrong-section (Lie ideal not respected)"
+  ],
+  "actionable_corrections_C1_C4": [
+    "C1 use PSL(2,7) orbit on 168 ZDs not null-space",
+    "C2 keep S₃ factor alive through any projection",
+    "C3 stabilize radion-like modulus before observables",
+    "C4 test section ideal-compatibility before phenomenology"
+  ],
+  "lakatos": "PROGRESSIVE — anomalies explained not patched",
+  "confidence": "HIGH (0.78)",
+  "agentId": "prom16-meta-A2-S1",
+  "findingId": "f_A2_S1",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

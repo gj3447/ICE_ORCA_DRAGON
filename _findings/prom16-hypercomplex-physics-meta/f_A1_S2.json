@@ -1,0 +1,27 @@
+{
+  "domain": "A1-S2: evidence AGAINST pure-math-only",
+  "oneLineSummary": "Hypothesis A DECISIVELY REFUTED for dim 1/2/4/8 + Clifford Cl(n) — these are physics-loaded (Pauli/Dirac/SUSY/spinors/aerospace). OPEN for sedenions specifically. Furey-Hughes EPJC 2024 uses sedenion algebra in Cl(8) for 3-gen SM = single load-bearing peer-reviewed citation preventing narrow-A.",
+  "spectrum_4_levels": [
+    "algebraic identity (R/C/H/O/Cl(n) all hit)",
+    "state space (Dirac spinors)",
+    "gauge group (SU(2)=quaternion)",
+    "industrial tool (NASA quaternion attitude, SLERP)"
+  ],
+  "quaternion_hits_all_4": true,
+  "octonion_hits_1_to_3": true,
+  "sedenion_hits_1_with_Furey_Hughes_promoting_to_3": true,
+  "key_refs": [
+    "Baez-Huerta arXiv:0909.0551 (SUSY dim={3,4,6,10}=dim(R,C,H,O)+2)",
+    "Adler 1995 OUP Quaternionic QM monograph",
+    "Furey-Hughes 2024 EPJC Cl(8) sedenion SM",
+    "de Wit-Nicolai Nucl.Phys.B231 1984 octonion 11D SUGRA",
+    "Atiyah-Bott-Shapiro 1964 (Cl Bott periodicity)"
+  ],
+  "confidence": "HIGH (0.95)",
+  "agentId": "prom16-meta-A1-S2",
+  "findingId": "f_A1_S2",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

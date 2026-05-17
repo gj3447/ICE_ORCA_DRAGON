@@ -1,0 +1,21 @@
+{
+  "domain": "A1-S2: SU(2)xSU(2) subset G_2 CAS implementations",
+  "oneLineSummary": "NO CAS auto-discovers 6-dim SU(2)xSU(2) subalgebra from 14 G_2 matrices. Standard algorithm = HARDCODE octonion-Cayley split (Draper arXiv:1704.07819 Sec on G_2 via para-units). Ground-truth check: 7=(2,2)+(1,3) branching.",
+  "recommendation": "Sage WeylCharacterRing('G2') + branching_rule (only single A_1 registered, need manual compose); LieART 2.0 has tabulated branching; basisgen Python supports G_2 weights but no subgroup decomposition; GAP Lie algebra chapter 64 has matrices but no built-in search. For matrices: use Draper-Fontanals Cayley-split construction. ALGORITHM IS HARDCODE, not blind search.",
+  "references": [
+    "Sage branching_rules thematic tutorial",
+    "LieART 2.0 arXiv:1912.10969 (tabulated G_2 branching)",
+    "basisgen jccriado GitHub",
+    "davidsd/lie Python wrapper for LiE",
+    "Draper Fontanals arXiv:1704.07819 (Cayley-octonion split)",
+    "Chala 2012 arXiv:1210.6208 (physics SO(7)/G_2 with branching)"
+  ],
+  "caveats": "PyG2 does NOT exist as maintained package. davidsd/lie + custom NumPy code is fastest path. SymPy + Sage WeylCharacterRing OK for symbolic verification.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A1-S2",
+  "findingId": "f_A1_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

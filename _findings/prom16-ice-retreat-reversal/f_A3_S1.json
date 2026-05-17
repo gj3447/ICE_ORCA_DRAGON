@@ -1,0 +1,23 @@
+{
+  "domain": "A3-S1: Wilmot dispute canonical references",
+  "oneLineSummary": "Wilmot 2025 (arXiv:2512.07210) is PREPRINT-ONLY, no peer review, ZERO trackback citations 5+ months post-submission. NO independent verifications. Calibration-Theta argument uses NOVEL 15-dim Fano-volume calibration NOT cited from Joyce. Schafer 1954 narrow read: Der(S)=g_2 != Aut(S)=G_2 (S_3 in pi_0 disconnected components).",
+  "recommendation": "PARK SYMPOSIUM R2 SS3TG as 'Brown S_3 CONFIRMED under cd_embedding multiplication-table convention; Wilmot calibration-Theta is OUTLIER preprint'. Add :CompetingVerdict flag. Note Schafer 1954 cite requires NARROW READING (Der not Aut). Flag dispute likely reduces to definitional: multiplication-table-preserving (Brown S_3 valid) vs calibration-Theta-preserving (Wilmot S_3 fails) -- DIFFERENT objects.",
+  "references": [
+    "arXiv:2512.07210 Wilmot 2025 (PREPRINT only)",
+    "arXiv:2505.11747 Wilmot sister paper",
+    "Brown 1967 Pacific J.Math.20:415-422 [CANONICAL ORIGIN]",
+    "Kirshtein 2011 arXiv:1102.5151 (loop level)",
+    "Schafer 1954 American J.Math.76:435-446 (Der level)",
+    "Gresnigt Nature Sci.Rep. 2021 doi:10.1038/s41598-021-01814-1",
+    "EPJ-C 2023 doi:10.1140/epjc/s10052-023-11923-y",
+    "MDPI Symmetry 16(5):626 (2024)"
+  ],
+  "caveats": "Wilmot DOES NOT cite Joyce 2000 directly -- novel 15-dim Fano-volume calibration extension lacks uniqueness theorem. Pre-Wilmot 50-year consensus AGAINST: Brown, Schafer narrow, Kirshtein, Cawagas, Gresnigt, EPJ-C, MDPI. Lakatos: DEGENERATING for Wilmot.",
+  "confidence": "HIGH (0.82)",
+  "agentId": "prom16-reversal-A3-S1",
+  "findingId": "f_A3_S1",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

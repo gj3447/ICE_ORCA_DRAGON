@@ -1,0 +1,20 @@
+{
+  "domain": "A1-S4: R4 pitfalls + 4-step structural gate",
+  "oneLineSummary": "5 pitfalls in G_2 maximal A_1+A_1 embedding: (a) wrong rep choice [=queue_02 failure!], (b) branching long/short Dynkin index confusion [factor-3 commutator anomaly], (c) hypercharge Y rank-saturation [G_2 has NO internal U(1) commuting with SU(2)_L; need G_2 x U(1) ambient!], (d) composite-Higgs retrofitting, (e) sedenion non-alternativity contamination.",
+  "recommendation": "5-step gate: (1) pick rep + verify faithful G_2 action; (2) verify SU(2)_L closure in rep (machine eps); (3) verify [T_L, T_R]=0 in rep; (4) verify G_2 orbit faithfulness 7-dim full coverage; (5) Y centralizer check -- WILL FAIL by rank theorem, FORCES G_2 x U(1) ambient extension (Das-Laporta-Mitra 2021 Sci.Rep.).",
+  "references": [
+    "Das-Laporta-Mitra Sci.Rep.2021 doi:10.1038/s41598-021-01814-1 (G_2 x U(1) SM extension)",
+    "Sanz-Setford arXiv:1703.10190 (custodial composite Higgs post-Run2)",
+    "arXiv:1206.6379 LieART",
+    "arXiv:1611.04070 Penkov-Serganova rk2 sl(2)-modules",
+    "arXiv:2411.18881 sedenion ZD geometry"
+  ],
+  "caveats": "Pitfall (c) is INFORMATIVE failure not bug -- rank G_2=2 forces external U(1)_Y from larger group. Sedenion non-alternativity (e) requires explicit projection P_{G_2} on BOTH sides of Lie bracket. Bayesian: P(R4 works naive)=10%, P(R4 works w/ 5-step gate + ambient G_2 x U(1))=55%, P(pure G_2 alone)=5%.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A1-S4",
+  "findingId": "f_A1_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

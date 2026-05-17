@@ -125,6 +125,10 @@ This is the **anti-numerology gate**. For every claimed confirmation, the loop a
 
 Provenance check: compare git timestamp of `:Contract` creation against the computation result file's mtime.
 
+### Known historical fitting acknowledgment — UEQFT/ICE 287/15 denominator (2026-02-07)
+
+KG node `UEQFT_ICE_CLUE_ANALYSIS_2026_02_07` (clue_C_honest field) explicitly records: *"15를 분모로 고른 이유가 결과 맞추기. 287/14=20.5, 287/16=17.9도 가능했음."* (English: 287/15 denominator was post-hoc fitting; 287/14 and 287/16 were also computationally available, suppressed after target observation.) `alpha_derivation_status = 'numerology_suspected'`, `alpha_verdict = 'HIGH_RISK - 라그랑지안 직접 유도 필요'`. Documented here per `lesson-prom32-thothsaem-ueqft-claims-2026-05-17` documentation-KG gap recommendation.
+
 ---
 
 ## Lakatos Evaluation

@@ -1,0 +1,24 @@
+{
+  "domain": "A3-S2: sedenion convention comparison across CAS",
+  "oneLineSummary": "**FALSE_ALARM_NOTATIONAL**! Wilmot's geoalg calcS.py __mul__ direct fetch -> byte-identical Bales-P3 doubling formula as SYMPOSIUM cd_embedding.py. _posSigs is split-form toggle (different algebra family), NOT alternative convention for standard sedenion. Bales 2015 ACA theorem: 8 doubling products yield ISOMORPHIC algebras. Brown S_3 holds in EVERY CD-convention.",
+  "recommendation": "Resolution of A3 dispute: NOTATIONAL DRIFT not mathematical disagreement. Three category-confusions identified: (C1) basis labeling drift (sequential vs hex-subset), (C2) calibration=signature confusion (_posSigs=split-form, not standard convention), (C3) ZD enumeration lens (84 pairs vs 7x3x4 reorganization). Cross-check: implement P0 and exhibit explicit isomorphism phi: S_P3 -> S_P0 (Lakatos robustness test).",
+  "references": [
+    "Bales 2017 arXiv:1707.07318 The Cayley-Dickson Doubling Products",
+    "Bales 2015 Adv.Appl.Clifford Alg. doi:10.1007/s00006-015-0638-6 [ISOMORPHISM THEOREM]",
+    "GPWilmot/geoalg calcS.py raw fetch (P3-default)",
+    "/Users/.../cd_embedding.py:30-31 (P3-default)",
+    "Wilmot arXiv:2505.11747 (calibration = STRUCTURAL enumeration, not sign convention)",
+    "discretegames/hypercomplex (P0-family iso to P3)",
+    "Cawagas 2004 (P3 epsilon=1)",
+    "Imaeda-Imaeda / Moreno (P3 rho=-1)",
+    "Köplinger conic sedenions (DIFFERENT algebra: 8 sqrt+1 + 8 sqrt-1)"
+  ],
+  "caveats": "ONLY GENUINE EXCEPTION: Köplinger conic sedenions are DIFFERENT algebra (modular+alternative+flexible), Brown S_3 does not apply. Label-collision 'sedenion' is naming hazard, not math contradiction. SYMPOSIUM R2 result stands.",
+  "confidence": "HIGH (0.92 posterior P(dispute_notational))",
+  "agentId": "prom16-reversal-A3-S2",
+  "findingId": "f_A3_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

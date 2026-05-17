@@ -12,6 +12,13 @@ ICE는 scale-free → dimensionless observable에만 예측 능력.
 4. 생존 예측 식별
 
 실행: python3 derive_dimensionless_ICE.py
+
+Historical fitting acknowledgment (propagated from KG `UEQFT_ICE_CLUE_ANALYSIS_2026_02_07`):
+    The 287/15 ≈ 19.13 ratio (UEQFT/ICE α derivation attempt) was post-hoc fitting:
+    "15를 분모로 고른 이유가 결과 맞추기. 287/14=20.5, 287/16=17.9도 가능했음."
+    alpha_derivation_status = 'numerology_suspected'.
+    See docs/STATUS.md § Fitting Detection for the propagated record.
+    Propagated 2026-05-17 per lesson-prom32-thothsaem-ueqft-claims-2026-05-17.
 """
 import numpy as np
 import json

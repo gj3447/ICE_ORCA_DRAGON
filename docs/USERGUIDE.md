@@ -207,6 +207,8 @@ jq '.fail_count_over_total' queue_02_custodial_results.json
 
 **verify_mp_mW special note**: A numerical hit of `mp / mW = 3 · 256 = 768` is a **numerology candidate**. The Fitting Detection step (was this pre-registered or post-hoc?) determines whether it gets `:Possibility` or `:NUMEROLOGY_HOLD`. Check [`STATUS.md`](STATUS.md) for current verdict.
 
+**Historical fitting acknowledgment (UEQFT/ICE 287/15)**: KG node `UEQFT_ICE_CLUE_ANALYSIS_2026_02_07` (clue_C_honest) explicitly records 287/15 ≈ 19.13 as post-hoc fitting (287/14 = 20.5 and 287/16 = 17.9 were also computationally available, suppressed after seeing the target). `alpha_derivation_status = 'numerology_suspected'`. See [`STATUS.md` § Fitting Detection](STATUS.md#fitting-detection-pre-prediction-vs-post-fitting). Propagated per `lesson-prom32-thothsaem-ueqft-claims-2026-05-17`.
+
 **Reproduce**:
 ```bash
 python verify_mp_mW_3_256.py

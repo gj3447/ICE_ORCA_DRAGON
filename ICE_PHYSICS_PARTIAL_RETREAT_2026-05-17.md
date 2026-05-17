@@ -85,17 +85,17 @@ ICE 측 다른 사도와 다른 점: 사도 #2 측 user's *mythological identifi
 
 ---
 
-## 5. RESUMPTION_HOOK (재정전화 trigger)
+## 5. RESUMPTION_HOOK (재정전화 trigger) — PROM 16 reversal 측 update 2026-05-17
 
 다음 중 하나라도 발생하면 본 retreat 측 재검토:
 
-| Trigger | Action |
-|---|---|
-| **R4 PASS**: ambient (non-projected) Aut(𝕊) commuting SU(2)×SU(2) 측 검정 측 통과 → physics layer 측 partial 복구 | retreat → partial_recovery |
-| **R7 PASS**: P2 zero-divisor filtration 측 unique ε form 도출 → MB1 theorem | retreat → retreat_lifted (L3 partial) |
-| **Wilmot 2025 dispute 측 외부 측 settled** | 본 문서 측 caveat 갱신 |
-| **사용자 verdict 측 명시적 정정** | 본 문서 측 deprecated |
-| **새 empirical 측 ICE physics-claim 측 contradicting evidence** | 본 문서 측 update |
+| Trigger | PROM 16 status | Action |
+|---|---|---|
+| **R4 PASS**: ambient (non-projected) Aut(𝕊) commuting SU(2)×SU(2) 측 검정 측 통과 → physics layer 측 partial 복구 | **VIABLE PATH IDENTIFIED**: G₂ 7-rep on Im(𝕆), 5-step gate (faithful rep / SU2_L closure / TL_TR commute / orbit faithfulness / Y centralizer), rank-2 saturation 측 G₂ × U(1)_Y ambient 강제 | retreat → partial_recovery |
+| **R7 PASS**: P2 zero-divisor filtration 측 unique ε form 도출 → MB1 theorem | **8-gate protocol (G1-G8) 필요, 현재 0/8**. 5 candidate dim {4,9,11,12,14} 측 pre-registration mandatory (numerology hazard). Citation correction: Reggiani sole author of arXiv:2411.18881 (NOT Düvel) | retreat → retreat_lifted (L3 partial) |
+| **Wilmot 2025 dispute 측 외부 측 settled** | **FALSE_ALARM_NOTATIONAL CONFIRMED** (PROM 16 A3-S2): Wilmot `calcS.py:__mul__` byte-identical to SYMPOSIUM `cd_embedding.py` P3. `_posSigs` is split-form toggle (different algebra family). Bales 2015 ACA: 8 CD doubling products yield iso algebras. Trigger 효력 약화 — 분쟁 자체 측 mathematical real 아님 | KG :CompetingVerdict + notational-drift 설명 박음 |
+| **사용자 verdict 측 명시적 정정** | 외부 input (researchable 아님) | 본 문서 측 deprecated |
+| **새 empirical 측 ICE physics-claim 측 contradicting evidence** | **3/5 historical anomalies RESOLVED 2024-2025** (muon g-2 / CDF W / R(K)). 2 LIVE (R(D*), B→Kνν) without ICE pre-registered predictions. Bayesian P(ICE validated) 0.20 → 0.08. MB1-MB6 rigor bar mandatory before reversal | 본 문서 측 update; pre-registration timestamp gate 필수 |
 
 ---
 

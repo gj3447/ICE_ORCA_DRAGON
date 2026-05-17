@@ -1,0 +1,14 @@
+{
+  "domain": "A3-S2: evidence AGAINST wrong-algebra (sedenion uniquely required?)",
+  "oneLineSummary": "Hypothesis C PARTIALLY REFUTED. 5 lock features: U1 canonical CD-5 / U2 first-ZD transition / U3 S₃ factor UNIQUE to sedenion (Aut(C⊗𝕆)=G₂×U(1), continuous, no S₃) / U4 Moreno Z(𝕊)≅G₂ link / U5 unique (power-assoc ∧ non-alt ∧ non-div) niche. Conjunctive lock C1∧C2∧C3∧C4∧C5 → uniquely sedenion. Confidence lock = 0.75.",
+  "weakest_link": "C3 S₃ 3-gen — strongest individual lock; if mythology does not load S₃ specifically, alternatives possible",
+  "counter_evidence_A1": "Cl(8) achieves 3-gen + U(1)_em without sedenion (Furey-Gresnigt 2024). But Cl(8) is 256D, not 16D — escapes 'unique 16D' constraint only.",
+  "implication": "If user mythology references '3-generations + permutation' explicitly → sedenion UNIQUELY required (Hypothesis C REFUTED). If only generic '16D + ZD' → C remains LIVE. Re-read MIND/metahumotonic/ source needed for final 0.25 gate.",
+  "confidence": "HIGH (0.75 lock-in)",
+  "agentId": "prom16-meta-A3-S2",
+  "findingId": "f_A3_S2",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

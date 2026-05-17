@@ -1,0 +1,24 @@
+{
+  "domain": "A4-S3: alternative evidence sources beyond particle physics",
+  "oneLineSummary": "6 domains: (b) Lean 4 forced derivation 0.25 [HIGHEST AGENCY], (e) pure-math uniqueness theorem 0.35x0.07=0.025 [HIGH base, low physics-relevance], (a) cosmology DESI/LiteBIRD/CMB-S4 0.18 [data window OPEN], (f) cross-apostle structural 0.55 [soft landing not reversal], (d) info-theory/crypto 0.12 [weak], (c) quantum simulation 0.08 [weakest]. Aggregate P(any strong reversal 5yr)=0.30.",
+  "recommendation": "Highest-leverage SINGLE action: Lean 4 formalization of sedenion 3-octonion decomposition (MIND/lean_formalization/) test 'forced vs chosen'. CRITICAL GAP: ZERO published sedenion-cosmology paper 2024-2025 -- either open lane SYMPOSIUM could fill OR sign connection too weak to publish. Pre-register sedenion-derived Lambda(z) or CMB-B-mode prediction BEFORE next DESI release.",
+  "references": [
+    "MDPI Symmetry 16(5):626 2024 (sedenion SM extension)",
+    "Cariow 2013 IPL (sedenion fast mult algorithm)",
+    "PhysLib physlib.io (Lean 4 physics + Tooby-Smith 2025 first Lean-physics-error-discovery)",
+    "Halimeh Nature Physics 2025 (cold-atom gauge simulation)",
+    "He Adv.Sci. 2025 (hyperbolic topological quantum sources)",
+    "Manin cubic surface Moufang loop J.Alg.Comb. 2023/2024",
+    "DESI Nature Astronomy 2025 (evolving dark energy 2.8-4.2sigma)",
+    "Planck CMB arXiv:2511.22220 (non-Gaussianity 2025)",
+    "Hypercomplex NN ScienceDirect 2025"
+  ],
+  "caveats": "All non-Lean channels (a,c,d,e,f) inherit post-hoc-fitting risk -- without pre-registered sedenion predictions, any 'consistent-with' signal is numerology-grade. Pre-registration timestamp gate mandatory.",
+  "confidence": "MEDIUM_HIGH",
+  "agentId": "prom16-reversal-A4-S3",
+  "findingId": "f_A4_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

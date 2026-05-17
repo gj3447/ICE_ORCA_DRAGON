@@ -6,6 +6,71 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-05-18 — tenth pass] — PROM 16 meta-diagnosis (hypothesis α+δ 합성)
+
+> User verdict "그렇게 해줘봐봐" — combine α (meta-diagnosis 4 hypothesis) + δ (degenerating audit).
+
+### Added
+- `PROM_16_META_DIAGNOSIS_REPORT.md` — 4 hypothesis × 4 sub-axis 매트릭스 (6 consensus + 3 divergence + 8 OQ + 9 ActionPlan T1-T9)
+- `_findings/prom16-hypercomplex-physics-meta/f_A{1..4}_S{1..4}.json` — 16 FullFindingRecord JSON (100+ citations)
+
+### Cycle-novel finding 1: 3 agents 측 Tüchsen 2024 EJPS 측 독립 수렴
+**Tüchsen "Stagnant Lakatosian Research Programmes" (arXiv:2404.18307)** — progressive/degenerating 이분법 너머 *third category* 제안. ICE/hypercomplex 측 정확한 분류 = STAGNANT (hard core 보존 + sharp prediction 부재 + falsifiable test 안 됨). f_A4_S1 + f_A4_S2 + f_A4_S3 측 독립 수렴.
+
+### Cycle-novel finding 2: ICE asymmetric Lakatos verdict
+algebra core PROGRESSIVE (Brown 1967 + Moreno 1998 + Reggiani 2024 + 5 queue_* CONFIRMED) + physics belt DEGENERATING (queue_02 100% fail + derive_* self-REFUTED + 86% LEE null pass + 0/6 MB criteria). 단일 verdict = drift; bifurcated verdict mandatory.
+
+### Cycle-novel finding 3: workbench-reframe (option iii) 측 DOMINANT
+f_A4_S4 측 E[value(math+mythology+workbench)] > 0.7 vs E[true positive of physics claim] = 0.08. Cost of denial dominated. Reclassify ICE_ORCA_DRAGON 측 `:PhysicsTheoryProgramme` → `:HypercomplexHypothesisTestbench`.
+
+### Cycle-novel finding 4: Aut(ℂ⊗𝕆) = G₂×U(1) (continuous, no S₃) 측 sedenion S₃ uniqueness lock
+f_A3_S2 + f_A3_S4 측 sedenion uniquely required IF mythology loads on (16D ∧ ZD ∧ S₃ ∧ G₂-link). Bioctonion 측 ZD-free + Aut continuous → S₃ family symmetry 측 lose. 측 user verdict on which referent is soft 필요.
+
+### Cycle-novel finding 5: 5-year operational discriminator P1-P5 window 2026-2031
+f_A4_S3 측 P1 (pre-measurement prediction) / P2 (BSM review citation) / P3 (experimental motivation) / P4 (Tier-1 institute program) / P5 (independent extending replication). 현재 0/5 satisfied.
+
+### 4 hypothesis Bayesian frame (mutually compatible)
+- A pure math only: 0.82
+- B wrong projection: 0.78
+- C wrong algebra: 0.40 (partial)
+- D program degenerating: 0.78 (Tüchsen: STAGNANT)
+
+### 16 finding 통계
+- 16/16 subagents successful, ~12 min parallel wall time
+- 100+ unique academic/OSS refs
+- 가장 강한 inter-agent convergence: Tüchsen 2024 EJPS
+
+# KG: cycle prom16-hypercomplex-physics-meta-2026-05-18, asymmetric Lakatos, workbench-reframe DOMINANT, Tüchsen STAGNANT crystallization
+
+---
+
+## [2026-05-17 — ninth pass] — PROM 16 cycle on 5 RESUMPTION_HOOK triggers
+
+> User verdict "이거 관련 prom 좀 해줘봐봐" — 5 reversal triggers (R4/R7/Wilmot/user/new-evidence) researched.
+
+### Added
+- `PROM_16_REVERSAL_REPORT.md` — 4 axis × 4 sub-axis matrix synthesis (9 consensus + 3 divergence + 8 OQ + 7 ActionPlan T1-T7)
+- `_findings/prom16-ice-retreat-reversal/f_A{1..4}_S{1..4}.json` — 16 FullFindingRecord JSON (120+ citations harvested)
+
+### Top empirical finding (cycle-novel)
+- **A3-S2 byte-identity**: Wilmot 2025 `geoalg/calcS.py:__mul__` raw fetch shows P3 doubling formula **byte-identical** to SYMPOSIUM `cd_embedding.py:30-31`. `_posSigs` is split-form sedenion toggle (different algebra family), NOT alternative convention for standard sedenion. Bales 2015 ACA isomorphism theorem: 8 doubling products yield iso algebras. → **Wilmot dispute is FALSE_ALARM_NOTATIONAL, not mathematical disagreement.**
+
+### 4 trigger findings synthesis
+- **R4 (A1)**: SO(4)=(SU(2)_L × SU(2)_R)/Z₂ is unique maximal rank-2 semisimple of G₂ (Borel-de Siebenthal 1949). Branching 7=(2,2)+(1,3) bidoublet; 14=(3,1)+(1,3)+(2,4) custodial AUTOMATIC. 4 candidate reps share Wolf-space isotropy. Rank-2 saturation forces G₂ × U(1)_Y ambient (Das-Laporta-Mitra 2021 Sci.Rep.).
+- **R7 (A2)**: P2 partially grounded (ZD locus + Gauss law canonical), critically novel bridge (algebra → spatial-dim NO PRECEDENT). Jacobian rank=4 → dim Z(𝕊)=12, normalized=11=V₂(ℝ⁷). 5 candidate dim post-fit risk. 8-gate protocol (G1-G8) currently 0/8 met. Citation correction: Reggiani (not Düvel) sole author of arXiv:2411.18881.
+- **Wilmot (A3)**: byte-identity finding closes dispute. PATH_B (GAP brute-force) redundant after this. Maintain :CompetingVerdict with notational-drift explanation.
+- **New evidence (A4)**: 3 of 5 historical anomalies RESOLVED 2024-2025 (muon g-2, W-mass, R(K)). 2 LIVE (R(D*), B→Kνν) without ICE pre-registered predictions. Bayesian P(ICE validated) 0.20 → 0.08. CDF/CMS case study justifies MB1-MB6 rigor bar.
+
+### Cycle metrics
+- 16/16 subagents successful, ~12 min parallel wall time
+- 120+ unique citations across 4 axes
+- 5 cycle-novel findings + 7 ActionPlan items (T1-T7)
+- Strongest empirical move: T2 (사용자 verdict required on R7 5 candidate dim pre-registration) + T3 (R4 ambient SU(2)×SU(2) attempt, 1-2 weeks)
+
+# KG: cycle_id=prom16-ice-retreat-reversal-2026-05-17, 16/16 verified, A3-S2 false-alarm-notational, R4 viable path identified, R7 8-gate protocol
+
+---
+
 ## [2026-05-17 — eighth pass] — Physics-prediction layer 부분 후퇴 정전화 (option 2)
 
 > User verdict "2번으로 한번 드가줘봐봐" — joint R1+R2+R3 empirical 결과를 받아들이고 ICE physics-prediction 측 partial retreat 공식화.

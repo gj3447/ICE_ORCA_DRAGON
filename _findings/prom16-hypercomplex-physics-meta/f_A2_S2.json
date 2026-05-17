@@ -1,0 +1,15 @@
+{
+  "domain": "A2-S2: evidence AGAINST wrong-projection",
+  "oneLineSummary": "EVIDENCE AGAINST B SUBSTANTIAL (0.72). 5 reasons projection is NOT bottleneck: (a) Hurwitz wall (algebras terminate at O, sedenion violates norm composition); (b) ZDs encode degeneracy not physics; (c) all past projection-shopping stalled 25+ years; (d) G₂ geometry primary, octonion incidental in M-theory; (e) historical track record — 'right algebra wrong projection' claims get abandoned as 'wrong algebra after all'.",
+  "best_case_for_B": "Exhibit projection that avoids ZD-degenerate sectors AND recovers G₂ as Lie algebra (not just topology) AND extracts more than Clifford-ideal content already accessible from octonion.",
+  "worst_case_for_B": "If all ICE projections factor through complex-sedenion left-ideals → Clifford, sedenion is decorative; real algebra is Clifford.",
+  "diagnostic_test": "Find any prediction/structure derivable from CD-sedenion NOT derivable from C⊗O (Dixon) plus Clifford(1,9). If empty → B unrescuable.",
+  "lakatos": "DEGENERATING (provisional) — sedenion-physics adds auxiliary hypotheses without novel predictions",
+  "confidence": "HIGH (0.72)",
+  "agentId": "prom16-meta-A2-S2",
+  "findingId": "f_A2_S2",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

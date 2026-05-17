@@ -1,0 +1,21 @@
+{
+  "domain": "A2-S2: R7 zero-divisor filtration computation",
+  "oneLineSummary": "VERIFIED COMPUTABLE. Jacobian rank=4 at e_1+e_10 ZD point -> dim Z(S)=12 in R^16, normalized=11=V_2(R^7)=G_2/SU(2). User option (d) 16-7=9 is INCORRECT (conflates Der(O) g_2-fixed subspace with ZD locus). 5 candidate dims {4, 9, 11, 12, 14} = post-fit numerology hazard.",
+  "recommendation": "7-step sequence: (1) add D_1, D_2 polynomials (from arXiv:2512.13002 Thm 3.7) + Jacobian-rank test -> zd_locus_filtration.py ~30 LOC; (2) Monte Carlo PCA confirmation 1M samples; (3) PRE-REGISTRATION of which dim is the spatial fiber BEFORE deriving epsilon; (4) compute G_2 action on (a,b) ZD pairs; (5) Riemannian volume of geodesic ball B_r in V_2(R^7); (6) compare to ICE derive_epsilon; (7) Lakatos verdict.",
+  "references": [
+    "Moreno 1998",
+    "arXiv:2411.18881 Reggiani 2024",
+    "arXiv:2512.13002 Dec 2025 (det L_v = D_1^4 D_2^2)",
+    "Cawagas 2004",
+    "Lygeros 2006 (42 Assessors)",
+    "Stiefel manifold V_2(R^7) = G_2/SU(2) homogeneous space"
+  ],
+  "caveats": "5 candidate dims (4/9/11/12/14) provides post-hoc fitting capability. ANY can match ICE n_eff=7 via formula like '11-4=7' (Cardano-style numerology). MUST pre-register before computing -- otherwise NUMEROLOGY_HOLD per numerology_mc_judge.py.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A2-S2",
+  "findingId": "f_A2_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

@@ -1,0 +1,28 @@
+{
+  "domain": "A4-S2: experiments that could constrain ICE predictions",
+  "oneLineSummary": "Tier 1 RESULTS-NOW (LZ Dec 2025 world-best WIMP + boron-8 CEvNS 4.5sigma; KATRIN <0.45 eV; ATLAS Run-3 kappa_lambda in [-1.6,+6.6]; JUNO Nov 2025 first results delta-m^2_21 world-leading). Tier 2 IMMINENT 2026-2030 (HL-LHC 2030 7sigma diHiggs/30% kappa_lambda; DUNE FD1 2028; XLZD construction 2026+; ESPPU Budapest May 2026; FCC-ee decision ~2028). Tier 3 2030+ (FCC-ee ops late-2040s).",
+  "recommendation": "Constraint ranking: (1) Higgs precision HL-LHC + FCC-ee = DIRECT EWSB/custodial probe; (2) Lattice QCD/technicolor = only non-perturbative tool for S1-S7; (3) Neutrino convergence 2026-2031; (4) Short-range gravity STRONG if ICE Yukawa-form sub-mm; (5) DM depends on candidate. Falsification windows: HL-LHC 2030-2032, FCC-ee 2028 decision, JUNO 2031, DUNE 2035-2038.",
+  "references": [
+    "Eot-Wash NPL Washington inverse-square-law",
+    "ATLAS Updates Higgs-Self-Interaction-Run-3",
+    "CMS Higgs 2025",
+    "PDG 2025 W-mass review",
+    "arXiv:2504.00672 HL-LHC ESPPU input",
+    "JUNO CERN Courier Aug 2025 first results",
+    "KATRIN Science 2025 doi:10.1126/science.adq9592",
+    "KamLAND-Zen arXiv:2406.11438",
+    "LZ Dec 2025 PRL d7mg-6sqq",
+    "XLZD consortium",
+    "ADMX arXiv:2502.08493",
+    "DUNE arXiv:2502.08493",
+    "USQCD BSM white paper"
+  ],
+  "caveats": "Eot-Wash 52um (2020) still stands. Next-gen cryo torsion balance + Müller-Berkeley 100x AI in commissioning; no firm 2026-2030 milestone. XLZD ops not firmly dated. FCC-ee contingent on ESPPU May 2026.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A4-S2",
+  "findingId": "f_A4_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

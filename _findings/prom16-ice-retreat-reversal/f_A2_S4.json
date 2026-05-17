@@ -1,0 +1,23 @@
+{
+  "domain": "A2-S4: R7 novel research pitfalls + verification bar",
+  "oneLineSummary": "5 pitfalls + R7-VP-v1 protocol (8 gates G1-G8): pre-registration, constants provenance, counterfactual table, independent observable, Lean 4 formalization, 88-taliban adversarial, VVUQ, LEE correction. Current R7 score: 0/8 fully met. Trial space estimate: 8 invariants x 5 maps x 6 observables = 240 trials -> family-wise null pass approx 86%.",
+  "recommendation": "BLOCK R7 retreat-reversal until R7-VP-v1 :Contract registered + G1 (pre-reg) + G3 (counterfactual) passed. KEY INSIGHT (NF3): G2 form-uniqueness theorem (MB1) OBVIATES trials factor (uniqueness -> trials=1 -> LEE drops). Lean 4 Mathlib-sister project ready for G5. /88-taliban for G6. Lakatos classification for G7.",
+  "references": [
+    "Lakatos SEP Stanford Encyclopedia",
+    "Gross-Vitells EPJC 70:525 (2010) trial factor",
+    "Nosek et al PNAS 2018 preregistration revolution",
+    "Wikipedia Replication crisis (69% physicists failed reproduction)",
+    "Frolov 2026 Pitt (physics not immune)",
+    "Oberkampf-Trucano-Hirsch VVUQ OSTI",
+    "Bayesian LEE arXiv:2007.13821",
+    "Aeon Lakatos essay"
+  ],
+  "caveats": "Replication crisis affects physics too (Frolov 2026 Pitt). SYMPOSIUM-original needs at minimum Lean 4 formal verification OR independent peer review. Trial factor 240 -> ~2.5sigma local lost in global. Standard discovery threshold = 5sigma global.",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A2-S4",
+  "findingId": "f_A2_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

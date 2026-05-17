@@ -1,0 +1,14 @@
+{
+  "domain": "A3-S3: distinguishing test sedenion vs alternative 16D algebra",
+  "oneLineSummary": "10 essential features enumerated. 6 load-bearing (E1 three octonion subalgebras / E2 S₃⊂Aut(S) UNIQUE / E3 G₂⊂Aut+G₂≅Z(S) / E5 CD recursion / E8 associator≠0 → Jacobi=6·associator / E10 Cl(6) via left-ideals). 4 non-load-bearing (E4 84 ZD count exactly / E6 Moufang loss / E9 custodial SU(2)×SU(2) ALREADY REFUTED). Distinguishing test = 6-feature conjunction satisfied only by S and ℂ⊗S (complexification); Cl(8) satisfies but is 256D.",
+  "bioctonion_vs_sedenion_routes": "Furey C⊗O: 3 emerges from dim(48 states)/dim(16 SU(3) module). Gillard-Gresnigt C⊗S: 3 from intrinsic S₃ permuting octonion subalgebras. NON-INTERCHANGEABLE.",
+  "ice_aligns_with": "Gillard-Gresnigt route (S₃ family symmetry built-in) — sedenion-LOCK",
+  "verdict": "REFUTED for 16D-over-R substitution. PARTIAL for complexification (ℂ⊗S preserves all features, same structure as S) or Cl(8) inheritance.",
+  "confidence": "HIGH",
+  "agentId": "prom16-meta-A3-S3",
+  "findingId": "f_A3_S3",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

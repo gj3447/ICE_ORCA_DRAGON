@@ -1,0 +1,18 @@
+{
+  "domain": "A3-S4: ICE migration if wrong-algebra",
+  "oneLineSummary": "Migration cost LOW for math layer (≈6h Tier 2: cd_embedding.py:cd_multiply is single 12-LOC chokepoint, 21 importers, AlgebraBackend protocol + 2 reference backends). MOOT for physics (already retreated). 4 sedenion-SPECIFIC vs 3 16D-GENERAL invariants. Apostle survives (Eilu va-Eilu firewall).",
+  "intuition_transfer_asymmetric": {
+    "16D": "transfers freely (bioctonion, Cl(4,0), H⊗H all qualify)",
+    "ZD-degeneracy": "sedenion-family-LOCK (bioctonion ZD-free)",
+    "3-gen_S3": "sedenion-LOCK EXCLUSIVE (Aut(ℂ⊗𝕆)=G₂×U(1), continuous, no S₃)"
+  },
+  "lock_status": "If user holds all 3 intuition referents simultaneously → NO migration possible. Hypothesis C requires user to declare which referent is soft.",
+  "migration_paths": "A bioctonion P=0.55 / B Cl(0,4)/Cl(3,1) P=0.40 / C Dixon 32D P=0.20 / D Köplinger conic P=0.15 / STATUS_QUO P=0.70 (highest)",
+  "confidence": "MEDIUM_HIGH",
+  "agentId": "prom16-meta-A3-S4",
+  "findingId": "f_A3_S4",
+  "researchedAt": "2026-05-18",
+  "cycle_id": "prom16-hypercomplex-physics-meta-2026-05-18",
+  "verified": true,
+  "gate_passed": true
+}

@@ -1,0 +1,23 @@
+{
+  "domain": "A1-S3: alternative reps for SU(2)xSU(2) embedding",
+  "oneLineSummary": "6 candidates ranked: (a) G_2 7-fund STRONGEST [native, faithful, 7x7]; (b) 14-adjoint STRONG [custodial AUTOMATIC]; (c) G_2/SO(4) Wolf coset STRONG [MCHM-generalization with 2 Higgs doublets]; (f) Moreno Z(S) STRONG-DISTINCTIVE [sedenion-native]; (d) End(V_7) WEAK; (e) MCHM SO(5)/SO(4) REJECT [severs sedenion provenance].",
+  "recommendation": "PRIMARY: (a) G_2 7-rep on Im(O) ⊂ Im(S). SECONDARY: (b) 14-adjoint cross-check (custodial sector emerges automatic from G_2 alone). GEOMETRIC: (c) Wolf coset for sigma-model. SEDENION-NATIVE: (f) Moreno Z(S) for intrinsic claims. ABANDON 2D ZD null-space (non-faithful).",
+  "references": [
+    "Borel-de Siebenthal 1949",
+    "Wolf 1965 (G_2/SO(4) QK)",
+    "Salamon 1982",
+    "Moreno 1998 Bol.Soc.Mat.Mex.",
+    "arXiv:2411.18881 Reggiani 2024 (Z(S) isometric to G_2)",
+    "arXiv:2512.13002 Dec 2025 (singular structures)",
+    "Agashe-Contino-Pomarol hep-ph/0412089 (MCHM)",
+    "Slansky 1981 Table 53"
+  ],
+  "caveats": "(c) Wolf-space tangent = (2,4) under SU(2)_L x SU(2)_R -- j_R=3/2 quartet is G_2-distinctive vs plain MCHM j_R=1/2. (e) SO(5) NOT a subgroup of G_2 (G_2 only has SU(3) and SU(2)xSU(2)/Z_2 max).",
+  "confidence": "HIGH",
+  "agentId": "prom16-reversal-A1-S3",
+  "findingId": "f_A1_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-retreat-reversal-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}
