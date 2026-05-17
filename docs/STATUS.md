@@ -224,7 +224,9 @@ When a result is classified `discovery`, `/apt-sp` dispatch is currently manual.
 
 ---
 
-## Roadmap (post PROM 16 prom16-ice-residual 2026-05-17)
+## Roadmap
+
+> Updated post PROM 16 `prom16-ice-residual-2026-05-17`.
 
 1. **External peer review for Der(S) = g₂** — submit arXiv preprint (g₂ 16-vs-14 in `queue_08_g2` confirmed METHOD_ARTIFACT, 2026-05-17 — non-alternative sedenion ambient breaks octonion derivation formula closure)
 2. ✅ **MC p-value tests for numerology candidates** — Koide Q + mp/mW done (`numerology_mc_judge.py`). Remaining: c=4·ln(2), Bekenstein-connection.
