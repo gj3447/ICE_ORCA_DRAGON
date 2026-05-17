@@ -1,13 +1,17 @@
 {
+  "verdict": "NUMEROLOGY_HOLD",
+  "verdict_reasoning": "Adelberger pass rate under wide-prior null = 23.8% (not trivially permissive). Gate has discriminatory power, but ICE did not pre-predict a specific epsilon form -- the script enumerates 7 forms and reports 5 pass. Post-hoc enumeration without pre-prediction remains NUMEROLOGY_HOLD even though the constraint itself has teeth. Upgrade to CONFIRMED or SIGNAL requires ICE-derived unique form prediction first.",
+  "verdict_source": "numerology_mc_judge.py 2026-05-17 (supersedes 2026-05-14 ledger)",
+  "verdict_date": "2026-05-17",
   "A: Yukawa_tower (Planck scale)": {
     "adelberger_pass": true,
     "observable_scales": []
   },
-  "B1: Power_law (Planck, \u03b1=2)": {
+  "B1: Power_law (Planck, α=2)": {
     "adelberger_pass": true,
     "observable_scales": []
   },
-  "B2: Power_law (\u03bcm, \u03b1=2)": {
+  "B2: Power_law (μm, α=2)": {
     "adelberger_pass": true,
     "observable_scales": [
       {
@@ -28,7 +32,7 @@
       }
     ]
   },
-  "B3: Power_law (nm, \u03b1=2)": {
+  "B3: Power_law (nm, α=2)": {
     "adelberger_pass": true,
     "observable_scales": [
       {
@@ -49,7 +53,7 @@
     "adelberger_pass": true,
     "observable_scales": []
   },
-  "D1: Oscillatory (\u03bcm)": {
+  "D1: Oscillatory (μm)": {
     "adelberger_pass": false,
     "observable_scales": [
       {
@@ -98,5 +102,10 @@
         "epsilon": 0.6003718501660928
       }
     ]
-  }
+  },
+  "verdict_reasoning_prior": "Dimensional analysis category locally degenerating (STATUS.md). epsilon power-law sweeps span 18 orders of magnitude with adelberger_pass=true but observable_scales mostly absent; no pre-registered prediction. Post-fit.",
+  "mc_evidence_ref": "numerology_mc_results.json :: claim_E_epsilon_adelberger",
+  "mc_p_e_given_not_h": 0.2384,
+  "mc_null_model": "random power-law eps0/r0/alpha log-uniform; Adelberger gate check",
+  "mc_verdict_reasoning": "Adelberger pass rate under wide-prior null = 23.8% (not trivially permissive). Gate has discriminatory power, but ICE did not pre-predict a specific epsilon form -- the script enumerates 7 forms and reports 5 pass. Post-hoc enumeration without pre-prediction remains NUMEROLOGY_HOLD even though the constraint itself has teeth. Upgrade to CONFIRMED or SIGNAL requires ICE-derived unique form prediction first."
 }

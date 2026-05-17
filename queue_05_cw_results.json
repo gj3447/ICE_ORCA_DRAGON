@@ -1,5 +1,9 @@
 {
-  "SM-like (3 gen \u00d7 1 \u2192 3 fermion, 4 EW boson)": {
+  "verdict": "CONFIRMATION_LOCAL",
+  "verdict_reasoning": "4/4 scenarios show SSB=True with bounded V_min (SM-like / ICE orbit-like / G2 fundamental / Reverse). Coleman-Weinberg potential bounded across regimes. Toy; no external peer review.",
+  "verdict_source": "result-inspection-2026-05-17",
+  "verdict_date": "2026-05-17",
+  "SM-like (3 gen × 1 → 3 fermion, 4 EW boson)": {
     "n_f": 3,
     "n_b": 4,
     "phi_min": 1.6500000000000001,
@@ -13,14 +17,14 @@
     "V_min": -5.102300774702513,
     "ssb": "True"
   },
-  "G\u2082 fundamental fermion (7 f, 3 b)": {
+  "G₂ fundamental fermion (7 f, 3 b)": {
     "n_f": 7,
     "n_b": 3,
     "phi_min": 5.0,
     "V_min": -6.80306769960335,
     "ssb": "True"
   },
-  "Reverse: 1 f, 3 b \u2192 SSB": {
+  "Reverse: 1 f, 3 b → SSB": {
     "n_f": 1,
     "n_b": 3,
     "phi_min": 1.6500000000000001,

@@ -1,0 +1,106 @@
+{
+  "verdict": "RESOLVED",
+  "verdict_reasoning": "Three NUMEROLOGY_HOLD items judged by explicit MC null models. All three resolve to NUMEROLOGY_CONFIRMED at the operational threshold (P(E|~H) >= 0.5).",
+  "verdict_source": "numerology_mc_judge.py 2026-05-17",
+  "verdict_date": "2026-05-17",
+  "decision_rule": {
+    "SIGNAL_GENUINE": "P(E|~H) < 0.01 (look-elsewhere corrected)",
+    "SIGNAL_WEAK": "0.01 <= P(E|~H) < 0.5",
+    "NUMEROLOGY_CONFIRMED": "P(E|~H) >= 0.5"
+  },
+  "summary": {
+    "Koide_Q_2_over_3": "NUMEROLOGY_CONFIRMED",
+    "mp_mW_3x256_literal": "NUMEROLOGY_CONFIRMED",
+    "mp_mW_layer3_a2n_fit": "NUMEROLOGY_CONFIRMED",
+    "epsilon_adelberger_screening": "SIGNAL_WEAK"
+  },
+  "claim_K_koide_2_3": {
+    "null_model": "random a/b from ICE-like atomic integer set; 499 candidates per trial",
+    "atomic_set": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      14,
+      24,
+      42
+    ],
+    "n_candidates_per_trial": 499,
+    "n_trials": 20000,
+    "tolerance_rel": 0.005,
+    "per_target": {
+      "target=0.666667": {
+        "p_at_least_one_match": 0.99925,
+        "verdict": "NUMEROLOGY_CONFIRMED"
+      },
+      "target=0.500000": {
+        "p_at_least_one_match": 1.0,
+        "verdict": "NUMEROLOGY_CONFIRMED"
+      },
+      "target=0.333333": {
+        "p_at_least_one_match": 1.0,
+        "verdict": "NUMEROLOGY_CONFIRMED"
+      },
+      "target=0.750000": {
+        "p_at_least_one_match": 0.96915,
+        "verdict": "NUMEROLOGY_CONFIRMED"
+      },
+      "target=0.375000": {
+        "p_at_least_one_match": 0.97005,
+        "verdict": "NUMEROLOGY_CONFIRMED"
+      },
+      "target=0.050000": {
+        "p_at_least_one_match": 0.0,
+        "verdict": "SIGNAL_GENUINE"
+      },
+      "target=1.000000": {
+        "p_at_least_one_match": 1.0,
+        "verdict": "NUMEROLOGY_CONFIRMED"
+      },
+      "target=0.312500": {
+        "p_at_least_one_match": 0.0,
+        "verdict": "SIGNAL_GENUINE"
+      }
+    },
+    "p_any_target_hit": 1.0,
+    "verdict_overall": "NUMEROLOGY_CONFIRMED",
+    "interpretation": "The 499-ratio ensemble drawn from any ICE-like small-integer atomic set produces at least one near-hit to 2/3 (or any small-rational target) with p ~ 1. Therefore the observed Koide_Q=2/3 'derivation' carries no information beyond combinatorial inevitability."
+  },
+  "claim_M1_mp_mW_literal": {
+    "observed_mp_over_mW": 0.011673098694932755,
+    "predicted_literal_3x256": 768,
+    "rel_diff_literal_pct": 6579129.903482147,
+    "predicted_reciprocal_1_over_3x256": 0.0013020833333333333,
+    "rel_diff_reciprocal_pct": 88.84543541211929,
+    "best_match_form": "1/(3*256) = 1/768 = 0.001302",
+    "best_match_rel_diff_pct": 88.84543541211929,
+    "verdict": "NUMEROLOGY_CONFIRMED",
+    "interpretation": "Even with the most charitable reading (1/(3*256) vs observed 0.01168), literal hypothesis is off by an order of magnitude. layer1 had already reported n_sigma=26.2."
+  },
+  "claim_M2_mp_mW_layer3": {
+    "null_model": "random R log-uniform in [1e-4, 1e2]; search a in [1,500000] x n in [14..19]",
+    "search_space_size": 3000000,
+    "threshold_rel": 0.001,
+    "n_trials": 5000,
+    "p_random_R_fits_within_0.1pct": 0.8118,
+    "median_best_err": 1.2929847028883305e-05,
+    "verdict": "NUMEROLOGY_CONFIRMED",
+    "interpretation": "Search space 500000 x 6 = 3,000,000 candidate (a,n) pairs per R. For ARBITRARY R drawn log-uniformly in [1e-4, 1e2], some (a, 2^n) hits within 0.1% with p = 0.812. This is rational approximation, not a physical derivation."
+  },
+  "claim_E_epsilon_adelberger": {
+    "null_model": "random power-law eps0 log-uniform [1e-15,1e5], r0 log-uniform [1e-15,1e-2], alpha uniform [0.5,3.0]",
+    "n_trials": 20000,
+    "adelberger_pass_rate_under_null": 0.2384,
+    "bounds": {
+      "eps_at_1mm_lt": 0.001,
+      "eps_at_56um_lt": 0.01
+    },
+    "verdict": "SIGNAL_WEAK",
+    "interpretation": "Under a wide-prior null, 23.8% of random power-law modifications of Newton gravity pass Adelberger. The 'passes Adelberger' criterion is therefore not evidence for the ICE epsilon scheme; it is a permissive screening that nearly any sufficiently-small modification clears."
+  }
+}

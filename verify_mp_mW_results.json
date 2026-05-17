@@ -1,4 +1,8 @@
 {
+  "verdict": "NUMEROLOGY_CONFIRMED",
+  "verdict_reasoning": "layer1 literal 3*256 vs observed mp/mW off by O(10) even with reciprocal interpretation (88.8% rel_diff). layer3 a*2^n search space ~3M candidates per ratio: under null, 81.2% of random R fit within 0.1%. This is rational approximation, not physics. Promotion from HOLD.",
+  "verdict_source": "numerology_mc_judge.py 2026-05-17 (supersedes 2026-05-14 ledger)",
+  "verdict_date": "2026-05-17",
   "layer1_precision": {
     "n_sigma": 26.195022031424756,
     "rel_diff": 0.39107262427432393
@@ -62,13 +66,20 @@
     }
   ],
   "layer5_flags": {
-    "truncation": "\u26a0\ufe0f WARN: CD level 8 (256) choice not uniquely determined by ICE",
-    "scale_mismatch": "\u2713 OK",
-    "scheme_indep": "\u2713 OK (unique ratio, just scaled)",
-    "post_hoc": "\u26a0\ufe0f WARN: 3/256 found by matching, not derived a priori",
-    "derivation": "\u274c NONE: No ICE-specific reason why 3/256 emerges",
-    "convergence": "\u2713 OK (fixed ratio)",
-    "consistency": "\u2713 PASS: 8/8 other ratios fit pattern"
+    "truncation": "⚠️ WARN: CD level 8 (256) choice not uniquely determined by ICE",
+    "scale_mismatch": "✓ OK",
+    "scheme_indep": "✓ OK (unique ratio, just scaled)",
+    "post_hoc": "⚠️ WARN: 3/256 found by matching, not derived a priori",
+    "derivation": "❌ NONE: No ICE-specific reason why 3/256 emerges",
+    "convergence": "✓ OK (fixed ratio)",
+    "consistency": "✓ PASS: 8/8 other ratios fit pattern"
   },
-  "taliban_verdict": "WARN \u2014 partial signatures, needs more work"
+  "taliban_verdict": "WARN — partial signatures, needs more work",
+  "verdict_reasoning_prior": "layer1 rel_diff=39.1% (n_sigma=26.2) — mp/mW=3*256 hypothesis far off observed ratio. layer3 best_a values arbitrary (e.g., a=462143 for mW/mZ). Existing taliban_verdict='WARN — partial signatures, needs more work'. Fitting Detection: post-fit, no pre-registered prediction. STATUS.md marks as candidate; Fitting Detection now resolves to HOLD.",
+  "mc_evidence_ref": "numerology_mc_results.json :: claim_M1_mp_mW_literal + claim_M2_mp_mW_layer3",
+  "mc_p_e_given_not_h_layer3": 0.8118,
+  "mc_layer1_rel_diff_literal_pct": 6579129.903482147,
+  "mc_layer1_rel_diff_reciprocal_pct": 88.84543541211929,
+  "mc_null_model_layer3": "random R log-uniform, search a in [1,500000] x n in {14..19}",
+  "mc_verdict_reasoning": "layer1 literal 3*256 vs observed mp/mW off by O(10) even with reciprocal interpretation (88.8% rel_diff). layer3 a*2^n search space ~3M candidates per ratio: under null, 81.2% of random R fit within 0.1%. This is rational approximation, not physics. Promotion from HOLD."
 }

@@ -1,0 +1,26 @@
+{
+  "domain": "A4-S2: composite/extra-dim epsilon(r) derivation models",
+  "oneLineSummary": "Only ADD's short-range 1/r^(n+1) is FORCED-UNIQUE (pure Gauss law in higher-dim). RS2 log + 1/(kr)^2 unique GIVEN AdS5. All others (RS1/KK/string) form-unique-Yukawa but params SELECTED. NO hypercomplex program (Dixon/Furey/Sorgsepp-Lohmus/Koplinger/Demir-Tanisli/Wei) derives epsilon(r) -- they reformulate.",
+  "rootCause": "3 obstructions for sedenion 16D: (i) algebraic basis NOT spatial manifold -- no Gauss-flux dilution argument; (ii) zero divisors break norm/composition needed for flux conservation; (iii) all extant sedenion physics is repackaging.",
+  "recommendation": "3 novel paths to unique form: P1 internal KK reinterpret (12 compactified directions, but topology SELECTED); P2 zero-divisor filtration (n_eff = 16 - dim(ZD-locus) -> 1/r^(n_eff+1) potentially UNIQUE -- NOVEL SYMPOSIUM contribution); P3 G2/SU(3) automorphism coset (no precedent). P2 most promising if rigorous. Exit NUMEROLOGY_HOLD requires (1) commit to ONE mechanism, (2) SINGLE form NO free parameters, (3) pre-register BEFORE Adelberger.",
+  "references": [
+    "Kehagias-Sfetsos hep-ph/9905417",
+    "RS2 log correction hep-th/0212023",
+    "RS1/RS2 Wiki Randall-Sundrum_model",
+    "Eot-Wash inverse-square law",
+    "Furey Quanta 2018 / homepage furey.space",
+    "Wei 2019 World Scientific doi:10.1142/S0219887819500191",
+    "Demir-Tanisli Indian J.Phys. 2014 doi:10.1007/s12648-014-0562-y",
+    "Koplinger conic sedenions Appl.Math.Comp. 2007",
+    "Sorgsepp-Lohmus Hadronic J. 1981",
+    "Cayley-Dickson rotating BH 2023 doi:10.1016/j.aop.2023..."
+  ],
+  "caveats": "P2 zero-divisor filtration is novel research, no literature precedent -- requires user verdict + rigorous derivation. Sedenion physics literature systematically tagged: 'reformulation, not prediction'.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A4-S2",
+  "findingId": "f_A4_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

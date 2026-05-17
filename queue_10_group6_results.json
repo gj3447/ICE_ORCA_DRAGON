@@ -1,4 +1,8 @@
 {
+  "verdict": "CONFIRMATION_LOCAL",
+  "verdict_reasoning": "exclusion_pattern shows each of 7 orbits excludes exactly one first-index and one second-index (Z6 substructure on 6-element orbits). Orbit 1 i^j (XOR) uniform =10; Z6 test gives 3 distinct sums, 2 distinct diffs. excluded_set_confirms_pattern field present.",
+  "verdict_source": "result-inspection-2026-05-17",
+  "verdict_date": "2026-05-17",
   "orbit_1_patterns": {
     "i+j": "[12, 12, 18, 20, 18, 20]",
     "i-j": "[10, 6, 10, 10, 6, 6]",

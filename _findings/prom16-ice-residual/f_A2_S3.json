@@ -1,0 +1,23 @@
+{
+  "domain": "A2-S3: alternative custodial embeddings",
+  "oneLineSummary": "Top recommendation: Aut(S) = G_2 x S_3 (Brown 1967) commuting SU(2) x SU(2) inside G_2 factor -- NATIVE to sedenion structure, commutativity by construction, predicted yield 14-28/42 pairs pass. 5 candidates ranked: (e) Aut(S) [WINNER], (a) MCHM5 SO(5)/SO(4), (b) twisted custodial 2HDM phase, (c) Little Higgs T-parity SO(9), (d) LR block-diagonal.",
+  "rootCause": "Current queue_02 picks first two invariant SU(2) triples found -- both often share index 8 (Cartan overlap), live in SAME SU(2). Generic SU(2) x SU(2) collapses to U(2) on 2D ZD null-space without extra discrete/coset/twisting.",
+  "recommendation": "New file queue_02b_custodial_check_AutS.py: (1) build_AutS_generators(n=4) -- explicit Aut(sedenion) Lie algebra ~9 generators; (2) split_into_SU2_pair() identifies commuting SU(2) inside G_2; (3) find_AutS_preserving_pairs() replaces heuristic triple-search. Open question OQ4: does ICE-6 family (#2 6-family from THEORY family-expansion) coincide with 6 generators of custodial SO(4)?",
+  "references": [
+    "Brown 1967 (Aut(S)=G2xS3)",
+    "Agashe-Contino-Pomarol MCHM hep-ph/0412089",
+    "Gerard-Herquet hep-ph/0703051 (twisted 2HDM)",
+    "Cheng-Low JHEP 03 (2011) 072 (T-parity)",
+    "Gresnigt 2019 arXiv:1904.03186 (complex sedenions)",
+    "Castro-Solar 2021 Sci.Rep. doi:10.1038/s41598-021-01814-1 (G_2 from CD automorphism)",
+    "Chivukula et al arXiv:1002.3663"
+  ],
+  "caveats": "OQ4 (6-family <-> custodial SO(4) generators) needs structural test -- not coincidence.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A2-S3",
+  "findingId": "f_A2_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

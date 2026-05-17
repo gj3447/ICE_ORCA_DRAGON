@@ -1,0 +1,23 @@
+{
+  "domain": "A2-S1: custodial SU(2)xSU(2) canonical refs",
+  "oneLineSummary": "max_commutator 1.91-1.96 = 95-98% of algebraic ceiling 2 -> generators living in SINGLE SU(2), share ~70% subspace. NOT a near-miss -- O(1) structural refutation. Custodial demands [T_L, T_R] = 0 EXACTLY.",
+  "rootCause": "Sikivie-Susskind-Voloshin-ZAKHAROV (NOT Weinberg, common citation error) NPB173 1980 originates custodial SU(2)_L x SU(2)_R / SU(2)_V -> rho=1 protection. Peskin-Takeuchi 1990/1992 T-parameter. ICE's 0/42 with 1.91-1.96 indicates two candidate generators don't decouple into commuting factors.",
+  "recommendation": "Reject all 42 ZD pairs as custodial embedding. Compute FULL 9-component cross-commutator tensor C^{ab}=[T_L^a, T_R^b], diagonalize -- rank(C)>0 -> not direct sum. Accept only ZD pairs with ALL 9 entries < 1e-10 (machine precision). Theoretical: sedenion ZDs live on G_2 orbits, NOT on SU(2)xSU(2) cosets -- must descend to quaternions H or use M_2(H)=Sp(4) for proper L x R direct product.",
+  "references": [
+    "Sikivie-Susskind-Voloshin-Zakharov NPB 173 (1980) 189 doi:10.1016/0550-3213(80)90214-X",
+    "Senjanovic NPB 153 (1979) 334",
+    "Mohapatra-Senjanovic PRL 44 (1980) 912",
+    "Peskin-Takeuchi PRL 65 (1990) 964 / PRD 46 (1992) 381",
+    "Willenbrock TASI hep-ph/0410370",
+    "Pomarol-Tommasini hep-ph/0302058",
+    "Moreno 1998 / Cawagas 2004 / arXiv:2411.18881 (sedenion ZDs on G2 orbits, not SU(2)xSU(2))"
+  ],
+  "caveats": "Sikivie et al 1980 fourth author = Zakharov, NOT Weinberg (frequent citation error). Pauli-Frobenius normalization gives ||[sigma_a, sigma_b]||_F = 2*sqrt(2) ~ 2.83; ICE 1.93 must be re-expressed in dimensionless ratio. Sedenion non-associativity means associator [a,b,c] also nonzero on ZDs -- folded into effective Lie algebra.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A2-S1",
+  "findingId": "f_A2_S1",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

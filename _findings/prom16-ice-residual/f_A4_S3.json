@@ -1,0 +1,24 @@
+{
+  "domain": "A4-S3: methodologies for unique epsilon(r) pre-prediction",
+  "oneLineSummary": "Winner = (c) AC decoupling + (b) EFT naturalness hybrid (score 0.75). TWO-BRANCH unique pre-prediction from algebra alone: Yukawa exp(-r/lambda_G2) (alternative G2 subalgebra branch, AC applies) OR power-law (r0/r)^4 (non-alternative branch, AC fails, dim-8 surviving operators). Branch selection rule = compare M_G2 vs Lambda_sed/sqrt(7) -- ALGEBRAIC.",
+  "rootCause": "(a) Casimir dim analysis alone -> only scaling not form (score 0.20). (d) Anomaly matching -> parity-odd sector orthogonal to V(r) (0.30). (e) Holographic bootstrap -> requires associative OPE which sedenion lacks (0.25). (b)+(c) hybrid uniquely separates branches via alternativity criterion.",
+  "recommendation": "Both branches DERIVED from algebraic structure (G2 Casimir + sedenion ZD count = 7) BEFORE comparing to Adelberger. Lambda_sed = M_pl/sqrt(7) NUMEROLOGY_HOLD candidate (rigorous derivation needed). Tag functional-form prediction as PROGRESSIVE_PREDICTION; tag Lambda_sed quantitative as NUMEROLOGY_HOLD.",
+  "references": [
+    "Shapiro 2024 ICTP-SAIFR Decoupling and effective QG lecture",
+    "Appelquist-Carazzone PRD 11 (1975) 2856",
+    "Gorbar-Shapiro 2003 anomalous gravitational decoupling",
+    "Kaplan EFT lectures Washington INT",
+    "TASI Lectures on EFTs hep-ph/0308266",
+    "Tifr SERC14 EFT = dim analysis",
+    "Csaki-Murayama discrete anomaly matching Nucl.Phys.B 1998",
+    "Tong DAMTP Cambridge anomalies"
+  ],
+  "caveats": "D1 whether non-alternative algebra admits valid EFT at all (associativity prerequisite for Lagrangian; Jordan-algebra circumvents). D2 Lambda_sed = M_pl/sqrt(7) is currently NUMEROLOGY_HOLD candidate. OQ1 sedenion ZD propagator non-invertibility: true AC failure or gauge artifact? OQ2 mutually exclusive vs coexistent branches?",
+  "confidence": "MEDIUM_HIGH",
+  "agentId": "prom16-ice-residual-A4-S3",
+  "findingId": "f_A4_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

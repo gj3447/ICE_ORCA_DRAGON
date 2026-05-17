@@ -1,0 +1,46 @@
+{
+  "verdict": "METHOD_ARTIFACT",
+  "verdict_reasoning": "queue_08 'g2' construction METHOD ARTIFACT — fails ['D2_so7_rank', 'D4_casimir_schur']. The script applies the octonion inner-derivation formula to sedenion ambient multiplication. Sedenions are not alternative, so this formula does not yield a closed 14-dim Lie algebra; the script-reported 'rank 16, commutant 1' arose from over-permissive projection and an ad-hoc Casimir normalization (sum of M_i^2 without Killing-form weighting). Verdict for queue_08 original CONFIRMATION_LOCAL: DEMOTE to METHOD_ARTIFACT.",
+  "verdict_source": "queue_08_g2_diagnostic.py 2026-05-17",
+  "verdict_date": "2026-05-17",
+  "diagnostics": {
+    "D1_antisymmetry": {
+      "n_generators": 21,
+      "n_strictly_antisym_within_5pct": 21,
+      "median_symmetric_norm": 0.0,
+      "median_antisym_norm": 11.999999999999998,
+      "median_sym_to_asym_ratio": 0.0,
+      "verdict_D1": "PASS: all 21 are antisymmetric"
+    },
+    "D2_ranks": {
+      "rank_in_End_V7_dim49": 16,
+      "rank_in_so_V7_dim21": 16,
+      "expected_g2_in_so7": 14,
+      "verdict_D2": "so(7) rank = 16. Mismatch with g2=14 -> projection includes non-g2 directions."
+    },
+    "D3_lie_closure": {
+      "n_commutator_pairs_tested": 49,
+      "median_relative_residual": 1.4198077138822893e-15,
+      "max_relative_residual": 0.7071067811865059,
+      "verdict_D3": "PASS: Lie closure within antisymmetric span"
+    },
+    "D4_casimir_schur_test": {
+      "n_orthonormal_directions_used": 16,
+      "casimir_eigenvalues": [
+        -3.0,
+        -2.5,
+        -2.5,
+        -2.5,
+        -2.5,
+        -2.5,
+        -0.5
+      ],
+      "max_minus_min": 2.499999999999999,
+      "verdict_D4": "FAIL: spread = 2.500 -> not Schur-scalar -> not irreducible OR non-Lie"
+    }
+  },
+  "failures": [
+    "D2_so7_rank",
+    "D4_casimir_schur"
+  ]
+}

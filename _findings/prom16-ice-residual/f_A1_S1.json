@@ -1,0 +1,26 @@
+{
+  "domain": "A1-S1: Aut(S)=G2xS3 canonical",
+  "oneLineSummary": "Brown 1967 Pacific J. Math. canonical: Aut(S)=G2 x S3 with sigma (sign-reversal of doubling e8) + Psi (sqrt(3)/2 rotation in each (q, q*e) plane) generators. Wilmot 2025 (arXiv:2512.07210) CONTESTS S3 factor entirely — claims Aut(S)=G2 only via Theta-calibration argument.",
+  "rootCause": "Over-permissive tests admit S6 (orbit-membership) or even S7/S8 (independent per-plane permutation). S3 acts COORDINATELY on 7 (q, q*e) planes simultaneously via 2pi/3 rotation — 'triality-like'.",
+  "recommendation": "256-check signed-permutation multiplication-table preservation gate (every basis pair (i,j) in 16x16): sigma(e_i * e_j) == sigma(e_i) * sigma(e_j) with sign tracking. Cross-check vs Wilmot's geoalg + GAP LOOPS loop-Aut bound.",
+  "references": [
+    "Brown 1967 Pacific J. Math. 20:415-422 [CANONICAL]",
+    "Wilmot 2025 arXiv:2512.07210 [DISSENT]",
+    "Moreno 1998 Bol. Soc. Mat. Mex.",
+    "Eakin-Sathaye 1990 J.Algebra 129:263",
+    "Kirshtein 2011 arXiv:1102.5151 (loop-level)",
+    "Cawagas 2004",
+    "deMarrais arXiv:math/0403113 (42 Assessors)",
+    "Gillard-Gresnigt 2019/2023 EPJ-C",
+    "Masi 2021 Sci.Rep. doi:10.1038/s41598-021-01814-1",
+    "Dray-Manogue GELG textbook online"
+  ],
+  "caveats": "OPEN dispute Aut(S)=G2 vs G2 x S3 (2025-2026, Wilmot calibration-Theta argument vs 50+ year citation chain). SYMPOSIUM should flag :CompetingVerdict, not pick side without user verdict.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A1-S1",
+  "findingId": "f_A1_S1",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

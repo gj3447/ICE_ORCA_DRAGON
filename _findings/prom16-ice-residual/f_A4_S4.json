@@ -1,0 +1,22 @@
+{
+  "domain": "A4-S4: epsilon(r) derivation claim verification + pitfalls",
+  "oneLineSummary": "Minimum bar for NUMEROLOGY_HOLD -> SIGNAL = 6-criterion promotion table (MB1-MB6). MB1 form-uniqueness theorem MANDATORY. MB3 independent observable prediction MANDATORY. SIGNAL >=4/6 with MB1+MB3 mandatory; CONFIRMED 6/6 + external replication. Current ICE state: 0/6 fully met (MB5 partial). HOLD verdict CORRECT.",
+  "rootCause": "5 pitfalls (a-e) crystallized: (a) post-hoc form selection (enumeration not derivation); (b) hidden tuning (L_star, alpha=2, amp=1e-5, n_max=8, xor_classes=7 hand-set in derive_epsilon_ICE.py); (c) look-elsewhere (7 forms x 3 scales = 21 trials x 23.8% per-trial = 86% family-wise null pass); (d) screening vs predicting (Adelberger pass necessary not sufficient); (e) literature selection bias (Yukawa retrofit because Adelberger constrains Yukawa shapes).",
+  "recommendation": "MB1 form-uniqueness theorem (Lean 4 preferred); MB2 every numeric -> symbolic ICE invariant; MB3 predict 1+ independent observable (Casimir-gravity / EP / PPN beta-1 / perihelion); MB4 :PreregisteredPrediction KG node timestamp before comparison; MB5 trials-factor audit (current ~0.86); MB6 sensitivity+necessity counterfactual proof. KEY INSIGHT NF3: MB1 OBVIATES trials-factor penalty (uniqueness -> trials=1 -> LEE drops).",
+  "references": [
+    "Adelberger Annu.Rev.Nucl.Part.Sci. (Yukawa parametrization not theory-grounded)",
+    "Kapner et al. 2007 PRL 98:021101 |alpha|<1 at lambda>197um",
+    "Gross-Vitells Eur.Phys.J.C 70:525 (2010) arXiv:1005.1891 trials factor",
+    "Nosek et al. PNAS preregistration revolution",
+    "Capozziello et al. arXiv:1201.3363 f(R) Yukawa retrofit",
+    "CMS Higgs LEE methodology"
+  ],
+  "caveats": "Trials-factor quantification 7 forms x 3 scales x 23.8% null pass = 86% family-wise -- gate approximately CERTAIN to pass under null without LEE correction. NUMEROLOGY_HOLD should be split into HOLD_PROMOTABLE (path to MB1 visible) vs HOLD_STALLED (no path).",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A4-S4",
+  "findingId": "f_A4_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

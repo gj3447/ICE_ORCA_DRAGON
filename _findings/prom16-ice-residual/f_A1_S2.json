@@ -1,0 +1,21 @@
+{
+  "domain": "A1-S2: sedenion automorphism CAS implementations",
+  "oneLineSummary": "No mainstream CAS (GAP/Sage/Mathematica/Magma/FORM) auto-computes Aut(S) at algebra level; Wilmot's geoalg Python (github.com/GPWilmot/geoalg) + discretegames/hypercomplex are closest; direct 256-entry sigma-by-sigma M-preservation testing is UNPUBLISHED — potential SYMPOSIUM contribution.",
+  "rootCause": "Sage OctonionAlgebra caps at dim 8 (derivations_basis only). GAP LOOPS handles Cayley-Dickson LOOP automorphism (32-element multiplicative closure) but NOT R-algebra automorphism. Literature dispute G2-only vs G2xS3 means OSS hasn't crystallized.",
+  "recommendation": "Layered verification stack: (1) hypercomplex Python for 16x16 mult table, (2) sigma-by-sigma 256-entry M-preservation with stabilizer-chain pruning (fix 1, e1, e2, e4 -> reduce to ~10^6 rational G2 points + at most 6 S3 cosets, tractable <1h), (3) cross-validate vs GPWilmot/geoalg and GAP LOOPS bound, (4) Lean 4 Mathlib formalization (Mathlib has CayleyDickson; no sedenion-automorphism theorem yet -- SYMPOSIUM contribution).",
+  "references": [
+    "GPWilmot/geoalg GitHub",
+    "discretegames/hypercomplex PyPI",
+    "GAP LOOPS package",
+    "Sage OctonionAlgebra docs",
+    "Cowles-Gamboa 2017 ACL2 arXiv:1705.06822"
+  ],
+  "caveats": "Full S_16 enumeration = 2.1e13 perms x 256 entries = ~5e15 ops infeasible. MUST use stabilizer pruning. Cariow 2013 122-mult/283-add sedenion mult kernel for production speed.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A1-S2",
+  "findingId": "f_A1_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

@@ -6,6 +6,130 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-05-17 — fifth pass] — R1 empirical execution: queue_02 4-condition diagnostic
+
+> **Anti-paper-bureaucracy gate**: 즉시 R1 실행 → empirical discrimination → PROM 16 가설 검정.
+
+### Added
+- `queue_02_4condition_diagnostic.py` — 3-condition Lie closure + cross-commutator empirical test on 42 ZD pairs (c4 Y consistency deferred)
+- `queue_02_4condition_diagnostic_results.json` — 42 per-pair records + verdict CONFIRMED
+
+### Empirical findings
+- **PROM 16 hypothesis (f_A2_S4) CONFIRMED stronger than predicted**: 100% (not 70%) of pairs FAIL_BOTH_CLOSURE
+- **c1 left closure** residual median **3.94** (saturated near ambient structure constant 4, i.e. ZERO projection retained)
+- **c2 right closure** residual median **3.94** (symmetric)
+- **c3 cross-commutator** median 1.97 (matches existing 1.91-1.96 range — confirms test reproducibility)
+- **Root cause**: the "SU(2) triples" found by `find_invariant_triples` ARE Lie algebras in the ambient 16D sedenion (by construction), but the projection onto 2D ZD null-space BREAKS closure entirely. The naive custodial test was measuring cross-commutators of non-Lie objects.
+- **Test structural validity**: queue_02 c3-only is invalid for non-alternative sedenion ambient; c3=1.93 is symptom, not disease.
+
+### Changed
+- `queue_02_custodial_results.json`: verdict_reasoning replaced with root-cause analysis citing diagnostic. verdict stays REFUTED but now structural, not threshold.
+- `docs/STATUS.md` Refutation row updated.
+
+### What this resolves
+- **paper-bureaucracy risk** (raised in 2026-05-17 user verdict): R1 actually executed within 1 hour of PROM 16 cycle close → empirical discrimination delivered, not stalled at research.
+- **PROM 16 ActionPlan R1** ✅ DONE.
+
+### What remains for true custodial pivot
+- **R4 still requires**: Aut(𝕊) Lie algebra construction within Der(𝕊) AND projection-faithful SU(2)×SU(2) identification. queue_08-style work, but done correctly (queue_08 itself was METHOD_ARTIFACT). Substantively harder than R1.
+- The discovery that null-space projection breaks Lie structure suggests Aut(𝕊) embedding may need to act on a DIFFERENT representation than the 2D ZD null-space.
+
+# KG: R1_DONE, prom16-ice-residual-2026-05-17 measurable progress, paper-bureaucracy risk averted
+
+---
+
+## [2026-05-17 — fourth pass] — PROM 16 통합 리서치 (residual 4 items)
+
+### Added
+- `PROM_16_REPORT.md` — 4 axis × 4 sub-axis 매트릭스 통합 보고서 (5 consensus + 3 divergence + 8 OQ + 10 ActionPlan R1-R10)
+- `_findings/prom16-ice-residual/f_A{1..4}_S{1..4}.json` — 16 FullFindingRecord JSON (60+ academic/OSS refs harvested)
+
+### Research outcomes (queue_09 / queue_02 / 29-script enforcement / ε pre-prediction)
+- **A1 queue_09 S₃ proper test**: SS3TG triple-gate 설계 — signed-permutation M-preservation (256 entries) + BSGS |G|=6 + S₃ presentation r³=s²=(rs)²=e. OPEN: Wilmot 2025 (arXiv:2512.07210) disputes Aut(𝕊) S₃ factor entirely → `:CompetingVerdict` 측 양측 양립
+- **A2 queue_02 custodial pivot**: 1.91-1.96 = algebraic ceiling 95-98%, structural refutation (not threshold). 4-condition diagnostic needed (c1/c2 likely fail BEFORE c3). Pivot to Aut(𝕊)=G₂×S₃ native commuting SU(2)×SU(2) inside G₂ factor (predicted 14-28/42 pass)
+- **A3 29 no-JSON enforcement**: zero-mod `_verdict_auto_emit.py` 3-layer (atexit + excepthook + SIGTERM) via sitecustomize; pytest+pytest-json-report+regressions+GH Actions cron weekly CI; 53→~20 canonical via pyastsim cluster (md5 useless)
+- **A4 ε pre-prediction**: pure-algebra → unique form NO precedent in literature (NUMEROLOGY_HOLD verdict externally validated); 6-criterion promotion bar MB1-MB6 (MB1 form-uniqueness theorem MANDATORY; MB3 independent observable MANDATORY); current 0/6 fully met; NF3 insight: MB1 obviates trials factor
+
+### Lesson candidates (5)
+- lesson-prom16-A1-S4-SS3TG-triple-gate-2026-05-17
+- lesson-prom16-A2-S4-naive-custodial-4condition-2026-05-17
+- lesson-prom16-A3-S1-zero-mod-retrofit-2026-05-17
+- lesson-prom16-A4-S4-promotion-bar-MB1-MB6-2026-05-17
+- lesson-prom16-aut-S-citation-dispute-2026-05-17
+
+# KG: cycle_id=prom16-ice-residual-2026-05-17, 16/16 verified, ActionPlan R1-R10
+
+---
+
+## [2026-05-17 — third pass] — queue_08 g₂ method-artifact demotion
+
+### Added
+- `queue_08_g2_diagnostic.py` — 4-test diagnostic (D1 antisymmetry / D2 so(7) rank / D3 Lie closure / D4 Casimir Schur)
+- `queue_08_g2_diagnostic_results.json` — verdict METHOD_ARTIFACT
+
+### Changed
+- `queue_08_g2_results.json`: CONFIRMATION_LOCAL → **METHOD_ARTIFACT**. Root cause: octonion inner-derivation formula `D_{a,b}(z) = [[e_a,e_b],z] - 3[e_a,e_b,z]` applied to *non-alternative* sedenion ambient does not yield a closed 14-dim Lie algebra. 16-vs-14 gap is method, not physics.
+- `docs/STATUS.md`: new "Method artifact" section; verdict distribution updated; confirmation row for queue_08 struck through
+- Roadmap #1 expanded with g₂ projection-faithfulness investigation
+
+### Verdict distribution change
+- before: 6 CONFIRMED / 5 CONFIRMATION_LOCAL / 3 REFUTED / 2 NUMEROLOGY_CONFIRMED / 1 NUMEROLOGY_HOLD / 1 INCONCLUSIVE
+- after:  6 CONFIRMED / **4** CONFIRMATION_LOCAL / 3 REFUTED / 2 NUMEROLOGY_CONFIRMED / **2 METHOD_ARTIFACT** / 1 NUMEROLOGY_HOLD / 1 INCONCLUSIVE
+
+# KG: ICE_ORCA_DRAGON queue_08 demotion, Roadmap #1 g₂ projection follow-up
+
+---
+
+## [2026-05-17 — second pass] — numerology MC discrimination + INCONCLUSIVE method-bug fixes
+
+### Added
+- `numerology_mc_judge.py` — operational P(E|~H) computation under explicit null models for 3 HOLD items
+  - (K) Koide Q=2/3: P(any-target hit | null) = 1.000 over 499 candidates × 8 targets
+  - (M1) mp/mW = 3·256 literal: 88.8% rel_diff even with reciprocal reading
+  - (M2) mp/mW layer3 a·2^n: 81.2% of random R fit within 0.1% under 3M (a,n) search
+  - (E) ε Adelberger: 23.8% pass under wide-prior null — gate has teeth, but no ICE pre-prediction
+- `numerology_mc_results.json` — full MC verdict report
+- `_patch_apply_mc_verdicts.py` — applies MC verdicts to 3 HOLD JSONs
+- `inconclusive_redo.py` — method-bug fixes for queue_06 (n_trials 20→200) + queue_09 (6! enum vs 10000-of-12! sampling)
+
+### Changed
+- `derive_dimensionless_results.json`: NUMEROLOGY_HOLD → **NUMEROLOGY_CONFIRMED** (P=1.000)
+- `verify_mp_mW_results.json`: NUMEROLOGY_HOLD → **NUMEROLOGY_CONFIRMED** (layer1 88.8% off + layer3 P=0.812)
+- `derive_epsilon_results.json`: NUMEROLOGY_HOLD retained (MC pass-rate 0.238 nontrivial, but no pre-prediction)
+- `queue_06_coop_results.json`: INCONCLUSIVE → CONFIRMATION_LOCAL of single-orbit-selection, with sub-verdict REFUTED for cooperative-mechanism claim (γ not needed; α-perturbation alone selects)
+- `queue_09_s3_results.json`: INCONCLUSIVE retained but with corrected method note — enumeration fixed (6!=720) reveals test is over-permissive (admits full S₆); proper S₃ test needs sedenion-mult preservation gate
+- `docs/STATUS.md`: numerology HOLD table replaced with MC P(E|~H) ledger; L2 known-limitation downgraded to "operationalized partial"; Roadmap #2 ✅ marked done
+- Verdict distribution: 6 CONFIRMED / **5** CONFIRMATION_LOCAL / 3 REFUTED / **2 NUMEROLOGY_CONFIRMED** / 1 NUMEROLOGY_HOLD / 1 INCONCLUSIVE
+
+### Methodology
+Decision rule for numerology gate now mechanical:
+- P(E|~H) < 0.01 → SIGNAL_GENUINE
+- 0.01 ≤ P < 0.5 → SIGNAL_WEAK
+- P ≥ 0.5 → NUMEROLOGY_CONFIRMED
+
+# KG: ICE_ORCA_DRAGON L2 numerology gate operationalized, Roadmap #2 resolved, L5/L6 method-bug fixes
+
+---
+
+## [2026-05-17] — verdict field generalization (L3 backfill)
+
+### Added
+- `_patch_verdict_backfill.py` — backfills 15 result JSONs missing `verdict` field
+- `_patch_verdict_legacy_normalize.py` — normalizes 3 legacy prose verdicts to taxonomy (preserves original prose as `verdict_reasoning`)
+- Top-level fields on every `_results.json`: `verdict`, `verdict_reasoning`, `verdict_source`, `verdict_date`
+
+### Changed
+- `docs/STATUS.md` — ledger reflects 18/18 verdicts; new INCONCLUSIVE section (queue_06 coop, queue_09 s3); confirmation rows expanded (queue_03 rep, queue_11 xor, queue_04 hosotani, queue_05 cw, queue_08 g2, queue_10 group6); L3 known-limitation downgraded to "partial fix"
+- Verdict taxonomy: CONFIRMED / CONFIRMATION_LOCAL / REFUTED / NUMEROLOGY_HOLD / INCONCLUSIVE
+- Distribution: 6 / 4 / 3 / 3 / 2
+
+### Remaining
+- 29 of 47 scripts produce no `_results.json` at all (forward enforcement on script JSON-dump paths pending)
+
+# KG: ICE_ORCA_DRAGON Roadmap #4 partial, L3 partial resolve
+
+---
+
 ## [2026-05-14] — ruflo-grade packaging
 
 ### Added

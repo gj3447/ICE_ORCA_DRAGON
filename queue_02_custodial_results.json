@@ -1,4 +1,10 @@
 {
+  "verdict": "REFUTED",
+  "verdict_reasoning": "n_success=0, n_fail=42; max_commutator 1.91-1.96. ROOT CAUSE (2026-05-17 R1 diagnostic): the two 'SU(2) triples' returned by find_invariant_triples are SU(2) Lie algebras in the AMBIENT sedenion (16D), but DO NOT remain Lie algebras when projected onto the 2D ZD null-space — c1 (left closure) and c2 (right closure) residuals saturate at median 3.94 (cf c3 cross-commutator 1.97). 100% of 42 pairs FAIL_BOTH_CLOSURE. The naive custodial test was measuring cross-commutators between non-Lie objects in the projected rep — c3=1.93 is a SYMPTOM, not the disease. Test is structurally invalid for non-alternative sedenion ambient. See queue_02_4condition_diagnostic_results.json. PROM 16 A2-S4 hypothesis (~70% closure failure) CONFIRMED stronger than predicted (100%).",
+  "verdict_source": "queue_02_4condition_diagnostic.py 2026-05-17 R1 (supersedes 2026-05-14 ledger)",
+  "verdict_date": "2026-05-17",
+  "diagnostic_file": "queue_02_4condition_diagnostic_results.json",
+  "verdict_reasoning_prior": "n_success=0, n_fail=42; all 42 pairs fail custodial with max_commutator ~1.91-1.96 (not near 0). Naive custodial SU(2)xSU(2) embedding refuted. Pivot recommended: alternative embedding or threshold sensitivity scan.",
   "n_success": 0,
   "n_fail": 42,
   "stats": [

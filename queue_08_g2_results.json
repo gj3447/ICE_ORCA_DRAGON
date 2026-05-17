@@ -1,4 +1,10 @@
 {
+  "verdict": "METHOD_ARTIFACT",
+  "verdict_reasoning": "queue_08_g2_diagnostic.py (2026-05-17) shows the 'g2' construction does NOT yield g2's 7-fundamental rep on these orbit reps. Failures: (D2) so(7) rank=16 != g2 dim 14; (D4) Casimir eigenvalues [-3, -2.5x5, -0.5] with spread 2.5 violate Schur scalarity that commutant_dim=1 would require for an irrep. Median Lie closure ~1e-15 passes but max relative residual 0.71 reveals some commutators escape the antisymmetric span. Root cause: octonion inner-derivation formula D_{a,b}(z) = [[e_a,e_b],z] - 3*[e_a,e_b,z] applied to non-alternative sedenion ambient does NOT close as a 14-dim Lie algebra. The original 'commutant_dim=1' was an artifact of the ad-hoc projection / non-Killing-form Casimir; not a genuine irreducibility. Demoted from CONFIRMATION_LOCAL.",
+  "verdict_source": "queue_08_g2_diagnostic.py 2026-05-17 (supersedes 2026-05-17 result-inspection)",
+  "verdict_date": "2026-05-17",
+  "verdict_reasoning_prior": "independent_generators=16 (g2 expected 14 — 2-generator discrepancy noted), commutant_dim=1, 7 orbit_reps. Casimir eigenvalues range -3.95 to -0.20 (non-degenerate). Local confirmation with caveat: 16 vs 14 generator gap deserves follow-up.",
+  "diagnostic_file": "queue_08_g2_diagnostic_results.json",
   "independent_generators": "16",
   "casimir_evals": [
     -3.9456,

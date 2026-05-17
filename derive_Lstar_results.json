@@ -1,4 +1,9 @@
 {
+  "verdict": "REFUTED",
+  "verdict_reasoning": "ICE cannot uniquely predict L_star from internal structure",
+  "verdict_source": "self-refutation prose preserved 2026-05-17",
+  "verdict_date": "2026-05-17",
+  "self_refutation": true,
   "candidate_A_doubling": {
     "10": 1.654784e-32,
     "50": 1.8194542494576803e-20,
@@ -32,7 +37,6 @@
     "11": 1.1312323795010139e-25,
     "15": 4.027216567983525e-16
   },
-  "verdict": "ICE cannot uniquely predict L_star from internal structure",
   "failure_modes": "5 of 6 numerology signatures triggered",
   "next_step": "Find ICE-specific principle that selects N (or equivalent)"
 }

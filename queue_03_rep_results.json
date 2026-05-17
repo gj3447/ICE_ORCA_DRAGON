@@ -1,4 +1,8 @@
 {
+  "verdict": "CONFIRMED",
+  "verdict_reasoning": "All 42 pairs share uniform Casimir pattern (0.75, 0.75, 0.75, 0.75). Strong rep-decomposition regularity; pattern_counts shows single bucket.",
+  "verdict_source": "README headline + result inspection 2026-05-17",
+  "verdict_date": "2026-05-17",
   "n_pairs": 42,
   "pattern_counts": {
     "(0.75, 0.75, 0.75, 0.75)": 42

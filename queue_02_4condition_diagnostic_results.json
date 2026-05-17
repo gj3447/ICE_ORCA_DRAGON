@@ -1,0 +1,881 @@
+{
+  "verdict": "CONFIRMED",
+  "verdict_reasoning": "PROM 16 A2-S4 hypothesis CONFIRMED: 100.0% of pairs fail SU(2) closure (c1 or c2 >= 1e-06). The 1.93 cross-commutator is a SYMPTOM; root cause is broken closure in projected rep, due to sedenion non-alternativity. queue_02 c3-only test was diagnostically incomplete.",
+  "verdict_source": "queue_02_4condition_diagnostic.py 2026-05-17 (R1 of prom16-ice-residual)",
+  "verdict_date": "2026-05-17",
+  "prom16_hypothesis_threshold_pct": 50.0,
+  "empirical_closure_fail_pct": 100.0,
+  "summary": {
+    "n_pairs_tested": 42,
+    "tolerance": 1e-06,
+    "verdict_distribution": {
+      "FAIL_BOTH_CLOSURE": 42
+    },
+    "c1_left_closure_stats": {
+      "min": 2.881898159340838,
+      "median": 3.9453401783168607,
+      "max": 4.0000000000000036,
+      "mean": 3.812657380892868,
+      "pct_pass": 0.0
+    },
+    "c2_right_closure_stats": {
+      "min": 2.881898159340838,
+      "median": 3.9453401783168607,
+      "max": 4.0000000000000036,
+      "mean": 3.812657380892868,
+      "pct_pass": 0.0
+    },
+    "c3_cross_commutator_stats": {
+      "min": 1.440949079670419,
+      "median": 1.97267008915843,
+      "max": 2.0000000000000018,
+      "mean": 1.9063286904464338,
+      "pct_pass": 0.0
+    }
+  },
+  "per_pair_records": [
+    {
+      "pair": [
+        1,
+        10
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        2,
+        8,
+        10
+      ],
+      "c1_left_closure": 3.923728952045816,
+      "c2_right_closure": 3.923728952045816,
+      "c3_cross_commutator": 1.9618644760229085,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        1,
+        11
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        3,
+        8,
+        11
+      ],
+      "c1_left_closure": 3.926300233985537,
+      "c2_right_closure": 3.9263002339855366,
+      "c3_cross_commutator": 1.9631501169927685,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        1,
+        12
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        4,
+        8,
+        12
+      ],
+      "c1_left_closure": 3.825965678139227,
+      "c2_right_closure": 3.8259656781392266,
+      "c3_cross_commutator": 1.9129828390696137,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        1,
+        13
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 3.9861879829466247,
+      "c2_right_closure": 3.9861879829466247,
+      "c3_cross_commutator": 1.9930939914733126,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        1,
+        14
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.6266541614900487,
+      "c2_right_closure": 3.6266541614900483,
+      "c3_cross_commutator": 1.8133270807450237,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        1,
+        15
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.892960356760227,
+      "c2_right_closure": 3.892960356760227,
+      "c3_cross_commutator": 1.946480178380113,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        2,
+        9
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        2,
+        8,
+        10
+      ],
+      "c1_left_closure": 3.524720620973122,
+      "c2_right_closure": 3.524720620973122,
+      "c3_cross_commutator": 1.762360310486561,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        2,
+        11
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        3,
+        8,
+        11
+      ],
+      "c1_left_closure": 2.881898159340838,
+      "c2_right_closure": 2.881898159340838,
+      "c3_cross_commutator": 1.440949079670419,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        2,
+        12
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        4,
+        8,
+        12
+      ],
+      "c1_left_closure": 3.992521805359265,
+      "c2_right_closure": 3.992521805359265,
+      "c3_cross_commutator": 1.9962609026796327,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        2,
+        13
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 3.9664629685636656,
+      "c2_right_closure": 3.9664629685636656,
+      "c3_cross_commutator": 1.9832314842818328,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        2,
+        14
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.984314044678504,
+      "c2_right_closure": 3.984314044678504,
+      "c3_cross_commutator": 1.9921570223392515,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        2,
+        15
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.887688327971164,
+      "c2_right_closure": 3.8876883279711634,
+      "c3_cross_commutator": 1.9438441639855815,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        3,
+        9
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        3,
+        8,
+        11
+      ],
+      "c1_left_closure": 3.6960658815196332,
+      "c2_right_closure": 3.6960658815196332,
+      "c3_cross_commutator": 1.8480329407598162,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        3,
+        10
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        3,
+        8,
+        11
+      ],
+      "c1_left_closure": 3.977285435183015,
+      "c2_right_closure": 3.977285435183015,
+      "c3_cross_commutator": 1.9886427175915073,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        3,
+        12
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        4,
+        8,
+        12
+      ],
+      "c1_left_closure": 3.9997294693481287,
+      "c2_right_closure": 3.9997294693481287,
+      "c3_cross_commutator": 1.9998647346740641,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        3,
+        13
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 3.9930063823456425,
+      "c2_right_closure": 3.9930063823456425,
+      "c3_cross_commutator": 1.9965031911728213,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        3,
+        14
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.9762369767913848,
+      "c2_right_closure": 3.9762369767913843,
+      "c3_cross_commutator": 1.988118488395692,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        3,
+        15
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.999999656830001,
+      "c2_right_closure": 3.999999656830001,
+      "c3_cross_commutator": 1.9999998284149998,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        4,
+        9
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        4,
+        8,
+        12
+      ],
+      "c1_left_closure": 4.0000000000000036,
+      "c2_right_closure": 4.0000000000000036,
+      "c3_cross_commutator": 2.0000000000000018,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        4,
+        10
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        4,
+        8,
+        12
+      ],
+      "c1_left_closure": 3.4563345803547367,
+      "c2_right_closure": 3.4563345803547367,
+      "c3_cross_commutator": 1.7281672901773684,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        4,
+        11
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        4,
+        8,
+        12
+      ],
+      "c1_left_closure": 4.000000000000002,
+      "c2_right_closure": 4.000000000000002,
+      "c3_cross_commutator": 2.000000000000001,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        4,
+        13
+      ],
+      "T_L": [
+        4,
+        8,
+        12
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 3.677045458257963,
+      "c2_right_closure": 3.6770454582579624,
+      "c3_cross_commutator": 1.8385227291289818,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        4,
+        14
+      ],
+      "T_L": [
+        4,
+        8,
+        12
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.9705901989431958,
+      "c2_right_closure": 3.970590198943196,
+      "c3_cross_commutator": 1.9852950994715974,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        4,
+        15
+      ],
+      "T_L": [
+        4,
+        8,
+        12
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.7720136856133886,
+      "c2_right_closure": 3.7720136856133886,
+      "c3_cross_commutator": 1.8860068428066947,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        5,
+        9
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 4.0,
+      "c2_right_closure": 4.0,
+      "c3_cross_commutator": 1.9999999999999998,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        5,
+        10
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 3.9693205040726895,
+      "c2_right_closure": 3.9693205040726895,
+      "c3_cross_commutator": 1.9846602520363443,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        5,
+        11
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 4.0000000000000036,
+      "c2_right_closure": 4.0000000000000036,
+      "c3_cross_commutator": 2.0000000000000018,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        5,
+        12
+      ],
+      "T_L": [
+        4,
+        8,
+        12
+      ],
+      "T_R": [
+        5,
+        8,
+        13
+      ],
+      "c1_left_closure": 3.972105681812129,
+      "c2_right_closure": 3.972105681812129,
+      "c3_cross_commutator": 1.9860528409060647,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        5,
+        14
+      ],
+      "T_L": [
+        5,
+        8,
+        13
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.990468365279304,
+      "c2_right_closure": 3.990468365279304,
+      "c3_cross_commutator": 1.9952341826396522,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        5,
+        15
+      ],
+      "T_L": [
+        5,
+        8,
+        13
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.946691293735311,
+      "c2_right_closure": 3.9466912937353107,
+      "c3_cross_commutator": 1.9733456468676551,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        6,
+        9
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 2.999693836088247,
+      "c2_right_closure": 2.9996938360882472,
+      "c3_cross_commutator": 1.4998469180441236,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        6,
+        10
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.94398906289841,
+      "c2_right_closure": 3.9439890628984102,
+      "c3_cross_commutator": 1.9719945314492047,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        6,
+        11
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.802216611334697,
+      "c2_right_closure": 3.802216611334697,
+      "c3_cross_commutator": 1.901108305667348,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        6,
+        12
+      ],
+      "T_L": [
+        4,
+        8,
+        12
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.9871422502870892,
+      "c2_right_closure": 3.987142250287089,
+      "c3_cross_commutator": 1.9935711251435448,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        6,
+        13
+      ],
+      "T_L": [
+        5,
+        8,
+        13
+      ],
+      "T_R": [
+        6,
+        8,
+        14
+      ],
+      "c1_left_closure": 3.0932770976477926,
+      "c2_right_closure": 3.0932770976477926,
+      "c3_cross_commutator": 1.5466385488238958,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        6,
+        15
+      ],
+      "T_L": [
+        6,
+        8,
+        14
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.893712013960066,
+      "c2_right_closure": 3.8937120139600654,
+      "c3_cross_commutator": 1.9468560069800327,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        7,
+        9
+      ],
+      "T_L": [
+        1,
+        8,
+        9
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.6630965025211983,
+      "c2_right_closure": 3.6630965025211983,
+      "c3_cross_commutator": 1.8315482512605987,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        7,
+        10
+      ],
+      "T_L": [
+        2,
+        8,
+        10
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.6051904821639456,
+      "c2_right_closure": 3.6051904821639456,
+      "c3_cross_commutator": 1.8025952410819732,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        7,
+        11
+      ],
+      "T_L": [
+        3,
+        8,
+        11
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 4.000000000000002,
+      "c2_right_closure": 4.000000000000002,
+      "c3_cross_commutator": 2.000000000000001,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        7,
+        12
+      ],
+      "T_L": [
+        4,
+        8,
+        12
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.997131578220503,
+      "c2_right_closure": 3.997131578220503,
+      "c3_cross_commutator": 1.998565789110252,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        7,
+        13
+      ],
+      "T_L": [
+        5,
+        8,
+        13
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.892481733484578,
+      "c2_right_closure": 3.892481733484578,
+      "c3_cross_commutator": 1.946240866742289,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    },
+    {
+      "pair": [
+        7,
+        14
+      ],
+      "T_L": [
+        6,
+        8,
+        14
+      ],
+      "T_R": [
+        7,
+        8,
+        15
+      ],
+      "c1_left_closure": 3.437381966553356,
+      "c2_right_closure": 3.437381966553356,
+      "c3_cross_commutator": 1.7186909832766775,
+      "verdict": "FAIL_BOTH_CLOSURE"
+    }
+  ],
+  "c4_y_consistency": "DEFERRED — Y generator identification in sedenion ambient is non-trivial; defer to follow-up",
+  "cycle_ref": "prom16-ice-residual-2026-05-17",
+  "actionplan_item": "R1"
+}

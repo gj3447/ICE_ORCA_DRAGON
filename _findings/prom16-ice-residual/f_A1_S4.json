@@ -1,0 +1,22 @@
+{
+  "domain": "A1-S4: S3 test pitfalls & gate design",
+  "oneLineSummary": "Sedenion S3 Triple-Gate (SS3TG): (G1) 256-entry signed multiplication-table preservation + (G2) Schreier-Sims BSGS |G|=6 + (G3) S3 presentation r^3=s^2=(rs)^2=e verified on all 16 basis vectors. Composition of all 3 mandatory; each alone fails.",
+  "rootCause": "FATAL pitfalls: (a) orbit-membership alone -> 1-closure = S6 trap (factor 120 overcounting); (b) random sampling 10^4 of 12! -> P(miss)~1 for order-6 subgroup; (c) octonion D_{a,b} formula transport categorical error (continuous Lie tool on discrete pi_0); (d) sign ambiguity factor-2 overcounting.",
+  "recommendation": "Signed-permutation representation (pi, epsilon) MANDATORY. ORDERED iteration over all 256 entries (not i<j). Forbidden anti-patterns: random sampling / orbit-only / D_{a,b} transport / unordered pairs / |G|-counting (Z6=S3 collision) / single-generator. GAP StructureDescription = ground-truth oracle (EPJ-C 2023 canonical).",
+  "references": [
+    "EPJ-C 2023 doi:10.1140/epjc/s10052-023-11923-y",
+    "Cawagas 2004 sedenion ZD",
+    "arXiv:2508.02277 triality automorphisms",
+    "Baez G2 octonion derivations",
+    "Schafer 1966 Algebra & Number Theory v2n8 Der(A) non-alternative",
+    "Cameron QMUL Permutation Groups (1-closure)"
+  ],
+  "caveats": "S3 = pi_0(Aut(S)) is FINITE DISCONNECTED component, invisible to Lie-algebra-level construction (Der(A) only sees Aut^0 = G2). Octonion formula categorical type-error reinforced here.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A1-S4",
+  "findingId": "f_A1_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

@@ -1,0 +1,24 @@
+{
+  "domain": "A4-S1: algebra-derived epsilon(r) form canonical refs",
+  "oneLineSummary": "NO derivation in literature fixes UNIQUE epsilon(r) form from sedenion/G2/Cayley-Dickson alone. Form fixed to Yukawa WITH compactification: Kehagias-Sfetsos hep-ph/9905417 alpha=2n (n-torus) / alpha=n+1 (n-sphere) / alpha<=20 (Calabi-Yau). Z(S)~=G2 isometry (Moreno 1998 + Duvel et al. arXiv:2411.18881) is hard theorem -- justifies G2-grounded gauge in ICE on rigorous math grounds.",
+  "rootCause": "Cayley-Dickson is purely algebraic recursion (no metric/Lagrangian/compactification). G2 Casimir C2=4 + dual Coxeter h*=4 are dimensionless ratios -- fix RELATIVE strengths and ONE mass scale, NOT functional form. KK reduction adds geometry which forces Yukawa form (free massive propagator in 4D after compactification).",
+  "recommendation": "REPLACE 7-form enumeration with 2-parameter Yukawa family V(r) = -GMm/r [1 + alpha exp(-r/lambda)] when ICE adopts compactification interpretation. Cite Kehagias-Sfetsos for alpha rule. Use Z(S)~=G2 (Moreno+Duvel) to justify G2 gauge as CANONICAL_ALGEBRA_RESULT (not numerology). Add Adelberger-Heckel-Hoyle 2009 (alpha, lambda) exclusion-plot check.",
+  "references": [
+    "Kehagias-Sfetsos hep-ph/9905417 [PRIMARY]",
+    "Duvel-Kotrbaty-Lukacova arXiv:2411.18881 [Z(S)~=G2]",
+    "Moreno 1998 Bol.Soc.Mat.Mex [Z(S) original]",
+    "Adelberger-Heckel-Hoyle 2009 review Springer doi:10.1007/s11214-009-9540-7",
+    "Eot-Wash inverse-square law",
+    "Vacaru et al arXiv:2411.12158 (non-assoc R-flux gravity, UV not sub-mm)",
+    "Witten 2002 M-theory G2 holonomy ATMP 6(1)",
+    "Acharya-Bobkov-Kane M-theory G2 phenomenology"
+  ],
+  "caveats": "OQ1: alpha-value for G_2-holonomy 7-manifold (vs tabulated torus/sphere) is LITERATURE GAP -- possible PROM topic, likely between 4 (T^7) and 8 (S^7). OQ3: sedenion ZD-pair-mediated forces -- no literature, novel research candidate. Vacaru/Buhl non-assoc gravity is UV (R^2 Goroff-Sagnotti), not sub-mm.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A4-S1",
+  "findingId": "f_A4_S1",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

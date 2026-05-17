@@ -1,0 +1,21 @@
+{
+  "domain": "A3-S1: Python decorator/hook patterns for verdict auto-emit",
+  "oneLineSummary": "(c) atexit + (d) sys.excepthook 3-layer (atexit + excepthook + SIGTERM handler) via sitecustomize.py = ZERO-source-mod retrofit for 29 untouched scripts. Idempotent merge preserves 18 existing outputs.",
+  "rootCause": "Decorator (a) and contextmanager (b) require per-script body edits -- defeats zero-mod constraint. atexit fires on normal exit + sys.exit(N); excepthook captures unhandled exceptions; signal.SIGTERM covers timeout. os._exit() and SIGKILL skip -- audit confirms no os._exit in ICE corpus.",
+  "recommendation": "Drop-in /Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/_verdict_auto_emit.py (~80 LOC): merges into existing _results.json via setdefault() (never overwrites human verdict), structural verdict='COMPLETED'|'ERROR' only -- NEVER auto-set CONFIRMED to avoid MT_RubberStampVerdict. Pair with subprocess wrapper for CI/batch. Reject (a)/(b) for retrofit.",
+  "references": [
+    "docs.python.org/3/library/atexit.html",
+    "docs.python.org/3/library/sys.html#sys.excepthook",
+    "docs.python.org/3/library/site.html",
+    "Argonne PyModuleSnooper github (production sitecustomize+atexit)",
+    "PyMOTW atexit/contextlib"
+  ],
+  "caveats": "auto-setting verdict='CONFIRMED' on returncode==0 = MT_RubberStampVerdict violation. Heavy work in atexit fails (subsystems torn down). sitecustomize global install must use opt-in env var SYMPOSIUM_VERDICT_AUTO_EMIT=1.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A3-S1",
+  "findingId": "f_A3_S1",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

@@ -1,0 +1,24 @@
+{
+  "domain": "A3-S4: retrofit pitfalls + variant identification",
+  "oneLineSummary": "Empirically confirmed: 53 .py / 23 .json (57% silent-fail surface); md5sum USELESS for variants (all distinct despite obvious family lineage). Family-prefix naming convention (*_search<N>, *_final, *_definitive) is signal. Estimated canonical = ~20 + 3 tooling (matches user 18-20 estimate). 7-phase Variant-Prune+Canonical-CI v1.0 strategy.",
+  "rootCause": "md5 single-byte sensitivity defeats variant detection; AST-diff (pyastsim, pycode-similar) required. queue_NN_* are DISTINCT experiments (not variants); cd_breaking_* (5->1), sedenion_su2_* (5->1) ARE variant families. Drift risks: numpy non-semver (downstream packagers guide), scipy.linalg.eigh sign convention flip, sympy simplify heuristics.",
+  "recommendation": "7 phases: (1) inventory family-bucket prefix grouping; (2) AST-diff cluster pyastsim threshold>=0.80; (3) canonical election (user verdict, default heuristic latest mtime + smallest LOC + suffix in {final, definitive}); (4) archive variants -> _archive/variants/; (5) verdict emission retrofit on ~20 canonical; (6) CI pipeline matrix 4 jobs x 5 scripts + SHA256 bit-identity gate + frozen toolchain requirements-ci.txt with hashed pins; (7) continuous pruning pre-commit hook + weekly pyastsim corpus scan.",
+  "references": [
+    "fyrestone/pycode_similar GitHub",
+    "jncraton/pyastsim GitHub",
+    "cedricrupb/code_diff GumTree",
+    "NumPy v2.x downstream packagers guide (NOT semver)",
+    "Meta Rabbit numpy/scipy stability 2017",
+    "Pixi for scientists prefix.dev",
+    "Agoda Engineering selective testing 2025",
+    "Modexa 7 OpenAPI/JSON-Schema moves"
+  ],
+  "caveats": "L5: queue_NN_* are DISTINCT not variants -- naming heuristic must distinguish numeric-index families from experiment-name families. L8 hash-baseline BEFORE retrofit to detect retrofit-induced drift.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A3-S4",
+  "findingId": "f_A3_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

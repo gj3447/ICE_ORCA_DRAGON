@@ -1,0 +1,23 @@
+{
+  "domain": "A2-S2: custodial in BSM implementations",
+  "oneLineSummary": "BSM frameworks (MadGraph/FeynRules/MCHM/Lattice) treat custodial as Lagrangian-level INPUT assumption, not derived property. 5 documented PIVOTS exist for max_commutator~2 failures: 't Hooft self-dual / quaternionic L/R / MCHM coset / bidoublet matrix / eta eta-bar orthogonality. Failed-naive cases appear as pedagogical footnotes (Contino TASI 2010, Panico-Wulzer 2015), not standalone papers.",
+  "rootCause": "max_commutator~2 typically traces to: (1) missing self-dual/anti-self-dual split (t Hooft eta_{ij}^a); (2) missing quaternionic L/R multiplication identification (q -> uqv^{-1}); (3) Hermiticity convention mix (anti-Hermitian vs i T_a/2).",
+  "recommendation": "PIVOT A 't Hooft symbols: T_L^a = (1/2) eta^a_{ij} M^{ij}, T_R^a = (1/2) eta-bar^a_{ij} M^{ij} on so(4) basis -- automatically satisfies [T_L, T_R]=0 by t Hooft identities. PIVOT B quaternionic equivalent. MCHM SO(5)/SO(4) coset chain (PIVOT C) for sedenion 16D framework.",
+  "references": [
+    "Agashe-Contino-Pomarol NPB 719 (2005) 165 hep-ph/0412089",
+    "Agashe-Contino-Da Rold-Pomarol PLB 641 (2006) 62 hep-ph/0605341",
+    "Contino TASI 2009 arXiv:1005.4269",
+    "Panico-Wulzer Springer 2016 arXiv:1506.01961",
+    "FeynRules 2.0 arXiv:1310.1921",
+    "Georgi-Machacek NPB 262 (1985) 463",
+    "Sannino et al MWT lattice arXiv:0712.1948"
+  ],
+  "caveats": "FeynRules does NOT auto-verify custodial -- wrong embedding silently produces rho!=1. Lattice tests are operationally chiral SU(2)L x SU(2)R observables (Goldstone degeneracy, Weinberg sum rules), not algebra commutators.",
+  "confidence": "MEDIUM_HIGH",
+  "agentId": "prom16-ice-residual-A2-S2",
+  "findingId": "f_A2_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

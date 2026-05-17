@@ -1,4 +1,9 @@
 {
+  "verdict": "NUMEROLOGY_CONFIRMED",
+  "verdict_reasoning": "P(any-target hit | null) = 1.000 over 8 small-rational targets x 499 candidates. Look-elsewhere effect renders the observed exact matches inevitable. ICE 'derivation' of Koide_Q = 2/3 (and 7 other observables) carries no information beyond combinatorial arithmetic; promotion from HOLD.",
+  "verdict_source": "numerology_mc_judge.py 2026-05-17 (supersedes 2026-05-14 ledger)",
+  "verdict_date": "2026-05-17",
+  "self_refutation": false,
   "total_ICE_ratios": 499,
   "matches": {
     "Koide_Q": {
@@ -56,7 +61,7 @@
       ]
     },
     "sin2_Cabibbo": {
-      "observable": "Cabibbo angle sin\u00b2 \u2248 0.0506",
+      "observable": "Cabibbo angle sin² ≈ 0.0506",
       "experimental_value": 0.05,
       "ICE_candidates": [
         {
@@ -110,7 +115,7 @@
       ]
     },
     "g2sq_g1sq": {
-      "observable": "GUT coupling ratio g_2\u00b2/g_1\u00b2",
+      "observable": "GUT coupling ratio g_2²/g_1²",
       "experimental_value": 1.6666666666666667,
       "ICE_candidates": [
         {
@@ -137,7 +142,7 @@
       ]
     },
     "theta_13_neutrino_sq": {
-      "observable": "neutrino \u03b8_13 mixing",
+      "observable": "neutrino θ_13 mixing",
       "experimental_value": 0.02241,
       "ICE_candidates": [
         {
@@ -164,7 +169,7 @@
       ]
     },
     "CP_phase_rad": {
-      "observable": "CP violation phase \u03b4",
+      "observable": "CP violation phase δ",
       "experimental_value": 1.36,
       "ICE_candidates": [
         {
@@ -207,5 +212,9 @@
   "genuinely_structural": 3,
   "fitting_suspected": 5,
   "no_match": 0,
-  "verdict": "Postdictions/fitting, no genuine prediction yet"
+  "verdict_reasoning_prior": "Postdictions/fitting, no genuine prediction yet",
+  "mc_evidence_ref": "numerology_mc_results.json :: claim_K_koide_2_3",
+  "mc_p_e_given_not_h": 1.0,
+  "mc_null_model": "499 random ratios from ICE-like atomic integer set",
+  "mc_verdict_reasoning": "P(any-target hit | null) = 1.000 over 8 small-rational targets x 499 candidates. Look-elsewhere effect renders the observed exact matches inevitable. ICE 'derivation' of Koide_Q = 2/3 (and 7 other observables) carries no information beyond combinatorial arithmetic; promotion from HOLD."
 }

@@ -1,0 +1,22 @@
+{
+  "domain": "A3-S3: schema/AST/papermill alternatives",
+  "oneLineSummary": "Recommended stack: (e) libcst codemod + (a) JSON-Schema validation + (c) Makefile dispatcher. One-time libcst CSTTransformer inserts uniform verdict emitter into all 53 scripts at O(1) human cost; Makefile drives weekly CI; jsonschema/fastjsonschema/jsonschema-rs is fail-fast gate. (b) pydantic REJECTED -- existing _patch_verdict_*.py files prove per-script retrofit fails to converge.",
+  "rootCause": "Empirical: 53 .py / 23 .json -> 57% silent-failure surface. Post-hoc patching pattern already exists in 3 _patch_*.py scripts and has not converged to 100%. Pure post-validation (a alone) leaves 30 missing-output scripts untouched. Pydantic per-script touch cost is exactly what _patch_*.py represents -- known failure mode.",
+  "recommendation": "libcst (Instagram, supports Py 3.0-3.14) CSTTransformer subclass finds FunctionDef name=='main' or module-tail, appends emission block. Lossless round-trip preserves comments/whitespace. Run once, commit, then CI is pure (a)+(c) steady-state. papermill (d) is secondary if narrative provenance becomes paper artifact (kernel overhead not justified now).",
+  "references": [
+    "libcst PyPI / Instagram/LibCST GitHub",
+    "jsonschema 4.26.0 Draft 2020-12",
+    "fastjsonschema (Ajv-class throughput, code-gen)",
+    "jsonschema-rs (2-5x faster, Rust core)",
+    "papermill 2.7.0 Netflix (REJECTED -- wrong format)",
+    "Make for Data Science (ADGEfficiency)"
+  ],
+  "caveats": "libcst learning curve. Transformer must handle 4-5 script shapes (main() / __main__ guard / top-level / notebook-converted).",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A3-S3",
+  "findingId": "f_A3_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

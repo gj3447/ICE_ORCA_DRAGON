@@ -1,0 +1,21 @@
+{
+  "domain": "A2-S4: custodial search pitfalls",
+  "oneLineSummary": "8 pitfalls + 4-phase Custodial-Pivot-v1. CDF 2022 W-mass tension UNRESOLVED (CMS 2024 SM-consistent) -> custodial prior shifted back to preservation. ICE's 1.93 average is 7+ OOM above tier-2 (1e-6) and 19x above tier-3 (0.1) -- structural refutation, not threshold issue.",
+  "rootCause": "Test ICE queue_02 checks ONLY [T_L, T_R]=0 (condition iii of FOUR: i SU(2)_L closure, ii SU(2)_R closure, iii cross-commutativity, iv Y consistency [Y,T_L]=0 etc.). Sedenion non-associativity ~70% of triples fail SU(2)_L closure (i) BEFORE cross-commutator -- the 1.93 is symptom, not root cause.",
+  "recommendation": "Phase 1 diagnostic: record all 4 conditions (c1, c2, c3, c4) per pair. Threshold tiers: tier1 1e-10 (machine), tier2 1e-6 (numerical), tier3 0.1 (soft-breaking EFT). Phase 2A structural pivot when c1/c2 fails dominate (Cartan/G2/triple ansaetze). Phase 2B soft-breaking pivot when c1/c2 pass but c3 fails. Phase 3 EW gate |Delta T|<0.13, |Delta S|<0.14, f>800 GeV.",
+  "references": [
+    "Asadi-Cesarotti-Fraser-Homiller-Parikh PRD 106 013008 (2022)",
+    "Grojean-Matsedonskyi-Panico-Wulzer JHEP 03 (2023) 222 arXiv:2207.01465",
+    "PDG 2024 EW Model review",
+    "Tripling down EPJ-C (2022) doi:10.1140/epjc/s10052-022-10934-5",
+    "W boson mass review arXiv:2409.08244"
+  ],
+  "caveats": "CDF 2022 W mass 7-sigma anomaly: if real, requires Delta T_CDF~+0.17 -- DISFAVORS pure custodial. CMS 2024 SM-consistent (Delta T~0). ICE current data forbids reaching phenomenology before Phase 2A structural fix.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A2-S4",
+  "findingId": "f_A2_S4",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

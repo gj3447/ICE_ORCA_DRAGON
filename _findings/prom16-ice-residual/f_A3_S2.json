@@ -1,0 +1,23 @@
+{
+  "domain": "A3-S2: scientific Python verdict-capture tools",
+  "oneLineSummary": "pytest + pytest-json-report + pytest-regressions + GitHub Actions cron Monday 06:00 UTC = best fit. Reuses existing .github/workflows/pytest.yml; verdict {verdict, verdict_reasoning, verdict_source, verdict_date} schema directly maps onto pytest outcome + user_properties. papermill/nbconvert REJECTED (wrong input format -- 53 .py, 0 .ipynb).",
+  "rootCause": "MLflow/Sacred ML-experiment-shaped (train -> eval -> model), wrong fit for physics proof scripts. ICE scripts are deterministic with discrete 'verdict' classification, not learning-curve metrics. Sacred MongoObserver could coexist Phase 2 (mcp__mongodb infra already in SYMPOSIUM).",
+  "recommendation": "8-step implementation: (1) idempotent script entrypoints def main() -> dict; (2) tests/ice/test_<script>.py wrappers with pytest.user_properties; (3) conftest.py with seed-pin + KG-session fixtures; (4) pytest-regressions baselines under _baselines/; (5) JSON aggregation to verdict_aggregate.json; (6) .github/workflows/ice-weekly.yml cron 0 6 * * 1; (7) failure notification via create-issue-from-file (GH does NOT notify scheduled-workflow failures by default); (8) drift -> KG feedback closing science-feedback-loop.md cycle.",
+  "references": [
+    "pytest 8.x docs",
+    "numirias/pytest-json-report 1.5+",
+    "pytest-regressions docs (ESSS)",
+    "GitHub Actions cron syntax",
+    "Netflix nteract/papermill (REJECTED)",
+    "IDSIA/sacred (REJECTED Phase 1)",
+    "MLflow tracking (REJECTED, overkill)"
+  ],
+  "caveats": "Q1 *_results.json git check-in (yes for pytest-regressions baseline) vs regenerated (cleaner git). Q2 @pytest.mark.numerology -> CI warns not fails. Q3 ICE scripts must be importable as modules (currently execute at import time) -- precondition for clean pytest fixture invocation.",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A3-S2",
+  "findingId": "f_A3_S2",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

@@ -1,0 +1,22 @@
+{
+  "domain": "A1-S3: S3 subgroup identification algorithms",
+  "oneLineSummary": "4-stage cascading filter recommended: (d) Coxeter relation enumeration tau^2=sigma^3=(tau*sigma)^2=e cheapest filter -> (c) structure-constant preservation (defining condition for sedenion automorphism, rules out S6) -> (a) Schreier-Sims BSGS (deterministic |G|=6 certificate) -> (b) character-theoretic audit.",
+  "rootCause": "Single approach insufficient: Schreier-Sims gives |G| but not isomorphism class (Z6 vs S3 collision); characters distinguish iso-class but require known abstract group; structure-constant is necessary-sufficient for automorphism but silent on order; presentation pins iso-class but needs candidate generators. Combinatorial OR algebraic OR spectral OR presentation each probe different facet.",
+  "recommendation": "Cascade order: (d)+(c)+(a)+(b). Critical insight: (d) alone is the over-permissive trap when applied to S_6 acting on 6 letters without sedenion-action stage (c). Minimum honest test = (d)+(c). (a)+(b) raise confidence.",
+  "references": [
+    "Seress 2002 Cambridge",
+    "Holt-Eick-O'Brien Handbook Comp.Group Theory CRC 2005",
+    "Sims 1970 original Schreier-Sims",
+    "Isaacs Character Theory of Finite Groups AMS",
+    "MathWorld Automorphism Group",
+    "arXiv:2411.18881 geometry of sedenion ZDs"
+  ],
+  "caveats": "S3 ~= D_3 ~= Z6 set-collision: distinguishing requires non-abelian check (tau*sigma != sigma*tau). Sedenion basis convention (Cawagas vs Moreno vs Imaeda-Imaeda) differ in sign tables; wrong convention spuriously fails (c).",
+  "confidence": "HIGH",
+  "agentId": "prom16-ice-residual-A1-S3",
+  "findingId": "f_A1_S3",
+  "researchedAt": "2026-05-17",
+  "cycle_id": "prom16-ice-residual-2026-05-17",
+  "verified": true,
+  "gate_passed": true
+}

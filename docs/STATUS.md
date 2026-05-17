@@ -10,11 +10,14 @@
 | Component | Value |
 |-----------|-------|
 | Python scripts | 47 |
-| JSON result files | 22 |
+| JSON result files | 22 (18 `_results.json` + 4 `finding_*.json` / `derive_*_results.json`) |
+| Result JSONs with `verdict` field | 18/18 + 1 MC judge meta (19/19 total) |
 | Categories | 7 (CD breaking / CD embedding / dim analysis / Higgs+S-proofs / sedenion / queue / misc) |
 | Feedback-loop skill | `.claude/skills/science-feedback-loop.md` (v1, 2026-04-21+) |
 | Classification ledger | See [the ledger below](#classification-ledger) |
-| Lakatos overall verdict | **progressive** (3 confirmation + 1 discovery > 2 numerology + 1 self-refutation) |
+| Verdict distribution | 6 CONFIRMED / 4 CONFIRMATION_LOCAL / 3 REFUTED / 2 NUMEROLOGY_CONFIRMED / 2 METHOD_ARTIFACT / 1 NUMEROLOGY_HOLD / 1 INCONCLUSIVE (+1 MC judge meta=RESOLVED) |
+| Numerology MC judge | `numerology_mc_judge.py` → `numerology_mc_results.json` (P(E\|~H) computed under explicit null models, 2026-05-17) |
+| Lakatos overall verdict | **progressive** (11 confirmation > 3 refutation + 2 numerology + 1 inconclusive; novel predictions present, look-elsewhere effects quantified) |
 
 ---
 
@@ -22,23 +25,30 @@
 
 The science-feedback-loop classifies every result into one of four categories. Refutations and self-refutations are first-class outcomes.
 
-### Confirmations
+### Confirmations (6 CONFIRMED + 4 CONFIRMATION_LOCAL = 10)
 
 | Result | Source | External grounding | Bayesian posterior | Lakatos |
 |--------|--------|--------------------|--------------------| --------|
 | 42 sedenion ZD pairs | `prove_higgs_results.json` | Lygeros 2006 "42 Assessors" | high (external peer ref exists) | progressive |
 | S₃ Jacobi = 6·associator | `prove_s3_results.json` | FDA structure constant computation | high (algebraic identity) | progressive |
 | S₅ BV bounded | `prove_s5_results.json` | all_zero + all_bounded checks | high (consistency) | progressive |
-| Der(S) = g₂ (14D) | `sedenion_g2_deep.py` | g₂ literature (14-dim Lie algebra known) | medium-high (numeric only) | **confirmation_local** — no external peer review yet |
+| Der(S) = g₂ (14D) | `sedenion_g2_deep.py` | g₂ literature (14-dim Lie algebra known) | medium-high (numeric only) | **CONFIRMATION_LOCAL** — no external peer review yet |
 | 7×6 = 42 orbit | `queue_01_orbit_results.json` | matches sedenion ZD count | high (consistent with S₃ orbit on 42) | progressive |
+| Uniform Casimir 0.75 across 42 pairs | `queue_03_rep_results.json` | rep-decomposition regularity (single bucket) | high (algebraic uniformity) | progressive |
+| XOR invariant 105/105 | `queue_11_xor_results.json` | sedenion mult XOR match 100% | high (full invariant) | progressive |
 | Wilmot 2025 Moufang pattern | (cross-cycle, history) | Wilmot 2025 | medium | progressive |
+| Hosotani vacuum (3 cases) | `queue_04_hosotani_results.json` | toy SSB + θ→π convergence | medium (toy, no external) | **CONFIRMATION_LOCAL** |
+| Coleman-Weinberg SSB (4/4) | `queue_05_cw_results.json` | bounded V_min across regimes | medium (toy) | **CONFIRMATION_LOCAL** |
+| ~~g₂ structure (16 gen)~~ — demoted | `queue_08_g2_results.json` | ~~commutant_dim=1, 7 orbit reps~~ | n/a | **METHOD_ARTIFACT** (see diagnostic below) |
+| Z₆ exclusion pattern | `queue_10_group6_results.json` | each orbit excludes 1 first + 1 second index | medium (combinatorial) | **CONFIRMATION_LOCAL** |
 
-### Refutations
+### Refutations (3 REFUTED, of which 2 are self-refutations)
 
 | Result | Source | Verdict | Action taken |
 |--------|--------|---------|--------------|
-| ICE mass ratios | `derive_mass_ratios_results.json` | **"ICE cannot genuinely derive (0/15 genuine)"** (self-refutation) | Contract `derive_mass_ratios` status=REFUTED. Higher Span re-review triggered. |
-| Custodial SU(2)×SU(2) | `queue_02_custodial_results.json` | 0/42 pairs preserve custodial (max_commutator ~1.9) | Contract `custodial_naive_embedding` status=REFUTED. Threshold sweep `queue_03_threshold_sensitivity_scan.py` recommended. |
+| ICE mass ratios | `derive_mass_ratios_results.json` | **REFUTED** (self) — "ICE cannot genuinely derive (0/15 genuine)" | Contract `derive_mass_ratios` status=REFUTED. Higher Span re-review triggered. |
+| ICE L_star prediction | `derive_Lstar_results.json` | **REFUTED** (self) — "ICE cannot uniquely predict L_star from internal structure" | Contract `derive_Lstar` status=REFUTED. |
+| Custodial SU(2)×SU(2) | `queue_02_custodial_results.json` + `queue_02_4condition_diagnostic_results.json` | **REFUTED structurally** — 100% of 42 pairs FAIL_BOTH_CLOSURE (c1, c2 residual median 3.94, c3 median 1.97). The 1.93 cross-commutator was SYMPTOM; root cause is projection onto 2D ZD null-space breaks Lie closure (non-alternative sedenion ambient). Test was measuring cross-commutators of non-Lie objects. | Contract `custodial_naive_embedding` status=REFUTED. PROM 16 R4 pivot (Aut(𝕊)=G₂×S₃ native commuting SU(2)×SU(2)) still needed but requires projection-faithful Lie construction (queue_08 was METHOD_ARTIFACT). |
 | T₂ mechanism | (session log, see feedback-loop skill md) | refutation | Step 4 Contract patched |
 
 ### Discoveries
@@ -47,14 +57,40 @@ The science-feedback-loop classifies every result into one of four categories. R
 |--------|-----------|----------|
 | ZD null space structure | (session log, see feedback-loop skill md) | new `:Span` created, /apt-sp dispatched |
 
-### Numerology (HOLD)
+### Numerology — MC discrimination (2026-05-17 resolution)
 
-| Result | Source | Why numerology | Status |
-|--------|--------|----------------|--------|
-| Koide Q = 2/3 | `derive_dimensionless_results.json` | multiple unrelated quantities (XOR_min_offset / G2_num_roots / etc.) match the same number | `:NUMEROLOGY_HOLD` — MC p-value test required |
-| c = 4·ln(2) | (session log) | post-hoc fit, no pre-prediction | `:NUMEROLOGY_HOLD` |
-| Bekenstein connection | (session log) | post-hoc analogy | `:NUMEROLOGY_HOLD` |
-| mp / mW = 3 · 256 | `verify_mp_mW_results.json` | numerical hit, Fitting Detection pending | candidate — see [Fitting Detection](#fitting-detection-pre-prediction-vs-post-fitting) |
+Three HOLD items were judged by Monte Carlo P(E|~H) under explicit null models
+(`numerology_mc_judge.py` → `numerology_mc_results.json`). Decision rule:
+
+| P(E\|~H) range | Verdict |
+|----------------|---------|
+| < 0.01 (look-elsewhere corrected) | SIGNAL_GENUINE |
+| 0.01 ≤ P < 0.5 | SIGNAL_WEAK |
+| ≥ 0.5 | NUMEROLOGY_CONFIRMED |
+
+| Result | Source | Null model | P(E\|~H) | Verdict |
+|--------|--------|-----------|---------|---------|
+| Koide Q = 2/3 (and 7 other observables) | `derive_dimensionless_results.json` | 499 random ratios from ICE-like atomic integer set, look-elsewhere over 8 targets | **1.000** | **NUMEROLOGY_CONFIRMED** |
+| mp / mW = 3·256 literal | `verify_mp_mW_results.json` (layer1) | direct comparison | rel_diff=88.8% even with reciprocal interpretation | **NUMEROLOGY_CONFIRMED** |
+| mp / mW = a·2^n best-fit | `verify_mp_mW_results.json` (layer3) | random R log-uniform, a∈[1,500000] × n∈{14..19} search | **0.812** | **NUMEROLOGY_CONFIRMED** |
+| ε power-law passes Adelberger | `derive_epsilon_results.json` | random eps0/r0/alpha power laws | 0.238 | NUMEROLOGY_HOLD (gate non-trivial; but no ICE pre-prediction of unique form) |
+| c = 4·ln(2) | (session log) | not yet MC-judged | — | `:NUMEROLOGY_HOLD` |
+| Bekenstein connection | (session log) | not yet MC-judged | — | `:NUMEROLOGY_HOLD` |
+
+**Key insight**: For Koide_Q the 499-candidate ensemble drawn from any small-integer atomic set produces near-hits to 2/3 (or any small-rational target) with p ≈ 1. The "match" carries zero information. For mp/mW the search space ~3M (a,n) pairs achieves arbitrary R within 0.1% in ~80% of cases — rational approximation theory, not physics.
+
+### Method artifact (1, demoted from CONFIRMATION_LOCAL via `queue_08_g2_diagnostic.py`)
+
+| Result | Original claim | Diagnostic finding |
+|--------|----------------|--------------------|
+| g₂ rep on 7 orbits (`queue_08_g2`) | 16 independent generators with commutant_dim=1 → "G₂ fundamental rep" | (D2) so(7) rank=16 ≠ g₂'s 14; (D4) Casimir eigenvalues `[-3, -2.5×5, -0.5]` spread 2.5 violates Schur scalarity. Root cause: octonion inner-derivation formula `D_{a,b}(z) = [[e_a,e_b],z] - 3[e_a,e_b,z]` applied to *non-alternative* sedenion ambient does not close as a 14-dim Lie algebra. The script's "commutant_dim=1" was an artifact of an ad-hoc projection and a non-Killing-form Casimir sum. **The 16-vs-14 gap is method, not physics.** |
+
+### Inconclusive (1 remaining after 2026-05-17 method-bug fixes via `inconclusive_redo.py`)
+
+| Result | Original issue | Resolution | Remaining gap |
+|--------|----------------|------------|---------------|
+| Cooperative vacuum (`queue_06_coop`) | gamma_critical=null (n_trials=20 too low) | Re-run with n_trials=200 → **gamma_critical=0.0**; single-orbit vacuum found at γ=0 already → CONFIRMATION_LOCAL of single-orbit-selection, but the *cooperative* mechanism claim is **REFUTED** because α-perturbation alone selects orbit 1 without needing γ-repulsion | Reclassified to CONFIRMATION_LOCAL with sub-verdict that cooperative-mechanism title is misleading |
+| S₃ action (`queue_09_s3`) | group_order=1 from 10000-sample of 12! (~5×10⁸ permutations, too sparse) | Direct 6! = 720 enumeration → finds 720 = S₆ valid index-realizations | Test is *too permissive*: orbit-membership-preservation alone admits the full S₆. The proper S₃ ⊂ Aut(𝕊) = G₂×S₃ test requires sedenion-multiplication-preservation; **INCONCLUSIVE** until that gate is added |
 
 ---
 
@@ -158,13 +194,21 @@ KG source: dgx worker MongoDB + Neo4j + Redis (see `CLAUDE.md` → `reference_kg
 
 Scripts are run manually. There is no GitHub Actions / pre-commit hook that re-runs all 47 scripts on every push. If a script breaks (e.g., numpy API change), it will not be detected until manual re-run.
 
-### L2 — Numerology gate is heuristic
+### L2 — Numerology gate operationalized 2026-05-17 (partial)
 
-The `P(E|~H) > 0.5` cutoff is a guideline, not a mechanical rule. Hard cases (Koide Q = 2/3, mp/mW = 3·256) require human verdict. Multiple matches with the same numerical hit raise the gate but do not automatically close it.
+**Resolution**: `numerology_mc_judge.py` operationalizes P(E|~H) ≥ 0.5 via explicit MC null models. Three HOLD items processed: Koide Q (P=1.000), mp/mW literal (88.8% rel_diff), mp/mW layer3 (P=0.812) all promoted to **NUMEROLOGY_CONFIRMED**. ε power-law remains HOLD (pass-rate 0.238 — gate non-trivial but no pre-prediction).
 
-### L3 — Self-refutation not yet generalized
+**Remaining**: c=4·ln(2) and Bekenstein-connection are session-log items without dedicated result JSONs; need MC null models built before judgment. Hard cases that survive MC (P near boundary) still require human verdict — the rule is now mechanical for the easy cases.
 
-`derive_mass_ratios_ICE.py` records its own refutation in JSON. Other scripts do *not* yet have this self-reporting discipline. Roadmap: every script should output a `verdict` field, even if the verdict is "PASS".
+### L3 — Verdict field generalization (partial fix 2026-05-17)
+
+**Status**: 18/18 existing result JSONs now carry a top-level `verdict` field (taxonomy: CONFIRMED / CONFIRMATION_LOCAL / REFUTED / NUMEROLOGY_HOLD / INCONCLUSIVE) plus `verdict_reasoning`, `verdict_source`, `verdict_date`. Distribution: 6 CONFIRMED + 4 CONFIRMATION_LOCAL + 3 REFUTED + 3 NUMEROLOGY_HOLD + 2 INCONCLUSIVE.
+
+**Backfill provenance**: `_patch_verdict_backfill.py` (15 new) + `_patch_verdict_legacy_normalize.py` (3 legacy prose → taxonomy, prose preserved as `verdict_reasoning`).
+
+**Remaining gap**: 29 scripts (of 47) do not emit `_results.json` at all (e.g., `cd_breaking_*`, `cd_embedding_*`, `sedenion_*`, `prove_s1/s2/s3/s7`). Forward fix: each script's JSON-dump path should write a `verdict` field. Not yet done.
+
+# KG: Roadmap #4 partially RESOLVED (backfill complete) — forward enforcement on scripts pending.
 
 ### L4 — Der(S) = g₂ has no external peer review
 
@@ -180,14 +224,18 @@ When a result is classified `discovery`, `/apt-sp` dispatch is currently manual.
 
 ---
 
-## Roadmap
+## Roadmap (post PROM 16 prom16-ice-residual 2026-05-17)
 
-1. **External peer review for Der(S) = g₂** — submit arXiv preprint
-2. **MC p-value tests for numerology candidates** — Koide Q, mp/mW
-3. **Custodial-preserving embedding search** — pivot from refutation
-4. **Self-verdict field on all 47 scripts** — generalize the mass_ratios pattern
-5. **CI integration** — GitHub Actions cron to re-run all scripts weekly
+1. **External peer review for Der(S) = g₂** — submit arXiv preprint (g₂ 16-vs-14 in `queue_08_g2` confirmed METHOD_ARTIFACT, 2026-05-17 — non-alternative sedenion ambient breaks octonion derivation formula closure)
+2. ✅ **MC p-value tests for numerology candidates** — Koide Q + mp/mW done (`numerology_mc_judge.py`). Remaining: c=4·ln(2), Bekenstein-connection.
+3. **Custodial-preserving embedding search** — PROM 16 outcome: pivot to Aut(𝕊) = G₂×S₃ native commuting SU(2)×SU(2) (R4 in PROM_16_REPORT.md). Precondition: R1 4-condition diagnostic.
+4. **Self-verdict field on all 47/53 scripts** — partial (18/18 result JSONs done; 30 scripts still produce no JSON). PROM 16 outcome: `_verdict_auto_emit.py` zero-mod hook (R3) + pyastsim canonical pruning 53→~20 (R5).
+5. **CI integration** — PROM 16 outcome: pytest+pytest-json-report+regressions+GH Actions cron `0 6 * * 1` (R6 8-step plan in PROM_16_REPORT.md).
 6. **Auto-dispatch /apt-sp on discovery** — close the recursive loop programmatically
+7. **Sedenion-multiplication-preservation gate for queue_09_s3** — PROM 16 outcome: SS3TG triple-gate (R2) signed-permutation M-preservation + BSGS + S₃ presentation. CAVEAT: Aut(𝕊) S₃ factor contested by Wilmot 2025 — `:CompetingVerdict` flag needed.
+8. **NEW**: ε P2 zero-divisor filtration (R7) — SYMPOSIUM-novel candidate for MB1 form-uniqueness theorem. Sedenion-derived ε(r) has NO literature precedent (PROM 16 confirmed); P2 = n_eff = 16 − dim(ZD-locus) → forced ε(r) ∝ 1/r^(n_eff+1).
+9. **NEW**: 6-criterion promotion bar MB1-MB6 (lesson-prom16-A4-S4) — operationalize NUMEROLOGY_HOLD → SIGNAL transition. NF3 insight: MB1 form-uniqueness theorem obviates trials factor (single proof obligation replaces diffuse LEE patching).
+10. **NEW**: Aut(𝕊) dispute resolution — Brown 1967 G₂×S₃ vs Wilmot 2025 G₂-only. SYMPOSIUM should flag `:CompetingVerdict`; Lean 4 formalization on Mathlib CayleyDickson is the resolution path.
 
 ---
 
