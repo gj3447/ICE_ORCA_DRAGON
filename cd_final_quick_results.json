@@ -1,0 +1,19 @@
+{
+  "verdict": "COMPLETED",
+  "verdict_reasoning": "AUTO_EMIT_PLACEHOLDER (no exception, no explicit set_verdict). MT_RubberStampVerdict guard: structural only — does not assert CONFIRMED/REFUTED/NUMEROLOGY classification.",
+  "verdict_source": "verdict_auto_emit/1.0",
+  "verdict_date": "2026-05-17",
+  "walltime_sec": 355.127431,
+  "exit_path": "normal",
+  "agent_stack": {
+    "agent_id": "manual",
+    "session_id": "",
+    "python_version": "3.9.6",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "cwd": "/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON",
+    "argv": [
+      "/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/cd_final_quick.py"
+    ],
+    "hook_version": "verdict_auto_emit/1.0"
+  }
+}

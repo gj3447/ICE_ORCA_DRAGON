@@ -1,0 +1,50 @@
+{
+  "verdict": "PASS_ALL",
+  "verdict_reasoning": "Brown 1967 CONFIRMED. sigma + Psi both preserve sedenion multiplication (0/256 failures each), satisfy S_3 presentation (orders 2/3/2), and generate group of order 6 with S_3 fingerprint {1:1, 2:3, 3:2}. Aut(S) S_3 factor exists as genuine algebra automorphism under cd_embedding convention; Wilmot 2025 claim REFUTED.",
+  "verdict_source": "queue_09_SS3TG.py 2026-05-17 (R2 of prom16-ice-residual)",
+  "verdict_date": "2026-05-17",
+  "cycle_ref": "prom16-ice-residual-2026-05-17",
+  "actionplan_item": "R2",
+  "gates": {
+    "gate1_preservation": {
+      "sigma_fail_count": 0,
+      "sigma_max_err": 0.0,
+      "sigma_sample_fails": [],
+      "psi_fail_count": 0,
+      "psi_max_err": 1.1102230246251565e-16,
+      "psi_sample_fails": [],
+      "tolerance": 1e-09
+    },
+    "gate2_presentation": {
+      "sigma_order": 2,
+      "psi_order": 3,
+      "sigma_psi_order": 2,
+      "expected": [
+        2,
+        3,
+        2
+      ],
+      "pass": true
+    },
+    "gate3_group_structure": {
+      "group_order": 6,
+      "expected": 6,
+      "element_order_distribution": {
+        "1": 1,
+        "2": 3,
+        "3": 2
+      },
+      "expected_distribution": {
+        "1": 1,
+        "2": 3,
+        "3": 2
+      },
+      "pass": true
+    }
+  },
+  "brown_vs_wilmot": {
+    "Brown_1967": "Aut(S) = G_2 x S_3 with explicit (sigma, Psi) generators",
+    "Wilmot_2025_arXiv_2512_07210": "Aut(S) = G_2 only; S_3 fails canonical 3-form preservation",
+    "empirical_settlement_2026_05_17": "PASS_ALL"
+  }
+}
