@@ -224,6 +224,21 @@ When a result is classified `discovery`, `/apt-sp` dispatch is currently manual.
 
 ---
 
+## Position Statement (2026-05-17)
+
+> User verdict "2번으로 한번 드가줘봐봐" → physics-prediction layer 부분 후퇴 formalized.
+
+Canonical position (`ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md`):
+
+- **Math layer**: CONFIRMED, robust (Aut(𝕊) = G₂ × S₃ via R2 SS3TG, 7 confirmation results retained)
+- **Mythology layer (USER_PRIMARY)**: PRESERVED untouched (Eilu va-Eilu — narrative-feedback-loop)
+- **Physics-prediction layer**: PARTIAL RETREAT (Higgs doublet / custodial / Koide / mp/mW / ε form all REFUTED or NUMEROLOGY)
+- **Reversibility**: 5 RESUMPTION_HOOK triggers — R4 PASS, R7 PASS, Wilmot dispute settled, user verdict, new empirical evidence
+
+The retreat is partial and reversible. Math + mythology layers retain ICE's role as 12사도 #2; only the *direct physics-prediction* claim is demoted.
+
+---
+
 ## Roadmap
 
 > Updated post PROM 16 `prom16-ice-residual-2026-05-17`.

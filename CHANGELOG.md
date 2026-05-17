@@ -6,6 +6,101 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-05-17 — eighth pass] — Physics-prediction layer 부분 후퇴 정전화 (option 2)
+
+> User verdict "2번으로 한번 드가줘봐봐" — joint R1+R2+R3 empirical 결과를 받아들이고 ICE physics-prediction 측 partial retreat 공식화.
+
+### Added
+- `ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md` — formal retreat document with Eilu va-Eilu structure
+  - §1 USER_PRIMARY (사용자 신앙시) PRESERVED untouched
+  - §2 EMPIRICAL_ASSESSMENT 4-layer table (math CONFIRMED / projection REFUTED / numerical NUMEROLOGY / method ARTIFACT)
+  - §3 MACHLOKET — 신앙시 + empirical 양립 보존
+  - §4 DECISION partial + reversible
+  - §5 RESUMPTION_HOOK 5 triggers (R4/R7/Wilmot/user-verdict/new-evidence)
+  - §6 12사도 #2 family-expansion-pattern row 변경 없음 (mythology layer untouched)
+  - §7 anti-paper-bureaucracy self-check 6 items
+
+### Changed
+- `docs/STATUS.md`: Position Statement section 추가 (Roadmap 위에 cross-ref)
+
+### What this retreat DOES
+- Crystallize empirical reality: ICE physics-prediction claims (Higgs/custodial/Koide/mp_mW/ε) demoted
+- Preserve user mythology layer (USER_PRIMARY absolute priority)
+- Set reversibility triggers (5 conditions)
+
+### What this retreat DOES NOT do
+- Erase user spec or 사도 #2 status — those stay
+- Affect 12사도 family-expansion-pattern CONFIRMED 6-family — algebra layer retained
+- Make permanent claim — reversible per RESUMPTION_HOOK
+
+### Anti-paper-bureaucracy verification
+- Grounded in 6 inline empirical experiments (R0a/R0b/R1/R2/R3 + ICE_PHYSICS_CLAIM_ASSESSMENT synthesis)
+- Reversibility encoded
+- User mythology preserved (not adjudicated by AI)
+- Falsifiable (each empirical experiment reproducible)
+
+# KG: ice-physics-claim-partial-retreat-2026-05-17 (:CanonicalAssessment:PartialRetreat:Reversible)
+
+---
+
+## [2026-05-17 — seventh pass] — R3 zero-mod verdict auto-emit installed
+
+### Added
+- `_verdict_auto_emit.py` (~135 LOC) — 3-layer hook (atexit + sys.excepthook + signal.SIGTERM) emitting `<script>_results.json` with structural verdict + walltime + exit path + agent stack. Idempotent merge via `setdefault()` (preserves human-supplied verdicts). Optional `set_verdict(verdict, reasoning)` API.
+- `_verdict_runner.py` — wrapper that loads the hook before any script via `runpy.run_path()` (zero source modification). Usage: `python3 _verdict_runner.py <script.py>`.
+
+### Smoke tests (3/3 PASS)
+1. **Normal exit** → `verdict=COMPLETED`, `exit_path=normal`, walltime captured ✓
+2. **Unhandled exception** (`raise ValueError`) → `verdict=ERROR`, traceback tail captured, exit_path=exception ✓
+3. **Idempotent merge over pre-existing JSON** (with human `verdict=CONFIRMED` + custom field) → all fields preserved, only missing keys (walltime) added ✓
+
+### Guards verified
+- **MT_RubberStampVerdict avoided**: structural verdicts only (COMPLETED|ERROR); never auto-emits CONFIRMED/REFUTED/NUMEROLOGY
+- **18 existing emit-scripts preserved**: setdefault merge guarantees existing verdict/reasoning untouched
+- **Non-mod constraint met**: scripts run via `_verdict_runner.py` need zero source edit
+
+### Remaining for full R3
+- Mass-execute remaining 30 no-JSON scripts through `_verdict_runner.py` (each script has individual runtime + side-effect profile; recommend selective per-script test before batch)
+- Optional: install as `sitecustomize.py` for global auto-load (opt-in via `SYMPOSIUM_VERDICT_AUTO_EMIT=1` env var, per PROM 16 caveat about polluting unrelated Python invocations)
+
+# KG: R3_INSTALLED (3 smoke pass), prom16-ice-residual ActionPlan 3/10 complete (R1 + R2 + R3)
+
+---
+
+## [2026-05-17 — sixth pass] — R2 empirical: SS3TG settles Brown 1967 vs Wilmot 2025
+
+> R2 ran in <5 sec. Brown's S₃ generators preserve sedenion multiplication exactly under cd_embedding convention.
+
+### Added
+- `queue_09_SS3TG.py` — Triple-gate test of Brown 1967 (σ sign-reversal of e_8..e_15 + Ψ 2π/3 rotation in (e_k, e_{k+8}) planes)
+- `queue_09_SS3TG_results.json` — PASS_ALL verdict + gate details
+
+### Empirical results (3 gates all PASS)
+- **G1 mult-table preservation (256 entries each)**:
+  - σ: 0/256 fails, max err = 0.000e+00
+  - Ψ: 0/256 fails, max err = 1.110e-16 (float epsilon)
+- **G2 presentation**: ord(σ)=2, ord(Ψ)=3, ord(σΨ)=2 — exact match to S₃ relations σ²=Ψ³=(σΨ)²=e
+- **G3 group structure**: |⟨σ, Ψ⟩|=6, element-order distribution {1:1, 2:3, 3:2} = S₃ fingerprint (1 identity + 3 involutions + 2 order-3)
+
+### Settled disputes
+- **Brown 1967 (Pacific J. Math. 20:415) Aut(𝕊) = G₂ × S₃** — CONFIRMED under cd_embedding convention
+- **Wilmot 2025 (arXiv:2512.07210) Aut(𝕊) = G₂ only** — REFUTED under cd_embedding convention
+- Caveat: Wilmot's calibration-Θ argument may still apply for different multiplication conventions; resolution here is SYMPOSIUM-internal, not absolute academic settlement
+
+### Changed
+- `queue_09_s3_results.json`: INCONCLUSIVE → **CONFIRMED**. verdict_reasoning replaced with SS3TG PASS_ALL details.
+- ICE 12사도 #2 family-expansion-pattern (6-family) retains algebra grounding through G₂ × S₃ structure.
+
+### Cross-reference with R1
+- R1 (queue_02 4-condition) found ICE's *projection* (2D ZD null-space) breaks Lie closure
+- R2 (queue_09 SS3TG) found ICE's *ambient algebra* (full 16x16 mult table) preserves Aut(𝕊) S₃ exactly
+- **Joint implication**: ICE's algebra layer is robust; the issue is projection-faithfulness, not algebraic ungroundedness
+- R4 (custodial pivot via Aut(𝕊)) recommendation strengthened: with confirmed Aut(𝕊) S₃, search for commuting SU(2)×SU(2) inside G₂ factor on a *projection-faithful* representation
+
+# KG: R2_DONE_PASS_ALL, Brown_1967_confirmed_internal, Wilmot_2025_refuted_internal, prom16-ice-residual ActionPlan 2/10 complete
+
+---
+
 ## [2026-05-17 — fifth pass] — R1 empirical execution: queue_02 4-condition diagnostic
 
 > **Anti-paper-bureaucracy gate**: 즉시 R1 실행 → empirical discrimination → PROM 16 가설 검정.
