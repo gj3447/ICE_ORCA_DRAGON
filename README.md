@@ -2,7 +2,7 @@
 
 # ICE_ORCA_DRAGON — Physics/Math Computation Workbench
 
-**12사도 #2 의 물리 계산 측 — Cayley-Dickson breaking, sedenion analysis, Higgs ZD doublet, S₁~S₇ proofs**
+**12사도 #2 의 물리 계산 영역 — Cayley-Dickson breaking, sedenion analysis, Higgs ZD doublet, S₁~S₇ proofs**
 
 [![Apostle](https://img.shields.io/badge/Apostle-%232_ICE_ORCA_DRAGON-0ea5e9?style=for-the-badge&logoColor=white)](SOURCES.md)
 [![Python Scripts](https://img.shields.io/badge/Python_Scripts-47-3776ab?style=for-the-badge&logo=python&logoColor=white)](#path-a--python-script-direct-execution)
