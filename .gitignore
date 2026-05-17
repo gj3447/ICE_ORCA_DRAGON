@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+*.egg-info/
+
+# macOS / editor
+.DS_Store
+._*
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build / dist
+build/
+dist/
+
+# Local-only test scratch
+.pytest_cache/
+.coverage
+htmlcov/
