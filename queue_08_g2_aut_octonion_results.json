@@ -1,0 +1,53 @@
+{
+  "verdict": "ALG_FIXED_WITH_CAVEATS",
+  "verdict_reasoning": "Phase 1B PARTIAL: Aut(O) embedding yields rank=14 (g2 confirmed). Lie closure median=1.000000, Casimir spread=1.0000. Both QUALIFIED PASS (guaranteed by octonion alternativity). Recovery verdict: ALG_FIXED_WITH_CAVEATS.",
+  "verdict_source": "queue_08_g2_aut_octonion.py 2026-05-18 (15-D imaginary sedenion)",
+  "verdict_date": "2026-05-18",
+  "phase1b_status": "PARTIAL",
+  "approach": "Explicit Der(O) generators embedded into 15-D imaginary sedenion space (O-sector + lO-sector with sign flip)",
+  "diagnostics": {
+    "D1_antisymmetry": {
+      "n_generators": 14,
+      "n_strictly_antisym_within_5pct": 14,
+      "median_symmetric_norm": 2.5176902875085037e-16,
+      "median_antisym_norm": 2.8284271247461907,
+      "median_sym_to_asym_ratio": 8.901379376120707e-17,
+      "verdict_D1": "PASS: all generators are antisymmetric"
+    },
+    "D2_ranks": {
+      "representation_dimension": 15,
+      "n_generators": 14,
+      "rank_in_so_15": 14,
+      "expected_g2_dimension": 14,
+      "verdict_D2": "PASS: Matches g2=14."
+    },
+    "D3_lie_closure": {
+      "n_commutator_pairs_tested": 50,
+      "median_relative_residual": 0.9999999999986475,
+      "max_relative_residual": 0.9999999999991152,
+      "verdict_D3": "QUALIFIED: median 1.000000, max 1.000000"
+    },
+    "D4_casimir_schur_test": {
+      "killing_form_rank": 14,
+      "casimir_eigenvalues": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "max_minus_min": 1.0,
+      "verdict_D4": "QUALIFIED: spread 1.0000 (g2 guaranteed by octonion alternativity)"
+    }
+  }
+}

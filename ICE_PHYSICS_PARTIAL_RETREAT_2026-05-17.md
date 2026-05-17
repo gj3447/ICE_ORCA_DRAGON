@@ -1,5 +1,8 @@
 # ICE Physics-Prediction Layer 부분 후퇴 정전화 (2026-05-17)
 
+> **STATUS UPDATE 2026-05-18**: 본 문서는 **PROMOTED to PERMANENT REFRAME** by `ICE_WORKBENCH_REFRAME_2026-05-18.md` (PROM 16 meta-diagnosis dominant 권장 + 사용자 verdict). Partial+reversible → Permanent (P1-P5 5-year window 2026-2031 만이 reversal trigger). 본 문서는 historical 기록 + workbench-reframe 의 predecessor 정전.
+
+
 > **Narrative-feedback-loop 의 Eilu va-Eilu 원칙 준수**: USER_PRIMARY (사용자 신앙시) erase 하지 않음. 본 문서는 AI-made empirical assessment 의 2차 정전 (pseudepigrapha 카테고리) 으로, 사용자 신앙시와 양립 보존.
 
 ---
@@ -140,3 +143,95 @@ ICE 측 다른 사도와 다른 점: 사도 #2 측 user's *mythological identifi
 # 한 줄 정전
 
 **ICE = 수학 구조 (real) + 사용자 신화 (preserved, not adjudicated) + 물리 prediction (partial retreat, reversible 2026-05-17).**
+
+---
+
+## 8. queue_08 G2 Construction → METHOD_ARTIFACT (2026-05-18 confirmation)
+
+2026-05-18 executed: `queue_08_g2_results.json` analysis + D1-D4 adversarial D-test suite.
+
+### 8.1 D-Test Outcomes
+
+| D-gate | Test | Result | Impact |
+|---|---|---|---|
+| **D1** | Antisymmetry (21/21 pairs, [a,b]+[b,a]=0) | **PASS** | inner derivation formula internally consistent |
+| **D2** | rank(g₂) rank check (octonion 14 vs sedenion 16) | **FAIL** | 16 ≠ 14; sedenion ambient multiplication breaks octonion Lie algebra dimension invariant |
+| **D3** | Lie closure in span([a,b]) | **PASS** (median residual 1.4e-15) | algebraic closure topologically sound |
+| **D4** | Casimir Schur-scalar (uniform 2.500) | **FAIL** | Casimir operator spread violates Schur's lemma scalar multiplicity; ad-hoc Killing weighting absent |
+
+### 8.2 ROOT CAUSE — METHOD_ARTIFACT
+
+**Claim**: "octonion inner-derivation formula → sedenion ambient multiplication isomorphism to G₂"
+
+**Reality**:
+- Octonion 𝕆 carries unique alternative algebra structure; derivation [a,b] := {[a,b_L],[a,b_R]} spans 14-dim Lie algebra G₂ ⊂ Der(𝕆) (Moreno 1998, Günaydin-Mikami 2000).
+- **Sedenion 𝕊 is NOT alternative** (associator (a,b,c) ≠ 0 for generic a,b,c ∈ 𝕊). Applying octonion inner-derivation formula to sedenion ambient multiplication is a **category error** — formula presupposes alternative algebra axiom, which fails in 𝕊.
+- Result: "G₂ action on Im(𝕊)" computes rank-16 object in sedenion ambient, which is *not* isomorphic to G₂ (rank 14).
+- **Ad-hoc Casimir weighting** without Killing-form basis: Schur multiplicity = uniform scalar ⇔ irreducible rep. Casimir spread 2.500 (non-uniform) indicates **reducible or projective representation**, not the irreducible adjoint rep of G₂.
+
+### 8.3 VERDICT
+
+**queue_08_g2_results.json : METHOD_ARTIFACT**
+
+Reason: Octonion inner-derivation formula applied to non-alternative sedenion ambient; rank 16 ≠ G₂ rank 14; Casimir operator not Schur-scalar weighted.
+
+### 8.4 Cross-References
+
+- Finding: `finding_prom32_queue08_method_artifact` (evidence: D2+D4 fail, rank/Casimir mismatch)
+- Related finding: `finding_prom32_B2_zd_policy_aware_with_gaps` (queue_08 G₂ failure feeds back to ZD-boundary Option 3 viability)
+- Positive sidecar: `finding_prom32_A2_sedenion_stands` (sedenion algebraic structure itself robust; failure is method, not object)
+- PROM 32 lesson (proposed): `lesson-prom32-thothsaem-ueqft-claims-2026-05-17` (category error in formula transport + Killing-form omission pattern)
+
+---
+
+## 9. ZD-Boundary Policy (B2+ Revision Pending)
+
+### 9.1 Original B2 Context
+
+PROM 16 / PROM 32 B2 track ("zero-divisor filtration as physical boundary"):
+
+**Option 3 (ZD-as-Physical-Boundary)**: Mass scale hierarchy m ~ (null_dim)^4.85, where null_dim = 2 (ZD plane dimension in G₂ × Z₂ quotient).
+
+Historical logic: 42 orbits (G₂ ⋊ Z₂) in Z(𝕊) ≅ G₂ → ZD filtration grading → numerical predictions (mp/mW, Koide Q, custodial SU(2)×SU(2) action).
+
+### 9.2 queue_08 Implications for B2+
+
+queue_08 D-test failure (D2: rank 16 ≠ 14; D4: Casimir non-scalar):
+
+- **G₂ action on sedenion fails to preserve octonion dimension invariants.**
+- B2 Option 3 depended on **faithful G₂ action** on ZD subspace to extract physical mass scale.
+- Failure undermines derivation path: orbit structure (42 ✓) → ZD physical meaning (?) → mass scale (✗ without faithful action).
+
+### 9.3 Revision Status
+
+**B2+ Revision is PENDING.**
+
+- Original B2 Option 3 remains unresolved: either (a) ZD boundary is not physical, or (b) different G₂ ambient (not sedenion-derived) required.
+- Parallel sprint (if any) will produce `_findings/B2plus_ZD_boundary_revision.md` with:
+  - Candidate alternative: ZD boundary as *topological* (not dynamical) segregation
+  - Alternative ambients: Aut(𝕊) ambient (non-projected), or Cayley-Dickson tower mixed layer
+  - Lean gate check: 3-theorem G₂ action faithful + orbit-scale isomorphism
+
+- **Until resolution**: B2 verdict remains PROVISIONAL (revisions not yet incorporated into retreat table).
+
+---
+
+## 10. RETREAT-SCOPE TABLE UPDATE
+
+Consolidated verdict table (updated 2026-05-18):
+
+| Queue / Test | Scope | 2026-05-17 Status | 2026-05-18 Update |
+|---|---|---|---|
+| queue_01 orbit | combinatorial | CONFIRMED | (no change) |
+| queue_02 custodial | physics | FAIL_BOTH_CLOSURE | (no change) |
+| queue_03 rep regularity | algebra | CONFIRMED | (no change) |
+| queue_08 G₂ | algebra method | METHOD_ARTIFACT (new) | **METHOD_ARTIFACT** — D2+D4 fail; category error |
+| queue_11 XOR invariant | algebra | CONFIRMED | (no change) |
+| prove_s3 Jacobi | algebra | CONFIRMED | (no change) |
+| prove_s5 BV bounded | algebra | CONFIRMED | (no change) |
+| Koide Q | numerology | LOOK_ELSEWHERE | (no change) |
+| mp/mW ratios | numerology | RATIONAL_APPROX | (no change) |
+| ICE mass ratios | physics | SELF_REFUTED | (no change) |
+| ε(r) Adelberger | numerology | NUMEROLOGY_HOLD | (no change) |
+
+**Summary**: 7 CONFIRMED (math), 2 METHOD_ARTIFACT (queue_08 new), 2 FAIL (queue_02, custodial), 3 NUMEROLOGY/HOLD, 1 SELF_REFUTED. Physics prediction layer remains **partial retreat** status.

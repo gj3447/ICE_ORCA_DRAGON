@@ -228,18 +228,23 @@ When a result is classified `discovery`, `/apt-sp` dispatch is currently manual.
 
 ---
 
-## Position Statement (2026-05-17)
+## Position Statement (2026-05-18 — promoted from 2026-05-17 partial retreat)
 
-> User verdict "2번으로 한번 드가줘봐봐" → physics-prediction layer 부분 후퇴 formalized.
+> User verdict "그렇게 해줘봐봐" (2026-05-18) → PROMOTED partial retreat → **PERMANENT workbench-reframe** per PROM 16 meta-diagnosis (`prom16-hypercomplex-physics-meta-2026-05-18`).
 
-Canonical position (`ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md`):
+Canonical position (`ICE_WORKBENCH_REFRAME_2026-05-18.md`, supersedes `ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md`):
 
-- **Math layer**: CONFIRMED, robust (Aut(𝕊) = G₂ × S₃ via R2 SS3TG, 7 confirmation results retained)
+- **ICE classification**: `:HypercomplexHypothesisTestbench` (was `:PhysicsTheoryProgramme`)
+- **L1 Algebra core**: PROGRESSIVE, retained as primary value (Brown 1967 Aut(𝕊)=G₂×S₃, Moreno 1998 Z(𝕊)≅G₂, Reggiani 2024, 5 queue_* CONFIRMED)
+- **L2/L3 Physics-prediction belt**: DEGENERATING / STAGNANT (Tüchsen 2024 EJPS third category applied)
 - **Mythology layer (USER_PRIMARY)**: PRESERVED untouched (Eilu va-Eilu — narrative-feedback-loop)
-- **Physics-prediction layer**: PARTIAL RETREAT (Higgs doublet / custodial / Koide / mp/mW / ε form all REFUTED or NUMEROLOGY)
-- **Reversibility**: 5 RESUMPTION_HOOK triggers — R4 PASS, R7 PASS, Wilmot dispute settled, user verdict, new empirical evidence
+- **Single Lean 4 escape lane**: P2 zero-divisor filtration uniqueness (`MIND/lean_formalization/sedenion_uniqueness/`), P=0.04 standalone; workbench-reframe insulates sunk cost
+- **5-year discriminator P1-P5 window 2026-2031**: 현재 0/5 satisfied; 1개라도 PASS → reframe 재검토
+- **Cross-apostle firewall**: 12사도 #2 6-family CONFIRMED row untouched (family-expansion-pattern §5-D 변경 없음)
 
-The retreat is partial and reversible. Math + mythology layers retain ICE's role as 12사도 #2; only the *direct physics-prediction* claim is demoted.
+### 3-Layer Disclosure (mandatory for all ICE outputs)
+
+Statements must distinguish: *algebra layer* (progressive) vs *workbench tested* (numerology hold) vs *mythology references* (USER_PRIMARY preserved). "ICE predicts X" without layer attribution is forbidden.
 
 ---
 
