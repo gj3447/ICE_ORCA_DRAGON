@@ -32,7 +32,7 @@ Sincerely,
 라경준 (Lagyeongjun Ra)
 Independent researcher, SYMPOSIUM Project
 ⟨gj3447@gmail.com⟩
-ORCID: ⟨pending⟩
+ORCID: 0009-0003-5827-6288 (https://orcid.org/0009-0003-5827-6288)
 
 ---
 
