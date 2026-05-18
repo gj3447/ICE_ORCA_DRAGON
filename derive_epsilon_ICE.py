@@ -21,6 +21,7 @@ ICE가 Newton/GR와 구별되는 specific correction을 예측할 수 있는가?
 """
 import numpy as np
 import json
+from pathlib import Path
 
 np.set_printoptions(precision=4, suppress=True)
 
@@ -320,6 +321,7 @@ if __name__ == "__main__":
     print("  2. 추가 observational tests (atom interferometry, cosmology) 매칭")
     print("  3. Proof-chain Taliban 재돌림으로 Jacobson/Verlinde와 구별 재확인")
 
-    with open("/Users/lagyeongjun/CD/AGENT/derive_epsilon_results.json", "w") as f:
+    out_path = Path(__file__).parent / "derive_epsilon_results.json"
+    with open(out_path, "w") as f:
         json.dump(results, f, indent=2, default=str)
-    print(f"\nResults → derive_epsilon_results.json")
+    print(f"\nResults → {out_path}")

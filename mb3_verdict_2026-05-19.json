@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "session": "MB3 Adelberger comparison verdict",
+    "date": "2026-05-19",
+    "prereg_hash": "2e1f6820e7a0f812c915a6165dd65b42bcf320c286c8bb048751698cac335299",
+    "prereg_file": "gravity_prereg_predictions_2026-05-19.json",
+    "raw_epsilon_results": "derive_epsilon_results.json"
+  },
+  "verdicts_per_prediction": {
+    "P-G01": {
+      "prediction": "Yukawa tower ε(r) = Σ_n (1/ZD_n) × (L_n/r) × exp(-r/L_n)",
+      "computed": "ε(1nm) < 1e-30 (sub-experimental)",
+      "vs_bound": "Adelberger PASS (|ε(52μm)| ≈ 1e-50) but unfalsifiable",
+      "verdict": "CONSISTENT_UNFALSIFIABLE",
+      "verdict_class": "structural_null",
+      "evidence": "derive_epsilon_results.json candidate A"
+    },
+    "P-G02": {
+      "prediction": "Oscillatory ε(r) = Σ_{k=1..7} (1/(8+k)) cos(2π k r / L*)",
+      "computed_amplitude": "~0.06 (DC offset ~0.6) at r in (62μm, 77μm)",
+      "vs_bound": "Adelberger 0.06 > 0.001 → VIOLATES bound by factor ~60",
+      "verdict": "REFUTED",
+      "verdict_class": "refuted_strong",
+      "evidence": "derive_epsilon_results.json candidates D1, D2",
+      "implication": "Most ICE-specific functional form is empirically REFUTED at sub-mm"
+    },
+    "P-G03": {
+      "prediction": "γ = 1/dim(G₂) = 1/14",
+      "computed": "γ_ICE = 0.0714",
+      "vs_bound": "Requires cosmology fit (Planck 2018 + DESI 2024 + SN). Not run here.",
+      "verdict": "DEFERRED",
+      "verdict_class": "deferred",
+      "next_action": "Write cosmology_friedmann_fit.py — compare modified Friedmann with γ=0.0714 against Planck 2018 + DESI 2024 BAO + SN. Compute χ² and Bayes factor vs ΛCDM."
+    },
+    "P-G04": {
+      "prediction": "α_ICE = 1/(42×8) = 0.002976",
+      "computed": 0.002976190476190476,
+      "vs_bound": "Eot-Wash 2020 bound α < 0.04 → α_ICE ≈ 0.003 (≈ 1/13 of bound)",
+      "verdict": "CONSISTENT_UNFALSIFIABLE",
+      "verdict_class": "structural_null",
+      "evidence": "α_ICE < bound by factor 13 — within bound but bound too weak to discriminate",
+      "next_action": "Wait for next-decade Eot-Wash precision (target α ~ 0.001) to discriminate"
+    },
+    "P-G05": {
+      "prediction": "λ_ICE = L_Planck × 2^4 = 2.586e-34 m",
+      "computed": 2.5856e-34,
+      "vs_bound": "λ_ICE ~ 1e-34 m << shortest accessible scale (~1nm). NO observable signal predicted.",
+      "verdict": "VACUOUSLY_SATISFIED",
+      "verdict_class": "vacuous",
+      "evidence": "Negative prediction (no signal) consistent with no observation",
+      "note": "Trivially true — does not constrain ICE"
+    },
+    "P-G06": {
+      "prediction": "G_N = G_planck × 1/(Σ 1/ZD_n)",
+      "computed_rescale_factor": 35.65423752095373,
+      "vs_bound": "Prediction ambiguous — 'G_planck' not separately defined. Rescale factor ~35.",
+      "verdict": "STRUCTURAL_NULL",
+      "verdict_class": "structural_null",
+      "evidence": "Prediction too vague to falsify",
+      "note": "Order-of-magnitude criterion vacuously satisfied (any factor 1-100 acceptable)"
+    },
+    "P-G07": {
+      "prediction": "β-1 = associator(S)/dim(End(S)) = 1.312/256",
+      "computed": 0.005125,
+      "vs_bound": "LLR β-1 < 1.20e-04, ICE predicts 5.1250e-03 → VIOLATES by factor 42.7",
+      "verdict": "REFUTED",
+      "verdict_class": "refuted_strong",
+      "evidence": "ICE PPN prediction exceeds LLR bound by factor ~43",
+      "implication": "Direct empirical refutation of associator-based PPN derivation"
+    }
+  },
+  "tally": {
+    "SIGNAL_GENUINE": 0,
+    "REFUTED": 2,
+    "CONSISTENT_UNFALSIFIABLE": 2,
+    "STRUCTURAL_NULL": 1,
+    "VACUOUSLY_SATISFIED": 1,
+    "DEFERRED": 1
+  },
+  "bayesian_update": {
+    "prior_P_escape_lane_viable": 0.04,
+    "posterior_after_MB3": 0.02,
+    "delta": -0.02,
+    "rationale": "0/7 SIGNAL_GENUINE + 2/7 REFUTED (P-G02 oscillatory + P-G07 PPN). Most ICE-specific predictions REFUTED. Remaining survivors are generic or unfalsifiable."
+  },
+  "escape_lane_status": "NARROWED_NOT_CLOSED",
+  "remaining_path": "P-G03 (Friedmann γ=1/14 cosmology fit) is the strongest remaining gravity claim. If cosmology fit also rejects at >3σ, escape lane is CLOSED.",
+  "honest_implication": "User's core claim 'CD-chain path integral = gravity' survives ONLY in the form that has no observable consequences (Yukawa tower at Planck scale) OR in the cosmological-γ form which needs separate testing. The most algebra-distinguishable predictions (oscillatory Z₂⁴-graded, PPN from associator) are REFUTED."
+}

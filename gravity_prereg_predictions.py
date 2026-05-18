@@ -1,0 +1,190 @@
+#!/usr/bin/env python3
+# KG: MB4-gravity-specific-prereg-2026-05-19, escape-lane-MB4-satisfied
+# LONGINUS: sourceId=gravity_prereg_predictions, sourcePath=gravity_prereg_predictions.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (single escape lane MB4 per ICE_WORKBENCH_REFRAME_2026-05-18.md §5)
+# Pre-registers ICE gravity-specific predictions BEFORE Adelberger 2024 sub-mm comparison.
+# Cryptographic sha256 commit prevents post-hoc fitting.
+# Companion: MB3 = derive_epsilon_ICE.py execution + Adelberger comparison
+#            MB1 = Lean 4 form-uniqueness theorem (Phase 3 of sedenion_uniqueness lake project)
+"""
+MB4: Gravity-specific Pre-Registered Predictions
+==================================================
+
+ICE 의 core thesis: CD-chain path integral = gravity (USER_PRIMARY mythology
++ orca_friedmann + derive_epsilon_ICE + cd_chain_propagator).
+
+Pre-registered predictions (sha256 committed BEFORE Adelberger comparison):
+
+Each prediction has 4 fields:
+  - id (P-G##)
+  - statement (what ICE algebra forces)
+  - derivation_source (which ICE primitive(s))
+  - testable_against (which experimental observable)
+
+Output: gravity_prereg_predictions_2026-05-19.json + sha256 hash
+"""
+
+import hashlib
+import json
+from pathlib import Path
+
+# ICE algebraic primitives (subset relevant to gravity)
+# Source: ICE_PHYSICS_CLAIM_ASSESSMENT + workbench-reframe §3 L1 algebra core
+ICE_PRIMITIVES_GRAVITY = {
+    "L_Planck_m": 1.616e-35,
+    "ZD_counts_OEIS_A167654": [0, 0, 0, 0, 42, 294, 1518, 6942, 29886],
+    "dim_G2_adjoint": 14,
+    "dim_G2_fundamental": 7,
+    "S3_order": 6,
+    "XOR_classes_Z2_4_grading": 7,
+    "CD_recursion_doubling_factor": 2,
+    "alternativity_loss_at": 16,  # sedenion dimension
+    "G2_orbit_decomposition_of_42": "7 x 6",
+    "Friedmann_correction_form_from_orca": "H^2 = (8πG/3)ρ(1 + γ/H)",
+    "sedenion_left_action_space_dim": 256,  # 16^2
+    "Cl_6_minimal_left_ideal_dim": 8,
+    "G2_short_roots": 6,
+    "G2_long_roots": 6,
+}
+
+# 7 pre-registered gravity-specific predictions
+# Each tied to specific ICE primitive(s); NO free fitting parameters
+PREREG_GRAVITY_PREDICTIONS = {
+    "P-G01": {
+        "statement": "ICE ε(r) modification to Newton/GR follows Yukawa tower form: ε(r) = Σ_n (1/ZD_n) × (L_n/r) × exp(-r/L_n)",
+        "derivation_source": [
+            "ZD_counts_OEIS_A167654 (Boltzmann weights)",
+            "CD_recursion_doubling_factor (L_n = L_Planck × 2^n)",
+        ],
+        "testable_against": "Adelberger Eot-Wash 2020 sub-mm bound |ε| < 1e-3 at r > 52μm",
+        "form_candidate": "A (Yukawa tower)",
+        "free_parameters": "NONE (all from ICE primitives)",
+        "PASS_criterion": "|ε(52μm)| < 1e-3 AND observable signature at some r in (1nm, 1mm)",
+    },
+    "P-G02": {
+        "statement": "ICE ε(r) follows oscillatory Z₂⁴-graded form: ε(r) = Σ_{k=1}^7 (1/(8+k)) × cos(2π k r / L*)",
+        "derivation_source": [
+            "XOR_classes_Z2_4_grading (k = 1..7)",
+            "G2_orbit_decomposition_of_42 (L* = orbit-scale)",
+        ],
+        "testable_against": "Adelberger sub-mm + atom interferometry oscillation signature",
+        "form_candidate": "D (oscillatory)",
+        "free_parameters": "L* (scale; predicted from G₂ orbit ≈ μm scale per ICE structural argument)",
+        "PASS_criterion": "Adelberger bound passed AND oscillation periodicity matches XOR class count",
+    },
+    "P-G03": {
+        "statement": "Modified Friedmann γ-term coefficient γ ∝ 1/dim(G₂) = 1/14",
+        "derivation_source": ["dim_G2_adjoint", "orca_friedmann.py SRG form"],
+        "testable_against": "cosmological dark energy fit (Planck 2018, DESY1 SN)",
+        "form_candidate": "Friedmann modification",
+        "free_parameters": "NONE",
+        "PASS_criterion": "γ predicted = γ measured within 1σ",
+    },
+    "P-G04": {
+        "statement": "Sub-mm Yukawa coupling α at r = 52μm: α_ICE = 1 / (42 × 8) = 1/336 ≈ 0.003 (42 ZD pairs × Cl(6) min ideal dim)",
+        "derivation_source": ["ZD_counts[4] = 42", "Cl_6_minimal_left_ideal_dim = 8"],
+        "testable_against": "Lee et al. 2020 PRL Eot-Wash α(λ=52μm) bound",
+        "form_candidate": "Yukawa coupling magnitude",
+        "free_parameters": "NONE",
+        "PASS_criterion": "|α_ICE - α_measured| < 1σ_experimental",
+    },
+    "P-G05": {
+        "statement": "Yukawa range λ_ICE = L_Planck × 2^n* where n* is the CD level with first non-alternativity (n* = 4, sedenion). λ_ICE ≈ L_Planck × 16 ≈ 2.6e-34 m",
+        "derivation_source": ["alternativity_loss_at = 16", "L_Planck"],
+        "testable_against": "Below all current experimental access — predicts NO observable Yukawa deviation",
+        "form_candidate": "Yukawa range",
+        "free_parameters": "NONE",
+        "PASS_criterion": "NO Yukawa signal in current sub-mm experiments (negative prediction)",
+    },
+    "P-G06": {
+        "statement": "Newton constant G_N from ICE = G_planck × (CD-tower normalization). Specific form: G_N = G_planck × 1/(Σ_n 1/ZD_n) per finite truncation",
+        "derivation_source": ["L_Planck", "ZD_counts_OEIS_A167654 sum"],
+        "testable_against": "G_N measured = 6.674e-11 m^3/(kg·s^2) (CODATA 2024)",
+        "form_candidate": "Coupling normalization",
+        "free_parameters": "NONE (sum is convergent over OEIS sequence)",
+        "PASS_criterion": "G_N predicted / G_N measured ∈ [0.5, 2.0] (order-of-magnitude)",
+    },
+    "P-G07": {
+        "statement": "PPN parameter β-1 from ICE-specific non-associative correction: β-1 ∝ associator(sedenion) ≈ 1.312 (cd_breaking measurement) — but suppressed by 1/(dim sedenion left action space) = 1/256",
+        "derivation_source": [
+            "cd_breaking_final.py associator measurement at 16D = 1.312",
+            "sedenion_left_action_space_dim = 256",
+        ],
+        "testable_against": "Lunar Laser Ranging β-1 < 1.2e-4",
+        "form_candidate": "PPN parameter",
+        "free_parameters": "NONE",
+        "PASS_criterion": "|β-1|_ICE < 1.2e-4 (must not violate LLR bound)",
+    },
+}
+
+# Pre-registration metadata
+PREREG_METADATA = {
+    "prereg_id": "MB4-gravity-prereg-2026-05-19",
+    "date_committed": "2026-05-19",
+    "purpose": "ICE gravity escape lane MB4 (single escape lane per workbench-reframe §5)",
+    "cycle": "MB1 + MB3 + MB4 (escape lane completion)",
+    "predicts_count": 7,
+    "free_parameters_count": 1,  # only P-G02 L*, others fully fixed
+    "comparison_observables": [
+        "Adelberger Lee et al. 2020 PRL sub-mm Yukawa bound",
+        "Planck 2018 / DESY1 SN cosmology",
+        "Lunar Laser Ranging PPN β",
+        "CODATA 2024 G_N",
+    ],
+    "predecessor_prereg": "ice_prereg_predictions_2026-05-18.json (mass-ratio set, separate scope)",
+    "note": "MB1 Lean form-uniqueness theorem PENDING — when complete, will select which P-G## is uniquely forced by ICE algebra. Until then, this set tests all candidates simultaneously.",
+}
+
+
+def canonical_json(obj):
+    """Deterministic JSON for sha256 commit"""
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
+def compute_sha256(content_str):
+    return hashlib.sha256(content_str.encode("utf-8")).hexdigest()
+
+
+def main():
+    output = {
+        "metadata": PREREG_METADATA,
+        "ice_primitives_used": ICE_PRIMITIVES_GRAVITY,
+        "predictions": PREREG_GRAVITY_PREDICTIONS,
+    }
+
+    canonical = canonical_json(output)
+    sha256_hash = compute_sha256(canonical)
+
+    output["sha256_self"] = sha256_hash  # self-reference hash for verification
+
+    # Write JSON
+    out_path = Path(__file__).parent / "gravity_prereg_predictions_2026-05-19.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
+
+    print("=" * 72)
+    print("MB4: Gravity Pre-Registered Predictions — sha256 COMMIT")
+    print("=" * 72)
+    print()
+    print(f"Output file: {out_path}")
+    print(f"Predictions count: {len(PREREG_GRAVITY_PREDICTIONS)}")
+    print()
+    print("Pre-registered predictions:")
+    for pid, pred in PREREG_GRAVITY_PREDICTIONS.items():
+        print(f"  [{pid}] {pred['statement'][:80]}...")
+        print(f"      → {pred['testable_against'][:80]}")
+        print(f"      → free params: {pred['free_parameters']}")
+        print()
+
+    print("=" * 72)
+    print(f"sha256 commit (canonical JSON): {sha256_hash}")
+    print("=" * 72)
+    print()
+    print("→ Any post-hoc modification of predictions detectable via hash mismatch.")
+    print("→ MB3 (Adelberger comparison) MUST proceed without modifying this list.")
+    print("→ MB1 (Lean form-uniqueness) will, when complete, identify uniquely-forced P-G##.")
+    print()
+
+
+if __name__ == "__main__":
+    main()

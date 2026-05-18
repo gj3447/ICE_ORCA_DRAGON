@@ -1,0 +1,18 @@
+{
+  "prediction": "P-G03: γ = 1/dim(G₂) = 1/14 in modified Friedmann",
+  "ICE_gamma_tilde": 0.07142857142857142,
+  "interpretation_1_as_pure_dark_energy": {
+    "required_gamma_tilde": 2.1746031746031744,
+    "ICE_predicts": 0.07142857142857142,
+    "mismatch_factor": 30.444444444444443,
+    "verdict": "REFUTED"
+  },
+  "interpretation_2_as_w0_deviation": {
+    "ICE_implied_w_0": -0.9285714285714286,
+    "observed_w_0": -0.997,
+    "sigma_deviation": 2.7371428571428558,
+    "verdict": "MARGINAL"
+  },
+  "overall_assessment": "P-G03 likely REFUTED — under both interpretations the prediction is in tension with current cosmology. Interpretation 1: 31× too small. Interpretation 2: 2.8σ deviation in w_0.",
+  "full_DESI_Planck_fit_status": "DEFERRED (requires data files + cobaya/MontePython infrastructure)"
+}
