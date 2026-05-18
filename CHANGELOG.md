@@ -6,6 +6,46 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-05-19 — twenty-fourth pass] — PROM 16 meta-A3-S3 synthesis (sedenion uniqueness distinguishing test)
+
+> Substantive forward task per `feedback_auto_crystallization_default` + `feedback_blanket_proceed_authorization_pattern` — converts raw f_A3_S3.json (parent SYMPOSIUM `_findings_prom32/prom16-meta-A3/`, 25kB single-cell PROM 16 dispatch 2026-05-18) into structured cross-referenced report.
+
+### Synthesis output
+
+- `PROM_16_META_A3_S3_REPORT_2026-05-19.md` (350+ lines)
+  - 10 ICE essential features E1~E10 matrix
+  - 7 candidate 16D algebras (C1 sedenion, C2 bioctonion C⊗O, C3 H⊗H, C4 Cl(4,0), C5 conic, C6 Wilmot 2024 assoc, C7 C⊗S, + C8 Cl(8) embedding)
+  - Critical distinguisher: **E2 (S3 in Aut) ∧ E1 (3 octonion subalg sharing quaternion)**
+  - Distinguishing test predicate (6-feature conjunction, formal)
+
+### Verdict on hypothesis C
+
+- "ICE could use different 16D algebra" → **REFUTED** for strict 16D-over-R among 7 rivals
+- "ICE could use C⊗S or Cl(8)" → PARTIALLY CONFIRMED (mathematically equivalent / containing structure)
+- Wilmot 2025 dispute: calibration-dependent, ICE empirical R2 SS3TG resolves for ICE's setup; external dispute remains OPEN
+
+### Cross-references (3 destinations)
+
+- ICE_WORKBENCH_REFRAME_2026-05-18.md §3 — STRENGTHENS L1 algebra core PROGRESSIVE status
+- papers/asymmetric_lakatos_paper_draft_2026-05-18.md §5 — supplies positive cycle-novel content for L1 sub-fiber empirical witness
+- ICE_PHYSICS_CLAIM_ASSESSMENT.md L1 — corroborates E2 via SS3TG 0/256
+
+### KG hooks (3 nodes)
+
+- `prom16-meta-A3-S3-distinguishing-test-2026-05-19` (:ResearchFinding:SingleCellDispatch:VerdictRecord)
+- `lesson-prom16-meta-A3-distinguishing-test-sedenion-uniqueness-2026-05-18` (:Lesson, category MT_MathStructureSubstitutability)
+- `distinguishing-test-predicate-canonical-2026-05-19` (:DistinguishingTestPredicate) — Lean 4 R1 target
+
+### Open follow-ups (R1~R5)
+
+R1 Lean 4 formalization (next sequential after Phase 1+2) | R2 Furey C⊗O re-run | R3 Wilmot dispute resolution | R4 conic sedenion mass-ratio test | R5 bridge to bhgman_tool pattern library
+
+# KG: prom16-meta-A3-S3-distinguishing-test-2026-05-19,
+#     lesson-prom16-meta-A3-distinguishing-test-sedenion-uniqueness-2026-05-18,
+#     distinguishing-test-predicate-canonical-2026-05-19
+
+---
+
 ## [2026-05-19 — twenty-third pass] — workbench-reframe per-script propagation audit
 
 > User verdict "ice orca dragon 작업 계속 쭉 이어서 진행" → propagation completeness audit per `feedback_canon_propagation_simultaneous`. 2026-05-18 banner-only state (README/SOURCES top-of-file) was insufficient; per-script layer attribution now applied to all 12 physics-claim scripts.
