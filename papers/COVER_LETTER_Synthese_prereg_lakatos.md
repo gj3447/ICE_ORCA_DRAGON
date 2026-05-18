@@ -25,11 +25,13 @@ The companion paper "*Asymmetric Lakatos Verdict via Fiber-Stratified Functor Ev
 
 This is an original submission, not under consideration elsewhere. No competing interests. No funding.
 
+**Note on author identity**: I publish under the name *metahumotonic*, which is the name registered with my ORCID record (0009-0003-5827-6288). My identity is verifiable through ORCID + the corresponding email address (gj3447@gmail.com, verified).
+
 Thank you for considering this work.
 
 Sincerely,
 
-라경준 (Lagyeongjun Ra)
+metahumotonic
 Independent researcher, SYMPOSIUM Project
 ⟨gj3447@gmail.com⟩
 ORCID: 0009-0003-5827-6288 (https://orcid.org/0009-0003-5827-6288)

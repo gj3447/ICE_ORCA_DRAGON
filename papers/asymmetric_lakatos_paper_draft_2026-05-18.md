@@ -13,7 +13,7 @@
 
 ## Frontmatter (submission metadata)
 
-- **Authors**: 라경준 (Lagyeongjun Ra), corresponding ⟨gj3447@gmail.com⟩
+- **Authors**: metahumotonic, corresponding ⟨gj3447@gmail.com⟩
 - **ORCID**: 0009-0003-5827-6288 (https://orcid.org/0009-0003-5827-6288)
 - **Affiliation**: Independent researcher, SYMPOSIUM Project (Mac/dgx workbench)
 - **Funding**: None. Self-funded; computation on personal Mac mini + dgx-station.
