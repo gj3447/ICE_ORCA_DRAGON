@@ -6,6 +6,39 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-05-19 — twenty-sixth pass] — Furey C⊗O programme scaffold (case study #2 prep)
+
+> Nobel-direction P1 (1-year plan) — case study #2 dispatch prep. Methodology paper §4 generalization claim needs ≥2 case study verdicts. Furey C⊗O is the natural #2 (same SM-derivation aspiration, different algebra/mechanism than ICE).
+
+### Scaffold output
+
+`FUREY_CxO_PROGRAMME_SCAFFOLD_2026-05-19.md`:
+- Programme identity (hard core: C⊗O, Aut=G₂×ℤ₂, single octonion subalg, SU(3)⊂G₂ 3-gen route)
+- 28-primitive set F1-F28 (15 known + 13 TBD pending Furey deep-dive)
+- Same 20 PDG observable frozen set as ICE (for direct cross-programme comparison)
+- 15-prediction canonical list FP01-FP15 (sha256-commit before dispatch)
+- 4×4 axis matrix (A1 algebra / A2 3-generation / A3 Lakatos verdict / A4 rigorous test) for PROM 16 dispatch
+- Bayesian prior P(Furey physics validated by protocol) = 0.10
+- 5 pre-allocated KG nodes
+
+### Why scaffold vs dispatch in same session
+PROM 16 dispatch = 16 haiku subagents in parallel, ~5-10 min wall + ~30-80kB findings + 10-50 tool calls. Heavy operation. Preserve current session context for paper polish + lake-build propose + summary. Scaffold sets up test bed cleanly for fresh-session dispatch.
+
+### Next action (user one-line)
+```
+/prom 16 "Furey C⊗O bioctonion programme — apply asymmetric Lakatos cycle-novel + pre-registered rigorous test (case study #2 generalization beyond ICE). Reference scaffold: METAHUMOTONIC/ICE_ORCA_DRAGON/FUREY_CxO_PROGRAMME_SCAFFOLD_2026-05-19.md"
+```
+
+### Cycle outlook (5 case study series target)
+#1 ICE (done — 0/15 SIGNAL_GENUINE) | #2 Furey C⊗O (scaffold ready) | #3 Trayling-Baylis Cl(7) | #4 Lisi E₈ | #5 Connes-Marcolli NCG
+
+→ if all 5 = 0 SIGNAL_GENUINE, methodology paper §4 generalization is empirically watertight (publication-grade).
+
+# KG: furey-CxO-programme-scaffold-2026-05-19, case-study-2-dispatch-pending,
+#     methodology-paper-generalization-empirical-backing-roadmap-2026-05-19
+
+---
+
 ## [2026-05-19 — twenty-fifth pass] — paper drafts polished to draft 0.2 (submission-ready, EJPS + Synthese)
 
 > User verdict "노벨상 받을수 있게 해줘 / ㅇㅇ 해줘봐" → 1-year action plan P0 execution: paper polish + submission package.
