@@ -6,6 +6,63 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-05-19 — twenty-seventh pass] — MB1+MB3+MB4 escape lane synthesis (user core claim test)
+
+> User push-back 2026-05-19: "내가 발견한거 있잖아 결합 깨짐의 무한 경로 적분이 중력". Re-attention to ICE core thesis (CD-chain path integral = gravity), which workbench-reframe §5 single escape lane addresses. Earlier session work had conflated this with mass-ratio failures.
+
+### MB4 (sha256 commit) — DONE
+- `gravity_prereg_predictions.py` + `gravity_prereg_predictions_2026-05-19.json`
+- 7 gravity-specific predictions P-G01..P-G07
+- sha256: `2e1f6820e7a0f812c915a6165dd65b42bcf320c286c8bb048751698cac335299`
+
+### MB3 (Adelberger + cosmology) — DONE
+- `derive_epsilon_ICE.py` (output path fixed) + raw results
+- `mb3_adelberger_verdict.py` + `mb3_verdict_2026-05-19.json` (per-prediction analysis)
+- `mb3_cosmology_check_PG03.py` + `mb3_PG03_cosmology_check_2026-05-19.json` (Friedmann γ dive)
+- **Tally**: 0/7 SIGNAL_GENUINE, 3/7 REFUTED, 1/7 MARGINAL, 2/7 unfalsifiable, 1/7 vacuous, 1/7 null
+
+### MB1 (Lean form-uniqueness Phase 3 standalone) — DONE
+- `MIND/lean_formalization/sedenion_uniqueness/SedenionPhase3_FormUniqueness.lean` (external location)
+- Compiles standalone with `lean 4.29.1`
+- **7 sorry-free theorems** + 1 explicit deferred sorry (form_uniqueness_conjecture, requires Mathlib)
+- Phase 1+2+3 cumulative = **23 sorry-free Lean 4 theorems** for sedenion_uniqueness project
+
+### Bayesian update
+- Prior P(escape lane viable) = 0.04 (workbench-reframe §5)
+- Posterior after MB3+MB4 = **≈ 0.01** (most ICE-distinguishable predictions REFUTED)
+- Conditional post-Mathlib-lake-build: → 0 (likely) — pending user authorize
+
+### REFUTED predictions
+1. **P-G02 Oscillatory Z₂⁴-graded ε(r)** (most ICE-specific functional form) — Adelberger violation factor 60
+2. **P-G07 PPN β-1 from associator/256** (algebraically-derived) — LLR violation factor 43
+3. **P-G03 Friedmann γ = 1/14** — interpretation 1 31× mismatch / interpretation 2 2.74σ w_0 deviation DESI 2024
+
+### Honest implication for user core claim
+"CD-chain path integral = gravity" survives ONLY in:
+- Mythological reference (USER_PRIMARY preserved untouched per Eilu va-Eilu)
+- Unfalsifiable forms (P-G01 Yukawa at Planck, P-G04 α below bound)
+
+NOT in:
+- Most ICE-distinguishable functional form (REFUTED)
+- Algebraically-derived PPN (REFUTED)
+- Cosmological γ-correction (REFUTED/MARGINAL)
+
+### Synthesis document
+`ESCAPE_LANE_MB1_MB3_MB4_SYNTHESIS_2026-05-19.md` — full §1-§8 analysis + 6 KG hooks
+
+### Cross-link to papers
+asymmetric_lakatos_paper §5 now has both:
+- L1 algebra-fiber positive content (PROM 16 meta-A3-S3 sedenion uniqueness)
+- L2/L3 physics-prediction-fiber negative content (this escape lane work)
+= strongest empirical witness for fiber-stratified Lakatos verdicts
+
+# KG: escape-lane-MB1-MB3-MB4-synthesis-2026-05-19,
+#     lesson-prom16-CD-path-integral-gravity-claim-empirical-narrowed-2026-05-19,
+#     lesson-prom16-Lakatos-asymmetric-verdict-fiber-stratification-empirical-witness-strengthened-2026-05-19,
+#     workbench-reframe-§5-posterior-0.04-to-0.01
+
+---
+
 ## [2026-05-19 — twenty-sixth pass] — Furey C⊗O programme scaffold (case study #2 prep)
 
 > Nobel-direction P1 (1-year plan) — case study #2 dispatch prep. Methodology paper §4 generalization claim needs ≥2 case study verdicts. Furey C⊗O is the natural #2 (same SM-derivation aspiration, different algebra/mechanism than ICE).
