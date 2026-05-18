@@ -174,7 +174,7 @@
 - `UEQFTLagrangianRigor.lean` — L_SM + λ·S_ent 측 mathematically rigorous reformulation (modular Hamiltonian K 또는 mutual information I(A:B) 사용).
 - `ICE_UEQFT_FormalIsomorphism.lean` — 4 mapping 측 explicit category-theoretic morphism (status: gap detection only, refuted current claim).
 
-### 5-D. Taliban (`/tlb --lens constitutional`) 자동 출격 대상
+### 5-D. Naesengmoon (`/tlb --lens constitutional`) 자동 출격 대상
 
 - **HIGH-priority findings**: 1, 2, 6, 10, 14, 18, 20, 22, 30 (HIGH confidence critique) — adversarial cross-check.
 - ActionPlan 5-A 측 KG corrections.

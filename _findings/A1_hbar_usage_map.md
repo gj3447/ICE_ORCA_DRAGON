@@ -161,7 +161,7 @@ class SMHiggsWW:
 - ✓ No scipy.constants.hbar or numerical Planck constant anywhere
 - ✓ All 3 hits appear in print/comment, never in computation loops
 
-The Taliban critique that "ICE uses effective hbar" was based on hbar references *in prose/formalism*. The actual code audit confirms: **ICE does NOT use hbar numerically at all**. The ℏ notation in path integral formulas is pedagogical exposition of the *theoretical framework*, not a code commitment.
+The Naesengmoon critique that "ICE uses effective hbar" was based on hbar references *in prose/formalism*. The actual code audit confirms: **ICE does NOT use hbar numerically at all**. The ℏ notation in path integral formulas is pedagogical exposition of the *theoretical framework*, not a code commitment.
 
 The code works entirely with dimensionless action S_n (natural units), and the three ℏ references are purely explanatory. ICE is **theoretically sound** in this respect.
 

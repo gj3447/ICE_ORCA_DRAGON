@@ -5,7 +5,7 @@ description: >
   재배맨(JaebaeMan) v2 — Subagent Runtime Protocol. 모든 AI subagent 동작의 바닥(foundation).
   씨앗(SubagentTaskSpec)을 KG에서 관리하고, 부모가 Pre-fetch → Dispatch → Collect → Write하는 프로토콜.
   재배맨은 서비스가 아닌 프로토콜이다. 부모 Claude가 따르는 규약.
-  Invoke when: subagent 출격이 필요할 때 (프로메테우스/탈레반/solve 등이 내부적으로 호출).
+  Invoke when: subagent 출격이 필요할 때 (프로메테우스/나생문/solve 등이 내부적으로 호출).
   직접 호출보다는 MIC_v1.SubagentSeeder slot을 통해 간접 resolve.
   # KG: ATOM_Skill_jaebaeman, 재배맨-v2-subagent-runtime-protocol, SA_methodology_v4_triple_upgrade
 ---
@@ -13,7 +13,7 @@ description: >
 ## 🔗 MIC Binding (SOLID-DIP)
 
 **IS slot**: `SubagentSeeder` (MIC_v1.currentConcrete = "재배맨")
-**소비자 slot**: Prometheus(ResearchProvider), Taliban(AdversarialValidator), Solve, APT-* (Phase별)
+**소비자 slot**: Prometheus(ResearchProvider), Naesengmoon(AdversarialValidator), Solve, APT-* (Phase별)
 
 **동적 resolution**:
 ```cypher
@@ -48,7 +48,7 @@ Phase 3: Collect  — JSON 수확 → 유효성 검증 → 중복 검사
 Phase 4: Write   — UNWIND 배치 KG merge → 씨앗 상태 갱신
 ```
 
-각 소비자(Prometheus, Taliban 등)는 이 4단계를 자기 도메인에 맞게 특화한다.
+각 소비자(Prometheus, Naesengmoon 등)는 이 4단계를 자기 도메인에 맞게 특화한다.
 **프로토콜은 하나, 소비 패턴은 다수.**
 
 ---
@@ -297,7 +297,7 @@ READY ──dispatch──→ DISPATCHED ──collect──→ COLLECTED ──
 
 <!-- # KG: SPAN_ResearchFinding_Lifecycle, CONTRACT_SharedType_RFStatus -->
 
-Finding은 `RESEARCHED` 시작 후 다음 terminal 상태 중 하나로 수렴. **모든 소비자(Prometheus/Taliban/Solve/APT) 공유**.
+Finding은 `RESEARCHED` 시작 후 다음 terminal 상태 중 하나로 수렴. **모든 소비자(Prometheus/Naesengmoon/Solve/APT) 공유**.
 
 ```
 RESEARCHED (Phase 4 write)
@@ -355,8 +355,8 @@ STALE 씨앗은 검토 후 ARCHIVED 또는 재활성화.
 | 소비자 | Phase 1 | Phase 2 | Phase 3 | Phase 4 |
 |--------|---------|---------|---------|---------|
 | **Prometheus** | N개 도메인별 씨앗 동적 생성 | N개 병렬 dispatch (haiku) | FullFindingRecord JSON | UNWIND + Step 4.7 씨앗 발아 |
-| **Taliban** | 9-lens 헌법 씨앗 (고정) | 9개 병렬 dispatch | Verdict JSON (PASS/FAIL) | ValidationResult MERGE |
-| **88-Taliban** | 113-lens 수학 씨앗 | 113개 배치 dispatch | 5-category 평가 JSON | 88-lens 결과 MERGE |
+| **Naesengmoon** | 9-lens 헌법 씨앗 (고정) | 9개 병렬 dispatch | Verdict JSON (PASS/FAIL) | ValidationResult MERGE |
+| **88-Naesengmoon** | 113-lens 수학 씨앗 | 113개 배치 dispatch | 5-category 평가 JSON | 88-lens 결과 MERGE |
 | **Solve** | 문제별 단일 씨앗 | 단일 dispatch | Solution JSON | Lesson.resolved = true |
 | **APT-*** | Phase별 전용 씨앗 | 필요 시 dispatch | Phase artifact | Phase 결과 MERGE |
 
@@ -385,7 +385,7 @@ provenance = '{method}-subagent-parallel-{N}'
   N: dispatch 수
 
 예: 'haiku-subagent-parallel-32' (Prom #1)
-    'haiku-subagent-parallel-9'  (Taliban 9-lens)
+    'haiku-subagent-parallel-9'  (Naesengmoon 9-lens)
 ```
 
 ---

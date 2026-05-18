@@ -7,7 +7,7 @@ description: >
   Invoke when: starting a new project/feature, establishing work identity,
   bootstrapping agent environment, or determining where new work fits in the KG.
   Enforces: Anchor identity, Progressive Disclosure, Context Budget, KG-first exploration.
-  v22: Gate Check enforcement via Claude Code Hook. 5대 무기(하네스/탈레반/프로메테우스/롱기누스/재배맨) 기반. SA는 프로메테우스(지식 선행)와 롱기누스(KG 접지)의 시작점.
+  v22: Gate Check enforcement via Claude Code Hook. 5대 무기(하네스/나생문/프로메테우스/롱기누스/재배맨) 기반. SA는 프로메테우스(지식 선행)와 롱기누스(KG 접지)의 시작점.
   # KG: lesson-feedback-is-emergent-not-weapon-2026-04-16
 ---
 
@@ -612,9 +612,9 @@ MATCH (wb:WorkBuffer {status:'CURRENT'}) RETURN wb
 
 ## MIC Binding Disclaimer
 
-> 이 SKILL.md에서 "Prometheus", "Taliban", "Longinus", "재배맨" 등의
+> 이 SKILL.md에서 "Prometheus", "Naesengmoon", "Longinus", "재배맨" 등의
 > concrete 이름은 MIC_v1 MethodologySlot의 **현재 바인딩(currentConcrete)**이다.
-> 88-Taliban은 별도 concrete가 아닌 Taliban --lens mathematical.
+> 88-Naesengmoon은 별도 concrete가 아닌 Naesengmoon --lens mathematical.
 > Slot이 다른 concrete로 교체되면 이 파일의 이름도 drift한다.
 > 정본 해석: `MATCH (mic:MethodologyIntegrationContract {name:'MIC_v1'})-[:HAS_SLOT]->(s) RETURN s.name, s.currentConcrete`
 > 유틸리티: `03_SCRIPTS/db/resolve_mic_slot.cypher`

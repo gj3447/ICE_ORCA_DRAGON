@@ -29,7 +29,7 @@ mythology 측 *implicit* 3-number reference 측 있음 ("web3 => 333 (트리플�
 web3=>333(트리플쓰리 이거 자세도있음)
 OM
 APT 개발론
-TLB 탈레반
+TLB 나생문
 CHU(계산가능하이퍼우주)
 METAHUMOTONIC
 SPACEGIRL

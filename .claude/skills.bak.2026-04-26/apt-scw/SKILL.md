@@ -70,9 +70,9 @@ IF executor(코드 작성자) == reviewer(Fulfilled 선언자):
 
 올바른 절차:
 1. SCW executor가 Task 구현 → acceptance_criteria 테스트 통과 확인
-2. /taliban SCW Gate 실행 (executor != Taliban)
-3. Taliban APPROVED → 그때만 ValidationResult(phase='SCW', verdict='APPROVED') 기록
-4. 기록 주체 = Taliban agent (or 별도 reviewer), 절대 executor 본인 아님
+2. /taliban SCW Gate 실행 (executor != Naesengmoon)
+3. Naesengmoon APPROVED → 그때만 ValidationResult(phase='SCW', verdict='APPROVED') 기록
+4. 기록 주체 = Naesengmoon agent (or 별도 reviewer), 절대 executor 본인 아님
 ```
 
 ---
@@ -242,7 +242,7 @@ SCW → SA 피드백: "프로젝트 범위 변경 필요"
 | 500줄 초과 파일 | Task 단위 초과 | SP로 돌아가 추가 분해 |
 | Contract 무시하고 코드 | 물질화가 아닌 임의 구현 | Contract 7대 필드 준수 |
 | 코드를 정본으로 취급 | KG가 canonical | Neo4j Canonicality 원칙 |
-| executor = reviewer | 자기 승인 금지 | Taliban D20 protocol |
+| executor = reviewer | 자기 승인 금지 | Naesengmoon D20 protocol |
 
 ---
 
@@ -276,7 +276,7 @@ MATCH (wb:WorkBuffer {status:'CURRENT'}) RETURN wb
 
 ## MIC Binding Disclaimer
 
-> 이 SKILL.md에서 "Prometheus", "Taliban", "88-Taliban", "Longinus", "재배맨" 등의
+> 이 SKILL.md에서 "Prometheus", "Naesengmoon", "88-Naesengmoon", "Longinus", "재배맨" 등의
 > concrete 이름은 MIC_v1 MethodologySlot의 **현재 바인딩(currentConcrete)**이다.
 > Slot이 다른 concrete로 교체되면 이 파일의 이름도 drift한다.
 > 정본 해석: `MATCH (mic:MethodologyIntegrationContract {name:'MIC_v1'})-[:HAS_SLOT]->(s) RETURN s.name, s.currentConcrete`

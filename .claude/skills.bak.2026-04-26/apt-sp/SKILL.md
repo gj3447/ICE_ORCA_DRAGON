@@ -115,7 +115,7 @@ AtomicSpan = base case. Contract = subproblem 간 합의된 interface.
 | 2 | τ | 구체적 I/O 타입 | **τ_infra**: 적용 후 상태 = 명세와 일치하는가 (`Deployment.spec ↔ 실제 Pod 상태`) |
 | 3 | ι | 함수 반환값 assertion | **ι_infra**: `kubectl apply --dry-run=server` 성공 + 예상 리소스 생성 확인 |
 
-**Taliban SP gate**: `kind`가 인프라 계열이면 `--lens infra`(infra-specific LensSet) 자동 적용. 일반 constitutional 렌즈로 판정 시 false positive 위험(YAML/Dockerfile τ 미충족으로 오판).
+**Naesengmoon SP gate**: `kind`가 인프라 계열이면 `--lens infra`(infra-specific LensSet) 자동 적용. 일반 constitutional 렌즈로 판정 시 false positive 위험(YAML/Dockerfile τ 미충족으로 오판).
 
 예: `ATOM_Landing_K8sDeploy` AtomicSpan의 Contract는 `input: yaml_manifest, output: k8s_resource_state_hash`. Task acceptance = `kubectl diff` empty + `kubectl apply --dry-run=server` 통과.
 
@@ -206,7 +206,7 @@ RETURN leaf.name,
 
 **모든 leaf가 is_atomic=true AND :AtomicSpan 라벨 보유 → Crystallization Frontier 도달 → ST 진입 가능.**
 
-### Step 5: Taliban RefinementGate
+### Step 5: Naesengmoon RefinementGate
 
 ```
 /taliban 호출 → SP 산출물 9-lens 검증
@@ -276,7 +276,7 @@ MATCH (wb:WorkBuffer {status:'CURRENT'}) RETURN wb
 
 ## MIC Binding Disclaimer
 
-> 이 SKILL.md에서 "Prometheus", "Taliban", "88-Taliban", "Longinus", "재배맨" 등의
+> 이 SKILL.md에서 "Prometheus", "Naesengmoon", "88-Naesengmoon", "Longinus", "재배맨" 등의
 > concrete 이름은 MIC_v1 MethodologySlot의 **현재 바인딩(currentConcrete)**이다.
 > Slot이 다른 concrete로 교체되면 이 파일의 이름도 drift한다.
 > 정본 해석: `MATCH (mic:MethodologyIntegrationContract {name:'MIC_v1'})-[:HAS_SLOT]->(s) RETURN s.name, s.currentConcrete`

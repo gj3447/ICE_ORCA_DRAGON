@@ -20,7 +20,7 @@
 
 - ICE_ORCA_DRAGON 53 Python scripts / 18 result JSON / verdict 분포 6 CONFIRMED + 4 CONFIRMATION_LOCAL + 3 REFUTED + 2 NUMEROLOGY_CONFIRMED + 2 METHOD_ARTIFACT + 1 NUMEROLOGY_HOLD + 1 INCONCLUSIVE (2026-05-17 second pass)
 - 12사도 #2 ICE의 6-family는 family-expansion-pattern CONFIRMED
-- 5무기: Prometheus / Taliban / Longinus / Harness / 재배맨; 본 cycle은 Prometheus 활용
+- 5무기: Prometheus / Naesengmoon / Longinus / Harness / 재배맨; 본 cycle은 Prometheus 활용
 - 기존 `numerology_mc_judge.py` (P(E|~H) decision rule) + `queue_08_g2_diagnostic.py` (4-test 진단) 이번 라운드에서 빌드 완료
 - Aut(𝕊) 정전: Brown 1967 G₂ × S₃ — 단 **Wilmot 2025 (arXiv:2512.07210)이 S₃ 부분 contests**, OPEN
 

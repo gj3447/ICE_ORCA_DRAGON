@@ -3,13 +3,13 @@ name: apt
 version: 24
 description: >
   APT v24 orchestrator — KG 정본 기반. Gate Check Hook 강제. SA→SP→ST→SCW 순환.
-  v5~v21 역사 반영. 하네스 4축 + 5대 무기(하네스/탈레반/프로메테우스/롱기누스/재배맨) + D(S)/C(S) + Crystallization Frontier.
+  v5~v21 역사 반영. 하네스 4축 + 5대 무기(하네스/나생문/프로메테우스/롱기누스/재배맨) + D(S)/C(S) + Crystallization Frontier.
   # KG: ATOM_Skill_apt_orchestrator
   v22: Gate Check enforcement via Claude Code Hook.
-  Incorporates Taliban --lens mathematical 5-round meta-verification feedback (260✓→102✓ honest convergence).
+  Incorporates Naesengmoon --lens mathematical 5-round meta-verification feedback (260✓→102✓ honest convergence).
   Every gate requires: adversarial critic + ground truth + human sigma_oracle + evidence-backed verdicts + post-gate reflection.
   HR11: Every APPROVED verdict MUST cite specific evidence. Approvals without evidence = RUBBER_STAMP violation.
-  Taliban 렌즈셋 플러거블: --lens constitutional(기본, 산출물 검증) / --lens mathematical(메타 검증). LensSet KG 노드로 확장.
+  Naesengmoon 렌즈셋 플러거블: --lens constitutional(기본, 산출물 검증) / --lens mathematical(메타 검증). LensSet KG 노드로 확장.
   피드백은 5대 무기 순환의 창발 속성 (독립 위상 아님). # KG: lesson-feedback-is-emergent-not-weapon-2026-04-16
   Essential ✗: Arrow of Time (order-dependent), Edge of Chaos (structured complexity), Gödel (never complete).
   Optional Lean 4 integration: `lake build` sorry=0 error=0 as ground truth.
@@ -25,7 +25,7 @@ description: >
 
 **IS slot**: Orchestrator (5대 무기 조율)
 **USES slots**: Harness, ResearchProvider, AdversarialValidator, KgCodeBinder, SubagentSeeder
-**참고**: MetaVerifier는 AdversarialValidator(Taliban)의 --lens mathematical로 통합. FeedbackProvider는 창발 속성(슬롯 아님).
+**참고**: MetaVerifier는 AdversarialValidator(Naesengmoon)의 --lens mathematical로 통합. FeedbackProvider는 창발 속성(슬롯 아님).
 
 **동적 resolution**:
 ```cypher
@@ -33,8 +33,8 @@ MATCH (mic:MethodologyIntegrationContract {name:'MIC_v1'})-[:HAS_SLOT]->(s:Metho
 RETURN s.name, s.currentConcrete, s.invocation
 ```
 
-본문의 `Prometheus`/`Taliban`/`Longinus`/`재배맨` 등은 MIC slot의 **현재 스냅샷**. 진짜 호출은 `s.invocation`.
-88-Taliban은 별도 concrete가 아니라 `Taliban --lens mathematical`. MetaVerifier 슬롯은 Taliban의 렌즈셋으로 통합됨.
+본문의 `Prometheus`/`Naesengmoon`/`Longinus`/`재배맨` 등은 MIC slot의 **현재 스냅샷**. 진짜 호출은 `s.invocation`.
+88-Naesengmoon은 별도 concrete가 아니라 `Naesengmoon --lens mathematical`. MetaVerifier 슬롯은 Naesengmoon의 렌즈셋으로 통합됨.
 피드백은 5대 무기 순환의 창발 속성 — FeedbackProvider 슬롯은 EMERGENT 상태.
 # KG: lesson-feedback-is-emergent-not-weapon-2026-04-16, lesson-taliban-lens-pluggable-refactor-2026-04-16
 
@@ -78,7 +78,7 @@ These rules are BLOCKING. If any is violated, the orchestrator MUST halt and ref
 | HR9 | **No human response to sigma_oracle = BLOCK** | Do not proceed. Ask again. Never assume approval. |
 | HR10 | **Every skip/override requires explicit human reason** | Logged with justification. Agent cannot generate reason. |
 | HR11 | **Every APPROVED verdict must cite specific evidence** | Theorem name, test result, or KG query. No evidence = RUBBER_STAMP violation, auto-downgrade to NEEDS_REVIEW. |
-| HR12 | **2-Tier Taliban: never mix tiers** | Tier 1 (9-lens) for artifacts, Tier 2 (88-lens) for methodology meta-verification only. Applying 88-lens to a Span is BLOCKED. |
+| HR12 | **2-Tier Naesengmoon: never mix tiers** | Tier 1 (9-lens) for artifacts, Tier 2 (88-lens) for methodology meta-verification only. Applying 88-lens to a Span is BLOCKED. |
 | HR13 | **Essential ✗ are design constraints, not bugs** | Arrow of Time (order-dependent), Edge of Chaos (structured complexity), Gödel (never complete). Do not "fix" these. |
 | HR14 | **Mandatory post-gate reflection** | After every gate: identify weakness exposed, log as AptFeedback, confirm next gate checks for it. No reflection = INCOMPLETE_GATE. |
 | HR15 | **Lean ground truth (optional per project)** | If enabled: `lake build` must produce sorry=0, error=0, warning=0. Add `lean: "lake build"` to config to activate. |
@@ -147,9 +147,9 @@ apt:
     rubber_stamp_action: "DOWNGRADE_TO_NEEDS_REVIEW"
 
   taliban:
-    tier1_lenses: 9                        # Constitutional Taliban for artifacts
+    tier1_lenses: 9                        # Constitutional Naesengmoon for artifacts
     tier1_target: "spans, contracts, code"
-    tier2_lenses: 88                       # Mathematical Taliban for methodology meta-verification ONLY
+    tier2_lenses: 88                       # Mathematical Naesengmoon for methodology meta-verification ONLY
     tier2_target: "methodology_audit"
     mixing_tiers: "BLOCKED"                # HR12
 
@@ -1789,7 +1789,7 @@ If ANY checkbox fails: BLOCK. Do not proceed. Fix the issue first.
 
 ## MIC Binding Disclaimer
 
-> 이 SKILL.md에서 "Prometheus", "Taliban", "88-Taliban", "Longinus", "재배맨" 등의
+> 이 SKILL.md에서 "Prometheus", "Naesengmoon", "88-Naesengmoon", "Longinus", "재배맨" 등의
 > concrete 이름은 MIC_v1 MethodologySlot의 **현재 바인딩(currentConcrete)**이다.
 > Slot이 다른 concrete로 교체되면 이 파일의 이름도 drift한다.
 > 정본 해석: `MATCH (mic:MethodologyIntegrationContract {name:'MIC_v1'})-[:HAS_SLOT]->(s) RETURN s.name, s.currentConcrete`

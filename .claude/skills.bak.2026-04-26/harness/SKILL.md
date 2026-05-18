@@ -70,7 +70,7 @@ Constrain   [Agent]   Verify
 | **Inform** | 에이전트에게 맥락 제공 | KG, docs, Progressive Disclosure | 맥락 없이 코딩 = Vibe Coding |
 | **Constrain** | 해 공간의 경계 설정 | Span 분해, Contract 7필드, complexity_threshold | 무한 자유 = 무한 오류 |
 | | v24: Gate Check Hook = Constrain축 물질화 | | |
-| **Verify** | 결과물 자동 검증 | Taliban 9-lens, Ground Truth, TDD | 고무도장 승인 |
+| **Verify** | 결과물 자동 검증 | Naesengmoon 9-lens, Ground Truth, TDD | 고무도장 승인 |
 | **Correct** | 피드백으로 개선 | Fractal Feedback, AptFeedback, 프로메테우스 | 같은 실수 반복 |
 
 ---
@@ -85,7 +85,7 @@ Constrain   [Agent]   Verify
 |------|---------|------|
 | 엉뚱한 방향으로 구현 | **Inform** | KG 보강, docs 추가, 프로메테우스 발동 |
 | 범위 초과 / Gold Plating | **Constrain** | Contract 경계 강화, Span 재분해 |
-| 틀린 코드가 통과됨 | **Verify** | Taliban lens 추가, 테스트 강화 |
+| 틀린 코드가 통과됨 | **Verify** | Naesengmoon lens 추가, 테스트 강화 |
 | 같은 버그 재발 | **Correct** | Feedback loop 점검, Lesson 기록 |
 
 ### Step 2: KG 조회 — 현재 4축 상태
@@ -103,7 +103,7 @@ OPTIONAL MATCH (ct:AptContract) WHERE ct.name STARTS WITH 'CT_' + $project
 WITH anchor, span_count, count(ct) as contract_count,
      sum(CASE WHEN ct.status = 'fulfilled' THEN 1 ELSE 0 END) as fulfilled
 
-// Verify: Taliban 결과
+// Verify: Naesengmoon 결과
 OPTIONAL MATCH (vr:ValidationResult) WHERE vr.project = $project
 WITH anchor, span_count, contract_count, fulfilled,
      count(vr) as validations,
@@ -167,7 +167,7 @@ RETURN span_count AS inform_density,
 하네스 (설계 철학) ← APT 전체 구조의 이유
   ├── Inform 축  ← 프로메테우스가 담당 (지식 획득)
   ├── Constrain 축 ← Span + Contract (SP/ST)
-  ├── Verify 축  ← 탈레반이 담당 (적대적 검증)
+  ├── Verify 축  ← 나생문이 담당 (적대적 검증)
   ├── Correct 축 ← Fractal Feedback + Lesson
   └── 연결 보장  ← 롱기누스가 담당 (KG↔Code 관통)
 ```
@@ -181,7 +181,7 @@ RETURN span_count AS inform_density,
 | 프롬프트만 수정해서 해결 시도 | 구조 문제를 지시문으로 해결 불가 | 4축 진단 후 구조 개선 |
 | 에이전트 탓만 하기 | "바보 에이전트" = 구조 실패 고백 | Bockeler 체크리스트 |
 | 4축 중 하나만 강화 | 밸런스 깨짐 | 4축 균형 진단 |
-| 검증 없이 신뢰 | 고무도장 = 구조 부재 | Taliban + Ground Truth |
+| 검증 없이 신뢰 | 고무도장 = 구조 부재 | Naesengmoon + Ground Truth |
 
 ---
 

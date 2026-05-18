@@ -3,7 +3,7 @@ name: apt-meta-review
 version: 1
 description: >
   APT MetaReview Phase (5/5) — 의심/피드백을 자동으로 스킬 강화로 이어지는 피드백 루프.
-  SCW 완료 후 자동 제안. Lesson 생성 → SKILL.md 패치 → MATERIALIZES 갱신 → Taliban Gate.
+  SCW 완료 후 자동 제안. Lesson 생성 → SKILL.md 패치 → MATERIALIZES 갱신 → Naesengmoon Gate.
   종료조건: self_application_forbidden, max_depth=1, delta=0.
   # KG: ATOM_Skill_apt_meta_review, CONTRACT_Hardening_MetaReview, SPAN_Hardening_MetaReview
 ---
@@ -11,7 +11,7 @@ description: >
 ## 🔗 MIC Binding (SOLID-DIP)
 
 **IS slot**: APT_Phase (MetaReview, 5/5)
-**USES slots**: AdversarialValidator (Taliban Gate 자체재검증), KgCodeBinder (Longinus MATERIALIZES 갱신), SubagentSeeder (재배맨 taskspec, Lesson 생성 자동화)
+**USES slots**: AdversarialValidator (Naesengmoon Gate 자체재검증), KgCodeBinder (Longinus MATERIALIZES 갱신), SubagentSeeder (재배맨 taskspec, Lesson 생성 자동화)
 
 **동적 resolution**:
 ```cypher
@@ -20,7 +20,7 @@ WHERE s.name IN ['AdversarialValidator','KgCodeBinder','SubagentSeeder']
 RETURN s.name, s.currentConcrete, s.invocation
 ```
 
-본문의 `Taliban`/`Longinus`/`재배맨`은 MIC slot 현재 스냅샷. 진짜 호출은 `s.invocation`.
+본문의 `Naesengmoon`/`Longinus`/`재배맨`은 MIC slot 현재 스냅샷. 진짜 호출은 `s.invocation`.
 **Self-application 금지**: MetaReview가 자기 자신을 다시 MetaReview하면 무한루프. `max_depth=1, delta=0` 경계 준수.
 
 # KG: MIC_v1, ATOM_Skill_apt_meta_review, lesson-apt-skill-drift-audit-2026-04-17
@@ -43,7 +43,7 @@ RETURN s.name, s.currentConcrete, s.invocation
 
 ### 경로 A: 사용자 피드백
 ```
-"제대로 한 거 맞아?" / "왤케 금방이야?" / "탈레반 제대로 동작했어?"
+"제대로 한 거 맞아?" / "왤케 금방이야?" / "나생문 제대로 동작했어?"
 → apt-meta-review 즉시 발동
 ```
 
@@ -55,7 +55,7 @@ SCW 완료 시 항상 물음:
 → NO → 종료
 ```
 
-### 경로 C: Taliban REJECTED 패턴
+### 경로 C: Naesengmoon REJECTED 패턴
 ```
 같은 렌즈에서 반복 REJECTED →
 동일 Lesson 2번 이상 재등장 시 → SKILL.md에 구조적 결함 존재 → apt-meta-review 발동
@@ -104,7 +104,7 @@ RETURN s.skillName, s.file_path
 ### Step 3: SKILL.md 패치
 
 Contract postcondition에 따라 구체적 방어 블록 삽입:
-- **Taliban** 계열 → Anti-Rubber-Stamp 섹션 강화
+- **Naesengmoon** 계열 → Anti-Rubber-Stamp 섹션 강화
 - **APT Phase** 계열 → 해당 Phase GATE CHECK 섹션 추가
 - **Longinus** 계열 → MATERIALIZES 의무화 절차 추가
 
@@ -131,7 +131,7 @@ MERGE (s)-[:MATERIALIZES]->(f)
 RETURN s.skillName, f.file_path
 ```
 
-### Step 5: Taliban Gate (executor ≠ reviewer)
+### Step 5: Naesengmoon Gate (executor ≠ reviewer)
 
 ```
 /taliban apt-meta-review 산출물 --lens constitutional
@@ -139,7 +139,7 @@ RETURN s.skillName, f.file_path
 → REJECTED: Finding 반영 후 Step 3으로 돌아가 재패치 (max_depth 카운터 확인)
 ```
 
-**executor(패치 작성자) ≠ reviewer(Taliban agent)** 원칙 엄수.
+**executor(패치 작성자) ≠ reviewer(Naesengmoon agent)** 원칙 엄수.
 
 ### Step 6: Lesson resolved 갱신
 
@@ -156,7 +156,7 @@ RETURN l.name, l.resolved
 ## 피드백 루프 다이어그램
 
 ```
-사용자 의심 / SCW 완료 / Taliban 반복 REJECTED
+사용자 의심 / SCW 완료 / Naesengmoon 반복 REJECTED
           ↓
     apt-meta-review 트리거
           ↓
@@ -166,7 +166,7 @@ RETURN l.name, l.resolved
           ↓
     MATERIALIZES 갱신 (KG↔파일 바인딩)
           ↓
-    Taliban Gate (executor≠reviewer)
+    Naesengmoon Gate (executor≠reviewer)
           ↓
     APPROVED → Lesson resolved → 종료
     REJECTED → 재패치 (depth+1, delta 체크)
@@ -182,7 +182,7 @@ RETURN l.name, l.resolved
 |------|------|
 | MetaReview를 자기 자신에 적용 | self_application_forbidden — 무한 루프 |
 | Lesson 없이 SKILL 패치 | 근거 없는 수정 — KG 정본 위반 |
-| executor가 Taliban Gate 통과 선언 | VR Self-Fulfillment 위반 |
+| executor가 Naesengmoon Gate 통과 선언 | VR Self-Fulfillment 위반 |
 | delta=0인데 계속 실행 | 종료조건 위반 |
 | max_depth 초과 후 계속 실행 | 무한 재귀 — 강제 종료 |
 

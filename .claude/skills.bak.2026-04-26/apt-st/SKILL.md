@@ -165,7 +165,7 @@ MERGE (c1)-[:SEQUENCED_WITH {order: 1}]->(c2)
 > 소스코드는 구현 공간일 뿐. 코드가 contract를 구현하지만,
 > 코드 측 폴더를 의미론적 정본과 혼동하면 안 된다."
 
-### Step 6: Taliban Gate
+### Step 6: Naesengmoon Gate
 
 ```
 /taliban → ST 산출물 검증 (Contract 7대 필드 완전성, SharedType 일관성)
@@ -245,7 +245,7 @@ MATCH (wb:WorkBuffer {status:'CURRENT'}) RETURN wb
 
 ## MIC Binding Disclaimer
 
-> 이 SKILL.md에서 "Prometheus", "Taliban", "88-Taliban", "Longinus", "재배맨" 등의
+> 이 SKILL.md에서 "Prometheus", "Naesengmoon", "88-Naesengmoon", "Longinus", "재배맨" 등의
 > concrete 이름은 MIC_v1 MethodologySlot의 **현재 바인딩(currentConcrete)**이다.
 > Slot이 다른 concrete로 교체되면 이 파일의 이름도 drift한다.
 > 정본 해석: `MATCH (mic:MethodologyIntegrationContract {name:'MIC_v1'})-[:HAS_SLOT]->(s) RETURN s.name, s.currentConcrete`

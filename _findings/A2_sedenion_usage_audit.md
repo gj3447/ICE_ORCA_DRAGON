@@ -6,9 +6,9 @@ ChallengeID: challenge-equivalence-ice-ueqft-sedenion-zd-overclaim
 
 ## Challenge Summary
 
-**Challenge C2 (Taliban critic)**: "ICE claims sedenion algebra provides '42 zero-divisor pairs' used in path integral mass model. Does ICE actually use FULL sedenion multiplication (with composition algebra risks), or just the ORBIT ACTION of Aut(S)=G₂×S₃?"
+**Challenge C2 (Naesengmoon critic)**: "ICE claims sedenion algebra provides '42 zero-divisor pairs' used in path integral mass model. Does ICE actually use FULL sedenion multiplication (with composition algebra risks), or just the ORBIT ACTION of Aut(S)=G₂×S₃?"
 
-**Question**: If ICE uses only (b) ORBIT ACTION ON ZD PAIRS and not (a) FULL MULTIPLICATION, then Taliban's critique about composition algebra zero-divisor handling is an **overclaim** — the framework doesn't depend on multiplication unitarity.
+**Question**: If ICE uses only (b) ORBIT ACTION ON ZD PAIRS and not (a) FULL MULTIPLICATION, then Naesengmoon's critique about composition algebra zero-divisor handling is an **overclaim** — the framework doesn't depend on multiplication unitarity.
 
 ---
 
@@ -126,7 +126,7 @@ Files that mention automorphism groups or orbit action:
 
 2. **The 42 ZD pairs are real**: cd_embedding.py (L85-95) exhaustively enumerates 42 ZD pairs (for 16D sedenions) by left-multiplication null space analysis. Not orbit-theoretic redescription; actual multiplication-derived.
 
-3. **Taliban's critique is NOT an overclaim**:
+3. **Naesengmoon's critique is NOT an overclaim**:
    - Sedenion multiplication is non-associative and loses composition property (norm not multiplicative).
    - When ICE computes a*b for ZD pairs (e_i + e_j), the result is 0.
    - The null space structure (4D per ZD pair) encodes where this "breaks."
@@ -138,7 +138,7 @@ Files that mention automorphism groups or orbit action:
    - The breaking (a*b=0) is **detected and accommodated**, not ignored.
    - **If anything, ICE is hyper-cautious**: queue_08_g2_diagnostic.py (§D1-D4) runs 4 separate diagnostics to verify whether the derived g₂ is actually a Lie algebra.
 
-5. **Refinement of Taliban's critique**:
+5. **Refinement of Naesengmoon's critique**:
    - Challenge is not "does ICE use sedenion mult?" (answer: yes, unavoidably)
    - Challenge should be: "does ICE's mass formula correctly handle the algebraic breaking?"
    - That is a **derivation-algebra question**, not a multiplication question.
@@ -217,7 +217,7 @@ zd64_analysis.py (EXTENSION: scales analysis to 64D)
 
 ### Challenge C2 Final Verdict
 
-**STANDS**: ICE does use full sedenion multiplication, and Taliban's concern about composition-algebra breaking is valid. However:
+**STANDS**: ICE does use full sedenion multiplication, and Naesengmoon's concern about composition-algebra breaking is valid. However:
 
 - **Not an overclaim**: ICE explicitly detects and handles the breaking via null space / SU(2) structure.
 - **Deeper question**: Does the downstream physics (path integral action S[b]) respect the breaking? Not addressed in these code files.
@@ -229,7 +229,7 @@ Run `/taliban queue_08_g2_diagnostic_results.json --lens mathematical` to verify
 2. If not, is queue_08's "g2=14" a method artifact (sedenion non-alternativity) or genuine physics?
 3. Cross-check with external octonion literature (G₂ = Der(O) = 14D).
 
-**If queue_08_g2_diagnostic fails D3 (Lie closure)**: That confirms sedenion derivations don't close to su(7), falsifying the "16-vs-14 gap is physics" narrative. **Then Taliban is right on a deeper level**: the gap is algebraic artifact, not physics discovery.
+**If queue_08_g2_diagnostic fails D3 (Lie closure)**: That confirms sedenion derivations don't close to su(7), falsifying the "16-vs-14 gap is physics" narrative. **Then Naesengmoon is right on a deeper level**: the gap is algebraic artifact, not physics discovery.
 
 ---
 
@@ -253,7 +253,7 @@ Run `/taliban queue_08_g2_diagnostic_results.json --lens mathematical` to verify
 
 ## A2_VERDICT
 
-**STANDS**: ICE uses full sedenion multiplication throughout, and Taliban's algebraic-breaking concern is legitimate. The overclaim was specifically "ICE only uses orbit action" — that is false. However, ICE's **handling** of the breaking (null space structure, SU(2) decomposition) appears defensive enough if downstream physics respects it. Recommend diagnostics validation.
+**STANDS**: ICE uses full sedenion multiplication throughout, and Naesengmoon's algebraic-breaking concern is legitimate. The overclaim was specifically "ICE only uses orbit action" — that is false. However, ICE's **handling** of the breaking (null space structure, SU(2) decomposition) appears defensive enough if downstream physics respects it. Recommend diagnostics validation.
 
 ---
 
