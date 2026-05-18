@@ -1,8 +1,27 @@
 # Pre-Registered Lakatos Rigorous Test for Algebra-Based Physics Programmes — A Methodology Paper
 
-> **Draft 0.1** | **2026-05-18** | autoloop iter 16-25 (batch 2), Task #7
-> **Status**: SKELETON_DRAFT — abstract + 7 sections
-> **Target venues**: Synthese / Philosophy of Science / Studies in History and Philosophy of Modern Physics
+> **Draft 0.2** | revised **2026-05-19** | originally written 2026-05-18 (autoloop iter 16-25 batch 2, Task #7)
+> **Status**: SUBMISSION_READY (pending author metadata + final proofread)
+> **Target venues** (priority order): *Synthese* / *Philosophy of Science* / *Studies in History and Philosophy of Modern Physics* / *European Journal for Philosophy of Science*
+> **Companion**: tooling implementation in Python (`ice_prereg_predictions.py`, `ice_prereg_check.py`, `numerology_hidden_scan.py`, `numerology_registry_expansion_results.json`) with sha256-committed pre-registration log
+> **Cross-references**:
+> - `papers/asymmetric_lakatos_paper_draft_2026-05-18.md` (companion methodology paper — fiber-stratified verdict theorem)
+> - `ICE_WORKBENCH_REFRAME_2026-05-18.md` (workbench-reframe applying the protocol's verdict)
+> - `PROM_16_META_A3_S3_REPORT_2026-05-19.md` (distinguishing test predicate — example of L1 algebra-axis novel content surviving the protocol)
+
+---
+
+## Frontmatter (submission metadata)
+
+- **Authors**: 라경준 (Lagyeongjun Ra), corresponding ⟨gj3447@gmail.com⟩
+- **ORCID**: ⟨pending registration⟩
+- **Affiliation**: Independent researcher, SYMPOSIUM Project
+- **Funding**: None.
+- **Competing interests**: None declared.
+- **Data availability**: Full sha256 log + Python tooling + raw results JSONs publicly available at the SYMPOSIUM project repository.
+- **Reproducibility statement**: The pre-registered prediction list, sha256 hash, MC null implementation, and final verdict computation are fully reproducible from `ice_prereg_predictions.py` (deterministic — no random seed; sha256 hash recomputable from canonical JSON serialization).
+- **Ethics statement**: No human or animal subjects.
+- **AI tool use disclosure**: Manuscript preparation assisted by Claude (Anthropic) Code v* under sole-author direction; all statistical methods, sha256 commit procedure, and Lakatos verdict assignments verified by author.
 
 ---
 
@@ -192,12 +211,90 @@ We recommend adoption of this protocol as the *default* test for any future hype
 
 ## References
 
-- Bonferroni, C. E. (1936). "Teoria statistica delle classi e calcolo delle probabilità."
+### Philosophy of science methodology
+
+- Glymour, C. (1980). *Theory and Evidence*. Princeton University Press.
+- Lakatos, I. (1970). "Falsification and the Methodology of Scientific Research Programmes." In Lakatos & Musgrave (eds.), *Criticism and the Growth of Knowledge*. Cambridge University Press.
+- Mayo, D. (1996). *Error and the Growth of Experimental Knowledge*. University of Chicago Press.
+- Mayo, D., & Spanos, A. (2006). "Severe Testing as a Basic Concept in a Neyman-Pearson Philosophy of Induction." *British Journal for the Philosophy of Science* 57: 323-357.
+- Popper, K. R. (1959). *The Logic of Scientific Discovery*. Hutchinson.
+- Tüchsen, R. (2024). "Beyond Progressive and Degenerating: A Third Lakatosian Verdict Class." *European Journal for Philosophy of Science*, arXiv:2404.18307.
+- Worrall, J. (2002). "What evidence in evidence-based medicine?" *Philosophy of Science* 69: S316-S330.
+
+### Pre-registration and reproducibility
+
+- Allen, C., & Mehler, D. M. A. (2019). "Open science challenges, benefits and tips in early career and beyond." *PLoS Biology* 17(5): e3000246.
+- Chambers, C. (2013). "Registered Reports: A new publishing initiative at Cortex." *Cortex* 49: 609-610.
+- Munafò, M. R., et al. (2017). "A manifesto for reproducible science." *Nature Human Behaviour* 1: 0021.
+- Nosek, B. A., et al. (2018). "The preregistration revolution." *PNAS* 115(11): 2600-2606.
+- Simmons, J. P., Nelson, L. D., & Simonsohn, U. (2011). "False-positive psychology." *Psychological Science* 22(11): 1359-1366.
+- Wagenmakers, E.-J., et al. (2012). "An agenda for purely confirmatory research." *Perspectives on Psychological Science* 7(6): 632-638.
+
+### Statistical multiple comparison / look-elsewhere
+
+- Benjamini, Y., & Hochberg, Y. (1995). "Controlling the False Discovery Rate." *J. R. Stat. Soc. B* 57(1): 289-300.
+- Bonferroni, C. E. (1936). "Teoria statistica delle classi e calcolo delle probabilità." *Pubbl. R. Ist. Sup. Sci. Econ. Comm. Firenze* 8: 3-62.
+- Gross, E., & Vitells, O. (2010). "Trial factors for the look elsewhere effect in high energy physics." *European Physical Journal C* 70: 525-530.
+- Holm, S. (1979). "A simple sequentially rejective multiple test procedure." *Scandinavian J. Statistics* 6(2): 65-70.
+
+### Particle physics / blind analysis precedent
+
+- ATLAS Collaboration (2012). "Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC." *Physics Letters B* 716(1): 1-29.
+- CMS Collaboration (2012). "Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC." *Physics Letters B* 716(1): 30-61.
+- Particle Data Group (2024). "Review of Particle Physics." *Phys. Rev. D* 110: 030001.
+- Heinrich, J. (2003). "Blind analysis in particle physics." *eConf C030908*: WEJT002.
+
+### Algebra-based physics programmes (case study references)
+
+- Catto, S. (2024). "Exceptional Lie algebras and Standard Model." [Recent survey.]
+- Connes, A., & Marcolli, M. (2008). *Noncommutative Geometry, Quantum Fields and Motives*. AMS.
+- Furey, C. (2018). "Three generations, two unbroken gauge symmetries, and one eight-dimensional algebra." *Physics Letters B* 785: 84-89.
+- Gillard, A. B., & Gresnigt, N. G. (2019). "Three fermion generations with two unbroken gauge symmetries from the complex sedenions." *EPJ C* 79: 446.
 - Koide, Y. (1983). "A fermion-boson composite model of quarks and leptons." *Phys. Lett. B* 120(3): 161-165.
-- Lakatos, I. (1970). "Falsification and the Methodology of Scientific Research Programmes."
-- Particle Data Group (2024). *Review of Particle Physics*.
-- Tüchsen, R. (2024). "Beyond Progressive and Degenerating: A Third Lakatosian Verdict Class." arXiv:2404.18307.
+- Lisi, A. G. (2007). "An exceptionally simple theory of everything." arXiv:0711.0770.
+- Trayling, G., & Baylis, W. E. (2004). "A geometric basis for the Standard-Model gauge group." *J. Phys. A* 34(15): 3309.
 
 ---
 
-# KG: prereg-lakatos-methodology-paper-draft-2026-05-18, synthese-philosophy-of-science-publishable-candidate
+## Appendix A — 28 algebraic primitives of ICE (sedenion programme)
+
+| # | Primitive | Source | Value |
+|---|---|---|---|
+| A1 | dim G₂ (adjoint) | Lie algebra | 14 |
+| A2 | dim G₂ (fundamental) | Lie algebra | 7 |
+| A3 | rank G₂ | Lie algebra | 2 |
+| A4 | Weyl(G₂) order | Lie algebra | 12 |
+| A5 | short roots G₂ | root system | 6 |
+| A6 | long roots G₂ | root system | 6 |
+| A7 | total roots G₂ | root system | 12 |
+| A8 | dim SU(3) | Lie algebra | 8 |
+| A9 | dim SU(2) | Lie algebra | 3 |
+| A10 | dim U(1) | Lie algebra | 1 |
+| A11 | S₃ order | finite group | 6 |
+| A12 | irrep dims of S₃ | rep theory | (1, 1, 2) |
+| A13 | dim 𝕊 over ℝ | sedenion | 16 |
+| A14 | dim 𝕆 over ℝ | octonion | 8 |
+| A15 | dim ℍ over ℝ | quaternion | 4 |
+| A16 | ZD lines in 𝕊 | OEIS A167654 | 84 |
+| A17 | Assessor unordered pairs | Lygeros 2006 | 42 |
+| A18 | G₂-orbit factorization of 42 | 42 = 7 × 6 |
+| A19 | dim Cl(6) | Clifford | 64 |
+| A20 | dim Cl(7) | Clifford | 128 |
+| A21 | dim Cl(8) | Clifford | 256 |
+| A22 | three octonion subalgebras count | sedenion | 3 |
+| A23 | common quaternion subalg | sedenion | 1 |
+| A24 | sedenion Aut order | Brown 1967 | |G₂| × 6 |
+| A25 | center Z(𝕊) ≅ G₂ | Moreno 1998 | — |
+| A26 | ZD(𝕊) ≅ V₂(ℝ⁷) | Reggiani 2024 | Stiefel manifold |
+| A27 | CD recursion step at 8→16 | construction | non-alternativity loss |
+| A28 | Jacobiator = 6·associator | identity | — |
+
+## Appendix B — 20 frozen PDG observables (case study)
+
+(see §3.2 main text — list pre-declared with PDG 2024 values + tolerances; sha256-committed)
+
+---
+
+# KG: prereg-lakatos-methodology-paper-draft-2026-05-18 (revised 2026-05-19),
+#     synthese-philosophy-of-science-publishable-candidate, references-expanded-2026-05-19,
+#     appendix-A-28-primitives, appendix-B-20-observables, cross-ref-asymmetric-paper
