@@ -1,7 +1,14 @@
 # KG: SPAN_ICE_L3_S7_WW_evasion, SPAN_ICE_L3_TRACK_A_ROOT
 # LONGINUS: sourceId=prove_s7_WW_evasion, sourcePath=prove_s7_WW_evasion.py
+# WORKBENCH-LAYER: L1 algebra core (structural internal-consistency check)
+#   per ICE_WORKBENCH_REFRAME_2026-05-18.md §3. S7 evasion verifies the path integral construction
+#   does not violate WW theorem — algebraic/field-theory structural property, NOT L2/L3 SM-prediction.
+#   ICE-internal "L3" label ≠ workbench L3.
+#   Caveat: 86% LEE null pass per workbench-reframe §3 — relevant only when interpreted as L2/L3 SM
+#   gauge-boson claim. As L1 algebra structural check, the evasion construction itself remains valid.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-S7 Weinberg-Witten No-Go Evasion — 수치 증명
+S7 Weinberg-Witten No-Go Evasion — 수치 증명 (workbench L1 algebra core, structural)
 ============================================
 W-W 정리의 두 가정:
     (A1) Lorentz-covariant conserved stress-energy T^μν 존재

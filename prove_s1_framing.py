@@ -1,7 +1,11 @@
 # KG: SPAN_ICE_L3_S1_framing, SPAN_ICE_L3_TRACK_A_ROOT
 # LONGINUS: sourceId=prove_s1_framing, sourcePath=prove_s1_framing.py
+# WORKBENCH-LAYER: L1 algebra core (PROGRESSIVE per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# S1 framing tower G_n/H_n is L1 algebra construction. Note: "L3" in KG label is ICE-internal Track A
+# layer numbering (path integral L3), NOT workbench-reframe L3 physics-prediction belt — disambiguation.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-S1 Framing: G_n / H_n Symmetry-Breaking Tower — 수치 증명
+S1 Framing: G_n / H_n Symmetry-Breaking Tower — 수치 증명 (workbench L1 algebra core)
 =========================================================
 ICE L3 framing: 각 CD_n → CD_{n+1} 전이를 엄밀 정식화.
     G_n = Aut(A_n) (automorphism group of level-n CD algebra)

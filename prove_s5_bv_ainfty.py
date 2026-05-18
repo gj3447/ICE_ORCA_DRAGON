@@ -1,7 +1,10 @@
 # KG: SPAN_ICE_L3_S5_deformation, SPAN_ICE_L3_S4_BRST, SPAN_ICE_L3_S6_path_integral, SPAN_ICE_L3_TRACK_A_ROOT
 # LONGINUS: sourceId=prove_s5_bv_ainfty, sourcePath=prove_s5_bv_ainfty.py
+# WORKBENCH-LAYER: L1 algebra core (PROGRESSIVE — explicitly CONFIRMED per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# S5 BV/A∞ quantization is L1 algebra/homotopy-theory established. ICE-internal "L3" ≠ workbench L3.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-S5: A∞ + BV Quantization - 수치 증명
+S5: A∞ + BV Quantization - 수치 증명 (workbench L1 algebra core, CONFIRMED)
 ========================================
 L3 경로 적분의 실제 존재성 증명.
 

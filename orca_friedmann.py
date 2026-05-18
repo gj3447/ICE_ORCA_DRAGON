@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 # KG: Modified Friedmann Equation (ICE SRG), Friedmann Equation Modification, SRG Master Equation
 # LONGINUS: sourceId=orca_friedmann, sourcePath=orca_friedmann.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (STAGNANT per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# T₀ = 19 closure normalization is L2/L3 workbench-tested numerology hold, NOT L1 algebra layer
+# establishment. Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-ORCA Theory – Gravity Sector: Modified Friedmann Equation from CD Chain
+ORCA Theory – Gravity Sector: Modified Friedmann Equation from CD Chain (L2/L3 workbench-tested layer)
 Compare with ICE theory's SRG equation: H² = (8πG/3)ρ(1 + γ/H)
 """
 
@@ -353,7 +356,7 @@ print("\n" + "=" * 72)
 print("[4] ORCA MODIFIED FRIEDMANN: ODE INTEGRATION")
 print("=" * 72)
 
-# Use T₀ = 19 (normalized to closure, as ICE predicts)
+# Use T₀ = 19 (normalized to closure, ICE workbench-tested numerology hold per ICE_WORKBENCH_REFRAME §3)
 T0_closure = T0_required  # ≈ 19
 
 # Also try with the raw ORCA prediction (state-count)

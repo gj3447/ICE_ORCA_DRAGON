@@ -1,7 +1,12 @@
 # KG: seed-track1-phase1prime-epsilon-ICE-derivation, proof-epsilon-ICE-derivation-v1-2026-04-20
 # LONGINUS: sourceId=derive_epsilon_ICE, sourcePath=derive_epsilon_ICE.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (STAGNANT per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# Special status: this script computes ε_ICE(r) Adelberger comparison — designated **single Lean 4
+# escape lane** per workbench-reframe §5 (MB3 independent observable prediction). MB1 form-uniqueness
+# theorem + MB3 + MB4 sha256 pre-registration are the only path to L2/L3 reversal.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-ε_ICE(r) Derivation — Track I Phase 1'
+ε_ICE(r) Derivation — Track I Phase 1' (L2/L3 workbench-tested layer, single escape lane)
 =========================================
 ICE가 Newton/GR와 구별되는 specific correction을 예측할 수 있는가?
 

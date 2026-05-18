@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 # KG: Higgs Mechanism in ICE, Derive the Higgs Sector from the Sedenion Span, Higgs from Sedenion Algebra
 # LONGINUS: sourceId=higgs_mechanism, sourcePath=higgs_mechanism.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (STAGNANT per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# Higgs sector construction is L2/L3 workbench-tested, NOT L1 algebra layer establishment. The 42 ZD
+# pair candidates exist as L1 algebra structure (Reggiani 2024, queue_01 CONFIRMED), but their identification
+# as SM Higgs doublets is L2/L3 hypothesis under test.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-ORCA Theory: Higgs Mechanism as O→S Cayley-Dickson Transition
-=============================================================
+ORCA Theory: Higgs Mechanism as O→S Cayley-Dickson Transition (L2/L3 workbench-tested layer)
+=============================================================================================
 Defining order parameters and deriving Higgs-like potentials
 for the octonion → sedenion transition.
 """

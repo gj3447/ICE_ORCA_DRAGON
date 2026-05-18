@@ -1,7 +1,11 @@
 # KG: Koide Q = 2/3 from Z₃, Cabibbo angle = √(1/20), ICE Observable and Likelihood Descent
 # LONGINUS: sourceId=derive_dimensionless_ICE, sourcePath=derive_dimensionless_ICE.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (STAGNANT per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# All "ICE prediction" claims here are L2/L3 workbench-tested candidates, NOT L1 algebra layer
+# establishment. 287/15 ratio = post-hoc fitting per UEQFT_ICE_CLUE_ANALYSIS_2026_02_07.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-Dimensionless ICE Observables — Scale-free Predictions
+Dimensionless ICE Observables — Scale-free Predictions (L2/L3 workbench-tested layer)
 ========================================================
 ICE는 scale-free → dimensionless observable에만 예측 능력.
 

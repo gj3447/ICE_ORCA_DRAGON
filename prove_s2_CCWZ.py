@@ -1,7 +1,10 @@
 # KG: SPAN_ICE_L3_S2_CCWZ, SPAN_ICE_L3_TRACK_A_ROOT
 # LONGINUS: sourceId=prove_s2_CCWZ, sourcePath=prove_s2_CCWZ.py
+# WORKBENCH-LAYER: L1 algebra core (PROGRESSIVE per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# S2 CCWZ coset construction is L1 algebra/geometry. ICE-internal "L3" label ≠ workbench L3.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-S2 CCWZ: Maurer-Cartan Form + pNGB Adler Zero — 수치 증명
+S2 CCWZ: Maurer-Cartan Form + pNGB Adler Zero — 수치 증명 (workbench L1 algebra core)
 ==========================================================
 G_n/H_n coset space에서 CCWZ construction:
     ω(g) = g⁻¹ dg  (Maurer-Cartan form)

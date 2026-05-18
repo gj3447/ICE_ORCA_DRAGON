@@ -1,7 +1,11 @@
 # LONGINUS: sourceId=verify_mp_mW_3_256, sourcePath=verify_mp_mW_3_256.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (STAGNANT per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# All "ICE prediction" labels in this file mean *L2/L3 workbench-tested candidate*, NOT L1 algebra layer
+# establishment. Per PREREG_CHECK_REPORT_2026-05-18.md the 3/256 ratio was classified NUMEROLOGY_CONFIRMED
+# under MC null + Bonferroni look-elsewhere correction. Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-Verification Protocol: m_p/m_W = 3/256
-=========================================
+Verification Protocol: m_p/m_W = 3/256 (L2/L3 workbench-tested layer)
+=======================================================================
 5-Layer verification:
   Layer 1: Precise numerical match
   Layer 2: Structural derivation attempts
@@ -9,8 +13,12 @@ Verification Protocol: m_p/m_W = 3/256
   Layer 4: Proof-chain (literature)
   Layer 5: Numerology taliban final audit
 
-Strategy: If 3/256 is ICE-genuine, other mass ratios should ALSO follow
+Strategy: If 3/256 is L2/L3 workbench-tested-genuine, other mass ratios should ALSO follow
 3-and-256-based patterns. If NOT, it's coincidence.
+
+Verdict (2026-05-18 pre-reg post-hoc audit): NUMEROLOGY_CONFIRMED (P=0.812 under MC null).
+이 script 의 "ICE prediction" 라벨 은 모두 L2/L3 workbench-tested candidate 의미, L1 algebra layer
+establishment 아님 (workbench-reframe propagation 2026-05-18).
 
 실행: python3 verify_mp_mW_3_256.py
 """

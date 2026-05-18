@@ -1,7 +1,11 @@
 # KG: seed-track1-phase1prime-epsilon-ICE-derivation
 # LONGINUS: sourceId=derive_Lstar_from_ICE, sourcePath=derive_Lstar_from_ICE.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (STAGNANT per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# L_star length scale is L2/L3 workbench-tested candidate, NOT L1 algebra layer establishment.
+# Supports escape lane (derive_epsilon_ICE.py MB3 Adelberger comparison).
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-L_star Derivation from ICE structure — Seed #20
+L_star Derivation from ICE structure — Seed #20 (L2/L3 workbench-tested layer)
 ===================================================
 ε_ICE(r) = (L_star/r)^α predicted signature.
 L_star이 ICE 이론에서 자연 도출되는가?

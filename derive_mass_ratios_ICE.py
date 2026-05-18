@@ -1,8 +1,12 @@
 # KG: Koide Q = 2/3 from Z₃, Cabibbo angle = √(1/20), 14², 15³ Mass Ratio Derivation Chain
 # LONGINUS: sourceId=derive_mass_ratios_ICE, sourcePath=derive_mass_ratios_ICE.py
+# WORKBENCH-LAYER: L2/L3 physics-prediction belt (STAGNANT per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# All "ICE prediction" claims in this file are L2/L3 workbench-tested candidates; 0/15 sha256-committed
+# pre-registered predictions reached SIGNAL_GENUINE per PREREG_CHECK_REPORT_2026-05-18.md.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-Track B: Mass Ratios from ICE Structure
-=========================================
+Track B: Mass Ratios from ICE Structure (L2/L3 workbench-tested layer)
+========================================================================
 절대 mass는 scale-free ICE로 도출 불가.
 BUT mass ratios (dimensionless)는 가능.
 
@@ -10,11 +14,15 @@ BUT mass ratios (dimensionless)는 가능.
 1. 실험 mass ratios 목록 (lepton, quark, hadron, gauge)
 2. ICE 구조 (sedenion, G₂, ZD, XOR) 에서 "자연" 비율 후보 생성
 3. 각 candidate에 Numerology Taliban + Proof-chain Taliban 동시 적용
-4. 생존 match → genuine ICE prediction 후보
+4. 생존 match → workbench-tested L2/L3 candidate (NOT algebra-layer L1 establishment)
 
-중요:
+중요 (2026-05-18 workbench-reframe propagation):
+- "genuine ICE prediction 후보" 는 항상 *L2/L3 workbench-tested candidate* 의미.
+  L1 algebra layer establishment 아님.
 - Postdiction (Koide 2/3, 이미 알려진 match) 는 fitting으로 처리
 - 진짜 prediction (SM이 fit 못하는 ratio) 만 credit
+- 본 script 결과는 derive_mass_ratios_results.json 으로 출력, 모두 NUMEROLOGY_CONFIRMED
+  또는 STRUCTURAL_INCAPACITY 판정 (PREREG_CHECK_REPORT_2026-05-18.md).
 
 실행: python3 derive_mass_ratios_ICE.py
 """

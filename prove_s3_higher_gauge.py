@@ -1,7 +1,10 @@
 # KG: SPAN_ICE_L3_S3_higher_gauge, SPAN_ICE_L3_TRACK_A_ROOT
 # LONGINUS: sourceId=prove_s3_higher_gauge, sourcePath=prove_s3_higher_gauge.py
+# WORKBENCH-LAYER: L1 algebra core (PROGRESSIVE — explicitly CONFIRMED per ICE_WORKBENCH_REFRAME_2026-05-18.md §3)
+# S3 higher gauge / FDA / Jacobi=6·associator is L1 algebra/Lie-theory established. ICE-internal "L3" ≠ workbench L3.
+# Layer attribution mandatory per 3-Layer Disclosure rule.
 """
-S3 Higher Gauge Elevation - 수치 증명
+S3 Higher Gauge Elevation - 수치 증명 (workbench L1 algebra core, CONFIRMED)
 ========================================
 ICE L3 construction의 핵심 주장 4개를 실제 계산으로 검증.
 

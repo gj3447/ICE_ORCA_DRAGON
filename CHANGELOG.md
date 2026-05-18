@@ -6,6 +6,44 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-05-19 — twenty-third pass] — workbench-reframe per-script propagation audit
+
+> User verdict "ice orca dragon 작업 계속 쭉 이어서 진행" → propagation completeness audit per `feedback_canon_propagation_simultaneous`. 2026-05-18 banner-only state (README/SOURCES top-of-file) was insufficient; per-script layer attribution now applied to all 12 physics-claim scripts.
+
+### Propagation patch (12 scripts tagged)
+
+**L1 algebra core (PROGRESSIVE)** — 5 scripts:
+- `prove_s1_framing.py`, `prove_s2_CCWZ.py`, `prove_s3_higher_gauge.py` (CONFIRMED), `prove_s5_bv_ainfty.py` (CONFIRMED), `prove_s7_WW_evasion.py` (structural)
+- 추가 disambiguation note: ICE-internal `SPAN_ICE_L3_*` label ≠ workbench L3 physics-prediction belt
+
+**L2/L3 physics-prediction belt (STAGNANT)** — 7 scripts:
+- `derive_dimensionless_ICE.py`, `derive_epsilon_ICE.py` (single escape lane per §5), `derive_Lstar_from_ICE.py`, `derive_mass_ratios_ICE.py`, `higgs_mechanism.py`, `orca_friedmann.py`, `verify_mp_mW_3_256.py`
+
+### Verification
+
+```bash
+grep -c "^# WORKBENCH-LAYER" derive_*.py verify_*.py higgs_*.py orca_*.py prove_s*.py
+# 12/12 PASS
+```
+
+### Audit report
+
+`WORKBENCH_REFRAME_PROPAGATION_AUDIT_2026-05-19.md` — full method + pre/post state + boundary-case rulings + deferred low-priority items (queue/cd/sedenion/zd64 scripts have no current "ICE predicts X" claim language, so no violation; future cosmetic pass).
+
+### Deferred (acceptable — no violation)
+
+- `derive_*_results.json`: layer inheritance by source; JSON `workbench_layer` field deferred
+- `papers/asymmetric_lakatos_paper_draft_2026-05-18.md` + `papers/prereg_lakatos_methodology_paper_draft_2026-05-18.md`: use "sub-belt" Lakatos language (semantically equivalent); cross-reference to ICE_WORKBENCH_REFRAME is enhancement-only
+
+### KG hooks
+
+- `workbench-reframe-propagation-audit-2026-05-19` (:PropagationAudit:VerdictRecord)
+- `lesson-workbench-reframe-banner-not-enough-2026-05-19` (:Lesson — wrongAssumption "top-of-file banner sufficient" ↔ truth "per-script attribution necessary")
+
+# KG: workbench-reframe-propagation-audit-2026-05-19, lesson-workbench-reframe-banner-not-enough-2026-05-19
+
+---
+
 ## [2026-05-18 — twenty-second pass] — autoloop batch 3 (3 tasks, narrower scope, Bayesian floor declared)
 
 > User verdict "계속 작업" → autoloop batch 3 reactivated with NARROWER scope acknowledging diminishing returns.
