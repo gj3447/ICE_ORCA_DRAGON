@@ -13,7 +13,19 @@
 
 </div>
 
-> **ICE_ORCA_DRAGON** is the physics-side workbench of SYMPOSIUM apostle #2 — 60+ Python scripts and JSON results that compute Cayley-Dickson algebra breaking (32D vs 64D), sedenion (16D) analysis, Der(S)=g₂ verification, Higgs ZD doublet candidates, S₁~S₇ structural proofs, and orbit/custodial/rep-decomposition scans. Computation results feed a *science feedback loop* that classifies each output as confirmation / refutation / discovery / numerology and updates the KG through Lakatos progressive-vs-degenerating evaluation.
+> **ICE_ORCA_DRAGON** is the **hypercomplex hypothesis testbench** of SYMPOSIUM apostle #2 — 60+ Python scripts and JSON results that compute Cayley-Dickson algebra breaking (32D vs 64D), sedenion (16D) analysis, Der(S)=g₂ verification, Higgs ZD doublet candidates, S₁~S₇ structural proofs, and orbit/custodial/rep-decomposition scans. Computation results feed a *science feedback loop* that classifies each output as confirmation / refutation / discovery / numerology and updates the KG through Lakatos progressive-vs-degenerating evaluation.
+
+### 2026-05-18 Workbench Reframe (3-Layer Disclosure mandatory)
+
+Per `ICE_WORKBENCH_REFRAME_2026-05-18.md` canonical position, ICE classification = `:HypercomplexHypothesisTestbench` (NOT `:PhysicsTheoryProgramme`). All statements must distinguish three layers:
+
+| Layer | Status | Examples |
+|---|---|---|
+| **L1 Algebra core** | **PROGRESSIVE** | Brown 1967 Aut(𝕊)=G₂×S₃, Moreno 1998 Z(𝕊)≅G₂, Reggiani 2024, 5 queue_* CONFIRMED |
+| **L2/L3 Workbench tested** | **DEGENERATING / STAGNANT** (Tüchsen 2024 EJPS) | queue_02 100% fail, derive_* self-REFUTED, Koide/mp_mW NUMEROLOGY_CONFIRMED |
+| **Mythology (USER_PRIMARY)** | **PRESERVED** (Eilu va-Eilu) | 사용자 신앙시 erase 금지 |
+
+"ICE predicts X" without layer attribution is forbidden. 5-year P1-P5 discriminator window 2026-2031 (currently 0/5 satisfied). Single Lean 4 escape lane: `MIND/lean_formalization/sedenion_uniqueness/`.
 
 ---
 

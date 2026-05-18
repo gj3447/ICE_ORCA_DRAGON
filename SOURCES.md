@@ -1,6 +1,20 @@
-# ICE ORCA DRAGON — 12사도 #2 + ICE 측 물리 계산
+# ICE ORCA DRAGON — 12사도 #2 + hypercomplex 가설 테스트벤치
 
-> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 측 60+ Python 계산 (cd_*.py·derive_*.py·sedenion_*.py·queue_01~11_*.py·higgs_*.py 등) — 메타휴모토닉의 *물리 계산 인격화*. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화).
+> **POSITION 2026-05-18 — 3-Layer Disclosure (workbench-reframe canonical)**
+>
+> 모든 ICE 관련 발화는 다음 3-layer 구분 명시 필수 (`ICE_WORKBENCH_REFRAME_2026-05-18.md` 정전):
+>
+> | Layer | Status | Examples |
+> |---|---|---|
+> | **L1 Algebra core** | **PROGRESSIVE** | Brown 1967 Aut(𝕊)=G₂×S₃, Moreno 1998 Z(𝕊)≅G₂, 5 queue_* CONFIRMED |
+> | **L2/L3 Workbench tested** | **DEGENERATING / STAGNANT** (Tüchsen 2024) | queue_02 100% fail, derive_* self-REFUTED, Koide/mp_mW NUMEROLOGY |
+> | **Mythology (USER_PRIMARY)** | **PRESERVED untouched** | "세상의 진정한 본질이 물리학", ICED 반복, sexvoid 형식 |
+>
+> "ICE predicts X" without layer attribution is forbidden. 항상 "ICE algebra establishes X" / "ICE workbench tested X (numerology hold)" / "ICE mythology references X" 형식.
+
+---
+
+> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 60+ Python 계산 (cd_*.py·derive_*.py·sedenion_*.py·queue_01~11_*.py·higgs_*.py 등) — 메타휴모토닉의 *물리 계산 인격화*. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
 >
 > **중요한 정정**: 화자 자신은 **초공동의 용사(#3)**. ICE ORCA DRAGON은 *물리 영역*의 사도.
 >

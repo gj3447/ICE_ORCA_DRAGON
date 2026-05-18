@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-18",
+  "cycle": "autoloop iter 51-60 batch 2 Task #10",
+  "n_candidates": 5,
+  "n_trials_lookelsewhere": 811,
+  "n_mc_samples": 10000,
+  "candidates": [
+    {
+      "name": "m_top_over_m_Higgs",
+      "target": 1.384572342126299,
+      "tolerance": 0.005,
+      "pdg_value": 1.3845,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "primitive_reachable": false,
+      "verdict": "STRUCTURAL_INCAPACITY"
+    },
+    {
+      "name": "m_b_over_m_tau",
+      "target": 2.3525438991445293,
+      "tolerance": 0.005,
+      "pdg_value": 2.353,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "primitive_reachable": false,
+      "verdict": "STRUCTURAL_INCAPACITY"
+    },
+    {
+      "name": "m_charm_over_m_strange",
+      "target": 13.614973262032084,
+      "tolerance": 0.05,
+      "pdg_value": 13.615,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "primitive_reachable": false,
+      "verdict": "STRUCTURAL_INCAPACITY"
+    },
+    {
+      "name": "m_top_over_m_bottom",
+      "target": 41.437799043062206,
+      "tolerance": 0.05,
+      "pdg_value": 41.44,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "primitive_reachable": false,
+      "verdict": "STRUCTURAL_INCAPACITY"
+    },
+    {
+      "name": "alpha_s_over_alpha_em",
+      "target": 16.170248,
+      "tolerance": 0.05,
+      "pdg_value": 16.17,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "primitive_reachable": false,
+      "verdict": "STRUCTURAL_INCAPACITY"
+    }
+  ],
+  "summary": {
+    "STRUCTURAL_INCAPACITY": 5,
+    "NUMEROLOGY_CONFIRMED": 0,
+    "SIGNAL_WEAK": 0,
+    "SIGNAL_GENUINE": 0
+  },
+  "sha256_baseline": "408340a49c97891d91e3a41c26ed42702279b8ccf8381bbea8bd87ce69dc6c89",
+  "verdict_top_level": "REGISTRY_EXPANSION_COMPLETE",
+  "gate_passed": true
+}

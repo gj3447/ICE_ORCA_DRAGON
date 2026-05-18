@@ -1,0 +1,118 @@
+{
+  "date": "2026-05-18",
+  "cycle": "autoloop iter 41-55 (Task 4)",
+  "protocol": "Lakatos-progressive pre-registration",
+  "n_predictions": 15,
+  "predictions": [
+    {
+      "id": "P01",
+      "name": "g2_adjoint_to_fundamental",
+      "value": 2.0,
+      "derivation": "dim(adjoint G\u2082) / dim(fundamental G\u2082) = 14/7 = 2",
+      "category": "group_theoretic_ratio"
+    },
+    {
+      "id": "P02",
+      "name": "g2_long_short_root_sq",
+      "value": 3.0,
+      "derivation": "long\u00b2/short\u00b2 for G\u2082 = 3 (G\u2082 Cartan matrix)",
+      "category": "lie_algebra_invariant"
+    },
+    {
+      "id": "P03",
+      "name": "g2_weyl_order_to_rank",
+      "value": 6.0,
+      "derivation": "|W(G\u2082)| / rank(G\u2082) = 12/2 = 6",
+      "category": "group_theoretic_ratio"
+    },
+    {
+      "id": "P04",
+      "name": "sedenion_zd_pair_per_orbit",
+      "value": 6.0,
+      "derivation": "42 ZD pairs / 7 G\u2082-orbits = 6 per orbit",
+      "category": "sedenion_orbit_invariant"
+    },
+    {
+      "id": "P05",
+      "name": "sedenion_zd_density",
+      "value": 0.35,
+      "derivation": "42 ZD pairs / C(16,2) = 42/120 = 7/20 = 0.35",
+      "category": "sedenion_combinatorial"
+    },
+    {
+      "id": "P06",
+      "name": "g2_x_s3_order",
+      "value": 72,
+      "derivation": "|W(G\u2082)| \u00d7 |S\u2083| = 12 \u00d7 6 = 72",
+      "category": "joint_group_order"
+    },
+    {
+      "id": "P07",
+      "name": "s3_sum_irrep_dim_sq",
+      "value": 6,
+      "derivation": "\u03a3dim(irreps)\u00b2 for S\u2083 = 1+1+4 = 6 = |S\u2083|",
+      "category": "rep_theory_check"
+    },
+    {
+      "id": "P08",
+      "name": "octonion_aut_to_octonion_dim",
+      "value": 1.75,
+      "derivation": "dim(G\u2082 = Aut(O)) / dim(O) = 14/8 = 7/4 = 1.75",
+      "category": "automorphism_ratio"
+    },
+    {
+      "id": "P09",
+      "name": "sedenion_aut_aut_dim",
+      "value": 5.25,
+      "derivation": "dim(G\u2082 \u00d7 S\u2083) / dim(\ud835\udd4a) = (14 \u00d7 6) / 16 = 84/16 = 5.25",
+      "category": "sedenion_automorphism_density"
+    },
+    {
+      "id": "P10",
+      "name": "zd_growth_ratio_5_4",
+      "value": 7.0,
+      "derivation": "OEIS A167654 ratio: ZD(n=5)/ZD(n=4) = 294/42 = 7",
+      "category": "cd_tower_growth"
+    },
+    {
+      "id": "P11",
+      "name": "zd_growth_ratio_6_5",
+      "value": 5.163265306122449,
+      "derivation": "ZD(n=6)/ZD(n=5) = 1518/294 \u2248 5.163",
+      "category": "cd_tower_growth"
+    },
+    {
+      "id": "P12",
+      "name": "zd_growth_ratio_7_6",
+      "value": 4.573122529644269,
+      "derivation": "ZD(n=7)/ZD(n=6) = 6942/1518 \u2248 4.573",
+      "category": "cd_tower_growth"
+    },
+    {
+      "id": "P13",
+      "name": "zd_growth_ratio_8_7",
+      "value": 4.305099394987035,
+      "derivation": "ZD(n=8)/ZD(n=7) = 29886/6942 \u2248 4.305",
+      "category": "cd_tower_growth"
+    },
+    {
+      "id": "P14",
+      "name": "cd_tower_doubling_invariant",
+      "value": 1.3333333333333333,
+      "derivation": "log\u2082(16)/log\u2082(8) = 4/3 \u2248 1.333 (CD tower level ratio)",
+      "category": "cd_tower_structure"
+    },
+    {
+      "id": "P15",
+      "name": "s3_alternating_subgroup_ratio",
+      "value": 0.5,
+      "derivation": "|A\u2083|/|S\u2083| = 3/6 = 1/2 (parity sign cohomology)",
+      "category": "permutation_invariant"
+    }
+  ],
+  "sha256_commit": "0bbcbe40272c3811f68e05b391c7746016cf54ca7fc2f28f39f03d0fb98900c2",
+  "step": "1+2 (derivation + commit) COMPLETE; PDG comparison NOT YET PERFORMED",
+  "verdict_top_level": "PRE_REGISTRATION_COMMITTED",
+  "gate_passed": true,
+  "note": "Step 3 (PDG comparison) and Step 4 (MC null gate) executed in separate script ice_prereg_check.py"
+}
