@@ -1,0 +1,50 @@
+{
+  "date": "2026-05-20",
+  "version": "v3_abc_kl_dual_gate",
+  "predecessor": "numerology_mc_judge.py (v1, 2026-05-17)",
+  "kg_anchor": "plan-prom16-meta-bayes-ice-004-abc-kl-dual-gate-2026-05-20",
+  "self_test_step_8": {
+    "n_synthetic_trials_used": 500,
+    "kl_threshold_tested": 1.0,
+    "kl_observed_mean_bits": 0.6047294514742598,
+    "kl_observed_p95_bits": 0.6807398637060016,
+    "false_lift_count": 0,
+    "false_lift_rate": 0.0,
+    "gate_passed": true
+  },
+  "ice_004_case": {
+    "n_samples": 200000,
+    "n_accept": 7407,
+    "p_e_given_not_h": 0.037035,
+    "kl_per_factor_bits": [
+      0.8419722304015154,
+      0.6827858866465748,
+      0.008227898063426326
+    ],
+    "kl_total_bits": 1.5329860151115164,
+    "posterior_product_mean": 0.039715314084014186,
+    "posterior_product_p05_p95": [
+      0.03631315898193764,
+      0.04346236781942566
+    ],
+    "factor_priors_alpha_beta": [
+      [
+        1.0,
+        9.0
+      ],
+      [
+        1.0,
+        4.0
+      ],
+      [
+        10.0,
+        1.0
+      ]
+    ],
+    "target_product": 0.04,
+    "tol_rel": 0.1,
+    "verdict_v3": "SIGNAL_WEAK",
+    "case": "ICE workbench reframe posterior_prior 0.04",
+    "interpretation": "P(E|~H)=0.0370, KL=1.533 bits. Verdict=SIGNAL_WEAK. Posterior product 95% interval = [0.0363, 0.0435]."
+  }
+}

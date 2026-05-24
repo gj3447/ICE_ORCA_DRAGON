@@ -297,8 +297,76 @@ MERGE (n)-[:RESOLVED_BY]->(lesson);
 
 ---
 
-## 11. 한 줄 정리
+## 11. Naesengmoon 1-lens audit (2026-05-20) — 부수 4 fix applied
 
-> ICE_ORCA_DRAGON 측 numerology landscape: **3 CONFIRMED + 4 HOLD + 2 METHOD_ARTIFACT + 2 REFUTED self + 1 REFUTED structural + 1 STAGNANT meta-program + 1 PULL_BACK = 14 items**. MC coverage 5/7 (N-5/N-6 측 gap). 본 세션 측 PULL_BACK (N-7) 측 internal rule self-correction 측 demonstration.
+> Trigger: ValidationResult `vr-naesengmoon-1lens-numerology-ice-2026-05-20` (final=CHANGES_REQUESTED, 5/5 axis). 부수 4 challenge mechanical fix 진행 (큰 1 = meta-self-MC는 별도 작업).
 
-# KG: numerology-registry-canonical-2026-05-18 (`:CanonicalRegistry:KG_Seed`, INSTANCE_OF_FEEDBACK_LOOP agent-feedback-loop-canonical-2026-04-27)
+### 11.1 V-class section (axis 1 fix)
+
+§6 "Adjacent claims" 3 항목 (V-1 42 ZD count / V-2 Casimir 0.75 / V-3 XOR 105)을 KG에 별도 라벨 `:VerifiedAlgebraInvariant`로 mirror. `algebra_postdiction_hazard` property에 physics-mapping 시 numerology 등급 carry-over 조건 명시.
+
+### 11.2 N-5/N-6 sunset clause (axis 2 fix)
+
+N-5 (c=4·ln2) + N-6 (Bekenstein) 둘 다 `sunset_deadline=2026-08-20` 부착. 3개월 안에 MC-buildable spec 제공 못 하면 자동 REFUTED. Lakatos protective belt 차단.
+
+### 11.3 Meta-program selection criterion (axis 4 fix)
+
+`criterion-hypercomplex-tower-sm-direct-descent-2026-05-20` 노드 결정화:
+- **포함 기준**: hypercomplex 수 타워(octonion/sedenion/Cl(8) 표현)를 SM 게이지·페르미온 도출의 1차 대수 기반으로 쓰는 프로그램
+- **제외 기준**: noncommutative geometry / spectral triple / K-theory가 1차 기반인 프로그램 (hypercomplex는 instance에 불과)
+- **포함 5**: Dixon / Furey / Manogue-Dray / Köplinger / Cawagas-descendants
+- **제외 3 (사유 명시)**: Connes spectral triple Cl(8) (noncommutative-geometry 1차) / Atiyah octonion 강연 (메타-철학, SM 도출 시도 없음) / Smolin 8-fold (loop QG 1차)
+
+### 11.4 Hidden scan v2 — 4-family target enumeration (axis 5 fix)
+
+`numerology_hidden_scan_v2_target_categories_2026-05-20.py` 실행 (28 primitives × 811 ratios × 10000 MC):
+
+| Family | 항목 | NUMEROLOGY_CONFIRMED | SIGNAL_GENUINE |
+|---|---|---|---|
+| A small-rational | 2 (parity) | 2 (Casimir 0.75 + Koide 2/3, both reconfirmed) | 0 |
+| B transcendental | 6 (π/4, π/2, e⁻¹, e⁻², √2/2, π²/6) | 1 (**e⁻² orphan**) | 5 |
+| C log-value | 4 (ln 2, ln 3, ln π, 4·ln 2) | 1 (**ln π orphan**) | 3 |
+| D large-integer | 3 (1/α=137, XOR 105, log τ_p=33) | 0 | 3 |
+
+**새 발견 2 (orphan hazard anchor)**:
+- `numerology-orphan-e-inv-squared-2026-05-20` — e⁻²≈0.1353가 ICE primitive ratio 측 1.7% 측 매칭. 아직 ICE physics claim에 attach 안 됨 → 미래 claim 측 hazard anchor.
+- `numerology-orphan-ln-pi-2026-05-20` — ln π≈1.1447가 ICE primitive ratio 측 1.01% 측 매칭. 같은 hazard 성격.
+
+해석: 11/15 SIGNAL_GENUINE은 *uninformative null* (ICE primitive set는 integer-only라 transcendental·log·큰 정수 측 stochastic match 가능성 자체가 거의 0). 진짜 의미 있는 결과는 4 NUMEROLOGY_CONFIRMED — 그 중 2개 reconfirm + **2개 orphan anchor 신규**.
+
+### 11.5 남은 큰 빵꾸 — **RESOLVED 2026-05-20 turn 2** 🟢
+
+> 본 §11.5 측 *2026-05-20 turn 1 측 PENDING* 측 → *turn 2 측 RESOLVED* 측 promote. 사용자 trust-based delegation (CANONICAL_DELEGATED band).
+
+**Original challenge** (turn 1): `lesson-self-mc-applies-to-meta-bayesian-too-2026-05-20` (PROPOSED) — workbench reframe `posterior_prior=0.04` 측 자체에 numerology_mc_judge 측 재귀 적용 필요.
+
+**Resolution path** (PROM 16 cycle `prom16-meta-bayesian-numerology-2026-05-20`):
+
+1. **학문 정전 mapping 도출** — 4 axis (PPC / Sensitivity / SHELF·IDEA·Cooke / ABC) × 4 sub-axis × 16 subagent → 가장 일반적 측정안 = **ABC + KL divergence dual gate**.
+2. **v3 tool implemented** — `numerology_mc_judge_v3_abc.py` (2026-05-20):
+   - Step 8 self-application gate 통과 (synthetic KL=0 false-lift rate = 0%)
+   - ICE 0.04 case 측정: **P(E|~H)=0.037, KL=1.533 bits → SIGNAL_WEAK (NOT NUMEROLOGY)**
+   - posterior product 95% interval = [0.0363, 0.0435]
+3. **CANONICAL_DELEGATED 격상** — 6 lessons + D2 epistemic status + ICE workbench reframe `non_numerology_v3_confirmed=true` (KG node).
+
+**Verdict**: ICE 0.04 측 **수비학 아님** confirmed. NUMEROLOGY_REGISTRY 측 N-* / M-* / R-* / S-* 측 entry 측 0.04 측 *추가 안 함*. 측 §6 V-class (verified-but-adjacent) 측 entry 측 *추가 안 함* — 측 escape lane 측 *single weak prediction* 측 별도 layer (algebra-invariant 아닌 future-event prediction).
+
+**유지되는 caveat** (Single-expert circular-prior risk):
+- A3×S3 측 Garthwaite-Kadane-O'Hagan 2005 §7.3: external seed 없으면 calibration 측 formally impossible.
+- LLM subagents (비행기맨 / Naesengmoon / Prometheus) 측 user KG 측 share → Cooke 1991 dependence catastrophe.
+- 측 즉 SIGNAL_WEAK 측 STRONG SIGNAL 측 격상 측 아님 — "weak but valid prediction, not coincidence."
+- 5-year P1-P5 window (2026-2031) 측 annual sequential ABC 측 calibration debt 측 resolve 측 trigger.
+
+**KG anchors**:
+- `ice-workbench-reframe-canonical-2026-05-18.non_numerology_v3_confirmed=true`
+- `lesson-self-mc-applies-to-meta-bayesian-too-2026-05-20` (CANONICAL_DELEGATED)
+- `plan-prom16-meta-bayes-ice-004-abc-kl-dual-gate-2026-05-20` (ActionPlan, 7-step + Step 8 self-test)
+- `decisionlog-prom16-blanket-proceed-2026-05-20` (escalation log)
+
+---
+
+## 12. 한 줄 정리 (갱신 2026-05-20 turn 2)
+
+> ICE_ORCA_DRAGON numerology landscape: **3 CONFIRMED + 4 HOLD + 2 METHOD_ARTIFACT + 2 REFUTED self + 1 REFUTED structural + 1 STAGNANT meta-program + 1 PULL_BACK = 14 items** (2026-05-18 baseline) **+ 3 VerifiedAlgebraInvariant V-class + 2 orphan hazard anchor (e⁻², ln π) = 19 items** (2026-05-20 expansion). MC coverage 5/7 → sunset clause로 N-5/N-6 측 3개월 deadline. **🟢 5/5 naesengmoon 1-lens audit RESOLVED** (4 mechanical + 1 큰 빵꾸 측 v3 ABC + KL dual gate 측 SIGNAL_WEAK NOT NUMEROLOGY 측 confirm). ICE workbench reframe 0.04 측 *numerology entry 측 추가 안 함* — escape lane 측 weak-but-valid prediction.
+
+# KG: numerology-registry-canonical-2026-05-18 (`:CanonicalRegistry:KG_Seed`, INSTANCE_OF_FEEDBACK_LOOP agent-feedback-loop-canonical-2026-04-27) + naesengmoon fix anchor `vr-naesengmoon-1lens-numerology-ice-2026-05-20`

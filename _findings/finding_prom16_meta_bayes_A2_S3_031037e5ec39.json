@@ -1,0 +1,119 @@
+{
+  "agentId": "prom16-meta-bayes-A2S3",
+  "cycle": "prom16-meta-bayesian-numerology-2026-05-20",
+  "axis": "A2_bayesian_sensitivity",
+  "sub_axis": "S3_ICE_0.04_application",
+  "timestamp": "2026-05-20",
+  "method": "Berger-Berliner 1986 ε-contamination closed-form, extended to product priors under factor-wise independence",
+  "inputs": {
+    "joint_prior_point_estimate": 0.04,
+    "decomposition_unspecified_in_source": true,
+    "source": "ICE_WORKBENCH_REFRAME_2026-05-18.md §5",
+    "candidate_decompositions": [
+      {
+        "p_mb1": 0.1,
+        "p_mb3_g_mb1": 0.4,
+        "p_mb4": 1.0
+      },
+      {
+        "p_mb1": 0.2,
+        "p_mb3_g_mb1": 0.2,
+        "p_mb4": 1.0
+      },
+      {
+        "p_mb1": 0.05,
+        "p_mb3_g_mb1": 0.8,
+        "p_mb4": 1.0
+      }
+    ]
+  },
+  "results": {
+    "epsilon_0.10_contamination_per_factor": {
+      "D-A_lean_hard_phys_modest": {
+        "nominal": 0.04000000000000001,
+        "worst_case_range_lo": 0.029160000000000005,
+        "worst_case_range_hi": 0.08740000000000002,
+        "width": 0.058240000000000014,
+        "verdict": "MARGINAL"
+      },
+      "D-B_balanced": {
+        "nominal": 0.04000000000000001,
+        "worst_case_range_lo": 0.029160000000000005,
+        "worst_case_range_hi": 0.07840000000000001,
+        "width": 0.049240000000000006,
+        "verdict": "MARGINAL"
+      },
+      "D-C_lean_very_hard": {
+        "nominal": 0.04000000000000001,
+        "worst_case_range_lo": 0.029160000000000005,
+        "worst_case_range_hi": 0.11890000000000002,
+        "width": 0.08974000000000001,
+        "verdict": "MARGINAL"
+      }
+    },
+    "robustness_threshold_epsilon": "~0.005 (20× tighter than user stress test)",
+    "berger_berliner_product_extension": {
+      "feasible_under_independence": true,
+      "closed_form_joint_range": "[∏ (1-ε)π₀_i, ∏ ((1-ε)π₀_i + ε)]",
+      "monte_carlo_uniform_validation_95CI": "[0.030, 0.062] across D-A/D-B/D-C"
+    },
+    "prior_gap_in_source": {
+      "elicited_pi_0_specification": "ABSENT in workbench reframe doc",
+      "recommended_base_priors": {
+        "MB1_PASS": "Beta(1,9), mean=0.10, CI95=[0.003, 0.336]",
+        "MB3_given_MB1": "Beta(1,4), mean=0.20, CI95=[0.006, 0.602]",
+        "MB4_sha256_commit": "Beta(10,1), mean=0.91, CI95=[0.687, 0.997]",
+        "alternative_ignorance": "Beta(1,1) uniform — Berger-Berliner degenerate at ε=0"
+      }
+    },
+    "empirical_update_2026_05_19": {
+      "posterior_after_MB3_REFUTED": 0.01,
+      "within_epsilon_0.10_band": true,
+      "verdict": "Update is consistent with prior sensitivity band, NOT independent confirmation of robustness"
+    },
+    "robustness_dual_criterion": {
+      "user_criterion_robust_band": "[0.03, 0.05]",
+      "user_criterion_non_robust_trigger": "outside [0.01, 0.20]",
+      "per_decomposition_at_eps_0.10": {
+        "D-A_lean_hard_phys_modest": {
+          "range": "[0.0292, 0.0874]",
+          "in_robust_band_strict": false,
+          "outside_non_robust_band": false,
+          "classification": "MARGINAL"
+        },
+        "D-B_balanced": {
+          "range": "[0.0292, 0.0784]",
+          "in_robust_band_strict": false,
+          "outside_non_robust_band": false,
+          "classification": "MARGINAL"
+        },
+        "D-C_lean_very_hard": {
+          "range": "[0.0292, 0.1189]",
+          "in_robust_band_strict": false,
+          "outside_non_robust_band": false,
+          "classification": "MARGINAL"
+        }
+      },
+      "robustness_threshold_epsilon_to_enter_strict_band": {
+        "D-A": 0.02,
+        "D-B": 0.02,
+        "D-C": 0.01
+      }
+    }
+  },
+  "verdict": "P=0.04 is MARGINAL under ε=0.10 worst-case contamination (all 3 plausible factor decompositions): worst-case lower=0.029 (below 0.03 robust floor) and upper ranges [0.078, 0.119] (within the [0.01, 0.20] non-robust trigger band, so NOT classified NON_ROBUST by user's stated criterion, but failing the [0.03, 0.05] ROBUST band on BOTH sides). Robustness threshold ε ≤ ~0.02 (D-B) to ~0.01 (D-C). Numerology hazard: MODERATE — primary gap is unspecified π₀ family in source doc, not the point value itself.",
+  "open_questions": [
+    "OQ-A2S3-01: Which factor decomposition does the workbench-reframe author intend? (D-A/D-B/D-C are all 0.04-consistent.)",
+    "OQ-A2S3-02: Is ε=0.10 the correct stress-test level for an 'escape lane' subjective prior? Berger 1985 §4.7 suggests ε ∈ [0.10, 0.20] for expert elicitation; 0.10 is the lenient end.",
+    "OQ-A2S3-03: Should P(MB4) really be 1.00? sha256 commit can fail (hash collision negligible, but commit-timing-vs-comparison-order auditable). Recommend P(MB4)=0.95 floor.",
+    "OQ-A2S3-04: Are MB1 and MB3|MB1 truly independent? Form-uniqueness theorem (MB1) might constrain admissible parameter space and thus correlate with MB3 prediction quality. Independence assumption needs explicit defense."
+  ],
+  "robustness_classification": "MARGINAL — within user-defined [0.01, 0.20] non-trigger band, but outside [0.03, 0.05] robust band; ε≤0.02 needed for full robustness",
+  "follow_up": [
+    "Author should explicitly state π₀ family + hyperparameters in workbench-reframe doc.",
+    "Re-derive 0.04 from explicit factor priors, not as post-hoc product.",
+    "Add ε=0.10 sensitivity band to all future escape-lane prior statements."
+  ],
+  "findingId": "finding_prom16_meta_bayes_A2_S3_031037e5ec39",
+  "sha256_full": "031037e5ec39b7b02ff63db26f2cd191c348daa1fffc65c6a734e536e8f03a10"
+}

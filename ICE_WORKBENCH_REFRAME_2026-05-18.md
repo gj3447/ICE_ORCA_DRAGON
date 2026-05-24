@@ -70,7 +70,28 @@ f_A4_S4 dominant 권장: 모든 retreat-lift 경로 차단하되 *MIND/lean_form
 - **MB3 independent observable prediction**: Adelberger ε(r) 측 algebra-fixed parameters
 - **MB4 pre-registration**: KG `:PreRegisteredPrediction` node sha256 timestamp BEFORE Adelberger comparison
 
-P(MB1 PASS) × P(MB3|MB1) × P(MB4) ≈ 0.04 standalone — but workbench-reframe 동시 보존 → 실패해도 algebra + mythology + workbench 가치 무결. 측 sunk cost risk = 0.
+### 5.1 Posterior_prior measurement (PROM 16 grounded 2026-05-20)
+
+> **🟢 NON-NUMEROLOGY CANONICAL 2026-05-20 turn 2** — v3 ABC + KL dual gate measure 측 0.04 측 **SIGNAL_WEAK (NOT numerology)** 측 confirm. CANONICAL_DELEGATED band (사용자 trust-based delegation 2026-05-20). Reversal trigger = user explicit 정정 OR contradicting empirical finding. Single-expert circular-prior caveat 측 유지 (아래 §5.1.2).
+
+**기존 표현**: `P(MB1) × P(MB3|MB1) × P(MB4) ≈ 0.04` (single point, 2026-05-18 v1)
+
+**갱신 표현** (PROM 16 cycle `prom16-meta-bayesian-numerology-2026-05-20` 결과):
+
+- **`prior_type = INTERVAL_SENSITIVITY_SANDWICH`** (KG tag)
+- **Sandwich**: `[0.02, 0.30]`
+  - skeptic anchor (Tüchsen 2024 STAGNANT base rate): ≈ 0.02
+  - reference prior (Berger-Bernardo Jeffreys-style): ≈ 0.10–0.20
+  - champion anchor (ICE pre-retreat stance): ≈ 0.30
+- **v3 ABC + KL dual gate** (`numerology_mc_judge_v3_abc.py`, 2026-05-20 measured): factor priors Beta(1,9) MB1 × Beta(1,4) MB3|MB1 × Beta(10,1) MB4 → **P(E\|~H)=0.037, KL=1.533 bits → verdict SIGNAL_WEAK** (semi-rare AND informative). NOT numerology.
+- **Predecessor cohort baseline** (A4×S3 measured): Dixon/Furey/Manogue-Dray/Köplinger/Cawagas × 50yr = 250 program-year × 0 triggers → ABC exchangeable P≈0.01. **4× gap** vs 0.04 expert prior = calibration debt, resolves at MB1 PASS time. BF=4.48 substantial null evidence (Kass-Raftery).
+- **§5.1.2 Single-expert caveat** (A3×S3, Garthwaite-Kadane-O'Hagan 2005 §7.3): no external seed → calibration formally impossible. LLM subagents NOT independent (Cooke 1991 dependence catastrophe). 측 즉 "NUMEROLOGY 측 부재" 측 confirm 측 하지만 *STRONG SIGNAL* 측 격상 측 아님. SIGNAL_WEAK = "weak but valid prediction, not coincidence."
+- **Plan**: `plan-prom16-meta-bayes-ice-004-abc-kl-dual-gate-2026-05-20` — 7-step protocol + Step (8) meta-self-MC gate. Annual sequential ABC 2026-2031 P1-P5 window. Decision gate 2031-06-30.
+- **D2 epistemic status**: PROVISIONALLY_RATIFIED **predictive_claim** (reversal trigger = user verdict). Implies calibration required, not exempt as informed prior.
+
+### 5.2 Sunk-cost guard (unchanged)
+
+workbench-reframe 동시 보존 → 실패해도 algebra + mythology + workbench 가치 무결. sunk cost risk = 0.
 
 ---
 

@@ -1,0 +1,196 @@
+{
+  "date": "2026-05-20",
+  "origin_challenge": "challenge-naesengmoon-numerology-1lens-axis5-hidden-scan-target-category-coverage-2026-05-20",
+  "predecessor": "numerology_hidden_scan_results.json (v1, 2026-05-18)",
+  "n_primitives": 28,
+  "n_pairwise_ratios": 811,
+  "n_mc_samples": 10000,
+  "target_family_enumeration": [
+    "A_small_rational",
+    "B_transcendental",
+    "C_log_value",
+    "D_large_integer"
+  ],
+  "results": [
+    {
+      "family": "B_transcendental",
+      "candidate": "pi_over_4",
+      "target": 0.7853981633974483,
+      "tolerance": 0.01,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "\u03c0/4 \u2248 0.7854 \u2014 close to Casimir 0.75 (8% off, v1 missed)"
+    },
+    {
+      "family": "B_transcendental",
+      "candidate": "pi_over_2",
+      "target": 1.5707963267948966,
+      "tolerance": 0.02,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "\u03c0/2 \u2248 1.5708"
+    },
+    {
+      "family": "B_transcendental",
+      "candidate": "e_inv",
+      "target": 0.36787944117144233,
+      "tolerance": 0.005,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "e\u207b\u00b9 \u2248 0.3679 \u2014 close to Singh \u03b4\u00b2=3/8=0.375 (2% off)"
+    },
+    {
+      "family": "B_transcendental",
+      "candidate": "e_inv_sq",
+      "target": 0.1353352832366127,
+      "tolerance": 0.005,
+      "p_raw": 0.0017,
+      "p_corrected": 1.0,
+      "verdict": "NUMEROLOGY_CONFIRMED",
+      "note": "e\u207b\u00b2 \u2248 0.1353"
+    },
+    {
+      "family": "B_transcendental",
+      "candidate": "sqrt2_over_2",
+      "target": 0.7071067811865476,
+      "tolerance": 0.01,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "\u221a2/2 \u2248 0.7071"
+    },
+    {
+      "family": "B_transcendental",
+      "candidate": "pi_squared_over_6",
+      "target": 1.6449340668482264,
+      "tolerance": 0.02,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "\u03b6(2) = \u03c0\u00b2/6 \u2248 1.6449"
+    },
+    {
+      "family": "C_log_value",
+      "candidate": "ln_2",
+      "target": 0.6931471805599453,
+      "tolerance": 0.01,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "ln 2 \u2248 0.6931 \u2014 close to Casimir 0.75 (8% off, v1 missed)"
+    },
+    {
+      "family": "C_log_value",
+      "candidate": "ln_3",
+      "target": 1.0986122886681098,
+      "tolerance": 0.01,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "ln 3 \u2248 1.0986"
+    },
+    {
+      "family": "C_log_value",
+      "candidate": "ln_pi",
+      "target": 1.1447298858494002,
+      "tolerance": 0.01,
+      "p_raw": 0.0101,
+      "p_corrected": 1.0,
+      "verdict": "NUMEROLOGY_CONFIRMED",
+      "note": "ln \u03c0 \u2248 1.1447"
+    },
+    {
+      "family": "C_log_value",
+      "candidate": "ln_2_times_4",
+      "target": 2.772588722239781,
+      "tolerance": 0.02,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "4\u00b7ln 2 \u2248 2.7726 \u2014 claimed in N-5 session log, MC test now done"
+    },
+    {
+      "family": "D_large_integer",
+      "candidate": "fine_structure_recip_137",
+      "target": 137.036,
+      "tolerance": 0.5,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "1/\u03b1 \u2248 137.036 \u2014 fine structure reciprocal"
+    },
+    {
+      "family": "D_large_integer",
+      "candidate": "xor_105",
+      "target": 105.0,
+      "tolerance": 1.0,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "XOR invariant count 105 = 7\u00b715 (already in primitives via 105 = 7\u00b715)"
+    },
+    {
+      "family": "D_large_integer",
+      "candidate": "proton_lifetime_log_33",
+      "target": 33.0,
+      "tolerance": 0.5,
+      "p_raw": 0.0,
+      "p_corrected": 0.0,
+      "verdict": "SIGNAL_GENUINE",
+      "note": "log\u2081\u2080(\u03c4_p / yr) \u2248 33-34 (proton decay bound)"
+    },
+    {
+      "family": "A_small_rational",
+      "candidate": "three_quarters",
+      "target": 0.75,
+      "tolerance": 0.005,
+      "p_raw": 0.0174,
+      "p_corrected": 1.0,
+      "verdict": "NUMEROLOGY_CONFIRMED",
+      "note": "3/4 \u2014 Casimir 0.75 baseline"
+    },
+    {
+      "family": "A_small_rational",
+      "candidate": "two_thirds",
+      "target": 0.6666666666666666,
+      "tolerance": 0.005,
+      "p_raw": 0.0131,
+      "p_corrected": 1.0,
+      "verdict": "NUMEROLOGY_CONFIRMED",
+      "note": "2/3 \u2014 Koide Q baseline (already CONFIRMED)"
+    }
+  ],
+  "by_family_verdicts": {
+    "B_transcendental": [
+      "SIGNAL_GENUINE",
+      "SIGNAL_GENUINE",
+      "SIGNAL_GENUINE",
+      "NUMEROLOGY_CONFIRMED",
+      "SIGNAL_GENUINE",
+      "SIGNAL_GENUINE"
+    ],
+    "C_log_value": [
+      "SIGNAL_GENUINE",
+      "SIGNAL_GENUINE",
+      "NUMEROLOGY_CONFIRMED",
+      "SIGNAL_GENUINE"
+    ],
+    "D_large_integer": [
+      "SIGNAL_GENUINE",
+      "SIGNAL_GENUINE",
+      "SIGNAL_GENUINE"
+    ],
+    "A_small_rational": [
+      "NUMEROLOGY_CONFIRMED",
+      "NUMEROLOGY_CONFIRMED"
+    ]
+  },
+  "summary_counts": {
+    "SIGNAL_GENUINE": 11,
+    "SIGNAL_WEAK": 0,
+    "NUMEROLOGY_CONFIRMED": 4
+  }
+}
