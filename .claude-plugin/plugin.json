@@ -5,12 +5,12 @@
   "author": {
     "name": "SYMPOSIUM project",
     "email": "gira@airobotics.im",
-    "url": "https://github.com/gira-airobotics/symposium"
+    "url": "https://github.com/gj3447/symposium"
   },
-  "homepage": "https://github.com/gira-airobotics/symposium/tree/main/METAHUMOTONIC/ICE_ORCA_DRAGON",
+  "homepage": "https://github.com/gj3447/symposium/tree/main/METAHUMOTONIC/ICE_ORCA_DRAGON",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gira-airobotics/symposium.git",
+    "url": "https://github.com/gj3447/symposium.git",
     "directory": "METAHUMOTONIC/ICE_ORCA_DRAGON"
   },
   "license": "MIT",
