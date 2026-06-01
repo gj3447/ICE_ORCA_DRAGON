@@ -26,7 +26,7 @@
 
 | layer | verdict |
 |---|---|
-| **L1 algebra** | **PASS** (만장일치, 단 AC4 정정 후) — AC1 해소 + **AC4: 첫 audit은 stale했음** (아래 §6) |
+| **L1 algebra core** | **PASS** (만장일치, AC4 정정 후) — AC1 해소 + **AC4: 첫 audit stale** (§6). 주의: prove_s3/s5는 dual-layer — *대수 코어*만 L1, *gauge/QFT span*은 L3/STAGNANT (§6.1) |
 | **L2/L3 physics belt** | **REFUTE** — SCI-A 단락 + SCI-B oracle + SCI-D 3중 over-determined |
 | **ε epsilon** | **SIGNAL_WEAK boundary** (종착, 재실행 불요) |
 | **신화 layer** | 적용범위 밖 (USER_PRIMARY, Eilu va-Eilu, erase 0) |
@@ -79,6 +79,15 @@
 **Fix (empirically verified)**: `cd_embedding.py` `_archive→top-level` 복원 → 13 스크립트 재실행 **PASS=13 FAIL=0**. L1은 이제 *실제로* 재현가능 (복원 전엔 거짓이었음).
 
 **교훈**: (1) SCI-C verdict는 반드시 실제 실행(exit + 2-run diff)에, KG metadata 금지. (2) occam archive는 import reverse-dep mandatory(live importer>0이면 archive 금지). (3) adversarial audit에 결론 선주입 금지.
+
+### 6.1 fix 자체에 대한 2차 나생문 (사용자 "나생문!" 2026-06-01)
+
+> fix를 다시 적대검증 → CONDITIONAL_APPROVED. VR `vr-sci-naesengmoon-cdembed-fix-2026-06-01`. 복원은 옳았으나 결함 2 + SCI-C 완결.
+
+- **SCI-C 완결**: 13/13 스크립트 재실행 → committed `*_results.json`과 **0 diff (bit-identical)**. exit=0뿐 아니라 출력 correct까지 확인 (reproducible-but-wrong 아님). json 미작성 스크립트는 exit=0만이 증거 (minor caveat). `finding-cdembed-fix-scic-resolved-2026-06-01`.
+- **중복 정정**: 복원이 `cp`라 `_archive/variants/cd_embedding.py` 동일-sha twin 생성(occam 재위반) → **삭제 완료** (top-level이 정본, regression 없음). + cd_embedding.py SourceCodeNode 신설(occam/longinus 가시화). `challenge-cdembed-cp-duplicate-occam-reviolation-2026-06-01`.
+- **L1/L3 라벨 정정 (mislabel)**: 본 §6의 "L1 증명 복원" framing은 over-claim이었음. KG span 조회 결과 **prove_s1/s2/s3/s5/s7은 `SPAN_ICE_L3_*`** (gauge/QFT = L3 STAGNANT belt). 단 reframe은 이미 fiber로 분리: **prove_s3/s5는 dual-layer 스크립트** — *대수 코어 출력*(Jacobi=6·assoc, BV bounded)은 **L1/PROGRESSIVE**, *gauge/QFT span 출력*(CCWZ/BRST/A∞/WW-evasion)은 **L3/STAGNANT**. 복원은 양쪽 다 살리지만, "whole-script = L1" 라벨은 틀림 → STAGNANT 물리를 PROGRESSIVE로 세탁 금지. `challenge-cdembed-L1-mislabel-resurrect-L3-physics-2026-06-01`.
+- **잔여(별도)**: `:AptSpan.sourcePath`가 `METAHUMOTONIC/` 누락 = pre-existing Longinus path drift, 본 fix와 무관. 별도 re-bind.
 
 ---
 
