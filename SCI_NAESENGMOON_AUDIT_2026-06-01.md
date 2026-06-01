@@ -26,7 +26,7 @@
 
 | layer | verdict |
 |---|---|
-| **L1 algebra** | **PASS** (만장일치) — AC1 해소 (아래) |
+| **L1 algebra** | **PASS** (만장일치, 단 AC4 정정 후) — AC1 해소 + **AC4: 첫 audit은 stale했음** (아래 §6) |
 | **L2/L3 physics belt** | **REFUTE** — SCI-A 단락 + SCI-B oracle + SCI-D 3중 over-determined |
 | **ε epsilon** | **SIGNAL_WEAK boundary** (종착, 재실행 불요) |
 | **신화 layer** | 적용범위 밖 (USER_PRIMARY, Eilu va-Eilu, erase 0) |
@@ -62,4 +62,24 @@
 
 ---
 
-*KG 영속: `vr-sci-naesengmoon-ice-2026-06-01` (4 USED_LENS + RAISED_CHALLENGE ×3, AC1 RESOLVED). HAS_VALIDATION → ICE_WORKBENCH_REFRAME_2026-05-18.*
+---
+
+## 6. AC4 정정 — 첫 audit이 놓친 진짜 문제 (사용자 epistemic challenge 2026-06-01)
+
+> 사용자 challenge: "나생문이 ICE 문제 못 잡았냐?" → **맞음.** 첫 audit은 reframe를 재확인만 했고 새 결함을 못 잡았다.
+
+**실측으로 드러난 진짜 결함** (`challenge-ice-L1-proofs-nonexecutable-cd_embedding-2026-06-01`, HIGH, CONFIRMED_DEFECT):
+
+- L1 증명 스크립트 **13개**(prove_s1/s2/s3/s5/s7 + prove_higgs_ZD + queue_01/02/03/08/09/10/11)가 현재 `ModuleNotFoundError: cd_embedding`으로 **실행 불가**.
+- 원인: `cd_embedding.py`(13 importers의 live 공유 의존성)가 commit `930abbb` (PROM16-OQ7 default heuristic)로 `_archive/variants/`로 **over-archive**됨. occam이 variants 존재를 보고 base를 superseded로 오판, reverse-dep 미확인.
+- 즉 **"L1 PROGRESSIVE/CONFIRMED/재현가능" verdict는 stale** — 그 결론을 만든 증명들이 실행조차 안 됐다.
+
+**왜 첫 audit이 놓쳤나**: SCI-C(재현성)에 PASS를 줬으나 *실제로 스크립트를 안 돌리고* KG "CONFIRMED" 메타데이터만 읽음 = **reproducibility theater** (SCI-C가 경고하는 바로 그 함정을 SCI-C가 범함). + parent가 critic에 결론을 미리 먹여 confirmation-primed. (`lesson-sci-naesengmoon-scic-theater-self-violation-2026-06-01`)
+
+**Fix (empirically verified)**: `cd_embedding.py` `_archive→top-level` 복원 → 13 스크립트 재실행 **PASS=13 FAIL=0**. L1은 이제 *실제로* 재현가능 (복원 전엔 거짓이었음).
+
+**교훈**: (1) SCI-C verdict는 반드시 실제 실행(exit + 2-run diff)에, KG metadata 금지. (2) occam archive는 import reverse-dep mandatory(live importer>0이면 archive 금지). (3) adversarial audit에 결론 선주입 금지.
+
+---
+
+*KG 영속: `vr-sci-naesengmoon-ice-2026-06-01` (4 USED_LENS + RAISED_CHALLENGE ×4: AC1 RESOLVED / AC2 OPEN / AC3 avoided / **AC4 CONFIRMED_DEFECT→fixed**). Lesson `lesson-sci-naesengmoon-scic-theater-self-violation-2026-06-01`. HAS_VALIDATION → ICE_WORKBENCH_REFRAME_2026-05-18.*
