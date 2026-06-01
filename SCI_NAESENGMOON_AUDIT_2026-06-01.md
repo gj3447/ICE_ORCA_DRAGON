@@ -87,7 +87,7 @@
 - **SCI-C 완결**: 13/13 스크립트 재실행 → committed `*_results.json`과 **0 diff (bit-identical)**. exit=0뿐 아니라 출력 correct까지 확인 (reproducible-but-wrong 아님). json 미작성 스크립트는 exit=0만이 증거 (minor caveat). `finding-cdembed-fix-scic-resolved-2026-06-01`.
 - **중복 정정**: 복원이 `cp`라 `_archive/variants/cd_embedding.py` 동일-sha twin 생성(occam 재위반) → **삭제 완료** (top-level이 정본, regression 없음). + cd_embedding.py SourceCodeNode 신설(occam/longinus 가시화). `challenge-cdembed-cp-duplicate-occam-reviolation-2026-06-01`.
 - **L1/L3 라벨 정정 (mislabel)**: 본 §6의 "L1 증명 복원" framing은 over-claim이었음. KG span 조회 결과 **prove_s1/s2/s3/s5/s7은 `SPAN_ICE_L3_*`** (gauge/QFT = L3 STAGNANT belt). 단 reframe은 이미 fiber로 분리: **prove_s3/s5는 dual-layer 스크립트** — *대수 코어 출력*(Jacobi=6·assoc, BV bounded)은 **L1/PROGRESSIVE**, *gauge/QFT span 출력*(CCWZ/BRST/A∞/WW-evasion)은 **L3/STAGNANT**. 복원은 양쪽 다 살리지만, "whole-script = L1" 라벨은 틀림 → STAGNANT 물리를 PROGRESSIVE로 세탁 금지. `challenge-cdembed-L1-mislabel-resurrect-L3-physics-2026-06-01`.
-- **잔여(별도)**: `:AptSpan.sourcePath`가 `METAHUMOTONIC/` 누락 = pre-existing Longinus path drift, 본 fix와 무관. 별도 re-bind.
+- **Longinus path drift (RESOLVED 2026-06-01)**: 7개 `:AptSpan`(prove_s1/s2/s3/s5×3/s7)의 `sourcePath`가 `/SYMPOSIUM/ICE_ORCA_DRAGON/`로 `METAHUMOTONIC/` 누락 = 모노레포 마이그레이션 잔재 (top-level은 빈 stub dir, 실파일은 METAHUMOTONIC/ICE_ORCA_DRAGON/). 7/7 re-bind 완료 (`METAHUMOTONIC/` 보정 + last_validated 갱신), stale 0 검증.
 
 ---
 
