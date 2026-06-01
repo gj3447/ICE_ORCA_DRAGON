@@ -18,7 +18,7 @@
 | P02 →SU(3) color dim(3) | ✓ | NUMEROLOGY | | **NUMEROLOGY (DEAD)** |
 | P02 →lepton/quark charge ratio | ✓ | NUMEROLOGY | | **NUMEROLOGY (DEAD)** |
 | P15 s₃ alt-subgroup→spin½ | ✓ | NUMEROLOGY | | **NUMEROLOGY (DEAD)** |
-| ε Adelberger screening | — | **SIGNAL_WEAK** (null pass 0.238) | E4(<0.01)✗ | **유일 ember — WEAK, signal 아님** |
+| ε Adelberger screening | — | SIGNAL_WEAK (band artifact) | D5✗ 비변별; MB1 sorry | **ember도 꺼짐 — 미증명 conjecture contingent, escape-lane 양분기 0 (§deep-dive)** |
 | sin²θ_W=3/8 | — | 미MC | integer-ratio class | **UNTESTED (presumptive numerology)** |
 | Cabibbo √(1/20) | — | 미MC | integer-ratio class | **UNTESTED (presumptive numerology)** |
 | CP phase arctan(7/3) | — | 미MC | integer-ratio class | **UNTESTED (presumptive numerology)** |
@@ -32,7 +32,21 @@
 
 **ICE 물리 belt(L2/L3)에서 E1-E5 5조건을 통과하는 claim = 0개.** 사전등록(E1) 통과분조차 look-elsewhere(E4)에서 전멸. TOE의 본체("자유파라미터 0으로 SM 유도")는 통계적으로 **부활 근거 없음**.
 
-**유일한 ember = ε (Adelberger screening), SIGNAL_WEAK.** 단 null pass_rate 0.238 = 우연히 통과할 확률 1/4라 약함. ε이 ember에서 signal로 가려면: E1(prereg 고정) + E3(N 정직 집계) + E5(메커니즘) + **P를 0.238→<0.01로** 밀어야 함. 이게 ICE 물리가 부활하려면 채워야 할 *유일하게 남은* 구체적 숙제.
+**유일한 ember = ε (Adelberger screening) — 그러나 full 파이프라인 적용 시 ember도 꺼진다 (deep-dive 2026-06-01).**
+
+### ε deep-dive (수비학 나생문 G1-G5 + D1-D5 + escape-lane)
+
+1. **SIGNAL_WEAK은 band artifact.** mc_epsilon 자체 interpretation: "wide-prior null에서 random power-law의 23.8%가 Adelberger 통과 → 'Adelberger 통과'는 ICE ε의 **증거가 아님**, 충분히 작으면 거의 다 통과하는 permissive screening." (D5 mechanism / 변별력 결여)
+2. **ε의 진짜 탈출로 = MB1 form-uniqueness 정리** (Adelberger 통과 아님). ε 형태가 ICE로 *유일하게 강제*돼야 free param이 사라지고 sharp 예측이 됨.
+3. **MB1 = 미증명 (실측).** `MIND/lean_formalization/sedenion_uniqueness/SedenionPhase3_FormUniqueness.lean:127` `form_uniqueness_conjecture` = **`sorry`** (lean 컴파일 "uses sorry", 2026-06-01 실측). 주변 23 theorem은 sorry-free이나 *핵심 conjecture는 deferred*.
+4. **escape-lane 딜레마 (양쪽 다 0).** `escape_lane_closed_if_unique_form_rejected` 형식화:
+   - 유일성 **증명** ∧ 유일 형태 ∈ refuted set → **CLOSED → 0**
+   - 유일성 **반증** (복수 형태) → privileged 예측 없음 → 구조적 **CLOSED → 0**
+   - 생존 = "증명 ∧ 유일 형태 ∉ refuted" 좁은 분기뿐. standalone prior **P ≈ 0.04**.
+
+**ε verdict**: 수비학은 아니나(D5 비변별), signal도 아님. **미증명 conjecture(sorry)에 contingent, 가장 그럴듯한 두 분기 모두 0으로 닫힘.** 사실상 life-support — L1 Aut(𝕊) 미증명과 같은 구조(real claim, unproven uniqueness theorem).
+
+→ ICE 물리 부활의 *유일하게 남은* 구체적 숙제 = **MB1 `form_uniqueness_conjecture` sorry 해소** (Mathlib functional analysis + n_eff). 그것도 P≈0.04 + 좁은 비-refuted 분기 조건.
 
 ## 책 덮기
 
