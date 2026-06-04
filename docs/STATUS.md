@@ -3,6 +3,8 @@
 > Classification ledger, Lakatos verdicts, Bayesian posteriors, known limitations.
 > Quick overview: [`../README.md`](../README.md). Script walk-through: [`USERGUIDE.md`](USERGUIDE.md).
 
+> ⚠️ **2026-06-05 reframe reconciliation**: the "Current State" / "Classification Ledger" / "Lakatos Evaluation" tables below **predate the 2026-05-18 workbench reframe** and read in the old physics-programme frame. The CANONICAL verdict is the **bifurcated** one (see the Position Statement §below + `../ICE_WORKBENCH_REFRAME_2026-05-18.md`): **L1 algebra = PROGRESSIVE / L2-L3 physics belt = DEGENERATING-STAGNANT (Tüchsen 2024), 0 SIGNAL_GENUINE** per `../L2L3_NUMEROLOGY_LEDGER_2026-06-01.md`. Where a table below says "progressive" without a layer, read it as **L1-only**; physics-referent "confirmations" (e.g. *42 ZD as Higgs candidates*) are demoted to **NUMEROLOGY (DEAD)**.
+
 ---
 
 ## Current State
@@ -17,7 +19,7 @@
 | Classification ledger | See [the ledger below](#classification-ledger) |
 | Verdict distribution | 6 CONFIRMED / 4 CONFIRMATION_LOCAL / 3 REFUTED / 2 NUMEROLOGY_CONFIRMED / 2 METHOD_ARTIFACT / 1 NUMEROLOGY_HOLD / 1 INCONCLUSIVE (+1 MC judge meta=RESOLVED) |
 | Numerology MC judge | `numerology_mc_judge.py` → `numerology_mc_results.json` (P(E\|~H) computed under explicit null models, 2026-05-17) |
-| Lakatos overall verdict | **progressive** (11 confirmation > 3 refutation + 2 numerology + 1 inconclusive; novel predictions present, look-elsewhere effects quantified) |
+| Lakatos overall verdict | **BIFURCATED** (canonical, 2026-05-18 reframe): **L1 algebra = PROGRESSIVE** / **L2-L3 physics belt = DEGENERATING-STAGNANT** (Tüchsen 2024 EJPS third category). Physics belt: **0 SIGNAL_GENUINE** (10 NUMEROLOGY + 1 WEAK ember ε) per `../L2L3_NUMEROLOGY_LEDGER_2026-06-01.md`. The old blanket "progressive (11 conf > 3 ref)" is pre-reframe and superseded — see `lesson-prom16-hypercomplex-program-bifurcated-verdict-2026-05-18`. |
 
 ---
 
@@ -150,7 +152,7 @@ KG node `UEQFT_ICE_CLUE_ANALYSIS_2026_02_07` (clue_C_honest field) explicitly re
 | Queue series | **mixed** | queue_01 progressive (42 orbit) but queue_02 refutation (custodial fail) |
 | Misc verification | **pending** | mp/mW Fitting Detection unresolved |
 
-**Overall**: progressive — confirmations + discoveries outweigh refutations + numerology, *and* the program produces novel predictions (e.g., 42 ZD as Higgs candidates) rather than only re-explaining.
+**Overall** (canonical, post-2026-05-18 reframe): **BIFURCATED**. The *L1 algebra core* is PROGRESSIVE (S₃ Jacobi, S₅ BV, Der(S)=g₂, XOR invariant — genuine structural results). The *L2/L3 physics-prediction belt* is DEGENERATING/STAGNANT (Tüchsen 2024). The "42 ZD as Higgs candidates" is **no longer a progressive novel prediction** — it is NUMEROLOGY (DEAD, p_corr=1.0, 2026-06-01 ledger). Applying a single blanket "confirmations outweigh refutations" Lakatos status to a program that is progressive on the algebra axis and degenerating on the physics axis is drift (`lesson-prom16-hypercomplex-program-bifurcated-verdict-2026-05-18`).
 
 ---
 
@@ -174,19 +176,19 @@ Numerology gate: `P(E|~H) > 0.5` ⇒ automatic `:NUMEROLOGY_HOLD` regardless of 
 
 ## KG Canon
 
-ICE_ORCA_DRAGON canon nodes (recommended):
+ICE_ORCA_DRAGON KG nodes. **⚠️ Reconciled 2026-06-05**: the table that lived here previously listed *aspirational/recommended* node names that were **never materialized** — exact-name queries return **0 rows** (verified by cypher). The rows below are the ACTUAL canonical nodes in Neo4j as of 2026-06-05:
 
-| Node | Type | Role |
+| Node (real) | Type | Role |
 |------|------|------|
-| `ICE_ORCA_DRAGON_apostle_2_physics_workbench` | `:Workbench` | Top-level workbench |
-| `science-feedback-loop-canonical-ice` | `:FeedbackLoopOntology` | Loop definition |
-| `Contract_derive_mass_ratios` | `:Contract` | status=REFUTED (self) |
-| `Contract_42_ZD_Higgs_doublet` | `:Contract` | status=CONFIRMED (external Lygeros 2006) |
-| `Contract_DerS_eq_g2` | `:Contract` | status=CONFIRMED_LOCAL (numeric only, no peer review) |
-| `Contract_custodial_naive_embedding` | `:Contract` | status=REFUTED (queue_02) |
-| `Possibility_Koide_Q_two_thirds` | `:Possibility` | status=NUMEROLOGY_HOLD |
-| `Possibility_mp_mW_3_256` | `:Possibility` | status=NUMEROLOGY_HOLD (Fitting Detection pending) |
-| `Verdict_mass_ratios_2026_self_refutation` | `:Verdict` | linked to Contract_derive_mass_ratios |
+| `ice-workbench-reframe-canonical-2026-05-18` | `:CanonicalReframe` | Canonical position — ICE = HypercomplexHypothesisTestbench |
+| `numerology-verdict-ice-L2L3-2026-06-01` | `:ValidationResult` | L2/L3 belt = 0 SIGNAL_GENUINE / 10 NUMEROLOGY / 1 WEAK (ε) |
+| `vr-sci-naesengmoon-ice-2026-06-01` | `:ValidationResult` | Scientific-naesengmoon audit, status=SPLIT_VERDICT |
+| `escape-lane-MB1-MB3-MB4-synthesis-2026-05-19` | `:EscapeLaneVerdict` | MB1 escape lane (structurally closed by enumeration 2026-06-05) |
+| `CONTRACT: Der(S) = g2 (dim=14)` | `:Contract` | L1 algebra, VERIFIED (conf 1.0; was non-executable until 2026-06-01 cd_embedding fix) |
+| `Koide Q = 2/3` / `Koide Q = 2/3 (Z₃ 대칭)` | `:Claim` / `:ICEClaim` | L2 physics, NUMEROLOGY (p_corr→1.0) |
+| `oq8-derive_mass_ratios_ICE-FAIL_HARD-2026-05-18` | `:ScriptVerdict` | mass-ratio self-refutation, FAIL_HARD |
+
+> The 7 names previously listed here (`Contract_42_ZD_Higgs_doublet`, `Contract_DerS_eq_g2`, `Possibility_Koide_Q_two_thirds`, `Possibility_mp_mW_3_256`, `Contract_custodial_naive_embedding`, `Contract_derive_mass_ratios`, `Verdict_mass_ratios_2026_self_refutation`) **do not exist in Neo4j** — recommended schema, never created. Enumerate live nodes with `MATCH (n) WHERE n.name CONTAINS 'ice-' OR n.name CONTAINS 'ICE' RETURN n.name`.
 
 KG source: dgx worker MongoDB + Neo4j + Redis (see `CLAUDE.md` → `reference_kg_infra_topology.md`).
 

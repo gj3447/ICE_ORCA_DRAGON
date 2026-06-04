@@ -8,12 +8,12 @@
 [![Python Scripts](https://img.shields.io/badge/Python_Scripts-47-3776ab?style=for-the-badge&logo=python&logoColor=white)](#path-a--python-script-direct-execution)
 [![JSON Results](https://img.shields.io/badge/JSON_Results-22-f59e0b?style=for-the-badge&logoColor=white)](docs/STATUS.md)
 [![Science Feedback Loop](https://img.shields.io/badge/Science_Feedback_Loop-skill-10b981?style=for-the-badge&logoColor=white)](.claude/skills/science-feedback-loop.md)
-[![Lakatos](https://img.shields.io/badge/Lakatos-progressive_%2F_degenerating-8b5cf6?style=for-the-badge&logoColor=white)](docs/STATUS.md#lakatos-evaluation)
+[![Lakatos](https://img.shields.io/badge/Lakatos-L1_progressive_·_L2%2FL3_stagnant-8b5cf6?style=for-the-badge&logoColor=white)](docs/STATUS.md#lakatos-evaluation)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](../../LICENSE)
 
 </div>
 
-> **ICE_ORCA_DRAGON** is the **hypercomplex hypothesis testbench** of SYMPOSIUM apostle #2 — 60+ Python scripts and JSON results that compute Cayley-Dickson algebra breaking (32D vs 64D), sedenion (16D) analysis, Der(S)=g₂ verification, Higgs ZD doublet candidates, S₁~S₇ structural proofs, and orbit/custodial/rep-decomposition scans. Computation results feed a *science feedback loop* that classifies each output as confirmation / refutation / discovery / numerology and updates the KG through Lakatos progressive-vs-degenerating evaluation.
+> **ICE_ORCA_DRAGON** is the **hypercomplex hypothesis testbench** of SYMPOSIUM apostle #2 — 60+ Python scripts and JSON results that compute Cayley-Dickson algebra breaking (32D vs 64D), sedenion (16D) analysis, Der(S)=g₂ verification, Higgs ZD doublet candidates, S₁~S₇ structural proofs, and orbit/custodial/rep-decomposition scans. Computation results feed a *science feedback loop* that classifies each output as confirmation / refutation / discovery / numerology and updates the KG through a **bifurcated** Lakatos evaluation (L1 algebra = progressive / L2-L3 physics = stagnant, Tüchsen 2024 third category — see the 3-layer disclosure below).
 
 ### 2026-05-18 Workbench Reframe (3-Layer Disclosure mandatory)
 
