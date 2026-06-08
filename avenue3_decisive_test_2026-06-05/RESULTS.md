@@ -39,6 +39,8 @@
 
 - **~0.3% TOE band 유지** (약한 하락 — escape lane 1개 닫힘). step change 아님.
 - Avenue 3 = **사후 라벨링으로 확정·closed**. 재오픈 조건: J₃(𝕆)가 안 주는 *새 연속 관측량*(혼합각/texture-zero/결합비)이 MC look-elsewhere 통과 시에만. "셋"을 재유도하는 건 PASS로 분장 불가.
+- **인접 경로도 이미 닫힌 sub-case (PROM16 A4 정정 2026-06-08, 별개 미개척 아님)**: (a) Gresnigt H-overlap(공유 quaternion {e0,e4,e8,e12}) 경로 = 본서 prereg line 33에서 기계산 = F1(counting-then-labeling) + octonion-permuting ρ∈G₂=F4(wrong-S3 hand-assignment). KG `KR_GRESNIGT_S3_THREE_GENERATIONS`는 "proven"이나 forced 연속 flavor=0 (REFINED_BY → 본 verdict). (b) G₂-coset CP-phase 경로 = G₂ rank 2, SU(2)×U(1) embedding은 *선택*이라 위상 미강제(Q3). ∴ 둘 다 재오픈 후보 아님.
+- **Singh δ_CP 귀속 정정 (PROM16 A4)**: ICE canon의 Singh 값은 **δ²=3/8** (POSTDICTION, NUMEROLOGY_CONFIRMED, OQ4)이지 δ_CP=±π/2 아님. ±π/2(최대 CP위반)는 별개 PMNS 문헌값 — oracle 모니터링 시 출처 분리. 리서치 셀이 제안한 "Furey 5-checkpoint gate"는 canon에 부재(FUREY_CxO_PROGRAMME_SCAFFOLD는 28 primitive·4×4 axis·15 prediction만, case-study PROM 미실행) → 게이트로 미채택.
 - 워크벤치 reframe의 단일 Lean-4 escape lane (P2 ZD filtration, P=0.04)은 이 결과에 영향 없음 (별개).
 - 신화 layer(사도 #2)는 USER_PRIMARY, 손 안 댐 — 이 판정은 물리-변별 layer만.
 

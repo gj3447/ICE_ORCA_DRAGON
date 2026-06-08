@@ -19,14 +19,14 @@
 | P02 →lepton/quark charge ratio | ✓ | NUMEROLOGY | | **NUMEROLOGY (DEAD)** |
 | P15 s₃ alt-subgroup→spin½ | ✓ | NUMEROLOGY | | **NUMEROLOGY (DEAD)** |
 | ε Adelberger screening | — | SIGNAL_WEAK (band artifact) | D5✗ 비변별; MB1 sorry | **ember도 꺼짐 — 미증명 conjecture contingent, escape-lane 양분기 0 (§deep-dive)** |
-| sin²θ_W=3/8 | — | 미MC | integer-ratio class | **UNTESTED (presumptive numerology)** |
-| Cabibbo √(1/20) | — | 미MC | integer-ratio class | **UNTESTED (presumptive numerology)** |
-| CP phase arctan(7/3) | — | 미MC | integer-ratio class | **UNTESTED (presumptive numerology)** |
+| sin²θ_W=3/8 | ✓ ice_prereg_check 2026-05-18 | p_corr=0.811 | look-elsewhere kill (측정 0.231과 62% 괴리=SU5 재발견) | **NUMEROLOGY_CONFIRMED** (stale 'untested' 정정 2026-06-08 PROM16 A2; KG `numerology-weinberg-angle-confirmed-2026-05-18`) |
+| Cabibbo √(1/20) | ✓ ice_prereg_check 2026-05-18 | p_corr=1.0 | look-elsewhere kill | **NUMEROLOGY_CONFIRMED** (stale 'untested' 정정 2026-06-08 PROM16 A2; KG `numerology-cabibbo-angle-confirmed-2026-05-18`) |
+| CP phase arctan(7/3) | — | 미MC | integer-ratio class | **UNTESTED (presumptive numerology)** — 유일 진짜 미테스트. avenue3 warning(이미 numerology class에 새 null 짓기 = manufacturing-a-number) 적용 → 강제 MC 보류, OPEN_DEFERRED |
 
 ## 집계
 
-- 테스트된 claim 11개 (MC 4 + prereg-match 7): **SIGNAL_GENUINE = 0**, SIGNAL_WEAK = 1(ε), NUMEROLOGY = 10.
-- 미테스트 3개 (sin²θ_W / Cabibbo / CP): 동일 integer-ratio 클래스라 presumptive numerology이나 **MC 미실행 = 정직하게 untested** (silent cap 금지).
+- 테스트된 claim 13개 (MC 4 + prereg-match 7 + 2026-05-18 mixing-angle 2): **SIGNAL_GENUINE = 0**, SIGNAL_WEAK = 1(ε), NUMEROLOGY = 12.
+- 미테스트 **1개** (CP phase arctan(7/3)만). sin²θ_W·Cabibbo는 2026-05-18 ice_prereg_check.py로 이미 NUMEROLOGY_CONFIRMED (위 stale 'untested' 라벨 2026-06-08 정정, PROM16 A2 adversarial). CP phase는 avenue3 FAIL_F5 후 "이미 numerology class에 정교한 null 신설 = manufacturing-a-number category error" 경고 적용 → 강제 MC 보류 OPEN_DEFERRED (silent cap 아님, 정직 라벨).
 
 ## 정의적 결론
 
