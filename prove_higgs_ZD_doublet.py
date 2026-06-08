@@ -347,7 +347,7 @@ if __name__ == "__main__":
         "n_higgs_candidates": len(higgs_candidates),
         "higgs_candidate_pairs": [(c["i"], c["j"]) for c in higgs_candidates]
     }
-    with open("/Users/lagyeongjun/CD/AGENT/prove_higgs_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "prove_higgs_results.json", "w") as f:
         json.dump(save_obj, f, indent=2, default=str)
     print()
     print(f"Results → prove_higgs_results.json")

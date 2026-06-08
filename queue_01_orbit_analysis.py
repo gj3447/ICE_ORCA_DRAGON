@@ -174,7 +174,7 @@ if __name__ == "__main__":
         print(f"     orbit 크기: {sorted([len(o) for o in orbits], reverse=True)}")
 
     import json
-    with open("/Users/lagyeongjun/CD/AGENT/queue_01_orbit_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "queue_01_orbit_results.json", "w") as f:
         json.dump({
             "n_orbits": n_orbits,
             "orbit_sizes": sorted([len(o) for o in orbits], reverse=True),

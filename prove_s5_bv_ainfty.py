@@ -434,7 +434,7 @@ if __name__ == "__main__":
         key = [k for k in res.keys() if k.endswith("_verdict")][0]
         print(f"\n{step}: {res[key]}")
 
-    with open("/Users/lagyeongjun/CD/AGENT/prove_s5_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "prove_s5_results.json", "w") as f:
         # handle non-serializable
         def default(o):
             if isinstance(o, (np.float64, np.float32)):

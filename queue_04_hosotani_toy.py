@@ -141,7 +141,7 @@ if __name__ == "__main__":
     print("  토이 결과는 mechanism 가능성 입증, 정량 결과 아님.")
 
     import json
-    with open("/Users/lagyeongjun/CD/AGENT/queue_04_hosotani_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "queue_04_hosotani_results.json", "w") as f:
         json.dump({
             "case1_symmetric": {"V0": float(V0), "Vpi": float(Vpi)},
             "case2_ssb": {"V0": float(V0b), "Vpi": float(Vpib)},

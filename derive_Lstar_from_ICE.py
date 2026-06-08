@@ -249,6 +249,6 @@ if __name__ == "__main__":
         "next_step": "Find ICE-specific principle that selects N (or equivalent)"
     }
 
-    with open("/Users/lagyeongjun/CD/AGENT/derive_Lstar_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "derive_Lstar_results.json", "w") as f:
         json.dump(results, f, indent=2, default=str)
     print(f"\nResults → derive_Lstar_results.json")

@@ -307,6 +307,6 @@ if __name__ == "__main__":
         "verdict": "ICE cannot genuinely derive mass ratios from internal structure",
         "recommendation": "Pivot to dimensionless structural quantities OR lattice simulation"
     }
-    with open("/Users/lagyeongjun/CD/AGENT/derive_mass_ratios_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "derive_mass_ratios_results.json", "w") as f:
         json.dump(results, f, indent=2, default=str)
     print(f"\nResults → derive_mass_ratios_results.json")

@@ -326,6 +326,6 @@ if __name__ == "__main__":
         print(f"\n{step}: {res.get(f'{step.replace(chr(46), chr(95)).lower()}_verdict', res.get(list(res.keys())[-1]))}")
 
     import json
-    with open("/Users/lagyeongjun/CD/AGENT/prove_s3_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "prove_s3_results.json", "w") as f:
         json.dump(results, f, indent=2, default=str)
     print(f"\nResults saved to: prove_s3_results.json")

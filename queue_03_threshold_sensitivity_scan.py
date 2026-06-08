@@ -322,7 +322,7 @@ if __name__ == "__main__":
         ]
     }
 
-    with open("/Users/lagyeongjun/CD/AGENT/queue_03_threshold_sensitivity_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "queue_03_threshold_sensitivity_results.json", "w") as f:
         json.dump(output_json, f, indent=2, default=str)
 
     print(f"\nResults → queue_03_threshold_sensitivity_results.json")

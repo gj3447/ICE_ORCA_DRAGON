@@ -311,6 +311,6 @@ if __name__ == "__main__":
         "no_match": no_match,
         "verdict": "Postdictions/fitting, no genuine prediction yet"
     }
-    with open("/Users/lagyeongjun/CD/AGENT/derive_dimensionless_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "derive_dimensionless_results.json", "w") as f:
         json.dump(results, f, indent=2, default=str)
     print(f"\nResults → derive_dimensionless_results.json")

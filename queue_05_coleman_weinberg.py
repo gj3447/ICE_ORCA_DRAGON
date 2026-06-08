@@ -126,7 +126,7 @@ if __name__ == "__main__":
         print(f"    φ={p:.2f}: V={V:.4e}")
 
     import json
-    with open("/Users/lagyeongjun/CD/AGENT/queue_05_cw_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "queue_05_cw_results.json", "w") as f:
         json.dump(results, f, indent=2, default=str)
     print()
     print("=" * 60)

@@ -137,7 +137,7 @@ if __name__ == "__main__":
     print("  • 현재 LHC 검출 한계 근처일 수 있음")
 
     import json
-    with open("/Users/lagyeongjun/CD/AGENT/queue_06_coop_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "queue_06_coop_results.json", "w") as f:
         json.dump({
             "symmetric_case": {"active_count": int(np.sum(np.abs(w) > 0.1))},
             "gamma_critical": float(gamma_critical) if gamma_critical else None,

@@ -149,7 +149,7 @@ if __name__ == "__main__":
     print("    - 7 orbits = 7 different 'charge' values")
 
     import json
-    with open("/Users/lagyeongjun/CD/AGENT/queue_11_xor_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "queue_11_xor_results.json", "w") as f:
         json.dump({
             "all_42_pairs_xor": all_xors,
             "unique_xor_across_orbits": unique_xor_values,

@@ -196,7 +196,7 @@ if __name__ == "__main__":
     print(f"  unique sums: {dict(sum_counts)}")
 
     import json
-    with open("/Users/lagyeongjun/CD/AGENT/queue_10_group6_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "queue_10_group6_results.json", "w") as f:
         json.dump({
             "orbit_1_patterns": {k: str(v) for k, v in patterns.items()},
             "z6_test": z6_result,

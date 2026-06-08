@@ -360,6 +360,6 @@ if __name__ == "__main__":
         "layer5_flags": flags,
         "taliban_verdict": verdict
     }
-    with open("/Users/lagyeongjun/CD/AGENT/verify_mp_mW_results.json", "w") as f:
+    with open(__import__("pathlib").Path(__file__).resolve().parent / "verify_mp_mW_results.json", "w") as f:
         json.dump(results, f, indent=2, default=str)
     print(f"Results → verify_mp_mW_results.json")
