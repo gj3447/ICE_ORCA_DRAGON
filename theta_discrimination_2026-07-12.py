@@ -2,6 +2,12 @@
 """Wilmot-Theta discrimination analysis: enumerate canonical 3-forms on Im(S)=R^15
 and measure sigma/Psi/G2/random residuals for each. Reuses the CD machinery from
 aut_s3_direct_product_test.py.  Two CD sign conventions tested.
+
+NOTE (2026-07-12): the forms below (phi_V octonion-sector, phi_W, phi_VW) are
+CONSTRUCTED G2-invariant PROBES for illustration — they are NOT Wilmot's actual
+calibration. Wilmot's real Θ = eq-9 (35 quaternion terms), tested authoritatively
+in wilmot_theta_preservation_test.py, which found eq-9 Θ = Alt(SYMPOSIUM structure
+constants) exactly ⇒ sigma,Psi preserve it (strong). See WILMOT_3FORM_CRITERION_TEST_2026-07-12.md.
 """
 import numpy as np
 np.set_printoptions(precision=4, suppress=True)
