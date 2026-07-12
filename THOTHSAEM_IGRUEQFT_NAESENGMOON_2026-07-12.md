@@ -54,4 +54,27 @@
 
 **정책**: ESCALATE 하나면 통상 앙상블을 지배하나, 여기선 oracle 질문이 self-answering(NO)이라 ESCALATE가 **FAIL로 붕괴** — 컴파일러 돌릴 필요도 없이 답이 나옴. **FAIL = 시도지 입증 아님. live research 방향으로 OPEN 유지, "repairs" 주장은 canonical 격상 금지.**
 
-# KG: vr-naesengmoon-igrueqft-locality-fix-2026-07-12, ig-rueqft-reformulation-2026-07-12 (fix_claim_status=ATTEMPTED_NOT_DEMONSTRATED)
+---
+
+## 오라클 승격 — 판단렌즈 → 실측 (2026-07-12)
+
+formal-cathedral의 `ESCALATE_TO_ORACLE`(판단 논증으로 PASS 불가, 컴파일러/계산이 때려야)를 **실제로 계산**해 discharge. `igrueqft_locality_falsifier_2026-07-12/` (sha256 4810f241, 재현 2× byte-identical).
+
+**모델**: 2D 자유페르미온 사각격자 64×64(torus), Fermi sea(filling 0.485), 영역 A=L×L. Peschel 상관행렬법으로 `S_A=Σ H2(ν_k)` exact + U(1) 전하 dephasing(=게이지 群평균, Casini-Huerta-Rosabal/Donnelly-Wall): `S_A ≤ S_inv ≤ S_A + H(P_A)`, `H(P_A)`=A의 전하 N_A(Poisson-binomial) Shannon 엔트로피.
+
+**결정 지표**: bulk 국소밀도 ℒ_ent(x) ⇒ `S ∝ 부피 L²`(extensive). 비국소 area-law ⇒ `S ∝ 경계 ~ L·lnL`. → `S/부피`가 상수로 가면 국소(주장 PASS), 0으로 가면 비국소(주장 FAIL).
+
+| L | S_A | H_charge | S_A/부피 | S_inv/부피(상한) | S_A/(L·lnL) |
+|---|---|---|---|---|---|
+| 4 | 5.53 | 1.71 | 0.345 | 0.452 | 0.997 |
+| 8 | 14.29 | 2.17 | 0.223 | 0.257 | 0.859 |
+| 12 | 24.32 | 2.43 | 0.169 | 0.186 | 0.816 |
+| 16 | 35.14 | 2.62 | 0.137 | **0.147** | 0.792 |
+
+**판정: NON_LOCAL area-law PRESERVED.** `S_inv/부피 = 0.452 → 0.147` 단조 **→0** (상수 아님) ⇒ S_inv은 부피비례 아님 ⇒ **bulk 국소밀도 아님**. `S_A/(L·lnL)`는 ~0.79로 plateau ⇒ `S_A ~ c·L·lnL`(log-enhanced area law, Gioev-Klich/Widom) = 경계지지 = 비국소. 게이지 群평균 추가분 `H_charge`도 sub-volume(1.7→2.6). → **群평균은 국소화하지 못한다. area law 그대로 보존.**
+
+∴ 나생문의 load-bearing 물리 주장이 **exact 계산으로 확증** = judgment verdict가 oracle-attested로 승격. ESCALATE가 열린 채가 아니라 실측 NO로 닫힘.
+
+*범위 정직*: 이건 *구체 자유이론 모델*에서 "群평균이 area-law를 보존"을 실증한 것(나생문 핵심 물리). IG-RUEQFT 전체 구성의 일반 반증은 아님(그건 실제 IG 구성의 L_matter를 요함) — 단, 그 L_matter가 국소밀도가 되려면 정확히 이 area-law를 깨야 하는데, 자유극한에서 안 깨짐을 보였다.
+
+# KG: vr-naesengmoon-igrueqft-locality-fix-2026-07-12 (verdict=FAIL, oracle_confirmed), ig-rueqft-reformulation-2026-07-12 (fix_claim_status=ATTEMPTED_NOT_DEMONSTRATED), igrueqft-locality-oracle-falsifier-2026-07-12

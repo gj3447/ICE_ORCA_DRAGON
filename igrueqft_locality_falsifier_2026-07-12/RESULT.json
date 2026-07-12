@@ -1,0 +1,90 @@
+{
+  "lattice_N": 64,
+  "filling": 0.484619140625,
+  "rows": [
+    {
+      "L": 4,
+      "volume_L2": 16,
+      "S_A": 5.526530442332511,
+      "H_charge": 1.7046758912515279,
+      "S_inv_lower(=S_A)": 5.526530442332511,
+      "S_inv_upper(=S_A+H)": 7.231206333584039,
+      "S_A_over_volume": 0.34540815264578195,
+      "S_inv_upper_over_volume": 0.45195039584900243,
+      "S_A_over_LlnL": 0.9966372578093754
+    },
+    {
+      "L": 6,
+      "volume_L2": 36,
+      "S_A": 9.695844142474652,
+      "H_charge": 1.9796918489453175,
+      "S_inv_lower(=S_A)": 9.695844142474652,
+      "S_inv_upper(=S_A+H)": 11.67553599141997,
+      "S_A_over_volume": 0.2693290039576292,
+      "S_inv_upper_over_volume": 0.3243204442061103,
+      "S_A_over_LlnL": 0.9018922748832947
+    },
+    {
+      "L": 8,
+      "volume_L2": 64,
+      "S_A": 14.286417875080542,
+      "H_charge": 2.1705650393676432,
+      "S_inv_lower(=S_A)": 14.286417875080542,
+      "S_inv_upper(=S_A+H)": 16.456982914448183,
+      "S_A_over_volume": 0.22322527929813346,
+      "S_inv_upper_over_volume": 0.25714035803825286,
+      "S_A_over_LlnL": 0.8587893425185892
+    },
+    {
+      "L": 10,
+      "volume_L2": 100,
+      "S_A": 19.18496136114369,
+      "H_charge": 2.3162422773706726,
+      "S_inv_lower(=S_A)": 19.18496136114369,
+      "S_inv_upper(=S_A+H)": 21.50120363851436,
+      "S_A_over_volume": 0.19184961361143688,
+      "S_inv_upper_over_volume": 0.21501203638514363,
+      "S_A_over_LlnL": 0.8331922854671802
+    },
+    {
+      "L": 12,
+      "volume_L2": 144,
+      "S_A": 24.322447616576447,
+      "H_charge": 2.433730110530311,
+      "S_inv_lower(=S_A)": 24.322447616576447,
+      "S_inv_upper(=S_A+H)": 26.75617772710676,
+      "S_A_over_volume": 0.16890588622622532,
+      "S_inv_upper_over_volume": 0.18580678977157472,
+      "S_A_over_LlnL": 0.8156727476614166
+    },
+    {
+      "L": 14,
+      "volume_L2": 196,
+      "S_A": 29.651438775975837,
+      "H_charge": 2.531964793689482,
+      "S_inv_lower(=S_A)": 29.651438775975837,
+      "S_inv_upper(=S_A+H)": 32.183403569665316,
+      "S_A_over_volume": 0.1512828508978359,
+      "S_inv_upper_over_volume": 0.1642010386207414,
+      "S_A_over_LlnL": 0.8025441087626827
+    },
+    {
+      "L": 16,
+      "volume_L2": 256,
+      "S_A": 35.1366672373575,
+      "H_charge": 2.6162154800988233,
+      "S_inv_lower(=S_A)": 35.1366672373575,
+      "S_inv_upper(=S_A+H)": 37.75288271745632,
+      "S_A_over_volume": 0.13725260639592773,
+      "S_inv_upper_over_volume": 0.14747219811506376,
+      "S_A_over_LlnL": 0.792054618385959
+    }
+  ],
+  "decisive": {
+    "S_inv_upper_over_volume_trend": "0.4520 (L=4) -> 0.1475 (L=16)",
+    "decreasing_toward_zero": true,
+    "S_A_over_LlnL_plateau": "0.9019 -> 0.7921 (area-law coeff ~stable)",
+    "verdict": "NON_LOCAL area-law PRESERVED (S/volume\u21920, S~L\u00b7lnL) \u2014 group-averaging does NOT localize; IG-RUEQFT locality-fix claim FAILS at the oracle level, confirming the naesengmoon judgment verdict."
+  },
+  "script_sha256": "4810f241c178f076d290212cfd9bbbb4d28d5acc942af8cf43e99f9151028a29"
+}
