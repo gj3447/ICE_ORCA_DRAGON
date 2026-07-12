@@ -1,5 +1,12 @@
 # OQ1 — Aut(𝕊) Brown 1967 vs Wilmot 2025 :CompetingVerdict 양립
 
+> ⚠️ **정정 2026-07-12 (primary source 검증)**: 아래 "Verdict B — Wilmot 2025 G₂ only"는 **오귀속**이다.
+> arXiv:2512.07210**v2** 자체 pdftotext 검증 결과 Wilmot은 **`G₂×S₃ ⊂ Aut(S)`를 확언**하고(Thm 5 `Aut(S)=Φ_S⋊S₃`),
+> Brown의 σ,Ψ를 *genuine weak automorphism*으로 분류한다. "Aut=G₂ only"는 **Schafer 1954**의 strong-only 판독.
+> 실제 분쟁은 *정의 차이*(strong=Θ-고정=G₂ vs 모든 대수 자기동형=G₂×S₃)이며 Wilmot 논문이 strong/weak로 화해시킨다.
+> 실측(σ,Ψ가 Wilmot eq-9 Θ 보존, eq-9 Θ = SYMPOSIUM 구조상수 반대칭부와 정확 일치) →
+> `WILMOT_3FORM_CRITERION_TEST_2026-07-12.md`. "Wilmot REFUTED"는 available outcome 아님.
+
 **User verdict 2026-05-19**: option (c) `:CompetingVerdict` 양립. machloket Eilu va-Eilu 원칙 따라 두 정전 모두 KG 보존, downstream 작업 측 conditional branch.
 
 ## 1. Two competing canons

@@ -6,10 +6,18 @@ Brown 1967 (Pacific J. Math. 20:415) asserts Aut(S) = G_2 x S_3 with S_3 generat
           Psi(e_k)     = -e_k/2 + (sqrt(3)/2) e_{k+8}
           Psi(e_{k+8}) = -(sqrt(3)/2) e_k - e_{k+8}/2
 
-Wilmot 2025 (arXiv:2512.07210) DISPUTES this -- claims Brown's Psi breaks the
-canonical 3-form Theta on Im(S), concluding Aut(S) = G_2 only.
+Wilmot 2025 (arXiv:2512.07210 v2). CORRECTION 2026-07-12 (primary source verified):
+Wilmot does NOT conclude "Aut(S)=G_2 only" -- that is SCHAFER 1954's strong-only
+reading. Wilmot AFFIRMS G_2 x S_3 subset Aut(S) (Thm 5: Aut(S)=Phi_S rtimes S_3) and
+classifies Brown's sigma,Psi as genuine WEAK automorphisms (preserve multiplication
+but map the specific signed calibration Theta to another primary). This script's
+Gate 1 (below) confirms Brown's MULTIPLICATION criterion; the Theta-criterion was
+tested separately in wilmot_theta_preservation_test.py (2026-07-12): Wilmot's eq-9
+Theta = Alt(SYMPOSIUM structure constants) exactly, so sigma,Psi preserve it (strong
+under this convention). The "Wilmot claim REFUTED" wording in the verdict strings
+below is superseded -- Brown and Wilmot are reconciled by the strong/weak distinction.
 
-This script settles the dispute under the cd_embedding.py multiplication convention:
+This script settles the MULTIPLICATION criterion under the cd_embedding.py convention:
 
   Gate 1: M-preservation  -- sigma and Psi each must satisfy
           M(e_i * e_j) = M(e_i) * M(e_j) for all 256 (i,j) entries

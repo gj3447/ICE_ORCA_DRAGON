@@ -1,0 +1,70 @@
+{
+  "test": "wilmot_theta_preservation_test",
+  "date": "2026-07-12",
+  "frontier": "lakatotree ice-orca-dragon / q_aut_full_proof",
+  "prereg_thresholds": {
+    "preserve": 1e-09,
+    "break": 0.01
+  },
+  "conventions": [
+    {
+      "convention": "A_baez",
+      "sanity": {
+        "der_dim": 14,
+        "sigma_auto_res": 0.0,
+        "psi_auto_res": 1.1102230246251565e-16
+      },
+      "sign_alignment_THETA_vs_A": {
+        "best_scale_s": 1.0,
+        "residual_after_scale": 0.0,
+        "same_primary": true,
+        "n_terms_theta": 210,
+        "n_terms_A": 210,
+        "sign_agreement_on_shared_support": 1.0,
+        "support_identical": true
+      },
+      "theta_eq9_residual": {
+        "sigma": 0.0,
+        "psi": 2.7755575615628914e-17,
+        "G2_positive_control": 8.326672684688674e-17,
+        "random_O15_discrimination": 0.25571811532237926
+      },
+      "A_own_calibration_residual (tautology guard)": {
+        "sigma": 0.0,
+        "psi": 2.220446049250313e-16,
+        "random_O15": 1.5343086919342754
+      }
+    },
+    {
+      "convention": "B_opposite",
+      "sanity": {
+        "der_dim": 14,
+        "sigma_auto_res": 0.0,
+        "psi_auto_res": 1.1102230246251565e-16
+      },
+      "sign_alignment_THETA_vs_A": {
+        "best_scale_s": -1.0,
+        "residual_after_scale": 0.0,
+        "same_primary": true,
+        "n_terms_theta": 210,
+        "n_terms_A": 210,
+        "sign_agreement_on_shared_support": 1.0,
+        "support_identical": true
+      },
+      "theta_eq9_residual": {
+        "sigma": 0.0,
+        "psi": 2.7755575615628914e-17,
+        "G2_positive_control": 1.1102230246251565e-16,
+        "random_O15_discrimination": 0.25571811532237926
+      },
+      "A_own_calibration_residual (tautology guard)": {
+        "sigma": 0.0,
+        "psi": 2.220446049250313e-16,
+        "random_O15": 1.5343086919342754
+      }
+    }
+  ],
+  "branch": "A_same_primary",
+  "interpretation": "BRANCH A: Wilmot eq-9 Θ == SYMPOSIUM's own Alt structure constants (same primary). σ,Ψ preserve Θ BY THEOREM; the Θ->Θ' weak-automorphism break is cross-primary, invisible under one convention. OQ1 stays OPEN (sharpened). No canon closure.",
+  "script_sha256": "90eafef960148bb15a6aab284f75ceac37f312358ce3d606f9427e34b2249dce"
+}
