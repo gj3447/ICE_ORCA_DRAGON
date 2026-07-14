@@ -16,7 +16,7 @@ The proposed protocol consists of eight pre-registered steps culminating in a cr
 
 I believe the paper is suitable for *Synthese* because:
 1. It contributes a novel methodological tool to philosophy of physics, generalizing across a class of programmes (hypercomplex, Clifford, exceptional Lie — Furey, Gillard-Gresnigt, Trayling-Baylis, Lisi, Catto, Connes-Marcolli);
-2. It bridges philosophy of science (Lakatos lineage, Tüchsen 2024 Stagnant class, Mayo severe testing) with statistical methodology (Bonferroni, Holm, BH-FDR, MC null modeling);
+2. It bridges philosophy of science (Lakatos lineage, Branahl 2025 Stagnant class, Mayo severe testing) with statistical methodology (Bonferroni, Holm, BH-FDR, MC null modeling);
 3. It places the foundational discipline of pre-registration (Nosek et al. 2018, Chambers 2013) in dialogue with the algebra-based physics community for the first time.
 
 The manuscript is approximately 5,800 words (excluding references and appendices), with 27 references and 2 appendices (28-primitive list of ICE; 20 PDG frozen observable set). All Python code, sha256 commit log, and raw results JSONs are openly available; the protocol is *fully reproducible*.

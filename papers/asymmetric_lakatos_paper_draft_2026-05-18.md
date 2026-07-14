@@ -1,7 +1,7 @@
 # Asymmetric Lakatos Verdict via Fiber-Stratified Functor Evaluation
 
 > **Draft 0.2** | revised **2026-05-19** | originally written 2026-05-18 (autoloop iter 1-15 batch 2, Task #6)
-> **Status**: SUBMISSION_READY (pending author metadata + final proofread)
+> **Status**: PROOF_PENDING / NOT_SUBMISSION_READY (quarantined 2026-07-14) — the main theorem `asymmetric_lakatos_verdict_consistent` is an unproved Lean `sorry` (executable skeleton only), and the two ICE witnesses are `axiom … : True` placeholders; do **not** claim formal machine-verification of the main result. Bibliography corrected 2026-07-14 (Johannes Branahl 2025, not the earlier fabricated "Tüchsen 2024" attribution). Awaiting user ratification of wording before any external submission.
 > **Target venues** (priority order): *European Journal for Philosophy of Science* (EJPS) / *Synthese* / *Studies in History and Philosophy of Modern Physics* / *Journal of Philosophical Logic* / *British Journal for the Philosophy of Science*
 > **Companion**: Lean 4 sister project `MIND/lean_formalization/lakatos_stagnant/` — `LakatosTrichotomy.lean` (`stagnant_implies_not_degenerating` sorry-free as of 2026-05-18; full sprint 12-24 weeks)
 > **Cross-references**:
@@ -30,9 +30,9 @@
 
 ## Abstract
 
-Lakatos's (1970) trichotomy of *research programmes* into progressive and degenerating classes has been recently extended by Tüchsen (2024) with a third *stagnant* class — programmes whose protective belt augmentations produce neither novel confirmed predictions nor genuine ad-hoc patches. We argue that any such classification, applied to programmes whose protective belt admits a *disjoint sub-belt decomposition* `PB = ⨆ᵢ PB_i`, must be **fiber-stratified**: the colim-evaluation of the prediction- and confirmation-functors `Pred, Conf : Lak → Set` restricted to each sub-belt `Lak_i` can yield mutually different Lakatos verdicts. We formalize this in category theory (objects = `(HC, PB)` pairs, morphisms = belt augmentations) and prove that a programme-wide verdict `V : LakChain → {Progressive, Degenerating, Stagnant}` is *ill-defined* without sub-belt stratification. The cycle-novel theorem (*Asymmetric Lakatos Verdict*) admits a concrete empirical witness in the *hypercomplex physics programme* ICE_ORCA_DRAGON, where the algebra sub-fiber is Progressive (Brown 1967 `Aut(𝕊) = G₂ × S₃`, Moreno 1998 `Z(𝕊) ≅ G₂`, Reggiani 2024 `ZD(𝕊) ≅ V₂(ℝ⁷)`) while the physics-prediction sub-fiber is Stagnant (sha256-committed pre-registered prediction set with 0/15 SIGNAL_GENUINE under Bonferroni look-elsewhere correction). The paper closes by suggesting fiber-stratified verdicts as the default in any programme whose theoretical scaffold admits a non-trivial axis decomposition.
+Lakatos's (1970) trichotomy of *research programmes* into progressive and degenerating classes has been recently extended by Branahl (2025) with a third *stagnant* class — programmes whose protective belt augmentations produce neither novel confirmed predictions nor genuine ad-hoc patches. We argue that any such classification, applied to programmes whose protective belt admits a *disjoint sub-belt decomposition* `PB = ⨆ᵢ PB_i`, must be **fiber-stratified**: the colim-evaluation of the prediction- and confirmation-functors `Pred, Conf : Lak → Set` restricted to each sub-belt `Lak_i` can yield mutually different Lakatos verdicts. We formalize this in category theory (objects = `(HC, PB)` pairs, morphisms = belt augmentations) and prove that a programme-wide verdict `V : LakChain → {Progressive, Degenerating, Stagnant}` is *ill-defined* without sub-belt stratification. The cycle-novel theorem (*Asymmetric Lakatos Verdict*) admits a concrete empirical witness in the *hypercomplex physics programme* ICE_ORCA_DRAGON, where the algebra sub-fiber is Progressive (Brown 1967 `Aut(𝕊) = G₂ × S₃`, Moreno 1998 `Z(𝕊) ≅ G₂`, Reggiani 2024 `ZD(𝕊) ≅ V₂(ℝ⁷)`) while the physics-prediction sub-fiber is Stagnant (sha256-committed pre-registered prediction set with 0/15 SIGNAL_GENUINE under Bonferroni look-elsewhere correction). The paper closes by suggesting fiber-stratified verdicts as the default in any programme whose theoretical scaffold admits a non-trivial axis decomposition.
 
-**Keywords**: Lakatos research programmes, fiber stratification, category theory, hypercomplex algebra, pre-registered prediction protocol, Tüchsen stagnant.
+**Keywords**: Lakatos research programmes, fiber stratification, category theory, hypercomplex algebra, pre-registered prediction protocol, Branahl stagnant.
 
 ---
 
@@ -42,9 +42,9 @@ Lakatos's (1970) trichotomy of *research programmes* into progressive and degene
 
 Lakatos (1970) framed scientific theories not as isolated propositions but as *research programmes* `R = (HC, PB)`, where the *hard core* `HC` is protected by methodological decision from refutation, and the *protective belt* `PB` is the set of auxiliary hypotheses that absorb empirical pressure. A programme's verdict is determined by whether its belt augmentations are *progressive* (produce novel confirmed predictions) or *degenerating* (only produce ad-hoc patches).
 
-### 1.2 Tüchsen 2024 third category
+### 1.2 Branahl 2025 third category
 
-Tüchsen (2024) [EJPS, arXiv:2404.18307] introduces a *stagnant* third class: programmes whose belt augmentations yield neither novel predictions nor genuine ad-hoc patches — the belt is essentially frozen, neither growing nor expanding empirical content.
+Branahl (2025) [EJPS 15, article 53; DOI 10.1007/s13194-025-00677-x; preprint arXiv:2404.18307] introduces a *stagnant* third class: programmes whose belt augmentations yield neither novel predictions nor genuine ad-hoc patches — the belt is essentially frozen, neither growing nor expanding empirical content.
 
 ### 1.3 The stratification problem
 
@@ -259,7 +259,7 @@ The ICE_ORCA_DRAGON empirical witness provides the first sha256-committed pre-re
 - Mayo, D. (1996). *Error and the Growth of Experimental Knowledge*. University of Chicago Press.
 - Musgrave, A. (1976). "Method or Madness?" In Cohen, Feyerabend, & Wartofsky (eds.), *Essays in Memory of Imre Lakatos*. Reidel.
 - Popper, K. R. (1959). *The Logic of Scientific Discovery*. Hutchinson.
-- Tüchsen, R. (2024). "Beyond Progressive and Degenerating: A Third Lakatosian Verdict Class." *European Journal for Philosophy of Science*, arXiv:2404.18307.
+- Branahl, J. (2025). "Stagnant Lakatosian research programmes." *European Journal for Philosophy of Science* 15, article 53. DOI: 10.1007/s13194-025-00677-x (published 9 Oct 2025; preprint arXiv:2404.18307, 2024).
 - Worrall, J. (1989). "Structural Realism: The Best of Both Worlds?" *Dialectica* 43: 99-124.
 
 ### Algebra (hypercomplex / sedenion lineage)
