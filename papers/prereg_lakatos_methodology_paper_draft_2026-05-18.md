@@ -1,7 +1,7 @@
 # Pre-Registered Lakatos Rigorous Test for Algebra-Based Physics Programmes — A Methodology Paper
 
 > **Draft 0.2** | revised **2026-05-19** | originally written 2026-05-18 (autoloop iter 16-25 batch 2, Task #7)
-> **Status**: SUBMISSION_READY (pending author metadata + final proofread)
+> **Status**: NOT_SUBMISSION_READY (quarantined 2026-07-14) — bibliography corrected 2026-07-14 (Johannes Branahl 2025, not the earlier fabricated "Tüchsen 2024" attribution); shares the submission-readiness gate with the companion asymmetric-Lakatos paper whose main theorem is an unproved Lean `sorry`. Awaiting user ratification before any external submission.
 > **Target venues** (priority order): *Synthese* / *Philosophy of Science* / *Studies in History and Philosophy of Modern Physics* / *European Journal for Philosophy of Science*
 > **Companion**: tooling implementation in Python (`ice_prereg_predictions.py`, `ice_prereg_check.py`, `numerology_hidden_scan.py`, `numerology_registry_expansion_results.json`) with sha256-committed pre-registration log
 > **Cross-references**:
@@ -138,7 +138,7 @@ If predicted target has no observable match within tolerance: **STRUCTURAL_INCAP
 
 ICE algebra primitives generate small integers (2, 3, 6, 7, 14) that *trivially* match generic SM quantum number assignments. The Bonferroni correction (n_trials=300) eliminates these as chance matches. No genuine novel prediction survives.
 
-This is the *strongest* form of Lakatos rigorous test applicable: pre-committed, frozen-set, MC-null, look-elsewhere-corrected. The result is unambiguous: ICE_ORCA_DRAGON physics-prediction layer is **Stagnant** in the Tüchsen (2024) sense.
+This is the *strongest* form of Lakatos rigorous test applicable: pre-committed, frozen-set, MC-null, look-elsewhere-corrected. The result is unambiguous: ICE_ORCA_DRAGON physics-prediction layer is **Stagnant** in the Branahl (2025) sense.
 
 ---
 
@@ -218,7 +218,7 @@ We recommend adoption of this protocol as the *default* test for any future hype
 - Mayo, D. (1996). *Error and the Growth of Experimental Knowledge*. University of Chicago Press.
 - Mayo, D., & Spanos, A. (2006). "Severe Testing as a Basic Concept in a Neyman-Pearson Philosophy of Induction." *British Journal for the Philosophy of Science* 57: 323-357.
 - Popper, K. R. (1959). *The Logic of Scientific Discovery*. Hutchinson.
-- Tüchsen, R. (2024). "Beyond Progressive and Degenerating: A Third Lakatosian Verdict Class." *European Journal for Philosophy of Science*, arXiv:2404.18307.
+- Branahl, J. (2025). "Stagnant Lakatosian research programmes." *European Journal for Philosophy of Science* 15, article 53. DOI: 10.1007/s13194-025-00677-x (published 9 Oct 2025; preprint arXiv:2404.18307, 2024).
 - Worrall, J. (2002). "What evidence in evidence-based medicine?" *Philosophy of Science* 69: S316-S330.
 
 ### Pre-registration and reproducibility

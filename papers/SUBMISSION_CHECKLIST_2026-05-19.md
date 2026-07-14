@@ -72,7 +72,7 @@ cd papers && pdflatex asymmetric_lakatos.tex && bibtex asymmetric_lakatos && pdf
 1. **Register ORCID** (free, 5 min) — https://orcid.org/register
 2. **Read both cover letters** + accept author info / make corrections
 3. **Choose order**: which paper to submit first?
-   - Recommended: submit asymmetric Lakatos to EJPS first (Tüchsen 2024 precedent makes EJPS the natural home)
+   - Recommended: submit asymmetric Lakatos to EJPS first (Branahl 2025 precedent makes EJPS the natural home)
    - 2-3 weeks later: submit prereg methodology to Synthese (allow time to cite reviewer feedback if any)
    - Simultaneously: arXiv / PhilSci-Archive both papers
 4. **Register Editorial Manager accounts** (free, 5 min each) for EJPS + Synthese
