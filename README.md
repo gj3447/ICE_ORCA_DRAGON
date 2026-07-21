@@ -9,7 +9,7 @@
 [![JSON Results](https://img.shields.io/badge/JSON_Results-22-f59e0b?style=for-the-badge&logoColor=white)](docs/STATUS.md)
 [![Science Feedback Loop](https://img.shields.io/badge/Science_Feedback_Loop-skill-10b981?style=for-the-badge&logoColor=white)](.claude/skills/science-feedback-loop.md)
 [![Lakatos](https://img.shields.io/badge/Lakatos-L1_progressive_·_L2%2FL3_stagnant-8b5cf6?style=for-the-badge&logoColor=white)](docs/STATUS.md#lakatos-evaluation)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](../../LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL_v3-yellow?style=for-the-badge)](../../LICENSE)
 
 </div>
 
