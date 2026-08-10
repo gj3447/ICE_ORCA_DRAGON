@@ -1,0 +1,133 @@
+{
+  "findingId": "C2_associator_distribution_2026-07-24",
+  "stage": "S_c2",
+  "timestamp": "2026-07-23T18:19:58.105363+00:00",
+  "script_sha256": "13aea57bc053eaab7c80e2ca3a75f89ad85d45f77729cf1ee8234acdcaa47e5c",
+  "script_path": "/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/claimB_loop/claimB_associator_distribution.py",
+  "protocol": "LOOP_PROTOCOL.md",
+  "prereg": "prereg_claimB_loop_20260724.json",
+  "levels": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "M": 10000,
+  "seed": 42,
+  "verdict": "KILL-C_reconfiguration",
+  "verdict_reason": "KS > 0.05 for 2+ consecutive levels at 5-6",
+  "reproducibility": {
+    "run2_verdict": "KILL-C_reconfiguration",
+    "byte_identical": true,
+    "mismatches": []
+  },
+  "layer_disclosure": {
+    "L1_algebra": "Cayley-Dickson associator norm ratio r(x,y,z)",
+    "L2_L3_physics": "NO physics prediction claimed. Avenue3 barrier intact.",
+    "mythology": "USER_PRIMARY ICE_ORCA_DRAGON canon #2"
+  },
+  "avenue3_caveat": "Even if PROGRESSIVE: CD doubling forces discrete integers {2,3,7,14} only. No continuous observable emergence mechanism connects any algebraic invariant to gravitational observables. This caveat is MANDATORY per ICE_WORKBENCH_REFRAME_2026-05-18 \u00a73.",
+  "metrics_per_level": {
+    "4": {
+      "level": 4,
+      "dim": 16,
+      "M": 10000,
+      "seed": 42,
+      "mean_r": 1.3127273964294677,
+      "median_r": 1.3022381673696124,
+      "std_r": 0.28438318219410164,
+      "max_r": 2.5606268563591885,
+      "min_r": 0.4113694324221704,
+      "q05_r": 0.8644996033911388,
+      "q95_r": 1.7953846987467477,
+      "flexibility_defect_max": 4.1314106709611766e-16,
+      "power_assoc_defect_max": 4.0053709487069576e-16,
+      "flexibility_defect_mean": 1.9546368466446918e-16,
+      "power_assoc_defect_mean": 1.6862907818616217e-16
+    },
+    "5": {
+      "level": 5,
+      "dim": 32,
+      "M": 10000,
+      "seed": 42,
+      "mean_r": 1.3765010813365515,
+      "median_r": 1.3618522194487408,
+      "std_r": 0.22167804574891745,
+      "max_r": 2.57027437778794,
+      "min_r": 0.7099104987371659,
+      "q05_r": 1.0338793952955774,
+      "q95_r": 1.7598795721471283,
+      "flexibility_defect_max": 4.032327312544114e-16,
+      "power_assoc_defect_max": 4.695882751734315e-16,
+      "flexibility_defect_mean": 2.1510333893189207e-16,
+      "power_assoc_defect_mean": 1.9616279279242678e-16
+    },
+    "6": {
+      "level": 6,
+      "dim": 64,
+      "M": 10000,
+      "seed": 42,
+      "mean_r": 1.397065077739737,
+      "median_r": 1.3843363826334487,
+      "std_r": 0.16995974711682538,
+      "max_r": 2.600357123388871,
+      "min_r": 0.8883169464921786,
+      "q05_r": 1.1430755386723277,
+      "q95_r": 1.69282197908468,
+      "flexibility_defect_max": 4.0050704144016233e-16,
+      "power_assoc_defect_max": 3.458575021073988e-16,
+      "flexibility_defect_mean": 2.317270777064843e-16,
+      "power_assoc_defect_mean": 2.2048720007959826e-16
+    },
+    "7": {
+      "level": 7,
+      "dim": 128,
+      "M": 10000,
+      "seed": 42,
+      "mean_r": 1.408108620968683,
+      "median_r": 1.4020826510195616,
+      "std_r": 0.12496931916758007,
+      "max_r": 2.051328865172142,
+      "min_r": 0.986287010117248,
+      "q05_r": 1.2151087215282508,
+      "q95_r": 1.622400843956926,
+      "flexibility_defect_max": 3.530151618047114e-16,
+      "power_assoc_defect_max": 3.592742056822285e-16,
+      "flexibility_defect_mean": 2.464796723187299e-16,
+      "power_assoc_defect_mean": 2.4126312433734947e-16
+    }
+  },
+  "ks_statistics": {
+    "4_to_5": {
+      "ks_statistic": 0.1484,
+      "p_value": 2.036682897308411e-96,
+      "n1": 4,
+      "n2": 5
+    },
+    "5_to_6": {
+      "ks_statistic": 0.10719999999999999,
+      "p_value": 1.9910433863701831e-50,
+      "n1": 5,
+      "n2": 6
+    },
+    "6_to_7": {
+      "ks_statistic": 0.1036,
+      "p_value": 4.0455550895732605e-47,
+      "n1": 6,
+      "n2": 7
+    }
+  },
+  "mean_r_relative_changes": {
+    "4_to_5": 0.048581057331890866,
+    "5_to_6": 0.014939324554121272,
+    "6_to_7": 0.007904816607980014
+  },
+  "thresholds_applied": {
+    "saturation_relative_change": 0.05,
+    "saturation_min_r": 0.01,
+    "growth_relative_increase": 0.2,
+    "collapse_relative_decrease": 0.5,
+    "collapse_absolute_r": 1e-06,
+    "ks_reconfiguration": 0.05
+  }
+}

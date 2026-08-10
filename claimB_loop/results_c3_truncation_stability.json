@@ -1,0 +1,88 @@
+{
+  "findingId": "C3_truncation_stability_2026-07-24",
+  "stage": "S_c3",
+  "script_sha256": "4b909089afd8e1fbd50d50c9498a00d4ab36bb1f5689e1a5f39831dd58601395",
+  "script_path": "/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/claimB_loop/claimB_truncation_stability.py",
+  "protocol": "LOOP_PROTOCOL.md",
+  "prereg": "prereg_claimB_loop_20260724.json",
+  "levels": [
+    5,
+    6,
+    7
+  ],
+  "prediction_family": {
+    "components": [
+      "mean_r",
+      "mode_nullity",
+      "zd_density"
+    ],
+    "P_5": {
+      "mean_r": 1.3765010813365515,
+      "mode_nullity": 0,
+      "zd_density": 0.632258064516129
+    },
+    "P_6": {
+      "mean_r": 1.397065077739737,
+      "mode_nullity": 0,
+      "zd_density": 0.7772657450076805
+    },
+    "P_7": {
+      "mean_r": 1.408108620968683,
+      "mode_nullity": 0,
+      "zd_density": 0.8676415448068991
+    }
+  },
+  "thresholds_applied": {
+    "cauchy_decreasing": "|P_7 - P_6| < |P_6 - P_5| for all components",
+    "absolute_tolerance": 0.1,
+    "relative_tolerance": 0.2
+  },
+  "verdict": "DRIFTING",
+  "verdict_reason": "DRIFTING: NOT cauchy-decreasing; relative>=0.20.",
+  "verdict_details": {
+    "cauchy_ok": false,
+    "abs_ok": true,
+    "rel_ok": false,
+    "diffs_5_to_6": {
+      "mean_r": 0.020563996403185625,
+      "mode_nullity": 0,
+      "zd_density": 0.14500768049155155
+    },
+    "diffs_6_to_7": {
+      "mean_r": 0.011043543228945962,
+      "mode_nullity": 0,
+      "zd_density": 0.09037579979921861
+    },
+    "abs_6_to_7": {
+      "mean_r": 0.011043543228945962,
+      "mode_nullity": 0,
+      "zd_density": 0.09037579979921861
+    },
+    "rel_details": {
+      "mean_r": {
+        "relative_change": 0.007904816607980014,
+        "guard_triggered": false
+      },
+      "mode_nullity": {
+        "relative_change": null,
+        "guard_triggered": true
+      },
+      "zd_density": {
+        "relative_change": 0.11627400329899469,
+        "guard_triggered": false
+      }
+    }
+  },
+  "layer_disclosure": {
+    "L1_algebra": "Cayley-Dickson prediction-family P_n = {mean_r, mode_nullity, zd_density}",
+    "L2_L3_physics": "NO physics prediction claimed. Avenue3 barrier intact.",
+    "mythology": "USER_PRIMARY ICE_ORCA_DRAGON canon #2"
+  },
+  "avenue3_caveat": "Even if PROGRESSIVE: CD doubling forces discrete integers {2,3,7,14} only. No continuous observable emergence mechanism connects any algebraic invariant to gravitational observables. This caveat is MANDATORY per ICE_WORKBENCH_REFRAME_2026-05-18 §3.",
+  "timestamp": "2026-07-23T18:38:54.664980+00:00",
+  "reproducibility": {
+    "run2_verdict": "DRIFTING",
+    "byte_identical": true,
+    "mismatches": []
+  }
+}

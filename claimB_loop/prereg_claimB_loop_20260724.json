@@ -1,0 +1,92 @@
+{
+  "preregistrationId": "claimB_loop_20260724",
+  "timestamp": "2026-07-24T02:57:34+09:00",
+  "protocolVersion": "1.0",
+  "protocolReference": "LOOP_PROTOCOL.md",
+  "specSource": "../CLAIMB_COMPUTATIONAL_FRONTIER_DESIGN_2026-07-21.md",
+  "constraintSources": [
+    "../ICE_WORKBENCH_REFRAME_2026-05-18.md",
+    "3-layer disclosure (L1 Algebra / L2-L3 Physics-prediction / Mythology)",
+    "MB4 sha256 pre-registration: thresholds committed BEFORE computation",
+    "Absolute rule: no post-hoc fitting (results recorded as-is even if they contradict thresholds)"
+  ],
+  "computations": {
+    "C1_zd_nullity_spectrum": {
+      "description": "Simple ZD pair nullity distribution convergence across levels",
+      "levels": [6, 7],
+      "rationale_for_levels": "Spec \u00a74 proposes n=6,7(,8). n=8 SVD(256x256) x 32385 pairs is dense-hours; conservative cutoff at n=7 keeps runtime under minutes. OEIS A167654 already closes ZD-count, leaving ONLY distribution shape as open signal.",
+      "metrics": {
+        "nullity_distribution": "p_n(k) = count_n(k) / C(2^n - 1, 2), where count_n(k) = number of simple-ZD pairs with nullity=k",
+        "tv_distance": "TV(p_n, p_{n-1}) = 0.5 * sum_k |p_n(k) - p_{n-1}(k)|, embedded to common support by zero-padding missing k values"
+      },
+      "thresholds": {
+        "convergence_tv_max": 0.05,
+        "progressive": "TV(p_6, p_5) < 0.05 AND TV(p_7, p_6) < TV(p_6, p_5) AND mode_nullity / 2^n relative change < 0.10 across n=6,7",
+        "kill": "TV(p_7, p_6) >= TV(p_6, p_5) OR TV(p_7, p_6) > 0.05 OR mode_nullity / 2^n changes by > 0.20 across n=6,7"
+      },
+      "rationale_for_thresholds": "TV<0.05 is the explicit example given in spec \u00a74 as convergence threshold. We commit to it strictly. Mode-shape stability is measured by normalized mode nullity (most frequent nullity divided by dimension) to avoid scale-dependence. 10% bound is conservative given O(1) nullity ranges."
+    },
+    "C2_associator_distribution": {
+      "description": "Random unit-vector triple associator ratio r(x,y,z) = ||[x,y,z]|| / (||x|| ||y|| ||z||) distribution and defect measurement",
+      "levels": [4, 5, 6, 7],
+      "sample_size": 10000,
+      "seed": 42,
+      "rationale_for_sample_size": "Spec \u00a75 prescribes M=10^4. With M=1e4, standard error on mean r is O(1/sqrt(M)) ~ 1%, adequate to detect 5% saturation thresholds below.",
+      "metrics": {
+        "mean_r": "arithmetic mean of r over M samples per level",
+        "median_r": "median of r",
+        "max_r": "maximum observed r (finite-sample upper bound)",
+        "ks_statistic": "Kolmogorov-Smirnov statistic between level-n and level-(n+1) empirical CDFs of r",
+        "flexibility_defect": "||(xy)x - x(yx)|| must be < 1e-12 for all tested triples (Schafer 1954 exact-zero oracle)",
+        "power_assoc_defect": "||(xx)x - x(xx)|| must be < 1e-12 for all tested triples (Schafer 1954 exact-zero oracle)"
+      },
+      "thresholds": {
+        "saturation_relative_change": 0.05,
+        "saturation_min_r": 0.01,
+        "growth_relative_increase": 0.20,
+        "collapse_relative_decrease": 0.50,
+        "collapse_absolute_r": 1e-06,
+        "ks_reconfiguration": 0.05
+      },
+      "verdict_rules": {
+        "PROGRESSIVE": "mean_r >= 0.01 AND |mean_r(n+1) - mean_r(n)| / mean_r(n) < 0.05 for all consecutive n in [4,5,6,7] AND KS(n, n+1) < 0.05 for all consecutive n",
+        "KILL-A_growth": "mean_r(n+1) > mean_r(n) * 1.20 for 2 or more consecutive levels",
+        "KILL-B_collapse": "mean_r(n+1) < mean_r(n) * 0.50 for 2 or more consecutive levels OR mean_r(n) < 1e-06 for any n >= 6",
+        "KILL-C_reconfiguration": "mean_r stable (all consecutive relative changes < 5%) BUT KS(n, n+1) > 0.05 for 2 or more consecutive levels"
+      },
+      "rationale_for_thresholds": "Spec \u00a75 defines qualitative branches but provides NO numerical thresholds. We fix them pre-hoc: (1) Saturation 5% is 5x the MC standard error, avoiding noise-driven false PROGRESSIVE. (2) Min r=0.01 ensures non-trivial associator signal; below this the algebra is effectively associative at machine precision. (3) Growth 20% is asymmetric to collapse 50% because growth threatens path-integral convergence more severely (spec \u00a75: 'free parameter forced'). (4) KS 0.05 is standard 5% significance; reconfiguration requires stability in mean (ruling out mixed drift) AND distributional shift."
+    },
+    "C3_truncation_stability": {
+      "description": "Finite-truncation prediction-family stability via Cauchy convergence test",
+      "levels": [5, 6, 7],
+      "depends_on": ["C1 outputs (mode_nullity_n)", "C2 outputs (mean_r_n)"],
+      "prediction_family": {
+        "P_n_components": [
+          "mean_r_n: from C2 associator distribution",
+          "mode_nullity_n: most frequent nullity value from C1 nullity spectrum",
+          "zd_density_n: simple-ZD pair count / total_pairs = count / C(2^n - 1, 2)"
+        ],
+        "definition_rationale": "Spec \u00a76 allows (i) inherited/mixed/new ratio, (ii) mode nullity, (iii) mean r, (iv) threshold-sweep success curve. We select (ii) and (iii) as directly computable from C1/C2, plus (iii-derived) zd_density which is OEIS-closed but included as normalization check. Inherited/mixed/new classifier requires O(pairs x dim^3) projector computation not yet generalized to n=7; excluded to avoid post-hoc method design."
+      },
+      "thresholds": {
+        "cauchy_decreasing": "|P_7 - P_6| < |P_6 - P_5| for all components (component-wise)",
+        "absolute_tolerance": 0.10,
+        "relative_tolerance": 0.20
+      },
+      "verdict_rules": {
+        "CONVERGED": "cauchy_decreasing AND |P_7 - P_6| < 0.10 (absolute) for ALL components AND |P_7 - P_6| / |P_6| < 0.20 (relative, guarded by |P_6| > 1e-12)",
+        "DRIFTING": "NOT cauchy_decreasing OR |P_7 - P_6| >= 0.10 for any component OR relative change >= 0.20",
+        "INSUFFICIENT_LEVELS": "C1 or C2 outputs missing or any P_n component is NaN / undefined"
+      },
+      "rationale_for_thresholds": "Spec \u00a76 lacks numerical convergence criteria. Absolute tolerance 0.10 is deliberately loose because components have different scales (mean_r ~ O(1), mode_nullity ~ O(2^n), zd_density ~ O(1)). Relative 20% matches C2 saturation threshold for internal consistency. Cauchy-decreasing is the minimal structural requirement for limit existence; without it no prediction family can claim stabilization."
+    }
+  },
+  "layer_disclosure": {
+    "L1_algebra_core": "PROGRESSIVE (Brown 1967 Aut(S)=G2xS3, Moreno 1998 Z(S)~G2, Reggiani 2024 ZD(S)~V2(R^7), 5 queue_* CONFIRMED)",
+    "L2_L3_physics_prediction_belt": "DEGENERATING / STAGNANT (queue_02 100% FAIL_BOTH_CLOSURE, derive_* self-REFUTED 0/15, 86% LEE null pass, 0/6 MB criteria met)",
+    "mythology_layer": "USER_PRIMARY preserved (ICE_ORCA_DRAGON 12-apostle canon #2, narrative-feedback-loop Eilu va-Eilu)"
+  },
+  "avenue3_caveat": "Even if C1/C2/C3 yield PROGRESSIVE on algebra metrics, avenue3 barrier remains intact: CD doubling forces discrete integers {2,3,7,14} only; no continuous observable emergence mechanism connects any algebraic invariant to gravitational observables. This caveat is MANDATORY in any PROGRESSIVE verdict per ICE_WORKBENCH_REFRAME_2026-05-18 \u00a73 and LOOP_PROTOCOL.md rule 4.",
+  "anti_numerology_guard": "All thresholds are fixed BEFORE computation. If results fall in boundary regions (e.g. TV=0.049 vs 0.051), the pre-registered threshold governs; no post-hoc adjustment permitted. Numerology_mc_judge_v3 gate required for any SIGNAL-grade upgrade.",
+  "provenance": "Generated by Claim B sealed-loop worker, S_setup stage, 2026-07-24. Thresholds derived from CLAIMB_COMPUTATIONAL_FRONTIER_DESIGN_2026-07-21.md; gaps filled conservatively with explicit rationale."
+}

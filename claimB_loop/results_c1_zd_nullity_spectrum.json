@@ -1,0 +1,145 @@
+{
+  "findingId": "C1_zd_nullity_spectrum_2026-07-24",
+  "stage": "S_c1",
+  "timestamp": "2026-07-24T03:29:59+0900",
+  "script_sha256": "b548bd8184e353929f4e34c89043a46da65c6f4bb6b4b888a449a4dbbdd3b841",
+  "script_path": "/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/claimB_loop/claimB_zd_nullity_spectrum.py",
+  "protocol": "LOOP_PROTOCOL.md",
+  "prereg": "prereg_claimB_loop_20260724.json",
+  "levels": [
+    5,
+    6,
+    7
+  ],
+  "verdict": "KILL_diverging_or_unstable_distribution",
+  "verdict_reason": "Kill conditions: TV_6_7 >= TV_5_6=True, TV_6_7 > 0.05=True, mode_rel_change > 0.20=True. At least one kill condition satisfied.",
+  "reproducibility": {
+    "run2_verdict": "KILL_diverging_or_unstable_distribution",
+    "byte_identical": true,
+    "mismatches": []
+  },
+  "layer_disclosure": {
+    "L1_algebra": "Cayley-Dickson simple-ZD pair nullity distribution",
+    "L2_L3_physics": "NO physics prediction claimed. Avenue3 barrier intact.",
+    "mythology": "USER_PRIMARY ICE_ORCA_DRAGON canon #2"
+  },
+  "avenue3_caveat": "Even if PROGRESSIVE: CD doubling forces discrete integers {2,3,7,14} only. No continuous observable emergence mechanism connects any algebraic invariant to gravitational observables. This caveat is MANDATORY per ICE_WORKBENCH_REFRAME_2026-05-18 \u00a73.",
+  "metrics_per_level": {
+    "5": {
+      "n": 5,
+      "dim": 32,
+      "total_pairs": 465,
+      "nullity_counts": {
+        "0": 171,
+        "8": 84,
+        "12": 126,
+        "4": 84
+      },
+      "nullity_distribution": {
+        "0": 0.36774193548387096,
+        "4": 0.18064516129032257,
+        "8": 0.18064516129032257,
+        "12": 0.2709677419354839
+      },
+      "elapsed_sec": 0.04656791687011719
+    },
+    "6": {
+      "n": 6,
+      "dim": 64,
+      "total_pairs": 1953,
+      "nullity_counts": {
+        "0": 435,
+        "16": 168,
+        "24": 252,
+        "8": 168,
+        "28": 342,
+        "12": 168,
+        "4": 252,
+        "20": 168
+      },
+      "nullity_distribution": {
+        "0": 0.2227342549923195,
+        "4": 0.12903225806451613,
+        "8": 0.08602150537634409,
+        "12": 0.08602150537634409,
+        "16": 0.08602150537634409,
+        "20": 0.08602150537634409,
+        "24": 0.12903225806451613,
+        "28": 0.17511520737327188
+      },
+      "elapsed_sec": 0.6195259094238281
+    },
+    "7": {
+      "n": 7,
+      "dim": 128,
+      "total_pairs": 8001,
+      "nullity_counts": {
+        "0": 1059,
+        "32": 336,
+        "48": 504,
+        "16": 336,
+        "56": 684,
+        "24": 336,
+        "8": 504,
+        "40": 336,
+        "60": 870,
+        "28": 336,
+        "12": 504,
+        "44": 336,
+        "4": 684,
+        "36": 336,
+        "52": 504,
+        "20": 336
+      },
+      "nullity_distribution": {
+        "0": 0.13235845519310085,
+        "4": 0.08548931383577053,
+        "8": 0.06299212598425197,
+        "12": 0.06299212598425197,
+        "16": 0.04199475065616798,
+        "20": 0.04199475065616798,
+        "24": 0.04199475065616798,
+        "28": 0.04199475065616798,
+        "32": 0.04199475065616798,
+        "36": 0.04199475065616798,
+        "40": 0.04199475065616798,
+        "44": 0.04199475065616798,
+        "48": 0.06299212598425197,
+        "52": 0.06299212598425197,
+        "56": 0.08548931383577053,
+        "60": 0.10873640794900638
+      },
+      "elapsed_sec": 9.65082597732544
+    }
+  },
+  "tv_distances": {
+    "5_to_6": {
+      "tv": 0.47619047619047616
+    },
+    "6_to_7": {
+      "tv": 0.4881889763779528
+    }
+  },
+  "mode_analysis": {
+    "mode_nullity": {
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    "norm_mode_by_dim": {
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0
+    },
+    "rel_change_5_to_6": Infinity,
+    "rel_change_6_to_7": Infinity
+  },
+  "thresholds_applied": {
+    "convergence_tv_max": 0.05,
+    "progressive_tv_monotone": true,
+    "progressive_mode_rel_change_max": 0.1,
+    "kill_tv_increase": true,
+    "kill_tv_max": 0.05,
+    "kill_mode_rel_change_max": 0.2
+  }
+}
