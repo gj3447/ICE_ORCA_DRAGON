@@ -25,6 +25,7 @@ Execution: python3 ww_unitarity_bound_analysis.py
 import numpy as np
 import json
 from datetime import datetime
+from pathlib import Path
 
 np.random.seed(42)
 
@@ -486,10 +487,10 @@ def generate_finding_json(energies_gev=[200, 500, 1000, 2000, 5000]):
         "recommendation": recommendation[:300],
         "alternatives": alternatives,
         "references": [
-            "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/ww_unitarity_bound_analysis.py",
-            "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/prove_s7_WW_evasion.py",
-            "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/higgs_mechanism.py",
-            "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/prove_higgs_ZD_doublet.py"
+            "METAHUMOTONIC/ICE_ORCA_DRAGON/ww_unitarity_bound_analysis.py",
+            "METAHUMOTONIC/ICE_ORCA_DRAGON/prove_s7_WW_evasion.py",
+            "METAHUMOTONIC/ICE_ORCA_DRAGON/higgs_mechanism.py",
+            "METAHUMOTONIC/ICE_ORCA_DRAGON/prove_higgs_ZD_doublet.py"
         ],
         "caveats": (
             "Analysis assumes simplified linear modification A_ICE = A_SM(1+δ). "
@@ -543,7 +544,7 @@ if __name__ == "__main__":
     print(json.dumps(finding, indent=2))
 
     # Save to file
-    output_path = "/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/finding_ww_evasion.json"
+    output_path = str(Path(__file__).resolve().parent / "finding_ww_evasion.json")
     with open(output_path, "w") as f:
         json.dump(finding, f, indent=2)
 

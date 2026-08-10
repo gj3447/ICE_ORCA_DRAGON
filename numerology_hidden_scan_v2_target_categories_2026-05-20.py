@@ -24,7 +24,7 @@ from pathlib import Path
 
 random.seed(42)
 
-ICE_DIR = Path("/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON")
+ICE_DIR = Path(__file__).resolve().parent
 
 ICE_PRIMITIVES = {
     "sedenion_dim": 16, "sedenion_pair_count": 120,

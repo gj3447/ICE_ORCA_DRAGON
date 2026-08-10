@@ -24,7 +24,7 @@ from pathlib import Path
 
 random.seed(42)  # reproducibility
 
-ICE_DIR = Path("/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON")
+ICE_DIR = Path(__file__).resolve().parent
 
 # ICE algebraic primitives — structurally available numbers
 ICE_PRIMITIVES = {

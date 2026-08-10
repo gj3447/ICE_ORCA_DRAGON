@@ -29,7 +29,7 @@ import json
 import math
 from pathlib import Path
 
-ICE_DIR = Path("/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON")
+ICE_DIR = Path(__file__).resolve().parent
 
 # ============================================================
 # STEP 1: ICE-derivable dimensionless quantities (NO PDG)

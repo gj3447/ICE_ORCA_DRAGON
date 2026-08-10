@@ -1,6 +1,6 @@
 import hashlib, json
 
-path = "/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/claimB_loop/prereg_claimB_loop_20260724.json"
+path = str(__import__("pathlib").Path(__file__).resolve().parent / "prereg_claimB_loop_20260724.json")
 with open(path, "r", encoding="utf-8") as f:
     data = json.load(f)
 
