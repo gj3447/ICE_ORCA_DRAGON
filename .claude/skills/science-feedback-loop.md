@@ -29,7 +29,8 @@ T1에서 유의한 drift나 주장에 영향을 주는 방법 결함을 발견�
 가능한 항목만 명시하되, 결과를 본 뒤 소급해 만들지 말라.
 
 - 가설 `H`와 관측/산출물 `E`
-- target claim과 증거 층위(`ALGEBRAIC` / `NUMERICAL` / `PHYSICS_MAPPING`)
+- target claim과 target fiber(`ALGEBRA` / `PHYSICS`)
+- 증거 층위(`ALGEBRAIC` / `NUMERICAL` / `PHYSICS_MAPPING`)
 - 예상 방향 또는 허용 영역
 - 적용 가능한 경우 null model과 `P(E|~H)` 산정법
 - 적용 가능한 경우 multiplicity와 look-elsewhere 보정
@@ -49,9 +50,9 @@ T1에서 유의한 drift나 주장에 영향을 주는 방법 결함을 발견�
 강제로 하나의 라벨만 고르지 말고 다음 축을 각각 기록하라.
 
 - **추론**: `SUPPORTS` / `CONTRADICTS` / `INCONCLUSIVE`
-- **신규성**: `REPLICATION` / `DISCOVERY_CANDIDATE`
+- **신규성**: `REPRODUCTION` / `DISCOVERY_CANDIDATE`
 - **등록**: `PREREGISTERED` / `POST_HOC`
-- **피팅 위험**: `CONTROLLED` / `NUMEROLOGY_RISK` / `NUMEROLOGY_HOLD` / `NOT_ASSESSED` / `NOT_APPLICABLE`
+- **피팅 위험**: `NULL_PASS` / `NUMEROLOGY_HOLD` / `NOT_ASSESSED` / `NOT_APPLICABLE`
 
 `CONFIRMATION`은 사전등록된 판정 계약과 적용 가능한 재현/null 게이트를 모두 통과한 경우에만
 보조 라벨로 사용하라. `REFUTED` 정전 변경은 사전등록된 falsifier, 검증, ratification을 모두
@@ -80,9 +81,11 @@ evidence 작성과 동시에 Contract confidence/status, Span grade, 기존 cano
 pending evidence ID와 명시된 ratifier 권한을 확인한 별도 절차에서만 정전 변경을 수행하라.
 일반 T2 실행이 자신을 ratify하지 못하게 하라.
 
-새 `:Lesson`을 만들 가치가 있는 반복 가능하고 비자명한 방법 교훈이라면 `wrongAssumption`,
-`truth`, 재발 방지, provenance와 KG 계약상의 `lakatos_mechanism`을 채워라. 평범한 오류를 이
-스키마에 맞추려고 Lesson으로 승격하지 말라.
+새 `:Lesson` 후보는 원인과 재사용 가능한 예방이 모두 증거로 확인된 반복 가능하고 비자명한
+방법 교훈에만 제안하라. `wrongAssumption`, `truth`, 재발 방지, provenance를 증거에 맞게
+채워라. KG 스키마가 `lakatos_mechanism`을 요구하더라도 실제 Lakatos 평가가 적용되지 않으면
+`NOT_APPLICABLE`과 이유를 기록하고 메커니즘을 발명하지 말라. 평범한 오류를 스키마에 맞추려고
+Lesson으로 승격하지 말라.
 
 ### 6. discovery를 무조건 재귀시키지 말라
 
@@ -95,14 +98,16 @@ PH2 또는 새 span으로 재귀 진입하고, 자식 작업의 tier는 독립�
 ```text
 tier: T2
 provenance: <command, environment, commit, paths, date, actor>
-target: <claim and ALGEBRAIC | NUMERICAL | PHYSICS_MAPPING layer>
+target_claim: <exact claim>
+target_fiber: ALGEBRA | PHYSICS
+evidence_layer: ALGEBRAIC | NUMERICAL | PHYSICS_MAPPING
 registration: PREREGISTERED | POST_HOC
 inference: SUPPORTS | CONTRADICTS | INCONCLUSIVE
-novelty: REPLICATION | DISCOVERY_CANDIDATE
-fitting_risk: CONTROLLED | NUMEROLOGY_RISK | NUMEROLOGY_HOLD | NOT_ASSESSED | NOT_APPLICABLE
+novelty: REPRODUCTION | DISCOVERY_CANDIDATE
+fitting_risk: NULL_PASS | NUMEROLOGY_HOLD | NOT_ASSESSED | NOT_APPLICABLE
 reproduction: <result and comparison policy>
 bayes: NOT_APPLICABLE | NOT_ESTIMABLE | <inputs and result>
-lakatos: NOT_APPLICABLE | UNDETERMINED | <checkpoint verdict and reason>
+lakatos: NOT_APPLICABLE | UNDETERMINED | STAGNANT | PROGRESSIVE | DEGENERATING
 kg_action: NONE | EVIDENCE_PENDING
 ratification_request: <pending evidence id + authorized ratifier, or none>
 follow_up: <bounded next task or none>

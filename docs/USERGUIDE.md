@@ -1,335 +1,190 @@
-# ICE_ORCA_DRAGON User Guide
+# ICE_ORCA_DRAGON user guide
 
-> Category-by-category walk-through of all 47 Python scripts and 22 JSON result files.
-> Quick overview: [`../README.md`](../README.md). Production / classification status: [`STATUS.md`](STATUS.md).
+> Guide to the 42 entries currently exposed by the TypeScript/Effect CLI. Historical source files are
+> not automatically runnable entries; `./ice list --json` is authoritative.
 
----
+## Setup
 
-## Table of Contents
-
-- [How this guide is organized](#how-this-guide-is-organized)
-- [Category 1 — Cayley-Dickson breaking](#category-1--cayley-dickson-breaking)
-- [Category 2 — Cayley-Dickson embedding & propagator](#category-2--cayley-dickson-embedding--propagator)
-- [Category 3 — Dimensional analysis](#category-3--dimensional-analysis)
-- [Category 4 — Higgs mechanism & S₁~S₇ proofs](#category-4--higgs-mechanism--s₁s₇-proofs)
-- [Category 5 — Sedenion (16D) analysis](#category-5--sedenion-16d-analysis)
-- [Category 6 — Orbit / rep / queue series](#category-6--orbit--rep--queue-series)
-- [Category 7 — Misc verification](#category-7--misc-verification)
-- [Reading a JSON result](#reading-a-json-result)
-- [Running science-feedback-loop on a result](#running-science-feedback-loop-on-a-result)
-- [Common pitfalls](#common-pitfalls)
-
----
-
-## How this guide is organized
-
-Each category answers:
-
-1. **What it computes** — the physics/math claim being tested
-2. **Kernel script + variants** — main entry point and refinement chain (`v2 / part2 / final / verify`)
-3. **JSON result** — output file and key fields
-4. **Classification verdict** — confirmation / refutation / discovery / numerology (see [`STATUS.md`](STATUS.md))
-5. **Reproduce** — exact command
-
-The control plane is strict TypeScript + Effect 3 on Node 24; numerical kernels
-remain Python 3.13 with NumPy/SciPy/SymPy. Bootstrap both exact locks with
-`npm ci` and `uv sync --locked`, verify them with `./ice doctor`, then use
-`./ice run <name>`. `jq` is optional for inspecting JSON. Direct kernel runs write
-next to the script; `./ice repro` instead uses an Effect-scoped temporary copy and
-leaves the checkout untouched.
-
----
-
-## Category 1 — Cayley-Dickson breaking
-
-**What it computes**: At which Cayley-Dickson level does which identity (associativity / alternativity / power-associativity / etc.) break? CD₃ = octonion (non-associative, alternative). CD₄ = sedenion (zero divisors appear). The "breaking pattern" is the focus.
-
-| Script | Role | Notes |
-|--------|------|-------|
-| `cd_breaking_search.py` | First pass scan | broad sweep over CD levels |
-| `cd_breaking_search2.py` | Refined scan | narrows on observed breaking signatures |
-| `cd_breaking_search3.py` | Targeted scan | targets 32D vs 64D specifically |
-| `cd_breaking_final.py` | **Canonical** | final result, use this for citation |
-| `cd_final_quick.py` | Quick-check variant | faster CI-style run |
-
-**Reproduce**:
 ```bash
-./ice run cd_breaking_final
-# Inspect output (in-script print + result JSON if written)
+npm ci
+uv sync --locked
+./ice doctor
 ```
 
-**Pitfall**: `search` / `search2` / `search3` show *exploration history*. Cite only `cd_breaking_final.py` in papers.
+`doctor` validates the Node major, package lock, Python version, uv lock, and required numerical
+packages. A READY report describes the environment, not the truth of a scientific claim.
 
----
+## Discover before running
 
-## Category 2 — Cayley-Dickson embedding & propagator
-
-**What it computes**: How does a CD₃ (octonion) substructure embed into CD₄ (sedenion)? Does the embedding preserve the propagator chain? Path amplitude as a function of embedding choice.
-
-| Script | Role | Notes |
-|--------|------|-------|
-| `cd_embedding.py` | Base embedding | initial CD₃→CD₄ map |
-| `cd_embedding_v2.py` | Refined embedding | corrects v1 sign convention |
-| `cd_embedding_verify.py` | Verification | checks embedding properties |
-| `cd_embedding_final_check.py` | Final canonical | use for citation |
-| `cd_chain_propagator.py` | Propagator chain | composes embeddings into chain |
-| `cd_path_amplitude.py` | Path amplitude v1 | first amplitude computation |
-| `cd_path_amplitude_v2.py` | Path amplitude v2 | corrected normalization |
-
-**Reproduce**:
 ```bash
-./ice run cd_embedding_final_check
+./ice list
+./ice list --json
+./ice info prove_s3_higher_gauge
+```
+
+Do not infer a CLI name from an old filename or a prose inventory. If `./ice info <name>` fails, choose a
+name from the live list. Source variants containing words such as `search`, `final`, `part2`, or `v2` may
+be historical implementation files rather than catalog entries.
+
+## Run one kernel
+
+```bash
 ./ice run cd_path_amplitude_v2
-```
-
-**Pitfall**: The v1 / v2 / final progression is *not* a regression; v1 documents an early sign convention error which v2 corrects. Always run `final_check` or `v2` for current results.
-
----
-
-## Category 3 — Dimensional analysis
-
-**What it computes**: Derive *dimensionless* physical ratios (Koide Q, mass ratios, ε scaling, Lstar length) from ICE-side algebraic invariants. The honest verdict is recorded in each JSON.
-
-| Script | What it derives | JSON result | Verdict |
-|--------|------------------|-------------|---------|
-| `derive_Lstar_from_ICE.py` | L* length scale | `derive_Lstar_results.json` | derivation attempt |
-| `derive_dimensionless_ICE.py` | dimensionless ratios (Koide Q etc.) | `derive_dimensionless_results.json` | **NUMEROLOGY_CONFIRMED** by MC null, P(E\|~H)=1.000 |
-| `derive_epsilon_ICE.py` | ε small parameter | `derive_epsilon_results.json` | scaling proposal |
-| `derive_mass_ratios_ICE.py` | quark/lepton mass ratios | `derive_mass_ratios_results.json` | **self-refutation: "ICE cannot genuinely derive (0/15 genuine)"** |
-
-**Reproduce**:
-```bash
 ./ice run derive_mass_ratios_ICE
-jq '.verdict' derive_mass_ratios_results.json
-# → "ICE cannot genuinely derive (0/15 genuine)"
-```
-
-**Pitfall**: `derive_mass_ratios_results.json` *contains a self-refutation*. Do not cite this as a confirmation. The honest verdict is a feature, not a bug — it demonstrates the workbench's refutation discipline.
-
----
-
-## Category 4 — Higgs mechanism & S₁~S₇ proofs
-
-**What it computes**: Standard Model Higgs doublet candidates extracted from sedenion ZD pairs; S₁~S₇ are progressive structural proofs (framing, CCWZ, higher gauge, BV-A∞, Ward-Takahashi evasion).
-
-| Script | Role | JSON result |
-|--------|------|-------------|
-| `higgs_mechanism.py` | Higgs mechanism baseline | (in-script print) |
-| `prove_higgs_ZD_doublet.py` | **42 assessors / 84 ZD pairs as candidate inputs** | `prove_higgs_results.json` |
-| `prove_s1_framing.py` | S₁ — symplectic framing | (in-script print) |
-| `prove_s2_CCWZ.py` | S₂ — Callan-Coleman-Wess-Zumino coset | (in-script print) |
-| `prove_s3_higher_gauge.py` | S₃ — higher gauge (Jacobi = 6·associator) | `prove_s3_results.json` |
-| `prove_s5_bv_ainfty.py` | S₅ — Batalin-Vilkovisky / A∞ algebra | `prove_s5_results.json` |
-| `prove_s7_WW_evasion.py` | S₇ — Ward-Takahashi / unitarity evasion | (uses `finding_ww_evasion.json`) |
-
-**S₄ and S₆ note**: numbered gaps reflect the *intended progression order*, not missing computations. S₄ corresponds to ww_unitarity_bound_analysis content; S₆ corresponds to queue_05 (CW potential).
-
-**Reproduce**:
-```bash
 ./ice run prove_higgs_ZD_doublet
-jq '.zd_pairs_count' prove_higgs_results.json
-# → 42
-
-./ice run prove_s3_higher_gauge
-jq '.jacobi_equals_associator' prove_s3_results.json
-```
-
-**Pitfall**: Lygeros 2006 externally grounds the **42 assessors** combinatorics, not
-the Higgs interpretation. The corresponding 84 ZD pairs are L1 algebra data; the
-L2/L3 Higgs referent remains NUMEROLOGY (DEAD). Do not promote one layer from evidence
-that belongs to another.
-
----
-
-## Category 5 — Sedenion (16D) analysis
-
-**What it computes**: The 16-dimensional sedenion algebra S has Der(S) = g₂ (the 14-dimensional Lie algebra). This category verifies that numerically, then probes SU(2) and SU(3) embeddings.
-
-| Script | Role | Notes |
-|--------|------|-------|
-| `sedenion_analysis.py` | Baseline structure | initial pass |
-| `sedenion_g2_investigation.py` | g₂ derivation investigation | iterative |
-| `sedenion_g2_deep.py` | **Canonical Der(S)=g₂ verification** | dim=14 verified numerically |
-| `sedenion_su2.py` | SU(2) embedding attempt | first pass |
-| `sedenion_su2_part2.py` | SU(2) attempt 2 | refinement |
-| `sedenion_su2_part3.py` | SU(2) attempt 3 | refinement |
-| `sedenion_su2_final.py` | SU(2) final | use this for citation |
-| `sedenion_su2_definitive.py` | SU(2) definitive | post-final clean run |
-| `sedenion_su3_check.py` | SU(3) embedding check | extends to SU(3) |
-
-**Reproduce**:
-```bash
-./ice run sedenion_g2_investigation
-# Expected output: Der(S) dim = 14 (matches g₂)
-
-./ice run sedenion_su2_definitive
-```
-
-**Pitfall**: Der(S) = g₂ is **numerically verified** here but has no external peer review yet. STATUS marks this as `confirmation_local`, pending arXiv preprint. Do not cite as established result without that step.
-
----
-
-## Category 6 — Orbit / rep / queue series
-
-**What it computes**: `queue_NN_*` is a sequential investigation series — orbit structure, custodial symmetry preservation, representation decomposition, Hosotani gauge symmetry, Coleman-Weinberg potential, cooperative vacuum, G₂ adjoint, S₃ action, group-of-6 structure, XOR invariant.
-
-| Script | What it computes | JSON result | Headline |
-|--------|------------------|-------------|----------|
-| `queue_01_orbit_analysis.py` | Orbit structure | `queue_01_orbit_results.json` | 7×6=42 orbit |
-| `queue_02_custodial_check.py` | Custodial SU(2)×SU(2) preservation | `queue_02_custodial_results.json` | **0/42 pairs preserve (refutation)** |
-| `queue_03_rep_decomposition.py` | Representation decomposition | `queue_03_rep_results.json` | 0.75 uniform |
-| `queue_03_threshold_sensitivity_scan.py` | Legacy threshold scan | `queue_03_threshold_sensitivity_results.json` | **NONPORTABLE / INVALID_METHOD** |
-| `queue_04_hosotani_toy.py` | Hosotani gauge-Higgs unification toy | `queue_04_hosotani_results.json` | toy model |
-| `queue_05_coleman_weinberg.py` | CW effective potential | `queue_05_cw_results.json` | radiative SSB |
-| `queue_06_cooperative_vacuum.py` | Cooperative vacuum | `queue_06_coop_results.json` | vacuum structure |
-| `queue_08_G2_adjoint.py` | G₂ adjoint representation | `queue_08_g2_results.json` | 14-dim adjoint |
-| `queue_09_S3_action.py` | S₃ (symmetric group) action | `queue_09_s3_results.json` | permutation orbits |
-| `queue_10_group_of_6.py` | Group-of-6 structure | `queue_10_group6_results.json` | hexagonal structure |
-| `queue_11_xor_invariant.py` | XOR invariant | `queue_11_xor_results.json` | ZD breaking via XOR |
-
-**queue_07 note**: queue_07 is intentionally absent — the numbering preserves the *original investigation chronology*. Inserting filler would violate provenance.
-
-**Reproduce (key)**:
-```bash
-./ice run queue_01_orbit_analysis
-jq '.orbit_size' queue_01_orbit_results.json
-# → 42 (7 × 6)
-
 ./ice run queue_02_4condition_diagnostic
-jq '.fail_count_over_total' queue_02_custodial_results.json
-# → "0/42 (max_commutator ~1.9)"
 ```
 
-**Pitfall**: `queue_02_custodial_results.json` is a **refutation** of the naive
-embedding. The legacy queue03 sweep cannot soften it: `scipy.linalg.null_space`
-chooses an arbitrary orthogonal basis, while queue03 measures an entrywise maximum
-that changes under that basis rotation. Its pass/fail counts are quarantined rather
-than tolerance-masked. See [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
-
----
-
-## Category 7 — Misc verification
-
-| Script | What it verifies | JSON result |
-|--------|------------------|-------------|
-| `zd64_analysis.py` | 64D ZD structure | (in-script) |
-| `verify_mp_mW_3_256.py` | Hypothesis: mp / mW = 3 · 256 | `verify_mp_mW_results.json` |
-| `ww_unitarity_bound_analysis.py` | WW unitarity bound | (uses `finding_ww_evasion.json`) |
-| `orca_friedmann.py` | Friedmann equation derivation | (in-script) |
-
-**verify_mp_mW special note**: `mp / mW = 3 · 256 = 768` is
-**NUMEROLOGY_CONFIRMED**: the literal comparison is far off, and the broad layer-3
-search has MC null P(E\|~H)=0.812. This is no longer a pending candidate.
-
-**Historical fitting acknowledgment (UEQFT/ICE 287/15)**: KG node `UEQFT_ICE_CLUE_ANALYSIS_2026_02_07` (clue_C_honest) explicitly records 287/15 ≈ 19.13 as post-hoc fitting (287/14 = 20.5 and 287/16 = 17.9 were also computationally available, suppressed after seeing the target). `alpha_derivation_status = 'numerology_suspected'`. See [`STATUS.md` § Fitting Detection](STATUS.md#fitting-detection-pre-prediction-vs-post-fitting). Propagated per `lesson-prom32-thothsaem-ueqft-claims-2026-05-17`.
-
-**Reproduce**:
-```bash
-./ice run verify_mp_mW_3_256
-jq '.' verify_mp_mW_results.json
-```
-
----
-
-## Reading a JSON result
-
-All JSON results follow a loose convention. Look for these fields (when present):
-
-| Field | Meaning |
-|-------|---------|
-| `verdict` | Plain-language summary (e.g., `"ICE cannot genuinely derive (0/15 genuine)"`) |
-| `confirmation_count` / `total` | numerator / denominator of confirmation rate |
-| `classification` | one of `confirmation` / `refutation` / `discovery` / `numerology` |
-| `lakatos_status` | `progressive` / `degenerating` (often added by the feedback-loop skill, not the script itself) |
-| `bayesian_posterior` | `P(H|E)` if computed |
-| `fitting_detection` | `pre-prediction` / `post-fitting` / `unknown` |
-| `external_references` | external papers cited (e.g., Lygeros 2006) |
-
-If a script does not write JSON, classification happens via the feedback-loop skill reading the script's stdout.
-
----
-
-## Running science-feedback-loop on a result
-
-After a fresh computation:
+Arguments after `--` are passed to the Python kernel as an argv array:
 
 ```bash
-./ice run <some_script>
-# JSON appears next to script
+./ice run <name> -- --flag value
 ```
 
-Then in Claude Code:
+Direct execution can write a result JSON next to the script. Inspect `git status --short` after the run.
 
+## Runnable areas
+
+The table is orientation, not a replacement for `./ice list`.
+
+| Area | Current runnable examples |
+|---|---|
+| sedenion ground truth | `avenue3_phase1_groundtruth`, `naesengmoon_indep_sedenion` |
+| Cayley–Dickson | `cd_path_amplitude_v2`, `ice_convention_invariance` |
+| Claim B falsifiers | `claimB_associator_growth_falsifier`, `claimB_associator_distribution`, `claimB_truncation_stability`, `claimB_zd_nullity_spectrum` |
+| dimensional analysis | `derive_dimensionless_ICE`, `derive_epsilon_ICE`, `derive_Lstar_from_ICE`, `derive_mass_ratios_ICE` |
+| preregistration checks | `gravity_prereg_predictions`, `ice_prereg_check`, `ice_prereg_predictions` |
+| Higgs and S-proofs | `prove_higgs_ZD_doublet`, `prove_s1_framing`, `prove_s2_CCWZ`, `prove_s3_higher_gauge`, `prove_s5_bv_ainfty`, `prove_s7_WW_evasion` |
+| queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_05_coleman_weinberg`, `queue_06_cooperative_vacuum`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_10_group_of_6`, `queue_11_xor_invariant` |
+| numerology controls | `numerology_hidden_scan`, `numerology_hidden_scan_v2_target_categories_2026-05-20`, `numerology_mc_judge`, `numerology_mc_judge_v3_abc` |
+| other falsifiers/checks | `igrueqft_locality_falsifier`, `mb3_adelberger_verdict`, `verify_mp_mW_3_256`, `wilmot_theta_preservation_test`, `ww_unitarity_bound_analysis` |
+
+## Read a result JSON
+
+Result schemas differ because the kernels answer different questions. Inspect structure before selecting a
+field:
+
+```bash
+jq 'keys' <result>.json
+jq '.' <result>.json
 ```
-"science-feedback-loop 실행 — <result_file>.json"
+
+Preserve the distinction between:
+
+- computed observables
+- thresholds or configuration
+- a script's own interpretation/verdict field
+- provenance and preregistration metadata
+
+A stored verdict string is evidence about what that historical run reported. It does not independently
+ratify a Contract or change current confidence.
+
+## Reproduce mapped outputs
+
+```bash
+./ice repro --list
+./ice repro
+./ice repro --only prove_s5_bv_ainfty
 ```
 
-The local skill ([`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md)) executes:
+`--only` accepts names in `./ice repro --list`, not every runnable name. The harness executes in an
+Effect-scoped temporary copy and compares fresh JSON with `git show HEAD:<mapped-output>` using a
+field-aware semantic contract.
 
-1. Read JSON
-2. Classify (4-way: confirmation / refutation / discovery / numerology)
-3. **Fitting Detection** — was the claim pre-registered (in `:Contract` before computation) or post-hoc?
-4. **Lakatos evaluation** — does it produce *new* predictions (progressive) or only re-explain (degenerating)?
-5. **Bayesian update** — compute `P(H|E) = P(E|H)·P(H) / P(E)`. Critically estimate `P(E|~H)` ("could this happen even without the theory?") — high `P(E|~H)` triggers `NUMEROLOGY_HOLD`.
-6. **KG write** — update `:Contract` confidence, create `:Span` (if discovery), tag `:NUMEROLOGY_HOLD` (if numerology).
-7. **Consistency check** — verify SA→SP→ST chain still holds.
+Current expected ledger:
 
-If classification is `discovery`, the loop **re-enters** by dispatching `/apt-sp <new_span_id>` for D(S) decomposition. This is why the workbench can self-extend.
+| Count/status | Meaning |
+|---|---|
+| 12 `REPRO` | mapped outputs satisfy their comparator |
+| 1 `NONPORTABLE_FAIL` | queue03 uses a basis-dependent legacy metric |
+| 1 `SUPERSEDED` | queue06 is retained as historical output, not a live success |
 
----
+The overall exit code is therefore nonzero by design. Do not loosen a global tolerance to make queue03
+green. See [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
 
-## Common pitfalls
+## Choose T0, T1, or T2
 
-### Pitfall 1 — Citing exploration variants
+Declare the highest applicable tier before looking at new output.
 
-Scripts with `search` / `v1` / `part1` / `investigation` suffixes are *exploration history*. Cite only `final` / `definitive` / `deep` variants. Exception: when documenting the iteration trajectory itself (e.g., in a paper's "methods" section).
+### T0 — engineering
 
-### Pitfall 2 — Treating numerology as confirmation
+Use for docs, CLI, harness, dependency, or refactor work that does not evaluate a scientific claim.
+Definition of done is the requested artifact plus directly relevant checks. Examples:
 
-A numerical match (Koide Q = 2/3, mp/mW = 3·256, "42") is **not** automatically a confirmation. Run Fitting Detection. If post-hoc, require external pre-registered prediction *before* promoting from `:NUMEROLOGY_HOLD` to `:Contract`.
+```bash
+npm run check                 # TypeScript/Effect control plane
+uv sync --locked              # Python/lock change
+./ice doctor
+./ice run <affected-name>     # numerical kernel change
+```
 
-### Pitfall 3 — Ignoring self-refutations
+### T1 — frozen reproduction
 
-`derive_mass_ratios_results.json` explicitly states `"ICE cannot genuinely derive"`. This is *valuable data*. Do not patch it out, do not bury it. The honest verdict is what distinguishes this workbench from a numerology engine.
+Record command, args, environment, frozen baseline, comparator, and diff. T1 confirms whether a result
+reproduces under that contract; it does not increment confidence. If the observed outcome materially
+affects a claim, escalate to T2.
 
-### Pitfall 4 — Running v1 instead of final
+### T2 — claim-impact work
 
-Always check for `_final.py` / `_definitive.py` / `_v2.py` versions before running the base script. The base often documents an early sign / normalization error that the final version corrects.
+Before execution, state:
 
-### Pitfall 5 — Skipping the feedback loop
+- target claim and algebra/physics fiber
+- preregistered or post-hoc status
+- null and multiplicity plan when applicable
+- frozen comparator/falsifier
 
-Running a Python script and *not* running the feedback-loop skill leaves the KG stale. The Python script computes; the skill *interprets and records*. Both steps are required for the result to count as a SYMPOSIUM canonical contribution.
+After execution, record independent axes:
 
-### Pitfall 6 — Forgetting queue_07 / S₄ / S₆ "gaps"
+```text
+claim_relation: SUPPORTS | CONTRADICTS | INCONCLUSIVE
+novelty: REPRODUCTION | DISCOVERY_CANDIDATE
+fitting_risk: NULL_PASS | NUMEROLOGY_HOLD | NOT_APPLICABLE | NOT_ASSESSED
+```
 
-Numbering gaps preserve original chronology. Do not fill them with placeholder scripts.
+Bayes is numerical only when `H`, `E`, a frozen prior, both likelihoods, and selection/dependence are
+explicit. Do not multiply repeated runs of the same data as independent evidence. Lakatos is assessed
+only for a declared programme/fiber at a checkpoint with a baseline and longitudinal window.
 
----
+The full contract is
+[`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md).
 
-## FAQ
+## Persistence after T2
 
-**Q: Why are there 5 variants of `sedenion_su2`?**
-A: Iterative refinement — each variant fixes a specific issue (sign convention, generator choice, basis ordering). Use `_definitive.py` or `_final.py`.
+The default output is the T2 report. Only material/reusable evidence should become a provenance-bearing
+`PENDING` proposal. Ordinary execution cannot directly:
 
-**Q: Can I add new scripts to this workbench?**
-A: Yes, but follow the conventions: snake_case, suffix `_results.json` for outputs, run the feedback-loop skill after computation, update [`STATUS.md`](STATUS.md) and [`../CHANGELOG.md`](../CHANGELOG.md).
+- increment Contract confidence
+- mark a claim `REFUTED`
+- create a canonical Span or Possibility
+- supersede an existing node
+- begin recursive discovery work
 
-**Q: How do I know if a result is pre-prediction vs post-fitting?**
-A: Check git log of the corresponding `:Contract` node creation timestamp vs the computation timestamp. If `:Contract` was created *before* computation → pre-prediction. Otherwise → post-fitting (high numerology risk).
+Ratification is a separate authorized action against an identified pending evidence record. A discovery
+may record one bounded follow-up; its child is independently tiered.
 
-**Q: What if my classification disagrees with a previous run?**
-A: Re-classifications are first-class. The feedback-loop skill creates a new `:Verdict` node linked to the prior; both are retained (Eilu va-Eilu rule from narrative-feedback-loop's machloket discipline). Never silently overwrite.
+## Adding a runnable kernel
 
-**Q: Is this workbench reproducible from scratch?**
-A: The mapped legacy-output ledger currently reports **12 semantic REPRO**, one
-**NONPORTABLE_FAIL** (queue03), and one **SUPERSEDED** mapping (queue06). Run
-`npm ci`, `uv sync --locked`, then `./ice repro`; overall exit 1 is intentional while
-queue03 remains quarantined. The Effect harness compares structure/types exactly,
-uses tight numeric semantics, and applies `atol=1e-6` only to queue04's registered
-optimizer-angle/spread paths. It never overwrites committed JSON. This attests
-reproduction behavior, not physical correctness.
-See [`REPRODUCTION/`](../../../REPRODUCTION/) for the separate KG dump.
+1. Keep import-time work cheap; put execution under `if __name__ == "__main__":`.
+2. Emit deterministic, schema-stable JSON where practical.
+3. Add the script where the catalog discovery rules can see it.
+4. Verify it appears in `./ice list` and resolves through `./ice info`.
+5. Run the locked environment and targeted case.
+6. Add a reproduction mapping only when a committed output and comparator policy are justified.
 
----
+## Common mistakes
 
-# KG: ICE_ORCA_DRAGON_userguide, science-feedback-loop-canonical-ice
+| Mistake | Correction |
+|---|---|
+| citing an old `*_final.py` name as runnable | use `./ice list` and `./ice info` |
+| treating a numerical match as confirmation | use T2 registration/null gates when it affects a claim |
+| treating reproduction as independent evidence | T1 records repeatability; identical data are not a second `E` |
+| applying Lakatos to each script | reserve it for declared programme/fiber checkpoints |
+| auto-writing KG after every result | local report first; selected PENDING evidence; separate ratification |
+| hiding method dependence with tolerance | quarantine or version a corrected invariant method |
+
+## Related documents
+
+- [`../README.md`](../README.md): overview and quick start
+- [`STATUS.md`](STATUS.md): engineering status and historical scientific ledger
+- [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md): historical attestation plus erratum
+- [`../CONTRIBUTING.md`](../CONTRIBUTING.md): contribution checks

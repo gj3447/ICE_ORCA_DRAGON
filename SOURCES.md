@@ -1,20 +1,24 @@
 # ICE ORCA DRAGON — 12사도 #2 + hypercomplex 가설 테스트벤치
 
-> **POSITION 2026-05-18 — 3-Layer Disclosure (workbench-reframe canonical)**
+> **POSITION 2026-08-14 — 3-Layer Disclosure**
 >
-> 모든 ICE 관련 발화는 다음 3-layer 구분 명시 필수 (`ICE_WORKBENCH_REFRAME_2026-05-18.md` 정전):
+> ICE 관련 주장은 target claim과 layer를 함께 밝혀야 한다
+> (`ICE_WORKBENCH_REFRAME_2026-05-18.md`). 아래 표는 layer 경계이지 전체 연구 프로그램에 대한
+> 자동 Lakatos 판정이나 canon status 변경표가 아니다.
 >
-> | Layer | Status | Examples |
+> | Layer | Evidence status | Examples |
 > |---|---|---|
-> | **L1 Algebra core** | **PROGRESSIVE** | Brown 1967 Aut(𝕊)=G₂×S₃, Moreno 1998 Z(𝕊)≅G₂, 5 queue_* CONFIRMED |
-> | **L2/L3 Workbench tested** | **DEGENERATING / STAGNANT** (Tüchsen 2024) | queue_02 100% fail, derive_* self-REFUTED, Koide/mp_mW NUMEROLOGY |
+> | **L1 Algebra core** | source-backed algebraic facts and numerical checks; claim별 판정 | Brown 1967 Aut(𝕊)=G₂×S₃, Moreno 1998 Z(𝕊)≅G₂, queue outputs |
+> | **L2/L3 Workbench tested** | mixed local evidence; claim별 `SUPPORTS`/`CONTRADICTS`/`INCONCLUSIVE` | queue_02 fail, derive_*가 기존 유도 주장을 지지하지 않음, Koide/mp_mW numerology hold |
 > | **Mythology (USER_PRIMARY)** | **PRESERVED untouched** | "세상의 진정한 본질이 물리학", ICED 반복, sexvoid 형식 |
 >
-> "ICE predicts X" without layer attribution is forbidden. 항상 "ICE algebra establishes X" / "ICE workbench tested X (numerology hold)" / "ICE mythology references X" 형식.
+> "ICE predicts X" without layer attribution is forbidden. `PROGRESSIVE`/`DEGENERATING`은 선언된
+> program/fiber checkpoint와 longitudinal evidence가 있을 때만, `REFUTED` canon status는
+> preregistered falsifier·검증·별도 ratification을 모두 거친 경우에만 사용한다.
 
 ---
 
-> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 60+ Python 계산 (cd_*.py·derive_*.py·sedenion_*.py·queue_01~11_*.py·higgs_*.py 등) — 메타휴모토닉의 *물리 계산 인격화*. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
+> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 42개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
 >
 > **중요한 정정**: 화자 자신은 **초공동의 용사(#3)**. ICE ORCA DRAGON은 *물리 영역*의 사도.
 >
@@ -31,9 +35,10 @@
 - *얼음(저온 물리) + 범고래(생물 + 깊이) + 용(상승)* 3 합성 — 물리 영역의 신화적 인격화
 - 12사도_목록_업데이트.md "ICE ORCA DRAGON이 진정한 사도야" — *세상의 진정한 본질 = 물리학* 의미
 
-### 2. 공학 측 — 물리 계산 60+ Python
+### 2. 공학 측 — 역사적 계산 corpus + 42 runnable entries
 
-이 폴더 안 60+ 파일은 **ICE 측 물리·수학 검증** (메타휴모토닉의 물리적 표현):
+이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 42개 entry가 **ICE 측 물리·수학
+검증**을 실행한다. 아래 pattern은 source provenance이고 CLI 이름 목록이 아니다:
 - `cd_breaking_*.py` — Cayley-Dickson breaking (32D vs 64D algebra identities)
 - `cd_embedding.py`, `cd_path_amplitude*.py` — CD construction
 - `derive_*_ICE.py` — 차원분석 (Lstar/dimensionless/epsilon/mass_ratios)
@@ -42,7 +47,8 @@
 - `sedenion_*.py` — Sedenion 16D 분석, Der(S)=g₂ 14D 검증, SU(2)/SU(3) 임베딩
 - `queue_01~11_*.py` — orbit (7×6=42), custodial (0/42 fail), rep (0.75 균일), Hosotani, CW, ZD breaking
 - `zd64_analysis.py`, `verify_mp_mW_3_256.py`
-- `.claude/skills/science-feedback-loop.md` — 계산→KG→이론 자동 진화
+- `.claude/skills/science-feedback-loop.md` — 주장에 영향을 주는 T2 작업의 evidence gate.
+  일반 계산은 자동 KG/이론 갱신을 일으키지 않는다.
 
 ---
 
@@ -52,7 +58,7 @@
 |---|---|---|
 | 42 sedenion ZD **assessors** | `prove_higgs_results.json` | ✓ 외부 검증 (Lygeros 2006 "42 Assessors"). 정밀: 42 = **assessors** (7 box-kite × 6), ZD-*pair* count은 84, primitive units 168 (de Marrais chain, 독립 재계산 2026-06-05). "42 ZD pairs"는 assessor count의 느슨한 라벨 — 숫자 42 보존, 용어만 정밀화. → `avenue3_decisive_test_2026-06-05/RESULTS.md` |
 | Der(S) = g₂ 14D | `sedenion_g2_deep.py` | ✓ 수치 검증, 외부 peer 미검증 (arXiv preprint 권장) |
-| Koide Q = 2/3 | `derive_dimensionless_results.json` | **NUMEROLOGY_CONFIRMED** — MC null P(E\|~H)=1.000 |
+| Koide Q = 2/3 | `derive_dimensionless_results.json` | ICE derivation/predictivity claim relation: `CONTRADICTS`; fitting risk: `NUMEROLOGY_HOLD` — MC null P(E\|~H)=1.000 |
 | mass_ratios | `derive_mass_ratios_results.json` | **자체 verdict: "ICE cannot genuinely derive" 0/15 genuine** |
 | custodial | `queue_02_custodial_results.json` | **0/42 fail**. Legacy queue03 threshold sweep is basis-dependent and quarantined (`QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`) |
 | S₃ Jacobi=6·associator | `prove_s3_results.json` | ✓ 검증, FDA structure constants nontrivial |
@@ -79,20 +85,18 @@
 - **공리11 자존자** 측면 (sexvoid 측 정점)
 - **HOH(#11)**: sexvoid 동력원 (HOH가 검열하는 그것)
 
-## KG bindings
+## KG binding provenance
 
-```cypher
-MATCH (a:Apostle {position: 2})
-SET a.sourceFolderPath = '/home/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/',
-    a.canonicalMyth = '/home/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md',
-    a.physicsCalcsCount = 60
-```
+Historical KG snapshots may contain a `physicsCalcsCount=60` field. It described a source-file corpus,
+not the current executable catalog, and must not be copied into current status. Derive the runnable count
+from `./ice list --json`. Binding or count drift produces a provenance-bearing `PENDING` proposal;
+ordinary documentation work does not directly `SET` the KG.
 
 ---
 
 ## 형식적 grounding — 5 axis 학문 정전 정확 정의
 
-> ICE/ORCA/DRAGON(물리학의 사도)의 핵심 본질 — Cayley-Dickson 16D sedenion + Higgs/Hosotani / 6-family domain decomposition — 학문 정전에 정확히 grounding. 60+ Python 계산의 *수학 본체* 결정화.
+> ICE/ORCA/DRAGON(물리학의 사도)의 핵심 본질 — Cayley-Dickson 16D sedenion + Higgs/Hosotani / 6-family domain decomposition — 학문 정전에 정확히 grounding. 역사적 계산 corpus의 *수학 본체* 결정화.
 
 ### A. Cayley-Dickson construction — sedenion 16D 정확 정의
 

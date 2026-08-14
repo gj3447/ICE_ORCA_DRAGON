@@ -1,14 +1,13 @@
 ---
 title: ICE_ORCA_DRAGON Documentation Hub
-description: Physics/math computation workbench — Cayley-Dickson breaking, sedenion analysis, Higgs ZD doublet, S₁~S₇ proofs, science-feedback-loop
+description: TypeScript/Effect control plane for locked Python hypercomplex computations and tiered scientific evidence handling.
 ---
 
-# ICE_ORCA_DRAGON Documentation
+# ICE_ORCA_DRAGON documentation
 
-**ICE_ORCA_DRAGON** is the physics-computation side of SYMPOSIUM apostle #2.
-A TypeScript + Effect control plane manages the locked Python numerical kernels and
-their JSON results. Every scientific result still feeds a *science-feedback-loop*
-that applies Fitting Detection, Lakatos evaluation, and Bayesian/KG discipline.
+ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
+runs, and reproduces locked Python kernels. The live catalog contains 42 runnable entries; verify the
+current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
 npm ci
@@ -18,95 +17,69 @@ npm run check
 ./ice list
 ```
 
-## Quick Links
+## Core documents
 
-| Doc | Read this when |
-|-----|----------------|
-| [`../README.md`](../README.md) | First time using ICE_ORCA_DRAGON — start here |
-| [`USERGUIDE.md`](USERGUIDE.md) | Category-by-category walk-through of 47 scripts |
-| [`STATUS.md`](STATUS.md) | Classification ledger, Lakatos verdicts, Bayesian posteriors |
-| [`../CHANGELOG.md`](../CHANGELOG.md) | Computation evolution (S₁~S₇, verify_mp_mW, sedenion variants) |
-| [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md) | Historical attestation and current portability contract |
-| [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md) | queue03 method quarantine evidence |
+| Document | Purpose |
+|---|---|
+| [`../README.md`](../README.md) | overview, CLI, tier policy, current reproduction ledger |
+| [`USERGUIDE.md`](USERGUIDE.md) | live-catalog usage and kernel workflow |
+| [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
+| [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification contract |
+| [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
+| [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md) | historical attestation plus current erratum |
+| [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md) | queue03 method-quarantine evidence |
+| [`../SOURCES.md`](../SOURCES.md) | source and mythology/physics provenance |
 
-## Theory & Sources
+## Feedback policy
 
-| Doc | What it covers |
-|-----|----------------|
-| [`../SOURCES.md`](../SOURCES.md) | Mythology/physics dual structure, apostle #2 canon, 1차 소스 paths |
-| `/home/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md` | User's primary mythology source (자칭, CHU 명단) |
-| `/home/lagyeongjun/CD/MIND/metahumotonic/얼어붙은_강물의_노래.md` | ICED 반복 + SSB 구원기도 canon |
-| [`../../PROM_64_REPORT.md`](../../PROM_64_REPORT.md) | METAHUMOTONIC axiom12 cycle |
-| [`../../PROM_16_PHYSICS_REPORT.md`](../../PROM_16_PHYSICS_REPORT.md) | Physics reinforcement cycle |
-| [`../../PROM_64_RESOLUTION_REPORT.md`](../../PROM_64_RESOLUTION_REPORT.md) | 4 미해결 해결 경로 |
+Only T2 claim-impact work invokes the full scientific loop.
 
-## Feedback Loop
+| Tier | Short rule |
+|---|---|
+| T0 | engineering artifact + directly relevant checks |
+| T1 | frozen reproduction receipt; no confidence change |
+| T2 | declare target/fiber and preregistration before execution, then apply all relevant evidence gates |
 
-| Doc | Role |
-|-----|------|
-| [`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md) | Skill definition: 7-step loop (compute → classify → Fitting Detection → Lakatos → Bayesian → KG → consistency check) |
-| [`STATUS.md#classification-ledger`](STATUS.md#classification-ledger) | Current classification of all results |
-| [`STATUS.md#fitting-detection-pre-prediction-vs-post-fitting`](STATUS.md#fitting-detection-pre-prediction-vs-post-fitting) | Anti-numerology gate |
-| [`STATUS.md#lakatos-evaluation`](STATUS.md#lakatos-evaluation) | Progressive vs degenerating per category |
-| [`STATUS.md#bayesian-update-discipline`](STATUS.md#bayesian-update-discipline) | `P(E|~H)` discipline |
+For T2, relation, novelty, fitting risk, and target/fiber are independent axes. Null/multiplicity checks,
+numerical Bayes, and Lakatos are conditional gates, not seven mandatory steps for every calculation.
+Material/reusable evidence may become a `PENDING` proposal; canonical mutation requires separate
+authorized ratification. Discovery records a bounded follow-up instead of recursively dispatching itself.
 
-## Computation Categories
+See [`../AGENTS.md`](../AGENTS.md) and
+[`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md).
 
-| Category | Scripts | Walk-through |
-|----------|---------|--------------|
-| CD breaking | 5 (`cd_breaking_*`, `cd_final_quick.py`) | [`USERGUIDE.md#category-1--cayley-dickson-breaking`](USERGUIDE.md#category-1--cayley-dickson-breaking) |
-| CD embedding & propagator | 7 (`cd_embedding*`, `cd_chain_propagator.py`, `cd_path_amplitude*`) | [`USERGUIDE.md#category-2--cayley-dickson-embedding--propagator`](USERGUIDE.md#category-2--cayley-dickson-embedding--propagator) |
-| Dimensional analysis | 4 (`derive_*_ICE.py`) | [`USERGUIDE.md#category-3--dimensional-analysis`](USERGUIDE.md#category-3--dimensional-analysis) |
-| Higgs / S-proofs | 7 (`higgs_*`, `prove_higgs_*`, `prove_s1_~s7_*`) | [`USERGUIDE.md#category-4--higgs-mechanism--s₁s₇-proofs`](USERGUIDE.md#category-4--higgs-mechanism--s₁s₇-proofs) |
-| Sedenion (16D) | 9 (`sedenion_*`) | [`USERGUIDE.md#category-5--sedenion-16d-analysis`](USERGUIDE.md#category-5--sedenion-16d-analysis) |
-| Queue / orbit / rep | 11 (`queue_01~11_*`) | [`USERGUIDE.md#category-6--orbit--rep--queue-series`](USERGUIDE.md#category-6--orbit--rep--queue-series) |
-| Misc verification | 4 (`zd64_analysis.py`, `verify_mp_mW_3_256.py`, `ww_unitarity_bound_analysis.py`, `orca_friedmann.py`) | [`USERGUIDE.md#category-7--misc-verification`](USERGUIDE.md#category-7--misc-verification) |
+## Current execution map
 
-## Key Headline Results
+| Need | Command |
+|---|---|
+| inspect environment | `./ice doctor` |
+| list runnable kernels | `./ice list` or `./ice list --json` |
+| inspect one entry | `./ice info <name>` |
+| execute one entry | `./ice run <name>` |
+| list mapped reproduction cases | `./ice repro --list` |
+| run isolated ledger | `./ice repro` |
 
-| Result | Source | Classification |
-|--------|--------|----------------|
-| 42 assessors / 84 ZD pairs | `prove_higgs_results.json` | L1 combinatorial confirmation; Higgs referent not confirmed |
-| Der(S) = g₂ (14D) | `sedenion_g2_deep.py` | confirmation_local (no peer review yet) |
-| Koide Q = 2/3 | `derive_dimensionless_results.json` | NUMEROLOGY_CONFIRMED |
-| ICE mass_ratios | `derive_mass_ratios_results.json` | **self-refutation** (0/15 genuine) |
-| Custodial SU(2)×SU(2) | `queue_02_custodial_results.json` | refutation (0/42 fail) |
-| S₃ Jacobi = 6·associator | `prove_s3_results.json` | confirmation |
-| S₅ BV bounded | `prove_s5_results.json` | confirmation |
-| mp / mW = 3·256 | `verify_mp_mW_results.json` | NUMEROLOGY_CONFIRMED |
-| queue03 threshold scan | `queue_03_threshold_sensitivity_results.json` | NONPORTABLE / INVALID_METHOD |
+The mapped ledger currently reports 12 `REPRO`, queue03 `NONPORTABLE_FAIL`, and queue06
+`SUPERSEDED`. A nonzero overall exit is expected while those explicit statuses remain.
 
-Full table with Bayesian posteriors: [`STATUS.md#classification-ledger`](STATUS.md#classification-ledger).
+## SYMPOSIUM integration
 
-## SYMPOSIUM Cross-References
+The upstream repository is [gj3447/ICE_ORCA_DRAGON](https://github.com/gj3447/ICE_ORCA_DRAGON).
+SYMPOSIUM consumes it as `METAHUMOTONIC/ICE_ORCA_DRAGON`; integration documents live in the
+[SYMPOSIUM repository](https://github.com/gj3447/symposium):
 
-| Concept | Where |
-|---------|-------|
-| Apostle #2 mythology layer | [`../SOURCES.md`](../SOURCES.md) |
-| Apostle #2 canon (mythology paper source) | `/home/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md` |
-| Engineering methodology (forward) | [`../../../THEORY/APT/`](../../../THEORY/APT/) |
-| Reverse methodology (code → design recovery) | [`../../../THEORY/TPA/`](../../../THEORY/TPA/) |
-| Narrative feedback loop (mythology-side complement) | [`../../../.claude/skills/narrative-feedback-loop.md`](../../../.claude/skills/narrative-feedback-loop.md) |
-| Five weapons (orthogonal tools) | [`../../../THEORY/HARNESS/`](../../../THEORY/HARNESS/), [`../../../THEORY/PROMETHEUS/`](../../../THEORY/PROMETHEUS/), [`../../../THEORY/TALIBAN/`](../../../THEORY/TALIBAN/), [`../../../THEORY/LONGINUS/`](../../../THEORY/LONGINUS/), [`../../../THEORY/재배맨/`](../../../THEORY/재배맨/) |
-| Reproducibility KG dump | [`../../../REPRODUCTION/`](../../../REPRODUCTION/) |
+- [APT](https://github.com/gj3447/symposium/tree/main/THEORY/APT)
+- [TPA](https://github.com/gj3447/symposium/tree/main/THEORY/TPA)
+- [Narrative feedback policy](https://github.com/gj3447/symposium/blob/main/.claude/skills/narrative-feedback-loop.md)
+- [Naesengmoon](https://github.com/gj3447/symposium/tree/main/THEORY/%EB%82%98%EC%83%9D%EB%AC%B8)
+- [Reproduction snapshot](https://github.com/gj3447/symposium/tree/main/REPRODUCTION)
 
-## Plugin Manifest
+These are optional integration references, not runtime dependencies of the standalone workbench.
 
-See [`../.claude-plugin/plugin.json`](../.claude-plugin/plugin.json) for Claude Code marketplace catalog of the 47-script set + feedback-loop skill.
+## Plugin manifest
 
-## Mythology ↔ Physics Bridge
-
-ICE_ORCA_DRAGON is unique among SYMPOSIUM apostles in that *its mythology layer makes physical claims*. The mythology says "세상의 진정한 본질이 물리학"; this workbench *operationally tests* that claim. The mythology-physics dual:
-
-| Mythology phrase | Physics-side test |
-|------------------|-------------------|
-| 마음의 절대영도 동결 | `derive_epsilon_ICE.py` ε scaling toward zero |
-| sexvoid 형식 | `prove_higgs_ZD_doublet.py` 42 assessors / 84 ZD pairs as candidate inputs |
-| ICED 반복 + SSB 구원기도 | `prove_s7_WW_evasion.py` Ward-Takahashi evasion structure |
-| 얼음 + 범고래 + 용 3 합성 | Cayley-Dickson 32D → 64D embedding + propagator chain composition |
-
-The science-feedback-loop's *refutation discipline* is what prevents this dual from collapsing into pure numerology. When the mythology claim fails operationally (e.g., `derive_mass_ratios` 0/15 genuine), the workbench records the failure honestly.
-
----
-
-# KG: ICE_ORCA_DRAGON_docs_index, ICE_ORCA_DRAGON_apostle_2_physics_workbench
+[`../.claude-plugin/plugin.json`](../.claude-plugin/plugin.json) carries portable package metadata.
+The repository-native policy remains the standalone
+[`science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md); it is not falsely declared as a
+plugin skill directory. Runtime dependency contracts remain in `package.json`/`package-lock.json` and
+`pyproject.toml`/`uv.lock`, not in custom manifest fields.
