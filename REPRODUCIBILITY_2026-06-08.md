@@ -1,5 +1,61 @@
 # ICE_ORCA_DRAGON L1 재현성 attestation (2026-06-08)
 
+## 2026-08-14 portability erratum — current contract
+
+The historical body below is preserved as the record of the 2026-06-08
+same-environment run. Its `byte-identical` language must **not** be read as a
+cross-platform guarantee: BLAS/LAPACK, optimizer, and null-space basis choices were
+not pinned by that run.
+
+The current control plane is strict TypeScript + Effect 3 on Node 24
+(`package-lock.json`). Numerical kernels remain Python 3.13 with NumPy 2.5.2,
+SciPy 1.18.0, and SymPy 1.14.0 (`uv.lock`). `./ice repro` copies the candidate tree
+into an Effect-scoped temporary directory, deletes each mapped output before its
+kernel runs, drains stdout/stderr concurrently, kills the process group on timeout,
+and reads baselines from `git show HEAD:./<output>`. It never restores files with
+`git checkout`, so a user's dirty result cannot be erased.
+
+Current mapped legacy-output ledger:
+
+| Status | Count | Meaning |
+|---|---:|---|
+| `REPRO` | 12 | Keys/shapes/types and categorical values reproduce; registered numeric semantics pass |
+| `NONPORTABLE_FAIL` | 1 | `queue_03_threshold_sensitivity_scan` uses a basis-dependent entrywise commutator maximum |
+| `SUPERSEDED` | 1 | `queue_06_cooperative_vacuum` is not the generator of its committed repaired output |
+
+The overall command intentionally exits 1 while queue03 is quarantined. This is an
+honest needs-attention gate, not a failed attempt to manufacture a green badge.
+
+Comparison policy is field-aware:
+
+- object keys, array lengths, booleans, strings, and integer-valued JSON numbers are exact;
+- curated verdict/timestamp/MC-overlay fields are excluded explicitly at the top level;
+- ordinary floating-point leaves use `rtol=1e-12`, `atol=1e-15`;
+- the S5.4 master residual is the semantic invariant `abs(residual) <= 1e-12`;
+- only `$.case3_realistic.best_theta[*]` (circular distance) and
+  `$.case3_realistic.theta_spread` in queue04 use `atol=1e-6`;
+- NaN/Inf are failures, and queue03 is never tolerance-masked.
+
+Queue03 changes categorical pass/fail counts across valid SciPy null-space bases,
+so its old threshold story is method-invalid. See
+[`QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
+A basis-invariant v2 would require a new preregistration, script, result, and verdict;
+it must not overwrite the legacy JSON.
+
+Current commands:
+
+```bash
+npm ci
+uv sync --locked
+./ice doctor
+npm run check
+./ice repro --only prove_s5_bv_ainfty
+./ice repro --only queue_04_hosotani_toy
+./ice repro  # 12 REPRO + 1 NONPORTABLE + 1 SUPERSEDED; exit 1
+```
+
+---
+
 > PROM 16 remediation A1 산출. harness: `repro_check.py`. 정전 lesson: `lesson-ice-L1-repro-stale-output-path-exit0-not-reproduced-2026-06-05` + `lesson-ice-naive-remediation-reintroduces-drift-2026-06-08`.
 >
 > **이건 REPRODUCIBILITY attestation이지 correctness/물리진리 주장이 아니다.** green = "스크립트 재실행이 committed JSON의 *computed* 키를 byte-identical 재생성한다"(= exit 0이 기록된 수를 실제로 썼다). L2/L3 물리는 여전히 STAGNANT, 신화는 USER_PRIMARY.

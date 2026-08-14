@@ -6,6 +6,28 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Versio
 
 ---
 
+## [2026-08-14] — TypeScript + Effect control plane and portability correction
+
+- Replaced Python orchestration with a strict TypeScript control plane built on
+  Effect 3, `@effect/cli`, `@effect/platform`, and scoped Node process services.
+- Added exact Node (`package-lock.json`) and Python (`uv.lock`) contracts plus a
+  non-mutating `ice doctor` that checks both installed runtimes.
+- Rebuilt mapped-output reproduction around scoped temporary copies, typed errors,
+  process-group timeout cleanup, Schema JSON decoding, exact structure/type checks,
+  and field-specific numeric semantics.
+- Current ledger: 12 `REPRO`, queue03 `NONPORTABLE_FAIL`, queue06 `SUPERSEDED`.
+- Quarantined queue03's basis-dependent entrywise commutator metric instead of
+  tolerance-masking categorical drift; added a post-hoc portability audit.
+- Limited queue04's `atol=1e-6` exception to circular optimizer coordinates and
+  spread. Other paths retain exact/default-tight policy.
+- Split the pure Cayley-Dickson numerical kernel into `cd_core.py`, removing the
+  expensive analysis side effect from imports.
+- Added strict typecheck and 11 Effect/Vitest control-plane tests. GitHub Actions is
+  still not configured.
+- Corrected setup commands, historical reproducibility claims, and license metadata.
+
+---
+
 ## [2026-05-19 — twenty-seventh pass] — MB1+MB3+MB4 escape lane synthesis (user core claim test)
 
 > User push-back 2026-05-19: "내가 발견한거 있잖아 결합 깨짐의 무한 경로 적분이 중력". Re-attention to ICE core thesis (CD-chain path integral = gravity), which workbench-reframe §5 single escape lane addresses. Earlier session work had conflated this with mass-ratio failures.

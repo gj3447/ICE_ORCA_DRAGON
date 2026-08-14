@@ -15,7 +15,7 @@ ICE Higgs Candidate Identification - 수치 증명
 """
 import numpy as np
 from scipy.linalg import null_space as scipy_null_space
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 np.set_printoptions(precision=4, suppress=True, linewidth=200)
 

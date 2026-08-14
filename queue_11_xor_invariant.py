@@ -12,7 +12,7 @@ Test:
 4. Sedenion 곱셈표와 XOR 관계
 """
 import numpy as np
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 np.set_printoptions(precision=3, suppress=True)
 

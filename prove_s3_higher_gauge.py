@@ -16,7 +16,7 @@ S3.4: sedenion FDA 구조상수 c^p_qr 계산
 실행: python3 prove_s3_higher_gauge.py
 """
 import numpy as np
-from cd_embedding import cd_multiply, cd_conj
+from cd_core import cd_conj, cd_multiply
 
 np.random.seed(42)
 

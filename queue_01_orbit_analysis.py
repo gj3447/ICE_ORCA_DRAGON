@@ -10,7 +10,7 @@ Queue 1: Orbit Analysis (DECISIVE)
 - 42 orbits → 전부 독립, landscape
 """
 import numpy as np
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 np.set_printoptions(precision=4, suppress=True)
 

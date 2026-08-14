@@ -1,0 +1,32 @@
+{
+  "name": "ice-orca-dragon-control-plane",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "description": "Effect-powered control plane for the ICE_ORCA_DRAGON numerical workbench",
+  "engines": {
+    "node": ">=24.0.0 <25.0.0"
+  },
+  "scripts": {
+    "ice": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@effect/cli": "0.77.0",
+    "@effect/platform": "0.97.1",
+    "@effect/platform-node": "0.108.1",
+    "@effect/printer": "0.51.0",
+    "@effect/printer-ansi": "0.51.0",
+    "effect": "3.22.1"
+  },
+  "devDependencies": {
+    "@effect/vitest": "0.30.0",
+    "@types/node": "24.13.3",
+    "tsx": "4.23.12",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}

@@ -19,7 +19,35 @@
 | Classification ledger | See [the ledger below](#classification-ledger) |
 | Verdict distribution | 6 CONFIRMED / 4 CONFIRMATION_LOCAL / 3 REFUTED / 2 NUMEROLOGY_CONFIRMED / 2 METHOD_ARTIFACT / 1 NUMEROLOGY_HOLD / 1 INCONCLUSIVE (+1 MC judge meta=RESOLVED) |
 | Numerology MC judge | `numerology_mc_judge.py` → `numerology_mc_results.json` (P(E\|~H) computed under explicit null models, 2026-05-17) |
+| Control plane | Node 24 + strict TypeScript + Effect 3; exact packages in `package-lock.json` |
+| Numerical runtime | Python 3.13 + NumPy/SciPy/SymPy; exact packages in `uv.lock` |
+| Mapped-output audit | 12 semantic `REPRO` + 1 `NONPORTABLE_FAIL` + 1 `SUPERSEDED` (2026-08-14) |
 | Lakatos overall verdict | **BIFURCATED** (canonical, 2026-05-18 reframe): **L1 algebra = PROGRESSIVE** / **L2-L3 physics belt = DEGENERATING-STAGNANT** (Tüchsen 2024 EJPS third category). Physics belt: **0 SIGNAL_GENUINE** (10 NUMEROLOGY + 1 WEAK ember ε) per `../L2L3_NUMEROLOGY_LEDGER_2026-06-01.md`. The old blanket "progressive (11 conf > 3 ref)" is pre-reframe and superseded — see `lesson-prom16-hypercomplex-program-bifurcated-verdict-2026-05-18`. |
+
+---
+
+## Tooling and reproduction status (2026-08-14)
+
+`./ice` is an Effect-powered TypeScript control plane. It discovers and runs the
+legacy Python numerical kernels, verifies both lock contracts, models subprocess and
+timeout failures in the typed error channel, and performs mapped-output reproduction
+inside a scoped temporary copy. `npm run check` runs strict typechecking plus local
+Effect/Vitest contracts; GitHub Actions is not yet wired.
+
+The reproduction command is intentionally not all-green:
+
+- 12 portable mappings reproduce under field-aware semantic comparison;
+- `queue_03_threshold_sensitivity_scan` is `NONPORTABLE_FAIL` because an entrywise
+  commutator maximum is evaluated in an arbitrary SciPy null-space basis;
+- `queue_06_cooperative_vacuum` is `SUPERSEDED` because its committed repaired JSON
+  comes from `inconclusive_redo.py`, not the historical named script;
+- queue04's circular optimizer coordinates and spread alone use `atol=1e-6`; other
+  structure/types/categories remain exact and ordinary floats remain tight.
+
+The queue03 threshold artifact is distinct from `queue_03_rep_results.json`, which is
+the output of the separate archived representation-decomposition experiment. See
+[`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md)
+and [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md).
 
 ---
 
@@ -31,7 +59,7 @@ The science-feedback-loop classifies every result into one of four categories. R
 
 | Result | Source | External grounding | Bayesian posterior | Lakatos |
 |--------|--------|--------------------|--------------------| --------|
-| 42 sedenion ZD pairs | `prove_higgs_results.json` | Lygeros 2006 "42 Assessors" | high (external peer ref exists) | progressive |
+| 42 sedenion assessors / 84 ZD pairs (L1 combinatorics only) | `prove_higgs_results.json` | Lygeros 2006 "42 Assessors" | high for the count; Higgs referent remains L2/L3 numerology | progressive at L1 only |
 | S₃ Jacobi = 6·associator | `prove_s3_results.json` | FDA structure constant computation | high (algebraic identity) | progressive |
 | S₅ BV bounded | `prove_s5_results.json` | all_zero + all_bounded checks | high (consistency) | progressive |
 | Der(S) = g₂ (14D) | `sedenion_g2_deep.py` | g₂ literature (14-dim Lie algebra known) | medium-high (numeric only) | **CONFIRMATION_LOCAL** — no external peer review yet |
@@ -81,11 +109,12 @@ Three HOLD items were judged by Monte Carlo P(E|~H) under explicit null models
 
 **Key insight**: For Koide_Q the 499-candidate ensemble drawn from any small-integer atomic set produces near-hits to 2/3 (or any small-rational target) with p ≈ 1. The "match" carries zero information. For mp/mW the search space ~3M (a,n) pairs achieves arbitrary R within 0.1% in ~80% of cases — rational approximation theory, not physics.
 
-### Method artifact (1, demoted from CONFIRMATION_LOCAL via `queue_08_g2_diagnostic.py`)
+### Method artifacts
 
 | Result | Original claim | Diagnostic finding |
 |--------|----------------|--------------------|
 | g₂ rep on 7 orbits (`queue_08_g2`) | 16 independent generators with commutant_dim=1 → "G₂ fundamental rep" | (D2) so(7) rank=16 ≠ g₂'s 14; (D4) Casimir eigenvalues `[-3, -2.5×5, -0.5]` spread 2.5 violates Schur scalarity. Root cause: octonion inner-derivation formula `D_{a,b}(z) = [[e_a,e_b],z] - 3[e_a,e_b,z]` applied to *non-alternative* sedenion ambient does not close as a 14-dim Lie algebra. The script's "commutant_dim=1" was an artifact of an ad-hoc projection and a non-Killing-form Casimir sum. **The 16-vs-14 gap is method, not physics.** |
+| queue03 legacy threshold scan | portable custodial pass/fail threshold | `scipy.linalg.null_space` admits arbitrary orthogonal bases, while `max(abs(commutator entry))` is basis-dependent. Valid basis changes move values by up to 30.77% and change categorical counts. **NONPORTABLE / INVALID_METHOD; no tolerance relaxation.** |
 
 ### Inconclusive (1 remaining after 2026-05-17 method-bug fixes via `inconclusive_redo.py`)
 
@@ -222,7 +251,10 @@ The numerical verification is solid, but no arXiv preprint exists. STATUS remain
 
 ### L5 — Custodial refutation not yet pivoted
 
-`queue_02` refutes the naive custodial embedding. `queue_03_threshold_sensitivity_scan.py` was recommended but does not yet have a "next embedding" candidate. The program is locally degenerating in custodial unless an alternative embedding emerges.
+`queue_02` refutes the naive custodial embedding. The legacy queue03 threshold scan is
+now quarantined as basis-dependent and cannot provide a "next embedding" candidate.
+A basis-invariant v2 needs new preregistration and must first gate closure,
+nondegeneracy, and rank 6. The program remains locally degenerating in custodial.
 
 ### L6 — Discovery re-entry is manual
 
@@ -258,7 +290,8 @@ Statements must distinguish: *algebra layer* (progressive) vs *workbench tested*
 2. ✅ **MC p-value tests for numerology candidates** — Koide Q + mp/mW done (`numerology_mc_judge.py`). Remaining: c=4·ln(2), Bekenstein-connection.
 3. **Custodial-preserving embedding search** — PROM 16 outcome: pivot to Aut(𝕊) = G₂×S₃ native commuting SU(2)×SU(2) (R4 in PROM_16_REPORT.md). Precondition: R1 4-condition diagnostic.
 4. **Self-verdict field on all 47/53 scripts** — partial (18/18 result JSONs done; 30 scripts still produce no JSON). PROM 16 outcome: `_verdict_auto_emit.py` zero-mod hook (R3) + pyastsim canonical pruning 53→~20 (R5).
-5. **CI integration** — PROM 16 outcome: pytest+pytest-json-report+regressions+GH Actions cron `0 6 * * 1` (R6 8-step plan in PROM_16_REPORT.md).
+5. **CI integration** — local strict TypeScript + Effect/Vitest gate is implemented
+   (`npm run check`), but GitHub Actions and scheduled mapped-output audits remain unwired.
 6. **Auto-dispatch /apt-sp on discovery** — close the recursive loop programmatically
 7. **Sedenion-multiplication-preservation gate for queue_09_s3** — PROM 16 outcome: SS3TG triple-gate (R2) signed-permutation M-preservation + BSGS + S₃ presentation. CAVEAT: Aut(𝕊) S₃ factor contested by Wilmot 2025 — `:CompetingVerdict` flag needed.
 8. **NEW**: ε P2 zero-divisor filtration (R7) — SYMPOSIUM-novel candidate for MB1 form-uniqueness theorem. Sedenion-derived ε(r) has NO literature precedent (PROM 16 confirmed); P2 = n_eff = 16 − dim(ZD-locus) → forced ε(r) ∝ 1/r^(n_eff+1).

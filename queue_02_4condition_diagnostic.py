@@ -28,7 +28,7 @@ import pathlib
 import statistics
 
 import numpy as np
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 from scipy.linalg import null_space
 
 ROOT = pathlib.Path(__file__).parent

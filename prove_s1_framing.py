@@ -22,7 +22,7 @@ S1.4: Zero Divisor의 level 4 발현 (sedenion 42-pair 구조)
 """
 import numpy as np
 from itertools import product
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 np.random.seed(42)
 

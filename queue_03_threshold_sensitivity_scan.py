@@ -15,7 +15,7 @@ EXPERIMENT DESIGN:
 THRESHOLDS: [0.001, 0.01, 0.1, 0.5, 1.0, 1.5, 2.0]
 """
 import numpy as np
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 from scipy.linalg import null_space
 import json
 from datetime import datetime

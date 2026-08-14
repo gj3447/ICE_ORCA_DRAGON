@@ -6,69 +6,15 @@ Cayley-Dickson multiplication: (a1,a2)(b1,b2) = (a1*b1 - conj(b2)*a2, b2*a1 + a2
 conj: negate all imaginary components (all except index 0).
 """
 import numpy as np
-from itertools import combinations
+from cd_core import (
+    build_mult_table,
+    cd_conj,
+    cd_multiply,
+    left_mult_matrix,
+    null_space,
+    right_mult_matrix,
+)
 np.set_printoptions(precision=6, suppress=True, linewidth=140)
-
-# ============================================================
-# 1. Cayley-Dickson multiplication (recursive)
-# ============================================================
-def cd_conj(x):
-    """Conjugate: negate all components except index 0."""
-    c = -x.copy()
-    c[0] = x[0]
-    return c
-
-def cd_multiply(a, b, n):
-    """Multiply two elements in the 2^n-dimensional CD algebra."""
-    dim = 2**n
-    assert len(a) == dim and len(b) == dim
-    if n == 0:
-        return a * b
-    half = dim // 2
-    a1, a2 = a[:half], a[half:]
-    b1, b2 = b[:half], b[half:]
-    part1 = cd_multiply(a1, b1, n-1) - cd_multiply(cd_conj(b2), a2, n-1)
-    part2 = cd_multiply(b2, a1, n-1) + cd_multiply(a2, cd_conj(b1), n-1)
-    return np.concatenate([part1, part2])
-
-def build_mult_table(n):
-    """Build full multiplication table for 2^n-dim CD algebra."""
-    dim = 2**n
-    MULT = np.zeros((dim, dim, dim), dtype=float)
-    for i in range(dim):
-        for j in range(dim):
-            ei = np.zeros(dim); ei[i] = 1.0
-            ej = np.zeros(dim); ej[j] = 1.0
-            MULT[i, j, :] = cd_multiply(ei, ej, n)
-    return MULT
-
-def left_mult_matrix(a, MULT):
-    """Matrix L_a such that L_a @ x = a * x."""
-    dim = len(a)
-    L = np.zeros((dim, dim))
-    for j in range(dim):
-        for k in range(dim):
-            if a[k] != 0:
-                L[:, j] += a[k] * MULT[k, j]
-    return L
-
-def right_mult_matrix(b, MULT):
-    """Matrix R_b such that R_b @ x = x * b."""
-    dim = len(b)
-    R = np.zeros((dim, dim))
-    for j in range(dim):
-        for k in range(dim):
-            if b[k] != 0:
-                R[:, j] += b[k] * MULT[j, k]
-    return R
-
-def null_space(M, tol=1e-10):
-    """Compute null space of matrix M."""
-    U, S, Vh = np.linalg.svd(M)
-    null_dim = np.sum(S < tol)
-    if null_dim == 0:
-        return np.zeros((0, M.shape[1]))
-    return Vh[-null_dim:]
 
 # ============================================================
 # 2. Build multiplication tables for 16D and 32D

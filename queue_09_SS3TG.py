@@ -40,7 +40,7 @@ import pathlib
 
 import numpy as np
 
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 ROOT = pathlib.Path(__file__).parent
 DATE = "2026-05-17"

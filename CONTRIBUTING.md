@@ -20,3 +20,28 @@ Pull requests without this sign-off will not be merged. By contributing you agre
 contribution may also be distributed under the owner's commercial license (per CLA.md).
 
 Contact: Ra Gyeongjun (라경준) — gj3447@gmail.com
+
+## Development and validation
+
+The control plane and numerical kernels have separate exact locks:
+
+```bash
+npm ci
+uv sync --locked
+./ice doctor
+npm run check
+```
+
+For a changed numerical kernel, also run its focused isolated audit:
+
+```bash
+./ice repro --only <mapped-script-name>
+```
+
+`npm run check` protects the TypeScript/Effect control-plane contract; it is not a
+physics oracle. Scientific changes still require preregistration, fitting detection,
+MC-null discrimination where applicable, Lakatos classification, and provenance.
+
+Do not relax the global comparator to make a drift green. Register a field-level
+semantic invariant with evidence, or classify the artifact as nonportable. In
+particular, the legacy queue03 metric is intentionally `NONPORTABLE_FAIL`.

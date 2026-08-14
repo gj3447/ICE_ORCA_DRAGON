@@ -21,7 +21,7 @@ S2.4: Adler zero — pNGB soft limit amplitude 소멸 (toy linearized)
 실행: python3 prove_s2_CCWZ.py
 """
 import numpy as np
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 np.random.seed(42)
 

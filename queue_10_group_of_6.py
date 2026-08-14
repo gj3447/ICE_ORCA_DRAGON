@@ -12,7 +12,7 @@ Candidates for |G|=6:
 """
 import numpy as np
 from itertools import product
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 np.set_printoptions(precision=3, suppress=True)
 

@@ -22,7 +22,7 @@ S5.4: BV master equation {S₀, S₀} = 0 (toy model)
 import numpy as np
 import json
 from itertools import permutations
-from cd_embedding import cd_multiply, cd_conj
+from cd_core import cd_conj, cd_multiply
 
 np.random.seed(42)
 

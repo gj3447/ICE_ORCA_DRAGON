@@ -37,7 +37,7 @@
 - `cd_breaking_*.py` — Cayley-Dickson breaking (32D vs 64D algebra identities)
 - `cd_embedding.py`, `cd_path_amplitude*.py` — CD construction
 - `derive_*_ICE.py` — 차원분석 (Lstar/dimensionless/epsilon/mass_ratios)
-- `higgs_mechanism.py`, `prove_higgs_*.py` — Higgs ZD doublet (42 ZD pairs all candidates)
+- `higgs_mechanism.py`, `prove_higgs_*.py` — Higgs-referent test over 42 assessors / 84 ZD pairs
 - `prove_s1~s7_*.py` — S₁ framing, S₂ CCWZ, S₃ higher gauge, S₅ BV, S₇ WW evasion
 - `sedenion_*.py` — Sedenion 16D 분석, Der(S)=g₂ 14D 검증, SU(2)/SU(3) 임베딩
 - `queue_01~11_*.py` — orbit (7×6=42), custodial (0/42 fail), rep (0.75 균일), Hosotani, CW, ZD breaking
@@ -52,9 +52,9 @@
 |---|---|---|
 | 42 sedenion ZD **assessors** | `prove_higgs_results.json` | ✓ 외부 검증 (Lygeros 2006 "42 Assessors"). 정밀: 42 = **assessors** (7 box-kite × 6), ZD-*pair* count은 84, primitive units 168 (de Marrais chain, 독립 재계산 2026-06-05). "42 ZD pairs"는 assessor count의 느슨한 라벨 — 숫자 42 보존, 용어만 정밀화. → `avenue3_decisive_test_2026-06-05/RESULTS.md` |
 | Der(S) = g₂ 14D | `sedenion_g2_deep.py` | ✓ 수치 검증, 외부 peer 미검증 (arXiv preprint 권장) |
-| Koide Q = 2/3 | `derive_dimensionless_results.json` | 다중 정확 일치 (XOR_min_offset/G2_num_roots 등). MC p-value 검증 필요 |
+| Koide Q = 2/3 | `derive_dimensionless_results.json` | **NUMEROLOGY_CONFIRMED** — MC null P(E\|~H)=1.000 |
 | mass_ratios | `derive_mass_ratios_results.json` | **자체 verdict: "ICE cannot genuinely derive" 0/15 genuine** |
-| custodial | `queue_02_custodial_results.json` | **0/42 fail** (max_commutator ~1.9). threshold sweep 권장 |
+| custodial | `queue_02_custodial_results.json` | **0/42 fail**. Legacy queue03 threshold sweep is basis-dependent and quarantined (`QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`) |
 | S₃ Jacobi=6·associator | `prove_s3_results.json` | ✓ 검증, FDA structure constants nontrivial |
 | S₅ BV bounded | `prove_s5_results.json` | ✓ all_zero, all_bounded |
 
@@ -62,9 +62,9 @@
 
 | 경로 | 내용 |
 |---|---|
-| `/Users/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md` | 화자 자칭, "CHU(계산가능하이퍼우주)" 명단, "그냥 모든것은 하이퍼그래프" |
-| `/Users/lagyeongjun/CD/MIND/metahumotonic/얼어붙은_강물의_노래.md` | ICED 반복 + SSB 구원기도 정전 |
-| `/Users/lagyeongjun/CD/MIND/metahumotonic/얼음장.md` | 얼음 단편 |
+| `/home/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md` | 화자 자칭, "CHU(계산가능하이퍼우주)" 명단, "그냥 모든것은 하이퍼그래프" |
+| `/home/lagyeongjun/CD/MIND/metahumotonic/얼어붙은_강물의_노래.md` | ICED 반복 + SSB 구원기도 정전 |
+| `/home/lagyeongjun/CD/MIND/metahumotonic/얼음장.md` | 얼음 단편 |
 
 ## 관련 보고서
 
@@ -83,8 +83,8 @@
 
 ```cypher
 MATCH (a:Apostle {position: 2})
-SET a.sourceFolderPath = '/Users/lagyeongjun/CD/SYMPOSIUM/ICE_ORCA_DRAGON/',
-    a.canonicalMyth = '/Users/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md',
+SET a.sourceFolderPath = '/home/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/',
+    a.canonicalMyth = '/home/lagyeongjun/CD/MIND/metahumotonic/나는야_ice_orca_dragon.md',
     a.physicsCalcsCount = 60
 ```
 

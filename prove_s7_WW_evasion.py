@@ -25,7 +25,7 @@ S7.4: Minimum W-W assumption violation 카운트 (Occam — 몇 개 깨야 충�
 실행: python3 prove_s7_WW_evasion.py
 """
 import numpy as np
-from cd_embedding import cd_multiply
+from cd_core import cd_multiply
 
 np.random.seed(42)
 

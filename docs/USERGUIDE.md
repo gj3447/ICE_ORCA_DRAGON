@@ -31,7 +31,12 @@ Each category answers:
 4. **Classification verdict** — confirmation / refutation / discovery / numerology (see [`STATUS.md`](STATUS.md))
 5. **Reproduce** — exact command
 
-Scripts are *standalone Python*. No package install required beyond `numpy` / `sympy` (and `jq` for inspecting JSON). All scripts write JSON results in-place next to themselves.
+The control plane is strict TypeScript + Effect 3 on Node 24; numerical kernels
+remain Python 3.13 with NumPy/SciPy/SymPy. Bootstrap both exact locks with
+`npm ci` and `uv sync --locked`, verify them with `./ice doctor`, then use
+`./ice run <name>`. `jq` is optional for inspecting JSON. Direct kernel runs write
+next to the script; `./ice repro` instead uses an Effect-scoped temporary copy and
+leaves the checkout untouched.
 
 ---
 
@@ -49,7 +54,7 @@ Scripts are *standalone Python*. No package install required beyond `numpy` / `s
 
 **Reproduce**:
 ```bash
-python cd_breaking_final.py
+./ice run cd_breaking_final
 # Inspect output (in-script print + result JSON if written)
 ```
 
@@ -73,8 +78,8 @@ python cd_breaking_final.py
 
 **Reproduce**:
 ```bash
-python cd_embedding_final_check.py
-python cd_path_amplitude_v2.py
+./ice run cd_embedding_final_check
+./ice run cd_path_amplitude_v2
 ```
 
 **Pitfall**: The v1 / v2 / final progression is *not* a regression; v1 documents an early sign convention error which v2 corrects. Always run `final_check` or `v2` for current results.
@@ -88,13 +93,13 @@ python cd_path_amplitude_v2.py
 | Script | What it derives | JSON result | Verdict |
 |--------|------------------|-------------|---------|
 | `derive_Lstar_from_ICE.py` | L* length scale | `derive_Lstar_results.json` | derivation attempt |
-| `derive_dimensionless_ICE.py` | dimensionless ratios (Koide Q etc.) | `derive_dimensionless_results.json` | multiple coincidences — **numerology candidate** |
+| `derive_dimensionless_ICE.py` | dimensionless ratios (Koide Q etc.) | `derive_dimensionless_results.json` | **NUMEROLOGY_CONFIRMED** by MC null, P(E\|~H)=1.000 |
 | `derive_epsilon_ICE.py` | ε small parameter | `derive_epsilon_results.json` | scaling proposal |
 | `derive_mass_ratios_ICE.py` | quark/lepton mass ratios | `derive_mass_ratios_results.json` | **self-refutation: "ICE cannot genuinely derive (0/15 genuine)"** |
 
 **Reproduce**:
 ```bash
-python derive_mass_ratios_ICE.py
+./ice run derive_mass_ratios_ICE
 jq '.verdict' derive_mass_ratios_results.json
 # → "ICE cannot genuinely derive (0/15 genuine)"
 ```
@@ -110,7 +115,7 @@ jq '.verdict' derive_mass_ratios_results.json
 | Script | Role | JSON result |
 |--------|------|-------------|
 | `higgs_mechanism.py` | Higgs mechanism baseline | (in-script print) |
-| `prove_higgs_ZD_doublet.py` | **42 ZD pairs as Higgs doublet candidates** | `prove_higgs_results.json` |
+| `prove_higgs_ZD_doublet.py` | **42 assessors / 84 ZD pairs as candidate inputs** | `prove_higgs_results.json` |
 | `prove_s1_framing.py` | S₁ — symplectic framing | (in-script print) |
 | `prove_s2_CCWZ.py` | S₂ — Callan-Coleman-Wess-Zumino coset | (in-script print) |
 | `prove_s3_higher_gauge.py` | S₃ — higher gauge (Jacobi = 6·associator) | `prove_s3_results.json` |
@@ -121,15 +126,18 @@ jq '.verdict' derive_mass_ratios_results.json
 
 **Reproduce**:
 ```bash
-python prove_higgs_ZD_doublet.py
+./ice run prove_higgs_ZD_doublet
 jq '.zd_pairs_count' prove_higgs_results.json
 # → 42
 
-python prove_s3_higher_gauge.py
+./ice run prove_s3_higher_gauge
 jq '.jacobi_equals_associator' prove_s3_results.json
 ```
 
-**Pitfall**: 42 ZD pairs were originally numerology candidates. External grounding via Lygeros 2006 "42 Assessors" promoted them to **confirmation**. Be careful not to use this as precedent for *other* "42" coincidences without independent external evidence.
+**Pitfall**: Lygeros 2006 externally grounds the **42 assessors** combinatorics, not
+the Higgs interpretation. The corresponding 84 ZD pairs are L1 algebra data; the
+L2/L3 Higgs referent remains NUMEROLOGY (DEAD). Do not promote one layer from evidence
+that belongs to another.
 
 ---
 
@@ -151,10 +159,10 @@ jq '.jacobi_equals_associator' prove_s3_results.json
 
 **Reproduce**:
 ```bash
-python sedenion_g2_deep.py
+./ice run sedenion_g2_investigation
 # Expected output: Der(S) dim = 14 (matches g₂)
 
-python sedenion_su2_definitive.py
+./ice run sedenion_su2_definitive
 ```
 
 **Pitfall**: Der(S) = g₂ is **numerically verified** here but has no external peer review yet. STATUS marks this as `confirmation_local`, pending arXiv preprint. Do not cite as established result without that step.
@@ -170,7 +178,7 @@ python sedenion_su2_definitive.py
 | `queue_01_orbit_analysis.py` | Orbit structure | `queue_01_orbit_results.json` | 7×6=42 orbit |
 | `queue_02_custodial_check.py` | Custodial SU(2)×SU(2) preservation | `queue_02_custodial_results.json` | **0/42 pairs preserve (refutation)** |
 | `queue_03_rep_decomposition.py` | Representation decomposition | `queue_03_rep_results.json` | 0.75 uniform |
-| `queue_03_threshold_sensitivity_scan.py` | Threshold scan | (in-script) | threshold sensitivity |
+| `queue_03_threshold_sensitivity_scan.py` | Legacy threshold scan | `queue_03_threshold_sensitivity_results.json` | **NONPORTABLE / INVALID_METHOD** |
 | `queue_04_hosotani_toy.py` | Hosotani gauge-Higgs unification toy | `queue_04_hosotani_results.json` | toy model |
 | `queue_05_coleman_weinberg.py` | CW effective potential | `queue_05_cw_results.json` | radiative SSB |
 | `queue_06_cooperative_vacuum.py` | Cooperative vacuum | `queue_06_coop_results.json` | vacuum structure |
@@ -183,16 +191,20 @@ python sedenion_su2_definitive.py
 
 **Reproduce (key)**:
 ```bash
-python queue_01_orbit_analysis.py
+./ice run queue_01_orbit_analysis
 jq '.orbit_size' queue_01_orbit_results.json
 # → 42 (7 × 6)
 
-python queue_02_custodial_check.py
+./ice run queue_02_4condition_diagnostic
 jq '.fail_count_over_total' queue_02_custodial_results.json
 # → "0/42 (max_commutator ~1.9)"
 ```
 
-**Pitfall**: `queue_02_custodial_results.json` is a **refutation** of the naive embedding's custodial preservation. Threshold sweep (`queue_03_threshold_sensitivity_scan.py`) was recommended but not auto-blocking. STATUS marks this Lakatos-degenerating unless an alternative custodial-preserving embedding emerges.
+**Pitfall**: `queue_02_custodial_results.json` is a **refutation** of the naive
+embedding. The legacy queue03 sweep cannot soften it: `scipy.linalg.null_space`
+chooses an arbitrary orthogonal basis, while queue03 measures an entrywise maximum
+that changes under that basis rotation. Its pass/fail counts are quarantined rather
+than tolerance-masked. See [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
 
 ---
 
@@ -205,13 +217,15 @@ jq '.fail_count_over_total' queue_02_custodial_results.json
 | `ww_unitarity_bound_analysis.py` | WW unitarity bound | (uses `finding_ww_evasion.json`) |
 | `orca_friedmann.py` | Friedmann equation derivation | (in-script) |
 
-**verify_mp_mW special note**: A numerical hit of `mp / mW = 3 · 256 = 768` is a **numerology candidate**. The Fitting Detection step (was this pre-registered or post-hoc?) determines whether it gets `:Possibility` or `:NUMEROLOGY_HOLD`. Check [`STATUS.md`](STATUS.md) for current verdict.
+**verify_mp_mW special note**: `mp / mW = 3 · 256 = 768` is
+**NUMEROLOGY_CONFIRMED**: the literal comparison is far off, and the broad layer-3
+search has MC null P(E\|~H)=0.812. This is no longer a pending candidate.
 
 **Historical fitting acknowledgment (UEQFT/ICE 287/15)**: KG node `UEQFT_ICE_CLUE_ANALYSIS_2026_02_07` (clue_C_honest) explicitly records 287/15 ≈ 19.13 as post-hoc fitting (287/14 = 20.5 and 287/16 = 17.9 were also computationally available, suppressed after seeing the target). `alpha_derivation_status = 'numerology_suspected'`. See [`STATUS.md` § Fitting Detection](STATUS.md#fitting-detection-pre-prediction-vs-post-fitting). Propagated per `lesson-prom32-thothsaem-ueqft-claims-2026-05-17`.
 
 **Reproduce**:
 ```bash
-python verify_mp_mW_3_256.py
+./ice run verify_mp_mW_3_256
 jq '.' verify_mp_mW_results.json
 ```
 
@@ -240,7 +254,7 @@ If a script does not write JSON, classification happens via the feedback-loop sk
 After a fresh computation:
 
 ```bash
-python <some_script>.py
+./ice run <some_script>
 # JSON appears next to script
 ```
 
@@ -250,7 +264,7 @@ Then in Claude Code:
 "science-feedback-loop 실행 — <result_file>.json"
 ```
 
-The skill (`/Users/lagyeongjun/CD/SYMPOSIUM/METAHUMOTONIC/ICE_ORCA_DRAGON/.claude/skills/science-feedback-loop.md`) executes:
+The local skill ([`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md)) executes:
 
 1. Read JSON
 2. Classify (4-way: confirmation / refutation / discovery / numerology)
@@ -307,7 +321,14 @@ A: Check git log of the corresponding `:Contract` node creation timestamp vs the
 A: Re-classifications are first-class. The feedback-loop skill creates a new `:Verdict` node linked to the prior; both are retained (Eilu va-Eilu rule from narrative-feedback-loop's machloket discipline). Never silently overwrite.
 
 **Q: Is this workbench reproducible from scratch?**
-A: Yes. All scripts are standalone Python. No data files outside the directory. `numpy` / `sympy` only. See [`REPRODUCTION/`](../../../REPRODUCTION/) for KG dump if you also want canonical metadata.
+A: The mapped legacy-output ledger currently reports **12 semantic REPRO**, one
+**NONPORTABLE_FAIL** (queue03), and one **SUPERSEDED** mapping (queue06). Run
+`npm ci`, `uv sync --locked`, then `./ice repro`; overall exit 1 is intentional while
+queue03 remains quarantined. The Effect harness compares structure/types exactly,
+uses tight numeric semantics, and applies `atol=1e-6` only to queue04's registered
+optimizer-angle/spread paths. It never overwrites committed JSON. This attests
+reproduction behavior, not physical correctness.
+See [`REPRODUCTION/`](../../../REPRODUCTION/) for the separate KG dump.
 
 ---
 
