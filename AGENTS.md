@@ -52,22 +52,30 @@ basis-dependent metric 때문에 `NONPORTABLE_FAIL`이며 tolerance로 숨기지
 
 ## Definition of Done
 
-`.claude/skills/science-feedback-loop.md` 의 루프를 끝까지 돌았을 때만 완료다.
+먼저 작업 tier를 고른다. 높은 tier의 의례를 낮은 tier에 소급 적용하지 않는다.
+여러 tier가 겹치면 가장 높은 tier를 결과 관측 전에 적용한다. T0/T1에서 T2로 승격할 수는
+있지만 결과가 불리하거나 null이라는 이유로 T2를 낮추지 않는다.
 
-```
-계산 → 분류(confirmation / refutation / discovery / numerology)
-     → Fitting Detection → Lakatos(progressive / degenerating)
-     → Bayesian Update → KG 기록
-```
+- **T0 일반 공학** — 문서, CLI, 리팩터링, 의존성, 타입/단위검사, 재현 하네스.
+  Node/TS 제어면은 `npm run check`, Python 커널·`uv.lock`은 `./ice doctor`와 대상
+  run/repro, 문서는 관련 형식/링크 검사처럼 변경한 plane에 직접 관련된 최소 검증이 통과하고
+  결과 JSON을 뜻하지 않게 바꾸지 않으면 완료다. 과학 분류, Bayes, Lakatos,
+  science-evidence KG 기록은 필요 없다.
+- **T1 동결 계산 재현** — 기존 방법·observable·해석을 바꾸지 않는 재실행.
+  `./ice doctor`, 정확한 명령/환경, semantic diff를 기록한다. 기대 결과와 일치했다는 이유만으로
+  이론 confidence를 올리지 않는다. 유의한 drift나 과학 주장에 영향을 주는 방법 결함이 나오면
+  T2로 승격한다.
+- **T2 과학 주장 영향** — 새/변경 observable, 가설 지지·반박, null/multiplicity 결과,
+  Contract confidence/status 또는 Span grade에 영향을 주는 작업. 이때만
+  `.claude/skills/science-feedback-loop.md`의 전체 게이트를 적용한다. 코드도 바꿨다면 T0의
+  관련 공학 검사도 함께 통과해야 한다.
 
-1. **사전예측인지 사후피팅인지 판별을 강제한다.** 이 판별 없이 결과를 보고하지 않는다.
-   사전등록 목록에 없던 예측을 사후에 맞췄다면 그렇게 쓴다.
-2. **numerology 로 분류되면 `NUMEROLOGY_HOLD` 태깅 + Possibility 강등.** 승격하지 않는다.
-3. 수비학 판별은 인상이 아니라 **MC null 정량화**로 한다. 같은 ICE primitive 에서 뽑은
-   랜덤 비율이 얼마나 자주 그만큼 맞는지를 세고, look-elsewhere 를 보정한다.
-4. **discovery 는 재귀 진입**이다 (PH2 재진입, `/apt-sp` 로 새 span 분해). 닫지 않는다.
-5. KG 기록에는 provenance(증거 경로 + 날짜 + actor)를 붙인다. 새 `:Lesson` 은
-   `lakatos_mechanism` 이 없으면 write 가 차단된다.
+T2에서도 사전등록 여부와 적용 가능한 null model을 결과 분류보다 먼저 고정한다. 수치 Bayes는 prior와
+`P(E|H)`, `P(E|~H)`가 사전에 정의된 경우에만 한다. fitting/numerology 의심은 MC null과
+look-elsewhere 검증 전에는 승격 근거가 아니다. 여러 세션에서 재사용할 결과만 provenance가
+붙은 `PENDING` evidence로 KG에 기록한다. Contract/Span 변경은 기존 evidence ID와 명시된
+ratifier 권한을 확인한 별도 ratification 뒤에 한다. discovery는 후속 작업으로 등록하고,
+현재 판단을 막거나 사용자가 명시한 경우에만 재귀 진입한다.
 
 ## 결과 파일 규율
 
@@ -79,10 +87,10 @@ basis-dependent metric 때문에 `NONPORTABLE_FAIL`이며 tolerance로 숨기지
 
 ## Workflow
 
-1. `./ice list` 로 이미 있는 스크립트를 먼저 본다. 가장 비슷한 것을 읽는다.
-2. 무엇을 예측하는지 **먼저** 쓴다. 돌리고 나서 정하지 않는다.
+1. 관련 기존 산출물을 먼저 본다. 계산 작업일 때만 `./ice list`로 가장 비슷한 스크립트를 찾는다.
+2. T0/T1/T2를 먼저 선언한다. T2라면 무엇을 예측하고 어떤 기준으로 판정할지 실행 전에 쓴다.
 3. 가장 작은 변경을 만든다.
-4. `./ice run <name>` 으로 돌리고, 필요하면
-   `python3 ice_prereg_check.py` 로 게이트를 건다.
-5. 분류 → Lakatos → KG 까지 간 뒤에 완료라고 말한다.
-6. 돌린 명령과 실제 출력을 보고한다. 관측하지 않은 그린을 보고하지 않는다.
+4. 변경에 맞는 최소 검증을 실행한다. 계산을 바꿨다면 `./ice run <name>`, 재현이면
+   `./ice repro --only <name>`, T2면 필요에 따라 `python3 ice_prereg_check.py`를 사용한다.
+5. 선택한 tier의 완료 조건까지만 수행한다. T0/T1에 T2 의례를 얹지 않는다.
+6. 실행한 명령과 실제 출력을 보고한다. 관측하지 않은 그린을 보고하지 않는다.
