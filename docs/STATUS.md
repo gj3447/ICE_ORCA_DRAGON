@@ -3,11 +3,11 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-14
+## Current state — 2026-08-15
 
 | Component | State |
 |---|---|
-| Runnable catalog | 42 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 43 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -87,6 +87,30 @@ A parent report may close after classifying its evidence and recording one bound
 does not trigger automatic `/apt-sp` recursion; any child is separately scoped and tiered.
 
 Source: [`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md).
+
+## Current bounded T2 result — CPT × Temporal-Folded SUSY Phase 12
+
+Phase 12 is a `POST_HOC` exact/deductive cycle, not a confirmation or canon change.
+
+- The Phase 11 homogeneous-quadratic strong class, and the weak dilation with an unrestricted lapse
+  rescaling, are removable from the open-interval bulk by a time-dependent canonical frame change under
+  the stated invariance/completeness assumptions. Endpoint twist, polarization, and (for momentum
+  shears) a boundary generating function remain.
+- An engineered, regular 4D rigid \(N=1\) Wess–Zumino spatial BPS wall gives scalar and chiralino
+  components the same kinematic internal-flavor frame. Its scalar differential expressions have exact
+  formal factorization; the executable does not derive the full Weyl operator or a self-adjoint domain.
+  A boson-only collar fails the matched endpoint identity.
+- This does **not** derive a local-supergravity seam, a cosmological observable, boson–fermion branch
+  exchange, a physical endpoint detector, or “pre-Big-Bang time = SUSY.” The partial matter-coupled
+  SUGRA candidate remains `INCONCLUSIVE`.
+- The executable reports 38 exact positive checks and rejects 9 semantic mutants. It has no mapped
+  legacy result JSON, so `./ice run phase12_boundary_twist_interface` is the applicable execution gate;
+  it is not an additional case in the 14-entry reproduction ledger.
+
+See
+[`../cpt_temporal_folded_susy/PHASE12_BOUNDARY_TWIST_INTERFACE.md`](../cpt_temporal_folded_susy/PHASE12_BOUNDARY_TWIST_INTERFACE.md)
+and
+[`../cpt_temporal_folded_susy/PHASE12_RESEARCH_CONTRACT.json`](../cpt_temporal_folded_susy/PHASE12_RESEARCH_CONTRACT.json).
 
 ## Historical scientific ledger
 

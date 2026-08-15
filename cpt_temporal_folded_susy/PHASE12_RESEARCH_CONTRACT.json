@@ -1,0 +1,130 @@
+{
+  "schema_version": "ice-science-feedback-loop/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-15-phase12",
+  "title": "Finite collar boundary-twist theorem and conditional endpoint-covariant N=1 interface witness",
+  "tier": "T2",
+  "registration": "POST_HOC",
+  "registration_reason": "The Phase 7 and Phase 11 collar outputs, and the specific canonical-removability observation, were inspected before this contract. The initial acceptance and mutation matrix was frozen before the Phase 12 executable was written. Post-run adversarial review then narrowed source, adjoint, fermion-operator, and SUGRA wording without changing the algebraic pass/fail gates; no confirmation label is available.",
+  "baseline": {
+    "repository_head": "05c8fe09920cce39959eb18bc352c4ba9c73fd47",
+    "phase11_report": "cpt_temporal_folded_susy/PHASE11_COLLAR_ADMISSIBILITY.md",
+    "phase11_executable": "cpt_temporal_folded_susy/phase11_collar_admissibility.py",
+    "declared_at_utc": "2026-08-15T14:57:56Z",
+    "actor": "Codex"
+  },
+  "claims": [
+    {
+      "id": "P12A_BOUNDARY_TWIST",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "hypothesis": "For S = integral[p.qdot - N C - a(u) J] du on a finite exact canonical chart, an autonomous complete generator with {C,J}=0 is removable from the open-interval bulk by the time-dependent Hamiltonian flow of J; only the transported endpoint data, endpoint symplectic twist, and a boundary generating function remain.",
+      "assumptions": [
+        "a(u) is a prescribed real integrable profile rather than a dynamical defect field",
+        "the Hamiltonian flow of J is complete and invertible over the required finite parameter interval",
+        "there is no additional J-noninvariant bulk term",
+        "endpoint functionals, observables, and polarization are transported with the canonical transformation",
+        "canonical bulk equivalence is not identified automatically with gauge equivalence"
+      ],
+      "acceptance": [
+        "derive the transformation of the canonical one-form, not only the equations of motion",
+        "verify exact removal for the Phase 7 rotation, a Phase 11 momentum shear, and a representative boost",
+        "verify that, for one fixed autonomous generator, the endpoint holonomy depends only on kappa = integral a du while the interior frame follows the cumulative profile",
+        "verify that a generator which fails both {C,J}=0 and the allowed projective condition {C,J}=lambda C does not remain equivalent to the unchanged baseline bulk constraint"
+      ],
+      "inference_if_passed": "SUPPORTS",
+      "novelty_if_passed": "REPRODUCTION",
+      "novelty_note": "This is a programme-local application of a standard Hamiltonian-flow lemma, not a literature-priority claim."
+    },
+    {
+      "id": "P12A_WEAK_DILATION",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "hypothesis": "Provided N is an unrestricted multiplier varied before any lapse parity/profile gauge fixing, the weak generator J_dil=q.p with {C,J_dil}=-2C is removable from the bulk together with the lapse redefinition N_new=N exp(-2 theta), leaving an endpoint dilation.",
+      "acceptance": [
+        "verify the canonical one-form identity exactly",
+        "verify C(exp(-theta)P)=exp(-2theta)C(P) exactly",
+        "verify that omitting the lapse rescaling is a failing semantic mutant"
+      ],
+      "inference_if_passed": "SUPPORTS",
+      "novelty_if_passed": "REPRODUCTION",
+      "novelty_note": "This is the weak/projective version of the same standard Hamiltonian-flow lemma."
+    },
+    {
+      "id": "P12B_ANCHORED_RIGID_N1_INTERFACE",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "A nondegenerate 4D rigid N=1 Wess-Zumino parent can contain a BPS wall multiplet Phi and a spectator flavor doublet Z with a holomorphic rotating mass matrix. In its selected quadratic reduction, scalar and Weyl-fermion flavor indices inherit the same kinematic frame connection, while the scalar differential expressions factorize into the standard first-order forms associated with the chiralino mass matrix. Given conditional external oriented endpoint data, a reduced open frame-transport contraction is basis-invariant.",
+      "parent_template": "K=Phi_bar Phi+Z_bar Z and W=lambda(v^2 Phi-Phi^3/3)+Z^T M(Phi) Z/2, with real nonzero distinct m1,m2, M(Phi)=R(Theta(Phi)) diag(m1,m2) R(Theta(Phi))^T, and Theta(Phi)=kappa(Phi+v)/(2v). Formal bulk chiral generating spurions Delta W_src=j_minus h_minus(Phi)n_minus^T Z+j_plus h_plus(Phi)n_plus^T Z, h_plus/minus=(1 plus/minus Phi/v)/2, have complementary asymptotic values and are turned off after source differentiation; they are not a localized physical endpoint action.",
+      "acceptance": [
+        "verify Phi=v tanh(lambda v z), Z=0 solves the selected rigid half-BPS wall equation and reaches F-flat endpoints",
+        "verify R^T R=I, det R=1, and symmetry of M(Phi) symbolically; distinguish holomorphic SO(2,C) from orthogonal SO(2) transport on the selected real wall slice",
+        "derive the common anti-Hermitian flavor-frame connection for bosonic canonical variables and the flavor index of the Weyl fermion",
+        "verify the rigid scalar differential expressions factorize as H_plus=D D_formal and H_minus=D_formal D for D=partial_z+M and formal differential adjoint D_formal=-partial_z+M, and obey the exact intertwining identities",
+        "verify M_plus=U M_minus U^T and the finite selected endpoint flavor identity S(M_plus) diag(U,U)=U S(M_minus), S(M)=[iM,I]",
+        "verify that a boson-only or unequal-angle mutation breaks the selected endpoint flavor identity",
+        "verify endpoint-basis covariance U -> g_plus U g_minus^{-1} and invariance of a reduced contraction n_plus^T U n_minus conditional on external oriented endpoint data",
+        "verify that the formal bulk chiral source profiles take complementary asymptotic endpoint values and vanish from the background when their source coefficients are set to zero",
+        "verify that unanchored open transport is removable by independent endpoint basis choices"
+      ],
+      "inference_if_passed": "SUPPORTS",
+      "inference_scope": "Conditional classical existence of an engineered rigid-N=1 internal-flavor wall and its selected quadratic covariance only. The contraction given external oriented endpoint data is a reduced frame-transport scalar, not a full Green function, S-matrix element, conversion probability, or a constructed physical endpoint observable. The executable does not derive the full 4D Weyl operator or its self-adjoint domain. This is not a local-SUGRA closure theorem, protected zero-mode bundle, temporal seam, gravity-anisotropy transfer, or evidence that nature realizes Temporal-Folded SUSY.",
+      "novelty_if_passed": "REPRODUCTION",
+      "novelty_note": "The model is a post-hoc engineered Wess-Zumino witness with selected kappa, not a unique prediction or literature-priority claim."
+    },
+    {
+      "id": "P12C_LOCAL_SUGRA_UPLIFT",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "The rigid wall witness admits a specified regular matter-coupled 4D N=1 SUGRA classical uplift with the same physical spectator flavor eigenframe transport.",
+      "acceptance": [
+        "derive or import a specified matter-coupled local-SUGRA action, including its off-shell formulation or compensator data where required, rather than append component terms by hand",
+        "verify the warped wall and all bosonic background equations",
+        "verify gravitino/chiralino mixing, local-SUSY constraints, boundary conditions, and a positive regular domain",
+        "show that the selected flavor-frame connection survives with no singular Einstein coefficient"
+      ],
+      "planned_scope": "The executable checks only the spectator holomorphic Hessian of an Eto-Sakai-type matter-coupled candidate on the one-active-real-scalar, Z=0 slice and whether that holomorphic Hessian receives a common identity shift. It does not check the physical SUGRA fermion mass, a compensator/off-shell action, or physical eigenframe transport. The warped background, gravitino/chiralino system, boundary domain, positivity, and full local constraints remain unchecked.",
+      "inference": "INCONCLUSIVE",
+      "novelty": "REPRODUCTION"
+    }
+  ],
+  "falsification_and_failure": [
+    "a Phase 11 strong representative cannot be removed without changing the bulk constraint",
+    "weak dilation removal requires more than a lapse rescaling and endpoint transformation",
+    "the selected mass matrix is not symmetric or the component transport angles differ",
+    "the rigid quadratic factorization or selected endpoint flavor identity fails under matched multiplet transport",
+    "the proposed anchored contraction changes under independent endpoint basis transformations",
+    "the calculation silently identifies the bosonic H_Sigma generator with a supercharge"
+  ],
+  "non_goals": [
+    "prove that supersymmetry is literally pre-Big-Bang time",
+    "put only bosons on one temporal branch and only fermions on the other",
+    "construct or cross a rank-changing Lorentzian tetrad",
+    "prove a static spatial BPS wall is a unitary spacelike temporal seam",
+    "derive kappa=pi/2 uniquely from minimal supergravity",
+    "prove a protected non-Abelian zero-mode bundle, anomaly-free quantum BFV closure, or a cosmological observable",
+    "identify the reduced anchored frame component with a full 4D propagator, scattering amplitude, or conversion probability",
+    "claim that the formal h_plus/minus bulk spurions construct a localized supersymmetric endpoint detector",
+    "claim self-adjointness, spectral positivity, or a full Weyl-fermion reduction without domains and boundary conditions",
+    "ratify a scientific verdict, programme appraisal, Contract status, or canon change"
+  ],
+  "post_run_scope_amendments": {
+    "date_utc": "2026-08-15",
+    "reason": "Independent adversarial audits required narrower language for the formal source selectors, differential adjoint, unexecuted Weyl reduction, and partial SUGRA Hessian check.",
+    "effect_on_gates": "No algebraic acceptance threshold or observed pass/fail result changed; all claims remain POST_HOC."
+  },
+  "comparison_policy": {
+    "symbolic_equalities": "exact SymPy simplification to zero",
+    "matrix_equalities": "exact entrywise equality",
+    "floating_tolerance": "not applicable",
+    "null_model": "not applicable",
+    "multiplicity": "not applicable",
+    "fitting_risk": "NOT_APPLICABLE",
+    "bayes": "NOT_ESTIMABLE"
+  },
+  "authority": {
+    "scientific_verdict": "UNJUDGED",
+    "programme_appraisal": "UNAPPRAISED",
+    "kg_action": "NONE",
+    "ratification_request": "none"
+  }
+}
