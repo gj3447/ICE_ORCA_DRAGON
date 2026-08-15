@@ -62,10 +62,10 @@ See [`../AGENTS.md`](../AGENTS.md) and
 The mapped ledger currently reports 12 `REPRO`, queue03 `NONPORTABLE_FAIL`, and queue06
 `SUPERSEDED`. A nonzero overall exit is expected while those explicit statuses remain.
 
-## SYMPOSIUM integration
+## External integration
 
 The upstream repository is [gj3447/ICE_ORCA_DRAGON](https://github.com/gj3447/ICE_ORCA_DRAGON).
-SYMPOSIUM consumes it as `METAHUMOTONIC/ICE_ORCA_DRAGON`; integration documents live in the
+It is developed and released independently. Related integration documents live in the
 [SYMPOSIUM repository](https://github.com/gj3447/symposium):
 
 - [APT](https://github.com/gj3447/symposium/tree/main/THEORY/APT)

@@ -1,10 +1,10 @@
 # ICE_ORCA_DRAGON — 작업 규칙
 
-> 이 저장소의 규칙은 여기 있다. 상위 규약(단일 writer 토큰, 세션 핸드오프, KG 정본)은
-> 부모 저장소 SYMPOSIUM 의 `AGENTS.md` 를 따른다.
-> **이 저장소는 submodule 이다.** 여기서 커밋하면 부모의 gitlink 가 바뀐다. submodule
-> 커밋은 부모 writer token을 직접 보유하고 write-set에 이 gitlink를 포함한 세션만 한다.
-> 다른 세션은 token이 HELD인 동안 read-only다.
+> 이 파일이 독립 저장소의 활성 규칙이다. dev-01 정본 checkout은
+> `/home/lagyeongjun/CD/ICE_ORCA_DRAGON`, 원격 정본은 `gj3447/ICE_ORCA_DRAGON`의
+> `main`이다. 이 저장소는 submodule이 아니며 sibling 저장소의 writer token이나 규칙을
+> 암묵적으로 상속하지 않는다. 기존 dirty 변경을 보존하고 변경 경로만 정확히 stage한 뒤,
+> 이 저장소 안에서 직접 검증·commit·push한다.
 
 ## 먼저 알아야 할 것 — 여기는 물리학이 아니라 **계산 워크벤치**다
 

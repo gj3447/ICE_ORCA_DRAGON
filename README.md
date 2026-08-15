@@ -11,9 +11,9 @@
 
 </div>
 
-ICE_ORCA_DRAGON is a standalone hypercomplex-computation repository. SYMPOSIUM consumes it at
-`METAHUMOTONIC/ICE_ORCA_DRAGON` as a git submodule; a second clone under a generic `project/`
-directory is not required.
+ICE_ORCA_DRAGON is a standalone hypercomplex-computation repository. The canonical dev-01 checkout is
+`/home/lagyeongjun/CD/ICE_ORCA_DRAGON`; it has its own Git history and `origin`. SYMPOSIUM may link to
+this repository for context, but no longer embeds it as a submodule or runtime dependency.
 
 The current CLI exposes **42 runnable Python kernels**. `./ice list --json` is the authority for the
 live catalog; historical source inventories may contain additional scripts that are not runnable entries.
