@@ -4,7 +4,7 @@
 
 ## How source edges are used
 
-- `evidence → DERIVED_FROM → source` means the calculation was built from that source. Phase 16 uses this stronger provenance relation for BGG.
+- `evidence → DERIVED_FROM → source` means the calculation was built from that source. Phase 16 uses this stronger provenance relation for BGG; selected Phase 19/20 groups use it for their model, action, or observational-comparison inputs while keeping local algebra and numerics separate.
 - `claim or concept → CITES → source` means the source frames the standard algebra, a comparison, or an interpretive boundary. It does not mean the paper performed the repository's exact finite calculation.
 - No source edge by itself changes claim state; the attached evidence and `HAS_EVIDENCE.polarity` do that.
 
@@ -28,8 +28,18 @@
 | `source:hung-smolkin-sorkin-2013` — L.-Y. Hung, M. Smolkin, E. Sorkin, [*(Non) supersymmetric quantum quenches*](https://arxiv.org/abs/1307.0376), `arXiv:1307.0376` | Interacting proof of principle for late nonthermal SUSY breaking after a quench | The model is 2+1-dimensional large-`N`/Hartree–Fock, not a 3+1-dimensional Wess–Zumino vacuum-pole calculation |
 | `source:girardello-grisaru-1982` — L. Girardello, M. T. Grisaru, [*Soft breaking of supersymmetry*](https://doi.org/10.1016/0550-3213(82)90512-0) | Classification baseline for soft versus hard SUSY-breaking operators | Does not derive a temporal-seam spurion or its magnitude |
 | `source:boyle-turok-2021` — L. Boyle, N. Turok, [*Two-sheeted universe, analyticity and the arrow of time*](https://arxiv.org/abs/2109.06204), `arXiv:2109.06204` | Motivation for one analytic spacetime with two sheets exchanged by an isometry; cited from `concept:cpt-pin-sewing` | Neither proves a SUSY seam nor supplies the Phase 18 free-spectrum theorem |
+| `source:kallosh-linde-2010` — R. Kallosh, A. Linde, [*New models of chaotic inflation in supergravity*](https://arxiv.org/abs/1008.3375v2), `arXiv:1008.3375v2` | Primary source for the Phase 19 shift-symmetric stabilizer construction; `DERIVED_FROM` the exact shift evidence | Does not select the closed-bounce initial amplitude or supply the repository's numerical shooting result |
+| `source:kallosh-linde-2013` — R. Kallosh, A. Linde, [*Superconformal generalizations of the Starobinsky model*](https://arxiv.org/abs/1306.3214v2), `arXiv:1306.3214v2` | Primary source for improved Cecotti stabilization; `DERIVED_FROM` the exact no-scale evidence | The sharp local Hessian threshold is a repository derivation; the paper does not construct this closed bounce or a CPT/Pin state |
+| `source:bicep-keck-2021` — BICEP/Keck Collaboration, [*Improved Constraints on Primordial Gravitational Waves using Planck, WMAP, and BICEP/Keck Observations through the 2018 Observing Season*](https://arxiv.org/abs/2110.00483), `arXiv:2110.00483` | Supplies the published \(r_{0.05}<0.036\) comparison used by the Phase 19 slow-roll evidence | Does not calculate either local SUGRA trajectory or the bounce |
+| `source:balkenhol-et-al-2026` — L. Balkenhol et al., [*Inflation at the End of 2025: Constraints on \(r\) and \(n_s\) Using the Latest CMB and BAO Data*](https://arxiv.org/abs/2512.10613v2), `arXiv:2512.10613v2` | Supplies the updated \(r<0.034\) comparison and dataset-dependent scalar-tilt context | Does not calculate the bounce; its likelihood results cannot be replaced by the repository's first-order potential formulas |
+| `source:hartle-hawking-1983` — J. B. Hartle, S. W. Hawking, [*Wave Function of the Universe*](https://doi.org/10.1103/PhysRevD.28.2960), Phys. Rev. D 28, 2960 (1983) | Primary no-boundary and Euclidean de Sitter-action baseline; `DERIVED_FROM` the leading Phase 20 WDW-envelope group | Does not supply an exact Starobinsky scalar-gravity saddle or any two-sheet probability rule |
+| `source:hartle-hawking-hertog-2008` — J. B. Hartle, S. W. Hawking, T. Hertog, [*The No-Boundary Measure of the Universe*](https://arxiv.org/abs/0711.4630), `arXiv:0711.4630v4` | Frames semiclassical history weighting and the generally complex no-boundary saddle | Does not derive the repository's conditional independent-pair joint probability or evaluate this Cecotti branch |
+| `source:halliwell-2009` — J. J. Halliwell, [*Probabilities in Quantum Cosmological Models: A Decoherent Histories Analysis Using a Complex Potential*](https://arxiv.org/abs/0909.2597), `arXiv:0909.2597` | Frames WDW currents, coarse histories, and approximate decoherence used to bound the coherent-interference interpretation | Does not choose the sheet inner product or compute the Phase 20 coherent phase |
+| `source:cheng-death-moniz-1994` — A. D. Y. Cheng, P. D. D'Eath, P. R. L. V. Moniz, [*Quantization of a Locally Supersymmetric Friedmann Model with Supermatter*](https://arxiv.org/abs/gr-qc/9406048), `arXiv:gr-qc/9406048v2` | Primary example showing local-SUSY minisuperspace constraints as coupled first-order PDEs dependent on Kähler geometry | Does not solve those constraints for the Cecotti model or select \(\varphi=5.44\) |
+| `source:desi-dr2-2025` — DESI Collaboration, [*DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints*](https://arxiv.org/abs/2503.14738), `arXiv:2503.14738` | Observational context for why the conditional curvature conversion is not treated as a detection | Does not supply the branch, reheating history, or a temporal-seam curvature prediction |
+| `source:barvinsky-kamenshchik-mishakov-1996` — A. O. Barvinsky, A. Yu. Kamenshchik, I. V. Mishakov, [*Quantum origin of the early inflationary Universe*](https://arxiv.org/abs/gr-qc/9612004), `arXiv:gr-qc/9612004` | One-loop sharp-peak proof of principle cited by the open determinant problem | The model has large nonminimal coupling and is not the two-sheet Cecotti boson–fermion–gravitino determinant |
 
-Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the sixteen-item inventory exhausts the literature.
+Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the twenty-six-item inventory exhausts the literature.
 
 ## Claim-family coverage
 
@@ -47,6 +57,13 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Sharp-seam UV admissibility | Collins–Holman | One `CITES` edge from the contradicted Phase 18 claim; initial-surface renormalization does not rescue its divergent state preparation |
 | Persistent SUSY-breaking carrier and soft terms | Hung–Smolkin–Sorkin; Girardello–Grisaru | Two `CITES` edges from the persistent-carrier concept: an interacting quench proof of principle and an operator-classification baseline, not a seam-generated mass prediction |
 | Analytic two-sheet motivation | Boyle–Turok (2021) | One additional `CITES` edge from `concept:cpt-pin-sewing`; motivation only, not evidence for a SUSY seam |
+| Phase 19 exact SUGRA reductions | Kallosh–Linde (2010, 2013) | Two `DERIVED_FROM` edges from the shift and no-scale evidence; local Hessian thresholds and bounce shooting remain repository calculations |
+| Phase 19 tensor-bound comparison | BICEP/Keck; Balkenhol et al. | Two limit inputs attached to the slow-roll evidence; neither source is attributed the local bounce calculation |
+| Phase 20 leading WDW envelope | Hartle–Hawking; Hartle–Hawking–Hertog | The 1983 source provides the Euclidean-action baseline through `DERIVED_FROM`; the later paper frames complex-saddle/history-measure limits. Neither derives the conditional independent-pair rule |
+| Phase 20 coherent interference and probabilities | Halliwell | One `CITES` edge for current/decoherent-histories interpretation; the algebraic \(\cos^2S\) identity remains local evidence |
+| Phase 20 classical F-flatness versus quantum local SUSY | Cheng–D'Eath–Moniz; Kallosh–Linde (2013) | The Cecotti model source attaches to the local auxiliary calculation; the minisuperspace source frames why that does not solve the quantum constraint |
+| Phase 20 curvature context | DESI DR2 | Observational boundary only; no `DERIVED_FROM` edge and no curvature-detection claim |
+| Phase 20 loop-selection frontier | Barvinsky–Kamenshchik–Mishakov | Proof of principle attached to an open problem in a different model, not evidence that the requested determinant has the needed slope |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -66,7 +83,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other fifteen graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17 and Phase 18 literature links document framing and scope, while the exact matrix results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other twenty-five graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–20 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -86,5 +103,22 @@ Phase 18 adds four further uncovered calculations:
 - a finite-energy persistent `F`/`D` order parameter, memory sector, or vacuum-selection mechanism;
 - FRW evolution including interactions, thermalization, and backreaction;
 - regulator-independent Higgs power sensitivity in the completed interacting doubled parent.
+
+Phase 19 adds a separate background-and-state frontier:
+
+- a minisuperspace wavefunction, seam path integral, or measure that selects \(\phi_0\);
+- a CPT/Pin-compatible perturbation Gaussian state on a fixed closed background;
+- full discrete \(S^3\) scalar and tensor propagation through the bounce;
+- reheating and the map from \(N_{\rm acc}\) to the observed pivot \(N_*\);
+- full covariant multifield and fermionic SUGRA stability.
+
+Phase 20 sharpens the background-selection frontier without closing it:
+
+- the exact complex Starobinsky scalar-gravity saddle, WDW current or decoherent-histories measure, and factor ordering;
+- a CPT/Pin sheet Hilbert-space inner product, overlap, sewing action, and derived probability-composition rule;
+- the local-SUGRA wavefunction including gravitino and ghost sectors;
+- the gauge-fixed boson–fermion–gravitino one-loop determinant with zero modes and renormalization;
+- an untuned quantized four-form selection spectrum;
+- a joint seam derivation of initial amplitude, reheating history, and present curvature distribution.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

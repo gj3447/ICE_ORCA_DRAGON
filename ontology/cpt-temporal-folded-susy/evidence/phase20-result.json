@@ -1,0 +1,486 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P20_TWO_SHEET_WDW_SELECTION_20260816",
+  "phase": "P20",
+  "observed_at_utc": "2026-08-16T17:28:20Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py",
+    "sha256": "a55ebfca78f07246679fd5fa8791537a0efe1d3370dfa53d8d6410ffc6a95807",
+    "introduced_in_commit": "c5395bc095399ca450adf555d8d24e21a9166725"
+  },
+  "exact_checks": 18,
+  "checks": [
+    {
+      "id": "P20.WDW.hemisphere_action_normalization",
+      "statement": "I=12 pi^2 M_Pl^4/V=16 pi^2/[lambda^2(1-exp(-b varphi))^2]",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.action_derivative",
+      "statement": "the leading de Sitter exponent has the claimed exact derivative",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.standard_history_weight_slope",
+      "statement": "the standard one-history WDW envelope exp(2 s I) has slope 2 s I'",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.independent_pair_weight_slope",
+      "statement": "the additional independent-pair Born weight exp(4 s I) has slope 4 s I'",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.pair_slope_factor_two",
+      "statement": "the independent-pair convention doubles, but does not cancel, the standard slope",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.no_finite_stationary_envelope",
+      "statement": "I' has no zero at finite varphi>0, so neither sign has a finite envelope extremum",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.asymptotic_zero_slope_only",
+      "statement": "the envelope slope approaches zero only on the infinite-field plateau",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.conjugate_saddle_interference",
+      "statement": "a coherent conjugate-saddle sum gives an order-one cos^2 phase modulation",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.independent_pair_joint_probability",
+      "statement": "exp(4 s I) is the conditional tensor-product joint-probability convention",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.constant_symmetrization_does_not_move_slope",
+      "statement": "a varphi-independent normalization factor cannot select a new peak",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.starobinsky_epsilon",
+      "statement": "epsilon_V=4 exp(-2b varphi)/[3(1-exp(-b varphi))^2]",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.WDW.constant_field_is_not_exact_saddle",
+      "statement": "V' is nonzero at every finite varphi>0, so the constant-field hemisphere is an approximation",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.SUSY.cecotti_DSW",
+      "statement": "D_S W=3M(T-1) on S=0 and real T",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.SUSY.cecotti_inverse_metric",
+      "statement": "K^{S Sbar}=2T/3 on the inflationary trajectory",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.SUSY.cecotti_auxiliary",
+      "statement": "F^S=-M(T-1)/sqrt(2T), up to the overall auxiliary convention",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.SUSY.cecotti_potential",
+      "statement": "the stabilizer F-term reproduces the Starobinsky trajectory potential",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.SUSY.static_F_flat_point",
+      "statement": "the positive-real static F-flat point on this trajectory is T=1, not the inflationary benchmark",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.curvature.matterlike_temperature_exponent",
+      "statement": "matterlike reheating gives |Omega_K0| proportional to T_reh^(2/3)",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 14,
+  "numerical": [
+    {
+      "id": "P20.numeric.standard_slope_coefficient",
+      "statement": "the standard WDW log-slope coefficient is 6.277009460746/lambda^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.pair_slope_coefficient",
+      "statement": "the conditional independent-pair coefficient is 12.554018921492/lambda^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.standard_central_difference",
+      "statement": "an h=1e-7 central difference independently reproduces the standard slope",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.pair_central_difference",
+      "statement": "an h=1e-7 central difference independently reproduces the pair slope",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.HH_and_tunneling_opposite_monotonicity",
+      "statement": "the HH envelope decreases and the tunneling envelope increases at the benchmark",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.T_star",
+      "statement": "T=exp(sqrt(2/3) varphi) gives T_star=85.1288467223",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.nonzero_F_star",
+      "statement": "F^S/M=-6.447503145 at varphi_star, so the background is not F-flat",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.slow_roll_not_constant_field",
+      "statement": "epsilon_V is small but nonzero at the benchmark",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.phase19_Nacc_bridge",
+      "statement": "the Phase 19 benchmark independently reaches 60 accelerated e-folds",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.phase19_rho_end_bridge",
+      "statement": "rho_end/(M_s^2 M_Pl^2)=0.1751668051 at the acceleration endpoint",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.phase19_constraint_bridge",
+      "statement": "the endpoint Friedmann constraint remains below 2e-12 relative error",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.curvature_reheating_coefficient",
+      "statement": "the explicit 2.435e18 GeV convention gives |Omega_K0|=5.525802e-4 at T_reh=1e9 GeV",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.curvature_reheating_inverse",
+      "statement": "|Omega_K0|=1e-3 corresponds conditionally to T_reh=2.434485e9 GeV",
+      "status": "PASS"
+    },
+    {
+      "id": "P20.numeric.closed_curvature_sign",
+      "statement": "k=+1 implies signed Omega_K0=-|Omega_K0|",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "benchmark": {
+      "F_S_over_M": "-6.44750314547252",
+      "T_star": "85.1288467223383",
+      "Vprime_over_V": "0.0194106210351966",
+      "conditional_independent_pair_log_slope": {
+        "HH_at_lambda_benchmark": "-74284135630.1",
+        "formula_at_star": "-s 12.554018921492/lambda^2",
+        "tunneling_at_lambda_benchmark": "74284135630.1"
+      },
+      "epsilon_V": "0.000188386104486009",
+      "finite_difference_step": "1e-7",
+      "lambda_benchmark": "1.3e-5",
+      "standard_log_slope": {
+        "HH_at_lambda_benchmark": "-37142067815.1",
+        "formula_at_star": "-s 6.277009460746/lambda^2",
+        "tunneling_at_lambda_benchmark": "37142067815.1"
+      },
+      "varphi_star": "5.442969458"
+    },
+    "calculation": "leading WDW envelope and conditional curvature-selection controls",
+    "claim_status": {
+      "Cecotti_background_at_phi_star_is_F_flat": "CONTRADICTED",
+      "curvature_reheating_relation_is_parameter_free_prediction": "CONTRADICTED",
+      "exact_CPT_two_sheet_SUGRA_WDW_state_selects_phi_star": "OPEN_NOT_COMPUTED",
+      "fixed_factor_symmetrization_creates_peak": "CONTRADICTED",
+      "general_coherent_interference_cannot_create_extrema": "NOT_CLAIMED",
+      "independent_pair_weight_selects_phi_star": "CONTRADICTED_CONDITIONALLY",
+      "leading_de_Sitter_WDW_envelope_selects_phi_star": "CONTRADICTED"
+    },
+    "conditional_curvature_reheating": {
+      "T_reh_for_abs_OmegaK0_1e_minus_3_GeV": "2.4344848e+09",
+      "conditional_relation": "Omega_K0=-5.525802e-4 (T_reh/1e9 GeV)^(2/3)",
+      "inputs": {
+        "H0_km_s_Mpc": 67.4,
+        "M_s_over_M_Pl": 0.0000122,
+        "N_acc": 59.99999999180113,
+        "T0_K": 2.7255,
+        "T_reh_GeV": 1000000000.0,
+        "g_energy_reh": 106.75,
+        "g_entropy_reh": 106.75,
+        "g_entropy_today": 3.909,
+        "reduced_planck_mass_GeV": 2.435E+18,
+        "w_reh": 0.0
+      },
+      "measurement_model": "a_today=a_b exp(N) (rho_end/rho_reh)^[1/(3(1+w))] (T_reh/T0) (g_s,reheat/g_s,0)^(1/3); Omega_K0=-1/(a_today H0)^2 for k=+1",
+      "scope_warning": "This is a conditional conversion, not a prediction or curvature detection. It assumes the Phase 19 phi0/N endpoint, constant matterlike reheating, instantaneous thermalization at T_reh, entropy conservation, Standard-Model relativistic degrees of freedom, and the listed late-time parameters.",
+      "sensitivities": {
+        "H0_power": "abs(Omega_K0) proportional to H0^(-2)",
+        "d_ln_abs_OmegaK0_d_N": "-2",
+        "general_T_reh_power": "-2+8/[3(1+w_reh)]",
+        "mass_scale_power": "abs(Omega_K0) proportional to M_s^(2/3)"
+      },
+      "unit_conversions": {
+        "H0_GeV": "1.437722663074e-42",
+        "T0_GeV": "2.348654180598e-13",
+        "a_bounce_GeV_inverse": "6.812445075448e-14",
+        "rho_end_GeV4": "9.165735751664e+62"
+      }
+    },
+    "exact_check_ids": [
+      "P20.WDW.hemisphere_action_normalization",
+      "P20.WDW.action_derivative",
+      "P20.WDW.standard_history_weight_slope",
+      "P20.WDW.independent_pair_weight_slope",
+      "P20.WDW.pair_slope_factor_two",
+      "P20.WDW.no_finite_stationary_envelope",
+      "P20.WDW.asymptotic_zero_slope_only",
+      "P20.WDW.conjugate_saddle_interference",
+      "P20.WDW.independent_pair_joint_probability",
+      "P20.WDW.constant_symmetrization_does_not_move_slope",
+      "P20.WDW.starobinsky_epsilon",
+      "P20.WDW.constant_field_is_not_exact_saddle",
+      "P20.SUSY.cecotti_DSW",
+      "P20.SUSY.cecotti_inverse_metric",
+      "P20.SUSY.cecotti_auxiliary",
+      "P20.SUSY.cecotti_potential",
+      "P20.SUSY.static_F_flat_point",
+      "P20.curvature.matterlike_temperature_exponent"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P20.WDW.hemisphere_action_normalization",
+        "statement": "I=12 pi^2 M_Pl^4/V=16 pi^2/[lambda^2(1-exp(-b varphi))^2]",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.action_derivative",
+        "statement": "the leading de Sitter exponent has the claimed exact derivative",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.standard_history_weight_slope",
+        "statement": "the standard one-history WDW envelope exp(2 s I) has slope 2 s I'",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.independent_pair_weight_slope",
+        "statement": "the additional independent-pair Born weight exp(4 s I) has slope 4 s I'",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.pair_slope_factor_two",
+        "statement": "the independent-pair convention doubles, but does not cancel, the standard slope",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.no_finite_stationary_envelope",
+        "statement": "I' has no zero at finite varphi>0, so neither sign has a finite envelope extremum",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.asymptotic_zero_slope_only",
+        "statement": "the envelope slope approaches zero only on the infinite-field plateau",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.conjugate_saddle_interference",
+        "statement": "a coherent conjugate-saddle sum gives an order-one cos^2 phase modulation",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.independent_pair_joint_probability",
+        "statement": "exp(4 s I) is the conditional tensor-product joint-probability convention",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.constant_symmetrization_does_not_move_slope",
+        "statement": "a varphi-independent normalization factor cannot select a new peak",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.starobinsky_epsilon",
+        "statement": "epsilon_V=4 exp(-2b varphi)/[3(1-exp(-b varphi))^2]",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.WDW.constant_field_is_not_exact_saddle",
+        "statement": "V' is nonzero at every finite varphi>0, so the constant-field hemisphere is an approximation",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.SUSY.cecotti_DSW",
+        "statement": "D_S W=3M(T-1) on S=0 and real T",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.SUSY.cecotti_inverse_metric",
+        "statement": "K^{S Sbar}=2T/3 on the inflationary trajectory",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.SUSY.cecotti_auxiliary",
+        "statement": "F^S=-M(T-1)/sqrt(2T), up to the overall auxiliary convention",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.SUSY.cecotti_potential",
+        "statement": "the stabilizer F-term reproduces the Starobinsky trajectory potential",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.SUSY.static_F_flat_point",
+        "statement": "the positive-real static F-flat point on this trajectory is T=1, not the inflationary benchmark",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.curvature.matterlike_temperature_exponent",
+        "statement": "matterlike reheating gives |Omega_K0| proportional to T_reh^(2/3)",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 18,
+    "leading_WDW_control": {
+      "b": "sqrt(2/3)",
+      "conditional_independent_pair_weight": "P_pair proportional to exp(4 s I)",
+      "general_reheating_temperature_exponent": "-2 + 8/(3*w_reh + 3)",
+      "positive_hemisphere_exponent": "I=12 pi^2 M_Pl^4/V",
+      "potential_over_MPl4": "3 lambda^2 (1-exp(-b varphi))^2/4",
+      "scope_warning": "I is the constant-field de Sitter hemisphere expression. At finite Starobinsky varphi it is a leading slow-roll control, not an exact complex scalar-gravity saddle or solved WDW wavefunction.",
+      "sign_convention": "s=+1 Hartle-Hawking; s=-1 tunneling",
+      "standard_history_weight": "P proportional to exp(2 s I)"
+    },
+    "next_calculation": {
+      "probability_level_stationary_condition_independent_pair": "d Gamma_seam^(P)/d varphi|star=-s 12.554018921492/lambda^2",
+      "probability_level_stationary_condition_standard": "d Gamma_seam^(P)/d varphi|star=-s 6.277009460746/lambda^2",
+      "warning": "If Gamma is defined at amplitude level, the probability contains 2 Re Gamma; the determinant convention must be fixed before comparing coefficients."
+    },
+    "numerical_check_ids": [
+      "P20.numeric.standard_slope_coefficient",
+      "P20.numeric.pair_slope_coefficient",
+      "P20.numeric.standard_central_difference",
+      "P20.numeric.pair_central_difference",
+      "P20.numeric.HH_and_tunneling_opposite_monotonicity",
+      "P20.numeric.T_star",
+      "P20.numeric.nonzero_F_star",
+      "P20.numeric.slow_roll_not_constant_field",
+      "P20.numeric.phase19_Nacc_bridge",
+      "P20.numeric.phase19_rho_end_bridge",
+      "P20.numeric.phase19_constraint_bridge",
+      "P20.numeric.curvature_reheating_coefficient",
+      "P20.numeric.curvature_reheating_inverse",
+      "P20.numeric.closed_curvature_sign"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P20.numeric.standard_slope_coefficient",
+        "statement": "the standard WDW log-slope coefficient is 6.277009460746/lambda^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.pair_slope_coefficient",
+        "statement": "the conditional independent-pair coefficient is 12.554018921492/lambda^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.standard_central_difference",
+        "statement": "an h=1e-7 central difference independently reproduces the standard slope",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.pair_central_difference",
+        "statement": "an h=1e-7 central difference independently reproduces the pair slope",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.HH_and_tunneling_opposite_monotonicity",
+        "statement": "the HH envelope decreases and the tunneling envelope increases at the benchmark",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.T_star",
+        "statement": "T=exp(sqrt(2/3) varphi) gives T_star=85.1288467223",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.nonzero_F_star",
+        "statement": "F^S/M=-6.447503145 at varphi_star, so the background is not F-flat",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.slow_roll_not_constant_field",
+        "statement": "epsilon_V is small but nonzero at the benchmark",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.phase19_Nacc_bridge",
+        "statement": "the Phase 19 benchmark independently reaches 60 accelerated e-folds",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.phase19_rho_end_bridge",
+        "statement": "rho_end/(M_s^2 M_Pl^2)=0.1751668051 at the acceleration endpoint",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.phase19_constraint_bridge",
+        "statement": "the endpoint Friedmann constraint remains below 2e-12 relative error",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.curvature_reheating_coefficient",
+        "statement": "the explicit 2.435e18 GeV convention gives |Omega_K0|=5.525802e-4 at T_reh=1e9 GeV",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.curvature_reheating_inverse",
+        "statement": "|Omega_K0|=1e-3 corresponds conditionally to T_reh=2.434485e9 GeV",
+        "status": "PASS"
+      },
+      {
+        "id": "P20.numeric.closed_curvature_sign",
+        "statement": "k=+1 implies signed Omega_K0=-|Omega_K0|",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 14,
+    "phase": "P20",
+    "phase19_endpoint_bridge": {
+      "N_acc": 59.99999999180113,
+      "constraint_relative_error": 1.8182396490101555E-14,
+      "mass_scale_times_a_bounce": 2.023773058563383,
+      "mass_scale_times_a_end": 2.3111637692402313E+26,
+      "phi_end": 0.6146439942747008,
+      "rho_end_over_Ms2_MPl2": 0.1751668050813487
+    },
+    "scope_guard": {
+      "central_interpretation": "the naive leading envelope does not select 5.442969, but this is not an exact two-sheet WDW no-go",
+      "what_is_computed": [
+        "constant-field de Sitter hemisphere exponent and its exact symbolic derivative",
+        "standard one-history and additional independent-pair envelope conventions",
+        "coherent conjugate-saddle interference identity",
+        "Cecotti stabilizer F-term on the one-field trajectory",
+        "one unit-explicit conditional Omega_K0/reheating conversion"
+      ],
+      "what_is_not_computed": [
+        "the exact complex Starobinsky scalar-gravity saddle",
+        "a WDW current, measure, normalization, or factor ordering",
+        "a CPT/Pin sheet Hilbert-space inner product or sewing action",
+        "the local-SUGRA wavefunction with gravitino and ghost sectors",
+        "a boson-fermion-gravitino one-loop determinant",
+        "a quantized four-form selection spectrum",
+        "a curvature detection or a seam-selected reheating temperature"
+      ]
+    }
+  }
+}

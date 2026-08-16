@@ -8,7 +8,7 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16 and Phase 17 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–20 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
 ## Read and validate it
 
@@ -17,6 +17,7 @@ The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). Th
 ./ice ontology summary
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
+./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;

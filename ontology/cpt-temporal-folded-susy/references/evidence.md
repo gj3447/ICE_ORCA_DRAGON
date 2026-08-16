@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), and [`phase18-result.json`](../evidence/phase18-result.json).
+Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), and [`phase20-result.json`](../evidence/phase20-result.json).
 
 ## Reading `PASS` correctly
 
-All 101 Phase 16–18 named exact checks in the three snapshots have `status: PASS`. The Phase 18 payload separately records one passing SciPy numerical control; it is not counted in the exact-check ledger. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or numerical comparison. It does not mean every scientific claim passed.
+All 136 Phase 16–20 named exact checks have `status: PASS`. The snapshots also record 45 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, and 14 Phase 20 benchmark/bridge checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
 
 The scientific direction is stored on:
 
@@ -23,6 +23,8 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 16 | `result:P16_BGG_SINGLE_SOURCE_20260816`; `2026-08-16T15:53:21Z` | `cpt_temporal_folded_susy/phase16_bgg_single_source.py`; SHA-256 `95c9346bf4607d955692778a2bf91638a307a3563f51bff57af0635bc548f55c`; introduced in `25bd216cfd1d85bde59c60ec4f2a9d91bdb53d78` | Exit `0`; 20 exact checks |
 | 17 | `result:P17_TIME_LINE_FOLD_ALGEBRA_20260816`; `2026-08-16T15:53:21Z` | `cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py`; SHA-256 `4723f6217f1014c52001dd989fb393e7c8547a1a0556bf7c0141c0dcaa20d615`; introduced in `5c95692b4c9ca6d92c617382f5bb9bf6506bfb5d` | Exit `0`; 34 exact checks |
 | 18 | `result:P18_GAUSSIAN_SEAM_SPECTRUM_20260816`; `2026-08-16T16:42:39Z` | `cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py`; SHA-256 `01f2d5d04341093494e185529dd67630aef5896e842a4bedddc6d1309271e221`; introduced in `1a5d6d4326da3451ff63274cee654fa504f82f9c` | Exit `0`; 47 exact checks plus 1 separately recorded numerical control |
+| 19 | `result:P19_CLOSED_SUGRA_BOUNCE_20260816`; `2026-08-16T17:23:38Z` | `cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py`; SHA-256 `5dbfccd768bb13961222c289ba0754497bec94319f8b33ff602889eaeb469341`; introduced in `90aedef93eadab40156fc22daf87b2d6942f49a6` | Exit `0`; 17 exact checks plus 30 numerical checks |
+| 20 | `result:P20_TWO_SHEET_WDW_SELECTION_20260816`; `2026-08-16T17:28:20Z` | `cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py`; SHA-256 `a55ebfca78f07246679fd5fa8791537a0efe1d3370dfa53d8d6410ffc6a95807`; introduced in `c5395bc095399ca450adf555d8d24e21a9166725` | Exit `0`; 18 exact checks plus 14 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -42,6 +44,14 @@ The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`]
 | `evidence:p18-charge-and-poles` | 18 exact | Elapsed time alone breaks SUSY — `CONTRADICTS`; free canonical seam generates permanent B/F pole splitting — `CONTRADICTS`; free seam can prepare a non-SUSY state without moving poles — `SUPPORTS` | Equal-mass free Wess–Zumino mode and unchanged future bulk operators; literature links are `CITES`, not `DERIVED_FROM` |
 | `evidence:p18-state-and-cpt` | 17 exact | Free seam can prepare a non-SUSY state without moving poles — `SUPPORTS` | Finite scalar canonical kick, finite-mode fermion CAR witness, and CPT-compatible doubled scalar eigenchannels; not a local fermionic Pin action |
 | `evidence:p18-uv-and-conditional-controls` | 12 exact + 1 numerical | Sharp spatially local scalar seam is UV admissible — `CONTRADICTS` | Sharp-kick cutoff asymptotics plus conditional Gaussian, collisionless FRW, and inserted-soft controls; no interacting self-energy or Higgs result |
+| `evidence:p19-shift-sugra` | 8 exact | Shift reduction and \(\zeta=1/12\) \(H_V\)-heavy benchmark — `SUPPORTS`; displayed endpoint F direction vanishes — `SUPPORTS` | Exact one-field shift trajectory; `DERIVED_FROM` Kallosh–Linde 2010 |
+| `evidence:p19-noscale-sugra` | 7 exact | Cecotti reduction and one-sixth sufficient/not-sharp statement — `SUPPORTS`; displayed endpoint F direction vanishes — `SUPPORTS` | Exact one-field no-scale trajectory; `DERIVED_FROM` Kallosh–Linde 2013 |
+| `evidence:p19-bounce-local` | 2 exact | Bosonic time-reflection data leave \(\phi_0\) free — `SUPPORTS`; target-shot branches exist — `SUPPORTS` | Classical homogeneous \(k=+1\) turning point |
+| `evidence:p19-bounce-shooting` | 24 numerical | Six target-shot \(N_{\rm acc}=50,55,60\) backgrounds — `SUPPORTS`; \(\phi_0\) remains unselected — `SUPPORTS` | Conditional classical background shooting; no state, uniqueness, or parameter-free radius claim |
+| `evidence:p19-slowroll-r` | 6 numerical | Quadratic compatibility with current \(r\) bound — `CONTRADICTS`; Starobinsky first-order \(r\) below bound — `SUPPORTS` | Potential slow roll at selected \(N_*\); cited papers supply comparison limits, not the bounce |
+| `evidence:p20-leading-wdw-envelope` | 12 exact + 6 numerical | Leading envelope selects \(5.44\) — `CONTRADICTS`; independent-pair \(e^{4sI}\) follows from CPT — `CONTRADICTS`; coherent symmetrization only rescales probability — `CONTRADICTS` | Constant-field de Sitter/WDW control; standard \(e^{2sI}\) versus conditional independent-pair joint probability; no exact complex saddle or sheet inner product |
+| `evidence:p20-cecotti-f-direction` | 5 exact + 2 numerical | Cecotti \(5.44\) point is F-flat — `CONTRADICTS` | Classical \(S=0\), positive-real \(T\) trajectory only; not the quantum local-SUSY wavefunction |
+| `evidence:p20-curvature-reheating-control` | 1 exact + 6 numerical | Conditional conversion is reproducible — `SUPPORTS`; displayed number is a seam prediction — `CONTRADICTS` | One Phase 19 branch with fixed matterlike reheating, entropy, units, and late-time inputs |
 
 ## Phase 16 check ledger
 
@@ -203,6 +213,129 @@ The sharp kick yields linear cutoff divergence in number density and leading ene
 
 The payload-only numerical control `P18.numeric.narrow_gaussian_delta_limit` used SciPy `solve_ivp` with DOP853 and passed with maximum absolute error `7.150719e-05` and Bogoliubov-normalization error `3.330669e-16`. It is recorded separately because the graph's evidence groups enumerate exact symbolic checks.
 
+## Phase 19 check ledger
+
+### Shift-symmetric exact reduction — 8 checks
+
+- `P19.shift.canonical_inflaton_metric`
+- `P19.shift.quadratic_potential`
+- `P19.shift.orthogonal_inflaton_mass`
+- `P19.shift.stabilizer_mass`
+- `P19.shift.hubble_heavy_sufficient_benchmark`
+- `P19.shift.gravitino_mass_on_path`
+- `P19.shift.stabilizer_F_order_parameter`
+- `P19.shift.susy_minkowski_endpoint`
+
+These checks derive the quadratic path, distinguish \(H_V^2=V/3\) from geometric \(H(t)^2\), and verify the displayed stabilizer F direction vanishes at the fully checked minimal endpoint.
+
+### Improved Cecotti exact reduction — 7 checks
+
+- `P19.noscale.starobinsky_potential`
+- `P19.noscale.canonical_log_modulus`
+- `P19.noscale.stabilizer_hessian_mass`
+- `P19.noscale.global_hessian_threshold`
+- `P19.noscale.one_sixth_is_sufficient`
+- `P19.noscale.gravitino_mass_on_path`
+- `P19.noscale.nonzero_F_direction`
+
+These checks derive the Starobinsky path, verify the degenerate path-local stabilizer Hessian, and show that \(\zeta>1/6\) is sufficient but not the sharp full-trajectory potential-Hessian threshold.
+
+### Closed turning-point identities — 2 checks
+
+- `P19.bounce.friedmann_constraint_at_turning_point`
+- `P19.bounce.local_minimum_of_scale_factor`
+
+The exact constraint fixes \(a_0\) only after \(\phi_0\) is supplied and gives a local scale-factor minimum. It does not select \(\phi_0\) or construct a CPT/Pin quantum state.
+
+### Closed-background shooting — 24 checks
+
+- `P19.quadratic_shift_symmetric.Nacc_50`
+- `P19.quadratic_shift_symmetric.table_phi0_50`
+- `P19.quadratic_shift_symmetric.table_a0_50`
+- `P19.quadratic_shift_symmetric.friedmann_constraint_50`
+- `P19.quadratic_shift_symmetric.Nacc_55`
+- `P19.quadratic_shift_symmetric.table_phi0_55`
+- `P19.quadratic_shift_symmetric.table_a0_55`
+- `P19.quadratic_shift_symmetric.friedmann_constraint_55`
+- `P19.quadratic_shift_symmetric.Nacc_60`
+- `P19.quadratic_shift_symmetric.table_phi0_60`
+- `P19.quadratic_shift_symmetric.table_a0_60`
+- `P19.quadratic_shift_symmetric.friedmann_constraint_60`
+- `P19.improved_cecotti_starobinsky.Nacc_50`
+- `P19.improved_cecotti_starobinsky.table_phi0_50`
+- `P19.improved_cecotti_starobinsky.table_a0_50`
+- `P19.improved_cecotti_starobinsky.friedmann_constraint_50`
+- `P19.improved_cecotti_starobinsky.Nacc_55`
+- `P19.improved_cecotti_starobinsky.table_phi0_55`
+- `P19.improved_cecotti_starobinsky.table_a0_55`
+- `P19.improved_cecotti_starobinsky.friedmann_constraint_55`
+- `P19.improved_cecotti_starobinsky.Nacc_60`
+- `P19.improved_cecotti_starobinsky.table_phi0_60`
+- `P19.improved_cecotti_starobinsky.table_a0_60`
+- `P19.improved_cecotti_starobinsky.friedmann_constraint_60`
+
+The 24 numerical checks cover two potentials, three target values \(N_{\rm acc}=50,55,60\), and four checks per row: target count, displayed \(\phi_0\), displayed radius, and Friedmann residual.
+
+### First-order tensor comparison — 6 checks
+
+- `P19.slowroll.quadratic_r_exceeds_current_N50`
+- `P19.slowroll.starobinsky_r_below_current_N50`
+- `P19.slowroll.quadratic_r_exceeds_current_N55`
+- `P19.slowroll.starobinsky_r_below_current_N55`
+- `P19.slowroll.quadratic_r_exceeds_current_N60`
+- `P19.slowroll.starobinsky_r_below_current_N60`
+
+These six checks compare only first-order potential slow-roll \(r\) values with the cited tensor limits. They do not perform a closed-bounce perturbation calculation, reheating map, or full \(n_s,r\) likelihood analysis.
+
+## Phase 20 check ledger
+
+### Leading de Sitter/WDW envelope — 12 exact plus 6 numerical checks
+
+- `P20.WDW.hemisphere_action_normalization`
+- `P20.WDW.action_derivative`
+- `P20.WDW.standard_history_weight_slope`
+- `P20.WDW.independent_pair_weight_slope`
+- `P20.WDW.pair_slope_factor_two`
+- `P20.WDW.no_finite_stationary_envelope`
+- `P20.WDW.asymptotic_zero_slope_only`
+- `P20.WDW.conjugate_saddle_interference`
+- `P20.WDW.independent_pair_joint_probability`
+- `P20.WDW.constant_symmetrization_does_not_move_slope`
+- `P20.WDW.starobinsky_epsilon`
+- `P20.WDW.constant_field_is_not_exact_saddle`
+- `P20.numeric.standard_slope_coefficient`
+- `P20.numeric.pair_slope_coefficient`
+- `P20.numeric.standard_central_difference`
+- `P20.numeric.pair_central_difference`
+- `P20.numeric.HH_and_tunneling_opposite_monotonicity`
+- `P20.numeric.slow_roll_not_constant_field`
+
+The standard history probability is proportional to \(e^{2sI}\). The doubled-slope \(e^{4sI}\) expression is checked only as the joint probability of an independently factorized pair; it is not derived from CPT sewing. Both leading envelopes are monotone at the Phase 19 benchmark. The same group verifies the order-one coherent \(\cos^2S\) identity and that the benchmark has small but nonzero \(\epsilon_V\), so the calculation is not promoted to an exact Starobinsky WDW saddle or no-go theorem.
+
+### Cecotti auxiliary direction — 5 exact plus 2 numerical checks
+
+- `P20.SUSY.cecotti_DSW`
+- `P20.SUSY.cecotti_inverse_metric`
+- `P20.SUSY.cecotti_auxiliary`
+- `P20.SUSY.cecotti_potential`
+- `P20.SUSY.static_F_flat_point`
+- `P20.numeric.T_star`
+- `P20.numeric.nonzero_F_star`
+
+These checks give \(T_*=85.1288467\ldots\) and \(F^S/M=-6.4475031\ldots\), contradicting classical F-flatness at \(\varphi_*=5.442969458\). They do not solve the coupled quantum local-SUSY constraints or exclude wavefunction support there.
+
+### Conditional curvature–reheating bridge — 1 exact plus 6 numerical checks
+
+- `P20.curvature.matterlike_temperature_exponent`
+- `P20.numeric.phase19_Nacc_bridge`
+- `P20.numeric.phase19_rho_end_bridge`
+- `P20.numeric.phase19_constraint_bridge`
+- `P20.numeric.curvature_reheating_coefficient`
+- `P20.numeric.curvature_reheating_inverse`
+- `P20.numeric.closed_curvature_sign`
+
+The bridge independently recovers the Phase 19 60-e-fold endpoint and, for the frozen inputs, obtains \(\Omega_{K0}=-5.5258\times10^{-4}(T_{\rm reh}/10^9\,{\rm GeV})^{2/3}\). The sign, branch choice, reheating equation of state, temperature, entropy factors, units, and late-time constants are all explicit inputs. This is a reproducible conversion, not a curvature detection or seam prediction.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -211,6 +344,8 @@ The commands recorded in the snapshots are:
 uv run --locked python3 cpt_temporal_folded_susy/phase16_bgg_single_source.py
 uv run --locked python3 cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py
 uv run --locked python3 cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py
+uv run --locked python3 cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py
+uv run --locked python3 cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -257,5 +392,19 @@ claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE
   ├─ HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p18-charge-and-poles
   └─ VALID_WITHIN → scope:p18-free-instantaneous-seam
 ```
+
+Phase 20's central bounded trace is:
+
+```text
+claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p20-leading-wdw-envelope
+  → DEFINED_IN → artifact:p20-script
+  → RECORDED_IN → artifact:p20-evidence-snapshot
+  → VALID_WITHIN → scope:p20-leading-de-sitter-wdw-control
+  → MOTIVATES → open:p20-exact-starobinsky-wdw-state
+```
+
+The scope edge is essential: the trace concerns the leading constant-field envelope, not an exact two-sheet local-SUGRA WDW no-go.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

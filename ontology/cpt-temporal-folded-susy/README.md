@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T16:42:39Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T17:39:49Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
 
 ## Quick answers
 
@@ -22,7 +22,11 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Is Schwinger–Keldysh BRST particle supersymmetry? | No. The checked quartet is cohomological/ghost graded and is not a positive-energy particle-SUSY construction. | `claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY` |
 | Does elapsed time itself break supersymmetry? | No in the conserved-charge control. If `[H,Q]=0`, a state annihilated by `Q` stays in that kernel under time evolution. | `claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY` |
 | Can one free instantaneous canonical seam explain missing superpartner pole masses? | No in the frozen Phase 18 class. It can prepare a non-SUSY state, but the post-post retarded B/F poles remain degenerate, and a sharp local kick has divergent energy density. | `claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING`; `claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE`; `claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open. | Phase 16–18 scope guards |
+| Do the displayed closed SUGRA models admit 50–60 accelerated e-folds? | Yes conditionally. Six homogeneous (k=+1) target-shot backgrounds pass the exact turning-point and numerical constraint checks. | `claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC` |
+| Does time symmetry now predict \(\phi_0\), universe size, or a present SUSY spectrum? | No. The bosonic symmetry data leave \(\phi_0\) free, the radius is conditional, and the displayed stabilizer F directions vanish at their endpoints. | `claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE`; `claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT` |
+| Does the leading two-sheet WDW control select \(\phi_0=5.442969\)? | No in the constant-field de Sitter envelope. The standard \(e^{2sI}\) history weight and conditional independent-pair \(e^{4sI}\) joint probability are monotone there. This is not an exact two-sheet SUGRA WDW no-go. | `claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44`; `claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING` |
+| Is the displayed \(\Omega_{K0}\)–\(T_{\rm reh}\) value a seam prediction? | No. The conversion is reproducible only after fixing the Phase 19 branch, reheating history, units, entropy data, and late-time parameters. | `claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE`; `claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope but not an exact local-SUGRA WDW state. | Phase 16–20 scope guards |
 
 ## Concept map
 
@@ -67,11 +71,35 @@ flowchart TD
   Pole18 --> Frontier18["OPEN: interacting self-energies · persistent carrier<br/>FRW backreaction · Higgs power sensitivity"]
   State18 --> Frontier18
   UV18 --> Frontier18
+
+  Programme --> P19["Phase 19 · closed SUGRA backgrounds"]
+  P19 --> Shift19["Shift trajectory → quadratic potential<br/>SUPPORTED"]
+  P19 --> Star19["Cecotti trajectory → Starobinsky potential<br/>SUPPORTED"]
+  P19 --> Bounce19["Six target-shot 50/55/60 Nacc backgrounds<br/>SUPPORTED"]
+  P19 --> Phi19["Time-reflection data leave phi0 free<br/>SUPPORTED"]
+  P19 --> R19["Quadratic r below current limit<br/>CONTRADICTED"]
+  P19 --> SR19["Starobinsky first-order r below limit<br/>SUPPORTED"]
+  Phi19 --> Open19["OPEN: minisuperspace phi0 measure"]
+  SR19 --> Pert19["OPEN: S3 state · perturbations · reheating"]
+
+  Programme --> P20["Phase 20 · leading WDW selection control"]
+  P20 --> Peak20["Leading envelope selects 5.44<br/>CONTRADICTED"]
+  P20 --> Pair20["CPT automatically gives exp(4sI)<br/>CONTRADICTED"]
+  P20 --> Int20["Coherent sum only rescales probability<br/>CONTRADICTED"]
+  P20 --> F20["Cecotti 5.44 point is F-flat<br/>CONTRADICTED"]
+  P20 --> Curv20["Conditional curvature–reheating map<br/>SUPPORTED"]
+  Peak20 --> Exact20["OPEN: exact complex WDW state · current · measure"]
+  Pair20 --> Sheet20["OPEN: CPT/Pin sheet inner product"]
+  F20 --> Loop20["OPEN: local-SUGRA one-loop determinant"]
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
 
 Phase 18 makes a different separation: an instantaneous free canonical seam can alter occupations and Wightman data without changing the common post-post retarded pole. This is a state-preparation witness, not a permanent soft-mass mechanism, and the unsmoothed local scalar kick is UV inadmissible.
+
+Phase 19 adds gravity only at the homogeneous classical-background level. It verifies two exact one-field SUGRA reductions and six conditional closed-FRW shooting solutions. The rows prove existence after choosing a target \(N_{\rm acc}\); they do not show that CPT/Pin selects \(\phi_0\), construct a quantum state, or predict a parameter-free universe size.
+
+Phase 20 tests one leading selection proposal rather than solving the exact WDW problem. The constant-field de Sitter envelope is monotone at the Phase 19 benchmark under both the standard \(e^{2sI}\) history weight and a separately assumed independent-pair \(e^{4sI}\) joint probability. Coherent phases, a WDW current, the sheet inner product, the exact complex saddle, and local-SUGRA loop sectors remain outside that result.
 
 ## Core distinctions
 
@@ -88,6 +116,13 @@ Phase 18 makes a different separation: an instantaneous free canonical seam can 
 | Initial state vs spectral pole (`concept:initial-state-versus-spectral-pole`) | Occupations, anomalous correlators, and Wightman functions can remember a seam while the free retarded commutator keeps the unchanged bulk pole. |
 | One-time excitation vs persistent carrier (`concept:persistent-susy-breaking-carrier`) | A non-SUSY state does not by itself supply a nondecaying `F`/`D` order parameter, memory sector, vacuum selection, or bulk soft spurion. |
 | Sharp kick vs admissible smoothing | The spatially local delta kick has linearly divergent number density and quadratically divergent energy density; the Gaussian result is only a bounded Born/numerical control, not a constructed UV completion. |
+| Potential scale vs geometric Hubble rate | \(H_V^2=V/3\) is used in the transverse SUGRA masses; the closed-FRW \(H(t)^2\) vanishes at the symmetric bounce. |
+| Background existence vs initial-amplitude selection | Target shooting can prove a branch exists while leaving \(\phi_0\) unselected. A perturbation Gaussian state and a minisuperspace/background measure are separate constructions. |
+| \(N_{\rm acc}\) vs \(N_*\) | Bounce-to-end accelerated e-folds are not automatically the CMB pivot e-fold count without reheating and scale matching. |
+| Standard history vs independent-pair probability | \(e^{2sI}\) is the recorded standard semiclassical one-history weight. \(e^{4sI}\) is a conditional joint probability for an independently factorized pair; CPT sewing alone does not derive it. |
+| Envelope monotonicity vs exact WDW no-go | A nonzero slope in the constant-field de Sitter control rules out a peak in that envelope, not every complex Starobinsky saddle, WDW measure, sheet overlap, or loop-corrected local-SUGRA state. |
+| Constant normalization vs coherent interference | A constant factor cannot move an envelope slope, but an order-one phase-dependent \(\cos^2S\) term can create nodes and local extrema until a current/decoherence prescription is supplied. |
+| Conditional conversion vs prediction | Reproducing \(\Omega_{K0}(T_{\rm reh})\) after fixing \(N\), \(M_s\), \(w_{\rm reh}\), entropy, and late-time inputs does not mean the seam selected any of them. |
 
 ## IDs and claim states
 
@@ -152,6 +187,12 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p17-sk-quartet` | Four-state cohomological control | Completed physical contour Hilbert space and ghost metric |
 | `scope:p18-free-instantaneous-seam` | Flat 3+1-dimensional equal-mass free Wess–Zumino mode control; instantaneous canonical Cauchy-data map; unchanged future bulk operators; post-post retarded-pole mass | Energy/time-nonlocal kernels, higher-time-derivative data, persistent carrier or bath, interactions, a full doubled Wess–Zumino Pin/common-domain construction, absolute scale, and Standard Model Higgs physics |
 | `scope:p18-uv-and-conditional-controls` | Sharp-kick cutoff integrals, Gaussian Born/numerical control, collisionless FRW dilution, and an inserted soft-term benchmark | Interacting Wigner self-energies, backreaction, thermalization, an absolute mass prediction, and a computed Higgs cancellation |
+| `scope:p19-exact-one-field-sugra-trajectories` | Exact F-term reductions, recorded path-local Hessians, \(H_V\) convention, endpoint F directions | Full covariant multifield stability, fermionic/off-shell CPT/Pin seam, present soft spectrum |
+| `scope:p19-classical-homogeneous-closed-frw-shooting` | Classical \(k=+1\) turning-point data, target shooting, constraint monitoring | \(\phi_0\) selection, quantum state, perturbations, uniqueness, parameter-free universe size |
+| `scope:p19-first-order-potential-slow-roll-r` | First-order potential slow-roll \(r\) at selected \(N_*\) | Reheating map, closed-\(S^3\) perturbations, full \(n_s,r\) likelihood viability |
+| `scope:p20-leading-de-sitter-wdw-control` | Constant-field hemisphere exponent, standard history weight, conditional independent-pair joint probability, exact slopes, coherent-sum identity | Exact complex Starobinsky saddle, WDW current/measure/factor ordering, CPT/Pin sheet inner product, local-SUGRA sectors, exact no-go |
+| `scope:p20-cecotti-path-f-flatness` | Classical \(D_SW\), inverse metric, \(F^S\), and positive-real static F-flat point on the displayed path | Quantum local-SUSY wavefunction support, closed-bounce Killing spinor, fermionic CPT/Pin boundary condition |
+| `scope:p20-conditional-curvature-reheating-benchmark` | One Phase 19 branch, \(w_{\rm reh}=0\), entropy conservation, explicit units, signed \(\Omega_K\) | Seam-selected amplitude/reheating, curvature detection, uncertainties/global likelihood, other thermal histories |
 
 ## Open construction ledger
 
@@ -172,8 +213,18 @@ All entries below have state `OPEN` in the graph.
 | `open:p18-persistent-order-parameter` | A finite-energy CPT/Pin-compatible nondecaying `F`/`D` order parameter, memory sector, or vacuum-selection mechanism |
 | `open:p18-frw-backreaction` | Expansion with interactions, thermalization, and backreaction beyond the conditional collisionless `a^-2` and `a^-3` controls |
 | `open:p18-higgs-power-sensitivity` | Regulator-independent Higgs power-sensitivity calculation in a consistent interacting doubled parent |
+| `open:p19-minisuperspace-phi0-measure` | A background wavefunction, seam path integral, or measure that predictively weights \(\phi_0\) |
+| `open:p19-cpt-pin-perturbation-state` | A CPT/Pin-compatible Hadamard/Wronskian perturbation state on a fixed background |
+| `open:p19-closed-s3-perturbations` | Discrete scalar/tensor propagation through the closed bounce |
+| `open:p19-reheating-pivot-map` | Reheating and the map from \(N_{\rm acc}\) to observational \(N_*\) |
+| `open:p19-full-covariant-multifield-stability` | Complete covariant scalar and fermionic SUGRA stability along the bounce |
+| `open:p20-exact-starobinsky-wdw-state` | Exact complex scalar-gravity saddle, WDW current or decoherent-histories measure, and fixed factor ordering |
+| `open:p20-cpt-pin-sheet-inner-product` | A doubled Hilbert space and sewing action that derive normalization, overlap, and the physical joint-probability rule |
+| `open:p20-local-sugra-one-loop-selection` | Gauge-fixed local-SUGRA wavefunction and boson–fermion–gravitino determinant including ghosts, zero modes, and renormalization |
+| `open:p20-quantized-four-form-selection` | UV-fixed discrete flux selection without tuning couplings to \(5.44\) |
+| `open:p20-seam-reheating-curvature-prediction` | Joint seam derivation of initial amplitude, reheating dynamics, and a present curvature distribution |
 
-The shortest honest statement of the research frontier is therefore: **finite doubled and state-preparation witnesses exist; a common interacting physical theory with persistent spectral breaking does not yet.**
+The shortest honest statement of the research frontier is therefore: **finite doubled and state-preparation witnesses plus conditional closed backgrounds exist; the leading de Sitter WDW envelope does not select \(5.44\), but neither an exact predictive background-selection rule nor a common interacting theory with persistent spectral breaking exists yet.**
 
 ## Repository artifacts
 
@@ -183,6 +234,8 @@ The shortest honest statement of the research frontier is therefore: **finite do
 | 16 | [`phase16_bgg_single_source.py`](../../cpt_temporal_folded_susy/phase16_bgg_single_source.py) | [`PHASE16_BGG_SINGLE_SOURCE.md`](../../cpt_temporal_folded_susy/PHASE16_BGG_SINGLE_SOURCE.md) · [`PHASE16_BGG_SOURCE_NOTES.md`](../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) | [`phase16-result.json`](./evidence/phase16-result.json) |
 | 17 | [`phase17_time_line_fold_algebra.py`](../../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py) | [`PHASE17_TIME_LINE_FOLD_ALGEBRA.md`](../../cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md) | [`phase17-result.json`](./evidence/phase17-result.json) |
 | 18 | [`phase18_gaussian_seam_spectrum.py`](../../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py) | [`PHASE18_GAUSSIAN_SEAM_SPECTRUM.md`](../../cpt_temporal_folded_susy/PHASE18_GAUSSIAN_SEAM_SPECTRUM.md) | [`phase18-result.json`](./evidence/phase18-result.json) |
+| 19 | [`phase19_closed_sugra_bounce.py`](../../cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py) | [`PHASE19_CLOSED_SUGRA_BOUNCE.md`](../../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md) | [`phase19-result.json`](./evidence/phase19-result.json) |
+| 20 | [`phase20_two_sheet_wdw_selection.py`](../../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py) | [`PHASE20_TWO_SHEET_WDW_SELECTION.md`](../../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | [`phase20-result.json`](./evidence/phase20-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

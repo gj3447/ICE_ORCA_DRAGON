@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 49 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 51 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -238,11 +238,65 @@ See
 and
 [`../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py`](../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py).
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 19
+
+Phase 19 tests two explicit SUGRA inflation trajectories against the closed \(k=+1\),
+time-reflection-symmetric bosonic equations. Its locked executable returned exit 0 with **17 exact and
+30 numerical checks**.
+
+- Exact reduction gives \(V=m^2\phi^2/2\) for the shift-symmetric stabilizer model and the Starobinsky
+  potential for the improved Cecotti/no-scale model. Orthogonal mass formulae use
+  \(H_V^2=V/3\), not the actual \(H(t)^2\), which vanishes at the bounce.
+- Data \(H_0=\dot\phi_0=0\) and \(a_0=\sqrt{3/V(\phi_0)}\) produce a local smooth bosonic bounce. The
+  independent integrations reproduce 50, 55, and 60 accelerated-e-fold solutions for both potentials
+  with maximum relative Friedmann-constraint error below \(10^{-12}\).
+- Every table row is an existence witness found by shooting from a requested \(N_{\rm acc}\). Neither
+  CPT nor Pin selects the input \(\phi_0\); in particular, \(\phi_0=5.44296946\ldots\) is the value
+  required by the 60-e-fold Starobinsky row, not a seam prediction.
+- The inflationary stabilizer F-term is nonzero, but the displayed models restore the supersymmetric
+  Minkowski endpoint. No persistent soft scale, fermionic sewing, perturbation propagation, or
+  reheating history is derived.
+- The runnable catalog rose to 50; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md`](../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md)
+and
+[`../cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py`](../cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 20
+
+Phase 20 checks whether the leading de Sitter/WDW envelope selects the Phase 19 Starobinsky benchmark.
+Its locked executable returned exit 0 with **18 exact and 14 numerical checks**.
+
+- The standard semiclassical history weight is proportional to \(e^{2sI}\). The \(e^{4sI}\) weight
+  requires an additional independent-pair assumption; CPT sewing alone does not derive it. Both
+  conventions are monotone at finite positive \(\varphi\) and have a nonzero slope at
+  \(\varphi=5.442969458\), so the leading envelope does not select that value.
+- A universal factor-two symmetrized probability is not established. Coherent conjugate saddles can
+  produce order-one interference, while a WDW current, overlap, normalization, factor ordering, and
+  decoherence prescription remain unconstructed.
+- On the displayed Cecotti trajectory the benchmark has \(F^S\ne0\). Its static positive-real F-flat
+  point is \(T=1,\varphi=0\), but that classical observation does not solve or localize the quantum
+  local-SUSY wavefunction.
+- With the Phase 19 endpoint and explicit thermal-history inputs, the code reproduces
+  \(\Omega_{K0}=-5.5258\times10^{-4}(T_{\rm reh}/10^9\,{\rm GeV})^{2/3}\). This is a sensitive
+  conditional conversion, including the negative closed-universe sign, not a curvature or reheating
+  prediction.
+- An exact complex SUGRA saddle and the boson–fermion–gravitino one-loop determinant remain open. The
+  calculation is a leading-envelope control, not a two-sheet SUGRA WDW no-go.
+- The runnable catalog is now 51; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md)
+and
+[`../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py`](../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py).
+
 ## Research ontology memory
 
-Phase 15R–18 is now indexed in a repository-local typed research graph with **105 nodes and 177 directed
-relations**. It preserves 19 claims, 12 evidence groups, 11 explicit scopes, 13 open problems, 16
-literature sources, the Phase 16–18 exact run payloads, and cautious bridges to the older SYMPOSIUM KG.
+Phase 15R–20 is now indexed in a repository-local typed research graph with **170 nodes and 311 directed
+relations**. It preserves 34 claims, 20 evidence groups, 17 explicit scopes, 23 open problems, 26
+literature sources, the Phase 16–20 exact and bounded numerical run payloads, and cautious bridges to
+the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
   is the human concept map.

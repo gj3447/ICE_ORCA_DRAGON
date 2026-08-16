@@ -442,12 +442,16 @@ layer(AppLayer)("canonical ontology", (it) => {
   it.effect("passes semantic validation and verifies every file hash", () =>
     Effect.gen(function* () {
       const { validation } = yield* loadOntologyValidation
+      const graph = yield* loadResearchGraph
       expect(validation.valid).toBe(true)
       expect(validation.errors).toHaveLength(0)
       expect(validation.counts.verified_hashes).toBe(
         validation.counts.hash_bearing_nodes
       )
-      expect(validation.warnings).toHaveLength(7)
+      expect(validation.warnings).toHaveLength(
+        graph.kg_bridges.filter((bridge) => bridge.status === "UNRESOLVED")
+          .length
+      )
       expect(
         validation.warnings.every(
           (issue) => issue.code === "EXTERNAL_BRIDGE_UNRESOLVED"
@@ -456,11 +460,14 @@ layer(AppLayer)("canonical ontology", (it) => {
     })
   )
 
-  it.effect("audits exactly the P16-P18 evidence snapshots", () =>
+  it.effect("audits every graph-registered evidence snapshot", () =>
     Effect.gen(function* () {
       const graph = yield* loadResearchGraph
       const audit = yield* auditEvidenceSnapshots(graph)
-      expect(audit.audited).toBe(3)
+      const evidenceArtifacts = graph.nodes.filter(
+        (node) => node.type === "artifact" && node.artifact_kind === "evidence"
+      )
+      expect(audit.audited).toBe(evidenceArtifacts.length)
       expect(audit.issues).toEqual([])
       expect(
         graph.nodes.find((node) => node.id === "artifact:p15r-run-result")

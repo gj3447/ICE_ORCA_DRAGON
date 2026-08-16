@@ -1,0 +1,722 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P19_CLOSED_SUGRA_BOUNCE_20260816",
+  "phase": "P19",
+  "observed_at_utc": "2026-08-16T17:23:38Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py",
+    "sha256": "5dbfccd768bb13961222c289ba0754497bec94319f8b33ff602889eaeb469341",
+    "introduced_in_commit": "90aedef93eadab40156fc22daf87b2d6942f49a6"
+  },
+  "exact_checks": 17,
+  "checks": [
+    {
+      "id": "P19.shift.canonical_inflaton_metric",
+      "statement": "K_{Phi Phibar}=1 gives a canonical real inflaton on the trajectory",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.shift.quadratic_potential",
+      "statement": "the source-local F-term potential is V=m^2 phi^2/2",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.shift.orthogonal_inflaton_mass",
+      "statement": "m_ImPhi^2=m^2+6H_V^2 with H_V^2:=V/3",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.shift.stabilizer_mass",
+      "statement": "m_S^2=m^2+12 zeta H_V^2 for either real stabilizer component",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.shift.hubble_heavy_sufficient_benchmark",
+      "statement": "zeta=1/12 is a sufficient m_S^2>H_V^2 benchmark at finite phi",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.shift.gravitino_mass_on_path",
+      "statement": "W=0 implies m_3/2=0 on S=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.shift.stabilizer_F_order_parameter",
+      "statement": "|F^S|=m|phi|/sqrt(2), up to the auxiliary sign convention",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.shift.susy_minkowski_endpoint",
+      "statement": "the phi=0 endpoint has W=D_Phi W=D_S W=V=F^S=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.noscale.starobinsky_potential",
+      "statement": "the improved Cecotti trajectory gives the Starobinsky potential",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.noscale.canonical_log_modulus",
+      "statement": "T=exp(sqrt(2/3) phi) gives the canonical real kinetic coefficient 1/2",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.noscale.stabilizer_hessian_mass",
+      "statement": "the degenerate real S Hessian reproduces the exact T-dependent mass",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.noscale.global_hessian_threshold",
+      "statement": "the potential-Hessian stability threshold is (-15+9 sqrt(3))/4",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.noscale.one_sixth_is_sufficient",
+      "statement": "zeta=1/6 is a conservative sufficient stability benchmark",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.noscale.gravitino_mass_on_path",
+      "statement": "W=0 and m_3/2=0 on S=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.noscale.nonzero_F_direction",
+      "statement": "D_S W is nonzero for T>1 and vanishes at T=1 while W=0 on the path",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.bounce.friedmann_constraint_at_turning_point",
+      "statement": "H_0=phidot_0=0 fixes a_0=sqrt(3/V_0) for k=+1",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.bounce.local_minimum_of_scale_factor",
+      "statement": "dot H_0=1/a_0^2>0 makes the symmetric turning point a local bounce",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 30,
+  "numerical": [
+    {
+      "id": "P19.quadratic_shift_symmetric.Nacc_50",
+      "statement": "a time-symmetric closed solution reaches N_acc=50",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.table_phi0_50",
+      "statement": "the independently solved phi_0 reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.table_a0_50",
+      "statement": "the dimensionless curvature radius reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.friedmann_constraint_50",
+      "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.Nacc_55",
+      "statement": "a time-symmetric closed solution reaches N_acc=55",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.table_phi0_55",
+      "statement": "the independently solved phi_0 reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.table_a0_55",
+      "statement": "the dimensionless curvature radius reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.friedmann_constraint_55",
+      "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.Nacc_60",
+      "statement": "a time-symmetric closed solution reaches N_acc=60",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.table_phi0_60",
+      "statement": "the independently solved phi_0 reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.table_a0_60",
+      "statement": "the dimensionless curvature radius reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.quadratic_shift_symmetric.friedmann_constraint_60",
+      "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.Nacc_50",
+      "statement": "a time-symmetric closed solution reaches N_acc=50",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.table_phi0_50",
+      "statement": "the independently solved phi_0 reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.table_a0_50",
+      "statement": "the dimensionless curvature radius reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.friedmann_constraint_50",
+      "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.Nacc_55",
+      "statement": "a time-symmetric closed solution reaches N_acc=55",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.table_phi0_55",
+      "statement": "the independently solved phi_0 reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.table_a0_55",
+      "statement": "the dimensionless curvature radius reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.friedmann_constraint_55",
+      "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.Nacc_60",
+      "statement": "a time-symmetric closed solution reaches N_acc=60",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.table_phi0_60",
+      "statement": "the independently solved phi_0 reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.table_a0_60",
+      "statement": "the dimensionless curvature radius reproduces the supplied table",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.improved_cecotti_starobinsky.friedmann_constraint_60",
+      "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.slowroll.quadratic_r_exceeds_current_N50",
+      "statement": "quadratic slow-roll r exceeds both BK18 0.036 and the 2026 combined 0.034 limit",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.slowroll.starobinsky_r_below_current_N50",
+      "statement": "Starobinsky slow-roll r lies below the 2026 combined limit",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.slowroll.quadratic_r_exceeds_current_N55",
+      "statement": "quadratic slow-roll r exceeds both BK18 0.036 and the 2026 combined 0.034 limit",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.slowroll.starobinsky_r_below_current_N55",
+      "statement": "Starobinsky slow-roll r lies below the 2026 combined limit",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.slowroll.quadratic_r_exceeds_current_N60",
+      "statement": "quadratic slow-roll r exceeds both BK18 0.036 and the 2026 combined 0.034 limit",
+      "status": "PASS"
+    },
+    {
+      "id": "P19.slowroll.starobinsky_r_below_current_N60",
+      "statement": "Starobinsky slow-roll r lies below the 2026 combined limit",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "shift-symmetric/no-scale SUGRA plus closed-FRW bounce control",
+    "claim_status": {
+      "CPT_or_Pin_selects_phi0": "OPEN_NOT_DERIVED",
+      "Starobinsky_first_order_ns_comparison": "CONDITIONAL_DATASET_DEPENDENT_NOT_LIKELIHOOD_TESTED",
+      "Starobinsky_first_order_r_is_below_current_limit": "SUPPORTED",
+      "closed_time_symmetric_50_to_60_efold_solutions_exist": "SUPPORTED_NUMERICALLY_FOR_THE_DISPLAYED_MODELS",
+      "full_CPT_Pin_SUGRA_state_or_seam": "OPEN_NOT_CONSTRUCTED",
+      "improved_Cecotti_Starobinsky_potential_exists": "SUPPORTED_EXACT",
+      "quadratic_model_is_compatible_with_BK18_r_limit": "CONTRADICTED",
+      "shift_symmetric_quadratic_potential_exists": "SUPPORTED_EXACT"
+    },
+    "closed_bounce": {
+      "equations": {
+        "Klein_Gordon": "ddot(phi)+3H phidot+V_phi=0",
+        "Raychaudhuri": "dot(H)=-phidot^2/2+1/a^2",
+        "constraint": "H^2+1/a^2=(phidot^2/2+V)/3"
+      },
+      "results": {
+        "conditional_scale_benchmarks": {
+          "quadratic_60": {
+            "H_max_over_MPl": "3.690186e-05",
+            "a0_in_MPl_inverse": "2.625184e+04",
+            "input_mass_m_over_MPl": "6.0e-06"
+          },
+          "starobinsky_60": {
+            "H_max_over_MPl": "6.416345e-06",
+            "a0_in_MPl_inverse": "1.556749e+05",
+            "input_mass_M_over_MPl": "1.3e-05"
+          }
+        },
+        "tables": {
+          "improved_cecotti_starobinsky": [
+            {
+              "H_max_over_mass_scale": "0.492249532",
+              "N_acc_observed": "50.000000000",
+              "constraint_max_relative_error": "2.080e-14",
+              "mass_scale_times_a0": "2.02828882",
+              "phi0_solved_from_target": "5.23269928",
+              "target_accelerated_e_folds": 50
+            },
+            {
+              "H_max_over_mass_scale": "0.492967908",
+              "N_acc_observed": "55.000000000",
+              "constraint_max_relative_error": "3.329e-15",
+              "mass_scale_times_a0": "2.02583440",
+              "phi0_solved_from_target": "5.34237404",
+              "target_accelerated_e_folds": 55
+            },
+            {
+              "H_max_over_mass_scale": "0.493564968",
+              "N_acc_observed": "60.000000000",
+              "constraint_max_relative_error": "1.271e-14",
+              "mass_scale_times_a0": "2.02377306",
+              "phi0_solved_from_target": "5.44296946",
+              "target_accelerated_e_folds": 60
+            }
+          ],
+          "quadratic_shift_symmetric": [
+            {
+              "H_max_over_mass_scale": "5.589491442",
+              "N_acc_observed": "50.000000000",
+              "constraint_max_relative_error": "6.016e-14",
+              "mass_scale_times_a0": "0.17235845",
+              "phi0_solved_from_target": "14.21160232",
+              "target_accelerated_e_folds": 50
+            },
+            {
+              "H_max_over_mass_scale": "5.876431461",
+              "N_acc_observed": "55.000000000",
+              "constraint_max_relative_error": "2.982e-13",
+              "mass_scale_times_a0": "0.16443528",
+              "phi0_solved_from_target": "14.89637634",
+              "target_accelerated_e_folds": 55
+            },
+            {
+              "H_max_over_mass_scale": "6.150309764",
+              "N_acc_observed": "60.000000000",
+              "constraint_max_relative_error": "5.109e-13",
+              "mass_scale_times_a0": "0.15751104",
+              "phi0_solved_from_target": "15.55122563",
+              "target_accelerated_e_folds": 60
+            }
+          ]
+        }
+      },
+      "time_reflection_compatible_bosonic_initial_data": "a and phi even; H and phidot odd; H0=phidot0=0"
+    },
+    "exact_check_ids": [
+      "P19.shift.canonical_inflaton_metric",
+      "P19.shift.quadratic_potential",
+      "P19.shift.orthogonal_inflaton_mass",
+      "P19.shift.stabilizer_mass",
+      "P19.shift.hubble_heavy_sufficient_benchmark",
+      "P19.shift.gravitino_mass_on_path",
+      "P19.shift.stabilizer_F_order_parameter",
+      "P19.shift.susy_minkowski_endpoint",
+      "P19.noscale.starobinsky_potential",
+      "P19.noscale.canonical_log_modulus",
+      "P19.noscale.stabilizer_hessian_mass",
+      "P19.noscale.global_hessian_threshold",
+      "P19.noscale.one_sixth_is_sufficient",
+      "P19.noscale.gravitino_mass_on_path",
+      "P19.noscale.nonzero_F_direction",
+      "P19.bounce.friedmann_constraint_at_turning_point",
+      "P19.bounce.local_minimum_of_scale_factor"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P19.shift.canonical_inflaton_metric",
+        "statement": "K_{Phi Phibar}=1 gives a canonical real inflaton on the trajectory",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.shift.quadratic_potential",
+        "statement": "the source-local F-term potential is V=m^2 phi^2/2",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.shift.orthogonal_inflaton_mass",
+        "statement": "m_ImPhi^2=m^2+6H_V^2 with H_V^2:=V/3",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.shift.stabilizer_mass",
+        "statement": "m_S^2=m^2+12 zeta H_V^2 for either real stabilizer component",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.shift.hubble_heavy_sufficient_benchmark",
+        "statement": "zeta=1/12 is a sufficient m_S^2>H_V^2 benchmark at finite phi",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.shift.gravitino_mass_on_path",
+        "statement": "W=0 implies m_3/2=0 on S=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.shift.stabilizer_F_order_parameter",
+        "statement": "|F^S|=m|phi|/sqrt(2), up to the auxiliary sign convention",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.shift.susy_minkowski_endpoint",
+        "statement": "the phi=0 endpoint has W=D_Phi W=D_S W=V=F^S=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.noscale.starobinsky_potential",
+        "statement": "the improved Cecotti trajectory gives the Starobinsky potential",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.noscale.canonical_log_modulus",
+        "statement": "T=exp(sqrt(2/3) phi) gives the canonical real kinetic coefficient 1/2",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.noscale.stabilizer_hessian_mass",
+        "statement": "the degenerate real S Hessian reproduces the exact T-dependent mass",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.noscale.global_hessian_threshold",
+        "statement": "the potential-Hessian stability threshold is (-15+9 sqrt(3))/4",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.noscale.one_sixth_is_sufficient",
+        "statement": "zeta=1/6 is a conservative sufficient stability benchmark",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.noscale.gravitino_mass_on_path",
+        "statement": "W=0 and m_3/2=0 on S=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.noscale.nonzero_F_direction",
+        "statement": "D_S W is nonzero for T>1 and vanishes at T=1 while W=0 on the path",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.bounce.friedmann_constraint_at_turning_point",
+        "statement": "H_0=phidot_0=0 fixes a_0=sqrt(3/V_0) for k=+1",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.bounce.local_minimum_of_scale_factor",
+        "statement": "dot H_0=1/a_0^2>0 makes the symmetric turning point a local bounce",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 17,
+    "models": {
+      "improved_cecotti_no_scale": {
+        "K": "-3 log[T+Tbar-S*Sbar+(zeta/3)(S*Sbar)^2]",
+        "V": "3 M^2 [1-exp(-sqrt(2/3) phi)]^2/4",
+        "W": "3 M S (T-1)",
+        "conservative_stability_benchmark": "zeta>1/6",
+        "full_T_ge_1_stability_threshold_decimal": "0.147114317030",
+        "full_T_ge_1_stability_threshold_exact": "-15/4 + 9*sqrt(3)/4",
+        "source_caveat": "Kallosh-Linde arXiv:1306.3214 reports zeta>0.15 for stability and zeta about 0.5 for m_S^2 at least H_V^2; 1/6 is sufficient for stability, not a universal heavy-field threshold",
+        "trajectory": "S=0, T=exp(sqrt(2/3) phi) real"
+      },
+      "shift_symmetric": {
+        "F_S_magnitude": "m |phi|/sqrt(2)",
+        "Hubble_heavy_sufficient_benchmark": "zeta>=1/12",
+        "K": "-(Phi-Phibar)^2/2 + S*Sbar - zeta*(S*Sbar)^2",
+        "V": "m^2 phi^2/2",
+        "W": "m*S*Phi",
+        "m_3_over_2": "0 on S=0",
+        "m_ImPhi_squared": "m^2+6H_V^2",
+        "m_S_squared": "m^2+12 zeta H_V^2",
+        "mass_scale_definition": "H_V^2:=V/3, distinct from the closed-FRW H(t)^2",
+        "trajectory": "S=0, Im(Phi)=0, phi=sqrt(2) Re(Phi)"
+      },
+      "units": "reduced Planck units M_Pl=1"
+    },
+    "numerical_check_ids": [
+      "P19.quadratic_shift_symmetric.Nacc_50",
+      "P19.quadratic_shift_symmetric.table_phi0_50",
+      "P19.quadratic_shift_symmetric.table_a0_50",
+      "P19.quadratic_shift_symmetric.friedmann_constraint_50",
+      "P19.quadratic_shift_symmetric.Nacc_55",
+      "P19.quadratic_shift_symmetric.table_phi0_55",
+      "P19.quadratic_shift_symmetric.table_a0_55",
+      "P19.quadratic_shift_symmetric.friedmann_constraint_55",
+      "P19.quadratic_shift_symmetric.Nacc_60",
+      "P19.quadratic_shift_symmetric.table_phi0_60",
+      "P19.quadratic_shift_symmetric.table_a0_60",
+      "P19.quadratic_shift_symmetric.friedmann_constraint_60",
+      "P19.improved_cecotti_starobinsky.Nacc_50",
+      "P19.improved_cecotti_starobinsky.table_phi0_50",
+      "P19.improved_cecotti_starobinsky.table_a0_50",
+      "P19.improved_cecotti_starobinsky.friedmann_constraint_50",
+      "P19.improved_cecotti_starobinsky.Nacc_55",
+      "P19.improved_cecotti_starobinsky.table_phi0_55",
+      "P19.improved_cecotti_starobinsky.table_a0_55",
+      "P19.improved_cecotti_starobinsky.friedmann_constraint_55",
+      "P19.improved_cecotti_starobinsky.Nacc_60",
+      "P19.improved_cecotti_starobinsky.table_phi0_60",
+      "P19.improved_cecotti_starobinsky.table_a0_60",
+      "P19.improved_cecotti_starobinsky.friedmann_constraint_60",
+      "P19.slowroll.quadratic_r_exceeds_current_N50",
+      "P19.slowroll.starobinsky_r_below_current_N50",
+      "P19.slowroll.quadratic_r_exceeds_current_N55",
+      "P19.slowroll.starobinsky_r_below_current_N55",
+      "P19.slowroll.quadratic_r_exceeds_current_N60",
+      "P19.slowroll.starobinsky_r_below_current_N60"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P19.quadratic_shift_symmetric.Nacc_50",
+        "statement": "a time-symmetric closed solution reaches N_acc=50",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.table_phi0_50",
+        "statement": "the independently solved phi_0 reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.table_a0_50",
+        "statement": "the dimensionless curvature radius reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.friedmann_constraint_50",
+        "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.Nacc_55",
+        "statement": "a time-symmetric closed solution reaches N_acc=55",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.table_phi0_55",
+        "statement": "the independently solved phi_0 reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.table_a0_55",
+        "statement": "the dimensionless curvature radius reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.friedmann_constraint_55",
+        "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.Nacc_60",
+        "statement": "a time-symmetric closed solution reaches N_acc=60",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.table_phi0_60",
+        "statement": "the independently solved phi_0 reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.table_a0_60",
+        "statement": "the dimensionless curvature radius reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.quadratic_shift_symmetric.friedmann_constraint_60",
+        "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.Nacc_50",
+        "statement": "a time-symmetric closed solution reaches N_acc=50",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.table_phi0_50",
+        "statement": "the independently solved phi_0 reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.table_a0_50",
+        "statement": "the dimensionless curvature radius reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.friedmann_constraint_50",
+        "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.Nacc_55",
+        "statement": "a time-symmetric closed solution reaches N_acc=55",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.table_phi0_55",
+        "statement": "the independently solved phi_0 reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.table_a0_55",
+        "statement": "the dimensionless curvature radius reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.friedmann_constraint_55",
+        "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.Nacc_60",
+        "statement": "a time-symmetric closed solution reaches N_acc=60",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.table_phi0_60",
+        "statement": "the independently solved phi_0 reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.table_a0_60",
+        "statement": "the dimensionless curvature radius reproduces the supplied table",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.improved_cecotti_starobinsky.friedmann_constraint_60",
+        "statement": "the redundant Friedmann constraint stays below 1e-12 relative error",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.slowroll.quadratic_r_exceeds_current_N50",
+        "statement": "quadratic slow-roll r exceeds both BK18 0.036 and the 2026 combined 0.034 limit",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.slowroll.starobinsky_r_below_current_N50",
+        "statement": "Starobinsky slow-roll r lies below the 2026 combined limit",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.slowroll.quadratic_r_exceeds_current_N55",
+        "statement": "quadratic slow-roll r exceeds both BK18 0.036 and the 2026 combined 0.034 limit",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.slowroll.starobinsky_r_below_current_N55",
+        "statement": "Starobinsky slow-roll r lies below the 2026 combined limit",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.slowroll.quadratic_r_exceeds_current_N60",
+        "statement": "quadratic slow-roll r exceeds both BK18 0.036 and the 2026 combined 0.034 limit",
+        "status": "PASS"
+      },
+      {
+        "id": "P19.slowroll.starobinsky_r_below_current_N60",
+        "statement": "Starobinsky slow-roll r lies below the 2026 combined limit",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 30,
+    "phase": "P19",
+    "scope_guard": {
+      "central_interpretation": "the calculation establishes conditional existence, not initial-data selection",
+      "what_is_not_proved": [
+        "a CPT/Pin rule selecting phi0",
+        "a full fermionic/off-shell seam or quantum cosmological state",
+        "perturbation evolution through the bounce",
+        "reheating or a mapping from N_acc to the observed pivot N_star",
+        "a parameter-free prediction of universe size",
+        "a present-day SUSY spectrum or temporal-seam Goldstino"
+      ],
+      "what_is_proved": [
+        "two exact one-field F-term trajectories",
+        "classical homogeneous k=+1 time-symmetric bounce solutions",
+        "conditional radii and Hubble scales after choosing a mass scale and target N_acc",
+        "first-order single-field slow-roll observables"
+      ]
+    },
+    "slow_roll_observables": {
+      "important_distinction": "N_star is the pivot-to-end slow-roll count; it is not automatically identical to the bounce-to-end N_acc used in the existence table",
+      "published_comparison": "BICEP/Keck XIII (BK18), arXiv:2110.00483, reports r_0.05<0.036 at 95% confidence; the 2026 combined analysis arXiv:2512.10613v2 reports r<0.034",
+      "tables": {
+        "quadratic": [
+          {
+            "N_star": "50",
+            "n_s_first_order": "0.9603960",
+            "r_first_order": "0.1584158"
+          },
+          {
+            "N_star": "55",
+            "n_s_first_order": "0.9639640",
+            "r_first_order": "0.1441441"
+          },
+          {
+            "N_star": "60",
+            "n_s_first_order": "0.9669421",
+            "r_first_order": "0.1322314"
+          }
+        ],
+        "starobinsky": [
+          {
+            "N_star": "50",
+            "n_s_first_order": "0.9615696",
+            "phi_star": "5.2435106",
+            "r_first_order": "0.0041923"
+          },
+          {
+            "N_star": "55",
+            "n_s_first_order": "0.9649772",
+            "phi_star": "5.3528685",
+            "r_first_order": "0.0034983"
+          },
+          {
+            "N_star": "60",
+            "n_s_first_order": "0.9678271",
+            "phi_star": "5.4531516",
+            "r_first_order": "0.0029639"
+          }
+        ]
+      }
+    }
+  }
+}

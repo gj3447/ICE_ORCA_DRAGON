@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-16T16:42:39Z",
+  "updated_at_utc": "2026-08-16T17:39:49Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -51,6 +51,37 @@
         "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
         "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
         "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE"
+      ]
+    },
+    {
+      "question": "Do the displayed closed SUGRA models admit 50–60 accelerated e-folds?",
+      "answer": "Yes conditionally: six k=+1 homogeneous target-shot background solutions pass the exact turning-point and numerical constraint checks.",
+      "claim_ids": [
+        "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC"
+      ]
+    },
+    {
+      "question": "Does time symmetry now predict phi0, universe size, or a present SUSY spectrum?",
+      "answer": "No. The bosonic symmetry data leave phi0 free; the radius is conditional, and the displayed stabilizer F directions vanish at their endpoints.",
+      "claim_ids": [
+        "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+        "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT"
+      ]
+    },
+    {
+      "question": "Does the leading two-sheet WDW control select phi0=5.442969?",
+      "answer": "No in the scoped constant-field de Sitter envelope. The standard exp(2sI) history weight and the conditional exp(4sI) independent-pair joint probability are both monotone, but this is not an exact two-sheet SUGRA WDW no-go.",
+      "claim_ids": [
+        "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+        "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING"
+      ]
+    },
+    {
+      "question": "Is the Phase 20 curvature–reheating number a seam prediction?",
+      "answer": "No. The displayed Omega_K0–T_reh conversion is reproducible only after fixing the Phase 19 branch, reheating history, units, and late-time inputs.",
+      "claim_ids": [
+        "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+        "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION"
       ]
     }
   ],
@@ -117,6 +148,36 @@
         "open:p18-persistent-order-parameter",
         "open:p18-frw-backreaction",
         "open:p18-higgs-power-sensitivity"
+      ]
+    },
+    {
+      "id": "reading-path:closed-bounce-to-selection",
+      "title": "From conditional closed bounces to the missing background-selection rule",
+      "summary": "Follow the exact SUGRA reductions, six verified target-shot backgrounds, tensor-bound comparison, and the separate perturbation-state and minisuperspace-selection problems.",
+      "nodes": [
+        "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+        "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+        "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+        "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+        "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+        "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+        "open:p19-minisuperspace-phi0-measure",
+        "open:p19-cpt-pin-perturbation-state"
+      ]
+    },
+    {
+      "id": "reading-path:leading-wdw-selection-control",
+      "title": "Why the leading WDW envelope does not select the Phase 19 amplitude",
+      "summary": "Separate the standard one-history weight from a conditional independent-pair joint probability, then follow the nonzero slope, coherent-interference caveat, Cecotti F direction, and exact-state blockers.",
+      "nodes": [
+        "concept:standard-history-versus-independent-pair-weight",
+        "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+        "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+        "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+        "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+        "open:p20-exact-starobinsky-wdw-state",
+        "open:p20-cpt-pin-sheet-inner-product",
+        "open:p20-local-sugra-one-loop-selection"
       ]
     }
   ],
@@ -1335,6 +1396,742 @@
       "path": "AGENTS.md",
       "sha256": "2ab850c0fca756e5d40724fa9ffd8dceb99b4afe8e0b4f6e0a79a549c1cb2193",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
+    },
+    {
+      "id": "phase:p19",
+      "type": "phase",
+      "title": "Phase 19 — closed SUGRA bounce backgrounds",
+      "summary": "Exact shift-symmetric and improved Cecotti one-field trajectories plus k=+1 time-symmetric background shooting; initial-amplitude selection remains open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:potential-hubble-versus-geometric-hubble",
+      "type": "concept",
+      "title": "Potential versus geometric Hubble scales",
+      "summary": "H_V^2:=V/3 is the potential scale used in transverse SUGRA masses; the geometric closed-FRW H(t)^2 vanishes at the symmetric bounce.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:closed-time-symmetric-frw-bounce",
+      "type": "concept",
+      "title": "Closed time-symmetric FRW bounce",
+      "summary": "A classical homogeneous k=+1 solution with H0=dot phi0=0, even a and phi, and odd H and dot phi. It is not by itself a CPT/Pin quantum state.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:background-existence-versus-initial-amplitude-selection",
+      "type": "concept",
+      "title": "Background existence versus initial-amplitude selection",
+      "summary": "Target shooting can prove a background exists for a chosen N_acc while leaving phi0 dynamically and quantum-mechanically unselected.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:bounce-efolds-versus-pivot-efolds",
+      "type": "concept",
+      "title": "Bounce accelerated e-folds versus pivot e-folds",
+      "summary": "N_acc from the bounce to acceleration end is not automatically the observational N_* without reheating and pivot-scale evolution.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "type": "claim",
+      "claim_id": "P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "title": "The shift-symmetric trajectory reduces to a quadratic potential",
+      "statement": "The displayed K and W reduce on S=Im Phi=0 to V=m^2 phi^2/2 with the recorded transverse data.",
+      "summary": "Supported by the exact shift-symmetric ledger.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "type": "claim",
+      "claim_id": "P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "title": "The improved Cecotti trajectory reduces to a Starobinsky potential",
+      "statement": "The displayed no-scale K and W reduce on S=0 and real T to the recorded Starobinsky potential and stabilizer Hessian.",
+      "summary": "Supported by the exact no-scale ledger.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P19_SHIFT_ONE_TWELFTH_IS_HV_HEAVY_SUFFICIENT_BENCHMARK",
+      "type": "claim",
+      "claim_id": "P19_SHIFT_ONE_TWELFTH_IS_HV_HEAVY_SUFFICIENT_BENCHMARK",
+      "title": "One twelfth is a sufficient H_V-heavy shift-model benchmark",
+      "statement": "For the recorded shift trajectory, zeta=1/12 makes m_S^2>H_V^2 at finite phi; this is not the basic non-tachyonic threshold.",
+      "summary": "Supported exactly and explicitly limited to the potential scale H_V.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P19_CECOTTI_ONE_SIXTH_IS_SUFFICIENT_NOT_SHARP",
+      "type": "claim",
+      "claim_id": "P19_CECOTTI_ONE_SIXTH_IS_SUFFICIENT_NOT_SHARP",
+      "title": "One sixth is sufficient but not sharp in the Cecotti model",
+      "statement": "Over T>=1 the exact potential-Hessian stability threshold is (9sqrt(3)-15)/4, so zeta>1/6 is sufficient but not necessary.",
+      "summary": "Supported by the exact threshold calculation.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "type": "claim",
+      "claim_id": "P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "title": "Bosonic time-reflection data leave phi0 free",
+      "statement": "H0=dot phi0=0 determine a0 only after phi0 is chosen and therefore do not select a unique background amplitude.",
+      "summary": "Supported by the exact turning-point constraint and the distinct target-shot rows.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "type": "claim",
+      "claim_id": "P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "title": "The displayed target-shot bounces reach 50, 55, and 60 N_acc",
+      "statement": "For each of the two displayed potentials, homogeneous k=+1 shooting finds time-symmetric branches at N_acc=50,55,60 with monitored Friedmann residuals.",
+      "summary": "Supported numerically as six conditional existence witnesses, not a uniqueness or selection theorem.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "type": "claim",
+      "claim_id": "P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "title": "Quadratic slow roll is compatible with the current tensor limit",
+      "statement": "At N*=50,55,60 the quadratic branch has first-order r below the cited r<0.034–0.036 limits.",
+      "summary": "Contradicted: the calculated r is about 0.132–0.158.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "type": "claim",
+      "claim_id": "P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "title": "Starobinsky first-order r is below the current tensor limit",
+      "statement": "At N*=50,55,60 the Starobinsky branch gives first-order r about 0.0030–0.0042, below the cited limits.",
+      "summary": "Supported only as a potential slow-roll tensor comparison, not a full bounce likelihood result.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "type": "claim",
+      "claim_id": "P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "title": "The displayed stabilizer F directions vanish at their endpoints",
+      "statement": "In the recorded minimal trajectories the shift-model endpoint has W=D_iW=0 and the no-scale stabilizer F direction vanishes at T=1.",
+      "summary": "Supported for these displayed directions; it is not a claim that every possible soft term or sector vanishes.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p19-shift-sugra",
+      "type": "evidence",
+      "title": "Phase 19 shift-model exact checks",
+      "summary": "Eight exact checks derive the quadratic potential, transverse masses, H_V benchmark, F direction, and endpoint.",
+      "state": "VERIFIED",
+      "observed_status": "8_EXACT_PASS",
+      "check_ids": [
+        "P19.shift.canonical_inflaton_metric",
+        "P19.shift.quadratic_potential",
+        "P19.shift.orthogonal_inflaton_mass",
+        "P19.shift.stabilizer_mass",
+        "P19.shift.hubble_heavy_sufficient_benchmark",
+        "P19.shift.gravitino_mass_on_path",
+        "P19.shift.stabilizer_F_order_parameter",
+        "P19.shift.susy_minkowski_endpoint"
+      ]
+    },
+    {
+      "id": "evidence:p19-noscale-sugra",
+      "type": "evidence",
+      "title": "Phase 19 no-scale exact checks",
+      "summary": "Seven exact checks derive the Starobinsky potential, canonical modulus, degenerate stabilizer Hessian, corrected stability threshold, and endpoint F direction.",
+      "state": "VERIFIED",
+      "observed_status": "7_EXACT_PASS",
+      "check_ids": [
+        "P19.noscale.starobinsky_potential",
+        "P19.noscale.canonical_log_modulus",
+        "P19.noscale.stabilizer_hessian_mass",
+        "P19.noscale.global_hessian_threshold",
+        "P19.noscale.one_sixth_is_sufficient",
+        "P19.noscale.gravitino_mass_on_path",
+        "P19.noscale.nonzero_F_direction"
+      ]
+    },
+    {
+      "id": "evidence:p19-bounce-local",
+      "type": "evidence",
+      "title": "Phase 19 exact turning-point checks",
+      "summary": "Two exact checks establish the constraint radius and local scale-factor minimum.",
+      "state": "VERIFIED",
+      "observed_status": "2_EXACT_PASS",
+      "check_ids": [
+        "P19.bounce.friedmann_constraint_at_turning_point",
+        "P19.bounce.local_minimum_of_scale_factor"
+      ]
+    },
+    {
+      "id": "evidence:p19-bounce-shooting",
+      "type": "evidence",
+      "title": "Phase 19 closed-background shooting checks",
+      "summary": "Twenty-four numerical checks reproduce six target-shot rows and their Friedmann constraints.",
+      "state": "VERIFIED",
+      "observed_status": "24_NUMERICAL_PASS",
+      "check_ids": [
+        "P19.quadratic_shift_symmetric.Nacc_50",
+        "P19.quadratic_shift_symmetric.table_phi0_50",
+        "P19.quadratic_shift_symmetric.table_a0_50",
+        "P19.quadratic_shift_symmetric.friedmann_constraint_50",
+        "P19.quadratic_shift_symmetric.Nacc_55",
+        "P19.quadratic_shift_symmetric.table_phi0_55",
+        "P19.quadratic_shift_symmetric.table_a0_55",
+        "P19.quadratic_shift_symmetric.friedmann_constraint_55",
+        "P19.quadratic_shift_symmetric.Nacc_60",
+        "P19.quadratic_shift_symmetric.table_phi0_60",
+        "P19.quadratic_shift_symmetric.table_a0_60",
+        "P19.quadratic_shift_symmetric.friedmann_constraint_60",
+        "P19.improved_cecotti_starobinsky.Nacc_50",
+        "P19.improved_cecotti_starobinsky.table_phi0_50",
+        "P19.improved_cecotti_starobinsky.table_a0_50",
+        "P19.improved_cecotti_starobinsky.friedmann_constraint_50",
+        "P19.improved_cecotti_starobinsky.Nacc_55",
+        "P19.improved_cecotti_starobinsky.table_phi0_55",
+        "P19.improved_cecotti_starobinsky.table_a0_55",
+        "P19.improved_cecotti_starobinsky.friedmann_constraint_55",
+        "P19.improved_cecotti_starobinsky.Nacc_60",
+        "P19.improved_cecotti_starobinsky.table_phi0_60",
+        "P19.improved_cecotti_starobinsky.table_a0_60",
+        "P19.improved_cecotti_starobinsky.friedmann_constraint_60"
+      ]
+    },
+    {
+      "id": "evidence:p19-slowroll-r",
+      "type": "evidence",
+      "title": "Phase 19 tensor-ratio comparison checks",
+      "summary": "Six numerical checks compare the two first-order tensor predictions with the cited current limits.",
+      "state": "VERIFIED",
+      "observed_status": "6_NUMERICAL_PASS",
+      "check_ids": [
+        "P19.slowroll.quadratic_r_exceeds_current_N50",
+        "P19.slowroll.starobinsky_r_below_current_N50",
+        "P19.slowroll.quadratic_r_exceeds_current_N55",
+        "P19.slowroll.starobinsky_r_below_current_N55",
+        "P19.slowroll.quadratic_r_exceeds_current_N60",
+        "P19.slowroll.starobinsky_r_below_current_N60"
+      ]
+    },
+    {
+      "id": "scope:p19-exact-one-field-sugra-trajectories",
+      "type": "scope",
+      "title": "P19 exact one-field SUGRA trajectories",
+      "summary": "The two displayed reduced bosonic paths in M_Pl=1 units.",
+      "state": "ACTIVE",
+      "includes": [
+        "exact F-term potential on each path",
+        "recorded transverse/stabilizer Hessians",
+        "H_V^2=V/3 mass convention",
+        "recorded endpoint F directions"
+      ],
+      "excludes": [
+        "full covariant multifield stability along the bounce",
+        "fermionic/off-shell CPT/Pin seam",
+        "persistent present-day soft spectrum"
+      ]
+    },
+    {
+      "id": "scope:p19-classical-homogeneous-closed-frw-shooting",
+      "type": "scope",
+      "title": "P19 classical homogeneous closed-FRW shooting",
+      "summary": "Classical k=+1 background evolution from the time-symmetric turning point to first acceleration end.",
+      "state": "ACTIVE",
+      "includes": [
+        "H0=dot phi0=0",
+        "a0=sqrt(3/V(phi0))",
+        "N_acc target shooting",
+        "Friedmann constraint monitoring"
+      ],
+      "excludes": [
+        "phi0 selection",
+        "full CPT/Pin quantum state",
+        "S3 perturbations",
+        "geodesic completeness and uniqueness",
+        "parameter-free universe size"
+      ]
+    },
+    {
+      "id": "scope:p19-first-order-potential-slow-roll-r",
+      "type": "scope",
+      "title": "P19 first-order potential slow-roll r",
+      "summary": "Tree-level single-field potential slow-roll tensor ratios at selected N* values.",
+      "state": "ACTIVE",
+      "includes": [
+        "N*=50,55,60 potential slow roll",
+        "comparison with cited tensor limits"
+      ],
+      "excludes": [
+        "N_acc to N* mapping",
+        "closed-S3 perturbation propagation",
+        "reheating",
+        "full ns-r likelihood viability"
+      ]
+    },
+    {
+      "id": "open:p19-minisuperspace-phi0-measure",
+      "type": "open_problem",
+      "title": "Construct a minisuperspace phi0 measure",
+      "summary": "Time reflection does not select the homogeneous amplitude.",
+      "question": "Can a CPT/Pin-compatible background wavefunction, seam path integral, or quantum-cosmological measure predictively weight phi0?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p19-cpt-pin-perturbation-state",
+      "type": "open_problem",
+      "title": "Construct a CPT/Pin perturbation state",
+      "summary": "A perturbation-mode state is a separate problem from weighting homogeneous phi0.",
+      "question": "Can the closed background support a CPT/Pin-compatible Hadamard and Wronskian-normalized Gaussian perturbation state?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p19-closed-s3-perturbations",
+      "type": "open_problem",
+      "title": "Propagate closed-S3 perturbations",
+      "summary": "No discrete scalar or tensor mode was propagated through the bounce.",
+      "question": "What spectra and non-Gaussianities follow after solving the discrete S3 perturbation problem?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p19-reheating-pivot-map",
+      "type": "open_problem",
+      "title": "Compute reheating and the pivot map",
+      "summary": "N_acc is not automatically the observational N*.",
+      "question": "How do reheating and later evolution map a bounce branch to the observed pivot exit?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p19-full-covariant-multifield-stability",
+      "type": "open_problem",
+      "title": "Compute full covariant multifield stability",
+      "summary": "Path-local Hessians are not the full scalar/fermion fluctuation problem.",
+      "question": "Does the complete covariant scalar and fermionic SUGRA system remain stable along the entire bounce?",
+      "state": "OPEN"
+    },
+    {
+      "id": "source:kallosh-linde-2010",
+      "type": "source",
+      "title": "New models of chaotic inflation in supergravity",
+      "summary": "Primary source for the shift-symmetric stabilizer construction.",
+      "state": "PRIMARY",
+      "citation": "R. Kallosh and A. Linde, New models of chaotic inflation in supergravity",
+      "version": "arXiv:1008.3375v2",
+      "uri": "https://arxiv.org/abs/1008.3375v2"
+    },
+    {
+      "id": "source:kallosh-linde-2013",
+      "type": "source",
+      "title": "Superconformal generalizations of the Starobinsky model",
+      "summary": "Primary source for improved Cecotti stabilization and its stability discussion.",
+      "state": "PRIMARY",
+      "citation": "R. Kallosh and A. Linde, Superconformal generalizations of the Starobinsky model",
+      "version": "arXiv:1306.3214v2",
+      "uri": "https://arxiv.org/abs/1306.3214v2"
+    },
+    {
+      "id": "source:bicep-keck-2021",
+      "type": "source",
+      "title": "BICEP/Keck 2018 tensor constraint",
+      "summary": "Primary collaboration result giving r_0.05<0.036 at 95% confidence.",
+      "state": "PRIMARY",
+      "citation": "BICEP/Keck Collaboration, Improved Constraints on Primordial Gravitational Waves using Planck, WMAP, and BICEP/Keck Observations through the 2018 Observing Season",
+      "version": "arXiv:2110.00483",
+      "uri": "https://arxiv.org/abs/2110.00483"
+    },
+    {
+      "id": "source:balkenhol-et-al-2026",
+      "type": "source",
+      "title": "Updated CMB and DESI inflation constraints",
+      "summary": "Primary combined analysis used for the quoted 2026 r<0.034 comparison and scalar-tilt context.",
+      "state": "PRIMARY",
+      "citation": "L. Balkenhol et al., Inflation at the End of 2025: Constraints on r and n_s Using the Latest CMB and BAO Data",
+      "version": "arXiv:2512.10613v2",
+      "uri": "https://arxiv.org/abs/2512.10613v2"
+    },
+    {
+      "id": "artifact:p19-script",
+      "type": "artifact",
+      "title": "Phase 19 executable",
+      "summary": "Exact SymPy trajectory checks plus SciPy closed-background and slow-roll controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py",
+      "sha256": "5dbfccd768bb13961222c289ba0754497bec94319f8b33ff602889eaeb469341",
+      "introduced_in_commit": "90aedef93eadab40156fc22daf87b2d6942f49a6"
+    },
+    {
+      "id": "artifact:p19-report",
+      "type": "artifact",
+      "title": "Phase 19 report",
+      "summary": "Human-readable derivation, verified tables, corrected interpretation, and next gates.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md",
+      "sha256": "ed3b77ede42fff7521f4cac80f00e8d5d9242cf62e44ddc72ed8a082d6107f3c",
+      "introduced_in_commit": "90aedef93eadab40156fc22daf87b2d6942f49a6"
+    },
+    {
+      "id": "artifact:p19-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 19 evidence snapshot",
+      "summary": "Persisted 17-exact and 30-numerical check payload observed on 2026-08-16.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase19-result.json",
+      "sha256": "ce6cf51547dad36dfbdbbba355b1b593c9fc1a6d45dd5cf0d0a772f07df80071"
+    },
+    {
+      "id": "phase:p20",
+      "type": "phase",
+      "title": "Phase 20 — leading two-sheet WDW selection control",
+      "summary": "A bounded constant-field de Sitter/WDW envelope calculation, Cecotti F-flatness check, and conditional curvature–reheating conversion; no exact two-sheet local-SUGRA state is constructed.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:leading-de-sitter-wdw-envelope",
+      "type": "concept",
+      "title": "Leading de Sitter WDW envelope",
+      "summary": "The constant-field de Sitter hemisphere exponent I=12 pi^2 M_Pl^4/V used as a semiclassical control, not the exact complex Starobinsky scalar-gravity saddle.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:standard-history-versus-independent-pair-weight",
+      "type": "concept",
+      "title": "Standard history versus independent-pair weight",
+      "summary": "The standard semiclassical history probability is proportional to exp(2sI); exp(4sI) is a conditional joint probability for an independently factorized pair, not an automatic consequence of CPT sewing.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:coherent-conjugate-saddle-interference",
+      "type": "concept",
+      "title": "Coherent conjugate-saddle interference",
+      "summary": "A coherent conjugate sum carries an order-one cos^2 phase factor that can create nodes and local extrema; normalization, overlap, current, and decoherence must be specified.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:conditional-curvature-reheating-map",
+      "type": "concept",
+      "title": "Conditional curvature–reheating map",
+      "summary": "A unit-explicit mapping from one selected closed-FRW branch and reheating history to present curvature; it is not a seam-selected observable without an initial-value and reheating rule.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "type": "claim",
+      "claim_id": "P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "title": "The leading de Sitter WDW envelope selects phi0=5.442969",
+      "statement": "The scoped constant-field Starobinsky de Sitter/WDW envelope has a finite stationary probability peak at the Phase 19 60-e-fold shooting value.",
+      "summary": "Contradicted for both sign choices and both recorded probability conventions; this is not an exact two-sheet SUGRA WDW no-go.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "type": "claim",
+      "claim_id": "P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "title": "The independent-pair exp(4sI) weight follows from CPT sewing",
+      "statement": "CPT sewing by itself fixes a two-sheet probability proportional to exp(4sI).",
+      "summary": "Contradicted: exp(4sI) is a conditional independent-pair joint probability; no sheet inner product or sewing action derives it here.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "type": "claim",
+      "claim_id": "P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "title": "Coherent symmetrization only changes normalization",
+      "statement": "Adding conjugate saddles changes the WDW probability only by a phi-independent constant and cannot create local extrema.",
+      "summary": "Contradicted: the coherent sum contains an order-one cos^2 phase factor; only a truly constant normalization leaves the envelope slope unchanged.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+      "type": "claim",
+      "claim_id": "P20_CECOTTI_5P44_IS_F_FLAT",
+      "title": "The Cecotti phi=5.442969 background is F-flat",
+      "statement": "The displayed Cecotti trajectory has a vanishing stabilizer auxiliary direction at the Phase 19 60-e-fold amplitude.",
+      "summary": "Contradicted on the classical trajectory: T is about 85.13 and F^S/M is about -6.45; the positive-real static F-flat point is T=1.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "type": "claim",
+      "claim_id": "P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "title": "The conditional curvature–reheating conversion is reproducible",
+      "statement": "Under the recorded Phase 19 branch, matterlike reheating, entropy, unit, and late-time inputs, |Omega_K0|=5.5258e-4 at T_reh=1e9 GeV and scales as T_reh^(2/3).",
+      "summary": "Supported as a unit-explicit conditional conversion with the closed-universe sign Omega_K0<0.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "type": "claim",
+      "claim_id": "P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "title": "The curvature–reheating number is a seam prediction",
+      "statement": "The temporal CPT/Pin construction uniquely predicts the displayed present curvature or reheating temperature without additional branch and thermal-history inputs.",
+      "summary": "Contradicted within the recorded control: phi0, N, reheating equation of state, temperature, and late-time parameters remain inputs.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p20-leading-wdw-envelope",
+      "type": "evidence",
+      "title": "Phase 20 leading WDW-envelope checks",
+      "summary": "Twelve exact and six numerical checks derive the hemisphere exponent, standard and conditional-pair slopes, monotonicity, interference identity, and nonconstant-field caveat.",
+      "state": "VERIFIED",
+      "observed_status": "12_EXACT_PASS_PLUS_6_NUMERICAL_PASS",
+      "check_ids": [
+        "P20.WDW.hemisphere_action_normalization",
+        "P20.WDW.action_derivative",
+        "P20.WDW.standard_history_weight_slope",
+        "P20.WDW.independent_pair_weight_slope",
+        "P20.WDW.pair_slope_factor_two",
+        "P20.WDW.no_finite_stationary_envelope",
+        "P20.WDW.asymptotic_zero_slope_only",
+        "P20.WDW.conjugate_saddle_interference",
+        "P20.WDW.independent_pair_joint_probability",
+        "P20.WDW.constant_symmetrization_does_not_move_slope",
+        "P20.WDW.starobinsky_epsilon",
+        "P20.WDW.constant_field_is_not_exact_saddle",
+        "P20.numeric.standard_slope_coefficient",
+        "P20.numeric.pair_slope_coefficient",
+        "P20.numeric.standard_central_difference",
+        "P20.numeric.pair_central_difference",
+        "P20.numeric.HH_and_tunneling_opposite_monotonicity",
+        "P20.numeric.slow_roll_not_constant_field"
+      ]
+    },
+    {
+      "id": "evidence:p20-cecotti-f-direction",
+      "type": "evidence",
+      "title": "Phase 20 Cecotti F-direction checks",
+      "summary": "Five exact and two numerical checks derive D_SW, the inverse metric, auxiliary direction, potential, static F-flat point, and the nonzero benchmark value.",
+      "state": "VERIFIED",
+      "observed_status": "5_EXACT_PASS_PLUS_2_NUMERICAL_PASS",
+      "check_ids": [
+        "P20.SUSY.cecotti_DSW",
+        "P20.SUSY.cecotti_inverse_metric",
+        "P20.SUSY.cecotti_auxiliary",
+        "P20.SUSY.cecotti_potential",
+        "P20.SUSY.static_F_flat_point",
+        "P20.numeric.T_star",
+        "P20.numeric.nonzero_F_star"
+      ]
+    },
+    {
+      "id": "evidence:p20-curvature-reheating-control",
+      "type": "evidence",
+      "title": "Phase 20 conditional curvature–reheating checks",
+      "summary": "One exact and six numerical checks bridge the Phase 19 endpoint, derive the matterlike temperature exponent, reproduce the unit-explicit coefficient and inverse, and retain the closed-universe sign.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_6_NUMERICAL_PASS",
+      "check_ids": [
+        "P20.curvature.matterlike_temperature_exponent",
+        "P20.numeric.phase19_Nacc_bridge",
+        "P20.numeric.phase19_rho_end_bridge",
+        "P20.numeric.phase19_constraint_bridge",
+        "P20.numeric.curvature_reheating_coefficient",
+        "P20.numeric.curvature_reheating_inverse",
+        "P20.numeric.closed_curvature_sign"
+      ]
+    },
+    {
+      "id": "scope:p20-leading-de-sitter-wdw-control",
+      "type": "scope",
+      "title": "P20 leading de Sitter/WDW control",
+      "summary": "A semiclassical constant-field hemisphere exponent evaluated on the Starobinsky potential, with two explicitly distinguished probability conventions.",
+      "state": "ACTIVE",
+      "includes": [
+        "I=12 pi^2 M_Pl^4/V constant-field hemisphere exponent",
+        "standard one-history exp(2sI) probability",
+        "conditional independent-pair exp(4sI) joint probability",
+        "exact symbolic slopes and finite benchmark checks",
+        "coherent conjugate-saddle algebraic identity"
+      ],
+      "excludes": [
+        "exact complex Starobinsky scalar-gravity saddle",
+        "WDW current, measure, normalization, or factor ordering",
+        "CPT/Pin sheet inner product or sewing action",
+        "local-SUGRA gravitino and ghost wavefunction",
+        "exact two-sheet SUGRA WDW no-go"
+      ]
+    },
+    {
+      "id": "scope:p20-cecotti-path-f-flatness",
+      "type": "scope",
+      "title": "P20 Cecotti path F-flatness",
+      "summary": "Classical auxiliary-field data on S=0 and positive-real T for the displayed Cecotti K and W.",
+      "state": "ACTIVE",
+      "includes": [
+        "D_SW and K^{S Sbar}",
+        "classical F^S direction",
+        "positive-real static F-flat point"
+      ],
+      "excludes": [
+        "quantum local-SUSY wavefunction support",
+        "Killing-spinor solution of the closed bounce",
+        "fermionic CPT/Pin boundary condition"
+      ]
+    },
+    {
+      "id": "scope:p20-conditional-curvature-reheating-benchmark",
+      "type": "scope",
+      "title": "P20 conditional curvature–reheating benchmark",
+      "summary": "One Phase 19 60-e-fold branch with fixed mass, matterlike reheating, thermal and entropy inputs, and chosen late-time constants.",
+      "state": "ACTIVE",
+      "includes": [
+        "Phase 19 acceleration endpoint bridge",
+        "w_reh=0 benchmark",
+        "entropy conservation and instantaneous thermalization",
+        "explicit GeV and SI conversions",
+        "signed Omega_K0 for k=+1"
+      ],
+      "excludes": [
+        "seam-selected phi0 or reheating temperature",
+        "curvature detection",
+        "uncertainty propagation or global likelihood",
+        "alternative reheating histories"
+      ]
+    },
+    {
+      "id": "open:p20-exact-starobinsky-wdw-state",
+      "type": "open_problem",
+      "title": "Solve the exact Starobinsky WDW state",
+      "summary": "The constant-field exponent is only a leading control at nonzero V'.",
+      "question": "What probability current or decoherent-histories measure follows from the exact complex scalar-gravity saddle and a fixed factor ordering?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p20-cpt-pin-sheet-inner-product",
+      "type": "open_problem",
+      "title": "Construct the CPT/Pin sheet inner product",
+      "summary": "No normalization, overlap, or joint-probability rule has been derived from a sheet sewing action.",
+      "question": "Can a concrete doubled Hilbert space and CPT/Pin sewing action derive the physical sheet probability and coherent/decoherent composition rule?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p20-local-sugra-one-loop-selection",
+      "type": "open_problem",
+      "title": "Compute local-SUGRA one-loop selection",
+      "summary": "The boson–fermion–gravitino determinant is not known for this two-sheet Cecotti background.",
+      "question": "Does the gauge-fixed local-SUGRA wavefunction and one-loop determinant generate a stable finite peak after ghosts, zero modes, renormalization, and sheet boundary data are included?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p20-quantized-four-form-selection",
+      "type": "open_problem",
+      "title": "Test quantized four-form selection",
+      "summary": "No UV-fixed flux spectrum has been coupled to the background-selection problem.",
+      "question": "Can a quantized four-form select a discrete initial amplitude without tuning its couplings to 5.44?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p20-seam-reheating-curvature-prediction",
+      "type": "open_problem",
+      "title": "Derive a seam-level reheating and curvature prediction",
+      "summary": "The current relation is a conditional conversion, not a predicted observable.",
+      "question": "Can the completed seam theory select phi0, reheating dynamics, and a present curvature distribution jointly?",
+      "state": "OPEN"
+    },
+    {
+      "id": "source:hartle-hawking-1983",
+      "type": "source",
+      "title": "Wave function of the Universe",
+      "summary": "Primary no-boundary proposal and de Sitter Euclidean-action baseline used for the Phase 20 hemisphere control.",
+      "state": "PRIMARY",
+      "citation": "J. B. Hartle and S. W. Hawking, Wave Function of the Universe",
+      "version": "Phys. Rev. D 28, 2960 (1983)",
+      "uri": "https://doi.org/10.1103/PhysRevD.28.2960"
+    },
+    {
+      "id": "source:hartle-hawking-hertog-2008",
+      "type": "source",
+      "title": "The No-Boundary Measure of the Universe",
+      "summary": "Primary semiclassical no-boundary measure example emphasizing complex saddles and history weighting rather than a universal two-sheet product rule.",
+      "state": "PRIMARY",
+      "citation": "J. B. Hartle, S. W. Hawking, and T. Hertog, The No-Boundary Measure of the Universe",
+      "version": "arXiv:0711.4630v4",
+      "uri": "https://arxiv.org/abs/0711.4630"
+    },
+    {
+      "id": "source:halliwell-2009",
+      "type": "source",
+      "title": "Probabilities in Quantum Cosmological Models",
+      "summary": "Primary decoherent-histories construction showing that WDW probabilities and approximate decoherence require more than a pointwise Born square.",
+      "state": "PRIMARY",
+      "citation": "J. J. Halliwell, Probabilities in Quantum Cosmological Models: A Decoherent Histories Analysis Using a Complex Potential",
+      "version": "arXiv:0909.2597",
+      "uri": "https://arxiv.org/abs/0909.2597"
+    },
+    {
+      "id": "source:cheng-death-moniz-1994",
+      "type": "source",
+      "title": "Quantization of a Locally Supersymmetric Friedmann Model with Supermatter",
+      "summary": "Primary supersymmetric-minisuperspace example in which quantum SUSY constraints become coupled first-order PDEs depending on Kähler geometry.",
+      "state": "PRIMARY",
+      "citation": "A. D. Y. Cheng, P. D. D'Eath, and P. R. L. V. Moniz, Quantization of a Locally Supersymmetric Friedmann Model with Supermatter",
+      "version": "arXiv:gr-qc/9406048v2",
+      "uri": "https://arxiv.org/abs/gr-qc/9406048"
+    },
+    {
+      "id": "source:desi-dr2-2025",
+      "type": "source",
+      "title": "DESI DR2 Results II",
+      "summary": "Primary DESI DR2 BAO and cosmology analysis used only to bound the interpretation of the conditional curvature conversion; it is not a curvature detection for this model.",
+      "state": "PRIMARY",
+      "citation": "DESI Collaboration, DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints",
+      "version": "arXiv:2503.14738",
+      "uri": "https://arxiv.org/abs/2503.14738"
+    },
+    {
+      "id": "source:barvinsky-kamenshchik-mishakov-1996",
+      "type": "source",
+      "title": "Quantum origin of the early inflationary Universe",
+      "summary": "Primary proof of principle for a loop-generated sharp cosmological probability peak in a different large-nonminimal-coupling model, not a determinant for this two-sheet Cecotti theory.",
+      "state": "PRIMARY",
+      "citation": "A. O. Barvinsky, A. Yu. Kamenshchik, and I. V. Mishakov, Quantum origin of the early inflationary Universe",
+      "version": "arXiv:gr-qc/9612004",
+      "uri": "https://arxiv.org/abs/gr-qc/9612004"
+    },
+    {
+      "id": "artifact:p20-script",
+      "type": "artifact",
+      "title": "Phase 20 executable",
+      "summary": "Exact SymPy WDW-envelope and Cecotti checks plus high-precision slope, closed-FRW bridge, and unit-explicit curvature controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py",
+      "sha256": "a55ebfca78f07246679fd5fa8791537a0efe1d3370dfa53d8d6410ffc6a95807",
+      "introduced_in_commit": "c5395bc095399ca450adf555d8d24e21a9166725"
+    },
+    {
+      "id": "artifact:p20-report",
+      "type": "artifact",
+      "title": "Phase 20 report",
+      "summary": "Human-readable normalization correction, leading-envelope result, interference and SUSY caveats, conditional curvature map, and next gates.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md",
+      "sha256": "5534dbdfc8e2af341f666e6f4ca89f4133f8927a4162b10b85aa7ac0ec11889c",
+      "introduced_in_commit": "c5395bc095399ca450adf555d8d24e21a9166725"
+    },
+    {
+      "id": "artifact:p20-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 20 evidence snapshot",
+      "summary": "Persisted 18-exact and 14-numerical check payload observed on 2026-08-16.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase20-result.json",
+      "sha256": "d9b19d16396055a97aa03cde9f2c72a231d287ffd32d50eea8903f20ce0cb17b"
     }
   ],
   "edges": [
@@ -2429,6 +3226,837 @@
       "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
       "relation": "MOTIVATES",
       "to": "open:p18-higgs-power-sensitivity"
+    },
+    {
+      "id": "edge:178",
+      "from": "phase:p19",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:179",
+      "from": "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:180",
+      "from": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:181",
+      "from": "claim:P19_SHIFT_ONE_TWELFTH_IS_HV_HEAVY_SUFFICIENT_BENCHMARK",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:182",
+      "from": "claim:P19_CECOTTI_ONE_SIXTH_IS_SUFFICIENT_NOT_SHARP",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:183",
+      "from": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:184",
+      "from": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:185",
+      "from": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:186",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:187",
+      "from": "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "relation": "PART_OF",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:188",
+      "from": "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-shift-sugra",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:189",
+      "from": "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-exact-one-field-sugra-trajectories"
+    },
+    {
+      "id": "edge:190",
+      "from": "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:191",
+      "from": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-noscale-sugra",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:192",
+      "from": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-exact-one-field-sugra-trajectories"
+    },
+    {
+      "id": "edge:193",
+      "from": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:194",
+      "from": "claim:P19_SHIFT_ONE_TWELFTH_IS_HV_HEAVY_SUFFICIENT_BENCHMARK",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-shift-sugra",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:195",
+      "from": "claim:P19_SHIFT_ONE_TWELFTH_IS_HV_HEAVY_SUFFICIENT_BENCHMARK",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-exact-one-field-sugra-trajectories"
+    },
+    {
+      "id": "edge:196",
+      "from": "claim:P19_SHIFT_ONE_TWELFTH_IS_HV_HEAVY_SUFFICIENT_BENCHMARK",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:197",
+      "from": "claim:P19_CECOTTI_ONE_SIXTH_IS_SUFFICIENT_NOT_SHARP",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-noscale-sugra",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:198",
+      "from": "claim:P19_CECOTTI_ONE_SIXTH_IS_SUFFICIENT_NOT_SHARP",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-exact-one-field-sugra-trajectories"
+    },
+    {
+      "id": "edge:199",
+      "from": "claim:P19_CECOTTI_ONE_SIXTH_IS_SUFFICIENT_NOT_SHARP",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:200",
+      "from": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-bounce-local",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:201",
+      "from": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-classical-homogeneous-closed-frw-shooting"
+    },
+    {
+      "id": "edge:202",
+      "from": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:203",
+      "from": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-bounce-shooting",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:204",
+      "from": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-bounce-shooting",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:205",
+      "from": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-classical-homogeneous-closed-frw-shooting"
+    },
+    {
+      "id": "edge:206",
+      "from": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:207",
+      "from": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-bounce-local",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:208",
+      "from": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-slowroll-r",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:209",
+      "from": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-first-order-potential-slow-roll-r"
+    },
+    {
+      "id": "edge:210",
+      "from": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:211",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-slowroll-r",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:212",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-first-order-potential-slow-roll-r"
+    },
+    {
+      "id": "edge:213",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:214",
+      "from": "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-shift-sugra",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:215",
+      "from": "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p19-exact-one-field-sugra-trajectories"
+    },
+    {
+      "id": "edge:216",
+      "from": "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p19-report"
+    },
+    {
+      "id": "edge:217",
+      "from": "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p19-noscale-sugra",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:218",
+      "from": "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "relation": "ABOUT",
+      "to": "concept:potential-hubble-versus-geometric-hubble"
+    },
+    {
+      "id": "edge:219",
+      "from": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "relation": "ABOUT",
+      "to": "concept:potential-hubble-versus-geometric-hubble"
+    },
+    {
+      "id": "edge:220",
+      "from": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "relation": "ABOUT",
+      "to": "concept:background-existence-versus-initial-amplitude-selection"
+    },
+    {
+      "id": "edge:221",
+      "from": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC",
+      "relation": "ABOUT",
+      "to": "concept:closed-time-symmetric-frw-bounce"
+    },
+    {
+      "id": "edge:222",
+      "from": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "relation": "ABOUT",
+      "to": "concept:bounce-efolds-versus-pivot-efolds"
+    },
+    {
+      "id": "edge:223",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "ABOUT",
+      "to": "concept:bounce-efolds-versus-pivot-efolds"
+    },
+    {
+      "id": "edge:224",
+      "from": "claim:P19_SHIFT_TRAJECTORY_REDUCES_TO_QUADRATIC_POTENTIAL",
+      "relation": "CITES",
+      "to": "source:kallosh-linde-2010"
+    },
+    {
+      "id": "edge:225",
+      "from": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "relation": "CITES",
+      "to": "source:kallosh-linde-2013"
+    },
+    {
+      "id": "edge:226",
+      "from": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "relation": "CITES",
+      "to": "source:bicep-keck-2021"
+    },
+    {
+      "id": "edge:227",
+      "from": "claim:P19_QUADRATIC_SLOWROLL_IS_COMPATIBLE_WITH_CURRENT_R_LIMIT",
+      "relation": "CITES",
+      "to": "source:balkenhol-et-al-2026"
+    },
+    {
+      "id": "edge:228",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "CITES",
+      "to": "source:bicep-keck-2021"
+    },
+    {
+      "id": "edge:229",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "CITES",
+      "to": "source:balkenhol-et-al-2026"
+    },
+    {
+      "id": "edge:230",
+      "from": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "relation": "MOTIVATES",
+      "to": "open:p19-minisuperspace-phi0-measure"
+    },
+    {
+      "id": "edge:231",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "MOTIVATES",
+      "to": "open:p19-cpt-pin-perturbation-state"
+    },
+    {
+      "id": "edge:232",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "MOTIVATES",
+      "to": "open:p19-closed-s3-perturbations"
+    },
+    {
+      "id": "edge:233",
+      "from": "claim:P19_STAROBINSKY_FIRST_ORDER_R_IS_BELOW_CURRENT_LIMIT",
+      "relation": "MOTIVATES",
+      "to": "open:p19-reheating-pivot-map"
+    },
+    {
+      "id": "edge:234",
+      "from": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "relation": "MOTIVATES",
+      "to": "open:p19-full-covariant-multifield-stability"
+    },
+    {
+      "id": "edge:235",
+      "from": "claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT",
+      "relation": "MOTIVATES",
+      "to": "open:p18-persistent-order-parameter"
+    },
+    {
+      "id": "edge:236",
+      "from": "evidence:p19-shift-sugra",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p19-script"
+    },
+    {
+      "id": "edge:237",
+      "from": "evidence:p19-shift-sugra",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p19-evidence-snapshot"
+    },
+    {
+      "id": "edge:238",
+      "from": "evidence:p19-noscale-sugra",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p19-script"
+    },
+    {
+      "id": "edge:239",
+      "from": "evidence:p19-noscale-sugra",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p19-evidence-snapshot"
+    },
+    {
+      "id": "edge:240",
+      "from": "evidence:p19-bounce-local",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p19-script"
+    },
+    {
+      "id": "edge:241",
+      "from": "evidence:p19-bounce-local",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p19-evidence-snapshot"
+    },
+    {
+      "id": "edge:242",
+      "from": "evidence:p19-bounce-shooting",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p19-script"
+    },
+    {
+      "id": "edge:243",
+      "from": "evidence:p19-bounce-shooting",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p19-evidence-snapshot"
+    },
+    {
+      "id": "edge:244",
+      "from": "evidence:p19-slowroll-r",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p19-script"
+    },
+    {
+      "id": "edge:245",
+      "from": "evidence:p19-slowroll-r",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p19-evidence-snapshot"
+    },
+    {
+      "id": "edge:246",
+      "from": "evidence:p19-shift-sugra",
+      "relation": "DERIVED_FROM",
+      "to": "source:kallosh-linde-2010"
+    },
+    {
+      "id": "edge:247",
+      "from": "evidence:p19-noscale-sugra",
+      "relation": "DERIVED_FROM",
+      "to": "source:kallosh-linde-2013"
+    },
+    {
+      "id": "edge:248",
+      "from": "evidence:p19-slowroll-r",
+      "relation": "DERIVED_FROM",
+      "to": "source:bicep-keck-2021",
+      "note": "The source supplies the limit, not the local bounce calculation."
+    },
+    {
+      "id": "edge:249",
+      "from": "evidence:p19-slowroll-r",
+      "relation": "DERIVED_FROM",
+      "to": "source:balkenhol-et-al-2026",
+      "note": "The source supplies the updated comparison, not the local bounce calculation."
+    },
+    {
+      "id": "edge:250",
+      "from": "artifact:p19-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:251",
+      "from": "artifact:p19-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:252",
+      "from": "artifact:p19-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p19"
+    },
+    {
+      "id": "edge:253",
+      "from": "phase:p20",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:254",
+      "from": "concept:leading-de-sitter-wdw-envelope",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:255",
+      "from": "concept:standard-history-versus-independent-pair-weight",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:256",
+      "from": "concept:coherent-conjugate-saddle-interference",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:257",
+      "from": "concept:conditional-curvature-reheating-map",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:258",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "PART_OF",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:259",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "PART_OF",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:260",
+      "from": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "relation": "PART_OF",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:261",
+      "from": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+      "relation": "PART_OF",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:262",
+      "from": "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "relation": "PART_OF",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:263",
+      "from": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "relation": "PART_OF",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:264",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "ABOUT",
+      "to": "concept:leading-de-sitter-wdw-envelope"
+    },
+    {
+      "id": "edge:265",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p20-leading-wdw-envelope",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:266",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p20-leading-de-sitter-wdw-control"
+    },
+    {
+      "id": "edge:267",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p20-report"
+    },
+    {
+      "id": "edge:268",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "note": "Phase 20 tests one leading weighting proposal for the free Phase 19 amplitude; it does not turn the classical existence result into a WDW theorem."
+    },
+    {
+      "id": "edge:269",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "CITES",
+      "to": "source:hartle-hawking-1983"
+    },
+    {
+      "id": "edge:270",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "CITES",
+      "to": "source:hartle-hawking-hertog-2008"
+    },
+    {
+      "id": "edge:271",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "MOTIVATES",
+      "to": "open:p20-exact-starobinsky-wdw-state"
+    },
+    {
+      "id": "edge:272",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "ABOUT",
+      "to": "concept:standard-history-versus-independent-pair-weight"
+    },
+    {
+      "id": "edge:273",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p20-leading-wdw-envelope",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:274",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p20-leading-de-sitter-wdw-control"
+    },
+    {
+      "id": "edge:275",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p20-report"
+    },
+    {
+      "id": "edge:276",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "CITES",
+      "to": "source:boyle-turok-2021",
+      "note": "Boyle–Turok motivate analytic two-sheet cosmology but do not derive the conditional independent-pair WDW joint probability."
+    },
+    {
+      "id": "edge:277",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "MOTIVATES",
+      "to": "open:p20-cpt-pin-sheet-inner-product"
+    },
+    {
+      "id": "edge:278",
+      "from": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "relation": "ABOUT",
+      "to": "concept:coherent-conjugate-saddle-interference"
+    },
+    {
+      "id": "edge:279",
+      "from": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p20-leading-wdw-envelope",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:280",
+      "from": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p20-leading-de-sitter-wdw-control"
+    },
+    {
+      "id": "edge:281",
+      "from": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p20-report"
+    },
+    {
+      "id": "edge:282",
+      "from": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "relation": "CITES",
+      "to": "source:halliwell-2009"
+    },
+    {
+      "id": "edge:283",
+      "from": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p20-cecotti-f-direction",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:284",
+      "from": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p20-cecotti-path-f-flatness"
+    },
+    {
+      "id": "edge:285",
+      "from": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p20-report"
+    },
+    {
+      "id": "edge:286",
+      "from": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+      "relation": "CITES",
+      "to": "source:cheng-death-moniz-1994",
+      "note": "The source frames the separate quantum local-SUSY constraint problem; it does not compute the Cecotti benchmark."
+    },
+    {
+      "id": "edge:287",
+      "from": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
+      "relation": "MOTIVATES",
+      "to": "open:p20-local-sugra-one-loop-selection"
+    },
+    {
+      "id": "edge:288",
+      "from": "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "relation": "ABOUT",
+      "to": "concept:conditional-curvature-reheating-map"
+    },
+    {
+      "id": "edge:289",
+      "from": "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p20-curvature-reheating-control",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:290",
+      "from": "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p20-conditional-curvature-reheating-benchmark"
+    },
+    {
+      "id": "edge:291",
+      "from": "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p20-report"
+    },
+    {
+      "id": "edge:292",
+      "from": "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P19_DISPLAYED_TARGET_SHOT_BOUNCES_REACH_50_55_60_NACC"
+    },
+    {
+      "id": "edge:293",
+      "from": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "relation": "ABOUT",
+      "to": "concept:conditional-curvature-reheating-map"
+    },
+    {
+      "id": "edge:294",
+      "from": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p20-curvature-reheating-control",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:295",
+      "from": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p20-conditional-curvature-reheating-benchmark"
+    },
+    {
+      "id": "edge:296",
+      "from": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p20-report"
+    },
+    {
+      "id": "edge:297",
+      "from": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "relation": "CITES",
+      "to": "source:desi-dr2-2025",
+      "note": "The source supplies observational context only and is not evidence for a seam prediction."
+    },
+    {
+      "id": "edge:298",
+      "from": "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION",
+      "relation": "MOTIVATES",
+      "to": "open:p20-seam-reheating-curvature-prediction"
+    },
+    {
+      "id": "edge:299",
+      "from": "evidence:p20-leading-wdw-envelope",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p20-script"
+    },
+    {
+      "id": "edge:300",
+      "from": "evidence:p20-leading-wdw-envelope",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p20-evidence-snapshot"
+    },
+    {
+      "id": "edge:301",
+      "from": "evidence:p20-leading-wdw-envelope",
+      "relation": "DERIVED_FROM",
+      "to": "source:hartle-hawking-1983",
+      "note": "The source supplies the hemisphere-action baseline; the finite benchmark and two convention checks are local evidence."
+    },
+    {
+      "id": "edge:302",
+      "from": "evidence:p20-cecotti-f-direction",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p20-script"
+    },
+    {
+      "id": "edge:303",
+      "from": "evidence:p20-cecotti-f-direction",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p20-evidence-snapshot"
+    },
+    {
+      "id": "edge:304",
+      "from": "evidence:p20-cecotti-f-direction",
+      "relation": "DERIVED_FROM",
+      "to": "source:kallosh-linde-2013",
+      "note": "The source supplies the improved Cecotti model; the displayed auxiliary calculation is local evidence."
+    },
+    {
+      "id": "edge:305",
+      "from": "evidence:p20-curvature-reheating-control",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p20-script"
+    },
+    {
+      "id": "edge:306",
+      "from": "evidence:p20-curvature-reheating-control",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p20-evidence-snapshot"
+    },
+    {
+      "id": "edge:307",
+      "from": "open:p20-local-sugra-one-loop-selection",
+      "relation": "CITES",
+      "to": "source:barvinsky-kamenshchik-mishakov-1996",
+      "note": "The source is a one-loop peak proof of principle in a different nonminimally coupled model."
+    },
+    {
+      "id": "edge:308",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "MOTIVATES",
+      "to": "open:p20-quantized-four-form-selection"
+    },
+    {
+      "id": "edge:309",
+      "from": "artifact:p20-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:310",
+      "from": "artifact:p20-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p20"
+    },
+    {
+      "id": "edge:311",
+      "from": "artifact:p20-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p20"
     }
   ],
   "kg_bridges": [
