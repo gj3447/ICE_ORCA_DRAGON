@@ -1,7 +1,7 @@
 {
   "name": "ice-orca-dragon-physics-workbench",
   "version": "1.0.0",
-  "description": "Tier-gated hypercomplex computation workbench with 42 runnable locked Python kernels and a T2 scientific-evidence workflow.",
+  "description": "Hypercomplex computation workbench with reproducible Python kernels and a lean source-to-check scientific workflow.",
   "author": {
     "name": "Ra Gyeongjun (라경준)",
     "email": "gj3447@gmail.com",

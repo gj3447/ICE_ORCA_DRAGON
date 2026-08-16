@@ -47,8 +47,8 @@
 - `sedenion_*.py` — Sedenion 16D 분석, Der(S)=g₂ 14D 검증, SU(2)/SU(3) 임베딩
 - `queue_01~11_*.py` — orbit (7×6=42), custodial (0/42 fail), rep (0.75 균일), Hosotani, CW, ZD breaking
 - `zd64_analysis.py`, `verify_mp_mW_3_256.py`
-- `.claude/skills/science-feedback-loop.md` — 주장에 영향을 주는 T2 작업의 evidence gate.
-  일반 계산은 자동 KG/이론 갱신을 일으키지 않는다.
+- `AGENTS.md` — source → calculation → independent check → scoped interpretation의 현재 작업 원칙.
+  의무적 tier, 사전등록 계약, 자동 KG/이론 갱신은 없다.
 
 ---
 

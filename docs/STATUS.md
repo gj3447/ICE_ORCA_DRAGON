@@ -14,7 +14,7 @@
 | Reproduction ledger | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` |
 | Local engineering gate | `npm run check` |
 | Environment gate | `./ice doctor` |
-| Scientific workflow | tiered T0/T1/T2; full loop only for T2 |
+| Scientific workflow | lean source → calculation → independent check → scoped interpretation |
 
 Historical source/result inventories contain more files than the live CLI. Do not use an old “47” or
 “60+” count as the runnable catalog.
@@ -37,56 +37,13 @@ current ledger.
 See [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md)
 and [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md).
 
-## Current feedback contract
+## Current scientific workflow
 
-Assign the highest applicable tier before execution.
-
-| Tier | Scope | Persistence |
-|---|---|---|
-| T0 | non-claim docs/tooling/harness/lock engineering | requested artifact and relevant checks |
-| T1 | frozen-input reproduction | reproducibility receipt; no confidence change |
-| T2 | work that can materially affect a scientific claim | full evidence report; material/reusable evidence may be proposed as `PENDING` |
-
-T0/T1 escalates to T2 when the outcome materially affects a claim. T2 does not downgrade after an
-unfavorable or null result is seen.
-
-### T2 classification axes
-
-T2 does not force a single four-way verdict. Record independent axes:
-
-| Axis | Values |
-|---|---|
-| target | explicit claim plus algebra/physics fiber |
-| claim relation | `SUPPORTS`, `CONTRADICTS`, `INCONCLUSIVE` |
-| novelty | `REPRODUCTION`, `DISCOVERY_CANDIDATE` |
-| fitting risk | `NULL_PASS`, `NUMEROLOGY_HOLD`, `NOT_APPLICABLE`, `NOT_ASSESSED` |
-| registration | committed preregistration or explicit post-hoc/unknown status |
-
-`CONTRADICTS` describes evidence before ratification. `REFUTED` is reserved for a validated
-preregistered falsifier plus authorized ratification.
-
-### Optional gates
-
-- Null/multiplicity: required when a meaningful statistical search or fit exists; `NOT_APPLICABLE` is
-  valid for exact/deductive work and `NOT_ASSESSED` when no valid null is available.
-- Numerical Bayes: only with explicit `H` and `E`, frozen prior, both likelihoods, and selection/
-  dependence treatment. A rerun of the same data is not a new independent `E`.
-- Lakatos: only at a declared programme/fiber checkpoint with baseline and longitudinal window.
-  `PROGRESSIVE` needs novel excess empirical content plus independent corroboration;
-  `DEGENERATING` needs a longitudinal sequence of ad-hoc belt changes without corroborated novelty.
-  Otherwise use `UNDETERMINED` or the canonical `STAGNANT`. Finding counts are not votes.
-
-### Persistence and ratification
-
-An ordinary T2 execution may create provenance-rich `PENDING` evidence or a proposed change. It does not
-directly change confidence/status, mark a Contract refuted, create a canonical Span/Possibility, or
-supersede an existing record. Ratification requires an explicit authorized ratifier and the ID of the
-pending evidence being considered.
-
-A parent report may close after classifying its evidence and recording one bounded follow-up. Discovery
-does not trigger automatic `/apt-sp` recursion; any child is separately scoped and tiered.
-
-Source: [`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md).
+New work has no mandatory tier, preregistration contract, Bayes/Lakatos form, or KG ratification step.
+Record the primary source, equations, conventions, assumptions, command, environment, and actual output;
+then apply an independent check proportional to the calculation's risk. Exact algebra, numerical output,
+physical interpretation, and open speculation must remain separate. Historical T2 labels and contract
+files below describe how those old results were produced; they do not govern new work.
 
 ## Current bounded T2 result — CPT × Temporal-Folded SUSY Phase 12
 
@@ -236,7 +193,7 @@ declared fibers, not a label to recompute after every script. Statements must di
 
 ## Known limitations and bounded follow-ups
 
-1. Queue03 needs a separately versioned, preregistered, basis-invariant method. A candidate must gate
+1. Queue03 needs a separately versioned, independently checked, basis-invariant method. A candidate must check
    closure, nondegeneracy, and combined rank before evaluating cross-commutation; the existing ledger is
    quarantined rather than silently rewritten.
 2. Queue09 needs a multiplication-preservation criterion before a group-theoretic interpretation.

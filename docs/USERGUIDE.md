@@ -102,14 +102,9 @@ Current expected ledger:
 The overall exit code is therefore nonzero by design. Do not loosen a global tolerance to make queue03
 green. See [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
 
-## Choose T0, T1, or T2
+## Run a scientific task
 
-Declare the highest applicable tier before looking at new output.
-
-### T0 — engineering
-
-Use for docs, CLI, harness, dependency, or refactor work that does not evaluate a scientific claim.
-Definition of done is the requested artifact plus directly relevant checks. Examples:
+No tier declaration or preregistration contract is required. Use the smallest relevant checks. Examples:
 
 ```bash
 npm run check                 # TypeScript/Effect control plane
@@ -118,49 +113,10 @@ uv sync --locked              # Python/lock change
 ./ice run <affected-name>     # numerical kernel change
 ```
 
-### T1 — frozen reproduction
-
-Record command, args, environment, frozen baseline, comparator, and diff. T1 confirms whether a result
-reproduces under that contract; it does not increment confidence. If the observed outcome materially
-affects a claim, escalate to T2.
-
-### T2 — claim-impact work
-
-Before execution, state:
-
-- target claim and algebra/physics fiber
-- preregistered or post-hoc status
-- null and multiplicity plan when applicable
-- frozen comparator/falsifier
-
-After execution, record independent axes:
-
-```text
-claim_relation: SUPPORTS | CONTRADICTS | INCONCLUSIVE
-novelty: REPRODUCTION | DISCOVERY_CANDIDATE
-fitting_risk: NULL_PASS | NUMEROLOGY_HOLD | NOT_APPLICABLE | NOT_ASSESSED
-```
-
-Bayes is numerical only when `H`, `E`, a frozen prior, both likelihoods, and selection/dependence are
-explicit. Do not multiply repeated runs of the same data as independent evidence. Lakatos is assessed
-only for a declared programme/fiber at a checkpoint with a baseline and longitudinal window.
-
-The full contract is
-[`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md).
-
-## Persistence after T2
-
-The default output is the T2 report. Only material/reusable evidence should become a provenance-bearing
-`PENDING` proposal. Ordinary execution cannot directly:
-
-- increment Contract confidence
-- mark a claim `REFUTED`
-- create a canonical Span or Possibility
-- supersede an existing node
-- begin recursive discovery work
-
-Ratification is a separate authorized action against an identified pending evidence record. A discovery
-may record one bounded follow-up; its child is independently tiered.
+For a new calculation, record the source equations/conventions, command, environment, input, and actual
+output. Use an independent derivation, symbolic identity, limiting case, or precision sweep when it
+materially lowers error risk. Reproduction establishes repeatability, not truth. Keep computed facts,
+physical interpretation, and open hypotheses separate.
 
 ## Adding a runnable kernel
 
@@ -176,10 +132,8 @@ may record one bounded follow-up; its child is independently tiered.
 | Mistake | Correction |
 |---|---|
 | citing an old `*_final.py` name as runnable | use `./ice list` and `./ice info` |
-| treating a numerical match as confirmation | use T2 registration/null gates when it affects a claim |
-| treating reproduction as independent evidence | T1 records repeatability; identical data are not a second `E` |
-| applying Lakatos to each script | reserve it for declared programme/fiber checkpoints |
-| auto-writing KG after every result | local report first; selected PENDING evidence; separate ratification |
+| treating a numerical match as confirmation | check alternatives, units, selection effects, and a null model when relevant |
+| treating reproduction as independent evidence | repeated execution establishes repeatability, not independent support |
 | hiding method dependence with tolerance | quarantine or version a corrected invariant method |
 
 ## Related documents

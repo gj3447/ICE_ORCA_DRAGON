@@ -24,30 +24,20 @@ npm run check
 | [`../README.md`](../README.md) | overview, CLI, tier policy, current reproduction ledger |
 | [`USERGUIDE.md`](USERGUIDE.md) | live-catalog usage and kernel workflow |
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
+| [`SCIENTIFIC_TOOLBOX.md`](SCIENTIFIC_TOOLBOX.md) | installed symbolic, numerical, workflow, and formal-verification tools |
 | [`../cpt_temporal_folded_susy/README.md`](../cpt_temporal_folded_susy/README.md) | CPT × Temporal-Folded SUSY phase index, current boundary, and sequencing gates |
-| [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification contract |
+| [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md) | historical attestation plus current erratum |
 | [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md) | queue03 method-quarantine evidence |
 | [`../SOURCES.md`](../SOURCES.md) | source and mythology/physics provenance |
 
-## Feedback policy
+## Scientific workflow
 
-Only T2 claim-impact work invokes the full scientific loop.
-
-| Tier | Short rule |
-|---|---|
-| T0 | engineering artifact + directly relevant checks |
-| T1 | frozen reproduction receipt; no confidence change |
-| T2 | declare target/fiber and preregistration before execution, then apply all relevant evidence gates |
-
-For T2, relation, novelty, fitting risk, and target/fiber are independent axes. Null/multiplicity checks,
-numerical Bayes, and Lakatos are conditional gates, not seven mandatory steps for every calculation.
-Material/reusable evidence may become a `PENDING` proposal; canonical mutation requires separate
-authorized ratification. Discovery records a bounded follow-up instead of recursively dispatching itself.
-
-See [`../AGENTS.md`](../AGENTS.md) and
-[`../.claude/skills/science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md).
+There is no mandatory tier or preregistration contract. Record the source equations and conventions, run
+the smallest useful calculation, preserve its command/environment/output, and check high-risk algebra or
+numerics independently. Reports must distinguish computed facts, physical interpretation, and open
+speculation. See [`../AGENTS.md`](../AGENTS.md).
 
 ## Current execution map
 
@@ -80,7 +70,5 @@ These are optional integration references, not runtime dependencies of the stand
 ## Plugin manifest
 
 [`../.claude-plugin/plugin.json`](../.claude-plugin/plugin.json) carries portable package metadata.
-The repository-native policy remains the standalone
-[`science-feedback-loop.md`](../.claude/skills/science-feedback-loop.md); it is not falsely declared as a
-plugin skill directory. Runtime dependency contracts remain in `package.json`/`package-lock.json` and
+Runtime dependency contracts remain in `package.json`/`package-lock.json` and
 `pyproject.toml`/`uv.lock`, not in custom manifest fields.

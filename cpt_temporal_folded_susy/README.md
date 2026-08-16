@@ -69,18 +69,16 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   target이 `VALID/CONTRADICTS/NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS`다. 이는 문헌 전체 no-go나
   Temporal-Folded SUSY core 판정이 아니다.
 
-## 순서 게이트와 다음 관문
+## 다음 계산
 
 Phase 14A의 residual·boundary subgates는 닫혔지만 proper-bulk canonical bridge가 열리지 않았고,
-Phase 15R은 기존 두 source 중 full same-source parent가 없음을 확인했다. 따라서 Phase 14B 및
-Phase 15 tangency/projector 계산은 시작하지 않는다.
+Phase 15R은 기존 두 source 중 full same-source parent가 없음을 확인했다.
 
-1. 다음 단계는 Lorentzian Einstein/scalar 부호, auxiliary-retaining action, 필요한 local
-   transformations를 **한 primary source 안에서** 주는 새 parent candidate의 별도 preregistered
-   source-admission cycle이다. Kugo–Yokokura–Yoshioka 계열은 검토 후보이며 아직 parent가 아니다.
-2. 그 source gate가 통과한 뒤에만 Bianchi-I homogeneous SUSY tangency, full constraint closure,
-   proper-gauge quotient와 relational branch projector를 새 cycle들로 순서대로 연다.
+1. Lorentzian Einstein/scalar 부호, auxiliary-retaining action, local transformations를 **한 primary
+   source 안에서** 주는 Binetruy–Girardi–Grimm parent를 직접 축약하고 부호·Hessian을 계산한다.
+2. 같은 source가 실제로 필요한 성분을 주면 Bianchi-I homogeneous SUSY tangency를 계산한다.
+   실패하거나 식이 빠지면 그 사실을 즉시 결과로 남기고 다른 source를 검토한다.
 3. P12B full Green function/S-matrix는 별도 **spatial-interface auxiliary** 연구로만 수행할 수
    있으며, canonical charge gate 전에는 cosmological branch 주장에 대한 evidence weight가 0이다.
-4. 이산/anomaly-fixed wall과 higher-derivative bounce는 auxiliary response가 non-null이고 각각의
-   독립 preregistration이 있을 때만 연다. spatial wall의 시간 analytic continuation은 증거로 쓰지 않는다.
+4. 이산/anomaly-fixed wall과 higher-derivative bounce는 auxiliary response가 non-null일 때만
+   별도 계산한다. spatial wall의 시간 analytic continuation은 증거로 쓰지 않는다.

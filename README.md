@@ -6,7 +6,7 @@
 
 [![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-46-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
-[![Science policy](https://img.shields.io/badge/Science_policy-T0%2FT1%2FT2-10b981?style=for-the-badge)](.claude/skills/science-feedback-loop.md)
+[![Science workflow](https://img.shields.io/badge/Science_workflow-source_%E2%86%92_compute_%E2%86%92_check-10b981?style=for-the-badge)](AGENTS.md)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
 
 </div>
@@ -99,40 +99,21 @@ committed baseline. The current 14-case ledger is intentionally not all-green:
 
 Queue 03 is quarantined because its legacy entrywise commutator maximum depends on an arbitrary
 null-space basis. A broad tolerance would conceal a method defect, so the ledger exits nonzero until a
-separately versioned and preregistered invariant method exists. See
+separately versioned and independently checked invariant method exists. See
 [`QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
 
-## Choose the feedback tier before execution
+## Lean scientific workflow
 
-Use the highest applicable tier. Declare it before observing the output; a T0/T1 result that materially
-affects a scientific claim escalates to T2, and a T2 run is never downgraded afterward.
+New work has no mandatory tier, preregistration contract, Bayes/Lakatos form, or KG ratification step.
 
-| Tier | Use when | Definition of done |
-|---|---|---|
-| T0 | docs, CLI, harness, locks, or other non-claim engineering | requested artifact plus directly relevant checks |
-| T1 | frozen-input reproduction | command/args/environment/baseline/comparator/diff; no confidence change |
-| T2 | result can support, contradict, or create a scientific claim | target claim and fiber, preregistration status, all applicable evidence gates, independent classifications |
+1. Record the primary source, equations, conventions, and assumptions actually used.
+2. Run the smallest exact or numerical calculation that can answer the question.
+3. Preserve the command, environment, inputs, and observed output; independently check high-risk steps.
+4. Separate computed facts from physical interpretation and open speculation.
 
-For T2, classify independent axes rather than forcing one verdict:
-
-- claim relation: `SUPPORTS | CONTRADICTS | INCONCLUSIVE`
-- novelty: `REPRODUCTION | DISCOVERY_CANDIDATE`
-- fitting risk: `NULL_PASS | NUMEROLOGY_HOLD | NOT_APPLICABLE | NOT_ASSESSED`
-- target: explicit claim plus algebra/physics fiber
-
-Null and multiplicity plans apply when statistically meaningful. Numerical Bayes requires an explicit
-hypothesis/evidence pair, frozen prior, both likelihoods, and selection/dependence treatment; rerunning the
-same data is not independent evidence. Lakatos applies only at a declared programme/fiber checkpoint with
-a baseline and longitudinal window.
-
-Ordinary T0/T1 work stays in test logs and reproduction receipts. Reusable/material T2 results may be
-proposed as provenance-bearing `PENDING` evidence. They do not directly increment confidence, mark a
-Contract refuted, create a canonical Span/Possibility, or supersede anything. Canonical mutation needs an
-identified pending evidence record and separate authorized ratification. Discovery creates one bounded
-follow-up candidate, not automatic recursion.
-
-The executable policy is [`AGENTS.md`](AGENTS.md) and
-[`science-feedback-loop.md`](.claude/skills/science-feedback-loop.md).
+Null results, basis dependence, sign errors, and failed mappings are ordinary results, not procedural
+failures. Historical `*_RESEARCH_CONTRACT.json` and receipts remain only where an old executable needs
+them for reproducibility. See [`AGENTS.md`](AGENTS.md).
 
 ## Computation areas
 

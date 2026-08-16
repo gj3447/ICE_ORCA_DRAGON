@@ -42,22 +42,14 @@ For a changed numerical kernel, confirm its live name and run the directly relev
 ./ice repro --only <mapped-script-name>
 ```
 
-`npm run check` protects the TypeScript/Effect control-plane contract; it is not a
-physics oracle. Choose the highest applicable tier before execution:
-
-- T0 engineering: run directly relevant Node/Python/lock checks.
-- T1 reproduction: record frozen inputs, environment, baseline, comparator, and diff; do not change
-  claim confidence.
-- T2 claim-impact work: run the full evidence gate in
-  [`.claude/skills/science-feedback-loop.md`](.claude/skills/science-feedback-loop.md), including
-  preregistration and null/multiplicity analysis only when applicable.
-
-Lakatos is a programme/fiber checkpoint, not a mandatory label on every scientific code change. A T2
-code change still needs its ordinary T0 engineering checks.
+`npm run check` protects the TypeScript/Effect control plane; it is not a physics oracle. For scientific
+changes, record the source equations and conventions, run the smallest relevant calculation, preserve the
+command and output, and use an independent check proportional to the risk. No tier declaration,
+preregistration contract, Bayes/Lakatos form, or KG ratification is mandatory.
 
 Do not relax the global comparator to make a drift green. Register a field-level
 semantic invariant with evidence, or classify the artifact as nonportable. In
 particular, the legacy queue03 metric is intentionally `NONPORTABLE_FAIL`.
 
-Material/reusable T2 results may produce `PENDING` evidence. Direct confidence, status, Contract, Span,
-or supersession changes require separate authorized ratification.
+Keep computed results, physical interpretation, and speculation visibly separate. Historical contracts
+and receipts are non-governing reproducibility artifacts.

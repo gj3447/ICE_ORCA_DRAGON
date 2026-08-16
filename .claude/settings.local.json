@@ -1,7 +1,6 @@
 {
   "permissions": {
     "allow": [
-      "mcp__ontology__ontology_contract_get",
       "mcp__ontology__ontology_search",
       "mcp__ontology__ontology_get",
       "mcp__ontology__ontology_neighbors",
