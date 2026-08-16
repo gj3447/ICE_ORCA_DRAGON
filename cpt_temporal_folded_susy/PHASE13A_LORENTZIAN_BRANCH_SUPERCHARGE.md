@@ -296,3 +296,6 @@ core 연구 순서는 여기서 멈춘다.
 - 원 사전등록: [`PHASE13A_RESEARCH_CONTRACT.json`](PHASE13A_RESEARCH_CONTRACT.json)
 - 적대검토 정정: [`PHASE13A_ADVERSARIAL_ERRATUM.json`](PHASE13A_ADVERSARIAL_ERRATUM.json)
 - 선행 Phase 12: [`PHASE12_BOUNDARY_TWIST_INTERFACE.md`](PHASE12_BOUNDARY_TWIST_INTERFACE.md)
+- 후속 charge-first audit:
+  [`PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md`](PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md) — residual,
+  spatial-boundary, bulk channels을 분해했지만 canonical bridge 미구성으로 literal-core 판정은 유지

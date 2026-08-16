@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 44 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 45 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -141,6 +141,36 @@ See
 [`../cpt_temporal_folded_susy/PHASE13A_RESEARCH_CONTRACT.json`](../cpt_temporal_folded_susy/PHASE13A_RESEARCH_CONTRACT.json),
 and
 [`../cpt_temporal_folded_susy/PHASE13A_ADVERSARIAL_ERRATUM.json`](../cpt_temporal_folded_susy/PHASE13A_ADVERSARIAL_ERRATUM.json).
+
+## Current bounded T2 result — CPT × Temporal-Folded SUSY Phase 14A
+
+Phase 14A preregistered a compact \(T^3\), flat-FLRW, neutral-chiral-clock charge-first template before
+freezing its source packet/ledger and executable. The committed first run and two independent replays
+all returned exit 0 with **24 exact checks, 7 executable mutants rejected, and 6 scope guards**.
+
+- The exact bosonic reduction gives
+  \(C_B=-p_X^2+p_T^2+p_Y^2\), \(\{T,C_B\}=2p_T\), and
+  \(\alpha=(p_T^2+p_Y^2)/(2V_0^2a^6)>0\) on both \(p_T\ne0\) orientations.
+- On the frozen Kallosh bosonic-flat-FLRW linear-fermion domain,
+  \(\delta\upsilon/\delta\epsilon=-(\alpha/2)I_4\) has rank 4 and kernel dimension 0. This excludes a
+  nonzero goldstino-unitary-gauge residual parameter; it does not remove local gauge invariance or every
+  reduced/dressed charge.
+- A smooth compact \(T^3\) has no actual spatial boundary or asymptotic end, so the
+  Regge–Teitelboim spatial-boundary channel is `NOT_APPLICABLE_IN_THIS_ROUTE`. No temporal endpoint or
+  earlier collar is substituted for that surface.
+- The bulk calculation is only a formal constraint-ideal control. The differentiable graded
+  matter-SUGRA Dirac generator is `NOT_DERIVED`, so template completeness and equivalence-class
+  deduplication remain `DEFERRED_PENDING_CANONICAL_BRIDGE`.
+- The selected nonzero-charge target is therefore `INCONCLUSIVE_UNCONSTRUCTED`; the literal
+  branch-superpartner target remains `INCONCLUSIVE_OUT_OF_SCOPE`. Phase 14B is not opened.
+- This kernel has no mapped legacy output. The runnable catalog rises to 45, while the mapped
+  reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md`](../cpt_temporal_folded_susy/PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md),
+[`../cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json`](../cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json),
+and
+[`../cpt_temporal_folded_susy/PHASE14A_RUN_RESULT.json`](../cpt_temporal_folded_susy/PHASE14A_RUN_RESULT.json).
 
 ## Historical scientific ledger
 

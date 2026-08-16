@@ -24,10 +24,16 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `phase13a_lorentzian_branch_supercharge.py` | Phase 13A exact 실행체 — Moniz principal-symbol control, finite positive-kernel obstruction, CAR closure countercontrol 및 의미 변형 검사 |
 | `PHASE13A_ADVERSARIAL_ERRATUM.json` | 최초 실행의 과도한 core 판정을 원 계약을 수정하지 않고 정정한 `POST_HOC_CORRECTED` 적대검토 기록 |
 | `PHASE13A_LORENTZIAN_BRANCH_SUPERCHARGE.md` | Phase 13A 보고서 — E163–E166. 두 algebraic 지름길은 닫혔고 literal branch=superpartner core는 `INCONCLUSIVE/UNCONSTRUCTED` |
+| `PHASE14A_RESEARCH_CONTRACT.json` | Phase 14A T2 사전등록 계약 — compact chiral-clock route의 goldstino residual, RT spatial boundary, proper-bulk quotient gate를 결과 전에 고정 |
+| `PHASE14A_SOURCE_PACKET.json` | Kallosh·Henneaux·Martínez-Pérez–Ramírez source version/hash/scope와 정규화 bridge의 frozen packet |
+| `PHASE14A_CHARGE_LEDGER.json` | 실행 전 동결한 immutable candidate ledger; observed status는 별도 result receipt에 기록 |
+| `phase14a_chiral_clock_charge_first.py` | Phase 14A exact 실행체 — bosonic clock, goldstino residual, compact topology, formal quotient와 verdict precedence 검사 |
+| `PHASE14A_RUN_RESULT.json` | 최초 실행 및 두 independent replay, observed gates, T2 classification을 담은 post-run receipt |
+| `PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md` | Phase 14A 보고서 — E167–E170. G2/G3은 닫혔지만 canonical bridge 미구성으로 selected target은 `INCONCLUSIVE/UNCONSTRUCTED` |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 13A)
+## 현재 경계 (Phase 14A)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -40,16 +46,23 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - gauge-independent relational branch projector, 공통 physical domain/inner product, local gauge
   constraint와 구별되는 nonzero \(Q_{\rm phys}\)의 결합은 아직 `UNCONSTRUCTED`다. 따라서 literal
   core는 증명·보편 반증 어느 쪽도 아니며 `INCONCLUSIVE`다.
+- Phase 14A는 \(C_B=-p_X^2+p_T^2+p_Y^2\), 양·음 \(p_T\ne0\) clock patch와
+  \(\alpha=(p_T^2+p_Y^2)/(2V_0^2a^6)>0\)를 exact하게 재현했다. 그 결과
+  goldstino-gauge residual kernel은 0이다.
+- Smooth compact \(T^3\)에서 RT spatial-boundary channel은
+  `NOT_APPLICABLE_IN_THIS_ROUTE`다. 그러나 differentiable graded matter-SUGRA Dirac generator는
+  유도되지 않아 template completeness와 equivalence-class deduplication은 보류됐고 selected
+  charge target은 `INCONCLUSIVE_UNCONSTRUCTED`다.
 
 ## 순서 게이트와 다음 관문
 
-Phase 13A의 사전등록 support 조건은 실제 relational \(Q_{\rm phys}\) 구성을 요구했다. 이 gate가
-열리지 않았으므로 core 순서는 여기서 멈춘다.
+Phase 14A의 residual·boundary subgates는 닫혔지만 proper-bulk canonical bridge가 열리지 않았다.
+따라서 Phase 14B relational projector/cross-branch 계산은 시작하지 않는다.
 
-1. literal core를 다시 열려면 chiral clock을 포함한 4D \(N=1\) Lorentzian reduction에서
-   self-adjoint relational expansion projector, 공통 physical product/domain, nonzero residual 또는
-   boundary fermionic charge를 먼저 구성해야 한다.
+1. 다음 단계는 동일 compact chiral-clock parent에서 matter-coupled canonical variables와 reality
+   conditions, Hamiltonian/Lorentz/SUSY constraints, differentiable generator, graded closure와
+   proper-gauge quotient를 함께 유도하는 별도 preregistered canonical-bridge cycle이다.
 2. P12B full Green function/S-matrix는 별도 **spatial-interface auxiliary** 연구로만 수행할 수
-   있으며, Phase 13A gate 전에는 cosmological branch 주장에 대한 evidence weight가 0이다.
+   있으며, canonical charge gate 전에는 cosmological branch 주장에 대한 evidence weight가 0이다.
 3. 이산/anomaly-fixed wall과 higher-derivative bounce는 auxiliary response가 non-null이고 각각의
    독립 preregistration이 있을 때만 연다. spatial wall의 시간 analytic continuation은 증거로 쓰지 않는다.

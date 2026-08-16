@@ -1,0 +1,174 @@
+{
+  "schema_version": "ice-science-run-result/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase14a",
+  "result_id": "P14A-RESULT-2026-08-16T063543Z",
+  "artifact_timing": "POST_RUN_RECEIPT",
+  "registration": "PREREGISTERED",
+  "tier": "T2",
+  "first_run": {
+    "recorded_at_utc": "2026-08-16T06:35:43Z",
+    "timestamp_note": "The first run completed immediately before this receipt timestamp; its completion instant was not separately captured.",
+    "actor": "Codex",
+    "command": "./ice run phase14a_chiral_clock_charge_first",
+    "exit_code": 0,
+    "executable_commit": "6d6b0f7ada9fd8dfdf6475ca8e90f095d9b9e01c",
+    "executable_sha256": "1c92f295329d511e661f5d8b9d83b6f767e3c8aee45be86e98f6cc95c133bb2b",
+    "environment": {
+      "node": "24.13.0",
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "uv": "0.12.3"
+    },
+    "counts": {
+      "positive_exact_checks": 24,
+      "executable_mutants_rejected": 7,
+      "scope_guards_enforced": 6
+    }
+  },
+  "frozen_inputs": {
+    "contract": {
+      "path": "cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json",
+      "commit": "86194e16f9ddb585292ff6569bc415163e917c99"
+    },
+    "source_packet_and_prerun_ledger": {
+      "paths": [
+        "cpt_temporal_folded_susy/PHASE14A_SOURCE_PACKET.json",
+        "cpt_temporal_folded_susy/PHASE14A_CHARGE_LEDGER.json"
+      ],
+      "commit": "9dd53338b8904a385f3cf06a5686676a0fe3fe6c"
+    },
+    "prerun_ledger_preservation": "PHASE14A_CHARGE_LEDGER.json remains the immutable pre-run ledger. This file is the separate observed-result receipt."
+  },
+  "pre_run_static_audits": [
+    {
+      "actor": "Mencius sub-agent",
+      "mode": "READ_ONLY_NO_EXECUTION",
+      "result": "PASS_AFTER_BLOCKER_FIXES"
+    },
+    {
+      "actor": "Jason sub-agent plus independent child cross-check",
+      "mode": "READ_ONLY_NO_EXECUTION",
+      "result": "PASS_AFTER_BLOCKER_FIXES"
+    }
+  ],
+  "observed_gates": {
+    "G0_provenance_and_scope": "PASS",
+    "G1_bosonic_clock_patch": {
+      "status": "PASS",
+      "constraint": "C_B=-p_X^2+p_T^2+p_Y^2",
+      "clock_bracket": "{T,C_B}=2p_T",
+      "clock_domain": "both p_T>0 and p_T<0 orientations",
+      "goldstino_coefficient": "alpha=(p_T^2+p_Y^2)/(2 V_0^2 a^6)>0"
+    },
+    "G2_goldstino_residual": {
+      "status": "NO_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "matrix": "delta upsilon/delta epsilon=-(alpha/2) I_4",
+      "rank": 4,
+      "kernel_dimension": 0,
+      "scope": "bosonic spatially-flat FLRW, linear-fermion goldstino unitary-gauge residual only"
+    },
+    "G3_compact_spatial_boundary": {
+      "status": "NOT_APPLICABLE_IN_THIS_ROUTE",
+      "spatial_boundary_components": 0,
+      "scope": "the Regge-Teitelboim spatial-boundary integration locus is absent on smooth compact T^3"
+    },
+    "G4_bulk_constraint_quotient": {
+      "formal_ideal_control": "ZERO",
+      "standard_graded_matter_sugra_dirac_decomposition": "NOT_DERIVED",
+      "physical_inference": "INCONCLUSIVE_UNCONSTRUCTED"
+    },
+    "G5_charge_ledger_and_completeness": {
+      "observed_completeness": "UNPROVED_STANDARD_DIRAC_DECOMPOSITION",
+      "equivalence_class_deduplication": "DEFERRED_PENDING_CANONICAL_BRIDGE",
+      "independent_reduced_symmetry": "OUTSIDE_CANDIDATE_CLASS_NOT_SEARCHED"
+    },
+    "G6_branch_inference": "INCONCLUSIVE_OUT_OF_SCOPE"
+  },
+  "candidate_observations": [
+    {
+      "candidate_id": "P14A-Q-BULK",
+      "observed_status": "FORMAL_ZERO_CONDITIONAL_ON_UNDERIVED_STANDARD_DIRAC_DECOMPOSITION",
+      "physical_representative": "UNCONSTRUCTED",
+      "equivalence_class_status": "NOT_ASSIGNED_TEMPLATE_INCOMPLETE"
+    },
+    {
+      "candidate_id": "P14A-Q-RESIDUAL",
+      "observed_status": "NO_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "physical_representative": "NONE_IN_FROZEN_LINEARIZED_GAUGE",
+      "equivalence_class_status": "NOT_ASSIGNED_TEMPLATE_INCOMPLETE"
+    },
+    {
+      "candidate_id": "P14A-Q-BOUNDARY",
+      "observed_status": "NOT_APPLICABLE_IN_THIS_ROUTE",
+      "physical_representative": "NO_SPATIAL_INTEGRATION_LOCUS",
+      "equivalence_class_status": "NOT_ASSIGNED_TEMPLATE_INCOMPLETE"
+    },
+    {
+      "candidate_id": "P14A-Q-INDEPENDENT-REDUCED",
+      "observed_status": "OUTSIDE_CANDIDATE_CLASS",
+      "physical_representative": "NOT_SEARCHED",
+      "equivalence_class_status": "OUTSIDE_CONTRACT_TEMPLATE"
+    }
+  ],
+  "classifications": [
+    {
+      "target_claim_id": "P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "target_claim": "A nonzero local-SUSY-descended physical charge exists inside the selected Phase 14A template.",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "inference": "INCONCLUSIVE",
+      "qualification": "UNCONSTRUCTED",
+      "reason": "The residual and spatial-boundary channels close negatively, but the differentiable graded matter-SUGRA Dirac decomposition needed for conditional template completeness was not derived."
+    },
+    {
+      "target_claim_id": "P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "target_claim": "Opposite relational expanding and contracting branches are superpartners.",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "inference": "INCONCLUSIVE",
+      "qualification": "OUT_OF_SCOPE"
+    }
+  ],
+  "independent_replays": [
+    {
+      "actor": "Mencius sub-agent",
+      "recorded_at_utc": "2026-08-16T06:36:42Z",
+      "command": "./ice run phase14a_chiral_clock_charge_first",
+      "exit_code": 0,
+      "elapsed_seconds": 2.49,
+      "repository_head": "6d6b0f7ada9fd8dfdf6475ca8e90f095d9b9e01c",
+      "committed_git_blob": "e8326b3aa2306c26a4cc49ab52089ef40e347e63",
+      "executable_sha256": "1c92f295329d511e661f5d8b9d83b6f767e3c8aee45be86e98f6cc95c133bb2b",
+      "counts": "24 exact checks / 7 mutants / 6 guards",
+      "comparison": "EXACT_MATCH",
+      "worktree_changed": false
+    },
+    {
+      "actor": "Jason sub-agent",
+      "started_at_utc": "2026-08-16T06:43:03Z",
+      "completed_at_utc": "2026-08-16T06:43:06Z",
+      "command": "./ice run phase14a_chiral_clock_charge_first",
+      "exit_code": 0,
+      "repository_head": "6d6b0f7ada9fd8dfdf6475ca8e90f095d9b9e01c",
+      "executable_sha256": "1c92f295329d511e661f5d8b9d83b6f767e3c8aee45be86e98f6cc95c133bb2b",
+      "counts": "24 exact checks / 7 mutants / 6 guards",
+      "comparison": "EXACT_MATCH_AND_PRIMARY_SOURCE_SCOPE_PASS",
+      "scope_audit": "G2 remains a linearized goldstino-gauge residual result, G3 remains a compact-topology result, and G4 keeps the graded matter-SUGRA Dirac bridge false.",
+      "worktree_changed": false
+    }
+  ],
+  "novelty": "REPRODUCTION",
+  "fitting_risk": "NOT_APPLICABLE",
+  "reproduction": {
+    "result": "The committed first run and two independent replays returned exit 0 with 24 exact checks, 7 executable mutants rejected, 6 scope guards, and the same INCONCLUSIVE_UNCONSTRUCTED selected-template verdict.",
+    "comparison_policy": "Exact SymPy equality, determinant, rank, nullspace, topology incidence, and exact enum comparison; no floating tolerance or fit."
+  },
+  "bayes": "NOT_ESTIMABLE",
+  "lakatos": "NOT_APPLICABLE",
+  "scientific_verdict": "UNJUDGED",
+  "programme_appraisal": "UNAPPRAISED",
+  "kg_action": "NONE",
+  "ratification_request": "none",
+  "sequencing": "Do not open Phase 14B. A separately preregistered canonical-bridge derivation is required before the selected template can receive SUPPORTS or CONTRADICTS.",
+  "follow_up": "Preregister a compact matter-coupled N=1 canonical-bridge derivation retaining lapse and gravitino multipliers, reality conditions, Hamiltonian/Lorentz/SUSY constraints, differentiability, graded closure, and the proper-gauge quotient."
+}
