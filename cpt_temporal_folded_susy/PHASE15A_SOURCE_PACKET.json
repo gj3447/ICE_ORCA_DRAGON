@@ -1,0 +1,412 @@
+{
+  "schema_version": "ice-source-packet/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase15a",
+  "title": "Frozen primary-source packet for the Phase 15A off-shell homogeneous Bianchi-I to FLRW tangency gate",
+  "created_at_utc": "2026-08-16T07:10:13Z",
+  "actor": "Codex",
+  "preregistered_contract": {
+    "path": "cpt_temporal_folded_susy/PHASE15A_RESEARCH_CONTRACT.json",
+    "commit": "9b86eead62ac53ac8466d132b63fbf92f292e368",
+    "committed_at_utc": "2026-08-16T07:05:55Z",
+    "ordering": "The contract was committed and pushed before this source packet. This task creates no Phase 15A convention map, mode-compensator ledger, reduction certificate, science executable, run result, or replay receipt."
+  },
+  "retrieval_policy": {
+    "metadata_provider": "official arXiv Atom API and versioned arXiv abstract records",
+    "source_provider": "official versioned arXiv e-print endpoints",
+    "metadata_verified_at_utc": "2026-08-16T07:08:29Z",
+    "source_retrieval_window_utc": "2026-08-16T05:55:47Z/2026-08-16T07:07:00Z",
+    "canonical_hash": "SHA-256 over the exact identified main TeX bytes after official archive decompression; file size is also frozen",
+    "transport_hash": "SHA-256 over the downloaded official gzip or tar-gzip transport bytes; secondary because transport metadata can change without changing TeX content",
+    "source_archives_committed": false,
+    "copyright_policy": "The packet records locators, metadata, equation scopes, file identities, and hashes. It does not vendor the papers or reproduce extended source text."
+  },
+  "sources": [
+    {
+      "source_id": "HOHL_2020_V1",
+      "title": "Notes on the derivation of the general supergravity/matter/Yang-Mills Lagrangian for N=1 supersymmetry in d=4 dimensions using superspace techniques",
+      "authors": [
+        "Christian Hohl"
+      ],
+      "arxiv": "2005.09504v1",
+      "version": 1,
+      "published_at_utc": "2020-05-19T15:03:27Z",
+      "updated_at_utc": "2020-05-19T15:03:27Z",
+      "primary_category": "hep-th",
+      "abstract_url": "https://arxiv.org/abs/2005.09504v1",
+      "eprint_url": "https://export.arxiv.org/e-print/2005.09504v1",
+      "official_source_artifact": {
+        "archive_kind": "single gzip member",
+        "main_tex": "sugra_lagrangian.tex",
+        "main_tex_bytes": 482023,
+        "main_tex_sha256": "12722fb7ed5e7c52c2011a632cd5c57e218a843888ce9e15ada6c64a4d52fec6",
+        "transport_bytes": 94242,
+        "transport_sha256": "991ec8f192c78671a899e61a44ddc53232cc7c4ac019a19f5d54748a14743521"
+      },
+      "role": "The sole Phase 15A parent for the off-shell Kähler-superspace minimal 4D N=1 component action and Wess-Zumino-gauge-adapted local-supergravity transformations, with the old-minimal auxiliary-field content e, psi, M, Mbar, b_a and one chiral multiplet varphi, chi, F after specialization.",
+      "formalism_scope": [
+        "Kähler superspace implemented through U(1) superspace",
+        "minimal 4D N=1 supergravity component multiplet with M, Mbar, and b_a auxiliaries",
+        "second-order component formalism: the torsionful spin connection is composite omega(e,psi), not an independent canonical variable",
+        "off-shell component transformations before auxiliary elimination",
+        "the source uses natural supergravity units and its own dimensionless Kähler-potential convention; the M_P and K_phys/M_P^2 bridge belongs to PHASE15A_CONVENTION_MAP.json"
+      ],
+      "exact_section_and_equation_scopes": [
+        {
+          "section": "Notations and identities / Conventions and Pauli matrices",
+          "official_tex_lines": "191-458",
+          "use": "Metric, Levi-Civita, Pauli-matrix, Weyl-spinor, and conjugation conventions only."
+        },
+        {
+          "section": "U(1) superspace / Structure group / Lorentz group",
+          "official_tex_lines": "1004-1149",
+          "official_tex_labels": [
+            "eq:superspace_lorentz_generator",
+            "eq:superspace_general_element_lorentz_algebra",
+            "eq:superspace_vielbein_transformation_lorentz",
+            "eq:superspace_inverse_vielbein_transformation_lorentz",
+            "eq:superspace_gauge_transformation_vector_components"
+          ],
+          "use": "Exact vector, undotted-Weyl, and dotted-Weyl Lorentz-generator blocks, the real antisymmetric K^{ab}/2 normalization, and the upper/lower-index action used by the frozen local-Lorentz compensator."
+        },
+        {
+          "section": "Component field formalism / Definition of component fields",
+          "official_tex_lines": "4264-4705",
+          "official_tex_labels": [
+            "eq:component_fields_definition_sugra_vielbein",
+            "eq:component_fields_definition_sugra_gravitino",
+            "eq:component_fields_definition_sugra_auxiliary_1",
+            "eq:component_fields_definition_sugra_auxiliary_2",
+            "eq:component_fields_definition_matter_matter_multiplet_1",
+            "eq:component_fields_definition_matter_matter_multiplet_2",
+            "eq:component_fields_definition_matter_kahler_connection_component_1"
+          ],
+          "use": "Exact component definitions for e_m^a, psi_m, M, Mbar, b_a, varphi, chi, F, and the composite Kähler connection."
+        },
+        {
+          "section": "Component field formalism / Supergravity multiplet / composite spin connection",
+          "official_tex_lines": "4376-4458",
+          "official_tex_labels": [
+            "eq:component_fields_definition_sugra_spin_connection",
+            "eq:component_fields_definition_sugra_spin_connection_id",
+            "eq:component_fields_definition_sugra_id_1",
+            "eq:component_fields_definition_sugra_spin_connection_identity",
+            "eq:component_fields_definition_sugra_cd_gravitino_1",
+            "eq:component_fields_definition_sugra_cd_gravitino_2"
+          ],
+          "use": "The torsion equation and explicit omega(e,psi) identity. This freezes the Phase 15A second-order formalism and the first-jet dependence of the gravitino sector."
+        },
+        {
+          "section": "Component field formalism / Supergravity transformations",
+          "official_tex_lines": "4790-4884",
+          "official_tex_labels": [
+            "eq:component_fields_sugra_transf_graviton",
+            "eq:component_fields_sugra_transf_gravitino_1",
+            "eq:component_fields_sugra_transf_gravitino_2",
+            "eq:component_fields_sugra_transf_aux_m_1",
+            "eq:component_fields_sugra_transf_aux_m_2",
+            "eq:component_fields_sugra_transf_aux_m_3"
+          ],
+          "unlabeled_equation_scope": "The matter scalar, chiralino, F, and conjugate transformation equations in official-TeX lines 4851-4884 are frozen by line span plus the main-TeX hash.",
+          "use": "The actual source-derived local-SUSY vector field for the Stage-A J^1 tangency calculation. The source states that these are local supersymmetry transformations adapted to Wess-Zumino gauge and fixes xi^a|=0 with barred spinor parameter the complex conjugate."
+        },
+        {
+          "section": "Component field formalism / Matter D-term derivative definitions",
+          "official_tex_lines": "4776-4788",
+          "official_tex_labels": [
+            "eq:component_fields_matter_dterm_nabla_chi",
+            "eq:component_fields_matter_dterm_nabla_chib"
+          ],
+          "use": "Exact omega, Kähler-connection, cubic-fermion, and sign definitions of nabla_m chi and nabla_m chibar, which occur in the frozen F and Fbar transformations. These labels are executable provenance, not merely an action convention."
+        },
+        {
+          "section": "Component field formalism / Invariant actions / Summary",
+          "official_tex_lines": "5384-5432",
+          "official_tex_labels": [
+            "eq:component_fields_action_all",
+            "eq:component_fields_action_aux_1",
+            "eq:component_fields_action_aux_2",
+            "eq:component_fields_action_aux_3",
+            "eq:component_fields_action_aux_4",
+            "eq:component_fields_action_aux_5",
+            "eq:component_fields_action_aux_6",
+            "eq:component_fields_action_scalar"
+          ],
+          "use": "Off-shell component-action and auxiliary-field anchor for the Bianchi-I bosonic-body reduction and for retaining every source term that contributes to a discarded-mode transformation."
+        }
+      ],
+      "phase15a_specialization": {
+        "matter": "one neutral chiral multiplet, with local variable Z=(T+iY)/sqrt(2)",
+        "kahler": "K_phys=Z Zbar and calK=K_phys/M_P^2 after the separately frozen convention map",
+        "superpotential": "W is identically zero before reduction",
+        "vectors_or_gauging": "none; every Yang-Mills field and gauging term is absent by target specialization",
+        "auxiliaries": "M, Mbar, b_a, F, and Fbar remain off shell throughout Stage A",
+        "derivative_domain": "homogeneous first jets of the retained fields and epsilon/dot-epsilon are independent; no equation of motion is used"
+      },
+      "source_caveats": [
+        "The source is not a canonical or minisuperspace derivation and does not prove the Phase 15A Bianchi-I-to-FLRW tangency claim.",
+        "The official TeX definitions of nabla_m xi and its conjugate immediately after the gravitino transformations print an n index in the Kähler-connection terms while the left-hand side carries m. No silent repair is allowed; any m-for-n emendation must be explicitly frozen in the convention map and tested as a source caveat.",
+        "The unnumbered conjugate-chiralino transformation in the frozen line span prints an undotted xi with a dotted free index in its Kähler-Christoffel term and prints chibar with an unbarred species label in its Kähler-weight term. PHASE15A_CONVENTION_MAP.json must packetize both glyph mismatches explicitly. The one-field flat Kähler specialization makes the Christoffel term identically zero, but it does not license silently inventing any nonzero coefficient; the conjugate species label must be fixed only by the frozen conjugation map.",
+        "The matter scalar, chiralino, and F component transformations are unnumbered in the official TeX; their exact identity is frozen by the official line span and main-TeX hash.",
+        "The action is invariant only on shell after the auxiliary fields are integrated out, as stated immediately after the auxiliary definitions. Stage A therefore may not substitute their equations of motion."
+      ],
+      "forbidden_inferences": [
+        "Hohl already derived the compact T^3 Bianchi-I or FLRW target model",
+        "the old-minimal-to-local convention map is automatic",
+        "the target W=0, one-chiral, no-vector specialization is a theorem of the source",
+        "off-shell transformation closure implies a canonical Dirac bridge, physical charge, quantum theory, or branch exchange"
+      ]
+    },
+    {
+      "source_id": "CHENG_DEATH_MONIZ_1994_V2",
+      "title": "Quantization of a Locally Supersymmetric Friedmann Model with Supermatter",
+      "authors": [
+        "A. D. Y. Cheng",
+        "P. D. D'Eath",
+        "P. R. L. V. Moniz"
+      ],
+      "arxiv": "gr-qc/9406048v2",
+      "version": 2,
+      "published_at_utc": "1994-06-28T14:28:18Z",
+      "updated_at_utc": "1994-07-13T09:06:23Z",
+      "primary_category": "gr-qc",
+      "journal_reference": "Int. J. Mod. Phys. D 4 (1995) 189-206",
+      "doi": "10.1142/S0218271895000132",
+      "abstract_url": "https://arxiv.org/abs/gr-qc/9406048v2",
+      "eprint_url": "https://export.arxiv.org/e-print/gr-qc/9406048v2",
+      "official_source_artifact": {
+        "archive_kind": "single gzip member",
+        "main_tex": "9406048.tex",
+        "main_tex_bytes": 69505,
+        "main_tex_sha256": "45ba7f7b13844ed59bcf6ee735bed381159151ab36ad743b85254bca15932155",
+        "transport_bytes": 20548,
+        "transport_sha256": "cee25146a08b1322104178cbe14e22965cd9b01d4cf62ba4e936afa0760eb90a"
+      },
+      "role": "Time-gauge canonical and convention cross-check only. It is not the Stage-A off-shell transformation parent.",
+      "formalism_scope": [
+        "canonical N=1 supergravity with supermatter after fermionic second-class constraints are handled by Dirac brackets",
+        "time gauge with residual spatial rotations",
+        "the paper's explicit Friedmann reduction is k=+1 on S^3",
+        "the explicit reduced quantum model is not the compact k=0 T^3 target"
+      ],
+      "exact_section_and_equation_scopes": [
+        {
+          "section": "II. Canonical Formulation of N=1 Supergravity with Supermatter",
+          "equations": [
+            "(2.4)",
+            "(2.6)-(2.13)",
+            "(2.15)-(2.21)",
+            "(2.22)"
+          ],
+          "use": "Equation (2.4) is the general Hamiltonian constraint decomposition; (2.6)-(2.13) shift/rescale variables and expose chiralino second-class constraints; (2.15)-(2.21) impose time gauge and give fermionic Dirac brackets; (2.22) is the general conjugate supersymmetry-constraint anchor. These are later canonical controls, not Stage-A transformation equations."
+        },
+        {
+          "section": "III. Ansätze for the Fields and Dimensional Reduction",
+          "equations": [
+            "(3.1)-(3.7)"
+          ],
+          "use": "The explicit tetrad and gravitino ansätze and reduced Lorentz constraint are k=+1. The source defines the unit-S^3 volume sigma^2=2 pi^2 after (3.1), and (3.2) carries the S^3 group structure. Equation (3.3) is not an independent proof of the Phase 15A off-shell tangency criterion."
+        },
+        {
+          "section": "Reduced supersymmetry constraints and quantum treatment",
+          "equations": [
+            "(5.1)-(5.14)"
+          ],
+          "use": "Reduced fermion rescalings, Dirac brackets, and S/Sbar formulas are recorded only as a sign/convention warning. They retain the k=+1 S^3 normalization and cannot be converted to k=0 by deleting the curvature-looking term."
+        }
+      ],
+      "source_caveats": [
+        "The general canonical formulas do not supply Hohl's off-shell auxiliary-field transformation system.",
+        "The text says preservation of the explicit gravitino ansatz can be justified by earlier references; this paper does not furnish the complete source-derived Bianchi-I discarded-mode census required by Phase 15A.",
+        "The paper uses sigma both in its S^3 volume normalization and reduced expressions. Setting sigma or sigma^2 to zero would erase normalization as well as curvature information and is forbidden.",
+        "The explicit paper proceeds through a k=+1 Friedmann model and quantum constraints; no physical inner product or target T^3 tangency theorem is imported into Stage A."
+      ],
+      "forbidden_inferences": [
+        "derive k=0 by deleting the sigma^2 a^2 gravitino term",
+        "treat equations (5.11)-(5.12) as the target W=0 flat-FLRW supercharges",
+        "claim that the general canonical anchor proves the off-shell auxiliary or J^1 tangency calculation",
+        "use the paper to complete Phase 14A or to infer Q_phys or branch exchange"
+      ]
+    },
+    {
+      "source_id": "CAPOVILLA_GUVEN_1994_V1",
+      "title": "Super-Minisuperspace and New Variables",
+      "authors": [
+        "Riccardo Capovilla",
+        "Jemal Guven"
+      ],
+      "arxiv": "gr-qc/9402025v1",
+      "version": 1,
+      "published_at_utc": "1994-02-11T23:46:35Z",
+      "updated_at_utc": "1994-02-11T23:46:35Z",
+      "primary_category": "gr-qc",
+      "journal_reference": "Class. Quantum Grav. 11 (1994) 1961-1970",
+      "doi": "10.1088/0264-9381/11/8/004",
+      "abstract_url": "https://arxiv.org/abs/gr-qc/9402025v1",
+      "eprint_url": "https://export.arxiv.org/e-print/gr-qc/9402025v1",
+      "official_source_artifact": {
+        "archive_kind": "single gzip member",
+        "main_tex": "9402025.tex",
+        "main_tex_bytes": 36553,
+        "main_tex_sha256": "42cdcdf96065bf64ab98a6fca384c814d66c6083338ba4825061f473d384d3b6",
+        "transport_bytes": 12345,
+        "transport_sha256": "fd7944929cbe249478092472a8e834c21dd67ef5ab61b533f939107b893d6b11"
+      },
+      "role": "Pure self-dual Bianchi type-A reduction and classical supersymmetry-subalgebra closure control only. It is not a matter, old-minimal-component, or FLRW transformation parent.",
+      "formalism_scope": [
+        "Jacobson's complex chiral/self-dual canonical N=1 supergravity in Ashtekar variables",
+        "spatially homogeneous Bianchi models",
+        "classical Poisson algebra of the homogeneous supersymmetry constraints",
+        "formal quantization of type-A models without a supplied physical inner product"
+      ],
+      "exact_section_and_equation_scopes": [
+        {
+          "section": "2. Jacobson's Hamiltonian N=1 Supergravity",
+          "equations": [
+            "(1)-(11)"
+          ],
+          "use": "Canonical self-dual variables and constraints; equations (8)-(10) display the supersymmetry brackets and (11) gives the connection reality condition. Equation (10) is the mixed-bracket anchor within this pure self-dual formalism."
+        },
+        {
+          "section": "3. Bianchi formalism",
+          "equations": [
+            "(12)-(14)"
+          ],
+          "use": "Homogeneity kinematics and the Bianchi structure-constant decomposition. The text following (14) defines type A by V_a=0 and identifies Bianchi I by M^{ab}=0."
+        },
+        {
+          "section": "4. Super-Minisuperspace",
+          "equations": [
+            "(15)-(23)"
+          ],
+          "use": "Reduced brackets and constraints. Equation (21) contains extra mixed-bracket terms proportional to contractions C_ba^b; the following text states that they vanish for type A and that the supersymmetry constraints fail to close for type B. Equations (22)-(23) give the further-reduced type-A supersymmetry constraints."
+        }
+      ],
+      "source_caveats": [
+        "Pure is a field-content description: the variables are gravitational self-dual variables and the gravitino; the introduction leaves matter inclusion for future work.",
+        "M^{ab} in this paper is the Bianchi structure-constant matrix, not Hohl's old-minimal complex auxiliary scalar M.",
+        "Bianchi I is a type-A homogeneous model here, but the paper does not impose isotropic FLRW, add a chiral multiplet, or derive the Phase 15A discarded-mode transformations.",
+        "The closure statement is the classical homogeneous supersymmetry-subalgebra result in the stated self-dual formalism, not a full old-minimal matter constraint-algebra theorem."
+      ],
+      "forbidden_inferences": [
+        "identify self-dual Bianchi-I closure with the target old-minimal chiral-matter FLRW tangency result",
+        "import equations (22)-(23) as target supercharges",
+        "claim a matter-coupled, auxiliary-complete, quantum, or physical-inner-product result",
+        "use type-A closure as evidence for Q_phys or relational branch exchange"
+      ]
+    },
+    {
+      "source_id": "MARTINEZ_PEREZ_RAMIREZ_2025_V1",
+      "title": "On FLRW reductions of N=1 supergravity",
+      "authors": [
+        "Nephtalí Eliceo Martínez-Pérez",
+        "Cupatitzio Ramírez Romero"
+      ],
+      "arxiv": "2510.20072v1",
+      "version": 1,
+      "published_at_utc": "2025-10-22T23:10:29Z",
+      "updated_at_utc": "2025-10-22T23:10:29Z",
+      "primary_category": "hep-th",
+      "secondary_categories": [
+        "gr-qc"
+      ],
+      "journal_reference": "Eur. Phys. J. C 85 (2025) 1126",
+      "doi": "10.1140/epjc/s10052-025-14874-8",
+      "abstract_url": "https://arxiv.org/abs/2510.20072v1",
+      "eprint_url": "https://export.arxiv.org/e-print/2510.20072v1",
+      "official_source_artifact": {
+        "archive_kind": "tar-gzip",
+        "main_tex": "arxiv.tex",
+        "main_tex_selection": "official 00README.json marks arxiv.tex as the sole toplevel source",
+        "main_tex_bytes": 68681,
+        "main_tex_sha256": "5f6d4195b55427163955677ac5fa87bd33b912d344b14408981146ce4a380146",
+        "transport_bytes": 31091,
+        "transport_sha256": "8a7a851a7f24862640aee49f8eebe1a56cb2d93f9de1eb673e01462121204756"
+      },
+      "role": "Matter-free Wess-Zumino-gauge FLRW ansatz-preservation and transformation-rule scope control only. It is not the Phase 15A parent and supplies no chiral-matter transformation system.",
+      "formalism_scope": [
+        "classical matter-free 4D N=1 supergravity in Wess-Zumino gauge",
+        "quadratic Killing equations for g_mn and the gravitino bilinear",
+        "FLRW ansatz and transformation rules, including an arbitrary-time-gauge extension",
+        "no derived reduced action, Hamiltonian, canonical constraint algebra, physical Hilbert space, or physical charge"
+      ],
+      "exact_section_and_equation_scopes": [
+        {
+          "section": "2.3. Quadratic Killing equations",
+          "equations": [
+            "(24a)-(24b)"
+          ],
+          "use": "The metric and gravitino-bilinear isometry conditions used to motivate the paper's relaxed FLRW notion."
+        },
+        {
+          "section": "3. FLRW supergravity",
+          "equations": [
+            "(29)",
+            "(57)",
+            "(62a)-(62c)"
+          ],
+          "use": "Equation (29) is the one-spinor vector-spinor ansatz. Equation (57), preservation of the vanishing spin-3/2 component, is explicitly imposed as an extra condition. Equations (62a)-(62c) give the conformal-FLRW multiplet transformations."
+        },
+        {
+          "section": "4. Generalization to arbitrary time gauge",
+          "equations": [
+            "(68)-(69)",
+            "(84)-(87)",
+            "(92)-(93)"
+          ],
+          "use": "The spatially projected extension retains N and psi_0 independently and gives modified transformations. Equations (92)-(93) receive only a one-dimensional Lorentz-constraint interpretation; they are not a derived four-dimensional canonical algebra."
+        },
+        {
+          "section": "5. Conclusions",
+          "official_tex_lines": "723-738",
+          "use": "The authors place matter, spontaneous supersymmetry breaking, scalar potential, and a more automatic gauge-independent reduction in future work, and state that the reduced-multiplet condition is enforced by hand."
+        }
+      ],
+      "source_caveats": [
+        "Equation (57) is an imposed preservation condition, not an output of an off-shell matter-coupled Bianchi-I tangency census.",
+        "The paper's conformal-time construction says consistency induces N=a; equations (62a)-(62b) themselves preserve N/a and do not uniquely select the value of that constant ratio without the additional source choice.",
+        "The arbitrary-time-gauge construction is obtained by spatial projection and deviations proportional to gauge fields; it does not derive the target compact-T^3 off-shell action or a canonical generator.",
+        "The paper explicitly has no chiral matter. Its nonzero background spin-1/2 gravitino is not a matter chiralino or the bosonic-FLRW goldstino background used in Phase 14A."
+      ],
+      "manifest_exclusions": {
+        "chiral_matter_present": false,
+        "chiral_clock_present": false,
+        "reduced_action_derived": false,
+        "canonical_constraint_algebra_derived": false,
+        "quantized": false,
+        "physical_inner_product_defined": false,
+        "physical_supercharge_computed": false,
+        "compact_T3_analyzed": false
+      },
+      "forbidden_inferences": [
+        "use this source as the Phase 15A matter parent",
+        "treat its imposed spin-3/2 condition as a proof of the preregistered Bianchi-I-to-FLRW tangency criterion",
+        "claim equations (62a)-(62b) uniquely derive N=a",
+        "import its one-dimensional Lorentz interpretation as a canonical Dirac bridge, Q_phys, or branch map"
+      ]
+    }
+  ],
+  "distinct_source_guard": {
+    "cross_source_single_model_derivation": false,
+    "hohl_role": "off-shell minimal/Kähler-superspace component action and local-SUSY transformation parent",
+    "cheng_death_moniz_role": "time-gauge canonical and sign/convention cross-check only",
+    "capovilla_guven_role": "pure self-dual Bianchi type-A reduction/closure control only",
+    "martinez_perez_ramirez_role": "matter-free FLRW ansatz-preservation scope control only",
+    "allowed_combination": "The sources may be compared only through separately labeled convention, topology, truncation-risk, and scope controls. Every Phase 15A target equation must be locally derived from the Hohl parent under the separately frozen convention and mode ledgers.",
+    "disallowed_statement": "No source, and no stack of these sources, already derives the compact T^3 homogeneous Bianchi-I old-minimal-field-content model with one neutral chiral multiplet, its exact FLRW tangency quotient, a canonical Dirac bridge, a physical charge, or a relational branch map."
+  },
+  "phase15a_scope_guards": [
+    "The source packet freezes literature inputs only; it is not evidence that the target tangency claim SUPPORTS or CONTRADICTS.",
+    "The target transformation parameter is homogeneous epsilon(t), with epsilon and dot epsilon treated according to the later frozen J^1 ledger. Nothing here establishes arbitrary periodic epsilon(x).",
+    "The compact T^3 topology, globally periodic compensator class, FLRW defining functions, transverse projector, coefficient ring, and cokernel map are preregistered local construction requirements, not results quoted from these papers.",
+    "The one-neutral-chiral, K_phys=Z Zbar, W identically zero, no-vector specialization is a Phase 15A model choice and requires an explicit convention map before use.",
+    "No k=0 expression may be obtained by deleting a curvature-looking term or setting a fiducial-volume symbol to zero in a k=+1 formula.",
+    "Off-shell transformation tangency is necessary but not sufficient for Dirac-Bergmann stabilization, graded canonical closure, differentiability, a nonzero Q_phys, quantization, or branch exchange.",
+    "Phase 14A remains INCONCLUSIVE_UNCONSTRUCTED and Phase 14B remains closed regardless of this packet."
+  ],
+  "known_source_caveat_policy": {
+    "silent_emendation_allowed": false,
+    "required_handling": "Any source typo, index mismatch, normalization conversion, or convention bridge used downstream must be enumerated in PHASE15A_CONVENTION_MAP.json before the executable exists and must receive an exact regression or semantic-mutant check.",
+    "priority": "The exact official-TeX bytes and labels frozen above take precedence over paraphrases in reports."
+  },
+  "packet_status": "FROZEN_PRE_EXECUTABLE_PRIMARY_SOURCE_ARTIFACT"
+}

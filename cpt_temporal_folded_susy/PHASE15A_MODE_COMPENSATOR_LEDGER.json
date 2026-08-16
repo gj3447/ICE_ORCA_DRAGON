@@ -1,0 +1,734 @@
+{
+  "schema_version": "ice-mode-compensator-ledger/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase15a",
+  "artifact_id": "P15A-MODE-COMPENSATOR-LEDGER-PRE-RESULT",
+  "artifact_timing": "PRE_RESULT_PRE_EXECUTABLE",
+  "created_at_utc": "2026-08-16T07:37:28Z",
+  "actor": "Codex sub-agent",
+  "contract": {
+    "path": "cpt_temporal_folded_susy/PHASE15A_RESEARCH_CONTRACT.json",
+    "commit": "9b86eead62ac53ac8466d132b63fbf92f292e368",
+    "target_claim_id": "P15A_OFF_SHELL_HOMOGENEOUS_FLRW_TANGENCY"
+  },
+  "preresult_dependencies": {
+    "source_packet": "cpt_temporal_folded_susy/PHASE15A_SOURCE_PACKET.json",
+    "convention_map": "cpt_temporal_folded_susy/PHASE15A_CONVENTION_MAP.json",
+    "commit_policy": "The source packet, convention map, and this ledger must be audited and committed together in the contract's second pre-result commit before any science executable exists.",
+    "source_parent": "HOHL_2020_V1 only",
+    "cross_source_equation_stacking": false
+  },
+  "scope_and_timing_guards": {
+    "purpose": "Freeze the complete homogeneous field/jet census, the candidate cubic-T3 FLRW locus, its physical normal projector, and the admissible kinematic compensator module before a tangency residual is constructed.",
+    "science_result_observed": false,
+    "tangency_residual_constructed_or_evaluated": false,
+    "compensator_system_solved": false,
+    "science_executable_created_or_run": false,
+    "reduction_certificate_created": false,
+    "run_result_created": false,
+    "replay_receipt_created": false,
+    "canonical_constraints_used": false,
+    "equations_of_motion_used": false,
+    "claim_ceiling": "This artifact defines a source-scoped off-shell homogeneous tangency test only. It supplies no SUPPORTS, CONTRADICTS, canonical closure, physical charge, quantum, or branch inference."
+  },
+  "index_and_component_ranges": {
+    "coordinate_indices": "m,n in {0,1,2,3}, with x^0=t",
+    "spatial_coordinate_indices": "i,j,k in {1,2,3}",
+    "lorentz_indices": "a,b in {0,1,2,3}",
+    "spatial_lorentz_indices": "r,s in {1,2,3}",
+    "undotted_indices": "alpha in {1,2}",
+    "dotted_indices": "dot_alpha in {dot_1,dot_2}",
+    "complexification_policy": "Unbarred and barred Weyl components are separate exact generators carrying the frozen conjugation involution. Complex-rank counts below always state the barred conjugate sector separately."
+  },
+  "topology_and_homogeneity": {
+    "spatial_manifold": "T^3=R^3/Lambda_cubic with one fixed oriented cubic fiducial lattice",
+    "spin_structure": "periodic",
+    "fiducial_metric": "delta_ij in the fixed periodic coordinate chart",
+    "fiducial_volume": "V_0>0",
+    "homogeneity_rule": "Every component field, retained parameter, and compensator coefficient depends on t only; all spatial component derivatives partial_i vanish kinematically, not by an equation of motion.",
+    "local_FLRW_meaning": "The candidate locus is isotropic relative to the fixed cubic-T3 lattice. No continuous coordinate rotation, shear, or rescaling of that lattice is treated as an infinitesimal gauge transformation.",
+    "large_diffeomorphisms": "GL(3,Z) lattice automorphisms are discrete and provide no infinitesimal compensator column."
+  },
+  "ambient_field_census": {
+    "even_base_fields": {
+      "tetrad_components": [
+        "e_0^0",
+        "e_0^1",
+        "e_0^2",
+        "e_0^3",
+        "e_1^0",
+        "e_1^1",
+        "e_1^2",
+        "e_1^3",
+        "e_2^0",
+        "e_2^1",
+        "e_2^2",
+        "e_2^3",
+        "e_3^0",
+        "e_3^1",
+        "e_3^2",
+        "e_3^3"
+      ],
+      "old_minimal_auxiliaries": [
+        "M",
+        "M_bar",
+        "b_0",
+        "b_1",
+        "b_2",
+        "b_3"
+      ],
+      "chiral_bosons": [
+        "Z",
+        "Z_bar",
+        "F",
+        "F_bar"
+      ],
+      "count": 26
+    },
+    "odd_base_fields": {
+      "gravitino_unbarred": [
+        "Psi_0^1",
+        "Psi_0^2",
+        "Psi_1^1",
+        "Psi_1^2",
+        "Psi_2^1",
+        "Psi_2^2",
+        "Psi_3^1",
+        "Psi_3^2"
+      ],
+      "gravitino_barred": [
+        "Psi_bar_0^dot_1",
+        "Psi_bar_0^dot_2",
+        "Psi_bar_1^dot_1",
+        "Psi_bar_1^dot_2",
+        "Psi_bar_2^dot_1",
+        "Psi_bar_2^dot_2",
+        "Psi_bar_3^dot_1",
+        "Psi_bar_3^dot_2"
+      ],
+      "barred_gravitino_index_bridge": "These Psi_bar_m^dot_alpha entries, and only these entries, are the raised exterior generators defined by Psi_bar_m^dot_alpha=epsilon^{dot_alpha dot_beta}Psi_bar_{m dot_beta} in PHASE15A_CONVENTION_MAP.json. The direct source/local lower-dotted fields are reconstructed by epsilon lowering and are not additional generators.",
+      "chiralino_unbarred": [
+        "chi_1",
+        "chi_2"
+      ],
+      "chiralino_barred": [
+        "chi_bar_dot_1",
+        "chi_bar_dot_2"
+      ],
+      "count": 20
+    },
+    "odd_local_susy_parameters": [
+      "epsilon_1",
+      "epsilon_2",
+      "epsilon_bar_dot_1",
+      "epsilon_bar_dot_2"
+    ],
+    "field_count_before_parameters": "(26 even | 20 odd) in the full component chart",
+    "spin_connection": "omega_m^{ab}(e,Psi) is composite and is not an ambient field or jet family."
+  },
+  "ambient_J1_jet_census": {
+    "jet_space": "The full first homogeneous jet of every ambient field plus epsilon and epsilon_bar; no first jet is removed by an equation of motion.",
+    "even_first_jets": {
+      "tetrad": [
+        "dot_e_0^0",
+        "dot_e_0^1",
+        "dot_e_0^2",
+        "dot_e_0^3",
+        "dot_e_1^0",
+        "dot_e_1^1",
+        "dot_e_1^2",
+        "dot_e_1^3",
+        "dot_e_2^0",
+        "dot_e_2^1",
+        "dot_e_2^2",
+        "dot_e_2^3",
+        "dot_e_3^0",
+        "dot_e_3^1",
+        "dot_e_3^2",
+        "dot_e_3^3"
+      ],
+      "auxiliary_and_matter": [
+        "dot_M",
+        "dot_M_bar",
+        "dot_b_0",
+        "dot_b_1",
+        "dot_b_2",
+        "dot_b_3",
+        "dot_Z",
+        "dot_Z_bar",
+        "dot_F",
+        "dot_F_bar"
+      ],
+      "present_but_not_used_by_selected_Hohl_transformations": [
+        "dot_M",
+        "dot_M_bar",
+        "dot_b_0",
+        "dot_b_1",
+        "dot_b_2",
+        "dot_b_3",
+        "dot_F",
+        "dot_F_bar"
+      ],
+      "count": 26
+    },
+    "odd_field_first_jets": [
+      "dot_Psi_0^1",
+      "dot_Psi_0^2",
+      "dot_Psi_1^1",
+      "dot_Psi_1^2",
+      "dot_Psi_2^1",
+      "dot_Psi_2^2",
+      "dot_Psi_3^1",
+      "dot_Psi_3^2",
+      "dot_Psi_bar_0^dot_1",
+      "dot_Psi_bar_0^dot_2",
+      "dot_Psi_bar_1^dot_1",
+      "dot_Psi_bar_1^dot_2",
+      "dot_Psi_bar_2^dot_1",
+      "dot_Psi_bar_2^dot_2",
+      "dot_Psi_bar_3^dot_1",
+      "dot_Psi_bar_3^dot_2",
+      "dot_chi_1",
+      "dot_chi_2",
+      "dot_chi_bar_dot_1",
+      "dot_chi_bar_dot_2"
+    ],
+    "barred_gravitino_jet_bridge": "Every listed dot_Psi_bar_m^dot_alpha is epsilon^{dot_alpha dot_beta} dot_Psi_bar_{m dot_beta}; it is the time jet of the raised ledger generator, not an independent duplication of the source lower-dotted jet.",
+    "odd_parameter_first_jets": [
+      "dot_epsilon_1",
+      "dot_epsilon_2",
+      "dot_epsilon_bar_dot_1",
+      "dot_epsilon_bar_dot_2"
+    ],
+    "second_and_higher_jets": "FORBIDDEN_IN_STAGE_A",
+    "independence": "All listed base fields and first jets are independent ambient J1 coordinates before the candidate-locus pullback. In particular dot_epsilon is not set proportional to epsilon."
+  },
+  "candidate_full_tetrad_chart": {
+    "no_tetrad_gauge_fixing": true,
+    "definition": "Every candidate tetrad is represented locally as e_m^a=Lambda^a_b e_tilde_m^b with Lambda in the proper orthochronous Lorentz group retained as six gauge/frame coordinates.",
+    "reference_tetrad": {
+      "e_tilde_0^0": "N",
+      "e_tilde_0^r": "a N^r",
+      "e_tilde_i^0": "0",
+      "e_tilde_i^r": "a delta_i^r"
+    },
+    "lorentz_frame": {
+      "constraints": "Lambda^T eta Lambda=eta, det(Lambda)=1, and Lambda^0_0 is future oriented",
+      "retained_dimension": 6,
+      "normal_and_spatial_legs": "n^a=Lambda^a_0 and u_r^a=Lambda^a_r",
+      "first_jet": "dot_Lambda=Lambda Omega with Omega_ab=-Omega_ba; all six Omega_ab are retained"
+    },
+    "derived_fields": {
+      "e_0^a": "N n^a+a N^r u_r^a",
+      "e_i^a": "a delta_i^r u_r^a",
+      "h_ij": "e_i^a e_j^b eta_ab=a^2 delta_ij",
+      "line_element": "ds^2=-N^2 dt^2+a^2 delta_ij(dx^i+N^i dt)(dx^j+N^j dt)"
+    },
+    "patch": [
+      "M_P>0",
+      "V_0>0",
+      "N>0",
+      "a>0",
+      "det(e_m^a)=N a^3 is nonzero"
+    ],
+    "retained_tetrad_modes": [
+      "N",
+      "N^1",
+      "N^2",
+      "N^3",
+      "a",
+      "six homogeneous Lorentz-frame coordinates Lambda modulo Lambda^T eta Lambda=eta"
+    ],
+    "discarded_tetrad_modes": [
+      "five physical traceless spatial-metric modes h_ij^TF relative to the fixed cubic delta_ij"
+    ],
+    "count_check": "16 tetrad components = 5 ADM/scale retained + 6 Lorentz-frame retained + 5 physical shear/off-diagonal modes discarded",
+    "adm_double_count_guard": "N, N^i, a, and Lambda are candidate-chart coordinates replacing e_m^a on the pullback; they are never added as independent generators alongside all sixteen pulled-back tetrad components."
+  },
+  "candidate_mode_census": {
+    "tetrad": {
+      "retained": [
+        "N",
+        "N^1",
+        "N^2",
+        "N^3",
+        "a",
+        "Lambda or an equivalent six-coordinate local Lorentz frame"
+      ],
+      "discarded": [
+        "h_12",
+        "h_13",
+        "h_23",
+        "h_11-h_22",
+        "h_22-h_33"
+      ]
+    },
+    "old_minimal_auxiliaries": {
+      "original_variable_choice": "Use Hohl's original b_a. The action-diagonalized shifted b_tilde_a is not a Stage-A field and may not be substituted.",
+      "retained": [
+        "M",
+        "M_bar",
+        "b_perp=-n^a b_a"
+      ],
+      "discarded": [
+        "b_i=e_i^a b_a for i=1,2,3"
+      ],
+      "variation_guard": "The normal variation is X(b_i)=X(e_i^a)b_a+e_i^a X(b_a); dropping the first term is a semantic mutant."
+    },
+    "chiral_bosons": {
+      "retained": [
+        "Z",
+        "Z_bar",
+        "F",
+        "F_bar"
+      ],
+      "discarded": []
+    },
+    "chiralino": {
+      "retained": [
+        "chi_1",
+        "chi_2",
+        "chi_bar_dot_1",
+        "chi_bar_dot_2"
+      ],
+      "discarded": [],
+      "guard": "No chi=0, spinor alignment, goldstino gauge, or matter-free ansatz is imposed. Any such restriction would be a new defining function and is outside this frozen ledger."
+    },
+    "gravitino": {
+      "retained": [
+        "Psi_0^alpha for alpha=1,2",
+        "Psi_bar_0^dot_alpha for dot_alpha=dot_1,dot_2",
+        "the complete spatial gamma-trace Weyl spinor lambda",
+        "its barred conjugate lambda_bar"
+      ],
+      "discarded": [
+        "the spatial gamma-traceless spin-3/2 vector-spinor rho_i=Psi_j(P_3/2)_i^j in the frozen upper-index row convention, rank four complex",
+        "its barred conjugate rho_bar_i, rank four complex"
+      ],
+      "psi_0_guard": "Psi_0 and Psi_bar_0 are independent retained fields and are not identified with lambda, lambda_bar, lapse, or shift.",
+      "source_scope_guard": "This retained/discarded split is the preregistered candidate definition. Cheng-D'Eath-Moniz (3.4)-(3.7) and Martinez-Perez-Ramirez (29)/(57) do not prove it and supply no transformation coefficient."
+    },
+    "base_field_rank_check": {
+      "retained_even": 18,
+      "discarded_even": 8,
+      "retained_odd_fields": "12 complex component generators counting barred fields separately",
+      "discarded_odd_fields": "4 complex spin-3/2 components plus 4 barred conjugate components",
+      "explanation": "The even counts are 5 tetrad/ADM + 6 independent Lorentz-frame coordinates + 7 auxiliary/matter coordinates (M,M_bar,b_perp,Z,Z_bar,F,F_bar), hence 18 retained of 26 and 8 physical normals. The Lorentz constraints define the six-dimensional Lambda chart and are not subtracted a second time. The odd count excludes epsilon, which is a parameter rather than a field."
+    }
+  },
+  "spatial_gravitino_projector": {
+    "induced_spatial_clifford_matrices": {
+      "definition": "(Gamma_i)_alpha{}^beta := e_i^a n^b (sigma_a bar_sigma_b)_alpha{}^beta, where n^a n_a=-1 and e_i^a n_a=0. Psi_i^alpha and lambda^alpha are upper-index row spinors, so Gamma_i acts from the right. Its barred conjugate is defined by the frozen Hohl conjugation, equivalently e_i^a n^b(bar_sigma_b sigma_a) with the corresponding dotted mixed index placement, right action, and conjugate order reversal. This is a definition in the registered local construction, not a source claim.",
+      "defining_identities": [
+        "Gamma_i Gamma_j+Gamma_j Gamma_i=2 h_ij I_2",
+        "Gamma^i=h^{ij} Gamma_j",
+        "Gamma^i Gamma_i=3 I_2"
+      ],
+      "frame_regression_only": "For Lambda=I, n^a=delta^a_0, and e_i^a=a delta_i^a, the exact definition gives Gamma_i=-a sigma^i with the frozen lower-index rules. The minus sign and the Clifford identities must be regressed exactly; the projector would be common-sign invariant, but no sign is left unfrozen.",
+      "source_claim": false
+    },
+    "unbarred": {
+      "row_spinor_convention": "delta_K Psi_i^alpha=Psi_i^beta L_beta{}^alpha and delta_K lambda^alpha=lambda^beta L_beta{}^alpha; no column-spinor shorthand is permitted.",
+      "gamma_trace": "lambda^beta=(1/3) Psi_i^alpha (Gamma^i)_alpha{}^beta",
+      "projector": "((P_3/2)_i{}^j)_alpha{}^beta=delta_i^j delta_alpha^beta-(1/3)(Gamma^j Gamma_i)_alpha{}^beta; this order is fixed by right action.",
+      "discarded_mode": "rho_i^beta=Psi_j^alpha((P_3/2)_i{}^j)_alpha{}^beta",
+      "candidate_reconstruction": "Psi_i^beta=lambda^alpha(Gamma_i)_alpha{}^beta",
+      "identities_to_regress_before_execution": [
+        "P_3/2^2=P_3/2",
+        "(P_3/2)_i{}^j Gamma^i=0 in the displayed right-acting order",
+        "rank_C(P_3/2)=4"
+      ]
+    },
+    "barred": {
+      "raised_row_basis": "Psi_bar_i^dot_alpha=epsilon^{dot_alpha dot_beta}Psi_bar_{i dot_beta} is the actual ledger field and transforms from the right: delta_K Psi_bar_i^dot_alpha=Psi_bar_i^dot_beta(L_bar)_dot_beta{}^dot_alpha. L_bar is obtained only through the convention-map epsilon-raising bridge.",
+      "gamma_matrix": "(Gamma_bar_i)_dot_alpha{}^dot_beta is the exact frozen conjugate of (Gamma_i)_alpha{}^beta in the raised row basis, equivalently the registered e_i^a n^b(bar_sigma_b sigma_a) mixed matrix with conjugate order reversal.",
+      "gamma_trace": "lambda_bar^dot_beta=(1/3)Psi_bar_i^dot_alpha(Gamma_bar^i)_dot_alpha{}^dot_beta",
+      "projector": "((P_bar_3/2)_i{}^j)_dot_alpha{}^dot_beta=delta_i^j delta_dot_alpha^dot_beta-(1/3)(Gamma_bar^j Gamma_bar_i)_dot_alpha{}^dot_beta",
+      "discarded_mode": "rho_bar_i^dot_beta=Psi_bar_j^dot_alpha((P_bar_3/2)_i{}^j)_dot_alpha{}^dot_beta",
+      "candidate_reconstruction": "Psi_bar_i^dot_beta=lambda_bar^dot_alpha(Gamma_bar_i)_dot_alpha{}^dot_beta",
+      "lorentz_covariance": "delta_K Gamma_bar_i=[Gamma_bar_i,L_bar], delta_K P_bar_3/2=[P_bar_3/2,L_bar], and delta_K rho_bar=rho_bar L_bar.",
+      "rank": 4
+    },
+    "variation_rule": "For any vector field X, X(rho_i)=X(Psi_j)(P_3/2)_i{}^j+Psi_j X((P_3/2)_i{}^j) in the frozen right-acting order. The second term contains the tetrad/normal variation and must not be omitted.",
+    "first_prolongation": "D_t rho_i=dot_Psi_j(P_3/2)_i{}^j+Psi_j D_t((P_3/2)_i{}^j), and similarly for rho_bar in the exact conjugate right-acting order; these vanish on the candidate J1 locus."
+  },
+  "candidate_pullback_and_J1_prolongation": {
+    "base_pullback": [
+      "e_0^a -> N n^a+a N^r u_r^a",
+      "e_i^a -> a delta_i^r u_r^a",
+      "b_a -> b_perp n_a",
+      "Psi_i -> lambda Gamma_i in upper-index row notation",
+      "Psi_bar_i -> lambda_bar Gamma_bar_i in the exact conjugate row notation",
+      "Psi_0, Psi_bar_0, chi, chi_bar, M, M_bar, Z, Z_bar, F, F_bar remain arbitrary"
+    ],
+    "first_jet_pullback": [
+      "dot_e is the exact total derivative of the full retained N,N^i,a,Lambda chart with dot_Lambda=Lambda Omega",
+      "dot_b_a -> dot_b_perp n_a+b_perp dot_n_a",
+      "dot_Psi_i -> dot_lambda Gamma_i+lambda dot_Gamma_i in right-acting order",
+      "dot_Psi_bar_i -> dot_lambda_bar Gamma_bar_i+lambda_bar dot_Gamma_bar_i in the exact conjugate order",
+      "dot_Psi_0, dot_Psi_bar_0, dot_chi, dot_chi_bar and every retained even first jet remain arbitrary",
+      "dot_epsilon and dot_epsilon_bar remain arbitrary and independent of epsilon and epsilon_bar"
+    ],
+    "discarded_base_defining_functions": [
+      "Q_TF(h)_ij=0, where Q_TF(s)_ij=s_ij-(delta^{kl}s_kl/3)delta_ij",
+      "b_i=e_i^a b_a=0",
+      "rho_i=Psi_j(P_3/2)_i{}^j=0",
+      "rho_bar_i=Psi_bar_j(P_bar_3/2)_i{}^j=0 in the exact conjugate right-acting order"
+    ],
+    "prolonged_defining_functions": [
+      "D_t Q_TF(h)=Q_TF(dot_h)=0",
+      "D_t b_i=dot_e_i^a b_a+e_i^a dot_b_a=0",
+      "D_t rho=0",
+      "D_t rho_bar=0"
+    ],
+    "arbitrary_retained_J1_data": true,
+    "no_second_jet": true,
+    "bosonic_K1_diagnostic_guard": {
+      "full_body": "The off-shell homogeneous bosonic body retains the algebraic M,M_bar,b_perp,F,F_bar sector and any surviving b-dependent term in the original auxiliary basis; no auxiliary equation of motion or diagonalizing redefinition is used.",
+      "kinetic_subblock_only": "C_B=-p_X^2+p_T^2+p_Y^2 with X=sqrt(6) M_P ln(a), up to the preregistered positive densitization, is checked only for the Einstein-plus-(T,Y)-kinetic Legendre subblock of the formal isotropic pullback.",
+      "exact_coordinate_bridge": "Use dX=sqrt(6) M_P da/a and p_X=a p_a/(sqrt(6) M_P) on a>0. The residual coefficient ring need not and may not be enlarged by ln(a) after the fact.",
+      "required_certificate_split": "The later reduction certificate must report C_off_shell=C_EH+chiral_kinetic+C_auxiliary and must not identify C_B with the full auxiliary-complete expression."
+    }
+  },
+  "defining_function_and_constant_rank_plan": {
+    "even_normal_block": {
+      "spatial_metric": {
+        "projector": "Q_TF on symmetric 3x3 tensors relative to the fixed delta_ij",
+        "rank": 5,
+        "independent_coordinate_rows": [
+          "h_12",
+          "h_13",
+          "h_23",
+          "h_11-h_22",
+          "h_22-h_33"
+        ]
+      },
+      "auxiliary_vector": {
+        "functions": "b_i=e_i^a b_a",
+        "rank": 3
+      },
+      "total_rank": 8
+    },
+    "odd_normal_block": {
+      "unbarred_spin_3_2_rank_complex": 4,
+      "barred_conjugate_rank_complex": 4,
+      "redundant_vector_spinor_rows": "The six displayed rho_i^alpha entries are represented by the rank-four projector image rather than falsely counted as six independent functions."
+    },
+    "full_tetrad_chart_guard": "No six Lorentz gauge/frame directions are counted as physical normals. If an implementation time-gauges or symmetrizes the triad, those six gauge-fixing rows must be labeled separately and exactly paired with the local-Lorentz compensator image.",
+    "constant_rank_checks_required_before_first_run": [
+      "rank(d Q_TF(h))=5 on N>0,a>0",
+      "rank(d(e_i^a b_a))=3 jointly with the metric block on the candidate chart",
+      "P_3/2 and P_bar_3/2 are idempotent with complex rank four",
+      "the combined physical normal super-rank is (8 even | 4 unbarred odd + 4 barred odd)",
+      "on base-field variations ker(P_perp)=T S for the candidate base locus S; its first prolongation J^1(S) is separately defined by f=0 and D_t f=0"
+    ],
+    "status": "PLAN_FROZEN_NOT_EXECUTED"
+  },
+  "coefficient_superalgebra": {
+    "exact_constant_field": "Q(i,sqrt(2),sqrt(3)); adjoining sqrt(3) before execution also represents the preregistered sqrt(6)=sqrt(2)sqrt(3) diagnostic normalization exactly",
+    "even_candidate_generators": [
+      "M_P",
+      "V_0",
+      "N",
+      "N^1",
+      "N^2",
+      "N^3",
+      "a",
+      "Lambda^a_b modulo Lambda^T eta Lambda=eta and det(Lambda)=1",
+      "Omega_01",
+      "Omega_02",
+      "Omega_03",
+      "Omega_12",
+      "Omega_23",
+      "Omega_31",
+      "M",
+      "M_bar",
+      "b_perp",
+      "Z",
+      "Z_bar",
+      "F",
+      "F_bar",
+      "dot_N",
+      "dot_N^1",
+      "dot_N^2",
+      "dot_N^3",
+      "dot_a",
+      "dot_M",
+      "dot_M_bar",
+      "dot_b_perp",
+      "dot_Z",
+      "dot_Z_bar",
+      "dot_F",
+      "dot_F_bar"
+    ],
+    "localization": {
+      "allowed_denominators": [
+        "nonzero integer/rational constants",
+        "powers of M_P",
+        "powers of V_0",
+        "powers of N",
+        "powers of a"
+      ],
+      "forbidden_denominators": [
+        "Z or Z_bar",
+        "F or F_bar",
+        "M or M_bar",
+        "b_perp",
+        "any field or parameter first jet",
+        "any odd generator or nilpotent polynomial",
+        "a determinant/minor selected only after a residual is observed"
+      ],
+      "regularity_domain": "M_P>0,V_0>0,N>0,a>0 with the proper-orthochronous Lorentz chart; no post-result shrinking of the patch is allowed"
+    },
+    "reality_involution": [
+      "i^*=-i",
+      "Z^*=Z_bar",
+      "F^*=F_bar",
+      "M^*=M_bar",
+      "N,a,N^i,b_perp,M_P,V_0 are real",
+      "Lambda and Omega are real Lorentz-vector data",
+      "the frozen Weyl conjugation maps every unbarred odd generator to its barred partner"
+    ],
+    "odd_generator_order_ambient": [
+      "Psi_0^1",
+      "Psi_0^2",
+      "Psi_1^1",
+      "Psi_1^2",
+      "Psi_2^1",
+      "Psi_2^2",
+      "Psi_3^1",
+      "Psi_3^2",
+      "Psi_bar_0^dot_1",
+      "Psi_bar_0^dot_2",
+      "Psi_bar_1^dot_1",
+      "Psi_bar_1^dot_2",
+      "Psi_bar_2^dot_1",
+      "Psi_bar_2^dot_2",
+      "Psi_bar_3^dot_1",
+      "Psi_bar_3^dot_2",
+      "chi_1",
+      "chi_2",
+      "chi_bar_dot_1",
+      "chi_bar_dot_2",
+      "epsilon_1",
+      "epsilon_2",
+      "epsilon_bar_dot_1",
+      "epsilon_bar_dot_2",
+      "dot_Psi_0^1",
+      "dot_Psi_0^2",
+      "dot_Psi_1^1",
+      "dot_Psi_1^2",
+      "dot_Psi_2^1",
+      "dot_Psi_2^2",
+      "dot_Psi_3^1",
+      "dot_Psi_3^2",
+      "dot_Psi_bar_0^dot_1",
+      "dot_Psi_bar_0^dot_2",
+      "dot_Psi_bar_1^dot_1",
+      "dot_Psi_bar_1^dot_2",
+      "dot_Psi_bar_2^dot_1",
+      "dot_Psi_bar_2^dot_2",
+      "dot_Psi_bar_3^dot_1",
+      "dot_Psi_bar_3^dot_2",
+      "dot_chi_1",
+      "dot_chi_2",
+      "dot_chi_bar_dot_1",
+      "dot_chi_bar_dot_2",
+      "dot_epsilon_1",
+      "dot_epsilon_2",
+      "dot_epsilon_bar_dot_1",
+      "dot_epsilon_bar_dot_2"
+    ],
+    "odd_generator_order_after_candidate_pullback": [
+      "Psi_0^1",
+      "Psi_0^2",
+      "lambda_1",
+      "lambda_2",
+      "chi_1",
+      "chi_2",
+      "epsilon_1",
+      "epsilon_2",
+      "Psi_bar_0^dot_1",
+      "Psi_bar_0^dot_2",
+      "lambda_bar_dot_1",
+      "lambda_bar_dot_2",
+      "chi_bar_dot_1",
+      "chi_bar_dot_2",
+      "epsilon_bar_dot_1",
+      "epsilon_bar_dot_2",
+      "dot_Psi_0^1",
+      "dot_Psi_0^2",
+      "dot_lambda_1",
+      "dot_lambda_2",
+      "dot_chi_1",
+      "dot_chi_2",
+      "dot_epsilon_1",
+      "dot_epsilon_2",
+      "dot_Psi_bar_0^dot_1",
+      "dot_Psi_bar_0^dot_2",
+      "dot_lambda_bar_dot_1",
+      "dot_lambda_bar_dot_2",
+      "dot_chi_bar_dot_1",
+      "dot_chi_bar_dot_2",
+      "dot_epsilon_bar_dot_1",
+      "dot_epsilon_bar_dot_2"
+    ],
+    "susy_parameter_linear_sector": {
+      "dynamic_superalgebra": "R_dyn is the displayed localized exact superalgebra after removing epsilon,epsilon_bar,dot_epsilon,dot_epsilon_bar from its generator set. It retains all even and odd field/jet generators, the exact exterior relations, and the frozen reality involution.",
+      "parameter_space": "E_susy=span_Q(i,sqrt(2),sqrt(3)){epsilon_1,epsilon_2,epsilon_bar_dot_1,epsilon_bar_dot_2,dot_epsilon_1,dot_epsilon_2,dot_epsilon_bar_dot_1,dot_epsilon_bar_dot_2}; every basis generator is odd and has SUSY-parameter degree one.",
+      "grading": "The full pulled-back algebra is graded by SUSY-parameter degree. Stage A constructs and compares only its degree-one component R_dyn tensor E_susy; all terms of parameter degree zero or at least two are outside the residual and compensator problem.",
+      "scalar_ring_for_linear_modules": "R_dyn,even, the parameter-degree-zero even subring of R_dyn, is the scalar ring for C^[1], N^[1], the normal map, image, and cokernel. Multiplication by a SUSY-parameter generator is never admitted as a scalar operation.",
+      "parity_rule": "A degree-one even compensator coefficient lies in R_dyn,odd tensor E_susy. Degree-one normal coefficients use the parity inherited from their normal slot: even slots have R_dyn,odd tensor E_susy coefficients and odd slots have R_dyn,even tensor E_susy coefficients.",
+      "closure_guard": "No unrestricted free module over the full parameter-containing exterior algebra is used; doing so would generate degree-three and higher terms and changes the preregistered problem."
+    },
+    "exterior_rules": "Every odd generator anticommutes, squares to zero, and is reduced to the displayed total order with the exact Koszul sign. Barred generators remain algebraically represented while carrying the frozen conjugation involution.",
+    "commuting_fermion_ideal_allowed": false
+  },
+  "admissible_compensator_module": {
+    "topology_restriction": "Only globally defined transformations preserving the fixed homogeneous cubic-T3 chart are admitted.",
+    "basis": {
+      "time_diffeomorphism": [
+        "tau(t) partial_t"
+      ],
+      "spatial_diffeomorphisms": [
+        "c^1(t) partial_1",
+        "c^2(t) partial_2",
+        "c^3(t) partial_3"
+      ],
+      "local_lorentz": [
+        "K_01(t)",
+        "K_02(t)",
+        "K_03(t)",
+        "K_12(t)",
+        "K_23(t)",
+        "K_31(t)"
+      ]
+    },
+    "parameter_parity": "Every diffeomorphism and Lorentz compensator has total Grassmann parity zero.",
+    "source_parameter_degree": "A compensator paired with one local-SUSY variation belongs to C^[1]: it vanishes when epsilon=epsilon_bar=dot_epsilon=dot_epsilon_bar=0 and is exactly degree one in E_susy. Its R_dyn coefficient has odd parity, so the full compensator coefficient is even.",
+    "coefficient_class": "C^[1] is an R_dyn,even-module of regular local parameter-linear coefficients in R_dyn,odd tensor E_susy. Coefficients may use retained J1 data and may not depend on a discarded mode, a forbidden denominator, a nonlocal integral, an equation of motion, a canonical constraint, or any parameter-degree-zero or degree-at-least-two term.",
+    "compensator_jet_order_in_physical_normal_map": "Zero. For homogeneous spatial base normals, the Lie and Lorentz actions use tau,c^i,K_ab but no time derivative of a compensator. If an exact source transcription produces a normal term requiring dot_tau, dot_c, or dot_K, this ledger is incomplete and K2 is INCONCLUSIVE; no new column may be added after observing a residual.",
+    "kinematic_action_definitions": {
+      "coordinate_diffeomorphism_on_covectors": "delta_xi V_m=xi^n partial_n V_m+(partial_m xi^n)V_n; apply to e_m^a and to the coordinate vector index of Psi_m, with spinor-frame action kept in the separate Lorentz column",
+      "coordinate_diffeomorphism_on_scalars": "delta_xi Phi=xi^n partial_n Phi for M,M_bar,b_a,Z,Z_bar,F,F_bar,chi,chi_bar",
+      "local_lorentz_on_tetrad": "With L=(1/2)K^{de}G_de from the frozen Hohl convention, delta_K e_m^a=e_m^b L_b^a and K^{de}=-K^{ed} is real and even.",
+      "local_lorentz_on_b": "Because b_a has a lower Lorentz-vector index, delta_K b_a=-L_a^b b_b under the same K^{de}; no separately normalized b transformation is allowed.",
+      "local_lorentz_on_Weyl_fields": "Use the exact G_de=diag(M_de,S_de,-Sdag_de) blocks and Hohl upper/lower-index rule frozen in PHASE15A_CONVENTION_MAP.json. The relative vector/spinor normalization is fixed and may not be absorbed, rephased, or changed.",
+      "local_lorentz_covariance_of_projector": "With upper-index row spinors, the same frozen common Lorentz representation gives delta_K Gamma_i=[Gamma_i,L_spin], delta_K P_3/2=[P_3/2,L_spin], and therefore delta_K rho=rho L_spin, with the exact barred conjugate right action."
+    },
+    "forbidden_columns": [
+      "xi^i=A^i_j(t)x^j for any continuous shear, scale, or rotation matrix A",
+      "an infinitesimal GL(3,Z) lattice transformation",
+      "an arbitrary lapse redefinition not induced by tau(t) through the frozen diffeomorphism law",
+      "a nonperiodic or spatially inhomogeneous vector field",
+      "a compensator supported only in rho, rho_bar, h_ij^TF, or b_i",
+      "an extra local-SUSY parameter",
+      "a field redefinition using an auxiliary equation of motion",
+      "a canonical-constraint, Lorentz-constraint, Hamiltonian-constraint, or supersymmetry-constraint transformation",
+      "a temporal endpoint, collar, CPT map, branch reflection, pseudo-supersymmetry, or worldline supercharge"
+    ],
+    "exact_normal_columns_on_prolonged_locus": {
+      "time_diffeomorphism": "P_perp L_{tau partial_t}=(tau Q_TF(dot h),tau dot b_i,tau dot rho,tau dot rho_bar)=0 on J^1(S)",
+      "spatial_translations": "P_perp L_{c^k(t) partial_k}=0 because partial_i c^k=0, all spatial jets vanish, and every physical defining function carries only spatial coordinate indices",
+      "local_lorentz": "P_perp delta_K=(0,0,rho L_spin,rho_bar L_bar_spin)=0 on S; h_ij and b_i=e_i^a b_a are exact common-representation Lorentz contractions",
+      "compensator_derivative_guard": "dot_tau and dot_c occur only in retained time-index/lapse/shift components; dot_K occurs only after prolonging a covariant zero and multiplies f or D_t f. No compensator first jet supplies a physical-normal column."
+    },
+    "status": "MODULE_FROZEN_EXACT_NORMAL_IMAGE_ZERO_ON_PROLONGED_LOCUS"
+  },
+  "physical_normal_map_and_cokernel": {
+    "normal_module": {
+      "even": "N_even=Sym^2_0(T^*T^3) direct_sum T^*T^3_b, with ranks 5+3 over the even coefficient ring",
+      "odd": "N_odd=Im(P_3/2) direct_sum Im(P_bar_3/2), with complex ranks 4+4",
+      "no_tetrad_gauge_normals": true
+    },
+    "P_perp_on_a_general_variation_X": [
+      "metric block: Q_TF(X(h_ij)), where X(h_ij)=eta_ab[X(e_i^a)e_j^b+e_i^a X(e_j^b)]",
+      "auxiliary block: X(b_i)=X(e_i^a)b_a+e_i^a X(b_a)",
+      "unbarred gravitino block: X(rho_i)=X(Psi_j)(P_3/2)_i{}^j+Psi_j X((P_3/2)_i{}^j) in right-acting order",
+      "barred gravitino block: the exact conjugate expression"
+    ],
+    "parameter_linear_normal_module": "N^[1] is the SUSY-parameter-degree-one sector of the displayed normal supermodule, with slot parity and R_dyn,even scalar action fixed by coefficient_superalgebra.susy_parameter_linear_sector.",
+    "compensator_domain": "C^[1] is the R_dyn,even-module generated by tau,c^1,c^2,c^3,K_01,K_02,K_03,K_12,K_23,K_31, whose coefficients lie exactly in R_dyn,odd tensor E_susy and obey the frozen locality, regularity, and common Hohl Lorentz-representation restrictions above.",
+    "normal_map": "A^[1]:C^[1] -> N^[1] is defined exactly by A^[1](c)=P_perp(X_comp[c]) restricted to J^1(S). Every frozen globally periodic homogeneous diffeomorphism and common-representation local-Lorentz column vanishes identically there, so A^[1]=0.",
+    "exact_image_and_cokernel": "Im(A^[1])={0}; therefore coker(A^[1])=N^[1]/Im(A^[1]) is canonically isomorphic to N^[1] as an R_dyn,even-module. This is a pre-result kinematic statement about the frozen parameter-linear gauge module, not an evaluation of the SUSY residual.",
+    "susy_normal_vector": "r^[1]=P_perp(X_SUSY) restricted to the same prolonged candidate J1 locus, after the byte-frozen Hohl transformations and jointly frozen convention map are transcribed and projected to SUSY-parameter degree one.",
+    "obstruction": "[r^[1]]=r^[1]+Im(A^[1]) in coker(A^[1]):=N^[1]/Im(A^[1])",
+    "exact_zero_condition": "Because A^[1]=0, [r^[1]]=0 if and only if r^[1]=0 identically for arbitrary retained J1 data and arbitrary degree-one epsilon,epsilon_bar,dot_epsilon,dot_epsilon_bar coefficients on the full declared patch.",
+    "exact_nonzero_condition": "Because A^[1]=0, [r^[1]]!=0 if the complete frozen parameter-linear residual has a nonzero exact exterior normal form, or an exact in-domain witness proves that r^[1] is not identically zero after the complete mode/source census.",
+    "post_result_extension_forbidden": "No generator, localization denominator, discarded-mode dependence, constraint, or compensator jet may be added after r is inspected.",
+    "current_status": "A_LINEAR_EXACTLY_ZERO_COKERNEL_IDENTIFIED_R_LINEAR_NOT_CONSTRUCTED_OR_EVALUATED"
+  },
+  "explicit_forbidden_source_imports": [
+    {
+      "source_id": "CHENG_DEATH_MONIZ_1994_V2",
+      "equations": "(3.4)-(3.7)",
+      "rule": "FORBIDDEN",
+      "reason": "These are reduced k=+1 S^3 time-gauge/Lorentz-constraint structures. They are not off-shell Hohl transformations, defining equations of the target T3 locus, admissible compensators, or Stage-A constraints."
+    },
+    {
+      "source_id": "CHENG_DEATH_MONIZ_1994_V2",
+      "equations": "(5.1)-(5.14)",
+      "rule": "FORBIDDEN",
+      "reason": "No reduced supercharge, Dirac bracket, curvature deletion, or S3 normalization is imported into Stage A."
+    },
+    {
+      "source_id": "MARTINEZ_PEREZ_RAMIREZ_2025_V1",
+      "equations": "(29), (57), (62a)-(62c), (84)-(87), (92)-(93)",
+      "rule": "SCOPE_CONTROL_ONLY",
+      "reason": "The imposed matter-free spin-3/2 condition, R3 Killing vectors, one-dimensional Lorentz interpretation, and any dot_epsilon proportional to epsilon relation are not imported as target equations."
+    },
+    {
+      "source_id": "CAPOVILLA_GUVEN_1994_V1",
+      "equations": "(15)-(23)",
+      "rule": "SCOPE_CONTROL_ONLY",
+      "reason": "Pure self-dual Bianchi closure supplies no old-minimal chiral-matter mode equation or compensator column."
+    }
+  ],
+  "semantic_mutants_to_reject": [
+    "time-gauge the tetrad before retaining its six Lorentz-frame directions",
+    "count six tetrad gauge-fixing rows as physical anisotropy normals",
+    "delete one off-diagonal or traceless spatial-metric mode",
+    "omit Psi_0 or identify it with the spatial gamma trace",
+    "set the chiralino to zero or discard a chiralino component",
+    "drop the Psi_j X((P_3/2)_i{}^j) contribution to X(rho_i)",
+    "drop X(e_i^a)b_a from X(b_i)",
+    "replace original Hohl b_a by b_tilde_a",
+    "use commuting symbols for any fermion or epsilon generator",
+    "set dot_epsilon proportional to epsilon",
+    "use a continuous GL(3,R) x-dependent vector field on T3",
+    "use a discrete GL(3,Z) map as an infinitesimal compensator",
+    "import Cheng-D'Eath-Moniz (3.4)-(3.7) as constraints",
+    "use an auxiliary equation of motion or any canonical constraint",
+    "add a denominator or compensator column after inspecting the residual"
+  ],
+  "source_map_uncertainty_policy": {
+    "resolved_typography_packets": [
+      "P15A-U1-HOHL-NABLA-EPSILON-FREE-INDEX",
+      "P15A-U2-HOHL-CONJUGATE-CHI-TYPOGRAPHY"
+    ],
+    "registered_local_definitions_not_claimed_from_a_source": [
+      "the full-tetrad Lorentz-frame chart",
+      "the fixed-cubic-T3 FLRW defining functions",
+      "the covariant spatial gamma-trace/spin-3/2 decomposition",
+      "the geometric b_perp/b_i split",
+      "the physical normal module and coker(A) construction"
+    ],
+    "blocking_source_map_uncertainties": [],
+    "pre_execution_implementation_obligation": "The induced Gamma_i matrix realization must be generated from, and regressed against, the jointly frozen sigma and exact Hohl Lorentz-generator conventions before executable code is accepted. This is an implementation proof obligation, not permission to choose a new source sign. If the defining Clifford/projector identities, exact common Lorentz action, or conjugation fail, K0 is INVALID; no source equation may be imported to repair them after a residual is seen.",
+    "guessing_policy": "No missing source sign, coefficient, field action, or index map is filled by Cheng-D'Eath-Moniz, Capovilla-Guven, or Martinez-Perez-Ramirez. An unresolved map yields INCONCLUSIVE/UNCONSTRUCTED rather than an invented term."
+  },
+  "readiness": {
+    "mode_census_status": "FROZEN_PRE_RESULT",
+    "compensator_module_status": "FROZEN_PRE_RESULT_EXACT_NORMAL_IMAGE_ZERO",
+    "cokernel_status": "EXACTLY_IDENTIFIED_AS_PHYSICAL_NORMAL_MODULE_RESIDUAL_NOT_EVALUATED",
+    "science_result": "NONE",
+    "ready_for_science_executable": false,
+    "readiness_reason": "The contract requires a joint read-only adversarial audit and one shared pre-result commit of the source packet, convention map, and this ledger before a separate executable commit.",
+    "next_allowed_action": "joint read-only audit of the three pre-result artifacts",
+    "forbidden_until_joint_commit": [
+      "cpt_temporal_folded_susy/phase15a_offshell_flrw_tangency.py",
+      "cpt_temporal_folded_susy/PHASE15A_REDUCTION_CERTIFICATE.json",
+      "cpt_temporal_folded_susy/PHASE15A_RUN_RESULT.json",
+      "cpt_temporal_folded_susy/PHASE15A_REPLAY_RECEIPT.json"
+    ]
+  }
+}

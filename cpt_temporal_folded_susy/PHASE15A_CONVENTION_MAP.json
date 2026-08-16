@@ -1,0 +1,639 @@
+{
+  "schema_version": "ice-convention-map/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase15a",
+  "artifact_id": "P15A-CONVENTION-MAP-PRE-RESULT",
+  "artifact_timing": "PRE_RESULT_PRE_EXECUTABLE",
+  "created_at_utc": "2026-08-16T07:12:26Z",
+  "actor": "Codex sub-agent",
+  "contract": {
+    "path": "cpt_temporal_folded_susy/PHASE15A_RESEARCH_CONTRACT.json",
+    "commit": "9b86eead62ac53ac8466d132b63fbf92f292e368",
+    "target_claim_id": "P15A_OFF_SHELL_HOMOGENEOUS_FLRW_TANGENCY"
+  },
+  "scope": {
+    "purpose": "Freeze the source-to-local notation, normalization, spinor, Grassmann, composite-connection, and first-jet conventions needed to transcribe the selected Hohl component transformations. This artifact contains no tangency calculation.",
+    "science_result_observed": false,
+    "science_executable_created_or_run": false,
+    "reduction_certificate_created": false,
+    "canonical_or_physical_adjoint_claim": false,
+    "forbidden_inferences": [
+      "a canonical Dirac bracket or first-class closure",
+      "a physical Hilbert-space adjoint",
+      "a nonzero physical supercharge",
+      "arbitrary inhomogeneous epsilon(x)",
+      "relational branch exchange"
+    ]
+  },
+  "source_basis": {
+    "source_packet": {
+      "path": "cpt_temporal_folded_susy/PHASE15A_SOURCE_PACKET.json",
+      "schema_version": "ice-source-packet/v1",
+      "packet_status": "FROZEN_PRE_EXECUTABLE_PRIMARY_SOURCE_ARTIFACT",
+      "hash_cross_check": "The Hohl version, main-TeX filename, and SHA-256 below exactly match the source packet."
+    },
+    "source_id": "HOHL_2020_V1",
+    "arxiv": "2005.09504v1",
+    "url": "https://arxiv.org/abs/2005.09504v1",
+    "official_eprint_url": "https://export.arxiv.org/e-print/2005.09504v1",
+    "main_tex": "sugra_lagrangian.tex",
+    "main_tex_sha256": "12722fb7ed5e7c52c2011a632cd5c57e218a843888ce9e15ada6c64a4d52fec6",
+    "source_role": "The only Phase 15A parent for off-shell component fields and local-supersymmetry transformations.",
+    "source_role_guard": {
+      "HOHL_2020_V1": "parent component definitions and transformations",
+      "CHENG_DEATH_MONIZ_1994_V2": "time-gauge convention cross-check only; no imported k=+1 transformation",
+      "CAPOVILLA_GUVEN_1994_V1": "pure self-dual Bianchi control only; no matter transformation",
+      "MARTINEZ_PEREZ_RAMIREZ_2025_V1": "matter-free FLRW scope control only",
+      "cross_source_equation_stacking": false
+    },
+    "anchor_policy": "Equation labels refer to the frozen main-TeX hash. Unlabeled matter-transformation displays are anchored by subsection and TeX line neighborhood; no coefficient may be replaced from another source.",
+    "anchors": {
+      "metric_and_epsilon": [
+        "eq:identities_conventions_id_1",
+        "eq:identities_conventions_id_2",
+        "eq:identities_conventions_id_6",
+        "eq:identities_conventions_id_7"
+      ],
+      "pauli_matrices": [
+        "eq:identities_pauli_id_1",
+        "eq:identities_pauli_id_7",
+        "eq:identities_pauli_id_8"
+      ],
+      "weyl_conjugation": [
+        "eq:identities_spinors_id_1",
+        "eq:identities_spinors_id_2",
+        "eq:identities_spinors_id_3"
+      ],
+      "local_lorentz_representation": [
+        "eq:superspace_lorentz_generator",
+        "eq:superspace_general_element_lorentz_algebra",
+        "eq:superspace_vielbein_transformation_lorentz",
+        "eq:superspace_inverse_vielbein_transformation_lorentz",
+        "eq:superspace_gauge_transformation_vector_components"
+      ],
+      "component_fields": [
+        "eq:component_fields_definition_sugra_vielbein",
+        "eq:component_fields_definition_sugra_gravitino",
+        "eq:component_fields_definition_sugra_auxiliary_1",
+        "eq:component_fields_definition_sugra_auxiliary_2",
+        "eq:component_fields_definition_matter_matter_multiplet_1",
+        "eq:component_fields_definition_matter_matter_multiplet_2"
+      ],
+      "composite_connection": [
+        "eq:component_fields_definition_sugra_spin_connection",
+        "eq:component_fields_definition_sugra_spin_connection_id",
+        "eq:component_fields_definition_sugra_id_1",
+        "eq:component_fields_definition_sugra_spin_connection_identity",
+        "eq:component_fields_definition_sugra_cd_gravitino_1",
+        "eq:component_fields_definition_sugra_cd_gravitino_2"
+      ],
+      "kahler_connection": "eq:component_fields_definition_matter_kahler_connection_component_1",
+      "matter_covariant_derivatives_used_by_F_transformations": [
+        "eq:component_fields_matter_dterm_nabla_chi",
+        "eq:component_fields_matter_dterm_nabla_chib"
+      ],
+      "component_action_normalization": "eq:component_fields_action_all",
+      "component_transformations": [
+        "eq:component_fields_sugra_transf_graviton",
+        "eq:component_fields_sugra_transf_gravitino_1",
+        "eq:component_fields_sugra_transf_gravitino_2",
+        "eq:component_fields_sugra_transf_aux_m_1",
+        "eq:component_fields_sugra_transf_aux_m_2",
+        "eq:component_fields_sugra_transf_aux_m_3",
+        "sec:component_fields_sugra_transformations / Matter multiplet, frozen TeX lines 4851-4884"
+      ]
+    }
+  },
+  "index_conventions": {
+    "spacetime_coordinate_indices": "m,n,p,q in {0,1,2,3}; x^0=t",
+    "spatial_coordinate_indices": "i,j,k in {1,2,3}",
+    "lorentz_vector_indices": "a,b,c,d in {0,1,2,3}",
+    "undotted_weyl_indices": "alpha,beta in {1,2}",
+    "dotted_weyl_indices": "dot_alpha,dot_beta in {dot_1,dot_2}",
+    "summation": "Repeated one-up/one-down indices are summed. Any exceptional same-height contraction must be displayed with the appropriate epsilon tensor.",
+    "complex_conjugate_index_map": "alpha <-> dot_alpha; an undotted lower Weyl spinor is conjugate to a dotted lower Weyl spinor before optional epsilon raising."
+  },
+  "lorentz_and_orientation_conventions": {
+    "metric_signature": "mostly_plus",
+    "eta_ab": [
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "levi_civita_lower_0123": 1,
+    "levi_civita_upper_0123": -1,
+    "spacetime_metric": "g_mn=e_m^a e_n^b eta_ab",
+    "tetrad_inverse": "e_m^a e_a^n=delta_m^n and e_a^m e_m^b=delta_a^b",
+    "adm_normalization": {
+      "line_element": "ds^2=-N^2 dt^2+h_ij(dx^i+N^i dt)(dx^j+N^j dt)",
+      "metric_components": "g_00=-N^2+h_ij N^i N^j, g_0i=h_ij N^j, g_ij=h_ij",
+      "tetrad_decomposition": "e_0^a=N n^a+N^i e_i^a with eta_ab n^a n^b=-1 and eta_ab n^a e_i^b=0",
+      "source_to_local_map": "N_local=N_Hohl[e], (N^i)_local=(N^i)_Hohl[e], and h_ij_local=h_ij_Hohl[e]; these are derived coordinates on tetrad space, not additional independent fields",
+      "gauge_status": "No N=a, N=1, or N^i=0 gauge is imposed. The nonzero-lapse/time-orientation patch and component chart are frozen in PHASE15A_MODE_COMPENSATOR_LEDGER.json."
+    },
+    "tetrad_patch": "det(e_m^a) is nonzero. Time orientation and the ADM chart are frozen separately in PHASE15A_MODE_COMPENSATOR_LEDGER.json; no N=a gauge is made here.",
+    "compact_cell": {
+      "topology": "T^3",
+      "fiducial_coordinate_volume": "V_0=integral_T3 d^3x > 0",
+      "role": "V_0 enters the later homogeneous action integral only and does not rescale the local Hohl transformations."
+    }
+  },
+  "spinor_conventions": {
+    "epsilon_undotted": {
+      "epsilon_upper_12": 1,
+      "epsilon_lower_21": 1,
+      "epsilon_lower_12": -1,
+      "inverse_identity": "epsilon^{alpha gamma} epsilon_{gamma beta}=delta^alpha_beta",
+      "raising": "chi^alpha=epsilon^{alpha beta} chi_beta"
+    },
+    "epsilon_dotted": {
+      "epsilon_upper_dot1dot2": 1,
+      "epsilon_lower_dot2dot1": 1,
+      "epsilon_lower_dot1dot2": -1,
+      "lowering": "chi_bar_dot_alpha=epsilon_{dot_alpha dot_beta} chi_bar^{dot_beta}",
+      "raising": "chi_bar^{dot_alpha}=epsilon^{dot_alpha dot_beta} chi_bar_dot_beta",
+      "inverse_identity": "epsilon^{dot_alpha dot_gamma} epsilon_{dot_gamma dot_beta}=delta^{dot_alpha}_{dot_beta}"
+    },
+    "barred_gravitino_ledger_bridge": {
+      "source_and_local_transformation_field": "Hohl and the direct local component map use Psi_bar_{m dot_alpha}=M_P psi_bar_{m dot_alpha} with a lower dotted index.",
+      "mode_ledger_generator": "The mode ledger uses Psi_bar_m^{dot_alpha}:=epsilon^{dot_alpha dot_beta} Psi_bar_{m dot_beta} as its actual barred-gravitino exterior generator; Psi_bar_{m dot_alpha} is reconstructed by lowering and is not a second independent generator.",
+      "jet_bridge": "dot_Psi_bar_m^{dot_alpha}:=epsilon^{dot_alpha dot_beta} dot_Psi_bar_{m dot_beta}; epsilon is constant, so no extra jet term occurs.",
+      "transformation_bridge": "Transcribe every frozen source variation for Psi_bar_{m dot_alpha} first, apply the local M_P scaling, and only then raise its free dotted index with epsilon^{dot_alpha dot_beta} before the mode projection.",
+      "lorentz_bridge": "The raised field transforms as delta_K Psi_bar_m^{dot_alpha}=Psi_bar_m^{dot_beta}(L_bar)_{dot_beta}{}^{dot_alpha}, where L_bar is defined by raising the exact Hohl lower-dotted action with the same frozen epsilon tensors. No independent sign, phase, or generator normalization is introduced."
+    },
+    "sigma_matrices": {
+      "sigma_upper_0": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "sigma_upper_1": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "sigma_upper_2": [
+        [
+          "0",
+          "-i"
+        ],
+        [
+          "i",
+          "0"
+        ]
+      ],
+      "sigma_upper_3": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "bar_sigma_upper_0": "sigma^0",
+      "bar_sigma_upper_i": "-sigma^i for i=1,2,3",
+      "lower_vector_index_rule": "sigma_a=eta_ab sigma^b and bar_sigma_a=eta_ab bar_sigma^b; in particular sigma_0=-sigma^0 and bar_sigma_0=-bar_sigma^0",
+      "curved_index_rule": "sigma_m=e_m^a sigma_a, bar_sigma_m=e_m^a bar_sigma_a, sigma^m=e_a^m sigma^a, and bar_sigma^m=e_a^m bar_sigma^a",
+      "sigma_upper_ab": "sigma^{ab}=(sigma^a bar_sigma^b-sigma^b bar_sigma^a)/4",
+      "bar_sigma_upper_ab": "bar_sigma^{ab}=(bar_sigma^a sigma^b-bar_sigma^b sigma^a)/4",
+      "clifford_identity": "sigma^a bar_sigma^b=-eta^{ab} I_2+2 sigma^{ab}"
+    },
+    "weyl_conjugation": {
+      "single_spinor": "(chi_alpha)^*=chi_bar_dot_alpha",
+      "odd_product": "(chi_alpha psi_beta)^*=-chi_bar_dot_alpha psi_bar_dot_beta in the frozen Hohl ordering",
+      "double_conjugation": "(A^*)^*=A",
+      "parameter": "(epsilon^alpha)^*=epsilon_bar^{dot_alpha}; epsilon and epsilon_bar are a conjugate Weyl pair, not independent complex parameters"
+    },
+    "majorana_packaging": {
+      "used_in_stage_a": false,
+      "rule": "No four-component Majorana matrix or charge-conjugation convention may be introduced without a separately frozen explicit Weyl-to-Majorana basis map."
+    }
+  },
+  "local_lorentz_compensator_convention": {
+    "parameter": "K^{de}(t) is real, even, antisymmetric, and L=(1/2) K^{de} G_de exactly as in the frozen Hohl source.",
+    "generator_blocks": [
+      "(M_de)_b^a=eta_db delta_e^a-eta_eb delta_d^a",
+      "(S_de)_beta^alpha=-(sigma_de)_beta^alpha",
+      "(Sdag_de)^dot_beta_dot_alpha=+(bar_sigma_de)^dot_beta_dot_alpha",
+      "G_de=diag(M_de,S_de,-Sdag_de) on (vector,undotted,dotted) supervielbein components"
+    ],
+    "index_action": "Every upper Lorentz index transforms by right action +L and every lower Lorentz index by the dual action -L, using the exact Hohl index placement. Tetrad, Psi, Psi_bar, chi, chi_bar, and b therefore share one K^{de}; no independent spinor rephasing or relative rescaling is allowed.",
+    "mixed_spinor_endomorphism_rule": "For an undotted mixed matrix A_alpha{}^beta acting on an upper-index row spinor v^alpha from the right, delta_K A=-L A+A L=[A,L], so delta_K(v A)=(v A)L. The barred rule is its frozen conjugate after the explicit epsilon-raising bridge: delta_K A_bar=[A_bar,L_bar] and delta_K(v_bar A_bar)=(v_bar A_bar)L_bar.",
+    "tetrad_example": "delta_K e_m^a=e_m^b L_b^a with L_b^a=(1/2)K^{de}(M_de)_b^a.",
+    "lower_vector_example": "delta_K b_a=-L_a^b b_b.",
+    "spinor_rule": "Apply the displayed G blocks plus the upper/lower-index rule rather than an informal sigma_ab convention. This also freezes the barred action by the source conjugation relation.",
+    "regressions_required": [
+      "delta_K(eta_ab e_i^a e_j^b)=0 exactly",
+      "the barred spinor action is the frozen complex conjugate of the unbarred action",
+      "the induced right-acting Gamma_i and P_3/2 obey delta Gamma_i=[Gamma_i,L] and delta P_3/2=[P_3/2,L], so rho=0 is Lorentz covariant"
+    ]
+  },
+  "grassmann_conventions": {
+    "parity_zero": [
+      "e_m^a",
+      "M",
+      "M_bar",
+      "b_a",
+      "Z",
+      "Z_bar",
+      "F",
+      "F_bar",
+      "M_P",
+      "V_0"
+    ],
+    "parity_one": [
+      "Psi_m^alpha",
+      "Psi_bar_m_dot_alpha",
+      "chi_alpha",
+      "chi_bar_dot_alpha",
+      "epsilon_alpha",
+      "epsilon_bar_dot_alpha",
+      "their first time jets"
+    ],
+    "supercommutation": "A B=(-1)^(parity(A) parity(B)) B A for pure objects",
+    "product_conjugation": "Conjugation follows the frozen Hohl same-order convention with the parity sign made explicit; expressions may not silently reverse and then reorder odd factors.",
+    "left_odd_derivative": {
+      "generator_rule": "partial_L(theta_A)/partial(theta_B)=delta_AB",
+      "leibniz": "partial_L(X Y)=(partial_L X) Y+(-1)^parity(X) X (partial_L Y)"
+    },
+    "right_odd_derivative": {
+      "generator_rule": "theta_A partial_R/partial(theta_B)=delta_AB",
+      "leibniz": "(X Y) partial_R=X (Y partial_R)+(-1)^parity(Y) (X partial_R) Y",
+      "left_right_relation": "partial_L F=(-1)^(parity(F)+1) F partial_R for homogeneous F"
+    },
+    "derivative_regression_examples": [
+      "partial_L(theta_A theta_B)/partial(theta_A)=theta_B for A!=B",
+      "(theta_A theta_B) partial_R/partial(theta_A)=-theta_B for A!=B"
+    ],
+    "exterior_algebra": {
+      "odd_generator_square": "theta_A^2=0",
+      "normal_form": "Sort each monomial by the total odd-generator order frozen in PHASE15A_MODE_COMPENSATOR_LEDGER.json and include the exact Koszul sign.",
+      "coefficient_ring": "An even commutative exact symbolic ring; allowed localizations are frozen only in PHASE15A_MODE_COMPENSATOR_LEDGER.json.",
+      "commuting_polynomial_ideal_for_fermions": false
+    },
+    "physical_adjoint_defined": false
+  },
+  "planck_and_field_normalization": {
+    "status": "RESOLVED_AS_AN_EXPLICIT_LOCAL_CONVENTION",
+    "source_unit_statement": "Hohl writes e^{-1} L=-R/2+... with no explicit M_P in the frozen eq:component_fields_action_all.",
+    "local_action_definition": "S_local=M_P^2 S_Hohl with M_P>0 and unchanged spacetime coordinates.",
+    "interpretation_guard": "This is a source-to-local Lagrangian normalization definition. It does not construct canonical phase-space variables, a Dirac bracket, or a canonical generator.",
+    "source_to_local_fields": [
+      {
+        "hohl": "e_m^a",
+        "local": "e_m^a",
+        "map": "e_local=e_Hohl"
+      },
+      {
+        "hohl": "psi_m^alpha",
+        "local": "Psi_m^alpha",
+        "map": "Psi_m^alpha=M_P psi_m^alpha"
+      },
+      {
+        "hohl": "psi_bar_m_dot_alpha",
+        "local": "Psi_bar_m_dot_alpha",
+        "map": "Psi_bar_m_dot_alpha=M_P psi_bar_m_dot_alpha"
+      },
+      {
+        "hohl": "M, M_bar, b_a",
+        "local": "M, M_bar, b_a",
+        "map": "M_local=M_Hohl, M_bar_local=M_bar_Hohl, and (b_a)_local=(b_a)_Hohl; their action terms retain the overall M_P^2 by this explicit convention"
+      },
+      {
+        "hohl": "varphi",
+        "local": "Z",
+        "map": "Z=M_P varphi"
+      },
+      {
+        "hohl": "varphi_bar",
+        "local": "Z_bar",
+        "map": "Z_bar=M_P varphi_bar"
+      },
+      {
+        "hohl": "chi_alpha",
+        "local": "chi_alpha",
+        "map": "chi_local=M_P chi_Hohl"
+      },
+      {
+        "hohl": "chi_bar_dot_alpha",
+        "local": "chi_bar_dot_alpha",
+        "map": "chi_bar_local=M_P chi_bar_Hohl"
+      },
+      {
+        "hohl": "F, F_bar",
+        "local": "F, F_bar",
+        "map": "F_local=M_P F_Hohl and F_bar_local=M_P F_bar_Hohl"
+      },
+      {
+        "hohl": "xi^alpha, xi_bar_dot_alpha",
+        "local": "epsilon^alpha, epsilon_bar_dot_alpha",
+        "map": "epsilon=xi and epsilon_bar=xi_bar; no parameter rephasing or rescaling"
+      }
+    ],
+    "normalization_check": "At the action level, M_P^2(-R/2)=-M_P^2 R/2; each quadratic source kinetic or F F_bar term built from varphi, chi_Hohl, F_Hohl, or psi_Hohl loses the overall M_P^2 after the displayed local-field substitution; and the translated vielbein variation carries 1/M_P. This is only a Lagrangian coefficient check, not a phase-space canonicality claim.",
+    "kahler_bridge": {
+      "physical_scalar": "Z=(T+iY)/sqrt(2)",
+      "physical_kahler_potential": "K_phys=Z Z_bar",
+      "dimensionless_source_coordinate": "varphi=Z/M_P",
+      "hohl_kahler_potential": "K_Hohl=varphi varphi_bar=K_phys/M_P^2=:calK",
+      "hohl_metric": "g_varphi_varphi_bar=1",
+      "hohl_christoffel": "Gamma=0",
+      "hohl_kahler_curvature": "R_varphi_varphi_bar_varphi_varphi_bar=0"
+    }
+  },
+  "component_projection_map": [
+    {
+      "source_definition": "E_m^a|=e_m^a",
+      "local_field": "e_m^a",
+      "local_definition": "e_local=e_Hohl",
+      "status": "RESOLVED"
+    },
+    {
+      "source_definition": "E_m^alpha|=(1/2) psi_m^alpha and E_m_dot_alpha|=(1/2) psi_bar_m_dot_alpha",
+      "local_field": "Psi_m^alpha, Psi_bar_m_dot_alpha",
+      "local_definition": "Psi=M_P psi_Hohl and Psi_bar=M_P psi_bar_Hohl; the factor 1/2 belongs to the supervielbein projection and is not removed",
+      "status": "RESOLVED"
+    },
+    {
+      "source_definition": "R|=-M/6 and R_bar|=-M_bar/6",
+      "local_field": "M, M_bar",
+      "local_definition": "identity map",
+      "status": "RESOLVED"
+    },
+    {
+      "source_definition": "G_a|=-b_a/3",
+      "local_field": "b_a",
+      "local_definition": "identity map",
+      "status": "RESOLVED"
+    },
+    {
+      "source_definition": "phi|=varphi",
+      "local_field": "Z",
+      "local_definition": "Z=M_P varphi",
+      "status": "RESOLVED"
+    },
+    {
+      "source_definition": "D_alpha phi|=sqrt(2) chi_Hohl_alpha",
+      "local_field": "chi_alpha",
+      "local_definition": "chi_local=M_P chi_Hohl",
+      "status": "RESOLVED"
+    },
+    {
+      "source_definition": "D_tilde^alpha D_alpha phi|=-4 F_Hohl",
+      "local_field": "F",
+      "local_definition": "F_local=M_P F_Hohl",
+      "status": "RESOLVED"
+    },
+    {
+      "source_definition": "Conjugate bar projections in eq:component_fields_definition_matter_matter_multiplet_2",
+      "local_field": "Z_bar, chi_bar_dot_alpha, F_bar",
+      "local_definition": "complex conjugates of the unbarred maps with the frozen Grassmann ordering",
+      "status": "RESOLVED"
+    }
+  ],
+  "second_order_composite_spin_connection": {
+    "independent_field": false,
+    "independent_omega_0_multiplier": false,
+    "source_projection": "Omega_b{}^a||=dz^m Omega_{mb}{}^a|:=dz^m omega_{mb}{}^a=:omega_b{}^a, with the analogous undotted and dotted spinor-connection projections in eq:component_fields_definition_sugra_spin_connection",
+    "source_vector_to_spinor_map": "omega_{m(beta alpha)}=+(1/2)(sigma^{ba} epsilon_spinor)_{beta alpha} omega_{mba} and omega_{m(dot beta dot alpha)}=+(1/2)(epsilon_spinor bar_sigma^{ba})_{dot beta dot alpha} omega_{mba}, exactly as in eq:component_fields_definition_sugra_spin_connection_id; parentheses denote the displayed symmetric spinor-index pair, and mixed spinor indices are obtained only with the frozen epsilon tensors",
+    "source_torsion_equation": "D_n e_m^a-D_m e_n^a=(i/2)(psi_n sigma^a psi_bar_m-psi_m sigma^a psi_bar_n)",
+    "source_definition": "omega_mnp=e_n^b e_p^a omega_mba",
+    "source_formula": "omega_mnp=(1/2)(e_m^a partial_n e_pa-e_p^a partial_m e_na-e_n^a partial_p e_ma)-(1/2)(e_m^a partial_p e_na-e_n^a partial_m e_pa-e_p^a partial_n e_ma)+(i/4)(psi_p sigma_m psi_bar_n-psi_m sigma_n psi_bar_p-psi_n sigma_p psi_bar_m)-(i/4)(psi_n sigma_m psi_bar_p-psi_m sigma_p psi_bar_n-psi_p sigma_n psi_bar_m)",
+    "local_formula": "omega_mnp=(1/2)(e_m^a partial_n e_pa-e_p^a partial_m e_na-e_n^a partial_p e_ma)-(1/2)(e_m^a partial_p e_na-e_n^a partial_m e_pa-e_p^a partial_n e_ma)+(i/(4 M_P^2))(Psi_p sigma_m Psi_bar_n-Psi_m sigma_n Psi_bar_p-Psi_n sigma_p Psi_bar_m)-(i/(4 M_P^2))(Psi_n sigma_m Psi_bar_p-Psi_m sigma_p Psi_bar_n-Psi_p sigma_n Psi_bar_m)",
+    "local_translation": "The local formula is the exact source identity after psi_Hohl=Psi/M_P and psi_bar_Hohl=Psi_bar/M_P. The vector-to-spinor map above is then applied without an extra rescaling. No independent omega jet is added.",
+    "homogeneous_dependency": "After partial_i=0, omega remains an exact composite of e_m^a, its allowed first time jets, Psi_m, and Psi_bar_m. Isotropy is not imposed here."
+  },
+  "frozen_matter_specialization": {
+    "number_of_chiral_multiplets": 1,
+    "neutral_representation": true,
+    "yang_mills_multiplet_in_field_algebra": false,
+    "yang_mills_substitution": "All source terms containing a_m^r, lambda^r, lambda_bar^r, D^r, or a representation generator T_r are exactly absent, not retained as tunable zeros.",
+    "superpotential": "W is identically zero, so W and every holomorphic or Kähler-covariant derivative of W vanish identically. This does not set spacetime or supercovariant derivatives of Z or Z_bar to zero; their homogeneous time jets remain independent.",
+    "source_normalized_kahler_data": {
+      "coordinate": "varphi=Z/M_P",
+      "K": "varphi varphi_bar",
+      "g": "1",
+      "Gamma": "0",
+      "target_curvature": "0"
+    },
+    "source_kahler_connection": "A_m+(i/2)e_m^a b_a=(1/4)(varphi_bar partial_m varphi-varphi partial_m varphi_bar)+(i/4)(chi_Hohl sigma_m chi_bar_Hohl)",
+    "local_kahler_connection": "A_m+(i/2)e_m^a b_a=(1/(4 M_P^2))(Z_bar partial_m Z-Z partial_m Z_bar)+(i/(4 M_P^2))(chi sigma_m chi_bar)",
+    "local_matter_derivatives_used_in_F_transformations": {
+      "nabla_m_chi": "partial_m chi-omega_m chi-(1/(4 M_P^2))(Z_bar partial_m Z-Z partial_m Z_bar) chi-(i/(4 M_P^2))(chi sigma_m chi_bar) chi",
+      "nabla_m_chi_bar": "partial_m chi_bar-omega_bar_m chi_bar+(1/(4 M_P^2))(Z_bar partial_m Z-Z partial_m Z_bar) chi_bar+(i/(4 M_P^2))(chi sigma_m chi_bar) chi_bar",
+      "derivation": "These are M_P times Hohl eq:component_fields_matter_dterm_nabla_chi and _nabla_chib after no vectors, one flat chiral field, Z=M_P varphi, and chi_local=M_P chi_Hohl. omega_m and omega_bar_m are the frozen undotted/dotted spinor connections induced by the same composite omega(e,Psi).",
+      "sign_regression": "The Kähler and cubic-fermion terms have minus signs for chi and plus signs for chi_bar, exactly as the frozen conjugate pair."
+    },
+    "homogeneity": "All partial_i of component fields and epsilon vanish as a kinematic ansatz on the invariant Bianchi-I frame. This does not set anisotropic, off-diagonal, lapse, shift, psi_0, or auxiliary components to zero.",
+    "auxiliary_equations_of_motion_used": false,
+    "auxiliary_basis_for_stage_a": "Use the original component auxiliaries M, M_bar, b_a, F, and F_bar defined by R|=-M/6, G_a|=-b_a/3, and the chiral projections. In particular, do not replace b_a by the action-summary diagonalized field b_tilde_a=b_a-(3/4)(chi sigma_a chi_bar). For W identically zero and no vectors the displayed M/F diagonalizations collapse, but this does not authorize the nontrivial b redefinition in a transformation or defining function.",
+    "bosonic_body_diagnostic_policy": {
+      "full_off_shell_requirement": "K1 must retain and display every algebraic term in the original auxiliaries M,M_bar,b_a,F,F_bar that survives the frozen W-identically-zero, no-vector specialization. No auxiliary equation of motion, diagonalizing field redefinition, or zero assignment is permitted.",
+      "required_output_split": "Write the homogeneous bosonic constraint before any auxiliary elimination as C_off_shell=C_EH+chiral_kinetic+C_auxiliary, with C_auxiliary shown separately and with its source normalization traceable to the frozen Hohl action.",
+      "phase14_skeleton_comparison": "The diagnostic C_B=-p_X^2+p_T^2+p_Y^2, X=sqrt(6) M_P ln(a), refers only to a positively densitized Einstein-plus-chiral-kinetic Legendre subblock. It is not the full auxiliary-complete off-shell constraint and does not assert C_auxiliary=0.",
+      "exact_coordinate_bridge": "On the frozen a>0 patch use dX=sqrt(6) M_P da/a and p_X=a p_a/(sqrt(6) M_P). This verifies the X normalization algebraically without adjoining ln(a) to the local residual/compensator coefficient ring.",
+      "failure_guard": "An executable that obtains C_B by deleting, solving, or silently suppressing any surviving auxiliary term fails K1 scope even if the kinetic subblock agrees exactly."
+    },
+    "isotropy_imposed": false
+  },
+  "transformation_import_policy": {
+    "parameter_map": "xi^a|=0, epsilon^alpha=xi^alpha|, epsilon_bar_dot_alpha=xi_bar_dot_alpha|",
+    "translation_algorithm": [
+      "Start from the exact Hohl component equation under the frozen main-TeX hash.",
+      "Apply only the preregistered one-neutral-chiral, K=varphi varphi_bar, W identically zero, and no-Yang-Mills substitutions in source-normalized fields.",
+      "Substitute varphi=Z/M_P, psi_Hohl=Psi/M_P, chi_Hohl=chi/M_P, and F_Hohl=F/M_P, including conjugates.",
+      "Multiply the transformed left-hand side by its local field scale: M_P for Psi, Z, chi, and F; one for e, M, M_bar, and b.",
+      "Preserve source factor order and exact Grassmann signs; perform no field rephasing, sign repair, equation-of-motion substitution, or compensator insertion."
+    ],
+    "fermion_order_policy": "Retain every fermion order in the selected off-shell source transformations. A term may disappear only by the frozen no-vector, W-identically-zero, one-flat-chiral specialization or an exact exterior-algebra zero; no quadratic or higher fermion truncation is allowed.",
+    "all_signs_authority": "Every plus/minus sign and factor in every selected component transformation is the byte-frozen Hohl equation under the recorded TeX hash followed only by the displayed specialization and multiplicative field map. The examples below are regression sentinels, not a replacement for the complete source equations.",
+    "leading_sign_regressions": [
+      "delta e_m^a=+i(xi sigma^a psi_bar_m)+i(xi_bar bar_sigma^a psi_m) in Hohl variables",
+      "delta psi_m^alpha starts with +2 nabla_m xi^alpha",
+      "delta psi_bar_m_dot_alpha starts with +2 nabla_m xi_bar_dot_alpha",
+      "delta varphi=+sqrt(2) xi chi and delta varphi_bar=+sqrt(2) xi_bar chi_bar",
+      "delta chi starts with +i sqrt(2)(xi_bar bar_sigma^m epsilon_spinor)_alpha(D_m varphi-psi_m chi/sqrt(2))+sqrt(2) xi_alpha F; epsilon_spinor here is the antisymmetric index tensor, not the local SUSY parameter epsilon"
+    ],
+    "families": [
+      {
+        "local_fields": "e_m^a",
+        "source_anchor": "eq:component_fields_sugra_transf_graviton",
+        "status": "RESOLVED"
+      },
+      {
+        "local_fields": "Psi_m, Psi_bar_m",
+        "source_anchor": "eq:component_fields_sugra_transf_gravitino_1 and eq:component_fields_sugra_transf_gravitino_2",
+        "status": "RESOLVED_WITH_PACKETIZED_U1_FREE_INDEX_EMENDATION_BELOW"
+      },
+      {
+        "local_fields": "M, M_bar, b_a",
+        "source_anchor": "eq:component_fields_sugra_transf_aux_m_1 through eq:component_fields_sugra_transf_aux_m_3",
+        "status": "RESOLVED_EXCEPT_THROUGH_REFERENCED_COVARIANT_DERIVATIVES"
+      },
+      {
+        "local_fields": "Z, Z_bar, chi, chi_bar, F, F_bar",
+        "source_anchor": "sec:component_fields_sugra_transformations / Matter multiplet, frozen TeX lines 4851-4884",
+        "status": "RESOLVED_WITH_PACKETIZED_U2_ZERO_TERM_AND_SPECIES_EMENDATION_BELOW"
+      }
+    ]
+  },
+  "j1_transformation_dependency_ledger": {
+    "jet_space": "First homogeneous jet space J^1; no equation of motion relates independent jets.",
+    "base_even_fields": [
+      "e_m^a",
+      "M",
+      "M_bar",
+      "b_a",
+      "Z",
+      "Z_bar",
+      "F",
+      "F_bar"
+    ],
+    "base_odd_fields_and_parameters": [
+      "Psi_m^alpha",
+      "Psi_bar_m_dot_alpha",
+      "chi_alpha",
+      "chi_bar_dot_alpha",
+      "epsilon^alpha",
+      "epsilon_bar_dot_alpha"
+    ],
+    "parameter_index_guard": "The independent unbarred parameter may be stored as epsilon^alpha or epsilon_alpha, but never both: epsilon_alpha=epsilon_{alpha beta} epsilon^beta. Its conjugate is (epsilon^alpha)^*=epsilon_bar^dot_alpha, with epsilon_bar_dot_alpha obtained by the frozen dotted epsilon tensor.",
+    "required_first_time_jet_families": [
+      {
+        "jets": "partial_0 e_m^a",
+        "reason": "torsionful composite omega(e,Psi)"
+      },
+      {
+        "jets": "partial_0 Psi_m^alpha and partial_0 Psi_bar_m_dot_alpha",
+        "reason": "D_n psi_m in delta M, delta M_bar, and delta b; the mode ledger must determine which components survive homogeneity without deleting psi_0"
+      },
+      {
+        "jets": "partial_0 Z and partial_0 Z_bar",
+        "reason": "matter covariant derivatives and the composite Kahler connection"
+      },
+      {
+        "jets": "partial_0 chi_alpha and partial_0 chi_bar_dot_alpha",
+        "reason": "nabla_m chi in delta F and delta F_bar"
+      },
+      {
+        "jets": "partial_0 epsilon^alpha and partial_0 epsilon_bar_dot_alpha",
+        "reason": "nabla_m epsilon in delta Psi_m and delta Psi_bar_m"
+      }
+    ],
+    "not_required_by_selected_component_transformations": [
+      "partial_0 M",
+      "partial_0 M_bar",
+      "partial_0 b_a",
+      "partial_0 F",
+      "partial_0 F_bar",
+      "second or higher time jets"
+    ],
+    "spatial_jets": "partial_i of homogeneous component fields and parameters are exactly zero by the homogeneous ansatz, not by an equation of motion.",
+    "adm_chart_guard": "N, N^i, and their retained jets are a chart of e_m^a data to be frozen in PHASE15A_MODE_COMPENSATOR_LEDGER.json. They are not added as independent variables simultaneously with all sixteen e_m^a components.",
+    "psi_0_guard": "Psi_0 and Psi_bar_0 remain base fields. The later mode ledger may prove that particular time jets do not occur after exact antisymmetric contractions, but may not delete the fields before that check.",
+    "dependency_by_variation": {
+      "delta_e": "base odd fields and epsilon; no field first derivative",
+      "delta_Psi": "partial_0 epsilon, composite omega(partial_0 e,Psi), partial_0 Z through the Kahler connection, and base auxiliaries",
+      "delta_M_and_delta_M_bar": "partial_0 Psi, composite omega(partial_0 e,Psi), partial_0 Z through the Kahler connection and matter derivative, and base fields",
+      "delta_b": "partial_0 Psi, composite omega(partial_0 e,Psi), partial_0 Z through the Kahler connection and matter derivative, and base fields",
+      "delta_Z_and_delta_Z_bar": "base chi and epsilon only",
+      "delta_chi_and_delta_chi_bar": "partial_0 Z and base fields",
+      "delta_F_and_delta_F_bar": "partial_0 chi, partial_0 Z, composite omega(partial_0 e,Psi), and base fields"
+    },
+    "component_expansion_authority": "PHASE15A_MODE_COMPENSATOR_LEDGER.json must expand these index families into the complete retained/discarded component and odd-generator lists before any executable is created."
+  },
+  "source_typography_packets": [
+    {
+      "id": "P15A-U1-HOHL-NABLA-EPSILON-FREE-INDEX",
+      "status": "RESOLVED_PRE_RESULT_BY_SOURCE_SCOPED_FREE_INDEX_EMENDATION",
+      "source_location": "Immediately after eq:component_fields_sugra_transf_gravitino_2 in the frozen Hohl TeX",
+      "issue": "The displayed definitions have free index m on nabla_m xi but use n in the Kahler-connection terms; the barred definition also prints omega_n. Taken literally, the equations have unmatched free indices.",
+      "frozen_emendation": "Only inside the two displayed definitions of nabla_m xi and nabla_m xi_bar, replace each unmatched n in omega_n, D_n varphi, D_n varphi_bar, and sigma_n by the already-free derivative index m. Change no coefficient, sign, factor ordering, conjugation rule, or any n appearing as a genuinely summed dummy index elsewhere.",
+      "source_scoped_justification": [
+        "The left-hand side and leading partial/connection terms define a covariant derivative carrying exactly the one free spacetime index m; the printed n has no contraction partner and is therefore not a well-formed tensor expression.",
+        "The adjacent frozen component identity for the Kahler connection is A_m+(i/2)e_m^a b_a=(1/4)(K_k D_m varphi^k-K_kbar D_m varphi_bar^kbar)+(i/4)g(chi sigma_m chi_bar), fixing the same m-indexed combination.",
+        "Applying m-for-n to both barred and unbarred definitions restores their frozen complex-conjugation relation without importing a coefficient from another source."
+      ],
+      "exact_regressions_required": [
+        "Every term in the emended unbarred definition has free-index signature (m,alpha), and every term in the barred definition has (m,dot_alpha).",
+        "Complex conjugation under the frozen Weyl and Grassmann rules maps the emended pair into each other.",
+        "The Kahler-connection portion equals the adjacent frozen A_m expression after the stated one-field specialization and field normalization."
+      ],
+      "semantic_mutants_required": [
+        "The literal-source n-index transcription is rejected for an unmatched free n.",
+        "Replacing n by m in only one member of the barred/unbarred pair is rejected by conjugation covariance.",
+        "A global n-to-m text replacement outside these two definitions is rejected as an overbroad source mutation."
+      ],
+      "scope_guard": "This is a pre-executable typography repair forced by index well-formedness and an adjacent equation from the same byte-frozen source. It is not a fitted tangency term or evidence for the target claim."
+    },
+    {
+      "id": "P15A-U2-HOHL-CONJUGATE-CHI-TYPOGRAPHY",
+      "status": "RESOLVED_PRE_RESULT_BY_ZERO_TERM_SPECIALIZATION_AND_CONJUGATION_SCOPED_SPECIES_EMENDATION",
+      "source_location": "Unlabeled conjugate-chi transformation in sec:component_fields_sugra_transformations / Matter multiplet",
+      "issue": "One connection term prints an undotted xi with a dotted index and a later factor prints chi_bar with unbarred species index k. The connection term vanishes because Gamma_bar=0, and the unique one-field specialization removes species ambiguity; no corrected nonzero coefficient is inferred.",
+      "frozen_handling": [
+        "Apply the frozen one-flat-chiral specialization Gamma_bar=0 before transcribing the malformed Christoffel term. The entire term is exactly zero; do not emend its dotted parameter glyph and do not infer a nonzero coefficient.",
+        "In the surviving Kähler-weight term only, replace the outer free field glyph chi_bar^{k dot_alpha} by chi_bar^{kbar dot_alpha}. Do not change the inner summed labels, coefficient, sign, factor order, or parameter glyphs."
+      ],
+      "source_scoped_justification": "The transformed field on the left carries the barred matter label kbar, and the frozen unbarred transformation plus Weyl/species conjugation fixes its conjugate outer field to chi_bar^{kbar}. In the one-field model this is also the unique barred species. This repair imports no equation from another source.",
+      "exact_regressions_required": [
+        "Gamma_bar=0 makes the malformed Christoffel term exactly zero before any free-index evaluation.",
+        "The surviving emended Kähler-weight term has the same free barred species and dotted-spinor indices as delta chi_bar^{kbar dot_alpha}.",
+        "Frozen complex conjugation maps the unbarred and emended barred Kähler-weight terms into each other with the source coefficient and sign."
+      ],
+      "semantic_mutants_required": [
+        "Any implementation assigning a nonzero value to the malformed Gamma_bar term is rejected.",
+        "The literal unbarred outer species glyph in the surviving barred term is rejected before the one-species numerical collapse.",
+        "Changing the coefficient, sign, inner summed species labels, or Grassmann order while repairing the outer glyph is rejected."
+      ]
+    }
+  ],
+  "readiness": {
+    "map_status": "FROZEN_PRE_RESULT_WITH_PACKETIZED_SOURCE_EMENDATIONS",
+    "ready_for_science_executable": false,
+    "readiness_reason": "The convention map has no unresolved source-index blocker, but the contract requires this map, the source packet, and the mode-compensator ledger to be jointly audited and committed before a separate executable commit may be created.",
+    "blocking_ids": [],
+    "next_allowed_artifacts": [
+      "cpt_temporal_folded_susy/PHASE15A_SOURCE_PACKET.json",
+      "cpt_temporal_folded_susy/PHASE15A_MODE_COMPENSATOR_LEDGER.json"
+    ],
+    "next_forbidden_artifacts_until_joint_preresult_audit_and_commit": [
+      "cpt_temporal_folded_susy/phase15a_offshell_flrw_tangency.py",
+      "cpt_temporal_folded_susy/PHASE15A_REDUCTION_CERTIFICATE.json",
+      "cpt_temporal_folded_susy/PHASE15A_RUN_RESULT.json",
+      "cpt_temporal_folded_susy/PHASE15A_REPLAY_RECEIPT.json"
+    ]
+  }
+}
