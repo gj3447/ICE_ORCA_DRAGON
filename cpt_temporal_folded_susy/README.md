@@ -43,7 +43,7 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE17_TIME_LINE_FOLD_ALGEBRA.md` | Phase 17 보고서 — E186–E192. literal local half-exchange는 실패; fixed-fiber exchange와 별도 doubled-real projector witness는 성공 |
 | `phase18_gaussian_seam_spectrum.py` | free equal-mass Wess–Zumino mode에서 instantaneous canonical seam의 pole·occupation·UV 비용을 가르는 exact 실행체 |
 | `PHASE18_GAUSSIAN_SEAM_SPECTRUM.md` | Phase 18 보고서 — 47 exact checks + 1 numerical control. free seam-only pole splitting은 0; interacting/order-parameter route는 OPEN |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–17의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–18의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).

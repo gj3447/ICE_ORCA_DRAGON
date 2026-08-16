@@ -122,7 +122,7 @@ them for reproducibility. See [`AGENTS.md`](AGENTS.md).
 The repository-local [CPT × Temporal-Folded SUSY research graph](ontology/cpt-temporal-folded-susy/README.md)
 keeps concepts, scoped claims, exact evidence, sources, and open problems linked without turning the
 graph into a research contract or a physics verdict. The machine-readable canonical file is
-[`graph.json`](ontology/cpt-temporal-folded-susy/graph.json); Phase 16 and 17 stdout payloads are preserved
+[`graph.json`](ontology/cpt-temporal-folded-susy/graph.json); Phase 16–18 stdout payloads are preserved
 as evidence snapshots rather than being left only in terminal history.
 
 ```bash
@@ -176,7 +176,7 @@ uv sync --locked
 | [`docs/STATUS.md`](docs/STATUS.md) | current engineering status plus historical scientific ledger |
 | [`docs/index.md`](docs/index.md) | documentation map |
 | [`ontology/README.md`](ontology/README.md) | repository research-ontology format and CLI entry points |
-| [`ontology/cpt-temporal-folded-susy/README.md`](ontology/cpt-temporal-folded-susy/README.md) | readable Phase 15R–17 concept/evidence/open-problem map |
+| [`ontology/cpt-temporal-folded-susy/README.md`](ontology/cpt-temporal-folded-susy/README.md) | readable Phase 15R–18 concept/evidence/open-problem map |
 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) | current CPT × Temporal-Folded SUSY workbench boundary and phase index |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | contribution and verification contract |
 | [`REPRODUCIBILITY_2026-06-08.md`](REPRODUCIBILITY_2026-06-08.md) | historical attestation and current erratum |

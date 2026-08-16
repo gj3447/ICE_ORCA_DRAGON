@@ -389,7 +389,7 @@ layer(AppLayer)("canonical ontology", (it) => {
       expect(validation.counts.verified_hashes).toBe(
         validation.counts.hash_bearing_nodes
       )
-      expect(validation.warnings).toHaveLength(3)
+      expect(validation.warnings).toHaveLength(7)
       expect(
         validation.warnings.every(
           (issue) => issue.code === "EXTERNAL_BRIDGE_UNRESOLVED"
@@ -398,11 +398,11 @@ layer(AppLayer)("canonical ontology", (it) => {
     })
   )
 
-  it.effect("audits exactly the P16/P17 evidence snapshots", () =>
+  it.effect("audits exactly the P16-P18 evidence snapshots", () =>
     Effect.gen(function* () {
       const graph = yield* loadResearchGraph
       const audit = yield* auditEvidenceSnapshots(graph)
-      expect(audit.audited).toBe(2)
+      expect(audit.audited).toBe(3)
       expect(audit.issues).toEqual([])
       expect(
         graph.nodes.find((node) => node.id === "artifact:p15r-run-result")

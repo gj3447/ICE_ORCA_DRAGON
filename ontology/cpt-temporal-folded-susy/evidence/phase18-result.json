@@ -1,0 +1,462 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P18_GAUSSIAN_SEAM_SPECTRUM_20260816",
+  "phase": "P18",
+  "observed_at_utc": "2026-08-16T16:42:39Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py",
+    "sha256": "01f2d5d04341093494e185529dd67630aef5896e842a4bedddc6d1309271e221",
+    "introduced_in_commit": "1a5d6d4326da3451ff63274cee654fa504f82f9c"
+  },
+  "exact_checks": 47,
+  "checks": [
+    {
+      "id": "P18.time.conserved_charge",
+      "status": "PASS",
+      "statement": "the exact multiplet Hamiltonian commutes with its supercharge"
+    },
+    {
+      "id": "P18.time.susy_state_stays_susy",
+      "status": "PASS",
+      "statement": "a Q-annihilated state remains Q-annihilated under conserved evolution"
+    },
+    {
+      "id": "P18.domain.multiplet_marker",
+      "status": "PASS",
+      "statement": "a seam treats an elementary B/F pair covariantly only when its markers agree"
+    },
+    {
+      "id": "P18.scalar.generator_square",
+      "status": "PASS",
+      "statement": "the scalar bulk generator has only frequencies plus/minus omega"
+    },
+    {
+      "id": "P18.scalar.evolution_equation",
+      "status": "PASS",
+      "statement": "the exact scalar evolution solves the first-order Cauchy system"
+    },
+    {
+      "id": "P18.scalar.evolution_symplectic",
+      "status": "PASS",
+      "statement": "free scalar propagation preserves Klein-Gordon phase-space flux"
+    },
+    {
+      "id": "P18.scalar.general_seam_flux_identity",
+      "status": "PASS",
+      "statement": "a finite two-dimensional scalar seam is canonical exactly when its determinant is one"
+    },
+    {
+      "id": "P18.scalar.post_seam_evolution",
+      "status": "PASS",
+      "statement": "an arbitrary instantaneous Cauchy-data map changes amplitudes but not the post-seam generator"
+    },
+    {
+      "id": "P18.scalar.characteristic_polynomial",
+      "status": "PASS",
+      "statement": "identifying omega^2=k^2+m^2 gives the scalar pole polynomial E^2-k^2-m^2"
+    },
+    {
+      "id": "P18.fermion.hamiltonian_square",
+      "status": "PASS",
+      "statement": "the reduced fermion Hamiltonian squares to k^2+m^2"
+    },
+    {
+      "id": "P18.fermion.characteristic_polynomial",
+      "status": "PASS",
+      "statement": "the fermion resolvent denominator is E^2-k^2-m^2"
+    },
+    {
+      "id": "P18.fermion.resolvent_factorization",
+      "status": "PASS",
+      "statement": "the full reduced fermion resolvent factorization has the common pole denominator"
+    },
+    {
+      "id": "P18.fermion.evolution_equation",
+      "status": "PASS",
+      "statement": "the exact fermion evolution solves the post-seam Dirac equation"
+    },
+    {
+      "id": "P18.fermion.evolution_unitary",
+      "status": "PASS",
+      "statement": "free fermion propagation preserves the CAR inner product"
+    },
+    {
+      "id": "P18.bulk.common_BF_shell",
+      "status": "PASS",
+      "statement": "equal-mass free boson and fermion modes have an identical pole polynomial"
+    },
+    {
+      "id": "P18.propagator.scalar_retarded_open_EOM",
+      "status": "PASS",
+      "statement": "away from coincidence the post-post scalar retarded kernel obeys the unchanged bulk equation"
+    },
+    {
+      "id": "P18.propagator.scalar_retarded_jump",
+      "status": "PASS",
+      "statement": "the canonical post-post scalar retarded kernel has the unit coincidence jump"
+    },
+    {
+      "id": "P18.propagator.scalar_retarded_seam_independence",
+      "status": "PASS",
+      "statement": "the post-post free retarded kernel is independent of the initial scalar kick"
+    },
+    {
+      "id": "P18.seam.scalar_kick_symplectic",
+      "status": "PASS",
+      "statement": "the delta-seam jump is a finite canonical scalar map"
+    },
+    {
+      "id": "P18.seam.scalar_kick_time_reversal_reciprocity",
+      "status": "PASS",
+      "statement": "time reversal maps the forward scalar kick to its inverse"
+    },
+    {
+      "id": "P18.seam.scalar_mode_continuity",
+      "status": "PASS",
+      "statement": "the outgoing scalar mode is continuous at the seam"
+    },
+    {
+      "id": "P18.seam.scalar_mode_jump",
+      "status": "PASS",
+      "statement": "the outgoing derivative obeys p(0+)-p(0-)=-kappa q(0)"
+    },
+    {
+      "id": "P18.seam.scalar_post_frequency",
+      "status": "PASS",
+      "statement": "the kick changes amplitudes but every post-seam mode still has frequency omega"
+    },
+    {
+      "id": "P18.seam.scalar_bogoliubov_norm",
+      "status": "PASS",
+      "statement": "the scalar annihilation map obeys the bosonic SU(1,1) normalization"
+    },
+    {
+      "id": "P18.prediction.scalar_occupation",
+      "status": "PASS",
+      "statement": "the exact real-mode occupation is kappa^2/(4 omega^2)"
+    },
+    {
+      "id": "P18.seam.fermion_CAR",
+      "status": "PASS",
+      "statement": "a finite two-mode fermionic Nambu-pair rotation preserves CAR"
+    },
+    {
+      "id": "P18.prediction.fermion_occupation",
+      "status": "PASS",
+      "statement": "the incoming-vacuum pair occupation in this finite-mode control is sin(theta)^2"
+    },
+    {
+      "id": "P18.propagator.spectral_state_independence",
+      "status": "PASS",
+      "statement": "occupation and anomalous image terms cancel from the free spectral kernel"
+    },
+    {
+      "id": "P18.propagator.statistical_state_dependence",
+      "status": "PASS",
+      "statement": "the statistical/Wightman sector retains seam-state data"
+    },
+    {
+      "id": "P18.propagator.image_bulk_equation",
+      "status": "PASS",
+      "statement": "the seam image term uses the same bulk frequency in both arguments"
+    },
+    {
+      "id": "P18.CPT.sheet_kernel",
+      "status": "PASS",
+      "statement": "the displayed Hermitian sheet kernel is invariant under X_s followed by conjugation"
+    },
+    {
+      "id": "P18.CPT.sheet_eigenchannels",
+      "status": "PASS",
+      "statement": "CPT permits two scalar seam eigenchannels a plus/minus |z|"
+    },
+    {
+      "id": "P18.CPT.real_sheet_diagonalization",
+      "status": "PASS",
+      "statement": "the real CPT-compatible sheet kick diagonalizes into a plus/minus channel"
+    },
+    {
+      "id": "P18.CPT.doubled_kick_symplectic",
+      "status": "PASS",
+      "statement": "the two-sheet scalar kick preserves the doubled symplectic flux"
+    },
+    {
+      "id": "P18.prediction.sheet_occupation_sum_difference",
+      "status": "PASS",
+      "statement": "the two CPT sheet eigenchannels have an exact occupation sum and asymmetry"
+    },
+    {
+      "id": "P18.UV.number_density_primitive",
+      "status": "PASS",
+      "statement": "the sharp-kick occupation integrates to the stated number density"
+    },
+    {
+      "id": "P18.UV.energy_density_primitive",
+      "status": "PASS",
+      "statement": "the sharp-kick energy integrates to the stated real-scalar density"
+    },
+    {
+      "id": "P18.UV.sharp_asymptotics",
+      "status": "PASS",
+      "statement": "a spatially local instantaneous seam has linear number and quadratic energy divergences"
+    },
+    {
+      "id": "P18.UV.gaussian_pulse_fourier",
+      "status": "PASS",
+      "statement": "a normalized Gaussian seam suppresses its 2-omega Fourier component exponentially"
+    },
+    {
+      "id": "P18.prediction.gaussian_Born_occupation",
+      "status": "PASS",
+      "statement": "the Born occupation is exponentially UV-soft and recovers the sharp result as sigma tends to zero"
+    },
+    {
+      "id": "P18.FRW.relativistic_dilution",
+      "status": "PASS",
+      "statement": "under the collisionless relativistic integrand assumption the state integral scales as a^-2"
+    },
+    {
+      "id": "P18.FRW.nonrelativistic_dilution",
+      "status": "PASS",
+      "statement": "under conserved nonrelativistic particle number the state integral scales as a^-3"
+    },
+    {
+      "id": "P18.soft.conditional_mass_ratio",
+      "status": "PASS",
+      "statement": "an inserted persistent scalar soft mass gives m_B/m_F=sqrt(1+r^2)"
+    },
+    {
+      "id": "P18.soft.small_breaking_series",
+      "status": "PASS",
+      "statement": "for small soft breaking the relative mass split begins at r^2/2"
+    },
+    {
+      "id": "P18.mutant.reject_noncanonical_scalar_seam",
+      "status": "PASS",
+      "statement": "a determinant-changing scalar seam is rejected as noncanonical"
+    },
+    {
+      "id": "P18.mutant.reject_nonunitary_fermion_seam",
+      "status": "PASS",
+      "statement": "a norm-changing fermion seam is rejected as CAR-nonunitary"
+    },
+    {
+      "id": "P18.mutant.detect_inserted_bulk_soft_mass",
+      "status": "PASS",
+      "statement": "a nonzero pole split is detected only after a persistent bulk soft term is inserted"
+    }
+  ],
+  "payload": {
+    "exact_checks": 47,
+    "numerical_checks": 1,
+    "check_ids": [
+      "P18.time.conserved_charge",
+      "P18.time.susy_state_stays_susy",
+      "P18.domain.multiplet_marker",
+      "P18.scalar.generator_square",
+      "P18.scalar.evolution_equation",
+      "P18.scalar.evolution_symplectic",
+      "P18.scalar.general_seam_flux_identity",
+      "P18.scalar.post_seam_evolution",
+      "P18.scalar.characteristic_polynomial",
+      "P18.fermion.hamiltonian_square",
+      "P18.fermion.characteristic_polynomial",
+      "P18.fermion.resolvent_factorization",
+      "P18.fermion.evolution_equation",
+      "P18.fermion.evolution_unitary",
+      "P18.bulk.common_BF_shell",
+      "P18.propagator.scalar_retarded_open_EOM",
+      "P18.propagator.scalar_retarded_jump",
+      "P18.propagator.scalar_retarded_seam_independence",
+      "P18.seam.scalar_kick_symplectic",
+      "P18.seam.scalar_kick_time_reversal_reciprocity",
+      "P18.seam.scalar_mode_continuity",
+      "P18.seam.scalar_mode_jump",
+      "P18.seam.scalar_post_frequency",
+      "P18.seam.scalar_bogoliubov_norm",
+      "P18.prediction.scalar_occupation",
+      "P18.seam.fermion_CAR",
+      "P18.prediction.fermion_occupation",
+      "P18.propagator.spectral_state_independence",
+      "P18.propagator.statistical_state_dependence",
+      "P18.propagator.image_bulk_equation",
+      "P18.CPT.sheet_kernel",
+      "P18.CPT.sheet_eigenchannels",
+      "P18.CPT.real_sheet_diagonalization",
+      "P18.CPT.doubled_kick_symplectic",
+      "P18.prediction.sheet_occupation_sum_difference",
+      "P18.UV.number_density_primitive",
+      "P18.UV.energy_density_primitive",
+      "P18.UV.sharp_asymptotics",
+      "P18.UV.gaussian_pulse_fourier",
+      "P18.prediction.gaussian_Born_occupation",
+      "P18.FRW.relativistic_dilution",
+      "P18.FRW.nonrelativistic_dilution",
+      "P18.soft.conditional_mass_ratio",
+      "P18.soft.small_breaking_series",
+      "P18.mutant.reject_noncanonical_scalar_seam",
+      "P18.mutant.reject_nonunitary_fermion_seam",
+      "P18.mutant.detect_inserted_bulk_soft_mass"
+    ],
+    "theorem": {
+      "id": "P18_FREE_TEMPORAL_SEAM_NO_POLE_SPLITTING",
+      "status": "PROVED_UNDER_FROZEN_ASSUMPTIONS",
+      "m_B_pole_squared": "m^2",
+      "m_F_pole_squared": "m^2",
+      "delta_m_pole_squared": "0"
+    },
+    "scope": {
+      "model": "free equal-mass Wess-Zumino mode control with t=0 quadratic canonical data",
+      "mass_definition": "t,t'>0 retarded bulk spectral pole",
+      "spacetime": "3+1D flat post-seam bulk; one scalar mode and one helicity-reduced fermion mode",
+      "seam_class": [
+        "standard instantaneous Cauchy-data map",
+        "no energy-dependent or time-nonlocal kernel",
+        "no higher-time-derivative extra Cauchy data",
+        "unchanged t>0 bulk kinetic and mass operators"
+      ],
+      "not_constructed": [
+        "full doubled Wess-Zumino Pin lift",
+        "common variational domain with conserved sheet-mixing Q",
+        "a local Weyl/Majorana fermionic seam action",
+        "interacting self-energies",
+        "a physical absolute SUSY-breaking scale"
+      ]
+    },
+    "exact_free_predictions": {
+      "delta_m_pole_squared": "0",
+      "sharp_scalar_occupation_per_real_mode": "kappa^2/[4 (k^2+m^2)]",
+      "fermion_pair_occupation_for_finite_Nambu_control": "sin(theta)^2",
+      "sharp_UV_leading_energy_density": "kappa^2 Lambda^2/(16 pi^2)",
+      "sharp_energy_density_per_real_scalar": "kappa^2 [Lambda sqrt(Lambda^2+m^2)-m^2 asinh(Lambda/m)]/(16 pi^2)"
+    },
+    "conditional_Born_and_FRW_controls": {
+      "conditions": [
+        "Gaussian pulse is a finite-duration UV regulator control outside the strict instantaneous-seam theorem",
+        "FRW scaling assumes a UV-admissible collisionless distribution and no persistent source or phase transition"
+      ],
+      "gaussian_Born_occupation": "kappa^2 exp(-4 sigma^2 omega_k^2)/(4 omega_k^2)",
+      "relativistic_medium_delta_m2_scaling": "a^-2",
+      "nonrelativistic_medium_delta_m2_scaling": "a^-3"
+    },
+    "dimensionless_benchmarks_not_fundamental_predictions": {
+      "FRW_dilution": [
+        {
+          "a_over_a_seam": "1000",
+          "nonrelativistic_delta_m2_ratio": "1/1000000000",
+          "relativistic_delta_m2_ratio": "1/1000000"
+        },
+        {
+          "a_over_a_seam": "10000000000",
+          "nonrelativistic_delta_m2_ratio": "1/1000000000000000000000000000000",
+          "relativistic_delta_m2_ratio": "1/100000000000000000000"
+        },
+        {
+          "a_over_a_seam": "10000000000000000000000000000",
+          "nonrelativistic_delta_m2_ratio": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "relativistic_delta_m2_ratio": "1/100000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "persistent_soft_mass": [
+        {
+          "delta_m_over_m_decimal": "0.00498756211209",
+          "m_B_over_m_F_decimal": "1.00498756211",
+          "m_B_over_m_F_exact": "sqrt(101)/10",
+          "mu_soft_over_m": "1/10"
+        },
+        {
+          "delta_m_over_m_decimal": "0.414213562373",
+          "m_B_over_m_F_decimal": "1.41421356237",
+          "m_B_over_m_F_exact": "sqrt(2)",
+          "mu_soft_over_m": "1"
+        },
+        {
+          "delta_m_over_m_decimal": "9.04987562112",
+          "m_B_over_m_F_decimal": "10.0498756211",
+          "m_B_over_m_F_exact": "sqrt(101)",
+          "mu_soft_over_m": "10"
+        }
+      ],
+      "seam": {
+        "Gaussian_Born_rest_mode": [
+          {
+            "k_over_m": "0",
+            "kappa_over_m": "1",
+            "n_B_Born_decimal": "0.250000000000",
+            "n_B_Born_exact": "1/4",
+            "sigma_times_m": "0"
+          },
+          {
+            "k_over_m": "0",
+            "kappa_over_m": "1",
+            "n_B_Born_decimal": "0.0919698602929",
+            "n_B_Born_exact": "exp(-1)/4",
+            "sigma_times_m": "1/2"
+          },
+          {
+            "k_over_m": "0",
+            "kappa_over_m": "1",
+            "n_B_Born_decimal": "0.00457890972218",
+            "n_B_Born_exact": "exp(-4)/4",
+            "sigma_times_m": "1"
+          }
+        ],
+        "sharp_cutoff_example": {
+          "Lambda_over_m": "100",
+          "energy_density_over_m4": "63.2953538393",
+          "kappa_over_m": "1",
+          "number_density_over_m3": "1.24674707490"
+        },
+        "sharp_rest_mode": [
+          {
+            "k_over_m": "0",
+            "kappa_over_m": "1/10",
+            "n_B_decimal": "0.00250000000000",
+            "n_B_exact": "1/400"
+          },
+          {
+            "k_over_m": "0",
+            "kappa_over_m": "1",
+            "n_B_decimal": "0.250000000000",
+            "n_B_exact": "1/4"
+          },
+          {
+            "k_over_m": "0",
+            "kappa_over_m": "2",
+            "n_B_decimal": "1.00000000000",
+            "n_B_exact": "1"
+          }
+        ]
+      }
+    },
+    "numerical_control": {
+      "id": "P18.numeric.narrow_gaussian_delta_limit",
+      "method": "SciPy solve_ivp DOP853 direct time integration",
+      "status": "PASS",
+      "inputs": {
+        "omega": "1.3",
+        "kappa": "0.4",
+        "sigma": "0.002",
+        "integration_interval": "[-0.05, 0.05]",
+        "rtol": "2e-12",
+        "atol": "2e-14"
+      },
+      "alpha_delta": "1.000000000000-0.153846153846j",
+      "alpha_numeric": "0.999999680077-0.153776727111j",
+      "beta_delta": "0.000000000000+0.153846153846j",
+      "beta_numeric": "-0.000000000000+0.153774646656j",
+      "max_abs_error": "7.150719e-05",
+      "bogoliubov_norm_error": "3.330669e-16"
+    },
+    "claim_status": {
+      "Higgs_quadratic_cancellation": "OUT_OF_SCOPE_FREE_THEORY",
+      "elapsed_time_alone_breaks_SUSY": "CONTRADICTED_IN_CONSERVED_Q_CONTROL",
+      "free_local_seam_generates_permanent_soft_mass": "CONTRADICTED_WITHIN_SCOPE",
+      "interacting_or_order_parameter_mass_split": "OPEN_NOT_COMPUTED",
+      "scalar_CPT_control_forces_BF_occupation_equality": "NO_NOT_FORCED_IN_MODE_CONTROL"
+    }
+  }
+}

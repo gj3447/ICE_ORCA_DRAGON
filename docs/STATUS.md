@@ -240,9 +240,9 @@ and
 
 ## Research ontology memory
 
-Phase 15R–17 is now indexed in a repository-local typed research graph with **79 nodes and 132 directed
-relations**. It preserves 15 claims, 9 evidence groups, 9 explicit scopes, 9 open problems, 10
-literature sources, the Phase 16/17 exact run payloads, and cautious bridges to the older SYMPOSIUM KG.
+Phase 15R–18 is now indexed in a repository-local typed research graph with **105 nodes and 177 directed
+relations**. It preserves 19 claims, 12 evidence groups, 11 explicit scopes, 13 open problems, 16
+literature sources, the Phase 16–18 exact run payloads, and cautious bridges to the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
   is the human concept map.

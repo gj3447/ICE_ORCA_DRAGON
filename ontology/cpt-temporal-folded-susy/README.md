@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T16:33:58Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T16:42:39Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
 
 ## Quick answers
 
@@ -20,7 +20,9 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Is physical time reversal itself the supercharge? | No in this analysis. Its anti-complex-linearity and grading make it a discrete operation, not the tested complex-linear fermionic `Q`. | `claim:P17_TIME_REVERSAL_IS_SUPERCHARGE` |
 | What role remains for CPT/Pin? | CPT/Pin sewing is retained as a distinct bosonic discrete pairing or real structure between histories, not as the computed supercharge claim. | `concept:cpt-pin-sewing` |
 | Is Schwinger–Keldysh BRST particle supersymmetry? | No. The checked quartet is cohomological/ghost graded and is not a positive-energy particle-SUSY construction. | `claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 explicitly leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open. | Phase 16 and Phase 17 scope guards |
+| Does elapsed time itself break supersymmetry? | No in the conserved-charge control. If `[H,Q]=0`, a state annihilated by `Q` stays in that kernel under time evolution. | `claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY` |
+| Can one free instantaneous canonical seam explain missing superpartner pole masses? | No in the frozen Phase 18 class. It can prepare a non-SUSY state, but the post-post retarded B/F poles remain degenerate, and a sharp local kick has divergent energy density. | `claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING`; `claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE`; `claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open. | Phase 16–18 scope guards |
 
 ## Concept map
 
@@ -56,9 +58,20 @@ flowchart TD
   Alt --> TR["Physical time reversal ≠ tested Q"]
   Alt --> CPT["CPT/Pin sewing · distinct concept"]
   Alt --> SK["SK BRST ≠ particle SUSY"]
+
+  Programme --> P18["Phase 18 · free temporal-seam spectrum"]
+  P18 --> T18["Elapsed time alone breaks SUSY<br/>CONTRADICTED"]
+  P18 --> Pole18["Free seam moves B/F poles<br/>CONTRADICTED"]
+  P18 --> State18["Free seam prepares non-SUSY state<br/>SUPPORTED as finite witness"]
+  P18 --> UV18["Sharp local seam is UV admissible<br/>CONTRADICTED"]
+  Pole18 --> Frontier18["OPEN: interacting self-energies · persistent carrier<br/>FRW backreaction · Higgs power sensitivity"]
+  State18 --> Frontier18
+  UV18 --> Frontier18
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
+
+Phase 18 makes a different separation: an instantaneous free canonical seam can alter occupations and Wightman data without changing the common post-post retarded pole. This is a state-preparation witness, not a permanent soft-mass mechanism, and the unsmoothed local scalar kick is UV inadmissible.
 
 ## Core distinctions
 
@@ -70,6 +83,11 @@ The two supported Phase 17 nodes are distinct witnesses. One proves a finite dou
 | Linear reflection vs physical time reversal | Bare history pullback is complex-linear; Wigner time reversal is anti-complex-linear. Neither fact turns the operation into a conventional fermionic charge. |
 | Finite algebra witness vs physical theory | Matrix closure or projector rank is necessary evidence for a route, not an action, self-adjoint domain, conserved charge, or observable. |
 | SK BRST vs particle SUSY | SK charges are ghost-odd cohomological controls; the checked signed contour spectrum is not a positive physical Hamiltonian. |
+| Elapsed time vs SUSY-breaking dynamics | Conserved evolution with `[H,Q]=0` does not break SUSY. A seam can fail to preserve a SUSY domain, but that is a property of the seam data, not of time passing. |
+| Free canonical temporal seam (`concept:free-canonical-temporal-seam`) | An instantaneous standard Cauchy-data map preserves scalar symplectic flux or the finite-mode fermion CAR while leaving the future bulk operators unchanged. |
+| Initial state vs spectral pole (`concept:initial-state-versus-spectral-pole`) | Occupations, anomalous correlators, and Wightman functions can remember a seam while the free retarded commutator keeps the unchanged bulk pole. |
+| One-time excitation vs persistent carrier (`concept:persistent-susy-breaking-carrier`) | A non-SUSY state does not by itself supply a nondecaying `F`/`D` order parameter, memory sector, vacuum selection, or bulk soft spurion. |
+| Sharp kick vs admissible smoothing | The spatially local delta kick has linearly divergent number density and quadratically divergent energy density; the Gaussian result is only a bounded Born/numerical control, not a constructed UV completion. |
 
 ## IDs and claim states
 
@@ -132,6 +150,8 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p17-fundamental-doubled-sheet` | New internal two-sheet degree with complete multiplets | Identification with bare coordinate-time halves |
 | `scope:p17-temporal-seam-projector` | Finite real/projector algebra | Pin lift, action, domain, charge, and observable |
 | `scope:p17-sk-quartet` | Four-state cohomological control | Completed physical contour Hilbert space and ghost metric |
+| `scope:p18-free-instantaneous-seam` | Flat 3+1-dimensional equal-mass free Wess–Zumino mode control; instantaneous canonical Cauchy-data map; unchanged future bulk operators; post-post retarded-pole mass | Energy/time-nonlocal kernels, higher-time-derivative data, persistent carrier or bath, interactions, a full doubled Wess–Zumino Pin/common-domain construction, absolute scale, and Standard Model Higgs physics |
+| `scope:p18-uv-and-conditional-controls` | Sharp-kick cutoff integrals, Gaussian Born/numerical control, collisionless FRW dilution, and an inserted soft-term benchmark | Interacting Wigner self-energies, backreaction, thermalization, an absolute mass prediction, and a computed Higgs cancellation |
 
 ## Open construction ledger
 
@@ -148,8 +168,12 @@ All entries below have state `OPEN` in the graph.
 | `open:p17-reality-positivity-junction` | Simultaneous Majorana reality, positive inner product, and junction consistency |
 | `open:p17-sk-full-completion` | Full contour operator algebra and ghost metric |
 | `open:full-4d-sugra-interface` | Complete local-SUGRA interface, conserved seam charge, and anomaly-free constraint algebra |
+| `open:p18-interacting-wigner-self-energies` | Late-time interacting boson and fermion retarded Wigner self-energies after an admissible seam state |
+| `open:p18-persistent-order-parameter` | A finite-energy CPT/Pin-compatible nondecaying `F`/`D` order parameter, memory sector, or vacuum-selection mechanism |
+| `open:p18-frw-backreaction` | Expansion with interactions, thermalization, and backreaction beyond the conditional collisionless `a^-2` and `a^-3` controls |
+| `open:p18-higgs-power-sensitivity` | Regulator-independent Higgs power-sensitivity calculation in a consistent interacting doubled parent |
 
-The shortest honest statement of the research frontier is therefore: **finite doubled witnesses exist; a common physical theory does not yet.**
+The shortest honest statement of the research frontier is therefore: **finite doubled and state-preparation witnesses exist; a common interacting physical theory with persistent spectral breaking does not yet.**
 
 ## Repository artifacts
 
@@ -158,6 +182,7 @@ The shortest honest statement of the research frontier is therefore: **finite do
 | 15R | — | — | [`PHASE15R_RUN_RESULT.json`](../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json) |
 | 16 | [`phase16_bgg_single_source.py`](../../cpt_temporal_folded_susy/phase16_bgg_single_source.py) | [`PHASE16_BGG_SINGLE_SOURCE.md`](../../cpt_temporal_folded_susy/PHASE16_BGG_SINGLE_SOURCE.md) · [`PHASE16_BGG_SOURCE_NOTES.md`](../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) | [`phase16-result.json`](./evidence/phase16-result.json) |
 | 17 | [`phase17_time_line_fold_algebra.py`](../../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py) | [`PHASE17_TIME_LINE_FOLD_ALGEBRA.md`](../../cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md) | [`phase17-result.json`](./evidence/phase17-result.json) |
+| 18 | [`phase18_gaussian_seam_spectrum.py`](../../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py) | [`PHASE18_GAUSSIAN_SEAM_SPECTRUM.md`](../../cpt_temporal_folded_susy/PHASE18_GAUSSIAN_SEAM_SPECTRUM.md) | [`phase18-result.json`](./evidence/phase18-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -179,4 +204,11 @@ Six claim bridges and one concept bridge are `RELATED`, `RESOLVED` pointers to o
 | `claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS` | `modified-reality-temporal-projector-route` |
 | `concept:cpt-pin-sewing` | `bft-cpt-not-supercharge` |
 
-The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOLVED`. A resolved UID proves only that the target exists. It is not an evidence receipt, equivalence assertion, review outcome, or KG ratification.
+The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOLVED`. Phase 18 adds four more unresolved lookups, one for each scoped claim:
+
+- `claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY`
+- `claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING`
+- `claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE`
+- `claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE`
+
+There are therefore seven expected unresolved bridges in the current graph. No external UID was invented for the four new lookups. A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion, review outcome, or KG ratification.

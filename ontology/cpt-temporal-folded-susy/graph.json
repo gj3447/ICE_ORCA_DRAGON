@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-16T16:33:58Z",
+  "updated_at_utc": "2026-08-16T16:42:39Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -35,6 +35,22 @@
       "claim_ids": [
         "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
         "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS"
+      ]
+    },
+    {
+      "question": "Does elapsed time itself break supersymmetry?",
+      "answer": "No in the conserved-charge control: a Q-annihilated state remains Q-annihilated when [H,Q]=0.",
+      "claim_ids": [
+        "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY"
+      ]
+    },
+    {
+      "question": "Can one free instantaneous canonical seam explain missing superpartner pole masses?",
+      "answer": "No in the frozen Phase 18 class. It can prepare a non-SUSY state, but the post-post retarded B/F poles remain degenerate and a sharp local kick has divergent energy density.",
+      "claim_ids": [
+        "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+        "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+        "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE"
       ]
     }
   ],
@@ -86,6 +102,21 @@
         "concept:cpt-pin-sewing",
         "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
         "concept:schwinger-keldysh-brst"
+      ]
+    },
+    {
+      "id": "reading-path:free-seam-spectrum",
+      "title": "Why a free seam changes the state but not the pole spectrum",
+      "summary": "Follow the conserved-charge control, common retarded pole, explicit occupation mismatch, sharp-seam UV failure, and the interacting/order-parameter frontier.",
+      "nodes": [
+        "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+        "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+        "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+        "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+        "open:p18-interacting-wigner-self-energies",
+        "open:p18-persistent-order-parameter",
+        "open:p18-frw-backreaction",
+        "open:p18-higgs-power-sensitivity"
       ]
     }
   ],
@@ -149,6 +180,13 @@
       "type": "phase",
       "title": "Phase 17 — real-line fold algebra",
       "summary": "Direct calculation on coordinate t in R, separating local supersymmetry, literal reflection, fundamental sheet doubling, temporal seam reality, CPT/Pin sewing, and SK BRST.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "phase:p18",
+      "type": "phase",
+      "title": "Phase 18 — free temporal-seam spectrum",
+      "summary": "A bounded free equal-mass Wess-Zumino mode control separating seam/domain SUSY breaking, state occupation, post-post retarded poles, UV admissibility, and conditional late-time controls.",
       "state": "ACTIVE"
     },
     {
@@ -233,6 +271,27 @@
       "type": "concept",
       "title": "Schwinger–Keldysh BRST",
       "summary": "A topological contour-doubling algebra that encodes unitarity identities rather than particle superpartners.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:free-canonical-temporal-seam",
+      "type": "concept",
+      "title": "Free canonical temporal seam",
+      "summary": "An instantaneous standard Cauchy-data map at t=0 that preserves scalar symplectic flux or the finite-mode fermion CAR inner product while leaving future bulk operators unchanged.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:initial-state-versus-spectral-pole",
+      "type": "concept",
+      "title": "Initial-state data versus spectral pole",
+      "summary": "Occupation and anomalous Wightman data may change while a free post-post retarded commutator and its characteristic pole remain state independent.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:persistent-susy-breaking-carrier",
+      "type": "concept",
+      "title": "Persistent SUSY-breaking carrier",
+      "summary": "A nondecaying order parameter, memory sector, or vacuum selection mechanism required to convert a one-time seam event into permanent bulk soft terms.",
       "state": "ACTIVE"
     },
     {
@@ -386,6 +445,46 @@
       "state": "CONTRADICTED"
     },
     {
+      "id": "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+      "type": "claim",
+      "claim_id": "P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+      "title": "Elapsed time alone breaks supersymmetry",
+      "statement": "For a conserved supercharge with [H,Q]=0, mere elapsed coordinate time can take a Q-annihilated state outside the Q kernel.",
+      "summary": "Contradicted by the exact conserved-charge evolution control.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "type": "claim",
+      "claim_id": "P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "title": "A free instantaneous canonical seam generates permanent B/F pole splitting",
+      "statement": "With unchanged equal-mass free t>0 bulk operators, a finite instantaneous canonical Cauchy-data seam shifts the post-post retarded boson and fermion poles to unequal masses.",
+      "summary": "Contradicted in the frozen class: both characteristic denominators remain p^2-m^2 and delta m_pole^2 is zero.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "type": "claim",
+      "claim_id": "P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "title": "A free seam can prepare a non-SUSY state without moving the poles",
+      "statement": "An explicit canonical scalar kick and finite two-mode fermion Nambu control can yield unequal B/F occupations while the common free retarded pole stays at m.",
+      "summary": "Supported as a finite free-mode state witness; it is not a local fermionic Pin-sewing action.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "type": "claim",
+      "claim_id": "P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "title": "The sharp spatially local scalar seam prepares a UV-admissible finite-energy state",
+      "statement": "The delta-function scalar kick has finite continuum number and energy densities without temporal smoothing or UV completion.",
+      "summary": "Contradicted: number density diverges linearly and energy density quadratically with the spatial cutoff.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
       "id": "evidence:p15r-run-result",
       "type": "evidence",
       "title": "Phase 15R committed run result",
@@ -525,6 +624,83 @@
         "P17.SK_BRST_parity",
         "P17.SK_difference_exact",
         "P17.SK_signed_contour_control_not_positive_H"
+      ]
+    },
+    {
+      "id": "evidence:p18-charge-and-poles",
+      "type": "evidence",
+      "title": "Phase 18 conserved-charge and free-pole checks",
+      "summary": "Eighteen exact checks prove the conserved-charge control, unchanged scalar and fermion post-seam generators, common characteristic shell, and seam-independent post-post scalar retarded kernel.",
+      "state": "VERIFIED",
+      "observed_status": "18_PASS",
+      "check_ids": [
+        "P18.time.conserved_charge",
+        "P18.time.susy_state_stays_susy",
+        "P18.domain.multiplet_marker",
+        "P18.scalar.generator_square",
+        "P18.scalar.evolution_equation",
+        "P18.scalar.evolution_symplectic",
+        "P18.scalar.general_seam_flux_identity",
+        "P18.scalar.post_seam_evolution",
+        "P18.scalar.characteristic_polynomial",
+        "P18.fermion.hamiltonian_square",
+        "P18.fermion.characteristic_polynomial",
+        "P18.fermion.resolvent_factorization",
+        "P18.fermion.evolution_equation",
+        "P18.fermion.evolution_unitary",
+        "P18.bulk.common_BF_shell",
+        "P18.propagator.scalar_retarded_open_EOM",
+        "P18.propagator.scalar_retarded_jump",
+        "P18.propagator.scalar_retarded_seam_independence"
+      ]
+    },
+    {
+      "id": "evidence:p18-state-and-cpt",
+      "type": "evidence",
+      "title": "Phase 18 seam-state and CPT-sheet checks",
+      "summary": "Seventeen exact checks exhibit a canonical scalar kick, state-dependent occupation and Wightman data, state-independent spectral data, and CPT-compatible doubled scalar eigenchannels.",
+      "state": "VERIFIED",
+      "observed_status": "17_PASS",
+      "check_ids": [
+        "P18.seam.scalar_kick_symplectic",
+        "P18.seam.scalar_kick_time_reversal_reciprocity",
+        "P18.seam.scalar_mode_continuity",
+        "P18.seam.scalar_mode_jump",
+        "P18.seam.scalar_post_frequency",
+        "P18.seam.scalar_bogoliubov_norm",
+        "P18.prediction.scalar_occupation",
+        "P18.seam.fermion_CAR",
+        "P18.prediction.fermion_occupation",
+        "P18.propagator.spectral_state_independence",
+        "P18.propagator.statistical_state_dependence",
+        "P18.propagator.image_bulk_equation",
+        "P18.CPT.sheet_kernel",
+        "P18.CPT.sheet_eigenchannels",
+        "P18.CPT.real_sheet_diagonalization",
+        "P18.CPT.doubled_kick_symplectic",
+        "P18.prediction.sheet_occupation_sum_difference"
+      ]
+    },
+    {
+      "id": "evidence:p18-uv-and-conditional-controls",
+      "type": "evidence",
+      "title": "Phase 18 UV, dilution, soft-term, and mutant controls",
+      "summary": "Twelve exact checks establish sharp-kick cutoff divergences and bounded conditional formulas; the snapshot separately records one passing SciPy narrow-Gaussian control outside the exact-check ledger.",
+      "state": "VERIFIED",
+      "observed_status": "12_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P18.UV.number_density_primitive",
+        "P18.UV.energy_density_primitive",
+        "P18.UV.sharp_asymptotics",
+        "P18.UV.gaussian_pulse_fourier",
+        "P18.prediction.gaussian_Born_occupation",
+        "P18.FRW.relativistic_dilution",
+        "P18.FRW.nonrelativistic_dilution",
+        "P18.soft.conditional_mass_ratio",
+        "P18.soft.small_breaking_series",
+        "P18.mutant.reject_noncanonical_scalar_seam",
+        "P18.mutant.reject_nonunitary_fermion_seam",
+        "P18.mutant.detect_inserted_bulk_soft_mass"
       ]
     },
     {
@@ -686,6 +862,46 @@
       ]
     },
     {
+      "id": "scope:p18-free-instantaneous-seam",
+      "type": "scope",
+      "title": "P18 free instantaneous canonical seam",
+      "summary": "A flat 3+1-dimensional equal-mass free Wess-Zumino mode control with an instantaneous canonical initial-data map and unchanged future bulk operators.",
+      "state": "ACTIVE",
+      "includes": [
+        "standard instantaneous Cauchy-data map",
+        "scalar symplectic and finite-mode fermion CAR preservation",
+        "unchanged t>0 kinetic and mass operators",
+        "mass defined by the t,t'>0 retarded spectral pole"
+      ],
+      "excludes": [
+        "energy-dependent or time-nonlocal seam kernels",
+        "higher-time-derivative extra Cauchy data",
+        "persistent order parameters or baths",
+        "interacting self-energies",
+        "full doubled Wess-Zumino Pin action, common domain, and conserved sheet-mixing charge",
+        "absolute SUSY-breaking scale and Standard Model Higgs loops"
+      ]
+    },
+    {
+      "id": "scope:p18-uv-and-conditional-controls",
+      "type": "scope",
+      "title": "P18 UV and conditional late-time controls",
+      "summary": "Sharp-kick cutoff integrals plus explicitly conditional smoothing, collisionless FRW, and inserted-soft-term benchmarks.",
+      "state": "ACTIVE",
+      "includes": [
+        "sharp scalar-kick occupation integrals",
+        "finite-duration Gaussian Born control outside the strict seam theorem",
+        "conditional collisionless relativistic and nonrelativistic dilution",
+        "inserted persistent scalar soft-mass benchmark"
+      ],
+      "excludes": [
+        "computed interacting Wigner self-energies",
+        "FRW backreaction and thermalization",
+        "an absolute mass prediction",
+        "a computed Higgs naturalness cancellation"
+      ]
+    },
+    {
       "id": "open:p17-pin-clifford-lift",
       "type": "open_problem",
       "title": "Construct the Pin/Clifford lift",
@@ -755,6 +971,38 @@
       "title": "Construct the full 4D SUGRA interface",
       "summary": "No complete local-SUGRA interface, conserved seam charge, or anomaly-free constraint algebra has been built.",
       "question": "Can a full 4D N=1 SUGRA bulk-plus-seam system close on a common domain?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p18-interacting-wigner-self-energies",
+      "type": "open_problem",
+      "title": "Compute interacting late-time Wigner self-energies",
+      "summary": "The free pole theorem does not determine interacting state-dependent boson and fermion quasiparticle self-energies.",
+      "question": "Do retarded Wigner self-energies in interacting Wess-Zumino theory approach unequal late-time quasiparticle poles after an admissible seam state?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p18-persistent-order-parameter",
+      "type": "open_problem",
+      "title": "Construct a persistent SUSY-breaking carrier",
+      "summary": "A one-time free seam supplies no nondecaying bulk soft spurion or vacuum-selection mechanism.",
+      "question": "Can a CPT/Pin-compatible seam select or source a finite-energy F/D order parameter that persists in the future bulk?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p18-frw-backreaction",
+      "type": "open_problem",
+      "title": "Compute FRW dilution and backreaction",
+      "summary": "The reported a^-2 and a^-3 laws are collisionless conditional controls, not a solved cosmological evolution.",
+      "question": "After expansion, interactions, thermalization, and backreaction, can any seam-induced SUSY-breaking medium effect survive to late times?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p18-higgs-power-sensitivity",
+      "type": "open_problem",
+      "title": "Compute the Higgs power sensitivity",
+      "summary": "No Phase 18 calculation establishes cancellation of Standard Model Higgs quadratic sensitivity after seam breaking.",
+      "question": "Does a consistent interacting doubled parent retain a regulator-independent boson/fermion UV cancellation while producing a non-SUSY observable spectrum?",
       "state": "OPEN"
     },
     {
@@ -880,6 +1128,66 @@
       "uri": "https://arxiv.org/abs/1712.04459"
     },
     {
+      "id": "source:wess-zumino-1974",
+      "type": "source",
+      "title": "A Lagrangian model invariant under supergauge transformations",
+      "summary": "Primary source for the four-dimensional supersymmetric boson/fermion model used as the free equal-mass baseline; it does not supply the temporal-seam theorem.",
+      "state": "PRIMARY",
+      "citation": "J. Wess and B. Zumino, A Lagrangian Model Invariant Under Supergauge Transformations, Physics Letters B 49 (1974) 52-54",
+      "version": "DOI record",
+      "uri": "https://doi.org/10.1016/0370-2693(74)90578-4"
+    },
+    {
+      "id": "source:collins-initial-propagators-2013",
+      "type": "source",
+      "title": "Initial state propagators",
+      "summary": "Primary source for encoding Gaussian initial data as propagator corrections with unchanged bulk frequencies; the Phase 18 matrix proof is local evidence.",
+      "state": "PRIMARY",
+      "citation": "H. Collins, Initial state propagators, JHEP 11 (2013) 077",
+      "version": "arXiv:1309.2656",
+      "uri": "https://arxiv.org/abs/1309.2656"
+    },
+    {
+      "id": "source:collins-holman-2005",
+      "type": "source",
+      "title": "Renormalization of initial conditions and the trans-Planckian problem of inflation",
+      "summary": "Primary source for the distinction between standard bulk renormalization and divergences localized on an initial surface; it does not make a sharp infinite-energy state admissible.",
+      "state": "PRIMARY",
+      "citation": "H. Collins and R. Holman, Renormalization of initial conditions and the trans-Planckian problem of inflation, Physical Review D 71 (2005) 085009",
+      "version": "arXiv:hep-th/0501158",
+      "uri": "https://arxiv.org/abs/hep-th/0501158"
+    },
+    {
+      "id": "source:hung-smolkin-sorkin-2013",
+      "type": "source",
+      "title": "(Non) supersymmetric quantum quenches",
+      "summary": "Primary interacting proof-of-principle for late nonthermal SUSY breaking in a 2+1-dimensional large-N/Hartree-Fock vector model, not a 3+1-dimensional Wess-Zumino vacuum-pole result.",
+      "state": "PRIMARY",
+      "citation": "L.-Y. Hung, M. Smolkin and E. Sorkin, (Non) supersymmetric quantum quenches, JHEP 12 (2013) 022",
+      "version": "arXiv:1307.0376",
+      "uri": "https://arxiv.org/abs/1307.0376"
+    },
+    {
+      "id": "source:girardello-grisaru-1982",
+      "type": "source",
+      "title": "Soft breaking of supersymmetry",
+      "summary": "Primary classification baseline for soft versus hard SUSY-breaking operators; it does not derive a seam-generated spurion.",
+      "state": "PRIMARY",
+      "citation": "L. Girardello and M. T. Grisaru, Soft breaking of supersymmetry, Nuclear Physics B 194 (1982) 65-76",
+      "version": "DOI record",
+      "uri": "https://doi.org/10.1016/0550-3213(82)90512-0"
+    },
+    {
+      "id": "source:boyle-turok-2021",
+      "type": "source",
+      "title": "Two-sheeted universe, analyticity and the arrow of time",
+      "summary": "Primary motivation for an analytic two-sheet spacetime exchanged by an isometry; it neither proves a SUSY seam nor supplies the Phase 18 spectrum theorem.",
+      "state": "PRIMARY",
+      "citation": "L. Boyle and N. Turok, Two-sheeted universe, analyticity and the arrow of time",
+      "version": "arXiv:2109.06204",
+      "uri": "https://arxiv.org/abs/2109.06204"
+    },
+    {
       "id": "artifact:p15r-run-result",
       "type": "artifact",
       "title": "Phase 15R run result",
@@ -964,6 +1272,38 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase17-result.json",
       "sha256": "e02af8550c74658d5edb45948dbb406b83fcc6a92d8584b201395390b088a6da"
+    },
+    {
+      "id": "artifact:p18-script",
+      "type": "artifact",
+      "title": "Phase 18 executable",
+      "summary": "Exact SymPy free temporal-seam spectrum calculation with a separate SciPy narrow-Gaussian control.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py",
+      "sha256": "01f2d5d04341093494e185529dd67630aef5896e842a4bedddc6d1309271e221",
+      "introduced_in_commit": "1a5d6d4326da3451ff63274cee654fa504f82f9c"
+    },
+    {
+      "id": "artifact:p18-report",
+      "type": "artifact",
+      "title": "Phase 18 report",
+      "summary": "Human-readable theorem, explicit seam witness, cutoff predictions, conditional controls, and Phase 19 decision tree.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE18_GAUSSIAN_SEAM_SPECTRUM.md",
+      "sha256": "12b307d0cb0ee41f0bc02ef10da8239ee36b1118c81b7e10e27b3a93f67adfd5",
+      "introduced_in_commit": "1a5d6d4326da3451ff63274cee654fa504f82f9c"
+    },
+    {
+      "id": "artifact:p18-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 18 evidence snapshot",
+      "summary": "Persisted 47-exact-check run payload plus one separately recorded numerical control captured on 2026-08-16.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase18-result.json",
+      "sha256": "bb0f00c4b9ea8fb8c7a6a5b57654ce21e2618fdc34d88f9a7166f29d0d92c695"
     },
     {
       "id": "artifact:scientific-cli-manual",
@@ -1813,6 +2153,282 @@
       "from": "concept:physical-time-reversal",
       "relation": "PART_OF",
       "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:133",
+      "from": "phase:p18",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:134",
+      "from": "concept:free-canonical-temporal-seam",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:135",
+      "from": "concept:initial-state-versus-spectral-pole",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:136",
+      "from": "concept:persistent-susy-breaking-carrier",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:137",
+      "from": "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+      "relation": "PART_OF",
+      "to": "phase:p18"
+    },
+    {
+      "id": "edge:138",
+      "from": "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p18-charge-and-poles",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:139",
+      "from": "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p18-free-instantaneous-seam"
+    },
+    {
+      "id": "edge:140",
+      "from": "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p18-report"
+    },
+    {
+      "id": "edge:141",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "PART_OF",
+      "to": "phase:p18"
+    },
+    {
+      "id": "edge:142",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "ABOUT",
+      "to": "concept:initial-state-versus-spectral-pole"
+    },
+    {
+      "id": "edge:143",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p18-charge-and-poles",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:144",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p18-free-instantaneous-seam"
+    },
+    {
+      "id": "edge:145",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "note": "Phase 18 asks whether the Phase 17 seam obstruction changes the free future spectral poles; it does not reverse the Phase 17 domain statement."
+    },
+    {
+      "id": "edge:146",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p18-report"
+    },
+    {
+      "id": "edge:147",
+      "from": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "relation": "PART_OF",
+      "to": "phase:p18"
+    },
+    {
+      "id": "edge:148",
+      "from": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "relation": "ABOUT",
+      "to": "concept:free-canonical-temporal-seam"
+    },
+    {
+      "id": "edge:149",
+      "from": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "relation": "ABOUT",
+      "to": "concept:initial-state-versus-spectral-pole"
+    },
+    {
+      "id": "edge:150",
+      "from": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p18-state-and-cpt",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:151",
+      "from": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p18-charge-and-poles",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:152",
+      "from": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p18-free-instantaneous-seam"
+    },
+    {
+      "id": "edge:153",
+      "from": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p18-report"
+    },
+    {
+      "id": "edge:154",
+      "from": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "relation": "PART_OF",
+      "to": "phase:p18"
+    },
+    {
+      "id": "edge:155",
+      "from": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "relation": "ABOUT",
+      "to": "concept:free-canonical-temporal-seam"
+    },
+    {
+      "id": "edge:156",
+      "from": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p18-uv-and-conditional-controls",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:157",
+      "from": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p18-uv-and-conditional-controls"
+    },
+    {
+      "id": "edge:158",
+      "from": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p18-report"
+    },
+    {
+      "id": "edge:159",
+      "from": "evidence:p18-charge-and-poles",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p18-script"
+    },
+    {
+      "id": "edge:160",
+      "from": "evidence:p18-charge-and-poles",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p18-evidence-snapshot"
+    },
+    {
+      "id": "edge:161",
+      "from": "evidence:p18-state-and-cpt",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p18-script"
+    },
+    {
+      "id": "edge:162",
+      "from": "evidence:p18-state-and-cpt",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p18-evidence-snapshot"
+    },
+    {
+      "id": "edge:163",
+      "from": "evidence:p18-uv-and-conditional-controls",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p18-script"
+    },
+    {
+      "id": "edge:164",
+      "from": "evidence:p18-uv-and-conditional-controls",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p18-evidence-snapshot"
+    },
+    {
+      "id": "edge:165",
+      "from": "artifact:p18-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p18"
+    },
+    {
+      "id": "edge:166",
+      "from": "artifact:p18-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p18"
+    },
+    {
+      "id": "edge:167",
+      "from": "artifact:p18-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p18"
+    },
+    {
+      "id": "edge:168",
+      "from": "concept:free-canonical-temporal-seam",
+      "relation": "CITES",
+      "to": "source:wess-zumino-1974"
+    },
+    {
+      "id": "edge:169",
+      "from": "concept:initial-state-versus-spectral-pole",
+      "relation": "CITES",
+      "to": "source:collins-initial-propagators-2013"
+    },
+    {
+      "id": "edge:170",
+      "from": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "relation": "CITES",
+      "to": "source:collins-holman-2005"
+    },
+    {
+      "id": "edge:171",
+      "from": "concept:persistent-susy-breaking-carrier",
+      "relation": "CITES",
+      "to": "source:hung-smolkin-sorkin-2013"
+    },
+    {
+      "id": "edge:172",
+      "from": "concept:persistent-susy-breaking-carrier",
+      "relation": "CITES",
+      "to": "source:girardello-grisaru-1982"
+    },
+    {
+      "id": "edge:173",
+      "from": "concept:cpt-pin-sewing",
+      "relation": "CITES",
+      "to": "source:boyle-turok-2021"
+    },
+    {
+      "id": "edge:174",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "MOTIVATES",
+      "to": "open:p18-interacting-wigner-self-energies"
+    },
+    {
+      "id": "edge:175",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "MOTIVATES",
+      "to": "open:p18-persistent-order-parameter"
+    },
+    {
+      "id": "edge:176",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "MOTIVATES",
+      "to": "open:p18-frw-backreaction"
+    },
+    {
+      "id": "edge:177",
+      "from": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "relation": "MOTIVATES",
+      "to": "open:p18-higgs-power-sensitivity"
     }
   ],
   "kg_bridges": [
@@ -1912,6 +2528,46 @@
       "lookup_key": "Phase17 Schwinger Keldysh BRST particle supersymmetry",
       "checked_at_utc": "2026-08-16T15:45:00Z",
       "note": "No safe direct live KG node was found."
+    },
+    {
+      "local_node_id": "claim:P18_ELAPSED_TIME_ALONE_BREAKS_SUSY",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "lookup_key": "P18 elapsed time alone breaks supersymmetry conserved charge",
+      "checked_at_utc": "2026-08-16T16:42:39Z",
+      "note": "No safe direct live KG node was identified; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "lookup_key": "P18 free canonical temporal seam boson fermion pole splitting",
+      "checked_at_utc": "2026-08-16T16:42:39Z",
+      "note": "No safe direct live KG node was identified; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "lookup_key": "P18 free temporal seam non-SUSY state unchanged poles",
+      "checked_at_utc": "2026-08-16T16:42:39Z",
+      "note": "No safe direct live KG node was identified; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "lookup_key": "P18 sharp temporal seam UV admissible finite energy state",
+      "checked_at_utc": "2026-08-16T16:42:39Z",
+      "note": "No safe direct live KG node was identified; no external UID was invented."
     }
   ]
 }
