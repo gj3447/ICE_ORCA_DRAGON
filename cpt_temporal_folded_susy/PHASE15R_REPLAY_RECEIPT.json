@@ -1,0 +1,100 @@
+{
+  "schema_version": "ice-science-replay-receipt/v1",
+  "receipt_id": "cpt-temporal-folded-susy-2026-08-16-phase15r-independent-replay",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase15r",
+  "registration": "PREREGISTERED",
+  "artifact_timing": "POST_RUN_REPLAY",
+  "novelty": "REPRODUCTION",
+  "tier": "T2",
+  "result_scope": "SOURCE_SCOPED_PARENT_SIGN_REPRODUCTION",
+  "replay": {
+    "actor": "/root/p15r_result_independent",
+    "mode": "INDEPENDENT_READ_ONLY_REPLAY",
+    "start_observed_at_utc": "2026-08-16T10:04:49Z",
+    "completion_observed_at_utc": "2026-08-16T10:05:05Z",
+    "tool_wall_time_seconds": 3.222099382,
+    "command": "uv run --with sympy python3 cpt_temporal_folded_susy/phase15r_parent_sign_reproduction.py",
+    "exit_code": 0,
+    "head_before_and_after": "3a9fec4c071e56113adde6387f64e7383e7ca9aa",
+    "executable_add_commit": "433b4920155d63afd07f74a5800f88c25216d94d",
+    "executable_sha256_before_and_after": "af3e3d021e995833a634b1fb7afda7d1cd4faace60113bb425d467301424f40d",
+    "first_run_receipt_sha256_before_and_after": "aa4b19116088a3ea52c71b8b7643233a05c3164132b8d2e47c859ff588f98fbe",
+    "worktree_clean_before_and_after": true,
+    "files_edited_created_or_committed": false
+  },
+  "comparison_policy": {
+    "first_run_head_commit": "433b4920155d63afd07f74a5800f88c25216d94d",
+    "replay_head_commit": "3a9fec4c071e56113adde6387f64e7383e7ca9aa",
+    "expected_run_specific_exclusion": "machine_record.provenance.head_commit",
+    "reason": "The first run occurred at the executable add-commit; replay occurred after the committed first-run receipt. All immutable provenance and scientific fields must remain identical.",
+    "canonical_first_run_machine_payload_sha256_excluding_only_head_commit": "1677f4d7bd21a2a07bd1a8b6542966a2a18e037e84bd7413b8c26cf8166db7a4",
+    "science_terminal_subset_sha256": "dc8960626b8eb121ec0a77307d0cdb77fdd9837f8c395f90855453f7ebb9d06b"
+  },
+  "replay_terminal": {
+    "positive_checks": 47,
+    "mutant_categories_rejected": 17,
+    "mutant_fixtures_rejected": 18,
+    "scope_guards": 4,
+    "scientific_observations": 24,
+    "known_prior_matches": 24,
+    "hohl": {
+      "inertia": [0, 0, 3],
+      "candidate_status": "REJECT_SIGN",
+      "full_offshell_coverage_pass": true
+    },
+    "kallosh": {
+      "inertia": [1, 0, 2],
+      "candidate_status": "BOSONIC_PARENT_ONLY",
+      "full_offshell_coverage_pass": false
+    },
+    "adm_internal": {
+      "inertia": [1, 0, 2],
+      "evidential_weight": "NONE"
+    },
+    "bosonic_eligible_source_ids": [
+      "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3"
+    ],
+    "full_offshell_eligible_source_ids": [],
+    "bosonic_parent_selection_status": "SINGLE_ELIGIBLE",
+    "full_offshell_parent_selection_status": "NONE_ELIGIBLE",
+    "target_classifications": [
+      {
+        "target_claim_id": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "SUPPORTS",
+        "qualification": "NONE"
+      },
+      {
+        "target_claim_id": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "CONTRADICTS",
+        "qualification": "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS"
+      }
+    ],
+    "scope": "FROZEN_TWO_SOURCE_CENSUS_ONLY",
+    "phase15a_k2_evaluated": false
+  },
+  "comparison": {
+    "immutable_provenance_match": true,
+    "source_terminal_formulas_match": true,
+    "hessians_and_inertias_match": true,
+    "candidate_records_match": true,
+    "census_and_selection_records_match": true,
+    "target_classifications_match": true,
+    "audit_counts_match": true,
+    "scientific_payload_match": true,
+    "only_expected_head_commit_delta": true
+  },
+  "validity": "VALID",
+  "inference": "SUPPORTS",
+  "qualification": "INDEPENDENT_REPLAY_PASS",
+  "reproduction": "INDEPENDENT_REPLAY_EXACT_SCIENTIFIC_PAYLOAD_MATCH",
+  "scientific_verdict": "BOSONIC_PARENT_ONLY_IN_FROZEN_CENSUS__NO_VALID_FULL_OFFSHELL_SINGLE_PARENT",
+  "programme_appraisal": "PHASE15R_SOURCE_REPAIR_REPRODUCED",
+  "fitting_risk": "NOT_APPLICABLE",
+  "bayes": "NOT_ESTIMABLE",
+  "lakatos": "NOT_APPLICABLE",
+  "kg_action": "NONE",
+  "ratification_request": "none",
+  "follow_up": "Close Phase 15R documentation. Any new single-source parent, including a Kugo-based candidate, requires a new preregistered cycle before calculation."
+}
