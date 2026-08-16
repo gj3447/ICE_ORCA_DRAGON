@@ -26,3 +26,7 @@ coverage/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Local scientific reference binaries (sources/checksums stay trackable)
+/output/pdf/tool-manuals/*.pdf
+/output/manual-bundles/*.zip

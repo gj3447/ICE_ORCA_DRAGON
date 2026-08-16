@@ -3,6 +3,9 @@
 Installed on dev-01 on 2026-08-16. These tools support calculations; none imposes a research contract or
 turns a symbolic identity into physical evidence.
 
+For version-specific commands, environment separation, examples, and the local offline-manual index, see
+[`SCIENTIFIC_CLI_MANUAL.md`](SCIENTIFIC_CLI_MANUAL.md).
+
 ## Ready now
 
 | Tool | Installed version | Best use |
@@ -23,7 +26,9 @@ turns a symbolic identity into physical evidence.
 | [OrdinaryDiffEq.jl](https://docs.sciml.ai/OrdinaryDiffEq/stable/) | 7.6.0 | cosmological background and perturbation ODEs |
 
 The Jupyter tool environment also contains NumPy, pandas, Matplotlib, mpmath, NetworkX, and an
-IPython kernel. It is isolated by `uv tool`; it does not modify this repository's `uv.lock`.
+IPython kernel. It is isolated by `uv tool`; it does not modify this repository's `uv.lock`. The two
+Python environments intentionally differ: the repository `.venv` currently has SciPy 1.18.0, while
+the Jupyter tool environment has SciPy 1.17.1.
 
 ## Common commands
 
