@@ -35,13 +35,15 @@ uv sync --locked
   (Effect scoped 임시 사본에서 실행하므로 committed JSON 불변)
 - 단일 재현 검사: `./ice repro --only <name>`
 - 스크립트 정보: `./ice info <name>` (경로 / 독스트링 / 산출 result JSON)
+- 연구 그래프 검사·조회: `./ice ontology validate`, `./ice ontology summary`,
+  `./ice ontology show <node-id>`, `./ice ontology trace <node-id>`
 - 기존 numerology 검산(선택): `python3 ice_prereg_check.py`
   (과거 P01–P15 산출물 재현용이며 새 연구의 필수 게이트가 아니다)
 
 `name` 은 stem 또는 relpath, unique-prefix 매칭이 된다.
 
 `test/`에는 Effect/Vitest 제어면 계약 검사가 있다 (`npm run check` = strict typecheck +
-12 tests). 자동 GitHub Actions CI는 아직 없다.
+21 tests). 자동 GitHub Actions CI는 아직 없다.
 이 검사는 도구 회귀만 막는다. "단위검사가 통과했다"는 물리 연구 완료 근거가 아니며,
 계산 결과와 물리적 해석은 분리해서 보고한다.
 
@@ -62,6 +64,17 @@ basis-dependent metric 때문에 `NONPORTABLE_FAIL`이며 tolerance로 숨기지
 
 과거 `*_RESEARCH_CONTRACT.json`, run receipt, replay receipt는 당시 결과의 재현 provenance일 뿐
 새 작업을 지배하지 않는다. 기존 실행기가 그것을 읽는 경우 역사적 재현을 위해 보존한다.
+
+## 연구 온톨로지
+
+- 계산이 기존 claim의 지위, 직접 evidence, 적용 scope, 또는 다음 open problem을 실질적으로
+  바꾸면 `ontology/`의 repository-local research graph와 evidence snapshot을 함께 갱신하고
+  `./ice ontology validate`로 검증한다. 문구 수정이나 중간 실험마다 의례적으로 갱신하지 않는다.
+- 온톨로지는 연구 내용을 찾고 추적하기 위한 **기억·색인 계층**이다. 연구 계약, 사전등록,
+  물리적 ratification, 또는 외부 KG 승격을 뜻하지 않는다. 외부 KG에 쓸 권한이나 정확한 대응
+  노드가 없으면 local graph에 `UNRESOLVED` bridge로 남기고 임의로 새 UID를 만들지 않는다.
+- claim은 계산된 사실, 해석, 열린 가설을 구분하고, evidence는 재현 명령·script hash·개별 check
+  ID를 보존한다. 사람이 먼저 읽을 수 있는 개념 지도와 기계가 검사하는 JSON을 함께 유지한다.
 
 ## 커밋 규율
 

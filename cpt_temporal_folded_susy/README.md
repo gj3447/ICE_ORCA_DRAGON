@@ -41,6 +41,8 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE16_BGG_SINGLE_SOURCE.md` | Phase 16 보고서 — E177–E185. bosonic parent PASS, specified strict auxiliary-retaining FLRW tangency FAIL |
 | `phase17_time_line_fold_algebra.py` | 스칼라 clock 없이 coordinate time-line 자체를 쓰는 local/reflection/doubled-sheet/SK algebra exact 실행체 |
 | `PHASE17_TIME_LINE_FOLD_ALGEBRA.md` | Phase 17 보고서 — E186–E192. literal local half-exchange는 실패; fixed-fiber exchange와 별도 doubled-real projector witness는 성공 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–17의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
@@ -90,6 +92,9 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   exact하게 존재한다. 따라서 leading open route는 doubled real sheet-mixing fold candidate +
   각 sheet 내부의 standard SUSY다. Pin/Clifford lift, 두 witness의 common-domain 결합,
   action/conserved charge/physical sheet anchor는 아직 OPEN이다.
+- 이 경계의 claim, exact check, primary source, 적용 범위와 OPEN 항목은
+  `../ontology/cpt-temporal-folded-susy/graph.json`에 stable ID로 연결했다. `./ice ontology validate`
+  는 그 연결과 artifact hash를 검사하며, 그래프 자체는 연구 계약이나 외부 KG 승격이 아니다.
 
 ## 다음 계산
 

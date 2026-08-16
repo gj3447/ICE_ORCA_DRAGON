@@ -1,0 +1,250 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P17_TIME_LINE_FOLD_ALGEBRA_20260816",
+  "phase": "P17",
+  "observed_at_utc": "2026-08-16T15:53:21Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py",
+    "sha256": "4723f6217f1014c52001dd989fb393e7c8547a1a0556bf7c0141c0dcaa20d615",
+    "introduced_in_commit": "5c95692b4c9ca6d92c617382f5bb9bf6506bfb5d"
+  },
+  "exact_checks": 34,
+  "checks": [
+    {
+      "id": "P17.branch_reflection",
+      "status": "PASS",
+      "statement": "the linear fold is a unitary involution that exchanges the two half-line labels"
+    },
+    {
+      "id": "P17.branch_projectors",
+      "status": "PASS",
+      "statement": "the fold swaps the negative- and positive-half projectors"
+    },
+    {
+      "id": "P17.N1_CAR",
+      "status": "PASS",
+      "statement": "two exact CAR modes realize the positive-energy 4D N=1 rest-frame algebra"
+    },
+    {
+      "id": "P17.N1_fermion_parity",
+      "status": "PASS",
+      "statement": "both Weyl supercharge components are odd under physical fermion parity"
+    },
+    {
+      "id": "P17.local_standard_closure",
+      "status": "PASS",
+      "statement": "the same-t local charge retains the standard algebra on both halves"
+    },
+    {
+      "id": "P17.local_same_half",
+      "status": "PASS",
+      "statement": "a support-local charge has exactly zero open-half cross blocks"
+    },
+    {
+      "id": "P17.fold_fixed_fiber_closure",
+      "status": "PASS",
+      "statement": "the bidirectional sheet flip preserves the fixed-positive-energy N=1 algebra"
+    },
+    {
+      "id": "P17.fold_physical_parity",
+      "status": "PASS",
+      "statement": "the folded charge remains odd under physical fermion parity"
+    },
+    {
+      "id": "P17.fold_bidirectional_exchange",
+      "status": "PASS",
+      "statement": "each folded Weyl charge has nonzero rank-two cross blocks in both directions"
+    },
+    {
+      "id": "P17.half_sign_is_not_fermion_parity",
+      "status": "PASS",
+      "statement": "multiplying fermion parity by time-half sign makes the folded charge even and is rejected"
+    },
+    {
+      "id": "P17.unitary_mixing_family",
+      "status": "PASS",
+      "statement": "a continuous unitary local/fold interpolation preserves the algebra for every real theta"
+    },
+    {
+      "id": "P17.mixing_not_selected",
+      "status": "PASS",
+      "statement": "the branch-exchange weight is sin(theta)^2, so closure alone does not select it"
+    },
+    {
+      "id": "P17.exchange_phase_family",
+      "status": "PASS",
+      "statement": "the pure-exchange phase is removable by an unanchored branch rephasing"
+    },
+    {
+      "id": "P17.local_fold_basis_equivalence",
+      "status": "PASS",
+      "statement": "without a physical sheet anchor, local and exchange charges are related by a parity-controlled basis change"
+    },
+    {
+      "id": "P17.one_way_cross",
+      "status": "PASS",
+      "statement": "a one-way arrow can be inserted algebraically"
+    },
+    {
+      "id": "P17.one_way_closure_rejected",
+      "status": "PASS",
+      "statement": "the one-way arrow fails the standard N=1 adjoint closure"
+    },
+    {
+      "id": "P17.nonunitary_branch_mutation",
+      "status": "PASS",
+      "statement": "a nonunitary branch factor cannot preserve the standard closure"
+    },
+    {
+      "id": "P17.reflection_reverses_time_momentum",
+      "status": "PASS",
+      "statement": "the time pullback reverses the signed translation generator"
+    },
+    {
+      "id": "P17.reflection_translation_obstruction",
+      "status": "PASS",
+      "statement": "the reflection-composed charge anticommutes rather than commutes with signed time translation"
+    },
+    {
+      "id": "P17.sharp_half_not_translation_invariant",
+      "status": "PASS",
+      "statement": "the sharp sign-of-coordinate split is not invariant under time translation at the seam"
+    },
+    {
+      "id": "P17.signed_time_generator_not_positive_closure",
+      "status": "PASS",
+      "statement": "a signed full-line time generator has a negative eigenvalue and cannot equal a physical-adjoint anticommutator"
+    },
+    {
+      "id": "P17.real_temporal_seam_closure_obstruction",
+      "status": "PASS",
+      "statement": "v^0=|zeta_1|^2+|zeta_2|^2 vanishes only for the zero real SUSY parameter"
+    },
+    {
+      "id": "P17.complexified_temporal_seam_control",
+      "status": "PASS",
+      "statement": "a nonzero tangent complexified parameter exists only after abandoning Lorentzian conjugacy"
+    },
+    {
+      "id": "P17.geometric_reflection_linearity",
+      "status": "PASS",
+      "statement": "the bare pullback is a complex-linear operation on history functions"
+    },
+    {
+      "id": "P17.physical_time_reversal_antilinearity",
+      "status": "PASS",
+      "statement": "Wigner time reversal is anti-complex-linear and is not itself a conventional supercharge"
+    },
+    {
+      "id": "P17.spatial_boundary_real_half",
+      "status": "PASS",
+      "statement": "a spacelike normal admits a real rank-two half-supersymmetry projector"
+    },
+    {
+      "id": "P17.temporal_boundary_complex_half",
+      "status": "PASS",
+      "statement": "a timelike normal produces conjugate complex rank-two projectors"
+    },
+    {
+      "id": "P17.temporal_boundary_no_real_half",
+      "status": "PASS",
+      "statement": "a single-copy standard temporal projector preserves no nonzero real Majorana parameter"
+    },
+    {
+      "id": "P17.doubled_real_temporal_projector",
+      "status": "PASS",
+      "statement": "an extra real two-sheet complex structure yields a real rank-four fold projector"
+    },
+    {
+      "id": "P17.doubled_projector_mixes_sheets",
+      "status": "PASS",
+      "statement": "the admissible doubled real normal genuinely mixes the two sheets"
+    },
+    {
+      "id": "P17.SK_BRST_algebra",
+      "status": "PASS",
+      "statement": "an abstract SK quartet carries two nilpotent mutually anticommuting BRST charges"
+    },
+    {
+      "id": "P17.SK_BRST_parity",
+      "status": "PASS",
+      "statement": "the Schwinger-Keldysh BRST charges are ghost-odd"
+    },
+    {
+      "id": "P17.SK_difference_exact",
+      "status": "PASS",
+      "statement": "the contour difference operator is BRST exact"
+    },
+    {
+      "id": "P17.SK_signed_contour_control_not_positive_H",
+      "status": "PASS",
+      "statement": "a signed contour spectrum has both energy signs and is not a positive physical-adjoint SUSY Hamiltonian"
+    }
+  ],
+  "payload": {
+    "exact_checks": 34,
+    "time_model": "t is the base coordinate on R; no scalar clock or rolling background",
+    "standard_local_N1": {
+      "algebra": "PASS_ON_FIXED_POSITIVE_ENERGY_FIBER",
+      "half_exchange": "ZERO_BY_SUPPORT_LOCALITY",
+      "interpretation": "standard Q changes fermion parity at the same spacetime point"
+    },
+    "linear_reflection_composed_charge": {
+      "fixed_fiber_algebra": "PASS",
+      "half_exchange_ranks_per_Weyl_component": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "locality": "FAIL_NONLOCAL_ON_THE_UNFOLDED_TIME_LINE",
+      "time_translation": "FAIL_ANTICOMMUTES_WITH_SIGNED_P_T"
+    },
+    "fundamental_doubled_sheet": {
+      "algebra": "PASS_WITH_BIDIRECTIONAL_UNITARY_FLIP",
+      "one_way_arrow": "FAILS_STANDARD_ADJOINT_CLOSURE",
+      "physical_time_half_identification": "OPEN_NEW_ACTION_PROBLEM_NOT_EVIDENCE_FOR_BARE_LITERAL_HALVES",
+      "continuous_mixing": "NOT_SELECTED_BY_THE_SUPERALGEBRA"
+    },
+    "temporal_boundary_reality": {
+      "ordinary_real_fixed_seam_subalgebra": "ZERO_ONLY",
+      "single_copy_real_preserved_parameters": 0,
+      "doubled_real_projector_rank": 4,
+      "doubled_physical_bulk_boundary_action": "OPEN"
+    },
+    "physical_time_reversal": {
+      "complex_linearity": "FAIL_ANTIUNITARY",
+      "role": "DISCRETE_AUTOMORPHISM_OR_SEWING_MAP_NOT_A_SUPERCHARGE"
+    },
+    "schwinger_keldysh_timefold": {
+      "BRST_superalgebra": "PASS_ABSTRACT_QUARTET_WITNESS",
+      "difference_operator": "BRST_EXACT",
+      "particle_superpartner_interpretation": "NO",
+      "full_contour_operator_algebra_and_ghost_metric": "NOT_CONSTRUCTED"
+    },
+    "most_promising_open_construction": {
+      "name": "DOUBLED_REAL_SHEET_MIXING_FOLD_CANDIDATE",
+      "next_required": [
+        "a source-defined Pin or Clifford lift and reflection cocycle",
+        "a real Lorentzian doubled bulk-plus-interface action",
+        "a variationally admissible t=0 gluing domain",
+        "a conserved complex-linear fermionic charge on that domain",
+        "compatibility of the sheet-mixing projector with that charge",
+        "a physical sheet anchor and basis-invariant observable"
+      ]
+    },
+    "scope_guard": {
+      "literal_local_Q_exchanges_coordinate_halves": "CONTRADICTED",
+      "nonlocal_or_fundamental_doubled_exchange": "ALGEBRAICALLY_ALLOWED",
+      "full_4D_SUGRA_interface": "NOT_YET_CONSTRUCTED",
+      "CPT_or_Pin_pairing": "BOSONIC_DISCRETE_PAIRING_NOT_PARTICLE_SUSY"
+    }
+  }
+}

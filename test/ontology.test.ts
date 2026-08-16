@@ -1,0 +1,435 @@
+import { NodeContext } from "@effect/platform-node"
+import { expect, it, layer } from "@effect/vitest"
+import { Effect, Layer } from "effect"
+import {
+  makeValidationReport,
+  resolveNode,
+  traceGraph,
+  validateGraphSemantics
+} from "../src/ontology/core.ts"
+import {
+  decodeResearchGraph,
+  type ResearchEdge,
+  type ResearchGraph,
+  type ResearchNode
+} from "../src/ontology/model.ts"
+import {
+  auditEvidenceSnapshots,
+  auditHashBearingFiles,
+  loadOntologyValidation,
+  loadResearchGraph
+} from "../src/ontology/repository.ts"
+import {
+  decodeResearchRunEvidence,
+  validateEvidenceSnapshot
+} from "../src/ontology/run-evidence.ts"
+import { WorkspaceLive } from "../src/workspace.ts"
+
+const fixture = () => ({
+  $schema: "../schema/research-graph-v1.schema.json",
+  schema_version: "research-graph/v1",
+  graph_id: "research-graph:test",
+  title: "Test graph",
+  description: "Small ontology fixture",
+  updated_at_utc: "2026-08-16T00:00:00Z",
+  canonical_file: "ontology/test/graph.json",
+  source_inventory: "ontology/test/sources.md",
+  quick_answers: [
+    {
+      question: "Does the claim hold?",
+      answer: "Yes in the fixture.",
+      claim_ids: ["claim:TEST_CLAIM"]
+    }
+  ],
+  reading_paths: [
+    {
+      id: "reading-path:test",
+      title: "Fixture path",
+      summary: "Claim to evidence",
+      nodes: ["claim:TEST_CLAIM", "evidence:test"]
+    }
+  ],
+  node_type_legend: {
+    claim: "claim",
+    evidence: "evidence",
+    artifact: "artifact"
+  },
+  relation_legend: {
+    HAS_EVIDENCE: "claim evidence relation"
+  },
+  nodes: [
+    {
+      id: "claim:TEST_CLAIM",
+      type: "claim",
+      title: "Test claim",
+      summary: "Supported fixture claim",
+      state: "SUPPORTED",
+      claim_id: "TEST_CLAIM",
+      statement: "The fixture claim holds.",
+      epistemic_state: "SUPPORTED"
+    },
+    {
+      id: "evidence:test",
+      type: "evidence",
+      title: "Test evidence",
+      summary: "One exact fixture check",
+      state: "VERIFIED",
+      observed_status: "1_PASS",
+      check_ids: ["TEST.check"]
+    },
+    {
+      id: "artifact:test",
+      type: "artifact",
+      title: "Test artifact",
+      summary: "Fixture artifact",
+      state: "TRACKED",
+      artifact_kind: "result",
+      path: "fixtures/result.json",
+      sha256: "0".repeat(64)
+    }
+  ],
+  edges: [
+    {
+      id: "edge:001",
+      from: "claim:TEST_CLAIM",
+      relation: "HAS_EVIDENCE",
+      to: "evidence:test",
+      polarity: "SUPPORTS"
+    }
+  ],
+  kg_bridges: [
+    {
+      local_node_id: "claim:TEST_CLAIM",
+      system: "EXTERNAL",
+      external_uid: null,
+      relation: null,
+      status: "UNRESOLVED",
+      lookup_key: "TEST_CLAIM",
+      checked_at_utc: "2026-08-16T00:00:00Z"
+    }
+  ]
+})
+
+const evidenceFixture = () => {
+  const base = fixture()
+  return {
+    ...base,
+    relation_legend: {
+      ...base.relation_legend,
+      RECORDED_IN: "evidence group recorded in snapshot"
+    },
+    nodes: base.nodes.map((node) =>
+      node.id === "evidence:test"
+        ? { ...node, check_ids: ["P16.check"] }
+        : node.id === "artifact:test"
+          ? { ...node, artifact_kind: "evidence" }
+          : node
+    ),
+    edges: [
+      ...base.edges,
+      {
+        id: "edge:002",
+        from: "evidence:test",
+        relation: "RECORDED_IN",
+        to: "artifact:test"
+      }
+    ]
+  }
+}
+
+const runEvidenceFixture = () => ({
+  $schema: "../../schema/research-run-evidence-v1.schema.json",
+  schema_version: "research-run-evidence/v1",
+  result_id: "result:P16-test",
+  phase: "P16",
+  observed_at_utc: "2026-08-16T00:00:00Z",
+  command: "python3 fixture.py --json",
+  exit_code: 0,
+  script: {
+    path: "fixture.py",
+    sha256: "0".repeat(64),
+    introduced_in_commit: "0".repeat(40)
+  },
+  exact_checks: 1,
+  checks: [
+    {
+      id: "P16.check",
+      status: "PASS",
+      statement: "The fixture check passed."
+    }
+  ],
+  payload: {
+    exact_checks: 1,
+    phase_specific_detail: { retained: true }
+  }
+})
+
+it.effect("decodes the discriminated v1 schema and rejects schema drift", () =>
+  Effect.gen(function* () {
+    const source = JSON.stringify(fixture())
+    const graph = yield* decodeResearchGraph(source, "fixture")
+    expect(graph.schema_version).toBe("research-graph/v1")
+
+    const base = fixture()
+    const motivatesGraph = yield* decodeResearchGraph(
+      JSON.stringify({
+        ...base,
+        relation_legend: {
+          ...base.relation_legend,
+          MOTIVATES: "terminal result to distinct follow-up"
+        },
+        edges: [
+          ...base.edges,
+          {
+            id: "edge:002",
+            from: "claim:TEST_CLAIM",
+            relation: "MOTIVATES",
+            to: "artifact:test"
+          }
+        ]
+      }),
+      "MOTIVATES fixture"
+    )
+    expect(motivatesGraph.edges.some((edge) => edge.relation === "MOTIVATES"))
+      .toBe(true)
+
+    const missingEvidenceStatus = source.replace(
+      '"observed_status":"1_PASS",',
+      ""
+    )
+    const missingResult = yield* decodeResearchGraph(
+      missingEvidenceStatus,
+      "missing status"
+    ).pipe(Effect.either)
+    expect(missingResult._tag).toBe("Left")
+
+    const unknownRelation = source.replace(
+      '"relation":"HAS_EVIDENCE"',
+      '"relation":"EVIDENCE_FOR"'
+    )
+    const relationResult = yield* decodeResearchGraph(
+      unknownRelation,
+      "unknown relation"
+    ).pipe(Effect.either)
+    expect(relationResult._tag).toBe("Left")
+  })
+)
+
+it.effect("decodes compact research-run-evidence/v1 snapshots strictly", () =>
+  Effect.gen(function* () {
+    const snapshot = yield* decodeResearchRunEvidence(
+      JSON.stringify(runEvidenceFixture()),
+      "snapshot fixture"
+    )
+    expect(snapshot.payload.exact_checks).toBe(1)
+    expect(snapshot.payload.phase_specific_detail).toEqual({ retained: true })
+
+    const raw = runEvidenceFixture()
+    const invalid = yield* decodeResearchRunEvidence(
+      JSON.stringify({
+        ...raw,
+        payload: { phase_specific_detail: true }
+      }),
+      "missing payload count"
+    ).pipe(Effect.either)
+    expect(invalid._tag).toBe("Left")
+  })
+)
+
+it.effect("cross-checks snapshot counts, uniqueness, and graph evidence groups", () =>
+  Effect.gen(function* () {
+    const graph = yield* decodeResearchGraph(
+      JSON.stringify(evidenceFixture()),
+      "evidence graph fixture"
+    )
+    const artifact = graph.nodes.find(
+      (node) => node.type === "artifact" && node.id === "artifact:test"
+    )
+    if (artifact === undefined || artifact.type !== "artifact") {
+      return yield* Effect.fail(new Error("fixture evidence artifact is missing"))
+    }
+
+    const valid = yield* decodeResearchRunEvidence(
+      JSON.stringify(runEvidenceFixture()),
+      "valid evidence fixture"
+    )
+    expect(validateEvidenceSnapshot(graph, artifact, valid)).toEqual([])
+
+    const raw = runEvidenceFixture()
+    const broken = yield* decodeResearchRunEvidence(
+      JSON.stringify({
+        ...raw,
+        exact_checks: 2,
+        checks: [
+          ...raw.checks,
+          {
+            id: "P16.check",
+            status: "PASS",
+            statement: "A duplicate fixture check."
+          }
+        ],
+        payload: { ...raw.payload, exact_checks: 3 }
+      }),
+      "broken evidence fixture"
+    )
+    const brokenCodes = validateEvidenceSnapshot(graph, artifact, broken).map(
+      (entry) => entry.code
+    )
+    expect(brokenCodes).toContain("EVIDENCE_PAYLOAD_EXACT_CHECKS_MISMATCH")
+    expect(brokenCodes).toContain("EVIDENCE_DUPLICATE_CHECK_ID")
+
+    const countMismatch = yield* decodeResearchRunEvidence(
+      JSON.stringify({ ...raw, exact_checks: 2 }),
+      "count mismatch fixture"
+    )
+    expect(
+      validateEvidenceSnapshot(graph, artifact, countMismatch).map(
+        (entry) => entry.code
+      )
+    ).toContain("EVIDENCE_EXACT_CHECKS_MISMATCH")
+
+    const otherCheck = yield* decodeResearchRunEvidence(
+      JSON.stringify({
+        ...raw,
+        checks: [
+          {
+            id: "P16.other",
+            status: "PASS",
+            statement: "A check absent from the graph group."
+          }
+        ]
+      }),
+      "membership mismatch fixture"
+    )
+    expect(
+      validateEvidenceSnapshot(graph, artifact, otherCheck).map(
+        (entry) => entry.code
+      )
+    ).toContain("EVIDENCE_CHECK_IDS_MISMATCH")
+  })
+)
+
+it.effect("allows unresolved external bridges as explicit warnings", () =>
+  Effect.gen(function* () {
+    const graph = yield* decodeResearchGraph(JSON.stringify(fixture()), "fixture")
+    const report = makeValidationReport(graph, validateGraphSemantics(graph))
+    expect(report.valid).toBe(true)
+    expect(report.errors).toHaveLength(0)
+    expect(report.warnings.map((issue) => issue.code)).toEqual([
+      "EXTERNAL_BRIDGE_UNRESOLVED"
+    ])
+  })
+)
+
+it.effect("detects duplicate IDs, broken endpoints, unsafe paths, and polarity drift", () =>
+  Effect.gen(function* () {
+    const graph = yield* decodeResearchGraph(JSON.stringify(fixture()), "fixture")
+    const firstNode = graph.nodes.find((node) => node.id === "claim:TEST_CLAIM")
+    const firstEdge = graph.edges.find((edge) => edge.id === "edge:001")
+    if (firstNode === undefined || firstEdge === undefined) {
+      return yield* Effect.fail(new Error("fixture entries are missing"))
+    }
+
+    const brokenNodes: ReadonlyArray<ResearchNode> = graph.nodes.map((node) =>
+      node.type === "artifact" ? { ...node, path: "../outside.json" } : node
+    )
+    const mismatchedEdge: ResearchEdge = {
+      ...firstEdge,
+      id: "edge:002",
+      to: "claim:missing",
+      polarity: "CONTRADICTS"
+    }
+    const broken: ResearchGraph = {
+      ...graph,
+      nodes: [...brokenNodes, firstNode],
+      edges: [...graph.edges, firstEdge, mismatchedEdge]
+    }
+    const codes = validateGraphSemantics(broken).map((issue) => issue.code)
+
+    expect(codes).toContain("DUPLICATE_NODE_ID")
+    expect(codes).toContain("DUPLICATE_EDGE_ID")
+    expect(codes).toContain("EDGE_TO_NOT_FOUND")
+    expect(codes).toContain("HASHED_PATH_UNSAFE")
+    expect(codes).toContain("EVIDENCE_POLARITY_STATE_MISMATCH")
+  })
+)
+
+it.effect("resolves bare claim IDs and bounds an undirected trace by depth", () =>
+  Effect.gen(function* () {
+    const graph = yield* decodeResearchGraph(JSON.stringify(fixture()), "fixture")
+    const root = resolveNode(graph, "TEST_CLAIM")
+    expect(root?.id).toBe("claim:TEST_CLAIM")
+    if (root === undefined) {
+      return yield* Effect.fail(new Error("fixture claim is missing"))
+    }
+
+    const rootOnly = traceGraph(graph, root, 0)
+    expect(rootOnly.nodes.map(({ node }) => node.id)).toEqual([
+      "claim:TEST_CLAIM"
+    ])
+    expect(rootOnly.edges).toHaveLength(0)
+
+    const oneHop = traceGraph(graph, root, 1)
+    expect(oneHop.nodes.map(({ node }) => node.id)).toEqual([
+      "claim:TEST_CLAIM",
+      "evidence:test"
+    ])
+    expect(oneHop.edges.map((edge) => edge.id)).toEqual(["edge:001"])
+  })
+)
+
+const AppLayer = Layer.mergeAll(NodeContext.layer, WorkspaceLive)
+
+layer(AppLayer)("canonical ontology", (it) => {
+  it.effect("passes semantic validation and verifies every file hash", () =>
+    Effect.gen(function* () {
+      const { validation } = yield* loadOntologyValidation
+      expect(validation.valid).toBe(true)
+      expect(validation.errors).toHaveLength(0)
+      expect(validation.counts.verified_hashes).toBe(
+        validation.counts.hash_bearing_nodes
+      )
+      expect(validation.warnings).toHaveLength(3)
+      expect(
+        validation.warnings.every(
+          (issue) => issue.code === "EXTERNAL_BRIDGE_UNRESOLVED"
+        )
+      ).toBe(true)
+    })
+  )
+
+  it.effect("audits exactly the P16/P17 evidence snapshots", () =>
+    Effect.gen(function* () {
+      const graph = yield* loadResearchGraph
+      const audit = yield* auditEvidenceSnapshots(graph)
+      expect(audit.audited).toBe(2)
+      expect(audit.issues).toEqual([])
+      expect(
+        graph.nodes.find((node) => node.id === "artifact:p15r-run-result")
+          ?.artifact_kind
+      ).toBe("result")
+    })
+  )
+
+  it.effect("reports content hash mismatches against real files", () =>
+    Effect.gen(function* () {
+      const graph = yield* loadResearchGraph
+      const changedNodes: ReadonlyArray<ResearchNode> = graph.nodes.map((node) =>
+        node.type === "artifact" || node.type === "policy"
+          ? { ...node, sha256: "0".repeat(64) }
+          : node
+      )
+      const changed: ResearchGraph = { ...graph, nodes: changedNodes }
+      const audit = yield* auditHashBearingFiles(changed)
+      expect(audit.verified).toBe(0)
+      expect(audit.issues).toHaveLength(
+        graph.nodes.filter(
+          (node) => node.type === "artifact" || node.type === "policy"
+        ).length
+      )
+      expect(
+        audit.issues.every((issue) => issue.code === "HASH_MISMATCH")
+      ).toBe(true)
+    })
+  )
+})

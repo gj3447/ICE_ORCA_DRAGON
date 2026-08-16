@@ -1,0 +1,170 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P16_BGG_SINGLE_SOURCE_20260816",
+  "phase": "P16",
+  "observed_at_utc": "2026-08-16T15:53:21Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase16_bgg_single_source.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase16_bgg_single_source.py",
+    "sha256": "95c9346bf4607d955692778a2bf91638a307a3563f51bff57af0635bc548f55c",
+    "introduced_in_commit": "25bd216cfd1d85bde59c60ec4f2a9d91bdb53d78"
+  },
+  "exact_checks": 20,
+  "checks": [
+    {
+      "id": "P16.connection",
+      "status": "PASS",
+      "statement": "CPN.13 uniquely gives omega_(i 0 i)=adot/N and no other lower-pair component"
+    },
+    {
+      "id": "P16.connection_mixed",
+      "status": "PASS",
+      "statement": "raising the final Lorentz index gives the two required equal mixed components"
+    },
+    {
+      "id": "P16.curvature_antisymmetry",
+      "status": "PASS",
+      "statement": "R[n,m] is antisymmetric in the reverse-order two-form coordinate pair"
+    },
+    {
+      "id": "P16.CPN26_ab",
+      "status": "PASS",
+      "statement": "the literal printed ab contraction gives calR_BGG=-6Q"
+    },
+    {
+      "id": "P16.CPN26_ba_mutation",
+      "status": "PASS",
+      "statement": "the transposed ba/storage reading gives the opposite +6Q and is rejected"
+    },
+    {
+      "id": "P16.raw_boundary",
+      "status": "PASS",
+      "statement": "CPN.130 gives L_EH,raw=dot(B)-3C at arbitrary lapse"
+    },
+    {
+      "id": "P16.first_order_gravity",
+      "status": "PASS",
+      "statement": "subtracting the one temporal endpoint leaves -3C and no higher jet"
+    },
+    {
+      "id": "P16.same_source_scalar",
+      "status": "PASS",
+      "statement": "the positive physical field bridge gives (Tdot^2+Ydot^2)/2"
+    },
+    {
+      "id": "P16.first_order_L",
+      "status": "PASS",
+      "statement": "X=sqrt(6) M_P ln(a) gives the Lorentzian (-,+,+) kinetic form"
+    },
+    {
+      "id": "P16.hessian",
+      "status": "PASS",
+      "statement": "the exact velocity Hessian is (V0 a^3/N) diag(-1,+1,+1)"
+    },
+    {
+      "id": "P16.hessian_invariants",
+      "status": "PASS",
+      "statement": "the Hessian has rank 3, determinant -prefactor^3, and inertia (1,0,2)"
+    },
+    {
+      "id": "P16.momenta",
+      "status": "PASS",
+      "statement": "the canonical momenta carry the same (-,+,+) signature"
+    },
+    {
+      "id": "P16.Hamiltonian",
+      "status": "PASS",
+      "statement": "the exact kinetic Hamiltonian is N(-pX^2+pT^2+pY^2)/(2V0a^3)"
+    },
+    {
+      "id": "P16.spin32_projector",
+      "status": "PASS",
+      "statement": "the right-acting spatial spin-3/2 projector is idempotent with complex rank four"
+    },
+    {
+      "id": "P16.spin32_candidate_kernel",
+      "status": "PASS",
+      "statement": "a pure spatial gamma-trace gravitino is annihilated by P_3/2"
+    },
+    {
+      "id": "P16.clean_spinor_bilinear",
+      "status": "PASS",
+      "statement": "the chi^1 chibar^dot1 coefficient is the exact spatial vector (0,0,1)"
+    },
+    {
+      "id": "P16.off_shell_b_i_obstruction",
+      "status": "PASS",
+      "statement": "delta b_3 has the nonzero F epsilon^1 chibar^dot1 coefficient 1/sqrt(2)"
+    },
+    {
+      "id": "P16.spin32_obstruction",
+      "status": "PASS",
+      "statement": "the chi^1 chibar^dot1 epsilon^1 coefficient has a nonzero P_3/2 projection"
+    },
+    {
+      "id": "P16.spin32_residual_trace",
+      "status": "PASS",
+      "statement": "the nonzero residual is gamma-traceless, so it is a genuine discarded spin-3/2 mode"
+    },
+    {
+      "id": "P16.rolling_clock_no_residual_susy",
+      "status": "PASS",
+      "statement": "for W=0, F=0 and nonzero real clock rate, delta chi=0 has only the zero SUSY parameter"
+    }
+  ],
+  "payload": {
+    "exact_checks": 20,
+    "source": "Binétruy–Girardi–Grimm, hep-th/0005225v1",
+    "bosonic_kinetic_parent": {
+      "status": "PASS",
+      "scope": "the (X,T,Y) velocity subblock after the one endpoint; lapse and algebraic auxiliary constraints are not included",
+      "curvature": "6*(-N*adot**2 + a*(-N*addot + Ndot*adot))/(N**3*a**2)",
+      "curvature_over_Q": -6,
+      "raw_gravity": "3*M_P**2*V_0*a*(N*adot**2 + a*(N*addot - Ndot*adot))/N**2",
+      "boundary_identity": "L_EH_raw = dot(B) - 3 C",
+      "first_order_lagrangian": "V_0*a**3*(Tdot**2 - Xdot**2 + Ydot**2)/(2*N)",
+      "hessian": "Matrix([\n[-V_0*a**3/N,          0,          0],\n[          0, V_0*a**3/N,          0],\n[          0,          0, V_0*a**3/N]])",
+      "rank": 3,
+      "determinant": "-V_0**3*a**9/N**3",
+      "inertia_negative_zero_positive": [
+        1,
+        0,
+        2
+      ],
+      "kinetic_hamiltonian": "N*(p_T**2 - p_X**2 + p_Y**2)/(2*V_0*a**3)",
+      "lapse_primary_constraint": "p_N=0"
+    },
+    "specified_off_shell_flrw_gamma_trace_tangency": {
+      "status": "FAIL_BY_EXACT_CLEAN_POINT_COUNTEREXAMPLE",
+      "scope": "analyst-defined discarded normals e_i^a b_a=0 and P_3/2 psi=0, BGG source b_a, arbitrary homogeneous complexified Grassmann chi/chibar, F/Fbar, and SUSY parameters",
+      "b3_monomial": "F epsilon^1 chibar^dot1",
+      "b3_coefficient": "sqrt(2)/2",
+      "rho_monomial": "chi^1 chibar^dot1 epsilon^1",
+      "rho_coefficient_vector": [
+        "0",
+        "-I/6",
+        "0",
+        "-1/6",
+        "I/3",
+        "0"
+      ],
+      "reason": "CPN.85 excites the constructed spatial projection b_i=e_i^a b_a and independently CPN.40+CPN.75+CPN.77 excite a discarded spin-3/2 mode"
+    },
+    "rolling_chiral_clock_background": {
+      "status": "NO_NONZERO_PRESERVED_SUSY_PARAMETER",
+      "scope": "bosonic W=0 on-shell auxiliary slice F=0 with nonzero real homogeneous proper-time rate D_tau A=N^-1 dA/dt and Lorentzian-conjugate SUSY parameters",
+      "delta_chi_parameter_map_rank": 2,
+      "interpretation": "with Lorentzian conjugate SUSY parameters the background is not SUSY-invariant; the underlying local gauge symmetry is not removed"
+    },
+    "scope_guard": {
+      "full_4d_local_susy": "NOT_REFUTED",
+      "other_bosonic_or_killing_spinor_subslices": "NOT_TESTED",
+      "shifted_auxiliary_basis": "NOT_TESTED",
+      "temporal_branch_supercharge": "NOT_TESTED",
+      "full_all_fermion_residual": "NOT_COMPUTED; exact clean-point counterexamples suffice for the scoped tangency failure",
+      "tangency_engine": "NOT_A_FULL_CPN_TRANSCRIPTION; it evaluates surviving BGG coefficients at one exact point of the specified truncation"
+    }
+  }
+}

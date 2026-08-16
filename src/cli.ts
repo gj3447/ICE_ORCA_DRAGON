@@ -10,6 +10,7 @@ import {
   setExitCode
 } from "./commands.ts"
 import { type IceError } from "./errors.ts"
+import { ontologyCommand } from "./ontology/cli.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const json = Options.boolean("json").pipe(
@@ -70,7 +71,7 @@ const root = Command.make("ice", {}, () =>
   Console.log("Use `ice --help` to inspect the Effect control plane.")
 ).pipe(
   Command.withDescription("ICE_ORCA_DRAGON functional workbench control plane"),
-  Command.withSubcommands([list, run, info, doctor, repro])
+  Command.withSubcommands([list, run, info, doctor, repro, ontologyCommand])
 )
 
 const cli = Command.run(root, {

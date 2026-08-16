@@ -1,0 +1,503 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-graph-v1.schema.json",
+  "title": "Research concept and evidence graph",
+  "description": "Repository-local semantic layer for claims, evidence, sources, scopes, artifacts, and open problems.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "graph_id",
+    "title",
+    "description",
+    "updated_at_utc",
+    "canonical_file",
+    "source_inventory",
+    "quick_answers",
+    "reading_paths",
+    "node_type_legend",
+    "relation_legend",
+    "nodes",
+    "edges",
+    "kg_bridges"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "research-graph/v1"
+    },
+    "graph_id": {
+      "type": "string",
+      "pattern": "^research-graph:[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "updated_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "canonical_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_inventory": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quick_answers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/quickAnswer"
+      }
+    },
+    "reading_paths": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/readingPath"
+      }
+    },
+    "node_type_legend": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "relation_legend": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    },
+    "kg_bridges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/kgBridge"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z_]+:[A-Za-z0-9_.:-]+$"
+    },
+    "quickAnswer": {
+      "type": "object",
+      "required": [
+        "question",
+        "answer",
+        "claim_ids"
+      ],
+      "properties": {
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^claim:"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "readingPath": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "summary",
+        "nodes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^reading-path:"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "title",
+        "summary",
+        "state"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "enum": [
+            "programme",
+            "phase",
+            "concept",
+            "claim",
+            "evidence",
+            "scope",
+            "open_problem",
+            "source",
+            "artifact",
+            "policy"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epistemic_state": {
+          "enum": [
+            "SUPPORTED",
+            "CONTRADICTED",
+            "INCONCLUSIVE"
+          ]
+        },
+        "observed_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "check_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "includes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_hashes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "source_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "introduced_in_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "artifact_kind": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "claim"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "claim_id",
+              "statement",
+              "epistemic_state"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "artifact"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "path",
+              "sha256",
+              "artifact_kind"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "evidence"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "observed_status"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "scope"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "includes",
+              "excludes"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "open_problem"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "question"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "source"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "citation",
+              "uri",
+              "version"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "policy"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "path",
+              "sha256",
+              "introduced_in_commit"
+            ]
+          }
+        }
+      ]
+    },
+    "edge": {
+      "type": "object",
+      "required": [
+        "id",
+        "from",
+        "relation",
+        "to"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^edge:[0-9]+$"
+        },
+        "from": {
+          "$ref": "#/$defs/id"
+        },
+        "relation": {
+          "enum": [
+            "PART_OF",
+            "ABOUT",
+            "HAS_EVIDENCE",
+            "DEFINED_IN",
+            "RECORDED_IN",
+            "DERIVED_FROM",
+            "DOCUMENTED_BY",
+            "DOCUMENTS",
+            "IMPLEMENTS",
+            "RECORDS",
+            "VALID_WITHIN",
+            "BLOCKED_BY",
+            "MOTIVATES",
+            "EXTENDS",
+            "FOLLOW_UP_TO",
+            "CONTRASTS_WITH",
+            "CITES",
+            "USES_TOOLING",
+            "GOVERNED_BY"
+          ]
+        },
+        "to": {
+          "$ref": "#/$defs/id"
+        },
+        "polarity": {
+          "enum": [
+            "SUPPORTS",
+            "CONTRADICTS"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "kgBridge": {
+      "type": "object",
+      "required": [
+        "local_node_id",
+        "system",
+        "external_uid",
+        "relation",
+        "status",
+        "checked_at_utc"
+      ],
+      "properties": {
+        "local_node_id": {
+          "$ref": "#/$defs/id"
+        },
+        "system": {
+          "type": "string",
+          "minLength": 1
+        },
+        "external_uid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "RESOLVED",
+            "UNRESOLVED"
+          ]
+        },
+        "checked_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "registry": {
+          "type": "string"
+        },
+        "lookup_key": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,1917 @@
+{
+  "$schema": "../schema/research-graph-v1.schema.json",
+  "schema_version": "research-graph/v1",
+  "graph_id": "research-graph:cpt-temporal-folded-susy",
+  "title": "CPT × Temporal-Folded SUSY research graph",
+  "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
+  "updated_at_utc": "2026-08-16T16:33:58Z",
+  "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
+  "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
+  "quick_answers": [
+    {
+      "question": "Did the bosonic parent work?",
+      "answer": "Yes, in the scoped BGG (X,T,Y) kinetic block.",
+      "claim_ids": [
+        "claim:P16_BGG_BOSONIC_KINETIC_PARENT"
+      ]
+    },
+    {
+      "question": "Did the specified strict off-shell FLRW SUSY truncation work?",
+      "answer": "No; two independent normal-mode coefficients are nonzero at an exact clean point.",
+      "claim_ids": [
+        "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY"
+      ]
+    },
+    {
+      "question": "Can a standard local Q exchange t<0 and t>0 support?",
+      "answer": "No; support locality makes both cross blocks zero.",
+      "claim_ids": [
+        "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE"
+      ]
+    },
+    {
+      "question": "What remains promising?",
+      "answer": "A fundamental doubled-sheet algebra and a separate doubled-real projector witness exist, but their common action, domain, charge, and physical sheet anchor are open.",
+      "claim_ids": [
+        "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+        "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS"
+      ]
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "reading-path:bosonic-to-susy",
+      "title": "Why the bosonic model passes but the specified SUSY truncation fails",
+      "summary": "Follow the same BGG parent from the kinetic block to the discarded-mode counterexample and the still-open full interface.",
+      "nodes": [
+        "concept:bgg-single-source-parent",
+        "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+        "evidence:p16-bosonic",
+        "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+        "evidence:p16-tangency",
+        "open:full-4d-sugra-interface"
+      ]
+    },
+    {
+      "id": "reading-path:literal-time-line",
+      "title": "Why literal coordinate-half exchange fails",
+      "summary": "Separate same-point local Q, reflection-composed Q, and the real temporal-seam obstruction.",
+      "nodes": [
+        "concept:coordinate-time-line",
+        "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+        "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+        "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY"
+      ]
+    },
+    {
+      "id": "reading-path:doubled-opening",
+      "title": "The surviving doubled-sheet opening",
+      "summary": "Track the finite exchange witness, basis nonselection, doubled-real projector, and the concrete missing construction steps.",
+      "nodes": [
+        "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+        "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+        "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+        "open:p17-doubled-action",
+        "open:p17-gluing-domain",
+        "open:p17-conserved-charge",
+        "open:p17-physical-sheet-anchor"
+      ]
+    },
+    {
+      "id": "reading-path:not-particle-susy",
+      "title": "What must not be called particle supersymmetry",
+      "summary": "CPT/Pin sewing and SK BRST are useful but distinct structures.",
+      "nodes": [
+        "claim:P17_TIME_REVERSAL_IS_SUPERCHARGE",
+        "concept:cpt-pin-sewing",
+        "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+        "concept:schwinger-keldysh-brst"
+      ]
+    }
+  ],
+  "node_type_legend": {
+    "programme": "overall research question",
+    "phase": "bounded calculation cycle",
+    "concept": "reusable definition or distinction",
+    "claim": "falsifiable or scoped scientific statement",
+    "evidence": "verified calculation/check group",
+    "scope": "assumptions and exclusions",
+    "open_problem": "missing construction or unresolved question",
+    "source": "primary or technical literature source",
+    "artifact": "tracked repository file",
+    "policy": "repository workflow rule, never scientific evidence"
+  },
+  "relation_legend": {
+    "PART_OF": "belongs to a programme or phase",
+    "ABOUT": "claim concerns a concept",
+    "HAS_EVIDENCE": "claim points to supporting or contradicting evidence; see polarity",
+    "DEFINED_IN": "evidence checks are implemented in an executable",
+    "RECORDED_IN": "run evidence is persisted in a result snapshot",
+    "DERIVED_FROM": "evidence uses a source",
+    "DOCUMENTED_BY": "claim has a human-readable report",
+    "DOCUMENTS": "artifact documents a source or phase",
+    "IMPLEMENTS": "artifact implements a phase calculation",
+    "RECORDS": "artifact records a phase result",
+    "VALID_WITHIN": "claim is limited by a scope node",
+    "BLOCKED_BY": "claim cannot be promoted until an open problem is solved",
+    "MOTIVATES": "terminal result motivates a distinct follow-up; solving it does not reverse the scoped result",
+    "EXTENDS": "new result adds a scoped case without overwriting the older claim",
+    "FOLLOW_UP_TO": "new claim tests a continuation of an older target",
+    "CONTRASTS_WITH": "distinguishes a sharper claim from an older one",
+    "CITES": "claim or concept cites a primary/technical source",
+    "USES_TOOLING": "programme uses a tooling reference",
+    "GOVERNED_BY": "repository workflow relationship, not evidential"
+  },
+  "nodes": [
+    {
+      "id": "programme:cpt-temporal-folded-susy",
+      "type": "programme",
+      "title": "CPT × Temporal-Folded Supersymmetry",
+      "summary": "A scoped research programme testing whether time orientation, branch labels, and supersymmetry can be related without confusing coordinate reflection, CPT sewing, internal doubling, or particle supercharges.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "phase:p15r",
+      "type": "phase",
+      "title": "Phase 15R — parent-sign reproduction",
+      "summary": "Historical two-source reproduction: one bosonic-only parent in the frozen census, with no full same-source off-shell parent in that census.",
+      "state": "HISTORICAL"
+    },
+    {
+      "id": "phase:p16",
+      "type": "phase",
+      "title": "Phase 16 — BGG single-source calculation",
+      "summary": "Direct BGG calculation separating a successful bosonic kinetic parent from a failed specified strict off-shell FLRW/gamma-trace truncation.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "phase:p17",
+      "type": "phase",
+      "title": "Phase 17 — real-line fold algebra",
+      "summary": "Direct calculation on coordinate t in R, separating local supersymmetry, literal reflection, fundamental sheet doubling, temporal seam reality, CPT/Pin sewing, and SK BRST.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:bgg-single-source-parent",
+      "type": "concept",
+      "title": "BGG single-source supergravity parent",
+      "summary": "The Binétruy–Girardi–Grimm old-minimal N=1 supergravity component source used without borrowing signs or transformations from another parent.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:bosonic-kinetic-parent",
+      "type": "concept",
+      "title": "Bosonic kinetic parent",
+      "summary": "The scoped FLRW (X,T,Y) velocity block after one endpoint removal; it is not the full constrained Hamiltonian.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:strict-off-shell-flrw-truncation",
+      "type": "concept",
+      "title": "Specified strict off-shell FLRW/gamma-trace truncation",
+      "summary": "The analyst-defined homogeneous locus retaining auxiliary and matter fermion modes while discarding spatial b_i and spin-3/2 gravitino modes.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:rolling-chiral-clock",
+      "type": "concept",
+      "title": "Rolling chiral clock background",
+      "summary": "A bosonic W=0, F=0 slice with nonzero real proper-time scalar rate; distinct from coordinate time itself.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:coordinate-time-line",
+      "type": "concept",
+      "title": "Coordinate time line",
+      "summary": "The base coordinate t in R, with no scalar clock and no spatial-wall analytic continuation.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:support-local-supercharge",
+      "type": "concept",
+      "title": "Support-local supercharge",
+      "summary": "A complex-linear local operator whose action does not move support from one open time half to the other.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:literal-time-reflection",
+      "type": "concept",
+      "title": "Literal coordinate reflection",
+      "summary": "The pullback R_t psi(t)=psi(-t), which exchanges time halves but reverses signed time momentum.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:physical-time-reversal",
+      "type": "concept",
+      "title": "Physical time reversal",
+      "summary": "The anti-complex-linear Wigner operation on states, distinct from the complex-linear coordinate pullback and from CPT/Pin sewing.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:fundamental-doubled-sheet",
+      "type": "concept",
+      "title": "Fundamental doubled sheet",
+      "summary": "An internal two-sheet Hilbert-space label on which a unitary sheet flip can multiply the ordinary supercharge.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:temporal-seam-reality",
+      "type": "concept",
+      "title": "Temporal seam reality",
+      "summary": "Reality and projector conditions for a fixed t=0 seam, separated from spatial-boundary half-BPS constructions.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:cpt-pin-sewing",
+      "type": "concept",
+      "title": "CPT/Pin sewing",
+      "summary": "A bosonic discrete pairing or real structure between histories; it is not itself a complex-linear fermionic supercharge.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:schwinger-keldysh-brst",
+      "type": "concept",
+      "title": "Schwinger–Keldysh BRST",
+      "summary": "A topological contour-doubling algebra that encodes unitarity identities rather than particle superpartners.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "type": "claim",
+      "claim_id": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "title": "P15R bosonic parent exists in the frozen census",
+      "statement": "Inside the frozen Hohl/Kallosh two-source census, at least one single-source bosonic parent matches the target kinetic signature.",
+      "summary": "Historical scoped target supported by Kallosh; it is not a literature-wide existence theorem.",
+      "epistemic_state": "SUPPORTED",
+      "state": "HISTORICAL"
+    },
+    {
+      "id": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "type": "claim",
+      "claim_id": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "title": "P15R full off-shell parent exists in the frozen census",
+      "statement": "Inside the frozen Hohl/Kallosh two-source census, a single parent supplies both the target bosonic sign and the required off-shell auxiliary/transformation coverage.",
+      "summary": "Historical scoped target contradicted only inside the two-source census.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "HISTORICAL"
+    },
+    {
+      "id": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "type": "claim",
+      "claim_id": "P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "title": "Literal opposite time branches are superpartners",
+      "statement": "Opposite relational expanding and contracting branches are literal superpartners.",
+      "summary": "Historical claim retained as inconclusive/unconstructed; Phase 17 tests sharper coordinate-time versions.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "HISTORICAL"
+    },
+    {
+      "id": "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+      "type": "claim",
+      "claim_id": "P16_BGG_BOSONIC_KINETIC_PARENT",
+      "title": "BGG supplies the target bosonic kinetic parent",
+      "statement": "Under the stated BGG conventions and flat one-chiral W=0 specialization, the (X,T,Y) FLRW velocity block has inertia (1,0,2) and kinetic Hamiltonian N(-p_X^2+p_T^2+p_Y^2)/(2 V_0 a^3).",
+      "summary": "Supported for the kinetic subblock; lapse and algebraic auxiliary constraints are outside this claim.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "type": "claim",
+      "claim_id": "P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "title": "The specified strict off-shell FLRW truncation is SUSY-tangent",
+      "statement": "The analyst-defined FLRW/gamma-trace locus with arbitrary homogeneous chi, chibar, F, and Fbar is preserved by the BGG local-SUSY transformations.",
+      "summary": "Contradicted by exact nonzero b_i and spin-3/2 normal components at one clean point on the locus.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY",
+      "type": "claim",
+      "claim_id": "P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY",
+      "title": "The scoped rolling chiral clock preserves a nonzero SUSY parameter",
+      "statement": "On the bosonic W=0, F=0 slice with nonzero real proper-time scalar rate and Lorentzian-conjugate parameters, a nonzero local-SUSY parameter leaves the background invariant.",
+      "summary": "Contradicted by a rank-two delta-chi parameter map; the underlying gauge symmetry is not removed.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "type": "claim",
+      "claim_id": "P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "title": "A standard support-local Q exchanges the two coordinate-time halves",
+      "statement": "A standard local 4D N=1 supercharge has a nonzero block from t>0 support to t<0 support, or conversely.",
+      "summary": "Contradicted by support locality: both open-half cross blocks vanish.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "type": "claim",
+      "claim_id": "P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "title": "Reflection-composed Q is a standard local conserved supercharge",
+      "statement": "Composing a fixed-fiber supercharge with t-to-minus-t reflection preserves same-time locality and commutes with signed P_t.",
+      "summary": "Contradicted: the finite fiber algebra passes, but the unfolded operator is nonlocal and anticommutes with signed time momentum.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "type": "claim",
+      "claim_id": "P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "title": "A fundamental doubled sheet admits bidirectional SUSY exchange algebra",
+      "statement": "On a fundamental two-sheet internal fiber, X_s tensor q_alpha preserves fixed-positive-energy N=1 closure and has nonzero rank-two cross blocks in both directions.",
+      "summary": "Supported as a finite algebra witness; it is not evidence that bare coordinate-time halves realize the sheets.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P17_ONE_WAY_SHEET_ARROW_STANDARD_CLOSURE",
+      "type": "claim",
+      "claim_id": "P17_ONE_WAY_SHEET_ARROW_STANDARD_CLOSURE",
+      "title": "A one-way sheet arrow preserves standard adjoint closure",
+      "statement": "A one-way off-diagonal sheet charge can obey the unchanged standard N=1 physical-adjoint closure.",
+      "summary": "Contradicted by the exact CAR block calculation.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "type": "claim",
+      "claim_id": "P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "title": "The superalgebra uniquely selects the exchange basis",
+      "statement": "Standard closure alone selects a unique local-versus-exchange sheet basis and mixing phase.",
+      "summary": "Contradicted by a continuous unitary mixing family and parity-controlled basis equivalence.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "type": "claim",
+      "claim_id": "P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "title": "A fixed temporal seam preserves an ordinary real SUSY subalgebra",
+      "statement": "At a fixed t=0 seam, a nonzero Lorentzian-conjugate standard N=1 parameter closes tangent to the seam.",
+      "summary": "Contradicted because v^0 is a positive sum of squares and vanishes only for the zero parameter.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "type": "claim",
+      "claim_id": "P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "title": "A doubled real sheet-mixing projector witness exists",
+      "statement": "Adding a real two-sheet complex structure yields a real rank-four temporal projector that mixes sheets.",
+      "summary": "Supported only as a reality/projector witness; no Pin lift, action, domain, conserved charge, or observable follows yet.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P17_TIME_REVERSAL_IS_SUPERCHARGE",
+      "type": "claim",
+      "claim_id": "P17_TIME_REVERSAL_IS_SUPERCHARGE",
+      "title": "Physical time reversal is itself the supercharge",
+      "statement": "The antiunitary physical time-reversal operation can be identified with an ordinary complex-linear fermionic supercharge.",
+      "summary": "Contradicted by complex antilinearity and grading; physical time reversal is a discrete operation, not the tested Q.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "type": "claim",
+      "claim_id": "P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "title": "Schwinger–Keldysh BRST is particle supersymmetry",
+      "statement": "The SK nilpotent contour charges directly pair physical bosons and fermions as 4D N=1 particle superpartners.",
+      "summary": "Contradicted; the verified quartet is topological/ghost graded and its full contour metric remains unconstructed.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p15r-run-result",
+      "type": "evidence",
+      "title": "Phase 15R committed run result",
+      "summary": "Pointer to the committed two-source parent-sign result with stable target claim IDs; its Hohl/Kallosh source ledger remains authoritative in the Phase 15R packet rather than being duplicated here.",
+      "state": "VERIFIED",
+      "observed_status": "EXIT_0"
+    },
+    {
+      "id": "evidence:p16-bosonic",
+      "type": "evidence",
+      "title": "Phase 16 BGG bosonic derivation",
+      "summary": "Thirteen exact checks covering connection, curvature order, endpoint, scalar normalization, Hessian, inertia, momenta, and Hamiltonian.",
+      "state": "VERIFIED",
+      "observed_status": "13_PASS",
+      "check_ids": [
+        "P16.connection",
+        "P16.connection_mixed",
+        "P16.curvature_antisymmetry",
+        "P16.CPN26_ab",
+        "P16.CPN26_ba_mutation",
+        "P16.raw_boundary",
+        "P16.first_order_gravity",
+        "P16.same_source_scalar",
+        "P16.first_order_L",
+        "P16.hessian",
+        "P16.hessian_invariants",
+        "P16.momenta",
+        "P16.Hamiltonian"
+      ]
+    },
+    {
+      "id": "evidence:p16-tangency",
+      "type": "evidence",
+      "title": "Phase 16 exact tangency counterexample",
+      "summary": "Six exact checks establish nonzero b_i and gamma-traceless spin-3/2 normal components at the declared clean point.",
+      "state": "VERIFIED",
+      "observed_status": "6_PASS",
+      "check_ids": [
+        "P16.spin32_projector",
+        "P16.spin32_candidate_kernel",
+        "P16.clean_spinor_bilinear",
+        "P16.off_shell_b_i_obstruction",
+        "P16.spin32_obstruction",
+        "P16.spin32_residual_trace"
+      ]
+    },
+    {
+      "id": "evidence:p16-clock",
+      "type": "evidence",
+      "title": "Phase 16 rolling-clock parameter map",
+      "summary": "One exact rank/determinant check shows the scoped nonzero-rate rolling background has no nonzero preserved Lorentzian-real SUSY parameter.",
+      "state": "VERIFIED",
+      "observed_status": "1_PASS",
+      "check_ids": [
+        "P16.rolling_clock_no_residual_susy"
+      ]
+    },
+    {
+      "id": "evidence:p17-local",
+      "type": "evidence",
+      "title": "Phase 17 standard local fiber and support-locality checks",
+      "summary": "Six checks verify the CAR fiber, fermion oddness, standard local closure, and zero half-exchange blocks.",
+      "state": "VERIFIED",
+      "observed_status": "6_PASS",
+      "check_ids": [
+        "P17.branch_reflection",
+        "P17.branch_projectors",
+        "P17.N1_CAR",
+        "P17.N1_fermion_parity",
+        "P17.local_standard_closure",
+        "P17.local_same_half"
+      ]
+    },
+    {
+      "id": "evidence:p17-doubled",
+      "type": "evidence",
+      "title": "Phase 17 doubled-sheet algebra and nonselection checks",
+      "summary": "Eleven checks verify bidirectional exchange closure, reject parity/one-way/nonunitary mutations, and show basis nonselection.",
+      "state": "VERIFIED",
+      "observed_status": "11_PASS",
+      "check_ids": [
+        "P17.fold_fixed_fiber_closure",
+        "P17.fold_physical_parity",
+        "P17.fold_bidirectional_exchange",
+        "P17.half_sign_is_not_fermion_parity",
+        "P17.unitary_mixing_family",
+        "P17.mixing_not_selected",
+        "P17.exchange_phase_family",
+        "P17.local_fold_basis_equivalence",
+        "P17.one_way_cross",
+        "P17.one_way_closure_rejected",
+        "P17.nonunitary_branch_mutation"
+      ]
+    },
+    {
+      "id": "evidence:p17-reflection",
+      "type": "evidence",
+      "title": "Phase 17 literal reflection, translation, and positivity checks",
+      "summary": "Four checks show reflection reverses P_t, the sharp half split is not translation invariant, and signed P_t cannot be a positive-adjoint anticommutator.",
+      "state": "VERIFIED",
+      "observed_status": "4_PASS",
+      "check_ids": [
+        "P17.reflection_reverses_time_momentum",
+        "P17.reflection_translation_obstruction",
+        "P17.sharp_half_not_translation_invariant",
+        "P17.signed_time_generator_not_positive_closure"
+      ]
+    },
+    {
+      "id": "evidence:p17-seam",
+      "type": "evidence",
+      "title": "Phase 17 temporal seam, reality, and doubled projector checks",
+      "summary": "Nine checks distinguish geometric reflection from antiunitary time reversal and compare spatial, temporal, and doubled-real projectors.",
+      "state": "VERIFIED",
+      "observed_status": "9_PASS",
+      "check_ids": [
+        "P17.real_temporal_seam_closure_obstruction",
+        "P17.complexified_temporal_seam_control",
+        "P17.geometric_reflection_linearity",
+        "P17.physical_time_reversal_antilinearity",
+        "P17.spatial_boundary_real_half",
+        "P17.temporal_boundary_complex_half",
+        "P17.temporal_boundary_no_real_half",
+        "P17.doubled_real_temporal_projector",
+        "P17.doubled_projector_mixes_sheets"
+      ]
+    },
+    {
+      "id": "evidence:p17-sk",
+      "type": "evidence",
+      "title": "Phase 17 abstract SK quartet checks",
+      "summary": "Four checks verify nilpotence, ghost parity, BRST exactness, and distinguish a signed contour spectrum from a positive SUSY Hamiltonian.",
+      "state": "VERIFIED",
+      "observed_status": "4_PASS",
+      "check_ids": [
+        "P17.SK_BRST_algebra",
+        "P17.SK_BRST_parity",
+        "P17.SK_difference_exact",
+        "P17.SK_signed_contour_control_not_positive_H"
+      ]
+    },
+    {
+      "id": "scope:p15r-frozen-two-source-census",
+      "type": "scope",
+      "title": "P15R frozen two-source census",
+      "summary": "Only Hohl and Kallosh are evidential candidates; ADM is a zero-weight internal control.",
+      "state": "ACTIVE",
+      "includes": [
+        "Hohl v1",
+        "Kallosh v3"
+      ],
+      "excludes": [
+        "BGG",
+        "literature-wide existence claim",
+        "universal no-go"
+      ]
+    },
+    {
+      "id": "scope:p16-bosonic-kinetic",
+      "type": "scope",
+      "title": "P16 bosonic kinetic subblock",
+      "summary": "The (X,T,Y) velocity block after exactly one endpoint removal.",
+      "state": "ACTIVE",
+      "includes": [
+        "arbitrary positive lapse",
+        "flat one-chiral W=0 specialization",
+        "velocity Hessian",
+        "kinetic Hamiltonian"
+      ],
+      "excludes": [
+        "lapse primary constraint beyond p_N=0",
+        "algebraic auxiliary constraints",
+        "full canonical constraint algebra"
+      ]
+    },
+    {
+      "id": "scope:p16-strict-flrw-tangency",
+      "type": "scope",
+      "title": "P16 specified strict FLRW/gamma-trace locus",
+      "summary": "A clean-point counterexample to one declared off-shell truncation.",
+      "state": "ACTIVE",
+      "includes": [
+        "BGG source b_a",
+        "constructed b_i=e_i^a b_a",
+        "P_3/2 psi_i=0",
+        "arbitrary homogeneous chi/chibar and F/Fbar"
+      ],
+      "excludes": [
+        "full all-fermion residual",
+        "shifted auxiliary basis",
+        "other Killing-spinor slices",
+        "full 4D local SUSY refutation"
+      ]
+    },
+    {
+      "id": "scope:p16-rolling-clock",
+      "type": "scope",
+      "title": "P16 rolling-clock slice",
+      "summary": "Bosonic W=0, F=0, nonzero real proper-time rate D_tau A, and Lorentzian-conjugate SUSY parameters.",
+      "state": "ACTIVE",
+      "includes": [
+        "D_tau A != 0",
+        "Lorentzian reality"
+      ],
+      "excludes": [
+        "coordinate time as a field",
+        "zero-rate backgrounds",
+        "complexified independent barred parameter"
+      ]
+    },
+    {
+      "id": "scope:p17-fixed-positive-energy-fiber",
+      "type": "scope",
+      "title": "P17 fixed positive-energy fiber",
+      "summary": "A generic massive rest-frame CAR fiber with E>0; not a sharp coordinate-time projector representation.",
+      "state": "ACTIVE",
+      "includes": [
+        "finite CAR representation",
+        "positive energy",
+        "standard adjoint"
+      ],
+      "excludes": [
+        "full history-space domain",
+        "sharp t-half energy preservation",
+        "interacting local QFT"
+      ]
+    },
+    {
+      "id": "scope:p17-literal-time-line",
+      "type": "scope",
+      "title": "P17 literal coordinate-time line",
+      "summary": "The unfolded t in R representation with signed P_t and a sharp seam at t=0.",
+      "state": "ACTIVE",
+      "includes": [
+        "support locality",
+        "literal R_t",
+        "signed P_t",
+        "ordinary Lorentzian reality"
+      ],
+      "excludes": [
+        "internal-sheet reinterpretation",
+        "rolling scalar clock",
+        "spatial-wall continuation"
+      ]
+    },
+    {
+      "id": "scope:p17-fundamental-doubled-sheet",
+      "type": "scope",
+      "title": "P17 fundamental doubled-sheet algebra",
+      "summary": "A new internal two-sheet degree of freedom carrying complete multiplets on both sheets.",
+      "state": "ACTIVE",
+      "includes": [
+        "unitary bidirectional sheet flip",
+        "fixed-energy closure",
+        "independent physical fermion parity"
+      ],
+      "excludes": [
+        "automatic identification with coordinate-time halves",
+        "unique sheet basis",
+        "one-way arrow"
+      ]
+    },
+    {
+      "id": "scope:p17-temporal-seam-projector",
+      "type": "scope",
+      "title": "P17 temporal seam projector scope",
+      "summary": "Finite real/projector algebra only.",
+      "state": "ACTIVE",
+      "includes": [
+        "single-copy real obstruction",
+        "doubled real rank-four witness"
+      ],
+      "excludes": [
+        "Pin lift",
+        "reflection cocycle",
+        "action",
+        "self-adjoint domain",
+        "conserved charge",
+        "observable"
+      ]
+    },
+    {
+      "id": "scope:p17-sk-quartet",
+      "type": "scope",
+      "title": "P17 abstract SK quartet",
+      "summary": "A four-state cohomological control, not a completed physical contour Hilbert space.",
+      "state": "ACTIVE",
+      "includes": [
+        "nilpotent BRST matrices",
+        "ghost parity",
+        "difference exactness"
+      ],
+      "excludes": [
+        "positive-adjoint identification",
+        "full contour operator algebra",
+        "ghost metric",
+        "particle superpartners"
+      ]
+    },
+    {
+      "id": "open:p17-pin-clifford-lift",
+      "type": "open_problem",
+      "title": "Construct the Pin/Clifford lift",
+      "summary": "Specify a source-defined reflection lift, square, cocycle, and Majorana bilinear.",
+      "question": "Which Pin/Clifford lift and reflection cocycle make the doubled real projector a valid fermionic sewing structure?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p17-doubled-action",
+      "type": "open_problem",
+      "title": "Construct a doubled Lorentzian action",
+      "summary": "Write one real quadratic bulk-plus-interface action for complete multiplets.",
+      "question": "Can a real Lorentzian doubled bulk-plus-interface action realize the sheet structure?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p17-gluing-domain",
+      "type": "open_problem",
+      "title": "Define the t=0 gluing domain",
+      "summary": "Supply variationally admissible junction data and a self-adjoint common domain.",
+      "question": "Which t=0 boundary data make the variational problem and operator domain well-defined?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p17-conserved-charge",
+      "type": "open_problem",
+      "title": "Construct a conserved complex-linear fermionic charge",
+      "summary": "The charge must act on the common domain and have a positive physical adjoint.",
+      "question": "Does a conserved complex-linear fermionic charge exist on the doubled gluing domain?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p17-projector-charge-compatibility",
+      "type": "open_problem",
+      "title": "Check projector-charge compatibility",
+      "summary": "The doubled reality projector and the exchange charge have not been combined on one domain.",
+      "question": "Does the sheet-mixing projector preserve the domain and intertwine the candidate charge?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p17-physical-sheet-anchor",
+      "type": "open_problem",
+      "title": "Find a physical sheet anchor",
+      "summary": "A basis-invariant observable must distinguish geometric sheets from an internal relabeling.",
+      "question": "What physical observable anchors the sheet projectors and defeats the basis-equivalence null?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p17-reality-positivity-junction",
+      "type": "open_problem",
+      "title": "Complete reality, positivity, and junction data",
+      "summary": "Majorana reality, positive inner product, and junction consistency remain unconstructed.",
+      "question": "Can one choose reality and junction data compatible with positivity and causal evolution?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p17-sk-full-completion",
+      "type": "open_problem",
+      "title": "Complete the SK contour algebra",
+      "summary": "The abstract quartet lacks a full contour operator algebra and ghost metric.",
+      "question": "Can the full SK contour algebra and ghost metric be built without relabeling it as particle SUSY?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:full-4d-sugra-interface",
+      "type": "open_problem",
+      "title": "Construct the full 4D SUGRA interface",
+      "summary": "No complete local-SUGRA interface, conserved seam charge, or anomaly-free constraint algebra has been built.",
+      "question": "Can a full 4D N=1 SUGRA bulk-plus-seam system close on a common domain?",
+      "state": "OPEN"
+    },
+    {
+      "id": "source:bgg-hep-th-0005225v1",
+      "type": "source",
+      "title": "Binétruy–Girardi–Grimm component supergravity",
+      "summary": "Primary single-source parent for Phase 16.",
+      "state": "PRIMARY",
+      "citation": "P. Binétruy, G. Girardi and R. Grimm, Supergravity couplings: a geometric formulation",
+      "version": "hep-th/0005225v1",
+      "uri": "https://arxiv.org/abs/hep-th/0005225v1",
+      "content_hashes": {
+        "eprint_gzip_sha256": "9752bda85371cdb572f82a0d6d22c2e6447048620400e61e7c7ba7e7afffdcbc",
+        "PRmain_tex_sha256": "3b776927675eafa3fb7ee5932d202b18cb0f77eb896281b7f2f910a6bce30d33",
+        "AppendixA_tex_sha256": "178da9280eda9aa356e84c7ec0df490186f60775c696db374963cca378cd9667",
+        "Section3_tex_sha256": "7bbd20f7a3a00e40a29b17f64f451bf329596db575eee0bb455bf23db937b037",
+        "Section4_tex_sha256": "b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa"
+      },
+      "source_anchors": [
+        "Formdef",
+        "Leib",
+        "A.1",
+        "A.2",
+        "spincom",
+        "GRA.240-GRA.242",
+        "CPN.13",
+        "CPN.26",
+        "CPN.40",
+        "CPN.59",
+        "CPN.74-CPN.100",
+        "CPN.130",
+        "CPN.133-CPN.143"
+      ]
+    },
+    {
+      "id": "source:hls-1975",
+      "type": "source",
+      "title": "Haag–Łopuszański–Sohnius classification",
+      "summary": "Primary baseline for the standard super-Poincaré algebra and translation closure.",
+      "state": "PRIMARY",
+      "citation": "R. Haag, J. T. Łopuszański and M. Sohnius, All Possible Generators of Supersymmetries of the S-Matrix",
+      "version": "1975",
+      "uri": "https://doi.org/10.1016/0550-3213(75)90279-5"
+    },
+    {
+      "id": "source:belyaev-van-nieuwenhuizen-2008",
+      "type": "source",
+      "title": "Rigid supersymmetry with spatial boundaries",
+      "summary": "Primary positive control for a timelike boundary with spacelike normal; not authority for a temporal seam.",
+      "state": "PRIMARY",
+      "citation": "D. V. Belyaev and P. van Nieuwenhuizen, Rigid supersymmetry with boundaries",
+      "version": "arXiv:0801.2377",
+      "uri": "https://arxiv.org/abs/0801.2377"
+    },
+    {
+      "id": "source:di-pietro-klinghoffer-shamir-2015",
+      "type": "source",
+      "title": "Supersymmetry, boundary actions, and brane charges",
+      "summary": "Primary spatial-boundary subalgebra source and reality warning; not a temporal-seam construction.",
+      "state": "PRIMARY",
+      "citation": "L. Di Pietro, N. Klinghoffer and I. Shamir, On Supersymmetry, Boundary Actions and Brane Charges",
+      "version": "arXiv:1502.05976",
+      "uri": "https://arxiv.org/abs/1502.05976"
+    },
+    {
+      "id": "source:skenderis-townsend-2006",
+      "type": "source",
+      "title": "Domain-wall/cosmology pseudo-supersymmetry",
+      "summary": "Primary warning that spatial wall-to-cosmology continuation changes the real/SUSY structure.",
+      "state": "PRIMARY",
+      "citation": "K. Skenderis and P. K. Townsend, Pseudo-Supersymmetry and the Domain-Wall/Cosmology Correspondence",
+      "version": "hep-th/0610253",
+      "uri": "https://arxiv.org/abs/hep-th/0610253"
+    },
+    {
+      "id": "source:boyle-finn-turok-2018",
+      "type": "source",
+      "title": "CPT-symmetric universe",
+      "summary": "Primary proposal for horizontal CPT-related cosmological histories, not a particle supercharge.",
+      "state": "PRIMARY",
+      "citation": "L. Boyle, K. Finn and N. Turok, CPT-Symmetric Universe",
+      "version": "arXiv:1803.08928",
+      "uri": "https://arxiv.org/abs/1803.08928"
+    },
+    {
+      "id": "source:witten-2015",
+      "type": "source",
+      "title": "Fermion path integrals and topological phases",
+      "summary": "Primary technical source for fermionic reflection structures.",
+      "state": "PRIMARY",
+      "citation": "E. Witten, Fermion Path Integrals And Topological Phases",
+      "version": "arXiv:1508.04715",
+      "uri": "https://arxiv.org/abs/1508.04715"
+    },
+    {
+      "id": "source:freed-hopkins-2016",
+      "type": "source",
+      "title": "Reflection positivity and invertible phases",
+      "summary": "Primary technical source for Pin/reflection lift and cocycle requirements.",
+      "state": "PRIMARY",
+      "citation": "D. Freed and M. Hopkins, Reflection positivity and invertible topological phases",
+      "version": "arXiv:1604.06527",
+      "uri": "https://arxiv.org/abs/1604.06527"
+    },
+    {
+      "id": "source:hlr-2016",
+      "type": "source",
+      "title": "Schwinger–Keldysh formalism I",
+      "summary": "Primary source for topological SK BRST structure.",
+      "state": "PRIMARY",
+      "citation": "F. Haehl, R. Loganayagam and M. Rangamani, Schwinger-Keldysh formalism I",
+      "version": "arXiv:1610.01940",
+      "uri": "https://arxiv.org/abs/1610.01940"
+    },
+    {
+      "id": "source:geracie-et-al-2017",
+      "type": "source",
+      "title": "Schwinger–Keldysh superspace in quantum mechanics",
+      "summary": "Primary source for a concrete SK superspace/quartet realization.",
+      "state": "PRIMARY",
+      "citation": "M. Geracie et al., Schwinger-Keldysh superspace in quantum mechanics",
+      "version": "arXiv:1712.04459",
+      "uri": "https://arxiv.org/abs/1712.04459"
+    },
+    {
+      "id": "artifact:p15r-run-result",
+      "type": "artifact",
+      "title": "Phase 15R run result",
+      "summary": "Committed machine result carrying the two historical target claim IDs.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json",
+      "sha256": "aa4b19116088a3ea52c71b8b7643233a05c3164132b8d2e47c859ff588f98fbe",
+      "introduced_in_commit": "3a9fec4c071e56113adde6387f64e7383e7ca9aa"
+    },
+    {
+      "id": "artifact:p16-script",
+      "type": "artifact",
+      "title": "Phase 16 executable",
+      "summary": "Exact SymPy BGG calculation.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase16_bgg_single_source.py",
+      "sha256": "95c9346bf4607d955692778a2bf91638a307a3563f51bff57af0635bc548f55c",
+      "introduced_in_commit": "25bd216cfd1d85bde59c60ec4f2a9d91bdb53d78"
+    },
+    {
+      "id": "artifact:p16-report",
+      "type": "artifact",
+      "title": "Phase 16 report",
+      "summary": "Human-readable derivation E177-E185 and scoped interpretation.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE16_BGG_SINGLE_SOURCE.md",
+      "sha256": "f09231c21093f803be3b05d5306b82c43a32389e385154290547076c0e332a06",
+      "introduced_in_commit": "25bd216cfd1d85bde59c60ec4f2a9d91bdb53d78"
+    },
+    {
+      "id": "artifact:p16-source-notes",
+      "type": "artifact",
+      "title": "Phase 16 BGG source notes",
+      "summary": "Official archive hashes, source locators, conventions, and caveats.",
+      "state": "TRACKED",
+      "artifact_kind": "source_inventory",
+      "path": "cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md",
+      "sha256": "071ddb541b5a1781c6b4ba82efaf10a7414c1abd9f413b2f1540e99c10f21dd0",
+      "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
+    },
+    {
+      "id": "artifact:p16-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 16 evidence snapshot",
+      "summary": "Persisted 20-check run payload captured on 2026-08-16.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase16-result.json",
+      "sha256": "e8f743f35cd7ed8137c3e2f02f4ed715e4b49546e6e3e53779c1744a51430950"
+    },
+    {
+      "id": "artifact:p17-script",
+      "type": "artifact",
+      "title": "Phase 17 executable",
+      "summary": "Exact SymPy real-line fold algebra calculation.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py",
+      "sha256": "4723f6217f1014c52001dd989fb393e7c8547a1a0556bf7c0141c0dcaa20d615",
+      "introduced_in_commit": "5c95692b4c9ca6d92c617382f5bb9bf6506bfb5d"
+    },
+    {
+      "id": "artifact:p17-report",
+      "type": "artifact",
+      "title": "Phase 17 report",
+      "summary": "Human-readable derivation E186-E192 and scoped interpretation.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md",
+      "sha256": "6d723198133f8643821ff2be2d39e6c98b280f81518297740e47d2d9b69f32a2",
+      "introduced_in_commit": "5c95692b4c9ca6d92c617382f5bb9bf6506bfb5d"
+    },
+    {
+      "id": "artifact:p17-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 17 evidence snapshot",
+      "summary": "Persisted 34-check run payload captured on 2026-08-16.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase17-result.json",
+      "sha256": "e02af8550c74658d5edb45948dbb406b83fcc6a92d8584b201395390b088a6da"
+    },
+    {
+      "id": "artifact:scientific-cli-manual",
+      "type": "artifact",
+      "title": "Scientific CLI manual",
+      "summary": "Locally verified command and official-manual index for the scientific toolchain; supporting infrastructure, not physics evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "manual",
+      "path": "docs/SCIENTIFIC_CLI_MANUAL.md",
+      "sha256": "34fd62e81a06ed3e847738ee7b61eacbfa20f7c77f91e8dec6587a8aa8b73b00",
+      "introduced_in_commit": "36d233568743c3eb3b40db8e99f0ee70289ba303"
+    },
+    {
+      "id": "policy:commit-completed-work-unit",
+      "type": "policy",
+      "title": "Commit completed work units",
+      "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
+      "state": "ACTIVE",
+      "path": "AGENTS.md",
+      "sha256": "2ab850c0fca756e5d40724fa9ffd8dceb99b4afe8e0b4f6e0a79a549c1cb2193",
+      "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
+    },
+    {
+      "id": "policy:lean-research-workflow",
+      "type": "policy",
+      "title": "Lean source-to-calculation workflow",
+      "summary": "New calculations require source, equations, observed output, independent checks, and scoped interpretation, but no mandatory research contract, preregistration ritual, or KG ratification.",
+      "state": "ACTIVE",
+      "path": "AGENTS.md",
+      "sha256": "2ab850c0fca756e5d40724fa9ffd8dceb99b4afe8e0b4f6e0a79a549c1cb2193",
+      "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:001",
+      "from": "phase:p15r",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:002",
+      "from": "phase:p16",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:003",
+      "from": "phase:p17",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:004",
+      "from": "concept:bgg-single-source-parent",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:005",
+      "from": "concept:bosonic-kinetic-parent",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:006",
+      "from": "concept:strict-off-shell-flrw-truncation",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:007",
+      "from": "concept:rolling-chiral-clock",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:008",
+      "from": "concept:coordinate-time-line",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:009",
+      "from": "concept:support-local-supercharge",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:010",
+      "from": "concept:literal-time-reflection",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:011",
+      "from": "concept:fundamental-doubled-sheet",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:012",
+      "from": "concept:temporal-seam-reality",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:013",
+      "from": "concept:cpt-pin-sewing",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:014",
+      "from": "concept:schwinger-keldysh-brst",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:015",
+      "from": "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "PART_OF",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:016",
+      "from": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "PART_OF",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:017",
+      "from": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy",
+      "note": "Historical programme-level pointer only; it is not asserted to be a Phase 15R result node."
+    },
+    {
+      "id": "edge:018",
+      "from": "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+      "relation": "PART_OF",
+      "to": "phase:p16"
+    },
+    {
+      "id": "edge:019",
+      "from": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "relation": "PART_OF",
+      "to": "phase:p16"
+    },
+    {
+      "id": "edge:020",
+      "from": "claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY",
+      "relation": "PART_OF",
+      "to": "phase:p16"
+    },
+    {
+      "id": "edge:021",
+      "from": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:022",
+      "from": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:023",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:024",
+      "from": "claim:P17_ONE_WAY_SHEET_ARROW_STANDARD_CLOSURE",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:025",
+      "from": "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:026",
+      "from": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:027",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:028",
+      "from": "claim:P17_TIME_REVERSAL_IS_SUPERCHARGE",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:029",
+      "from": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "relation": "PART_OF",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:030",
+      "from": "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+      "relation": "ABOUT",
+      "to": "concept:bosonic-kinetic-parent"
+    },
+    {
+      "id": "edge:031",
+      "from": "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p16-bosonic",
+      "note": "The claim points to its exact persisted evidence; polarity records the result.",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:032",
+      "from": "evidence:p16-bosonic",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p16-script"
+    },
+    {
+      "id": "edge:033",
+      "from": "evidence:p16-bosonic",
+      "relation": "DERIVED_FROM",
+      "to": "source:bgg-hep-th-0005225v1"
+    },
+    {
+      "id": "edge:034",
+      "from": "evidence:p16-bosonic",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p16-evidence-snapshot"
+    },
+    {
+      "id": "edge:035",
+      "from": "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p16-report"
+    },
+    {
+      "id": "edge:036",
+      "from": "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p16-bosonic-kinetic"
+    },
+    {
+      "id": "edge:037",
+      "from": "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+      "relation": "EXTENDS",
+      "to": "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "note": "BGG lies outside the frozen P15R census; this adds an independent same-source instance and does not rewrite the old census verdict."
+    },
+    {
+      "id": "edge:038",
+      "from": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "relation": "ABOUT",
+      "to": "concept:strict-off-shell-flrw-truncation"
+    },
+    {
+      "id": "edge:039",
+      "from": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p16-tangency",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:040",
+      "from": "evidence:p16-tangency",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p16-script"
+    },
+    {
+      "id": "edge:041",
+      "from": "evidence:p16-tangency",
+      "relation": "DERIVED_FROM",
+      "to": "source:bgg-hep-th-0005225v1"
+    },
+    {
+      "id": "edge:042",
+      "from": "evidence:p16-tangency",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p16-evidence-snapshot"
+    },
+    {
+      "id": "edge:043",
+      "from": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p16-report"
+    },
+    {
+      "id": "edge:044",
+      "from": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p16-strict-flrw-tangency"
+    },
+    {
+      "id": "edge:045",
+      "from": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "note": "It tests one new BGG truncation outside the old census; it is not a universal parent no-go."
+    },
+    {
+      "id": "edge:046",
+      "from": "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+      "relation": "MOTIVATES",
+      "to": "open:full-4d-sugra-interface",
+      "note": "A different full Bianchi-I or interface construction remains open."
+    },
+    {
+      "id": "edge:047",
+      "from": "claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY",
+      "relation": "ABOUT",
+      "to": "concept:rolling-chiral-clock"
+    },
+    {
+      "id": "edge:048",
+      "from": "claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p16-clock",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:049",
+      "from": "evidence:p16-clock",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p16-script"
+    },
+    {
+      "id": "edge:050",
+      "from": "evidence:p16-clock",
+      "relation": "DERIVED_FROM",
+      "to": "source:bgg-hep-th-0005225v1"
+    },
+    {
+      "id": "edge:051",
+      "from": "evidence:p16-clock",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p16-evidence-snapshot"
+    },
+    {
+      "id": "edge:052",
+      "from": "claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p16-report"
+    },
+    {
+      "id": "edge:053",
+      "from": "claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p16-rolling-clock"
+    },
+    {
+      "id": "edge:054",
+      "from": "artifact:p16-source-notes",
+      "relation": "DOCUMENTS",
+      "to": "source:bgg-hep-th-0005225v1"
+    },
+    {
+      "id": "edge:055",
+      "from": "artifact:p16-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p16"
+    },
+    {
+      "id": "edge:056",
+      "from": "artifact:p16-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p16"
+    },
+    {
+      "id": "edge:057",
+      "from": "artifact:p16-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p16"
+    },
+    {
+      "id": "edge:058",
+      "from": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "relation": "ABOUT",
+      "to": "concept:support-local-supercharge"
+    },
+    {
+      "id": "edge:059",
+      "from": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-local",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:060",
+      "from": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-literal-time-line"
+    },
+    {
+      "id": "edge:061",
+      "from": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "note": "Phase 17 tests a sharper coordinate-support version; it does not settle every relational-branch realization."
+    },
+    {
+      "id": "edge:062",
+      "from": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "relation": "CITES",
+      "to": "source:hls-1975"
+    },
+    {
+      "id": "edge:063",
+      "from": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "relation": "ABOUT",
+      "to": "concept:literal-time-reflection"
+    },
+    {
+      "id": "edge:064",
+      "from": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-reflection",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:065",
+      "from": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-literal-time-line"
+    },
+    {
+      "id": "edge:066",
+      "from": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "relation": "CITES",
+      "to": "source:hls-1975"
+    },
+    {
+      "id": "edge:067",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "ABOUT",
+      "to": "concept:fundamental-doubled-sheet"
+    },
+    {
+      "id": "edge:068",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-doubled",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:069",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-fundamental-doubled-sheet"
+    },
+    {
+      "id": "edge:070",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-doubled-action"
+    },
+    {
+      "id": "edge:071",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-gluing-domain"
+    },
+    {
+      "id": "edge:072",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-conserved-charge"
+    },
+    {
+      "id": "edge:073",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-projector-charge-compatibility"
+    },
+    {
+      "id": "edge:074",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-physical-sheet-anchor"
+    },
+    {
+      "id": "edge:075",
+      "from": "claim:P17_ONE_WAY_SHEET_ARROW_STANDARD_CLOSURE",
+      "relation": "ABOUT",
+      "to": "concept:fundamental-doubled-sheet"
+    },
+    {
+      "id": "edge:076",
+      "from": "claim:P17_ONE_WAY_SHEET_ARROW_STANDARD_CLOSURE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-doubled",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:077",
+      "from": "claim:P17_ONE_WAY_SHEET_ARROW_STANDARD_CLOSURE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-fundamental-doubled-sheet"
+    },
+    {
+      "id": "edge:078",
+      "from": "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "relation": "ABOUT",
+      "to": "concept:fundamental-doubled-sheet"
+    },
+    {
+      "id": "edge:079",
+      "from": "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-doubled",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:080",
+      "from": "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-fundamental-doubled-sheet"
+    },
+    {
+      "id": "edge:081",
+      "from": "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "relation": "MOTIVATES",
+      "to": "open:p17-physical-sheet-anchor"
+    },
+    {
+      "id": "edge:082",
+      "from": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "relation": "ABOUT",
+      "to": "concept:temporal-seam-reality"
+    },
+    {
+      "id": "edge:083",
+      "from": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-seam",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:084",
+      "from": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-temporal-seam-projector"
+    },
+    {
+      "id": "edge:085",
+      "from": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "relation": "CITES",
+      "to": "source:belyaev-van-nieuwenhuizen-2008"
+    },
+    {
+      "id": "edge:086",
+      "from": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "relation": "CITES",
+      "to": "source:di-pietro-klinghoffer-shamir-2015"
+    },
+    {
+      "id": "edge:087",
+      "from": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "relation": "CITES",
+      "to": "source:skenderis-townsend-2006"
+    },
+    {
+      "id": "edge:088",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "ABOUT",
+      "to": "concept:temporal-seam-reality"
+    },
+    {
+      "id": "edge:089",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-seam",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:090",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-temporal-seam-projector"
+    },
+    {
+      "id": "edge:091",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "CITES",
+      "to": "source:witten-2015"
+    },
+    {
+      "id": "edge:092",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "CITES",
+      "to": "source:freed-hopkins-2016"
+    },
+    {
+      "id": "edge:093",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-pin-clifford-lift"
+    },
+    {
+      "id": "edge:094",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-doubled-action"
+    },
+    {
+      "id": "edge:095",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-gluing-domain"
+    },
+    {
+      "id": "edge:096",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-conserved-charge"
+    },
+    {
+      "id": "edge:097",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-projector-charge-compatibility"
+    },
+    {
+      "id": "edge:098",
+      "from": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "relation": "BLOCKED_BY",
+      "to": "open:p17-reality-positivity-junction"
+    },
+    {
+      "id": "edge:099",
+      "from": "claim:P17_TIME_REVERSAL_IS_SUPERCHARGE",
+      "relation": "ABOUT",
+      "to": "concept:physical-time-reversal"
+    },
+    {
+      "id": "edge:100",
+      "from": "claim:P17_TIME_REVERSAL_IS_SUPERCHARGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-seam",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:101",
+      "from": "concept:cpt-pin-sewing",
+      "relation": "CITES",
+      "to": "source:boyle-finn-turok-2018"
+    },
+    {
+      "id": "edge:102",
+      "from": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "relation": "ABOUT",
+      "to": "concept:schwinger-keldysh-brst"
+    },
+    {
+      "id": "edge:103",
+      "from": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p17-sk",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:104",
+      "from": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-sk-quartet"
+    },
+    {
+      "id": "edge:105",
+      "from": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "relation": "CITES",
+      "to": "source:hlr-2016"
+    },
+    {
+      "id": "edge:106",
+      "from": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "relation": "CITES",
+      "to": "source:geracie-et-al-2017"
+    },
+    {
+      "id": "edge:107",
+      "from": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "relation": "MOTIVATES",
+      "to": "open:p17-sk-full-completion"
+    },
+    {
+      "id": "edge:108",
+      "from": "evidence:p17-local",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p17-script"
+    },
+    {
+      "id": "edge:109",
+      "from": "evidence:p17-local",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p17-evidence-snapshot"
+    },
+    {
+      "id": "edge:110",
+      "from": "evidence:p17-doubled",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p17-script"
+    },
+    {
+      "id": "edge:111",
+      "from": "evidence:p17-doubled",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p17-evidence-snapshot"
+    },
+    {
+      "id": "edge:112",
+      "from": "evidence:p17-reflection",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p17-script"
+    },
+    {
+      "id": "edge:113",
+      "from": "evidence:p17-reflection",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p17-evidence-snapshot"
+    },
+    {
+      "id": "edge:114",
+      "from": "evidence:p17-seam",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p17-script"
+    },
+    {
+      "id": "edge:115",
+      "from": "evidence:p17-seam",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p17-evidence-snapshot"
+    },
+    {
+      "id": "edge:116",
+      "from": "evidence:p17-sk",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p17-script"
+    },
+    {
+      "id": "edge:117",
+      "from": "evidence:p17-sk",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p17-evidence-snapshot"
+    },
+    {
+      "id": "edge:118",
+      "from": "artifact:p17-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:119",
+      "from": "artifact:p17-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:120",
+      "from": "artifact:p17-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p17"
+    },
+    {
+      "id": "edge:121",
+      "from": "artifact:p15r-run-result",
+      "relation": "RECORDS",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:122",
+      "from": "evidence:p15r-run-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p15r-run-result"
+    },
+    {
+      "id": "edge:123",
+      "from": "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p15r-run-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:124",
+      "from": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p15r-run-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:125",
+      "from": "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p15r-frozen-two-source-census"
+    },
+    {
+      "id": "edge:126",
+      "from": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p15r-frozen-two-source-census"
+    },
+    {
+      "id": "edge:127",
+      "from": "programme:cpt-temporal-folded-susy",
+      "relation": "USES_TOOLING",
+      "to": "artifact:scientific-cli-manual"
+    },
+    {
+      "id": "edge:128",
+      "from": "programme:cpt-temporal-folded-susy",
+      "relation": "GOVERNED_BY",
+      "to": "policy:commit-completed-work-unit",
+      "note": "Repository workflow policy only; not scientific evidence."
+    },
+    {
+      "id": "edge:129",
+      "from": "programme:cpt-temporal-folded-susy",
+      "relation": "GOVERNED_BY",
+      "to": "policy:lean-research-workflow",
+      "note": "Repository workflow policy only; not scientific evidence or a research contract."
+    },
+    {
+      "id": "edge:130",
+      "from": "claim:P17_TIME_REVERSAL_IS_SUPERCHARGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-literal-time-line",
+      "note": "This computed claim concerns physical time reversal on the literal real line; CPT/Pin sewing is kept as a distinct concept."
+    },
+    {
+      "id": "edge:131",
+      "from": "claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p17-fixed-positive-energy-fiber",
+      "note": "The verified closure is a fixed-positive-energy CAR-fiber result, not yet a history-space domain construction."
+    },
+    {
+      "id": "edge:132",
+      "from": "concept:physical-time-reversal",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    }
+  ],
+  "kg_bridges": [
+    {
+      "local_node_id": "programme:cpt-temporal-folded-susy",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosTree:lakatostree_cpttemporalfoldedsusy_20260809",
+      "relation": "EXACT",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z",
+      "registry": "schema-registry-v1-2026-08-03"
+    },
+    {
+      "local_node_id": "claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/standard-susy-translation-closure",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z",
+      "note": "Older DRAFT concept node; not a Phase 17 evidence receipt."
+    },
+    {
+      "local_node_id": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/hls-local-supercharge-no-go",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z",
+      "note": "Older DRAFT node with overlapping obstruction scope."
+    },
+    {
+      "local_node_id": "claim:P17_REFLECTION_COMPOSED_Q_IS_STANDARD_LOCAL_CHARGE",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/sheet-locality-unfolded-bilocality",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z",
+      "note": "Older DRAFT locality node; today's script/result is not attached there."
+    },
+    {
+      "local_node_id": "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/exact-unitary-fold-equivalence",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z"
+    },
+    {
+      "local_node_id": "claim:P17_ORDINARY_REAL_TEMPORAL_SEAM_PRESERVES_SUSY",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/fixed-spacelike-seam-rigid-susy-no-go",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z",
+      "note": "Existing node label is historical; Phase 17's precise fixed-t=0 calculation remains local."
+    },
+    {
+      "local_node_id": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/modified-reality-temporal-projector-route",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z"
+    },
+    {
+      "local_node_id": "concept:cpt-pin-sewing",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/bft-cpt-not-supercharge",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-16T15:45:00Z"
+    },
+    {
+      "local_node_id": "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "lookup_key": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "checked_at_utc": "2026-08-16T15:45:00Z"
+    },
+    {
+      "local_node_id": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "lookup_key": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "checked_at_utc": "2026-08-16T15:45:00Z"
+    },
+    {
+      "local_node_id": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "lookup_key": "Phase17 Schwinger Keldysh BRST particle supersymmetry",
+      "checked_at_utc": "2026-08-16T15:45:00Z",
+      "note": "No safe direct live KG node was found."
+    }
+  ]
+}

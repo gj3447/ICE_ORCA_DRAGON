@@ -213,6 +213,24 @@ See
 and
 [`../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py`](../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py).
 
+## Research ontology memory
+
+Phase 15R–17 is now indexed in a repository-local typed research graph with **79 nodes and 132 directed
+relations**. It preserves 15 claims, 9 evidence groups, 9 explicit scopes, 9 open problems, 10
+literature sources, the Phase 16/17 exact run payloads, and cautious bridges to the older SYMPOSIUM KG.
+
+- [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
+  is the human concept map.
+- [`../ontology/cpt-temporal-folded-susy/graph.json`](../ontology/cpt-temporal-folded-susy/graph.json)
+  is the machine-readable record.
+- `./ice ontology validate` checks IDs, endpoints, claim/evidence polarity, source and scope shape,
+  persisted check IDs, artifact/policy hashes, and bridge syntax.
+- `./ice ontology show <id>` and `./ice ontology trace <id>` expose the result without scanning every
+  phase report.
+
+This layer is memory and navigation, not a new research contract, scientific ratification, or automatic
+external-KG write. A `RELATED` bridge is not identity, and unresolved external mappings remain explicit.
+
 ## Historical scientific ledger
 
 The rows below summarize previously committed outputs and audits. They are historical evidence, not a

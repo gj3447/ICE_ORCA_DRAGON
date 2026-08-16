@@ -1,6 +1,6 @@
 # ICE_ORCA_DRAGON user guide
 
-> Guide to the 42 entries currently exposed by the TypeScript/Effect CLI. Historical source files are
+> Guide to the 48 entries currently exposed by the TypeScript/Effect CLI. Historical source files are
 > not automatically runnable entries; `./ice list --json` is authoritative.
 
 ## Setup
@@ -25,6 +25,17 @@ packages. A READY report describes the environment, not the truth of a scientifi
 Do not infer a CLI name from an old filename or a prose inventory. If `./ice info <name>` fails, choose a
 name from the live list. Source variants containing words such as `search`, `final`, `part2`, or `v2` may
 be historical implementation files rather than catalog entries.
+
+Research claims are a separate catalog from runnable kernels. Inspect and validate them by stable ID:
+
+```bash
+./ice ontology validate
+./ice ontology summary
+./ice ontology show claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE
+./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
+```
+
+This graph is a searchable evidence map, not an automatic physics verdict or external-KG mutation.
 
 ## Run one kernel
 

@@ -15,6 +15,7 @@ uv sync --locked
 ./ice doctor
 npm run check
 ./ice list
+./ice ontology validate
 ```
 
 ## Core documents
@@ -26,6 +27,8 @@ npm run check
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
 | [`SCIENTIFIC_TOOLBOX.md`](SCIENTIFIC_TOOLBOX.md) | installed symbolic, numerical, workflow, and formal-verification tools |
 | [`SCIENTIFIC_CLI_MANUAL.md`](SCIENTIFIC_CLI_MANUAL.md) | version-specific commands, examples, official documentation, and offline-manual index |
+| [`../ontology/README.md`](../ontology/README.md) | typed research graph, evidence snapshots, validation, and lookup commands |
+| [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md) | readable CPT × Temporal-Folded SUSY concept and evidence map |
 | [`../cpt_temporal_folded_susy/README.md`](../cpt_temporal_folded_susy/README.md) | CPT × Temporal-Folded SUSY phase index, current boundary, and sequencing gates |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
@@ -50,6 +53,9 @@ speculation. See [`../AGENTS.md`](../AGENTS.md).
 | execute one entry | `./ice run <name>` |
 | list mapped reproduction cases | `./ice repro --list` |
 | run isolated ledger | `./ice repro` |
+| validate research graph | `./ice ontology validate` |
+| read current research summary | `./ice ontology summary` |
+| trace one claim | `./ice ontology trace <node-id>` |
 
 The mapped ledger currently reports 12 `REPRO`, queue03 `NONPORTABLE_FAIL`, and queue06
 `SUPERSEDED`. A nonzero overall exit is expected while those explicit statuses remain.
