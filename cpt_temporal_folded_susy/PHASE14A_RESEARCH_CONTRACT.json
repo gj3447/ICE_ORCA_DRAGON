@@ -1,0 +1,258 @@
+{
+  "schema_version": "ice-science-feedback-loop/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase14a",
+  "title": "Charge-first census for local-SUSY-descended generators in one compact chiral-clock route",
+  "tier": "T2",
+  "registration": "PREREGISTERED",
+  "registration_scope": "This contract is frozen before the Phase 14A source packet, executable, charge ledger, or result report is created. The literature-motivated expectation that compact proper gauge generators and a rolling-clock residual parameter are trivial is already known, so this cycle is an exact source-scoped reproduction/bridge test and is not eligible for a novelty or universal-no-go claim.",
+  "baseline": {
+    "repository_head": "66c0d01f7ba56698c6d2ea7d4fc18f5c60f372d6",
+    "phase13a_report": "cpt_temporal_folded_susy/PHASE13A_LORENTZIAN_BRANCH_SUPERCHARGE.md",
+    "declared_at_utc": "2026-08-16T05:55:59Z",
+    "actor": "Codex"
+  },
+  "scope_lock": {
+    "route_id": "COMPACT_T3_FLAT_FLRW_OLD_MINIMAL_N1_NEUTRAL_CHIRAL_W_IDENTICALLY_ZERO_PERIODIC_SPIN",
+    "background": "A nondegenerate spatially flat homogeneous bosonic FLRW background with compact Cauchy slice Sigma=T^3, one physical neutral chiral scalar Z=(T+iY)/sqrt(2), canonical physical Kahler potential K_phys=Z Zbar (dimensionless calK=K_phys/M_P^2), W identically zero, no vector multiplets, and a monotonic clock patch p_T!=0.",
+    "candidate_class_id": "BOSONIC_FLAT_FLRW_LINEAR_FERMION_GOLDSTINO_GAUGE_AND_RT_SPATIAL_BOUNDARY_TEMPLATE",
+    "candidate_class": "A bounded structural template consisting of: (i) residual standard complex-linear local 4D N=1 supersymmetry parameters preserving the Kallosh bosonic spatially-flat FLRW linear-fermion goldstino gauge; (ii) the Regge-Teitelboim spatial-boundary improvement channel for a differentiable local-SUSY generator; and (iii) the proper bulk-constraint representative in the classical reduced quotient. It excludes nonlinear or inhomogeneous compensating sectors, a full matter-coupled canonical reducibility census, and any independent emergent or nonlocal reduced fermionic symmetry.",
+    "candidate_completeness": "CONTRACT_TEMPLATE_COMPLETE_CONDITIONAL_ON_STANDARD_DIRAC_DECOMPOSITION only for the three explicitly frozen representatives in candidate_class_id if their source equations, topology, and classical proper-constraint quotient are reproduced exactly. No SOURCE_COMPLETE claim is made for the full matter-coupled canonical theory or for reduced/topological/dressed charges outside this template.",
+    "source_versions": [
+      {
+        "id": "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+        "url": "https://arxiv.org/abs/hep-th/0006179v3",
+        "scope": "Matter-coupled 4D N=1 supergravity on a bosonic spatially-flat FLRW background; goldstino transformation and alpha identities in equations (7.15)-(7.16)."
+      },
+      {
+        "id": "HENNEAUX_MATULICH_NEOGI_2020_V2",
+        "url": "https://arxiv.org/abs/2004.07299v2",
+        "scope": "Pure asymptotically-flat 4D N=1 canonical supergravity. Equations (II.33)-(II.35) are the exact sign/variation anchor for the supersymmetry generator and improvement; equation (III.7) is used only for the general constraint-plus-boundary structure. No normalization equivalence with (III.8)/(III.13) is asserted, and the asymptotic formula is not imported into FLRW."
+      },
+      {
+        "id": "MARTINEZ_PEREZ_RAMIREZ_2025_V1",
+        "url": "https://arxiv.org/abs/2510.20072v1",
+        "scope": "Matter-free classical FLRW transformation/ansatz context only; not a chiral-clock action, canonical reduction, physical inner product, or charge derivation."
+      }
+    ],
+    "single_parent_guard": "The executable may combine universally applicable algebraic consequences only after labeling their distinct provenance. It may not claim that the three papers derive one common chiral-clock minisuperspace model.",
+    "topology": {
+      "cauchy_slice": "T^3",
+      "spatial_boundary": "empty",
+      "asymptotic_end": "none",
+      "spin_structure": "periodic",
+      "temporal_endpoints_are_spatial_charge_boundaries": false
+    },
+    "claim_ceiling": "No inference may exceed the frozen bosonic-FLRW linear-fermion goldstino-gauge and Regge-Teitelboim spatial-boundary template. Passing or failing this cycle does not decide the full matter-coupled canonical charge census, nonlinear or inhomogeneous compensating sectors, an independent reduced/dressed charge, a relational branch exchange, a full quantum physical domain, a noncompact boundary route, or all N=1 supergravities."
+  },
+  "target_claims": [
+    {
+      "id": "P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "Within the frozen compact route and bounded structural template, at least one differentiable, conserved, gauge-representative-independent, nonzero fermion-odd complex-linear physical charge survives either the goldstino-gauge residual channel or the Regge-Teitelboim spatial-boundary channel after quotienting the proper bulk constraint.",
+      "necessary_not_sufficient": "A positive witness would only keep this selected route alive for a separately preregistered relational branch test. It would not support branch exchange by itself."
+    },
+    {
+      "id": "P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "Opposite relational expanding and contracting branches are superpartners.",
+      "frozen_status": "INCONCLUSIVE_OUT_OF_SCOPE because Phase 14A introduces no relational branch projector and computes no branch cross block."
+    }
+  ],
+  "charge_taxonomy": {
+    "nonexclusive_warning": "Residual, boundary and reduced are not mutually exclusive charge types. Origin and realization are recorded on separate axes, and equivalent physical actions count once.",
+    "origin_axis": [
+      "LOCAL_GAUGE_CONSTRAINT",
+      "RESIDUAL_LOCAL_SYMMETRY",
+      "INDEPENDENT_REDUCED_SYMMETRY"
+    ],
+    "realization_axis": [
+      "BULK_CONSTRAINT",
+      "SPATIAL_BOUNDARY_IMPROVEMENT",
+      "REDUCED_OPERATOR"
+    ],
+    "definitions": {
+      "proper_local_generator": "The smooth periodic local-SUSY generator on the compact slice. Its bulk representative is proportional to the first-class fermionic constraint and is zero in the classical reduced quotient.",
+      "residual": "A local-SUSY parameter solving the exact gauge-preserving equation, modulo proper local gauge, whose induced physical action is nonzero.",
+      "boundary": "The improvement required to make the canonical generator differentiable at an actual spatial boundary or asymptotic end. The frozen compact route has neither.",
+      "independent_reduced": "A fermionic Dirac observable or physical-space symmetry not obtained as a representative of the original local gauge generator. It is explicitly outside the Phase 14A candidate class."
+    },
+    "deduplication": "Candidates with the same action modulo constraints and proper gauge share one equivalence_class_id and count once."
+  },
+  "frozen_assumptions": [
+    "The physical scalar normalization is Z=(T+iY)/sqrt(2), K_phys=Z Zbar and calK=K_phys/M_P^2. In the Kallosh dimensionless convention m=e^(calK/2)W. W is identically zero, so m, its covariant derivatives, the F-term potential, and m_3/2 vanish; W merely vanishing at one field value is not sufficient.",
+    "The clock patch has p_T!=0, a>0, positive lapse magnitude, and finite nonzero fiducial volume, hence |dot Z|^2>0 even if p_Y=0.",
+    "The Kallosh goldstino equation is used on its stated bosonic spatially-flat FLRW and linear-fermion domain; alpha>0 is not generalized to arbitrary backgrounds.",
+    "The Henneaux surface formula is evidence for the constraint-plus-boundary structure under asymptotically-flat conditions. Only the topological inference that a spatial surface improvement has no integration locus on boundaryless T^3 is used in the frozen route.",
+    "A local gauge constraint and its closure are not a nonzero physical charge. Equality to zero is taken in the classical reduced quotient; a quantum statement would additionally require anomaly-free constraints and a common domain.",
+    "The goldstino gauge v=0 is used only to census residual local supersymmetry. Full-rank delta v/delta epsilon means that this gauge has no nonzero residual local-SUSY parameter; it does not mean that the 4D action lacks local supersymmetry.",
+    "No CPT map, complex conjugation, branch reflection, whole-multiplet flavor transport, worldline supercharge, defect, edge mode, collar, temporal boundary charge, or pseudo-supersymmetry is appended.",
+    "All executable comparisons use exact symbolic arithmetic; no floating tolerance, fit, or parameter scan is permitted."
+  ],
+  "gates": [
+    {
+      "id": "P14A_G0_PROVENANCE_AND_SCOPE",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "acceptance": [
+        "record exact source versions, equation scopes, retrieved artifact hashes, and the distinct-source guard in a machine-readable source packet",
+        "record the frozen topology, spin structure, gauge, candidate class, and exclusions",
+        "reject any claim that the modern pure FLRW paper supplies the chiral matter reduction or that the asymptotically-flat surface formula directly applies to FLRW"
+      ],
+      "failure_policy": "INVALID_OR_UNCONSTRUCTED; stop before a physics inference"
+    },
+    {
+      "id": "P14A_G1_BOSONIC_CLOCK_PATCH",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "acceptance": [
+        "derive the homogeneous Einstein-plus-canonical-complex-scalar bosonic Lagrangian and its exact Legendre transform",
+        "with X=sqrt(6) M_P ln a, verify that a positive densitization gives C_B=-p_X^2+p_T^2+p_Y^2",
+        "verify {T,C_B}=2 p_T and retain Y rather than silently deleting the second chiral scalar component",
+        "derive |dot Z|^2 as a positive exact multiple of p_T^2+p_Y^2 and prove alpha>0 on p_T!=0"
+      ],
+      "failure_policy": "INCONCLUSIVE_UNCONSTRUCTED; do not substitute p_T=0 and still call T a clock"
+    },
+    {
+      "id": "P14A_G2_GOLDSTINO_RESIDUAL_CENSUS",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "acceptance": [
+        "reproduce the source relation -2 delta_epsilon v=alpha epsilon with the exact sign and stated domain",
+        "construct the real Majorana residual-parameter matrix delta v/delta epsilon=-(alpha/2) I_4",
+        "compute its exact kernel dimension on alpha>0",
+        "record no surviving residual local-SUSY equivalence class if and only if that kernel is zero"
+      ],
+      "scope": "This tests unbroken/gauge-preserving residual local supersymmetry, not existence of local gauge invariance or every possible independent reduced symmetry."
+    },
+    {
+      "id": "P14A_G3_COMPACT_SPATIAL_BOUNDARY_CHANNEL",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "acceptance": [
+        "verify exact cancellation of opposite faces for a periodic T^3 fundamental cell",
+        "record partial Sigma=empty and therefore no Regge-Teitelboim spatial supersymmetry integration locus in the frozen route",
+        "classify the asymptotic boundary-improvement realization as NOT_APPLICABLE_IN_THIS_ROUTE rather than as a universal zero-charge theorem"
+      ],
+      "scope_change_rule": "Adding a boundary, corner, defect, edge mode, noncompact end, or temporal-boundary charge invalidates this contract and requires a new preregistration."
+    },
+    {
+      "id": "P14A_G4_BULK_CONSTRAINT_QUOTIENT",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "acceptance": [
+        "represent the differentiable local-SUSY generator as bulk first-class constraint plus the applicable improvement",
+        "take the exact classical quotient by proper gauge transformations and verify the bulk constraint representative is zero there",
+        "classify the local constraint as EXCLUDED_AS_PHYSICAL_CHARGE rather than counting its off-shell action"
+      ],
+      "scope": "The corresponding quantum compressed operator is not claimed without an anomaly-free common domain."
+    },
+    {
+      "id": "P14A_G5_CHARGE_LEDGER_AND_COMPLETENESS",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "acceptance": [
+        "write a machine-readable ledger separating origin, realization, equivalence class, parameter space, proper-gauge quotient, and physical representative",
+        "deduplicate residual, boundary, and reduced labels that describe the same physical action",
+        "mark INDEPENDENT_REDUCED_SYMMETRY as OUTSIDE_CANDIDATE_CLASS rather than silently treating it as searched",
+        "declare only CONTRACT_TEMPLATE_COMPLETE_CONDITIONAL_ON_STANDARD_DIRAC_DECOMPOSITION if G2 through G4 cover the frozen linearized goldstino residual, Regge-Teitelboim spatial-boundary, and proper-bulk representatives; do not call this a complete matter-coupled canonical charge census"
+      ]
+    },
+    {
+      "id": "P14A_G6_NO_BRANCH_INFERENCE",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "acceptance": [
+        "introduce no P_plus, P_minus, internal sheet, formal WKB phase, triad orientation, or flavor label as a relational branch",
+        "compute no branch exchange block",
+        "keep P14A_LITERAL_BRANCH_SUPERPARTNER INCONCLUSIVE in every Phase 14A outcome"
+      ]
+    }
+  ],
+  "frozen_decision": {
+    "invalid_if": [
+      "a source equation, sign, version, or domain is misquoted",
+      "the source packet or executable violates the distinct-source guard",
+      "the executable is created or run before this contract is committed"
+    ],
+    "supports_selected_charge_claim_only_if": [
+      "a nonzero residual or spatial-boundary-improved physical representative descended from the local-SUSY generator is explicitly constructed",
+      "the generator is differentiable and preserves the frozen constraint surface, gauge slice, and physical quotient",
+      "its action remains nonzero after quotienting proper gauge transformations",
+      "its physical action is independent of the admissible gauge representative and is exactly conserved under the frozen classical evolution",
+      "it is complex-linear and fermion odd",
+      "if a quantum representation is asserted, a common invariant domain, physical inner product, and physical adjoint are explicitly constructed",
+      "it is not merely the bulk constraint, CPT, conjugation, reflection, flavor transport, or an appended worldline symmetry"
+    ],
+    "contradicts_selected_template_if": [
+      "G0 and G1 pass",
+      "the exact goldstino gauge-preserving parameter kernel is zero",
+      "the frozen spatial boundary channel is absent",
+      "the proper bulk generator is zero in the classical reduced quotient",
+      "the charge ledger shows these are all representatives inside BOSONIC_FLAT_FLRW_LINEAR_FERMION_GOLDSTINO_GAUGE_AND_RT_SPATIAL_BOUNDARY_TEMPLATE"
+    ],
+    "inconclusive_if": [
+      "the goldstino residual equation does not apply to the frozen clock model",
+      "the topology or canonical-generator classification is not adequately frozen",
+      "CONTRACT_TEMPLATE_COMPLETE_CONDITIONAL_ON_STANDARD_DIRAC_DECOMPOSITION is unproved",
+      "a claimed positive witness lacks differentiability, conservation, gauge-representative independence, physical-space preservation, or the required quantum domain and adjoint"
+    ],
+    "verdict_precedence": [
+      "INVALID takes precedence over every scientific label",
+      "a positive physical witness takes precedence for the existential selected-class claim",
+      "CONTRADICTS_SELECTED_LINEARIZED_GOLDSTINO_RT_TEMPLATE requires every frozen negative condition and applies only to candidate_class_id",
+      "otherwise use INCONCLUSIVE_UNCONSTRUCTED",
+      "outside-template independent reduced, nonlinear, inhomogeneous, topological, dressed, defect, or boundary routes do not block a selected-template contradiction; they instead keep every broader charge and literal branch claim INCONCLUSIVE",
+      "the literal branch-superpartner claim remains INCONCLUSIVE regardless of the selected-template result"
+    ],
+    "sequencing_rule": "Open a relational Hilbert/projector/cross-branch Phase 14B only if Phase 14A constructs a nonzero physical charge satisfying every support condition. If the selected template is contradicted or remains unconstructed, stop this core sequence. Any full canonical census, independent reduced symmetry, nonlinear/inhomogeneous compensating sector, noncompact boundary, defect, temporal-boundary, modified-supergravity, or CPT route requires a new contract and has zero automatic evidential inheritance."
+  },
+  "semantic_mutants": [
+    "use p_T=0 to restore supersymmetry while still calling T a monotonic clock",
+    "treat W=0 at one field value as W identically zero and silently keep nonzero D_i W",
+    "interpret alpha>0 as loss of local gauge invariance rather than absence of an unbroken gauge-preserving residual parameter",
+    "count the off-shell local SUSY constraint as a nonzero physical charge",
+    "count a residual parameter before quotienting proper gauge",
+    "import the asymptotically-flat surface charge into compact FLRW",
+    "rename a temporal endpoint or Phase 12 collar as a spatial charge boundary",
+    "add a boundary, defect, edge mode, branch reflection, or worldline supercharge after observing a zero result",
+    "count residual, boundary, and reduced labels for one physical action as independent candidates",
+    "infer all possible reduced fermionic symmetries are absent although independent reduced symmetries were outside the candidate class",
+    "infer branch exchange without a relational spectral projector",
+    "identify the sign of H, p_T, triad orientation, CPT, fermion parity, formal WKB phase, or flavor with a relational branch",
+    "claim a universal no-go for compact, noncompact, boundary, modified, nonlocal, or extended supergravity routes"
+  ],
+  "comparison_policy": {
+    "symbolic_equalities": "exact SymPy simplification to zero",
+    "matrix_equalities": "exact entrywise equality, determinant, rank, and nullspace",
+    "topology_control": "exact periodic opposite-face cancellation and an explicit empty-boundary flag",
+    "floating_tolerance": "not applicable",
+    "null_model": "not applicable; this is an exact deductive test",
+    "multiplicity": "not applicable",
+    "fitting_risk": "NOT_APPLICABLE",
+    "bayes": "NOT_ESTIMABLE"
+  },
+  "required_deliverables": [
+    "cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json",
+    "cpt_temporal_folded_susy/PHASE14A_SOURCE_PACKET.json",
+    "cpt_temporal_folded_susy/PHASE14A_CHARGE_LEDGER.json",
+    "cpt_temporal_folded_susy/phase14a_chiral_clock_charge_first.py",
+    "cpt_temporal_folded_susy/PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md",
+    "an independent read-only adversarial replay receipt"
+  ],
+  "non_goals": [
+    "derive a full matter-coupled FLRW canonical constraint algebra or quantum physical Hilbert space",
+    "construct a relational expansion/contraction projector or branch exchange block",
+    "claim a no-go for independent emergent or nonlocal reduced fermionic symmetries",
+    "import an asymptotic super-BMS charge into FLRW",
+    "continue to a spatial wall, bounce, anomaly wall, observable adapter, or CPT fork as evidence for the literal core",
+    "ratify a scientific verdict, programme appraisal, Contract status, or canon change"
+  ],
+  "authority": {
+    "scientific_verdict": "UNJUDGED",
+    "programme_appraisal": "UNAPPRAISED",
+    "kg_action": "NONE",
+    "ratification_request": "none"
+  }
+}
