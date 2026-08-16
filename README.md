@@ -180,6 +180,7 @@ uv sync --locked
 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) | current CPT × Temporal-Folded SUSY workbench boundary and phase index |
 | [`cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md`](cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md) | closed-SUGRA background existence calculation and initial-value caveat |
 | [`cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | leading WDW selection control and conditional curvature conversion |
+| [`cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | normalized connected Gaussian seam control and flux-prior boundary |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | contribution and verification contract |
 | [`REPRODUCIBILITY_2026-06-08.md`](REPRODUCIBILITY_2026-06-08.md) | historical attestation and current erratum |
 | [`SOURCES.md`](SOURCES.md) | mythology/physics sources and provenance |

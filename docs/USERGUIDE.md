@@ -157,5 +157,6 @@ physical interpretation, and open hypotheses separate.
 - [`STATUS.md`](STATUS.md): engineering status and historical scientific ledger
 - [`../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md`](../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md): closed-SUGRA bounce existence calculation
 - [`../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md): leading WDW initial-value selection control
+- [`../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md): normalized connected Gaussian seam and flux-prior control
 - [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md): historical attestation plus erratum
 - [`../CONTRIBUTING.md`](../CONTRIBUTING.md): contribution checks

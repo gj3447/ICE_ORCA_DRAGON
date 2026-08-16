@@ -284,7 +284,7 @@ Its locked executable returned exit 0 with **18 exact and 14 numerical checks**.
   prediction.
 - An exact complex SUGRA saddle and the boson–fermion–gravitino one-loop determinant remain open. The
   calculation is a leading-envelope control, not a two-sheet SUGRA WDW no-go.
-- The runnable catalog is now 51; the mapped reproduction ledger remains 14 cases.
+- At Phase 20 the runnable catalog rose to 51; the mapped reproduction ledger remained 14 cases.
 
 See
 [`../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md)
