@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 46 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 48 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -16,8 +16,8 @@
 | Environment gate | `./ice doctor` |
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
 
-Historical source/result inventories contain more files than the live CLI. Do not use an old “47” or
-“60+” count as the runnable catalog.
+Historical source/result inventories contain more files than the live CLI. Do not use a copied prose
+count or “60+” inventory as the runnable catalog.
 
 ## Reproduction status
 
@@ -158,6 +158,60 @@ See
 [`../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json`](../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json),
 and
 [`../cpt_temporal_folded_susy/PHASE15R_REPLAY_RECEIPT.json`](../cpt_temporal_folded_susy/PHASE15R_REPLAY_RECEIPT.json).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 16
+
+Phase 16 drops the former contract machinery and computes directly from one source, Binétruy–Girardi–
+Grimm `hep-th/0005225v1`. The executable returned exit 0 with **20 exact checks**.
+
+- Solving BGG CPN.13 and contracting the curvature in the literal CPN.26 `ab` order gives
+  \(\mathcal R_{\rm BGG}=-6Q\). CPN.130 plus CPN.59 then gives the first-order kinetic Hessian
+  \((V_0a^3/N)\operatorname{diag}(-1,1,1)\), inertia \((1,0,2)\), and
+  \(H=N(-p_X^2+p_T^2+p_Y^2)/(2V_0a^3)\). This is the \((X,T,Y)\) kinetic
+  parent subblock; the lapse and algebraic auxiliary constraints are outside that Hamiltonian.
+- The strict auxiliary-retaining FLRW truncation does not. At an exact point on that locus, CPN.85
+  gives a nonzero \(F\epsilon^1\bar\chi^{\dot1}\) coefficient in \(\delta b_3\), and CPN.40/75/77
+  independently give a nonzero gamma-traceless spatial gravitino variation.
+- On the bosonic \(W=0,F=0\) rolling-clock slice with nonzero proper-time rate, the CPN.93 parameter map has full rank, so the
+  background preserves no nonzero local-SUSY parameter.
+- This is a scoped failure of the minimal off-shell FLRW fermionic truncation, not a refutation of full
+  4D \(N=1\) SUGRA, full homogeneous Bianchi I, a smaller on-shell/Killing-spinor slice, or the still
+  unconstructed temporal branch supercharge.
+- The runnable catalog is now 47; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE16_BGG_SINGLE_SOURCE.md`](../cpt_temporal_folded_susy/PHASE16_BGG_SINGLE_SOURCE.md)
+and
+[`../cpt_temporal_folded_susy/phase16_bgg_single_source.py`](../cpt_temporal_folded_susy/phase16_bgg_single_source.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 17
+
+Phase 17 treats \(t\in\mathbb R\) as the base coordinate itself: there is no chiral clock, rolling
+background, or spatial-wall analytic continuation. The contract-free executable returned exit 0 with
+**34 exact symbolic checks**.
+
+- The minimal positive-energy \(4d\;N=1\) CAR fiber and the same-point local charge pass the standard
+  adjoint closure, but every open-half cross block is exactly zero by support locality.
+- On a fundamental two-sheet space, \(Q^X_\alpha=X_s\otimes q_\alpha\) keeps the same algebra and
+  fermion oddness while giving rank-two cross blocks in both directions. A one-way sheet charge fails
+  the standard adjoint closure, and a continuous unitary mixing shows that the algebra alone does not
+  select the exchange basis.
+- When unfolded as literal coordinate reflection, the charge is nonlocal and anticommutes rather than
+  commutes with signed \(P_t\). A fixed \(t=0\) seam also has
+  \(v^0=|\zeta_1|^2+|\zeta_2|^2\), so ordinary Lorentzian reality leaves only the zero preserved
+  supercharge parameter.
+- A doubled real Pin-like temporal projector of rank four exists. This is an algebraic opening, not yet
+  a physical interface: the doubled Lorentzian action, variational domain, conserved charge, and
+  basis-independent sheet observable remain open.
+- Schwinger–Keldysh doubling supplies an exact nilpotent BRST algebra, but its charges encode contour
+  unitarity rather than particle superpartners. The conservative physical interpretation is horizontal
+  CPT/Pin sewing between histories with ordinary SUSY acting vertically inside each sheet.
+- The runnable catalog is now 48; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md`](../cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md)
+and
+[`../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py`](../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py).
 
 ## Historical scientific ledger
 

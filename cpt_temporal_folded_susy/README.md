@@ -36,10 +36,15 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `phase15r_parent_sign_reproduction.py` | Phase 15R source-native curvature/action/scalar/Legendre/inertia 및 full-offshell coverage 실행체 |
 | `PHASE15R_RUN_RESULT.json` / `PHASE15R_REPLAY_RECEIPT.json` | 최초 실행과 독립 replay 영수증. 47 PASS, 17 mutant categories / 18 fixtures, 4 guards |
 | `PHASE15R_PARENT_SIGN_REPAIR.md` | Phase 15R 보고서 — E171–E176. Kallosh는 bosonic parent only, frozen census에는 full same-source parent가 없음 |
+| `PHASE16_BGG_SOURCE_NOTES.md` | BGG `hep-th/0005225v1` source hash·식·convention 메모; 계약이나 실행 게이트가 아님 |
+| `phase16_bgg_single_source.py` | BGG-only curvature/action/Hessian/Hamiltonian과 두 off-shell FLRW tangency witness의 exact 실행체 |
+| `PHASE16_BGG_SINGLE_SOURCE.md` | Phase 16 보고서 — E177–E185. bosonic parent PASS, specified strict auxiliary-retaining FLRW tangency FAIL |
+| `phase17_time_line_fold_algebra.py` | 스칼라 clock 없이 coordinate time-line 자체를 쓰는 local/reflection/doubled-sheet/SK algebra exact 실행체 |
+| `PHASE17_TIME_LINE_FOLD_ALGEBRA.md` | Phase 17 보고서 — E186–E192. literal local half-exchange는 실패; fixed-fiber exchange와 별도 doubled-real projector witness는 성공 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 15R)
+## 현재 경계 (Phase 17)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -68,17 +73,35 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - 따라서 frozen two-source census에서는 bosonic target이 `VALID/SUPPORTS`, full same-source
   target이 `VALID/CONTRADICTS/NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS`다. 이는 문헌 전체 no-go나
   Temporal-Folded SUSY core 판정이 아니다.
+- Phase 16의 BGG 단일-source 계산은 \(\mathcal R=-6Q\), inertia \((1,0,2)\),
+  \(H=N(-p_X^2+p_T^2+p_Y^2)/(2V_0a^3)\)를 exact하게 재현해 bosonic parent gap을 닫았다.
+- 그러나 같은 BGG 변환식은 source auxiliary \(b_a\)의 constructed spatial projection \(b_i\)와
+  spatial spin-3/2 discarded mode에 각각 비영 잔차를 만든다. 따라서 arbitrary homogeneous \(F,\chi\)를 유지하면서 gravity를 strict
+  FLRW/gamma-trace sector로 자르는 off-shell truncation은 local SUSY에 tangent하지 않는다.
+
+- Phase 17은 scalar clock과 rolling background를 완전히 제거하고 coordinate \(t\in\mathbb R\) 자체를 계산했다.
+  표준 support-local \(Q\)의 \(t<0\leftrightarrow t>0\) cross block은 정확히 0이지만,
+  fundamental doubled sheet에서는 \(Q^X_\alpha=X_s\otimes q_\alpha\)가 표준 fixed-energy
+  \(N=1\) closure와 양방향 rank-two exchange를 동시에 만족한다.
+- 이 algebraic success를 원래 한 실수선의 \(t\mapsto-t\)로 unfold하면 연산자가 비국소적이고
+  signed \(P_t\)와 commute하지 않는다. 또한 fixed \(t=0\) seam의 ordinary Lorentzian-real
+  closure vector는 \(v^0=|\zeta_1|^2+|\zeta_2|^2\)이므로 비영 보존 parameter가 없다.
+- 반면 두 sheet에 각각 제곱이 \(-1\)인 실수구조를 결합한 rank-four real fold projector는
+  exact하게 존재한다. 따라서 leading open route는 doubled real sheet-mixing fold candidate +
+  각 sheet 내부의 standard SUSY다. Pin/Clifford lift, 두 witness의 common-domain 결합,
+  action/conserved charge/physical sheet anchor는 아직 OPEN이다.
 
 ## 다음 계산
 
-Phase 14A의 residual·boundary subgates는 닫혔지만 proper-bulk canonical bridge가 열리지 않았고,
-Phase 15R은 기존 두 source 중 full same-source parent가 없음을 확인했다.
+고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-1. Lorentzian Einstein/scalar 부호, auxiliary-retaining action, local transformations를 **한 primary
-   source 안에서** 주는 Binetruy–Girardi–Grimm parent를 직접 축약하고 부호·Hessian을 계산한다.
-2. 같은 source가 실제로 필요한 성분을 주면 Bianchi-I homogeneous SUSY tangency를 계산한다.
-   실패하거나 식이 빠지면 그 사실을 즉시 결과로 남기고 다른 source를 검토한다.
-3. P12B full Green function/S-matrix는 별도 **spatial-interface auxiliary** 연구로만 수행할 수
-   있으며, canonical charge gate 전에는 cosmological branch 주장에 대한 evidence weight가 0이다.
-4. 이산/anomaly-fixed wall과 higher-derivative bounce는 auxiliary response가 non-null일 때만
-   별도 계산한다. spatial wall의 시간 analytic continuation은 증거로 쓰지 않는다.
+1. **Leading construction:** 두 complete free Wess–Zumino multiplet을 folded half-line에 놓고,
+   Phase 17의 doubled real structure를 쓰는 quadratic bulk-plus-seam action을 직접 변분한다.
+   Positive inner product, self-adjoint domain, conserved complex-linear \(Q\), sheet observable을
+   한꺼번에 통과해야 한다.
+2. **Conservative physical interpretation:** 두 half-history는 CPT/Pin sewing으로 연결하고,
+   ordinary SUSY는 각 history 안에서만 작용하게 한다. CPT sewing 자체를 supercharge라 부르지 않는다.
+3. **Real-time alternative:** Schwinger–Keldysh doubling을 쓰면 정확한 BRST supersymmetry를 얻지만,
+   이는 particle superpartner algebra가 아니라 contour unitarity 구조로 분리한다.
+4. Phase 16 Bianchi-I/full-spin-\(3/2\) reduction은 local-SUGRA auxiliary route로 남기되,
+   Phase 17의 coordinate-time fold와 scalar-clock/rolling-background 분석을 다시 섞지 않는다.
