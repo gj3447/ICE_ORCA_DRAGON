@@ -3,11 +3,11 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-15
+## Current state — 2026-08-16
 
 | Component | State |
 |---|---|
-| Runnable catalog | 43 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 44 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -111,6 +111,36 @@ See
 [`../cpt_temporal_folded_susy/PHASE12_BOUNDARY_TWIST_INTERFACE.md`](../cpt_temporal_folded_susy/PHASE12_BOUNDARY_TWIST_INTERFACE.md)
 and
 [`../cpt_temporal_folded_susy/PHASE12_RESEARCH_CONTRACT.json`](../cpt_temporal_folded_susy/PHASE12_RESEARCH_CONTRACT.json).
+
+## Current bounded T2 result — CPT × Temporal-Folded SUSY Phase 13A
+
+Phase 13A preregistered a direct Lorentzian local-SUGRA branch-\(Q\) kill test before its executable
+was written. An independent adversarial audit found that the first run's overall `CONTRADICTS` wording
+exceeded the implemented physical mapping. The original contract remains unchanged; a separate
+`POST_HOC_CORRECTED` erratum records the corrected scope.
+
+- The Moniz first-order constraint's \(\partial_a,\partial_\phi\) principal terms preserve a chosen
+  formal \(e^{\pm i\lambda W}\) phase label. The implemented direct-sum labels are not relational
+  expanding/contracting spectral projectors, so this control is `INCONCLUSIVE` for the physics claim.
+- In a finite positive-Hilbert-space class, if \(C=\{Q,Q^\dagger\}\) and physical states are defined by
+  \(\ker C\), then \(Q\) and \(Q^\dagger\) vanish on that kernel. The executable verifies a nontrivial
+  off-shell sheet/parity-flipping witness whose kernel exchange map is exactly zero. This scoped shortcut
+  is `CONTRADICTS`, but it is not a mapped truncation of the 4D SUGRA physical Hilbert space.
+- A generic odd CAR constraint can close exactly on an even symbol while every formal-sheet cross block
+  vanishes. Local constraint closure alone therefore does not imply branch exchange.
+- No audited Phase 13A source model supplies a gauge-independent relational branch projector, common
+  physical domain/inner product, and a nonzero fermionic charge distinct from the local gauge constraint.
+  The literal “opposite time branch = superpartner” claim remains `INCONCLUSIVE/UNCONSTRUCTED`, not
+  supported and not universally refuted.
+- The executable reports 21 exact positive checks and rejects 8 semantic mutants. Phase 13B spatial-wall
+  scattering is gated out of the core sequence; if pursued, it is a separately registered auxiliary
+  interface project with zero evidence weight for the literal cosmological claim.
+
+See
+[`../cpt_temporal_folded_susy/PHASE13A_LORENTZIAN_BRANCH_SUPERCHARGE.md`](../cpt_temporal_folded_susy/PHASE13A_LORENTZIAN_BRANCH_SUPERCHARGE.md),
+[`../cpt_temporal_folded_susy/PHASE13A_RESEARCH_CONTRACT.json`](../cpt_temporal_folded_susy/PHASE13A_RESEARCH_CONTRACT.json),
+and
+[`../cpt_temporal_folded_susy/PHASE13A_ADVERSARIAL_ERRATUM.json`](../cpt_temporal_folded_susy/PHASE13A_ADVERSARIAL_ERRATUM.json).
 
 ## Historical scientific ledger
 

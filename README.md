@@ -4,7 +4,7 @@
 
 **Cayley–Dickson and sedenion experiments, structural proofs, and reproducibility checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-42-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
+[![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-44-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![Science policy](https://img.shields.io/badge/Science_policy-T0%2FT1%2FT2-10b981?style=for-the-badge)](.claude/skills/science-feedback-loop.md)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -15,7 +15,7 @@ ICE_ORCA_DRAGON is a standalone hypercomplex-computation repository. The canonic
 `/home/lagyeongjun/CD/ICE_ORCA_DRAGON`; it has its own Git history and `origin`. SYMPOSIUM may link to
 this repository for context, but no longer embeds it as a submodule or runtime dependency.
 
-The current CLI exposes **42 runnable Python kernels**. `./ice list --json` is the authority for the
+The current CLI exposes **44 runnable Python kernels**. `./ice list --json` is the authority for the
 live catalog; historical source inventories may contain additional scripts that are not runnable entries.
 Fourteen committed outputs are mapped into the isolated reproduction ledger.
 
