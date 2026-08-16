@@ -313,8 +313,8 @@ The honest bounded conclusion is therefore
 
 \[
 \boxed{
-\text{a conditional closed Starobinsky-potential SUGRA background exists
-conditionally,}
+\text{a closed Starobinsky-potential SUGRA background exists for the displayed
+conditional inputs,}
 \quad
 \text{but the temporal/CPT construction does not yet select its initial
 amplitude.}

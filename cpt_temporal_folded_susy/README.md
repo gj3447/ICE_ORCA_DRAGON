@@ -43,12 +43,16 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE17_TIME_LINE_FOLD_ALGEBRA.md` | Phase 17 보고서 — E186–E192. literal local half-exchange는 실패; fixed-fiber exchange와 별도 doubled-real projector witness는 성공 |
 | `phase18_gaussian_seam_spectrum.py` | free equal-mass Wess–Zumino mode에서 instantaneous canonical seam의 pole·occupation·UV 비용을 가르는 exact 실행체 |
 | `PHASE18_GAUSSIAN_SEAM_SPECTRUM.md` | Phase 18 보고서 — 47 exact checks + 1 numerical control. free seam-only pole splitting은 0; interacting/order-parameter route는 OPEN |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–18의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase19_closed_sugra_bounce.py` | shift-symmetric/Cecotti SUGRA reduction과 closed \(k=+1\) time-symmetric bounce shooting을 검증하는 exact+numerical 실행체 |
+| `PHASE19_CLOSED_SUGRA_BOUNCE.md` | Phase 19 보고서 — 17 exact + 30 numerical checks. 50–60 accelerated-e-fold background는 존재하지만 \(\phi_0\)는 역산 입력이며 CPT/Pin 선택값이 아님 |
+| `phase20_two_sheet_wdw_selection.py` | 표준 WDW history와 추가 independent-pair 확률 convention, benchmark slope, F-flatness 및 조건부 curvature–reheating 변환 실행체 |
+| `PHASE20_TWO_SHEET_WDW_SELECTION.md` | Phase 20 보고서 — 18 exact + 14 numerical checks. leading envelope는 \(5.442969458\)을 선택하지 않지만 exact two-sheet SUGRA WDW no-go는 아님 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–20의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 18)
+## 현재 경계 (Phase 20)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -104,6 +108,21 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - 따라서 full Pin lift와 common variational domain은 여전히 OPEN이고, interacting Wigner
   self-energy, FRW dilution, persistent \(F/D\)-order parameter와 Higgs UV sensitivity도 아직
   계산되지 않았다. 현재 parameter-free pole prediction은 \(\Delta m_{\mathrm{pole}}^2=0\)뿐이다.
+- Phase 19는 shift-symmetric quadratic 및 improved Cecotti/no-scale 궤적을 exact하게 축약하고,
+  closed \(k=+1\) bosonic 방정식에서 각 potential의 50, 55, 60 accelerated-e-fold bounce를
+  독립 shooting으로 재현했다. bounce에서 실제 \(H(0)=0\)이고 안정화 질량식의
+  \(H_V^2=V/3\)과는 다르다.
+- Phase 19의 각 \(\phi_0\)는 요청한 \(N_{\rm acc}\)에서 역산했다. 따라서
+  \(\phi_0=5.44296946\ldots\)은 60-e-fold Starobinsky existence witness이지 CPT/Pin seam의
+  초기값 예측이 아니다. fermionic sewing, perturbation, reheating 및 late-time soft scale도
+  아직 유도하지 않았다.
+- Phase 20의 leading de Sitter/WDW control에서 표준 history weight는 \(e^{2sI}\)이고
+  \(e^{4sI}\)는 추가 independent-pair 가정이다. 둘 다 유한 \(\varphi>0\)에서 단조로워
+  \(5.442969458\)에 peak가 없다. 다만 exact complex saddle, WDW current/measure, sheet overlap과
+  local-SUGRA wavefunction을 풀지 않았으므로 exact two-sheet WDW no-go는 아니다.
+- 동일 Phase 20의 \(\Omega_{K0}\)–\(T_{\rm reh}\) 식은 Phase 19 endpoint와 명시적 reheating,
+  entropy, \(H_0\) 입력에서 얻는 조건부 변환이다. closed \(k=+1\)에서는 \(\Omega_{K0}<0\)이고,
+  이 수식은 curvature 검출이나 seam-derived reheating 예측이 아니다.
 - 이 경계의 claim, exact check, primary source, 적용 범위와 OPEN 항목은
   `../ontology/cpt-temporal-folded-susy/graph.json`에 stable ID로 연결했다. `./ice ontology validate`
   는 그 연결과 artifact hash를 검사하며, 그래프 자체는 연구 계약이나 외부 KG 승격이 아니다.
@@ -112,18 +131,21 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-1. **Foundational construction:** 두 complete free Wess–Zumino multiplet을 folded half-line에 놓고,
-   Phase 17의 doubled real structure를 쓰는 quadratic bulk-plus-seam action을 직접 변분한다.
-   Positive inner product, self-adjoint domain, conserved complex-linear \(Q\), sheet observable을
-   한꺼번에 통과해야 한다.
-2. **Phase 19 interacting test:** UV-admissible smooth seam state에서 \(4d\) interacting
-   Wess–Zumino Schwinger–Keldysh \(\Pi_B^R(T,p)\)와 \(\Sigma_F^R(T,p)\)를 계산한다. Medium
-   quasiparticle shift, boundary transient와 vacuum pole을 분리하고 FRW late-time limit을 취한다.
-3. **Persistent-breaking gate:** seam이 metastable \(F/D\)-order parameter를 실제로 선택하는지,
-   생성된 visible operator가 soft class인지, bulk power sensitivity가 상쇄되는지 검사한다.
-4. **Conservative physical interpretation:** 두 half-history는 CPT/Pin sewing으로 연결하고,
-   ordinary SUSY는 각 history 안에서만 작용하게 한다. CPT sewing 자체를 supercharge라 부르지 않는다.
-5. **Real-time alternative:** Schwinger–Keldysh doubling을 쓰면 정확한 BRST supersymmetry를 얻지만,
-   이는 particle superpartner algebra가 아니라 contour unitarity 구조로 분리한다.
-6. Phase 16 Bianchi-I/full-spin-\(3/2\) reduction은 local-SUGRA auxiliary route로 남기되,
-   Phase 17의 coordinate-time fold와 scalar-clock/rolling-background 분석을 다시 섞지 않는다.
+- **Background-state follow-up:** closed \(S^3\)에서 exact complex Starobinsky/SUGRA saddle,
+  WDW current/inner product와 CPT/Pin sheet overlap을 함께 정하고, one-loop
+  boson–fermion–gravitino determinant가 유한 initial-amplitude peak를 만드는지 계산한다.
+- **Foundational construction:** 두 complete free Wess–Zumino multiplet을 folded half-line에 놓고,
+  Phase 17의 doubled real structure를 쓰는 quadratic bulk-plus-seam action을 직접 변분한다.
+  Positive inner product, self-adjoint domain, conserved complex-linear \(Q\), sheet observable을
+  한꺼번에 통과해야 한다.
+- **Future interacting follow-up:** UV-admissible smooth seam state에서 \(4d\) interacting
+  Wess–Zumino Schwinger–Keldysh \(\Pi_B^R(T,p)\)와 \(\Sigma_F^R(T,p)\)를 계산한다. Medium
+  quasiparticle shift, boundary transient와 vacuum pole을 분리하고 FRW late-time limit을 취한다.
+- **Persistent-breaking gate:** seam이 metastable \(F/D\)-order parameter를 실제로 선택하는지,
+  생성된 visible operator가 soft class인지, bulk power sensitivity가 상쇄되는지 검사한다.
+- **Conservative physical interpretation:** 두 half-history는 CPT/Pin sewing으로 연결하고,
+  ordinary SUSY는 각 history 안에서만 작용하게 한다. CPT sewing 자체를 supercharge라 부르지 않는다.
+- **Real-time alternative:** Schwinger–Keldysh doubling을 쓰면 정확한 BRST supersymmetry를 얻지만,
+  이는 particle superpartner algebra가 아니라 contour unitarity 구조로 분리한다.
+- Phase 16 Bianchi-I/full-spin-\(3/2\) reduction은 local-SUGRA auxiliary route로 남기되,
+  Phase 17의 coordinate-time fold와 scalar-clock/rolling-background 분석을 다시 섞지 않는다.

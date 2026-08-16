@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python hypercomplex comp
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The live catalog contains 49 runnable entries; verify the
+runs, and reproduces locked Python kernels. The live catalog contains 51 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -30,6 +30,8 @@ npm run check
 | [`../ontology/README.md`](../ontology/README.md) | typed research graph, evidence snapshots, validation, and lookup commands |
 | [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md) | readable CPT × Temporal-Folded SUSY concept and evidence map |
 | [`../cpt_temporal_folded_susy/README.md`](../cpt_temporal_folded_susy/README.md) | CPT × Temporal-Folded SUSY phase index, current boundary, and sequencing gates |
+| [`../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md`](../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md) | closed-SUGRA background existence calculation and initial-value caveat |
+| [`../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | leading two-sheet WDW selection control and conditional curvature conversion |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md) | historical attestation plus current erratum |
