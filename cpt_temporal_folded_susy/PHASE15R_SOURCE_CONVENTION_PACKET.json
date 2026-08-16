@@ -1,0 +1,493 @@
+{
+  "schema_version": "ice-science-source-convention-packet/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase15r",
+  "artifact_id": "P15R-SOURCE-CONVENTION-COVERAGE-PACKET",
+  "registration": "PREREGISTERED",
+  "artifact_role": "PRE_RUN_INPUT",
+  "created_at_utc": "2026-08-16T08:43:45Z",
+  "actor": "Codex",
+  "contract_provenance": {
+    "path": "cpt_temporal_folded_susy/PHASE15R_RESEARCH_CONTRACT.json",
+    "commit": "34dd2d3fc533d94113f5ea98d3eafc3721565be4",
+    "ordering": "The Phase 15R contract was committed and pushed before this packet. No Phase 15R executable, import, run, result, replay, or report exists while this packet is created."
+  },
+  "known_prior_policy": {
+    "status": "TRANSCRIPTION_OF_DECLARED_KNOWN_PRIORS_ONLY",
+    "novelty": "REPRODUCTION",
+    "guard": "The anticipated Hohl, Kallosh, ADM, typo, and source-coverage outcomes were disclosed in the committed contract. This packet freezes their exact provenance and cannot be cited as a new scientific observation."
+  },
+  "official_sources": [
+    {
+      "source_id": "HOHL_2020_V1",
+      "title": "Notes on the derivation of the general supergravity/matter/Yang-Mills Lagrangian for N=1 supersymmetry in d=4 dimensions using superspace techniques",
+      "author": "Christian Hohl",
+      "arxiv": "2005.09504v1",
+      "abstract_url": "https://arxiv.org/abs/2005.09504v1",
+      "eprint_url": "https://export.arxiv.org/e-print/2005.09504v1",
+      "official_source_artifact": {
+        "archive_kind": "single gzip member",
+        "main_tex": "sugra_lagrangian.tex",
+        "main_tex_bytes": 482023,
+        "main_tex_sha256": "12722fb7ed5e7c52c2011a632cd5c57e218a843888ce9e15ada6c64a4d52fec6",
+        "transport_bytes": 94242,
+        "transport_sha256": "991ec8f192c78671a899e61a44ddc53232cc7c4ac019a19f5d54748a14743521"
+      },
+      "role": "Full-off-shell candidate and literal bosonic-sign track. Every Hohl-derived node must use source tag HOHL_2020_V1.",
+      "exact_scopes": [
+        {
+          "official_tex_lines": "195-200",
+          "labels": [
+            "eq:identities_conventions_id_1"
+          ],
+          "use": "Mostly-plus eta_ab=diag(-1,+1,+1,+1)."
+        },
+        {
+          "official_tex_lines": "1284-1296",
+          "labels": [
+            "eq:superspace_structure_equation_lorentz_curvature",
+            "eq:superspace_lorentz_curvature_definition"
+          ],
+          "use": "Lorentz-curvature two-form order and component-index order."
+        },
+        {
+          "official_tex_lines": "4376-4437",
+          "labels": [
+            "eq:component_fields_definition_sugra_id_1",
+            "eq:component_fields_definition_sugra_spin_connection_identity"
+          ],
+          "use": "Composite second-order spin connection omega(e,psi); its bosonic specialization is used without importing another Riemann convention."
+        },
+        {
+          "official_tex_lines": "4491-4506",
+          "labels": [
+            "eq:component_fields_definition_sugra_dbp_lorentz_curvature_1",
+            "eq:component_fields_definition_sugra_dbp_lorentz_curvature_2",
+            "eq:component_fields_definition_sugra_id_9",
+            "eq:component_fields_definition_sugra_curvature_scalar"
+          ],
+          "use": "Component Lorentz curvature and scalar-curvature contraction."
+        },
+        {
+          "official_tex_lines": "4753-4773",
+          "labels": [
+            "eq:component_fields_matter_dterm_cd_x",
+            "eq:component_fields_matter_dterm"
+          ],
+          "use": "Original-basis canonical chiral scalar kinetic term and F Fbar auxiliary term before auxiliary elimination."
+        },
+        {
+          "official_tex_lines": "4790-4884",
+          "labels": [
+            "eq:component_fields_sugra_transf_graviton",
+            "eq:component_fields_sugra_transf_gravitino_1",
+            "eq:component_fields_sugra_transf_gravitino_2",
+            "eq:component_fields_sugra_transf_aux_m_1",
+            "eq:component_fields_sugra_transf_aux_m_2",
+            "eq:component_fields_sugra_transf_aux_m_3"
+          ],
+          "unlabeled_scope": "Matter scalar, chiralino, F, and conjugate transformations at official lines 4851-4884 under the frozen main-TeX hash.",
+          "use": "Coverage evidence only; no transformation is evaluated in Phase 15R."
+        },
+        {
+          "official_tex_lines": "5191-5203",
+          "labels": [
+            "eq:component_fields_action_sugra_matter"
+          ],
+          "use": "Original-basis auxiliary-retaining supergravity-plus-matter action: -R/2, -M Mbar/3, +b^2/3, and D_matter."
+        },
+        {
+          "official_tex_lines": "5391-5432",
+          "labels": [
+            "eq:component_fields_action_all",
+            "eq:component_fields_action_aux_1",
+            "eq:component_fields_action_aux_2",
+            "eq:component_fields_action_aux_3",
+            "eq:component_fields_action_aux_4",
+            "eq:component_fields_action_aux_5",
+            "eq:component_fields_action_aux_6"
+          ],
+          "use": "Summary and explicit warning separating auxiliary-retaining from integrated-out action. The diagonalized summary is a coverage cross-check, not the parent of the sign track."
+        },
+        {
+          "official_tex_lines": "5458-5473",
+          "use": "Repeated metric, scalar-curvature, and spin-connection definitions used as exact sign regressions."
+        }
+      ],
+      "literal_bosonic_specialization": {
+        "fields": "psi=chi=M=Mbar=b=F=Fbar=0 only for the R1-R2 bosonic velocity-sign track; this is not an auxiliary equation-of-motion claim",
+        "tetrad": "e_m^a=diag(N,a,a,a), N>0, a>0, shift=0",
+        "local_normalization": "S_local=M_P^2 S_Hohl, Z=M_P varphi, Zbar=M_P varphibar, with unchanged real coordinates and M_P>0",
+        "matter": "one neutral flat chiral coordinate, K_Hohl=varphi varphibar, g=1, W identically zero, no vectors or gauging",
+        "expected_known_prior": "R_H=+6 Q; L_H,raw=-dot(B)+3 M_P^2 V_0 a dot(a)^2/N; the first-order (X,T,Y) inertia is (0 negative, 3 positive)."
+      },
+      "sign_repair_policy": "No official later version, erratum, or author correction is frozen. Flipping the Hohl Einstein coefficient or curvature sign is an unsupported semantic mutant and cannot make the candidate eligible.",
+      "coverage_only_transcription_caveats": [
+        "Official lines 4818-4824 print n in terms whose unique free spacetime index is m. For formula-family availability only, the same-source tensorial resolution is n->m exactly as disclosed and frozen in PHASE15A_CONVENTION_MAP.json; no transformation is executed in Phase 15R.",
+        "Official lines 4866-4868 contain a malformed dotted parameter in the Kähler-Christoffel term and an unbarred outer species glyph in the conjugate Kähler-weight term. In the frozen one-flat-field specialization Gamma_bar=0 removes the former before transcription, and conjugation fixes the latter outer label k->kbar. A future tangency cycle must preregister these resolutions again before using the formulas."
+      ],
+      "inherited_convention_authority_for_coverage_only": {
+        "path": "cpt_temporal_folded_susy/PHASE15A_CONVENTION_MAP.json",
+        "commit": "8622bf77c09daa573f5acdc354c3083fae81d01a",
+        "scope": "U1/U2 glyph-resolution provenance only; no invalid Phase 15A result or tangency inference is inherited."
+      }
+    },
+    {
+      "source_id": "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+      "title": "Superconformal Symmetry, Supergravity and Cosmology",
+      "authors": [
+        "Renata Kallosh",
+        "Lev Kofman",
+        "Andrei Linde",
+        "Antoine Van Proeyen"
+      ],
+      "arxiv": "hep-th/0006179v3",
+      "abstract_url": "https://arxiv.org/abs/hep-th/0006179v3",
+      "eprint_url": "https://export.arxiv.org/e-print/hep-th/0006179v3",
+      "official_source_artifact": {
+        "archive_kind": "gzip-compressed tar archive",
+        "transport_bytes": 183658,
+        "transport_sha256": "d4cdf9f7e2afc63cce079b264dadda50597ed0c06732b225fafe172b834c9ee8",
+        "main_tex": "Gravitino.tex",
+        "main_tex_bytes": 278279,
+        "main_tex_sha256": "81c4ab799f2cd943bb53fec6f8607267a46090b222a9fc659144902862431af7"
+      },
+      "role": "Bosonic normalization candidate only. Every Kallosh-derived node must use source tag KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3.",
+      "exact_scopes": [
+        {
+          "official_tex_lines": "148-153",
+          "use": "Standard gauge-fixed Einstein coefficient -M_P^2 R/2 in the source's own curvature convention."
+        },
+        {
+          "official_tex_lines": "902-930",
+          "labels": [
+            "tablefieldswc"
+          ],
+          "use": "Superconformal Weyl, chiral, and vector multiplet field table. The conformal K-gauge field b_mu in the footnote is absent from the invariant action and is not Hohl's old-minimal auxiliary b_a."
+        },
+        {
+          "official_tex_lines": "1011-1058",
+          "labels": [
+            "fullaction"
+          ],
+          "use": "Superconformal auxiliary-retaining action with h_I, D, and A_mu. Its existence is recorded without calling it the target old-minimal gauge-fixed auxiliary basis."
+        },
+        {
+          "official_tex_lines": "1153-1218",
+          "labels": [
+            "confsusytransf",
+            "fullAmu"
+          ],
+          "use": "The source explicitly omits fields that will be auxiliary from the displayed transformations, then solves h_I, D, and A_mu and substitutes them back; closure after elimination is modulo field equations."
+        },
+        {
+          "official_tex_lines": "1910-1928",
+          "use": "Matter-supergravity action with -M_P^2 R/2 and -g M_P^2 partial z partial z before the W=0 one-flat-chiral specialization."
+        },
+        {
+          "official_tex_lines": "2058-2079",
+          "labels": [
+            "choise"
+          ],
+          "use": "Source-internal U(1) gauge nonsingular at W=0."
+        },
+        {
+          "official_tex_lines": "2182-2190",
+          "labels": [
+            "zepsphi"
+          ],
+          "use": "Physical scalar parametrization z=z_0+M_P^(-1) phi."
+        },
+        {
+          "official_tex_lines": "2223-2233",
+          "labels": [
+            "gijisgij"
+          ],
+          "use": "The Kähler metric is unchanged under the z-to-phi parametrization and the physical scalar kinetic term loses the apparent M_P dependence."
+        },
+        {
+          "official_tex_lines": "2283-2317",
+          "labels": [
+            "shortphenL"
+          ],
+          "use": "Simplified phenomenological bosonic sign cross-check; it omits four-fermion interactions and is not the full off-shell parent."
+        },
+        {
+          "official_tex_lines": "2383-2404",
+          "labels": [
+            "gfsusyphenom"
+          ],
+          "use": "Only boson-producing parts of fermion transformations and boson transformations linear in fermions; not full auxiliary-retaining coverage."
+        },
+        {
+          "official_tex_lines": "2625-2705",
+          "labels": [
+            "Friedmetric",
+            "confmetric",
+            "Gscalar",
+            "rhoinH"
+          ],
+          "use": "Flat-FRW, scalar energy, Friedmann, and the two packetized internal typography conflicts."
+        },
+        {
+          "official_tex_lines": "3600-3607",
+          "use": "First independent same-source anchor dt=a deta."
+        },
+        {
+          "official_tex_lines": "4917-4968",
+          "labels": [
+            "defGmunu"
+          ],
+          "use": "Mostly-plus (+++-) metric statement, Riemann/Ricci/scalar contraction, and Einstein tensor definition."
+        },
+        {
+          "official_tex_lines": "5004-5107",
+          "labels": [
+            "curvatures",
+            "Gconf",
+            "curvdS"
+          ],
+          "use": "Conformal metric, connection, R_K sign, second dt=a deta anchor, G^0_0=-rho/M_P^2, and de Sitter R=-12 H^2."
+        }
+      ],
+      "literal_bosonic_specialization": {
+        "metric": "The executable derives arbitrary positive lapse from the source's own diffeomorphism-covariant Riemann definition; it does not import Hohl omega or set N=1 before the identity.",
+        "matter": "Choose the frozen one-field flat-canonical specialization g_i^j=1 and use the source physical scalar phi_source=Z=(T+iY)/sqrt(2), equivalently z=z_0+M_P^(-1) Z under zepsphi. The same-source gijisgij identity preserves that chosen metric normalization under the z-to-phi coordinate change; it does not itself set the metric to one. Use the choise U(1) gauge nonsingular at W=0, W identically zero, and no vectors or gauging. No additional M_P rescaling of Z is allowed.",
+        "expected_known_prior": "R_K=-6 Q; L_K,raw=+dot(B)-3 M_P^2 V_0 a dot(a)^2/N; the first-order (X,T,Y) inertia is (1 negative, 2 positive)."
+      },
+      "full_offshell_scope_guard": "This source is not eligible for the full-off-shell target because the displayed transformations omit the auxiliary fields and the later phenomenological action/transformations have used auxiliary equations and restricted fermion order. It remains eligible for the independent bosonic sign target."
+    }
+  ],
+  "kallosh_same_source_typography_packets": [
+    {
+      "id": "P15R_KU1_TIME_RELATION",
+      "malformed_or_conflicting_print": {
+        "official_tex_line": 2632,
+        "literal": "dt=deta/a"
+      },
+      "accepted_same_source_emendation": "dt=a deta on the positive time-orientation patch",
+      "anchors": [
+        {
+          "official_tex_lines": "2630-2636",
+          "reason": "Equating ds^2=-dt^2+a^2 dx^2 with ds^2=a^2(-deta^2+dx^2) gives dt=a deta for positive orientation."
+        },
+        {
+          "official_tex_line": 3604,
+          "literal": "dt=a deta"
+        },
+        {
+          "official_tex_line": 5060,
+          "literal": "dt=a(eta) deta"
+        }
+      ],
+      "executable_policy": "The accepted relation must pass exactly and the literal line-2632 mutant must be rejected. No other equation may be changed by this packet."
+    },
+    {
+      "id": "P15R_KU2_EINSTEIN_MIXED_COMPONENT",
+      "malformed_or_conflicting_print": {
+        "official_tex_line": 2678,
+        "literal": "G^0_0=+rho/M_P^2"
+      },
+      "accepted_same_source_emendation": "G^0_0=-rho/M_P^2",
+      "anchors": [
+        {
+          "official_tex_lines": "2701-2705",
+          "reason": "rho=3 M_P^2 H^2"
+        },
+        {
+          "official_tex_lines": "5090-5095",
+          "reason": "G^0_0=-3 H^2=-rho/M_P^2"
+        }
+      ],
+      "executable_policy": "The accepted sign must pass exactly and the literal line-2678 mutant must be rejected. This is not authority to change the action or Riemann convention."
+    }
+  ],
+  "internal_adm_regression": {
+    "source_tag": "ADM_EINSTEIN_CANONICAL_SCALAR_INTERNAL_CONTROL",
+    "evidential_weight": "NONE",
+    "definition": "In the contract's mostly-plus convention take R_std=+6 Q and L_std=sqrt(-g)[+M_P^2 R_std/2-g^{mn} partial_m Z partial_n Zbar].",
+    "expected_known_prior": "L_ADM,raw=+dot(B)-3 M_P^2 V_0 a dot(a)^2/N plus V_0 a^3[dot(T)^2+dot(Y)^2]/(2N), hence first-order inertia (1 negative,2 positive).",
+    "guard": "This internal regression cannot support an active target without a passing primary-source candidate and cannot supply any missing supergravity field or transformation."
+  },
+  "exact_convention_map": {
+    "coordinate_time": "dot=d/dt; adot, addot, Ndot, Tdot, and Ydot are independent real jet symbols before identities are imposed",
+    "positive_patch": [
+      "M_P>0",
+      "V_0>0",
+      "a>0",
+      "N>0"
+    ],
+    "exact_coefficient_domains": {
+      "real_result_domain": "QQ(sqrt(2),sqrt(3)) extended by the declared real jet symbols and their allowed rational functions on M_P V_0 a N !=0",
+      "transcription_extension": "QQ(i,sqrt(2),sqrt(3)) with conjugation i->-i, used to state and exactly multiply/reduce the Z and Zbar bridge",
+      "executable_real_identity": "The bosonic executable must either calculate dot(Z)dot(Zbar)=[dot(T)^2+dot(Y)^2]/2 in the transcription extension or perform the exactly equivalent real-pair calculation. In either implementation the comparison record is projected to the real result domain and contains no i."
+    },
+    "shared_display_metric": "g_mn=diag(-N^2,a^2,a^2,a^2), sqrt(-g)=N a^3, shift=0",
+    "matter_bridge": "Z=(T+iY)/sqrt(2), Zbar=(T-iY)/sqrt(2), so dot(Z)dot(Zbar)=[dot(T)^2+dot(Y)^2]/2 on the real slice",
+    "scale_bridge": "X=sqrt(6) M_P ln(a), dX=sqrt(6) M_P da/a, p_X=a p_a/[sqrt(6) M_P]",
+    "Q_curv": "This is the contract shorthand Q: addot/(a N^2)+adot^2/(a^2 N^2)-adot Ndot/(a N^3). The prefix QQ is reserved for exact number fields.",
+    "B": "3 M_P^2 V_0 a^2 adot/N",
+    "dot_B": "3 M_P^2 V_0[2 a adot^2/N+a^2 addot/N-a^2 adot Ndot/N^2]",
+    "first_order_policy": {
+      "Hohl": "L_H,first=L_H,raw+dot(B)",
+      "Kallosh": "L_K,first=L_K,raw-dot(B)",
+      "ADM_internal": "L_ADM,first=L_ADM,raw-dot(B)",
+      "guard": "No ordinary velocity Hessian is assigned to a raw second-order Lagrangian. After this one registered velocity-dependent endpoint removal, only dF(q,t)/dt with F independent of lapse and velocities is allowed."
+    },
+    "first_order_template": "L_first=V_0 a^3[s_X dot(X)^2+dot(T)^2+dot(Y)^2]/(2N), with s_X in {-1,+1}",
+    "momenta": "p_X=s_X V_0 a^3 dot(X)/N, p_T=V_0 a^3 dot(T)/N, p_Y=V_0 a^3 dot(Y)/N",
+    "hamiltonian_template": "H_kin=N[s_X p_X^2+p_T^2+p_Y^2]/(2 V_0 a^3)",
+    "hessian_template": "G=(V_0 a^3/N) diag(s_X,1,1)",
+    "inertia_order": "(number_negative,number_zero,number_positive)",
+    "target_inertia": [
+      1,
+      0,
+      2
+    ],
+    "equivalence_domain": "Only derivative-free regular real point maps q'=f(q), det(J)!=0, with no lapse or velocity dependence; G transforms by congruence J^T G J. Strictly positive lapse, densitizer, and unit normalization preserve inertia.",
+    "floating_tolerance": "not applicable"
+  },
+  "source_tagged_derivation_graph": {
+    "allowed_tags": [
+      "HOHL_2020_V1",
+      "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+      "ADM_EINSTEIN_CANONICAL_SCALAR_INTERNAL_CONTROL"
+    ],
+    "primitive_clone_rule": "The contract literals metric, Q_curv, B, X, Z bridge, and positive symbols are specifications, not shared graph nodes. Each branch independently instantiates tagged leaf copies metric_H/Q_H/B_H/X_H/Z_H, metric_K/Q_K/B_K/X_K/Z_K, or metric_A/Q_A/B_A/X_A/Z_A. Identical printed values create no cross-tag graph edge.",
+    "node_rule": "Every symbolic derivation node stores exactly one source_tag, and every parent of every symbolic derivation node must have the same tag as the child. There is no mixed-source comparison node inside the symbolic DAG.",
+    "comparison_boundary": "Only completed immutable per-tag terminal records may be read by a non-symbolic decision layer outside the derivation DAG. That decision record has no source_tag, cannot be a derivation parent, and may compare only source hashes, R/Q coefficient, raw boundary identity, first-order Hessian, inertia, scalar-sign check, and source-coverage status.",
+    "forbidden_edges": [
+      "HOHL action to KALLOSH curvature",
+      "KALLOSH action to HOHL spin connection",
+      "KALLOSH bosonic action to HOHL transformations",
+      "ADM internal control to either primary candidate's missing source formula"
+    ],
+    "violation": {
+      "validity": "INVALID",
+      "inference": "INCONCLUSIVE",
+      "qualification": "INVALID_SOURCE_STACKING",
+      "action": "STOP_PHASE15R"
+    }
+  },
+  "full_offshell_coverage_matrix": {
+    "definition": "Availability in one primary source of the auxiliary-uneliminated component action and the required local-supersymmetry formula families, with every known glyph caveat disclosed before execution. This is a source census, not a new proof of invariance, closure, or tangency and not a certificate that the transformations are ready for later use without a fresh convention preregistration.",
+    "required_fields": [
+      "e_mu^a",
+      "psi_mu and psibar_mu",
+      "M and Mbar",
+      "b_a",
+      "Z and Zbar",
+      "chi and chibar",
+      "F and Fbar"
+    ],
+    "candidates": [
+      {
+        "source_id": "HOHL_2020_V1",
+        "auxiliary_uneliminated_action_available": true,
+        "local_transformation_family_available": true,
+        "field_rows": {
+          "e_mu^a": "ACTION_AND_TRANSFORMATION_AVAILABLE",
+          "psi_mu_and_psibar_mu": "ACTION_AND_TRANSFORMATION_AVAILABLE",
+          "M_and_Mbar": "ACTION_AND_TRANSFORMATION_AVAILABLE",
+          "b_a": "ACTION_AND_TRANSFORMATION_AVAILABLE",
+          "Z_and_Zbar": "ACTION_AND_TRANSFORMATION_AVAILABLE",
+          "chi_and_chibar": "ACTION_AND_TRANSFORMATION_AVAILABLE",
+          "F_and_Fbar": "ACTION_AND_TRANSFORMATION_AVAILABLE"
+        },
+        "coverage_status": "FULL_OFFSHELL_FORMULA_FAMILY_AVAILABLE_WITH_FROZEN_GLYPH_CAVEATS",
+        "candidate_role": "FULL_OFFSHELL_CANDIDATE",
+        "candidate_status_before_bosonic_sign_test": "UNRESOLVED"
+      },
+      {
+        "source_id": "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+        "superconformal_auxiliary_retaining_action_available": true,
+        "target_old_minimal_auxiliary_uneliminated_action_available": false,
+        "complete_required_target_transformation_family_available": false,
+        "field_rows": {
+          "e_mu^a": "BOSONIC_ACTION_AND_LINEAR_FERMION_TRANSFORMATION_AVAILABLE",
+          "psi_mu_and_psibar_mu": "ACTION_AND_RESTRICTED_TRANSFORMATION_AVAILABLE",
+          "M_and_Mbar": "TARGET_OLD_MINIMAL_FIELDS_NOT_AVAILABLE",
+          "b_a": "TARGET_OLD_MINIMAL_FIELD_NOT_AVAILABLE",
+          "Z_and_Zbar": "ACTION_AND_LINEAR_FERMION_TRANSFORMATION_AVAILABLE",
+          "chi_and_chibar": "ACTION_AND_BOSON_PRODUCING_TRANSFORMATION_PART_AVAILABLE",
+          "F_and_Fbar": "SUPERCONFORMAL_h_I_EXISTS_BUT_ITS_TRANSFORMATION_IS_OMITTED_AND_THE_TARGET_GAUGE_FIXED_AUXILIARIES_ARE_ELIMINATED"
+        },
+        "coverage_status": "FULL_OFFSHELL_SOURCE_COVERAGE_MISSING",
+        "candidate_role": "BOSONIC_PARENT_CANDIDATE_ONLY",
+        "candidate_status_before_bosonic_sign_test": "UNRESOLVED",
+        "guard": "The conformal h_I, D, and A_mu equations cannot be relabeled as the target M, Mbar, b_a, F, Fbar off-shell transformation family."
+      }
+    ],
+    "result_selection_fields": {
+      "bosonic_parent_selection_status": {
+        "allowed": [
+          "NONE_ELIGIBLE",
+          "SINGLE_ELIGIBLE",
+          "MULTIPLE_NON_EQUIVALENT_ELIGIBLE",
+          "UNRESOLVED"
+        ],
+        "known_prior_expected": "SINGLE_ELIGIBLE"
+      },
+      "full_offshell_parent_selection_status": {
+        "allowed": [
+          "NONE_ELIGIBLE",
+          "SINGLE_ELIGIBLE",
+          "MULTIPLE_NON_EQUIVALENT_ELIGIBLE",
+          "UNRESOLVED"
+        ],
+        "known_prior_expected": "NONE_ELIGIBLE"
+      },
+      "policy": "These instantiate the contract parent_selection_status schema independently for the two active targets; neither field is itself an inference or qualification."
+    },
+    "census_scope": "Exactly the two primary candidates frozen in the contract; no claim of literature completeness."
+  },
+  "executable_requirements": {
+    "path": "cpt_temporal_folded_susy/phase15r_parent_sign_reproduction.py",
+    "must_check": [
+      "both official main-TeX hashes and transport hashes",
+      "all frozen locator sentinels and Kallosh typography packets",
+      "per-source curvature/Q coefficient with arbitrary lapse and Ndot retained",
+      "per-source raw endpoint identity and first-order representative",
+      "same-source scalar normalization",
+      "X,T,Y Legendre map, Hessian rank, and exact inertia",
+      "coverage matrix and independent active-target classification",
+      "source-tag graph non-mixing",
+      "all registered semantic mutants"
+    ],
+    "must_not_contain": [
+      "P_3/2",
+      "rho_i or a discarded gravitino mode",
+      "a tangency residual or compensator",
+      "a canonical supersymmetry constraint",
+      "Q_phys or a branch projector"
+    ],
+    "locator_validation_policy": "For this offline executable, a locator sentinel means the exact source_id, main-TeX SHA-256, official line span, and label strings frozen in this packet. Precommit source auditors compare them with the official artifacts; the executable verifies the immutable packet values and performs no network download.",
+    "pre_first_run_policy": "The complete executable must be committed in the next separate commit. Static read-only review is allowed; import or execution is forbidden until that commit exists."
+  },
+  "semantic_mutants": [
+    "Kallosh line-2632 literal dt=deta/a",
+    "Kallosh line-2678 literal G^0_0=+rho/M_P^2",
+    "Hohl Einstein coefficient -1/2 changed to +1/2",
+    "Hohl Riemann derivative order replaced by Kallosh order",
+    "Kallosh R_K sign replaced by Hohl R_H sign",
+    "N set to one before the arbitrary-lapse identity",
+    "Ndot term omitted",
+    "registered velocity-dependent endpoint omitted or used twice",
+    "complex X or imaginary M_P",
+    "negative lapse or negative densitizer",
+    "scalar factor 1/2 omitted after Z=(T+iY)/sqrt(2)",
+    "Kallosh action combined with Hohl transformations",
+    "Kallosh auxiliary equations called full off-shell coverage",
+    "ADM internal control counted as primary evidence",
+    "claim that the frozen two-source census exhausts 4D N=1 supergravity or the primary literature",
+    "Phase 15A P_3/2 clean probe evaluated"
+  ],
+  "no_result_leakage": {
+    "phase15r_executable_created": false,
+    "phase15r_executable_imported_or_run": false,
+    "phase15r_run_result_created": false,
+    "phase15r_replay_created": false,
+    "phase15r_report_created": false,
+    "phase15a_k2_evaluated": false,
+    "next_artifact": "Commit this packet alone, then create and commit the complete sign-only executable without running it."
+  }
+}
