@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 45 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 46 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -171,6 +171,36 @@ See
 [`../cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json`](../cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json),
 and
 [`../cpt_temporal_folded_susy/PHASE14A_RUN_RESULT.json`](../cpt_temporal_folded_susy/PHASE14A_RUN_RESULT.json).
+
+## Current bounded T2 result — CPT × Temporal-Folded SUSY Phase 15R
+
+Phase 15A was stopped as `INVALID/INCONCLUSIVE/PREREG_OR_PROVENANCE_INVALID` after a parent-sign
+outcome was observed before the complete executable commit. Phase 15R disclosed that outcome as a
+known prior, preregistered a fresh source-scoped reproduction, and kept the Hohl, Kallosh, and
+non-evidential ADM symbolic graphs disjoint.
+
+- The committed first run and independent replay both returned exit 0 with **47 exact checks,
+  17 mutant categories / 18 fixtures rejected, 4 scope guards, and 24/24 known-prior matches**.
+- Hohl's frozen source-native map gives (R_H=+6Q) and, after the unique endpoint removal,
+  first-order inertia ((0,0,3)). It is `REJECT_SIGN` for the ADM-compatible Lorentzian bosonic target.
+- Kallosh's source-native map gives (R_K=-6Q) and inertia ((1,0,2)), so it passes the bosonic
+  target. Its frozen source coverage lacks the target old-minimal auxiliary-retaining action and
+  complete required transformation family, so it is `BOSONIC_PARENT_ONLY`.
+- The bosonic target is `VALID/SUPPORTS/NONE`; the full same-source target is
+  `VALID/CONTRADICTS/NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS`. This is a result for exactly the two
+  frozen primary candidates, not a literature-wide SUGRA no-go.
+- Hohl action/transformations may not be stacked with Kallosh curvature/action signs. Phase 15
+  tangency and every relational branch projector remain closed. The literal branch-superpartner core
+  remains `INCONCLUSIVE/UNCONSTRUCTED` with no new observable.
+- The runnable catalog is now 46; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE15R_PARENT_SIGN_REPAIR.md`](../cpt_temporal_folded_susy/PHASE15R_PARENT_SIGN_REPAIR.md),
+[`../cpt_temporal_folded_susy/PHASE15R_RESEARCH_CONTRACT.json`](../cpt_temporal_folded_susy/PHASE15R_RESEARCH_CONTRACT.json),
+[`../cpt_temporal_folded_susy/PHASE15R_SOURCE_CONVENTION_PACKET.json`](../cpt_temporal_folded_susy/PHASE15R_SOURCE_CONVENTION_PACKET.json),
+[`../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json`](../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json),
+and
+[`../cpt_temporal_folded_susy/PHASE15R_REPLAY_RECEIPT.json`](../cpt_temporal_folded_susy/PHASE15R_REPLAY_RECEIPT.json).
 
 ## Historical scientific ledger
 

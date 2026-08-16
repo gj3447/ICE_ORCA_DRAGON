@@ -4,7 +4,7 @@
 
 **Cayley–Dickson and sedenion experiments, structural proofs, and reproducibility checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-45-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
+[![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-46-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![Science policy](https://img.shields.io/badge/Science_policy-T0%2FT1%2FT2-10b981?style=for-the-badge)](.claude/skills/science-feedback-loop.md)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -15,7 +15,7 @@ ICE_ORCA_DRAGON is a standalone hypercomplex-computation repository. The canonic
 `/home/lagyeongjun/CD/ICE_ORCA_DRAGON`; it has its own Git history and `origin`. SYMPOSIUM may link to
 this repository for context, but no longer embeds it as a submodule or runtime dependency.
 
-The current CLI exposes **45 runnable Python kernels**. `./ice list --json` is the authority for the
+The current CLI exposes **46 runnable Python kernels**. `./ice list --json` is the authority for the
 live catalog; historical source inventories may contain additional scripts that are not runnable entries.
 Fourteen committed outputs are mapped into the isolated reproduction ledger.
 
@@ -144,7 +144,7 @@ The executable policy is [`AGENTS.md`](AGENTS.md) and
 | sedenion ground truth | `avenue3_phase1_groundtruth`, `naesengmoon_indep_sedenion` |
 | queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_11_xor_invariant` |
 | numerology controls | `numerology_mc_judge`, `numerology_mc_judge_v3_abc`, `numerology_hidden_scan` |
-| CPT × Temporal-Folded SUSY | `phase11_collar_admissibility`, `phase12_boundary_twist_interface`, `phase13a_lorentzian_branch_supercharge`, `phase14a_chiral_clock_charge_first` |
+| CPT × Temporal-Folded SUSY | `phase11_collar_admissibility`, `phase12_boundary_twist_interface`, `phase13a_lorentzian_branch_supercharge`, `phase14a_chiral_clock_charge_first`, `phase15r_parent_sign_reproduction` |
 
 Always use `./ice list` for the complete live set.
 

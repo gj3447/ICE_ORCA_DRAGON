@@ -30,10 +30,16 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `phase14a_chiral_clock_charge_first.py` | Phase 14A exact 실행체 — bosonic clock, goldstino residual, compact topology, formal quotient와 verdict precedence 검사 |
 | `PHASE14A_RUN_RESULT.json` | 최초 실행 및 두 independent replay, observed gates, T2 classification을 담은 post-run receipt |
 | `PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md` | Phase 14A 보고서 — E167–E170. G2/G3은 닫혔지만 canonical bridge 미구성으로 selected target은 `INCONCLUSIVE/UNCONSTRUCTED` |
+| `PHASE15A_RESEARCH_CONTRACT.json` / `PHASE15A_SOURCE_PACKET.json` / `PHASE15A_CONVENTION_MAP.json` / `PHASE15A_MODE_COMPENSATOR_LEDGER.json` | Phase 15A off-shell tangency 입력. 완성 executable commit 전 K1 sign을 관측해 cycle은 실행하지 않고 sequence-invalid로 봉인 |
+| `PHASE15A_SEQUENCE_BREACH.json` | Phase 15A의 `INVALID / INCONCLUSIVE / PREREG_OR_PROVENANCE_INVALID` 기록과 K2 방화벽 |
+| `PHASE15R_RESEARCH_CONTRACT.json` / `PHASE15R_SOURCE_CONVENTION_PACKET.json` | Known prior를 공개한 fresh T2 reproduction contract와 Hohl/Kallosh 두-source census |
+| `phase15r_parent_sign_reproduction.py` | Phase 15R source-native curvature/action/scalar/Legendre/inertia 및 full-offshell coverage 실행체 |
+| `PHASE15R_RUN_RESULT.json` / `PHASE15R_REPLAY_RECEIPT.json` | 최초 실행과 독립 replay 영수증. 47 PASS, 17 mutant categories / 18 fixtures, 4 guards |
+| `PHASE15R_PARENT_SIGN_REPAIR.md` | Phase 15R 보고서 — E171–E176. Kallosh는 bosonic parent only, frozen census에는 full same-source parent가 없음 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 14A)
+## 현재 경계 (Phase 15R)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -53,16 +59,28 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   `NOT_APPLICABLE_IN_THIS_ROUTE`다. 그러나 differentiable graded matter-SUGRA Dirac generator는
   유도되지 않아 template completeness와 equivalence-class deduplication은 보류됐고 selected
   charge target은 `INCONCLUSIVE_UNCONSTRUCTED`다.
+- Phase 15A는 complete executable commit 전에 Hohl parent-sign 결과가 관측되어
+  `INVALID / INCONCLUSIVE / PREREG_OR_PROVENANCE_INVALID`로 봉인됐다. 그 cycle의 K2 tangency와
+  projector는 평가하지 않았다.
+- Fresh Phase 15R은 Hohl/Kallosh source를 섞지 않고 재현했다. Hohl은 first-order kinetic
+  inertia \((0,0,3)\)으로 bosonic sign gate를 통과하지 못하고, Kallosh는 \((1,0,2)\)를
+  통과하지만 target old-minimal auxiliary/transform coverage가 없다.
+- 따라서 frozen two-source census에서는 bosonic target이 `VALID/SUPPORTS`, full same-source
+  target이 `VALID/CONTRADICTS/NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS`다. 이는 문헌 전체 no-go나
+  Temporal-Folded SUSY core 판정이 아니다.
 
 ## 순서 게이트와 다음 관문
 
-Phase 14A의 residual·boundary subgates는 닫혔지만 proper-bulk canonical bridge가 열리지 않았다.
-따라서 Phase 14B relational projector/cross-branch 계산은 시작하지 않는다.
+Phase 14A의 residual·boundary subgates는 닫혔지만 proper-bulk canonical bridge가 열리지 않았고,
+Phase 15R은 기존 두 source 중 full same-source parent가 없음을 확인했다. 따라서 Phase 14B 및
+Phase 15 tangency/projector 계산은 시작하지 않는다.
 
-1. 다음 단계는 동일 compact chiral-clock parent에서 matter-coupled canonical variables와 reality
-   conditions, Hamiltonian/Lorentz/SUSY constraints, differentiable generator, graded closure와
-   proper-gauge quotient를 함께 유도하는 별도 preregistered canonical-bridge cycle이다.
-2. P12B full Green function/S-matrix는 별도 **spatial-interface auxiliary** 연구로만 수행할 수
+1. 다음 단계는 Lorentzian Einstein/scalar 부호, auxiliary-retaining action, 필요한 local
+   transformations를 **한 primary source 안에서** 주는 새 parent candidate의 별도 preregistered
+   source-admission cycle이다. Kugo–Yokokura–Yoshioka 계열은 검토 후보이며 아직 parent가 아니다.
+2. 그 source gate가 통과한 뒤에만 Bianchi-I homogeneous SUSY tangency, full constraint closure,
+   proper-gauge quotient와 relational branch projector를 새 cycle들로 순서대로 연다.
+3. P12B full Green function/S-matrix는 별도 **spatial-interface auxiliary** 연구로만 수행할 수
    있으며, canonical charge gate 전에는 cosmological branch 주장에 대한 evidence weight가 0이다.
-3. 이산/anomaly-fixed wall과 higher-derivative bounce는 auxiliary response가 non-null이고 각각의
+4. 이산/anomaly-fixed wall과 higher-derivative bounce는 auxiliary response가 non-null이고 각각의
    독립 preregistration이 있을 때만 연다. spatial wall의 시간 analytic continuation은 증거로 쓰지 않는다.
