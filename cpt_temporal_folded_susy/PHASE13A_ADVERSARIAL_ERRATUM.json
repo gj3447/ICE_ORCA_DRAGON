@@ -1,0 +1,84 @@
+{
+  "schema_version": "ice-science-feedback-loop/v1-erratum",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase13a-erratum",
+  "title": "Post-run adversarial scope correction for the Phase 13A branch-Q test",
+  "tier": "T2",
+  "registration": "POST_HOC_CORRECTED",
+  "declared_at_utc": "2026-08-16T02:41:35Z",
+  "actor": "Codex",
+  "preregistered_contract": {
+    "path": "cpt_temporal_folded_susy/PHASE13A_RESEARCH_CONTRACT.json",
+    "commit": "c41b6a68367ea6ca33ed033e5406223fc2c0b6d6",
+    "preservation": "The committed preregistration is left byte-for-byte unchanged. This erratum narrows post-run inference and does not rewrite its gates."
+  },
+  "reviewed_first_run": {
+    "executable_sha256": "65e70acf0d906eac0eefa4afe4596b4fba39aad9ffd2d43d08116d6a5ab7ae3d",
+    "snapshot_status": "The first-run executable was an untracked transient and was corrected in place after review; its contemporaneous hash is informational and is not independently reconstructible from the repository. Only the later committed corrected executable is release-grade provenance.",
+    "command": "./ice run phase13a_lorentzian_branch_supercharge",
+    "result": "exit 0; 21 positive exact checks; 8 semantic mutants rejected",
+    "problem": "The raw algebra passed, but the final single CONTRADICTS label exceeded the constructed physics mapping and conflicted with the contract's simultaneously true G4 INCONCLUSIVE condition."
+  },
+  "mandatory_scope_corrections": [
+    {
+      "id": "E13A-ERR-1",
+      "correction": "The exp(+/- i lambda W) calculation uses only the partial_a and partial_phi principal terms of Moniz equation (9). W is an arbitrary formal phase, not a solved real Lorentzian Hamilton-Jacobi function or a published Moniz physical state."
+    },
+    {
+      "id": "E13A-ERR-2",
+      "correction": "The two projectors in the finite source-symbol control are formal direct-sum phase labels. Their zero cross block is true by construction and is not a gauge-independent relational expansion/contraction spectral projector."
+    },
+    {
+      "id": "E13A-ERR-3",
+      "correction": "The positive-kernel theorem is an exact finite Hilbert-space lemma and a Phase-5-derived countermodel. No positive physical inner product, adjoint, or map from its C={Q,Q_dagger} to the Moniz/Eder local-SUGRA constraints was derived; it has zero direct evidential weight for the 4D source until that mapping exists."
+    },
+    {
+      "id": "E13A-ERR-4",
+      "correction": "The two-mode CAR closure is a generic null control, not a normalized reproduction of Eder-Sahlmann equations (169)-(176). It omits volume shifts, Theta, reality conditions, ordering, domain, and residual SUSY-constraint structure terms."
+    },
+    {
+      "id": "E13A-ERR-5",
+      "correction": "The constant sp.I != -sp.I anti-linearity mutant must be replaced by an explicit conjugation witness, and real-toy transpose adjoints should be written as conjugate transpose to prevent semantic drift."
+    }
+  ],
+  "corrected_independent_classification": [
+    {
+      "target": "formal local WKB phase-retention control",
+      "inference": "INCONCLUSIVE",
+      "reason": "It demonstrates same-phase principal action but does not construct the relational branch projector or a source physical WKB pair."
+    },
+    {
+      "target": "positive finite-kernel branch-flipping Q class",
+      "inference": "CONTRADICTS",
+      "reason": "Within that exact finite positive class, occupied physical cells exist but the induced branch map is zero."
+    },
+    {
+      "target": "generic CAR closure implies branch exchange",
+      "inference": "CONTRADICTS",
+      "reason": "The null control closes exactly while every branch cross block is zero. This is a logic counterexample, not source evidence."
+    },
+    {
+      "target": "P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "inference": "INCONCLUSIVE",
+      "reason": "G4 did not construct a relational spectral projector, common physical domain/inner product, or distinct nonzero physical fermionic charge."
+    }
+  ],
+  "sequencing_effect": "The core sequence still stops after Phase 13A, now because its decisive physical-domain gate is UNCONSTRUCTED rather than because a universal no-go was proved. Phase 13B may proceed only as a separately labeled spatial-interface auxiliary project with zero evidence weight for the literal cosmological claim.",
+  "historical_dependencies_added": [
+    {
+      "path": "../SYMPOSIUM/FINDINGS/cpt-temporal-folded-susy-2026-08-09/PHASE3_REPORT.md",
+      "sha256": "2265a158a84c3d33289895ab07c4e45292fb0869690aed55859ec2e62066333f",
+      "reused_result": "local SUGRA constraint closure does not automatically provide a nonzero global physical supercharge"
+    },
+    {
+      "path": "../SYMPOSIUM/FINDINGS/cpt-temporal-folded-susy-2026-08-09/PHASE5_REPORT.md",
+      "sha256": "bc9959e0d97de53bcc0a275d53030333586b90de16bf1209c576ec609b3a3cba",
+      "reused_result": "finite positive cochain square-root/kernel analogy, explicitly not a 4D SUGRA truncation"
+    }
+  ],
+  "authority": {
+    "scientific_verdict": "UNJUDGED",
+    "programme_appraisal": "UNAPPRAISED",
+    "kg_action": "NONE",
+    "ratification_request": "none"
+  }
+}
