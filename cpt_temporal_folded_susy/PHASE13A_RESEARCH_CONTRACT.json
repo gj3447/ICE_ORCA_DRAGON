@@ -1,0 +1,125 @@
+{
+  "schema_version": "ice-science-feedback-loop/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase13a",
+  "title": "Lorentzian local-SUGRA WKB branch-supercharge kill test",
+  "tier": "T2",
+  "registration": "PREREGISTERED",
+  "registration_scope": "This contract and its exact pass/fail matrix were frozen before the Phase 13A executable was created or run. The broad warning that local SUSY constraints need not define a nonzero physical global charge was already present in Phases 3 and 5, so this cycle is a preregistered source-scoped reproduction/bridge test and is not eligible for a novelty or confirmation claim.",
+  "baseline": {
+    "repository_head": "8642a6aca69d5b5631b3e90f93000bf62b344504",
+    "phase12_report": "cpt_temporal_folded_susy/PHASE12_BOUNDARY_TWIST_INTERFACE.md",
+    "declared_at_utc": "2026-08-16T02:32:21Z",
+    "actor": "Codex"
+  },
+  "target_claim": {
+    "id": "P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+    "target_fiber": "PHYSICS",
+    "evidence_layer": "PHYSICS_MAPPING",
+    "hypothesis": "In a standard complex-linear local 4D N=1 supergravity route, the fermionic supersymmetry constraint descends to a nonzero physical odd operator Q that exchanges relational expanding and contracting WKB branch sectors, rather than merely acting within each branch or annihilating Dirac physical states.",
+    "required_relation": "P_minus Q_phys P_plus is nonzero and P_plus Q_phys P_minus is nonzero, while Q_phys flips fermion parity and its local-SUSY parent closes consistently on the Hamiltonian and gauge constraints.",
+    "assumptions": [
+      "the comparison is made away from WKB turning points where the branch covector is nonzero",
+      "the local constraint is a complex-linear finite-order differential operator; CPT or complex conjugation is not renamed a fermionic supercharge",
+      "a local SUSY constraint and a nonzero reduced/asymptotic boundary charge are distinct objects",
+      "for the positive-constraint kernel gate, the physical space is ker C with C={Q,Q_dagger} on a positive finite Hilbert space",
+      "the source-scoped FRW principal symbol uses the matter-coupled 4D N=1 reduction of Moniz, arXiv:gr-qc/9606047, equations (9)-(11); this is not a claim that its ordering or inner product is unique",
+      "the modern closure control uses only the published scope of Eder-Sahlmann, arXiv:2010.15629: a pure, quasi-isotropic self-dual N=1 minisuperspace subclass, not the same chiral-clock model"
+    ]
+  },
+  "gates": [
+    {
+      "id": "P13A_G1_SOURCE_LOCALITY",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "acceptance": [
+        "derive the leading WKB action of the source first-order FRW SUSY constraint on both exp(+i lambda S) and exp(-i lambda S)",
+        "verify exactly that each result retains its input phase and that the principal symbol is odd in fermion parity",
+        "verify that the branch off-diagonal blocks vanish while a generic branch-diagonal symbol remains nonzero"
+      ],
+      "falsifier_for_core": "The local source symbol is branch diagonal, so it fails Q P_plus = P_minus Q for every nonzero generic symbol coefficient."
+    },
+    {
+      "id": "P13A_G2_POSITIVE_DIRAC_KERNEL",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "acceptance": [
+        "construct a maximally favorable finite odd Q that flips both branch and fermion parity",
+        "verify Q^2=(Q_dagger)^2=0 and C={Q,Q_dagger} is positive",
+        "verify all four branch/parity cells of ker C are occupied",
+        "measure the induced physical cross-branch rank after projecting both input and output to ker C"
+      ],
+      "falsifier_for_core": "The off-shell branch-flipping rank is nonzero but the induced physical rank is exactly zero because ker C is contained in ker Q intersect ker Q_dagger."
+    },
+    {
+      "id": "P13A_G3_LOCAL_CONSTRAINT_CLOSURE_CONTROL",
+      "target_fiber": "ALGEBRA",
+      "evidence_layer": "ALGEBRAIC",
+      "acceptance": [
+        "verify a normalized two-mode CAR realization in which left/right odd constraints close on an even Hamiltonian symbol",
+        "keep this closure result logically independent from branch exchange",
+        "reject a semantic mutant that infers branch exchange from closure alone"
+      ],
+      "scope": "This is a normalized principal-symbol control motivated by the published Eder-Sahlmann closure, not an executable reproduction of their full volume-difference operator."
+    },
+    {
+      "id": "P13A_G4_RELATIONAL_PHYSICAL_DOMAIN",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "acceptance": [
+        "identify a gauge-independent relational branch projector and a common positive or conserved physical inner product",
+        "identify a nonzero reduced, residual, or boundary fermionic charge distinct from the local gauge constraint",
+        "verify the nonzero physical branch-exchange block on that common domain"
+      ],
+      "failure_policy": "If the selected source supplies no adequate relational current/domain or no distinct physical charge, mark this gate INCONCLUSIVE/UNCONSTRUCTED; do not replace it with an internal sheet label."
+    }
+  ],
+  "frozen_decision": {
+    "supports_core_only_if": [
+      "all exact algebra gates pass",
+      "P13A_G4 is explicitly constructed rather than assumed",
+      "both physical cross-branch blocks are nonzero",
+      "the map is fermion odd and is not CPT, complex conjugation, flavor transport, or an appended sheet reflection"
+    ],
+    "contradicts_under_frozen_assumptions_if": [
+      "the local WKB source symbol is branch diagonal with zero cross blocks",
+      "or a branch-flipping local constraint becomes zero after projection to the positive Dirac physical kernel"
+    ],
+    "inconclusive_if": [
+      "a needed relational projector or common physical domain cannot be constructed in the selected source",
+      "or only a nonlocal/boundary charge outside the source model could evade the exact gates"
+    ],
+    "sequencing_rule": "Phase 13B receives zero evidential weight for the literal branch=superpartner claim unless Phase 13A supports the core. If Phase 13A contradicts or remains unconstructed at the physical-domain gate, stop the core sequence; any spatial scattering calculation is a separately labeled auxiliary interface project."
+  },
+  "semantic_mutants": [
+    "fermion-odd but branch-diagonal local constraint reported as a branch exchanger",
+    "branch reflection tensored with a fermion-even identity reported as SUSY",
+    "off-shell branch-flipping rank reported without projection to the physical kernel",
+    "one-sided Q_dagger Q used instead of C={Q,Q_dagger} to evade the kernel theorem",
+    "whole-multiplet even flavor transport U reported as Q",
+    "anti-linear complex conjugation or CPT reported as a complex-linear fermionic supercharge",
+    "closure on the Hamiltonian constraint reported as proof of branch exchange"
+  ],
+  "comparison_policy": {
+    "symbolic_equalities": "exact SymPy simplification to zero",
+    "matrix_equalities": "exact entrywise equality and exact rank/nullspace",
+    "floating_tolerance": "not applicable",
+    "null_model": "not applicable; this is an exact deductive test",
+    "multiplicity": "not applicable",
+    "fitting_risk": "NOT_APPLICABLE",
+    "bayes": "NOT_ESTIMABLE"
+  },
+  "non_goals": [
+    "claim a universal no-go for every boundary, asymptotic, nonlocal, or reduced supercharge",
+    "construct the full unreduced 4D quantum constraint algebra",
+    "claim that the old FRW ordering or inner product is unique",
+    "identify triad orientation, internal flavor, CPT branch, or fermion parity with the relational expansion branch",
+    "continue to Phase 13B as evidence for the core after a failed Phase 13A gate",
+    "ratify a scientific verdict, programme appraisal, Contract status, or canon change"
+  ],
+  "authority": {
+    "scientific_verdict": "UNJUDGED",
+    "programme_appraisal": "UNAPPRAISED",
+    "kg_action": "NONE",
+    "ratification_request": "none"
+  }
+}
