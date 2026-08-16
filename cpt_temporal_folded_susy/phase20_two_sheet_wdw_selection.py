@@ -147,10 +147,16 @@ def exact_wdw_controls(audit: Audit) -> dict[str, object]:
         "a coherent conjugate-saddle sum gives an order-one cos^2 phase modulation",
     )
 
-    pair_amplitude = sp.exp(2 * sheet_sign * hemisphere_exponent)
+    single_sheet_history_probability = sp.exp(
+        2 * sheet_sign * hemisphere_exponent
+    )
+    independent_joint_probability = single_sheet_history_probability**2
     audit.exact(
-        "P20.WDW.independent_pair_is_extra_born_square",
-        exact_zero(pair_amplitude**2 - sp.exp(4 * sheet_sign * hemisphere_exponent)),
+        "P20.WDW.independent_pair_joint_probability",
+        exact_zero(
+            independent_joint_probability
+            - sp.exp(4 * sheet_sign * hemisphere_exponent)
+        ),
         "exp(4 s I) is the conditional tensor-product joint-probability convention",
     )
 

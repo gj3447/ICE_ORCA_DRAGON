@@ -28,10 +28,10 @@ P_{\rm independent\ pair}\propto e^{4sI},
 \]
 
 The first is the standard semiclassical history weight. The second requires
-an extra assumption: regard the product of two sheet amplitudes as a new
-independent-pair amplitude and apply the Born square again. CPT sewing alone
-does not establish that rule. The factor changes the slope by two but does
-not change the no-finite-peak result.
+an extra assumption: treat the two sheet histories as independent
+tensor-product outcomes, so their history probabilities multiply. CPT sewing
+alone does not establish that rule. The factor changes the slope by two but
+does not change the no-finite-peak result.
 
 The executable reproduces this separation with **18 exact PASS and 14
 numerical PASS** checks:
