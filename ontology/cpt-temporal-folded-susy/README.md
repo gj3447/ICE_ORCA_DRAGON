@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T17:39:49Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T17:43:53Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
 
 ## Quick answers
 
@@ -90,7 +90,8 @@ flowchart TD
   P20 --> Curv20["Conditional curvature–reheating map<br/>SUPPORTED"]
   Peak20 --> Exact20["OPEN: exact complex WDW state · current · measure"]
   Pair20 --> Sheet20["OPEN: CPT/Pin sheet inner product"]
-  F20 --> Loop20["OPEN: local-SUGRA one-loop determinant"]
+  F20 --> Tree20["OPEN: tree-level local-SUGRA WDW constraints"]
+  Peak20 --> Loop20["OPEN: local-SUGRA one-loop determinant"]
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -220,7 +221,8 @@ All entries below have state `OPEN` in the graph.
 | `open:p19-full-covariant-multifield-stability` | Complete covariant scalar and fermionic SUGRA stability along the bounce |
 | `open:p20-exact-starobinsky-wdw-state` | Exact complex scalar-gravity saddle, WDW current or decoherent-histories measure, and fixed factor ordering |
 | `open:p20-cpt-pin-sheet-inner-product` | A doubled Hilbert space and sewing action that derive normalization, overlap, and the physical joint-probability rule |
-| `open:p20-local-sugra-one-loop-selection` | Gauge-fixed local-SUGRA wavefunction and boson–fermion–gravitino determinant including ghosts, zero modes, and renormalization |
+| `open:p20-local-sugra-wdw-constraint` | Tree-level Cecotti local-SUGRA Hamiltonian/SUSY constraints, wavefunction components, factor ordering, and sheet boundary data |
+| `open:p20-local-sugra-one-loop-selection` | Gauge-fixed boson–fermion–gravitino determinant including ghosts, zero modes, and renormalization |
 | `open:p20-quantized-four-form-selection` | UV-fixed discrete flux selection without tuning couplings to \(5.44\) |
 | `open:p20-seam-reheating-curvature-prediction` | Joint seam derivation of initial amplitude, reheating dynamics, and a present curvature distribution |
 

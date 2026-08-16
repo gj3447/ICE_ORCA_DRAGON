@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-16T17:39:49Z",
+  "updated_at_utc": "2026-08-16T17:43:53Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1835,9 +1835,9 @@
       "id": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
       "type": "claim",
       "claim_id": "P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
-      "title": "The independent-pair exp(4sI) weight follows from CPT sewing",
-      "statement": "CPT sewing by itself fixes a two-sheet probability proportional to exp(4sI).",
-      "summary": "Contradicted: exp(4sI) is a conditional independent-pair joint probability; no sheet inner product or sewing action derives it here.",
+      "title": "The bounded leading-envelope control derives exp(4sI) from CPT sewing alone",
+      "statement": "Within the recorded leading-envelope control, the CPT label alone fixes a two-sheet probability proportional to exp(4sI), without an independent-pair postulate or constructed sheet inner product.",
+      "summary": "Contradicted inside this control: exp(4sI) enters only as a conditional independent-pair joint probability. A future concrete sheet action or inner product could define another rule and remains open.",
       "epistemic_state": "CONTRADICTED",
       "state": "CONTRADICTED"
     },
@@ -2015,6 +2015,14 @@
       "title": "Construct the CPT/Pin sheet inner product",
       "summary": "No normalization, overlap, or joint-probability rule has been derived from a sheet sewing action.",
       "question": "Can a concrete doubled Hilbert space and CPT/Pin sewing action derive the physical sheet probability and coherent/decoherent composition rule?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p20-local-sugra-wdw-constraint",
+      "type": "open_problem",
+      "title": "Solve the tree-level local-SUGRA WDW constraints",
+      "summary": "Classical non-F-flatness at the benchmark does not determine support of a quantum local-SUSY wavefunction.",
+      "question": "What wavefunction components solve the Cecotti local-SUGRA Hamiltonian and supersymmetry constraints with a fixed factor ordering and CPT/Pin sheet boundary data?",
       "state": "OPEN"
     },
     {
@@ -3906,7 +3914,7 @@
       "id": "edge:287",
       "from": "claim:P20_CECOTTI_5P44_IS_F_FLAT",
       "relation": "MOTIVATES",
-      "to": "open:p20-local-sugra-one-loop-selection"
+      "to": "open:p20-local-sugra-wdw-constraint"
     },
     {
       "id": "edge:288",
@@ -4057,6 +4065,18 @@
       "from": "artifact:p20-evidence-snapshot",
       "relation": "RECORDS",
       "to": "phase:p20"
+    },
+    {
+      "id": "edge:312",
+      "from": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "relation": "ABOUT",
+      "to": "concept:cpt-pin-sewing"
+    },
+    {
+      "id": "edge:313",
+      "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "relation": "MOTIVATES",
+      "to": "open:p20-local-sugra-one-loop-selection"
     }
   ],
   "kg_bridges": [

@@ -293,8 +293,8 @@ and
 
 ## Research ontology memory
 
-Phase 15R–20 is now indexed in a repository-local typed research graph with **170 nodes and 311 directed
-relations**. It preserves 34 claims, 20 evidence groups, 17 explicit scopes, 23 open problems, 26
+Phase 15R–20 is now indexed in a repository-local typed research graph with **171 nodes and 313 directed
+relations**. It preserves 34 claims, 20 evidence groups, 17 explicit scopes, 24 open problems, 26
 literature sources, the Phase 16–20 exact and bounded numerical run payloads, and cautious bridges to
 the older SYMPOSIUM KG.
 
