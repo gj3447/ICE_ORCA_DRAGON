@@ -4,7 +4,7 @@
 > `/home/lagyeongjun/CD/ICE_ORCA_DRAGON`, 원격 정본은 `gj3447/ICE_ORCA_DRAGON`의
 > `main`이다. 이 저장소는 submodule이 아니며 sibling 저장소의 writer token이나 규칙을
 > 암묵적으로 상속하지 않는다. 기존 dirty 변경을 보존하고 변경 경로만 정확히 stage한 뒤,
-> 이 저장소 안에서 직접 검증·commit·push한다.
+> 이 저장소 안에서 직접 검증·commit한다. 원격 push는 사용자가 요청한 경우에만 한다.
 
 ## 먼저 알아야 할 것 — 여기는 물리학이 아니라 **계산 워크벤치**다
 
@@ -62,6 +62,21 @@ basis-dependent metric 때문에 `NONPORTABLE_FAIL`이며 tolerance로 숨기지
 
 과거 `*_RESEARCH_CONTRACT.json`, run receipt, replay receipt는 당시 결과의 재현 provenance일 뿐
 새 작업을 지배하지 않는다. 기존 실행기가 그것을 읽는 경우 역사적 재현을 위해 보존한다.
+
+## 커밋 규율
+
+- 사용자 요청의 완료된 작업 단위마다 관련 검증을 끝낸 뒤 **같은 턴에서 로컬 Git commit까지**
+  만든다. 완료된 source·test·문서 변경을 handoff 시 unstaged/uncommitted로 남기지 않는다.
+- 한 요청 안에 독립 deliverable이 여러 개면 의미 단위별로 커밋을 나눈다. 사소한 중간 patch마다
+  커밋하지 말고, 검증 가능한 coherent unit이 완성되는 시점을 경계로 삼는다.
+- 작업 시작과 커밋 직전에 `git status`를 확인한다. 기존 dirty 변경은 사용자 소유로 간주하고
+  보존하며, 이번 작업에서 만든 정확한 경로만 stage한다. 다른 사람의 변경을 몰래 섞지 않는다.
+- 커밋 메시지는 무엇을 계산·수정했는지 드러내고, 산출 결과를 포함하면 실행 명령이나 핵심
+  검증을 본문에 기록한다. 실패한 검증을 숨긴 채 커밋하지 않는다.
+- generated cache, 가상환경, 대용량 다운로드 binary는 사용자가 versioning까지 요청하지 않은
+  한 커밋하지 않는다. 대신 재구성 가능한 source URL, version, checksum, 생성 명령을 추적한다.
+- 기존 commit을 amend/rebase/reset으로 다시 쓰지 않는다. push, PR, release는 로컬 commit과
+  별도 외부 변경이므로 사용자가 요청한 경우에만 수행한다.
 
 ## 결과 파일 규율
 
