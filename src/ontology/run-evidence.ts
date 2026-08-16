@@ -45,6 +45,8 @@ export const ResearchRunEvidenceSchema = Schema.Struct({
   }),
   exact_checks: Schema.NonNegativeInt,
   checks: Schema.Array(RunCheckSchema),
+  numerical_checks: Schema.optional(Schema.NonNegativeInt),
+  numerical: Schema.optional(Schema.Array(RunCheckSchema)),
   payload: RunPayloadSchema
 })
 
@@ -103,7 +105,11 @@ export const validateEvidenceSnapshot = (
   snapshot: ResearchRunEvidence
 ): ReadonlyArray<ValidationIssue> => {
   const issues: Array<ValidationIssue> = []
-  const snapshotIds = snapshot.checks.map((check) => check.id)
+  const numericalRecords = snapshot.numerical ?? []
+  const snapshotIds = [
+    ...snapshot.checks.map((check) => check.id),
+    ...numericalRecords.map((check) => check.id)
+  ]
 
   if (snapshot.exact_checks !== snapshot.checks.length) {
     issues.push(
@@ -119,6 +125,43 @@ export const validateEvidenceSnapshot = (
       issue(
         "EVIDENCE_PAYLOAD_EXACT_CHECKS_MISMATCH",
         `payload.exact_checks is ${snapshot.payload.exact_checks}, but exact_checks is ${snapshot.exact_checks}`,
+        artifact.id
+      )
+    )
+  }
+  if (
+    (snapshot.numerical_checks === undefined) !==
+    (snapshot.numerical === undefined)
+  ) {
+    issues.push(
+      issue(
+        "EVIDENCE_NUMERICAL_LEDGER_INCOMPLETE",
+        "numerical_checks and numerical must either both be present or both be absent",
+        artifact.id
+      )
+    )
+  }
+  if (
+    snapshot.numerical_checks !== undefined &&
+    snapshot.numerical_checks !== numericalRecords.length
+  ) {
+    issues.push(
+      issue(
+        "EVIDENCE_NUMERICAL_CHECKS_MISMATCH",
+        `numerical_checks is ${snapshot.numerical_checks}, but numerical contains ${numericalRecords.length} entries`,
+        artifact.id
+      )
+    )
+  }
+  const payloadNumericalChecks = snapshot.payload.numerical_checks
+  if (
+    snapshot.numerical_checks !== undefined &&
+    payloadNumericalChecks !== snapshot.numerical_checks
+  ) {
+    issues.push(
+      issue(
+        "EVIDENCE_PAYLOAD_NUMERICAL_CHECKS_MISMATCH",
+        `payload.numerical_checks is ${String(payloadNumericalChecks)}, but numerical_checks is ${snapshot.numerical_checks}`,
         artifact.id
       )
     )

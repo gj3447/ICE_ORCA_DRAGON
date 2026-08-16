@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "research-run-evidence-v1.schema.json",
   "title": "Research run evidence snapshot",
-  "description": "A durable snapshot of one exact research executable run. The payload remains phase-specific while provenance and check records are shared.",
+  "description": "A durable snapshot of one research executable run. Exact checks are required; an optional typed numerical ledger preserves bounded numerical controls. The payload remains phase-specific.",
   "type": "object",
   "required": [
     "schema_version",
@@ -50,6 +50,16 @@
       "minimum": 0
     },
     "checks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/check"
+      }
+    },
+    "numerical_checks": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "numerical": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/check"

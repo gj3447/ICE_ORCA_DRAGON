@@ -233,6 +233,29 @@ it.effect("decodes compact research-run-evidence/v1 snapshots strictly", () =>
       "missing payload count"
     ).pipe(Effect.either)
     expect(invalid._tag).toBe("Left")
+
+    const numerical = yield* decodeResearchRunEvidence(
+      JSON.stringify({
+        ...raw,
+        numerical_checks: 1,
+        numerical: [
+          {
+            id: "P16.numeric.control",
+            status: "PASS",
+            statement: "The bounded numerical control passed."
+          }
+        ],
+        payload: {
+          ...raw.payload,
+          numerical_checks: 1
+        }
+      }),
+      "typed numerical fixture"
+    )
+    expect(numerical.numerical_checks).toBe(1)
+    expect(numerical.numerical?.map((check) => check.id)).toEqual([
+      "P16.numeric.control"
+    ])
   })
 )
 
@@ -287,6 +310,41 @@ it.effect("cross-checks snapshot counts, uniqueness, and graph evidence groups",
         (entry) => entry.code
       )
     ).toContain("EVIDENCE_EXACT_CHECKS_MISMATCH")
+
+    const incompleteNumerical = yield* decodeResearchRunEvidence(
+      JSON.stringify({ ...raw, numerical_checks: 1 }),
+      "incomplete numerical fixture"
+    )
+    expect(
+      validateEvidenceSnapshot(graph, artifact, incompleteNumerical).map(
+        (entry) => entry.code
+      )
+    ).toContain("EVIDENCE_NUMERICAL_LEDGER_INCOMPLETE")
+
+    const mismatchedNumerical = yield* decodeResearchRunEvidence(
+      JSON.stringify({
+        ...raw,
+        numerical_checks: 2,
+        numerical: [
+          {
+            id: "P16.numeric.control",
+            status: "PASS",
+            statement: "One numerical check."
+          }
+        ],
+        payload: { ...raw.payload, numerical_checks: 3 }
+      }),
+      "mismatched numerical fixture"
+    )
+    const numericalCodes = validateEvidenceSnapshot(
+      graph,
+      artifact,
+      mismatchedNumerical
+    ).map((entry) => entry.code)
+    expect(numericalCodes).toContain("EVIDENCE_NUMERICAL_CHECKS_MISMATCH")
+    expect(numericalCodes).toContain(
+      "EVIDENCE_PAYLOAD_NUMERICAL_CHECKS_MISMATCH"
+    )
 
     const otherCheck = yield* decodeResearchRunEvidence(
       JSON.stringify({
