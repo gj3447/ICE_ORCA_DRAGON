@@ -15,7 +15,7 @@ qualifications:
 With those corrections, exact symbolic reduction gives
 
 \[
-V_{m quad}=\frac12m^2\phi^2,
+V_{\rm quad}=\frac12m^2\phi^2,
 \qquad
 V_{\rm St}=\frac34M^2
 \left(1-e^{-\sqrt{2/3}\phi}\right)^2,
@@ -28,7 +28,7 @@ The quoted tables are reproduced to their displayed precision, with the
 redundant Friedmann constraint below (10^{-12}) relative error.
 
 This is an **existence result**, not an initial-condition prediction.  In each
-row (phi_0) is found by shooting backwards from a requested (N_{m acc}).
+row \(\phi_0\) is found by shooting backwards from a requested \(N_{\rm acc}\).
 Neither CPT nor Pin has yet selected (phi_0).  The result also does not
 construct a fermionic CPT/Pin state, a BPS bounce, perturbations through the
 bounce, reheating, or a present-day SUSY spectrum.
@@ -90,7 +90,7 @@ W=mS\Phi,
 on
 
 \[
-S=0,qquad \operatorname{Im}\Phi=0,qquad
+S=0,\qquad \operatorname{Im}\Phi=0,\qquad
 \Phi=\frac{\phi}{\sqrt2}.
 \]
 
@@ -242,7 +242,7 @@ undefined at (H=0).
 
 ### Independently solved shooting table
 
-| model | target (N_{\rm acc}) | solved (phi_0) | mass scale (	imes a_0) | (H_{\max}/\)mass scale | max relative constraint error |
+| model | target \(N_{\rm acc}\) | solved \(\phi_0\) | mass scale \(\times a_0\) | \(H_{\max}\)/(mass scale) | max relative constraint error |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | quadratic | 50 | 14.21160232 | 0.17235845 | 5.589491442 | (6.0\times10^{-14}) |
 | quadratic | 55 | 14.89637634 | 0.16443528 | 5.876431461 | (3.0\times10^{-13}) |
