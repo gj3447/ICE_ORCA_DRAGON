@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 48 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 49 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -212,6 +212,31 @@ See
 [`../cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md`](../cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md)
 and
 [`../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py`](../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 18
+
+Phase 18 is a bounded free initial-state/seam control, not a completed doubled Wess–Zumino/Pin
+interface. Its locked executable returned exit 0 with **47 exact symbolic checks and one independent
+SciPy time-integration control**.
+
+- Under an unchanged equal-mass free post-seam bulk, a finite instantaneous canonical Cauchy-data map
+  cannot move the post-post retarded poles: \(m_{B,\mathrm{pole}}^2=m_{F,\mathrm{pole}}^2=m^2\) and
+  \(\Delta m_{\mathrm{pole}}^2=0\).
+- A scalar kick can still break the seam action/domain and prepare a non-SUSY state with
+  \(n_B(k)=\kappa^2/[4(k^2+m^2)]\), while a finite two-mode fermion Nambu control has
+  \(n_F=\sin^2\theta\). Statistical correlators change; the free spectral commutator does not.
+- The sharp scalar kick has linear number-density and quadratic energy-density UV divergences. A
+  finite-duration Gaussian Born control suppresses high momentum exponentially, but lies outside the
+  strict instantaneous-seam theorem.
+- Collisionless FRW \(a^{-2}\)/\(a^{-3}\) dilution and inserted-soft-mass ratios are conditional scaling
+  controls, not derived absolute mass predictions. Interacting self-energies, persistent \(F/D\)-order
+  parameters, full Pin sewing and Higgs power sensitivity remain open.
+- The runnable catalog is now 49; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE18_GAUSSIAN_SEAM_SPECTRUM.md`](../cpt_temporal_folded_susy/PHASE18_GAUSSIAN_SEAM_SPECTRUM.md)
+and
+[`../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py`](../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py).
 
 ## Research ontology memory
 

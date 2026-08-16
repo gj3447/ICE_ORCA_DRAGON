@@ -1,6 +1,6 @@
 # ICE_ORCA_DRAGON user guide
 
-> Guide to the 48 entries currently exposed by the TypeScript/Effect CLI. Historical source files are
+> Guide to the 49 entries currently exposed by the TypeScript/Effect CLI. Historical source files are
 > not automatically runnable entries; `./ice list --json` is authoritative.
 
 ## Setup
@@ -68,6 +68,7 @@ The table is orientation, not a replacement for `./ice list`.
 | Higgs and S-proofs | `prove_higgs_ZD_doublet`, `prove_s1_framing`, `prove_s2_CCWZ`, `prove_s3_higher_gauge`, `prove_s5_bv_ainfty`, `prove_s7_WW_evasion` |
 | queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_05_coleman_weinberg`, `queue_06_cooperative_vacuum`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_10_group_of_6`, `queue_11_xor_invariant` |
 | numerology controls | `numerology_hidden_scan`, `numerology_hidden_scan_v2_target_categories_2026-05-20`, `numerology_mc_judge`, `numerology_mc_judge_v3_abc` |
+| CPT × Temporal-Folded SUSY | `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum` |
 | other falsifiers/checks | `igrueqft_locality_falsifier`, `mb3_adelberger_verdict`, `verify_mp_mW_3_256`, `wilmot_theta_preservation_test`, `ww_unitarity_bound_analysis` |
 
 ## Read a result JSON
