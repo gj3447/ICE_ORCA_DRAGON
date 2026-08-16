@@ -1,0 +1,521 @@
+{
+  "schema_version": "ice-science-feedback-loop/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase16a",
+  "title": "BGG single-source Lorentzian parent admission after the Phase 15R frozen-census failure",
+  "tier": "T2",
+  "registration": "PREREGISTERED",
+  "registration_scope": "This is a source-scoped reproduction and parent-admission cycle. It tests one newly scoped primary-source candidate, Binétruy-Girardi-Grimm hep-th/0005225v1, without importing Hohl, Kallosh, Kugo, ADM, or textbook conventions into its source-formula derivation. Contract-fixed geometry, domain, unit bridges, and comparison targets are explicitly non-evidential specification nodes rather than facts attributed to BGG. All design-stage observations are disclosed as known priors. The cycle ends at source eligibility and cannot evaluate homogeneous supersymmetry tangency, canonical closure, a physical supercharge, temporal branches, or the Temporal-Folded SUSY ontology.",
+  "baseline": {
+    "repository_head": "0c0a4a89c69a2cfc4329261d4fdb4cc775866f9b",
+    "phase15r_report": "cpt_temporal_folded_susy/PHASE15R_PARENT_SIGN_REPAIR.md",
+    "phase15r_full_parent_target": {
+      "validity": "VALID",
+      "inference": "CONTRADICTS",
+      "qualification": "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS"
+    },
+    "declared_at_utc": "2026-08-16T10:27:44Z",
+    "actor": "Codex"
+  },
+  "known_priors_firewall": {
+    "evidential_status": "KNOWN_BEFORE_THIS_CONTRACT_AND_ZERO_NOVELTY_WEIGHT",
+    "items": [
+      "BGG hep-th/0005225v1 presents itself as a self-contained Kähler-superspace construction of minimal D=4 N=1 supergravity coupled to chiral matter and gives explicit component transformations and a complete auxiliary-retaining component action.",
+      "BGG Appendix A uses eta_ab=diag(-1,+1,+1,+1). Section 4 defines the Lorentz curvature two-form, the scalar contraction calR=e_a^n e_b^m (R_nm)^{ab}, and the component action with -calR/2.",
+      "The sign-rejected Hohl v1 candidate instead printed the final Lorentz pair in the reverse order, e_a^n e_b^m (R_nm)^{ba}, while retaining -calR/2. The exact antisymmetric-pair order difference was observed before this contract and is not a discovery outcome of Phase 16A.",
+      "By comparison with the already reproduced Hohl branch, the anticipated BGG source-native FLRW result is R_BGG=-6Q, raw Einstein Lagrangian +dot(B)-3C, and one-negative/two-positive first-order inertia. This anticipation must be reproduced or refuted from the BGG source AST rather than inserted.",
+      "BGG explicitly prints the old-minimal fields M, Mbar, b_a; the chiral fields A, chi, F and conjugates; their local supersymmetry transformations; the auxiliary-uneliminated matter D-term; and the full supergravity-plus-matter component action. The anticipated coverage status is complete formula-family availability, not a proof of a future homogeneous truncation.",
+      "Kugo-Yokokura-Yoshioka arXiv:1602.04441v2 is not an active candidate here. In the strict W=0 Phase 15-style fieldwise component gate, its detailed Poincaré component compensation formulas live on the W nonzero G=K+ln|W|^2 patch; the W=0 completion is inferable but not fully displayed and is therefore a known SOURCE_INCOMPLETE alternative under this contract's stricter rule.",
+      "The anticipated aggregate is that BGG becomes FULL_OFFSHELL_ELIGIBLE for a later separately preregistered tangency attempt. That anticipation has zero novelty weight and cannot be reported as a SUSY or cosmological result."
+    ],
+    "ratification_rule": "The first run of the complete committed exact executable may issue a provisional classification. Only an independent replay may ratify that classification as the final Phase 16A result. A match ratifies source reproducibility only and has novelty REPRODUCTION."
+  },
+  "scope_lock": {
+    "route_id": "BGG_W0_FLAT_CHIRAL_SINGLE_SOURCE_PARENT_ADMISSION",
+    "candidate_census": [
+      {
+        "id": "BINETRUY_GIRARDI_GRIMM_2000_V1",
+        "candidate_role": "FULL_OFFSHELL_CANDIDATE",
+        "source_package_rule": "Only the official hep-th/0005225v1 TeX archive and files inside that archive may be evidential formula parents. CONTRACT_FIXED specification leaves are permitted under frozen_decision.symbolic_provenance_policy but cannot fill or repair source content. Citations made by the paper are context, not formula imports."
+      }
+    ],
+    "excluded_sources": [
+      "HOHL_2020_V1",
+      "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+      "KUGO_YOKOKURA_YOSHIOKA_2016_V2",
+      "ADM_EINSTEIN_CANONICAL_SCALAR_INTERNAL_CONTROL"
+    ],
+    "geometry": "Compact flat T^3 fiducial cell of positive coordinate volume V_0 with ds^2=-N(t)^2 dt^2+a(t)^2 delta_ij dx^i dx^j, N>0 and a>0.",
+    "matter": "One neutral chiral multiplet with source Kähler metric g_{A Abar}=1, no vectors or gauging, and W identically zero. For dimensionful comparison set Phi=M_P A=(T+iY)/sqrt(2), K=Phi Phibar/M_P^2, with M_P>0. This is a positive real unit bridge, not a source-sign repair.",
+    "exact_shorthands": {
+      "Q": "ddot(a)/(a N^2)+dot(a)^2/(a^2 N^2)-dot(a) dot(N)/(a N^3)",
+      "B": "3 M_P^2 V_0 a^2 dot(a)/N",
+      "C": "M_P^2 V_0 a dot(a)^2/N",
+      "X": "sqrt(6) M_P ln(a)",
+      "target_hamiltonian": "H_kin=N[-p_X^2+p_T^2+p_Y^2]/(2 V_0 a^3)"
+    },
+    "allowed_equivalences": [
+      "BGG-internal notation and equation correspondences frozen in the pre-executable source packet",
+      "the positive dimensionful field bridge Phi=M_P A",
+      "the preregistered source-derived velocity-dependent temporal endpoint B needed to obtain the first-order Einstein bulk representative, modulo the subsequently allowed regular endpoint terms",
+      "after that endpoint, only dF(q,t)/dt with no lapse or velocity dependence, as an inertia-only witness that cannot repair the frozen X,T,Y Hamiltonian",
+      "derivative-free regular real point transformations with nonsingular real Jacobian, as inertia-only witnesses unless an exact canonical-equivalence predicate is separately frozen; no such predicate is frozen in Phase 16A",
+      "strictly positive lapse, positive densitization, and positive overall unit normalization for inertia equivalence only; the exact Hamiltonian is compared in the frozen N,V_0,M_P normalization representative and none of these rescalings may repair a Hamiltonian mismatch"
+    ],
+    "forbidden_repairs": [
+      "replace BGG's ab curvature contraction by Hohl's ba contraction or import another Riemann convention",
+      "flip the Einstein or matter sign, use a negative lapse, negative densitizer, negative overall normalization, or use X -> i X",
+      "eliminate M, Mbar, b_a, F, or Fbar before the source-coverage classification",
+      "treat formulas in a cited external reference as if printed in the BGG source package",
+      "evaluate a Bianchi-I/FLRW tangency residual, spin-3/2 projection, compensator quotient, canonical constraint, Q_phys, or branch projector"
+    ],
+    "claim_ceiling": "The strongest result is that this one frozen BGG source package exactly reproduces the accepted Lorentzian bosonic inertia and contains the frozen auxiliary-retaining action/transformation formula family. It is not a proof of consistent homogeneous truncation, constraint closure, unbroken SUSY, branch exchange, or the Temporal-Folded SUSY hypothesis."
+  },
+  "source_lock": [
+    {
+      "id": "BINETRUY_GIRARDI_GRIMM_2000_V1",
+      "url": "https://arxiv.org/abs/hep-th/0005225v1",
+      "title": "Supergravity couplings: a geometric formulation",
+      "role": "The sole evidential and symbolic parent for source conventions, Lorentz curvature, component action, auxiliary fields, and local supersymmetry transformations."
+    },
+    {
+      "id": "PHASE15R_HISTORY_ONLY",
+      "path": "cpt_temporal_folded_susy/PHASE15R_PARENT_SIGN_REPAIR.md",
+      "role": "Known-prior and sequencing history only; it is forbidden as a symbolic or formula parent."
+    }
+  ],
+  "target_claims": [
+    {
+      "id": "P16A_BGG_BOSONIC_PARENT_COMPATIBLE",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "The frozen BGG source package by itself yields the Lorentzian one-negative/two-positive flat-FLRW Einstein-plus-canonical-chiral kinetic inertia and the frozen target Hamiltonian under only the allowed equivalences.",
+      "novelty": "REPRODUCTION"
+    },
+    {
+      "id": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "The same frozen BGG source package both passes the bosonic parent test and explicitly supplies the auxiliary-uneliminated minimal-supergravity plus one-chiral component action and local-supersymmetry transformation formula family required before a later tangency cycle.",
+      "novelty": "REPRODUCTION"
+    }
+  ],
+  "frozen_prior_claims": [
+    {
+      "id": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "validity": "VALID",
+      "inference": "CONTRADICTS",
+      "qualification": "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS",
+      "evidential_inheritance": "NONE_BIDIRECTIONAL_BECAUSE_PHASE16A_ADMITS_A_NEW_SOURCE"
+    },
+    {
+      "id": "P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "validity": "VALID",
+      "inference": "INCONCLUSIVE",
+      "qualification": "OUT_OF_SCOPE",
+      "evidential_inheritance": "NONE_BIDIRECTIONAL"
+    }
+  ],
+  "gates": [
+    {
+      "id": "P16A_R0_PROVENANCE_AND_SOURCE_PACKAGE",
+      "acceptance": [
+        "commit this contract alone before creating the source packet or executable",
+        "freeze the official v1 transport hash, every relevant TeX-file hash and byte count, exact labels/line ranges, source-local field inventory, and all typography caveats in a second commit",
+        "give source-formula nodes the tag BGG_SOURCE and contract-defined geometry, domain, units, bridges, shorthands, and targets the non-evidential tag CONTRACT_FIXED; reject every other symbolic tag or formula import",
+        "allow CONTRACT_FIXED leaves to enter BGG_SOURCE reductions only as substitutions or domain specifications; they cannot supply a missing BGG coefficient, sign, field, or transformation, and cross-tag comparison occurs only in an immutable non-symbolic terminal record",
+        "record all manual sign and coverage observations as known priors"
+      ]
+    },
+    {
+      "id": "P16A_R1_SOURCE_NATIVE_CURVATURE_AND_ENDPOINT",
+      "acceptance": [
+        "transcribe BGG's own coframe, composite bosonic spin connection, curvature two-form, coefficient ordering, and scalar contraction with final Lorentz order ab",
+        "derive arbitrary-positive-lapse FLRW curvature without assigning Q or importing Hohl/Kallosh/ADM curvature",
+        "reproduce or refute the anticipated R_BGG=-6Q",
+        "derive the raw -M_P^2 R_BGG/2 Lagrangian and the preregistered source-compatible temporal endpoint, modulo allowed regular endpoint terms, before any Hessian or Legendre transform",
+        "require the first-order Einstein term to be derived rather than sign-assigned"
+      ]
+    },
+    {
+      "id": "P16A_R2_SAME_SOURCE_SCALAR_LEGENDRE_AND_INERTIA",
+      "acceptance": [
+        "derive the scalar time-kinetic coefficient from BGG CPN.59/CPN.130 with g_{A Abar}=1 and the frozen positive Phi=M_P A bridge",
+        "derive the X,T,Y first-order Lagrangian, momenta, Hamiltonian, Hessian rank, determinant, and exact inertia",
+        "prove the endpoint and allowed real point-map/positive-densitization equivalences cannot change inertia",
+        "classify the bosonic target from both the computed exact inertia and the computed exact Hamiltonian in the frozen normalization representative, rather than the source ID or known-prior expectation"
+      ]
+    },
+    {
+      "id": "P16A_R3_EXPLICIT_FORMULA_FAMILY_COVERAGE",
+      "acceptance": [
+        "verify printed BGG formulas for e_mu^a, psi_mu and psibar_mu, M, Mbar, b_a, A, Abar, chi, chibar, F, Fbar",
+        "verify the auxiliary-uneliminated supergravity-plus-matter component action and the explicit local-supersymmetry transformations for every listed field",
+        "verify W=0 and no-vector specialization removes interaction sectors without eliminating required auxiliaries",
+        "distinguish printed or source-locally expanded formulas from statements only available in cited external works"
+      ],
+      "coverage_definition": "Formula-family availability means exact equation availability in the frozen BGG TeX package for the auxiliary-uneliminated component action and every listed local transformation. It does not by itself prove off-shell invariance anew, canonical closure, or homogeneous truncation tangency."
+    },
+    {
+      "id": "P16A_R4_TARGET_CLASSIFICATION",
+      "acceptance": [
+        "classify the two active targets independently and persist source, curvature, boundary, action, Hessian, inertia, Hamiltonian, coverage, and candidate status records",
+        "FULL_OFFSHELL_ELIGIBLE requires both exact bosonic compatibility and complete same-source formula coverage",
+        "give no evidential inheritance to Phase 15A tangency, Phase 14A Q_phys, or the branch-superpartner thesis"
+      ]
+    },
+    {
+      "id": "P16A_R5_SCOPE_FIREWALL",
+      "acceptance": [
+        "contain no discarded-mode residual, spin-3/2 projection, compensator quotient or compensator gauge-mode calculation, Dirac-Bergmann calculation, graded closure, Q_phys, branch projector, or cosmological observable",
+        "make no literature-exhaustive or universal supergravity claim",
+        "do not open tangency inside this cycle even if both targets SUPPORT"
+      ]
+    }
+  ],
+  "frozen_decision": {
+    "enum_authority": "classification_policy.candidate_status_axis is the sole candidate-status enum authority.",
+    "symbolic_provenance_policy": {
+      "allowed_tags": [
+        "BGG_SOURCE",
+        "CONTRACT_FIXED"
+      ],
+      "BGG_SOURCE": "Only formulas, coefficients, index orderings, fields, and transformations printed in the frozen BGG v1 archive may carry this tag.",
+      "CONTRACT_FIXED": "The metric ansatz, positive domain, V_0, M_P, N, a, Q, B, C, X, T, Y, the positive field-unit bridge, and target Hamiltonian carry this non-evidential tag.",
+      "allowed_edge": "A CONTRACT_FIXED leaf may enter a BGG_SOURCE node only as a substitution, domain restriction, or unit bridge. It may not provide or repair a missing BGG coefficient, sign, index ordering, field, action term, or transformation.",
+      "comparison_boundary": "Computed immutable BGG terminal records may be compared with CONTRACT_FIXED target records only in a non-symbolic decision layer that cannot become a derivation parent.",
+      "forbidden": "Every other tag, foreign formula parent, mixed-source algebraic parent, or reverse edge from a BGG result into a contract-fixed target is invalid source stacking."
+    },
+    "decision_input_axes": {
+      "bosonic_derivation_status": [
+        "EXACT_COMPATIBLE",
+        "EXACT_INCOMPATIBLE",
+        "SOURCE_GAP",
+        "UNCONSTRUCTED"
+      ],
+      "formula_coverage_status": [
+        "EXACT_COMPLETE",
+        "EXACT_INCOMPLETE",
+        "SOURCE_GAP",
+        "UNCONSTRUCTED"
+      ],
+      "exact_compatibility_rule": "EXACT_COMPATIBLE requires a rank-three Hessian with inertia (one negative, zero null, two positive) and exact equality to the frozen target Hamiltonian in the declared N,V_0,M_P,X,T,Y representative immediately after the single preregistered velocity-dependent endpoint and before any further dF(q,t)/dt, real point map, positive densitization, or positive overall rescaling. Any exact Hessian degeneracy, inertia mismatch, Hamiltonian coefficient/sign mismatch, or failure of that frozen normalization is EXACT_INCOMPATIBLE. Subsequent regular endpoints, point maps, and positive rescalings are inertia-only witnesses and cannot repair the Hamiltonian test.",
+      "coverage_axis_disjointness": "EXACT_COMPLETE means every provenance-valid frozen coverage predicate is exactly true. EXACT_INCOMPLETE means the complete verified archive and registered locators exactly establish at least one required field, action, or transformation formula is absent, auxiliary-eliminated, or only delegated to an external citation. SOURCE_GAP means the archive and packet are provenance-valid but a preregistered unresolved typography, truncated member, or nonlocal dependency leaves a required proposition genuinely undecidable under the frozen source policy; it is neither a proved absence nor unfinished implementation. A missing prereg packet hash, required locator, version, or declared caveat is instead PREREG_OR_PROVENANCE_INVALID and never SOURCE_GAP. UNCONSTRUCTED means the requisite provenance-valid source material is present but the registered calculation or verification was not completed. The executable may not invent a new SOURCE_GAP after seeing the outcome.",
+      "bosonic_axis_disjointness": "EXACT_COMPATIBLE and EXACT_INCOMPATIBLE are complete exact outcomes. SOURCE_GAP has the same narrow provenance-valid-but-undecidable meaning as above for a bosonic source proposition. Missing prereg source controls are invalid, while an unfinished derivation with available source material is UNCONSTRUCTED."
+    },
+    "candidate_status_function": [
+      {
+        "precedence": 1,
+        "if": "bosonic_derivation_status=EXACT_INCOMPATIBLE, regardless of formula_coverage_status",
+        "status": "REJECT_BOSONIC_MAPPING"
+      },
+      {
+        "precedence": 2,
+        "if": "bosonic_derivation_status=SOURCE_GAP",
+        "status": "SOURCE_INCOMPLETE"
+      },
+      {
+        "precedence": 3,
+        "if": "bosonic_derivation_status=UNCONSTRUCTED",
+        "status": "UNRESOLVED"
+      },
+      {
+        "precedence": 4,
+        "if": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=EXACT_COMPLETE",
+        "status": "FULL_OFFSHELL_ELIGIBLE"
+      },
+      {
+        "precedence": 5,
+        "if": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=EXACT_INCOMPLETE",
+        "status": "BOSONIC_PARENT_ONLY"
+      },
+      {
+        "precedence": 6,
+        "if": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=SOURCE_GAP",
+        "status": "SOURCE_INCOMPLETE"
+      },
+      {
+        "precedence": 7,
+        "if": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=UNCONSTRUCTED",
+        "status": "UNRESOLVED"
+      }
+    ],
+    "invalid_event_table": [
+      {
+        "event": "ARTIFACT_ORDER_HASH_VERSION_KNOWN_PRIOR_DISCLOSURE_OR_INPUT_SCHEMA_FAILURE",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "PREREG_OR_PROVENANCE_INVALID",
+        "action": "STOP_PHASE16A_BEFORE_SCIENCE"
+      },
+      {
+        "event": "FOREIGN_SOURCE_SYMBOL_MIXED_FORMULA_PARENT_OR_FORBIDDEN_TAG",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "INVALID_SOURCE_STACKING",
+        "action": "STOP_PHASE16A_BEFORE_SCIENCE_OR_IMMEDIATELY_IF_DISCOVERED_DURING_DERIVATION"
+      },
+      {
+        "event": "CURVATURE_AB_TO_BA_SWAP_EINSTEIN_SIGN_FLIP_MATTER_SIGN_FLIP_FROZEN_FIELD_BRIDGE_FACTOR_DROP_COMPLEX_MAP_NEGATIVE_LAPSE_NEGATIVE_DENSITIZER_NEGATIVE_OVERALL_NORMALIZATION_POSITIVE_RESCALING_REGULAR_ENDPOINT_OR_POINT_MAP_USED_TO_REPAIR_HAMILTONIAN_EARLY_N_EQUALS_ONE_OMITTED_DOT_N_OMITTED_ENDPOINT_OR_DOUBLE_ENDPOINT",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "FORBIDDEN_CONVENTION_MUTATION",
+        "action": "STOP_PHASE16A_BEFORE_SCIENCE_OR_IMMEDIATELY_IF_DISCOVERED_DURING_DERIVATION"
+      },
+      {
+        "event": "AUXILIARY_ELIMINATION_BEFORE_FORMULA_COVERAGE_CLASSIFICATION",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "FORBIDDEN_CONVENTION_MUTATION",
+        "action": "STOP_COVERAGE_CLASSIFICATION; PRESERVE_AN_ALREADY_COMPLETE_BOSONIC_TARGET_RECORD, OTHERWISE_CLASSIFY_THE_BOSONIC_TARGET_VALID_INCONCLUSIVE_UNCONSTRUCTED"
+      },
+      {
+        "event": "TANGENCY_PROJECTION_COMPENSATOR_QUOTIENT_CANONICAL_CHARGE_BRANCH_OBSERVABLE_OR_CLAIM_CEILING_VIOLATION",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SCOPE_OVERREACH",
+        "action": "STOP_PHASE16A_BEFORE_SCIENCE_OR_IMMEDIATELY_IF_DISCOVERED_DURING_DERIVATION"
+      },
+      {
+        "event": "GLOBAL_RESULT_SCHEMA_OR_ENUM_INCONSISTENCY",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "INTERNAL_INCONSISTENCY",
+        "action": "STOP_PHASE16A"
+      },
+      {
+        "event": "SIMULTANEOUS_SUPPORTS_AND_CONTRADICTS_FOR_BOSONIC_TARGET",
+        "applies_to": "P16A_BGG_BOSONIC_PARENT_COMPATIBLE",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "INTERNAL_INCONSISTENCY",
+        "action": "STOP_PHASE16A; CLASSIFY_THE_DEPENDENT_FULL_TARGET_VALID_INCONCLUSIVE_UNCONSTRUCTED_UNLESS_IT_ALREADY_HAS_AN_INDEPENDENT_INVALID_EVENT"
+      },
+      {
+        "event": "SIMULTANEOUS_SUPPORTS_AND_CONTRADICTS_FOR_FULL_TARGET",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "INTERNAL_INCONSISTENCY",
+        "action": "STOP_PHASE16A; PRESERVE_THE_BOSONIC_TARGET_RECORD_IF_ALREADY_COMPLETE"
+      }
+    ],
+    "multiple_invalid_precedence": [
+      "PREREG_OR_PROVENANCE_INVALID",
+      "INVALID_SOURCE_STACKING",
+      "FORBIDDEN_CONVENTION_MUTATION",
+      "SCOPE_OVERREACH",
+      "INTERNAL_INCONSISTENCY"
+    ],
+    "invalid_application_rule": "Preflight collects all detectable invalid events before any curvature or science calculation, then applies the highest listed qualification separately to each affected target. An invalid event first detected during a derivation stops that derivation and every downstream calculation immediately. It does not retroactively invalidate an unaffected target with an already immutable complete record, except where invalid_event_table explicitly applies the event to both targets.",
+    "machine_decision_table": [
+      {
+        "input": "bosonic_derivation_status=EXACT_COMPATIBLE",
+        "applies_to": "P16A_BGG_BOSONIC_PARENT_COMPATIBLE",
+        "validity": "VALID",
+        "inference": "SUPPORTS",
+        "qualification": "NONE",
+        "action": "CONTINUE_TO_FORMULA_COVERAGE"
+      },
+      {
+        "input": "bosonic_derivation_status=EXACT_INCOMPATIBLE, including an exact degenerate Hessian, wrong inertia, or wrong target Hamiltonian",
+        "applies_to": "P16A_BGG_BOSONIC_PARENT_COMPATIBLE",
+        "validity": "VALID",
+        "inference": "CONTRADICTS",
+        "qualification": "PARENT_MAPPING_MISMATCH",
+        "action": "CLASSIFY_FULL_TARGET_BY_THE_DOMINANT_FALSE_CONJUNCT_THEN_STOP"
+      },
+      {
+        "input": "bosonic_derivation_status=SOURCE_GAP",
+        "applies_to": "P16A_BGG_BOSONIC_PARENT_COMPATIBLE",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SOURCE_INCOMPLETE",
+        "action": "PROPAGATE_SOURCE_GAP_TO_FULL_TARGET_THEN_STOP"
+      },
+      {
+        "input": "bosonic_derivation_status=UNCONSTRUCTED",
+        "applies_to": "P16A_BGG_BOSONIC_PARENT_COMPATIBLE",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "UNCONSTRUCTED",
+        "action": "PROPAGATE_UNCONSTRUCTED_TO_FULL_TARGET_THEN_STOP"
+      },
+      {
+        "input": "bosonic_derivation_status=EXACT_INCOMPATIBLE and formula_coverage_status=ANY",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "VALID",
+        "inference": "CONTRADICTS",
+        "qualification": "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS",
+        "action": "STOP_PHASE16A; THE_EXACT_FALSE_BOSONIC_CONJUNCT_DOMINATES_UNRELATED_COVERAGE_UNRESOLVEDNESS"
+      },
+      {
+        "input": "bosonic_derivation_status=SOURCE_GAP",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SOURCE_INCOMPLETE",
+        "action": "STOP_PHASE16A"
+      },
+      {
+        "input": "bosonic_derivation_status=UNCONSTRUCTED",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "UNCONSTRUCTED",
+        "action": "STOP_PHASE16A"
+      },
+      {
+        "input": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=EXACT_COMPLETE",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "VALID",
+        "inference": "SUPPORTS",
+        "qualification": "NONE",
+        "action": "CLOSE_PHASE16A_WITHOUT_TANGENCY"
+      },
+      {
+        "input": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=EXACT_INCOMPLETE",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "VALID",
+        "inference": "CONTRADICTS",
+        "qualification": "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS",
+        "action": "STOP_PHASE16A"
+      },
+      {
+        "input": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=SOURCE_GAP",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SOURCE_INCOMPLETE",
+        "action": "STOP_PHASE16A"
+      },
+      {
+        "input": "bosonic_derivation_status=EXACT_COMPATIBLE and formula_coverage_status=UNCONSTRUCTED",
+        "applies_to": "P16A_BGG_FULL_OFFSHELL_SINGLE_SOURCE_ELIGIBLE",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "UNCONSTRUCTED",
+        "action": "STOP_PHASE16A"
+      }
+    ],
+    "artifact_order": [
+      "Commit PHASE16A_RESEARCH_CONTRACT.json alone.",
+      "In a second pre-result commit freeze PHASE16A_SOURCE_CONVENTION_PACKET.json with official archive/file hashes, exact labels, source AST rules, typography caveats, field inventory, and semantic mutants.",
+      "In a third commit add the complete phase16a_bgg_parent_admission.py executable. Static review is allowed; import, compile, or execution is forbidden before this commit.",
+      "Run the committed executable for the first time and persist PHASE16A_RUN_RESULT.json in a later commit.",
+      "Perform an independent read-only replay and persist PHASE16A_REPLAY_RECEIPT.json in another commit.",
+      "Only then write PHASE16A_BGG_PARENT_ADMISSION.md and update README/STATUS."
+    ],
+    "sequencing_rule": "Phase 16A stops at parent admission. Even FULL_OFFSHELL_ELIGIBLE only permits consideration of a new separately preregistered Bianchi-I-first tangency cycle."
+  },
+  "semantic_mutants": [
+    "replace the BGG ab scalar-curvature contraction by Hohl's ba order",
+    "import Kallosh or ADM Riemann signs instead of deriving BGG curvature",
+    "flip the Einstein sign or the matter sign",
+    "use a negative lapse, negative densitizer, or negative overall normalization",
+    "set N=1 before deriving the arbitrary-lapse curvature and endpoint identity",
+    "omit dot(N), omit the endpoint, or apply the velocity-dependent endpoint twice",
+    "drop the scalar factor from A=Phi/M_P or use a complex field redefinition",
+    "eliminate M, Mbar, b_a, F, or Fbar and still claim full formula coverage",
+    "treat an external citation as a formula printed in the BGG source package",
+    "count Kugo, Hohl, Kallosh, or ADM as a second candidate or symbolic parent",
+    "use a CONTRACT_FIXED node to supply or repair a missing BGG coefficient, sign, field, action term, or transformation",
+    "use a positive normalization or densitization to excuse a mismatch with the frozen target Hamiltonian representative",
+    "use an additional regular endpoint or real point map to excuse a mismatch with the frozen X,T,Y Hamiltonian representative",
+    "claim literature completeness, unbroken SUSY, or temporal branch exchange",
+    "evaluate a Phase 15A spin-3/2 or tangency expression"
+  ],
+  "classification_policy": {
+    "classification_unit": "EACH_ACTIVE_TARGET_INDEPENDENT",
+    "candidate_status_axis": [
+      "REJECT_BOSONIC_MAPPING",
+      "BOSONIC_PARENT_ONLY",
+      "FULL_OFFSHELL_ELIGIBLE",
+      "SOURCE_INCOMPLETE",
+      "UNRESOLVED"
+    ],
+    "validity_axis": [
+      "VALID",
+      "INVALID"
+    ],
+    "inference_axis": [
+      "SUPPORTS",
+      "CONTRADICTS",
+      "INCONCLUSIVE"
+    ],
+    "qualification_axis": [
+      "NONE",
+      "UNCONSTRUCTED",
+      "SOURCE_INCOMPLETE",
+      "PARENT_MAPPING_MISMATCH",
+      "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS",
+      "PREREG_OR_PROVENANCE_INVALID",
+      "INVALID_SOURCE_STACKING",
+      "FORBIDDEN_CONVENTION_MUTATION",
+      "SCOPE_OVERREACH",
+      "INTERNAL_INCONSISTENCY"
+    ],
+    "novelty_axis": [
+      "REPRODUCTION",
+      "DISCOVERY_CANDIDATE"
+    ],
+    "active_target_novelty": "REPRODUCTION",
+    "fitting_risk": "NOT_APPLICABLE",
+    "null_model": "NOT_APPLICABLE",
+    "multiplicity": "NOT_APPLICABLE",
+    "bayes": "NOT_ESTIMABLE",
+    "lakatos": "NOT_APPLICABLE"
+  },
+  "result_schema_required_fields": [
+    "target_claim_id",
+    "validity",
+    "inference",
+    "qualification",
+    "novelty",
+    "registration",
+    "fitting_risk",
+    "reproduction",
+    "bayes",
+    "lakatos",
+    "kg_action",
+    "ratification_request",
+    "follow_up"
+  ],
+  "comparison_policy": {
+    "symbolic": "Exact rational/algebraic equality in the typed BGG_SOURCE/CONTRACT_FIXED DAG under frozen_decision.symbolic_provenance_policy; only BGG_SOURCE is evidential, terminal comparison is non-symbolic, and floating-point comparison is forbidden.",
+    "matrix": "Exact Hessian rank, determinant, and inertia on the positive parameter patch.",
+    "boundary": "Exact total-derivative identity before a first-order Hessian or Legendre transform.",
+    "coverage": "Exact source archive hash, TeX file hash, label/line sentinel, and field-row predicates.",
+    "floating_tolerance": "not applicable"
+  },
+  "required_deliverables": [
+    "cpt_temporal_folded_susy/PHASE16A_RESEARCH_CONTRACT.json",
+    "cpt_temporal_folded_susy/PHASE16A_SOURCE_CONVENTION_PACKET.json",
+    "cpt_temporal_folded_susy/phase16a_bgg_parent_admission.py",
+    "cpt_temporal_folded_susy/PHASE16A_RUN_RESULT.json",
+    "cpt_temporal_folded_susy/PHASE16A_REPLAY_RECEIPT.json",
+    "cpt_temporal_folded_susy/PHASE16A_BGG_PARENT_ADMISSION.md",
+    "an independent read-only adversarial replay"
+  ],
+  "non_goals": [
+    "repairing Hohl or stacking Hohl transformations with another source",
+    "using Kugo's inferable W=0 completion as if fully displayed",
+    "Bianchi-I-to-FLRW supersymmetry tangency",
+    "spin-3/2 projection or discarded-mode residuals",
+    "canonical constraint closure, quantization, or a physical Hilbert space",
+    "a residual or boundary supercharge",
+    "relational expansion/contraction branches or branch-superpartner exchange",
+    "a literature-exhaustive or universal supergravity result"
+  ],
+  "authority": {
+    "scientific_verdict": "UNJUDGED",
+    "programme_appraisal": "UNAPPRAISED",
+    "kg_action": "NONE",
+    "ratification_request": "none"
+  }
+}
