@@ -1,0 +1,184 @@
+{
+  "schema_version": "ice-source-packet/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase14a",
+  "title": "Frozen source and normalization packet for the Phase 14A charge-first template audit",
+  "created_at_utc": "2026-08-16T06:04:27Z",
+  "actor": "Codex",
+  "preregistered_contract": {
+    "path": "cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json",
+    "commit": "86194e16f9ddb585292ff6569bc415163e917c99",
+    "ordering": "The contract was committed before this packet and before the Phase 14A executable existed or was run."
+  },
+  "retrieval_policy": {
+    "provider": "arXiv official e-print endpoints",
+    "retrieved_at_utc": "2026-08-16T06:04:27Z",
+    "hash_algorithm": "SHA-256 over the identified main TeX source file after decompression",
+    "artifacts_committed": false,
+    "reason": "Only versioned locators, file names, and hashes are committed; source archives and copyrighted paper text are not vendored."
+  },
+  "sources": [
+    {
+      "source_id": "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+      "title": "Superconformal Symmetry, Supergravity and Cosmology",
+      "authors": [
+        "Renata Kallosh",
+        "Lev Kofman",
+        "Andrei Linde",
+        "Antoine Van Proeyen"
+      ],
+      "arxiv": "hep-th/0006179v3",
+      "abstract_url": "https://arxiv.org/abs/hep-th/0006179v3",
+      "eprint_url": "https://export.arxiv.org/e-print/hep-th/0006179v3",
+      "main_tex": "Gravitino.tex",
+      "main_tex_sha256": "81c4ab799f2cd943bb53fec6f8607267a46090b222a9fc659144902862431af7",
+      "role": "Goldstino residual-parameter gate on a bosonic spatially-flat FLRW background in matter-coupled 4D N=1 supergravity.",
+      "equation_anchors": [
+        {
+          "equations": "(5.30)-(5.34)",
+          "use": "Definition bridge m=exp(calK/2) W, its covariant derivatives, and m_3/2; m is not a canonical momentum."
+        },
+        {
+          "equations": "(7.12)-(7.14)",
+          "use": "Definitions of n, xi, and the cosmological goldstino upsilon."
+        },
+        {
+          "equation": "(7.15)",
+          "use": "Exact sign anchor -2 delta_epsilon upsilon = alpha epsilon."
+        },
+        {
+          "equation": "(7.16)",
+          "use": "alpha=|dot phi|^2+V_+=rho+3 M_P^(-2)|m|^2=3 M_P^2(H^2+m_3/2^2) on the stated on-shell flat-FLRW domain."
+        }
+      ],
+      "domain": [
+        "classical spatially-flat on-shell FLRW",
+        "homogeneous scalars",
+        "bosonic background with a fermion-linear analysis",
+        "positive matter metric",
+        "the final H expression uses the Friedmann equation"
+      ],
+      "phase14_specialization": {
+        "physical_scalar": "Z=(T+iY)/sqrt(2)",
+        "physical_kahler_potential": "K_phys=Z Zbar",
+        "dimensionless_kahler_potential": "calK=K_phys/M_P^2",
+        "superpotential": "W is identically zero, hence m, D_i m, V_F, and m_3/2 vanish",
+        "vector_or_gauging": "none, hence V_D=0",
+        "resulting_identity": "With D_tau=N^(-1)d/dt, alpha=|D_tau Z|^2=((D_tau T)^2+(D_tau Y)^2)/2"
+      },
+      "forbidden_inferences": [
+        "alpha>0 on arbitrary backgrounds",
+        "absence of local gauge invariance",
+        "absence of every relational or dressed fermionic observable",
+        "branch selection or exchange; alpha is even under H to -H"
+      ]
+    },
+    {
+      "source_id": "HENNEAUX_MATULICH_NEOGI_2020_V2",
+      "title": "Asymptotic realization of the super-BMS algebra at spatial infinity",
+      "authors": [
+        "Marc Henneaux",
+        "Javier Matulich",
+        "Turmoli Neogi"
+      ],
+      "arxiv": "2004.07299v2",
+      "abstract_url": "https://arxiv.org/abs/2004.07299v2",
+      "eprint_url": "https://export.arxiv.org/e-print/2004.07299v2",
+      "main_tex": "SuperBMS_PRD__02_.tex",
+      "main_tex_sha256": "580d701efb3068709cd1e46033425b5a9ed1fa74a40c14db3839ac11cf3ad473",
+      "role": "Canonical constraint-plus-spatial-boundary template and exact supersymmetry-improvement sign anchor.",
+      "equation_anchors": [
+        {
+          "equation": "(II.33)",
+          "use": "S_epsilon=i integral epsilon^T S + B_Susy."
+        },
+        {
+          "equation": "(II.34)",
+          "use": "delta B_Susy=-i surface-integral epsilon^T gamma delta psi."
+        },
+        {
+          "equation": "(II.35)",
+          "use": "B_Susy=-i epsilon_0^T surface-integral gamma psi."
+        },
+        {
+          "equation": "(III.7)",
+          "use": "General constraint-plus-boundary structure only."
+        }
+      ],
+      "normalization_guard": "Equations (II.33)-(II.35) are the exact sign anchor. No normalization equivalence with the separately printed (III.8)/(III.13) notation is asserted.",
+      "domain": [
+        "pure 4D N=1 supergravity",
+        "asymptotically-flat spatial infinity",
+        "time gauge",
+        "psi_k=chi_k/r^2+O(r^-3)",
+        "epsilon=epsilon_0+O(r^-1)"
+      ],
+      "phase14_topological_inference": "For the frozen smooth compact T^3 with no spatial boundary or asymptotic end, the specific Regge-Teitelboim surface integration locus is absent. This is a Phase 14A inference, not a result stated by the paper.",
+      "forbidden_inferences": [
+        "direct application of the asymptotic formula to FLRW",
+        "absence of a relational, topological, defect, temporal-boundary, edge, or dressed charge",
+        "a quantum zero-operator result without anomaly-free constraints and a common domain"
+      ]
+    },
+    {
+      "source_id": "MARTINEZ_PEREZ_RAMIREZ_2025_V1",
+      "title": "On FLRW reductions of N=1 supergravity",
+      "authors": [
+        "Nephtali Eliceo Martinez-Perez",
+        "Cupatitzio Ramirez Romero"
+      ],
+      "arxiv": "2510.20072v1",
+      "abstract_url": "https://arxiv.org/abs/2510.20072v1",
+      "eprint_url": "https://export.arxiv.org/e-print/2510.20072v1",
+      "main_tex": "arxiv.tex",
+      "main_tex_sha256": "5f6d4195b55427163955677ac5fa87bd33b912d344b14408981146ce4a380146",
+      "role": "Matter-free classical FLRW ansatz and transformation-rule context only.",
+      "equation_anchors": [
+        {
+          "equation": "(57)",
+          "use": "The spin-3/2-preservation condition is imposed by hand."
+        },
+        {
+          "equations": "(62a)-(62b)",
+          "use": "They imply delta(N/a)=0; they do not uniquely derive N=a."
+        }
+      ],
+      "manifest_scope": {
+        "matter_present": false,
+        "chiral_clock_present": false,
+        "reduced_action_derived": false,
+        "canonical_constraint_algebra_derived": false,
+        "quantized": false,
+        "physical_inner_product_defined": false,
+        "physical_supercharge_computed": false,
+        "compact_T3_analyzed": false
+      },
+      "forbidden_inferences": [
+        "using this source as the parent of the Phase 14A chiral-clock action",
+        "identifying its nonzero background spin-1/2 gravitino with the Kallosh bosonic matter-FLRW background",
+        "claiming equations (62a)-(62b) uniquely fix N=a"
+      ]
+    }
+  ],
+  "local_exact_derivation_contract": {
+    "fiducial_volume": "V_0>0",
+    "lapse": "N!=0; positivity statements use |N| or a fixed positive time orientation",
+    "derivative_convention": "A dot in the reduced Lagrangian is coordinate-time d/dt. Kallosh equations (7.12)-(7.16) use cosmic proper time on N=1 FLRW; for arbitrary lapse the bridge is D_tau=N^(-1)d/dt.",
+    "scale_factor": "a>0",
+    "variables": "X=sqrt(6) M_P ln a, Z=(T+iY)/sqrt(2)",
+    "bosonic_lagrangian": "L_B=V_0 a^3/(2N) (-dot X^2+dot T^2+dot Y^2)",
+    "momenta": "p_X=-V_0 a^3 dot X/N, p_T=V_0 a^3 dot T/N, p_Y=V_0 a^3 dot Y/N",
+    "densitized_constraint": "C_B=-p_X^2+p_T^2+p_Y^2",
+    "clock_bracket": "{T,C_B}=2 p_T",
+    "goldstino_coefficient": "alpha=((D_tau T)^2+(D_tau Y)^2)/2=(p_T^2+p_Y^2)/(2 V_0^2 a^6)>0 on p_T!=0",
+    "topology_control": "The six faces of a T^3 fundamental cell pair with opposite orientations and periodic data; their boundary incidence sum is exactly zero. They are not physical boundaries."
+  },
+  "distinct_source_guard": {
+    "cross_source_single_model_derivation": false,
+    "kallosh_role": "matter-FLRW goldstino transformation",
+    "henneaux_role": "asymptotic canonical boundary template only",
+    "martinez_perez_ramirez_role": "matter-free FLRW context only",
+    "allowed_combination": "Only separately labeled necessary structural checks and the explicitly identified local bosonic derivation are combined.",
+    "disallowed_statement": "No source in this packet derives the full compact chiral-clock canonical model, its quantum physical space, or a relational branch charge."
+  },
+  "packet_status": "FROZEN_BEFORE_FIRST_EXECUTABLE_RUN"
+}

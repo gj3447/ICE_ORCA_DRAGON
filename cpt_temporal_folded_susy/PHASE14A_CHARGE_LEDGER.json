@@ -1,0 +1,77 @@
+{
+  "schema_version": "ice-charge-ledger/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase14a",
+  "created_before_first_run": true,
+  "candidate_class_id": "BOSONIC_FLAT_FLRW_LINEAR_FERMION_GOLDSTINO_GAUGE_AND_RT_SPATIAL_BOUNDARY_TEMPLATE",
+  "maximum_eligible_completeness_claim": "CONTRACT_TEMPLATE_COMPLETE_CONDITIONAL_ON_STANDARD_DIRAC_DECOMPOSITION",
+  "observed_completeness_status": "PENDING_EXECUTION",
+  "deduplication_rule": "The same physical action modulo constraints and proper gauge has one equivalence_class_id even if it has residual, boundary, and reduced descriptions. Post-run, channels with the same quotient action, including all zero representatives, must be merged into one equivalence class.",
+  "candidates": [
+    {
+      "candidate_id": "P14A-Q-BULK",
+      "provisional_channel_id": "LOCAL_SUSY_PROPER_BULK",
+      "equivalence_class_id": "PENDING_EXECUTION",
+      "origin": "LOCAL_GAUGE_CONSTRAINT",
+      "realizations": [
+        "BULK_CONSTRAINT"
+      ],
+      "parameter_space": "smooth periodic Majorana epsilon on T^3",
+      "proper_gauge_subspace": "all smooth periodic local parameters in the frozen compact template",
+      "physical_representative": "PENDING_EXECUTION",
+      "domain": "classical constraint surface modulo proper local SUSY",
+      "fermion_parity": "odd off shell",
+      "status": "PENDING_EXECUTION",
+      "success_condition": "nonzero differentiable conserved action in the classical physical quotient"
+    },
+    {
+      "candidate_id": "P14A-Q-RESIDUAL",
+      "provisional_channel_id": "LOCAL_SUSY_GOLDSTINO_GAUGE_RESIDUAL",
+      "equivalence_class_id": "PENDING_EXECUTION",
+      "origin": "RESIDUAL_LOCAL_SYMMETRY",
+      "realizations": [],
+      "provisional_realizations": [
+        "REDUCED_OPERATOR"
+      ],
+      "parameter_space": "kernel of delta upsilon/delta epsilon on the frozen bosonic rolling-clock background",
+      "proper_gauge_subspace": "residual solutions acting trivially on the physical quotient",
+      "physical_representative": "PENDING_EXECUTION",
+      "domain": "Kallosh bosonic spatially-flat FLRW linear-fermion goldstino gauge",
+      "fermion_parity": "odd if a nonzero residual survives",
+      "status": "PENDING_EXECUTION",
+      "success_condition": "nonzero residual parameter modulo proper gauge with differentiable conserved physical action"
+    },
+    {
+      "candidate_id": "P14A-Q-BOUNDARY",
+      "provisional_channel_id": "LOCAL_SUSY_RT_SPATIAL_IMPROVEMENT",
+      "equivalence_class_id": "PENDING_EXECUTION",
+      "origin": "LOCAL_GAUGE_CONSTRAINT",
+      "realizations": [
+        "SPATIAL_BOUNDARY_IMPROVEMENT"
+      ],
+      "parameter_space": "improper local-SUSY parameters supported by an actual spatial boundary or asymptotic end",
+      "proper_gauge_subspace": "parameters with zero boundary charge",
+      "physical_representative": "PENDING_EXECUTION",
+      "domain": "frozen smooth compact T^3 with periodic spin structure",
+      "fermion_parity": "odd when an improvement exists",
+      "status": "PENDING_EXECUTION",
+      "success_condition": "an actual nonempty spatial integration locus and a nonzero differentiable improvement"
+    },
+    {
+      "candidate_id": "P14A-Q-INDEPENDENT-REDUCED",
+      "equivalence_class_id": "OUTSIDE_CONTRACT_TEMPLATE",
+      "origin": "INDEPENDENT_REDUCED_SYMMETRY",
+      "realizations": [
+        "REDUCED_OPERATOR"
+      ],
+      "parameter_space": "not frozen",
+      "proper_gauge_subspace": "not assessed",
+      "physical_representative": "NOT_SEARCHED",
+      "domain": "outside Phase 14A candidate class",
+      "fermion_parity": "not assessed",
+      "status": "OUTSIDE_CANDIDATE_CLASS",
+      "success_condition": "requires a separate preregistered derivation and cannot inherit a Phase 14A verdict"
+    }
+  ],
+  "observed_overall_template_verdict": "PENDING_EXECUTION",
+  "literal_branch_superpartner_status": "INCONCLUSIVE_OUT_OF_SCOPE"
+}
