@@ -187,7 +187,7 @@ def exact_sugra_controls(audit: Audit) -> dict[str, object]:
             - potential_hubble_scale_squared
         ).is_positive
         is True,
-        "zeta=1/12 is a sufficient m_S^2>H^2 benchmark at finite phi",
+        "zeta=1/12 is a sufficient m_S^2>H_V^2 benchmark at finite phi",
     )
 
     gravitino_mass_squared_shift = sp.simplify(
