@@ -222,8 +222,21 @@ def exact_sugra_controls(audit: Audit) -> dict[str, object]:
     audit.exact(
         "P19.shift.susy_minkowski_endpoint",
         exact_zero(shift_potential.subs(phi, 0))
-        and exact_zero(auxiliary_s_squared.subs(phi, 0)),
-        "the phi=0 endpoint has V=F^S=0",
+        and exact_zero(auxiliary_s_squared.subs(phi, 0))
+        and exact_zero(superpotential_shift.subs(shift_path).subs(phi, 0))
+        and exact_zero(
+            (sp.diff(superpotential_shift, Phi)
+             + sp.diff(kahler_shift, Phi) * superpotential_shift)
+            .subs(shift_path)
+            .subs(phi, 0)
+        )
+        and exact_zero(
+            (sp.diff(superpotential_shift, S)
+             + sp.diff(kahler_shift, S) * superpotential_shift)
+            .subs(shift_path)
+            .subs(phi, 0)
+        ),
+        "the phi=0 endpoint has W=D_Phi W=D_S W=V=F^S=0",
     )
 
     # Improved Cecotti/no-scale model.
@@ -274,7 +287,9 @@ def exact_sugra_controls(audit: Audit) -> dict[str, object]:
     ) / (6 * T**2)
     audit.exact(
         "P19.noscale.stabilizer_hessian_mass",
-        exact_zero(no_scale_s_mass_squared - no_scale_s_mass_target),
+        exact_zero(no_scale_s_mass_squared - no_scale_s_mass_target)
+        and exact_zero(sp.diff(potential_no_scale, S, 2).subs(t_path))
+        and exact_zero(sp.diff(potential_no_scale, Sb, 2).subs(t_path)),
         "the degenerate real S Hessian reproduces the exact T-dependent mass",
     )
 
@@ -329,8 +344,9 @@ def exact_sugra_controls(audit: Audit) -> dict[str, object]:
         exact_zero(
             d_s_w_squared
             - 9 * scale**2 * (T - 1) ** 2 / (8 * T**3)
-        ),
-        "D_S W is nonzero for T>1 even though W vanishes",
+        )
+        and exact_zero(d_s_w_squared.subs(T, 1)),
+        "D_S W is nonzero for T>1 and vanishes at T=1 while W=0 on the path",
     )
 
     # Closed k=+1 time-symmetric initial data.
@@ -655,7 +671,7 @@ def run() -> dict[str, object]:
                 "Raychaudhuri": "dot(H)=-phidot^2/2+1/a^2",
                 "Klein_Gordon": "ddot(phi)+3H phidot+V_phi=0",
             },
-            "CPT_compatible_bosonic_initial_data": (
+            "time_reflection_compatible_bosonic_initial_data": (
                 "a and phi even; H and phidot odd; H0=phidot0=0"
             ),
             "results": bounce_results,
@@ -668,8 +684,9 @@ def run() -> dict[str, object]:
                 "SUPPORTED_NUMERICALLY_FOR_THE_DISPLAYED_MODELS"
             ),
             "quadratic_model_is_compatible_with_BK18_r_limit": "CONTRADICTED",
-            "Starobinsky_model_has_viable_tree_level_ns_r": (
-                "SUPPORTED_AT_FIRST_ORDER_SLOW_ROLL"
+            "Starobinsky_first_order_r_is_below_current_limit": "SUPPORTED",
+            "Starobinsky_first_order_ns_comparison": (
+                "CONDITIONAL_DATASET_DEPENDENT_NOT_LIKELIHOOD_TESTED"
             ),
             "CPT_or_Pin_selects_phi0": "OPEN_NOT_DERIVED",
             "full_CPT_Pin_SUGRA_state_or_seam": "OPEN_NOT_CONSTRUCTED",
