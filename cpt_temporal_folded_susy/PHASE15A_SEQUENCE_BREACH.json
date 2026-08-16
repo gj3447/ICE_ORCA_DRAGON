@@ -1,0 +1,97 @@
+{
+  "schema_version": "ice-science-sequence-breach/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase15a",
+  "artifact_id": "P15A-SEQUENCE-BREACH-POST-HOC-DISCLOSURE",
+  "artifact_registration": "POST_HOC_CORRECTED",
+  "created_at_utc": "2026-08-16T08:24:39Z",
+  "actor": "Codex root agent",
+  "frozen_provenance": {
+    "research_contract": {
+      "path": "cpt_temporal_folded_susy/PHASE15A_RESEARCH_CONTRACT.json",
+      "commit": "9b86eead62ac53ac8466d132b63fbf92f292e368",
+      "registration": "PREREGISTERED"
+    },
+    "source_convention_mode_inputs": {
+      "commit": "8622bf77c09daa573f5acdc354c3083fae81d01a",
+      "paths": [
+        "cpt_temporal_folded_susy/PHASE15A_SOURCE_PACKET.json",
+        "cpt_temporal_folded_susy/PHASE15A_CONVENTION_MAP.json",
+        "cpt_temporal_folded_susy/PHASE15A_MODE_COMPENSATOR_LEDGER.json"
+      ],
+      "frozen_before_observation": true,
+      "modified_after_observation": false
+    },
+    "science_executable_commit": null,
+    "first_committed_executable_run": null,
+    "reduction_certificate": null,
+    "run_result": null,
+    "replay_receipt": null
+  },
+  "sequence_breach": {
+    "contract_policy": "The complete Stage-A executable had to be committed in the third preregistered artifact step before the first scientific observation.",
+    "observed_at_utc": "2026-08-16",
+    "time_precision": "DATE_ONLY",
+    "observation_context": "During pre-commit implementation review, a read-only action-reduction sub-agent evaluated the K1 Hohl-to-FLRW curvature/sign map. A second read-only reviewer independently repeated the calculation before a complete executable existed or was committed.",
+    "observers": [
+      "p15_mode_audit read-only action-reduction reviewer",
+      "Halley independent reviewer"
+    ],
+    "breached_requirement": "PHASE15A_RESEARCH_CONTRACT.json frozen_decision.artifact_order",
+    "why_material": "The calculation directly determines the K1 parent-mapping gate and therefore is a scientific outcome, not merely a syntax, schema, or source-hash check.",
+    "result_contingent_adaptation_after_observation": false,
+    "partial_executable_edited_after_observation": true,
+    "post_observation_edit_scope": "A generic exterior-matrix coercion helper only; no K1 or K2 result was encoded.",
+    "k2_projection_or_residual_evaluated": false
+  },
+  "partial_executable_disposition": {
+    "path": "cpt_temporal_folded_susy/phase15a_offshell_flrw_tangency.py",
+    "state": "UNTRACKED_INCOMPLETE_DRAFT_DELETED_WITHOUT_EXECUTION",
+    "sha256_before_deletion": "d5f6c5ec624cc48abd3aac280c4e1f9d37d17cd6c302df332963070bcf7bac28",
+    "line_count_before_deletion": 442,
+    "contained_science_result": false,
+    "contained_k0_k1_k2_main": false,
+    "executed": false,
+    "recoverability": "The draft was never committed and is not recoverable from repository history. It contained only audit/exterior/verdict scaffolding and a pre-run draft probe table, not a completed calculation."
+  },
+  "unratified_sequence_breached_k1_observation": {
+    "status": "KNOWN_PRIOR_FOR_A_FRESH_REPAIR_CYCLE_ONLY",
+    "source_parent": "HOHL_2020_V1",
+    "official_main_tex_sha256": "12722fb7ed5e7c52c2011a632cd5c57e218a843888ce9e15ada6c64a4d52fec6",
+    "frozen_local_map": "S_local=+M_P^2 S_Hohl",
+    "domain": "bosonic flat FLRW tetrad e_m^a=diag(N,a,a,a), arbitrary positive lapse N, vanishing fermions",
+    "connection": "omega_{i0}^r=omega_{ir}^0=(dot(a)/N) delta_i^r and omega_0=0",
+    "hohl_curvature": "R_H=6[ddot(a)/(a N^2)+dot(a)^2/(a^2 N^2)-dot(a) dot(N)/(a N^3)]",
+    "raw_einstein_lagrangian": "L_EH_raw=-(M_P^2 V_0/2) N a^3 R_H",
+    "boundary_identity": "L_EH_raw=d_t B_H+3 M_P^2 V_0 a dot(a)^2/N, with B_H=-3 M_P^2 V_0 a^2 dot(a)/N",
+    "first_order_kinetic_block": "After the explicit temporal total derivative and X=sqrt(6) M_P ln(a), H_kin=N[p_X^2+p_T^2+p_Y^2]/(2 V_0 a^3).",
+    "registered_control": "The Phase 15A K1 diagnostic required a positive densitization of -p_X^2+p_T^2+p_Y^2.",
+    "inertia_guard": "A strictly positive densitizer preserves quadratic-form inertia and therefore cannot create the registered single negative direction from the all-positive kinetic block.",
+    "arithmetic_interpretation_if_provenance_were_valid": "PARENT_MAPPING_MISMATCH",
+    "ratified_inference": "NONE",
+    "scope_guard": "This observation does not evaluate off-shell FLRW tangency, P_3/2, a compensator cokernel, canonical closure, Q_phys, or temporal branch exchange."
+  },
+  "classification": {
+    "target_claim_id": "P15A_OFF_SHELL_HOMOGENEOUS_FLRW_TANGENCY",
+    "validity": "INVALID",
+    "inference": "INCONCLUSIVE",
+    "qualification": "PREREG_OR_PROVENANCE_INVALID",
+    "novelty": "REPRODUCTION",
+    "registration": "PREREGISTERED",
+    "fitting_risk": "NOT_APPLICABLE",
+    "reproduction": "INDEPENDENT_SYMBOLIC_CROSS_CHECK_BEFORE_AUTHORIZED_RUN",
+    "bayes": "NOT_ESTIMABLE",
+    "lakatos": "NOT_APPLICABLE",
+    "kg_action": "NONE",
+    "ratification_request": "none",
+    "action": "STOP_STAGE_A",
+    "follow_up": "Open a fresh preregistered source-sign repair/reproduction cycle that declares the Hohl K1 sign as a known prior. Do not evaluate the Phase 15A K2 residual in this invalid cycle."
+  },
+  "authority": {
+    "scientific_verdict": "INVALID_INCONCLUSIVE",
+    "programme_appraisal": "UNAPPRAISED",
+    "phase14a_inheritance": "NONE",
+    "phase15b_status": "CLOSED",
+    "kg_action": "NONE",
+    "ratification_request": "none"
+  }
+}
