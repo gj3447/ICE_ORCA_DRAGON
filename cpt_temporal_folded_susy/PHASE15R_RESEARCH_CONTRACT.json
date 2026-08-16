@@ -1,0 +1,484 @@
+{
+  "schema_version": "ice-science-feedback-loop/v1",
+  "cycle_id": "cpt-temporal-folded-susy-2026-08-16-phase15r",
+  "title": "Single-source parent-sign reproduction and full off-shell eligibility repair after invalid Phase 15A",
+  "tier": "T2",
+  "registration": "PREREGISTERED",
+  "registration_scope": "This is a transparent reproduction and source-repair cycle, not a blind discovery cycle. Every source formula and candidate outcome already inspected during the invalid Phase 15A implementation review is declared below as a known prior. The cycle may ratify reproducibility and select only within the frozen two-source census. It cannot evaluate FLRW supersymmetry tangency, a spin-3/2 projection, a compensator quotient, canonical closure, a physical supercharge, or temporal branch exchange.",
+  "baseline": {
+    "repository_head": "621320a3524a809b6aac7f55195cdc16ea6aaab0",
+    "phase15a_sequence_disclosure": "cpt_temporal_folded_susy/PHASE15A_SEQUENCE_BREACH.json",
+    "phase15a_status": {
+      "validity": "INVALID",
+      "inference": "INCONCLUSIVE",
+      "qualification": "PREREG_OR_PROVENANCE_INVALID"
+    },
+    "declared_at_utc": "2026-08-16T08:30:18Z",
+    "actor": "Codex"
+  },
+  "known_priors_firewall": {
+    "evidential_status": "KNOWN_BEFORE_THIS_CONTRACT_AND_ZERO_NOVELTY_WEIGHT",
+    "items": [
+      "Under the literal Phase 15A Hohl map, the bosonic flat-FLRW reduction was manually found to give R_H=+6 Q and an all-positive (X,T,Y) kinetic inertia after the temporal endpoint term.",
+      "The Kallosh-Kofman-Linde-Van Proeyen source was manually inspected before this contract and found to use R_K=-6 Q on flat FLRW, giving the ADM-compatible (-,+,+) kinetic inertia with its own action and matter conventions.",
+      "The standard ADM Einstein-plus-canonical-complex-scalar reference was manually checked to give the same (-,+,+) kinetic inertia as the Kallosh bosonic parent.",
+      "The Kallosh source's printed dt=deta/a near its first FRW discussion conflicts with its own later dt=a deta equations; only the latter same-source relation is an anticipated emendation candidate.",
+      "The Kallosh source's printed G^0_0=+rho/M_P^2 near its first FRW discussion conflicts with its own Friedmann equation and appendix value G^0_0=-rho/M_P^2; only the latter same-source sign is an anticipated emendation candidate.",
+      "Hohl supplies the old-minimal auxiliary fields and the off-shell chiral-matter transformation family needed by the abandoned Phase 15A tangency design, while the audited Kallosh phenomenological action has eliminated auxiliaries and is only a bosonic-normalization candidate for this census.",
+      "The anticipated scoped aggregate is BOSONIC_PARENT_ONLY / NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS. This must not be reported as a new result, a universal supergravity no-go, or evidence about temporal-folded SUSY."
+    ],
+    "ratification_rule": "A committed exact executable plus an independent replay may classify the two active reproduction targets, but may not convert any listed item into DISCOVERY_CANDIDATE evidence."
+  },
+  "scope_lock": {
+    "route_id": "FLAT_FLRW_EINSTEIN_CANONICAL_CHIRAL_PARENT_SIGN_AND_SOURCE_COMPLETENESS_REPRODUCTION",
+    "geometry": "Compact flat T^3 fiducial cell of positive coordinate volume V_0 with ds^2=-N(t)^2 dt^2+a(t)^2 delta_ij dx^i dx^j, N>0 and a>0.",
+    "matter": "One neutral canonical complex scalar Z=(T+iY)/sqrt(2), with W identically zero and no vectors or gauging. Fermions and auxiliaries enter only the source-coverage ledger, not the bosonic sign executable.",
+    "exact_shorthands": {
+      "Q": "ddot(a)/(a N^2)+dot(a)^2/(a^2 N^2)-dot(a) dot(N)/(a N^3)",
+      "B": "3 M_P^2 V_0 a^2 dot(a)/N",
+      "X": "sqrt(6) M_P ln(a)",
+      "target_hamiltonian": "H_kin=N[-p_X^2+p_T^2+p_Y^2]/(2 V_0 a^3)"
+    },
+    "frozen_candidate_census": [
+      {
+        "id": "HOHL_2020_V1",
+        "candidate_role": "FULL_OFFSHELL_CANDIDATE",
+        "eligibility_claim_before_run": "Provides the required old-minimal and chiral off-shell component coverage, but the known literal-map bosonic inertia mismatch must be reproduced rather than repaired by hand."
+      },
+      {
+        "id": "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+        "candidate_role": "BOSONIC_PARENT_CANDIDATE_ONLY",
+        "eligibility_claim_before_run": "Provides an independently coherent Einstein-plus-chiral bosonic normalization control but not the auxiliary-retaining full off-shell transformation parent required by a future tangency cycle."
+      }
+    ],
+    "reference_only": {
+      "id": "ADM_EINSTEIN_CANONICAL_SCALAR_INTERNAL_CONTROL",
+      "role": "A contract-defined exact internal geometric regression derived from +M_P^2 R_std/2-partial Z partial Zbar in the frozen mostly-plus convention. It is not an independent primary-literature control, is not a supergravity parent candidate, contributes no off-shell coverage, and cannot by itself support either active target. The evidential comparison in this cycle is explicitly limited to the two primary sources Hohl and Kallosh."
+    },
+    "allowed_equivalences": [
+      "source-internal notation changes frozen before the executable",
+      "derivative-free regular real point transformations q'=f(q) with det(partial f/partial q) nonzero and no lapse, velocity, or derivative dependence, checked by congruence of the first-order velocity Hessian",
+      "the single preregistered velocity-dependent endpoint B used in R1 to remove the raw curvature second derivative, followed only by regular endpoints dF(q,t)/dt with F independent of lapse and velocities",
+      "strictly positive lapse, strictly positive densitization, and strictly positive field-independent unit normalization",
+      "same-source typo emendations only when the frozen packet gives two independent internal anchors and a literal-mutant rejection"
+    ],
+    "forbidden_repairs": [
+      "combine a Hohl transformation with a Kallosh action or curvature convention",
+      "flip only the Einstein term or only a selected matter sector",
+      "use an unsupported editorial sign change in Hohl",
+      "multiply a selected sector by a negative factor",
+      "use X->i X, a Wick rotation, a complex field redefinition, negative lapse, or negative densitization",
+      "eliminate auxiliaries to manufacture full off-shell source coverage",
+      "delete a k=1 curvature term to claim k=0",
+      "evaluate P_3/2, rho_i, a tangency residual, a compensator, or any Phase 15A K2 expression"
+    ],
+    "claim_ceiling": "The strongest possible result is a source-scoped reproduction statement: at least one frozen source is an eligible bosonic normalization parent, and/or at least one frozen source independently supplies both that normalization and the full off-shell content required for a later separately preregistered tangency attempt. No universal existence or no-go statement is allowed."
+  },
+  "source_lock": [
+    {
+      "id": "PHASE15A_SEQUENCE_DISCLOSURE",
+      "path": "cpt_temporal_folded_susy/PHASE15A_SEQUENCE_BREACH.json",
+      "role": "Immutable provenance disclosure and Hohl known-prior record only. It is not a valid Phase 15A result."
+    },
+    {
+      "id": "HOHL_2020_V1",
+      "url": "https://arxiv.org/abs/2005.09504v1",
+      "role": "Single-source Hohl candidate: Kähler-superspace component action, curvature conventions, old-minimal auxiliary fields, and chiral-matter transformations."
+    },
+    {
+      "id": "KALLOSH_KOFMAN_LINDE_VAN_PROEYEN_2000_V3",
+      "url": "https://arxiv.org/abs/hep-th/0006179v3",
+      "role": "Single-source Kallosh candidate: phenomenological N=1 matter-supergravity action and explicit flat-FRW curvature/energy conventions. It is not treated as an auxiliary-retaining off-shell parent."
+    }
+  ],
+  "target_claims": [
+    {
+      "id": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "At least one source in the frozen Hohl/Kallosh census independently reproduces the ADM-compatible Lorentzian (-,+,+) Einstein-plus-canonical-chiral kinetic inertia under only the frozen allowed equivalences.",
+      "novelty": "REPRODUCTION"
+    },
+    {
+      "id": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "target_fiber": "PHYSICS",
+      "evidence_layer": "PHYSICS_MAPPING",
+      "hypothesis": "At least one same source in the frozen Hohl/Kallosh census independently supplies both the accepted bosonic parent normalization and the auxiliary-retaining old-minimal plus one-chiral off-shell action/transformation coverage required before any later tangency calculation.",
+      "novelty": "REPRODUCTION"
+    }
+  ],
+  "frozen_prior_claims": [
+    {
+      "id": "P15A_OFF_SHELL_HOMOGENEOUS_FLRW_TANGENCY",
+      "validity": "INVALID",
+      "inference": "INCONCLUSIVE",
+      "qualification": "PREREG_OR_PROVENANCE_INVALID",
+      "evidential_inheritance": "NONE_BIDIRECTIONAL"
+    },
+    {
+      "id": "P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "validity": "VALID",
+      "inference": "INCONCLUSIVE",
+      "qualification": "OUT_OF_SCOPE",
+      "evidential_inheritance": "NONE_BIDIRECTIONAL"
+    }
+  ],
+  "gates": [
+    {
+      "id": "P15R_R0_PROVENANCE_SOURCE_AND_KNOWN_PRIORS",
+      "acceptance": [
+        "freeze exact source versions, official main-TeX hashes, line/equation scopes, candidate roles, and the two Kallosh same-source typo packets in a second commit before the executable exists",
+        "record every design-stage formula and anticipated candidate classification above as a known prior with zero novelty weight",
+        "use a separate source-tagged derivation graph for Hohl, Kallosh, and the internal ADM reference; no symbolic node may have parents from two tags",
+        "freeze a machine-readable full-off-shell coverage matrix before the executable exists"
+      ],
+      "failure_policy": {
+        "applies_to_target_claim_ids": [
+          "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+          "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS"
+        ],
+        "artifact_order_hash_or_known_prior_failure": {
+          "validity": "INVALID",
+          "inference": "INCONCLUSIVE",
+          "qualification": "PREREG_OR_PROVENANCE_INVALID",
+          "action": "STOP_PHASE15R"
+        },
+        "mixed_source_derivation_graph": {
+          "validity": "INVALID",
+          "inference": "INCONCLUSIVE",
+          "qualification": "INVALID_SOURCE_STACKING",
+          "action": "STOP_PHASE15R"
+        }
+      }
+    },
+    {
+      "id": "P15R_R1_EXACT_SINGLE_SOURCE_CURVATURE_AND_BOUNDARY",
+      "acceptance": [
+        "derive each source's spin or Levi-Civita connection and scalar curvature on the same displayed FLRW metric with arbitrary positive lapse without importing another source's Riemann sign",
+        "reproduce or refute the known-prior Hohl target R_H=+6 Q and L_H,raw=-dot(B)+3 M_P^2 V_0 a dot(a)^2/N",
+        "reproduce or refute the known-prior Kallosh target R_K=-6 Q and L_K,raw=+dot(B)-3 M_P^2 V_0 a dot(a)^2/N",
+        "derive the ADM reference independently and require its first-order Einstein term to be -3 M_P^2 V_0 a dot(a)^2/N",
+        "prove each second-derivative term is exactly the displayed velocity-dependent endpoint derivative, then define L_H,first=L_H,raw+dot(B) and L_K,first=L_K,raw-dot(B) before any Hessian or Legendre calculation"
+      ],
+      "incomplete_policy": {
+        "bosonic_target": {
+          "target_claim_id": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+          "validity": "VALID",
+          "inference": "INCONCLUSIVE",
+          "qualification": "UNCONSTRUCTED"
+        },
+        "full_offshell_target": {
+          "target_claim_id": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+          "validity": "VALID",
+          "inference": "INCONCLUSIVE",
+          "qualification": "SOURCE_INCOMPLETE"
+        },
+        "action": "CLASSIFY_BOTH_TARGETS_THEN_STOP_PHASE15R"
+      }
+    },
+    {
+      "id": "P15R_R2_HESSIAN_LEGENDRE_AND_INERTIA",
+      "acceptance": [
+        "derive the canonical complex-scalar time-kinetic term from the same source as its Einstein term",
+        "perform the X=sqrt(6) M_P ln(a), Z=(T+iY)/sqrt(2) Legendre map exactly",
+        "compute each three-variable velocity Hessian and its exact inertia",
+        "compute the velocity Hessian only for the unique displayed first-order bulk representatives obtained in R1; do not assign an ordinary velocity Hessian to the raw second-order Lagrangians",
+        "after the R1 second-derivative removal, verify that any further allowed endpoint dF(q,t)/dt with F independent of velocities is at most linear in velocities and hence leaves the first-order velocity Hessian unchanged; a velocity-dependent endpoint may not be invoked a second time",
+        "verify that a derivative-free regular real point map q'=f(q), with no lapse or velocity dependence and det(J) nonzero, acts on the first-order velocity Hessian by J^T G J",
+        "verify that strictly positive densitization preserves inertia, so an all-positive or all-negative block cannot become (-,+,+)"
+      ],
+      "candidate_pass_rule": "A bosonic candidate passes only if its own source-tagged action yields the ADM-compatible one-negative/two-positive inertia under the frozen equivalences.",
+      "candidate_reject_rule": "An exact nondegenerate inertia mismatch rejects that candidate; it does not make the cycle invalid and is not a universal no-go."
+    },
+    {
+      "id": "P15R_R3_FULL_OFFSHELL_COVERAGE",
+      "acceptance": [
+        "for each candidate independently inventory e_mu^a, psi_mu, M, Mbar, b_a, Z, Zbar, chi, chibar, F, Fbar and the action plus local-supersymmetry transformation families required by the abandoned Stage-A design",
+        "distinguish an auxiliary-retaining off-shell parent from an action in which auxiliaries have already been eliminated",
+        "require the same source candidate to pass R2 and the coverage matrix; a bosonic-only parent cannot pass the full target",
+        "reject Hohl-action plus Kallosh-curvature or Kallosh-action plus Hohl-transformations as invalid source stacking"
+      ],
+      "coverage_definition": "For this repair cycle, full-off-shell coverage means source availability in one convention-complete primary source of the auxiliary-uneliminated component action and local-supersymmetry transformation formulas for every listed old-minimal and chiral field. It does not assert that this cycle proves off-shell invariance, algebraic closure, a canonical constraint algebra, or truncation tangency.",
+      "scope": "Coverage is evaluated only for the frozen two-source census and does not claim completeness of the literature."
+    },
+    {
+      "id": "P15R_R4_TARGET_CLASSIFICATION",
+      "acceptance": [
+        "classify the bosonic-parent target and full-off-shell-parent target independently",
+        "persist every candidate's curvature, boundary, Hessian, inertia, coverage, and rejection reason in the run result",
+        "give no evidential inheritance to Phase 15A tangency or the temporal-superpartner thesis"
+      ]
+    },
+    {
+      "id": "P15R_R5_SCOPE_FIREWALL",
+      "acceptance": [
+        "contain no spin-3/2 projector, discarded-mode residual, compensator quotient, canonical constraint, quantum operator, Q_phys, or branch-exchange calculation",
+        "do not call a source typo repair a physical resolution and do not call a scoped frozen-census failure a universal no-go",
+        "do not open a tangency cycle unless the full-off-shell same-source target is SUPPORTS"
+      ],
+      "failure_policy": {
+        "applies_to_target_claim_ids": [
+          "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+          "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS"
+        ],
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SCOPE_OVERREACH",
+        "action": "STOP_PHASE15R"
+      }
+    }
+  ],
+  "frozen_decision": {
+    "invalid_if": [
+      "the source/convention/coverage packet or executable is created, imported, or scientifically evaluated out of the frozen artifact order",
+      "one derivation graph combines source tags",
+      "an unsupported sign flip, analytic continuation, negative lapse, negative densitizer, or sector-specific multiplier is used",
+      "a K2 tangency or projection expression is evaluated",
+      "the same target is classified as both SUPPORTS and CONTRADICTS"
+    ],
+    "bosonic_target": {
+      "supports_if": "R0-R2 and R5 pass and at least one frozen candidate independently passes the exact ADM-compatible inertia test; classify VALID/SUPPORTS/NONE.",
+      "contradicts_if": "R0-R2 and R5 are complete and no frozen candidate independently passes the exact ADM-compatible inertia test; classify VALID/CONTRADICTS/NO_VALID_BOSONIC_PARENT_IN_FROZEN_CENSUS.",
+      "inconclusive_if": "Any required source curvature, action, scalar normalization, boundary identity, or exact Legendre map is unresolved; classify VALID/INCONCLUSIVE/UNCONSTRUCTED.",
+      "candidate_status_note": "A passing candidate may separately be labeled BOSONIC_PARENT_ONLY in the candidate ledger when it lacks R3 coverage; that candidate label is not the active bosonic target's qualification."
+    },
+    "full_offshell_target": {
+      "supports_if": "R0-R3 and R5 pass and at least one same frozen candidate passes both the bosonic inertia test and the frozen full-off-shell coverage matrix without source stacking; classify VALID/SUPPORTS/NONE. Candidate multiplicity is recorded separately and cannot change this existence inference.",
+      "contradicts_if": "R0-R3 and R5 are complete and no same candidate in the frozen census passes both tests; classify VALID/CONTRADICTS/NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS.",
+      "inconclusive_if": "The frozen-census coverage matrix or source map is incomplete; classify VALID/INCONCLUSIVE/SOURCE_INCOMPLETE."
+    },
+    "parent_selection_status": {
+      "zero_eligible": "NONE_ELIGIBLE",
+      "exactly_one_eligible": "SINGLE_ELIGIBLE",
+      "two_or_more_non_equivalent_eligible": "MULTIPLE_NON_EQUIVALENT_ELIGIBLE",
+      "unresolved": "UNRESOLVED",
+      "policy": "This is an aggregate status, not an active-target inference or qualification. MULTIPLE_NON_EQUIVALENT_ELIGIBLE blocks automatic selection even though the existence target is SUPPORTS."
+    },
+    "invalid_qualification_map": {
+      "artifact_order_hash_or_known_prior_failure": "PREREG_OR_PROVENANCE_INVALID",
+      "mixed_source_derivation_or_action_transformation_stack": "INVALID_SOURCE_STACKING",
+      "unsupported_sign_flip_analytic_continuation_negative_lapse_or_negative_densitizer": "FORBIDDEN_SIGN_REPAIR",
+      "K2_projection_or_claim_ceiling_violation": "SCOPE_OVERREACH",
+      "simultaneous_supports_and_contradicts_for_one_target": "INTERNAL_INCONSISTENCY"
+    },
+    "multiple_invalid_precedence": [
+      "PREREG_OR_PROVENANCE_INVALID",
+      "INVALID_SOURCE_STACKING",
+      "FORBIDDEN_SIGN_REPAIR",
+      "SCOPE_OVERREACH",
+      "INTERNAL_INCONSISTENCY"
+    ],
+    "machine_decision_table": [
+      {
+        "event": "ARTIFACT_ORDER_HASH_OR_KNOWN_PRIOR_FAILURE",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "PREREG_OR_PROVENANCE_INVALID",
+        "action": "STOP_PHASE15R"
+      },
+      {
+        "event": "MIXED_SOURCE_DERIVATION_OR_ACTION_TRANSFORMATION_STACK",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "INVALID_SOURCE_STACKING",
+        "action": "STOP_PHASE15R"
+      },
+      {
+        "event": "UNSUPPORTED_SIGN_FLIP_ANALYTIC_CONTINUATION_NEGATIVE_LAPSE_OR_NEGATIVE_DENSITIZER",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "FORBIDDEN_SIGN_REPAIR",
+        "action": "STOP_PHASE15R"
+      },
+      {
+        "event": "K2_PROJECTION_OR_CLAIM_CEILING_VIOLATION",
+        "applies_to": "BOTH_ACTIVE_TARGETS",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SCOPE_OVERREACH",
+        "action": "STOP_PHASE15R"
+      },
+      {
+        "event": "SIMULTANEOUS_SUPPORTS_AND_CONTRADICTS_FOR_ONE_TARGET",
+        "applies_to": "AFFECTED_TARGET",
+        "validity": "INVALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "INTERNAL_INCONSISTENCY",
+        "action": "STOP_PHASE15R"
+      },
+      {
+        "event": "BOSONIC_CENSUS_COMPLETE_AND_AT_LEAST_ONE_CANDIDATE_PASSES",
+        "applies_to": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "SUPPORTS",
+        "qualification": "NONE",
+        "action": "CLASSIFY_FULL_OFFSHELL_TARGET"
+      },
+      {
+        "event": "BOSONIC_CENSUS_COMPLETE_AND_ZERO_CANDIDATES_PASS",
+        "applies_to": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "CONTRADICTS",
+        "qualification": "NO_VALID_BOSONIC_PARENT_IN_FROZEN_CENSUS",
+        "action": "CLASSIFY_FULL_OFFSHELL_TARGET_THEN_STOP"
+      },
+      {
+        "event": "BOSONIC_SOURCE_OR_DERIVATION_UNRESOLVED",
+        "applies_to": "P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "UNCONSTRUCTED",
+        "action": "CLASSIFY_FULL_OFFSHELL_TARGET_AS_SOURCE_INCOMPLETE_THEN_STOP"
+      },
+      {
+        "event": "BOSONIC_SOURCE_OR_DERIVATION_UNRESOLVED_PROPAGATES_TO_FULL_TARGET",
+        "applies_to": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SOURCE_INCOMPLETE",
+        "action": "STOP_PHASE15R"
+      },
+      {
+        "event": "FULL_CENSUS_COMPLETE_AND_AT_LEAST_ONE_SAME_CANDIDATE_PASSES_BOTH_TESTS",
+        "applies_to": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "SUPPORTS",
+        "qualification": "NONE",
+        "action": "RECORD_PARENT_SELECTION_STATUS_AND_CLOSE_PHASE15R"
+      },
+      {
+        "event": "FULL_CENSUS_COMPLETE_AND_ZERO_SAME_CANDIDATES_PASS_BOTH_TESTS",
+        "applies_to": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "CONTRADICTS",
+        "qualification": "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS",
+        "action": "STOP_PHASE15R"
+      },
+      {
+        "event": "FULL_OFFSHELL_COVERAGE_OR_SOURCE_MAP_UNRESOLVED",
+        "applies_to": "P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "validity": "VALID",
+        "inference": "INCONCLUSIVE",
+        "qualification": "SOURCE_INCOMPLETE",
+        "action": "STOP_PHASE15R"
+      }
+    ],
+    "verdict_precedence": [
+      "INVALID takes precedence for both targets",
+      "each active target is classified independently",
+      "complete exact target failure gives CONTRADICTS",
+      "complete exact target satisfaction gives SUPPORTS",
+      "every unresolved derivation gives INCONCLUSIVE",
+      "simultaneous SUPPORTS and CONTRADICTS for one target gives INVALID with INTERNAL_INCONSISTENCY"
+    ],
+    "artifact_order": [
+      "Commit PHASE15R_RESEARCH_CONTRACT.json alone.",
+      "In a second pre-result commit freeze PHASE15R_SOURCE_CONVENTION_PACKET.json, including hashes, source scopes, typo packets, source-tag graph rules, and the full-off-shell coverage matrix.",
+      "In a third commit add the complete phase15r_parent_sign_reproduction.py executable. It may be statically reviewed but must not be imported or run before that commit.",
+      "Run the committed executable for the first time and persist PHASE15R_RUN_RESULT.json in a post-run commit.",
+      "Perform an independent read-only replay of the committed executable and persist PHASE15R_REPLAY_RECEIPT.json in a later commit.",
+      "Only after replay update PHASE15R_PARENT_SIGN_REPAIR.md, README, and STATUS."
+    ],
+    "sequencing_rule": "Phase 15R ends after source-scoped reproduction. A bosonic-parent SUPPORTS result alone does not reopen tangency. Only full-offshell-target SUPPORTS may motivate a new, separately preregistered tangency cycle."
+  },
+  "semantic_mutants": [
+    "use Hohl's action with Kallosh's Riemann convention",
+    "use Kallosh's bosonic action with Hohl's auxiliary transformations",
+    "flip only the Hohl Einstein sign",
+    "use X=i sqrt(6) M_P ln(a)",
+    "use a negative lapse or negative densitizer",
+    "drop the temporal endpoint term without displaying it",
+    "silently accept either Kallosh typo without the frozen same-source anchors",
+    "treat auxiliary elimination as full off-shell coverage",
+    "claim that the two-source census exhausts 4D N=1 supergravity",
+    "evaluate the clean cubic P_3/2 probe from the invalid Phase 15A draft"
+  ],
+  "classification_policy": {
+    "classification_unit": "EACH_ACTIVE_TARGET_INDEPENDENT",
+    "validity_axis": [
+      "VALID",
+      "INVALID"
+    ],
+    "inference_axis": [
+      "SUPPORTS",
+      "CONTRADICTS",
+      "INCONCLUSIVE"
+    ],
+    "qualification_axis": [
+      "NONE",
+      "UNCONSTRUCTED",
+      "NO_VALID_BOSONIC_PARENT_IN_FROZEN_CENSUS",
+      "NO_VALID_SINGLE_PARENT_IN_FROZEN_CENSUS",
+      "SOURCE_INCOMPLETE",
+      "INVALID_SOURCE_STACKING",
+      "FORBIDDEN_SIGN_REPAIR",
+      "PREREG_OR_PROVENANCE_INVALID",
+      "INTERNAL_INCONSISTENCY",
+      "SCOPE_OVERREACH"
+    ],
+    "novelty_axis": [
+      "REPRODUCTION",
+      "DISCOVERY_CANDIDATE"
+    ],
+    "active_target_novelty": "REPRODUCTION",
+    "candidate_status_axis": [
+      "REJECT_SIGN",
+      "BOSONIC_PARENT_ONLY",
+      "FULL_OFFSHELL_ELIGIBLE",
+      "UNRESOLVED"
+    ],
+    "fitting_risk": "NOT_APPLICABLE",
+    "null_model": "NOT_APPLICABLE",
+    "multiplicity": "NOT_APPLICABLE",
+    "bayes": "NOT_ESTIMABLE",
+    "lakatos": "NOT_APPLICABLE"
+  },
+  "result_schema_required_fields": [
+    "target_claim_id",
+    "validity",
+    "inference",
+    "qualification",
+    "novelty",
+    "registration",
+    "fitting_risk",
+    "reproduction",
+    "bayes",
+    "lakatos",
+    "kg_action",
+    "ratification_request",
+    "follow_up"
+  ],
+  "comparison_policy": {
+    "symbolic": "Exact rational/algebraic equality after each separately tagged source map; floating-point comparison is forbidden.",
+    "matrix": "Exact Hessian equality, determinant/nondegeneracy, and inertia by exact congruence or exact principal/eigenvalue sign analysis on the positive parameter patch.",
+    "boundary": "Exact total-derivative identity before any Legendre transform.",
+    "floating_tolerance": "not applicable"
+  },
+  "required_deliverables": [
+    "cpt_temporal_folded_susy/PHASE15R_RESEARCH_CONTRACT.json",
+    "cpt_temporal_folded_susy/PHASE15R_SOURCE_CONVENTION_PACKET.json",
+    "cpt_temporal_folded_susy/phase15r_parent_sign_reproduction.py",
+    "cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json",
+    "cpt_temporal_folded_susy/PHASE15R_REPLAY_RECEIPT.json",
+    "cpt_temporal_folded_susy/PHASE15R_PARENT_SIGN_REPAIR.md",
+    "an independent read-only adversarial replay"
+  ],
+  "non_goals": [
+    "repairing or rerunning invalid Phase 15A",
+    "off-shell Bianchi-I-to-FLRW supersymmetry tangency",
+    "spin-3/2 projection or a discarded-mode census",
+    "Dirac-Bergmann stabilization or graded canonical closure",
+    "quantization, a physical inner product, or a physical supercharge",
+    "relational expansion/contraction branches or branch-superpartner exchange",
+    "a literature-exhaustive or universal supergravity no-go"
+  ],
+  "authority": {
+    "scientific_verdict": "UNJUDGED",
+    "programme_appraisal": "UNAPPRAISED",
+    "kg_action": "NONE",
+    "ratification_request": "none"
+  }
+}
