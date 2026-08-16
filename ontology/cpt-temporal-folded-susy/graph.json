@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-16T17:43:53Z",
+  "updated_at_utc": "2026-08-16T18:13:41Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -82,6 +82,16 @@
       "claim_ids": [
         "claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE",
         "claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION"
+      ]
+    },
+    {
+      "question": "Does a connected two-sheet Gaussian automatically produce a physical flux probability?",
+      "answer": "No. Decoupled-sheet normalization identifies the unit baseline, a chosen zero-insertion exclusion gives R-1, and log R is the connected vacuum generator. A flux measure, state prescription, and decoherence rule are still missing.",
+      "claim_ids": [
+        "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+        "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+        "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+        "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY"
       ]
     }
   ],
@@ -179,6 +189,22 @@
         "open:p20-cpt-pin-sheet-inner-product",
         "open:p20-local-sugra-one-loop-selection"
       ]
+    },
+    {
+      "id": "reading-path:connected-seam-baseline",
+      "title": "From a normalized Gaussian seam to the still-missing flux measure",
+      "summary": "Separate the unit no-seam baseline, the chosen R-1 remainder, the connected log R generator, flux-tail convergence, and the unresolved physical sector prior.",
+      "nodes": [
+        "concept:normalized-two-sheet-gaussian-ratio",
+        "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+        "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+        "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+        "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+        "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+        "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+        "open:p21-three-form-seam-kernel",
+        "open:p21-physical-flux-measure"
+      ]
     }
   ],
   "node_type_legend": {
@@ -210,7 +236,7 @@
     "EXTENDS": "new result adds a scoped case without overwriting the older claim",
     "FOLLOW_UP_TO": "new claim tests a continuation of an older target",
     "CONTRASTS_WITH": "distinguishes a sharper claim from an older one",
-    "CITES": "claim or concept cites a primary/technical source",
+    "CITES": "claim, concept, or open problem cites a primary/technical source",
     "USES_TOOLING": "programme uses a tooling reference",
     "GOVERNED_BY": "repository workflow relationship, not evidential"
   },
@@ -2140,6 +2166,326 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase20-result.json",
       "sha256": "d9b19d16396055a97aa03cde9f2c72a231d287ffd32d50eea8903f20ce0cb17b"
+    },
+    {
+      "id": "phase:p21",
+      "type": "phase",
+      "title": "Phase 21 — connected two-sheet Gaussian seam control",
+      "summary": "A bounded positive Euclidean Gaussian calculation separating the unit no-seam baseline, a chosen R-1 remainder, the connected log R generator, and flux-sector prior dependence.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:normalized-two-sheet-gaussian-ratio",
+      "type": "concept",
+      "title": "Normalized two-sheet Gaussian ratio",
+      "summary": "The sectorwise ratio R=Z(C)/(Z_+ Z_-)=(1-rho^2)^(-1/2), which equals one at zero cross-sheet coupling inside the positive finite Gaussian control.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:zero-insertion-remainder-versus-connected-generator",
+      "type": "concept",
+      "title": "Zero-insertion remainder versus connected generator",
+      "summary": "R-1 excludes the zero-bridge term but contains disconnected products of connected rings; log R is the linked-cluster vacuum generator.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:flux-sector-base-measure",
+      "type": "concept",
+      "title": "Flux-sector base measure",
+      "summary": "A choice of relative weight across separately normalized flux sectors; dropping the n-dependent Z_n(0) baseline is itself a flat-prior convention, not a determinant identity.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "type": "claim",
+      "claim_id": "P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "title": "The normalized no-seam Gaussian baseline equals one",
+      "statement": "Within the recorded positive Euclidean Gaussian control, dividing by the decoupled sheet partition functions gives R(C=0)=1 exactly.",
+      "summary": "Supported exactly; this identifies a reference term but does not require excluding it.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "type": "claim",
+      "claim_id": "P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "title": "Normalization forces subtraction of the zero-bridge term",
+      "statement": "The normalized Gaussian path integral itself uniquely requires replacing R by R-1 as the physical observable or sector weight.",
+      "summary": "Contradicted: normalization fixes R(0)=1, while excluding that term remains an additional observable or weighting choice.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+      "type": "claim",
+      "claim_id": "P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+      "title": "A chosen zero-bridge exclusion equals R minus one",
+      "statement": "If the inserted observable is explicitly chosen as exp(C x_+ x_-)-1, its decoupled-sheet expectation is R-1 in the recorded Gaussian control.",
+      "summary": "Supported as a conditional algebraic identity; no exclusive event projector or physical conditioning rule is inferred.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "type": "claim",
+      "claim_id": "P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "title": "R minus one is the connected vacuum functional",
+      "statement": "After removing the unit term, R-1 contains only connected cross-sheet vacuum diagrams.",
+      "summary": "Contradicted: R-1=exp(log R)-1 includes products of connected rings; log R is the connected generator.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "type": "claim",
+      "claim_id": "P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "title": "Log R is the connected vacuum generator",
+      "statement": "Within the recorded Gaussian control, log R has the linked-cluster trace expansion and its source derivative gives the connected cross-sheet covariance.",
+      "summary": "Supported exactly for the finite positive Gaussian kernel.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "type": "claim",
+      "claim_id": "P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "title": "Reference subtraction guarantees a normalizable flux distribution",
+      "statement": "Subtracting a unit or asymptotic reference is by itself sufficient to produce a normalizable probability across arbitrary flux lattices and the inflaton direction.",
+      "summary": "Contradicted: convergence depends on the kernel, retained baseline, lattice dimension, phi tails, and a separately defined physical measure.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "type": "claim",
+      "claim_id": "P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "title": "The constant-absolute-kernel one-flux toy is summable",
+      "statement": "For A_n=a0+q^2 n^2 and C_n=kappa with kappa<a0, R_n-1 and log R_n have n^-4 tails and their one-dimensional integer-flux sums converge.",
+      "summary": "Supported symbolically and numerically as a bounded toy, not as a derived three-form SUGRA probability.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "type": "claim",
+      "claim_id": "P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "title": "R minus one alone fixes the physical flux probability",
+      "statement": "Within the recorded control, the determinant remainder alone determines a unique physical WDW probability over flux sectors without a base measure, state prescription, or decoherence functional.",
+      "summary": "Contradicted in this control: retaining Z_n(0) changes the normalized toy weight, and no physical WDW probability rule was constructed.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p21-single-mode-gaussian",
+      "type": "evidence",
+      "title": "Phase 21 single-mode Gaussian checks",
+      "summary": "Twelve exact checks derive the determinant, covariance, normalized ratio, R-1 and log R series, connected-source derivative, parity in C, and symmetric normal modes.",
+      "state": "VERIFIED",
+      "observed_status": "12_EXACT_PASS",
+      "check_ids": [
+        "P21.gaussian.kernel_determinant",
+        "P21.gaussian.schur_factorization",
+        "P21.gaussian.inverse_covariance",
+        "P21.gaussian.normalized_ratio",
+        "P21.gaussian.no_seam_baseline",
+        "P21.gaussian.nonempty_bridge_series",
+        "P21.gaussian.connected_log_series",
+        "P21.gaussian.remainder_is_exponential_of_connected",
+        "P21.gaussian.order_four_disconnected_piece",
+        "P21.gaussian.source_derivative_correlation",
+        "P21.gaussian.ratio_even_correlation_odd",
+        "P21.gaussian.symmetric_normal_modes"
+      ]
+    },
+    {
+      "id": "evidence:p21-multimode-gaussian",
+      "type": "evidence",
+      "title": "Phase 21 multimode determinant checks",
+      "summary": "Four exact checks verify the block Schur determinant, singular-value factorization, connected trace expansion, and positivity gate.",
+      "state": "VERIFIED",
+      "observed_status": "4_EXACT_PASS",
+      "check_ids": [
+        "P21.multimode.schur_determinant",
+        "P21.multimode.determinant_ratio",
+        "P21.multimode.connected_trace_expansion",
+        "P21.multimode.positivity_singular_value_gate"
+      ]
+    },
+    {
+      "id": "evidence:p21-flux-tail-and-prior",
+      "type": "evidence",
+      "title": "Phase 21 flux-tail and prior checks",
+      "summary": "Eleven exact and seven numerical checks distinguish n^-4, n^-6, n^-2, and constant tails, lattice-dimension gates, Abel finite parts, and two inequivalent imposed toy priors.",
+      "state": "VERIFIED",
+      "observed_status": "11_EXACT_PASS_PLUS_7_NUMERICAL_PASS",
+      "check_ids": [
+        "P21.flux.absolute_coupling_remainder_tail",
+        "P21.flux.absolute_coupling_log_tail",
+        "P21.flux.sector_partition_difference_tail",
+        "P21.flux.relative_coupling_constant_tail",
+        "P21.flux.normalized_ratio_lattice_dimension_threshold",
+        "P21.flux.sector_difference_lattice_dimension_threshold",
+        "P21.flux.relative_sector_difference_dimension_threshold",
+        "P21.flux.WDW_HH_excess_tail",
+        "P21.flux.WDW_tunneling_deficit_tail",
+        "P21.flux.WDW_reference_lattice_dimension_threshold",
+        "P21.regularization.constant_tail_finite_part",
+        "P21.numeric.absolute_coupling_sum",
+        "P21.numeric.connected_generator_sum",
+        "P21.numeric.truncation_convergence",
+        "P21.numeric.flat_remainder_zero_sector_peak",
+        "P21.numeric.sector_partition_difference_sum",
+        "P21.numeric.sector_partition_prior_dependence",
+        "P21.numeric.relative_coupling_linear_divergence"
+      ]
+    },
+    {
+      "id": "scope:p21-positive-euclidean-gaussian",
+      "type": "scope",
+      "title": "P21 positive Euclidean Gaussian control",
+      "summary": "Finite real-boson two-sheet Gaussian kernels with positive block matrix and explicitly normalized decoupled sheets.",
+      "state": "ACTIVE",
+      "includes": [
+        "one-mode determinant and covariance",
+        "finite-mode Schur complement and singular values",
+        "R, R-1, and log R algebra",
+        "positive Euclidean stability domain"
+      ],
+      "excludes": [
+        "Lorentzian contour or reflection-positive field theory",
+        "fermionic or ghost Pfaffian phases",
+        "three-form SUGRA derivation of the kernel",
+        "WDW probability or inflationary selection"
+      ]
+    },
+    {
+      "id": "scope:p21-single-flux-tail-toy",
+      "type": "scope",
+      "title": "P21 single-flux tail and prior toy",
+      "summary": "The explicit A_n=a0+q^2 n^2 stiffness with constant-absolute or constant-relative cross coupling, plus reference-difference asymptotics.",
+      "state": "ACTIVE",
+      "includes": [
+        "one integer flux label",
+        "symbolic large-n tails",
+        "lattice-dimension convergence gates",
+        "a0=2, q=1, kappa=1 numerical sums",
+        "comparison of R_n-1 with Z_n(0)(R_n-1)"
+      ],
+      "excludes": [
+        "derived flux-sector base measure",
+        "joint n and phi normalization",
+        "oriented membrane transition amplitude",
+        "multi-harmonic local-SUGRA determinant",
+        "inflationary initial-value prediction"
+      ]
+    },
+    {
+      "id": "open:p21-three-form-seam-kernel",
+      "type": "open_problem",
+      "title": "Derive the three-form SUGRA seam kernel",
+      "summary": "The recorded A_n and C_n are explicit controls rather than coefficients derived from compact three-form supergravity or a membrane saddle.",
+      "question": "What flux- and harmonic-dependent cross-sheet kernel follows from a fixed three-form SUGRA boundary state or membrane action, including charge, tension, boundary ensemble, zero modes, and determinant prefactors?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p21-physical-flux-measure",
+      "type": "open_problem",
+      "title": "Construct the physical flux measure",
+      "summary": "A finite positive toy sequence is not yet a WDW Born probability or a decoherent set of alternatives.",
+      "question": "Which physical inner product, current or decoherence functional fixes the flux-sector base measure and yields a finite joint distribution over n and phi with an interior peak?",
+      "state": "OPEN"
+    },
+    {
+      "id": "source:kubo-1962",
+      "type": "source",
+      "title": "Generalized Cumulant Expansion Method",
+      "summary": "Primary linked-cluster and cumulant reference used to distinguish log R from R-1.",
+      "state": "PRIMARY",
+      "citation": "R. Kubo, Generalized Cumulant Expansion Method",
+      "version": "J. Phys. Soc. Jpn. 17 (1962) 1100–1120",
+      "uri": "https://doi.org/10.1143/JPSJ.17.1100"
+    },
+    {
+      "id": "source:osterwalder-schrader-1975",
+      "type": "source",
+      "title": "Axioms for Euclidean Green's Functions II",
+      "summary": "Primary reflection-positivity reference; Phase 21 does not claim that its finite Gaussian control supplies the full construction.",
+      "state": "PRIMARY",
+      "citation": "K. Osterwalder and R. Schrader, Axioms for Euclidean Green's Functions II",
+      "version": "Commun. Math. Phys. 42 (1975) 281–305",
+      "uri": "https://doi.org/10.1007/BF01608978"
+    },
+    {
+      "id": "source:hawking-1977-zeta",
+      "type": "source",
+      "title": "Zeta Function Regularization of Path Integrals in Curved Spacetime",
+      "summary": "Primary functional-determinant regularization reference, explicitly separated from probability normalization.",
+      "state": "PRIMARY",
+      "citation": "S. W. Hawking, Zeta Function Regularization of Path Integrals in Curved Spacetime",
+      "version": "Commun. Math. Phys. 55 (1977) 133–148",
+      "uri": "https://doi.org/10.1007/BF01626516"
+    },
+    {
+      "id": "source:hartle-marolf-1997",
+      "type": "source",
+      "title": "Comparing Formulations of Generalized Quantum Mechanics for Reparametrization-Invariant Systems",
+      "summary": "Primary comparison of constraint-system probability formulations and induced products.",
+      "state": "PRIMARY",
+      "citation": "J. B. Hartle and D. Marolf, Comparing Formulations of Generalized Quantum Mechanics for Reparametrization-Invariant Systems",
+      "version": "arXiv:gr-qc/9703021v1",
+      "uri": "https://doi.org/10.1103/PhysRevD.56.6247"
+    },
+    {
+      "id": "source:bousso-polchinski-2000",
+      "type": "source",
+      "title": "Quantization of Four-form Fluxes and Dynamical Neutralization of the Cosmological Constant",
+      "summary": "Primary compact-flux and membrane framework; it does not supply the Phase 21 toy kernel or a WDW probability.",
+      "state": "PRIMARY",
+      "citation": "R. Bousso and J. Polchinski, Quantization of Four-form Fluxes and Dynamical Neutralization of the Cosmological Constant",
+      "version": "arXiv:hep-th/0004134v3",
+      "uri": "https://doi.org/10.1088/1126-6708/2000/06/006"
+    },
+    {
+      "id": "source:bandos-et-al-2018",
+      "type": "source",
+      "title": "Three-forms, dualities and membranes in four-dimensional supergravity",
+      "summary": "Primary compact three-form supergravity and charged membrane construction; no cosmological nucleation probability is imported from it.",
+      "state": "PRIMARY",
+      "citation": "I. Bandos et al., Three-forms, dualities and membranes in four-dimensional supergravity",
+      "version": "arXiv:1803.01405v2",
+      "uri": "https://doi.org/10.1007/JHEP07(2018)028"
+    },
+    {
+      "id": "artifact:p21-script",
+      "type": "artifact",
+      "title": "Phase 21 executable",
+      "summary": "Exact SymPy Gaussian, Schur, connected-series, flux-tail, and regularization checks plus high-precision toy sums.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py",
+      "sha256": "6ac7b2b36da9aa2eeda4c83494427c5d9f006bb9031d6b55d6678bf2ffc5b005",
+      "introduced_in_commit": "44e2865cc850bf7fef0c4ccebde788ca703ab8d8"
+    },
+    {
+      "id": "artifact:p21-report",
+      "type": "artifact",
+      "title": "Phase 21 report",
+      "summary": "Human-readable normalized Gaussian derivation, flux-tail comparison, regularization warning, bounded verdict, and next gate.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md",
+      "sha256": "942aa0f683db3820679e4ff7af98209be90fc6de03d8d0b64d8f04f01564c689",
+      "introduced_in_commit": "44e2865cc850bf7fef0c4ccebde788ca703ab8d8"
+    },
+    {
+      "id": "artifact:p21-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 21 evidence snapshot",
+      "summary": "Persisted 27-exact and 7-numerical check payload observed on 2026-08-16.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase21-result.json",
+      "sha256": "b50d84c49b96ca0e8d73b4a94c101cadb79364cdfe035394ba87f3432427d369"
     }
   ],
   "edges": [
@@ -4077,6 +4423,426 @@
       "from": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
       "relation": "MOTIVATES",
       "to": "open:p20-local-sugra-one-loop-selection"
+    },
+    {
+      "id": "edge:314",
+      "from": "phase:p21",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:315",
+      "from": "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:316",
+      "from": "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:317",
+      "from": "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:318",
+      "from": "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:319",
+      "from": "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:320",
+      "from": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:321",
+      "from": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:322",
+      "from": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:323",
+      "from": "evidence:p21-single-mode-gaussian",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:324",
+      "from": "evidence:p21-multimode-gaussian",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:325",
+      "from": "evidence:p21-flux-tail-and-prior",
+      "relation": "PART_OF",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:326",
+      "from": "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "relation": "ABOUT",
+      "to": "concept:normalized-two-sheet-gaussian-ratio"
+    },
+    {
+      "id": "edge:327",
+      "from": "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "relation": "ABOUT",
+      "to": "concept:normalized-two-sheet-gaussian-ratio"
+    },
+    {
+      "id": "edge:328",
+      "from": "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+      "relation": "ABOUT",
+      "to": "concept:zero-insertion-remainder-versus-connected-generator"
+    },
+    {
+      "id": "edge:329",
+      "from": "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "relation": "ABOUT",
+      "to": "concept:zero-insertion-remainder-versus-connected-generator"
+    },
+    {
+      "id": "edge:330",
+      "from": "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "relation": "ABOUT",
+      "to": "concept:zero-insertion-remainder-versus-connected-generator"
+    },
+    {
+      "id": "edge:331",
+      "from": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "relation": "ABOUT",
+      "to": "concept:flux-sector-base-measure"
+    },
+    {
+      "id": "edge:332",
+      "from": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "relation": "ABOUT",
+      "to": "concept:flux-sector-base-measure"
+    },
+    {
+      "id": "edge:333",
+      "from": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "relation": "ABOUT",
+      "to": "concept:flux-sector-base-measure"
+    },
+    {
+      "id": "edge:334",
+      "from": "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-single-mode-gaussian",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:335",
+      "from": "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-single-mode-gaussian",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:336",
+      "from": "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-single-mode-gaussian",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:337",
+      "from": "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-single-mode-gaussian",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:338",
+      "from": "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-single-mode-gaussian",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:339",
+      "from": "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-multimode-gaussian",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:340",
+      "from": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-flux-tail-and-prior",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:341",
+      "from": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-flux-tail-and-prior",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:342",
+      "from": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p21-flux-tail-and-prior",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:343",
+      "from": "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-positive-euclidean-gaussian"
+    },
+    {
+      "id": "edge:344",
+      "from": "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-positive-euclidean-gaussian"
+    },
+    {
+      "id": "edge:345",
+      "from": "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-positive-euclidean-gaussian"
+    },
+    {
+      "id": "edge:346",
+      "from": "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-positive-euclidean-gaussian"
+    },
+    {
+      "id": "edge:347",
+      "from": "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-positive-euclidean-gaussian"
+    },
+    {
+      "id": "edge:348",
+      "from": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-single-flux-tail-toy"
+    },
+    {
+      "id": "edge:349",
+      "from": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-single-flux-tail-toy"
+    },
+    {
+      "id": "edge:350",
+      "from": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p21-single-flux-tail-toy"
+    },
+    {
+      "id": "edge:351",
+      "from": "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:352",
+      "from": "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:353",
+      "from": "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:354",
+      "from": "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:355",
+      "from": "claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:356",
+      "from": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:357",
+      "from": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:358",
+      "from": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p21-report"
+    },
+    {
+      "id": "edge:359",
+      "from": "evidence:p21-single-mode-gaussian",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p21-script"
+    },
+    {
+      "id": "edge:360",
+      "from": "evidence:p21-single-mode-gaussian",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p21-evidence-snapshot"
+    },
+    {
+      "id": "edge:361",
+      "from": "evidence:p21-multimode-gaussian",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p21-script"
+    },
+    {
+      "id": "edge:362",
+      "from": "evidence:p21-multimode-gaussian",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p21-evidence-snapshot"
+    },
+    {
+      "id": "edge:363",
+      "from": "evidence:p21-flux-tail-and-prior",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p21-script"
+    },
+    {
+      "id": "edge:364",
+      "from": "evidence:p21-flux-tail-and-prior",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p21-evidence-snapshot"
+    },
+    {
+      "id": "edge:365",
+      "from": "artifact:p21-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:366",
+      "from": "artifact:p21-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:367",
+      "from": "artifact:p21-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p21"
+    },
+    {
+      "id": "edge:368",
+      "from": "concept:zero-insertion-remainder-versus-connected-generator",
+      "relation": "CITES",
+      "to": "source:kubo-1962"
+    },
+    {
+      "id": "edge:369",
+      "from": "concept:normalized-two-sheet-gaussian-ratio",
+      "relation": "CITES",
+      "to": "source:osterwalder-schrader-1975"
+    },
+    {
+      "id": "edge:370",
+      "from": "concept:normalized-two-sheet-gaussian-ratio",
+      "relation": "CITES",
+      "to": "source:hawking-1977-zeta"
+    },
+    {
+      "id": "edge:371",
+      "from": "concept:flux-sector-base-measure",
+      "relation": "CITES",
+      "to": "source:hartle-marolf-1997"
+    },
+    {
+      "id": "edge:372",
+      "from": "concept:flux-sector-base-measure",
+      "relation": "CITES",
+      "to": "source:halliwell-2009"
+    },
+    {
+      "id": "edge:373",
+      "from": "open:p21-three-form-seam-kernel",
+      "relation": "CITES",
+      "to": "source:bousso-polchinski-2000"
+    },
+    {
+      "id": "edge:374",
+      "from": "open:p21-three-form-seam-kernel",
+      "relation": "CITES",
+      "to": "source:bandos-et-al-2018"
+    },
+    {
+      "id": "edge:375",
+      "from": "claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "note": "Phase 21 replaces an assumed pair weight by an explicit normalized finite Gaussian ratio, without deriving a physical WDW measure."
+    },
+    {
+      "id": "edge:376",
+      "from": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING"
+    },
+    {
+      "id": "edge:377",
+      "from": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "note": "The finite flux-tail witness tests a reference-subtracted continuation; it does not select the Phase 19 amplitude."
+    },
+    {
+      "id": "edge:378",
+      "from": "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P20_COHERENT_SYMMETRIZATION_ONLY_CHANGES_NORMALIZATION",
+      "note": "Phase 20 concerns coherent saddle interference; Phase 21 separately distinguishes a normalized determinant remainder from its connected logarithm."
+    },
+    {
+      "id": "edge:379",
+      "from": "claim:P21_CONSTANT_ABSOLUTE_KERNEL_SINGLE_FLUX_SUM_IS_FINITE",
+      "relation": "MOTIVATES",
+      "to": "open:p21-three-form-seam-kernel"
+    },
+    {
+      "id": "edge:380",
+      "from": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "relation": "MOTIVATES",
+      "to": "open:p21-physical-flux-measure"
+    },
+    {
+      "id": "edge:381",
+      "from": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
+      "relation": "MOTIVATES",
+      "to": "open:p21-physical-flux-measure"
     }
   ],
   "kg_bridges": [

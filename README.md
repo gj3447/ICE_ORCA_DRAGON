@@ -4,7 +4,7 @@
 
 **Cayley–Dickson and sedenion experiments, structural proofs, and reproducibility checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-51-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
+[![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-52-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![Science workflow](https://img.shields.io/badge/Science_workflow-source_%E2%86%92_compute_%E2%86%92_check-10b981?style=for-the-badge)](AGENTS.md)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -15,7 +15,7 @@ ICE_ORCA_DRAGON is a standalone hypercomplex-computation repository. The canonic
 `/home/lagyeongjun/CD/ICE_ORCA_DRAGON`; it has its own Git history and `origin`. SYMPOSIUM may link to
 this repository for context, but no longer embeds it as a submodule or runtime dependency.
 
-The current CLI exposes **51 runnable Python kernels**. `./ice list --json` is the authority for the
+The current CLI exposes **52 runnable Python kernels**. `./ice list --json` is the authority for the
 live catalog; historical source inventories may contain additional scripts that are not runnable entries.
 Fourteen committed outputs are mapped into the isolated reproduction ledger.
 
@@ -122,7 +122,7 @@ them for reproducibility. See [`AGENTS.md`](AGENTS.md).
 The repository-local [CPT × Temporal-Folded SUSY research graph](ontology/cpt-temporal-folded-susy/README.md)
 keeps concepts, scoped claims, exact evidence, sources, and open problems linked without turning the
 graph into a research contract or a physics verdict. The machine-readable canonical file is
-[`graph.json`](ontology/cpt-temporal-folded-susy/graph.json); Phase 16–20 stdout payloads are preserved
+[`graph.json`](ontology/cpt-temporal-folded-susy/graph.json); Phase 16–21 stdout payloads are preserved
 as evidence snapshots rather than being left only in terminal history.
 
 ```bash
@@ -145,7 +145,7 @@ External SYMPOSIUM KG links are bridge metadata only. `RELATED` does not mean ex
 | sedenion ground truth | `avenue3_phase1_groundtruth`, `naesengmoon_indep_sedenion` |
 | queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_11_xor_invariant` |
 | numerology controls | `numerology_mc_judge`, `numerology_mc_judge_v3_abc`, `numerology_hidden_scan` |
-| CPT × Temporal-Folded SUSY | `phase11_collar_admissibility`, `phase12_boundary_twist_interface`, `phase13a_lorentzian_branch_supercharge`, `phase14a_chiral_clock_charge_first`, `phase15r_parent_sign_reproduction`, `phase16_bgg_single_source`, `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection` |
+| CPT × Temporal-Folded SUSY | `phase11_collar_admissibility`, `phase12_boundary_twist_interface`, `phase13a_lorentzian_branch_supercharge`, `phase14a_chiral_clock_charge_first`, `phase15r_parent_sign_reproduction`, `phase16_bgg_single_source`, `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian` |
 
 Always use `./ice list` for the complete live set.
 
@@ -176,7 +176,7 @@ uv sync --locked
 | [`docs/STATUS.md`](docs/STATUS.md) | current engineering status plus historical scientific ledger |
 | [`docs/index.md`](docs/index.md) | documentation map |
 | [`ontology/README.md`](ontology/README.md) | repository research-ontology format and CLI entry points |
-| [`ontology/cpt-temporal-folded-susy/README.md`](ontology/cpt-temporal-folded-susy/README.md) | readable Phase 15R–20 concept/evidence/open-problem map |
+| [`ontology/cpt-temporal-folded-susy/README.md`](ontology/cpt-temporal-folded-susy/README.md) | readable Phase 15R–21 concept/evidence/open-problem map |
 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) | current CPT × Temporal-Folded SUSY workbench boundary and phase index |
 | [`cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md`](cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md) | closed-SUGRA background existence calculation and initial-value caveat |
 | [`cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | leading WDW selection control and conditional curvature conversion |

@@ -47,12 +47,14 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE19_CLOSED_SUGRA_BOUNCE.md` | Phase 19 보고서 — 17 exact + 30 numerical checks. 50–60 accelerated-e-fold background는 존재하지만 \(\phi_0\)는 역산 입력이며 CPT/Pin 선택값이 아님 |
 | `phase20_two_sheet_wdw_selection.py` | 표준 WDW history와 추가 independent-pair 확률 convention, benchmark slope, F-flatness 및 조건부 curvature–reheating 변환 실행체 |
 | `PHASE20_TWO_SHEET_WDW_SELECTION.md` | Phase 20 보고서 — 18 exact + 14 numerical checks. leading envelope는 \(5.442969458\)을 선택하지 않지만 exact two-sheet SUGRA WDW no-go는 아님 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–20의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase21_connected_seam_gaussian.py` | normalized two-sheet Gaussian에서 \(R\), \(R-1\), \(\log R\), flux tail과 sector-prior 의존성을 가르는 exact+numerical 실행체 |
+| `PHASE21_CONNECTED_SEAM_GAUSSIAN.md` | Phase 21 보고서 — 27 exact + 7 numerical checks. no-seam baseline은 식별되지만 subtraction과 물리적 flux 확률은 자동 유도되지 않음 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–21의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 20)
+## 현재 경계 (Phase 21)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -123,6 +125,16 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - 동일 Phase 20의 \(\Omega_{K0}\)–\(T_{\rm reh}\) 식은 Phase 19 endpoint와 명시적 reheating,
   entropy, \(H_0\) 입력에서 얻는 조건부 변환이다. closed \(k=+1\)에서는 \(\Omega_{K0}<0\)이고,
   이 수식은 curvature 검출이나 seam-derived reheating 예측이 아니다.
+- Phase 21은 positive Euclidean Gaussian에서 decoupled-sheet normalization이
+  \(R(C=0)=1\)을 exact하게 식별함을 보였다. 하지만 그 항을 제외해 \(R-1\)을 쓰는 것은
+  별도 weighting 선택이고, connected vacuum generator는 \(\log R\)이다.
+- 단일 flux toy \(A_n=a_0+q^2n^2,\ C_n=\kappa\)에서는 \(R_n-1\)과 \(\log R_n\)이
+  \(n^{-4}\)로 감쇠해 합이 유한하다. 그러나 실제 sector difference는
+  \(Z_n(0)(R_n-1)\)이고, 이를 보존하면 정규화된 toy \(n=0\) weight가
+  \(0.484950\ldots\)에서 \(0.626161\ldots\)로 바뀐다.
+- 따라서 finite determinant나 Ramanujan/Abel/zeta finite part만으로 WDW 확률은 생기지 않는다.
+  three-form SUGRA가 주는 실제 kernel, flux-sector measure, physical inner product/current 또는
+  decoherence functional과 joint \((n,\phi)\) peak는 아직 OPEN이다.
 - 이 경계의 claim, exact check, primary source, 적용 범위와 OPEN 항목은
   `../ontology/cpt-temporal-folded-susy/graph.json`에 stable ID로 연결했다. `./ice ontology validate`
   는 그 연결과 artifact hash를 검사하며, 그래프 자체는 연구 계약이나 외부 KG 승격이 아니다.
@@ -131,6 +143,9 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
+- **Three-form seam-kernel gate:** compact three-form SUGRA boundary state 또는 charged-membrane
+  saddle에서 실제 \(C_{n\ell}\), charge/tension, boundary ensemble과 determinant prefactor를
+  유도한다. 그 뒤에만 regulated determinant와 joint \((n,\phi)\) measure의 내부 peak를 검사한다.
 - **Background-state follow-up:** closed \(S^3\)에서 exact complex Starobinsky/SUGRA saddle,
   WDW current/inner product와 CPT/Pin sheet overlap을 함께 정하고, one-loop
   boson–fermion–gravitino determinant가 유한 initial-amplitude peak를 만드는지 계산한다.

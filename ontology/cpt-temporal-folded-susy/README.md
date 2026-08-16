@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T17:43:53Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T18:13:41Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
 
 ## Quick answers
 
@@ -26,7 +26,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does time symmetry now predict \(\phi_0\), universe size, or a present SUSY spectrum? | No. The bosonic symmetry data leave \(\phi_0\) free, the radius is conditional, and the displayed stabilizer F directions vanish at their endpoints. | `claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE`; `claim:P19_DISPLAYED_STABILIZER_F_DIRECTIONS_VANISH_AT_ENDPOINT` |
 | Does the leading two-sheet WDW control select \(\phi_0=5.442969\)? | No in the constant-field de Sitter envelope. The standard \(e^{2sI}\) history weight and conditional independent-pair \(e^{4sI}\) joint probability are monotone there. This is not an exact two-sheet SUGRA WDW no-go. | `claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44`; `claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING` |
 | Is the displayed \(\Omega_{K0}\)–\(T_{\rm reh}\) value a seam prediction? | No. The conversion is reproducible only after fixing the Phase 19 branch, reheating history, units, entropy data, and late-time parameters. | `claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE`; `claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope but not an exact local-SUGRA WDW state. | Phase 16–20 scope guards |
+| Does Gaussian normalization automatically give the physical flux probability? | No. It fixes the no-seam baseline at one. A chosen exclusion gives \(R-1\), while \(\log R\) is connected; the physical sector measure and decoherence rule remain open. | `claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION`; `claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR`; `claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope; Phase 21 identifies a normalized Gaussian baseline without deriving a universe probability. | Phase 16–21 scope guards |
 
 ## Concept map
 
@@ -92,6 +93,16 @@ flowchart TD
   Pair20 --> Sheet20["OPEN: CPT/Pin sheet inner product"]
   F20 --> Tree20["OPEN: tree-level local-SUGRA WDW constraints"]
   Peak20 --> Loop20["OPEN: local-SUGRA one-loop determinant"]
+
+  Programme --> P21["Phase 21 · connected Gaussian seam"]
+  P21 --> Base21["R(C=0)=1 baseline<br/>SUPPORTED"]
+  P21 --> Force21["Normalization forces R-1<br/>CONTRADICTED"]
+  P21 --> Conn21["R-1 is connected<br/>CONTRADICTED"]
+  P21 --> Log21["log R is connected generator<br/>SUPPORTED"]
+  P21 --> Tail21["Constant-absolute one-flux sum<br/>SUPPORTED as toy"]
+  P21 --> Prob21["R-1 alone fixes WDW probability<br/>CONTRADICTED"]
+  Tail21 --> Kernel21["OPEN: three-form SUGRA kernel"]
+  Prob21 --> Measure21["OPEN: physical flux measure"]
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -101,6 +112,8 @@ Phase 18 makes a different separation: an instantaneous free canonical seam can 
 Phase 19 adds gravity only at the homogeneous classical-background level. It verifies two exact one-field SUGRA reductions and six conditional closed-FRW shooting solutions. The rows prove existence after choosing a target \(N_{\rm acc}\); they do not show that CPT/Pin selects \(\phi_0\), construct a quantum state, or predict a parameter-free universe size.
 
 Phase 20 tests one leading selection proposal rather than solving the exact WDW problem. The constant-field de Sitter envelope is monotone at the Phase 19 benchmark under both the standard \(e^{2sI}\) history weight and a separately assumed independent-pair \(e^{4sI}\) joint probability. Coherent phases, a WDW current, the sheet inner product, the exact complex saddle, and local-SUGRA loop sectors remain outside that result.
+
+Phase 21 replaces a guessed pair weight by an explicit positive finite Gaussian ratio. It proves that normalization identifies a unit no-seam term, but also proves that subtracting it is not forced and that \(R-1\) is not the connected functional. The one-flux convergence witness remains a toy because the kernel, sector measure, WDW inner product/current, and joint \((n,\phi)\) peak are not derived.
 
 ## Core distinctions
 
@@ -124,6 +137,9 @@ Phase 20 tests one leading selection proposal rather than solving the exact WDW 
 | Envelope monotonicity vs exact WDW no-go | A nonzero slope in the constant-field de Sitter control rules out a peak in that envelope, not every complex Starobinsky saddle, WDW measure, sheet overlap, or loop-corrected local-SUGRA state. |
 | Constant normalization vs coherent interference | A constant factor cannot move an envelope slope, but an order-one phase-dependent \(\cos^2S\) term can create nodes and local extrema until a current/decoherence prescription is supplied. |
 | Conditional conversion vs prediction | Reproducing \(\Omega_{K0}(T_{\rm reh})\) after fixing \(N\), \(M_s\), \(w_{\rm reh}\), entropy, and late-time inputs does not mean the seam selected any of them. |
+| Unit baseline vs forced subtraction | Decoupled-sheet normalization gives \(R(0)=1\); using \(R-1\) additionally chooses to exclude the zero-insertion term. |
+| Remainder vs connected generator | \(R-1=\exp(\log R)-1\) includes products of connected rings; \(\log R\) is the linked-cluster generator. |
+| Finite determinant vs universe probability | A regulated or summable positive sequence still needs a physical sector measure, WDW current/inner product or decoherence functional before it can be called a probability. |
 
 ## IDs and claim states
 
@@ -167,7 +183,7 @@ Every edge is read in stored `from → relation → to` direction.
 | `EXTENDS` | New result adds a scoped case without overwriting an older claim. |
 | `FOLLOW_UP_TO` | New claim tests a continuation of an older target. |
 | `CONTRASTS_WITH` | New claim sharpens a distinction from an older one. |
-| `CITES` | Claim or concept cites a primary or technical source for framing or a boundary. |
+| `CITES` | Claim, concept, or open problem cites a primary or technical source for framing or a boundary. |
 | `USES_TOOLING` | Programme points to a tooling reference. |
 | `GOVERNED_BY` | Repository workflow relation; never scientific evidence. |
 
@@ -194,6 +210,8 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p20-leading-de-sitter-wdw-control` | Constant-field hemisphere exponent, standard history weight, conditional independent-pair joint probability, exact slopes, coherent-sum identity | Exact complex Starobinsky saddle, WDW current/measure/factor ordering, CPT/Pin sheet inner product, local-SUGRA sectors, exact no-go |
 | `scope:p20-cecotti-path-f-flatness` | Classical \(D_SW\), inverse metric, \(F^S\), and positive-real static F-flat point on the displayed path | Quantum local-SUSY wavefunction support, closed-bounce Killing spinor, fermionic CPT/Pin boundary condition |
 | `scope:p20-conditional-curvature-reheating-benchmark` | One Phase 19 branch, \(w_{\rm reh}=0\), entropy conservation, explicit units, signed \(\Omega_K\) | Seam-selected amplitude/reheating, curvature detection, uncertainties/global likelihood, other thermal histories |
+| `scope:p21-positive-euclidean-gaussian` | Positive finite real-boson Gaussian determinant, covariance, Schur and linked-cluster algebra | Lorentzian/OS field theory, fermionic phases, SUGRA kernel, WDW probability |
+| `scope:p21-single-flux-tail-toy` | One integer flux, two explicit kernel scalings, tail and prior comparisons | Derived sector measure, joint \((n,\phi)\), membrane rate, inflationary selection |
 
 ## Open construction ledger
 
@@ -225,8 +243,10 @@ All entries below have state `OPEN` in the graph.
 | `open:p20-local-sugra-one-loop-selection` | Gauge-fixed boson–fermion–gravitino determinant including ghosts, zero modes, and renormalization |
 | `open:p20-quantized-four-form-selection` | UV-fixed discrete flux selection without tuning couplings to \(5.44\) |
 | `open:p20-seam-reheating-curvature-prediction` | Joint seam derivation of initial amplitude, reheating dynamics, and a present curvature distribution |
+| `open:p21-three-form-seam-kernel` | Flux- and harmonic-dependent cross-sheet kernel derived from compact three-form SUGRA or a charged-membrane saddle |
+| `open:p21-physical-flux-measure` | Physical sector measure and WDW current/inner product or decoherence functional yielding a finite joint \((n,\phi)\) distribution |
 
-The shortest honest statement of the research frontier is therefore: **finite doubled and state-preparation witnesses plus conditional closed backgrounds exist; the leading de Sitter WDW envelope does not select \(5.44\), but neither an exact predictive background-selection rule nor a common interacting theory with persistent spectral breaking exists yet.**
+The shortest honest statement of the research frontier is therefore: **finite doubled and state-preparation witnesses plus conditional closed backgrounds exist; the leading WDW envelope does not select \(5.44\), and a normalized Gaussian seam identifies a reference baseline but not a physical flux probability. Neither an exact predictive background-selection rule nor a common interacting theory with persistent spectral breaking exists yet.**
 
 ## Repository artifacts
 
@@ -238,6 +258,7 @@ The shortest honest statement of the research frontier is therefore: **finite do
 | 18 | [`phase18_gaussian_seam_spectrum.py`](../../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py) | [`PHASE18_GAUSSIAN_SEAM_SPECTRUM.md`](../../cpt_temporal_folded_susy/PHASE18_GAUSSIAN_SEAM_SPECTRUM.md) | [`phase18-result.json`](./evidence/phase18-result.json) |
 | 19 | [`phase19_closed_sugra_bounce.py`](../../cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py) | [`PHASE19_CLOSED_SUGRA_BOUNCE.md`](../../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md) | [`phase19-result.json`](./evidence/phase19-result.json) |
 | 20 | [`phase20_two_sheet_wdw_selection.py`](../../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py) | [`PHASE20_TWO_SHEET_WDW_SELECTION.md`](../../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | [`phase20-result.json`](./evidence/phase20-result.json) |
+| 21 | [`phase21_connected_seam_gaussian.py`](../../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py) | [`PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | [`phase21-result.json`](./evidence/phase21-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

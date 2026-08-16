@@ -1,0 +1,513 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P21_CONNECTED_SEAM_GAUSSIAN_20260816",
+  "phase": "P21",
+  "observed_at_utc": "2026-08-16T18:11:47Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py",
+    "sha256": "6ac7b2b36da9aa2eeda4c83494427c5d9f006bb9031d6b55d6678bf2ffc5b005",
+    "introduced_in_commit": "44e2865cc850bf7fef0c4ccebde788ca703ab8d8"
+  },
+  "exact_checks": 27,
+  "checks": [
+    {
+      "id": "P21.gaussian.kernel_determinant",
+      "statement": "det M=A_plus A_minus-C^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.schur_factorization",
+      "statement": "the determinant equals A_plus times the minus-sheet Schur complement",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.inverse_covariance",
+      "statement": "the exact covariance has cross entry C/(A_plus A_minus-C^2)",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.normalized_ratio",
+      "statement": "[Z(C)/(Z_plus Z_minus)]^2=1/(1-rho^2)",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.no_seam_baseline",
+      "statement": "the normalized ratio is exactly one when the cross-sheet coupling vanishes",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.nonempty_bridge_series",
+      "statement": "R-1=rho^2/2+3rho^4/8+5rho^6/16+O(rho^8)",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.connected_log_series",
+      "statement": "log R=rho^2/2+rho^4/4+rho^6/6+O(rho^8)",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.remainder_is_exponential_of_connected",
+      "statement": "R-1=exp(log R)-1, so it includes products of connected vacuum rings",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.order_four_disconnected_piece",
+      "statement": "the rho^4 coefficient 3/8 contains a connected 1/4 plus a disconnected 1/8",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.source_derivative_correlation",
+      "statement": "d log R/dC equals the connected cross-sheet two-point function",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.ratio_even_correlation_odd",
+      "statement": "the determinant ratio forgets the sign of C while the cross correlation retains it",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.gaussian.symmetric_normal_modes",
+      "statement": "the symmetric-sheet normal-mode eigenvalues are A-C and A+C",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.multimode.schur_determinant",
+      "statement": "the two-mode block determinant obeys the Schur-complement identity",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.multimode.determinant_ratio",
+      "statement": "the normalized two-mode ratio factors over whitened singular values",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.multimode.connected_trace_expansion",
+      "statement": "log R=Tr(K^T K)/2+Tr[(K^T K)^2]/4+... for two diagonal modes",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.multimode.positivity_singular_value_gate",
+      "statement": "positive convergence requires every whitened singular value to be below one",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.absolute_coupling_remainder_tail",
+      "statement": "for A_n=a0+q^2 n^2 and constant C=kappa, R_n-1 is asymptotic to kappa^2/(2q^4 n^4)",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.absolute_coupling_log_tail",
+      "statement": "the connected generator has the same leading n^-4 tail",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.sector_partition_difference_tail",
+      "statement": "the actual one-mode sector difference Z_n(C)-Z_n(0)=Z_n(0)(R_n-1) has an n^-6 tail",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.relative_coupling_constant_tail",
+      "statement": "if C_n=eta A_n, the zero-bridge remainder approaches a nonzero constant",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.normalized_ratio_lattice_dimension_threshold",
+      "statement": "the n^-4 tails of R_n-1 and log R_n are summable on Z^d only for d<4",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.sector_difference_lattice_dimension_threshold",
+      "statement": "the n^-6 tail of Z_n(C)-Z_n(0) is summable on Z^d only for d<6",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.relative_sector_difference_dimension_threshold",
+      "statement": "for C_n=eta A_n the n^-2 sector-difference tail is summable only for d<2",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.WDW_HH_excess_tail",
+      "statement": "the positive HH excess exp(gamma/V_n)-1 has an n^-2 tail when V_n grows as n^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.WDW_tunneling_deficit_tail",
+      "statement": "the positive tunneling deficit 1-exp(-gamma/V_n) has the same n^-2 tail",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.flux.WDW_reference_lattice_dimension_threshold",
+      "statement": "an n^-2 WDW reference-difference tail is summable on Z^d only for d<2",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.regularization.constant_tail_finite_part",
+      "statement": "the Abel-regulated two-sided constant sum has divergence 2/epsilon and zero constant finite part",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 7,
+  "numerical": [
+    {
+      "id": "P21.numeric.absolute_coupling_sum",
+      "statement": "the toy single-flux zero-bridge remainder sums to 0.319002816952369856...",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.numeric.connected_generator_sum",
+      "statement": "the toy single-flux connected generator sums to 0.304386389797735255...",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.numeric.truncation_convergence",
+      "statement": "N=10,100,1000 symmetric cutoffs converge with the n^-4 tail",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.numeric.flat_remainder_zero_sector_peak",
+      "statement": "under an imposed flat sector measure, normalized positive R_n-1 toy weights peak at n=0 with p0=0.484950...",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.numeric.sector_partition_difference_sum",
+      "statement": "including the n-dependent decoupled partition gives sum_n[Z_n(C)-Z_n(0)]=0.776167636301807...",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.numeric.sector_partition_prior_dependence",
+      "statement": "retaining Z_n(0) changes the normalized positive toy n=0 weight from 0.484950... to 0.626161...",
+      "status": "PASS"
+    },
+    {
+      "id": "P21.numeric.relative_coupling_linear_divergence",
+      "statement": "a constant relative coupling makes the symmetric cutoff sum grow exactly with 2N+1",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "normalized connected two-sheet Gaussian seam control",
+    "claim_status": {
+      "R_minus_1_alone_is_the_unnormalized_flux_sector_weight": "CONTRADICTED_WITHOUT_A_FLAT_NORMALIZED_SECTOR_PRIOR",
+      "R_minus_1_is_the_connected_vacuum_functional": "CONTRADICTED",
+      "chosen_zero_bridge_exclusion_equals_R_minus_1": "SUPPORTED_CONDITIONALLY",
+      "connected_Gaussian_ratio_is_a_physical_WDW_flux_probability": "OPEN_NOT_DERIVED",
+      "constant_absolute_kernel_with_A_n_growing_as_n_squared_is_summable": "SUPPORTED_IN_SINGLE_FLUX_TOY",
+      "log_R_is_the_connected_vacuum_generator": "SUPPORTED",
+      "normalization_forces_zero_bridge_subtraction": "CONTRADICTED_NOT_FORCED",
+      "normalization_identifies_the_zero_seam_baseline_as_one": "SUPPORTED",
+      "subtraction_alone_guarantees_flux_normalizability": "CONTRADICTED",
+      "three_form_CPT_seam_selects_an_inflationary_flux_sector": "OPEN_NOT_COMPUTED"
+    },
+    "exact_check_ids": [
+      "P21.gaussian.kernel_determinant",
+      "P21.gaussian.schur_factorization",
+      "P21.gaussian.inverse_covariance",
+      "P21.gaussian.normalized_ratio",
+      "P21.gaussian.no_seam_baseline",
+      "P21.gaussian.nonempty_bridge_series",
+      "P21.gaussian.connected_log_series",
+      "P21.gaussian.remainder_is_exponential_of_connected",
+      "P21.gaussian.order_four_disconnected_piece",
+      "P21.gaussian.source_derivative_correlation",
+      "P21.gaussian.ratio_even_correlation_odd",
+      "P21.gaussian.symmetric_normal_modes",
+      "P21.multimode.schur_determinant",
+      "P21.multimode.determinant_ratio",
+      "P21.multimode.connected_trace_expansion",
+      "P21.multimode.positivity_singular_value_gate",
+      "P21.flux.absolute_coupling_remainder_tail",
+      "P21.flux.absolute_coupling_log_tail",
+      "P21.flux.sector_partition_difference_tail",
+      "P21.flux.relative_coupling_constant_tail",
+      "P21.flux.normalized_ratio_lattice_dimension_threshold",
+      "P21.flux.sector_difference_lattice_dimension_threshold",
+      "P21.flux.relative_sector_difference_dimension_threshold",
+      "P21.flux.WDW_HH_excess_tail",
+      "P21.flux.WDW_tunneling_deficit_tail",
+      "P21.flux.WDW_reference_lattice_dimension_threshold",
+      "P21.regularization.constant_tail_finite_part"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P21.gaussian.kernel_determinant",
+        "statement": "det M=A_plus A_minus-C^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.schur_factorization",
+        "statement": "the determinant equals A_plus times the minus-sheet Schur complement",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.inverse_covariance",
+        "statement": "the exact covariance has cross entry C/(A_plus A_minus-C^2)",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.normalized_ratio",
+        "statement": "[Z(C)/(Z_plus Z_minus)]^2=1/(1-rho^2)",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.no_seam_baseline",
+        "statement": "the normalized ratio is exactly one when the cross-sheet coupling vanishes",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.nonempty_bridge_series",
+        "statement": "R-1=rho^2/2+3rho^4/8+5rho^6/16+O(rho^8)",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.connected_log_series",
+        "statement": "log R=rho^2/2+rho^4/4+rho^6/6+O(rho^8)",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.remainder_is_exponential_of_connected",
+        "statement": "R-1=exp(log R)-1, so it includes products of connected vacuum rings",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.order_four_disconnected_piece",
+        "statement": "the rho^4 coefficient 3/8 contains a connected 1/4 plus a disconnected 1/8",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.source_derivative_correlation",
+        "statement": "d log R/dC equals the connected cross-sheet two-point function",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.ratio_even_correlation_odd",
+        "statement": "the determinant ratio forgets the sign of C while the cross correlation retains it",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.gaussian.symmetric_normal_modes",
+        "statement": "the symmetric-sheet normal-mode eigenvalues are A-C and A+C",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.multimode.schur_determinant",
+        "statement": "the two-mode block determinant obeys the Schur-complement identity",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.multimode.determinant_ratio",
+        "statement": "the normalized two-mode ratio factors over whitened singular values",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.multimode.connected_trace_expansion",
+        "statement": "log R=Tr(K^T K)/2+Tr[(K^T K)^2]/4+... for two diagonal modes",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.multimode.positivity_singular_value_gate",
+        "statement": "positive convergence requires every whitened singular value to be below one",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.absolute_coupling_remainder_tail",
+        "statement": "for A_n=a0+q^2 n^2 and constant C=kappa, R_n-1 is asymptotic to kappa^2/(2q^4 n^4)",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.absolute_coupling_log_tail",
+        "statement": "the connected generator has the same leading n^-4 tail",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.sector_partition_difference_tail",
+        "statement": "the actual one-mode sector difference Z_n(C)-Z_n(0)=Z_n(0)(R_n-1) has an n^-6 tail",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.relative_coupling_constant_tail",
+        "statement": "if C_n=eta A_n, the zero-bridge remainder approaches a nonzero constant",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.normalized_ratio_lattice_dimension_threshold",
+        "statement": "the n^-4 tails of R_n-1 and log R_n are summable on Z^d only for d<4",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.sector_difference_lattice_dimension_threshold",
+        "statement": "the n^-6 tail of Z_n(C)-Z_n(0) is summable on Z^d only for d<6",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.relative_sector_difference_dimension_threshold",
+        "statement": "for C_n=eta A_n the n^-2 sector-difference tail is summable only for d<2",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.WDW_HH_excess_tail",
+        "statement": "the positive HH excess exp(gamma/V_n)-1 has an n^-2 tail when V_n grows as n^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.WDW_tunneling_deficit_tail",
+        "statement": "the positive tunneling deficit 1-exp(-gamma/V_n) has the same n^-2 tail",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.flux.WDW_reference_lattice_dimension_threshold",
+        "statement": "an n^-2 WDW reference-difference tail is summable on Z^d only for d<2",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.regularization.constant_tail_finite_part",
+        "statement": "the Abel-regulated two-sided constant sum has divergence 2/epsilon and zero constant finite part",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 27,
+    "flux_tail": {
+      "WDW_reference_subtractions": {
+        "HH_positive_excess": "exp(gamma/V_n)-1",
+        "flux_lattice": "CONVERGENT_ONLY_FOR_d<2",
+        "tail_for_V_n_proportional_to_n_squared": "n^-2",
+        "tunneling_positive_deficit": "1-exp(-gamma/V_n)",
+        "warning": "These weights are not derived by the Gaussian determinant; the comparison only exposes the asymptotic effect of a reference subtraction."
+      },
+      "constant_absolute_coupling": {
+        "C_n": "kappa",
+        "R_minus_1_and_log_R_flux_lattice": "CONVERGENT_ONLY_FOR_d<4",
+        "R_n_minus_1_tail": "kappa^2/(2 q^4 n^4)",
+        "single_flux_sum": "CONVERGENT_IF_kappa<a0",
+        "unnormalized_sector_difference_flux_lattice": "CONVERGENT_ONLY_FOR_d<6",
+        "unnormalized_sector_difference_tail": "pi kappa^2/(q^6 n^6)"
+      },
+      "constant_relative_coupling": {
+        "C_n": "eta A_n",
+        "R_minus_1_flux_lattice": "DIVERGENT_FOR_ALL_d>=1",
+        "R_n_minus_1_tail": "(1-eta^2)^(-1/2)-1",
+        "unnormalized_sector_difference_flux_lattice": "CONVERGENT_ONLY_FOR_d<2",
+        "unnormalized_sector_difference_tail": "proportional to n^-2"
+      },
+      "regularization_warning": "Assigning a finite part to the constant tail does not create a countably additive positive probability measure.",
+      "toy_flux_stiffness": "A_n=a0+q^2 n^2"
+    },
+    "multimode": {
+      "block_kernel": "M=[[A_plus,-C],[-C^T,A_minus]]",
+      "connected_generator": "log R=(1/2) sum_{j>=1} Tr[(K^T K)^j]/j",
+      "finite_mode_stability": "largest singular value of K is below one",
+      "infinite_mode_unregularized_gate": "K must at least be Hilbert-Schmidt: sum_j singular_value_j^2<infinity",
+      "normalized_ratio": "det(I-K^T K)^(-1/2)",
+      "whitened_kernel": "K=A_plus^(-1/2) C A_minus^(-1/2)"
+    },
+    "next_calculation": {
+      "minimum_gates": [
+        "positive/stable Euclidean kernel or a specified Lorentzian contour",
+        "UV Hilbert-Schmidt or renormalized determinant control",
+        "a physical flux-sector measure and decoherence functional",
+        "a finite joint distribution in n and phi with an interior peak"
+      ],
+      "target": "derive the actual flux- and harmonic-dependent cross-sheet kernel from a three-form SUGRA boundary state or membrane action"
+    },
+    "numerical_check_ids": [
+      "P21.numeric.absolute_coupling_sum",
+      "P21.numeric.connected_generator_sum",
+      "P21.numeric.truncation_convergence",
+      "P21.numeric.flat_remainder_zero_sector_peak",
+      "P21.numeric.sector_partition_difference_sum",
+      "P21.numeric.sector_partition_prior_dependence",
+      "P21.numeric.relative_coupling_linear_divergence"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P21.numeric.absolute_coupling_sum",
+        "statement": "the toy single-flux zero-bridge remainder sums to 0.319002816952369856...",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.numeric.connected_generator_sum",
+        "statement": "the toy single-flux connected generator sums to 0.304386389797735255...",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.numeric.truncation_convergence",
+        "statement": "N=10,100,1000 symmetric cutoffs converge with the n^-4 tail",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.numeric.flat_remainder_zero_sector_peak",
+        "statement": "under an imposed flat sector measure, normalized positive R_n-1 toy weights peak at n=0 with p0=0.484950...",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.numeric.sector_partition_difference_sum",
+        "statement": "including the n-dependent decoupled partition gives sum_n[Z_n(C)-Z_n(0)]=0.776167636301807...",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.numeric.sector_partition_prior_dependence",
+        "statement": "retaining Z_n(0) changes the normalized positive toy n=0 weight from 0.484950... to 0.626161...",
+        "status": "PASS"
+      },
+      {
+        "id": "P21.numeric.relative_coupling_linear_divergence",
+        "statement": "a constant relative coupling makes the symmetric cutoff sum grow exactly with 2N+1",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 7,
+    "numerical_toy": {
+      "flat_measure_p_n0_from_R_minus_1": "0.48495038337655114054854403352973",
+      "flat_measure_p_n0_from_ZC_minus_Z0": "0.62616122104022169270099878533431",
+      "interpretation": "p_n proportional to R_n-1 is only a normalized positive toy weighting under an imposed flat sector measure; no exclusive event projector or decoherence functional is constructed. The actual sector difference carries an additional Z_n(0).",
+      "parameters": {
+        "a0": "2",
+        "kappa": "1",
+        "q": "1"
+      },
+      "stability_margin": "min_n(A_n-|C_n|)=1",
+      "sum_over_integer_flux_R_minus_1": "0.31900281695236985606563439724588",
+      "sum_over_integer_flux_ZC_minus_Z0": "0.77616763630180746465249601085546",
+      "sum_over_integer_flux_log_R": "0.30438638979773525500623466628212",
+      "symmetric_partial_sums": {
+        "N=10": "0.31872224071526594766666378793332",
+        "N=100": "0.31900248866370727272719262091332",
+        "N=1000": "0.31900281661953698739931933728882"
+      }
+    },
+    "phase": "P21",
+    "scope_guard": {
+      "central_interpretation": "normalized path-integral division makes the no-cross-sheet term exactly one.  Choosing to exclude that term gives R-1, but the subtraction is not forced by normalization.  The linked-cluster object is log R, and neither expression is a universe probability without a sector measure, state prescription, and decoherence/inner product. Across flux sectors, dropping Z_n(0) is itself a prior convention.",
+      "what_is_computed": [
+        "one positive Euclidean real-boson two-sheet Gaussian",
+        "finite-mode Schur determinant and connected trace expansion",
+        "single-flux asymptotics for two explicit kernel scalings",
+        "a bounded numerical sum for A_n=2+n^2 and C_n=1",
+        "the distinction among R, R-1, and log R",
+        "the distinction between R_n-1 and Z_n(0)(R_n-1)"
+      ],
+      "what_is_not_computed": [
+        "a three-form supergravity derivation of A_n or C_n",
+        "a membrane transition amplitude or flux master equation",
+        "oriented n-to-n-plus-or-minus-one transitions or their rates",
+        "a Wheeler-DeWitt solution, current, inner product, or Born measure",
+        "a Lorentzian contour or Osterwalder-Schrader reflection-positive field theory",
+        "scalar, tensor, chiralino, gravitino, or ghost functional determinants",
+        "a normalizable distribution over both flux n and inflaton phi",
+        "an inflationary initial value, e-fold count, or observable prediction"
+      ]
+    },
+    "single_mode": {
+      "connected_vacuum_generator": "W_cross=log R=-log(1-rho^2)/2",
+      "cross_sheet_covariance": "C/(A_plus A_minus-C^2)",
+      "euclidean_action": "S_E=(A_plus x_plus^2+A_minus x_minus^2)/2-C x_plus x_minus",
+      "interpretation": "R-1 removes the zero-bridge term but is not itself the connected vacuum functional; log R is the connected vacuum sum.",
+      "normalized_partition_ratio": "R=(1-rho^2)^(-1/2)",
+      "stability_domain": "A_plus>0, A_minus>0, C^2<A_plus A_minus",
+      "whitened_coupling": "rho=C/sqrt(A_plus A_minus)",
+      "zero_bridge_removed_remainder": "R-1"
+    }
+  }
+}

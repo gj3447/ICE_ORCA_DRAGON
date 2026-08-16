@@ -5,7 +5,7 @@
 ## How source edges are used
 
 - `evidence → DERIVED_FROM → source` means the calculation was built from that source. Phase 16 uses this stronger provenance relation for BGG; selected Phase 19/20 groups use it for their model, action, or observational-comparison inputs while keeping local algebra and numerics separate.
-- `claim or concept → CITES → source` means the source frames the standard algebra, a comparison, or an interpretive boundary. It does not mean the paper performed the repository's exact finite calculation.
+- `claim, concept, or open problem → CITES → source` means the source frames the standard algebra, a comparison, or an interpretive boundary. It does not mean the paper performed the repository's exact finite calculation.
 - No source edge by itself changes claim state; the attached evidence and `HAS_EVIDENCE.polarity` do that.
 
 ## Inventory
@@ -38,8 +38,14 @@
 | `source:cheng-death-moniz-1994` — A. D. Y. Cheng, P. D. D'Eath, P. R. L. V. Moniz, [*Quantization of a Locally Supersymmetric Friedmann Model with Supermatter*](https://arxiv.org/abs/gr-qc/9406048), `arXiv:gr-qc/9406048v2` | Primary example showing local-SUSY minisuperspace constraints as coupled first-order PDEs dependent on Kähler geometry | Does not solve those constraints for the Cecotti model or select \(\varphi=5.44\) |
 | `source:desi-dr2-2025` — DESI Collaboration, [*DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints*](https://arxiv.org/abs/2503.14738), `arXiv:2503.14738` | Observational context for why the conditional curvature conversion is not treated as a detection | Does not supply the branch, reheating history, or a temporal-seam curvature prediction |
 | `source:barvinsky-kamenshchik-mishakov-1996` — A. O. Barvinsky, A. Yu. Kamenshchik, I. V. Mishakov, [*Quantum origin of the early inflationary Universe*](https://arxiv.org/abs/gr-qc/9612004), `arXiv:gr-qc/9612004` | One-loop sharp-peak proof of principle cited by the open determinant problem | The model has large nonminimal coupling and is not the two-sheet Cecotti boson–fermion–gravitino determinant |
+| `source:kubo-1962` — R. Kubo, [*Generalized Cumulant Expansion Method*](https://doi.org/10.1143/JPSJ.17.1100), JPSJ 17 (1962) 1100–1120 | Linked-cluster/cumulant reference for the distinction between \(R-1\) and \(\log R\) | Does not define a WDW probability or the Phase 21 flux-sector measure |
+| `source:osterwalder-schrader-1975` — K. Osterwalder, R. Schrader, [*Axioms for Euclidean Green's Functions II*](https://doi.org/10.1007/BF01608978), CMP 42 (1975) 281–305 | Reflection-positivity boundary for interpreting a Euclidean determinant | Phase 21 verifies only a finite positive Gaussian and does not construct the full OS field theory |
+| `source:hawking-1977-zeta` — S. W. Hawking, [*Zeta Function Regularization of Path Integrals in Curved Spacetime*](https://doi.org/10.1007/BF01626516), CMP 55 (1977) 133–148 | Functional-determinant regularization baseline | A finite determinant or finite part is not automatically a countably additive universe probability |
+| `source:hartle-marolf-1997` — J. B. Hartle, D. Marolf, [*Comparing Formulations of Generalized Quantum Mechanics for Reparametrization-Invariant Systems*](https://doi.org/10.1103/PhysRevD.56.6247), `arXiv:gr-qc/9703021v1` | Frames induced products and alternative probability formulations for constraint systems | Does not choose the Phase 21 flux-sector prior or sheet kernel |
+| `source:bousso-polchinski-2000` — R. Bousso, J. Polchinski, [*Quantization of Four-form Fluxes and Dynamical Neutralization of the Cosmological Constant*](https://doi.org/10.1088/1126-6708/2000/06/006), `arXiv:hep-th/0004134v3` | Compact flux and charged-membrane framework cited by the kernel open problem | Does not derive the Phase 21 Gaussian kernel or a WDW probability distribution |
+| `source:bandos-et-al-2018` — I. Bandos et al., [*Three-forms, dualities and membranes in four-dimensional supergravity*](https://doi.org/10.1007/JHEP07(2018)028), `arXiv:1803.01405v2` | Compact three-form SUGRA and charged-membrane construction cited by the next gate | Does not calculate a cosmological nucleation rate, the toy determinant ratio, or inflationary selection |
 
-Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the twenty-six-item inventory exhausts the literature.
+Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the thirty-two-item inventory exhausts the literature.
 
 ## Claim-family coverage
 
@@ -64,6 +70,10 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 20 classical F-flatness versus quantum local SUSY | Cheng–D'Eath–Moniz; Kallosh–Linde (2013) | The Cecotti model source attaches to the local auxiliary calculation; the minisuperspace source frames why that does not solve the quantum constraint |
 | Phase 20 curvature context | DESI DR2 | Observational boundary only; no `DERIVED_FROM` edge and no curvature-detection claim |
 | Phase 20 loop-selection frontier | Barvinsky–Kamenshchik–Mishakov | Proof of principle attached to an open problem in a different model, not evidence that the requested determinant has the needed slope |
+| Phase 21 remainder versus connected generator | Kubo | One `CITES` edge from the reusable distinction; the finite Gaussian coefficients remain repository evidence |
+| Phase 21 determinant and regularization boundary | Osterwalder–Schrader II; Hawking | Technical interpretation boundaries only; neither source turns the finite Gaussian into a physical WDW probability |
+| Phase 21 physical flux measure | Halliwell; Hartle–Marolf | Decoherence/current/constraint-system framing attached to the sector-measure concept, not a derived prior |
+| Phase 21 three-form seam-kernel frontier | Bousso–Polchinski; Bandos et al. | Compact flux/membrane frameworks attached to an open problem; no transition rate or kernel is imported |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -83,7 +93,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other twenty-five graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–20 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other thirty-one graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–21 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -120,5 +130,12 @@ Phase 20 sharpens the background-selection frontier without closing it:
 - the gauge-fixed boson–fermion–gravitino one-loop determinant with zero modes and renormalization;
 - an untuned quantized four-form selection spectrum;
 - a joint seam derivation of initial amplitude, reheating history, and present curvature distribution.
+
+Phase 21 adds the determinant-to-probability frontier:
+
+- a flux- and harmonic-dependent cross-sheet kernel derived from compact three-form SUGRA or a charged-membrane saddle;
+- membrane charge, tension, boundary ensemble, zero/negative modes, and determinant prefactors;
+- a physical flux-sector base measure with a specified WDW current/inner product or decoherence functional;
+- a finite joint distribution over \((n,\phi)\) with an interior peak, rather than a cutoff endpoint or imposed target.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

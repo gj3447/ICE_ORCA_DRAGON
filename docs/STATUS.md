@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 51 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 52 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -291,11 +291,40 @@ See
 and
 [`../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py`](../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py).
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 21
+
+Phase 21 asks whether a decoupled-sheet-normalized Gaussian seam makes a reference subtraction and
+flux probability emerge automatically. Its committed executable returned exit 0 with **27 exact and
+7 numerical checks**.
+
+- For one positive real-boson mode,
+  \(R=Z(C)/(Z_+Z_-)=(1-\rho^2)^{-1/2}\) and \(R(C=0)=1\) exactly. This identifies the
+  no-cross-sheet baseline; it does not force replacing \(R\) by \(R-1\).
+- A chosen zero-insertion exclusion gives \(R-1\), but the linked-cluster object is
+  \(\log R=-\tfrac12\log(1-\rho^2)\). At order \(\rho^4\), \(R-1\) already contains a
+  disconnected product of connected rings.
+- For \(A_n=a_0+q^2n^2\) and constant \(C_n=\kappa\), \(R_n-1\) and \(\log R_n\) have
+  \(n^{-4}\) tails, while the unnormalized sector difference
+  \(Z_n(0)(R_n-1)\) has an \(n^{-6}\) tail. Constant-relative coupling instead leaves a
+  non-decaying normalized-ratio tail.
+- The imposed flat-sector toy gives \(p_0=0.484950\ldots\); retaining the decoupled
+  \(Z_n(0)\) baseline changes it to \(0.626161\ldots\). This is direct evidence that the
+  determinant ratio alone does not fix the sector prior.
+- Abel/zeta finite parts can define a regulated determinant but do not create a countably additive
+  positive WDW probability. A physical flux measure, decoherence/current prescription, actual
+  three-form SUGRA kernel, and a finite joint \((n,\phi)\) peak remain open.
+- The runnable catalog is now 52; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md)
+and
+[`../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py`](../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py).
+
 ## Research ontology memory
 
-Phase 15R–20 is now indexed in a repository-local typed research graph with **171 nodes and 313 directed
-relations**. It preserves 34 claims, 20 evidence groups, 17 explicit scopes, 24 open problems, 26
-literature sources, the Phase 16–20 exact and bounded numerical run payloads, and cautious bridges to
+Phase 15R–21 is now indexed in a repository-local typed research graph with **199 nodes and 381 directed
+relations**. It preserves 42 claims, 23 evidence groups, 19 explicit scopes, 26 open problems, 32
+literature sources, the Phase 16–21 exact and bounded numerical run payloads, and cautious bridges to
 the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)

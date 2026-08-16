@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), and [`phase20-result.json`](../evidence/phase20-result.json).
+Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), and [`phase21-result.json`](../evidence/phase21-result.json).
 
 ## Reading `PASS` correctly
 
-All 136 Phase 16–20 named exact checks have `status: PASS`. The snapshots also record 45 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, and 14 Phase 20 benchmark/bridge checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
+All 163 Phase 16–21 named exact checks have `status: PASS`. The snapshots also record 52 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, and 7 Phase 21 flux-tail/prior controls. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
 
 The scientific direction is stored on:
 
@@ -25,6 +25,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 18 | `result:P18_GAUSSIAN_SEAM_SPECTRUM_20260816`; `2026-08-16T16:42:39Z` | `cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py`; SHA-256 `01f2d5d04341093494e185529dd67630aef5896e842a4bedddc6d1309271e221`; introduced in `1a5d6d4326da3451ff63274cee654fa504f82f9c` | Exit `0`; 47 exact checks plus 1 separately recorded numerical control |
 | 19 | `result:P19_CLOSED_SUGRA_BOUNCE_20260816`; `2026-08-16T17:23:38Z` | `cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py`; SHA-256 `5dbfccd768bb13961222c289ba0754497bec94319f8b33ff602889eaeb469341`; introduced in `90aedef93eadab40156fc22daf87b2d6942f49a6` | Exit `0`; 17 exact checks plus 30 numerical checks |
 | 20 | `result:P20_TWO_SHEET_WDW_SELECTION_20260816`; `2026-08-16T17:28:20Z` | `cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py`; SHA-256 `a55ebfca78f07246679fd5fa8791537a0efe1d3370dfa53d8d6410ffc6a95807`; introduced in `c5395bc095399ca450adf555d8d24e21a9166725` | Exit `0`; 18 exact checks plus 14 numerical checks |
+| 21 | `result:P21_CONNECTED_SEAM_GAUSSIAN_20260816`; `2026-08-16T18:11:47Z` | `cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py`; SHA-256 `6ac7b2b36da9aa2eeda4c83494427c5d9f006bb9031d6b55d6678bf2ffc5b005`; introduced in `44e2865cc850bf7fef0c4ccebde788ca703ab8d8` | Exit `0`; 27 exact checks plus 7 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -52,6 +53,9 @@ The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`]
 | `evidence:p20-leading-wdw-envelope` | 12 exact + 6 numerical | Leading envelope selects \(5.44\) — `CONTRADICTS`; independent-pair \(e^{4sI}\) follows from CPT — `CONTRADICTS`; coherent symmetrization only rescales probability — `CONTRADICTS` | Constant-field de Sitter/WDW control; standard \(e^{2sI}\) versus conditional independent-pair joint probability; no exact complex saddle or sheet inner product |
 | `evidence:p20-cecotti-f-direction` | 5 exact + 2 numerical | Cecotti \(5.44\) point is F-flat — `CONTRADICTS` | Classical \(S=0\), positive-real \(T\) trajectory only; not the quantum local-SUSY wavefunction |
 | `evidence:p20-curvature-reheating-control` | 1 exact + 6 numerical | Conditional conversion is reproducible — `SUPPORTS`; displayed number is a seam prediction — `CONTRADICTS` | One Phase 19 branch with fixed matterlike reheating, entropy, units, and late-time inputs |
+| `evidence:p21-single-mode-gaussian` | 12 exact | Unit baseline — `SUPPORTS`; normalization forces subtraction — `CONTRADICTS`; chosen zero-insertion identity — `SUPPORTS`; R-1 is connected — `CONTRADICTS`; log R is connected — `SUPPORTS` | Positive finite one-mode real-boson Gaussian only |
+| `evidence:p21-multimode-gaussian` | 4 exact | Log R is the connected generator — `SUPPORTS` | Finite positive block kernel and singular-value gate; no field-theory determinant |
+| `evidence:p21-flux-tail-and-prior` | 11 exact + 7 numerical | Reference subtraction guarantees normalizability — `CONTRADICTS`; one-flux constant-absolute toy sum — `SUPPORTS`; R-1 alone fixes physical flux probability — `CONTRADICTS` | One integer-flux toy with imposed kernel and prior comparisons; no WDW measure or joint \((n,\phi)\) distribution |
 
 ## Phase 16 check ledger
 
@@ -336,6 +340,66 @@ These checks give \(T_*=85.1288467\ldots\) and \(F^S/M=-6.4475031\ldots\), contr
 
 The bridge independently recovers the Phase 19 60-e-fold endpoint and, for the frozen inputs, obtains \(\Omega_{K0}=-5.5258\times10^{-4}(T_{\rm reh}/10^9\,{\rm GeV})^{2/3}\). The sign, branch choice, reheating equation of state, temperature, entropy factors, units, and late-time constants are all explicit inputs. This is a reproducible conversion, not a curvature detection or seam prediction.
 
+## Phase 21 check ledger
+
+### Single-mode normalized Gaussian — 12 exact checks
+
+- `P21.gaussian.kernel_determinant`
+- `P21.gaussian.schur_factorization`
+- `P21.gaussian.inverse_covariance`
+- `P21.gaussian.normalized_ratio`
+- `P21.gaussian.no_seam_baseline`
+- `P21.gaussian.nonempty_bridge_series`
+- `P21.gaussian.connected_log_series`
+- `P21.gaussian.remainder_is_exponential_of_connected`
+- `P21.gaussian.order_four_disconnected_piece`
+- `P21.gaussian.source_derivative_correlation`
+- `P21.gaussian.ratio_even_correlation_odd`
+- `P21.gaussian.symmetric_normal_modes`
+
+These checks establish \(R(0)=1\), the conditional identity for a chosen zero-insertion exclusion,
+and the distinction \(R-1=\exp(\log R)-1\). They do not define an exclusive event or Born
+probability.
+
+### Multimode determinant — 4 exact checks
+
+- `P21.multimode.schur_determinant`
+- `P21.multimode.determinant_ratio`
+- `P21.multimode.connected_trace_expansion`
+- `P21.multimode.positivity_singular_value_gate`
+
+The finite block result is \(R=\det(I-K^TK)^{-1/2}\), with
+\(\log R=\tfrac12\sum_{j\ge1}{\rm Tr}[(K^TK)^j]/j\). Infinite-mode UV control and any
+fermionic/Pfaffian phase remain outside this group.
+
+### Flux tails, finite parts, and imposed priors — 11 exact plus 7 numerical checks
+
+- `P21.flux.absolute_coupling_remainder_tail`
+- `P21.flux.absolute_coupling_log_tail`
+- `P21.flux.sector_partition_difference_tail`
+- `P21.flux.relative_coupling_constant_tail`
+- `P21.flux.normalized_ratio_lattice_dimension_threshold`
+- `P21.flux.sector_difference_lattice_dimension_threshold`
+- `P21.flux.relative_sector_difference_dimension_threshold`
+- `P21.flux.WDW_HH_excess_tail`
+- `P21.flux.WDW_tunneling_deficit_tail`
+- `P21.flux.WDW_reference_lattice_dimension_threshold`
+- `P21.regularization.constant_tail_finite_part`
+- `P21.numeric.absolute_coupling_sum`
+- `P21.numeric.connected_generator_sum`
+- `P21.numeric.truncation_convergence`
+- `P21.numeric.flat_remainder_zero_sector_peak`
+- `P21.numeric.sector_partition_difference_sum`
+- `P21.numeric.sector_partition_prior_dependence`
+- `P21.numeric.relative_coupling_linear_divergence`
+
+The recorded one-flux constant-absolute toy is summable. Its flat-sector \(R_n-1\) weighting has
+\(p_0=0.484950\ldots\), while retaining \(Z_n(0)\) gives \(0.626161\ldots\). This is a
+prior-dependence witness, not an inflationary flux prediction. The lattice thresholds are stated
+weight by weight: \(d<4\) for the \(n^{-4}\) normalized-ratio tails, \(d<6\) for the
+\(n^{-6}\) absolute sector difference, and \(d<2\) for the \(n^{-2}\) reference or
+relative-coupling sector-difference tails.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -346,6 +410,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase17_time_line_fold_algebra.
 uv run --locked python3 cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py
 uv run --locked python3 cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py
 uv run --locked python3 cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py
+uv run --locked python3 cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -406,5 +471,24 @@ claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44
 ```
 
 The scope edge is essential: the trace concerns the leading constant-field envelope, not an exact two-sheet local-SUGRA WDW no-go.
+
+Phase 21's central distinction is:
+
+```text
+claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p21-single-mode-gaussian
+  → DEFINED_IN → artifact:p21-script
+  → RECORDED_IN → artifact:p21-evidence-snapshot
+  → VALID_WITHIN → scope:p21-positive-euclidean-gaussian
+
+claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR
+  ├─ HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p21-single-mode-gaussian
+  ├─ HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p21-multimode-gaussian
+  └─ VALID_WITHIN → scope:p21-positive-euclidean-gaussian
+```
+
+Neither trace supplies the separate physical flux-sector measure represented by
+`open:p21-physical-flux-measure`.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.
