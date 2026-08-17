@@ -483,7 +483,7 @@ Flux-induced soft terms are known in concrete Type-IIB D-brane settings, but
 none has been computed for this seam.  This is the viable way to evade the
 Phase-18 free instantaneous-seam result: the seam would select a persistent
 bulk flux vacuum rather than directly kick a free pole mass.
-A (D^a\ne0) branch would require additional vector-multiplet/gauging data;
+A \(D^a\ne0\) branch would require additional vector-multiplet/gauging data;
 it is not supplied by the cited three-form construction alone.
 
 Two further distinctions are mandatory:
