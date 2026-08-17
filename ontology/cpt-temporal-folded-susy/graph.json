@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T17:27:03.527Z",
+  "updated_at_utc": "2026-08-17T18:12:31.429Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -178,13 +178,24 @@
     },
     {
       "question": "Does Phase 32 fix the Picard--Lefschetz coefficient of the connected saddle?",
-      "answer": "Only locally for one independently declared contour class. The specified full real lapse contour bypassing zero from below has one recorded finite-radius transverse contribution +1 on the tracked homogeneous lapse-base sheet; the positive half-line has endpoint contact rather than an ordinary intersection. The complete upward-cycle census, determinant-line orientation, CPT/Pin choice of lapse class, global integer coefficient, and physical state remain open.",
+      "answer": "No. For one independently declared below-origin full-line contour, the tracked homogeneous lapse base has one recorded finite-radius projected crossing whose coordinate sign is +1 only under the declared ambient, column, dual-flow, and Gaussian-lift orientations. The positive half-line has endpoint contact. The signed full-joint local intersection, determinant-line orientation, complete upward-cycle census, CPT/Pin contour choice, global coefficient, and physical state remain open.",
       "claim_ids": [
-        "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+        "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
         "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
         "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
         "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION"
+      ]
+    },
+    {
+      "question": "Does Phase 33 complete the uniform fold kernel or fix the global connected-saddle coefficient?",
+      "answer": "No. It confirms a transverse simple Dirichlet fold, the two-branch Airy action scale, and a regular rank-two local Ai/Bi solution space despite divergent separate Van Vleck terms. The fold is not a lapse saddle and its local chart adds no Phase-32 crossing. The contour/Stokes multiplier, analytic amplitude, determinant line, full dual census, global n_sigma, and physical state remain open.",
+      "claim_ids": [
+        "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+        "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+        "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+        "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+        "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION"
       ]
     }
   ],
@@ -438,13 +449,13 @@
     },
     {
       "id": "reading-path:lapse-prescription-to-local-intersection",
-      "title": "From a lapse prescription to a recorded local intersection, not yet a global coefficient",
-      "summary": "Separate the causal positive half-line from a full-line group average, follow the lower versus upper zero-lapse bypass, include the declared convergent momentum lift and Maslov comparison, and stop at the global relative-homology and CPT/Pin selection gates.",
+      "title": "From a lapse prescription to a projected crossing, not yet a signed joint coefficient",
+      "summary": "Separate the causal positive half-line from a full-line group average, follow the lower versus upper zero-lapse bypass, include the declared convergent momentum lift and orientation-line comparison, and stop before assigning a signed full-joint local or global coefficient.",
       "nodes": [
         "concept:causal-half-line-versus-full-line-lapse-object",
         "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
         "concept:below-origin-relative-cycle-versus-cpt-pin-selection",
-        "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+        "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
         "concept:transported-momentum-cycle-versus-real-fresnel-normalization",
         "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
@@ -452,6 +463,28 @@
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
         "open:p28-global-relative-homology-and-intersection",
         "open:p32-cpt-pin-lapse-class-selection",
+        "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p28-physical-state-and-density"
+      ]
+    },
+    {
+      "id": "reading-path:simple-fold-to-global-airy-cycle",
+      "title": "From the simple Dirichlet fold to the still-open uniform kernel",
+      "summary": "Follow the measured two-branch Airy scale, distinguish the field-endpoint fold from a lapse saddle, replace divergent separate-saddle asymptotics by a local solution space without choosing it, and stop at the global cycle, amplitude, determinant, and state gates.",
+      "nodes": [
+        "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+        "concept:simple-dirichlet-fold-versus-lapse-saddle",
+        "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+        "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+        "concept:separate-van-vleck-divergence-versus-uniform-fold-kernel",
+        "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+        "concept:local-airy-regularity-versus-global-cycle-and-amplitude",
+        "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+        "concept:local-fold-patch-versus-global-dual-census",
+        "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+        "open:p33-airy-cycle-amplitude-and-global-continuation",
+        "open:p29-conformal-bfv-uniform-parametrix",
+        "open:p28-global-relative-homology-and-intersection",
         "open:p28-full-gauge-reduced-superdeterminant",
         "open:p28-physical-state-and-density"
       ]
@@ -5266,7 +5299,7 @@
       "id": "phase:p32",
       "type": "phase",
       "title": "Phase 32 — below-origin lapse bypass and recorded intersection gate",
-      "summary": "A comparison of positive-half-line and full-line lapse prescriptions, lower and upper zero-lapse bypasses, a declared convergent signature-(-,+) momentum lift, regulated connected BVP continuation, and one recorded local intersection orientation.",
+      "summary": "A comparison of positive-half-line and full-line lapse prescriptions, lower and upper zero-lapse bypasses, a declared convergent signature-(-,+) momentum lift, sampled connected BVP continuation, and one recorded projected lapse-base crossing orientation.",
       "state": "ACTIVE"
     },
     {
@@ -5286,25 +5319,25 @@
     {
       "id": "concept:recorded-local-intersection-versus-global-pl-coefficient",
       "type": "concept",
-      "title": "Recorded local intersection versus global PL coefficient",
-      "summary": "One transverse crossing on one tracked lapse-base sheet contributes a local oriented sign; the physical Picard--Lefschetz coefficient additionally requires every upward-cycle component, complex sheet, endpoint, good end, Stokes jump, and determinant-line orientation.",
+      "title": "Projected lapse-base crossing versus signed joint PL intersection",
+      "summary": "One projected crossing on one tracked lapse base has a coordinate sign under declared orientations; a signed full-joint local intersection and physical Picard--Lefschetz coefficient additionally require the complete middle-dimensional BFV cycle, determinant-line trivialization, all upward components, complex sheets, endpoints, good ends, and Stokes data.",
       "state": "ACTIVE"
     },
     {
       "id": "concept:transported-momentum-cycle-versus-real-fresnel-normalization",
       "type": "concept",
       "title": "Transported momentum cycle versus real Fresnel normalization",
-      "summary": "The holomorphically transported signature-(-,+) momentum cycle is locally decaying around the lower bypass, but matching its C/N result to an independently identity-normalized C/|N| negative-real kernel requires an additional Maslov comparison sign.",
+      "summary": "The holomorphically transported signature-(-,+) momentum cycle is locally decaying around the lower bypass, but matching its C/N result to an independently identity-normalized C/|N| negative-real kernel requires additional orientation-line gluing not derived as a Maslov index.",
       "state": "ACTIVE"
     },
     {
-      "id": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "id": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "type": "claim",
-      "title": "The specified below-origin full line has one recorded local +1 intersection",
-      "summary": "Supported on the tracked homogeneous lapse-base sheet: each recorded finite lower semicircle crosses the positive-real dual at T=r with stable positive transverse orientation, and the connected complex BVP continues without a sampled Jacobi zero.",
+      "title": "The specified below-origin full line has one recorded projected lapse-base crossing",
+      "summary": "Supported on the tracked homogeneous lapse base: every recorded finite lower semicircle crosses the positive-real dual at T=r, with coordinate sign +1 only under the declared ambient, column, dual-flow, and Gaussian-lift orientations; five sampled angles on each of four arcs contain no sampled Jacobi zero.",
       "state": "SUPPORTED_ON_TRACKED_HOMOGENEOUS_LAPSE_BASE",
-      "claim_id": "P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
-      "statement": "For the independently declared full real lapse contour with a finite lower semicircular bypass, the tracked connected homogeneous upward dual contributes one recorded local oriented intersection +1 at T=r.",
+      "claim_id": "P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
+      "statement": "For the independently declared full real lapse contour with each recorded finite lower semicircular bypass, the tracked connected homogeneous lapse base has one projected transverse crossing at T=r; its coordinate sign is +1 under the explicitly declared orientations, without assigning a signed full-joint local or global PL coefficient.",
       "epistemic_state": "SUPPORTED"
     },
     {
@@ -5331,7 +5364,7 @@
       "id": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
       "type": "claim",
       "title": "The lower-bypass principal momentum cycle is locally convergent",
-      "summary": "Supported exactly in the frozen signature-(-,+) principal control: lapse-dependent gravity and scalar momentum rays turn both quadratic terms into decaying real Gaussians and preserve the declared local crossing orientation.",
+      "summary": "Supported exactly in the frozen signature-(-,+) principal control: lapse-dependent gravity and scalar momentum rays turn both quadratic terms into decaying real Gaussians; their declared Jacobian adds no sign to the projected coordinate crossing but does not orient the full BFV determinant line.",
       "state": "SUPPORTED_IN_FROZEN_PRINCIPAL_CONTROL",
       "claim_id": "P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
       "statement": "Along the declared lower semicircular lapse bypass, the frozen principal gravity and scalar momentum rays make the signature-(-,+) Gaussian locally decaying.",
@@ -5341,10 +5374,10 @@
       "id": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
       "type": "claim",
       "title": "Analytic transport alone fixes the negative-real identity normalization",
-      "summary": "Contradicted by the exact comparison: analytic transport gives C/N=-C/r on the negative real side, whereas the separately normalized real Fresnel identity kernel uses C/|N|=C/r and needs an additional Maslov gluing sign.",
-      "state": "CONTRADICTED_REQUIRES_MASLOV_COMPARISON_DATA",
+      "summary": "Contradicted by the exact comparison: analytic transport gives C/N=-C/r on the negative real side, whereas the separately normalized real Fresnel identity kernel uses C/|N|=C/r and needs additional orientation-line gluing not derived as a Maslov index.",
+      "state": "CONTRADICTED_REQUIRES_ORIENTATION_LINE_GLUING_DATA",
       "claim_id": "P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
-      "statement": "Holomorphic transport of the declared momentum cycle around the lower lapse bypass by itself reproduces the independently identity-normalized negative-real Fresnel kernel with no additional comparison orientation.",
+      "statement": "Holomorphic transport of the declared momentum cycle around the lower lapse bypass by itself reproduces the independently identity-normalized negative-real Fresnel kernel with no additional orientation-line comparison data.",
       "epistemic_state": "CONTRADICTED"
     },
     {
@@ -5368,15 +5401,15 @@
     {
       "id": "evidence:p32-momentum-cycle-maslov-and-endpoint",
       "type": "evidence",
-      "title": "Phase 32 momentum-cycle, Maslov, and endpoint checks",
-      "summary": "Six exact checks cover the lower-bypass orientation, convergent principal momentum rays, coupled Jacobian orientation, required Maslov comparison, paired arc versus pointwise pole, and nonuniform lateral limit.",
+      "title": "Phase 32 momentum-cycle, orientation-line, and endpoint checks",
+      "summary": "Six exact checks cover the projected lower-bypass orientation, convergent principal momentum rays, coupled Jacobian orientation, required orientation-line comparison, paired arc versus pointwise pole, and nonuniform lateral limit.",
       "state": "VERIFIED",
       "observed_status": "6_EXACT_PASS",
       "check_ids": [
         "P32.intersection.lower_bypass_orientation",
         "P32.contour.principal_momentum_decay",
         "P32.detline.coupled_crossing_orientation",
-        "P32.detline.lower_half_turn_requires_maslov_gluing",
+        "P32.detline.lower_half_turn_requires_orientation_gluing",
         "P32.endpoint.paired_arc_vs_pointwise_pole",
         "P32.regulator.lateral_limit_is_not_uniform"
       ]
@@ -5385,7 +5418,7 @@
       "id": "evidence:p32-connected-dual-bvp-and-regulator",
       "type": "evidence",
       "title": "Phase 32 connected dual, BVP, and regulator checks",
-      "summary": "Seven numerical checks freeze the connected saddle, continue the short-time real dual and complex lower bypass, exclude sampled Jacobi zeros, verify Van Vleck scaling and local orientation stability, and separate fixed-cutoff damping from a nonuniform lateral limit.",
+      "summary": "Seven numerical checks freeze the connected saddle, continue the short-time real dual, sample five angles on each of four complex lower bypasses, find no Jacobi zero at those samples, verify Van Vleck scaling and projected coordinate-orientation stability, and separate fixed-cutoff damping from a nonuniform lateral limit.",
       "state": "VERIFIED",
       "observed_status": "7_NUMERICAL_PASS",
       "check_ids": [
@@ -5402,7 +5435,7 @@
       "id": "scope:p32-specified-lapse-bypasses-and-tracked-dual",
       "type": "scope",
       "title": "P32 specified lapse bypasses and tracked homogeneous dual",
-      "summary": "The frozen connected Starobinsky interval, positive-half-line and full-real-line lapse prescriptions, finite lower and upper semicircular bypasses, one declared principal momentum lift, and bounded real/complex continuation near zero lapse.",
+      "summary": "The frozen connected Starobinsky interval, positive-half-line and full-real-line lapse prescriptions, finite lower and upper semicircular bypasses, one declared principal momentum lift, and bounded real plus sampled complex continuation near zero lapse.",
       "state": "ACTIVE",
       "includes": [
         "the inherited reduced-unit boundary data and connected T=0.7 saddle without retuning",
@@ -5411,13 +5444,13 @@
         "the specified full real lapse contour bypassing zero from below",
         "the frozen signature-(-,+) principal momentum rays and local coupled crossing Jacobian",
         "real crossings at r from 0.1 through 0.0015625",
-        "complex fixed-boundary continuations on four lower semicircles",
+        "five sampled complex fixed-boundary points on each of four lower semicircles",
         "finite spectral damping and nonuniform lateral-limit controls"
       ],
       "excludes": [
         "a derivation that CPT or Pin selects the below-origin contour class",
         "every upward-cycle component, complex BVP sheet, asymptotic good end, singularity, and Stokes jump",
-        "the full inhomogeneous gauge-fixed oriented superdeterminant line",
+        "a signed full-joint local intersection, determinant-line trivialization, and the full inhomogeneous gauge-fixed oriented superdeterminant line",
         "a nonperturbative BFV/BV quantum master equation, gauge-independence proof, or Gribov analysis",
         "a global integer Picard--Lefschetz coefficient",
         "a positive trace-class WDW projector, seam density, initial-value selection, or SUSY spectrum"
@@ -5445,23 +5478,23 @@
       "id": "artifact:p32-script",
       "type": "artifact",
       "title": "Phase 32 executable",
-      "summary": "Exact and bounded numerical lapse-map, bypass, momentum-cycle, Maslov, connected-dual, complex-BVP, and regulator controls.",
+      "summary": "Exact and bounded numerical lapse-map, bypass, momentum-cycle, orientation-line, projected-crossing, sampled complex-BVP, and regulator controls.",
       "state": "TRACKED",
       "artifact_kind": "executable",
       "path": "cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py",
-      "sha256": "944f2c51a656d3622f2f8d0dd83fabb1f25bcc59751e11c1fbd7b292ff8fee8f",
-      "introduced_in_commit": "60775dd068123fcc36a848d7d8329d8127b83ece"
+      "sha256": "35e68db704f65c704a34ac4b2e9d676ad39c1bb390221b5b41d79da3e34bb6d3",
+      "introduced_in_commit": "2b04df329d863c60ca62585c821f4f29c2047461"
     },
     {
       "id": "artifact:p32-report",
       "type": "artifact",
       "title": "Phase 32 report",
-      "summary": "Human-readable positive-half-line versus full-line contour distinction, finite lower-bypass local intersection, momentum-cycle and Maslov analysis, and global-scope boundary.",
+      "summary": "Human-readable positive-half-line versus full-line contour distinction, projected lower-bypass crossing, momentum-cycle and orientation-line analysis, sampled BVP control, and global-scope boundary.",
       "state": "TRACKED",
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md",
-      "sha256": "11edf6f536dc27bddd1e4c6df4a7352e4b08c63f8de5930df997af3c3820d994",
-      "introduced_in_commit": "60775dd068123fcc36a848d7d8329d8127b83ece"
+      "sha256": "cb5f112eaa5f73460dd97994583233306fe5bda7331868d49a703c568f41279f",
+      "introduced_in_commit": "2b04df329d863c60ca62585c821f4f29c2047461"
     },
     {
       "id": "artifact:p32-evidence-snapshot",
@@ -5471,7 +5504,199 @@
       "state": "TRACKED",
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase32-result.json",
-      "sha256": "e7c27f2e667eb0820eeeaf8896974c73266a982420c1c2244c1a2cf72e64e789"
+      "sha256": "73c117d4acba48c325d661980f41a46ccd914f239ef6eea2046b417527c55eaf"
+    },
+    {
+      "id": "phase:p33",
+      "type": "phase",
+      "title": "Phase 33 — simple-fold Airy uniformization and intersection scope gate",
+      "summary": "A frozen connected Dirichlet-fold calculation resolving the two real branches, invariant local Airy action scale, soft Jacobi and separate Van Vleck scaling, local regular-solution rank, nonstationary lapse direction, and separation from the Phase-32 endpoint contour.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:simple-dirichlet-fold-versus-lapse-saddle",
+      "type": "concept",
+      "title": "Simple Dirichlet fold versus lapse saddle",
+      "summary": "A corank-one endpoint-projection caustic can have the transverse simple-fold normal form while the lapse derivative of the reduced action remains nonzero; field-endpoint coalescence does not create another lapse critical point.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:separate-van-vleck-divergence-versus-uniform-fold-kernel",
+      "type": "concept",
+      "title": "Separate Van Vleck divergence versus a uniform fold kernel",
+      "summary": "The isolated-saddle factors diverge as the two branches coalesce, but the canonical simple-fold equation has a regular Airy solution space. This removes a coordinate failure of separate-saddle asymptotics, not a possible singularity in an uncomputed physical measure or amplitude.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:local-airy-regularity-versus-global-cycle-and-amplitude",
+      "type": "concept",
+      "title": "Local Airy regularity versus global cycle and amplitude data",
+      "summary": "Ai and Bi are both regular at the fold, so local finiteness does not choose the original relative cycle or Stokes multiplier. The even/odd analytic amplitude coefficients are a second layer distinct from the contour-function coefficients.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:local-fold-patch-versus-global-dual-census",
+      "type": "concept",
+      "title": "Local fold patch versus the global dual census",
+      "summary": "Disjointness of one radius-one fold chart from the imaginary full-lapse line and the recorded small endpoint bypasses excludes only a local crossing there; dual arms may leave the chart, cross elsewhere, or occur on other sheets.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "type": "claim",
+      "title": "The recorded Dirichlet caustic has a transverse simple-fold Airy scale",
+      "summary": "Supported in the frozen homogeneous connected model: both transversality magnitudes are nonzero, two actual branches reach delta=0.0002, and their last-four-point log slopes are consistent with the canonical action-gap, Airy-scale, and soft-Jacobi powers. The quoted 93.0272 and 16.94783 ratios are recorded finite-resolution values, not error-certified asymptotic coefficients.",
+      "state": "SUPPORTED_IN_RECORDED_FOLD_SCALING_CONTROL",
+      "claim_id": "P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "statement": "For the frozen Phase-25 fixed-boundary connected branch near T_c=9.78862556808, the recorded caustic is a transverse simple Dirichlet fold with the canonical local Airy action-scale magnitude inferred from the two-branch action gap.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "type": "claim",
+      "title": "The recorded Dirichlet fold is an additional lapse saddle",
+      "summary": "Contradicted at the recorded fold: W_T=-73.72585376 is nonzero, so the endpoint-projection caustic is not another critical point of the lapse-reduced action.",
+      "state": "CONTRADICTED_BY_NONZERO_LAPSE_DERIVATIVE",
+      "claim_id": "P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "statement": "The real Dirichlet fold at T_c is also a stationary point of the fixed-boundary lapse integral.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "type": "claim",
+      "title": "The separate Van Vleck divergences force the exact fold kernel to diverge",
+      "summary": "Contradicted only in the canonical simple-fold normal form: the isolated endpoint proxies scale as delta^(-1/4), while the local Airy equation has regular solutions. The physical measure, analytic amplitude, ghost determinant, and absolute phase were not computed.",
+      "state": "CONTRADICTED_IN_CANONICAL_FOLD_NORMAL_FORM",
+      "claim_id": "P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "statement": "Divergence of the two separate endpoint Van Vleck saddle terms at the recorded simple fold is sufficient by itself to prove divergence of any exact uniform kernel.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "type": "claim",
+      "title": "Local Airy regularity uniquely selects the uniform kernel",
+      "summary": "Contradicted exactly inside the declared local Airy ODE: Ai and Bi solve the equation, are both regular at the fold, and have Wronskian 1/pi, while the analytic even/odd amplitude data are distinct from contour/Stokes coefficients. This does not assert that both basis solutions lift to admissible gravitational cycles.",
+      "state": "CONTRADICTED_BY_TWO_DIMENSIONAL_REGULAR_SOLUTION_SPACE",
+      "claim_id": "P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "statement": "Requiring local finiteness at the simple fold uniquely fixes the Airy contour function, its Stokes multiplier, and the analytic amplitude of the physical uniform kernel.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "type": "claim",
+      "title": "The local fold patch adds an intersection to the Phase-32 lapse contour",
+      "summary": "Contradicted in the declared local T-plane patch: the radius-one chart around T_c approximately 9.7886 is disjoint from the imaginary-axis full-lapse contour and every recorded Phase-32 bypass with r at most 0.1. This is not a global dual-cycle census.",
+      "state": "CONTRADICTED_IN_DECLARED_LOCAL_T_PLANE_PATCH",
+      "claim_id": "P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "statement": "The radius-one chart around the recorded positive-real Dirichlet fold contributes another local crossing to the imaginary-axis full-lapse contour or a recorded Phase-32 endpoint bypass.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p33-exact-fold-and-airy-normal-form",
+      "type": "evidence",
+      "title": "Phase 33 exact fold, Airy, and CFU checks",
+      "summary": "Seven exact checks cover the canonical stationary points and action gap, invariant action-scale magnitude, isolated-branch quarter-power divergence, the two-dimensional regular local Airy ODE solution space, and the distinction between even/odd amplitude data and contour choice; admissible lifted gravitational cycles are not inferred.",
+      "state": "VERIFIED",
+      "observed_status": "7_EXACT_PASS",
+      "check_ids": [
+        "P33.normal_form.stationary_points",
+        "P33.normal_form.action_gap",
+        "P33.normal_form.invariant_Airy_scale",
+        "P33.normal_form.branch_prefactor_divergence",
+        "P33.Airy.two_regular_solutions",
+        "P33.Airy.local_regularity_does_not_select_cycle",
+        "P33.CFU.amplitude_data_are_distinct_from_cycle_choice"
+      ]
+    },
+    {
+      "id": "evidence:p33-two-branch-fold-scaling",
+      "type": "evidence",
+      "title": "Phase 33 two-branch fold-scaling checks",
+      "summary": "Seven numerical checks freeze the transverse fold, resolve both real fixed-boundary branches, test the last-four-point action-gap, Airy-scale, soft-Jacobi, and endpoint-prefactor log slopes, verify opposite determinant signs, bound endpoint residuals, and show W_T is nonzero.",
+      "state": "VERIFIED",
+      "observed_status": "7_NUMERICAL_PASS",
+      "check_ids": [
+        "P33.fold.frozen_simple_fold_control",
+        "P33.fold.two_branch_action_gap_three_halves",
+        "P33.fold.Airy_scale_linear",
+        "P33.fold.soft_Jacobi_square_root",
+        "P33.fold.separate_endpoint_prefactor_quarter_power",
+        "P33.fold.actual_BVP_residuals",
+        "P33.fold.is_not_a_lapse_saddle"
+      ]
+    },
+    {
+      "id": "evidence:p33-local-lapse-separation",
+      "type": "evidence",
+      "title": "Phase 33 local fold-patch separation check",
+      "summary": "One exact inequality places the complete radius-one fold chart to the right of both the imaginary full-lapse line and all recorded Phase-32 endpoint bypasses.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS",
+      "check_ids": [
+        "P33.intersection.local_fold_patch_disjoint_from_imaginary_lapse_axis"
+      ]
+    },
+    {
+      "id": "scope:p33-frozen-simple-fold-airy-control",
+      "type": "scope",
+      "title": "P33 frozen connected simple-fold Airy control",
+      "summary": "The Phase-25 frozen fixed-boundary homogeneous connected branch near its positive-real Dirichlet fold, two real solutions down to delta=0.0002, the canonical local fold normal form, and a radius-one T-plane comparison with the recorded Phase-32 contour pieces.",
+      "state": "ACTIVE",
+      "includes": [
+        "the inherited reduced-unit Starobinsky boundary data and positive-real connected branch",
+        "the simple fold at T_c=9.788625568081242 and both measured transversality magnitudes",
+        "two actual real fixed-boundary branches at seven positive delta values",
+        "the action-gap Airy scale, soft Jacobi singular value, endpoint determinant signs, and separate Van Vleck proxies",
+        "the local Ai/Bi ODE solution space and generic CFU even/odd analytic-amplitude decomposition, without inferring admissible lifted gravitational cycles",
+        "the radius-one fold patch, imaginary-axis full-lapse line, and recorded Phase-32 bypasses with r<=0.1"
+      ],
+      "excludes": [
+        "an off-real canonical-map or exponent branch for the Airy argument, and the separately selected Airy contour/Stokes multiplier",
+        "the analytic amplitude coefficients, functional measure, ghost superdeterminant, absolute determinant/Maslov line, or uniform physical prefactor",
+        "every full joint upward-cycle arm outside the fold chart, every complex sheet, and the global intersection matrix or n_sigma",
+        "a nonlinear BFV/BV completion, inhomogeneous SUGRA modes, physical WDW endpoint product, or trace-class seam state",
+        "an initial-value peak, persistent order parameter, or SUSY-breaking spectrum"
+      ]
+    },
+    {
+      "id": "open:p33-airy-cycle-amplitude-and-global-continuation",
+      "type": "open_problem",
+      "title": "Complete the Airy cycle, amplitude, and global continuation",
+      "summary": "The local action-scale magnitude is known in the declared real exp(-W/hbar) chart, but an off-real canonical-map/exponent branch remains to be derived. The original relative cycle and oriented determinant line must then be transported into that chart to select the Airy contour/Stokes multiplier; the analytic amplitude and every dual arm must be continued before a uniform physical kernel or global coefficient can be assigned.",
+      "state": "OPEN",
+      "question": "Can one derive the off-real canonical map/exponent branch, lift a regulated physical relative cycle and determinant line into the resulting Airy chart, fix its contour/Stokes multiplier and analytic amplitude, continue every joint dual arm to its good ends, and yield a gauge-reduced uniform kernel with a global n_sigma and trace-class state?"
+    },
+    {
+      "id": "artifact:p33-script",
+      "type": "artifact",
+      "title": "Phase 33 executable",
+      "summary": "Exact and bounded numerical simple-fold normal-form, two-branch scaling, local Airy-rank, lapse-nonstationarity, and local contour-separation controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py",
+      "sha256": "844c1262332c06b17def3506a0112f3230b12cbda153750d4964ca9f96a4485b",
+      "introduced_in_commit": "25d4eb9933342824794a2bc39b434899ba566ac1"
+    },
+    {
+      "id": "artifact:p33-report",
+      "type": "artifact",
+      "title": "Phase 33 report",
+      "summary": "Human-readable simple-fold Airy scale, separate-saddle divergence, contour-versus-amplitude distinction, local lapse separation, and global-scope gate.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md",
+      "sha256": "248923359787cf61c18c0e556155ae9ee577100b663825510ac5c89ee61c27c0",
+      "introduced_in_commit": "25d4eb9933342824794a2bc39b434899ba566ac1"
+    },
+    {
+      "id": "artifact:p33-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 33 evidence snapshot",
+      "summary": "Persisted eight-exact and seven-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase33-result.json",
+      "sha256": "0293f0deea25b5da7b31467db430ebb538aba1304f5fceb7bf527a0332549724"
     }
   ],
   "edges": [
@@ -11873,39 +12098,39 @@
     },
     {
       "id": "edge:1031",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "PART_OF",
       "to": "phase:p32"
     },
     {
       "id": "edge:1032",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "VALID_WITHIN",
       "to": "scope:p32-specified-lapse-bypasses-and-tracked-dual"
     },
     {
       "id": "edge:1033",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "DOCUMENTED_BY",
       "to": "artifact:p32-report"
     },
     {
       "id": "edge:1034",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "HAS_EVIDENCE",
       "to": "evidence:p32-connected-dual-bvp-and-regulator",
       "polarity": "SUPPORTS"
     },
     {
       "id": "edge:1035",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "HAS_EVIDENCE",
       "to": "evidence:p32-lapse-map-operator-and-conjugation",
       "polarity": "SUPPORTS"
     },
     {
       "id": "edge:1036",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "ABOUT",
       "to": "concept:recorded-local-intersection-versus-global-pl-coefficient"
     },
@@ -12095,13 +12320,13 @@
     },
     {
       "id": "edge:1067",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH"
     },
     {
       "id": "edge:1068",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT"
     },
@@ -12125,7 +12350,7 @@
     },
     {
       "id": "edge:1072",
-      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
       "relation": "MOTIVATES",
       "to": "open:p28-global-relative-homology-and-intersection",
       "note": "One recorded local crossing is not the complete global upward-cycle census or physical coefficient."
@@ -12222,7 +12447,7 @@
       "from": "concept:transported-momentum-cycle-versus-real-fresnel-normalization",
       "relation": "CITES",
       "to": "source:gibbons-hawking-perry-1978",
-      "note": "Conformal-factor contour warning only; the exact finite-mode momentum rays and Maslov comparison are repository calculations."
+      "note": "Conformal-factor contour warning only; the exact finite-mode momentum rays and orientation-line comparison are repository calculations."
     },
     {
       "id": "edge:1087",
@@ -12237,6 +12462,427 @@
       "relation": "CITES",
       "to": "source:banihashemi-jacobson-2025",
       "note": "The source does not derive a CPT/Pin bra--ket lift or select the ket contour class."
+    },
+    {
+      "id": "edge:1089",
+      "from": "phase:p33",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1090",
+      "from": "scope:p33-frozen-simple-fold-airy-control",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1091",
+      "from": "concept:simple-dirichlet-fold-versus-lapse-saddle",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1092",
+      "from": "concept:separate-van-vleck-divergence-versus-uniform-fold-kernel",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1093",
+      "from": "concept:local-airy-regularity-versus-global-cycle-and-amplitude",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1094",
+      "from": "concept:local-fold-patch-versus-global-dual-census",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1095",
+      "from": "artifact:p33-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1096",
+      "from": "artifact:p33-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1097",
+      "from": "artifact:p33-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1098",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1099",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p33-frozen-simple-fold-airy-control"
+    },
+    {
+      "id": "edge:1100",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p33-report"
+    },
+    {
+      "id": "edge:1101",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "ABOUT",
+      "to": "concept:simple-dirichlet-fold-versus-lapse-saddle"
+    },
+    {
+      "id": "edge:1102",
+      "from": "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1103",
+      "from": "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p33-frozen-simple-fold-airy-control"
+    },
+    {
+      "id": "edge:1104",
+      "from": "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p33-report"
+    },
+    {
+      "id": "edge:1105",
+      "from": "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "relation": "ABOUT",
+      "to": "concept:simple-dirichlet-fold-versus-lapse-saddle"
+    },
+    {
+      "id": "edge:1106",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1107",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p33-frozen-simple-fold-airy-control"
+    },
+    {
+      "id": "edge:1108",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p33-report"
+    },
+    {
+      "id": "edge:1109",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "ABOUT",
+      "to": "concept:separate-van-vleck-divergence-versus-uniform-fold-kernel"
+    },
+    {
+      "id": "edge:1110",
+      "from": "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1111",
+      "from": "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p33-frozen-simple-fold-airy-control"
+    },
+    {
+      "id": "edge:1112",
+      "from": "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p33-report"
+    },
+    {
+      "id": "edge:1113",
+      "from": "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "relation": "ABOUT",
+      "to": "concept:local-airy-regularity-versus-global-cycle-and-amplitude"
+    },
+    {
+      "id": "edge:1114",
+      "from": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1115",
+      "from": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p33-frozen-simple-fold-airy-control"
+    },
+    {
+      "id": "edge:1116",
+      "from": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p33-report"
+    },
+    {
+      "id": "edge:1117",
+      "from": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "relation": "ABOUT",
+      "to": "concept:local-fold-patch-versus-global-dual-census"
+    },
+    {
+      "id": "edge:1118",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p33-exact-fold-and-airy-normal-form",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1119",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p33-two-branch-fold-scaling",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1120",
+      "from": "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p33-two-branch-fold-scaling",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1121",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p33-exact-fold-and-airy-normal-form",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1122",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p33-two-branch-fold-scaling",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1123",
+      "from": "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p33-exact-fold-and-airy-normal-form",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1124",
+      "from": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p33-local-lapse-separation",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1125",
+      "from": "evidence:p33-exact-fold-and-airy-normal-form",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1126",
+      "from": "evidence:p33-exact-fold-and-airy-normal-form",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p33-script"
+    },
+    {
+      "id": "edge:1127",
+      "from": "evidence:p33-exact-fold-and-airy-normal-form",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p33-evidence-snapshot"
+    },
+    {
+      "id": "edge:1128",
+      "from": "evidence:p33-two-branch-fold-scaling",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1129",
+      "from": "evidence:p33-two-branch-fold-scaling",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p33-script"
+    },
+    {
+      "id": "edge:1130",
+      "from": "evidence:p33-two-branch-fold-scaling",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p33-evidence-snapshot"
+    },
+    {
+      "id": "edge:1131",
+      "from": "evidence:p33-local-lapse-separation",
+      "relation": "PART_OF",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1132",
+      "from": "evidence:p33-local-lapse-separation",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p33-script"
+    },
+    {
+      "id": "edge:1133",
+      "from": "evidence:p33-local-lapse-separation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p33-evidence-snapshot"
+    },
+    {
+      "id": "edge:1134",
+      "from": "phase:p33",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1135",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC"
+    },
+    {
+      "id": "edge:1136",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "EXTENDS",
+      "to": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING"
+    },
+    {
+      "id": "edge:1137",
+      "from": "claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE"
+    },
+    {
+      "id": "edge:1138",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING"
+    },
+    {
+      "id": "edge:1139",
+      "from": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING"
+    },
+    {
+      "id": "edge:1140",
+      "from": "artifact:p33-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p25-script"
+    },
+    {
+      "id": "edge:1141",
+      "from": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+      "relation": "MOTIVATES",
+      "to": "open:p29-conformal-bfv-uniform-parametrix"
+    },
+    {
+      "id": "edge:1142",
+      "from": "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
+      "relation": "MOTIVATES",
+      "to": "open:p33-airy-cycle-amplitude-and-global-continuation"
+    },
+    {
+      "id": "edge:1143",
+      "from": "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
+      "relation": "MOTIVATES",
+      "to": "open:p33-airy-cycle-amplitude-and-global-continuation"
+    },
+    {
+      "id": "edge:1144",
+      "from": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:1145",
+      "from": "phase:p33",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density"
+    },
+    {
+      "id": "edge:1146",
+      "from": "open:p33-airy-cycle-amplitude-and-global-continuation",
+      "relation": "BLOCKED_BY",
+      "to": "open:p29-conformal-bfv-uniform-parametrix"
+    },
+    {
+      "id": "edge:1147",
+      "from": "open:p33-airy-cycle-amplitude-and-global-continuation",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:1148",
+      "from": "open:p33-airy-cycle-amplitude-and-global-continuation",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:1149",
+      "from": "open:p33-airy-cycle-amplitude-and-global-continuation",
+      "relation": "BLOCKED_BY",
+      "to": "open:p29-physical-endpoint-measure-and-ordering"
+    },
+    {
+      "id": "edge:1150",
+      "from": "concept:simple-dirichlet-fold-versus-lapse-saddle",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1151",
+      "from": "concept:simple-dirichlet-fold-versus-lapse-saddle",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii"
+    },
+    {
+      "id": "edge:1152",
+      "from": "concept:separate-van-vleck-divergence-versus-uniform-fold-kernel",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1153",
+      "from": "concept:local-airy-regularity-versus-global-cycle-and-amplitude",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1154",
+      "from": "concept:local-airy-regularity-versus-global-cycle-and-amplitude",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1155",
+      "from": "concept:local-fold-patch-versus-global-dual-census",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1156",
+      "from": "concept:local-fold-patch-versus-global-dual-census",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii"
+    },
+    {
+      "id": "edge:1157",
+      "from": "open:p33-airy-cycle-amplitude-and-global-continuation",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978"
     }
   ],
   "kg_bridges": [
@@ -12464,7 +13110,17 @@
       "relation": null,
       "status": "UNRESOLVED",
       "checked_at_utc": "2026-08-17T17:27:03.527Z",
-      "lookup_key": "CPT Temporal-Folded SUSY Phase32 below-origin lapse bypass recorded local intersection",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase32 below-origin lapse bypass projected lapse-base crossing",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p33",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T18:12:31.429Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase33 simple-fold Airy uniformization intersection scope gate",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
     }
   ]

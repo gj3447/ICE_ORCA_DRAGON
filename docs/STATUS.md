@@ -374,10 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–32 is now indexed in a repository-local typed research graph with **443 nodes and 1088 directed
-relations**. It preserves 107 claims, 63 evidence groups, 35 explicit scopes, 39 open problems, 63
-literature sources, the Phase 16–32 run payloads (315 named exact checks, 142 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 56/56 verified artifact and policy hashes,
+Phase 15R–33 is now indexed in a repository-local typed research graph with **461 nodes and 1157 directed
+relations**. It preserves 112 claims, 66 evidence groups, 36 explicit scopes, 40 open problems, 63
+literature sources, the Phase 16–33 run payloads (323 named exact checks, 149 typed numerical checks, and
+one separately recorded legacy Phase-18 numerical control), 59/59 verified artifact and policy hashes,
 and cautious bridges to
 the older SYMPOSIUM KG.
 
@@ -590,14 +590,15 @@ Phase 32 returns exit 0 with **14 exact checks and 7 numerical checks**.
   recorded positive-real upward dual only at the contour endpoint, so no ordinary transverse
   intersection integer is assigned.
 - For the independently declared full real lapse contour bypassing zero from below, every recorded
-  finite radius crosses the tracked homogeneous dual at `T=r` with positive local orientation. The
-  connected complex BVP continues around four lower semicircles with no sampled Jacobi zero.
+  finite radius has one projected lapse-base crossing at `T=r`. Its coordinate sign is positive only
+  under the declared ambient, column, dual-flow, and Gaussian-lift orientations. The connected complex
+  BVP was evaluated at five angles on each of four lower arcs with no Jacobi zero at those samples.
 - The declared signature-(-,+) principal momentum rays are locally decaying, but analytic `C/N`
   transport does not by itself reproduce the independently normalized negative-real `C/|N|` kernel;
-  an additional Maslov comparison sign is required.
-- The result is one **recorded local contribution +1**, not a complete global `n_sigma=+1` theorem.
-  Other upward-cycle pieces, complex sheets, good ends, Stokes data, and the oriented inhomogeneous
-  superdeterminant remain open.
+  additional orientation-line gluing is required; it is not derived as a Maslov index.
+- The signed full-joint local intersection and global coefficient are both unassigned. Other
+  upward-cycle pieces, unsampled arc segments, complex sheets, good ends, Stokes data, determinant-line
+  trivialization, and the oriented inhomogeneous superdeterminant remain open.
 - Complex conjugation exchanges lower and upper lateral loci. CPT/Pin does not yet select the
   below-origin ket contour, and no positive trace-class physical state is derived. The committed
   runnable catalog is now 63.
@@ -606,6 +607,33 @@ See
 [`../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md)
 and
 [`../cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py`](../cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 33
+
+Phase 33 returns exit 0 with **8 exact checks and 7 numerical checks**.
+
+- The Phase-25 real Dirichlet caustic at $T_c=9.78862556808$ is a transverse simple fold. Two actual
+  fixed-boundary branches were resolved down to $\delta=T_c-T=2\times10^{-4}$.
+- Their action gap approaches $|\Delta W|=93.0272\,\delta^{3/2}$, giving the invariant local action-scale
+  magnitude $\zeta_{\rm act}=16.94783\,\delta+o(\delta)$. The soft Jacobi singular value scales as
+  $\sqrt\delta$, the endpoint determinants have opposite signs, and separate Van Vleck proxies diverge
+  as $\delta^{-1/4}$.
+- This separate-saddle divergence does not force divergence in the canonical Airy fold normal form.
+  It also does not prove the uncomputed physical kernel finite: the analytic amplitude, measure,
+  superdeterminant, and absolute phase remain absent.
+- Local regularity does not select a unique kernel. Both $\operatorname{Ai}$ and $\operatorname{Bi}$ are
+  regular at the fold and have Wronskian $1/\pi$; the original relative cycle must still fix the
+  contour/Stokes combination, separately from the even/odd analytic-amplitude data.
+- The fold has $W_T=-73.72585376\ne0$ and is not another lapse saddle. Its radius-one $T$-plane chart is
+  disjoint from the imaginary-axis full-lapse contour and every recorded Phase-32 bypass with
+  $r\le0.1$, so it adds no local crossing there. Dual arms outside that chart remain uncomputed.
+- The committed runnable catalog is now 64. The complete global $n_\sigma$, gauge-reduced uniform
+  kernel, determinant line, physical WDW product, and trace-class seam state remain open.
+
+See
+[`../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md`](../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md)
+and
+[`../cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py`](../cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py).
 
 ## Historical scientific ledger
 

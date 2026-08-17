@@ -1,15 +1,15 @@
 {
   "$schema": "../../schema/research-run-evidence-v1.schema.json",
   "schema_version": "research-run-evidence/v1",
-  "result_id": "result:P32_BELOW_ORIGIN_LAPSE_INTERSECTION_20260817",
+  "result_id": "result:P32_BELOW_ORIGIN_LAPSE_INTERSECTION_20260817_CORRECTED",
   "phase": "P32",
-  "observed_at_utc": "2026-08-17T17:27:03.527Z",
+  "observed_at_utc": "2026-08-17T17:49:24.844Z",
   "command": "uv run --locked python3 cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py",
   "exit_code": 0,
   "script": {
     "path": "cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py",
-    "sha256": "944f2c51a656d3622f2f8d0dd83fabb1f25bcc59751e11c1fbd7b292ff8fee8f",
-    "introduced_in_commit": "60775dd068123fcc36a848d7d8329d8127b83ece"
+    "sha256": "35e68db704f65c704a34ac4b2e9d676ad39c1bb390221b5b41d79da3e34bb6d3",
+    "introduced_in_commit": "2b04df329d863c60ca62585c821f4f29c2047461"
   },
   "exact_checks": 14,
   "checks": [
@@ -30,7 +30,7 @@
     },
     {
       "id": "P32.intersection.lower_bypass_orientation",
-      "statement": "the lower-bypass tangent and outward left dual tangent have positive transverse orientation",
+      "statement": "with ambient (Re T,Im T), columns (Gamma,K), and the stipulated flow-outward left-dual orientation, the projected lapse-base crossing has coordinate sign +1",
       "status": "PASS"
     },
     {
@@ -45,12 +45,12 @@
     },
     {
       "id": "P32.detline.coupled_crossing_orientation",
-      "statement": "the declared momentum and dual-configuration Jacobians multiply to +1 and preserve the local crossing orientation",
+      "statement": "the declared principal Gaussian lift has Jacobian product +1; this adds no sign to the stipulated projected crossing but does not orient the full BFV determinant line",
       "status": "PASS"
     },
     {
-      "id": "P32.detline.lower_half_turn_requires_maslov_gluing",
-      "statement": "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional declared Maslov sign",
+      "id": "P32.detline.lower_half_turn_requires_orientation_gluing",
+      "statement": "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional orientation-line gluing sign that is not derived as a Maslov index",
       "status": "PASS"
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "id": "P32.conjugation.lateral_loci",
-      "statement": "complex conjugation exchanges the lower and upper lateral lapse loci; no CPT or Pin lift is inferred",
+      "statement": "lapse conjugation exchanges the lateral loci and induces T -> -conjugate(T); no boundary exchange, CPT, or Pin lift is inferred",
       "status": "PASS"
     }
   ],
@@ -93,7 +93,7 @@
     },
     {
       "id": "P32.dual.short_time_transversality",
-      "statement": "the left dual stays transverse and its tangent approaches the nonzero short-time Hamilton-Jacobi limit",
+      "statement": "the recorded samples of the left dual remain transverse and their tangent approaches the nonzero short-time Hamilton-Jacobi limit",
       "status": "PASS"
     },
     {
@@ -108,12 +108,12 @@
     },
     {
       "id": "P32.intersection.regulated_local_orientation_stability",
-      "statement": "every finite lower full-line bypass crosses the recorded real dual at T=r with stable positive local orientation",
+      "statement": "every recorded finite lower full-line bypass crosses the recorded real dual at T=r with the same positive projected coordinate sign under the declared orientations",
       "status": "PASS"
     },
     {
       "id": "P32.joint.lower_bypass_complex_BVP",
-      "statement": "the actual connected complex BVP continues around four lower lapse bypasses with no sampled Jacobi zero",
+      "statement": "the connected complex BVP was solved at five recorded angles on each of four lower lapse bypasses, with no sampled Jacobi zero",
       "status": "PASS"
     },
     {
@@ -126,13 +126,13 @@
     "calculation": "below-origin lapse bypass and recorded intersection gate",
     "claim_status": {
       "CPT_or_Pin_alone_selects_the_below_origin_lapse_class": "OPEN_NOT_DERIVED",
-      "analytic_transport_alone_fixes_the_negative_real_identity_normalization": "CONTRADICTED_REQUIRES_AN_ADDITIONAL_MASLOV_COMPARISON_SIGN",
+      "analytic_transport_alone_fixes_the_negative_real_identity_normalization": "CONTRADICTED_REQUIRES_AN_ADDITIONAL_ORIENTATION_LINE_GLUING_SIGN",
       "the_above_origin_full_line_has_the_same_positive_dual_intersection": "CONTRADICTED_ON_THE_RECORDED_BRANCH",
       "the_lower_bypass_principal_momentum_cycle_is_locally_convergent": "SUPPORTED_EXACTLY",
       "the_positive_half_lapse_ray_has_an_ordinary_transverse_intersection_with_that_dual": "CONTRADICTED_BY_ENDPOINT_CONTACT",
-      "the_recorded_local_plus_one_is_the_complete_global_PL_coefficient": "OPEN_OTHER_DUAL_COMPONENTS_AND_GLOBAL_ENDS_NOT_DERIVED",
+      "the_projected_coordinate_plus_one_is_a_signed_full_joint_local_or_global_PL_coefficient": "OPEN_FULL_CYCLE_ORIENTATION_OTHER_DUAL_COMPONENTS_AND_GLOBAL_ENDS_NOT_DERIVED",
       "the_result_is_a_positive_trace_class_WDW_projector_or_seam_state": "OPEN_NOT_DERIVED",
-      "the_specified_below_origin_full_line_has_one_recorded_local_intersection_with_the_connected_saddle_dual": "SUPPORTED_ON_THE_TRACKED_HOMOGENEOUS_LAPSE_BASE"
+      "the_specified_below_origin_full_line_has_one_recorded_projected_lapse_base_crossing_with_coordinate_sign_plus_one_under_the_declared_orientations": "SUPPORTED_ON_THE_TRACKED_HOMOGENEOUS_LAPSE_BASE"
     },
     "exact_check_ids": [
       "P32.Wick.lapse_half_plane_map",
@@ -142,7 +142,7 @@
       "P32.intersection.lower_lateral_half_line_is_endpoint_contact",
       "P32.contour.principal_momentum_decay",
       "P32.detline.coupled_crossing_orientation",
-      "P32.detline.lower_half_turn_requires_maslov_gluing",
+      "P32.detline.lower_half_turn_requires_orientation_gluing",
       "P32.operator.full_line_lateral_constraint_support",
       "P32.operator.positive_half_line_is_sourced",
       "P32.endpoint.paired_arc_vs_pointwise_pole",
@@ -168,7 +168,7 @@
       },
       {
         "id": "P32.intersection.lower_bypass_orientation",
-        "statement": "the lower-bypass tangent and outward left dual tangent have positive transverse orientation",
+        "statement": "with ambient (Re T,Im T), columns (Gamma,K), and the stipulated flow-outward left-dual orientation, the projected lapse-base crossing has coordinate sign +1",
         "status": "PASS"
       },
       {
@@ -183,12 +183,12 @@
       },
       {
         "id": "P32.detline.coupled_crossing_orientation",
-        "statement": "the declared momentum and dual-configuration Jacobians multiply to +1 and preserve the local crossing orientation",
+        "statement": "the declared principal Gaussian lift has Jacobian product +1; this adds no sign to the stipulated projected crossing but does not orient the full BFV determinant line",
         "status": "PASS"
       },
       {
-        "id": "P32.detline.lower_half_turn_requires_maslov_gluing",
-        "statement": "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional declared Maslov sign",
+        "id": "P32.detline.lower_half_turn_requires_orientation_gluing",
+        "statement": "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional orientation-line gluing sign that is not derived as a Maslov index",
         "status": "PASS"
       },
       {
@@ -218,7 +218,7 @@
       },
       {
         "id": "P32.conjugation.lateral_loci",
-        "statement": "complex conjugation exchanges the lower and upper lateral lapse loci; no CPT or Pin lift is inferred",
+        "statement": "lapse conjugation exchanges the lateral loci and induces T -> -conjugate(T); no boundary exchange, CPT, or Pin lift is inferred",
         "status": "PASS"
       }
     ],
@@ -251,7 +251,7 @@
       },
       {
         "id": "P32.dual.short_time_transversality",
-        "statement": "the left dual stays transverse and its tangent approaches the nonzero short-time Hamilton-Jacobi limit",
+        "statement": "the recorded samples of the left dual remain transverse and their tangent approaches the nonzero short-time Hamilton-Jacobi limit",
         "status": "PASS"
       },
       {
@@ -266,12 +266,12 @@
       },
       {
         "id": "P32.intersection.regulated_local_orientation_stability",
-        "statement": "every finite lower full-line bypass crosses the recorded real dual at T=r with stable positive local orientation",
+        "statement": "every recorded finite lower full-line bypass crosses the recorded real dual at T=r with the same positive projected coordinate sign under the declared orientations",
         "status": "PASS"
       },
       {
         "id": "P32.joint.lower_bypass_complex_BVP",
-        "statement": "the actual connected complex BVP continues around four lower lapse bypasses with no sampled Jacobi zero",
+        "statement": "the connected complex BVP was solved at five recorded angles on each of four lower lapse bypasses, with no sampled Jacobi zero",
         "status": "PASS"
       },
       {
@@ -382,10 +382,10 @@
         {
           "N": [
             0.1,
-            0.0
+            0
           ],
           "T": [
-            0.0,
+            0,
             0.1
           ],
           "action": [
@@ -398,7 +398,7 @@
             0.10001936912276842
           ],
           "r": 0.1,
-          "theta": 0.0
+          "theta": 0
         },
         {
           "N": [
@@ -487,10 +487,10 @@
         {
           "N": [
             0.05,
-            0.0
+            0
           ],
           "T": [
-            0.0,
+            0,
             0.05
           ],
           "action": [
@@ -503,7 +503,7 @@
             0.050002418869561215
           ],
           "r": 0.05,
-          "theta": 0.0
+          "theta": 0
         },
         {
           "N": [
@@ -592,10 +592,10 @@
         {
           "N": [
             0.025,
-            0.0
+            0
           ],
           "T": [
-            0.0,
+            0,
             0.025
           ],
           "action": [
@@ -608,7 +608,7 @@
             0.025000302287682352
           ],
           "r": 0.025,
-          "theta": 0.0
+          "theta": 0
         },
         {
           "N": [
@@ -697,10 +697,10 @@
         {
           "N": [
             0.0125,
-            0.0
+            0
           ],
           "T": [
-            0.0,
+            0,
             0.0125
           ],
           "action": [
@@ -713,15 +713,17 @@
             0.012500037783740744
           ],
           "r": 0.0125,
-          "theta": 0.0
+          "theta": 0
         }
       ],
       "recorded_intersection": {
-        "above_origin_full_line_on_positive_dual": 0,
-        "below_origin_full_line": 1,
+        "above_origin_projected_base_crossing_on_positive_dual": 0,
         "global_coefficient": null,
         "positive_half_line": null,
-        "positive_half_line_reason": "the meeting is a singular contour endpoint rather than an interior transverse crossing"
+        "positive_half_line_reason": "the meeting is a singular contour endpoint rather than an interior transverse crossing",
+        "projected_base_crossing_count": 1,
+        "projected_base_crossing_sign_under_declared_orientations": 1,
+        "signed_full_joint_local_intersection": null
       },
       "regulated_real_dual": [
         {
@@ -730,7 +732,7 @@
           "W_over_r": 2.9677823714708773,
           "crossing_point_residual": 6.123233995736766e-18,
           "det_Bv_over_r2": 0.9993743303334802,
-          "endpoint_residual": 0.0,
+          "endpoint_residual": 0,
           "intersection_orientation_determinant": 0.2928939471811943,
           "r": 0.1,
           "r_times_Van_Vleck": 97.93088888969896,
@@ -742,7 +744,7 @@
           "W_over_r": 2.9823421284037246,
           "crossing_point_residual": 3.061616997868383e-18,
           "det_Bv_over_r2": 0.9998434808290262,
-          "endpoint_residual": 0.0,
+          "endpoint_residual": 0,
           "intersection_orientation_determinant": 0.14863199219425668,
           "r": 0.05,
           "r_times_Van_Vleck": 97.90791043519982,
@@ -754,7 +756,7 @@
           "W_over_r": 2.9859800894856656,
           "crossing_point_residual": 1.5308084989341916e-18,
           "det_Bv_over_r2": 0.9999608638468623,
-          "endpoint_residual": 0.0,
+          "endpoint_residual": 0,
           "intersection_orientation_determinant": 0.07458887614590894,
           "r": 0.025,
           "r_times_Van_Vleck": 97.90216367864744,
@@ -766,7 +768,7 @@
           "W_over_r": 2.9868894561292763,
           "crossing_point_residual": 7.654042494670958e-19,
           "det_Bv_over_r2": 0.9999902155641794,
-          "endpoint_residual": 0.0,
+          "endpoint_residual": 0,
           "intersection_orientation_determinant": 0.03732854035229543,
           "r": 0.0125,
           "r_times_Van_Vleck": 97.90072685572909,
@@ -778,7 +780,7 @@
           "W_over_r": 2.9871167900633053,
           "crossing_point_residual": 3.827021247335479e-19,
           "det_Bv_over_r2": 0.9999975538661987,
-          "endpoint_residual": 0.0,
+          "endpoint_residual": 0,
           "intersection_orientation_determinant": 0.01866853271960964,
           "r": 0.00625,
           "r_times_Van_Vleck": 97.9003676416407,
@@ -790,7 +792,7 @@
           "W_over_r": 2.987173623063958,
           "crossing_point_residual": 1.9135106236677395e-19,
           "det_Bv_over_r2": 0.9999993884649968,
-          "endpoint_residual": 0.0,
+          "endpoint_residual": 0,
           "intersection_orientation_determinant": 0.00933479917019189,
           "r": 0.003125,
           "r_times_Van_Vleck": 97.90027783759626,
@@ -802,7 +804,7 @@
           "W_over_r": 2.9871878312841424,
           "crossing_point_residual": 9.567553118338697e-20,
           "det_Bv_over_r2": 0.9999998471161515,
-          "endpoint_residual": 0.0,
+          "endpoint_residual": 0,
           "intersection_orientation_determinant": 0.004667466186158538,
           "r": 0.0015625,
           "r_times_Van_Vleck": 97.90025538655243,
@@ -811,16 +813,16 @@
       ],
       "spectral_regulator": {
         "cutoff_errors": [
-          3.515008315657332e-07,
-          4.1794514611332494e-07,
-          4.413992705175966e-07,
-          4.47906736884689e-07
+          3.515008315657332e-7,
+          4.1794514611332494e-7,
+          4.413992705175966e-7,
+          4.47906736884689e-7
         ],
         "eigenvalues": [
-          -3.0,
+          -3,
           -0.5,
           0.25,
-          2.0
+          2
         ],
         "eta_values": [
           0.2,
@@ -849,13 +851,14 @@
         "the full-line lower and upper semicircular lapse bypass geometry",
         "the lower-bypass principal signature (-,+) momentum cycle and orientation holonomy",
         "the connected real dual from r=.1 to .0015625",
-        "the actual complex fixed-boundary branch around four lower bypass semicircles",
-        "the recorded local intersection orientation and regulator stability",
+        "five recorded complex fixed-boundary points on each of four lower bypass semicircles",
+        "the projected lapse-base crossing coordinate sign and regulator stability under declared orientations",
         "the positive half-line endpoint-contact distinction",
         "a finite spectral damping versus lateral-shift control"
       ],
       "not_computed": [
         "the complete global upward cycle and every intersection on every BVP sheet",
+        "a signed full-joint local BFV/PL intersection and determinant-line trivialization",
         "the inhomogeneous gauge-fixed determinant and its oriented superdeterminant line",
         "a nonperturbative BFV/BV quantum master equation or Gribov analysis",
         "a proof that CPT or Pin selects the below-origin rather than above-origin class",
@@ -864,4 +867,3 @@
     }
   }
 }
-

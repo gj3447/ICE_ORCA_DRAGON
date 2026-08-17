@@ -1,6 +1,6 @@
 # ICE_ORCA_DRAGON user guide
 
-> Guide to the 61 committed entries currently exposed by the TypeScript/Effect CLI. Historical source files are
+> Guide to the 64 committed entries currently exposed by the TypeScript/Effect CLI. Historical source files are
 > not automatically runnable entries; `./ice list --json` is authoritative.
 
 ## Setup
@@ -58,6 +58,7 @@ This graph is a searchable evidence map, not an automatic physics verdict or ext
 ./ice run phase30_conformal_bfv_determinant_line
 ./ice run phase31_homogeneous_bfv_superhessian
 ./ice run phase32_below_origin_lapse_intersection
+./ice run phase33_fold_airy_uniformization
 ```
 
 Arguments after `--` are passed to the Python kernel as an argv array:
@@ -82,7 +83,7 @@ The table is orientation, not a replacement for `./ice list`.
 | Higgs and S-proofs | `prove_higgs_ZD_doublet`, `prove_s1_framing`, `prove_s2_CCWZ`, `prove_s3_higher_gauge`, `prove_s5_bv_ainfty`, `prove_s7_WW_evasion` |
 | queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_05_coleman_weinberg`, `queue_06_cooperative_vacuum`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_10_group_of_6`, `queue_11_xor_invariant` |
 | numerology controls | `numerology_hidden_scan`, `numerology_hidden_scan_v2_target_categories_2026-05-20`, `numerology_mc_judge`, `numerology_mc_judge_v3_abc` |
-| CPT × Temporal-Folded SUSY | `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian`, `phase22_finite_mode_seam_density`, `phase23_homogeneous_minisuperspace_density`, `phase24_connected_starobinsky_interval`, `phase25_connected_lapse_scan`, `phase26_global_lapse_flow`, `phase27_lorentzian_lapse_endpoint`, `phase28_thimble_bfv_intersection`, `phase29_zero_lapse_uniform_kernel`, `phase30_conformal_bfv_determinant_line`, `phase31_homogeneous_bfv_superhessian`, `phase32_below_origin_lapse_intersection` |
+| CPT × Temporal-Folded SUSY | `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian`, `phase22_finite_mode_seam_density`, `phase23_homogeneous_minisuperspace_density`, `phase24_connected_starobinsky_interval`, `phase25_connected_lapse_scan`, `phase26_global_lapse_flow`, `phase27_lorentzian_lapse_endpoint`, `phase28_thimble_bfv_intersection`, `phase29_zero_lapse_uniform_kernel`, `phase30_conformal_bfv_determinant_line`, `phase31_homogeneous_bfv_superhessian`, `phase32_below_origin_lapse_intersection`, `phase33_fold_airy_uniformization` |
 | other falsifiers/checks | `igrueqft_locality_falsifier`, `mb3_adelberger_verdict`, `verify_mp_mW_3_256`, `wilmot_theta_preservation_test`, `ww_unitarity_bound_analysis` |
 
 ## Read a result JSON

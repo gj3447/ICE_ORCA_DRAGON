@@ -1,0 +1,578 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P33_FOLD_AIRY_UNIFORMIZATION_20260817",
+  "phase": "P33",
+  "observed_at_utc": "2026-08-17T18:12:31.429Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py",
+    "sha256": "844c1262332c06b17def3506a0112f3230b12cbda153750d4964ca9f96a4485b",
+    "introduced_in_commit": "e1b6e055a72dbf9e018ced01f6becdb34705238b"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P33.normal_form.stationary_points",
+      "statement": "the canonical fold phase has stationary points u=plus/minus sqrt(zeta)",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.normal_form.action_gap",
+      "statement": "the two canonical fold actions differ by 4 zeta^(3/2)/3",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.normal_form.invariant_Airy_scale",
+      "statement": "the magnitude zeta=(3 DeltaW/4)^(2/3) is fixed by the branch-action gap",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.normal_form.branch_prefactor_divergence",
+      "statement": "separate saddle prefactors diverge as zeta^(-1/4) at the fold",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.Airy.two_regular_solutions",
+      "statement": "Ai and Bi solve the local Airy equation and have finite exact values at the fold",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.Airy.local_regularity_does_not_select_cycle",
+      "statement": "the nonzero Ai/Bi Wronskian leaves a two-dimensional regular local ODE solution space; admissible lifted gravitational cycles are not inferred",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.CFU.amplitude_data_are_distinct_from_cycle_choice",
+      "statement": "even and odd analytic-amplitude data reconstruct the two saddle amplitudes independently of the Airy contour choice",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.intersection.local_fold_patch_disjoint_from_imaginary_lapse_axis",
+      "statement": "a radius-one T-plane patch around the recorded fold is disjoint from the imaginary-axis full-lapse contour and every Phase-32 bypass",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 7,
+  "numerical": [
+    {
+      "id": "P33.fold.frozen_simple_fold_control",
+      "statement": "the previously recorded Dirichlet caustic is a transverse simple fold",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.fold.two_branch_action_gap_three_halves",
+      "statement": "the recorded two-branch action gap has a last-four-point log slope consistent with delta^(3/2)",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.fold.Airy_scale_linear",
+      "statement": "the recorded invariant Airy action-scale magnitude has a last-four-point log slope consistent with T_c-T",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.fold.soft_Jacobi_square_root",
+      "statement": "the recorded soft Jacobi singular values have last-four-point slopes consistent with sqrt(delta), and the two branch determinants have opposite signs",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.fold.separate_endpoint_prefactor_quarter_power",
+      "statement": "the recorded endpoint Jacobi/Van-Vleck proxies have last-four-point slopes consistent with delta^(-1/4), while their finite rescaled branch values approach each other",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.fold.actual_BVP_residuals",
+      "statement": "both actual fixed-boundary branches solve the endpoint problem at every recorded delta",
+      "status": "PASS"
+    },
+    {
+      "id": "P33.fold.is_not_a_lapse_saddle",
+      "statement": "the Dirichlet fold has nonzero W_T and is not an additional lapse saddle",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "simple-fold Airy uniformization and intersection scope gate",
+    "claim_status": {
+      "Airy_uniformization_fixes_the_complete_global_PL_coefficient": "OPEN_REQUIRES_THE_ORIGINAL_RELATIVE_CYCLE_AND_COMPLETE_DUAL",
+      "a_positive_trace_class_WDW_or_quantum_seam_state_is_obtained": "OPEN_NOT_DERIVED",
+      "local_regularity_at_the_fold_uniquely_selects_an_Airy_contour_solution": "CONTRADICTED_BY_THE_NONZERO_Ai_Bi_WRONSKIAN",
+      "the_divergent_separate_Van_Vleck_branches_necessarily_imply_a_divergent_exact_kernel": "CONTRADICTED_IN_THE_CANONICAL_FOLD_NORMAL_FORM_NOT_A_CLAIM_ABOUT_THE_UNCOMPUTED_FULL_MEASURE",
+      "the_radius_one_fold_patch_adds_an_intersection_with_the_imaginary_full_lapse_contour": "CONTRADICTED_IN_THE_LOCAL_T_PLANE_PATCH",
+      "the_recorded_Dirichlet_caustic_has_a_local_Airy_fold_scale": "SUPPORTED_BY_EXACT_NORMAL_FORM_AND_NUMERICAL_SCALING",
+      "the_recorded_fold_is_an_additional_lapse_saddle": "CONTRADICTED_BY_NONZERO_W_T"
+    },
+    "exact_check_ids": [
+      "P33.normal_form.stationary_points",
+      "P33.normal_form.action_gap",
+      "P33.normal_form.invariant_Airy_scale",
+      "P33.normal_form.branch_prefactor_divergence",
+      "P33.Airy.two_regular_solutions",
+      "P33.Airy.local_regularity_does_not_select_cycle",
+      "P33.CFU.amplitude_data_are_distinct_from_cycle_choice",
+      "P33.intersection.local_fold_patch_disjoint_from_imaginary_lapse_axis"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P33.normal_form.stationary_points",
+        "statement": "the canonical fold phase has stationary points u=plus/minus sqrt(zeta)",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.normal_form.action_gap",
+        "statement": "the two canonical fold actions differ by 4 zeta^(3/2)/3",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.normal_form.invariant_Airy_scale",
+        "statement": "the magnitude zeta=(3 DeltaW/4)^(2/3) is fixed by the branch-action gap",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.normal_form.branch_prefactor_divergence",
+        "statement": "separate saddle prefactors diverge as zeta^(-1/4) at the fold",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.Airy.two_regular_solutions",
+        "statement": "Ai and Bi solve the local Airy equation and have finite exact values at the fold",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.Airy.local_regularity_does_not_select_cycle",
+        "statement": "the nonzero Ai/Bi Wronskian leaves a two-dimensional regular local ODE solution space; admissible lifted gravitational cycles are not inferred",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.CFU.amplitude_data_are_distinct_from_cycle_choice",
+        "statement": "even and odd analytic-amplitude data reconstruct the two saddle amplitudes independently of the Airy contour choice",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.intersection.local_fold_patch_disjoint_from_imaginary_lapse_axis",
+        "statement": "a radius-one T-plane patch around the recorded fold is disjoint from the imaginary-axis full-lapse contour and every Phase-32 bypass",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 8,
+    "frozen_conventions": {
+      "Airy_action_scale_magnitude": "zeta_action=(3 abs(DeltaW)/4)^(2/3)",
+      "canonical_fold_phase": "Phi(u,zeta)=u^3/3-zeta u",
+      "dimensionless_Airy_argument": "z=zeta_action/hbar^(2/3) in the declared real e^(-W/hbar) canonical chart; any complex phase requires a separately derived canonical-map/exponent branch",
+      "generic_CFU_amplitude_structure": "A(zeta) hbar^(1/3) Airy_C(z)+B(zeta) hbar^(2/3) Airy_C_prime(z)+higher terms for a chosen contour C",
+      "local_contour_solution_basis": "Ai(z), Bi(z), or rotated-Ai equivalents; the relative cycle selects a combination but local ODE regularity does not",
+      "local_fold_patch_radius": 1.0
+    },
+    "next_calculation": "choose and lift one complete regulated relative cycle, transport the oriented determinant line into the Airy chart, fix its Airy contour/Stokes multiplier and analytic amplitude data, then continue every joint dual arm",
+    "numerical_check_ids": [
+      "P33.fold.frozen_simple_fold_control",
+      "P33.fold.two_branch_action_gap_three_halves",
+      "P33.fold.Airy_scale_linear",
+      "P33.fold.soft_Jacobi_square_root",
+      "P33.fold.separate_endpoint_prefactor_quarter_power",
+      "P33.fold.actual_BVP_residuals",
+      "P33.fold.is_not_a_lapse_saddle"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P33.fold.frozen_simple_fold_control",
+        "statement": "the previously recorded Dirichlet caustic is a transverse simple fold",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.fold.two_branch_action_gap_three_halves",
+        "statement": "the recorded two-branch action gap has a last-four-point log slope consistent with delta^(3/2)",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.fold.Airy_scale_linear",
+        "statement": "the recorded invariant Airy action-scale magnitude has a last-four-point log slope consistent with T_c-T",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.fold.soft_Jacobi_square_root",
+        "statement": "the recorded soft Jacobi singular values have last-four-point slopes consistent with sqrt(delta), and the two branch determinants have opposite signs",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.fold.separate_endpoint_prefactor_quarter_power",
+        "statement": "the recorded endpoint Jacobi/Van-Vleck proxies have last-four-point slopes consistent with delta^(-1/4), while their finite rescaled branch values approach each other",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.fold.actual_BVP_residuals",
+        "statement": "both actual fixed-boundary branches solve the endpoint problem at every recorded delta",
+        "status": "PASS"
+      },
+      {
+        "id": "P33.fold.is_not_a_lapse_saddle",
+        "statement": "the Dirichlet fold has nonzero W_T and is not an additional lapse saddle",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 7,
+    "numerical_controls": {
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "fold": {
+        "bracket_actions": [
+          -1156.358836162342,
+          -1156.433339578167
+        ],
+        "bracket_centers": [
+          [
+            1.3582938059349714,
+            0.09182398917947315
+          ],
+          [
+            1.1390171046018283,
+            0.11035950312110182
+          ]
+        ],
+        "bracket_time": 9.78,
+        "bracket_velocity_monodromy_determinants": [
+          887.1315226694023,
+          -1014.2933668383619
+        ],
+        "center": [
+          1.2479953302615718,
+          0.10016795390658555
+        ],
+        "center_jacobian": [
+          [
+            -0.4948955370318605,
+            -5.886027579136579
+          ],
+          [
+            0.5206589163537467,
+            6.192443680865572
+          ]
+        ],
+        "center_singular_values": [
+          8.573662385632007,
+          9.979449957303106E-17
+        ],
+        "full_velocity_monodromy_singular_ratio": 1.2729916203682207E-16,
+        "full_velocity_monodromy_singular_values": [
+          2504.6388735251417,
+          3.188384298046005E-13
+        ],
+        "half_length_transversality": 0.5177826517939689,
+        "left_null_vector": [
+          0.724812020852866,
+          0.6889466847493967
+        ],
+        "proper_length": 9.788625568081242,
+        "quadratic_transversality": 0.3686170856958765,
+        "residual": [
+          -8.881784197001252E-16,
+          2.220446049250313E-16,
+          0.0
+        ],
+        "right_null_vector": [
+          0.9964839319603808,
+          -0.08378408765857216
+        ]
+      },
+      "fold_W_T": -73.7258537571177,
+      "fold_action": -1157.032181506277,
+      "records": [
+        {
+          "Airy_action_scale_magnitude": 0.3388154351472078,
+          "Airy_action_scale_over_delta": 16.94077175736039,
+          "action_gap": 0.26295626169348907,
+          "action_gap_over_delta_3_2": 92.96907789946525,
+          "actions": [
+            -1155.6882482737806,
+            -1155.425292012087
+          ],
+          "centers": [
+            [
+              1.082673308291998,
+              0.1165165948567961
+            ],
+            [
+              1.4163809135141376,
+              0.08811074430194026
+            ]
+          ],
+          "delta": 0.02,
+          "det_Bv_over_sqrt_delta": [
+            -11292.036761555531,
+            9185.49436415335
+          ],
+          "endpoint_residual_max": 5.402578411571408E-14,
+          "proper_length": 9.768625568081243,
+          "scaled_endpoint_Van_Vleck_proxies": [
+            0.009410525120231291,
+            0.010433949549510145
+          ],
+          "sigma_min_over_sqrt_delta": [
+            4.396238933986936,
+            3.805531052079757
+          ],
+          "soft_center_separation_over_sqrt_delta": 2.368201195070905,
+          "transverse_center_separation_over_delta": 0.017329320165888
+        },
+        {
+          "Airy_action_scale_magnitude": 0.1694434100002209,
+          "Airy_action_scale_over_delta": 16.94434100002209,
+          "action_gap": 0.09299846085923491,
+          "action_gap_over_delta_3_2": 92.99846085923491,
+          "actions": [
+            -1156.3411987135466,
+            -1156.2482002526874
+          ],
+          "centers": [
+            [
+              1.1307181218026137,
+              0.11122580233475378
+            ],
+            [
+              1.3668033030315536,
+              0.09125254851071145
+            ]
+          ],
+          "delta": 0.01,
+          "det_Bv_over_sqrt_delta": [
+            -10974.736223552723,
+            9498.663498284808
+          ],
+          "endpoint_residual_max": 1.5434975172220862E-13,
+          "proper_length": 9.778625568081242,
+          "scaled_endpoint_Van_Vleck_proxies": [
+            0.00954559390959214,
+            0.010260505292707545
+          ],
+          "sigma_min_over_sqrt_delta": [
+            4.3024691799685755,
+            3.885540407450702
+          ],
+          "soft_center_separation_over_sqrt_delta": 2.369285305178136,
+          "transverse_center_separation_over_delta": 0.012284498564901032
+        },
+        {
+          "Airy_action_scale_magnitude": 0.08473062809322046,
+          "Airy_action_scale_over_delta": 16.946125618644093,
+          "action_gap": 0.03288511578170983,
+          "action_gap_over_delta_3_2": 93.01315347740709,
+          "actions": [
+            -1156.679938934983,
+            -1156.6470538192013
+          ],
+          "centers": [
+            [
+              1.1648882642755147,
+              0.10774475082682637
+            ],
+            [
+              1.3318675224393504,
+              0.0936615426789706
+            ]
+          ],
+          "delta": 0.005,
+          "det_Bv_over_sqrt_delta": [
+            -10756.028916731957,
+            9716.975819305253
+          ],
+          "endpoint_residual_max": 2.19274865417068E-13,
+          "proper_length": 9.783625568081241,
+          "scaled_endpoint_Van_Vleck_proxies": [
+            0.009642153020642422,
+            0.010144588588348175
+          ],
+          "sigma_min_over_sqrt_delta": [
+            4.237848997776651,
+            3.9433059066544
+          ],
+          "soft_center_separation_over_sqrt_delta": 2.3698273151292515,
+          "transverse_center_separation_over_delta": 0.008697165325926633
+        },
+        {
+          "Airy_action_scale_magnitude": 0.03389439393615223,
+          "Airy_action_scale_over_delta": 16.947196968076113,
+          "action_gap": 0.008320138306771696,
+          "action_gap_over_delta_3_2": 93.02197418070756,
+          "actions": [
+            -1156.8888809314028,
+            -1156.880560793096
+          ],
+          "centers": [
+            [
+              1.1953369099876283,
+              0.1048278224767163
+            ],
+            [
+              1.3009597393391497,
+              0.09593603676316274
+            ]
+          ],
+          "delta": 0.002,
+          "det_Bv_over_sqrt_delta": [
+            -10564.344513227414,
+            9908.953209590802
+          ],
+          "endpoint_residual_max": 4.190705895488584E-13,
+          "proper_length": 9.786625568081242,
+          "scaled_endpoint_Van_Vleck_proxies": [
+            0.009729235644520474,
+            0.010045836629619852
+          ],
+          "sigma_min_over_sqrt_delta": [
+            4.181616633387143,
+            3.9954336462239546
+          ],
+          "soft_center_separation_over_sqrt_delta": 2.3701525069279756,
+          "transverse_center_separation_over_delta": 0.005504598428360732
+        },
+        {
+          "Airy_action_scale_magnitude": 0.016947552900394295,
+          "Airy_action_scale_over_delta": 16.947552900394296,
+          "action_gap": 0.002941705780585835,
+          "action_gap_over_delta_3_2": 93.02490472734769,
+          "actions": [
+            -1156.9599242713944,
+            -1156.9569825656138
+          ],
+          "centers": [
+            [
+              1.210726642005038,
+              0.10341685049251487
+            ],
+            [
+              1.2854170026208678,
+              0.09713299903825164
+            ]
+          ],
+          "delta": 0.001,
+          "det_Bv_over_sqrt_delta": [
+            -10468.250544656496,
+            10005.232790952477
+          ],
+          "endpoint_residual_max": 1.9592954737501099E-13,
+          "proper_length": 9.787625568081243,
+          "scaled_endpoint_Van_Vleck_proxies": [
+            0.009773788700944695,
+            0.009997384630904995
+          ],
+          "sigma_min_over_sqrt_delta": [
+            4.153655278455259,
+            4.02202815874153
+          ],
+          "soft_center_separation_over_sqrt_delta": 2.370260901855381,
+          "transverse_center_separation_over_delta": 0.0038932839121320834
+        },
+        {
+          "Airy_action_scale_magnitude": 0.0084738664919132,
+          "Airy_action_scale_over_delta": 16.9477329838264,
+          "action_gap": 0.0010400666301393358,
+          "action_gap_over_delta_3_2": 93.02638744482745,
+          "actions": [
+            -1156.9958380543023,
+            -1156.9947979876722
+          ],
+          "centers": [
+            [
+              1.221625883291296,
+              0.10244247709473138
+            ],
+            [
+              1.2744412667066594,
+              0.09800039306074065
+            ]
+          ],
+          "delta": 0.0005,
+          "det_Bv_over_sqrt_delta": [
+            -10400.424749610958,
+            10073.167847925739
+          ],
+          "endpoint_residual_max": 3.423017620880857E-14,
+          "proper_length": 9.788125568081242,
+          "scaled_endpoint_Van_Vleck_proxies": [
+            0.00980560652205194,
+            0.009963615617263557
+          ],
+          "sigma_min_over_sqrt_delta": [
+            4.13403308493907,
+            4.040967187302961
+          ],
+          "soft_center_separation_over_sqrt_delta": 2.370315098876814,
+          "transverse_center_separation_over_delta": 0.0027533009912235748
+        },
+        {
+          "Airy_action_scale_magnitude": 0.0033895664978528693,
+          "Airy_action_scale_over_delta": 16.947832489264346,
+          "action_gap": 0.0002631206748446857,
+          "action_gap_over_delta_3_2": 93.02720672652895,
+          "actions": [
+            -1157.0175678066887,
+            -1157.0173046860139
+          ],
+          "centers": [
+            [
+              1.2313086861258797,
+              0.10159381465752042
+            ],
+            [
+              1.264712569568264,
+              0.09878487604639197
+            ]
+          ],
+          "delta": 0.0002,
+          "det_Bv_over_sqrt_delta": [
+            -10340.291731940535,
+            10133.371684175396
+          ],
+          "endpoint_residual_max": 1.294304839799087E-13,
+          "proper_length": 9.788425568081243,
+          "scaled_endpoint_Van_Vleck_proxies": [
+            0.009834076992652306,
+            0.009933973879834728
+          ],
+          "sigma_min_over_sqrt_delta": [
+            4.116723629943165,
+            4.057866825382966
+          ],
+          "soft_center_separation_over_sqrt_delta": 2.3703476169458453,
+          "transverse_center_separation_over_delta": 0.0017414668958193767
+        }
+      ],
+      "scaling_fits": {
+        "Airy_scale_log_slope": 0.9999841538345478,
+        "action_gap_log_slope": 1.4999762307518218,
+        "endpoint_Van_Vleck_proxy_log_slopes": [
+          -0.25460566826495845,
+          -0.24519188579927717
+        ],
+        "soft_singular_value_log_slopes": [
+          0.5067183252382609,
+          0.4933386740511881
+        ],
+        "tail_point_count": 4
+      }
+    },
+    "phase": "P33",
+    "scope_guard": {
+      "computed": [
+        "the canonical simple-fold normal form and invariant Airy action-scale magnitude",
+        "two actual real fixed-boundary branches down to T_c-T=0.0002",
+        "action-gap, Jacobi-soft-mode, determinant-sign, and branch-prefactor scaling",
+        "the local two-dimensional regular Airy ODE solution space; admissible lifted gravitational cycles are not inferred",
+        "nonstationarity of the fold in the lapse direction",
+        "local T-plane disjointness of a radius-one fold patch and the imaginary lapse contour"
+      ],
+      "not_computed": [
+        "an off-real canonical-map or exponent branch for the Airy argument, and the separately selected Airy contour/Stokes combination",
+        "the analytic amplitude coefficients multiplying the chosen Airy function and its derivative, or a uniformized absolute prefactor",
+        "the continuation of every full joint dual arm beyond the fold patch",
+        "the global determinant line, BFV superorientation, or complete intersection matrix",
+        "inhomogeneous SUGRA modes, a WDW density, an initial-value peak, or a SUSY scale"
+      ]
+    }
+  }
+}

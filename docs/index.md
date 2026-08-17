@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 63 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 64 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -44,7 +44,8 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md`](../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md) | distributional zero-lapse identity kernel, BFV modulus measure, and conformal-sign obstruction |
 | [`../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md`](../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md) | finite-cutoff coupled conformal/lapse tangent cycle, relative determinant magnitude, and determinant-line obstruction |
 | [`../cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md`](../cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md) | unreduced canonical lift, nonzero homogeneous BFV quartets, relative normalization, and clock-polarization obstruction |
-| [`../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md) | positive-half-line endpoint contact versus the declared below-origin full-line local intersection gate |
+| [`../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md) | positive-half-line endpoint contact versus a declared below-origin projected lapse-base crossing; signed joint intersection remains open |
+| [`../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md`](../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md) | simple-fold Airy action scale, separate-saddle divergence, local solution-rank obstruction, and global contour gate |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

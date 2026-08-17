@@ -69,14 +69,16 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md` | Phase 30 보고서 — 10 exact + 10 numerical checks. coupled local Gaussian cycle은 존재하지만 full BFV super-Hessian·determinant-line phase·global PL coefficient는 미유도 |
 | `phase31_homogeneous_bfv_superhessian.py` | canonical `(q,p,T)` lift, nonzero homogeneous BFV quartet, same-regulator 상대정규화와 `p_a` local-clock obstruction을 검증하는 실행체 |
 | `PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md` | Phase 31 보고서 — 9 exact + 11 numerical checks. stable canonical sign과 relative quartet cancellation은 계산됐지만 absolute phase·physical determinant·SUSY/SUGRA Hessian은 미유도 |
-| `phase32_below_origin_lapse_intersection.py` | positive half-line과 full-line lapse prescription, lower/upper bypass, momentum cycle, connected complex BVP와 local intersection orientation을 검증하는 실행체 |
-| `PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md` | Phase 32 보고서 — 14 exact + 7 numerical checks. specified below-origin full line은 tracked sheet에서 local `+1`을 갖지만 global `n_sigma`와 CPT/Pin contour selection은 미유도 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–32의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase32_below_origin_lapse_intersection.py` | positive half-line과 full-line lapse prescription, lower/upper bypass, momentum cycle, sampled complex BVP와 projected lapse-base crossing orientation을 검증하는 실행체 |
+| `PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md` | Phase 32 보고서 — 14 exact + 7 numerical checks. specified below-origin full line에는 recorded projected crossing이 있지만 signed full-joint intersection, global `n_sigma`, CPT/Pin contour selection은 미유도 |
+| `phase33_fold_airy_uniformization.py` | connected Dirichlet fold의 two-branch action gap, Airy action scale, Jacobi/Van Vleck scaling, local solution rank와 lapse-contour separation을 검증하는 실행체 |
+| `PHASE33_FOLD_AIRY_UNIFORMIZATION.md` | Phase 33 보고서 — 8 exact + 7 numerical checks. local simple-fold uniformization은 계산됐지만 Airy contour·analytic amplitude·global `n_sigma`·physical kernel은 미유도 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–33의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 32)
+## 현재 경계 (Phase 33)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -252,19 +254,35 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - Phase 32는 lapse prescription을 분리했다. Causal \(N>0\) half-line의 lower-lateral regulator는
   tracked positive-real dual과 contour endpoint에서만 만나 ordinary PL integer를 주지 않는다.
   반면 independently specified full real lapse contour가 \(N=0\)을 아래로 우회하면 finite \(r\)에서
-  한 tracked homogeneous lapse-base crossing의 local orientation이 \(+1\)이다.
-- 이 local \(+1\)은 global \(n_\sigma=+1\)이 아니다. Complete upward-cycle components, 다른 complex
-  BVP sheets, asymptotic good ends, Stokes data와 oriented inhomogeneous superdeterminant line이
+  한 tracked homogeneous lapse-base projected crossing이 나온다. 그 coordinate sign \(+1\)은 선언된
+  ambient orientation, column order, dual-flow orientation과 Gaussian lift에 조건부다.
+- 이는 signed full-joint local intersection도 global \(n_\sigma=+1\)도 아니다. Complex BVP는 네 lower
+  arc 각각에서 다섯 angle만 샘플링했으며 샘플 사이 sheet jump/Jacobi zero는 배제하지 못했다.
+  Complete upward-cycle components, 다른 complex BVP sheets, asymptotic good ends, Stokes data와
+  determinant-line trivialization 및 oriented inhomogeneous superdeterminant line이
   열려 있다. Complex conjugation은 lower/upper lateral loci를 교환할 뿐 CPT/Pin이 below-origin ket
   class를 선택한다는 유도도 아직 없다.
+- Phase 33은 같은 real branch의 \(T_c=9.78862556808\) Dirichlet caustic을 transverse simple fold로
+  확인하고, 두 실제 branch에서 \(|\Delta W|\sim93.0272\,\delta^{3/2}\),
+  \(\zeta_{\rm act}\sim16.94783\,\delta\), soft Jacobi \(\sim\sqrt\delta\), separate endpoint
+  Van Vleck proxy \(\sim\delta^{-1/4}\)를 계산했다.
+- Separate-saddle divergence는 canonical fold의 regular Airy solution space 때문에 exact kernel
+  divergence를 자동으로 뜻하지 않는다. 그러나 \(\operatorname{Ai}\)와 \(\operatorname{Bi}\)가 모두
+  regular이고 Wronskian이 \(1/\pi\)이므로 local regularity는 contour/Stokes multiplier를 고르지
+  않는다. Analytic even/odd amplitude data와 absolute determinant line도 별도 미계산량이다.
+- 이 fold는 \(W_T=-73.72585376\ne0\)이므로 추가 lapse saddle이 아니다. Radius-one fold patch는
+  imaginary-axis full-lapse contour와 Phase-32의 \(r\le0.1\) bypass에서 떨어져 있어 그 local chart가
+  crossing을 추가하지 않는다. 이것은 fold 밖의 dual arms를 센 global theorem이 아니며 full
+  uniform physical kernel, global \(n_\sigma\), WDW state는 계속 OPEN이다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-- **PL/BFV global gate:** Phase 32의 tracked local crossing에서 멈추지 않고 full joint upward
-  cycle의 양 arm을 fold를 지나 uniform polarization으로 계속한다. 모든 complex BVP sheet와
-  asymptotic good end를 열거하고, separately specified physical lapse contour와의 전체 intersection
+- **PL/BFV global gate:** Phase 32의 tracked projected lapse-base crossing과 Phase 33의 local Airy
+  chart에서 멈추지 않고, 한 complete regulated relative cycle의 oriented determinant line을 fold로
+  운반해 Airy contour/Stokes multiplier와 analytic amplitude를 고정한다. Full joint upward cycle의
+  모든 arm과 complex BVP sheet 및 asymptotic good end를 열거하고, separately specified physical lapse contour와의 전체 intersection
   sum을 계산한 뒤 endpoint·mode regulator를 제거한다. 동시에 Phase 31 hybrid를 constraint-reduced
   inhomogeneous graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로
   확장해 determinant-line orientation과 gauge-fixing independence를 검사한다.
