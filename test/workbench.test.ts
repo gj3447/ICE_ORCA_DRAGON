@@ -1,9 +1,11 @@
 import { expect, it, layer } from "@effect/vitest"
+import * as FileSystem from "@effect/platform/FileSystem"
 import { NodeContext } from "@effect/platform-node"
+import * as Path from "@effect/platform/Path"
 import { Effect, Layer } from "effect"
 import { discoverScripts } from "../src/catalog.ts"
 import { reproCases } from "../src/repro/manifest.ts"
-import { WorkspaceLive } from "../src/workspace.ts"
+import { Workspace, WorkspaceLive } from "../src/workspace.ts"
 
 const AppLayer = Layer.mergeAll(NodeContext.layer, WorkspaceLive)
 
@@ -28,4 +30,20 @@ it("quarantines queue03 and keeps queue06 explicitly superseded", () => {
     reproCases.find((entry) => entry.name === "queue_06_cooperative_vacuum")
       ?.policy
   ).toBe("superseded")
+})
+
+layer(AppLayer)("reproduction manifest", (it) => {
+  it.effect("maps every case to an adjacent tracked script and output", () =>
+    Effect.gen(function* () {
+      const workspace = yield* Workspace
+      const fs = yield* FileSystem.FileSystem
+      const path = yield* Path.Path
+
+      for (const entry of reproCases) {
+        expect(path.dirname(entry.script)).toBe(path.dirname(entry.output))
+        expect(yield* fs.exists(path.join(workspace.root, entry.script))).toBe(true)
+        expect(yield* fs.exists(path.join(workspace.root, entry.output))).toBe(true)
+      }
+    })
+  )
 })
