@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–33 snapshots in [`../evidence/`](../evidence/), including [`phase30-result.json`](../evidence/phase30-result.json), [`phase31-result.json`](../evidence/phase31-result.json), [`phase32-result.json`](../evidence/phase32-result.json), and [`phase33-result.json`](../evidence/phase33-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–35 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), and [`phase35-result.json`](../evidence/phase35-result.json).
 
 ## Reading `PASS` correctly
 
-All 323 Phase 16–33 named exact checks have `status: PASS`. The snapshots contain 149 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, and 7 in Phase 33, for 150 numerical controls in all. Phase 32 contributes 14 exact checks and Phase 33 contributes 8. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that the original-contour intersection coefficient is globally known, that a full uniform kernel was selected, or that a physical state has been constructed.
+All 334 Phase 16–35 named exact checks have `status: PASS`. The snapshots contain 167 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, and 8 in Phase 35, for 168 numerical controls in all. Phase 34 contributes 5 exact checks and Phase 35 contributes 6. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that an endpoint-Jacobi section is the physical Van Vleck factor, that the original-contour intersection coefficient is globally known, or that a physical state has been constructed.
 
 The scientific direction is stored on:
 
@@ -38,6 +38,8 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 31 | `result:P31_HOMOGENEOUS_BFV_SUPERHESSIAN_20260817`; `2026-08-17T17:21:03.451Z` | `cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py`; SHA-256 `f2f37ff240c1bea82a5345a549882415e5f9fde1fc7bcf3bb96abc80a2e05adb`; introduced/finalized in `18451c0f0e021d89d2b5b35ff77e053cf97a3e95` | Exit `0`; 9 exact checks plus 11 numerical checks |
 | 32 | `result:P32_BELOW_ORIGIN_LAPSE_INTERSECTION_20260817_CORRECTED`; `2026-08-17T17:49:24.844Z` | `cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py`; SHA-256 `35e68db704f65c704a34ac4b2e9d676ad39c1bb390221b5b41d79da3e34bb6d3`; introduced/finalized in `2b04df329d863c60ca62585c821f4f29c2047461` | Exit `0`; 14 exact checks plus 7 numerical checks |
 | 33 | `result:P33_FOLD_AIRY_UNIFORMIZATION_20260817`; `2026-08-17T18:12:31.429Z` | `cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py`; SHA-256 `844c1262332c06b17def3506a0112f3230b12cbda153750d4964ca9f96a4485b`; current bytes finalized in `e1b6e055a72dbf9e018ced01f6becdb34705238b` | Exit `0`; 8 exact checks plus 7 numerical checks |
+| 34 | `result:P34_DIRECTED_FOLD_DUAL_CONTINUATION_20260817`; `2026-08-17T18:31:54.008Z` | `cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py`; SHA-256 `c35d9fd605e46d791ae74b58344565578a84a7803745481859b41b26699e9527`; finalized in `4cd7e7215077137c576dcdab2765beab09d1a09b` | Exit `0`; 5 exact checks plus 10 numerical checks |
+| 35 | `result:P35_REDUCED_DETLINE_TRANSPORT_20260817`; `2026-08-17T18:50:03.459Z` | `cpt_temporal_folded_susy/phase35_reduced_detline_transport.py`; SHA-256 `2e91813fca948735abd8226a63af4cb26cba459ac0a9897b852686d8cb33d6cb`; current bytes finalized in `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8` | Exit `0`; 6 exact checks plus 8 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -52,6 +54,10 @@ The Phase 31 report hash is `6ab0707bd4c133c62087c90b1e0b7131609491c0e10ee004b5e
 The corrected Phase 32 report hash is `cb5f112eaa5f73460dd97994583233306fe5bda7331868d49a703c568f41279f`; its fresh snapshot hash is `73c117d4acba48c325d661980f41a46ccd914f239ef6eea2046b417527c55eaf`. The exact final executable and report bytes first appear in `2b04df329d863c60ca62585c821f4f29c2047461`.
 
 The Phase 33 report hash is `248923359787cf61c18c0e556155ae9ee577100b663825510ac5c89ee61c27c0`; its fresh snapshot hash is `0293f0deea25b5da7b31467db430ebb538aba1304f5fceb7bf527a0332549724`. The artifact paths first appear in `25d4eb9933342824794a2bc39b434899ba566ac1`; the exact current executable and report bytes first appear in the hardening revision `e1b6e055a72dbf9e018ced01f6becdb34705238b`.
+
+The Phase 34 report hash is `14c2c6a63d1acc8ca53b55513f13364b92598f54f2bf03099f176bb538048952`; its fresh snapshot hash is `44240252eaf9bec2f63c374056c90c26e81f222eae080631e7f0e66269b4651a`. The exact current executable and report bytes first appear in `4cd7e7215077137c576dcdab2765beab09d1a09b`.
+
+The Phase 35 report hash is `467563b5eec62d0c3295be1ff7204ff0bd7d0688948e8841a009d4a828c87bc9`; its fresh snapshot hash is `f60c5baa537d8c04fef4f72683085f1e77092e420ccbcbda5c2c87283d3ee55a`. The artifact paths first appear in `212f39039c33948d16ec691b1ae4a2866631c6fc`; the exact current executable and report bytes first appear in the conservative hardening revision `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8`.
 
 ## Evidence-to-claim index
 
@@ -123,6 +129,13 @@ The Phase 33 report hash is `248923359787cf61c18c0e556155ae9ee577100b663825510ac
 | `evidence:p33-exact-fold-and-airy-normal-form` | 7 exact | Simple-fold Airy scale — `SUPPORTS`; separate Van Vleck divergence forces exact divergence — `CONTRADICTS`; local regularity uniquely selects a kernel — `CONTRADICTS` | Canonical fold normal form and local Ai/Bi/CFU algebra; no physical measure, selected contour, or analytic amplitude |
 | `evidence:p33-two-branch-fold-scaling` | 7 numerical | Simple-fold Airy scale — `SUPPORTS`; fold is another lapse saddle — `CONTRADICTS`; separate-saddle divergence forces exact divergence — `CONTRADICTS` | Frozen real branch, two actual solutions at seven deltas, endpoint Jacobi/Van Vleck proxies, and nonzero `W_T` |
 | `evidence:p33-local-lapse-separation` | 1 exact | Radius-one fold patch adds a Phase-32 lapse intersection — `CONTRADICTS` | Local T-plane inequality only; arms outside the fold chart and all other sheets remain uncomputed |
+| `evidence:p34-exact-soft-orientation-and-reduced-flow` | 5 exact | Bounded directed constant-phase pair exists — `SUPPORTS` | Frozen stationary family and declared flat complex-T metric; no full joint flow or oriented connection |
+| `evidence:p34-complex-bvp-and-flow-continuation` | 7 numerical | Bounded directed constant-phase pair exists — `SUPPORTS` | Independently reintegrated bounded complex branch pair through `Re T=13` |
+| `evidence:p34-recorded-incoming-real-segment` | 1 numerical | Recorded incoming real segment is directed toward the fold — `SUPPORTS` | Forty-seven recorded post-saddle points; no connection to an outgoing arm |
+| `evidence:p34-bounded-jacobi-and-lapse-separation` | 2 numerical | Sampled arm contains another Jacobi zero — `CONTRADICTS`; bounded arms add a Phase-32 crossing — `CONTRADICTS` | Frozen samples and bounded lapse bases only; no global sheet/end census |
+| `evidence:p35-exact-detline-lift-and-conjugation` | 6 exact | Relative sampled endpoint transport, formal oriented fold law, and conjugate phase cancellation — `SUPPORTS`; sampled transport fixes absolute Maslov orientation — `CONTRADICTS` | Declared endpoint basis and sampled lift; no zero-free interpolation, absolute sign, or physical determinant |
+| `evidence:p35-dense-detline-and-fold-transport` | 5 numerical | Sampled reduced determinant line is transportable; recorded upper near-fold phase is consistent with minus pi over two — `SUPPORTS` | Fifty-seven sampled upper points, phase increments, finite-resolution fold control, and Phase-34 anchors; no continuum limit or unsampled/global theorem |
+| `evidence:p35-conjugate-and-local-continuity` | 3 numerical | Sampled determinant transport and conjugate reduced bosonic endpoint phase cancellation — `SUPPORTS` | Separate conjugate-input integrations and local finite differences only; not a square-root, Gaussian, or full BFV/SUGRA superdeterminant cancellation |
 
 ## Phase 16 check ledger
 
@@ -1011,6 +1024,67 @@ or the recorded Phase-32 endpoint bypasses. This excludes a local crossing in th
 not continue any dual arm after it exits, enumerate other sheets, fix the Airy contour, or compute the
 global coefficient.
 
+## Phase 34 check ledger
+
+### Soft orientation and reduced-flow algebra — 5 exact checks
+
+- `P34.orientation.deterministic_soft_vector`
+- `P34.seed.Airy_three_halves_constant_phase`
+- `P34.flow.constant_phase_is_reduced_dual`
+- `P34.conjugation.upper_lower_fold_arms`
+- `P34.flow.both_real_sheets_enter_fold`
+
+These fix the declared soft-vector sign and reduced flat-`T` flow convention. They do not orient the
+original incoming cycle into either complex branch or compute the full joint field--lapse metric.
+
+### Recorded branch, BVP, Jacobi, and lapse controls — 10 numerical checks
+
+- `P34.seed.frozen_P33_coefficients`
+- `P34.flow.recorded_incoming_real_segment`
+- `P34.flow.actual_real_sheets_enter_fold`
+- `P34.continuation.actual_complex_BVP`
+- `P34.continuation.constant_ImW_and_decreasing_ReW`
+- `P34.flow.computed_curve_derivative`
+- `P34.seed.imaginary_time_three_halves`
+- `P34.conjugation.lower_arm`
+- `P34.Jacobi.no_sampled_complex_zero`
+- `P34.intersection.bounded_lapse_base_disjointness`
+
+The checks record 47 incoming real points and a bounded conjugate branch pair through `Re T=13`, with
+no zero at the frozen Jacobi samples or crossing of the bounded Phase-32 lapse pieces. They do not
+supply the missing fold connection, all sheets or good ends, or global `n_sigma`.
+
+## Phase 35 check ledger
+
+### Sampled lift, conjugation, and formal fold convention — 6 exact checks
+
+- `P35.conjugation.real_ODE_determinant`
+- `P35.phase.principal_increment_recursion`
+- `P35.sqrt.sampled_half_phase_lift_squares`
+- `P35.sqrt.absolute_sign_ambiguity`
+- `P35.fold.oriented_minus_i_square_root`
+- `P35.pair.relative_phase_cancellation`
+
+These checks define phase recursion on the ordered samples, verify the sampled square-root algebra and
+its overall sign ambiguity, and pair the reduced determinant section with its conjugate. The formal
+fold convention is not by itself a numerical proof of a `tau→0` limit or an absolute Maslov choice.
+
+### Dense sampled transport and finite-resolution controls — 8 numerical checks
+
+- `P35.detline.no_sampled_zero`
+- `P35.phase.sampled_unwrap_and_square_root`
+- `P35.phase.recorded_increment_consistency`
+- `P35.fold.finite_resolution_minus_i_sqrt`
+- `P35.conjugation.lower_detline`
+- `P35.continuation.independent_finite_differences`
+- `P35.regression.P34_anchor_determinants`
+- `P35.pair.reduced_relative_phase_cancels`
+
+The 57-point upper table has no recorded zero and its adjacent phase increments remain away from a
+principal branch-cut jump. Near-fold samples are only finite-resolution consistent with the declared
+minus-imaginary square-root law. Six separate conjugate-input lower integrations and local BVP controls
+support relative phase cancellation, not a physical Van Vleck or full BFV/SUGRA determinant.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1034,6 +1108,8 @@ uv run --locked python3 cpt_temporal_folded_susy/phase30_conformal_bfv_determina
 uv run --locked python3 cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py
 uv run --locked python3 cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py
 uv run --locked python3 cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py
+uv run --locked python3 cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py
+uv run --locked python3 cpt_temporal_folded_susy/phase35_reduced_detline_transport.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -1297,5 +1373,38 @@ claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION
 The first trace fixes a local action-scale magnitude and universal fold scaling. It does not fix the
 complex Airy-argument phase, contour/Stokes multiplier, analytic amplitude, absolute determinant line,
 full dual continuation, global `n_sigma`, or physical state.
+
+Phase 34 separates bounded reduced branch existence from the missing cycle connection:
+
+```text
+claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p34-complex-bvp-and-flow-continuation
+  → VALID_WITHIN → scope:p34-frozen-reduced-stationary-family-continuation
+  → MOTIVATES → open:p34-full-joint-dual-determinant-and-global-census
+```
+
+The recorded incoming segment and the outgoing conjugate pair remain separate pieces; the trace does
+not orient one into the other.
+
+Phase 35 advances only the sampled reduced endpoint determinant section:
+
+```text
+claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p35-dense-detline-and-fold-transport
+  → VALID_WITHIN → scope:p35-sampled-reduced-endpoint-detline-transport
+  → MOTIVATES → open:p35-absolute-detline-full-bfv-and-global-cycle
+
+claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p35-dense-detline-and-fold-transport
+  → VALID_WITHIN → scope:p35-sampled-reduced-endpoint-detline-transport
+```
+
+These traces preserve sampled nonvanishing and finite-resolution fold consistency. They do not prove a
+zero-free interpolation or asymptotic limit, identify the physical Van Vleck block, orient the absolute
+Maslov line, connect the incoming cycle to an outgoing arm, or determine the full determinant and global
+coefficient.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

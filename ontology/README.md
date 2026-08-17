@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–34 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–35 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-17T18:31:54.008Z` graph update, the collection has 478 nodes and
-1224 edges. Validation verifies 62/62 stored hashes (60 artifacts and 2 policies). The
-Phase 16–34 run snapshots contain 328 named exact checks, 159 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (160 numerical controls in all). These
+At the recorded `2026-08-17T18:50:03.459Z` graph update, the collection has 492 nodes and
+1284 edges. Validation verifies 65/65 stored hashes (63 artifacts and 2 policies). The
+Phase 16–35 run snapshots contain 334 named exact checks, 167 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (168 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 

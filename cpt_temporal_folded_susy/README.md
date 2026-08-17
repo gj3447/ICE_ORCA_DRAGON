@@ -73,12 +73,16 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md` | Phase 32 보고서 — 14 exact + 7 numerical checks. specified below-origin full line에는 recorded projected crossing이 있지만 signed full-joint intersection, global `n_sigma`, CPT/Pin contour selection은 미유도 |
 | `phase33_fold_airy_uniformization.py` | connected Dirichlet fold의 two-branch action gap, Airy action scale, Jacobi/Van Vleck scaling, local solution rank와 lapse-contour separation을 검증하는 실행체 |
 | `PHASE33_FOLD_AIRY_UNIFORMIZATION.md` | Phase 33 보고서 — 8 exact + 7 numerical checks. local simple-fold uniformization은 계산됐지만 Airy contour·analytic amplitude·global `n_sigma`·physical kernel은 미유도 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–33의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase34_directed_fold_dual_continuation.py` | 기록된 incoming real segment와 별도의 conjugate reduced stationary-family arms를 fold 양쪽에서 추적하는 실행체 |
+| `PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md` | Phase 34 보고서 — 5 exact + 10 numerical checks. bounded reduced branches는 계산됐지만 incoming-to-outgoing connection과 full joint flow는 미유도 |
+| `phase35_reduced_detline_transport.py` | Phase 34 branch pair의 endpoint-Jacobi determinant section, relative phase, square-root lift와 conjugate cancellation을 검증하는 실행체 |
+| `PHASE35_REDUCED_DETLINE_TRANSPORT.md` | Phase 35 보고서 — 6 exact + 8 numerical checks. sampled reduced det line은 운반되지만 physical Van Vleck block·absolute Maslov orientation·full BFV determinant·global `n_sigma`는 미유도 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–35의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 33)
+## 현재 경계 (Phase 35)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -274,14 +278,26 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   imaginary-axis full-lapse contour와 Phase-32의 \(r\le0.1\) bypass에서 떨어져 있어 그 local chart가
   crossing을 추가하지 않는다. 이것은 fold 밖의 dual arms를 센 global theorem이 아니며 full
   uniform physical kernel, global \(n_\sigma\), WDW state는 계속 OPEN이다.
+- Phase 34는 기록된 real stationary segment가 fold 쪽을 향함을 확인하고, 그와 별도로 fold 너머의
+  conjugate constant-phase reduced branches를 \(\operatorname{Re}T=13\)까지 구성했다. 이 두 사실은
+  incoming Picard--Lefschetz cycle이 어느 outgoing arm으로 연결되는지를 정하지 않는다.
+- Phase 35는 선언된 rows \((a,\phi)\), columns \((\dot a,\dot\phi)\) endpoint block
+  \(B_v\)의 \(\det B_v\)를 그 sampled branch pair에서 상대적으로 운반했다. 57개 upper sample은
+  nonzero이고, recorded near-fold data는 \(\det B_v\sim-iC_{\rm det}\sqrt\tau\)와 유한해상도에서
+  일치하며 conjugate reduced endpoint phases는 상대적으로 상쇄된다.
+- 이것은 sample 사이의 zero-free continuous lift나 \(\tau\to0\) 극한의 증명이 아니며,
+  \(\det B_v\)는 아직 physical Van Vleck factor가 아니다. Correct canonical/momentum-adjusted
+  block과 endpoint measure, absolute lift sign/Maslov orientation, incoming-to-outgoing fold
+  connection, full BFV/SUGRA superdeterminant, 모든 sheet와 good end, global \(n_\sigma\)는 OPEN이다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-- **PL/BFV global gate:** Phase 32의 tracked projected lapse-base crossing과 Phase 33의 local Airy
-  chart에서 멈추지 않고, 한 complete regulated relative cycle의 oriented determinant line을 fold로
-  운반해 Airy contour/Stokes multiplier와 analytic amplitude를 고정한다. Full joint upward cycle의
+- **PL/BFV global gate:** Phase 32의 tracked projected lapse-base crossing, Phase 33의 local Airy
+  chart, Phase 34의 reduced branch pair와 Phase 35의 relative endpoint-Jacobi transport에서 멈추지
+  않고, 원래 incoming cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
+  line의 absolute orientation을 고정한다. Full joint upward cycle의
   모든 arm과 complex BVP sheet 및 asymptotic good end를 열거하고, separately specified physical lapse contour와의 전체 intersection
   sum을 계산한 뒤 endpoint·mode regulator를 제거한다. 동시에 Phase 31 hybrid를 constraint-reduced
   inhomogeneous graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로

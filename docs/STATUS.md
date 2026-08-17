@@ -374,10 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–34 is now indexed in a repository-local typed research graph with **476 nodes and 1214 directed
-relations**. It preserves 115 claims, 69 evidence groups, 37 explicit scopes, 41 open problems, 63
-literature sources, the Phase 16–34 run payloads (328 named exact checks, 158 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 62/62 verified artifact and policy hashes,
+Phase 15R–35 is now indexed in a repository-local typed research graph with **492 nodes and 1284 directed
+relations**. It preserves 120 claims, 73 evidence groups, 38 explicit scopes, 42 open problems, 63
+literature sources, the Phase 16–35 run payloads (334 named exact checks, 167 typed numerical checks, and
+one separately recorded legacy Phase-18 numerical control), 65/65 verified artifact and policy hashes,
 and cautious bridges to
 the older SYMPOSIUM KG.
 
@@ -637,7 +637,7 @@ and
 
 ## Current direct calculation — CPT × Temporal-Folded SUSY Phase 34
 
-Phase 34 returns exit 0 with **5 exact checks and 9 numerical checks**.
+Phase 34 returns exit 0 with **5 exact checks and 10 numerical checks**.
 
 - A deterministic positive-$a_c$ orientation fixes the fold soft coordinate. Both actual real sheets
   have $W_T<0$ and the recorded projected dual direction sends them into the fold.
@@ -654,7 +654,7 @@ Phase 34 returns exit 0 with **5 exact checks and 9 numerical checks**.
 - Because the bounded chart has $\operatorname{Re}T>T_c>9.7$, neither conjugate lapse base meets the
   Phase-32 imaginary axis or its $r\le0.1$ endpoint caps. This is not a census of uncontinued arms,
   other sheets, unsampled Jacobi zeros, or good ends.
-- The committed runnable catalog is now 65. The full joint field--lapse metric and flow, oriented Airy
+- The committed runnable catalog is now 66. The full joint field--lapse metric and flow, oriented Airy
   connection and determinant line, complete relative cycles, global $n_\sigma$, gauge-reduced kernel,
   and physical trace-class state remain open.
 
@@ -662,6 +662,28 @@ See
 [`../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md)
 and
 [`../cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py`](../cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 35
+
+Phase 35 returns exit 0 with **6 exact checks and 8 numerical checks**.
+
+- In the declared endpoint order, $B_v=M_{(a,\phi),(\dot a,\dot\phi)}$ has nonzero determinant at all
+  57 sampled upper-branch points from $\tau=2\times10^{-6}$ through $\operatorname{Re}T=13$.
+- Recursive principal-increment unwrapping gives relative determinant and square-root sections on the
+  recorded table; the alternative sampled lift differs by an overall sign, which these data do not select.
+- In the frozen upper-fold orientation, the recorded samples are finite-resolution consistent with
+  $\det B_v=-iC_{\rm det}\sqrt\tau+O(\tau)$ and $C_{\rm det}>0$. Six separate conjugate-input integrations
+  verify the conjugate section, and the reduced bosonic endpoint phases cancel relatively.
+- This does not prove a zero-free continuum interpolation or a $\tau\to0$ limit. The endpoint-Jacobi
+  determinant is not yet the physical Van Vleck factor or a full Gaussian
+  prefactor. The correct canonical block and measure, absolute sign/Maslov orientation,
+  incoming-to-outgoing fold connection, full BFV/SUGRA superdeterminant, global $n_\sigma$, and physical
+  state remain open.
+
+See
+[`../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md`](../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md)
+and
+[`../cpt_temporal_folded_susy/phase35_reduced_detline_transport.py`](../cpt_temporal_folded_susy/phase35_reduced_detline_transport.py).
 
 ## Historical scientific ledger
 

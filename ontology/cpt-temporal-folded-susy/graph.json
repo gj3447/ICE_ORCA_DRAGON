@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T18:31:54.008Z",
+  "updated_at_utc": "2026-08-17T18:50:03.459Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -206,6 +206,16 @@
         "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
         "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
         "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO"
+      ]
+    },
+    {
+      "question": "Does Phase 35 provide the physical Van Vleck determinant or fix the Maslov phase and global Picard--Lefschetz coefficient?",
+      "answer": "No. It transports the declared endpoint-Jacobi det B_v section relatively on the sampled Phase-34 dual-aligned branch table, records finite-resolution consistency with the oriented near-fold square-root law, and finds conjugate reduced endpoint phases cancel. The zero-free continuum interpolation, physical Van Vleck block and measure, absolute sign/Maslov orientation, incoming-to-outgoing fold connection, full BFV/SUGRA superdeterminant, all sheets and good ends, global n_sigma, and physical state remain open.",
+      "claim_ids": [
+        "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+        "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+        "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+        "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION"
       ]
     }
   ],
@@ -513,6 +523,24 @@
         "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
         "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
         "open:p34-full-joint-dual-determinant-and-global-census",
+        "open:p33-airy-cycle-amplitude-and-global-continuation",
+        "open:p28-global-relative-homology-and-intersection",
+        "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p28-physical-state-and-density"
+      ]
+    },
+    {
+      "id": "reading-path:reduced-detline-transport-to-physical-prefactor",
+      "title": "From sampled reduced endpoint determinant transport to the still-open physical prefactor",
+      "summary": "Follow the bounded dual-aligned branch pair, its declared endpoint-Jacobi block, the nonzero recorded table and sampled square-root lifts, the conjugate relative phase cancellation, and stop before a zero-free continuum lift, physical Van Vleck identification, absolute Maslov orientation, fold-cycle connection, full superdeterminant, or global coefficient.",
+      "nodes": [
+        "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+        "concept:relative-endpoint-detline-transport-versus-absolute-orientation",
+        "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+        "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+        "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+        "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+        "open:p35-absolute-detline-full-bfv-and-global-cycle",
         "open:p33-airy-cycle-amplitude-and-global-continuation",
         "open:p28-global-relative-homology-and-intersection",
         "open:p28-full-gauge-reduced-superdeterminant",
@@ -5914,6 +5942,170 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase34-result.json",
       "sha256": "44240252eaf9bec2f63c374056c90c26e81f222eae080631e7f0e66269b4651a"
+    },
+    {
+      "id": "phase:p35",
+      "type": "phase",
+      "title": "Phase 35 — relative reduced endpoint determinant-line transport",
+      "summary": "Transport of det B_v for the endpoint Jacobi block with rows (a,phi) and columns (a_dot,phi_dot) on the sampled Phase-34 dual-aligned branch pair. It records relative phase transport on an ordered finite table, not a physical Van Vleck factor, proved continuum lift, absolute Maslov orientation, full BFV/SUGRA determinant, or global cycle coefficient.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:relative-endpoint-detline-transport-versus-absolute-orientation",
+      "type": "concept",
+      "title": "Relative endpoint determinant-line transport versus absolute orientation",
+      "summary": "A nonzero sampled complex endpoint-Jacobi section admits a recursively unwrapped phase and two relative square-root lifts along the bounded Phase-34 branch pair, while nonvanishing between samples, the initial lift sign, Maslov orientation, original-cycle connection, endpoint measure, regulator, and full BFV/SUGRA determinant line remain unfixed.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "type": "claim",
+      "title": "The tracked reduced endpoint determinant line is transportable",
+      "summary": "Supported only on the sampled Phase-34 dual-aligned stationary-family branch pair: 57 upper-branch samples from tau=2e-6 through Re T=13 stay nonzero, admit recursively unwrapped sampled phase transport, and pass six conjugacy or local-continuity spot checks. Nonvanishing between samples, other sheets, modes, and good ends is not proved.",
+      "state": "SUPPORTED_ON_SAMPLED_P34_BRANCH_PAIR",
+      "claim_id": "P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "statement": "In the declared endpoint basis, det B_v remains nonzero at all recorded points and has a recursively transported relative phase and sampled square-root lift on the Phase-34 dual-aligned branch table through Re T=13.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "type": "claim",
+      "title": "The recorded upper near-fold phase is consistent with minus pi over two",
+      "summary": "Supported only at finite resolution in the frozen row, column, soft-vector, and upper-sheet convention: the recorded near-fold samples are consistent with det B_v=-i C_det sqrt(tau) and positive C_det. This coordinate-normalized sample trend is not a proved tau-to-zero limit and does not fix an absolute determinant or Maslov orientation.",
+      "state": "SUPPORTED_AT_FINITE_RESOLUTION_IN_DECLARED_ORIENTATION",
+      "claim_id": "P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "statement": "With the declared endpoint basis, positive-a_c soft-vector orientation, and upper sheet, the recorded near-fold det B_v samples are finite-resolution consistent with phase -pi/2 and a positive coefficient multiplying sqrt(tau).",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "type": "claim",
+      "title": "The conjugate reduced bosonic endpoint phases cancel relatively",
+      "summary": "Supported for the sampled conjugate endpoint-Jacobi determinant sections: the upper phase transport and separate conjugate-input lower spot integrations have opposite relative rotations and zero recorded pair residual. This is determinant-phase cancellation only, not correlated square-root, Gaussian, Van Vleck, BFV, or SUGRA superdeterminant cancellation.",
+      "state": "SUPPORTED_RELATIVE_ENDPOINT_DETERMINANT_PHASE_ONLY",
+      "claim_id": "P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "statement": "For the tracked conjugate reduced stationary-family pair, the relative phases of the bosonic endpoint-Jacobi determinant sections cancel.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "type": "claim",
+      "title": "Relative endpoint transport fixes the absolute Maslov orientation",
+      "summary": "Contradicted as sufficient data: the sampled determinant table admits equally valid relative square-root lifts g and -g. An absolute physical orientation would additionally require an oriented original cycle, compatible regulator and endpoint measure, Airy connection, and full joint field--lapse flow. This does not claim that no physical orientation exists.",
+      "state": "CONTRADICTED_AS_SUFFICIENT_DATA",
+      "claim_id": "P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "statement": "The sampled nonzero endpoint-determinant path and one relative square-root lift alone determine the absolute lift sign, Maslov orientation, physical prefactor, and incoming-to-outgoing Picard--Lefschetz connection.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p35-exact-detline-lift-and-conjugation",
+      "type": "evidence",
+      "title": "Phase 35 exact determinant-line lift and conjugation checks",
+      "summary": "Six exact checks establish real-equation conjugation, recursive sampled principal-increment phase lifting, the two sampled square-root sections and their sign ambiguity, the formal declared oriented minus-i fold law, and relative conjugate-pair phase cancellation.",
+      "state": "VERIFIED",
+      "observed_status": "6_EXACT_PASS",
+      "check_ids": [
+        "P35.conjugation.real_ODE_determinant",
+        "P35.phase.principal_increment_recursion",
+        "P35.sqrt.sampled_half_phase_lift_squares",
+        "P35.sqrt.absolute_sign_ambiguity",
+        "P35.fold.oriented_minus_i_square_root",
+        "P35.pair.relative_phase_cancellation"
+      ]
+    },
+    {
+      "id": "evidence:p35-dense-detline-and-fold-transport",
+      "type": "evidence",
+      "title": "Phase 35 dense determinant-line and fold transport checks",
+      "summary": "Five numerical checks find no zero at 57 sampled upper points, recursively unwrap their phases, keep every recorded principal increment below 0.098, test finite-resolution consistency with the near-fold square-root law, and reproduce the Phase-34 determinant anchors. They do not prove nonvanishing or a lift between samples.",
+      "state": "VERIFIED",
+      "observed_status": "5_NUMERICAL_PASS",
+      "check_ids": [
+        "P35.detline.no_sampled_zero",
+        "P35.phase.sampled_unwrap_and_square_root",
+        "P35.phase.recorded_increment_consistency",
+        "P35.fold.finite_resolution_minus_i_sqrt",
+        "P35.regression.P34_anchor_determinants"
+      ]
+    },
+    {
+      "id": "evidence:p35-conjugate-and-local-continuity",
+      "type": "evidence",
+      "title": "Phase 35 conjugate-line and local-continuity checks",
+      "summary": "Three numerical checks use separate conjugate-input lower integrations, independently re-solved two-sided BVPs, and the conjugate-pair comparison to test local sampled continuity and cancelling relative determinant phases without promoting them to a square-root, Gaussian, or full-superdeterminant cancellation.",
+      "state": "VERIFIED",
+      "observed_status": "3_NUMERICAL_PASS",
+      "check_ids": [
+        "P35.conjugation.lower_detline",
+        "P35.continuation.independent_finite_differences",
+        "P35.pair.reduced_relative_phase_cancels"
+      ]
+    },
+    {
+      "id": "scope:p35-sampled-reduced-endpoint-detline-transport",
+      "type": "scope",
+      "title": "P35 sampled reduced endpoint determinant-line transport",
+      "summary": "The endpoint-Jacobi determinant section on the Phase-34 reflection-symmetric dual-aligned branch pair, recorded over the declared finite ordered sample table and endpoint basis.",
+      "state": "ACTIVE",
+      "includes": [
+        "B_v=M_[(a,phi),(a_dot,phi_dot)] in the declared row and column order",
+        "the positive-a_c Phase-34 soft-vector orientation and upper-fold convention",
+        "fifty-seven nonzero sampled upper points from tau=2e-6 through Re T=13",
+        "recursive relative phase transport and both sampled square-root lifts",
+        "the corresponding sampled inverse-square-root endpoint factor's opposite half phase",
+        "six separate conjugate-input lower reintegration spot checks and five local finite-difference controls",
+        "relative reduced bosonic endpoint-phase cancellation on the conjugate pair"
+      ],
+      "excludes": [
+        "a proof of nonvanishing between samples, on other sheets, for other modes, or at good ends",
+        "identification of det B_v with the physical canonical or momentum-adjusted Van Vleck block",
+        "an endpoint measure, original-cycle normalization, absolute determinant sign, or Maslov orientation",
+        "an oriented incoming-to-outgoing Picard--Lefschetz connection across the fold",
+        "the full joint field--lapse flow, relative cycle, signed intersection matrix, or global n_sigma",
+        "a regulated graviton--gravitino--Goldstino--ghost BFV/SUGRA superdeterminant",
+        "a WDW density, trace-class seam state, initial-value peak, or SUSY spectrum",
+        "a proof that the sampled phase lift extends continuously between recorded points or defines a tau-to-zero asymptotic limit"
+      ]
+    },
+    {
+      "id": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "type": "open_problem",
+      "title": "Orient the physical determinant line and complete the global joint cycle",
+      "summary": "The sampled reduced det B_v path fixes relative transport but not the physical Van Vleck block, initial square-root sign, Maslov orientation, incoming-to-outgoing fold connection, or full regulated superdeterminant. The original and every joint dual cycle must be oriented and continued to all good ends before a signed global n_sigma or physical kernel can be assigned.",
+      "state": "OPEN",
+      "question": "Can the original cycle and regulator select an absolute determinant/Maslov orientation and an incoming-to-outgoing fold connection, and can that choice be lifted to the regulated full BFV/SUGRA determinant line and complete joint relative cycle with signed global n_sigma?"
+    },
+    {
+      "id": "artifact:p35-script",
+      "type": "artifact",
+      "title": "Phase 35 executable",
+      "summary": "Exact and numerical sampled relative endpoint-Jacobi determinant transport, square-root-lift, finite-resolution fold, conjugacy, finite-difference, and pair-phase controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase35_reduced_detline_transport.py",
+      "sha256": "2e91813fca948735abd8226a63af4cb26cba459ac0a9897b852686d8cb33d6cb",
+      "introduced_in_commit": "6d3228ef21b74549e5e5c57b9a6871d44bcc82e8"
+    },
+    {
+      "id": "artifact:p35-report",
+      "type": "artifact",
+      "title": "Phase 35 report",
+      "summary": "Human-readable sampled relative determinant-line transport, declared endpoint basis and fold convention, finite-resolution near-fold evidence, conjugate phase result, and physical-prefactor scope boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md",
+      "sha256": "467563b5eec62d0c3295be1ff7204ff0bd7d0688948e8841a009d4a828c87bc9",
+      "introduced_in_commit": "6d3228ef21b74549e5e5c57b9a6871d44bcc82e8"
+    },
+    {
+      "id": "artifact:p35-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 35 evidence snapshot",
+      "summary": "Persisted six-exact and eight-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase35-result.json",
+      "sha256": "f60c5baa537d8c04fef4f72683085f1e77092e420ccbcbda5c2c87283d3ee55a"
     }
   ],
   "edges": [
@@ -13507,6 +13699,374 @@
       "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
       "relation": "MOTIVATES",
       "to": "open:p34-full-joint-dual-determinant-and-global-census"
+    },
+    {
+      "id": "edge:1225",
+      "from": "phase:p35",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1226",
+      "from": "scope:p35-sampled-reduced-endpoint-detline-transport",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1227",
+      "from": "concept:relative-endpoint-detline-transport-versus-absolute-orientation",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1228",
+      "from": "artifact:p35-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1229",
+      "from": "artifact:p35-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1230",
+      "from": "artifact:p35-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1231",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1232",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p35-sampled-reduced-endpoint-detline-transport"
+    },
+    {
+      "id": "edge:1233",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p35-report"
+    },
+    {
+      "id": "edge:1234",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "ABOUT",
+      "to": "concept:relative-endpoint-detline-transport-versus-absolute-orientation"
+    },
+    {
+      "id": "edge:1235",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1236",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p35-sampled-reduced-endpoint-detline-transport"
+    },
+    {
+      "id": "edge:1237",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p35-report"
+    },
+    {
+      "id": "edge:1238",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "ABOUT",
+      "to": "concept:relative-endpoint-detline-transport-versus-absolute-orientation"
+    },
+    {
+      "id": "edge:1239",
+      "from": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1240",
+      "from": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p35-sampled-reduced-endpoint-detline-transport"
+    },
+    {
+      "id": "edge:1241",
+      "from": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p35-report"
+    },
+    {
+      "id": "edge:1242",
+      "from": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "relation": "ABOUT",
+      "to": "concept:relative-endpoint-detline-transport-versus-absolute-orientation"
+    },
+    {
+      "id": "edge:1243",
+      "from": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1244",
+      "from": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p35-sampled-reduced-endpoint-detline-transport"
+    },
+    {
+      "id": "edge:1245",
+      "from": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p35-report"
+    },
+    {
+      "id": "edge:1246",
+      "from": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "relation": "ABOUT",
+      "to": "concept:relative-endpoint-detline-transport-versus-absolute-orientation"
+    },
+    {
+      "id": "edge:1247",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-exact-detline-lift-and-conjugation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1248",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-dense-detline-and-fold-transport",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1249",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-conjugate-and-local-continuity",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1250",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-exact-detline-lift-and-conjugation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1251",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-dense-detline-and-fold-transport",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1252",
+      "from": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-exact-detline-lift-and-conjugation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1253",
+      "from": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-conjugate-and-local-continuity",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1254",
+      "from": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p35-exact-detline-lift-and-conjugation",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1255",
+      "from": "evidence:p35-exact-detline-lift-and-conjugation",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1256",
+      "from": "evidence:p35-exact-detline-lift-and-conjugation",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p35-script"
+    },
+    {
+      "id": "edge:1257",
+      "from": "evidence:p35-exact-detline-lift-and-conjugation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p35-evidence-snapshot"
+    },
+    {
+      "id": "edge:1258",
+      "from": "evidence:p35-dense-detline-and-fold-transport",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1259",
+      "from": "evidence:p35-dense-detline-and-fold-transport",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p35-script"
+    },
+    {
+      "id": "edge:1260",
+      "from": "evidence:p35-dense-detline-and-fold-transport",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p35-evidence-snapshot"
+    },
+    {
+      "id": "edge:1261",
+      "from": "evidence:p35-conjugate-and-local-continuity",
+      "relation": "PART_OF",
+      "to": "phase:p35"
+    },
+    {
+      "id": "edge:1262",
+      "from": "evidence:p35-conjugate-and-local-continuity",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p35-script"
+    },
+    {
+      "id": "edge:1263",
+      "from": "evidence:p35-conjugate-and-local-continuity",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p35-evidence-snapshot"
+    },
+    {
+      "id": "edge:1264",
+      "from": "phase:p35",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1265",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD"
+    },
+    {
+      "id": "edge:1266",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "EXTENDS",
+      "to": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE"
+    },
+    {
+      "id": "edge:1267",
+      "from": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT"
+    },
+    {
+      "id": "edge:1268",
+      "from": "artifact:p35-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p34-script"
+    },
+    {
+      "id": "edge:1269",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p34-full-joint-dual-determinant-and-global-census"
+    },
+    {
+      "id": "edge:1270",
+      "from": "claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE",
+      "relation": "MOTIVATES",
+      "to": "open:p35-absolute-detline-full-bfv-and-global-cycle"
+    },
+    {
+      "id": "edge:1271",
+      "from": "claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2",
+      "relation": "MOTIVATES",
+      "to": "open:p35-absolute-detline-full-bfv-and-global-cycle"
+    },
+    {
+      "id": "edge:1272",
+      "from": "claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY",
+      "relation": "MOTIVATES",
+      "to": "open:p35-absolute-detline-full-bfv-and-global-cycle"
+    },
+    {
+      "id": "edge:1273",
+      "from": "claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION",
+      "relation": "MOTIVATES",
+      "to": "open:p35-absolute-detline-full-bfv-and-global-cycle"
+    },
+    {
+      "id": "edge:1274",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "BLOCKED_BY",
+      "to": "open:p33-airy-cycle-amplitude-and-global-continuation"
+    },
+    {
+      "id": "edge:1275",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:1276",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:1277",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "BLOCKED_BY",
+      "to": "open:p29-physical-endpoint-measure-and-ordering"
+    },
+    {
+      "id": "edge:1278",
+      "from": "phase:p35",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density"
+    },
+    {
+      "id": "edge:1279",
+      "from": "concept:relative-endpoint-detline-transport-versus-absolute-orientation",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1280",
+      "from": "concept:relative-endpoint-detline-transport-versus-absolute-orientation",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1281",
+      "from": "concept:relative-endpoint-detline-transport-versus-absolute-orientation",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii"
+    },
+    {
+      "id": "edge:1282",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1283",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1284",
+      "from": "open:p35-absolute-detline-full-bfv-and-global-cycle",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii"
     }
   ],
   "kg_bridges": [
@@ -13755,6 +14315,16 @@
       "status": "UNRESOLVED",
       "checked_at_utc": "2026-08-17T18:31:54.008Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase34 bounded dual-aligned stationary branches around fold",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p35",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T18:50:03.459Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase35 relative reduced endpoint determinant-line transport",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
     }
   ]

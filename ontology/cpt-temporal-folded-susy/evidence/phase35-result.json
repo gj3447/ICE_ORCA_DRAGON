@@ -1,0 +1,1046 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P35_REDUCED_DETLINE_TRANSPORT_20260817",
+  "phase": "P35",
+  "observed_at_utc": "2026-08-17T18:50:03.459Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase35_reduced_detline_transport.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase35_reduced_detline_transport.py",
+    "sha256": "2e91813fca948735abd8226a63af4cb26cba459ac0a9897b852686d8cb33d6cb",
+    "introduced_in_commit": "6d3228ef21b74549e5e5c57b9a6871d44bcc82e8"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {
+      "id": "P35.conjugation.real_ODE_determinant",
+      "statement": "real analytically continued equations pair det Bv with its conjugate and give a positive pair product away from zero",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.phase.principal_increment_recursion",
+      "statement": "theta_(j+1)=theta_j+Arg(d_(j+1)/d_j) lifts the sampled determinant phase when each increment is chosen in (-pi,pi]",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.sqrt.sampled_half_phase_lift_squares",
+      "statement": "the sampled half-phase lift squares to det Bv, while the corresponding inverse-square-root transport has the opposite half phase",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.sqrt.absolute_sign_ambiguity",
+      "statement": "changing the initial lift sign, equivalently shifting the phase by 2pi, leaves the determinant unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.fold.oriented_minus_i_square_root",
+      "statement": "in the declared row/column and soft-vector orientation the upper determinant is -i C_det sqrt(tau), while the lower is its conjugate",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.pair.relative_phase_cancellation",
+      "statement": "the conjugate reduced bosonic endpoint pair cancels its relative phase, without asserting a full BFV/SUGRA superdeterminant cancellation",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P35.detline.no_sampled_zero",
+      "statement": "the dense upper-branch table contains no sampled endpoint-Jacobi zero and every BVP remains solved",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.phase.sampled_unwrap_and_square_root",
+      "statement": "the recursive phase lifts det Bv, and the associated inverse-square-root factor carries the opposite half phase",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.phase.recorded_increment_consistency",
+      "statement": "the recorded upper determinant phases advance with positive adjacent increments, none near a principal branch-cut jump",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.fold.finite_resolution_minus_i_sqrt",
+      "statement": "the recorded near-fold samples are finite-resolution consistent with det Bv=-i C_det sqrt(tau) and C_det positive",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.conjugation.lower_detline",
+      "statement": "six separate conjugate-input integrations spot-check the analytic conjugate lift constructed across the full sampled table",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.continuation.independent_finite_differences",
+      "statement": "independently re-solved two-sided BVPs stay on the same locally smooth determinant branch",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.regression.P34_anchor_determinants",
+      "statement": "the dense transport reproduces the Phase-34 near-fold and ReT=13 endpoint determinant anchors",
+      "status": "PASS"
+    },
+    {
+      "id": "P35.pair.reduced_relative_phase_cancels",
+      "statement": "the sampled upper transport and separate conjugate-input lower spot integrations have cancelling relative endpoint phases",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "relative endpoint-Jacobi determinant-line transport on the bounded P34 dual-aligned reduced stationary-family branch pair",
+    "claim_status": {
+      "the_absolute_determinant_or_Maslov_orientation_is_fixed": "OPEN_REQUIRES_AN_ORIENTED_ORIGINAL_CYCLE_AND_REGULATOR",
+      "the_conjugate_reduced_bosonic_endpoint_phases_cancel": "SUPPORTED_RELATIVELY_NOT_A_FULL_SUPERDETERMINANT_RESULT",
+      "the_full_BFV_SUGRA_superdeterminant_is_transported": "OPEN_NOT_COMPUTED",
+      "the_global_intersection_coefficient_n_sigma_is_fixed": "OPEN_REQUIRES_ALL_JOINT_DUALS_GOOD_ENDS_AND_ORIENTATIONS",
+      "the_incoming_PL_cycle_is_oriented_into_one_outgoing_branch": "OPEN_NOT_FIXED_BY_RELATIVE_ENDPOINT_DETERMINANT_TRANSPORT",
+      "the_recorded_upper_near_fold_phase_is_consistent_with_minus_pi_over_2": "SUPPORTED_AT_FINITE_RESOLUTION_IN_THE_DECLARED_ENDPOINT_BASIS",
+      "the_tracked_reduced_endpoint_determinant_line_is_transportable": "SUPPORTED_ON_THE_SAMPLED_P34_BRANCH_PAIR_THROUGH_ReT_13",
+      "there_are_no_unsampled_or_other_sheet_Jacobi_zeros": "OPEN_NOT_PROVED"
+    },
+    "exact_check_ids": [
+      "P35.conjugation.real_ODE_determinant",
+      "P35.phase.principal_increment_recursion",
+      "P35.sqrt.sampled_half_phase_lift_squares",
+      "P35.sqrt.absolute_sign_ambiguity",
+      "P35.fold.oriented_minus_i_square_root",
+      "P35.pair.relative_phase_cancellation"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P35.conjugation.real_ODE_determinant",
+        "statement": "real analytically continued equations pair det Bv with its conjugate and give a positive pair product away from zero",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.phase.principal_increment_recursion",
+        "statement": "theta_(j+1)=theta_j+Arg(d_(j+1)/d_j) lifts the sampled determinant phase when each increment is chosen in (-pi,pi]",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.sqrt.sampled_half_phase_lift_squares",
+        "statement": "the sampled half-phase lift squares to det Bv, while the corresponding inverse-square-root transport has the opposite half phase",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.sqrt.absolute_sign_ambiguity",
+        "statement": "changing the initial lift sign, equivalently shifting the phase by 2pi, leaves the determinant unchanged",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.fold.oriented_minus_i_square_root",
+        "statement": "in the declared row/column and soft-vector orientation the upper determinant is -i C_det sqrt(tau), while the lower is its conjugate",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.pair.relative_phase_cancellation",
+        "statement": "the conjugate reduced bosonic endpoint pair cancels its relative phase, without asserting a full BFV/SUGRA superdeterminant cancellation",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 6,
+    "frozen_conventions": {
+      "basis_order": "rows=(a,phi), columns=(a_dot,phi_dot)",
+      "endpoint_block": "B_v=M_[(a,phi),(a_dot,phi_dot)]",
+      "soft_orientation": "the P34 unit right-null vector has positive a_c component",
+      "square_root_lift": "g_j=sqrt(|d_j|) exp(i theta_j/2); g and -g are the two lifts",
+      "unwrapped_phase": "theta_0=Arg d_0; theta_(j+1)=theta_j+Arg(d_(j+1)/d_j), with principal increments in (-pi,pi]",
+      "upper_fold_convention": "det B_v ~ -i C_det sqrt(tau), C_det>0"
+    },
+    "next_calculation": "continue the oriented original and every joint dual cycle with the regulated BFV superdeterminant line, including all good ends",
+    "numerical_check_ids": [
+      "P35.detline.no_sampled_zero",
+      "P35.phase.sampled_unwrap_and_square_root",
+      "P35.phase.recorded_increment_consistency",
+      "P35.fold.finite_resolution_minus_i_sqrt",
+      "P35.conjugation.lower_detline",
+      "P35.continuation.independent_finite_differences",
+      "P35.regression.P34_anchor_determinants",
+      "P35.pair.reduced_relative_phase_cancels"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P35.detline.no_sampled_zero",
+        "statement": "the dense upper-branch table contains no sampled endpoint-Jacobi zero and every BVP remains solved",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.phase.sampled_unwrap_and_square_root",
+        "statement": "the recursive phase lifts det Bv, and the associated inverse-square-root factor carries the opposite half phase",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.phase.recorded_increment_consistency",
+        "statement": "the recorded upper determinant phases advance with positive adjacent increments, none near a principal branch-cut jump",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.fold.finite_resolution_minus_i_sqrt",
+        "statement": "the recorded near-fold samples are finite-resolution consistent with det Bv=-i C_det sqrt(tau) and C_det positive",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.conjugation.lower_detline",
+        "statement": "six separate conjugate-input integrations spot-check the analytic conjugate lift constructed across the full sampled table",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.continuation.independent_finite_differences",
+        "statement": "independently re-solved two-sided BVPs stay on the same locally smooth determinant branch",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.regression.P34_anchor_determinants",
+        "statement": "the dense transport reproduces the Phase-34 near-fold and ReT=13 endpoint determinant anchors",
+        "status": "PASS"
+      },
+      {
+        "id": "P35.pair.reduced_relative_phase_cancels",
+        "statement": "the sampled upper transport and separate conjugate-input lower spot integrations have cancelling relative endpoint phases",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 8,
+    "numerical_controls": {
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "finite_difference_checks": [
+        {
+          "centered_phase_derivative": 16.2559981248705,
+          "minus_phase_increment": -0.00016296785784287313,
+          "nearby_root_residual_max": 3.808110283464959e-13,
+          "phase_midpoint_defect": 8.157531883372588e-7,
+          "plus_phase_increment": 0.00016215210465453587,
+          "relative_det_jump_max": 0.005016631842258251,
+          "step": 0.00001,
+          "tau": 0.001
+        },
+        {
+          "centered_phase_derivative": 5.059179672982002,
+          "minus_phase_increment": -0.0005072268013996828,
+          "nearby_root_residual_max": 9.770029345095798e-13,
+          "phase_midpoint_defect": 0.000002617668202967464,
+          "plus_phase_increment": 0.0005046091331967153,
+          "relative_det_jump_max": 0.005054519679668427,
+          "step": 0.0001,
+          "tau": 0.01
+        },
+        {
+          "centered_phase_derivative": 1.4144389096941539,
+          "minus_phase_increment": -0.001418664807642326,
+          "nearby_root_residual_max": 2.763392126534709e-11,
+          "phase_midpoint_defect": 0.000008451795896341052,
+          "plus_phase_increment": 0.001410213011745985,
+          "relative_det_jump_max": 0.005562902395744285,
+          "step": 0.001,
+          "tau": 0.1
+        },
+        {
+          "centered_phase_derivative": 0.7457715667699955,
+          "minus_phase_increment": -0.0007457135846976333,
+          "nearby_root_residual_max": 1.17594973711806e-12,
+          "phase_midpoint_defect": 1.1596414470620587e-7,
+          "plus_phase_increment": 0.0007458295488423395,
+          "relative_det_jump_max": 0.0020366097375432066,
+          "step": 0.001,
+          "tau": 0.5
+        },
+        {
+          "centered_phase_derivative": 1.076304732692121,
+          "minus_phase_increment": -0.0010762115146590243,
+          "nearby_root_residual_max": 1.4850386883249187e-12,
+          "phase_midpoint_defect": 1.8643606621731625e-7,
+          "plus_phase_increment": 0.0010763979507252416,
+          "relative_det_jump_max": 0.0017937221936655133,
+          "step": 0.001,
+          "tau": 1.7
+        }
+      ],
+      "fold": {
+        "T_c": 9.788625568081242,
+        "center": [
+          1.2479953302615718,
+          0.10016795390658555
+        ],
+        "right_null_oriented": [
+          0.9964839319603808,
+          -0.08378408765857216
+        ]
+      },
+      "lower_conjugacy_checks": [
+        {
+          "det_lower": [
+            0.02108729111652027,
+            14.47708989830141
+          ],
+          "det_upper": [
+            0.02108729111652027,
+            -14.47708989830141
+          ],
+          "lower_endpoint_residual": 4.521962729697898e-11,
+          "relative_conjugacy_residual": 0,
+          "tau": 0.000002
+        },
+        {
+          "det_lower": [
+            10.536937719121825,
+            323.59258496076325
+          ],
+          "det_upper": [
+            10.536937719121825,
+            -323.59258496076325
+          ],
+          "lower_endpoint_residual": 4.577551891219327e-11,
+          "relative_conjugacy_residual": 0,
+          "tau": 0.001
+        },
+        {
+          "det_lower": [
+            104.78838297664505,
+            1019.8963602331231
+          ],
+          "det_upper": [
+            104.78838297664505,
+            -1019.8963602331231
+          ],
+          "lower_endpoint_residual": 4.6572578641781335e-11,
+          "relative_conjugacy_residual": 0,
+          "tau": 0.01
+        },
+        {
+          "det_lower": [
+            1011.3803928184103,
+            3164.744753522341
+          ],
+          "det_upper": [
+            1011.3803928184103,
+            -3164.744753522341
+          ],
+          "lower_endpoint_residual": 5.0142211711263894e-11,
+          "relative_conjugacy_residual": 0,
+          "tau": 0.1
+        },
+        {
+          "det_lower": [
+            20013.811274722015,
+            11026.940088313693
+          ],
+          "det_upper": [
+            20013.811274722015,
+            -11026.940088313693
+          ],
+          "lower_endpoint_residual": 9.456856388311389e-11,
+          "relative_conjugacy_residual": 0,
+          "tau": 1
+        },
+        {
+          "det_lower": [
+            -191673.33752629877,
+            -465022.38564904494
+          ],
+          "det_upper": [
+            -191673.33752629877,
+            465022.38564904494
+          ],
+          "lower_endpoint_residual": 4.523222513802062e-9,
+          "relative_conjugacy_residual": 0,
+          "tau": 3.211374431918758
+        }
+      ],
+      "max_principal_increment": 0.09794249194338712,
+      "min_abs_det_Bv": 14.477105256139687,
+      "min_sigma_Bv": 0.0057801140319032945,
+      "near_fold": {
+        "C_det_smallest_tau": 10236.848438936193,
+        "det_over_minus_i_sqrt_tau": [
+          [
+            10236.848438936193,
+            14.910966545346326
+          ],
+          [
+            10236.836506426045,
+            23.57626353234291
+          ],
+          [
+            10236.816613127326,
+            33.341765319535185
+          ],
+          [
+            10236.776822550495,
+            47.152098656391395
+          ],
+          [
+            10236.657474417914,
+            74.5525448360813
+          ],
+          [
+            10236.458635734683,
+            105.42985035462232
+          ],
+          [
+            10236.061248551036,
+            149.09079112441438
+          ]
+        ],
+        "phase_error_power": 0.4999770021454895,
+        "phase_errors_from_minus_pi_over_2": [
+          0.001456596342994887,
+          0.0023030769157454944,
+          0.00325703279448164,
+          0.004606114405840245,
+          0.00728277047072301,
+          0.010299081586100822,
+          0.014564220144452023
+        ]
+      },
+      "relative_transport": {
+        "absolute_lift_sign": "UNFIXED",
+        "conjugate_pair_phase_residual": 0,
+        "determinant_unit_transport": [
+          -0.9250966693356631,
+          -0.3797316847249682
+        ],
+        "independent_lower_spot_rotation": -3.531098892536293,
+        "one_inverse_sqrt_prefactor_unit_transport": [
+          -0.1935243274944223,
+          -0.9810954768358845
+        ],
+        "one_sqrt_section_unit_transport": [
+          -0.1935243274944223,
+          0.9810954768358845
+        ],
+        "other_inverse_sqrt_prefactor_unit_transport": [
+          0.1935243274944223,
+          0.9810954768358845
+        ],
+        "other_sqrt_section_unit_transport": [
+          0.1935243274944223,
+          -0.9810954768358845
+        ],
+        "upper_endpoint_phase": 1.961759162084391,
+        "upper_rotation_from_formal_minus_pi_over_2_reference": 3.5325554888792876,
+        "upper_rotation_from_tau_min": 3.531098892536293,
+        "upper_start_phase": -1.5693397304519017
+      },
+      "sample_count": 57,
+      "selected_records": [
+        {
+          "T": [
+            9.788627568081242,
+            1.7844653469423086e-9
+          ],
+          "abs_det_Bv": 14.477105256139687,
+          "center": [
+            [
+              1.2479959223963166,
+              -0.0016702113746066049
+            ],
+            [
+              0.10016767735074379,
+              0.0001404305237197279
+            ]
+          ],
+          "det_Bv": [
+            0.02108729111652027,
+            -14.47708989830141
+          ],
+          "endpoint_residual": 4.521962729697898e-11,
+          "principal_arg_det_Bv": -1.5693397304519017,
+          "root_residual": 3.731061129442681e-15,
+          "sigma_min_Bv": 0.0057801140319032945,
+          "sqrt_lift_phase": -0.7846698652259508,
+          "tau": 0.000002,
+          "unwrapped_arg_det_Bv": -1.5693397304519017
+        },
+        {
+          "T": [
+            9.788630568081242,
+            7.053717420892266e-9
+          ],
+          "abs_det_Bv": 22.890323009898655,
+          "center": [
+            [
+              1.2479968105987604,
+              -0.0026408371751918316
+            ],
+            [
+              0.1001672625180965,
+              0.00022203935347260356
+            ]
+          ],
+          "det_Bv": [
+            0.052718127913768065,
+            -22.890262302920103
+          ],
+          "endpoint_residual": 4.6340482646073946e-11,
+          "principal_arg_det_Bv": -1.568493249879151,
+          "root_residual": 3.2181606170071226e-15,
+          "sigma_min_Bv": 0.009139160038484868,
+          "sqrt_lift_phase": -0.7842466249395755,
+          "tau": 0.000005,
+          "unwrapped_arg_det_Bv": -1.568493249879151
+        },
+        {
+          "T": [
+            9.788635568081242,
+            1.995091996943324e-8
+          ],
+          "abs_det_Bv": 32.37182819120883,
+          "center": [
+            [
+              1.2479982909370124,
+              -0.003734710378041951
+            ],
+            [
+              0.10016657113331853,
+              0.00031400917804257956
+            ]
+          ],
+          "det_Bv": [
+            0.10543591962054295,
+            -32.37165648693308
+          ],
+          "endpoint_residual": 4.574469478310373e-11,
+          "principal_arg_det_Bv": -1.567539294000415,
+          "root_residual": 7.272623116004262e-16,
+          "sigma_min_Bv": 0.01292471770367188,
+          "sqrt_lift_phase": -0.7837696470002075,
+          "tau": 0.00001,
+          "unwrapped_arg_det_Bv": -1.567539294000415
+        },
+        {
+          "T": [
+            9.788645568081241,
+            5.642969097462242e-8
+          ],
+          "abs_det_Bv": 45.7807433393375,
+          "center": [
+            [
+              1.2480012516286267,
+              -0.005281685500440425
+            ],
+            [
+              0.10016518837388895,
+              0.0004440707007398779
+            ]
+          ],
+          "det_Bv": [
+            0.21087059575493536,
+            -45.78025769143442
+          ],
+          "endpoint_residual": 4.605507419770399e-11,
+          "principal_arg_det_Bv": -1.5661902123890563,
+          "root_residual": 5.221183821374829e-11,
+          "sigma_min_Bv": 0.01827829303328358,
+          "sqrt_lift_phase": -0.7830951061945282,
+          "tau": 0.00002,
+          "unwrapped_arg_det_Bv": -1.5661902123890563
+        },
+        {
+          "T": [
+            9.788675568081242,
+            2.2305755697321533e-7
+          ],
+          "abs_det_Bv": 72.38601879178661,
+          "center": [
+            [
+              1.2480101336800817,
+              -0.00835111328568215
+            ],
+            [
+              0.10016104018874303,
+              0.0007021121100106171
+            ]
+          ],
+          "det_Bv": [
+            0.5271661000830721,
+            -72.38409916844864
+          ],
+          "endpoint_residual": 4.690385695453743e-11,
+          "principal_arg_det_Bv": -1.5635135563241735,
+          "root_residual": 9.626147004328247e-12,
+          "sigma_min_Bv": 0.02890043332546185,
+          "sqrt_lift_phase": -0.7817567781620868,
+          "tau": 0.00005,
+          "unwrapped_arg_det_Bv": -1.5635135563241735
+        },
+        {
+          "T": [
+            9.788725568081242,
+            6.309002440927609e-7
+          ],
+          "abs_det_Bv": 102.37001555848909,
+          "center": [
+            [
+              1.2480249372084113,
+              -0.011810340758096715
+            ],
+            [
+              0.10015412684158288,
+              0.000992876793229376
+            ]
+          ],
+          "det_Bv": [
+            1.0542985035462231,
+            -102.36458635734684
+          ],
+          "endpoint_residual": 4.5371450698799303e-11,
+          "principal_arg_det_Bv": -1.5604972452087957,
+          "root_residual": 2.7664728212422934e-12,
+          "sigma_min_Bv": 0.040871183153628005,
+          "sqrt_lift_phase": -0.7802486226043979,
+          "tau": 0.0001,
+          "unwrapped_arg_det_Bv": -1.5604972452087957
+        },
+        {
+          "T": [
+            9.788825568081242,
+            0.0000017844451790522318
+          ],
+          "abs_det_Bv": 144.77512075497384,
+          "center": [
+            [
+              1.2480545445817175,
+              -0.016702579080682668
+            ],
+            [
+              0.10014030126049896,
+              0.0014039710440780714
+            ]
+          ],
+          "det_Bv": [
+            2.108462188330811,
+            -144.7597664298255
+          ],
+          "endpoint_residual": 4.563381355207555e-11,
+          "principal_arg_det_Bv": -1.5562321066504445,
+          "root_residual": 8.654908766182488e-14,
+          "sigma_min_Bv": 0.05780001132069954,
+          "sqrt_lift_phase": -0.7781160533252223,
+          "tau": 0.0002,
+          "unwrapped_arg_det_Bv": -1.5562321066504445
+        },
+        {
+          "T": [
+            9.789125568081243,
+            0.0000070535181281522576
+          ],
+          "abs_det_Bv": 228.91935420757125,
+          "center": [
+            [
+              1.248143369265044,
+              -0.026410210985349635
+            ],
+            [
+              0.10009883342262549,
+              0.002219072575455878
+            ]
+          ],
+          "det_Bv": [
+            5.270145976546286,
+            -228.8586819244517
+          ],
+          "endpoint_residual": 4.5566497562283794e-11,
+          "principal_arg_det_Bv": -1.5477724473150227,
+          "root_residual": 6.598230335581473e-12,
+          "sigma_min_Bv": 0.09138713806019408,
+          "sqrt_lift_phase": -0.7738862236575114,
+          "tau": 0.0005,
+          "unwrapped_arg_det_Bv": -1.5477724473150227
+        },
+        {
+          "T": [
+            9.789625568081242,
+            0.000019949792564997706
+          ],
+          "abs_det_Bv": 323.7640932810268,
+          "center": [
+            [
+              1.2482914189450653,
+              -0.03735230539351803
+            ],
+            [
+              0.10002975005797195,
+              0.0031363558242355743
+            ]
+          ],
+          "det_Bv": [
+            10.536937719121825,
+            -323.59258496076325
+          ],
+          "endpoint_residual": 4.577551891219327e-11,
+          "principal_arg_det_Bv": -1.538245469804186,
+          "root_residual": 2.883099695680476e-14,
+          "sigma_min_Bv": 0.1292345585655373,
+          "sqrt_lift_phase": -0.769122734902093,
+          "tau": 0.001,
+          "unwrapped_arg_det_Bv": -1.538245469804186
+        },
+        {
+          "T": [
+            9.790625568081243,
+            0.000056423312410976305
+          ],
+          "abs_det_Bv": 457.93817062762326,
+          "center": [
+            [
+              1.2485875503445405,
+              -0.05283156458837616
+            ],
+            [
+              0.09989169479846127,
+              0.004430141739944521
+            ]
+          ],
+          "det_Bv": [
+            21.06053906129093,
+            -457.4536280457529
+          ],
+          "endpoint_residual": 4.627993280818814e-11,
+          "principal_arg_det_Bv": -1.5247901810257958,
+          "root_residual": 1.5099451277324811e-13,
+          "sigma_min_Bv": 0.18274725684643642,
+          "sqrt_lift_phase": -0.7623950905128979,
+          "tau": 0.002,
+          "unwrapped_arg_det_Bv": -1.5247901810257958
+        },
+        {
+          "T": [
+            9.793625568081243,
+            0.00022299449135068867
+          ],
+          "abs_det_Bv": 724.3907388011871,
+          "center": [
+            [
+              1.249476200987871,
+              -0.08356924451563873
+            ],
+            [
+              0.09947842277606955,
+              0.006979377645624794
+            ]
+          ],
+          "det_Bv": [
+            52.552928250527195,
+            -722.4819251671454
+          ],
+          "endpoint_residual": 4.609851398746202e-11,
+          "principal_arg_det_Bv": -1.4981847731187878,
+          "root_residual": 8.443262530102315e-13,
+          "sigma_min_Bv": 0.28886352290144657,
+          "sqrt_lift_phase": -0.7490923865593939,
+          "tau": 0.005,
+          "unwrapped_arg_det_Bv": -1.4981847731187878
+        },
+        {
+          "T": [
+            9.798625568081242,
+            0.0006305431882819263
+          ],
+          "abs_det_Bv": 1025.2654245724043,
+          "center": [
+            [
+              1.2509581410770065,
+              -0.11826761618734993
+            ],
+            [
+              0.09879262832350921,
+              0.009810794036506587
+            ]
+          ],
+          "det_Bv": [
+            104.78838297664505,
+            -1019.8963602331231
+          ],
+          "endpoint_residual": 4.6572578641781335e-11,
+          "principal_arg_det_Bv": -1.4684114403781348,
+          "root_residual": 3.681556584010779e-13,
+          "sigma_min_Bv": 0.40831451228207777,
+          "sqrt_lift_phase": -0.7342057201890674,
+          "tau": 0.01,
+          "unwrapped_arg_det_Bv": -1.4684114403781348
+        },
+        {
+          "T": [
+            9.808625568081242,
+            0.0017824219362965567
+          ],
+          "abs_det_Bv": 1452.54152023756,
+          "center": [
+            [
+              1.253925236191019,
+              -0.16748935908377485
+            ],
+            [
+              0.09743235457683262,
+              0.013706593472039189
+            ]
+          ],
+          "det_Bv": [
+            208.3848695353357,
+            -1437.516126574858
+          ],
+          "endpoint_residual": 4.621082813204833e-11,
+          "principal_arg_det_Bv": -1.4268373566238297,
+          "root_residual": 5.6419040864984345e-14,
+          "sigma_min_Bv": 0.5768817381964423,
+          "sqrt_lift_phase": -0.7134186783119149,
+          "tau": 0.02,
+          "unwrapped_arg_det_Bv": -1.4268373566238297
+        },
+        {
+          "T": [
+            9.838625568081243,
+            0.007033422474590227
+          ],
+          "abs_det_Bv": 2312.3560704930387,
+          "center": [
+            [
+              1.2628523436971988,
+              -0.26592399986820753
+            ],
+            [
+              0.09344374998672056,
+              0.020881549622725086
+            ]
+          ],
+          "det_Bv": [
+            513.515852086549,
+            -2254.615724774808
+          ],
+          "endpoint_residual": 4.9764557455456294e-11,
+          "principal_arg_det_Bv": -1.3468545056571193,
+          "root_residual": 4.1830369534863436e-10,
+          "sigma_min_Bv": 0.909515595694758,
+          "sqrt_lift_phase": -0.6734272528285596,
+          "tau": 0.05,
+          "unwrapped_arg_det_Bv": -1.3468545056571193
+        },
+        {
+          "T": [
+            9.888625568081242,
+            0.019835156962912107
+          ],
+          "abs_det_Bv": 3322.4237619431847,
+          "center": [
+            [
+              1.2778173467586955,
+              -0.37862612615925584
+            ],
+            [
+              0.08711232801165973,
+              0.027704287509554445
+            ]
+          ],
+          "det_Bv": [
+            1011.3803928184103,
+            -3164.744753522341
+          ],
+          "endpoint_residual": 5.0142211711263894e-11,
+          "principal_arg_det_Bv": -1.2614769201004121,
+          "root_residual": 5.481133348991641e-11,
+          "sigma_min_Bv": 1.2803388045941095,
+          "sqrt_lift_phase": -0.6307384600502061,
+          "tau": 0.1,
+          "unwrapped_arg_det_Bv": -1.2614769201004121
+        },
+        {
+          "T": [
+            9.988625568081241,
+            0.055764145229135885
+          ],
+          "abs_det_Bv": 4922.660788904566,
+          "center": [
+            [
+              1.308070795724962,
+              -0.5424629088503813
+            ],
+            [
+              0.07566780472622797,
+              0.03426839748980275
+            ]
+          ],
+          "det_Bv": [
+            2019.8378890369784,
+            -4489.191925572928
+          ],
+          "endpoint_residual": 7.853655938612382e-11,
+          "principal_arg_det_Bv": -1.1479976935282084,
+          "root_residual": 1.8900640053848002e-10,
+          "sigma_min_Bv": 1.795338821304511,
+          "sqrt_lift_phase": -0.5739988467641042,
+          "tau": 0.2,
+          "unwrapped_arg_det_Bv": -1.1479976935282084
+        },
+        {
+          "T": [
+            10.288625568081242,
+            0.21619342013578136
+          ],
+          "abs_det_Bv": 9736.869348521075,
+          "center": [
+            [
+              1.401236775411374,
+              -0.8881968282458886
+            ],
+            [
+              0.05046565311453401,
+              0.03510024558064957
+            ]
+          ],
+          "det_Bv": [
+            5968.399725258481,
+            -7693.167711008497
+          ],
+          "endpoint_residual": 7.119616821943187e-10,
+          "principal_arg_det_Bv": -0.9109833839687599,
+          "root_residual": 1.6642307317027578e-9,
+          "sigma_min_Bv": 2.7831039637843524,
+          "sqrt_lift_phase": -0.4554916919843799,
+          "tau": 0.4999999999999999,
+          "unwrapped_arg_det_Bv": -0.9109833839687598
+        },
+        {
+          "T": [
+            10.788625568081242,
+            0.5902606710698798
+          ],
+          "abs_det_Bv": 22850.515299473,
+          "center": [
+            [
+              1.5625135512683777,
+              -1.3162736749322097
+            ],
+            [
+              0.029039203330457997,
+              0.023135545973931484
+            ]
+          ],
+          "det_Bv": [
+            20013.811274722015,
+            -11026.940088313693
+          ],
+          "endpoint_residual": 9.456856388311389e-11,
+          "principal_arg_det_Bv": -0.5035849632711641,
+          "root_residual": 4.132881892622277e-11,
+          "sigma_min_Bv": 3.8661556462297404,
+          "sqrt_lift_phase": -0.25179248163558204,
+          "tau": 1,
+          "unwrapped_arg_det_Bv": -0.5035849632711641
+        },
+        {
+          "T": [
+            11.488625568081241,
+            1.2421302754480177
+          ],
+          "abs_det_Bv": 65330.43185161284,
+          "center": [
+            [
+              1.7952924080074095,
+              -1.802227341057733
+            ],
+            [
+              0.016482199879444416,
+              0.009781290919588539
+            ]
+          ],
+          "det_Bv": [
+            64114.637124298366,
+            12545.064062720887
+          ],
+          "endpoint_residual": 5.074738146664941e-10,
+          "principal_arg_det_Bv": 0.19322494248886862,
+          "root_residual": 3.1620840640419543e-13,
+          "sigma_min_Bv": 5.007988393843255,
+          "sqrt_lift_phase": 0.09661247124443426,
+          "tau": 1.6999999999999997,
+          "unwrapped_arg_det_Bv": 0.1932249424888685
+        },
+        {
+          "T": [
+            12,
+            1.774406550372197
+          ],
+          "abs_det_Bv": 133603.44603844173,
+          "center": [
+            [
+              1.9680863950046878,
+              -2.113435461433162
+            ],
+            [
+              0.011495942382815242,
+              0.004203591964577146
+            ]
+          ],
+          "det_Bv": [
+            96411.21400360353,
+            92491.93806866724
+          ],
+          "endpoint_residual": 1.2819064616973487e-9,
+          "principal_arg_det_Bv": 0.7646535984036981,
+          "root_residual": 2.3048780229264652e-12,
+          "sigma_min_Bv": 5.731616944377875,
+          "sqrt_lift_phase": 0.3823267992018489,
+          "tau": 2.211374431918758,
+          "unwrapped_arg_det_Bv": 0.7646535984036978
+        },
+        {
+          "T": [
+            13,
+            2.891389599736991
+          ],
+          "abs_det_Bv": 502975.633080967,
+          "center": [
+            [
+              2.3095475818541047,
+              -2.657646478504238
+            ],
+            [
+              0.0053961098673171075,
+              -0.0006210740869795361
+            ]
+          ],
+          "det_Bv": [
+            -191673.33752629877,
+            465022.38564904494
+          ],
+          "endpoint_residual": 4.523222513802062e-9,
+          "principal_arg_det_Bv": 1.9617591620843915,
+          "root_residual": 1.3183482574876874e-10,
+          "sigma_min_Bv": 7.040891614869826,
+          "sqrt_lift_phase": 0.9808795810421955,
+          "tau": 3.211374431918758,
+          "unwrapped_arg_det_Bv": 1.961759162084391
+        }
+      ],
+      "tau_range": [
+        0.000002,
+        3.211374431918758
+      ]
+    },
+    "phase": "P35",
+    "scope_guard": {
+      "computed": [
+        "the complex 2x2 endpoint Jacobi determinant in the declared (a,phi)/(a_dot,phi_dot) order",
+        "a dense sampled table with no recorded zero and its recursively unwrapped phase",
+        "the two sampled square-root lifts relative to the first regulated point",
+        "the opposite half phase of the corresponding inverse-square-root endpoint factor",
+        "finite-resolution consistency with the -i sqrt(tau) near-fold law in the frozen orientation",
+        "six separate conjugate-input lower spot checks and local two-sided BVP continuity checks"
+      ],
+      "not_computed": [
+        "an absolute determinant/Maslov orientation or original-cycle normalization",
+        "an oriented incoming-to-outgoing Picard-Lefschetz connection at the fold",
+        "zeros between samples, other sheets, inhomogeneous modes, or good ends",
+        "a regularized full field-lapse BFV/SUGRA superdeterminant",
+        "complete relative cycles or a global Picard-Lefschetz coefficient",
+        "a WDW density matrix or physical quantum state"
+      ]
+    }
+  }
+}
