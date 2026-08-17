@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Phase 36 -- local Airy/Gauss--Manin fold connection.
 
-The script fixes the exact local contour algebra at the simple Dirichlet fold
-of Phases 33--35 and independently continues both real stationary roots around
-small upper/lower semicircles in the complex proper-time plane.  The exact
-layer distinguishes integration cycles, their inverse-transpose upward duals,
-Stokes basis changes, and the relative endpoint-determinant half phase.  The
-numerical layer only identifies which complex BVP root is reached by each
-lateral continuation.
+The script fixes exact identities in a declared local contour basis at the
+simple Dirichlet fold of Phases 33--35 and independently continues both real
+stationary roots around small upper/lower semicircles in the complex
+proper-time plane.  The exact layer distinguishes integration cycles, their
+inverse-transpose upward duals, Stokes basis changes, and the relative
+endpoint-determinant half phase.  The numerical layer only identifies which
+complex BVP root is reached by each lateral continuation.
+
+The CW and CCW ordered bases use different companion cycles, so their first
+dual vectors are different lateralized basis elements.  The calculation does
+not transport one common incoming physical dual through both continuations.
 
 This is a local, finite-dimensional connection calculation.  It neither
 chooses the upper rather than lower lateral continuation nor computes a full
@@ -88,7 +92,7 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     tracked_saddle = sp.sqrt(z)
     other_saddle = -sp.sqrt(z)
     audit.exact(
-        "P36.canonical.tracked_sheet_is_Ai_saddle",
+        "P36.canonical.positive_t_is_decaying_Ai_saddle",
         sp.diff(airy_exponent, t).subs(t, tracked_saddle) == 0
         and sp.diff(airy_exponent, t).subs(t, other_saddle) == 0
         and sp.simplify(
@@ -96,7 +100,7 @@ def exact_controls(audit: Audit) -> dict[str, object]:
             + sp.Rational(2, 3) * z ** sp.Rational(3, 2)
         )
         == 0,
-        "with physical soft x mapped by u=-alpha x and t=-u, the tracked x>0 sheet is t=+sqrt(z), the decaying Ai saddle",
+        "for f=t^3/3-zt, t=+sqrt(z) is stationary and has exponent -2 z^(3/2)/3; identifying it with the tracked x>0 sheet uses the separately declared x-to-u-to-t chart",
     )
 
     # Contour-chain coordinates use (Gamma_U,Gamma_L).  The three decay-ray
@@ -115,11 +119,11 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     ) / 2
     airy_from_arm = sp.Matrix([[-1, -1], [sp.I, -sp.I]])
     audit.exact(
-        "P36.contours.Airy_arm_connection",
+        "P36.contours.declared_Airy_arm_matrix",
         sp.simplify(arm_from_airy * airy_from_arm) == sp.eye(2)
         and sp.simplify(airy_from_arm * arm_from_airy) == sp.eye(2)
         and airy_from_arm[0, :] == sp.Matrix([[-1, -1]]),
-        "in arm order (U,L), [J_U,J_L]^T=1/2[[-1,-i],[-1,i]][Ai,Bi]^T and Ai=-J_U-J_L",
+        "the declared arm-order (U,L) and (Ai,Bi) matrices are exact inverses and encode Ai=-J_U-J_L",
     )
 
     gauss_manin = sp.Matrix([[-1, -1], [0, 1]])
@@ -143,28 +147,40 @@ def exact_controls(audit: Audit) -> dict[str, object]:
 
     dual_map = gauss_manin.inv().T
     audit.exact(
-        "P36.Gauss_Manin.inverse_transpose_dual",
+        "P36.Gauss_Manin.inverse_transpose_pairing",
         dual_map == sp.Matrix([[-1, 0], [-1, 1]])
         and sp.simplify(gauss_manin.T * dual_map) == sp.eye(2),
-        "upward duals transform by G^(-T), preserving the cycle-dual pairing; the tracked CW dual is -K_U",
+        "dual bases transform by G^(-T), preserving the pairing in each separately declared ordered lateral basis",
     )
 
-    # The same matrix occurs CCW after swapping the outgoing arm naming.  It
-    # therefore sends the same tracked incoming dual to a different arm.
-    k_u, k_l = sp.symbols("K_U K_L")
-    tracked_cw = -k_u
-    tracked_ccw = -k_l
+    # A dual basis depends on the complete ordered cycle basis, not only on
+    # its first element Gamma_0.  CW and CCW use different companion cycles,
+    # so their first dual vectors are distinct elements in the common
+    # (K_U,K_L) coordinates.  This is basis dependence, not transport of one
+    # fixed incoming physical dual to two different arms.
+    cw_in_dual = cw_in.inv().T
+    ccw_in_dual = ccw_in.inv().T
     audit.exact(
-        "P36.lateral.CW_CCW_counterexample",
-        sp.simplify(tracked_cw - tracked_ccw) != 0,
-        "CW sends the tracked dual to -K_U while CCW sends it to -K_L; local regularity alone does not choose between independent arms",
+        "P36.lateral.CW_CCW_basis_label_dependence",
+        cw_in_dual[0, :] == sp.Matrix([[-1, 0]])
+        and ccw_in_dual[0, :] == sp.Matrix([[0, -1]])
+        and cw_in_dual[0, :] != ccw_in_dual[0, :]
+        and cw_in * cw_in_dual.T == sp.eye(2)
+        and ccw_in * ccw_in_dual.T == sp.eye(2),
+        "the first dual of Gamma_0 is -K_U in the (Gamma_0,Gamma_L) basis and -K_L in the (Gamma_0,Gamma_U) basis; these are different lateralized dual conventions, not one transported dual",
     )
 
+    e_minus = gamma_l
+    e_plus = -gamma_u
     stokes_down = sp.Matrix([[1, 0], [1, 1]])
     stokes_up = sp.Matrix([[1, -1], [0, 1]])
     audit.exact(
         "P36.Stokes.enhanced_lateral_matrices",
-        stokes_down.det() == 1
+        e_plus == gamma_0 + gamma_l
+        and e_minus == gamma_l
+        and stokes_down * sp.Matrix.vstack(gamma_0.T, gamma_l.T)
+        == sp.Matrix.vstack(gamma_0.T, e_plus.T)
+        and stokes_down.det() == 1
         and stokes_up.det() == 1
         and stokes_up == stokes_down.inv().T,
         "for E_-=Gamma_L and E_+=-Gamma_U=Gamma_0+Gamma_L, S_down=[[1,0],[1,1]] and S_up=S_down^(-T)",
@@ -175,11 +191,11 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     sqrt_transport = sp.diag(upper_sqrt, lower_sqrt)
     inverse_sqrt_transport = sp.diag(1 / upper_sqrt, 1 / lower_sqrt)
     audit.exact(
-        "P36.detline.arm_half_phase",
+        "P36.detline.declared_fold_half_phase_basis",
         sp.simplify(upper_sqrt**2 + sp.I) == 0
         and sp.simplify(lower_sqrt**2 - sp.I) == 0
         and sp.simplify(sqrt_transport * inverse_sqrt_transport) == sp.eye(2),
-        "in arm order (U,L), sqrt(det) has phases (e^-i pi/4,e^+i pi/4) and the inverse-sqrt endpoint factor has the opposite half phases",
+        "in the declared leading-fold arm order (U,L), sqrt(det) has phases (e^-i pi/4,e^+i pi/4) and the inverse-sqrt endpoint factor has the opposite half phases",
     )
 
     zeta, hard_determinant = sp.symbols(
@@ -192,12 +208,17 @@ def exact_controls(audit: Audit) -> dict[str, object]:
         canonical_u, tracked_u
     ) / 2
     full_determinant = hard_determinant * soft_factor
+    separate_prefactor = 1 / sp.sqrt(full_determinant)
+    factorized_prefactor = (
+        1 / sp.sqrt(hard_determinant) / zeta ** sp.Rational(1, 4)
+    )
     audit.exact(
-        "P36.uniformization.no_soft_determinant_double_counting",
+        "P36.uniformization.conditional_soft_hard_factorization",
         sp.simplify(soft_factor - sp.sqrt(zeta)) == 0
         and sp.simplify(full_determinant / soft_factor - hard_determinant)
-        == 0,
-        "Airy uniformization replaces the soft zeta^(-1/4) factor: a uniform kernel may multiply only the regular hard quotient d_hat=d/[-Phi''(u_track)/2], never full d^(-1/2) times Airy",
+        == 0
+        and sp.simplify(separate_prefactor - factorized_prefactor) == 0,
+        "conditional on d=sqrt(zeta)*d_hat, the separate-saddle inverse square root factorizes as d_hat^(-1/2)*zeta^(-1/4); using CFU without duplicating this soft factor is bookkeeping, not a derivation of the hard Airy/Airy-prime coefficients",
     )
 
     identity = sp.eye(2)
@@ -206,19 +227,19 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     bare_ccw = sp.exp(-sp.I * sp.pi / 4) * identity
     lateral_ratio = sp.simplify(bare_cw * bare_ccw.inv())
     audit.exact(
-        "P36.detline.bare_root_monodromy",
+        "P36.detline.formal_bare_root_ratio_under_declared_lift",
         lateral_ratio == sp.I * permutation
         and sp.simplify(lateral_ratio**2 + sp.eye(2)) == sp.zeros(2),
-        "after one declared inverse-sqrt trivialization, the bare BVP-root lateral ratio is iP and its square is -I; this is not the Gauss--Manin cycle matrix G",
+        "in the declared leading-fold inverse-sqrt trivialization, the formal root-basis lateral ratio is iP and its square is -I; this is neither the finite-radius BVP value nor the Gauss--Manin cycle matrix G",
     )
 
     fold_time = sp.Rational(9788625568, 10**9)
     fold_patch_radius = sp.Integer(1)
     largest_phase32_cap = sp.Rational(1, 10)
     audit.exact(
-        "P36.scope.Phase32_cannot_locally_choose_fold_arm",
+        "P36.scope.fold_patch_disjoint_from_Phase32_origin_caps",
         fold_time - fold_patch_radius - largest_phase32_cap > 0,
-        "the fold patch is disjoint from every recorded Phase-32 origin cap, so that bypass supplies an origin lateral chamber but no local U/L fold-arm choice",
+        "the declared radius-one fold patch is disjoint from every recorded Phase-32 origin cap with |T|<=0.1",
     )
 
     return {
@@ -245,8 +266,9 @@ def exact_controls(audit: Audit) -> dict[str, object]:
             "CCW": "(Gamma_0,Gamma_U)_in -> (Gamma_L,Gamma_U)_out",
         },
         "dual_G_inverse_transpose": [[-1, 0], [-1, 1]],
-        "CW_tracked_dual": "-K_U",
-        "CCW_tracked_dual": "-K_L",
+        "CW_first_dual_in_basis_Gamma0_GammaL": "-K_U",
+        "CCW_first_dual_in_basis_Gamma0_GammaU": "-K_L",
+        "dual_warning": "these are distinct lateralized dual-basis elements, not two images of one common transported physical dual",
         "Stokes_down": [[1, 0], [1, 1]],
         "Stokes_up": [[1, -1], [0, 1]],
         "determinant_half_phase": {
@@ -255,9 +277,9 @@ def exact_controls(audit: Audit) -> dict[str, object]:
             "epsilon_U_L": "independent relative signs remain unresolved by the endpoint determinant alone",
         },
         "uniformization_double_counting_guard": (
-            "the soft sqrt(zeta) factor in det Bv is already replaced by the "
-            "Airy function; only a derived regular hard quotient d_hat may be "
-            "multiplied into a uniform kernel, and d_hat is not constructed here"
+            "conditional on d=sqrt(zeta)*d_hat, the soft factor belongs in the "
+            "CFU uniformization rather than being multiplied twice; the hard "
+            "quotient and the even/odd Airy/Airy-prime amplitudes are not constructed here"
         ),
     }
 
@@ -533,7 +555,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         < 2e-9
         and float(real_small[0]["det_Bv"]) < 0.0
         < float(real_small[1]["det_Bv"]),
-        "the Phase-25 recorded real sheet is incoming I_+ (positive physical soft coordinate and positive endpoint determinant), the canonical Ai saddle after the frozen sign map",
+        "a fresh Phase-36 continuation using the Phase-25 solver and seed identifies incoming I_+ by positive physical soft coordinate and endpoint determinant; its Ai label additionally uses the frozen sign chart",
     )
 
     radius_records: list[dict[str, object]] = []
@@ -587,7 +609,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         return record["laterals"][name]
 
     audit.numerical(
-        "P36.BVP.four_path_residuals",
+        "P36.BVP.twelve_path_residuals",
         max(
             path["max_root_residual"]
             for record in radius_records
@@ -625,7 +647,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     upper_small = lateral(smallest, "upper_T_CW")
     lower_small = lateral(smallest, "lower_T_CCW")
     audit.numerical(
-        "P36.BVP.tracked_Ai_arm_mapping",
+        "P36.BVP.tracked_root_lateral_sheet_mapping",
         upper_small["paths"][1]["end_soft"][1] < 0.0
         and lower_small["paths"][1]["end_soft"][1] > 0.0,
         "the tracked I_plus/Ai root reaches the P34 upper U arm through the upper-T/CW bypass and the lower L arm through the lower-T/CCW bypass",
@@ -657,7 +679,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         and abs(smallest_ratios["path_mean"][1]) < 1e-4
         and path_deviations[0] < path_deviations[1] < path_deviations[2]
         and path_deviations[0] < 1e-4,
-        "three finite radii of the continuous action-gap lift are consistent with one locally analytic CFU coordinate and approach a real-positive zeta/(Tc-T) coefficient about 16.94791",
+        "three finite radii of the sampled action-gap lift are consistent with one locally analytic CFU coordinate and a real-positive zeta/(Tc-T) coefficient near 16.94791; this is not an analyticity or limit proof",
     )
 
     def rotations(record: dict[str, object], name: str) -> list[float]:
@@ -677,14 +699,14 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         for values in lower_rotations
     ]
     audit.numerical(
-        "P36.detline.lateral_half_phase_limit",
+        "P36.detline.finite_radius_half_phase_consistency",
         upper_errors[0] < upper_errors[1] < upper_errors[2]
         and lower_errors[0] < lower_errors[1] < lower_errors[2]
         and upper_errors[0] < 0.011
         and lower_errors[0] < 0.011
         and abs(np.mean(upper_rotations[0]) + np.pi / 2.0) < 2e-9
         and abs(np.mean(lower_rotations[0]) - np.pi / 2.0) < 2e-9,
-        "sampled det Bv phases approach -pi/2 on upper-T/CW and +pi/2 on lower-T/CCW, yielding the declared opposite square-root half phases",
+        "the errors decrease across three recorded radii and the smallest finite radius is within 0.011 of the declared opposite fold half phases; this is not a certified zero-radius limit",
     )
 
     audit.numerical(
@@ -711,11 +733,11 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     upper_complex = upper_end[:, 0] + 1.0j * upper_end[:, 1]
     lower_complex = lower_end[:, 0] + 1.0j * lower_end[:, 1]
     audit.numerical(
-        "P36.counterexample.CW_CCW_both_regular",
+        "P36.BVP.CW_CCW_conjugate_sampled_regular_roots",
         np.linalg.norm(lower_complex - np.conjugate(upper_complex)) < 2e-10
         and upper_small["paths"][1]["min_sampled_sigma_Bv"] > 0.05
         and lower_small["paths"][1]["min_sampled_sigma_Bv"] > 0.05,
-        "the CW/U and CCW/L continuations of the same tracked root are distinct conjugate regular solutions, furnishing the explicit local nonselection counterexample",
+        "the CW/U and CCW/L continuations of the tracked BVP root are distinct conjugate solutions with nonzero sampled endpoint blocks; both local root-sheet laterals survive the recorded gates",
     )
 
     return {
@@ -725,7 +747,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             "center": fold_center.tolist(),
             "right_null_oriented": right_null.tolist(),
         },
-        "recorded_Phase25_sheet_at_smallest_radius": {
+        "Phase36_recomputed_sheet_using_Phase25_solver_and_seed": {
             "center": recorded_center.tolist(),
             "physical_soft": recorded_soft,
             "incoming_label": "I_plus_tracked_Ai",
@@ -747,7 +769,7 @@ def run() -> dict[str, object]:
     numerical = numerical_controls(audit)
     result: dict[str, object] = {
         "phase": "P36",
-        "calculation": "local Airy/Gauss-Manin connection with prescribed-complex-T BVP lateral counterexample",
+        "calculation": "declared local Airy contour-basis identities with prescribed-complex-T BVP lateral tests",
         "exact_checks": audit.exact_passed,
         "numerical_checks": audit.numerical_passed,
         "exact_check_ids": audit.exact_ids,
@@ -757,11 +779,12 @@ def run() -> dict[str, object]:
         "frozen_conventions": exact,
         "numerical_controls": numerical,
         "claim_status": {
-            "the_exact_local_Airy_contour_and_Gauss_Manin_connection_is_fixed": "SUPPORTED_IN_THE_DECLARED_ORIENTED_CONTOUR_BASES",
+            "the_exact_declared_local_Airy_contour_basis_identities_are_fixed": "SUPPORTED_IN_THE_SEPARATELY_ORDERED_LATERAL_BASES",
             "the_tracked_real_Ai_root_has_regular_CW_U_and_CCW_L_continuations": "SUPPORTED_ON_THREE_FINITE_SEMICIRCLE_RADII",
-            "Phase32_below_origin_plus_Phase35_relative_det_transport_selects_U_over_L": "CONTRADICTED_AS_A_LOCAL_INFERENCE_BOTH_LATERALS_PASS_THE_RECORDED_LOCAL_GATES",
+            "Phase32_below_origin_plus_Phase35_relative_det_transport_is_by_itself_sufficient_to_select_U_over_L": "CONTRADICTED_WITHIN_THE_RECORDED_LOCAL_GATES_BOTH_ROOT_SHEET_LATERALS_SURVIVE",
+            "one_common_incoming_upward_dual_was_transported_through_both_laterals": "OPEN_NOT_COMPUTED_THE_TWO_FIRST_DUALS_BELONG_TO_DIFFERENT_LATERALIZED_BASES",
             "the_absolute_determinant_signs_epsilon_U_L_are_fixed": "OPEN_REQUIRES_ORIENTED_ORIGINAL_CYCLE_AND_REGULATOR",
-            "the_regular_hard_determinant_quotient_d_hat_is_constructed": "OPEN_THE_SOFT_DOUBLE_COUNTING_GUARD_IS_EXACT_BUT_THE_QUOTIENT_IS_NOT_NUMERICALLY_DERIVED",
+            "the_regular_hard_determinant_quotient_and_CFU_Airy_Airy_prime_coefficients_are_constructed": "OPEN_THE_CONDITIONAL_SOFT_FACTOR_BOOKKEEPING_DOES_NOT_DERIVE_THEM",
             "one_lateral_is_selected_by_a_complete_original_relative_cycle": "OPEN_NOT_COMPUTED",
             "the_global_PL_intersection_coefficient_n_sigma_is_fixed": "OPEN_REQUIRES_ALL_JOINT_DUALS_GOOD_ENDS_AND_ORIENTATIONS",
             "a_full_BFV_SUGRA_or_physical_quantum_state_is_obtained": "OPEN_OUT_OF_SCOPE",
@@ -769,16 +792,18 @@ def run() -> dict[str, object]:
         "scope_guard": {
             "computed": [
                 "the exact three-ray Airy contour relation and Ai/Bi-to-arm matrix",
-                "CW and CCW Gauss-Manin cycle maps and inverse-transpose upward-dual maps",
+                "the algebra of the separately ordered CW and CCW cycle bases and their inverse-transpose dual bases",
+                "the fact that the first dual vectors in those two lateralized bases are different basis elements, not transport of one common dual",
                 "the enhanced lateral Stokes matrices in one frozen convention",
-                "relative endpoint-determinant square-root and inverse-square-root half phases with unresolved signs",
+                "declared leading-fold endpoint-determinant half-phase conventions with unresolved signs and finite-radius consistency tests",
                 "twelve prescribed-complex-T BVP root paths on three shrinking semicircle radii",
                 "the BVP-root permutation, action-gap winding, CFU coordinate fit, and sampled determinant phase",
             ],
             "not_computed": [
+                "transport of one specified incoming physical upward dual or realization of the formal K_U and K_L cycles by the BVP roots",
                 "a choice between the upper/CW and lower/CCW lateral continuations",
                 "absolute determinant signs, unsampled zeros, other sheets, inhomogeneous modes, or good ends",
-                "the regular hard determinant quotient needed by an absolute Airy-uniform kernel",
+                "the regular hard determinant quotient and the even/odd CFU amplitudes needed by an absolute Airy/Airy-prime uniform kernel",
                 "a full joint field-lapse flow or regularized BFV/SUGRA superdeterminant",
                 "complete relative cycles, a global intersection coefficient, WDW state, initial-value peak, or SUSY scale",
             ],

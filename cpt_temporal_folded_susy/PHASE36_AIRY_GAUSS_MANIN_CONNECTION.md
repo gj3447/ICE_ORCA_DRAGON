@@ -2,50 +2,54 @@
 
 ## Result
 
-The local connection problem left open by Phases 33--35 is now fixed in a
-declared oriented Airy contour basis.  The tracked real Phase-25 root is the
-decaying Airy saddle.  The standard declared local decay contour
-\(\Gamma_0\) through that saddle represents
+The exact Airy contour-chain and basis identities left open by Phases
+33--35 are now fixed in separately declared clockwise (CW) and
+counterclockwise (CCW) bases.  The tracked real Phase-25 root maps to the
+decaying Airy saddle, and the declared local decay contour \(\Gamma_0\)
+represents
 
 \[
 \boxed{\operatorname{Ai}(z)=-J_U(z)-J_L(z)}.
 \]
 
-This local representation does not prove that the uncomputed original
-gravitational relative cycle equals \(\Gamma_0\).
-
-Clockwise and counterclockwise continuation use the same local
-Gauss--Manin matrix after their outgoing bases are ordered separately, but
-their upward-dual images are different:
+This representation does not prove that the uncomputed original
+gravitational relative cycle equals \(\Gamma_0\).  More importantly, CW and
+CCW use different companion cycles:
 
 \[
-\boxed{K_{\rm tracked}\longmapsto-K_U\quad({\rm CW})},
+(\Gamma_0,\Gamma_L)_{\rm CW},
 \qquad
-\boxed{K_{\rm tracked}\longmapsto-K_L\quad({\rm CCW})}.
+(\Gamma_0,\Gamma_U)_{\rm CCW}.
 \]
 
-Both choices were realized by direct prescribed-complex-
-\(T\) boundary-value continuations on three shrinking semicircles.  The
-upper-
-\(T\)/CW path reaches the Phase-34 upper arm; the lower-
-\(T\)/CCW path reaches its lower conjugate.  Both pass the same local
-endpoint, action-gap, and sampled determinant tests.
+Consequently their first dual vectors are different basis elements,
+\(-K_U\) and \(-K_L\).  They are **not** two images of one common incoming
+physical dual.  The exact algebra therefore records lateralized basis
+dependence; it does not yet transport a specified physical upward cycle
+through the fold.
 
-Therefore the result has two layers:
+The numerical calculation independently realizes both **root-sheet**
+laterals on three shrinking finite semicircles.  The upper-\(T\)/CW path of
+the tracked BVP root reaches the Phase-34 upper arm, while the
+lower-\(T\)/CCW path reaches its lower conjugate.  Both pass the same local
+endpoint, action-gap, and sampled determinant gates.
+
+Therefore the bounded result is
 
 \[
-\boxed{\text{exact local Airy/Gauss--Manin connection: fixed}},
+\boxed{\text{declared local Airy contour-basis identities: fixed}},
 \]
 
 \[
 \boxed{
-\text{upper versus lower lateral selection from Phases 32 and 35: not fixed}.
+\text{the recorded local gates alone do not select upper versus lower}.
 }
 \]
 
-This is a concrete local nonselection counterexample, not a failure of the
-connected saddle or fold.  It does not compute a full joint BFV cycle, a
-global Picard--Lefschetz coefficient, or a quantum state.
+This is a local insufficiency result, not a global Picard--Lefschetz
+counterexample.  A complete original contour and its homotopy may still
+select one lateral.  Phase 36 does not compute that contour, a full joint BFV
+cycle, a global intersection coefficient, or a quantum state.
 
 ## 1. Canonical sign and decay-ray contours
 
@@ -74,7 +78,7 @@ f(+\sqrt z,z)=-\frac23z^{3/2}.
 \]
 
 It is the decaying \(\operatorname{Ai}\) saddle.  This sign is also checked by
-continuing the actual Phase-25 real branch to
+a fresh Phase-36 continuation using the Phase-25 solver and seed out to
 \(T_c-2\times10^{-4}\), where
 
 \[
@@ -137,7 +141,7 @@ The executable verifies that these matrices are exact inverses.  In
 particular, local regularity does not reduce the two-dimensional Airy
 solution space to one arm.
 
-## 2. Gauss--Manin cycle and upward-dual maps
+## 2. Declared Gauss--Manin cycle-basis and formal dual-basis maps
 
 For CW continuation, order the bases as
 
@@ -171,7 +175,8 @@ matrix does **not** mean that the geometrical outgoing arm is the same; its
 first outgoing basis vector is \(\Gamma_U\) in the CW chart and
 \(\Gamma_L\) in the CCW chart.
 
-Preservation of the cycle--dual pairing requires the upward cycles to obey
+Within either separately ordered basis, preservation of the cycle--dual
+pairing requires the formal dual basis to obey
 
 \[
 K_{\rm in}=G^{-T}K_{\rm out},
@@ -180,10 +185,20 @@ G^{-T}=
 \begin{pmatrix}-1&0\\-1&1\end{pmatrix}.
 \]
 
-Consequently the same tracked incoming dual maps to \(-K_U\) in the CW
-chart and \(-K_L\) in the CCW chart.  This is the exact algebraic
-counterexample to inferring a unique outgoing arm from local fold
-regularity.
+But the first dual depends on the complete incoming basis.  Direct inversion
+gives
+
+\[
+K_{0}^{(\Gamma_0,\Gamma_L)}=-K_U,
+\qquad
+K_{0}^{(\Gamma_0,\Gamma_U)}=-K_L.
+\]
+
+These are distinct lateralized dual-basis elements.  Calling both of them
+the “same tracked incoming dual” would be a basis error.  The algebra fixes
+the transition matrices for the declared bases; it does not transport one
+specified physical dual, nor does the numerical BVP calculation realize
+the formal upward cycles \(K_U\) and \(K_L\).
 
 ## 3. Enhanced lateral/Stokes basis
 
@@ -211,7 +226,9 @@ permutation of the two numerical BVP roots described below.
 
 ## 4. Determinant half phase and the double-counting guard
 
-Phase 35 fixed the local endpoint-basis convention
+Phase 35 supplied the following finite-resolution fold convention,
+consistent with the recorded trend but not an error-certified
+\(\tau\rightarrow0\) limit:
 
 \[
 d_U\sim-iC\sqrt\tau,
@@ -238,9 +255,9 @@ L_{d^{-1/2}}=
 \qquad \epsilon_U,\epsilon_L\in\{+1,-1\}.
 \]
 
-The endpoint calculation does not determine the two signs.  With one
-declared finite-dimensional trivialization, the bare BVP-root lateral ratio
-is
+The endpoint calculation does not determine the two signs.  In one declared
+**leading-fold** finite-dimensional trivialization, the formal root-basis
+lateral ratio is
 
 \[
 iP,
@@ -250,8 +267,10 @@ P=\begin{pmatrix}0&1\\1&0\end{pmatrix},
 (iP)^2=-I.
 \]
 
-This bare root/determinant monodromy is not the cycle matrix \(G\), and it is
-not a global Maslov or intersection coefficient.
+This formal limiting ratio is not the exact finite-radius BVP value, the
+cycle matrix \(G\), or a global Maslov/intersection coefficient.  For
+example, at \(r=2\times10^{-4}\) the tracked-root determinant phase rotation
+has magnitude \(1.56069368\), about \(0.01010\) below \(\pi/2\).
 
 There is also a mandatory uniformization guard.  For the canonical fold
 
@@ -278,13 +297,13 @@ then the separate-saddle factor contains
 d^{-1/2}=\widehat d^{-1/2}\zeta^{-1/4}.
 \]
 
-The Airy function already replaces the singular
-\(\zeta^{-1/4}\) soft-mode asymptotic.  A uniform kernel may therefore
-multiply the Airy term by a derived regular hard quotient
-\(\widehat d^{-1/2}\), but it must **not** multiply
-\(d^{-1/2}\) by the Airy function again.  Phase 36 enforces this exact
-no-double-counting rule; it does not yet construct the physical or regulated
-\(\widehat d\).
+Conditional on this factorization, CFU uniformization replaces the singular
+\(\zeta^{-1/4}\) soft-mode asymptotic rather than multiplying it a second
+time.  This is a structural bookkeeping rule, not a derivation of an
+analytic nonzero \(\widehat d\).  A generic uniform kernel also recombines
+the two branch amplitudes into even/odd coefficients multiplying
+\(\operatorname{Ai}\) and \(\operatorname{Ai}'\); Phase 36 constructs none
+of those hard coefficients or the physical regulated determinant.
 
 ## 5. Direct complex-BVP continuation
 
@@ -392,9 +411,9 @@ At the smallest radius,
 
 The maximum deviation from the path mean is
 \(8.37\times10^{-5}\), increasing with radius.  These three finite
-semicircles are consistent with one locally analytic CFU coordinate and an
-approach to a real-positive coefficient near \(16.94791\).  They do not by
-themselves prove analyticity or an error-certified zero-radius limit.
+semicircles are consistent with the local analytic CFU form and a
+real-positive coefficient near \(16.94791\).  They do not by themselves
+prove analyticity or an error-certified zero-radius limit.
 
 The smallest sampled endpoint-Jacobi singular value over all paths is
 
@@ -408,7 +427,7 @@ independently reintegrated full endpoint residual is
 \(4.75\times10^{-11}\).  These are sampled finite-dimensional tests; they do
 not exclude a zero between samples or on another sheet.
 
-## 7. What the counterexample decides
+## 7. What the local insufficiency result decides
 
 The upper and lower tracked endpoints at the smallest radius have soft
 coordinates
@@ -428,9 +447,10 @@ Airy regularity, and relative endpoint transport therefore leave both
 laterals alive.
 
 The Phase-32 lapse bypass is confined to origin caps with \(|T|\leq0.1\),
-whereas the fold is at \(T_c\simeq9.7886\).  Its recorded projected crossing
-can assign data to the incoming reduced dual, but it does not pass through
-this fold chart and cannot locally distinguish \(-K_U\) from \(-K_L\).
+whereas the fold is at \(T_c\simeq9.7886\).  Its recorded projected
+lapse-base crossing fixes only a coordinate sign under declared
+orientations.  It does not pass through this fold chart or select one of the
+two root-sheet laterals.
 Phase 35 transports the relative determinant on the already chosen upper
 and lower branches; its unresolved signs \(\epsilon_U,\epsilon_L\) do not
 supply the missing original-cycle choice.
@@ -459,12 +479,12 @@ Computed:
 - the exact oriented three-ray Airy contour relation;
 - the exact \((\operatorname{Ai},\operatorname{Bi})\)-to-\((J_U,J_L)\)
   connection;
-- the separately ordered CW and CCW Gauss--Manin cycle maps;
-- the inverse-transpose upward-dual maps and enhanced lateral Stokes
-  matrices;
-- the relative endpoint-determinant half-phase layer, with its unresolved
-  signs explicit;
-- the exact soft-mode double-counting prohibition;
+- the algebra of the separately ordered CW and CCW contour bases;
+- the inverse-transpose dual-basis maps and enhanced lateral Stokes matrices,
+  without identifying them as one transported physical dual;
+- the declared leading-fold determinant half-phase convention and its
+  finite-radius consistency, with unresolved signs explicit;
+- the conditional soft/hard determinant bookkeeping rule;
 - twelve finite-radius prescribed-complex-\(T\) BVP paths and their root
   permutations, action-gap winding, CFU consistency, and sampled determinant
   phases.
@@ -473,8 +493,9 @@ Open and not computed:
 
 - selection of CW/upper rather than CCW/lower by one declared complete
   original relative cycle;
-- the regular hard determinant quotient \(\widehat d\) needed for an
-  absolute uniform kernel;
+- transport of one specified incoming upward cycle through the fold;
+- the regular hard determinant quotient \(\widehat d\) and even/odd CFU
+  coefficients needed for an absolute Airy/Airy-prime uniform kernel;
 - absolute determinant/Maslov signs, unsampled zeros, other sheets,
   inhomogeneous modes, and all good ends;
 - a full joint field--lapse flow or regulated BFV/SUGRA superdeterminant;
