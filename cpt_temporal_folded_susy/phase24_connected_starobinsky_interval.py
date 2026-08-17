@@ -90,7 +90,9 @@ def euclidean_rhs(_tau: float, state: np.ndarray) -> np.ndarray:
     return np.array(
         [
             scale_velocity,
-            -scale * (phi_velocity**2 + potential(phi)) / 3.0,
+            (1.0 - scale_velocity**2) / (2.0 * scale)
+            - scale * phi_velocity**2 / 4.0
+            - scale * potential(phi) / 2.0,
             phi_velocity,
             potential_prime(phi)
             - 3.0 * scale_velocity * phi_velocity / scale,
@@ -399,6 +401,29 @@ def exact_controls(audit: Audit) -> dict[str, object]:
         and sp.diff(lagrangian, phi_dot)
         == 2 * sp.pi**2 * scale**3 * phi_dot,
         "the endpoint Hamilton-Jacobi gradient uses the canonical momenta of the reduced action",
+    )
+
+    symbolic_v = sp.symbols("V", real=True, finite=True)
+    full_scale_eom = (
+        (1 - scale_dot**2) / (2 * scale)
+        - scale * phi_dot**2 / 4
+        - scale * symbolic_v / 2
+    )
+    symbolic_constraint = (
+        scale_dot**2
+        - 1
+        - scale**2 * (phi_dot**2 / 2 - symbolic_v) / 3
+    )
+    reduced_scale_eom = -scale * (phi_dot**2 + symbolic_v) / 3
+    audit.exact(
+        "P24.action.off_shell_scale_equation",
+        sp.simplify(
+            full_scale_eom
+            - reduced_scale_eom
+            + symbolic_constraint / (2 * scale)
+        )
+        == 0,
+        "the full scale-factor Euler-Lagrange equation differs from its constraint-reduced form by -C/(2a)",
     )
 
     jm_entries = sp.symbols("jm0:4", real=True)

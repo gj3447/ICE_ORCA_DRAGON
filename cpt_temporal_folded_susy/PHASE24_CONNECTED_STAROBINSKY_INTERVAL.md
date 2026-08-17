@@ -48,10 +48,10 @@ I_E=2\pi^2\int d\tau\left[
 \right].
 \]
 
-Its equations and constraint are
+The unconstrained Euler--Lagrange equations are
 
 \[
-a''=-\frac a3\left(\phi'^2+V\right),
+a''=\frac{1-a'^2}{2a}-\frac a4\phi'^2-\frac a2V,
 \qquad
 \phi''+3\frac{a'}a\phi'=V_{,\phi},
 \]
@@ -60,6 +60,17 @@ a''=-\frac a3\left(\phi'^2+V\right),
 \mathcal C
 =a'^2-1-\frac{a^2}{3}\left(\frac12\phi'^2-V\right)=0.
 \]
+
+On the constraint surface only, the scale-factor equation reduces to
+
+\[
+a''=-\frac a3\left(\phi'^2+V\right),
+\qquad
+a''_{\rm full}-a''_{\mathcal C=0}=-\frac{\mathcal C}{2a}.
+\]
+
+This distinction is immaterial for the constrained saddle but essential for
+the fixed-length off-shell mutation in Section 5.
 
 This phase deliberately supplies two calibration values:
 
@@ -145,7 +156,7 @@ The Richardson singular spectrum is
 
 \[
 \sigma(K_{+-})
-=\left(1902.7254364,\;2.58\times10^{-9}\right).
+=\left(1902.7254364,\;1.30\times10^{-9}\right).
 \]
 
 The small-to-large singular ratios at successive step sizes are
@@ -185,9 +196,9 @@ v_\pm^A=\frac{\partial\mathcal H_\pm}{\partial p_{\pm A}}.
 The normalized numerical residuals of these two identities are
 
 \[
-2.10\times10^{-12},
+8.37\times10^{-13},
 \qquad
-3.54\times10^{-12}.
+3.28\times10^{-12}.
 \]
 
 Since the $2\times2$ mixed block is nonzero but has one left and one right
@@ -211,7 +222,7 @@ Hamiltonian constraint is not imposed off the base saddle, then
 
 \[
 \sigma(K_{+-}^{T\,\mathrm{fixed}})
-=(1297.25934,607.46791).
+=(1297.02951,613.38930).
 \]
 
 The mixed block is full rank.  Consequently:

@@ -54,7 +54,7 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `phase23_homogeneous_minisuperspace_density.py` | full-real-lapse rigging, KG current, compact spectral density, quadratic zero root와 decompactification을 가르는 exact+numerical 실행체 |
 | `PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md` | Phase 23 보고서 — 32 exact + 4 numerical checks. supplied \(B_L\)은 regulated density를 만들지만 constraint/CPT-like pairing만으로 그 가중치는 선택되지 않음 |
 | `phase24_connected_starobinsky_interval.py` | real connected Starobinsky \(S^3\times I\) saddle, Hamilton-principal Hessian, constraint-null mixed block, fixed-length mutant와 contour obstruction을 가르는 실행체 |
-| `PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md` | Phase 24 보고서 — 4 exact + 14 numerical checks. connected response와 rank-one constrained channel은 지지되지만 positive density·physical entropy·thimble 선택은 미유도 |
+| `PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md` | Phase 24 보고서 — 5 exact + 14 numerical checks. connected response와 rank-one constrained channel은 지지되지만 positive density·physical entropy·thimble 선택은 미유도 |
 | `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–23의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
