@@ -88,7 +88,7 @@ q_0=(3.56680319357,1.01858094640,
 \]
 
 \[
-I(q_0)=1.40669054283449.
+I(q_0)=1.40669054283430.
 \]
 
 The endpoint velocities are
@@ -278,6 +278,13 @@ reading, the Schmidt magnitude is
 \[
 |t|=\frac{\kappa_K}{1+\sqrt{1-\kappa_K^2}}
 =0.130336866,
+\]
+
+with normalized Schmidt probabilities
+
+\[
+p_n=(1-|t|^2)|t|^{2n},
+\qquad n=0,1,2,\ldots.
 \]
 
 \[

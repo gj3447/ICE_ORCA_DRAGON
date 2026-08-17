@@ -128,6 +128,14 @@ def integrate_state(
     rtol: float = 2e-13,
     atol: float = 2e-15,
 ) -> np.ndarray:
+    if not np.isfinite(proper_length) or proper_length <= 0.0:
+        raise ValueError("proper_length must be finite and strictly positive")
+    if (
+        initial_state.shape != (5,)
+        or not np.all(np.isfinite(initial_state))
+        or initial_state[0] <= 0.0
+    ):
+        raise ValueError("initial_state must be finite with positive scale factor")
     solution = solve_ivp(
         euclidean_rhs,
         (0.0, proper_length),
@@ -138,7 +146,12 @@ def integrate_state(
     )
     if not solution.success:
         raise RuntimeError(solution.message)
-    return solution.y[:, -1]
+    final_state = solution.y[:, -1]
+    if not np.all(np.isfinite(final_state)) or final_state[0] <= 0.0:
+        raise RuntimeError(
+            "integration returned non-finite data or a nonpositive scale factor"
+        )
+    return final_state
 
 
 def midpoint_benchmark() -> tuple[np.ndarray, np.ndarray, float]:
@@ -241,6 +254,7 @@ def solve_constrained_boundaries(
     residual_norm = float(np.linalg.norm(residual_vector))
     if (
         not np.all(np.isfinite(root_result.x))
+        or not np.isfinite(residual_norm)
         or residual_norm > 2e-9
         or root_result.x[2] <= 0.0
     ):
@@ -262,6 +276,38 @@ def solve_constrained_boundaries(
         ),
         proper_length,
     )
+    final_bvp_residual = float(
+        np.linalg.norm(
+            [
+                final_state[0] - right_scale,
+                final_state[2] - right_phi,
+            ]
+        )
+    )
+    constraint_residual = max(
+        abs(
+            constraint(
+                np.array(
+                    [
+                        left_scale,
+                        left_scale_velocity,
+                        left_phi,
+                        left_phi_velocity,
+                    ]
+                )
+            )
+        ),
+        abs(constraint(final_state)),
+    )
+    if (
+        not np.isfinite(final_bvp_residual)
+        or final_bvp_residual > 2e-9
+        or not np.isfinite(constraint_residual)
+        or constraint_residual > 2e-9
+    ):
+        raise RuntimeError(
+            "tight constrained integration failed its endpoint or constraint gate"
+        )
     gradient = canonical_gradient(
         left_scale,
         left_phi,
@@ -274,22 +320,8 @@ def solve_constrained_boundaries(
         gradient=gradient,
         shooting_data=root_result.x.copy(),
         final_state=final_state,
-        bvp_residual=float(np.linalg.norm(residual_vector[:2])),
-        constraint_residual=max(
-            abs(
-                constraint(
-                    np.array(
-                        [
-                            left_scale,
-                            left_scale_velocity,
-                            left_phi,
-                            left_phi_velocity,
-                        ]
-                    )
-                )
-            ),
-            abs(constraint(final_state)),
-        ),
+        bvp_residual=final_bvp_residual,
+        constraint_residual=constraint_residual,
     )
 
 
@@ -318,7 +350,11 @@ def solve_fixed_length_boundaries(
     root_result = root(residual, velocity_guess, method="hybr", tol=1e-12)
     residual_vector = residual(root_result.x)
     residual_norm = float(np.linalg.norm(residual_vector))
-    if not np.all(np.isfinite(root_result.x)) or residual_norm > 2e-9:
+    if (
+        not np.all(np.isfinite(root_result.x))
+        or not np.isfinite(residual_norm)
+        or residual_norm > 2e-9
+    ):
         raise RuntimeError(
             f"fixed-length shooting failed: {root_result.message}; "
             f"residual={residual_vector.tolist()}"
@@ -329,6 +365,16 @@ def solve_fixed_length_boundaries(
         ),
         proper_length,
     )
+    final_bvp_residual = float(
+        np.linalg.norm(
+            [
+                final_state[0] - right_scale,
+                final_state[2] - right_phi,
+            ]
+        )
+    )
+    if not np.isfinite(final_bvp_residual) or final_bvp_residual > 2e-9:
+        raise RuntimeError("tight fixed-length integration failed its endpoint gate")
     gradient = canonical_gradient(
         left_scale,
         left_phi,
@@ -343,7 +389,7 @@ def solve_fixed_length_boundaries(
             [root_result.x[0], root_result.x[1], proper_length]
         ),
         final_state=final_state,
-        bvp_residual=float(np.linalg.norm(residual_vector)),
+        bvp_residual=final_bvp_residual,
         constraint_residual=max(
             abs(
                 constraint(
@@ -639,13 +685,20 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         scalar_precision[0, 1]
         / np.sqrt(scalar_precision[0, 0] * scalar_precision[1, 1])
     )
+    audit.numerical(
+        "P24.gaussian.fixed_scale_scalar_positive",
+        np.all(np.isfinite(scalar_precision))
+        and scalar_eigenvalues[0] > 0.0
+        and abs(normalized_precision_coupling) < 1.0,
+        "with both boundary scale factors fixed, the amplitude precision is finite and positive definite",
+    )
     scalar_covariance = 0.5 * np.linalg.inv(scalar_precision)
     position_correlation = float(
         scalar_covariance[0, 1]
         / np.sqrt(scalar_covariance[0, 0] * scalar_covariance[1, 1])
     )
     schmidt_magnitude = float(
-        normalized_precision_coupling
+        abs(normalized_precision_coupling)
         / (
             1.0
             + np.sqrt(1.0 - normalized_precision_coupling**2)
@@ -656,11 +709,6 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         - schmidt_magnitude**2
         / (1.0 - schmidt_magnitude**2)
         * np.log(schmidt_magnitude**2)
-    )
-    audit.numerical(
-        "P24.gaussian.fixed_scale_scalar_positive",
-        scalar_eigenvalues[0] > 0,
-        "with both boundary scale factors fixed, the scalar 2x2 precision is positive",
     )
     audit.numerical(
         "P24.gaussian.conditional_parameters",
@@ -675,7 +723,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     audit.numerical(
         "P24.contour.full_boundary_hessian_indefinite",
         negative_modes == 2,
-        "the real-boundary Hessian has two negative eigenvalues and is not a positive density kernel",
+        "the real-boundary Hessian has two negative eigenvalues and is not a normalizable real-contour Gaussian precision",
     )
 
     scale_indices = [0, 2]
@@ -731,7 +779,8 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         "full_boundary_hessian_eigenvalues": full_eigenvalues.tolist(),
         "fixed_length_cross_singular_values": fixed_singular_values.tolist(),
         "conditional_fixed_scale_scalar": {
-            "precision": scalar_precision.tolist(),
+            "amplitude_precision": scalar_precision.tolist(),
+            "density_precision": (2.0 * scalar_precision).tolist(),
             "position_covariance": scalar_covariance.tolist(),
             "eigenvalues": scalar_eigenvalues.tolist(),
             "normalized_precision_coupling": normalized_precision_coupling,

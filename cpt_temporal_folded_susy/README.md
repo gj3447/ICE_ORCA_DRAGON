@@ -172,7 +172,8 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - 같은 endpoint를 고정하되 \(T=0.7\)을 모든 variation에서 고정하면 mixed block은 full rank다.
   따라서 rank one은 connectedness만이 아니라 Hamiltonian-constraint reduction의 결과다.
 - full boundary Hessian과 real-contour scalar Schur complement는 indefinite다. fixed-\(a_\pm\)
-  scalar subblock의 \(0.08756\)-nat 값은 flat-measure pure-two-mode Gaussian diagnostic일 뿐,
+  scalar subblock에서 precision coupling \(\kappa_K=+0.25632\)는 position correlation
+  \(\rho_\phi=-0.25632\)에 해당한다. \(0.08756\)-nat 값은 flat-measure pure-two-mode Gaussian diagnostic일 뿐,
   physical seam entropy나 positive WDW density가 아니다. Phase 24는 아직 ontology에 색인되지 않았다.
 - Phase 25는 fixed-boundary principal function이 \(T_*=0.7\)에서
   \(W_T=0\), \(W_{TT}=-8.923143\)인 nondegenerate lapse saddle임을 확인했다. 실수 \(T\)는

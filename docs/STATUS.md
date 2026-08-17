@@ -398,14 +398,15 @@ exit 0 with **6 exact checks and 14 numerical checks**.
 
 - The explicitly supplied calibration $\phi_{\rm center}=1$, $T_0=0.7$ gives
   $q_0=(3.56680319,1.01858095,3.56680319,1.01858095)$ and
-  $I_0=1.40669054283449$. These inputs are not an initial-value selection rule.
+  $I_0=1.40669054283430$. These inputs are not an initial-value selection rule.
 - Constraint-preserving endpoint variations solve the proper length as a modulus. The connected mixed
   Hessian has singular values $(1902.725436,1.3\times10^{-9})$ after fourth-order Richardson control;
   the small value converges away and the Hamilton--Jacobi flow vectors are its null directions.
 - Holding $T=0.7$ fixed instead gives a full-rank mixed spectrum $(1297.02951,613.38930)$. Rank one is
   therefore a constraint-reduction result, not a consequence of connectedness alone.
 - The complete boundary Hessian has two negative eigenvalues, and the real-contour scalar Schur
-  complement is indefinite. The fixed-scale $0.0875594$-nat Gaussian diagnostic is not a physical
+  complement is indefinite. The fixed-scale precision coupling is $+0.2563195$, while the position
+  covariance correlation is $-0.2563195$. The $0.0875594$-nat Gaussian diagnostic is not a physical
   gravitational entropy without a contour, boundary factorization, physical measure, and trace test.
 - The live runnable catalog rose to 55 at Phase 24. The machine ontology remains indexed through Phase 23 pending a
   frozen Phase 24 evidence snapshot.
