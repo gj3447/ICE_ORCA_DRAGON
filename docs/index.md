@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 60 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 61 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -42,6 +42,7 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md`](../cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md) | Lorentzian Wick convention, half-line resolvent, and raw zero-lapse endpoint singularity |
 | [`../cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md) | bounded crossing and reduced BFV--BRST proper-length diagnostic |
 | [`../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md`](../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md) | distributional zero-lapse identity kernel, BFV modulus measure, and conformal-sign obstruction |
+| [`../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md`](../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md) | finite-cutoff coupled conformal/lapse tangent cycle, relative determinant magnitude, and determinant-line obstruction |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

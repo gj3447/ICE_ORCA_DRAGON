@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–29 snapshots in [`../evidence/`](../evidence/), including [`phase25-result.json`](../evidence/phase25-result.json), [`phase26-result.json`](../evidence/phase26-result.json), [`phase27-result.json`](../evidence/phase27-result.json), [`phase28-result.json`](../evidence/phase28-result.json), and [`phase29-result.json`](../evidence/phase29-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–30 snapshots in [`../evidence/`](../evidence/), including [`phase25-result.json`](../evidence/phase25-result.json), [`phase26-result.json`](../evidence/phase26-result.json), [`phase27-result.json`](../evidence/phase27-result.json), [`phase28-result.json`](../evidence/phase28-result.json), [`phase29-result.json`](../evidence/phase29-result.json), and [`phase30-result.json`](../evidence/phase30-result.json).
 
 ## Reading `PASS` correctly
 
-All 282 Phase 16–29 named exact checks have `status: PASS`. The snapshots contain 114 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, and 7 in Phase 29, for 115 numerical controls in all. Phase 29 contributes 18 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that the original-contour intersection coefficient is known, or that a physical state has been constructed.
+All 292 Phase 16–30 named exact checks have `status: PASS`. The snapshots contain 124 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, and 10 in Phase 30, for 125 numerical controls in all. Phase 30 contributes 10 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that the original-contour intersection coefficient is known, or that a physical state has been constructed.
 
 The scientific direction is stored on:
 
@@ -34,12 +34,15 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 27 | `result:P27_LORENTZIAN_LAPSE_ENDPOINT_20260817`; `2026-08-17T15:26:44.354Z` | `cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py`; SHA-256 `36a454ca3f98277cca2c24904a708ec67fa8f7c3556f376e6613cdc0823e0d04`; finalized in `2065de0125674ba9c72888e3d95bc84fec66850b` | Exit `0`; 13 exact checks plus 8 numerical checks |
 | 28 | `result:P28_THIMBLE_BFV_INTERSECTION_20260817`; `2026-08-17T15:26:44.354Z` | `cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py`; SHA-256 `496990308456bcc1d28f9649b99053d2a05499c6d3c2c0d233d5576a39a3f018`; introduced in `2065de0125674ba9c72888e3d95bc84fec66850b` | Exit `0`; 10 exact checks plus 9 numerical checks |
 | 29 | `result:P29_ZERO_LAPSE_UNIFORM_KERNEL_20260817`; `2026-08-17T15:45:17.466Z` | `cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py`; SHA-256 `0fa8314d3c0385c70ad569ce1c2ad65d506580eef50ef589e7fa2da5f7fb3e76`; introduced/finalized in `4794ff6de9f5f5726bcdd633f64fd4988eb197de` | Exit `0`; 18 exact checks plus 7 numerical checks |
+| 30 | `result:P30_CONFORMAL_BFV_DETERMINANT_LINE_20260817`; `2026-08-17T16:38:39.344Z` | `cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py`; SHA-256 `4c402a50aa5f32966faa7e01d65623933ea7d9cff2b43f25b76f89b5efa36cc7`; introduced/finalized in `bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d` | Exit `0`; 10 exact checks plus 10 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
 The Phase 25–28 report hashes are `921ffbb7…`, `99b7d7d7…`, `9db755b6…`, and `1c721018…`; the corresponding frozen snapshot hashes are `62e124dc…`, `69cea996…`, `121a440f…`, and `114374d8…`. Phase 28's executable first appears in `2065de0…`; its final report bytes, after source-scope and notation repair, first appear in `1d48edc6160ed915c1a13f21e6f82d7211e8e6fe`. Each executable, report, and snapshot is a distinct artifact node.
 
 The Phase 29 report hash is `d3aa7abf…`; its frozen snapshot hash is `dd13f707…`. Both the final executable and report bytes first appear in `4794ff6de9f5f5726bcdd633f64fd4988eb197de`.
+
+The Phase 30 report hash is `0cf7a2cb39392ab07580207ec4bceb910f200eb9d07f4b5fc7090d1ea456914d`; its fresh snapshot hash is `3ebfec6c9ce43ed499f70ac151508be6a8ad90bca8341d0c7feec2adfac0fadf`. The exact final executable and report bytes first appear in `bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d`.
 
 ## Evidence-to-claim index
 
@@ -97,6 +100,10 @@ The Phase 29 report hash is `d3aa7abf…`; its frozen snapshot hash is `dd13f707
 | `evidence:p29-reduced-bfv-modulus` | 6 exact + 1 numerical | Fixed-parameter BFV modulus factor is T-independent — `SUPPORTS`; unit ghost cancels the pointwise pole — `CONTRADICTS` | Reduced one-constraint fixed-parameter gauge only; no full endpoint or nonzero-mode determinant |
 | `evidence:p29-lapse-operator-and-bypass` | 7 exact + 1 numerical | Inserted lapse power is harmless — `CONTRADICTS`; positive half lapse is a projector — `CONTRADICTS` | Spectral distributions and bounded finite-truncation arc; no global PL coefficient |
 | `evidence:p29-conformal-sign-and-density` | 3 exact + 1 numerical | One imaginary rotation damps both signs — `CONTRADICTS`; identity distribution is trace-class density — `CONTRADICTS` | Frozen indefinite kinetic form and identity cutoff; no conformal thimble or physical trace |
+| `evidence:p30-principal-cycle-and-maslov` | 5 exact + 1 numerical | Finite-cutoff local coupled field–lapse Gaussian cycle exists — `SUPPORTS`; one holomorphic lapse sheet normalizes both real sides — `CONTRADICTS` | Principal homogeneous rays and real-axis Fresnel/Maslov control; no continuum determinant-line gluing |
+| `evidence:p30-fibered-schur-cycle` | 3 exact + 4 numerical | Finite-cutoff local coupled field–lapse Gaussian cycle exists — `SUPPORTS`; tested standard product rotation is sufficient — `CONTRADICTS` | Frozen midpoint Hessians and Schur-shifted tangent only; no nonlinear global relative cycle or full BFV super-Hessian |
+| `evidence:p30-relative-determinant-and-prefactor` | 1 exact + 5 numerical | Declared midpoint relative magnitude has a recorded limit — `SUPPORTS`; bare absolute lattice sign is cutoff independent — `CONTRADICTS` | Declared time slicing and reference magnitude; not an absolute zeta determinant or continuum determinant-line phase |
+| `evidence:p30-endpoint-ray-limit` | 1 exact | Pointwise shifted-ray limit fixes an integer PL coefficient — `CONTRADICTS` | Common open-ray limit away from singular `N=0`; no endpoint-completed upward cycle or transverse intersection |
 
 ## Phase 16 check ledger
 
@@ -798,6 +805,50 @@ An inserted `N` changes the half-line pole and full-line constraint distribution
 
 The frozen kinetic matrix has one negative and one positive direction, so one imaginary-lapse sign cannot damp both. The identity kernel's Hilbert–Schmidt norm grows with cutoff dimension. Thus neither the conformal contour nor a trace-class physical density follows from the leading real-lapse identity limit.
 
+## Phase 30 check ledger
+
+### Principal coupled rays and Maslov line — 5 exact plus 1 numerical check
+
+- `P30.contour.coupled_principal_rays`
+- `P30.contour.local_holomorphic_normalization`
+- `P30.contour.Euclidean_conformal_ray`
+- `P30.Maslov.real_side_phase_cancellation`
+- `P30.Maslov.single_holomorphic_sheet_left_sign`
+- `P30.contour.complex_principal_normalization`
+
+The lapse-dependent gravity/scalar rays normalize the finite homogeneous principal Gaussian at the tested complex angles, including the Euclidean conformal ray. On the real axis the two Fresnel phases require the positive identity normalization `1/|N|`; a single holomorphic `1/N` sheet therefore has the wrong sign for negative real lapse. This diagnoses missing Maslov/determinant-line gluing rather than constructing it.
+
+### Fibered field–lapse Schur cycle — 3 exact plus 4 numerical checks
+
+- `P30.schur.field_lapse_completion`
+- `P30.contour.fibered_completion_identity`
+- `P30.lapse.Wick_and_thimble_jacobians`
+- `P30.saddle.frozen_stationary_control`
+- `P30.schur.discrete_bulk_lapse_convergence`
+- `P30.contour.direct_product_fails`
+- `P30.contour.fibered_cycle_passes`
+
+The discrete Schur complement converges to the recorded negative lapse curvature. The tested independent field and lapse rotations retain one negative direction, whereas the field-dependent lapse shift removes the mixed block and makes the real part positive at every tested finite cutoff. This is a local tangent cycle for the frozen homogeneous quadratic control, not a global nonlinear Picard–Lefschetz cycle and not a full BFV calculation.
+
+### Relative determinant magnitude and conditional prefactor — 1 exact plus 5 numerical checks
+
+- `P30.determinant.declared_midpoint_measure_power`
+- `P30.Jacobi.momentum_endpoint_identity`
+- `P30.Jacobi.sampled_no_caustic_to_saddle`
+- `P30.determinant.declared_midpoint_measure_convergence`
+- `P30.determinant.cutoff_parity_phase_obstruction`
+- `P30.prefactor.conditional_local_magnitude`
+
+The declared midpoint configuration measure makes the recorded relative endpoint magnitude converge to `1.01502655703`, consistent with the endpoint Jacobi/Van Vleck control. The naked Hessian ratio grows strongly, and the absolute field-determinant sign alternates between odd and even cutoffs. The reference cancels that finite-lattice sign only in the relative ratio; no absolute zeta determinant or continuum determinant-line phase follows.
+
+### Shifted endpoint rays — 1 exact check
+
+- `P30.PL.shifted_rays_share_pointwise_open_limit`
+
+Left- and right-shifted positive-imaginary rays have the same pointwise limit away from the singular endpoint. That equality does not create a transverse intersection at `N=0`, complete the upward dual cycle, or determine an integer PL coefficient.
+
+Phase 30 evaluates no new BFV ghost complex and no full phase-space BFV super-Hessian. Those objects, their primed superdeterminant, the determinant line through `N=0`, and regulator/mode-cutoff limits remain open.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -817,6 +868,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase26_global_lapse_flow.py
 uv run --locked python3 cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py
 uv run --locked python3 cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py
 uv run --locked python3 cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py
+uv run --locked python3 cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -995,5 +1047,28 @@ claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE
 ```
 
 Both traces are true together: the first is weak/distributional convergence under the declared local flat measure, while the second is pointwise behavior. `claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY` is separately contradicted, so neither trace supplies a physical WDW density.
+
+Phase 30 separates the local coupled cycle from the still-missing global determinant line:
+
+```text
+claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p30-fibered-schur-cycle
+  → VALID_WITHIN → scope:p30-frozen-coupled-cycle-and-relative-determinant
+  → MOTIVATES → open:p29-conformal-bfv-uniform-parametrix
+
+claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p30-fibered-schur-cycle
+  → VALID_WITHIN → scope:p30-frozen-coupled-cycle-and-relative-determinant
+
+claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p30-relative-determinant-and-prefactor
+  → VALID_WITHIN → scope:p30-frozen-coupled-cycle-and-relative-determinant
+  → MOTIVATES → open:p29-conformal-bfv-uniform-parametrix
+```
+
+The supported cycle is finite-cutoff, local, homogeneous, and quadratic. The supported relative magnitude uses the declared midpoint measure. Neither is a full BFV super-Hessian, a regulator-independent determinant-line phase, a global integer PL coefficient, or a physical state.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

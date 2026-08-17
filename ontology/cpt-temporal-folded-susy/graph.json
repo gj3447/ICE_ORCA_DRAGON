@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T15:45:17Z",
+  "updated_at_utc": "2026-08-17T16:38:39.344Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -152,6 +152,18 @@
         "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
         "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
         "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY"
+      ]
+    },
+    {
+      "question": "Does Phase 30 finish the conformal/BFV determinant and fix the physical thimble coefficient?",
+      "answer": "No. It constructs a convergent finite-cutoff homogeneous Gaussian tangent cycle only after a field-dependent lapse shift and records a stable relative magnitude in one declared midpoint calibration. The absolute lattice sign alternates with cutoff parity, the single-sheet Maslov gluing fails across real lapse zero, and no full BFV super-Hessian or global PL coefficient has been computed.",
+      "claim_ids": [
+        "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+        "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+        "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+        "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+        "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+        "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT"
       ]
     }
   ],
@@ -361,6 +373,26 @@
         "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
         "open:p29-conformal-bfv-uniform-parametrix",
         "open:p29-physical-endpoint-measure-and-ordering"
+      ]
+    },
+    {
+      "id": "reading-path:coupled-contour-to-determinant-line",
+      "title": "From the conformal-sign obstruction to the still-open physical determinant line",
+      "summary": "Follow the failed one-variable rotation, the finite-cutoff fibered Gaussian cycle, the declared relative magnitude, the absolute cutoff-parity obstruction, and the endpoint Maslov/global-cycle gates without mistaking them for a full BFV superdeterminant.",
+      "nodes": [
+        "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+        "concept:fibered-field-lapse-cycle-versus-product-rotation",
+        "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+        "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+        "concept:relative-determinant-magnitude-versus-determinant-line-phase",
+        "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+        "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+        "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet",
+        "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+        "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+        "open:p29-conformal-bfv-uniform-parametrix",
+        "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p28-global-relative-homology-and-intersection"
       ]
     }
   ],
@@ -4655,9 +4687,9 @@
       "id": "open:p29-conformal-bfv-uniform-parametrix",
       "type": "open_problem",
       "title": "Construct the conformal/BFV uniform endpoint parametrix",
-      "summary": "The leading real-lapse identity distribution does not select a conformal contour or include the all-orders gauge-reduced determinant.",
+      "summary": "Phase 30 supplies a finite-cutoff homogeneous Gaussian tangent cycle, but not its nonlinear continuum completion, full BFV phase-space super-Hessian, endpoint-uniform kernel, or determinant line.",
       "state": "OPEN",
-      "question": "After choosing the conformal/BFV integration cycle, does the endpoint-completed operator-valued uniform parametrix remain controlled across zero lapse with the full primed determinant?"
+      "question": "Does the finite-cutoff coupled tangent cycle extend to an endpoint-completed conformal/BFV operator-valued parametrix across zero lapse with the full primed determinant and fixed determinant-line phase?"
     },
     {
       "id": "open:p29-physical-endpoint-measure-and-ordering",
@@ -4718,6 +4750,240 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase29-result.json",
       "sha256": "dd13f707e4c5692155ccb28e9616b1e07b7aaa6bb68d1d90257180922cb425e0"
+    },
+    {
+      "id": "phase:p30",
+      "type": "phase",
+      "title": "Phase 30 — coupled conformal/lapse tangent cycle and determinant-line gate",
+      "summary": "A frozen finite-cutoff homogeneous quadratic control of a field-dependent lapse contour, one declared midpoint relative determinant magnitude, cutoff-parity signs, and a zero-lapse Maslov obstruction.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:fibered-field-lapse-cycle-versus-product-rotation",
+      "type": "concept",
+      "title": "Fibered field–lapse cycle versus product rotation",
+      "summary": "When the field and lapse Hessian blocks mix, separately rotating their negative directions need not give a positive real quadratic form; completing the square makes the field contour depend on the lapse fluctuation.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:relative-determinant-magnitude-versus-determinant-line-phase",
+      "type": "concept",
+      "title": "Relative determinant magnitude versus determinant-line phase",
+      "summary": "A declared reference measure can stabilize a relative determinant magnitude while the absolute finite-lattice sign alternates with cutoff parity, leaving the continuum determinant-line phase unconstructed.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet",
+      "type": "concept",
+      "title": "Real-lapse Maslov gluing versus one holomorphic sheet",
+      "summary": "The identity-normalized signature-minus-plus kernel has a 1/abs(N) real-axis prefactor, whereas a scalar 1/N sheet changes sign across zero and therefore needs additional determinant-line or Maslov gluing data.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "type": "claim",
+      "title": "A finite-cutoff local coupled field–lapse Gaussian cycle exists",
+      "summary": "Supported in the frozen homogeneous quadratic control: the Schur-shifted fibered contour removes the mixed block and has positive real quadratic form at every tested cutoff.",
+      "state": "SUPPORTED_IN_FROZEN_FINITE_CUTOFF_CONTROL",
+      "claim_id": "P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "statement": "For the frozen Phase-24/25 homogeneous saddle and tested finite midpoint discretizations, the declared field-dependent lapse tangent contour yields a convergent Gaussian quadratic form.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "type": "claim",
+      "title": "The tested standard product rotation is sufficient",
+      "summary": "Contradicted in the recorded finite-cutoff Hessians: independently rotating the negative field eigenspace and lapse direction leaves exactly one negative real direction.",
+      "state": "CONTRADICTED_IN_TESTED_FINITE_CUTOFF_CONTROL",
+      "claim_id": "P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "statement": "The tested standard direct product of the field negative-mode rotation and the lapse rotation makes the joint frozen homogeneous Gaussian convergent without a field-dependent shift.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "type": "claim",
+      "title": "The declared midpoint relative magnitude has a recorded limit",
+      "summary": "Supported numerically only for the declared hybrid midpoint calibration: the measure-normalized magnitude approaches the endpoint Jacobi/Van Vleck value 1.015026557031 over the recorded refinements.",
+      "state": "SUPPORTED_NUMERICALLY_IN_DECLARED_CALIBRATION",
+      "claim_id": "P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "statement": "Within the declared arithmetic-element and continuum-midpoint measure calibration, the relative determinant magnitude converges numerically to the endpoint Jacobi/Van Vleck magnitude over the tested cutoffs.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "type": "claim",
+      "title": "The bare absolute lattice sign is cutoff independent",
+      "summary": "Contradicted by the odd/even cutoff control: the field determinant sign alternates even though the declared relative reference magnitude remains positive.",
+      "state": "CONTRADICTED_BY_CUTOFF_PARITY",
+      "claim_id": "P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "statement": "The unprimed absolute finite-lattice field determinant has a cutoff-independent sign that already fixes the continuum determinant-line phase.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "type": "claim",
+      "title": "One holomorphic lapse sheet normalizes both real sides",
+      "summary": "Contradicted in the frozen signature-minus-plus principal kernel: 1/N has the wrong identity-kernel sign on the negative real side compared with 1/abs(N).",
+      "state": "CONTRADICTED_BY_MASLOV_ORIENTATION",
+      "claim_id": "P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "statement": "A single scalar holomorphic 1/N prefactor supplies the correctly oriented identity kernel on both nonzero sides of the real lapse axis without determinant-line gluing.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "type": "claim",
+      "title": "The pointwise shifted-ray limit fixes the integer PL coefficient",
+      "summary": "Contradicted as a shortcut: the two shifted rays share a pointwise open limit for positive height, but their contact at zero is a singular nontransverse endpoint and no complete upward cycle was computed.",
+      "state": "CONTRADICTED_AS_SUFFICIENT_GLOBAL_DATA",
+      "claim_id": "P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "statement": "The common pointwise open limit of the two shifted positive-imaginary rays alone assigns the physical integer Picard–Lefschetz coefficient of the connected saddle.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p30-principal-cycle-and-maslov",
+      "type": "evidence",
+      "title": "Phase 30 principal-cycle and Maslov checks",
+      "summary": "Five exact identities and one numerical control cover the lapse-dependent principal rays, their local Gaussian normalization, Euclidean image, real-side Fresnel phases, and the one-sheet sign obstruction.",
+      "state": "VERIFIED",
+      "observed_status": "5_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P30.contour.coupled_principal_rays",
+        "P30.contour.local_holomorphic_normalization",
+        "P30.contour.Euclidean_conformal_ray",
+        "P30.Maslov.real_side_phase_cancellation",
+        "P30.Maslov.single_holomorphic_sheet_left_sign",
+        "P30.contour.complex_principal_normalization"
+      ]
+    },
+    {
+      "id": "evidence:p30-fibered-schur-cycle",
+      "type": "evidence",
+      "title": "Phase 30 fibered Schur-cycle checks",
+      "summary": "Three exact identities and four numerical controls cover field–lapse completion, Wick/thimble Jacobians, the stationary benchmark, Schur convergence, direct-product failure, and the positive fibered Gaussian form.",
+      "state": "VERIFIED",
+      "observed_status": "3_EXACT_PASS_PLUS_4_NUMERICAL_PASS",
+      "check_ids": [
+        "P30.schur.field_lapse_completion",
+        "P30.contour.fibered_completion_identity",
+        "P30.lapse.Wick_and_thimble_jacobians",
+        "P30.saddle.frozen_stationary_control",
+        "P30.schur.discrete_bulk_lapse_convergence",
+        "P30.contour.direct_product_fails",
+        "P30.contour.fibered_cycle_passes"
+      ]
+    },
+    {
+      "id": "evidence:p30-relative-determinant-and-prefactor",
+      "type": "evidence",
+      "title": "Phase 30 relative determinant and prefactor checks",
+      "summary": "One exact measure identity and five numerical controls cover the endpoint Jacobi block, sampled no-caustic interval, declared relative-magnitude convergence, cutoff-parity sign, and conditional local-flat magnitude.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_5_NUMERICAL_PASS",
+      "check_ids": [
+        "P30.determinant.declared_midpoint_measure_power",
+        "P30.Jacobi.momentum_endpoint_identity",
+        "P30.Jacobi.sampled_no_caustic_to_saddle",
+        "P30.determinant.declared_midpoint_measure_convergence",
+        "P30.determinant.cutoff_parity_phase_obstruction",
+        "P30.prefactor.conditional_local_magnitude"
+      ]
+    },
+    {
+      "id": "evidence:p30-endpoint-ray-limit",
+      "type": "evidence",
+      "title": "Phase 30 endpoint-ray limit check",
+      "summary": "One exact identity records the shared pointwise open limit of two shifted rays without promoting their singular endpoint contact to an intersection number.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS",
+      "check_ids": [
+        "P30.PL.shifted_rays_share_pointwise_open_limit"
+      ]
+    },
+    {
+      "id": "scope:p30-frozen-coupled-cycle-and-relative-determinant",
+      "type": "scope",
+      "title": "P30 frozen coupled cycle and relative determinant",
+      "summary": "The Phase-24/25 homogeneous saddle, finite midpoint field–lapse Hessians, declared hybrid measure calibration, and local endpoint-ray diagnostics.",
+      "state": "ACTIVE",
+      "includes": [
+        "the frozen reduced-unit Starobinsky boundary data and T=0.7 saddle",
+        "finite Dirichlet midpoint Hessians for homogeneous a, phi, and the proper-length modulus",
+        "a spectral rotation of the negative field eigenspace and its Schur-shifted lapse fiber",
+        "odd/even finite-lattice determinant-sign controls",
+        "one declared arithmetic-element and continuum-midpoint configuration-measure calibration",
+        "a sampled real Jacobi interval and a conditional local-flat magnitude",
+        "the pointwise open limit of two shifted endpoint rays"
+      ],
+      "excludes": [
+        "a nonlinear continuum thimble or proof of admissible asymptotic ends",
+        "the full homogeneous BFV phase-space ghost/gauge super-Hessian",
+        "an absolute zeta determinant, priming prescription, or cutoff-independent determinant-line phase",
+        "inhomogeneous graviton, scalar, vector, fermion, gravitino, Goldstino, and ghost modes",
+        "a complete saddle and upward-cycle census or physical integer PL coefficient",
+        "a physical WDW endpoint measure, factor ordering, state, density, Pin lift, or SUSY spectrum"
+      ]
+    },
+    {
+      "id": "source:forman-1987-functional-determinants",
+      "type": "source",
+      "title": "Functional determinants and geometry",
+      "summary": "CITES-only boundary-value determinant framework; it does not turn the Phase-30 hybrid midpoint magnitude into an absolute gravitational determinant or fix its phase.",
+      "state": "PRIMARY",
+      "citation": "R. Forman, Functional determinants and geometry, Inventiones Mathematicae 88 (1987) 447–493",
+      "uri": "https://doi.org/10.1007/BF01391828",
+      "version": "Invent. Math. 88 (1987) 447–493"
+    },
+    {
+      "id": "source:gratton-turok-2001",
+      "type": "source",
+      "title": "Homogeneous modes of cosmological instantons",
+      "summary": "CITES-only warning that gravitational homogeneous negative-mode reduction depends on variables and constraint treatment; it does not supply the Phase-30 BFV super-Hessian.",
+      "state": "PRIMARY",
+      "citation": "S. Gratton and N. Turok, Homogeneous modes of cosmological instantons, Physical Review D 63 (2001) 123514",
+      "uri": "https://doi.org/10.1103/PhysRevD.63.123514",
+      "version": "Phys. Rev. D 63 (2001) 123514"
+    },
+    {
+      "id": "source:halliwell-louko-1990-part-iii",
+      "type": "source",
+      "title": "Steepest-descent contours in the path-integral approach to quantum cosmology. III",
+      "summary": "CITES-only minisuperspace lapse-contour framework; it does not determine this model's endpoint bypass, complete upward cycle, determinant line, or PL coefficient.",
+      "state": "PRIMARY",
+      "citation": "J. J. Halliwell and J. Louko, Steepest-descent contours in the path-integral approach to quantum cosmology. III. A general method with applications to anisotropic minisuperspace models, Physical Review D 42 (1990) 3997–4031",
+      "uri": "https://doi.org/10.1103/PhysRevD.42.3997",
+      "version": "Phys. Rev. D 42 (1990) 3997–4031"
+    },
+    {
+      "id": "artifact:p30-script",
+      "type": "artifact",
+      "title": "Phase 30 executable",
+      "summary": "Exact and bounded numerical coupled contour, relative determinant magnitude, cutoff-parity, Maslov, Jacobi, and endpoint-ray controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py",
+      "sha256": "4c402a50aa5f32966faa7e01d65623933ea7d9cff2b43f25b76f89b5efa36cc7",
+      "introduced_in_commit": "bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d"
+    },
+    {
+      "id": "artifact:p30-report",
+      "type": "artifact",
+      "title": "Phase 30 report",
+      "summary": "Human-readable finite-cutoff coupled Gaussian cycle, relative-magnitude, determinant-line parity, Maslov, and global-scope analysis.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md",
+      "sha256": "0cf7a2cb39392ab07580207ec4bceb910f200eb9d07f4b5fc7090d1ea456914d",
+      "introduced_in_commit": "bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d"
+    },
+    {
+      "id": "artifact:p30-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 30 evidence snapshot",
+      "summary": "Persisted ten-exact and ten-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase30-result.json",
+      "sha256": "3ebfec6c9ce43ed499f70ac151508be6a8ad90bca8341d0c7feec2adfac0fadf"
     }
   ],
   "edges": [
@@ -10251,6 +10517,398 @@
       "relation": "CITES",
       "to": "source:marolf-1995",
       "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:892",
+      "from": "phase:p30",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:893",
+      "from": "scope:p30-frozen-coupled-cycle-and-relative-determinant",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:894",
+      "from": "concept:fibered-field-lapse-cycle-versus-product-rotation",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:895",
+      "from": "concept:relative-determinant-magnitude-versus-determinant-line-phase",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:896",
+      "from": "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:897",
+      "from": "artifact:p30-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:898",
+      "from": "artifact:p30-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:899",
+      "from": "artifact:p30-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:900",
+      "from": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:901",
+      "from": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p30-frozen-coupled-cycle-and-relative-determinant"
+    },
+    {
+      "id": "edge:902",
+      "from": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p30-report"
+    },
+    {
+      "id": "edge:903",
+      "from": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p30-fibered-schur-cycle",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:904",
+      "from": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "relation": "ABOUT",
+      "to": "concept:fibered-field-lapse-cycle-versus-product-rotation"
+    },
+    {
+      "id": "edge:905",
+      "from": "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:906",
+      "from": "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p30-frozen-coupled-cycle-and-relative-determinant"
+    },
+    {
+      "id": "edge:907",
+      "from": "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p30-report"
+    },
+    {
+      "id": "edge:908",
+      "from": "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p30-fibered-schur-cycle",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:909",
+      "from": "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "relation": "ABOUT",
+      "to": "concept:fibered-field-lapse-cycle-versus-product-rotation"
+    },
+    {
+      "id": "edge:910",
+      "from": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:911",
+      "from": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p30-frozen-coupled-cycle-and-relative-determinant"
+    },
+    {
+      "id": "edge:912",
+      "from": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p30-report"
+    },
+    {
+      "id": "edge:913",
+      "from": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p30-relative-determinant-and-prefactor",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:914",
+      "from": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "relation": "ABOUT",
+      "to": "concept:relative-determinant-magnitude-versus-determinant-line-phase"
+    },
+    {
+      "id": "edge:915",
+      "from": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:916",
+      "from": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p30-frozen-coupled-cycle-and-relative-determinant"
+    },
+    {
+      "id": "edge:917",
+      "from": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p30-report"
+    },
+    {
+      "id": "edge:918",
+      "from": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p30-relative-determinant-and-prefactor",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:919",
+      "from": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "relation": "ABOUT",
+      "to": "concept:relative-determinant-magnitude-versus-determinant-line-phase"
+    },
+    {
+      "id": "edge:920",
+      "from": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:921",
+      "from": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p30-frozen-coupled-cycle-and-relative-determinant"
+    },
+    {
+      "id": "edge:922",
+      "from": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p30-report"
+    },
+    {
+      "id": "edge:923",
+      "from": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p30-principal-cycle-and-maslov",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:924",
+      "from": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "relation": "ABOUT",
+      "to": "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet"
+    },
+    {
+      "id": "edge:925",
+      "from": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:926",
+      "from": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p30-frozen-coupled-cycle-and-relative-determinant"
+    },
+    {
+      "id": "edge:927",
+      "from": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p30-report"
+    },
+    {
+      "id": "edge:928",
+      "from": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p30-endpoint-ray-limit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:929",
+      "from": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "relation": "ABOUT",
+      "to": "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet"
+    },
+    {
+      "id": "edge:930",
+      "from": "evidence:p30-principal-cycle-and-maslov",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:931",
+      "from": "evidence:p30-principal-cycle-and-maslov",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p30-script"
+    },
+    {
+      "id": "edge:932",
+      "from": "evidence:p30-principal-cycle-and-maslov",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p30-evidence-snapshot"
+    },
+    {
+      "id": "edge:933",
+      "from": "evidence:p30-fibered-schur-cycle",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:934",
+      "from": "evidence:p30-fibered-schur-cycle",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p30-script"
+    },
+    {
+      "id": "edge:935",
+      "from": "evidence:p30-fibered-schur-cycle",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p30-evidence-snapshot"
+    },
+    {
+      "id": "edge:936",
+      "from": "evidence:p30-relative-determinant-and-prefactor",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:937",
+      "from": "evidence:p30-relative-determinant-and-prefactor",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p30-script"
+    },
+    {
+      "id": "edge:938",
+      "from": "evidence:p30-relative-determinant-and-prefactor",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p30-evidence-snapshot"
+    },
+    {
+      "id": "edge:939",
+      "from": "evidence:p30-endpoint-ray-limit",
+      "relation": "PART_OF",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:940",
+      "from": "evidence:p30-endpoint-ray-limit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p30-script"
+    },
+    {
+      "id": "edge:941",
+      "from": "evidence:p30-endpoint-ray-limit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p30-evidence-snapshot"
+    },
+    {
+      "id": "edge:942",
+      "from": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS"
+    },
+    {
+      "id": "edge:943",
+      "from": "claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS"
+    },
+    {
+      "id": "edge:944",
+      "from": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT",
+      "relation": "MOTIVATES",
+      "to": "open:p29-physical-endpoint-measure-and-ordering",
+      "note": "The recorded magnitude uses one declared hybrid calibration and does not derive the physical WDW measure or ordering."
+    },
+    {
+      "id": "edge:945",
+      "from": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:946",
+      "from": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
+      "relation": "MOTIVATES",
+      "to": "open:p29-conformal-bfv-uniform-parametrix"
+    },
+    {
+      "id": "edge:947",
+      "from": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:948",
+      "from": "concept:fibered-field-lapse-cycle-versus-product-rotation",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978",
+      "note": "Literature framing only; the finite-cutoff coupled-cycle result is repository evidence, not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:949",
+      "from": "concept:relative-determinant-magnitude-versus-determinant-line-phase",
+      "relation": "CITES",
+      "to": "source:forman-1987-functional-determinants",
+      "note": "Boundary-value determinant framing only; the Phase-30 midpoint convergence and cutoff signs are repository calculations."
+    },
+    {
+      "id": "edge:950",
+      "from": "concept:relative-determinant-magnitude-versus-determinant-line-phase",
+      "relation": "CITES",
+      "to": "source:gratton-turok-2001",
+      "note": "Negative-mode and variable-choice framing only; no full BFV super-Hessian is imported."
+    },
+    {
+      "id": "edge:951",
+      "from": "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii",
+      "note": "Minisuperspace lapse-contour framing only; the source does not compute this model's endpoint gluing or coefficient."
+    },
+    {
+      "id": "edge:952",
+      "from": "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz",
+      "note": "Relative-cycle framing only; the Phase-30 endpoint calculation is repository evidence."
+    },
+    {
+      "id": "edge:953",
+      "from": "open:p28-full-gauge-reduced-superdeterminant",
+      "relation": "CITES",
+      "to": "source:gratton-turok-2001",
+      "note": "The source sharpens the completion boundary but does not provide the missing BFV phase-space super-Hessian or determinant line."
+    },
+    {
+      "id": "edge:954",
+      "from": "open:p28-global-relative-homology-and-intersection",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii",
+      "note": "The source supplies contour methodology, not the physical original cycle or intersection coefficient for this saddle."
     }
   ],
   "kg_bridges": [
@@ -10449,6 +11107,16 @@
       "status": "UNRESOLVED",
       "checked_at_utc": "2026-08-17T15:45:17Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase29 zero-lapse distribution and reduced BFV measure",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p30",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T16:38:39.344Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase30 coupled conformal lapse tangent cycle determinant line",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
     }
   ]

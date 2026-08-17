@@ -4,7 +4,7 @@
 
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-60-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-61-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -166,6 +166,7 @@ aims to explain, not evidence that the route is correct.
 | [Phase 27](cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md) | The declared Wick map sends positive Lorentzian lapse to the upper-imaginary Euclidean ray; the positive half-line is a sourced resolvent, while the raw fixed-$T$ Van Vleck factor diverges as $1/|T|$ at zero duration. | A transverse interior intersection, global PL coefficient, or finite gauge-reduced kernel. |
 | [Phase 28](cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md) | In the reduced homogeneous BFV--BRST control, Dirichlet ghosts do not remove proper length; bounded constructed dual-cycle segments cross the recorded branch and give a conditional local Gaussian factor. | The physical original cycle, global intersection number, full boson--fermion--gravitino--ghost determinant, positive density, or soft spectrum. |
 | [Phase 29](cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md) | For the frozen leading real-lapse quadratic kernel and local flat $da\,d\phi$ endpoint measure, the pointwise $1/N$ factor is the normalization of a distributional identity kernel. The reduced fixed-$s$ BFV ghost leaves a $dT$ modulus measure and does not cancel it. | The physical WDW endpoint measure, interacting all-orders uniform kernel, simultaneous conformal/lapse cycle, full determinant, quantum state, or global PL coefficient. Multiplying by $N$ changes the resolvent and group average. |
+| [Phase 30](cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md) | In the frozen homogeneous finite-cutoff control, a field-dependent Schur shift gives a convergent coupled conformal/lapse Gaussian tangent cycle. One declared midpoint calibration has a stable relative determinant magnitude. | A nonlinear continuum thimble, full BFV phase-space super-Hessian, absolute determinant-line phase, physical WDW measure, or global PL coefficient. The bare determinant sign alternates with cutoff parity, and one holomorphic lapse sheet does not normalize both real sides. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -177,18 +178,18 @@ no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomp
    physical sheet observable, and genuine spacetime Pin lift.
 2. **Persistent breaking:** derive a stable nonzero $F/D$ order parameter, its visible-sector
    mediation, late-time pole splitting, vacuum lifetime, backreaction, and soft-versus-hard UV behavior.
-3. **PL/BFV completion:** derive the physical WDW endpoint measure and all-orders uniform kernel, choose
-   a simultaneous conformal-field/lapse cycle for the indefinite kinetic form, construct the physical
-   original and global dual cycles, and compute their intersection coefficient and the gauge-reduced
-   boson–fermion–gravitino–ghost determinant. An inserted lapse power is not an allowed shortcut because
-   it changes the operator being integrated.
+3. **PL/BFV completion:** extend Phase 30's finite-cutoff coupled Gaussian tangent cycle to a nonlinear
+   endpoint-uniform conformal/BFV cycle, construct the full phase-space ghost/gauge super-Hessian and a
+   cutoff-independent determinant-line phase, derive the physical WDW endpoint measure, and compute the
+   physical original/global-dual intersection coefficient. An inserted lapse power is not an allowed
+   shortcut because it changes the operator being integrated.
 4. **Three-form/flux selection:** derive the harmonic- and flux-dependent seam kernel, charge lattice,
    boundary ensemble, and sector measure from an actual three-form SUGRA or membrane action; then test
    for a cutoff-independent interior peak in $(n,\phi)$.
 5. **Quantum state:** combine the completed contour and determinant with the physical WDW
    current/projector; test positivity and trace class rather than assigning $|\Psi|^2$ by assumption.
 6. **String completion gate:** compactify a double-three-form $N=1$ SUGRA realization, derive its flux
-   and membrane data and visible-sector mediation, and rerun the Phase 24--29 saddle and fluctuation
+   and membrane data and visible-sector mediation, and rerun the Phase 24--30 saddle and fluctuation
    tests instead of importing string soft terms into the seam by analogy.
 7. **Hypercomplex interpretation:** replace basis-dependent diagnostics with invariant closure,
    nondegeneracy, rank, and multiplication-preservation checks, followed by an external physical
@@ -201,11 +202,11 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 60 | `./ice list --json` |
+| runnable Python kernels | 61 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 384 nodes, 891 edges, 90 claims | `./ice ontology summary` |
-| latest runnable CPT seam phase | Phase 29 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| research ontology | 405 nodes, 954 edges, 96 claims | `./ice ontology summary` |
+| latest runnable CPT seam phase | Phase 30 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.
@@ -282,6 +283,7 @@ Use a name returned by `./ice list` rather than depending on a physical path:
 ./ice run phase27_lorentzian_lapse_endpoint
 ./ice run phase28_thimble_bfv_intersection
 ./ice run phase29_zero_lapse_uniform_kernel
+./ice run phase30_conformal_bfv_determinant_line
 ```
 
 Direct runs may update an adjacent result file. Inspect `git status` afterward. Use `./ice repro` for a

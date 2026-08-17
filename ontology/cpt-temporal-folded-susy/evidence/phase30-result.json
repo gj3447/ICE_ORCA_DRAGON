@@ -1,0 +1,650 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P30_CONFORMAL_BFV_DETERMINANT_LINE_20260817",
+  "phase": "P30",
+  "observed_at_utc": "2026-08-17T16:38:39.344Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py",
+    "sha256": "4c402a50aa5f32966faa7e01d65623933ea7d9cff2b43f25b76f89b5efa36cc7",
+    "introduced_in_commit": "bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d"
+  },
+  "exact_checks": 10,
+  "checks": [
+    {
+      "id": "P30.contour.coupled_principal_rays",
+      "statement": "the lapse-dependent gravity and scalar rays make both principal Gaussians decaying",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.contour.local_holomorphic_normalization",
+      "statement": "the coupled complex Gaussian is identity-normalized on its local holomorphic cycle",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.contour.Euclidean_conformal_ray",
+      "statement": "at N=-iT the gravity fluctuation is imaginary while the scalar remains real",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.Maslov.real_side_phase_cancellation",
+      "statement": "the opposite-sign one-dimensional Fresnel phases cancel on either real-lapse side",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.Maslov.single_holomorphic_sheet_left_sign",
+      "statement": "C/N agrees with the positive-real identity branch but gives minus the required C/|N| on the negative real side",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.schur.field_lapse_completion",
+      "statement": "the coupled determinant factors only after the field-dependent lapse shift",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.contour.fibered_completion_identity",
+      "statement": "the lapse-dependent field shift removes the mixed term and rotates negative Schur curvature to positive",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.lapse.Wick_and_thimble_jacobians",
+      "statement": "dN=-i dT and the local lapse thimble dT=i du have cancelling Jacobians",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.determinant.declared_midpoint_measure_power",
+      "statement": "the declared midpoint configuration measure contributes the exact per-slice factor (a_e/a_0)^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.PL.shifted_rays_share_pointwise_open_limit",
+      "statement": "left- and right-shifted rays have the same pointwise limit away from the unresolved endpoint",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 10,
+  "numerical": [
+    {
+      "id": "P30.saddle.frozen_stationary_control",
+      "statement": "the frozen interval is stationary and has the converged negative lapse curvature",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.Jacobi.momentum_endpoint_identity",
+      "statement": "the canonical endpoint identity W_-+=-B_p^{-1} agrees with an independent boundary finite-difference Hessian",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.Jacobi.sampled_no_caustic_to_saddle",
+      "statement": "the sampled real branch from T=.02 to .7 has no fixed-T Dirichlet zero and reaches the lapse saddle monotonically",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.determinant.declared_midpoint_measure_convergence",
+      "statement": "the naked magnitude ratio grows rapidly across the recorded cutoffs while the declared midpoint measure converges to the endpoint Van-Vleck magnitude",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.determinant.cutoff_parity_phase_obstruction",
+      "statement": "the absolute field-determinant sign alternates with cutoff parity even though the declared reference magnitude ratio stays positive, so the continuum determinant-line phase remains open",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.schur.discrete_bulk_lapse_convergence",
+      "statement": "the discrete field-lapse Schur complement through 320 slices converges to W_TT",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.contour.direct_product_fails",
+      "statement": "the tested standard independent field and lapse rotations leave one negative direction at every tested cutoff",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.contour.fibered_cycle_passes",
+      "statement": "the Schur-shifted fibered contour removes the mixed term and has positive real quadratic form",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.prefactor.conditional_local_magnitude",
+      "statement": "the flat-endpoint Van-Vleck magnitude and lapse Gaussian give the conditional local-flat weight, while the separate relative endpoint factor is recorded only as a control",
+      "status": "PASS"
+    },
+    {
+      "id": "P30.contour.complex_principal_normalization",
+      "statement": "the coupled principal Gaussian remains normalized along four complex-lapse angles",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "coupled conformal field-lapse contour and determinant-line gate",
+    "claim_status": {
+      "a_finite_cutoff_local_coupled_field_lapse_Gaussian_cycle_exists": "SUPPORTED_IN_THE_FROZEN_HOMOGENEOUS_QUADRATIC_CONTROL",
+      "a_positive_trace_class_seam_state_or_initial_value_is_selected": "OPEN_NOT_DERIVED",
+      "one_holomorphic_lapse_sheet_gives_the_identity_kernel_on_both_real_sides": "CONTRADICTED_BY_THE_MASLOV_ORIENTATION_JUMP",
+      "the_absolute_lattice_determinant_sign_has_a_cutoff_independent_limit": "CONTRADICTED_BY_ODD_EVEN_CUTOFF_PARITY",
+      "the_declared_midpoint_measure_normalized_endpoint_magnitude_has_a_recorded_limit": "SUPPORTED_NUMERICALLY_IN_THE_RECORDED_TIME_SLICING",
+      "the_full_physical_PL_coefficient_for_the_connected_saddle_is_fixed": "OPEN_NOT_DERIVED",
+      "the_naked_bulk_Hessian_ratio_is_the_physical_functional_determinant": "CONTRADICTED_BY_STRONG_RECORDED_CUTOFF_DEPENDENCE_AND_MISSING_PHASE",
+      "the_positive_half_lapse_ray_fixes_an_integer_PL_coefficient": "OPEN_ENDPOINT_AND_GLOBAL_DUAL_CYCLE_NOT_DERIVED",
+      "the_tested_standard_independent_field_and_lapse_Wick_rotations_are_sufficient": "CONTRADICTED_BY_THE_MIXED_HESSIAN"
+    },
+    "exact_check_ids": [
+      "P30.contour.coupled_principal_rays",
+      "P30.contour.local_holomorphic_normalization",
+      "P30.contour.Euclidean_conformal_ray",
+      "P30.Maslov.real_side_phase_cancellation",
+      "P30.Maslov.single_holomorphic_sheet_left_sign",
+      "P30.schur.field_lapse_completion",
+      "P30.contour.fibered_completion_identity",
+      "P30.lapse.Wick_and_thimble_jacobians",
+      "P30.determinant.declared_midpoint_measure_power",
+      "P30.PL.shifted_rays_share_pointwise_open_limit"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P30.contour.coupled_principal_rays",
+        "statement": "the lapse-dependent gravity and scalar rays make both principal Gaussians decaying",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.contour.local_holomorphic_normalization",
+        "statement": "the coupled complex Gaussian is identity-normalized on its local holomorphic cycle",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.contour.Euclidean_conformal_ray",
+        "statement": "at N=-iT the gravity fluctuation is imaginary while the scalar remains real",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.Maslov.real_side_phase_cancellation",
+        "statement": "the opposite-sign one-dimensional Fresnel phases cancel on either real-lapse side",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.Maslov.single_holomorphic_sheet_left_sign",
+        "statement": "C/N agrees with the positive-real identity branch but gives minus the required C/|N| on the negative real side",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.schur.field_lapse_completion",
+        "statement": "the coupled determinant factors only after the field-dependent lapse shift",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.contour.fibered_completion_identity",
+        "statement": "the lapse-dependent field shift removes the mixed term and rotates negative Schur curvature to positive",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.lapse.Wick_and_thimble_jacobians",
+        "statement": "dN=-i dT and the local lapse thimble dT=i du have cancelling Jacobians",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.determinant.declared_midpoint_measure_power",
+        "statement": "the declared midpoint configuration measure contributes the exact per-slice factor (a_e/a_0)^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.PL.shifted_rays_share_pointwise_open_limit",
+        "statement": "left- and right-shifted rays have the same pointwise limit away from the unresolved endpoint",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 10,
+    "frozen_conventions": {
+      "fibered_contour": "nu=i u; eta=R xi-i u L_D^{-1}j",
+      "holomorphic_local_prefactor": "sqrt(mu_g mu_s)/(2 pi hbar N)",
+      "principal_cycle": {
+        "N": "rho exp(i theta)",
+        "delta_a": "exp[i(theta/2-pi/4)] R",
+        "delta_phi": "exp[i(theta/2+pi/4)] R"
+      },
+      "real_lapse_prefactor": "sqrt(mu_g mu_s)/(2 pi hbar |N|)"
+    },
+    "next_calculation": "construct the finite-cutoff homogeneous BFV phase-space super-Hessian, track its determinant line through N=0, and then compute all upward-thimble intersections before taking regulator and mode-cutoff limits",
+    "numerical_check_ids": [
+      "P30.saddle.frozen_stationary_control",
+      "P30.Jacobi.momentum_endpoint_identity",
+      "P30.Jacobi.sampled_no_caustic_to_saddle",
+      "P30.determinant.declared_midpoint_measure_convergence",
+      "P30.determinant.cutoff_parity_phase_obstruction",
+      "P30.schur.discrete_bulk_lapse_convergence",
+      "P30.contour.direct_product_fails",
+      "P30.contour.fibered_cycle_passes",
+      "P30.prefactor.conditional_local_magnitude",
+      "P30.contour.complex_principal_normalization"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P30.saddle.frozen_stationary_control",
+        "statement": "the frozen interval is stationary and has the converged negative lapse curvature",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.Jacobi.momentum_endpoint_identity",
+        "statement": "the canonical endpoint identity W_-+=-B_p^{-1} agrees with an independent boundary finite-difference Hessian",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.Jacobi.sampled_no_caustic_to_saddle",
+        "statement": "the sampled real branch from T=.02 to .7 has no fixed-T Dirichlet zero and reaches the lapse saddle monotonically",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.determinant.declared_midpoint_measure_convergence",
+        "statement": "the naked magnitude ratio grows rapidly across the recorded cutoffs while the declared midpoint measure converges to the endpoint Van-Vleck magnitude",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.determinant.cutoff_parity_phase_obstruction",
+        "statement": "the absolute field-determinant sign alternates with cutoff parity even though the declared reference magnitude ratio stays positive, so the continuum determinant-line phase remains open",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.schur.discrete_bulk_lapse_convergence",
+        "statement": "the discrete field-lapse Schur complement through 320 slices converges to W_TT",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.contour.direct_product_fails",
+        "statement": "the tested standard independent field and lapse rotations leave one negative direction at every tested cutoff",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.contour.fibered_cycle_passes",
+        "statement": "the Schur-shifted fibered contour removes the mixed term and has positive real quadratic form",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.prefactor.conditional_local_magnitude",
+        "statement": "the flat-endpoint Van-Vleck magnitude and lapse Gaussian give the conditional local-flat weight, while the separate relative endpoint factor is recorded only as a control",
+        "status": "PASS"
+      },
+      {
+        "id": "P30.contour.complex_principal_normalization",
+        "statement": "the coupled principal Gaussian remains normalized along four complex-lapse angles",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 10,
+    "numerical_controls": {
+      "Jacobi": {
+        "det_Bp": -0.0000012569382711948748,
+        "det_mixed_hessian": -795584.0178606199,
+        "endpoint_ratio": 0.9706109567600985,
+        "endpoint_relative_factor": 1.0150265570311958,
+        "finite_difference_relative_residual": 4.009803618444818E-12,
+        "scan": [
+          {
+            "T": 0.02,
+            "W_T": 2.9848646042200726,
+            "det_Bv": 0.0003999899809494006,
+            "det_Bv_over_T2": 0.9999749523735014,
+            "min_singular_value": 0.019999653796204206
+          },
+          {
+            "T": 0.06,
+            "W_T": 2.9662344174303623,
+            "det_Bv": 0.0035991886819897348,
+            "det_Bv_over_T2": 0.9997746338860375,
+            "min_singular_value": 0.05999065399442158
+          },
+          {
+            "T": 0.09999999999999999,
+            "W_T": 2.928939471811943,
+            "det_Bv": 0.009993743303334805,
+            "det_Bv_over_T2": 0.9993743303334806,
+            "min_singular_value": 0.09995674530938889
+          },
+          {
+            "T": 0.13999999999999999,
+            "W_T": 2.8729106094333394,
+            "det_Bv": 0.019575984283859357,
+            "det_Bv_over_T2": 0.9987747083601715,
+            "min_singular_value": 0.13988136610612073
+          },
+          {
+            "T": 0.17999999999999997,
+            "W_T": 2.7980440592071525,
+            "det_Bv": 0.03233444726480977,
+            "det_Bv_over_T2": 0.9979767674324007,
+            "min_singular_value": 0.1797480210266002
+          },
+          {
+            "T": 0.21999999999999995,
+            "W_T": 2.7042013971014973,
+            "det_Bv": 0.04825392101922993,
+            "det_Bv_over_T2": 0.9969818392402883,
+            "min_singular_value": 0.2195403071923513
+          },
+          {
+            "T": 0.25999999999999995,
+            "W_T": 2.5912094951682034,
+            "det_Bv": 0.06731551127470253,
+            "det_Bv_over_T2": 0.9957915869038839,
+            "min_singular_value": 0.25924194009740104
+          },
+          {
+            "T": 0.3,
+            "W_T": 2.45886046118839,
+            "det_Bv": 0.08949672035878783,
+            "det_Bv_over_T2": 0.9944080039865315,
+            "min_singular_value": 0.2988367791012235
+          },
+          {
+            "T": 0.33999999999999997,
+            "W_T": 2.3069115712145667,
+            "det_Bv": 0.11477154257971159,
+            "det_Bv_over_T2": 0.9928334133193045,
+            "min_singular_value": 0.338308852429895
+          },
+          {
+            "T": 0.37999999999999995,
+            "W_T": 2.135085197781678,
+            "det_Bv": 0.14311057523857096,
+            "det_Bv_over_T2": 0.9910704656410733,
+            "min_singular_value": 0.37764238159211205
+          },
+          {
+            "T": 0.41999999999999993,
+            "W_T": 1.943068737069688,
+            "det_Bv": 0.17448114515368757,
+            "det_Bv_over_T2": 0.9891221380594536,
+            "min_singular_value": 0.41682180511502503
+          },
+          {
+            "T": 0.45999999999999996,
+            "W_T": 1.7305145388433967,
+            "det_Bv": 0.20884745056285411,
+            "det_Bv_over_T2": 0.9869917323386302,
+            "min_singular_value": 0.45583180150305463
+          },
+          {
+            "T": 0.49999999999999994,
+            "W_T": 1.4970398435523498,
+            "det_Bv": 0.2461707182551747,
+            "det_Bv_over_T2": 0.984682873020699,
+            "min_singular_value": 0.4946573113211363
+          },
+          {
+            "T": 0.5399999999999999,
+            "W_T": 1.242226731566683,
+            "det_Bv": 0.2864093757711119,
+            "det_Bv_over_T2": 0.9821995053879012,
+            "min_singular_value": 0.5332835583022338
+          },
+          {
+            "T": 0.58,
+            "W_T": 0.9656220901512463,
+            "det_Bv": 0.32951923849726894,
+            "det_Bv_over_T2": 0.9795458932736889,
+            "min_singular_value": 0.5716960693776186
+          },
+          {
+            "T": 0.6199999999999999,
+            "W_T": 0.6667376044333718,
+            "det_Bv": 0.3754537114714877,
+            "det_Bv_over_T2": 0.976726616731238,
+            "min_singular_value": 0.6098806935274947
+          },
+          {
+            "T": 0.6599999999999999,
+            "W_T": 0.34504977931421715,
+            "det_Bv": 0.4241640057040761,
+            "det_Bv_over_T2": 0.9737465695685863,
+            "min_singular_value": 0.6478236193491692
+          },
+          {
+            "T": 0.7,
+            "W_T": 4.6899732760132136E-14,
+            "det_Bv": 0.47559936881244824,
+            "det_Bv_over_T2": 0.9706109567600986,
+            "min_singular_value": 0.6855113912403269
+          }
+        ]
+      },
+      "base": {
+        "T_star": 0.7,
+        "W_TT": -8.923143038336717,
+        "W_star": 1.4066905428343415,
+        "boundary": [
+          3.5668031935672753,
+          1.0185809464006637,
+          3.5668031935672753,
+          1.0185809464006637
+        ]
+      },
+      "complex_normalization_samples": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0000000000000002,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.9999999999999998,
+          -2.6853947549966797E-16
+        ]
+      ],
+      "determinant_line_orientation": {
+        "records": [
+          {
+            "canonical_amplitude_ratio": 1.0142020719387044,
+            "canonical_slice_factor": 1.0602642095563621,
+            "determinant_sign": 1.0,
+            "field_negative_count": 8,
+            "raw_amplitude_ratio": 0.9565559817991677,
+            "raw_determinant_ratio": 1.0928969556388035,
+            "reference_determinant_sign": 1.0,
+            "relative_determinant_sign": 1.0,
+            "schur": -8.796019404124788,
+            "segments": 9
+          },
+          {
+            "canonical_amplitude_ratio": 1.0142810708072498,
+            "canonical_slice_factor": 1.0670988091052815,
+            "determinant_sign": -1.0,
+            "direct_product_min_eigenvalue": -10.336619486889942,
+            "direct_product_negative_count": 1,
+            "fibered_cross_residual": 6.09224060795173E-13,
+            "fibered_min_eigenvalue": 8.820140783327588,
+            "field_negative_count": 9,
+            "raw_amplitude_ratio": 0.9505034230688373,
+            "raw_determinant_ratio": 1.1068598380144092,
+            "reference_determinant_sign": -1.0,
+            "relative_determinant_sign": 1.0,
+            "schur": -8.82014078333397,
+            "segments": 10
+          },
+          {
+            "canonical_amplitude_ratio": 1.0143462523391753,
+            "canonical_slice_factor": 1.0739845428643007,
+            "determinant_sign": 1.0,
+            "field_negative_count": 10,
+            "raw_amplitude_ratio": 0.9444700662394349,
+            "raw_determinant_ratio": 1.1210464399642037,
+            "reference_determinant_sign": 1.0,
+            "relative_determinant_sign": 1.0,
+            "schur": -8.837997574231748,
+            "segments": 11
+          },
+          {
+            "canonical_amplitude_ratio": 1.014626241579222,
+            "canonical_slice_factor": 1.1308214037675963,
+            "determinant_sign": 1.0,
+            "field_negative_count": 18,
+            "raw_amplitude_ratio": 0.8972471145299842,
+            "raw_determinant_ratio": 1.2421551928957435,
+            "reference_determinant_sign": 1.0,
+            "relative_determinant_sign": 1.0,
+            "schur": -8.894583146859736,
+            "segments": 19
+          },
+          {
+            "canonical_amplitude_ratio": 1.0146458276166543,
+            "canonical_slice_factor": 1.1381423170129803,
+            "determinant_sign": -1.0,
+            "direct_product_min_eigenvalue": -10.285879875588149,
+            "direct_product_negative_count": 1,
+            "fibered_cross_residual": 1.347930093462549E-12,
+            "fibered_min_eigenvalue": 8.897366812298632,
+            "field_negative_count": 19,
+            "raw_amplitude_ratio": 0.8914929288277069,
+            "raw_determinant_ratio": 1.2582420482437022,
+            "reference_determinant_sign": -1.0,
+            "relative_determinant_sign": 1.0,
+            "schur": -8.897366812298648,
+            "segments": 20
+          },
+          {
+            "canonical_amplitude_ratio": 1.014663586418505,
+            "canonical_slice_factor": 1.1455115630291888,
+            "determinant_sign": 1.0,
+            "field_negative_count": 20,
+            "raw_amplitude_ratio": 0.8857733253563415,
+            "raw_determinant_ratio": 1.2745439178559053,
+            "reference_determinant_sign": 1.0,
+            "relative_determinant_sign": 1.0,
+            "schur": -8.899762520257362,
+            "segments": 21
+          }
+        ],
+        "status": "absolute cutoff parity alternates; the declared relative reference cancels the finite-lattice sign but does not derive a continuum Maslov phase"
+      },
+      "endpoint_regulator_status": {
+        "common_pointwise_open_limit": "positive imaginary T ray",
+        "intersection_number": null,
+        "reason": "the contact at T=0 is a singular non-transverse endpoint and no complete dual cycle was computed"
+      },
+      "prefactor": {
+        "fixed_time_endpoint_magnitude": 141.9590736590698,
+        "lapse_Gaussian": 0.839133398327939,
+        "local_flat_prefactor": 119.12259990302144,
+        "local_flat_weight_hbar1": 29.179390965008775,
+        "status": "conditional on determinant orientation, BFV normalization, and global intersection coefficient"
+      },
+      "time_slicing": [
+        {
+          "canonical_amplitude_ratio": 1.0142810708072498,
+          "canonical_slice_factor": 1.0670988091052815,
+          "determinant_sign": -1.0,
+          "direct_product_min_eigenvalue": -10.336619486889942,
+          "direct_product_negative_count": 1,
+          "fibered_cross_residual": 6.09224060795173E-13,
+          "fibered_min_eigenvalue": 8.820140783327588,
+          "field_negative_count": 9,
+          "raw_amplitude_ratio": 0.9505034230688373,
+          "raw_determinant_ratio": 1.1068598380144092,
+          "reference_determinant_sign": -1.0,
+          "relative_determinant_sign": 1.0,
+          "schur": -8.82014078333397,
+          "segments": 10
+        },
+        {
+          "canonical_amplitude_ratio": 1.0146458276166543,
+          "canonical_slice_factor": 1.1381423170129803,
+          "determinant_sign": -1.0,
+          "direct_product_min_eigenvalue": -10.285879875588149,
+          "direct_product_negative_count": 1,
+          "fibered_cross_residual": 1.347930093462549E-12,
+          "fibered_min_eigenvalue": 8.897366812298632,
+          "field_negative_count": 19,
+          "raw_amplitude_ratio": 0.8914929288277069,
+          "raw_determinant_ratio": 1.2582420482437022,
+          "reference_determinant_sign": -1.0,
+          "relative_determinant_sign": 1.0,
+          "schur": -8.897366812298648,
+          "segments": 20
+        },
+        {
+          "canonical_amplitude_ratio": 1.014834124178668,
+          "canonical_slice_factor": 1.2950507070342832,
+          "determinant_sign": -1.0,
+          "direct_product_min_eigenvalue": -10.07558339446163,
+          "direct_product_negative_count": 1,
+          "fibered_cross_residual": 3.8530547767665815E-12,
+          "fibered_min_eigenvalue": 8.916697378313415,
+          "field_negative_count": 39,
+          "raw_amplitude_ratio": 0.7836250107168993,
+          "raw_determinant_ratio": 1.6284837243470838,
+          "reference_determinant_sign": -1.0,
+          "relative_determinant_sign": 1.0,
+          "schur": -8.916697378240366,
+          "segments": 40
+        },
+        {
+          "canonical_amplitude_ratio": 1.0149298142876197,
+          "canonical_slice_factor": 1.6769509499565818,
+          "determinant_sign": -1.0,
+          "direct_product_min_eigenvalue": -9.685718207067964,
+          "direct_product_negative_count": 1,
+          "fibered_cross_residual": 1.1887662260275905E-11,
+          "fibered_min_eigenvalue": 8.92153152306179,
+          "field_negative_count": 79,
+          "raw_amplitude_ratio": 0.6052233157528534,
+          "raw_determinant_ratio": 2.7300380428854845,
+          "reference_determinant_sign": -1.0,
+          "relative_determinant_sign": 1.0,
+          "schur": -8.921531523064148,
+          "segments": 80
+        },
+        {
+          "canonical_amplitude_ratio": 1.0149780528992989,
+          "canonical_slice_factor": 2.8119922931402783,
+          "determinant_sign": -1.0,
+          "direct_product_min_eigenvalue": -9.071032149309554,
+          "direct_product_negative_count": 1,
+          "fibered_cross_residual": 3.0118114666940475E-11,
+          "fibered_min_eigenvalue": 8.922740153206114,
+          "field_negative_count": 159,
+          "raw_amplitude_ratio": 0.3609462427671974,
+          "raw_determinant_ratio": 7.675646216204683,
+          "reference_determinant_sign": -1.0,
+          "relative_determinant_sign": 1.0,
+          "schur": -8.922740153221527,
+          "segments": 160
+        },
+        {
+          "canonical_amplitude_ratio": 1.0150022716299762,
+          "canonical_slice_factor": 7.907058561023763,
+          "determinant_sign": -1.0,
+          "field_negative_count": 319,
+          "raw_amplitude_ratio": 0.1283666060895544,
+          "raw_determinant_ratio": 60.68702975994544,
+          "reference_determinant_sign": -1.0,
+          "relative_determinant_sign": 1.0,
+          "schur": -8.923042316630424,
+          "segments": 320
+        }
+      ]
+    },
+    "phase": "P30",
+    "scope_guard": {
+      "computed": [
+        "the frozen homogeneous a-phi principal and midpoint quadratic forms",
+        "a coupled lapse-dependent conformal principal cycle",
+        "the discrete field-lapse Schur complement and fibered Gaussian contour",
+        "declared midpoint configuration-measure convergence to an endpoint Van-Vleck magnitude",
+        "a conditional local-flat endpoint-plus-lapse prefactor magnitude",
+        "the common pointwise open limit of two shifted endpoint rays"
+      ],
+      "not_computed": [
+        "an absolute zeta determinant or cutoff-independent determinant phase",
+        "the full BFV phase-space ghost/gauge super-Hessian and the inhomogeneous graviton, scalar, fermion, and gravitino spectra",
+        "a complete global relative-homology cycle or all complex saddles",
+        "the positive-half-lapse endpoint coefficient after a physical regulator",
+        "a WDW physical trace, density matrix, Pin lift, or initial-value distribution"
+      ]
+    }
+  }
+}

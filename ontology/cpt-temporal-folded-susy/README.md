@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T15:45:17Z`; 384 nodes, 891 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 47/47 stored hashes (45 artifacts and 2 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T16:38:39.344Z`; 405 nodes, 954 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 50/50 stored hashes (48 artifacts and 2 policies).
 
 ## Quick answers
 
@@ -34,7 +34,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Do Phases 25–28 determine the physical gravitational thimble coefficient? | No. They establish a stationary fixed-boundary lapse saddle, a bounded long constant-phase arm, one real Airy fold, raw zero-lapse endpoint scaling, bounded constructed crossings, and a reduced homogeneous BFV diagnostic. The original-cycle relative homology, endpoint-completed kernel, and full determinant remain open. | `claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE`; `claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET`; `claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE`; `claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH` |
 | Does the Phase 28 BFV/string route already explain missing superpartners? | No. The homogeneous Dirichlet ghost does not remove the proper-length modulus, the local lapse factor is conditional, and the string/three-form material is a completion design gate. No seam-selected sector rule, persistent F-type order parameter, soft spectrum, or physical state is derived; D-type breaking would need a separate vector/gauging sector. | `claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE`; `claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL`; `open:p28-string-three-form-soft-spectrum` |
 | Does Phase 29 remove the zero-lapse pole or produce a physical state? | No. The normalized frozen leading real-lapse kernel still has a pointwise `1/N` pole but converges to a `delta_flat` identity distribution under the declared local `da dphi` measure. The reduced BFV modulus factor is T-independent; the physical WDW measure, conformal contour, all-orders kernel, full determinant, state, and global PL coefficient remain open. | `claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT`; `claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE`; `claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT`; `claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–29 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–29 scope guards |
+| Does Phase 30 finish the conformal thimble or BFV determinant? | No. It supports a finite-cutoff local field–lapse **coupled** Gaussian cycle and records a declared-measure relative magnitude. The tested independent product rotation fails; cutoff parity obstructs a bare absolute determinant sign; one holomorphic lapse sheet cannot normalize both real sides. No full BFV super-Hessian, determinant-line phase, global integer PL coefficient, or physical state was computed. | `claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS`; `claim:P30_TESTED_STANDARD_PRODUCT_ROTATION_IS_SUFFICIENT`; `claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT`; `claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT`; `claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–30 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–30 scope guards |
 
 ### Phase 23 reading path
 
@@ -73,6 +74,16 @@ The graph's `reading-path:zero-lapse-distribution-and-measure` keeps five layers
 3. after fixed-parameter BFV rescaling and the matching gauge-condition normalization, the nonzero-mode ghost factor is T-independent and proper time remains a modulus;
 4. inserting an ad hoc lapse power changes the half-line resolvent and full-line rigging distribution rather than merely canceling a normalization;
 5. the indefinite kinetic sign still requires a separately derived conformal contour, and the physical WDW endpoint measure, all-orders uniform parametrix, full determinant, global coefficient, and trace-class state remain open.
+
+### Phase 30 reading path
+
+The graph's `reading-path:coupled-conformal-cycle-and-determinant-line` separates local convergence, relative magnitude, and global phase:
+
+1. `concept:fibered-field-lapse-cycle-versus-product-rotation` leads to the supported finite-cutoff Schur-shifted cycle and the contradicted sufficiency of the tested independent field/lapse rotation;
+2. `concept:relative-determinant-magnitude-versus-determinant-line-phase` separates the recorded midpoint-measure relative magnitude from the contradicted cutoff-independent bare lattice sign;
+3. `concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet` records that the real-axis identity kernel needs `1/|N|`, whereas a single holomorphic `1/N` sheet has the wrong sign on the negative side;
+4. the pointwise common limit of shifted positive-imaginary rays does not fix an integer Picard–Lefschetz coefficient because the singular endpoint and global upward cycle remain unresolved;
+5. the path returns to `open:p29-conformal-bfv-uniform-parametrix`: the full phase-space BFV super-Hessian, primed superdeterminant, determinant line through `N=0`, all upward intersections, and regulator removal were not computed in Phase 30.
 
 ## Concept map
 
@@ -215,6 +226,18 @@ flowchart TD
   P29 --> Density29["Identity distribution is trace-class density<br/>CONTRADICTED"]
   Wick29 --> Param29["OPEN: conformal/BFV uniform parametrix"]
   Delta29 --> WDW29["OPEN: physical endpoint measure · ordering"]
+
+  Programme --> P30["Phase 30 · coupled conformal cycle and determinant line"]
+  P30 --> Coupled30["Finite-cutoff local coupled cycle<br/>SUPPORTED"]
+  P30 --> Product30["Tested product rotation is sufficient<br/>CONTRADICTED"]
+  P30 --> Relative30["Declared-measure relative magnitude<br/>SUPPORTED at recorded cutoffs"]
+  P30 --> Parity30["Bare sign is cutoff independent<br/>CONTRADICTED"]
+  P30 --> Sheet30["One holomorphic sheet works on both real sides<br/>CONTRADICTED"]
+  P30 --> Ray30["Pointwise shifted-ray limit fixes integer coefficient<br/>CONTRADICTED"]
+  Coupled30 --> Param29
+  Parity30 --> Param29
+  Sheet30 --> Param29
+  Ray30 --> Param29
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -263,6 +286,8 @@ Phase 27 fixes the declared Wick map and resolves the leading equal-boundary raw
 Phase 28 continues the bounded upper arm past its imaginary-lapse turn, records four finite constructed crossings with one real dual branch, and adds an Abelian Euclidean-continued homogeneous BFV control. Intrinsic neck clocks are singular, `p_a` is locally regular, and Dirichlet ghosts have no zero mode, yet proper length remains BRST invariant. The determinant `2` is scheme-normalized and the local imaginary Gaussian factor is conditional on the still-open global coefficient and full superdeterminant. The cited string/three-form sources only define a completion route: direct three-form sources motivate F-type breaking, D-type breaking needs a separate vector/gauging sector, and no temporal-seam sector rule or soft spectrum has been derived.
 
 Phase 29 resolves one narrow endpoint question at leading quadratic order. With the frozen kinetic matrix and a declared local flat `da dphi` endpoint measure, the normalized real-lapse Fresnel kernel tends distributionally to the identity delta kernel even though its equal-endpoint pointwise amplitude still behaves as `1/N`. Fixed-parameter BFV rescaling leaves a T-independent nonzero-mode ghost normalization and a gauge-invariant proper-time modulus; inserting an extra lapse power changes the spectral object. The indefinite kinetic form prevents one imaginary-lapse rotation from damping both directions. None of this derives the physical WDW endpoint measure, all-orders uniform kernel, conformal contour, full determinant, global PL coefficient, or trace-class density.
+
+Phase 30 supplies the first finite-cutoff local contour that treats the homogeneous conformal field direction and the lapse fluctuation together. The Schur-shifted field fiber cancels the mixed block and gives a positive real quadratic form at every tested cutoff, whereas the tested direct-product rotations retain one negative direction. A declared midpoint configuration measure also stabilizes one relative endpoint magnitude at `1.01502655703`; the naked Hessian ratio and absolute determinant sign do not have the same status, and the latter alternates with cutoff parity. On the real lapse axis, `1/|N|` identity normalization requires Maslov/determinant-line gluing that a single holomorphic `1/N` sheet cannot provide. This is a local homogeneous quadratic result only: Phase 30 evaluates no new BFV ghost complex and no full phase-space BFV super-Hessian, primed superdeterminant, global upward-cycle census, integer PL coefficient, or physical state.
 
 ## Core distinctions
 
@@ -398,6 +423,7 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p27-declared-wick-map-and-raw-zero-lapse-control` | Declared Wick convention, equal-boundary short-time action, raw two-coordinate Van Vleck scaling, and spectral lapse proxies | Endpoint-completed BFV kernel, conformal contour, global PL coefficient, physical product, or state |
 | `scope:p28-bounded-pl-and-homogeneous-bfv` | Bounded upper arm, one real dual branch, four constructed finite cycles, and Euclidean-continued Abelian homogeneous BFV | Complete saddle/cycle census, endpoint prescription, full superdeterminant, physical density, Pin, soft spectrum, or string embedding |
 | `scope:p29-frozen-leading-kernel-and-reduced-bfv-measure` | Frozen two-coordinate leading kernel, declared local flat `da dphi` measure, fixed-parameter ghost reduction, and spectral lapse distributions | Physical WDW measure/ordering, all-orders kernel, conformal contour, full determinant, global coefficient, or density |
+| `scope:p30-frozen-coupled-cycle-and-relative-determinant` | Frozen Phase-24 homogeneous interval, finite midpoint cutoffs, coupled field–lapse Gaussian tangent, declared midpoint measure, relative endpoint magnitude, and real-lapse principal/Maslov controls | Nonlinear global contour, original-cycle relative homology, integer PL coefficient, continuum determinant-line phase, full BFV super-Hessian/ghost complex, regulator-independent superdeterminant, physical state, or SUSY spectrum |
 
 ## Open construction ledger
 
@@ -441,10 +467,10 @@ All entries below have state `OPEN` in the graph.
 | `open:p28-full-gauge-reduced-superdeterminant` | Compute the primed nonzero-mode metric, matter, gravitino, Goldstino, and ghost superdeterminant with phases and renormalization |
 | `open:p28-physical-state-and-density` | Specify the WDW/BFV product and boundary factorization, then test normalization, positivity, and trace class |
 | `open:p28-string-three-form-soft-spectrum` | Derive a compact seam kernel, local-EFT sector rule, persistent F-type breaking, and soft spectrum; a D-type route needs extra vector/gauging data |
-| `open:p29-conformal-bfv-uniform-parametrix` | Choose the conformal/BFV cycle and construct an endpoint-completed all-orders operator-valued uniform parametrix with the full primed determinant |
+| `open:p29-conformal-bfv-uniform-parametrix` | Extend the Phase-30 finite-cutoff local coupled tangent to a nonlinear global conformal/BFV cycle; construct the full phase-space BFV super-Hessian, endpoint-completed all-orders operator-valued uniform parametrix, determinant line through `N=0`, and full primed superdeterminant |
 | `open:p29-physical-endpoint-measure-and-ordering` | Derive the physical WDW endpoint measure, factor ordering, and inner product rather than supplying local flat `da dphi` |
 
-The shortest honest statement of the research frontier is therefore: **a supplied connected Starobinsky interval, stationary lapse saddle, bounded constant-phase arm, real Airy fold, raw zero-lapse endpoint asymptotics, finite constructed crossings, and homogeneous BFV diagnostics now exist. They do not yet determine the global relative-homology coefficient, endpoint-completed BFV kernel, full superdeterminant, physical WDW/BFV state, seam sector rule, or persistent soft spectrum.**
+The shortest honest statement of the research frontier is therefore: **a supplied connected Starobinsky interval, stationary lapse saddle, bounded constant-phase arm, real Airy fold, raw zero-lapse endpoint asymptotics, finite constructed crossings, reduced homogeneous BFV diagnostics, and a finite-cutoff local coupled conformal field–lapse tangent now exist. A declared-measure relative determinant magnitude is stable, but the bare determinant sign is cutoff-parity dependent. The programme still lacks the nonlinear global relative-homology coefficient, full BFV super-Hessian and primed determinant line, endpoint-completed physical WDW/BFV state, seam sector rule, and persistent soft spectrum.**
 
 ## Repository artifacts
 
@@ -465,6 +491,7 @@ The shortest honest statement of the research frontier is therefore: **a supplie
 | 27 | [`phase27_lorentzian_lapse_endpoint.py`](../../cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py) | [`PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md`](../../cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md) | [`phase27-result.json`](./evidence/phase27-result.json) |
 | 28 | [`phase28_thimble_bfv_intersection.py`](../../cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py) | [`PHASE28_THIMBLE_BFV_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md) | [`phase28-result.json`](./evidence/phase28-result.json) |
 | 29 | [`phase29_zero_lapse_uniform_kernel.py`](../../cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py) | [`PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md`](../../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md) | [`phase29-result.json`](./evidence/phase29-result.json) |
+| 30 | [`phase30_conformal_bfv_determinant_line.py`](../../cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py) | [`PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md`](../../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md) | [`phase30-result.json`](./evidence/phase30-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -495,8 +522,8 @@ The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOL
 
 Phase 24 adds one more unresolved bridge at `phase:p24`. The older
 `sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
-planning node and was deliberately not reused. Phases 25–29 add five fresh unresolved phase lookups;
-similarly numbered historical planning nodes were not reused. There are therefore thirteen expected
+planning node and was deliberately not reused. Phases 25–30 add six fresh unresolved phase lookups;
+similarly numbered historical planning nodes were not reused. There are therefore fourteen expected
 unresolved bridges in the current graph. No external UID was invented for the new lookups. A resolved UID proves only that
 the target exists; it is not an evidence receipt, equivalence assertion, review outcome, or KG
 ratification.

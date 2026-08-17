@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 60 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 61 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -17,7 +17,7 @@
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
 
 Historical source/result inventories contain more files than the live CLI. Do not use a copied prose
-count or “60+” inventory as the runnable catalog.
+count or rough “N+” inventory as the runnable catalog.
 
 ## Reproduction status
 
@@ -374,10 +374,11 @@ and
 
 ## Research ontology memory
 
-Phase 15R–29 is now indexed in a repository-local typed research graph with **384 nodes and 891 directed
-relations**. It preserves 90 claims, 52 evidence groups, 32 explicit scopes, 38 open problems, 58
-literature sources, the Phase 16–29 exact and bounded numerical run payloads, 47/47 verified artifact and
-policy hashes, and cautious bridges to
+Phase 15R–30 is now indexed in a repository-local typed research graph with **405 nodes and 954 directed
+relations**. It preserves 96 claims, 56 evidence groups, 33 explicit scopes, 38 open problems, 61
+literature sources, the Phase 16–30 run payloads (292 named exact checks, 124 typed numerical checks, and
+one separately recorded legacy Phase-18 numerical control), 50/50 verified artifact and policy hashes,
+and cautious bridges to
 the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
@@ -532,6 +533,32 @@ See
 [`../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md`](../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md)
 and
 [`../cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py`](../cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 30
+
+Phase 30 returns exit 0 with **10 exact checks and 10 numerical checks**.
+
+- The frozen finite-cutoff joint field–lapse Hessian does not become convergent under the tested
+  standard product of independent field and lapse rotations: one negative real direction remains at
+  every recorded cutoff.
+- Completing the square instead gives the fibered tangent cycle
+  $\delta T=iu$, $\eta=R\xi-iu\mathcal O_D^{-1}j$. Its mixed block vanishes numerically and its real
+  Gaussian quadratic form is positive over the tested finite cutoffs.
+- In one explicitly declared hybrid midpoint calibration, the relative magnitude approaches the
+  endpoint Jacobi/Van Vleck value $1.015026557031$. This is not an absolute zeta determinant. The bare
+  field-determinant sign alternates with odd/even cutoff parity, so the continuum determinant-line phase
+  remains open.
+- A scalar holomorphic $1/N$ prefactor has the wrong identity-kernel sign on the negative real-lapse
+  side compared with $1/|N|$. Two shifted rays sharing a pointwise open limit does not determine the
+  singular endpoint bypass or a global intersection number.
+- The executable contains no full BFV phase-space ghost/gauge super-Hessian, nonlinear continuum
+  thimble, inhomogeneous superdeterminant, physical endpoint measure, quantum state, or integer PL
+  coefficient. The committed runnable catalog is now 61.
+
+See
+[`../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md`](../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md)
+and
+[`../cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py`](../cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py).
 
 ## Historical scientific ledger
 
