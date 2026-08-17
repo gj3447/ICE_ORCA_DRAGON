@@ -26,12 +26,12 @@ I_E^{(2)}
 \]
 
 Every tested cutoff gives a positive real quadratic form.  In contrast, the
-direct-product rotation leaves exactly one negative direction.
+tested standard direct-product rotation leaves exactly one negative direction.
 
 The determinant calculation also separates two notions that had been mixed.
-A naked lattice Hessian ratio grows rapidly over the recorded refinements.
-Including the
-canonical time-slice measure gives a stable relative endpoint datum,
+A naked lattice Hessian magnitude ratio grows rapidly over the recorded
+refinements.  Including the declared midpoint configuration measure gives a
+stable relative endpoint **magnitude**,
 
 \[
 \boxed{
@@ -40,8 +40,11 @@ canonical time-slice measure gives a stable relative endpoint datum,
 }
 \]
 
-This is a canonical-measure-normalized Jacobi/Van Vleck result, not an
-absolute zeta determinant of the gravitational fluctuation operator.
+This is a declared-measure-normalized Jacobi/Van Vleck magnitude, not an
+absolute zeta determinant of the gravitational fluctuation operator.  Odd
+and even cutoffs have opposite absolute field-determinant signs.  The chosen
+constant-principal reference cancels that finite-lattice sign in the relative
+determinant ratio, but it does not derive a continuum determinant-line phase.
 
 The remaining global obstruction is now sharper.  On the real lapse axis the
 identity-normalized signature-$(-,+)$ kernel requires $1/|N|$.  A single
@@ -58,6 +61,10 @@ Consequently
 n_\sigma\text{ is not fixed.}
 }
 \]
+
+No new BFV ghost complex is evaluated in this phase.  The reduced
+proper-time BFV result from Phase 28 is inherited only as context; a full
+phase-space BFV super-Hessian and its determinant line remain the next gate.
 
 ## 1. Frozen homogeneous action
 
@@ -202,9 +209,10 @@ integrand without that extra data.
 ## 3. Why the product contour fails
 
 The midpoint discretization keeps both homogeneous field histories and the
-global lapse modulus.  At every tested cutoff, rotating the negative spectral
-field directions and the lapse direction independently leaves one negative
-eigenvalue in the real part of the joint Hessian:
+global lapse modulus.  At every tested cutoff, the standard prescription that
+rotates the negative spectral field directions and the lapse direction
+independently leaves one negative eigenvalue in the real part of the joint
+Hessian:
 
 | segments | direct-product minimum eigenvalue | negative count |
 |---:|---:|---:|
@@ -266,7 +274,7 @@ point.  This is a bounded numerical no-caustic scan, not an interval proof.
 
 A midpoint lattice comparison against a constant endpoint principal symbol
 shows why a naked determinant is not meaningful here.  The kinetic metric
-$G(a)$ changes along the saddle.  The raw determinant ratio grows as
+$G(a)$ changes along the saddle.  The raw determinant magnitude ratio grows as
 
 \[
 1.10686, 1.25824, 1.62848, 2.73004, 7.67565, 60.6870
@@ -274,7 +282,7 @@ $G(a)$ changes along the saddle.  The raw determinant ratio grows as
 
 for 10, 20, 40, 80, 160, and 320 segments.
 
-The canonical time-slice measure contains
+The declared midpoint configuration measure contains
 
 \[
 \prod_e
@@ -285,10 +293,18 @@ The canonical time-slice measure contains
 
 where $a_e$ is evaluated at the exact continuum midpoint of each slice.
 This freezes one explicit hybrid midpoint calibration: the element action
-uses arithmetic node midpoints, while the canonical measure samples the
+uses arithmetic node midpoints, while the declared measure samples the
 continuum saddle at exact slice midpoints.  It is a reproducible convergence
 test, not a uniqueness theorem for all orderings or time-slicings.
-After including it, the relative amplitudes are
+
+The even-cutoff table alone hides an additional fact.  At 9, 10, 11, 19, 20,
+and 21 segments, the field-Hessian negative-mode count is exactly
+\(N_{\rm seg}-1\), so the bare absolute lattice determinant sign alternates
+\(+,-,+,+,-,+\).  The constant-principal reference has the same
+finite-lattice orientation, making the displayed relative sign positive.
+This does not determine a continuum Maslov/determinant-line phase.
+
+After including the declared measure, the relative magnitudes are
 
 \[
 1.0142811, 1.0146458, 1.0148341,
@@ -391,8 +407,10 @@ the minisuperspace contour analyses of
 | Question | Result |
 |---|---|
 | Does a local coupled conformal/lapse Gaussian cycle exist? | **Yes, in the frozen homogeneous quadratic control.** |
-| Does the direct-product Wick rotation work? | **No.** |
-| Does the canonical relative determinant have a stable limit? | **Yes, numerically.** |
+| Does the tested standard direct-product Wick rotation work? | **No, at the tested finite cutoffs.** |
+| Does the declared-measure relative magnitude have a stable recorded limit? | **Yes, numerically.** |
+| Does the bare absolute lattice determinant sign have a cutoff-independent limit? | **No; it alternates with cutoff parity.** |
+| Is the properly regularized continuum Maslov/determinant-line phase known? | **No.** |
 | Is a naked bulk Hessian determinant adequate? | **No.** |
 | Is the conditional local magnitude finite? | **Yes: $29.1793909650$ at $\hbar=1$.** |
 | Is that a physical probability or complete one-loop determinant? | **No.** |
@@ -414,7 +432,7 @@ Included:
 - the lapse-dependent principal conformal rays;
 - midpoint field--lapse Hessians through 320 time slices;
 - direct-product and fibered-contour eigenvalue tests;
-- a canonical slice-measure convergence test;
+- a declared midpoint configuration-measure convergence test;
 - the endpoint Jacobi/Van Vleck datum and a conditional local magnitude;
 - the common pointwise open limit of two shifted endpoint rays.
 
@@ -455,5 +473,5 @@ uv run --locked python3 \
   cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py
 ```
 
-The executable emits ten exact checks, nine numerical checks, and one
+The executable emits ten exact checks, ten numerical checks, and one
 `PHASE30_RESULT=` payload.  It writes no files.
