@@ -15,21 +15,26 @@ K_N(\Delta q)
 \right].
 \]
 
-At $\Delta q=0$ this diverges as $1/N$, but for real lapse its identity-normalized
-quadratic distribution obeys
+At $\Delta q=0$ this diverges as $1/N$, but for real lapse its
+identity-normalized quadratic distribution, in the local flat endpoint measure
+used in this frozen control, obeys
 
 \[
-\boxed{K_{N\to0}(q_+,q_-)=\delta^{(2)}(q_+-q_-)}.
+\boxed{K_{N\to0}(q_+,q_-)=\delta^{(2)}_{\rm flat}(q_+-q_-)}.
 \]
 
 The pole is therefore the short-time normalization of the identity kernel,
 not by itself a removable infinity or a probability divergence.
 
+This closes only the leading frozen pointwise-versus-distributional question.
+It does not derive the physical Wheeler--DeWitt endpoint measure, its factor
+ordering, an all-orders uniform kernel, or a global lapse contour.
+
 For an open interval with fixed endpoint configurations, proper-time gauge
-leaves the lapse modulus with a $T$-independent measure.  The reduced
-Dirichlet ghost determinant is a constant after the coordinate and ghost
-Jacobians are included.  It does **not** cancel the $1/N$ identity-kernel
-scaling.
+leaves the lapse modulus with a $T$-independent measure in the declared
+fixed-$s$ reduced BFV normalization.  The reduced Dirichlet ghost factor is a
+constant after the coordinate and ghost Jacobians are included.  It does
+**not** cancel the $1/N$ identity-kernel scaling.
 
 Trying to cancel the pole by inserting an extra factor of $N$ changes the
 physical object:
@@ -58,6 +63,12 @@ be specified together with the lapse contour before a complex endpoint
 parametrix or global thimble coefficient can be defined.
 
 ## 1. Frozen short-time metric
+
+As in Phases 24--28, reduced units are
+
+\[
+M_{\rm P}=M=1.
+\]
 
 At
 
@@ -102,9 +113,12 @@ K_N^{(0)}(\Delta q)
 \]
 
 On real $N$, the square-root branch $\det_{\mathcal C}^{1/2}$ is fixed here by
-the requirement $K_{N\to0}=+\delta^{(2)}$.  Its continuation to imaginary
-$N$, including the negative kinetic/conformal contour and phase, remains
-unfixed.  The raw Van Vleck and normalized magnitudes are
+the requirement $K_{N\to0}=+\delta^{(2)}_{\rm flat}$ under the declared local
+flat $d a\,d\phi$ endpoint measure.  A different physical WDW measure would
+carry the corresponding density factor; that measure and its factor ordering
+are not derived here.  Continuation to imaginary $N$, including the negative
+kinetic/conformal contour and phase, also remains unfixed.  The raw Van Vleck
+and normalized magnitudes are
 
 \[
 |\det D|^{1/2}
@@ -150,9 +164,9 @@ e^{-iNh(p)}\longrightarrow1,
 |e^{-iNh(p)}|=1.
 \]
 
-Dominated convergence therefore extends the identity limit to Schwartz test
-functions for this frozen quadratic real-lapse control.  At the same time,
-the diagonal value grows exactly as $1/N$.
+Dominated convergence therefore extends the local-flat-measure identity limit
+to Schwartz test functions for this frozen quadratic real-lapse control.  At
+the same time, the diagonal value grows exactly as $1/N$.
 
 This shows why the order of operations matters:
 
@@ -199,14 +213,14 @@ is gauge invariant and remains to be integrated.
 
 In the gauge $\dot N=0$, the nonzero-mode FP operator is
 $-\partial_s^2$ with Dirichlet ghost endpoints.  On a unit coordinate
-interval,
+interval, with the zeta reference scale fixed to one,
 
 \[
 \det_\zeta(-\partial_s^2)=2.
 \]
 
-If the same bare operator is instead written as $-\partial_\tau^2$ on a
-coordinate interval of length $L$, then
+If the same bare operator and reference scale are instead written as
+$-\partial_\tau^2$ on a coordinate interval of length $L$, then
 
 \[
 \det_\zeta(-\partial_\tau^2)=2L.
@@ -226,14 +240,17 @@ Equivalently, for any positive gauge-condition rescaling,
 \]
 
 An isolated determinant factor can therefore be moved between the delta
-functional, ghost determinant, and measure.  The open-line reduced modulus
-measure is, up to an overall convention,
+functional, ghost determinant, and measure.  Within this fixed-$s$ reduced
+gauge and BFV normalization, the open-interval reduced modulus measure is, up
+to an overall convention,
 
 \[
 \boxed{dT},
 \]
 
-not $T\,dT$ inserted to cancel the short-time kernel.  The familiar $dT/T$
+not $T\,dT$ inserted to cancel the short-time kernel.  This statement concerns
+the lapse modulus; it does not fix the physical endpoint configuration-space
+measure.  The familiar $dT/T$
 of a closed loop involves a residual rigid-translation zero mode and must not
 be imported into this open fixed-endpoint problem.
 
@@ -377,11 +394,13 @@ identity source.  Neither is yet a full quantum seam state.
 | Is the full-line object a normalized state? | **No; it is a rigging distribution.** |
 | Is the lateral PL coefficient now fixed? | **No.** |
 
-The calculation strengthens the connected-seam program at the operator level
-while ruling out a tempting shortcut.  The zero-lapse pole is not removed;
-it must be retained and interpreted distributionally.  The next genuine gate
-is the conformal/BFV contour together with the complete gauge-reduced
-determinant.
+The calculation strengthens the connected-seam program at the local operator
+level while ruling out a tempting shortcut.  It resolves the leading frozen
+quadratic interpretation of the zero-lapse pole; it does not resolve the full
+Phase-27/28 global endpoint gate.  The pole is not removed and must be retained
+and interpreted distributionally.  The next genuine gate is the
+conformal/BFV contour together with the physical endpoint measure and complete
+gauge-reduced determinant.
 
 ## Scope
 
@@ -401,6 +420,7 @@ Excluded:
 - a gauge-fixed graviton, matter, gravitino, and ghost determinant;
 - a conformal-field thimble and determinant phase;
 - a global relative-homology intersection number;
+- the physical WDW endpoint measure and factor ordering;
 - a positive trace-class WDW/seam density or selection of $\phi_0$.
 
 ## Primary references
@@ -408,7 +428,8 @@ Excluded:
 - J. J. Halliwell, “Derivation of the Wheeler–DeWitt equation from a path
   integral for minisuperspace models,”
   [DOI:10.1103/PhysRevD.38.2468](https://doi.org/10.1103/PhysRevD.38.2468).
-  Used for the BFV minisuperspace measure and lapse-range distinction.
+  Used for the BFV minisuperspace measure and lapse-range distinction; it does
+  not fix the physical endpoint measure of this seam model.
 - C. Teitelboim, “Quantum Mechanics of the Gravitational Field in
   Asymptotically Flat Space,”
   [DOI:10.1103/PhysRevD.28.310](https://doi.org/10.1103/PhysRevD.28.310).

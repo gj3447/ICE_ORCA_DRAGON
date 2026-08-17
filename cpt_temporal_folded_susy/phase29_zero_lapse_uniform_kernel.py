@@ -4,9 +4,9 @@
 This executable freezes the Phase-24--27 homogeneous boundary metric and
 studies the zero-duration kernel before setting the two endpoint coordinates
 equal.  It separates the pointwise Van Vleck pole from its distributional
-identity-kernel limit, checks the coordinate-length dependence of the reduced
-Dirichlet ghost determinant, and records the conformal-sign obstruction to a
-single Euclidean lapse rotation.
+identity-kernel limit in the declared local flat endpoint measure, checks the
+coordinate-length dependence of the reduced Dirichlet ghost determinant, and
+records the conformal-sign obstruction to a single Euclidean lapse rotation.
 
 It is a finite-dimensional short-time control, not a gauge-fixed gravitational
 one-loop determinant or a Picard--Lefschetz intersection calculation.  The
@@ -158,7 +158,7 @@ def exact_controls(audit: Audit) -> dict[str, object]:
         "P29.BFV.Dirichlet_ghost_length_scaling",
         dirichlet_zeta_prime == -sp.log(2 * length)
         and dirichlet_determinant == 2 * length,
-        "det_zeta(-d^2) on a Dirichlet interval of coordinate length L is 2L",
+        "with the zeta reference scale fixed to one, det_zeta(-d^2) on a Dirichlet interval of coordinate length L is 2L",
     )
 
     fixed_parameter_determinant = sp.simplify(
@@ -192,13 +192,15 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     )
 
     mode_number = sp.symbols("n", positive=True, integer=True)
-    nonzero_mode_factor = sp.simplify(
-        (mode_number * sp.pi) ** 2 / (mode_number * sp.pi)
+    coordinate_interval_eigenvalue = (mode_number * sp.pi / length) ** 2
+    fixed_parameter_mode_eigenvalue = sp.simplify(
+        length**2 * coordinate_interval_eigenvalue
     )
     audit.exact(
         "P29.BFV.nonzero_mode_factor_is_modulus_independent",
-        sp.diff(nonzero_mode_factor, length) == 0,
-        "each fixed-parameter nonzero lapse/Dirichlet-ghost mode leaves only a T-independent normalization",
+        fixed_parameter_mode_eigenvalue == (mode_number * sp.pi) ** 2
+        and sp.diff(fixed_parameter_mode_eigenvalue, length) == 0,
+        "each fixed-parameter Dirichlet-ghost eigenvalue is independent of the coordinate/proper-time length",
     )
 
     endpoint_pole = sp.symbols("N", positive=True, real=True)
@@ -309,16 +311,22 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     )
 
     dimension = sp.symbols("D", positive=True, integer=True)
+    identity_index = sp.symbols("j", positive=True, integer=True)
+    identity_hs_squared = sp.summation(
+        1, (identity_index, 1, dimension)
+    )
     audit.exact(
         "P29.density.identity_not_Hilbert_Schmidt",
-        sp.limit(dimension, dimension, sp.oo) == sp.oo,
+        identity_hs_squared == dimension
+        and sp.limit(identity_hs_squared, dimension, sp.oo) == sp.oo,
         "the identity kernel has Hilbert-Schmidt norm squared D and is not trace class as D grows",
     )
 
     return {
         "short_time_metric": "M=2pi^2 diag(-6a,a^3)",
         "normalized_kernel": "sqrt(det-branch(M))/(2pi i N) exp[i Deltaq^T M Deltaq/(2N)]",
-        "ghost_determinant": "det_zeta(-d_s^2)=2L for Dirichlet ghosts on coordinate length L",
+        "ghost_determinant": "det_zeta(-d_tau^2)=2L for Dirichlet ghosts on coordinate length L with zeta reference scale fixed to one",
+        "endpoint_measure": "local flat d(a) d(phi) measure for this frozen quadratic control",
         "operator_objects": {
             "positive_half_line": "sourced resolvent",
             "full_line": "constraint-supported rigging distribution",
@@ -431,7 +439,7 @@ def run() -> dict[str, object]:
         "frozen_conventions": exact,
         "numerical_controls": numerical,
         "claim_status": {
-            "the_zero_lapse_kernel_has_a_distributional_identity_limit": "SUPPORTED_FOR_REAL_LAPSE_SCHWARTZ_TESTS_IN_THE_FROZEN_QUADRATIC_CONTROL",
+            "the_zero_lapse_kernel_has_a_distributional_identity_limit": "SUPPORTED_FOR_REAL_LAPSE_SCHWARTZ_TESTS_IN_THE_FROZEN_QUADRATIC_CONTROL_WITH_THE_DECLARED_LOCAL_FLAT_ENDPOINT_MEASURE",
             "the_equal_endpoint_pointwise_zero_lapse_limit_is_finite": "CONTRADICTED_BY_THE_ONE_OVER_N_POLE",
             "the_unit_interval_Dirichlet_ghost_determinant_removes_the_pole": "CONTRADICTED_BY_ITS_CONSTANT_SCALING",
             "one_imaginary_lapse_rotation_damps_both_homogeneous_directions": "CONTRADICTED_BY_THE_INDEFINITE_KINETIC_FORM",
@@ -443,7 +451,7 @@ def run() -> dict[str, object]:
         "scope_guard": {
             "computed": [
                 "the frozen two-coordinate quadratic short-time kernel",
-                "Gaussian-test and Fourier-Schwartz distributional convergence to the identity kernel",
+                "Gaussian-test and Fourier-Schwartz distributional convergence to the local-flat-measure identity kernel",
                 "the reduced Dirichlet-ghost zeta determinant and its coordinate-length scaling",
                 "half-line resolvent versus full-line constraint annihilation",
                 "the opposite-sign damping obstruction of the homogeneous kinetic form",
@@ -453,6 +461,7 @@ def run() -> dict[str, object]:
                 "the gauge-fixed nonzero-mode gravitational or SUGRA determinant",
                 "a global relative-homology cycle or integer saddle coefficient",
                 "an interacting zero-lapse uniform parametrix beyond leading order",
+                "the physical WDW endpoint measure and factor ordering",
                 "a trace-class WDW density or initial-value distribution",
             ],
         },
