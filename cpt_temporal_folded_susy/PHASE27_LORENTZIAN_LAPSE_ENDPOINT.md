@@ -128,7 +128,7 @@ whereas the Phase-24--26 Euclidean constraint is
 
 They obey $p_L=i p_E$ and
 $\mathcal H_L(q,i p_E)=-\mathcal H_E(q,p_E)$.  Thus the BFV calculation in
-Phase 26 is a Euclidean-continued reduction of the frozen Phase-24/25 system,
+Phase 28 is a Euclidean-continued reduction of the frozen Phase-24/25 system,
 not an uncontinued Lorentzian Hamiltonian with the same potential signs.
 
 The Euclidean saddle $T_*=0.7$ therefore lies at
@@ -333,7 +333,7 @@ These are necessary sampled raw-exponent data for a candidate Stokes segment.
 They do not establish continuous positivity or solve the Picard--Lefschetz
 flow equation, much less a heteroclinic of the full prefactored lapse
 integrand: the Jacobi/Van Vleck factor is singular at $T=0$, while the
-Phase-26 reduced Dirichlet-ghost diagnostic has not yet been combined with a
+Phase-28 reduced Dirichlet-ghost diagnostic has not yet been combined with a
 zero-lapse-uniform bulk determinant.
 
 ## 6. What the lateral prescription fixes
@@ -393,7 +393,7 @@ The executable supports only the following bounded claims:
 The following remain open:
 
 - deriving the full BFV/FP endpoint measure from, among other inputs, the
-  Phase-26 reduced Dirichlet-ghost diagnostic, then combining it with the raw
+  Phase-28 reduced Dirichlet-ghost diagnostic, then combining it with the raw
   zero-lapse Van Vleck factor and a gauge-fixed bulk determinant;
 - a gauge-fixed bulk determinant and its phase;
 - a zero-lapse-uniform full configuration-space kernel;

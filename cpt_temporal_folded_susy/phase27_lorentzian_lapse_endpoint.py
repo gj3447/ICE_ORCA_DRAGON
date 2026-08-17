@@ -745,7 +745,7 @@ def run() -> dict[str, object]:
                 "spectral proxy identities separating a positive half-line resolvent from full-line constraint support",
             ],
             "not_computed": [
-                "a full BFV/FP endpoint measure, using but not equating it to the Phase-26 reduced Dirichlet-ghost diagnostic, combined with a zero-lapse-uniform gauge-fixed bulk determinant",
+                "a full BFV/FP endpoint measure, using but not equating it to the Phase-28 reduced Dirichlet-ghost diagnostic, combined with a zero-lapse-uniform gauge-fixed bulk determinant",
                 "the conformal-factor integration cycle or determinant phase",
                 "a zero-lapse-uniform full configuration-space kernel",
                 "a global Picard-Lefschetz flow, Stokes matrix, or intersection number",
@@ -762,7 +762,7 @@ def run() -> dict[str, object]:
             "Banihashemi_Jacobson_2025": "below-origin lapse contour after momentum integration in its stated gravitational setup; DOI 10.1103/PhysRevD.111.066014; it does not determine this model's n_sigma",
         },
         "next_calculation": (
-            "derive the full BFV/FP endpoint measure using the Phase-26 reduced ghost diagnostic and combine it with a zero-lapse-uniform determinant, "
+            "derive the full BFV/FP endpoint measure using the Phase-28 reduced ghost diagnostic and combine it with a zero-lapse-uniform determinant, "
             "then count lateral relative intersections on the full complex BVP surface"
         ),
     }
