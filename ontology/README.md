@@ -8,11 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–24 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–29 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-17T14:21:16Z` graph update, the collection has 281 nodes and
-588 edges. Validation verifies 32/32 stored hashes (30 artifacts and 2 policies). The
-Phase 16–24 run snapshots contain 232 named exact checks and 70 numerical checks. These
+At the recorded `2026-08-17T15:45:17Z` graph update, the collection has 384 nodes and
+891 edges. Validation verifies 47/47 stored hashes (45 artifacts and 2 policies). The
+Phase 16–29 run snapshots contain 282 named exact checks, 114 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (115 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -26,6 +27,8 @@ confidence.
 ./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2
 ./ice ontology trace claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY --depth 2
 ./ice ontology trace claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE --depth 2
+./ice ontology trace claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE --depth 2
+./ice ontology trace claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT --depth 2
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;

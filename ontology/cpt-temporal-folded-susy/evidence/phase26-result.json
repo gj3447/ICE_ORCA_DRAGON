@@ -1,0 +1,1382 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P26_GLOBAL_LAPSE_FLOW_20260817",
+  "phase": "P26",
+  "observed_at_utc": "2026-08-17T15:26:44.354Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase26_global_lapse_flow.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase26_global_lapse_flow.py",
+    "sha256": "c41824d6667d38efe66f5ebf4d0e1ec572d27c78b146b7c044e2e1ffd9868d04",
+    "introduced_in_commit": "c64eedb5cfb0d2fc49d3cd0243ee198a15a12165"
+  },
+  "exact_checks": 4,
+  "checks": [
+    {
+      "id": "P26.flow.exp_minus_W_sign",
+      "statement": "dT/ds=conj(W_T) increases Re W and preserves Im W",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.saddle.local_tangents",
+      "statement": "negative lapse curvature makes the imaginary tangent convergent for exp(-W)",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.fold.Airy_three_halves_law",
+      "statement": "a generic cubic fold has an action gap proportional to delta^(3/2)",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.asymptotic.plateau_projected_length",
+      "statement": "the frozen V=3/4 plateau control has projected round-trip length 4pi/3",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 9,
+  "numerical": [
+    {
+      "id": "P26.saddle.base",
+      "statement": "the continued arm starts at the frozen T=0.7 lapse saddle",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.flow.constant_phase_and_monotone_ReW",
+      "statement": "the recorded upper arm keeps Im W fixed while Re W rises above 4e4",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.flow.gradient_alignment",
+      "statement": "the oriented constant-phase curve follows the exp(-W) gradient direction",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.flow.projection_turn",
+      "statement": "the tracked BVP branch turns in its T-plane projection and returns to smaller Im T",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.flow.field_norm_stop",
+      "statement": "the bounded continuation stops on a declared large shooting-data norm, not a proven endpoint",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.flow.conjugate_lower_arm",
+      "statement": "real coefficients and real endpoints give a conjugate lower arm",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.fold.not_a_lapse_saddle",
+      "statement": "the real Dirichlet fold has nonzero W_T and is not a new lapse saddle",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.fold.Airy_scaling",
+      "statement": "the two real sheets obey the generic fold action and coordinate scaling laws",
+      "status": "PASS"
+    },
+    {
+      "id": "P26.contour.positive_real_not_recorded_decay_cycle",
+      "statement": "on the recorded real sheet Re W decreases by more than 10^3 before the fold",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "bounded global complex-lapse flow and real-fold uniform control",
+    "claim_status": {
+      "a_long_constant_phase_convergent_complex_arm_exists": "SUPPORTED_ON_THE_RECORDED_ANALYTIC_SHEET",
+      "a_positive_quantum_seam_state_or_initial_value_has_been_selected": "OPEN_NOT_DERIVED",
+      "the_Lorentzian_contour_intersection_number_has_been_computed": "OPEN_ENDPOINT_AND_MEASURE_REQUIRED",
+      "the_full_Starobinsky_arm_reaches_4pi_over_3": "OPEN_ASYMPTOTIC_EXISTENCE_NOT_DERIVED",
+      "the_plateau_asymptotic_control_has_projected_length_4pi_over_3": "SUPPORTED_EXACTLY_FOR_THE_PLATEAU_CONTROL",
+      "the_positive_real_Euclidean_T_sheet_is_a_convergent_relative_cycle": "NOT_SUPPORTED_ON_THE_RECORDED_BRANCH",
+      "the_projection_turn_alone_establishes_a_caustic_or_new_saddle": "NOT_INFERRED_WITHOUT_A_JACOBI_TEST",
+      "the_real_Dirichlet_fold_is_a_lapse_saddle": "CONTRADICTED_BY_NONZERO_W_T",
+      "the_real_fold_requires_a_two_sheet_Airy_uniformization": "SUPPORTED_BY_THREE_HALVES_AND_SQUARE_ROOT_SCALING",
+      "the_recorded_field_norm_stop_is_the_exact_thimble_endpoint": "OPEN_NOT_PROVED"
+    },
+    "exact_check_ids": [
+      "P26.flow.exp_minus_W_sign",
+      "P26.saddle.local_tangents",
+      "P26.fold.Airy_three_halves_law",
+      "P26.asymptotic.plateau_projected_length"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P26.flow.exp_minus_W_sign",
+        "statement": "dT/ds=conj(W_T) increases Re W and preserves Im W",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.saddle.local_tangents",
+        "statement": "negative lapse curvature makes the imaginary tangent convergent for exp(-W)",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.fold.Airy_three_halves_law",
+        "statement": "a generic cubic fold has an action gap proportional to delta^(3/2)",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.asymptotic.plateau_projected_length",
+        "statement": "the frozen V=3/4 plateau control has projected round-trip length 4pi/3",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 4,
+    "frozen_model": {
+      "flow": "dT/ds=conj(W_T) for the convergent exp(-W) thimble",
+      "fold_normal_form": "Phi=b delta u+c u^3/3",
+      "plateau_projected_length": "4pi/3"
+    },
+    "next_calculation": "combine the Phase-27 zero-lapse endpoint with a BFV/FP measure and a uniform determinant before counting lateral intersections",
+    "numerical_check_ids": [
+      "P26.saddle.base",
+      "P26.flow.constant_phase_and_monotone_ReW",
+      "P26.flow.gradient_alignment",
+      "P26.flow.projection_turn",
+      "P26.flow.field_norm_stop",
+      "P26.flow.conjugate_lower_arm",
+      "P26.fold.not_a_lapse_saddle",
+      "P26.fold.Airy_scaling",
+      "P26.contour.positive_real_not_recorded_decay_cycle"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P26.saddle.base",
+        "statement": "the continued arm starts at the frozen T=0.7 lapse saddle",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.flow.constant_phase_and_monotone_ReW",
+        "statement": "the recorded upper arm keeps Im W fixed while Re W rises above 4e4",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.flow.gradient_alignment",
+        "statement": "the oriented constant-phase curve follows the exp(-W) gradient direction",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.flow.projection_turn",
+        "statement": "the tracked BVP branch turns in its T-plane projection and returns to smaller Im T",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.flow.field_norm_stop",
+        "statement": "the bounded continuation stops on a declared large shooting-data norm, not a proven endpoint",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.flow.conjugate_lower_arm",
+        "statement": "real coefficients and real endpoints give a conjugate lower arm",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.fold.not_a_lapse_saddle",
+        "statement": "the real Dirichlet fold has nonzero W_T and is not a new lapse saddle",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.fold.Airy_scaling",
+        "statement": "the two real sheets obey the generic fold action and coordinate scaling laws",
+        "status": "PASS"
+      },
+      {
+        "id": "P26.contour.positive_real_not_recorded_decay_cycle",
+        "statement": "on the recorded real sheet Re W decreases by more than 10^3 before the fold",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 9,
+    "numerical_controls": {
+      "base": {
+        "T": 0.7,
+        "W": 1.4066905428343415,
+        "W_TT": -8.923143038336717
+      },
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "plateau_projected_endpoint_candidate": {
+        "T": [
+          4.1887902047863905,
+          0
+        ],
+        "status": "EXACT_FOR_THE_FROZEN_PLATEAU_ASYMPTOTIC_CONTROL_ONLY"
+      },
+      "projection_turn": {
+        "T": [
+          3.05,
+          2.4747967610571484
+        ],
+        "W": 209.21050090066498
+      },
+      "real_fold": {
+        "T_c": 9.788625568081242,
+        "W_T": -73.72585454419959,
+        "center": [
+          1.2479953435858713,
+          0.10016795278628221
+        ],
+        "samples": [
+          {
+            "T": 9.78,
+            "action_gap": 0.0745034154424502,
+            "action_gap_over_delta_3_2": 93.00249965755567,
+            "center_gap_over_sqrt_delta": 2.369434536384254,
+            "delta": 0.008625568081242818
+          },
+          {
+            "T": 9.784,
+            "action_gap": 0.029261536682497535,
+            "action_gap_over_delta_3_2": 93.01425530030531,
+            "center_gap_over_sqrt_delta": 2.3698679714076167,
+            "delta": 0.004625568081241482
+          },
+          {
+            "T": 9.786,
+            "action_gap": 0.012514453221911026,
+            "action_gap_over_delta_3_2": 93.02013236823502,
+            "center_gap_over_sqrt_delta": 2.370084719955978,
+            "delta": 0.0026255680812425908
+          },
+          {
+            "T": 9.787,
+            "action_gap": 0.006096750486221936,
+            "action_gap_over_delta_3_2": 93.02307185386353,
+            "center_gap_over_sqrt_delta": 2.370193102034082,
+            "delta": 0.0016255680812413686
+          },
+          {
+            "T": 9.788,
+            "action_gap": 0.0014555136024227977,
+            "action_gap_over_delta_3_2": 93.02601054341267,
+            "center_gap_over_sqrt_delta": 2.3703014893191834,
+            "delta": 0.0006255680812419229
+          },
+          {
+            "T": 9.7883,
+            "action_gap": 0.0005464764421958535,
+            "action_gap_over_delta_3_2": 93.0269355576642,
+            "center_gap_over_sqrt_delta": 2.370334006534854,
+            "delta": 0.00032556808124262204
+          },
+          {
+            "T": 9.7885,
+            "action_gap": 0.00013089697381474252,
+            "action_gap_over_delta_3_2": 93.02736489857638,
+            "center_gap_over_sqrt_delta": 2.3703556849679432,
+            "delta": 0.0001255680812413118
+          }
+        ]
+      },
+      "stop_reason": "FIELD_NORM_CUTOFF_CONTROL",
+      "upper_arm": [
+        {
+          "T": [
+            0.7001747500790572,
+            0.025
+          ],
+          "W": [
+            1.4094795508963736,
+            -2.0359582075801796e-14
+          ],
+          "W_T": [
+            0.003119008426975539,
+            -0.22311910960707146
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 2.264386402115024e-15,
+          "velocity": [
+            [
+              0.09987145935474649,
+              0.0035382821771622014
+            ],
+            [
+              -0.10666030027065945,
+              -0.003897943977100695
+            ]
+          ],
+          "velocity_norm": 0.14621368422787198
+        },
+        {
+          "T": [
+            0.7006988672388701,
+            0.05
+          ],
+          "W": [
+            1.4178528834281048,
+            -4.890185478778619e-15
+          ],
+          "W_T": [
+            0.012478079057775525,
+            -0.44648125658286697
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 4.968472179192598e-16,
+          "velocity": [
+            [
+              0.09995043625065744,
+              0.007076587107988536
+            ],
+            [
+              -0.10672785353990524,
+              -0.007795975576408568
+            ]
+          ],
+          "velocity_norm": 0.1466007494804072
+        },
+        {
+          "T": [
+            0.7027933498225041,
+            0.1
+          ],
+          "W": [
+            1.451440719239309,
+            1.0651202142497596e-15
+          ],
+          "W_T": [
+            0.04994510189893379,
+            -0.8949018931491927
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 1.3506556319905942e-15,
+          "velocity": [
+            [
+              0.10026611236039341,
+              0.014153357337696572
+            ],
+            [
+              -0.10699757764235086,
+              -0.015592656209166975
+            ]
+          ],
+          "velocity_norm": 0.14813920264664496
+        },
+        {
+          "T": [
+            0.7111401292567655,
+            0.2
+          ],
+          "W": [
+            1.587296770094416,
+            1.1416562140098563e-13
+          ],
+          "W_T": [
+            0.20030883809846967,
+            -1.805163516500832
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 2.3722314521151018e-15,
+          "velocity": [
+            [
+              0.10152519690006223,
+              0.02830821474031137
+            ],
+            [
+              -0.10806875686839429,
+              -0.03119108379541614
+            ]
+          ],
+          "velocity_norm": 0.15414428483337544
+        },
+        {
+          "T": [
+            0.744066432189102,
+            0.4
+          ],
+          "W": [
+            2.15435901823478,
+            9.71445146547012e-17
+          ],
+          "W_T": [
+            0.8099412474964648,
+            -3.7284871878101296
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 6.403926932535264e-16,
+          "velocity": [
+            [
+              0.10650864809738254,
+              0.056629570344821814
+            ],
+            [
+              -0.11223637851853568,
+              -0.06243258182826395
+            ]
+          ],
+          "velocity_norm": 0.17619827551275888
+        },
+        {
+          "T": [
+            0.797565165801727,
+            0.6
+          ],
+          "W": [
+            3.180611337376156,
+            -1.0777490011548707e-13
+          ],
+          "W_T": [
+            1.8570983312152307,
+            -5.8655909393736625
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 1.4341272915026084e-15,
+          "velocity": [
+            [
+              0.11466125532638151,
+              0.08498350573146354
+            ],
+            [
+              -0.11880997876381484,
+              -0.09379821148733314
+            ]
+          ],
+          "velocity_norm": 0.20804642571193563
+        },
+        {
+          "T": [
+            0.8703254993453503,
+            0.8
+          ],
+          "W": [
+            4.7803040205392175,
+            1.4710455076283324e-15
+          ],
+          "W_T": [
+            3.3962658544496684,
+            -8.277189893776118
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 5.125522625762685e-16,
+          "velocity": [
+            [
+              0.1258556792406653,
+              0.11340318241794822
+            ],
+            [
+              -0.12735722959714885,
+              -0.12541186986772893
+            ]
+          ],
+          "velocity_norm": 0.24626801419191394
+        },
+        {
+          "T": [
+            0.9615823503782869,
+            1
+          ],
+          "W": [
+            7.107114041715356,
+            1.879468802812312e-13
+          ],
+          "W_T": [
+            5.521701291284175,
+            -10.989483384261693
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 2.4162053527571295e-15,
+          "velocity": [
+            [
+              0.14006203150596247,
+              0.14194562371547212
+            ],
+            [
+              -0.1374456180425311,
+              -0.15748345092522784
+            ]
+          ],
+          "velocity_norm": 0.28889144673382705
+        },
+        {
+          "T": [
+            1.1022257051569255,
+            1.25
+          ],
+          "W": [
+            11.353885549465492,
+            1.8318679906315083e-15
+          ],
+          "W_T": [
+            9.255016666511663,
+            -14.803250885139354
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 5.20787707933585e-16,
+          "velocity": [
+            [
+              0.16230448421032834,
+              0.17794916967418836
+            ],
+            [
+              -0.15167229942340366,
+              -0.19877176950327233
+            ]
+          ],
+          "velocity_norm": 0.34716473805148823
+        },
+        {
+          "T": [
+            1.2762567725736398,
+            1.5
+          ],
+          "W": [
+            17.652272776336645,
+            4.60437243887668e-13
+          ],
+          "W_T": [
+            14.746276062477447,
+            -19.072066863692516
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 3.9516258301944564e-15,
+          "velocity": [
+            [
+              0.19041983097492118,
+              0.21464796727508267
+            ],
+            [
+              -0.16723198250426624,
+              -0.24259329630389928
+            ]
+          ],
+          "velocity_norm": 0.4112803244354648
+        },
+        {
+          "T": [
+            1.4933294275301678,
+            1.75
+          ],
+          "W": [
+            27.089010549053516,
+            2.2417484535353083e-13
+          ],
+          "W_T": [
+            23.248844810828114,
+            -23.813314443005552
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 1.7917993128471502e-15,
+          "velocity": [
+            [
+              0.22655736833895038,
+              0.2527436981359709
+            ],
+            [
+              -0.1838560464832657,
+              -0.29148583670368766
+            ]
+          ],
+          "velocity_norm": 0.48370926900714156
+        },
+        {
+          "T": [
+            1.7742603689878385,
+            2
+          ],
+          "W": [
+            42.17469036585585,
+            5.570544026056723e-14
+          ],
+          "W_T": [
+            37.93953960512239,
+            -29.149074797919802
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 1.627641220990486e-15,
+          "velocity": [
+            [
+              0.2757827911226489,
+              0.29382870796427635
+            ],
+            [
+              -0.2013912681571762,
+              -0.35135486951925876
+            ]
+          ],
+          "velocity_norm": 0.5713144009459289
+        },
+        {
+          "T": [
+            1.9140190417695426,
+            2.1
+          ],
+          "W": [
+            51.1476822960122,
+            4.7883919052083e-13
+          ],
+          "W_T": [
+            47.372457926290316,
+            -31.493479290783558
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 1.584063765558594e-15,
+          "velocity": [
+            [
+              0.30173919612631817,
+              0.3119089603933799
+            ],
+            [
+              -0.20851990441618817,
+              -0.38148415327896085
+            ]
+          ],
+          "velocity_norm": 0.6142836899945641
+        },
+        {
+          "T": [
+            2.0779891601427876,
+            2.2
+          ],
+          "W": [
+            63.25449224657949,
+            7.636113963371827e-13
+          ],
+          "W_T": [
+            60.90646846359386,
+            -33.92694376927402
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 2.219169033975901e-15,
+          "velocity": [
+            [
+              0.3339083739193333,
+              0.33174194819423114
+            ],
+            [
+              -0.21539981816720047,
+              -0.4183813970283072
+            ]
+          ],
+          "velocity_norm": 0.6655731345321702
+        },
+        {
+          "T": [
+            2.279244817722211,
+            2.3
+          ],
+          "W": [
+            81.08221371899127,
+            -1.021405182655144e-13
+          ],
+          "W_T": [
+            82.43990026499351,
+            -36.171223477901805
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 2.5590223025902077e-15,
+          "velocity": [
+            [
+              0.3767462041313591,
+              0.3546889428989214
+            ],
+            [
+              -0.2211174766816032,
+              -0.4676444987456633
+            ]
+          ],
+          "velocity_norm": 0.7316599375688572
+        },
+        {
+          "T": [
+            2.4028201074736684,
+            2.35
+          ],
+          "W": [
+            94.10556295905816,
+            -3.299582829185965e-13
+          ],
+          "W_T": [
+            99.29895789607546,
+            -36.827216230549666
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 1.5247420057565287e-15,
+          "velocity": [
+            [
+              0.40544155071930216,
+              0.3683220802617026
+            ],
+            [
+              -0.22261470650048046,
+              -0.5010617728131875
+            ]
+          ],
+          "velocity_norm": 0.7750252986728691
+        },
+        {
+          "T": [
+            2.5542319534598907,
+            2.4
+          ],
+          "W": [
+            112.84679703898559,
+            1.0647482895365101e-11
+          ],
+          "W_T": [
+            125.07661725311742,
+            -36.23776990968792
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 3.0312553502226396e-14,
+          "velocity": [
+            [
+              0.4438285806633024,
+              0.3848470103589577
+            ],
+            [
+              -0.22145518553139898,
+              -0.5464435974184351
+            ]
+          ],
+          "velocity_norm": 0.8323064548314979
+        },
+        {
+          "T": [
+            2.648801181423706,
+            2.425
+          ],
+          "W": [
+            126.47227073974058,
+            1.6780354883394466e-11
+          ],
+          "W_T": [
+            144.8168458408011,
+            -34.592981578871516
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 7.159963131111266e-14,
+          "velocity": [
+            [
+              0.47002772859642583,
+              0.3951964602692588
+            ],
+            [
+              -0.21845289704694415,
+              -0.5778173701205951
+            ]
+          ],
+          "velocity_norm": 0.871034378942732
+        },
+        {
+          "T": [
+            2.7704393911209544,
+            2.45
+          ],
+          "W": [
+            146.7018666702345,
+            -1.5337064951381763e-11
+          ],
+          "W_T": [
+            175.41539268232182,
+            -30.123572701481145
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 1.7562743105704877e-13,
+          "velocity": [
+            [
+              0.5068402667969312,
+              0.40868957052126964
+            ],
+            [
+              -0.21105113039232662,
+              -0.6222314576227019
+            ]
+          ],
+          "velocity_norm": 0.9250020473462723
+        },
+        {
+          "T": [
+            2.835753400391685,
+            2.46
+          ],
+          "W": [
+            159.06066112605816,
+            -1.815436689867056e-12
+          ],
+          "W_T": [
+            194.71842793639632,
+            -26.14822060115728
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 3.171395554533831e-14,
+          "velocity": [
+            [
+              0.5283195145471685,
+              0.41607417075112596
+            ],
+            [
+              -0.20498160685954372,
+              -0.6481775776778108
+            ]
+          ],
+          "velocity_norm": 0.9562378660001851
+        },
+        {
+          "T": [
+            2.929727486651903,
+            2.47
+          ],
+          "W": [
+            179.04375765641166,
+            2.6290081223123707e-13
+          ],
+          "W_T": [
+            226.62497316884077,
+            -17.678440503674274
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 8.747636529194094e-15,
+          "velocity": [
+            [
+              0.5617242777390712,
+              0.42694008989290305
+            ],
+            [
+              -0.19300050119170922,
+              -0.6882994345100777
+            ]
+          ],
+          "velocity_norm": 1.0043989792738666
+        },
+        {
+          "T": [
+            3.0019703460456078,
+            2.474
+          ],
+          "W": [
+            196.47139388683524,
+            1.758593271006248e-13
+          ],
+          "W_T": [
+            254.89020650706576,
+            -8.24481496297562
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 5.723241587632743e-15,
+          "velocity": [
+            [
+              0.5897351509930994,
+              0.4355342670032162
+            ],
+            [
+              -0.18065594455041867,
+              -0.7214848556666689
+            ]
+          ],
+          "velocity_norm": 1.0443441067524826
+        },
+        {
+          "T": [
+            3.033927833767134,
+            2.4747
+          ],
+          "W": [
+            204.83734594930075,
+            -5.3290705182007514e-14
+          ],
+          "W_T": [
+            268.52982442326817,
+            -3.0554348757912684
+          ],
+          "chart": "fixed_ImT",
+          "endpoint_residual": 3.3041523541221136e-15,
+          "velocity": [
+            [
+              0.6028631391006942,
+              0.4394144333368547
+            ],
+            [
+              -0.1741877993971032,
+              -0.7368296287137158
+            ]
+          ],
+          "velocity_norm": 1.0629150012678765
+        },
+        {
+          "T": [
+            3.05,
+            2.4747967610571484
+          ],
+          "W": [
+            209.21050090066498,
+            -3.26139115713886e-12
+          ],
+          "W_T": [
+            275.6666540246237,
+            -0.17655045946160824
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 4.854132380093387e-14,
+          "velocity": [
+            [
+              0.6096509752522613,
+              0.4413857165959479
+            ],
+            [
+              -0.17068050643981444,
+              -0.7447020966279568
+            ]
+          ],
+          "velocity_norm": 1.0724778368066998
+        },
+        {
+          "T": [
+            3.1,
+            2.4739774751696246
+          ],
+          "W": [
+            223.5771919377578,
+            -8.270717444247566e-12
+          ],
+          "W_T": [
+            299.10196614868323,
+            10.060833967477704
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 3.056312679331061e-14,
+          "velocity": [
+            [
+              0.6316185180311262,
+              0.4476093210388478
+            ],
+            [
+              -0.15860522312055206,
+              -0.7698586229465719
+            ]
+          ],
+          "velocity_norm": 1.1032379492779454
+        },
+        {
+          "T": [
+            3.2,
+            2.467020537933203
+          ],
+          "W": [
+            256.2359304695466,
+            3.062883280335882e-12
+          ],
+          "W_T": [
+            351.9184504326413,
+            37.482644081368186
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 2.1238536335199814e-14,
+          "velocity": [
+            [
+              0.6799223896163671,
+              0.4605186713629279
+            ],
+            [
+              -0.12855602844607134,
+              -0.8231865657232316
+            ]
+          ],
+          "velocity_norm": 1.1698438686476682
+        },
+        {
+          "T": [
+            3.3,
+            2.4524591513561687
+          ],
+          "W": [
+            295.2655412835992,
+            3.2365221613872563e-12
+          ],
+          "W_T": [
+            413.34489427133525,
+            76.8325716905005
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 2.7303824517169315e-14,
+          "velocity": [
+            [
+              0.7352918340119154,
+              0.4741541587312823
+            ],
+            [
+              -0.08932112259120178,
+              -0.8805108994947692
+            ]
+          ],
+          "velocity_norm": 1.2444894352612303
+        },
+        {
+          "T": [
+            3.5,
+            2.3975995311961666
+          ],
+          "W": [
+            400.3043910557785,
+            9.485745522397337e-12
+          ],
+          "W_T": [
+            565.6739583455695,
+            208.59182229938125
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 3.8414744436872136e-14,
+          "velocity": [
+            [
+              0.8758705711904536,
+              0.5043197713636405
+            ],
+            [
+              0.024371204599467677,
+              -1.0075446849429461
+            ]
+          ],
+          "velocity_norm": 1.4273149396808595
+        },
+        {
+          "T": [
+            3.7,
+            2.301883556478649
+          ],
+          "W": [
+            564.2297549548136,
+            -6.0325078266032506e-12
+          ],
+          "W_T": [
+            766.8934321614605,
+            459.0104159481967
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 3.431679490732833e-14,
+          "velocity": [
+            [
+              1.0814679595846597,
+              0.5404150135364912
+            ],
+            [
+              0.20504935148791714,
+              -1.1549403740069433
+            ]
+          ],
+          "velocity_norm": 1.6845040333940333
+        },
+        {
+          "T": [
+            4,
+            2.0495664772649556
+          ],
+          "W": [
+            1080.4091161222075,
+            2.8975932764296886e-11
+          ],
+          "W_T": [
+            1220.4472090676495,
+            1401.2737750134088
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 6.153621945393691e-14,
+          "velocity": [
+            [
+              1.686363559545562,
+              0.6192645227538347
+            ],
+            [
+              0.7389611607505137,
+              -1.4505671863206169
+            ]
+          ],
+          "velocity_norm": 2.42435957795715
+        },
+        {
+          "T": [
+            4.2,
+            1.7468703594706934
+          ],
+          "W": [
+            2079.7024571761385,
+            -1.0241762993246084e-10
+          ],
+          "W_T": [
+            1735.9696230152815,
+            3532.8796505859696
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 8.565540515060744e-14,
+          "velocity": [
+            [
+              2.7985572164886543,
+              0.7220197785540767
+            ],
+            [
+              1.669682982387624,
+              -1.7915145610467196
+            ]
+          ],
+          "velocity_norm": 3.788218676198782
+        },
+        {
+          "T": [
+            4.3,
+            1.486464462171922
+          ],
+          "W": [
+            3623.9494282925393,
+            4.647233708965359e-10
+          ],
+          "W_T": [
+            2100.1903569273118,
+            7307.432510923858
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 1.9830652614829875e-12,
+          "velocity": [
+            [
+              4.467754559564017,
+              0.8364076757448689
+            ],
+            [
+              2.9940756690110697,
+              -2.1361780656244145
+            ]
+          ],
+          "velocity_norm": 5.847063745536639
+        },
+        {
+          "T": [
+            4.34,
+            1.3143088823826838
+          ],
+          "W": [
+            5334.049883256703,
+            -2.984279490192421e-13
+          ],
+          "W_T": [
+            2156.834719886244,
+            11986.261492956435
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 4.158417537524687e-14,
+          "velocity": [
+            [
+              6.286275920361557,
+              0.9353501372948924
+            ],
+            [
+              4.388519781630933,
+              -2.4173968788246225
+            ]
+          ],
+          "velocity_norm": 8.09290172742584
+        },
+        {
+          "T": [
+            4.36,
+            1.1712452680046472
+          ],
+          "W": [
+            7521.664117149554,
+            9.29105681279907e-11
+          ],
+          "W_T": [
+            1875.751671780727,
+            18577.7617498723
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 9.592012437213267e-14,
+          "velocity": [
+            [
+              8.588434280775239,
+              1.0395501418680297
+            ],
+            [
+              6.115694949566121,
+              -2.7029065731799364
+            ]
+          ],
+          "velocity_norm": 10.933860093861682
+        },
+        {
+          "T": [
+            4.37,
+            0.9878209114713591
+          ],
+          "W": [
+            12229.772774439138,
+            -2.2185986381373368e-10
+          ],
+          "W_T": [
+            336.042455003471,
+            34598.08769902349
+          ],
+          "chart": "fixed_ReT",
+          "endpoint_residual": 4.672624435107832e-13,
+          "velocity": [
+            [
+              13.493091916575036,
+              1.218294847233982
+            ],
+            [
+              9.721477860373119,
+              -3.1758228483306508
+            ]
+          ],
+          "velocity_norm": 16.97470925693996
+        },
+        {
+          "T": [
+            4.370061555584786,
+            0.98
+          ],
+          "W": [
+            12504.268961111688,
+            5.703668648493476e-10
+          ],
+          "W_T": [
+            214.7022155490365,
+            35598.81404317812
+          ],
+          "chart": "fixed_ImT_return",
+          "endpoint_residual": 7.283925389361891e-13,
+          "velocity": [
+            [
+              13.777637189302713,
+              1.227453067687522
+            ],
+            [
+              9.928687056703987,
+              -3.199610892910367
+            ]
+          ],
+          "velocity_norm": 17.324729841744276
+        },
+        {
+          "T": [
+            4.369062344181924,
+            0.9
+          ],
+          "W": [
+            15826.31790633685,
+            1.2063310350640677e-9
+          ],
+          "W_T": [
+            -1482.7337682614846,
+            48220.69415651648
+          ],
+          "chart": "fixed_ImT_return",
+          "endpoint_residual": 5.690745010167378e-12,
+          "velocity": [
+            [
+              17.212639300070336,
+              1.330654923702895
+            ],
+            [
+              12.418520949841186,
+              -3.465239638526958
+            ]
+          ],
+          "velocity_norm": 21.546998457659097
+        },
+        {
+          "T": [
+            4.363776122819706,
+            0.8
+          ],
+          "W": [
+            21799.873152496984,
+            6.44014619410882e-10
+          ],
+          "W_T": [
+            -5447.783355008315,
+            73032.82764561706
+          ],
+          "chart": "fixed_ImT_return",
+          "endpoint_residual": 2.072966080944159e-13,
+          "velocity": [
+            [
+              23.359276423711833,
+              1.4901160715591668
+            ],
+            [
+              16.835325126675887,
+              -3.868062807049077
+            ]
+          ],
+          "velocity_norm": 29.090656970000857
+        },
+        {
+          "T": [
+            4.354218218497174,
+            0.7
+          ],
+          "W": [
+            31148.74908522626,
+            -9.265875178243732e-9
+          ],
+          "W_T": [
+            -13530.115748469916,
+            116441.47546535672
+          ],
+          "chart": "fixed_ImT_return",
+          "endpoint_residual": 1.2738867496471467e-11,
+          "velocity": [
+            [
+              32.92986704547606,
+              1.697774857434562
+            ],
+            [
+              23.653088816834202,
+              -4.381331000937217
+            ]
+          ],
+          "velocity_norm": 40.81572313479314
+        },
+        {
+          "T": [
+            4.340610405264956,
+            0.6
+          ],
+          "W": [
+            46740.35874123373,
+            -1.2223608791828156e-8
+          ],
+          "W_T": [
+            -30948.19534933123,
+            198912.2337864493
+          ],
+          "chart": "fixed_ImT_return",
+          "endpoint_residual": 5.6790112983177743e-11,
+          "velocity": [
+            [
+              48.813413913995625,
+              1.9792232562598164
+            ],
+            [
+              34.88014166400267,
+              -5.060407407263038
+            ]
+          ],
+          "velocity_norm": 60.24034120309711
+        }
+      ],
+      "upper_arm_min_gradient_alignment": 0.9976382438649195
+    },
+    "phase": "P26",
+    "scope_guard": {
+      "computed": [
+        "one reflection-symmetric analytic complex-BVP sheet",
+        "a long constant-Im-W arm through a projection turn and bounded return segment",
+        "the conjugate lower-arm control",
+        "the real simple-fold nonstationarity and Airy scaling overlap",
+        "the exact frozen-plateau projected-length control"
+      ],
+      "not_computed": [
+        "all complex or nonsymmetric BVP sheets",
+        "a proof of the recorded arm's asymptotic endpoint",
+        "the original Lorentzian contour's lateral relative homology",
+        "the Faddeev-Popov measure or gauge-fixed bulk determinant",
+        "a Stokes matrix, integer intersection coefficient, WDW state, or density",
+        "fermion, gravitino, ghost, Pin, or local-SUGRA completion"
+      ]
+    }
+  }
+}

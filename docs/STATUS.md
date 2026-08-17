@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 56 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 60 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,9 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–24 is now indexed in a repository-local typed research graph with **281 nodes and 588 directed
-relations**. It preserves 63 claims, 35 evidence groups, 27 explicit scopes, 31 open problems, 42
-literature sources, the Phase 16–24 exact and bounded numerical run payloads, and cautious bridges to
+Phase 15R–29 is now indexed in a repository-local typed research graph with **384 nodes and 891 directed
+relations**. It preserves 90 claims, 52 evidence groups, 32 explicit scopes, 38 open problems, 58
+literature sources, the Phase 16–29 exact and bounded numerical run payloads, 47/47 verified artifact and
+policy hashes, and cautious bridges to
 the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
@@ -430,13 +431,107 @@ Phase 25 uses the full off-constraint Euler–Lagrange system and returns exit 0
 - The tracked real reflection-symmetric branch reaches a corank-one simple fold at
   $T_c=9.7886255681$. Two real roots at $T=9.78$ and both fold transversality conditions were checked.
 - This does not fix the original lapse contour, global intersection number, FP measure, physical bulk
-  Morse index, or a positive WDW/SUGRA seam state. The live runnable catalog is now 56; ontology remains
-  indexed through Phase 24 pending a frozen Phase 25 snapshot.
+  Morse index, or a positive WDW/SUGRA seam state. The runnable catalog rose to 56 at this phase; the
+  current ontology now freezes its Phase 25 snapshot together with the later Phase 26–29 records.
 
 See
 [`../cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md`](../cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md)
 and
 [`../cpt_temporal_folded_susy/phase25_connected_lapse_scan.py`](../cpt_temporal_folded_susy/phase25_connected_lapse_scan.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 26
+
+Phase 26 returns exit 0 with **4 exact checks and 9 numerical checks**.
+
+- The upper constant-phase complex-lapse arm continues through its projected
+  $\operatorname{Im}T$ turn over the recorded bounded domain, with increasing $\operatorname{Re}W$ and
+  constant $\operatorname{Im}W$ to the stated tolerances.
+- No monitored scale zero or homogeneous complex Dirichlet Jacobi zero appears on that bounded arm.
+- The real reflection-symmetric branch ends at the Phase-25 simple Dirichlet fold and obeys the expected
+  square-root splitting and Airy uniformization. The fold is a field-saddle projection caustic, not a
+  second stationary point of the lapse integral.
+- This does not determine the arm's global endpoint, the original-cycle intersection coefficient, the
+  complete determinant, or a physical state. The live committed catalog rose to 57 at this phase.
+
+See
+[`../cpt_temporal_folded_susy/PHASE26_GLOBAL_LAPSE_FLOW.md`](../cpt_temporal_folded_susy/PHASE26_GLOBAL_LAPSE_FLOW.md)
+and
+[`../cpt_temporal_folded_susy/phase26_global_lapse_flow.py`](../cpt_temporal_folded_susy/phase26_global_lapse_flow.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 27
+
+Phase 27 returns exit 0 with **13 exact checks and 8 numerical checks**.
+
+- The declared continuation $N_L=-iT_E$ maps positive Lorentzian lapse to
+  $T_E\in i\mathbb R_+$; the positive-real Euclidean axis is not that contour.
+- A positive lapse half-line produces a sourced resolvent, not the full-line group-averaging
+  distribution. Equal-boundary short-time checks reproduce the stated raw action and canonical
+  constraint limits.
+- The fixed-$T$ endpoint Jacobi map scales as $B_v\sim T\mathbf1$, so the raw two-coordinate Van Vleck
+  magnitude diverges as $1/|T|$. Contact at zero lapse is therefore not an ordinary transverse interior
+  intersection.
+- The global Picard--Lefschetz coefficient and a finite full gauge-reduced kernel remain open. The live
+  committed catalog rose to 58 at this phase.
+
+See
+[`../cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md`](../cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md)
+and
+[`../cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py`](../cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 28
+
+Phase 28 returns exit 0 with **10 exact checks and 9 numerical checks**.
+
+- Pseudo-arclength continuation carries the recorded upper constant-phase arm past its projected turn;
+  the monitored bounded branch remains regular. Constructed two-sided vertical segments cross the
+  recorded real dual branch once, but these are bounded crossings rather than a global relative-homology
+  coefficient for the physical positive-lapse contour.
+- In the Euclidean-continued homogeneous BFV--BRST control, the reduced Abelian constraint has a
+  nilpotent charge. Dirichlet ghosts have no zero mode, yet proper length remains a global modulus after
+  auxiliary elimination; the negative $W_{TT}$ direction is therefore not removed as a ghost-cancelled
+  gauge zero mode within this reduction.
+- The displayed local rotated Gaussian factor is conditional on a nonzero global thimble coefficient.
+  A complete conformal/lapse contour, inhomogeneous boson--fermion--gravitino--ghost determinant,
+  positive density, Pin lift, and soft SUSY spectrum remain open.
+- A bounded string-completion design route is
+  $\text{BFV seam candidate}\to\text{CPT/Pin completion}\to
+  \text{double-three-form }N=1\text{ SUGRA}\to\text{flux selection}
+  \to F\ne0\to\text{soft terms}$. A \(D\)-term branch needs an additional vector/gauging sector.
+  String/M-theory can supply flux quantization, charged-membrane
+  transitions, soft-term maps, and modular UV constraints; it does not derive the temporal seam or
+  sector prior and does not guarantee this saddle survives compactification.
+- The committed runnable catalog is now 59.
+
+See
+[`../cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md)
+and
+[`../cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py`](../cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 29
+
+Phase 29 returns exit 0 with **18 exact checks and 7 numerical checks**.
+
+- For the frozen leading quadratic real-lapse kernel, pairing with endpoint test functions under the
+  declared local flat $da\,d\phi$ measure gives
+  $K_{N\to0}=\delta^{(2)}_{\rm flat}$. The diagonal $1/N$ growth is the normalization of this identity
+  distribution in the stated scope, not by itself a removable infinity or a probability divergence.
+- In the fixed-$s$ reduced open-interval BFV normalization, the Dirichlet-ghost determinant and
+  coordinate Jacobian leave the proper-length modulus measure proportional to $dT$. The ghost does not
+  cancel the pointwise pole.
+- Multiplying the measure by $N$ changes the positive-half-line sourced resolvent from a simple to a
+  double pole and changes the full-line group average from $\delta(H)$ to $\delta'(H)$. It is therefore
+  a different operator prescription, not an endpoint renormalization of the same construction.
+- The frozen homogeneous kinetic form has one negative and one positive eigenvalue. Either sign of an
+  imaginary lapse damps one direction and amplifies the other, so a simultaneous conformal-field/lapse
+  cycle is required.
+- This is not a physical WDW endpoint measure, interacting all-orders uniform kernel, conformal cycle,
+  complete boson--fermion--gravitino--ghost determinant, quantum state, or global PL coefficient. The
+  committed runnable catalog is now 60.
+
+See
+[`../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md`](../cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md)
+and
+[`../cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py`](../cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py).
 
 ## Historical scientific ledger
 

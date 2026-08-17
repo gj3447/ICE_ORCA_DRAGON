@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), [`phase21-result.json`](../evidence/phase21-result.json), [`phase22-result.json`](../evidence/phase22-result.json), [`phase23-result.json`](../evidence/phase23-result.json), and [`phase24-result.json`](../evidence/phase24-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–29 snapshots in [`../evidence/`](../evidence/), including [`phase25-result.json`](../evidence/phase25-result.json), [`phase26-result.json`](../evidence/phase26-result.json), [`phase27-result.json`](../evidence/phase27-result.json), [`phase28-result.json`](../evidence/phase28-result.json), and [`phase29-result.json`](../evidence/phase29-result.json).
 
 ## Reading `PASS` correctly
 
-All 232 Phase 16–24 named exact checks have `status: PASS`. The snapshots also record 70 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, 7 Phase 21 flux-tail/prior controls, 4 Phase 23 normalization, convergence, spectrum, and current controls, and 14 Phase 24 saddle, Hessian, Gaussian, and contour controls. Phase 22 contributes 31 exact checks and no numerical fit; Phase 23 contributes 32 exact and 4 numerical checks; Phase 24 contributes 6 exact and 14 numerical checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
+All 282 Phase 16–29 named exact checks have `status: PASS`. The snapshots contain 114 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, and 7 in Phase 29, for 115 numerical controls in all. Phase 29 contributes 18 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that the original-contour intersection coefficient is known, or that a physical state has been constructed.
 
 The scientific direction is stored on:
 
@@ -29,10 +29,17 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 22 | `result:P22_FINITE_MODE_SEAM_DENSITY_20260817`; `2026-08-17T04:48:31Z` | `cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py`; SHA-256 `0a4da3c60bbd2231892938cb8a74f45bd3e491d9884df4adcc86051053d58dbe`; introduced in `d1befe783386f499818c3b902c90e5a9740e7fb4` | Exit `0`; 31 exact checks, 0 numerical checks |
 | 23 | `result:P23_HOMOGENEOUS_MINISUPERSPACE_DENSITY_20260817`; `2026-08-17T05:45:44Z` | `cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py`; SHA-256 `62408abeeec2eb11f104d984c84ffde5c2d6f287e7f07a4021ee6fb3ec202ffd`; introduced in `634d984e25422063a66a497963380fc24ad9f9d2` | Exit `0`; 32 exact checks plus 4 numerical checks |
 | 24 | `result:P24_CONNECTED_STAROBINSKY_INTERVAL_20260817`; `2026-08-17T14:21:16Z` | `cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py`; SHA-256 `a625c9390305a0e07ea3b38977dc34b4cce725f8dd19cec1c66b90d8ccf63256`; finalized in `1f5d60c33ace93eb3dd51b3236212dcf5a87703f` | Exit `0`; 6 exact checks plus 14 numerical checks |
+| 25 | `result:P25_CONNECTED_LAPSE_SCAN_20260817`; `2026-08-17T15:26:44.354Z` | `cpt_temporal_folded_susy/phase25_connected_lapse_scan.py`; SHA-256 `5fe43ec6997d6bae9c10d78ddb5d13b1806e10934140fd5080fef0dca3492ee8`; introduced in `c9533dc1aa7a11d7a7e53fa10a657b94406a4e54` | Exit `0`; 5 exact checks plus 12 numerical checks |
+| 26 | `result:P26_GLOBAL_LAPSE_FLOW_20260817`; `2026-08-17T15:26:44.354Z` | `cpt_temporal_folded_susy/phase26_global_lapse_flow.py`; SHA-256 `c41824d6667d38efe66f5ebf4d0e1ec572d27c78b146b7c044e2e1ffd9868d04`; introduced in `c64eedb5cfb0d2fc49d3cd0243ee198a15a12165` | Exit `0`; 4 exact checks plus 9 numerical checks |
+| 27 | `result:P27_LORENTZIAN_LAPSE_ENDPOINT_20260817`; `2026-08-17T15:26:44.354Z` | `cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py`; SHA-256 `36a454ca3f98277cca2c24904a708ec67fa8f7c3556f376e6613cdc0823e0d04`; finalized in `2065de0125674ba9c72888e3d95bc84fec66850b` | Exit `0`; 13 exact checks plus 8 numerical checks |
+| 28 | `result:P28_THIMBLE_BFV_INTERSECTION_20260817`; `2026-08-17T15:26:44.354Z` | `cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py`; SHA-256 `496990308456bcc1d28f9649b99053d2a05499c6d3c2c0d233d5576a39a3f018`; introduced in `2065de0125674ba9c72888e3d95bc84fec66850b` | Exit `0`; 10 exact checks plus 9 numerical checks |
+| 29 | `result:P29_ZERO_LAPSE_UNIFORM_KERNEL_20260817`; `2026-08-17T15:45:17.466Z` | `cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py`; SHA-256 `0fa8314d3c0385c70ad569ce1c2ad65d506580eef50ef589e7fa2da5f7fb3e76`; introduced/finalized in `4794ff6de9f5f5726bcdd633f64fd4988eb197de` | Exit `0`; 18 exact checks plus 7 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
-The Phase 24 artifact receipt also indexes [`PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md`](../../../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md) at SHA-256 `f91966c31a4219a2f939d440928b1f3bd6d42da2ceb50df444c710c97c82f74d` and the frozen [`phase24-result.json`](../evidence/phase24-result.json) at SHA-256 `6797e7699de453bcc1940e44cd36d174e18aaf3d78a298299ada06da403e84a9`. The executable, report, and snapshot are distinct artifacts: `artifact:p24-script`, `artifact:p24-report`, and `artifact:p24-evidence-snapshot`.
+The Phase 25–28 report hashes are `921ffbb7…`, `99b7d7d7…`, `9db755b6…`, and `1c721018…`; the corresponding frozen snapshot hashes are `62e124dc…`, `69cea996…`, `121a440f…`, and `114374d8…`. Phase 28's executable first appears in `2065de0…`; its final report bytes, after source-scope and notation repair, first appear in `1d48edc6160ed915c1a13f21e6f82d7211e8e6fe`. Each executable, report, and snapshot is a distinct artifact node.
+
+The Phase 29 report hash is `d3aa7abf…`; its frozen snapshot hash is `dd13f707…`. Both the final executable and report bytes first appear in `4794ff6de9f5f5726bcdd633f64fd4988eb197de`.
 
 ## Evidence-to-claim index
 
@@ -73,6 +80,23 @@ The Phase 24 artifact receipt also indexes [`PHASE24_CONNECTED_STAROBINSKY_INTER
 | `evidence:p24-constrained-mixed-hessian` | 1 exact + 6 numerical | Connected principal function has nonzero cross-boundary response — `SUPPORTS`; constraint-preserving mixed Hessian has rank one — `SUPPORTS`; the small mixed singular value is a physical mode — `CONTRADICTS` | Proper length is solved as a modulus under endpoint variations; fourth-order convergence removes the second singular direction, while the fixed-length mutant remains full rank |
 | `evidence:p24-conditional-scalar-gaussian` | 2 exact + 2 numerical | Fixed-scale scalar subblock defines a conditional positive Gaussian — `SUPPORTS` | Both endpoint scale factors fixed, flat \(d\phi_-d\phi_+\) measure, pure two-real-mode reading only; not a physical WDW density or seam entropy |
 | `evidence:p24-real-contour-obstruction` | 2 numerical | Real boundary Hessian defines a positive normalizable Gaussian precision — `CONTRADICTS` | Full real-boundary Hessian and the naive real-contour scalar Schur complement are indefinite; no thimble or bulk Morse spectrum was computed |
+| `evidence:p25-action-lapse-and-jacobi` | 4 exact + 7 numerical | Frozen endpoints define a lapse saddle — `SUPPORTS`; real lapse is the exp(-W) descent — `CONTRADICTS` | Supplied Phase-24 boundaries and fixed-length homogeneous action; no global cycle or gauge-fixed determinant |
+| `evidence:p25-real-branch-and-fold` | 4 numerical | Tracked real branch reaches a Dirichlet caustic — `SUPPORTS` | One bounded reflection-symmetric real continuation; not branch completeness or a second lapse saddle |
+| `evidence:p25-local-complex-segment` | 1 exact + 1 numerical | Local constant-phase complex segment exists — `SUPPORTS` | Local branch only; no original-contour coefficient |
+| `evidence:p26-bounded-complex-flow` | 2 exact + 6 numerical | Long constant-phase arm exists — `SUPPORTS` | One analytic sheet with a declared field-norm cutoff; endpoint and relative homology remain open |
+| `evidence:p26-real-fold-airy` | 1 exact + 2 numerical | Real fold is a lapse saddle — `CONTRADICTS`; Airy scaling — `SUPPORTS` | The fixed-length fold has nonzero W_T and generic local uniform scaling |
+| `evidence:p26-asymptotic-and-real-cycle` | 1 exact + 1 numerical | Positive real Euclidean sheet is the recorded convergent cycle — `CONTRADICTS` | Frozen plateau length is a separate exact control; no full Starobinsky asymptotic endpoint |
+| `evidence:p27-wick-map` | 4 exact | Declared Lorentzian–Euclidean map is consistent — `SUPPORTS` | Explicit convention only; not a contour selection rule |
+| `evidence:p27-raw-zero-lapse-kernel` | 3 exact + 6 numerical | Raw equal-boundary fixed-T kernel is finite at zero lapse — `CONTRADICTS` | Unreduced two-coordinate Van Vleck kernel only; the full BFV/FP kernel is distinct and uncomputed |
+| `evidence:p27-operator-and-contour` | 5 exact | Positive half-line is a sourced resolvent — `SUPPORTS`; it is a WDW projector — `CONTRADICTS` | Spectral operator identities; no positive density or global PL coefficient |
+| `evidence:p27-signed-raw-branch` | 1 exact + 2 numerical | Signed raw branch has paired stationary points — `SUPPORTS` | Frozen raw-W samples; not a prefactored heteroclinic |
+| `evidence:p28-bounded-upper-arm` | 4 exact + 6 numerical | Upper arm continues past the imaginary-T turn — `SUPPORTS` | Bounded monitored segment; not a complete thimble |
+| `evidence:p28-bounded-crossings` | 1 exact + 2 numerical | Four finite vertical cycles cross the recorded dual branch — `SUPPORTS` | Constructed bounded geometry; not a physical original-cycle intersection number |
+| `evidence:p28-homogeneous-bfv` | 5 exact + 1 numerical | Intrinsic clock regularity — `CONTRADICTS`; extrinsic p_a clock — `SUPPORTS`; Dirichlet ghosts remove proper length — `CONTRADICTS`; local Gaussian factor — `SUPPORTS` conditionally | Euclidean-continued homogeneous Abelian BFV only; determinant 2 is scheme-normalized, not a physical prefactor |
+| `evidence:p29-leading-fresnel-kernel` | 2 exact + 4 numerical | Frozen leading kernel has a `delta_flat` identity limit — `SUPPORTS`; equal-endpoint pointwise limit is finite — `CONTRADICTS` | Real-lapse leading quadratic control under declared local flat `da dphi`; not the physical WDW measure or all-orders kernel |
+| `evidence:p29-reduced-bfv-modulus` | 6 exact + 1 numerical | Fixed-parameter BFV modulus factor is T-independent — `SUPPORTS`; unit ghost cancels the pointwise pole — `CONTRADICTS` | Reduced one-constraint fixed-parameter gauge only; no full endpoint or nonzero-mode determinant |
+| `evidence:p29-lapse-operator-and-bypass` | 7 exact + 1 numerical | Inserted lapse power is harmless — `CONTRADICTS`; positive half lapse is a projector — `CONTRADICTS` | Spectral distributions and bounded finite-truncation arc; no global PL coefficient |
+| `evidence:p29-conformal-sign-and-density` | 3 exact + 1 numerical | One imaginary rotation damps both signs — `CONTRADICTS`; identity distribution is trace-class density — `CONTRADICTS` | Frozen indefinite kinetic form and identity cutoff; no conformal thimble or physical trace |
 
 ## Phase 16 check ledger
 
@@ -596,6 +620,184 @@ After fixing both endpoint scale factors, the scalar precision block is positive
 
 The full boundary Hessian has two negative directions, and naively integrating the scale factors on the real contour leaves an indefinite scalar Schur complement. These boundary signs do not determine the bulk Dirichlet Morse spectrum; a lapse/conformal thimble, gauge-fixed primed bulk operator, ghosts, physical boundary measure, and trace-class test remain open.
 
+## Phase 25 check ledger
+
+### Action, lapse saddle, and Jacobi response — 4 exact plus 7 numerical checks
+
+- `P25.action.full_off_shell_scale_equation`
+- `P25.action.energy_constraint_identity`
+- `P25.action.HJ_time_derivative_sign`
+- `P25.jacobi.starobinsky_second_derivative`
+- `P25.saddle.base_stationarity`
+- `P25.action.time_derivative_control`
+- `P25.saddle.negative_lapse_curvature`
+- `P25.saddle.real_direction_is_not_descent`
+- `P25.saddle.lapse_Schur_recovers_constrained_Hessian`
+- `P25.jacobi.base_velocity_monodromy`
+- `P25.jacobi.momentum_block_and_mixed_hessian`
+
+The supplied Phase-24 endpoints give a stationary fixed-boundary lapse saddle at `T=0.7` with `W_TT=-8.9231430383`. The negative curvature makes the imaginary tangent locally convergent for `exp(-W)`; it does not determine the global integration cycle.
+
+### Tracked real branch and simple fold — 4 numerical checks
+
+- `P25.branch.tracked_real_continuation`
+- `P25.caustic.symmetric_fold`
+- `P25.caustic.simple_fold_transversality`
+- `P25.caustic.two_branch_sign_bracket`
+
+### Local complex continuation — 1 exact plus 1 numerical check
+
+- `P25.thimble.local_steepest_direction`
+- `P25.thimble.local_constant_phase_segment`
+
+The real Dirichlet fold and local complex segment are two different diagnostics. Neither is a proof of a complete saddle census, relative-homology class, or intersection coefficient.
+
+## Phase 26 check ledger
+
+### Bounded complex arm — 2 exact plus 6 numerical checks
+
+- `P26.flow.exp_minus_W_sign`
+- `P26.saddle.local_tangents`
+- `P26.saddle.base`
+- `P26.flow.constant_phase_and_monotone_ReW`
+- `P26.flow.gradient_alignment`
+- `P26.flow.projection_turn`
+- `P26.flow.field_norm_stop`
+- `P26.flow.conjugate_lower_arm`
+
+### Real fold — 1 exact plus 2 numerical checks
+
+- `P26.fold.Airy_three_halves_law`
+- `P26.fold.not_a_lapse_saddle`
+- `P26.fold.Airy_scaling`
+
+### Plateau and real-sheet controls — 1 exact plus 1 numerical check
+
+- `P26.asymptotic.plateau_projected_length`
+- `P26.contour.positive_real_not_recorded_decay_cycle`
+
+The long arm is bounded by an explicit field-norm cutoff, and the exact `4π/3` projected length belongs only to the frozen plateau control. The positive real tracked sheet is not the recorded convergent cycle, but this does not determine another sheet or the Lorentzian original contour.
+
+## Phase 27 check ledger
+
+### Declared Wick map — 4 exact checks
+
+- `P27.action.lapse_Wick_map`
+- `P27.action.exponent_Wick_map`
+- `P27.action.principal_derivative_map`
+- `P27.action.canonical_constraint_Wick_map`
+
+### Raw zero-lapse kernel — 3 exact plus 6 numerical checks
+
+- `P27.short_time.equal_boundary_action`
+- `P27.short_time.Jacobi_Van_Vleck_map`
+- `P27.short_time.conformal_determinant_sign`
+- `P27.short_time.action_linear_cubic_convergence`
+- `P27.short_time.initial_velocity_convergence`
+- `P27.short_time.velocity_Jacobi_scaling`
+- `P27.short_time.momentum_Van_Vleck_scaling`
+- `P27.endpoint.raw_W_zero_derivative_nonzero`
+- `P27.benchmark.Phase24_25_endpoint`
+
+The `1/|T|` magnitude is the raw two-coordinate fixed-T Van Vleck behavior. It is deliberately not identified with a zero-lapse-uniform, endpoint-completed, gauge-reduced BFV/FP kernel.
+
+### Spectral operator and lateral-contour identities — 5 exact checks
+
+- `P27.operator.fixed_lapse_constraint_evolution`
+- `P27.operator.positive_half_line_resolvent`
+- `P27.operator.full_line_constraint_support`
+- `P27.contour.lateral_Wick_side`
+- `P27.flow.exp_minus_W_monotonicity`
+
+### Signed raw branch — 1 exact plus 2 numerical checks
+
+- `P27.action.signed_classical_oddness`
+- `P27.signed_branch.paired_stationary_actions`
+- `P27.signed_branch.sampled_raw_W_control`
+
+The paired raw stationary points and lateral sides do not fix a global Stokes matrix or physical half-line coefficient.
+
+## Phase 28 check ledger
+
+### Bounded upper arm — 4 exact plus 6 numerical checks
+
+- `P28.PL.downward_flow_identity`
+- `P28.PL.upward_flow_identity`
+- `P28.PL.negative_mode_tangents`
+- `P28.PL.Schwarz_reflection`
+- `P28.downward.pseudo_arclength_residual`
+- `P28.downward.gradient_alignment`
+- `P28.downward.imaginary_projection_turn`
+- `P28.downward.independent_fixed_imaginary_control`
+- `P28.downward.conjugate_arm`
+- `P28.downward.jacobi_and_scale_monitor`
+
+### Constructed bounded crossings — 1 exact plus 2 numerical checks
+
+- `P28.intersection.transverse_orientation`
+- `P28.upward.real_branch_control`
+- `P28.intersection.bounded_vertical_crossings`
+
+The four crossings use declared finite vertical cycles and one recorded dual branch. Their local orientation and magnitude are not a global intersection number for a physical original contour.
+
+### Euclidean-continued homogeneous BFV — 5 exact plus 1 numerical check
+
+- `P28.BFV.neck_clock_Faddeev_Popov_brackets`
+- `P28.BFV.abelian_constraint_algebra`
+- `P28.BFV.Dirichlet_ghost_determinant`
+- `P28.BFV.proper_length_BRST_invariance_after_auxiliary_elimination`
+- `P28.BFV.local_lapse_Gaussian`
+- `P28.saddle.curvature_and_local_prefactor`
+
+At the neck, the intrinsic `a` and `phi` clocks are singular while `p_a` is locally regular. The unit-interval Dirichlet ghost operator has no zero mode and a chosen zeta-normalized determinant of `2`, but `sT=c(1)-c(0)=0`; proper length therefore survives in this reduced model. The local factor `i*0.8391333983*sqrt(hbar)` is conditional on the still-unknown global coefficient and full superdeterminant.
+
+## Phase 29 check ledger
+
+### Leading real-lapse Fresnel kernel — 2 exact plus 4 numerical checks
+
+- `P29.kernel.distributional_identity_limit`
+- `P29.kernel.Fourier_multiplier_identity_limit`
+- `P29.numeric.frozen_metric`
+- `P29.numeric.raw_and_normalized_prefactors`
+- `P29.numeric.distributional_pairing_convergence`
+- `P29.numeric.pointwise_pole`
+
+The normalized frozen leading kernel tends to the identity delta distribution on the tested Schwartz/Gaussian functions under the declared local flat `da dphi` endpoint measure. Its equal-endpoint value still diverges as `1/N`. Distributional identity and pointwise finiteness are therefore not interchangeable.
+
+### Reduced fixed-parameter BFV modulus — 6 exact plus 1 numerical check
+
+- `P29.BFV.Dirichlet_ghost_length_scaling`
+- `P29.BFV.fixed_parameter_ghost_is_modulus_independent`
+- `P29.BFV.gauge_condition_rescaling_cancels`
+- `P29.BFV.proper_time_modulus_is_gauge_invariant`
+- `P29.BFV.nonzero_mode_factor_is_modulus_independent`
+- `P29.BFV.unit_ghost_does_not_cancel_endpoint_pole`
+- `P29.numeric.ghost_coordinate_length_dependence`
+
+The standalone coordinate-interval determinant scales as `2L`, but the fixed-parameter rescaling and matching gauge-condition delta leave a T-independent reduced nonzero-mode factor. Proper time remains a modulus. This is not a derivation of the physical WDW endpoint measure.
+
+### Lapse operators and endpoint bypass — 7 exact plus 1 numerical check
+
+- `P29.endpoint.pointwise_vs_distributional_integrability`
+- `P29.operator.half_line_is_sourced_resolvent`
+- `P29.operator.ad_hoc_lapse_power_changes_resolvent`
+- `P29.operator.full_line_constraint_support`
+- `P29.operator.weighted_full_line_loses_constraint_annihilation`
+- `P29.endpoint.lateral_bypass_Bessel_residues`
+- `P29.endpoint.finite_spectral_arc_control`
+- `P29.numeric.half_line_resolvent_residual`
+
+An inserted `N` changes the half-line pole and full-line constraint distribution. Finite bounded spectral truncations have a vanishing small arc, but the off-diagonal lateral residue and full unbounded/global coefficient are not fixed.
+
+### Conformal sign and density obstruction — 3 exact plus 1 numerical check
+
+- `P29.kernel.indefinite_signature`
+- `P29.kernel.single_Wick_rotation_obstruction`
+- `P29.density.identity_not_Hilbert_Schmidt`
+- `P29.numeric.identity_HS_divergence`
+
+The frozen kinetic matrix has one negative and one positive direction, so one imaginary-lapse sign cannot damp both. The identity kernel's Hilbert–Schmidt norm grows with cutoff dimension. Thus neither the conformal contour nor a trace-class physical density follows from the leading real-lapse identity limit.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -610,6 +812,11 @@ uv run --locked python3 cpt_temporal_folded_susy/phase21_connected_seam_gaussian
 uv run --locked python3 cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py
 uv run --locked python3 cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py
 uv run --locked python3 cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py
+uv run --locked python3 cpt_temporal_folded_susy/phase25_connected_lapse_scan.py
+uv run --locked python3 cpt_temporal_folded_susy/phase26_global_lapse_flow.py
+uv run --locked python3 cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py
+uv run --locked python3 cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py
+uv run --locked python3 cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -752,5 +959,41 @@ claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISI
 ```
 
 The first trace fixes both scale factors and assumes a flat scalar measure. The second is a real-boundary diagnostic, not a thimble computation or a bulk negative-mode census. Neither trace promotes the connected interval to a positive gravitational density or physical entropy.
+
+Phase 27 and 28 keep the raw endpoint and reduced BFV diagnostics separate:
+
+```text
+claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p27-raw-zero-lapse-kernel
+  → VALID_WITHIN → scope:p27-declared-wick-map-and-raw-zero-lapse-control
+  → MOTIVATES → open:p28-zero-lapse-uniform-bfv-kernel
+
+claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p28-homogeneous-bfv
+  → VALID_WITHIN → scope:p28-bounded-pl-and-homogeneous-bfv
+  → MOTIVATES → open:p28-zero-lapse-uniform-bfv-kernel
+  → MOTIVATES → open:p28-full-gauge-reduced-superdeterminant
+```
+
+The first trace is an unreduced fixed-T Van Vleck statement. The second is a homogeneous Euclidean-continued BFV statement with Dirichlet ghost endpoints. Neither computes the full endpoint-completed gauge-reduced kernel. Likewise, `claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH` records bounded constructed geometry only; it points to `open:p28-global-relative-homology-and-intersection` rather than asserting a physical intersection coefficient.
+
+Phase 29 refines, but does not erase, the raw pole trace:
+
+```text
+claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p29-leading-fresnel-kernel
+  → VALID_WITHIN → scope:p29-frozen-leading-kernel-and-reduced-bfv-measure
+  → MOTIVATES → open:p29-physical-endpoint-measure-and-ordering
+
+claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p29-leading-fresnel-kernel
+  → VALID_WITHIN → scope:p29-frozen-leading-kernel-and-reduced-bfv-measure
+```
+
+Both traces are true together: the first is weak/distributional convergence under the declared local flat measure, while the second is pointwise behavior. `claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY` is separately contradicted, so neither trace supplies a physical WDW density.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

@@ -1,0 +1,430 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P29_ZERO_LAPSE_UNIFORM_KERNEL_20260817",
+  "phase": "P29",
+  "observed_at_utc": "2026-08-17T15:45:17.466Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py",
+    "sha256": "0fa8314d3c0385c70ad569ce1c2ad65d506580eef50ef589e7fa2da5f7fb3e76",
+    "introduced_in_commit": "4794ff6de9f5f5726bcdd633f64fd4988eb197de"
+  },
+  "exact_checks": 18,
+  "checks": [
+    {
+      "id": "P29.kernel.indefinite_signature",
+      "statement": "the frozen two-coordinate kinetic form has one negative and one positive eigenvalue",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.kernel.distributional_identity_limit",
+      "statement": "the normalized Fresnel kernel tends to the identity delta distribution on Gaussian tests",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.kernel.Fourier_multiplier_identity_limit",
+      "statement": "on real lapse the Fourier multiplier has unit modulus and tends pointwise to one",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.kernel.single_Wick_rotation_obstruction",
+      "statement": "either imaginary-lapse sign damps one kinetic direction and amplifies the other",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.BFV.Dirichlet_ghost_length_scaling",
+      "statement": "with the zeta reference scale fixed to one, det_zeta(-d^2) on a Dirichlet interval of coordinate length L is 2L",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.BFV.fixed_parameter_ghost_is_modulus_independent",
+      "statement": "the proper-time-gauge operator -L^2 d_tau^2 has determinant 2 after the coordinate and ghost rescaling",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.BFV.gauge_condition_rescaling_cancels",
+      "statement": "delta(f chi) det(f M)=delta(chi) det(M), so an isolated ghost power is not a physical modulus measure",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.BFV.proper_time_modulus_is_gauge_invariant",
+      "statement": "fixed endpoint gauge parameters give delta integral(N ds)=epsilon(1)-epsilon(0)=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.BFV.nonzero_mode_factor_is_modulus_independent",
+      "statement": "each fixed-parameter Dirichlet-ghost eigenvalue is independent of the coordinate/proper-time length",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.BFV.unit_ghost_does_not_cancel_endpoint_pole",
+      "statement": "the unit-coordinate Dirichlet ghost determinant is constant and leaves the d=2 1/N pole",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.endpoint.pointwise_vs_distributional_integrability",
+      "statement": "the alpha=0 diagonal 1/N integral diverges while its normalized d=2 distributional pairing is locally integrable",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.operator.half_line_is_sourced_resolvent",
+      "statement": "the regulated positive half-lapse integral is a sourced resolvent, not a projector",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.operator.ad_hoc_lapse_power_changes_resolvent",
+      "statement": "multiplying the measure by N changes the resolvent to a double pole instead of canceling a harmless normalization",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.operator.full_line_constraint_support",
+      "statement": "the full-line delta distribution is annihilated by the constraint on test functions",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.operator.weighted_full_line_loses_constraint_annihilation",
+      "statement": "an inserted N leaves delta-prime support on H=0 but gives H delta-prime=-delta rather than a constraint solution",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.endpoint.lateral_bypass_Bessel_residues",
+      "statement": "even an inserted N leaves an off-diagonal lateral residue; diagonal pole cancellation does not fix the bypass",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.endpoint.finite_spectral_arc_control",
+      "statement": "a zero-radius bypass contributes nothing in every fixed bounded spectral truncation",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.density.identity_not_Hilbert_Schmidt",
+      "statement": "the identity kernel has Hilbert-Schmidt norm squared D and is not trace class as D grows",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 7,
+  "numerical": [
+    {
+      "id": "P29.numeric.frozen_metric",
+      "statement": "the frozen kinetic eigenvalues reproduce the Phase-27 short-time mixed Hessian",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.numeric.raw_and_normalized_prefactors",
+      "statement": "the raw determinant is 615.1254/|N| while the normalized d=2 kernel has magnitude 97.9003/|N|",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.numeric.distributional_pairing_convergence",
+      "statement": "Gaussian test pairings converge linearly to the delta-kernel value one",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.numeric.pointwise_pole",
+      "statement": "at equal endpoint coordinates the pointwise kernel diverges exactly as 1/N",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.numeric.ghost_coordinate_length_dependence",
+      "statement": "the standalone zeta ghost determinant changes with coordinate interval length",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.numeric.identity_HS_divergence",
+      "statement": "finite-rank identity controls have HS norm squared equal to their cutoff dimension",
+      "status": "PASS"
+    },
+    {
+      "id": "P29.numeric.half_line_resolvent_residual",
+      "statement": "the positive-half-line spectral control satisfies the sourced resolvent identity",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "zero-lapse uniform kernel and reduced BFV measure control",
+    "claim_status": {
+      "a_positive_seam_state_or_initial_value_is_selected": "OPEN_NOT_DERIVED",
+      "a_zero_endpoint_bypass_fixes_the_global_PL_coefficient": "OPEN_NOT_DERIVED",
+      "one_imaginary_lapse_rotation_damps_both_homogeneous_directions": "CONTRADICTED_BY_THE_INDEFINITE_KINETIC_FORM",
+      "the_equal_endpoint_pointwise_zero_lapse_limit_is_finite": "CONTRADICTED_BY_THE_ONE_OVER_N_POLE",
+      "the_full_line_group_average_is_a_normalized_density": "NOT_ESTABLISHED_WITHOUT_A_PHYSICAL_TRACE",
+      "the_positive_half_lapse_integral_is_a_constraint_projector": "CONTRADICTED_BY_THE_SOURCED_RESOLVENT_IDENTITY",
+      "the_unit_interval_Dirichlet_ghost_determinant_removes_the_pole": "CONTRADICTED_BY_ITS_CONSTANT_SCALING",
+      "the_zero_lapse_kernel_has_a_distributional_identity_limit": "SUPPORTED_FOR_REAL_LAPSE_SCHWARTZ_TESTS_IN_THE_FROZEN_QUADRATIC_CONTROL_WITH_THE_DECLARED_LOCAL_FLAT_ENDPOINT_MEASURE"
+    },
+    "exact_check_ids": [
+      "P29.kernel.indefinite_signature",
+      "P29.kernel.distributional_identity_limit",
+      "P29.kernel.Fourier_multiplier_identity_limit",
+      "P29.kernel.single_Wick_rotation_obstruction",
+      "P29.BFV.Dirichlet_ghost_length_scaling",
+      "P29.BFV.fixed_parameter_ghost_is_modulus_independent",
+      "P29.BFV.gauge_condition_rescaling_cancels",
+      "P29.BFV.proper_time_modulus_is_gauge_invariant",
+      "P29.BFV.nonzero_mode_factor_is_modulus_independent",
+      "P29.BFV.unit_ghost_does_not_cancel_endpoint_pole",
+      "P29.endpoint.pointwise_vs_distributional_integrability",
+      "P29.operator.half_line_is_sourced_resolvent",
+      "P29.operator.ad_hoc_lapse_power_changes_resolvent",
+      "P29.operator.full_line_constraint_support",
+      "P29.operator.weighted_full_line_loses_constraint_annihilation",
+      "P29.endpoint.lateral_bypass_Bessel_residues",
+      "P29.endpoint.finite_spectral_arc_control",
+      "P29.density.identity_not_Hilbert_Schmidt"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P29.kernel.indefinite_signature",
+        "statement": "the frozen two-coordinate kinetic form has one negative and one positive eigenvalue",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.kernel.distributional_identity_limit",
+        "statement": "the normalized Fresnel kernel tends to the identity delta distribution on Gaussian tests",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.kernel.Fourier_multiplier_identity_limit",
+        "statement": "on real lapse the Fourier multiplier has unit modulus and tends pointwise to one",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.kernel.single_Wick_rotation_obstruction",
+        "statement": "either imaginary-lapse sign damps one kinetic direction and amplifies the other",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.BFV.Dirichlet_ghost_length_scaling",
+        "statement": "with the zeta reference scale fixed to one, det_zeta(-d^2) on a Dirichlet interval of coordinate length L is 2L",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.BFV.fixed_parameter_ghost_is_modulus_independent",
+        "statement": "the proper-time-gauge operator -L^2 d_tau^2 has determinant 2 after the coordinate and ghost rescaling",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.BFV.gauge_condition_rescaling_cancels",
+        "statement": "delta(f chi) det(f M)=delta(chi) det(M), so an isolated ghost power is not a physical modulus measure",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.BFV.proper_time_modulus_is_gauge_invariant",
+        "statement": "fixed endpoint gauge parameters give delta integral(N ds)=epsilon(1)-epsilon(0)=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.BFV.nonzero_mode_factor_is_modulus_independent",
+        "statement": "each fixed-parameter Dirichlet-ghost eigenvalue is independent of the coordinate/proper-time length",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.BFV.unit_ghost_does_not_cancel_endpoint_pole",
+        "statement": "the unit-coordinate Dirichlet ghost determinant is constant and leaves the d=2 1/N pole",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.endpoint.pointwise_vs_distributional_integrability",
+        "statement": "the alpha=0 diagonal 1/N integral diverges while its normalized d=2 distributional pairing is locally integrable",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.operator.half_line_is_sourced_resolvent",
+        "statement": "the regulated positive half-lapse integral is a sourced resolvent, not a projector",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.operator.ad_hoc_lapse_power_changes_resolvent",
+        "statement": "multiplying the measure by N changes the resolvent to a double pole instead of canceling a harmless normalization",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.operator.full_line_constraint_support",
+        "statement": "the full-line delta distribution is annihilated by the constraint on test functions",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.operator.weighted_full_line_loses_constraint_annihilation",
+        "statement": "an inserted N leaves delta-prime support on H=0 but gives H delta-prime=-delta rather than a constraint solution",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.endpoint.lateral_bypass_Bessel_residues",
+        "statement": "even an inserted N leaves an off-diagonal lateral residue; diagonal pole cancellation does not fix the bypass",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.endpoint.finite_spectral_arc_control",
+        "statement": "a zero-radius bypass contributes nothing in every fixed bounded spectral truncation",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.density.identity_not_Hilbert_Schmidt",
+        "statement": "the identity kernel has Hilbert-Schmidt norm squared D and is not trace class as D grows",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 18,
+    "frozen_conventions": {
+      "endpoint_measure": "local flat d(a) d(phi) measure for this frozen quadratic control",
+      "ghost_determinant": "det_zeta(-d_tau^2)=2L for Dirichlet ghosts on coordinate length L with zeta reference scale fixed to one",
+      "normalized_kernel": "sqrt(det-branch(M))/(2pi i N) exp[i Deltaq^T M Deltaq/(2N)]",
+      "operator_objects": {
+        "full_line": "constraint-supported rigging distribution",
+        "positive_half_line": "sourced resolvent"
+      },
+      "short_time_metric": "M=2pi^2 diag(-6a,a^3)"
+    },
+    "next_calculation": "choose and derive the conformal/BFV integration cycle, then compute the gauge-reduced determinant as an operator-valued uniform endpoint parametrix",
+    "numerical_check_ids": [
+      "P29.numeric.frozen_metric",
+      "P29.numeric.raw_and_normalized_prefactors",
+      "P29.numeric.distributional_pairing_convergence",
+      "P29.numeric.pointwise_pole",
+      "P29.numeric.ghost_coordinate_length_dependence",
+      "P29.numeric.identity_HS_divergence",
+      "P29.numeric.half_line_resolvent_residual"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P29.numeric.frozen_metric",
+        "statement": "the frozen kinetic eigenvalues reproduce the Phase-27 short-time mixed Hessian",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.numeric.raw_and_normalized_prefactors",
+        "statement": "the raw determinant is 615.1254/|N| while the normalized d=2 kernel has magnitude 97.9003/|N|",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.numeric.distributional_pairing_convergence",
+        "statement": "Gaussian test pairings converge linearly to the delta-kernel value one",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.numeric.pointwise_pole",
+        "statement": "at equal endpoint coordinates the pointwise kernel diverges exactly as 1/N",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.numeric.ghost_coordinate_length_dependence",
+        "statement": "the standalone zeta ghost determinant changes with coordinate interval length",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.numeric.identity_HS_divergence",
+        "statement": "finite-rank identity controls have HS norm squared equal to their cutoff dimension",
+        "status": "PASS"
+      },
+      {
+        "id": "P29.numeric.half_line_resolvent_residual",
+        "statement": "the positive-half-line spectral control satisfies the sourced resolvent identity",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 7,
+    "numerical_controls": {
+      "Gaussian_test": {
+        "errors": [
+          0.000020569586723576413,
+          0.000010284772833409251,
+          0.000005142383850653658,
+          0.0000025711916045703218,
+          0.0000012855957621906173
+        ],
+        "lapses": [
+          0.2,
+          0.1,
+          0.05,
+          0.025,
+          0.0125
+        ],
+        "pairings": [
+          [
+            0.9999999512654568,
+            0.00002056952899127815
+          ],
+          [
+            0.9999999878163635,
+            0.000010284765616864271
+          ],
+          [
+            0.9999999969540908,
+            0.00000514238294858529
+          ],
+          [
+            0.9999999992385228,
+            0.0000025711914918117936
+          ],
+          [
+            0.9999999998096306,
+            0.0000012855957480957887
+          ]
+        ]
+      },
+      "diagonal_pointwise_amplitudes": [
+        489.5012395143412,
+        979.0024790286824,
+        1958.0049580573648,
+        3916.0099161147295,
+        7832.019832229459
+      ],
+      "frozen_boundary": [
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "ghost_coordinate_lengths": [
+        0.5,
+        1,
+        2,
+        4
+      ],
+      "ghost_determinants": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "identity_HS_squared": [
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "identity_cutoffs": [
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "kinetic_eigenvalues": [
+        -422.43523796461386,
+        895.7095022538779
+      ],
+      "normalized_kernel_coefficient": 97.90024790286824,
+      "raw_Van_Vleck_coefficient": 615.1253991925408
+    },
+    "phase": "P29",
+    "scope_guard": {
+      "computed": [
+        "the frozen two-coordinate quadratic short-time kernel",
+        "Gaussian-test and Fourier-Schwartz distributional convergence to the local-flat-measure identity kernel",
+        "the reduced Dirichlet-ghost zeta determinant and its coordinate-length scaling",
+        "half-line resolvent versus full-line constraint annihilation",
+        "the opposite-sign damping obstruction of the homogeneous kinetic form"
+      ],
+      "not_computed": [
+        "a conformal-factor integration contour",
+        "the gauge-fixed nonzero-mode gravitational or SUGRA determinant",
+        "a global relative-homology cycle or integer saddle coefficient",
+        "an interacting zero-lapse uniform parametrix beyond leading order",
+        "the physical WDW endpoint measure and factor ordering",
+        "a trace-class WDW density or initial-value distribution"
+      ]
+    }
+  }
+}

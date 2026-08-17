@@ -57,12 +57,20 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md` | Phase 24 보고서 — 6 exact + 14 numerical checks. connected response와 rank-one constrained channel은 지지되지만 positive density·physical entropy·thimble 선택은 미유도 |
 | `phase25_connected_lapse_scan.py` | full off-shell lapse flow, Hamilton–Jacobi time identity, Schur reduction, Jacobi map, complex constant-phase segment와 real simple fold를 검증하는 실행체 |
 | `PHASE25_CONNECTED_LAPSE_SCAN.md` | Phase 25 보고서 — 5 exact + 12 numerical checks. base lapse saddle과 local descent는 계산됐지만 global intersection number와 positive quantum state는 미유도 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–24의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase26_global_lapse_flow.py` | bounded constant-phase complex-lapse continuation, plateau control과 real-fold Airy scaling을 검증하는 실행체 |
+| `PHASE26_GLOBAL_LAPSE_FLOW.md` | Phase 26 보고서 — 4 exact + 9 numerical checks. bounded arm과 fold uniformization은 계산됐지만 global endpoint·intersection·state는 미유도 |
+| `phase27_lorentzian_lapse_endpoint.py` | Lorentzian--Euclidean Wick map, positive-half-line resolvent와 zero-duration Jacobi/Van Vleck scaling을 검증하는 실행체 |
+| `PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md` | Phase 27 보고서 — 13 exact + 8 numerical checks. raw fixed-\(T\) endpoint singularity는 확인됐지만 global PL coefficient와 full gauge-reduced kernel은 미유도 |
+| `phase28_thimble_bfv_intersection.py` | bounded branch/dual-cycle crossing과 homogeneous Euclidean-continued BFV--BRST reduction을 검증하는 실행체 |
+| `PHASE28_THIMBLE_BFV_INTERSECTION.md` | Phase 28 보고서 — 10 exact + 9 numerical checks. reduced ghost sector 뒤에도 proper length가 남지만 global coefficient·full determinant·physical state는 미유도 |
+| `phase29_zero_lapse_uniform_kernel.py` | frozen quadratic short-time kernel의 distributional identity limit, BFV modulus measure와 indefinite-sign obstruction을 검증하는 실행체 |
+| `PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md` | Phase 29 보고서 — 18 exact + 7 numerical checks. local flat endpoint measure에서 raw \(1/N\)은 delta-kernel normalization이지만 physical WDW measure·all-orders kernel·global PL coefficient는 미유도 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–29의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 25)
+## 현재 경계 (Phase 29)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -183,12 +191,47 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   \(10^{-10}\) 이하 상대오차로 재현한다. 따라서 base rank one은 caustic이 아니라 lapse 제거 결과다.
 - 같은 real symmetric branch는 \(T_c=9.788625568\)에서 simple Dirichlet fold에 도달한다.
   이는 global single-saddle 해석의 반례지만, global thimble·intersection number·physical Morse index를
-  아직 정하지 않는다. Phase 25는 아직 ontology에 색인되지 않았다.
+  아직 정하지 않는다. Phase 25–29의 claim, scope, evidence snapshot과 OPEN gate는
+  현재 ontology에 색인되어 artifact hash와 check ledger까지 검증된다.
+- Phase 26은 upper constant-phase lapse arm을 projected \(\operatorname{Im}T\) turn 너머까지
+  bounded하게 이어가고, real Dirichlet fold의 square-root/Airy scaling을 확인했다. 그러나 그 arm의
+  global endpoint, original contour와의 intersection coefficient와 state normalization은 정하지 않는다.
+- Phase 27은 \(N_L=-iT_E\) convention에서 positive Lorentzian lapse가
+  \(T_E\in i\mathbb R_+\)로 감을 고정했다. Positive half-line object는 sourced resolvent이고,
+  raw fixed-\(T\) two-coordinate Van Vleck magnitude는 \(T\to0\)에서 \(1/|T|\)로 발산한다.
+  따라서 zero-lapse contact를 ordinary transverse interior intersection으로 세지 않는다.
+- Phase 28의 Euclidean-continued homogeneous BFV--BRST control에서는 Dirichlet ghost reduction 뒤에도
+  proper length \(T\)가 global modulus로 남고 \(W_{TT}<0\) 방향은 ghost-cancelled gauge zero mode가 아니다.
+  기록한 vertical two-sided segments의 crossings와 local Gaussian factor는 **bounded/conditional**
+  diagnostic이며, physical positive-lapse contour의 global coefficient는 아니다.
+- string/SUGRA 보강의 현재 설계 경로는
+  \(\text{BFV-reduced seam candidate}\to\text{CPT/Pin completion}\to
+  \text{double-three-form }N=1\text{ SUGRA}\to
+  \text{flux selection}\to F\ne0\to\text{soft terms}\)이다. \(D\)-term branch에는 별도의
+  vector/gauging sector가 필요하다. String theory는 flux quantization,
+  charged-membrane transition, soft-term map과 modular UV constraint를 제공할 후보지만 temporal seam,
+  sector prior 또는 saddle survival을 자동으로 유도하지 않는다.
+- Phase 29는 frozen leading real-lapse quadratic kernel을 local flat \(da\,d\phi\) endpoint measure에
+  분포로 작용시키면 \(K_{N\to0}=\delta^{(2)}_{\rm flat}\)임을 확인했다. Pointwise \(1/N\)은
+  이 범위에서 identity-kernel normalization이지 그 자체로 probability divergence가 아니다.
+- 같은 fixed-\(s\) reduced BFV normalization에서 Dirichlet ghost와 coordinate Jacobian을 함께
+  처리하면 proper-length modulus measure는 overall constant를 제외하고 \(dT\)다. Ghost가 pole을
+  지우지 않으며, 임의로 \(N\)을 곱하면 sourced resolvent가 double pole로, group average가
+  \(\delta(H)\)에서 \(\delta'(H)\)로 바뀌므로 같은 이론의 재규격화가 아니다.
+- Homogeneous kinetic form은 한 양·한 음의 eigenvalue를 가져 하나의 imaginary-lapse sign으로 두
+  방향을 동시에 감쇠할 수 없다. 따라서 physical WDW endpoint measure, all-orders uniform kernel,
+  conformal-field/lapse cycle, full determinant와 global PL coefficient는 여전히 OPEN이다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
+- **PL/BFV global gate:** Phase 29의 local-flat leading delta parametrix를 physical WDW endpoint
+  measure와 interacting all-orders uniform kernel로 확장한다. Indefinite kinetic form의 conformal-field
+  cycle과 lapse cycle, endpoint/lateral prescription과 complete dual cycles를 함께 정해 global
+  intersection coefficient를 계산한다. Homogeneous reduced ghost control을 inhomogeneous
+  graviton·matter·gravitino·ghost superdeterminant와 BFV/BV Ward identity로 확장해 cutoff와
+  gauge-fixing independence를 검사하며, 결과를 바꾸는 ad hoc \(N\) measure insertion은 쓰지 않는다.
 - **Three-form seam-kernel gate:** compact three-form SUGRA boundary state 또는 charged-membrane
   saddle에서 실제 \(C_{n\ell}\), charge/tension, boundary ensemble과 determinant prefactor를
   유도한다. 그 뒤에만 regulated determinant와 joint \((n,\phi)\) measure의 내부 peak를 검사한다.
@@ -209,6 +252,10 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   quasiparticle shift, boundary transient와 vacuum pole을 분리하고 FRW late-time limit을 취한다.
 - **Persistent-breaking gate:** seam이 metastable \(F/D\)-order parameter를 실제로 선택하는지,
   생성된 visible operator가 soft class인지, bulk power sensitivity가 상쇄되는지 검사한다.
+- **String-completion gate:** double-three-form \(N=1\) compactification의 실제 flux lattice, membrane
+  charge/tension, moduli stabilization과 visible-sector mediation을 고정한 뒤 Phase 24--29 전체를
+  재실행한다. Worldsheet BRST/crosscap을 temporal BFV seam과 동일시하지 않고, full modular-invariant
+  spectrum이 필요한 UV cancellation은 별도 gate로 둔다.
 - **Conservative physical interpretation:** 두 half-history는 CPT/Pin sewing으로 연결하고,
   ordinary SUSY는 각 history 안에서만 작용하게 한다. CPT sewing 자체를 supercharge라 부르지 않는다.
 - **Real-time alternative:** Schwinger–Keldysh doubling을 쓰면 정확한 BRST supersymmetry를 얻지만,

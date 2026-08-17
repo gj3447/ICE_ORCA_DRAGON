@@ -1,0 +1,916 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P28_THIMBLE_BFV_INTERSECTION_20260817",
+  "phase": "P28",
+  "observed_at_utc": "2026-08-17T15:26:44.354Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py",
+    "sha256": "496990308456bcc1d28f9649b99053d2a05499c6d3c2c0d233d5576a39a3f018",
+    "introduced_in_commit": "2065de0125674ba9c72888e3d95bc84fec66850b"
+  },
+  "exact_checks": 10,
+  "checks": [
+    {
+      "id": "P28.PL.downward_flow_identity",
+      "statement": "dT/ds=conj(W_T) keeps Im W fixed and increases Re W by |W_T|^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.PL.upward_flow_identity",
+      "statement": "the dual flow keeps Im W fixed and decreases Re W",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.PL.negative_mode_tangents",
+      "statement": "for W_TT=-mu, descent is imaginary and the dual direction is real",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.PL.Schwarz_reflection",
+      "statement": "real Starobinsky coefficients give a conjugate lower arm",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.intersection.transverse_orientation",
+      "statement": "the declared tangent ordering has transverse orientation determinant +1",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.BFV.neck_clock_Faddeev_Popov_brackets",
+      "statement": "at the neck {a,H}={phi,H}=0 while {p_a,H}=12 pi^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.BFV.abelian_constraint_algebra",
+      "statement": "the Abelian constraint commutes with lapse momentum, so Omega=cH+rho Pi is nilpotent",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.BFV.Dirichlet_ghost_determinant",
+      "statement": "the chosen unit-interval zeta normalization gives Dirichlet ghost determinant 2 and no zero mode",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.BFV.proper_length_BRST_invariance_after_auxiliary_elimination",
+      "statement": "after rho=dot c, s integral(N ds)=c(1)-c(0)=0 for Dirichlet endpoints",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.BFV.local_lapse_Gaussian",
+      "statement": "the rotated local negative mode gives i sqrt(2 pi hbar/mu), conditional on global intersection",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 9,
+  "numerical": [
+    {
+      "id": "P28.saddle.curvature_and_local_prefactor",
+      "statement": "independent curvature stencils give the conditional factor i*0.8391333983*sqrt(hbar)",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.upward.real_branch_control",
+      "statement": "the recorded dual branch is regular and flows left from T*=0.7 to T=0.2",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.intersection.bounded_vertical_crossings",
+      "statement": "four declared two-sided vertical cycles each cross the recorded branch once and transversely",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.downward.pseudo_arclength_residual",
+      "statement": "pseudo-arclength keeps endpoints and Im W fixed while Re W increases",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.downward.gradient_alignment",
+      "statement": "the recorded tangent aligns with dT/ds=conj(W_T)",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.downward.imaginary_projection_turn",
+      "statement": "the arm continues through a maximum of Im T",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.downward.independent_fixed_imaginary_control",
+      "statement": "independent fixed-Im-T solves lie on the pseudo-arclength curve",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.downward.conjugate_arm",
+      "statement": "conjugation gives lower endpoint solutions with conjugate action",
+      "status": "PASS"
+    },
+    {
+      "id": "P28.downward.jacobi_and_scale_monitor",
+      "statement": "no scale zero or homogeneous complex Dirichlet Jacobi zero appears at monitored points",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "bounded lapse-thimble continuation, regulated branch crossing, and Euclidean-continued homogeneous BFV",
+    "claim_status": {
+      "bounded_upper_arm_continues_past_ImT_turn": "SUPPORTED",
+      "bounded_vertical_cycles_cross_recorded_dual_branch": "SUPPORTED_GEOMETRIC_DIAGNOSTIC",
+      "extrinsic_p_a_clock_locally_regular": "SUPPORTED_IN_EUCLIDEAN_CONTINUED_HOMOGENEOUS_BFV",
+      "global_PL_coefficient": "OPEN",
+      "intrinsic_neck_clock_regular": "CONTRADICTED",
+      "physical_quantum_state": "OPEN_NOT_DERIVED",
+      "positive_lapse_half_cycle_coefficient": "OPEN_ENDPOINT_PRESCRIPTION_REQUIRED"
+    },
+    "exact_check_ids": [
+      "P28.PL.downward_flow_identity",
+      "P28.PL.upward_flow_identity",
+      "P28.PL.negative_mode_tangents",
+      "P28.PL.Schwarz_reflection",
+      "P28.intersection.transverse_orientation",
+      "P28.BFV.neck_clock_Faddeev_Popov_brackets",
+      "P28.BFV.abelian_constraint_algebra",
+      "P28.BFV.Dirichlet_ghost_determinant",
+      "P28.BFV.proper_length_BRST_invariance_after_auxiliary_elimination",
+      "P28.BFV.local_lapse_Gaussian"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P28.PL.downward_flow_identity",
+        "statement": "dT/ds=conj(W_T) keeps Im W fixed and increases Re W by |W_T|^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.PL.upward_flow_identity",
+        "statement": "the dual flow keeps Im W fixed and decreases Re W",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.PL.negative_mode_tangents",
+        "statement": "for W_TT=-mu, descent is imaginary and the dual direction is real",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.PL.Schwarz_reflection",
+        "statement": "real Starobinsky coefficients give a conjugate lower arm",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.intersection.transverse_orientation",
+        "statement": "the declared tangent ordering has transverse orientation determinant +1",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.BFV.neck_clock_Faddeev_Popov_brackets",
+        "statement": "at the neck {a,H}={phi,H}=0 while {p_a,H}=12 pi^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.BFV.abelian_constraint_algebra",
+        "statement": "the Abelian constraint commutes with lapse momentum, so Omega=cH+rho Pi is nilpotent",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.BFV.Dirichlet_ghost_determinant",
+        "statement": "the chosen unit-interval zeta normalization gives Dirichlet ghost determinant 2 and no zero mode",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.BFV.proper_length_BRST_invariance_after_auxiliary_elimination",
+        "statement": "after rho=dot c, s integral(N ds)=c(1)-c(0)=0 for Dirichlet endpoints",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.BFV.local_lapse_Gaussian",
+        "statement": "the rotated local negative mode gives i sqrt(2 pi hbar/mu), conditional on global intersection",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 10,
+    "frozen_conventions": {
+      "BFV": {
+        "Omega": "cH+rho Pi",
+        "Psi": "-N bar_rho",
+        "constraint": "-p_a^2/(24pi^2a)+p_phi^2/(4pi^2a^3)+2pi^2(3a-a^3V)",
+        "determinant_note": "zeta-normalized value 2 is not a physical prefactor",
+        "ghost_operator": "-d_s^2, Dirichlet",
+        "status": "Euclidean-continued frozen Phase-24/25 constraint, not undeformed Lorentzian BFV"
+      },
+      "PL": {
+        "downward": "dT/ds=conj(W_T)",
+        "dual": "dT/ds=-conj(W_T)",
+        "integrand": "exp(-W/hbar)"
+      }
+    },
+    "next_calculation": "combine the Phase-27 endpoint prescription with complete dual-cycle continuation and the gauge-reduced nonzero-mode determinant",
+    "numerical_check_ids": [
+      "P28.saddle.curvature_and_local_prefactor",
+      "P28.upward.real_branch_control",
+      "P28.intersection.bounded_vertical_crossings",
+      "P28.downward.pseudo_arclength_residual",
+      "P28.downward.gradient_alignment",
+      "P28.downward.imaginary_projection_turn",
+      "P28.downward.independent_fixed_imaginary_control",
+      "P28.downward.conjugate_arm",
+      "P28.downward.jacobi_and_scale_monitor"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P28.saddle.curvature_and_local_prefactor",
+        "statement": "independent curvature stencils give the conditional factor i*0.8391333983*sqrt(hbar)",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.upward.real_branch_control",
+        "statement": "the recorded dual branch is regular and flows left from T*=0.7 to T=0.2",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.intersection.bounded_vertical_crossings",
+        "statement": "four declared two-sided vertical cycles each cross the recorded branch once and transversely",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.downward.pseudo_arclength_residual",
+        "statement": "pseudo-arclength keeps endpoints and Im W fixed while Re W increases",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.downward.gradient_alignment",
+        "statement": "the recorded tangent aligns with dT/ds=conj(W_T)",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.downward.imaginary_projection_turn",
+        "statement": "the arm continues through a maximum of Im T",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.downward.independent_fixed_imaginary_control",
+        "statement": "independent fixed-Im-T solves lie on the pseudo-arclength curve",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.downward.conjugate_arm",
+        "statement": "conjugation gives lower endpoint solutions with conjugate action",
+        "status": "PASS"
+      },
+      {
+        "id": "P28.downward.jacobi_and_scale_monitor",
+        "statement": "no scale zero or homogeneous complex Dirichlet Jacobi zero appears at monitored points",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 9,
+    "numerical_controls": {
+      "base": {
+        "T_star": 0.7,
+        "W": 1.4066905428343415,
+        "W_TT": -8.923143038336717,
+        "W_TT_action_stencil": -8.923143034539708,
+        "conditional_prefactor": [
+          0,
+          0.839133398327939
+        ]
+      },
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "bounded_crossings": [
+        {
+          "T": [
+            0.25,
+            0
+          ],
+          "cycle": "T=0.25+iN, N in [-2.5,2.5]",
+          "dW_dT": 2.6212634862611837,
+          "epsilon": 0.25,
+          "orientation_convention": "columns=(cycle tangent, outward dual tangent)",
+          "orientation_determinant": 1,
+          "recorded_crossing_magnitude": 1
+        },
+        {
+          "T": [
+            0.35,
+            0
+          ],
+          "cycle": "T=0.35+iN, N in [-2.5,2.5]",
+          "dW_dT": 2.2658301047217484,
+          "epsilon": 0.35,
+          "orientation_convention": "columns=(cycle tangent, outward dual tangent)",
+          "orientation_determinant": 1,
+          "recorded_crossing_magnitude": 1
+        },
+        {
+          "T": [
+            0.45,
+            0
+          ],
+          "cycle": "T=0.45+iN, N in [-2.5,2.5]",
+          "dW_dT": 1.7855988329122097,
+          "epsilon": 0.45,
+          "orientation_convention": "columns=(cycle tangent, outward dual tangent)",
+          "orientation_determinant": 1,
+          "recorded_crossing_magnitude": 1
+        },
+        {
+          "T": [
+            0.55,
+            0
+          ],
+          "cycle": "T=0.55+iN, N in [-2.5,2.5]",
+          "dW_dT": 1.175137000345061,
+          "epsilon": 0.55,
+          "orientation_convention": "columns=(cycle tangent, outward dual tangent)",
+          "orientation_determinant": 1,
+          "recorded_crossing_magnitude": 1
+        }
+      ],
+      "dual_branch": [
+        {
+          "T": 0.2,
+          "W": 0.5818833424850565,
+          "center": [
+            3.5682330923040655,
+            1.017074675959986
+          ],
+          "dW_dT": 2.753504748596427,
+          "det_Bv": 0.039900153222265734,
+          "endpoint_residual": 0,
+          "upward_dT_ds": -2.753504748596427
+        },
+        {
+          "T": 0.25,
+          "W": 0.7163773646617722,
+          "center": [
+            3.5690359498208157,
+            1.0162265607280137
+          ],
+          "dW_dT": 2.6212634862611837,
+          "det_Bv": 0.06225670989002194,
+          "endpoint_residual": 4.440892098500626e-16,
+          "upward_dT_ds": -2.6212634862611837
+        },
+        {
+          "T": 0.3,
+          "W": 0.8435070422848573,
+          "center": [
+            3.5700157836967374,
+            1.0151891588407194
+          ],
+          "dW_dT": 2.45886046118839,
+          "det_Bv": 0.08949672035878783,
+          "endpoint_residual": 4.440892098500626e-16,
+          "upward_dT_ds": -2.45886046118839
+        },
+        {
+          "T": 0.35,
+          "W": 0.9617530025981748,
+          "center": [
+            3.571171721217046,
+            1.01396198412624
+          ],
+          "dW_dT": 2.2658301047217484,
+          "det_Bv": 0.12157025245730742,
+          "endpoint_residual": 4.440892098500626e-16,
+          "upward_dT_ds": -2.2658301047217484
+        },
+        {
+          "T": 0.4,
+          "W": 1.069570464988719,
+          "center": [
+            3.5725027211199096,
+            1.0125444655348204
+          ],
+          "dW_dT": 2.0416216342912366,
+          "det_Bv": 0.15841908409053496,
+          "endpoint_residual": 2.220446049250313e-16,
+          "upward_dT_ds": -2.0416216342912366
+        },
+        {
+          "T": 0.45,
+          "W": 1.1653849747583456,
+          "center": [
+            3.5740075686649355,
+            1.0109359489807428
+          ],
+          "dW_dT": 1.7855988329122097,
+          "det_Bv": 0.19997709520215842,
+          "endpoint_residual": 2.220446049250313e-16,
+          "upward_dT_ds": -1.7855988329122097
+        },
+        {
+          "T": 0.5,
+          "W": 1.2475881261560586,
+          "center": [
+            3.575684869948298,
+            1.0091356995323144
+          ],
+          "dW_dT": 1.4970398435523498,
+          "det_Bv": 0.2461707182551747,
+          "endpoint_residual": 4.440892098500626e-16,
+          "upward_dT_ds": -1.4970398435523498
+        },
+        {
+          "T": 0.55,
+          "W": 1.3145332759529318,
+          "center": [
+            3.5775330454689915,
+            1.0071429039781632
+          ],
+          "dW_dT": 1.175137000345061,
+          "det_Bv": 0.29691944650018154,
+          "endpoint_residual": 0,
+          "upward_dT_ds": -1.175137000345061
+        },
+        {
+          "T": 0.6,
+          "W": 1.36453125002239,
+          "center": [
+            3.5795503229526777,
+            1.0049566738020919
+          ],
+          "dW_dT": 0.8189967222381354,
+          "det_Bv": 0.35213639922607193,
+          "endpoint_residual": 6.280369834735101e-16,
+          "upward_dT_ds": -0.8189967222381354
+        },
+        {
+          "T": 0.65,
+          "W": 1.3958460467714109,
+          "center": [
+            3.581734729442221,
+            1.002576048602931
+          ],
+          "dW_dT": 0.4276394985480715,
+          "det_Bv": 0.41172894312088876,
+          "endpoint_residual": 4.965068306494546e-16,
+          "upward_dT_ds": -0.4276394985480715
+        },
+        {
+          "T": 0.68,
+          "W": 1.4049258114974614,
+          "center": [
+            3.583124696416522,
+            1.0010539387649975
+          ],
+          "dW_dT": 0.17548141663846245,
+          "det_Bv": 0.44954429577114563,
+          "endpoint_residual": 0,
+          "upward_dT_ds": -0.17548141663846245
+        },
+        {
+          "T": 0.7,
+          "W": 1.4066905428343945,
+          "center": [
+            3.5840840826673714,
+            0.9999999999999998
+          ],
+          "dW_dT": 4.6899732760132136e-14,
+          "det_Bv": 0.4755993688124482,
+          "endpoint_residual": 9.930136612989092e-16,
+          "upward_dT_ds": -4.6899732760132136e-14
+        }
+      ],
+      "positive_half_cycle": "ENDPOINT_CONTACT_COEFFICIENT_OPEN",
+      "positive_real_Euclidean_cycle": "NONTRANSVERSE_COEFFICIENT_OPEN",
+      "upper_arm": {
+        "conjugate_controls": [
+          {
+            "T": [
+              0.7403114668918414,
+              -0.3823444682619119
+            ],
+            "action_error": 0,
+            "endpoint_error": 1.5545199856725756e-15,
+            "index": 5
+          },
+          {
+            "T": [
+              1.2309324373203672,
+              -1.4398365375172608
+            ],
+            "action_error": 0,
+            "endpoint_error": 8.41299752224726e-16,
+            "index": 25
+          },
+          {
+            "T": [
+              2.094907774007381,
+              -2.2093356769226857
+            ],
+            "action_error": 0,
+            "endpoint_error": 3.1728049695129787e-15,
+            "index": 45
+          },
+          {
+            "T": [
+              3.1315169945814154,
+              -2.4725671041812687
+            ],
+            "action_error": 0,
+            "endpoint_error": 3.764946123795423e-13,
+            "index": 65
+          }
+        ],
+        "independent_controls": [
+          {
+            "Im_T": 0.4,
+            "error": 0.00018307663827789468
+          },
+          {
+            "Im_T": 1,
+            "error": 0.00010538461101725505
+          },
+          {
+            "Im_T": 2,
+            "error": 0.0002743162728020546
+          }
+        ],
+        "jacobi_monitors": [
+          {
+            "Bv_singular_values": [
+              0.7047745096619982,
+              0.6941914940819505
+            ],
+            "T": [
+              0.7027933498225527,
+              0.1
+            ],
+            "endpoint_residual": 2.450541652037239e-15,
+            "index": 0,
+            "min_abs_scale": 3.5668031935672753,
+            "phase_residual": 9.633266406794405e-14
+          },
+          {
+            "Bv_singular_values": [
+              1.740663601465629,
+              1.4724564669056839
+            ],
+            "T": [
+              1.0688613701390084,
+              1.1953935609405715
+            ],
+            "endpoint_residual": 5.59068973769486e-16,
+            "index": 20,
+            "min_abs_scale": 3.563579188708712,
+            "phase_residual": 6.050715484207103e-14
+          },
+          {
+            "Bv_singular_values": [
+              3.3601357647136143,
+              2.0475503632591443
+            ],
+            "T": [
+              1.849770441834216,
+              2.0558211506645416
+            ],
+            "endpoint_residual": 9.529949363273889e-16,
+            "index": 40,
+            "min_abs_scale": 3.5643543811395966,
+            "phase_residual": 3.345379528951753e-13
+          },
+          {
+            "Bv_singular_values": [
+              4.430762803673749,
+              1.5377321112107625
+            ],
+            "T": [
+              2.88244006071382,
+              2.465628872127542
+            ],
+            "endpoint_residual": 7.7043754858689e-15,
+            "index": 60,
+            "min_abs_scale": 3.5668031935672753,
+            "phase_residual": 2.3234747459355276e-12
+          },
+          {
+            "Bv_singular_values": [
+              4.484895550891864,
+              1.4190759691864534
+            ],
+            "T": [
+              3.03446752801624,
+              2.4747060441295834
+            ],
+            "endpoint_residual": 3.9026466616603344e-13,
+            "index": 63,
+            "min_abs_scale": 3.5668031935672753,
+            "phase_residual": 8.101611048694224e-11
+          },
+          {
+            "Bv_singular_values": [
+              4.594857790493404,
+              1.170099806952582
+            ],
+            "T": [
+              3.3942970911411554,
+              2.4311344117805005
+            ],
+            "endpoint_residual": 3.893420353662623e-13,
+            "index": 71,
+            "min_abs_scale": 3.5668031935672753,
+            "phase_residual": 6.490807891168515e-11
+          }
+        ],
+        "last": {
+          "T": [
+            3.3942970911411554,
+            2.4311344117805005
+          ],
+          "W": [
+            339.5058547285337,
+            -5.016254078782367e-11
+          ]
+        },
+        "max_alignment_residual": 0.0022655700749581015,
+        "max_endpoint_residual": 3.852582487233481e-13,
+        "max_phase_residual": 7.835154747226625e-11,
+        "point_count": 72,
+        "sampled": [
+          {
+            "T": [
+              0.7027933498225527,
+              0.1
+            ],
+            "W": [
+              1.451440719239294,
+              -9.999640004920707e-14
+            ],
+            "dW_dT": [
+              0.04994510189862894,
+              -0.8949018931493385
+            ],
+            "index": 0
+          },
+          {
+            "T": [
+              0.7403114668918414,
+              0.3823444682619119
+            ],
+            "W": [
+              2.087189336841502,
+              -5.787037515858628e-14
+            ],
+            "dW_dT": [
+              0.7390849479107686,
+              -3.5512669149581924
+            ],
+            "index": 5
+          },
+          {
+            "T": [
+              0.8191640317801401,
+              0.6650317184667243
+            ],
+            "W": [
+              3.6312275773854266,
+              -3.724520691861244e-13
+            ],
+            "dW_dT": [
+              2.3000032280189693,
+              -6.617717958994471
+            ],
+            "index": 10
+          },
+          {
+            "T": [
+              0.9306312932896811,
+              0.9365394160526861
+            ],
+            "W": [
+              6.278939611372856,
+              -5.209721543053547e-14
+            ],
+            "dW_dT": [
+              4.7758096324734565,
+              -10.095864983279341
+            ],
+            "index": 15
+          },
+          {
+            "T": [
+              1.0688613701390084,
+              1.1953935609405715
+            ],
+            "W": [
+              10.27641745073507,
+              -1.4394041514265155e-13
+            ],
+            "dW_dT": [
+              8.3162853559556,
+              -13.930896540129808
+            ],
+            "index": 20
+          },
+          {
+            "T": [
+              1.2309324373203672,
+              1.4398365375172608
+            ],
+            "W": [
+              15.903750849863986,
+              -1.8962609260597674e-13
+            ],
+            "dW_dT": [
+              13.214260874237524,
+              -18.003439242461596
+            ],
+            "index": 25
+          },
+          {
+            "T": [
+              1.415697669606281,
+              1.6671736205732661
+            ],
+            "W": [
+              23.508804413473197,
+              3.9288017283922727e-13
+            ],
+            "dW_dT": [
+              19.968719779420653,
+              -22.18555350703487
+            ],
+            "index": 30
+          },
+          {
+            "T": [
+              1.6224424739197467,
+              1.873830861013418
+            ],
+            "W": [
+              33.58303439946538,
+              2.41664327438329e-13
+            ],
+            "dW_dT": [
+              29.3950474555874,
+              -26.368904566747965
+            ],
+            "index": 35
+          },
+          {
+            "T": [
+              1.849770441834216,
+              2.0558211506645416
+            ],
+            "W": [
+              46.884106981581546,
+              7.530087664520124e-13
+            ],
+            "dW_dT": [
+              42.82582138810744,
+              -30.44263454472836
+            ],
+            "index": 40
+          },
+          {
+            "T": [
+              2.094907774007381,
+              2.2093356769226857
+            ],
+            "W": [
+              64.61603300415484,
+              2.950972799453666e-13
+            ],
+            "dW_dT": [
+              62.484935843696015,
+              -34.153208878791325
+            ],
+            "index": 45
+          },
+          {
+            "T": [
+              2.3534305566972087,
+              2.331021131978574
+            ],
+            "W": [
+              88.68211545503225,
+              -2.184918912462308e-13
+            ],
+            "dW_dT": [
+              92.16756827702382,
+              -36.65666936309976
+            ],
+            "index": 50
+          },
+          {
+            "T": [
+              2.618982847355492,
+              2.4176367009242505
+            ],
+            "W": [
+              121.99561423507102,
+              3.127142989001186e-11
+            ],
+            "dW_dT": [
+              138.2462725395156,
+              -35.2510323799191
+            ],
+            "index": 55
+          },
+          {
+            "T": [
+              2.88244006071382,
+              2.465628872127542
+            ],
+            "W": [
+              168.63898995084622,
+              9.707790127322369e-13
+            ],
+            "dW_dT": [
+              209.92284627768572,
+              -22.403922642116957
+            ],
+            "index": 60
+          },
+          {
+            "T": [
+              3.03446752801624,
+              2.4747060441295834
+            ],
+            "W": [
+              204.98235197415804,
+              7.37276906193074e-11
+            ],
+            "dW_dT": [
+              268.7664256862626,
+              -2.9617898576162838
+            ],
+            "index": 63
+          },
+          {
+            "T": [
+              3.1315169945814154,
+              2.4725671041812687
+            ],
+            "W": [
+              233.27022994553536,
+              3.084821287302475e-11
+            ],
+            "dW_dT": [
+              314.8683601522347,
+              17.61923432444823
+            ],
+            "index": 65
+          },
+          {
+            "T": [
+              3.3538268720121502,
+              2.441232285778939
+            ],
+            "W": [
+              319.5135453700688,
+              -7.526068657170981e-11
+            ],
+            "dW_dT": [
+              450.26917434546016,
+              104.30316134563547
+            ],
+            "index": 70
+          },
+          {
+            "T": [
+              3.3942970911411554,
+              2.4311344117805005
+            ],
+            "W": [
+              339.5058547285337,
+              -5.016254078782367e-11
+            ],
+            "dW_dT": [
+              479.92727879577535,
+              128.43527721752224
+            ],
+            "index": 71
+          }
+        ],
+        "step": 0.06,
+        "turn": {
+          "T": [
+            3.03446752801624,
+            2.4747060441295834
+          ],
+          "W": [
+            204.98235197415804,
+            7.37276906193074e-11
+          ],
+          "index": 63
+        }
+      }
+    },
+    "phase": "P28",
+    "scope_guard": {
+      "not_computed": [
+        "global thimble endpoints and complete saddle set",
+        "relative-homology coefficient for a physical original cycle",
+        "positive-lapse endpoint prescription",
+        "nonzero-mode gravity, matter, gravitino, and ghost superdeterminant",
+        "positive WDW/BFV density, Pin lift, soft spectrum, or string embedding"
+      ]
+    }
+  }
+}

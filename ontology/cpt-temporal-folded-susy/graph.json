@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T14:21:16Z",
+  "updated_at_utc": "2026-08-17T15:45:17Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -124,6 +124,34 @@
         "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
         "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
         "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION"
+      ]
+    },
+    {
+      "question": "Do Phases 25–28 determine the physical gravitational thimble coefficient?",
+      "answer": "No. They establish a local lapse saddle, a bounded long constant-phase arm, one real Airy fold, raw zero-lapse endpoint scaling, bounded constructed crossings, and a reduced homogeneous BFV diagnostic. The original-cycle relative homology, endpoint prescription, and full determinant remain open.",
+      "claim_ids": [
+        "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+        "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+        "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+        "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH"
+      ]
+    },
+    {
+      "question": "Does the Phase 28 BFV or string analysis already explain missing superpartners?",
+      "answer": "No. The homogeneous BFV control leaves proper length as a modulus, and the string/three-form route is a completion design gate. No temporal-seam sector rule, persistent F-type order parameter (nor a separate D-type vector/gauging construction), soft spectrum, or UV-complete state has been derived.",
+      "claim_ids": [
+        "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+        "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL"
+      ]
+    },
+    {
+      "question": "Does Phase 29 remove the zero-lapse pole and produce a physical state?",
+      "answer": "No. The normalized frozen leading real-lapse kernel still has a pointwise 1/N pole but converges to a delta-flat identity distribution under the declared local da dphi measure. The reduced BFV modulus factor is T-independent; the physical WDW measure, conformal contour, all-orders uniform kernel, determinant, state, and global PL coefficient remain open.",
+      "claim_ids": [
+        "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+        "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+        "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+        "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY"
       ]
     }
   ],
@@ -297,6 +325,42 @@
         "open:p24-gravitational-thimble-and-bulk-determinant",
         "open:p24-physical-two-boundary-density-and-entropy",
         "open:p22-gauge-fixed-local-sugra-seam-density"
+      ]
+    },
+    {
+      "id": "reading-path:connected-lapse-thimble-to-bfv",
+      "title": "From the connected saddle to the still-open physical thimble",
+      "summary": "Follow the fixed-boundary lapse saddle, local and bounded complex arms, raw zero-lapse endpoint, finite constructed crossings, surviving BFV modulus, and the global determinant/state/string gates.",
+      "nodes": [
+        "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+        "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+        "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+        "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+        "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+        "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+        "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+        "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+        "open:p28-global-relative-homology-and-intersection",
+        "open:p28-zero-lapse-uniform-bfv-kernel",
+        "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p28-physical-state-and-density",
+        "open:p28-string-three-form-soft-spectrum"
+      ]
+    },
+    {
+      "id": "reading-path:zero-lapse-distribution-and-measure",
+      "title": "From the raw zero-lapse pole to a scoped distributional identity",
+      "summary": "Keep pointwise divergence, distributional normalization, BFV modulus measure, operator-changing lapse weights, conformal contour, and physical WDW measure as distinct statements.",
+      "nodes": [
+        "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+        "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+        "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+        "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+        "claim:P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+        "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+        "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+        "open:p29-conformal-bfv-uniform-parametrix",
+        "open:p29-physical-endpoint-measure-and-ordering"
       ]
     }
   ],
@@ -3437,7 +3501,7 @@
       "id": "source:halliwell-1988",
       "type": "source",
       "title": "Derivation of the Wheeler–DeWitt equation from a path integral for minisuperspace models",
-      "summary": "Primary minisuperspace path-integral reference used to frame lapse integration, the Hamiltonian constraint, boundary conditions, and ordering distinctions.",
+      "summary": "Primary minisuperspace path-integral reference used to frame the Wheeler–DeWitt derivation and lapse-measure or operator-ordering distinctions, not generic boundary-condition claims.",
       "state": "PRIMARY",
       "citation": "J. J. Halliwell, Derivation of the Wheeler–DeWitt equation from a path integral for minisuperspace models, Physical Review D 38 (1988) 2468",
       "uri": "https://doi.org/10.1103/PhysRevD.38.2468",
@@ -3524,6 +3588,1136 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase24-result.json",
       "sha256": "6797e7699de453bcc1940e44cd36d174e18aaf3d78a298299ada06da403e84a9"
+    },
+    {
+      "id": "phase:p25",
+      "type": "phase",
+      "title": "Phase 25 — connected lapse saddle and local thimble",
+      "summary": "Fixed-boundary lapse stationarity, Jacobi response, one tracked real fold, and a local constant-phase complex continuation of the Phase-24 benchmark.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "phase:p26",
+      "type": "phase",
+      "title": "Phase 26 — bounded global lapse flow and fold control",
+      "summary": "A bounded long constant-phase arm on one analytic BVP sheet, a conjugate control, and Airy scaling at a distinct real Dirichlet fold.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "phase:p27",
+      "type": "phase",
+      "title": "Phase 27 — Lorentzian lapse and zero-lapse endpoint",
+      "summary": "An exact Wick-map convention, short-time raw fixed-lapse Van Vleck scaling, and the operator distinction between a positive half-line resolvent and full-line constraint support.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "phase:p28",
+      "type": "phase",
+      "title": "Phase 28 — bounded thimble crossings and homogeneous BFV",
+      "summary": "Bounded continuation through an imaginary-lapse projection turn, constructed local crossings, and a Euclidean-continued homogeneous BFV diagnostic that leaves proper length as a modulus.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:lapse-saddle-versus-dirichlet-caustic",
+      "type": "concept",
+      "title": "Lapse saddle versus Dirichlet caustic",
+      "summary": "Stationarity of the on-shell action with respect to proper length is distinct from singularity of the fixed-length endpoint map; a Dirichlet fold need not be a lapse saddle.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:bounded-thimble-arm-versus-global-relative-cycle",
+      "type": "concept",
+      "title": "Bounded thimble arm versus global relative cycle",
+      "summary": "A monitored constant-phase segment on one analytic sheet is local continuation evidence, not a complete relative-homology cycle or an original-contour coefficient.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:raw-fixed-lapse-kernel-versus-bfv-kernel",
+      "type": "concept",
+      "title": "Raw fixed-lapse kernel versus BFV kernel",
+      "summary": "Short-time Van Vleck behavior of the unreduced fixed-T configuration kernel does not determine the endpoint behavior of a full gauge-reduced BFV/FP kernel.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:positive-half-lapse-resolvent-versus-projector",
+      "type": "concept",
+      "title": "Positive half-lapse resolvent versus projector",
+      "summary": "A damped positive half-line lapse integral solves a sourced resolvent identity; full-line group averaging instead has constraint support and is not the same object.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:bounded-crossing-versus-global-intersection-number",
+      "type": "concept",
+      "title": "Bounded crossing versus global intersection number",
+      "summary": "A transverse crossing of a declared finite cycle with a recorded dual branch is a geometric diagnostic, not the integer coefficient of a physical original contour.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:bfv-zero-mode-versus-local-negative-mode",
+      "type": "concept",
+      "title": "BFV zero mode versus local lapse negative mode",
+      "summary": "Dirichlet ghosts can have no zero mode while the BRST-invariant proper-length modulus survives; the local lapse Hessian direction is therefore not automatically ghost-cancelled.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:string-completion-versus-temporal-seam-derivation",
+      "type": "concept",
+      "title": "String completion versus temporal-seam derivation",
+      "summary": "Flux lattices, F-type three-form multiplets, membranes, soft-term formulae, and modular ultraviolet structure can constrain a completion but do not derive the temporal seam or a local-EFT sector rule; D-type breaking needs an additional vector/gauging construction.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "type": "claim",
+      "title": "The frozen boundary has a stationary lapse saddle",
+      "summary": "For the supplied Phase-24 endpoints, the fixed-boundary action has W_T=0 at T=0.7 and the full off-constraint equations and Hamilton–Jacobi identity agree.",
+      "state": "SUPPORTED_FOR_THE_FROZEN_BENCHMARK",
+      "claim_id": "P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "statement": "The supplied Phase-24 boundary data define a stationary fixed-boundary lapse saddle at T=0.7 in the frozen homogeneous Starobinsky model.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P25_REAL_LAPSE_DIRECTION_IS_EXP_MINUS_W_DESCENT",
+      "type": "claim",
+      "title": "The real lapse direction is descent for exp(-W)",
+      "summary": "Contradicted locally: W_TT is negative, so the real direction lowers W and is not the convergent Gaussian direction for exp(-W).",
+      "state": "CONTRADICTED",
+      "claim_id": "P25_REAL_LAPSE_DIRECTION_IS_EXP_MINUS_W_DESCENT",
+      "statement": "At the T=0.7 lapse saddle, the real lapse tangent is the local convergent steepest-descent direction for exp(-W).",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+      "type": "claim",
+      "title": "The tracked real branch reaches a Dirichlet caustic",
+      "summary": "Supported on one bounded reflection-symmetric continuation by a singular endpoint map, two-sheet bracket, and simple-fold transversality.",
+      "state": "SUPPORTED_ON_RECORDED_BRANCH",
+      "claim_id": "P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+      "statement": "The recorded reflection-symmetric real branch reaches a simple fixed-length Dirichlet fold near T=9.7886.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "type": "claim",
+      "title": "A local constant-phase complex descent segment exists",
+      "summary": "Supported only for the recorded local complex-T continuation from the lapse saddle; no global cycle or intersection coefficient follows.",
+      "state": "SUPPORTED_LOCALLY",
+      "claim_id": "P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "statement": "A local complex-T branch through the frozen saddle keeps Im W fixed while Re W increases in the exp(-W) convergent direction.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "type": "claim",
+      "title": "A long constant-phase arm exists on the recorded sheet",
+      "summary": "Supported on one bounded analytic BVP sheet, including a projection turn and return segment; its asymptotic endpoint is not proved.",
+      "state": "SUPPORTED_ON_RECORDED_SHEET",
+      "claim_id": "P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "statement": "The recorded reflection-symmetric analytic sheet carries a bounded long arm with nearly constant Im W and increasing Re W through a T-plane projection turn.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "type": "claim",
+      "title": "The real Dirichlet fold is a lapse saddle",
+      "summary": "Contradicted on the recorded branch because W_T remains nonzero at the endpoint-map fold.",
+      "state": "CONTRADICTED",
+      "claim_id": "P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "statement": "The real fixed-length Dirichlet fold near T=9.7886 is also a stationary lapse saddle.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "type": "claim",
+      "title": "The real fold obeys Airy uniform scaling",
+      "summary": "Supported for the recorded two real sheets by square-root coordinate splitting and three-halves action splitting.",
+      "state": "SUPPORTED_ON_RECORDED_FOLD",
+      "claim_id": "P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "statement": "The recorded simple real Dirichlet fold has the generic Airy square-root coordinate and delta^(3/2) action-gap scaling.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "type": "claim",
+      "title": "The positive real Euclidean sheet is the recorded convergent cycle",
+      "summary": "Contradicted for the tracked real sheet: Re W decreases by more than 10^3 before the fold. This does not determine another sheet or the Lorentzian original contour.",
+      "state": "CONTRADICTED_ON_RECORDED_SHEET",
+      "claim_id": "P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "statement": "The positive real Euclidean-T continuation of the recorded branch is itself a convergent relative cycle for exp(-W).",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P27_DECLARED_LORENTZIAN_EUCLIDEAN_WICK_MAP_IS_CONSISTENT",
+      "type": "claim",
+      "title": "The declared Lorentzian–Euclidean lapse map is consistent",
+      "summary": "Supported exactly for the frozen action, exponent, Hamilton principal derivatives, and canonical constraint under N_L=-iT_E and p_L=i p_E.",
+      "state": "SUPPORTED_WITHIN_DECLARED_CONVENTION",
+      "claim_id": "P27_DECLARED_LORENTZIAN_EUCLIDEAN_WICK_MAP_IS_CONSISTENT",
+      "statement": "The explicitly declared Lorentzian and Euclidean reduced actions obey the recorded Wick maps for the exponent, principal derivatives, and canonical constraint.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "type": "claim",
+      "title": "The equal-boundary raw fixed-T kernel is finite at zero lapse",
+      "summary": "Contradicted for the unreduced two-coordinate semiclassical kernel by the 1/|T| Van Vleck magnitude. The full BFV/FP kernel remains uncomputed.",
+      "state": "CONTRADICTED_FOR_RAW_KERNEL",
+      "claim_id": "P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "statement": "At equal boundary data, W→0 makes the raw two-coordinate fixed-T semiclassical kernel finite as T→0.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+      "type": "claim",
+      "title": "The positive-lapse half-line is a sourced resolvent",
+      "summary": "Supported at the spectral-operator level with damping; it is not a positive state construction.",
+      "state": "SUPPORTED_AT_OPERATOR_LEVEL",
+      "claim_id": "P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+      "statement": "The damped positive half-line lapse integral obeys a sourced resolvent identity in the recorded spectral control.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "type": "claim",
+      "title": "The positive-lapse half-line is a WDW projector",
+      "summary": "Contradicted in the spectral control: the half-line object is sourced, whereas full-line averaging is supported on the constraint shell.",
+      "state": "CONTRADICTED",
+      "claim_id": "P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "statement": "The positive-lapse half-line integral is the same constraint projector as full-line group averaging.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P27_SIGNED_RAW_BRANCH_HAS_PAIRED_STATIONARY_POINTS",
+      "type": "claim",
+      "title": "The signed raw branch has paired stationary points",
+      "summary": "Supported for the frozen benchmark at T=±0.7 with opposite actions; this sampled raw-W control is not a full prefactored PL heteroclinic.",
+      "state": "SUPPORTED_FOR_FROZEN_BENCHMARK",
+      "claim_id": "P27_SIGNED_RAW_BRANCH_HAS_PAIRED_STATIONARY_POINTS",
+      "statement": "The signed reflection-symmetric raw classical branch has paired stationary points at T=±0.7 with opposite actions.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "type": "claim",
+      "title": "The bounded upper arm continues past its imaginary-T turn",
+      "summary": "Supported on the recorded pseudo-arclength segment with endpoint, phase, tangent, conjugation, scale, and homogeneous Jacobi monitors.",
+      "state": "SUPPORTED_ON_BOUNDED_SEGMENT",
+      "claim_id": "P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "statement": "The recorded upper constant-phase arm continues beyond a local maximum of Im T without a monitored scale zero or homogeneous Dirichlet-Jacobi zero.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "type": "claim",
+      "title": "Bounded vertical cycles cross the recorded dual branch",
+      "summary": "Supported for four explicitly constructed finite vertical cycles and the recorded real dual branch; no global physical-cycle coefficient follows.",
+      "state": "SUPPORTED_AS_BOUNDED_GEOMETRY",
+      "claim_id": "P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "statement": "Each of the four declared two-sided bounded vertical cycles crosses the recorded real dual branch once and transversely under the stated orientation convention.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P28_INTRINSIC_NECK_CLOCK_IS_REGULAR",
+      "type": "claim",
+      "title": "An intrinsic neck clock is regular",
+      "summary": "Contradicted in the Euclidean-continued homogeneous constraint: both {a,H} and {phi,H} vanish at the symmetric neck.",
+      "state": "CONTRADICTED_LOCALLY",
+      "claim_id": "P28_INTRINSIC_NECK_CLOCK_IS_REGULAR",
+      "statement": "At the symmetric neck, a or phi supplies a locally regular Faddeev–Popov clock for the homogeneous constraint.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P28_EXTRINSIC_PA_CLOCK_IS_LOCALLY_REGULAR",
+      "type": "claim",
+      "title": "The extrinsic p_a clock is locally regular",
+      "summary": "Supported only locally in the frozen Euclidean-continued homogeneous BFV model because {p_a,H}=12π² at the neck.",
+      "state": "SUPPORTED_LOCALLY",
+      "claim_id": "P28_EXTRINSIC_PA_CLOCK_IS_LOCALLY_REGULAR",
+      "statement": "At the symmetric neck of the frozen homogeneous constraint, p_a has a nonzero Faddeev–Popov bracket and is a locally regular extrinsic clock.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "type": "claim",
+      "title": "The Dirichlet BFV ghost removes the proper-length zero mode",
+      "summary": "Contradicted in the reduced model: after auxiliary elimination sT=c(1)-c(0)=0, so proper length remains BRST invariant even though the Dirichlet ghost operator has no zero mode.",
+      "state": "CONTRADICTED_IN_REDUCED_MODEL",
+      "claim_id": "P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "statement": "The chosen Dirichlet homogeneous BFV ghost sector gauges away the proper-length modulus and cancels the local lapse direction.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "type": "claim",
+      "title": "The local lapse Gaussian factor is conditional",
+      "summary": "Supported as the local rotated negative-mode factor i sqrt(2πℏ/μ) with the recorded curvature; its sign and presence remain conditional on the global intersection and full determinant.",
+      "state": "SUPPORTED_CONDITIONALLY",
+      "claim_id": "P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "statement": "Given the recorded local descent orientation and a contributing saddle, the lapse negative mode supplies the stated local Gaussian factor, not a complete physical prefactor.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p25-action-lapse-and-jacobi",
+      "type": "evidence",
+      "title": "Phase 25 action, lapse, and Jacobi checks",
+      "summary": "Four exact action/Jacobi identities and seven numerical controls cover fixed-boundary stationarity, negative lapse curvature, Schur recovery, and shooting/momentum response.",
+      "state": "VERIFIED",
+      "observed_status": "4_EXACT_PASS_PLUS_7_NUMERICAL_PASS",
+      "check_ids": [
+        "P25.action.full_off_shell_scale_equation",
+        "P25.action.energy_constraint_identity",
+        "P25.action.HJ_time_derivative_sign",
+        "P25.jacobi.starobinsky_second_derivative",
+        "P25.saddle.base_stationarity",
+        "P25.action.time_derivative_control",
+        "P25.saddle.negative_lapse_curvature",
+        "P25.saddle.real_direction_is_not_descent",
+        "P25.saddle.lapse_Schur_recovers_constrained_Hessian",
+        "P25.jacobi.base_velocity_monodromy",
+        "P25.jacobi.momentum_block_and_mixed_hessian"
+      ]
+    },
+    {
+      "id": "evidence:p25-real-branch-and-fold",
+      "type": "evidence",
+      "title": "Phase 25 real branch and fold checks",
+      "summary": "Four numerical controls cover the bounded tracked real branch, singular symmetric endpoint map, simple-fold transversality, and two-branch sign bracket.",
+      "state": "VERIFIED",
+      "observed_status": "4_NUMERICAL_PASS",
+      "check_ids": [
+        "P25.branch.tracked_real_continuation",
+        "P25.caustic.symmetric_fold",
+        "P25.caustic.simple_fold_transversality",
+        "P25.caustic.two_branch_sign_bracket"
+      ]
+    },
+    {
+      "id": "evidence:p25-local-complex-segment",
+      "type": "evidence",
+      "title": "Phase 25 local complex segment checks",
+      "summary": "One exact tangent identity and one numerical continuation control establish only a local constant-phase exp(-W) segment.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P25.thimble.local_steepest_direction",
+        "P25.thimble.local_constant_phase_segment"
+      ]
+    },
+    {
+      "id": "evidence:p26-bounded-complex-flow",
+      "type": "evidence",
+      "title": "Phase 26 bounded complex-flow checks",
+      "summary": "Two exact flow/tangent identities and six numerical controls cover the recorded bounded arm, projection turn, declared cutoff, and conjugate lower control.",
+      "state": "VERIFIED",
+      "observed_status": "2_EXACT_PASS_PLUS_6_NUMERICAL_PASS",
+      "check_ids": [
+        "P26.flow.exp_minus_W_sign",
+        "P26.saddle.local_tangents",
+        "P26.saddle.base",
+        "P26.flow.constant_phase_and_monotone_ReW",
+        "P26.flow.gradient_alignment",
+        "P26.flow.projection_turn",
+        "P26.flow.field_norm_stop",
+        "P26.flow.conjugate_lower_arm"
+      ]
+    },
+    {
+      "id": "evidence:p26-real-fold-airy",
+      "type": "evidence",
+      "title": "Phase 26 real-fold Airy checks",
+      "summary": "One exact normal-form identity and two numerical controls separate the nonstationary real Dirichlet fold from its Airy uniform scaling.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_2_NUMERICAL_PASS",
+      "check_ids": [
+        "P26.fold.Airy_three_halves_law",
+        "P26.fold.not_a_lapse_saddle",
+        "P26.fold.Airy_scaling"
+      ]
+    },
+    {
+      "id": "evidence:p26-asymptotic-and-real-cycle",
+      "type": "evidence",
+      "title": "Phase 26 asymptotic and real-cycle checks",
+      "summary": "One exact plateau projected-length control and one numerical real-sheet action control; neither fixes a global Starobinsky endpoint or Lorentzian coefficient.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P26.asymptotic.plateau_projected_length",
+        "P26.contour.positive_real_not_recorded_decay_cycle"
+      ]
+    },
+    {
+      "id": "evidence:p27-wick-map",
+      "type": "evidence",
+      "title": "Phase 27 Wick-map checks",
+      "summary": "Four exact identities cover the declared lapse, exponent, Hamilton-principal, and canonical-constraint continuations.",
+      "state": "VERIFIED",
+      "observed_status": "4_EXACT_PASS",
+      "check_ids": [
+        "P27.action.lapse_Wick_map",
+        "P27.action.exponent_Wick_map",
+        "P27.action.principal_derivative_map",
+        "P27.action.canonical_constraint_Wick_map"
+      ]
+    },
+    {
+      "id": "evidence:p27-raw-zero-lapse-kernel",
+      "type": "evidence",
+      "title": "Phase 27 raw zero-lapse kernel checks",
+      "summary": "Three exact short-time identities and six numerical controls establish the unreduced equal-boundary action, Jacobi map, and raw Van Vleck singularity.",
+      "state": "VERIFIED",
+      "observed_status": "3_EXACT_PASS_PLUS_6_NUMERICAL_PASS",
+      "check_ids": [
+        "P27.short_time.equal_boundary_action",
+        "P27.short_time.Jacobi_Van_Vleck_map",
+        "P27.short_time.conformal_determinant_sign",
+        "P27.short_time.action_linear_cubic_convergence",
+        "P27.short_time.initial_velocity_convergence",
+        "P27.short_time.velocity_Jacobi_scaling",
+        "P27.short_time.momentum_Van_Vleck_scaling",
+        "P27.endpoint.raw_W_zero_derivative_nonzero",
+        "P27.benchmark.Phase24_25_endpoint"
+      ]
+    },
+    {
+      "id": "evidence:p27-operator-and-contour",
+      "type": "evidence",
+      "title": "Phase 27 operator and lateral-contour checks",
+      "summary": "Five exact identities distinguish fixed-lapse evolution, the half-line resolvent, full-line shell support, lateral Wick sides, and local exp(-W) flow.",
+      "state": "VERIFIED",
+      "observed_status": "5_EXACT_PASS",
+      "check_ids": [
+        "P27.operator.fixed_lapse_constraint_evolution",
+        "P27.operator.positive_half_line_resolvent",
+        "P27.operator.full_line_constraint_support",
+        "P27.contour.lateral_Wick_side",
+        "P27.flow.exp_minus_W_monotonicity"
+      ]
+    },
+    {
+      "id": "evidence:p27-signed-raw-branch",
+      "type": "evidence",
+      "title": "Phase 27 signed raw-branch checks",
+      "summary": "One exact oddness identity and two numerical controls cover paired stationary actions and sampled raw-W data without constructing a full prefactored heteroclinic.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_2_NUMERICAL_PASS",
+      "check_ids": [
+        "P27.action.signed_classical_oddness",
+        "P27.signed_branch.paired_stationary_actions",
+        "P27.signed_branch.sampled_raw_W_control"
+      ]
+    },
+    {
+      "id": "evidence:p28-bounded-upper-arm",
+      "type": "evidence",
+      "title": "Phase 28 bounded upper-arm checks",
+      "summary": "Four exact PL identities and six numerical controls cover bounded pseudo-arclength continuation, the imaginary-T turn, conjugation, and monitored regularity.",
+      "state": "VERIFIED",
+      "observed_status": "4_EXACT_PASS_PLUS_6_NUMERICAL_PASS",
+      "check_ids": [
+        "P28.PL.downward_flow_identity",
+        "P28.PL.upward_flow_identity",
+        "P28.PL.negative_mode_tangents",
+        "P28.PL.Schwarz_reflection",
+        "P28.downward.pseudo_arclength_residual",
+        "P28.downward.gradient_alignment",
+        "P28.downward.imaginary_projection_turn",
+        "P28.downward.independent_fixed_imaginary_control",
+        "P28.downward.conjugate_arm",
+        "P28.downward.jacobi_and_scale_monitor"
+      ]
+    },
+    {
+      "id": "evidence:p28-bounded-crossings",
+      "type": "evidence",
+      "title": "Phase 28 bounded crossing checks",
+      "summary": "One exact orientation identity and two numerical controls cover only the recorded real dual branch and four constructed finite vertical cycles.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_2_NUMERICAL_PASS",
+      "check_ids": [
+        "P28.intersection.transverse_orientation",
+        "P28.upward.real_branch_control",
+        "P28.intersection.bounded_vertical_crossings"
+      ]
+    },
+    {
+      "id": "evidence:p28-homogeneous-bfv",
+      "type": "evidence",
+      "title": "Phase 28 homogeneous BFV checks",
+      "summary": "Five exact BFV/local-Gaussian identities and one numerical curvature control cover neck clocks, nilpotence, a scheme-normalized Dirichlet ghost determinant, surviving proper length, and a conditional local factor.",
+      "state": "VERIFIED",
+      "observed_status": "5_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P28.BFV.neck_clock_Faddeev_Popov_brackets",
+        "P28.BFV.abelian_constraint_algebra",
+        "P28.BFV.Dirichlet_ghost_determinant",
+        "P28.BFV.proper_length_BRST_invariance_after_auxiliary_elimination",
+        "P28.BFV.local_lapse_Gaussian",
+        "P28.saddle.curvature_and_local_prefactor"
+      ]
+    },
+    {
+      "id": "scope:p25-fixed-boundary-lapse-and-local-complex-flow",
+      "type": "scope",
+      "title": "P25 fixed-boundary lapse and local complex flow",
+      "summary": "The frozen Phase-24 endpoints, fixed-length off-constraint action, one bounded real symmetric branch, and one local complex continuation.",
+      "state": "ACTIVE",
+      "includes": [
+        "reduced M_P=M=1 homogeneous Starobinsky action",
+        "the supplied Phase-24 boundary values and T=0.7 benchmark",
+        "full off-constraint fixed-lapse Euler–Lagrange flow",
+        "fixed-boundary W(T), Jacobi response, one real branch and simple fold",
+        "one local constant-Im-W complex-T segment"
+      ],
+      "excludes": [
+        "global Picard–Lefschetz flow or intersection number",
+        "completeness of real, complex, or nonsymmetric branches",
+        "BFV/FP measure, full bulk Morse spectrum, and one-loop prefactor",
+        "positive state, entropy, Pin lift, local SUGRA, or parameter selection"
+      ]
+    },
+    {
+      "id": "scope:p26-bounded-analytic-sheet-and-fold",
+      "type": "scope",
+      "title": "P26 bounded analytic sheet and fold",
+      "summary": "One reflection-symmetric analytic BVP sheet, a declared field-norm cutoff, its conjugate control, and a separate real simple fold.",
+      "state": "ACTIVE",
+      "includes": [
+        "exp(-W) flow convention",
+        "bounded upper constant-phase continuation through one projection turn",
+        "conjugate lower-arm checks",
+        "real Dirichlet-fold nonstationarity and Airy scaling",
+        "frozen-plateau projected-length control"
+      ],
+      "excludes": [
+        "all complex and nonsymmetric sheets",
+        "proof of an asymptotic endpoint",
+        "physical original contour and relative homology",
+        "BFV/FP measure, determinant, Stokes matrix, or integer coefficient",
+        "WDW state, density, fermions, gravitino, Pin, or local SUGRA"
+      ]
+    },
+    {
+      "id": "scope:p27-declared-wick-map-and-raw-zero-lapse-control",
+      "type": "scope",
+      "title": "P27 declared Wick map and raw zero-lapse control",
+      "summary": "The explicitly declared reduced Lorentzian continuation, equal-boundary short-time expansion, raw two-coordinate fixed-T semiclassics, and spectral lapse proxies.",
+      "state": "ACTIVE",
+      "includes": [
+        "N_L=-iT_E and p_L=i p_E convention",
+        "equal-boundary action through cubic order",
+        "raw two-coordinate Jacobi, momentum, and Van Vleck scaling",
+        "sampled signed raw-W branch excluding T=0",
+        "positive half-line and full-line spectral operator identities"
+      ],
+      "excludes": [
+        "full BFV/FP endpoint measure or zero-lapse-uniform gauge-reduced kernel",
+        "conformal-factor contour and determinant phase",
+        "global PL flow, Stokes matrix, or intersection coefficient",
+        "physical WDW domain, positive density, entropy, Pin, or local SUGRA"
+      ]
+    },
+    {
+      "id": "scope:p28-bounded-pl-and-homogeneous-bfv",
+      "type": "scope",
+      "title": "P28 bounded PL and homogeneous BFV",
+      "summary": "One bounded upper-arm segment, one recorded real dual branch, four constructed finite cycles, and an Abelian Euclidean-continued homogeneous BFV control.",
+      "state": "ACTIVE",
+      "includes": [
+        "bounded pseudo-arclength continuation and conjugate controls",
+        "homogeneous complex endpoint, scale, and Dirichlet-Jacobi monitors",
+        "four declared finite vertical crossing cycles",
+        "Euclidean-continued homogeneous constraint with Omega=cH+rho Pi",
+        "Dirichlet ghost operator on the unit interval and its chosen zeta normalization",
+        "local neck brackets and local lapse Gaussian"
+      ],
+      "excludes": [
+        "global thimble endpoints or complete saddle set",
+        "relative-homology coefficient for a physical original cycle",
+        "positive-lapse endpoint prescription",
+        "full gauge-reduced zero-lapse-uniform kernel",
+        "nonzero-mode gravity, matter, gravitino, Goldstino, ghost superdeterminant",
+        "physical density, Pin lift, soft spectrum, or string embedding"
+      ]
+    },
+    {
+      "id": "open:p28-global-relative-homology-and-intersection",
+      "type": "open_problem",
+      "title": "Determine global relative homology and the physical-cycle coefficient",
+      "summary": "Bounded continuation and finite constructed crossings do not determine which complete dual cycles intersect the Lorentzian original contour.",
+      "state": "OPEN",
+      "question": "After resolving all saddles, endpoints, singularities, and Stokes jumps, what integer coefficients multiply the complete thimbles for the specified physical lapse contour?"
+    },
+    {
+      "id": "open:p28-zero-lapse-uniform-bfv-kernel",
+      "type": "open_problem",
+      "title": "Construct a zero-lapse-uniform BFV kernel",
+      "summary": "The raw fixed-T Van Vleck kernel diverges while the reduced Dirichlet-ghost diagnostic does not compute the full endpoint measure.",
+      "state": "OPEN",
+      "question": "Does a complete BFV/FP reduction with endpoint factors and a uniform determinant define a controlled kernel across T=0, and what contour bypass does it require?"
+    },
+    {
+      "id": "open:p28-full-gauge-reduced-superdeterminant",
+      "type": "open_problem",
+      "title": "Compute the full gauge-reduced superdeterminant",
+      "summary": "The homogeneous BFV algebra omits nonzero-mode conformal, metric, scalar, fermion, gravitino, Goldstino, and ghost operators and their phases.",
+      "state": "OPEN",
+      "question": "After BRST/BFV reduction and zero-mode extraction, is the primed nonzero-mode superdeterminant finite, gauge-independent, and compatible with the selected thimble?"
+    },
+    {
+      "id": "open:p28-physical-state-and-density",
+      "type": "open_problem",
+      "title": "Construct the physical WDW/BFV state and density",
+      "summary": "Neither bounded classical crossings nor a local Gaussian factor supplies the physical inner product, factorization, positivity, or trace-class property.",
+      "state": "OPEN",
+      "question": "Does the globally reduced kernel define a positive normalizable physical state or trace-class two-boundary density under a specified WDW/BFV product?"
+    },
+    {
+      "id": "open:p28-string-three-form-soft-spectrum",
+      "type": "open_problem",
+      "title": "Derive a string/three-form completion and soft spectrum",
+      "summary": "The cited UV structures provide constraints and downstream templates but no temporal seam, local-EFT sector rule, or persistent soft spectrum has been derived.",
+      "state": "OPEN",
+      "question": "Can a compact string/M-theory reduction derive the temporal seam kernel, quantized three-form sector weights, persistent F-type breaking (or a separately constructed D-type vector/gauging sector), and a calculable tachyon-free soft spectrum while preserving the Phase-24–28 saddle?"
+    },
+    {
+      "id": "source:feldbrugge-lehners-turok-2017",
+      "type": "source",
+      "title": "Lorentzian quantum cosmology",
+      "summary": "Primary Picard–Lefschetz lapse-integral reference used only to frame flow cycles, dual intersections, and contour dependence.",
+      "state": "PRIMARY",
+      "citation": "J. Feldbrugge, J.-L. Lehners and N. Turok, Lorentzian Quantum Cosmology",
+      "uri": "https://arxiv.org/abs/1703.02076",
+      "version": "arXiv:1703.02076v2"
+    },
+    {
+      "id": "source:witten-2010-picard-lefschetz",
+      "type": "source",
+      "title": "Analytic continuation of Chern–Simons theory",
+      "summary": "Primary mathematical-physics reference for Morse/Picard–Lefschetz flow and relative-cycle framing; it does not compute this gravitational cycle.",
+      "state": "PRIMARY",
+      "citation": "E. Witten, Analytic Continuation Of Chern-Simons Theory",
+      "uri": "https://arxiv.org/abs/1001.2933",
+      "version": "arXiv:1001.2933v4"
+    },
+    {
+      "id": "source:gutzwiller-1967",
+      "type": "source",
+      "title": "Phase-integral approximation and Van Vleck relations",
+      "summary": "Primary semiclassical reference for fixed-time principal functions, Jacobi maps, Van Vleck determinants, and caustics.",
+      "state": "PRIMARY",
+      "citation": "M. C. Gutzwiller, Phase-integral approximation in momentum space and the bound states of an atom, Journal of Mathematical Physics 8 (1967) 1979",
+      "uri": "https://doi.org/10.1063/1.1705112",
+      "version": "J. Math. Phys. 8 (1967) 1979"
+    },
+    {
+      "id": "source:chester-friedman-ursell-1957",
+      "type": "source",
+      "title": "Uniform asymptotics for coalescing saddles",
+      "summary": "Primary Airy-uniformization reference used only to frame the simple-fold scaling control.",
+      "state": "PRIMARY",
+      "citation": "C. Chester, B. Friedman and F. Ursell, An extension of the method of steepest descents, Proceedings of the Cambridge Philosophical Society 53 (1957) 599",
+      "uri": "https://doi.org/10.1017/S0305004100032655",
+      "version": "Proc. Camb. Phil. Soc. 53 (1957) 599"
+    },
+    {
+      "id": "source:teitelboim-1983",
+      "type": "source",
+      "title": "Causality versus gauge invariance in quantum gravity",
+      "summary": "Primary proper-time reference for distinguishing positive-lapse causal objects from gauge-invariant constraint constructions.",
+      "state": "PRIMARY",
+      "citation": "C. Teitelboim, Causality versus Gauge Invariance in Quantum Gravity and Supergravity, Physical Review Letters 50 (1983) 705",
+      "uri": "https://doi.org/10.1103/PhysRevLett.50.705",
+      "version": "Phys. Rev. Lett. 50 (1983) 705"
+    },
+    {
+      "id": "source:banihashemi-jacobson-2025",
+      "type": "source",
+      "title": "On the lapse contour in the gravitational path integral",
+      "summary": "Primary contour analysis cited as a boundary condition in its own integration order; it does not determine this model's FP factor or PL coefficient.",
+      "state": "PRIMARY",
+      "citation": "B. Banihashemi and T. Jacobson, On the lapse contour in the gravitational path integral, Physical Review D 111 (2025) 066014",
+      "uri": "https://doi.org/10.1103/PhysRevD.111.066014",
+      "version": "Phys. Rev. D 111 (2025) 066014"
+    },
+    {
+      "id": "source:batalin-vilkovisky-1981",
+      "type": "source",
+      "title": "Gauge algebra and quantization",
+      "summary": "Primary BV gauge-algebra framework cited for the completion gate; the Phase-28 executable uses only a reduced Hamiltonian BFV control.",
+      "state": "PRIMARY",
+      "citation": "I. A. Batalin and G. A. Vilkovisky, Gauge Algebra and Quantization, Physics Letters B 102 (1981) 27",
+      "uri": "https://doi.org/10.1016/0370-2693(81)90205-7",
+      "version": "Phys. Lett. B 102 (1981) 27"
+    },
+    {
+      "id": "source:fradkin-vilkovisky-1975",
+      "type": "source",
+      "title": "Quantization of relativistic systems with constraints",
+      "summary": "Primary Hamiltonian constrained-path-integral and gauge-fixing reference for the BFV completion boundary.",
+      "state": "PRIMARY",
+      "citation": "E. S. Fradkin and G. A. Vilkovisky, Quantization of Relativistic Systems with Constraints, Physics Letters B 55 (1975) 224",
+      "uri": "https://doi.org/10.1016/0370-2693(75)90448-7",
+      "version": "Phys. Lett. B 55 (1975) 224"
+    },
+    {
+      "id": "source:farakos-et-al-2017",
+      "type": "source",
+      "title": "Three-forms in supergravity and flux compactifications",
+      "summary": "Primary double-three-form N=1 SUGRA reference in which flux parameters can arise as four-form expectation values; it does not derive the temporal seam.",
+      "state": "PRIMARY",
+      "citation": "F. Farakos, S. Lanza, L. Martucci and D. Sorokin, Three-forms in Supergravity and Flux Compactifications",
+      "uri": "https://arxiv.org/abs/1706.09422",
+      "version": "arXiv:1706.09422v2"
+    },
+    {
+      "id": "source:witten-1996-flux-quantization",
+      "type": "source",
+      "title": "Flux quantization in M-theory",
+      "summary": "Primary source for the gravitationally shifted flux lattice that a specifically M-theoretic embedding would have to respect.",
+      "state": "PRIMARY",
+      "citation": "E. Witten, On Flux Quantization in M-Theory and the Effective Action",
+      "uri": "https://arxiv.org/abs/hep-th/9609122",
+      "version": "arXiv:hep-th/9609122v2"
+    },
+    {
+      "id": "source:camara-ibanez-uranga-2003",
+      "type": "source",
+      "title": "Flux-induced SUSY-breaking soft terms",
+      "summary": "Primary D-brane flux-soft-term construction cited as a downstream spectrum template, not as evidence for temporal-seam selection.",
+      "state": "PRIMARY",
+      "citation": "P. G. Cámara, L. E. Ibáñez and A. M. Uranga, Flux-induced SUSY-breaking soft terms",
+      "uri": "https://arxiv.org/abs/hep-th/0311241",
+      "version": "arXiv:hep-th/0311241v2"
+    },
+    {
+      "id": "source:dienes-1994",
+      "type": "source",
+      "title": "Modular invariance, finiteness, and misaligned supersymmetry",
+      "summary": "Primary full-string-spectrum analysis of modular ultraviolet cancellations without level-by-level spacetime SUSY, conditional on a complete tachyon-free modular-invariant spectrum.",
+      "state": "PRIMARY",
+      "citation": "K. R. Dienes, Modular Invariance, Finiteness, and Misaligned Supersymmetry",
+      "uri": "https://arxiv.org/abs/hep-th/9402006",
+      "version": "arXiv:hep-th/9402006v1"
+    },
+    {
+      "id": "source:kiermaier-okawa-zwiebach-2008",
+      "type": "source",
+      "title": "The boundary state from open string fields",
+      "summary": "Primary BRST-cohomological boundary-state construction cited as a structural template; worldsheet BRST is distinct from the homogeneous BFV charge.",
+      "state": "PRIMARY",
+      "citation": "M. Kiermaier, Y. Okawa and B. Zwiebach, The boundary state from open string fields",
+      "uri": "https://arxiv.org/abs/0810.1737",
+      "version": "arXiv:0810.1737v2"
+    },
+    {
+      "id": "source:moosavian-sen-verma-2019",
+      "type": "source",
+      "title": "Superstring field theory with open and closed strings",
+      "summary": "Primary quantum BV/master-equation framework cited as a completion gate for an actual string-field construction.",
+      "state": "PRIMARY",
+      "citation": "S. F. Moosavian, A. Sen and M. Verma, Superstring Field Theory with Open and Closed Strings",
+      "uri": "https://arxiv.org/abs/1907.10632",
+      "version": "arXiv:1907.10632v3"
+    },
+    {
+      "id": "artifact:p25-script",
+      "type": "artifact",
+      "title": "Phase 25 executable",
+      "summary": "Exact and bounded numerical fixed-boundary lapse, Jacobi, real-fold, and local complex-continuation checks.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase25_connected_lapse_scan.py",
+      "sha256": "5fe43ec6997d6bae9c10d78ddb5d13b1806e10934140fd5080fef0dca3492ee8",
+      "introduced_in_commit": "c9533dc1aa7a11d7a7e53fa10a657b94406a4e54"
+    },
+    {
+      "id": "artifact:p25-report",
+      "type": "artifact",
+      "title": "Phase 25 report",
+      "summary": "Human-readable derivation and scope ledger for the connected lapse saddle, local descent, and real Dirichlet fold.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md",
+      "sha256": "921ffbb741f7a33f06bc01b1b68684ee4851e2db2bc67f6b61cd840e0e5b97a9",
+      "introduced_in_commit": "c9533dc1aa7a11d7a7e53fa10a657b94406a4e54"
+    },
+    {
+      "id": "artifact:p25-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 25 evidence snapshot",
+      "summary": "Persisted five-exact and twelve-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase25-result.json",
+      "sha256": "62e124dcbe15e8a9285876e7a8c94b318dd11f5743da4e07f045c9bcec333507"
+    },
+    {
+      "id": "artifact:p26-script",
+      "type": "artifact",
+      "title": "Phase 26 executable",
+      "summary": "Exact and bounded numerical long-arm, fold-uniformization, and real-sheet contour controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase26_global_lapse_flow.py",
+      "sha256": "c41824d6667d38efe66f5ebf4d0e1ec572d27c78b146b7c044e2e1ffd9868d04",
+      "introduced_in_commit": "c64eedb5cfb0d2fc49d3cd0243ee198a15a12165"
+    },
+    {
+      "id": "artifact:p26-report",
+      "type": "artifact",
+      "title": "Phase 26 report",
+      "summary": "Human-readable bounded global-flow and Airy-fold analysis with explicit endpoint and relative-homology limits.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE26_GLOBAL_LAPSE_FLOW.md",
+      "sha256": "99b7d7d73cd98ad07a7e70eb08e222ab874cd7acc75d9c0b3e37a7a20e21678a",
+      "introduced_in_commit": "c64eedb5cfb0d2fc49d3cd0243ee198a15a12165"
+    },
+    {
+      "id": "artifact:p26-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 26 evidence snapshot",
+      "summary": "Persisted four-exact and nine-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase26-result.json",
+      "sha256": "69cea99621db30f41b815fa987980916b9b63ce8acfccf2bc77f172d6d3d842a"
+    },
+    {
+      "id": "artifact:p27-script",
+      "type": "artifact",
+      "title": "Phase 27 executable",
+      "summary": "Exact Wick-map and spectral identities plus bounded raw zero-lapse short-time and signed-branch controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py",
+      "sha256": "36a454ca3f98277cca2c24904a708ec67fa8f7c3556f376e6613cdc0823e0d04",
+      "introduced_in_commit": "2065de0125674ba9c72888e3d95bc84fec66850b"
+    },
+    {
+      "id": "artifact:p27-report",
+      "type": "artifact",
+      "title": "Phase 27 report",
+      "summary": "Human-readable Wick-map, zero-lapse raw-kernel, half-line resolvent, and endpoint-scope analysis.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md",
+      "sha256": "9db755b61a526fc650875b12c3e92d3b1bf1913fff5f68b4434c5d363af66572",
+      "introduced_in_commit": "2065de0125674ba9c72888e3d95bc84fec66850b"
+    },
+    {
+      "id": "artifact:p27-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 27 evidence snapshot",
+      "summary": "Persisted thirteen-exact and eight-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase27-result.json",
+      "sha256": "121a440f408446a96eaf21e5765fbde7c35a0182c8eddd06becceb60c2beb4d3"
+    },
+    {
+      "id": "artifact:p28-script",
+      "type": "artifact",
+      "title": "Phase 28 executable",
+      "summary": "Exact PL/BFV identities and bounded numerical upper-arm, crossing, clock, and local-prefactor controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py",
+      "sha256": "496990308456bcc1d28f9649b99053d2a05499c6d3c2c0d233d5576a39a3f018",
+      "introduced_in_commit": "2065de0125674ba9c72888e3d95bc84fec66850b"
+    },
+    {
+      "id": "artifact:p28-report",
+      "type": "artifact",
+      "title": "Phase 28 report",
+      "summary": "Human-readable bounded PL crossing, Euclidean-continued homogeneous BFV, and string-completion design-gate analysis.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md",
+      "sha256": "1c721018747828f03ba832f797d7beff77f7c0d60303bed767958a4c76df8b4e",
+      "introduced_in_commit": "1d48edc6160ed915c1a13f21e6f82d7211e8e6fe"
+    },
+    {
+      "id": "artifact:p28-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 28 evidence snapshot",
+      "summary": "Persisted ten-exact and nine-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase28-result.json",
+      "sha256": "114374d88132a79fd601f5b55b2c7187b9adc738cb48c9ae122f3a79ec55505c"
+    },
+    {
+      "id": "phase:p29",
+      "type": "phase",
+      "title": "Phase 29 — zero-lapse distribution and reduced BFV measure",
+      "summary": "A frozen leading quadratic real-lapse Fresnel kernel, its local-flat-measure identity limit, the surviving pointwise pole, and a reduced fixed-parameter BFV modulus-measure control.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:pointwise-pole-versus-distributional-identity",
+      "type": "concept",
+      "title": "Pointwise pole versus distributional identity",
+      "summary": "A normalized oscillatory kernel can diverge at coincident endpoints pointwise while converging to an identity delta distribution when paired with test functions in a declared measure.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:fixed-parameter-bfv-modulus-versus-ghost-determinant",
+      "type": "concept",
+      "title": "Fixed-parameter BFV modulus versus standalone ghost determinant",
+      "summary": "Coordinate-length scaling of a standalone ghost determinant cancels after fixed-parameter rescaling and gauge-condition normalization; the gauge-invariant proper-time modulus remains integrated with a T-independent reduced factor.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:lapse-weight-insertion-versus-operator-object",
+      "type": "concept",
+      "title": "Lapse-weight insertion versus operator object",
+      "summary": "Multiplying a lapse measure by N is not a harmless pole subtraction: it changes a half-line resolvent pole and turns a full-line constraint delta into a derivative distribution not annihilated by the constraint.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:real-lapse-fresnel-versus-conformal-contour",
+      "type": "concept",
+      "title": "Real-lapse Fresnel limit versus conformal contour",
+      "summary": "Distributional real-lapse normalization does not choose a single imaginary rotation for an indefinite gravitational kinetic form; the conformal integration cycle remains separate.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "type": "claim",
+      "title": "The frozen quadratic kernel has a delta-flat identity limit",
+      "summary": "Supported for the normalized leading two-coordinate real-lapse Fresnel kernel on Schwartz/Gaussian tests under the declared local flat da dphi endpoint measure.",
+      "state": "SUPPORTED_IN_FROZEN_CONTROL",
+      "claim_id": "P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "statement": "In the frozen leading quadratic control, the normalized real-lapse kernel converges distributionally to the identity delta kernel under the declared local flat da dphi endpoint measure.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+      "type": "claim",
+      "title": "The equal-endpoint pointwise zero-lapse limit is finite",
+      "summary": "Contradicted: the normalized two-coordinate kernel still has a pointwise 1/N pole at coincident endpoints even though its distributional pairing is controlled.",
+      "state": "CONTRADICTED",
+      "claim_id": "P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+      "statement": "Normalization makes the equal-endpoint kernel approach a finite pointwise value as real lapse N tends to zero.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "type": "claim",
+      "title": "The unit Dirichlet ghost cancels the endpoint pole",
+      "summary": "Contradicted in the reduced fixed-parameter BFV control: the ghost normalization is modulus independent and does not cancel the 1/N pointwise kernel factor.",
+      "state": "CONTRADICTED",
+      "claim_id": "P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "statement": "The unit-interval Dirichlet ghost determinant supplies a proper-time factor that cancels the two-coordinate 1/N endpoint pole.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "type": "claim",
+      "title": "The fixed-parameter BFV modulus factor is T-independent",
+      "summary": "Supported in the reduced one-constraint gauge control after coordinate and ghost rescaling and the matching gauge-condition delta normalization; this is not the full physical WDW endpoint measure.",
+      "state": "SUPPORTED_IN_REDUCED_BFV",
+      "claim_id": "P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "statement": "For the declared fixed-parameter proper-time gauge with fixed endpoint gauge parameters, the reduced nonzero-mode ghost normalization is independent of T and proper time remains a gauge-invariant modulus.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+      "type": "claim",
+      "title": "An inserted lapse power is harmless normalization",
+      "summary": "Contradicted at the spectral-distribution level: multiplying by N changes the half-line resolvent to a double pole and the full-line constraint delta to delta-prime support.",
+      "state": "CONTRADICTED",
+      "claim_id": "P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+      "statement": "Multiplying the lapse measure by N merely removes a pointwise normalization pole without changing the resolvent or rigging object.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "type": "claim",
+      "title": "The positive half-lapse integral is a constraint projector",
+      "summary": "Contradicted by the sourced resolvent identity in the frozen spectral control; full-line group averaging is a different distributional object.",
+      "state": "CONTRADICTED",
+      "claim_id": "P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "statement": "The regulated positive half-lapse integral is the same constraint projector as the full-line group average.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "type": "claim",
+      "title": "One imaginary lapse rotation damps both homogeneous directions",
+      "summary": "Contradicted by the one-negative/one-positive kinetic signature: either imaginary sign damps one direction and amplifies the other.",
+      "state": "CONTRADICTED_IN_FROZEN_KINETIC_FORM",
+      "claim_id": "P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "statement": "A single Wick rotation of the lapse makes the leading homogeneous gravitational and scalar quadratic directions simultaneously damped.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "type": "claim",
+      "title": "The distributional identity is a trace-class density",
+      "summary": "Contradicted by finite-rank Hilbert–Schmidt growth; an identity kernel is neither a normalized physical density nor an initial-value distribution.",
+      "state": "CONTRADICTED",
+      "claim_id": "P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "statement": "The local identity-distribution limit by itself defines a positive trace-class WDW/seam density.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p29-leading-fresnel-kernel",
+      "type": "evidence",
+      "title": "Phase 29 leading Fresnel-kernel checks",
+      "summary": "Two exact distributional/Fourier identities and four numerical controls cover the frozen metric, normalized coefficient, Gaussian-test convergence, and surviving pointwise pole.",
+      "state": "VERIFIED",
+      "observed_status": "2_EXACT_PASS_PLUS_4_NUMERICAL_PASS",
+      "check_ids": [
+        "P29.kernel.distributional_identity_limit",
+        "P29.kernel.Fourier_multiplier_identity_limit",
+        "P29.numeric.frozen_metric",
+        "P29.numeric.raw_and_normalized_prefactors",
+        "P29.numeric.distributional_pairing_convergence",
+        "P29.numeric.pointwise_pole"
+      ]
+    },
+    {
+      "id": "evidence:p29-reduced-bfv-modulus",
+      "type": "evidence",
+      "title": "Phase 29 reduced BFV modulus checks",
+      "summary": "Six exact identities and one numerical control cover ghost length scaling, fixed-parameter rescaling, gauge-condition normalization, proper-time invariance, and the absence of a pole-canceling ghost power.",
+      "state": "VERIFIED",
+      "observed_status": "6_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P29.BFV.Dirichlet_ghost_length_scaling",
+        "P29.BFV.fixed_parameter_ghost_is_modulus_independent",
+        "P29.BFV.gauge_condition_rescaling_cancels",
+        "P29.BFV.proper_time_modulus_is_gauge_invariant",
+        "P29.BFV.nonzero_mode_factor_is_modulus_independent",
+        "P29.BFV.unit_ghost_does_not_cancel_endpoint_pole",
+        "P29.numeric.ghost_coordinate_length_dependence"
+      ]
+    },
+    {
+      "id": "evidence:p29-lapse-operator-and-bypass",
+      "type": "evidence",
+      "title": "Phase 29 lapse-operator and bypass checks",
+      "summary": "Seven exact distributional identities and one numerical residual separate local integrability, half/full lapse objects, inserted powers, lateral residues, and bounded spectral arcs.",
+      "state": "VERIFIED",
+      "observed_status": "7_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P29.endpoint.pointwise_vs_distributional_integrability",
+        "P29.operator.half_line_is_sourced_resolvent",
+        "P29.operator.ad_hoc_lapse_power_changes_resolvent",
+        "P29.operator.full_line_constraint_support",
+        "P29.operator.weighted_full_line_loses_constraint_annihilation",
+        "P29.endpoint.lateral_bypass_Bessel_residues",
+        "P29.endpoint.finite_spectral_arc_control",
+        "P29.numeric.half_line_resolvent_residual"
+      ]
+    },
+    {
+      "id": "evidence:p29-conformal-sign-and-density",
+      "type": "evidence",
+      "title": "Phase 29 conformal-sign and density checks",
+      "summary": "Three exact checks and one numerical control cover indefinite signature, the single-rotation obstruction, and the non-Hilbert–Schmidt identity limit.",
+      "state": "VERIFIED",
+      "observed_status": "3_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P29.kernel.indefinite_signature",
+        "P29.kernel.single_Wick_rotation_obstruction",
+        "P29.density.identity_not_Hilbert_Schmidt",
+        "P29.numeric.identity_HS_divergence"
+      ]
+    },
+    {
+      "id": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure",
+      "type": "scope",
+      "title": "P29 frozen leading kernel and reduced BFV measure",
+      "summary": "The frozen two-coordinate leading quadratic short-time kernel, declared local flat endpoint measure, fixed-parameter Dirichlet-ghost control, and spectral lapse distributions.",
+      "state": "ACTIVE",
+      "includes": [
+        "the frozen endpoint and two-coordinate quadratic kinetic matrix",
+        "real-lapse Fresnel normalization under a declared local flat da dphi endpoint measure",
+        "Schwartz/Fourier and Gaussian-test distributional identity controls",
+        "fixed-parameter one-constraint BFV ghost and gauge-condition rescaling",
+        "positive-half-line resolvent and full-line constraint distributions",
+        "finite bounded spectral truncation of a zero-radius bypass"
+      ],
+      "excludes": [
+        "the physical WDW endpoint measure and factor ordering",
+        "an all-orders interacting uniform kernel or operator-valued parametrix",
+        "the conformal-factor integration contour",
+        "the gauge-fixed nonzero-mode gravity or SUGRA determinant",
+        "global relative homology, Stokes data, or an integer PL coefficient",
+        "a trace-class density, state, or initial-value distribution"
+      ]
+    },
+    {
+      "id": "open:p29-conformal-bfv-uniform-parametrix",
+      "type": "open_problem",
+      "title": "Construct the conformal/BFV uniform endpoint parametrix",
+      "summary": "The leading real-lapse identity distribution does not select a conformal contour or include the all-orders gauge-reduced determinant.",
+      "state": "OPEN",
+      "question": "After choosing the conformal/BFV integration cycle, does the endpoint-completed operator-valued uniform parametrix remain controlled across zero lapse with the full primed determinant?"
+    },
+    {
+      "id": "open:p29-physical-endpoint-measure-and-ordering",
+      "type": "open_problem",
+      "title": "Derive the physical WDW endpoint measure and ordering",
+      "summary": "The declared local flat da dphi measure is a frozen control measure, not a derived physical WDW product.",
+      "state": "OPEN",
+      "question": "Which endpoint measure, factor ordering, and physical product follow from the completed constrained path integral, and do they preserve a useful distributional identity limit?"
+    },
+    {
+      "id": "source:teitelboim-1983-gravitational-field",
+      "type": "source",
+      "title": "Quantum mechanics of the gravitational field",
+      "summary": "Primary positive-proper-time causal/source boundary cited for the half-line distinction; it does not define the Phase-29 endpoint measure or density.",
+      "state": "PRIMARY",
+      "citation": "C. Teitelboim, Quantum Mechanics of the Gravitational Field in Asymptotically Flat Space, Physical Review D 28 (1983) 310",
+      "uri": "https://doi.org/10.1103/PhysRevD.28.310",
+      "version": "Phys. Rev. D 28 (1983) 310"
+    },
+    {
+      "id": "source:garcia-vergara-urrutia-1995",
+      "type": "source",
+      "title": "BRST–BFV quantization and the Schwinger action principle",
+      "summary": "Primary source for endpoint BRST boundary conditions and boundary terms; it does not determine this gravitational determinant or physical endpoint measure.",
+      "state": "PRIMARY",
+      "citation": "J. A. García, J. D. Vergara and L. F. Urrutia, BRST–BFV quantization and the Schwinger action principle",
+      "uri": "https://arxiv.org/abs/hep-th/9511092",
+      "version": "arXiv:hep-th/9511092v1"
+    },
+    {
+      "id": "artifact:p29-script",
+      "type": "artifact",
+      "title": "Phase 29 executable",
+      "summary": "Exact and bounded numerical leading Fresnel-kernel, reduced BFV modulus, lapse-operator, conformal-sign, and identity-density controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py",
+      "sha256": "0fa8314d3c0385c70ad569ce1c2ad65d506580eef50ef589e7fa2da5f7fb3e76",
+      "introduced_in_commit": "4794ff6de9f5f5726bcdd633f64fd4988eb197de"
+    },
+    {
+      "id": "artifact:p29-report",
+      "type": "artifact",
+      "title": "Phase 29 report",
+      "summary": "Human-readable zero-lapse distribution, reduced BFV measure, operator-object, conformal-sign, and physical-scope analysis.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md",
+      "sha256": "d3aa7abf86f4a65b98fbfd3bc9e9d8cf7d9c9cd596c2fcac34d113097e52f7ec",
+      "introduced_in_commit": "4794ff6de9f5f5726bcdd633f64fd4988eb197de"
+    },
+    {
+      "id": "artifact:p29-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 29 evidence snapshot",
+      "summary": "Persisted eighteen-exact and seven-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase29-result.json",
+      "sha256": "dd13f707e4c5692155ccb28e9616b1e07b7aaa6bb68d1d90257180922cb425e0"
     }
   ],
   "edges": [
@@ -7171,6 +8365,1892 @@
       "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
       "relation": "MOTIVATES",
       "to": "open:p20-exact-starobinsky-wdw-state"
+    },
+    {
+      "id": "edge:589",
+      "from": "phase:p25",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:590",
+      "from": "phase:p26",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:591",
+      "from": "phase:p27",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:592",
+      "from": "phase:p28",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:593",
+      "from": "concept:lapse-saddle-versus-dirichlet-caustic",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:594",
+      "from": "concept:bounded-thimble-arm-versus-global-relative-cycle",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:595",
+      "from": "concept:raw-fixed-lapse-kernel-versus-bfv-kernel",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:596",
+      "from": "concept:positive-half-lapse-resolvent-versus-projector",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:597",
+      "from": "concept:bounded-crossing-versus-global-intersection-number",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:598",
+      "from": "concept:bfv-zero-mode-versus-local-negative-mode",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:599",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:600",
+      "from": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:601",
+      "from": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p25-fixed-boundary-lapse-and-local-complex-flow"
+    },
+    {
+      "id": "edge:602",
+      "from": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p25-report"
+    },
+    {
+      "id": "edge:603",
+      "from": "claim:P25_REAL_LAPSE_DIRECTION_IS_EXP_MINUS_W_DESCENT",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:604",
+      "from": "claim:P25_REAL_LAPSE_DIRECTION_IS_EXP_MINUS_W_DESCENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p25-fixed-boundary-lapse-and-local-complex-flow"
+    },
+    {
+      "id": "edge:605",
+      "from": "claim:P25_REAL_LAPSE_DIRECTION_IS_EXP_MINUS_W_DESCENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p25-report"
+    },
+    {
+      "id": "edge:606",
+      "from": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:607",
+      "from": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p25-fixed-boundary-lapse-and-local-complex-flow"
+    },
+    {
+      "id": "edge:608",
+      "from": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p25-report"
+    },
+    {
+      "id": "edge:609",
+      "from": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:610",
+      "from": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p25-fixed-boundary-lapse-and-local-complex-flow"
+    },
+    {
+      "id": "edge:611",
+      "from": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p25-report"
+    },
+    {
+      "id": "edge:612",
+      "from": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:613",
+      "from": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p26-bounded-analytic-sheet-and-fold"
+    },
+    {
+      "id": "edge:614",
+      "from": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p26-report"
+    },
+    {
+      "id": "edge:615",
+      "from": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:616",
+      "from": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p26-bounded-analytic-sheet-and-fold"
+    },
+    {
+      "id": "edge:617",
+      "from": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p26-report"
+    },
+    {
+      "id": "edge:618",
+      "from": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:619",
+      "from": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p26-bounded-analytic-sheet-and-fold"
+    },
+    {
+      "id": "edge:620",
+      "from": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p26-report"
+    },
+    {
+      "id": "edge:621",
+      "from": "claim:P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:622",
+      "from": "claim:P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p26-bounded-analytic-sheet-and-fold"
+    },
+    {
+      "id": "edge:623",
+      "from": "claim:P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p26-report"
+    },
+    {
+      "id": "edge:624",
+      "from": "claim:P27_DECLARED_LORENTZIAN_EUCLIDEAN_WICK_MAP_IS_CONSISTENT",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:625",
+      "from": "claim:P27_DECLARED_LORENTZIAN_EUCLIDEAN_WICK_MAP_IS_CONSISTENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p27-declared-wick-map-and-raw-zero-lapse-control"
+    },
+    {
+      "id": "edge:626",
+      "from": "claim:P27_DECLARED_LORENTZIAN_EUCLIDEAN_WICK_MAP_IS_CONSISTENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p27-report"
+    },
+    {
+      "id": "edge:627",
+      "from": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:628",
+      "from": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p27-declared-wick-map-and-raw-zero-lapse-control"
+    },
+    {
+      "id": "edge:629",
+      "from": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p27-report"
+    },
+    {
+      "id": "edge:630",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:631",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p27-declared-wick-map-and-raw-zero-lapse-control"
+    },
+    {
+      "id": "edge:632",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p27-report"
+    },
+    {
+      "id": "edge:633",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:634",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p27-declared-wick-map-and-raw-zero-lapse-control"
+    },
+    {
+      "id": "edge:635",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p27-report"
+    },
+    {
+      "id": "edge:636",
+      "from": "claim:P27_SIGNED_RAW_BRANCH_HAS_PAIRED_STATIONARY_POINTS",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:637",
+      "from": "claim:P27_SIGNED_RAW_BRANCH_HAS_PAIRED_STATIONARY_POINTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p27-declared-wick-map-and-raw-zero-lapse-control"
+    },
+    {
+      "id": "edge:638",
+      "from": "claim:P27_SIGNED_RAW_BRANCH_HAS_PAIRED_STATIONARY_POINTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p27-report"
+    },
+    {
+      "id": "edge:639",
+      "from": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:640",
+      "from": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p28-bounded-pl-and-homogeneous-bfv"
+    },
+    {
+      "id": "edge:641",
+      "from": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p28-report"
+    },
+    {
+      "id": "edge:642",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:643",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p28-bounded-pl-and-homogeneous-bfv"
+    },
+    {
+      "id": "edge:644",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p28-report"
+    },
+    {
+      "id": "edge:645",
+      "from": "claim:P28_INTRINSIC_NECK_CLOCK_IS_REGULAR",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:646",
+      "from": "claim:P28_INTRINSIC_NECK_CLOCK_IS_REGULAR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p28-bounded-pl-and-homogeneous-bfv"
+    },
+    {
+      "id": "edge:647",
+      "from": "claim:P28_INTRINSIC_NECK_CLOCK_IS_REGULAR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p28-report"
+    },
+    {
+      "id": "edge:648",
+      "from": "claim:P28_EXTRINSIC_PA_CLOCK_IS_LOCALLY_REGULAR",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:649",
+      "from": "claim:P28_EXTRINSIC_PA_CLOCK_IS_LOCALLY_REGULAR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p28-bounded-pl-and-homogeneous-bfv"
+    },
+    {
+      "id": "edge:650",
+      "from": "claim:P28_EXTRINSIC_PA_CLOCK_IS_LOCALLY_REGULAR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p28-report"
+    },
+    {
+      "id": "edge:651",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:652",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p28-bounded-pl-and-homogeneous-bfv"
+    },
+    {
+      "id": "edge:653",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p28-report"
+    },
+    {
+      "id": "edge:654",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:655",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p28-bounded-pl-and-homogeneous-bfv"
+    },
+    {
+      "id": "edge:656",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p28-report"
+    },
+    {
+      "id": "edge:657",
+      "from": "evidence:p25-action-lapse-and-jacobi",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:658",
+      "from": "evidence:p25-action-lapse-and-jacobi",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p25-script"
+    },
+    {
+      "id": "edge:659",
+      "from": "evidence:p25-action-lapse-and-jacobi",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p25-evidence-snapshot"
+    },
+    {
+      "id": "edge:660",
+      "from": "evidence:p25-real-branch-and-fold",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:661",
+      "from": "evidence:p25-real-branch-and-fold",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p25-script"
+    },
+    {
+      "id": "edge:662",
+      "from": "evidence:p25-real-branch-and-fold",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p25-evidence-snapshot"
+    },
+    {
+      "id": "edge:663",
+      "from": "evidence:p25-local-complex-segment",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:664",
+      "from": "evidence:p25-local-complex-segment",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p25-script"
+    },
+    {
+      "id": "edge:665",
+      "from": "evidence:p25-local-complex-segment",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p25-evidence-snapshot"
+    },
+    {
+      "id": "edge:666",
+      "from": "evidence:p26-bounded-complex-flow",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:667",
+      "from": "evidence:p26-bounded-complex-flow",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p26-script"
+    },
+    {
+      "id": "edge:668",
+      "from": "evidence:p26-bounded-complex-flow",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p26-evidence-snapshot"
+    },
+    {
+      "id": "edge:669",
+      "from": "evidence:p26-real-fold-airy",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:670",
+      "from": "evidence:p26-real-fold-airy",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p26-script"
+    },
+    {
+      "id": "edge:671",
+      "from": "evidence:p26-real-fold-airy",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p26-evidence-snapshot"
+    },
+    {
+      "id": "edge:672",
+      "from": "evidence:p26-asymptotic-and-real-cycle",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:673",
+      "from": "evidence:p26-asymptotic-and-real-cycle",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p26-script"
+    },
+    {
+      "id": "edge:674",
+      "from": "evidence:p26-asymptotic-and-real-cycle",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p26-evidence-snapshot"
+    },
+    {
+      "id": "edge:675",
+      "from": "evidence:p27-wick-map",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:676",
+      "from": "evidence:p27-wick-map",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p27-script"
+    },
+    {
+      "id": "edge:677",
+      "from": "evidence:p27-wick-map",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p27-evidence-snapshot"
+    },
+    {
+      "id": "edge:678",
+      "from": "evidence:p27-raw-zero-lapse-kernel",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:679",
+      "from": "evidence:p27-raw-zero-lapse-kernel",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p27-script"
+    },
+    {
+      "id": "edge:680",
+      "from": "evidence:p27-raw-zero-lapse-kernel",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p27-evidence-snapshot"
+    },
+    {
+      "id": "edge:681",
+      "from": "evidence:p27-operator-and-contour",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:682",
+      "from": "evidence:p27-operator-and-contour",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p27-script"
+    },
+    {
+      "id": "edge:683",
+      "from": "evidence:p27-operator-and-contour",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p27-evidence-snapshot"
+    },
+    {
+      "id": "edge:684",
+      "from": "evidence:p27-signed-raw-branch",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:685",
+      "from": "evidence:p27-signed-raw-branch",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p27-script"
+    },
+    {
+      "id": "edge:686",
+      "from": "evidence:p27-signed-raw-branch",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p27-evidence-snapshot"
+    },
+    {
+      "id": "edge:687",
+      "from": "evidence:p28-bounded-upper-arm",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:688",
+      "from": "evidence:p28-bounded-upper-arm",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p28-script"
+    },
+    {
+      "id": "edge:689",
+      "from": "evidence:p28-bounded-upper-arm",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p28-evidence-snapshot"
+    },
+    {
+      "id": "edge:690",
+      "from": "evidence:p28-bounded-crossings",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:691",
+      "from": "evidence:p28-bounded-crossings",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p28-script"
+    },
+    {
+      "id": "edge:692",
+      "from": "evidence:p28-bounded-crossings",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p28-evidence-snapshot"
+    },
+    {
+      "id": "edge:693",
+      "from": "evidence:p28-homogeneous-bfv",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:694",
+      "from": "evidence:p28-homogeneous-bfv",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p28-script"
+    },
+    {
+      "id": "edge:695",
+      "from": "evidence:p28-homogeneous-bfv",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p28-evidence-snapshot"
+    },
+    {
+      "id": "edge:696",
+      "from": "scope:p25-fixed-boundary-lapse-and-local-complex-flow",
+      "relation": "PART_OF",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:697",
+      "from": "scope:p26-bounded-analytic-sheet-and-fold",
+      "relation": "PART_OF",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:698",
+      "from": "scope:p27-declared-wick-map-and-raw-zero-lapse-control",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:699",
+      "from": "scope:p28-bounded-pl-and-homogeneous-bfv",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:700",
+      "from": "open:p28-zero-lapse-uniform-bfv-kernel",
+      "relation": "PART_OF",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:701",
+      "from": "open:p28-global-relative-homology-and-intersection",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:702",
+      "from": "open:p28-full-gauge-reduced-superdeterminant",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:703",
+      "from": "open:p28-physical-state-and-density",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:704",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "PART_OF",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:705",
+      "from": "artifact:p25-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:706",
+      "from": "artifact:p25-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:707",
+      "from": "artifact:p25-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p25"
+    },
+    {
+      "id": "edge:708",
+      "from": "artifact:p26-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:709",
+      "from": "artifact:p26-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:710",
+      "from": "artifact:p26-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p26"
+    },
+    {
+      "id": "edge:711",
+      "from": "artifact:p27-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:712",
+      "from": "artifact:p27-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:713",
+      "from": "artifact:p27-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p27"
+    },
+    {
+      "id": "edge:714",
+      "from": "artifact:p28-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:715",
+      "from": "artifact:p28-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:716",
+      "from": "artifact:p28-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p28"
+    },
+    {
+      "id": "edge:717",
+      "from": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p25-action-lapse-and-jacobi",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:718",
+      "from": "claim:P25_REAL_LAPSE_DIRECTION_IS_EXP_MINUS_W_DESCENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p25-action-lapse-and-jacobi",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:719",
+      "from": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p25-real-branch-and-fold",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:720",
+      "from": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p25-local-complex-segment",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:721",
+      "from": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p26-bounded-complex-flow",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:722",
+      "from": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p26-real-fold-airy",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:723",
+      "from": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p26-real-fold-airy",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:724",
+      "from": "claim:P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p26-asymptotic-and-real-cycle",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:725",
+      "from": "claim:P27_DECLARED_LORENTZIAN_EUCLIDEAN_WICK_MAP_IS_CONSISTENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p27-wick-map",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:726",
+      "from": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p27-raw-zero-lapse-kernel",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:727",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p27-operator-and-contour",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:728",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p27-operator-and-contour",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:729",
+      "from": "claim:P27_SIGNED_RAW_BRANCH_HAS_PAIRED_STATIONARY_POINTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p27-signed-raw-branch",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:730",
+      "from": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p28-bounded-upper-arm",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:731",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p28-bounded-crossings",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:732",
+      "from": "claim:P28_INTRINSIC_NECK_CLOCK_IS_REGULAR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p28-homogeneous-bfv",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:733",
+      "from": "claim:P28_EXTRINSIC_PA_CLOCK_IS_LOCALLY_REGULAR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p28-homogeneous-bfv",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:734",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p28-homogeneous-bfv",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:735",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p28-homogeneous-bfv",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:736",
+      "from": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "relation": "ABOUT",
+      "to": "concept:lapse-saddle-versus-dirichlet-caustic"
+    },
+    {
+      "id": "edge:737",
+      "from": "claim:P25_REAL_LAPSE_DIRECTION_IS_EXP_MINUS_W_DESCENT",
+      "relation": "ABOUT",
+      "to": "concept:bounded-thimble-arm-versus-global-relative-cycle"
+    },
+    {
+      "id": "edge:738",
+      "from": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC",
+      "relation": "ABOUT",
+      "to": "concept:lapse-saddle-versus-dirichlet-caustic"
+    },
+    {
+      "id": "edge:739",
+      "from": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "relation": "ABOUT",
+      "to": "concept:bounded-thimble-arm-versus-global-relative-cycle"
+    },
+    {
+      "id": "edge:740",
+      "from": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "relation": "ABOUT",
+      "to": "concept:bounded-thimble-arm-versus-global-relative-cycle"
+    },
+    {
+      "id": "edge:741",
+      "from": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "relation": "ABOUT",
+      "to": "concept:lapse-saddle-versus-dirichlet-caustic"
+    },
+    {
+      "id": "edge:742",
+      "from": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "relation": "ABOUT",
+      "to": "concept:lapse-saddle-versus-dirichlet-caustic"
+    },
+    {
+      "id": "edge:743",
+      "from": "claim:P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "relation": "ABOUT",
+      "to": "concept:bounded-thimble-arm-versus-global-relative-cycle"
+    },
+    {
+      "id": "edge:744",
+      "from": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "relation": "ABOUT",
+      "to": "concept:raw-fixed-lapse-kernel-versus-bfv-kernel"
+    },
+    {
+      "id": "edge:745",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_SOURCED_RESOLVENT",
+      "relation": "ABOUT",
+      "to": "concept:positive-half-lapse-resolvent-versus-projector"
+    },
+    {
+      "id": "edge:746",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "relation": "ABOUT",
+      "to": "concept:positive-half-lapse-resolvent-versus-projector"
+    },
+    {
+      "id": "edge:747",
+      "from": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "relation": "ABOUT",
+      "to": "concept:bounded-thimble-arm-versus-global-relative-cycle"
+    },
+    {
+      "id": "edge:748",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "ABOUT",
+      "to": "concept:bounded-crossing-versus-global-intersection-number"
+    },
+    {
+      "id": "edge:749",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "ABOUT",
+      "to": "concept:bfv-zero-mode-versus-local-negative-mode"
+    },
+    {
+      "id": "edge:750",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "ABOUT",
+      "to": "concept:bfv-zero-mode-versus-local-negative-mode"
+    },
+    {
+      "id": "edge:751",
+      "from": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS"
+    },
+    {
+      "id": "edge:752",
+      "from": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION"
+    },
+    {
+      "id": "edge:753",
+      "from": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS"
+    },
+    {
+      "id": "edge:754",
+      "from": "claim:P26_REAL_DIRICHLET_FOLD_IS_LAPSE_SADDLE",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC"
+    },
+    {
+      "id": "edge:755",
+      "from": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET"
+    },
+    {
+      "id": "edge:756",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR"
+    },
+    {
+      "id": "edge:757",
+      "from": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET"
+    },
+    {
+      "id": "edge:758",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P28_BOUNDED_UPPER_ARM_CONTINUES_PAST_IMAGINARY_TURN"
+    },
+    {
+      "id": "edge:759",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE"
+    },
+    {
+      "id": "edge:760",
+      "from": "claim:P25_LOCAL_CONSTANT_PHASE_COMPLEX_DESCENT_SEGMENT_EXISTS",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:761",
+      "from": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:762",
+      "from": "claim:P26_POSITIVE_REAL_EUCLIDEAN_SHEET_IS_RECORDED_CONVERGENT_CYCLE",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:763",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:764",
+      "from": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "relation": "MOTIVATES",
+      "to": "open:p28-zero-lapse-uniform-bfv-kernel"
+    },
+    {
+      "id": "edge:765",
+      "from": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR",
+      "relation": "MOTIVATES",
+      "to": "open:p28-zero-lapse-uniform-bfv-kernel"
+    },
+    {
+      "id": "edge:766",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "MOTIVATES",
+      "to": "open:p28-zero-lapse-uniform-bfv-kernel"
+    },
+    {
+      "id": "edge:767",
+      "from": "claim:P28_INTRINSIC_NECK_CLOCK_IS_REGULAR",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:768",
+      "from": "claim:P28_EXTRINSIC_PA_CLOCK_IS_LOCALLY_REGULAR",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:769",
+      "from": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:770",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:771",
+      "from": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density"
+    },
+    {
+      "id": "edge:772",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density"
+    },
+    {
+      "id": "edge:773",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:774",
+      "from": "claim:P28_LOCAL_LAPSE_GAUSSIAN_FACTOR_IS_CONDITIONAL",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:775",
+      "from": "open:p28-physical-state-and-density",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:776",
+      "from": "open:p28-physical-state-and-density",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-zero-lapse-uniform-bfv-kernel"
+    },
+    {
+      "id": "edge:777",
+      "from": "open:p28-physical-state-and-density",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:778",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-physical-state-and-density"
+    },
+    {
+      "id": "edge:779",
+      "from": "concept:bounded-thimble-arm-versus-global-relative-cycle",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:780",
+      "from": "concept:bounded-thimble-arm-versus-global-relative-cycle",
+      "relation": "CITES",
+      "to": "source:feldbrugge-lehners-turok-2017",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:781",
+      "from": "concept:lapse-saddle-versus-dirichlet-caustic",
+      "relation": "CITES",
+      "to": "source:gutzwiller-1967",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:782",
+      "from": "claim:P26_REAL_FOLD_OBEYS_AIRY_UNIFORM_SCALING",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:783",
+      "from": "open:p28-global-relative-homology-and-intersection",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1989",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:784",
+      "from": "open:p28-global-relative-homology-and-intersection",
+      "relation": "CITES",
+      "to": "source:feldbrugge-lehners-turok-2017",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:785",
+      "from": "concept:raw-fixed-lapse-kernel-versus-bfv-kernel",
+      "relation": "CITES",
+      "to": "source:halliwell-1988",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:786",
+      "from": "concept:raw-fixed-lapse-kernel-versus-bfv-kernel",
+      "relation": "CITES",
+      "to": "source:gutzwiller-1967",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:787",
+      "from": "concept:positive-half-lapse-resolvent-versus-projector",
+      "relation": "CITES",
+      "to": "source:teitelboim-1983",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:788",
+      "from": "concept:positive-half-lapse-resolvent-versus-projector",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:789",
+      "from": "open:p28-zero-lapse-uniform-bfv-kernel",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:790",
+      "from": "open:p28-zero-lapse-uniform-bfv-kernel",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:791",
+      "from": "concept:bfv-zero-mode-versus-local-negative-mode",
+      "relation": "CITES",
+      "to": "source:fradkin-vilkovisky-1975",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:792",
+      "from": "open:p28-full-gauge-reduced-superdeterminant",
+      "relation": "CITES",
+      "to": "source:batalin-vilkovisky-1981",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:793",
+      "from": "open:p28-full-gauge-reduced-superdeterminant",
+      "relation": "CITES",
+      "to": "source:fradkin-vilkovisky-1975",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:794",
+      "from": "open:p28-full-gauge-reduced-superdeterminant",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:795",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "CITES",
+      "to": "source:farakos-et-al-2017",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:796",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "CITES",
+      "to": "source:bandos-et-al-2018",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:797",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "CITES",
+      "to": "source:witten-1996-flux-quantization",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:798",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "CITES",
+      "to": "source:camara-ibanez-uranga-2003",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:799",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "CITES",
+      "to": "source:dienes-1994",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:800",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "CITES",
+      "to": "source:kiermaier-okawa-zwiebach-2008",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:801",
+      "from": "concept:string-completion-versus-temporal-seam-derivation",
+      "relation": "CITES",
+      "to": "source:moosavian-sen-verma-2019",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:802",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "CITES",
+      "to": "source:farakos-et-al-2017",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:803",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "CITES",
+      "to": "source:bandos-et-al-2018",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:804",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "CITES",
+      "to": "source:witten-1996-flux-quantization",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:805",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "CITES",
+      "to": "source:camara-ibanez-uranga-2003",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:806",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "CITES",
+      "to": "source:dienes-1994",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:807",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "CITES",
+      "to": "source:kiermaier-okawa-zwiebach-2008",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:808",
+      "from": "open:p28-string-three-form-soft-spectrum",
+      "relation": "CITES",
+      "to": "source:moosavian-sen-verma-2019",
+      "note": "Literature framing/completion boundary only; the scoped repository result is not derived from this source."
+    },
+    {
+      "id": "edge:809",
+      "from": "phase:p29",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:810",
+      "from": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:811",
+      "from": "open:p29-conformal-bfv-uniform-parametrix",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:812",
+      "from": "open:p29-physical-endpoint-measure-and-ordering",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:813",
+      "from": "artifact:p29-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:814",
+      "from": "artifact:p29-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:815",
+      "from": "artifact:p29-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:816",
+      "from": "concept:pointwise-pole-versus-distributional-identity",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:817",
+      "from": "concept:fixed-parameter-bfv-modulus-versus-ghost-determinant",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:818",
+      "from": "concept:lapse-weight-insertion-versus-operator-object",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:819",
+      "from": "concept:real-lapse-fresnel-versus-conformal-contour",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:820",
+      "from": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:821",
+      "from": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:822",
+      "from": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:823",
+      "from": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-leading-fresnel-kernel",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:824",
+      "from": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "relation": "ABOUT",
+      "to": "concept:pointwise-pole-versus-distributional-identity"
+    },
+    {
+      "id": "edge:825",
+      "from": "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:826",
+      "from": "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:827",
+      "from": "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:828",
+      "from": "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-leading-fresnel-kernel",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:829",
+      "from": "claim:P29_EQUAL_ENDPOINT_POINTWISE_ZERO_LAPSE_LIMIT_IS_FINITE",
+      "relation": "ABOUT",
+      "to": "concept:pointwise-pole-versus-distributional-identity"
+    },
+    {
+      "id": "edge:830",
+      "from": "claim:P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:831",
+      "from": "claim:P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:832",
+      "from": "claim:P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:833",
+      "from": "claim:P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-reduced-bfv-modulus",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:834",
+      "from": "claim:P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "relation": "ABOUT",
+      "to": "concept:fixed-parameter-bfv-modulus-versus-ghost-determinant"
+    },
+    {
+      "id": "edge:835",
+      "from": "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:836",
+      "from": "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:837",
+      "from": "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:838",
+      "from": "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-reduced-bfv-modulus",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:839",
+      "from": "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "relation": "ABOUT",
+      "to": "concept:fixed-parameter-bfv-modulus-versus-ghost-determinant"
+    },
+    {
+      "id": "edge:840",
+      "from": "claim:P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:841",
+      "from": "claim:P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:842",
+      "from": "claim:P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:843",
+      "from": "claim:P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-lapse-operator-and-bypass",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:844",
+      "from": "claim:P29_INSERTED_LAPSE_POWER_IS_HARMLESS_NORMALIZATION",
+      "relation": "ABOUT",
+      "to": "concept:lapse-weight-insertion-versus-operator-object"
+    },
+    {
+      "id": "edge:845",
+      "from": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:846",
+      "from": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:847",
+      "from": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:848",
+      "from": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-lapse-operator-and-bypass",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:849",
+      "from": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "relation": "ABOUT",
+      "to": "concept:lapse-weight-insertion-versus-operator-object"
+    },
+    {
+      "id": "edge:850",
+      "from": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:851",
+      "from": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:852",
+      "from": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:853",
+      "from": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-conformal-sign-and-density",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:854",
+      "from": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "relation": "ABOUT",
+      "to": "concept:real-lapse-fresnel-versus-conformal-contour"
+    },
+    {
+      "id": "edge:855",
+      "from": "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:856",
+      "from": "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p29-frozen-leading-kernel-and-reduced-bfv-measure"
+    },
+    {
+      "id": "edge:857",
+      "from": "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p29-report"
+    },
+    {
+      "id": "edge:858",
+      "from": "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p29-conformal-sign-and-density",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:859",
+      "from": "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "relation": "ABOUT",
+      "to": "concept:pointwise-pole-versus-distributional-identity"
+    },
+    {
+      "id": "edge:860",
+      "from": "evidence:p29-leading-fresnel-kernel",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:861",
+      "from": "evidence:p29-leading-fresnel-kernel",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p29-script"
+    },
+    {
+      "id": "edge:862",
+      "from": "evidence:p29-leading-fresnel-kernel",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p29-evidence-snapshot"
+    },
+    {
+      "id": "edge:863",
+      "from": "evidence:p29-reduced-bfv-modulus",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:864",
+      "from": "evidence:p29-reduced-bfv-modulus",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p29-script"
+    },
+    {
+      "id": "edge:865",
+      "from": "evidence:p29-reduced-bfv-modulus",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p29-evidence-snapshot"
+    },
+    {
+      "id": "edge:866",
+      "from": "evidence:p29-lapse-operator-and-bypass",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:867",
+      "from": "evidence:p29-lapse-operator-and-bypass",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p29-script"
+    },
+    {
+      "id": "edge:868",
+      "from": "evidence:p29-lapse-operator-and-bypass",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p29-evidence-snapshot"
+    },
+    {
+      "id": "edge:869",
+      "from": "evidence:p29-conformal-sign-and-density",
+      "relation": "PART_OF",
+      "to": "phase:p29"
+    },
+    {
+      "id": "edge:870",
+      "from": "evidence:p29-conformal-sign-and-density",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p29-script"
+    },
+    {
+      "id": "edge:871",
+      "from": "evidence:p29-conformal-sign-and-density",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p29-evidence-snapshot"
+    },
+    {
+      "id": "edge:872",
+      "from": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P27_EQUAL_BOUNDARY_RAW_FIXED_T_KERNEL_IS_FINITE_AT_ZERO_LAPSE",
+      "note": "The distributional identity and pointwise pole coexist; the later result does not erase the raw endpoint obstruction."
+    },
+    {
+      "id": "edge:873",
+      "from": "claim:P29_FIXED_PARAMETER_BFV_MODULUS_FACTOR_IS_T_INDEPENDENT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE"
+    },
+    {
+      "id": "edge:874",
+      "from": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P27_POSITIVE_LAPSE_HALF_LINE_IS_WDW_PROJECTOR"
+    },
+    {
+      "id": "edge:875",
+      "from": "claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT",
+      "relation": "MOTIVATES",
+      "to": "open:p29-physical-endpoint-measure-and-ordering"
+    },
+    {
+      "id": "edge:876",
+      "from": "claim:P29_SINGLE_IMAGINARY_ROTATION_DAMPS_BOTH_DIRECTIONS",
+      "relation": "MOTIVATES",
+      "to": "open:p29-conformal-bfv-uniform-parametrix"
+    },
+    {
+      "id": "edge:877",
+      "from": "claim:P29_UNIT_DIRICHLET_GHOST_CANCELS_ENDPOINT_POLE",
+      "relation": "MOTIVATES",
+      "to": "open:p29-conformal-bfv-uniform-parametrix"
+    },
+    {
+      "id": "edge:878",
+      "from": "claim:P29_DISTRIBUTIONAL_IDENTITY_IS_TRACE_CLASS_DENSITY",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density"
+    },
+    {
+      "id": "edge:879",
+      "from": "open:p29-conformal-bfv-uniform-parametrix",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:880",
+      "from": "open:p29-conformal-bfv-uniform-parametrix",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:881",
+      "from": "open:p29-physical-endpoint-measure-and-ordering",
+      "relation": "BLOCKED_BY",
+      "to": "open:p29-conformal-bfv-uniform-parametrix"
+    },
+    {
+      "id": "edge:882",
+      "from": "open:p28-zero-lapse-uniform-bfv-kernel",
+      "relation": "MOTIVATES",
+      "to": "open:p29-conformal-bfv-uniform-parametrix",
+      "note": "Phase 29 closes only the frozen leading distributional control; the full endpoint-completed uniform kernel remains open."
+    },
+    {
+      "id": "edge:883",
+      "from": "concept:fixed-parameter-bfv-modulus-versus-ghost-determinant",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:884",
+      "from": "concept:fixed-parameter-bfv-modulus-versus-ghost-determinant",
+      "relation": "CITES",
+      "to": "source:halliwell-1988",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:885",
+      "from": "concept:lapse-weight-insertion-versus-operator-object",
+      "relation": "CITES",
+      "to": "source:teitelboim-1983-gravitational-field",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:886",
+      "from": "concept:lapse-weight-insertion-versus-operator-object",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:887",
+      "from": "concept:real-lapse-fresnel-versus-conformal-contour",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:888",
+      "from": "open:p29-conformal-bfv-uniform-parametrix",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:889",
+      "from": "open:p29-conformal-bfv-uniform-parametrix",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:890",
+      "from": "open:p29-physical-endpoint-measure-and-ordering",
+      "relation": "CITES",
+      "to": "source:halliwell-1988",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
+    },
+    {
+      "id": "edge:891",
+      "from": "open:p29-physical-endpoint-measure-and-ordering",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Literature framing or completion boundary only; the Phase-29 result is repository evidence and is not DERIVED_FROM this source."
     }
   ],
   "kg_bridges": [
@@ -7320,6 +10400,56 @@
       "checked_at_utc": "2026-08-17T14:21:16Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase24 connected Euclidean Starobinsky interval Hessian",
       "note": "The existing sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24 is a distinct 2026-08-09 planning node and was not reused; no authorized external UID exists."
+    },
+    {
+      "local_node_id": "phase:p25",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T15:26:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase25 connected lapse saddle and local complex continuation",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p26",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T15:26:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase26 bounded global lapse flow and Airy fold",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p27",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T15:26:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase27 Lorentzian Wick map and raw zero-lapse endpoint",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p28",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T15:26:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase28 bounded thimble crossings and homogeneous BFV",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p29",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T15:45:17Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase29 zero-lapse distribution and reduced BFV measure",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
     }
   ]
 }

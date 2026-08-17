@@ -1,0 +1,493 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P27_LORENTZIAN_LAPSE_ENDPOINT_20260817",
+  "phase": "P27",
+  "observed_at_utc": "2026-08-17T15:26:44.354Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py",
+    "sha256": "36a454ca3f98277cca2c24904a708ec67fa8f7c3556f376e6613cdc0823e0d04",
+    "introduced_in_commit": "2065de0125674ba9c72888e3d95bc84fec66850b"
+  },
+  "exact_checks": 13,
+  "checks": [
+    {
+      "id": "P27.action.lapse_Wick_map",
+      "statement": "N_L=-iT_E maps the declared Lorentzian density to i times the frozen Euclidean density",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.action.exponent_Wick_map",
+      "statement": "the Wick map gives exp(i S_L)=exp(-I_E)",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.action.principal_derivative_map",
+      "statement": "S_N=-W_T and S_NN=-i W_TT on corresponding analytic branches",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.action.canonical_constraint_Wick_map",
+      "statement": "p_L=i p_E gives H_L(q,i p_E)=-H_E(q,p_E)",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.action.signed_classical_oddness",
+      "statement": "the fixed-s Euclidean action changes sign under T to -T",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.short_time.equal_boundary_action",
+      "statement": "the equal-boundary action is U0 T-F2 T^3/24 through cubic order",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.short_time.Jacobi_Van_Vleck_map",
+      "statement": "B_v=T I and B_p=T(MG)^-1 imply W_+-=-MG/T",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.short_time.conformal_determinant_sign",
+      "statement": "the raw two-coordinate Van Vleck determinant is negative and scales as T^-2",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.operator.fixed_lapse_constraint_evolution",
+      "statement": "the spectral fixed-lapse kernel obeys i d_N K=lambda K",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.operator.positive_half_line_resolvent",
+      "statement": "the damped positive half-line is a sourced resolvent, not a constraint projector",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.operator.full_line_constraint_support",
+      "statement": "the full-line group average is supported on the constraint surface",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.contour.lateral_Wick_side",
+      "statement": "N-i0 maps to the right of the upper-imaginary T ray and N+i0 to its left",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.flow.exp_minus_W_monotonicity",
+      "statement": "dT/ds=conj(W_T) keeps Im W fixed and increases Re W",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P27.benchmark.Phase24_25_endpoint",
+      "statement": "the frozen endpoint and T=0.7 saddle reproduce the Phase-24/25 benchmark",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.short_time.action_linear_cubic_convergence",
+      "statement": "W/T converges quadratically to 2pi^2 U0 and its cubic coefficient converges to -2pi^2 F2/24",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.short_time.initial_velocity_convergence",
+      "statement": "the equal-boundary initial velocity obeys v_-=-T G^-1 grad(U)/2+O(T^3)",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.short_time.velocity_Jacobi_scaling",
+      "statement": "B_v/T tends to the identity and det(B_v)/T^2 tends to one",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.short_time.momentum_Van_Vleck_scaling",
+      "statement": "det(B_p)/T^2 and T W_+- converge to their metric-controlled short-time limits",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.signed_branch.paired_stationary_actions",
+      "statement": "the signed raw classical branch has paired stationary points at T=+-0.7 with opposite actions",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.signed_branch.sampled_raw_W_control",
+      "statement": "the eight symmetric raw-W samples are odd and have W_T>0",
+      "status": "PASS"
+    },
+    {
+      "id": "P27.endpoint.raw_W_zero_derivative_nonzero",
+      "statement": "the analytic short-time limit has W_T(0) nonzero, so T=0 is not a saddle of raw W",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "Lorentzian lapse Wick map and equal-boundary zero-lapse endpoint",
+    "claim_status": {
+      "a_global_n_sigma_has_been_computed": "OPEN_NOT_COMPUTED",
+      "a_lateral_zero_lapse_bypass_fixes_the_global_PL_intersection_number": "OPEN_NOT_DERIVED",
+      "equal_boundary_W_to_zero_removes_the_full_gauge_reduced_kernel_singularity": "OPEN_NOT_COMPUTED",
+      "equal_boundary_W_to_zero_removes_the_raw_two_coordinate_fixed_T_kernel_singularity": "CONTRADICTED_BY_VAN_VLECK_T_INVERSE",
+      "positive_real_Lorentzian_lapse_maps_to_positive_real_Euclidean_T": "CONTRADICTED_BY_T_EQUALS_iN",
+      "the_declared_Lorentzian_continuation_has_Wick_map_NL_minus_i_TE": "SUPPORTED_EXACTLY",
+      "the_positive_lapse_half_line_is_a_WDW_projector_or_positive_state": "CONTRADICTED_AS_A_PROJECTOR_AND_NOT_DERIVED_AS_A_STATE",
+      "the_positive_lapse_half_line_is_a_sourced_resolvent": "SUPPORTED_AT_THE_SPECTRAL_OPERATOR_LEVEL",
+      "the_signed_raw_W_control_is_a_heteroclinic_of_the_full_prefactored_integrand": "OPEN_NOT_DERIVED",
+      "the_signed_raw_W_sheet_has_paired_stationary_points": "SUPPORTED_FOR_THE_FROZEN_BENCHMARK"
+    },
+    "exact_check_ids": [
+      "P27.action.lapse_Wick_map",
+      "P27.action.exponent_Wick_map",
+      "P27.action.principal_derivative_map",
+      "P27.action.canonical_constraint_Wick_map",
+      "P27.action.signed_classical_oddness",
+      "P27.short_time.equal_boundary_action",
+      "P27.short_time.Jacobi_Van_Vleck_map",
+      "P27.short_time.conformal_determinant_sign",
+      "P27.operator.fixed_lapse_constraint_evolution",
+      "P27.operator.positive_half_line_resolvent",
+      "P27.operator.full_line_constraint_support",
+      "P27.contour.lateral_Wick_side",
+      "P27.flow.exp_minus_W_monotonicity"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P27.action.lapse_Wick_map",
+        "statement": "N_L=-iT_E maps the declared Lorentzian density to i times the frozen Euclidean density",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.action.exponent_Wick_map",
+        "statement": "the Wick map gives exp(i S_L)=exp(-I_E)",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.action.principal_derivative_map",
+        "statement": "S_N=-W_T and S_NN=-i W_TT on corresponding analytic branches",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.action.canonical_constraint_Wick_map",
+        "statement": "p_L=i p_E gives H_L(q,i p_E)=-H_E(q,p_E)",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.action.signed_classical_oddness",
+        "statement": "the fixed-s Euclidean action changes sign under T to -T",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.short_time.equal_boundary_action",
+        "statement": "the equal-boundary action is U0 T-F2 T^3/24 through cubic order",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.short_time.Jacobi_Van_Vleck_map",
+        "statement": "B_v=T I and B_p=T(MG)^-1 imply W_+-=-MG/T",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.short_time.conformal_determinant_sign",
+        "statement": "the raw two-coordinate Van Vleck determinant is negative and scales as T^-2",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.operator.fixed_lapse_constraint_evolution",
+        "statement": "the spectral fixed-lapse kernel obeys i d_N K=lambda K",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.operator.positive_half_line_resolvent",
+        "statement": "the damped positive half-line is a sourced resolvent, not a constraint projector",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.operator.full_line_constraint_support",
+        "statement": "the full-line group average is supported on the constraint surface",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.contour.lateral_Wick_side",
+        "statement": "N-i0 maps to the right of the upper-imaginary T ray and N+i0 to its left",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.flow.exp_minus_W_monotonicity",
+        "statement": "dT/ds=conj(W_T) keeps Im W fixed and increases Re W",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 13,
+    "frozen_model": {
+      "Euclidean_action": "I_E=2pi^2 integral[(G_AB q_s^A q_s^B)/(2T)+T U] ds",
+      "Euclidean_potential": "U=-3a+a^3 V(phi)",
+      "Lorentzian_action": "S_L=2pi^2 integral[(G_AB q_s^A q_s^B)/(2N)-N U] ds",
+      "Wick_map": "N_L=-i T_E; T_E=i N_L; S_cl(N)=i W(iN)",
+      "canonical_constraint_map": "p_L=i p_E and H_L(q,i p_E)=-H_E(q,p_E)",
+      "configuration_metric": "G=diag(-6a,a^3)",
+      "potential": "V=3/4[1-exp(-sqrt(2/3)phi)]^2"
+    },
+    "next_calculation": "derive the full BFV/FP endpoint measure using the Phase-28 reduced ghost diagnostic and combine it with a zero-lapse-uniform determinant, then count lateral relative intersections on the full complex BVP surface",
+    "numerical_check_ids": [
+      "P27.benchmark.Phase24_25_endpoint",
+      "P27.short_time.action_linear_cubic_convergence",
+      "P27.short_time.initial_velocity_convergence",
+      "P27.short_time.velocity_Jacobi_scaling",
+      "P27.short_time.momentum_Van_Vleck_scaling",
+      "P27.signed_branch.paired_stationary_actions",
+      "P27.signed_branch.sampled_raw_W_control",
+      "P27.endpoint.raw_W_zero_derivative_nonzero"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P27.benchmark.Phase24_25_endpoint",
+        "statement": "the frozen endpoint and T=0.7 saddle reproduce the Phase-24/25 benchmark",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.short_time.action_linear_cubic_convergence",
+        "statement": "W/T converges quadratically to 2pi^2 U0 and its cubic coefficient converges to -2pi^2 F2/24",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.short_time.initial_velocity_convergence",
+        "statement": "the equal-boundary initial velocity obeys v_-=-T G^-1 grad(U)/2+O(T^3)",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.short_time.velocity_Jacobi_scaling",
+        "statement": "B_v/T tends to the identity and det(B_v)/T^2 tends to one",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.short_time.momentum_Van_Vleck_scaling",
+        "statement": "det(B_p)/T^2 and T W_+- converge to their metric-controlled short-time limits",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.signed_branch.paired_stationary_actions",
+        "statement": "the signed raw classical branch has paired stationary points at T=+-0.7 with opposite actions",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.signed_branch.sampled_raw_W_control",
+        "statement": "the eight symmetric raw-W samples are odd and have W_T>0",
+        "status": "PASS"
+      },
+      {
+        "id": "P27.endpoint.raw_W_zero_derivative_nonzero",
+        "statement": "the analytic short-time limit has W_T(0) nonzero, so T=0 is not a saddle of raw W",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 8,
+    "numerical_controls": {
+      "base": {
+        "N_star": [
+          0,
+          -0.7
+        ],
+        "T_star": 0.7,
+        "W": 1.4066905428343415,
+        "constraint": 2.220446049250313e-16,
+        "paired_negative_T_action": -1.4066905428343415
+      },
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "boundary_order": [
+        "a_minus",
+        "phi_minus",
+        "a_plus",
+        "phi_plus"
+      ],
+      "convergence": {
+        "Jacobi_orders": [
+          1.9989961227405038,
+          1.9997478397964696,
+          1.9999368857456812,
+          1.9999842167624227,
+          1.9999960540915696
+        ],
+        "cubic_orders": [
+          2.0002575760236736,
+          2.0000652061040207,
+          2.000014216261694,
+          2.000056219624965,
+          2.001074934799813
+        ],
+        "linear_orders": [
+          2.002507670754782,
+          2.00062745938692,
+          2.0001568985552467,
+          2.000039227299023,
+          2.0000098089171376
+        ],
+        "velocity_orders": [
+          1.9996282476137768,
+          1.9999078557077508,
+          1.9999768964059663,
+          1.9999977804851023,
+          1.9999724974375204
+        ]
+      },
+      "short_time_coefficients": {
+        "U0": 0.15133294334598624,
+        "W_cubic": -1.9398942613393657,
+        "W_linear": 2.9871925673547044,
+        "abs_sqrt_Van_Vleck_times_abs_T": 615.1253991925408,
+        "det_Bp_over_T2": -0.0000026428510078417385,
+        "det_minus_W_cross_times_T2": -378379.25673178275,
+        "gradU_Ginv_gradU": 2.358628592398597,
+        "predicted_velocity_per_T": [
+          0.14315537347235194,
+          -0.15053145517037733
+        ]
+      },
+      "short_time_table": [
+        {
+          "T": 0.2,
+          "W": 0.5818833424850621,
+          "W_over_T": 2.9094167124253105,
+          "cubic_estimate": -1.9443963732348464,
+          "det_Bp_over_T2": -0.0000026362540039126214,
+          "det_Bv_over_T2": 0.9975038305566432,
+          "relative_T_Wcross_error": 0.0015078272517836397,
+          "velocity": [
+            0.028623083455415445,
+            -0.030136086199720753
+          ]
+        },
+        {
+          "T": 0.1,
+          "W": 0.2967782371470889,
+          "W_over_T": 2.967782371470889,
+          "cubic_estimate": -1.9410195883815535,
+          "det_Bp_over_T2": -0.0000026411974561330006,
+          "det_Bv_over_T2": 0.9993743303334802,
+          "relative_T_Wcross_error": 0.00037764163239623673,
+          "velocity": [
+            0.014314542494227414,
+            -0.015056872025675985
+          ]
+        },
+        {
+          "T": 0.05,
+          "W": 0.14911710642018713,
+          "W_over_T": 2.9823421284037424,
+          "cubic_estimate": -1.9401755803847283,
+          "det_Bp_over_T2": -0.000002642437350992984,
+          "det_Bv_over_T2": 0.9998434808290262,
+          "relative_T_Wcross_error": 0.00009445305987178441,
+          "velocity": [
+            0.007157644443531559,
+            -0.007527038637732512
+          ]
+        },
+        {
+          "T": 0.025,
+          "W": 0.07464950223714249,
+          "W_over_T": 2.9859800894856994,
+          "cubic_estimate": -1.939964590407683,
+          "det_Bp_over_T2": -0.000002642747576819973,
+          "det_Bv_over_T2": 0.9999608638468633,
+          "relative_T_Wcross_error": 0.00002361592836691646,
+          "velocity": [
+            0.0035788688119838797,
+            -0.0037633446162094026
+          ]
+        },
+        {
+          "T": 0.0125,
+          "W": 0.0373361182016156,
+          "W_over_T": 2.986889456129248,
+          "cubic_estimate": -1.9399118429213043,
+          "det_Bp_over_T2": -0.0000026428251490356643,
+          "det_Bv_over_T2": 0.9999902155641777,
+          "relative_T_Wcross_error": 0.0000059041485180301814,
+          "velocity": [
+            0.0017894402279757982,
+            -0.0018816504693069777
+          ]
+        },
+        {
+          "T": 0.00625,
+          "W": 0.01866947993789721,
+          "W_over_T": 2.9871167900635536,
+          "cubic_estimate": -1.9398986534611136,
+          "det_Bp_over_T2": -0.0000026428445430745565,
+          "det_Bv_over_T2": 0.9999975538661987,
+          "relative_T_Wcross_error": 0.000001476047530135858,
+          "velocity": [
+            0.0008947208416011721,
+            -0.0009408225047804458
+          ]
+        }
+      ],
+      "signed_raw_W_control": {
+        "actions": [
+          -1.3958460467713674,
+          -1.0695704649888575,
+          -0.5818833424850604,
+          -0.296778237147082,
+          0.2967782371470889,
+          0.5818833424850621,
+          1.069570464988865,
+          1.3958460467714107
+        ],
+        "dW_dT": [
+          0.42763949854804806,
+          2.041621634291354,
+          2.75350474859645,
+          2.9289394718119195,
+          2.92893947181199,
+          2.753504748596333,
+          2.0416216342913067,
+          0.4276394985480715
+        ],
+        "interpretation": "sampled necessary data only; continuous PL flow and the prefactored zero-lapse domain are not computed",
+        "max_odd_action_residual": 4.3298697960381105e-14,
+        "times": [
+          -0.65,
+          -0.4,
+          -0.2,
+          -0.1,
+          0.1,
+          0.2,
+          0.4,
+          0.65
+        ]
+      }
+    },
+    "phase": "P27",
+    "scope_guard": {
+      "computed": [
+        "the frozen Euclidean model, its explicitly declared Lorentzian continuation, and their exact Wick map",
+        "the equal-boundary short-time classical action through cubic order",
+        "the raw two-coordinate Jacobi, momentum, and Van Vleck short-time scaling",
+        "symmetric signed raw-W samples approaching but excluding T=0, plus the analytic short-time limit",
+        "spectral proxy identities separating a positive half-line resolvent from full-line constraint support"
+      ],
+      "not_computed": [
+        "a full BFV/FP endpoint measure, using but not equating it to the Phase-28 reduced Dirichlet-ghost diagnostic, combined with a zero-lapse-uniform gauge-fixed bulk determinant",
+        "the conformal-factor integration cycle or determinant phase",
+        "a zero-lapse-uniform full configuration-space kernel",
+        "a global Picard-Lefschetz flow, Stokes matrix, or intersection number",
+        "the physical WDW rigging-map domain or inner product",
+        "a positive density, probability, entropy, Pin lift, or local SUGRA completion"
+      ]
+    },
+    "source_scope": {
+      "Banihashemi_Jacobson_2025": "below-origin lapse contour after momentum integration in its stated gravitational setup; DOI 10.1103/PhysRevD.111.066014; it does not determine this model's n_sigma",
+      "Gibbons_Hawking_Perry_1978": "indefinite Euclidean gravitational action and conformal contour; DOI 10.1016/0550-3213(78)90161-X",
+      "Gutzwiller_1967": "Van Vleck, Jacobi, and caustic semiclassics; DOI 10.1063/1.1705112",
+      "Halliwell_1988": "BFV minisuperspace lapse range and Wheeler-DeWitt boundary identity; DOI 10.1103/PhysRevD.38.2468",
+      "Marolf_1995": "single-constraint refined algebraic quantization and group averaging; arXiv gr-qc/9508015",
+      "Teitelboim_1983": "positive proper time and causal versus gauge-invariant objects; DOI 10.1103/PhysRevLett.50.705"
+    }
+  }
+}

@@ -1,0 +1,701 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P25_CONNECTED_LAPSE_SCAN_20260817",
+  "phase": "P25",
+  "observed_at_utc": "2026-08-17T15:26:44.354Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase25_connected_lapse_scan.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase25_connected_lapse_scan.py",
+    "sha256": "5fe43ec6997d6bae9c10d78ddb5d13b1806e10934140fd5080fef0dca3492ee8",
+    "introduced_in_commit": "c9533dc1aa7a11d7a7e53fa10a657b94406a4e54"
+  },
+  "exact_checks": 5,
+  "checks": [
+    {
+      "id": "P25.action.full_off_shell_scale_equation",
+      "statement": "the fixed-lapse scan uses the full scale equation rather than its C=0 reduction",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.action.energy_constraint_identity",
+      "statement": "the conserved fixed-lapse energy is E=-6 pi^2 a C",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.action.HJ_time_derivative_sign",
+      "statement": "Hamilton-Jacobi gives dW/dT=-E=6 pi^2 a C",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.jacobi.starobinsky_second_derivative",
+      "statement": "the variational flow uses the exact Starobinsky V''",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.thimble.local_steepest_direction",
+      "statement": "for W_TT<0, real delta T lowers Re W while imaginary delta T raises it",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 12,
+  "numerical": [
+    {
+      "id": "P25.saddle.base_stationarity",
+      "statement": "the Phase-24 fixed boundary has a stationary fixed-lapse solution at T=0.7",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.action.time_derivative_control",
+      "statement": "finite differences of W(T) agree with dW/dT=6 pi^2 a C off shell",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.saddle.negative_lapse_curvature",
+      "statement": "the fixed-boundary lapse curvature is W_TT=-8.9231430383<0",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.saddle.real_direction_is_not_descent",
+      "statement": "W rises toward T=0.7 from the left and falls to the right",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.saddle.lapse_Schur_recovers_constrained_Hessian",
+      "statement": "the symmetric 5x5 (q,T) Hessian reduces to the Phase-24 constrained Hessian",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.jacobi.base_velocity_monodromy",
+      "statement": "the base Dirichlet shooting block is nonsingular",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.jacobi.momentum_block_and_mixed_hessian",
+      "statement": "B_p=B_v(dv/dp) is invertible and K_+-=-B_p^{-1} on the fixed-T branch",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.branch.tracked_real_continuation",
+      "statement": "one reflection-symmetric real branch continues from T=0.2 to T=9.78",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.caustic.symmetric_fold",
+      "statement": "the tracked symmetric branch reaches a singular midpoint endpoint map at T_c",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.caustic.simple_fold_transversality",
+      "statement": "the fold has nonzero parameter and quadratic null-direction transversality",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.caustic.two_branch_sign_bracket",
+      "statement": "two real symmetric solutions at T=9.78 bracket the singular shooting block",
+      "status": "PASS"
+    },
+    {
+      "id": "P25.thimble.local_constant_phase_segment",
+      "statement": "the local complex-T branch keeps Im W=0 while Re W increases",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "fixed-boundary lapse scan and local complex-T descent",
+    "claim_status": {
+      "a_local_constant_phase_complex_T_descent_segment_exists": "SUPPORTED_ON_THE_RECORDED_BRANCH",
+      "a_positive_quantum_gravitational_state_is_constructed": "OPEN_NOT_DERIVED",
+      "the_Phase24_connected_solution_is_a_fixed_boundary_lapse_saddle": "SUPPORTED_FOR_THE_FROZEN_BENCHMARK",
+      "the_fold_exhausts_all_real_or_complex_saddles": "OPEN_NOT_TESTED",
+      "the_real_fixed_endpoint_BVP_is_unique_below_the_fold": "OPEN_NOT_TESTED",
+      "the_real_lapse_direction_is_a_local_descent_for_exp_minus_W": "CONTRADICTED_BY_NEGATIVE_W_TT",
+      "the_recorded_complex_segment_is_the_global_contributing_thimble": "OPEN_NOT_DERIVED",
+      "the_tracked_symmetric_real_branch_reaches_a_Dirichlet_caustic": "SUPPORTED_ON_THE_RECORDED_CONTINUATION"
+    },
+    "exact_check_ids": [
+      "P25.action.full_off_shell_scale_equation",
+      "P25.action.energy_constraint_identity",
+      "P25.action.HJ_time_derivative_sign",
+      "P25.jacobi.starobinsky_second_derivative",
+      "P25.thimble.local_steepest_direction"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P25.action.full_off_shell_scale_equation",
+        "statement": "the fixed-lapse scan uses the full scale equation rather than its C=0 reduction",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.action.energy_constraint_identity",
+        "statement": "the conserved fixed-lapse energy is E=-6 pi^2 a C",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.action.HJ_time_derivative_sign",
+        "statement": "Hamilton-Jacobi gives dW/dT=-E=6 pi^2 a C",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.jacobi.starobinsky_second_derivative",
+        "statement": "the variational flow uses the exact Starobinsky V''",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.thimble.local_steepest_direction",
+        "statement": "for W_TT<0, real delta T lowers Re W while imaginary delta T raises it",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 5,
+    "frozen_model": {
+      "action": "W=2pi^2 integral[-3a(a_dot^2+1)+a^3(phi_dot^2/2+V)]d tau",
+      "potential": "V=3/4[1-exp(-sqrt(2/3)phi)]^2",
+      "time_identity": "dW/dT=-E=6pi^2 a C"
+    },
+    "next_calculation": "integrate the global downward flow with singularity monitoring and compute its intersection with a specified lapse contour",
+    "numerical_check_ids": [
+      "P25.saddle.base_stationarity",
+      "P25.action.time_derivative_control",
+      "P25.saddle.negative_lapse_curvature",
+      "P25.saddle.real_direction_is_not_descent",
+      "P25.saddle.lapse_Schur_recovers_constrained_Hessian",
+      "P25.jacobi.base_velocity_monodromy",
+      "P25.jacobi.momentum_block_and_mixed_hessian",
+      "P25.branch.tracked_real_continuation",
+      "P25.caustic.symmetric_fold",
+      "P25.caustic.simple_fold_transversality",
+      "P25.caustic.two_branch_sign_bracket",
+      "P25.thimble.local_constant_phase_segment"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P25.saddle.base_stationarity",
+        "statement": "the Phase-24 fixed boundary has a stationary fixed-lapse solution at T=0.7",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.action.time_derivative_control",
+        "statement": "finite differences of W(T) agree with dW/dT=6 pi^2 a C off shell",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.saddle.negative_lapse_curvature",
+        "statement": "the fixed-boundary lapse curvature is W_TT=-8.9231430383<0",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.saddle.real_direction_is_not_descent",
+        "statement": "W rises toward T=0.7 from the left and falls to the right",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.saddle.lapse_Schur_recovers_constrained_Hessian",
+        "statement": "the symmetric 5x5 (q,T) Hessian reduces to the Phase-24 constrained Hessian",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.jacobi.base_velocity_monodromy",
+        "statement": "the base Dirichlet shooting block is nonsingular",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.jacobi.momentum_block_and_mixed_hessian",
+        "statement": "B_p=B_v(dv/dp) is invertible and K_+-=-B_p^{-1} on the fixed-T branch",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.branch.tracked_real_continuation",
+        "statement": "one reflection-symmetric real branch continues from T=0.2 to T=9.78",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.caustic.symmetric_fold",
+        "statement": "the tracked symmetric branch reaches a singular midpoint endpoint map at T_c",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.caustic.simple_fold_transversality",
+        "statement": "the fold has nonzero parameter and quadratic null-direction transversality",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.caustic.two_branch_sign_bracket",
+        "statement": "two real symmetric solutions at T=9.78 bracket the singular shooting block",
+        "status": "PASS"
+      },
+      {
+        "id": "P25.thimble.local_constant_phase_segment",
+        "statement": "the local complex-T branch keeps Im W=0 while Re W increases",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 12,
+    "numerical_controls": {
+      "augmented_lapse_Hessian": {
+        "Phase24_relative_residual": 7.009956792791901e-11,
+        "coordinate_order": [
+          "a_minus",
+          "phi_minus",
+          "a_plus",
+          "phi_plus",
+          "T"
+        ],
+        "lapse_Schur_complement": [
+          [
+            -177.34995102542013,
+            1002.7722903974063,
+            1013.8887813705799,
+            949.3058057541084
+          ],
+          [
+            1002.7722903974063,
+            3467.690971223401,
+            949.3058058324734,
+            888.8366548982431
+          ],
+          [
+            1013.8887813705799,
+            949.3058058324734,
+            -177.34995094432736,
+            1002.7722904808168
+          ],
+          [
+            949.3058057541084,
+            888.8366548982431,
+            1002.7722904808168,
+            3467.69097123516
+          ]
+        ],
+        "matrix": [
+          [
+            -577.945762874227,
+            67.03181325322541,
+            613.2929694845686,
+            13.565328607943647,
+            59.787738959673334
+          ],
+          [
+            67.03181325322541,
+            1281.9211387207758,
+            13.565328601387705,
+            -1296.9331776090153,
+            139.65649596609256
+          ],
+          [
+            613.2929694845686,
+            13.565328601387705,
+            -577.9457628675431,
+            67.03181324774712,
+            59.78773896522599
+          ],
+          [
+            13.565328607943647,
+            -1296.9331776090153,
+            67.03181324774712,
+            1281.9211387232674,
+            139.65649596638863
+          ],
+          [
+            59.787738959673334,
+            139.65649596609256,
+            59.78773896522599,
+            139.65649596638863,
+            -8.92314303889717
+          ]
+        ],
+        "raw_symmetry_residual": 5.734399731624749e-12
+      },
+      "base": {
+        "T_star": 0.7,
+        "W": 1.4066905428343415,
+        "W_TT": -8.923143038336717,
+        "constraint": 2.220446049250313e-16,
+        "dW_dT": 4.6899732760132136e-14,
+        "velocity": [
+          0.09984512854889886,
+          -0.10663777160996184
+        ]
+      },
+      "base_jacobi": {
+        "B_momentum": [
+          [
+            -0.0016301649461218956,
+            -0.00001705078068620708
+          ],
+          [
+            -0.000017050780686207047,
+            0.0007708714048000996
+          ]
+        ],
+        "B_velocity": [
+          [
+            0.6886391169365749,
+            -0.015272546281482578
+          ],
+          [
+            0.007202850596660315,
+            0.6904768422952449
+          ]
+        ],
+        "det_B_momentum": -0.0000012569382711948748,
+        "det_B_velocity": 0.4755993688124482,
+        "mixed_hessian": [
+          [
+            613.2929694847243,
+            13.565328605992903
+          ],
+          [
+            13.565328605992875,
+            -1296.9331776112
+          ]
+        ],
+        "mixed_hessian_singular_values": [
+          1297.029505923596,
+          613.3892977971205
+        ]
+      },
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "boundary_order": [
+        "a_minus",
+        "phi_minus",
+        "a_plus",
+        "phi_plus"
+      ],
+      "local_constant_phase_segment": [
+        {
+          "ReW_minus_W0": 0.0027890080620320834,
+          "T": [
+            0.7001747500790572,
+            0.025
+          ],
+          "W": [
+            1.4094795508963736,
+            -2.0359582075801796e-14
+          ]
+        },
+        {
+          "ReW_minus_W0": 0.011162340593763309,
+          "T": [
+            0.7006988672388701,
+            0.05
+          ],
+          "W": [
+            1.4178528834281048,
+            -4.890185478778619e-15
+          ]
+        },
+        {
+          "ReW_minus_W0": 0.04475017640496759,
+          "T": [
+            0.7027933498225041,
+            0.1
+          ],
+          "W": [
+            1.451440719239309,
+            1.0651202142497596e-15
+          ]
+        },
+        {
+          "ReW_minus_W0": 0.18060622726007458,
+          "T": [
+            0.7111401292567655,
+            0.2
+          ],
+          "W": [
+            1.587296770094416,
+            1.1416562140098563e-13
+          ]
+        },
+        {
+          "ReW_minus_W0": 0.7476684754004383,
+          "T": [
+            0.744066432189102,
+            0.4
+          ],
+          "W": [
+            2.15435901823478,
+            9.71445146547012e-17
+          ]
+        }
+      ],
+      "symmetric_fold": {
+        "bracket_actions": [
+          -1156.358836162342,
+          -1156.433339578167
+        ],
+        "bracket_centers": [
+          [
+            1.3582938059349714,
+            0.09182398917947315
+          ],
+          [
+            1.1390171046018283,
+            0.11035950312110182
+          ]
+        ],
+        "bracket_time": 9.78,
+        "bracket_velocity_monodromy_determinants": [
+          887.1315226694023,
+          -1014.2933668383619
+        ],
+        "center": [
+          1.2479953302615718,
+          0.10016795390658555
+        ],
+        "center_jacobian": [
+          [
+            -0.4948955370318605,
+            -5.886027579136579
+          ],
+          [
+            0.5206589163537467,
+            6.192443680865572
+          ]
+        ],
+        "center_singular_values": [
+          8.573662385632007,
+          9.979449957303106e-17
+        ],
+        "full_velocity_monodromy_singular_ratio": 1.2729916203682207e-16,
+        "full_velocity_monodromy_singular_values": [
+          2504.6388735251417,
+          3.188384298046005e-13
+        ],
+        "half_length_transversality": 0.5177826517939689,
+        "left_null_vector": [
+          0.724812020852866,
+          0.6889466847493967
+        ],
+        "proper_length": 9.788625568081242,
+        "quadratic_transversality": 0.3686170856958765,
+        "residual": [
+          -8.881784197001252e-16,
+          2.220446049250313e-16,
+          0
+        ],
+        "right_null_vector": [
+          0.9964839319603808,
+          -0.08378408765857216
+        ]
+      },
+      "time_derivative_samples": [
+        {
+          "T": 0.6,
+          "finite_difference": 0.8189966284138928,
+          "six_pi_squared_a_C": 0.8189967222381823
+        },
+        {
+          "T": 0.8,
+          "finite_difference": -0.9688144851555114,
+          "six_pi_squared_a_C": -0.9688143784617373
+        }
+      ],
+      "tracked_symmetric_real_branch": [
+        {
+          "Bv_singular_values": [
+            0.1998460190339115,
+            0.19965448106071682
+          ],
+          "T": 0.2,
+          "W": 0.5818833424850565,
+          "center": [
+            3.5682330923040655,
+            1.017074675959986
+          ],
+          "dW_dT": 2.753504748596427,
+          "det_Bv": 0.039900153222265734,
+          "endpoint_residual": 0
+        },
+        {
+          "Bv_singular_values": [
+            0.693787696148892,
+            0.6855113912403269
+          ],
+          "T": 0.7,
+          "W": 1.4066905428343415,
+          "center": [
+            3.5840840826673714,
+            0.9999999999999999
+          ],
+          "dW_dT": 4.6899732760132136e-14,
+          "det_Bv": 0.4755993688124482,
+          "endpoint_residual": 9.930136612989092e-16
+        },
+        {
+          "Bv_singular_values": [
+            1.1733002074931693,
+            1.1302143307774484
+          ],
+          "T": 1.2,
+          "W": -0.04892488220001265,
+          "center": [
+            3.6159993054752495,
+            0.9632271944786159
+          ],
+          "dW_dT": -6.566304789162575,
+          "det_Bv": 1.3260807088129338,
+          "endpoint_residual": 1.3506446028928519e-15
+        },
+        {
+          "Bv_singular_values": [
+            1.9488221222385183,
+            1.7090993824487617
+          ],
+          "T": 2,
+          "W": -13.122855305827505,
+          "center": [
+            3.6893234330420923,
+            0.8605487884343367
+          ],
+          "dW_dT": -29.09263903924985,
+          "det_Bv": 3.330730685620337,
+          "endpoint_residual": 6.280369834735101e-16
+        },
+        {
+          "Bv_singular_values": [
+            8.440217353033947,
+            2.323822122836689
+          ],
+          "T": 4,
+          "W": -186.44560256591907,
+          "center": [
+            3.7518823659991147,
+            0.4449347932002077
+          ],
+          "dW_dT": -149.62756066370537,
+          "det_Bv": 19.61356380653041,
+          "endpoint_residual": 4.440892098500626e-16
+        },
+        {
+          "Bv_singular_values": [
+            69.53624834434443,
+            2.559485796025906
+          ],
+          "T": 6,
+          "W": -547.1993063720648,
+          "center": [
+            3.445759793345794,
+            0.18167849729295513
+          ],
+          "dW_dT": -192.53813855401887,
+          "det_Bv": 177.9770399462796,
+          "endpoint_residual": 6.169484474161015e-15
+        },
+        {
+          "Bv_singular_values": [
+            492.1010637716729,
+            2.672787509156749
+          ],
+          "T": 8,
+          "W": -912.8324194120129,
+          "center": [
+            2.836207402539074,
+            0.08631987670105278
+          ],
+          "dW_dT": -166.38922070822744,
+          "det_Bv": 1315.281576491667,
+          "endpoint_residual": 6.642511767492343e-14
+        },
+        {
+          "Bv_singular_values": [
+            1228.77748852609,
+            2.3047431077316745
+          ],
+          "T": 9,
+          "W": -1065.7039456707348,
+          "center": [
+            2.318653143421285,
+            0.06924222839369064
+          ],
+          "dW_dT": -136.74755000102593,
+          "det_Bv": 2832.016447616229,
+          "endpoint_residual": 7.239505468516944e-14
+        },
+        {
+          "Bv_singular_values": [
+            1900.8366390466274,
+            1.6760371536569347
+          ],
+          "T": 9.5,
+          "W": -1128.4182247826727,
+          "center": [
+            1.8958129898345735,
+            0.0705879756938319
+          ],
+          "dW_dT": -111.94914468976444,
+          "det_Bv": 3185.8728300744533,
+          "endpoint_residual": 3.851526089923876e-13
+        },
+        {
+          "Bv_singular_values": [
+            2258.405933695101,
+            1.0477305711204674
+          ],
+          "T": 9.7,
+          "W": -1149.256796883959,
+          "center": [
+            1.6048437213293254,
+            0.07874201112345128
+          ],
+          "dW_dT": -94.79776820239952,
+          "det_Bv": 2366.2009387315725,
+          "endpoint_residual": 3.02325369802691e-13
+        },
+        {
+          "Bv_singular_values": [
+            2366.1867531683542,
+            0.7275551784306833
+          ],
+          "T": 9.75,
+          "W": -1153.8284733184537,
+          "center": [
+            1.4826183388551197,
+            0.08438072358041926
+          ],
+          "dW_dT": -87.58328127781145,
+          "det_Bv": 1721.5314254012178,
+          "endpoint_residual": 5.26826269618401e-14
+        },
+        {
+          "Bv_singular_values": [
+            2449.542990033195,
+            0.3621620548316228
+          ],
+          "T": 9.78,
+          "W": -1156.3588361621196,
+          "center": [
+            1.3582938059349665,
+            0.09182398917947326
+          ],
+          "dW_dT": -80.24136612610856,
+          "det_Bv": 887.1315226689226,
+          "endpoint_residual": 2.7512930457625504e-14
+        }
+      ]
+    },
+    "phase": "P25",
+    "scope_guard": {
+      "computed": [
+        "the full off-constraint Euler-Lagrange fixed-lapse flow",
+        "W(T), dW/dT, and W_TT for the frozen Phase-24 boundaries",
+        "one local constant-Im-W complex-T segment through T=0.7",
+        "the real Jacobi monodromy and a bounded symmetric branch continuation",
+        "a two-branch sign bracket and singular endpoint map at the recorded fold"
+      ],
+      "not_computed": [
+        "a global Picard-Lefschetz flow or intersection number",
+        "uniqueness or completeness of real, complex, or nonsymmetric branches",
+        "the lapse measure, Faddeev-Popov determinant, or one-loop prefactor",
+        "the full bulk fluctuation spectrum or Morse index",
+        "a WDW inner product, positive density, entropy, Pin lift, or local SUGRA completion"
+      ]
+    }
+  }
+}
