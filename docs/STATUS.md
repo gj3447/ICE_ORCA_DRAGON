@@ -374,9 +374,9 @@ and
 
 ## Research ontology memory
 
-Phase 15R–23 is now indexed in a repository-local typed research graph with **251 nodes and 511 directed
-relations**. It preserves 56 claims, 31 evidence groups, 24 explicit scopes, 29 open problems, 36
-literature sources, the Phase 16–23 exact and bounded numerical run payloads, and cautious bridges to
+Phase 15R–24 is now indexed in a repository-local typed research graph with **281 nodes and 588 directed
+relations**. It preserves 63 claims, 35 evidence groups, 27 explicit scopes, 31 open problems, 42
+literature sources, the Phase 16–24 exact and bounded numerical run payloads, and cautious bridges to
 the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
@@ -408,8 +408,8 @@ exit 0 with **6 exact checks and 14 numerical checks**.
   complement is indefinite. The fixed-scale precision coupling is $+0.2563195$, while the position
   covariance correlation is $-0.2563195$. The $0.0875594$-nat Gaussian diagnostic is not a physical
   gravitational entropy without a contour, boundary factorization, physical measure, and trace test.
-- The live runnable catalog rose to 55 at Phase 24. The machine ontology remains indexed through Phase 23 pending a
-  frozen Phase 24 evidence snapshot.
+- The live runnable catalog rose to 55 at Phase 24. The machine ontology now indexes the frozen Phase 24
+  evidence snapshot and its scoped claim/evidence/source/open-problem traces.
 
 See
 [`../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md`](../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md)
@@ -431,7 +431,7 @@ Phase 25 uses the full off-constraint Euler–Lagrange system and returns exit 0
   $T_c=9.7886255681$. Two real roots at $T=9.78$ and both fold transversality conditions were checked.
 - This does not fix the original lapse contour, global intersection number, FP measure, physical bulk
   Morse index, or a positive WDW/SUGRA seam state. The live runnable catalog is now 56; ontology remains
-  indexed through Phase 23 pending frozen Phase 24–25 snapshots.
+  indexed through Phase 24 pending a frozen Phase 25 snapshot.
 
 See
 [`../cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md`](../cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md)

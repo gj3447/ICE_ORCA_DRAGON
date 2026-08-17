@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), [`phase21-result.json`](../evidence/phase21-result.json), [`phase22-result.json`](../evidence/phase22-result.json), and [`phase23-result.json`](../evidence/phase23-result.json).
+Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), [`phase21-result.json`](../evidence/phase21-result.json), [`phase22-result.json`](../evidence/phase22-result.json), [`phase23-result.json`](../evidence/phase23-result.json), and [`phase24-result.json`](../evidence/phase24-result.json).
 
 ## Reading `PASS` correctly
 
-All 226 Phase 16–23 named exact checks have `status: PASS`. The snapshots also record 56 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, 7 Phase 21 flux-tail/prior controls, and 4 Phase 23 normalization, convergence, spectrum, and current controls. Phase 22 contributes 31 exact checks and no numerical fit; Phase 23 contributes 32 exact and 4 numerical checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
+All 232 Phase 16–24 named exact checks have `status: PASS`. The snapshots also record 70 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, 7 Phase 21 flux-tail/prior controls, 4 Phase 23 normalization, convergence, spectrum, and current controls, and 14 Phase 24 saddle, Hessian, Gaussian, and contour controls. Phase 22 contributes 31 exact checks and no numerical fit; Phase 23 contributes 32 exact and 4 numerical checks; Phase 24 contributes 6 exact and 14 numerical checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
 
 The scientific direction is stored on:
 
@@ -28,8 +28,11 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 21 | `result:P21_CONNECTED_SEAM_GAUSSIAN_20260816`; `2026-08-16T18:11:47Z` | `cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py`; SHA-256 `6ac7b2b36da9aa2eeda4c83494427c5d9f006bb9031d6b55d6678bf2ffc5b005`; introduced in `44e2865cc850bf7fef0c4ccebde788ca703ab8d8` | Exit `0`; 27 exact checks plus 7 numerical checks |
 | 22 | `result:P22_FINITE_MODE_SEAM_DENSITY_20260817`; `2026-08-17T04:48:31Z` | `cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py`; SHA-256 `0a4da3c60bbd2231892938cb8a74f45bd3e491d9884df4adcc86051053d58dbe`; introduced in `d1befe783386f499818c3b902c90e5a9740e7fb4` | Exit `0`; 31 exact checks, 0 numerical checks |
 | 23 | `result:P23_HOMOGENEOUS_MINISUPERSPACE_DENSITY_20260817`; `2026-08-17T05:45:44Z` | `cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py`; SHA-256 `62408abeeec2eb11f104d984c84ffde5c2d6f287e7f07a4021ee6fb3ec202ffd`; introduced in `634d984e25422063a66a497963380fc24ad9f9d2` | Exit `0`; 32 exact checks plus 4 numerical checks |
+| 24 | `result:P24_CONNECTED_STAROBINSKY_INTERVAL_20260817`; `2026-08-17T14:21:16Z` | `cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py`; SHA-256 `a625c9390305a0e07ea3b38977dc34b4cce725f8dd19cec1c66b90d8ccf63256`; finalized in `1f5d60c33ace93eb3dd51b3236212dcf5a87703f` | Exit `0`; 6 exact checks plus 14 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
+
+The Phase 24 artifact receipt also indexes [`PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md`](../../../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md) at SHA-256 `f91966c31a4219a2f939d440928b1f3bd6d42da2ceb50df444c710c97c82f74d` and the frozen [`phase24-result.json`](../evidence/phase24-result.json) at SHA-256 `6797e7699de453bcc1940e44cd36d174e18aaf3d78a298299ada06da403e84a9`. The executable, report, and snapshot are distinct artifacts: `artifact:p24-script`, `artifact:p24-report`, and `artifact:p24-evidence-snapshot`.
 
 ## Evidence-to-claim index
 
@@ -66,6 +69,10 @@ The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`]
 | `evidence:p23-shell-and-current` | 10 exact + 1 numerical | Explicit clock/frequency gives positive integrated norm — `SUPPORTS`; positive-frequency local current is pointwise positive — `CONTRADICTS`; CPT-like reality plus zero signed current uniquely selects a density — `CONTRADICTS` | Compact KG-type shell/current control; induced product and signed local current remain distinct |
 | `evidence:p23-trace-class-density` | 8 exact + 2 numerical | Imposed bridge gives a positive trace-class regulated density — `SUPPORTS`; unique selection from zero current — `CONTRADICTS` | Separate compact calibration with supplied \(L>0\), \(B_L\), branch orientation, and toy pairing; not cap-derived |
 | `evidence:p23-zero-root-and-regulator` | 4 exact | Trace class survives massless decompactification — `CONTRADICTS`; quadratic zero root has a regular intrinsic clock — `CONTRADICTS` | Explicit double-root and massless-box obstruction models; not a universal homogeneous-density no-go |
+| `evidence:p24-action-benchmark-and-saddle` | 3 exact + 4 numerical | Connected real Starobinsky interval saddle exists — `SUPPORTS`; the saddle selects \(\phi_0\) or a SUSY-breaking scale — `CONTRADICTS` | One frozen real homogeneous benchmark with supplied `phi_center=1` and `T0=0.7`; no selection principle or full local-SUGRA state |
+| `evidence:p24-constrained-mixed-hessian` | 1 exact + 6 numerical | Connected principal function has nonzero cross-boundary response — `SUPPORTS`; constraint-preserving mixed Hessian has rank one — `SUPPORTS`; the small mixed singular value is a physical mode — `CONTRADICTS` | Proper length is solved as a modulus under endpoint variations; fourth-order convergence removes the second singular direction, while the fixed-length mutant remains full rank |
+| `evidence:p24-conditional-scalar-gaussian` | 2 exact + 2 numerical | Fixed-scale scalar subblock defines a conditional positive Gaussian — `SUPPORTS` | Both endpoint scale factors fixed, flat \(d\phi_-d\phi_+\) measure, pure two-real-mode reading only; not a physical WDW density or seam entropy |
+| `evidence:p24-real-contour-obstruction` | 2 numerical | Real boundary Hessian defines a positive normalizable Gaussian precision — `CONTRADICTS` | Full real-boundary Hessian and the naive real-contour scalar Schur complement are indefinite; no thimble or bulk Morse spectrum was computed |
 
 ## Phase 16 check ledger
 
@@ -547,6 +554,48 @@ orientation. In the separate massless box, \(Z_R\sim R/(2L)\), so the compact tr
 trace-class decompactification limit in this control. These witnesses do not prove that the Starobinsky
 homogeneous mode is gauge or rule out compact/interacting constrained models.
 
+## Phase 24 check ledger
+
+### Frozen action, supplied benchmark, and connected saddle — 3 exact plus 4 numerical checks
+
+- `P24.action.starobinsky_derivative`
+- `P24.action.canonical_momenta`
+- `P24.action.off_shell_scale_equation`
+- `P24.saddle.midpoint_constraint`
+- `P24.saddle.connected_boundary_values`
+- `P24.saddle.on_shell_action`
+- `P24.saddle.bvp_and_constraint_residuals`
+
+These checks freeze the reduced Euclidean action, distinguish its full off-shell scale equation from the constraint-reduced equation, and reproduce one connected `S3 x I` saddle. The values `phi_center=1` and base proper length `T0=0.7` are supplied calibrations; the result does not select either input or a SUSY-breaking scale.
+
+### Constraint-preserving mixed Hamilton principal Hessian — 1 exact plus 6 numerical checks
+
+- `P24.hessian.mixed_block_bilinear_transform`
+- `P24.hessian.fourth_order_rank_convergence`
+- `P24.hessian.symmetry`
+- `P24.hessian.HJ_constraint_null_vectors`
+- `P24.hessian.constraint_reduced_rank_one`
+- `P24.hessian.fixed_length_mutant_full_rank`
+- `P24.factorization.connected_response_nonzero`
+
+The connected principal function has a nonzero mixed boundary response. With proper length solved as a modulus, the Hamilton–Jacobi constraint gives left and right null directions and the mixed block has one surviving direction. The small-to-large singular ratio converges away at fourth order; holding `T=0.7` fixed off shell instead leaves a full-rank mixed block. Rank is invariant under separate invertible endpoint configuration-coordinate changes, but the singular values are not, and no change of polarization or clock is covered.
+
+### Conditional fixed-scale scalar Gaussian — 2 exact plus 2 numerical checks
+
+- `P24.gaussian.schmidt_relation`
+- `P24.gaussian.precision_covariance_sign`
+- `P24.gaussian.fixed_scale_scalar_positive`
+- `P24.gaussian.conditional_parameters`
+
+After fixing both endpoint scale factors, the scalar precision block is positive and gives precision coupling `0.256319454`, position correlation `-0.256319454`, Schmidt magnitude `0.130336866`, and conditional entropy `0.087559403` nats. These are flat-measure two-real-mode diagnostics, not a physical WDW density, a Choi construction, or gravitational seam entanglement.
+
+### Full real-contour obstruction — 2 numerical checks
+
+- `P24.contour.full_boundary_hessian_indefinite`
+- `P24.contour.real_scale_integration_not_positive`
+
+The full boundary Hessian has two negative directions, and naively integrating the scale factors on the real contour leaves an indefinite scalar Schur complement. These boundary signs do not determine the bulk Dirichlet Morse spectrum; a lapse/conformal thimble, gauge-fixed primed bulk operator, ghosts, physical boundary measure, and trace-class test remain open.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -560,6 +609,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection
 uv run --locked python3 cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py
 uv run --locked python3 cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py
 uv run --locked python3 cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py
+uv run --locked python3 cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -678,5 +728,29 @@ claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY
 
 The first trace proves only a supplied compact regulated density. The full-lapse rigging map does not
 derive \(B_L\), and neither trace is a cap-derived cosmological Born measure or local-SUGRA/BRST state.
+
+Phase 24's conditional positive subblock and full-contour obstruction are:
+
+```text
+claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN
+  ├─ HAS_EVIDENCE {polarity: SUPPORTS}
+  │  → evidence:p24-conditional-scalar-gaussian
+  │  ├─ DEFINED_IN → artifact:p24-script
+  │  └─ RECORDED_IN → artifact:p24-evidence-snapshot
+  ├─ DOCUMENTED_BY → artifact:p24-report
+  └─ VALID_WITHIN → scope:p24-fixed-scale-flat-measure-scalar-gaussian
+
+claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION
+  ├─ HAS_EVIDENCE {polarity: CONTRADICTS}
+  │  → evidence:p24-real-contour-obstruction
+  │  ├─ DEFINED_IN → artifact:p24-script
+  │  └─ RECORDED_IN → artifact:p24-evidence-snapshot
+  ├─ DOCUMENTED_BY → artifact:p24-report
+  ├─ VALID_WITHIN → scope:p24-real-boundary-contour-diagnostic
+  ├─ MOTIVATES → open:p24-gravitational-thimble-and-bulk-determinant
+  └─ MOTIVATES → open:p24-physical-two-boundary-density-and-entropy
+```
+
+The first trace fixes both scale factors and assumes a flat scalar measure. The second is a real-boundary diagnostic, not a thimble computation or a bulk negative-mode census. Neither trace promotes the connected interval to a positive gravitational density or physical entropy.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

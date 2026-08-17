@@ -1,0 +1,468 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P24_CONNECTED_STAROBINSKY_INTERVAL_20260817",
+  "phase": "P24",
+  "observed_at_utc": "2026-08-17T14:21:16Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py",
+    "sha256": "a625c9390305a0e07ea3b38977dc34b4cce725f8dd19cec1c66b90d8ccf63256",
+    "introduced_in_commit": "1f5d60c33ace93eb3dd51b3236212dcf5a87703f"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {
+      "id": "P24.action.starobinsky_derivative",
+      "statement": "the recorded Starobinsky derivative follows from the frozen potential",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.action.canonical_momenta",
+      "statement": "the endpoint Hamilton-Jacobi gradient uses the canonical momenta of the reduced action",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.action.off_shell_scale_equation",
+      "statement": "the action yields the full scale-factor equation, which differs from its constraint-reduced form by -C/(2a)",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.hessian.mixed_block_bilinear_transform",
+      "statement": "the mixed-Hessian bitensor law preserves rank under invertible separate endpoint Jacobians",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.gaussian.schmidt_relation",
+      "statement": "the conditional two-mode Gaussian precision coupling obeys kappa=2|t|/(1+|t|^2)",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.gaussian.precision_covariance_sign",
+      "statement": "a positive off-diagonal precision coupling gives the opposite-sign position covariance correlation",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 14,
+  "numerical": [
+    {
+      "id": "P24.saddle.midpoint_constraint",
+      "statement": "the explicit phi_center=1 calibration seed satisfies the Euclidean constraint",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.saddle.connected_boundary_values",
+      "statement": "the connected interval gives q0=[3.5668031935672753, 1.0185809464006632, 3.5668031935672753, 1.0185809464006632]",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.saddle.on_shell_action",
+      "statement": "the full connected action is I0=1.406690542834295",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.saddle.bvp_and_constraint_residuals",
+      "statement": "the boundary-value and Hamiltonian-constraint residuals are below tolerance",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.hessian.fourth_order_rank_convergence",
+      "statement": "the spurious second mixed singular value converges away at fourth order; ratios=[8.670189049862306e-07, 5.3431516224532535e-08, 3.3291323794057397e-09, 2.0742773391409153e-10], orders=[4.020300588986672, 4.004472813091248, 4.00446553261888]",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.hessian.symmetry",
+      "statement": "the independently differentiated raw Hamilton principal Hessian is symmetric within numerical tolerance; relative residual=1.823e-12",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.hessian.HJ_constraint_null_vectors",
+      "statement": "v_minus is a left null vector and v_plus is a right null vector of K_+-; normalized residuals=(8.370e-13,3.279e-12)",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.hessian.constraint_reduced_rank_one",
+      "statement": "the nonzero constrained mixed response survives while the constraint-null singular value vanishes; sigma=[1902.7254364311532, 1.3049903015685761e-09]",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.hessian.fixed_length_mutant_full_rank",
+      "statement": "holding T=0.7 fixed instead of imposing H=0 leaves a full-rank mixed block; sigma=[1297.0295059226137, 613.3892977971519]",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.gaussian.fixed_scale_scalar_positive",
+      "statement": "with both boundary scale factors fixed, the amplitude precision is finite and positive definite",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.gaussian.conditional_parameters",
+      "statement": "the fixed-scale Gaussian separates its positive precision coupling, negative position correlation, Schmidt magnitude, and conditional entropy",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.contour.full_boundary_hessian_indefinite",
+      "statement": "the real-boundary Hessian has two negative eigenvalues and is not a normalizable real-contour Gaussian precision",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.contour.real_scale_integration_not_positive",
+      "statement": "naively integrating the scale factors on the real contour gives an indefinite scalar Schur complement",
+      "status": "PASS"
+    },
+    {
+      "id": "P24.factorization.connected_response_nonzero",
+      "statement": "the connected interval has a nonzero mixed response whereas a factorized endpoint action has none",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "connected Euclidean Starobinsky interval Hessian",
+    "claim_status": {
+      "a_connected_real_minisuperspace_interval_saddle_exists": "SUPPORTED_FOR_THE_FROZEN_BENCHMARK",
+      "a_full_Pin_local_SUGRA_seam_state_is_constructed": "OPEN_NOT_COMPUTED",
+      "the_conditional_entropy_is_full_gravitational_seam_entanglement": "OPEN_NOT_DERIVED",
+      "the_connected_principal_function_has_nonzero_cross_boundary_response": "SUPPORTED_FOR_THE_FROZEN_BENCHMARK",
+      "the_constrained_homogeneous_mixed_block_has_one_nonzero_classical_response_direction": "SUPPORTED_BY_HJ_IDENTITY_AND_NUMERICAL_CONVERGENCE",
+      "the_fixed_scale_scalar_subblock_defines_a_conditional_positive_Gaussian": "SUPPORTED_ONLY_IN_THE_RECORDED_FLAT_MEASURE_CONTROL",
+      "the_real_boundary_Hessian_defines_a_positive_normalizable_real_Gaussian_precision": "CONTRADICTED_BY_TWO_NEGATIVE_EIGENVALUES",
+      "the_saddle_is_selected_by_a_gravitational_thimble": "OPEN_NOT_COMPUTED",
+      "the_saddle_selects_phi0_or_a_SUSY_breaking_scale": "CONTRADICTED_BY_SUPPLIED_BENCHMARK_INPUTS",
+      "the_small_mixed_singular_value_is_a_physical_mode": "CONTRADICTED_BY_FOURTH_ORDER_CONVERGENCE"
+    },
+    "exact_check_ids": [
+      "P24.action.starobinsky_derivative",
+      "P24.action.canonical_momenta",
+      "P24.action.off_shell_scale_equation",
+      "P24.hessian.mixed_block_bilinear_transform",
+      "P24.gaussian.schmidt_relation",
+      "P24.gaussian.precision_covariance_sign"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P24.action.starobinsky_derivative",
+        "statement": "the recorded Starobinsky derivative follows from the frozen potential",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.action.canonical_momenta",
+        "statement": "the endpoint Hamilton-Jacobi gradient uses the canonical momenta of the reduced action",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.action.off_shell_scale_equation",
+        "statement": "the action yields the full scale-factor equation, which differs from its constraint-reduced form by -C/(2a)",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.hessian.mixed_block_bilinear_transform",
+        "statement": "the mixed-Hessian bitensor law preserves rank under invertible separate endpoint Jacobians",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.gaussian.schmidt_relation",
+        "statement": "the conditional two-mode Gaussian precision coupling obeys kappa=2|t|/(1+|t|^2)",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.gaussian.precision_covariance_sign",
+        "statement": "a positive off-diagonal precision coupling gives the opposite-sign position covariance correlation",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 6,
+    "frozen_model": {
+      "action": "I_E=2pi^2 integral[-3a(a_dot^2+1)+a^3(phi_dot^2/2+V)]d tau",
+      "potential": "V(phi)=3/4[1-exp(-sqrt(2/3)phi)]^2",
+      "units": "reduced M_P=M=1"
+    },
+    "next_calculation": {
+      "contour": "construct the lapse/conformal Picard-Lefschetz thimble and the gauge-fixed primed bulk fluctuation operator",
+      "local_sugra": "only then add the gravitino-Goldstino-ghost Calderon blocks and test BRST Ward identities",
+      "state": "specify an outgoing/outgoing or Choi reflection prescription, physical boundary measure, and test whether the resulting kernel is trace class"
+    },
+    "numerical_check_ids": [
+      "P24.saddle.midpoint_constraint",
+      "P24.saddle.connected_boundary_values",
+      "P24.saddle.on_shell_action",
+      "P24.saddle.bvp_and_constraint_residuals",
+      "P24.hessian.fourth_order_rank_convergence",
+      "P24.hessian.symmetry",
+      "P24.hessian.HJ_constraint_null_vectors",
+      "P24.hessian.constraint_reduced_rank_one",
+      "P24.hessian.fixed_length_mutant_full_rank",
+      "P24.gaussian.fixed_scale_scalar_positive",
+      "P24.gaussian.conditional_parameters",
+      "P24.contour.full_boundary_hessian_indefinite",
+      "P24.contour.real_scale_integration_not_positive",
+      "P24.factorization.connected_response_nonzero"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P24.saddle.midpoint_constraint",
+        "statement": "the explicit phi_center=1 calibration seed satisfies the Euclidean constraint",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.saddle.connected_boundary_values",
+        "statement": "the connected interval gives q0=[3.5668031935672753, 1.0185809464006632, 3.5668031935672753, 1.0185809464006632]",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.saddle.on_shell_action",
+        "statement": "the full connected action is I0=1.406690542834295",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.saddle.bvp_and_constraint_residuals",
+        "statement": "the boundary-value and Hamiltonian-constraint residuals are below tolerance",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.hessian.fourth_order_rank_convergence",
+        "statement": "the spurious second mixed singular value converges away at fourth order; ratios=[8.670189049862306e-07, 5.3431516224532535e-08, 3.3291323794057397e-09, 2.0742773391409153e-10], orders=[4.020300588986672, 4.004472813091248, 4.00446553261888]",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.hessian.symmetry",
+        "statement": "the independently differentiated raw Hamilton principal Hessian is symmetric within numerical tolerance; relative residual=1.823e-12",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.hessian.HJ_constraint_null_vectors",
+        "statement": "v_minus is a left null vector and v_plus is a right null vector of K_+-; normalized residuals=(8.370e-13,3.279e-12)",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.hessian.constraint_reduced_rank_one",
+        "statement": "the nonzero constrained mixed response survives while the constraint-null singular value vanishes; sigma=[1902.7254364311532, 1.3049903015685761e-09]",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.hessian.fixed_length_mutant_full_rank",
+        "statement": "holding T=0.7 fixed instead of imposing H=0 leaves a full-rank mixed block; sigma=[1297.0295059226137, 613.3892977971519]",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.gaussian.fixed_scale_scalar_positive",
+        "statement": "with both boundary scale factors fixed, the amplitude precision is finite and positive definite",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.gaussian.conditional_parameters",
+        "statement": "the fixed-scale Gaussian separates its positive precision coupling, negative position correlation, Schmidt magnitude, and conditional entropy",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.contour.full_boundary_hessian_indefinite",
+        "statement": "the real-boundary Hessian has two negative eigenvalues and is not a normalizable real-contour Gaussian precision",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.contour.real_scale_integration_not_positive",
+        "statement": "naively integrating the scale factors on the real contour gives an indefinite scalar Schur complement",
+        "status": "PASS"
+      },
+      {
+        "id": "P24.factorization.connected_response_nonzero",
+        "statement": "the connected interval has a nonzero mixed response whereas a factorized endpoint action has none",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 14,
+    "numerical_controls": {
+      "HJ_null_residuals": [
+        8.370219182666924e-13,
+        3.2785710834688125e-12
+      ],
+      "I0": 1.4066905428342948,
+      "base_final_velocities": [
+        -0.09984512854889933,
+        0.1066377716099628
+      ],
+      "base_shooting": [
+        0.09984512854889784,
+        -0.10663777160996041,
+        0.6999999999999968
+      ],
+      "benchmark_inputs": {
+        "base_proper_length": 0.7,
+        "note": "calibration inputs, not selected observables",
+        "phi_center": 1
+      },
+      "boundary_order": [
+        "a_minus",
+        "phi_minus",
+        "a_plus",
+        "phi_plus"
+      ],
+      "bvp_residual": 1.2560739669470201e-15,
+      "conditional_fixed_scale_scalar": {
+        "amplitude_precision": [
+          [
+            3467.6909713723876,
+            888.8366550289675
+          ],
+          [
+            888.8366550289675,
+            3467.690971366877
+          ]
+        ],
+        "density_precision": [
+          [
+            6935.381942744775,
+            1777.673310057935
+          ],
+          [
+            1777.673310057935,
+            6935.381942733754
+          ]
+        ],
+        "eigenvalues": [
+          2578.8543163406644,
+          4356.5276263986
+        ],
+        "entropy_nats": 0.08755940333548494,
+        "interpretation": "flat-measure two-real-mode toy with delta a_+=delta a_-=0",
+        "normalized_precision_coupling": 0.2563194535982265,
+        "position_correlation": -0.25631945359822655,
+        "position_covariance": [
+          [
+            0.00015432742531726305,
+            -0.00003955712133257341
+          ],
+          [
+            -0.000039557121332573404,
+            0.00015432742531750832
+          ]
+        ],
+        "schmidt_magnitude": 0.13033686560230895
+      },
+      "constrained_hessian": [
+        [
+          -177.34995095391767,
+          1002.7722905050546,
+          1013.8887814008809,
+          949.3058058546293
+        ],
+        [
+          1002.7722905050546,
+          3467.6909713723876,
+          949.3058058598235,
+          888.8366550289675
+        ],
+        [
+          1013.8887814008809,
+          949.3058058598235,
+          -177.34995095587132,
+          1002.7722905024837
+        ],
+        [
+          949.3058058546293,
+          888.8366550289675,
+          1002.7722905024837,
+          3467.690971366877
+        ]
+      ],
+      "constraint_residual": 0,
+      "cross_block": [
+        [
+          1013.8887814008809,
+          949.3058058546293
+        ],
+        [
+          949.3058058598235,
+          888.8366550289675
+        ]
+      ],
+      "cross_singular_values": [
+        1902.7254364311532,
+        1.3049903015685761e-9
+      ],
+      "finite_difference": {
+        "observed_orders": [
+          4.020300588986672,
+          4.004472813091248,
+          4.00446553261888
+        ],
+        "richardson": "H=(16 H(h/2)-H(h))/15 from the two smallest steps",
+        "small_to_large_singular_ratios": [
+          8.670189049862306e-7,
+          5.3431516224532535e-8,
+          3.3291323794057397e-9,
+          2.0742773391409153e-10
+        ],
+        "stencil": "five-point first derivative of the Hamilton-Jacobi gradient",
+        "steps": [
+          0.001,
+          0.0005,
+          0.00025,
+          0.000125
+        ]
+      },
+      "fixed_length_cross_singular_values": [
+        1297.0295059226137,
+        613.3892977971519
+      ],
+      "full_boundary_hessian_eigenvalues": [
+        -1191.9968277754053,
+        -31.810199518650336,
+        2579.6124117602935,
+        5224.876656363234
+      ],
+      "gradient": [
+        42.17810063816112,
+        95.51646533022034,
+        42.178100638161744,
+        95.51646533022242
+      ],
+      "q0": [
+        3.5668031935672753,
+        1.0185809464006632,
+        3.5668031935672753,
+        1.0185809464006632
+      ],
+      "raw_hessian_symmetry_residual": 1.8231012325583266e-12,
+      "real_contour_scalar_schur": {
+        "eigenvalues": [
+          -198.68099704426788,
+          2581.254057805422
+        ],
+        "interpretation": "indefinite; not a normalized real Gaussian",
+        "precision": [
+          [
+            1191.286530374111,
+            -1389.9675274248448
+          ],
+          [
+            -1389.9675274248448,
+            1191.286530387043
+          ]
+        ]
+      }
+    },
+    "phase": "P24",
+    "scope_guard": {
+      "what_is_computed": [
+        "one real O(4)-homogeneous canonical scalar-gravity saddle on S3 x I",
+        "the reduced action after the standard Dirichlet gravitational boundary reduction",
+        "constraint-preserving endpoint variations with the proper length solved as a modulus",
+        "the 4x4 Hamilton principal Hessian and its 2x2 mixed block",
+        "Hamilton-Jacobi left and right null directions",
+        "a fixed-proper-length mutant",
+        "a conditional scalar Gaussian after fixing both endpoint scale factors"
+      ],
+      "what_is_not_computed": [
+        "a Picard-Lefschetz intersection number or dominant contour",
+        "the gauge-fixed bulk fluctuation Morse spectrum",
+        "Faddeev-Popov or BRST ghosts and one-loop determinants",
+        "inhomogeneous scalar, vector, tensor, chiralino, or gravitino modes",
+        "a two-universe Hilbert-space factorization or Choi state prescription",
+        "a physical WDW inner product, positive density, or entropy",
+        "a CPT/Pin lift, flux sum, membrane transition, or local SUGRA completion",
+        "selection of phi0, e-folds, curvature radius, or SUSY-breaking scale"
+      ]
+    }
+  }
+}

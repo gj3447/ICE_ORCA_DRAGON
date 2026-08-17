@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T05:45:44Z`; 251 nodes, 511 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 29/29 stored hashes (27 artifacts and 2 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T14:21:16Z`; 281 nodes, 588 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 32/32 stored hashes (30 artifacts and 2 policies).
 
 ## Quick answers
 
@@ -30,7 +30,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does a positive finite-mode seam density exist? | Yes for one free SUSY oscillator with \(\omega,\beta>0\). The exact purification is normalized and positive, its reduced Gibbs density commutes with the fixed-mode charges, and it passes the equal-source SK trace identity. This is not an unbroken thermal vacuum or a 4D Pin/SUGRA state. | `claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE`; `claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES`; `claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION` |
 | Does the same free Gaussian normalize the homogeneous mode? | No in the noncompact \(L^2(\mathbb R)\), \(\omega\to0^+\) limit: the bosonic partition and covariance diverge while the stiffness vanishes. Compact or interacting constrained inflaton modes are not decided. | `claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT` |
 | Does the Phase 23 constraint alone determine a physical cosmological seam density? | No. Full-lapse averaging gives a distributional rigging map, an explicit clock and frequency orientation give a positive integrated norm, and only a separately supplied compact bridge gives the regulated trace-class density. CPT-like reality and zero signed current do not select its weights; the quadratic zero root is singular and the massless decompactification limit is not trace class. | `claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP`; `claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM`; `claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY`; `claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY`; `claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope; Phase 21 identifies a normalized Gaussian baseline; Phase 22 adds a finite-mode density witness and a scoped zero-mode obstruction; Phase 23 adds a constrained toy rigging/density control while leaving the cosmological cap-derived density open. | Phase 16–23 scope guards |
+| Does the Phase 24 connected interval already define a physical entangled seam density? | No. The supplied real saddle has a nonzero cross-boundary response and one constraint-preserving mixed direction. A fixed-scale scalar subblock gives a conditional positive Gaussian, but the full real boundary Hessian and real-contour scalar Schur complement are indefinite; no gravitational thimble, physical boundary measure, trace-class density, or entropy has been constructed. | `claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE`; `claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE`; `claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN`; `claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope; Phase 21 identifies a normalized Gaussian baseline; Phase 22 adds a finite-mode density witness and a scoped zero-mode obstruction; Phase 23 adds a constrained toy rigging/density control; Phase 24 adds a connected classical response and conditional scalar Gaussian while leaving the gravitational contour and physical two-boundary density open. | Phase 16–24 scope guards |
 
 ### Phase 23 reading path
 
@@ -40,6 +41,15 @@ The graph's `reading-path:minisuperspace-rigging-to-density` should be read in t
 2. `concept:induced-product-versus-signed-wdw-current` leads to `claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM` and `claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE`.
 3. `concept:constraint-rigging-versus-state-preparation-bridge` separates imposing the constraint from supplying spectral weights; follow `claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY` and `claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY`.
 4. `claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT` and `claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE` lead to `open:p23-cap-derived-regulator-independent-density`, while `open:p22-gauge-fixed-local-sugra-seam-density` remains the later local-SUGRA gate.
+
+### Phase 24 reading path
+
+The graph's `reading-path:connected-starobinsky-response-to-physical-density` should be read in this order:
+
+1. `concept:connected-boundary-response-versus-quantum-entanglement` leads from the supported real saddle to `claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE`; a nonzero mixed principal-function Hessian is a classical response statement, not yet quantum entanglement.
+2. `concept:constraint-preserving-versus-fixed-length-hessian` separates the rank-one constrained mixed block from the full-rank fixed-length mutation. Follow `claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE` and the contradicted `claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE`.
+3. `concept:conditional-fixed-scale-gaussian-versus-physical-gravitational-state` leads to the supported conditional scalar Gaussian and the contradicted claim that the full real boundary precision is positive and normalizable.
+4. `concept:boundary-response-hessian-versus-bulk-morse-spectrum` leads to `open:p24-gravitational-thimble-and-bulk-determinant`; `open:p24-physical-two-boundary-density-and-entropy` separately requires a physical factorization, measure, inner product, positivity, and trace test.
 
 ## Concept map
 
@@ -134,6 +144,19 @@ flowchart TD
   Rig23 --> Gate23["OPEN: cap-derived regulator-independent density"]
   Dens23 --> Gate23
   Zero23 --> Gate23
+
+  Programme --> P24["Phase 24 · connected Starobinsky interval response"]
+  P24 --> Saddle24["Supplied real connected saddle exists<br/>SUPPORTED"]
+  P24 --> Resp24["Cross-boundary principal response is nonzero<br/>SUPPORTED"]
+  P24 --> Rank24["Constraint-preserving mixed block is rank one<br/>SUPPORTED"]
+  P24 --> Mode24["Small singular value is physical<br/>CONTRADICTED"]
+  P24 --> Cond24["Fixed-scale scalar Gaussian is conditionally positive<br/>SUPPORTED"]
+  P24 --> Full24["Full real-boundary Gaussian is positive<br/>CONTRADICTED"]
+  P24 --> Select24["Saddle selects phi0 or a SUSY-breaking scale<br/>CONTRADICTED"]
+  Resp24 --> Thimble24["OPEN: gravitational thimble · bulk determinant"]
+  Rank24 --> Thimble24
+  Cond24 --> Density24["OPEN: physical two-boundary density · entropy"]
+  Full24 --> Density24
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -161,6 +184,17 @@ regulator. Group averaging does not derive \(L\) or the weights, CPT-like realit
 does not select them uniquely, the quadratic \(E=0\) root is singular, and the massless box loses trace
 class as it is decompactified. The continuous seed calibration and compact density calibration remain
 separate; neither is the closed Starobinsky/Cecotti cap or a local-SUGRA/BRST seam state.
+
+Phase 24 replaces the disconnected control by one supplied real connected Starobinsky
+\(S^3\times I\) saddle. Its Hamilton principal function has a nonzero cross-boundary response, and
+constraint-preserving endpoint variations leave one nonzero mixed homogeneous direction; the second
+singular value converges away along the Hamilton–Jacobi null direction. Holding the proper length fixed
+is a distinct off-constraint mutation and restores full mixed rank. At fixed boundary scale factors, a
+supplied flat scalar measure gives a positive conditional two-real-mode Gaussian, but the complete
+real-boundary Hessian and the formal real-contour scalar Schur complement are indefinite. These finite
+boundary-response signs are not the gauge-fixed bulk Morse spectrum. No lapse/conformal thimble,
+primed determinant, physical factorization, trace-class density, entropy, initial-amplitude selection,
+or SUSY-breaking scale follows from this benchmark.
 
 ## Core distinctions
 
@@ -196,6 +230,10 @@ separate; neither is the closed Starobinsky/Cecotti cap or a local-SUGRA/BRST se
 | Constraint rigging vs state-preparation bridge | Group averaging places data on the constraint shell. The separately supplied \(B_L=e^{-L\sqrt h}\) fixes relative weights; the first operation does not derive the second. |
 | Compact trace class vs continuum limit | The supplied density is trace class on the compact spectrum for \(L>0\), but the massless box partition grows as \(R/(2L)\) under decompactification. |
 | Quadratic zero root vs regular clock gauge | At \(E=0\), the quadratic shell root is double, the regulated integral diverges, and the intrinsic-clock Faddeev–Popov determinant vanishes. Linearizing the constraint preselects an orientation. |
+| Connected boundary response vs quantum entanglement | A nonzero mixed Hessian of the Hamilton principal function proves nonfactorizing classical boundary response; it does not supply a bipartite Hilbert-space state, density operator, or entanglement measure. |
+| Constraint-preserving vs fixed-length Hessian | Solving the proper length as a modulus preserves the Hamiltonian constraint and exposes Hamilton–Jacobi null directions. Freezing the length during endpoint variation is a distinct off-constraint mutation and can change the mixed rank. |
+| Conditional fixed-scale Gaussian vs physical gravitational state | Positivity of the scalar subblock after fixing both boundary scale factors and supplying a flat measure is a conditional diagnostic, not positivity or trace class of the full gravitational kernel. |
+| Boundary-response Hessian vs bulk Morse spectrum | Signs of the finite boundary Hessian or a formal Schur complement do not determine the gauge-fixed primed bulk fluctuation spectrum, thimble intersection number, ghost determinant, or contour phase. |
 
 ## IDs and claim states
 
@@ -273,6 +311,9 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p23-single-constraint-rigging-and-current` | One 1+1-dimensional KG-type constraint, full-real-lapse regulators, compact Dirichlet normal form, explicit \(T\)-clock branch, and integrated/local currents | Actual closed Starobinsky/Cecotti WDW operator, contour, ordering/clock independence, Born measure, Pin or local-SUGRA/BRST sectors |
 | `scope:p23-supplied-bridge-compact-density` | Compact positive-frequency spectrum with supplied \(L>0\), \(B_L=e^{-L\sqrt h}\), two constrained copies, and a toy anti-linear pairing | Derivation of \(L\) or \(B_L\), unique CPT/Pin selection, regulator independence, cosmological parameter selection, and fermion/ghost sectors |
 | `scope:p23-zero-root-and-decompactification` | Abel-regulated quadratic \(E=0\) root, intrinsic-clock determinant, oriented linear comparison, and massless box at \(R\to\infty\) | A universal no-go, proof that \(\phi_0\) is gauge, or an actual saddle zero-mode/Jacobian/modulus measure |
+| `scope:p24-connected-homogeneous-starobinsky-interval` | One supplied real reflection-symmetric homogeneous \(S^3\times I\) saddle, constrained endpoint response, principal Hessian, Hamilton–Jacobi null directions, and a fixed-length mutation | Global thimble, bulk determinant, inhomogeneous/local-SUGRA modes, physical density or entropy, and initial-value or SUSY-scale selection |
+| `scope:p24-fixed-scale-flat-measure-scalar-gaussian` | The two scalar boundary variables at fixed \(a_\pm\), density precision \(2K_\phi\), covariance, correlation, Schmidt magnitude, and entropy under a supplied flat measure | Dynamical scale-factor integration, full gravitational positivity, a derived factorization, WDW/BFV measure, trace-class state, and local-SUGRA modes |
+| `scope:p24-real-boundary-contour-diagnostic` | Eigenvalue signs of the finite \(4\times4\) real-boundary Hessian and the formal scalar Schur complement | Gauge-fixed bulk Morse spectrum, lapse/conformal thimble, intersection number, determinant/ghost phase, and physical-state positivity |
 
 ## Open construction ledger
 
@@ -309,8 +350,10 @@ All entries below have state `OPEN` in the graph.
 | `open:p22-homogeneous-minisuperspace-density` | Constrained complex-cap homogeneous density with zero-mode measure, collective-coordinate Jacobian, and physical WDW current |
 | `open:p22-gauge-fixed-local-sugra-seam-density` | Coupled gravitino–Goldstino–ghost boundary operator, physical projector, positivity, and trace-class test |
 | `open:p23-cap-derived-regulator-independent-density` | Replace the normal form and supplied \(B_L\) by the actual closed Starobinsky/Cecotti constraint, contour, physical product, ordering, clock patches, and zero-mode measure; test regulator-independent positivity |
+| `open:p24-gravitational-thimble-and-bulk-determinant` | Determine the contributing lapse/conformal Picard–Lefschetz thimble, intersection number, gauge-fixed primed bulk operator, ghosts, zero modes, determinant, and phase |
+| `open:p24-physical-two-boundary-density-and-entropy` | Supply the boundary factorization or Choi prescription, physical measure and WDW/BFV product, then test positivity, trace class, and physical entropy |
 
-The shortest honest statement of the research frontier is therefore: **finite doubled, Gaussian, and positive-frequency density witnesses plus conditional closed backgrounds exist; full-lapse averaging gives a distributional constraint map, and a separately supplied compact bridge gives a positive trace-class toy density. The constraint does not select its weights, the local current is not a Born density, and zero-root or continuum limits remain obstructed. Neither a cap-derived regulator-independent background-selection density nor a full projected local-SUGRA seam density with persistent spectral breaking exists yet.**
+The shortest honest statement of the research frontier is therefore: **finite doubled, Gaussian, and positive-frequency density witnesses plus conditional closed backgrounds exist; full-lapse averaging gives a distributional constraint map, and a separately supplied compact bridge gives a positive trace-class toy density. A supplied connected Starobinsky interval also has nonzero classical cross-boundary response and one constraint-preserving mixed direction, while its fixed-scale scalar Gaussian remains conditional and its full real-boundary kernel is indefinite. The constraint does not select its weights, the local current is not a Born density, and zero-root or continuum limits remain obstructed. Neither a contributing gravitational thimble with its bulk determinant, a physical two-boundary density and entropy, a cap-derived regulator-independent background-selection density, nor a full projected local-SUGRA seam density with persistent spectral breaking exists yet.**
 
 ## Repository artifacts
 
@@ -325,6 +368,7 @@ The shortest honest statement of the research frontier is therefore: **finite do
 | 21 | [`phase21_connected_seam_gaussian.py`](../../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py) | [`PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | [`phase21-result.json`](./evidence/phase21-result.json) |
 | 22 | [`phase22_finite_mode_seam_density.py`](../../cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py) | [`PHASE22_FINITE_MODE_SEAM_DENSITY.md`](../../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md) | [`phase22-result.json`](./evidence/phase22-result.json) |
 | 23 | [`phase23_homogeneous_minisuperspace_density.py`](../../cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py) | [`PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md`](../../cpt_temporal_folded_susy/PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md) | [`phase23-result.json`](./evidence/phase23-result.json) |
+| 24 | [`phase24_connected_starobinsky_interval.py`](../../cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py) | [`PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md`](../../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md) | [`phase24-result.json`](./evidence/phase24-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -353,4 +397,9 @@ The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOL
 - `claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE`
 - `claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE`
 
-There are therefore seven expected unresolved bridges in the current graph. No external UID was invented for the four new lookups. A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion, review outcome, or KG ratification.
+Phase 24 adds one more unresolved bridge at `phase:p24`. The older
+`sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
+planning node and was deliberately not reused. There are therefore eight expected unresolved bridges
+in the current graph. No external UID was invented for the new lookup. A resolved UID proves only that
+the target exists; it is not an evidence receipt, equivalence assertion, review outcome, or KG
+ratification.

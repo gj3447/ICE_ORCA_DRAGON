@@ -48,8 +48,14 @@
 | `source:ojima-1981` — I. Ojima, [*Gauge Fields at Finite Temperatures—Thermo Field Dynamics and the KMS Condition and Their Extension to Gauge Theories*](https://doi.org/10.1016/0003-4916(81)90058-0), Ann. Phys. 137 (1981) 1–32 | Primary thermofield/KMS framing for the finite doubled purification | Does not identify the two factors with literal universes or supply a local-SUGRA seam state |
 | `source:israel-1976` — W. Israel, [*Thermo-field Dynamics of Black Holes*](https://doi.org/10.1016/0375-9601(76)90178-X), Phys. Lett. A 57 (1976) 107–110 | Primary doubled-purification example | Does not derive the Phase 22 graded phase, Pin lift, or cosmological state |
 | `source:buchholz-ojima-1997` — D. Buchholz, I. Ojima, [*Spontaneous Collapse of Supersymmetry*](https://arxiv.org/abs/hep-th/9701005), `arXiv:hep-th/9701005v3` | Thermal-SUSY obstruction used to separate Gibbs covariance from an unbroken vacuum claim | Does not invalidate the exact finite matrix algebra or construct the requested seam state |
+| `source:halliwell-1988` — J. J. Halliwell, [*Derivation of the Wheeler–DeWitt equation from a path integral for minisuperspace models*](https://doi.org/10.1103/PhysRevD.38.2468), Phys. Rev. D 38 (1988) 2468 | `CITES`-only lapse, constraint, and ordering boundary for the Phase 24 connected minisuperspace calculation | Does not derive the frozen numerical saddle, its Hamilton principal Hessian, or its rank-one mixed block |
+| `source:barvinsky-nesterov-2005` — A. O. Barvinsky, D. V. Nesterov, [*Quantum effective action in spacetimes with branes and boundaries*](https://arxiv.org/abs/hep-th/0512291), `arXiv:hep-th/0512291` | `CITES`-only framing for the relation between boundary response kernels and bulk operators | Does not supply the Phase 24 response matrix, prove a positive seam state, or perform its constraint-preserving endpoint variation |
+| `source:gibbons-hawking-perry-1978` — G. W. Gibbons, S. W. Hawking, M. J. Perry, [*Path integrals and the indefiniteness of the gravitational action*](https://doi.org/10.1016/0550-3213(78)90161-X), Nucl. Phys. B 138 (1978) 141 | `CITES`-only contour warning for the indefinite gravitational action | Does not choose the Phase 24 thimble, compute an intersection number, or identify the bulk fluctuation spectrum |
+| `source:donnelly-freidel-2016` — W. Donnelly, L. Freidel, [*Local subsystems in gauge theory and gravity*](https://arxiv.org/abs/1601.04744), `arXiv:1601.04744` | `CITES`-only factorization caveat for interpreting two gravitational boundaries as subsystems | Does not establish a two-universe Hilbert-space factorization, Choi state, physical measure, or trace-class density for Phase 24 |
+| `source:bombelli-et-al-1986` — L. Bombelli, R. K. Koul, J. Lee, R. D. Sorkin, [*Quantum source of entropy for black holes*](https://doi.org/10.1103/PhysRevD.34.373), Phys. Rev. D 34 (1986) 373 | `CITES`-only pure-Gaussian Schmidt-entropy control for the conditional two-mode algebra | Does not turn the fixed-scale flat-measure diagnostic into gravitational seam entropy |
+| `source:halliwell-louko-1989` — J. J. Halliwell, J. Louko, [*Steepest-descent contours in the path-integral approach to quantum cosmology. I. The de Sitter minisuperspace model*](https://doi.org/10.1103/PhysRevD.39.2206), Phys. Rev. D 39 (1989) 2206 | `CITES`-only motivation for the missing steepest-descent contour and intersection gate | Treats a de Sitter minisuperspace model and does not determine whether the Phase 24 Starobinsky interval contributes |
 
-Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the thirty-six-item inventory exhausts the literature.
+Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the forty-two-item inventory exhausts the literature.
 
 ## Claim-family coverage
 
@@ -83,6 +89,9 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 22 equal-source SK trace | Haehl–Loganayagam–Rangamani | Reused to distinguish elementary unitarity from the unconstructed SK ghost/BRST completion |
 | Phase 23 full-lapse rigging map | Marolf (1995) | `concept:distributional-rigging-map-versus-bounded-projector` cites the RAQ/group-averaging framework; the Abel/Gaussian regulators and seed calculation remain repository evidence |
 | Phase 23 induced product versus signed WDW current | Hartle–Marolf | Reused to frame the distinction between induced products and constraint-system probability formulations; it does not derive the compact bridge or select a state |
+| Phase 24 minisuperspace constraint and boundary response | Halliwell (1988); Barvinsky–Nesterov | `CITES`-only framing for the lapse/ordering and boundary-operator context; neither source is a `DERIVED_FROM` receipt for the frozen action, saddle, Hessian, or rank calculation |
+| Phase 24 gravitational contour obstruction | Gibbons–Hawking–Perry; Halliwell–Louko | `CITES`-only bounds on the conformal/contour interpretation; Phase 24 computes neither a thimble intersection number nor the bulk fluctuation Morse spectrum |
+| Phase 24 factorization and conditional Gaussian interpretation | Donnelly–Freidel; Bombelli et al. | `CITES`-only bounds on the subsystem and Schmidt-algebra reading; they do not define the physical boundary measure, a Choi prescription, trace-class density, or seam entropy |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -102,7 +111,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other thirty-five graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–23 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other forty-one graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–24 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -165,5 +174,18 @@ Phase 23 sharpens the constrained-density frontier without closing it:
 - establish factor-ordering, constraint-rescaling, clock-patch, zero-mode-measure, and regulator
   independence;
 - only then test the coupled local-SUGRA/BRST boundary operator and its positivity or trace class.
+
+Phase 24 supplies a connected real homogeneous interval but leaves two explicit frontier nodes open:
+
+- `open:p24-gravitational-thimble-and-bulk-determinant`: choose the lapse/conformal Picard–Lefschetz
+  contour, calculate its intersection number, and construct the gauge-fixed primed bulk fluctuation
+  operator with Faddeev–Popov/BRST ghosts and determinant;
+- establish the inhomogeneous scalar, vector, tensor, chiralino, gravitino, Goldstino, and ghost mode
+  content, rather than identifying the boundary-Hessian signs with a bulk Morse census;
+- `open:p24-physical-two-boundary-density-and-entropy`: specify an outgoing/outgoing or Choi reflection
+  prescription, physical WDW/BFV boundary measure and inner product, trace normalization, and a
+  trace-class test before interpreting the conditional scalar Gaussian as a density or entropy;
+- only after those gates, test CPT/Pin sewing, local-SUGRA Calderón blocks and Ward identities, and any
+  claimed selection of an inflaton value, curvature scale, or SUSY-breaking scale.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

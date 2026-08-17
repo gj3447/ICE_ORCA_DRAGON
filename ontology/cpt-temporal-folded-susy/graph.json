@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T05:45:44Z",
+  "updated_at_utc": "2026-08-17T14:21:16Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -113,6 +113,17 @@
         "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
         "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
         "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT"
+      ]
+    },
+    {
+      "question": "Does the Phase 24 connected interval already define a physical entangled seam density?",
+      "answer": "No. The supplied real benchmark has a nonzero classical cross-boundary response and one nonzero constraint-reduced homogeneous direction, but the full real-boundary Hessian and real-contour Schur complement are indefinite. The fixed-scale scalar Gaussian is only a conditional flat-measure diagnostic; the thimble, bulk determinant, physical factorization and measure, trace-class state, and local-SUGRA completion remain open.",
+      "claim_ids": [
+        "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+        "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+        "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+        "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+        "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION"
       ]
     }
   ],
@@ -262,6 +273,29 @@
         "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
         "open:p22-homogeneous-minisuperspace-density",
         "open:p23-cap-derived-regulator-independent-density",
+        "open:p22-gauge-fixed-local-sugra-seam-density"
+      ]
+    },
+    {
+      "id": "reading-path:connected-starobinsky-response-to-physical-density",
+      "title": "From a connected Starobinsky response to the still-missing physical density",
+      "summary": "Follow the supplied real saddle, nonfactorizing classical response, constraint-reduced rank, conditional fixed-scale Gaussian, real-contour obstruction, and the separate thimble, state, and local-SUGRA gates.",
+      "nodes": [
+        "concept:background-existence-versus-initial-amplitude-selection",
+        "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+        "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+        "concept:connected-boundary-response-versus-quantum-entanglement",
+        "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+        "concept:constraint-preserving-versus-fixed-length-hessian",
+        "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+        "claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+        "concept:amplitude-versus-density-kernel",
+        "concept:conditional-fixed-scale-gaussian-versus-physical-gravitational-state",
+        "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+        "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+        "concept:boundary-response-hessian-versus-bulk-morse-spectrum",
+        "open:p24-gravitational-thimble-and-bulk-determinant",
+        "open:p24-physical-two-boundary-density-and-entropy",
         "open:p22-gauge-fixed-local-sugra-seam-density"
       ]
     }
@@ -3153,6 +3187,343 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase23-result.json",
       "sha256": "198e2d6641d35b0a71b8024abfffb4883f6ae4ee87146f1864bba0f90ec91e0b"
+    },
+    {
+      "id": "phase:p24",
+      "type": "phase",
+      "title": "Phase 24 — connected Starobinsky interval response",
+      "summary": "A real connected S3 x I minisuperspace benchmark that separates classical cross-boundary response, Hamilton–Jacobi constraint reduction, a conditional fixed-scale scalar Gaussian, and real-contour or quantum-state obstructions.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:connected-boundary-response-versus-quantum-entanglement",
+      "type": "concept",
+      "title": "Connected boundary response versus quantum entanglement",
+      "summary": "A nonzero mixed Hessian of a connected Hamilton principal function establishes nonfactorizing classical boundary response; it does not by itself define a bipartite quantum state or entanglement.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:constraint-preserving-versus-fixed-length-hessian",
+      "type": "concept",
+      "title": "Constraint-preserving versus fixed-length boundary Hessian",
+      "summary": "Solving the proper length as a modulus while preserving the Hamiltonian constraint produces Hamilton–Jacobi null directions; holding the length fixed is a distinct off-constraint mutation and can change the mixed rank.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:conditional-fixed-scale-gaussian-versus-physical-gravitational-state",
+      "type": "concept",
+      "title": "Conditional fixed-scale Gaussian versus physical gravitational state",
+      "summary": "A positive scalar subblock after fixing both boundary scale factors and supplying a flat measure can define a conditional Gaussian diagnostic without making the full gravitational kernel positive, normalizable, trace class, or physically entangled.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:boundary-response-hessian-versus-bulk-morse-spectrum",
+      "type": "concept",
+      "title": "Boundary-response Hessian versus bulk Morse spectrum",
+      "summary": "Eigenvalue signs of the finite boundary response or a real-contour Schur complement are not the gauge-fixed Dirichlet bulk fluctuation Morse spectrum and do not choose a gravitational integration contour.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "type": "claim",
+      "claim_id": "P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "title": "A connected real Starobinsky interval saddle exists",
+      "statement": "For the frozen canonical Starobinsky action and supplied phi_center=1, base proper length T=0.7 benchmark, the recorded real reflection-symmetric S3 x I boundary-value solution satisfies the endpoint and Hamiltonian constraints with the reported action.",
+      "summary": "Supported for one supplied homogeneous benchmark; this is an existence result, not an initial-value or contour-selection rule.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+      "type": "claim",
+      "claim_id": "P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+      "title": "The connected principal function has nonzero cross-boundary response",
+      "statement": "At the supplied constrained saddle, the mixed boundary Hessian K_+- is nonzero, whereas a factorized endpoint action has zero mixed response.",
+      "summary": "Supported numerically for the frozen real connected interval and distinguished from quantum entanglement.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "type": "claim",
+      "claim_id": "P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "title": "The constraint-preserving mixed Hessian has rank one",
+      "statement": "When endpoint variations solve the proper length as a modulus and preserve the Hamiltonian constraint, the 2 x 2 mixed block has one nonzero homogeneous response direction at the supplied saddle.",
+      "summary": "Supported by fourth-order convergence and the left and right Hamilton–Jacobi null identities; the statement is local and polarization-specific.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+      "type": "claim",
+      "claim_id": "P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+      "title": "The small mixed singular value is a physical mode",
+      "statement": "The second small singular value of the constrained mixed block represents an additional physical homogeneous response channel.",
+      "summary": "Contradicted: it converges away at fourth order and lies in the Hamilton–Jacobi constraint-null direction, while the fixed-length mutant is full rank.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "type": "claim",
+      "claim_id": "P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "title": "The fixed-scale scalar subblock defines a conditional positive Gaussian",
+      "statement": "With both boundary scale factors fixed and the recorded flat scalar measure supplied, the scalar amplitude Hessian is positive definite and gives the reported density precision, negative position correlation, Schmidt magnitude, and conditional entropy.",
+      "summary": "Supported only as a two-real-mode fixed-scale flat-measure diagnostic, not as a physical gravitational density or entropy.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "type": "claim",
+      "claim_id": "P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "title": "The real boundary Hessian defines a positive normalizable Gaussian precision",
+      "statement": "The complete real-boundary Hessian, or the scalar precision obtained by naively integrating the scale factors on the real contour, is positive definite and normalizable.",
+      "summary": "Contradicted by two negative full-boundary eigenvalues and an indefinite real-contour scalar Schur complement.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "type": "claim",
+      "claim_id": "P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "title": "The saddle selects phi0 or a SUSY-breaking scale",
+      "statement": "The connected interval calculation dynamically selects the displayed homogeneous scalar amplitude or a supersymmetry-breaking scale.",
+      "summary": "Contradicted within this calculation because phi_center=1 and T=0.7 are supplied calibration inputs and no selection measure is constructed.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p24-action-benchmark-and-saddle",
+      "type": "evidence",
+      "title": "Phase 24 action, benchmark, and saddle checks",
+      "summary": "Three exact checks and four numerical controls cover the Starobinsky derivative, canonical momenta, full off-constraint scale equation, supplied midpoint seed, connected boundary values, action, and residuals.",
+      "state": "VERIFIED",
+      "observed_status": "3_EXACT_PASS_PLUS_4_NUMERICAL_PASS",
+      "check_ids": [
+        "P24.action.starobinsky_derivative",
+        "P24.action.canonical_momenta",
+        "P24.action.off_shell_scale_equation",
+        "P24.saddle.midpoint_constraint",
+        "P24.saddle.connected_boundary_values",
+        "P24.saddle.on_shell_action",
+        "P24.saddle.bvp_and_constraint_residuals"
+      ]
+    },
+    {
+      "id": "evidence:p24-constrained-mixed-hessian",
+      "type": "evidence",
+      "title": "Phase 24 constrained mixed-Hessian checks",
+      "summary": "One exact check and six numerical controls cover endpoint-coordinate rank covariance, fourth-order convergence, Hessian symmetry, Hamilton–Jacobi nulls, constrained rank one, the fixed-length mutant, and nonfactorizing connected response.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_6_NUMERICAL_PASS",
+      "check_ids": [
+        "P24.hessian.mixed_block_bilinear_transform",
+        "P24.hessian.fourth_order_rank_convergence",
+        "P24.hessian.symmetry",
+        "P24.hessian.HJ_constraint_null_vectors",
+        "P24.hessian.constraint_reduced_rank_one",
+        "P24.hessian.fixed_length_mutant_full_rank",
+        "P24.factorization.connected_response_nonzero"
+      ]
+    },
+    {
+      "id": "evidence:p24-conditional-scalar-gaussian",
+      "type": "evidence",
+      "title": "Phase 24 conditional scalar-Gaussian checks",
+      "summary": "Two exact checks and two numerical controls cover the precision-coupling Schmidt relation, the opposite covariance-correlation sign, fixed-scale positivity, and the recorded conditional Gaussian parameters.",
+      "state": "VERIFIED",
+      "observed_status": "2_EXACT_PASS_PLUS_2_NUMERICAL_PASS",
+      "check_ids": [
+        "P24.gaussian.schmidt_relation",
+        "P24.gaussian.precision_covariance_sign",
+        "P24.gaussian.fixed_scale_scalar_positive",
+        "P24.gaussian.conditional_parameters"
+      ]
+    },
+    {
+      "id": "evidence:p24-real-contour-obstruction",
+      "type": "evidence",
+      "title": "Phase 24 real-contour obstruction checks",
+      "summary": "Two numerical controls record the indefinite full real-boundary Hessian and the indefinite scalar Schur complement obtained from naive real scale-factor integration.",
+      "state": "VERIFIED",
+      "observed_status": "2_NUMERICAL_PASS",
+      "check_ids": [
+        "P24.contour.full_boundary_hessian_indefinite",
+        "P24.contour.real_scale_integration_not_positive"
+      ]
+    },
+    {
+      "id": "scope:p24-connected-homogeneous-starobinsky-interval",
+      "type": "scope",
+      "title": "P24 connected homogeneous Starobinsky interval",
+      "summary": "One real O(4)-homogeneous canonical scalar-gravity S3 x I benchmark with constraint-preserving endpoint variations and a fixed-length mutation.",
+      "state": "ACTIVE",
+      "includes": [
+        "reduced Planck and Starobinsky mass units M_P=M=1",
+        "supplied phi_center=1 and base proper length T=0.7",
+        "one real reflection-symmetric connected S3 x I saddle",
+        "the standard Dirichlet gravitational boundary reduction",
+        "proper length solved as a modulus under constrained endpoint variations",
+        "the 4 x 4 Hamilton principal Hessian, 2 x 2 mixed block, and Hamilton–Jacobi null directions",
+        "a fixed-proper-length off-constraint mutant"
+      ],
+      "excludes": [
+        "global Picard–Lefschetz contour or intersection number",
+        "gauge-fixed primed bulk fluctuation determinant, Faddeev–Popov ghosts, or BRST cohomology",
+        "inhomogeneous scalar, vector, tensor, chiralino, or gravitino modes",
+        "physical two-boundary factorization, WDW/BFV product, trace-class density, or entropy",
+        "CPT/Pin or local-SUGRA completion",
+        "selection of phi0, e-folds, curvature radius, flux, or a SUSY-breaking scale"
+      ]
+    },
+    {
+      "id": "scope:p24-fixed-scale-flat-measure-scalar-gaussian",
+      "type": "scope",
+      "title": "P24 fixed-scale flat-measure scalar Gaussian",
+      "summary": "The two scalar boundary variables after imposing delta a_minus=delta a_plus=0, with a supplied flat measure and pure two-real-mode Gaussian reading.",
+      "state": "ACTIVE",
+      "includes": [
+        "the positive 2 x 2 scalar amplitude Hessian at fixed boundary scale factors",
+        "density precision twice the amplitude Hessian",
+        "position covariance equal to the inverse density precision",
+        "normalized precision coupling, negative position correlation, Schmidt magnitude, and conditional entropy",
+        "a supplied flat d phi_minus d phi_plus measure"
+      ],
+      "excludes": [
+        "dynamical integration over boundary scale factors",
+        "positivity or normalizability of the full gravitational Hessian",
+        "a derived two-universe Hilbert-space factorization or Choi prescription",
+        "a physical WDW/BFV measure, trace-class state, or entanglement entropy",
+        "inhomogeneous and local-SUGRA modes"
+      ]
+    },
+    {
+      "id": "scope:p24-real-boundary-contour-diagnostic",
+      "type": "scope",
+      "title": "P24 real-boundary contour diagnostic",
+      "summary": "The eigenvalue signs of the finite 4 x 4 boundary Hessian and the scalar Schur complement from formal real scale-factor integration.",
+      "state": "ACTIVE",
+      "includes": [
+        "the full real-boundary Hessian eigenvalues at the supplied saddle",
+        "the scalar Schur complement after formal real scale-factor elimination",
+        "the resulting real-Gaussian indefiniteness diagnostics"
+      ],
+      "excludes": [
+        "the gauge-fixed bulk Dirichlet Morse spectrum",
+        "a lapse or conformal Picard–Lefschetz contour",
+        "global thimble intersection numbers or dominance",
+        "bulk one-loop determinants, ghosts, and renormalization",
+        "quantum-state normalizability or positivity on a physical inner product"
+      ]
+    },
+    {
+      "id": "open:p24-gravitational-thimble-and-bulk-determinant",
+      "type": "open_problem",
+      "title": "Construct the gravitational thimble and bulk determinant",
+      "summary": "The real saddle and boundary Hessian do not determine whether the saddle contributes or what its gauge-fixed bulk fluctuation weight is.",
+      "question": "Does the supplied connected saddle lie on a contributing lapse/conformal Picard–Lefschetz thimble after fixing the intersection number, gauge-fixed primed bulk operator, ghosts, zero modes, and determinant phase?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p24-physical-two-boundary-density-and-entropy",
+      "type": "open_problem",
+      "title": "Construct the physical two-boundary density and entropy",
+      "summary": "The fixed-scale scalar Gaussian is conditional and the full real-boundary kernel is indefinite; a physical state prescription and measure are missing.",
+      "question": "After specifying an outgoing/outgoing or Choi reflection prescription, physical boundary measure, and WDW/BFV inner product, does the connected kernel define a positive trace-class density and a physical entropy?",
+      "state": "OPEN"
+    },
+    {
+      "id": "source:halliwell-1988",
+      "type": "source",
+      "title": "Derivation of the Wheeler–DeWitt equation from a path integral for minisuperspace models",
+      "summary": "Primary minisuperspace path-integral reference used to frame lapse integration, the Hamiltonian constraint, boundary conditions, and ordering distinctions.",
+      "state": "PRIMARY",
+      "citation": "J. J. Halliwell, Derivation of the Wheeler–DeWitt equation from a path integral for minisuperspace models, Physical Review D 38 (1988) 2468",
+      "uri": "https://doi.org/10.1103/PhysRevD.38.2468",
+      "version": "Phys. Rev. D 38 (1988) 2468"
+    },
+    {
+      "id": "source:barvinsky-nesterov-2005",
+      "type": "source",
+      "title": "Quantum effective action in spacetimes with branes and boundaries",
+      "summary": "Technical reference for relations between boundary response operators and bulk fluctuation problems; it does not provide the Phase 24 saddle or positivity result.",
+      "state": "PRIMARY",
+      "citation": "A. O. Barvinsky and D. V. Nesterov, Quantum effective action in spacetimes with branes and boundaries",
+      "uri": "https://arxiv.org/abs/hep-th/0512291",
+      "version": "arXiv:hep-th/0512291"
+    },
+    {
+      "id": "source:gibbons-hawking-perry-1978",
+      "type": "source",
+      "title": "Path integrals and the indefiniteness of the gravitational action",
+      "summary": "Primary contour warning for the conformal indefiniteness of the Euclidean gravitational action; Phase 24 does not solve the contour problem.",
+      "state": "PRIMARY",
+      "citation": "G. W. Gibbons, S. W. Hawking and M. J. Perry, Path integrals and the indefiniteness of the gravitational action, Nuclear Physics B 138 (1978) 141",
+      "uri": "https://doi.org/10.1016/0550-3213(78)90161-X",
+      "version": "Nucl. Phys. B 138 (1978) 141"
+    },
+    {
+      "id": "source:donnelly-freidel-2016",
+      "type": "source",
+      "title": "Local subsystems in gauge theory and gravity",
+      "summary": "Primary boundary-factorization reference used to make the gauge-theory and gravity subsystem caveat explicit; it does not construct a two-universe Hilbert space here.",
+      "state": "PRIMARY",
+      "citation": "W. Donnelly and L. Freidel, Local subsystems in gauge theory and gravity",
+      "uri": "https://arxiv.org/abs/1601.04744",
+      "version": "arXiv:1601.04744"
+    },
+    {
+      "id": "source:bombelli-et-al-1986",
+      "type": "source",
+      "title": "Quantum source of entropy for black holes",
+      "summary": "Primary Gaussian entanglement reference used only for the pure-Gaussian Schmidt-entropy control, not for its promotion to gravitational seam entropy.",
+      "state": "PRIMARY",
+      "citation": "L. Bombelli, R. K. Koul, J. Lee and R. D. Sorkin, Quantum source of entropy for black holes, Physical Review D 34 (1986) 373",
+      "uri": "https://doi.org/10.1103/PhysRevD.34.373",
+      "version": "Phys. Rev. D 34 (1986) 373"
+    },
+    {
+      "id": "source:halliwell-louko-1989",
+      "type": "source",
+      "title": "Steepest-descent contours in the path-integral approach to quantum cosmology. I",
+      "summary": "Primary minisuperspace steepest-descent reference used to frame the missing global contour and intersection-number gate.",
+      "state": "PRIMARY",
+      "citation": "J. J. Halliwell and J. Louko, Steepest-descent contours in the path-integral approach to quantum cosmology. I. The de Sitter minisuperspace model, Physical Review D 39 (1989) 2206",
+      "uri": "https://doi.org/10.1103/PhysRevD.39.2206",
+      "version": "Phys. Rev. D 39 (1989) 2206"
+    },
+    {
+      "id": "artifact:p24-script",
+      "type": "artifact",
+      "title": "Phase 24 executable",
+      "summary": "Exact and bounded numerical checks of a connected real Starobinsky interval, constrained mixed Hessian, conditional scalar Gaussian, and real-contour obstruction.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py",
+      "sha256": "a625c9390305a0e07ea3b38977dc34b4cce725f8dd19cec1c66b90d8ccf63256",
+      "introduced_in_commit": "1f5d60c33ace93eb3dd51b3236212dcf5a87703f"
+    },
+    {
+      "id": "artifact:p24-report",
+      "type": "artifact",
+      "title": "Phase 24 report",
+      "summary": "Human-readable connected-interval derivation separating classical response, constraint reduction, conditional Gaussian diagnostics, contour indefiniteness, and quantum-state scope limits.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md",
+      "sha256": "f91966c31a4219a2f939d440928b1f3bd6d42da2ceb50df444c710c97c82f74d",
+      "introduced_in_commit": "1f5d60c33ace93eb3dd51b3236212dcf5a87703f"
+    },
+    {
+      "id": "artifact:p24-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 24 evidence snapshot",
+      "summary": "Persisted six-exact and fourteen-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase24-result.json",
+      "sha256": "6797e7699de453bcc1940e44cd36d174e18aaf3d78a298299ada06da403e84a9"
     }
   ],
   "edges": [
@@ -6322,6 +6693,484 @@
       "relation": "MOTIVATES",
       "to": "open:p20-cpt-pin-sheet-inner-product",
       "note": "A concrete doubled Hilbert-space inner product and sewing action remain necessary to derive physical sheet weights."
+    },
+    {
+      "id": "edge:512",
+      "from": "phase:p24",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:513",
+      "from": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:514",
+      "from": "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:515",
+      "from": "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:516",
+      "from": "claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:517",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:518",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:519",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:520",
+      "from": "evidence:p24-action-benchmark-and-saddle",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:521",
+      "from": "evidence:p24-constrained-mixed-hessian",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:522",
+      "from": "evidence:p24-conditional-scalar-gaussian",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:523",
+      "from": "evidence:p24-real-contour-obstruction",
+      "relation": "PART_OF",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:524",
+      "from": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "relation": "ABOUT",
+      "to": "concept:background-existence-versus-initial-amplitude-selection"
+    },
+    {
+      "id": "edge:525",
+      "from": "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+      "relation": "ABOUT",
+      "to": "concept:connected-boundary-response-versus-quantum-entanglement"
+    },
+    {
+      "id": "edge:526",
+      "from": "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "relation": "ABOUT",
+      "to": "concept:constraint-preserving-versus-fixed-length-hessian"
+    },
+    {
+      "id": "edge:527",
+      "from": "claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+      "relation": "ABOUT",
+      "to": "concept:constraint-preserving-versus-fixed-length-hessian"
+    },
+    {
+      "id": "edge:528",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "ABOUT",
+      "to": "concept:conditional-fixed-scale-gaussian-versus-physical-gravitational-state"
+    },
+    {
+      "id": "edge:529",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "ABOUT",
+      "to": "concept:amplitude-versus-density-kernel"
+    },
+    {
+      "id": "edge:530",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "ABOUT",
+      "to": "concept:conditional-fixed-scale-gaussian-versus-physical-gravitational-state"
+    },
+    {
+      "id": "edge:531",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "ABOUT",
+      "to": "concept:boundary-response-hessian-versus-bulk-morse-spectrum"
+    },
+    {
+      "id": "edge:532",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "ABOUT",
+      "to": "concept:background-existence-versus-initial-amplitude-selection"
+    },
+    {
+      "id": "edge:533",
+      "from": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p24-action-benchmark-and-saddle",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:534",
+      "from": "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p24-constrained-mixed-hessian",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:535",
+      "from": "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p24-constrained-mixed-hessian",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:536",
+      "from": "claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p24-constrained-mixed-hessian",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:537",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p24-conditional-scalar-gaussian",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:538",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p24-real-contour-obstruction",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:539",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p24-action-benchmark-and-saddle",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:540",
+      "from": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p24-connected-homogeneous-starobinsky-interval"
+    },
+    {
+      "id": "edge:541",
+      "from": "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p24-connected-homogeneous-starobinsky-interval"
+    },
+    {
+      "id": "edge:542",
+      "from": "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p24-connected-homogeneous-starobinsky-interval"
+    },
+    {
+      "id": "edge:543",
+      "from": "claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p24-connected-homogeneous-starobinsky-interval"
+    },
+    {
+      "id": "edge:544",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p24-fixed-scale-flat-measure-scalar-gaussian"
+    },
+    {
+      "id": "edge:545",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p24-real-boundary-contour-diagnostic"
+    },
+    {
+      "id": "edge:546",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p24-connected-homogeneous-starobinsky-interval"
+    },
+    {
+      "id": "edge:547",
+      "from": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p24-report"
+    },
+    {
+      "id": "edge:548",
+      "from": "claim:P24_CONNECTED_PRINCIPAL_FUNCTION_HAS_NONZERO_CROSS_BOUNDARY_RESPONSE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p24-report"
+    },
+    {
+      "id": "edge:549",
+      "from": "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p24-report"
+    },
+    {
+      "id": "edge:550",
+      "from": "claim:P24_SMALL_MIXED_SINGULAR_VALUE_IS_A_PHYSICAL_MODE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p24-report"
+    },
+    {
+      "id": "edge:551",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p24-report"
+    },
+    {
+      "id": "edge:552",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p24-report"
+    },
+    {
+      "id": "edge:553",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p24-report"
+    },
+    {
+      "id": "edge:554",
+      "from": "evidence:p24-action-benchmark-and-saddle",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p24-script"
+    },
+    {
+      "id": "edge:555",
+      "from": "evidence:p24-action-benchmark-and-saddle",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p24-evidence-snapshot"
+    },
+    {
+      "id": "edge:556",
+      "from": "evidence:p24-constrained-mixed-hessian",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p24-script"
+    },
+    {
+      "id": "edge:557",
+      "from": "evidence:p24-constrained-mixed-hessian",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p24-evidence-snapshot"
+    },
+    {
+      "id": "edge:558",
+      "from": "evidence:p24-conditional-scalar-gaussian",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p24-script"
+    },
+    {
+      "id": "edge:559",
+      "from": "evidence:p24-conditional-scalar-gaussian",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p24-evidence-snapshot"
+    },
+    {
+      "id": "edge:560",
+      "from": "evidence:p24-real-contour-obstruction",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p24-script"
+    },
+    {
+      "id": "edge:561",
+      "from": "evidence:p24-real-contour-obstruction",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p24-evidence-snapshot"
+    },
+    {
+      "id": "edge:562",
+      "from": "artifact:p24-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:563",
+      "from": "artifact:p24-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:564",
+      "from": "artifact:p24-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p24"
+    },
+    {
+      "id": "edge:565",
+      "from": "concept:constraint-preserving-versus-fixed-length-hessian",
+      "relation": "CITES",
+      "to": "source:halliwell-1988",
+      "note": "The source frames lapse integration and the Hamiltonian-constraint boundary; the Phase 24 rank calculation remains repository evidence."
+    },
+    {
+      "id": "edge:566",
+      "from": "concept:connected-boundary-response-versus-quantum-entanglement",
+      "relation": "CITES",
+      "to": "source:barvinsky-nesterov-2005",
+      "note": "The source frames boundary response versus bulk operators; it does not infer a positive state from the Phase 24 mixed Hessian."
+    },
+    {
+      "id": "edge:567",
+      "from": "concept:boundary-response-hessian-versus-bulk-morse-spectrum",
+      "relation": "CITES",
+      "to": "source:barvinsky-nesterov-2005"
+    },
+    {
+      "id": "edge:568",
+      "from": "concept:boundary-response-hessian-versus-bulk-morse-spectrum",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978"
+    },
+    {
+      "id": "edge:569",
+      "from": "concept:conditional-fixed-scale-gaussian-versus-physical-gravitational-state",
+      "relation": "CITES",
+      "to": "source:bombelli-et-al-1986",
+      "note": "The source supplies Gaussian Schmidt-entropy framing only; the physical gravitational interpretation remains open."
+    },
+    {
+      "id": "edge:570",
+      "from": "concept:conditional-fixed-scale-gaussian-versus-physical-gravitational-state",
+      "relation": "CITES",
+      "to": "source:donnelly-freidel-2016",
+      "note": "The source frames the gravity factorization caveat; it does not construct the two-boundary state."
+    },
+    {
+      "id": "edge:571",
+      "from": "open:p24-gravitational-thimble-and-bulk-determinant",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978"
+    },
+    {
+      "id": "edge:572",
+      "from": "open:p24-gravitational-thimble-and-bulk-determinant",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1989"
+    },
+    {
+      "id": "edge:573",
+      "from": "open:p24-physical-two-boundary-density-and-entropy",
+      "relation": "CITES",
+      "to": "source:donnelly-freidel-2016"
+    },
+    {
+      "id": "edge:574",
+      "from": "open:p24-physical-two-boundary-density-and-entropy",
+      "relation": "CITES",
+      "to": "source:halliwell-1988"
+    },
+    {
+      "id": "edge:575",
+      "from": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P19_CECOTTI_TRAJECTORY_REDUCES_TO_STAROBINSKY_POTENTIAL",
+      "note": "Phase 24 uses the canonical Starobinsky scalar in one connected Euclidean interval; it does not inherit a local-SUGRA or state construction."
+    },
+    {
+      "id": "edge:576",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P19_BOSONIC_TIME_REFLECTION_DATA_LEAVE_PHI0_FREE",
+      "note": "The new connected saddle still supplies rather than selects its central scalar amplitude."
+    },
+    {
+      "id": "edge:577",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+      "note": "A classical connected response does not replace the missing quantum-cosmological selection measure."
+    },
+    {
+      "id": "edge:578",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "note": "Phase 24 keeps the amplitude Hessian, density precision, and covariance factor of two explicit in the conditional scalar block."
+    },
+    {
+      "id": "edge:579",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "note": "Unlike the supplied positive spectral bridge of Phase 23, the real connected interval does not yet define a positive normalizable density."
+    },
+    {
+      "id": "edge:580",
+      "from": "claim:P24_CONNECTED_REAL_STAROBINSKY_INTERVAL_SADDLE_EXISTS",
+      "relation": "MOTIVATES",
+      "to": "open:p24-gravitational-thimble-and-bulk-determinant"
+    },
+    {
+      "id": "edge:581",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "MOTIVATES",
+      "to": "open:p24-gravitational-thimble-and-bulk-determinant"
+    },
+    {
+      "id": "edge:582",
+      "from": "claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE",
+      "relation": "MOTIVATES",
+      "to": "open:p24-physical-two-boundary-density-and-entropy"
+    },
+    {
+      "id": "edge:583",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "MOTIVATES",
+      "to": "open:p24-physical-two-boundary-density-and-entropy"
+    },
+    {
+      "id": "edge:584",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "MOTIVATES",
+      "to": "open:p24-physical-two-boundary-density-and-entropy"
+    },
+    {
+      "id": "edge:585",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "MOTIVATES",
+      "to": "open:p19-minisuperspace-phi0-measure"
+    },
+    {
+      "id": "edge:586",
+      "from": "claim:P24_FIXED_SCALE_SCALAR_SUBBLOCK_DEFINES_A_CONDITIONAL_POSITIVE_GAUSSIAN",
+      "relation": "MOTIVATES",
+      "to": "open:p22-gauge-fixed-local-sugra-seam-density"
+    },
+    {
+      "id": "edge:587",
+      "from": "claim:P24_REAL_BOUNDARY_HESSIAN_DEFINES_A_POSITIVE_NORMALIZABLE_GAUSSIAN_PRECISION",
+      "relation": "MOTIVATES",
+      "to": "open:p22-gauge-fixed-local-sugra-seam-density"
+    },
+    {
+      "id": "edge:588",
+      "from": "claim:P24_SADDLE_SELECTS_PHI0_OR_A_SUSY_BREAKING_SCALE",
+      "relation": "MOTIVATES",
+      "to": "open:p20-exact-starobinsky-wdw-state"
     }
   ],
   "kg_bridges": [
@@ -6461,6 +7310,16 @@
       "lookup_key": "P18 sharp temporal seam UV admissible finite energy state",
       "checked_at_utc": "2026-08-16T16:42:39Z",
       "note": "No safe direct live KG node was identified; no external UID was invented."
+    },
+    {
+      "local_node_id": "phase:p24",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T14:21:16Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase24 connected Euclidean Starobinsky interval Hessian",
+      "note": "The existing sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24 is a distinct 2026-08-09 planning node and was not reused; no authorized external UID exists."
     }
   ]
 }

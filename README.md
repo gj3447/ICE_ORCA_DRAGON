@@ -179,7 +179,7 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 | runnable Python kernels | 56 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 251 nodes, 511 edges, 56 claims | `./ice ontology summary` |
+| research ontology | 281 nodes, 588 edges, 63 claims | `./ice ontology summary` |
 | latest runnable CPT seam phase | Phase 25 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
@@ -288,6 +288,7 @@ research contract or automatic physics verdict.
 ./ice ontology summary
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
+./ice ontology trace claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE --depth 2
 ```
 
 ## Scientific scope
