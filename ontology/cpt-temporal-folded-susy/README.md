@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T18:12:31.429Z`; 461 nodes, 1157 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 59/59 stored hashes (57 artifacts and 2 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T18:31:54.008Z`; 478 nodes, 1224 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 62/62 stored hashes (60 artifacts and 2 policies).
 
 ## Quick answers
 
@@ -38,7 +38,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 31 provide the physical BFV determinant or a SUSY/SUGRA Hessian? | No. Exact momentum elimination reproduces the Phase-30 configuration Hessian, the unreduced canonical sign is stable, and nonzero homogeneous quartets cancel only in a same-regulator relative normalization. The bare bosonic BFV sign still alternates, and “super-Hessian” here is BFV grading rather than a local-SUSY fluctuation operator. | `claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT`; `claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE`; `claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION`; `claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE` |
 | Does Phase 32 fix the signed local or global connected-saddle PL coefficient? | No. A separately specified below-origin full real lapse contour has one recorded finite-radius **projected lapse-base crossing**; its coordinate sign is `+1` only under declared orientation conventions. The positive half-line has endpoint contact. The signed full-joint local intersection, continuous-arc proof, complete dual census, determinant-line trivialization, CPT/Pin contour selection, global coefficient, and state remain open. | `claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING`; `claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION`; `claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION`; `open:p28-global-relative-homology-and-intersection`; `open:p32-cpt-pin-lapse-class-selection` |
 | Does Phase 33 complete the uniform fold kernel or fix the global connected-saddle coefficient? | No. It confirms a transverse simple Dirichlet fold, its two-branch Airy action scale, and a regular rank-two local Ai/Bi space despite divergent separate Van Vleck terms. The fold is not a lapse saddle and its local chart adds no Phase-32 crossing. The contour/Stokes multiplier, analytic amplitude, determinant line, full dual census, global `n_sigma`, and physical state remain open. | `claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE`; `claim:P33_RECORDED_DIRICHLET_FOLD_IS_ADDITIONAL_LAPSE_SADDLE`; `claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE`; `claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL`; `claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–33 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–33 scope guards |
+| Does Phase 34 transport the incoming cycle through the fold or fix the global coefficient? | No. It records 47 incoming real points directed toward the fold and separately constructs a conjugate pair of reduced constant-phase branches beyond it through `Re T=13`. It does not decide which outgoing arm, if either, carries the incoming cycle. The Airy connection, determinant line, full joint field–lapse flow, complete sheet/end census, global `n_sigma`, and state remain open. | `claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD`; `claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD`; `open:p34-full-joint-dual-determinant-and-global-census` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–34 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–34 scope guards |
 
 ### Phase 23 reading path
 
@@ -117,6 +118,16 @@ The graph's `reading-path:simple-fold-to-global-airy-cycle` separates local unif
 3. the divergent separate Van Vleck proxies diagnose failure of isolated-saddle asymptotics, while the canonical Airy equation supplies a regular local solution space without proving the uncomputed physical measure finite;
 4. Ai/Bi regularity does not choose the relative cycle, Stokes multiplier, analytic amplitude, or determinant line, and the radius-one fold chart is locally disjoint from the Phase-32 lapse pieces;
 5. `open:p33-airy-cycle-amplitude-and-global-continuation` returns the path to the still-open global relative-homology, full superdeterminant, endpoint-measure, and physical-state gates.
+
+### Phase 34 reading path
+
+The graph's `reading-path:reduced-fold-dual-to-global-joint-cycle` keeps branch existence separate from an oriented cycle connection:
+
+1. `claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD` records 47 post-saddle real points with `W_T<0`;
+2. `claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD` separately supports conjugate reduced branches beyond the fold through `Re T=13`;
+3. the declared flat-`T` flow direction and bounded BVP table do not connect the incoming cycle to either outgoing arm because the `T-T_c~u^2` chart degenerates at the fold;
+4. the sampled Jacobi and lapse-base exclusions are bounded statements, not a complete sheet, good-end, or intersection census;
+5. `open:p34-full-joint-dual-determinant-and-global-census` requires the Airy connection, determinant-line orientation, full joint field–lapse flow, and global relative cycle before assigning `n_sigma` or a physical state.
 
 ## Concept map
 
@@ -298,6 +309,15 @@ flowchart TD
   Fold33 --> AiryOpen33["OPEN: cycle · amplitude · global continuation"]
   Rank33 --> AiryOpen33
   Patch33 --> Global28
+
+  Programme --> P34["Phase 34 · reduced fold branches"]
+  P34 --> In34["Incoming real segment aims at fold<br/>SUPPORTED on 47 points"]
+  P34 --> Out34["Conjugate directed branches beyond fold<br/>SUPPORTED through Re T=13"]
+  P34 --> Jac34["Sampled arm has another Jacobi zero<br/>CONTRADICTED at frozen points"]
+  P34 --> Cross34["Bounded arms add Phase-32 crossing<br/>CONTRADICTED on tracked bases"]
+  In34 --> Join34["OPEN: oriented Airy connection · determinant line"]
+  Out34 --> Join34
+  Join34 --> Global28
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -520,6 +540,7 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p31-unreduced-proper-time-hybrid-bfv-control` | Continuum saddle sampled on midpoint lattices, unreduced homogeneous `(q,p,T)` canonical Hessians, truncated continuum gauge harmonics, nonzero alpha=0 BFV quartets, and one bounded local `p_a` scan | Exact finite-lattice critical point, absolute BFV phase/measure, constraint reduction, gauge independence, global clock/kernel transform, inhomogeneous modes, physical state, or SUSY/SUGRA Hessian |
 | `scope:p32-specified-lapse-bypasses-and-tracked-dual` | Inherited connected saddle, causal half-line and full-real-line prescriptions, finite lower/upper bypasses, declared principal momentum lift, and bounded real/complex continuation near zero lapse | CPT/Pin contour selection, complete upward-cycle census, oriented inhomogeneous superdeterminant, global PL coefficient, physical state, or SUSY spectrum |
 | `scope:p33-frozen-simple-fold-airy-control` | Inherited fixed-boundary real branch near its positive-real Dirichlet fold, two actual solutions at seven `delta` values, canonical Airy normal form, and radius-one local contour comparison | Selected Airy contour/amplitude, absolute determinant line, full dual continuation, global `n_sigma`, physical WDW measure/kernel/state, or SUSY spectrum |
+| `scope:p34-frozen-reduced-stationary-family-continuation` | Forty-seven incoming real samples, deterministic fold soft orientation, conjugate constant-`Im W` stationary sheets, and fourteen upper-arm endpoint-Jacobi samples through `Re T=13` in the declared flat complex-`T` metric | Oriented incoming-to-outgoing connection, full joint field–lapse flow, determinant-line transport, all sheets/good ends, global `n_sigma`, physical WDW state, or SUSY spectrum |
 
 ## Open construction ledger
 
@@ -567,12 +588,14 @@ All entries below have state `OPEN` in the graph.
 | `open:p29-physical-endpoint-measure-and-ordering` | Derive the physical WDW endpoint measure, factor ordering, and inner product rather than supplying local flat `da dphi` |
 | `open:p32-cpt-pin-lapse-class-selection` | Construct a complete CPT/Pin bra--ket lift and determine whether it selects the below-origin full-line ket class, its conjugate bra, and their oriented determinant data |
 | `open:p33-airy-cycle-amplitude-and-global-continuation` | Transport one regulated relative cycle and determinant line into the fold chart, fix its Airy contour/Stokes multiplier and analytic amplitude, then continue every joint dual arm before assigning a uniform physical kernel or global `n_sigma` |
+| `open:p34-full-joint-dual-determinant-and-global-census` | Determine which outgoing fold arm, if either, carries the incoming cycle; transport the determinant line, compute the full joint field–lapse flow, enumerate every sheet and good end, and only then assign global `n_sigma` or a physical state |
 | Canonical BFV sign vs physical determinant line | A stable unreduced `(q,p,T)` determinant sign and same-regulator quartet cancellation do not fix momentum-contour orientation, zero modes, absolute phase, or the constraint-reduced inhomogeneous superdeterminant. |
 | Positive lapse half-line vs full real lapse | The former is a causal sourced resolvent with endpoint contact; the latter is a separate group-averaging contour whose relative-homology bypass must be specified. |
 | Projected coordinate sign vs signed joint/global coefficient | A finite-radius projected crossing on one tracked lapse base has coordinate sign `+1` only under the declared orientations; it is neither a signed full-joint local intersection nor the sum over every complete upward component, complex sheet, end, Stokes jump, and determinant-line orientation. |
 | Lateral conjugation vs CPT/Pin selection | Complex conjugation exchanges lower and upper lateral loci but does not by itself construct the physical Pin lift, select the ket contour, or prove positivity. |
+| Directed branch pair vs oriented cycle transport | Incoming and outgoing reduced branches may each follow the local dual direction while the degenerate fold chart still leaves their oriented Airy connection and determinant-line matching unknown. |
 
-The shortest honest statement of the research frontier is therefore: **a supplied connected Starobinsky interval, stationary lapse saddle, bounded constant-phase arm, measured simple-fold Airy action scale, zero-lapse distributional control, finite-cutoff coupled conformal tangent, unreduced homogeneous canonical/BFV hybrid, and one recorded below-origin projected lapse-base crossing now exist. The fold's local solution space is regular but rank two, and the crossing coordinate sign is convention-conditional; neither a selected uniform kernel nor a signed full-joint/global coefficient has been assigned. The programme still lacks the complete relative cycle and analytic amplitude, constraint-reduced oriented inhomogeneous superdeterminant, CPT/Pin contour-class selection, endpoint-completed physical WDW/BFV state, seam sector rule, and persistent soft spectrum.**
+The shortest honest statement of the research frontier is therefore: **a supplied connected Starobinsky interval, stationary lapse saddle, bounded constant-phase arm, measured simple-fold Airy action scale, zero-lapse distributional control, finite-cutoff coupled conformal tangent, unreduced homogeneous canonical/BFV hybrid, one recorded below-origin projected lapse-base crossing, one incoming real segment directed toward the fold, and a separate conjugate pair of outgoing reduced branches now exist. The fold's local solution space is regular but rank two, the crossing coordinate sign is convention-conditional, and no oriented incoming-to-outgoing Airy connection has been derived; neither a selected uniform kernel nor a signed full-joint/global coefficient has been assigned. The programme still lacks the complete relative cycle and analytic amplitude, constraint-reduced oriented inhomogeneous superdeterminant, CPT/Pin contour-class selection, endpoint-completed physical WDW/BFV state, seam sector rule, and persistent soft spectrum.**
 
 ## Repository artifacts
 
@@ -597,6 +620,7 @@ The shortest honest statement of the research frontier is therefore: **a supplie
 | 31 | [`phase31_homogeneous_bfv_superhessian.py`](../../cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py) | [`PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md`](../../cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md) | [`phase31-result.json`](./evidence/phase31-result.json) |
 | 32 | [`phase32_below_origin_lapse_intersection.py`](../../cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py) | [`PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md) | [`phase32-result.json`](./evidence/phase32-result.json) |
 | 33 | [`phase33_fold_airy_uniformization.py`](../../cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py) | [`PHASE33_FOLD_AIRY_UNIFORMIZATION.md`](../../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md) | [`phase33-result.json`](./evidence/phase33-result.json) |
+| 34 | [`phase34_directed_fold_dual_continuation.py`](../../cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py) | [`PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md`](../../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md) | [`phase34-result.json`](./evidence/phase34-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

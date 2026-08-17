@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–33 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–34 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-17T18:12:31.429Z` graph update, the collection has 461 nodes and
-1157 edges. Validation verifies 59/59 stored hashes (57 artifacts and 2 policies). The
-Phase 16–33 run snapshots contain 323 named exact checks, 149 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (150 numerical controls in all). These
+At the recorded `2026-08-17T18:31:54.008Z` graph update, the collection has 478 nodes and
+1224 edges. Validation verifies 62/62 stored hashes (60 artifacts and 2 policies). The
+Phase 16–34 run snapshots contain 328 named exact checks, 159 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (160 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -33,6 +33,7 @@ confidence.
 ./ice ontology trace claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE --depth 2
 ./ice ontology trace claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING --depth 2
 ./ice ontology trace claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE --depth 2
+./ice ontology trace claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD --depth 2
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;

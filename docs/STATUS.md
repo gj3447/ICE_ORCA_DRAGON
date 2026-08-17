@@ -374,10 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–33 is now indexed in a repository-local typed research graph with **461 nodes and 1157 directed
-relations**. It preserves 112 claims, 66 evidence groups, 36 explicit scopes, 40 open problems, 63
-literature sources, the Phase 16–33 run payloads (323 named exact checks, 149 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 59/59 verified artifact and policy hashes,
+Phase 15R–34 is now indexed in a repository-local typed research graph with **476 nodes and 1214 directed
+relations**. It preserves 115 claims, 69 evidence groups, 37 explicit scopes, 41 open problems, 63
+literature sources, the Phase 16–34 run payloads (328 named exact checks, 158 typed numerical checks, and
+one separately recorded legacy Phase-18 numerical control), 62/62 verified artifact and policy hashes,
 and cautious bridges to
 the older SYMPOSIUM KG.
 
@@ -634,6 +634,34 @@ See
 [`../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md`](../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md)
 and
 [`../cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py`](../cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 34
+
+Phase 34 returns exit 0 with **5 exact checks and 9 numerical checks**.
+
+- A deterministic positive-$a_c$ orientation fixes the fold soft coordinate. Both actual real sheets
+  have $W_T<0$ and the recorded projected dual direction sends them into the fold.
+- The Phase-33 action-gap seed gives
+  $\operatorname{Im}T=0.63089949\,\tau^{3/2}+O(\tau^{5/2})$ on the upper arm and
+  $\operatorname{Im}u<0$; complex conjugation supplies the lower arm.
+- On the frozen reflection-symmetric stationary family and declared flat complex-$T$ metric, the
+  constant-$\operatorname{Im}W$ tangent is a positive reparametrization of
+  $dT/ds=-\overline{W_T}$. Independently re-solved centered differences agree with the
+  Hamilton--Jacobi slope to a largest normalized difference of $1.29\times10^{-6}$.
+- The upper complex boundary-value branch is continued through
+  $T=13+2.89138959974i$. All fourteen frozen endpoint reintegrations pass; the smallest sampled
+  endpoint-Jacobi singular value is $0.05780$.
+- Because the bounded chart has $\operatorname{Re}T>T_c>9.7$, neither conjugate lapse base meets the
+  Phase-32 imaginary axis or its $r\le0.1$ endpoint caps. This is not a census of uncontinued arms,
+  other sheets, unsampled Jacobi zeros, or good ends.
+- The committed runnable catalog is now 65. The full joint field--lapse metric and flow, oriented Airy
+  connection and determinant line, complete relative cycles, global $n_\sigma$, gauge-reduced kernel,
+  and physical trace-class state remain open.
+
+See
+[`../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md)
+and
+[`../cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py`](../cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py).
 
 ## Historical scientific ledger
 

@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 64 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 65 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -46,6 +46,7 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md`](../cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md) | unreduced canonical lift, nonzero homogeneous BFV quartets, relative normalization, and clock-polarization obstruction |
 | [`../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md) | positive-half-line endpoint contact versus a declared below-origin projected lapse-base crossing; signed joint intersection remains open |
 | [`../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md`](../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md) | simple-fold Airy action scale, separate-saddle divergence, local solution-rank obstruction, and global contour gate |
+| [`../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md) | bounded directed reduced-dual continuation through the fold and full-joint/global-census gate |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

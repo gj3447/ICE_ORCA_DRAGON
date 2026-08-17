@@ -4,7 +4,7 @@
 
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-64-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-65-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -170,6 +170,7 @@ aims to explain, not evidence that the route is correct.
 | [Phase 31](cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md) | Exact momentum elimination reproduces the Phase-30 configuration Hessian. The unreduced proper-time-gauge canonical sign is stable, and nonzero homogeneous BFV quartet factors cancel in a same-regulator benchmark/reference ratio. | An absolute BFV phase or normalization, constraint-reduced continuum determinant, global $p_a$ clock, global PL coefficient, physical probability, or SUSY/SUGRA Hessian. “Super-Hessian” here is BFV grading only. |
 | [Phase 32](cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md) | For an independently specified full real lapse contour bypassing zero from below, the tracked homogeneous lapse base has one recorded finite-radius projected crossing. Its coordinate sign is $+1$ only under the declared ambient, column, dual-flow, and Gaussian-lift orientations. The positive half-line instead has endpoint contact. | A signed full-joint local intersection, the complete global coefficient $n_\sigma$, continuous-arc proof beyond five samples on each of four arcs, a CPT/Pin derivation of the contour class, the full oriented superdeterminant line, or a positive physical seam state. |
 | [Phase 33](cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md) | The recorded Dirichlet caustic is a transverse simple fold. Its two real branches determine the local Airy action scale, soft Jacobi scaling, and opposite determinant signs; the canonical Airy solution space remains regular when the separate Van Vleck terms diverge. | A unique Airy contour/Stokes multiplier, analytic amplitude, absolute determinant line, complete dual continuation, global $n_\sigma$, uniform physical WDW kernel, or trace-class seam state. The fold is not another lapse saddle and its local chart adds no Phase-32 crossing. |
+| [Phase 34](cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md) | On the frozen reflection-symmetric stationary family, both real sheets enter the fold and seed conjugate constant-phase arms. The upper reduced flat-$T$ dual is continued through $T=13+2.8913896i$; no sampled endpoint-Jacobi zero or bounded Phase-32 lapse-base crossing occurs. | The full joint field--lapse metric and gradient flow, Airy connection and oriented determinant-line transport, all sheets and good ends, global $n_\sigma$, gauge-reduced physical kernel, or trace-class state. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -185,8 +186,10 @@ no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomp
    every intersection with a separately specified physical lapse contour, and remove the endpoint and
    mode regulators. Phase 31 supplies only an unreduced homogeneous BFV hybrid, while Phase 32 supplies
    one projected lapse-base crossing with a convention-conditional coordinate sign—not a signed joint
-   local or global coefficient. Phase 33 uniformizes the recorded simple fold locally but leaves the
-   Airy contour, analytic amplitude, determinant line, and every global dual arm open. The full oriented
+   local or global coefficient. Phase 33 uniformizes the recorded simple fold locally, and Phase 34
+   continues one conjugate reduced stationary-family pair through `Re T=13`; neither supplies the full
+   joint field--lapse flow. The Airy connection, determinant line, every global dual arm and good end,
+   and the full oriented
    inhomogeneous superdeterminant, physical WDW endpoint measure, and CPT/Pin contour-class selection
    remain required.
 4. **Three-form/flux selection:** derive the harmonic- and flux-dependent seam kernel, charge lattice,
@@ -208,11 +211,11 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 64 | `./ice list --json` |
+| runnable Python kernels | 65 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 461 nodes, 1157 edges, 112 claims | `./ice ontology summary` |
-| latest runnable CPT seam phase | Phase 33 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| research ontology | 476 nodes, 1214 edges, 115 claims | `./ice ontology summary` |
+| latest runnable CPT seam phase | Phase 34 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.
@@ -293,6 +296,7 @@ Use a name returned by `./ice list` rather than depending on a physical path:
 ./ice run phase31_homogeneous_bfv_superhessian
 ./ice run phase32_below_origin_lapse_intersection
 ./ice run phase33_fold_airy_uniformization
+./ice run phase34_directed_fold_dual_continuation
 ```
 
 Direct runs may update an adjacent result file. Inspect `git status` afterward. Use `./ice repro` for a

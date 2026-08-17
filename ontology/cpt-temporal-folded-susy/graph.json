@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T18:12:31.429Z",
+  "updated_at_utc": "2026-08-17T18:31:54.008Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -196,6 +196,16 @@
         "claim:P33_SEPARATE_VAN_VLECK_DIVERGENCE_FORCES_EXACT_KERNEL_DIVERGENCE",
         "claim:P33_LOCAL_AIRY_REGULARITY_UNIQUELY_SELECTS_UNIFORM_KERNEL",
         "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION"
+      ]
+    },
+    {
+      "question": "Does Phase 34 complete the full joint dual or fix the global intersection coefficient?",
+      "answer": "No. On the frozen reflection-symmetric stationary family it records an incoming real segment directed toward the fold and separately constructs conjugate constant-phase branches beyond it through Re T=13, with no sampled endpoint-Jacobi zero or bounded lapse-base crossing. Which outgoing arm, if either, carries the incoming cycle is open, together with the full field--lapse metric and flow, Airy connection and determinant-line transport, all sheets and good ends, global n_sigma, and physical state.",
+      "claim_ids": [
+        "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+        "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+        "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+        "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO"
       ]
     }
   ],
@@ -484,6 +494,26 @@
         "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION",
         "open:p33-airy-cycle-amplitude-and-global-continuation",
         "open:p29-conformal-bfv-uniform-parametrix",
+        "open:p28-global-relative-homology-and-intersection",
+        "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p28-physical-state-and-density"
+      ]
+    },
+    {
+      "id": "reading-path:reduced-fold-dual-to-global-joint-cycle",
+      "title": "From the directed reduced fold arm to the still-open joint relative cycle",
+      "summary": "Follow the oriented soft coordinate, the recorded incoming real direction, and the separately located conjugate constant-phase branches, verify their reduced flat-T directions and bounded extent, and stop before asserting an oriented Airy connection, full joint field--lapse cycle, or global coefficient.",
+      "nodes": [
+        "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
+        "concept:fold-soft-orientation-and-airy-seed",
+        "concept:reduced-stationary-family-dual-versus-full-joint-flow",
+        "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+        "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+        "concept:bounded-complex-continuation-versus-global-dual-census",
+        "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+        "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+        "open:p34-full-joint-dual-determinant-and-global-census",
+        "open:p33-airy-cycle-amplitude-and-global-continuation",
         "open:p28-global-relative-homology-and-intersection",
         "open:p28-full-gauge-reduced-superdeterminant",
         "open:p28-physical-state-and-density"
@@ -5662,9 +5692,9 @@
       "id": "open:p33-airy-cycle-amplitude-and-global-continuation",
       "type": "open_problem",
       "title": "Complete the Airy cycle, amplitude, and global continuation",
-      "summary": "The local action-scale magnitude is known in the declared real exp(-W/hbar) chart, but an off-real canonical-map/exponent branch remains to be derived. The original relative cycle and oriented determinant line must then be transported into that chart to select the Airy contour/Stokes multiplier; the analytic amplitude and every dual arm must be continued before a uniform physical kernel or global coefficient can be assigned.",
+      "summary": "The local action-scale magnitude is known in the declared real exp(-W/hbar) chart, but an off-real canonical-map/exponent branch remains to be derived. The original relative cycle must then select the Airy contour/Stokes combination, while the determinant line separately fixes the semiclassical prefactor orientation and phase. The analytic amplitude and every dual arm must be continued before a uniform physical kernel or global coefficient can be assigned.",
       "state": "OPEN",
-      "question": "Can one derive the off-real canonical map/exponent branch, lift a regulated physical relative cycle and determinant line into the resulting Airy chart, fix its contour/Stokes multiplier and analytic amplitude, continue every joint dual arm to its good ends, and yield a gauge-reduced uniform kernel with a global n_sigma and trace-class state?"
+      "question": "Can one derive the off-real canonical map/exponent branch, use a regulated physical relative cycle to fix the resulting Airy contour/Stokes multiplier, transport the determinant line to orient the prefactor, determine the analytic amplitude, continue every joint dual arm to its good ends, and yield a gauge-reduced uniform kernel with a global n_sigma and trace-class state?"
     },
     {
       "id": "artifact:p33-script",
@@ -5675,7 +5705,7 @@
       "artifact_kind": "executable",
       "path": "cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py",
       "sha256": "844c1262332c06b17def3506a0112f3230b12cbda153750d4964ca9f96a4485b",
-      "introduced_in_commit": "25d4eb9933342824794a2bc39b434899ba566ac1"
+      "introduced_in_commit": "e1b6e055a72dbf9e018ced01f6becdb34705238b"
     },
     {
       "id": "artifact:p33-report",
@@ -5686,7 +5716,7 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md",
       "sha256": "248923359787cf61c18c0e556155ae9ee577100b663825510ac5c89ee61c27c0",
-      "introduced_in_commit": "25d4eb9933342824794a2bc39b434899ba566ac1"
+      "introduced_in_commit": "e1b6e055a72dbf9e018ced01f6becdb34705238b"
     },
     {
       "id": "artifact:p33-evidence-snapshot",
@@ -5697,6 +5727,193 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase33-result.json",
       "sha256": "0293f0deea25b5da7b31467db430ebb538aba1304f5fceb7bf527a0332549724"
+    },
+    {
+      "id": "phase:p34",
+      "type": "phase",
+      "title": "Phase 34 — bounded dual-aligned stationary branches around the fold",
+      "summary": "A frozen reflection-symmetric stationary-family calculation that records an incoming real segment directed toward the fold and a separate conjugate pair of outgoing constant-phase branches through Re T=13. It does not orient the incoming Picard--Lefschetz cycle into either outgoing arm or compute the full joint field--lapse flow.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:fold-soft-orientation-and-airy-seed",
+      "type": "concept",
+      "title": "Oriented fold soft coordinate and Airy seed",
+      "summary": "The Phase-25 null vector is normalized with positive scale-factor component, fixing u=v_R^T(c-c_c); the finite-resolution Phase-33 action-gap data then locate conjugate local constant-phase seeds with Im T proportional to tau^(3/2) and upper-arm Im u<0, without selecting which arm carries the incoming cycle.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:reduced-stationary-family-dual-versus-full-joint-flow",
+      "type": "concept",
+      "title": "Reduced stationary-family dual versus full joint field--lapse flow",
+      "summary": "On the declared one-complex-dimensional stationary family and flat T metric, a constant-Im W curve with Re W_T<0 is a positive reparametrization of dT/ds=-conj(W_T). This does not construct the field-dependent joint metric, its off-diagonal blocks, or the full field--lapse gradient cycle.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:bounded-complex-continuation-versus-global-dual-census",
+      "type": "concept",
+      "title": "Bounded complex continuation versus global dual census",
+      "summary": "A conjugate pair of sampled complex stationary sheets can be continued with bounded residuals and no sampled Jacobi zero or lapse-base crossing without enumerating every sheet, unsampled zero, good end, or component of the global relative cycle.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "type": "claim",
+      "title": "A bounded directed constant-phase pair exists beyond the fold",
+      "summary": "Supported only as branch existence and direction on the frozen reflection-symmetric stationary family: conjugate complex arms exist beyond the fold, and the upper branch remains aligned with -conj(W_T) in the declared flat T metric through T=13+2.89138959974 i. No oriented incoming-to-outgoing connection is inferred.",
+      "state": "SUPPORTED_ON_FROZEN_REDUCED_STATIONARY_FAMILY",
+      "claim_id": "P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "statement": "For the frozen reflection-symmetric fixed-boundary stationary family, a conjugate pair of bounded constant-phase complex branches exists beyond the Phase-25 fold through Re T=13 and follows the declared reduced flat-T dual direction.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "type": "claim",
+      "title": "The recorded incoming real stationary segment is directed toward the fold",
+      "summary": "Supported on 47 post-saddle real fixed-boundary points from T=0.8933707568 to T_c-0.0002: every recorded W_T is negative and every endpoint residual is below 2.9e-13. This does not transport the incoming cycle into an outgoing complex arm.",
+      "state": "SUPPORTED_ON_RECORDED_INCOMING_REAL_SEGMENT",
+      "claim_id": "P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "statement": "On the recorded Phase-25 post-saddle real stationary segment, the declared reduced flat-T dual direction points toward the Dirichlet fold.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "type": "claim",
+      "title": "The tracked complex fold arms add a Phase-32 lapse-base crossing",
+      "summary": "Contradicted on the bounded tracked bases: every point has prescribed Re T>T_c>9.7, so neither conjugate arm can meet the imaginary T axis or the Phase-32 endpoint caps with r<=0.1. This is not a global joint-cycle intersection theorem.",
+      "state": "CONTRADICTED_ON_BOUNDED_TRACKED_LAPSE_BASES",
+      "claim_id": "P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "statement": "Between the fold and Re T=13, one of the tracked conjugate reduced lapse bases intersects the Phase-32 imaginary-axis full-lapse contour or one of its r<=0.1 endpoint caps.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "type": "claim",
+      "title": "The sampled complex arm contains another endpoint-Jacobi zero",
+      "summary": "Contradicted at the fourteen frozen continuation points: the smallest sampled endpoint-Jacobi singular value is 0.05780. A zero between samples, on another sheet, or in an inhomogeneous mode remains open.",
+      "state": "CONTRADICTED_AT_FROZEN_SAMPLE_POINTS",
+      "claim_id": "P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "statement": "At least one frozen point on the recorded upper complex stationary-family arm through Re T=13 has a singular endpoint Jacobi block.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p34-exact-soft-orientation-and-reduced-flow",
+      "type": "evidence",
+      "title": "Phase 34 exact soft-orientation and reduced-flow checks",
+      "summary": "Five exact checks fix the soft-vector sign, cancel the leading Airy-seed phase, identify constant phase with a positively reparametrized reduced flat-T dual, pair the complex arms by conjugation, and orient both real sheets into the fold.",
+      "state": "VERIFIED",
+      "observed_status": "5_EXACT_PASS",
+      "check_ids": [
+        "P34.orientation.deterministic_soft_vector",
+        "P34.seed.Airy_three_halves_constant_phase",
+        "P34.flow.constant_phase_is_reduced_dual",
+        "P34.conjugation.upper_lower_fold_arms",
+        "P34.flow.both_real_sheets_enter_fold"
+      ]
+    },
+    {
+      "id": "evidence:p34-complex-bvp-and-flow-continuation",
+      "type": "evidence",
+      "title": "Phase 34 complex BVP and reduced-flow continuation checks",
+      "summary": "Seven numerical checks reconstruct the fold seed, verify both real-sheet directions, solve and independently reintegrate the complex boundary-value family, keep Im W constant while Re W decreases, compare independently re-solved centered derivatives with the Hamilton--Jacobi slope, verify the three-halves seed, and reproduce the lower conjugate arm.",
+      "state": "VERIFIED",
+      "observed_status": "7_NUMERICAL_PASS",
+      "check_ids": [
+        "P34.seed.frozen_P33_coefficients",
+        "P34.flow.actual_real_sheets_enter_fold",
+        "P34.continuation.actual_complex_BVP",
+        "P34.continuation.constant_ImW_and_decreasing_ReW",
+        "P34.flow.computed_curve_derivative",
+        "P34.seed.imaginary_time_three_halves",
+        "P34.conjugation.lower_arm"
+      ]
+    },
+    {
+      "id": "evidence:p34-recorded-incoming-real-segment",
+      "type": "evidence",
+      "title": "Phase 34 recorded incoming real-segment direction check",
+      "summary": "One numerical check samples 47 post-saddle real stationary points, verifies W_T<0 throughout the recorded segment, and bounds the endpoint residual below 2.9e-13 without constructing the missing Airy connection.",
+      "state": "VERIFIED",
+      "observed_status": "1_NUMERICAL_PASS",
+      "check_ids": [
+        "P34.flow.recorded_incoming_real_segment"
+      ]
+    },
+    {
+      "id": "evidence:p34-bounded-jacobi-and-lapse-separation",
+      "type": "evidence",
+      "title": "Phase 34 sampled Jacobi and bounded lapse-separation checks",
+      "summary": "Two numerical checks find no endpoint-Jacobi zero at the frozen complex points and prove bounded lapse-base disjointness from the Phase-32 imaginary axis and r<=0.1 caps using the prescribed monotone positive Re T chart.",
+      "state": "VERIFIED",
+      "observed_status": "2_NUMERICAL_PASS",
+      "check_ids": [
+        "P34.Jacobi.no_sampled_complex_zero",
+        "P34.intersection.bounded_lapse_base_disjointness"
+      ]
+    },
+    {
+      "id": "scope:p34-frozen-reduced-stationary-family-continuation",
+      "type": "scope",
+      "title": "P34 frozen reduced stationary-family continuation",
+      "summary": "The inherited equal-boundary homogeneous Starobinsky family, deterministic fold soft orientation, conjugate constant-Im W fixed-boundary sheets, and a robust table bounded by Re T<=13 in the declared flat complex-T metric.",
+      "state": "ACTIVE",
+      "includes": [
+        "the Phase-25 fold center and deterministic positive-a_c soft-vector orientation",
+        "the finite-resolution Phase-33 Airy three-halves seed and recorded near-fold scaling",
+        "forty-seven post-saddle samples on the incoming real stationary branch",
+        "upper and lower reflection-symmetric constant-Im W fixed-boundary stationary sheets",
+        "pointwise alignment with -conj(W_T) in the declared reduced flat complex-T metric",
+        "fourteen upper-arm endpoint Jacobi samples with independently reintegrated full intervals through Re T=13",
+        "lapse-base disjointness from the Phase-32 imaginary axis and r<=0.1 caps on the bounded chart"
+      ],
+      "excludes": [
+        "the full joint field--lapse metric, its off-diagonal blocks, or its gradient flow",
+        "oriented transport of the incoming Picard--Lefschetz cycle into either outgoing arm",
+        "an oriented Airy connection matrix, determinant-line transport, or full semiclassical prefactor",
+        "all complex sheets, unsampled Jacobi zeros, good ends, infinity, or a complete dual census",
+        "the original full relative cycle, signed joint intersection matrix, or global n_sigma",
+        "inhomogeneous SUGRA fluctuations, a WDW density, trace-class seam state, initial-value peak, or SUSY spectrum"
+      ]
+    },
+    {
+      "id": "open:p34-full-joint-dual-determinant-and-global-census",
+      "type": "open_problem",
+      "title": "Connect the stationary branches and construct the full joint dual census",
+      "summary": "The recorded incoming segment and outgoing branch pair do not determine their oriented connection across the degenerate T chart, nor do they supply the joint field--lapse metric or cycle. The relative cycle and Airy connection must determine which outgoing arm, if either, carries the incoming cycle; the determinant line must separately orient the semiclassical prefactor. Every joint dual arm and good end must then be continued and all local intersections oriented before assigning global n_sigma or a physical kernel.",
+      "state": "OPEN",
+      "question": "Can the relative cycle and Airy connection determine which outgoing arm, if either, carries the recorded incoming cycle, can the determinant line orient its prefactor, and can that construction be lifted to a complete joint field--lapse relative cycle with enumerated sheets, good ends, signed global n_sigma, and a gauge-reduced trace-class WDW/seam state?"
+    },
+    {
+      "id": "artifact:p34-script",
+      "type": "artifact",
+      "title": "Phase 34 executable",
+      "summary": "Exact and bounded numerical soft-orientation, Airy-seed, reduced-flow, complex-BVP, Jacobi, conjugation, and lapse-separation controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py",
+      "sha256": "c35d9fd605e46d791ae74b58344565578a84a7803745481859b41b26699e9527",
+      "introduced_in_commit": "4cd7e7215077137c576dcdab2765beab09d1a09b"
+    },
+    {
+      "id": "artifact:p34-report",
+      "type": "artifact",
+      "title": "Phase 34 report",
+      "summary": "Human-readable incoming real-segment and outgoing dual-aligned stationary-branch controls, bounded complex-sheet table, sampled Jacobi and lapse-separation results, and full-joint scope boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md",
+      "sha256": "14c2c6a63d1acc8ca53b55513f13364b92598f54f2bf03099f176bb538048952",
+      "introduced_in_commit": "4cd7e7215077137c576dcdab2765beab09d1a09b"
+    },
+    {
+      "id": "artifact:p34-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 34 evidence snapshot",
+      "summary": "Persisted five-exact and ten-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase34-result.json",
+      "sha256": "44240252eaf9bec2f63c374056c90c26e81f222eae080631e7f0e66269b4651a"
     }
   ],
   "edges": [
@@ -12883,6 +13100,413 @@
       "from": "open:p33-airy-cycle-amplitude-and-global-continuation",
       "relation": "CITES",
       "to": "source:gibbons-hawking-perry-1978"
+    },
+    {
+      "id": "edge:1158",
+      "from": "phase:p34",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1159",
+      "from": "scope:p34-frozen-reduced-stationary-family-continuation",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1160",
+      "from": "concept:fold-soft-orientation-and-airy-seed",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1161",
+      "from": "concept:reduced-stationary-family-dual-versus-full-joint-flow",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1162",
+      "from": "concept:bounded-complex-continuation-versus-global-dual-census",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1163",
+      "from": "artifact:p34-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1164",
+      "from": "artifact:p34-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1165",
+      "from": "artifact:p34-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1166",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1167",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p34-frozen-reduced-stationary-family-continuation"
+    },
+    {
+      "id": "edge:1168",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p34-report"
+    },
+    {
+      "id": "edge:1169",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "ABOUT",
+      "to": "concept:reduced-stationary-family-dual-versus-full-joint-flow"
+    },
+    {
+      "id": "edge:1170",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1171",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p34-frozen-reduced-stationary-family-continuation"
+    },
+    {
+      "id": "edge:1172",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p34-report"
+    },
+    {
+      "id": "edge:1173",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "ABOUT",
+      "to": "concept:bounded-complex-continuation-versus-global-dual-census"
+    },
+    {
+      "id": "edge:1174",
+      "from": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1175",
+      "from": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p34-frozen-reduced-stationary-family-continuation"
+    },
+    {
+      "id": "edge:1176",
+      "from": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p34-report"
+    },
+    {
+      "id": "edge:1177",
+      "from": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "relation": "ABOUT",
+      "to": "concept:bounded-complex-continuation-versus-global-dual-census"
+    },
+    {
+      "id": "edge:1178",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p34-exact-soft-orientation-and-reduced-flow",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1179",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p34-complex-bvp-and-flow-continuation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1180",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p34-bounded-jacobi-and-lapse-separation",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1181",
+      "from": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p34-bounded-jacobi-and-lapse-separation",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1182",
+      "from": "evidence:p34-exact-soft-orientation-and-reduced-flow",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1183",
+      "from": "evidence:p34-exact-soft-orientation-and-reduced-flow",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p34-script"
+    },
+    {
+      "id": "edge:1184",
+      "from": "evidence:p34-exact-soft-orientation-and-reduced-flow",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p34-evidence-snapshot"
+    },
+    {
+      "id": "edge:1185",
+      "from": "evidence:p34-complex-bvp-and-flow-continuation",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1186",
+      "from": "evidence:p34-complex-bvp-and-flow-continuation",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p34-script"
+    },
+    {
+      "id": "edge:1187",
+      "from": "evidence:p34-complex-bvp-and-flow-continuation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p34-evidence-snapshot"
+    },
+    {
+      "id": "edge:1188",
+      "from": "evidence:p34-bounded-jacobi-and-lapse-separation",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1189",
+      "from": "evidence:p34-bounded-jacobi-and-lapse-separation",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p34-script"
+    },
+    {
+      "id": "edge:1190",
+      "from": "evidence:p34-bounded-jacobi-and-lapse-separation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p34-evidence-snapshot"
+    },
+    {
+      "id": "edge:1191",
+      "from": "phase:p34",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p33"
+    },
+    {
+      "id": "edge:1192",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE"
+    },
+    {
+      "id": "edge:1193",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "EXTENDS",
+      "to": "claim:P26_LONG_CONSTANT_PHASE_ARM_EXISTS_ON_RECORDED_SHEET"
+    },
+    {
+      "id": "edge:1194",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P33_LOCAL_FOLD_PATCH_ADDS_PHASE32_LAPSE_INTERSECTION"
+    },
+    {
+      "id": "edge:1195",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING"
+    },
+    {
+      "id": "edge:1196",
+      "from": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC"
+    },
+    {
+      "id": "edge:1197",
+      "from": "artifact:p34-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p33-script"
+    },
+    {
+      "id": "edge:1198",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p33-airy-cycle-amplitude-and-global-continuation"
+    },
+    {
+      "id": "edge:1199",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "MOTIVATES",
+      "to": "open:p34-full-joint-dual-determinant-and-global-census"
+    },
+    {
+      "id": "edge:1200",
+      "from": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING",
+      "relation": "MOTIVATES",
+      "to": "open:p34-full-joint-dual-determinant-and-global-census"
+    },
+    {
+      "id": "edge:1201",
+      "from": "claim:P34_SAMPLED_COMPLEX_ARM_CONTAINS_ANOTHER_ENDPOINT_JACOBI_ZERO",
+      "relation": "MOTIVATES",
+      "to": "open:p34-full-joint-dual-determinant-and-global-census"
+    },
+    {
+      "id": "edge:1202",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "BLOCKED_BY",
+      "to": "open:p33-airy-cycle-amplitude-and-global-continuation"
+    },
+    {
+      "id": "edge:1203",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:1204",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:1205",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "BLOCKED_BY",
+      "to": "open:p29-physical-endpoint-measure-and-ordering"
+    },
+    {
+      "id": "edge:1206",
+      "from": "phase:p34",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density"
+    },
+    {
+      "id": "edge:1207",
+      "from": "concept:fold-soft-orientation-and-airy-seed",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1208",
+      "from": "concept:reduced-stationary-family-dual-versus-full-joint-flow",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1209",
+      "from": "concept:reduced-stationary-family-dual-versus-full-joint-flow",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii"
+    },
+    {
+      "id": "edge:1210",
+      "from": "concept:bounded-complex-continuation-versus-global-dual-census",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1211",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1212",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1213",
+      "from": "open:p34-full-joint-dual-determinant-and-global-census",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii"
+    },
+    {
+      "id": "edge:1214",
+      "from": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD",
+      "relation": "ABOUT",
+      "to": "concept:fold-soft-orientation-and-airy-seed"
+    },
+    {
+      "id": "edge:1215",
+      "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1216",
+      "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p34-frozen-reduced-stationary-family-continuation"
+    },
+    {
+      "id": "edge:1217",
+      "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p34-report"
+    },
+    {
+      "id": "edge:1218",
+      "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "relation": "ABOUT",
+      "to": "concept:reduced-stationary-family-dual-versus-full-joint-flow"
+    },
+    {
+      "id": "edge:1219",
+      "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p34-recorded-incoming-real-segment",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1220",
+      "from": "evidence:p34-recorded-incoming-real-segment",
+      "relation": "PART_OF",
+      "to": "phase:p34"
+    },
+    {
+      "id": "edge:1221",
+      "from": "evidence:p34-recorded-incoming-real-segment",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p34-script"
+    },
+    {
+      "id": "edge:1222",
+      "from": "evidence:p34-recorded-incoming-real-segment",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p34-evidence-snapshot"
+    },
+    {
+      "id": "edge:1223",
+      "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P25_TRACKED_REAL_BRANCH_REACHES_DIRICHLET_CAUSTIC"
+    },
+    {
+      "id": "edge:1224",
+      "from": "claim:P34_RECORDED_INCOMING_REAL_SEGMENT_IS_DIRECTED_TOWARD_FOLD",
+      "relation": "MOTIVATES",
+      "to": "open:p34-full-joint-dual-determinant-and-global-census"
     }
   ],
   "kg_bridges": [
@@ -13121,6 +13745,16 @@
       "status": "UNRESOLVED",
       "checked_at_utc": "2026-08-17T18:12:31.429Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase33 simple-fold Airy uniformization intersection scope gate",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p34",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T18:31:54.008Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase34 bounded dual-aligned stationary branches around fold",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
     }
   ]

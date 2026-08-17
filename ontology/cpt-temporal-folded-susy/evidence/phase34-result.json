@@ -1,0 +1,1365 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P34_DIRECTED_FOLD_DUAL_CONTINUATION_20260817",
+  "phase": "P34",
+  "observed_at_utc": "2026-08-17T18:31:54.008Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py",
+    "sha256": "c35d9fd605e46d791ae74b58344565578a84a7803745481859b41b26699e9527",
+    "introduced_in_commit": "4cd7e7215077137c576dcdab2765beab09d1a09b"
+  },
+  "exact_checks": 5,
+  "checks": [
+    {
+      "id": "P34.orientation.deterministic_soft_vector",
+      "statement": "v_R and -v_R give the same unit soft vector with positive a_c component",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.seed.Airy_three_halves_constant_phase",
+      "statement": "kappa=C/(2|W_Tc|) cancels the leading imaginary action on the upper fold sheet",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.flow.constant_phase_is_reduced_dual",
+      "statement": "for Re W_T<0, y'=-Im W_T/Re W_T is a positive reparametrization of -conj(W_T)",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.conjugation.upper_lower_fold_arms",
+      "statement": "real coefficients pair the upper T arm and Im u<0 sheet with their lower conjugates",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.flow.both_real_sheets_enter_fold",
+      "statement": "u=plus/minus R sqrt(T_c-T) both move toward u=0 when the projected dual has dT/ds>0",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 10,
+  "numerical": [
+    {
+      "id": "P34.seed.frozen_P33_coefficients",
+      "statement": "the directed seed sign and finite-resolution estimators are reconstructed from the last P33 action-gap, oriented soft coordinate, and fold W_T data",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.flow.recorded_incoming_real_segment",
+      "statement": "47 recorded post-saddle points on the Phase25 real stationary branch have W_T<0 before the fold",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.flow.actual_real_sheets_enter_fold",
+      "statement": "both actual real sheets have W_T<0 and their projected dual orientation points toward the fold",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.continuation.actual_complex_BVP",
+      "statement": "every frozen upper-arm point solves the symmetric root system and the independently reintegrated full endpoint problem",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.continuation.constant_ImW_and_decreasing_ReW",
+      "statement": "the upper branch keeps Im W fixed while Re W and Re W_T remain decreasing and negative",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.flow.computed_curve_derivative",
+      "statement": "centered differences of independently re-solved nearby BVPs agree with -Im(W_T)/Re(W_T) and stay on the upper branch",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.seed.imaginary_time_three_halves",
+      "statement": "the recorded Im T/tau^(3/2) ratios and fitted exponent are consistent with the finite-resolution P33 fold seed",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.conjugation.lower_arm",
+      "statement": "complex conjugation supplies a lower constant-phase endpoint branch with the same bounded accuracy",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.Jacobi.no_sampled_complex_zero",
+      "statement": "the sampled complex continuation has no endpoint-Jacobi zero (not a proof for unsampled points or modes)",
+      "status": "PASS"
+    },
+    {
+      "id": "P34.intersection.bounded_lapse_base_disjointness",
+      "statement": "the monotone-ReT bounded arms remain disjoint from the imaginary T axis and every Phase32 cap with r<=0.1",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "bounded directed fold continuation of the reduced stationary family",
+    "claim_status": {
+      "a_bounded_directed_constant_phase_pair_exists_beyond_the_fold": "SUPPORTED_THROUGH_ReT_13_ON_THE_TRACKED_STATIONARY_FAMILY",
+      "all_complex_sheets_and_good_ends_are_enumerated": "OPEN_NOT_COMPUTED",
+      "the_continuation_adds_a_crossing_with_the_Phase32_lapse_base_contour": "NOT_SEEN_ON_THE_BOUNDED_TRACKED_ARMS",
+      "the_global_intersection_coefficient_n_sigma_is_fixed": "OPEN_REQUIRES_COMPLETE_RELATIVE_CYCLES_AND_DETERMINANT_LINE",
+      "the_incoming_right_projected_PL_cycle_is_oriented_into_a_specific_outgoing_arm": "OPEN_REQUIRES_AIRY_CONNECTION_DETERMINANT_LINE_AND_FULL_JOINT_FLOW",
+      "the_sampled_complex_arm_contains_another_endpoint_Jacobi_zero": "NOT_SEEN_AT_THE_FROZEN_POINTS",
+      "this_is_the_full_joint_field_lapse_dual": "OPEN_NOT_COMPUTED"
+    },
+    "exact_check_ids": [
+      "P34.orientation.deterministic_soft_vector",
+      "P34.seed.Airy_three_halves_constant_phase",
+      "P34.flow.constant_phase_is_reduced_dual",
+      "P34.conjugation.upper_lower_fold_arms",
+      "P34.flow.both_real_sheets_enter_fold"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P34.orientation.deterministic_soft_vector",
+        "statement": "v_R and -v_R give the same unit soft vector with positive a_c component",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.seed.Airy_three_halves_constant_phase",
+        "statement": "kappa=C/(2|W_Tc|) cancels the leading imaginary action on the upper fold sheet",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.flow.constant_phase_is_reduced_dual",
+        "statement": "for Re W_T<0, y'=-Im W_T/Re W_T is a positive reparametrization of -conj(W_T)",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.conjugation.upper_lower_fold_arms",
+        "statement": "real coefficients pair the upper T arm and Im u<0 sheet with their lower conjugates",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.flow.both_real_sheets_enter_fold",
+        "statement": "u=plus/minus R sqrt(T_c-T) both move toward u=0 when the projected dual has dT/ds>0",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 5,
+    "frozen_conventions": {
+      "constant_phase_slope": "d(Im T)/d(Re T)=-Im(W_T)/Re(W_T)",
+      "declared_reduced_dual": "dT/ds=-conj(W_T) in the flat complex-T metric",
+      "lower_seed": "the complex conjugate of the upper seed",
+      "metric_scope": "a positive scalar Hermitian rescaling changes only the parameter; the full joint field-lapse metric and flow are not computed",
+      "soft_coordinate": "u=v_R^T(center-center_c), with ||v_R||=1 and (v_R)_a>0",
+      "upper_seed": "T=T_c+tau+i[C/(2|W_Tc|)]tau^(3/2), u=-i R sqrt(tau)"
+    },
+    "next_calculation": "lift one regulated field-lapse relative cycle and its determinant line, then continue every joint dual arm and good end",
+    "numerical_check_ids": [
+      "P34.seed.frozen_P33_coefficients",
+      "P34.flow.recorded_incoming_real_segment",
+      "P34.flow.actual_real_sheets_enter_fold",
+      "P34.continuation.actual_complex_BVP",
+      "P34.continuation.constant_ImW_and_decreasing_ReW",
+      "P34.flow.computed_curve_derivative",
+      "P34.seed.imaginary_time_three_halves",
+      "P34.conjugation.lower_arm",
+      "P34.Jacobi.no_sampled_complex_zero",
+      "P34.intersection.bounded_lapse_base_disjointness"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P34.seed.frozen_P33_coefficients",
+        "statement": "the directed seed sign and finite-resolution estimators are reconstructed from the last P33 action-gap, oriented soft coordinate, and fold W_T data",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.flow.recorded_incoming_real_segment",
+        "statement": "47 recorded post-saddle points on the Phase25 real stationary branch have W_T<0 before the fold",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.flow.actual_real_sheets_enter_fold",
+        "statement": "both actual real sheets have W_T<0 and their projected dual orientation points toward the fold",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.continuation.actual_complex_BVP",
+        "statement": "every frozen upper-arm point solves the symmetric root system and the independently reintegrated full endpoint problem",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.continuation.constant_ImW_and_decreasing_ReW",
+        "statement": "the upper branch keeps Im W fixed while Re W and Re W_T remain decreasing and negative",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.flow.computed_curve_derivative",
+        "statement": "centered differences of independently re-solved nearby BVPs agree with -Im(W_T)/Re(W_T) and stay on the upper branch",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.seed.imaginary_time_three_halves",
+        "statement": "the recorded Im T/tau^(3/2) ratios and fitted exponent are consistent with the finite-resolution P33 fold seed",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.conjugation.lower_arm",
+        "statement": "complex conjugation supplies a lower constant-phase endpoint branch with the same bounded accuracy",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.Jacobi.no_sampled_complex_zero",
+        "statement": "the sampled complex continuation has no endpoint-Jacobi zero (not a proof for unsampled points or modes)",
+        "status": "PASS"
+      },
+      {
+        "id": "P34.intersection.bounded_lapse_base_disjointness",
+        "statement": "the monotone-ReT bounded arms remain disjoint from the imaginary T axis and every Phase32 cap with r<=0.1",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 10,
+    "numerical_controls": {
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "computed_curve_derivative_checks": [
+        {
+          "HJ_constant_phase_slope": 0.02992354988526073,
+          "center_jump_max": 0.00018796699942156474,
+          "center_midpoint_error": 4.68315682582807e-7,
+          "centered_step": 0.00001,
+          "minus_ImT": 0.000019651306264405115,
+          "minus_Imu": -0.037295810269707054,
+          "nearby_root_residual_max": 1.2401939568140038e-13,
+          "numerical_dImT_dtau": 0.029923425159086588,
+          "plus_ImT": 0.000020249774767586847,
+          "plus_Imu": -0.03767075081417621,
+          "relative_slope_error": 1.2472617414230336e-7,
+          "tau": 0.001
+        },
+        {
+          "HJ_constant_phase_slope": 0.09454535197739296,
+          "center_jump_max": 0.0005972985424682844,
+          "center_midpoint_error": 0.0000014757558900215707,
+          "centered_step": 0.0001,
+          "minus_ImT": 0.0006211122838980188,
+          "minus_Imu": -0.11807736556709231,
+          "nearby_root_residual_max": 8.519891394152366e-13,
+          "numerical_dImT_dtau": 0.09454495651530935,
+          "plus_ImT": 0.0006400212752010806,
+          "plus_Imu": -0.11926721819710567,
+          "relative_slope_error": 3.9546208360774493e-7,
+          "tau": 0.01
+        },
+        {
+          "HJ_constant_phase_slope": 0.2963505090332061,
+          "center_jump_max": 0.0019777128172448416,
+          "center_midpoint_error": 0.000004520566969588111,
+          "centered_step": 0.001,
+          "minus_ImT": 0.019539533721256993,
+          "minus_Imu": -0.3776660517481564,
+          "nearby_root_residual_max": 2.7604611597758967e-11,
+          "numerical_dImT_dtau": 0.29634922236417177,
+          "plus_ImT": 0.020132232165985336,
+          "plus_Imu": -0.3815569716114759,
+          "relative_slope_error": 0.0000012866690343171783,
+          "tau": 0.1
+        },
+        {
+          "HJ_constant_phase_slope": 0.6339995945862309,
+          "center_jump_max": 0.0010351467673919042,
+          "center_midpoint_error": 3.769281341988856e-7,
+          "centered_step": 0.001,
+          "minus_ImT": 0.21555969991979687,
+          "minus_Imu": -0.8870361142257948,
+          "nearby_root_residual_max": 7.88705683776384e-13,
+          "numerical_dImT_dtau": 0.6339994616477856,
+          "plus_ImT": 0.21682769884309244,
+          "plus_Imu": -0.888992560899117,
+          "relative_slope_error": 1.329384452519733e-7,
+          "tau": 0.5
+        },
+        {
+          "HJ_constant_phase_slope": 1.0034786740631054,
+          "center_jump_max": 0.0007213015782359015,
+          "center_midpoint_error": 6.528956839580909e-8,
+          "centered_step": 0.001,
+          "minus_ImT": 1.2411268804137838,
+          "minus_Imu": -1.796075582727879,
+          "nearby_root_residual_max": 7.23511441985785e-12,
+          "numerical_dImT_dtau": 1.0034786510045857,
+          "plus_ImT": 1.243133837715793,
+          "plus_Imu": -1.797344496901597,
+          "relative_slope_error": 2.2978584753466326e-8,
+          "tau": 1.7
+        },
+        {
+          "HJ_constant_phase_slope": 1.0734931477243435,
+          "center_jump_max": 0.0006743024758192906,
+          "center_midpoint_error": 4.598186402147939e-8,
+          "centered_step": 0.001,
+          "minus_ImT": 1.7733331127064207,
+          "minus_Imu": -2.105776883162662,
+          "nearby_root_residual_max": 6.984672667887971e-12,
+          "numerical_dImT_dtau": 1.0734931332186948,
+          "plus_ImT": 1.775480098972858,
+          "plus_Imu": -2.10693637202128,
+          "relative_slope_error": 1.3512567558504688e-8,
+          "tau": 2.211374431918758
+        }
+      ],
+      "fold": {
+        "T_c": 9.788625568081242,
+        "center": [
+          1.2479953302615718,
+          0.10016795390658555
+        ],
+        "right_null_oriented": [
+          0.9964839319603808,
+          -0.08378408765857216
+        ]
+      },
+      "incoming_real_segment": [
+        {
+          "T": 0.893370756767686,
+          "W_T": -2.017658295036627,
+          "endpoint_residual": 0
+        },
+        {
+          "T": 1.086741513535372,
+          "W_T": -4.675022520546818,
+          "endpoint_residual": 0
+        },
+        {
+          "T": 1.280112270303058,
+          "W_T": -8.068147377925252,
+          "endpoint_residual": 1.3322676295501878e-15
+        },
+        {
+          "T": 1.4734830270707442,
+          "W_T": -12.307913979199773,
+          "endpoint_residual": 8.881784197001252e-16
+        },
+        {
+          "T": 1.66685378383843,
+          "W_T": -17.514394147948565,
+          "endpoint_residual": 2.220446049250313e-16
+        },
+        {
+          "T": 1.8602245406061162,
+          "W_T": -23.807245232437577,
+          "endpoint_residual": 2.318213734067276e-15
+        },
+        {
+          "T": 2.053595297373802,
+          "W_T": -31.291044988272127,
+          "endpoint_residual": 2.220446049250313e-16
+        },
+        {
+          "T": 2.246966054141488,
+          "W_T": -40.035206963014694,
+          "endpoint_residual": 1.7763568394002505e-15
+        },
+        {
+          "T": 2.4403368109091743,
+          "W_T": -50.049769041718804,
+          "endpoint_residual": 8.881784197001252e-16
+        },
+        {
+          "T": 2.6337075676768604,
+          "W_T": -61.26096185977401,
+          "endpoint_residual": 4.965068306494546e-16
+        },
+        {
+          "T": 2.827078324444546,
+          "W_T": -73.49334514609134,
+          "endpoint_residual": 1.4043333874306805e-15
+        },
+        {
+          "T": 3.0204490812122327,
+          "W_T": -86.4667439639417,
+          "endpoint_residual": 3.5596458096434965e-15
+        },
+        {
+          "T": 3.2138198379799183,
+          "W_T": -99.81411172295672,
+          "endpoint_residual": 4.440892098500626e-16
+        },
+        {
+          "T": 3.407190594747604,
+          "W_T": -113.12007097552393,
+          "endpoint_residual": 1.4217791915866692e-15
+        },
+        {
+          "T": 3.6005613515152906,
+          "W_T": -125.97164001865295,
+          "endpoint_residual": 1.897149936107019e-15
+        },
+        {
+          "T": 3.7939321082829762,
+          "W_T": -138.00732765387542,
+          "endpoint_residual": 1.6011864169946884e-15
+        },
+        {
+          "T": 3.987302865050663,
+          "W_T": -148.9518716134358,
+          "endpoint_residual": 8.881784197001252e-16
+        },
+        {
+          "T": 4.1806736218183485,
+          "W_T": -158.63049745193197,
+          "endpoint_residual": 1.5543122344752192e-15
+        },
+        {
+          "T": 4.374044378586034,
+          "W_T": -166.96431399062206,
+          "endpoint_residual": 5.347542221830668e-15
+        },
+        {
+          "T": 4.567415135353721,
+          "W_T": -173.9533328001102,
+          "endpoint_residual": 9.930136612989092e-16
+        },
+        {
+          "T": 4.760785892121407,
+          "W_T": -179.6544958008567,
+          "endpoint_residual": 1.1957467920563633e-15
+        },
+        {
+          "T": 4.954156648889093,
+          "W_T": -184.1603270271985,
+          "endpoint_residual": 1.3322676295501878e-15
+        },
+        {
+          "T": 5.147527405656779,
+          "W_T": -187.58127583265465,
+          "endpoint_residual": 2.589462819655575e-15
+        },
+        {
+          "T": 5.340898162424465,
+          "W_T": -190.03271512656102,
+          "endpoint_residual": 8.005932084973442e-16
+        },
+        {
+          "T": 5.534268919192151,
+          "W_T": -191.62628657470597,
+          "endpoint_residual": 9.441466109136565e-15
+        },
+        {
+          "T": 5.727639675959837,
+          "W_T": -192.4647314573264,
+          "endpoint_residual": 6.75322301446426e-15
+        },
+        {
+          "T": 5.921010432727523,
+          "W_T": -192.6392453044214,
+          "endpoint_residual": 1.6011864169946884e-15
+        },
+        {
+          "T": 6.114381189495209,
+          "W_T": -192.22851360274456,
+          "endpoint_residual": 2.1390168887322673e-14
+        },
+        {
+          "T": 6.307751946262895,
+          "W_T": -191.29877592016214,
+          "endpoint_residual": 1.8045820636273346e-14
+        },
+        {
+          "T": 6.501122703030581,
+          "W_T": -189.90445061155006,
+          "endpoint_residual": 6.221212756561689e-15
+        },
+        {
+          "T": 6.6944934597982675,
+          "W_T": -188.08900201981484,
+          "endpoint_residual": 9.441466109136565e-15
+        },
+        {
+          "T": 6.887864216565953,
+          "W_T": -185.8858409374063,
+          "endpoint_residual": 1.112884370092863e-14
+        },
+        {
+          "T": 7.081234973333639,
+          "W_T": -183.3191211362274,
+          "endpoint_residual": 5.347542221830668e-15
+        },
+        {
+          "T": 7.274605730101325,
+          "W_T": -180.40433641762345,
+          "endpoint_residual": 1.616509124176106e-15
+        },
+        {
+          "T": 7.467976486869011,
+          "W_T": -177.14863886751382,
+          "endpoint_residual": 1.3703948308760403e-14
+        },
+        {
+          "T": 7.661347243636698,
+          "W_T": -173.55079131716778,
+          "endpoint_residual": 2.229752420147902e-14
+        },
+        {
+          "T": 7.854718000404383,
+          "W_T": -169.60063127066198,
+          "endpoint_residual": 3.815356980893988e-14
+        },
+        {
+          "T": 8.048088757172069,
+          "W_T": -165.27784584854007,
+          "endpoint_residual": 9.090821777112135e-14
+        },
+        {
+          "T": 8.241459513939756,
+          "W_T": -160.54970401767534,
+          "endpoint_residual": 7.586650367401154e-14
+        },
+        {
+          "T": 8.43483027070744,
+          "W_T": -155.36708495278017,
+          "endpoint_residual": 2.9687621096311766e-14
+        },
+        {
+          "T": 8.628201027475127,
+          "W_T": -149.65748649602696,
+          "endpoint_residual": 9.881384092413193e-14
+        },
+        {
+          "T": 8.821571784242813,
+          "W_T": -143.3121741379875,
+          "endpoint_residual": 4.446439748506844e-14
+        },
+        {
+          "T": 9.014942541010498,
+          "W_T": -136.16064225469773,
+          "endpoint_residual": 6.439293542825908e-14
+        },
+        {
+          "T": 9.208313297778185,
+          "W_T": -127.91327586764893,
+          "endpoint_residual": 2.0388531731306088e-13
+        },
+        {
+          "T": 9.401684054545871,
+          "W_T": -118.00494059563853,
+          "endpoint_residual": 1.8246663179901993e-13
+        },
+        {
+          "T": 9.595054811313556,
+          "W_T": -104.98401313521623,
+          "endpoint_residual": 9.155133597044475e-15
+        },
+        {
+          "T": 9.788425568081243,
+          "W_T": -74.71344631341547,
+          "endpoint_residual": 2.8477936915357e-13
+        }
+      ],
+      "records": [
+        {
+          "T": [
+            9.788825568081242,
+            0.0000017844451790040356
+          ],
+          "W": [
+            -1157.0469283484817,
+            -6.800116025829084e-14
+          ],
+          "W_T": [
+            -73.72936209263166,
+            0.9867375265846289
+          ],
+          "center": [
+            [
+              1.2480545445817153,
+              -0.016702579080765466
+            ],
+            [
+              0.10014030126049865,
+              0.0014039710440850153
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.013383236997831576,
+          "det_Bv": [
+            2.10846218665009,
+            -144.75976643062785
+          ],
+          "full_endpoint_residual": 4.498619786655724e-11,
+          "lower_T": [
+            9.788825568081242,
+            -0.0000017844451790040356
+          ],
+          "lower_center": [
+            [
+              1.2480545445817153,
+              0.016702579080765466
+            ],
+            [
+              0.10014030126049865,
+              -0.0014039710440850153
+            ]
+          ],
+          "lower_endpoint_residual": 4.498619786655724e-11,
+          "root_residual": 6.800158118768293e-14,
+          "sigma_min_Bv": 0.05780001132099319,
+          "tau": 0.0002,
+          "u": [
+            0.00006132297028863319,
+            -0.016761482109308088
+          ]
+        },
+        {
+          "T": [
+            9.789625568081242,
+            0.000019949792565091703
+          ],
+          "W": [
+            -1157.1059491463363,
+            9.357792318809288e-12
+          ],
+          "W_T": [
+            -73.74339654697671,
+            2.2066642052820216
+          ],
+          "center": [
+            [
+              1.2482914189453669,
+              -0.03735230539349181
+            ],
+            [
+              0.1000297500579467,
+              0.0031363558242333586
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.02992354988526073,
+          "det_Bv": [
+            10.536937721766545,
+            -323.5925849599218
+          ],
+          "full_endpoint_residual": 4.644769772804709e-11,
+          "lower_T": [
+            9.789625568081242,
+            -0.000019949792565091703
+          ],
+          "lower_center": [
+            [
+              1.2482914189453669,
+              0.03735230539349181
+            ],
+            [
+              0.1000297500579467,
+              -0.0031363558242333586
+            ]
+          ],
+          "lower_endpoint_residual": 4.644769772804709e-11,
+          "root_residual": 9.357804574218761e-12,
+          "sigma_min_Bv": 0.12923455856526028,
+          "tau": 0.001,
+          "u": [
+            0.00030662689920617247,
+            -0.0374837488575977
+          ]
+        },
+        {
+          "T": [
+            9.790625568081243,
+            0.00005642331241115007
+          ],
+          "W": [
+            -1157.1798003648948,
+            8.326672684688674e-15
+          ],
+          "W_T": [
+            -73.76094211824783,
+            3.1211398119550333
+          ],
+          "center": [
+            [
+              1.2485875503445432,
+              -0.05283156458839492
+            ],
+            [
+              0.09989169479846126,
+              0.004430141739946062
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.042314261753211665,
+          "det_Bv": [
+            21.060539062671367,
+            -457.45362804615553
+          ],
+          "full_endpoint_residual": 4.563394093826207e-11,
+          "lower_T": [
+            9.790625568081243,
+            -0.00005642331241115007
+          ],
+          "lower_center": [
+            [
+              1.2485875503445432,
+              0.05283156458839492
+            ],
+            [
+              0.09989169479846126,
+              -0.004430141739946062
+            ]
+          ],
+          "lower_endpoint_residual": 4.563394093826207e-11,
+          "root_residual": 8.617755242287383e-15,
+          "sigma_min_Bv": 0.18274725684655982,
+          "tau": 0.002,
+          "u": [
+            0.0006132839141967368,
+            -0.053016980596542126
+          ]
+        },
+        {
+          "T": [
+            9.793625568081243,
+            0.00022299449135059976
+          ],
+          "W": [
+            -1157.4018555821588,
+            -5.688782778179302e-13
+          ],
+          "W_T": [
+            -73.81359553342493,
+            4.93706635082133
+          ],
+          "center": [
+            [
+              1.2494762009878466,
+              -0.08356924451563888
+            ],
+            [
+              0.0994784227760716,
+              0.006979377645624893
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.06688559627996557,
+          "det_Bv": [
+            52.552928249226476,
+            -722.4819251670484
+          ],
+          "full_endpoint_residual": 4.635619635780034e-11,
+          "lower_T": [
+            9.793625568081243,
+            -0.00022299449135059976
+          ],
+          "lower_center": [
+            [
+              1.2494762009878466,
+              0.08356924451563888
+            ],
+            [
+              0.0994784227760716,
+              -0.006979377645624893
+            ]
+          ],
+          "lower_endpoint_residual": 4.635619635780034e-11,
+          "root_residual": 5.68879883911549e-13,
+          "sigma_min_Bv": 0.28886352290140116,
+          "tau": 0.005,
+          "u": [
+            0.0015334356207256173,
+            -0.08386017015436563
+          ]
+        },
+        {
+          "T": [
+            9.798625568081242,
+            0.0006305431882816576
+          ],
+          "W": [
+            -1157.773620021344,
+            1.341149413747189e-13
+          ],
+          "W_T": [
+            -73.90140696985682,
+            6.987034533589674
+          ],
+          "center": [
+            [
+              1.2509581410770048,
+              -0.11826761618735383
+            ],
+            [
+              0.09879262832350919,
+              0.009810794036506929
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.09454535197739296,
+          "det_Bv": [
+            104.78838297564387,
+            -1019.8963602333753
+          ],
+          "full_endpoint_residual": 4.6339137923317163e-11,
+          "lower_T": [
+            9.798625568081242,
+            -0.0006305431882816576
+          ],
+          "lower_center": [
+            [
+              1.2509581410770048,
+              0.11826761618735383
+            ],
+            [
+              0.09879262832350919,
+              -0.009810794036506929
+            ]
+          ],
+          "lower_endpoint_residual": 4.6339137923317163e-11,
+          "root_residual": 1.3421962041830068e-13,
+          "sigma_min_Bv": 0.4083145122820886,
+          "tau": 0.01,
+          "u": [
+            0.0030676237702288904,
+            -0.11867376762951042
+          ]
+        },
+        {
+          "T": [
+            9.808625568081242,
+            0.0017824219362950378
+          ],
+          "W": [
+            -1158.5234244265403,
+            1.27675647831893e-13
+          ],
+          "W_T": [
+            -74.07723940302695,
+            9.895172566327764
+          ],
+          "center": [
+            [
+              1.2539252361910131,
+              -0.1674893590837556
+            ],
+            [
+              0.09743235457683352,
+              0.013706593472037811
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.13357912155030208,
+          "det_Bv": [
+            208.384869535999,
+            -1437.516126575073
+          ],
+          "full_endpoint_residual": 4.5887767267008744e-11,
+          "lower_T": [
+            9.808625568081242,
+            -0.0017824219362950378
+          ],
+          "lower_center": [
+            [
+              1.2539252361910131,
+              0.1674893590837556
+            ],
+            [
+              0.09743235457683352,
+              -0.013706593472037811
+            ]
+          ],
+          "lower_endpoint_residual": 4.5887767267008744e-11,
+          "root_residual": 1.2767956282978073e-13,
+          "sigma_min_Bv": 0.5768817381965055,
+          "tau": 0.02,
+          "u": [
+            0.006138255670767533,
+            -0.16804884953026653
+          ]
+        },
+        {
+          "T": [
+            9.838625568081243,
+            0.00703342247460031
+          ],
+          "W": [
+            -1160.8231190450736,
+            -9.934852940318706e-11
+          ],
+          "W_T": [
+            -74.60642190430744,
+            15.711615907425035
+          ],
+          "center": [
+            [
+              1.2628523436951478,
+              -0.2659239998684729
+            ],
+            [
+              0.09344374998689038,
+              0.020881549622737913
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.2105933444654034,
+          "det_Bv": [
+            513.5158521453251,
+            -2254.6157246994135
+          ],
+          "full_endpoint_residual": 5.160641620858912e-11,
+          "lower_T": [
+            9.838625568081243,
+            -0.00703342247460031
+          ],
+          "lower_center": [
+            [
+              1.2628523436951478,
+              0.2659239998684729
+            ],
+            [
+              0.09344374998689038,
+              -0.020881549622737913
+            ]
+          ],
+          "lower_endpoint_residual": 5.160641620858912e-11,
+          "root_residual": 9.93486543610996e-11,
+          "sigma_min_Bv": 0.9095155956890199,
+          "tau": 0.05,
+          "u": [
+            0.015368156454119791,
+            -0.266738534575606
+          ]
+        },
+        {
+          "T": [
+            9.888625568081242,
+            0.019835156962913242
+          ],
+          "W": [
+            -1164.824028162528,
+            -5.4147797357018135e-11
+          ],
+          "W_T": [
+            -75.49404614192669,
+            22.372699003136322
+          ],
+          "center": [
+            [
+              1.2778173467586982,
+              -0.37862612615925706
+            ],
+            [
+              0.08711232801165932,
+              0.0277042875095544
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.2963505090332061,
+          "det_Bv": [
+            1011.3803928173203,
+            -3164.7447535211463
+          ],
+          "full_endpoint_residual": 5.0674051513820004e-11,
+          "lower_T": [
+            9.888625568081242,
+            -0.019835156962913242
+          ],
+          "lower_center": [
+            [
+              1.2778173467586982,
+              0.37862612615925706
+            ],
+            [
+              0.08711232801165932,
+              -0.0277042875095544
+            ]
+          ],
+          "lower_endpoint_residual": 5.0674051513820004e-11,
+          "root_residual": 5.4147863681018886e-11,
+          "sigma_min_Bv": 1.2803388045937714,
+          "tau": 0.1,
+          "u": [
+            0.030811013962461827,
+            -0.37961602939132244
+          ]
+        },
+        {
+          "T": [
+            9.988625568081241,
+            0.05576414522873099
+          ],
+          "W": [
+            -1173.4592324802652,
+            -4.764810768165262e-11
+          ],
+          "W_T": [
+            -77.29044152169391,
+            32.059893992613645
+          ],
+          "center": [
+            [
+              1.3080707957248234,
+              -0.5424629088501735
+            ],
+            [
+              0.07566780472622786,
+              0.034268397489815736
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.41479765623560405,
+          "det_Bv": [
+            2019.8378890889812,
+            -4489.191925643309
+          ],
+          "full_endpoint_residual": 5.4562443888802284e-11,
+          "lower_T": [
+            9.988625568081241,
+            -0.05576414522873099
+          ],
+          "lower_center": [
+            [
+              1.3080707957248234,
+              0.5424629088501735
+            ],
+            [
+              0.07566780472622786,
+              -0.034268397489815736
+            ]
+          ],
+          "lower_endpoint_residual": 5.4562443888802284e-11,
+          "root_residual": 4.764817204871706e-11,
+          "sigma_min_Bv": 1.7953388213209056,
+          "tau": 0.2,
+          "u": [
+            0.06191695868574619,
+            -0.543426718772892
+          ]
+        },
+        {
+          "T": [
+            10.288625568081242,
+            0.21619342012985632
+          ],
+          "W": [
+            -1204.4661131768346,
+            -2.929212428171013e-12
+          ],
+          "W_T": [
+            -82.83510850266345,
+            52.51742520819507
+          ],
+          "center": [
+            [
+              1.401236775410794,
+              -0.8881968282415477
+            ],
+            [
+              0.050465653114539995,
+              0.03510024558070344
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.6339995945862309,
+          "det_Bv": [
+            5968.399729789855,
+            -7693.167710684769
+          ],
+          "full_endpoint_residual": 6.36130061542376e-11,
+          "lower_T": [
+            10.288625568081242,
+            -0.21619342012985632
+          ],
+          "lower_center": [
+            [
+              1.401236775410794,
+              0.8881968282415477
+            ],
+            [
+              0.050465653114539995,
+              -0.03510024558070344
+            ]
+          ],
+          "lower_endpoint_residual": 6.36130061542376e-11,
+          "root_residual": 2.9292219776886216e-12,
+          "sigma_min_Bv": 2.7831039644113056,
+          "tau": 0.5,
+          "u": [
+            0.15686689972798132,
+            -0.8880147098134474
+          ]
+        },
+        {
+          "T": [
+            10.788625568081242,
+            0.5902606710698779
+          ],
+          "W": [
+            -1273.0698686862704,
+            4.696332212006382e-11
+          ],
+          "W_T": [
+            -92.44728152947471,
+            77.86743526928983
+          ],
+          "center": [
+            [
+              1.5625135512683772,
+              -1.3162736749322086
+            ],
+            [
+              0.029039203330457647,
+              0.023135545973931523
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 0.8422901569524635,
+          "det_Bv": [
+            20013.81127478523,
+            -11026.940088241274
+          ],
+          "full_endpoint_residual": 9.455595315971885e-11,
+          "lower_T": [
+            10.788625568081242,
+            -0.5902606710698779
+          ],
+          "lower_center": [
+            [
+              1.5625135512683772,
+              1.3162736749322086
+            ],
+            [
+              0.029039203330457647,
+              -0.023135545973931523
+            ]
+          ],
+          "lower_endpoint_residual": 9.455595315971885e-11,
+          "root_residual": 4.696342923224089e-11,
+          "sigma_min_Bv": 3.8661556462370643,
+          "tau": 1,
+          "u": [
+            0.31937181101536044,
+            -1.313583957744296
+          ]
+        },
+        {
+          "T": [
+            11.488625568081241,
+            1.2421302754480819
+          ],
+          "W": [
+            -1403.3105268037489,
+            2.8538948981804424e-11
+          ],
+          "W_T": [
+            -106.29713438007748,
+            106.6669074644279
+          ],
+          "center": [
+            [
+              1.7952924080074442,
+              -1.8022273410576994
+            ],
+            [
+              0.016482199879443177,
+              0.009781290919587834
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 1.0034786740631054,
+          "det_Bv": [
+            64114.63711898977,
+            12545.064066113506
+          ],
+          "full_endpoint_residual": 6.430817800267283e-10,
+          "lower_T": [
+            11.488625568081241,
+            -1.2421302754480819
+          ],
+          "lower_center": [
+            [
+              1.7952924080074442,
+              1.8022273410576994
+            ],
+            [
+              0.016482199879443177,
+              -0.009781290919587834
+            ]
+          ],
+          "lower_endpoint_residual": 6.430817800267283e-10,
+          "root_residual": 2.8539119898649374e-11,
+          "sigma_min_Bv": 5.007988393819818,
+          "tau": 1.7,
+          "u": [
+            0.5523842785338168,
+            -1.7967101036394992
+          ]
+        },
+        {
+          "T": [
+            12,
+            1.7744065503721973
+          ],
+          "W": [
+            -1522.1026915020138,
+            -8.380851568290382e-12
+          ],
+          "W_T": [
+            -116.55222426751541,
+            125.11801410320874
+          ],
+          "center": [
+            [
+              1.9680863950046856,
+              -2.1134354614331636
+            ],
+            [
+              0.01149594238281521,
+              0.004203591964577155
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 1.0734931477243435,
+          "det_Bv": [
+            96411.2140102365,
+            92491.93807497526
+          ],
+          "full_endpoint_residual": 1.1584164589847871e-9,
+          "lower_T": [
+            12,
+            -1.7744065503721973
+          ],
+          "lower_center": [
+            [
+              1.9680863950046856,
+              2.1134354614331636
+            ],
+            [
+              0.01149594238281521,
+              -0.004203591964577155
+            ]
+          ],
+          "lower_endpoint_residual": 1.1584164589847871e-9,
+          "root_residual": 8.383946076461472e-12,
+          "sigma_min_Bv": 5.731616944576416,
+          "tau": 2.211374431918758,
+          "u": [
+            0.7249884791511246,
+            -2.1063566726710614
+          ]
+        },
+        {
+          "T": [
+            13,
+            2.89138959973697
+          ],
+          "W": [
+            -1807.1169534212804,
+            1.8033574633591343e-11
+          ],
+          "W_T": [
+            -136.77782685047376,
+            157.37521486549724
+          ],
+          "center": [
+            [
+              2.30954758185397,
+              -2.6576464785044394
+            ],
+            [
+              0.005396109867314738,
+              -0.0006210740869805844
+            ]
+          ],
+          "conjugation_residual": 0,
+          "constant_phase_slope": 1.1505901101758302,
+          "det_Bv": [
+            -191673.3371278249,
+            465022.3872731154
+          ],
+          "full_endpoint_residual": 2.3878268295174168e-9,
+          "lower_T": [
+            13,
+            -2.89138959973697
+          ],
+          "lower_center": [
+            [
+              2.30954758185397,
+              2.6576464785044394
+            ],
+            [
+              0.005396109867314738,
+              0.0006210740869805844
+            ]
+          ],
+          "lower_endpoint_residual": 2.3878268295174168e-9,
+          "root_residual": 1.8033595973837925e-11,
+          "sigma_min_Bv": 7.040891614531824,
+          "tau": 3.211374431918758,
+          "u": [
+            1.065760134136739,
+            -2.648249976535017
+          ]
+        }
+      ],
+      "robust_max_ReT": 13,
+      "seed": {
+        "action_gap": 0.0002631206748446857,
+        "action_gap_coefficient": 93.02720672652895,
+        "fold_W_T": -73.7258537571177,
+        "kappa": 0.6308994876681766,
+        "oriented_action_gap_W_plus_u_minus_W_minus_u": 0.0002631206748446857,
+        "real_sheets": [
+          {
+            "W": -1157.0175678066887,
+            "W_T": -72.74004840630644,
+            "center": [
+              1.2313086861258797,
+              0.10159381465752042
+            ],
+            "endpoint_residual": 2.512932857498226e-14,
+            "u": -0.016747437201703335
+          },
+          {
+            "W": -1157.0173046860139,
+            "W_T": -74.71344631341641,
+            "center": [
+              1.264712569568264,
+              0.09878487604639197
+            ],
+            "endpoint_residual": 1.294304839799087e-13,
+            "u": 0.016774340272532273
+          }
+        ],
+        "recorded_action_gap_ratio": 93.02720672652895,
+        "recorded_kappa_estimator": 0.6308994876681766,
+        "recorded_soft_radius_ratio": 1.1851738084729226,
+        "seed_delta": 0.0002,
+        "soft_radius_coefficient": 1.1851738084729226
+      },
+      "small_tau_fitted_exponent": 1.4998675902351137,
+      "small_tau_seed_ratios": [
+        0.6308966433646981,
+        0.6308678335358272,
+        0.6308318103351955,
+        0.630723668005016,
+        0.6305431882816577
+      ]
+    },
+    "phase": "P34",
+    "scope_guard": {
+      "computed": [
+        "the deterministic P25 soft-vector orientation",
+        "the finite-resolution P33 Airy 3/2 seed and recorded near-fold scaling",
+        "47 recorded post-saddle points on the incoming real stationary branch",
+        "upper and lower reflection-symmetric constant-ImW fixed-boundary sheets",
+        "pointwise alignment with -conj(W_T) in the declared reduced flat T metric",
+        "endpoint Jacobi singular values on a table bounded by ReT<=13",
+        "lapse-base disjointness from the Phase32 imaginary axis and r<=0.1 caps on that bounded table"
+      ],
+      "not_computed": [
+        "the full joint field-lapse gradient flow or its metric",
+        "oriented transport of the incoming PL cycle into either outgoing fold arm",
+        "an oriented Airy connection matrix or determinant-line transport",
+        "all complex sheets, unsampled Jacobi zeros, good ends, or infinity",
+        "a global Picard-Lefschetz intersection coefficient",
+        "inhomogeneous fluctuations, a WDW density, or a physical quantum state"
+      ]
+    }
+  }
+}
