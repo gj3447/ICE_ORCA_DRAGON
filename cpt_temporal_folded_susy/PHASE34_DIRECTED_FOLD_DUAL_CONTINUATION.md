@@ -2,10 +2,11 @@
 
 ## Result
 
-The right positive-real projected dual inherited from Phases 28 and 32 reaches
-the Phase-25 Dirichlet fold.  On the frozen reflection-symmetric
-fixed-boundary stationary family, it has a bounded continuation into a
-conjugate pair of complex sheets.  The upper sheet was continued from
+The recorded Phase-25 real stationary branch approaches the Dirichlet fold
+with the reduced flat-$T$ dual directed toward it.  Beyond the fold, the
+frozen reflection-symmetric fixed-boundary equations admit a bounded conjugate
+pair of constant-phase complex sheets aligned with that reduced dual field.
+The upper sheet was continued from
 
 \[
 T_c=9.788625568081242
@@ -17,7 +18,7 @@ to
 T=13+2.89138959974\,i.
 \]
 
-At every frozen point its constant-\(\operatorname{Im}W\) tangent is a
+At every recorded point its constant-\(\operatorname{Im}W\) tangent is a
 positive reparametrization of
 
 \[
@@ -29,9 +30,13 @@ lower sheet.  No sampled endpoint-Jacobi zero occurs, and the bounded lapse
 bases cannot meet the Phase-32 imaginary axis or its \(r\leq0.1\) endpoint
 caps.
 
-This is a **reduced stationary-family continuation**, not the full joint
-field--lapse Picard--Lefschetz dual.  It does not determine a global
-intersection coefficient.
+This is a **reduced stationary-family branch-existence and direction test**,
+not an oriented transport of the incoming PL cycle through the fold and not
+the full joint field--lapse Picard--Lefschetz dual.  At the fold,
+$T-T_c\sim u^2$, so the reduced $T$ chart itself degenerates.  An Airy
+connection, determinant-line orientation, and full joint flow are still
+needed to decide which outgoing arm, if either, carries the incoming cycle.
+The calculation does not determine a global intersection coefficient.
 
 ## 1. Frozen fold and soft orientation
 
@@ -98,12 +103,13 @@ Consequently both real sheets are oriented into \(u=0\).  This statement is
 about the projected base flow; it does not construct a smooth full-field
 gradient chart at the degenerate Hessian.
 
-## 2. Airy seed and its sign
+## 2. Finite-resolution Airy seed and its sign
 
-The last Phase-33 two-sheet data give
+The last Phase-33 two-sheet data at
+$\delta_*=2\times10^{-4}$ give the recorded estimators
 
 \[
-\frac{|\Delta W|}{\delta^{3/2}}
+\frac{W(+u)-W(-u)}{\delta_*^{3/2}}
 =C=93.0272067265,
 \]
 
@@ -113,8 +119,9 @@ R=1.18517380847,
 W_{T,c}=-73.7258537571.
 \]
 
-The two singular actions lie half an action gap from their common regular
-part.  For the upper continuation, the leading imaginary singular action is
+The oriented gap is positive, fixing the sign used below.  In the local fold
+expansion, the two singular actions lie half an action gap from their common
+regular part.  For the upper continuation, the leading imaginary singular action is
 \(+C\tau^{3/2}/2\), where
 
 \[
@@ -122,7 +129,8 @@ part.  For the upper continuation, the leading imaginary singular action is
 \]
 
 The regular term contributes
-\(W_{T,c}\operatorname{Im}T\).  Constant phase therefore fixes
+\(W_{T,c}\operatorname{Im}T\).  Using the recorded finite-resolution $C$ as
+the seed estimator, constant phase gives
 
 \[
 \operatorname{Im}T
@@ -162,7 +170,9 @@ p=1.49986759
 \]
 
 for \(\operatorname{Im}T\propto\tau^p\), and the smallest-\(\tau\) ratio
-differs from \(\kappa\) by \(2.84\times10^{-6}\).
+differs from \(\kappa\) by \(2.84\times10^{-6}\).  These observations are
+consistent with the $3/2$ fold law; they are not an error-certified
+asymptotic determination of $C$, $R$, or $\kappa$.
 
 ## 3. Constant phase and directed flow
 
@@ -188,14 +198,14 @@ The constant-phase equation is therefore
 y'=-\frac{B}{A}.
 \]
 
-Every recorded point has \(A=\operatorname{Re}W_T<0\).  Hence
+Every recorded outgoing point has \(A=\operatorname{Re}W_T<0\).  Hence
 
 \[
 1+i y'
 =\frac{-\overline{W_T}}{-A},
 \]
 
-where \(-A>0\).  The fixed-\(\operatorname{Re}T\) continuation is therefore
+where \(-A>0\).  The fixed-\(\operatorname{Re}T\) branch is therefore
 pointwise parallel, with the same orientation, to the reduced dual field
 \(-\overline{W_T}\).  It also obeys
 
@@ -291,7 +301,14 @@ Across this table:
 - the smallest sampled \(\sigma_{\min}(B_v)\) is \(0.05780\);
 - upper/lower reintegrations are conjugate to displayed precision.
 
-The flow-direction check is not obtained by substituting the
+The incoming real stationary branch was seeded at $T=0.7$ and separately
+sampled at 47 post-saddle points from $T=0.8933707568$ to
+$T=T_c-2\times10^{-4}$.  Every recorded point has $W_T<0$ and an endpoint
+residual below $2.9\times10^{-13}$.  This supports the incoming reduced
+direction on that recorded branch; it does not supply the missing oriented
+Airy connection at the fold.
+
+The outgoing flow-direction check is not obtained by substituting the
 Hamilton--Jacobi slope back into its own algebraic identity.  At six selected
 points, the code independently re-solves the same five-equation BVP at
 \(\tau-h\) and \(\tau+h\), then forms the centered derivative
@@ -341,8 +358,10 @@ the global relative-homology problem.
 
 Supported in the frozen homogeneous reduced model:
 
-- both actual real fixed-boundary sheets are projected into the fold;
-- the Airy \(3/2\) seed selects conjugate upper/lower complex sheets;
+- 47 recorded post-saddle real fixed-boundary points have the reduced
+  direction aimed toward the fold;
+- the finite-resolution Airy $3/2$ seed locates conjugate upper/lower
+  constant-phase complex sheets;
 - the upper constant-phase branch is directed like
   \(-\overline{W_T}\) in the declared reduced metric;
 - a robust table continues that branch through \(\operatorname{Re}T=13\);
@@ -350,14 +369,16 @@ Supported in the frozen homogeneous reduced model:
 
 Open and not computed:
 
+- oriented transport of the incoming PL cycle into a specific outgoing arm;
 - the full joint field--lapse metric and gradient flow;
 - the Airy connection matrix and oriented determinant-line transport;
 - all complex sheets, good ends, infinity, and unsampled Jacobi zeros;
 - the complete relative cycles and global \(n_\sigma\);
 - inhomogeneous fluctuations, a WDW density, or a physical state.
 
-In particular, the phrase “directed dual continuation” in this phase always
-means the **reduced stationary-family** object defined above.
+In particular, the phrase “directed dual continuation” in this phase means
+the **dual-aligned reduced stationary-family branch pair** defined above.  It
+does not mean that a PL relative cycle has been transported through the fold.
 
 ## 8. Reproduction
 
@@ -374,11 +395,10 @@ Workbench entry point:
 ./ice run phase34_directed_fold_dual_continuation
 ```
 
-Expected result:
+The final JSON payload contains:
 
-```text
-5 exact checks passed
-9 numerical checks passed
+```json
+{"exact_checks": 5, "numerical_checks": 10}
 ```
 
 The executable prints one deterministic `PHASE34_RESULT=` JSON payload and

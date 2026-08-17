@@ -9,9 +9,11 @@ In the declared flat complex-T metric that branch is pointwise parallel to
 the reduced dual field ``dT/ds=-conj(W_T)``.
 
 The calculation is deliberately a bounded, reduced stationary-family test.
-It does not integrate the full joint field--lapse Picard--Lefschetz flow,
-transport a determinant line, enumerate all sheets, or assign a global
-intersection coefficient.  The script writes no files.
+It establishes outgoing directed constant-phase branches, not an oriented
+transport of the incoming PL cycle through the fold.  It does not integrate
+the full joint field--lapse Picard--Lefschetz flow, transport a determinant
+line, enumerate all sheets, or assign a global intersection coefficient.
+The script writes no files.
 """
 
 from __future__ import annotations
@@ -289,7 +291,11 @@ def solve_symmetric_constant_phase(
     residual_norm = float(
         np.linalg.norm(symmetric_residual(solved.x, real_time, boundary))
     )
-    if not np.all(np.isfinite(solved.x)) or residual_norm > 5e-8:
+    if (
+        not np.all(np.isfinite(solved.x))
+        or not np.isfinite(residual_norm)
+        or residual_norm > 5e-8
+    ):
         raise RuntimeError(
             f"symmetric constant-phase solve failed at Re T={real_time}: "
             f"{residual_norm}; {solved.message}"
@@ -345,7 +351,7 @@ def p33_seed_data(
 ) -> dict[str, object]:
     branches = p33.solve_two_branches(boundary, fold, SEED_DELTA)
     lower, upper = branches
-    action_gap = abs(float(upper["action"]) - float(lower["action"]))
+    action_gap = float(upper["action"]) - float(lower["action"])
     action_coefficient = action_gap / SEED_DELTA**1.5
     center_difference = np.asarray(upper["center"]) - np.asarray(
         lower["center"]
@@ -384,13 +390,44 @@ def p33_seed_data(
 
     return {
         "seed_delta": SEED_DELTA,
+        "oriented_action_gap_W_plus_u_minus_W_minus_u": action_gap,
+        "recorded_action_gap_ratio": action_coefficient,
+        "recorded_soft_radius_ratio": soft_radius,
+        "fold_W_T": fold_w_t,
+        "recorded_kappa_estimator": kappa,
+        # Backward-compatible aliases retained for downstream phase scripts.
         "action_gap": action_gap,
         "action_gap_coefficient": action_coefficient,
         "soft_radius_coefficient": soft_radius,
-        "fold_W_T": fold_w_t,
         "kappa": kappa,
         "real_sheets": real_sheets,
     }
+
+
+def incoming_real_segment_control(
+    boundary: np.ndarray, fold_time: float
+) -> list[dict[str, float]]:
+    """Sample the recorded real stationary branch after T=.7 and before the fold."""
+
+    center_guess = np.array([np.sqrt(3.0 / p25.potential(1.0)), 1.0])
+    center_guess, _ = p25.solve_symmetric_center(0.7, boundary, center_guess)
+    sample_times = np.linspace(0.7, fold_time - SEED_DELTA, 48)[1:]
+    records: list[dict[str, float]] = []
+    for proper_length in sample_times:
+        center_guess, endpoint = p25.solve_symmetric_center(
+            float(proper_length), boundary, center_guess
+        )
+        solution = p25.solve_fixed_time(
+            float(proper_length), boundary, -endpoint[[1, 3]]
+        )
+        records.append(
+            {
+                "T": float(proper_length),
+                "W_T": float(-solution.energy),
+                "endpoint_residual": float(solution.endpoint_residual),
+            }
+        )
+    return records
 
 
 def selected_taus(fold_time: float) -> tuple[float, ...]:
@@ -463,8 +500,8 @@ def continue_upper_arm(
 ) -> list[dict[str, object]]:
     fold_time = float(fold["proper_length"])
     fold_center = np.asarray(fold["center"], dtype=float)
-    soft_radius = float(seed["soft_radius_coefficient"])
-    kappa = float(seed["kappa"])
+    soft_radius = float(seed["recorded_soft_radius_ratio"])
+    kappa = float(seed["recorded_kappa_estimator"])
 
     center_seed = (
         fold_center
@@ -617,6 +654,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         np.asarray(fold["right_null_vector"], dtype=float)
     )
     seed = p33_seed_data(boundary, fold, right_null)
+    incoming_real_segment = incoming_real_segment_control(boundary, fold_time)
     records = continue_upper_arm(boundary, fold, right_null, seed)
     derivative_checks = computed_curve_derivatives(
         records,
@@ -628,11 +666,21 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
 
     audit.numerical(
         "P34.seed.frozen_P33_coefficients",
-        abs(float(seed["action_gap_coefficient"]) - 93.02721) < 8e-4
-        and abs(float(seed["soft_radius_coefficient"]) - 1.185174) < 8e-5
+        float(seed["oriented_action_gap_W_plus_u_minus_W_minus_u"]) > 0.0
+        and abs(float(seed["recorded_action_gap_ratio"]) - 93.02721) < 8e-4
+        and abs(float(seed["recorded_soft_radius_ratio"]) - 1.185174) < 8e-5
         and abs(float(seed["fold_W_T"]) + 73.72585376) < 2e-6
-        and abs(float(seed["kappa"]) - 0.6308995) < 2e-6,
-        "the directed seed is reconstructed from the last P33 action-gap, soft-radius, and fold W_T data",
+        and abs(float(seed["recorded_kappa_estimator"]) - 0.6308995) < 2e-6,
+        "the directed seed sign and finite-resolution estimators are reconstructed from the last P33 action-gap, oriented soft coordinate, and fold W_T data",
+    )
+
+    audit.numerical(
+        "P34.flow.recorded_incoming_real_segment",
+        len(incoming_real_segment) == 47
+        and all(record["W_T"] < 0.0 for record in incoming_real_segment)
+        and max(record["endpoint_residual"] for record in incoming_real_segment)
+        < 2e-8,
+        "47 recorded post-saddle points on the Phase25 real stationary branch have W_T<0 before the fold",
     )
 
     real_sheets = seed["real_sheets"]
@@ -657,6 +705,9 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         "P34.continuation.constant_ImW_and_decreasing_ReW",
         max(abs(float(record["W"][1])) for record in records) < 5e-8
         and all(float(record["W_T"][0]) < 0.0 for record in records)
+        and np.all(
+            np.diff([float(record["W_T"][0]) for record in records]) < 0.0
+        )
         and np.all(np.diff([float(record["W"][0]) for record in records]) < 0.0),
         "the upper branch keeps Im W fixed while Re W and Re W_T remain decreasing and negative",
     )
@@ -671,7 +722,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         and max(check["center_midpoint_error"] for check in derivative_checks)
         < 2e-5
         and all(
-            check["minus_ImT"] < check["plus_ImT"]
+            0.0 < check["minus_ImT"] < check["plus_ImT"]
             and check["minus_Imu"] < 0.0
             and check["plus_Imu"] < 0.0
             for check in derivative_checks
@@ -695,10 +746,10 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     )
     audit.numerical(
         "P34.seed.imaginary_time_three_halves",
-        abs(seed_ratios[0] - float(seed["kappa"])) < 1e-5
+        abs(seed_ratios[0] - float(seed["recorded_kappa_estimator"])) < 1e-5
         and np.all(np.diff(seed_ratios) < 0.0)
         and abs(fitted_exponent - 1.5) < 5e-4,
-        "Im T/tau^(3/2) converges to the P33 seed coefficient at the fold",
+        "the recorded Im T/tau^(3/2) ratios and fitted exponent are consistent with the finite-resolution P33 fold seed",
     )
 
     audit.numerical(
@@ -736,6 +787,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             "right_null_oriented": right_null.tolist(),
         },
         "seed": seed,
+        "incoming_real_segment": incoming_real_segment,
         "small_tau_seed_ratios": seed_ratios.tolist(),
         "small_tau_fitted_exponent": fitted_exponent,
         "computed_curve_derivative_checks": derivative_checks,
@@ -760,7 +812,8 @@ def run() -> dict[str, object]:
         "frozen_conventions": exact,
         "numerical_controls": numerical,
         "claim_status": {
-            "the_right_projected_dual_has_a_bounded_reduced_continuation_through_the_fold": "SUPPORTED_THROUGH_ReT_13_ON_THE_TRACKED_STATIONARY_FAMILY",
+            "a_bounded_directed_constant_phase_pair_exists_beyond_the_fold": "SUPPORTED_THROUGH_ReT_13_ON_THE_TRACKED_STATIONARY_FAMILY",
+            "the_incoming_right_projected_PL_cycle_is_oriented_into_a_specific_outgoing_arm": "OPEN_REQUIRES_AIRY_CONNECTION_DETERMINANT_LINE_AND_FULL_JOINT_FLOW",
             "the_continuation_adds_a_crossing_with_the_Phase32_lapse_base_contour": "NOT_SEEN_ON_THE_BOUNDED_TRACKED_ARMS",
             "the_sampled_complex_arm_contains_another_endpoint_Jacobi_zero": "NOT_SEEN_AT_THE_FROZEN_POINTS",
             "this_is_the_full_joint_field_lapse_dual": "OPEN_NOT_COMPUTED",
@@ -770,7 +823,8 @@ def run() -> dict[str, object]:
         "scope_guard": {
             "computed": [
                 "the deterministic P25 soft-vector orientation",
-                "the P33 Airy 3/2 seed and its numerical convergence",
+                "the finite-resolution P33 Airy 3/2 seed and recorded near-fold scaling",
+                "47 recorded post-saddle points on the incoming real stationary branch",
                 "upper and lower reflection-symmetric constant-ImW fixed-boundary sheets",
                 "pointwise alignment with -conj(W_T) in the declared reduced flat T metric",
                 "endpoint Jacobi singular values on a table bounded by ReT<=13",
@@ -778,6 +832,7 @@ def run() -> dict[str, object]:
             ],
             "not_computed": [
                 "the full joint field-lapse gradient flow or its metric",
+                "oriented transport of the incoming PL cycle into either outgoing fold arm",
                 "an oriented Airy connection matrix or determinant-line transport",
                 "all complex sheets, unsampled Jacobi zeros, good ends, or infinity",
                 "a global Picard-Lefschetz intersection coefficient",
