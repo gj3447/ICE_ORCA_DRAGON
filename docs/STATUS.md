@@ -391,6 +391,30 @@ the older SYMPOSIUM KG.
 This layer is memory and navigation, not a new research contract, scientific ratification, or automatic
 external-KG write. A `RELATED` bridge is not identity, and unresolved external mappings remain explicit.
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 24
+
+Phase 24 adds a connected real Starobinsky $S^3\times I$ minisuperspace control. Its executable returns
+exit 0 with **4 exact checks and 14 numerical checks**.
+
+- The explicitly supplied calibration $\phi_{\rm center}=1$, $T_0=0.7$ gives
+  $q_0=(3.56680319,1.01858095,3.56680319,1.01858095)$ and
+  $I_0=1.40669054283449$. These inputs are not an initial-value selection rule.
+- Constraint-preserving endpoint variations solve the proper length as a modulus. The connected mixed
+  Hessian has singular values $(1902.725436,2.6\times10^{-9})$ after fourth-order Richardson control;
+  the small value converges away and the Hamilton--Jacobi flow vectors are its null directions.
+- Holding $T=0.7$ fixed instead gives a full-rank mixed spectrum $(1297.25934,607.46791)$. Rank one is
+  therefore a constraint-reduction result, not a consequence of connectedness alone.
+- The complete boundary Hessian has two negative eigenvalues, and the real-contour scalar Schur
+  complement is indefinite. The fixed-scale $0.0875594$-nat Gaussian diagnostic is not a physical
+  gravitational entropy without a contour, boundary factorization, physical measure, and trace test.
+- The live runnable catalog is now 55. The machine ontology remains indexed through Phase 23 pending a
+  frozen Phase 24 evidence snapshot.
+
+See
+[`../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md`](../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md)
+and
+[`../cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py`](../cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py).
+
 ## Historical scientific ledger
 
 The rows below summarize previously committed outputs and audits. They are historical evidence, not a

@@ -53,12 +53,14 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE22_FINITE_MODE_SEAM_DENSITY.md` | Phase 22 보고서 — 31 exact checks. \(\omega,\beta>0\) finite mode는 양의 정규화 상태를 갖지만 noncompact free zero mode는 trace class가 아님 |
 | `phase23_homogeneous_minisuperspace_density.py` | full-real-lapse rigging, KG current, compact spectral density, quadratic zero root와 decompactification을 가르는 exact+numerical 실행체 |
 | `PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md` | Phase 23 보고서 — 32 exact + 4 numerical checks. supplied \(B_L\)은 regulated density를 만들지만 constraint/CPT-like pairing만으로 그 가중치는 선택되지 않음 |
+| `phase24_connected_starobinsky_interval.py` | real connected Starobinsky \(S^3\times I\) saddle, Hamilton-principal Hessian, constraint-null mixed block, fixed-length mutant와 contour obstruction을 가르는 실행체 |
+| `PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md` | Phase 24 보고서 — 4 exact + 14 numerical checks. connected response와 rank-one constrained channel은 지지되지만 positive density·physical entropy·thimble 선택은 미유도 |
 | `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–23의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 23)
+## 현재 경계 (Phase 24)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -162,6 +164,14 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - 이 경계의 claim, exact check, primary source, 적용 범위와 OPEN 항목은
   `../ontology/cpt-temporal-folded-susy/graph.json`에 stable ID로 연결했다. `./ice ontology validate`
   는 그 연결과 artifact hash를 검사하며, 그래프 자체는 연구 계약이나 외부 KG 승격이 아니다.
+- Phase 24는 supplied \(\phi_{\rm center}=1\), base proper length \(T_0=0.7\)에서 real connected
+  Starobinsky \(S^3\times I\) saddle을 재현하고, endpoint variation에서 proper length를 함께 풀어
+  constraint를 유지할 때 \(K_{+-}\)에 한 개의 nonzero homogeneous direction이 남음을 보였다.
+- 같은 endpoint를 고정하되 \(T=0.7\)을 모든 variation에서 고정하면 mixed block은 full rank다.
+  따라서 rank one은 connectedness만이 아니라 Hamiltonian-constraint reduction의 결과다.
+- full boundary Hessian과 real-contour scalar Schur complement는 indefinite다. fixed-\(a_\pm\)
+  scalar subblock의 \(0.08756\)-nat 값은 flat-measure pure-two-mode Gaussian diagnostic일 뿐,
+  physical seam entropy나 positive WDW density가 아니다. Phase 24는 아직 ontology에 색인되지 않았다.
 
 ## 다음 계산
 
