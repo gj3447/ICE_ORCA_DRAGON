@@ -315,6 +315,35 @@ def exact_controls(audit: Audit) -> dict[str, object]:
         and sp.simplify(sp.diff(local_s, lapse, 2) + sp.I * w2) == 0,
         "S_N=-W_T and S_NN=-i W_TT on corresponding analytic branches",
     )
+
+    scale_symbol = sp.symbols("a", positive=True)
+    potential_symbol = sp.symbols("V", real=True)
+    p_ea, p_ephi, p_la, p_lphi = sp.symbols(
+        "p_Ea p_Ephi p_La p_Lphi", real=True
+    )
+    h_euclidean = (
+        -p_ea**2 / (24 * sp.pi**2 * scale_symbol)
+        + p_ephi**2 / (4 * sp.pi**2 * scale_symbol**3)
+        + 6 * sp.pi**2 * scale_symbol
+        - 2 * sp.pi**2 * scale_symbol**3 * potential_symbol
+    )
+    h_lorentzian = (
+        -p_la**2 / (24 * sp.pi**2 * scale_symbol)
+        + p_lphi**2 / (4 * sp.pi**2 * scale_symbol**3)
+        - 6 * sp.pi**2 * scale_symbol
+        + 2 * sp.pi**2 * scale_symbol**3 * potential_symbol
+    )
+    audit.exact(
+        "P27.action.canonical_constraint_Wick_map",
+        sp.simplify(
+            h_lorentzian.subs(
+                {p_la: sp.I * p_ea, p_lphi: sp.I * p_ephi}
+            )
+            + h_euclidean
+        )
+        == 0,
+        "p_L=i p_E gives H_L(q,i p_E)=-H_E(q,p_E)",
+    )
     audit.exact(
         "P27.action.signed_classical_oddness",
         sp.simplify(euclidean_density.subs(time, -time) + euclidean_density)
@@ -432,6 +461,7 @@ def exact_controls(audit: Audit) -> dict[str, object]:
         "Wick_map": "N_L=-i T_E; T_E=i N_L; S_cl(N)=i W(iN)",
         "configuration_metric": "G=diag(-6a,a^3)",
         "Euclidean_potential": "U=-3a+a^3 V(phi)",
+        "canonical_constraint_map": "p_L=i p_E and H_L(q,i p_E)=-H_E(q,p_E)",
         "potential": "V=3/4[1-exp(-sqrt(2/3)phi)]^2",
     }
 
@@ -608,18 +638,18 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             )
         )
     audit.numerical(
-        "P27.signed_branch.raw_W_Stokes_candidate",
+        "P27.signed_branch.sampled_raw_W_control",
         np.min(connecting_derivatives) > 0.0
         and max(signed_action_residuals) < 2e-9,
-        "the recorded signed raw-W interval is odd with W_T>0 between the paired saddles",
+        "the eight symmetric raw-W samples are odd and have W_T>0",
     )
 
     short_endpoint_speed = float(-short_solutions[-1].energy)
     audit.numerical(
-        "P27.endpoint.zero_lapse_is_not_a_saddle",
+        "P27.endpoint.raw_W_zero_derivative_nonzero",
         abs(short_endpoint_speed - linear_coefficient) < 3e-4
         and linear_coefficient > 0.0,
-        "the raw-W dual reaches T=0 with finite nonzero speed rather than a critical endpoint",
+        "the analytic short-time limit has W_T(0) nonzero, so T=0 is not a saddle of raw W",
     )
 
     van_vleck_determinant_coefficient = float(
@@ -674,7 +704,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             ],
             "dW_dT": connecting_derivatives.tolist(),
             "max_odd_action_residual": max(signed_action_residuals),
-            "interpretation": "candidate raw-W Stokes connection only; the prefactored zero-lapse domain is not computed",
+            "interpretation": "sampled necessary data only; continuous PL flow and the prefactored zero-lapse domain are not computed",
         },
     }
 
@@ -697,7 +727,8 @@ def run() -> dict[str, object]:
         "claim_status": {
             "the_declared_Lorentzian_continuation_has_Wick_map_NL_minus_i_TE": "SUPPORTED_EXACTLY",
             "positive_real_Lorentzian_lapse_maps_to_positive_real_Euclidean_T": "CONTRADICTED_BY_T_EQUALS_iN",
-            "equal_boundary_W_to_zero_removes_the_zero_lapse_kernel_singularity": "CONTRADICTED_BY_VAN_VLECK_T_INVERSE",
+            "equal_boundary_W_to_zero_removes_the_raw_two_coordinate_fixed_T_kernel_singularity": "CONTRADICTED_BY_VAN_VLECK_T_INVERSE",
+            "equal_boundary_W_to_zero_removes_the_full_gauge_reduced_kernel_singularity": "OPEN_NOT_COMPUTED",
             "the_signed_raw_W_sheet_has_paired_stationary_points": "SUPPORTED_FOR_THE_FROZEN_BENCHMARK",
             "the_signed_raw_W_control_is_a_heteroclinic_of_the_full_prefactored_integrand": "OPEN_NOT_DERIVED",
             "the_positive_lapse_half_line_is_a_sourced_resolvent": "SUPPORTED_AT_THE_SPECTRAL_OPERATOR_LEVEL",
@@ -710,11 +741,11 @@ def run() -> dict[str, object]:
                 "the frozen Euclidean model, its explicitly declared Lorentzian continuation, and their exact Wick map",
                 "the equal-boundary short-time classical action through cubic order",
                 "the raw two-coordinate Jacobi, momentum, and Van Vleck short-time scaling",
-                "a bounded signed raw-W continuation through T=0",
+                "symmetric signed raw-W samples approaching but excluding T=0, plus the analytic short-time limit",
                 "spectral proxy identities separating a positive half-line resolvent from full-line constraint support",
             ],
             "not_computed": [
-                "the Faddeev-Popov measure or a gauge-fixed bulk one-loop determinant",
+                "a full BFV/FP endpoint measure, using but not equating it to the Phase-26 reduced Dirichlet-ghost diagnostic, combined with a zero-lapse-uniform gauge-fixed bulk determinant",
                 "the conformal-factor integration cycle or determinant phase",
                 "a zero-lapse-uniform full configuration-space kernel",
                 "a global Picard-Lefschetz flow, Stokes matrix, or intersection number",
@@ -731,7 +762,7 @@ def run() -> dict[str, object]:
             "Banihashemi_Jacobson_2025": "below-origin lapse contour after momentum integration in its stated gravitational setup; DOI 10.1103/PhysRevD.111.066014; it does not determine this model's n_sigma",
         },
         "next_calculation": (
-            "derive the BFV/FP measure and the zero-lapse-uniform determinant, "
+            "derive the full BFV/FP endpoint measure using the Phase-26 reduced ghost diagnostic and combine it with a zero-lapse-uniform determinant, "
             "then count lateral relative intersections on the full complex BVP surface"
         ),
     }

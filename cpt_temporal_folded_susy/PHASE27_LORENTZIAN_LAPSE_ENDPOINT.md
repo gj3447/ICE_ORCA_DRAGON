@@ -31,11 +31,14 @@ $B_v\sim T\mathbf 1$, while the raw two-coordinate Van Vleck magnitude scales
 as $1/|T|$.  Thus $W(0)=0$ does not remove the zero-duration delta-kernel
 singularity.
 
-The positive-$N$ contour and the real dual cycle seen in Phase 25 meet only at
-this singular endpoint after the Wick map.  That endpoint contact is not an
-ordinary transverse interior intersection.  A lateral prescription fixes a
-side and a Green-function boundary value, but it does not compute a global
-Picard--Lefschetz coefficient.
+In the sampled domain, the unregulated positive-$N$ ray and the recorded real
+raw-$W$ segment have only the common limiting point $T=0$ after the Wick map.
+That endpoint contact is not an ordinary transverse interior intersection.  A
+lateral prescription fixes only
+the local side of the zero-lapse singularity.  The Green-function boundary
+value in Section 2 also requires the independently declared large-$N$
+damping/spectral $\lambda-i0$ prescription; the zero bypass alone supplies
+neither that prescription nor a global Picard--Lefschetz coefficient.
 
 ## 1. Declared Lorentzian continuation
 
@@ -103,6 +106,30 @@ S_N=-W_T,
 \qquad
 S_{NN}=-iW_{TT}.
 \]
+
+The canonical constraints on the two sides of this continuation must not be
+identified without continuing the momenta.  With the conventions above,
+
+\[
+\mathcal H_L=
+-\frac{p_{La}^2}{24\pi^2a}
++\frac{p_{L\phi}^2}{4\pi^2a^3}
+-6\pi^2a+2\pi^2a^3V,
+\]
+
+whereas the Phase-24--26 Euclidean constraint is
+
+\[
+\mathcal H_E=
+-\frac{p_{Ea}^2}{24\pi^2a}
++\frac{p_{E\phi}^2}{4\pi^2a^3}
++6\pi^2a-2\pi^2a^3V.
+\]
+
+They obey $p_L=i p_E$ and
+$\mathcal H_L(q,i p_E)=-\mathcal H_E(q,p_E)$.  Thus the BFV calculation in
+Phase 26 is a Euclidean-continued reduction of the frozen Phase-24/25 system,
+not an uncontinued Lorentzian Hamiltonian with the same potential signs.
 
 The Euclidean saddle $T_*=0.7$ therefore lies at
 
@@ -298,14 +325,16 @@ W(+0.7)=+1.40669054283434,
 W(-0.7)=-1.40669054283434,
 \]
 
-with vanishing constraint at both ends.  On the recorded interval
-$-0.65\le T\le0.65$, excluding $T=0$, $W_T$ remains positive and the odd-action
+with vanishing constraint at both ends.  At the eight sampled points
+$T=\pm0.1,\pm0.2,\pm0.4,\pm0.65$, $W_T$ is positive and the odd-action
 residual is below $5\times10^{-14}$.
 
-This supports a candidate real Stokes connection for the classical exponent
-$W$ alone.  It does not establish a heteroclinic of the full prefactored lapse
-integrand: the Jacobi/Van Vleck factor is singular at $T=0$, while the FP
-measure and determinant domain remain uncomputed.
+These are necessary sampled raw-exponent data for a candidate Stokes segment.
+They do not establish continuous positivity or solve the Picard--Lefschetz
+flow equation, much less a heteroclinic of the full prefactored lapse
+integrand: the Jacobi/Van Vleck factor is singular at $T=0$, while the
+Phase-26 reduced Dirichlet-ghost diagnostic has not yet been combined with a
+zero-lapse-uniform bulk determinant.
 
 ## 6. What the lateral prescription fixes
 
@@ -323,9 +352,13 @@ upper-imaginary $T$ ray; the conjugate bypass maps to its left.
 This fixes:
 
 - the side of the zero-lapse singularity;
-- the lateral resolvent or causal boundary value;
-- a determinant square-root branch once the determinant is supplied;
-- which relative contour is to be used in a subsequent intersection count.
+- a determinant square-root branch only after the determinant and its global
+  continuation are supplied;
+- which local relative-contour side is used near $T=0$ in a subsequent
+  intersection count.
+
+It does not by itself fix convergence as $|N|\to\infty$ or the sign of the
+spectral $i0$.
 
 It does not fix:
 
@@ -335,11 +368,12 @@ It does not fix:
 - whether a recorded local PL arm reaches an admissible good end;
 - a WDW inner product, probability, or state.
 
-The positive-real $N$ contour maps to $i\mathbb R_+$, whereas the left dual arm
-from $T_*=0.7$ reaches $T=0$ along the real $T$ axis with nonzero speed.  The
-two directions are geometrically transverse if extended through the origin,
-but their contact occurs at a singular common endpoint.  It is therefore not
-an ordinary interior intersection and receives no integer or half-integer
+The positive-real $N$ contour maps to $i\mathbb R_+$.  The sampled raw-$W$ real
+branch approaches $T=0$, and the analytic short-time limit has
+$W_T(0)\ne0$.  No global dual cycle was computed.  If the two local directions
+are extended through the origin they are geometrically transverse, but their
+contact occurs at a singular common endpoint.  It is therefore not an
+ordinary interior intersection and receives no integer or half-integer
 assignment in this phase.
 
 ## 7. Claim boundary
@@ -351,14 +385,16 @@ The executable supports only the following bounded claims:
 - the equal-boundary classical action has the recorded linear and cubic
   short-time coefficients;
 - the raw Jacobi and Van Vleck factors remain singular at zero lapse;
-- the signed raw-$W$ branch has paired $\pm0.7$ stationary points and a
-  monotone recorded interval between them;
+- the signed raw-$W$ branch has paired $\pm0.7$ stationary points and positive
+  derivative at the eight recorded samples between them;
 - the positive lapse half-line is a sourced resolvent at the spectral operator
   level, while the full line is constraint-supported.
 
 The following remain open:
 
-- the BFV/Faddeev--Popov measure;
+- deriving the full BFV/FP endpoint measure from, among other inputs, the
+  Phase-26 reduced Dirichlet-ghost diagnostic, then combining it with the raw
+  zero-lapse Van Vleck factor and a gauge-fixed bulk determinant;
 - a gauge-fixed bulk determinant and its phase;
 - a zero-lapse-uniform full configuration-space kernel;
 - a global PL flow, Stokes matrix, or intersection number;
@@ -374,7 +410,7 @@ uv run --locked python3 \
   cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoint.py
 ```
 
-The current executable emits 12 exact checks, 8 numerical checks, and one
+The current executable emits 13 exact checks, 8 numerical checks, and one
 machine-readable `PHASE27_RESULT` record.  It writes no files.
 
 ## Primary references and their bounded role
