@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–30 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–32 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-17T16:38:39.344Z` graph update, the collection has 405 nodes and
-954 edges. Validation verifies 50/50 stored hashes (48 artifacts and 2 policies). The
-Phase 16–30 run snapshots contain 292 named exact checks, 124 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (125 numerical controls in all). These
+At the recorded `2026-08-17T17:27:03.527Z` graph update, the collection has 443 nodes and
+1088 edges. Validation verifies 56/56 stored hashes (54 artifacts and 2 policies). The
+Phase 16–32 run snapshots contain 315 named exact checks, 142 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (143 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -30,6 +30,8 @@ confidence.
 ./ice ontology trace claim:P28_DIRICHLET_BFV_GHOST_REMOVES_PROPER_LENGTH_ZERO_MODE --depth 2
 ./ice ontology trace claim:P29_FROZEN_QUADRATIC_KERNEL_HAS_DELTA_FLAT_IDENTITY_LIMIT --depth 2
 ./ice ontology trace claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS --depth 2
+./ice ontology trace claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE --depth 2
+./ice ontology trace claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE --depth 2
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;

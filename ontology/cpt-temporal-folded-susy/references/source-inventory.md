@@ -73,8 +73,10 @@
 | `source:forman-1987-functional-determinants` — R. Forman, [*Functional determinants and geometry*](https://doi.org/10.1007/BF01391828), Invent. Math. 88 (1987) 447–493 | `CITES`-only boundary-value functional-determinant framework for the Phase 30 magnitude/phase distinction | Does not turn the hybrid midpoint relative magnitude into an absolute gravitational determinant or fix its continuum determinant-line phase |
 | `source:gratton-turok-2001` — S. Gratton, N. Turok, [*Homogeneous modes of cosmological instantons*](https://doi.org/10.1103/PhysRevD.63.123514), Phys. Rev. D 63 (2001) 123514 | `CITES`-only warning that homogeneous gravitational negative-mode reduction depends on variables and constraint treatment | Does not supply the Phase 30 phase-space BFV super-Hessian, ghost complex, or physical determinant |
 | `source:halliwell-louko-1990-part-iii` — J. J. Halliwell, J. Louko, [*Steepest-descent contours in the path-integral approach to quantum cosmology. III. A general method with applications to anisotropic minisuperspace models*](https://doi.org/10.1103/PhysRevD.42.3997), Phys. Rev. D 42 (1990) 3997–4031 | `CITES`-only minisuperspace lapse-contour framework for the Phase 30 endpoint and global-cycle boundary | Does not determine this model's endpoint bypass, complete upward cycle, determinant line, or integer PL coefficient |
+| `source:rogers-2000-gauge-fixing-bfv` — A. Rogers, [*Gauge Fixing and BFV Quantization*](https://arxiv.org/abs/hep-th/9902133), Class. Quantum Grav. 17 (2000) 389–397 | `CITES`-only gauge-fermion admissibility and Gribov-boundary framework for the Phase 31 hybrid-BFV completion boundary | Does not validate the hybrid spectral/midpoint regulator, prove gauge-parameter independence, or supply an absolute physical determinant |
+| `source:halliwell-ortiz-1993` — J. J. Halliwell, M. E. Ortiz, [*Sum-over-histories origin of the composition laws of relativistic quantum mechanics and quantum cosmology*](https://doi.org/10.1103/PhysRevD.48.748), Phys. Rev. D 48 (1993) 748–768 | `CITES`-only composition-law framing for distinguishing causal positive-proper-time kernels from constraint-supported objects in Phase 32 | Does not select the lapse contour class or compute the repository's local or global intersection coefficient |
 
-Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the sixty-one-item inventory exhausts the literature.
+Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the sixty-three-item inventory exhausts the literature.
 
 ## Claim-family coverage
 
@@ -118,6 +120,8 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 28 string/three-form completion gate | Farakos et al.; Bandos et al.; Witten (1996); Cámara–Ibáñez–Uranga; Dienes; Kiermaier–Okawa–Zwiebach; Moosavian–Sen–Verma | All are `CITES` only: the direct three-form sources motivate an F-type route, D-type breaking needs an extra vector/gauging sector, Witten's shifted lattice applies only to an M-theory embedding, and no cited source derives the temporal seam or its local-EFT sector rule |
 | Phase 29 zero-lapse distribution and reduced BFV measure | Halliwell (1988); Teitelboim (1983, PRD 28); García–Vergara–Urrutia; Gibbons–Hawking–Perry; Marolf | `CITES`-only WDW measure/ordering, half-line causal/source, endpoint BFV, conformal-sign, and group-averaging boundaries; none derives the frozen `delta_flat` calculation or upgrades it to a physical WDW measure/state |
 | Phase 30 coupled conformal tangent and determinant-line gate | Gibbons–Hawking–Perry; Forman; Gratton–Turok; Halliwell–Louko III | `CITES`-only conformal-factor, boundary-determinant, constrained negative-mode, and lapse-contour framing; none supplies the finite-cutoff Schur-shifted cycle, derives a full BFV super-Hessian, or fixes the determinant-line phase and integer PL coefficient |
+| Phase 31 canonical lift and homogeneous BFV quartets | Gratton–Turok; Fradkin–Vilkovisky; García–Vergara–Urrutia; Rogers; Halliwell (1988) | `CITES`-only constrained negative-mode, BFV, endpoint, admissibility, and clock/polarization framing; none supplies the repository's finite Schur identities, relative cancellation, physical determinant, or SUSY/SUGRA Hessian |
+| Phase 32 lapse prescriptions and recorded local intersection | Teitelboim (1983, PRL); Halliwell–Ortiz; Banihashemi–Jacobson; Witten (2010); Feldbrugge–Lehners–Turok; Halliwell–Louko III; Gibbons–Hawking–Perry | `CITES`-only causal/group-average, below-origin-contour, relative-homology, and conformal-factor framing; none computes the recorded local `+1`, chooses the contour by CPT/Pin, or supplies the global coefficient |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -137,7 +141,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other sixty graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–30 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other sixty-two graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–32 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -254,5 +258,19 @@ identity sign, and the shifted-ray endpoint limit is not an intersection number.
 complex or phase-space BFV super-Hessian was evaluated. The nonlinear global cycle, determinant line
 through `N=0`, full primed superdeterminant, upward-cycle intersections, and regulator removal therefore
 remain within `open:p29-conformal-bfv-uniform-parametrix`.
+
+Phase 31 partially supplies the previously absent homogeneous canonical/BFV layer. Exact momentum
+elimination reproduces the configuration Hessian, the unreduced canonical sign is stable over the
+recorded cutoffs, and nonzero alpha=0 quartet factors cancel in a same-hybrid-regulator relative ratio.
+The bare bosonic BFV sign still alternates, however, and no absolute phase, zero-mode measure,
+constraint reduction, gauge-parameter independence, inhomogeneous mode determinant, or SUSY/SUGRA
+Hessian is obtained. The local `p_a` clock scan also changes endpoint polarization.
+
+Phase 32 fixes a narrower contour question only after the lapse class is supplied as independent input.
+The positive half-line has endpoint contact, while the full real line passing below zero gives one
+recorded finite-radius local `+1` on the tracked homogeneous lapse-base sheet. The upper bypass misses
+that positive dual. This does not close `open:p28-global-relative-homology-and-intersection`: other dual
+components, complex sheets, good ends, Stokes jumps, and the oriented superdeterminant are uncomputed.
+Nor does complex conjugation close `open:p32-cpt-pin-lapse-class-selection`.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

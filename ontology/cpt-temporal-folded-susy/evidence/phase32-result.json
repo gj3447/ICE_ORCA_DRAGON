@@ -1,0 +1,867 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P32_BELOW_ORIGIN_LAPSE_INTERSECTION_20260817",
+  "phase": "P32",
+  "observed_at_utc": "2026-08-17T17:27:03.527Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py",
+    "sha256": "944f2c51a656d3622f2f8d0dd83fabb1f25bcc59751e11c1fbd7b292ff8fee8f",
+    "introduced_in_commit": "60775dd068123fcc36a848d7d8329d8127b83ece"
+  },
+  "exact_checks": 14,
+  "checks": [
+    {
+      "id": "P32.Wick.lapse_half_plane_map",
+      "statement": "T=iN maps Re N>=0 to Im T>=0 and the lower N half-plane to the right T half-plane",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.Wick.lower_bypass_maps_right",
+      "statement": "the lower N semicircle from -r to +r maps to a right T semicircle crossing T=r",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.Wick.upper_bypass_maps_left",
+      "statement": "the upper N semicircle maps to a left T semicircle and misses the recorded positive-real dual",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.intersection.lower_bypass_orientation",
+      "statement": "the lower-bypass tangent and outward left dual tangent have positive transverse orientation",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.intersection.lower_lateral_half_line_is_endpoint_contact",
+      "statement": "the separately declared lower-lateral half-line meets the real dual only at its s=0 endpoint",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.contour.principal_momentum_decay",
+      "statement": "the lapse-dependent gravity and scalar momentum rays make the lower-bypass Gaussian decaying",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.detline.coupled_crossing_orientation",
+      "statement": "the declared momentum and dual-configuration Jacobians multiply to +1 and preserve the local crossing orientation",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.detline.lower_half_turn_requires_maslov_gluing",
+      "statement": "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional declared Maslov sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.operator.full_line_lateral_constraint_support",
+      "statement": "both full-line lateral contours retain the same formal delta(H) constraint support",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.operator.positive_half_line_is_sourced",
+      "statement": "the positive half-line remains a sourced resolvent rather than a constraint projector",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.endpoint.paired_arc_vs_pointwise_pole",
+      "statement": "the operator-paired bypass shrinks while a pointwise 1/N pole retains a finite semicircle integral",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.regulator.lateral_limit_is_not_uniform",
+      "statement": "the lateral difference vanishes at fixed spectral cutoff but not when the cutoff scales as 1/epsilon",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.BFV.open_interval_modulus_control",
+      "statement": "in the declared reduced open-interval gauge, Dirichlet ghosts leave the lapse modulus invariant and add no bypass-selecting power",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.conjugation.lateral_loci",
+      "statement": "complex conjugation exchanges the lower and upper lateral lapse loci; no CPT or Pin lift is inferred",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 7,
+  "numerical": [
+    {
+      "id": "P32.saddle.frozen_connected_control",
+      "statement": "the connected T=.7 saddle and boundary are inherited without retuning",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.dual.short_time_transversality",
+      "statement": "the left dual stays transverse and its tangent approaches the nonzero short-time Hamilton-Jacobi limit",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.Jacobi.short_time_no_caustic",
+      "statement": "the regulated crossings approach N=0 without a sampled fixed-time Dirichlet zero",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.endpoint.Van_Vleck_scaling",
+      "statement": "r times the endpoint Van-Vleck magnitude converges to the frozen identity-kernel coefficient",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.intersection.regulated_local_orientation_stability",
+      "statement": "every finite lower full-line bypass crosses the recorded real dual at T=r with stable positive local orientation",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.joint.lower_bypass_complex_BVP",
+      "statement": "the actual connected complex BVP continues around four lower lapse bypasses with no sampled Jacobi zero",
+      "status": "PASS"
+    },
+    {
+      "id": "P32.regulator.finite_spectral_control",
+      "statement": "spectral damping converges at fixed modes, while the endpoint lateral limit remains nonuniform as the mode cutoff grows like 1/epsilon",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "below-origin lapse bypass and recorded intersection gate",
+    "claim_status": {
+      "CPT_or_Pin_alone_selects_the_below_origin_lapse_class": "OPEN_NOT_DERIVED",
+      "analytic_transport_alone_fixes_the_negative_real_identity_normalization": "CONTRADICTED_REQUIRES_AN_ADDITIONAL_MASLOV_COMPARISON_SIGN",
+      "the_above_origin_full_line_has_the_same_positive_dual_intersection": "CONTRADICTED_ON_THE_RECORDED_BRANCH",
+      "the_lower_bypass_principal_momentum_cycle_is_locally_convergent": "SUPPORTED_EXACTLY",
+      "the_positive_half_lapse_ray_has_an_ordinary_transverse_intersection_with_that_dual": "CONTRADICTED_BY_ENDPOINT_CONTACT",
+      "the_recorded_local_plus_one_is_the_complete_global_PL_coefficient": "OPEN_OTHER_DUAL_COMPONENTS_AND_GLOBAL_ENDS_NOT_DERIVED",
+      "the_result_is_a_positive_trace_class_WDW_projector_or_seam_state": "OPEN_NOT_DERIVED",
+      "the_specified_below_origin_full_line_has_one_recorded_local_intersection_with_the_connected_saddle_dual": "SUPPORTED_ON_THE_TRACKED_HOMOGENEOUS_LAPSE_BASE"
+    },
+    "exact_check_ids": [
+      "P32.Wick.lapse_half_plane_map",
+      "P32.Wick.lower_bypass_maps_right",
+      "P32.Wick.upper_bypass_maps_left",
+      "P32.intersection.lower_bypass_orientation",
+      "P32.intersection.lower_lateral_half_line_is_endpoint_contact",
+      "P32.contour.principal_momentum_decay",
+      "P32.detline.coupled_crossing_orientation",
+      "P32.detline.lower_half_turn_requires_maslov_gluing",
+      "P32.operator.full_line_lateral_constraint_support",
+      "P32.operator.positive_half_line_is_sourced",
+      "P32.endpoint.paired_arc_vs_pointwise_pole",
+      "P32.regulator.lateral_limit_is_not_uniform",
+      "P32.BFV.open_interval_modulus_control",
+      "P32.conjugation.lateral_loci"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P32.Wick.lapse_half_plane_map",
+        "statement": "T=iN maps Re N>=0 to Im T>=0 and the lower N half-plane to the right T half-plane",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.Wick.lower_bypass_maps_right",
+        "statement": "the lower N semicircle from -r to +r maps to a right T semicircle crossing T=r",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.Wick.upper_bypass_maps_left",
+        "statement": "the upper N semicircle maps to a left T semicircle and misses the recorded positive-real dual",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.intersection.lower_bypass_orientation",
+        "statement": "the lower-bypass tangent and outward left dual tangent have positive transverse orientation",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.intersection.lower_lateral_half_line_is_endpoint_contact",
+        "statement": "the separately declared lower-lateral half-line meets the real dual only at its s=0 endpoint",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.contour.principal_momentum_decay",
+        "statement": "the lapse-dependent gravity and scalar momentum rays make the lower-bypass Gaussian decaying",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.detline.coupled_crossing_orientation",
+        "statement": "the declared momentum and dual-configuration Jacobians multiply to +1 and preserve the local crossing orientation",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.detline.lower_half_turn_requires_maslov_gluing",
+        "statement": "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional declared Maslov sign",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.operator.full_line_lateral_constraint_support",
+        "statement": "both full-line lateral contours retain the same formal delta(H) constraint support",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.operator.positive_half_line_is_sourced",
+        "statement": "the positive half-line remains a sourced resolvent rather than a constraint projector",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.endpoint.paired_arc_vs_pointwise_pole",
+        "statement": "the operator-paired bypass shrinks while a pointwise 1/N pole retains a finite semicircle integral",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.regulator.lateral_limit_is_not_uniform",
+        "statement": "the lateral difference vanishes at fixed spectral cutoff but not when the cutoff scales as 1/epsilon",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.BFV.open_interval_modulus_control",
+        "statement": "in the declared reduced open-interval gauge, Dirichlet ghosts leave the lapse modulus invariant and add no bypass-selecting power",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.conjugation.lateral_loci",
+        "statement": "complex conjugation exchanges the lower and upper lateral lapse loci; no CPT or Pin lift is inferred",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 14,
+    "frozen_conventions": {
+      "Wick_map": "T=iN",
+      "below_origin_full_line": "N real except N=r exp(i theta), theta from -pi to 0",
+      "lower_lateral_endpoint_regulator": "N=x-i epsilon, x>=0; separately declared",
+      "positive_half_line": "N=x, x>=0 with proper-time damping; sourced resolvent",
+      "principal_momentum_cycle": {
+        "p_gravity": "exp[i(pi/4-theta/2)] R",
+        "p_scalar": "exp[i(-pi/4-theta/2)] R"
+      }
+    },
+    "next_calculation": "continue both arms of the full joint upward cycle through the real fold using a uniform Airy polarization, then enumerate every intersection with the specified below-origin full-line contour before removing the mode cutoff",
+    "numerical_check_ids": [
+      "P32.saddle.frozen_connected_control",
+      "P32.dual.short_time_transversality",
+      "P32.Jacobi.short_time_no_caustic",
+      "P32.endpoint.Van_Vleck_scaling",
+      "P32.intersection.regulated_local_orientation_stability",
+      "P32.joint.lower_bypass_complex_BVP",
+      "P32.regulator.finite_spectral_control"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P32.saddle.frozen_connected_control",
+        "statement": "the connected T=.7 saddle and boundary are inherited without retuning",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.dual.short_time_transversality",
+        "statement": "the left dual stays transverse and its tangent approaches the nonzero short-time Hamilton-Jacobi limit",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.Jacobi.short_time_no_caustic",
+        "statement": "the regulated crossings approach N=0 without a sampled fixed-time Dirichlet zero",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.endpoint.Van_Vleck_scaling",
+        "statement": "r times the endpoint Van-Vleck magnitude converges to the frozen identity-kernel coefficient",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.intersection.regulated_local_orientation_stability",
+        "statement": "every finite lower full-line bypass crosses the recorded real dual at T=r with stable positive local orientation",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.joint.lower_bypass_complex_BVP",
+        "statement": "the actual connected complex BVP continues around four lower lapse bypasses with no sampled Jacobi zero",
+        "status": "PASS"
+      },
+      {
+        "id": "P32.regulator.finite_spectral_control",
+        "statement": "spectral damping converges at fixed modes, while the endpoint lateral limit remains nonuniform as the mode cutoff grows like 1/epsilon",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 7,
+    "numerical_controls": {
+      "base": {
+        "T_star": 0.7,
+        "W_star": 1.4066905428343415,
+        "boundary": [
+          3.5668031935672753,
+          1.0185809464006637,
+          3.5668031935672753,
+          1.0185809464006637
+        ],
+        "identity_kernel_coefficient": 97.90024790286826,
+        "short_time_W_T_limit": 2.9871925673547044
+      },
+      "complex_lower_bypass": [
+        {
+          "N": [
+            -0.1,
+            -1.2246467991473533e-17
+          ],
+          "T": [
+            1.2246467991473533e-17,
+            -0.1
+          ],
+          "action": [
+            3.7294574780888614e-17,
+            -0.30065802580558354
+          ],
+          "endpoint_residual": 3.480928408564328e-28,
+          "jacobi_singular_values": [
+            0.10004329801241661,
+            0.10001936912276845
+          ],
+          "r": 0.1,
+          "theta": -3.141592653589793
+        },
+        {
+          "N": [
+            -0.07071067811865475,
+            -0.07071067811865477
+          ],
+          "T": [
+            0.07071067811865477,
+            -0.07071067811865475
+          ],
+          "action": [
+            0.21259892012624274,
+            -0.20985549544832033
+          ],
+          "endpoint_residual": 4.440904771826567e-16,
+          "jacobi_singular_values": [
+            0.10003291018604374,
+            0.09996706581698671
+          ],
+          "r": 0.1,
+          "theta": -2.356194490192345
+        },
+        {
+          "N": [
+            6.123233995736766e-18,
+            -0.1
+          ],
+          "T": [
+            0.1,
+            6.123233995736766e-18
+          ],
+          "action": [
+            0.29677823714709506,
+            1.7934581745253887e-17
+          ],
+          "endpoint_residual": 4.440892098500626e-16,
+          "jacobi_singular_values": [
+            0.09998067967234824,
+            0.0999567447929515
+          ],
+          "r": 0.1,
+          "theta": -1.5707963267948966
+        },
+        {
+          "N": [
+            0.07071067811865477,
+            -0.07071067811865475
+          ],
+          "T": [
+            0.07071067811865475,
+            0.07071067811865477
+          ],
+          "action": [
+            0.2125989201262436,
+            0.20985549544832124
+          ],
+          "endpoint_residual": 4.965073394974291e-16,
+          "jacobi_singular_values": [
+            0.10003291010750379,
+            0.09996706558158733
+          ],
+          "r": 0.1,
+          "theta": -0.7853981633974483
+        },
+        {
+          "N": [
+            0.1,
+            0.0
+          ],
+          "T": [
+            0.0,
+            0.1
+          ],
+          "action": [
+            2.2664091394701805e-19,
+            0.30065802580559303
+          ],
+          "endpoint_residual": 8.881784205590573e-16,
+          "jacobi_singular_values": [
+            0.10004329801241661,
+            0.10001936912276842
+          ],
+          "r": 0.1,
+          "theta": 0.0
+        },
+        {
+          "N": [
+            -0.05,
+            -6.123233995736766e-18
+          ],
+          "T": [
+            6.123233995736766e-18,
+            -0.05
+          ],
+          "action": [
+            1.836047174787226e-17,
+            -0.14960207998658073
+          ],
+          "endpoint_residual": 2.195765741854362e-20,
+          "jacobi_singular_values": [
+            0.05000541021959803,
+            0.05000241886956123
+          ],
+          "r": 0.05,
+          "theta": -3.141592653589793
+        },
+        {
+          "N": [
+            -0.035355339059327376,
+            -0.03535533905932738
+          ],
+          "T": [
+            0.03535533905932738,
+            -0.035355339059327376
+          ],
+          "action": [
+            0.10578469496728024,
+            -0.10544176687128598
+          ],
+          "endpoint_residual": 4.440893285618747e-16,
+          "jacobi_singular_values": [
+            0.05000411442734455,
+            0.04999588443456835
+          ],
+          "r": 0.05,
+          "theta": -2.356194490192345
+        },
+        {
+          "N": [
+            3.061616997868383e-18,
+            -0.05
+          ],
+          "T": [
+            0.05,
+            3.061616997868383e-18
+          ],
+          "action": [
+            0.1491171064201844,
+            9.190194405659156e-18
+          ],
+          "endpoint_residual": 4.440892109886737e-16,
+          "jacobi_singular_values": [
+            0.049997582788745734,
+            0.04999459120217646
+          ],
+          "r": 0.05,
+          "theta": -1.5707963267948966
+        },
+        {
+          "N": [
+            0.03535533905932738,
+            -0.035355339059327376
+          ],
+          "T": [
+            0.035355339059327376,
+            0.03535533905932738
+          ],
+          "action": [
+            0.10578469496728005,
+            0.10544176687128586
+          ],
+          "endpoint_residual": 4.440892803912866e-16,
+          "jacobi_singular_values": [
+            0.05000411458444026,
+            0.049995884434642125
+          ],
+          "r": 0.05,
+          "theta": -0.7853981633974483
+        },
+        {
+          "N": [
+            0.05,
+            0.0
+          ],
+          "T": [
+            0.0,
+            0.05
+          ],
+          "action": [
+            2.0929795359709558e-19,
+            0.14960207998657776
+          ],
+          "endpoint_residual": 4.440892126207189e-16,
+          "jacobi_singular_values": [
+            0.05000541021959805,
+            0.050002418869561215
+          ],
+          "r": 0.05,
+          "theta": 0.0
+        },
+        {
+          "N": [
+            -0.025,
+            -3.061616997868383e-18
+          ],
+          "T": [
+            3.061616997868383e-18,
+            -0.025
+          ],
+          "action": [
+            9.156773686798465e-18,
+            -0.07471012393282035
+          ],
+          "endpoint_residual": 3.46426919308026e-25,
+          "jacobi_singular_values": [
+            0.025000676213980347,
+            0.025000302287682366
+          ],
+          "r": 0.025,
+          "theta": -3.141592653589793
+        },
+        {
+          "N": [
+            -0.017677669529663688,
+            -0.01767766952966369
+          ],
+          "T": [
+            0.01767766952966369,
+            -0.017677669529663688
+          ],
+          "action": [
+            0.052828036810237636,
+            -0.05278517079815044
+          ],
+          "endpoint_residual": 4.7638073506308684e-20,
+          "jacobi_singular_values": [
+            0.025000514563866396,
+            0.024999485785741994
+          ],
+          "r": 0.025,
+          "theta": -2.356194490192345
+        },
+        {
+          "N": [
+            1.5308084989341916e-18,
+            -0.025
+          ],
+          "T": [
+            0.025,
+            1.5308084989341916e-18
+          ],
+          "action": [
+            0.0746495022371418,
+            4.567251421204099e-18
+          ],
+          "endpoint_residual": 1.9632163385923595e-36,
+          "jacobi_singular_values": [
+            0.024999696826660447,
+            0.024999325106599374
+          ],
+          "r": 0.025,
+          "theta": -1.5707963267948966
+        },
+        {
+          "N": [
+            0.01767766952966369,
+            -0.017677669529663688
+          ],
+          "T": [
+            0.017677669529663688,
+            0.01767766952966369
+          ],
+          "action": [
+            0.052828036810237976,
+            0.05278517079815078
+          ],
+          "endpoint_residual": 9.842772507254273e-21,
+          "jacobi_singular_values": [
+            0.025000514524602713,
+            0.024999485746477666
+          ],
+          "r": 0.025,
+          "theta": -0.7853981633974483
+        },
+        {
+          "N": [
+            0.025,
+            0.0
+          ],
+          "T": [
+            0.0,
+            0.025
+          ],
+          "action": [
+            -1.1993551425178219e-18,
+            0.0747101239328208
+          ],
+          "endpoint_residual": 2.220449750639193e-16,
+          "jacobi_singular_values": [
+            0.025000676213980357,
+            0.025000302287682352
+          ],
+          "r": 0.025,
+          "theta": 0.0
+        },
+        {
+          "N": [
+            -0.0125,
+            -1.5308084989341916e-18
+          ],
+          "T": [
+            1.5308084989341916e-18,
+            -0.0125
+          ],
+          "action": [
+            4.574211750373373e-18,
+            -0.03734369591357314
+          ],
+          "endpoint_residual": 9.556189962326764e-28,
+          "jacobi_singular_values": [
+            0.012500084524764353,
+            0.012500037783740744
+          ],
+          "r": 0.0125,
+          "theta": -3.141592653589793
+        },
+        {
+          "N": [
+            -0.008838834764831844,
+            -0.008838834764831846
+          ],
+          "T": [
+            0.008838834764831846,
+            -0.008838834764831844
+          ],
+          "action": [
+            0.026405980663618756,
+            -0.026400622412107156
+          ],
+          "endpoint_residual": 4.4408920999593345e-16,
+          "jacobi_singular_values": [
+            0.012500063992666937,
+            0.012499936258873875
+          ],
+          "r": 0.0125,
+          "theta": -2.356194490192345
+        },
+        {
+          "N": [
+            7.654042494670958e-19,
+            -0.0125
+          ],
+          "T": [
+            0.0125,
+            7.654042494670958e-19
+          ],
+          "action": [
+            0.03733611820161415,
+            2.2857138729640344e-18
+          ],
+          "endpoint_residual": 8.945361885820885e-38,
+          "jacobi_singular_values": [
+            0.012499962339994028,
+            0.012499916383063232
+          ],
+          "r": 0.0125,
+          "theta": -1.5707963267948966
+        },
+        {
+          "N": [
+            0.008838834764831846,
+            -0.008838834764831844
+          ],
+          "T": [
+            0.008838834764831844,
+            0.008838834764831846
+          ],
+          "action": [
+            0.02640598066361926,
+            0.026400622412107676
+          ],
+          "endpoint_residual": 4.268126278768135e-21,
+          "jacobi_singular_values": [
+            0.012500064188845025,
+            0.012499935905690136
+          ],
+          "r": 0.0125,
+          "theta": -0.7853981633974483
+        },
+        {
+          "N": [
+            0.0125,
+            0.0
+          ],
+          "T": [
+            0.0,
+            0.0125
+          ],
+          "action": [
+            -2.3970777722939627e-27,
+            0.03734369591357312
+          ],
+          "endpoint_residual": 1.5661062608618822e-27,
+          "jacobi_singular_values": [
+            0.012500084524764348,
+            0.012500037783740744
+          ],
+          "r": 0.0125,
+          "theta": 0.0
+        }
+      ],
+      "recorded_intersection": {
+        "above_origin_full_line_on_positive_dual": 0,
+        "below_origin_full_line": 1,
+        "global_coefficient": null,
+        "positive_half_line": null,
+        "positive_half_line_reason": "the meeting is a singular contour endpoint rather than an interior transverse crossing"
+      },
+      "regulated_real_dual": [
+        {
+          "W": 0.29677823714708773,
+          "W_T": 2.928939471811943,
+          "W_over_r": 2.9677823714708773,
+          "crossing_point_residual": 6.123233995736766e-18,
+          "det_Bv_over_r2": 0.9993743303334802,
+          "endpoint_residual": 0.0,
+          "intersection_orientation_determinant": 0.2928939471811943,
+          "r": 0.1,
+          "r_times_Van_Vleck": 97.93088888969896,
+          "sigma_min_over_r": 0.9995674530938887
+        },
+        {
+          "W": 0.14911710642018625,
+          "W_T": 2.972639843885134,
+          "W_over_r": 2.9823421284037246,
+          "crossing_point_residual": 3.061616997868383e-18,
+          "det_Bv_over_r2": 0.9998434808290262,
+          "endpoint_residual": 0.0,
+          "intersection_orientation_determinant": 0.14863199219425668,
+          "r": 0.05,
+          "r_times_Van_Vleck": 97.90791043519982,
+          "sigma_min_over_r": 0.9998918226841713
+        },
+        {
+          "W": 0.07464950223714165,
+          "W_T": 2.9835550458363573,
+          "W_over_r": 2.9859800894856656,
+          "crossing_point_residual": 1.5308084989341916e-18,
+          "det_Bv_over_r2": 0.9999608638468623,
+          "endpoint_residual": 0.0,
+          "intersection_orientation_determinant": 0.07458887614590894,
+          "r": 0.025,
+          "r_times_Van_Vleck": 97.90216367864744,
+          "sigma_min_over_r": 0.9999729531330442
+        },
+        {
+          "W": 0.037336118201615955,
+          "W_T": 2.986283228183634,
+          "W_over_r": 2.9868894561292763,
+          "crossing_point_residual": 7.654042494670958e-19,
+          "det_Bv_over_r2": 0.9999902155641794,
+          "endpoint_residual": 0.0,
+          "intersection_orientation_determinant": 0.03732854035229543,
+          "r": 0.0125,
+          "r_times_Van_Vleck": 97.90072685572909,
+          "sigma_min_over_r": 0.999993238124618
+        },
+        {
+          "W": 0.01866947993789566,
+          "W_T": 2.9869652351375424,
+          "W_over_r": 2.9871167900633053,
+          "crossing_point_residual": 3.827021247335479e-19,
+          "det_Bv_over_r2": 0.9999975538661987,
+          "endpoint_residual": 0.0,
+          "intersection_orientation_determinant": 0.01866853271960964,
+          "r": 0.00625,
+          "r_times_Van_Vleck": 97.9003676416407,
+          "sigma_min_over_r": 0.9999983095212391
+        },
+        {
+          "W": 0.00933491757207487,
+          "W_T": 2.9871357344614045,
+          "W_over_r": 2.987173623063958,
+          "crossing_point_residual": 1.9135106236677395e-19,
+          "det_Bv_over_r2": 0.9999993884649968,
+          "endpoint_residual": 0.0,
+          "intersection_orientation_determinant": 0.00933479917019189,
+          "r": 0.003125,
+          "r_times_Van_Vleck": 97.90027783759626,
+          "sigma_min_over_r": 0.9999995773796901
+        },
+        {
+          "W": 0.004667480986381473,
+          "W_T": 2.9871783591414642,
+          "W_over_r": 2.9871878312841424,
+          "crossing_point_residual": 9.567553118338697e-20,
+          "det_Bv_over_r2": 0.9999998471161515,
+          "endpoint_residual": 0.0,
+          "intersection_orientation_determinant": 0.004667466186158538,
+          "r": 0.0015625,
+          "r_times_Van_Vleck": 97.90025538655243,
+          "sigma_min_over_r": 0.999999894344884
+        }
+      ],
+      "spectral_regulator": {
+        "cutoff_errors": [
+          3.515008315657332e-07,
+          4.1794514611332494e-07,
+          4.413992705175966e-07,
+          4.47906736884689e-07
+        ],
+        "eigenvalues": [
+          -3.0,
+          -0.5,
+          0.25,
+          2.0
+        ],
+        "eta_values": [
+          0.2,
+          0.1,
+          0.05,
+          0.025
+        ],
+        "lateral_differences": [
+          0.30112626630322525,
+          0.15014066455607866,
+          0.0750175793610034,
+          0.037502197304248974
+        ],
+        "lateral_epsilons": [
+          0.05,
+          0.025,
+          0.0125,
+          0.00625
+        ],
+        "nonuniform_unit_scaled_difference": 2.3504023872876028
+      }
+    },
+    "phase": "P32",
+    "scope_guard": {
+      "computed": [
+        "the full-line lower and upper semicircular lapse bypass geometry",
+        "the lower-bypass principal signature (-,+) momentum cycle and orientation holonomy",
+        "the connected real dual from r=.1 to .0015625",
+        "the actual complex fixed-boundary branch around four lower bypass semicircles",
+        "the recorded local intersection orientation and regulator stability",
+        "the positive half-line endpoint-contact distinction",
+        "a finite spectral damping versus lateral-shift control"
+      ],
+      "not_computed": [
+        "the complete global upward cycle and every intersection on every BVP sheet",
+        "the inhomogeneous gauge-fixed determinant and its oriented superdeterminant line",
+        "a nonperturbative BFV/BV quantum master equation or Gribov analysis",
+        "a proof that CPT or Pin selects the below-origin rather than above-origin class",
+        "a positive WDW physical trace, seam density, initial value, or SUSY spectrum"
+      ]
+    }
+  }
+}
+

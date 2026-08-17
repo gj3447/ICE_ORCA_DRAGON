@@ -167,6 +167,8 @@ aims to explain, not evidence that the route is correct.
 | [Phase 28](cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md) | In the reduced homogeneous BFV--BRST control, Dirichlet ghosts do not remove proper length; bounded constructed dual-cycle segments cross the recorded branch and give a conditional local Gaussian factor. | The physical original cycle, global intersection number, full boson--fermion--gravitino--ghost determinant, positive density, or soft spectrum. |
 | [Phase 29](cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md) | For the frozen leading real-lapse quadratic kernel and local flat $da\,d\phi$ endpoint measure, the pointwise $1/N$ factor is the normalization of a distributional identity kernel. The reduced fixed-$s$ BFV ghost leaves a $dT$ modulus measure and does not cancel it. | The physical WDW endpoint measure, interacting all-orders uniform kernel, simultaneous conformal/lapse cycle, full determinant, quantum state, or global PL coefficient. Multiplying by $N$ changes the resolvent and group average. |
 | [Phase 30](cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md) | In the frozen homogeneous finite-cutoff control, a field-dependent Schur shift gives a convergent coupled conformal/lapse Gaussian tangent cycle. One declared midpoint calibration has a stable relative determinant magnitude. | A nonlinear continuum thimble, full BFV phase-space super-Hessian, absolute determinant-line phase, physical WDW measure, or global PL coefficient. The bare determinant sign alternates with cutoff parity, and one holomorphic lapse sheet does not normalize both real sides. |
+| [Phase 31](cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md) | Exact momentum elimination reproduces the Phase-30 configuration Hessian. The unreduced proper-time-gauge canonical sign is stable, and nonzero homogeneous BFV quartet factors cancel in a same-regulator benchmark/reference ratio. | An absolute BFV phase or normalization, constraint-reduced continuum determinant, global $p_a$ clock, global PL coefficient, physical probability, or SUSY/SUGRA Hessian. “Super-Hessian” here is BFV grading only. |
+| [Phase 32](cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md) | For an independently specified full real lapse contour bypassing zero from below, the tracked homogeneous dual has one recorded finite-radius local intersection contribution $+1$. The positive half-line instead has endpoint contact. | The complete global coefficient $n_\sigma$, a CPT/Pin derivation of the below-origin contour class, the full oriented superdeterminant line, or a positive physical seam state. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -178,11 +180,12 @@ no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomp
    physical sheet observable, and genuine spacetime Pin lift.
 2. **Persistent breaking:** derive a stable nonzero $F/D$ order parameter, its visible-sector
    mediation, late-time pole splitting, vacuum lifetime, backreaction, and soft-versus-hard UV behavior.
-3. **PL/BFV completion:** extend Phase 30's finite-cutoff coupled Gaussian tangent cycle to a nonlinear
-   endpoint-uniform conformal/BFV cycle, construct the full phase-space ghost/gauge super-Hessian and a
-   cutoff-independent determinant-line phase, derive the physical WDW endpoint measure, and compute the
-   physical original/global-dual intersection coefficient. An inserted lapse power is not an allowed
-   shortcut because it changes the operator being integrated.
+3. **PL/BFV completion:** continue every arm of the full joint upward cycle through its folds, enumerate
+   every intersection with a separately specified physical lapse contour, and remove the endpoint and
+   mode regulators. Phase 31 supplies only an unreduced homogeneous BFV hybrid, while Phase 32 supplies
+   one local $+1$ for the declared below-origin full line—not the global coefficient. The full oriented
+   inhomogeneous superdeterminant, physical WDW endpoint measure, and CPT/Pin contour-class selection
+   remain required.
 4. **Three-form/flux selection:** derive the harmonic- and flux-dependent seam kernel, charge lattice,
    boundary ensemble, and sector measure from an actual three-form SUGRA or membrane action; then test
    for a cutoff-independent interior peak in $(n,\phi)$.
@@ -202,11 +205,11 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 61 | `./ice list --json` |
+| runnable Python kernels | 63 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 405 nodes, 954 edges, 96 claims | `./ice ontology summary` |
-| latest runnable CPT seam phase | Phase 30 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| research ontology | 443 nodes, 1088 edges, 107 claims | `./ice ontology summary` |
+| latest runnable CPT seam phase | Phase 32 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.
@@ -284,6 +287,8 @@ Use a name returned by `./ice list` rather than depending on a physical path:
 ./ice run phase28_thimble_bfv_intersection
 ./ice run phase29_zero_lapse_uniform_kernel
 ./ice run phase30_conformal_bfv_determinant_line
+./ice run phase31_homogeneous_bfv_superhessian
+./ice run phase32_below_origin_lapse_intersection
 ```
 
 Direct runs may update an adjacent result file. Inspect `git status` afterward. Use `./ice repro` for a

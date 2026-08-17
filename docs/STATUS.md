@@ -374,10 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–30 is now indexed in a repository-local typed research graph with **405 nodes and 954 directed
-relations**. It preserves 96 claims, 56 evidence groups, 33 explicit scopes, 38 open problems, 61
-literature sources, the Phase 16–30 run payloads (292 named exact checks, 124 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 50/50 verified artifact and policy hashes,
+Phase 15R–32 is now indexed in a repository-local typed research graph with **443 nodes and 1088 directed
+relations**. It preserves 107 claims, 63 evidence groups, 35 explicit scopes, 39 open problems, 63
+literature sources, the Phase 16–32 run payloads (315 named exact checks, 142 typed numerical checks, and
+one separately recorded legacy Phase-18 numerical control), 56/56 verified artifact and policy hashes,
 and cautious bridges to
 the older SYMPOSIUM KG.
 
@@ -559,6 +559,53 @@ See
 [`../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md`](../cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md)
 and
 [`../cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py`](../cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 31
+
+Phase 31 returns exit 0 with **9 exact checks and 11 numerical checks**.
+
+- Exact momentum elimination reproduces the Phase-30 configuration-plus-global-lapse Hessian from the
+  declared unreduced canonical `(q,p,T)` midpoint system.
+- The unreduced proper-time-gauge canonical determinant sign is positive over all recorded odd and even
+  cutoffs. This does not determine the momentum-contour orientation or physical determinant line.
+- Each nonzero homogeneous alpha=0 BFV gauge/ghost quartet is background-independent in the stated
+  finite-dimensional factorization and drops out of a same-hybrid-regulator benchmark/reference ratio.
+  No absolute Gaussian phase, ghost normalization, or zero-mode measure is assigned.
+- The bare full bosonic BFV block still has an odd/even gauge-pair parity sign. The bounded `p_a` clock
+  scan is locally regular, but changing the endpoint polarization produces a nonzero Legendre term.
+- “Super-Hessian” denotes the BFV Z2 gauge/ghost grading, not a SUSY/SUGRA Hessian. No physical
+  probability, global PL coefficient, or SUGRA seam state is obtained. The committed runnable catalog
+  is now 62.
+
+See
+[`../cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md`](../cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md)
+and
+[`../cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py`](../cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 32
+
+Phase 32 returns exit 0 with **14 exact checks and 7 numerical checks**.
+
+- The causal positive-lapse half-line is a sourced resolvent. Its lower-lateral regulator meets the
+  recorded positive-real upward dual only at the contour endpoint, so no ordinary transverse
+  intersection integer is assigned.
+- For the independently declared full real lapse contour bypassing zero from below, every recorded
+  finite radius crosses the tracked homogeneous dual at `T=r` with positive local orientation. The
+  connected complex BVP continues around four lower semicircles with no sampled Jacobi zero.
+- The declared signature-(-,+) principal momentum rays are locally decaying, but analytic `C/N`
+  transport does not by itself reproduce the independently normalized negative-real `C/|N|` kernel;
+  an additional Maslov comparison sign is required.
+- The result is one **recorded local contribution +1**, not a complete global `n_sigma=+1` theorem.
+  Other upward-cycle pieces, complex sheets, good ends, Stokes data, and the oriented inhomogeneous
+  superdeterminant remain open.
+- Complex conjugation exchanges lower and upper lateral loci. CPT/Pin does not yet select the
+  below-origin ket contour, and no positive trace-class physical state is derived. The committed
+  runnable catalog is now 63.
+
+See
+[`../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md)
+and
+[`../cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py`](../cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py).
 
 ## Historical scientific ledger
 

@@ -1,0 +1,742 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P31_HOMOGENEOUS_BFV_SUPERHESSIAN_20260817",
+  "phase": "P31",
+  "observed_at_utc": "2026-08-17T17:21:03.451Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py",
+    "sha256": "f2f37ff240c1bea82a5345a549882415e5f9fde1fc7bcf3bb96abc80a2e05adb",
+    "introduced_in_commit": "18451c0f0e021d89d2b5b35ff77e053cf97a3e95"
+  },
+  "exact_checks": 9,
+  "checks": [
+    {
+      "id": "P31.Hamiltonian.stationary_element_momenta",
+      "statement": "the midpoint canonical element has the declared exact stationary momenta",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.Hamiltonian.configuration_element_recovered",
+      "statement": "exact momentum elimination reproduces the Phase-30 midpoint configuration element",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.Hessian.momentum_Schur_determinant",
+      "statement": "the phase-space determinant factors into the momentum block and the configuration Schur complement",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.abelian_constraint_nilpotence",
+      "statement": "H_E and Pi form an Abelian one-constraint BFV algebra, so Omega=c H_E+rho Pi is classically nilpotent",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.bosonic_quartet_determinant",
+      "statement": "one alpha=0 nonzero lapse-multiplier pair contributes -d^2 independently of its coupling to the proper-time-gauge canonical Hessian",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.ghost_quartet_Pfaffian",
+      "statement": "the ordered first-order ghost quartet (c,barc,rho,barrho) has Pfaffian d^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.continuum_spectral_pair_derivative",
+      "statement": "the truncated continuum sine/cosine gauge pair has derivative eigenvalue d_k=k pi before midpoint projection",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.global_lapse_mode_separation",
+      "statement": "the k>=1 cosine lapse modes have zero average, leaving T as a separate unpaired global modulus",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.clock.pa_FP_bracket_identity",
+      "statement": "the extrinsic p_a clock bracket has the declared exact off-shell and on-constraint forms",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 11,
+  "numerical": [
+    {
+      "id": "P31.saddle.frozen_phase30_control",
+      "statement": "the fixed-boundary Euclidean interval and negative global-lapse curvature are unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.background.sampled_discrete_constraint_convergence",
+      "statement": "the sampled midpoint constraint is nonzero at every cutoff and decays as O(m^-2), exposing that the continuum saddle is not a new exact finite-lattice critical point",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.Hamiltonian.sampled_stationary_momenta",
+      "statement": "the sampled element momenta solve their discrete stationary equations to roundoff",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.Hessian.phase_to_configuration_Schur",
+      "statement": "eliminating all element momenta reproduces the independently assembled configuration-plus-T Hessian",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.Hessian.proper_time_canonical_inertia_and_parity",
+      "statement": "the momentum and configuration Schur blocks each carry m negative directions, while the unreduced proper-time-gauge canonical determinant stays positive for odd and even cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.full_bosonic_inertia",
+      "statement": "each nonzero lapse-multiplier pair adds one positive and one negative direction, so its finite-cutoff sign is kept separate from the proper-time-gauge canonical block",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.coupled_block_factorization",
+      "statement": "the actual nonzero lapse coupling is nontrivial but leaves the alpha=0 bosonic determinant factor exactly background-independent within numerical precision",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.BFV.same_regulator_relative_normalization",
+      "statement": "the bosonic gauge determinant and ghost Pfaffian are fixed d-dependent factors that each drop out of identical hybrid-regulator benchmark/reference ratios; no absolute within-amplitude unity is inferred",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.spectrum.no_finite_cutoff_zero_mode",
+      "statement": "no homogeneous eigenvalue is numerically zero at any recorded finite cutoff",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.lapse.global_modulus_Schur_convergence",
+      "statement": "the separately retained global T Schur complement converges toward the Phase-30 W_TT control",
+      "status": "PASS"
+    },
+    {
+      "id": "P31.clock.pa_local_bulk_regular",
+      "statement": "p_a is a regular monotone bulk clock on this recorded saddle while intrinsic a and phi clocks vanish at the neck; its nonzero boundary Legendre shift forbids reusing the fixed-q kernel unchanged",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "homogeneous finite-cutoff BFV Z2-graded phase-space super-Hessian gate",
+    "claim_status": {
+      "a_continuum_physical_probability_or_SUSY_seam_state_is_obtained": "OPEN_NOT_COMPUTED",
+      "pa_is_a_regular_local_bulk_clock_on_the_recorded_real_saddle": "SUPPORTED_BY_A_BOUNDED_NUMERICAL_SCAN",
+      "super_Hessian_here_is_a_SUSY_or_SUGRA_Hessian": "CONTRADICTED_BY_DEFINITION_IT_IS_ONLY_THE_BFV_Z2_GAUGE_GHOST_GRADING",
+      "the_absolute_BFV_contour_phase_or_global_PL_coefficient_is_fixed": "OPEN_NOT_DERIVED",
+      "the_fixed_q_seam_kernel_can_be_reinterpreted_as_a_global_pa_clock_kernel_without_boundary_terms": "CONTRADICTED_BY_THE_ENDPOINT_POLARIZATION_CHANGE",
+      "the_full_bosonic_BFV_cutoff_sign_equals_the_proper_time_gauge_canonical_determinant_line": "CONTRADICTED_BY_THE_ADDITIONAL_GAUGE_PAIR_PARITY",
+      "the_nonzero_BFV_quartets_cancel_in_a_same_regulator_relative_normalization": "SUPPORTED_AS_A_RELATIVE_FINITE_DIMENSIONAL_IDENTITY_ONLY",
+      "the_nonzero_alpha0_BFV_quartet_factor_depends_on_the_background_lapse_coupling": "CONTRADICTED_BY_EXACT_BLOCK_FACTORIZATION",
+      "the_phase30_configuration_Hessian_is_the_momentum_Schur_complement_of_the_canonical_phase_space_Hessian": "SUPPORTED_EXACTLY_AND_NUMERICALLY_AT_THE_RECORDED_CUTOFFS",
+      "the_proper_time_gauge_canonical_q_p_T_determinant_sign_is_stable_across_recorded_odd_even_cutoffs": "SUPPORTED_IN_THE_FINITE_CUTOFF_HOMOGENEOUS_CONTROL"
+    },
+    "exact_check_ids": [
+      "P31.Hamiltonian.stationary_element_momenta",
+      "P31.Hamiltonian.configuration_element_recovered",
+      "P31.Hessian.momentum_Schur_determinant",
+      "P31.BFV.abelian_constraint_nilpotence",
+      "P31.BFV.bosonic_quartet_determinant",
+      "P31.BFV.ghost_quartet_Pfaffian",
+      "P31.BFV.continuum_spectral_pair_derivative",
+      "P31.BFV.global_lapse_mode_separation",
+      "P31.clock.pa_FP_bracket_identity"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P31.Hamiltonian.stationary_element_momenta",
+        "statement": "the midpoint canonical element has the declared exact stationary momenta",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.Hamiltonian.configuration_element_recovered",
+        "statement": "exact momentum elimination reproduces the Phase-30 midpoint configuration element",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.Hessian.momentum_Schur_determinant",
+        "statement": "the phase-space determinant factors into the momentum block and the configuration Schur complement",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.abelian_constraint_nilpotence",
+        "statement": "H_E and Pi form an Abelian one-constraint BFV algebra, so Omega=c H_E+rho Pi is classically nilpotent",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.bosonic_quartet_determinant",
+        "statement": "one alpha=0 nonzero lapse-multiplier pair contributes -d^2 independently of its coupling to the proper-time-gauge canonical Hessian",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.ghost_quartet_Pfaffian",
+        "statement": "the ordered first-order ghost quartet (c,barc,rho,barrho) has Pfaffian d^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.continuum_spectral_pair_derivative",
+        "statement": "the truncated continuum sine/cosine gauge pair has derivative eigenvalue d_k=k pi before midpoint projection",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.global_lapse_mode_separation",
+        "statement": "the k>=1 cosine lapse modes have zero average, leaving T as a separate unpaired global modulus",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.clock.pa_FP_bracket_identity",
+        "statement": "the extrinsic p_a clock bracket has the declared exact off-shell and on-constraint forms",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 9,
+    "frozen_conventions": {
+      "BFV_charge": "Omega=c H_E+rho Pi",
+      "Hamiltonian_constraint": "H_E=-p_a^2/(24 pi^2 a)+p_phi^2/(4 pi^2 a^3)+2 pi^2(3a-a^3 V)",
+      "gauge_fermion": "Psi_0=-N barrho",
+      "ghost_order": [
+        "c",
+        "barc",
+        "rho",
+        "barrho"
+      ],
+      "global_modulus": "T is k=0 and is not divided out by the nonzero BFV quartets",
+      "mode_boundary_conditions": {
+        "cosine": [
+          "N",
+          "rho",
+          "barrho"
+        ],
+        "endpoint_vanishing_sine": [
+          "c",
+          "barc",
+          "Pi"
+        ]
+      },
+      "nonzero_mode_bosonic_block": "[[A,C,0],[C^T,0,-D],[0,-D,0]]",
+      "regulator_definition": "continuum sine-cosine gauge harmonics truncated at k=m-1 and projected against the q-p midpoint discretization; d_k=k pi is not an exact derivative eigenvalue of that midpoint lattice",
+      "super_Hessian_meaning": "Z2 BFV gauge-ghost grading only; not a SUSY or SUGRA Hessian",
+      "zero_mode_ledger": "endpoint-vanishing c, barc, and Pi have no k=0 mode; the algebraic rho-barrho k=0 pair is eliminated and declared a background-independent unit only in the same-hybrid-regulator relative normalization"
+    },
+    "next_calculation": "derive the determinant-line orientation from a regulated global lapse contour, then extend the relative BFV superdeterminant to inhomogeneous S3 harmonics before assigning any quantum seam weight",
+    "numerical_check_ids": [
+      "P31.saddle.frozen_phase30_control",
+      "P31.background.sampled_discrete_constraint_convergence",
+      "P31.Hamiltonian.sampled_stationary_momenta",
+      "P31.Hessian.phase_to_configuration_Schur",
+      "P31.Hessian.proper_time_canonical_inertia_and_parity",
+      "P31.BFV.full_bosonic_inertia",
+      "P31.BFV.coupled_block_factorization",
+      "P31.BFV.same_regulator_relative_normalization",
+      "P31.spectrum.no_finite_cutoff_zero_mode",
+      "P31.lapse.global_modulus_Schur_convergence",
+      "P31.clock.pa_local_bulk_regular"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P31.saddle.frozen_phase30_control",
+        "statement": "the fixed-boundary Euclidean interval and negative global-lapse curvature are unchanged",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.background.sampled_discrete_constraint_convergence",
+        "statement": "the sampled midpoint constraint is nonzero at every cutoff and decays as O(m^-2), exposing that the continuum saddle is not a new exact finite-lattice critical point",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.Hamiltonian.sampled_stationary_momenta",
+        "statement": "the sampled element momenta solve their discrete stationary equations to roundoff",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.Hessian.phase_to_configuration_Schur",
+        "statement": "eliminating all element momenta reproduces the independently assembled configuration-plus-T Hessian",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.Hessian.proper_time_canonical_inertia_and_parity",
+        "statement": "the momentum and configuration Schur blocks each carry m negative directions, while the unreduced proper-time-gauge canonical determinant stays positive for odd and even cutoffs",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.full_bosonic_inertia",
+        "statement": "each nonzero lapse-multiplier pair adds one positive and one negative direction, so its finite-cutoff sign is kept separate from the proper-time-gauge canonical block",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.coupled_block_factorization",
+        "statement": "the actual nonzero lapse coupling is nontrivial but leaves the alpha=0 bosonic determinant factor exactly background-independent within numerical precision",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.BFV.same_regulator_relative_normalization",
+        "statement": "the bosonic gauge determinant and ghost Pfaffian are fixed d-dependent factors that each drop out of identical hybrid-regulator benchmark/reference ratios; no absolute within-amplitude unity is inferred",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.spectrum.no_finite_cutoff_zero_mode",
+        "statement": "no homogeneous eigenvalue is numerically zero at any recorded finite cutoff",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.lapse.global_modulus_Schur_convergence",
+        "statement": "the separately retained global T Schur complement converges toward the Phase-30 W_TT control",
+        "status": "PASS"
+      },
+      {
+        "id": "P31.clock.pa_local_bulk_regular",
+        "statement": "p_a is a regular monotone bulk clock on this recorded saddle while intrinsic a and phi clocks vanish at the neck; its nonzero boundary Legendre shift forbids reusing the fixed-q kernel unchanged",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 11,
+    "numerical_controls": {
+      "base": {
+        "T_star": 0.7,
+        "W_TT": -8.923143038336717,
+        "W_star": 1.4066905428343415,
+        "boundary": [
+          3.5668031935672753,
+          1.0185809464006637,
+          3.5668031935672753,
+          1.0185809464006637
+        ]
+      },
+      "cutoff_controls": [
+        {
+          "bosonic_gauge_log_magnitude": 15.513946747491106,
+          "bosonic_to_ghost_log_match_residual": 1.4210854715202004e-14,
+          "configuration_inertia": {
+            "max_abs_eigenvalue": 23427.221998160527,
+            "min_abs_eigenvalue": 8.395255422165079,
+            "negative": 5,
+            "positive": 4,
+            "relative_min_abs_eigenvalue": 0.00035835471328287506,
+            "zero": 0
+          },
+          "configuration_schur_relative_residual": 7.765660949288929e-17,
+          "coupling_independence_log_residual": -7.105427357601002e-15,
+          "coupling_independence_sign_match": true,
+          "coupling_norm": 107.91540981898851,
+          "expected_full_bfv_bosonic_determinant_sign": 1,
+          "frequencies": [
+            3.141592653589793,
+            6.283185307179586,
+            9.42477796076938,
+            12.566370614359172
+          ],
+          "full_bfv_bosonic_determinant_sign": 1,
+          "full_bfv_bosonic_inertia": {
+            "max_abs_eigenvalue": 138.9923201581883,
+            "min_abs_eigenvalue": 0.00015483498111856276,
+            "negative": 14,
+            "positive": 13,
+            "relative_min_abs_eigenvalue": 0.0000011139822757282114,
+            "zero": 0
+          },
+          "gauge_factor_log_residual": 1.4210854715202004e-14,
+          "ghost_pfaffian_log_magnitude": 15.513946747491092,
+          "lapse_schur": -8.512777768560902,
+          "momentum_inertia": {
+            "max_abs_eigenvalue": 0.00033089668419553856,
+            "min_abs_eigenvalue": 0.00015413893502225519,
+            "negative": 5,
+            "positive": 5,
+            "relative_min_abs_eigenvalue": 0.00015413893502225519,
+            "zero": 0
+          },
+          "proper_time_canonical_determinant_sign": 1,
+          "proper_time_canonical_inertia": {
+            "max_abs_eigenvalue": 131.1375097415622,
+            "min_abs_eigenvalue": 0.000154846144746446,
+            "negative": 10,
+            "positive": 9,
+            "relative_min_abs_eigenvalue": 0.0000011807921703836476,
+            "zero": 0
+          },
+          "sampled_midpoint_constraint_max_residual": 0.12208673219857749,
+          "segments": 5,
+          "stationary_momentum_max_residual": 8.673617379884035e-19
+        },
+        {
+          "bosonic_gauge_log_magnitude": 39.52488397908074,
+          "bosonic_to_ghost_log_match_residual": -1.6342482922482304e-13,
+          "configuration_inertia": {
+            "max_abs_eigenvalue": 45236.07490269208,
+            "min_abs_eigenvalue": 8.579337177899689,
+            "negative": 9,
+            "positive": 8,
+            "relative_min_abs_eigenvalue": 0.00018965697612701398,
+            "zero": 0
+          },
+          "configuration_schur_relative_residual": 1.661034013451263e-16,
+          "coupling_independence_log_residual": 1.0302869668521453e-13,
+          "coupling_independence_sign_match": true,
+          "coupling_norm": 93.46416072095465,
+          "expected_full_bfv_bosonic_determinant_sign": 1,
+          "frequencies": [
+            3.141592653589793,
+            6.283185307179586,
+            9.42477796076938,
+            12.566370614359172,
+            15.707963267948966,
+            18.84955592153876,
+            21.991148575128552,
+            25.132741228718345
+          ],
+          "full_bfv_bosonic_determinant_sign": 1,
+          "full_bfv_bosonic_inertia": {
+            "max_abs_eigenvalue": 104.85486987504554,
+            "min_abs_eigenvalue": 0.00008599826261367055,
+            "negative": 26,
+            "positive": 25,
+            "relative_min_abs_eigenvalue": 8.201646973207234e-7,
+            "zero": 0
+          },
+          "gauge_factor_log_residual": -1.6342482922482304e-13,
+          "ghost_pfaffian_log_magnitude": 39.524883979080904,
+          "lapse_schur": -8.796019404124788,
+          "momentum_inertia": {
+            "max_abs_eigenvalue": 0.0001839404200907407,
+            "min_abs_eigenvalue": 0.0000855988497744792,
+            "negative": 9,
+            "positive": 9,
+            "relative_min_abs_eigenvalue": 0.0000855988497744792,
+            "zero": 0
+          },
+          "proper_time_canonical_determinant_sign": 1,
+          "proper_time_canonical_inertia": {
+            "max_abs_eigenvalue": 100.38497283848994,
+            "min_abs_eigenvalue": 0.00008600178978946803,
+            "negative": 18,
+            "positive": 17,
+            "relative_min_abs_eigenvalue": 8.567197595185575e-7,
+            "zero": 0
+          },
+          "sampled_midpoint_constraint_max_residual": 0.03770404222668223,
+          "segments": 9,
+          "stationary_momentum_max_residual": 8.673617379884035e-19
+        },
+        {
+          "bosonic_gauge_log_magnitude": 46.20879290545333,
+          "bosonic_to_ghost_log_match_residual": 1.1866063687193673e-12,
+          "configuration_inertia": {
+            "max_abs_eigenvalue": 50558.80196604907,
+            "min_abs_eigenvalue": 8.579304444284872,
+            "negative": 10,
+            "positive": 9,
+            "relative_min_abs_eigenvalue": 0.00016968963089841396,
+            "zero": 0
+          },
+          "configuration_schur_relative_residual": 1.115695665446119e-16,
+          "coupling_independence_log_residual": 1.6200374375330284e-12,
+          "coupling_independence_sign_match": true,
+          "coupling_norm": 89.74296815527596,
+          "expected_full_bfv_bosonic_determinant_sign": -1,
+          "frequencies": [
+            3.141592653589793,
+            6.283185307179586,
+            9.42477796076938,
+            12.566370614359172,
+            15.707963267948966,
+            18.84955592153876,
+            21.991148575128552,
+            25.132741228718345,
+            28.274333882308138
+          ],
+          "full_bfv_bosonic_determinant_sign": -1,
+          "full_bfv_bosonic_inertia": {
+            "max_abs_eigenvalue": 99.40461560126528,
+            "min_abs_eigenvalue": 0.00007739692661867646,
+            "negative": 29,
+            "positive": 28,
+            "relative_min_abs_eigenvalue": 7.786049586382718e-7,
+            "zero": 0
+          },
+          "gauge_factor_log_residual": 1.1866063687193673e-12,
+          "ghost_pfaffian_log_magnitude": 46.20879290545214,
+          "lapse_schur": -8.82014078333397,
+          "momentum_inertia": {
+            "max_abs_eigenvalue": 0.00016556046462332127,
+            "min_abs_eigenvalue": 0.00007704740894168883,
+            "negative": 10,
+            "positive": 10,
+            "relative_min_abs_eigenvalue": 0.00007704740894168883,
+            "zero": 0
+          },
+          "proper_time_canonical_determinant_sign": 1,
+          "proper_time_canonical_inertia": {
+            "max_abs_eigenvalue": 95.45092691993034,
+            "min_abs_eigenvalue": 0.0000773997891271035,
+            "negative": 20,
+            "positive": 19,
+            "relative_min_abs_eigenvalue": 8.108856731378926e-7,
+            "zero": 0
+          },
+          "sampled_midpoint_constraint_max_residual": 0.030534708321684017,
+          "segments": 10,
+          "stationary_momentum_max_residual": 4.336808689942018e-19
+        },
+        {
+          "bosonic_gauge_log_magnitude": 53.10342286313881,
+          "bosonic_to_ghost_log_match_residual": -2.2026824808563106e-13,
+          "configuration_inertia": {
+            "max_abs_eigenvalue": 55856.89848314223,
+            "min_abs_eigenvalue": 8.573182432585265,
+            "negative": 11,
+            "positive": 10,
+            "relative_min_abs_eigenvalue": 0.0001534847559638972,
+            "zero": 0
+          },
+          "configuration_schur_relative_residual": 6.777315013785162e-17,
+          "coupling_independence_log_residual": -8.455458555545192e-13,
+          "coupling_independence_sign_match": true,
+          "coupling_norm": 86.3276172689847,
+          "expected_full_bfv_bosonic_determinant_sign": 1,
+          "frequencies": [
+            3.141592653589793,
+            6.283185307179586,
+            9.42477796076938,
+            12.566370614359172,
+            15.707963267948966,
+            18.84955592153876,
+            21.991148575128552,
+            25.132741228718345,
+            28.274333882308138,
+            31.41592653589793
+          ],
+          "full_bfv_bosonic_determinant_sign": 1,
+          "full_bfv_bosonic_inertia": {
+            "max_abs_eigenvalue": 94.68753950194912,
+            "min_abs_eigenvalue": 0.00007035985017434783,
+            "negative": 32,
+            "positive": 31,
+            "relative_min_abs_eigenvalue": 7.43074015276313e-7,
+            "zero": 0
+          },
+          "gauge_factor_log_residual": -2.2026824808563106e-13,
+          "ghost_pfaffian_log_magnitude": 53.10342286313903,
+          "lapse_schur": -8.837997574231748,
+          "momentum_inertia": {
+            "max_abs_eigenvalue": 0.0001505202685589935,
+            "min_abs_eigenvalue": 0.00007003133288503882,
+            "negative": 11,
+            "positive": 11,
+            "relative_min_abs_eigenvalue": 0.00007003133288503882,
+            "zero": 0
+          },
+          "proper_time_canonical_determinant_sign": 1,
+          "proper_time_canonical_inertia": {
+            "max_abs_eigenvalue": 91.16026640039345,
+            "min_abs_eigenvalue": 0.00007036221923443409,
+            "negative": 22,
+            "positive": 21,
+            "relative_min_abs_eigenvalue": 7.718518386660879e-7,
+            "zero": 0
+          },
+          "sampled_midpoint_constraint_max_residual": 0.025242163034810784,
+          "segments": 11,
+          "stationary_momentum_max_residual": 0
+        },
+        {
+          "bosonic_gauge_log_magnitude": 122.1795040366878,
+          "bosonic_to_ghost_log_match_residual": 1.1610268302320037e-11,
+          "configuration_inertia": {
+            "max_abs_eigenvalue": 103034.64738827044,
+            "min_abs_eigenvalue": 8.422984454679655,
+            "negative": 20,
+            "positive": 19,
+            "relative_min_abs_eigenvalue": 0.00008174904916148172,
+            "zero": 0
+          },
+          "configuration_schur_relative_residual": 1.1007138038851324e-16,
+          "coupling_independence_log_residual": 5.7411853049416095e-12,
+          "coupling_independence_sign_match": true,
+          "coupling_norm": 65.90989269230775,
+          "expected_full_bfv_bosonic_determinant_sign": -1,
+          "frequencies": [
+            3.141592653589793,
+            6.283185307179586,
+            9.42477796076938,
+            12.566370614359172,
+            15.707963267948966,
+            18.84955592153876,
+            21.991148575128552,
+            25.132741228718345,
+            28.274333882308138,
+            31.41592653589793,
+            34.55751918948772,
+            37.69911184307752,
+            40.840704496667314,
+            43.982297150257104,
+            47.12388980384689,
+            50.26548245743669,
+            53.40707511102649,
+            56.548667764616276,
+            59.690260418206066
+          ],
+          "full_bfv_bosonic_determinant_sign": -1,
+          "full_bfv_bosonic_inertia": {
+            "max_abs_eigenvalue": 69.58892713662675,
+            "min_abs_eigenvalue": 0.000038696261604313404,
+            "negative": 59,
+            "positive": 58,
+            "relative_min_abs_eigenvalue": 5.560692368246958e-7,
+            "zero": 0
+          },
+          "gauge_factor_log_residual": 1.1610268302320037e-11,
+          "ghost_pfaffian_log_magnitude": 122.17950403667619,
+          "lapse_schur": -8.897366812298648,
+          "momentum_inertia": {
+            "max_abs_eigenvalue": 0.00008281447693813795,
+            "min_abs_eigenvalue": 0.00003851543434605275,
+            "negative": 20,
+            "positive": 20,
+            "relative_min_abs_eigenvalue": 0.00003851543434605275,
+            "zero": 0
+          },
+          "proper_time_canonical_determinant_sign": 1,
+          "proper_time_canonical_inertia": {
+            "max_abs_eigenvalue": 67.92089240744792,
+            "min_abs_eigenvalue": 0.00003869698159290728,
+            "negative": 40,
+            "positive": 39,
+            "relative_min_abs_eigenvalue": 5.697360594258613e-7,
+            "zero": 0
+          },
+          "sampled_midpoint_constraint_max_residual": 0.0076362765410794954,
+          "segments": 20,
+          "stationary_momentum_max_residual": 4.336808689942018e-19
+        },
+        {
+          "bosonic_gauge_log_magnitude": 302.5524516175448,
+          "bosonic_to_ghost_log_match_residual": 4.661160346586257e-12,
+          "configuration_inertia": {
+            "max_abs_eigenvalue": 207077.62218098567,
+            "min_abs_eigenvalue": 8.008783610157291,
+            "negative": 40,
+            "positive": 39,
+            "relative_min_abs_eigenvalue": 0.000038675273193728393,
+            "zero": 0
+          },
+          "configuration_schur_relative_residual": 1.6965344206901894e-16,
+          "coupling_independence_log_residual": 2.3874235921539366e-12,
+          "coupling_independence_sign_match": true,
+          "coupling_norm": 47.04666589500282,
+          "expected_full_bfv_bosonic_determinant_sign": -1,
+          "frequencies": [
+            3.141592653589793,
+            6.283185307179586,
+            9.42477796076938,
+            12.566370614359172,
+            15.707963267948966,
+            18.84955592153876,
+            21.991148575128552,
+            25.132741228718345,
+            28.274333882308138,
+            31.41592653589793,
+            34.55751918948772,
+            37.69911184307752,
+            40.840704496667314,
+            43.982297150257104,
+            47.12388980384689,
+            50.26548245743669,
+            53.40707511102649,
+            56.548667764616276,
+            59.690260418206066,
+            62.83185307179586,
+            65.97344572538566,
+            69.11503837897544,
+            72.25663103256524,
+            75.39822368615503,
+            78.53981633974483,
+            81.68140899333463,
+            84.82300164692441,
+            87.96459430051421,
+            91.106186954104,
+            94.24777960769379,
+            97.38937226128358,
+            100.53096491487338,
+            103.67255756846318,
+            106.81415022205297,
+            109.95574287564276,
+            113.09733552923255,
+            116.23892818282235,
+            119.38052083641213,
+            122.52211349000193
+          ],
+          "full_bfv_bosonic_determinant_sign": -1,
+          "full_bfv_bosonic_inertia": {
+            "max_abs_eigenvalue": 122.53552899157188,
+            "min_abs_eigenvalue": 0.00001934794632783808,
+            "negative": 119,
+            "positive": 118,
+            "relative_min_abs_eigenvalue": 1.5789662383690244e-7,
+            "zero": 0
+          },
+          "gauge_factor_log_residual": 4.661160346586257e-12,
+          "ghost_pfaffian_log_magnitude": 302.55245161754016,
+          "lapse_schur": -8.916697378240366,
+          "momentum_inertia": {
+            "max_abs_eigenvalue": 0.00004141658806382725,
+            "min_abs_eigenvalue": 0.000019256684025122334,
+            "negative": 40,
+            "positive": 40,
+            "relative_min_abs_eigenvalue": 0.000019256684025122334,
+            "zero": 0
+          },
+          "proper_time_canonical_determinant_sign": 1,
+          "proper_time_canonical_inertia": {
+            "max_abs_eigenvalue": 47.986272208118606,
+            "min_abs_eigenvalue": 0.000019348126594943694,
+            "negative": 80,
+            "positive": 79,
+            "relative_min_abs_eigenvalue": 4.0320128454717223e-7,
+            "zero": 0
+          },
+          "sampled_midpoint_constraint_max_residual": 0.0019092315750417162,
+          "segments": 40,
+          "stationary_momentum_max_residual": 4.336808689942018e-19
+        }
+      ],
+      "extrinsic_clock_scan": {
+        "constraint_form_max_residual": 7.105427357601002e-14,
+        "fixed_q_to_mixed_pa_boundary_legendre_shift": 300.8819681095936,
+        "intrinsic_a_clock_bracket_at_neck": -1.218643241873707e-16,
+        "intrinsic_phi_clock_bracket_at_neck": -2.6454533008646308e-17,
+        "max_FP_bracket": 124.64093114267942,
+        "min_FP_bracket": 118.43525281307232,
+        "neck_FP_bracket": 118.43525281307232,
+        "p_a_left": -42.17810063816155,
+        "p_a_min_step": 0.08290468279638886,
+        "p_a_right": 42.17810063816168,
+        "sample_count": 1001,
+        "status": "p_a is a regular local bulk clock on the recorded real saddle; enforcing it at the endpoints would change the fixed-(a,phi) kernel to a mixed boundary polarization"
+      },
+      "quartet_interpretation": {
+        "absolute_factor": "not assigned",
+        "auxiliary_k0": "omitted as a declared background-independent relative unit; no absolute zero-mode normalization is inferred",
+        "global_T": "retained as the unreduced proper-time integration modulus",
+        "relative_statement": "at fixed hybrid regulator, the nonzero quartet factor is independent of the background and cancels between benchmark and reference"
+      }
+    },
+    "phase": "P31",
+    "scope_guard": {
+      "computed": [
+        "the frozen homogeneous proper-time-gauge canonical Hessian in (q,p,T)",
+        "exact momentum elimination and finite-cutoff Schur complements",
+        "all nonzero homogeneous alpha=0 lapse-multiplier and first-order ghost quartet blocks",
+        "relative same-hybrid-regulator quartet cancellation and finite-cutoff inertia",
+        "a bounded local p_a Faddeev--Popov bracket scan on the real saddle"
+      ],
+      "not_computed": [
+        "an absolute BFV measure, contour orientation, or continuum determinant-line phase",
+        "a global nonlinear Picard--Lefschetz cycle or integer intersection coefficient",
+        "a global p_a clock theorem or a fixed-q-to-mixed-polarization kernel transform",
+        "inhomogeneous graviton, scalar, chiralino, gravitino, and ghost harmonics",
+        "a WDW physical trace, density matrix, Pin lift, flux distribution, or SUSY-breaking spectrum",
+        "a constraint-reduced physical phase space or a SUSY/SUGRA super-Hessian"
+      ]
+    }
+  }
+}

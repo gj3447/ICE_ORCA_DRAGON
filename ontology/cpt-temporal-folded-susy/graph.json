@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T16:38:39.344Z",
+  "updated_at_utc": "2026-08-17T17:27:03.527Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -164,6 +164,27 @@
         "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT",
         "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES",
         "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT"
+      ]
+    },
+    {
+      "question": "Does Phase 31 now provide the physical BFV determinant, probability, or SUSY seam?",
+      "answer": "No. It lifts the frozen midpoint control to an unreduced proper-time-gauge canonical (q,p,T) Hessian and nonzero homogeneous BFV quartets. The canonical sign is stable and same-regulator quartet factors cancel only relatively; the bare bosonic BFV sign still alternates, global T remains a modulus, and no absolute determinant line, global PL coefficient, physical probability, or SUSY/SUGRA Hessian is derived.",
+      "claim_ids": [
+        "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+        "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+        "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+        "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE"
+      ]
+    },
+    {
+      "question": "Does Phase 32 fix the Picard--Lefschetz coefficient of the connected saddle?",
+      "answer": "Only locally for one independently declared contour class. The specified full real lapse contour bypassing zero from below has one recorded finite-radius transverse contribution +1 on the tracked homogeneous lapse-base sheet; the positive half-line has endpoint contact rather than an ordinary intersection. The complete upward-cycle census, determinant-line orientation, CPT/Pin choice of lapse class, global integer coefficient, and physical state remain open.",
+      "claim_ids": [
+        "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+        "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+        "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+        "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+        "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION"
       ]
     }
   ],
@@ -393,6 +414,46 @@
         "open:p29-conformal-bfv-uniform-parametrix",
         "open:p28-full-gauge-reduced-superdeterminant",
         "open:p28-global-relative-homology-and-intersection"
+      ]
+    },
+    {
+      "id": "reading-path:canonical-bfv-hybrid-to-physical-determinant",
+      "title": "From the finite-cutoff canonical BFV hybrid to the still-open physical determinant",
+      "summary": "Follow exact momentum Schur reduction, the stable unreduced proper-time-gauge canonical sign, relative nonzero-quartet cancellation, residual gauge-pair parity, and the local-clock polarization obstruction without calling the result a physical determinant, probability, or SUSY Hessian.",
+      "nodes": [
+        "concept:canonical-momentum-schur-versus-physical-determinant",
+        "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+        "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+        "concept:relative-bfv-quartet-cancellation-versus-absolute-amplitude",
+        "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+        "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+        "concept:local-extrinsic-clock-versus-endpoint-polarization",
+        "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+        "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+        "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p29-conformal-bfv-uniform-parametrix",
+        "open:p28-global-relative-homology-and-intersection",
+        "open:p28-physical-state-and-density"
+      ]
+    },
+    {
+      "id": "reading-path:lapse-prescription-to-local-intersection",
+      "title": "From a lapse prescription to a recorded local intersection, not yet a global coefficient",
+      "summary": "Separate the causal positive half-line from a full-line group average, follow the lower versus upper zero-lapse bypass, include the declared convergent momentum lift and Maslov comparison, and stop at the global relative-homology and CPT/Pin selection gates.",
+      "nodes": [
+        "concept:causal-half-line-versus-full-line-lapse-object",
+        "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+        "concept:below-origin-relative-cycle-versus-cpt-pin-selection",
+        "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+        "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+        "concept:transported-momentum-cycle-versus-real-fresnel-normalization",
+        "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+        "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+        "concept:recorded-local-intersection-versus-global-pl-coefficient",
+        "open:p28-global-relative-homology-and-intersection",
+        "open:p32-cpt-pin-lapse-class-selection",
+        "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p28-physical-state-and-density"
       ]
     }
   ],
@@ -4176,7 +4237,7 @@
       "id": "open:p28-global-relative-homology-and-intersection",
       "type": "open_problem",
       "title": "Determine global relative homology and the physical-cycle coefficient",
-      "summary": "Bounded continuation and finite constructed crossings do not determine which complete dual cycles intersect the Lorentzian original contour.",
+      "summary": "Phase 32 records one finite-radius local +1 crossing for a separately declared below-origin full real lapse contour, but bounded continuation and one local crossing do not determine every complete dual component, complex BVP sheet, good end, Stokes jump, determinant-line orientation, or the global coefficient.",
       "state": "OPEN",
       "question": "After resolving all saddles, endpoints, singularities, and Stokes jumps, what integer coefficients multiply the complete thimbles for the specified physical lapse contour?"
     },
@@ -4192,7 +4253,7 @@
       "id": "open:p28-full-gauge-reduced-superdeterminant",
       "type": "open_problem",
       "title": "Compute the full gauge-reduced superdeterminant",
-      "summary": "The homogeneous BFV algebra omits nonzero-mode conformal, metric, scalar, fermion, gravitino, Goldstino, and ghost operators and their phases.",
+      "summary": "Phase 31 supplies only an unreduced finite-cutoff proper-time-gauge canonical hybrid and its nonzero homogeneous alpha=0 BFV quartets; constraint reduction, absolute phases, gauge-parameter independence, continuum measure, and inhomogeneous metric, matter, fermion, gravitino, Goldstino, and ghost operators remain open.",
       "state": "OPEN",
       "question": "After BRST/BFV reduction and zero-mode extraction, is the primed nonzero-mode superdeterminant finite, gauge-independent, and compatible with the selected thimble?"
     },
@@ -4687,7 +4748,7 @@
       "id": "open:p29-conformal-bfv-uniform-parametrix",
       "type": "open_problem",
       "title": "Construct the conformal/BFV uniform endpoint parametrix",
-      "summary": "Phase 30 supplies a finite-cutoff homogeneous Gaussian tangent cycle, but not its nonlinear continuum completion, full BFV phase-space super-Hessian, endpoint-uniform kernel, or determinant line.",
+      "summary": "Phase 30 supplies a finite-cutoff homogeneous Gaussian tangent, Phase 31 an unreduced proper-time-gauge canonical/BFV hybrid, and Phase 32 a regulated local bypass analysis; none supplies their nonlinear endpoint-uniform completion, constraint-reduced physical superdeterminant, or globally oriented determinant line through zero lapse.",
       "state": "OPEN",
       "question": "Does the finite-cutoff coupled tangent cycle extend to an endpoint-completed conformal/BFV operator-valued parametrix across zero lapse with the full primed determinant and fixed determinant-line phase?"
     },
@@ -4984,6 +5045,433 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase30-result.json",
       "sha256": "3ebfec6c9ce43ed499f70ac151508be6a8ad90bca8341d0c7feec2adfac0fadf"
+    },
+    {
+      "id": "phase:p31",
+      "type": "phase",
+      "title": "Phase 31 — homogeneous finite-cutoff BFV super-Hessian gate",
+      "summary": "An unreduced proper-time-gauge canonical midpoint Hessian, nonzero homogeneous alpha=0 BFV quartets, relative same-hybrid-regulator cancellation, finite-cutoff inertia, and a bounded local p_a clock diagnostic.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:canonical-momentum-schur-versus-physical-determinant",
+      "type": "concept",
+      "title": "Canonical momentum Schur reduction versus a physical determinant",
+      "summary": "Exact momentum elimination can reproduce a configuration Hessian and stabilize the sign of an unreduced canonical block without fixing the momentum-contour orientation, constraint-reduced measure, or physical determinant line.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:relative-bfv-quartet-cancellation-versus-absolute-amplitude",
+      "type": "concept",
+      "title": "Relative BFV quartet cancellation versus an absolute amplitude",
+      "summary": "Background-independent gauge and ghost factors can each cancel in a benchmark/reference ratio at one shared regulator while their absolute phases, normalization, zero-mode measure, and within-amplitude product remain unassigned.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:local-extrinsic-clock-versus-endpoint-polarization",
+      "type": "concept",
+      "title": "Local extrinsic clock versus endpoint polarization",
+      "summary": "A nonzero local Faddeev–Popov bracket along one bounded real saddle does not provide a global clock theorem, and imposing momentum data at the endpoints changes a fixed-configuration kernel by a boundary Legendre transform.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "type": "claim",
+      "title": "The Phase-30 configuration Hessian is the canonical momentum Schur complement",
+      "summary": "Supported exactly per midpoint element and numerically at the recorded cutoffs: eliminating the algebraic momenta reproduces the independently assembled configuration-plus-global-T Hessian.",
+      "state": "SUPPORTED_IN_DECLARED_FINITE_CUTOFF_HYBRID_CONTROL",
+      "claim_id": "P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "statement": "For the continuum-saddle-sampled midpoint discretizations and frozen boundary data, the Phase-30 configuration-plus-T Hessian equals the momentum Schur complement of the declared unreduced proper-time-gauge canonical phase-space Hessian.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "type": "claim",
+      "title": "The unreduced proper-time-gauge canonical determinant sign is stable",
+      "summary": "Supported over the recorded odd and even finite cutoffs: the momentum and configuration Schur blocks each carry m negative directions, leaving the unreduced canonical (q,p,T) determinant sign positive.",
+      "state": "SUPPORTED_IN_RECORDED_ODD_EVEN_CUTOFFS",
+      "claim_id": "P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "statement": "Within the declared continuum-sine/cosine and midpoint hybrid finite-cutoff control, the unreduced proper-time-gauge canonical (q,p,T) determinant has positive sign at every tested odd and even cutoff.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "type": "claim",
+      "title": "The nonzero BFV quartets cancel in a same-regulator relative normalization",
+      "summary": "Supported only as a finite-dimensional relative identity: at the same declared hybrid cutoff the bosonic gauge determinant and ghost Pfaffian are fixed d-dependent factors that each drop out of benchmark/reference ratios.",
+      "state": "SUPPORTED_AS_RELATIVE_FINITE_DIMENSIONAL_IDENTITY",
+      "claim_id": "P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "statement": "At fixed identical hybrid regulator and boundary-mode ledger, the nonzero alpha=0 BFV gauge and ghost factors are background independent and cancel separately between the frozen benchmark and its reference normalization.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "type": "claim",
+      "title": "The full bosonic BFV cutoff sign equals the canonical determinant line",
+      "summary": "Contradicted in the declared finite-cutoff hybrid: each nonzero lapse–multiplier pair adds one negative direction, so the bare bosonic BFV sign alternates even though the unreduced proper-time-gauge canonical sign is positive.",
+      "state": "CONTRADICTED_BY_GAUGE_PAIR_PARITY",
+      "claim_id": "P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "statement": "The sign of the bare full bosonic BFV finite-cutoff block is identical to the stable sign of the unreduced proper-time-gauge canonical (q,p,T) block and therefore fixes the physical determinant line.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "type": "claim",
+      "title": "p_a is a regular local bulk clock on the recorded saddle",
+      "summary": "Supported by one bounded numerical scan of the supplied real saddle: p_a is monotone and its Faddeev–Popov bracket stays positive while the intrinsic a and phi clock brackets vanish at the neck.",
+      "state": "SUPPORTED_BY_BOUNDED_RECORDED_SCAN",
+      "claim_id": "P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "statement": "On the recorded finite real Starobinsky interval and with the declared Hamiltonian constraint, p_a has a nonzero local Faddeev–Popov bracket throughout the sampled bulk and is monotone there.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "type": "claim",
+      "title": "The fixed-q kernel is unchanged as a global p_a-clock amplitude",
+      "summary": "Contradicted for the proposed shortcut: enforcing p_a at the endpoints changes the boundary polarization and produces a nonzero Legendre term, while the bounded scan is not a global clock theorem.",
+      "state": "CONTRADICTED_BY_ENDPOINT_POLARIZATION_CHANGE",
+      "claim_id": "P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "statement": "The existing fixed-(a,phi) seam kernel can be reinterpreted without boundary terms or a kernel transform as a globally gauge-fixed p_a-clock amplitude.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p31-canonical-schur-and-sampled-background",
+      "type": "evidence",
+      "title": "Phase 31 canonical Schur and sampled-background checks",
+      "summary": "Three exact identities and three numerical controls cover stationary element momenta, exact Legendre elimination, determinant factorization, the sampled O(m^-2) constraint residual, and independent phase/configuration Hessians.",
+      "state": "VERIFIED",
+      "observed_status": "3_EXACT_PASS_PLUS_3_NUMERICAL_PASS",
+      "check_ids": [
+        "P31.Hamiltonian.stationary_element_momenta",
+        "P31.Hamiltonian.configuration_element_recovered",
+        "P31.Hessian.momentum_Schur_determinant",
+        "P31.background.sampled_discrete_constraint_convergence",
+        "P31.Hamiltonian.sampled_stationary_momenta",
+        "P31.Hessian.phase_to_configuration_Schur"
+      ]
+    },
+    {
+      "id": "evidence:p31-canonical-and-bosonic-inertia",
+      "type": "evidence",
+      "title": "Phase 31 canonical and bosonic BFV inertia checks",
+      "summary": "Five numerical controls cover the frozen saddle, stable unreduced proper-time-gauge canonical sign, added bosonic gauge-pair parity, finite-cutoff nonzero spectra, and global-T Schur convergence.",
+      "state": "VERIFIED",
+      "observed_status": "5_NUMERICAL_PASS",
+      "check_ids": [
+        "P31.saddle.frozen_phase30_control",
+        "P31.Hessian.proper_time_canonical_inertia_and_parity",
+        "P31.BFV.full_bosonic_inertia",
+        "P31.spectrum.no_finite_cutoff_zero_mode",
+        "P31.lapse.global_modulus_Schur_convergence"
+      ]
+    },
+    {
+      "id": "evidence:p31-bfv-quartet-relative-cancellation",
+      "type": "evidence",
+      "title": "Phase 31 BFV quartet and relative-cancellation checks",
+      "summary": "Five exact identities and two numerical controls cover Abelian nilpotence, nonzero spectral gauge/ghost blocks, global-mode separation, coupling-independent factorization, and same-hybrid-regulator relative cancellation.",
+      "state": "VERIFIED",
+      "observed_status": "5_EXACT_PASS_PLUS_2_NUMERICAL_PASS",
+      "check_ids": [
+        "P31.BFV.abelian_constraint_nilpotence",
+        "P31.BFV.bosonic_quartet_determinant",
+        "P31.BFV.ghost_quartet_Pfaffian",
+        "P31.BFV.continuum_spectral_pair_derivative",
+        "P31.BFV.global_lapse_mode_separation",
+        "P31.BFV.coupled_block_factorization",
+        "P31.BFV.same_regulator_relative_normalization"
+      ]
+    },
+    {
+      "id": "evidence:p31-extrinsic-clock-and-polarization",
+      "type": "evidence",
+      "title": "Phase 31 extrinsic-clock and polarization checks",
+      "summary": "One exact bracket identity and one bounded numerical scan cover the local p_a Faddeev–Popov bracket, monotonicity, stopped intrinsic clocks at the neck, and the nonzero endpoint Legendre shift.",
+      "state": "VERIFIED",
+      "observed_status": "1_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P31.clock.pa_FP_bracket_identity",
+        "P31.clock.pa_local_bulk_regular"
+      ]
+    },
+    {
+      "id": "scope:p31-unreduced-proper-time-hybrid-bfv-control",
+      "type": "scope",
+      "title": "P31 unreduced proper-time-gauge hybrid BFV control",
+      "summary": "The continuum Phase-25 saddle sampled on midpoint lattices, unreduced homogeneous (q,p,T) canonical Hessians, continuum sine/cosine gauge harmonics projected against those lattices, and nonzero alpha=0 BFV quartets.",
+      "state": "ACTIVE",
+      "includes": [
+        "the frozen reduced-unit Starobinsky boundary data and T=0.7 saddle",
+        "the continuum saddle sampled at finite midpoint cutoffs rather than an exact finite-lattice critical point",
+        "algebraic element momenta and exact finite-dimensional Schur identities",
+        "the unreduced proper-time-gauge canonical q,p,T block",
+        "continuum sine/cosine gauge harmonics truncated at k=m-1 and projected against the midpoint lattice",
+        "endpoint-vanishing sine modes for c, bar c, and Pi and cosine modes for N, rho, and bar rho",
+        "a declared background-independent auxiliary k=0 unit only in same-hybrid-regulator relative normalization",
+        "one bounded local p_a Faddeev–Popov bracket scan"
+      ],
+      "excludes": [
+        "an exact gauge-invariant finite-lattice critical point or regulator-independent continuum limit",
+        "a constraint-reduced physical phase space, absolute BFV measure, or gauge-parameter independence",
+        "momentum, conformal, ghost, and square-root contour orientations or a continuum determinant-line phase",
+        "a nonlinear global lapse contour, complete upward-cycle census, or integer PL coefficient",
+        "a global p_a clock theorem or fixed-q to mixed-polarization kernel transform",
+        "inhomogeneous metric, scalar, vector, chiralino, gravitino, Goldstino, and ghost harmonics",
+        "a WDW physical trace, density, probability, Pin lift, flux measure, SUSY-breaking spectrum, or SUSY/SUGRA Hessian"
+      ]
+    },
+    {
+      "id": "source:rogers-2000-gauge-fixing-bfv",
+      "type": "source",
+      "title": "Gauge fixing and BFV quantization",
+      "summary": "CITES-only gauge-fermion admissibility and Gribov-boundary framework; it does not validate the Phase-31 hybrid regulator, prove gauge-parameter independence, or supply a physical determinant.",
+      "state": "PRIMARY",
+      "citation": "A. Rogers, Gauge Fixing and BFV Quantization, Classical and Quantum Gravity 17 (2000) 389–397",
+      "uri": "https://arxiv.org/abs/hep-th/9902133",
+      "version": "arXiv:hep-th/9902133v1; Class. Quantum Grav. 17 (2000) 389–397"
+    },
+    {
+      "id": "artifact:p31-script",
+      "type": "artifact",
+      "title": "Phase 31 executable",
+      "summary": "Exact and bounded numerical canonical-lift, BFV quartet, inertia, relative-normalization, residual-modulus, and local-clock controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py",
+      "sha256": "f2f37ff240c1bea82a5345a549882415e5f9fde1fc7bcf3bb96abc80a2e05adb",
+      "introduced_in_commit": "18451c0f0e021d89d2b5b35ff77e053cf97a3e95"
+    },
+    {
+      "id": "artifact:p31-report",
+      "type": "artifact",
+      "title": "Phase 31 report",
+      "summary": "Human-readable finite-cutoff proper-time-gauge canonical and homogeneous BFV hybrid, relative quartet cancellation, determinant parity, and clock-polarization analysis.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md",
+      "sha256": "6ab0707bd4c133c62087c90b1e0b7131609491c0e10ee004b5ef08dbf2c2760b",
+      "introduced_in_commit": "18451c0f0e021d89d2b5b35ff77e053cf97a3e95"
+    },
+    {
+      "id": "artifact:p31-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 31 evidence snapshot",
+      "summary": "Persisted nine-exact and eleven-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase31-result.json",
+      "sha256": "d28e26c990cdad0075f5f3e1494383cb90e6dbc58ae641e094ce79c598159c4c"
+    },
+    {
+      "id": "phase:p32",
+      "type": "phase",
+      "title": "Phase 32 — below-origin lapse bypass and recorded intersection gate",
+      "summary": "A comparison of positive-half-line and full-line lapse prescriptions, lower and upper zero-lapse bypasses, a declared convergent signature-(-,+) momentum lift, regulated connected BVP continuation, and one recorded local intersection orientation.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:causal-half-line-versus-full-line-lapse-object",
+      "type": "concept",
+      "title": "Causal half-line versus full-line lapse object",
+      "summary": "Positive proper time gives a sourced resolvent, whereas unrestricted real lapse formally gives a constraint-supported distribution; their endpoint and intersection questions are not interchangeable.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:below-origin-relative-cycle-versus-cpt-pin-selection",
+      "type": "concept",
+      "title": "Below-origin relative cycle versus CPT/Pin selection",
+      "summary": "A full real lapse contour bypassing zero from below is independent quantization data. Complex conjugation exchanges lower and upper lateral loci, but no CPT/Pin lift or principle selecting the ket contour class is derived.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:recorded-local-intersection-versus-global-pl-coefficient",
+      "type": "concept",
+      "title": "Recorded local intersection versus global PL coefficient",
+      "summary": "One transverse crossing on one tracked lapse-base sheet contributes a local oriented sign; the physical Picard--Lefschetz coefficient additionally requires every upward-cycle component, complex sheet, endpoint, good end, Stokes jump, and determinant-line orientation.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:transported-momentum-cycle-versus-real-fresnel-normalization",
+      "type": "concept",
+      "title": "Transported momentum cycle versus real Fresnel normalization",
+      "summary": "The holomorphically transported signature-(-,+) momentum cycle is locally decaying around the lower bypass, but matching its C/N result to an independently identity-normalized C/|N| negative-real kernel requires an additional Maslov comparison sign.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "type": "claim",
+      "title": "The specified below-origin full line has one recorded local +1 intersection",
+      "summary": "Supported on the tracked homogeneous lapse-base sheet: each recorded finite lower semicircle crosses the positive-real dual at T=r with stable positive transverse orientation, and the connected complex BVP continues without a sampled Jacobi zero.",
+      "state": "SUPPORTED_ON_TRACKED_HOMOGENEOUS_LAPSE_BASE",
+      "claim_id": "P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "statement": "For the independently declared full real lapse contour with a finite lower semicircular bypass, the tracked connected homogeneous upward dual contributes one recorded local oriented intersection +1 at T=r.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "type": "claim",
+      "title": "The positive lapse half-line has an ordinary transverse intersection",
+      "summary": "Contradicted for the recorded branch: its lower-lateral regulator meets the positive-real dual only at the contour endpoint, which approaches the singular zero-lapse endpoint as the regulator is removed.",
+      "state": "CONTRADICTED_BY_ENDPOINT_CONTACT",
+      "claim_id": "P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "statement": "The causal positive-lapse half-line, or its lower-lateral regulator, has an interior ordinary transverse intersection with the recorded connected-saddle upward dual and therefore fixes an integer coefficient.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "type": "claim",
+      "title": "The above-origin full line has the same positive-dual intersection",
+      "summary": "Contradicted on the recorded branch: the upper N semicircle maps to the left T semicircle and misses the tracked positive-real dual.",
+      "state": "CONTRADICTED_ON_RECORDED_BRANCH",
+      "claim_id": "P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "statement": "Replacing the lower full-line bypass by the upper bypass leaves the recorded positive-real dual intersection unchanged.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "type": "claim",
+      "title": "The lower-bypass principal momentum cycle is locally convergent",
+      "summary": "Supported exactly in the frozen signature-(-,+) principal control: lapse-dependent gravity and scalar momentum rays turn both quadratic terms into decaying real Gaussians and preserve the declared local crossing orientation.",
+      "state": "SUPPORTED_IN_FROZEN_PRINCIPAL_CONTROL",
+      "claim_id": "P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "statement": "Along the declared lower semicircular lapse bypass, the frozen principal gravity and scalar momentum rays make the signature-(-,+) Gaussian locally decaying.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "type": "claim",
+      "title": "Analytic transport alone fixes the negative-real identity normalization",
+      "summary": "Contradicted by the exact comparison: analytic transport gives C/N=-C/r on the negative real side, whereas the separately normalized real Fresnel identity kernel uses C/|N|=C/r and needs an additional Maslov gluing sign.",
+      "state": "CONTRADICTED_REQUIRES_MASLOV_COMPARISON_DATA",
+      "claim_id": "P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "statement": "Holomorphic transport of the declared momentum cycle around the lower lapse bypass by itself reproduces the independently identity-normalized negative-real Fresnel kernel with no additional comparison orientation.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p32-lapse-map-operator-and-conjugation",
+      "type": "evidence",
+      "title": "Phase 32 lapse-map, operator, and conjugation checks",
+      "summary": "Eight exact checks distinguish lower and upper Wick images, positive-half-line endpoint contact, sourced resolvent versus full-line constraint support, the reduced open-interval BFV modulus, and conjugate lateral loci.",
+      "state": "VERIFIED",
+      "observed_status": "8_EXACT_PASS",
+      "check_ids": [
+        "P32.Wick.lapse_half_plane_map",
+        "P32.Wick.lower_bypass_maps_right",
+        "P32.Wick.upper_bypass_maps_left",
+        "P32.intersection.lower_lateral_half_line_is_endpoint_contact",
+        "P32.operator.full_line_lateral_constraint_support",
+        "P32.operator.positive_half_line_is_sourced",
+        "P32.BFV.open_interval_modulus_control",
+        "P32.conjugation.lateral_loci"
+      ]
+    },
+    {
+      "id": "evidence:p32-momentum-cycle-maslov-and-endpoint",
+      "type": "evidence",
+      "title": "Phase 32 momentum-cycle, Maslov, and endpoint checks",
+      "summary": "Six exact checks cover the lower-bypass orientation, convergent principal momentum rays, coupled Jacobian orientation, required Maslov comparison, paired arc versus pointwise pole, and nonuniform lateral limit.",
+      "state": "VERIFIED",
+      "observed_status": "6_EXACT_PASS",
+      "check_ids": [
+        "P32.intersection.lower_bypass_orientation",
+        "P32.contour.principal_momentum_decay",
+        "P32.detline.coupled_crossing_orientation",
+        "P32.detline.lower_half_turn_requires_maslov_gluing",
+        "P32.endpoint.paired_arc_vs_pointwise_pole",
+        "P32.regulator.lateral_limit_is_not_uniform"
+      ]
+    },
+    {
+      "id": "evidence:p32-connected-dual-bvp-and-regulator",
+      "type": "evidence",
+      "title": "Phase 32 connected dual, BVP, and regulator checks",
+      "summary": "Seven numerical checks freeze the connected saddle, continue the short-time real dual and complex lower bypass, exclude sampled Jacobi zeros, verify Van Vleck scaling and local orientation stability, and separate fixed-cutoff damping from a nonuniform lateral limit.",
+      "state": "VERIFIED",
+      "observed_status": "7_NUMERICAL_PASS",
+      "check_ids": [
+        "P32.saddle.frozen_connected_control",
+        "P32.dual.short_time_transversality",
+        "P32.Jacobi.short_time_no_caustic",
+        "P32.endpoint.Van_Vleck_scaling",
+        "P32.intersection.regulated_local_orientation_stability",
+        "P32.joint.lower_bypass_complex_BVP",
+        "P32.regulator.finite_spectral_control"
+      ]
+    },
+    {
+      "id": "scope:p32-specified-lapse-bypasses-and-tracked-dual",
+      "type": "scope",
+      "title": "P32 specified lapse bypasses and tracked homogeneous dual",
+      "summary": "The frozen connected Starobinsky interval, positive-half-line and full-real-line lapse prescriptions, finite lower and upper semicircular bypasses, one declared principal momentum lift, and bounded real/complex continuation near zero lapse.",
+      "state": "ACTIVE",
+      "includes": [
+        "the inherited reduced-unit boundary data and connected T=0.7 saddle without retuning",
+        "the Wick map T=iN and explicit lower versus upper semicircular zero-lapse bypasses",
+        "the causal positive half-line and its separately declared lower-lateral endpoint regulator",
+        "the specified full real lapse contour bypassing zero from below",
+        "the frozen signature-(-,+) principal momentum rays and local coupled crossing Jacobian",
+        "real crossings at r from 0.1 through 0.0015625",
+        "complex fixed-boundary continuations on four lower semicircles",
+        "finite spectral damping and nonuniform lateral-limit controls"
+      ],
+      "excludes": [
+        "a derivation that CPT or Pin selects the below-origin contour class",
+        "every upward-cycle component, complex BVP sheet, asymptotic good end, singularity, and Stokes jump",
+        "the full inhomogeneous gauge-fixed oriented superdeterminant line",
+        "a nonperturbative BFV/BV quantum master equation, gauge-independence proof, or Gribov analysis",
+        "a global integer Picard--Lefschetz coefficient",
+        "a positive trace-class WDW projector, seam density, initial-value selection, or SUSY spectrum"
+      ]
+    },
+    {
+      "id": "open:p32-cpt-pin-lapse-class-selection",
+      "type": "open_problem",
+      "title": "Determine whether CPT/Pin selects a lapse relative-homology class",
+      "summary": "Complex conjugation exchanges lower and upper lateral lapse loci, but the repository has not constructed a complete CPT/Pin bra--ket lift that selects the below-origin ket contour or fixes its determinant-line orientation.",
+      "state": "OPEN",
+      "question": "Does a fully specified CPT/Pin quantum state and BFV/BV integration cycle select the below-origin full-line lapse class, its conjugate bra, and their oriented superdeterminant data?"
+    },
+    {
+      "id": "source:halliwell-ortiz-1993",
+      "type": "source",
+      "title": "Sum-over-histories origin of the composition laws of relativistic quantum mechanics and quantum cosmology",
+      "summary": "CITES-only composition-law framing for the distinction between causal positive-proper-time kernels and constraint-supported objects; it does not select the Phase-32 contour class or compute its local or global intersection coefficient.",
+      "state": "PRIMARY",
+      "citation": "J. J. Halliwell and M. E. Ortiz, Sum-over-histories origin of the composition laws of relativistic quantum mechanics and quantum cosmology, Physical Review D 48 (1993) 748–768",
+      "uri": "https://doi.org/10.1103/PhysRevD.48.748",
+      "version": "Phys. Rev. D 48 (1993) 748–768"
+    },
+    {
+      "id": "artifact:p32-script",
+      "type": "artifact",
+      "title": "Phase 32 executable",
+      "summary": "Exact and bounded numerical lapse-map, bypass, momentum-cycle, Maslov, connected-dual, complex-BVP, and regulator controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py",
+      "sha256": "944f2c51a656d3622f2f8d0dd83fabb1f25bcc59751e11c1fbd7b292ff8fee8f",
+      "introduced_in_commit": "60775dd068123fcc36a848d7d8329d8127b83ece"
+    },
+    {
+      "id": "artifact:p32-report",
+      "type": "artifact",
+      "title": "Phase 32 report",
+      "summary": "Human-readable positive-half-line versus full-line contour distinction, finite lower-bypass local intersection, momentum-cycle and Maslov analysis, and global-scope boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md",
+      "sha256": "11edf6f536dc27bddd1e4c6df4a7352e4b08c63f8de5930df997af3c3820d994",
+      "introduced_in_commit": "60775dd068123fcc36a848d7d8329d8127b83ece"
+    },
+    {
+      "id": "artifact:p32-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 32 evidence snapshot",
+      "summary": "Persisted fourteen-exact and seven-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase32-result.json",
+      "sha256": "e7c27f2e667eb0820eeeaf8896974c73266a982420c1c2244c1a2cf72e64e789"
     }
   ],
   "edges": [
@@ -10909,6 +11397,846 @@
       "relation": "CITES",
       "to": "source:halliwell-louko-1990-part-iii",
       "note": "The source supplies contour methodology, not the physical original cycle or intersection coefficient for this saddle."
+    },
+    {
+      "id": "edge:955",
+      "from": "phase:p31",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:956",
+      "from": "scope:p31-unreduced-proper-time-hybrid-bfv-control",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:957",
+      "from": "concept:canonical-momentum-schur-versus-physical-determinant",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:958",
+      "from": "concept:relative-bfv-quartet-cancellation-versus-absolute-amplitude",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:959",
+      "from": "concept:local-extrinsic-clock-versus-endpoint-polarization",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:960",
+      "from": "artifact:p31-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:961",
+      "from": "artifact:p31-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:962",
+      "from": "artifact:p31-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:963",
+      "from": "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:964",
+      "from": "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p31-unreduced-proper-time-hybrid-bfv-control"
+    },
+    {
+      "id": "edge:965",
+      "from": "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p31-report"
+    },
+    {
+      "id": "edge:966",
+      "from": "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p31-canonical-schur-and-sampled-background",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:967",
+      "from": "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "relation": "ABOUT",
+      "to": "concept:canonical-momentum-schur-versus-physical-determinant"
+    },
+    {
+      "id": "edge:968",
+      "from": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:969",
+      "from": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p31-unreduced-proper-time-hybrid-bfv-control"
+    },
+    {
+      "id": "edge:970",
+      "from": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p31-report"
+    },
+    {
+      "id": "edge:971",
+      "from": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p31-canonical-and-bosonic-inertia",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:972",
+      "from": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "relation": "ABOUT",
+      "to": "concept:canonical-momentum-schur-versus-physical-determinant"
+    },
+    {
+      "id": "edge:973",
+      "from": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:974",
+      "from": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p31-unreduced-proper-time-hybrid-bfv-control"
+    },
+    {
+      "id": "edge:975",
+      "from": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p31-report"
+    },
+    {
+      "id": "edge:976",
+      "from": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p31-bfv-quartet-relative-cancellation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:977",
+      "from": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "relation": "ABOUT",
+      "to": "concept:relative-bfv-quartet-cancellation-versus-absolute-amplitude"
+    },
+    {
+      "id": "edge:978",
+      "from": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:979",
+      "from": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p31-unreduced-proper-time-hybrid-bfv-control"
+    },
+    {
+      "id": "edge:980",
+      "from": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p31-report"
+    },
+    {
+      "id": "edge:981",
+      "from": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p31-canonical-and-bosonic-inertia",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:982",
+      "from": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "relation": "ABOUT",
+      "to": "concept:canonical-momentum-schur-versus-physical-determinant"
+    },
+    {
+      "id": "edge:983",
+      "from": "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:984",
+      "from": "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p31-unreduced-proper-time-hybrid-bfv-control"
+    },
+    {
+      "id": "edge:985",
+      "from": "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p31-report"
+    },
+    {
+      "id": "edge:986",
+      "from": "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p31-extrinsic-clock-and-polarization",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:987",
+      "from": "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "relation": "ABOUT",
+      "to": "concept:local-extrinsic-clock-versus-endpoint-polarization"
+    },
+    {
+      "id": "edge:988",
+      "from": "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:989",
+      "from": "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p31-unreduced-proper-time-hybrid-bfv-control"
+    },
+    {
+      "id": "edge:990",
+      "from": "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p31-report"
+    },
+    {
+      "id": "edge:991",
+      "from": "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p31-extrinsic-clock-and-polarization",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:992",
+      "from": "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "relation": "ABOUT",
+      "to": "concept:local-extrinsic-clock-versus-endpoint-polarization"
+    },
+    {
+      "id": "edge:993",
+      "from": "evidence:p31-canonical-schur-and-sampled-background",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:994",
+      "from": "evidence:p31-canonical-schur-and-sampled-background",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p31-script"
+    },
+    {
+      "id": "edge:995",
+      "from": "evidence:p31-canonical-schur-and-sampled-background",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p31-evidence-snapshot"
+    },
+    {
+      "id": "edge:996",
+      "from": "evidence:p31-canonical-and-bosonic-inertia",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:997",
+      "from": "evidence:p31-canonical-and-bosonic-inertia",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p31-script"
+    },
+    {
+      "id": "edge:998",
+      "from": "evidence:p31-canonical-and-bosonic-inertia",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p31-evidence-snapshot"
+    },
+    {
+      "id": "edge:999",
+      "from": "evidence:p31-bfv-quartet-relative-cancellation",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:1000",
+      "from": "evidence:p31-bfv-quartet-relative-cancellation",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p31-script"
+    },
+    {
+      "id": "edge:1001",
+      "from": "evidence:p31-bfv-quartet-relative-cancellation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p31-evidence-snapshot"
+    },
+    {
+      "id": "edge:1002",
+      "from": "evidence:p31-extrinsic-clock-and-polarization",
+      "relation": "PART_OF",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:1003",
+      "from": "evidence:p31-extrinsic-clock-and-polarization",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p31-script"
+    },
+    {
+      "id": "edge:1004",
+      "from": "evidence:p31-extrinsic-clock-and-polarization",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p31-evidence-snapshot"
+    },
+    {
+      "id": "edge:1005",
+      "from": "phase:p31",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p30"
+    },
+    {
+      "id": "edge:1006",
+      "from": "claim:P31_PHASE30_CONFIGURATION_HESSIAN_IS_CANONICAL_MOMENTUM_SCHUR_COMPLEMENT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P30_DECLARED_MIDPOINT_RELATIVE_MAGNITUDE_HAS_RECORDED_LIMIT"
+    },
+    {
+      "id": "edge:1007",
+      "from": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT"
+    },
+    {
+      "id": "edge:1008",
+      "from": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT"
+    },
+    {
+      "id": "edge:1009",
+      "from": "claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE",
+      "relation": "MOTIVATES",
+      "to": "open:p29-conformal-bfv-uniform-parametrix",
+      "note": "The stable unreduced canonical sign does not assign the momentum contour, physical determinant-line phase, or global lapse orientation."
+    },
+    {
+      "id": "edge:1010",
+      "from": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant",
+      "note": "Relative cancellation at one shared hybrid regulator is not an absolute or constraint-reduced physical superdeterminant."
+    },
+    {
+      "id": "edge:1011",
+      "from": "claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:1012",
+      "from": "claim:P31_PA_IS_REGULAR_LOCAL_BULK_CLOCK_ON_RECORDED_SADDLE",
+      "relation": "MOTIVATES",
+      "to": "open:p29-physical-endpoint-measure-and-ordering",
+      "note": "The bounded local clock scan leaves the endpoint polarization transform and physical product open."
+    },
+    {
+      "id": "edge:1013",
+      "from": "claim:P31_FIXED_Q_KERNEL_IS_UNCHANGED_GLOBAL_PA_CLOCK_AMPLITUDE",
+      "relation": "MOTIVATES",
+      "to": "open:p29-physical-endpoint-measure-and-ordering"
+    },
+    {
+      "id": "edge:1014",
+      "from": "claim:P31_NONZERO_BFV_QUARTETS_CANCEL_IN_SAME_REGULATOR_RELATIVE_NORMALIZATION",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density",
+      "note": "A relative determinant identity supplies neither an absolute weight nor a physical probability."
+    },
+    {
+      "id": "edge:1015",
+      "from": "concept:canonical-momentum-schur-versus-physical-determinant",
+      "relation": "CITES",
+      "to": "source:gratton-turok-2001",
+      "note": "Constraint-reduction and variable-choice framing only; the finite midpoint Schur calculation is repository evidence."
+    },
+    {
+      "id": "edge:1016",
+      "from": "concept:relative-bfv-quartet-cancellation-versus-absolute-amplitude",
+      "relation": "CITES",
+      "to": "source:fradkin-vilkovisky-1975",
+      "note": "BFV constrained-quantization framing only; no physical normalization is imported."
+    },
+    {
+      "id": "edge:1017",
+      "from": "concept:relative-bfv-quartet-cancellation-versus-absolute-amplitude",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Endpoint-sensitive BFV framing only; the hybrid spectral/midpoint determinant identities remain repository evidence."
+    },
+    {
+      "id": "edge:1018",
+      "from": "concept:relative-bfv-quartet-cancellation-versus-absolute-amplitude",
+      "relation": "CITES",
+      "to": "source:rogers-2000-gauge-fixing-bfv",
+      "note": "Gauge-fermion admissibility and Gribov caveats only; Phase 31 does not establish those global conditions."
+    },
+    {
+      "id": "edge:1019",
+      "from": "concept:local-extrinsic-clock-versus-endpoint-polarization",
+      "relation": "CITES",
+      "to": "source:halliwell-1988",
+      "note": "Minisuperspace lapse and constraint framing only; the bounded p_a scan is repository evidence."
+    },
+    {
+      "id": "edge:1020",
+      "from": "concept:local-extrinsic-clock-versus-endpoint-polarization",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Endpoint polarization and BFV boundary-condition framing only."
+    },
+    {
+      "id": "edge:1021",
+      "from": "open:p28-full-gauge-reduced-superdeterminant",
+      "relation": "CITES",
+      "to": "source:rogers-2000-gauge-fixing-bfv",
+      "note": "The source supplies admissibility criteria, not the missing gauge-independent continuum superdeterminant."
+    },
+    {
+      "id": "edge:1022",
+      "from": "phase:p32",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1023",
+      "from": "scope:p32-specified-lapse-bypasses-and-tracked-dual",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1024",
+      "from": "concept:causal-half-line-versus-full-line-lapse-object",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1025",
+      "from": "concept:below-origin-relative-cycle-versus-cpt-pin-selection",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1026",
+      "from": "concept:recorded-local-intersection-versus-global-pl-coefficient",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1027",
+      "from": "concept:transported-momentum-cycle-versus-real-fresnel-normalization",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1028",
+      "from": "artifact:p32-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1029",
+      "from": "artifact:p32-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1030",
+      "from": "artifact:p32-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1031",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1032",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p32-specified-lapse-bypasses-and-tracked-dual"
+    },
+    {
+      "id": "edge:1033",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p32-report"
+    },
+    {
+      "id": "edge:1034",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p32-connected-dual-bvp-and-regulator",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1035",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p32-lapse-map-operator-and-conjugation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1036",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "ABOUT",
+      "to": "concept:recorded-local-intersection-versus-global-pl-coefficient"
+    },
+    {
+      "id": "edge:1037",
+      "from": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1038",
+      "from": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p32-specified-lapse-bypasses-and-tracked-dual"
+    },
+    {
+      "id": "edge:1039",
+      "from": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p32-report"
+    },
+    {
+      "id": "edge:1040",
+      "from": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p32-lapse-map-operator-and-conjugation",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1041",
+      "from": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "relation": "ABOUT",
+      "to": "concept:causal-half-line-versus-full-line-lapse-object"
+    },
+    {
+      "id": "edge:1042",
+      "from": "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1043",
+      "from": "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p32-specified-lapse-bypasses-and-tracked-dual"
+    },
+    {
+      "id": "edge:1044",
+      "from": "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p32-report"
+    },
+    {
+      "id": "edge:1045",
+      "from": "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p32-lapse-map-operator-and-conjugation",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1046",
+      "from": "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "relation": "ABOUT",
+      "to": "concept:below-origin-relative-cycle-versus-cpt-pin-selection"
+    },
+    {
+      "id": "edge:1047",
+      "from": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1048",
+      "from": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p32-specified-lapse-bypasses-and-tracked-dual"
+    },
+    {
+      "id": "edge:1049",
+      "from": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p32-report"
+    },
+    {
+      "id": "edge:1050",
+      "from": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p32-momentum-cycle-maslov-and-endpoint",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1051",
+      "from": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "relation": "ABOUT",
+      "to": "concept:transported-momentum-cycle-versus-real-fresnel-normalization"
+    },
+    {
+      "id": "edge:1052",
+      "from": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1053",
+      "from": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p32-specified-lapse-bypasses-and-tracked-dual"
+    },
+    {
+      "id": "edge:1054",
+      "from": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p32-report"
+    },
+    {
+      "id": "edge:1055",
+      "from": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p32-momentum-cycle-maslov-and-endpoint",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1056",
+      "from": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "relation": "ABOUT",
+      "to": "concept:transported-momentum-cycle-versus-real-fresnel-normalization"
+    },
+    {
+      "id": "edge:1057",
+      "from": "evidence:p32-lapse-map-operator-and-conjugation",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1058",
+      "from": "evidence:p32-lapse-map-operator-and-conjugation",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p32-script"
+    },
+    {
+      "id": "edge:1059",
+      "from": "evidence:p32-lapse-map-operator-and-conjugation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p32-evidence-snapshot"
+    },
+    {
+      "id": "edge:1060",
+      "from": "evidence:p32-momentum-cycle-maslov-and-endpoint",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1061",
+      "from": "evidence:p32-momentum-cycle-maslov-and-endpoint",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p32-script"
+    },
+    {
+      "id": "edge:1062",
+      "from": "evidence:p32-momentum-cycle-maslov-and-endpoint",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p32-evidence-snapshot"
+    },
+    {
+      "id": "edge:1063",
+      "from": "evidence:p32-connected-dual-bvp-and-regulator",
+      "relation": "PART_OF",
+      "to": "phase:p32"
+    },
+    {
+      "id": "edge:1064",
+      "from": "evidence:p32-connected-dual-bvp-and-regulator",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p32-script"
+    },
+    {
+      "id": "edge:1065",
+      "from": "evidence:p32-connected-dual-bvp-and-regulator",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p32-evidence-snapshot"
+    },
+    {
+      "id": "edge:1066",
+      "from": "phase:p32",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p31"
+    },
+    {
+      "id": "edge:1067",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P28_BOUNDED_VERTICAL_CYCLES_CROSS_RECORDED_DUAL_BRANCH"
+    },
+    {
+      "id": "edge:1068",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P30_POINTWISE_SHIFTED_RAY_LIMIT_FIXES_INTEGER_PL_COEFFICIENT"
+    },
+    {
+      "id": "edge:1069",
+      "from": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P29_POSITIVE_HALF_LAPSE_IS_CONSTRAINT_PROJECTOR"
+    },
+    {
+      "id": "edge:1070",
+      "from": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS"
+    },
+    {
+      "id": "edge:1071",
+      "from": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P30_ONE_HOLOMORPHIC_LAPSE_SHEET_NORMALIZES_BOTH_REAL_SIDES"
+    },
+    {
+      "id": "edge:1072",
+      "from": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection",
+      "note": "One recorded local crossing is not the complete global upward-cycle census or physical coefficient."
+    },
+    {
+      "id": "edge:1073",
+      "from": "claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:p28-global-relative-homology-and-intersection",
+      "note": "The causal half-line has endpoint contact, so its endpoint prescription remains distinct from ordinary interior intersection counting."
+    },
+    {
+      "id": "edge:1074",
+      "from": "claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:p32-cpt-pin-lapse-class-selection"
+    },
+    {
+      "id": "edge:1075",
+      "from": "claim:P32_LOWER_BYPASS_PRINCIPAL_MOMENTUM_CYCLE_IS_LOCALLY_CONVERGENT",
+      "relation": "MOTIVATES",
+      "to": "open:p28-full-gauge-reduced-superdeterminant",
+      "note": "Local principal convergence does not determine the inhomogeneous oriented superdeterminant line."
+    },
+    {
+      "id": "edge:1076",
+      "from": "claim:P32_ANALYTIC_TRANSPORT_FIXES_NEGATIVE_REAL_IDENTITY_NORMALIZATION",
+      "relation": "MOTIVATES",
+      "to": "open:p29-conformal-bfv-uniform-parametrix"
+    },
+    {
+      "id": "edge:1077",
+      "from": "open:p32-cpt-pin-lapse-class-selection",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:1078",
+      "from": "open:p32-cpt-pin-lapse-class-selection",
+      "relation": "BLOCKED_BY",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:1079",
+      "from": "phase:p32",
+      "relation": "MOTIVATES",
+      "to": "open:p28-physical-state-and-density",
+      "note": "The local contour calculation supplies neither a physical product nor positivity or trace class."
+    },
+    {
+      "id": "edge:1080",
+      "from": "concept:causal-half-line-versus-full-line-lapse-object",
+      "relation": "CITES",
+      "to": "source:teitelboim-1983",
+      "note": "Causality-versus-gauge-invariance framing only; the Phase-32 endpoint and crossing calculations are repository evidence."
+    },
+    {
+      "id": "edge:1081",
+      "from": "concept:causal-half-line-versus-full-line-lapse-object",
+      "relation": "CITES",
+      "to": "source:halliwell-ortiz-1993",
+      "note": "Composition-law framing only; the source does not compute this model's bypass or intersection."
+    },
+    {
+      "id": "edge:1082",
+      "from": "concept:below-origin-relative-cycle-versus-cpt-pin-selection",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "The below-origin full-line prescription is cited as independent contour input in its stated momentum-integration order, not as a CPT/Pin derivation or repository intersection result."
+    },
+    {
+      "id": "edge:1083",
+      "from": "concept:recorded-local-intersection-versus-global-pl-coefficient",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz",
+      "note": "Relative-homology and intersection framing only; the local +1 is repository evidence."
+    },
+    {
+      "id": "edge:1084",
+      "from": "concept:recorded-local-intersection-versus-global-pl-coefficient",
+      "relation": "CITES",
+      "to": "source:feldbrugge-lehners-turok-2017",
+      "note": "Lorentzian lapse-thimble framing only; no physical coefficient is imported."
+    },
+    {
+      "id": "edge:1085",
+      "from": "concept:recorded-local-intersection-versus-global-pl-coefficient",
+      "relation": "CITES",
+      "to": "source:halliwell-louko-1990-part-iii",
+      "note": "Minisuperspace contour methodology only; it does not enumerate the Phase-32 global cycle."
+    },
+    {
+      "id": "edge:1086",
+      "from": "concept:transported-momentum-cycle-versus-real-fresnel-normalization",
+      "relation": "CITES",
+      "to": "source:gibbons-hawking-perry-1978",
+      "note": "Conformal-factor contour warning only; the exact finite-mode momentum rays and Maslov comparison are repository calculations."
+    },
+    {
+      "id": "edge:1087",
+      "from": "open:p28-global-relative-homology-and-intersection",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "The source motivates one full-line contour prescription but does not close this model's global upward-cycle census."
+    },
+    {
+      "id": "edge:1088",
+      "from": "open:p32-cpt-pin-lapse-class-selection",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "The source does not derive a CPT/Pin bra--ket lift or select the ket contour class."
     }
   ],
   "kg_bridges": [
@@ -11117,6 +12445,26 @@
       "status": "UNRESOLVED",
       "checked_at_utc": "2026-08-17T16:38:39.344Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase30 coupled conformal lapse tangent cycle determinant line",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p31",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T17:21:03.451Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase31 homogeneous finite-cutoff BFV super-Hessian gate",
+      "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "phase:p32",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-17T17:27:03.527Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase32 below-origin lapse bypass recorded local intersection",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
     }
   ]

@@ -67,12 +67,16 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md` | Phase 29 보고서 — 18 exact + 7 numerical checks. local flat endpoint measure에서 raw \(1/N\)은 delta-kernel normalization이지만 physical WDW measure·all-orders kernel·global PL coefficient는 미유도 |
 | `phase30_conformal_bfv_determinant_line.py` | finite-cutoff homogeneous field–lapse Hessian의 coupled tangent cycle, declared midpoint relative magnitude, determinant parity와 Maslov obstruction을 검증하는 실행체 |
 | `PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md` | Phase 30 보고서 — 10 exact + 10 numerical checks. coupled local Gaussian cycle은 존재하지만 full BFV super-Hessian·determinant-line phase·global PL coefficient는 미유도 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–30의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase31_homogeneous_bfv_superhessian.py` | canonical `(q,p,T)` lift, nonzero homogeneous BFV quartet, same-regulator 상대정규화와 `p_a` local-clock obstruction을 검증하는 실행체 |
+| `PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md` | Phase 31 보고서 — 9 exact + 11 numerical checks. stable canonical sign과 relative quartet cancellation은 계산됐지만 absolute phase·physical determinant·SUSY/SUGRA Hessian은 미유도 |
+| `phase32_below_origin_lapse_intersection.py` | positive half-line과 full-line lapse prescription, lower/upper bypass, momentum cycle, connected complex BVP와 local intersection orientation을 검증하는 실행체 |
+| `PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md` | Phase 32 보고서 — 14 exact + 7 numerical checks. specified below-origin full line은 tracked sheet에서 local `+1`을 갖지만 global `n_sigma`와 CPT/Pin contour selection은 미유도 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–32의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 30)
+## 현재 경계 (Phase 32)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -237,17 +241,33 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   singular endpoint의 bypass나 complete upward cycle을 정하지 않는다. Full homogeneous BFV
   phase-space ghost/gauge super-Hessian, inhomogeneous superdeterminant와 physical integer
   \(n_\sigma\)는 모두 OPEN이다.
+- Phase 31은 Phase 30 configuration Hessian을 canonical \((q,p,T)\) phase space로 lift했다. Exact
+  momentum Schur reduction은 원래 Hessian을 재현하고 unreduced proper-time-gauge canonical sign은
+  기록한 odd/even cutoff 모두에서 양수다. 하지만 bare full bosonic BFV block은 gauge-pair parity로
+  다시 교대하며, nonzero quartet cancellation은 동일 hybrid regulator의 benchmark/reference
+  **상대정규화**에만 성립한다. 여기서 super-Hessian은 BFV grading이지 SUSY/SUGRA Hessian이 아니다.
+- 같은 Phase 31에서 \(p_a\)는 기록한 real saddle bulk에서 local regular clock이지만 fixed-\(q\)
+  endpoint를 \(p_a\) polarization으로 바꾸면 nonzero Legendre term이 생긴다. 따라서 기존 seam
+  kernel을 unchanged global clock amplitude로 재해석할 수 없다.
+- Phase 32는 lapse prescription을 분리했다. Causal \(N>0\) half-line의 lower-lateral regulator는
+  tracked positive-real dual과 contour endpoint에서만 만나 ordinary PL integer를 주지 않는다.
+  반면 independently specified full real lapse contour가 \(N=0\)을 아래로 우회하면 finite \(r\)에서
+  한 tracked homogeneous lapse-base crossing의 local orientation이 \(+1\)이다.
+- 이 local \(+1\)은 global \(n_\sigma=+1\)이 아니다. Complete upward-cycle components, 다른 complex
+  BVP sheets, asymptotic good ends, Stokes data와 oriented inhomogeneous superdeterminant line이
+  열려 있다. Complex conjugation은 lower/upper lateral loci를 교환할 뿐 CPT/Pin이 below-origin ket
+  class를 선택한다는 유도도 아직 없다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-- **PL/BFV global gate:** Phase 30의 finite-cutoff coupled Gaussian tangent cycle을 nonlinear
-  endpoint-uniform cycle로 확장한다. Full homogeneous BFV phase-space ghost/gauge super-Hessian을
-  먼저 만들고 determinant line을 \(N=0\) 너머까지 추적한 뒤, complete upward cycles와 physical
-  original contour의 global intersection coefficient를 계산한다. 이어 inhomogeneous
-  graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로 확장해 cutoff와
-  gauge-fixing independence를 검사하며, 결과를 바꾸는 ad hoc \(N\) measure insertion은 쓰지 않는다.
+- **PL/BFV global gate:** Phase 32의 tracked local crossing에서 멈추지 않고 full joint upward
+  cycle의 양 arm을 fold를 지나 uniform polarization으로 계속한다. 모든 complex BVP sheet와
+  asymptotic good end를 열거하고, separately specified physical lapse contour와의 전체 intersection
+  sum을 계산한 뒤 endpoint·mode regulator를 제거한다. 동시에 Phase 31 hybrid를 constraint-reduced
+  inhomogeneous graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로
+  확장해 determinant-line orientation과 gauge-fixing independence를 검사한다.
 - **Three-form seam-kernel gate:** compact three-form SUGRA boundary state 또는 charged-membrane
   saddle에서 실제 \(C_{n\ell}\), charge/tension, boundary ensemble과 determinant prefactor를
   유도한다. 그 뒤에만 regulated determinant와 joint \((n,\phi)\) measure의 내부 peak를 검사한다.

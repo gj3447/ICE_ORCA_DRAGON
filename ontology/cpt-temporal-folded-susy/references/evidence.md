@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–30 snapshots in [`../evidence/`](../evidence/), including [`phase25-result.json`](../evidence/phase25-result.json), [`phase26-result.json`](../evidence/phase26-result.json), [`phase27-result.json`](../evidence/phase27-result.json), [`phase28-result.json`](../evidence/phase28-result.json), [`phase29-result.json`](../evidence/phase29-result.json), and [`phase30-result.json`](../evidence/phase30-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–32 snapshots in [`../evidence/`](../evidence/), including [`phase29-result.json`](../evidence/phase29-result.json), [`phase30-result.json`](../evidence/phase30-result.json), [`phase31-result.json`](../evidence/phase31-result.json), and [`phase32-result.json`](../evidence/phase32-result.json).
 
 ## Reading `PASS` correctly
 
-All 292 Phase 16–30 named exact checks have `status: PASS`. The snapshots contain 124 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, and 10 in Phase 30, for 125 numerical controls in all. Phase 30 contributes 10 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that the original-contour intersection coefficient is known, or that a physical state has been constructed.
+All 315 Phase 16–32 named exact checks have `status: PASS`. The snapshots contain 142 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, and 7 in Phase 32, for 143 numerical controls in all. Phase 31 contributes 9 exact checks and Phase 32 contributes 14. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that the original-contour intersection coefficient is globally known, or that a physical state has been constructed.
 
 The scientific direction is stored on:
 
@@ -35,6 +35,8 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 28 | `result:P28_THIMBLE_BFV_INTERSECTION_20260817`; `2026-08-17T15:26:44.354Z` | `cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py`; SHA-256 `496990308456bcc1d28f9649b99053d2a05499c6d3c2c0d233d5576a39a3f018`; introduced in `2065de0125674ba9c72888e3d95bc84fec66850b` | Exit `0`; 10 exact checks plus 9 numerical checks |
 | 29 | `result:P29_ZERO_LAPSE_UNIFORM_KERNEL_20260817`; `2026-08-17T15:45:17.466Z` | `cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py`; SHA-256 `0fa8314d3c0385c70ad569ce1c2ad65d506580eef50ef589e7fa2da5f7fb3e76`; introduced/finalized in `4794ff6de9f5f5726bcdd633f64fd4988eb197de` | Exit `0`; 18 exact checks plus 7 numerical checks |
 | 30 | `result:P30_CONFORMAL_BFV_DETERMINANT_LINE_20260817`; `2026-08-17T16:38:39.344Z` | `cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py`; SHA-256 `4c402a50aa5f32966faa7e01d65623933ea7d9cff2b43f25b76f89b5efa36cc7`; introduced/finalized in `bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d` | Exit `0`; 10 exact checks plus 10 numerical checks |
+| 31 | `result:P31_HOMOGENEOUS_BFV_SUPERHESSIAN_20260817`; `2026-08-17T17:21:03.451Z` | `cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py`; SHA-256 `f2f37ff240c1bea82a5345a549882415e5f9fde1fc7bcf3bb96abc80a2e05adb`; introduced/finalized in `18451c0f0e021d89d2b5b35ff77e053cf97a3e95` | Exit `0`; 9 exact checks plus 11 numerical checks |
+| 32 | `result:P32_BELOW_ORIGIN_LAPSE_INTERSECTION_20260817`; `2026-08-17T17:27:03.527Z` | `cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py`; SHA-256 `944f2c51a656d3622f2f8d0dd83fabb1f25bcc59751e11c1fbd7b292ff8fee8f`; introduced/finalized in `60775dd068123fcc36a848d7d8329d8127b83ece` | Exit `0`; 14 exact checks plus 7 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -43,6 +45,10 @@ The Phase 25–28 report hashes are `921ffbb7…`, `99b7d7d7…`, `9db755b6…`,
 The Phase 29 report hash is `d3aa7abf…`; its frozen snapshot hash is `dd13f707…`. Both the final executable and report bytes first appear in `4794ff6de9f5f5726bcdd633f64fd4988eb197de`.
 
 The Phase 30 report hash is `0cf7a2cb39392ab07580207ec4bceb910f200eb9d07f4b5fc7090d1ea456914d`; its fresh snapshot hash is `3ebfec6c9ce43ed499f70ac151508be6a8ad90bca8341d0c7feec2adfac0fadf`. The exact final executable and report bytes first appear in `bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d`.
+
+The Phase 31 report hash is `6ab0707bd4c133c62087c90b1e0b7131609491c0e10ee004b5ef08dbf2c2760b`; its fresh snapshot hash is `d28e26c990cdad0075f5f3e1494383cb90e6dbc58ae641e094ce79c598159c4c`. The exact final executable and report bytes first appear in `18451c0f0e021d89d2b5b35ff77e053cf97a3e95`.
+
+The Phase 32 report hash is `11edf6f536dc27bddd1e4c6df4a7352e4b08c63f8de5930df997af3c3820d994`; its fresh snapshot hash is `e7c27f2e667eb0820eeeaf8896974c73266a982420c1c2244c1a2cf72e64e789`. The exact final executable and report bytes first appear in `60775dd068123fcc36a848d7d8329d8127b83ece`.
 
 ## Evidence-to-claim index
 
@@ -104,6 +110,13 @@ The Phase 30 report hash is `0cf7a2cb39392ab07580207ec4bceb910f200eb9d07f4b5fc70
 | `evidence:p30-fibered-schur-cycle` | 3 exact + 4 numerical | Finite-cutoff local coupled field–lapse Gaussian cycle exists — `SUPPORTS`; tested standard product rotation is sufficient — `CONTRADICTS` | Frozen midpoint Hessians and Schur-shifted tangent only; no nonlinear global relative cycle or full BFV super-Hessian |
 | `evidence:p30-relative-determinant-and-prefactor` | 1 exact + 5 numerical | Declared midpoint relative magnitude has a recorded limit — `SUPPORTS`; bare absolute lattice sign is cutoff independent — `CONTRADICTS` | Declared time slicing and reference magnitude; not an absolute zeta determinant or continuum determinant-line phase |
 | `evidence:p30-endpoint-ray-limit` | 1 exact | Pointwise shifted-ray limit fixes an integer PL coefficient — `CONTRADICTS` | Common open-ray limit away from singular `N=0`; no endpoint-completed upward cycle or transverse intersection |
+| `evidence:p31-canonical-schur-and-sampled-background` | 3 exact + 3 numerical | Phase-30 configuration Hessian is the canonical momentum Schur complement — `SUPPORTS` | Continuum saddle sampled on declared midpoint lattices; sampled constraint residual is nonzero and converges as `O(m^-2)` |
+| `evidence:p31-canonical-and-bosonic-inertia` | 5 numerical | Unreduced proper-time canonical sign is stable — `SUPPORTS`; bare bosonic BFV sign fixes the determinant line — `CONTRADICTS` | Finite hybrid cutoffs only; no absolute contour phase or continuum determinant line |
+| `evidence:p31-bfv-quartet-relative-cancellation` | 5 exact + 2 numerical | Nonzero BFV quartets cancel in same-regulator relative normalization — `SUPPORTS` | Background-independent finite block factors and identical benchmark/reference regulator; no absolute within-amplitude unity |
+| `evidence:p31-extrinsic-clock-and-polarization` | 1 exact + 1 numerical | `p_a` is a regular local clock on the recorded saddle — `SUPPORTS`; fixed-q kernel is an unchanged global `p_a` amplitude — `CONTRADICTS` | Bounded real-saddle scan and nonzero endpoint Legendre shift; no global clock theorem |
+| `evidence:p32-lapse-map-operator-and-conjugation` | 8 exact | Below-origin full line has the mapped positive-dual crossing — `SUPPORTS`; positive half-line ordinary crossing and upper-bypass equality — `CONTRADICTS` | Declared lapse prescriptions and tracked homogeneous dual only; conjugation is not a CPT/Pin selection theorem |
+| `evidence:p32-momentum-cycle-maslov-and-endpoint` | 6 exact | Lower-bypass principal momentum cycle is locally convergent — `SUPPORTS`; analytic transport alone fixes negative-real identity normalization — `CONTRADICTS` | Frozen signature-(-,+) principal cycle, local Jacobians, and endpoint comparison; no global oriented superdeterminant |
+| `evidence:p32-connected-dual-bvp-and-regulator` | 7 numerical | Specified below-origin full line has one recorded local `+1` — `SUPPORTS` | Finite radii, one tracked lapse-base sheet, bounded real/complex BVP continuation; not the global coefficient |
 
 ## Phase 16 check ledger
 
@@ -849,6 +862,101 @@ Left- and right-shifted positive-imaginary rays have the same pointwise limit aw
 
 Phase 30 evaluates no new BFV ghost complex and no full phase-space BFV super-Hessian. Those objects, their primed superdeterminant, the determinant line through `N=0`, and regulator/mode-cutoff limits remain open.
 
+## Phase 31 check ledger
+
+### Canonical lift and sampled background — 3 exact plus 3 numerical checks
+
+- `P31.Hamiltonian.stationary_element_momenta`
+- `P31.Hamiltonian.configuration_element_recovered`
+- `P31.Hessian.momentum_Schur_determinant`
+- `P31.background.sampled_discrete_constraint_convergence`
+- `P31.Hamiltonian.sampled_stationary_momenta`
+- `P31.Hessian.phase_to_configuration_Schur`
+
+These checks establish the finite-dimensional Legendre/Schur identity and reproduce the independently
+assembled configuration-plus-`T` Hessian. The sampled continuum saddle is not promoted to an exact
+finite-lattice critical point; its nonzero midpoint constraint residual decays as `O(m^-2)`.
+
+### Canonical and bare bosonic inertia — 5 numerical checks
+
+- `P31.saddle.frozen_phase30_control`
+- `P31.Hessian.proper_time_canonical_inertia_and_parity`
+- `P31.BFV.full_bosonic_inertia`
+- `P31.spectrum.no_finite_cutoff_zero_mode`
+- `P31.lapse.global_modulus_Schur_convergence`
+
+The unreduced proper-time-gauge canonical sign is stable at the recorded odd/even cutoffs, while adding
+the bosonic gauge pairs restores an alternating bare sign. The global proper length remains separate.
+Neither observation fixes an absolute continuum determinant-line phase.
+
+### Nonzero BFV quartets and relative normalization — 5 exact plus 2 numerical checks
+
+- `P31.BFV.abelian_constraint_nilpotence`
+- `P31.BFV.bosonic_quartet_determinant`
+- `P31.BFV.ghost_quartet_Pfaffian`
+- `P31.BFV.continuum_spectral_pair_derivative`
+- `P31.BFV.global_lapse_mode_separation`
+- `P31.BFV.coupled_block_factorization`
+- `P31.BFV.same_regulator_relative_normalization`
+
+The nonzero alpha=0 gauge and ghost factors are background independent in the declared block identity
+and drop out of identical benchmark/reference regulators. This is not an absolute within-amplitude
+cancellation, gauge-independence theorem, or SUGRA superdeterminant.
+
+### Local extrinsic clock and endpoint polarization — 1 exact plus 1 numerical check
+
+- `P31.clock.pa_FP_bracket_identity`
+- `P31.clock.pa_local_bulk_regular`
+
+The recorded `p_a` bracket is nonzero along one bounded real saddle, but the endpoint Legendre shift is
+nonzero. The fixed-configuration kernel therefore cannot be reused unchanged as a global `p_a`-clock
+amplitude.
+
+## Phase 32 check ledger
+
+### Lapse maps, operator objects, and conjugation — 8 exact checks
+
+- `P32.Wick.lapse_half_plane_map`
+- `P32.Wick.lower_bypass_maps_right`
+- `P32.Wick.upper_bypass_maps_left`
+- `P32.intersection.lower_lateral_half_line_is_endpoint_contact`
+- `P32.operator.full_line_lateral_constraint_support`
+- `P32.operator.positive_half_line_is_sourced`
+- `P32.BFV.open_interval_modulus_control`
+- `P32.conjugation.lateral_loci`
+
+The causal half-line and full-line group average are different spectral objects. The lower full-line
+bypass maps to the right `T` semicircle; the upper one maps left. Conjugation exchanges the lateral
+loci but does not derive a CPT/Pin lift or select the ket contour.
+
+### Momentum lift, Maslov comparison, and endpoint limit — 6 exact checks
+
+- `P32.intersection.lower_bypass_orientation`
+- `P32.contour.principal_momentum_decay`
+- `P32.detline.coupled_crossing_orientation`
+- `P32.detline.lower_half_turn_requires_maslov_gluing`
+- `P32.endpoint.paired_arc_vs_pointwise_pole`
+- `P32.regulator.lateral_limit_is_not_uniform`
+
+The declared signature-(-,+) momentum rays are locally decaying and preserve the local geometric sign.
+Their analytic `C/N` transport still needs a separate Maslov comparison to match the negative-real
+identity-normalized `C/|N|` kernel. Fixed-mode lateral convergence is not uniform in the mode cutoff.
+
+### Connected dual, complex BVP, and regulated crossing — 7 numerical checks
+
+- `P32.saddle.frozen_connected_control`
+- `P32.dual.short_time_transversality`
+- `P32.Jacobi.short_time_no_caustic`
+- `P32.endpoint.Van_Vleck_scaling`
+- `P32.intersection.regulated_local_orientation_stability`
+- `P32.joint.lower_bypass_complex_BVP`
+- `P32.regulator.finite_spectral_control`
+
+Every recorded finite lower bypass has one positive local crossing on the tracked sheet, and the sampled
+complex branch has no Jacobi zero. The Van Vleck factor itself scales as `1/r`; the crossing approaches
+the singular endpoint as `r` vanishes. These checks support one recorded local `+1`, not the complete
+global Picard--Lefschetz coefficient.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -869,6 +977,8 @@ uv run --locked python3 cpt_temporal_folded_susy/phase27_lorentzian_lapse_endpoi
 uv run --locked python3 cpt_temporal_folded_susy/phase28_thimble_bfv_intersection.py
 uv run --locked python3 cpt_temporal_folded_susy/phase29_zero_lapse_uniform_kernel.py
 uv run --locked python3 cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py
+uv run --locked python3 cpt_temporal_folded_susy/phase31_homogeneous_bfv_superhessian.py
+uv run --locked python3 cpt_temporal_folded_susy/phase32_below_origin_lapse_intersection.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -1070,5 +1180,43 @@ claim:P30_BARE_ABSOLUTE_LATTICE_SIGN_IS_CUTOFF_INDEPENDENT
 ```
 
 The supported cycle is finite-cutoff, local, homogeneous, and quadratic. The supported relative magnitude uses the declared midpoint measure. Neither is a full BFV super-Hessian, a regulator-independent determinant-line phase, a global integer PL coefficient, or a physical state.
+
+Phase 31 separates an unreduced canonical sign from the physical determinant line:
+
+```text
+claim:P31_PROPER_TIME_CANONICAL_DETERMINANT_SIGN_IS_STABLE
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p31-canonical-and-bosonic-inertia
+  → VALID_WITHIN → scope:p31-unreduced-proper-time-hybrid-bfv-control
+
+claim:P31_FULL_BOSONIC_BFV_SIGN_EQUALS_CANONICAL_DETERMINANT_LINE
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p31-canonical-and-bosonic-inertia
+  → MOTIVATES → open:p28-full-gauge-reduced-superdeterminant
+```
+
+Phase 32 separates a recorded local intersection from the global coefficient and contour selection:
+
+```text
+claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_LOCAL_PLUS_ONE
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p32-connected-dual-bvp-and-regulator
+  → VALID_WITHIN → scope:p32-specified-lapse-bypasses-and-tracked-dual
+  → MOTIVATES → open:p28-global-relative-homology-and-intersection
+
+claim:P32_POSITIVE_HALF_LINE_HAS_ORDINARY_TRANSVERSE_INTERSECTION
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p32-lapse-map-operator-and-conjugation
+  → VALID_WITHIN → scope:p32-specified-lapse-bypasses-and-tracked-dual
+
+claim:P32_ABOVE_ORIGIN_FULL_LINE_HAS_SAME_POSITIVE_DUAL_INTERSECTION
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p32-lapse-map-operator-and-conjugation
+  → MOTIVATES → open:p32-cpt-pin-lapse-class-selection
+```
+
+The first Phase-32 trace is deliberately scoped to the separately declared below-origin full line and
+one tracked homogeneous lapse-base sheet. It is not a trace for global `n_sigma=+1`, a positive WDW
+state, or a CPT/Pin-derived contour.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.
