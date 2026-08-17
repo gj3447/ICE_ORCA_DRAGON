@@ -51,12 +51,14 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE21_CONNECTED_SEAM_GAUSSIAN.md` | Phase 21 보고서 — 27 exact + 7 numerical checks. no-seam baseline은 식별되지만 subtraction과 물리적 flux 확률은 자동 유도되지 않음 |
 | `phase22_finite_mode_seam_density.py` | 한 free SUSY oscillator의 TFD-like seam density, graded anti-linear involution, DtN 상관, SK trace identity와 \(\omega\to0\) obstruction을 가르는 exact 실행체 |
 | `PHASE22_FINITE_MODE_SEAM_DENSITY.md` | Phase 22 보고서 — 31 exact checks. \(\omega,\beta>0\) finite mode는 양의 정규화 상태를 갖지만 noncompact free zero mode는 trace class가 아님 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–22의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase23_homogeneous_minisuperspace_density.py` | full-real-lapse rigging, KG current, compact spectral density, quadratic zero root와 decompactification을 가르는 exact+numerical 실행체 |
+| `PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md` | Phase 23 보고서 — 32 exact + 4 numerical checks. supplied \(B_L\)은 regulated density를 만들지만 constraint/CPT-like pairing만으로 그 가중치는 선택되지 않음 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–23의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 22)
+## 현재 경계 (Phase 23)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -146,6 +148,17 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - 같은 ansatz의 noncompact \(\omega\to0^+\) limit에서는
   \(Z_B\sim(\beta\omega)^{-1}\), \(\langle x^2\rangle\sim(\beta\omega^2)^{-1}\)로 발산한다.
   이는 interacting inflaton minisuperspace의 no-go가 아니라 free zero-mode completion gate다.
+- Phase 23은 \(C=p_T^2-h\)의 full-real-lapse average가 distributional rigging map을 주지만,
+  half-lapse는 resolvent이고 \(\delta(C)\) 자체는 bounded density가 아님을 exact하게 분리했다.
+- 명시적인 clock/positive-frequency 선택 뒤 compact Dirichlet control에서
+  \(B_L=e^{-L\sqrt h}\)를 **입력하면** \(\rho_+=Z_L^{-1}e^{-2L\sqrt h}\)는 positive trace class다.
+  그러나 \(L\), regulator와 toy pairing은 cap/CPT/Pin에서 유도되지 않았다.
+- equal branch의 signed KG current는 0이어도 induced norm은 양수이고, positive-frequency
+  superposition의 local current도 점별 양수가 아니다. 정확 반례는
+  \(j_T=-55/(768\pi)\)를 준다.
+- quadratic \(E=0\) root에서는 rigging integral이 \(1/\sqrt{2\epsilon}\)로 발산하고 clock FP가
+  0이다. 실제 symmetric closed-FRW neck에는 extrinsic/two-patch clock 또는
+  deparametrization-free RAQ가 필요하다.
 - 이 경계의 claim, exact check, primary source, 적용 범위와 OPEN 항목은
   `../ontology/cpt-temporal-folded-susy/graph.json`에 stable ID로 연결했다. `./ice ontology validate`
   는 그 연결과 artifact hash를 검사하며, 그래프 자체는 연구 계약이나 외부 KG 승격이 아니다.
@@ -160,10 +173,11 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - **Background-state follow-up:** closed \(S^3\)에서 exact complex Starobinsky/SUGRA saddle,
   WDW current/inner product와 CPT/Pin sheet overlap을 함께 정하고, one-loop
   boson–fermion–gravitino determinant가 유한 initial-amplitude peak를 만드는지 계산한다.
-- **Finite-to-full density gate:** Phase 22의 finite-mode density를 무한 mode product로 올리기 전에
-  Hilbert–Schmidt/UV 조건을 검사하고, homogeneous \((a,\phi)\) sector에는 primed determinant,
-  collective-coordinate Jacobian과 physical WDW current를 사용한다. 같은 cap에서
-  gravitino–Goldstino–ghost boundary operator와 Pfaffian phase도 함께 계산한다.
+- **Regulated-to-cosmological density gate:** Phase 23의 supplied \(B_L\) control을 실제 closed
+  Starobinsky complex-cap constraint로 교체한다. Extrinsic/two-patch clock 또는 RAQ, factor
+  ordering, primed determinant, collective-coordinate Jacobian과 physical WDW current에서
+  \(B_L\) 또는 그 대체 kernel이 유도되는지 먼저 검사한다. 그 뒤 같은 cap에서
+  gravitino–Goldstino–ghost boundary operator와 Pfaffian phase를 계산한다.
 - **Foundational construction:** 두 complete free Wess–Zumino multiplet을 folded half-line에 놓고,
   Phase 17의 doubled real structure를 쓰는 quadratic bulk-plus-seam action을 직접 변분한다.
   Positive inner product, self-adjoint domain, conserved complex-linear \(Q\), sheet observable을

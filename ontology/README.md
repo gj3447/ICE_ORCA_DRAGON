@@ -8,7 +8,13 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–22 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–23 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+
+At the recorded `2026-08-17T05:45:44Z` graph update, the collection has 251 nodes and
+511 edges. Validation verifies 29/29 stored hashes (27 artifacts and 2 policies). The
+Phase 16–23 run snapshots contain 226 named exact checks and 56 numerical checks. These
+counts describe repository records, not independent replications or global scientific
+confidence.
 
 ## Read and validate it
 
@@ -18,6 +24,7 @@ The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). Th
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2
+./ice ontology trace claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY --depth 2
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;

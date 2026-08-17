@@ -41,14 +41,15 @@
 | `source:kubo-1962` — R. Kubo, [*Generalized Cumulant Expansion Method*](https://doi.org/10.1143/JPSJ.17.1100), JPSJ 17 (1962) 1100–1120 | Linked-cluster/cumulant reference for the distinction between \(R-1\) and \(\log R\) | Does not define a WDW probability or the Phase 21 flux-sector measure |
 | `source:osterwalder-schrader-1975` — K. Osterwalder, R. Schrader, [*Axioms for Euclidean Green's Functions II*](https://doi.org/10.1007/BF01608978), CMP 42 (1975) 281–305 | Reflection-positivity boundary for interpreting a Euclidean determinant | Phase 21 verifies only a finite positive Gaussian and does not construct the full OS field theory |
 | `source:hawking-1977-zeta` — S. W. Hawking, [*Zeta Function Regularization of Path Integrals in Curved Spacetime*](https://doi.org/10.1007/BF01626516), CMP 55 (1977) 133–148 | Functional-determinant regularization baseline | A finite determinant or finite part is not automatically a countably additive universe probability |
-| `source:hartle-marolf-1997` — J. B. Hartle, D. Marolf, [*Comparing Formulations of Generalized Quantum Mechanics for Reparametrization-Invariant Systems*](https://doi.org/10.1103/PhysRevD.56.6247), `arXiv:gr-qc/9703021v1` | Frames induced products and alternative probability formulations for constraint systems | Does not choose the Phase 21 flux-sector prior or sheet kernel |
+| `source:hartle-marolf-1997` — J. B. Hartle, D. Marolf, [*Comparing Formulations of Generalized Quantum Mechanics for Reparametrization-Invariant Systems*](https://doi.org/10.1103/PhysRevD.56.6247), `arXiv:gr-qc/9703021v1` | Frames induced products and alternative probability formulations for Phase 21 and the Phase 23 current/product distinction | Does not choose the flux prior, sheet kernel, compact bridge, or physical state |
+| `source:marolf-1995` — D. Marolf, [*Refined Algebraic Quantization: Systems with a single constraint*](https://arxiv.org/abs/gr-qc/9508015), `arXiv:gr-qc/9508015v3` | Primary refined-algebraic-quantization and group-averaging framing for the Phase 23 distributional single-constraint rigging map | Does not derive the repository's concrete lapse regulators, compact bridge \(B_L\), positive-frequency choice, or cosmological density |
 | `source:bousso-polchinski-2000` — R. Bousso, J. Polchinski, [*Quantization of Four-form Fluxes and Dynamical Neutralization of the Cosmological Constant*](https://doi.org/10.1088/1126-6708/2000/06/006), `arXiv:hep-th/0004134v3` | Compact flux and charged-membrane framework cited by the kernel open problem | Does not derive the Phase 21 Gaussian kernel or a WDW probability distribution |
 | `source:bandos-et-al-2018` — I. Bandos et al., [*Three-forms, dualities and membranes in four-dimensional supergravity*](https://doi.org/10.1007/JHEP07(2018)028), `arXiv:1803.01405v2` | Compact three-form SUGRA and charged-membrane construction cited by the next gate | Does not calculate a cosmological nucleation rate, the toy determinant ratio, or inflationary selection |
 | `source:ojima-1981` — I. Ojima, [*Gauge Fields at Finite Temperatures—Thermo Field Dynamics and the KMS Condition and Their Extension to Gauge Theories*](https://doi.org/10.1016/0003-4916(81)90058-0), Ann. Phys. 137 (1981) 1–32 | Primary thermofield/KMS framing for the finite doubled purification | Does not identify the two factors with literal universes or supply a local-SUGRA seam state |
 | `source:israel-1976` — W. Israel, [*Thermo-field Dynamics of Black Holes*](https://doi.org/10.1016/0375-9601(76)90178-X), Phys. Lett. A 57 (1976) 107–110 | Primary doubled-purification example | Does not derive the Phase 22 graded phase, Pin lift, or cosmological state |
 | `source:buchholz-ojima-1997` — D. Buchholz, I. Ojima, [*Spontaneous Collapse of Supersymmetry*](https://arxiv.org/abs/hep-th/9701005), `arXiv:hep-th/9701005v3` | Thermal-SUSY obstruction used to separate Gibbs covariance from an unbroken vacuum claim | Does not invalidate the exact finite matrix algebra or construct the requested seam state |
 
-Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the thirty-five-item inventory exhausts the literature.
+Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the thirty-six-item inventory exhausts the literature.
 
 ## Claim-family coverage
 
@@ -80,6 +81,8 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 22 finite doubled purification | Ojima; Israel | Thermofield/KMS and doubled-purification framing only; the 31 exact checks remain repository evidence |
 | Phase 22 Gibbs covariance versus vacuum SUSY | Buchholz–Ojima | Prevents \([\rho,Q]=0\) from being promoted to an unbroken finite-temperature vacuum claim |
 | Phase 22 equal-source SK trace | Haehl–Loganayagam–Rangamani | Reused to distinguish elementary unitarity from the unconstructed SK ghost/BRST completion |
+| Phase 23 full-lapse rigging map | Marolf (1995) | `concept:distributional-rigging-map-versus-bounded-projector` cites the RAQ/group-averaging framework; the Abel/Gaussian regulators and seed calculation remain repository evidence |
+| Phase 23 induced product versus signed WDW current | Hartle–Marolf | Reused to frame the distinction between induced products and constraint-system probability formulations; it does not derive the compact bridge or select a state |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -99,7 +102,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other thirty-four graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–22 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other thirty-five graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–23 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -152,5 +155,15 @@ Phase 22 adds the finite-to-full density frontier:
 - a spacetime Clifford/Pin lift rather than the finite occupation-basis involution;
 - the coupled gauge-fixed gravitino–Goldstino–ghost boundary operator, Pfaffian phase, physical
   projector, positivity, and trace-class test.
+
+Phase 23 sharpens the constrained-density frontier without closing it:
+
+- replace the continuous spectral normal form and compact Dirichlet calibration by the actual closed
+  Starobinsky/Cecotti Wheeler–DeWitt operator and admissible lapse/complex-cap contour;
+- derive, rather than supply, the bridge \(B\), physical product, relative weights, and any preparation
+  parameter;
+- establish factor-ordering, constraint-rescaling, clock-patch, zero-mode-measure, and regulator
+  independence;
+- only then test the coupled local-SUGRA/BRST boundary operator and its positivity or trace class.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

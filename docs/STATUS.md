@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 53 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 54 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -340,18 +340,43 @@ executable returned exit 0 with **31 exact checks** and no floating-point fit.
 - In the unregulated noncompact free limit, \(Z_B\sim(\beta\omega)^{-1}\) and
   \(\langle x^2\rangle\sim(\beta\omega^2)^{-1}\). Thus the same Gaussian ansatz is not trace class at
   \(\omega=0\); this is not a no-go for compact or interacting inflaton minisuperspace.
-- The runnable catalog is now 53; the mapped reproduction ledger remains 14 cases.
+- At Phase 22 the runnable catalog rose to 53; the mapped reproduction ledger remained 14 cases.
 
 See
 [`../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md`](../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md)
 and
 [`../cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py`](../cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py).
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 23
+
+Phase 23 calibrates the homogeneous constrained-density step without calling it the full cosmological
+seam state. Its committed executable returned exit 0 with **32 exact checks and 4 numerical checks**.
+
+- The full-real-lapse Abel and Gaussian averages converge distributionally to \(\delta(C)\), while a
+  half-lapse integral is a resolvent and naive Euclidean evolution diverges on the negative spectrum of
+  the hyperbolic constraint.
+- For the compact control \(q\in(0,\pi)\), \(E_n=\sqrt{n^2+\mu^2}\), an explicit clock and
+  positive-frequency choice give a positive integrated physical norm. Local KG current is not a Born
+  density: an exact two-mode witness has \(j_T=-55/(768\pi)\) at one point while its integrated current
+  remains one.
+- Supplying \(B_L=e^{-L\sqrt h}\) after the constraint gives
+  \(\rho_+=Z_L^{-1}e^{-2L\sqrt h}\), a positive trace-class regulated density. The continuous seed and
+  compact bridge are separate calibrations; \(L\), the regulator, branch orientation, and toy pairing
+  are inputs rather than cap/CPT predictions.
+- At the quadratic \(E=0\) root the rigging integral diverges as \(1/\sqrt{2\epsilon}\) and the clock
+  Faddeev--Popov determinant vanishes. The massless decompactification limit also loses trace class.
+- The runnable catalog is now 54; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md`](../cpt_temporal_folded_susy/PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md)
+and
+[`../cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py`](../cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py).
+
 ## Research ontology memory
 
-Phase 15R–22 is now indexed in a repository-local typed research graph with **225 nodes and 442 directed
-relations**. It preserves 48 claims, 27 evidence groups, 21 explicit scopes, 28 open problems, 35
-literature sources, the Phase 16–22 exact and bounded numerical run payloads, and cautious bridges to
+Phase 15R–23 is now indexed in a repository-local typed research graph with **251 nodes and 511 directed
+relations**. It preserves 56 claims, 31 evidence groups, 24 explicit scopes, 29 open problems, 36
+literature sources, the Phase 16–23 exact and bounded numerical run payloads, and cautious bridges to
 the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)

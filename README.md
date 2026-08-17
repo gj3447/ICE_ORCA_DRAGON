@@ -4,7 +4,7 @@
 
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-53-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-54-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -145,6 +145,7 @@ aims to explain, not evidence that the route is correct.
 | [Phase 20](cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | The tested leading de Sitter/WDW envelopes do not select $\phi_0=5.442969\ldots$; it is target-shot initial data obtained after requiring 60 accelerated e-folds. | An exact two-sheet SUGRA WDW no-go or a unique curvature/reheating prediction. |
 | [Phase 21](cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | A normalized Gaussian identifies the decoupled-sheet baseline; $R-1$ and $\log R$ have distinct connectedness meanings. | An absolute universe/flux probability, physical sector prior, or derived joint $(n,\phi)$ peak. |
 | [Phase 22](cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md) | One positive-frequency SUSY oscillator admits a normalized positive two-sheet purification, fixed-mode SUSY algebra, and elementary SK normalization. | An unbroken SUSY vacuum or physical CPT/Pin SUGRA state: $[\rho,Q]=0$ but $\langle H\rangle>0$, and the unregulated noncompact free zero mode is not trace class. |
+| [Phase 23](cpt_temporal_folded_susy/PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md) | Full-real-lapse rigging, an explicit clock/frequency choice, and a supplied compact bridge produce a positive trace-class regulated density. | A cap-derived bridge, regulator-independent cosmological density, unique $\phi_0$, or local-SUGRA/Pin/BRST completion; zero signed current alone does not select a state. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -173,11 +174,11 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 53 | `./ice list --json` |
+| runnable Python kernels | 54 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 225 nodes, 442 edges, 48 claims | `./ice ontology summary` |
-| latest runnable CPT seam phase | Phase 22 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| research ontology | 251 nodes, 511 edges, 56 claims | `./ice ontology summary` |
+| latest runnable CPT seam phase | Phase 23 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.
@@ -247,6 +248,7 @@ Use a name returned by `./ice list` rather than depending on a physical path:
 ./ice run phase20_two_sheet_wdw_selection
 ./ice run phase21_connected_seam_gaussian
 ./ice run phase22_finite_mode_seam_density
+./ice run phase23_homogeneous_minisuperspace_density
 ```
 
 Direct runs may update an adjacent result file. Inspect `git status` afterward. Use `./ice repro` for a

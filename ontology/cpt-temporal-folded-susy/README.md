@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T04:48:31Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T05:45:44Z`; 251 nodes, 511 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 29/29 stored hashes (27 artifacts and 2 policies).
 
 ## Quick answers
 
@@ -29,7 +29,17 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Gaussian normalization automatically give the physical flux probability? | No. It fixes the no-seam baseline at one. A chosen exclusion gives \(R-1\), while \(\log R\) is connected; the physical sector measure and decoherence rule remain open. | `claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION`; `claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR`; `claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY` |
 | Does a positive finite-mode seam density exist? | Yes for one free SUSY oscillator with \(\omega,\beta>0\). The exact purification is normalized and positive, its reduced Gibbs density commutes with the fixed-mode charges, and it passes the equal-source SK trace identity. This is not an unbroken thermal vacuum or a 4D Pin/SUGRA state. | `claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE`; `claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES`; `claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION` |
 | Does the same free Gaussian normalize the homogeneous mode? | No in the noncompact \(L^2(\mathbb R)\), \(\omega\to0^+\) limit: the bosonic partition and covariance diverge while the stiffness vanishes. Compact or interacting constrained inflaton modes are not decided. | `claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope; Phase 21 identifies a normalized Gaussian baseline; Phase 22 adds a finite-mode density witness and a scoped zero-mode obstruction. | Phase 16–22 scope guards |
+| Does the Phase 23 constraint alone determine a physical cosmological seam density? | No. Full-lapse averaging gives a distributional rigging map, an explicit clock and frequency orientation give a positive integrated norm, and only a separately supplied compact bridge gives the regulated trace-class density. CPT-like reality and zero signed current do not select its weights; the quadratic zero root is singular and the massless decompactification limit is not trace class. | `claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP`; `claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM`; `claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY`; `claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY`; `claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope; Phase 21 identifies a normalized Gaussian baseline; Phase 22 adds a finite-mode density witness and a scoped zero-mode obstruction; Phase 23 adds a constrained toy rigging/density control while leaving the cosmological cap-derived density open. | Phase 16–23 scope guards |
+
+### Phase 23 reading path
+
+The graph's `reading-path:minisuperspace-rigging-to-density` should be read in this order:
+
+1. `concept:distributional-rigging-map-versus-bounded-projector` leads to `claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP` and `claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR`.
+2. `concept:induced-product-versus-signed-wdw-current` leads to `claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM` and `claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE`.
+3. `concept:constraint-rigging-versus-state-preparation-bridge` separates imposing the constraint from supplying spectral weights; follow `claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY` and `claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY`.
+4. `claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT` and `claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE` lead to `open:p23-cap-derived-regulator-independent-density`, while `open:p22-gauge-fixed-local-sugra-seam-density` remains the later local-SUGRA gate.
 
 ## Concept map
 
@@ -113,6 +123,17 @@ flowchart TD
   P22 --> Zero22["Free noncompact zero mode is trace class<br/>CONTRADICTED"]
   Dens22 --> Full22["OPEN: homogeneous WDW density · local-SUGRA kernel"]
   Zero22 --> Full22
+
+  Programme --> P23["Phase 23 · constrained minisuperspace density control"]
+  P23 --> Rig23["Full-lapse distributional rigging map<br/>SUPPORTED"]
+  P23 --> Cur23["Positive-frequency local current is pointwise positive<br/>CONTRADICTED"]
+  P23 --> Dens23["Supplied compact bridge gives trace-class density<br/>SUPPORTED"]
+  P23 --> Sel23["CPT-like reality + zero current select weights<br/>CONTRADICTED"]
+  P23 --> Zero23["Quadratic zero root has regular intrinsic clock<br/>CONTRADICTED"]
+  P23 --> Dec23["Trace class survives massless decompactification<br/>CONTRADICTED"]
+  Rig23 --> Gate23["OPEN: cap-derived regulator-independent density"]
+  Dens23 --> Gate23
+  Zero23 --> Gate23
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -131,6 +152,15 @@ correlation, and equal-source SK trace identity are exact. Finite temperature ha
 is not an unbroken positive-Hamiltonian SUSY vacuum; the toy involution is not a spacetime Pin lift. The
 same noncompact free ansatz fails at \(\omega=0\), leaving the constrained homogeneous WDW and
 gravitino–Goldstino–ghost completions open.
+
+Phase 23 moves one step into a constrained KG-type minisuperspace normal form. Full-real-lapse averaging
+defines a distributional rigging map, not a bounded kinematical projector, and a chosen clock/frequency
+orientation gives a positive integrated norm even though an exact two-mode local current becomes negative.
+A separate supplied bridge \(B_L=e^{-L\sqrt h}\) yields a positive trace-class density only at the compact
+regulator. Group averaging does not derive \(L\) or the weights, CPT-like reality plus zero signed current
+does not select them uniquely, the quadratic \(E=0\) root is singular, and the massless box loses trace
+class as it is decompactified. The continuous seed calibration and compact density calibration remain
+separate; neither is the closed Starobinsky/Cecotti cap or a local-SUGRA/BRST seam state.
 
 ## Core distinctions
 
@@ -161,6 +191,11 @@ gravitino–Goldstino–ghost completions open.
 | Occupation-space real structure vs Pin lift | The graded anti-linear toy involution fixes the displayed finite state, but omits spacetime Clifford reflection, spin structure, reflection square, and local-SUGRA gluing. |
 | DtN amplitude vs density covariance | If the Euclidean amplitude is \(e^{-q^TKq/2}\), the probability density has covariance \((2K)^{-1}\), not \(K^{-1}\). |
 | Free noncompact zero mode vs inflaton minisuperspace | Divergence of the \(L^2(\mathbb R)\) free oscillator limit does not decide a compact mode or an interacting constrained \((a,\phi)\) wavefunction. |
+| Distributional rigging map vs bounded projector | The full-real-lapse delta sequence imposes one constraint distributionally; its divergent supremum prevents treating it as an ordinary bounded kinematical projector or density matrix. |
+| Induced norm vs signed local WDW current | A branch/clock choice can give a positive integrated physical norm while the conserved local Klein–Gordon current remains pointwise sign-indefinite. |
+| Constraint rigging vs state-preparation bridge | Group averaging places data on the constraint shell. The separately supplied \(B_L=e^{-L\sqrt h}\) fixes relative weights; the first operation does not derive the second. |
+| Compact trace class vs continuum limit | The supplied density is trace class on the compact spectrum for \(L>0\), but the massless box partition grows as \(R/(2L)\) under decompactification. |
+| Quadratic zero root vs regular clock gauge | At \(E=0\), the quadratic shell root is double, the regulated integral diverges, and the intrinsic-clock Faddeev–Popov determinant vanishes. Linearizing the constraint preselects an orientation. |
 
 ## IDs and claim states
 
@@ -235,6 +270,9 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p21-single-flux-tail-toy` | One integer flux, two explicit kernel scalings, tail and prior comparisons | Derived sector measure, joint \((n,\phi)\), membrane rate, inflationary selection |
 | `scope:p22-positive-frequency-finite-mode-density` | One free SUSY oscillator, \(\omega,\beta>0\), explicit doubled purification and finite trace functional | Infinite-mode UV product, 4D Pin, BRST, WDW measure, observables |
 | `scope:p22-noncompact-zero-mode-limit` | Fixed \(\beta>0\), \(\omega\to0^+\) in the original noncompact \(L^2(\mathbb R)\) oscillator representation | Compact regulators and interacting/gravitational inflaton minisuperspace |
+| `scope:p23-single-constraint-rigging-and-current` | One 1+1-dimensional KG-type constraint, full-real-lapse regulators, compact Dirichlet normal form, explicit \(T\)-clock branch, and integrated/local currents | Actual closed Starobinsky/Cecotti WDW operator, contour, ordering/clock independence, Born measure, Pin or local-SUGRA/BRST sectors |
+| `scope:p23-supplied-bridge-compact-density` | Compact positive-frequency spectrum with supplied \(L>0\), \(B_L=e^{-L\sqrt h}\), two constrained copies, and a toy anti-linear pairing | Derivation of \(L\) or \(B_L\), unique CPT/Pin selection, regulator independence, cosmological parameter selection, and fermion/ghost sectors |
+| `scope:p23-zero-root-and-decompactification` | Abel-regulated quadratic \(E=0\) root, intrinsic-clock determinant, oriented linear comparison, and massless box at \(R\to\infty\) | A universal no-go, proof that \(\phi_0\) is gauge, or an actual saddle zero-mode/Jacobian/modulus measure |
 
 ## Open construction ledger
 
@@ -270,8 +308,9 @@ All entries below have state `OPEN` in the graph.
 | `open:p21-physical-flux-measure` | Physical sector measure and WDW current/inner product or decoherence functional yielding a finite joint \((n,\phi)\) distribution |
 | `open:p22-homogeneous-minisuperspace-density` | Constrained complex-cap homogeneous density with zero-mode measure, collective-coordinate Jacobian, and physical WDW current |
 | `open:p22-gauge-fixed-local-sugra-seam-density` | Coupled gravitino–Goldstino–ghost boundary operator, physical projector, positivity, and trace-class test |
+| `open:p23-cap-derived-regulator-independent-density` | Replace the normal form and supplied \(B_L\) by the actual closed Starobinsky/Cecotti constraint, contour, physical product, ordering, clock patches, and zero-mode measure; test regulator-independent positivity |
 
-The shortest honest statement of the research frontier is therefore: **finite doubled, Gaussian, and positive-frequency density witnesses plus conditional closed backgrounds exist; the leading WDW envelope does not select \(5.44\), the normalized Gaussian does not supply a universe probability, and the free noncompact zero mode is not trace class. Neither an exact predictive background-selection rule nor a full projected local-SUGRA seam density with persistent spectral breaking exists yet.**
+The shortest honest statement of the research frontier is therefore: **finite doubled, Gaussian, and positive-frequency density witnesses plus conditional closed backgrounds exist; full-lapse averaging gives a distributional constraint map, and a separately supplied compact bridge gives a positive trace-class toy density. The constraint does not select its weights, the local current is not a Born density, and zero-root or continuum limits remain obstructed. Neither a cap-derived regulator-independent background-selection density nor a full projected local-SUGRA seam density with persistent spectral breaking exists yet.**
 
 ## Repository artifacts
 
@@ -285,6 +324,7 @@ The shortest honest statement of the research frontier is therefore: **finite do
 | 20 | [`phase20_two_sheet_wdw_selection.py`](../../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py) | [`PHASE20_TWO_SHEET_WDW_SELECTION.md`](../../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | [`phase20-result.json`](./evidence/phase20-result.json) |
 | 21 | [`phase21_connected_seam_gaussian.py`](../../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py) | [`PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | [`phase21-result.json`](./evidence/phase21-result.json) |
 | 22 | [`phase22_finite_mode_seam_density.py`](../../cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py) | [`PHASE22_FINITE_MODE_SEAM_DENSITY.md`](../../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md) | [`phase22-result.json`](./evidence/phase22-result.json) |
+| 23 | [`phase23_homogeneous_minisuperspace_density.py`](../../cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py) | [`PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md`](../../cpt_temporal_folded_susy/PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md) | [`phase23-result.json`](./evidence/phase23-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

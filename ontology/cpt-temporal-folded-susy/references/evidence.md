@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), [`phase21-result.json`](../evidence/phase21-result.json), and [`phase22-result.json`](../evidence/phase22-result.json).
+Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), [`phase21-result.json`](../evidence/phase21-result.json), [`phase22-result.json`](../evidence/phase22-result.json), and [`phase23-result.json`](../evidence/phase23-result.json).
 
 ## Reading `PASS` correctly
 
-All 194 Phase 16–22 named exact checks have `status: PASS`. The snapshots also record 52 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, and 7 Phase 21 flux-tail/prior controls. Phase 22 adds 31 exact checks and no numerical fit. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
+All 226 Phase 16–23 named exact checks have `status: PASS`. The snapshots also record 56 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, 7 Phase 21 flux-tail/prior controls, and 4 Phase 23 normalization, convergence, spectrum, and current controls. Phase 22 contributes 31 exact checks and no numerical fit; Phase 23 contributes 32 exact and 4 numerical checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
 
 The scientific direction is stored on:
 
@@ -27,6 +27,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 20 | `result:P20_TWO_SHEET_WDW_SELECTION_20260816`; `2026-08-16T17:28:20Z` | `cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py`; SHA-256 `a55ebfca78f07246679fd5fa8791537a0efe1d3370dfa53d8d6410ffc6a95807`; introduced in `c5395bc095399ca450adf555d8d24e21a9166725` | Exit `0`; 18 exact checks plus 14 numerical checks |
 | 21 | `result:P21_CONNECTED_SEAM_GAUSSIAN_20260816`; `2026-08-16T18:11:47Z` | `cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py`; SHA-256 `6ac7b2b36da9aa2eeda4c83494427c5d9f006bb9031d6b55d6678bf2ffc5b005`; introduced in `44e2865cc850bf7fef0c4ccebde788ca703ab8d8` | Exit `0`; 27 exact checks plus 7 numerical checks |
 | 22 | `result:P22_FINITE_MODE_SEAM_DENSITY_20260817`; `2026-08-17T04:48:31Z` | `cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py`; SHA-256 `0a4da3c60bbd2231892938cb8a74f45bd3e491d9884df4adcc86051053d58dbe`; introduced in `d1befe783386f499818c3b902c90e5a9740e7fb4` | Exit `0`; 31 exact checks, 0 numerical checks |
+| 23 | `result:P23_HOMOGENEOUS_MINISUPERSPACE_DENSITY_20260817`; `2026-08-17T05:45:44Z` | `cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py`; SHA-256 `62408abeeec2eb11f104d984c84ffde5c2d6f287e7f07a4021ee6fb3ec202ffd`; introduced in `634d984e25422063a66a497963380fc24ad9f9d2` | Exit `0`; 32 exact checks plus 4 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -61,6 +62,10 @@ The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`]
 | `evidence:p22-graded-real-structure` | 5 exact | Graded anti-linear toy involution — `SUPPORTS` | Occupation-basis real structure only; no spacetime Clifford/Pin lift |
 | `evidence:p22-bridge-and-sk` | 6 exact | Density/DtN factor two — `SUPPORTS`; equal-source SK normalization — `SUPPORTS` | Finite density covariance and unitarity; no SK ghost/BRST completion |
 | `evidence:p22-zero-mode-obstruction` | 4 exact | Free noncompact zero mode has a trace-class TFD limit — `CONTRADICTS` | Fixed \(\beta>0\), \(\omega\to0^+\) in noncompact \(L^2(\mathbb R)\); compact/interacting constrained modes excluded |
+| `evidence:p23-rigging-and-lapse` | 10 exact + 1 numerical | Full real lapse gives a distributional rigging map — `SUPPORTS`; it is a bounded kinematical projector — `CONTRADICTS` | Continuous single-constraint spectral calibration; half lapse is a resolvent, not the full rigging delta; Marolf frames RAQ |
+| `evidence:p23-shell-and-current` | 10 exact + 1 numerical | Explicit clock/frequency gives positive integrated norm — `SUPPORTS`; positive-frequency local current is pointwise positive — `CONTRADICTS`; CPT-like reality plus zero signed current uniquely selects a density — `CONTRADICTS` | Compact KG-type shell/current control; induced product and signed local current remain distinct |
+| `evidence:p23-trace-class-density` | 8 exact + 2 numerical | Imposed bridge gives a positive trace-class regulated density — `SUPPORTS`; unique selection from zero current — `CONTRADICTS` | Separate compact calibration with supplied \(L>0\), \(B_L\), branch orientation, and toy pairing; not cap-derived |
+| `evidence:p23-zero-root-and-regulator` | 4 exact | Trace class survives massless decompactification — `CONTRADICTS`; quadratic zero root has a regular intrinsic clock — `CONTRADICTS` | Explicit double-root and massless-box obstruction models; not a universal homogeneous-density no-go |
 
 ## Phase 16 check ledger
 
@@ -467,6 +472,81 @@ The payload records `P22.guard.free_noncompact_zero_mode_trace_class` with
 mode or the interacting constrained \((a,\phi)\) sector requires a separate physical measure and
 zero-mode treatment.
 
+## Phase 23 check ledger
+
+### Full-lapse rigging and seed calibration — 10 exact plus 1 numerical check
+
+- `P23.rigging.full_real_lapse_abel_kernel`
+- `P23.rigging.abel_delta_normalization`
+- `P23.rigging.full_real_lapse_gaussian_kernel`
+- `P23.rigging.kinematical_gaussian_norm`
+- `P23.rigging.regulated_seed_norm`
+- `P23.rigging.normalized_shell_profile`
+- `P23.rigging.not_a_bounded_kinematical_projector`
+- `P23.rigging.half_lapse_is_resolvent`
+- `P23.rigging.half_lapse_is_not_projector_kernel`
+- `P23.rigging.naive_euclidean_lapse_mutant_diverges`
+- `P23.numeric.regulated_seed_norm`
+
+The full real lapse gives normalized Abel and Gaussian delta sequences for one constraint. The Gaussian
+seed is normalized before rigging and reduces to its chosen normalized shell profile after division by
+the square root of the rigging norm. This continuous spectral calibration is distributional: the kernel
+supremum diverges, the positive half-lapse transform is a resolvent, and a naive Euclidean exponential
+diverges on the negative spectrum. It is separate from the compact density calibration below.
+
+### Shell, branch, and current control — 10 exact plus 1 numerical check
+
+- `P23.constraint.dirichlet_spectrum`
+- `P23.constraint.frequency_roots`
+- `P23.constraint.delta_shell_jacobian`
+- `P23.constraint.clock_gauge_FP_cancellation`
+- `P23.WDW.frequency_modes_solve_constraint`
+- `P23.current.integrated_frequency_signs`
+- `P23.current.induced_sum_vs_signed_difference`
+- `P23.current.two_mode_continuity`
+- `P23.current.integrated_density_equals_trace`
+- `P23.current.local_density_not_pointwise_positive`
+- `P23.numeric.current_slice_conservation`
+
+For the compact Dirichlet normal form, the two simple roots have opposite integrated Klein–Gordon signs.
+Choosing the \(T\)-clock and one frequency orientation supplies a positive integrated norm; the quadratic
+constraint alone does not. An equal-weight relative-phase family has unit induced norm and zero signed
+current, with orthogonal real witnesses, so zero current does not select a unique state. Separately, the
+positive-frequency two-mode state has conserved unit integrated current but the exact local value
+\(-55/(768\pi)\), so the local current is not a pointwise Born probability.
+
+### Supplied compact bridge and density — 8 exact plus 2 numerical checks
+
+- `P23.density.spectral_comparison_gap`
+- `P23.density.trace_class_geometric_bound`
+- `P23.density.truncated_purification`
+- `P23.density.partial_trace_positive`
+- `P23.density.spectral_stationarity`
+- `P23.density.bridge_weight_ratio`
+- `P23.theta.toy_pairing`
+- `P23.selection.preparation_length_remains_input`
+- `P23.numeric.trace_sum_convergence`
+- `P23.numeric.two_mode_density_spectrum`
+
+With supplied \(L>0\), \(B_L=e^{-L\sqrt h}\), and two outward-positive constrained copies, comparison
+with a geometric series proves the infinite compact spectral sum is trace class. The finite matrix checks
+verify purification, reduction, positivity, and the toy anti-linear pairing; the numerical sum gives
+\(Z_L=0.072625937359366\) at \(\mu=L=1\). Neither group averaging nor CPT-like pairing derives \(L\),
+the compact regulator, or the relative weights.
+
+### Zero root and decompactification — 4 exact checks
+
+- `P23.zero_root.quadratic_root_divergence`
+- `P23.zero_root.clock_FP_vanishes`
+- `P23.zero_root.linear_constraint_control`
+- `P23.regulator.decompactification_not_trace_class`
+
+At the quadratic \(E=0\) root, the regulated shell integral diverges as \(1/\sqrt{2\epsilon}\) and the
+intrinsic-clock determinant vanishes. A linear constraint removes that double root only by choosing an
+orientation. In the separate massless box, \(Z_R\sim R/(2L)\), so the compact trace-class result has no
+trace-class decompactification limit in this control. These witnesses do not prove that the Starobinsky
+homogeneous mode is gauge or rule out compact/interacting constrained models.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -479,6 +559,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py
 uv run --locked python3 cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py
 uv run --locked python3 cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py
 uv run --locked python3 cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py
+uv run --locked python3 cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -577,5 +658,25 @@ claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT
   → VALID_WITHIN → scope:p22-noncompact-zero-mode-limit
   → MOTIVATES → open:p22-homogeneous-minisuperspace-density
 ```
+
+Phase 23's supplied positive density and selection obstruction are:
+
+```text
+claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p23-trace-class-density
+  → DEFINED_IN → artifact:p23-script
+  → RECORDED_IN → artifact:p23-evidence-snapshot
+  → VALID_WITHIN → scope:p23-supplied-bridge-compact-density
+  → MOTIVATES → open:p23-cap-derived-regulator-independent-density
+
+claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY
+  ├─ HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:p23-shell-and-current
+  ├─ HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:p23-trace-class-density
+  └─ VALID_WITHIN → scope:p23-supplied-bridge-compact-density
+```
+
+The first trace proves only a supplied compact regulated density. The full-lapse rigging map does not
+derive \(B_L\), and neither trace is a cap-derived cosmological Born measure or local-SUGRA/BRST state.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

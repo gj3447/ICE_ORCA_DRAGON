@@ -1,0 +1,557 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P23_HOMOGENEOUS_MINISUPERSPACE_DENSITY_20260817",
+  "phase": "P23",
+  "observed_at_utc": "2026-08-17T05:45:44Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py",
+    "sha256": "62408abeeec2eb11f104d984c84ffde5c2d6f287e7f07a4021ee6fb3ec202ffd",
+    "introduced_in_commit": "634d984e25422063a66a497963380fc24ad9f9d2"
+  },
+  "exact_checks": 32,
+  "checks": [
+    {
+      "id": "P23.rigging.full_real_lapse_abel_kernel",
+      "statement": "full real lapse with exp(-epsilon|N|) gives epsilon/[pi(C^2+epsilon^2)]",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.abel_delta_normalization",
+      "statement": "the Abel rigging kernel has unit spectral integral",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.full_real_lapse_gaussian_kernel",
+      "statement": "Gaussian-damped full lapse gives exp(-C^2/epsilon^2)/(sqrt(pi)epsilon)",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.kinematical_gaussian_norm",
+      "statement": "the factorized kinematical Gaussian seed has auxiliary L2 norm one",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.regulated_seed_norm",
+      "statement": "the regulated rigging norm is 1/[sqrt(pi)sqrt(lambda^2+epsilon^2)]",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.normalized_shell_profile",
+      "statement": "after rigging normalization the on-shell seed reduces to the chosen physical profile",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.not_a_bounded_kinematical_projector",
+      "statement": "the approximate delta has divergent operator supremum and is not an ordinary bounded projector",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.half_lapse_is_resolvent",
+      "statement": "the positive half-lapse integral is a resolvent Green function",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.half_lapse_is_not_projector_kernel",
+      "statement": "the half-lapse kernel is not even in C and therefore is not the full rigging delta",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.rigging.naive_euclidean_lapse_mutant_diverges",
+      "statement": "exp(-sC) diverges on the negative spectrum of a hyperbolic constraint",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.constraint.dirichlet_spectrum",
+      "statement": "on q in (0,pi), h=-d_q^2+mu^2 has E_n^2=n^2+mu^2",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.constraint.frequency_roots",
+      "statement": "the quadratic constraint has positive and negative simple roots",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.constraint.delta_shell_jacobian",
+      "statement": "delta(C) gives 1/(2E_n) on each simple root",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.constraint.clock_gauge_FP_cancellation",
+      "statement": "the T=tau clock-gauge determinant 2E_n cancels the shell Jacobian",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.WDW.frequency_modes_solve_constraint",
+      "statement": "both normalized frequency modes solve the regulated KG-type WDW equation",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.current.integrated_frequency_signs",
+      "statement": "the integrated KG current is +1 on the chosen branch and -1 on its conjugate",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.current.induced_sum_vs_signed_difference",
+      "statement": "a nontrivial equal-weight phase family has unit induced norm while its signed KG current cancels",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.current.two_mode_continuity",
+      "statement": "the two-mode positive-frequency current obeys d_T j_T-d_q j_q=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.current.integrated_density_equals_trace",
+      "statement": "the integrated physical current equals the unit trace of the two-mode density",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.current.local_density_not_pointwise_positive",
+      "statement": "a positive-frequency superposition has j_T=-55/(768pi) at the recorded point",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.density.spectral_comparison_gap",
+      "statement": "E_n>n for mu>0, so exp(-2LE_n) is bounded by exp(-2Ln)",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.density.trace_class_geometric_bound",
+      "statement": "Tr exp(-2L sqrt(h)) converges by comparison with 1/(exp(2L)-1)",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.density.truncated_purification",
+      "statement": "the three-level spectral truncation is a normalized pure two-sheet purification",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.density.partial_trace_positive",
+      "statement": "the reduced spectral density is positive, finite rank, and unit trace",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.density.spectral_stationarity",
+      "statement": "the reduced density commutes with A=sqrt(h) in the regulated spectral basis",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.density.bridge_weight_ratio",
+      "statement": "B_L=exp(-L sqrt(h)) fixes the two-level ratio once L and h are supplied",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.theta.toy_pairing",
+      "statement": "the regulated spectral state is invariant under the toy parity-sheet anti-linear pairing",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.selection.preparation_length_remains_input",
+      "statement": "the physical weights vary continuously with the supplied preparation length L",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.zero_root.quadratic_root_divergence",
+      "statement": "at E=0 the quadratic-root rigging integral diverges as 1/sqrt(2epsilon)",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.zero_root.clock_FP_vanishes",
+      "statement": "the intrinsic T-clock Faddeev--Popov determinant vanishes at the double root",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.zero_root.linear_constraint_control",
+      "statement": "a linear p_T-A constraint has a simple unit Jacobian but preselects time orientation",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.regulator.decompactification_not_trace_class",
+      "statement": "the massless box partition diverges as R/(2L) in the decompactification limit",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 4,
+  "numerical": [
+    {
+      "id": "P23.numeric.regulated_seed_norm",
+      "statement": "Gaussian rigging norm matches the exact value; relative error=1.110e-16",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.numeric.trace_sum_convergence",
+      "statement": "mu=L=1 spectral sums converge to 0.072625937359366; max recorded increment=1.874e-15",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.numeric.two_mode_density_spectrum",
+      "statement": "two-mode pure density eigenvalues are [-5.551115123125783e-17, 1.0] and trace is one",
+      "status": "PASS"
+    },
+    {
+      "id": "P23.numeric.current_slice_conservation",
+      "statement": "integrated current stays one on four time slices; max error=2.220e-16",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "constrained minisuperspace rigging-map density control",
+    "claim_status": {
+      "CPT_reality_and_zero_signed_current_uniquely_select_a_density": "CONTRADICTED_IN_THIS_CONTROL",
+      "after_explicit_clock_and_positive_frequency_choice_the_integrated_norm_is_positive": "SUPPORTED_IN_REGULATED_KG_CONTROL",
+      "closed_Starobinsky_complex_cap_derives_L_and_the_density": "OPEN_NOT_COMPUTED",
+      "full_real_lapse_average_defines_a_distributional_rigging_map": "SUPPORTED_IN_SINGLE_CONSTRAINT_CONTROL",
+      "gauge_fixed_local_SUGRA_BRST_seam_density_exists": "OPEN_NOT_COMPUTED",
+      "imposed_B_L_defines_a_positive_trace_class_regulated_density": "SUPPORTED_AT_FINITE_COMPACT_REGULATOR",
+      "positive_frequency_local_current_is_pointwise_positive": "CONTRADICTED_BY_EXACT_TWO_MODE_WITNESS",
+      "regulated_density_has_a_trace_class_decompactification_limit": "CONTRADICTED_IN_MASSLESS_BOX_CONTROL"
+    },
+    "exact_check_ids": [
+      "P23.rigging.full_real_lapse_abel_kernel",
+      "P23.rigging.abel_delta_normalization",
+      "P23.rigging.full_real_lapse_gaussian_kernel",
+      "P23.rigging.kinematical_gaussian_norm",
+      "P23.rigging.regulated_seed_norm",
+      "P23.rigging.normalized_shell_profile",
+      "P23.rigging.not_a_bounded_kinematical_projector",
+      "P23.rigging.half_lapse_is_resolvent",
+      "P23.rigging.half_lapse_is_not_projector_kernel",
+      "P23.rigging.naive_euclidean_lapse_mutant_diverges",
+      "P23.constraint.dirichlet_spectrum",
+      "P23.constraint.frequency_roots",
+      "P23.constraint.delta_shell_jacobian",
+      "P23.constraint.clock_gauge_FP_cancellation",
+      "P23.WDW.frequency_modes_solve_constraint",
+      "P23.current.integrated_frequency_signs",
+      "P23.current.induced_sum_vs_signed_difference",
+      "P23.current.two_mode_continuity",
+      "P23.current.integrated_density_equals_trace",
+      "P23.current.local_density_not_pointwise_positive",
+      "P23.density.spectral_comparison_gap",
+      "P23.density.trace_class_geometric_bound",
+      "P23.density.truncated_purification",
+      "P23.density.partial_trace_positive",
+      "P23.density.spectral_stationarity",
+      "P23.density.bridge_weight_ratio",
+      "P23.theta.toy_pairing",
+      "P23.selection.preparation_length_remains_input",
+      "P23.zero_root.quadratic_root_divergence",
+      "P23.zero_root.clock_FP_vanishes",
+      "P23.zero_root.linear_constraint_control",
+      "P23.regulator.decompactification_not_trace_class"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P23.rigging.full_real_lapse_abel_kernel",
+        "statement": "full real lapse with exp(-epsilon|N|) gives epsilon/[pi(C^2+epsilon^2)]",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.abel_delta_normalization",
+        "statement": "the Abel rigging kernel has unit spectral integral",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.full_real_lapse_gaussian_kernel",
+        "statement": "Gaussian-damped full lapse gives exp(-C^2/epsilon^2)/(sqrt(pi)epsilon)",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.kinematical_gaussian_norm",
+        "statement": "the factorized kinematical Gaussian seed has auxiliary L2 norm one",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.regulated_seed_norm",
+        "statement": "the regulated rigging norm is 1/[sqrt(pi)sqrt(lambda^2+epsilon^2)]",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.normalized_shell_profile",
+        "statement": "after rigging normalization the on-shell seed reduces to the chosen physical profile",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.not_a_bounded_kinematical_projector",
+        "statement": "the approximate delta has divergent operator supremum and is not an ordinary bounded projector",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.half_lapse_is_resolvent",
+        "statement": "the positive half-lapse integral is a resolvent Green function",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.half_lapse_is_not_projector_kernel",
+        "statement": "the half-lapse kernel is not even in C and therefore is not the full rigging delta",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.rigging.naive_euclidean_lapse_mutant_diverges",
+        "statement": "exp(-sC) diverges on the negative spectrum of a hyperbolic constraint",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.constraint.dirichlet_spectrum",
+        "statement": "on q in (0,pi), h=-d_q^2+mu^2 has E_n^2=n^2+mu^2",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.constraint.frequency_roots",
+        "statement": "the quadratic constraint has positive and negative simple roots",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.constraint.delta_shell_jacobian",
+        "statement": "delta(C) gives 1/(2E_n) on each simple root",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.constraint.clock_gauge_FP_cancellation",
+        "statement": "the T=tau clock-gauge determinant 2E_n cancels the shell Jacobian",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.WDW.frequency_modes_solve_constraint",
+        "statement": "both normalized frequency modes solve the regulated KG-type WDW equation",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.current.integrated_frequency_signs",
+        "statement": "the integrated KG current is +1 on the chosen branch and -1 on its conjugate",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.current.induced_sum_vs_signed_difference",
+        "statement": "a nontrivial equal-weight phase family has unit induced norm while its signed KG current cancels",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.current.two_mode_continuity",
+        "statement": "the two-mode positive-frequency current obeys d_T j_T-d_q j_q=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.current.integrated_density_equals_trace",
+        "statement": "the integrated physical current equals the unit trace of the two-mode density",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.current.local_density_not_pointwise_positive",
+        "statement": "a positive-frequency superposition has j_T=-55/(768pi) at the recorded point",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.density.spectral_comparison_gap",
+        "statement": "E_n>n for mu>0, so exp(-2LE_n) is bounded by exp(-2Ln)",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.density.trace_class_geometric_bound",
+        "statement": "Tr exp(-2L sqrt(h)) converges by comparison with 1/(exp(2L)-1)",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.density.truncated_purification",
+        "statement": "the three-level spectral truncation is a normalized pure two-sheet purification",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.density.partial_trace_positive",
+        "statement": "the reduced spectral density is positive, finite rank, and unit trace",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.density.spectral_stationarity",
+        "statement": "the reduced density commutes with A=sqrt(h) in the regulated spectral basis",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.density.bridge_weight_ratio",
+        "statement": "B_L=exp(-L sqrt(h)) fixes the two-level ratio once L and h are supplied",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.theta.toy_pairing",
+        "statement": "the regulated spectral state is invariant under the toy parity-sheet anti-linear pairing",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.selection.preparation_length_remains_input",
+        "statement": "the physical weights vary continuously with the supplied preparation length L",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.zero_root.quadratic_root_divergence",
+        "statement": "at E=0 the quadratic-root rigging integral diverges as 1/sqrt(2epsilon)",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.zero_root.clock_FP_vanishes",
+        "statement": "the intrinsic T-clock Faddeev--Popov determinant vanishes at the double root",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.zero_root.linear_constraint_control",
+        "statement": "a linear p_T-A constraint has a simple unit Jacobian but preselects time orientation",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.regulator.decompactification_not_trace_class",
+        "statement": "the massless box partition diverges as R/(2L) in the decompactification limit",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 32,
+    "mass_shell_and_current": {
+      "constraint": "C=p_T^2-E_n^2",
+      "physical_branch": "explicit positive-frequency and T-clock orientation",
+      "regulator": "q in (0,pi) with Dirichlet modes sqrt(2/pi)sin(nq)",
+      "spectrum": "E_n=sqrt(n^2+mu^2), n>=1",
+      "two_mode_current": {
+        "integrated_current": "1",
+        "negative_local_value": "-55/(768pi)",
+        "state": "[sin(q)e^-iT+sin(2q)e^-2iT]/sqrt(3pi)"
+      },
+      "warning": "the integrated branch inner product is positive; the local current density need not be pointwise positive"
+    },
+    "next_calculation": {
+      "homogeneous_sector": "replace the compact normal form and supplied L by the actual closed Starobinsky complex-cap constraint, extrinsic/two-patch clock or deparametrization-free RAQ, factor ordering, primed determinant, collective-coordinate Jacobian, and physical current",
+      "local_sugra_sector": "only after that, derive the coupled gauge-fixed gravitino-Goldstino-ghost boundary operator and test the projected density"
+    },
+    "numerical_check_ids": [
+      "P23.numeric.regulated_seed_norm",
+      "P23.numeric.trace_sum_convergence",
+      "P23.numeric.two_mode_density_spectrum",
+      "P23.numeric.current_slice_conservation"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P23.numeric.regulated_seed_norm",
+        "statement": "Gaussian rigging norm matches the exact value; relative error=1.110e-16",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.numeric.trace_sum_convergence",
+        "statement": "mu=L=1 spectral sums converge to 0.072625937359366; max recorded increment=1.874e-15",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.numeric.two_mode_density_spectrum",
+        "statement": "two-mode pure density eigenvalues are [-5.551115123125783e-17, 1.0] and trace is one",
+        "status": "PASS"
+      },
+      {
+        "id": "P23.numeric.current_slice_conservation",
+        "statement": "integrated current stays one on four time slices; max error=2.220e-16",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 4,
+    "numerical_controls": {
+      "current_max_slice_error": 2.220446049250313e-16,
+      "density_eigenvalues": [
+        -5.551115123125783e-17,
+        1
+      ],
+      "rigging_seed": {
+        "epsilon": 0.02,
+        "lambda": 0.7,
+        "relative_error": 1.1102230246251565e-16
+      },
+      "trace_sum": {
+        "L": 1,
+        "Z_16": 0.07262593735936461,
+        "Z_256": 0.07262593735936648,
+        "Z_64": 0.07262593735936648,
+        "max_increment": 1.8735013540549517e-15,
+        "mu": 1
+      }
+    },
+    "obstruction_guards": [
+      {
+        "id": "P23.guard.rigging_map_is_not_bounded_projector",
+        "observed_status": "EXPECTED_OBSTRUCTION_CONFIRMED",
+        "scope": "the recorded noncompact single-constraint spectral average",
+        "supporting_check_ids": [
+          "P23.rigging.not_a_bounded_kinematical_projector",
+          "P23.rigging.half_lapse_is_resolvent"
+        ],
+        "target": "ordinary bounded kinematical projector from delta(C)"
+      },
+      {
+        "id": "P23.guard.zero_current_is_not_unique_positive_density",
+        "observed_status": "EXPECTED_OBSTRUCTION_CONFIRMED",
+        "scope": "the regulated KG-type minisuperspace and signed-current prescription",
+        "supporting_check_ids": [
+          "P23.current.induced_sum_vs_signed_difference",
+          "P23.current.local_density_not_pointwise_positive",
+          "P23.selection.preparation_length_remains_input"
+        ],
+        "target": "unique positive density from CPT reality plus zero signed WDW current"
+      },
+      {
+        "id": "P23.guard.quadratic_zero_root",
+        "observed_status": "EXPECTED_OBSTRUCTION_CONFIRMED",
+        "scope": "the quadratic p_T^2-E^2 constraint at its double root",
+        "supporting_check_ids": [
+          "P23.zero_root.quadratic_root_divergence",
+          "P23.zero_root.clock_FP_vanishes"
+        ],
+        "target": "simple-root clock gauge at E=0"
+      }
+    ],
+    "phase": "P23",
+    "rigging_and_lapse": {
+      "constraint_spectral_coordinate": "c",
+      "full_lapse_Abel_kernel": "epsilon/[pi(c^2+epsilon^2)]",
+      "full_lapse_Gaussian_kernel": "exp(-c^2/epsilon^2)/(sqrt(pi)epsilon)",
+      "half_lapse": "1/(epsilon-i c), a resolvent rather than a projector",
+      "regulated_seed_norm": "1/[sqrt(pi)sqrt(lambda^2+epsilon^2)]",
+      "seed_width": "lambda",
+      "warning": "the rigging map is distributional; finite-regulator kernels and ordinary kinematical traces are not physical density matrices"
+    },
+    "scope_guard": {
+      "what_is_computed": [
+        "one hyperbolic single-constraint rigging-map calibration",
+        "full-real-lapse Abel and Gaussian delta sequences",
+        "one explicit T clock and positive-frequency branch choice",
+        "q in (0,pi) Dirichlet spectral regulator with E_n=sqrt(n^2+mu^2)",
+        "the imposed bridge B_L=exp(-L sqrt(h)) at L>0",
+        "an infinite-rank positive trace-class spectral density at finite regulator",
+        "integrated and local two-mode KG current controls",
+        "quadratic E=0 root and decompactification obstructions"
+      ],
+      "what_is_not_computed": [
+        "the closed k=+1 Starobinsky or Cecotti Wheeler-DeWitt operator",
+        "a regular complex cap, Picard-Lefschetz contour, or cap-derived L",
+        "factor-ordering, constraint-rescaling, and clock-patch independence",
+        "a regulator-independent WDW Born probability over universe initial data",
+        "a 4d Clifford or Pin lift",
+        "gravitino, Goldstino, three-form, membrane, or ghost sectors",
+        "local-SUGRA constraints or BRST cohomology",
+        "a selected flux n, inflaton phi0, curvature radius, or SUSY-breaking scale"
+      ]
+    },
+    "trace_class_density": {
+      "partition": "Z_L=sum_(n>=1) exp(-2L sqrt(n^2+mu^2))",
+      "physical_generator": "A=sqrt(h)",
+      "reduced_density": "rho_plus=Z_L^-1 exp(-2L A)",
+      "relational_bridge_input": "B_L=exp(-L A), L>0",
+      "state": "Z_L^-1/2 sum_n exp(-L E_n)|n>_L tensor Theta|n>_R",
+      "trace_class_reason": "E_n>n gives a convergent geometric upper bound",
+      "warning": "L, the compact regulator, the branch pairing, and Theta are inputs; B_L is not derived here from the Starobinsky cap"
+    },
+    "zero_root_and_regulator": {
+      "decompactification": "Z_R~R/(2L) for the massless Dirichlet spectrum",
+      "linear_control": "C_lin=p_T-A is regular but chooses an orientation",
+      "spectral_zero_root": "E=0 gives a double root of p_T^2-E^2",
+      "warning": "a cap Hessian zero mode would additionally require a genuine saddle family, primed determinant, collective-coordinate Jacobian, and modulus measure",
+      "zero_root_FP": "2E=0",
+      "zero_root_integral": "1/sqrt(2epsilon)"
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T04:48:31Z",
+  "updated_at_utc": "2026-08-17T05:45:44Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -102,6 +102,17 @@
         "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
         "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
         "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT"
+      ]
+    },
+    {
+      "question": "Does the Phase 23 constraint alone determine a physical cosmological seam density?",
+      "answer": "No. Full-lapse averaging gives a distributional rigging map, an explicit clock and branch give a positive integrated norm, and a separately supplied compact bridge gives a regulated trace-class density. CPT-like reality and zero signed current do not select its weights, and the massless decompactification limit is not trace class.",
+      "claim_ids": [
+        "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+        "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+        "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+        "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+        "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT"
       ]
     }
   ],
@@ -230,6 +241,27 @@
         "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
         "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
         "open:p22-homogeneous-minisuperspace-density",
+        "open:p22-gauge-fixed-local-sugra-seam-density"
+      ]
+    },
+    {
+      "id": "reading-path:minisuperspace-rigging-to-density",
+      "title": "From distributional minisuperspace rigging to a supplied regulated density",
+      "summary": "Separate full-lapse rigging, clock-oriented positivity, local signed-current failure, the independently supplied compact bridge, and the zero-root and continuum obstructions before the cap-derived density gate.",
+      "nodes": [
+        "concept:distributional-rigging-map-versus-bounded-projector",
+        "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+        "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+        "concept:induced-product-versus-signed-wdw-current",
+        "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+        "claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+        "concept:constraint-rigging-versus-state-preparation-bridge",
+        "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+        "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+        "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+        "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+        "open:p22-homogeneous-minisuperspace-density",
+        "open:p23-cap-derived-regulator-independent-density",
         "open:p22-gauge-fixed-local-sugra-seam-density"
       ]
     }
@@ -2808,6 +2840,319 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase22-result.json",
       "sha256": "dd72d1c669c65ad49e25bc6b0b82a6620494fda7af8a8988e2d6727f76d56d83"
+    },
+    {
+      "id": "phase:p23",
+      "type": "phase",
+      "title": "Phase 23 — homogeneous minisuperspace density control",
+      "summary": "A single-constraint rigging-map calibration that separates full-lapse group averaging, clock-oriented positivity, a supplied compact trace-class bridge, and zero-root or continuum obstructions.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:distributional-rigging-map-versus-bounded-projector",
+      "type": "concept",
+      "title": "Distributional rigging map versus bounded projector",
+      "summary": "A full-real-lapse delta sequence can define a distributional constraint rigging map while failing to be an ordinary bounded projector or trace-class kinematical density.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:induced-product-versus-signed-wdw-current",
+      "type": "concept",
+      "title": "Induced product versus signed Wheeler–DeWitt current",
+      "summary": "The branch-positive induced product and the signed Klein–Gordon current are different: branch orientation can make the integrated norm positive while local current density remains sign-indefinite.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:constraint-rigging-versus-state-preparation-bridge",
+      "type": "concept",
+      "title": "Constraint rigging versus state-preparation bridge",
+      "summary": "Group averaging imposes the constraint, whereas a separately supplied operator B_L fixes relative state weights; the first operation does not derive the second.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:compact-trace-class-density-versus-continuum-limit",
+      "type": "concept",
+      "title": "Compact trace-class density versus continuum limit",
+      "summary": "A positive spectral density can be trace class on a compact regulated spectrum while losing trace class when the massless box is decompactified.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:quadratic-zero-root-clock-obstruction",
+      "type": "concept",
+      "title": "Quadratic zero-root clock obstruction",
+      "summary": "At the double root of p_T^2-E^2, the rigging integral diverges and the intrinsic T-clock Faddeev–Popov determinant vanishes; a linearized constraint changes the time-orientation content.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+      "type": "claim",
+      "claim_id": "P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+      "title": "The full real lapse average defines a distributional rigging map",
+      "statement": "For the recorded single-constraint spectral control, Abel and Gaussian full-real-lapse regulators give normalized delta sequences and a normalized on-shell profile after rigging normalization.",
+      "summary": "Supported exactly as a distributional single-constraint construction, not as an ordinary bounded projector.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+      "type": "claim",
+      "claim_id": "P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+      "title": "The full-lapse rigging kernel is a bounded kinematical projector",
+      "statement": "The regulated delta kernel defines an ordinary bounded projector on the kinematical Hilbert space in the zero-regulator limit.",
+      "summary": "Contradicted in the recorded spectral control by the divergent kernel supremum; the half-lapse object is instead a resolvent.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "type": "claim",
+      "claim_id": "P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "title": "An explicit clock and frequency choice give a positive integrated norm",
+      "statement": "For the compact Dirichlet KG-type constraint with an explicit T clock and positive-frequency branch, the shell Jacobian is canceled and the integrated physical norm is positive.",
+      "summary": "Supported in the regulated branch-selected control; the quadratic constraint alone contains both current signs.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+      "type": "claim",
+      "claim_id": "P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+      "title": "Positive frequency makes the local current pointwise positive",
+      "statement": "Every positive-frequency superposition in the recorded KG-type control has a nonnegative local Klein–Gordon current density.",
+      "summary": "Contradicted by an exact two-mode witness with unit integrated current and a negative recorded local value.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "type": "claim",
+      "claim_id": "P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "title": "CPT-like reality and zero signed current uniquely select a density",
+      "statement": "Within the recorded regulated minisuperspace controls, CPT-like branch pairing together with zero signed WDW current fixes unique positive spectral weights.",
+      "summary": "Contradicted: equal-branch states are nonunique, and the supplied preparation length continuously changes the normalized weights.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "type": "claim",
+      "claim_id": "P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "title": "The imposed bridge defines a positive trace-class regulated density",
+      "statement": "For q in (0,pi), mu,L>0, and the supplied bridge B_L=exp(-L sqrt(h)), the two-sheet spectral state is normalizable and its one-sheet reduction is positive, unit trace, and trace class.",
+      "summary": "Supported at the finite compact regulator; L, the regulator, branch orientation, and toy pairing remain inputs.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "type": "claim",
+      "claim_id": "P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "title": "The regulated density has a trace-class decompactification limit",
+      "statement": "The massless compact spectral density remains trace class as the box radius tends to infinity at fixed positive preparation length.",
+      "summary": "Contradicted in the recorded massless box control because its partition grows as R/(2L).",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "type": "claim",
+      "claim_id": "P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "title": "The quadratic zero root has a regular intrinsic-clock gauge",
+      "statement": "At E=0, the quadratic constraint p_T^2-E^2 retains a finite rigging normalization and a nonzero intrinsic T-clock Faddeev–Popov determinant.",
+      "summary": "Contradicted by the exact double-root divergence and vanishing clock determinant.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p23-rigging-and-lapse",
+      "type": "evidence",
+      "title": "Phase 23 full-lapse rigging checks",
+      "summary": "Ten exact checks and one numerical control cover full-lapse delta sequences, seed and shell normalization, the unbounded-projector obstruction, the half-lapse resolvent, and the Euclidean-lapse mutant.",
+      "state": "VERIFIED",
+      "observed_status": "10_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P23.rigging.full_real_lapse_abel_kernel",
+        "P23.rigging.abel_delta_normalization",
+        "P23.rigging.full_real_lapse_gaussian_kernel",
+        "P23.rigging.kinematical_gaussian_norm",
+        "P23.rigging.regulated_seed_norm",
+        "P23.rigging.normalized_shell_profile",
+        "P23.rigging.not_a_bounded_kinematical_projector",
+        "P23.rigging.half_lapse_is_resolvent",
+        "P23.rigging.half_lapse_is_not_projector_kernel",
+        "P23.rigging.naive_euclidean_lapse_mutant_diverges",
+        "P23.numeric.regulated_seed_norm"
+      ]
+    },
+    {
+      "id": "evidence:p23-shell-and-current",
+      "type": "evidence",
+      "title": "Phase 23 shell, branch, and current checks",
+      "summary": "Ten exact checks and one numerical control cover the compact spectrum, shell roots and Jacobian, branch-oriented WDW modes, induced versus signed products, current continuity, normalization, and a negative local-current witness.",
+      "state": "VERIFIED",
+      "observed_status": "10_EXACT_PASS_PLUS_1_NUMERICAL_PASS",
+      "check_ids": [
+        "P23.constraint.dirichlet_spectrum",
+        "P23.constraint.frequency_roots",
+        "P23.constraint.delta_shell_jacobian",
+        "P23.constraint.clock_gauge_FP_cancellation",
+        "P23.WDW.frequency_modes_solve_constraint",
+        "P23.current.integrated_frequency_signs",
+        "P23.current.induced_sum_vs_signed_difference",
+        "P23.current.two_mode_continuity",
+        "P23.current.integrated_density_equals_trace",
+        "P23.current.local_density_not_pointwise_positive",
+        "P23.numeric.current_slice_conservation"
+      ]
+    },
+    {
+      "id": "evidence:p23-trace-class-density",
+      "type": "evidence",
+      "title": "Phase 23 supplied-bridge density checks",
+      "summary": "Eight exact checks and two numerical controls cover the compact trace-class bound, purification and reduction, spectral stationarity, bridge-weight dependence, toy anti-linear pairing, and convergence.",
+      "state": "VERIFIED",
+      "observed_status": "8_EXACT_PASS_PLUS_2_NUMERICAL_PASS",
+      "check_ids": [
+        "P23.density.spectral_comparison_gap",
+        "P23.density.trace_class_geometric_bound",
+        "P23.density.truncated_purification",
+        "P23.density.partial_trace_positive",
+        "P23.density.spectral_stationarity",
+        "P23.density.bridge_weight_ratio",
+        "P23.theta.toy_pairing",
+        "P23.selection.preparation_length_remains_input",
+        "P23.numeric.trace_sum_convergence",
+        "P23.numeric.two_mode_density_spectrum"
+      ]
+    },
+    {
+      "id": "evidence:p23-zero-root-and-regulator",
+      "type": "evidence",
+      "title": "Phase 23 zero-root and continuum obstruction checks",
+      "summary": "Four exact checks cover the quadratic-root divergence, vanishing intrinsic-clock determinant, oriented linear-constraint control, and loss of trace class in the massless decompactification limit.",
+      "state": "VERIFIED",
+      "observed_status": "4_EXACT_PASS",
+      "check_ids": [
+        "P23.zero_root.quadratic_root_divergence",
+        "P23.zero_root.clock_FP_vanishes",
+        "P23.zero_root.linear_constraint_control",
+        "P23.regulator.decompactification_not_trace_class"
+      ]
+    },
+    {
+      "id": "scope:p23-single-constraint-rigging-and-current",
+      "type": "scope",
+      "title": "P23 single-constraint rigging and current control",
+      "summary": "One 1+1-dimensional KG-type hyperbolic constraint, full-real-lapse regulators, a compact Dirichlet spectral normal form, and an explicit T-clock positive-frequency branch.",
+      "state": "ACTIVE",
+      "includes": [
+        "Abel and Gaussian full-real-lapse delta sequences",
+        "factorized Gaussian kinematical seed and normalized shell profile",
+        "half-lapse resolvent and Euclidean-lapse mutation controls",
+        "q in (0,pi) Dirichlet spectrum with mu>0",
+        "explicit T clock and positive-frequency orientation",
+        "integrated and local two-mode Klein–Gordon currents"
+      ],
+      "excludes": [
+        "closed k=+1 Starobinsky or Cecotti Wheeler–DeWitt operator",
+        "complex cap or Picard–Lefschetz contour",
+        "factor-ordering, constraint-rescaling, or clock-patch independence",
+        "regulator-independent universe Born measure",
+        "4D Pin lift, local SUGRA constraints, ghosts, or BRST cohomology"
+      ]
+    },
+    {
+      "id": "scope:p23-supplied-bridge-compact-density",
+      "type": "scope",
+      "title": "P23 supplied-bridge compact density control",
+      "summary": "The positive-frequency compact spectrum with supplied L>0, B_L=exp(-L sqrt(h)), two constrained sheet copies, and a toy anti-linear spectral pairing.",
+      "state": "ACTIVE",
+      "includes": [
+        "compact Dirichlet spectral regulator",
+        "positive-frequency physical branch",
+        "supplied positive preparation length L",
+        "spectral bridge B_L=exp(-L sqrt(h))",
+        "normalized two-sheet purification and one-sheet reduction",
+        "toy parity-sheet anti-linear pairing"
+      ],
+      "excludes": [
+        "derivation of L or B_L from a Starobinsky cap",
+        "unique density from CPT, Pin, or zero signed current",
+        "4D Clifford or Pin action",
+        "clock, factor-ordering, and regulator independence",
+        "physical inflaton, flux, curvature, or SUSY-breaking selection",
+        "gravitino, Goldstino, three-form, membrane, ghost, or BRST sectors"
+      ]
+    },
+    {
+      "id": "scope:p23-zero-root-and-decompactification",
+      "type": "scope",
+      "title": "P23 zero-root and decompactification controls",
+      "summary": "The quadratic E=0 spectral root and the massless Dirichlet box as two explicit obstruction models.",
+      "state": "ACTIVE",
+      "includes": [
+        "Abel-regulated p_T^2 double root",
+        "intrinsic T-clock Faddeev–Popov determinant at E=0",
+        "oriented linear-constraint comparison",
+        "massless box partition at fixed L>0 and radius R tending to infinity"
+      ],
+      "excludes": [
+        "proof that the Starobinsky homogeneous mode is gauge",
+        "actual saddle zero-mode family and primed determinant",
+        "collective-coordinate Jacobian or modulus measure",
+        "all compact or interacting homogeneous models",
+        "universal no-go for a physical WDW density"
+      ]
+    },
+    {
+      "id": "open:p23-cap-derived-regulator-independent-density",
+      "type": "open_problem",
+      "title": "Derive a cap-based regulator-independent density",
+      "summary": "The compact normal form and supplied B_L must be replaced by the actual closed Starobinsky/Cecotti constraint, contour, physical product, ordering, and zero-mode measure.",
+      "question": "Does the exact closed complex-cap problem produce a cap-derived bridge and a positive density that is independent of regulator, factor ordering, and admissible clock patch?",
+      "state": "OPEN"
+    },
+    {
+      "id": "source:marolf-1995",
+      "type": "source",
+      "title": "Refined Algebraic Quantization: Systems with a single constraint",
+      "summary": "Primary refined-algebraic-quantization and group-averaging reference used to frame the distributional single-constraint rigging map.",
+      "state": "PRIMARY",
+      "citation": "D. Marolf, Refined Algebraic Quantization: Systems with a single constraint",
+      "version": "arXiv:gr-qc/9508015v3",
+      "uri": "https://arxiv.org/abs/gr-qc/9508015"
+    },
+    {
+      "id": "artifact:p23-script",
+      "type": "artifact",
+      "title": "Phase 23 executable",
+      "summary": "Exact and bounded numerical checks of full-lapse rigging, branch-oriented currents, a supplied compact trace-class density, and zero-root or continuum obstructions.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase23_homogeneous_minisuperspace_density.py",
+      "sha256": "62408abeeec2eb11f104d984c84ffde5c2d6f287e7f07a4021ee6fb3ec202ffd",
+      "introduced_in_commit": "634d984e25422063a66a497963380fc24ad9f9d2"
+    },
+    {
+      "id": "artifact:p23-report",
+      "type": "artifact",
+      "title": "Phase 23 report",
+      "summary": "Human-readable constrained minisuperspace rigging-map and supplied-density derivation with explicit clock, current, zero-root, continuum, and cosmological scope boundaries.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md",
+      "sha256": "25cdb9e53b327a14844ec4a4b94afe9ae2770492358416f49cd6e185882d8bb3",
+      "introduced_in_commit": "634d984e25422063a66a497963380fc24ad9f9d2"
+    },
+    {
+      "id": "artifact:p23-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 23 evidence snapshot",
+      "summary": "Persisted 32-exact and four-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase23-result.json",
+      "sha256": "198e2d6641d35b0a71b8024abfffb4883f6ae4ee87146f1864bba0f90ec91e0b"
     }
   ],
   "edges": [
@@ -5543,6 +5888,440 @@
       "from": "open:p22-homogeneous-minisuperspace-density",
       "relation": "CITES",
       "to": "source:halliwell-2009"
+    },
+    {
+      "id": "edge:443",
+      "from": "phase:p23",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:444",
+      "from": "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:445",
+      "from": "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:446",
+      "from": "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:447",
+      "from": "claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:448",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:449",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:450",
+      "from": "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:451",
+      "from": "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:452",
+      "from": "evidence:p23-rigging-and-lapse",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:453",
+      "from": "evidence:p23-shell-and-current",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:454",
+      "from": "evidence:p23-trace-class-density",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:455",
+      "from": "evidence:p23-zero-root-and-regulator",
+      "relation": "PART_OF",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:456",
+      "from": "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+      "relation": "ABOUT",
+      "to": "concept:distributional-rigging-map-versus-bounded-projector"
+    },
+    {
+      "id": "edge:457",
+      "from": "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+      "relation": "ABOUT",
+      "to": "concept:distributional-rigging-map-versus-bounded-projector"
+    },
+    {
+      "id": "edge:458",
+      "from": "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "relation": "ABOUT",
+      "to": "concept:induced-product-versus-signed-wdw-current"
+    },
+    {
+      "id": "edge:459",
+      "from": "claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+      "relation": "ABOUT",
+      "to": "concept:induced-product-versus-signed-wdw-current"
+    },
+    {
+      "id": "edge:460",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "ABOUT",
+      "to": "concept:constraint-rigging-versus-state-preparation-bridge"
+    },
+    {
+      "id": "edge:461",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "ABOUT",
+      "to": "concept:compact-trace-class-density-versus-continuum-limit"
+    },
+    {
+      "id": "edge:462",
+      "from": "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "relation": "ABOUT",
+      "to": "concept:compact-trace-class-density-versus-continuum-limit"
+    },
+    {
+      "id": "edge:463",
+      "from": "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "relation": "ABOUT",
+      "to": "concept:quadratic-zero-root-clock-obstruction"
+    },
+    {
+      "id": "edge:464",
+      "from": "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-rigging-and-lapse",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:465",
+      "from": "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-rigging-and-lapse",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:466",
+      "from": "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-shell-and-current",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:467",
+      "from": "claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-shell-and-current",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:468",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-shell-and-current",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:469",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-trace-class-density",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:470",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-trace-class-density",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:471",
+      "from": "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-zero-root-and-regulator",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:472",
+      "from": "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p23-zero-root-and-regulator",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:473",
+      "from": "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-single-constraint-rigging-and-current"
+    },
+    {
+      "id": "edge:474",
+      "from": "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-single-constraint-rigging-and-current"
+    },
+    {
+      "id": "edge:475",
+      "from": "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-single-constraint-rigging-and-current"
+    },
+    {
+      "id": "edge:476",
+      "from": "claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-single-constraint-rigging-and-current"
+    },
+    {
+      "id": "edge:477",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-supplied-bridge-compact-density"
+    },
+    {
+      "id": "edge:478",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-supplied-bridge-compact-density"
+    },
+    {
+      "id": "edge:479",
+      "from": "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-zero-root-and-decompactification"
+    },
+    {
+      "id": "edge:480",
+      "from": "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p23-zero-root-and-decompactification"
+    },
+    {
+      "id": "edge:481",
+      "from": "claim:P23_FULL_REAL_LAPSE_AVERAGE_DEFINES_DISTRIBUTIONAL_RIGGING_MAP",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:482",
+      "from": "claim:P23_FULL_REAL_LAPSE_RIGGING_KERNEL_IS_A_BOUNDED_KINEMATICAL_PROJECTOR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:483",
+      "from": "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:484",
+      "from": "claim:P23_POSITIVE_FREQUENCY_LOCAL_CURRENT_IS_POINTWISE_POSITIVE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:485",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:486",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:487",
+      "from": "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:488",
+      "from": "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p23-report"
+    },
+    {
+      "id": "edge:489",
+      "from": "evidence:p23-rigging-and-lapse",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p23-script"
+    },
+    {
+      "id": "edge:490",
+      "from": "evidence:p23-rigging-and-lapse",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p23-evidence-snapshot"
+    },
+    {
+      "id": "edge:491",
+      "from": "evidence:p23-shell-and-current",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p23-script"
+    },
+    {
+      "id": "edge:492",
+      "from": "evidence:p23-shell-and-current",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p23-evidence-snapshot"
+    },
+    {
+      "id": "edge:493",
+      "from": "evidence:p23-trace-class-density",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p23-script"
+    },
+    {
+      "id": "edge:494",
+      "from": "evidence:p23-trace-class-density",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p23-evidence-snapshot"
+    },
+    {
+      "id": "edge:495",
+      "from": "evidence:p23-zero-root-and-regulator",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p23-script"
+    },
+    {
+      "id": "edge:496",
+      "from": "evidence:p23-zero-root-and-regulator",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p23-evidence-snapshot"
+    },
+    {
+      "id": "edge:497",
+      "from": "artifact:p23-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:498",
+      "from": "artifact:p23-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:499",
+      "from": "artifact:p23-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p23"
+    },
+    {
+      "id": "edge:500",
+      "from": "concept:distributional-rigging-map-versus-bounded-projector",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "The source frames refined algebraic quantization and group averaging; the concrete regulators and checks remain repository evidence."
+    },
+    {
+      "id": "edge:501",
+      "from": "concept:induced-product-versus-signed-wdw-current",
+      "relation": "CITES",
+      "to": "source:hartle-marolf-1997",
+      "note": "The source frames induced-product and constraint-system probability distinctions; it does not derive the Phase 23 compact bridge."
+    },
+    {
+      "id": "edge:502",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "note": "Phase 23 replaces the free fixed oscillator by a branch-selected compact constraint normal form, while still supplying the bridge."
+    },
+    {
+      "id": "edge:503",
+      "from": "claim:P23_REGULATED_DENSITY_HAS_TRACE_CLASS_DECOMPACTIFICATION_LIMIT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "note": "Both bounded controls lose trace class in their specified noncompact or zero-frequency limit; neither is a universal interacting-minisuperspace no-go."
+    },
+    {
+      "id": "edge:504",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING",
+      "note": "A discrete pairing label still does not derive the probability weights or preparation bridge."
+    },
+    {
+      "id": "edge:505",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
+      "note": "A normalized kernel or current condition does not by itself choose the physical sector weights."
+    },
+    {
+      "id": "edge:506",
+      "from": "claim:P23_EXPLICIT_CLOCK_AND_POSITIVE_FREQUENCY_GIVE_POSITIVE_INTEGRATED_NORM",
+      "relation": "MOTIVATES",
+      "to": "open:p23-cap-derived-regulator-independent-density"
+    },
+    {
+      "id": "edge:507",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "MOTIVATES",
+      "to": "open:p23-cap-derived-regulator-independent-density",
+      "note": "The positive compact density is conditional on supplied L and B_L; the actual cap must derive them."
+    },
+    {
+      "id": "edge:508",
+      "from": "claim:P23_QUADRATIC_ZERO_ROOT_HAS_A_REGULAR_INTRINSIC_CLOCK_GAUGE",
+      "relation": "MOTIVATES",
+      "to": "open:p22-homogeneous-minisuperspace-density",
+      "note": "The double-root obstruction requires a genuine constrained homogeneous treatment with a valid clock strategy or deparametrization-free rigging."
+    },
+    {
+      "id": "edge:509",
+      "from": "claim:P23_IMPOSED_BRIDGE_DEFINES_POSITIVE_TRACE_CLASS_REGULATED_DENSITY",
+      "relation": "MOTIVATES",
+      "to": "open:p22-gauge-fixed-local-sugra-seam-density",
+      "note": "The bosonic compact density omits the local-SUGRA constraints and gravitino–Goldstino–ghost boundary operator."
+    },
+    {
+      "id": "edge:510",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "MOTIVATES",
+      "to": "open:p19-minisuperspace-phi0-measure",
+      "note": "The supplied length changes weights continuously and therefore does not select the homogeneous inflaton amplitude."
+    },
+    {
+      "id": "edge:511",
+      "from": "claim:P23_CPT_REALITY_AND_ZERO_SIGNED_CURRENT_UNIQUELY_SELECT_A_DENSITY",
+      "relation": "MOTIVATES",
+      "to": "open:p20-cpt-pin-sheet-inner-product",
+      "note": "A concrete doubled Hilbert-space inner product and sewing action remain necessary to derive physical sheet weights."
     }
   ],
   "kg_bridges": [
