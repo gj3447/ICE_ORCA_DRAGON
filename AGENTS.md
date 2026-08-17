@@ -8,8 +8,8 @@
 
 ## 먼저 알아야 할 것 — 여기는 물리학이 아니라 **계산 워크벤치**다
 
-`ICE_WORKBENCH_REFRAME_2026-05-18.md` 가 영구 승격시킨 지위다
-(선행: `ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md`).
+`docs/decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md` 가 영구 승격시킨 지위다
+(선행: `docs/decisions/ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md`).
 
 - 산출물을 **물리학 주장으로 서술하지 않는다.** 수치 일치는 그 자체로 물리가 아니다.
 - 동시에 사용자 원문 spec(12사도 #2, `MIND/metahumotonic/나는야_ice_orca_dragon.md`)은
@@ -37,7 +37,7 @@ uv sync --locked
 - 스크립트 정보: `./ice info <name>` (경로 / 독스트링 / 산출 result JSON)
 - 연구 그래프 검사·조회: `./ice ontology validate`, `./ice ontology summary`,
   `./ice ontology show <node-id>`, `./ice ontology trace <node-id>`
-- 기존 numerology 검산(선택): `python3 ice_prereg_check.py`
+- 기존 numerology 검산(선택): `./ice run ice_prereg_check`
   (과거 P01–P15 산출물 재현용이며 새 연구의 필수 게이트가 아니다)
 
 `name` 은 stem 또는 relpath, unique-prefix 매칭이 된다.

@@ -1,6 +1,6 @@
 ---
 title: ICE_ORCA_DRAGON Documentation Hub
-description: TypeScript/Effect control plane for locked Python hypercomplex computations and tiered scientific evidence handling.
+description: TypeScript/Effect control plane for locked Python research computations and layered scientific evidence handling.
 ---
 
 # ICE_ORCA_DRAGON documentation
@@ -22,9 +22,10 @@ npm run check
 
 | Document | Purpose |
 |---|---|
-| [`../README.md`](../README.md) | overview, CLI, tier policy, current reproduction ledger |
+| [`../README.md`](../README.md) | overview, repository layout, CLI, scientific scope, and current snapshot |
 | [`USERGUIDE.md`](USERGUIDE.md) | live-catalog usage and kernel workflow |
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
+| [`../research/README.md`](../research/README.md) | organized hypercomplex/legacy-prediction code and report map |
 | [`SCIENTIFIC_TOOLBOX.md`](SCIENTIFIC_TOOLBOX.md) | installed symbolic, numerical, workflow, and formal-verification tools |
 | [`SCIENTIFIC_CLI_MANUAL.md`](SCIENTIFIC_CLI_MANUAL.md) | version-specific commands, examples, official documentation, and offline-manual index |
 | [`../ontology/README.md`](../ontology/README.md) | typed research graph, evidence snapshots, validation, and lookup commands |
@@ -35,9 +36,9 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | normalized connected two-sheet Gaussian seam control and flux-prior caveat |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
-| [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md) | historical attestation plus current erratum |
-| [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md) | queue03 method-quarantine evidence |
-| [`../SOURCES.md`](../SOURCES.md) | source and mythology/physics provenance |
+| [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |
+| [`decisions/README.md`](decisions/README.md) | active workbench-scope decisions |
+| [`provenance/SOURCES.md`](provenance/SOURCES.md) | source and mythology/physics provenance |
 
 ## Scientific workflow
 

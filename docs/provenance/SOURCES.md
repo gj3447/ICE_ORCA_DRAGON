@@ -3,7 +3,7 @@
 > **POSITION 2026-08-14 — 3-Layer Disclosure**
 >
 > ICE 관련 주장은 target claim과 layer를 함께 밝혀야 한다
-> (`ICE_WORKBENCH_REFRAME_2026-05-18.md`). 아래 표는 layer 경계이지 전체 연구 프로그램에 대한
+> ([`ICE_WORKBENCH_REFRAME_2026-05-18.md`](../decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md)). 아래 표는 layer 경계이지 전체 연구 프로그램에 대한
 > 자동 Lakatos 판정이나 canon status 변경표가 아니다.
 >
 > | Layer | Evidence status | Examples |
@@ -56,13 +56,13 @@
 
 | 결과 | 파일 | 상태 |
 |---|---|---|
-| 42 sedenion ZD **assessors** | `prove_higgs_results.json` | ✓ 외부 검증 (Lygeros 2006 "42 Assessors"). 정밀: 42 = **assessors** (7 box-kite × 6), ZD-*pair* count은 84, primitive units 168 (de Marrais chain, 독립 재계산 2026-06-05). "42 ZD pairs"는 assessor count의 느슨한 라벨 — 숫자 42 보존, 용어만 정밀화. → `avenue3_decisive_test_2026-06-05/RESULTS.md` |
-| Der(S) = g₂ 14D | `sedenion_g2_deep.py` | ✓ 수치 검증, 외부 peer 미검증 (arXiv preprint 권장) |
-| Koide Q = 2/3 | `derive_dimensionless_results.json` | ICE derivation/predictivity claim relation: `CONTRADICTS`; fitting risk: `NUMEROLOGY_HOLD` — MC null P(E\|~H)=1.000 |
-| mass_ratios | `derive_mass_ratios_results.json` | **자체 verdict: "ICE cannot genuinely derive" 0/15 genuine** |
-| custodial | `queue_02_custodial_results.json` | **0/42 fail**. Legacy queue03 threshold sweep is basis-dependent and quarantined (`QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`) |
-| S₃ Jacobi=6·associator | `prove_s3_results.json` | ✓ 검증, FDA structure constants nontrivial |
-| S₅ BV bounded | `prove_s5_results.json` | ✓ all_zero, all_bounded |
+| 42 sedenion ZD **assessors** | [`prove_higgs_results.json`](../../research/hypercomplex/prove_higgs_results.json) | ✓ 외부 검증 (Lygeros 2006 "42 Assessors"). 정밀: 42 = **assessors** (7 box-kite × 6), ZD-*pair* count은 84, primitive units 168 (de Marrais chain, 독립 재계산 2026-06-05). "42 ZD pairs"는 assessor count의 느슨한 라벨 — 숫자 42 보존, 용어만 정밀화. → [`RESULTS.md`](../../avenue3_decisive_test_2026-06-05/RESULTS.md) |
+| Der(S) = g₂ 14D | [`sedenion_g2_deep.py`](../../_archive/variants/sedenion_g2_deep.py) | ✓ 수치 검증, 외부 peer 미검증 (arXiv preprint 권장) |
+| Koide Q = 2/3 | [`derive_dimensionless_results.json`](../../research/legacy_predictions/derive_dimensionless_results.json) | ICE derivation/predictivity claim relation: `CONTRADICTS`; fitting risk: `NUMEROLOGY_HOLD` — MC null P(E\|~H)=1.000 |
+| mass_ratios | [`derive_mass_ratios_results.json`](../../research/legacy_predictions/derive_mass_ratios_results.json) | **자체 verdict: "ICE cannot genuinely derive" 0/15 genuine** |
+| custodial | [`queue_02_custodial_results.json`](../../research/hypercomplex/queue_02_custodial_results.json) | **0/42 fail**. Legacy queue03 threshold sweep is basis-dependent and quarantined ([audit](../audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md)) |
+| S₃ Jacobi=6·associator | [`prove_s3_results.json`](../../research/hypercomplex/prove_s3_results.json) | ✓ 검증, FDA structure constants nontrivial |
+| S₅ BV bounded | [`prove_s5_results.json`](../../research/hypercomplex/prove_s5_results.json) | ✓ all_zero, all_bounded |
 
 ## 1차 소스 (사용자 창작 시)
 
@@ -125,7 +125,7 @@ Total count of orthogonal zero-divisor pairs (e_i, e_j) with i,j ∈ {1..15}:
   → reduced to 42 sedenion ZD doublets (Lygeros 2006 "42 Assessors")
 ```
 
-→ ICE *얼음 absolute zero* metaphor = sedenion zero divisor 의 *물리학 격자*. 42 ZD doublets = `prove_higgs_results.json` 외부 검증.
+→ ICE *얼음 absolute zero* metaphor = sedenion zero divisor 의 *물리학 격자*. 42 ZD doublets = [`prove_higgs_results.json`](../../research/hypercomplex/prove_higgs_results.json) 외부 검증.
 
 ### B. Hosotani mechanism — Wilson loop SSB 정확 식
 
@@ -142,7 +142,7 @@ Effective potential V_eff(α) at one-loop:
 Minimum α* ≠ 0 ⟹ gauge symmetry breaking G → H ⊂ G
 ```
 
-→ `queue_04_hosotani_toy.py` + `queue_04_hosotani_results.json` 의 *수학 본체*. Wilson loop trick = SSB without Higgs field.
+→ [`queue_04_hosotani_toy.py`](../../research/hypercomplex/queue_04_hosotani_toy.py) + [`queue_04_hosotani_results.json`](../../research/hypercomplex/queue_04_hosotani_results.json) 의 *수학 본체*. Wilson loop trick = SSB without Higgs field.
 
 ### C. Higgs Coleman-Weinberg potential — radiative SSB 정확 식
 
@@ -157,7 +157,7 @@ Vacuum at non-trivial φ_min ≠ 0 :
   ⟨φ⟩ = M exp(−16π²/(33 λ) + 11/6)        -- dimensional transmutation
 ```
 
-→ Higgs *self-generation* = CW radiative correction. `queue_05_coleman_weinberg.py` 본체.
+→ Higgs *self-generation* = CW radiative correction. [`queue_05_coleman_weinberg.py`](../../research/hypercomplex/queue_05_coleman_weinberg.py) 본체.
 
 ### D. CCWZ formalism — coset construction (Callan-Coleman-Wess-Zumino 1969)
 
@@ -176,7 +176,7 @@ Effective Lagrangian (lowest order):
   L = (f²/4) tr(D_μ U D^μ U†)   where U = ξ ξ_R⁻¹
 ```
 
-→ `prove_s2_CCWZ.py` 본체. Custodial SU(2)_L × SU(2)_R → SU(2)_V structure.
+→ [`prove_s2_CCWZ.py`](../../research/hypercomplex/prove_s2_CCWZ.py) 본체. Custodial SU(2)_L × SU(2)_R → SU(2)_V structure.
 
 ### E. Domain decomposition family — sub-type AND-conjunctive 정전
 

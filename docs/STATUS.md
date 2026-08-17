@@ -34,8 +34,8 @@ current ledger.
 - Queue04 permits `atol=1e-6` only for the verified circular optimizer-coordinate paths; structure,
   categories, and other fields keep their tighter comparator.
 
-See [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md)
-and [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md).
+See [`audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md)
+and [`audits/REPRODUCIBILITY_2026-06-08.md`](audits/REPRODUCIBILITY_2026-06-08.md).
 
 ## Current scientific workflow
 
@@ -346,16 +346,16 @@ current execution policy and not proof that similarly named KG nodes exist.
 
 | Topic | Source | Historical evidence relation / caveat |
 |---|---|---|
-| 42 sedenion assessors / 84 ZD pairs | `prove_higgs_results.json` | supports the L1 combinatorial count; does not by itself support a Higgs referent |
-| S3 Jacobi/associator structure | `prove_s3_results.json` | structural algebra result |
-| S5 BV bounded result | `prove_s5_results.json` | structural/numerical consistency result |
+| 42 sedenion assessors / 84 ZD pairs | `research/hypercomplex/prove_higgs_results.json` | supports the L1 combinatorial count; does not by itself support a Higgs referent |
+| S3 Jacobi/associator structure | `research/hypercomplex/prove_s3_results.json` | structural algebra result |
+| S5 BV bounded result | `research/hypercomplex/prove_s5_results.json` | structural/numerical consistency result |
 | Der(S) dimension 14 computation | sedenion result corpus | local numerical result; external review and precise method provenance remain separate |
-| mass-ratio derivation | `derive_mass_ratios_results.json` | script self-report says 0/15 genuine |
-| L-star derivation | `derive_Lstar_results.json` | script self-report says it does not uniquely predict L-star |
+| mass-ratio derivation | `research/legacy_predictions/derive_mass_ratios_results.json` | script self-report says 0/15 genuine |
+| L-star derivation | `research/legacy_predictions/derive_Lstar_results.json` | script self-report says it does not uniquely predict L-star |
 | naive custodial construction | queue02 result corpus | structural closure diagnostics contradict the proposed construction |
-| Koide-like matches | `derive_dimensionless_results.json`, numerology judge | historical null scan found high coincidence risk |
+| Koide-like matches | `research/legacy_predictions/derive_dimensionless_results.json`, numerology judge | historical null scan found high coincidence risk |
 | mp/mW search | `verify_mp_mW_results.json`, numerology judge | literal mismatch and high look-elsewhere coincidence risk |
-| queue03 threshold scan | `queue_03_threshold_sensitivity_results.json` | invalid as a portable pass/fail metric because of basis dependence |
+| queue03 threshold scan | `research/hypercomplex/queue_03_threshold_sensitivity_results.json` | invalid as a portable pass/fail metric because of basis dependence |
 | queue08 projected g2 claim | queue08 diagnostics | method-artifact warning: projected/non-alternative construction did not establish the claimed Lie representation |
 | queue09 group action | queue09 result corpus | earlier orbit-membership test was too permissive; multiplication-preservation gate remains needed |
 

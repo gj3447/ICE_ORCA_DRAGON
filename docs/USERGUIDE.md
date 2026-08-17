@@ -115,7 +115,7 @@ Current expected ledger:
 | 1 `SUPERSEDED` | queue06 is retained as historical output, not a live success |
 
 The overall exit code is therefore nonzero by design. Do not loosen a global tolerance to make queue03
-green. See [`../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](../QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
+green. See [`audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
 
 ## Run a scientific task
 

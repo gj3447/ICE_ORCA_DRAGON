@@ -8,6 +8,9 @@ This audit explains why `queue_03_threshold_sensitivity_scan.py` is quarantined 
 the reproduction control plane. The legacy script and its JSON remain historical
 artifacts; neither is silently rewritten.
 
+Current locations: [`queue_03_threshold_sensitivity_scan.py`](../../research/hypercomplex/queue_03_threshold_sensitivity_scan.py)
+and [`queue_03_threshold_sensitivity_results.json`](../../research/hypercomplex/queue_03_threshold_sensitivity_results.json).
+
 ## Failure mechanism
 
 For a null-space basis matrix `Q`, queue03 projects a generator `L` as
