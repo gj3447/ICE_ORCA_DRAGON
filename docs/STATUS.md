@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 54 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 56 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -394,26 +394,48 @@ external-KG write. A `RELATED` bridge is not identity, and unresolved external m
 ## Current direct calculation — CPT × Temporal-Folded SUSY Phase 24
 
 Phase 24 adds a connected real Starobinsky $S^3\times I$ minisuperspace control. Its executable returns
-exit 0 with **5 exact checks and 14 numerical checks**.
+exit 0 with **6 exact checks and 14 numerical checks**.
 
 - The explicitly supplied calibration $\phi_{\rm center}=1$, $T_0=0.7$ gives
   $q_0=(3.56680319,1.01858095,3.56680319,1.01858095)$ and
   $I_0=1.40669054283449$. These inputs are not an initial-value selection rule.
 - Constraint-preserving endpoint variations solve the proper length as a modulus. The connected mixed
-  Hessian has singular values $(1902.725436,2.6\times10^{-9})$ after fourth-order Richardson control;
+  Hessian has singular values $(1902.725436,1.3\times10^{-9})$ after fourth-order Richardson control;
   the small value converges away and the Hamilton--Jacobi flow vectors are its null directions.
 - Holding $T=0.7$ fixed instead gives a full-rank mixed spectrum $(1297.02951,613.38930)$. Rank one is
   therefore a constraint-reduction result, not a consequence of connectedness alone.
 - The complete boundary Hessian has two negative eigenvalues, and the real-contour scalar Schur
   complement is indefinite. The fixed-scale $0.0875594$-nat Gaussian diagnostic is not a physical
   gravitational entropy without a contour, boundary factorization, physical measure, and trace test.
-- The live runnable catalog is now 55. The machine ontology remains indexed through Phase 23 pending a
+- The live runnable catalog rose to 55 at Phase 24. The machine ontology remains indexed through Phase 23 pending a
   frozen Phase 24 evidence snapshot.
 
 See
 [`../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md`](../cpt_temporal_folded_susy/PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md)
 and
 [`../cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py`](../cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 25
+
+Phase 25 uses the full off-constraint Euler–Lagrange system and returns exit 0 with **5 exact checks and
+12 numerical checks**.
+
+- The fixed Phase-24 boundaries give a lapse saddle at $T_*=0.7$, with
+  $W_T=0$ and $W_{TT}=-8.9231430383$. The real direction is locally nonconvergent for $e^{-W}$;
+  the recorded constant-phase descent segment leaves in the imaginary direction.
+- The symmetric $5\times5$ $(q,T)$ Hessian reduces by a lapse Schur complement to the independently
+  computed constrained Phase-24 Hessian with relative error $7.01\times10^{-11}$.
+- The base fixed-$T$ Jacobi map is nonsingular, so its constrained rank loss is not a caustic.
+- The tracked real reflection-symmetric branch reaches a corank-one simple fold at
+  $T_c=9.7886255681$. Two real roots at $T=9.78$ and both fold transversality conditions were checked.
+- This does not fix the original lapse contour, global intersection number, FP measure, physical bulk
+  Morse index, or a positive WDW/SUGRA seam state. The live runnable catalog is now 56; ontology remains
+  indexed through Phase 23 pending frozen Phase 24–25 snapshots.
+
+See
+[`../cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md`](../cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md)
+and
+[`../cpt_temporal_folded_susy/phase25_connected_lapse_scan.py`](../cpt_temporal_folded_susy/phase25_connected_lapse_scan.py).
 
 ## Historical scientific ledger
 

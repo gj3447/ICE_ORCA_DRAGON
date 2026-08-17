@@ -80,7 +80,7 @@ def potential_prime(phi: float | np.ndarray) -> float | np.ndarray:
 
 
 def euclidean_rhs(_tau: float, state: np.ndarray) -> np.ndarray:
-    """O(4)-symmetric Euclidean equations plus the on-shell action."""
+    """Full off-constraint Euclidean Euler--Lagrange flow plus the action."""
 
     scale, scale_velocity, phi, phi_velocity, _action = state
     lagrangian = TWO_PI_SQUARED * (
@@ -238,7 +238,12 @@ def solve_constrained_boundaries(
 
     root_result = root(residual, shooting_guess, method="hybr", tol=1e-12)
     residual_vector = residual(root_result.x)
-    if not root_result.success and np.linalg.norm(residual_vector) > 2e-9:
+    residual_norm = float(np.linalg.norm(residual_vector))
+    if (
+        not np.all(np.isfinite(root_result.x))
+        or residual_norm > 2e-9
+        or root_result.x[2] <= 0.0
+    ):
         raise RuntimeError(
             f"constrained shooting failed: {root_result.message}; "
             f"residual={residual_vector.tolist()}"
@@ -312,7 +317,8 @@ def solve_fixed_length_boundaries(
 
     root_result = root(residual, velocity_guess, method="hybr", tol=1e-12)
     residual_vector = residual(root_result.x)
-    if not root_result.success and np.linalg.norm(residual_vector) > 2e-9:
+    residual_norm = float(np.linalg.norm(residual_vector))
+    if not np.all(np.isfinite(root_result.x)) or residual_norm > 2e-9:
         raise RuntimeError(
             f"fixed-length shooting failed: {root_result.message}; "
             f"residual={residual_vector.tolist()}"
@@ -403,7 +409,19 @@ def exact_controls(audit: Audit) -> dict[str, object]:
         "the endpoint Hamilton-Jacobi gradient uses the canonical momenta of the reduced action",
     )
 
-    symbolic_v = sp.symbols("V", real=True, finite=True)
+    symbolic_v, scale_ddot = sp.symbols(
+        "V addot", real=True, finite=True
+    )
+    scale_lagrangian = 2 * sp.pi**2 * (
+        -3 * scale * (scale_dot**2 + 1)
+        + scale**3 * (sp.Rational(1, 2) * phi_dot**2 + symbolic_v)
+    )
+    scale_euler_lagrange = sp.expand(
+        sp.diff(sp.diff(scale_lagrangian, scale_dot), scale) * scale_dot
+        + sp.diff(sp.diff(scale_lagrangian, scale_dot), scale_dot)
+        * scale_ddot
+        - sp.diff(scale_lagrangian, scale)
+    )
     full_scale_eom = (
         (1 - scale_dot**2) / (2 * scale)
         - scale * phi_dot**2 / 4
@@ -418,12 +436,16 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     audit.exact(
         "P24.action.off_shell_scale_equation",
         sp.simplify(
+            scale_euler_lagrange.subs(scale_ddot, full_scale_eom)
+        )
+        == 0
+        and sp.simplify(
             full_scale_eom
             - reduced_scale_eom
             + symbolic_constraint / (2 * scale)
         )
         == 0,
-        "the full scale-factor Euler-Lagrange equation differs from its constraint-reduced form by -C/(2a)",
+        "the action yields the full scale-factor equation, which differs from its constraint-reduced form by -C/(2a)",
     )
 
     jm_entries = sp.symbols("jm0:4", real=True)
@@ -447,12 +469,30 @@ def exact_controls(audit: Audit) -> dict[str, object]:
         "the mixed-Hessian bitensor law preserves rank under invertible separate endpoint Jacobians",
     )
 
-    correlation = sp.symbols("r", positive=True)
-    schmidt = correlation / (1 + sp.sqrt(1 - correlation**2))
+    precision_coupling = sp.symbols("kappa", positive=True)
+    schmidt_magnitude = precision_coupling / (
+        1 + sp.sqrt(1 - precision_coupling**2)
+    )
     audit.exact(
         "P24.gaussian.schmidt_relation",
-        sp.simplify(2 * schmidt / (1 + schmidt**2) - correlation) == 0,
-        "the conditional two-mode Gaussian correlation obeys r=2t/(1+t^2)",
+        sp.simplify(
+            2 * schmidt_magnitude / (1 + schmidt_magnitude**2)
+            - precision_coupling
+        )
+        == 0,
+        "the conditional two-mode Gaussian precision coupling obeys kappa=2|t|/(1+|t|^2)",
+    )
+    unit_precision = sp.Matrix(
+        [[1, precision_coupling], [precision_coupling, 1]]
+    )
+    position_covariance = sp.simplify(unit_precision.inv() / 2)
+    position_correlation = sp.simplify(
+        position_covariance[0, 1] / position_covariance[0, 0]
+    )
+    audit.exact(
+        "P24.gaussian.precision_covariance_sign",
+        position_correlation == -precision_coupling,
+        "a positive off-diagonal precision coupling gives the opposite-sign position covariance correlation",
     )
     return {
         "potential": "V(phi)=3/4[1-exp(-sqrt(2/3)phi)]^2",
@@ -571,7 +611,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         "P24.hessian.constraint_reduced_rank_one",
         singular_values[0] > 1e3
         and singular_values[1] / singular_values[0] < 3e-10,
-        "the nonzero constrained mixed response survives while the gauge singular value vanishes; "
+        "the nonzero constrained mixed response survives while the constraint-null singular value vanishes; "
         f"sigma={singular_values.tolist()}",
     )
 
@@ -595,19 +635,27 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
 
     scalar_precision = richardson_hessian[np.ix_([1, 3], [1, 3])]
     scalar_eigenvalues = np.linalg.eigvalsh(scalar_precision)
-    scalar_correlation = float(
+    normalized_precision_coupling = float(
         scalar_precision[0, 1]
         / np.sqrt(scalar_precision[0, 0] * scalar_precision[1, 1])
     )
-    schmidt_parameter = float(
-        scalar_correlation
-        / (1.0 + np.sqrt(1.0 - scalar_correlation**2))
+    scalar_covariance = 0.5 * np.linalg.inv(scalar_precision)
+    position_correlation = float(
+        scalar_covariance[0, 1]
+        / np.sqrt(scalar_covariance[0, 0] * scalar_covariance[1, 1])
+    )
+    schmidt_magnitude = float(
+        normalized_precision_coupling
+        / (
+            1.0
+            + np.sqrt(1.0 - normalized_precision_coupling**2)
+        )
     )
     conditional_entropy = float(
-        -np.log(1.0 - schmidt_parameter**2)
-        - schmidt_parameter**2
-        / (1.0 - schmidt_parameter**2)
-        * np.log(schmidt_parameter**2)
+        -np.log(1.0 - schmidt_magnitude**2)
+        - schmidt_magnitude**2
+        / (1.0 - schmidt_magnitude**2)
+        * np.log(schmidt_magnitude**2)
     )
     audit.numerical(
         "P24.gaussian.fixed_scale_scalar_positive",
@@ -616,10 +664,11 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     )
     audit.numerical(
         "P24.gaussian.conditional_parameters",
-        abs(scalar_correlation - 0.25631946) < 2e-7
-        and abs(schmidt_parameter - 0.13033687) < 2e-7
+        abs(normalized_precision_coupling - 0.25631946) < 2e-7
+        and abs(position_correlation + 0.25631946) < 2e-7
+        and abs(schmidt_magnitude - 0.13033687) < 2e-7
         and abs(conditional_entropy - 0.0875594) < 2e-7,
-        "the fixed-scale flat-measure Gaussian has the recorded conditional r, t, and entropy",
+        "the fixed-scale Gaussian separates its positive precision coupling, negative position correlation, Schmidt magnitude, and conditional entropy",
     )
 
     negative_modes = int(np.count_nonzero(full_eigenvalues < 0.0))
@@ -683,9 +732,11 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         "fixed_length_cross_singular_values": fixed_singular_values.tolist(),
         "conditional_fixed_scale_scalar": {
             "precision": scalar_precision.tolist(),
+            "position_covariance": scalar_covariance.tolist(),
             "eigenvalues": scalar_eigenvalues.tolist(),
-            "r": scalar_correlation,
-            "t": schmidt_parameter,
+            "normalized_precision_coupling": normalized_precision_coupling,
+            "position_correlation": position_correlation,
+            "schmidt_magnitude": schmidt_magnitude,
             "entropy_nats": conditional_entropy,
             "interpretation": "flat-measure two-real-mode toy with delta a_+=delta a_-=0",
         },

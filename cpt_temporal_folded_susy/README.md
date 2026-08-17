@@ -54,13 +54,15 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `phase23_homogeneous_minisuperspace_density.py` | full-real-lapse rigging, KG current, compact spectral density, quadratic zero root와 decompactification을 가르는 exact+numerical 실행체 |
 | `PHASE23_HOMOGENEOUS_MINISUPERSPACE_DENSITY.md` | Phase 23 보고서 — 32 exact + 4 numerical checks. supplied \(B_L\)은 regulated density를 만들지만 constraint/CPT-like pairing만으로 그 가중치는 선택되지 않음 |
 | `phase24_connected_starobinsky_interval.py` | real connected Starobinsky \(S^3\times I\) saddle, Hamilton-principal Hessian, constraint-null mixed block, fixed-length mutant와 contour obstruction을 가르는 실행체 |
-| `PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md` | Phase 24 보고서 — 5 exact + 14 numerical checks. connected response와 rank-one constrained channel은 지지되지만 positive density·physical entropy·thimble 선택은 미유도 |
+| `PHASE24_CONNECTED_STAROBINSKY_INTERVAL.md` | Phase 24 보고서 — 6 exact + 14 numerical checks. connected response와 rank-one constrained channel은 지지되지만 positive density·physical entropy·thimble 선택은 미유도 |
+| `phase25_connected_lapse_scan.py` | full off-shell lapse flow, Hamilton–Jacobi time identity, Schur reduction, Jacobi map, complex constant-phase segment와 real simple fold를 검증하는 실행체 |
+| `PHASE25_CONNECTED_LAPSE_SCAN.md` | Phase 25 보고서 — 5 exact + 12 numerical checks. base lapse saddle과 local descent는 계산됐지만 global intersection number와 positive quantum state는 미유도 |
 | `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–23의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 24)
+## 현재 경계 (Phase 25)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -172,6 +174,14 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - full boundary Hessian과 real-contour scalar Schur complement는 indefinite다. fixed-\(a_\pm\)
   scalar subblock의 \(0.08756\)-nat 값은 flat-measure pure-two-mode Gaussian diagnostic일 뿐,
   physical seam entropy나 positive WDW density가 아니다. Phase 24는 아직 ontology에 색인되지 않았다.
+- Phase 25는 fixed-boundary principal function이 \(T_*=0.7\)에서
+  \(W_T=0\), \(W_{TT}=-8.923143\)인 nondegenerate lapse saddle임을 확인했다. 실수 \(T\)는
+  \(e^{-W}\)의 local ascent이고, 기록된 constant-phase descent는 허수 방향으로 출발한다.
+- augmented \((q,T)\) Hessian의 lapse Schur complement가 Phase 24 constrained Hessian을
+  \(10^{-10}\) 이하 상대오차로 재현한다. 따라서 base rank one은 caustic이 아니라 lapse 제거 결과다.
+- 같은 real symmetric branch는 \(T_c=9.788625568\)에서 simple Dirichlet fold에 도달한다.
+  이는 global single-saddle 해석의 반례지만, global thimble·intersection number·physical Morse index를
+  아직 정하지 않는다. Phase 24–25는 아직 ontology에 색인되지 않았다.
 
 ## 다음 계산
 

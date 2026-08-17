@@ -249,18 +249,40 @@ K_\phi=
 \end{pmatrix},
 \]
 
-whose eigenvalues are $2578.854316$ and $4356.527626$.  In a supplied
-flat $d\phi_-d\phi_+$ measure and a pure two-real-mode Gaussian reading,
+whose eigenvalues are $2578.854316$ and $4356.527626$.  Its normalized
+off-diagonal **precision coupling** is
 
 \[
-r=0.256319454,
+\kappa_K
+=\frac{(K_\phi)_{12}}
+{\sqrt{(K_\phi)_{11}(K_\phi)_{22}}}
+=0.256319454.
+\]
+
+For the supplied flat $d\phi_-d\phi_+$ measure, the corresponding position
+covariance is
+
+\[
+\Sigma_\phi=(2K_\phi)^{-1},
 \qquad
-t=\frac{r}{1+\sqrt{1-r^2}}=0.130336866,
+\rho_\phi
+=\frac{(\Sigma_\phi)_{12}}
+{\sqrt{(\Sigma_\phi)_{11}(\Sigma_\phi)_{22}}}
+=-0.256319454.
+\]
+
+Thus the positive number previously denoted by $r$ is the precision coupling,
+not the Pearson position correlation.  In a pure two-real-mode Gaussian
+reading, the Schmidt magnitude is
+
+\[
+|t|=\frac{\kappa_K}{1+\sqrt{1-\kappa_K^2}}
+=0.130336866,
 \]
 
 \[
 S_G
-=-\log(1-t^2)-\frac{t^2}{1-t^2}\log t^2
+=-\log(1-|t|^2)-\frac{|t|^2}{1-|t|^2}\log |t|^2
 =0.087559403\ \mathrm{nats}.
 \]
 
@@ -341,7 +363,7 @@ uv run --locked python3 \
   cpt_temporal_folded_susy/phase24_connected_starobinsky_interval.py
 ```
 
-The executable emits four exact checks, fourteen numerical checks, and one
+The executable emits six exact checks, fourteen numerical checks, and one
 machine-readable `PHASE24_RESULT` record.  It writes no files.
 
 ## Primary references and their boundary
