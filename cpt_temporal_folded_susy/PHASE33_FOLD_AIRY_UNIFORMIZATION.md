@@ -15,24 +15,31 @@ The two real classical branches were solved down to
 \delta\equiv T_c-T=2\times10^{-4}.
 \]
 
-Their action gap obeys
+At the smallest recorded separation, the action-gap ratio is
 
 \[
 \boxed{
-|\Delta W|
-=93.0272\,\delta^{3/2}+o(\delta^{3/2})
+\left.\frac{|\Delta W|}{\delta^{3/2}}\right|_{\delta=2\times10^{-4}}
+=93.02721
 }
 \]
 
-and therefore defines the invariant local Airy **action-scale** magnitude
+and the last four recorded points have log--log slope $1.499976$.  The
+corresponding invariant local Airy **action-scale** magnitude satisfies
 
 \[
 \boxed{
 \zeta_{\rm act}
 =\left(\frac{3|\Delta W|}{4}\right)^{2/3}
-=16.94783\,\delta+o(\delta).
+\quad\text{with}\quad
+\left.\frac{\zeta_{\rm act}}{\delta}\right|_{\delta=2\times10^{-4}}
+=16.94783.
 }
 \]
+
+Its last-four-point log--log slope is $0.999984$.  These are recorded
+finite-resolution ratios and slopes, not error-certified asymptotic
+coefficients.
 
 The soft Jacobi singular value scales as $\delta^{1/2}$, while each separate
 endpoint Van Vleck proxy scales as $\delta^{-1/4}$.  That divergence is the
@@ -55,16 +62,17 @@ $\operatorname{Ai}$ and $\operatorname{Bi}$ are regular at the fold and
 W[\operatorname{Ai},\operatorname{Bi}](0)=\frac1\pi\neq0.
 \]
 
-Thus an original relative cycle and its oriented determinant line are still
-needed to choose an Airy contour/Stokes multiplier.  Separately, the analytic
-path-integral amplitude fixes the coefficients multiplying that contour
-function and its derivative.  The fold removes a coordinate singularity; it
-does not solve either layer of the global contour-selection problem.
+Thus an original relative cycle is still needed to choose an Airy
+contour/Stokes combination.  The determinant line separately fixes a
+prefactor orientation/phase, while the analytic path-integral amplitude fixes
+the coefficients multiplying that contour function and its derivative.  The
+fold removes a coordinate singularity; it does not solve these global data.
 
 Finally, a radius-one $T$-plane patch around $T_c$ is disjoint from both the
 imaginary-axis full-lapse contour and all Phase-32 lower bypasses with
 $r\leq0.1$.  The fold therefore adds no **local lapse-base intersection** to
-the recorded Phase-32 $+1$ contribution.  This statement is local; other
+the Phase-32 projected crossing whose coordinate sign is $+1$ under the
+declared orientations.  This statement is local; other
 dual arms outside the patch remain uncomputed.
 
 The executable passes 8 exact and 7 numerical checks.  No desired inflation
@@ -133,7 +141,7 @@ Their phase gap is exactly
 =\frac43\zeta^{3/2}.
 \]
 
-Hence a measured branch-action gap fixes the action-valued magnitude
+Hence a measured branch-action gap fixes the action-to-the-$2/3$-power scale
 
 \[
 \zeta_{\rm act}
@@ -160,18 +168,22 @@ not uniform at $\zeta=0$.  The standard treatment of coalescing saddles is the
 Airy uniformization of
 [Chester--Friedman--Ursell](https://doi.org/10.1017/S0305004100032655).
 
-The calculation here fixes only $\zeta_{\rm act}$.  The complex phase/sign of
-the Airy argument depends on the exponent convention, chosen thimble, and
-determinant orientation.  It is not inferred from the real action gap.
-Restoring $\hbar$, the dimensionless argument has the form
+In the declared real canonical chart with exponent $e^{-W/\hbar}$, set
+$u=-\hbar^{1/3}t$.  Then
 
 \[
-z=e^{i\alpha}\frac{\zeta_{\rm act}}{\hbar^{2/3}}
-=e^{i\alpha}
-\left(\frac{3|\Delta W|}{4\hbar}\right)^{2/3},
+-\frac{\Phi}{\hbar}
+=\frac{t^3}{3}
+-\frac{\zeta_{\rm act}}{\hbar^{2/3}}t,
+\qquad
+z=\frac{\zeta_{\rm act}}{\hbar^{2/3}}.
 \]
 
-where $\alpha$ is precisely part of the missing contour data.
+An off-real argument phase would have to come from an explicitly derived
+complex canonical map or exponent branch.  The relative cycle instead
+selects the Ai/Bi (or rotated-Ai) contour combination, while the determinant
+line fixes a prefactor orientation/phase.  None of those latter data is
+inferred from the real action gap.
 
 ## 3. Numerical two-branch scaling
 
@@ -208,7 +220,10 @@ diverges as $\delta^{-1/4}$.  The rescaled values
 \delta^{1/4}|\det B_v|^{-1/2}
 \]
 
-approach finite branch-dependent limits near $9.9\times10^{-3}$.
+give two finite recorded values, $0.0098341$ and $0.0099340$, at the smallest
+$\delta$.  Their separation decreases monotonically over the recorded scan,
+consistent with approach to a common leading value; distinct branch limits
+have not been established.
 
 This proxy differs from a complete quantum prefactor.  It omits the chosen
 functional measure, ghost superdeterminant, Airy amplitude function, and
@@ -243,7 +258,7 @@ are regular at $z=0$.  Their Wronskian is
 =\frac1\pi.
 \]
 
-Therefore the local Airy **contour-function** space is rank two.  In an
+Therefore the local Airy ODE solution space is rank two.  In an
 Ai/Bi basis one may write
 
 \[
@@ -251,9 +266,10 @@ Ai/Bi basis one may write
 =c_A\operatorname{Ai}(z)+c_B\operatorname{Bi}(z).
 \]
 
-Neither finiteness nor the simple-fold equations fix this contour/Stokes
-combination.  It encodes how the original relative cycle enters and leaves
-the local Airy chart.
+Neither finiteness nor the simple-fold equations says that both basis
+solutions are admissible lifted gravitational contours, or fixes the
+contour/Stokes combination.  That combination encodes how the original
+relative cycle enters and leaves the local Airy chart.
 
 There is a second, distinct layer.  For a generic analytic path-integral
 amplitude $G(u,\zeta)$, the CFU decomposition has the form
@@ -310,8 +326,8 @@ The fold is centered at $T_c\simeq9.7886$.  Thus a radius-one fold patch has
 \]
 
 and cannot meet either the imaginary axis or those endpoint caps.  The fold
-does not add a local crossing to the recorded finite-$r$ Phase-32
-contribution.
+does not add a local crossing to the recorded finite-$r$ Phase-32 projected
+lapse-base crossing.
 
 This does not determine the global intersection matrix.  The complete dual
 may leave the fold chart and cross the original cycle elsewhere, and other
@@ -325,18 +341,22 @@ Established in the frozen homogeneous connected model:
 - the recorded caustic is a transverse simple fold;
 - two actual fixed-boundary branches have the universal
   $|\Delta W|\sim\delta^{3/2}$ scaling;
-- $\zeta_{\rm act}\sim16.94783\delta$ in the recorded $\hbar=1$ units;
+- at $\delta=2\times10^{-4}$, the recorded ratio
+  $\zeta_{\rm act}/\delta=16.94783$, with last-four-point log slope
+  $0.999984$;
 - the soft Jacobi direction scales as $\sqrt\delta$ and the branch
   determinants have opposite signs;
 - separate endpoint Van Vleck proxies scale as $\delta^{-1/4}$;
 - the fold is not a lapse saddle;
 - a radius-one fold chart is locally disjoint from the Phase-32 lapse cycle;
-- local Airy regularity leaves a rank-two contour-function space, distinct
-  from the even/odd analytic-amplitude data.
+- local Airy regularity leaves a rank-two ODE solution space, distinct from
+  the even/odd analytic-amplitude data; admissible lifted gravitational
+  cycles remain uncomputed.
 
 Still open:
 
-- the phase/sign of the Airy argument and the contour/Stokes multiplier;
+- an off-real canonical-map/exponent branch for the Airy argument, and the
+  separately selected contour/Stokes combination;
 - the analytic amplitude coefficients multiplying the chosen Airy function
   and its derivative, plus the absolute determinant/Maslov line;
 - every joint upward-cycle arm outside the fold chart;
@@ -359,11 +379,10 @@ uv run --locked python3 \
 ./ice run phase33_fold_airy_uniformization
 ```
 
-Expected result:
+The final JSON payload contains:
 
-```text
-8 exact checks passed
-7 numerical checks passed
+```json
+{"exact_checks": 8, "numerical_checks": 7}
 ```
 
 The script writes no files.

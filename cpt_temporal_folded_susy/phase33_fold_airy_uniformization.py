@@ -66,8 +66,9 @@ class Audit:
 
 
 def exact_controls(audit: Audit) -> dict[str, object]:
-    u, zeta, action_gap = sp.symbols(
-        "u zeta DeltaW", positive=True, real=True
+    u = sp.symbols("u", real=True)
+    zeta, action_gap = sp.symbols(
+        "zeta DeltaW", positive=True, real=True
     )
     normal_form = u**3 / 3 - zeta * u
     stationary_plus = sp.sqrt(zeta)
@@ -115,11 +116,15 @@ def exact_controls(audit: Audit) -> dict[str, object]:
 
     airy_ai = sp.airyai(zeta)
     airy_bi = sp.airybi(zeta)
+    airy_ai_zero = sp.expand_func(sp.airyai(0))
+    airy_bi_zero = sp.expand_func(sp.airybi(0))
     audit.exact(
         "P33.Airy.two_regular_solutions",
         sp.simplify(sp.diff(airy_ai, zeta, 2) - zeta * airy_ai) == 0
-        and sp.simplify(sp.diff(airy_bi, zeta, 2) - zeta * airy_bi) == 0,
-        "Ai and Bi both solve the local Airy equation and are regular at the fold",
+        and sp.simplify(sp.diff(airy_bi, zeta, 2) - zeta * airy_bi) == 0
+        and airy_ai_zero.is_finite is True
+        and airy_bi_zero.is_finite is True,
+        "Ai and Bi solve the local Airy equation and have finite exact values at the fold",
     )
 
     wronskian_at_zero = sp.expand_func(
@@ -129,7 +134,7 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     audit.exact(
         "P33.Airy.local_regularity_does_not_select_cycle",
         sp.simplify(wronskian_at_zero - 1 / sp.pi) == 0,
-        "the nonzero Ai/Bi Wronskian leaves a two-dimensional regular local solution space",
+        "the nonzero Ai/Bi Wronskian leaves a two-dimensional regular local ODE solution space; admissible lifted gravitational cycles are not inferred",
     )
 
     amplitude_plus, amplitude_minus = sp.symbols(
@@ -164,8 +169,8 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     return {
         "canonical_fold_phase": "Phi(u,zeta)=u^3/3-zeta u",
         "Airy_action_scale_magnitude": "zeta_action=(3 abs(DeltaW)/4)^(2/3)",
-        "dimensionless_Airy_argument": "z=exp(i alpha) zeta_action/hbar^(2/3); alpha is contour dependent and not fixed here",
-        "local_contour_solution_basis": "Ai(z), Bi(z), or rotated-Ai equivalents; local regularity does not select the relative cycle",
+        "dimensionless_Airy_argument": "z=zeta_action/hbar^(2/3) in the declared real e^(-W/hbar) canonical chart; any complex phase requires a separately derived canonical-map/exponent branch",
+        "local_contour_solution_basis": "Ai(z), Bi(z), or rotated-Ai equivalents; the relative cycle selects a combination but local ODE regularity does not",
         "generic_CFU_amplitude_structure": "A(zeta) hbar^(1/3) Airy_C(z)+B(zeta) hbar^(2/3) Airy_C_prime(z)+higher terms for a chosen contour C",
         "local_fold_patch_radius": 1.0,
     }
@@ -275,12 +280,55 @@ def fold_scan() -> dict[str, object]:
         boundary,
         -fold_endpoint[[1, 3]],
     )
+
+    tail = records[-4:]
+    tail_deltas = np.asarray([record["delta"] for record in tail])
+
+    def log_slope(values: np.ndarray) -> float:
+        return float(np.polyfit(np.log(tail_deltas), np.log(values), 1)[0])
+
+    gap_values = np.asarray([record["action_gap"] for record in tail])
+    airy_values = np.asarray(
+        [record["Airy_action_scale_magnitude"] for record in tail]
+    )
+    sigma_values = [
+        np.asarray(
+            [
+                record["sigma_min_over_sqrt_delta"][branch]
+                * np.sqrt(record["delta"])
+                for record in tail
+            ]
+        )
+        for branch in (0, 1)
+    ]
+    van_vleck_values = [
+        np.asarray(
+            [
+                record["scaled_endpoint_Van_Vleck_proxies"][branch]
+                / record["delta"] ** 0.25
+                for record in tail
+            ]
+        )
+        for branch in (0, 1)
+    ]
+    scaling_fits = {
+        "tail_point_count": len(tail),
+        "action_gap_log_slope": log_slope(gap_values),
+        "Airy_scale_log_slope": log_slope(airy_values),
+        "soft_singular_value_log_slopes": [
+            log_slope(values) for values in sigma_values
+        ],
+        "endpoint_Van_Vleck_proxy_log_slopes": [
+            log_slope(values) for values in van_vleck_values
+        ],
+    }
     return {
         "boundary": boundary.tolist(),
         "fold": fold,
         "fold_action": float(fold_solution.action),
         "fold_W_T": float(-fold_solution.energy),
         "records": records,
+        "scaling_fits": scaling_fits,
     }
 
 
@@ -288,6 +336,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     scan = fold_scan()
     fold = scan["fold"]
     records = scan["records"]
+    scaling_fits = scan["scaling_fits"]
 
     audit.numerical(
         "P33.fold.frozen_simple_fold_control",
@@ -306,8 +355,9 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             )
             > 0
         )
+        and abs(scaling_fits["action_gap_log_slope"] - 1.5) < 5e-5
         and abs(records[-1]["action_gap_over_delta_3_2"] - 93.0272) < 8e-4,
-        "the two real branch actions coalesce with DeltaW proportional to delta^(3/2)",
+        "the recorded two-branch action gap has a last-four-point log slope consistent with delta^(3/2)",
     )
     audit.numerical(
         "P33.fold.Airy_scale_linear",
@@ -317,8 +367,9 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             )
             > 0
         )
+        and abs(scaling_fits["Airy_scale_log_slope"] - 1.0) < 3e-5
         and abs(records[-1]["Airy_action_scale_over_delta"] - 16.94783) < 8e-5,
-        "the invariant Airy action-scale magnitude is linear in T_c-T near the fold (hbar=1 units)",
+        "the recorded invariant Airy action-scale magnitude has a last-four-point log slope consistent with T_c-T",
     )
     audit.numerical(
         "P33.fold.soft_Jacobi_square_root",
@@ -327,12 +378,17 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             and record["det_Bv_over_sqrt_delta"][1] > 0
             for record in records
         )
+        and max(
+            abs(value - 0.5)
+            for value in scaling_fits["soft_singular_value_log_slopes"]
+        )
+        < 0.012
         and abs(
             records[-1]["sigma_min_over_sqrt_delta"][0]
             - records[-1]["sigma_min_over_sqrt_delta"][1]
         )
         < 0.07,
-        "the soft Jacobi singular value scales as sqrt(delta) and the two branch determinants have opposite signs",
+        "the recorded soft Jacobi singular values have last-four-point slopes consistent with sqrt(delta), and the two branch determinants have opposite signs",
     )
     audit.numerical(
         "P33.fold.separate_endpoint_prefactor_quarter_power",
@@ -342,6 +398,23 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             for value in record["scaled_endpoint_Van_Vleck_proxies"]
         )
         and max(
+            abs(value + 0.25)
+            for value in scaling_fits["endpoint_Van_Vleck_proxy_log_slopes"]
+        )
+        < 0.012
+        and np.all(
+            np.diff(
+                [
+                    abs(
+                        record["scaled_endpoint_Van_Vleck_proxies"][1]
+                        - record["scaled_endpoint_Van_Vleck_proxies"][0]
+                    )
+                    for record in records
+                ]
+            )
+            < 0
+        )
+        and max(
             abs(
                 records[-1]["scaled_endpoint_Van_Vleck_proxies"][index]
                 - records[-2]["scaled_endpoint_Van_Vleck_proxies"][index]
@@ -349,7 +422,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             for index in (0, 1)
         )
         < 4e-4,
-        "the scaled endpoint Jacobi/Van-Vleck proxy delta^(1/4)/sqrt(abs(det Bv)) approaches a finite branch-dependent limit",
+        "the recorded endpoint Jacobi/Van-Vleck proxies have last-four-point slopes consistent with delta^(-1/4), while their finite rescaled branch values approach each other",
     )
     audit.numerical(
         "P33.fold.actual_BVP_residuals",
@@ -395,12 +468,12 @@ def run() -> dict[str, object]:
                 "the canonical simple-fold normal form and invariant Airy action-scale magnitude",
                 "two actual real fixed-boundary branches down to T_c-T=0.0002",
                 "action-gap, Jacobi-soft-mode, determinant-sign, and branch-prefactor scaling",
-                "the local two-dimensional regular Airy solution space",
+                "the local two-dimensional regular Airy ODE solution space; admissible lifted gravitational cycles are not inferred",
                 "nonstationarity of the fold in the lapse direction",
                 "local T-plane disjointness of a radius-one fold patch and the imaginary lapse contour",
             ],
             "not_computed": [
-                "the contour-dependent complex phase/sign of the Airy argument and the Airy contour/Stokes multiplier",
+                "an off-real canonical-map or exponent branch for the Airy argument, and the separately selected Airy contour/Stokes combination",
                 "the analytic amplitude coefficients multiplying the chosen Airy function and its derivative, or a uniformized absolute prefactor",
                 "the continuation of every full joint dual arm beyond the fold patch",
                 "the global determinant line, BFV superorientation, or complete intersection matrix",
