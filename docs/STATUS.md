@@ -641,9 +641,11 @@ Phase 34 returns exit 0 with **5 exact checks and 10 numerical checks**.
 
 - A deterministic positive-$a_c$ orientation fixes the fold soft coordinate. Both actual real sheets
   have $W_T<0$ and the recorded projected dual direction sends them into the fold.
-- The Phase-33 action-gap seed gives
-  $\operatorname{Im}T=0.63089949\,\tau^{3/2}+O(\tau^{5/2})$ on the upper arm and
-  $\operatorname{Im}u<0$; complex conjugation supplies the lower arm.
+- Using the Phase-33 finite-resolution seed estimator $\kappa=0.63089949$, the smallest recorded
+  ratio is $\operatorname{Im}T/\tau^{3/2}=0.63089664$ and the recorded fit gives
+  $p=1.49986759$ for $\operatorname{Im}T\propto\tau^p$ on the upper arm, with
+  $\operatorname{Im}u<0$. These samples are consistent with the $3/2$ fold law; they are not an
+  error-certified asymptotic limit. Complex conjugation supplies the lower-arm control.
 - On the frozen reflection-symmetric stationary family and declared flat complex-$T$ metric, the
   constant-$\operatorname{Im}W$ tangent is a positive reparametrization of
   $dT/ds=-\overline{W_T}$. Independently re-solved centered differences agree with the
@@ -654,9 +656,10 @@ Phase 34 returns exit 0 with **5 exact checks and 10 numerical checks**.
 - Because the bounded chart has $\operatorname{Re}T>T_c>9.7$, neither conjugate lapse base meets the
   Phase-32 imaginary axis or its $r\le0.1$ endpoint caps. This is not a census of uncontinued arms,
   other sheets, unsampled Jacobi zeros, or good ends.
-- The committed runnable catalog is now 66. The full joint field--lapse metric and flow, oriented Airy
-  connection and determinant line, complete relative cycles, global $n_\sigma$, gauge-reduced kernel,
-  and physical trace-class state remain open.
+- The committed runnable catalog at Phase 34 is 65. The full joint field--lapse metric and flow, the
+  incoming-to-outgoing Airy relative-cycle connection, a separately oriented determinant line,
+  complete relative cycles, global $n_\sigma$, gauge-reduced kernel, and physical trace-class state
+  remain open.
 
 See
 [`../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md)

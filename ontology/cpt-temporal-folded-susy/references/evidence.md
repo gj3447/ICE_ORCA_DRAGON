@@ -130,7 +130,7 @@ The Phase 35 report hash is `467563b5eec62d0c3295be1ff7204ff0bd7d0688948e8841a00
 | `evidence:p33-two-branch-fold-scaling` | 7 numerical | Simple-fold Airy scale — `SUPPORTS`; fold is another lapse saddle — `CONTRADICTS`; separate-saddle divergence forces exact divergence — `CONTRADICTS` | Frozen real branch, two actual solutions at seven deltas, endpoint Jacobi/Van Vleck proxies, and nonzero `W_T` |
 | `evidence:p33-local-lapse-separation` | 1 exact | Radius-one fold patch adds a Phase-32 lapse intersection — `CONTRADICTS` | Local T-plane inequality only; arms outside the fold chart and all other sheets remain uncomputed |
 | `evidence:p34-exact-soft-orientation-and-reduced-flow` | 5 exact | Bounded directed constant-phase pair exists — `SUPPORTS` | Frozen stationary family and declared flat complex-T metric; no full joint flow or oriented connection |
-| `evidence:p34-complex-bvp-and-flow-continuation` | 7 numerical | Bounded directed constant-phase pair exists — `SUPPORTS` | Independently reintegrated bounded complex branch pair through `Re T=13` |
+| `evidence:p34-complex-bvp-and-flow-continuation` | 7 numerical | Bounded directed constant-phase pair exists — `SUPPORTS` | Upper full-interval BVP reintegrations through `Re T=13` plus conjugate lower-arm control; no independently discovered lower branch or incoming-cycle connection |
 | `evidence:p34-recorded-incoming-real-segment` | 1 numerical | Recorded incoming real segment is directed toward the fold — `SUPPORTS` | Forty-seven recorded post-saddle points; no connection to an outgoing arm |
 | `evidence:p34-bounded-jacobi-and-lapse-separation` | 2 numerical | Sampled arm contains another Jacobi zero — `CONTRADICTS`; bounded arms add a Phase-32 crossing — `CONTRADICTS` | Frozen samples and bounded lapse bases only; no global sheet/end census |
 | `evidence:p35-exact-detline-lift-and-conjugation` | 6 exact | Relative sampled endpoint transport, formal oriented fold law, and conjugate phase cancellation — `SUPPORTS`; sampled transport fixes absolute Maslov orientation — `CONTRADICTS` | Declared endpoint basis and sampled lift; no zero-free interpolation, absolute sign, or physical determinant |
@@ -1400,6 +1400,12 @@ claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2
   → HAS_EVIDENCE {polarity: SUPPORTS}
   → evidence:p35-dense-detline-and-fold-transport
   → VALID_WITHIN → scope:p35-sampled-reduced-endpoint-detline-transport
+
+claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p35-exact-detline-lift-and-conjugation
+  → VALID_WITHIN → scope:p35-sampled-reduced-endpoint-detline-transport
+  → MOTIVATES → open:p35-absolute-detline-full-bfv-and-global-cycle
 ```
 
 These traces preserve sampled nonvanishing and finite-resolution fold consistency. They do not prove a
