@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), and [`phase21-result.json`](../evidence/phase21-result.json).
+Machine-readable records: [`graph.json`](../graph.json), [`phase16-result.json`](../evidence/phase16-result.json), [`phase17-result.json`](../evidence/phase17-result.json), [`phase18-result.json`](../evidence/phase18-result.json), [`phase19-result.json`](../evidence/phase19-result.json), [`phase20-result.json`](../evidence/phase20-result.json), [`phase21-result.json`](../evidence/phase21-result.json), and [`phase22-result.json`](../evidence/phase22-result.json).
 
 ## Reading `PASS` correctly
 
-All 163 Phase 16–21 named exact checks have `status: PASS`. The snapshots also record 52 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, and 7 Phase 21 flux-tail/prior controls. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
+All 194 Phase 16–22 named exact checks have `status: PASS`. The snapshots also record 52 numerical checks: one Phase 18 SciPy control, 30 Phase 19 background/slow-roll checks, 14 Phase 20 benchmark/bridge checks, and 7 Phase 21 flux-tail/prior controls. Phase 22 adds 31 exact checks and no numerical fit. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed.
 
 The scientific direction is stored on:
 
@@ -26,6 +26,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 19 | `result:P19_CLOSED_SUGRA_BOUNCE_20260816`; `2026-08-16T17:23:38Z` | `cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py`; SHA-256 `5dbfccd768bb13961222c289ba0754497bec94319f8b33ff602889eaeb469341`; introduced in `90aedef93eadab40156fc22daf87b2d6942f49a6` | Exit `0`; 17 exact checks plus 30 numerical checks |
 | 20 | `result:P20_TWO_SHEET_WDW_SELECTION_20260816`; `2026-08-16T17:28:20Z` | `cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py`; SHA-256 `a55ebfca78f07246679fd5fa8791537a0efe1d3370dfa53d8d6410ffc6a95807`; introduced in `c5395bc095399ca450adf555d8d24e21a9166725` | Exit `0`; 18 exact checks plus 14 numerical checks |
 | 21 | `result:P21_CONNECTED_SEAM_GAUSSIAN_20260816`; `2026-08-16T18:11:47Z` | `cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py`; SHA-256 `6ac7b2b36da9aa2eeda4c83494427c5d9f006bb9031d6b55d6678bf2ffc5b005`; introduced in `44e2865cc850bf7fef0c4ccebde788ca703ab8d8` | Exit `0`; 27 exact checks plus 7 numerical checks |
+| 22 | `result:P22_FINITE_MODE_SEAM_DENSITY_20260817`; `2026-08-17T04:48:31Z` | `cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py`; SHA-256 `0a4da3c60bbd2231892938cb8a74f45bd3e491d9884df4adcc86051053d58dbe`; introduced in `d1befe783386f499818c3b902c90e5a9740e7fb4` | Exit `0`; 31 exact checks, 0 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -56,6 +57,10 @@ The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`]
 | `evidence:p21-single-mode-gaussian` | 12 exact | Unit baseline — `SUPPORTS`; normalization forces subtraction — `CONTRADICTS`; chosen zero-insertion identity — `SUPPORTS`; R-1 is connected — `CONTRADICTS`; log R is connected — `SUPPORTS` | Positive finite one-mode real-boson Gaussian only |
 | `evidence:p21-multimode-gaussian` | 4 exact | Log R is the connected generator — `SUPPORTS` | Finite positive block kernel and singular-value gate; no field-theory determinant |
 | `evidence:p21-flux-tail-and-prior` | 11 exact + 7 numerical | Reference subtraction guarantees normalizability — `CONTRADICTS`; one-flux constant-absolute toy sum — `SUPPORTS`; R-1 alone fixes physical flux probability — `CONTRADICTS` | One integer-flux toy with imposed kernel and prior comparisons; no WDW measure or joint \((n,\phi)\) distribution |
+| `evidence:p22-susy-and-density` | 16 exact | Positive-frequency density — `SUPPORTS`; reduced Gibbs covariance — `SUPPORTS` | One free SUSY oscillator with \(\omega,\beta>0\); finite temperature is not an unbroken positive-H vacuum |
+| `evidence:p22-graded-real-structure` | 5 exact | Graded anti-linear toy involution — `SUPPORTS` | Occupation-basis real structure only; no spacetime Clifford/Pin lift |
+| `evidence:p22-bridge-and-sk` | 6 exact | Density/DtN factor two — `SUPPORTS`; equal-source SK normalization — `SUPPORTS` | Finite density covariance and unitarity; no SK ghost/BRST completion |
+| `evidence:p22-zero-mode-obstruction` | 4 exact | Free noncompact zero mode has a trace-class TFD limit — `CONTRADICTS` | Fixed \(\beta>0\), \(\omega\to0^+\) in noncompact \(L^2(\mathbb R)\); compact/interacting constrained modes excluded |
 
 ## Phase 16 check ledger
 
@@ -400,6 +405,68 @@ weight by weight: \(d<4\) for the \(n^{-4}\) normalized-ratio tails, \(d<6\) for
 \(n^{-6}\) absolute sector difference, and \(d<2\) for the \(n^{-2}\) reference or
 relative-coupling sector-difference tails.
 
+## Phase 22 check ledger
+
+### Fixed-energy SUSY and finite density — 16 exact checks
+
+- `P22.susy.charge_nilpotent`
+- `P22.susy.adjoint_nilpotent`
+- `P22.susy.positive_closure`
+- `P22.susy.energy_conservation`
+- `P22.susy.fermion_oddness`
+- `P22.density.boson_geometric_norm`
+- `P22.density.fermion_pair_norm`
+- `P22.density.pure_projector_hermitian`
+- `P22.density.pure_projector_trace_one`
+- `P22.density.pure_projector_idempotent_rank_one`
+- `P22.density.partial_trace`
+- `P22.density.reduced_trace`
+- `P22.density.full_reduced_positivity`
+- `P22.density.gibbs_partition`
+- `P22.density.supermultiplet_equal_weights`
+- `P22.density.finite_temperature_not_zero_energy`
+
+These checks establish a normalized positive purification and a positive reduced Gibbs density for
+\(0<r=e^{-\beta\omega}<1\). The density commutes with the fixed-mode charges because both members of
+each positive-energy supermultiplet have equal weight. The positive energy at finite \(\beta\) is a
+separate exact guard against calling this an unbroken thermal vacuum.
+
+### Graded anti-linear real structure — 5 exact checks
+
+- `P22.theta.involution_square`
+- `P22.theta.state_invariance`
+- `P22.theta.parity_compatibility`
+- `P22.theta.energy_compatibility`
+- `P22.theta.ungraded_swap_mutant_rejected`
+
+The displayed phase and graded swap define an exact occupation-space toy involution. They do not
+construct a 4D Clifford reflection, spin structure, reflection square, or local-SUGRA Pin gluing law.
+
+### Euclidean bridge and SK trace — 6 exact checks
+
+- `P22.bridge.local_covariance`
+- `P22.bridge.cross_covariance`
+- `P22.bridge.normalized_coefficient`
+- `P22.bridge.amplitude_density_factor_two`
+- `P22.SK.equal_source_unitarity`
+- `P22.SK.wrong_adjoint_mutant_rejected`
+
+The density covariance is \((2K_{\rm DtN})^{-1}\), while \(K_{\rm DtN}\) is the amplitude Hessian.
+The SK check is the exact unitary identity \({\rm Tr}(U\rho U^\dagger)=1\); it is not a constructed
+ghost quartet or BRST cohomology.
+
+### Noncompact free zero-mode obstruction — 4 exact checks
+
+- `P22.zero_mode.boson_partition_diverges`
+- `P22.zero_mode.fermion_partition_finite`
+- `P22.zero_mode.coordinate_variance_diverges`
+- `P22.zero_mode.diagonal_stiffness_vanishes`
+
+The payload records `P22.guard.free_noncompact_zero_mode_trace_class` with
+`EXPECTED_OBSTRUCTION_CONFIRMED`. It is bounded to the unregulated noncompact free oscillator; a compact
+mode or the interacting constrained \((a,\phi)\) sector requires a separate physical measure and
+zero-mode treatment.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -411,6 +478,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.
 uv run --locked python3 cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py
 uv run --locked python3 cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py
 uv run --locked python3 cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py
+uv run --locked python3 cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -490,5 +558,24 @@ claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR
 
 Neither trace supplies the separate physical flux-sector measure represented by
 `open:p21-physical-flux-measure`.
+
+Phase 22's positive and obstructed traces are:
+
+```text
+claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p22-susy-and-density
+  → DEFINED_IN → artifact:p22-script
+  → RECORDED_IN → artifact:p22-evidence-snapshot
+  → VALID_WITHIN → scope:p22-positive-frequency-finite-mode-density
+
+claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p22-zero-mode-obstruction
+  → DEFINED_IN → artifact:p22-script
+  → RECORDED_IN → artifact:p22-evidence-snapshot
+  → VALID_WITHIN → scope:p22-noncompact-zero-mode-limit
+  → MOTIVATES → open:p22-homogeneous-minisuperspace-density
+```
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

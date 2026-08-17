@@ -1,0 +1,454 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P22_FINITE_MODE_SEAM_DENSITY_20260817",
+  "phase": "P22",
+  "observed_at_utc": "2026-08-17T04:48:31Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py",
+    "sha256": "0a4da3c60bbd2231892938cb8a74f45bd3e491d9884df4adcc86051053d58dbe",
+    "introduced_in_commit": "d1befe783386f499818c3b902c90e5a9740e7fb4"
+  },
+  "exact_checks": 31,
+  "checks": [
+    {
+      "id": "P22.susy.charge_nilpotent",
+      "statement": "the fixed-energy odd charge obeys Q^2=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.susy.adjoint_nilpotent",
+      "statement": "the positive-Hilbert adjoint obeys (Q^dagger)^2=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.susy.positive_closure",
+      "statement": "{Q,Q^dagger}=2H on the E=omega supermultiplet",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.susy.energy_conservation",
+      "statement": "[H,Q]=0 on the fixed-energy supermultiplet",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.susy.fermion_oddness",
+      "statement": "the charge anticommutes with fermion parity",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.boson_geometric_norm",
+      "statement": "the bosonic TFD geometric series has unit norm for 0<r<1",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.fermion_pair_norm",
+      "statement": "the graded fermion pair has unit norm",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.pure_projector_hermitian",
+      "statement": "the normalized pair defines a Hermitian pure density matrix",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.pure_projector_trace_one",
+      "statement": "the pure pair density matrix has unit trace",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.pure_projector_idempotent_rank_one",
+      "statement": "the pure pair density matrix is idempotent and rank one",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.partial_trace",
+      "statement": "the coefficient-matrix partial trace gives diag(1,r)/(1+r)",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.reduced_trace",
+      "statement": "the reduced fermion density matrix has unit trace",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.full_reduced_positivity",
+      "statement": "all Gibbs eigenweights are positive because p_(n,f)=(1-r)r^(n+f)/(1+r) with 0<r<1",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.gibbs_partition",
+      "statement": "Z=Z_B Z_F=(1+r)/(1-r) follows from the boson and fermion factors",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.supermultiplet_equal_weights",
+      "statement": "rho_plus gives equal weight to both states in every E=m omega supermultiplet",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.density.finite_temperature_not_zero_energy",
+      "statement": "<H>/omega=2r/(1-r^2)>0, so finite-r is not the positive-H vacuum",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.theta.involution_square",
+      "statement": "Theta_toy=S_g K squares to one in the displayed occupation convention",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.theta.state_invariance",
+      "statement": "the phase-i fermion pair is invariant under the graded anti-linear swap",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.theta.parity_compatibility",
+      "statement": "the toy involution commutes with total fermion parity",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.theta.energy_compatibility",
+      "statement": "the toy involution preserves the doubled occupation energy",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.theta.ungraded_swap_mutant_rejected",
+      "statement": "an ungraded sheet-swap mutant does not preserve the phase-i pair",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.bridge.local_covariance",
+      "statement": "<x_plus^2>=coth(beta omega/2)/(2 omega)",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.bridge.cross_covariance",
+      "statement": "<x_plus x_minus>=1/[2 omega sinh(beta omega/2)]",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.bridge.normalized_coefficient",
+      "statement": "the normalized cross-sheet coefficient is sech(beta omega/2)",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.bridge.amplitude_density_factor_two",
+      "statement": "the density covariance is one half of the Euclidean amplitude-kernel inverse",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.SK.equal_source_unitarity",
+      "statement": "Tr(U rho U^dagger)=1 for the exact finite CAR source rotation",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.SK.wrong_adjoint_mutant_rejected",
+      "statement": "replacing U^dagger by U fails the normalized closed-time-path identity",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.zero_mode.boson_partition_diverges",
+      "statement": "Z_B diverges as 1/(beta omega) in the noncompact oscillator limit",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.zero_mode.fermion_partition_finite",
+      "statement": "the fermion partition remains finite and tends to two",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.zero_mode.coordinate_variance_diverges",
+      "statement": "the coordinate covariance diverges as 1/(beta omega^2)",
+      "status": "PASS"
+    },
+    {
+      "id": "P22.zero_mode.diagonal_stiffness_vanishes",
+      "statement": "the diagonal Gaussian stiffness vanishes as beta omega^2/2",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "bridge_and_SK": {
+      "SK_identity": "Tr(U rho_plus U^dagger)=1",
+      "cross_covariance": "1/[2 omega sinh(beta omega/2)]",
+      "euclidean_interval": "L=beta/2",
+      "kernel_distinction": "the wavefunction uses K_DtN while |Psi|^2 has covariance (2K_DtN)^-1",
+      "normalized_coefficient": "sech(beta omega/2)",
+      "warning": "this is unitarity, not a constructed SK BRST quartet"
+    },
+    "calculation": "finite-mode CPT-like seam density control",
+    "claim_status": {
+      "finite_density_satisfies_equal_source_SK_normalization": "SUPPORTED_AS_UNITARITY_IDENTITY",
+      "finite_mode_state_selects_flux_or_inflaton_initial_data": "OPEN_NOT_COMPUTED",
+      "free_noncompact_zero_mode_has_a_trace_class_TFD_limit": "CONTRADICTED",
+      "full_4d_Pin_lift_from_toy_involution": "OPEN_NOT_CONSTRUCTED",
+      "full_gravitino_Goldstino_ghost_seam_density_exists": "OPEN_NOT_COMPUTED",
+      "graded_anti_linear_sheet_involution_exists": "SUPPORTED_AS_TOY_REAL_STRUCTURE",
+      "positive_frequency_TFD_like_density_is_normalized_and_positive": "SUPPORTED_IN_FINITE_MODE_CONTROL",
+      "reduced_Gibbs_density_commutes_with_fixed_mode_supercharges": "SUPPORTED_AS_COVARIANCE_NOT_VACUUM_SUSY"
+    },
+    "density_and_theta": {
+      "boson_factor": "sqrt(1-r) sum_n r^(n/2)|n,n>",
+      "fermion_factor": "(|00>+i sqrt(r)|11>)/sqrt(1+r)",
+      "partition": "Z=(1+r)/(1-r)",
+      "r": "exp(-beta omega), 0<r<1",
+      "reduced_state": "rho_plus=Z^-1 exp(-beta H)",
+      "theta": "(boson sheet swap tensor graded fermion swap) K",
+      "warning": "Theta_toy is not a spacetime Clifford/Pin lift"
+    },
+    "exact_check_ids": [
+      "P22.susy.charge_nilpotent",
+      "P22.susy.adjoint_nilpotent",
+      "P22.susy.positive_closure",
+      "P22.susy.energy_conservation",
+      "P22.susy.fermion_oddness",
+      "P22.density.boson_geometric_norm",
+      "P22.density.fermion_pair_norm",
+      "P22.density.pure_projector_hermitian",
+      "P22.density.pure_projector_trace_one",
+      "P22.density.pure_projector_idempotent_rank_one",
+      "P22.density.partial_trace",
+      "P22.density.reduced_trace",
+      "P22.density.full_reduced_positivity",
+      "P22.density.gibbs_partition",
+      "P22.density.supermultiplet_equal_weights",
+      "P22.density.finite_temperature_not_zero_energy",
+      "P22.theta.involution_square",
+      "P22.theta.state_invariance",
+      "P22.theta.parity_compatibility",
+      "P22.theta.energy_compatibility",
+      "P22.theta.ungraded_swap_mutant_rejected",
+      "P22.bridge.local_covariance",
+      "P22.bridge.cross_covariance",
+      "P22.bridge.normalized_coefficient",
+      "P22.bridge.amplitude_density_factor_two",
+      "P22.SK.equal_source_unitarity",
+      "P22.SK.wrong_adjoint_mutant_rejected",
+      "P22.zero_mode.boson_partition_diverges",
+      "P22.zero_mode.fermion_partition_finite",
+      "P22.zero_mode.coordinate_variance_diverges",
+      "P22.zero_mode.diagonal_stiffness_vanishes"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P22.susy.charge_nilpotent",
+        "statement": "the fixed-energy odd charge obeys Q^2=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.susy.adjoint_nilpotent",
+        "statement": "the positive-Hilbert adjoint obeys (Q^dagger)^2=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.susy.positive_closure",
+        "statement": "{Q,Q^dagger}=2H on the E=omega supermultiplet",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.susy.energy_conservation",
+        "statement": "[H,Q]=0 on the fixed-energy supermultiplet",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.susy.fermion_oddness",
+        "statement": "the charge anticommutes with fermion parity",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.boson_geometric_norm",
+        "statement": "the bosonic TFD geometric series has unit norm for 0<r<1",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.fermion_pair_norm",
+        "statement": "the graded fermion pair has unit norm",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.pure_projector_hermitian",
+        "statement": "the normalized pair defines a Hermitian pure density matrix",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.pure_projector_trace_one",
+        "statement": "the pure pair density matrix has unit trace",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.pure_projector_idempotent_rank_one",
+        "statement": "the pure pair density matrix is idempotent and rank one",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.partial_trace",
+        "statement": "the coefficient-matrix partial trace gives diag(1,r)/(1+r)",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.reduced_trace",
+        "statement": "the reduced fermion density matrix has unit trace",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.full_reduced_positivity",
+        "statement": "all Gibbs eigenweights are positive because p_(n,f)=(1-r)r^(n+f)/(1+r) with 0<r<1",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.gibbs_partition",
+        "statement": "Z=Z_B Z_F=(1+r)/(1-r) follows from the boson and fermion factors",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.supermultiplet_equal_weights",
+        "statement": "rho_plus gives equal weight to both states in every E=m omega supermultiplet",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.density.finite_temperature_not_zero_energy",
+        "statement": "<H>/omega=2r/(1-r^2)>0, so finite-r is not the positive-H vacuum",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.theta.involution_square",
+        "statement": "Theta_toy=S_g K squares to one in the displayed occupation convention",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.theta.state_invariance",
+        "statement": "the phase-i fermion pair is invariant under the graded anti-linear swap",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.theta.parity_compatibility",
+        "statement": "the toy involution commutes with total fermion parity",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.theta.energy_compatibility",
+        "statement": "the toy involution preserves the doubled occupation energy",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.theta.ungraded_swap_mutant_rejected",
+        "statement": "an ungraded sheet-swap mutant does not preserve the phase-i pair",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.bridge.local_covariance",
+        "statement": "<x_plus^2>=coth(beta omega/2)/(2 omega)",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.bridge.cross_covariance",
+        "statement": "<x_plus x_minus>=1/[2 omega sinh(beta omega/2)]",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.bridge.normalized_coefficient",
+        "statement": "the normalized cross-sheet coefficient is sech(beta omega/2)",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.bridge.amplitude_density_factor_two",
+        "statement": "the density covariance is one half of the Euclidean amplitude-kernel inverse",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.SK.equal_source_unitarity",
+        "statement": "Tr(U rho U^dagger)=1 for the exact finite CAR source rotation",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.SK.wrong_adjoint_mutant_rejected",
+        "statement": "replacing U^dagger by U fails the normalized closed-time-path identity",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.zero_mode.boson_partition_diverges",
+        "statement": "Z_B diverges as 1/(beta omega) in the noncompact oscillator limit",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.zero_mode.fermion_partition_finite",
+        "statement": "the fermion partition remains finite and tends to two",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.zero_mode.coordinate_variance_diverges",
+        "statement": "the coordinate covariance diverges as 1/(beta omega^2)",
+        "status": "PASS"
+      },
+      {
+        "id": "P22.zero_mode.diagonal_stiffness_vanishes",
+        "statement": "the diagonal Gaussian stiffness vanishes as beta omega^2/2",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 31,
+    "next_calculation": {
+      "homogeneous_sector": "replace the free omega=0 insertion by the constrained complex-cap minisuperspace action, primed determinant, collective-coordinate Jacobian, and physical WDW current",
+      "local_sugra_sector": "derive the coupled gauge-fixed gravitino-Goldstino-ghost boundary operator and test the projected density for positivity and trace class"
+    },
+    "numerical_check_ids": [],
+    "numerical_check_records": [],
+    "numerical_checks": 0,
+    "obstruction_guards": [
+      {
+        "id": "P22.guard.free_noncompact_zero_mode_trace_class",
+        "observed_status": "EXPECTED_OBSTRUCTION_CONFIRMED",
+        "scope": "unregulated noncompact L2(R) oscillator limit at fixed beta>0",
+        "supporting_check_ids": [
+          "P22.zero_mode.boson_partition_diverges",
+          "P22.zero_mode.coordinate_variance_diverges",
+          "P22.zero_mode.diagonal_stiffness_vanishes"
+        ],
+        "target": "a trace-class omega=0 limit of the displayed free Gaussian state"
+      }
+    ],
+    "phase": "P22",
+    "scope_guard": {
+      "what_is_computed": [
+        "one free 0+1 supersymmetric oscillator",
+        "omega>0 and beta>0 exact thermofield-double-like purification",
+        "fixed-energy positive-Hilbert SUSY algebra",
+        "mode-level graded anti-linear sheet involution",
+        "finite cross-sheet density covariance",
+        "elementary density-matrix Schwinger-Keldysh trace identity",
+        "the omega->0+ limit in the unregulated noncompact oscillator representation"
+      ],
+      "what_is_not_computed": [
+        "an unbroken physical thermal supersymmetry generator",
+        "a 4d Clifford or Pin lift",
+        "an infinite-mode Hilbert-Schmidt or UV-renormalized product state",
+        "an SK ghost quartet or BRST cohomology",
+        "a gravitino-Goldstino-ghost boundary kernel",
+        "a Wheeler-DeWitt physical projector, current, or Born measure",
+        "a distribution over flux n or inflaton phi0",
+        "a persistent SUSY-breaking scale or observable particle spectrum"
+      ]
+    },
+    "susy_oscillator": {
+      "basis": [
+        "|1_B,0_F>",
+        "|0_B,1_F>"
+      ],
+      "charge": "sqrt(2 omega) |1_B,0_F><0_B,1_F|",
+      "hamiltonian": "omega I_2",
+      "scope": "one invariant positive-energy supermultiplet of the full oscillator"
+    },
+    "zero_mode": {
+      "boson_partition": "Z_B~1/(beta omega) -> infinity",
+      "coordinate_variance": "<x^2>~1/(beta omega^2) -> infinity",
+      "diagonal_stiffness": "Omega~beta omega^2/2 ->0",
+      "fermion_partition": "Z_F->2",
+      "interpretation": "the unregulated noncompact free Gaussian has no trace-class zero-mode limit; this does not decide a compact zero mode or the interacting gravitational inflaton minisuperspace",
+      "limit": "omega->0+ at fixed beta>0"
+    }
+  }
+}

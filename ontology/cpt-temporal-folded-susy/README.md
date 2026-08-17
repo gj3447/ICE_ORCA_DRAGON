@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-16T18:13:41Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T04:48:31Z`). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md).
 
 ## Quick answers
 
@@ -27,7 +27,9 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does the leading two-sheet WDW control select \(\phi_0=5.442969\)? | No in the constant-field de Sitter envelope. The standard \(e^{2sI}\) history weight and conditional independent-pair \(e^{4sI}\) joint probability are monotone there. This is not an exact two-sheet SUGRA WDW no-go. | `claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44`; `claim:P20_INDEPENDENT_PAIR_WEIGHT_FOLLOWS_FROM_CPT_SEWING` |
 | Is the displayed \(\Omega_{K0}\)–\(T_{\rm reh}\) value a seam prediction? | No. The conversion is reproducible only after fixing the Phase 19 branch, reheating history, units, entropy data, and late-time parameters. | `claim:P20_CONDITIONAL_CURVATURE_REHEATING_CONVERSION_IS_REPRODUCIBLE`; `claim:P20_CURVATURE_REHEATING_NUMBER_IS_A_SEAM_PREDICTION` |
 | Does Gaussian normalization automatically give the physical flux probability? | No. It fixes the no-seam baseline at one. A chosen exclusion gives \(R-1\), while \(\log R\) is connected; the physical sector measure and decoherence rule remain open. | `claim:P21_NORMALIZATION_FORCES_ZERO_BRIDGE_SUBTRACTION`; `claim:P21_LOG_R_IS_CONNECTED_VACUUM_GENERATOR`; `claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope; Phase 21 identifies a normalized Gaussian baseline without deriving a universe probability. | Phase 16–21 scope guards |
+| Does a positive finite-mode seam density exist? | Yes for one free SUSY oscillator with \(\omega,\beta>0\). The exact purification is normalized and positive, its reduced Gibbs density commutes with the fixed-mode charges, and it passes the equal-source SK trace identity. This is not an unbroken thermal vacuum or a 4D Pin/SUGRA state. | `claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE`; `claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES`; `claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION` |
+| Does the same free Gaussian normalize the homogeneous mode? | No in the noncompact \(L^2(\mathbb R)\), \(\omega\to0^+\) limit: the bosonic partition and covariance diverge while the stiffness vanishes. Compact or interacting constrained inflaton modes are not decided. | `claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phase 16 leaves full 4D local SUSY and other slices untested; Phase 17 leaves a new doubled construction open; Phase 18 leaves interacting self-energies and a persistent carrier open; Phase 19 adds conditional classical backgrounds; Phase 20 excludes one leading selection envelope; Phase 21 identifies a normalized Gaussian baseline; Phase 22 adds a finite-mode density witness and a scoped zero-mode obstruction. | Phase 16–22 scope guards |
 
 ## Concept map
 
@@ -103,6 +105,14 @@ flowchart TD
   P21 --> Prob21["R-1 alone fixes WDW probability<br/>CONTRADICTED"]
   Tail21 --> Kernel21["OPEN: three-form SUGRA kernel"]
   Prob21 --> Measure21["OPEN: physical flux measure"]
+
+  Programme --> P22["Phase 22 · finite-mode seam density"]
+  P22 --> Dens22["Positive-frequency purification<br/>SUPPORTED as finite control"]
+  P22 --> Theta22["Graded anti-linear involution<br/>SUPPORTED as toy real structure"]
+  P22 --> SK22["Equal-source SK normalization<br/>SUPPORTED as unitarity"]
+  P22 --> Zero22["Free noncompact zero mode is trace class<br/>CONTRADICTED"]
+  Dens22 --> Full22["OPEN: homogeneous WDW density · local-SUGRA kernel"]
+  Zero22 --> Full22
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -114,6 +124,13 @@ Phase 19 adds gravity only at the homogeneous classical-background level. It ver
 Phase 20 tests one leading selection proposal rather than solving the exact WDW problem. The constant-field de Sitter envelope is monotone at the Phase 19 benchmark under both the standard \(e^{2sI}\) history weight and a separately assumed independent-pair \(e^{4sI}\) joint probability. Coherent phases, a WDW current, the sheet inner product, the exact complex saddle, and local-SUGRA loop sectors remain outside that result.
 
 Phase 21 replaces a guessed pair weight by an explicit positive finite Gaussian ratio. It proves that normalization identifies a unit no-seam term, but also proves that subtracting it is not forced and that \(R-1\) is not the connected functional. The one-flux convergence witness remains a toy because the kernel, sector measure, WDW inner product/current, and joint \((n,\phi)\) peak are not derived.
+
+Phase 22 constructs a different finite witness: a normalized thermofield-double-like purification of one
+supersymmetric oscillator. Its Gibbs covariance, graded occupation-space real structure, DtN density
+correlation, and equal-source SK trace identity are exact. Finite temperature has positive energy, so this
+is not an unbroken positive-Hamiltonian SUSY vacuum; the toy involution is not a spacetime Pin lift. The
+same noncompact free ansatz fails at \(\omega=0\), leaving the constrained homogeneous WDW and
+gravitino–Goldstino–ghost completions open.
 
 ## Core distinctions
 
@@ -140,6 +157,10 @@ Phase 21 replaces a guessed pair weight by an explicit positive finite Gaussian 
 | Unit baseline vs forced subtraction | Decoupled-sheet normalization gives \(R(0)=1\); using \(R-1\) additionally chooses to exclude the zero-insertion term. |
 | Remainder vs connected generator | \(R-1=\exp(\log R)-1\) includes products of connected rings; \(\log R\) is the linked-cluster generator. |
 | Finite determinant vs universe probability | A regulated or summable positive sequence still needs a physical sector measure, WDW current/inner product or decoherence functional before it can be called a probability. |
+| Gibbs covariance vs unbroken vacuum SUSY | \([\rho,Q]=0\) and equal multiplet weights do not make a finite-temperature state a zero-energy SUSY vacuum; Phase 22 checks \(\langle H\rangle>0\). |
+| Occupation-space real structure vs Pin lift | The graded anti-linear toy involution fixes the displayed finite state, but omits spacetime Clifford reflection, spin structure, reflection square, and local-SUGRA gluing. |
+| DtN amplitude vs density covariance | If the Euclidean amplitude is \(e^{-q^TKq/2}\), the probability density has covariance \((2K)^{-1}\), not \(K^{-1}\). |
+| Free noncompact zero mode vs inflaton minisuperspace | Divergence of the \(L^2(\mathbb R)\) free oscillator limit does not decide a compact mode or an interacting constrained \((a,\phi)\) wavefunction. |
 
 ## IDs and claim states
 
@@ -212,6 +233,8 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p20-conditional-curvature-reheating-benchmark` | One Phase 19 branch, \(w_{\rm reh}=0\), entropy conservation, explicit units, signed \(\Omega_K\) | Seam-selected amplitude/reheating, curvature detection, uncertainties/global likelihood, other thermal histories |
 | `scope:p21-positive-euclidean-gaussian` | Positive finite real-boson Gaussian determinant, covariance, Schur and linked-cluster algebra | Lorentzian/OS field theory, fermionic phases, SUGRA kernel, WDW probability |
 | `scope:p21-single-flux-tail-toy` | One integer flux, two explicit kernel scalings, tail and prior comparisons | Derived sector measure, joint \((n,\phi)\), membrane rate, inflationary selection |
+| `scope:p22-positive-frequency-finite-mode-density` | One free SUSY oscillator, \(\omega,\beta>0\), explicit doubled purification and finite trace functional | Infinite-mode UV product, 4D Pin, BRST, WDW measure, observables |
+| `scope:p22-noncompact-zero-mode-limit` | Fixed \(\beta>0\), \(\omega\to0^+\) in the original noncompact \(L^2(\mathbb R)\) oscillator representation | Compact regulators and interacting/gravitational inflaton minisuperspace |
 
 ## Open construction ledger
 
@@ -245,8 +268,10 @@ All entries below have state `OPEN` in the graph.
 | `open:p20-seam-reheating-curvature-prediction` | Joint seam derivation of initial amplitude, reheating dynamics, and a present curvature distribution |
 | `open:p21-three-form-seam-kernel` | Flux- and harmonic-dependent cross-sheet kernel derived from compact three-form SUGRA or a charged-membrane saddle |
 | `open:p21-physical-flux-measure` | Physical sector measure and WDW current/inner product or decoherence functional yielding a finite joint \((n,\phi)\) distribution |
+| `open:p22-homogeneous-minisuperspace-density` | Constrained complex-cap homogeneous density with zero-mode measure, collective-coordinate Jacobian, and physical WDW current |
+| `open:p22-gauge-fixed-local-sugra-seam-density` | Coupled gravitino–Goldstino–ghost boundary operator, physical projector, positivity, and trace-class test |
 
-The shortest honest statement of the research frontier is therefore: **finite doubled and state-preparation witnesses plus conditional closed backgrounds exist; the leading WDW envelope does not select \(5.44\), and a normalized Gaussian seam identifies a reference baseline but not a physical flux probability. Neither an exact predictive background-selection rule nor a common interacting theory with persistent spectral breaking exists yet.**
+The shortest honest statement of the research frontier is therefore: **finite doubled, Gaussian, and positive-frequency density witnesses plus conditional closed backgrounds exist; the leading WDW envelope does not select \(5.44\), the normalized Gaussian does not supply a universe probability, and the free noncompact zero mode is not trace class. Neither an exact predictive background-selection rule nor a full projected local-SUGRA seam density with persistent spectral breaking exists yet.**
 
 ## Repository artifacts
 
@@ -259,6 +284,7 @@ The shortest honest statement of the research frontier is therefore: **finite do
 | 19 | [`phase19_closed_sugra_bounce.py`](../../cpt_temporal_folded_susy/phase19_closed_sugra_bounce.py) | [`PHASE19_CLOSED_SUGRA_BOUNCE.md`](../../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md) | [`phase19-result.json`](./evidence/phase19-result.json) |
 | 20 | [`phase20_two_sheet_wdw_selection.py`](../../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py) | [`PHASE20_TWO_SHEET_WDW_SELECTION.md`](../../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | [`phase20-result.json`](./evidence/phase20-result.json) |
 | 21 | [`phase21_connected_seam_gaussian.py`](../../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py) | [`PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | [`phase21-result.json`](./evidence/phase21-result.json) |
+| 22 | [`phase22_finite_mode_seam_density.py`](../../cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py) | [`PHASE22_FINITE_MODE_SEAM_DENSITY.md`](../../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md) | [`phase22-result.json`](./evidence/phase22-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

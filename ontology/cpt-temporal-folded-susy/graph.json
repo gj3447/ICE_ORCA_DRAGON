@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-16T18:13:41Z",
+  "updated_at_utc": "2026-08-17T04:48:31Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -92,6 +92,16 @@
         "claim:P21_CHOSEN_ZERO_BRIDGE_EXCLUSION_EQUALS_R_MINUS_ONE",
         "claim:P21_R_MINUS_ONE_IS_CONNECTED_VACUUM_FUNCTIONAL",
         "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY"
+      ]
+    },
+    {
+      "question": "Does the finite-mode density control construct a full CPT/Pin supergravity seam state?",
+      "answer": "No. For beta,omega>0 it constructs a normalized TFD-like oscillator purification, a finite graded anti-linear real structure, and elementary SK normalization. The 4D Pin lift, physical projector, and local-SUGRA ghost-completed kernel remain open, while the unregulated noncompact omega=0 limit diverges.",
+      "claim_ids": [
+        "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+        "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+        "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+        "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT"
       ]
     }
   ],
@@ -204,6 +214,23 @@
         "claim:P21_R_MINUS_ONE_ALONE_FIXES_PHYSICAL_FLUX_PROBABILITY",
         "open:p21-three-form-seam-kernel",
         "open:p21-physical-flux-measure"
+      ]
+    },
+    {
+      "id": "reading-path:finite-mode-density-to-physical-seam",
+      "title": "From a finite TFD-like density to the still-missing physical seam",
+      "summary": "Follow the positive-frequency oscillator purification, supersymmetry covariance, finite graded real structure, amplitude-versus-density factor, elementary SK identity, zero-mode obstruction, and the two next physical gates.",
+      "nodes": [
+        "concept:tfd-like-susy-oscillator-purification",
+        "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+        "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+        "concept:finite-graded-antiunitary-real-structure",
+        "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+        "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+        "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+        "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+        "open:p22-homogeneous-minisuperspace-density",
+        "open:p22-gauge-fixed-local-sugra-seam-density"
       ]
     }
   ],
@@ -1410,7 +1437,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "2ab850c0fca756e5d40724fa9ffd8dceb99b4afe8e0b4f6e0a79a549c1cb2193",
+      "sha256": "8e757b1abbcf28a92cc65cc834d892ebbc9916f39817396a24ac45c0c944a265",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -1420,7 +1447,7 @@
       "summary": "New calculations require source, equations, observed output, independent checks, and scoped interpretation, but no mandatory research contract, preregistration ritual, or KG ratification.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "2ab850c0fca756e5d40724fa9ffd8dceb99b4afe8e0b4f6e0a79a549c1cb2193",
+      "sha256": "8e757b1abbcf28a92cc65cc834d892ebbc9916f39817396a24ac45c0c944a265",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
     },
     {
@@ -2486,6 +2513,301 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase21-result.json",
       "sha256": "b50d84c49b96ca0e8d73b4a94c101cadb79364cdfe035394ba87f3432427d369"
+    },
+    {
+      "id": "phase:p22",
+      "type": "phase",
+      "title": "Phase 22 — finite-mode seam density control",
+      "summary": "An exact positive-frequency supersymmetric-oscillator purification with bounded real-structure, bridge-covariance, SK-unitarity, and noncompact zero-mode obstruction checks.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:tfd-like-susy-oscillator-purification",
+      "type": "concept",
+      "title": "TFD-like purification of a supersymmetric oscillator",
+      "summary": "For one free oscillator with beta,omega>0, a normalized pure doubled state whose one-sheet reduction is the positive Gibbs density of H=omega(N_B+N_F).",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:finite-graded-antiunitary-real-structure",
+      "type": "concept",
+      "title": "Finite graded antiunitary real structure",
+      "summary": "The explicitly specified bosonic sheet swap times graded fermion swap and complex conjugation on the doubled oscillator occupation basis; it is not a spacetime Pin lift.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:amplitude-versus-density-kernel",
+      "type": "concept",
+      "title": "Euclidean amplitude kernel versus density covariance",
+      "summary": "If a wavefunction amplitude is exp(-q^T K q/2), its density has precision 2K and covariance (2K)^-1, fixing the factor of two in cross-sheet correlations.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:standard-density-matrix-sk-functional",
+      "type": "concept",
+      "title": "Standard density-matrix Schwinger–Keldysh functional",
+      "summary": "The trace functional Tr(U[J+] rho U[J-]^dagger), whose equal-source normalization follows from unitarity and unit trace without constructing an SK BRST quartet.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:noncompact-zero-frequency-oscillator-limit",
+      "type": "concept",
+      "title": "Unregulated noncompact zero-frequency oscillator limit",
+      "summary": "The omega->0+ limit at fixed beta of the free oscillator on L2(R), kept distinct from compact zero modes and constrained interacting minisuperspace.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "type": "claim",
+      "claim_id": "P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "title": "The positive-frequency TFD-like density is normalized and positive",
+      "statement": "For the recorded one-free-oscillator control with beta,omega>0, the displayed doubled state is normalized and pure, and its one-sheet Gibbs reduction is Hermitian, positive, and unit trace.",
+      "summary": "Supported exactly in the finite-mode control; this is not a physical WDW projector or a full seam state.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "type": "claim",
+      "claim_id": "P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "title": "The reduced Gibbs density commutes with the fixed-mode supercharges",
+      "statement": "Within the recorded oscillator algebra, rho_plus=Z^-1 exp(-beta H) gives equal weights inside every positive-energy supermultiplet and commutes with Q and Q^dagger.",
+      "summary": "Supported as covariance of the mixed density; the finite-temperature purification has positive energy and is not an unbroken vacuum of H_plus+H_minus.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "type": "claim",
+      "claim_id": "P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "title": "A graded anti-linear sheet involution exists",
+      "statement": "On the displayed doubled oscillator occupation basis, the specified bosonic swap times graded fermion swap and complex conjugation squares to one, preserves the state, commutes with total parity, and preserves the doubled occupation energy.",
+      "summary": "Supported as a finite toy real structure only; no 4D Clifford or Pin lift is constructed.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "type": "claim",
+      "claim_id": "P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "title": "The density covariance is half the Euclidean amplitude-kernel inverse",
+      "statement": "For L=beta/2 in the recorded positive-frequency oscillator, the TFD-like cross covariance equals one half of the off-diagonal inverse Dirichlet-to-Neumann amplitude kernel, while the normalized coefficient is sech(beta omega/2).",
+      "summary": "Supported exactly; beta and omega remain supplied inputs and no cosmological state-selection rule follows.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "type": "claim",
+      "claim_id": "P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "title": "The finite density satisfies equal-source SK normalization",
+      "statement": "For a unit-trace density and unitary source evolution, the standard finite density-matrix functional obeys Z_SK[J,J]=Tr(U rho U^dagger)=1.",
+      "summary": "Supported as the elementary unitarity identity, not as a ghost-completed SK BRST construction.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "type": "claim",
+      "claim_id": "P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "title": "The free noncompact zero mode has a trace-class TFD limit",
+      "statement": "The displayed free Gaussian oscillator on unregulated noncompact L2(R) has a trace-class normalized TFD-like limit as omega approaches zero from above at fixed beta.",
+      "summary": "Contradicted in this scope: the bosonic partition and covariance diverge and the diagonal stiffness vanishes; compact or interacting constrained zero modes are not decided.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p22-susy-and-density",
+      "type": "evidence",
+      "title": "Phase 22 fixed-mode SUSY and density checks",
+      "summary": "Sixteen exact checks cover fixed-energy charge closure and parity, the doubled pure projector, its partial trace and positive Gibbs spectrum, supermultiplet covariance, and the positive finite-temperature energy.",
+      "state": "VERIFIED",
+      "observed_status": "16_EXACT_PASS",
+      "check_ids": [
+        "P22.susy.charge_nilpotent",
+        "P22.susy.adjoint_nilpotent",
+        "P22.susy.positive_closure",
+        "P22.susy.energy_conservation",
+        "P22.susy.fermion_oddness",
+        "P22.density.boson_geometric_norm",
+        "P22.density.fermion_pair_norm",
+        "P22.density.pure_projector_hermitian",
+        "P22.density.pure_projector_trace_one",
+        "P22.density.pure_projector_idempotent_rank_one",
+        "P22.density.partial_trace",
+        "P22.density.reduced_trace",
+        "P22.density.full_reduced_positivity",
+        "P22.density.gibbs_partition",
+        "P22.density.supermultiplet_equal_weights",
+        "P22.density.finite_temperature_not_zero_energy"
+      ]
+    },
+    {
+      "id": "evidence:p22-graded-real-structure",
+      "type": "evidence",
+      "title": "Phase 22 graded real-structure checks",
+      "summary": "Five exact finite-matrix checks establish the toy anti-linear involution, state, parity, and energy compatibilities and reject the ungraded-swap mutant.",
+      "state": "VERIFIED",
+      "observed_status": "5_EXACT_PASS",
+      "check_ids": [
+        "P22.theta.involution_square",
+        "P22.theta.state_invariance",
+        "P22.theta.parity_compatibility",
+        "P22.theta.energy_compatibility",
+        "P22.theta.ungraded_swap_mutant_rejected"
+      ]
+    },
+    {
+      "id": "evidence:p22-bridge-and-sk",
+      "type": "evidence",
+      "title": "Phase 22 bridge-covariance and SK checks",
+      "summary": "Six exact checks derive the local and cross covariances, normalized coefficient, amplitude-versus-density factor of two, equal-source unitary identity, and wrong-adjoint mutant rejection.",
+      "state": "VERIFIED",
+      "observed_status": "6_EXACT_PASS",
+      "check_ids": [
+        "P22.bridge.local_covariance",
+        "P22.bridge.cross_covariance",
+        "P22.bridge.normalized_coefficient",
+        "P22.bridge.amplitude_density_factor_two",
+        "P22.SK.equal_source_unitarity",
+        "P22.SK.wrong_adjoint_mutant_rejected"
+      ]
+    },
+    {
+      "id": "evidence:p22-zero-mode-obstruction",
+      "type": "evidence",
+      "title": "Phase 22 noncompact zero-mode obstruction checks",
+      "summary": "Four exact limits show bosonic partition and coordinate-covariance divergence, finite fermion partition, and vanishing diagonal stiffness.",
+      "state": "VERIFIED",
+      "observed_status": "4_EXACT_PASS",
+      "check_ids": [
+        "P22.zero_mode.boson_partition_diverges",
+        "P22.zero_mode.fermion_partition_finite",
+        "P22.zero_mode.coordinate_variance_diverges",
+        "P22.zero_mode.diagonal_stiffness_vanishes"
+      ]
+    },
+    {
+      "id": "scope:p22-positive-frequency-finite-mode-density",
+      "type": "scope",
+      "title": "P22 positive-frequency finite-mode density control",
+      "summary": "One free 0+1-dimensional supersymmetric oscillator with beta,omega>0, its explicit doubled purification, specified occupation-basis grading, and standard finite density-matrix trace functional.",
+      "state": "ACTIVE",
+      "includes": [
+        "one bosonic oscillator and one CAR mode",
+        "positive beta and omega",
+        "fixed-energy positive-Hilbert SUSY algebra",
+        "normalized pure doubled state and one-sheet Gibbs reduction",
+        "mode-level graded anti-linear sheet involution",
+        "finite-interval bridge covariance and elementary SK unitarity"
+      ],
+      "excludes": [
+        "unbroken physical thermal supersymmetry",
+        "4D Clifford or Pin lift",
+        "infinite-mode Shale or Hilbert-Schmidt completion and UV renormalization",
+        "SK ghosts or BRST cohomology",
+        "gravitino-Goldstino-ghost boundary kernel",
+        "WDW projector, current, Born measure, flux distribution, or inflaton selection",
+        "persistent SUSY-breaking scale or observable particle spectrum"
+      ]
+    },
+    {
+      "id": "scope:p22-noncompact-zero-mode-limit",
+      "type": "scope",
+      "title": "P22 unregulated noncompact zero-mode limit",
+      "summary": "The omega->0+ limit at fixed beta>0 of the displayed free oscillator in its original noncompact L2(R) representation.",
+      "state": "ACTIVE",
+      "includes": [
+        "free Gaussian oscillator",
+        "fixed positive beta",
+        "noncompact coordinate line",
+        "bosonic trace, covariance, and stiffness limits"
+      ],
+      "excludes": [
+        "compact zero modes",
+        "interacting inflaton potential",
+        "gravitational Hamiltonian constraint",
+        "collective-coordinate Jacobian and primed determinant",
+        "physical minisuperspace inner product"
+      ]
+    },
+    {
+      "id": "open:p22-homogeneous-minisuperspace-density",
+      "type": "open_problem",
+      "title": "Construct the homogeneous minisuperspace density",
+      "summary": "The free noncompact omega=0 insertion must be replaced by the constrained complex-cap action, zero-mode measure, and physical WDW current.",
+      "question": "Does the interacting constrained (a,phi) sector, including its primed determinant and collective-coordinate Jacobian, define a normalizable physical density or selection rule?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p22-gauge-fixed-local-sugra-seam-density",
+      "type": "open_problem",
+      "title": "Construct the gauge-fixed local-SUGRA seam density",
+      "summary": "The finite oscillator witness omits the coupled gravitino, Goldstino, gauge, and ghost boundary operator and the physical projector.",
+      "question": "After deriving the gauge-fixed local-SUGRA boundary kernel and Pfaffian phase, is the projected infinite-mode seam density positive, trace class, and compatible with a genuine 4D Pin lift?",
+      "state": "OPEN"
+    },
+    {
+      "id": "source:ojima-1981",
+      "type": "source",
+      "title": "Gauge fields at finite temperatures—Thermo field dynamics and the KMS condition",
+      "summary": "Primary thermo-field-dynamics and KMS reference used only to frame the finite doubled purification.",
+      "state": "PRIMARY",
+      "citation": "I. Ojima, Gauge Fields at Finite Temperatures—Thermo Field Dynamics and the KMS Condition and Their Extension to Gauge Theories",
+      "version": "Annals of Physics 137 (1981) 1–32",
+      "uri": "https://doi.org/10.1016/0003-4916(81)90058-0"
+    },
+    {
+      "id": "source:israel-1976",
+      "type": "source",
+      "title": "Thermo-field dynamics of black holes",
+      "summary": "Primary black-hole doubled-purification reference; it does not identify the Phase 22 factors with literal temporal universes.",
+      "state": "PRIMARY",
+      "citation": "W. Israel, Thermo-field Dynamics of Black Holes",
+      "version": "Physics Letters A 57 (1976) 107–110",
+      "uri": "https://doi.org/10.1016/0375-9601(76)90178-X"
+    },
+    {
+      "id": "source:buchholz-ojima-1997",
+      "type": "source",
+      "title": "Spontaneous Collapse of Supersymmetry",
+      "summary": "Primary thermal-supersymmetry obstruction reference used to prevent Gibbs covariance from being promoted to an unbroken-vacuum claim.",
+      "state": "PRIMARY",
+      "citation": "D. Buchholz and I. Ojima, Spontaneous Collapse of Supersymmetry",
+      "version": "arXiv:hep-th/9701005v3; Nuclear Physics B 498 (1997) 228–242",
+      "uri": "https://arxiv.org/abs/hep-th/9701005"
+    },
+    {
+      "id": "artifact:p22-script",
+      "type": "artifact",
+      "title": "Phase 22 executable",
+      "summary": "Exact SymPy fixed-mode SUSY, pure/reduced density, graded real-structure, bridge, SK, and noncompact zero-mode checks.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py",
+      "sha256": "0a4da3c60bbd2231892938cb8a74f45bd3e491d9884df4adcc86051053d58dbe",
+      "introduced_in_commit": "d1befe783386f499818c3b902c90e5a9740e7fb4"
+    },
+    {
+      "id": "artifact:p22-report",
+      "type": "artifact",
+      "title": "Phase 22 report",
+      "summary": "Human-readable finite-mode TFD-like density derivation, bounded real-structure and SK verdict, zero-mode obstruction, and next physical gates.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md",
+      "sha256": "d2d11d512c13e34c48080a1603c5cd55f49f568bc2064b065ad34b931bb97311",
+      "introduced_in_commit": "d1befe783386f499818c3b902c90e5a9740e7fb4"
+    },
+    {
+      "id": "artifact:p22-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 22 evidence snapshot",
+      "summary": "Persisted 31-exact and zero-numerical check payload observed on 2026-08-17.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase22-result.json",
+      "sha256": "dd72d1c669c65ad49e25bc6b0b82a6620494fda7af8a8988e2d6727f76d56d83"
     }
   ],
   "edges": [
@@ -4843,6 +5165,384 @@
       "from": "claim:P21_REFERENCE_SUBTRACTION_GUARANTEES_FLUX_NORMALIZABILITY",
       "relation": "MOTIVATES",
       "to": "open:p21-physical-flux-measure"
+    },
+    {
+      "id": "edge:382",
+      "from": "phase:p22",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:383",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:384",
+      "from": "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:385",
+      "from": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:386",
+      "from": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:387",
+      "from": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:388",
+      "from": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:389",
+      "from": "evidence:p22-susy-and-density",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:390",
+      "from": "evidence:p22-graded-real-structure",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:391",
+      "from": "evidence:p22-bridge-and-sk",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:392",
+      "from": "evidence:p22-zero-mode-obstruction",
+      "relation": "PART_OF",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:393",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "ABOUT",
+      "to": "concept:tfd-like-susy-oscillator-purification"
+    },
+    {
+      "id": "edge:394",
+      "from": "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "relation": "ABOUT",
+      "to": "concept:tfd-like-susy-oscillator-purification"
+    },
+    {
+      "id": "edge:395",
+      "from": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "relation": "ABOUT",
+      "to": "concept:finite-graded-antiunitary-real-structure"
+    },
+    {
+      "id": "edge:396",
+      "from": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "relation": "ABOUT",
+      "to": "concept:amplitude-versus-density-kernel"
+    },
+    {
+      "id": "edge:397",
+      "from": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "relation": "ABOUT",
+      "to": "concept:standard-density-matrix-sk-functional"
+    },
+    {
+      "id": "edge:398",
+      "from": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "relation": "ABOUT",
+      "to": "concept:noncompact-zero-frequency-oscillator-limit"
+    },
+    {
+      "id": "edge:399",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p22-susy-and-density",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:400",
+      "from": "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p22-susy-and-density",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:401",
+      "from": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p22-graded-real-structure",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:402",
+      "from": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p22-bridge-and-sk",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:403",
+      "from": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p22-bridge-and-sk",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:404",
+      "from": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p22-zero-mode-obstruction",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:405",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p22-positive-frequency-finite-mode-density"
+    },
+    {
+      "id": "edge:406",
+      "from": "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p22-positive-frequency-finite-mode-density"
+    },
+    {
+      "id": "edge:407",
+      "from": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p22-positive-frequency-finite-mode-density"
+    },
+    {
+      "id": "edge:408",
+      "from": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p22-positive-frequency-finite-mode-density"
+    },
+    {
+      "id": "edge:409",
+      "from": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p22-positive-frequency-finite-mode-density"
+    },
+    {
+      "id": "edge:410",
+      "from": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p22-noncompact-zero-mode-limit"
+    },
+    {
+      "id": "edge:411",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p22-report"
+    },
+    {
+      "id": "edge:412",
+      "from": "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p22-report"
+    },
+    {
+      "id": "edge:413",
+      "from": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p22-report"
+    },
+    {
+      "id": "edge:414",
+      "from": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p22-report"
+    },
+    {
+      "id": "edge:415",
+      "from": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p22-report"
+    },
+    {
+      "id": "edge:416",
+      "from": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p22-report"
+    },
+    {
+      "id": "edge:417",
+      "from": "evidence:p22-susy-and-density",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p22-script"
+    },
+    {
+      "id": "edge:418",
+      "from": "evidence:p22-susy-and-density",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p22-evidence-snapshot"
+    },
+    {
+      "id": "edge:419",
+      "from": "evidence:p22-graded-real-structure",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p22-script"
+    },
+    {
+      "id": "edge:420",
+      "from": "evidence:p22-graded-real-structure",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p22-evidence-snapshot"
+    },
+    {
+      "id": "edge:421",
+      "from": "evidence:p22-bridge-and-sk",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p22-script"
+    },
+    {
+      "id": "edge:422",
+      "from": "evidence:p22-bridge-and-sk",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p22-evidence-snapshot"
+    },
+    {
+      "id": "edge:423",
+      "from": "evidence:p22-zero-mode-obstruction",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p22-script"
+    },
+    {
+      "id": "edge:424",
+      "from": "evidence:p22-zero-mode-obstruction",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p22-evidence-snapshot"
+    },
+    {
+      "id": "edge:425",
+      "from": "artifact:p22-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:426",
+      "from": "artifact:p22-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:427",
+      "from": "artifact:p22-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p22"
+    },
+    {
+      "id": "edge:428",
+      "from": "concept:tfd-like-susy-oscillator-purification",
+      "relation": "CITES",
+      "to": "source:ojima-1981"
+    },
+    {
+      "id": "edge:429",
+      "from": "concept:tfd-like-susy-oscillator-purification",
+      "relation": "CITES",
+      "to": "source:israel-1976"
+    },
+    {
+      "id": "edge:430",
+      "from": "claim:P22_REDUCED_GIBBS_DENSITY_COMMUTES_WITH_FIXED_MODE_SUPERCHARGES",
+      "relation": "CITES",
+      "to": "source:buchholz-ojima-1997",
+      "note": "The source frames why density covariance must not be promoted to unbroken thermal-vacuum supersymmetry."
+    },
+    {
+      "id": "edge:431",
+      "from": "concept:standard-density-matrix-sk-functional",
+      "relation": "CITES",
+      "to": "source:hlr-2016"
+    },
+    {
+      "id": "edge:432",
+      "from": "claim:P22_DENSITY_COVARIANCE_IS_HALF_THE_EUCLIDEAN_AMPLITUDE_KERNEL_INVERSE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P21_NO_SEAM_BASELINE_EQUALS_ONE",
+      "note": "Phase 22 specializes the finite Gaussian bridge to a normalized oscillator state and makes the amplitude-versus-density factor of two explicit."
+    },
+    {
+      "id": "edge:433",
+      "from": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P17_DOUBLED_REAL_SHEET_PROJECTOR_WITNESS"
+    },
+    {
+      "id": "edge:434",
+      "from": "claim:P22_GRADED_ANTI_LINEAR_SHEET_INVOLUTION_EXISTS",
+      "relation": "MOTIVATES",
+      "to": "open:p17-pin-clifford-lift",
+      "note": "The finite occupation-basis real structure does not itself provide the spacetime Clifford action or Pin lift."
+    },
+    {
+      "id": "edge:435",
+      "from": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P17_SK_BRST_IS_PARTICLE_SUPERSYMMETRY",
+      "note": "Equal-source unitarity is a density-matrix trace identity, not an SK BRST or particle-supercharge construction."
+    },
+    {
+      "id": "edge:436",
+      "from": "claim:P22_FINITE_DENSITY_SATISFIES_EQUAL_SOURCE_SK_NORMALIZATION",
+      "relation": "MOTIVATES",
+      "to": "open:p17-sk-full-completion"
+    },
+    {
+      "id": "edge:437",
+      "from": "claim:P22_FREE_NONCOMPACT_ZERO_MODE_HAS_TRACE_CLASS_TFD_LIMIT",
+      "relation": "MOTIVATES",
+      "to": "open:p22-homogeneous-minisuperspace-density"
+    },
+    {
+      "id": "edge:438",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "MOTIVATES",
+      "to": "open:p22-gauge-fixed-local-sugra-seam-density"
+    },
+    {
+      "id": "edge:439",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "MOTIVATES",
+      "to": "open:p21-physical-flux-measure",
+      "note": "A valid finite-mode density still supplies no flux-sector base measure or WDW probability."
+    },
+    {
+      "id": "edge:440",
+      "from": "claim:P22_POSITIVE_FREQUENCY_TFD_LIKE_DENSITY_IS_NORMALIZED_AND_POSITIVE",
+      "relation": "MOTIVATES",
+      "to": "open:p19-minisuperspace-phi0-measure",
+      "note": "The finite oscillator state does not select the homogeneous inflaton amplitude."
+    },
+    {
+      "id": "edge:441",
+      "from": "open:p22-homogeneous-minisuperspace-density",
+      "relation": "CITES",
+      "to": "source:hartle-marolf-1997"
+    },
+    {
+      "id": "edge:442",
+      "from": "open:p22-homogeneous-minisuperspace-density",
+      "relation": "CITES",
+      "to": "source:halliwell-2009"
     }
   ],
   "kg_bridges": [

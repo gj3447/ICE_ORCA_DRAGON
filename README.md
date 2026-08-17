@@ -28,7 +28,7 @@ dependency.
 | runnable Python kernels | 53 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 199 nodes, 381 edges, 42 claims | `./ice ontology summary` |
+| research ontology | 225 nodes, 442 edges, 48 claims | `./ice ontology summary` |
 | latest runnable CPT seam phase | Phase 22 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a

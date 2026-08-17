@@ -44,7 +44,8 @@ Executable:
 uv run --locked python3 cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py
 ```
 
-The executable records 27 exact checks and no floating-point fit.
+The executable records 31 exact checks and no floating-point fit, including
+Hermiticity, unit trace, rank-one idempotence, and an explicit partial trace.
 
 ## 1. One-side supersymmetric oscillator
 

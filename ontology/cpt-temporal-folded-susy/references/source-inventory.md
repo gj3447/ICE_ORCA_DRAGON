@@ -44,8 +44,11 @@
 | `source:hartle-marolf-1997` — J. B. Hartle, D. Marolf, [*Comparing Formulations of Generalized Quantum Mechanics for Reparametrization-Invariant Systems*](https://doi.org/10.1103/PhysRevD.56.6247), `arXiv:gr-qc/9703021v1` | Frames induced products and alternative probability formulations for constraint systems | Does not choose the Phase 21 flux-sector prior or sheet kernel |
 | `source:bousso-polchinski-2000` — R. Bousso, J. Polchinski, [*Quantization of Four-form Fluxes and Dynamical Neutralization of the Cosmological Constant*](https://doi.org/10.1088/1126-6708/2000/06/006), `arXiv:hep-th/0004134v3` | Compact flux and charged-membrane framework cited by the kernel open problem | Does not derive the Phase 21 Gaussian kernel or a WDW probability distribution |
 | `source:bandos-et-al-2018` — I. Bandos et al., [*Three-forms, dualities and membranes in four-dimensional supergravity*](https://doi.org/10.1007/JHEP07(2018)028), `arXiv:1803.01405v2` | Compact three-form SUGRA and charged-membrane construction cited by the next gate | Does not calculate a cosmological nucleation rate, the toy determinant ratio, or inflationary selection |
+| `source:ojima-1981` — I. Ojima, [*Gauge Fields at Finite Temperatures—Thermo Field Dynamics and the KMS Condition and Their Extension to Gauge Theories*](https://doi.org/10.1016/0003-4916(81)90058-0), Ann. Phys. 137 (1981) 1–32 | Primary thermofield/KMS framing for the finite doubled purification | Does not identify the two factors with literal universes or supply a local-SUGRA seam state |
+| `source:israel-1976` — W. Israel, [*Thermo-field Dynamics of Black Holes*](https://doi.org/10.1016/0375-9601(76)90178-X), Phys. Lett. A 57 (1976) 107–110 | Primary doubled-purification example | Does not derive the Phase 22 graded phase, Pin lift, or cosmological state |
+| `source:buchholz-ojima-1997` — D. Buchholz, I. Ojima, [*Spontaneous Collapse of Supersymmetry*](https://arxiv.org/abs/hep-th/9701005), `arXiv:hep-th/9701005v3` | Thermal-SUSY obstruction used to separate Gibbs covariance from an unbroken vacuum claim | Does not invalidate the exact finite matrix algebra or construct the requested seam state |
 
-Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the thirty-two-item inventory exhausts the literature.
+Every source above has `state: PRIMARY` in the local graph. That is a source classification, not a claim that the thirty-five-item inventory exhausts the literature.
 
 ## Claim-family coverage
 
@@ -74,6 +77,9 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 21 determinant and regularization boundary | Osterwalder–Schrader II; Hawking | Technical interpretation boundaries only; neither source turns the finite Gaussian into a physical WDW probability |
 | Phase 21 physical flux measure | Halliwell; Hartle–Marolf | Decoherence/current/constraint-system framing attached to the sector-measure concept, not a derived prior |
 | Phase 21 three-form seam-kernel frontier | Bousso–Polchinski; Bandos et al. | Compact flux/membrane frameworks attached to an open problem; no transition rate or kernel is imported |
+| Phase 22 finite doubled purification | Ojima; Israel | Thermofield/KMS and doubled-purification framing only; the 31 exact checks remain repository evidence |
+| Phase 22 Gibbs covariance versus vacuum SUSY | Buchholz–Ojima | Prevents \([\rho,Q]=0\) from being promoted to an unbroken finite-temperature vacuum claim |
+| Phase 22 equal-source SK trace | Haehl–Loganayagam–Rangamani | Reused to distinguish elementary unitarity from the unconstructed SK ghost/BRST completion |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -93,7 +99,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other thirty-one graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–21 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other thirty-four graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–22 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -137,5 +143,14 @@ Phase 21 adds the determinant-to-probability frontier:
 - membrane charge, tension, boundary ensemble, zero/negative modes, and determinant prefactors;
 - a physical flux-sector base measure with a specified WDW current/inner product or decoherence functional;
 - a finite joint distribution over \((n,\phi)\) with an interior peak, rather than a cutoff endpoint or imposed target.
+
+Phase 22 adds the finite-to-full density frontier:
+
+- a constrained homogeneous complex-cap density with a primed determinant, collective-coordinate
+  Jacobian, and physical WDW current instead of a free \(\omega=0\) insertion;
+- an infinite-mode Hilbert–Schmidt/UV-renormalized product-state test;
+- a spacetime Clifford/Pin lift rather than the finite occupation-basis involution;
+- the coupled gauge-fixed gravitino–Goldstino–ghost boundary operator, Pfaffian phase, physical
+  projector, positivity, and trace-class test.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

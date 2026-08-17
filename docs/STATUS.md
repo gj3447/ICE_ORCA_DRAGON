@@ -3,11 +3,11 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-16
+## Current state — 2026-08-17
 
 | Component | State |
 |---|---|
-| Runnable catalog | 52 entries; `./ice list --json` is authoritative |
+| Runnable catalog | 53 entries; `./ice list --json` is authoritative |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -291,7 +291,7 @@ See
 and
 [`../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py`](../cpt_temporal_folded_susy/phase20_two_sheet_wdw_selection.py).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 21
+## Previous direct calculation — CPT × Temporal-Folded SUSY Phase 21
 
 Phase 21 asks whether a decoupled-sheet-normalized Gaussian seam makes a reference subtraction and
 flux probability emerge automatically. Its committed executable returned exit 0 with **27 exact and
@@ -313,18 +313,45 @@ flux probability emerge automatically. Its committed executable returned exit 0 
 - Abel/zeta finite parts can define a regulated determinant but do not create a countably additive
   positive WDW probability. A physical flux measure, decoherence/current prescription, actual
   three-form SUGRA kernel, and a finite joint \((n,\phi)\) peak remain open.
-- The runnable catalog is now 52; the mapped reproduction ledger remains 14 cases.
+- At Phase 21 the runnable catalog rose to 52; the mapped reproduction ledger remained 14 cases.
 
 See
 [`../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md)
 and
 [`../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py`](../cpt_temporal_folded_susy/phase21_connected_seam_gaussian.py).
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 22
+
+Phase 22 constructs a bounded seam-state control for one free supersymmetric oscillator. Its committed
+executable returned exit 0 with **31 exact checks** and no floating-point fit.
+
+- For \(\omega,\beta>0\), the bosonic and fermionic thermofield-double-like factors form a normalized
+  positive purification. Tracing out one sheet gives
+  \(\rho_+=Z^{-1}e^{-\beta H}\), \(Z=(1+r)/(1-r)\), \(r=e^{-\beta\omega}\).
+- The fixed-energy doublet obeys \(Q^2=0\), \(\{Q,Q^\dagger\}=2H\), and
+  \([\rho_+,Q]=0\). This is covariance inside equal-energy multiplets, not an unbroken thermal vacuum:
+  \(\langle H\rangle=2\omega r/(1-r^2)>0\) at finite \(\beta\).
+- A graded anti-linear occupation-space involution leaves the displayed state invariant. It is not a
+  spacetime Clifford/Pin lift, and the exact \(Z_{\rm SK}[J,J]=1\) check is unitarity rather than a
+  constructed SK ghost/BRST quartet.
+- The density cross covariance is
+  \(1/[2\omega\sinh(\beta\omega/2)]\). The factor two relative to the inverse Euclidean DtN amplitude
+  kernel is explicit because the density is \(|\Psi|^2\).
+- In the unregulated noncompact free limit, \(Z_B\sim(\beta\omega)^{-1}\) and
+  \(\langle x^2\rangle\sim(\beta\omega^2)^{-1}\). Thus the same Gaussian ansatz is not trace class at
+  \(\omega=0\); this is not a no-go for compact or interacting inflaton minisuperspace.
+- The runnable catalog is now 53; the mapped reproduction ledger remains 14 cases.
+
+See
+[`../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md`](../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md)
+and
+[`../cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py`](../cpt_temporal_folded_susy/phase22_finite_mode_seam_density.py).
+
 ## Research ontology memory
 
-Phase 15R–21 is now indexed in a repository-local typed research graph with **199 nodes and 381 directed
-relations**. It preserves 42 claims, 23 evidence groups, 19 explicit scopes, 26 open problems, 32
-literature sources, the Phase 16–21 exact and bounded numerical run payloads, and cautious bridges to
+Phase 15R–22 is now indexed in a repository-local typed research graph with **225 nodes and 442 directed
+relations**. It preserves 48 claims, 27 evidence groups, 21 explicit scopes, 28 open problems, 35
+literature sources, the Phase 16–22 exact and bounded numerical run payloads, and cautious bridges to
 the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)

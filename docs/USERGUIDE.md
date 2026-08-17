@@ -1,6 +1,6 @@
 # ICE_ORCA_DRAGON user guide
 
-> Guide to the 52 entries currently exposed by the TypeScript/Effect CLI. Historical source files are
+> Guide to the 53 entries currently exposed by the TypeScript/Effect CLI. Historical source files are
 > not automatically runnable entries; `./ice list --json` is authoritative.
 
 ## Setup
@@ -47,6 +47,7 @@ This graph is a searchable evidence map, not an automatic physics verdict or ext
 ./ice run phase19_closed_sugra_bounce
 ./ice run phase20_two_sheet_wdw_selection
 ./ice run phase21_connected_seam_gaussian
+./ice run phase22_finite_mode_seam_density
 ```
 
 Arguments after `--` are passed to the Python kernel as an argv array:
@@ -71,7 +72,7 @@ The table is orientation, not a replacement for `./ice list`.
 | Higgs and S-proofs | `prove_higgs_ZD_doublet`, `prove_s1_framing`, `prove_s2_CCWZ`, `prove_s3_higher_gauge`, `prove_s5_bv_ainfty`, `prove_s7_WW_evasion` |
 | queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_05_coleman_weinberg`, `queue_06_cooperative_vacuum`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_10_group_of_6`, `queue_11_xor_invariant` |
 | numerology controls | `numerology_hidden_scan`, `numerology_hidden_scan_v2_target_categories_2026-05-20`, `numerology_mc_judge`, `numerology_mc_judge_v3_abc` |
-| CPT × Temporal-Folded SUSY | `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian` |
+| CPT × Temporal-Folded SUSY | `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian`, `phase22_finite_mode_seam_density` |
 | other falsifiers/checks | `igrueqft_locality_falsifier`, `mb3_adelberger_verdict`, `verify_mp_mW_3_256`, `wilmot_theta_preservation_test`, `ww_unitarity_bound_analysis` |
 
 ## Read a result JSON
@@ -158,5 +159,6 @@ physical interpretation, and open hypotheses separate.
 - [`../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md`](../cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md): closed-SUGRA bounce existence calculation
 - [`../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](../cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md): leading WDW initial-value selection control
 - [`../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](../cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md): normalized connected Gaussian seam and flux-prior control
-- [`../REPRODUCIBILITY_2026-06-08.md`](../REPRODUCIBILITY_2026-06-08.md): historical attestation plus erratum
+- [`../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md`](../cpt_temporal_folded_susy/PHASE22_FINITE_MODE_SEAM_DENSITY.md): finite-mode seam density and noncompact zero-mode obstruction
+- [`audits/REPRODUCIBILITY_2026-06-08.md`](audits/REPRODUCIBILITY_2026-06-08.md): historical attestation plus erratum
 - [`../CONTRIBUTING.md`](../CONTRIBUTING.md): contribution checks

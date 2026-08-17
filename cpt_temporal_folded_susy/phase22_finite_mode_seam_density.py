@@ -103,6 +103,11 @@ def density_and_theta_controls(audit: Audit) -> dict[str, object]:
     fermion_state = sp.Matrix([1, 0, 0, sp.I * sp.sqrt(r)]) / sp.sqrt(1 + r)
     fermion_norm = (fermion_state.H * fermion_state)[0]
     rho_f = sp.diag(1, r) / (1 + r)
+    rho_pair = sp.simplify(fermion_state * fermion_state.H)
+    coefficient_matrix = sp.diag(1, sp.I * sp.sqrt(r)) / sp.sqrt(1 + r)
+    reduced_from_partial_trace = sp.simplify(
+        coefficient_matrix * coefficient_matrix.H
+    )
     z_boson = 1 / (1 - r)
     z_fermion = 1 + r
     partition = (1 + r) / (1 - r)
@@ -116,6 +121,26 @@ def density_and_theta_controls(audit: Audit) -> dict[str, object]:
         "P22.density.fermion_pair_norm",
         exact_zero(fermion_norm - 1),
         "the graded fermion pair has unit norm",
+    )
+    audit.exact(
+        "P22.density.pure_projector_hermitian",
+        exact_zero(rho_pair - rho_pair.H),
+        "the normalized pair defines a Hermitian pure density matrix",
+    )
+    audit.exact(
+        "P22.density.pure_projector_trace_one",
+        exact_zero(sp.trace(rho_pair) - 1),
+        "the pure pair density matrix has unit trace",
+    )
+    audit.exact(
+        "P22.density.pure_projector_idempotent_rank_one",
+        exact_zero(rho_pair * rho_pair - rho_pair) and rho_pair.rank() == 1,
+        "the pure pair density matrix is idempotent and rank one",
+    )
+    audit.exact(
+        "P22.density.partial_trace",
+        exact_zero(reduced_from_partial_trace - rho_f),
+        "the coefficient-matrix partial trace gives diag(1,r)/(1+r)",
     )
     audit.exact(
         "P22.density.reduced_trace",
@@ -348,7 +373,7 @@ def run() -> dict[str, object]:
             "positive_frequency_TFD_like_density_is_normalized_and_positive": "SUPPORTED_IN_FINITE_MODE_CONTROL",
             "reduced_Gibbs_density_commutes_with_fixed_mode_supercharges": "SUPPORTED_AS_COVARIANCE_NOT_VACUUM_SUSY",
             "graded_anti_linear_sheet_involution_exists": "SUPPORTED_AS_TOY_REAL_STRUCTURE",
-            "toy_sheet_involution_alone_establishes_a_4d_Pin_lift": "CONTRADICTED_BY_SCOPE",
+            "full_4d_Pin_lift_from_toy_involution": "OPEN_NOT_CONSTRUCTED",
             "finite_density_satisfies_equal_source_SK_normalization": "SUPPORTED_AS_UNITARITY_IDENTITY",
             "free_noncompact_zero_mode_has_a_trace_class_TFD_limit": "CONTRADICTED",
             "finite_mode_state_selects_flux_or_inflaton_initial_data": "OPEN_NOT_COMPUTED",
@@ -375,6 +400,19 @@ def run() -> dict[str, object]:
                 "a persistent SUSY-breaking scale or observable particle spectrum",
             ],
         },
+        "obstruction_guards": [
+            {
+                "id": "P22.guard.free_noncompact_zero_mode_trace_class",
+                "target": "a trace-class omega=0 limit of the displayed free Gaussian state",
+                "observed_status": "EXPECTED_OBSTRUCTION_CONFIRMED",
+                "supporting_check_ids": [
+                    "P22.zero_mode.boson_partition_diverges",
+                    "P22.zero_mode.coordinate_variance_diverges",
+                    "P22.zero_mode.diagonal_stiffness_vanishes",
+                ],
+                "scope": "unregulated noncompact L2(R) oscillator limit at fixed beta>0",
+            }
+        ],
         "next_calculation": {
             "homogeneous_sector": (
                 "replace the free omega=0 insertion by the constrained complex-cap "
