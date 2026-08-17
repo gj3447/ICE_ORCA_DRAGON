@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 66 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 67 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash

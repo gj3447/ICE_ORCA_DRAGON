@@ -35,9 +35,9 @@
 - *얼음(저온 물리) + 범고래(생물 + 깊이) + 용(상승)* 3 합성 — 물리 영역의 신화적 인격화
 - 12사도_목록_업데이트.md "ICE ORCA DRAGON이 진정한 사도야" — *세상의 진정한 본질 = 물리학* 의미
 
-### 2. 공학 측 — 역사적 계산 corpus + 66 runnable entries
+### 2. 공학 측 — 역사적 계산 corpus + 67 runnable entries
 
-이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 66개 entry가 **ICE 측 물리·수학
+이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 67개 entry가 **ICE 측 물리·수학
 검증**을 실행한다. 아래 pattern은 source provenance이고 CLI 이름 목록이 아니다:
 - `cd_breaking_*.py` — Cayley-Dickson breaking (32D vs 64D algebra identities)
 - `cd_embedding.py`, `cd_path_amplitude*.py` — CD construction

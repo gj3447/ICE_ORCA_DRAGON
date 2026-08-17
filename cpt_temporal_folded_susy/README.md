@@ -77,12 +77,14 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md` | Phase 34 보고서 — 5 exact + 10 numerical checks. bounded reduced branches는 계산됐지만 incoming-to-outgoing connection과 full joint flow는 미유도 |
 | `phase35_reduced_detline_transport.py` | Phase 34 branch pair의 endpoint-Jacobi determinant section, relative phase, square-root lift와 conjugate cancellation을 검증하는 실행체 |
 | `PHASE35_REDUCED_DETLINE_TRANSPORT.md` | Phase 35 보고서 — 6 exact + 8 numerical checks. sampled reduced det line은 운반되지만 physical Van Vleck block·absolute Maslov orientation·full BFV determinant·global `n_sigma`는 미유도 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–35의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase36_airy_gauss_manin_connection.py` | declared local Airy/Gauss--Manin maps와 세 유한 반원 반경의 CW/U·CCW/L BVP continuation을 검증하는 실행체 |
+| `PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md` | Phase 36 보고서 — 12 exact + 9 numerical checks. local connection은 고정되지만 두 lateral이 모두 regular하여 unique-arm inference는 locally contradicted; global cycle·absolute signs·BFV state는 미유도 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–36의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 35)
+## 현재 경계 (Phase 36)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint

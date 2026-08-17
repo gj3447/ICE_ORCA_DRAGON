@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–35 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–36 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-17T18:50:03.459Z` graph update, the collection has 492 nodes and
-1284 edges. Validation verifies 65/65 stored hashes (63 artifacts and 2 policies). The
-Phase 16–35 run snapshots contain 334 named exact checks, 167 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (168 numerical controls in all). These
+At the recorded `2026-08-17T19:15:04.017Z` graph update, the collection has 506 nodes and
+1328 edges. Validation verifies 68/68 stored hashes (66 artifacts and 2 policies). The
+Phase 16–36 run snapshots contain 346 named exact checks, 176 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (177 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -36,6 +36,8 @@ confidence.
 ./ice ontology trace claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD --depth 2
 ./ice ontology trace claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE --depth 2
 ./ice ontology trace claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION --depth 2
+./ice ontology trace claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED --depth 2
+./ice ontology trace claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM --depth 2
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;

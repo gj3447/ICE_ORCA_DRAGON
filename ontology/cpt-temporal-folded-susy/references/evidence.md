@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–35 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), and [`phase35-result.json`](../evidence/phase35-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–36 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), and [`phase36-result.json`](../evidence/phase36-result.json).
 
 ## Reading `PASS` correctly
 
-All 334 Phase 16–35 named exact checks have `status: PASS`. The snapshots contain 167 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, and 8 in Phase 35, for 168 numerical controls in all. Phase 34 contributes 5 exact checks and Phase 35 contributes 6. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that an endpoint-Jacobi section is the physical Van Vleck factor, that the original-contour intersection coefficient is globally known, or that a physical state has been constructed.
+All 346 Phase 16–36 named exact checks have `status: PASS`. The snapshots contain 176 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35, and 9 in Phase 36, for 177 numerical controls in all. Phase 36 contributes 12 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that a local Airy basis is the original global cycle, that an endpoint-Jacobi section is the physical Van Vleck factor, that the original-contour intersection coefficient is globally known, or that a physical state has been constructed.
 
 The scientific direction is stored on:
 
@@ -40,6 +40,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 33 | `result:P33_FOLD_AIRY_UNIFORMIZATION_20260817`; `2026-08-17T18:12:31.429Z` | `cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py`; SHA-256 `844c1262332c06b17def3506a0112f3230b12cbda153750d4964ca9f96a4485b`; current bytes finalized in `e1b6e055a72dbf9e018ced01f6becdb34705238b` | Exit `0`; 8 exact checks plus 7 numerical checks |
 | 34 | `result:P34_DIRECTED_FOLD_DUAL_CONTINUATION_20260817`; `2026-08-17T18:31:54.008Z` | `cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py`; SHA-256 `c35d9fd605e46d791ae74b58344565578a84a7803745481859b41b26699e9527`; finalized in `4cd7e7215077137c576dcdab2765beab09d1a09b` | Exit `0`; 5 exact checks plus 10 numerical checks |
 | 35 | `result:P35_REDUCED_DETLINE_TRANSPORT_20260817`; `2026-08-17T18:50:03.459Z` | `cpt_temporal_folded_susy/phase35_reduced_detline_transport.py`; SHA-256 `2e91813fca948735abd8226a63af4cb26cba459ac0a9897b852686d8cb33d6cb`; current bytes finalized in `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8` | Exit `0`; 6 exact checks plus 8 numerical checks |
+| 36 | `result:P36_AIRY_GAUSS_MANIN_CONNECTION_20260817`; `2026-08-17T19:15:04.017Z` | `cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py`; SHA-256 `58b244cc7a051f011268effef56974cd5e906b917b4d8ca203466fa55c583eed`; introduced in `377fffe3c4075e157c1ba261837cf01a52517d9f` | Exit `0`; 12 exact checks plus 9 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -58,6 +59,8 @@ The Phase 33 report hash is `248923359787cf61c18c0e556155ae9ee577100b663825510ac
 The Phase 34 report hash is `14c2c6a63d1acc8ca53b55513f13364b92598f54f2bf03099f176bb538048952`; its fresh snapshot hash is `44240252eaf9bec2f63c374056c90c26e81f222eae080631e7f0e66269b4651a`. The exact current executable and report bytes first appear in `4cd7e7215077137c576dcdab2765beab09d1a09b`.
 
 The Phase 35 report hash is `467563b5eec62d0c3295be1ff7204ff0bd7d0688948e8841a009d4a828c87bc9`; its fresh snapshot hash is `f60c5baa537d8c04fef4f72683085f1e77092e420ccbcbda5c2c87283d3ee55a`. The artifact paths first appear in `212f39039c33948d16ec691b1ae4a2866631c6fc`; the exact current executable and report bytes first appear in the conservative hardening revision `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8`.
+
+The Phase 36 report hash is `f4beb9fbd06ade0ece676aabe96f483884396bfb09a394577e4e15c71c91ce2e`; its fresh snapshot hash is `671709f887619a7d7e0add9b44e5930101f3bf1fd5d503ce6d133fefb137aefe`. The executable and report bytes first appear in `377fffe3c4075e157c1ba261837cf01a52517d9f`.
 
 ## Evidence-to-claim index
 

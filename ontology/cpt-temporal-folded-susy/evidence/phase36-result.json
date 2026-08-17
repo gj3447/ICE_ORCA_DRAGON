@@ -1,0 +1,1095 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P36_AIRY_GAUSS_MANIN_CONNECTION_20260817",
+  "phase": "P36",
+  "observed_at_utc": "2026-08-17T19:15:04.017Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py",
+    "sha256": "58b244cc7a051f011268effef56974cd5e906b917b4d8ca203466fa55c583eed",
+    "introduced_in_commit": "377fffe3c4075e157c1ba261837cf01a52517d9f"
+  },
+  "exact_checks": 12,
+  "checks": [
+    {
+      "id": "P36.canonical.tracked_sheet_is_Ai_saddle",
+      "statement": "with physical soft x mapped by u=-alpha x and t=-u, the tracked x>0 sheet is t=+sqrt(z), the decaying Ai saddle",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.contours.three_ray_relation",
+      "statement": "the oriented decay-ray contours obey Gamma_0+Gamma_L+Gamma_U=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.contours.Airy_arm_connection",
+      "statement": "in arm order (U,L), [J_U,J_L]^T=1/2[[-1,-i],[-1,i]][Ai,Bi]^T and Ai=-J_U-J_L",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.Gauss_Manin.CW_cycle_map",
+      "statement": "for CW bases (Gamma_0,Gamma_L)_in and (Gamma_U,Gamma_L)_out, G=[[-1,-1],[0,1]] and G inverse equals G",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.Gauss_Manin.CW_CCW_ordered_bases",
+      "statement": "the same G acts on the frozen CW order (Gamma_0,Gamma_L)->(Gamma_U,Gamma_L) and CCW order (Gamma_0,Gamma_U)->(Gamma_L,Gamma_U)",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.Gauss_Manin.inverse_transpose_dual",
+      "statement": "upward duals transform by G^(-T), preserving the cycle-dual pairing; the tracked CW dual is -K_U",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.lateral.CW_CCW_counterexample",
+      "statement": "CW sends the tracked dual to -K_U while CCW sends it to -K_L; local regularity alone does not choose between independent arms",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.Stokes.enhanced_lateral_matrices",
+      "statement": "for E_-=Gamma_L and E_+=-Gamma_U=Gamma_0+Gamma_L, S_down=[[1,0],[1,1]] and S_up=S_down^(-T)",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.detline.arm_half_phase",
+      "statement": "in arm order (U,L), sqrt(det) has phases (e^-i pi/4,e^+i pi/4) and the inverse-sqrt endpoint factor has the opposite half phases",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.uniformization.no_soft_determinant_double_counting",
+      "statement": "Airy uniformization replaces the soft zeta^(-1/4) factor: a uniform kernel may multiply only the regular hard quotient d_hat=d/[-Phi''(u_track)/2], never full d^(-1/2) times Airy",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.detline.bare_root_monodromy",
+      "statement": "after one declared inverse-sqrt trivialization, the bare BVP-root lateral ratio is iP and its square is -I; this is not the Gauss--Manin cycle matrix G",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.scope.Phase32_cannot_locally_choose_fold_arm",
+      "statement": "the fold patch is disjoint from every recorded Phase-32 origin cap, so that bypass supplies an origin lateral chamber but no local U/L fold-arm choice",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 9,
+  "numerical": [
+    {
+      "id": "P36.branch.tracked_real_sheet_identification",
+      "statement": "the Phase-25 recorded real sheet is incoming I_+ (positive physical soft coordinate and positive endpoint determinant), the canonical Ai saddle after the frozen sign map",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.BVP.four_path_residuals",
+      "statement": "all twelve upper/lower prescribed-complex-T root paths solve the half BVP and independently reintegrated sampled full endpoint problem",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.BVP.lateral_root_permutations",
+      "statement": "in BVP-root order (O_minus Im soft<0,O_plus Im soft>0) versus (I_minus,I_plus), upper-T/CW gives P and lower-T/CCW gives I; these root permutations are distinct from the cycle matrix G",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.BVP.tracked_Ai_arm_mapping",
+      "statement": "the tracked I_plus/Ai root reaches the P34 upper U arm through the upper-T/CW bypass and the lower L arm through the lower-T/CCW bypass",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.CFU.action_gap_winding",
+      "statement": "the oriented two-root action gap winds by -3pi/2 on upper-T/CW and +3pi/2 on lower-T/CCW continuation",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.CFU.complex_canonical_coordinate",
+      "statement": "three finite radii of the continuous action-gap lift are consistent with one locally analytic CFU coordinate and approach a real-positive zeta/(Tc-T) coefficient about 16.94791",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.detline.lateral_half_phase_limit",
+      "statement": "sampled det Bv phases approach -pi/2 on upper-T/CW and +pi/2 on lower-T/CCW, yielding the declared opposite square-root half phases",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.detline.no_sampled_semicircle_zero",
+      "statement": "nine-point determinant tables on every semicircle are nonzero and have unambiguous principal phase increments (not a proof between samples or on other sheets)",
+      "status": "PASS"
+    },
+    {
+      "id": "P36.counterexample.CW_CCW_both_regular",
+      "statement": "the CW/U and CCW/L continuations of the same tracked root are distinct conjugate regular solutions, furnishing the explicit local nonselection counterexample",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "local Airy/Gauss-Manin connection with prescribed-complex-T BVP lateral counterexample",
+    "claim_status": {
+      "Phase32_below_origin_plus_Phase35_relative_det_transport_selects_U_over_L": "CONTRADICTED_AS_A_LOCAL_INFERENCE_BOTH_LATERALS_PASS_THE_RECORDED_LOCAL_GATES",
+      "a_full_BFV_SUGRA_or_physical_quantum_state_is_obtained": "OPEN_OUT_OF_SCOPE",
+      "one_lateral_is_selected_by_a_complete_original_relative_cycle": "OPEN_NOT_COMPUTED",
+      "the_absolute_determinant_signs_epsilon_U_L_are_fixed": "OPEN_REQUIRES_ORIENTED_ORIGINAL_CYCLE_AND_REGULATOR",
+      "the_exact_local_Airy_contour_and_Gauss_Manin_connection_is_fixed": "SUPPORTED_IN_THE_DECLARED_ORIENTED_CONTOUR_BASES",
+      "the_global_PL_intersection_coefficient_n_sigma_is_fixed": "OPEN_REQUIRES_ALL_JOINT_DUALS_GOOD_ENDS_AND_ORIENTATIONS",
+      "the_regular_hard_determinant_quotient_d_hat_is_constructed": "OPEN_THE_SOFT_DOUBLE_COUNTING_GUARD_IS_EXACT_BUT_THE_QUOTIENT_IS_NOT_NUMERICALLY_DERIVED",
+      "the_tracked_real_Ai_root_has_regular_CW_U_and_CCW_L_continuations": "SUPPORTED_ON_THREE_FINITE_SEMICIRCLE_RADII"
+    },
+    "exact_check_ids": [
+      "P36.canonical.tracked_sheet_is_Ai_saddle",
+      "P36.contours.three_ray_relation",
+      "P36.contours.Airy_arm_connection",
+      "P36.Gauss_Manin.CW_cycle_map",
+      "P36.Gauss_Manin.CW_CCW_ordered_bases",
+      "P36.Gauss_Manin.inverse_transpose_dual",
+      "P36.lateral.CW_CCW_counterexample",
+      "P36.Stokes.enhanced_lateral_matrices",
+      "P36.detline.arm_half_phase",
+      "P36.uniformization.no_soft_determinant_double_counting",
+      "P36.detline.bare_root_monodromy",
+      "P36.scope.Phase32_cannot_locally_choose_fold_arm"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P36.canonical.tracked_sheet_is_Ai_saddle",
+        "statement": "with physical soft x mapped by u=-alpha x and t=-u, the tracked x>0 sheet is t=+sqrt(z), the decaying Ai saddle",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.contours.three_ray_relation",
+        "statement": "the oriented decay-ray contours obey Gamma_0+Gamma_L+Gamma_U=0",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.contours.Airy_arm_connection",
+        "statement": "in arm order (U,L), [J_U,J_L]^T=1/2[[-1,-i],[-1,i]][Ai,Bi]^T and Ai=-J_U-J_L",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.Gauss_Manin.CW_cycle_map",
+        "statement": "for CW bases (Gamma_0,Gamma_L)_in and (Gamma_U,Gamma_L)_out, G=[[-1,-1],[0,1]] and G inverse equals G",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.Gauss_Manin.CW_CCW_ordered_bases",
+        "statement": "the same G acts on the frozen CW order (Gamma_0,Gamma_L)->(Gamma_U,Gamma_L) and CCW order (Gamma_0,Gamma_U)->(Gamma_L,Gamma_U)",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.Gauss_Manin.inverse_transpose_dual",
+        "statement": "upward duals transform by G^(-T), preserving the cycle-dual pairing; the tracked CW dual is -K_U",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.lateral.CW_CCW_counterexample",
+        "statement": "CW sends the tracked dual to -K_U while CCW sends it to -K_L; local regularity alone does not choose between independent arms",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.Stokes.enhanced_lateral_matrices",
+        "statement": "for E_-=Gamma_L and E_+=-Gamma_U=Gamma_0+Gamma_L, S_down=[[1,0],[1,1]] and S_up=S_down^(-T)",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.detline.arm_half_phase",
+        "statement": "in arm order (U,L), sqrt(det) has phases (e^-i pi/4,e^+i pi/4) and the inverse-sqrt endpoint factor has the opposite half phases",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.uniformization.no_soft_determinant_double_counting",
+        "statement": "Airy uniformization replaces the soft zeta^(-1/4) factor: a uniform kernel may multiply only the regular hard quotient d_hat=d/[-Phi''(u_track)/2], never full d^(-1/2) times Airy",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.detline.bare_root_monodromy",
+        "statement": "after one declared inverse-sqrt trivialization, the bare BVP-root lateral ratio is iP and its square is -I; this is not the Gauss--Manin cycle matrix G",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.scope.Phase32_cannot_locally_choose_fold_arm",
+        "statement": "the fold patch is disjoint from every recorded Phase-32 origin cap, so that bypass supplies an origin lateral chamber but no local U/L fold-arm choice",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 12,
+    "frozen_conventions": {
+      "Ai_Bi_from_arm": [
+        [
+          "-1",
+          "-1"
+        ],
+        [
+          "+i",
+          "-i"
+        ]
+      ],
+      "Airy_integrals": {
+        "J_0": "Ai(z)",
+        "J_L": "omega Ai(omega z)",
+        "J_U": "omega^2 Ai(omega^2 z)",
+        "omega": "exp(2 pi i/3)"
+      },
+      "CCW_tracked_dual": "-K_L",
+      "CW_tracked_dual": "-K_U",
+      "Gauss_Manin_G": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "Gauss_Manin_basis_orders": {
+        "CCW": "(Gamma_0,Gamma_U)_in -> (Gamma_L,Gamma_U)_out",
+        "CW": "(Gamma_0,Gamma_L)_in -> (Gamma_U,Gamma_L)_out"
+      },
+      "Stokes_down": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "Stokes_up": [
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "arm_from_Ai_Bi": [
+        [
+          "-1/2",
+          "-i/2"
+        ],
+        [
+          "-1/2",
+          "+i/2"
+        ]
+      ],
+      "arm_order": [
+        "U",
+        "L"
+      ],
+      "canonical_exponent": "f(t,z)=t^3/3-z t, integrand exp(f); physical soft x maps through u=-alpha x and t=-u",
+      "contours": {
+        "Gamma_0": "D_minus -> D_plus",
+        "Gamma_L": "D_plus -> D_pi",
+        "Gamma_U": "D_pi -> D_minus",
+        "relation": "Gamma_0+Gamma_L+Gamma_U=0"
+      },
+      "decay_rays": {
+        "D_minus": "arg t=-pi/3",
+        "D_pi": "arg t=pi",
+        "D_plus": "arg t=+pi/3"
+      },
+      "determinant_half_phase": {
+        "epsilon_U_L": "independent relative signs remain unresolved by the endpoint determinant alone",
+        "inverse_sqrt_arm_order_U_L": [
+          "epsilon_U exp(+i pi/4)",
+          "epsilon_L exp(-i pi/4)"
+        ],
+        "sqrt_arm_order_U_L": [
+          "epsilon_U exp(-i pi/4)",
+          "epsilon_L exp(+i pi/4)"
+        ]
+      },
+      "dual_G_inverse_transpose": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "uniformization_double_counting_guard": "the soft sqrt(zeta) factor in det Bv is already replaced by the Airy function; only a derived regular hard quotient d_hat may be multiplied into a uniform kernel, and d_hat is not constructed here"
+    },
+    "next_calculation": "lift the complete declared original lapse-field relative cycle into the Airy chart, transport its regulated determinant orientation to all good ends, and only then pair it with every upward dual",
+    "numerical_check_ids": [
+      "P36.branch.tracked_real_sheet_identification",
+      "P36.BVP.four_path_residuals",
+      "P36.BVP.lateral_root_permutations",
+      "P36.BVP.tracked_Ai_arm_mapping",
+      "P36.CFU.action_gap_winding",
+      "P36.CFU.complex_canonical_coordinate",
+      "P36.detline.lateral_half_phase_limit",
+      "P36.detline.no_sampled_semicircle_zero",
+      "P36.counterexample.CW_CCW_both_regular"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P36.branch.tracked_real_sheet_identification",
+        "statement": "the Phase-25 recorded real sheet is incoming I_+ (positive physical soft coordinate and positive endpoint determinant), the canonical Ai saddle after the frozen sign map",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.BVP.four_path_residuals",
+        "statement": "all twelve upper/lower prescribed-complex-T root paths solve the half BVP and independently reintegrated sampled full endpoint problem",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.BVP.lateral_root_permutations",
+        "statement": "in BVP-root order (O_minus Im soft<0,O_plus Im soft>0) versus (I_minus,I_plus), upper-T/CW gives P and lower-T/CCW gives I; these root permutations are distinct from the cycle matrix G",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.BVP.tracked_Ai_arm_mapping",
+        "statement": "the tracked I_plus/Ai root reaches the P34 upper U arm through the upper-T/CW bypass and the lower L arm through the lower-T/CCW bypass",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.CFU.action_gap_winding",
+        "statement": "the oriented two-root action gap winds by -3pi/2 on upper-T/CW and +3pi/2 on lower-T/CCW continuation",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.CFU.complex_canonical_coordinate",
+        "statement": "three finite radii of the continuous action-gap lift are consistent with one locally analytic CFU coordinate and approach a real-positive zeta/(Tc-T) coefficient about 16.94791",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.detline.lateral_half_phase_limit",
+        "statement": "sampled det Bv phases approach -pi/2 on upper-T/CW and +pi/2 on lower-T/CCW, yielding the declared opposite square-root half phases",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.detline.no_sampled_semicircle_zero",
+        "statement": "nine-point determinant tables on every semicircle are nonzero and have unambiguous principal phase increments (not a proof between samples or on other sheets)",
+        "status": "PASS"
+      },
+      {
+        "id": "P36.counterexample.CW_CCW_both_regular",
+        "statement": "the CW/U and CCW/L continuations of the same tracked root are distinct conjugate regular solutions, furnishing the explicit local nonselection counterexample",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 9,
+    "numerical_controls": {
+      "BVP_root_basis": {
+        "incoming_order": [
+          "I_minus_physical_soft",
+          "I_plus_tracked_Ai"
+        ],
+        "lower_T_CCW_root_map": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "outgoing_order": [
+          "O_minus_Im_soft",
+          "O_plus_Im_soft"
+        ],
+        "upper_T_CW_root_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "warning": "these analytic root permutations are not the Gauss-Manin contour matrix G or an intersection coefficient"
+      },
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "fold": {
+        "T_c": 9.788625568081242,
+        "center": [
+          1.2479953302615718,
+          0.10016795390658555
+        ],
+        "right_null_oriented": [
+          0.9964839319603808,
+          -0.08378408765857216
+        ]
+      },
+      "radius_records": [
+        {
+          "determinant_sample_count_per_path": 9,
+          "incoming_order": [
+            "I_minus_soft",
+            "I_plus_tracked_Ai"
+          ],
+          "laterals": {
+            "lower_T_CCW": {
+              "action_gap_end": [
+                1.1368683772161603E-12,
+                -0.00026312415451559823
+              ],
+              "action_gap_phase_rotation": 4.712388984705343,
+              "action_gap_start": [
+                0.00026312082809454296,
+                0.0
+              ],
+              "max_action_gap_phase_increment": 0.19635036812954273,
+              "paths": [
+                {
+                  "det_phase_end": 4.722491627527907,
+                  "det_phase_rotation": 1.5808989739381136,
+                  "det_phase_start": 3.141592653589793,
+                  "end_action": [
+                    -1157.046926587721,
+                    0.00013156207725079083
+                  ],
+                  "end_center": [
+                    [
+                      1.2479800330885034,
+                      -0.016702276408207657
+                    ],
+                    [
+                      0.10014656382666946,
+                      0.0014041479067249797
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    1.4626238626986146,
+                    -144.77137342977932
+                  ],
+                  "end_soft": [
+                    -0.000013451238836438057,
+                    -0.016761195319242517
+                  ],
+                  "incoming_index": 0,
+                  "max_full_endpoint_residual": 4.684911662306688E-11,
+                  "max_root_residual": 1.3507169931821301E-15,
+                  "max_sampled_det_phase_increment": 0.19830163747711083,
+                  "min_sampled_sigma_Bv": 0.05780071745388183
+                },
+                {
+                  "det_phase_end": 1.560693679658675,
+                  "det_phase_rotation": 1.560693679658675,
+                  "det_phase_start": 0.0,
+                  "end_action": [
+                    -1157.0469265877198,
+                    -0.0001315620772648074
+                  ],
+                  "end_center": [
+                    [
+                      1.247980033088502,
+                      0.016702276408194255
+                    ],
+                    [
+                      0.1001465638266697,
+                      -0.0014041479067238656
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    1.4626238616846199,
+                    144.77137342966444
+                  ],
+                  "end_soft": [
+                    -0.000013451238837785409,
+                    0.016761195319229066
+                  ],
+                  "incoming_index": 1,
+                  "max_full_endpoint_residual": 4.6748691546523227E-11,
+                  "max_root_residual": 2.987373936170624E-15,
+                  "max_sampled_det_phase_increment": 0.19617623797039424,
+                  "min_sampled_sigma_Bv": 0.0573869029854798
+                }
+              ],
+              "zeta_over_Tc_minus_T": {
+                "endpoint": [
+                  16.947981908069693,
+                  4.881756574586082E-8
+                ],
+                "max_deviation_from_path_mean": 0.00008368455889059019,
+                "midpoint": [
+                  16.947910548412576,
+                  -0.00007136172220523008
+                ],
+                "path_mean": [
+                  16.947910517862855,
+                  -0.00004356948362163132
+                ],
+                "start": [
+                  16.947839069941306,
+                  0.0
+                ]
+              }
+            },
+            "upper_T_CW": {
+              "action_gap_end": [
+                0.0,
+                0.00026312415448984106
+              ],
+              "action_gap_phase_rotation": -4.71238898038469,
+              "action_gap_start": [
+                0.00026312082809454296,
+                0.0
+              ],
+              "max_action_gap_phase_increment": 0.19635036471940825,
+              "paths": [
+                {
+                  "det_phase_end": 1.5606936796516384,
+                  "det_phase_rotation": -1.5808989739381547,
+                  "det_phase_start": 3.141592653589793,
+                  "end_action": [
+                    -1157.0469265877211,
+                    -0.00013156207720591007
+                  ],
+                  "end_center": [
+                    [
+                      1.247980033088507,
+                      0.016702276408075055
+                    ],
+                    [
+                      0.10014656382666931,
+                      -0.0014041479067138196
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    1.4626238626929482,
+                    144.77137342862662
+                  ],
+                  "end_soft": [
+                    -0.000013451238832885044,
+                    0.016761195319109447
+                  ],
+                  "incoming_index": 0,
+                  "max_full_endpoint_residual": 4.684911662306688E-11,
+                  "max_root_residual": 1.7343048389323074E-15,
+                  "max_sampled_det_phase_increment": 0.19830163747384857,
+                  "min_sampled_sigma_Bv": 0.05780071745342259
+                },
+                {
+                  "det_phase_end": -1.5606936796551718,
+                  "det_phase_rotation": -1.5606936796551718,
+                  "det_phase_start": 0.0,
+                  "end_action": [
+                    -1157.0469265877211,
+                    0.000131562077283931
+                  ],
+                  "end_center": [
+                    [
+                      1.2479800330885051,
+                      -0.016702276408170794
+                    ],
+                    [
+                      0.10014656382666921,
+                      0.00140414790672187
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    1.4626238621891192,
+                    -144.7713734293925
+                  ],
+                  "end_soft": [
+                    -0.000013451238834647018,
+                    -0.016761195319205523
+                  ],
+                  "incoming_index": 1,
+                  "max_full_endpoint_residual": 4.6748691546523227E-11,
+                  "max_root_residual": 1.603437826216561E-15,
+                  "max_sampled_det_phase_increment": 0.1961762379728024,
+                  "min_sampled_sigma_Bv": 0.0573869029854798
+                }
+              ],
+              "zeta_over_Tc_minus_T": {
+                "endpoint": [
+                  16.947981906963673,
+                  -5.450886714179623E-15
+                ],
+                "max_deviation_from_path_mean": 0.0000836854211119658,
+                "midpoint": [
+                  16.94791050811752,
+                  0.00007140427348719992
+                ],
+                "path_mean": [
+                  16.947910512423057,
+                  0.000043580058604277795
+                ],
+                "start": [
+                  16.947839069941306,
+                  0.0
+                ]
+              }
+            }
+          },
+          "point_count_per_path": 25,
+          "radius": 0.0002,
+          "start_det_Bv": [
+            -146.23380806204685,
+            143.30751668328335
+          ],
+          "start_soft": [
+            -0.016747437201703335,
+            0.016774340272532273
+          ]
+        },
+        {
+          "determinant_sample_count_per_path": 9,
+          "incoming_order": [
+            "I_minus_soft",
+            "I_plus_tracked_Ai"
+          ],
+          "laterals": {
+            "lower_T_CCW": {
+              "action_gap_end": [
+                9.094947017729282E-13,
+                -0.0029418918345117118
+              ],
+              "action_gap_phase_rotation": 4.712388980693842,
+              "action_gap_start": [
+                0.0029417059456591232,
+                0.0
+              ],
+              "max_action_gap_phase_increment": 0.19635366457232165,
+              "paths": [
+                {
+                  "det_phase_end": 4.73495977735176,
+                  "det_phase_rotation": 1.5933671237619667,
+                  "det_phase_start": 3.141592653589793,
+                  "end_action": [
+                    -1157.1059051261936,
+                    0.0014709459172688732
+                  ],
+                  "end_center": [
+                    [
+                      1.2479188485243453,
+                      -0.03734892222314498
+                    ],
+                    [
+                      0.10006101718389922,
+                      0.003138332379988553
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    7.307907821357589,
+                    -323.7221444837899
+                  ],
+                  "end_soft": [
+                    -0.00006725322648717063,
+                    -0.03748054318662865
+                  ],
+                  "incoming_index": 0,
+                  "max_full_endpoint_residual": 4.632519954705355E-11,
+                  "max_root_residual": 1.695596813379816E-15,
+                  "max_sampled_det_phase_increment": 0.20066910938783236,
+                  "min_sampled_sigma_Bv": 0.12924244930317155
+                },
+                {
+                  "det_phase_end": 1.548225529828859,
+                  "det_phase_rotation": 1.548225529828859,
+                  "det_phase_start": 0.0,
+                  "end_action": [
+                    -1157.1059051261927,
+                    -0.0014709459172428385
+                  ],
+                  "end_center": [
+                    [
+                      1.2479188485243466,
+                      0.03734892222309661
+                    ],
+                    [
+                      0.10006101718389956,
+                      -0.0031383323799844976
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    7.30790782101392,
+                    323.722144483388
+                  ],
+                  "end_soft": [
+                    -0.0000672532264858721,
+                    0.03748054318658011
+                  ],
+                  "incoming_index": 1,
+                  "max_full_endpoint_residual": 4.641641212654266E-11,
+                  "max_root_residual": 1.9071806642684402E-15,
+                  "max_sampled_det_phase_increment": 0.19602223945254768,
+                  "min_sampled_sigma_Bv": 0.12718769794714088
+                }
+              ],
+              "zeta_over_Tc_minus_T": {
+                "endpoint": [
+                  16.948267480253904,
+                  3.4930513447477134E-9
+                ],
+                "max_deviation_from_path_mean": 0.0004182009828696591,
+                "midpoint": [
+                  16.9479105142681,
+                  -0.0003569625423190134
+                ],
+                "path_mean": [
+                  16.947910514257643,
+                  -0.00021784730927754814
+                ],
+                "start": [
+                  16.947553534409593,
+                  0.0
+                ]
+              }
+            },
+            "upper_T_CW": {
+              "action_gap_end": [
+                -1.3642420526593924E-12,
+                0.00294189183483462
+              ],
+              "action_gap_phase_rotation": -4.712388979920961,
+              "action_gap_start": [
+                0.0029417059456591232,
+                0.0
+              ],
+              "max_action_gap_phase_increment": 0.19635366421925274,
+              "paths": [
+                {
+                  "det_phase_end": 1.5482255298283791,
+                  "det_phase_rotation": -1.593367123761414,
+                  "det_phase_start": 3.141592653589793,
+                  "end_action": [
+                    -1157.105905126192,
+                    -0.0014709459173787298
+                  ],
+                  "end_center": [
+                    [
+                      1.247918848524345,
+                      0.037348922223111855
+                    ],
+                    [
+                      0.10006101718389938,
+                      -0.003138332379985791
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    7.307907821171977,
+                    323.7221444835076
+                  ],
+                  "end_soft": [
+                    -0.00006725322648740584,
+                    0.03748054318659541
+                  ],
+                  "incoming_index": 0,
+                  "max_full_endpoint_residual": 4.6080090097893876E-11,
+                  "max_root_residual": 1.5934486226866032E-15,
+                  "max_sampled_det_phase_increment": 0.20066910938934673,
+                  "min_sampled_sigma_Bv": 0.1292424493030514
+                },
+                {
+                  "det_phase_end": -1.548225529827325,
+                  "det_phase_rotation": -1.548225529827325,
+                  "det_phase_start": 0.0,
+                  "end_action": [
+                    -1157.1059051261934,
+                    0.0014709459174558903
+                  ],
+                  "end_center": [
+                    [
+                      1.247918848524344,
+                      -0.03734892222313002
+                    ],
+                    [
+                      0.10006101718389944,
+                      0.003138332379987353
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    7.307907821513416,
+                    -323.7221444835082
+                  ],
+                  "end_soft": [
+                    -0.00006725322648851681,
+                    -0.037480543186613646
+                  ],
+                  "incoming_index": 1,
+                  "max_full_endpoint_residual": 4.6655094386546446E-11,
+                  "max_root_residual": 9.218757450113532E-16,
+                  "max_sampled_det_phase_increment": 0.1960222394495238,
+                  "min_sampled_sigma_Bv": 0.12718769794714088
+                }
+              ],
+              "zeta_over_Tc_minus_T": {
+                "endpoint": [
+                  16.948267481494096,
+                  5.2396047860435E-9
+                ],
+                "max_deviation_from_path_mean": 0.0004182025463574779,
+                "midpoint": [
+                  16.94791051464449,
+                  0.0003569641536731119
+                ],
+                "path_mean": [
+                  16.947910515270966,
+                  0.00021784865019908045
+                ],
+                "start": [
+                  16.947553534409593,
+                  0.0
+                ]
+              }
+            }
+          },
+          "point_count_per_path": 25,
+          "radius": 0.001,
+          "start_det_Bv": [
+            -331.035148384127,
+            316.39324139613143
+          ],
+          "start_soft": [
+            -0.037409854849225654,
+            0.037544376137852616
+          ]
+        },
+        {
+          "determinant_sample_count_per_path": 9,
+          "incoming_order": [
+            "I_minus_soft",
+            "I_plus_tracked_Ai"
+          ],
+          "laterals": {
+            "lower_T_CCW": {
+              "action_gap_end": [
+                2.9558577807620168E-12,
+                -0.032895507322029616
+              ],
+              "action_gap_phase_rotation": 4.712388980474545,
+              "action_gap_start": [
+                0.03288511609844136,
+                0.0
+              ],
+              "max_action_gap_phase_increment": 0.14727763811550829,
+              "paths": [
+                {
+                  "det_phase_end": 4.762642226710216,
+                  "det_phase_rotation": 1.6210495731204233,
+                  "det_phase_start": 3.141592653589793,
+                  "end_action": [
+                    -1157.4007549366568,
+                    0.016447753660933095
+                  ],
+                  "end_center": [
+                    [
+                      1.2476130250208115,
+                      -0.08353146494727308
+                    ],
+                    [
+                      0.09963361445696893,
+                      0.007001429526683865
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    36.40992546571322,
+                    -723.9188157065843
+                  ],
+                  "end_soft": [
+                    -0.00033619188623579965,
+                    -0.0838243710182684
+                  ],
+                  "incoming_index": 0,
+                  "max_full_endpoint_residual": 4.599404872576869E-11,
+                  "max_root_residual": 4.475458662021884E-15,
+                  "max_sampled_det_phase_increment": 0.2058551915113782,
+                  "min_sampled_sigma_Bv": 0.28895151653350226
+                },
+                {
+                  "det_phase_end": 1.520543080468262,
+                  "det_phase_rotation": 1.520543080468262,
+                  "det_phase_start": 0.0,
+                  "end_action": [
+                    -1157.4007549366538,
+                    -0.01644775366109652
+                  ],
+                  "end_center": [
+                    [
+                      1.2476130250208144,
+                      0.08353146494728027
+                    ],
+                    [
+                      0.09963361445696856,
+                      -0.007001429526684412
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    36.40992546649379,
+                    723.9188157061396
+                  ],
+                  "end_soft": [
+                    -0.0003361918862328918,
+                    0.0838243710182756
+                  ],
+                  "incoming_index": 1,
+                  "max_full_endpoint_residual": 4.737040487297463E-11,
+                  "max_root_residual": 3.488737598376292E-15,
+                  "max_sampled_det_phase_increment": 0.19594575288404184,
+                  "min_sampled_sigma_Bv": 0.2788338346837444
+                }
+              ],
+              "zeta_over_Tc_minus_T": {
+                "endpoint": [
+                  16.949695360767,
+                  1.015338805505696E-9
+                ],
+                "max_deviation_from_path_mean": 0.0020970746290651923,
+                "midpoint": [
+                  16.947910486911717,
+                  -0.001784816757118998
+                ],
+                "path_mean": [
+                  16.94791051684658,
+                  -0.0011009323067172757
+                ],
+                "start": [
+                  16.946125727452014,
+                  0.0
+                ]
+              }
+            },
+            "upper_T_CW": {
+              "action_gap_end": [
+                -6.821210263296962E-13,
+                0.032895507322525996
+              ],
+              "action_gap_phase_rotation": -4.712388980363954,
+              "action_gap_start": [
+                0.03288511609844136,
+                0.0
+              ],
+              "max_action_gap_phase_increment": 0.14727763802483648,
+              "paths": [
+                {
+                  "det_phase_end": 1.5205430804682363,
+                  "det_phase_rotation": -1.6210495731215568,
+                  "det_phase_start": 3.141592653589793,
+                  "end_action": [
+                    -1157.4007549366568,
+                    -0.01644775366123241
+                  ],
+                  "end_center": [
+                    [
+                      1.2476130250208115,
+                      0.08353146494728422
+                    ],
+                    [
+                      0.09963361445696854,
+                      -0.007001429526684791
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    36.40992546651375,
+                    723.9188157061665
+                  ],
+                  "end_soft": [
+                    -0.0003361918862357671,
+                    0.08382437101827957
+                  ],
+                  "incoming_index": 0,
+                  "max_full_endpoint_residual": 4.679685561580885E-11,
+                  "max_root_residual": 3.723798756985984E-15,
+                  "max_sampled_det_phase_increment": 0.20585519151149873,
+                  "min_sampled_sigma_Bv": 0.28895151653344336
+                },
+                {
+                  "det_phase_end": -1.5205430804694344,
+                  "det_phase_rotation": -1.5205430804694344,
+                  "det_phase_start": 0.0,
+                  "end_action": [
+                    -1157.4007549366574,
+                    0.016447753661293585
+                  ],
+                  "end_center": [
+                    [
+                      1.2476130250208126,
+                      -0.08353146494724695
+                    ],
+                    [
+                      0.09963361445696906,
+                      0.007001429526681783
+                    ]
+                  ],
+                  "end_det_Bv": [
+                    36.409925465635865,
+                    -723.9188157060022
+                  ],
+                  "end_soft": [
+                    -0.0003361918862347038,
+                    -0.08382437101824218
+                  ],
+                  "incoming_index": 1,
+                  "max_full_endpoint_residual": 4.7494555587189843E-11,
+                  "max_root_residual": 2.987914991562001E-15,
+                  "max_sampled_det_phase_increment": 0.19594575288514632,
+                  "min_sampled_sigma_Bv": 0.2788338346837444
+                }
+              ],
+              "zeta_over_Tc_minus_T": {
+                "endpoint": [
+                  16.949695360937504,
+                  2.343230901468002E-10
+                ],
+                "max_deviation_from_path_mean": 0.002097074251961513,
+                "midpoint": [
+                  16.947910487036204,
+                  0.0017848168815959248
+                ],
+                "path_mean": [
+                  16.9479105167366,
+                  0.0011009323833378528
+                ],
+                "start": [
+                  16.946125727452014,
+                  0.0
+                ]
+              }
+            }
+          },
+          "point_count_per_path": 33,
+          "radius": 0.005,
+          "start_det_Bv": [
+            -760.5660985659762,
+            687.0939494456453
+          ],
+          "start_soft": [
+            -0.08344967090481366,
+            0.08412242557208664
+          ]
+        }
+      ],
+      "recorded_Phase25_sheet_at_smallest_radius": {
+        "center": [
+          1.264712569568749,
+          0.09878487604635221
+        ],
+        "incoming_label": "I_plus_tracked_Ai",
+        "physical_soft": 0.016774340273018846
+      }
+    },
+    "phase": "P36",
+    "scope_guard": {
+      "computed": [
+        "the exact three-ray Airy contour relation and Ai/Bi-to-arm matrix",
+        "CW and CCW Gauss-Manin cycle maps and inverse-transpose upward-dual maps",
+        "the enhanced lateral Stokes matrices in one frozen convention",
+        "relative endpoint-determinant square-root and inverse-square-root half phases with unresolved signs",
+        "twelve prescribed-complex-T BVP root paths on three shrinking semicircle radii",
+        "the BVP-root permutation, action-gap winding, CFU coordinate fit, and sampled determinant phase"
+      ],
+      "not_computed": [
+        "a choice between the upper/CW and lower/CCW lateral continuations",
+        "absolute determinant signs, unsampled zeros, other sheets, inhomogeneous modes, or good ends",
+        "the regular hard determinant quotient needed by an absolute Airy-uniform kernel",
+        "a full joint field-lapse flow or regularized BFV/SUGRA superdeterminant",
+        "complete relative cycles, a global intersection coefficient, WDW state, initial-value peak, or SUSY scale"
+      ]
+    }
+  }
+}
+

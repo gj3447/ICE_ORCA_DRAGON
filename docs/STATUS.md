@@ -374,10 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–35 is now indexed in a repository-local typed research graph with **492 nodes and 1284 directed
-relations**. It preserves 120 claims, 73 evidence groups, 38 explicit scopes, 42 open problems, 63
-literature sources, the Phase 16–35 run payloads (334 named exact checks, 167 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 65/65 verified artifact and policy hashes,
+Phase 15R–36 is now indexed in a repository-local typed research graph with **506 nodes and 1328 directed
+relations**. It preserves 123 claims, 75 evidence groups, 39 explicit scopes, 43 open problems, 63
+literature sources, the Phase 16–36 run payloads (346 named exact checks, 176 typed numerical checks, and
+one separately recorded legacy Phase-18 numerical control), 68/68 verified artifact and policy hashes,
 and cautious bridges to
 the older SYMPOSIUM KG.
 
@@ -687,6 +687,23 @@ See
 [`../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md`](../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md)
 and
 [`../cpt_temporal_folded_susy/phase35_reduced_detline_transport.py`](../cpt_temporal_folded_susy/phase35_reduced_detline_transport.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 36
+
+Phase 36 returns exit 0 with **12 exact checks and 9 numerical checks**. In the declared local Airy
+contour bases it fixes the three-ray relation, Ai/Bi arm connection, CW/CCW Gauss--Manin cycle maps,
+inverse-transpose dual maps, lateral Stokes matrices, and the soft-determinant no-double-counting guard.
+At three finite semicircle radii, twelve prescribed-complex-$T$ BVP paths keep both the CW/U and CCW/L
+tracked continuations regular. This contradicts only the local inference that the Phase-32 origin
+lateral plus Phase-35 relative determinant transport uniquely selects one arm. The complete original
+relative cycle, regular hard determinant quotient, absolute signs and Maslov orientation, unsampled
+zeros and other sheets, full joint field--lapse/BFV superdeterminant, global $n_\sigma$, and physical
+state remain open.
+
+See
+[`../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md`](../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md)
+and
+[`../cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py`](../cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py).
 
 ## Historical scientific ledger
 
