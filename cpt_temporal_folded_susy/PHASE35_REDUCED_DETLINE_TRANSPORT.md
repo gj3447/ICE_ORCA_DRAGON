@@ -13,9 +13,10 @@ B_v=M_{(a,\phi),(\dot a,\dot\phi)},
 was transported along the bounded upper and lower **dual-aligned reduced
 stationary-family branches** of Phase 34.  In the declared endpoint basis it
 does not vanish at any of the sampled points.  Its upper phase starts near
-\(-\pi/2\), unwraps continuously past a total rotation larger than \(\pi\),
-and reaches the Phase-34 endpoint at \(\operatorname{Re}T=13\).  The lower
-line is the complex conjugate.
+\(-\pi/2\), admits a recursive lift across the recorded samples with total
+rotation larger than \(\pi\), and reaches the Phase-34 endpoint at
+\(\operatorname{Re}T=13\).  The lower line is the complex conjugate.  This
+does not exclude a zero or branch change between samples.
 
 This determines a **relative finite-dimensional endpoint transport**.  It
 does not fix the absolute square-root sign, a Maslov orientation, the full
@@ -66,7 +67,7 @@ is only for the displayed reduced bosonic endpoint pair; it is not a claim
 about ghosts, gravitini, inhomogeneous modes, or a regulated
 superdeterminant.
 
-## 2. Continuous phase and square-root lift
+## 2. Sampled phase and square-root lift
 
 For nonzero ordered samples \(d_j\), define
 
@@ -84,7 +85,7 @@ checks
 e^{i\theta_j}=\frac{d_j}{|d_j|}
 \]
 
-at every point.  One continuous square-root lift is
+at every recorded point.  One sampled square-root lift is
 
 \[
 g_j=\sqrt{|d_j|}\,e^{i\theta_j/2},
@@ -142,7 +143,7 @@ Near the fold the first seven samples use
 \tau=(2,5,10,20,50,100,200)\times10^{-6}.
 \]
 
-They verify
+At the recorded resolutions they are consistent with
 
 \[
 \arg d_+\longrightarrow-\frac{\pi}{2},
@@ -156,9 +157,10 @@ The smallest-\(\tau\) coefficient is approximately
 C_{\det}=1.02368\times10^4,
 \]
 
-and the phase error has the expected leading square-root scaling.  This is a
-coordinate-normalized coefficient; its sign and limiting direction are the
-relevant outputs here, not its absolute magnitude.
+and the fitted phase-error power is approximately \(0.5\).  This is a
+finite-resolution, coordinate-normalized consistency check; its recorded sign
+and direction are the relevant outputs here, not a proved \(\tau\to0\) limit
+or its absolute magnitude.
 
 The Phase-34 anchors are reproduced:
 
@@ -169,15 +171,16 @@ d(2\times10^{-4})
 
 \[
 d(13-T_c)
-=-191673.33713+465022.38727\,i.
+\simeq-1.91673\times10^5+4.65022\times10^5\,i.
 \]
 
-The upper endpoint argument is about \(1.9618\).  Since the fold limit is
-\(-\pi/2\), the bounded upper path rotates by about \(3.5326\) radians from
-that limiting direction.  The precise executable output separately reports
-the rotation from the finite regulator \(\tau_{\min}\).
+The upper endpoint argument is about \(1.9618\).  Relative to the formal
+\(-\pi/2\) fold reference, the bounded upper table rotates by about
+\(3.5326\) radians.  The precise executable output separately reports the
+rotation from the finite regulator \(\tau_{\min}\); only the latter is a
+directly sampled relative transport.
 
-## 4. Independent continuity checks
+## 4. Sampled continuity checks
 
 The dense phase increments stay positive and well below \(\pi\), so the
 unwrapping never hides a sampled branch-cut jump.  At five interior values of
@@ -207,12 +210,17 @@ prefactors; that would additionally require a correlated lift orientation.
 Supported on the sampled Phase-34 dual-aligned reduced stationary-family
 branch pair through \(\operatorname{Re}T=13\):
 
-- the declared complex endpoint-Jacobi determinant section stays nonzero;
-- its phase admits a continuous lift from the oriented fold asymptotic;
+- the declared complex endpoint-Jacobi determinant is nonzero at all 57
+  recorded upper points;
+- its recorded phase admits a recursive discrete lift consistent with smooth
+  transport;
+- the near-fold samples are finite-resolution consistent with the declared
+  \(-iC_{\det}\sqrt{\tau}\) law;
 - the two relative square-root lifts differ by one global sign;
 - the corresponding inverse-square-root endpoint factor has the opposite
   half phase, subject to the still-open canonical/measure completion;
-- six direct lower integrations spot-check the analytically conjugated line;
+- six separate conjugate-input lower integrations spot-check the analytically
+  conjugated line;
 - the relative reduced bosonic **determinant** endpoint phases cancel in the
   conjugate pair.
 

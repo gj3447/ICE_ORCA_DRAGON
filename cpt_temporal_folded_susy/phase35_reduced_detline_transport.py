@@ -135,12 +135,12 @@ def exact_controls(audit: Audit) -> dict[str, str]:
     )
     inverse_lift_ratio = (1 / lift_1) / (1 / lift_0)
     audit.exact(
-        "P35.sqrt.continuous_lift_squares",
+        "P35.sqrt.sampled_half_phase_lift_squares",
         sp.simplify(lift_0**2 - z_0) == 0
         and sp.simplify(lift_1**2 - z_1) == 0
         and sp.simplify((lift_1 / lift_0) ** 2 - z_1 / z_0) == 0
         and sp.simplify(inverse_lift_ratio**2 - z_0 / z_1) == 0,
-        "the continuous half-phase lift squares to det Bv, while the corresponding inverse-square-root transport has the opposite half phase",
+        "the sampled half-phase lift squares to det Bv, while the corresponding inverse-square-root transport has the opposite half phase",
     )
 
     audit.exact(
@@ -300,7 +300,7 @@ def unwrap_determinants(
     if determinants.ndim != 1 or len(determinants) == 0:
         raise ValueError("determinants must be a nonempty vector")
     if np.any(np.abs(determinants) == 0.0):
-        raise ValueError("a zero determinant has no continuous phase lift")
+        raise ValueError("a zero determinant has no sampled phase lift")
     phases = np.empty(len(determinants), dtype=float)
     increments = np.empty(max(0, len(determinants) - 1), dtype=float)
     phases[0] = float(np.angle(determinants[0]))
@@ -442,7 +442,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     lifted_sections = np.sqrt(np.abs(determinants)) * np.exp(0.5j * phases)
     inverse_sqrt_sections = 1.0 / lifted_sections
     audit.numerical(
-        "P35.phase.continuous_unwrap_and_square_root",
+        "P35.phase.sampled_unwrap_and_square_root",
         max(abs(np.exp(1.0j * phases) - normalized_sections)) < 2e-14
         and max(abs(lifted_sections**2 - determinants) / np.abs(determinants))
         < 3e-14
@@ -457,11 +457,11 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     )
 
     audit.numerical(
-        "P35.phase.no_discontinuous_dense_jump",
+        "P35.phase.recorded_increment_consistency",
         np.all(increments > 0.0)
         and max(abs(increments)) < 0.16
         and float(phases[-1] - phases[0]) > np.pi,
-        "the dense upper determinant rotates continuously with no principal increment near a branch cut",
+        "the recorded upper determinant phases advance with positive adjacent increments, none near a principal branch-cut jump",
     )
 
     near_indices = [
@@ -479,7 +479,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         np.polyfit(np.log(near_taus), np.log(near_phase_errors), 1)[0]
     )
     audit.numerical(
-        "P35.fold.minus_i_sqrt_asymptotic",
+        "P35.fold.finite_resolution_minus_i_sqrt",
         near_phase_errors[0] < 1.6e-3
         and np.all(np.diff(near_phase_errors) > 0.0)
         and 0.47 < phase_exponent < 0.53
@@ -487,7 +487,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         and abs(near_coefficients[0].imag / near_coefficients[0].real)
         < 1.6e-3
         and max(abs(np.diff(near_coefficients.real))) < 1.0,
-        "the declared upper convention converges to det Bv=-i C_det sqrt(tau) with C_det positive",
+        "the recorded near-fold samples are finite-resolution consistent with det Bv=-i C_det sqrt(tau) and C_det positive",
     )
 
     lower_checks = lower_conjugacy_checks(
@@ -521,7 +521,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         and max(abs(lower_spot_phases + upper_spot_phases)) < 2e-12
         and max(abs(lower_phases + phases)) < 2e-14
         and max(abs(lower_increments + increments)) < 2e-14,
-        "six independent lower integrations spot-check the analytic conjugate lift constructed across the full sampled table",
+        "six separate conjugate-input integrations spot-check the analytic conjugate lift constructed across the full sampled table",
     )
 
     finite_difference_checks = local_finite_difference_checks(
@@ -566,7 +566,9 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     )
 
     determinant_phase_rotation = float(phases[-1] - phases[0])
-    fold_limit_rotation = float(phases[-1] + np.pi / 2.0)
+    formal_minus_pi_over_2_reference_rotation = float(
+        phases[-1] + np.pi / 2.0
+    )
     determinant_unit_transport = complex(
         np.exp(1.0j * determinant_phase_rotation)
     )
@@ -589,7 +591,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
     audit.numerical(
         "P35.pair.reduced_relative_phase_cancels",
         pair_phase_residual < 2e-12,
-        "the dense upper transport and independently reintegrated lower spot path have cancelling relative endpoint phases",
+        "the sampled upper transport and separate conjugate-input lower spot integrations have cancelling relative endpoint phases",
     )
 
     selected_taus = set(
@@ -628,7 +630,9 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             "upper_start_phase": float(phases[0]),
             "upper_endpoint_phase": float(phases[-1]),
             "upper_rotation_from_tau_min": determinant_phase_rotation,
-            "upper_rotation_from_fold_limit": fold_limit_rotation,
+            "upper_rotation_from_formal_minus_pi_over_2_reference": (
+                formal_minus_pi_over_2_reference_rotation
+            ),
             "independent_lower_spot_rotation": independent_lower_rotation,
             "determinant_unit_transport": pair(determinant_unit_transport),
             "one_sqrt_section_unit_transport": pair(
@@ -677,8 +681,8 @@ def run() -> dict[str, object]:
             "the_incoming_PL_cycle_is_oriented_into_one_outgoing_branch": (
                 "OPEN_NOT_FIXED_BY_RELATIVE_ENDPOINT_DETERMINANT_TRANSPORT"
             ),
-            "the_upper_near_fold_endpoint_phase_is_minus_pi_over_2": (
-                "SUPPORTED_AS_A_LIMIT_IN_THE_DECLARED_ENDPOINT_BASIS"
+            "the_recorded_upper_near_fold_phase_is_consistent_with_minus_pi_over_2": (
+                "SUPPORTED_AT_FINITE_RESOLUTION_IN_THE_DECLARED_ENDPOINT_BASIS"
             ),
             "the_conjugate_reduced_bosonic_endpoint_phases_cancel": (
                 "SUPPORTED_RELATIVELY_NOT_A_FULL_SUPERDETERMINANT_RESULT"
@@ -699,11 +703,11 @@ def run() -> dict[str, object]:
         "scope_guard": {
             "computed": [
                 "the complex 2x2 endpoint Jacobi determinant in the declared (a,phi)/(a_dot,phi_dot) order",
-                "a dense nonzero sampled path and its recursively unwrapped phase",
-                "the two continuous square-root lifts relative to the first regulated point",
+                "a dense sampled table with no recorded zero and its recursively unwrapped phase",
+                "the two sampled square-root lifts relative to the first regulated point",
                 "the opposite half phase of the corresponding inverse-square-root endpoint factor",
-                "the -i sqrt(tau) upper-fold asymptotic in the frozen orientation",
-                "six independent lower conjugacy spot checks and local two-sided BVP continuity checks",
+                "finite-resolution consistency with the -i sqrt(tau) near-fold law in the frozen orientation",
+                "six separate conjugate-input lower spot checks and local two-sided BVP continuity checks",
             ],
             "not_computed": [
                 "an absolute determinant/Maslov orientation or original-cycle normalization",
