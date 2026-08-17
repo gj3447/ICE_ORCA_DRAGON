@@ -4,7 +4,7 @@
 
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-66-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-67-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -172,7 +172,7 @@ aims to explain, not evidence that the route is correct.
 | [Phase 33](cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md) | The recorded Dirichlet caustic is a transverse simple fold. Its two real branches determine the local Airy action scale, soft Jacobi scaling, and opposite determinant signs; the canonical Airy solution space remains regular when the separate Van Vleck terms diverge. | A unique Airy contour/Stokes multiplier, analytic amplitude, absolute determinant line, complete dual continuation, global $n_\sigma$, uniform physical WDW kernel, or trace-class seam state. The fold is not another lapse saddle and its local chart adds no Phase-32 crossing. |
 | [Phase 34](cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md) | On the frozen reflection-symmetric stationary family, the recorded incoming real segment is directed toward the fold and a separate conjugate pair of reduced constant-phase arms continues through $T=13+2.8913896i$; no sampled endpoint-Jacobi zero or bounded Phase-32 lapse-base crossing occurs. | Which outgoing arm, if either, carries the incoming cycle; the full joint field--lapse metric and gradient flow, Airy connection and oriented determinant-line transport, all sheets and good ends, global $n_\sigma$, gauge-reduced physical kernel, or trace-class state. |
 | [Phase 35](cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md) | In the declared endpoint basis, the reduced endpoint-Jacobi determinant stays nonzero at 57 sampled points on the Phase-34 dual-aligned branch pair, admits recursively unwrapped sampled square-root transport, is finite-resolution consistent with the oriented $-iC_{\rm det}\sqrt\tau$ fold law, and has cancelling conjugate reduced endpoint phases. | A zero-free continuum interpolation or asymptotic limit, identification with the physical Van Vleck block, an endpoint measure, absolute determinant sign or Maslov orientation, the incoming-to-outgoing fold connection, a regulated full BFV/SUGRA superdeterminant, all sheets and good ends, global $n_\sigma$, or a physical state. |
-| [Phase 36](cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md) | In declared oriented local Airy bases, the contour, Gauss--Manin, dual, and lateral Stokes maps are exact. Direct finite-radius BVP continuation keeps both the CW/U and CCW/L tracked branches regular, contradicting the local inference that Phase 32 plus Phase 35 uniquely selects one arm. | Identification of the complete original relative cycle, a global choice of arm, the regular hard determinant quotient, absolute determinant/Maslov signs, unsampled zeros or other sheets, full joint field--lapse/BFV data, global $n_\sigma$, or a physical state. |
+| [Phase 36](cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md) | In separately declared CW and CCW local Airy bases, the contour-, cycle-, formal dual-basis, and Stokes identities are fixed. Two distinct sampled root-sheet BVP laterals pass the same finite-radius endpoint, action-gap, and determinant gates, so those local gates alone do not select an arm. | Transport of one common incoming physical upward dual, identification of the complete original relative cycle, a global choice of arm, the regular hard determinant quotient and CFU coefficients, absolute determinant/Maslov signs, unsampled zeros or other sheets, full joint field--lapse/BFV data, global $n_\sigma$, or a physical state. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -191,9 +191,11 @@ no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomp
    local or global coefficient. Phase 33 uniformizes the recorded simple fold locally, Phase 34
    continues one conjugate reduced stationary-family pair through `Re T=13`, Phase 35 transports
    only its declared endpoint-Jacobi determinant section relatively along the sampled open path, and
-   Phase 36 fixes the declared local Airy/Gauss--Manin maps while finding both finite-radius laterals
-   regular. None identifies the complete original relative cycle or supplies the physical Van Vleck
-   block, absolute Maslov orientation, global arm selection, or full joint field--lapse flow. Every
+   Phase 36 fixes identities in separately declared lateralized Airy bases and finds that two distinct
+   sampled root-sheet laterals pass the recorded finite-radius gates. It does not transport one common
+   incoming physical upward dual through both laterals; the local gates alone are insufficient to select
+   an arm. None identifies the complete original relative cycle or supplies the physical Van Vleck block,
+   absolute Maslov orientation, global arm selection, or full joint field--lapse flow. Every
    global dual arm and good end,
    and the full oriented
    inhomogeneous superdeterminant, physical WDW endpoint measure, and CPT/Pin contour-class selection
@@ -220,7 +222,7 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 | runnable Python kernels | 67 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 506 nodes, 1328 edges, 123 claims | `./ice ontology summary` |
+| research ontology | 506 nodes, 1331 edges, 123 claims | `./ice ontology summary` |
 | latest runnable CPT seam phase | Phase 36 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a

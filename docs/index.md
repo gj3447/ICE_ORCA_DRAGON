@@ -48,6 +48,7 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md`](../cpt_temporal_folded_susy/PHASE33_FOLD_AIRY_UNIFORMIZATION.md) | simple-fold Airy action scale, separate-saddle divergence, local solution-rank obstruction, and global contour gate |
 | [`../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE34_DIRECTED_FOLD_DUAL_CONTINUATION.md) | bounded directed reduced-dual continuation through the fold and full-joint/global-census gate |
 | [`../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md`](../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md) | relative endpoint-Jacobi determinant-line transport and the still-open physical-prefactor/global-cycle gate |
+| [`../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md`](../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md) | declared lateralized Airy basis identities, two sampled root-sheet laterals, local-gate insufficiency, and the still-open common-dual/global-contour gate |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

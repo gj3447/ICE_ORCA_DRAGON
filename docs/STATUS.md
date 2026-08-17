@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 61 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 67 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,7 +374,7 @@ and
 
 ## Research ontology memory
 
-Phase 15R–36 is now indexed in a repository-local typed research graph with **506 nodes and 1328 directed
+Phase 15R–36 is now indexed in a repository-local typed research graph with **506 nodes and 1331 directed
 relations**. It preserves 123 claims, 75 evidence groups, 39 explicit scopes, 43 open problems, 63
 literature sources, the Phase 16–36 run payloads (346 named exact checks, 176 typed numerical checks, and
 one separately recorded legacy Phase-18 numerical control), 68/68 verified artifact and policy hashes,
@@ -690,15 +690,19 @@ and
 
 ## Current direct calculation — CPT × Temporal-Folded SUSY Phase 36
 
-Phase 36 returns exit 0 with **12 exact checks and 9 numerical checks**. In the declared local Airy
-contour bases it fixes the three-ray relation, Ai/Bi arm connection, CW/CCW Gauss--Manin cycle maps,
-inverse-transpose dual maps, lateral Stokes matrices, and the soft-determinant no-double-counting guard.
-At three finite semicircle radii, twelve prescribed-complex-$T$ BVP paths keep both the CW/U and CCW/L
-tracked continuations regular. This contradicts only the local inference that the Phase-32 origin
-lateral plus Phase-35 relative determinant transport uniquely selects one arm. The complete original
-relative cycle, regular hard determinant quotient, absolute signs and Maslov orientation, unsampled
-zeros and other sheets, full joint field--lapse/BFV superdeterminant, global $n_\sigma$, and physical
-state remain open.
+Phase 36 returns exit 0 with **12 exact checks and 9 numerical checks**. In separately declared CW and
+CCW local Airy bases it fixes the three-ray and Ai/Bi arm relations, the cycle-basis and inverse-transpose
+formal dual-basis identities, the lateral Stokes convention, a declared leading-fold half-phase, and a
+conditional soft/hard determinant bookkeeping identity. The first duals in the two bases are distinct
+lateralized basis elements, not two transports of one common incoming physical upward dual.
+
+At three finite semicircle radii, twelve prescribed-complex-$T$ BVP paths realize two distinct conjugate
+root-sheet laterals, both of which pass the sampled endpoint, action-gap, and determinant gates. The
+recorded local gates alone are therefore insufficient to select upper versus lower. Transport of one
+common dual, the complete original relative cycle and global contour/homotopy choice, regular hard
+determinant quotient and CFU coefficients, absolute signs and Maslov orientation, unsampled zeros and
+other sheets, full joint field--lapse/BFV superdeterminant, global $n_\sigma$, and a physical state remain
+open.
 
 See
 [`../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md`](../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md)

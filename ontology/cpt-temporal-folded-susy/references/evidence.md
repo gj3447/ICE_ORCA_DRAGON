@@ -40,7 +40,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 33 | `result:P33_FOLD_AIRY_UNIFORMIZATION_20260817`; `2026-08-17T18:12:31.429Z` | `cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py`; SHA-256 `844c1262332c06b17def3506a0112f3230b12cbda153750d4964ca9f96a4485b`; current bytes finalized in `e1b6e055a72dbf9e018ced01f6becdb34705238b` | Exit `0`; 8 exact checks plus 7 numerical checks |
 | 34 | `result:P34_DIRECTED_FOLD_DUAL_CONTINUATION_20260817`; `2026-08-17T18:31:54.008Z` | `cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py`; SHA-256 `c35d9fd605e46d791ae74b58344565578a84a7803745481859b41b26699e9527`; finalized in `4cd7e7215077137c576dcdab2765beab09d1a09b` | Exit `0`; 5 exact checks plus 10 numerical checks |
 | 35 | `result:P35_REDUCED_DETLINE_TRANSPORT_20260817`; `2026-08-17T18:50:03.459Z` | `cpt_temporal_folded_susy/phase35_reduced_detline_transport.py`; SHA-256 `2e91813fca948735abd8226a63af4cb26cba459ac0a9897b852686d8cb33d6cb`; current bytes finalized in `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8` | Exit `0`; 6 exact checks plus 8 numerical checks |
-| 36 | `result:P36_AIRY_GAUSS_MANIN_CONNECTION_20260817`; `2026-08-17T19:15:04.017Z` | `cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py`; SHA-256 `58b244cc7a051f011268effef56974cd5e906b917b4d8ca203466fa55c583eed`; introduced in `377fffe3c4075e157c1ba261837cf01a52517d9f` | Exit `0`; 12 exact checks plus 9 numerical checks |
+| 36 | `result:P36_AIRY_GAUSS_MANIN_CONNECTION_20260817_CORRECTED`; `2026-08-17T20:00:27.984Z` | `cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py`; SHA-256 `a82da3be27bdb903756ed8b9d511e5f3eb99e7b15eac27f13c4adad695c04bf9`; current bytes finalized in `f975f3e0ee3fc8afc1a21444075eec7fe4716783` | Exit `0`; 12 exact checks plus 9 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -60,7 +60,7 @@ The Phase 34 report hash is `14c2c6a63d1acc8ca53b55513f13364b92598f54f2bf03099f1
 
 The Phase 35 report hash is `467563b5eec62d0c3295be1ff7204ff0bd7d0688948e8841a009d4a828c87bc9`; its fresh snapshot hash is `f60c5baa537d8c04fef4f72683085f1e77092e420ccbcbda5c2c87283d3ee55a`. The artifact paths first appear in `212f39039c33948d16ec691b1ae4a2866631c6fc`; the exact current executable and report bytes first appear in the conservative hardening revision `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8`.
 
-The Phase 36 report hash is `f4beb9fbd06ade0ece676aabe96f483884396bfb09a394577e4e15c71c91ce2e`; its fresh snapshot hash is `671709f887619a7d7e0add9b44e5930101f3bf1fd5d503ce6d133fefb137aefe`. The executable and report bytes first appear in `377fffe3c4075e157c1ba261837cf01a52517d9f`.
+The corrected Phase 36 report hash is `83eb4e1abfca5db76efdb22451c0f655a39ae73085723d60b06379f4dd117db7`; its fresh snapshot hash is `80a2fc35b1a62ee40ccc951063687a98c2ea491d193373ad03c32311555459c7`. The artifact paths first appear in `377fffe3c4075e157c1ba261837cf01a52517d9f`; the exact current executable and report bytes first appear in the bounded-evidence correction `f975f3e0ee3fc8afc1a21444075eec7fe4716783`.
 
 ## Evidence-to-claim index
 
@@ -139,6 +139,8 @@ The Phase 36 report hash is `f4beb9fbd06ade0ece676aabe96f483884396bfb09a394577e4
 | `evidence:p35-exact-detline-lift-and-conjugation` | 6 exact | Relative sampled endpoint transport, formal oriented fold law, and conjugate phase cancellation — `SUPPORTS`; sampled transport fixes absolute Maslov orientation — `CONTRADICTS` | Declared endpoint basis and sampled lift; no zero-free interpolation, absolute sign, or physical determinant |
 | `evidence:p35-dense-detline-and-fold-transport` | 5 numerical | Sampled reduced determinant line is transportable; recorded upper near-fold phase is consistent with minus pi over two — `SUPPORTS` | Fifty-seven sampled upper points, phase increments, finite-resolution fold control, and Phase-34 anchors; no continuum limit or unsampled/global theorem |
 | `evidence:p35-conjugate-and-local-continuity` | 3 numerical | Sampled determinant transport and conjugate reduced bosonic endpoint phase cancellation — `SUPPORTS` | Separate conjugate-input integrations and local finite differences only; not a square-root, Gaussian, or full BFV/SUGRA superdeterminant cancellation |
+| `evidence:p36-exact-airy-gauss-manin-and-detline-guard` | 12 exact | Declared local contour-basis identities — `SUPPORTS`; Phase 32 plus Phase 35 is sufficient by itself within the local gates — `CONTRADICTS` together with the numerical group | Separately ordered CW/CCW bases, basis-dependent first duals, declared leading-fold half phases, conditional soft/hard bookkeeping, and fold-patch separation; no common physical-dual transport or hard Airy amplitudes |
+| `evidence:p36-finite-radius-lateral-bvp` | 9 numerical | Tracked BVP root has sampled regular CW/U and CCW/L root-sheet continuations — `SUPPORTS`; unique local arm inference from Phase 32 plus Phase 35 — `CONTRADICTS` | Twelve root paths on three finite radii; root permutations are not cycle maps, sampled regularity is not a zero-radius or between-sample theorem, and the roots do not realize formal upward cycles |
 
 ## Phase 16 check ledger
 
@@ -1088,6 +1090,46 @@ principal branch-cut jump. Near-fold samples are only finite-resolution consiste
 minus-imaginary square-root law. Six separate conjugate-input lower integrations and local BVP controls
 support relative phase cancellation, not a physical Van Vleck or full BFV/SUGRA determinant.
 
+## Phase 36 check ledger
+
+### Declared Airy bases and conditional determinant bookkeeping — 12 exact checks
+
+- `P36.canonical.positive_t_is_decaying_Ai_saddle`
+- `P36.contours.three_ray_relation`
+- `P36.contours.declared_Airy_arm_matrix`
+- `P36.Gauss_Manin.CW_cycle_map`
+- `P36.Gauss_Manin.CW_CCW_ordered_bases`
+- `P36.Gauss_Manin.inverse_transpose_pairing`
+- `P36.lateral.CW_CCW_basis_label_dependence`
+- `P36.Stokes.enhanced_lateral_matrices`
+- `P36.detline.declared_fold_half_phase_basis`
+- `P36.uniformization.conditional_soft_hard_factorization`
+- `P36.detline.formal_bare_root_ratio_under_declared_lift`
+- `P36.scope.fold_patch_disjoint_from_Phase32_origin_caps`
+
+These checks verify algebra in separately ordered CW and CCW contour bases. Their first duals are
+different basis elements because the companion cycles differ; the checks do not transport one common
+physical upward dual. The half-phase basis and formal root ratio are declared leading-fold
+bookkeeping, while the soft/hard statement is conditional on the displayed factorization and does not
+derive an analytic hard quotient or Airy/Airy-prime amplitudes.
+
+### Finite-radius BVP root-sheet controls — 9 numerical checks
+
+- `P36.branch.tracked_real_sheet_identification`
+- `P36.BVP.twelve_path_residuals`
+- `P36.BVP.lateral_root_permutations`
+- `P36.BVP.tracked_root_lateral_sheet_mapping`
+- `P36.CFU.action_gap_winding`
+- `P36.CFU.complex_canonical_coordinate`
+- `P36.detline.finite_radius_half_phase_consistency`
+- `P36.detline.no_sampled_semicircle_zero`
+- `P36.BVP.CW_CCW_conjugate_sampled_regular_roots`
+
+The twelve paths cover two incoming BVP roots, two laterals, and three finite radii. They support
+sampled root-sheet continuation, action-gap winding, CFU consistency, and determinant nonvanishing at
+the recorded points. They do not realize the formal upward cycles, certify analyticity or the
+zero-radius limit, exclude between-sample or other-sheet zeros, or select the original global cycle.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1113,6 +1155,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase32_below_origin_lapse_inte
 uv run --locked python3 cpt_temporal_folded_susy/phase33_fold_airy_uniformization.py
 uv run --locked python3 cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py
 uv run --locked python3 cpt_temporal_folded_susy/phase35_reduced_detline_transport.py
+uv run --locked python3 cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -1415,5 +1458,37 @@ These traces preserve sampled nonvanishing and finite-resolution fold consistenc
 zero-free interpolation or asymptotic limit, identify the physical Van Vleck block, orient the absolute
 Maslov line, connect the incoming cycle to an outgoing arm, or determine the full determinant and global
 coefficient.
+
+Phase 36 separates declared local basis identities and sampled BVP-root continuation from a physical
+cycle connection:
+
+```text
+claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p36-exact-airy-gauss-manin-and-detline-guard
+  → VALID_WITHIN → scope:p36-local-airy-connection-and-finite-radius-laterals
+  → MOTIVATES → open:p36-original-cycle-hard-determinant-and-global-bfv-state
+
+claim:P36_TRACKED_AI_ROOT_HAS_REGULAR_CW_U_AND_CCW_L_CONTINUATIONS
+  → HAS_EVIDENCE {polarity: SUPPORTS}
+  → evidence:p36-finite-radius-lateral-bvp
+  → VALID_WITHIN → scope:p36-local-airy-connection-and-finite-radius-laterals
+
+claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p36-exact-airy-gauss-manin-and-detline-guard
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+  → evidence:p36-finite-radius-lateral-bvp
+  → VALID_WITHIN → scope:p36-local-airy-connection-and-finite-radius-laterals
+  → FOLLOW_UP_TO → claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING
+  → FOLLOW_UP_TO → claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2
+```
+
+The first trace concerns separately ordered bases whose first duals are different elements; it is not
+transport of one common physical dual. The second concerns numerical BVP root sheets, not formal
+upward cycles. The contradiction in the third trace is only a sufficient-data result within the
+recorded local gates. A complete original relative cycle may still select one arm globally, and the
+hard Airy amplitudes, absolute determinant orientation, full joint BFV/SUGRA superdeterminant, global
+coefficient, and physical state remain open.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

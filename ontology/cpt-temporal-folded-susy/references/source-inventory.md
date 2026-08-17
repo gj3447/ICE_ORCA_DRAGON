@@ -125,6 +125,7 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 33 simple-fold Airy scale and global-cycle gate | Chester–Friedman–Ursell; Witten (2010); Halliwell–Louko III; Gibbons–Hawking–Perry | `CITES`-only coalescing-saddle, relative-cycle, lapse-contour, and conformal-factor framing; none supplies the measured two-branch data, selects the Airy contour/Stokes multiplier or analytic amplitude, or fixes the determinant line, full dual census, global coefficient, or physical state |
 | Phase 34 reduced directed branch pair | Chester–Friedman–Ursell; Witten (2010); Halliwell–Louko III | `CITES`-only fold, relative-cycle, and lapse-contour framing; none supplies the recorded incoming segment or outgoing branch pair, connects them across the fold, or computes the full joint flow and global coefficient |
 | Phase 35 sampled reduced endpoint determinant transport | Chester–Friedman–Ursell; Witten (2010); Halliwell–Louko III | `CITES`-only fold, determinant-line/orientation, and lapse-contour framing; none supplies the 57-point table, upgrades sampled nonvanishing to a continuum theorem, identifies the physical Van Vleck block, or fixes the absolute Maslov orientation, full superdeterminant, or global coefficient |
+| Phase 36 declared local Airy bases and finite-radius BVP root laterals | Chester–Friedman–Ursell; Witten (2010); Halliwell–Louko III; Banihashemi–Jacobson | `CITES`-only uniformization, relative-cycle, lapse-contour, and below-origin prescription framing; none identifies the original gravitational cycle with a declared Airy contour, turns basis-dependent first duals into one transported physical dual, realizes formal upward cycles with the BVP roots, derives the hard Airy/Airy-prime amplitudes, selects an arm, or fixes the global coefficient or state |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -284,5 +285,21 @@ analytic amplitude, measure, or determinant line. The chart's disjointness from 
 pieces also does not continue any arm after it leaves the chart. These missing data are explicit in
 `open:p33-airy-cycle-amplitude-and-global-continuation`; global `n_sigma` and the full uniform physical
 kernel remain open.
+
+Phase 34 continues a bounded conjugate pair of reduced stationary-family branches beyond the fold,
+and Phase 35 transports their declared endpoint-Jacobi determinant section only on a finite sampled
+table. The cited fold, relative-cycle, and lapse-contour sources frame those operations but do not
+connect the incoming physical cycle to either branch, prove a zero-free determinant lift, identify the
+physical Van Vleck block, or orient the absolute Maslov line.
+
+Phase 36 fixes exact identities in separately ordered CW and CCW local Airy bases and independently
+tracks both BVP root-sheet laterals on three finite radii. The first duals in those two bases use
+different companion cycles, so the source-framed inverse-transpose algebra is not transport of one
+common physical upward dual. The BVP root permutations likewise do not realize the formal upward
+cycles. Chester--Friedman--Ursell, Witten, Halliwell--Louko, and Banihashemi--Jacobson remain
+`CITES`-only boundaries: none supplies the missing original relative cycle, analytic hard quotient and
+Airy/Airy-prime coefficients, absolute determinant orientation, complete good-end census, global
+`n_sigma`, or physical BFV/SUGRA state recorded in
+`open:p36-original-cycle-hard-determinant-and-global-bfv-state`.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

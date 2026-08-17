@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T19:15:04.017Z",
+  "updated_at_utc": "2026-08-17T20:00:27.984Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -220,7 +220,7 @@
     },
     {
       "question": "Does Phase 36 uniquely select the upper or lower outgoing fold arm or complete the global physical state?",
-      "answer": "No. It fixes the local Airy/Gauss–Manin connection in declared oriented bases and finds both the CW/U and CCW/L continuations regular on three finite radii, contradicting the inference that the Phase-32 origin lateral plus Phase-35 relative determinant transport locally selects one arm. The complete original relative cycle, regular hard determinant quotient, absolute determinant/Maslov signs, full joint flow and BFV/SUGRA superdeterminant, global n_sigma, and physical state remain open.",
+      "answer": "No. It fixes exact contour-basis identities in separately ordered CW and CCW local Airy bases and finds both tracked BVP root-sheet laterals regular at sampled points on three finite radii. The two first duals belong to different lateralized bases, so no common physical upward dual was transported. Phase-32 origin data plus Phase-35 relative determinant transport are therefore insufficient by themselves within the recorded local gates; a complete original relative cycle could still select an arm globally. The hard determinant quotient and Airy/Airy-prime coefficients, absolute signs, full BFV/SUGRA superdeterminant, global n_sigma, and physical state remain open.",
       "claim_ids": [
         "claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED",
         "claim:P36_TRACKED_AI_ROOT_HAS_REGULAR_CW_U_AND_CCW_L_CONTINUATIONS",
@@ -558,8 +558,8 @@
     },
     {
       "id": "reading-path:local-airy-connection-to-global-original-cycle",
-      "title": "From the exact local Airy connection to the still-open original global cycle",
-      "summary": "Follow the exact declared local contour and cycle maps, distinguish them from numerical BVP-root permutations, observe both finite-radius laterals remain regular, and stop before selecting an arm or assigning absolute determinant signs, a global intersection coefficient, or a BFV/SUGRA state.",
+      "title": "From declared local Airy basis identities to the still-open original global cycle",
+      "summary": "Follow exact identities in the separately ordered local contour bases, distinguish basis-dependent first duals from transport of one common physical dual and from numerical BVP-root permutations, observe both sampled finite-radius root-sheet laterals remain regular, and stop before selecting an arm or assigning hard Airy coefficients, absolute determinant signs, a global intersection coefficient, or a BFV/SUGRA state.",
       "nodes": [
         "claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE",
         "concept:local-airy-connection-versus-global-original-cycle",
@@ -6137,120 +6137,122 @@
     {
       "id": "phase:p36",
       "type": "phase",
-      "title": "Phase 36 — local Airy/Gauss–Manin connection and lateral BVP test",
-      "summary": "Exact Airy contour, Gauss–Manin cycle and dual maps in declared local oriented bases, plus prescribed-complex-T finite-radius BVP continuation around the recorded fold. This local calculation does not identify the original gravitational relative cycle or fix absolute determinant signs, the global intersection coefficient, or a BFV/SUGRA state.",
+      "title": "Phase 36 — declared Airy contour-basis identities and lateral BVP test",
+      "summary": "Exact Airy contour and basis-change identities in separately ordered CW and CCW local bases, plus prescribed-complex-T finite-radius BVP root continuation around the recorded fold. The first dual vectors are different lateralized basis elements, not two transports of one common physical dual. This calculation does not identify the original gravitational relative cycle, realize formal upward cycles with the BVP roots, construct the hard Airy amplitudes, or fix absolute determinant signs, a global intersection coefficient, or a BFV/SUGRA state.",
       "state": "ACTIVE"
     },
     {
       "id": "concept:local-airy-connection-versus-global-original-cycle",
       "type": "concept",
-      "title": "Local Airy connection versus the global original cycle",
-      "summary": "The declared Airy rays, cycles, Ai/Bi arm matrix, Gauss–Manin maps, and enhanced lateral Stokes matrices can be fixed exactly without proving that the original gravitational integration cycle is the real Airy contour or selecting one outgoing arm.",
+      "title": "Declared local Airy basis algebra versus the global original cycle",
+      "summary": "Airy rays, contour relations, the Ai/Bi arm matrix, and basis-change identities can be fixed in separately ordered local bases without proving that either declared contour is the original gravitational integration cycle, transporting one common physical dual, or selecting one outgoing arm.",
       "state": "ACTIVE"
     },
     {
       "id": "concept:cycle-map-versus-bvp-root-permutation",
       "type": "concept",
-      "title": "Cycle map versus BVP-root permutation",
-      "summary": "Gauss–Manin and Stokes matrices act on oriented relative cycles and upward duals, whereas finite-radius BVP continuation permutes numerical solution roots. Their recorded matrices need not coincide and cannot be substituted for one another.",
+      "title": "Lateralized cycle bases versus BVP-root permutation",
+      "summary": "Gauss–Manin and Stokes matrices act within declared ordered relative-cycle bases and their inverse-transpose dual bases, whereas finite-radius BVP continuation permutes numerical solution roots. First duals defined with different companion cycles are different basis elements, not images of one common physical dual; neither matrix algebra nor root permutations can be substituted for a geometric upward-cycle transport.",
       "state": "ACTIVE"
     },
     {
       "id": "concept:airy-uniformization-versus-soft-determinant-double-counting",
       "type": "concept",
       "title": "Airy uniformization versus soft-determinant double counting",
-      "summary": "The Airy factor replaces the singular soft quarter-power. A uniform kernel may therefore use only a separately derived regular hard determinant quotient, not multiply by the full separate-saddle inverse square root again; the absolute hard quotient and its signs remain uncomputed.",
+      "summary": "Conditional on the declared factorization d=sqrt(zeta) d_hat, CFU uniformization replaces the singular soft quarter-power instead of multiplying it twice. This bookkeeping does not derive an analytic hard quotient, its signs, or the even/odd coefficients multiplying Airy and Airy-prime.",
       "state": "ACTIVE"
     },
     {
       "id": "claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED",
       "type": "claim",
-      "title": "The exact local Airy/Gauss–Manin connection is fixed",
-      "summary": "Supported in the declared oriented local contour bases: the three-ray chain relation, Ai/Bi-to-arm matrix, CW/CCW cycle maps, inverse-transpose upward-dual maps, enhanced lateral Stokes matrices, determinant half-phase bookkeeping, and soft-factor no-double-counting guard pass exact checks. This does not select the original global gravitational cycle.",
-      "state": "SUPPORTED_IN_DECLARED_LOCAL_BASES",
+      "title": "Declared local Airy contour-basis identities are fixed",
+      "summary": "Supported in separately ordered CW and CCW local contour bases: the three-ray relation, Ai/Bi-to-arm matrix, cycle-basis identities, inverse-transpose pairings, enhanced Stokes matrices, declared leading-fold half-phase basis, and conditional soft/hard bookkeeping pass exact checks. The first duals use different companion cycles; this does not transport one common physical dual or select the original global gravitational cycle.",
+      "state": "SUPPORTED_IN_SEPARATELY_ORDERED_LATERAL_BASES",
       "claim_id": "P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED",
-      "statement": "In the explicitly declared local Airy contour bases, the contour relation, arm connection, Gauss–Manin maps, upward-dual maps, and lateral Stokes matrices are fixed exactly.",
+      "statement": "In the separately declared CW and CCW ordered local contour bases, the three-ray relation, Ai/Bi arm matrix, basis-change matrices, inverse-transpose pairings, and enhanced Stokes matrices are exact; this does not transport one common physical dual.",
       "epistemic_state": "SUPPORTED"
     },
     {
       "id": "claim:P36_TRACKED_AI_ROOT_HAS_REGULAR_CW_U_AND_CCW_L_CONTINUATIONS",
       "type": "claim",
-      "title": "The tracked Ai root has regular CW/U and CCW/L continuations",
-      "summary": "Supported only on three recorded finite semicircle radii: twelve prescribed-complex-T BVP paths solve with controlled residuals, the CW upper path sends the tracked incoming root to U, the CCW lower path sends it to L, and neither sampled path encounters an endpoint-Jacobi zero. This is not a zero-radius, between-sample, other-sheet, or global-good-end theorem.",
+      "title": "The tracked BVP root has sampled regular CW/U and CCW/L root-sheet continuations",
+      "summary": "Supported only on three recorded finite semicircle radii: twelve prescribed-complex-T BVP paths solve with controlled residuals, the CW upper path sends the tracked incoming root to the U-labeled root sheet, the CCW lower path sends it to the L-labeled root sheet, and neither sampled path encounters an endpoint-Jacobi zero. The Ai label additionally uses the declared sign chart. This does not realize the formal K_U or K_L upward cycles or prove a zero-radius, between-sample, other-sheet, or global-good-end theorem.",
       "state": "SUPPORTED_ON_THREE_FINITE_RADII",
       "claim_id": "P36_TRACKED_AI_ROOT_HAS_REGULAR_CW_U_AND_CCW_L_CONTINUATIONS",
-      "statement": "For the tracked real Ai root and the three declared finite semicircle radii, both the CW upper continuation to U and the CCW lower continuation to L remain regular at all sampled BVP points.",
+      "statement": "For the tracked real BVP root, labeled Ai only after the declared sign chart, both root-sheet laterals remain regular at every sampled point on the three finite semicircle radii; no formal upward cycle is thereby realized.",
       "epistemic_state": "SUPPORTED"
     },
     {
       "id": "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
       "type": "claim",
-      "title": "Phase 32 plus Phase 35 uniquely selects one outgoing fold arm",
-      "summary": "Contradicted as a local inference: the Phase-32 origin cap is far from the Phase-36 fold and the Phase-35 relative determinant phases carry unresolved lift signs; direct finite-radius continuation realizes regular CW/U and CCW/L alternatives. A complete original relative cycle could still select an arm globally.",
-      "state": "CONTRADICTED_AS_LOCAL_INFERENCE",
+      "title": "Phase 32 plus Phase 35 by themselves select one outgoing fold arm within the recorded local gates",
+      "summary": "Contradicted only within the recorded local gates: the Phase-32 origin cap is disjoint from the declared fold patch, the Phase-35 relative determinant phases carry unresolved lift signs, and both finite-radius BVP root-sheet laterals survive the sampled tests. A complete original relative cycle and its homotopy could still select an arm globally.",
+      "state": "CONTRADICTED_WITHIN_RECORDED_LOCAL_GATES",
       "claim_id": "P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
-      "statement": "The Phase-32 below-origin lapse lateral together with the Phase-35 relative endpoint-determinant transport is sufficient by itself to select U rather than L at the recorded fold.",
+      "statement": "Within the recorded local gates, the Phase-32 below-origin lapse lateral together with the Phase-35 relative endpoint-determinant transport is sufficient by itself to select U rather than L at the recorded fold.",
       "epistemic_state": "CONTRADICTED"
     },
     {
       "id": "evidence:p36-exact-airy-gauss-manin-and-detline-guard",
       "type": "evidence",
-      "title": "Phase 36 exact Airy, Gauss–Manin, and determinant-line checks",
-      "summary": "Twelve exact checks establish the declared Airy contour and arm relations, CW/CCW cycle and dual maps, enhanced lateral Stokes matrices, relative determinant half phases and bare-root monodromy, the soft-factor no-double-counting guard, and the local insufficiency of the Phase-32 origin cap.",
+      "title": "Phase 36 exact declared Airy basis and determinant bookkeeping checks",
+      "summary": "Twelve exact checks establish contour and arm identities in separately ordered CW and CCW bases, their inverse-transpose pairings and basis-dependent first duals, enhanced Stokes matrices, a declared leading-fold half-phase basis and formal root ratio, conditional soft/hard factorization, and geometric separation of the Phase-32 origin caps from the fold patch. They do not transport one common physical dual or derive the hard Airy amplitudes.",
       "state": "VERIFIED",
       "observed_status": "12_EXACT_PASS",
       "check_ids": [
-        "P36.canonical.tracked_sheet_is_Ai_saddle",
+        "P36.canonical.positive_t_is_decaying_Ai_saddle",
         "P36.contours.three_ray_relation",
-        "P36.contours.Airy_arm_connection",
+        "P36.contours.declared_Airy_arm_matrix",
         "P36.Gauss_Manin.CW_cycle_map",
         "P36.Gauss_Manin.CW_CCW_ordered_bases",
-        "P36.Gauss_Manin.inverse_transpose_dual",
-        "P36.lateral.CW_CCW_counterexample",
+        "P36.Gauss_Manin.inverse_transpose_pairing",
+        "P36.lateral.CW_CCW_basis_label_dependence",
         "P36.Stokes.enhanced_lateral_matrices",
-        "P36.detline.arm_half_phase",
-        "P36.uniformization.no_soft_determinant_double_counting",
-        "P36.detline.bare_root_monodromy",
-        "P36.scope.Phase32_cannot_locally_choose_fold_arm"
+        "P36.detline.declared_fold_half_phase_basis",
+        "P36.uniformization.conditional_soft_hard_factorization",
+        "P36.detline.formal_bare_root_ratio_under_declared_lift",
+        "P36.scope.fold_patch_disjoint_from_Phase32_origin_caps"
       ]
     },
     {
       "id": "evidence:p36-finite-radius-lateral-bvp",
       "type": "evidence",
       "title": "Phase 36 finite-radius lateral BVP checks",
-      "summary": "Nine numerical checks track both incoming roots along twelve upper/lower semicircle paths at three radii, verify residuals, root maps, action-gap winding, CFU coordinates, determinant half-phase behavior, sampled nonvanishing, and regular CW/U and CCW/L continuations. They do not exclude zeros between samples or determine a global relative cycle.",
+      "summary": "Nine numerical checks track both incoming BVP roots along twelve upper/lower semicircle paths at three finite radii, verify residuals, root-sheet maps, action-gap winding, sampled CFU-coordinate consistency, finite-radius determinant half-phase consistency, sampled nonvanishing, and conjugate CW/U and CCW/L root continuations. These BVP roots are not numerical realizations of the formal upward cycles, and the samples do not prove a zero-radius limit, exclude zeros between samples, or determine a global relative cycle.",
       "state": "VERIFIED",
       "observed_status": "9_NUMERICAL_PASS",
       "check_ids": [
         "P36.branch.tracked_real_sheet_identification",
-        "P36.BVP.four_path_residuals",
+        "P36.BVP.twelve_path_residuals",
         "P36.BVP.lateral_root_permutations",
-        "P36.BVP.tracked_Ai_arm_mapping",
+        "P36.BVP.tracked_root_lateral_sheet_mapping",
         "P36.CFU.action_gap_winding",
         "P36.CFU.complex_canonical_coordinate",
-        "P36.detline.lateral_half_phase_limit",
+        "P36.detline.finite_radius_half_phase_consistency",
         "P36.detline.no_sampled_semicircle_zero",
-        "P36.counterexample.CW_CCW_both_regular"
+        "P36.BVP.CW_CCW_conjugate_sampled_regular_roots"
       ]
     },
     {
       "id": "scope:p36-local-airy-connection-and-finite-radius-laterals",
       "type": "scope",
-      "title": "P36 local Airy connection and finite-radius lateral continuations",
-      "summary": "The declared oriented Airy contour bases and the tracked reduced homogeneous BVP roots on three finite complex-T semicircle radii around the recorded fold.",
+      "title": "P36 declared local Airy bases and finite-radius root-sheet continuations",
+      "summary": "Separately ordered declared Airy contour bases and tracked reduced homogeneous BVP roots sampled on three finite complex-T semicircle radii around the recorded fold.",
       "state": "ACTIVE",
       "includes": [
         "the exact three-ray Airy chain relation and Ai/Bi-to-arm matrix",
-        "CW and CCW Gauss–Manin cycle maps and inverse-transpose upward-dual maps in separately ordered bases",
+        "CW and CCW cycle-basis identities and inverse-transpose pairings in separately ordered bases",
+        "basis dependence of the first dual when the companion cycle changes",
         "enhanced local lateral Stokes matrices",
-        "relative endpoint-determinant half phases with unresolved signs",
+        "declared leading-fold endpoint-determinant half-phase conventions with unresolved signs and finite-radius consistency tests",
         "twelve prescribed-complex-T BVP root paths on three finite semicircle radii",
         "sampled root permutations, action-gap winding, CFU coordinate and determinant phase"
       ],
       "excludes": [
         "identification of the original gravitational relative cycle with a declared Airy contour",
+        "transport of one specified incoming physical upward dual or realization of formal K_U and K_L cycles by BVP roots",
         "a global choice between the CW/U and CCW/L continuations",
-        "absolute determinant signs, Maslov orientation, or a numerical regular hard determinant quotient",
+        "absolute determinant signs, Maslov orientation, an analytic regular hard determinant quotient, or even/odd Airy/Airy-prime coefficients",
         "zeros between samples, other sheets, inhomogeneous modes, all good ends, or a zero-radius theorem",
         "the full joint field–lapse flow or a regulated BFV/SUGRA superdeterminant",
         "complete relative cycles, global n_sigma, WDW density, physical state, initial peak, or SUSY scale"
@@ -6260,7 +6262,7 @@
       "id": "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
       "type": "open_problem",
       "title": "Lift the original cycle and regulated determinant to the global BFV state",
-      "summary": "Both local laterals remain viable until the complete original lapse–field relative cycle is lifted into the Airy chart and transported, with a regulator and determinant orientation, to every good end. The regular hard quotient, absolute signs, full joint flow and BFV/SUGRA superdeterminant, global n_sigma, and physical state remain open.",
+      "summary": "Both sampled root-sheet laterals remain viable until one specified incoming physical dual and the complete original lapse–field relative cycle are lifted into the Airy chart and transported, with a regulator and determinant orientation, to every good end. Realizing the formal upward cycles, constructing the regular hard quotient and even/odd Airy amplitudes, fixing absolute signs, completing the full joint flow and BFV/SUGRA superdeterminant, and deriving global n_sigma and a physical state remain open.",
       "state": "OPEN",
       "question": "Which local arm, if either, is selected by the complete original relative cycle after its regulated determinant orientation is transported through the full joint field–lapse problem to all good ends?"
     },
@@ -6268,23 +6270,23 @@
       "id": "artifact:p36-script",
       "type": "artifact",
       "title": "Phase 36 executable",
-      "summary": "Exact local Airy/Gauss–Manin and determinant-line bookkeeping plus finite-radius prescribed-complex-T BVP lateral checks.",
+      "summary": "Exact identities in separately ordered local Airy contour bases, conditional determinant bookkeeping, and finite-radius prescribed-complex-T BVP root-sheet checks.",
       "state": "TRACKED",
       "artifact_kind": "executable",
       "path": "cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py",
-      "sha256": "58b244cc7a051f011268effef56974cd5e906b917b4d8ca203466fa55c583eed",
-      "introduced_in_commit": "377fffe3c4075e157c1ba261837cf01a52517d9f"
+      "sha256": "a82da3be27bdb903756ed8b9d511e5f3eb99e7b15eac27f13c4adad695c04bf9",
+      "introduced_in_commit": "f975f3e0ee3fc8afc1a21444075eec7fe4716783"
     },
     {
       "id": "artifact:p36-report",
       "type": "artifact",
       "title": "Phase 36 report",
-      "summary": "Human-readable local Airy contour and Gauss–Manin connection, determinant-line guard, finite-radius CW/U and CCW/L continuation counterexample, and global-scope boundary.",
+      "summary": "Human-readable declared local Airy contour-basis algebra, basis-dependent dual warning, determinant bookkeeping, finite-radius CW/U and CCW/L root-sheet local-insufficiency result, and global-scope boundary.",
       "state": "TRACKED",
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md",
-      "sha256": "f4beb9fbd06ade0ece676aabe96f483884396bfb09a394577e4e15c71c91ce2e",
-      "introduced_in_commit": "377fffe3c4075e157c1ba261837cf01a52517d9f"
+      "sha256": "83eb4e1abfca5db76efdb22451c0f655a39ae73085723d60b06379f4dd117db7",
+      "introduced_in_commit": "f975f3e0ee3fc8afc1a21444075eec7fe4716783"
     },
     {
       "id": "artifact:p36-evidence-snapshot",
@@ -6294,7 +6296,7 @@
       "state": "TRACKED",
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase36-result.json",
-      "sha256": "671709f887619a7d7e0add9b44e5930101f3bf1fd5d503ce6d133fefb137aefe"
+      "sha256": "80a2fc35b1a62ee40ccc951063687a98c2ea491d193373ad03c32311555459c7"
     }
   ],
   "edges": [
@@ -14451,7 +14453,7 @@
       "id": "edge:1316",
       "from": "artifact:p36-script",
       "relation": "DERIVED_FROM",
-      "to": "artifact:p35-script"
+      "to": "artifact:p25-script"
     },
     {
       "id": "edge:1317",
@@ -14524,6 +14526,24 @@
       "from": "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
       "relation": "CITES",
       "to": "source:banihashemi-jacobson-2025"
+    },
+    {
+      "id": "edge:1329",
+      "from": "artifact:p36-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p33-script"
+    },
+    {
+      "id": "edge:1330",
+      "from": "artifact:p36-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p34-script"
+    },
+    {
+      "id": "edge:1331",
+      "from": "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING"
     }
   ],
   "kg_bridges": [
@@ -14790,8 +14810,8 @@
       "external_uid": null,
       "relation": null,
       "status": "UNRESOLVED",
-      "checked_at_utc": "2026-08-17T19:15:04.017Z",
-      "lookup_key": "CPT Temporal-Folded SUSY Phase36 local Airy Gauss-Manin connection and lateral BVP counterexample",
+      "checked_at_utc": "2026-08-17T20:00:27.984Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase36 declared local Airy contour-basis identities and lateral BVP test",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
     }
   ]

@@ -10,8 +10,8 @@
 
 The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–36 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-17T19:15:04.017Z` graph update, the collection has 506 nodes and
-1328 edges. Validation verifies 68/68 stored hashes (66 artifacts and 2 policies). The
+At the recorded `2026-08-17T20:00:27.984Z` graph update, the collection has 506 nodes and
+1331 edges. Validation verifies 68/68 stored hashes (66 artifacts and 2 policies). The
 Phase 16–36 run snapshots contain 346 named exact checks, 176 typed numerical-ledger checks, and one
 legacy separately recorded Phase 18 numerical control (177 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
