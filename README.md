@@ -2,42 +2,42 @@
 
 # ICE_ORCA_DRAGON — Physics/Math Computation Workbench
 
-**Cayley–Dickson and sedenion experiments, structural proofs, and reproducibility checks**
+**Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Runnable_kernels-52-3776ab?style=for-the-badge&logo=python&logoColor=white)](#run-a-kernel)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-53-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
-[![Science workflow](https://img.shields.io/badge/Science_workflow-source_%E2%86%92_compute_%E2%86%92_check-10b981?style=for-the-badge)](AGENTS.md)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
 
 </div>
 
-ICE_ORCA_DRAGON is a standalone hypercomplex-computation repository. The canonical dev-01 checkout is
-`/home/lagyeongjun/CD/ICE_ORCA_DRAGON`; it has its own Git history and `origin`. SYMPOSIUM may link to
-this repository for context, but no longer embeds it as a submodule or runtime dependency.
+ICE_ORCA_DRAGON is a standalone computation workbench with two active research tracks:
 
-The current CLI exposes **52 runnable Python kernels**. `./ice list --json` is the authority for the
-live catalog; historical source inventories may contain additional scripts that are not runnable entries.
-Fourteen committed outputs are mapped into the isolated reproduction ledger.
+- Cayley–Dickson, sedenion, zero-divisor, and legacy numerical-claim tests;
+- CPT × Temporal-Folded SUSY, closed-FRW/SUGRA, WDW, and two-sheet seam controls.
 
-## Scientific scope
+It is a hypothesis testbench, not a finished physics theory. Exact calculations, numerical evidence,
+physical interpretations, and open conjectures are kept separate. The canonical development checkout is
+`/home/lagyeongjun/CD/ICE_ORCA_DRAGON`; SYMPOSIUM may link here for context but is not a runtime
+dependency.
 
-This repository is a hypothesis testbench, not a finished physics theory. Reports must keep these layers
-separate:
+## Current snapshot
 
-| Layer | Meaning |
-|---|---|
-| L1 algebra | exact or numerical statements about hypercomplex algebra and computation |
-| L2/L3 physics belt | proposed physical interpretations and empirical discriminators |
-| mythology | user-primary narrative material preserved separately from scientific evidence |
+| Surface | Committed state at this revision | Authority |
+|---|---:|---|
+| runnable Python kernels | 53 | `./ice list --json` |
+| mapped reproduction cases | 14 | `./ice repro --list` |
+| reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
+| research ontology | 199 nodes, 381 edges, 42 claims | `./ice ontology summary` |
+| latest runnable CPT seam phase | Phase 22 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
-“ICE predicts X” is incomplete without a layer, target claim, and evidence status. Historical verdicts
-remain documented in [`docs/STATUS.md`](docs/STATUS.md); they are not instructions to mutate current
-canon automatically.
+The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
+working tree that contains additional local kernels.
 
 ## Quick start
 
-The control plane is strict TypeScript using Effect. Numerical kernels run in the Python environment
-locked by `uv.lock`.
+The control plane is strict TypeScript using Effect. Numerical kernels use the Python environment locked
+by `uv.lock`.
 
 ```bash
 npm ci
@@ -60,29 +60,49 @@ Canonical commands:
 
 `npm run ice -- <command>` is the package-script equivalent. `./ice` is the repository entry point.
 
+## Repository layout
+
+The repository root is intentionally limited to entry points, policy, package metadata, lockfiles, and
+legal documents. Research code and historical reports live in named areas.
+
+| Path | Contents | Runnable catalog |
+|---|---|---:|
+| [`ice`](ice), [`src/`](src), [`test/`](test) | Effect control plane and its tests | control plane |
+| [`research/hypercomplex/`](research/hypercomplex) | Cayley–Dickson/sedenion kernels and adjacent JSON results | included |
+| [`research/legacy_predictions/`](research/legacy_predictions) | dimensional, preregistration, and numerology-era kernels/results | included |
+| [`cpt_temporal_folded_susy/`](cpt_temporal_folded_susy) | current phase scripts, reports, and frozen inputs | included |
+| [`claimB_loop/`](claimB_loop) and named experiment directories | focused research programmes | included when a script has a main guard |
+| [`ontology/`](ontology) | typed claims, evidence snapshots, scopes, sources, and open problems | not applicable |
+| [`docs/`](docs) | current guides, decisions, audits, and provenance | excluded |
+| [`_archive/`](_archive), [`_findings/`](_findings), [`papers/`](papers), [`output/`](output) | historical/non-runnable material and generated references | excluded |
+
+Python scripts that import local helpers remain colocated with them. Result JSON files stay beside their
+producer so direct runs and isolated reproduction use the same path contract.
+
 ## Run a kernel
 
-Use a name returned by `./ice list`:
+Use a name returned by `./ice list` rather than depending on a physical path:
 
 ```bash
-# Cayley–Dickson path computation
+# Hypercomplex calculations
 ./ice info cd_path_amplitude_v2
 ./ice run cd_path_amplitude_v2
-
-# Independent sedenion checks
-./ice run avenue3_phase1_groundtruth
-./ice run naesengmoon_indep_sedenion
-
-# Structural and diagnostic cases
-./ice run prove_higgs_ZD_doublet
 ./ice run prove_s3_higher_gauge
-./ice run queue_02_4condition_diagnostic
 ./ice run queue_08_g2_diagnostic
-./ice run queue_09_SS3TG
+
+# Legacy dimensional/numerology controls
+./ice run derive_dimensionless_ICE
+./ice run ice_prereg_check
+
+# Current CPT × Temporal-Folded SUSY track
+./ice run phase19_closed_sugra_bounce
+./ice run phase20_two_sheet_wdw_selection
+./ice run phase21_connected_seam_gaussian
+./ice run phase22_finite_mode_seam_density
 ```
 
-Direct runs may update a kernel's result file. Inspect `git status` afterward. Use `./ice repro` when the
-goal is a non-destructive comparison against committed mapped outputs.
+Direct runs may update an adjacent result file. Inspect `git status` afterward. Use `./ice repro` for a
+non-destructive comparison against committed mapped outputs.
 
 ## Reproduction ledger
 
@@ -91,39 +111,23 @@ goal is a non-destructive comparison against committed mapped outputs.
 ./ice repro
 ```
 
-The harness copies tracked/candidate files into an Effect-scoped temporary directory, deletes each mapped
-output before execution, runs cases serially, and performs a structural/semantic comparison against the
-committed baseline. The current 14-case ledger is intentionally not all-green:
+The harness copies tracked and candidate files into an Effect-scoped temporary directory, deletes each
+mapped output before execution, runs cases serially, and compares the fresh result with the committed
+baseline. The current ledger intentionally exits nonzero:
 
-- 12 `REPRO`
-- `queue_03_threshold_sensitivity_scan`: `NONPORTABLE_FAIL`
-- `queue_06_cooperative_vacuum`: `SUPERSEDED`
+- 12 portable cases reproduce;
+- `queue_03_threshold_sensitivity_scan` is quarantined because its legacy entrywise metric depends on an
+  arbitrary null-space basis;
+- `queue_06_cooperative_vacuum` is marked `SUPERSEDED` because a repaired script generated its baseline.
 
-Queue 03 is quarantined because its legacy entrywise commutator maximum depends on an arbitrary
-null-space basis. A broad tolerance would conceal a method defect, so the ledger exits nonzero until a
-separately versioned and independently checked invariant method exists. See
-[`QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](QUEUE03_PORTABILITY_AUDIT_2026-08-14.md).
-
-## Lean scientific workflow
-
-New work has no mandatory tier, preregistration contract, Bayes/Lakatos form, or KG ratification step.
-
-1. Record the primary source, equations, conventions, and assumptions actually used.
-2. Run the smallest exact or numerical calculation that can answer the question.
-3. Preserve the command, environment, inputs, and observed output; independently check high-risk steps.
-4. Separate computed facts from physical interpretation and open speculation.
-
-Null results, basis dependence, sign errors, and failed mappings are ordinary results, not procedural
-failures. Historical `*_RESEARCH_CONTRACT.json` and receipts remain only where an old executable needs
-them for reproducibility. See [`AGENTS.md`](AGENTS.md).
+See the [Queue 03 portability audit](docs/audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md) and the
+[reproducibility record](docs/audits/REPRODUCIBILITY_2026-06-08.md).
 
 ## Research ontology
 
 The repository-local [CPT × Temporal-Folded SUSY research graph](ontology/cpt-temporal-folded-susy/README.md)
-keeps concepts, scoped claims, exact evidence, sources, and open problems linked without turning the
-graph into a research contract or a physics verdict. The machine-readable canonical file is
-[`graph.json`](ontology/cpt-temporal-folded-susy/graph.json); Phase 16–21 stdout payloads are preserved
-as evidence snapshots rather than being left only in terminal history.
+links scoped claims, executable evidence, sources, and open problems. It is a memory/index layer, not a
+research contract or automatic physics verdict.
 
 ```bash
 ./ice ontology validate
@@ -132,22 +136,19 @@ as evidence snapshots rather than being left only in terminal history.
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ```
 
-External SYMPOSIUM KG links are bridge metadata only. `RELATED` does not mean exact identity, and an
-`UNRESOLVED` bridge remains local until a real external node is found or created by an authorized writer.
+## Scientific scope
 
-## Computation areas
+Reports use the following disclosure layers:
 
-| Area | Representative runnable entries |
+| Layer | Meaning |
 |---|---|
-| Cayley–Dickson | `cd_path_amplitude_v2`, `ice_convention_invariance` |
-| dimensional/numerical claims | `derive_dimensionless_ICE`, `derive_Lstar_from_ICE`, `derive_mass_ratios_ICE` |
-| Higgs and S-proofs | `prove_higgs_ZD_doublet`, `prove_s1_framing`, `prove_s2_CCWZ`, `prove_s3_higher_gauge`, `prove_s5_bv_ainfty`, `prove_s7_WW_evasion` |
-| sedenion ground truth | `avenue3_phase1_groundtruth`, `naesengmoon_indep_sedenion` |
-| queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_11_xor_invariant` |
-| numerology controls | `numerology_mc_judge`, `numerology_mc_judge_v3_abc`, `numerology_hidden_scan` |
-| CPT × Temporal-Folded SUSY | `phase11_collar_admissibility`, `phase12_boundary_twist_interface`, `phase13a_lorentzian_branch_supercharge`, `phase14a_chiral_clock_charge_first`, `phase15r_parent_sign_reproduction`, `phase16_bgg_single_source`, `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian` |
+| L1 algebra | exact or numerical statements about the implemented algebra/computation |
+| L2/L3 physics belt | proposed physical interpretations and empirical discriminators |
+| mythology | user-primary narrative material preserved separately from scientific evidence |
 
-Always use `./ice list` for the complete live set.
+“ICE predicts X” is incomplete without a target claim, layer, assumptions, and evidence status. The
+governing decision is [the workbench reframe](docs/decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md); the
+working rules are in [`AGENTS.md`](AGENTS.md).
 
 ## Development
 
@@ -155,16 +156,15 @@ Always use `./ice list` for the complete live set.
 npm run typecheck
 npm test
 npm run check
+./ice doctor
 ```
 
-For Python/kernel changes, also verify the locked environment and the directly affected cases:
+For a Python/kernel change, also run the directly affected entry and, when mapped, its isolated repro
+case:
 
 ```bash
-uv sync --locked
-./ice doctor
 ./ice info <name>
 ./ice run <name>
-# only when the name is in ./ice repro --list
 ./ice repro --only <name>
 ```
 
@@ -172,18 +172,16 @@ uv sync --locked
 
 | Document | Purpose |
 |---|---|
-| [`docs/USERGUIDE.md`](docs/USERGUIDE.md) | runnable catalog usage and category guide |
-| [`docs/STATUS.md`](docs/STATUS.md) | current engineering status plus historical scientific ledger |
 | [`docs/index.md`](docs/index.md) | documentation map |
-| [`ontology/README.md`](ontology/README.md) | repository research-ontology format and CLI entry points |
-| [`ontology/cpt-temporal-folded-susy/README.md`](ontology/cpt-temporal-folded-susy/README.md) | readable Phase 15R–21 concept/evidence/open-problem map |
-| [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) | current CPT × Temporal-Folded SUSY workbench boundary and phase index |
-| [`cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md`](cpt_temporal_folded_susy/PHASE19_CLOSED_SUGRA_BOUNCE.md) | closed-SUGRA background existence calculation and initial-value caveat |
-| [`cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md`](cpt_temporal_folded_susy/PHASE20_TWO_SHEET_WDW_SELECTION.md) | leading WDW selection control and conditional curvature conversion |
-| [`cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md`](cpt_temporal_folded_susy/PHASE21_CONNECTED_SEAM_GAUSSIAN.md) | normalized connected Gaussian seam control and flux-prior boundary |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | contribution and verification contract |
-| [`REPRODUCIBILITY_2026-06-08.md`](REPRODUCIBILITY_2026-06-08.md) | historical attestation and current erratum |
-| [`SOURCES.md`](SOURCES.md) | mythology/physics sources and provenance |
+| [`docs/USERGUIDE.md`](docs/USERGUIDE.md) | CLI and runnable-catalog guide |
+| [`docs/STATUS.md`](docs/STATUS.md) | engineering status and bounded scientific ledger |
+| [`research/README.md`](research/README.md) | organized research-code and report map |
+| [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) | complete CPT phase index and current boundary |
+| [`ontology/README.md`](ontology/README.md) | research-graph format and CLI entry points |
+| [`docs/decisions/`](docs/decisions) | governing scope decisions |
+| [`docs/audits/`](docs/audits) | reproducibility and method audits |
+| [`docs/provenance/SOURCES.md`](docs/provenance/SOURCES.md) | mythology/physics sources and provenance |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | contribution and verification workflow |
 
 ## License
 

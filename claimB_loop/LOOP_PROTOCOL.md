@@ -3,8 +3,8 @@
 루프 목적: Claim B(무한 CD tower 경로적분 = 중력)의 계산 측 open status를
 어느 브랜치로든 **봉인**한다. 반전이 목적이 아니라 판정이 목적이다.
 
-근거 스펙: `../CLAIMB_COMPUTATIONAL_FRONTIER_DESIGN_2026-07-21.md`
-정전 제약: `../ICE_WORKBENCH_REFRAME_2026-05-18.md` (3-layer 공시),
+근거 스펙: [`CLAIMB_COMPUTATIONAL_FRONTIER_DESIGN_2026-07-21.md`](CLAIMB_COMPUTATIONAL_FRONTIER_DESIGN_2026-07-21.md)
+정전 제약: [`ICE_WORKBENCH_REFRAME_2026-05-18.md`](../docs/decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md) (3-layer 공시),
 MB4 sha256 사전등록 프로토콜, numerology_mc_judge 게이트.
 
 ## 절대 규칙

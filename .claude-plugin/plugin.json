@@ -1,7 +1,7 @@
 {
   "name": "ice-orca-dragon-physics-workbench",
   "version": "1.0.0",
-  "description": "Hypercomplex computation workbench with reproducible Python kernels and a lean source-to-check scientific workflow.",
+  "description": "Physics/math computation workbench for hypercomplex experiments and CPT two-sheet cosmology, with reproducible Python kernels.",
   "author": {
     "name": "Ra Gyeongjun (라경준)",
     "email": "gj3447@gmail.com",
@@ -13,6 +13,8 @@
   "keywords": [
     "physics",
     "hypercomplex",
+    "quantum-cosmology",
+    "supersymmetry",
     "typescript",
     "python",
     "effect",
