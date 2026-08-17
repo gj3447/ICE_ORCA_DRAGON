@@ -449,7 +449,7 @@ completion route suggested by existing string/SUGRA structures is instead
 \longrightarrow
 \text{flux-sector selection}
 \longrightarrow
-F/D\ne0\text{ and visible soft terms}.}
+F\ne0\text{ and visible soft terms}.}
 \]
 
 This route would replace the presently chosen Starobinsky potential and any
@@ -465,15 +465,16 @@ The three-form variational boundary term must be included before evaluating a
 Euclidean saddle; otherwise even the on-shell scalar-potential sign can be
 misidentified.  A kappa-symmetric charged membrane would additionally supply
 physical jumps of the electric/magnetic flux data.  Without such a transition
-operator, distinct fluxes remain superselection sectors and the action alone
-does not assign their probabilities.
+operator, the electric/magnetic data are constant on each source-free local-EFT
+region.  Whether a global path integral sums those sectors, and with which
+measure, is additional input that the local action does not provide.
 
 If a normalized seam state selected a sector with nonzero auxiliary order
 parameters, the phenomenological chain to be tested would be
 
 \[
 \text{seam selects }n_*
-\longrightarrow F^I(n_*),D^a(n_*)\ne0
+\longrightarrow F^I(n_*)\ne0
 \longrightarrow
 (M_{1/2},m_{\tilde f}^2,A_{ijk}).
 \]
@@ -482,6 +483,8 @@ Flux-induced soft terms are known in concrete Type-IIB D-brane settings, but
 none has been computed for this seam.  This is the viable way to evade the
 Phase-18 free instantaneous-seam result: the seam would select a persistent
 bulk flux vacuum rather than directly kick a free pole mass.
+A (D^a\ne0) branch would require additional vector-multiplet/gauging data;
+it is not supplied by the cited three-form construction alone.
 
 Two further distinctions are mandatory:
 
@@ -523,11 +526,11 @@ machine-readable `PHASE28_RESULT`.  It writes no files.
 - [Feldbrugge, Lehners, and Turok, *Lorentzian quantum cosmology*](https://arxiv.org/abs/1703.02076) — Picard--Lefschetz flows and dual-cycle intersection numbers for lapse integrals.
 - [Batalin and Vilkovisky, *Gauge algebra and quantization*](https://doi.org/10.1016/0370-2693(81)90205-7) — BV gauge-algebra framework.
 - [Fradkin and Vilkovisky, *Quantization of relativistic systems with constraints*](https://doi.org/10.1016/0370-2693(75)90448-7) — Hamiltonian constrained path integrals and gauge fixing.
-- [Halliwell, *Derivation of the Wheeler--DeWitt equation from a path integral for minisuperspace models*](https://doi.org/10.1103/PhysRevD.38.2468) — lapse reduction and Wheeler--DeWitt boundary conditions.
+- [Halliwell, *Derivation of the Wheeler--DeWitt equation from a path integral for minisuperspace models*](https://doi.org/10.1103/PhysRevD.38.2468) — lapse reduction, the Wheeler--DeWitt equation, and measure/operator ordering.
 - [Gibbons, Hawking, and Perry, *Path integrals and the indefiniteness of the gravitational action*](https://doi.org/10.1016/0550-3213(78)90161-X) — the gravitational conformal-contour obstruction that this homogeneous lapse calculation does not remove.
 - [Farakos, Lanza, Martucci, and Sorokin, *Three-forms in Supergravity and Flux Compactifications*](https://arxiv.org/abs/1706.09422) — double-three-form SUGRA and flux parameters as four-form expectation values; it does not derive this seam.
 - [Bandos et al., *Three-forms, dualities and membranes in four-dimensional supergravity*](https://arxiv.org/abs/1803.01405) — duality-covariant three-form multiplets and charged kappa-symmetric membranes; no membrane is present in the Phase-28 executable.
-- [Witten, *On Flux Quantization in M-Theory and the Effective Action*](https://arxiv.org/abs/hep-th/9609122) — the gravitationally shifted M-theory flux lattice that a genuine UV completion must respect.
+- [Witten, *On Flux Quantization in M-Theory and the Effective Action*](https://arxiv.org/abs/hep-th/9609122) — the gravitationally shifted flux lattice that an M-theory embedding must respect.
 - [Cámara, Ibáñez, and Uranga, *Flux-induced SUSY-breaking soft terms*](https://arxiv.org/abs/hep-th/0311241) — explicit D-brane soft terms from background fluxes; cited as the downstream spectrum template, not as evidence for seam selection.
 - [Dienes, *Modular Invariance, Finiteness, and Misaligned Supersymmetry*](https://arxiv.org/abs/hep-th/9402006) — full-string ultraviolet cancellations without level-by-level spacetime SUSY, conditional on the complete modular-invariant spectrum.
 - [Kiermaier, Okawa, and Zwiebach, *The boundary state from open string fields*](https://arxiv.org/abs/0810.1737) — a BRST-cohomological boundary-state template; its worldsheet BRST charge is distinct from the BFV charge used here.
