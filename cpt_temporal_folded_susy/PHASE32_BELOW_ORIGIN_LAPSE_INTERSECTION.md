@@ -49,8 +49,12 @@ v_{\Gamma}=(0,1),\qquad v_{\mathcal K}=(-1,0),
 \det(v_\Gamma,v_\mathcal K)=+1.
 \]
 
-The actual complex fixed-boundary solution was continued around four such
-semicircles.  No sampled Jacobi zero was encountered.  Thus
+The actual complex fixed-boundary solution was solved at five recorded angles
+on each of four such semicircles.  No sampled Jacobi zero was encountered.
+With ambient orientation $(\operatorname{Re}T,\operatorname{Im}T)$, columns
+ordered as $(\Gamma_r^-,\mathcal K_\sigma)$, a stipulated flow-outward
+orientation on the left dual, and the declared positive-$N$-normalized
+Gaussian lift, this gives
 
 \[
 \boxed{
@@ -59,11 +63,14 @@ semicircles.  No sampled Jacobi zero was encountered.  Thus
 {}+\text{declared positive-}N\text{-normalized coupled Gaussian lift}
 \end{gathered}
 \quad\Longrightarrow\quad
-\text{one recorded finite-}r\text{ local contribution }+1.
+\text{one projected lapse-base crossing with coordinate sign }+1.
 }
 \]
 
-This is deliberately **not** called the global coefficient $n_\sigma=+1$.
+This is deliberately **not** called either a signed local intersection of the
+full joint BFV/PL cycles or the global coefficient $n_\sigma=+1$.  The full
+$\mathcal K_\sigma$ tangent, ghost/superdeterminant orientation, and
+determinant-line trivialization have not been constructed.
 As $r\to0$, the crossing moves into the singular identity-kernel endpoint.
 Other upward-cycle components, other complex BVP sheets, good ends, the full
 oriented superdeterminant line, and all possible additional intersections
@@ -106,9 +113,9 @@ On the short positive-real branch it approaches
 =2.98719256735>0.
 \]
 
-Therefore the recorded upward dual from $T_*=0.7$ is oriented toward the
-origin along the positive real $T$ axis.  This fixes the local intersection
-orientation used below.
+Therefore its flow direction on the recorded upward dual points toward the
+origin along the positive real $T$ axis.  The orientation of that dual is an
+additional convention, stipulated below rather than fixed by $W_T>0$ alone.
 
 ## 2. Half-line versus full-line objects
 
@@ -147,7 +154,8 @@ N=x-i\epsilon,\quad x\geq0
 T=\epsilon+ix.
 \]
 
-At $x=0$, $T=\epsilon$ lies on the recorded real dual, but this point is the
+For $0<\epsilon<T_*$, at $x=0$, $T=\epsilon$ lies on the recorded real dual,
+but this point is the
 boundary of the half-line contour.  In the $\epsilon\to0^+$ limit it also
 approaches the singular zero-lapse endpoint.  An endpoint contact is not an
 ordinary interior intersection number.
@@ -199,14 +207,15 @@ The dual configuration rays are
 \]
 
 Their local Jacobians are $J_p=i$ and $J_q=-i$, so $J_pJ_q=+1$.
-The explicitly declared coupled lift therefore does not reverse the local
-geometric crossing sign.
+The explicitly declared principal Gaussian lift therefore adds no sign to the
+stipulated projected crossing.  This calculation does not orient the full
+BFV determinant line.
 
 At the negative-real end of the lower turn, however, analytic transport of
 the momentum integral already includes its Jacobian and gives $C/N=-C/r$.
 The independently identity-normalized real kernel requires $C/|N|=C/r$.
-Relating those two cycles therefore needs an **additional** Maslov comparison
-or gluing sign $m_-=-1$:
+Relating those two separately normalized cycles therefore needs an
+**additional** orientation-line comparison or gluing transition $m_-=-1$:
 
 \[
 \left(-\frac Cr\right)m_-=\frac Cr,
@@ -216,8 +225,9 @@ or gluing sign $m_-=-1$:
 The $-1$ here is not a second copy of the already included momentum Jacobian;
 it is extra comparison data between the analytically transported thimble and
 the separately normalized negative-real Fresnel cycle.  The executable proves
-that this gluing is required, but does not derive it from CPT/Pin or from the
-local equations.  In particular,
+that such a transition is required by these two conventions, but does not
+derive it as a Maslov index, from CPT/Pin, or from the local equations.  In
+particular,
 Banihashemi--Jacobson remove the negative gravitational trace momentum before
 their positive Gaussian argument; the retained signature-$(-,+)$ extension
 above is our finite-mode control, not a theorem imported from that paper.
@@ -266,8 +276,9 @@ the complex fixed-boundary equations were solved at
 \{-\pi,-3\pi/4,-\pi/2,-\pi/4,0\}.
 \]
 
-This is 20 distinct points on four full lower semicircles.  The maximum
-endpoint residual is
+This is 20 distinct sampled points, five on each of four lower semicircles.
+It is not a proof of continuous sheet tracking between the samples.  The
+maximum endpoint residual is
 
 \[
 8.89\times10^{-16},
@@ -336,14 +347,17 @@ endpoint cap.  Phase 31 separately verifies the nonzero finite-cutoff BFV
 quartets; neither calculation constructs the absolute nonlinear BFV/BV
 measure.
 
-Complex conjugation maps
+Lapse conjugation maps
 
 \[
 x-i\epsilon\longleftrightarrow x+i\epsilon.
 \]
 
-This pairs only the two lapse loci.  Identifying them as ket/bra prescriptions
-requires the conjugated field action, measure, and determinant orientation;
+Under $T=iN$ it induces $T\mapsto-\bar T$.  This pairs only the two lapse
+loci.  A full CPT operation additionally requires boundary exchange plus the
+field, spin/Pin, and measure-orientation actions.  Identifying the loci as
+ket/bra prescriptions requires the conjugated field action, measure, and
+determinant orientation;
 that identification, selection of a ket contour, a four-dimensional Pin
 lift, and a positive seam density matrix all remain open.
 
@@ -354,11 +368,12 @@ Established within the frozen homogeneous model:
 - the causal positive half-line, and its separately declared lower-lateral
   endpoint regulator, give only endpoint contact with the recorded dual;
 - the specified full-line lower bypass maps to a right $T$ semicircle;
-- its finite-$r$ cap has one recorded transverse local contribution $+1$;
+- its finite-$r$ cap has one projected lapse-base crossing with coordinate
+  sign $+1$ under the declared orientations;
 - the declared signature-$(-,+)$ momentum lift is locally convergent and
   preserves that local sign;
-- the actual connected complex BVP continues around four lower bypasses
-  without a sampled Jacobi zero;
+- the actual connected complex BVP was solved at five recorded angles on each
+  of four lower bypasses without a sampled Jacobi zero;
 - the $r\to0$ limit is nonuniform because the endpoint Van Vleck factor grows
   as $1/r$.
 
@@ -366,7 +381,8 @@ Still open:
 
 - the complete global integer $n_\sigma$;
 - every other upward-cycle component and every complex BVP sheet;
-- global determinant/Maslov and BFV superdeterminant orientation;
+- the signed full-joint local intersection, global determinant/Maslov data,
+  and BFV superdeterminant orientation;
 - the physical reason, if any, for choosing below rather than above;
 - the inhomogeneous SUGRA, gravitino, Goldstino, and ghost sectors;
 - a trace-class WDW projector or full quantum seam state;
@@ -388,11 +404,10 @@ uv run --locked python3 \
 ./ice run phase32_below_origin_lapse_intersection
 ```
 
-Expected result:
+The final JSON payload contains:
 
-```text
-14 exact checks passed
-7 numerical checks passed
+```json
+{"exact_checks": 14, "numerical_checks": 7}
 ```
 
 The script writes no files.  Its result payload records the contour class,
@@ -412,8 +427,8 @@ remaining open gates.
   minisuperspace/WDW path-integral and lapse-measure setting; not the present
   complex BVP calculation.
 - [Halliwell--Ortiz](https://doi.org/10.1103/PhysRevD.48.748): proper-time
-  ranges, Green functions, and composition laws; not a proof of the local
-  $+1$ sign.
+  ranges, Green functions, and composition laws; not a proof of the projected
+  coordinate $+1$ sign or a full-cycle orientation.
 - [Witten](https://arxiv.org/abs/1001.2933): relative Picard--Lefschetz
   cycles and intersection coefficients; not a derivation of the original
   cosmological integration cycle.

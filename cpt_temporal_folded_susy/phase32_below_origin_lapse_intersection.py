@@ -11,12 +11,14 @@ This executable distinguishes two lapse objects:
   N=0.  Under T=iN, that bypass becomes a right semicircle and crosses the
   recorded positive-real dual once at T=r.
 
-The program follows that crossing down to small r, continues the actual
-complex boundary-value solution around the lower bypass, and transports the
-principal signature (-,+) momentum cycle.  The recorded local intersection is
-+1 for the specified full-line contour.  No complete global upward cycle,
-absolute determinant phase, trace-class WDW projector, Pin lift, or SUGRA
-state is claimed.  The script writes no files.
+The program follows that crossing down to small r, samples the actual complex
+boundary-value solution at five angles on each of four lower bypasses, and
+transports the principal signature (-,+) momentum cycle.  The projected
+lapse-base crossing has coordinate sign +1 under the explicitly declared
+orientations.  A signed intersection of the full joint BFV/PL cycles, a
+complete global upward cycle, the absolute determinant phase, a trace-class
+WDW projector, a Pin lift, and a SUGRA state are not claimed.  The script
+writes no files.
 """
 
 from __future__ import annotations
@@ -109,11 +111,23 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     )
 
     dual_speed = sp.symbols("v", positive=True, real=True)
-    orientation = sp.Matrix([[0, -dual_speed], [radius, 0]]).det()
+    crossing_angle = -sp.pi / 2
+    bypass_tangent = sp.simplify(
+        sp.diff(lower_time, theta).subs(theta, crossing_angle)
+    )
+    outward_dual_tangent = -sp.conjugate(dual_speed)
+    orientation = sp.Matrix(
+        [
+            [sp.re(bypass_tangent), sp.re(outward_dual_tangent)],
+            [sp.im(bypass_tangent), sp.im(outward_dual_tangent)],
+        ]
+    ).det()
     audit.exact(
         "P32.intersection.lower_bypass_orientation",
-        sp.simplify(orientation - radius * dual_speed) == 0,
-        "the lower-bypass tangent and outward left dual tangent have positive transverse orientation",
+        sp.simplify(bypass_tangent - sp.I * radius) == 0
+        and sp.simplify(outward_dual_tangent + dual_speed) == 0
+        and sp.simplify(orientation - radius * dual_speed) == 0,
+        "with ambient (Re T,Im T), columns (Gamma,K), and the stipulated flow-outward left-dual orientation, the projected lapse-base crossing has coordinate sign +1",
     )
 
     half_parameter = sp.symbols("s", nonnegative=True, real=True)
@@ -167,7 +181,7 @@ def exact_controls(audit: Audit) -> dict[str, object]:
             configuration_jacobian.subs(theta, -sp.pi / 2) + sp.I
         )
         == 0,
-        "the declared momentum and dual-configuration Jacobians multiply to +1 and preserve the local crossing orientation",
+        "the declared principal Gaussian lift has Jacobian product +1; this adds no sign to the stipulated projected crossing but does not orient the full BFV determinant line",
     )
 
     normalization = sp.symbols("C", positive=True, real=True)
@@ -177,18 +191,18 @@ def exact_controls(audit: Audit) -> dict[str, object]:
     transported_momentum_orientation = sp.simplify(
         momentum_jacobian.subs(theta, -sp.pi)
     )
-    declared_maslov_comparison = -1
+    declared_orientation_transition = -1
     independently_normalized_real_prefactor = normalization / radius
     audit.exact(
-        "P32.detline.lower_half_turn_requires_maslov_gluing",
+        "P32.detline.lower_half_turn_requires_orientation_gluing",
         negative_real_prefactor == -normalization / radius
         and transported_momentum_orientation == -1
         and sp.simplify(
-            negative_real_prefactor * declared_maslov_comparison
+            negative_real_prefactor * declared_orientation_transition
             - independently_normalized_real_prefactor
         )
         == 0,
-        "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional declared Maslov sign",
+        "analytic momentum-cycle transport gives C/N; comparison with the independently normalized C/|N| real branch requires an additional orientation-line gluing sign that is not derived as a Maslov index",
     )
 
     spectral = sp.symbols("lambda", real=True)
@@ -256,8 +270,12 @@ def exact_controls(audit: Audit) -> dict[str, object]:
 
     audit.exact(
         "P32.conjugation.lateral_loci",
-        sp.conjugate(x - sp.I * epsilon) == x + sp.I * epsilon,
-        "complex conjugation exchanges the lower and upper lateral lapse loci; no CPT or Pin lift is inferred",
+        sp.conjugate(x - sp.I * epsilon) == x + sp.I * epsilon
+        and sp.simplify(
+            sp.I * sp.conjugate(lapse_general) + sp.conjugate(euclidean_time)
+        )
+        == 0,
+        "lapse conjugation exchanges the lateral loci and induces T -> -conjugate(T); no boundary exchange, CPT, or Pin lift is inferred",
     )
 
     return {
@@ -507,7 +525,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         all(record["W_T"] > 0 for record in records)
         and abs(records[-1]["W_T"] - potential_coefficient) < 2e-5
         and all(record["intersection_orientation_determinant"] > 0 for record in records),
-        "the left dual stays transverse and its tangent approaches the nonzero short-time Hamilton-Jacobi limit",
+        "the recorded samples of the left dual remain transverse and their tangent approaches the nonzero short-time Hamilton-Jacobi limit",
     )
     audit.numerical(
         "P32.Jacobi.short_time_no_caustic",
@@ -530,7 +548,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         all(0 < record["r"] < 0.7 for record in records)
         and all(record["crossing_point_residual"] < 1e-14 for record in records)
         and all(record["intersection_orientation_determinant"] > 0 for record in records),
-        "every finite lower full-line bypass crosses the recorded real dual at T=r with stable positive local orientation",
+        "every recorded finite lower full-line bypass crosses the recorded real dual at T=r with the same positive projected coordinate sign under the declared orientations",
     )
 
     complex_records = complex_lower_bypass_control(scan)
@@ -543,7 +561,7 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
             for record in complex_records
         )
         > 0.99,
-        "the actual connected complex BVP continues around four lower lapse bypasses with no sampled Jacobi zero",
+        "the connected complex BVP was solved at five recorded angles on each of four lower lapse bypasses, with no sampled Jacobi zero",
     )
 
     spectral = spectral_regulator_control()
@@ -568,8 +586,10 @@ def numerical_controls(audit: Audit) -> dict[str, object]:
         "complex_lower_bypass": complex_records,
         "spectral_regulator": spectral,
         "recorded_intersection": {
-            "below_origin_full_line": 1,
-            "above_origin_full_line_on_positive_dual": 0,
+            "projected_base_crossing_count": 1,
+            "projected_base_crossing_sign_under_declared_orientations": 1,
+            "signed_full_joint_local_intersection": None,
+            "above_origin_projected_base_crossing_on_positive_dual": 0,
             "positive_half_line": None,
             "positive_half_line_reason": "the meeting is a singular contour endpoint rather than an interior transverse crossing",
             "global_coefficient": None,
@@ -593,12 +613,12 @@ def run() -> dict[str, object]:
         "frozen_conventions": exact,
         "numerical_controls": numerical,
         "claim_status": {
-            "the_specified_below_origin_full_line_has_one_recorded_local_intersection_with_the_connected_saddle_dual": "SUPPORTED_ON_THE_TRACKED_HOMOGENEOUS_LAPSE_BASE",
+            "the_specified_below_origin_full_line_has_one_recorded_projected_lapse_base_crossing_with_coordinate_sign_plus_one_under_the_declared_orientations": "SUPPORTED_ON_THE_TRACKED_HOMOGENEOUS_LAPSE_BASE",
             "the_positive_half_lapse_ray_has_an_ordinary_transverse_intersection_with_that_dual": "CONTRADICTED_BY_ENDPOINT_CONTACT",
             "the_above_origin_full_line_has_the_same_positive_dual_intersection": "CONTRADICTED_ON_THE_RECORDED_BRANCH",
             "the_lower_bypass_principal_momentum_cycle_is_locally_convergent": "SUPPORTED_EXACTLY",
-            "analytic_transport_alone_fixes_the_negative_real_identity_normalization": "CONTRADICTED_REQUIRES_AN_ADDITIONAL_MASLOV_COMPARISON_SIGN",
-            "the_recorded_local_plus_one_is_the_complete_global_PL_coefficient": "OPEN_OTHER_DUAL_COMPONENTS_AND_GLOBAL_ENDS_NOT_DERIVED",
+            "analytic_transport_alone_fixes_the_negative_real_identity_normalization": "CONTRADICTED_REQUIRES_AN_ADDITIONAL_ORIENTATION_LINE_GLUING_SIGN",
+            "the_projected_coordinate_plus_one_is_a_signed_full_joint_local_or_global_PL_coefficient": "OPEN_FULL_CYCLE_ORIENTATION_OTHER_DUAL_COMPONENTS_AND_GLOBAL_ENDS_NOT_DERIVED",
             "CPT_or_Pin_alone_selects_the_below_origin_lapse_class": "OPEN_NOT_DERIVED",
             "the_result_is_a_positive_trace_class_WDW_projector_or_seam_state": "OPEN_NOT_DERIVED",
         },
@@ -607,13 +627,14 @@ def run() -> dict[str, object]:
                 "the full-line lower and upper semicircular lapse bypass geometry",
                 "the lower-bypass principal signature (-,+) momentum cycle and orientation holonomy",
                 "the connected real dual from r=.1 to .0015625",
-                "the actual complex fixed-boundary branch around four lower bypass semicircles",
-                "the recorded local intersection orientation and regulator stability",
+                "five recorded complex fixed-boundary points on each of four lower bypass semicircles",
+                "the projected lapse-base crossing coordinate sign and regulator stability under declared orientations",
                 "the positive half-line endpoint-contact distinction",
                 "a finite spectral damping versus lateral-shift control",
             ],
             "not_computed": [
                 "the complete global upward cycle and every intersection on every BVP sheet",
+                "a signed full-joint local BFV/PL intersection and determinant-line trivialization",
                 "the inhomogeneous gauge-fixed determinant and its oriented superdeterminant line",
                 "a nonperturbative BFV/BV quantum master equation or Gribov analysis",
                 "a proof that CPT or Pin selects the below-origin rather than above-origin class",
