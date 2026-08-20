@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T05:15:08Z`; 507 nodes, 1332 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 69/69 stored hashes (66 artifacts and 3 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T05:50:42Z`; 511 nodes, 1338 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 71/71 stored hashes (68 artifacts and 3 policies).
 
 ## Quick answers
 
@@ -499,22 +499,27 @@ gauge-reduced kernel, physical endpoint product, and trace-class state therefore
 
 `policy:recursive-self-application-audit` stores the user-requested lesson inspired by Greg Egan's
 recursive mode of thought. It does not treat the novel's ideas or their interpretation as physics
-evidence. It turns the lesson into an active audit:
+evidence. Its self-audit verdict is `NARROW`: literal recursion is required only when type-correct;
+otherwise the policy audits the justification for a privilege-bearing edge. The active audit is:
 
-1. freeze the exact conditions of a proposed `A → B` bridge;
-2. seek a minimal counterexample;
-3. remove `A` and reverse the arrow;
-4. apply the rule to itself and to the rule that selected the preferred branch;
-5. demand a basis-independent invariant and observable;
-6. check whether the result silently changed the original definitions;
-7. finish with `KEEP`, `NARROW`, `BRANCH`, `KILL`, or an explicit `OPEN`.
+1. classify the proposed `A → B` bridge and quotient gauge/basis redundancy;
+2. freeze its exact conditions;
+3. seek a minimal counterexample;
+4. remove `A` and reverse the arrow;
+5. perform type-correct self-application or a meta-audit of the preferred branch;
+6. demand a basis-independent invariant and discriminating observable;
+7. check whether the result silently changed the original definitions;
+8. finish with `KEEP`, `NARROW`, `BRANCH`, `EQUIVALENCE`, `KILL`, or an explicit `OPEN`.
 
-Applied to the current frontier, “global selection is required” recursively becomes “what derives the
-global selection rule?” A convenient lapse bypass, Airy contour, or sector prior has no privileged
-status. The complete original problem must derive it, or the non-uniqueness remains open. The policy is
-attached to the programme through `GOVERNED_BY`; it cannot support or contradict a scientific claim.
-Its SYMPOSIUM bridge is deliberately `UNRESOLVED` because no authorized external UID or writer is
-available.
+Applied to the current frontier, “global selection is required” becomes two questions: what derives the
+relative coefficients, and must one arm be selected at all? A convenient lapse bypass, Airy contour, or
+sector prior has no privileged status. The result may be one invariant cycle, a fixed CPT-real sum,
+physically distinct underweighted branches, or an observational equivalence class. The two concepts
+`concept:invariant-difference-amplitude-and-record` and
+`concept:recursive-objectivity-and-world-resistance` record this deeper boundary. The central philosophy
+and intuitive meditation document them without evidential polarity. The policy is attached to the
+programme through `GOVERNED_BY`; it cannot support or contradict a scientific claim. Its SYMPOSIUM bridge
+is deliberately `UNRESOLVED` because no authorized external UID or writer is available.
 
 ## IDs and claim states
 

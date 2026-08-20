@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T05:15:08Z",
+  "updated_at_utc": "2026-08-20T05:50:42Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -579,12 +579,16 @@
       "title": "Apply every proposed bridge and selection rule back to itself",
       "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch.",
       "nodes": [
+        "artifact:ice-central-philosophy",
+        "concept:invariant-difference-amplitude-and-record",
         "policy:recursive-self-application-audit",
+        "concept:recursive-objectivity-and-world-resistance",
         "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
         "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
         "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
         "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
-        "open:p36-original-cycle-hard-determinant-and-global-bfv-state"
+        "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
+        "artifact:recursive-truth-meditation"
       ]
     }
   ],
@@ -1808,11 +1812,47 @@
       "id": "policy:recursive-self-application-audit",
       "type": "policy",
       "title": "No-privileged recursive self-application audit",
-      "summary": "Every proposed principle or bridge must be reapplied to itself and to the rule that selected it, with explicit condition, counterexample, ablation, reversal, invariant, observable, and definition-stability checks. Preferred sheets, contours, measures, originating intuitions, and the programme's own philosophy receive no exemption. This is a workflow policy, never scientific evidence.",
+      "summary": "When a principle or bridge privileges one otherwise comparable candidate, apply the same evidential burden to the differentiating rule. Literal self-application is required only when type-correct; otherwise perform a meta-audit of kind, conditions, counterexample, ablation, reversal, invariance, observables, and definition stability. The policy's own self-audit is NARROW: it is a revisable workflow tool, never a universal law or scientific evidence.",
       "state": "ACTIVE",
       "path": "docs/decisions/ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md",
-      "sha256": "aa60fa2d7e5b66c2936f43f08064f1de1ad543ce79a9108004e1f4002780b46b",
+      "sha256": "1f20c81bae626a3e58ae64bb6fd01839351819f542b73a00ebdc5bba4776e62b",
       "introduced_in_commit": "8a3aad8a3c3d0d7e035ba9732a02fcdb8d51fe71"
+    },
+    {
+      "id": "concept:invariant-difference-amplitude-and-record",
+      "type": "concept",
+      "title": "Invariant difference, amplitude, and persistent record",
+      "summary": "The programme treats a candidate physical distinction only after quotienting gauge, basis, coordinate, and other redundant descriptions. A surviving distinction must then acquire a well-defined relative amplitude and, to explain later observables, a persistent causal record. Nonzero amplitude does not by itself settle actuality, and observability is an evidence condition rather than a definition of existence.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:recursive-objectivity-and-world-resistance",
+      "type": "concept",
+      "title": "Recursive objectivity and resistance from the world",
+      "summary": "Objectivity does not erase the observer; it applies the same evidential burden to the observer's location, preferred branch, and selection rule. Reflective consistency can expose hidden exemptions but cannot establish physics by itself: epistemic weight additionally requires invariance under legitimate redescription and vulnerability to counterexample, intervention, and observation.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "artifact:ice-central-philosophy",
+      "type": "artifact",
+      "title": "ICE central-claim philosophy",
+      "summary": "Programme-wide philosophical synthesis distinguishing formal possibility, invariant physical difference, amplitude, persistent record, and observational warrant. It regulates interpretation and is not scientific evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "philosophy",
+      "path": "docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md",
+      "sha256": "8924e28d27d5fa88b90c319e2f7af1e366d6bf0d92b2ca8ea33c82659068940a",
+      "introduced_in_commit": "5cc16164a7e34e92f7182f7f07893d2744dbf8ab"
+    },
+    {
+      "id": "artifact:recursive-truth-meditation",
+      "type": "artifact",
+      "title": "ICE recursive-truth meditation",
+      "summary": "An intuitive ICE, ORCA, DRAGON, fold, mirror, and memory meditation that helps readers feel the programme's distinctions while explicitly carrying no scientific evidential polarity.",
+      "state": "TRACKED",
+      "artifact_kind": "philosophical_meditation",
+      "path": "docs/ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md",
+      "sha256": "42f4233215ec6422a801436cbf79dfda6d1069bc101c7fcd4435bfa652daa87b",
+      "introduced_in_commit": "641b34f223e1720f91a1ba6e15c2a3e6bc900bee"
     },
     {
       "id": "phase:p19",
@@ -14574,6 +14614,46 @@
       "relation": "GOVERNED_BY",
       "to": "policy:recursive-self-application-audit",
       "note": "User-requested methodology lesson: recurse on the proposed bridge and its selection rule without treating the preferred construction as a privileged exception. Workflow only; not scientific evidence."
+    },
+    {
+      "id": "edge:1333",
+      "from": "concept:invariant-difference-amplitude-and-record",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1334",
+      "from": "concept:recursive-objectivity-and-world-resistance",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1335",
+      "from": "artifact:ice-central-philosophy",
+      "relation": "DOCUMENTS",
+      "to": "concept:invariant-difference-amplitude-and-record",
+      "note": "Philosophical interpretation only; no scientific evidential polarity."
+    },
+    {
+      "id": "edge:1336",
+      "from": "artifact:ice-central-philosophy",
+      "relation": "DOCUMENTS",
+      "to": "concept:recursive-objectivity-and-world-resistance",
+      "note": "Philosophical interpretation only; no scientific evidential polarity."
+    },
+    {
+      "id": "edge:1337",
+      "from": "artifact:recursive-truth-meditation",
+      "relation": "DOCUMENTS",
+      "to": "concept:invariant-difference-amplitude-and-record",
+      "note": "Intuitive meditation only; never scientific evidence."
+    },
+    {
+      "id": "edge:1338",
+      "from": "artifact:recursive-truth-meditation",
+      "relation": "DOCUMENTS",
+      "to": "concept:recursive-objectivity-and-world-resistance",
+      "note": "Intuitive meditation only; never scientific evidence."
     }
   ],
   "kg_bridges": [

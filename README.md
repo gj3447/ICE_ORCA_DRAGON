@@ -230,7 +230,7 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 | runnable Python kernels | 67 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 507 nodes, 1332 edges, 123 claims | `./ice ontology summary` |
+| research ontology | 511 nodes, 1338 edges, 123 claims | `./ice ontology summary` |
 | latest runnable CPT seam phase | Phase 36 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
