@@ -1,0 +1,356 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P41_M4_TWO_SOURCE_INTERSECTION_20260820",
+  "phase": "P41",
+  "observed_at_utc": "2026-08-20T14:28:45.166Z",
+  "command": ".venv/bin/python cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+    "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530",
+    "introduced_in_commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd"
+  },
+  "exact_checks": 7,
+  "checks": [
+    {
+      "id": "P41.action.single_scalar_four_elements",
+      "statement": "the byte-pinned post-feasibility manifest drives one S4 scalar, four midpoint elements, and the production seven-gradient/seven-Hessian",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.action.holomorphic_off_T_zero",
+      "statement": "S4 has no conjugation off T=0 and its simple-pole residue is a nonzero symbolic polynomial",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.reflection.two_source_covariance",
+      "statement": "S4, its full gradient, and its Hessian obey joint two-source reflection covariance",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.modes.DST_and_nested_orientation",
+      "statement": "the frozen DST and nested bases are positively oriented, have parity +++--++, and have positive transition determinant",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.nesting.affine_cycle_not_action",
+      "statement": "the affine retraction, anchors, and cap deviations nest exactly while an exact rational witness proves S4 composed with I is not S2",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.orientation.middle_dimension_and_root_parity",
+      "statement": "Gamma and K each have real dimension seven in R14 and seven negated K columns reverse the root determinant",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.guard.incomplete_data_force_global_nulls",
+      "statement": "incomplete chain, census, Stokes, nonlinear-manifold, end, and physical-cycle data force all bounded/global outputs to null",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 9,
+  "numerical": [
+    {
+      "id": "P41.saddles.two_source_signed_grids",
+      "statement": "all nine independently continued two-source grid saddles are resolved, nondegenerate, inertia-matched, and reflection-paired",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.response.anchor_subtracted_two_source_matrix",
+      "statement": "the reported half-step susceptibility is tested against source reversal, step drift, and the independent predeclared solver-tolerance repeat without forcing its rank",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.metric.one_fixed_mobility_two_sources",
+      "statement": "one zero-source mobility is held fixed while signed projectors, transported frames, reflection, and every lambda-one Takagi identity are checked",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.intersections.five_primary_full_R14_candidates",
+      "statement": "the shared, signed phi, and signed a endpoints are independently solved in all R14 equations with frozen residual, rank, transversality, reflection, and window criteria",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.orientation.direct_root_and_basis_controls",
+      "statement": "within m4, direct/root parity, single Gamma/K reversals, correctly row-acting DST/nested coordinate maps, and strict overlap-chart transport are audited without a desired sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.tangent.three_full_FD_controls",
+      "statement": "the full strict-map residual Jacobian is audited at shared_zero, phi_plus, and a_plus using the first adjacent surviving frozen FD pair",
+      "status": "FAIL"
+    },
+    {
+      "id": "P41.launch.radius_and_shape_controls",
+      "statement": "radius and aligned launch-shape mutations must return the same normalized cap state, not merely repeat a determinant sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.path.first_cap_and_flow_box",
+      "statement": "every primary tracked path has monotone sampled ReS, stable ImS, frozen-box margins, and an independently re-integrated matching first cap event",
+      "status": "PASS"
+    },
+    {
+      "id": "P41.guard.no_global_integer",
+      "statement": "all sixteen incomplete-data flags remain false, six promoted outputs remain null, and Gate 1 remains open",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 7,
+    "numerical_checks": 9,
+    "calculation": "m=4 two-source finite local joint-intersection production audit",
+    "run_status": "VALID_TYPED_RUN",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "extraction_transport": "in-memory parser",
+      "full_result_stdout_archived": false,
+      "note": "The executable emitted one RESULT_JSON record, but the full raw stdout was intentionally not archived. This snapshot preserves all contract IDs, statuses and statements plus selected scoped metrics and typed outputs; it does not claim byte-full payload preservation."
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e",
+      "introduced_in_commit": "58181447b558fa204406b732badd5c2fd541bb47",
+      "freeze_kind": "post_feasibility_workflow_input_freeze",
+      "is_preregistration": false,
+      "is_scientific_evidence": false,
+      "pre_freeze_R14_sign": "UNKNOWN_NOT_RETAINED",
+      "desired_local_orientation_sign": null,
+      "desired_susceptibility_rank": null
+    },
+    "completion_contract_counts": {
+      "exact_total": 7,
+      "exact_passed": 7,
+      "numerical_total": 9,
+      "numerical_passed": 8,
+      "numerical_failed": 1,
+      "sole_failed_contract": "P41.tangent.three_full_FD_controls",
+      "sole_typed_failure_status": "TANGENT_CONTROL_FAILED"
+    },
+    "declared_model": {
+      "segment_count": 4,
+      "complex_dimension": 7,
+      "ambient_real_dimension": 14,
+      "source_dimension": 2,
+      "source_axes": [
+        "delta_a",
+        "delta_phi"
+      ],
+      "fixed_zero_source_mobility": true,
+      "source_rewhitening": false,
+      "omitted_sectors": [
+        "canonical momenta",
+        "lapse gauge ghosts",
+        "fermions and gravitino",
+        "inhomogeneous modes",
+        "BFV/Pfaffian/Pin orientation line"
+      ]
+    },
+    "shared_zero_saddle": {
+      "z_approximate": [
+        3.580742041048,
+        1.00365908814,
+        3.585333552575,
+        0.998707997221,
+        3.580742041048,
+        1.00365908814,
+        0.724303333668
+      ],
+      "action_approximate": 1.4545006797598463,
+      "hessian_inertia": {
+        "negative": 4,
+        "positive": 3,
+        "zero": 0
+      },
+      "signed_grid_saddles_resolved": 9,
+      "saddle_census_complete": false
+    },
+    "exact_nesting_control": {
+      "m2_affine_retraction_anchor_and_cap_embedding_exact": true,
+      "S4_composed_with_I_identified_with_S2": false,
+      "action_nonnesting_witness": "-63*pi**2*exp(-sqrt(6)/3)/32 + 63*pi**2*exp(-2*sqrt(6)/3)/64 + 63*pi**2/64",
+      "m2_m4_common_determinant_line_constructed": false
+    },
+    "two_source_response": {
+      "reported_matrix": "chi_half",
+      "row_order": [
+        "a_odd_over_a_b",
+        "phi_odd_over_phi_b"
+      ],
+      "column_order": [
+        "delta_a",
+        "delta_phi_over_phi_b"
+      ],
+      "chi_half": [
+        [
+          0.0004641563772,
+          0.001789434943
+        ],
+        [
+          0.005176662239,
+          -0.00106314873
+        ]
+      ],
+      "chi_half_singular_values_approximate": [
+        0.00528567,
+        0.00184589
+      ],
+      "E_step_spectral_approximate": 0.00000652667,
+      "E_solver_spectral_approximate": 2.43e-12,
+      "sigma_min_over_10_E_rank_approximate": 28.2823,
+      "maximum_source_reversal_residual": 1.76e-16,
+      "stable_numerical_rank_two_supported": true,
+      "exact_algebraic_rank_two_proved": false
+    },
+    "fixed_metric_and_launch": {
+      "one_mobility_used_for_both_sources": true,
+      "mobility_reflection_relative_error": 5.38e-16,
+      "Q_orthogonality_residual": 5.25e-14,
+      "Q_squared_minus_identity_residual": 5.9e-16,
+      "signed_projector_reflection_relative_error": 9.88e-13,
+      "block_Procrustes_frame_error": 9.87e-13,
+      "lambda_one_Takagi_residual": 1.08e-12,
+      "metric_homotopy_tested": false
+    },
+    "primary_local_candidates": {
+      "labels": [
+        "shared_zero",
+        "phi_minus",
+        "phi_plus",
+        "a_minus",
+        "a_plus"
+      ],
+      "all_five_full_R14_candidates_accepted": true,
+      "direct_declared_coordinate_signs": {
+        "shared_zero": 1,
+        "phi_minus": 1,
+        "phi_plus": 1,
+        "a_minus": 1,
+        "a_plus": 1
+      },
+      "root_jacobian_signs": {
+        "shared_zero": -1,
+        "phi_minus": -1,
+        "phi_plus": -1,
+        "a_minus": -1,
+        "a_plus": -1
+      },
+      "phi_reflection_physical_max": 1.385e-12,
+      "a_reflection_physical_max": 6.058e-12,
+      "orientation_mutations_passed": true,
+      "DST_nested_row_basis_controls_passed": true,
+      "strict_overlap_chart_controls_passed": true,
+      "m3_m4_sign_comparison": "DESCRIPTIVE_SEPARATELY_AUDITED_COMPARISON_ONLY",
+      "m3_m4_common_determinant_line_constructed": false
+    },
+    "finite_difference_tangent_control": {
+      "status": "TANGENT_CONTROL_FAILED",
+      "passed": false,
+      "audited_points": [
+        "shared_zero",
+        "phi_plus",
+        "a_plus"
+      ],
+      "finite_difference_root_signs": {
+        "shared_zero": -1,
+        "phi_plus": -1,
+        "a_plus": -1
+      },
+      "FD_to_variational_relative_operator_error": {
+        "shared_zero": 0.00164506,
+        "phi_plus": 0.000773922,
+        "a_plus": 0.00135951
+      },
+      "first_adjacent_pair_failed_column_zero_based": 8,
+      "failed_parameter": "u2",
+      "steps_used": [
+        0.000002,
+        5e-7
+      ],
+      "adjacent_step_relative_change": {
+        "shared_zero": 0.29885,
+        "phi_plus": 0.2219933,
+        "a_plus": 0.7952717
+      },
+      "frozen_plateau_threshold": 0.02,
+      "later_favorable_step_selected": false,
+      "interpretation": "The transported-frame trust control failed and both source-scoped robustness claims remain inconclusive. The five computed roots are retained, and no no-root or exact tangent-instability theorem follows."
+    },
+    "bounded_controls": {
+      "radius_and_launch_shape_contract_passed": true,
+      "same_normalized_cap_state_required": true,
+      "all_five_first_cap_and_path_ledgers_passed": true,
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "continuous_direction_coverage_proved": false,
+      "root_exhaustion_proved": false,
+      "exact_nonlinear_upward_manifold_certified": false
+    },
+    "completion_ledger": {
+      "m2_and_m4_actions_identified": false,
+      "m2_and_m4_upward_cycles_identified": false,
+      "m2_and_m4_common_determinant_line_constructed": false,
+      "m3_and_m4_canonical_sign_equality_proved": false,
+      "m3_and_m4_common_determinant_line_constructed": false,
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "continuous_direction_coverage_proved": false,
+      "root_exhaustion_proved": false,
+      "exact_nonlinear_upward_manifold_certified": false,
+      "all_saddles_and_upward_components_complete": false,
+      "non_Stokes_chamber_certified": false,
+      "all_relative_good_ends_classified": false,
+      "physical_original_cycle_derived": false,
+      "metric_homotopy_tested": false,
+      "BFV_Pfaffian_Pin_orientation_computed": false,
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "quantum_gravity_explanation": null,
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "claim_status": {
+      "phi_only_local_m4_robustness": "INCONCLUSIVE_WITHIN_FROZEN_LOCAL_PROTOCOL",
+      "a_only_local_m4_robustness": "INCONCLUSIVE_WITHIN_FROZEN_LOCAL_PROTOCOL",
+      "two_source_stable_numerical_rank": "RANK_TWO_SUPPORTED_WITHIN_FROZEN_NORMALIZATION",
+      "exact_algebraic_response_rank": "NOT_PROVED",
+      "five_primary_local_R14_candidates": "SUPPORTED_AS_COMPUTED_LOCAL_CANDIDATES_WITHOUT_TANGENT_ROBUSTNESS",
+      "m3_m4_sign_relation": "DESCRIPTIVE_SEPARATELY_AUDITED_COMPARISON_ONLY",
+      "common_cross_cutoff_determinant_line": "NOT_CONSTRUCTED",
+      "global_Picard_Lefschetz_promotion": "PROHIBITED",
+      "Gate_1": "OPEN_PARTIAL_PROGRESS",
+      "SUSY_quantum_gravity_or_cosmology_claim": "NOT_LICENSED"
+    },
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "quantum_gravity_explanation": null,
+    "scope_guard": {
+      "computed": [
+        "one explicit four-segment midpoint configuration action and its exact symbolic derivatives",
+        "two independently continued signed endpoint-source saddle grids and their anchor-subtracted susceptibility",
+        "stable numerical rank two under one frozen dimensionless finite-precision rule",
+        "one fixed zero-source Hermitian mobility used for both source axes",
+        "five finite-radius finite-time local full-R14 cap candidates with direct declared sign plus one",
+        "local reflection, orientation, overlap-chart, launch radius, launch shape, and first-cap path controls",
+        "one retained failed finite-difference tangent plateau contract"
+      ],
+      "not_computed": [
+        "source-scoped local robustness passing every frozen tangent prerequisite",
+        "straight arms or later cap reintersections",
+        "continuous direction coverage, root exhaustion, or complete nonlinear upward manifolds",
+        "a complete saddle census, Stokes chamber, connecting flows, or every relative good end",
+        "a derived physical original cycle or global intersection integer",
+        "a common cross-cutoff determinant line, cutoff limit, or continuum limit",
+        "BFV ghosts, Pfaffian/Pin line, fermions, gravitino, spinorial charge, persistent order parameter, or particle-pole splitting",
+        "quantum gravity, SUSY breaking, or a cosmological prediction"
+      ]
+    },
+    "next_calculation": "freeze a new diagnostic that separates u2 finite-difference integration noise, chart conditioning, and true local nonlinearity before attempting any Gate-1 global promotion"
+  }
+}

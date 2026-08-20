@@ -89,12 +89,15 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json` | $m=3$ reflection-odd 계산의 post-feasibility 입력과 실패 시 `null`로 남길 전역 출력을 고정한 workflow manifest. 최초 frame 가정의 실패와 signed-subspace transport 교정을 커밋 이력으로 보존 |
 | `phase40_m3_reflection_odd_intersection.py` | 하나의 SymPy scalar에서 $S_3$, gradient, Hessian을 만들고 rank-one endpoint mutation, signed spectral-subspace transport, full $10\times10$ local orientation과 대조군을 검증하는 실행체 |
 | `PHASE40_M3_REFLECTION_ODD_INTERSECTION.md` | Phase 40 보고서 — 12 exact + 22 numerical checks. 다섯 sampled $\delta$ 후보의 local sign은 $+1$이지만 source rank는 1이고 모든 global intersection 출력은 `null`; Gate 1은 OPEN |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–40의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json` | feasibility 확인 뒤 고정한 $m=4$ two-source workflow manifest. 원하는 부호를 입력하지 않으며 incomplete global data를 fail-closed `false`/`null`로 유지 |
+| `phase41_m4_two_source_intersection.py` | 하나의 $m=4$ midpoint scalar에서 두 독립 endpoint-source saddle grid, 고정 mobility, full $\mathbb R^{14}$ local intersections와 orientation·tangent·launch·path controls를 계산하는 실행체 |
+| `PHASE41_M4_TWO_SOURCE_INTERSECTION.md` | Phase 41 보고서 — 7/7 exact + 8/9 typed numerical contracts. 두-source response의 수치 rank 2는 지지되지만 tangent FD plateau가 유일하게 실패하여 $\phi$/$a$ local robustness는 inconclusive; 모든 global 출력은 `null`이고 Gate 1은 OPEN |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–41의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 40)
+## 현재 경계 (Phase 41)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -359,6 +362,17 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   clamp는 full odd-sector ablation도 아니며, 단지 같은 neighborhood에서 full candidate를 재현하지
   못한 대조군이다. 따라서 bounded-chain sum, complete signed vector, `global_n_sigma`는 계속
   `null`이고 Gate 1은 OPEN이다.
+- Phase 41은 $m=4$와 서로 독립인 $\phi$-only/$a$-only endpoint source로 이 rank-one 한계를
+  직접 건드린다. Frozen normalization에서 anchor-subtracted susceptibility의
+  $\sigma_{\min}/(10E_{\rm rank})=28.28$이고, 두 source의 수치 rank 2가 지지된다. Shared zero와
+  네 signed endpoints에서 full $14\times14$ direct local sign은 모두 $+1$, root-Jacobian sign은
+  모두 $-1$이며 reflection, radius, launch-shape, first-cap path controls도 통과한다.
+- 전체 계약은 7/7 exact와 8/9 typed numerical이다. 유일한 실패는 shared zero, $\phi+$, $a+$의
+  finite-difference tangent plateau이며, 세 점의 FD sign과 operator error 자체는 통과한다. 따라서
+  두 source의 local robustness는 `INCONCLUSIVE_WITHIN_FROZEN_LOCAL_PROTOCOL`이다. Cross-cutoff
+  determinant line, straight-arm/reintersection census, exact nonlinear upward manifold, physical
+  original cycle, cutoff/continuum limit, BFV/Pfaffian/Pin orientation은 여전히 없다. Six promoted
+  outputs는 `null`, 16 completion flags는 `false`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
 ## 다음 계산
 
@@ -369,9 +383,10 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   separate root-sheet lateral gate, Phase 37의 local closed root/half-form holonomy, Phase 38의
   inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger, Phase 39의
   $m=2$ cap-piece local full-space witness, Phase 40의 rank-one $m=3$ reflection-odd local
-  continuation에서 멈추지 않는다. 다음에는 $m=4$에서 orientation-matched cutoff control을 만들고
-  독립적인 $a$-only source를 추가해 두 odd response 방향의 rank를 검사한다. 이후 이미 feasible한
-  $m=5$ joint saddle로 올린다. 그 뒤
+  continuation, Phase 41의 two-source $m=4$ full-$\mathbb R^{14}$ local roots에서 멈추지 않는다.
+  Phase 41의 수치 rank 2를 별도 source robustness나 common cross-cutoff determinant line으로
+  승격하지 않고, 먼저 실패한 FD plateau를 해소하거나 그 민감도를 분류한다. 이후 이미 feasible한
+  $m=5$ joint saddle로 올리고 cutoff/metric homotopy를 실제로 구성한다. 그 뒤
   하나의 공통 incoming physical upward dual과
   원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
   line의 absolute orientation을 고정한다. Full joint upward cycle의

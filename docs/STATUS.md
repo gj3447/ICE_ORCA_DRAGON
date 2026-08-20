@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 71 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 72 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,10 +374,13 @@ and
 
 ## Research ontology memory
 
-Phase 15R–40 is indexed in a repository-local typed research graph with **567 nodes and 1570 directed
-relations**. It preserves 137 claims and the Phase 16–40 run payloads: 403 named exact checks and 229
-typed numerical checks, or 230 numerical checks when the separately catalogued legacy Phase-18 control
-is included. The graph also preserves cautious bridges to the older SYMPOSIUM KG.
+Phase 15R–41 is indexed in a repository-local typed research graph with **579 nodes and 1617 directed
+relations**. It preserves 141 claims (74 `SUPPORTED`, 66 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
+Phase 16–41 run payloads: 410 named exact checks and 238 current typed numerical checks, split as 237
+`PASS` and 1 `FAIL`. Including the separately catalogued passing legacy Phase-18 control gives 239
+typed numerical checks, split as 238 `PASS` and 1 `FAIL`. The graph contains 86 artifacts, 85 evidence
+nodes, 27 phases, and 44 scopes; all 90 recorded hashes validate (86 artifacts and 4 policies), with 26
+declared validation warnings. It also preserves cautious bridges to the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
   is the human concept map.
@@ -817,7 +820,7 @@ See
 and
 [`../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py`](../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 40
+## Previous direct calculation — CPT × Temporal-Folded SUSY Phase 40
 
 Phase 40 returns exit 0 with **12 exact checks and 22 numerical checks**. It raises the finite-cutoff
 configuration model to $m=3$, so the joint action has five complex variables and the local intersection
@@ -855,14 +858,50 @@ chamber, cutoff/metric/regulator independence, physical original relative cycle,
 BFV/Pfaffian/Pin orientation. Accordingly `bounded_chain_signed_sum`,
 `complete_global_signed_intersection_vector`, and `global_n_sigma` remain `null`; Gate 1 remains open.
 
-The next cutoff control is $m=4$, with orientation matched to the lower cutoffs and an independent
-$a$-only endpoint source alongside the $\phi$-only source. That tests whether the two odd responses span
-the available odd sector before promotion to the feasible $m=5$ saddle and the global end/Stokes census.
+The next cutoff control was Phase 41 at $m=4$, with orientation matched to the lower cutoffs and an
+independent $a$-only endpoint source alongside the $\phi$-only source.
 
 See
 [`../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md)
 and
 [`../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py`](../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 41
+
+Phase 41 returns exit 0 with **7/7 exact contracts and 8/9 typed numerical contracts**. Exit 0 denotes
+a valid typed scientific run, not nine numerical passes: the sole negative record is
+`P41.tangent.three_full_FD_controls = TANGENT_CONTROL_FAILED`. The calculation raises the same explicit
+midpoint action to $m=4$, giving seven complex configuration variables and a full local intersection
+problem in fourteen real dimensions. It uses one zero-source mobility and independent signed
+$\phi$-only and $a$-only endpoint-source arms.
+
+The anchor-subtracted two-source susceptibility has singular values approximately
+$(0.00528567,0.00184589)$ and
+$\sigma_{\min}/(10E_{\rm rank})=28.28$. This supports stable **numerical** rank two within the frozen
+normalization; it is not an exact algebraic rank theorem. Shared zero and the four signed endpoints all
+produce accepted local roots with full $7+7$ tangent ranks, normalized
+$\sigma_{\min}\ge 0.08890$, direct declared-coordinate sign $+1$, and root-Jacobian sign $-1$.
+The negative source arms are independently continued from the common zero. Reflection residuals are
+at most $6.06\times10^{-12}$, and the radius, launch-shape, overlap-chart, and independently reintegrated
+first-cap path controls pass.
+
+At shared zero, $\phi+$, and $a+$, the finite-difference root signs and tangent-operator errors pass,
+but the first adjacent finite-difference step pair has maximum relative plateau changes approximately
+$0.299$, $0.222$, and $0.795$. The typed tangent contract therefore fails. The source-specific
+$\phi$/$a$ robustness claims remain `INCONCLUSIVE_WITHIN_FROZEN_LOCAL_PROTOCOL`; repeated local $+1$
+signs are not promoted through that failure.
+
+No straight-arm or reintersection census, continuous-direction coverage, root exhaustion, exact
+nonlinear upward manifold, common $m=2/3/4$ determinant line, physical original cycle, cutoff/continuum
+limit, metric homotopy, or BFV/Pfaffian/Pin orientation has been computed. Six promoted outputs,
+including the bounded-chain sum, global vector, global $n_\sigma$, cutoff limit, continuum limit, and
+quantum-gravity explanation, remain `null`; all sixteen completion flags remain false and Gate 1 is
+`OPEN_PARTIAL_PROGRESS`. The runnable catalog is now 72.
+
+See
+[`../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md)
+and
+[`../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py`](../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py).
 
 ## Historical scientific ledger
 

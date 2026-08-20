@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T12:23:10.518Z",
+  "updated_at_utc": "2026-08-20T14:28:45.166Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -263,6 +263,16 @@
         "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
         "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
         "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ]
+    },
+    {
+      "question": "Does Phase 41 establish robust m=4 source branches, cutoff convergence, or a global intersection coefficient?",
+      "answer": "No. It supports stable numerical rank two for the anchor-subtracted two-source response in one frozen normalization and resolves five local full-R14 cap candidates with direct declared sign +1. The frozen u2 finite-difference plateau fails at all three audited points, so both source-scoped robustness claims remain inconclusive even though the roots and other controls are retained. The m3/m4 sign agreement is only a comparison of separately audited declared-coordinate signs; no common determinant line, cutoff limit, bounded-chain sum, global vector, or quantum-gravity result follows, and Gate 1 remains open.",
+      "claim_ids": [
+        "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+        "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
       ]
     }
   ],
@@ -615,7 +625,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phase 41 exemplifies the rule by retaining five local roots and numerical rank two while refusing source robustness after the frozen tangent audit fails.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -627,6 +637,8 @@
         "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
         "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid",
         "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+        "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
         "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
         "artifact:recursive-truth-meditation"
       ]
@@ -670,7 +682,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, and the Phase-40 m=3 rank-one signed-endpoint mutation. Retain only the five sampled local R10 +1 candidates and their fixed-mobility, delta-dependent launch-ellipsoid scope; stop before turning sampled continuation into a continuous branch, a local K-launch clamp into a full odd-sector ablation, or local candidates into an entire-chain pairing, cutoff limit, physical original cycle, certified Stokes chamber, or global vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, and the Phase-41 m=4 two-source control. Retain the stable numerical rank-two response and five computed local R14 +1 candidates, but also retain the failed tangent plateau and inconclusive source robustness. Stop before turning separately audited m3/m4 signs into a common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -691,6 +703,10 @@
         "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
         "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
         "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+        "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+        "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
       ]
@@ -6809,7 +6825,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--40 partially supply frozen m=2 and m=3 finite-cutoff configuration actions and local cap-piece intersection candidates. Phase 40 adds a rank-one signed phi-endpoint probe, the first two-dimensional reflection-odd Hessian block, and five sampled local R10 +1 candidates under one fixed flow mobility and delta-dependent launch ellipsoids. The construction debt remains open: add the independent endpoint-source direction and m=4 control, search straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric-homotopy, regulator, anchor, and boundary stability before emitting a bounded-chain signed sum or global vector. The sampled local candidates do not pair the entire chain or select a preferred physical cycle.",
+      "summary": "Phases 39--41 partially supply frozen m=2, m=3, and m=4 finite-cutoff configuration actions and local cap-piece intersection candidates. Phase 41 adds the independent a endpoint probe, a stable numerical rank-two two-source response in one frozen normalization, and five local R14 +1 candidates under one fixed flow mobility. Its frozen u2 finite-difference plateau fails, so both source-scoped robustness claims remain inconclusive. The construction debt remains open: diagnose the tangent transport without retroactive step selection, search straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric-homotopy, regulator, anchor, and boundary stability before emitting a bounded-chain signed sum or global vector. The sampled local candidates do not pair the entire chain or select a preferred physical cycle.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -7002,7 +7018,7 @@
       "id": "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid",
       "type": "concept",
       "title": "Fixed flow mobility versus a delta-dependent Morse launch ellipsoid",
-      "summary": "In Phase 40, M_0=L_0 L_0^T is the fixed positive inverse-metric mobility in the original reference coordinates and g_0=M_0^{-1} is the corresponding Hermitian metric. The Procrustes-aligned signed-subspace frame and restricted inverse-square-root launch map J_delta instead define a delta-dependent local Morse-normalized launch ellipsoid. Varying J_delta or rescaling its launch radius does not change M_0 and is not a metric-homotopy test, exact unstable-manifold certificate, determinant-line transport, or Pin holonomy.",
+      "summary": "In Phases 40--41, M_0=L_0 L_0^T is the fixed positive inverse-metric mobility in the original reference coordinates and g_0=M_0^{-1} is the corresponding Hermitian metric. Phase 41 holds one zero-source m=4 mobility fixed across both endpoint-source axes. The Procrustes-aligned signed-subspace frame and restricted inverse-square-root launch map instead define source-dependent local Morse-normalized launch ellipsoids. Varying their lambda shape or launch radius does not change the mobility and is not a metric-homotopy test, exact unstable-manifold certificate, determinant-line transport, or Pin holonomy.",
       "state": "ACTIVE"
     },
     {
@@ -7163,6 +7179,156 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase40-result.json",
       "sha256": "bf6b9f9b8b69b84807bb25748d2ff06c548566184c9003e4c5bb1b1f8b54d6dd"
+    },
+    {
+      "id": "phase:p41",
+      "type": "phase",
+      "title": "Phase 41 — m=4 two-source local joint intersections",
+      "summary": "A typed Gate-1 local control at m=4. It freezes independent signed a and phi endpoint probes and one shared zero-source mobility, supports stable numerical rank two for their anchor-subtracted odd response in the declared normalization, and resolves five local full-R14 cap candidates with direct sign +1. One predeclared u2 finite-difference plateau fails at all three audited points, so both source-scoped robustness claims remain inconclusive and all global outputs remain null.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "type": "claim",
+      "title": "The frozen m=4 two-source odd susceptibility has stable numerical rank two",
+      "summary": "Supported only in the declared dimensionless source/output normalization and finite-precision error rule. The reported half-step matrix has singular values approximately 5.286e-3 and 1.846e-3, while sigma_min/[10(E_step+E_solver)] is about 28.28 and source reversal is resolved. This does not prove exact algebraic rank two, make either endpoint probe a physical time arrow, or establish a continuum response.",
+      "state": "SUPPORTED_WITHIN_FROZEN_DIMENSIONLESS_NUMERICAL_RANK_RULE",
+      "claim_id": "P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "statement": "For the frozen m=4 saddle grids, normalized signed endpoint sources, anchor subtraction, half-step response, and nonrigorous finite-precision rank rule, the recorded two-by-two odd susceptibility has stable numerical rank two.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "type": "claim",
+      "title": "Five primary m=4 cap candidates have computed local full-R14 sign +1",
+      "summary": "Supported as a local-candidate statement at shared_zero, phi_minus, phi_plus, a_minus, and a_plus. All five roots satisfy the frozen residual, rank, transversality, reflection, parameter-window, direct/root parity, orientation-reversal, ambient DST/nested row-basis, and strict overlap-chart checks; their direct signs are +1 and root-Jacobian signs are -1. Launch radius, launch shape, and first-cap path controls also pass at their declared points. The separate full finite-difference tangent plateau fails, so this claim deliberately stops short of source-scoped robustness.",
+      "state": "SUPPORTED_FOR_FIVE_PRIMARY_POINTS_WITHOUT_TANGENT_ROBUSTNESS",
+      "claim_id": "P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "statement": "Within the frozen m=4 action, nodal orientation, one fixed mobility, declared cap piece, and finite-radius finite-time K chart patches, each of the five primary source points has one numerically resolved locally transverse full-R14 candidate with direct declared-coordinate sign +1.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "type": "claim",
+      "title": "The retained tangent-control failure leaves both source robustness claims inconclusive",
+      "summary": "Supported as a typed audit and inference boundary. At shared_zero, phi_plus, and a_plus, the strict-map finite-difference root signs and aggregate operator errors pass, but the first frozen adjacent pair for u2 changes by about 0.299, 0.222, and 0.795, all above 0.02. No later favorable pair is selected. Therefore both phi-only and a-only local robustness outputs remain INCONCLUSIVE_WITHIN_FROZEN_LOCAL_PROTOCOL. The failure does not erase the five computed roots, prove no root, or prove that no stable tangent discretization exists.",
+      "state": "SUPPORTED_AS_TYPED_AUDIT_AND_INFERENCE_BOUNDARY",
+      "claim_id": "P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "statement": "Because the predeclared full finite-difference tangent plateau fails at all three audited Phase-41 points, neither source axis satisfies every prerequisite for the frozen local-robustness claim, although the separately accepted local candidates remain recorded.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "type": "claim",
+      "title": "The local m=4 data do not license canonical cross-cutoff or global intersection inference",
+      "summary": "Supported as an evidential-sufficiency boundary, not a global no-go. The exact m=2 affine grid/cap embedding does not identify S2 with S4 or their upward cycles and determinant lines; the m=3 and m=4 grids are nonnested. Their separately audited local +1 signs therefore agree only descriptively. Straight arms, reintersections, direction/root and component exhaustion, exact nonlinear K, a non-Stokes chamber, all good ends, a physical original cycle, and BFV/Pfaffian/Pin data remain absent. Six promoted outputs stay null, null is not zero, and Gate 1 remains open.",
+      "state": "SUPPORTED_AS_CROSS_CUTOFF_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "statement": "Because Phase 41 constructs neither a common cross-cutoff determinant line nor the complete original chain, census, Stokes, end, and physical-cycle data, its local m=4 response and candidate signs do not license cutoff convergence, a bounded-chain signed sum, a complete global intersection vector, or global n_sigma.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards",
+      "type": "evidence",
+      "title": "Phase 41 exact m=4 action, reflection, nesting, orientation, and null guards",
+      "summary": "Seven exact checks verify the byte-pinned post-feasibility manifest, one holomorphic four-element scalar and all its derivatives, two-source reflection covariance, positively oriented DST and nested parity bases, exact affine m=2 grid/cap nesting together with an exact action-nonnesting witness, seven-versus-seven middle dimension in R14 with odd root parity, and the fail-closed global-null contract.",
+      "state": "VERIFIED",
+      "observed_status": "7_EXACT_PASS",
+      "check_ids": [
+        "P41.action.single_scalar_four_elements",
+        "P41.action.holomorphic_off_T_zero",
+        "P41.reflection.two_source_covariance",
+        "P41.modes.DST_and_nested_orientation",
+        "P41.nesting.affine_cycle_not_action",
+        "P41.orientation.middle_dimension_and_root_parity",
+        "P41.guard.incomplete_data_force_global_nulls"
+      ]
+    },
+    {
+      "id": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "type": "evidence",
+      "title": "Phase 41 numerical two-source response, local R14 candidates, and retained tangent failure",
+      "summary": "The typed numerical ledger contains eight PASS records and one retained TANGENT_CONTROL_FAILED record. It resolves nine signed-grid saddles, supports stable numerical rank two, fixes one mobility across both sources, resolves and orientation-audits five local R14 +1 candidates, and passes the radius, launch-shape, first-cap, flow-box, and global-null guards. The full finite-difference determinant signs and aggregate operator errors pass, but the frozen u2 adjacent-step plateau fails at all three audited points, leaving both source robustness claims inconclusive.",
+      "state": "VERIFIED_TYPED_LEDGER_WITH_ONE_FAILED_CONTROL",
+      "observed_status": "8_NUMERICAL_PASS_1_TANGENT_CONTROL_FAILED",
+      "check_ids": [
+        "P41.saddles.two_source_signed_grids",
+        "P41.response.anchor_subtracted_two_source_matrix",
+        "P41.metric.one_fixed_mobility_two_sources",
+        "P41.intersections.five_primary_full_R14_candidates",
+        "P41.orientation.direct_root_and_basis_controls",
+        "P41.tangent.three_full_FD_controls",
+        "P41.launch.radius_and_shape_controls",
+        "P41.path.first_cap_and_flow_box",
+        "P41.guard.no_global_integer"
+      ]
+    },
+    {
+      "id": "scope:p41-frozen-m4-two-source-local-r14-ledger",
+      "type": "scope",
+      "title": "P41 frozen m=4 two-source local R14 ledger",
+      "summary": "One frozen four-segment midpoint configuration action, two independently continued antisymmetric endpoint-source axes, one shared zero-source inverse-metric mobility, source-dependent finite launch ellipsoids, one declared cap piece, and tracked finite-time seven-real-dimensional K chart patches in an ambient R14.",
+      "state": "ACTIVE",
+      "includes": [
+        "one holomorphic m=4 configuration action on C^6 x C-star_T, exact reflection and orientation identities, and nine tracked signed-grid saddle points",
+        "independent a-only and phi-only source axes, anchor-subtracted two-source response, and stable numerical rank two under one frozen normalization and finite-precision rule",
+        "one fixed zero-source Hermitian mobility held fixed across both sources, signs, launch radii, launch shapes, and trajectories",
+        "five accepted local full-R14 candidates with direct declared sign +1 and root-Jacobian sign -1",
+        "reflection, orientation mutation, DST/nested ambient row-basis, strict overlap-chart, launch-radius, launch-shape, first-cap, and sampled-flow controls",
+        "one retained failed u2 finite-difference tangent plateau and typed inconclusive phi-only and a-only robustness outputs"
+      ],
+      "excludes": [
+        "exact algebraic rank two, a physical time arrow, CPT breaking, or a mixed-source production path",
+        "source-scoped local robustness passing every frozen tangent prerequisite, or a theorem that no stable tangent discretization exists",
+        "equality of the m=2 and m=4 actions or upward cycles, a common m2/m4 or m3/m4 determinant line, canonical cross-cutoff sign equality, cutoff convergence, or a continuum limit",
+        "continuous direction coverage, interval-certified roots, root exhaustion, uniqueness, or exact complete nonlinear upward manifolds",
+        "straight-arm intersections, later cap reintersections, every saddle and upward component, a non-Stokes chamber, connecting flows, or every relative good end",
+        "derivation of the Gaussian-lift candidate as the physical original cycle, a bounded-chain signed sum, complete global signed vector, global n_sigma, Gate-1 closure, or interpretation of a null output as physical zero",
+        "canonical momenta, lapse ghosts, fermions, gravitino, inhomogeneous modes, BFV/Pfaffian/Pin orientation, spinorial charge, persistent order parameter, particle poles, cosmological prediction, or quantum gravity"
+      ]
+    },
+    {
+      "id": "artifact:p41-input-manifest",
+      "type": "artifact",
+      "title": "Phase 41 frozen two-source input manifest",
+      "summary": "The byte-pinned post-feasibility workflow freeze fixes the m=4 action, two signed source axes, one shared mobility, cycle/cap/chart, launch, finite-difference, path, comparison, and fail-closed contracts. It discloses the pre-freeze saddle and response feasibility data, records the pre-freeze R14 sign as unknown-not-retained, supplies no desired result, and is neither preregistration nor scientific evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e",
+      "introduced_in_commit": "58181447b558fa204406b732badd5c2fd541bb47"
+    },
+    {
+      "id": "artifact:p41-script",
+      "type": "artifact",
+      "title": "Phase 41 executable",
+      "summary": "One m=4 scalar action and seven exact contracts plus nine typed numerical contracts for signed saddle grids, two-source response, fixed mobility, five local R14 candidates, orientation, finite-difference tangent, launch surface, path, and fail-closed controls. The committed run passes seven exact and eight numerical contracts and retains one tangent-control failure.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530",
+      "introduced_in_commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd"
+    },
+    {
+      "id": "artifact:p41-report",
+      "type": "artifact",
+      "title": "Phase 41 report",
+      "summary": "Human-readable frozen provenance, exact m=4 and nonnesting identities, stable numerical rank-two response, five local R14 +1 candidates, retained u2 tangent-plateau failure, inconclusive source robustness, implementation-audit repairs, and open Gate-1/global boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md",
+      "sha256": "9d67451e26838da1ee7e644bbbc4b619600391a96e0762d56aa8f164763f6e52",
+      "introduced_in_commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd"
+    },
+    {
+      "id": "artifact:p41-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 41 evidence snapshot",
+      "summary": "Compact typed extract of the committed zero-exit rerun: seven exact PASS records, eight numerical PASS records, one tangent FAIL record with its typed status and selected metrics, rank-two and local-candidate outputs, inconclusive source robustness, sixteen false completion flags, six null promoted outputs, and Gate 1 open. The full raw RESULT_JSON stdout was intentionally not archived.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase41-result.json",
+      "sha256": "3aebe67a1eec1b190942f8a9ba312f90f20244a08ec2e28f1832ea7f8af73b9e"
     }
   ],
   "edges": [
@@ -16281,7 +16447,7 @@
       "from": "open:gate1-original-cycle-signed-global-intersections",
       "relation": "BLOCKED_BY",
       "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
-      "note": "Phases 39--40 partially supply frozen m=2 and m=3 local cap-piece versus chart-patch constructions. Phase 40 adds one rank-one odd-sector probe and five sampled local R10 signs, but the second source direction, m=4/cutoff control, entire-chain intersections, exact nonlinear K, complete census, Stokes chamber, stable signed sum, and global vector remain open. Parallel exploratory Gate-2 work is allowed; physical promotion still requires the Gate-1 typed output."
+      "note": "Phases 39--41 partially supply frozen m=2, m=3, and m=4 local cap-piece versus chart-patch constructions. Phase 41 adds the second source direction, a stable numerical rank-two response in one normalization, and five computed local R14 +1 signs, but its tangent plateau control fails and both source robustness claims remain inconclusive. Entire-chain intersections, exact nonlinear K, complete census, Stokes chamber, stable signed sum, and the global vector remain open. Parallel exploratory Gate-2 work is allowed; physical promotion still requires the Gate-1 typed output."
     },
     {
       "id": "edge:1473",
@@ -16880,6 +17046,296 @@
     {
       "id": "edge:1570",
       "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1571",
+      "from": "phase:p41",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1572",
+      "from": "phase:p41",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1573",
+      "from": "artifact:p41-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1574",
+      "from": "artifact:p41-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1575",
+      "from": "artifact:p41-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1576",
+      "from": "artifact:p41-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1577",
+      "from": "artifact:p41-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-input-manifest"
+    },
+    {
+      "id": "edge:1578",
+      "from": "artifact:p41-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p40-script"
+    },
+    {
+      "id": "edge:1579",
+      "from": "artifact:p41-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p39-script"
+    },
+    {
+      "id": "edge:1580",
+      "from": "artifact:p41-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p30-script"
+    },
+    {
+      "id": "edge:1581",
+      "from": "evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards",
+      "relation": "PART_OF",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1582",
+      "from": "evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:1583",
+      "from": "evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p41-evidence-snapshot"
+    },
+    {
+      "id": "edge:1584",
+      "from": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "relation": "PART_OF",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1585",
+      "from": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:1586",
+      "from": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p41-evidence-snapshot"
+    },
+    {
+      "id": "edge:1587",
+      "from": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "relation": "PART_OF",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1588",
+      "from": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p41-frozen-m4-two-source-local-r14-ledger"
+    },
+    {
+      "id": "edge:1589",
+      "from": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p41-report"
+    },
+    {
+      "id": "edge:1590",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "PART_OF",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1591",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p41-frozen-m4-two-source-local-r14-ledger"
+    },
+    {
+      "id": "edge:1592",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p41-report"
+    },
+    {
+      "id": "edge:1593",
+      "from": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "relation": "PART_OF",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1594",
+      "from": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p41-frozen-m4-two-source-local-r14-ledger"
+    },
+    {
+      "id": "edge:1595",
+      "from": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p41-report"
+    },
+    {
+      "id": "edge:1596",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "PART_OF",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1597",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p41-frozen-m4-two-source-local-r14-ledger"
+    },
+    {
+      "id": "edge:1598",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p41-report"
+    },
+    {
+      "id": "edge:1599",
+      "from": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1600",
+      "from": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1601",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1602",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1603",
+      "from": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1604",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1605",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p41-numerical-two-source-response-local-r14-and-controls",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1606",
+      "from": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "relation": "ABOUT",
+      "to": "concept:literal-time-reflection"
+    },
+    {
+      "id": "edge:1607",
+      "from": "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
+      "relation": "EXTENDS",
+      "to": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE"
+    },
+    {
+      "id": "edge:1608",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "ABOUT",
+      "to": "concept:recorded-local-intersection-versus-global-pl-coefficient"
+    },
+    {
+      "id": "edge:1609",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "ABOUT",
+      "to": "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid"
+    },
+    {
+      "id": "edge:1610",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "EXTENDS",
+      "to": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE"
+    },
+    {
+      "id": "edge:1611",
+      "from": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1612",
+      "from": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "note": "The five computed candidates are retained, but the stronger source-robustness outputs require the failed tangent plateau control."
+    },
+    {
+      "id": "edge:1613",
+      "from": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1614",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "ABOUT",
+      "to": "concept:bounded-crossing-versus-global-intersection-number"
+    },
+    {
+      "id": "edge:1615",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
+    },
+    {
+      "id": "edge:1616",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1617",
+      "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
       "relation": "MOTIVATES",
       "to": "open:gate1-original-cycle-signed-global-intersections"
     }

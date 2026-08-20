@@ -8,12 +8,13 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–40 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–41 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T12:23:10.518Z` graph update, the collection has 567 nodes and
-1570 edges. Validation verifies 86/86 stored hashes (82 artifacts and 4 policies). The
-Phase 16–40 run snapshots contain 403 named exact checks, 229 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (230 numerical controls in all). These
+At the recorded `2026-08-20T14:28:45.166Z` graph update, the collection has 579 nodes and
+1617 edges. Validation verifies 90/90 stored hashes (86 artifacts and 4 policies). The
+Phase 16–41 run snapshots contain 410 named exact checks, all `PASS`, and 238 typed numerical-ledger
+checks: 237 `PASS` and one retained Phase-41 tangent-control `FAIL`. One legacy separately recorded
+Phase-18 numerical control brings the numerical-record total to 239 (238 pass and one fail). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -52,6 +53,10 @@ confidence.
 ./ice ontology trace claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE --depth 2
 ./ice ontology trace claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE --depth 2
 ./ice ontology trace claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE --depth 2
+./ice ontology trace claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO --depth 2
+./ice ontology trace claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE --depth 2
+./ice ontology trace claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE --depth 2
+./ice ontology trace claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -101,6 +106,17 @@ K-launch-coordinate clamp is not a full odd-sector ablation. The second source d
 continuous branch theorem, the entire chain, exact nonlinear upward manifold, Stokes chamber and good
 ends remain open, so every chain/global output stays null and Gate 1 remains open.
 
+Phase 41 raises the local control to (m=4) and adds an independent a-only endpoint source. The
+anchor-subtracted two-source susceptibility has stable numerical rank two under the frozen
+dimensionless finite-precision rule, and five local (mathbb R^{14}) cap candidates are resolved with
+direct declared sign (+1). Reflection, orientation, overlap-chart, launch-radius, launch-shape, and
+first-cap path controls pass. The predeclared finite-difference tangent audit does not: the first
+adjacent frozen step pair for `u2` changes by 22–80% at the three audited points, above the 2% threshold.
+The five roots remain recorded, but both source-scoped robustness outputs are consequently
+inconclusive. The m3/m4 signs are only separately audited descriptive data; no common determinant line,
+cutoff limit, bounded-chain sum, complete vector, or quantum-gravity result is inferred. Six promoted
+outputs remain null, null is not zero, and Gate 1 remains open.
+
 ## How to read a claim
 
 Follow a claim in this order:
@@ -113,7 +129,11 @@ Follow a claim in this order:
    `MOTIVATES` for a distinct next problem suggested by a terminal result; solving it does not reverse
    that result.
 
-A check marked `PASS` means that the named exact test passed. It does **not** mean that the associated scientific claim is true. For example, a passing counterexample check can attach to a claim with `polarity: CONTRADICTS`.
+A check marked `PASS` means that its named contract passed; it does **not** mean that every associated
+scientific claim is true. A `FAIL` records a failed contract, not automatically a negation of the
+physical proposition. In Phase 41 the tangent-control `FAIL` leaves the stronger source-robustness
+outputs inconclusive while the separately accepted local-root claim remains supported. Conversely, a
+passing counterexample check can attach to a claim with `polarity: CONTRADICTS`.
 
 ## Identifier families
 

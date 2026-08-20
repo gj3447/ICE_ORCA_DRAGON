@@ -2,11 +2,27 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–40 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), and [`phase40-result.json`](../evidence/phase40-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–41 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), and [`phase41-result.json`](../evidence/phase41-result.json).
 
 ## Reading `PASS` correctly
 
-All 403 Phase 16–40 named exact checks have `status: PASS`. The snapshots contain 229 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35, 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, and 22 in Phase 40, for 230 numerical controls in all. Phase 40 contributes 12 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation result, guard, or bounded numerical comparison. It does not mean every scientific claim passed, that any local candidate is an interval-certified root, that five sampled delta values define a continuous branch, that the finite-radius chart patch is the exact complete upward manifold, that the K-launch clamp probes the full odd sector, that the entire bounded chain was paired, that the physical original relative cycle or non-Stokes chamber is fixed, that the global intersection coefficient is known, or that a hard CFU kernel, full BFV/SUGRA operator, supercharge, quantum constraint, state, observable prediction, or quantum-gravity theory has been constructed. Gate-2 exploration may run in parallel; only physical promotion remains dependent on Gate 1's typed output.
+All 410 Phase 16–41 named exact checks have `status: PASS`. The snapshots contain 238 typed
+numerical-ledger checks: 237 `PASS` and one retained Phase-41 tangent-control `FAIL`. One legacy
+separately recorded Phase-18 SciPy control brings the numerical-record total to 239: 70 controls through
+Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
+in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35,
+9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, 22 in Phase 40, and 9 in Phase 41. Phase 41
+contributes 7 exact checks and passes 8 of its 9 numerical contracts. A `PASS` means that an executable
+verified its stated equality, rank, obstruction, mutation result, guard, or bounded numerical
+comparison. A `FAIL` records a failed contract; it does not automatically negate the physical
+proposition. In Phase 41 the failed finite-difference tangent plateau leaves both source-robustness
+outputs inconclusive while retaining the separately accepted local candidates. None of these records
+means that a local candidate is an interval-certified root, that the finite-radius chart patch is the
+exact complete upward manifold, that the entire bounded chain was paired, that the physical original
+relative cycle or non-Stokes chamber is fixed, that a global coefficient is known, or that a hard CFU
+kernel, full BFV/SUGRA operator, supercharge, state, observable prediction, or quantum-gravity theory
+has been constructed. Gate-2 exploration may run in parallel; only physical promotion remains dependent
+on Gate 1's typed output.
 
 The scientific direction is stored on:
 
@@ -45,6 +61,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 38 | `result:P38_JOINT_CYCLE_IDENTIFIABILITY_20260820`; `2026-08-20T08:11:16.535Z` | `cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py`; SHA-256 `4df1c5e59404019d8fb6e278ca70b1cfee87a40d77d7288ce2720360376915a8`; introduced in `8912c762df078379d7b5b3bfab6fb51867d58132` | Exit `0`; 15 exact checks plus 6 numerical checks |
 | 39 | `result:P39_FINITE_JOINT_INTERSECTION_20260820`; `2026-08-20T09:56:05.857Z` | `cpt_temporal_folded_susy/phase39_finite_joint_intersection.py`; SHA-256 `0af21171e44a688a9dd0b19b2491954467c5ceb881a97852d0eb6135ea8fce54`; introduced in `05b642eafd4dd10ecb69c345bb07bacb2c458bf4` | Exit `0`; 12 exact checks plus 17 numerical checks |
 | 40 | `result:P40_M3_REFLECTION_ODD_INTERSECTION_20260820`; `2026-08-20T12:23:10.518Z` | `cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py`; SHA-256 `d7e71ed8a7561a586e7035366a92a3033dcb029bb9aa88ea595b38d4d7dacbc3`; introduced in `2f6bf27784de89518b6ce55de451781f73288d6e` | Exit `0`; 12 exact checks plus 22 numerical checks |
+| 41 | `result:P41_M4_TWO_SOURCE_INTERSECTION_20260820`; `2026-08-20T14:28:45.166Z` | `cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py`; SHA-256 `377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530`; introduced in `a31a8627b0e0e210dea96d1d69dad80ccaa6decd` | Exit `0`; 7 exact PASS plus 8 numerical PASS and 1 tangent-control FAIL; valid typed run |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -73,6 +90,19 @@ The Phase 38 report hash is `c275687bd73e7e18442e73619f75585f2cfdbab4cf80d9c7c2a
 The Phase 39 input-manifest hash is `b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4`; its exact bytes are finalized in `750d19e76827ce78c9322e9fac6b494ade1f2bbf`. The report hash is `0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70`; its snapshot hash is `6bc83c7cf3e5a6d65cc24ab71e1c9a2566ba30860eca5c2131bc848115bf6bfd`. The exact executable and report bytes first appear in `05b642eafd4dd10ecb69c345bb07bacb2c458bf4`. The manifest is a post-feasibility workflow freeze, not a preregistration or scientific-evidence artifact.
 
 The Phase 40 manifest has split provenance. Its initial post-feasibility freeze has SHA-256 `897c9788cf1b2706ddf6e2c75f56f4ac7da1eb0aea64ea01cb31971a35920426` in `dd2a9d54b386dcc7bb090f446d5d32aad59743e7`; after a fail-closed run exposed ill-posed individual-eigenvector anchoring, amendment `a6b369e0a9518cd491f8116204ec67ab36fdf2a1` replaced that convention with invariant signed-subspace Procrustes transport. The final manifest hash is `60dfc9c31e45408c92b5fbcd1e1487bcd53b02a62ccf4ee71272f7c3dcc382ae`. The raw declared amendment time and Git commit time disagree and are both retained rather than silently normalized. The manifest remains workflow provenance, not preregistration or scientific evidence. The report hash is `ede77a67fa98adf224c76c5f2e22dac9c00f3650fa10ff7420aa6ee760ef8a42`; the snapshot hash is `bf6b9f9b8b69b84807bb25748d2ff06c548566184c9003e4c5bb1b1f8b54d6dd`. The exact executable and report bytes first appear in `2f6bf27784de89518b6ce55de451781f73288d6e`.
+
+The Phase 41 post-feasibility input manifest has SHA-256
+`dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e` and first appears in
+`58181447b558fa204406b732badd5c2fd541bb47`. It discloses the feasibility saddle and response data but
+records the pre-freeze R14 cap solution and sign as unknown-not-retained; it supplies no desired sign,
+rank, or global output and is neither preregistration nor scientific evidence. The executable and report
+hashes are `377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530` and
+`9d67451e26838da1ee7e644bbbc4b619600391a96e0762d56aa8f164763f6e52`; their exact bytes first appear
+in `a31a8627b0e0e210dea96d1d69dad80ccaa6decd`. The snapshot hash is
+`3aebe67a1eec1b190942f8a9ba312f90f20244a08ec2e28f1832ea7f8af73b9e`. It is explicitly a compact
+typed extract transported by an in-memory parser: all 7+9 contract IDs, statuses, and statements plus
+selected scoped metrics and outputs are retained, but the full raw `RESULT_JSON` stdout was not archived
+and byte-full payload preservation is not claimed.
 
 ## Evidence-to-claim index
 
@@ -161,6 +191,8 @@ The Phase 40 manifest has split provenance. Its initial post-feasibility freeze 
 | `evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census` | 17 numerical | Frozen \(m=2\) action has a positive-\(T\) discrete joint saddle — `SUPPORTS`; two cap pieces have local six-real `+1` candidates — `SUPPORTS`; two local candidates suffice for the global vector — `CONTRADICTS` | One saddle, an incomplete four-real-root ledger, two cap-piece candidates against one finite-radius/time K-chart patch, direct signs, solver-Jacobian parity, tangent/Morse/mutation/radius controls, and a non-exhaustive 54-sample first-hit ledger; no entire-chain pairing or global integer |
 | `evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards` | 12 exact | Rank-one phi source has an anchor-subtracted sign-reversing odd response — `SUPPORTS` together with the numerical group; five sampled local R10 candidates have sign `+1` — `SUPPORTS` together with the numerical group; local data do not license chain/global inference — `SUPPORTS` as an evidential-sufficiency boundary | Amended post-feasibility manifest contract, one holomorphic \(m=3\) scalar and derivatives, signed reflection covariance, oriented DST parity/even-odd separation, five-plus-five R10 orientation parity, dual-flow identity, and fail-closed null outputs; manifest provenance is not evidence |
 | `evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations` | 22 numerical | Rank-one phi source has an anchor-subtracted sign-reversing odd response — `SUPPORTS`; five sampled local R10 candidates have sign `+1` — `SUPPORTS`; local data do not license chain/global inference — `SUPPORTS` as a completion boundary | Five signed-delta saddles and local candidates, one two-dimensional odd block, one rank-one phi source, fixed delta-zero mobility, delta-dependent Morse launch ellipsoids, three full FD/variational/flow audits, two continuation controls, reflection/radius/clamp mutations, and a fail-closed guard; no full odd-sector ablation, continuous branch, entire-chain pairing, or global integer |
+| `evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards` | 7 exact PASS | Stable numerical rank-two response — `SUPPORTS` together with the numerical group; five computed local R14 +1 candidates — `SUPPORTS` together with the numerical group; cross-cutoff/global promotion boundary — `SUPPORTS` | Byte-pinned post-feasibility manifest, one holomorphic m=4 scalar and derivatives, joint source reflection, oriented DST/nested parity bases, exact affine cycle embedding with action nonnesting, seven-plus-seven R14 parity, and fail-closed null outputs |
+| `evidence:p41-numerical-two-source-response-local-r14-and-controls` | 8 PASS + 1 tangent FAIL | Stable numerical rank-two response — `SUPPORTS`; five computed local R14 +1 candidates — `SUPPORTS`; retained tangent failure leaves both robustness outputs inconclusive — `SUPPORTS` as a typed audit boundary; cross-cutoff/global promotion boundary — `SUPPORTS` | Nine signed-grid saddles, two-source response, one fixed mobility, five accepted candidates, orientation and overlap charts, failed frozen `u2` FD plateau, passed radius/shape/path guards, and six null promoted outputs; no exact rank, robust source branch, common determinant line, or global integer |
 
 ## Phase 16 check ledger
 
@@ -1384,6 +1416,79 @@ root/component exhaustion, exact nonlinear K, a certified non-Stokes chamber, al
 the physical original cycle. Thus `bounded_chain_signed_sum`,
 `complete_global_signed_intersection_vector`, and `global_n_sigma` remain null and Gate 1 remains open.
 
+## Phase 41 check ledger
+
+### Four-segment action, two-source covariance, nesting, orientation, and null guards — 7 exact PASS
+
+- `P41.action.single_scalar_four_elements`
+- `P41.action.holomorphic_off_T_zero`
+- `P41.reflection.two_source_covariance`
+- `P41.modes.DST_and_nested_orientation`
+- `P41.nesting.affine_cycle_not_action`
+- `P41.orientation.middle_dimension_and_root_parity`
+- `P41.guard.incomplete_data_force_global_nulls`
+
+These checks derive the four-midpoint action, seven-gradient, and seven-Hessian from one holomorphic
+scalar away from its simple \(T=0\) pole and establish joint \((\delta_a,\delta_\phi)\) reflection
+covariance. The frozen DST and nested bases are positively oriented with parity `+++--++`; seven
+original-cycle and seven K-chart directions fill ambient \(\mathbb R^{14}\), so the direct orientation
+and residual-Jacobian conventions differ by the exact seven-column sign. The affine \(m=2\) retraction,
+anchor, and cap embedding are exact, but a nonzero symbolic witness proves that the composed \(m=4\)
+action is not the \(m=2\) action. This is cycle-coordinate nesting, not cross-cutoff action identity or
+a common determinant line. The final guard leaves all promoted outputs null when the global completion
+ledger is incomplete.
+
+### Two-source response, local R14 candidates, and controls — 8 numerical PASS + 1 retained FAIL
+
+- `P41.saddles.two_source_signed_grids` — `PASS`
+- `P41.response.anchor_subtracted_two_source_matrix` — `PASS`
+- `P41.metric.one_fixed_mobility_two_sources` — `PASS`
+- `P41.intersections.five_primary_full_R14_candidates` — `PASS`
+- `P41.orientation.direct_root_and_basis_controls` — `PASS`
+- `P41.tangent.three_full_FD_controls` — `FAIL` (`TANGENT_CONTROL_FAILED`)
+- `P41.launch.radius_and_shape_controls` — `PASS`
+- `P41.path.first_cap_and_flow_box` — `PASS`
+- `P41.guard.no_global_integer` — `PASS`
+
+The two independently continued source grids resolve nine nondegenerate saddles around the shared zero
+anchor. In the recorded row order \((a_{\rm odd}/a_b,\phi_{\rm odd}/\phi_b)\) and column order
+\((\delta_a,\delta_\phi/\phi_b)\), the half-step susceptibility is
+
+\[
+\chi_{1/2}\simeq
+\begin{pmatrix}
+0.0004641563772 & 0.001789434943\\
+0.005176662239 & -0.001063148730
+\end{pmatrix}.
+\]
+
+Its singular values are approximately \(0.00528567\) and \(0.00184589\), versus spectral step and
+solver errors \(6.52667\times10^{-6}\) and \(2.43\times10^{-12}\); the frozen rank margin is about
+\(28.2823\). This supports stable **numerical** rank two within the declared normalization, not an exact
+algebraic rank theorem or a complete odd-sector/physical response.
+
+The shared-zero, phi-minus, phi-plus, a-minus, and a-plus cap systems each yield an accepted local
+fourteen-real-coordinate candidate. Every direct declared-coordinate sign is \(+1\), every root-
+Jacobian sign is \(-1\), and reflection, orientation mutation, nested-basis, overlap-chart,
+launch-radius, launch-shape, and first-cap/path controls pass. These are computed finite-radius,
+finite-time local roots; they neither exhaust roots nor identify the exact complete upward manifold.
+
+The retained finite-difference tangent contract fails at its first adjacent-step pair for transported
+parameter `u2`. Although the FD-to-variational operator errors at shared-zero, phi-plus, and a-plus are
+approximately \(0.00164506\), \(0.000773922\), and \(0.00135951\), their adjacent-step relative changes
+are \(0.29885\), \(0.2219933\), and \(0.7952717\), all above the frozen \(0.02\) plateau threshold. No
+later favorable step was selected. Therefore the phi-only and a-only local robustness outputs remain
+`INCONCLUSIVE_WITHIN_FROZEN_LOCAL_PROTOCOL`; the failure does not erase the five computed roots and is
+not a no-root or exact tangent-instability theorem.
+
+The \(m=3\)/\(m=4\) sign comparison is descriptive and separately audited: no common cross-cutoff
+determinant line, action identity, or canonical sign equality was constructed. Six promoted fields—
+`bounded_chain_signed_sum`, `complete_global_signed_intersection_vector`, `global_n_sigma`,
+`cutoff_limit`, `continuum_limit`, and `quantum_gravity_explanation`—remain null. Straight arms, later
+cap reintersections, continuous direction coverage, root/component exhaustion, a non-Stokes chamber,
+all good ends, the physical original cycle, metric homotopy, and BFV/Pfaffian/Pin orientation remain
+uncomputed. Gate 1 is `OPEN_PARTIAL_PROGRESS`.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1414,9 +1519,15 @@ uv run --locked python3 cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py
 uv run --locked python3 cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py
 uv run --locked python3 cpt_temporal_folded_susy/phase39_finite_joint_intersection.py
 uv run --locked python3 cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py
+.venv/bin/python cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
+
+The Phase-41 snapshot is a `compact_typed_extract` transported by an in-memory parser. It preserves all
+7 exact and 9 numerical contract IDs, statuses, and statements plus selected scoped metrics and typed
+outputs. `full_result_stdout_archived` is false, so auditing must not treat it as a byte-full archive of
+the emitted `RESULT_JSON` stdout.
 
 ## Two complete traces
 
@@ -1858,5 +1969,37 @@ flow mobility is distinct from the delta-dependent launch ellipsoid, and only th
 points have the full finite-difference/flow audit. The clamp is a local coordinate mutation rather than
 a full-sector ablation. The third is a supported sufficiency boundary, not a theorem of physical
 nonexistence or a zero global coefficient. Its null chain/global outputs keep Gate 1 open.
+
+Phase 41 adds a second independent source at \(m=4\), while retaining the failed tangent contract:
+
+```text
+claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p41-numerical-two-source-response-local-r14-and-controls
+  → VALID_WITHIN → scope:p41-frozen-m4-two-source-local-r14-ledger
+
+claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p41-numerical-two-source-response-local-r14-and-controls
+  → ABOUT → concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid
+  → MOTIVATES → open:p38-explicit-joint-action-cycle-and-oriented-intersections
+
+claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p41-numerical-two-source-response-local-r14-and-controls
+  → VALID_WITHIN → scope:p41-frozen-m4-two-source-local-r14-ledger
+
+claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p41-exact-m4-action-reflection-nesting-orientation-and-null-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p41-numerical-two-source-response-local-r14-and-controls
+  → MOTIVATES → open:gate1-original-cycle-signed-global-intersections
+```
+
+The first trace is a finite-precision rank result under one frozen dimensionless rule; it is not an
+exact response theorem, a physical arrow, or CPT breaking. The second retains all five computed local
+roots and their direct signs independently of whether source robustness passes. The third records the
+epistemic consequence of the frozen `u2` tangent-plateau failure: both source-scoped robustness outputs
+are inconclusive, rather than contradicted. The fourth keeps the \(m=3\)/\(m=4\) comparison descriptive
+because neither an action identity nor a common determinant line exists. Its six fail-closed nulls are
+unknowns, not zero coefficients, and Gate 1 stays open.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

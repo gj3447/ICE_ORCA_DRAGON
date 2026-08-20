@@ -351,4 +351,15 @@ they do not select this frozen cycle candidate. No new source node or literature
 missing \(m=4\)/cutoff comparison, arms, reintersections, component census, Stokes chamber, good ends,
 BFV/Pfaffian/Pin orientation, state, and global coefficient remain open.
 
+Phase 41 also adds no source-derived physics claim. Its four-midpoint action, independently continued
+two-source saddle grids, finite-precision rank-two response, fixed zero-source mobility, and five local
+\(\mathbb R^{14}\) cap candidates are repository calculations. The retained `u2` finite-difference
+plateau failure leaves both source-scoped robustness claims inconclusive even though the local roots,
+declared signs, overlap, launch, and path ledgers were computed. The inherited relative-cycle and
+lapse-contour sources neither repair that tangent audit nor identify the separately audited m=3/m=4
+signs with one determinant line. They also do not select a physical original joint cycle, complete the
+arms or component/end census, fix a Stokes chamber, or supply a global Picard--Lefschetz coefficient.
+No new source node or literature edge was added; Gate 1 remains open and every bounded/global,
+cutoff/continuum, BFV/Pfaffian/Pin, SUSY, and quantum-gravity promotion remains unlicensed.
+
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

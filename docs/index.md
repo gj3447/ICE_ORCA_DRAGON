@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 71 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 72 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -55,6 +55,7 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md) | finite inverse-reconstruction warning, $G^T$-versus-$P$ typed mutation, bounded $\operatorname{Re}T=16$ arm ledger, and the still-open physical joint-cycle gate |
 | [`../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md) | explicit $m=2$ joint action, two direct local six-real cap-piece signs, finite-radius chart and solver-Jacobian controls, and the still-null bounded/global intersection outputs |
 | [`../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md) | $m=3$ reflection-odd source response, five direct local ten-real signs, signed-subspace/finite-difference controls, and the still-null bounded/global intersection outputs |
+| [`../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md) | $m=4$ two-source numerical-rank response, five local full-$\mathbb R^{14}$ roots, the sole tangent finite-difference plateau failure, and the still-null global intersection outputs |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

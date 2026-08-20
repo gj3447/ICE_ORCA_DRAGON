@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T12:23:10.518Z`; 567 nodes, 1570 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 86/86 stored hashes (82 artifacts and 4 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T14:28:45.166Z`; 579 nodes, 1617 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 90/90 stored hashes (86 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -45,7 +45,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 38 close Gate 1 or determine the global signed intersection vector? | No. It supports that the recorded projected/local data do not license inverse reconstruction without a physical injectivity theorem or admissible completions; its noninjective example is only a finite surrogate, not a physical relative-homology theorem. The conditional \(\Gamma_0\) local map is exact, and one tracked branch plus its conjugation control remains disjoint at sampled points through \(\operatorname{Re}T=16\), but no continuous census, complete joint cycle, full-joint sign, good-end classification, or global vector is obtained. Gate-2 hard-CFU work may run in parallel; only its physical promotion depends on Gate 1. | `claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION`; `claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT`; `claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS`; `claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16`; `claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 39 directly compute a full-joint intersection sign and close Gate 1? | It directly computes two **local** six-real-dimensional signs: for one frozen \(m=2\) configuration action and one finite-radius, finite-time upward-chart patch, a numerically locally transverse candidate on each declared cap piece has configuration-coordinate sign `+1`. This no longer infers the sign from the lapse projection. It does not pair the entire bounded chain: straight arms and later cap reintersections are unsearched, root/upward-component exhaustion and the exact nonlinear upward manifold are uncertified, all recorded real saddles are critical-phase degenerate without a certified lateral chamber, and the good ends are incomplete. Thus `bounded_chain_signed_sum`, the complete vector, and `global_n_sigma` remain null; Gate 1 stays open. | `claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE`; `claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH`; `claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 40 establish an odd history sector or close Gate 1 at \(m=3\)? | It supports a nonzero anchor-subtracted, sign-reversing response of the first two-dimensional reflection-odd \((a,\phi)\) block to one rank-one antisymmetric **phi-only** endpoint source. It also records five sampled local full-\(\mathbb R^{10}\) candidates with direct declared signs `+1`, using one fixed delta-zero flow mobility and delta-dependent local Morse launch ellipsoids. The source does not probe the full odd sector; the five samples are not a continuous branch theorem; and the local K-launch clamp is neither a full odd-sector ablation nor a no-root result. All chain/global outputs remain null, meaning uncomputed rather than zero, and Gate 1 stays open. | `claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE`; `claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE`; `claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE`; `concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid`; `open:gate1-original-cycle-signed-global-intersections` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–40 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–40 scope guards |
+| Does Phase 41 establish robust m=4 source branches, cutoff convergence, or close Gate 1? | No. It supports stable numerical rank two for the two-source odd susceptibility in one frozen normalization and resolves five local full-\(\mathbb R^{14}\) candidates with direct declared sign `+1`. The frozen `u2` finite-difference plateau fails at all three audited points, so phi-only and a-only robustness remain inconclusive even though the roots and other controls are retained. The m3/m4 signs are only separately audited descriptive data; no common determinant line, cutoff limit, chain sum, global vector, or quantum-gravity result follows. | `claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO`; `claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE`; `claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE`; `claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE`; `open:gate1-original-cycle-signed-global-intersections` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–41 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–41 scope guards |
 
 ### Phase 23 reading path
 
@@ -263,6 +264,30 @@ a source response, a launch-coordinate choice, and a global relative-cycle resul
    records an evidential-sufficiency boundary. The absent \(m=4\)/cutoff comparison, arms,
    reintersections, exhaustive components, exact nonlinear K, Stokes chamber, and good ends keep the
    bounded-chain sum, complete vector, and `global_n_sigma` null. Gate 1 remains open.
+
+### Phase 41 reading path
+
+Phase 41 adds the missing independent endpoint-source axis at (m=4), while separating a computed
+local root from the stronger robustness claim that requires every frozen tangent control:
+
+1. `claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO` is supported under the
+   declared dimensionless normalization and finite-precision rule. Its smallest singular value exceeds
+   ten times the step-plus-solver stability estimate by a factor of about 28.28; exact algebraic rank
+   two, a physical time arrow, and continuum response are not inferred;
+2. `claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE` records five accepted
+   local candidates at the shared, signed phi, and signed a endpoints. All have direct sign (+1),
+   root-Jacobian sign (-1), and pass the declared residual, transversality, reflection, orientation,
+   overlap-chart, launch, and path checks;
+3. `claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE`
+   preserves the failed test rather than choosing a favorable post-result step. The aggregate
+   finite-difference operator errors pass, but the first frozen `u2` adjacent pair changes by 22–80%,
+   above 2%, at all three audited points. Thus both source robustness outputs remain inconclusive while
+   the five roots remain recorded;
+4. `claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE`
+   keeps affine m2/m4 cycle embedding distinct from equality of their actions or upward cycles, and
+   keeps the nonnested m3/m4 `+1` signs descriptive rather than canonical. The incomplete chain,
+   census, Stokes, end, and physical-cycle data force six promoted outputs to null and leave Gate 1
+   open.
 
 ## Concept map
 
@@ -515,6 +540,15 @@ flowchart TD
   Geometry40 --> Local40
   Local40 --> Boundary40
   Boundary40 --> Gate1_40["OPEN Gate 1 · m=4/cutoff, full chain,<br/>ends, Stokes, stability"]
+
+  Programme --> P41["Phase 41 · frozen m=4 two-source local R14 control"]
+  P41 --> Rank41["Two-source odd susceptibility<br/>stable numerical rank two · SUPPORTED"]
+  P41 --> Local41["Five local R14 signs = +1<br/>SUPPORTED as computed candidates"]
+  P41 --> Tangent41["Frozen u2 tangent plateau fails<br/>source robustness INCONCLUSIVE"]
+  P41 --> Boundary41["Cross-cutoff comparison descriptive;<br/>global promotion unlicensed"]
+  Local41 --> Tangent41
+  Tangent41 --> Boundary41
+  Boundary41 --> Gate1_41["OPEN Gate 1 · full chain, census,<br/>Stokes, ends, physical cycle"]
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -878,6 +912,16 @@ continuous branch, and the K-launch clamp is strictly local. With \(m=4\), cutof
 chain/component census, exact nonlinear K, Stokes data, and good ends absent, all chain/global outputs
 remain null and Gate 1 remains open.
 
+Phase 41 raises the cutoff to (m=4) and adds the independent a-only endpoint source. The
+anchor-subtracted two-source response passes the frozen stable numerical rank-two rule, and five local
+full-(mathbb R^{14}) cap candidates have direct declared sign (+1). This adds a real second response
+direction and higher-cutoff local roots, but not a robust source branch: the predeclared `u2`
+finite-difference plateau fails at all three audited points, so both source robustness outputs are
+inconclusive. The exact affine m2/m4 grid and cap embedding does not identify their nonlinear actions,
+upward cycles, or determinant lines; the nonnested m3/m4 sign agreement is descriptive only. The full
+chain, exhaustive components, exact nonlinear K, Stokes chamber, good ends, physical original cycle,
+and BFV/Pfaffian/Pin line remain absent. Six promoted outputs stay null and Gate 1 stays open.
+
 ## Repository artifacts
 
 | Phase | Executable | Report | Observed evidence |
@@ -908,6 +952,7 @@ remain null and Gate 1 remains open.
 | 38 | [`phase38_joint_cycle_identifiability.py`](../../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py) | [`PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md) | [`phase38-result.json`](./evidence/phase38-result.json) |
 | 39 | [`phase39_finite_joint_intersection.py`](../../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py) | [`PHASE39_FINITE_JOINT_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md) · [`PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json) | [`phase39-result.json`](./evidence/phase39-result.json) |
 | 40 | [`phase40_m3_reflection_odd_intersection.py`](../../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py) | [`PHASE40_M3_REFLECTION_ODD_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md) · [`PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json) | [`phase40-result.json`](./evidence/phase40-result.json) |
+| 41 | [`phase41_m4_two_source_intersection.py`](../../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py) | [`PHASE41_M4_TWO_SOURCE_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md) · [`PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json) | [`phase41-result.json`](./evidence/phase41-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

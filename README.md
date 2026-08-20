@@ -4,7 +4,7 @@
 
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-71-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-72-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -185,6 +185,7 @@ aims to explain, not evidence that the route is correct.
 | [Phase 38](cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md) | The recorded projected crossing and local-root data do not license inverse reconstruction of the missing joint cycle. A finite typed witness exposes the possible information loss without proving it for the physical projection; the correct conditional local coefficient map is $G^T$, not the root permutation $P$. The known conjugate stationary-family arms are sampled through $\operatorname{Re}T=16$. | Noninjectivity of the actual physical projection, an admissible original joint cycle, signed full-joint intersections, all sheets and relative good ends, and global $n_\sigma$. The full-joint sign, complete signed vector, and $n_\sigma$ outputs remain `null`; Gate 1 is open. |
 | [Phase 39](cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md) | In one frozen $m=2$ configuration regulator, a genuine positive-$T$ discrete saddle is re-solved and two cap pieces meet one finite-radius, finite-time upward-flow chart patch at numerically locally transverse six-real-dimensional candidates. The directly computed declared configuration-coordinate signs are $+1$ at $r=.3,.2$. | A full finite-chain signed sum, straight-arm or reintersection census, exact nonlinear upward manifold, physical original relative cycle, non-Stokes chamber, cutoff/metric/regulator stability, BFV/Pfaffian/Pin orientation, or global $n_\sigma$. The bounded-chain sum, complete vector, and $n_\sigma$ remain `null`; Gate 1 is open. |
 | [Phase 40](cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md) | At $m=3$, a rank-one signed endpoint mutation exposes the first reflection-odd history sector. Five sequentially continued ten-real-dimensional local candidates at $\delta\in\{-.001,-.0005,0,.0005,.001\}$ all have direct declared coordinate sign $+1$; reflection, launch-radius, variational-tangent, and local odd-coordinate-clamp controls were run. | The source probes only one direction in the two-dimensional odd field sector. A five-point local branch is not a continuous homotopy proof, cutoff/metric/regulator stability, a bounded-chain sum, the physical original relative cycle, BFV/Pfaffian/Pin orientation, or global $n_\sigma$. All global outputs remain `null`; Gate 1 is open. |
+| [Phase 41](cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md) | At $m=4$, independent $\phi$-only and $a$-only endpoint sources give a stable numerical rank-two anchor-subtracted odd-response matrix in the frozen normalization. Five fourteen-real-dimensional local candidates are resolved with direct declared-coordinate sign $+1$ and root-Jacobian sign $-1$; 7/7 exact and 8/9 typed numerical contracts pass. | The sole failed contract is the three-point finite-difference tangent plateau check, even though its signs and operator errors pass. Consequently the separate $\phi$/$a$ local robustness claims remain inconclusive. No cross-cutoff determinant line, physical original cycle, bounded/global signed sum, cutoff or continuum limit, BFV/Pfaffian/Pin orientation, or global $n_\sigma$ is obtained; six promoted outputs remain `null` and Gate 1 is open. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -219,7 +220,12 @@ no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomp
    source gives five sequentially continued local ten-real-dimensional candidates with direct sign
    $+1$, while the matched local K-launch-coordinate clamp fails to reproduce the full candidate.
    This is a local mutation witness, not a proof that the sign survives every odd direction or any
-   continuous deformation. These phases do not transport the missing original physical cycle or derive a fermionic
+   continuous deformation. Phase 41 raises the same local construction to $m=4$ and adds independent
+   $\phi$-only and $a$-only endpoint sources. Their frozen, anchor-subtracted susceptibility is stably
+   numerical rank two, and five local full-$\mathbb R^{14}$ roots are computed, but the finite-difference
+   tangent plateau contract fails at all three audited points. The source-specific robustness verdicts
+   therefore remain inconclusive rather than being promoted from the repeated local signs. These phases
+   do not transport the missing original physical cycle or derive a fermionic
    Pin/Pfaffian line. None identifies the
    complete original relative cycle or supplies the physical Van
    Vleck block, absolute Maslov orientation, global arm selection, or full joint field--lapse flow. Every
@@ -247,13 +253,14 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 71 | `./ice list --json` |
+| runnable Python kernels | 72 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 567 nodes, 1570 edges, 137 claims | `./ice ontology summary` |
-| named exact checks | 403 | phase result payloads in the ontology |
-| typed numerical checks | 229 current; 230 including the separately catalogued legacy control | phase result payloads in the ontology |
-| latest runnable CPT seam phase | Phase 40 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| research ontology | 579 nodes, 1617 edges, 141 claims: 74 `SUPPORTED`, 66 `CONTRADICTED`, 1 `INCONCLUSIVE` | `./ice ontology summary` |
+| indexed Phase 15R--41 payload | 86 artifacts, 85 evidence nodes, 27 phases, 44 scopes; 90/90 recorded hashes verified (86 artifacts + 4 policies); 26 validation warnings | ontology graph and validator |
+| named exact checks | 410 | phase result payloads in the ontology |
+| typed numerical checks | 238 current = 237 `PASS` + 1 `FAIL`; 239 including the separately catalogued passing legacy control = 238 `PASS` + 1 `FAIL` | phase result payloads in the ontology |
+| latest runnable CPT seam phase | Phase 41 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.

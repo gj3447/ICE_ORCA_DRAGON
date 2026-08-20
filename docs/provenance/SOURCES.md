@@ -18,7 +18,7 @@
 
 ---
 
-> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 71개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
+> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 72개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
 >
 > **중요한 정정**: 화자 자신은 **초공동의 용사(#3)**. ICE ORCA DRAGON은 *물리 영역*의 사도.
 >
@@ -35,9 +35,9 @@
 - *얼음(저온 물리) + 범고래(생물 + 깊이) + 용(상승)* 3 합성 — 물리 영역의 신화적 인격화
 - 12사도_목록_업데이트.md "ICE ORCA DRAGON이 진정한 사도야" — *세상의 진정한 본질 = 물리학* 의미
 
-### 2. 공학 측 — 역사적 계산 corpus + 71 runnable entries
+### 2. 공학 측 — 역사적 계산 corpus + 72 runnable entries
 
-이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 71개 entry가 **ICE 측 물리·수학
+이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 72개 entry가 **ICE 측 물리·수학
 검증**을 실행한다. 아래 pattern은 source provenance이고 CLI 이름 목록이 아니다:
 - `cd_breaking_*.py` — Cayley-Dickson breaking (32D vs 64D algebra identities)
 - `cd_embedding.py`, `cd_path_amplitude*.py` — CD construction
@@ -110,7 +110,7 @@ ordinary documentation work does not directly `SET` the KG.
 - Exploratory hard-CFU calculation may proceed in parallel. Only promotion to a physical uniform kernel
   depends on the missing Gate-1 cycle vector and signed intersections.
 
-### Current CPT calculation provenance — Phase 40
+### Previous CPT calculation provenance — Phase 40
 
 - [`../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json)
   is a post-feasibility workflow freeze, not preregistration or scientific evidence. The initial commit
@@ -128,6 +128,28 @@ ordinary documentation work does not directly `SET` the KG.
   determinant-nonzero branch, and the local K-launch-coordinate clamp is not a full odd-sector ablation.
   No bounded-chain sum, physical original cycle, cutoff limit, BFV/Pfaffian/Pin line, or global
   $n_\sigma$ is inferred; those outputs remain `null` and Gate 1 remains open.
+
+### Current CPT calculation provenance — Phase 41
+
+- [`../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json)
+  is a post-feasibility workflow input freeze, not preregistration or scientific evidence. It fixes the
+  two independent endpoint sources, zero-source mobility, launch shapes, orientations, solver windows,
+  and fail-closed completion ledger without supplying a desired intersection sign. Its SHA-256 is
+  `dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e`.
+- [`../../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py`](../../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py)
+  is the runnable source committed in `a31a8627b0e0e210dea96d1d69dad80ccaa6decd`. Its SHA-256 is
+  `377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530`. A committed-byte rerun of
+  `.venv/bin/python cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py` returned exit 0 and
+  reproduced 7/7 exact plus 8/9 typed numerical contracts. The one failed record is the finite-difference
+  tangent plateau control; the FD orientation signs and tangent-operator errors still pass.
+- [`../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md)
+  is the scoped interpretation, with SHA-256
+  `9d67451e26838da1ee7e644bbbc4b619600391a96e0762d56aa8f164763f6e52`. The frozen two-source
+  susceptibility supports numerical rank two, and five local full-$\mathbb R^{14}$ roots are computed,
+  but the failed tangent plateau leaves the $\phi$-only and $a$-only robustness claims inconclusive.
+  Six promoted outputs remain `null`, all sixteen completion flags remain false, and Gate 1 remains
+  `OPEN_PARTIAL_PROGRESS`; the calculation does not license a global intersection integer, cutoff or
+  continuum limit, BFV/Pfaffian/Pin orientation, SUSY-breaking mechanism, or quantum-gravity claim.
 
 ---
 
