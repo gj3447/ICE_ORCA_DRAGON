@@ -1,0 +1,665 @@
+{
+  "phase": 43,
+  "title": "m=4 frozen-state high-precision local RHS arbitration",
+  "created_at_utc": "2026-08-20T21:53:18Z",
+  "frozen_at_utc": "2026-08-20T22:09:19Z",
+  "status": "POST_PHASE42_DIAGNOSTIC_INPUT_FREEZE",
+  "is_preregistration": false,
+  "is_scientific_evidence": false,
+  "purpose": "At all ninety local Phase-42 state-and-transported-direction slots, arbitrate the protocol-defined Hessian-action anomalies by comparing the byte-pinned NumPy64 Phase-41 local variational RHS with an independently reconstructed exact symbolic action, an independently differentiated symbolic gradient, and fixed 80/120-decimal real-direction finite differences. The calculation may distinguish a local RHS implementation mismatch from binary64 finite-difference arithmetic, but it does not reintegrate a tangent equation, rerun a root or trajectory solver, or promote Gate 1.",
+  "epistemic_scope": {
+    "known_result_precedes_this_freeze": true,
+    "phase42_result_is_immutable_historical_input": "Phase 42 completed 8/8 exact and 6/8 numerical contracts, retained 90/90 complete local direction records, found 33 stable threshold violations, and left the reference tangent REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE.",
+    "new_result_scope": "Local algebra and real-direction differentiation at the exact binary64 states and transported tangents stored in the committed Phase-42 raw result, for shared_zero, phi_plus, and a_plus only.",
+    "all_ninety_slots_are_required": true,
+    "phase42_violation_slots_are_a_disclosed_negative_control_not_a_selected_sample": true,
+    "time_column_excluded_as_independent_bug_evidence": true,
+    "time_column_reason": "The Phase-41 time tangent was appended as flow_xi at an augmented endpoint, while the Phase-42 comparison used independently integrated state-only endpoints. Its mismatch is endpoint-state/solver sensitivity and is not an independent variational-RHS test.",
+    "not_a_root_or_saddle_search": true,
+    "not_an_ODE_or_tangent_reintegration": true,
+    "not_an_integrated_variational_evolution_test": true,
+    "not_a_new_reference_tangent_or_orientation_calculation": true,
+    "not_a_determinant_line_construction": true,
+    "not_a_bounded_or_global_intersection_calculation": true,
+    "not_a_cutoff_or_continuum_limit": true,
+    "frozen_state_accuracy_not_retested": "The pointwise derivative identity is meaningful for any finite xi and q. Agreement or disagreement here does not test how accurately the stored xi and q approximate an exact integrated trajectory or continuum tangent.",
+    "no_unique_physical_cause_may_be_claimed": true
+  },
+  "immutable_artifacts": {
+    "phase42_raw_result": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json",
+      "commit": "d8c2fce3eb3e72a956a34776970c15642ed88047",
+      "outer_file_sha256_including_final_LF": "568e02cc8c4d730aba3a7a83febd3aa41cf14dfdb87b53950cc6fcc78c5bd013",
+      "size_bytes": 7526372,
+      "schema": "ice-phase42-fixed-root-tangent-disentanglement/v1",
+      "result_payload_sha256_without_self": "8d824c2c7204a6762a0e75321c285bd30339f67b244bb106a9dc4febc9da7b36",
+      "run_status": "VALID_TYPED_RUN",
+      "exit_code": 0,
+      "verification_role": "Only source of the frozen local xi states, transported q directions, and disclosed Phase-42 local diagnostic records."
+    },
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "outer_file_sha256_including_final_LF": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+      "schema": "ice-phase42-fixed-root-checkpoint/v1",
+      "checkpoint_payload_sha256_without_self": "e05c6cae4d34cf0bc7615a4801c7c96d163f974edc70d7f6d623102ee9dd63e2",
+      "verification_role": "Only source of the fixed linear map, coordinate scales, three saddle_w vectors, and source labels needed to evaluate the frozen local algebra."
+    },
+    "phase42_input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json",
+      "commit": "dc21816b9fef9ad658fdd728e73453ffeee46f4d",
+      "sha256": "1cc88c489b5240019aaf339b25d0cebac9b4a1560b09cbec9c3079ce2067afb6"
+    },
+    "phase42_runner": {
+      "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py",
+      "commit": "1c0d7fed4aa99c6424ec659dae8ba6f24b791926",
+      "sha256": "1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019"
+    },
+    "phase42_report": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md",
+      "commit": "bdf3f7d6c9ad0fa9174b601832802f4ed3ebcb4f",
+      "sha256": "8d697ef8482674ca79cb0d0b681c4baeea9f1e85ec7460c614e06b601659fa0b",
+      "verification_role": "Scope and interpretation check only; no numerical value is taken from prose."
+    },
+    "phase41_executable": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530",
+      "verification_role": "Byte-pinned production NumPy64 target implementation only. The independent high-precision reference may not call its action_at, gradient_at, hessian_at, flow_xi, hessian_xi, or xi_to_w helpers."
+    },
+    "phase41_input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "commit": "58181447b558fa204406b732badd5c2fd541bb47",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e"
+    },
+    "dependency_locks": {
+      "pyproject": {
+        "path": "pyproject.toml",
+        "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+        "sha256": "ae68ad259121fb948c176b5b724db19c6f45ea48e8ad49d5b74a73e623067891"
+      },
+      "uv_lock": {
+        "path": "uv.lock",
+        "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+        "sha256": "8afebaf1d11eb0e31ee6398e4a88b2742acb887920a7ec12a5f3d581c1c99527"
+      }
+    },
+    "drift_policy": "A missing file, strict-JSON failure, outer/self hash mismatch, schema/status mismatch, array hash mismatch, source/lock/runtime mismatch, non-ancestor pin, or start/end TOCTOU mismatch is INVALID_RUN with exit 2. No alternate checkpoint, reconstructed trajectory, root solve, looser threshold, or hand-transcribed state is allowed."
+  },
+  "three_stage_commit_and_run_protocol": {
+    "stage_1_manifest": "Commit this manifest by itself before implementing the Phase-43 runner. This file intentionally contains no runner commit, runner hash, result hash, or desired scientific verdict.",
+    "stage_2_runner": "Implement and commit the runner after Stage 1. The runner must embed the committed manifest path, commit, and SHA-256. Production execution is forbidden until the runner is tracked, clean for its path, byte-identical to its latest committed blob, and its commit is an ancestor of HEAD.",
+    "stage_2_start_end_guard": "At numerical start retain manifest/result/checkpoint/source/lock pins, runner path/SHA/latest commit/blob, HEAD, runtime, and repository pycache snapshot. Immediately before RESULT_JSON recompute them and require exact equality; drift emits INVALID_RUN and exit 2.",
+    "stage_3_raw_result": "Capture and strictly validate the full raw RESULT_JSON outside the repository, then atomically add and commit it before any Phase-43 report, ontology evidence, general documentation, or Phase-44 input is written.",
+    "production_run_before_manifest_commit_forbidden": true,
+    "production_run_before_runner_commit_forbidden": true,
+    "report_or_graph_before_raw_result_commit_forbidden": true,
+    "runner_binding_policy": "The future runner must bind this manifest after its Stage-1 commit. No uncommitted runner or dynamically selected input is valid."
+  },
+  "strict_json_and_array_decode": {
+    "duplicate_keys_rejected": true,
+    "NaN_Infinity_rejected": true,
+    "UTF8_and_exact_outer_bytes_required": true,
+    "single_final_LF_required_for_pinned_artifacts": true,
+    "self_digest_recomputed_after_removing_only_the_named_self_field": true,
+    "canonicalization": "json.dumps(sort_keys=True,separators=(',',':'),allow_nan=False) encoded as UTF-8 with no LF for self digests and canonical subtree pins.",
+    "all_pinned_arrays_independently_verified": true,
+    "array_checks": [
+      "declared logical shape",
+      "finite numeric components",
+      "runtime float64/complex128 dtype",
+      "terminal [real,imag] complex encoding",
+      "canonical little-endian C-order raw SHA-256"
+    ],
+    "signed_zero_complex_decode": "Allocate complex128 first and assign .real and .imag buffers separately. Constructing complex values as real+1j*imag before raw-hash verification is forbidden because it can erase a signed zero."
+  },
+  "strict_runtime_environment": {
+    "launch_executable": ".venv/bin/python",
+    "resolved_python_executable": "/usr/bin/python3.13",
+    "sys_dont_write_bytecode_required": true,
+    "repository_file_writes_allowed": false,
+    "source_and_environment_TOCTOU_recheck_before_RESULT_JSON": true,
+    "fingerprint": {
+      "python_implementation": "CPython",
+      "python_version": "3.13.5",
+      "python_build": [
+        "main",
+        "Jul 15 2026 20:25:40"
+      ],
+      "python_compiler": "GCC 14.2.0",
+      "numpy_version": "2.5.2",
+      "scipy_version": "1.18.0",
+      "sympy_version": "1.14.0",
+      "mpmath_version": "1.3.0",
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "machine": "x86_64",
+      "byteorder": "little",
+      "libc": [
+        "glibc",
+        "2.41"
+      ],
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null
+      }
+    },
+    "precision_isolation": "Every arbitrary-precision slot runs inside an explicit mpmath.workdps context. No global mp.dps value may leak between slots, and no mp value may be converted through Python float before a comparison or serialization."
+  },
+  "frozen_local_inputs": {
+    "points_in_fixed_order": [
+      "shared_zero",
+      "phi_plus",
+      "a_plus"
+    ],
+    "flow_fractions_in_fixed_order": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75",
+      "1"
+    ],
+    "transported_direction_indices_in_fixed_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "slot_count": 90,
+    "source_points": {
+      "shared_zero": {
+        "delta_a": "0",
+        "delta_phi": "0",
+        "checkpoint_saddle_w_raw_sha256": "2c38cd0b72251c5547512043cbd3c374e9b10948a3894f3106e2bda5351bbdf1"
+      },
+      "phi_plus": {
+        "delta_a": "0",
+        "delta_phi": "0.001",
+        "checkpoint_saddle_w_raw_sha256": "7c8227c302e330b248f79cc890fc11a79f62d3f17465d2c342e6f4bea4553dba"
+      },
+      "a_plus": {
+        "delta_a": "0.001",
+        "delta_phi": "0",
+        "checkpoint_saddle_w_raw_sha256": "627e995a64ac6ae9326316c005183f1aeb75ea808e1ee0d6d79c1b6a1c1d35f6"
+      }
+    },
+    "checkpoint_array_pins": {
+      "coordinate_scales_raw_sha256": "f6acac19f6bf171e8850b809d2c7f0cfafe5843f42f412865dbdae423951b333",
+      "fixed_linear_map_raw_sha256": "1f50ef9c5f5ac7d6db9b06803715ad5cc837d38a9052411dfdd32b42faf52b3a",
+      "coordinate_order": [
+        "a1",
+        "phi1",
+        "a2",
+        "phi2",
+        "a3",
+        "phi3",
+        "T"
+      ],
+      "complex_dimension": 7,
+      "coordinate_scales_decimal_literals": [
+        "3.5668031935672753",
+        "1.0185809464006637",
+        "3.5668031935672753",
+        "1.0185809464006637",
+        "3.5668031935672753",
+        "1.0185809464006637",
+        "0.7"
+      ]
+    },
+    "phase42_result_paths": {
+      "state_path_template": "$.slot_ledger['augmented|{point}|tight_augmented'].payload.fraction_xi[{fraction_index}]",
+      "tangent_path_template": "$.slot_ledger['augmented|{point}|tight_augmented'].payload.fraction_tangents[{fraction_index}][:][{direction}]",
+      "local_record_path_template": "$.local_variational_diagnostics.points.{point}.direction_records matching exact fraction and direction",
+      "duplicate_q_cross_identity": "Every local direction-record q must be JSON-value-identical to the corresponding column of the augmented fraction_tangents array.",
+      "terminal_status_requirement": "All three tight augmented slots and all ninety local direction slots must be SUCCESS and complete."
+    },
+    "phase42_array_and_subtree_pins": {
+      "shared_zero": {
+        "fraction_times_shape": [5],
+        "fraction_times_raw_float64_sha256": "d9d382fb2c30f51986f764db8ad46c287af0c9e52f3eeba2ee26da082eea4fc6",
+        "fraction_xi_shape": [5, 7],
+        "fraction_xi_raw_complex128_sha256": "1ae81a3d3b5ec1017c2d608f5e66d1e379194b587a4c07cb326a01e263b66779",
+        "fraction_tangents_shape": [5, 7, 6],
+        "fraction_tangents_raw_complex128_sha256": "d71af864cf2fffd32d6db184417c09370fa067e11c8cc67a8fe019addf221c0f",
+        "tight_augmented_payload_canonical_json_sha256": "cd0ce80d890a3e2c848bae8969c9d8a9d05b5c69a4769d758a80d2f6c7b9b5a5",
+        "local_point_payload_canonical_json_sha256": "ffa14de673124a4e5d14b069b081b8843db6e0c30cf8aef310d6f359d1e61eea",
+        "stable_count": 29,
+        "stable_violation_count": 12
+      },
+      "phi_plus": {
+        "fraction_times_shape": [5],
+        "fraction_times_raw_float64_sha256": "285c5c1356e2b13c8b62c5f497e375878432b50626bc5c0395d2c827ed4d6b78",
+        "fraction_xi_shape": [5, 7],
+        "fraction_xi_raw_complex128_sha256": "5b8e317c2be66c7bb4e753811cb2d3caeaa72d4a8e65dee9de257cd1de6258f1",
+        "fraction_tangents_shape": [5, 7, 6],
+        "fraction_tangents_raw_complex128_sha256": "11df222a035f2da3f9326b834059bb42c8360f127b7fa9ef744ced1af15efb05",
+        "tight_augmented_payload_canonical_json_sha256": "c19c4af7c99ab59fdf28af49ef719862286ed40a105cc2a592e6b801d9c70aa2",
+        "local_point_payload_canonical_json_sha256": "441507085b9d8489397d008740bbc10460d48d6c339c31113f19a7a04c06dcb1",
+        "stable_count": 29,
+        "stable_violation_count": 11
+      },
+      "a_plus": {
+        "fraction_times_shape": [5],
+        "fraction_times_raw_float64_sha256": "f2f4b3f5dbd371c2925835511371fb51e72ef1e0633ae55bf6a62053aa108523",
+        "fraction_xi_shape": [5, 7],
+        "fraction_xi_raw_complex128_sha256": "f675900b4a4e5ffad2d27d7b0b9b2f76839fc12cbfcc9c9a75bc355a0d088e89",
+        "fraction_tangents_shape": [5, 7, 6],
+        "fraction_tangents_raw_complex128_sha256": "30cb6f52db6ccf332743e4ad3af7d4b44a5a57007aec6d127051747e5592069d",
+        "tight_augmented_payload_canonical_json_sha256": "ea694ea9fd3a5bb12a00542b9e1fccadcd068d9888526d01f905295f8c2ff109",
+        "local_point_payload_canonical_json_sha256": "dfc7a7b1613627bb25958c26b926f5c83b1e1c1dcd9c2a54b1ebba9db4178a21",
+        "stable_count": 29,
+        "stable_violation_count": 10
+      }
+    },
+    "binary64_to_mpmath_lift": "Strictly decode each terminal [real,imag] pair into complex128 by assigning real and imaginary buffers separately, verify the canonical little-endian hashes, and lift each nonzero binary64 component through its exact as_integer_ratio numerator/denominator. Preserve signed-zero metadata. Treating the shortest JSON decimal spelling as newly measured extra precision or converting an mp value through float is forbidden.",
+    "no_state_reconstruction": "Do not obtain xi or q by rerunning solve_ivp, dense output, chart transport, or averaging stored perturbations. The augmented fraction arrays are authoritative."
+  },
+  "known_phase42_negative_control": {
+    "role": "These disclosed outcomes define the complete negative-control cohort and reproduction checks. They do not select a favorable state, direction, step, precision, threshold, or desired Phase-43 verdict.",
+    "local_identity_threshold": "1e-7",
+    "neighbor_stability_threshold": "1e-6",
+    "stable_direction_counts": {
+      "shared_zero": 29,
+      "phi_plus": 29,
+      "a_plus": 29
+    },
+    "stable_violation_counts": {
+      "shared_zero": 12,
+      "phi_plus": 11,
+      "a_plus": 10
+    },
+    "stable_violation_slots": {
+      "shared_zero": [["0",0],["0",1],["0",2],["0.25",1],["0.5",0],["0.5",1],["0.5",2],["0.75",0],["0.75",2],["1",0],["1",1],["1",2]],
+      "phi_plus": [["0",0],["0",2],["0.25",0],["0.25",1],["0.5",0],["0.5",1],["0.5",2],["0.75",0],["0.75",1],["1",0],["1",1]],
+      "a_plus": [["0",0],["0",1],["0",2],["0.25",0],["0.25",1],["0.25",2],["0.5",0],["0.5",2],["0.75",0],["0.75",2]]
+    },
+    "unstable_slots_retained_but_not_bug_evidence": {
+      "shared_zero": [["0.75",1]],
+      "phi_plus": [["1",2]],
+      "a_plus": [["1",0]]
+    },
+    "phase42_local_evidence_label": "VARIATIONAL_RHS_BUG_EVIDENCE",
+    "label_interpretation": "Protocol-defined local Hessian-action anomaly evidence only; not an established code bug, continuum failure, or unique cause.",
+    "time_column_may_not_enter_phase43_classification": true
+  },
+  "known_precommit_design_audit": {
+    "disclosure_reason": "A read-only independent manifest audit evaluated the already frozen 1e-12 same-step threshold at all ninety slots before the Stage-1 commit. These unarchived pilot numbers are disclosed so they cannot be mistaken for unseen prospective evidence.",
+    "pilot_is_not_a_production_run": true,
+    "pilot_has_no_committed_runner_or_raw_artifact": true,
+    "pilot_is_not_admissible_phase43_evidence": true,
+    "threshold_was_set_before_pilot_values_were_returned": true,
+    "threshold_was_not_changed_after_pilot": true,
+    "reported_120_dps_same_step_max_relative_errors": {
+      "native_mpmath_geometry": "4.6272e-20",
+      "lifted_binary64_geometry": "1.4578e-16"
+    },
+    "reported_coverage": "90/90 slots in both normalization modes",
+    "required_production_treatment": "The committed Phase-43 runner must recompute every predeclared slot from committed inputs, retain full vectors and provenance, and apply the unchanged rules. It may neither import the pilot nor count these summary values as a contract pass."
+  },
+  "independent_symbolic_model": {
+    "independence_boundary": {
+      "production_target_path": "The future runner may import the byte-pinned Phase-41 module only to evaluate numeric_model plus flow_xi and hessian_xi at the frozen binary64 xi and q values, reproducing the implementation actually used by the variational RHS.",
+      "reference_path": "Rebuild the action in the Phase-43 runner from the equations and exact decimal literals below using new SymPy symbols. The reference path may not call or copy a SymPy expression, lambdified callable, gradient, Hessian, or flow helper from Phase 41 or Phase 42.",
+      "forbidden_reference_calls": [
+        "phase41.action_at",
+        "phase41.gradient_at",
+        "phase41.hessian_at",
+        "phase41.flow_xi",
+        "phase41.hessian_xi",
+        "phase41.xi_to_w",
+        "phase41.build_symbolic_family",
+        "phase41.numeric_model",
+        "eval",
+        "sympy.parsing.parse_expr"
+      ],
+      "source_text_copy_forbidden": "The runner must implement the declared equations directly and retain a static AST/source audit showing the independent reference functions do not access the imported Phase-41 module."
+    },
+    "exact_constants": {
+      "segment_count": 4,
+      "step": "1/4",
+      "base_a": "3.5668031935672753",
+      "base_phi": "1.0185809464006637",
+      "time_scale": "0.7",
+      "slope": "sqrt(2/3)",
+      "spatial_volume_factor": "2*pi**2"
+    },
+    "boundary_nodes": {
+      "left": ["base_a*(1-delta_a/2)", "base_phi-delta_phi/2"],
+      "interior": [["a1","phi1"],["a2","phi2"],["a3","phi3"]],
+      "right": ["base_a*(1+delta_a/2)", "base_phi+delta_phi/2"]
+    },
+    "midpoint_element": "For adjacent (a_L,phi_L),(a_R,phi_R), midpoint a_m=(a_L+a_R)/2, phi_m=(phi_L+phi_R)/2, differences da=a_R-a_L and dphi=phi_R-phi_L, proper time T, and step Delta=1/4: E=2*pi**2*((-6*a_m*da**2+a_m**3*dphi**2)/(2*T*Delta)+T*Delta*(-3*a_m+a_m**3*(3/4)*(1-exp(-sqrt(2/3)*phi_m))**2)).",
+    "action": "S_z is the expanded sum of the four midpoint elements. Substitute z_i=coordinate_scales_i*w_i to form S_w, using SymPy Rational for every declared decimal literal and integer/rational coefficient before differentiation.",
+    "gradient": "G_w=gradient(S_w,w) from the independently rebuilt action.",
+    "hessian": "H_w=hessian(S_w,w) from the independently rebuilt action.",
+    "local_coordinates": "w(xi)=saddle_w+L*xi, with saddle_w and real L lifted exactly from their frozen binary64 ratios.",
+    "flow": "V(xi)=-conjugate(L.T*G_w(w(xi))).",
+    "analytic_hessian_action": "A_H(xi,q)=-conjugate(L.T*H_w(w(xi))*L*q).",
+    "independent_gradient_directional_action": "Introduce a new real epsilon, directly differentiate L.T*G_w(saddle_w+L*(xi+epsilon*q)) componentwise before substituting epsilon=0, and only then apply the outer -conjugate operation numerically. This path may not call the constructed H_w object.",
+    "source_rounding_control": "In a third, non-authoritative control built from the same independently coded equations, replace the exact base, scale, and source Rational literals by SymPy Float(decimal_string,50), matching the declared Phase-41 coefficient-construction semantics without importing or copying a Phase-41 expression. Compare this control numerically with the exact-decimal reference; it may not replace either independent reference path.",
+    "exact_symbolic_checks": [
+      "The independently constructed H_w equals jacobian(G_w,w) componentwise after simplify/together.",
+      "H_w-H_w.T is the exact zero matrix.",
+      "Before the outer conjugation, the direct epsilon derivative equals L.T*H_w*L*q componentwise after simplify/together for symbolic base and direction placeholders; applying the same outer -conjugate then gives A_H.",
+      "The action contains exactly four declared midpoint elements and seven w variables in the frozen order.",
+      "No machine float enters the independent expression tree before mpmath evaluation."
+    ],
+    "complex_step_full_flow_allowed": false,
+    "complex_step_reason": "The tested flow includes conjugation and the direction q is generally complex. No undeclared holomorphic extension or complex-step shortcut may replace the real-epsilon derivative."
+  },
+  "arbitrary_precision_protocol": {
+    "precision_tiers_decimal_digits": [80,120],
+    "authoritative_reference_tier_decimal_digits": 120,
+    "lower_tier_role": "An independent precision-stability control; it may not replace a failed 120-digit slot.",
+    "mpmath_backend": "Use separate SymPy lambdify(...,modules='mpmath') callables for the independently rebuilt gradient, Hessian, and direct-gradient-directional expressions. Direct evalf, NumPy, SciPy, math, or a custom floating backend may not replace this fixed high-precision backend. Apply matrix products and outer conjugation with mpmath values inside the active workdps context.",
+    "phase42_same_step_replay": {
+      "normalization_modes_in_fixed_order": [
+        "lifted_binary64_geometry",
+        "native_mpmath_geometry"
+      ],
+      "lifted_binary64_geometry": "Reproduce the stored Phase-42 q_norm and NumPy64 q_hat=q/q_norm exactly, verify q_norm against the direction record, then lift q_norm and every rounded q_hat component through exact binary64 ratios before forming mp endpoints and restoring q_norm.",
+      "native_mpmath_geometry": "Lift q exactly from binary64 ratios, evaluate q_norm and q_hat wholly at the active mp precision, and restore the mp q_norm.",
+      "two_mode_reason": "Both modes use the same frozen xi, q, and epsilon values. Requiring both prevents a change in normalization arithmetic from masquerading as correction of the Phase-42 flow finite difference.",
+      "epsilon_values": ["2e-5","1e-5","5e-6"],
+      "D2": "D2(epsilon)=[V(xi+epsilon*q_hat)-V(xi-epsilon*q_hat)]/(2*epsilon).",
+      "R4_neighbor": "||q||*[4*D2(1e-5)-D2(2e-5)]/3.",
+      "R4_fixed": "||q||*[4*D2(5e-6)-D2(1e-5)]/3.",
+      "purpose": "Hold the Phase-42 step sizes fixed while changing arithmetic precision, so improvement cannot be credited to favorable step selection."
+    },
+    "prospective_small_step_ladder": {
+      "normalization_mode": "native_mpmath_geometry",
+      "R4_base_h_values_in_fixed_order": ["1e-6","1e-8","1e-10","1e-12","1e-14","1e-16"],
+      "endpoint_offsets_for_each_h": ["h","h/2","-h/2","-h"],
+      "fixed_primary_h": "1e-12",
+      "fixed_coarse_neighbor_h": "1e-10",
+      "fixed_fine_neighbor_h": "1e-14",
+      "R4_formula": "R4(h)=[V(xi-h*q_hat)-8*V(xi-h*q_hat/2)+8*V(xi+h*q_hat/2)-V(xi+h*q_hat)]/(6*h), restored by ||q||.",
+      "survival_rule": "Evaluate and retain every declared h at both precision tiers. No failed, unstable, or unfavorable h may be skipped; no undeclared h may be inserted; no observed error may choose a replacement reference."
+    },
+    "source_numpy64_targets": [
+      "A_source=-conjugate(phase41.hessian_xi(model,saddle,fixed,xi)@q)",
+      "V_source at every Phase-42 same-step plus/minus point",
+      "the recomputed D2 and R4 vectors from those V_source values"
+    ],
+    "independent_reference_vectors": [
+      "A_H at 80 and 120 dps",
+      "A_gradient_directional at 80 and 120 dps",
+      "same-step high-precision D2/R4 in both normalization modes at 80 and 120 dps",
+      "all prospective small-step R4 vectors at 80 and 120 dps"
+    ],
+    "time_column_evaluations": [],
+    "ODE_solver_evaluations": [],
+    "root_solver_evaluations": []
+  },
+  "metric_definitions": {
+    "mp_vector_norm": "sqrt(sum(abs(z_i)**2)) evaluated wholly in the active mp context.",
+    "symmetric_relative": "rel(x,y)=||x-y||_2/max(||x||_2,||y||_2,1e-100), where 1e-100 is parsed directly as mp.mpf.",
+    "max_component_relative": "max_i abs(x_i-y_i)/max(abs(x_i),abs(y_i),1e-100).",
+    "binary64_reproduction_max_abs": "Maximum absolute complex-component difference after recomputing the stored Phase-42 source analytic, D2, and R4 vectors.",
+    "precision_stability": "rel(value_at_80_dps,value_at_120_dps) after both are retained as decimal strings without float conversion.",
+    "reference_neighbor_stability": "max(rel(R4(1e-12),R4(1e-10)),rel(R4(1e-12),R4(1e-14))).",
+    "old_to_high_precision_improvement_ratio": "Phase42 stored fixed-to-analytic rel divided by max(120-dps same-step R4-to-A_H rel,1e-100); retained descriptively and never used to select a slot or step."
+  },
+  "acceptance_thresholds": {
+    "phase42_source_vector_reproduction_max_abs": "5e-15",
+    "source_rounding_control_vs_independent_exact_decimal_relative_max": "1e-40",
+    "symbolic_hessian_vs_gradient_directional_relative_max": "1e-50",
+    "80_vs_120_precision_stability_relative_max": "1e-50",
+    "same_step_high_precision_R4_to_symbolic_relative_max": "1e-12",
+    "small_step_primary_R4_to_symbolic_relative_max": "1e-30",
+    "small_step_reference_neighbor_relative_max": "1e-28",
+    "source_numpy64_hessian_action_to_high_precision_relative_max": "5e-13",
+    "phase42_stable_violation_threshold_reproduced": "1e-7",
+    "phase42_reference_stability_threshold_reproduced": "1e-6",
+    "threshold_rationale": {
+      "phase42_reproduction": "5e-15 is an absolute platform-drift guard for recomputing byte-pinned binary64 vectors, not a scientific agreement threshold.",
+      "independent_paths_and_precision": "The 1e-40/1e-50 controls leave at least thirty decimal guard digits below the 80-dps tier and are far above its nominal rounding floor.",
+      "same_phase42_steps": "For fourth-order R4 with epsilon near 1e-5, 1e-12 permits a conservative fixed truncation envelope while remaining five orders below the disclosed 1e-7 anomaly threshold.",
+      "prospective_small_steps": "At primary h=1e-12 the formal fourth-order scale is h^4=1e-48; 1e-30 and the 1e-28 coarse/fine stability envelope leave large analytic and evaluation margins.",
+      "source_numpy64": "5e-13 is a conservative multiple of binary64 roundoff for a seven-component dense Hessian/matrix action and is applied uniformly to all ninety slots."
+    },
+    "threshold_policy": "All decimal thresholds are parsed directly by mpmath. They were fixed before the disclosed unarchived design-audit pilot returned values and may not be changed after that pilot, after the Stage-1 commit, or after any production Phase-43 value is observed. Failure never authorizes a different state, direction, precision, step, backend, norm floor, source convention, or classification quantifier."
+  },
+  "classification_protocol": {
+    "slot_evidence_is_tri_state": ["SUPPORTED","NOT_SUPPORTED","INCONCLUSIVE"],
+    "completion_is_separate_from_evidence": true,
+    "local_rhs_implementation_mismatch_evidence": {
+      "SUPPORTED": "Both independent high-precision reference paths agree and are precision/reference stable, while A_source exceeds the frozen 5e-13 relative threshold at the same frozen xi,q slot.",
+      "NOT_SUPPORTED": "Both independent high-precision reference paths agree and are stable, and A_source is within 5e-13.",
+      "INCONCLUSIVE": "Any required independent reference, precision, symbolic identity, or source reproduction prerequisite is incomplete or fails."
+    },
+    "double_precision_local_FD_arithmetic_evidence": {
+      "SUPPORTED": "For a disclosed Phase-42 stable-violation slot, the stored/recomputed binary64 same-step R4 still exceeds 1e-7, A_source agrees with the independent high-precision reference within 5e-13, and the 120-dps R4 in both lifted-binary64 and native-mpmath normalization modes at the exact same Phase-42 step sizes agrees with the reference within 1e-12. The 1e-12 bound retains a five-order separation from the disclosed 1e-7 anomaly threshold while allowing the fixed O(epsilon^4) truncation at the unchanged Phase-42 epsilon values.",
+      "NOT_SUPPORTED": "All prerequisites are complete but the declared conjunction is false.",
+      "INCONCLUSIVE": "A source reproduction, independent reference, or same-step high-precision prerequisite is incomplete or unstable."
+    },
+    "prospective_high_precision_reference": {
+      "CORROBORATED": "At a slot, the exact symbolic checks pass, Hessian and direct-gradient directional paths agree, 80/120 dps agree, and fixed primary/coarse/fine R4 comparisons all meet their frozen thresholds.",
+      "INCONCLUSIVE": "Any required path or fixed neighbor is missing, nonfinite, unstable, or above threshold. No alternate h is substituted."
+    },
+    "point_aggregates": {
+      "rhs_mismatch_supported": "At least one complete slot at the point is SUPPORTED; NOT_SUPPORTED requires all thirty complete slots to be NOT_SUPPORTED; otherwise INCONCLUSIVE.",
+      "double_FD_artifact_supported_for_disclosed_anomalies": "SUPPORTED only if every disclosed stable-violation slot at the point is complete and SUPPORTED; NOT_SUPPORTED if all are complete and at least one is NOT_SUPPORTED; otherwise INCONCLUSIVE.",
+      "reference_corroborated": "CORROBORATED only if all thirty slots at the point are corroborated; otherwise INCONCLUSIVE."
+    },
+    "global_local_aggregate": {
+      "LOCAL_RHS_IMPLEMENTATION_MISMATCH_EVIDENCE": "SUPPORTED if any point supports it; NOT_SUPPORTED only if all ninety slots are complete and not supported; otherwise INCONCLUSIVE.",
+      "DOUBLE_PRECISION_LOCAL_FD_ARTIFACT_FOR_PHASE42_ANOMALIES": "SUPPORTED only if all 33 disclosed stable-violation slots are complete and supported; NOT_SUPPORTED if all 33 are complete and at least one is not supported; otherwise INCONCLUSIVE.",
+      "PHASE43_LOCAL_ARBITRATION": "LOCAL_RHS_IMPLEMENTATION_MISMATCH_SUPPORTED if that aggregate is supported; otherwise DOUBLE_PRECISION_LOCAL_FD_ARTIFACT_SUPPORTED only if the RHS mismatch aggregate is NOT_SUPPORTED and all 33 anomaly slots support the FD-artifact rule; otherwise MIXED_OR_INCONCLUSIVE.",
+      "INTEGRATED_TANGENT_EVOLUTION": "NOT_TESTED_LOCAL_ONLY in every valid run. This fixed boundary is not a scientific favorable outcome and may not be converted to NOT_SUPPORTED.",
+      "ODE_SOLVER_NOISE_COMPONENT": "NOT_TESTED_LOCAL_ONLY in Phase 43 because no trajectory or tangent ODE is evaluated. This does not alter Phase 42's separately scoped SOLVER_NOISE_EVIDENCE at phi_plus and a_plus."
+    },
+    "no_forced_unique_cause": true,
+    "non_anomalous_and_unstable_slots_retained": "All 57 non-violation slots, including the three Phase-42 reference-unstable slots, receive complete reference and RHS-mismatch records. They are excluded only from the quantified 33-slot explanation claim, not from retention or local implementation audit."
+  },
+  "contracts": {
+    "exact": [
+      {
+        "id": "P43.freeze.committed_artifacts_runner_and_environment",
+        "criterion": "The manifest-to-runner-to-result order holds; the committed runner is tracked, clean, latest-blob-identical, ancestor-bound, and all artifact, source, lock, HEAD, runtime, pycache, and start/end TOCTOU pins match exactly.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P43.input.strict_phase42_state_identity",
+        "criterion": "Strict JSON, outer/self hashes, schemas, statuses, all checkpoint array hashes, all six Phase-42 frozen trajectory array hashes, all six canonical subtree hashes, exact label/fraction/direction sets, terminal statuses, q duplicate identities, and disclosed 29/29/29 stable plus 12/11/10 violation counts pass without trusting stored pass booleans.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P43.scope.local_only_no_solver_or_time_column",
+        "criterion": "The runner consumes the frozen xi,q arrays directly, calls no root/least-squares/ODE/dense-output/chart transport or integration routine, evaluates no time-column comparison, performs no state reconstruction or retuning, and retains INTEGRATED_TANGENT_EVOLUTION=NOT_TESTED_LOCAL_ONLY.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P43.symbolic.independent_action_and_directional_identity",
+        "criterion": "The exact-rational four-element action is independently rebuilt; gradient/Hessian symmetry and direct real-epsilon directional identities pass exactly; the reference call-denylist and no-machine-float expression-tree audit pass.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P43.math.binary64_lift_precision_ladders_and_metrics",
+        "criterion": "Exact binary64-ratio lifting, signed-zero retention, 80/120 workdps isolation, both fixed finite-difference ladders, R4 formulas, norm floor, decimal thresholds, no-float serialization, and no-skipping quantifiers equal this manifest.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P43.retention.complete_slot_and_classification_schema",
+        "criterion": "Every predeclared source, symbolic, precision, endpoint, D2, R4, metric, slot-classification, point-aggregate, and global-local aggregate record is terminal exactly once; exceptions and nonfinite values are typed; the full raw artifact is retained before prose or graph updates.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P43.guard.fail_closed_gate1_and_null_outputs",
+        "criterion": "All desired outputs remain null, the sixteen promoted prerequisites remain false, the six global outputs remain null, Phase 41 remains 8/9, Phase 42 remains inconclusive, global promotion remains prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+        "failure_status": "INVALID_RUN"
+      }
+    ],
+    "numerical": [
+      {
+        "id": "P43.reproduction.phase42_local_source_controls",
+        "criterion": "At all ninety frozen slots the imported byte-pinned source reproduces stored Phase-42 analytic Hessian actions and the exact old-step D2/R4 controls within 5e-15 maximum absolute component error, and reproduces the disclosed stable/violation ledgers exactly.",
+        "failure_status": "PHASE42_LOCAL_SOURCE_OR_PLATFORM_DRIFT",
+        "failure_invalidates_run": true
+      },
+      {
+        "id": "P43.reference.independent_symbolic_and_precision_agreement",
+        "criterion": "At all ninety slots the independent Hessian action and independently differentiated gradient action agree within 1e-50, their 80/120 evaluations agree within 1e-50, and the independently rebuilt 50-digit source-rounding control versus exact-decimal model difference remains within 1e-40.",
+        "failure_status": "HIGH_PRECISION_REFERENCE_INCONCLUSIVE",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P43.reference.same_step_and_small_step_R4",
+        "criterion": "At all ninety slots the 120-dps R4 in both fixed normalization modes using the unchanged Phase-42 step sizes agrees with the symbolic reference within 1e-12, the preselected native-mpmath 1e-12 primary R4 agrees within 1e-30, and both fixed small-step neighbors satisfy the 1e-28 stability threshold; every declared mode and h at both precisions survives and is retained.",
+        "failure_status": "HIGH_PRECISION_REFERENCE_INCONCLUSIVE",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P43.arbitration.source_RHS_implementation",
+        "criterion": "Every one of ninety slots has complete separate reference-corroboration and local-RHS-implementation-mismatch tri-states under the frozen rules; PASS means all ninety complete source NumPy64 Hessian actions agree with corroborated high-precision references within 5e-13.",
+        "failure_status": "LOCAL_RHS_IMPLEMENTATION_MISMATCH_OR_INCONCLUSIVE",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P43.arbitration.phase42_stable_violations",
+        "criterion": "All 33 disclosed Phase-42 stable-violation slots have complete same-step binary64-versus-high-precision arbitration records; PASS means all 33 support the fixed DOUBLE_PRECISION_LOCAL_FD_ARTIFACT rule without changing their xi, q, epsilon values, or threshold.",
+        "failure_status": "PHASE42_LOCAL_ANOMALY_MIXED_OR_INCONCLUSIVE",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P43.classification.complete_nonexclusive_local_ledger",
+        "criterion": "All slot, point, and global-local completion/evidence records are present, cite exact metric paths, retain non-anomaly and unstable slots, do not force a unique cause, and leave integrated tangent evolution explicitly untested.",
+        "failure_status": "LOCAL_ARBITRATION_LEDGER_INCOMPLETE",
+        "failure_invalidates_run": true
+      }
+    ]
+  },
+  "declared_output_retention": {
+    "stdout_policy": "Exactly one final RESULT_JSON record on stdout; progress, symbolic build timing, and slot timing go only to stderr.",
+    "result_artifact": {
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json",
+      "schema": "ice-phase43-high-precision-local-rhs-arbitration/v1",
+      "stdout_prefix": "RESULT_JSON=",
+      "stored_prefix": null,
+      "stored_format": "One compact sort_keys JSON object followed by exactly one LF; the transport prefix is removed.",
+      "outer_file_sha256": null,
+      "payload_digest_field_name": "result_payload_sha256_without_self",
+      "payload_sha256_without_self": null,
+      "null_hash_reason": "No result exists at input-freeze time; a result digest is an output, not an input target."
+    },
+    "slot_key": "point|fraction|direction plus explicit method|precision|h|sign subslots.",
+    "slot_terminal_statuses": ["SUCCESS","EVALUATION_FAILED","NOT_RUN_UPSTREAM_INVALID"],
+    "preenumeration_rule": "Before scientific evaluation, enumerate the exact Cartesian products for 90 base slots, two precisions, both independent analytic paths, the independently rebuilt 50-digit source-rounding control, both same-step normalization modes, every Phase-42 same-step endpoint, every prospective h endpoint, every D2/R4 vector, and every classification record. Duplicate, missing, silently skipped, or dynamically inserted slots invalidate the run.",
+    "arbitrary_precision_serialization": "After all comparisons, serialize each finite nonzero mp real as mp.nstr(value,n=dps,strip_zeros=False,min_fixed=0,max_fixed=0); serialize exact zero as '0.0'. Never serialize an mp value as JSON float. Retain complex vectors as [real_string,imag_string] pairs with the active dps beside them, and reject NaN, Infinity, or a lost precision context.",
+    "retain_per_base_slot": [
+      "exact frozen xi and q binary64 hex/ratio representations and source JSON paths",
+      "q norm and normalized q at both precision tiers",
+      "stored and recomputed Phase-42 analytic, D2, R4 vectors and reproduction errors",
+      "source NumPy64 Hessian action and all source same-step flow endpoints",
+      "independent Hessian and direct-gradient directional vectors at 80 and 120 dps",
+      "independently rebuilt 50-digit source-rounding-control vectors and their comparison with the exact-decimal reference",
+      "every high-precision same-step endpoint, D2, and R4 vector in both normalization modes, plus every prospective endpoint, D2, and R4 vector",
+      "all pairwise metrics, precision stability, neighbor stability, and descriptive improvement ratios",
+      "separate completion and tri-state evidence with cited metric paths"
+    ],
+    "retain_global": [
+      "independent SymPy expression fingerprints and exact symbolic check records",
+      "reference-path independence/denylist audit",
+      "artifact/source/runtime/runner start and end provenance",
+      "complete slot counts and terminal-status histograms",
+      "all exact and numerical contract records",
+      "the unchanged fail-closed Gate-1 ledger"
+    ],
+    "exception_policy": "Catch numerical exceptions at the smallest predeclared slot, retain completed siblings, explicitly terminalize dependencies, and emit finite allow_nan=false typed JSON. Infrastructure, provenance, exact-symbolic, reproduction-drift, or incomplete-ledger failures emit a fail-closed INVALID_RUN skeleton and exit 2.",
+    "atomic_capture_sequence": [
+      "Run only the committed clean runner against the committed manifest and immutable inputs with pipefail, retaining the runner exit code.",
+      "Parse exactly one complete RESULT_JSON record in memory with duplicate-key and NaN/Infinity rejection; reject missing, duplicate, truncated, wrong-schema, or trailing scientific stdout.",
+      "Validate canonical string encoding of every mp number, the self-excluding payload digest, and the outer hash in an external staging directory.",
+      "Move no partial artifact into the repository. Add the fully validated compact JSON plus one LF atomically and commit it as a separate coherent result unit.",
+      "Only after that commit may a report, ontology update, general documentation, or later-phase input consume Phase-43 evidence."
+    ],
+    "archive_policy": "The full raw high-precision vector and slot ledger is mandatory. A prose summary or selected anomaly table is not a substitute."
+  },
+  "required_fail_closed_outputs": {
+    "m2_and_m4_actions_identified": false,
+    "m2_and_m4_upward_cycles_identified": false,
+    "m2_and_m4_common_determinant_line_constructed": false,
+    "m3_and_m4_canonical_sign_equality_proved": false,
+    "m3_and_m4_common_determinant_line_constructed": false,
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "continuous_direction_coverage_proved": false,
+    "root_exhaustion_proved": false,
+    "exact_nonlinear_upward_manifold_certified": false,
+    "all_saddles_and_upward_components_complete": false,
+    "non_Stokes_chamber_certified": false,
+    "all_relative_good_ends_classified": false,
+    "physical_original_cycle_derived": false,
+    "metric_homotopy_tested": false,
+    "BFV_Pfaffian_Pin_orientation_computed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "quantum_gravity_explanation": null,
+    "gate1_status": "OPEN_PARTIAL_PROGRESS"
+  },
+  "historical_statuses_must_remain": {
+    "phase41_numerical_contracts": "8/9",
+    "phase41_tangent_status": "TANGENT_CONTROL_FAILED",
+    "phase42_reference_tangent": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+    "phase42_protocol_local_anomaly_label": "VARIATIONAL_RHS_BUG_EVIDENCE",
+    "integrated_tangent_evolution": "NOT_TESTED_LOCAL_ONLY",
+    "phase43_ODE_solver_noise_component": "NOT_TESTED_LOCAL_ONLY",
+    "global_promotion": "PROHIBITED"
+  },
+  "desired_outputs": {
+    "desired_phase43_local_arbitration": null,
+    "desired_local_RHS_implementation_verdict": null,
+    "desired_double_precision_FD_verdict": null,
+    "desired_integrated_tangent_verdict": null,
+    "desired_reference_corroboration": null,
+    "desired_local_orientation_sign": null,
+    "desired_global_intersection_coefficient": null
+  },
+  "run_semantics": {
+    "exact_contract_count": 7,
+    "numerical_contract_count": 6,
+    "valid_scientific_inconclusive_exit_code": 0,
+    "invalid_run_exit_code": 2,
+    "valid_typed_scientific_outcomes": [
+      "LOCAL_RHS_IMPLEMENTATION_CORROBORATED",
+      "LOCAL_RHS_IMPLEMENTATION_MISMATCH_SUPPORTED",
+      "DOUBLE_PRECISION_LOCAL_FD_ARTIFACT_SUPPORTED",
+      "HIGH_PRECISION_REFERENCE_INCONCLUSIVE",
+      "MIXED_OR_INCONCLUSIVE",
+      "INTEGRATED_TANGENT_EVOLUTION_NOT_TESTED_LOCAL_ONLY",
+      "ODE_SOLVER_NOISE_NOT_TESTED_LOCAL_ONLY"
+    ],
+    "INVALID_RUN_conditions": [
+      "artifact, source, lock, schema, hash, array, subtree, runtime, commit, runner, HEAD, pycache, or start/end TOCTOU drift",
+      "Phase-42 source-vector or stable/violation-ledger reproduction drift",
+      "use of a forbidden reference dependency or any machine float in the independent symbolic expression tree",
+      "root, saddle, ODE, dense-output, chart-transport, trajectory, time-column, or integrated-tangent evaluation",
+      "state reconstruction, hand transcription, clipping, retuning, fallback, adaptive precision, favorable h selection, or undeclared threshold change",
+      "missing, duplicate, nonterminal, nonfinite, float-truncated mp, or inconsistent slot/classification records",
+      "missing or non-null fail-closed global outputs or any Gate-1 promotion"
+    ],
+    "numerical_failure_policy": "A complete non-drift threshold failure is a valid typed negative or inconclusive scientific result and exits 0. Provenance, exact-symbolic, Phase-42 reproduction, retention, or fail-closed boundary failure is INVALID_RUN and exits 2.",
+    "result_emission": "When this manifest can be parsed, emit one finite fail-closed RESULT_JSON skeleton even for INVALID_RUN, then exit 2. No progress text may enter stdout."
+  },
+  "claim_promotion_policy": {
+    "strongest_allowed_positive_claim": "At the ninety frozen local m=4 Phase-42 state-and-direction slots only, the byte-pinned local variational RHS is or is not corroborated by two independent high-precision derivative paths, and the disclosed Phase-42 stable finite-difference anomalies are or are not explained by binary64 same-step arithmetic under the frozen all-slot quantifier.",
+    "local_RHS_corroboration_proves_integrated_tangent_evolution": false,
+    "local_RHS_mismatch_proves_unique_code_defect": false,
+    "double_precision_FD_evidence_proves_all_phase41_solver_behavior": false,
+    "phase41_9_of_9_may_be_claimed": false,
+    "phase42_reference_tangent_may_be_promoted": false,
+    "local_orientation_or_determinant_sign_may_be_promoted": false,
+    "global_intersection_may_be_claimed": false,
+    "common_determinant_line_may_be_claimed": false,
+    "cutoff_or_continuum_convergence_may_be_claimed": false,
+    "SUSY_holography_emergent_spacetime_or_quantum_gravity_explanation_may_be_claimed": false,
+    "gate1_must_remain_open": true
+  }
+}
