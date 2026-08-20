@@ -1,0 +1,931 @@
+{
+  "phase": 42,
+  "title": "m=4 committed-checkpoint fixed-root tangent disentanglement",
+  "created_at_utc": "2026-08-20T14:28:37Z",
+  "frozen_at_utc": "2026-08-20T15:54:58Z",
+  "status": "POST_CHECKPOINT_DIAGNOSTIC_INPUT_FREEZE",
+  "is_preregistration": false,
+  "is_scientific_evidence": false,
+  "purpose": "Diagnose the retained Phase-41 K_u2 finite-difference plateau at three immutable local roots loaded only from the committed Phase-42 checkpoint, without rerunning a root search, selecting a favorable step or sign, changing Phase 41 from 8/9, or promoting any bounded or global intersection claim.",
+  "epistemic_scope": {
+    "known_result_precedes_this_freeze": true,
+    "phase41_historical_result_is_immutable": "7/7 exact and 8/9 numerical contracts; P41.tangent.three_full_FD_controls remains TANGENT_CONTROL_FAILED.",
+    "checkpoint_is_post_hoc_regenerated": true,
+    "checkpoint_is_not_historical_phase41_stdout": true,
+    "new_result_scope": "At most, an independent prospective derivative audit at shared_zero, phi_plus, and a_plus in one declared m=4 chart, cap radius, launch shape, and fixed mobility.",
+    "not_a_retroactive_phase41_pass": true,
+    "not_a_new_root_search": true,
+    "not_a_determinant_line_construction": true,
+    "not_a_global_intersection_calculation": true,
+    "not_a_cutoff_or_continuum_limit": true
+  },
+  "two_stage_input_freeze": {
+    "checkpoint_artifact": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "outer_file_sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+      "storage_format": "one raw compact JSON object parsed from the extractor's single CHECKPOINT_JSON record; the prefix is not stored",
+      "schema": "ice-phase42-fixed-root-checkpoint/v1",
+      "checkpoint_status": "POST_HOC_REGENERATED_CHECKPOINT",
+      "checkpoint_payload_sha256_without_self": "e05c6cae4d34cf0bc7615a4801c7c96d163f974edc70d7f6d623102ee9dd63e2",
+      "git_blob": "7659c3174bd600f5d09ec0061426b8ee5eaa8b2f",
+      "size_bytes_at_freeze": 422981,
+      "final_LF_included_in_outer_sha": true,
+      "source_phase": 41,
+      "critical_array_ledger_count": 204,
+      "required_provenance_flags": {
+        "scientific_provenance.post_hoc_regenerated": true,
+        "scientific_provenance.is_original_phase41_stdout": false,
+        "scientific_provenance.historical_stdout_identity_verified": false,
+        "scientific_provenance.historical_root_vector_identity_verified": false,
+        "scientific_provenance.phase42_manifest_consumed_by_this_extractor": false
+      }
+    },
+    "checkpoint_extractor": {
+      "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py",
+      "commit": "712c54b13869b1aee26503947c60dfe34bfa2a3c",
+      "sha256": "5b2492347405bef0fed26fbfe2a68648899219c8583c20b8de0b2be02419de6d"
+    },
+    "phase41_executable": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530"
+    },
+    "phase41_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "commit": "58181447b558fa204406b732badd5c2fd541bb47",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e"
+    },
+    "phase41_report": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "9d67451e26838da1ee7e644bbbc4b619600391a96e0762d56aa8f164763f6e52"
+    },
+    "phase39_transitive_closure": {
+      "script": {
+        "path": "cpt_temporal_folded_susy/phase39_finite_joint_intersection.py",
+        "commit": "05b642eafd4dd10ecb69c345bb07bacb2c458bf4",
+        "sha256": "0af21171e44a688a9dd0b19b2491954467c5ceb881a97852d0eb6135ea8fce54"
+      },
+      "direction_report": {
+        "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+        "commit": "05b642eafd4dd10ecb69c345bb07bacb2c458bf4",
+        "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70"
+      },
+      "input_manifest": {
+        "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+        "commit": "750d19e76827ce78c9322e9fac6b494ade1f2bbf",
+        "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"
+      }
+    },
+    "dependency_locks": {
+      "pyproject": {
+        "path": "pyproject.toml",
+        "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+        "sha256": "ae68ad259121fb948c176b5b724db19c6f45ea48e8ad49d5b74a73e623067891"
+      },
+      "uv_lock": {
+        "path": "uv.lock",
+        "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+        "sha256": "8afebaf1d11eb0e31ee6398e4a88b2742acb887920a7ec12a5f3d581c1c99527"
+      }
+    },
+    "runner_binding_policy": "This manifest must be committed before the diagnostic runner is implemented. The runner must embed this manifest's committed path, commit, and SHA-256. No runner path, hash, result, or desired outcome is prefilled here.",
+    "three_stage_commit_protocol": {
+      "stage_1_manifest": "Commit this input manifest by itself before runner implementation; that commit and SHA become the runner's immutable input pin.",
+      "stage_2_runner": "Implement and commit the runner after Stage 1. A production run is forbidden unless the runner is Git-tracked, clean for its path, byte-identical to its latest committed blob, and that commit is an ancestor of HEAD.",
+      "stage_2_start_end_guard": "At numerical start retain runner path/SHA/latest commit, manifest and checkpoint pins, source closure, HEAD, runtime, and repository pycache snapshot. Immediately before RESULT_JSON recompute all of them and require exact equality; drift emits INVALID_RUN and exit 2.",
+      "stage_3_result": "Capture, validate, and commit the full raw result artifact with the committed runner before creating or updating any report, ontology evidence, documentation, or later-phase input.",
+      "self_provenance_output": "The result must retain the runner's observed SHA, latest path commit and blob SHA, clean/tracked/ancestor booleans, start and end HEAD, and every TOCTOU comparison."
+    },
+    "drift_policy": "Any missing file, byte mismatch, commit-blob mismatch, non-ancestor pin, schema mismatch, internal digest mismatch, runtime mismatch, or checkpoint cross-field mismatch is INVALID_RUN with exit 2; no source, checkpoint, root, or environment fallback is allowed."
+  },
+  "strict_runtime_environment": {
+    "launch_executable": ".venv/bin/python",
+    "resolved_python_executable": "/usr/bin/python3.13",
+    "sys_dont_write_bytecode_required": true,
+    "repository_file_writes_allowed": false,
+    "source_and_environment_TOCTOU_recheck_before_RESULT_JSON": true,
+    "fingerprint": {
+      "python_implementation": "CPython",
+      "python_version": "3.13.5",
+      "python_build": [
+        "main",
+        "Jul 15 2026 20:25:40"
+      ],
+      "python_compiler": "GCC 14.2.0",
+      "numpy_version": "2.5.2",
+      "scipy_version": "1.18.0",
+      "sympy_version": "1.14.0",
+      "mpmath_version": "1.3.0",
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "system": "Linux",
+      "release": "7.0.14-5-pve",
+      "machine": "x86_64",
+      "byteorder": "little",
+      "libc": [
+        "glibc",
+        "2.41"
+      ],
+      "numpy_blas": {
+        "name": "scipy-openblas",
+        "version": "0.3.34.0.0",
+        "openblas_configuration": "OpenBLAS 0.3.34.0.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64"
+      },
+      "numpy_lapack": {
+        "name": "scipy-openblas",
+        "version": "0.3.34.0.0",
+        "openblas_configuration": "OpenBLAS 0.3.34.0.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64"
+      },
+      "scipy_blas": {
+        "name": "scipy-openblas",
+        "version": "0.3.31.dev",
+        "openblas_configuration": "OpenBLAS 0.3.31.dev DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=64",
+        "has_ilp64": false
+      },
+      "scipy_lapack": {
+        "name": "scipy-openblas",
+        "version": "0.3.31.dev",
+        "openblas_configuration": "OpenBLAS 0.3.31.dev DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=64",
+        "has_ilp64": false
+      },
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null
+      },
+      "effective_BLAS_thread_count": null,
+      "effective_BLAS_thread_count_scope": "The checkpoint pinned the five controlling environment variables as unset but did not retain a runtime threadpool count. Phase 42 must reproduce those null variables and may not claim bitwise determinism from an unmeasured effective thread count."
+    }
+  },
+  "checkpoint_consumer_protocol": {
+    "checkpoint_is_only_root_and_geometry_input": true,
+    "full_phase41_pipeline_replay_allowed": false,
+    "root_or_saddle_solver_calls_allowed": false,
+    "forbidden_calls": [
+      "solve_signed_saddle_grids",
+      "solve_main_saddle",
+      "solve_primary_intersections",
+      "build_fixed_metric",
+      "build_nested_chart",
+      "scipy.optimize.root",
+      "scipy.optimize.least_squares",
+      "Newton refinement",
+      "root replacement",
+      "branch search",
+      "parameter clipping"
+    ],
+    "allowed_reconstruction": "Rehydrate FixedMetric, SaddleData, Chart, the three immutable parameter vectors, and their authoritative Jacobians directly from decoded checkpoint arrays. Rebuild only NumericModel(delta_a,delta_phi) and the declared residual/flow evaluators from byte-pinned Phase-41 source.",
+    "no_root_solve_fallback": "Checkpoint decode, identity, or map reproduction failure terminates INVALID_RUN; it never triggers Phase-41 replay, a new root solve, hand transcription, looser tolerances, or an alternate checkpoint.",
+    "strict_json_decode": {
+      "duplicate_keys_rejected": true,
+      "NaN_Infinity_rejected": true,
+      "outer_file_sha_verified": true,
+      "self_excluding_digest_recomputed_after_removing_only_its_field": true,
+      "canonicalization": "json.dumps(sort_keys=True,separators=(',',':'),allow_nan=False) encoded as UTF-8",
+      "all_array_payloads_independently_verified": true,
+      "embedded_204_array_ledger_is_not_trusted_as_a_substitute": true,
+      "array_checks": [
+        "declared logical shape",
+        "finite numeric values",
+        "runtime and canonical dtype",
+        "terminal [real,imag] complex encoding",
+        "canonical little-endian raw SHA-256"
+      ],
+      "signed_zero_complex_decode": "For complex payloads allocate the declared complex128 array first and assign its .real and .imag buffers separately from the terminal pairs. Constructing values as real+1j*imag is forbidden because it can erase a signed zero and invalidate the canonical raw-byte identity."
+    },
+    "required_label_sets": {
+      "saddles": [
+        "shared_zero",
+        "phi_plus_half",
+        "phi_plus",
+        "phi_minus_half",
+        "phi_minus",
+        "a_plus_half",
+        "a_plus",
+        "a_minus_half",
+        "a_minus"
+      ],
+      "primaries": [
+        "shared_zero",
+        "phi_minus",
+        "phi_plus",
+        "a_minus",
+        "a_plus"
+      ],
+      "diagnostic_targets": [
+        "shared_zero",
+        "phi_plus",
+        "a_plus"
+      ]
+    },
+    "cross_field_identities": [
+      "each target parameter vector is bit-identical to its all-primary vector and phase41_primary_result.parameters",
+      "each authoritative target J is bit-identical to the result variational_scaled_root_jacobian",
+      "source point, sphere radius 1e-4, shape lambda 1, and chart-u agree across duplicated records",
+      "target launch matrix equals that saddle's lambda-one launch matrix",
+      "Gamma state agrees with the recorded primary intersection state",
+      "scaled and physical residual identities agree",
+      "the regenerated frame identity is row_scales[:,None]*column_stack([V_Gamma,-V_K])",
+      "the completion ledger remains exactly sixteen false, six null, and Gate 1 open"
+    ],
+    "critical_nested_array_pins": {
+      "shared_zero_parameter": "2c9180f168618dd36191a357ce141d00048908043da6dc11372abbbf6acae161",
+      "shared_zero_J": "abf9fa215a176ea04448d03b2fc5e54a73977e89b4cc733d73e6bfabf44feb38",
+      "phi_plus_parameter": "7c7ea9cb52e3ff3eb066c3265b36d1940e4a7c2519d6adc58984f91b37e70ec6",
+      "phi_plus_J": "2882614a35047f0a7afcd553a69a3025e5ef24260c84843b4a0ff6f8a156aa7d",
+      "a_plus_parameter": "00cc43fd4780da7048e5200b680c7ed271af71503d8542f0ecffaeae6edadef8",
+      "a_plus_J": "705634f8399c29ce4e2f00329703b944ba0e678d2465aae0ef29dab4183bb4b7",
+      "chart_center": "dad9f4f15e68a392071fbc919e0ad7a8bee3053b827abb9daf6978a7bef6b901",
+      "chart_tangent": "f2e288781f2da90e8cd406d1328d23978a3c1cd5caea99d1db64c7392e4995f5",
+      "chart_orientation_determinant": 1.0,
+      "fixed_linear_map": "1f50ef9c5f5ac7d6db9b06803715ad5cc837d38a9052411dfdd32b42faf52b3a",
+      "fixed_mobility": "d7446427626de4049efaa40291f097059eb9baa774960c3e8d15ad041f31fea5",
+      "fixed_xi_reflection": "4c6e2d678dc210fa8aeafc316f80109b6864bd9bc962e8ff99da45aae68c2710"
+    }
+  },
+  "known_before_freeze": {
+    "role": "Disclosed post-result information defines negative controls and reproduction tolerances; it never selects a root, step, sign, cause, or final claim.",
+    "phase41_completed_contracts": {
+      "exact_passed": 7,
+      "exact_total": 7,
+      "numerical_passed": 8,
+      "numerical_total": 9,
+      "run_status": "VALID_TYPED_RUN",
+      "failed_contract": "P41.tangent.three_full_FD_controls"
+    },
+    "failed_zero_based_column": 8,
+    "failed_parameter_name": "K_u2",
+    "phase41_first_pair_for_u2": [
+      0.000002,
+      0.0000005
+    ],
+    "phase41_thresholds_unchanged": {
+      "FD_to_variational_relative_operator_error": 0.02,
+      "adjacent_FD_step_relative_change": 0.02
+    },
+    "audited_points": {
+      "shared_zero": {
+        "delta_a": 0.0,
+        "delta_phi": 0.0,
+        "phase41_FD_to_variational_relative_operator_error": 0.00164506,
+        "phase41_u2_adjacent_step_relative_change": 0.29885,
+        "phase41_FD_root_sign": -1
+      },
+      "phi_plus": {
+        "delta_a": 0.0,
+        "delta_phi": 0.001,
+        "phase41_FD_to_variational_relative_operator_error": 0.000773922,
+        "phase41_u2_adjacent_step_relative_change": 0.2219933,
+        "phase41_FD_root_sign": -1
+      },
+      "a_plus": {
+        "delta_a": 0.001,
+        "delta_phi": 0.0,
+        "phase41_FD_to_variational_relative_operator_error": 0.00135951,
+        "phase41_u2_adjacent_step_relative_change": 0.7952717,
+        "phase41_FD_root_sign": -1
+      }
+    }
+  },
+  "desired_outputs": {
+    "desired_cause_classification": null,
+    "desired_phase42_tangent_result": null,
+    "desired_variational_bug_verdict": null,
+    "desired_local_orientation_sign": null,
+    "desired_root_jacobian_sign": null,
+    "desired_homotopy_certificate": null,
+    "desired_global_intersection_coefficient": null
+  },
+  "fixed_map": {
+    "diagnostic_points": [
+      "shared_zero",
+      "phi_plus",
+      "a_plus"
+    ],
+    "residual": "F(p)=interleave((Gamma(p_Gamma)-K(p_K))/COORDINATE_SCALES) in R14.",
+    "center": "The immutable checkpoint parameter p_star at each diagnostic point.",
+    "parameter_order": [
+      "y_a1",
+      "y_phi1",
+      "y_a2",
+      "y_phi2",
+      "y_a3",
+      "y_phi3",
+      "psi",
+      "u1",
+      "u2",
+      "u3",
+      "u4",
+      "u5",
+      "u6",
+      "flow_time"
+    ],
+    "Gamma_columns_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "K_columns_zero_based": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "suspect_column": {
+      "zero_based_index": 8,
+      "K_local_index": 1,
+      "name": "u2"
+    },
+    "root_J_sign_convention": "J=row_scales[:,None]*column_stack([V_Gamma,-V_K]); column 13 is the negative row-scaled K flow-time tangent.",
+    "same_cap_radius_shape_metric_chart_and_roots": true,
+    "candidate_reoptimization_allowed": false,
+    "determinant_sign_may_select_a_step": false
+  },
+  "three_way_variational_J_protocol": {
+    "J_checkpoint": "The authoritative 14x14 variational_scaled_root_jacobian decoded from the committed checkpoint. It is J_V for all frozen reference and homotopy decisions.",
+    "J_phase41_production_reintegration": "Re-evaluate the unchanged pinned Phase-41 augmented DOP853 map once at the immutable p_star, using its original 8e-11 rtol, 8e-13 atol, and 0.025 max_step. No center update follows.",
+    "J_phase42_tight_reintegration": "Independently integrate the same complex state-plus-six-chart-tangent equations with DOP853 rtol 2e-12, atol 2e-14, max_step 0.01, then append the analytic Gamma block and negative endpoint flow-time column in the same row scaling.",
+    "independent_J_R4": "A separate finite-difference reference assembled from the fourteen preselected tight-state R4_j(0.0002) columns; it is not one of the three transported variational J matrices.",
+    "cause_reference_u2_column": "For truncation, chart-curvature, solver-noise, and integrated-variational cause rules, V_u2 means exactly J_phase42_tight_reintegration[:,8]. The homotopy endpoint remains J_checkpoint and is never silently changed.",
+    "required_comparisons": [
+      "J_checkpoint versus J_phase41_production_reintegration max absolute error",
+      "J_checkpoint versus J_phase42_tight_reintegration symmetric relative operator error and every-column symmetric relative error",
+      "J_phase41_production_reintegration versus J_phase42_tight_reintegration symmetric relative operator error and every-column symmetric relative error",
+      "all three root signs, normalized singular spectra, column norms, and condition numbers",
+      "J_R4 versus J_checkpoint and J_phase42_tight_reintegration per-column and full-operator metrics"
+    ],
+    "three_way_thresholds": {
+      "checkpoint_to_phase41_production_max_abs": 5e-11,
+      "tight_to_checkpoint_relative_operator_max": 0.005,
+      "tight_to_production_relative_operator_max": 0.005,
+      "tight_to_each_baseline_per_column_relative_max": 0.005
+    },
+    "invalid_drift_boundary": "Only the checkpoint versus unchanged original Phase-41 production reproduction of the frozen center state, residual, Gamma/K frames, and J at max absolute 5e-11 is an input/platform gate whose failure causes INVALID_RUN. Tight-integrator comparisons are excluded from this invalidation boundary.",
+    "scientific_comparison_boundary": "J_phase42_tight comparisons with J_checkpoint, J_phase41_production, and J_R4 are prospective numerical diagnostics. Their stable failure is valid typed evidence or inconclusive output with exit 0, never source drift and never permission to replace J_checkpoint.",
+    "interpretation": "The three matrices are all retained. Disagreement never permits choosing another checkpoint J, retuning a root, or replacing the frozen homotopy endpoint."
+  },
+  "finite_difference_protocol": {
+    "phase41_production_negative_control_steps_by_zero_based_column": {
+      "0": [
+        0.000002,
+        0.0000005
+      ],
+      "1": [
+        0.000002,
+        0.0000005
+      ],
+      "2": [
+        0.000002,
+        0.0000005
+      ],
+      "3": [
+        0.000002,
+        0.0000005
+      ],
+      "4": [
+        0.000002,
+        0.0000005
+      ],
+      "5": [
+        0.000002,
+        0.0000005
+      ],
+      "6": [
+        0.000002,
+        0.0000005
+      ],
+      "7": [
+        0.00002,
+        0.00001
+      ],
+      "8": [
+        0.000002,
+        0.0000005,
+        0.0000001
+      ],
+      "9": [
+        0.000002,
+        0.0000005,
+        0.0000001
+      ],
+      "10": [
+        0.000002,
+        0.0000005,
+        0.0000001
+      ],
+      "11": [
+        0.000002,
+        0.0000005,
+        0.0000001
+      ],
+      "12": [
+        0.000002,
+        0.0000005,
+        0.0000001
+      ],
+      "13": [
+        0.000005,
+        0.000001,
+        0.0000002
+      ]
+    },
+    "phase41_negative_control_selection": "Evaluate every listed step in descending order, retain every failure, and choose the first pair that is both adjacent in the original list and successfully evaluated. A surviving but unfavorable first adjacent pair may not be skipped. In the frozen reproduction all first pairs are expected to survive; assemble the old FD matrix from the first member of each selected pair.",
+    "phase42_all_fourteen_columns_main_ladder": [
+      0.0004,
+      0.0002,
+      0.0001,
+      0.00005
+    ],
+    "u2_additional_dyadic_tail": [
+      0.000025,
+      0.0000125,
+      0.00000625,
+      0.000003125,
+      0.0000015625,
+      7.8125e-7,
+      3.90625e-7,
+      1.953125e-7,
+      9.765625e-8
+    ],
+    "u2_exact_phase41_reproduction_steps_across_state_tiers": [
+      0.000002,
+      0.0000005,
+      0.0000001
+    ],
+    "u2_cross_tier_coverage_matrix": {
+      "P41_production_affine": "main ladder, full dyadic tail, and all three exact Phase-41 reproduction steps",
+      "P42_tight_affine": "main ladder, full dyadic tail, and all three exact Phase-41 reproduction steps",
+      "P42_tight_geodesic": "main ladder, full dyadic tail, and all three exact Phase-41 reproduction steps",
+      "P42_Radau_affine": "main ladder and all three exact Phase-41 reproduction steps",
+      "P42_Radau_geodesic": "main ladder and all three exact Phase-41 reproduction steps",
+      "P42_Radau_flow_time": "main ladder only"
+    },
+    "D2_formula": "D2_j(h)=[F(p_star+h*e_j)-F(p_star-h*e_j)]/(2*h).",
+    "R4_formula": "R4_j(h)=[4*D2_j(h/2)-D2_j(h)]/3.",
+    "five_point_equivalence": "R4_j(h)=[F(-h)-8F(-h/2)+8F(h/2)-F(h)]/(6*h) around p_star.",
+    "fixed_primary_reference": "R4_j(0.0002), using D2_j(0.0002) and D2_j(0.0001).",
+    "fixed_reference_neighbors": {
+      "coarse": "R4_j(0.0004), using D2_j(0.0004) and D2_j(0.0002)",
+      "fine": "R4_j(0.0001), using D2_j(0.0001) and D2_j(0.00005)"
+    },
+    "observed_central_order": "For each consecutive dyadic triple (h,h/2,h/4), q2=log2(||D2(h)-D2(h/2)||_2/||D2(h/2)-D2(h/4)||_2). q2 is null with a reason when either norm is zero, nonfinite, or unavailable.",
+    "survival_rule": "Every declared plus and minus point is attempted and retained. No failed point is skipped, no undeclared h is inserted, and no observed sign, eta, error, or cause may select a replacement reference.",
+    "box_rule": "Every p_star plus or minus h*e_j must remain strictly inside the Phase-41 parameter bounds before evaluation. Leaving the box is a typed incomplete slot; clipping is forbidden.",
+    "forward_backward_metrics": {
+      "d_plus": "[F(p+h*e_j)-F(p)]/h",
+      "d_minus": "[F(p)-F(p-h*e_j)]/h",
+      "asymmetry": "||d_plus-d_minus||_2/max(||d_plus||_2,||d_minus||_2,1e-30)",
+      "second_symmetric_residual": "||F(p+h*e_j)+F(p-h*e_j)-2F(p)||_2",
+      "second_symmetric_scaled": "second_symmetric_residual/h^2"
+    }
+  },
+  "integration_tiers": {
+    "P41_production_state_map": {
+      "method": "DOP853",
+      "representation": "complex xi state",
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "max_step": 0.04,
+      "coverage": "Use the exact Phase-41 per-column ladders for the old negative control and evaluate the complete affine-chart u2 main ladder plus tail for the production noise curve."
+    },
+    "P41_production_augmented_map": {
+      "method": "DOP853",
+      "representation": "complex xi plus 7x6 complex chart tangent",
+      "rtol": 8e-11,
+      "atol": 8e-13,
+      "max_step": 0.025,
+      "coverage": "One unperturbed center integration at each fixed point for the three-way J comparison."
+    },
+    "P42_tight_state_map": {
+      "method": "DOP853",
+      "representation": "complex xi state",
+      "rtol": 2e-12,
+      "atol": 2e-14,
+      "max_step": 0.01,
+      "coverage": "All fourteen main ladders; the complete affine and geodesic u2 tails; and affine plus geodesic u2 evaluations at all three exact Phase-41 reproduction steps at every point."
+    },
+    "P42_tight_augmented_map": {
+      "method": "DOP853",
+      "representation": "complex xi plus 7x6 complex chart tangent",
+      "rtol": 2e-12,
+      "atol": 2e-14,
+      "max_step": 0.01,
+      "coverage": "One unperturbed center integration with states and transported tangents at fractions 0, .25, .5, .75, and 1 at every point."
+    },
+    "P42_cross_method_state_map": {
+      "method": "Radau",
+      "representation": "realified xi in interleaved [Re xi_1,Im xi_1,...,Re xi_7,Im xi_7] order",
+      "rhs": "Interleave the exact same complex Phase-41 flow_xi value; no flow, action, metric, chart, launch, time, or root change is allowed.",
+      "rtol": 5e-12,
+      "atol": 5e-14,
+      "max_step": 0.01,
+      "coverage": "Affine and geodesic u2 at h=0.0004,0.0002,0.0001,0.00005 and at the exact Phase-41 steps 2e-6,5e-7,1e-7; flow_time at the four main-ladder h values; all at all three points."
+    },
+    "implementation_guard": "Phase41.integrate_chart may be used only for the frozen production tiers. It hard-codes production/loose tolerances and must not implement the tight or Radau tiers. Tight and Radau use new tier-specific solve_ivp wrappers around pinned flow_xi and hessian_xi.",
+    "cache_isolation": "Cache keys include point, tier, method, rtol, atol, max_step, chart kind, and the complete K parameter tuple. Production, tight, Radau, affine, and geodesic endpoints are never shared.",
+    "solver_ledger_per_attempt": [
+      "terminal status",
+      "method and exact tolerances",
+      "parameter vector and bounds margins",
+      "nfev, njev, nlu, accepted-step count",
+      "xi norm maximum and frozen 40.0 cap",
+      "full endpoint xi and z state or typed error",
+      "no fallback method used"
+    ]
+  },
+  "relative_metric_definitions": {
+    "vector_symmetric_relative": "rel(x,y)=||x-y||_2/max(||x||_2,||y||_2,1e-30).",
+    "operator_symmetric_relative": "rel_op(A,B)=||A-B||_2/max(||A||_2,||B||_2,1e-30).",
+    "signed_cosine": "cos(x,y)=x^T*y/(||x||_2*||y||_2), with zero norms rejected before evaluation.",
+    "angle_sine": "sqrt(max(0,1-cos(x,y)^2)); signed_cosine must additionally be strictly positive.",
+    "norm_ratio_deviation": "abs(||x||_2/||y||_2-1), with y zero rejected.",
+    "solver_derivative_envelope": "max(rel(D2_production,D2_tight),rel(D2_tight,D2_Radau)) over the methods declared at that h; unavailable Radau terms are omitted only where coverage explicitly excludes them, never silently.",
+    "adjacent_D2_relative_change": "rel(D2(h),D2(h/2)) using the same tier and chart kind.",
+    "triple_solver_envelope": "For the fixed triple (h,h/2,h/4), E_triple(h)=max(E_solver(h),E_solver(h/2),E_solver(h/4)) and C_triple(h)=min(rel(D2_tight(h),D2_tight(h/2)),rel(D2_tight(h/2),D2_tight(h/4))).",
+    "old_step_pair_solver_envelope": "For each fixed adjacent old-step pair (h_i,h_{i+1}), E_pair=max(E_solver(h_i),E_solver(h_{i+1})) and C_pair=rel(D2_production(h_i),D2_production(h_{i+1})).",
+    "chart_R4_solver_envelope_at_fixed_h": "At h=.0002, E_chart=max(rel(R4_affine_production,R4_affine_tight),rel(R4_affine_tight,R4_affine_Radau),rel(R4_geodesic_tight,R4_geodesic_Radau)); all R4 objects use D2 at .0002 and .0001.",
+    "neighbor_stability": "max(rel(R4_primary,R4_coarse),rel(R4_primary,R4_fine))."
+  },
+  "chart_curvature_protocol": {
+    "production_chart": "r(u)=c+B*u and omega_affine(u)=r(u)/||r(u)||.",
+    "analytic_derivative": "d_j omega=[I-omega*omega^T]*B_j/||r(u)||.",
+    "algebra_checks": [
+      "||omega||=1",
+      "omega^T*d_j_omega=0 for all six chart directions",
+      "Phase41 Chart.direction equals the independently assembled formula",
+      "the initial launch tangent equals sphere_radius*launch_matrix*d_j_omega"
+    ],
+    "independent_arithmetic": "Evaluate affine normalization and derivatives in 80-decimal arithmetic after importing binary64 inputs through exact decimal round-trip strings, then compare with the double implementation.",
+    "u2_geodesic_control": {
+      "definition": "At fixed u_star, set omega=omega_affine(u_star), v=d_u2 omega, and omega_geo(t)=cos(||v||*t)*omega+sin(||v||*t)*v/||v||.",
+      "same_base_and_tangent": "omega_geo(0)=omega and derivative_t omega_geo(0)=v.",
+      "evaluation": "Use the same saddle, launch matrix, sphere radius, flow time, and both declared tight-DOP853 and Radau state maps over the complete u2 main ladder and all three exact Phase-41 reproduction steps; tight DOP853 additionally covers the full tail. Only finite-step sphere parameterization changes.",
+      "cause_decision_h": 0.0002,
+      "scope_warning": "The geodesic is diagnostic only and never replaces the affine production chart, a root, an intersection sign, or a physical cycle."
+    }
+  },
+  "local_variational_rhs_protocol": {
+    "sampled_flow_fractions": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "transported_directions": "All six transported chart tangents at every sampled fraction; u2 is the primary reported direction.",
+    "real_directional_identity": "For a real-parameter complex tangent q, D flow_xi(xi)[q]=-conjugate(hessian_xi(xi)*q).",
+    "normalized_state_perturbation_ladder": [
+      0.00002,
+      0.00001,
+      0.000005
+    ],
+    "local_D2_R4_rule": "Normalize q, form centered D2(epsilon), form R4(epsilon) from epsilon and epsilon/2, then restore ||q|| before comparison with the analytic Hessian action.",
+    "fixed_local_reference": "R4(0.00001), with R4(0.00002) as its sole fixed stability neighbor.",
+    "stable_arithmetic_rule": "Both local R4 vectors must be finite and their symmetric relative difference must be at most 1e-6 before a threshold violation is labeled bug evidence.",
+    "flow_time_identities": {
+      "independent_positive_K_tangent": "From each independently integrated state-only center endpoint xi_T, evaluate V_K,time_independent=realify(diag(COORDINATE_SCALES)*L*flow_xi(xi_T)) before residual signing or row scaling.",
+      "original_returned_column_test": "Compare -row_scales*V_K,time_independent separately with checkpoint J[:,13] and with the unchanged Phase-41 production augmented integrator's returned root column 13.",
+      "state_only_R4_test": "Compare the preselected tight state-only R4_flow_time(.0002) separately with -row_scales*V_K,time_independent, including both fixed neighbors and Radau main-ladder reference.",
+      "tight_append_scope": "The tight augmented runner may append -row_scales*V_K,time to assemble J_phase42_tight, but equality of that constructed column with the same RHS is only an assembly control and is forbidden as variational-bug evidence.",
+      "separation_rule": "The positive tangent, original returned negative columns, and independent state-only R4 derivative are distinct recorded objects and comparisons."
+    },
+    "complex_step_scope": {
+      "full_residual_allowed": false,
+      "reason": "The flow contains conjugation, the residual is realified, the chart uses a Euclidean norm, and adaptive solvers branch on real error estimates.",
+      "limited_allowed_use": "Only a separately declared holomorphic extension of local action-gradient or chart algebra may use complex step; it cannot replace any full-map real directional test."
+    }
+  },
+  "orientation_homotopy_protocol": {
+    "variational_endpoint": "J_V is exactly J_checkpoint, not an observed best of the three variational integrations.",
+    "reference_endpoint": "J_R is assembled from all fourteen fixed tight R4_j(0.0002) columns.",
+    "column_normalization": "D_V=diag(||V_j||)>0, D_R=diag(||R_j||)>0, A_V=J_V*D_V^-1, A_R=J_R*D_R^-1. Zero or nonfinite columns fail before normalization.",
+    "linear_homotopy": "Delta=A_R-A_V, E=solve(A_V,Delta), H(t)=A_V*(I+t*E), eta=||E||_2.",
+    "sufficient_certificate": "eta<1 implies H(t) is nonsingular for every t in [0,1]. Positive endpoint column scalings preserve determinant sign.",
+    "sufficient_only_warning": "eta>=1, a small sampled singular value, or failure of the rounding margin does not prove a zero, sign change, singularity, or tangent bug. It means only that this predeclared sufficient certificate is not established. No alternative path, scaling, root, h, or favorable discrete t-grid may replace it.",
+    "numerical_robustness": {
+      "explicit_inverse_forbidden": true,
+      "solve_backward_residual": "||A_V*E-Delta||_2/max(||Delta||_2,1e-30)",
+      "rounding_budget": "max(1e-8,100*machine_epsilon*condition_2(A_V))",
+      "required_margin": "1-eta must exceed the rounding budget",
+      "record": [
+        "raw and normalized J_V and J_R signs and log absolute determinants",
+        "column norms and signed cosines",
+        "normalized singular spectra and condition numbers",
+        "Delta, E, eta, 1-eta, and solve backward residual",
+        "sigma_min(A_V), sigma_min(A_R), and the rounding budget"
+      ]
+    },
+    "mutation_controls": [
+      "multiplying columns by fixed positive scales leaves normalized signs and certificate inputs unchanged",
+      "flipping exactly one reference column flips its sign and must not pass the eta certificate",
+      "the checker never uses sampled t values as a proof"
+    ],
+    "scope_warning": "This is a sufficient local numerical matrix homotopy at three fixed roots, not a determinant-line, upward-manifold, Picard-Lefschetz, or physical-cycle homotopy."
+  },
+  "acceptance_thresholds": {
+    "checkpoint_map_reproduction_max_abs": 5e-11,
+    "phase41_disclosed_metric_reproduction_absolute": 0.000005,
+    "three_way_variational_relative_max": 0.005,
+    "R4_internal_neighbor_symmetric_relative_max": 0.005,
+    "tight_to_cross_method_symmetric_relative_max": 0.005,
+    "per_column_R4_to_variational_symmetric_relative_max": 0.01,
+    "full_R4_to_variational_symmetric_relative_operator_max": 0.01,
+    "per_column_angle_sine_max": 0.01,
+    "per_column_signed_cosine_strict_min": 0.0,
+    "per_column_abs_norm_ratio_minus_one_max": 0.01,
+    "chart_formula_relative_max": 1e-11,
+    "local_variational_RHS_symmetric_relative_max": 1e-7,
+    "local_RHS_reference_neighbor_symmetric_relative_max": 0.000001,
+    "flow_time_identity_symmetric_relative_max": 1e-8,
+    "normalized_orientation_homotopy_eta_strict_max": 1.0,
+    "homotopy_solve_backward_residual_max": 1e-10,
+    "flow_xi_norm_strict_max": 40.0,
+    "phase41_plateau_threshold_is_not_changed": 0.02,
+    "threshold_policy": "All thresholds and denominators are frozen before the diagnostic run. Failure never permits a new step, solver, root, chart, scaling, sign, or threshold."
+  },
+  "u2_cause_classification": {
+    "status_domains": {
+      "completion_status": [
+        "COMPLETE",
+        "INCOMPLETE",
+        "INVALID"
+      ],
+      "cause_evidence_status": [
+        "SUPPORTED",
+        "NOT_SUPPORTED",
+        "INCONCLUSIVE"
+      ]
+    },
+    "separation_rule": "Completion and cause evidence are independent fields. Completing a diagnostic is not evidence for a cause; a threshold failure caused by missing or unstable data is INCONCLUSIVE, not bug evidence.",
+    "per_point_rules": {
+      "TRUNCATION_EVIDENCE": {
+        "prerequisite": "The u2 main-ladder production and tight slots and their solver envelopes are COMPLETE.",
+        "support_if": "For each of the two predeclared tight-tier triples with h=.0004 and h=.0002, q2_tight(h) lies in [1.5,2.5] and E_triple(h)<=0.1*C_triple(h); additionally ||D2_tight(.0001)-J_phase42_tight[:,8]||/max(||R4_tight(.0002)-J_phase42_tight[:,8]||,1e-30) is at least 4.",
+        "not_supported_if": "Prerequisites are complete and the conjunction is false.",
+        "inconclusive_if": "Any prerequisite is incomplete, zero-denominator, or nonfinite."
+      },
+      "SOLVER_NOISE_EVIDENCE": {
+        "prerequisite": "Production, tight, and Radau affine D2 values at the exact Phase-41 u2 steps 2e-6,5e-7,1e-7 are COMPLETE, the geodesic tight/Radau reproduction-only attempts are retained, and fixed tight/Radau main references pass.",
+        "support_if": "Let e(h)=rel(D2_production(h),D2_tight(h)). Require e(2e-6)<e(5e-7)<e(1e-7), and for each of the two fixed pairs (2e-6,5e-7) and (5e-7,1e-7) require E_pair>=0.5*C_pair using the predeclared definitions above.",
+        "not_supported_if": "Prerequisites are complete and the conjunction is false.",
+        "inconclusive_if": "Any prerequisite is incomplete or unstable."
+      },
+      "CHART_CURVATURE_EVIDENCE": {
+        "prerequisite": "Affine and same-tangent geodesic tight R4_u2(.0002), J_phase42_tight_reintegration[:,8], and the solver envelope are COMPLETE.",
+        "support_if": "At the single fixed h=.0002, rel(R_affine_tight,J_phase42_tight[:,8])>=5*rel(R_geodesic_tight,J_phase42_tight[:,8]), rel(R_affine_tight,R_geodesic_tight)>=0.8*rel(R_affine_tight,J_phase42_tight[:,8]), and rel(R_affine_tight,R_geodesic_tight)>=5*E_chart using the predeclared chart R4 envelope.",
+        "not_supported_if": "Prerequisites are complete and the conjunction is false.",
+        "inconclusive_if": "Any prerequisite is incomplete or unstable."
+      },
+      "STEP_PAIR_SELECTION_ARTIFACT": {
+        "prerequisite": "The Phase-41 failed-FD negative control, all fixed Phase-42 u2 references and neighbors, Radau comparison, variational comparison, and homotopy contract are COMPLETE.",
+        "support_if": "The old first pair reproduces plateau failure while every preselected Phase-42 reference, direction, norm, cross-method, and sufficient homotopy criterion passes at that point.",
+        "not_supported_if": "Prerequisites are complete and the conjunction is false.",
+        "inconclusive_if": "Any prerequisite is incomplete."
+      },
+      "VARIATIONAL_RHS_BUG_EVIDENCE": {
+        "declared_slot_count_per_point": "Thirty local slots = five flow fractions times six transported chart directions, plus the separately recorded positive K tangent and three negative time-column comparisons.",
+        "support_if": "At least one of the thirty local slots has two complete finite R4 estimates passing the 1e-6 neighbor-stability rule and its fixed local R4(.00001) versus analytic Hessian-action error exceeds 1e-7; or at least one complete stable checkpoint/original-production/state-only-R4 time comparison differs from the independently evaluated negative scaled K endpoint tangent by more than 1e-8. The tautologically appended tight column is excluded.",
+        "not_supported_if": "All thirty local slots and all declared time controls are complete, finite, stable, and pass their fixed thresholds.",
+        "inconclusive_if": "No stable violation is present and at least one of the thirty local slots or declared time controls is incomplete, nonfinite, or fails its reference-stability prerequisite."
+      },
+      "PRODUCTION_TANGENT_SOLVER_EVIDENCE": {
+        "prerequisite": "Checkpoint versus original Phase-41 production J passes the 5e-11 invalid-drift gate; local RHS bug evidence is NOT_SUPPORTED; tight J, fixed R4, both neighbors, and cross-method references are COMPLETE and stable.",
+        "support_if": "The frozen checkpoint/original-production u2 column differs from J_phase42_tight[:,8] beyond the 0.005 three-way threshold while J_phase42_tight[:,8] passes the frozen vector, positive signed-cosine, norm, and 0.01 comparison thresholds against R4_u2(.0002).",
+        "not_supported_if": "Prerequisites are complete and the conjunction is false.",
+        "inconclusive_if": "Any reference, tight J, local RHS, or cross-method prerequisite is incomplete or unstable.",
+        "scope": "This is evidence that the original transported tangent is solver-accuracy sensitive at the fixed root; it is not platform drift and does not retroactively change Phase 41."
+      },
+      "INTEGRATED_VARIATIONAL_BUG_EVIDENCE": {
+        "prerequisite": "Local RHS bug evidence is NOT_SUPPORTED; fixed R4 references, both neighbors, cross method, and three-way J are COMPLETE and stable.",
+        "support_if": "J_phase42_tight_reintegration[:,8] fails the frozen per-column vector, positive signed-cosine, angle-sine, or norm threshold against the stable R4 reference. Eta failure alone is explicitly insufficient for this label.",
+        "not_supported_if": "Prerequisites are complete and the tight transported column passes all frozen comparisons.",
+        "inconclusive_if": "Any prerequisite is incomplete or local RHS evidence is INCONCLUSIVE."
+      }
+    },
+    "aggregate_rule": "For each named cause, aggregate status is SUPPORTED when at least one fixed point is SUPPORTED, NOT_SUPPORTED when all three are NOT_SUPPORTED, and INCONCLUSIVE otherwise. The output must retain all three per-point statuses and must call the aggregate an any-fixed-point summary, not a universal cause.",
+    "UNRESOLVED_rule": "Per point, UNRESOLVED is SUPPORTED exactly when a required cause prerequisite is incomplete or unstable and no stable cause is SUPPORTED; it is NOT_SUPPORTED when the complete ledger supports at least one cause or stably excludes all declared causes. It is never used to force mutual exclusivity.",
+    "multi_label_policy": "Cause labels may coexist. They are numerical and procedural evidence labels, not proofs of a unique physical cause."
+  },
+  "declared_output_retention": {
+    "stdout_policy": "Exactly one final RESULT_JSON record on stdout; progress and timing go to stderr.",
+    "result_artifact": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json",
+      "schema": "ice-phase42-fixed-root-tangent-disentanglement/v1",
+      "stdout_prefix": "RESULT_JSON=",
+      "stored_prefix": null,
+      "stored_format": "one compact sort_keys JSON object followed by exactly one LF; the RESULT_JSON= transport prefix is removed",
+      "outer_file_sha256": null,
+      "payload_digest_field_name": "result_payload_sha256_without_self",
+      "payload_sha256_without_self_field": "The runner computes SHA-256 of json.dumps(payload_without_only_this_digest_field,sort_keys=True,separators=(',',':'),allow_nan=False).encode('utf-8') with no LF.",
+      "outer_hash_convention": "SHA-256 covers the exact committed artifact bytes including the single final LF and excluding the stdout prefix.",
+      "null_hash_reason": "No result exists at input-freeze time; a result hash is an output and cannot be a desired input."
+    },
+    "slot_key": "point|tier|chart_kind|zero_based_column|h|sign, with separate declared keys for center, augmented, chart, local-RHS, matrix, and mutation controls.",
+    "slot_terminal_statuses": [
+      "SUCCESS",
+      "EVALUATION_FAILED",
+      "NOT_RUN_UPSTREAM_INVALID"
+    ],
+    "preenumeration_rule": "Every slot implied by the fixed point, tier, column, step, sign, fraction, and direction products is created before numerical work. Exactly one terminal status is required; duplicate, missing, silently skipped, or undeclared replacement slots invalidate the retention contract.",
+    "retain_for_every_endpoint_attempt": [
+      "full perturbed parameter vector and bounds margins",
+      "tier, method, tolerances, chart kind, h, sign, and cache key",
+      "solver success or typed exception",
+      "nfev, njev, nlu, step count, xi norm maximum",
+      "full endpoint xi and z state when available",
+      "full scaled residual when available"
+    ],
+    "retain_derived_vectors_and_matrices": [
+      "F0 for every point and tier",
+      "all D2 and R4 vectors, q2, forward/backward asymmetry, and second differences",
+      "production-tight-Radau endpoint and derivative envelopes",
+      "all three transported J matrices and their pairwise differences",
+      "J_R4, A_V, A_R, Delta, E, signs, singular spectra, conditions, eta, margin, and solve residual",
+      "80-decimal chart values and affine/geodesic ledgers",
+      "all local RHS analytic and finite-difference vectors at every fraction and direction",
+      "all cause completion and evidence tri-states with metric paths",
+      "all exact and numerical contract records",
+      "the unchanged fail-closed global ledger"
+    ],
+    "exception_policy": "Catch numerical exceptions at the smallest declared slot, retain completed slots, mark dependent slots explicitly, and still emit a finite allow_nan=false typed result. Infrastructure or drift exceptions emit a fail-closed INVALID_RUN skeleton when the manifest can be parsed, then exit 2.",
+    "nonfinite_policy": "Any nonfinite serialized scientific number invalidates that slot and is represented by null plus a typed error; JSON NaN or Infinity tokens are forbidden.",
+    "atomic_capture_sequence": [
+      "Run the committed runner against the committed manifest and checkpoint with pipefail while retaining the runner exit code.",
+      "Parse exactly one complete RESULT_JSON record in memory; reject missing, duplicate, truncated, nonfinite, wrong-schema, or trailing scientific stdout records.",
+      "Strip only the RESULT_JSON= transport prefix, canonicalize exactly as declared, append one LF, and validate the payload self-digest plus computed outer SHA in a staging location outside the repository.",
+      "Move no partial result into the repository. Add the fully validated raw artifact atomically, then commit it with its runner and provenance.",
+      "Only after that result-artifact commit may a prose report, ontology evidence, documentation, or later-phase input cite the Phase-42 result."
+    ],
+    "archive_policy": "The complete raw RESULT_JSON artifact, not only a report or compact summary, must be captured, hashed, and committed before any later phase consumes Phase-42 evidence."
+  },
+  "contracts": {
+    "exact": [
+      {
+        "id": "P42.freeze.two_stage_artifacts_and_environment",
+        "criterion": "The manifest-to-runner-to-result three-stage order holds; the committed runner is tracked, clean, latest-blob-identical, and ancestor-bound; checkpoint, extractor, Phase41/Phase39 closure, locks, commits, SHAs, HEAD, pycache snapshot, and the full runtime fingerprint match exactly at start and before emission.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P42.checkpoint.strict_integrity_and_cross_identities",
+        "criterion": "Strict JSON, outer and self digests, every independently decoded array, exact label sets, duplicate fields, three target cross-identities, and the embedded fail-closed ledger all pass without trusting the checkpoint's own pass booleans.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P42.freeze.checkpoint_only_fixed_roots_no_retune",
+        "criterion": "All three p_star and J_checkpoint arrays are immutable checkpoint inputs; no root, saddle, chart, whitening, branch, clipping, or fallback solver is called before, during, or after the diagnostic.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P42.map.order_steps_tiers_and_root_sign",
+        "criterion": "The R14 residual, row scaling, [Gamma,-K] convention, parameter order, suspect column, exact Phase41 per-column ladders, Phase42 ladders, solver tiers, cache isolation, bounds rule, and no-skipping rule equal this manifest.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P42.math.fixed_Richardson_metrics_and_homotopy",
+        "criterion": "D2/R4/five-point formulas, primary and neighbor h values, symmetric denominators, signed cosine, positive column normalization, solve-based eta, robustness budget, sufficient-only interpretation, and mutation controls are fixed exactly as declared.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P42.guard.chart_geodesic_and_real_directional_scope",
+        "criterion": "The affine chart remains the production map, the geodesic has only the same base and first tangent at fixed h, full-map complex step is forbidden, and neither diagnostic may replace a root, chart, map, sign, or intersection claim.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P42.retention.complete_declared_slot_schema",
+        "criterion": "All endpoint, augmented, chart, local-RHS, matrix, classification, and mutation slots are preenumerated exactly once and carry one terminal status; the result schema, prefix removal, self/outer hash conventions, and atomic artifact-before-report capture sequence equal this manifest.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P42.guard.fail_closed_global_outputs",
+        "criterion": "Phase 41 remains 8/9 with its tangent failure; desired outputs remain null; exactly sixteen prerequisites remain false, six global outputs remain null, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+        "failure_status": "INVALID_RUN"
+      }
+    ],
+    "numerical": [
+      {
+        "id": "P42.reproduction.fixed_checkpoint_and_three_way_J",
+        "criterion": "Its invalidating PASS predicate is only that, at all three immutable points, the unchanged original Phase-41 production state, residual, frames, and J reproduce the checkpoint within 5e-11. The same record must retain J_phase42_tight and all three signs, spectra, norms, pairwise metrics, and a separate tight scientific completion/evidence substatus; tight failure never changes this drift predicate.",
+        "failure_status": "PHASE41_MAP_OR_PLATFORM_DRIFT",
+        "failure_invalidates_run": true,
+        "invalidation_scope": "checkpoint-versus-original-production reproduction only",
+        "tight_scientific_subcomparison_failure_invalidates_run": false
+      },
+      {
+        "id": "P42.reproduction.phase41_failed_FD_negative_control",
+        "criterion": "Using the exact old per-column ladders, the old control is faithfully reproduced as TANGENT_CONTROL_FAILED with u2 plateau failure, root sign -1, and all three disclosed operator and plateau metrics within 5e-6 absolute tolerance; PASS never changes Phase 41 to 9/9.",
+        "failure_status": "PHASE41_MAP_OR_PLATFORM_DRIFT",
+        "failure_invalidates_run": true
+      },
+      {
+        "id": "P42.chart.initial_tangent_and_fixed_curvature",
+        "criterion": "All double and 80-decimal affine chart identities, launch tangents, same-base/same-first-tangent geodesic controls, and the fixed-h curvature ledger are complete at all three points.",
+        "failure_status": "CHART_TANGENT_INVALID_OR_INCONCLUSIVE",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P42.variational.local_RHS_and_time_column",
+        "criterion": "All fixed local real-directional R4 identities, the independently evaluated raw positive K endpoint tangent, its comparisons with checkpoint and original-production negative root columns, and the tight state-only R4_flow_time plus neighbors and Radau reference are complete. The tautological tight appended column is assembly-only; stable violations and unstable references receive distinct evidence tri-states.",
+        "failure_status": "LOCAL_VARIATIONAL_IDENTITY_NOT_SUPPORTED",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P42.derivative.all_column_fixed_R4",
+        "criterion": "Every one of 42 fixed primary R4 columns and both fixed neighbors survives, meets reference stability, signed direction, norm, per-column, and full-operator thresholds against the frozen and tight variational J matrices, with no favorable replacement.",
+        "failure_status": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P42.derivative.u2_solver_disentanglement",
+        "criterion": "All declared production and tight u2 main/tail slots; production, tight-affine, tight-geodesic, Radau-affine, and Radau-geodesic attempts at all three exact old u2 steps; main-ladder Radau u2/time references; solver envelopes; and fixed quantifier metrics are complete at all three points.",
+        "failure_status": "U2_CAUSE_UNRESOLVED",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P42.orientation.normalized_sufficient_homotopy",
+        "criterion": "At all three points the frozen J_checkpoint and preselected J_R4 have nonzero finite columns, matching nonzero signs, eta<1 with robust positive rounding margin and solve residual, and both mutation controls pass; failure is only noncertification.",
+        "failure_status": "LOCAL_ORIENTATION_DERIVATIVE_TRUST_NOT_SUPPORTED",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P42.classification.complete_tri_state_cause_ledger",
+        "criterion": "Every declared cause at every point and in the any-fixed-point aggregate has separate completion and SUPPORTED/NOT_SUPPORTED/INCONCLUSIVE evidence statuses with cited metric paths, including the exact UNRESOLVED rule and no forced unique cause.",
+        "failure_status": "CAUSE_LEDGER_INCOMPLETE",
+        "failure_invalidates_run": true
+      }
+    ]
+  },
+  "run_semantics": {
+    "exact_contract_count": 8,
+    "numerical_contract_count": 8,
+    "valid_scientific_inconclusive_exit_code": 0,
+    "invalid_run_exit_code": 2,
+    "INVALID_RUN_conditions": [
+      "input, source, commit, hash, schema, checkpoint, array, cross-field, lock, environment, or TOCTOU drift",
+      "root, saddle, chart, whitening, branch, or parameter retuning or fallback",
+      "column, sign, step, solver tier, tolerance, denominator, quantifier, reference, or retention-schema drift",
+      "Phase41 checkpoint-versus-original-production fixed-map/J or exact failed-FD negative-control reproduction drift; tight-J scientific disagreement is explicitly excluded",
+      "runner untracked, dirty, not latest-blob-identical, non-ancestor, self/HEAD/source/runtime/pycache TOCTOU drift, or violation of the manifest-to-runner-to-result commit order",
+      "missing, duplicate, or internally inconsistent completion/cause tri-state ledger entries",
+      "missing or non-null fail-closed global outputs"
+    ],
+    "valid_typed_scientific_outcomes": [
+      "PHASE42_REFERENCE_TANGENT_CORROBORATED",
+      "VARIATIONAL_RHS_BUG_EVIDENCE",
+      "INTEGRATED_VARIATIONAL_BUG_EVIDENCE",
+      "PRODUCTION_TANGENT_SOLVER_EVIDENCE",
+      "U2_CAUSE_UNRESOLVED",
+      "CHART_TANGENT_INVALID_OR_INCONCLUSIVE",
+      "LOCAL_VARIATIONAL_IDENTITY_NOT_SUPPORTED",
+      "LOCAL_ORIENTATION_DERIVATIVE_TRUST_NOT_SUPPORTED",
+      "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE"
+    ],
+    "numerical_failure_policy": "A complete non-drift scientific threshold failure is retained as a valid typed negative or inconclusive outcome and does not by itself cause exit 2. Drift-tagged reproduction failures and an incomplete or inconsistent required cause ledger are INVALID_RUN and exit 2.",
+    "result_emission": "When the manifest is parseable, emit one finite fail-closed RESULT_JSON skeleton even for INVALID_RUN, then exit 2. Progress is never mixed into stdout.",
+    "historical_phase41_status": "TANGENT_CONTROL_FAILED"
+  },
+  "claim_promotion_policy": {
+    "prospective_local_claim_if_all_required_numerical_contracts_pass": "At the three immutable Phase-41 m=4 roots only, the preselected fourth-order real finite-difference reference corroborates the transported residual Jacobian and a sufficient nonsingular normalized local matrix homotopy preserves its declared-coordinate root sign.",
+    "eta_failure_means_sign_change": false,
+    "phase41_9_of_9_may_be_claimed": false,
+    "global_intersection_may_be_claimed": false,
+    "common_determinant_line_may_be_claimed": false,
+    "cutoff_or_continuum_convergence_may_be_claimed": false,
+    "SUSY_or_quantum_gravity_explanation_may_be_claimed": false,
+    "inconclusive_if": "Any fixed reference, cross-method comparison, three-way J, local variational identity, signed per-column test, or sufficient homotopy certificate is incomplete or fails without stable bug evidence."
+  },
+  "required_fail_closed_outputs": {
+    "m2_and_m4_actions_identified": false,
+    "m2_and_m4_upward_cycles_identified": false,
+    "m2_and_m4_common_determinant_line_constructed": false,
+    "m3_and_m4_canonical_sign_equality_proved": false,
+    "m3_and_m4_common_determinant_line_constructed": false,
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "continuous_direction_coverage_proved": false,
+    "root_exhaustion_proved": false,
+    "exact_nonlinear_upward_manifold_certified": false,
+    "all_saddles_and_upward_components_complete": false,
+    "non_Stokes_chamber_certified": false,
+    "all_relative_good_ends_classified": false,
+    "physical_original_cycle_derived": false,
+    "metric_homotopy_tested": false,
+    "BFV_Pfaffian_Pin_orientation_computed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "quantum_gravity_explanation": null,
+    "gate1_status": "OPEN_PARTIAL_PROGRESS"
+  }
+}
