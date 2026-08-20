@@ -25,8 +25,11 @@ reported separately.
 
 The programme's current philosophical synthesis is documented in
 [`docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md):
-mathematical structure supplies a grammar of possibilities, while physical actuality additionally
-requires global selection, a state and measure, persistent dynamics, and an observable map.
+mathematical structure supplies candidate possibilities; physical content requires quotienting
+redundant descriptions, assigning consistent amplitudes, tracking persistent records, and confronting
+observables without assuming that one branch must be singled out.
+An intuitive, explicitly non-evidential companion is
+[`docs/ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](docs/ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md).
 
 ## What this workbench is testing
 
