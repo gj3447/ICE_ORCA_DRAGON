@@ -10,8 +10,8 @@
 
 The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–37 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T07:14:54.671Z` graph update, the collection has 525 nodes and
-1394 edges. Validation verifies 74/74 stored hashes (71 artifacts and 3 policies). The
+At the recorded `2026-08-20T07:48:35Z` graph update, the collection has 531 nodes and
+1419 edges. Validation verifies 75/75 stored hashes (71 artifacts and 4 policies). The
 Phase 16–37 run snapshots contain 364 named exact checks, 184 typed numerical-ledger checks, and one
 legacy separately recorded Phase 18 numerical control (185 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
@@ -41,6 +41,8 @@ confidence.
 ./ice ontology trace claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY --depth 2
 ./ice ontology trace claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY --depth 2
 ./ice ontology trace claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE --depth 2
+./ice ontology show policy:ordered-five-gate-advancement
+./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;
@@ -51,6 +53,14 @@ lesson. Its own audit narrows it from universal literal recursion to a type-corr
 claim grants one candidate explanatory privilege. `concept:invariant-difference-amplitude-and-record`
 and `concept:recursive-objectivity-and-world-resistance` preserve the deeper synthesis. The central
 philosophy and intuitive meditation are hash-tracked artifacts, explicitly not scientific evidence.
+
+The active `policy:ordered-five-gate-advancement` records the user-mandated promotion route from one
+specified original joint relative cycle to signed global intersections, hard CFU coefficients, the full
+BFV/Pfaffian/Pin line, a physical spinorial charge and common constraint domain (or a typed obstruction),
+and finally a persistent order parameter with interacting pole splitting. Downstream calculations may be
+explored early, but they remain conditional until the earlier gate supplies its evidence-backed typed
+output. The ordering is a revisable workflow rule governed by the recursive audit; it adds no physics
+evidence and predicts no gate outcome.
 
 ## How to read a claim
 

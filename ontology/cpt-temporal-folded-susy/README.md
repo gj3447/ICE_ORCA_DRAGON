@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T07:14:54.671Z`; 525 nodes, 1394 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 74/74 stored hashes (71 artifacts and 3 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T07:48:35Z`; 531 nodes, 1419 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 75/75 stored hashes (71 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -161,6 +161,30 @@ The graph's `reading-path:closed-fold-holonomy-to-full-pfaffian-line` keeps loca
 3. `claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY` retains only the same-basepoint conjugacy invariants of the nonzero minimal-jump sampled lift, conditional on no unresolved intersample zero or alias winding;
 4. `claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE` is contradicted in the exact finite-fiber control: a physical sheet anchor or distinct derived fermionic holonomy would be additional input, not a consequence of the bare swap;
 5. `concept:reduced-bosonic-half-form-versus-fermion-pfaffian-and-pin` and `open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate` retain the original cycle, hard CFU coefficients, spacetime Pin lift, fermion Pfaffian line, complete BFV/SUGRA operator, supercharge, quantum constraint, and physical state as open.
+
+### Ordered five-gate reading path
+
+The graph's `reading-path:ordered-five-gate-global-cycle-to-pole-spectrum` decomposes the Phase-37
+omnibus frontier into five typed promotion gates:
+
+1. `open:gate1-original-cycle-signed-global-intersections` transports one pre-specified regulated joint
+   lapse--field--gauge relative cycle and fixes its complete oriented integer intersection vector;
+2. `open:gate2-hard-cfu-airy-coefficients` derives the regular hard quotient and absolute Airy/Airy-prime
+   coefficients for the Gate-1 cycle without double-counting the soft factor;
+3. `open:gate3-full-bfv-pfaffian-pin-holonomy` computes the selected saddle combination's complete
+   gauge-reduced boson--fermion--ghost determinant/Pfaffian line, Pin lift, and closed holonomy;
+4. `open:gate4-spinorial-charge-domain-constraint-closure` either constructs a conserved spinorial
+   charge on one positive common domain with anomaly-free constraint closure or records the typed global
+   obstruction instead;
+5. `open:gate5-persistent-order-and-pole-splitting` derives a finite-energy persistent order parameter
+   and a nonzero late-time interacting boson--fermion retarded-pole difference against matched controls.
+
+The `BLOCKED_BY` chain is a claim-promotion dependency, not a ban on exploratory calculation. A later
+calculation performed early remains `CONDITIONAL` until every earlier gate supplies its compatible
+evidence-backed typed output. A complete stable zero vector, a proved obstruction, or another scoped
+negative answer can resolve a gate epistemically, but it unlocks the preferred downstream route only when
+the next gate's required input actually exists. This roadmap does not alter any Phase-37 claim or scope,
+and it stops before asserting a physical state, a completed quantum-cosmology model, or quantum gravity.
 
 ## Concept map
 
@@ -546,6 +570,16 @@ and intuitive meditation document them without evidential polarity. The policy i
 programme through `GOVERNED_BY`; it cannot support or contradict a scientific claim. Its SYMPOSIUM bridge
 is deliberately `UNRESOLVED` because no authorized external UID or writer is available.
 
+## Programme policy — ordered five-gate advancement
+
+`policy:ordered-five-gate-advancement` hash-tracks the user-mandated route in
+[`ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md`](../../docs/decisions/ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md).
+It turns the large Phase-37 frontier into five explicit typed debts and records which output may support
+which later inference. It is workflow metadata, not preregistration, evidence, or a forecast that any gate
+will succeed. The policy is itself `GOVERNED_BY` the recursive self-application audit: if a more direct
+formulation changes the dependency structure, the order must be justified and revised rather than treated
+as a natural law. The five gate nodes stay `OPEN`; no scientific claim state changes in this integration.
+
 ## IDs and claim states
 
 IDs use stable semantic prefixes: `programme:`, `phase:`, `concept:`, `claim:`, `evidence:`, `scope:`, `open:`, `source:`, `artifact:`, and `policy:`. `edge:` IDs identify directed relations; `result:` IDs identify observed run snapshots.
@@ -689,6 +723,11 @@ All entries below have state `OPEN` in the graph.
 | `open:p35-absolute-detline-full-bfv-and-global-cycle` | Prove a zero-free continuum determinant section, identify the physical canonical block and endpoint measure, fix the absolute determinant/Maslov orientation separately from the Airy cycle connection, compute the regulated full BFV/SUGRA superdeterminant, and complete the global cycle before assigning `n_sigma` or a physical state |
 | `open:p36-original-cycle-hard-determinant-and-global-bfv-state` | Transport one specified incoming physical dual and the complete original relative cycle through the Airy chart to every good end; realize the relevant upward cycles, derive the analytic hard quotient and even/odd Airy amplitudes, orient the regulated determinant, and only then assign an arm, global `n_sigma`, or a physical BFV/SUGRA state |
 | `open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate` | Transport one regulated original lapse-field relative cycle through the fold, compute its signed global intersections and hard CFU coefficients, then lift the selected saddle combination to the complete boson--fermion--ghost BFV/SUGRA determinant/Pfaffian line before testing Pin, a global intertwiner or anomaly, the quantum constraints, or a state |
+| `open:gate1-original-cycle-signed-global-intersections` | Pre-specify and transport the regulated joint lapse--field--gauge relative cycle through every relevant saddle, upward cycle, sheet, singularity, Stokes jump, and good end; compute a complete orientation-stable integer intersection vector |
+| `open:gate2-hard-cfu-airy-coefficients` | Convert the Gate-1 cycle vector into regular hard Airy/Airy-prime coefficients, match both outer saddles and the absolute phase, and avoid double-counting the soft fold factor |
+| `open:gate3-full-bfv-pfaffian-pin-holonomy` | Compute the full gauge-reduced boson--fermion--ghost BFV/SUGRA determinant/Pfaffian line, zero modes, omitted sectors, Pin lift, spectral flow, and basis-independent closed holonomy on the selected saddle combination |
+| `open:gate4-spinorial-charge-domain-constraint-closure` | Construct a conserved fermion-odd Lorentz-spinor charge on one positive common domain with anomaly-free BFV/local-SUGRA closure, or establish and correctly name the typed global obstruction |
+| `open:gate5-persistent-order-and-pole-splitting` | Derive a finite-energy persistent gauge-invariant order parameter and a late-time interacting boson--fermion retarded-pole difference against trivial-holonomy, zero-order, seam-off, dilution, and backreaction controls |
 | Canonical BFV sign vs physical determinant line | A stable unreduced `(q,p,T)` determinant sign and same-regulator quartet cancellation do not fix momentum-contour orientation, zero modes, absolute phase, or the constraint-reduced inhomogeneous superdeterminant. |
 | Positive lapse half-line vs full real lapse | The former is a causal sourced resolvent with endpoint contact; the latter is a separate group-averaging contour whose relative-homology bypass must be specified. |
 | Projected coordinate sign vs signed joint/global coefficient | A finite-radius projected crossing on one tracked lapse base has coordinate sign `+1` only under the declared orientations; it is neither a signed full-joint local intersection nor the sum over every complete upward component, complex sheet, end, Stokes jump, and determinant-line orientation. |
@@ -757,8 +796,9 @@ The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOL
 Phase 24 adds one more unresolved bridge at `phase:p24`. The older
 `sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
 planning node and was deliberately not reused. Phases 25–37 add thirteen fresh unresolved phase lookups;
-similarly numbered historical planning nodes were not reused. The recursive-audit policy adds one separate
-repository-workflow lookup, so there are twenty-two expected unresolved bridges in the current graph.
-No external UID was invented for the new lookups. A resolved UID proves only that
-the target exists; it is not an evidence receipt, equivalence assertion, review outcome, or KG
-ratification.
+similarly numbered historical planning nodes were not reused. The recursive-audit policy and the ordered
+five-gate policy add two separate repository-workflow lookups, so there are twenty-three expected
+unresolved bridges in the current graph. The latter remains local because no authorized external UID or
+writer exists; no identity was invented for the roadmap.
+A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,
+review outcome, or KG ratification.

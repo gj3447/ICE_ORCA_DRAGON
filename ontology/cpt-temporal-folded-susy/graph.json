@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T07:14:54.671Z",
+  "updated_at_utc": "2026-08-20T07:48:35Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -615,6 +615,24 @@
         "open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate",
         "open:p28-global-relative-homology-and-intersection",
         "open:p28-full-gauge-reduced-superdeterminant",
+        "open:p28-physical-state-and-density"
+      ]
+    },
+    {
+      "id": "reading-path:ordered-five-gate-global-cycle-to-pole-spectrum",
+      "title": "Ordered five-gate route from the original cycle to a pole-spectrum test",
+      "summary": "Start at the strict Phase-37 boundary, apply the active workflow-only ordering policy, and require the typed output of each gate before promoting the next. Exploratory downstream work may run early but remains conditional; this path stops before calling any local holonomy a physical state, quantum-cosmology completion, or quantum-gravity theory.",
+      "nodes": [
+        "claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY",
+        "claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY",
+        "claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE",
+        "open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate",
+        "policy:ordered-five-gate-advancement",
+        "open:gate1-original-cycle-signed-global-intersections",
+        "open:gate2-hard-cfu-airy-coefficients",
+        "open:gate3-full-bfv-pfaffian-pin-holonomy",
+        "open:gate4-spinorial-charge-domain-constraint-closure",
+        "open:gate5-persistent-order-and-pole-splitting",
         "open:p28-physical-state-and-density"
       ]
     }
@@ -1844,6 +1862,16 @@
       "path": "docs/decisions/ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md",
       "sha256": "1f20c81bae626a3e58ae64bb6fd01839351819f542b73a00ebdc5bba4776e62b",
       "introduced_in_commit": "8a3aad8a3c3d0d7e035ba9732a02fcdb8d51fe71"
+    },
+    {
+      "id": "policy:ordered-five-gate-advancement",
+      "type": "policy",
+      "title": "Ordered five-gate advancement from the original cycle to the SUSY spectrum",
+      "summary": "The user-mandated core route advances in five typed gates: original joint relative cycle and signed global intersections, hard CFU coefficients, the full BFV/Pfaffian/Pin line, a conserved spinorial charge with common domain and constraint closure or a typed obstruction, and a persistent order parameter with interacting pole splitting. Later gates may be explored early but cannot be promoted or used as established downstream input before prior gates supply compatible evidence-backed outputs. This is a revisable workflow rule, never scientific evidence or a promised outcome.",
+      "state": "ACTIVE",
+      "path": "docs/decisions/ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md",
+      "sha256": "fc4d5fa3758faf32511f00648993a7563a93f10a2138738c1980163b286fffed",
+      "introduced_in_commit": "1ab7b779cf6fbdc4343ba5200ea8efe6037243a9"
     },
     {
       "id": "concept:invariant-difference-amplitude-and-record",
@@ -6523,6 +6551,46 @@
       "summary": "The local closed root and reduced-half-form holonomies do not select the original lapse-field relative cycle or its signed intersections. One regulated original cycle must be transported through the fold to all relevant upward cycles and good ends, its hard CFU coefficients computed, and only then its complete boson--fermion--ghost BFV/SUGRA determinant/Pfaffian line and global intertwiner or anomaly tested before any Pin, supercharge, quantum constraint, or state claim.",
       "state": "OPEN",
       "question": "Can one regulated original lapse-field relative cycle fix the signed global intersections and hard CFU coefficients, and can the selected saddle combination then be lifted to a nondegenerate full BFV/SUGRA boson--fermion--ghost Pfaffian line satisfying the required global consistency conditions?"
+    },
+    {
+      "id": "open:gate1-original-cycle-signed-global-intersections",
+      "type": "open_problem",
+      "title": "Gate 1 — transport the original cycle and fix signed global intersections",
+      "summary": "Specify one regulated original joint lapse--field--gauge relative cycle before inspecting the result, transport it through the fold to every relevant saddle, upward cycle, complex sheet, singular divisor, Stokes jump, and good end, and compute the complete orientation-stable integer intersection vector. A projected crossing, one bounded arm, or one preferred lapse bypass does not close this gate; a complete stable zero vector is a valid negative resolution.",
+      "state": "OPEN",
+      "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
+    },
+    {
+      "id": "open:gate2-hard-cfu-airy-coefficients",
+      "type": "open_problem",
+      "title": "Gate 2 — derive the hard CFU Airy and Airy-prime coefficients",
+      "summary": "Given Gate 1's selected integer cycle vector, derive the regular hard quotient and the even/odd coefficients multiplying the canonical Airy and Airy-prime terms, match them to both outer saddle amplitudes with a consistent absolute phase, and avoid double-counting the soft fold factor. Airy regularity, root exchange, or separate-saddle determinants alone do not close this gate.",
+      "state": "OPEN",
+      "question": "Can the Gate-1 cycle vector be converted into regular hard Airy and Airy-prime coefficients that match the outer saddles, preserve the absolute orientation convention, and do not double-count the soft factor?"
+    },
+    {
+      "id": "open:gate3-full-bfv-pfaffian-pin-holonomy",
+      "type": "open_problem",
+      "title": "Gate 3 — compute the full BFV/Pfaffian line and Pin holonomy",
+      "summary": "On the saddle combination fixed by Gates 1--2, compute the gauge-reduced boson--fermion--ghost determinant/Pfaffian line with zero modes, inhomogeneous sectors, boundary conditions, renormalization, spectral flow, and a source-defined Pin/Clifford lift, then test regulator- and gauge-independent closed holonomy. A reduced bosonic endpoint half-form is not this line.",
+      "state": "OPEN",
+      "question": "Does the Gates-1--2 saddle combination carry a well-defined gauge- and regulator-independent full BFV/SUGRA determinant/Pfaffian line with a consistent Pin lift and basis-independent closed holonomy?"
+    },
+    {
+      "id": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "type": "open_problem",
+      "title": "Gate 4 — test the spinorial charge, common domain, and constraint closure",
+      "summary": "Determine whether the Gate-3 line and holonomy admit a conserved fermion-odd Lorentz-spinor charge on one positive physical inner product and common self-adjoint domain, intertwine the selected line, and close the full BFV/local-SUGRA constraints without anomaly; otherwise state the global obstruction instead of calling it a conserved temporal supercharge.",
+      "state": "OPEN",
+      "question": "Does the Gate-3 holonomy preserve a conserved spinorial charge on a common positive self-adjoint domain with anomaly-free constraint closure, or does it instead furnish a typed global obstruction?"
+    },
+    {
+      "id": "open:gate5-persistent-order-and-pole-splitting",
+      "type": "open_problem",
+      "title": "Gate 5 — derive persistent SUSY breaking and interacting pole splitting",
+      "summary": "Within the Gate-4-compatible branch, derive a finite-energy gauge-invariant order parameter that persists after the fold and compute a nonzero late-time difference between renormalized interacting boson and fermion retarded poles, with matched trivial-holonomy, zero-order, seam-off, dilution, backreaction, and lifetime controls. Occupation differences in an unchanged free bulk do not close this gate.",
+      "state": "OPEN",
+      "question": "Does the Gate-4-compatible branch produce a persistent finite-energy SUSY-breaking order parameter and a nonzero late-time interacting boson--fermion pole splitting against matched controls?"
     },
     {
       "id": "artifact:p37-script",
@@ -15190,6 +15258,164 @@
       "from": "open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate",
       "relation": "CITES",
       "to": "source:freed-hopkins-2016"
+    },
+    {
+      "id": "edge:1395",
+      "from": "programme:cpt-temporal-folded-susy",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ordered-five-gate-advancement"
+    },
+    {
+      "id": "edge:1396",
+      "from": "open:gate1-original-cycle-signed-global-intersections",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1397",
+      "from": "open:gate2-hard-cfu-airy-coefficients",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1398",
+      "from": "open:gate3-full-bfv-pfaffian-pin-holonomy",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1399",
+      "from": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1400",
+      "from": "open:gate5-persistent-order-and-pole-splitting",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1401",
+      "from": "open:gate2-hard-cfu-airy-coefficients",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-original-cycle-signed-global-intersections",
+      "note": "Promotion dependency only: exploratory calculations may run early but cannot count as programme advancement before the prior typed output is evidenced."
+    },
+    {
+      "id": "edge:1402",
+      "from": "open:gate3-full-bfv-pfaffian-pin-holonomy",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate2-hard-cfu-airy-coefficients",
+      "note": "Promotion dependency only: exploratory calculations may run early but cannot count as programme advancement before the prior typed output is evidenced."
+    },
+    {
+      "id": "edge:1403",
+      "from": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate3-full-bfv-pfaffian-pin-holonomy",
+      "note": "Promotion dependency only: exploratory calculations may run early but cannot count as programme advancement before the prior typed output is evidenced."
+    },
+    {
+      "id": "edge:1404",
+      "from": "open:gate5-persistent-order-and-pole-splitting",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "note": "Promotion dependency only: exploratory calculations may run early but cannot count as programme advancement before the prior typed output is evidenced."
+    },
+    {
+      "id": "edge:1405",
+      "from": "open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-original-cycle-signed-global-intersections",
+      "note": "The Phase-37 omnibus frontier is decomposed into typed gates without changing its OPEN state or adding scientific evidence."
+    },
+    {
+      "id": "edge:1406",
+      "from": "open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate2-hard-cfu-airy-coefficients",
+      "note": "The Phase-37 omnibus frontier is decomposed into typed gates without changing its OPEN state or adding scientific evidence."
+    },
+    {
+      "id": "edge:1407",
+      "from": "open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate3-full-bfv-pfaffian-pin-holonomy",
+      "note": "The Phase-37 omnibus frontier is decomposed into typed gates without changing its OPEN state or adding scientific evidence."
+    },
+    {
+      "id": "edge:1408",
+      "from": "open:gate1-original-cycle-signed-global-intersections",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:1409",
+      "from": "open:gate2-hard-cfu-airy-coefficients",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p33-airy-cycle-amplitude-and-global-continuation"
+    },
+    {
+      "id": "edge:1410",
+      "from": "open:gate3-full-bfv-pfaffian-pin-holonomy",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p28-full-gauge-reduced-superdeterminant"
+    },
+    {
+      "id": "edge:1411",
+      "from": "open:gate3-full-bfv-pfaffian-pin-holonomy",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p17-pin-clifford-lift"
+    },
+    {
+      "id": "edge:1412",
+      "from": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p17-conserved-charge"
+    },
+    {
+      "id": "edge:1413",
+      "from": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p17-gluing-domain"
+    },
+    {
+      "id": "edge:1414",
+      "from": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p17-projector-charge-compatibility"
+    },
+    {
+      "id": "edge:1415",
+      "from": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p17-reality-positivity-junction"
+    },
+    {
+      "id": "edge:1416",
+      "from": "open:gate4-spinorial-charge-domain-constraint-closure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:full-4d-sugra-interface"
+    },
+    {
+      "id": "edge:1417",
+      "from": "open:gate5-persistent-order-and-pole-splitting",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p18-persistent-order-parameter"
+    },
+    {
+      "id": "edge:1418",
+      "from": "open:gate5-persistent-order-and-pole-splitting",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p18-interacting-wigner-self-energies"
+    },
+    {
+      "id": "edge:1419",
+      "from": "policy:ordered-five-gate-advancement",
+      "relation": "GOVERNED_BY",
+      "to": "policy:recursive-self-application-audit",
+      "note": "The ordering remains revisable under type, counterexample, ablation, reversal, and invariant-observable audit; neither policy is scientific evidence."
     }
   ],
   "kg_bridges": [
@@ -15479,6 +15705,16 @@
       "checked_at_utc": "2026-08-20T07:14:54.671Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase37 closed simple-fold root and reduced half-form holonomy",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "policy:ordered-five-gate-advancement",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-20T07:48:35Z",
+      "lookup_key": "ICE ordered five gate programme global cycle hard CFU BFV Pfaffian spinorial charge persistent pole splitting 2026-08-20",
+      "note": "The user-mandated ordered programme is recorded as repository-local workflow. No authorized external UID or writer is available, so no external identity was invented."
     }
   ]
 }
