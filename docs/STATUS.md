@@ -374,10 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–36 is now indexed in a repository-local typed research graph with **506 nodes and 1331 directed
+Phase 15R–36 is now indexed in a repository-local typed research graph with **507 nodes and 1332 directed
 relations**. It preserves 123 claims, 75 evidence groups, 39 explicit scopes, 43 open problems, 63
 literature sources, the Phase 16–36 run payloads (346 named exact checks, 176 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 68/68 verified artifact and policy hashes,
+one separately recorded legacy Phase-18 numerical control), 69/69 verified artifact and policy hashes,
 and cautious bridges to
 the older SYMPOSIUM KG.
 

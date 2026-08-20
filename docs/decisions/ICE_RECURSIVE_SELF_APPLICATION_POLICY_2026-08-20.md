@@ -1,8 +1,8 @@
 # ICE 무특권 재귀 검증 정책
 
-> **상태:** ACTIVE methodology policy  
+> **상태:** ACTIVE methodology policy
 > **기원:** 2026-08-20 사용자 제공 교훈. Greg Egan의 *Permutation City*를 읽는 방식에서
-> 영감을 받았으나, 작품 해석이나 작품 속 이론을 과학적 근거로 채택하는 문서가 아니다.  
+> 영감을 받았으나, 작품 해석이나 작품 속 이론을 과학적 근거로 채택하는 문서가 아니다.
 > **적용 범위:** ICE_ORCA_DRAGON에서 새로 제안되는 철학적 원리, 수학적 대응, 물리적
 > bridge, 상태 선택 규칙과 관측 해석.
 

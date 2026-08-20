@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-17T20:00:27.984Z",
+  "updated_at_utc": "2026-08-20T05:15:08Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -572,6 +572,19 @@
         "open:p28-global-relative-homology-and-intersection",
         "open:p28-full-gauge-reduced-superdeterminant",
         "open:p28-physical-state-and-density"
+      ]
+    },
+    {
+      "id": "reading-path:no-privileged-recursive-self-application",
+      "title": "Apply every proposed bridge and selection rule back to itself",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch.",
+      "nodes": [
+        "policy:recursive-self-application-audit",
+        "claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS",
+        "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
+        "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
+        "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
+        "open:p36-original-cycle-hard-determinant-and-global-bfv-state"
       ]
     }
   ],
@@ -1790,6 +1803,16 @@
       "path": "AGENTS.md",
       "sha256": "8e757b1abbcf28a92cc65cc834d892ebbc9916f39817396a24ac45c0c944a265",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
+    },
+    {
+      "id": "policy:recursive-self-application-audit",
+      "type": "policy",
+      "title": "No-privileged recursive self-application audit",
+      "summary": "Every proposed principle or bridge must be reapplied to itself and to the rule that selected it, with explicit condition, counterexample, ablation, reversal, invariant, observable, and definition-stability checks. Preferred sheets, contours, measures, originating intuitions, and the programme's own philosophy receive no exemption. This is a workflow policy, never scientific evidence.",
+      "state": "ACTIVE",
+      "path": "docs/decisions/ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md",
+      "sha256": "aa60fa2d7e5b66c2936f43f08064f1de1ad543ce79a9108004e1f4002780b46b",
+      "introduced_in_commit": "8a3aad8a3c3d0d7e035ba9732a02fcdb8d51fe71"
     },
     {
       "id": "phase:p19",
@@ -14544,6 +14567,13 @@
       "from": "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING"
+    },
+    {
+      "id": "edge:1332",
+      "from": "programme:cpt-temporal-folded-susy",
+      "relation": "GOVERNED_BY",
+      "to": "policy:recursive-self-application-audit",
+      "note": "User-requested methodology lesson: recurse on the proposed bridge and its selection rule without treating the preferred construction as a privileged exception. Workflow only; not scientific evidence."
     }
   ],
   "kg_bridges": [
@@ -14813,6 +14843,16 @@
       "checked_at_utc": "2026-08-17T20:00:27.984Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase36 declared local Airy contour-basis identities and lateral BVP test",
       "note": "No authorized matching external UID exists; similarly numbered historical planning nodes were not reused."
+    },
+    {
+      "local_node_id": "policy:recursive-self-application-audit",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-20T05:15:08Z",
+      "lookup_key": "ICE lesson no privileged exception recursive self application audit 2026-08-20",
+      "note": "The user-requested lesson is recorded in the repository-local research graph. No authorized external UID or writer is available, so the bridge remains unresolved rather than inventing an external identity."
     }
   ]
 }

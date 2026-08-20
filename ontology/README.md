@@ -10,8 +10,8 @@
 
 The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–36 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-17T20:00:27.984Z` graph update, the collection has 506 nodes and
-1331 edges. Validation verifies 68/68 stored hashes (66 artifacts and 2 policies). The
+At the recorded `2026-08-20T05:15:08Z` graph update, the collection has 507 nodes and
+1332 edges. Validation verifies 69/69 stored hashes (66 artifacts and 3 policies). The
 Phase 16–36 run snapshots contain 346 named exact checks, 176 typed numerical-ledger checks, and one
 legacy separately recorded Phase 18 numerical control (177 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
@@ -42,6 +42,11 @@ confidence.
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;
 `trace` walks incoming and outgoing relations to the requested bounded depth.
+
+The active `policy:recursive-self-application-audit` records the user-requested no-privileged-exception
+lesson. It requires every proposed bridge or selection rule to be tested under explicit conditions,
+counterexample, ablation, reversal, self-application, invariant/observable, and definition-stability
+checks. It is workflow memory, never scientific evidence.
 
 ## How to read a claim
 

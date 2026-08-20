@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-17T20:00:27.984Z`; 506 nodes, 1331 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 68/68 stored hashes (66 artifacts and 2 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T05:15:08Z`; 507 nodes, 1332 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 69/69 stored hashes (66 artifacts and 3 policies).
 
 ## Quick answers
 
@@ -494,6 +494,27 @@ gauge-reduced kernel, physical endpoint product, and trace-class state therefore
 | Fixed-parameter BFV modulus vs standalone ghost determinant | Coordinate-length ghost scaling is canceled by the matching rescaling and gauge-condition delta; proper time remains a modulus with a T-independent reduced factor in the frozen control. |
 | Lapse-weight insertion vs operator object | An inserted factor of `N` changes a half-line resolvent to a double pole and a full-line constraint delta to a derivative distribution; it is not a neutral subtraction. |
 | Real-lapse Fresnel vs conformal contour | Oscillatory distributional normalization on real lapse does not solve the opposite-sign conformal damping problem or choose the gravitational thimble. |
+
+## Method policy — no privileged exception
+
+`policy:recursive-self-application-audit` stores the user-requested lesson inspired by Greg Egan's
+recursive mode of thought. It does not treat the novel's ideas or their interpretation as physics
+evidence. It turns the lesson into an active audit:
+
+1. freeze the exact conditions of a proposed `A → B` bridge;
+2. seek a minimal counterexample;
+3. remove `A` and reverse the arrow;
+4. apply the rule to itself and to the rule that selected the preferred branch;
+5. demand a basis-independent invariant and observable;
+6. check whether the result silently changed the original definitions;
+7. finish with `KEEP`, `NARROW`, `BRANCH`, `KILL`, or an explicit `OPEN`.
+
+Applied to the current frontier, “global selection is required” recursively becomes “what derives the
+global selection rule?” A convenient lapse bypass, Airy contour, or sector prior has no privileged
+status. The complete original problem must derive it, or the non-uniqueness remains open. The policy is
+attached to the programme through `GOVERNED_BY`; it cannot support or contradict a scientific claim.
+Its SYMPOSIUM bridge is deliberately `UNRESOLVED` because no authorized external UID or writer is
+available.
 
 ## IDs and claim states
 
