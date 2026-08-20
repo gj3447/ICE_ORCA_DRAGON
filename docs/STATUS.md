@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 72 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 74 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,13 +374,14 @@ and
 
 ## Research ontology memory
 
-Phase 15R–41 is indexed in a repository-local typed research graph with **579 nodes and 1617 directed
-relations**. It preserves 141 claims (74 `SUPPORTED`, 66 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
-Phase 16–41 run payloads: 410 named exact checks and 238 current typed numerical checks, split as 237
-`PASS` and 1 `FAIL`. Including the separately catalogued passing legacy Phase-18 control gives 239
-typed numerical checks, split as 238 `PASS` and 1 `FAIL`. The graph contains 86 artifacts, 85 evidence
-nodes, 27 phases, and 44 scopes; all 90 recorded hashes validate (86 artifacts and 4 policies), with 26
-declared validation warnings. It also preserves cautious bridges to the older SYMPOSIUM KG.
+Phase 15R–42 is indexed in a repository-local typed research graph with **594 nodes and 1669 directed
+relations**. It preserves 145 claims (78 `SUPPORTED`, 66 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
+Phase 16–42 run payloads: 418 named exact checks and 246 current typed numerical checks, split as 243
+`PASS`, 2 `FAIL`, and 1 `INCONCLUSIVE`. Including the separately catalogued passing legacy Phase-18
+control gives 247 typed numerical checks, split as 244 `PASS`, 2 `FAIL`, and 1 `INCONCLUSIVE`. The graph
+contains 93 artifacts, 87 evidence nodes, 28 phases, and 45 scopes; all 97 recorded hashes validate (93
+artifacts and 4 policies), with 26 declared validation warnings. It also preserves cautious bridges to
+the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
   is the human concept map.
@@ -866,7 +867,7 @@ See
 and
 [`../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py`](../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 41
+## Previous direct calculation — CPT × Temporal-Folded SUSY Phase 41
 
 Phase 41 returns exit 0 with **7/7 exact contracts and 8/9 typed numerical contracts**. Exit 0 denotes
 a valid typed scientific run, not nine numerical passes: the sole negative record is
@@ -902,6 +903,52 @@ See
 [`../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md)
 and
 [`../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py`](../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 42
+
+Phase 42 returns exit 0 with **8/8 exact contracts and 6/8 numerical contracts**. Exit 0 denotes
+`VALID_TYPED_RUN`, not eight numerical passes. The two scientific non-PASS records are
+`LOCAL_VARIATIONAL_IDENTITY_NOT_SUPPORTED` and
+`REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE`; neither is rewritten as an infrastructure failure or
+removed from the aggregate. The diagnostic consumes three immutable Phase-41 roots—shared-zero,
+$\phi+$, and $a+$—without retuning a root, chart, sign, or finite-difference step.
+
+The committed Phase-41 states, residuals, frames, and Jacobians are reproduced exactly in this run, and
+the historical $u_2$ first-pair plateaus reappear at approximately 0.299, 0.222, and 0.795. At $\phi+$
+and $a+$, the preselected fixed-$R_4$ references are stable and the production-to-tight discrepancy
+grows as the old step shrinks. The complete tri-state ledger therefore supports both
+`SOLVER_NOISE_EVIDENCE` and `STEP_PAIR_SELECTION_ARTIFACT` there. At shared-zero, the same trend is not
+promoted because its fixed reference fails the prerequisite.
+
+The all-column fixed-$R_4$ contract fails only at the shared-zero $u_2$ column: its internal-neighbor
+stability is $5.97045\times10^{-3}$ against the frozen $5\times10^{-3}$ limit. Its direction, norm, and
+whole-matrix comparisons remain small, so this is a reference-stability failure rather than a detected
+sign reversal. Because the contract quantifies over all three roots, the Phase-42 reference tangent
+remains `REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE`.
+
+At each root, 29 of 30 local Hessian-action directions pass the reference-stability prerequisite. Among
+them, 12, 11, and 10 respectively exceed the frozen $10^{-7}$ analytic-identity threshold. These stable
+violations support the protocol-defined `VARIATIONAL_RHS_BUG_EVIDENCE` anomaly label at all three roots.
+The label is not proof of a code defect, a faulty line, or a false continuum equation, and it is not a
+unique-cause verdict. In particular, the Phase-41 time tangent is appended from the final augmented
+endpoint rather than independently integrated. Its mismatch with state-only endpoints lies in the same
+solver envelope, so it is explicitly excluded as independent bug evidence.
+
+All three normalized $14\times14$ matrix pairs satisfy the sufficient $\eta<1$ nonsingular linear-
+homotopy test, with $\eta$ between $4.03\times10^{-4}$ and $1.01\times10^{-3}$. This certifies only a
+local path in the declared coordinate frames. It does not construct a determinant line, orient the full
+upward cycle, identify the physical original contour, or repair the inconclusive reference tangent.
+
+Six promoted outputs—including the bounded-chain sum, global vector, global $n_\sigma$, cutoff limit,
+continuum limit, and quantum-gravity explanation—remain `null`; all sixteen completion flags remain
+false. Global promotion is `PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and the runnable
+catalog is now 74.
+
+See
+[`../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md`](../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md),
+[`../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py`](../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py),
+and
+[`../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json`](../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json).
 
 ## Historical scientific ledger
 

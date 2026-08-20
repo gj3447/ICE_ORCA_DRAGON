@@ -18,7 +18,7 @@
 
 ---
 
-> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 72개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
+> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 74개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
 >
 > **중요한 정정**: 화자 자신은 **초공동의 용사(#3)**. ICE ORCA DRAGON은 *물리 영역*의 사도.
 >
@@ -35,9 +35,9 @@
 - *얼음(저온 물리) + 범고래(생물 + 깊이) + 용(상승)* 3 합성 — 물리 영역의 신화적 인격화
 - 12사도_목록_업데이트.md "ICE ORCA DRAGON이 진정한 사도야" — *세상의 진정한 본질 = 물리학* 의미
 
-### 2. 공학 측 — 역사적 계산 corpus + 72 runnable entries
+### 2. 공학 측 — 역사적 계산 corpus + 74 runnable entries
 
-이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 72개 entry가 **ICE 측 물리·수학
+이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 74개 entry가 **ICE 측 물리·수학
 검증**을 실행한다. 아래 pattern은 source provenance이고 CLI 이름 목록이 아니다:
 - `cd_breaking_*.py` — Cayley-Dickson breaking (32D vs 64D algebra identities)
 - `cd_embedding.py`, `cd_path_amplitude*.py` — CD construction
@@ -129,7 +129,7 @@ ordinary documentation work does not directly `SET` the KG.
   No bounded-chain sum, physical original cycle, cutoff limit, BFV/Pfaffian/Pin line, or global
   $n_\sigma$ is inferred; those outputs remain `null` and Gate 1 remains open.
 
-### Current CPT calculation provenance — Phase 41
+### Previous CPT calculation provenance — Phase 41
 
 - [`../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json)
   is a post-feasibility workflow input freeze, not preregistration or scientific evidence. It fixes the
@@ -150,6 +150,48 @@ ordinary documentation work does not directly `SET` the KG.
   Six promoted outputs remain `null`, all sixteen completion flags remain false, and Gate 1 remains
   `OPEN_PARTIAL_PROGRESS`; the calculation does not license a global intersection integer, cutoff or
   continuum limit, BFV/Pfaffian/Pin orientation, SUSY-breaking mechanism, or quantum-gravity claim.
+
+### Current CPT calculation provenance — Phase 42
+
+- [`../../cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py`](../../cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py)
+  is the post-hoc checkpoint extractor committed in
+  `712c54b13869b1aee26503947c60dfe34bfa2a3c`; its SHA-256 is
+  `5b2492347405bef0fed26fbfe2a68648899219c8583c20b8de0b2be02419de6d`. The resulting
+  [`../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json)
+  was committed in `731579c37867a2041b65359bfc649be3b66900c7` with SHA-256
+  `ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6`. It is a regenerated
+  checkpoint, not a byte archive of Phase-41 stdout or preregistered evidence.
+- [`../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json)
+  is the post-failure workflow freeze committed in `dc21816b9fef9ad658fdd728e73453ffeee46f4d`,
+  SHA-256 `1cc88c489b5240019aaf339b25d0cebac9b4a1560b09cbec9c3079ce2067afb6`. It fixes the
+  three roots, chart, sign, ordered step ladders, solver tiers, cause rules, and fail-closed global
+  outputs without supplying a desired result; it is not preregistration.
+- [`../../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py`](../../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py)
+  is the runner committed in `1c0d7fed4aa99c6424ec659dae8ba6f24b791926`, SHA-256
+  `1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019`. Its committed-byte run
+  completed 8/8 exact and 6/8 numerical contracts with `VALID_TYPED_RUN` and exit 0; the two non-PASS
+  records are retained scientific outcomes rather than transport or infrastructure failures.
+- [`../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json)
+  is the 7,526,372-byte raw result committed in
+  `d8c2fce3eb3e72a956a34776970c15642ed88047`. Its outer SHA-256 is
+  `568e02cc8c4d730aba3a7a83febd3aa41cf14dfdb87b53950cc6fcc78c5bd013`, and its canonical
+  self-excluding payload digest is
+  `8d824c2c7204a6762a0e75321c285bd30339f67b244bb106a9dc4febc9da7b36`.
+- [`../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md)
+  is the corrected scoped report at `bdf3f7d6c9ad0fa9174b601832802f4ed3ebcb4f`, SHA-256
+  `8d697ef8482674ca79cb0d0b681c4baeea9f1e85ec7460c614e06b601659fa0b`. It records solver-noise
+  and old-step-pair-selection evidence at $\phi+$/$a+$ and 12/11/10 reference-stable local
+  Hessian-action violations at shared-zero/$\phi+$/$a+$. The protocol's variational-RHS bug-evidence
+  label is not proof of a code defect or a unique cause; the endpoint-limited appended time column is
+  explicitly excluded as independent bug evidence.
+- The shared-zero fixed-$R_4$ $u_2$ reference misses its frozen neighbor-stability limit, so the
+  reference tangent remains inconclusive. The normalized $14\times14$ homotopy certificate is local
+  only. Six promoted outputs remain `null`, all sixteen completion flags remain false, global promotion
+  is prohibited, and Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
+- The Phase-42 ontology integration is committed in
+  `c3a9dc7a0a61b083efc5784b8d3abfd9ecbfff0a`; it indexes the scoped evidence and nonclaim boundary
+  without changing the report's scientific status. Its validator confirms all 97 recorded hashes with
+  the 26 declared warnings retained.
 
 ---
 

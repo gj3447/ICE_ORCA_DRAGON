@@ -92,12 +92,18 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json` | feasibility 확인 뒤 고정한 $m=4$ two-source workflow manifest. 원하는 부호를 입력하지 않으며 incomplete global data를 fail-closed `false`/`null`로 유지 |
 | `phase41_m4_two_source_intersection.py` | 하나의 $m=4$ midpoint scalar에서 두 독립 endpoint-source saddle grid, 고정 mobility, full $\mathbb R^{14}$ local intersections와 orientation·tangent·launch·path controls를 계산하는 실행체 |
 | `PHASE41_M4_TWO_SOURCE_INTERSECTION.md` | Phase 41 보고서 — 7/7 exact + 8/9 typed numerical contracts. 두-source response의 수치 rank 2는 지지되지만 tangent FD plateau가 유일하게 실패하여 $\phi$/$a$ local robustness는 inconclusive; 모든 global 출력은 `null`이고 Gate 1은 OPEN |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–41의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase42_m4_fixed_root_checkpoint.py` | Phase 41의 세 고정 root와 관련 수치 기록을 post-hoc checkpoint로 추출하는 실행체. 원 Phase-41 stdout의 byte archive나 preregistration이 아님 |
+| `PHASE42_M4_FIXED_ROOT_CHECKPOINT.json` | shared-zero, $\phi+$, $a+$의 immutable diagnostic 입력과 Phase-41 negative-control 기록 |
+| `PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json` | root/chart/sign/step retuning을 금지하고 fixed-$R_4$, solver-tier, local Hessian-action, cause-ledger와 fail-closed 출력을 동결한 workflow manifest |
+| `phase42_m4_fixed_root_tangent_disentanglement.py` | 세 fixed root에서 Phase-41 plateau를 재현하고 fixed derivative, solver/step, local variational identity와 normalized matrix homotopy를 분리 검사하는 실행체 |
+| `PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json` | Phase 42의 8/8 exact, 6/8 numerical 계약과 2,192-slot complete cause ledger를 보존한 raw result |
+| `PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md` | Phase 42 보고서 — $\phi+$/$a+$ solver-noise·step-pair evidence와 세 root의 protocol-defined local Hessian-action anomaly를 지지하지만 reference tangent는 inconclusive; 모든 global 승격은 금지되고 Gate 1은 OPEN |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–42의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 41)
+## 현재 경계 (Phase 42)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -373,6 +379,21 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   determinant line, straight-arm/reintersection census, exact nonlinear upward manifold, physical
   original cycle, cutoff/continuum limit, BFV/Pfaffian/Pin orientation은 여전히 없다. Six promoted
   outputs는 `null`, 16 completion flags는 `false`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
+- Phase 42는 이 한 실패를 shared-zero, $\phi+$, $a+$의 immutable root에서 retuning 없이 다시
+  검사해 8/8 exact와 6/8 numerical 계약을 기록했다. $\phi+$/$a+$에서는 old small-step
+  solver-noise와 first-pair selection artifact evidence가 함께 지지된다. 세 root의 local
+  Hessian-action audit에서는 각 29/30 방향이 reference-stable이고 그중 12/11/10개가 동결한
+  analytic-identity threshold를 넘어서 protocol-defined `VARIATIONAL_RHS_BUG_EVIDENCE` anomaly
+  label을 지지한다.
+- 이 label은 code defect나 하나의 유일 원인을 증명하지 않는다. Appended time column의 차이는
+  독립 state-only endpoint의 solver envelope와 같은 크기이므로 독립적인 bug evidence에서
+  제외했다. 또한 shared-zero fixed-$R_4$ $u_2$ neighbor stability가 $5.97045\times10^{-3}$으로
+  동결 기준 $5\times10^{-3}$을 넘어서 promoted reference tangent는
+  `REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE`로 남는다.
+- 세 normalized $14\times14$ matrix pair의 $\eta<1$은 선언 좌표의 local nonsingular linear
+  homotopy에 대한 sufficient certificate일 뿐 determinant line, upward cycle orientation 또는
+  physical original contour가 아니다. Six promoted outputs는 계속 `null`, 16 completion flags는
+  `false`, global promotion은 `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
 ## 다음 계산
 
@@ -383,9 +404,12 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   separate root-sheet lateral gate, Phase 37의 local closed root/half-form holonomy, Phase 38의
   inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger, Phase 39의
   $m=2$ cap-piece local full-space witness, Phase 40의 rank-one $m=3$ reflection-odd local
-  continuation, Phase 41의 two-source $m=4$ full-$\mathbb R^{14}$ local roots에서 멈추지 않는다.
-  Phase 41의 수치 rank 2를 별도 source robustness나 common cross-cutoff determinant line으로
-  승격하지 않고, 먼저 실패한 FD plateau를 해소하거나 그 민감도를 분류한다. 이후 이미 feasible한
+  continuation, Phase 41의 two-source $m=4$ full-$\mathbb R^{14}$ local roots와 Phase 42의
+  fixed-root tangent diagnosis에서 멈추지 않는다. Phase 42는 $\phi+$/$a+$의 solver-noise와
+  old-step-pair sensitivity를 분류했지만 shared-zero fixed-$R_4$ reference와 local Hessian-action
+  anomaly의 원인을 확정하지 못했다. 따라서 P42의 local normalized homotopy를 common
+  cross-cutoff determinant line으로 승격하지 않고, 먼저 immutable states에서 high-precision
+  Hessian/RHS identity와 stable derivative reference를 독립적으로 중재한다. 이후 이미 feasible한
   $m=5$ joint saddle로 올리고 cutoff/metric homotopy를 실제로 구성한다. 그 뒤
   하나의 공통 incoming physical upward dual과
   원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
