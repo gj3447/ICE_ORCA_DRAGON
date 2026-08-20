@@ -1,5 +1,5 @@
 {
-  "schema_version": "ice.phase40.input-freeze.v1",
+  "schema_version": "ice.phase40.input-freeze.v1.1",
   "phase": 40,
   "gate": 1,
   "frozen_at_utc": "2026-08-20T10:20:00Z",
@@ -8,6 +8,12 @@
   "is_preregistration": false,
   "is_scientific_evidence": false,
   "non_evidence_disclaimer": "The symmetric m=3 saddle, an approximate symmetric cap hit, the existence of the first reflection-odd Hessian block, and exploratory local signs were inspected before this file was written. This manifest freezes the production mutation and audit contract; it does not erase that feasibility knowledge or count as evidence.",
+  "amendment": {
+    "amended_at_utc": "2026-08-20T11:05:00Z",
+    "trigger": "The first fail-closed production run showed that exact delta-zero Morse whitening makes the positive and negative blocks internally degenerate, so individual nonzero-delta eigendirections cannot be continuously anchored to unique delta-zero eigenvectors.",
+    "correction": "Transport the positive and negative spectral subspaces, which are the continuous invariant objects, by orthogonal Procrustes alignment to the frozen delta-zero signed coordinate subspaces. Build the launch frame with the inverse positive square root of the Hessian restricted to each aligned signed subspace.",
+    "epistemic_status": "Transparent post-failure correction of an ill-posed frame-gauge requirement; not a new scientific result and not permission to alter the frozen action, source, metric, cap, delta grid, or promotion boundary."
+  },
   "purpose": "Test whether the Phase39 local cap-piece witness survives the first added reflection-odd history sector and a signed endpoint-asymmetry probe, without promoting any local result to a bounded-chain or global Picard-Lefschetz coefficient.",
   "model": {
     "name": "three-segment midpoint Starobinsky minisuperspace configuration regulator",
@@ -96,7 +102,7 @@
     "metric_homotopy_tested": false
   },
   "upward_chart": {
-    "local_takagi_frame": "At each continued saddle, diagonalize L_0^T H_w L_0, match its nondegenerate signed eigendirections continuously to the delta-zero frame, and use the e^{-S} real/imaginary Takagi phases.",
+    "local_takagi_frame": "At each continued saddle, compute the positive and negative spectral subspaces of L_0^T H_w L_0, align each whole signed subspace to its frozen delta-zero coordinate subspace by orthogonal Procrustes transport, and use the inverse positive square root of the Hessian restricted to that aligned subspace together with the e^{-S} real/imaginary Takagi phases. Individual eigendirections inside the exactly degenerate delta-zero signed blocks are not treated as invariant.",
     "initial_radius": 0.0001,
     "control_initial_radii": [
       0.00005,
