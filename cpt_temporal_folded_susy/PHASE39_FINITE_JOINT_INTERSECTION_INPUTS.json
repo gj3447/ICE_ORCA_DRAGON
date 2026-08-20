@@ -50,21 +50,28 @@
     "saddle_census_complete": false
   },
   "gradient_metric": {
-    "type": "fixed positive Hermitian Euclidean metric in dimensionless coordinates",
-    "coordinate_definition": "z=(a_boundary*w_a, max(1,abs(phi_boundary))*w_phi, 0.7*w_T)",
+    "type": "constant positive Hermitian local-Morse-whitened metric",
+    "reference_coordinate_definition": "z=(a_boundary*w_a, max(1,abs(phi_boundary))*w_phi, 0.7*w_T)",
     "scales": {
       "a": 3.5668031935672753,
       "phi": 1.0185809464006637,
       "T": 0.7
     },
-    "upward_dual_flow_for_exp_minus_S": "dot(w)=-conjugate(partial S_2/partial w)",
-    "downward_integration_flow_for_exp_minus_S": "dot(w)=+conjugate(partial S_2/partial w)",
+    "whitening_definition": "At the recomputed real saddle, diagonalize the real symmetric reference-coordinate Hessian H_w=O*Lambda*O^T with det(O)=+1 and set L=O*diag(abs(Lambda)^(-1/2)); use w=w_saddle+L*xi with the Euclidean Hermitian metric in xi.",
+    "global_constancy": "After the saddle is solved, L is held constant on every transported trajectory; it is not recomputed along the flow.",
+    "upward_dual_flow_for_exp_minus_S": "dot(xi)=-conjugate(partial S_2/partial xi)",
+    "downward_integration_flow_for_exp_minus_S": "dot(xi)=+conjugate(partial S_2/partial xi)",
+    "selection_note": "This conditioning metric was chosen after a feasibility pilot and is not claimed to be physically selected.",
     "metric_homotopy_tested": false
   },
   "upward_cycle": {
     "local_frame": "Takagi frame derived from the real symmetric Hessian in the frozen dimensionless coordinates, with deterministic eigenvector signs and orientation",
     "initial_radius": 0.0001,
-    "sphere_coordinates": "omega(alpha,beta)=(cos(beta)cos(alpha),cos(beta)sin(alpha),sin(beta)) in the oriented upward frame",
+    "control_initial_radii": [
+      0.0002
+    ],
+    "reported_root_chart": "equatorial chart omega(alpha,beta)=(cos(beta)cos(alpha),cos(beta)sin(alpha),sin(beta)); its coordinate poles are excluded",
+    "discovery_atlas": "six normalized cubed-sphere faces cover S^2 for a bounded first-hit sample; face overlaps are a mutation control, not an exhaustion theorem",
     "parameter_orientation": [
       "alpha",
       "beta",
@@ -87,6 +94,8 @@
     "cap_parameter": "psi=arg(T)=theta+pi/2, increasing from -pi/2 to pi/2",
     "field_anchor": "constant interior history equal to the fixed endpoint; the target saddle is not used as the anchor",
     "cap_embedding": "a_1=a_boundary+exp(i*(psi/2-pi/2))*y_a; phi_1=phi_boundary+exp(i*psi/2)*y_phi; T=r*exp(i*psi)",
+    "negative_arm_embedding": "For N in [-R,-r], hold the continuously unwrapped endpoint phases psi=-pi/2: a_1=a_boundary+exp(-3*pi*i/4)*y_a, phi_1=phi_boundary+exp(-pi*i/4)*y_phi, T=i*N.",
+    "positive_arm_embedding": "For N in [r,R], hold the continuously unwrapped endpoint phases psi=+pi/2: a_1=a_boundary+exp(-pi*i/4)*y_a, phi_1=phi_boundary+exp(+pi*i/4)*y_phi, T=i*N.",
     "parameter_orientation": [
       "y_a",
       "y_phi",
@@ -99,6 +108,7 @@
       "y_phi_max": 0.25
     },
     "provenance": "finite full-joint lift of the Phase32 declared below-origin full-lapse bypass and principal configuration rays",
+    "orientation_note": "The Phase32 momentum-times-configuration +1 normalization is not inherited; Phase39 reports only the newly declared configuration-chain coordinate orientation.",
     "relative_homology_class_proved": false,
     "uniform_good_end_decay_proved": false
   },
