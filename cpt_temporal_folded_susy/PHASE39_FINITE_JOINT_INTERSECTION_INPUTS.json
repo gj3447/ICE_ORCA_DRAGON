@@ -1,0 +1,144 @@
+{
+  "schema_version": "ice.phase39.input-freeze.v1",
+  "phase": 39,
+  "gate": 1,
+  "frozen_at_utc": "2026-08-20T00:00:00Z",
+  "freeze_kind": "post_feasibility_workflow_input_freeze",
+  "authority": "repository-local computational workflow input",
+  "non_evidence_disclaimer": "Solver feasibility and approximate roots were inspected before this file was written. This is not a preregistration and contains no Phase39 scientific result.",
+  "purpose": "Run the smallest nontrivial full-joint algorithm pilot before higher finite cutoffs: solve one genuine discrete saddle, transport its full upward-cycle tangent, and evaluate the six-real-dimensional local oriented intersection determinant against one independently anchored regulated-cycle candidate.",
+  "model": {
+    "name": "two-segment midpoint Starobinsky minisuperspace configuration regulator",
+    "segment_count": 2,
+    "complex_variables_in_order": [
+      "a_1",
+      "phi_1",
+      "T"
+    ],
+    "complex_dimension": 3,
+    "ambient_real_order": [
+      "Re(a_1)",
+      "Im(a_1)",
+      "Re(phi_1)",
+      "Im(phi_1)",
+      "Re(T)",
+      "Im(T)"
+    ],
+    "fixed_boundary": {
+      "a_left": 3.5668031935672753,
+      "phi_left": 1.0185809464006637,
+      "a_right": 3.5668031935672753,
+      "phi_right": 1.0185809464006637,
+      "source": "Phase25 benchmark, inherited without tuning to the Phase39 intersection"
+    },
+    "potential": "V(phi)=(3/4)*(1-exp(-sqrt(2/3)*phi))^2",
+    "action": "S_2=2*pi^2*sum_{e=0}^{1}<[(-6*a_mid*(Delta a)^2+a_mid^3*(Delta phi)^2)/(2*T*h)+T*h*(-3*a_mid+a_mid^3*V(phi_mid))]>, h=1/2",
+    "analytic_domain": "C^2 times C-star in T; T=0 is excluded as an action pole",
+    "omitted_sectors": [
+      "canonical momenta",
+      "lapse gauge ghosts",
+      "fermions and gravitino",
+      "inhomogeneous modes",
+      "BFV/Pfaffian/Pin orientation line"
+    ]
+  },
+  "saddle_protocol": {
+    "seed_source": "the inherited short connected continuum branch sampled at the interior midpoint, used only as a numerical seed",
+    "equations": "partial S_2 / partial(a_1,phi_1,T)=0",
+    "required_residual_max": 1e-09,
+    "required_hessian_nonsingularity": true,
+    "saddle_census_complete": false
+  },
+  "gradient_metric": {
+    "type": "fixed positive Hermitian Euclidean metric in dimensionless coordinates",
+    "coordinate_definition": "z=(a_boundary*w_a, max(1,abs(phi_boundary))*w_phi, 0.7*w_T)",
+    "scales": {
+      "a": 3.5668031935672753,
+      "phi": 1.0185809464006637,
+      "T": 0.7
+    },
+    "upward_dual_flow_for_exp_minus_S": "dot(w)=-conjugate(partial S_2/partial w)",
+    "downward_integration_flow_for_exp_minus_S": "dot(w)=+conjugate(partial S_2/partial w)",
+    "metric_homotopy_tested": false
+  },
+  "upward_cycle": {
+    "local_frame": "Takagi frame derived from the real symmetric Hessian in the frozen dimensionless coordinates, with deterministic eigenvector signs and orientation",
+    "initial_radius": 0.0001,
+    "sphere_coordinates": "omega(alpha,beta)=(cos(beta)cos(alpha),cos(beta)sin(alpha),sin(beta)) in the oriented upward frame",
+    "parameter_orientation": [
+      "alpha",
+      "beta",
+      "flow_time"
+    ],
+    "flow_time_max": 13.5,
+    "variational_tangent_transport": true,
+    "all_ends_classified": false
+  },
+  "declared_original_cycle_candidate": {
+    "status": "finite-window Gaussian-lift candidate, not a derived physical original relative cycle",
+    "lapse_variable": "N",
+    "wick_map": "T=i*N",
+    "oriented_lapse_path": "[-R,-r] followed by N=r*exp(i*theta), theta from -pi to 0, followed by [r,R]",
+    "finite_arm_cutoff_R": 1.2,
+    "cap_radii": [
+      0.3,
+      0.2
+    ],
+    "cap_parameter": "psi=arg(T)=theta+pi/2, increasing from -pi/2 to pi/2",
+    "field_anchor": "constant interior history equal to the fixed endpoint; the target saddle is not used as the anchor",
+    "cap_embedding": "a_1=a_boundary+exp(i*(psi/2-pi/2))*y_a; phi_1=phi_boundary+exp(i*psi/2)*y_phi; T=r*exp(i*psi)",
+    "parameter_orientation": [
+      "y_a",
+      "y_phi",
+      "psi"
+    ],
+    "field_window": {
+      "y_a_min": -0.25,
+      "y_a_max": 0.25,
+      "y_phi_min": -0.25,
+      "y_phi_max": 0.25
+    },
+    "provenance": "finite full-joint lift of the Phase32 declared below-origin full-lapse bypass and principal configuration rays",
+    "relative_homology_class_proved": false,
+    "uniform_good_end_decay_proved": false
+  },
+  "intersection_protocol": {
+    "equation": "Gamma(y_a,y_phi,psi)=K(alpha,beta,s)",
+    "local_orientation_sign": "sign det_R[V_Gamma,V_K]",
+    "root_jacobian_warning": "the solver Jacobian [V_Gamma,-V_K] differs by (-1)^3 from the requested oriented-intersection determinant",
+    "determinant_magnitude_is_not_an_invariant": true,
+    "transversality_controls": [
+      "column-normalized slogdet sign",
+      "minimum singular value",
+      "condition number",
+      "finite-difference versus variational tangents",
+      "Gamma orientation reversal mutation",
+      "upward-frame orientation reversal mutation"
+    ],
+    "bounded_census": "record all detected first cap hits in a deterministic alpha scan of the beta=0 real-symmetry component and a deterministic multistart scan over the full sphere chart; this is not a proof of exhaustion",
+    "global_integer_must_remain_null": true
+  },
+  "required_fail_closed_outputs": {
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "gate1_status": "OPEN_PARTIAL_PROGRESS"
+  },
+  "planned_controls": {
+    "exact": [
+      "single symbolic scalar produces the gradient and Hessian",
+      "action is holomorphic on T nonzero and explicitly meromorphic at T=0",
+      "flow identities give monotone Re(S) and constant Im(S)",
+      "Gamma and K frames have the declared middle dimension",
+      "orientation mutations flip only the local determinant sign"
+    ],
+    "numerical": [
+      "genuine discrete joint saddle residual and Hessian inertia",
+      "upward-flow Re(S) monotonicity and Im(S) conservation",
+      "isolated full-space root residual at both declared cap radii",
+      "transported tangent finite-difference agreement",
+      "six-by-six determinant transversality",
+      "bounded real-component and full-sphere discovery ledger"
+    ]
+  },
+  "promotion_boundary": "A successful run may support only a declared finite-cutoff local full-space intersection candidate. It cannot establish the physical original cycle, a complete upward cycle, a global PL coefficient, Gate 1 closure, a BFV/Pfaffian/Pin result, or quantum gravity."
+}
