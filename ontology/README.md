@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–37 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–38 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T07:48:35Z` graph update, the collection has 531 nodes and
-1419 edges. Validation verifies 75/75 stored hashes (71 artifacts and 4 policies). The
-Phase 16–37 run snapshots contain 364 named exact checks, 184 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (185 numerical controls in all). These
+At the recorded `2026-08-20T08:11:16.535Z` graph update, the collection has 544 nodes and
+1487 edges. Validation verifies 78/78 stored hashes (74 artifacts and 4 policies). The
+Phase 16–38 run snapshots contain 379 named exact checks, 190 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (191 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -41,6 +41,11 @@ confidence.
 ./ice ontology trace claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY --depth 2
 ./ice ontology trace claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY --depth 2
 ./ice ontology trace claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE --depth 2
+./ice ontology trace claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION --depth 2
+./ice ontology trace claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT --depth 2
+./ice ontology trace claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS --depth 2
+./ice ontology trace claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16 --depth 2
+./ice ontology trace claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -61,6 +66,14 @@ and finally a persistent order parameter with interacting pole splitting. Downst
 explored early, but they remain conditional until the earlier gate supplies its evidence-backed typed
 output. The ordering is a revisable workflow rule governed by the recursive audit; it adds no physics
 evidence and predicts no gate outcome.
+
+Phase 38 starts Gate 1 without closing it. Its finite noninjective surrogate is only a schema-level
+warning: the graph supports that the current records do not license inverse reconstruction without a
+physical injectivity theorem or admissible completions, not that physical relative homology is
+noninjective or that the physical cycle is nonunique. The numerical extension concerns sampled points on
+one tracked branch plus a real-coefficient conjugation control, not a continuous two-arm census. Gate-2
+hard-CFU work may be explored in parallel, while physical promotion remains dependent on Gate 1's typed
+cycle output.
 
 ## How to read a claim
 

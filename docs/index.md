@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 68 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 69 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -52,6 +52,7 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md`](../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md) | relative endpoint-Jacobi determinant-line transport and the still-open physical-prefactor/global-cycle gate |
 | [`../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md`](../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md) | declared lateralized Airy basis identities, two sampled root-sheet laterals, local-gate insufficiency, and the still-open common-dual/global-contour gate |
 | [`../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md`](../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md) | same-basepoint closed root monodromy, conditional sampled reduced half-form return, and the still-open cycle/Pfaffian/Pin/BFV/supercharge gates |
+| [`../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md) | finite inverse-reconstruction warning, $G^T$-versus-$P$ typed mutation, bounded $\operatorname{Re}T=16$ arm ledger, and the still-open physical joint-cycle gate |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

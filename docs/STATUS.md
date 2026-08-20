@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 68 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 69 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,12 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–37 is now indexed in a repository-local typed research graph with **525 nodes and 1394 directed
-relations**. It preserves 126 claims, 77 evidence groups, 40 explicit scopes, 44 open problems, 63
-literature sources, the Phase 16–37 run payloads (364 named exact checks, 184 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 74/74 verified artifact and policy hashes,
-and cautious bridges to
-the older SYMPOSIUM KG.
+Phase 15R–38 is indexed in a repository-local typed research graph with **544 nodes and 1487 directed
+relations**. It preserves 131 claims and the Phase 16–38 run payloads: 379 named exact checks and 190
+typed numerical checks, or 191 numerical checks when the separately catalogued legacy Phase-18 control
+is included. The graph also preserves cautious bridges to the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
   is the human concept map.
@@ -739,6 +737,36 @@ See
 [`../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md`](../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md)
 and
 [`../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py`](../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 38
+
+Phase 38 returns exit 0 with **15 exact checks and 6 numerical checks**. Its exact finite surrogate is a
+typed warning about omitted information: it does **not** prove that the actual physical projection on
+gravitational relative homology is noninjective. Rather, the recorded projected crossing and local-root
+data contain neither an injectivity theorem nor explicit admissible joint-cycle completions, so they do
+not license inverse reconstruction of the original joint cycle.
+
+In the declared local cycle basis, coefficient transport is $c_{\rm out}=G^T c_{\rm in}$, not the root
+permutation $P$. The conditional input $c_{\rm in}=(1,0)^T$ maps to $(-1,-1)^T$; treating $P$ as the
+cycle map would instead fabricate $(0,1)^T$, and a typed mutation control rejects that substitution.
+This is a local-basis representation, not a physical thimble vector or global intersection coefficient.
+
+Numerically, the known conjugate stationary-family arms are sampled from the previous
+$\operatorname{Re}T=13$ bound through $\operatorname{Re}T=16$. Two continuation step sizes agree on the
+endpoint basin, and the recorded checkpoints show no endpoint-Jacobi zero or projected crossing with
+the Phase-32-declared full-line lapse-base candidate. This bounded ledger neither classifies the origin
+or two box exits as relative good ends nor enumerates all sheets and arms. Consequently
+`full_joint_local_sign`, `complete_global_signed_vector`, and `global_n_sigma` are all `null`; Gate 1
+remains open.
+
+Exploratory computation of the regular hard quotient and CFU coefficients $A,B$ may proceed in parallel
+with Gate 1. Only assembling and promoting those data as a physical uniform kernel depends on the
+missing original cycle vector and signed intersections.
+
+See
+[`../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md)
+and
+[`../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py`](../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py).
 
 ## Historical scientific ledger
 

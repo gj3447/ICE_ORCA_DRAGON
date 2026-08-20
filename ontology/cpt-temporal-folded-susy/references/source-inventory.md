@@ -127,6 +127,7 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 35 sampled reduced endpoint determinant transport | Chester–Friedman–Ursell; Witten (2010); Halliwell–Louko III | `CITES`-only fold, determinant-line/orientation, and lapse-contour framing; none supplies the 57-point table, upgrades sampled nonvanishing to a continuum theorem, identifies the physical Van Vleck block, or fixes the absolute Maslov orientation, full superdeterminant, or global coefficient |
 | Phase 36 declared local Airy bases and finite-radius BVP root laterals | Chester–Friedman–Ursell; Witten (2010); Halliwell–Louko III; Banihashemi–Jacobson | `CITES`-only uniformization, relative-cycle, lapse-contour, and below-origin prescription framing; none identifies the original gravitational cycle with a declared Airy contour, turns basis-dependent first duals into one transported physical dual, realizes formal upward cycles with the BVP roots, derives the hard Airy/Airy-prime amplitudes, selects an arm, or fixes the global coefficient or state |
 | Phase 37 closed local root and reduced-half-form holonomy | Chester–Friedman–Ursell; Witten (2010); Witten (2015); Freed–Hopkins | `CITES`-only coalescing-saddle, relative-cycle, fermion-Pfaffian, and Pin/reflection frameworks; none supplies the six BVP paths or sampled lift, turns root monodromy into a relative-cycle map, excludes intersample determinant zeros or alias winding, identifies the reduced bosonic half-form with a fermion Pfaffian or spacetime Pin lift, constructs the full BFV/SUGRA operator or supercharge, or derives a state |
+| Phase 38 Gate-1 identifiability and bounded end ledger | Witten (2010); Chester–Friedman–Ursell; Teitelboim (1983, PRL); Banihashemi–Jacobson | `CITES`-only relative-cycle, coalescing-saddle, causal-vs-gauge-invariant lapse, and below-origin-contour frameworks attached to the next open construction; none supplies a physical injectivity theorem or admissible completions, turns the finite surrogate into physical homology, provides the sampled continuation, promotes conjugation to an independent branch, proves continuous disjointness, classifies the box exits, fixes the global vector, or computes the hard CFU functions |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -314,5 +315,16 @@ CFU coefficients, promotes the reduced bosonic half-form to a fermionic line, br
 equivalence, constructs a complete BFV/SUGRA operator or spinorial supercharge, or derives a quantum
 constraint or state. Those gates remain explicit in
 `open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate`.
+
+Phase 38 makes the Gate-1 data boundary executable. Witten (2010) frames the need for complete relative
+cycles and oriented intersections; Teitelboim and Banihashemi--Jacobson frame why lapse prescriptions and
+integration order must be kept explicit; Chester--Friedman--Ursell frames the later hard uniformization
+problem. These are `CITES` edges from
+`open:p38-explicit-joint-action-cycle-and-oriented-intersections`, not evidence receipts for the five
+Phase-38 claims. In particular, no cited source proves that this model's physical projection is
+noninjective or nonunique. Only the declared finite surrogate has a demonstrated kernel. Likewise, none
+turns three sampled upper checkpoints and real-coefficient conjugation controls into a continuous
+two-branch census or a global coefficient. Conditional hard-CFU exploration may proceed in parallel,
+but physical promotion still requires Gate 1's typed cycle vector and a joint consistency check.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

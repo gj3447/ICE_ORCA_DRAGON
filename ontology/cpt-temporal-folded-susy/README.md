@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T07:48:35Z`; 531 nodes, 1419 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 75/75 stored hashes (71 artifacts and 4 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T08:11:16.535Z`; 544 nodes, 1487 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 78/78 stored hashes (74 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -42,7 +42,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 35 provide the physical Van Vleck determinant or fix the Maslov phase and global coefficient? | No. It transports the declared endpoint-Jacobi `det B_v` section relatively on the sampled Phase-34 table, records finite-resolution consistency with the oriented near-fold square-root law, and finds conjugate reduced endpoint phases cancel. The sampled data are insufficient to fix an absolute orientation. A zero-free continuum lift, the physical block and measure, absolute sign/Maslov orientation, incoming-to-outgoing connection, full BFV/SUGRA superdeterminant, all sheets and good ends, global `n_sigma`, and state remain open. | `claim:P35_TRACKED_REDUCED_ENDPOINT_DETERMINANT_LINE_IS_TRANSPORTABLE`; `claim:P35_RECORDED_UPPER_NEAR_FOLD_PHASE_IS_CONSISTENT_WITH_MINUS_PI_OVER_2`; `claim:P35_CONJUGATE_REDUCED_BOSONIC_ENDPOINT_PHASES_CANCEL_RELATIVELY`; `claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION`; `open:p35-absolute-detline-full-bfv-and-global-cycle` |
 | Does Phase 36 transport one physical upward cycle through the fold or select an outgoing arm? | No. It fixes exact identities only in separately ordered CW and CCW Airy bases. Their first duals use different companion cycles, while the numerical calculation tracks BVP root sheets rather than the formal upward cycles. Both root-sheet laterals pass sampled gates on three finite radii, so Phase 32 plus Phase 35 is insufficient by itself within those local gates. A complete original cycle may still select one arm globally. | `claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED`; `claim:P36_TRACKED_AI_ROOT_HAS_REGULAR_CW_U_AND_CCW_L_CONTINUATIONS`; `claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM`; `open:p36-original-cycle-hard-determinant-and-global-bfv-state` |
 | Does Phase 37 make the local sheet exchange physical or establish a Pin/Pfaffian supercharge holonomy? | No. Both tracked BVP roots exchange on three finite enclosing loops, and the sampled reduced bosonic half-form has a conditional order-four conjugacy class with \(L^2=-I\). Bare root monodromy still preserves the Phase-17 parity-controlled basis equivalence. No original relative cycle, hard CFU coefficients, spacetime Pin lift, fermion Pfaffian line, full BFV/SUGRA operator, conserved spinorial charge, quantum constraint, or state is computed. | `claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY`; `claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY`; `claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE`; `open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–37 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–37 scope guards |
+| Does Phase 38 close Gate 1 or determine the global signed intersection vector? | No. It supports that the recorded projected/local data do not license inverse reconstruction without a physical injectivity theorem or admissible completions; its noninjective example is only a finite surrogate, not a physical relative-homology theorem. The conditional \(\Gamma_0\) local map is exact, and one tracked branch plus its conjugation control remains disjoint at sampled points through \(\operatorname{Re}T=16\), but no continuous census, complete joint cycle, full-joint sign, good-end classification, or global vector is obtained. Gate-2 hard-CFU work may run in parallel; only its physical promotion depends on Gate 1. | `claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION`; `claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT`; `claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS`; `claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16`; `claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR`; `open:gate1-original-cycle-signed-global-intersections` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–38 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–38 scope guards |
 
 ### Phase 23 reading path
 
@@ -185,6 +186,32 @@ evidence-backed typed output. A complete stable zero vector, a proved obstructio
 negative answer can resolve a gate epistemically, but it unlocks the preferred downstream route only when
 the next gate's required input actually exists. This roadmap does not alter any Phase-37 claim or scope,
 and it stops before asserting a physical state, a completed quantum-cosmology model, or quantum gravity.
+
+### Phase 38 reading path
+
+The graph's `reading-path:projected-lapse-data-to-joint-cycle-identifiability` starts Gate 1 but keeps
+data sufficiency, surrogate algebra, and physical topology separate:
+
+1. `claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION` is supported only as a
+   boundary on what follows from the current record: neither a physical injectivity theorem nor
+   admissible physical completions have been supplied. The noninjective \(1\times3\) map is a finite
+   surrogate and does not prove that physical relative homology is noninjective or nonunique;
+2. `claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT` is contradicted by the typed mutation:
+   the root permutation and the relative-cycle coefficient map have different domains and give different
+   outputs for the declared conditional input;
+3. `claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS` supports
+   \(G^T(1,0)^T=(-1,-1)^T\) only as a local representation. It neither selects the physical incoming
+   coefficient nor computes hard CFU data;
+4. `claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16` concerns three new sampled
+   checkpoints of one continued upper root/basin and real-coefficient conjugation controls. It is not a
+   continuous no-crossing theorem, an integration-mesh theorem, or an independently continued lower arm;
+5. `claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR` is contradicted because the
+   original joint cycle and full-joint sign are absent and all three recorded ends remain unresolved.
+   `open:p38-explicit-joint-action-cycle-and-oriented-intersections` is the next concrete Gate-1 debt.
+
+Gate-2 hard-CFU functions may be calculated conditionally in parallel. What remains blocked is their
+promotion into a physical uniform kernel before Gate 1 supplies the actual typed cycle vector and the two
+outputs pass a joint consistency check.
 
 ## Concept map
 
@@ -407,6 +434,19 @@ flowchart TD
   Typed37 --> Open37
   Guard37 --> Open37
   Open37 --> Global28
+
+  Programme --> P38["Phase 38 · Gate-1 identifiability and bounded ledger"]
+  P38 --> Data38["Recorded data do not license inverse reconstruction<br/>SUPPORTED boundary"]
+  P38 --> Map38["Root swap replaces cycle map<br/>CONTRADICTED"]
+  P38 --> Cond38["Conditional Gamma0 → two local arms<br/>SUPPORTED exactly"]
+  P38 --> Bound38["Sampled projected disjointness to Re T=16<br/>SUPPORTED on bounded table"]
+  P38 --> Global38["Bounded ledger fixes global vector<br/>CONTRADICTED"]
+  Data38 --> Gate1_38["OPEN Gate 1 · physical joint cycle and signs"]
+  Map38 --> Open38["OPEN: explicit joint action · tangent frames · ends"]
+  Bound38 --> Open38
+  Global38 --> Gate1_38
+  Gate1_38 --> Open38
+  Cond38 --> Gate2_38["Gate 2 hard CFU may run conditionally<br/>physical promotion still depends on Gate 1"]
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -672,6 +712,7 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p35-sampled-reduced-endpoint-detline-transport` | Ordered 57-point endpoint-Jacobi table on the Phase-34 branch pair, declared endpoint basis and orientation, recursive sampled phase/square-root transport, conjugate-input controls, and finite-resolution near-fold comparison | Zero-free continuum interpolation, physical Van Vleck block or measure, absolute sign/Maslov orientation, incoming-to-outgoing cycle connection, full BFV/SUGRA superdeterminant, all sheets/good ends, global `n_sigma`, physical state, or SUSY spectrum |
 | `scope:p36-local-airy-connection-and-finite-radius-laterals` | Separately ordered CW/CCW Airy contour bases, exact contour/basis identities and conditional determinant bookkeeping, plus twelve tracked BVP root paths on three finite semicircle radii | Transport of one common physical upward dual, realization of formal \(K_U/K_L\) cycles by BVP roots, original-cycle arm selection, analytic hard quotient and Airy/Airy-prime amplitudes, zero-radius or between-sample theorem, absolute signs, full BFV/SUGRA determinant, global `n_sigma`, physical state, or SUSY scale |
 | `scope:p37-closed-local-root-and-reduced-half-form-holonomy` | Exact typed-map and finite-intertwiner controls, six enclosing BVP-root paths on three finite radii, thirteen determinant samples per path, and a same-basepoint minimal-jump reduced-half-form lift | Intersample zero/alias-winding theorem, original relative cycle or global intersection, hard CFU coefficients, spacetime Pin lift, fermion Pfaffian, full BFV/SUGRA operator or quantum master equation, conserved spinorial charge, physical state, or SUSY scale |
+| `scope:p38-finite-surrogate-and-bounded-reduced-ledger` | Finite schema surrogate, exact local cycle/dual law and conditional \(\Gamma_0\) representation, sampled reduced real ledger, one upper root/basin continued to three new checkpoints through \(\operatorname{Re}T=16\), and real-coefficient conjugation controls | Physical noninjectivity or nonuniqueness theorem, admissible physical completions, exact joint action/cycle/tangent frames, continuous no-crossing or independent lower-arm continuation, all sheets and good ends, global vector, promoted hard CFU kernel, BFV/Pfaffian/Pin line, charge, state, or spectrum |
 
 ## Open construction ledger
 
@@ -728,6 +769,7 @@ All entries below have state `OPEN` in the graph.
 | `open:gate3-full-bfv-pfaffian-pin-holonomy` | Compute the full gauge-reduced boson--fermion--ghost BFV/SUGRA determinant/Pfaffian line, zero modes, omitted sectors, Pin lift, spectral flow, and basis-independent closed holonomy on the selected saddle combination |
 | `open:gate4-spinorial-charge-domain-constraint-closure` | Construct a conserved fermion-odd Lorentz-spinor charge on one positive common domain with anomaly-free BFV/local-SUGRA closure, or establish and correctly name the typed global obstruction |
 | `open:gate5-persistent-order-and-pole-splitting` | Derive a finite-energy persistent gauge-invariant order parameter and a late-time interacting boson--fermion retarded-pole difference against trivial-holonomy, zero-order, seam-off, dilution, and backreaction controls |
+| `open:p38-explicit-joint-action-cycle-and-oriented-intersections` | Build an explicit finite-cutoff holomorphic joint action, re-solve its discrete saddle and fold, embed separately specified admissible original-cycle candidates, transport full tangent/orientation frames, compute isolated full-space signs, and classify every end before testing regulator stability |
 | Canonical BFV sign vs physical determinant line | A stable unreduced `(q,p,T)` determinant sign and same-regulator quartet cancellation do not fix momentum-contour orientation, zero modes, absolute phase, or the constraint-reduced inhomogeneous superdeterminant. |
 | Positive lapse half-line vs full real lapse | The former is a causal sourced resolvent with endpoint contact; the latter is a separate group-averaging contour whose relative-homology bypass must be specified. |
 | Projected coordinate sign vs signed joint/global coefficient | A finite-radius projected crossing on one tracked lapse base has coordinate sign `+1` only under the declared orientations; it is neither a signed full-joint local intersection nor the sum over every complete upward component, complex sheet, end, Stokes jump, and determinant-line orientation. |
@@ -737,6 +779,15 @@ All entries below have state `OPEN` in the graph.
 | BVP root sheets vs formal upward cycles | Numerical root permutations and regular sampled CW/U and CCW/L endpoints do not realize the formal \(K_U\) and \(K_L\) cycles or determine their intersection with the original contour. |
 
 The shortest honest statement of the research frontier is therefore: **the programme now has a supplied connected Starobinsky interval, a stationary lapse saddle, bounded reduced constant-phase branches, a measured simple-fold Airy scale, zero-lapse distributional and finite-cutoff BFV controls, one recorded projected lapse-base crossing, sampled endpoint-Jacobi transport, exact local Airy basis identities, and a same-basepoint closed continuation of both local BVP roots. On three finite enclosing loops the roots exchange, and conditional on the recorded nonzero minimal-jump sampled lift with no unresolved intersample zero or alias winding, the reduced bosonic inverse-square-root section has an order-four conjugacy class with \(L^2=-I\). Those invariants make the local closed transport stronger than separately trivialized open laterals, but they do not identify the root map with Airy-solution or relative-cycle monodromy. Bare root monodromy does not break the Phase-17 local/exchange basis equivalence, and the reduced bosonic half-form is not a spacetime Pin lift or fermion Pfaffian line. No original physical relative cycle, signed global intersection coefficient, analytic hard CFU Airy/Airy-prime amplitude, zero-free continuum determinant lift, full boson--fermion--ghost BFV/SUGRA operator or Pfaffian line, conserved spinorial supercharge, quantum master equation, WDW/BFV state, seam sector rule, or persistent soft spectrum has been derived.**
+
+Phase 38 sharpens the first missing step rather than weakening that boundary. The current records do not
+license inverse reconstruction of a physical joint cycle, but the finite noninjective surrogate does not
+prove physical noninjectivity or nonuniqueness. The correct conditional local coefficient map uses
+Gauss--Manin transport rather than the root swap. One upper root/basin and its conjugation control are
+sampled through \(\operatorname{Re}T=16\), with no sampled projected crossing, while the origin limit and
+both box exits stay unresolved. Gate 1 is therefore `OPEN_PARTIAL_PROGRESS`; conditional Gate-2
+calculation may proceed in parallel, but a physical uniform-kernel claim still needs the Gate-1 cycle
+vector and a joint consistency check.
 
 ## Repository artifacts
 
@@ -765,6 +816,7 @@ The shortest honest statement of the research frontier is therefore: **the progr
 | 35 | [`phase35_reduced_detline_transport.py`](../../cpt_temporal_folded_susy/phase35_reduced_detline_transport.py) | [`PHASE35_REDUCED_DETLINE_TRANSPORT.md`](../../cpt_temporal_folded_susy/PHASE35_REDUCED_DETLINE_TRANSPORT.md) | [`phase35-result.json`](./evidence/phase35-result.json) |
 | 36 | [`phase36_airy_gauss_manin_connection.py`](../../cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py) | [`PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md`](../../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md) | [`phase36-result.json`](./evidence/phase36-result.json) |
 | 37 | [`phase37_closed_fold_holonomy.py`](../../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py) | [`PHASE37_CLOSED_FOLD_HOLONOMY.md`](../../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md) | [`phase37-result.json`](./evidence/phase37-result.json) |
+| 38 | [`phase38_joint_cycle_identifiability.py`](../../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py) | [`PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md) | [`phase38-result.json`](./evidence/phase38-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -795,9 +847,9 @@ The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOL
 
 Phase 24 adds one more unresolved bridge at `phase:p24`. The older
 `sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
-planning node and was deliberately not reused. Phases 25–37 add thirteen fresh unresolved phase lookups;
+planning node and was deliberately not reused. Phases 25–38 add fourteen fresh unresolved phase lookups;
 similarly numbered historical planning nodes were not reused. The recursive-audit policy and the ordered
-five-gate policy add two separate repository-workflow lookups, so there are twenty-three expected
+five-gate policy add two separate repository-workflow lookups, so there are twenty-four expected
 unresolved bridges in the current graph. The latter remains local because no authorized external UID or
 writer exists; no identity was invented for the roadmap.
 A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,

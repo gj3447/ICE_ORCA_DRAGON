@@ -81,12 +81,14 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md` | Phase 36 보고서 — 12 exact + 9 numerical checks. 선언 basis identity는 고정되고 두 sampled root-sheet lateral이 local gate를 통과하지만, 공통 incoming physical dual의 수송·global contour 선택·absolute signs·BFV state는 미유도 |
 | `phase37_closed_fold_holonomy.py` | 같은 basepoint의 실제 enclosing BVP-root loop, sampled reduced half-form return, typed holonomy/intertwiner와 nonenclosing·direct-two-turn 대조군을 검증하는 실행체 |
 | `PHASE37_CLOSED_FOLD_HOLONOMY.md` | Phase 37 보고서 — 18 exact + 8 numerical checks. local root monodromy와 조건부 sampled $L^2=-I$는 지지되지만 cycle·Pfaffian·Pin·BFV·물리적 supercharge는 미유도 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–37의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase38_joint_cycle_identifiability.py` | projected record의 inverse-reconstruction 한계, $G^T$ cycle map 대 root-$P$ mutation, 그리고 known stationary-family arms의 $\operatorname{Re}T=16$ sampled extension을 검증하는 실행체 |
+| `PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md` | Phase 38 보고서 — 15 exact + 6 numerical checks. finite witness는 actual physical projection의 noninjectivity를 증명하지 않으며, 모든 global/full-joint 값은 `null`이고 Gate 1은 OPEN |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–38의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 37)
+## 현재 경계 (Phase 38)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -314,6 +316,20 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   change와 commute한다. 따라서 root holonomy alone은 \(Q_X\)를 물리적으로 선택하지 않는다.
   Physical sheet anchor, fermionic Pin/Pfaffian holonomy, full BFV/SUGRA domain·cohomology·Ward identity,
   conserved spinorial charge, persistent order parameter와 pole splitting은 계속 OPEN이다.
+- Phase 38의 exact finite surrogate는 누락된 fiber 방향이 있는 record를 역으로 joint cycle로
+  복원하는 추론을 차단한다. 이것은 실제 gravitational relative-homology projection이
+  noninjective라는 증명이 아니다. 현재 기록에는 그 projection의 injectivity theorem도 admissible
+  joint-cycle completions도 없으므로 inverse reconstruction을 허용하지 않는다는 fail-closed 판정이다.
+- Declared local cycle basis에서는 coefficients가 root permutation \(P\)가 아니라
+  \(c_{\rm out}=G^T c_{\rm in}\)으로 변환된다. 조건부 \(c_{\rm in}=(1,0)^T\)는
+  \((-1,-1)^T\)로 가지만, 이는 local-basis representation이지 두 physical thimble contribution이나
+  global intersection vector의 계산이 아니다. \(P\)를 대입해 \((0,1)^T\)를 얻는 mutation은
+  typed negative control에서 배제된다.
+- Known upper/lower stationary-family arms는 두 continuation step size로
+  \(\operatorname{Re}T=16\)까지 sampled extension되었고, 기록된 세 checkpoint에는 endpoint-Jacobi
+  zero나 Phase-32-declared full-line lapse-base candidate와의 projected crossing이 없다. 그러나 origin과
+  두 box exit은 relative good end로 분류되지 않았다. `full_joint_local_sign`,
+  `complete_global_signed_vector`, `global_n_sigma`는 모두 `null`이며 Gate 1은 OPEN이다.
 
 ## 다음 계산
 
@@ -321,7 +337,8 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 
 - **PL/BFV global gate:** Phase 32의 tracked projected lapse-base crossing, Phase 33의 local Airy
   chart, Phase 34의 reduced branch pair, Phase 35의 relative endpoint-Jacobi transport, Phase 36의
-  separate root-sheet lateral gate와 Phase 37의 local closed root/half-form holonomy에서 멈추지 않고,
+  separate root-sheet lateral gate, Phase 37의 local closed root/half-form holonomy, Phase 38의
+  inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger에서 멈추지 않고,
   하나의 공통 incoming physical upward dual과
   원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
   line의 absolute orientation을 고정한다. Full joint upward cycle의
@@ -329,6 +346,9 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   sum을 계산한 뒤 endpoint·mode regulator를 제거한다. 동시에 Phase 31 hybrid를 constraint-reduced
   inhomogeneous graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로
   확장해 determinant-line orientation과 gauge-fixing independence를 검사한다.
+- **Hard-CFU parallel track:** regular hard quotient와 CFU coefficients \(A,B\)의 탐색 계산은 Gate 1과
+  병렬로 진행할 수 있다. 다만 그것을 original joint-cycle coefficient와 결합해 physical uniform
+  kernel로 승격하는 단계만 Gate 1의 cycle vector와 signed intersections에 의존한다.
 - **Three-form seam-kernel gate:** compact three-form SUGRA boundary state 또는 charged-membrane
   saddle에서 실제 \(C_{n\ell}\), charge/tension, boundary ensemble과 determinant prefactor를
   유도한다. 그 뒤에만 regulated determinant와 joint \((n,\phi)\) measure의 내부 peak를 검사한다.

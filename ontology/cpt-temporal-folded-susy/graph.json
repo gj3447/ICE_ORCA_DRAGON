@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T07:48:35Z",
+  "updated_at_utc": "2026-08-20T08:11:16.535Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -234,6 +234,17 @@
         "claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY",
         "claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY",
         "claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE"
+      ]
+    },
+    {
+      "question": "Does Phase 38 close Gate 1 or determine the global signed intersection vector?",
+      "answer": "No. It supports only that the recorded projected and local data do not license inverse reconstruction without a physical injectivity theorem or admissible completions; its noninjective example is a finite surrogate, not a theorem about physical relative homology. It fixes a conditional local cycle representation, rejects root-swap substitution, and extends one tracked branch with its conjugation control to sampled points through Re T=16. The original joint cycle, full joint sign, continuous arm census, classified good ends, and global vector remain open. Gate-2 hard-CFU exploration may run in parallel, but physical promotion still depends on Gate 1's typed output.",
+      "claim_ids": [
+        "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+        "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+        "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+        "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+        "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
       ]
     }
   ],
@@ -634,6 +645,27 @@
         "open:gate4-spinorial-charge-domain-constraint-closure",
         "open:gate5-persistent-order-and-pole-splitting",
         "open:p28-physical-state-and-density"
+      ]
+    },
+    {
+      "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
+      "title": "From projected lapse data to the still-unidentified original joint cycle",
+      "summary": "Follow the recorded projected crossing, the declared local Gauss--Manin cycle map, and the distinct root permutation into the Phase-38 finite-surrogate and bounded-ledger audit. Retain only the lack of a licensed inverse reconstruction, the conditional local coefficient law, and the sampled projected disjointness; stop before asserting physical noninjectivity, a continuous no-crossing theorem, an independently continued conjugate arm, a complete original joint cycle, or a global intersection vector.",
+      "nodes": [
+        "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
+        "concept:recorded-local-intersection-versus-global-pl-coefficient",
+        "claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED",
+        "concept:cycle-map-versus-bvp-root-permutation",
+        "claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY",
+        "policy:ordered-five-gate-advancement",
+        "open:gate1-original-cycle-signed-global-intersections",
+        "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+        "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+        "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+        "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+        "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+        "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+        "open:gate2-hard-cfu-airy-coefficients"
       ]
     }
   ],
@@ -6623,6 +6655,168 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase37-result.json",
       "sha256": "cdfbd339693fc51f24c16a93febae0b72bf45b36cd84fae8ce873bd3fbaa7364"
+    },
+    {
+      "id": "phase:p38",
+      "type": "phase",
+      "title": "Phase 38 — Gate-1 joint-cycle identifiability and bounded end ledger",
+      "summary": "A Gate-1 preflight that records why the existing projected/local data do not license inverse reconstruction of the physical original joint cycle without an independent injectivity theorem or admissible completions, fixes the declared local Gauss--Manin coefficient and dual maps, rejects root-swap substitution, and extends one tracked stationary-family branch with its conjugation control to sampled points through Re T=16. The noninjective example is only a finite surrogate; Gate 1 remains open and no global intersection vector is emitted.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "type": "claim",
+      "title": "The recorded projected and local data do not license inverse joint-cycle reconstruction",
+      "summary": "Supported as an evidential sufficiency boundary: the record contains a projected lapse crossing and local/reduced cycle, root, and half-form data, but no injectivity theorem for the physical projection and no constructed admissible physical completions. A declared finite surrogate has a nontrivial label kernel and shows why an inverse requires extra premises; it is not the physical projection map, not a calculation of relative-homology rank, and not a theorem that the physical map is noninjective or that the physical joint cycle is nonunique.",
+      "state": "SUPPORTED_AS_RECORDED_DATA_SUFFICIENCY_BOUNDARY",
+      "claim_id": "P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "statement": "Without an independent injectivity theorem for the physical projection or constructed admissible physical completions, the Phase-32 projected crossing together with the recorded Phases-34--37 local and reduced data does not license inverse reconstruction of a unique physical original joint cycle or its full-joint local sign.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "type": "claim",
+      "title": "The local root swap can replace Gauss--Manin cycle transport",
+      "summary": "Contradicted by the exact typed mutation. For the explicitly conditional local Gamma_0 coefficient input, the correct coefficient map G^T gives the two-component vector (-1,-1), while substituting the root permutation gives (0,1). The maps act on different typed objects even if their finite matrices are abstractly related.",
+      "state": "CONTRADICTED_BY_EXACT_TYPED_MUTATION",
+      "claim_id": "P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "statement": "The Phase-37 BVP-root swap matrix may replace the Phase-36 Gauss--Manin coefficient map when transporting a relative-cycle coefficient vector through the local fold chart.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "type": "claim",
+      "title": "The declared conditional Gamma_0 input maps to both local outgoing arms",
+      "summary": "Supported exactly for the declared local coefficient input c_in=(1,0): the Phase-36 law c_out=G^T c_in gives (-1,-1) and hence a fixed local Ai/Bi cycle combination. Phase 38 does not establish that the physical original cycle has this input, select a physical arm vector, or compute the regular hard CFU Ai/Ai-prime coefficients. Exploratory hard-CFU calculations may run in parallel, but physical promotion of their kernel remains conditional on the Gate-1 typed cycle output.",
+      "state": "SUPPORTED_FOR_DECLARED_LOCAL_INPUT_ONLY",
+      "claim_id": "P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "statement": "If the incoming local cycle coefficient is declared to be c_in=(1,0), the Phase-36 Gauss--Manin coefficient law maps it to the two outgoing local components c_out=(-1,-1).",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "type": "claim",
+      "title": "The sampled tracked outgoing projections remain disjoint through Re T=16",
+      "summary": "Supported only on the recorded bounded sampled table: one numerically continued upper stationary-family root/basin reaches three new checkpoints through Re T=16 under coarse/fine continuation controls, and its lower entries are real-coefficient conjugation controls rather than an independently continued second branch. The sampled projections do not meet the declared Phase-32 imaginary-T full-line base or origin caps. This is not a continuous no-crossing theorem, integration-mesh convergence theorem, census of other branches or sheets, or classification of the box exits as good ends.",
+      "state": "SUPPORTED_ON_BOUNDED_SAMPLED_PROJECTED_TABLE",
+      "claim_id": "P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "statement": "On the recorded sampled tracked table through Re T=16, the upper stationary-family lapse projection and its real-coefficient conjugation control remain disjoint from the declared Phase-32 imaginary-T full-line base and origin caps.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "type": "claim",
+      "title": "The bounded Phase-38 ledger suffices to fix the global signed intersection vector",
+      "summary": "Contradicted within the declared Phase-38 construction: the original joint cycle and full-joint local orientation are absent, the origin-side limit is singular and unresolved, and the Re T=16 endpoints are numerical box exits rather than classified good ends. The fail-closed result API therefore leaves the full-joint sign, complete signed vector, and global n_sigma null; it does not assign null as a physical zero coefficient.",
+      "state": "CONTRADICTED_BY_INCOMPLETE_JOINT_ORIENTATION_AND_END_CENSUS",
+      "claim_id": "P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "statement": "The Phase-38 finite surrogate, projected crossing, local cycle law, and bounded stationary-family/end ledger are sufficient to determine a complete global signed intersection vector or n_sigma.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "type": "evidence",
+      "title": "Phase 38 exact surrogate-identifiability, cycle-map, and fail-closed guards",
+      "summary": "Fifteen exact checks keep the finite noninjective surrogate distinct from the unknown physical projection, show that the recorded data need an injectivity theorem or admissible completions for inverse reconstruction, fix the local coefficient and dual maps, reject root-swap mutation, derive the conditional local Ai/Bi combination, preserve Gate-2 hard-CFU slots as uncomputed bookkeeping, and refuse a global integer when the joint cycle, ends, or orientation data are incomplete.",
+      "state": "VERIFIED",
+      "observed_status": "15_EXACT_PASS",
+      "check_ids": [
+        "P38.identifiability.surrogate_projection_has_kernel",
+        "P38.identifiability.same_projection_distinct_surrogate_labels",
+        "P38.orientation.projected_sign_does_not_fix_joint_sign",
+        "P38.cycles.local_three_ray_relation_and_basis_map",
+        "P38.cycles.coefficients_transform_by_transpose",
+        "P38.cycles.dual_inverse_transpose_preserves_pairing",
+        "P38.mutation.root_swap_is_not_cycle_transport",
+        "P38.cycles.orientation_reversal_flips_coefficients",
+        "P38.intersection.pair_birth_preserves_signed_sum",
+        "P38.cycles.arm_to_Ai_Bi_coefficients",
+        "P38.gates.Gate1_record_schema_omits_hard_CFU_data",
+        "P38.guard.missing_completion_forces_null_global_integer",
+        "P38.guard.endpoint_contact_is_not_half_intersection",
+        "P38.guard.finite_BFV_bosonic_parity_is_not_absolute_orientation",
+        "P38.scope.semantic_claim_guards"
+      ]
+    },
+    {
+      "id": "evidence:p38-bounded-reduced-dual-and-end-ledger",
+      "type": "evidence",
+      "title": "Phase 38 bounded reduced stationary-family and unresolved-end checks",
+      "summary": "Six numerical checks stitch the sampled reduced real stationary ledger through the T=.7 saddle toward the fold, retain the inherited crossing only as projected, continue one upper stationary-family root/basin under two step sizes to Re T=16, verify three new upper checkpoints with conjugation controls and sampled Jacobi gates, record sampled projected disjointness, and classify the origin limit and both box exits as unresolved. They do not prove continuous no-crossing, independently continue a lower branch, classify all ends, or determine a global coefficient.",
+      "state": "VERIFIED",
+      "observed_status": "6_NUMERICAL_PASS",
+      "check_ids": [
+        "P38.dual.real_stationary_ledger_stitches_at_saddle",
+        "P38.intersection.inherited_projected_crossing_is_stable_but_typed",
+        "P38.continuation.coarse_fine_stationary_arm_extension",
+        "P38.continuation.extended_BVP_and_Jacobi_controls",
+        "P38.intersection.bounded_arms_disjoint_from_original_lapse_base",
+        "P38.guard.box_exits_are_not_good_ends"
+      ]
+    },
+    {
+      "id": "scope:p38-finite-surrogate-and-bounded-reduced-ledger",
+      "type": "scope",
+      "title": "P38 finite surrogate, local cycle law, and bounded reduced end ledger",
+      "summary": "One declared finite label-space surrogate, the Phase-36 local cycle-basis law, a conditional Gamma_0 coefficient input, the inherited reduced real ledger and projected crossing, and one upper stationary-family continuation with real-coefficient conjugation controls to sampled points through Re T=16.",
+      "state": "ACTIVE",
+      "includes": [
+        "a finite 1x3 surrogate projection with a two-dimensional label kernel, used only as a schema-level warning",
+        "the declared local three-ray relation, Gauss--Manin coefficient map G^T, inverse-transpose dual convention, orientation reversal, and signed pair-birth controls",
+        "the conditional c_in=(1,0) local representation and its exact Ai/Bi cycle combination",
+        "the sampled reduced real stationary ledger from regulated origin-side points through the T=.7 saddle toward the fold",
+        "one tracked upper stationary-family root/basin continued under two step sizes from Re T=13 to Re T=16",
+        "three sampled upper checkpoints, real-coefficient conjugation controls, endpoint reintegration, sampled Jacobi values, projected-base separation, and an unresolved-end ledger"
+      ],
+      "excludes": [
+        "a theorem that the physical projection on admissible relative cycles is noninjective, a calculation of physical relative-homology rank, or a disproof of physical uniqueness",
+        "an injectivity theorem for the physical projection or explicitly constructed admissible physical completions sharing one projection",
+        "a fully specified original lapse--field--momentum--gauge cycle, exact finite-cutoff joint action and saddle, full joint gradient flow, transported tangent frame, or full-joint local sign",
+        "a continuous no-crossing theorem, integration-mesh convergence theorem, independently continued conjugate branch, or census of other components, sheets, singular divisors, Stokes jumps, and asymptotic good ends",
+        "a complete global signed vector, regulator-stable n_sigma, or interpretation of a null API value as a physical zero coefficient",
+        "hard CFU Ai/Ai-prime coefficients or a physically promoted uniform kernel; exploratory Gate-2 calculations may run in parallel but remain conditional on Gate 1",
+        "a full BFV/Pfaffian/Pin line, spinorial charge, common physical domain, persistent order parameter, pole splitting, physical state, or observable cosmological prediction"
+      ]
+    },
+    {
+      "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "type": "open_problem",
+      "title": "Construct the explicit joint action, original cycle, and oriented intersections",
+      "summary": "Build one finite-cutoff holomorphic joint lapse--field action, re-solve its discrete saddle and fold, embed separately specified admissible original-cycle candidates with orientations and regulated caps, transport full joint tangent frames from the upward cycle, compute certified isolated full-space intersection signs, and classify every encountered boundary before testing cutoff/regulator stability. This is the next concrete Gate-1 construction, not evidence that the physical projection is noninjective or that a preferred cycle has already been selected.",
+      "state": "OPEN",
+      "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
+    },
+    {
+      "id": "artifact:p38-script",
+      "type": "artifact",
+      "title": "Phase 38 executable",
+      "summary": "Exact finite-surrogate, local cycle-map, root-swap mutation, conditional arm, Gate-boundary and fail-closed guards plus numerical reduced-ledger, bounded continuation, sampled projected-disjointness, and unresolved-end controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py",
+      "sha256": "4df1c5e59404019d8fb6e278ca70b1cfee87a40d77d7288ce2720360376915a8",
+      "introduced_in_commit": "8912c762df078379d7b5b3bfab6fb51867d58132"
+    },
+    {
+      "id": "artifact:p38-report",
+      "type": "artifact",
+      "title": "Phase 38 report",
+      "summary": "Human-readable Gate-1 identifiability boundary, correct local coefficient law, bounded reduced end ledger, strict finite-surrogate and sampled-continuation qualifications, parallel Gate-2 exploration rule, and next explicit joint-action construction.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md",
+      "sha256": "c275687bd73e7e18442e73619f75585f2cfdbab4cf80d9c7c2a65e3a2ecc52cf",
+      "introduced_in_commit": "8912c762df078379d7b5b3bfab6fb51867d58132"
+    },
+    {
+      "id": "artifact:p38-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 38 evidence snapshot",
+      "summary": "Persisted fifteen-exact and six-numerical check payload observed on 2026-08-20.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase38-result.json",
+      "sha256": "1cd4c7ea8f1824a81b3d68899ea634b54629eaeadd719ff5f6c46ce1d7202fc6"
     }
   ],
   "edges": [
@@ -15416,6 +15610,422 @@
       "relation": "GOVERNED_BY",
       "to": "policy:recursive-self-application-audit",
       "note": "The ordering remains revisable under type, counterexample, ablation, reversal, and invariant-observable audit; neither policy is scientific evidence."
+    },
+    {
+      "id": "edge:1420",
+      "from": "phase:p38",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1421",
+      "from": "phase:p38",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p37"
+    },
+    {
+      "id": "edge:1422",
+      "from": "artifact:p38-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1423",
+      "from": "artifact:p38-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1424",
+      "from": "artifact:p38-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1425",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1426",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p38-finite-surrogate-and-bounded-reduced-ledger"
+    },
+    {
+      "id": "edge:1427",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p38-report"
+    },
+    {
+      "id": "edge:1428",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1429",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p38-finite-surrogate-and-bounded-reduced-ledger"
+    },
+    {
+      "id": "edge:1430",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p38-report"
+    },
+    {
+      "id": "edge:1431",
+      "from": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1432",
+      "from": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p38-finite-surrogate-and-bounded-reduced-ledger"
+    },
+    {
+      "id": "edge:1433",
+      "from": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p38-report"
+    },
+    {
+      "id": "edge:1434",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1435",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p38-finite-surrogate-and-bounded-reduced-ledger"
+    },
+    {
+      "id": "edge:1436",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p38-report"
+    },
+    {
+      "id": "edge:1437",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1438",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p38-finite-surrogate-and-bounded-reduced-ledger"
+    },
+    {
+      "id": "edge:1439",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p38-report"
+    },
+    {
+      "id": "edge:1440",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1441",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1442",
+      "from": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1443",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p38-bounded-reduced-dual-and-end-ledger",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1444",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1445",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p38-bounded-reduced-dual-and-end-ledger",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1446",
+      "from": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1447",
+      "from": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p38-script"
+    },
+    {
+      "id": "edge:1448",
+      "from": "evidence:p38-exact-joint-cycle-identifiability-and-map-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p38-evidence-snapshot"
+    },
+    {
+      "id": "edge:1449",
+      "from": "evidence:p38-bounded-reduced-dual-and-end-ledger",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1450",
+      "from": "evidence:p38-bounded-reduced-dual-and-end-ledger",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p38-script"
+    },
+    {
+      "id": "edge:1451",
+      "from": "evidence:p38-bounded-reduced-dual-and-end-ledger",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p38-evidence-snapshot"
+    },
+    {
+      "id": "edge:1452",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "ABOUT",
+      "to": "concept:recorded-local-intersection-versus-global-pl-coefficient"
+    },
+    {
+      "id": "edge:1453",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "ABOUT",
+      "to": "concept:cycle-map-versus-bvp-root-permutation"
+    },
+    {
+      "id": "edge:1454",
+      "from": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "relation": "ABOUT",
+      "to": "concept:local-airy-connection-versus-global-original-cycle"
+    },
+    {
+      "id": "edge:1455",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "ABOUT",
+      "to": "concept:bounded-thimble-arm-versus-global-relative-cycle"
+    },
+    {
+      "id": "edge:1456",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "ABOUT",
+      "to": "concept:bounded-crossing-versus-global-intersection-number"
+    },
+    {
+      "id": "edge:1457",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING"
+    },
+    {
+      "id": "edge:1458",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "EXTENDS",
+      "to": "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM"
+    },
+    {
+      "id": "edge:1459",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED"
+    },
+    {
+      "id": "edge:1460",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY"
+    },
+    {
+      "id": "edge:1461",
+      "from": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED"
+    },
+    {
+      "id": "edge:1462",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "EXTENDS",
+      "to": "claim:P34_BOUNDED_DIRECTED_CONSTANT_PHASE_PAIR_EXISTS_BEYOND_FOLD"
+    },
+    {
+      "id": "edge:1463",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P34_TRACKED_COMPLEX_ARMS_ADD_PHASE32_LAPSE_BASE_CROSSING"
+    },
+    {
+      "id": "edge:1464",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING"
+    },
+    {
+      "id": "edge:1465",
+      "from": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1466",
+      "from": "claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1467",
+      "from": "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
+      "relation": "MOTIVATES",
+      "to": "open:gate2-hard-cfu-airy-coefficients",
+      "note": "Gate-2 hard-CFU calculations may be explored in parallel, but their physical promotion remains conditional on Gate 1 supplying the actual typed cycle vector."
+    },
+    {
+      "id": "edge:1468",
+      "from": "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1469",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1470",
+      "from": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1471",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "PART_OF",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1472",
+      "from": "open:gate1-original-cycle-signed-global-intersections",
+      "relation": "BLOCKED_BY",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "note": "This is the present concrete Gate-1 construction debt. It does not prohibit parallel exploratory work at Gate 2; only physical promotion requires the Gate-1 typed output."
+    },
+    {
+      "id": "edge:1473",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p28-global-relative-homology-and-intersection"
+    },
+    {
+      "id": "edge:1474",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p34-full-joint-dual-determinant-and-global-census"
+    },
+    {
+      "id": "edge:1475",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p35-absolute-detline-full-bfv-and-global-cycle"
+    },
+    {
+      "id": "edge:1476",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p36-original-cycle-hard-determinant-and-global-bfv-state"
+    },
+    {
+      "id": "edge:1477",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate"
+    },
+    {
+      "id": "edge:1478",
+      "from": "artifact:p38-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p25-script"
+    },
+    {
+      "id": "edge:1479",
+      "from": "artifact:p38-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p31-script"
+    },
+    {
+      "id": "edge:1480",
+      "from": "artifact:p38-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p32-script"
+    },
+    {
+      "id": "edge:1481",
+      "from": "artifact:p38-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p34-script"
+    },
+    {
+      "id": "edge:1482",
+      "from": "artifact:p38-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p36-script"
+    },
+    {
+      "id": "edge:1483",
+      "from": "artifact:p38-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p37-script"
+    },
+    {
+      "id": "edge:1484",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz"
+    },
+    {
+      "id": "edge:1485",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "CITES",
+      "to": "source:chester-friedman-ursell-1957"
+    },
+    {
+      "id": "edge:1486",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "CITES",
+      "to": "source:teitelboim-1983"
+    },
+    {
+      "id": "edge:1487",
+      "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025"
     }
   ],
   "kg_bridges": [
@@ -15715,6 +16325,16 @@
       "checked_at_utc": "2026-08-20T07:48:35Z",
       "lookup_key": "ICE ordered five gate programme global cycle hard CFU BFV Pfaffian spinorial charge persistent pole splitting 2026-08-20",
       "note": "The user-mandated ordered programme is recorded as repository-local workflow. No authorized external UID or writer is available, so no external identity was invented."
+    },
+    {
+      "local_node_id": "phase:p38",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-20T08:11:16.535Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase38 Gate1 joint cycle identifiability bounded end ledger",
+      "note": "No authorized matching external UID exists; the finite surrogate and bounded ledger remain repository-local evidence, so no external identity was invented."
     }
   ]
 }

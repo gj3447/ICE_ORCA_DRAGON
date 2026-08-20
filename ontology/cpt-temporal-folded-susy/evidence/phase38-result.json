@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P38_JOINT_CYCLE_IDENTIFIABILITY_20260820",
+  "phase": "P38",
+  "observed_at_utc": "2026-08-20T08:11:16.535Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py",
+    "sha256": "4df1c5e59404019d8fb6e278ca70b1cfee87a40d77d7288ce2720360376915a8",
+    "introduced_in_commit": "8912c762df078379d7b5b3bfab6fb51867d58132"
+  },
+  "exact_checks": 15,
+  "checks": [
+    {
+      "id": "P38.identifiability.surrogate_projection_has_kernel",
+      "statement": "the declared finite surrogate has a two-dimensional label kernel invisible to its lapse coordinate; this is not a theorem about physical relative homology",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.identifiability.same_projection_distinct_surrogate_labels",
+      "statement": "distinct labels in the declared surrogate share one lapse coordinate, showing why inverse reconstruction needs an independent injectivity theorem or physical completions",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.orientation.projected_sign_does_not_fix_joint_sign",
+      "statement": "even with projected lapse sign +1, an unresolved omitted-cycle orientation allows either full-joint local sign; no fermion/Pfaffian factor is folded into this PL integer",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.cycles.local_three_ray_relation_and_basis_map",
+      "statement": "the frozen local Airy cycles obey Gamma_0+Gamma_L+Gamma_U=0 and the Phase-36 ordered-basis map is involutive",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.cycles.coefficients_transform_by_transpose",
+      "statement": "when Gamma_in=G Gamma_out, coefficients of the same chain transform as c_out=G^T c_in",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.cycles.dual_inverse_transpose_preserves_pairing",
+      "statement": "the upward dual basis uses G^(-T), and G (G^(-T))^T=I preserves the declared row-basis pairing",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.mutation.root_swap_is_not_cycle_transport",
+      "statement": "for the conditional Gamma_0 input, G^T gives two arms (-1,-1), whereas the forbidden root-swap mutant fabricates a single arm",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.cycles.orientation_reversal_flips_coefficients",
+      "statement": "reversing the original cycle orientation reverses every transported cycle coefficient",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.intersection.pair_birth_preserves_signed_sum",
+      "statement": "a transverse +1/-1 crossing-pair birth leaves the signed intersection sum unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.cycles.arm_to_Ai_Bi_coefficients",
+      "statement": "the Gate-1 arm vector fixes only its exact Ai/Bi combination, not the hard CFU Ai-prime coefficient",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.gates.Gate1_record_schema_omits_hard_CFU_data",
+      "statement": "the declared Gate-1 output schema records arm data but omits the two hard CFU slots; this is bookkeeping, not a proof of physical independence",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.guard.missing_completion_forces_null_global_integer",
+      "statement": "the result API refuses a global integer until the joint cycle, every upward end, and the orientation line are complete",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.guard.endpoint_contact_is_not_half_intersection",
+      "statement": "the positive lapse half-line endpoint contact remains unassigned rather than being counted as 0, 1/2, or +1",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.guard.finite_BFV_bosonic_parity_is_not_absolute_orientation",
+      "statement": "the inherited nonzero-mode BFV bosonic sign alternates with cutoff parity and cannot supply an absolute continuum orientation line",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.scope.semantic_claim_guards",
+      "statement": "the executable keeps every uncomputed joint-cycle, global-intersection, hard-CFU, and BFV/Pfaffian claim false",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 6,
+  "numerical": [
+    {
+      "id": "P38.dual.real_stationary_ledger_stitches_at_saddle",
+      "statement": "the sampled reduced real stationary ledger joins the origin-side branch to the T=.7 saddle and the post-saddle branch toward the fold",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.intersection.inherited_projected_crossing_is_stable_but_typed",
+      "statement": "seven regulated lower-bypass locations retain the inherited positive transverse lapse-base crossing, explicitly typed as projected rather than joint",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.continuation.coarse_fine_stationary_arm_extension",
+      "statement": "two continuation step sizes converge to the same tracked upper stationary-family root/basin at Re T=16; this is not an integration-mesh convergence theorem",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.continuation.extended_BVP_and_Jacobi_controls",
+      "statement": "three new upper checkpoints and their real-coefficient conjugation controls pass the symmetric root, independently reintegrated full-endpoint, and sampled Jacobi gates through Re T=16",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.intersection.bounded_arms_disjoint_from_original_lapse_base",
+      "statement": "the sampled tracked conjugate outgoing lapse projections remain disjoint from the declared Phase-32 full-line imaginary-T base and origin caps through Re T=16",
+      "status": "PASS"
+    },
+    {
+      "id": "P38.guard.box_exits_are_not_good_ends",
+      "statement": "the origin limit and both Re T=16 box exits remain unresolved ends, so the bounded census cannot emit a global coefficient",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 15,
+    "numerical_checks": 6,
+    "calculation": "exact joint-cycle identifiability audit plus bounded reduced-dual and unresolved-end ledger",
+    "gate": "Gate 1 -- original joint cycle and signed global intersections",
+    "gate_status": {
+      "Gate_1": "OPEN_PARTIAL_PROGRESS",
+      "Gate_2": "PHYSICAL_PROMOTION_DEPENDS_ON_GATE_1_TYPED_OUTPUT",
+      "Gate_3": "PHYSICAL_PROMOTION_DEPENDS_ON_GATE_2_TYPED_OUTPUT",
+      "Gate_4": "PHYSICAL_PROMOTION_DEPENDS_ON_GATE_3_TYPED_OUTPUT",
+      "Gate_5": "PHYSICAL_PROMOTION_DEPENDS_ON_GATE_4_TYPED_OUTPUT"
+    },
+    "typed_information_loss_witness": {
+      "projection_matrix": [
+        [
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "rank": 1,
+      "nullity": 2,
+      "scope": "finite surrogate/schema witness only; not a computation of the physical projection map or relative-homology rank"
+    },
+    "local_cycle_transport": {
+      "basis_equation": "Gamma_in=G Gamma_out",
+      "G": [
+        [
+          "-1",
+          "-1"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "coefficient_equation": "c_out=G^T c_in",
+      "dual_equation": "K_in=G^(-T) K_out",
+      "conditional_Gamma0_input": [
+        "1",
+        "0"
+      ],
+      "conditional_cycle_output": [
+        "-1",
+        "-1"
+      ],
+      "forbidden_root_mutant_output": [
+        "0",
+        "1"
+      ],
+      "conditional_warning": "the physical original cycle is not established to have input coefficients (1,0)"
+    },
+    "extension": {
+      "start_ReT": 13.0,
+      "max_ReT": 16.0,
+      "coarse_step": 0.25,
+      "fine_step": 0.125,
+      "coarse_fine_endpoint_unknown_difference": 3.65279654924528e-14,
+      "coarse_max_root_residual": 4.398982274262542e-09,
+      "fine_max_root_residual": 2.4879581250773244e-09,
+      "max_full_endpoint_residual_at_new_checkpoints": 5.394919204853979e-07,
+      "min_sigma_min_Bv_at_new_checkpoints": 8.300170644382613,
+      "checkpoint_count": 3,
+      "scope": "two continuation step sizes to the same sampled root/basin; not an integration-mesh or continuum convergence theorem"
+    },
+    "end_ledger": {
+      "origin_side": "SINGULAR_ENDPOINT_UNRESOLVED",
+      "upper_outgoing_at_ReT_16": "BOX_EXIT_UNRESOLVED",
+      "conjugate_outgoing_at_ReT_16": "BOX_EXIT_UNRESOLVED"
+    },
+    "recorded_intersections": {
+      "lower_full_line_projected_lapse_crossing_count": 1,
+      "projected_coordinate_sign": 1,
+      "full_joint_local_sign": null,
+      "complete_global_signed_vector": null,
+      "global_n_sigma": null
+    },
+    "claim_status": {
+      "physical_joint_cycle_is_identifiable_from_the_recorded_data": "NOT_ESTABLISHED_NONINJECTIVE_ONLY_IN_THE_DECLARED_FINITE_SURROGATE",
+      "root_swap_can_replace_Gauss_Manin_cycle_transport": "CONTRADICTED_BY_EXACT_MUTATION",
+      "conditional_Gamma0_maps_to_two_local_cycle_components": "SUPPORTED_EXACTLY_WITHOUT_SELECTING_THE_PHYSICAL_INPUT",
+      "sampled_tracked_arms_add_a_projected_crossing_through_ReT_16": "NOT_SEEN_ON_THE_BOUNDED_TRACKED_TABLE",
+      "global_signed_intersection_vector_is_fixed": "OPEN_AND_EXPLICITLY_NULL"
+    },
+    "next_calculation": "construct a finite-cutoff holomorphic joint action, re-solve its discrete saddle and fold, embed separately specified original cycle candidates, and transport full joint tangent frames to certified local intersections"
+  }
+}
