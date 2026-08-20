@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 69 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 70 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,9 +374,9 @@ and
 
 ## Research ontology memory
 
-Phase 15R–38 is indexed in a repository-local typed research graph with **544 nodes and 1487 directed
-relations**. It preserves 131 claims and the Phase 16–38 run payloads: 379 named exact checks and 190
-typed numerical checks, or 191 numerical checks when the separately catalogued legacy Phase-18 control
+Phase 15R–39 is indexed in a repository-local typed research graph with **555 nodes and 1527 directed
+relations**. It preserves 134 claims and the Phase 16–39 run payloads: 391 named exact checks and 207
+typed numerical checks, or 208 numerical checks when the separately catalogued legacy Phase-18 control
 is included. The graph also preserves cautious bridges to the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
@@ -738,7 +738,7 @@ See
 and
 [`../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py`](../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 38
+## Previous direct calculation — CPT × Temporal-Folded SUSY Phase 38
 
 Phase 38 returns exit 0 with **15 exact checks and 6 numerical checks**. Its exact finite surrogate is a
 typed warning about omitted information: it does **not** prove that the actual physical projection on
@@ -767,6 +767,56 @@ See
 [`../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md)
 and
 [`../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py`](../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 39
+
+Phase 39 returns exit 0 with **12 exact checks and 17 numerical checks**. It reads a separately committed
+post-feasibility input freeze and constructs the nonlinear two-segment midpoint action on
+$\mathbb C^2\times\mathbb C_T^*$. All three joint critical equations and the Hessian are differentiated
+from that same holomorphic SymPy scalar. The positive-$T$ discrete root is
+
+$$
+(a_1,\phi_1,T)_\sigma
+=(3.59047203047,0.993462632204,0.816050882199),
+$$
+
+with maximum gradient residual $2.73\times10^{-12}$ and dimensionless-reference Hessian inertia
+$(2_-,1_+)$. A bounded multiseed ledger also finds three other real roots, so neither uniqueness nor a
+complete saddle census is claimed. All four recorded critical actions have zero imaginary part; a
+lateral non-Stokes chamber remains required.
+
+For one post-feasibility fixed positive Morse-whitened metric, the executable launches a linear Takagi
+sphere and transports one finite-radius, finite-time three-real-dimensional upward-flow chart patch and
+its variational tangent. Against two cap pieces of an independently endpoint-anchored lower-bypass
+configuration chain, the full six-real-dimensional solves give:
+
+| cap radius | max root residual | normalized $\sigma_{\min}$ | direct declared configuration-coordinate sign |
+|---:|---:|---:|---:|
+| 0.3 | $2.64\times10^{-9}$ | 0.0752060 | +1 |
+| 0.2 | $3.48\times10^{-8}$ | 0.0696581 | +1 |
+
+The sign is computed as $\operatorname{sgn}\det_{\mathbb R}[V_\Gamma,V_K]$, not reconstructed from the
+Phase-32 lapse projection. The solver's actual finite-difference residual Jacobian has the opposite sign
+and agrees with the positively row-scaled assembled $[V_\Gamma,-V_K]$ matrix at the recorded
+$1.76\times10^{-3}$ and $1.07\times10^{-3}$ spectral relative levels. Orientation reversal and doubled
+launch-radius controls preserve the expected local behavior.
+
+This is a cap-piece local algorithm witness, not a bounded-chain intersection number. Straight-arm
+intersections and later cap reintersections are not searched; a 54-direction cubed-sphere ledger is only
+a non-exhaustive atlas smoke test; 21 samples leave the norm box. No exact nonlinear unstable manifold,
+all-root/component/end census, Stokes jump, cutoff/metric/regulator/anchor stability, reflection-odd
+history mode, BFV/Pfaffian/Pin orientation, or physical original relative cycle is established.
+Accordingly `bounded_chain_signed_sum`, `complete_global_signed_intersection_vector`, and
+`global_n_sigma` are all `null`, and Gate 1 remains open.
+
+The next calculation is the same determinant API at $m=3$ or $m=4$ with a signed endpoint-asymmetry
+mutation to expose the first reflection-odd history mode, followed by the already feasible $m=5$ joint
+saddle and a complete relative-end/Stokes census.
+
+See
+[`../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md)
+and
+[`../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py`](../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py).
 
 ## Historical scientific ledger
 

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T08:11:16.535Z",
+  "updated_at_utc": "2026-08-20T09:56:05.857Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -245,6 +245,15 @@
         "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
         "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
         "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
+      ]
+    },
+    {
+      "question": "Does Phase 39 compute the cap-chain pairing or close Gate 1?",
+      "answer": "No. In one frozen m=2 configuration-space model it resolves one positive-T saddle and, separately for the r=.3 and r=.2 cap pieces, one locally transverse candidate against one finite-radius, finite-time K chart patch. Both direct declared configuration-coordinate signs are +1, with the actual solver finite-difference residual-Jacobian signs equal to -1 as required by the exact odd-dimensional parity convention. Straight arms, cap reintersections, root exhaustion, exact nonlinear K, a non-Stokes chamber, the bounded-chain signed sum, the complete global vector, and n_sigma remain unresolved or null.",
+      "claim_ids": [
+        "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+        "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+        "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
       ]
     }
   ],
@@ -650,7 +659,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing, the declared local Gauss--Manin cycle map, and the distinct root permutation into the Phase-38 finite-surrogate and bounded-ledger audit. Retain only the lack of a licensed inverse reconstruction, the conditional local coefficient law, and the sampled projected disjointness; stop before asserting physical noninjectivity, a continuous no-crossing theorem, an independently continued conjugate arm, a complete original joint cycle, or a global intersection vector.",
+      "summary": "Follow the recorded projected crossing, the declared local Gauss--Manin cycle map, and the distinct root permutation into the Phase-38 finite-surrogate audit and the Phase-39 frozen m=2 local full-space pilot. Retain the lack of a licensed inverse reconstruction, the conditional local coefficient law, and only two numerically resolved locally transverse cap-piece candidates on one finite-radius, finite-time K chart patch; stop before promoting them to an entire-chain pairing, exact nonlinear K, complete original joint cycle, certified Stokes chamber, or global intersection vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -664,6 +673,9 @@
         "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS",
         "claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16",
         "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+        "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+        "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+        "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
       ]
@@ -6782,7 +6794,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Build one finite-cutoff holomorphic joint lapse--field action, re-solve its discrete saddle and fold, embed separately specified admissible original-cycle candidates with orientations and regulated caps, transport full joint tangent frames from the upward cycle, compute certified isolated full-space intersection signs, and classify every encountered boundary before testing cutoff/regulator stability. This is the next concrete Gate-1 construction, not evidence that the physical projection is noninjective or that a preferred cycle has already been selected.",
+      "summary": "Phase 39 partially supplies one frozen m=2 finite-cutoff configuration action, one positive-T saddle, and two numerically resolved locally transverse candidates between separately declared cap pieces and one finite-radius, finite-time K chart patch. The construction debt remains open: search the straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric, regulator, anchor, and boundary-asymmetry stability before emitting a bounded-chain signed sum or global vector. The local candidates are not a pairing with the entire cap-plus-arm chain and do not select a preferred physical cycle.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -6817,6 +6829,159 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase38-result.json",
       "sha256": "1cd4c7ea8f1824a81b3d68899ea634b54629eaeadd719ff5f6c46ce1d7202fc6"
+    },
+    {
+      "id": "phase:p39",
+      "type": "phase",
+      "title": "Phase 39 — Frozen m=2 local joint-intersection pilot",
+      "summary": "A Gate-1 pilot for one frozen two-segment midpoint configuration action. It resolves one positive-T saddle and two local six-real-dimensional cap-piece candidates against one finite-radius, finite-time upward-chart patch, records direct declared configuration-coordinate signs and actual solver finite-difference Jacobian parity, and fails closed on every chain-level or global intersection output.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "type": "claim",
+      "title": "The frozen m=2 action has a genuine positive-T discrete joint saddle",
+      "summary": "Supported for one frozen m=2 configuration action: the recorded positive-T root has max gradient residual 2.73e-12 and real Hessian inertia (2 negative, 1 positive, 0 zero). A bounded multiseed ledger finds four distinct real roots, so neither uniqueness nor a complete saddle census is claimed.",
+      "state": "SUPPORTED_FOR_ONE_FROZEN_M2_SADDLE_WITHOUT_COMPLETE_CENSUS",
+      "claim_id": "P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "statement": "For the frozen Phase-39 two-segment midpoint configuration action, the recorded positive-T numerical root is a nondegenerate discrete joint saddle within the declared residual and Hessian-inertia tolerances.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "type": "claim",
+      "title": "Two declared m=2 cap pieces have local six-real +1 candidates on one frozen K chart patch",
+      "summary": "Supported only for the two declared cap pieces and one finite-radius, finite-time three-real-dimensional K chart patch. The r=.3 and r=.2 candidates are resolved in all six real coordinates, have normalized smallest singular values 0.0752060 and 0.0696581, and have direct assembled signs +1 in the declared configuration-coordinate orientations. The actual solver finite-difference residual Jacobians have sign -1 at both candidates, agreeing with the exact (-1)^3 root-Jacobian parity; their relative differences from the assembled Jacobians are 1.76e-3 and 1.07e-3. Projected lapse signs were not used to infer the direct signs. This is not a pairing with the entire cap-plus-straight-arm chain: straight arms and cap reintersections were not searched, root exhaustion is false, and the exact nonlinear K manifold is uncertified.",
+      "state": "SUPPORTED_FOR_TWO_CAP_PIECES_ON_ONE_FROZEN_LOCAL_K_PATCH",
+      "claim_id": "P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "statement": "Within the frozen m=2 configuration action, declared configuration-coordinate orientations, and one finite-radius, finite-time three-real-dimensional K chart patch, each of the r=.3 and r=.2 cap pieces has one numerically resolved locally transverse candidate in all six real coordinates, with direct sign det_R[V_Gamma,V_K]=+1.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "type": "claim",
+      "title": "The two frozen-cap local candidates suffice to fix the global signed intersection vector",
+      "summary": "Contradicted within the Phase-39 pilot. Straight-arm intersections, later cap reintersections, continuous directional coverage, root and upward-component exhaustion, exact nonlinear K, a complete good-end census, and a certified non-Stokes lateral chamber are absent. All four recorded real saddles have Im S=0, but their connecting flows and Stokes jumps were not computed. The fail-closed outputs bounded_chain_signed_sum, complete_global_signed_intersection_vector, and global_n_sigma therefore remain null; null is not a physical zero.",
+      "state": "CONTRADICTED_BY_INCOMPLETE_CHAIN_K_CENSUS_AND_STOKES_DATA",
+      "claim_id": "P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "statement": "The two Phase-39 cap-piece candidates and their direct local signs are sufficient to determine the signed sum of the bounded chain, the complete global intersection vector, or global n_sigma.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards",
+      "type": "evidence",
+      "title": "Phase 39 exact frozen-input, action, cycle, orientation, and fail-closed guards",
+      "summary": "Twelve exact checks freeze the post-feasibility input manifest, define one holomorphic two-midpoint action on C^2 x C-star_T with a simple T=0 pole, derive gradient and Hessian from that scalar, retain the Phase-32 unwrapped half-angle cap/arm parameterization and field-plane gluing, fix full cap tangent rank and equatorial chart order, prove Morse identities and the odd-dimensional residual-Jacobian parity, and refuse a global integer when the chain, census, or Stokes data are incomplete. The manifest is workflow provenance rather than preregistration or scientific evidence, and cap/arm gluing does not certify intersections of the entire chain.",
+      "state": "VERIFIED",
+      "observed_status": "12_EXACT_PASS",
+      "check_ids": [
+        "P39.input.frozen_manifest_contract",
+        "P39.action.single_scalar_two_midpoint_elements",
+        "P39.action.holomorphic_without_hidden_conjugation",
+        "P39.action.simple_T_zero_pole",
+        "P39.action.gradient_and_hessian_same_scalar",
+        "P39.cycle.unwrapped_Phase32_half_angles",
+        "P39.cycle.cap_arm_field_plane_gluing",
+        "P39.cycle.full_cap_tangent_rank",
+        "P39.flow.exact_Morse_identities",
+        "P39.orientation.equatorial_chart_order",
+        "P39.orientation.root_jacobian_odd_parity",
+        "P39.guard.global_integer_fail_closed"
+      ]
+    },
+    {
+      "id": "evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census",
+      "type": "evidence",
+      "title": "Phase 39 numerical m=2 saddle, local cap-piece candidates, and bounded controls",
+      "summary": "Seventeen numerical checks verify one nondegenerate positive-T saddle, constant Morse whitening, a four-root but incomplete bounded ledger, and one locally transverse candidate for each of the r=.3 and r=.2 cap pieces against the same frozen finite-radius, finite-time K chart patch. Direct six-real assembled signs are +1; actual solver finite-difference residual-Jacobian signs are -1 and satisfy the exact odd-dimensional parity at both candidates. Variational tangents, Morse monotonicity, orientation mutations, cap-radius and initial-sphere-radius controls, and a 54-sample cubed-sphere first-hit ledger pass. Sampling is not continuous coverage or root exhaustion, and the guard leaves every chain/global integer null.",
+      "state": "VERIFIED",
+      "observed_status": "17_NUMERICAL_PASS",
+      "check_ids": [
+        "P39.saddle.genuine_discrete_joint_root",
+        "P39.metric.constant_Morse_whitening",
+        "P39.saddle.bounded_multiseed_nonuniqueness_ledger",
+        "P39.intersection.r0p3_full_six_real_root",
+        "P39.intersection.r0p3_transverse_orientation",
+        "P39.intersection.r0p3_variational_tangent",
+        "P39.flow.r0p3_Morse_monotonicity",
+        "P39.orientation.r0p3_mutation_controls",
+        "P39.intersection.r0p2_full_six_real_root",
+        "P39.intersection.r0p2_transverse_orientation",
+        "P39.intersection.r0p2_variational_tangent",
+        "P39.flow.r0p2_Morse_monotonicity",
+        "P39.orientation.r0p2_mutation_controls",
+        "P39.intersection.two_cap_radii_same_recorded_sign",
+        "P39.intersection.initial_sphere_radius_control",
+        "P39.census.cubed_sphere_first_hit_ledger_completed",
+        "P39.guard.local_sign_does_not_emit_global_integer"
+      ]
+    },
+    {
+      "id": "scope:p39-frozen-m2-configuration-local-joint-candidates",
+      "type": "scope",
+      "title": "P39 frozen m=2 configuration-space local joint-candidate pilot",
+      "summary": "One frozen two-segment midpoint configuration action, one recorded positive-T saddle, two separately declared finite cap pieces, and one finite-radius, finite-time three-real-dimensional Morse-whitened upward-chart patch in a six-real-dimensional ambient configuration space.",
+      "state": "ACTIVE",
+      "includes": [
+        "one explicit nonlinear holomorphic two-segment midpoint configuration action on C^2 x C-star_T and one positive-T numerical saddle",
+        "declared r=.3 and r=.2 cap-piece parameterizations with fixed configuration-coordinate orientations",
+        "one frozen constant positive Hermitian Morse-whitened metric and one finite-radius, finite-time three-real-dimensional K chart patch",
+        "one numerically resolved locally transverse candidate per declared cap piece in all six real coordinates",
+        "direct assembled local signs, actual solver finite-difference residual-Jacobian signs and exact odd-dimensional parity, variational-tangent, Morse, orientation-mutation, radius, and sampled first-hit controls"
+      ],
+      "excludes": [
+        "a pairing with the entire bounded cap-plus-straight-arm chain, any straight-arm intersection search, or later cap-reintersection search",
+        "continuous direction coverage, root exhaustion, a complete saddle or upward-component census, or certification of the exact nonlinear K manifold",
+        "a proof that the frozen Gaussian lift is the physical original relative cycle",
+        "a certified non-Stokes lateral chamber, connecting flows or jumps among the four recorded real Im S=0 saddles, or a complete good-end census",
+        "a bounded-chain signed sum, complete global signed intersection vector, regulator-stable global n_sigma, or interpretation of a null API output as physical zero",
+        "cutoff, metric-homotopy, regulator, anchor, or boundary-asymmetry stability",
+        "canonical momenta, lapse gauge ghosts, fermions, gravitino, inhomogeneous modes, reflection-odd history modes, or a BFV/Pfaffian/Pin orientation line",
+        "hard CFU coefficients, a conserved spinorial charge, common physical domain, persistent order parameter, particle-pole splitting, physical state, cosmological prediction, or quantum-gravity theory"
+      ]
+    },
+    {
+      "id": "artifact:p39-input-manifest",
+      "type": "artifact",
+      "title": "Phase 39 frozen input manifest",
+      "summary": "Post-feasibility workflow input freeze for the m=2 pilot; it records the chosen action, cycle, metric, chart, tolerances, and fail-closed outputs but is neither a preregistration nor scientific evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4",
+      "introduced_in_commit": "750d19e76827ce78c9322e9fac6b494ade1f2bbf"
+    },
+    {
+      "id": "artifact:p39-script",
+      "type": "artifact",
+      "title": "Phase 39 executable",
+      "summary": "Frozen m=2 joint-action saddle, local cap-piece versus finite K-chart candidate solver, direct orientation, solver finite-difference Jacobian parity, variational, Morse, mutation, radius, sampled-census, and fail-closed checks.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase39_finite_joint_intersection.py",
+      "sha256": "0af21171e44a688a9dd0b19b2491954467c5ceb881a97852d0eb6135ea8fce54",
+      "introduced_in_commit": "05b642eafd4dd10ecb69c345bb07bacb2c458bf4"
+    },
+    {
+      "id": "artifact:p39-report",
+      "type": "artifact",
+      "title": "Phase 39 report",
+      "summary": "Human-readable frozen m=2 saddle and local cap-piece candidate ledger, direct configuration-coordinate orientation, finite-difference parity audit, strict entire-chain, nonlinear-K, census, Stokes, BFV/Pfaffian/Pin, state, and global-vector boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70",
+      "introduced_in_commit": "05b642eafd4dd10ecb69c345bb07bacb2c458bf4"
+    },
+    {
+      "id": "artifact:p39-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 39 evidence snapshot",
+      "summary": "Persisted twelve-exact and seventeen-numerical check payload observed on 2026-08-20, including direct local signs, actual solver finite-difference residual-Jacobian parity, and null chain/global outputs.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase39-result.json",
+      "sha256": "6bc83c7cf3e5a6d65cc24ab71e1c9a2566ba30860eca5c2131bc848115bf6bfd"
     }
   ],
   "edges": [
@@ -15935,7 +16100,7 @@
       "from": "open:gate1-original-cycle-signed-global-intersections",
       "relation": "BLOCKED_BY",
       "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
-      "note": "This is the present concrete Gate-1 construction debt. It does not prohibit parallel exploratory work at Gate 2; only physical promotion requires the Gate-1 typed output."
+      "note": "Phase 39 partially supplies one frozen m=2 local cap-piece versus chart-patch construction, but entire-chain intersections, exact nonlinear K, complete census, Stokes chamber, stable signed sum, and global vector remain open. Parallel exploratory Gate-2 work is allowed; physical promotion still requires the Gate-1 typed output."
     },
     {
       "id": "edge:1473",
@@ -16026,6 +16191,252 @@
       "from": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "relation": "CITES",
       "to": "source:banihashemi-jacobson-2025"
+    },
+    {
+      "id": "edge:1488",
+      "from": "phase:p39",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1489",
+      "from": "phase:p39",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p38"
+    },
+    {
+      "id": "edge:1490",
+      "from": "artifact:p39-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1491",
+      "from": "artifact:p39-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1492",
+      "from": "artifact:p39-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1493",
+      "from": "artifact:p39-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1494",
+      "from": "artifact:p39-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p39-input-manifest"
+    },
+    {
+      "id": "edge:1495",
+      "from": "artifact:p39-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p25-script"
+    },
+    {
+      "id": "edge:1496",
+      "from": "artifact:p39-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p32-script"
+    },
+    {
+      "id": "edge:1497",
+      "from": "artifact:p39-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p38-script"
+    },
+    {
+      "id": "edge:1498",
+      "from": "evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards",
+      "relation": "PART_OF",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1499",
+      "from": "evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p39-script"
+    },
+    {
+      "id": "edge:1500",
+      "from": "evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p39-evidence-snapshot"
+    },
+    {
+      "id": "edge:1501",
+      "from": "evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census",
+      "relation": "PART_OF",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1502",
+      "from": "evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p39-script"
+    },
+    {
+      "id": "edge:1503",
+      "from": "evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p39-evidence-snapshot"
+    },
+    {
+      "id": "edge:1504",
+      "from": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "relation": "PART_OF",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1505",
+      "from": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p39-frozen-m2-configuration-local-joint-candidates"
+    },
+    {
+      "id": "edge:1506",
+      "from": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p39-report"
+    },
+    {
+      "id": "edge:1507",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "PART_OF",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1508",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p39-frozen-m2-configuration-local-joint-candidates"
+    },
+    {
+      "id": "edge:1509",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p39-report"
+    },
+    {
+      "id": "edge:1510",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "PART_OF",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1511",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p39-frozen-m2-configuration-local-joint-candidates"
+    },
+    {
+      "id": "edge:1512",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p39-report"
+    },
+    {
+      "id": "edge:1513",
+      "from": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1514",
+      "from": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1515",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1516",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1517",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1518",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1519",
+      "from": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "relation": "ABOUT",
+      "to": "concept:reduced-stationary-family-dual-versus-full-joint-flow"
+    },
+    {
+      "id": "edge:1520",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "ABOUT",
+      "to": "concept:recorded-local-intersection-versus-global-pl-coefficient"
+    },
+    {
+      "id": "edge:1521",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "ABOUT",
+      "to": "concept:bounded-crossing-versus-global-intersection-number"
+    },
+    {
+      "id": "edge:1522",
+      "from": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
+      "relation": "EXTENDS",
+      "to": "claim:P25_FROZEN_BOUNDARY_HAS_STATIONARY_LAPSE_SADDLE"
+    },
+    {
+      "id": "edge:1523",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING"
+    },
+    {
+      "id": "edge:1524",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "EXTENDS",
+      "to": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION"
+    },
+    {
+      "id": "edge:1525",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
+    },
+    {
+      "id": "edge:1526",
+      "from": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1527",
+      "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
     }
   ],
   "kg_bridges": [
@@ -16335,6 +16746,16 @@
       "checked_at_utc": "2026-08-20T08:11:16.535Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase38 Gate1 joint cycle identifiability bounded end ledger",
       "note": "No authorized matching external UID exists; the finite surrogate and bounded ledger remain repository-local evidence, so no external identity was invented."
+    },
+    {
+      "local_node_id": "phase:p39",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-20T09:56:05.857Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase39 frozen m2 local joint intersection pilot",
+      "note": "No authorized matching external UID exists; the frozen action, two cap-piece local candidates, finite chart patch, and fail-closed global outputs remain repository-local evidence, so no external identity was invented."
     }
   ]
 }

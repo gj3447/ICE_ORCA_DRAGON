@@ -83,12 +83,15 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE37_CLOSED_FOLD_HOLONOMY.md` | Phase 37 보고서 — 18 exact + 8 numerical checks. local root monodromy와 조건부 sampled $L^2=-I$는 지지되지만 cycle·Pfaffian·Pin·BFV·물리적 supercharge는 미유도 |
 | `phase38_joint_cycle_identifiability.py` | projected record의 inverse-reconstruction 한계, $G^T$ cycle map 대 root-$P$ mutation, 그리고 known stationary-family arms의 $\operatorname{Re}T=16$ sampled extension을 검증하는 실행체 |
 | `PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md` | Phase 38 보고서 — 15 exact + 6 numerical checks. finite witness는 actual physical projection의 noninjectivity를 증명하지 않으며, 모든 global/full-joint 값은 `null`이고 Gate 1은 OPEN |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–38의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json` | feasibility 확인 뒤 production 전에 고정한 $m=2$ action·metric·lower-bypass chain·orientation·fail-closed 출력 입력. preregistration이나 scientific evidence가 아님 |
+| `phase39_finite_joint_intersection.py` | 같은 nonlinear $S_2$에서 discrete saddle·Hessian을 다시 만들고 finite-radius upward chart tangent를 운반해 두 cap piece의 직접 $6\times6$ local orientation을 계산하는 실행체 |
+| `PHASE39_FINITE_JOINT_INTERSECTION.md` | Phase 39 보고서 — 12 exact + 17 numerical checks. $r=.3,.2$의 declared configuration-coordinate local sign은 $+1$이지만 bounded-chain sum·complete vector·global $n_\sigma$는 `null`이고 Gate 1은 OPEN |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–39의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 38)
+## 현재 경계 (Phase 39)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -330,6 +333,18 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   zero나 Phase-32-declared full-line lapse-base candidate와의 projected crossing이 없다. 그러나 origin과
   두 box exit은 relative good end로 분류되지 않았다. `full_joint_local_sign`,
   `complete_global_signed_vector`, `global_n_sigma`는 모두 `null`이며 Gate 1은 OPEN이다.
+- Phase 39는 Phase 38의 missing object를 가장 작은 $m=2$ configuration regulator에서 처음 직접
+  구성한다. 같은 holomorphic midpoint scalar에서 $(a_1,\phi_1,T)$ joint saddle을 다시 풀고,
+  post-feasibility 고정 Morse-whitened metric에서 finite-radius·finite-time 3-real upward-flow chart
+  patch와 tangent를 운반했다. independently endpoint-anchored lower-bypass chain의 $r=.3,.2$ cap
+  pieces와 만나는 두 numerically resolved locally transverse 후보에서
+  $\operatorname{sgn}\det_{\mathbb R}[V_\Gamma,V_K]=+1$이다. 이 부호는 Phase-32 lapse sign에서
+  추론하지 않고 실제 $6\times6$ matrix와 solver finite-difference Jacobian으로 검산했다.
+- 그러나 straight arms와 later cap reintersection은 검색하지 않았고, cubed-sphere 54점은
+  non-exhaustive smoke test일 뿐이다. 네 recorded real saddle의 critical action은 모두 real이라
+  lateral Stokes chamber도 미고정이다. exact nonlinear $K$, 모든 root/component/end, reflection-odd
+  history mode와 cutoff·metric·regulator 안정성이 없으므로 `bounded_chain_signed_sum`, complete
+  vector, `global_n_sigma`는 모두 `null`이고 Gate 1은 계속 OPEN이다.
 
 ## 다음 계산
 
@@ -338,7 +353,10 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 - **PL/BFV global gate:** Phase 32의 tracked projected lapse-base crossing, Phase 33의 local Airy
   chart, Phase 34의 reduced branch pair, Phase 35의 relative endpoint-Jacobi transport, Phase 36의
   separate root-sheet lateral gate, Phase 37의 local closed root/half-form holonomy, Phase 38의
-  inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger에서 멈추지 않고,
+  inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger, Phase 39의
+  $m=2$ cap-piece local full-space witness에서 멈추지 않는다. 먼저 $m=3/4$ endpoint-asymmetry
+  mutation으로 첫 reflection-odd history mode와 orientation을 검사하고, 이미 feasible한 $m=5$
+  joint saddle로 올린다. 그 뒤
   하나의 공통 incoming physical upward dual과
   원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
   line의 absolute orientation을 고정한다. Full joint upward cycle의

@@ -18,7 +18,7 @@
 
 ---
 
-> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 69개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
+> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 70개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
 >
 > **중요한 정정**: 화자 자신은 **초공동의 용사(#3)**. ICE ORCA DRAGON은 *물리 영역*의 사도.
 >
@@ -35,9 +35,9 @@
 - *얼음(저온 물리) + 범고래(생물 + 깊이) + 용(상승)* 3 합성 — 물리 영역의 신화적 인격화
 - 12사도_목록_업데이트.md "ICE ORCA DRAGON이 진정한 사도야" — *세상의 진정한 본질 = 물리학* 의미
 
-### 2. 공학 측 — 역사적 계산 corpus + 69 runnable entries
+### 2. 공학 측 — 역사적 계산 corpus + 70 runnable entries
 
-이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 69개 entry가 **ICE 측 물리·수학
+이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 70개 entry가 **ICE 측 물리·수학
 검증**을 실행한다. 아래 pattern은 source provenance이고 CLI 이름 목록이 아니다:
 - `cd_breaking_*.py` — Cayley-Dickson breaking (32D vs 64D algebra identities)
 - `cd_embedding.py`, `cd_path_amplitude*.py` — CD construction
@@ -92,15 +92,21 @@ not the current executable catalog, and must not be copied into current status. 
 from `./ice list --json`. Binding or count drift produces a provenance-bearing `PENDING` proposal;
 ordinary documentation work does not directly `SET` the KG.
 
-### Current CPT calculation provenance — Phase 38
+### Current CPT calculation provenance — Phase 39
 
-- [`../../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py`](../../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py)
-  is the runnable source for the 15 exact and 6 numerical checks.
-- [`../../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md)
-  is the scoped interpretation. Its finite witness does not prove noninjectivity of the actual physical
-  projection; the current projected record does not license inverse joint-cycle reconstruction. It also
-  records the $G^T$ cycle-map versus root-$P$ mutation control, the sampled extension through
-  $\operatorname{Re}T=16$, the three `null` global/full-joint outputs, and open Gate 1.
+- [`../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json)
+  is a post-feasibility workflow input freeze, not preregistration or scientific evidence. It fixes the
+  $m=2$ action, constant Morse-whitened metric, finite lower-bypass chain, cap pieces, orientations, and
+  fail-closed outputs before the production run.
+- [`../../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py`](../../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py)
+  is the runnable source for the 12 exact and 17 numerical checks. It re-solves the discrete saddle and
+  computes direct $6\times6$ declared configuration-coordinate local signs $+1$ at $r=.3,.2$ between
+  two cap pieces and one finite-radius, finite-time upward-flow chart patch.
+- [`../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md)
+  is the scoped interpretation. Straight arms and reintersections are not searched, the direction ledger
+  is non-exhaustive, all recorded real saddles are critical-phase degenerate, and neither the exact
+  nonlinear upward manifold nor a physical original relative cycle is certified. The bounded-chain
+  signed sum, complete vector, and global $n_\sigma$ remain `null`; Gate 1 remains open.
 - Exploratory hard-CFU calculation may proceed in parallel. Only promotion to a physical uniform kernel
   depends on the missing Gate-1 cycle vector and signed intersections.
 

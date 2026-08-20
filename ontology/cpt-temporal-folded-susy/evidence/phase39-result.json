@@ -1,0 +1,301 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P39_FINITE_JOINT_INTERSECTION_20260820",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-20T09:56:05.857Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase39_finite_joint_intersection.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase39_finite_joint_intersection.py",
+    "sha256": "0af21171e44a688a9dd0b19b2491954467c5ceb881a97852d0eb6135ea8fce54",
+    "introduced_in_commit": "05b642eafd4dd10ecb69c345bb07bacb2c458bf4"
+  },
+  "exact_checks": 12,
+  "checks": [
+    {
+      "id": "P39.input.frozen_manifest_contract",
+      "statement": "the committed post-feasibility manifest fixes Phase39 inputs and requires Gate 1 and the global integer to remain open/null",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.action.single_scalar_two_midpoint_elements",
+      "statement": "equal frozen endpoints make S2 exactly the sum of two identical midpoint elements, and all derivatives are generated from that one scalar",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.action.holomorphic_without_hidden_conjugation",
+      "statement": "the finite action contains no conjugation or absolute value and is holomorphic away from its declared divisor",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.action.simple_T_zero_pole",
+      "statement": "S2 is meromorphic with a generically nonzero simple T=0 kinetic pole, so the flow domain is C^2 times C-star",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.action.gradient_and_hessian_same_scalar",
+      "statement": "the production gradient and Hessian are exact symbolic derivatives of the same frozen scalar action",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.cycle.unwrapped_Phase32_half_angles",
+      "statement": "the cap embedding is the continuous unwrapped T=iN rewrite of the Phase32 configuration half-angles rather than a pointwise principal-root reset",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.cycle.cap_arm_field_plane_gluing",
+      "statement": "the frozen negative arm, cap, and positive arm field planes glue continuously at both finite joints",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.cycle.full_cap_tangent_rank",
+      "statement": "the declared (y_a,y_phi,psi) cap tangent has full real rank three, including both field half-angle derivatives and dT/dpsi",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.flow.exact_Morse_identities",
+      "statement": "for dot(xi)=-conjugate(partial_xi S), Re S decreases by the gradient norm squared and Im S is exactly conserved",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.orientation.equatorial_chart_order",
+      "statement": "inside the equatorial chart, parameter order (alpha,beta,outward flow) has the declared positive K orientation; the poles are excluded and separately sampled by cubed faces",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.orientation.root_jacobian_odd_parity",
+      "statement": "in complex dimension three, the Gamma-K solver Jacobian [V_Gamma,-V_K] has the opposite sign from det[V_Gamma,V_K]",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.guard.global_integer_fail_closed",
+      "statement": "the manifest forbids promoting the local determinant to a complete vector or global coefficient while cycle and end certificates are absent",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 17,
+  "numerical": [
+    {
+      "id": "P39.saddle.genuine_discrete_joint_root",
+      "statement": "the three joint discrete equations are re-solved at positive T with sub-nanoscopic residual and a nondegenerate (2-,1+) Hessian",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.metric.constant_Morse_whitening",
+      "statement": "the frozen constant whitening map reduces the saddle Hessian to diag(-1,-1,+1) with an oriented eigenframe",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.saddle.bounded_multiseed_nonuniqueness_ledger",
+      "statement": "the bounded real multiseed ledger records more than the target positive-T saddle, so no complete saddle census or uniqueness is claimed",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.r0p3_full_six_real_root",
+      "statement": "the declared r=0.3 cap piece and one finite-radius, finite-time three-dimensional K chart patch have a numerically resolved candidate in all six real coordinates",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.r0p3_transverse_orientation",
+      "statement": "the r=0.3 normalized 6x6 tangent matrix is transverse and its direct sign has the required odd-dimensional parity relative to the solver's finite-difference residual Jacobian",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.r0p3_variational_tangent",
+      "statement": "the r=0.3 transported alpha, beta, and flow tangents agree with stiff independent central finite differences to better than one half percent",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.flow.r0p3_Morse_monotonicity",
+      "statement": "along the r=0.3 trajectory Re S is nonincreasing and Im S is conserved within the recorded integration error",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.orientation.r0p3_mutation_controls",
+      "statement": "at r=0.3, reversing either declared manifold orientation leaves the root fixed and flips only the local determinant sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.r0p2_full_six_real_root",
+      "statement": "the declared r=0.2 cap piece and one finite-radius, finite-time three-dimensional K chart patch have a numerically resolved candidate in all six real coordinates",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.r0p2_transverse_orientation",
+      "statement": "the r=0.2 normalized 6x6 tangent matrix is transverse and its direct sign has the required odd-dimensional parity relative to the solver's finite-difference residual Jacobian",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.r0p2_variational_tangent",
+      "statement": "the r=0.2 transported alpha, beta, and flow tangents agree with stiff independent central finite differences to better than one half percent",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.flow.r0p2_Morse_monotonicity",
+      "statement": "along the r=0.2 trajectory Re S is nonincreasing and Im S is conserved within the recorded integration error",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.orientation.r0p2_mutation_controls",
+      "statement": "at r=0.2, reversing either declared manifold orientation leaves the root fixed and flips only the local determinant sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.two_cap_radii_same_recorded_sign",
+      "statement": "the two frozen finite cap radii record the same local sign and both roots lie well inside the declared field window; this is not an r-to-zero theorem",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.intersection.initial_sphere_radius_control",
+      "statement": "doubling the frozen local-sphere radius preserves a transverse nearby r=.3 root and its declared coordinate sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.census.cubed_sphere_first_hit_ledger_completed",
+      "statement": "the bounded first-hit ledger samples every cubed-sphere face, including representatives at the equatorial-chart poles, while explicitly declining continuous coverage or exhaustion",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.guard.local_sign_does_not_emit_global_integer",
+      "statement": "finite local signs were computed directly, but unclassified arm, field-box, flow-box, Stokes, and omitted-sector ends keep both global outputs null",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 12,
+    "numerical_checks": 17,
+    "calculation": "m=2 finite-cutoff configuration-space joint local intersection algorithm pilot",
+    "gate": "Gate 1 -- original joint cycle and signed global intersections",
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4",
+      "finalized_in_commit": "750d19e76827ce78c9322e9fac6b494ade1f2bbf",
+      "freeze_kind": "post_feasibility_workflow_input_freeze",
+      "is_preregistration": false,
+      "is_scientific_evidence": false
+    },
+    "declared_model": {
+      "segment_count": 2,
+      "complex_dimension": 3,
+      "ambient_real_dimension": 6,
+      "integration_space": "C^2 x C-star_T",
+      "omits": [
+        "canonical momenta",
+        "lapse gauge ghosts",
+        "fermions and gravitino",
+        "inhomogeneous modes",
+        "BFV/Pfaffian/Pin orientation line"
+      ]
+    },
+    "recorded_positive_T_saddle": {
+      "z": [
+        3.590472030474745,
+        0.9934626322043222,
+        0.8160508821989653
+      ],
+      "gradient_max_abs": 2.7284841053187847e-12,
+      "hessian_inertia": {
+        "negative": 2,
+        "positive": 1,
+        "zero": 0
+      },
+      "bounded_multiseed_distinct_real_roots": 4,
+      "saddle_census_complete": false,
+      "uniqueness_claimed": false
+    },
+    "local_candidate_ledger": [
+      {
+        "cap_piece_radius": 0.3,
+        "upward_object": "one finite-radius finite-time three-real-dimensional K chart patch",
+        "candidate_resolved_in_all_six_real_coordinates": true,
+        "physical_residual_max_abs": 2.6409404663141345e-9,
+        "direct_declared_configuration_coordinate_sign": 1,
+        "normalized_sigma_min": 0.075206024927793,
+        "normalized_condition_number": 18.78749967142522,
+        "solver_finite_difference_residual_jacobian_sign": -1,
+        "solver_finite_difference_normalized_sigma_min": 0.01583958662342505,
+        "solver_to_assembled_jacobian_relative_error": 0.001756537769443604,
+        "odd_dimension_root_jacobian_parity_passed": true,
+        "projected_lapse_coordinate_sign": 1,
+        "projected_sign_used_to_infer_direct_sign": false
+      },
+      {
+        "cap_piece_radius": 0.2,
+        "upward_object": "one finite-radius finite-time three-real-dimensional K chart patch",
+        "candidate_resolved_in_all_six_real_coordinates": true,
+        "physical_residual_max_abs": 3.48171370068151e-8,
+        "direct_declared_configuration_coordinate_sign": 1,
+        "normalized_sigma_min": 0.06965812398415447,
+        "normalized_condition_number": 20.277562886544626,
+        "solver_finite_difference_residual_jacobian_sign": -1,
+        "solver_finite_difference_normalized_sigma_min": 0.016662584899857055,
+        "solver_to_assembled_jacobian_relative_error": 0.001067966811445925,
+        "odd_dimension_root_jacobian_parity_passed": true,
+        "projected_lapse_coordinate_sign": 1,
+        "projected_sign_used_to_infer_direct_sign": false
+      }
+    ],
+    "bounded_controls": {
+      "two_frozen_cap_pieces_have_same_recorded_local_sign": true,
+      "initial_sphere_radius_control_preserves_nearby_r0p3_sign": true,
+      "cubed_sphere_face_sample_count_including_overlaps": 54,
+      "continuous_direction_coverage_proved": false,
+      "root_exhaustion_proved": false,
+      "face_overlap_deduplicated": false,
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "exact_nonlinear_upward_manifold_certified": false
+    },
+    "critical_phase_ledger": {
+      "all_four_recorded_real_saddles_have_ImS_zero": true,
+      "connecting_flows_and_jumps_computed": false,
+      "non_Stokes_lateral_chamber_required": true,
+      "non_Stokes_chamber_certified": false
+    },
+    "end_ledger": {
+      "Gamma_negative_arm_at_N_minus_R": "FINITE_ARM_CUTOFF_UNRESOLVED",
+      "Gamma_positive_arm_at_N_plus_R": "FINITE_ARM_CUTOFF_UNRESOLVED",
+      "Gamma_field_box_faces": "FINITE_FIELD_WINDOW_UNRESOLVED",
+      "Gamma_T_zero": "EXCLUDED_SIMPLE_ACTION_POLE",
+      "K_nonhit_flow_time_faces": "FLOW_TIME_BOX_EXIT_UNRESOLVED",
+      "K_nonhit_norm_faces": "FLOW_NORM_BOX_EXIT_UNRESOLVED",
+      "other_saddles_and_upward_components": "NOT_EXHAUSTED",
+      "Stokes_chamber": "REAL_SADDLE_NOT_LATERALLY_CERTIFIED",
+      "BFV_Pfaffian_Pin_orientation": "NOT_PRESENT_IN_M2_CONFIGURATION_MODEL"
+    },
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "gate_status": {
+      "Gate_1": "OPEN_PARTIAL_LOCAL_FULL_SPACE_INTERSECTION_PILOT",
+      "Gate_2": "EXPLORATORY_CALCULATION_ALLOWED_BUT_PHYSICAL_PROMOTION_DEPENDS_ON_GATE_1",
+      "Gate_3": "PHYSICAL_PROMOTION_DEPENDS_ON_GATE_2_TYPED_OUTPUT",
+      "Gate_4": "PHYSICAL_PROMOTION_DEPENDS_ON_GATE_3_TYPED_OUTPUT",
+      "Gate_5": "PHYSICAL_PROMOTION_DEPENDS_ON_GATE_4_TYPED_OUTPUT"
+    },
+    "scope_guard": {
+      "computed": [
+        "one explicit nonlinear two-segment midpoint configuration action on C^2 times C-star_T",
+        "one high-precision positive-T discrete joint saddle and a bounded nonuniqueness ledger",
+        "one constant positive Hermitian Morse-whitened metric chosen after the feasibility pilot",
+        "one finite-radius finite-time three-real-dimensional upward-flow chart patch and its variational tangent frame",
+        "numerically resolved locally transverse six-real-dimensional candidates between that chart patch and the r=.3 and r=.2 cap pieces",
+        "direct configuration-coordinate signs, finite-difference residual-Jacobian parity, tangent, orientation, radius, and bounded cubed-sphere controls"
+      ],
+      "not_computed": [
+        "a pairing of the entire bounded cap-plus-straight-arm chain",
+        "straight-arm intersections or later cap reintersections",
+        "continuous direction coverage or root exhaustion",
+        "an exact nonlinear upward manifold or every upward component",
+        "a proof that the frozen Gaussian lift is the physical original relative cycle",
+        "a complete saddle, sheet, Stokes, or good-end census",
+        "a cutoff, metric-homotopy, regulator, anchor, or boundary-asymmetry stable global Picard-Lefschetz vector",
+        "a certified non-Stokes chamber despite all four recorded real saddles having ImS=0",
+        "reflection-odd history modes, canonical momenta, BFV ghosts, fermions, gravitino, inhomogeneous modes, Pfaffian/Pin data, or a spinorial charge",
+        "hard CFU coefficients, persistent order parameters, particle poles, or quantum gravity"
+      ]
+    },
+    "next_calculation": "repeat the local determinant algorithm at m=3 or m=4 with endpoint asymmetry to expose the first reflection-odd history mode, then promote to m=5 and classify complete upward components and relative good ends"
+  }
+}

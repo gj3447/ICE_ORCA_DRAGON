@@ -128,6 +128,7 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 36 declared local Airy bases and finite-radius BVP root laterals | Chester–Friedman–Ursell; Witten (2010); Halliwell–Louko III; Banihashemi–Jacobson | `CITES`-only uniformization, relative-cycle, lapse-contour, and below-origin prescription framing; none identifies the original gravitational cycle with a declared Airy contour, turns basis-dependent first duals into one transported physical dual, realizes formal upward cycles with the BVP roots, derives the hard Airy/Airy-prime amplitudes, selects an arm, or fixes the global coefficient or state |
 | Phase 37 closed local root and reduced-half-form holonomy | Chester–Friedman–Ursell; Witten (2010); Witten (2015); Freed–Hopkins | `CITES`-only coalescing-saddle, relative-cycle, fermion-Pfaffian, and Pin/reflection frameworks; none supplies the six BVP paths or sampled lift, turns root monodromy into a relative-cycle map, excludes intersample determinant zeros or alias winding, identifies the reduced bosonic half-form with a fermion Pfaffian or spacetime Pin lift, constructs the full BFV/SUGRA operator or supercharge, or derives a state |
 | Phase 38 Gate-1 identifiability and bounded end ledger | Witten (2010); Chester–Friedman–Ursell; Teitelboim (1983, PRL); Banihashemi–Jacobson | `CITES`-only relative-cycle, coalescing-saddle, causal-vs-gauge-invariant lapse, and below-origin-contour frameworks attached to the next open construction; none supplies a physical injectivity theorem or admissible completions, turns the finite surrogate into physical homology, provides the sampled continuation, promotes conjugation to an independent branch, proves continuous disjointness, classifies the box exits, fixes the global vector, or computes the hard CFU functions |
+| Phase 39 frozen \(m=2\) local joint-intersection pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing inherited through the Gate-1 opens; none supplies the frozen action, cycle/metric choices, discrete saddle, finite-time upward-chart patch, local six-real determinant signs, sampled first-hit ledger, or global completion. No new literature source is introduced by Phase 39 |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -147,7 +148,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other sixty-two graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–37 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other sixty-two graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–39 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -326,5 +327,14 @@ noninjective or nonunique. Only the declared finite surrogate has a demonstrated
 turns three sampled upper checkpoints and real-coefficient conjugation controls into a continuous
 two-branch census or a global coefficient. Conditional hard-CFU exploration may proceed in parallel,
 but physical promotion still requires Gate 1's typed cycle vector and a joint consistency check.
+
+Phase 39 reuses those same literature boundaries but adds no source-derived physics result. Its explicit
+two-segment midpoint action, discrete saddle, frozen Gaussian-lift cap/arm chain candidate,
+Morse-whitened finite-time chart, and two direct local \(\mathbb R^6\) signs are repository calculations.
+Witten (2010), Teitelboim, and Banihashemi--Jacobson do not select that candidate as the physical original
+relative cycle, certify the nonlinear upward manifold, search its straight arms or reintersections,
+classify the sampled box exits as good ends, choose a non-Stokes lateral chamber, or supply cutoff and
+metric-homotopy stability. The calculation therefore stays a local Gate-1 pilot rather than a
+literature-backed global Picard--Lefschetz coefficient.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

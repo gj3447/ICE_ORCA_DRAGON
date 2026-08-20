@@ -4,7 +4,7 @@
 
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-69-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-70-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -183,6 +183,7 @@ aims to explain, not evidence that the route is correct.
 | [Phase 36](cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md) | In separately declared CW and CCW local Airy bases, the contour-, cycle-, formal dual-basis, and Stokes identities are fixed. Two distinct sampled root-sheet BVP laterals pass the same finite-radius endpoint, action-gap, and determinant gates, so those local gates alone do not select an arm. | Transport of one common incoming physical upward dual, identification of the complete original relative cycle, a global choice of arm, the regular hard determinant quotient and CFU coefficients, absolute determinant/Maslov signs, unsampled zeros or other sheets, full joint field--lapse/BFV data, global $n_\sigma$, or a physical state. |
 | [Phase 37](cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md) | On three finite enclosing loops the two BVP roots exchange at one fixed basepoint, and—conditional on no unresolved intersample zero or alias winding—the sampled reduced determinant half-form has $\operatorname{tr}L=0$, $\det L=1$, and $L^2=-I$. An uninterrupted two-turn path and a nonenclosing control reproduce the expected $-1$ and $+1$ returns. | The original relative cycle, hard CFU coefficients, all modes and good ends, an absolute Maslov/Pfaffian orientation, a spacetime Pin lift, full BFV/SUGRA data, a conserved spinorial supercharge, pole splitting, or a physical state. Root holonomy alone does not break the Phase-17 local/exchange basis equivalence. |
 | [Phase 38](cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md) | The recorded projected crossing and local-root data do not license inverse reconstruction of the missing joint cycle. A finite typed witness exposes the possible information loss without proving it for the physical projection; the correct conditional local coefficient map is $G^T$, not the root permutation $P$. The known conjugate stationary-family arms are sampled through $\operatorname{Re}T=16$. | Noninjectivity of the actual physical projection, an admissible original joint cycle, signed full-joint intersections, all sheets and relative good ends, and global $n_\sigma$. The full-joint sign, complete signed vector, and $n_\sigma$ outputs remain `null`; Gate 1 is open. |
+| [Phase 39](cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md) | In one frozen $m=2$ configuration regulator, a genuine positive-$T$ discrete saddle is re-solved and two cap pieces meet one finite-radius, finite-time upward-flow chart patch at numerically locally transverse six-real-dimensional candidates. The directly computed declared configuration-coordinate signs are $+1$ at $r=.3,.2$. | A full finite-chain signed sum, straight-arm or reintersection census, exact nonlinear upward manifold, physical original relative cycle, non-Stokes chamber, cutoff/metric/regulator stability, BFV/Pfaffian/Pin orientation, or global $n_\sigma$. The bounded-chain sum, complete vector, and $n_\sigma$ remain `null`; Gate 1 is open. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -209,8 +210,12 @@ no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomp
    joint cycle without an injectivity theorem or explicit admissible completions, guards $G^T$ against
    the root-permutation mutation $P$, and extends the sampled stationary-family arms through
    $\operatorname{Re}T=16$. It does **not** prove that the actual physical projection is noninjective;
-   every global and full-joint output remains `null`, so Gate 1 stays open. These phases do not transport
-   the missing original physical cycle or derive a fermionic Pin/Pfaffian line. None identifies the
+   every global output remains `null`, so Gate 1 stays open. Phase 39 then supplies the first direct
+   six-real-dimensional local determinant at two frozen cap pieces, but only for one post-feasibility
+   $m=2$ metric and finite-radius chart patch. It does not search the straight arms or reintersections,
+   exhaust roots/components, certify a lateral Stokes chamber, or produce even a bounded-chain signed
+   sum. These phases do not transport the missing original physical cycle or derive a fermionic
+   Pin/Pfaffian line. None identifies the
    complete original relative cycle or supplies the physical Van
    Vleck block, absolute Maslov orientation, global arm selection, or full joint field--lapse flow. Every
    global dual arm and good end,
@@ -237,13 +242,13 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 69 | `./ice list --json` |
+| runnable Python kernels | 70 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 544 nodes, 1487 edges, 131 claims | `./ice ontology summary` |
-| named exact checks | 379 | phase result payloads in the ontology |
-| typed numerical checks | 190 current; 191 including the separately catalogued legacy control | phase result payloads in the ontology |
-| latest runnable CPT seam phase | Phase 38 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| research ontology | 555 nodes, 1527 edges, 134 claims | `./ice ontology summary` |
+| named exact checks | 391 | phase result payloads in the ontology |
+| typed numerical checks | 207 current; 208 including the separately catalogued legacy control | phase result payloads in the ontology |
+| latest runnable CPT seam phase | Phase 39 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.

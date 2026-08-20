@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–38 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), and [`phase38-result.json`](../evidence/phase38-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–39 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), and [`phase39-result.json`](../evidence/phase39-result.json).
 
 ## Reading `PASS` correctly
 
-All 379 Phase 16–38 named exact checks have `status: PASS`. The snapshots contain 190 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35, 9 in Phase 36, 8 in Phase 37, and 6 in Phase 38, for 191 numerical controls in all. Phase 38 contributes 15 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, guard, or bounded numerical comparison. It does not mean every scientific claim passed, that the finite surrogate is the physical projection map, that physical relative homology is noninjective or nonunique, that sampled projected separation is a continuous no-crossing theorem, that a conjugation control is an independently continued second branch, that the original-contour intersection coefficient is globally known, or that a hard CFU kernel, full BFV/SUGRA operator, supercharge, quantum constraint, or state has been constructed. Gate-2 exploration may run in parallel; only physical promotion remains dependent on Gate 1's typed output.
+All 391 Phase 16–39 named exact checks have `status: PASS`. The snapshots contain 207 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35, 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, and 17 in Phase 39, for 208 numerical controls in all. Phase 39 contributes 12 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, guard, or bounded numerical comparison. It does not mean every scientific claim passed, that either cap-piece candidate is an interval-certified root, that the finite-radius chart patch is the exact complete upward manifold, that the entire bounded chain was paired, that the cubed-sphere ledger is a continuous or exhaustive census, that the physical original relative cycle or non-Stokes chamber is fixed, that the global intersection coefficient is known, or that a hard CFU kernel, full BFV/SUGRA operator, supercharge, quantum constraint, or state has been constructed. Gate-2 exploration may run in parallel; only physical promotion remains dependent on Gate 1's typed output.
 
 The scientific direction is stored on:
 
@@ -43,6 +43,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 36 | `result:P36_AIRY_GAUSS_MANIN_CONNECTION_20260817_CORRECTED`; `2026-08-17T20:00:27.984Z` | `cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py`; SHA-256 `a82da3be27bdb903756ed8b9d511e5f3eb99e7b15eac27f13c4adad695c04bf9`; current bytes finalized in `f975f3e0ee3fc8afc1a21444075eec7fe4716783` | Exit `0`; 12 exact checks plus 9 numerical checks |
 | 37 | `result:P37_CLOSED_FOLD_HOLONOMY_20260820`; `2026-08-20T07:14:54.671Z` | `cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py`; SHA-256 `72dd9264a15f3910c51fe01ca608cc435f5afcf0c47797d2889df467f8b46f62`; introduced in `abc297327358e71ed51b7fc4d20c9c13ddd3d412` | Exit `0`; 18 exact checks plus 8 numerical checks |
 | 38 | `result:P38_JOINT_CYCLE_IDENTIFIABILITY_20260820`; `2026-08-20T08:11:16.535Z` | `cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py`; SHA-256 `4df1c5e59404019d8fb6e278ca70b1cfee87a40d77d7288ce2720360376915a8`; introduced in `8912c762df078379d7b5b3bfab6fb51867d58132` | Exit `0`; 15 exact checks plus 6 numerical checks |
+| 39 | `result:P39_FINITE_JOINT_INTERSECTION_20260820`; `2026-08-20T09:56:05.857Z` | `cpt_temporal_folded_susy/phase39_finite_joint_intersection.py`; SHA-256 `0af21171e44a688a9dd0b19b2491954467c5ceb881a97852d0eb6135ea8fce54`; introduced in `05b642eafd4dd10ecb69c345bb07bacb2c458bf4` | Exit `0`; 12 exact checks plus 17 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -67,6 +68,8 @@ The corrected Phase 36 report hash is `83eb4e1abfca5db76efdb22451c0f655a39ae7308
 The Phase 37 report hash is `a9041a7903263fa3a43ae150349acba098c39168e832a251fdf22672e71c68e0`; its fresh snapshot hash is `cdfbd339693fc51f24c16a93febae0b72bf45b36cd84fae8ce873bd3fbaa7364`. The exact executable and report bytes first appear in `abc297327358e71ed51b7fc4d20c9c13ddd3d412`.
 
 The Phase 38 report hash is `c275687bd73e7e18442e73619f75585f2cfdbab4cf80d9c7c2a65e3a2ecc52cf`; its schema-complete snapshot hash is `1cd4c7ea8f1824a81b3d68899ea634b54629eaeadd719ff5f6c46ce1d7202fc6`. The exact executable and report bytes first appear in `8912c762df078379d7b5b3bfab6fb51867d58132`. The snapshot adds the required payload count fields without changing the observed check records or scientific payload.
+
+The Phase 39 input-manifest hash is `b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4`; its exact bytes are finalized in `750d19e76827ce78c9322e9fac6b494ade1f2bbf`. The report hash is `0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70`; its snapshot hash is `6bc83c7cf3e5a6d65cc24ab71e1c9a2566ba30860eca5c2131bc848115bf6bfd`. The exact executable and report bytes first appear in `05b642eafd4dd10ecb69c345bb07bacb2c458bf4`. The manifest is a post-feasibility workflow freeze, not a preregistration or scientific-evidence artifact.
 
 ## Evidence-to-claim index
 
@@ -151,6 +154,8 @@ The Phase 38 report hash is `c275687bd73e7e18442e73619f75585f2cfdbab4cf80d9c7c2a
 | `evidence:p37-finite-loop-root-and-reduced-half-form-transport` | 8 numerical | Local BVP-root-cover Z2 monodromy — `SUPPORTS`; conditional reduced-half-form order-four transport — `SUPPORTS` | Six enclosing root paths on three finite radii, one tracked-root nonenclosing control, sampled nonzero determinant lifts, coarse/fine BVP and direct/stitched two-turn checks; no theorem excluding intersample zero or alias winding |
 | `evidence:p38-exact-joint-cycle-identifiability-and-map-guards` | 15 exact | Current records do not license inverse joint-cycle reconstruction — `SUPPORTS`; root swap can replace Gauss--Manin cycle transport — `CONTRADICTS`; conditional \(\Gamma_0\) input maps to both local arms — `SUPPORTS`; bounded ledger suffices for a global vector — `CONTRADICTS` | Finite surrogate/schema warning, exact local cycle/dual algebra, mutation and fail-closed guards; the surrogate is not the physical projection or homology, and hard-CFU slots are bookkeeping omissions rather than a physical-independence theorem |
 | `evidence:p38-bounded-reduced-dual-and-end-ledger` | 6 numerical | Sampled tracked projections remain disjoint through \(\operatorname{Re}T=16\) — `SUPPORTS`; bounded ledger suffices for a global vector — `CONTRADICTS` | Sampled reduced ledger, one continued upper root/basin, real-coefficient conjugation controls, and three unresolved ends; no continuous no-crossing theorem, integration-mesh theorem, independently continued lower branch, or global census |
+| `evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards` | 12 exact | Frozen \(m=2\) action has a positive-\(T\) discrete joint saddle — `SUPPORTS`; two cap pieces have local six-real `+1` candidates — `SUPPORTS`; two local candidates suffice for the global vector — `CONTRADICTS` | Post-feasibility frozen configuration action/cycle/metric contract, holomorphic action identities, local cap tangent/orientation identities, odd root-Jacobian parity, and fail-closed global outputs; the manifest is workflow provenance, not evidence |
+| `evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census` | 17 numerical | Frozen \(m=2\) action has a positive-\(T\) discrete joint saddle — `SUPPORTS`; two cap pieces have local six-real `+1` candidates — `SUPPORTS`; two local candidates suffice for the global vector — `CONTRADICTS` | One saddle, an incomplete four-real-root ledger, two cap-piece candidates against one finite-radius/time K-chart patch, direct signs, solver-Jacobian parity, tangent/Morse/mutation/radius controls, and a non-exhaustive 54-sample first-hit ledger; no entire-chain pairing or global integer |
 
 ## Phase 16 check ledger
 
@@ -1239,6 +1244,61 @@ Phase-32 imaginary-\(T\) base and origin caps. This is not a continuous no-cross
 integration-mesh convergence theorem, or a census of other branches and sheets. The origin limit and
 both box exits remain unresolved rather than classified good ends, so no global vector follows.
 
+## Phase 39 check ledger
+
+### Frozen action, cycle, orientation, and fail-closed guards — 12 exact checks
+
+- `P39.input.frozen_manifest_contract`
+- `P39.action.single_scalar_two_midpoint_elements`
+- `P39.action.holomorphic_without_hidden_conjugation`
+- `P39.action.simple_T_zero_pole`
+- `P39.action.gradient_and_hessian_same_scalar`
+- `P39.cycle.unwrapped_Phase32_half_angles`
+- `P39.cycle.cap_arm_field_plane_gluing`
+- `P39.cycle.full_cap_tangent_rank`
+- `P39.flow.exact_Morse_identities`
+- `P39.orientation.equatorial_chart_order`
+- `P39.orientation.root_jacobian_odd_parity`
+- `P39.guard.global_integer_fail_closed`
+
+These checks freeze one post-feasibility \(m=2\) configuration-space pilot and derive the action,
+gradient, and Hessian from one holomorphic scalar away from its simple \(T=0\) pole. They establish the
+declared cap/arm parameterization, local cap rank, Morse identities, orientation convention, and exact
+odd-dimensional sign relation between \([V_\Gamma,V_K]\) and the residual Jacobian
+\([V_\Gamma,-V_K]\). The final guard refuses a global integer whenever chain, census, Stokes, or end
+data are incomplete; it is not a proof that the physical intersection number vanishes.
+
+### Discrete saddle, local cap-piece candidates, and bounded controls — 17 numerical checks
+
+- `P39.saddle.genuine_discrete_joint_root`
+- `P39.metric.constant_Morse_whitening`
+- `P39.saddle.bounded_multiseed_nonuniqueness_ledger`
+- `P39.intersection.r0p3_full_six_real_root`
+- `P39.intersection.r0p3_transverse_orientation`
+- `P39.intersection.r0p3_variational_tangent`
+- `P39.flow.r0p3_Morse_monotonicity`
+- `P39.orientation.r0p3_mutation_controls`
+- `P39.intersection.r0p2_full_six_real_root`
+- `P39.intersection.r0p2_transverse_orientation`
+- `P39.intersection.r0p2_variational_tangent`
+- `P39.flow.r0p2_Morse_monotonicity`
+- `P39.orientation.r0p2_mutation_controls`
+- `P39.intersection.two_cap_radii_same_recorded_sign`
+- `P39.intersection.initial_sphere_radius_control`
+- `P39.census.cubed_sphere_first_hit_ledger_completed`
+- `P39.guard.local_sign_does_not_emit_global_integer`
+
+The positive-\(T\) saddle has max gradient residual \(2.73\times10^{-12}\) and Hessian inertia
+\((2-,1+)\). At cap radii \(.3\) and \(.2\), one candidate per cap piece is solved in all six real
+coordinates against one finite-radius, finite-time three-real-dimensional K-chart patch. Their direct
+declared configuration-coordinate signs are \(+1\), normalized smallest singular values are about
+\(.0752\) and \(.0697\), and actual finite-difference residual-Jacobian signs are \(-1\), as required
+by the exact three-column parity. These are numerical locally transverse candidates, not
+interval-certified roots. The 54 cubed-sphere samples are a bounded first-hit smoke ledger, not
+continuous coverage or root exhaustion. Straight arms and later cap reintersections are unsearched; the
+exact nonlinear upward manifold, complete saddle/component census, non-Stokes chamber, and all good ends
+remain uncertified. Hence the bounded-chain sum, complete vector, and `global_n_sigma` stay null.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1267,6 +1327,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase35_reduced_detline_transpo
 uv run --locked python3 cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py
 uv run --locked python3 cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py
 uv run --locked python3 cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py
+uv run --locked python3 cpt_temporal_folded_susy/phase39_finite_joint_intersection.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -1661,5 +1722,28 @@ surrogate has a demonstrated kernel, while the physical injectivity question and
 remain open. The third trace is conditional on a local input not selected as physical. The fourth is
 sampled and uses conjugation as a symmetry control rather than an independent continuation. Gate-2 hard
 CFU work may run in parallel, but its promotion into a physical kernel remains conditional on Gate 1.
+
+Phase 39 turns the next debt into a direct local full-space pilot:
+
+```text
+claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census
+  → VALID_WITHIN → scope:p39-frozen-m2-configuration-local-joint-candidates
+
+claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census
+  → MOTIVATES → open:p38-explicit-joint-action-cycle-and-oriented-intersections
+
+claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR
+  → HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards
+  → HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census
+  → MOTIVATES → open:gate1-original-cycle-signed-global-intersections
+```
+
+The second trace is a direct \(\mathbb R^6\) determinant result and does not inherit its sign from the
+Phase-32 lapse projection. Its scope is nevertheless only two cap pieces against one approximate chart
+patch. The third trace records why two local signs cannot be promoted to a bounded-chain or global
+Picard--Lefschetz integer; the null outputs are fail-closed unknowns, not zeros.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

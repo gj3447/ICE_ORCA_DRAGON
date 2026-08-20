@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–38 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–39 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T08:11:16.535Z` graph update, the collection has 544 nodes and
-1487 edges. Validation verifies 78/78 stored hashes (74 artifacts and 4 policies). The
-Phase 16–38 run snapshots contain 379 named exact checks, 190 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (191 numerical controls in all). These
+At the recorded `2026-08-20T09:56:05.857Z` graph update, the collection has 555 nodes and
+1527 edges. Validation verifies 82/82 stored hashes (78 artifacts and 4 policies). The
+Phase 16–39 run snapshots contain 391 named exact checks, 207 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (208 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -46,6 +46,9 @@ confidence.
 ./ice ontology trace claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS --depth 2
 ./ice ontology trace claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16 --depth 2
 ./ice ontology trace claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR --depth 2
+./ice ontology trace claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE --depth 2
+./ice ontology trace claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH --depth 2
+./ice ontology trace claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -74,6 +77,16 @@ noninjective or that the physical cycle is nonunique. The numerical extension co
 one tracked branch plus a real-coefficient conjugation control, not a continuous two-arm census. Gate-2
 hard-CFU work may be explored in parallel, while physical promotion remains dependent on Gate 1's typed
 cycle output.
+
+Phase 39 replaces the lapse-only sign inference with a direct local full-space pilot. For one frozen
+two-segment configuration action and one post-feasibility fixed metric, it resolves one positive-\(T\)
+discrete joint saddle and one numerically locally transverse candidate on each of two declared cap
+pieces against a finite-radius, finite-time three-real-dimensional upward-chart patch. Both direct
+\(\mathbb R^6\) configuration-coordinate signs are \(+1\). The calculation does not search the
+straight arms or later cap intersections, exhaust roots or upward components, certify the exact
+nonlinear upward manifold or a non-Stokes chamber, or classify all relative good ends. Consequently the
+bounded-chain sum, complete signed vector, and `global_n_sigma` remain null rather than zero, and Gate 1
+remains open.
 
 ## How to read a claim
 
