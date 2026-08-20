@@ -3,11 +3,11 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-17
+## Current state — 2026-08-20
 
 | Component | State |
 |---|---|
-| Runnable catalog | 67 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 68 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,10 +374,10 @@ and
 
 ## Research ontology memory
 
-Phase 15R–36 is now indexed in a repository-local typed research graph with **511 nodes and 1338 directed
-relations**. It preserves 123 claims, 75 evidence groups, 39 explicit scopes, 43 open problems, 63
-literature sources, the Phase 16–36 run payloads (346 named exact checks, 176 typed numerical checks, and
-one separately recorded legacy Phase-18 numerical control), 71/71 verified artifact and policy hashes,
+Phase 15R–37 is now indexed in a repository-local typed research graph with **525 nodes and 1394 directed
+relations**. It preserves 126 claims, 77 evidence groups, 40 explicit scopes, 44 open problems, 63
+literature sources, the Phase 16–37 run payloads (364 named exact checks, 184 typed numerical checks, and
+one separately recorded legacy Phase-18 numerical control), 74/74 verified artifact and policy hashes,
 and cautious bridges to
 the older SYMPOSIUM KG.
 
@@ -708,6 +708,37 @@ See
 [`../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md`](../cpt_temporal_folded_susy/PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md)
 and
 [`../cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py`](../cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 37
+
+Phase 37 returns exit 0 with **18 exact checks and 8 numerical checks**. It replaces the separately
+trivialized open-lateral comparison by same-basepoint closed continuation of both BVP roots around the
+recorded simple fold. On three finite enclosing radii the one-turn root map is $P^2=I$. Conditional on
+the thirteen-angle minimal-jump determinant tables having no unresolved intersample zero or alias
+winding, the sampled reduced half-form has
+
+\[
+\operatorname{tr}L=0,
+\qquad \det L=1,
+\qquad L^2=-I.
+\]
+
+An uninterrupted 97-point $4\pi$ continuation returns the same root with inverse-square-root
+transport $-0.999999999993$; a nearby nonenclosing loop returns the root and half-form with $+1$.
+The exact typed controls distinguish this root/determinant local system from the entire Airy solution,
+relative-cycle Gauss--Manin map, Stokes map, fermion Pfaffian, and Pin lift. Bare root swap also commutes
+with the Phase-17 parity-controlled basis change, so it does not by itself make the exchange charge
+physical.
+
+The original lapse-field relative cycle and signed intersections, hard CFU coefficients, intersample
+continuum theorem, all modes and good ends, absolute Maslov/Pfaffian orientation, spacetime Pin data,
+full BFV/SUGRA operator and cohomology, conserved spinorial supercharge, persistent order parameter,
+pole splitting, and physical state remain open.
+
+See
+[`../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md`](../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md)
+and
+[`../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py`](../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py).
 
 ## Historical scientific ledger
 

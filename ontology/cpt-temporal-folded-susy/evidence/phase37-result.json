@@ -1,0 +1,1307 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P37_CLOSED_FOLD_HOLONOMY_20260820",
+  "phase": "P37",
+  "observed_at_utc": "2026-08-20T07:14:54.671Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py",
+    "sha256": "72dd9264a15f3910c51fe01ca608cc435f5afcf0c47797d2889df467f8b46f62",
+    "introduced_in_commit": "abc297327358e71ed51b7fc4d20c9c13ddd3d412"
+  },
+  "exact_checks": 18,
+  "checks": [
+    {
+      "id": "P37.root_cover.closed_loop_swap",
+      "statement": "the u^2=z root local system exchanges its two roots after one enclosing loop and returns after two",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.Airy.full_solution_is_single_valued",
+      "statement": "Ai and Bi are single-valued at the ordinary point z=0, so root exchange is not full Airy-solution monodromy",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.detline.closed_half_form_lift",
+      "statement": "the declared canonical representative of a continuously lifted soft inverse square root has order four: one loop exchanges roots and two loops give the central sign -I",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.detline.reverse_loop_is_inverse",
+      "statement": "reversing the oriented loop inverts the half-form transport",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.detline.constant_rephasing_conjugacy",
+      "statement": "constant sheet rephasing changes raw off-diagonal entries only by conjugation and preserves trace, determinant, characteristic polynomial, and the central square",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.mutation.principal_reset_loses_central_sign",
+      "statement": "resetting a principal square root at each sample collapses the half-form lift to the root permutation and incorrectly loses the two-turn sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.types.conjugate_matrices_need_not_be_same_object",
+      "statement": "P and the Phase-36 Gauss-Manin G are conjugate as matrices but remain different typed maps; the unipotent Stokes map is different again",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.open_laterals.independent_signs_do_not_fix_closed_lift",
+      "statement": "independently reset open-lateral signs allow both order-four and order-two matrices, which is why a single connected closed-loop lift is extra information",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.control.nonenclosing_loop_is_trivial",
+      "statement": "the local winding-zero control has neither root exchange nor half-form phase",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.scope.monodromy_does_not_choose_contour_vector",
+      "statement": "the local monodromy has two eigendirections and supplies no physical relative-cycle vector or intersection coefficient",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.Phase17.root_swap_does_not_break_basis_equivalence",
+      "statement": "a common root-swap holonomy preserves the Phase-17 parity-controlled equivalence between local and sheet-exchange charge matrices",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.conditional.physical_sheet_anchor_can_forbid_change",
+      "statement": "if an independently physical sheet-localized source is supplied, the Phase-17 basis change moves it and is no longer an allowed passive relabeling",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.intertwiner.specific_QX_classification",
+      "statement": "for the declared toy H_B=P, H_F=eta P, the specific Q_X=P sheet map intertwines only eta=+1",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.intertwiner.full_and_candidate_nullities",
+      "statement": "the exact toy nullities separate the declared span{I,P} from all 2x2 sheet intertwiners; neither count is a physical supercharge count",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.intertwiner.specific_failure_is_not_total_no_go",
+      "statement": "at eta=-1 the declared Q_X=P fails while two other sheet intertwiners survive, so a specific-Q obstruction is not a total no-go",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.guard.pfaffian_sign_not_recovered_from_determinant",
+      "statement": "two antisymmetric matrices can have the same determinant and opposite Pfaffians, so the reduced bosonic determinant does not compute a fermion Pfaffian sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.guard.reduced_block_does_not_fix_full_BFV_operator",
+      "statement": "a nonzero reduced block can coexist with a zero mode of the full operator and therefore cannot establish BFV nondegeneracy or a quantum master equation",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.scope.semantic_claim_guards",
+      "statement": "the executable keeps every uncomputed physical selection, Pfaffian/BFV, supercharge, and state claim false",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P37.BVP.closed_loop_root_swap_three_radii",
+      "statement": "both BVP roots exchange at one fixed basepoint after one enclosing loop on each of three finite radii",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.BVP.residual_and_continuity_gates",
+      "statement": "all six enclosing paths pass the half-BVP, independently reintegrated sampled endpoint, and continuous-nearest-root step gates",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.detline.sampled_nonzero_phase_lifts",
+      "statement": "the thirteen sampled endpoint blocks per path are nonzero and support a minimal-jump sampled determinant phase lift, conditional on no unresolved intersample winding or zero",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.detline.closed_lift_conjugacy_class",
+      "statement": "conditional on the minimal-jump sampled phase with no unresolved intersample winding, the reduced half-form has tr L=0, det L=1, L^2=-I, and L^4=I on all three loops",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.detline.two_turn_soft_origin_of_central_sign",
+      "statement": "on the minimal-jump sampled lift over the two-sheet return path, the determinant and soft coordinate wind once, d/soft has zero net phase, and the inverse square root acquires -1",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.mesh.coarse_fine_closed_path_stability",
+      "statement": "a 25-point and 49-point BVP continuation of the same enclosing root path agree at the endpoint and on their shared thirteen-angle determinant table; this is not determinant-sampling refinement",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.detline.direct_two_turn_matches_stitched_return",
+      "statement": "one uninterrupted 4pi continuation returns the same root with inverse-square-root phase -1 and agrees with the independently stitched two-sheet return",
+      "status": "PASS"
+    },
+    {
+      "id": "P37.control.nonenclosing_BVP_loop_returns_identity",
+      "statement": "a nearby loop that does not enclose the fold returns the same BVP root and reduced inverse-square-root lift",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "typed exact monodromy/intertwiner audit plus same-basepoint closed BVP-root and sampled reduced-half-form transport",
+    "claim_status": {
+      "a_global_conserved_spinorial_supercharge_or_SUGRA_constraint_is_constructed": "OPEN_NOT_COMPUTED",
+      "a_physical_sheet_anchor_is_present_in_the_current_model": "OPEN_NOT_SUPPLIED",
+      "root_monodromy_alone_breaks_the_Phase17_local_exchange_basis_equivalence": "CONTRADICTED_IN_THE_EXACT_FINITE_FIBER_CONTROL",
+      "the_closed_loop_result_is_removed_by_constant_root_relabeling": "CONTRADICTED_FOR_THE_RECORDED_CONJUGACY_INVARIANTS",
+      "the_full_BFV_superdeterminant_or_physical_state_is_constructed": "OPEN_NOT_COMPUTED",
+      "the_local_BVP_root_cover_has_nontrivial_Z2_monodromy": "SUPPORTED_ON_THREE_SAMPLED_FINITE_LOOPS",
+      "the_original_gravitational_relative_cycle_is_selected": "OPEN_NOT_COMPUTED",
+      "the_reduced_bosonic_half_form_is_a_spacetime_Pin_or_fermion_Pfaffian_holonomy": "OPEN_NOT_COMPUTED_AND_NOT_IDENTIFIED",
+      "the_sampled_reduced_determinant_half_form_has_order_four_closed_loop_transport": "SUPPORTED_CONDITIONALLY_ON_THE_MINIMAL_JUMP_SAMPLED_NONZERO_LIFT_WITH_NO_UNRESOLVED_INTERSAMPLE_WINDING"
+    },
+    "exact_check_ids": [
+      "P37.root_cover.closed_loop_swap",
+      "P37.Airy.full_solution_is_single_valued",
+      "P37.detline.closed_half_form_lift",
+      "P37.detline.reverse_loop_is_inverse",
+      "P37.detline.constant_rephasing_conjugacy",
+      "P37.mutation.principal_reset_loses_central_sign",
+      "P37.types.conjugate_matrices_need_not_be_same_object",
+      "P37.open_laterals.independent_signs_do_not_fix_closed_lift",
+      "P37.control.nonenclosing_loop_is_trivial",
+      "P37.scope.monodromy_does_not_choose_contour_vector",
+      "P37.Phase17.root_swap_does_not_break_basis_equivalence",
+      "P37.conditional.physical_sheet_anchor_can_forbid_change",
+      "P37.intertwiner.specific_QX_classification",
+      "P37.intertwiner.full_and_candidate_nullities",
+      "P37.intertwiner.specific_failure_is_not_total_no_go",
+      "P37.guard.pfaffian_sign_not_recovered_from_determinant",
+      "P37.guard.reduced_block_does_not_fix_full_BFV_operator",
+      "P37.scope.semantic_claim_guards"
+    ],
+    "exact_check_records": [
+      {
+        "id": "P37.root_cover.closed_loop_swap",
+        "statement": "the u^2=z root local system exchanges its two roots after one enclosing loop and returns after two",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.Airy.full_solution_is_single_valued",
+        "statement": "Ai and Bi are single-valued at the ordinary point z=0, so root exchange is not full Airy-solution monodromy",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.detline.closed_half_form_lift",
+        "statement": "the declared canonical representative of a continuously lifted soft inverse square root has order four: one loop exchanges roots and two loops give the central sign -I",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.detline.reverse_loop_is_inverse",
+        "statement": "reversing the oriented loop inverts the half-form transport",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.detline.constant_rephasing_conjugacy",
+        "statement": "constant sheet rephasing changes raw off-diagonal entries only by conjugation and preserves trace, determinant, characteristic polynomial, and the central square",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.mutation.principal_reset_loses_central_sign",
+        "statement": "resetting a principal square root at each sample collapses the half-form lift to the root permutation and incorrectly loses the two-turn sign",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.types.conjugate_matrices_need_not_be_same_object",
+        "statement": "P and the Phase-36 Gauss-Manin G are conjugate as matrices but remain different typed maps; the unipotent Stokes map is different again",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.open_laterals.independent_signs_do_not_fix_closed_lift",
+        "statement": "independently reset open-lateral signs allow both order-four and order-two matrices, which is why a single connected closed-loop lift is extra information",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.control.nonenclosing_loop_is_trivial",
+        "statement": "the local winding-zero control has neither root exchange nor half-form phase",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.scope.monodromy_does_not_choose_contour_vector",
+        "statement": "the local monodromy has two eigendirections and supplies no physical relative-cycle vector or intersection coefficient",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.Phase17.root_swap_does_not_break_basis_equivalence",
+        "statement": "a common root-swap holonomy preserves the Phase-17 parity-controlled equivalence between local and sheet-exchange charge matrices",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.conditional.physical_sheet_anchor_can_forbid_change",
+        "statement": "if an independently physical sheet-localized source is supplied, the Phase-17 basis change moves it and is no longer an allowed passive relabeling",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.intertwiner.specific_QX_classification",
+        "statement": "for the declared toy H_B=P, H_F=eta P, the specific Q_X=P sheet map intertwines only eta=+1",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.intertwiner.full_and_candidate_nullities",
+        "statement": "the exact toy nullities separate the declared span{I,P} from all 2x2 sheet intertwiners; neither count is a physical supercharge count",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.intertwiner.specific_failure_is_not_total_no_go",
+        "statement": "at eta=-1 the declared Q_X=P fails while two other sheet intertwiners survive, so a specific-Q obstruction is not a total no-go",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.guard.pfaffian_sign_not_recovered_from_determinant",
+        "statement": "two antisymmetric matrices can have the same determinant and opposite Pfaffians, so the reduced bosonic determinant does not compute a fermion Pfaffian sign",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.guard.reduced_block_does_not_fix_full_BFV_operator",
+        "statement": "a nonzero reduced block can coexist with a zero mode of the full operator and therefore cannot establish BFV nondegeneracy or a quantum master equation",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.scope.semantic_claim_guards",
+        "statement": "the executable keeps every uncomputed physical selection, Pfaffian/BFV, supercharge, and state claim false",
+        "status": "PASS"
+      }
+    ],
+    "exact_checks": 18,
+    "exact_controls": {
+      "conditional_intertwiner_table": {
+        "+1": {
+          "coefficient_map_rank": 2,
+          "declared_QX_compatible": true,
+          "declared_candidate_subspace_dimension": 2,
+          "eta": "1",
+          "unrestricted_sheet_intertwiner_dimension": 2
+        },
+        "+i": {
+          "coefficient_map_rank": 4,
+          "declared_QX_compatible": false,
+          "declared_candidate_subspace_dimension": 0,
+          "eta": "I",
+          "unrestricted_sheet_intertwiner_dimension": 0
+        },
+        "-1": {
+          "coefficient_map_rank": 2,
+          "declared_QX_compatible": false,
+          "declared_candidate_subspace_dimension": 0,
+          "eta": "-1",
+          "unrestricted_sheet_intertwiner_dimension": 2
+        },
+        "-i": {
+          "coefficient_map_rank": 4,
+          "declared_QX_compatible": false,
+          "declared_candidate_subspace_dimension": 0,
+          "eta": "-I",
+          "unrestricted_sheet_intertwiner_dimension": 0
+        }
+      },
+      "conjugacy_invariants": {
+        "Gauss_Manin_G": {
+          "characteristic_polynomial": "(lambda - 1)*(lambda + 1)",
+          "determinant": "-1",
+          "fourth_power": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "square": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "trace": "0"
+        },
+        "Stokes_down": {
+          "characteristic_polynomial": "(lambda - 1)**2",
+          "determinant": "1",
+          "fourth_power": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "4",
+              "1"
+            ]
+          ],
+          "square": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "2",
+              "1"
+            ]
+          ],
+          "trace": "2"
+        },
+        "conditional_canonical_soft_half_form_CCW": {
+          "characteristic_polynomial": "lambda**2 + 1",
+          "determinant": "1",
+          "fourth_power": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "square": [
+            [
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "-1"
+            ]
+          ],
+          "trace": "0"
+        },
+        "root_sheet_P": {
+          "characteristic_polynomial": "(lambda - 1)*(lambda + 1)",
+          "determinant": "-1",
+          "fourth_power": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "square": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "trace": "0"
+        }
+      },
+      "physical_claim_guards": {
+        "absolute_maslov_orientation_fixed": false,
+        "conserved_spinorial_supercharge_constructed": false,
+        "full_BFV_superdeterminant_computed": false,
+        "pfaffian_phase_computed": false,
+        "physical_contour_selected": false,
+        "physical_state_constructed": false,
+        "upper_or_lower_lateral_physically_selected": false
+      },
+      "typed_matrices": {
+        "Airy_solution_monodromy": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "Phase36_Gauss_Manin_cycle_map": [
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "Phase36_Stokes_down": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "conditional_canonical_soft_half_form_CCW": [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0"
+          ]
+        ],
+        "conditional_canonical_soft_half_form_CW": [
+          [
+            "0",
+            "-1"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "root_sheet_monodromy_P": [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      "typed_spaces": {
+        "airy_solution": "the exact (Ai,Bi) solution space",
+        "boson_fermion_sheet_fibers": "finite conditional intertwiner witness only",
+        "relative_cycle": "the separately declared Phase-36 contour-chain space",
+        "root_sheet": "two local BVP stationary-root sheets",
+        "soft_half_form": "the conditional reduced d^(-1/2) lift"
+      }
+    },
+    "next_calculation": "transport one regulated original lapse-field relative cycle from the origin prescription through the fold, compute its signed global intersections and hard CFU coefficients, then lift the selected saddle to the full BFV/SUGRA Pfaffian line",
+    "numerical_check_ids": [
+      "P37.BVP.closed_loop_root_swap_three_radii",
+      "P37.BVP.residual_and_continuity_gates",
+      "P37.detline.sampled_nonzero_phase_lifts",
+      "P37.detline.closed_lift_conjugacy_class",
+      "P37.detline.two_turn_soft_origin_of_central_sign",
+      "P37.mesh.coarse_fine_closed_path_stability",
+      "P37.detline.direct_two_turn_matches_stitched_return",
+      "P37.control.nonenclosing_BVP_loop_returns_identity"
+    ],
+    "numerical_check_records": [
+      {
+        "id": "P37.BVP.closed_loop_root_swap_three_radii",
+        "statement": "both BVP roots exchange at one fixed basepoint after one enclosing loop on each of three finite radii",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.BVP.residual_and_continuity_gates",
+        "statement": "all six enclosing paths pass the half-BVP, independently reintegrated sampled endpoint, and continuous-nearest-root step gates",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.detline.sampled_nonzero_phase_lifts",
+        "statement": "the thirteen sampled endpoint blocks per path are nonzero and support a minimal-jump sampled determinant phase lift, conditional on no unresolved intersample winding or zero",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.detline.closed_lift_conjugacy_class",
+        "statement": "conditional on the minimal-jump sampled phase with no unresolved intersample winding, the reduced half-form has tr L=0, det L=1, L^2=-I, and L^4=I on all three loops",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.detline.two_turn_soft_origin_of_central_sign",
+        "statement": "on the minimal-jump sampled lift over the two-sheet return path, the determinant and soft coordinate wind once, d/soft has zero net phase, and the inverse square root acquires -1",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.mesh.coarse_fine_closed_path_stability",
+        "statement": "a 25-point and 49-point BVP continuation of the same enclosing root path agree at the endpoint and on their shared thirteen-angle determinant table; this is not determinant-sampling refinement",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.detline.direct_two_turn_matches_stitched_return",
+        "statement": "one uninterrupted 4pi continuation returns the same root with inverse-square-root phase -1 and agrees with the independently stitched two-sheet return",
+        "status": "PASS"
+      },
+      {
+        "id": "P37.control.nonenclosing_BVP_loop_returns_identity",
+        "statement": "a nearby loop that does not enclose the fold returns the same BVP root and reduced inverse-square-root lift",
+        "status": "PASS"
+      }
+    ],
+    "numerical_checks": 8,
+    "numerical_controls": {
+      "basepoint_half_form_reference": "principal Arg in (-pi,pi] is fixed once on each basepoint root; paths use unwrapped minimal-jump sample phases, and constant changes of the two fixed references act by conjugation",
+      "boundary": [
+        3.5668031935672753,
+        1.0185809464006637,
+        3.5668031935672753,
+        1.0185809464006637
+      ],
+      "direct_two_turn_control": {
+        "comparison": "uninterrupted 4pi path versus two independently solved 2pi sheet paths stitched at their matching basepoint roots",
+        "inverse_sqrt_transport": [
+          -0.9999999999925295,
+          -1.0106430996073106e-15
+        ],
+        "path": {
+          "determinant_phase_rotation": 6.2831853071795845,
+          "determinant_sample_count": 13,
+          "end_center": [
+            [
+              1.2647125695685673,
+              -2.3958578625412987e-18
+            ],
+            [
+              0.09878487604636517,
+              1.8441044610077265e-19
+            ]
+          ],
+          "end_determinant": [
+            143.30751667900387,
+            -2.1692690805926578e-14
+          ],
+          "end_soft": [
+            0.016774340272836766,
+            -2.4028845242646103e-18
+          ],
+          "max_center_step": 0.001098544367973965,
+          "max_full_endpoint_residual": 4.6748691546523227e-11,
+          "max_root_residual": 3.20353094384105e-15,
+          "max_sampled_determinant_phase_increment": 0.5286070338727534,
+          "max_sampled_hard_phase_increment": 0.0054939882699445546,
+          "max_sampled_soft_phase_increment": 0.5239918620409711,
+          "min_sampled_abs_hard_quotient": 8543.257996922024,
+          "min_sampled_sigma_Bv": 0.0573869029854798,
+          "sampled_hard_quotient_phase_rotation": -9.540979117872439e-18,
+          "soft_phase_rotation": 6.283185307179586,
+          "start_center": [
+            [
+              1.264712569568264,
+              0
+            ],
+            [
+              0.09878487604639197,
+              0
+            ]
+          ],
+          "start_determinant": [
+            143.30751667686272,
+            0
+          ],
+          "start_soft": [
+            0.016774340272532273,
+            0
+          ]
+        },
+        "point_count": 97,
+        "radius": 0.0002
+      },
+      "fold": {
+        "T_c": 9.788625568081242,
+        "center": [
+          1.2479953302615718,
+          0.10016795390658555
+        ],
+        "right_null_oriented": [
+          0.9964839319603808,
+          -0.08378408765857216
+        ]
+      },
+      "mesh_refinement": {
+        "coarse_point_count": 25,
+        "coarse_positive_soft_path": {
+          "determinant_phase_rotation": 3.1415926535898406,
+          "determinant_sample_count": 13,
+          "end_center": [
+            [
+              1.231308686125857,
+              -8.211030184724972e-16
+            ],
+            [
+              0.1015938146575202,
+              7.143617385342473e-17
+            ]
+          ],
+          "end_determinant": [
+            -146.2338080607084,
+            -6.928416210173289e-12
+          ],
+          "end_soft": [
+            -0.016747437201725886,
+            -8.242011790441395e-16
+          ],
+          "max_center_step": 0.0021959017242491755,
+          "max_full_endpoint_residual": 4.6748691546523227e-11,
+          "max_root_residual": 3.096597536975077e-15,
+          "max_sampled_determinant_phase_increment": 0.264389506478279,
+          "max_sampled_hard_phase_increment": 0.0028465805475203216,
+          "max_sampled_soft_phase_increment": 0.2620023777871706,
+          "min_sampled_abs_hard_quotient": 8543.25799694946,
+          "min_sampled_sigma_Bv": 0.0573869029854798,
+          "sampled_hard_quotient_phase_rotation": -1.8366384801904445e-15,
+          "soft_phase_rotation": 3.1415926535898424,
+          "start_center": [
+            [
+              1.264712569568264,
+              0
+            ],
+            [
+              0.09878487604639197,
+              0
+            ]
+          ],
+          "start_determinant": [
+            143.30751667686272,
+            0
+          ],
+          "start_soft": [
+            0.016774340272532273,
+            0
+          ]
+        },
+        "fine_point_count": 49,
+        "fine_positive_soft_path": {
+          "determinant_phase_rotation": 3.1415926535898286,
+          "determinant_sample_count": 13,
+          "end_center": [
+            [
+              1.2313086861258071,
+              -6.240889036422848e-16
+            ],
+            [
+              0.10159381465752458,
+              5.444073665328839e-17
+            ]
+          ],
+          "end_determinant": [
+            -146.2338080612443,
+            -5.2125639660723075e-12
+          ],
+          "end_soft": [
+            -0.016747437201776037,
+            -6.264558320462636e-16
+          ],
+          "max_center_step": 0.0010985443679722617,
+          "max_full_endpoint_residual": 4.6748691546523227e-11,
+          "max_root_residual": 1.4134158346288916e-15,
+          "max_sampled_determinant_phase_increment": 0.26438950647911486,
+          "max_sampled_hard_phase_increment": 0.0028465805469653827,
+          "max_sampled_soft_phase_increment": 0.2620023777871781,
+          "min_sampled_abs_hard_quotient": 8543.25799694946,
+          "min_sampled_sigma_Bv": 0.0573869029854798,
+          "sampled_hard_quotient_phase_rotation": -1.762479051592436e-15,
+          "soft_phase_rotation": 3.14159265358983,
+          "start_center": [
+            [
+              1.264712569568264,
+              0
+            ],
+            [
+              0.09878487604639197,
+              0
+            ]
+          ],
+          "start_determinant": [
+            143.30751667686272,
+            0
+          ],
+          "start_soft": [
+            0.016774340272532273,
+            0
+          ]
+        },
+        "radius": 0.0002
+      },
+      "nonenclosing_control": {
+        "inverse_sqrt_transport": [
+          0.999999999998397,
+          7.840950111402599e-16
+        ],
+        "loop_center": [
+          9.787825568081242,
+          0
+        ],
+        "path": {
+          "determinant_phase_rotation": -1.5681900222830336e-15,
+          "determinant_sample_count": 13,
+          "end_center": [
+            [
+              1.2854170026209102,
+              -5.849301328695634e-17
+            ],
+            [
+              0.0971329990382466,
+              4.562233198579139e-18
+            ]
+          ],
+          "end_determinant": [
+            316.3932413886157,
+            -4.962307404519924e-13
+          ],
+          "end_soft": [
+            0.037544376137895304,
+            -5.866959041862565e-17
+          ],
+          "max_center_step": 0.0009491948359367979,
+          "max_full_endpoint_residual": 4.641641212654266e-11,
+          "max_root_residual": 4.441051169333586e-15,
+          "max_sampled_determinant_phase_increment": 0.08518397623009392,
+          "max_sampled_hard_phase_increment": 0.0017233435305159083,
+          "max_sampled_soft_phase_increment": 0.0869073197605199,
+          "min_sampled_abs_hard_quotient": 8427.180684156061,
+          "min_sampled_sigma_Bv": 0.09887593687500157,
+          "sampled_hard_quotient_phase_rotation": -5.637851296924623e-18,
+          "soft_phase_rotation": -1.5612511283791264e-15,
+          "start_center": [
+            [
+              1.2854170026208678,
+              0
+            ],
+            [
+              0.09713299903825164,
+              0
+            ]
+          ],
+          "start_determinant": [
+            316.3932413876013,
+            0
+          ],
+          "start_soft": [
+            0.037544376137852616,
+            0
+          ]
+        },
+        "point_count": 33,
+        "radius": 0.0002
+      },
+      "orientation": "T-loop counterclockwise from T_c-r; z=T_c-T also winds counterclockwise",
+      "radius_records": [
+        {
+          "combined_two_turn_determinant_phase_rotation": 6.283185307179624,
+          "combined_two_turn_inverse_sqrt_phase": [
+            -1,
+            1.8973371343637957e-14
+          ],
+          "combined_two_turn_sampled_hard_phase_rotation": -1.730386667286865e-15,
+          "combined_two_turn_soft_phase_rotation": 6.283185307179625,
+          "endpoint_swap_errors": [
+            2.7173752069129257e-13,
+            7.273054759625793e-14
+          ],
+          "incoming_root_order": [
+            "soft_minus",
+            "soft_plus"
+          ],
+          "lift_determinant": [
+            0.9999999999870296,
+            -1.897337134339186e-14
+          ],
+          "lift_fourth_minus_identity_norm": 3.6685877585093614e-11,
+          "lift_square_plus_identity_norm": 1.834293879254681e-11,
+          "lift_trace": [
+            0,
+            0
+          ],
+          "max_step_over_min_root_separation": 0.03277106557845732,
+          "min_root_separation": 0.033521777476045,
+          "paths": [
+            {
+              "determinant_phase_rotation": 3.141592653589796,
+              "determinant_sample_count": 13,
+              "end_center": [
+                [
+                  1.2647125695685346,
+                  3.6493115029392886e-17
+                ],
+                [
+                  0.09878487604636793,
+                  -2.968007976478798e-18
+                ]
+              ],
+              "end_determinant": [
+                143.30751667860878,
+                3.174306044981603e-13
+              ],
+              "end_soft": [
+                0.016774340272804007,
+                3.661347459444453e-17
+              ],
+              "max_center_step": 0.001098544367973924,
+              "max_full_endpoint_residual": 4.684911662306688e-11,
+              "max_root_residual": 1.795400703510697e-15,
+              "max_sampled_determinant_phase_increment": 0.26438950648087267,
+              "max_sampled_hard_phase_increment": 0.002846580546705056,
+              "max_sampled_soft_phase_increment": 0.26200237778909513,
+              "min_sampled_abs_hard_quotient": 8543.257996915156,
+              "min_sampled_sigma_Bv": 0.05738690298603794,
+              "sampled_hard_quotient_phase_rotation": 3.209238430557093e-17,
+              "soft_phase_rotation": 3.141592653589795,
+              "start_center": [
+                [
+                  1.2313086861258797,
+                  0
+                ],
+                [
+                  0.10159381465752042,
+                  0
+                ]
+              ],
+              "start_determinant": [
+                -146.23380805923256,
+                0
+              ],
+              "start_soft": [
+                -0.016747437201703335,
+                0
+              ]
+            },
+            {
+              "determinant_phase_rotation": 3.1415926535898286,
+              "determinant_sample_count": 13,
+              "end_center": [
+                [
+                  1.2313086861258071,
+                  -6.240889036422848e-16
+                ],
+                [
+                  0.10159381465752458,
+                  5.444073665328839e-17
+                ]
+              ],
+              "end_determinant": [
+                -146.2338080612443,
+                -5.2125639660723075e-12
+              ],
+              "end_soft": [
+                -0.016747437201776037,
+                -6.264558320462636e-16
+              ],
+              "max_center_step": 0.0010985443679722617,
+              "max_full_endpoint_residual": 4.6748691546523227e-11,
+              "max_root_residual": 1.4134158346288916e-15,
+              "max_sampled_determinant_phase_increment": 0.26438950647911486,
+              "max_sampled_hard_phase_increment": 0.0028465805469653827,
+              "max_sampled_soft_phase_increment": 0.2620023777871781,
+              "min_sampled_abs_hard_quotient": 8543.25799694946,
+              "min_sampled_sigma_Bv": 0.0573869029854798,
+              "sampled_hard_quotient_phase_rotation": -1.762479051592436e-15,
+              "soft_phase_rotation": 3.14159265358983,
+              "start_center": [
+                [
+                  1.264712569568264,
+                  0
+                ],
+                [
+                  0.09878487604639197,
+                  0
+                ]
+              ],
+              "start_determinant": [
+                143.30751667686272,
+                0
+              ],
+              "start_soft": [
+                0.016774340272532273,
+                0
+              ]
+            }
+          ],
+          "point_count_per_path": 49,
+          "radius": 0.0002,
+          "reduced_half_form_lift": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0.9999999999931215,
+                -1.7763568393880316e-14
+              ]
+            ],
+            [
+              [
+                -0.9999999999939081,
+                1.2098029496280824e-15
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "root_sheet_monodromy": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "combined_two_turn_determinant_phase_rotation": 6.283185307179586,
+          "combined_two_turn_inverse_sqrt_phase": [
+            -1,
+            -1.2246467991473532e-16
+          ],
+          "combined_two_turn_sampled_hard_phase_rotation": -2.6020852139652106e-18,
+          "combined_two_turn_soft_phase_rotation": 6.283185307179586,
+          "endpoint_swap_errors": [
+            2.2539017599615074e-15,
+            1.4943234626880115e-14
+          ],
+          "incoming_root_order": [
+            "soft_minus",
+            "soft_plus"
+          ],
+          "lift_determinant": [
+            0.999999999995195,
+            1.224646799141469e-16
+          ],
+          "lift_fourth_minus_identity_norm": 1.3590720326780828e-11,
+          "lift_square_plus_identity_norm": 6.795360163390414e-12,
+          "lift_trace": [
+            0,
+            0
+          ],
+          "max_step_over_min_root_separation": 0.0328339920228258,
+          "min_root_separation": 0.07495423108817781,
+          "paths": [
+            {
+              "determinant_phase_rotation": 3.141592653589793,
+              "determinant_sample_count": 13,
+              "end_center": [
+                [
+                  1.285417002620869,
+                  -6.887615589317873e-18
+                ],
+                [
+                  0.09713299903824982,
+                  5.385154246861511e-19
+                ]
+              ],
+              "end_determinant": [
+                316.3932413887433,
+                -5.677205086038586e-14
+              ],
+              "end_soft": [
+                0.037544376137854094,
+                -6.9085172878224865e-18
+              ],
+              "max_center_step": 0.002461046625626272,
+              "max_full_endpoint_residual": 4.6080090097893876e-11,
+              "max_root_residual": 1.6045383582233347e-15,
+              "max_sampled_determinant_phase_increment": 0.26753128864608183,
+              "max_sampled_hard_phase_increment": 0.00643942502734382,
+              "max_sampled_soft_phase_increment": 0.26224030537522547,
+              "min_sampled_abs_hard_quotient": 8427.180684186147,
+              "min_sampled_sigma_Bv": 0.12718769794751464,
+              "sampled_hard_quotient_phase_rotation": 0,
+              "soft_phase_rotation": 3.141592653589793,
+              "start_center": [
+                [
+                  1.210726642005038,
+                  0
+                ],
+                [
+                  0.10341685049251487,
+                  0
+                ]
+              ],
+              "start_determinant": [
+                -331.0351483772147,
+                0
+              ],
+              "start_soft": [
+                -0.037409854849225654,
+                0
+              ]
+            },
+            {
+              "determinant_phase_rotation": 3.141592653589793,
+              "determinant_sample_count": 13,
+              "end_center": [
+                [
+                  1.2107266420050524,
+                  6.8314063560360545e-18
+                ],
+                [
+                  0.103416850492511,
+                  -6.171288436094979e-19
+                ]
+              ],
+              "end_determinant": [
+                -331.0351483792011,
+                6.215620349815596e-14
+              ],
+              "end_soft": [
+                -0.037409854849210944,
+                6.859092243611556e-18
+              ],
+              "max_center_step": 0.002461046625620263,
+              "max_full_endpoint_residual": 4.654019506392373e-11,
+              "max_root_residual": 1.4219293067312031e-15,
+              "max_sampled_determinant_phase_increment": 0.26753128864651665,
+              "max_sampled_hard_phase_increment": 0.006439425026349909,
+              "max_sampled_soft_phase_increment": 0.26224030537560683,
+              "min_sampled_abs_hard_quotient": 8427.180684156061,
+              "min_sampled_sigma_Bv": 0.12718769794714088,
+              "sampled_hard_quotient_phase_rotation": -2.6020852139652106e-18,
+              "soft_phase_rotation": 3.141592653589793,
+              "start_center": [
+                [
+                  1.2854170026208678,
+                  0
+                ],
+                [
+                  0.09713299903825164,
+                  0
+                ]
+              ],
+              "start_determinant": [
+                316.3932413876013,
+                0
+              ],
+              "start_soft": [
+                0.037544376137852616,
+                0
+              ]
+            }
+          ],
+          "point_count_per_path": 49,
+          "radius": 0.001,
+          "reduced_half_form_lift": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0.9999999999969997,
+                0
+              ]
+            ],
+            [
+              [
+                -0.9999999999981952,
+                -1.2246467991451432e-16
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "root_sheet_monodromy": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "combined_two_turn_determinant_phase_rotation": 6.283185307179563,
+          "combined_two_turn_inverse_sqrt_phase": [
+            -1,
+            -1.1668784136016363e-14
+          ],
+          "combined_two_turn_sampled_hard_phase_rotation": 1.5057399771478686e-14,
+          "combined_two_turn_soft_phase_rotation": 6.283185307179549,
+          "endpoint_swap_errors": [
+            4.888245772623393e-14,
+            2.2968873440967607e-14
+          ],
+          "incoming_root_order": [
+            "soft_minus",
+            "soft_plus"
+          ],
+          "lift_determinant": [
+            0.9999999999971613,
+            1.1890828740907639e-14
+          ],
+          "lift_fourth_minus_identity_norm": 8.029209254247321e-12,
+          "lift_square_plus_identity_norm": 4.0146046271236615e-12,
+          "lift_trace": [
+            0,
+            0
+          ],
+          "max_step_over_min_root_separation": 0.02472899545082788,
+          "min_root_separation": 0.16757210211929877,
+          "paths": [
+            {
+              "determinant_phase_rotation": 3.141592653589779,
+              "determinant_sample_count": 13,
+              "end_center": [
+                [
+                  1.331867522439399,
+                  -1.226055692719109e-15
+                ],
+                [
+                  0.09366154267896577,
+                  8.838320163621987e-17
+                ]
+              ],
+              "end_determinant": [
+                687.0939494299182,
+                -9.204727676816005e-12
+              ],
+              "end_soft": [
+                0.0841224255721355,
+                -1.2291499033965803e-15
+              ],
+              "max_center_step": 0.004143889750993804,
+              "max_full_endpoint_residual": 4.7522720990803705e-11,
+              "max_root_residual": 4.7412651040149e-15,
+              "max_sampled_determinant_phase_increment": 0.3077618757654242,
+              "max_sampled_hard_phase_increment": 0.015327372586110116,
+              "max_sampled_soft_phase_increment": 0.29551574452887114,
+              "min_sampled_abs_hard_quotient": 8167.785756970724,
+              "min_sampled_sigma_Bv": 0.27883383468402173,
+              "sampled_hard_quotient_phase_rotation": 1.1969591984239969e-15,
+              "soft_phase_rotation": 3.141592653589779,
+              "start_center": [
+                [
+                  1.1648882642755147,
+                  0
+                ],
+                [
+                  0.10774475082682637,
+                  0
+                ]
+              ],
+              "start_determinant": [
+                -760.5660985521982,
+                0
+              ],
+              "start_soft": [
+                -0.08344967090481366,
+                0
+              ]
+            },
+            {
+              "determinant_phase_rotation": 3.141592653589784,
+              "determinant_sample_count": 13,
+              "end_center": [
+                [
+                  1.1648882642754919,
+                  1.94246362972202e-15
+                ],
+                [
+                  0.10774475082682554,
+                  -1.9637577831227727e-16
+                ]
+              ],
+              "end_determinant": [
+                -760.5660985550111,
+                7.2505974469472624e-12
+              ],
+              "end_soft": [
+                -0.08344967090483638,
+                1.952086960859568e-15
+              ],
+              "max_center_step": 0.004143889750993166,
+              "max_full_endpoint_residual": 4.788097057774919e-11,
+              "max_root_residual": 4.572794047058888e-15,
+              "max_sampled_determinant_phase_increment": 0.3077618757649202,
+              "max_sampled_hard_phase_increment": 0.015327372586372139,
+              "max_sampled_soft_phase_increment": 0.2955157445289689,
+              "min_sampled_abs_hard_quotient": 8167.785756959304,
+              "min_sampled_sigma_Bv": 0.2788338346837444,
+              "sampled_hard_quotient_phase_rotation": 1.3860440573054689e-14,
+              "soft_phase_rotation": 3.14159265358977,
+              "start_center": [
+                [
+                  1.3318675224393504,
+                  0
+                ],
+                [
+                  0.0936615426789706,
+                  0
+                ]
+              ],
+              "start_determinant": [
+                687.0939494285585,
+                0
+              ],
+              "start_soft": [
+                0.08412242557208664,
+                0
+              ]
+            }
+          ],
+          "point_count_per_path": 65,
+          "radius": 0.005,
+          "reduced_half_form_lift": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0.9999999999981507,
+                4.6629367034170344e-15
+              ]
+            ],
+            [
+              [
+                -0.9999999999990106,
+                -7.227892037508585e-15
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "root_sheet_monodromy": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "sampling_warning": "minimal-jump phase lifts from sampled nonzero endpoint blocks and d/soft quotients do not exclude zeros or alias winding between samples, on other sheets, or in omitted modes"
+    },
+    "phase": "P37",
+    "scope_guard": {
+      "computed": [
+        "exact typed distinctions among root, Airy-solution, cycle, Stokes, and soft-half-form matrices",
+        "exact conjugacy invariants of declared canonical representatives and mutation controls for one local simple-fold model",
+        "conditional finite sheet-holonomy intertwiner dimensions for four declared eta values",
+        "six same-basepoint closed BVP-root paths on three finite enclosing radii",
+        "sampled endpoint-determinant, soft-coordinate, and d/soft phase lifts",
+        "one coarse/fine comparison, one uninterrupted two-turn return, and one nonenclosing-loop control"
+      ],
+      "not_computed": [
+        "a proof excluding determinant/hard-quotient zeros or alias winding between samples, on other sheets, or in omitted modes",
+        "the original lapse-field relative cycle, all good ends, or a global Picard-Lefschetz intersection coefficient",
+        "the regular hard determinant and complete Airy/Airy-prime uniform kernel coefficients",
+        "a spacetime Pin lift, fermion Pfaffian line, eta phase, or anomaly cancellation",
+        "a full joint field-lapse BFV/SUGRA operator, cohomology, quantum master equation, or WDW state",
+        "a conserved fermion-odd Lorentz-spinor supercharge, SUSY breaking order parameter, pole splitting, or SUSY scale"
+      ]
+    }
+  }
+}

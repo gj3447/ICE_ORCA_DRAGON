@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–36 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–37 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T05:50:42Z` graph update, the collection has 511 nodes and
-1338 edges. Validation verifies 71/71 stored hashes (68 artifacts and 3 policies). The
-Phase 16–36 run snapshots contain 346 named exact checks, 176 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (177 numerical controls in all). These
+At the recorded `2026-08-20T07:14:54.671Z` graph update, the collection has 525 nodes and
+1394 edges. Validation verifies 74/74 stored hashes (71 artifacts and 3 policies). The
+Phase 16–37 run snapshots contain 364 named exact checks, 184 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (185 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -38,6 +38,9 @@ confidence.
 ./ice ontology trace claim:P35_RELATIVE_ENDPOINT_TRANSPORT_FIXES_ABSOLUTE_MASLOV_ORIENTATION --depth 2
 ./ice ontology trace claim:P36_EXACT_LOCAL_AIRY_GAUSS_MANIN_CONNECTION_IS_FIXED --depth 2
 ./ice ontology trace claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM --depth 2
+./ice ontology trace claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY --depth 2
+./ice ontology trace claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY --depth 2
+./ice ontology trace claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE --depth 2
 ```
 
 Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;

@@ -79,12 +79,14 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE35_REDUCED_DETLINE_TRANSPORT.md` | Phase 35 보고서 — 6 exact + 8 numerical checks. sampled reduced det line은 운반되지만 physical Van Vleck block·absolute Maslov orientation·full BFV determinant·global `n_sigma`는 미유도 |
 | `phase36_airy_gauss_manin_connection.py` | 서로 따로 선언된 CW/CCW Airy basis identity와 세 유한 반원 반경의 두 sampled root-sheet BVP lateral을 검증하는 실행체 |
 | `PHASE36_AIRY_GAUSS_MANIN_CONNECTION.md` | Phase 36 보고서 — 12 exact + 9 numerical checks. 선언 basis identity는 고정되고 두 sampled root-sheet lateral이 local gate를 통과하지만, 공통 incoming physical dual의 수송·global contour 선택·absolute signs·BFV state는 미유도 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–36의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `phase37_closed_fold_holonomy.py` | 같은 basepoint의 실제 enclosing BVP-root loop, sampled reduced half-form return, typed holonomy/intertwiner와 nonenclosing·direct-two-turn 대조군을 검증하는 실행체 |
+| `PHASE37_CLOSED_FOLD_HOLONOMY.md` | Phase 37 보고서 — 18 exact + 8 numerical checks. local root monodromy와 조건부 sampled $L^2=-I$는 지지되지만 cycle·Pfaffian·Pin·BFV·물리적 supercharge는 미유도 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–37의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 36)
+## 현재 경계 (Phase 37)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -300,14 +302,27 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   local gate들만으로는 upper/lower arm을 고를 수 없다. 공통 dual의 실제 수송, complete original
   relative cycle과 global contour/homotopy 선택, regular hard determinant quotient와 CFU coefficient,
   unsampled zero 및 다른 sheet, absolute Maslov orientation, global \(n_\sigma\)는 계속 OPEN이다.
+- Phase 37은 Phase 36의 서로 따로 trivialize된 open lateral 비교를 넘어, 같은 basepoint에서 두 BVP
+  root를 실제 enclosing loop로 수송한다. 세 유한 반경 모두에서 root map은
+  \(P^2=I\)이고, 13-point minimal-jump determinant lift에 unresolved intersample zero/alias winding이
+  없다는 조건 아래 reduced half-form은 \(\operatorname{tr}L=0\), \(\det L=1\), \(L^2=-I\)다.
+- 작은 반경의 uninterrupted \(4\pi\) path는 원 root와 half-form sign \(-1\)로 돌아오고,
+  nonenclosing loop는 root와 half-form 모두 \(+1\)로 돌아온다. 이것은 local root/determinant
+  local-system의 비자명한 return이지 original gravitational relative cycle 또는 full Airy amplitude의
+  monodromy가 아니다.
+- Exact Phase-17 control에서 bare root swap은 local/exchange charge를 잇는 parity-controlled basis
+  change와 commute한다. 따라서 root holonomy alone은 \(Q_X\)를 물리적으로 선택하지 않는다.
+  Physical sheet anchor, fermionic Pin/Pfaffian holonomy, full BFV/SUGRA domain·cohomology·Ward identity,
+  conserved spinorial charge, persistent order parameter와 pole splitting은 계속 OPEN이다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
 - **PL/BFV global gate:** Phase 32의 tracked projected lapse-base crossing, Phase 33의 local Airy
-  chart, Phase 34의 reduced branch pair, Phase 35의 relative endpoint-Jacobi transport와 Phase 36의
-  separate root-sheet lateral gate에서 멈추지 않고, 하나의 공통 incoming physical upward dual과
+  chart, Phase 34의 reduced branch pair, Phase 35의 relative endpoint-Jacobi transport, Phase 36의
+  separate root-sheet lateral gate와 Phase 37의 local closed root/half-form holonomy에서 멈추지 않고,
+  하나의 공통 incoming physical upward dual과
   원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
   line의 absolute orientation을 고정한다. Full joint upward cycle의
   모든 arm과 complex BVP sheet 및 asymptotic good end를 열거하고, separately specified physical lapse contour와의 전체 intersection

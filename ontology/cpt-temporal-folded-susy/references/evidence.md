@@ -2,11 +2,11 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–36 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), and [`phase36-result.json`](../evidence/phase36-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–37 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), and [`phase37-result.json`](../evidence/phase37-result.json).
 
 ## Reading `PASS` correctly
 
-All 346 Phase 16–36 named exact checks have `status: PASS`. The snapshots contain 176 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35, and 9 in Phase 36, for 177 numerical controls in all. Phase 36 contributes 12 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that a local Airy basis is the original global cycle, that an endpoint-Jacobi section is the physical Van Vleck factor, that the original-contour intersection coefficient is globally known, or that a physical state has been constructed.
+All 364 Phase 16–37 named exact checks have `status: PASS`. The snapshots contain 184 typed numerical-ledger checks plus one legacy separately recorded Phase 18 SciPy control: 70 numerical controls through Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35, 9 in Phase 36, and 8 in Phase 37, for 185 numerical controls in all. Phase 37 contributes 18 exact checks. A `PASS` means that an executable verified its stated equality, rank, obstruction, mutation rejection, counterexample, or bounded numerical comparison. It does not mean every scientific claim passed, that local root monodromy is a relative-cycle map, that the sampled reduced bosonic half-form is a spacetime Pin or fermion Pfaffian line, that the original-contour intersection coefficient is globally known, or that a full BFV/SUGRA operator, supercharge, quantum constraint, or state has been constructed.
 
 The scientific direction is stored on:
 
@@ -41,6 +41,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 34 | `result:P34_DIRECTED_FOLD_DUAL_CONTINUATION_20260817`; `2026-08-17T18:31:54.008Z` | `cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py`; SHA-256 `c35d9fd605e46d791ae74b58344565578a84a7803745481859b41b26699e9527`; finalized in `4cd7e7215077137c576dcdab2765beab09d1a09b` | Exit `0`; 5 exact checks plus 10 numerical checks |
 | 35 | `result:P35_REDUCED_DETLINE_TRANSPORT_20260817`; `2026-08-17T18:50:03.459Z` | `cpt_temporal_folded_susy/phase35_reduced_detline_transport.py`; SHA-256 `2e91813fca948735abd8226a63af4cb26cba459ac0a9897b852686d8cb33d6cb`; current bytes finalized in `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8` | Exit `0`; 6 exact checks plus 8 numerical checks |
 | 36 | `result:P36_AIRY_GAUSS_MANIN_CONNECTION_20260817_CORRECTED`; `2026-08-17T20:00:27.984Z` | `cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py`; SHA-256 `a82da3be27bdb903756ed8b9d511e5f3eb99e7b15eac27f13c4adad695c04bf9`; current bytes finalized in `f975f3e0ee3fc8afc1a21444075eec7fe4716783` | Exit `0`; 12 exact checks plus 9 numerical checks |
+| 37 | `result:P37_CLOSED_FOLD_HOLONOMY_20260820`; `2026-08-20T07:14:54.671Z` | `cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py`; SHA-256 `72dd9264a15f3910c51fe01ca608cc435f5afcf0c47797d2889df467f8b46f62`; introduced in `abc297327358e71ed51b7fc4d20c9c13ddd3d412` | Exit `0`; 18 exact checks plus 8 numerical checks |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -61,6 +62,8 @@ The Phase 34 report hash is `14c2c6a63d1acc8ca53b55513f13364b92598f54f2bf03099f1
 The Phase 35 report hash is `467563b5eec62d0c3295be1ff7204ff0bd7d0688948e8841a009d4a828c87bc9`; its fresh snapshot hash is `f60c5baa537d8c04fef4f72683085f1e77092e420ccbcbda5c2c87283d3ee55a`. The artifact paths first appear in `212f39039c33948d16ec691b1ae4a2866631c6fc`; the exact current executable and report bytes first appear in the conservative hardening revision `6d3228ef21b74549e5e5c57b9a6871d44bcc82e8`.
 
 The corrected Phase 36 report hash is `83eb4e1abfca5db76efdb22451c0f655a39ae73085723d60b06379f4dd117db7`; its fresh snapshot hash is `80a2fc35b1a62ee40ccc951063687a98c2ea491d193373ad03c32311555459c7`. The artifact paths first appear in `377fffe3c4075e157c1ba261837cf01a52517d9f`; the exact current executable and report bytes first appear in the bounded-evidence correction `f975f3e0ee3fc8afc1a21444075eec7fe4716783`.
+
+The Phase 37 report hash is `a9041a7903263fa3a43ae150349acba098c39168e832a251fdf22672e71c68e0`; its fresh snapshot hash is `cdfbd339693fc51f24c16a93febae0b72bf45b36cd84fae8ce873bd3fbaa7364`. The exact executable and report bytes first appear in `abc297327358e71ed51b7fc4d20c9c13ddd3d412`.
 
 ## Evidence-to-claim index
 
@@ -141,6 +144,8 @@ The corrected Phase 36 report hash is `83eb4e1abfca5db76efdb22451c0f655a39ae7308
 | `evidence:p35-conjugate-and-local-continuity` | 3 numerical | Sampled determinant transport and conjugate reduced bosonic endpoint phase cancellation — `SUPPORTS` | Separate conjugate-input integrations and local finite differences only; not a square-root, Gaussian, or full BFV/SUGRA superdeterminant cancellation |
 | `evidence:p36-exact-airy-gauss-manin-and-detline-guard` | 12 exact | Declared local contour-basis identities — `SUPPORTS`; Phase 32 plus Phase 35 is sufficient by itself within the local gates — `CONTRADICTS` together with the numerical group | Separately ordered CW/CCW bases, basis-dependent first duals, declared leading-fold half phases, conditional soft/hard bookkeeping, and fold-patch separation; no common physical-dual transport or hard Airy amplitudes |
 | `evidence:p36-finite-radius-lateral-bvp` | 9 numerical | Tracked BVP root has sampled regular CW/U and CCW/L root-sheet continuations — `SUPPORTS`; unique local arm inference from Phase 32 plus Phase 35 — `CONTRADICTS` | Twelve root paths on three finite radii; root permutations are not cycle maps, sampled regularity is not a zero-radius or between-sample theorem, and the roots do not realize formal upward cycles |
+| `evidence:p37-exact-typed-monodromy-and-physical-guards` | 18 exact | Local BVP-root-cover Z2 monodromy — `SUPPORTS` together with the numerical group; conditional reduced-half-form order-four transport — `SUPPORTS` together with the numerical group; root monodromy alone breaks the Phase-17 basis equivalence — `CONTRADICTS` | Exact canonical root/half-form representatives, typed-map distinctions, reverse/rephasing/reset controls, finite intertwiner witness, and Pin/Pfaffian/BFV/state guards; no physical cycle, fermionic line, or supercharge |
+| `evidence:p37-finite-loop-root-and-reduced-half-form-transport` | 8 numerical | Local BVP-root-cover Z2 monodromy — `SUPPORTS`; conditional reduced-half-form order-four transport — `SUPPORTS` | Six enclosing root paths on three finite radii, one tracked-root nonenclosing control, sampled nonzero determinant lifts, coarse/fine BVP and direct/stitched two-turn checks; no theorem excluding intersample zero or alias winding |
 
 ## Phase 16 check ledger
 
@@ -1130,6 +1135,58 @@ sampled root-sheet continuation, action-gap winding, CFU consistency, and determ
 the recorded points. They do not realize the formal upward cycles, certify analyticity or the
 zero-radius limit, exclude between-sample or other-sheet zeros, or select the original global cycle.
 
+## Phase 37 check ledger
+
+### Typed monodromy, half-form, intertwiner, and physical-claim guards — 18 exact checks
+
+- `P37.root_cover.closed_loop_swap`
+- `P37.Airy.full_solution_is_single_valued`
+- `P37.detline.closed_half_form_lift`
+- `P37.detline.reverse_loop_is_inverse`
+- `P37.detline.constant_rephasing_conjugacy`
+- `P37.mutation.principal_reset_loses_central_sign`
+- `P37.types.conjugate_matrices_need_not_be_same_object`
+- `P37.open_laterals.independent_signs_do_not_fix_closed_lift`
+- `P37.control.nonenclosing_loop_is_trivial`
+- `P37.scope.monodromy_does_not_choose_contour_vector`
+- `P37.Phase17.root_swap_does_not_break_basis_equivalence`
+- `P37.conditional.physical_sheet_anchor_can_forbid_change`
+- `P37.intertwiner.specific_QX_classification`
+- `P37.intertwiner.full_and_candidate_nullities`
+- `P37.intertwiner.specific_failure_is_not_total_no_go`
+- `P37.guard.pfaffian_sign_not_recovered_from_determinant`
+- `P37.guard.reduced_block_does_not_fix_full_BFV_operator`
+- `P37.scope.semantic_claim_guards`
+
+These checks distinguish the canonical root permutation, exact Airy-solution identity, Phase-36
+cycle/Stokes maps, and the conditional reduced-half-form lift as typed objects. They establish the
+declared order-four representative, its reverse and constant-rephasing invariants, and the loss of its
+central sign under an invalid principal-root reset. The finite intertwiner table is only a conditional
+2x2 sheet-map witness: failure of the declared `Q_X=P` is not a total no-go, and survival of another
+matrix is not a conserved fermion-odd Lorentz-spinor charge. Exact Pfaffian and full-operator mutation
+controls keep spacetime Pin, a fermion Pfaffian phase, full BFV nondegeneracy, quantum constraints, and
+a physical state uncomputed.
+
+### Same-basepoint root and sampled reduced-half-form transport — 8 numerical checks
+
+- `P37.BVP.closed_loop_root_swap_three_radii`
+- `P37.BVP.residual_and_continuity_gates`
+- `P37.detline.sampled_nonzero_phase_lifts`
+- `P37.detline.closed_lift_conjugacy_class`
+- `P37.detline.two_turn_soft_origin_of_central_sign`
+- `P37.mesh.coarse_fine_closed_path_stability`
+- `P37.detline.direct_two_turn_matches_stitched_return`
+- `P37.control.nonenclosing_BVP_loop_returns_identity`
+
+The six enclosing paths track both BVP roots around three finite radii and compare their returns in one
+fixed basepoint fiber. The nearby numerical nonenclosing loop follows one positive-soft tracked control
+root, not both roots; the exact winding-zero model supplies the abstract identity control. Thirteen
+recorded endpoint blocks per path are nonzero and support the minimal-jump sampled phase lift. The
+resulting `tr L=0`, `det L=1`, `L^2=-I`, and `L^4=I` statements remain conditional on no unresolved
+zero or alias winding between determinant samples, on other sheets, or in omitted modes. Coarse/fine
+BVP agreement is not determinant-sampling refinement, and no original cycle, hard CFU coefficient,
+fermion Pfaffian, Pin lift, complete BFV/SUGRA line, supercharge, or state follows.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1156,6 +1213,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase33_fold_airy_uniformizatio
 uv run --locked python3 cpt_temporal_folded_susy/phase34_directed_fold_dual_continuation.py
 uv run --locked python3 cpt_temporal_folded_susy/phase35_reduced_detline_transport.py
 uv run --locked python3 cpt_temporal_folded_susy/phase36_airy_gauss_manin_connection.py
+uv run --locked python3 cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -1490,5 +1548,33 @@ upward cycles. The contradiction in the third trace is only a sufficient-data re
 recorded local gates. A complete original relative cycle may still select one arm globally, and the
 hard Airy amplitudes, absolute determinant orientation, full joint BFV/SUGRA superdeterminant, global
 coefficient, and physical state remain open.
+
+Phase 37 closes the local root path without promoting it to a physical cycle or fermionic line:
+
+```text
+claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p37-exact-typed-monodromy-and-physical-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p37-finite-loop-root-and-reduced-half-form-transport
+  → VALID_WITHIN → scope:p37-closed-local-root-and-reduced-half-form-holonomy
+  → MOTIVATES → open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate
+
+claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p37-exact-typed-monodromy-and-physical-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p37-finite-loop-root-and-reduced-half-form-transport
+  → VALID_WITHIN → scope:p37-closed-local-root-and-reduced-half-form-holonomy
+  → MOTIVATES → open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate
+
+claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE
+  → HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:p37-exact-typed-monodromy-and-physical-guards
+  → FOLLOW_UP_TO → claim:P17_SUPERALGEBRA_SELECTS_SHEET_BASIS
+  → VALID_WITHIN → scope:p37-closed-local-root-and-reduced-half-form-holonomy
+```
+
+The first trace is a root-cover result, not Airy-solution or relative-cycle monodromy. The second is a
+conditional sampled reduced **bosonic** half-form conjugacy class, not a spacetime Pin or fermion
+Pfaffian holonomy. The third shows that the bare swap supplies no physical sheet anchor by itself. The
+open gate requires the original global relative cycle and hard CFU coefficients before any complete
+BFV/SUGRA determinant/Pfaffian line, global intertwiner, anomaly, quantum constraint, or state can be
+tested.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.
