@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T14:28:45.166Z",
+  "updated_at_utc": "2026-08-20T21:35:41Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -273,6 +273,16 @@
         "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
         "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
         "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ]
+    },
+    {
+      "question": "Does Phase 42 repair the Phase-41 tangent audit or identify one unique cause?",
+      "answer": "No. At the three immutable m=4 roots, the frozen multi-label rules support solver-noise and old step-pair-selection evidence at phi_plus and a_plus, and separately support a protocol-defined local Hessian-action identity anomaly at all three points. The time-column discrepancy is solver-endpoint/state limited and is not independent bug evidence. A sufficient normalized local matrix homotopy preserves the sampled root sign, but the shared-zero u2 reference misses its frozen neighbor-stability threshold, so the reference tangent remains inconclusive. Phase 41 stays 8/9, sixteen prerequisites remain false, six promoted outputs remain null, and Gate 1 stays open.",
+      "claim_ids": [
+        "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+        "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+        "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+        "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED"
       ]
     }
   ],
@@ -625,7 +635,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phase 41 exemplifies the rule by retaining five local roots and numerical rank two while refusing source robustness after the frozen tangent audit fails.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phase 42 applies the same rule to Phase 41: it retains supported solver, step-pair, local-identity, and sufficient-homotopy evidence while refusing to select one unique cause or promote an unstable reference tangent.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -639,6 +649,9 @@
         "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
         "claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO",
         "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+        "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+        "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
         "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
         "artifact:recursive-truth-meditation"
       ]
@@ -682,7 +695,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, and the Phase-41 m=4 two-source control. Retain the stable numerical rank-two response and five computed local R14 +1 candidates, but also retain the failed tangent plateau and inconclusive source robustness. Stop before turning separately audited m3/m4 signs into a common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, and the Phase-42 fixed-root tangent diagnosis. Retain the numerical rank-two response, five computed local R14 +1 candidates, point-scoped multi-label cause evidence, and sufficient normalized sign homotopy, but also retain the inconclusive shared-zero derivative reference. Stop before turning local diagnostics into a corrected production tangent, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -707,6 +720,10 @@
         "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
         "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
         "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+        "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+        "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+        "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+        "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
       ]
@@ -6825,7 +6842,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--41 partially supply frozen m=2, m=3, and m=4 finite-cutoff configuration actions and local cap-piece intersection candidates. Phase 41 adds the independent a endpoint probe, a stable numerical rank-two two-source response in one frozen normalization, and five local R14 +1 candidates under one fixed flow mobility. Its frozen u2 finite-difference plateau fails, so both source-scoped robustness claims remain inconclusive. The construction debt remains open: diagnose the tangent transport without retroactive step selection, search straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric-homotopy, regulator, anchor, and boundary stability before emitting a bounded-chain signed sum or global vector. The sampled local candidates do not pair the entire chain or select a preferred physical cycle.",
+      "summary": "Phases 39--41 partially supply frozen m=2, m=3, and m=4 finite-cutoff configuration actions and local cap-piece intersection candidates. Phase 42 diagnoses the retained m=4 tangent failure without retuning: solver-noise and old step-pair evidence are supported at phi_plus and a_plus, stable local Hessian-action identity anomalies are supported at all three audited roots without proving a code bug, and a sufficient normalized local homotopy preserves the sampled sign. The shared-zero u2 finite-difference reference still misses its frozen neighbor-stability threshold, so the reference tangent remains inconclusive. The construction debt remains open: independently arbitrate the local RHS/tangent reference at higher precision, then search straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric-homotopy, regulator, anchor, and boundary stability before emitting a bounded-chain signed sum or global vector. The sampled local candidates do not pair the entire chain or select a preferred physical cycle.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -7329,6 +7346,189 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase41-result.json",
       "sha256": "3aebe67a1eec1b190942f8a9ba312f90f20244a08ec2e28f1832ea7f8af73b9e"
+    },
+    {
+      "id": "phase:p42",
+      "type": "phase",
+      "title": "Phase 42 — m=4 fixed-root tangent disentanglement",
+      "summary": "A post-checkpoint diagnostic of the retained Phase-41 u2 tangent failure at shared_zero, phi_plus, and a_plus. It performs no root or sign retuning, passes eight exact and six of eight numerical contracts, supports three compatible protocol labels, certifies a sufficient normalized local sign homotopy, and leaves the reference derivative or tangent inconclusive. Phase 41 remains 8/9 and Gate 1 remains open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "type": "claim",
+      "title": "Solver noise and the frozen old step-pair artifact are supported at phi_plus and a_plus",
+      "summary": "Supported only under the predeclared multi-label cause rules at two of three immutable roots. At phi_plus and a_plus the production-to-tight errors grow across the exact old u2 steps, the fixed reference is stable, and the old first-pair failure coexists with all preselected Phase-42 references. shared_zero remains INCONCLUSIVE for solver noise and NOT_SUPPORTED for the step-pair artifact because its fixed reference misses the frozen stability rule. The labels may coexist with the local Hessian-action anomaly and do not prove a unique cause.",
+      "state": "SUPPORTED_AT_TWO_FIXED_POINTS_UNDER_FROZEN_MULTI_LABEL_RULES",
+      "claim_id": "P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "statement": "Within the frozen Phase-42 cause classifier, the retained Phase-41 u2 plateau at phi_plus and a_plus has supported solver-noise evidence and supported evidence that the old first surviving adjacent-step pair is an unreliable reference; neither label is supported at shared_zero under the same quantifiers.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "type": "claim",
+      "title": "A protocol-defined local Hessian-action identity anomaly is supported without proving a code bug",
+      "summary": "At each immutable root, 29 of 30 local direction slots have stable finite-difference references and 12, 11, and 10 of those stable slots exceed the frozen 1e-7 identity threshold at shared_zero, phi_plus, and a_plus. The frozen classifier names this VARIATIONAL_RHS_BUG_EVIDENCE, but the graph records only the demonstrated numerical identity anomaly. The returned time column is assembly-identical at its own augmented endpoint; its comparison with a different state-only endpoint lies within the cross-tier solver/state envelope and is excluded as independent bug evidence.",
+      "state": "SUPPORTED_AS_PROTOCOL_DEFINED_LOCAL_IDENTITY_ANOMALY_ONLY",
+      "claim_id": "P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "statement": "For the frozen local real-directional Hessian-action tests at shared_zero, phi_plus, and a_plus, multiple reference-stable finite-difference comparisons exceed the declared identity threshold, while the calculation does not establish that a particular implementation contains a bug.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "type": "claim",
+      "title": "A sufficient normalized local matrix homotopy preserves the fixed-root sign at all three points",
+      "summary": "The checkpoint and preselected R4 matrices have sign -1 at all three roots. Their solve-based normalized perturbation bounds are approximately 0.000403, 0.001006, and 0.000797, each below one with positive rounding margin, and both frozen mutation controls pass. This is a sufficient certificate only for the sampled normalized matrices; it does not prove the R4 reference is correct, construct a determinant line, transport an entire upward cycle, or establish a global intersection sign.",
+      "state": "SUPPORTED_AS_SUFFICIENT_LOCAL_NORMALIZED_MATRIX_CERTIFICATE",
+      "claim_id": "P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "statement": "For each of the three immutable Phase-42 roots, the preselected normalized checkpoint and R4 matrices satisfy the frozen eta-less-than-one sufficient homotopy criterion and retain root-Jacobian sign -1.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "type": "claim",
+      "title": "The reference tangent remains inconclusive and no global promotion is licensed",
+      "summary": "Supported as a typed diagnostic and promotion boundary. The shared-zero u2 R4 neighbor change is approximately 0.005970, above the frozen 0.005 stability threshold, so the all-column reference result is REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE despite small full-operator errors and a sufficient sign homotopy. Phase 41 is not changed to 9/9; sixteen global prerequisites remain false, six promoted outputs remain null, null is not zero, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_INCONCLUSIVE_REFERENCE_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "statement": "Because the frozen all-column derivative contract is inconclusive and the global completion ledger remains unchanged, Phase 42 neither repairs the historical Phase-41 tangent pass count nor licenses a bounded-chain sum, global signed intersection vector, cutoff or continuum limit, or quantum-gravity conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p42-exact-freeze-checkpoint-map-retention-and-global-guards",
+      "type": "evidence",
+      "title": "Phase 42 exact freeze, checkpoint, map, retention, and global guards",
+      "summary": "Eight exact checks verify the manifest-runner-result order, strict post-hoc checkpoint integrity, immutable fixed roots with no retuning, R14 map and step/tier conventions, fixed Richardson and homotopy formulas, chart and real-direction scope, all 2,192 declared terminal slots, and the fail-closed ledger with sixteen false prerequisites, six null promoted outputs, and Gate 1 open.",
+      "state": "VERIFIED",
+      "observed_status": "8_EXACT_PASS",
+      "check_ids": [
+        "P42.freeze.two_stage_artifacts_and_environment",
+        "P42.checkpoint.strict_integrity_and_cross_identities",
+        "P42.freeze.checkpoint_only_fixed_roots_no_retune",
+        "P42.map.order_steps_tiers_and_root_sign",
+        "P42.math.fixed_Richardson_metrics_and_homotopy",
+        "P42.guard.chart_geodesic_and_real_directional_scope",
+        "P42.retention.complete_declared_slot_schema",
+        "P42.guard.fail_closed_global_outputs"
+      ]
+    },
+    {
+      "id": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "type": "evidence",
+      "title": "Phase 42 numerical fixed-root tangent and tri-state cause ledger",
+      "summary": "The eight-record numerical ledger has six PASS records, one LOCAL_VARIATIONAL_IDENTITY_NOT_SUPPORTED result mapped to FAIL in the repository evidence schema, and one REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE result. It reproduces Phase 41, tests chart, local Hessian-action and all-column R4 references, disentangles u2 solver tiers, certifies a sufficient local sign homotopy, and retains a complete multi-label cause ledger. Solver noise and old step-pair evidence are supported at phi_plus and a_plus; stable local Hessian-action anomalies occur at all three points. The time-column comparison is solver-endpoint/state limited and is not independent bug evidence.",
+      "state": "VERIFIED_TYPED_LEDGER_WITH_ONE_FAILED_IDENTITY_AND_ONE_INCONCLUSIVE_REFERENCE",
+      "observed_status": "6_NUMERICAL_PASS_1_LOCAL_IDENTITY_NOT_SUPPORTED_1_REFERENCE_INCONCLUSIVE",
+      "check_ids": [
+        "P42.reproduction.fixed_checkpoint_and_three_way_J",
+        "P42.reproduction.phase41_failed_FD_negative_control",
+        "P42.chart.initial_tangent_and_fixed_curvature",
+        "P42.variational.local_RHS_and_time_column",
+        "P42.derivative.all_column_fixed_R4",
+        "P42.derivative.u2_solver_disentanglement",
+        "P42.orientation.normalized_sufficient_homotopy",
+        "P42.classification.complete_tri_state_cause_ledger"
+      ]
+    },
+    {
+      "id": "scope:p42-three-immutable-m4-roots-fixed-tangent-diagnostic",
+      "type": "scope",
+      "title": "P42 three-immutable-root m=4 tangent diagnostic",
+      "summary": "A post-result diagnostic at shared_zero, phi_plus, and a_plus using the committed post-hoc checkpoint, one frozen m=4 residual/chart/mobility, fixed Phase-41 and Phase-42 step ladders, production, tight, and Radau solver tiers, real-directional local Hessian actions, and normalized local matrix homotopy tests.",
+      "state": "ACTIVE",
+      "includes": [
+        "three immutable Phase-41 local m=4 roots and checkpoint Jacobians loaded from a hash-pinned post-hoc regenerated checkpoint",
+        "exact reproduction of the retained Phase-41 u2 tangent failure without choosing a later favorable step",
+        "production, tight, and Radau state-only integrations, fixed affine and same-base same-first-tangent geodesic probes, and complete solver-attempt retention",
+        "42 fixed primary R4 columns with fixed neighbors, 90 local Hessian-action directions, and 540 local perturbation records",
+        "pointwise and aggregate tri-state, multi-label cause rules with no forced unique cause",
+        "sufficient normalized checkpoint-to-R4 local matrix homotopies and mutation controls"
+      ],
+      "excludes": [
+        "an original Phase-41 stdout archive or verification that the regenerated checkpoint root bytes equal unarchived historical root bytes",
+        "a new root, saddle, branch, chart, mobility, whitening, step, solver, threshold, or orientation-sign search",
+        "proof that one unique mechanism caused the Phase-41 plateau or proof that a specific variational implementation contains a bug",
+        "independent bug evidence from the returned time column, which is assembly-identical at its own augmented endpoint and solver-state limited across endpoints",
+        "proof that the preselected R4 reference is correct at shared_zero, a fully supported transported tangent, or retroactive Phase-41 9/9 status",
+        "an absolute or cross-cutoff determinant line, exact nonlinear complete upward manifold, continuous branch, root/component census, Stokes chamber, or classified good ends",
+        "a physical original cycle, bounded-chain signed sum, complete global signed vector, global n_sigma, cutoff or continuum limit, BFV/Pfaffian/Pin orientation, SUSY claim, cosmological prediction, or quantum-gravity explanation"
+      ]
+    },
+    {
+      "id": "artifact:p42-checkpoint-extractor",
+      "type": "artifact",
+      "title": "Phase 42 fixed-root checkpoint extractor",
+      "summary": "Committed post-hoc extractor for the immutable Phase-41 fixed-root arrays, duplicated fields, strict digests, provenance flags, and fail-closed ledger. It does not consume the later Phase-42 diagnostic manifest and does not recreate the unarchived historical Phase-41 stdout.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py",
+      "sha256": "5b2492347405bef0fed26fbfe2a68648899219c8583c20b8de0b2be02419de6d",
+      "introduced_in_commit": "712c54b13869b1aee26503947c60dfe34bfa2a3c"
+    },
+    {
+      "id": "artifact:p42-fixed-root-checkpoint",
+      "type": "artifact",
+      "title": "Phase 42 post-hoc fixed-root checkpoint",
+      "summary": "Byte-pinned regenerated checkpoint containing the three Phase-41 roots, checkpoint Jacobians, independently decoded arrays, cross-identities, strict runtime/source provenance, and fail-closed completion ledger. It is not the original Phase-41 stdout and historical root-vector identity with that stdout is unverified.",
+      "state": "TRACKED",
+      "artifact_kind": "checkpoint",
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+      "introduced_in_commit": "731579c37867a2041b65359bfc649be3b66900c7"
+    },
+    {
+      "id": "artifact:p42-input-manifest",
+      "type": "artifact",
+      "title": "Phase 42 frozen tangent-diagnostic input manifest",
+      "summary": "Post-checkpoint input freeze for the three-root derivative audit. It fixes the checkpoint and source closure, maps, step ladders, solver tiers, Richardson references, real-directional local identities, sufficient homotopy rule, tri-state cause classifier, retention schema, and fail-closed outputs. It supplies no desired result and is neither preregistration nor scientific evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json",
+      "sha256": "1cc88c489b5240019aaf339b25d0cebac9b4a1560b09cbec9c3079ce2067afb6",
+      "introduced_in_commit": "dc21816b9fef9ad658fdd728e73453ffeee46f4d"
+    },
+    {
+      "id": "artifact:p42-script",
+      "type": "artifact",
+      "title": "Phase 42 tangent-diagnostic executable",
+      "summary": "Committed-checkpoint fixed-root runner with eight exact and eight typed numerical contracts for reproduction, chart, local Hessian-action, all-column R4, u2 solver-tier, sufficient normalized homotopy, complete cause classification, retention, provenance, and global fail-closed controls.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py",
+      "sha256": "1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019",
+      "introduced_in_commit": "1c0d7fed4aa99c6424ec659dae8ba6f24b791926"
+    },
+    {
+      "id": "artifact:p42-raw-result",
+      "type": "artifact",
+      "title": "Phase 42 full raw result",
+      "summary": "The complete 7,526,372-byte compact result artifact captured from the committed runner: eight exact PASS records, six numerical PASS records, one local-identity non-support result, one inconclusive derivative-reference result, all 2,192 terminal slots, all 915 successful solver attempts, pointwise cause records, matrices, metrics, provenance, sixteen false prerequisites, six null promoted outputs, and Gate 1 open.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json",
+      "sha256": "568e02cc8c4d730aba3a7a83febd3aa41cf14dfdb87b53950cc6fcc78c5bd013",
+      "introduced_in_commit": "d8c2fce3eb3e72a956a34776970c15642ed88047"
+    },
+    {
+      "id": "artifact:p42-report",
+      "type": "artifact",
+      "title": "Phase 42 report",
+      "summary": "Human-readable committed-checkpoint provenance, exact and numerical contract ledger, Phase-41 negative-control reproduction, fixed R4 and solver-tier diagnostics, local Hessian-action anomaly with the time-column caveat, multi-label cause ledger, sufficient local homotopy, inconclusive reference tangent, and open Gate-1/global boundary. The initial report commit 991ffd3059635a46dc78f66f79a50a51042f6941 was corrected by the pinned commit after an independent numerical audit repaired radius terminology without changing the result.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md",
+      "sha256": "8d697ef8482674ca79cb0d0b681c4baeea9f1e85ec7460c614e06b601659fa0b",
+      "introduced_in_commit": "bdf3f7d6c9ad0fa9174b601832802f4ed3ebcb4f"
+    },
+    {
+      "id": "artifact:p42-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 42 evidence snapshot",
+      "summary": "Compact typed extract of the full raw result preserving all eight exact and eight numerical contract IDs, mapped schema statuses, pointwise and aggregate cause states, key metrics, the time-column solver-state limitation, sufficient local homotopy, sixteen false prerequisites, six null promoted outputs, and Gate 1 open. The separately pinned raw result remains the byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase42-result.json",
+      "sha256": "6ee84fd9fce5dcb336bf430a9fec562bc17fe1bb6d2969ac74a5c3cfcd76e140"
     }
   ],
   "edges": [
@@ -17336,6 +17536,325 @@
     {
       "id": "edge:1617",
       "from": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1618",
+      "from": "phase:p42",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1619",
+      "from": "phase:p42",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p41"
+    },
+    {
+      "id": "edge:1620",
+      "from": "artifact:p42-checkpoint-extractor",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1621",
+      "from": "artifact:p42-fixed-root-checkpoint",
+      "relation": "RECORDS",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1622",
+      "from": "artifact:p42-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1623",
+      "from": "artifact:p42-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1624",
+      "from": "artifact:p42-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1625",
+      "from": "artifact:p42-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1626",
+      "from": "artifact:p42-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1627",
+      "from": "artifact:p42-checkpoint-extractor",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:1628",
+      "from": "artifact:p42-fixed-root-checkpoint",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-checkpoint-extractor"
+    },
+    {
+      "id": "edge:1629",
+      "from": "artifact:p42-fixed-root-checkpoint",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:1630",
+      "from": "artifact:p42-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-fixed-root-checkpoint"
+    },
+    {
+      "id": "edge:1631",
+      "from": "artifact:p42-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-input-manifest"
+    },
+    {
+      "id": "edge:1632",
+      "from": "artifact:p42-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-fixed-root-checkpoint"
+    },
+    {
+      "id": "edge:1633",
+      "from": "artifact:p42-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-script"
+    },
+    {
+      "id": "edge:1634",
+      "from": "artifact:p42-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-raw-result"
+    },
+    {
+      "id": "edge:1635",
+      "from": "artifact:p42-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-raw-result"
+    },
+    {
+      "id": "edge:1636",
+      "from": "evidence:p42-exact-freeze-checkpoint-map-retention-and-global-guards",
+      "relation": "PART_OF",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1637",
+      "from": "evidence:p42-exact-freeze-checkpoint-map-retention-and-global-guards",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p42-script"
+    },
+    {
+      "id": "edge:1638",
+      "from": "evidence:p42-exact-freeze-checkpoint-map-retention-and-global-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p42-evidence-snapshot"
+    },
+    {
+      "id": "edge:1639",
+      "from": "evidence:p42-exact-freeze-checkpoint-map-retention-and-global-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p42-raw-result"
+    },
+    {
+      "id": "edge:1640",
+      "from": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "relation": "PART_OF",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1641",
+      "from": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p42-script"
+    },
+    {
+      "id": "edge:1642",
+      "from": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p42-evidence-snapshot"
+    },
+    {
+      "id": "edge:1643",
+      "from": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p42-raw-result"
+    },
+    {
+      "id": "edge:1644",
+      "from": "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "relation": "PART_OF",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1645",
+      "from": "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p42-three-immutable-m4-roots-fixed-tangent-diagnostic"
+    },
+    {
+      "id": "edge:1646",
+      "from": "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p42-report"
+    },
+    {
+      "id": "edge:1647",
+      "from": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "relation": "PART_OF",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1648",
+      "from": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p42-three-immutable-m4-roots-fixed-tangent-diagnostic"
+    },
+    {
+      "id": "edge:1649",
+      "from": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p42-report"
+    },
+    {
+      "id": "edge:1650",
+      "from": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "relation": "PART_OF",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1651",
+      "from": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p42-three-immutable-m4-roots-fixed-tangent-diagnostic"
+    },
+    {
+      "id": "edge:1652",
+      "from": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p42-report"
+    },
+    {
+      "id": "edge:1653",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "PART_OF",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1654",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p42-three-immutable-m4-roots-fixed-tangent-diagnostic"
+    },
+    {
+      "id": "edge:1655",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p42-report"
+    },
+    {
+      "id": "edge:1656",
+      "from": "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1657",
+      "from": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1658",
+      "from": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p42-exact-freeze-checkpoint-map-retention-and-global-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1659",
+      "from": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1660",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p42-exact-freeze-checkpoint-map-retention-and-global-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1661",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p42-numerical-fixed-root-tangent-and-cause-ledger",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1662",
+      "from": "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE"
+    },
+    {
+      "id": "edge:1663",
+      "from": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE"
+    },
+    {
+      "id": "edge:1664",
+      "from": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
+      "note": "The frozen cause labels are compatible and nonexclusive; this contrast separates the local Hessian-action layer from solver and reference-step evidence without selecting one unique cause."
+    },
+    {
+      "id": "edge:1665",
+      "from": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE"
+    },
+    {
+      "id": "edge:1666",
+      "from": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
+      "relation": "ABOUT",
+      "to": "concept:recorded-local-intersection-versus-global-pl-coefficient"
+    },
+    {
+      "id": "edge:1667",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+    },
+    {
+      "id": "edge:1668",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1669",
+      "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
       "relation": "MOTIVATES",
       "to": "open:gate1-original-cycle-signed-global-intersections"
     }

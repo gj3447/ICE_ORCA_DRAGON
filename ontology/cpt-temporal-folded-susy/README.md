@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T14:28:45.166Z`; 579 nodes, 1617 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 90/90 stored hashes (86 artifacts and 4 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T21:35:41Z`; 594 nodes, 1669 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 97/97 stored hashes (93 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -46,7 +46,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 39 directly compute a full-joint intersection sign and close Gate 1? | It directly computes two **local** six-real-dimensional signs: for one frozen \(m=2\) configuration action and one finite-radius, finite-time upward-chart patch, a numerically locally transverse candidate on each declared cap piece has configuration-coordinate sign `+1`. This no longer infers the sign from the lapse projection. It does not pair the entire bounded chain: straight arms and later cap reintersections are unsearched, root/upward-component exhaustion and the exact nonlinear upward manifold are uncertified, all recorded real saddles are critical-phase degenerate without a certified lateral chamber, and the good ends are incomplete. Thus `bounded_chain_signed_sum`, the complete vector, and `global_n_sigma` remain null; Gate 1 stays open. | `claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE`; `claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH`; `claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 40 establish an odd history sector or close Gate 1 at \(m=3\)? | It supports a nonzero anchor-subtracted, sign-reversing response of the first two-dimensional reflection-odd \((a,\phi)\) block to one rank-one antisymmetric **phi-only** endpoint source. It also records five sampled local full-\(\mathbb R^{10}\) candidates with direct declared signs `+1`, using one fixed delta-zero flow mobility and delta-dependent local Morse launch ellipsoids. The source does not probe the full odd sector; the five samples are not a continuous branch theorem; and the local K-launch clamp is neither a full odd-sector ablation nor a no-root result. All chain/global outputs remain null, meaning uncomputed rather than zero, and Gate 1 stays open. | `claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE`; `claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE`; `claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE`; `concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 41 establish robust m=4 source branches, cutoff convergence, or close Gate 1? | No. It supports stable numerical rank two for the two-source odd susceptibility in one frozen normalization and resolves five local full-\(\mathbb R^{14}\) candidates with direct declared sign `+1`. The frozen `u2` finite-difference plateau fails at all three audited points, so phi-only and a-only robustness remain inconclusive even though the roots and other controls are retained. The m3/m4 signs are only separately audited descriptive data; no common determinant line, cutoff limit, chain sum, global vector, or quantum-gravity result follows. | `claim:P41_TWO_SOURCE_ODD_SUSCEPTIBILITY_HAS_STABLE_NUMERICAL_RANK_TWO`; `claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE`; `claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE`; `claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE`; `open:gate1-original-cycle-signed-global-intersections` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–41 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–41 scope guards |
+| Does Phase 42 repair the tangent or prove a variational code bug? | No. It supports solver-noise and old-step-pair evidence at `phi_plus` and `a_plus`, and separately supports a protocol-defined local Hessian-action identity anomaly at all three fixed roots. The time-column discrepancy is an endpoint solver/state comparison, not independent bug evidence. A sufficient normalized local matrix homotopy preserves sign `-1`, but the `shared_zero` `u2` reference is not stable under its frozen neighbor rule, so the reference tangent remains inconclusive. Phase 41 stays 8/9, all global outputs remain fail-closed, and Gate 1 stays open. | `claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A`; `claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG`; `claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN`; `claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED`; `open:gate1-original-cycle-signed-global-intersections` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–42 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–42 scope guards |
 
 ### Phase 23 reading path
 
@@ -288,6 +289,25 @@ local root from the stronger robustness claim that requires every frozen tangent
    keeps the nonnested m3/m4 `+1` signs descriptive rather than canonical. The incomplete chain,
    census, Stokes, end, and physical-cycle data force six promoted outputs to null and leave Gate 1
    open.
+
+### Phase 42 reading path
+
+Phase 42 applies the same fail-closed method to the retained Phase-41 tangent failure:
+
+1. `claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A` records two
+   compatible numerical/procedural labels at `phi_plus` and `a_plus`; `shared_zero` does not satisfy
+   those frozen quantifiers, and no unique cause is selected;
+2. `claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG` records 12,
+   11, and 10 stable local Hessian-action violations at the three roots. The frozen classifier's
+   `VARIATIONAL_RHS_BUG_EVIDENCE` name is not promoted into proof of a software defect. In particular,
+   the returned time column is assembled at its own endpoint, while the compared state-only RHS uses a
+   different solver endpoint; its discrepancy lies inside the cross-tier solver/state envelope;
+3. `claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN` retains the
+   three eta-less-than-one sufficient certificates and sign `-1`, but only for the sampled normalized
+   matrices. It does not establish reference correctness or global determinant-line transport;
+4. `claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED` keeps the
+   shared-zero `u2` neighbor-stability miss visible. Phase 41 remains 8/9; sixteen prerequisites remain
+   false, six promoted fields remain null, and Gate 1 remains open.
 
 ## Concept map
 
@@ -549,6 +569,16 @@ flowchart TD
   Local41 --> Tangent41
   Tangent41 --> Boundary41
   Boundary41 --> Gate1_41["OPEN Gate 1 · full chain, census,<br/>Stokes, ends, physical cycle"]
+
+  Programme --> P42["Phase 42 · fixed-root tangent diagnosis"]
+  P42 --> Cause42["Solver noise + old step-pair evidence<br/>SUPPORTED at phi/a only"]
+  P42 --> RHS42["Stable local Hessian-action anomaly<br/>SUPPORTED · not bug proof"]
+  P42 --> Hom42["Normalized local homotopy<br/>sufficient sign certificate"]
+  P42 --> Ref42["Reference tangent<br/>INCONCLUSIVE"]
+  Cause42 --> Ref42
+  RHS42 --> Ref42
+  Hom42 --> Ref42
+  Ref42 --> Gate1_42["OPEN Gate 1 · independent tangent arbitration,<br/>full chain, census, Stokes, ends"]
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -922,6 +952,16 @@ upward cycles, or determinant lines; the nonnested m3/m4 sign agreement is descr
 chain, exhaustive components, exact nonlinear K, Stokes chamber, good ends, physical original cycle,
 and BFV/Pfaffian/Pin line remain absent. Six promoted outputs stay null and Gate 1 stays open.
 
+Phase 42 does not search another root or replace the failed step pair. It reloads the three immutable
+checkpoint roots and applies fixed production, tight, and Radau tiers, fixed fourth-order real finite
+differences, local Hessian-action identities, and a sufficient normalized matrix homotopy. Solver noise
+and the old first-pair reference artifact are supported at `phi_plus` and `a_plus`; stable local
+Hessian-action anomalies are supported at all three roots without proving a code bug. The time-column
+comparison is limited by distinct solver endpoints and is excluded as independent bug evidence. All
+three normalized local homotopies retain root sign `-1`, but `shared_zero` misses the frozen `u2`
+reference-neighbor threshold. The reference tangent remains inconclusive, Phase 41 stays 8/9, and the
+six null global outputs keep Gate 1 open.
+
 ## Repository artifacts
 
 | Phase | Executable | Report | Observed evidence |
@@ -953,6 +993,7 @@ and BFV/Pfaffian/Pin line remain absent. Six promoted outputs stay null and Gate
 | 39 | [`phase39_finite_joint_intersection.py`](../../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py) | [`PHASE39_FINITE_JOINT_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md) · [`PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json) | [`phase39-result.json`](./evidence/phase39-result.json) |
 | 40 | [`phase40_m3_reflection_odd_intersection.py`](../../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py) | [`PHASE40_M3_REFLECTION_ODD_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md) · [`PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json) | [`phase40-result.json`](./evidence/phase40-result.json) |
 | 41 | [`phase41_m4_two_source_intersection.py`](../../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py) | [`PHASE41_M4_TWO_SOURCE_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md) · [`PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json) | [`phase41-result.json`](./evidence/phase41-result.json) |
+| 42 | [`phase42_m4_fixed_root_tangent_disentanglement.py`](../../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py) · [`phase42_m4_fixed_root_checkpoint.py`](../../cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py) | [`PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md) · [`PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json) · [`PHASE42_M4_FIXED_ROOT_CHECKPOINT.json`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json) | [`phase42-result.json`](./evidence/phase42-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

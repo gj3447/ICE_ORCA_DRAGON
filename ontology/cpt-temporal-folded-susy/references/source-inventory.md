@@ -130,6 +130,8 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 38 Gate-1 identifiability and bounded end ledger | Witten (2010); Chester–Friedman–Ursell; Teitelboim (1983, PRL); Banihashemi–Jacobson | `CITES`-only relative-cycle, coalescing-saddle, causal-vs-gauge-invariant lapse, and below-origin-contour frameworks attached to the next open construction; none supplies a physical injectivity theorem or admissible completions, turns the finite surrogate into physical homology, provides the sampled continuation, promotes conjugation to an independent branch, proves continuous disjointness, classifies the box exits, fixes the global vector, or computes the hard CFU functions |
 | Phase 39 frozen \(m=2\) local joint-intersection pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing inherited through the Gate-1 opens; none supplies the frozen action, cycle/metric choices, discrete saddle, finite-time upward-chart patch, local six-real determinant signs, sampled first-hit ledger, or global completion. No new literature source is introduced by Phase 39 |
 | Phase 40 frozen \(m=3\) rank-one odd-response and local R10 pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing inherited through the still-open Gate 1; none supplies the three-midpoint action, rank-one phi source, odd response, fixed-mobility/launch-ellipsoid construction, five sampled local R10 signs, local clamp, or global completion. No new literature source is introduced by Phase 40 |
+| Phase 41 frozen \(m=4\) two-source and local R14 pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing; none supplies the four-midpoint action, two-source response, five local R14 candidates, repairs the failed tangent contract, identifies a cross-cutoff determinant line, or licenses global completion. No new literature source is introduced by Phase 41 |
+| Phase 42 fixed-root tangent disentanglement | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none arbitrates the repository's solver-noise/step-pair diagnostics, local Hessian-action anomaly, endpoint time-column comparison, or sufficient normalized local-matrix homotopy. No new literature source is introduced by Phase 42 |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -149,7 +151,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other sixty-two graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–39 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other sixty-two graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–42 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -361,5 +363,19 @@ signs with one determinant line. They also do not select a physical original joi
 arms or component/end census, fix a Stokes chamber, or supply a global Picard--Lefschetz coefficient.
 No new source node or literature edge was added; Gate 1 remains open and every bounded/global,
 cutoff/continuum, BFV/Pfaffian/Pin, SUSY, and quantum-gravity promotion remains unlicensed.
+
+Phase 42 likewise adds no source-derived physics claim. Its checkpoint-only rerun, fixed-step derivative
+tiers, solver envelopes, local real-directional Hessian-action tests, pointwise multi-cause ledger, and
+normalized local-matrix homotopy are repository diagnostics at three immutable \(m=4\) roots. The
+inherited sources do not decide whether finite-difference behavior comes from solver noise or the frozen
+old step pair, prove that a protocol-defined local Hessian-action anomaly is an implementation bug, or
+turn the appended time-column comparison into independent bug evidence. That time comparison uses
+different solver endpoints and remains an endpoint solver/state diagnostic. Nor do those sources turn a
+sufficient normalized local-matrix homotopy into reference-tangent correctness, a physical metric
+homotopy, a common determinant line, or a global orientation theorem. The shared-zero reference fails
+the frozen neighbor-stability threshold, so the all-column reference tangent remains inconclusive.
+Exactly 16 global-completion prerequisites remain false and 6 promoted outputs remain null. No new
+source node or literature edge was added; Gate 1 remains open and all global, continuum,
+BFV/Pfaffian/Pin, SUSY, and quantum-gravity promotions remain unlicensed.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

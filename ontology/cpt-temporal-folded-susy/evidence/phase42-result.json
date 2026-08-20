@@ -1,0 +1,353 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_20260820",
+  "phase": "P42",
+  "observed_at_utc": "2026-08-20T21:35:41Z",
+  "command": ".venv/bin/python cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py",
+    "sha256": "1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019",
+    "introduced_in_commit": "1c0d7fed4aa99c6424ec659dae8ba6f24b791926"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P42.freeze.two_stage_artifacts_and_environment",
+      "statement": "The manifest-to-runner-to-result three-stage order holds; the committed runner is tracked, clean, latest-blob-identical, and ancestor-bound; checkpoint, extractor, Phase41/Phase39 closure, locks, commits, SHAs, HEAD, pycache snapshot, and the full runtime fingerprint match exactly at start and before emission.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.checkpoint.strict_integrity_and_cross_identities",
+      "statement": "Strict JSON, outer and self digests, every independently decoded array, exact label sets, duplicate fields, three target cross-identities, and the embedded fail-closed ledger all pass without trusting the checkpoint's own pass booleans.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.freeze.checkpoint_only_fixed_roots_no_retune",
+      "statement": "All three p_star and J_checkpoint arrays are immutable checkpoint inputs; no root, saddle, chart, whitening, branch, clipping, or fallback solver is called before, during, or after the diagnostic.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.map.order_steps_tiers_and_root_sign",
+      "statement": "The R14 residual, row scaling, [Gamma,-K] convention, parameter order, suspect column, exact Phase41 per-column ladders, Phase42 ladders, solver tiers, cache isolation, bounds rule, and no-skipping rule equal this manifest.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.math.fixed_Richardson_metrics_and_homotopy",
+      "statement": "D2/R4/five-point formulas, primary and neighbor h values, symmetric denominators, signed cosine, positive column normalization, solve-based eta, robustness budget, sufficient-only interpretation, and mutation controls are fixed exactly as declared.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.guard.chart_geodesic_and_real_directional_scope",
+      "statement": "The affine chart remains the production map, the geodesic has only the same base and first tangent at fixed h, full-map complex step is forbidden, and neither diagnostic may replace a root, chart, map, sign, or intersection claim.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.retention.complete_declared_slot_schema",
+      "statement": "All endpoint, augmented, chart, local-RHS, matrix, classification, and mutation slots are preenumerated exactly once and carry one terminal status; the result schema, prefix removal, self/outer hash conventions, and atomic artifact-before-report capture sequence equal this manifest.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.guard.fail_closed_global_outputs",
+      "statement": "Phase 41 remains 8/9 with its tangent failure; desired outputs remain null; exactly sixteen prerequisites remain false, six global outputs remain null, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P42.reproduction.fixed_checkpoint_and_three_way_J",
+      "statement": "Its invalidating PASS predicate is only that, at all three immutable points, the unchanged original Phase-41 production state, residual, frames, and J reproduce the checkpoint within 5e-11. The same record must retain J_phase42_tight and all three signs, spectra, norms, pairwise metrics, and a separate tight scientific completion/evidence substatus; tight failure never changes this drift predicate.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.reproduction.phase41_failed_FD_negative_control",
+      "statement": "Using the exact old per-column ladders, the old control is faithfully reproduced as TANGENT_CONTROL_FAILED with u2 plateau failure, root sign -1, and all three disclosed operator and plateau metrics within 5e-6 absolute tolerance; PASS never changes Phase 41 to 9/9.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.chart.initial_tangent_and_fixed_curvature",
+      "statement": "All double and 80-decimal affine chart identities, launch tangents, same-base/same-first-tangent geodesic controls, and the fixed-h curvature ledger are complete at all three points.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.variational.local_RHS_and_time_column",
+      "statement": "All fixed local real-directional R4 identities, the independently evaluated raw positive K endpoint tangent, its comparisons with checkpoint and original-production negative root columns, and the tight state-only R4_flow_time plus neighbors and Radau reference are complete. The tautological tight appended column is assembly-only; stable violations and unstable references receive distinct evidence tri-states.",
+      "status": "FAIL"
+    },
+    {
+      "id": "P42.derivative.all_column_fixed_R4",
+      "statement": "Every one of 42 fixed primary R4 columns and both fixed neighbors survives, meets reference stability, signed direction, norm, per-column, and full-operator thresholds against the frozen and tight variational J matrices, with no favorable replacement.",
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "id": "P42.derivative.u2_solver_disentanglement",
+      "statement": "All declared production and tight u2 main/tail slots; production, tight-affine, tight-geodesic, Radau-affine, and Radau-geodesic attempts at all three exact old u2 steps; main-ladder Radau u2/time references; solver envelopes; and fixed quantifier metrics are complete at all three points.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.orientation.normalized_sufficient_homotopy",
+      "statement": "At all three points the frozen J_checkpoint and preselected J_R4 have nonzero finite columns, matching nonzero signs, eta<1 with robust positive rounding margin and solve residual, and both mutation controls pass; failure is only noncertification.",
+      "status": "PASS"
+    },
+    {
+      "id": "P42.classification.complete_tri_state_cause_ledger",
+      "statement": "Every declared cause at every point and in the any-fixed-point aggregate has separate completion and SUPPORTED/NOT_SUPPORTED/INCONCLUSIVE evidence statuses with cited metric paths, including the exact UNRESOLVED rule and no forced unique cause.",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "numerical_checks": 8,
+    "calculation": "m=4 committed-checkpoint fixed-root tangent disentanglement",
+    "run_status": "VALID_TYPED_RUN",
+    "raw_numerical_status_counts": {
+      "PASS": 6,
+      "LOCAL_VARIATIONAL_IDENTITY_NOT_SUPPORTED": 1,
+      "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE": 1
+    },
+    "raw_numerical_status_by_id": {
+      "P42.reproduction.fixed_checkpoint_and_three_way_J": "PASS",
+      "P42.reproduction.phase41_failed_FD_negative_control": "PASS",
+      "P42.chart.initial_tangent_and_fixed_curvature": "PASS",
+      "P42.variational.local_RHS_and_time_column": "LOCAL_VARIATIONAL_IDENTITY_NOT_SUPPORTED",
+      "P42.derivative.all_column_fixed_R4": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+      "P42.derivative.u2_solver_disentanglement": "PASS",
+      "P42.orientation.normalized_sufficient_homotopy": "PASS",
+      "P42.classification.complete_tri_state_cause_ledger": "PASS"
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "full_raw_result_archived": true,
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json",
+      "raw_result_outer_sha256": "568e02cc8c4d730aba3a7a83febd3aa41cf14dfdb87b53950cc6fcc78c5bd013",
+      "raw_result_payload_sha256_without_self": "8d824c2c7204a6762a0e75321c285bd30339f67b244bb106a9dc4febc9da7b36",
+      "raw_result_introduced_in_commit": "d8c2fce3eb3e72a956a34776970c15642ed88047",
+      "raw_result_size_bytes": 7526372,
+      "observed_time_basis": "The raw runner payload contains no wall-clock field; observed_at_utc is the durable Git commit time of the byte-validated raw-result capture commit.",
+      "note": "This compact snapshot preserves all sixteen contract IDs, schema statuses and statements, the pointwise and aggregate cause statuses, key scoped metrics, the time-column limitation, and the complete fail-closed boundary. The byte-full numerical arrays and slot records remain authoritative in the separately hash-pinned raw result."
+    },
+    "frozen_inputs": {
+      "input_manifest": {
+        "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json",
+        "sha256": "1cc88c489b5240019aaf339b25d0cebac9b4a1560b09cbec9c3079ce2067afb6",
+        "introduced_in_commit": "dc21816b9fef9ad658fdd728e73453ffeee46f4d",
+        "status": "POST_CHECKPOINT_DIAGNOSTIC_INPUT_FREEZE",
+        "is_preregistration": false,
+        "is_scientific_evidence": false
+      },
+      "checkpoint": {
+        "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+        "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+        "introduced_in_commit": "731579c37867a2041b65359bfc649be3b66900c7",
+        "status": "POST_HOC_REGENERATED_CHECKPOINT",
+        "is_original_phase41_stdout": false,
+        "historical_root_vector_identity_verified": false
+      },
+      "checkpoint_extractor": {
+        "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py",
+        "sha256": "5b2492347405bef0fed26fbfe2a68648899219c8583c20b8de0b2be02419de6d",
+        "introduced_in_commit": "712c54b13869b1aee26503947c60dfe34bfa2a3c"
+      },
+      "desired_outputs_all_null": true,
+      "root_search_or_retuning_performed": false
+    },
+    "retention_and_solver_ledger": {
+      "declared_slots": 2192,
+      "terminal_slots": 2192,
+      "endpoint_slots": 894,
+      "centered_D2_slots": 447,
+      "fixed_R4_slots": 126,
+      "local_RHS_direction_slots": 90,
+      "local_RHS_perturbation_slots": 540,
+      "solver_attempts": 915,
+      "solver_failures": 0,
+      "fallbacks_used": 0,
+      "start_end_HEAD_source_runner_runtime_pycache_equal": true
+    },
+    "immutable_points": {
+      "shared_zero": { "delta_a": 0.0, "delta_phi": 0.0 },
+      "phi_plus": { "delta_a": 0.0, "delta_phi": 0.001 },
+      "a_plus": { "delta_a": 0.001, "delta_phi": 0.0 }
+    },
+    "phase41_negative_control": {
+      "historical_status": "TANGENT_CONTROL_FAILED",
+      "phase41_retroactive_9_of_9": false,
+      "failed_zero_based_column": 8,
+      "failed_parameter": "K_u2",
+      "fixed_old_pair": [0.000002, 5e-7],
+      "root_signs": { "shared_zero": -1, "phi_plus": -1, "a_plus": -1 },
+      "FD_to_production_variational_relative_operator_error": {
+        "shared_zero": 0.0016450576383028118,
+        "phi_plus": 0.0007739216319627098,
+        "a_plus": 0.0013595137148025437
+      },
+      "u2_adjacent_step_relative_change": {
+        "shared_zero": 0.2988500216656352,
+        "phi_plus": 0.22199327396012633,
+        "a_plus": 0.7952717049287439
+      },
+      "no_later_favorable_pair_selected": true
+    },
+    "fixed_R4_reference": {
+      "full_operator_to_checkpoint_relative": {
+        "shared_zero": 0.0000113845,
+        "phi_plus": 0.0000115550,
+        "a_plus": 0.00000615281
+      },
+      "full_operator_to_tight_relative": {
+        "shared_zero": 0.0000114249,
+        "phi_plus": 0.0000115542,
+        "a_plus": 0.00000612347
+      },
+      "u2_internal_neighbor_stability": {
+        "shared_zero": 0.005970446597162429,
+        "phi_plus": 0.0007524202454539055,
+        "a_plus": 0.0035636470833986652
+      },
+      "frozen_neighbor_threshold": 0.005,
+      "reference_stable": {
+        "shared_zero": false,
+        "phi_plus": true,
+        "a_plus": true
+      },
+      "all_column_result": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+      "raw_statement_caveat": "The raw all-column contract statement is retained byte-for-byte above. Its positive wording does not override the raw typed status or metrics: shared_zero fails the frozen u2 internal-neighbor stability threshold, so the schema status is INCONCLUSIVE."
+    },
+    "local_hessian_action_diagnostics": {
+      "frozen_identity_threshold": 1e-7,
+      "frozen_reference_neighbor_threshold": 1e-6,
+      "direction_slots_per_point": 30,
+      "stable_reference_slots_per_point": 29,
+      "unstable_reference_slots_per_point": 1,
+      "stable_violation_count": {
+        "shared_zero": 12,
+        "phi_plus": 11,
+        "a_plus": 10
+      },
+      "maximum_stable_fixed_to_analytic_symmetric_relative": {
+        "shared_zero": 0.0000010218164691896943,
+        "phi_plus": 6.865545868143039e-7,
+        "a_plus": 6.847622577044141e-7
+      },
+      "protocol_label": "VARIATIONAL_RHS_BUG_EVIDENCE",
+      "interpretation": "The frozen classifier supports a protocol-defined local Hessian-action anomaly at all three points. This is evidence for a mismatch under the declared numerical identity test, not proof that a particular implementation contains a bug."
+    },
+    "time_column_limitation": {
+      "phase41_production_time_column_is_appended_from_endpoint_flow": true,
+      "tight_appended_time_column_is_assembly_only": true,
+      "direct_checkpoint_or_production_to_state_only_endpoint_RHS_discrepancy": {
+        "shared_zero": 2.143077847309506e-7,
+        "phi_plus": 1.4425781764253618e-7,
+        "a_plus": 1.3655221572151686e-7
+      },
+      "endpoint_RHS_cross_tier_envelope": {
+        "shared_zero": 1.1739652593601487e-7,
+        "phi_plus": 1.4969825782629335e-7,
+        "a_plus": 1.4358184637270587e-7
+      },
+      "interpretation": "The original returned time column is assembly-identical at its own augmented endpoint, while the state-only RHS comparison is evaluated at a different solver endpoint. Its discrepancy is within the endpoint cross-tier solver/state envelope and is not independent evidence for a variational-RHS bug. The local anomaly label is supported only by the separately stable Hessian-action violations."
+    },
+    "cause_ledger": {
+      "multi_label_not_unique_cause": true,
+      "points": {
+        "shared_zero": {
+          "SOLVER_NOISE_EVIDENCE": "INCONCLUSIVE",
+          "STEP_PAIR_SELECTION_ARTIFACT": "NOT_SUPPORTED",
+          "VARIATIONAL_RHS_BUG_EVIDENCE": "SUPPORTED",
+          "TRUNCATION_EVIDENCE": "NOT_SUPPORTED",
+          "CHART_CURVATURE_EVIDENCE": "NOT_SUPPORTED",
+          "PRODUCTION_TANGENT_SOLVER_EVIDENCE": "INCONCLUSIVE",
+          "INTEGRATED_VARIATIONAL_BUG_EVIDENCE": "INCONCLUSIVE",
+          "UNRESOLVED": "NOT_SUPPORTED"
+        },
+        "phi_plus": {
+          "SOLVER_NOISE_EVIDENCE": "SUPPORTED",
+          "STEP_PAIR_SELECTION_ARTIFACT": "SUPPORTED",
+          "VARIATIONAL_RHS_BUG_EVIDENCE": "SUPPORTED",
+          "TRUNCATION_EVIDENCE": "NOT_SUPPORTED",
+          "CHART_CURVATURE_EVIDENCE": "NOT_SUPPORTED",
+          "PRODUCTION_TANGENT_SOLVER_EVIDENCE": "INCONCLUSIVE",
+          "INTEGRATED_VARIATIONAL_BUG_EVIDENCE": "INCONCLUSIVE",
+          "UNRESOLVED": "NOT_SUPPORTED"
+        },
+        "a_plus": {
+          "SOLVER_NOISE_EVIDENCE": "SUPPORTED",
+          "STEP_PAIR_SELECTION_ARTIFACT": "SUPPORTED",
+          "VARIATIONAL_RHS_BUG_EVIDENCE": "SUPPORTED",
+          "TRUNCATION_EVIDENCE": "NOT_SUPPORTED",
+          "CHART_CURVATURE_EVIDENCE": "NOT_SUPPORTED",
+          "PRODUCTION_TANGENT_SOLVER_EVIDENCE": "INCONCLUSIVE",
+          "INTEGRATED_VARIATIONAL_BUG_EVIDENCE": "INCONCLUSIVE",
+          "UNRESOLVED": "NOT_SUPPORTED"
+        }
+      },
+      "aggregate_any_fixed_point": {
+        "SOLVER_NOISE_EVIDENCE": "SUPPORTED",
+        "STEP_PAIR_SELECTION_ARTIFACT": "SUPPORTED",
+        "VARIATIONAL_RHS_BUG_EVIDENCE": "SUPPORTED",
+        "TRUNCATION_EVIDENCE": "NOT_SUPPORTED",
+        "CHART_CURVATURE_EVIDENCE": "NOT_SUPPORTED",
+        "PRODUCTION_TANGENT_SOLVER_EVIDENCE": "INCONCLUSIVE",
+        "INTEGRATED_VARIATIONAL_BUG_EVIDENCE": "INCONCLUSIVE",
+        "UNRESOLVED": "NOT_SUPPORTED"
+      }
+    },
+    "normalized_orientation_homotopy": {
+      "sufficient_only": true,
+      "all_three_certified": true,
+      "checkpoint_and_R4_signs": {
+        "shared_zero": [-1, -1],
+        "phi_plus": [-1, -1],
+        "a_plus": [-1, -1]
+      },
+      "eta": {
+        "shared_zero": 0.00040334758687424275,
+        "phi_plus": 0.0010056853169212196,
+        "a_plus": 0.0007965000105128302
+      },
+      "mutation_controls_passed": true,
+      "does_not_prove_reference_correctness_or_global_orientation": true
+    },
+    "claim_status": {
+      "cause_classification": [
+        "SOLVER_NOISE_EVIDENCE",
+        "STEP_PAIR_SELECTION_ARTIFACT",
+        "VARIATIONAL_RHS_BUG_EVIDENCE"
+      ],
+      "phase42_reference_tangent": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+      "phase41_historical_status": "TANGENT_CONTROL_FAILED",
+      "phase41_retroactive_9_of_9": false,
+      "scope": "three immutable local m=4 roots only",
+      "global_promotion": "PROHIBITED"
+    },
+    "completion_ledger": {
+      "m2_and_m4_actions_identified": false,
+      "m2_and_m4_upward_cycles_identified": false,
+      "m2_and_m4_common_determinant_line_constructed": false,
+      "m3_and_m4_canonical_sign_equality_proved": false,
+      "m3_and_m4_common_determinant_line_constructed": false,
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "continuous_direction_coverage_proved": false,
+      "root_exhaustion_proved": false,
+      "exact_nonlinear_upward_manifold_certified": false,
+      "all_saddles_and_upward_components_complete": false,
+      "non_Stokes_chamber_certified": false,
+      "all_relative_good_ends_classified": false,
+      "physical_original_cycle_derived": false,
+      "metric_homotopy_tested": false,
+      "BFV_Pfaffian_Pin_orientation_computed": false,
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "quantum_gravity_explanation": null,
+      "false_count": 16,
+      "null_count": 6,
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    }
+  }
+}

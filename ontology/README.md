@@ -8,13 +8,15 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–41 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–42 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T14:28:45.166Z` graph update, the collection has 579 nodes and
-1617 edges. Validation verifies 90/90 stored hashes (86 artifacts and 4 policies). The
-Phase 16–41 run snapshots contain 410 named exact checks, all `PASS`, and 238 typed numerical-ledger
-checks: 237 `PASS` and one retained Phase-41 tangent-control `FAIL`. One legacy separately recorded
-Phase-18 numerical control brings the numerical-record total to 239 (238 pass and one fail). These
+At the recorded `2026-08-20T21:35:41Z` graph update, the collection has 594 nodes and
+1669 edges. Validation verifies 97/97 stored hashes (93 artifacts and 4 policies). The
+Phase 16–42 run snapshots contain 418 named exact checks, all `PASS`, and 246 typed numerical-ledger
+checks: 243 `PASS`, two `FAIL`, and one `INCONCLUSIVE`. The added Phase-42 non-PASS records preserve
+one protocol-defined local identity non-support result as `FAIL` and one derivative-reference result as
+`INCONCLUSIVE`; neither invalidates the zero-exit typed run. One legacy separately recorded Phase-18
+numerical control brings the numerical-record total to 247 (244 pass, two fail, one inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -57,6 +59,10 @@ confidence.
 ./ice ontology trace claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE --depth 2
 ./ice ontology trace claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE --depth 2
 ./ice ontology trace claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE --depth 2
+./ice ontology trace claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A --depth 2
+./ice ontology trace claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG --depth 2
+./ice ontology trace claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN --depth 2
+./ice ontology trace claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -117,6 +123,17 @@ inconclusive. The m3/m4 signs are only separately audited descriptive data; no c
 cutoff limit, bounded-chain sum, complete vector, or quantum-gravity result is inferred. Six promoted
 outputs remain null, null is not zero, and Gate 1 remains open.
 
+Phase 42 recursively audits the retained Phase-41 tangent failure at the three immutable roots. Under
+the frozen multi-label rules, solver noise and the old first-pair reference artifact are supported at
+`phi_plus` and `a_plus`, while multiple reference-stable local Hessian-action identities exceed their
+threshold at all three roots. That local anomaly is not proof of a code bug: the returned time column is
+assembled at its own augmented endpoint, and its comparison with a different state-only endpoint lies
+inside the cross-tier solver/state envelope, so it is excluded as independent bug evidence. A
+sufficient normalized local matrix homotopy preserves sign `-1` at all three points, but the
+`shared_zero` `u2` R4 neighbor change remains above the frozen reference-stability threshold. The
+reference tangent therefore remains inconclusive; Phase 41 stays 8/9, sixteen prerequisites remain
+false, six promoted outputs remain null, and Gate 1 remains open.
+
 ## How to read a claim
 
 Follow a claim in this order:
@@ -132,7 +149,9 @@ Follow a claim in this order:
 A check marked `PASS` means that its named contract passed; it does **not** mean that every associated
 scientific claim is true. A `FAIL` records a failed contract, not automatically a negation of the
 physical proposition. In Phase 41 the tangent-control `FAIL` leaves the stronger source-robustness
-outputs inconclusive while the separately accepted local-root claim remains supported. Conversely, a
+outputs inconclusive while the separately accepted local-root claim remains supported. In Phase 42 one
+typed `FAIL` records a local numerical identity that is not supported and one `INCONCLUSIVE` preserves
+an unstable derivative reference; neither is a failed run or proof of a software defect. Conversely, a
 passing counterexample check can attach to a claim with `polarity: CONTRADICTS`.
 
 ## Identifier families
