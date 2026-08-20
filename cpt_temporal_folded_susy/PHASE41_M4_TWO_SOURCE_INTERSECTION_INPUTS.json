@@ -1,0 +1,734 @@
+{
+  "schema_version": "ice.phase41.input-freeze.v1",
+  "phase": 41,
+  "gate": 1,
+  "frozen_at_utc": "2026-08-20T12:55:35Z",
+  "freeze_kind": "post_feasibility_workflow_input_freeze",
+  "authority": "repository-local computational workflow input",
+  "is_preregistration": false,
+  "is_scientific_evidence": false,
+  "non_evidence_disclaimer": "The symmetric m=4 saddle, its Hessian inertia and parity blocks, and exploratory two-source odd-response data were inspected before this file was written. No reproducible pre-freeze m=4 R14 cap solve or local-orientation sign record was retained; any informal recollection of one is treated as unknown. This manifest freezes a post-feasibility production and audit contract. It does not turn prior observations into predictions or scientific evidence.",
+  "provenance": {
+    "repository_head_observed_at_freeze": "cd4c1a090b0532b5fa532741202b21ca7be28609",
+    "precommit_revision_note": "A draft was first assembled at 2026-08-20T12:39:13Z, then adversarially audited and revised before any commit. frozen_at_utc records the final byte freeze, so no post-freeze amendment is being hidden.",
+    "manifest_introduction_commit": null,
+    "manifest_introduction_commit_note": "The requested workflow creates this file without committing it. A later result artifact must record the commit that first introduces the byte-identical manifest and its SHA-256.",
+    "derived_from": [
+      {
+        "path": "cpt_temporal_folded_susy/phase30_conformal_bfv_determinant_line.py",
+        "commit": "bbbaa7a9f4d00a9f6a2ef4ffad3d6df4f8ee076d",
+        "role": "midpoint minisuperspace element and finite-cutoff Hessian convention"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+        "commit": "750d19e76827ce78c9322e9fac6b494ade1f2bbf",
+        "role": "m=2 finite-window Gaussian-lift chain, cap, metric, and local-orientation convention"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json",
+        "commit": "a6b369e0a9518cd491f8116204ec67ab36fdf2a1",
+        "role": "signed phi-source, fixed-mobility, signed-subspace, and fail-closed audit conventions"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py",
+        "commit": "2f6bf27784de89518b6ce55de451781f73288d6e",
+        "role": "coarse-BDF then strict-DOP853 full-space solver and tangent-audit architecture"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md",
+        "commit": "2f6bf27784de89518b6ce55de451781f73288d6e",
+        "role": "m=3 scope boundary, failed-check provenance, and next-control requirement"
+      }
+    ]
+  },
+  "known_before_freeze": {
+    "role": "disclosed feasibility information, numerical seeds, and audit-risk information. The symmetric seed and inertia are used only as an explicitly post-feasibility initialization and branch-label convention; the prior response and local sign are not acceptance targets or predictions.",
+    "symmetric_m4_saddle_z_approximate": [
+      3.58074204105,
+      1.00365908814,
+      3.58533355258,
+      0.99870799722,
+      3.58074204105,
+      1.00365908814,
+      0.72430333367
+    ],
+    "symmetric_m4_action_approximate": 1.4545006797598463,
+    "symmetric_m4_hessian_inertia_observed": {
+      "negative": 4,
+      "positive": 3,
+      "zero": 0
+    },
+    "symmetric_m4_odd_block_eigenvalues_approximate": [
+      -59514.21819425,
+      10360.3035033
+    ],
+    "normalized_anchor_subtracted_odd_susceptibility_spot": {
+      "row_order": [
+        "a_odd_over_a_b",
+        "phi_odd_over_phi_b"
+      ],
+      "column_order": [
+        "delta_a",
+        "delta_phi_over_phi_b"
+      ],
+      "matrix_approximate": [
+        [
+          0.00046474,
+          0.00178907
+        ],
+        [
+          0.00518316,
+          -0.00106294
+        ]
+      ],
+      "determinant_approximate": -0.000009767010332210768,
+      "condition_number_approximate": 2.86735164896106,
+      "used_as_production_acceptance_target": false
+    },
+    "exploratory_m4_R14_cap_record": {
+      "status": "UNKNOWN_NOT_RETAINED",
+      "source_point": "UNKNOWN",
+      "chart": "UNKNOWN",
+      "used_as_production_input": false
+    },
+    "exploratory_m4_local_orientation_sign_record": {
+      "status": "UNKNOWN_NOT_RETAINED",
+      "value": "UNKNOWN",
+      "source_point": "UNKNOWN",
+      "chart": "UNKNOWN",
+      "used_as_acceptance_target": false
+    },
+    "desired_local_orientation_sign": null,
+    "known_method_risks": [
+      "m=4 adds two fine-even field directions as well as the reflection-odd pair",
+      "the m=2 Gaussian-lift cap embeds affinely in m=4 but the nonlinear midpoint actions and upward cycles do not",
+      "delta-dependent Morse normalization changes the finite launch ellipsoid while leaving the flow mobility fixed",
+      "a solver failure in one frozen chart is not a no-root certificate"
+    ]
+  },
+  "prohibited_result_inputs": {
+    "desired_direct_orientation_sign": null,
+    "desired_root_jacobian_sign": null,
+    "desired_susceptibility_rank": null,
+    "desired_cutoff_agreement_verdict": null,
+    "desired_global_intersection_coefficient": null,
+    "desired_susy_scale_or_cosmological_target": null,
+    "rule": "No desired output may be inferred from the disclosed feasibility observations or inserted into the production solver, branch selector, chart, acceptance threshold, or report template."
+  },
+  "purpose": "Test whether an independently solved m=4 phi-source local cap witness has the same separately audited declared-coordinate sign as the nonnested Phase40 m=3 sample, and whether an independent a-only signed endpoint source probes a second odd-response direction. The m=4 grid is nested only relative to m=2; no common m3/m4 determinant line, bounded-chain, global, continuum, or quantum-gravity promotion is assumed.",
+  "model": {
+    "name": "four-segment midpoint Starobinsky minisuperspace configuration regulator",
+    "segment_count": 4,
+    "step": 0.25,
+    "complex_variables_in_order": [
+      "a_1",
+      "phi_1",
+      "a_2",
+      "phi_2",
+      "a_3",
+      "phi_3",
+      "T"
+    ],
+    "complex_dimension": 7,
+    "ambient_real_dimension": 14,
+    "ambient_real_order": [
+      "Re(a_1)",
+      "Im(a_1)",
+      "Re(phi_1)",
+      "Im(phi_1)",
+      "Re(a_2)",
+      "Im(a_2)",
+      "Re(phi_2)",
+      "Im(phi_2)",
+      "Re(a_3)",
+      "Im(a_3)",
+      "Re(phi_3)",
+      "Im(phi_3)",
+      "Re(T)",
+      "Im(T)"
+    ],
+    "base_boundary": {
+      "a": 3.5668031935672753,
+      "phi": 1.0185809464006637,
+      "source": "Phase25 benchmark inherited through Phases39 and 40 without tuning to a Phase41 production result"
+    },
+    "potential": "V(phi)=(3/4)*(1-exp(-sqrt(2/3)*phi))^2",
+    "action": "S_4=2*pi^2*sum_{e=0}^{3}[(-6*a_mid*(Delta a)^2+a_mid^3*(Delta phi)^2)/(2*T*h)+T*h*(-3*a_mid+a_mid^3*V(phi_mid))], h=1/4",
+    "analytic_domain": "C^6 times C-star in T; T=0 is excluded as an action pole and the simple-pole residue polynomial is required to be nonidentically zero rather than pointwise nonzero",
+    "omitted_sectors": [
+      "canonical momenta",
+      "lapse gauge ghosts",
+      "fermions and gravitino",
+      "inhomogeneous modes",
+      "BFV/Pfaffian/Pin orientation line"
+    ]
+  },
+  "two_source_family": {
+    "source_parameters": {
+      "delta_a": {
+        "unit": "dimensionless fractional full endpoint difference",
+        "definition": "delta_a=(a_R-a_L)/a_b"
+      },
+      "delta_phi": {
+        "unit": "the same dimensionless field-coordinate unit as phi",
+        "definition": "delta_phi=phi_R-phi_L"
+      }
+    },
+    "joint_endpoint_definition": "a_L=a_b*(1-delta_a/2); a_R=a_b*(1+delta_a/2); phi_L=phi_b-delta_phi/2; phi_R=phi_b+delta_phi/2",
+    "source_paths": {
+      "phi_only": {
+        "coordinates": "delta_a=0; vary delta_phi",
+        "purpose": "repeat the Phase40 rank-one source at the m=4 cutoff",
+        "grid": [
+          -0.001,
+          -0.0005,
+          0.0,
+          0.0005,
+          0.001
+        ]
+      },
+      "a_only": {
+        "coordinates": "vary delta_a; delta_phi=0",
+        "purpose": "probe an independent rank-one source direction",
+        "grid": [
+          -0.001,
+          -0.0005,
+          0.0,
+          0.0005,
+          0.001
+        ]
+      }
+    },
+    "reflection": "(delta_a,delta_phi) maps to (-delta_a,-delta_phi) while interior nodes 1 and 3 are exchanged and node 2 and T are fixed",
+    "probe_interpretation": "Both real endpoint mutations are parity probes. Neither is a physical time arrow, a CPT-breaking source, or a non-Stokes regulator.",
+    "declared_source_dimension": 2,
+    "reflection_odd_field_response_dimension": 2,
+    "full_two_source_response_claim_requires_numerically_stable_rank_two": true,
+    "mixed_source_production_path_included": false
+  },
+  "odd_response_protocol": {
+    "nodal_odd_amplitudes": {
+      "a_odd": "(a_3-a_1)/sqrt(2)",
+      "phi_odd": "(phi_3-phi_1)/sqrt(2)"
+    },
+    "linear_anchor_odd_amplitudes": {
+      "a_odd_anchor": "a_b*delta_a/(2*sqrt(2))",
+      "phi_odd_anchor": "delta_phi/(2*sqrt(2))"
+    },
+    "anchor_subtracted_normalized_output": "o_hat=((a_odd-a_odd_anchor)/a_b,(phi_odd-phi_odd_anchor)/phi_b)",
+    "normalized_source": "s_hat=(delta_a,delta_phi/phi_b)",
+    "susceptibility": "chi_ij=partial(o_hat_i)/partial(s_hat_j), with columns estimated independently on the a-only and phi-only signed half/full grids",
+    "rank_two_rule": "Within the frozen dimensionless source and output normalization, use central signed differences at full step h and half step h/2 for each source, form chi_full and chi_half, and report chi=chi_half. Define E_step=norm_2(chi_half-chi_full). Repeat the saddle-response calculation with the predeclared control root tolerance 5e-10 and define E_solver as the maximum spectral-norm change of chi_half and chi_full relative to the primary calculation. Set E_rank=E_step+E_solver. E_rank is a numerical stability estimate, not a rigorous error bound. Stable numerical rank two may be supported only if sigma_min(chi)>10*E_rank; otherwise report STABLE_NUMERICAL_RANK_TWO_NOT_SUPPORTED. Do not infer exact algebraic rank deficiency from this finite-precision test.",
+    "linearity_control": "Compare signed half-step and full-step susceptibilities for each source and require the normalized anchor-subtracted output to obey max_abs(o_hat(+h)+o_hat(-h))<=1e-7 at both scales."
+  },
+  "m2_nested_relation": {
+    "status": "exact affine grid and declared-cycle embedding, not action or upward-cycle equality",
+    "coarse_variables": "one interior pair q_c=(a_c,phi_c) at s=1/2 and T",
+    "affine_prolongation": "I(q_c;q_L,q_R)=((q_L+q_c)/2,q_c,(q_c+q_R)/2)",
+    "fixed_endpoint_variation": "dI(delta q_c)=(delta q_c/2,delta q_c,delta q_c/2)",
+    "center_restriction": "r(q_1,q_2,q_3)=q_2",
+    "exact_retraction_identity": "r composed with I equals identity",
+    "reflection_covariance": "P_4 composed with I_(delta_a,delta_phi) equals I_(-delta_a,-delta_phi) composed with P_2",
+    "linear_anchor_nesting": "The m=4 anchors qbar_j=(1-j/4)q_L+(j/4)q_R equal the prolongation of the m=2 midpoint anchor.",
+    "Gamma_parameter_embedding": "For each field, the m=2 cap deviation y embeds as (y_1,y_2,y_3)=(y/2,y,y/2), with psi unchanged and positive embedding scales.",
+    "required_action_nonnesting_check": "Verify symbolically that S_4 composed with I is not identically equal to S_2 for the nonlinear midpoint regulator.",
+    "forbidden_inference": "Neither the m=2 saddle nor its K cycle, Hessian, fixed mobility, thimble, local sign, or Picard-Lefschetz coefficient is exactly inherited by m=4."
+  },
+  "reflection_and_orientation_conventions": {
+    "nodal_reflection": "P(a1,phi1,a2,phi2,a3,phi3,T)=(a3,phi3,a2,phi2,a1,phi1,T)",
+    "exact_action_covariance": "S_4(Pz;-delta_a,-delta_phi)=S_4(z;delta_a,delta_phi)",
+    "DST_I_basis": {
+      "definition": "e_k(j)=sqrt(2/4)*sin(pi*k*j/4), j,k in {1,2,3}",
+      "field_vectors": {
+        "k1_even": "(1/2,1/sqrt(2),1/2)",
+        "k2_odd": "(1/sqrt(2),0,-1/sqrt(2))",
+        "k3_even": "(1/2,-1/sqrt(2),1/2)"
+      },
+      "full_mode_order": [
+        "a_even_k1",
+        "phi_even_k1",
+        "T_even",
+        "a_odd_k2",
+        "phi_odd_k2",
+        "a_even_k3",
+        "phi_even_k3"
+      ],
+      "required_complex_determinant": 1,
+      "required_reflection_parity": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    "nested_comparison_basis": {
+      "field_vectors": {
+        "coarse": "c=(1,2,1)/sqrt(6)",
+        "odd": "o=(1,0,-1)/sqrt(2)",
+        "fine_even": "f=(1,-1,1)/sqrt(3)"
+      },
+      "full_mode_order": [
+        "a_coarse",
+        "phi_coarse",
+        "T_even",
+        "a_odd",
+        "phi_odd",
+        "a_fine_even",
+        "phi_fine_even"
+      ],
+      "required_complex_determinant": 1,
+      "required_reflection_parity": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "required_transition_determinant_from_DST_order": 1
+    },
+    "orientation_rule": "All scientific signs are direct signs in the frozen nodal order or signs corrected through an explicitly verified positive-determinant basis transition. An uncorrected raw sign from another row, mode, chart, or parameter order is not comparable.",
+    "Gamma_parameter_order": [
+      "y_a1",
+      "y_phi1",
+      "y_a2",
+      "y_phi2",
+      "y_a3",
+      "y_phi3",
+      "psi"
+    ],
+    "K_parameter_order": [
+      "u_1",
+      "u_2",
+      "u_3",
+      "u_4",
+      "u_5",
+      "u_6",
+      "flow_time"
+    ],
+    "local_orientation_sign": "sign det_R[V_Gamma,V_K] in the frozen interleaved ambient order",
+    "root_jacobian_warning": "The residual Jacobian [V_Gamma,-V_K] differs by (-1)^7=-1 from [V_Gamma,V_K].",
+    "required_orientation_mutations": [
+      "reverse one Gamma parameter and require the direct sign to flip",
+      "reverse one K parameter and require the direct sign to flip",
+      "transform between the declared DST and nested bases and require the determinant-corrected sign to remain unchanged"
+    ]
+  },
+  "saddle_protocol": {
+    "seed_source": "Use the disclosed symmetric m=4 feasibility saddle as the primary numerical seed; record that it was known before the freeze. Independently retain the Phase39 m=2 affine prolongation as a deliberately untuned negative seed/control rather than evidence of action nesting.",
+    "equations": "partial S_4 / partial(a_1,phi_1,a_2,phi_2,a_3,phi_3,T)=0",
+    "shared_zero_saddle": true,
+    "continuation_arms_per_source": {
+      "positive": [
+        0.0,
+        0.0005,
+        0.001
+      ],
+      "negative": [
+        0.0,
+        -0.0005,
+        -0.001
+      ],
+      "rule": "Solve the positive and negative arms independently from the common zero saddle; never jump from the positive full step directly to a negative point or use a reflected root as the only negative solve."
+    },
+    "required_residual_max": 1e-09,
+    "required_hessian_nonsingularity": true,
+    "hessian_min_abs_eigenvalue": 0.001,
+    "signed_saddle_reflection_max_abs": 2e-08,
+    "signed_action_reflection_max_abs": 2e-08,
+    "signed_hessian_reflection_relative_operator_error": 2e-07,
+    "feasibility_inertia_used_as_continuation_guard": {
+      "negative": 4,
+      "positive": 3,
+      "zero": 0
+    },
+    "signed_branch_match_required": true,
+    "saddle_census_complete": false
+  },
+  "fixed_flow_geometry": {
+    "reference_coordinate_definition": "w=(a1/a_b,phi1/phi_b,a2/a_b,phi2/phi_b,a3/a_b,phi3/phi_b,T/0.7)",
+    "common_zero_source_construction": "At the shared delta_a=delta_phi=0 saddle, diagonalize the real symmetric H_w=O*Lambda*O^T with det(O)=+1 and set L_4_0=O*diag(abs(Lambda)^(-1/2)).",
+    "coordinate_map": "w=w_saddle(delta_a,delta_phi)+L_4_0*xi",
+    "inverse_metric_mobility": "M_4_0=L_4_0*L_4_0^T",
+    "metric_tensor": "g_4_0=M_4_0^(-1)",
+    "upward_dual_flow_for_exp_minus_S": "dot(xi)=-conjugate(L_4_0^T*partial_w S_4)",
+    "global_constancy": "The same L_4_0 and M_4_0 are held fixed for both source axes, every signed source value, every launch-shape control, and every trajectory. They are never source-rewhitened or recomputed along a flow.",
+    "reflection_covariance_required": true,
+    "signed_projector_reflection_relative_operator_error": 2e-07,
+    "transported_frame_reflection_relative_operator_error": 2e-07,
+    "m2_metric_embedding_proved": false,
+    "m3_metric_embedding_proved": false,
+    "metric_homotopy_tested": false
+  },
+  "launch_shape_protocol": {
+    "signed_subspace_transport": "At each continued saddle, align the negative four-plane and positive three-plane of L_4_0^T H_w L_4_0 separately to the shared zero-source signed coordinate subspaces by orthogonal Procrustes transport. Individual eigenvectors inside the exactly whitened signed blocks are not invariant inputs.",
+    "primary_shape": {
+      "lambda": 1.0,
+      "name": "Morse-normalized ellipsoid",
+      "definition": "Apply the inverse positive square root of each aligned signed Hessian restriction together with negative-real and positive-imaginary e^{-S} phases."
+    },
+    "control_shape": {
+      "lambda": 0.0,
+      "name": "aligned orthonormal launch",
+      "definition": "Use the same aligned signed subspaces and phases without the restricted-Hessian inverse square root."
+    },
+    "conditional_intermediate_shape": {
+      "lambda": 0.5,
+      "run_if": "The lambda=0 and lambda=1 tracked candidates disagree in existence, orientation, or declared transversality.",
+      "definition": "Use the predeclared positive interpolation A_signed^(-lambda/2) inside each aligned signed subspace."
+    },
+    "interpretation": "Changing lambda changes the finite launch ellipsoid, not the fixed flow metric. Agreement is a launch-shape control and not a metric-homotopy theorem.",
+    "initial_radius": 0.0001,
+    "control_initial_radii": [
+      0.00005,
+      0.0002
+    ],
+    "required_primary_identity": "J^T*(L_4_0^T H_w L_4_0)*J=-I_7 with spectral-norm residual at most 2e-7 for the lambda=1 Takagi launch frame",
+    "exact_nonlinear_unstable_manifold_certified": false
+  },
+  "upward_chart": {
+    "sphere": "S^6 in the seven-real-dimensional local upward tangent",
+    "phase39_direction_source": {
+      "artifact": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "artifact_commit": "05b642eafd4dd10ecb69c345bb07bacb2c458bf4",
+      "artifact_sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70",
+      "script": "cpt_temporal_folded_susy/phase39_finite_joint_intersection.py",
+      "script_commit": "05b642eafd4dd10ecb69c345bb07bacb2c458bf4",
+      "script_sha256": "0af21171e44a688a9dd0b19b2491954467c5ceb881a97852d0eb6135ea8fce54",
+      "cap_radius": 0.3,
+      "alpha": 1.8402186306,
+      "beta": -4.16e-16,
+      "rule": "Reconstruct the Phase39 delta-zero Takagi launch vector at these frozen equatorial coordinates from the committed Phase39 action, saddle, scaling, and deterministic frame; do not substitute a Phase41 root or desired sign."
+    },
+    "center_construction": "Take the Phase39 primary m=2 launch direction in physical tangent coordinates, apply the fixed-endpoint affine prolongation (field variations y/2,y,y/2 and unchanged T variation), map it into m=4 xi coordinates using the shared L_4_0, and interleave it in R14. If J_R is the interleaved real m=4 Takagi frame, project with the Euclidean/Hermitian real projector P_up=J_R*(J_R^T*J_R)^(-1)*J_R^T. Require norm(P_up*v)/norm(v)>=0.05, choose the center sign by positive real Euclidean overlap with v, and normalize. This deterministic construction, not a desired Phase41 sign, defines omega_center.",
+    "center_value_is_derived_at_runtime": true,
+    "center_retuning_without_manifest_amendment_allowed": false,
+    "chart": "omega(u)=normalize(omega_center+B*u), u in R^6, with B a deterministic oriented orthonormal null frame satisfying det[B,omega_center]=+1",
+    "primary_parameter_box": {
+      "each_u_min": -0.6,
+      "each_u_max": 0.6
+    },
+    "overlap_control": "Construct one deterministic overlapping chart at every primary candidate, include the chart-transition orientation, require normalized chart-transition sigma_min>=1e-4, and require the corrected local sign and normalized ambient cap state to agree within 5e-5.",
+    "bounded_seed_fallback": "DISABLED. If the nested center and the frozen sequential source/radius/shape continuations do not yield a root inside the declared chart, report NO_ROOT_FOUND_IN_FROZEN_SEARCH. Adding a direction list requires a separately committed manifest amendment and a full rerun.",
+    "continuous_direction_coverage_proved": false,
+    "flow_time_max": 13.5,
+    "flow_time_min": 0.1,
+    "flow_norm_max": 40.0,
+    "minimum_boundary_margins": {
+      "each_chart_u_to_abs_0p6": 0.01,
+      "each_Gamma_field_y_to_abs_0p25": 0.005,
+      "cap_psi_to_abs_pi_over_2": 0.005,
+      "flow_time_to_lower_and_upper_bounds": 0.02,
+      "flow_norm_to_40": 0.1
+    },
+    "variational_tangent_transport": true,
+    "all_ends_classified": false
+  },
+  "declared_original_cycle_candidate": {
+    "status": "m=4 affine refinement of the finite-window Gaussian-lift chain candidate, not a derived physical original relative cycle",
+    "lapse_variable": "N",
+    "wick_map": "T=i*N",
+    "oriented_lapse_path": "[-R,-r] followed by N=r*exp(i*theta), theta from -pi to 0, followed by [r,R]",
+    "finite_arm_cutoff_R": 1.2,
+    "primary_cap_radius": 0.3,
+    "cap_parameter": "psi=arg(T)=theta+pi/2, increasing from -pi/2 to pi/2",
+    "field_anchor": "For j=1,2,3 and each source pair, qbar_j=(1-j/4)*q_L+(j/4)*q_R.",
+    "cap_embedding": "a_j=abar_j+exp(i*(psi/2-pi/2))*y_aj; phi_j=phibar_j+exp(i*psi/2)*y_phij; T=r*exp(i*psi)",
+    "cap_psi_tangent_requirement": "Include partial_psi a_j=(i/2)*(a_j-abar_j), partial_psi phi_j=(i/2)*(phi_j-phibar_j), and partial_psi T=i*T for every interior node.",
+    "parameter_orientation": [
+      "y_a1",
+      "y_phi1",
+      "y_a2",
+      "y_phi2",
+      "y_a3",
+      "y_phi3",
+      "psi"
+    ],
+    "field_window": {
+      "each_y_min": -0.25,
+      "each_y_max": 0.25
+    },
+    "m2_affine_cap_embedding_exact": true,
+    "relative_homology_class_proved": false,
+    "uniform_good_end_decay_proved": false
+  },
+  "intersection_protocol": {
+    "equation": "Gamma(y_a1,y_phi1,y_a2,y_phi2,y_a3,y_phi3,psi)=K(u_1,u_2,u_3,u_4,u_5,u_6,s)",
+    "primary_full_R14_points": [
+      {
+        "delta_a": 0.0,
+        "delta_phi": 0.0,
+        "label": "shared_zero"
+      },
+      {
+        "delta_a": 0.0,
+        "delta_phi": -0.001,
+        "label": "phi_minus"
+      },
+      {
+        "delta_a": 0.0,
+        "delta_phi": 0.001,
+        "label": "phi_plus"
+      },
+      {
+        "delta_a": -0.001,
+        "delta_phi": 0.0,
+        "label": "a_minus"
+      },
+      {
+        "delta_a": 0.001,
+        "delta_phi": 0.0,
+        "label": "a_plus"
+      }
+    ],
+    "positive_half_step_continuation_points": [
+      {
+        "delta_a": 0.0,
+        "delta_phi": 0.0005
+      },
+      {
+        "delta_a": 0.0005,
+        "delta_phi": 0.0
+      }
+    ],
+    "negative_half_step_policy": "Saddle and response data are independently solved at the negative half steps; a full intersection there is optional and cannot replace the independently solved negative full endpoints.",
+    "solver_pipeline": {
+      "coarse": "BDF residual and transported variational Jacobian used only to produce a seed",
+      "production": "strict DOP853 residual and transported variational Jacobian Newton-refine the seed on the same numerical map used for reporting",
+      "state_rtol": 2e-10,
+      "state_atol": 2e-12,
+      "state_max_step": 0.04,
+      "tangent_rtol": 8e-11,
+      "tangent_atol": 8e-13,
+      "tangent_max_step": 0.025
+    },
+    "acceptance_thresholds": {
+      "physical_residual_max_abs": 2e-07,
+      "normalized_sigma_min": 0.0002,
+      "FD_to_variational_relative_operator_error": 0.02,
+      "adjacent_FD_step_relative_change": 0.02,
+      "signed_reflection_candidate_max_abs": 2e-06
+    },
+    "full_finite_difference_points": [
+      "shared_zero",
+      "phi_plus",
+      "a_plus"
+    ],
+    "finite_difference_step_policy": {
+      "Gamma_field_y_columns": [
+        2e-06,
+        5e-07
+      ],
+      "Gamma_psi_column": [
+        2e-06,
+        5e-07
+      ],
+      "K_u1_column": [
+        2e-05,
+        1e-05
+      ],
+      "K_u2_through_u6_columns": [
+        2e-06,
+        5e-07,
+        1e-07
+      ],
+      "K_flow_time_column": [
+        5e-06,
+        1e-06,
+        2e-07
+      ],
+      "selection_rule": "Evaluate in the listed descending order and use the first adjacent surviving pair. The pair must satisfy the frozen plateau threshold; no favorable step may be selected after observing a determinant sign."
+    },
+    "launch_shape_controls_at": [
+      "phi_plus",
+      "a_plus"
+    ],
+    "radius_controls_at": [
+      "shared_zero",
+      "phi_plus",
+      "a_plus"
+    ],
+    "control_candidate_matching": {
+      "radius_seed_rule": "Start from the primary candidate, keep its direction/chart coordinates, and shift the flow-time seed by log(primary_radius/control_radius) before the strict same-map solve.",
+      "launch_shape_seed_rule": "Map the primary lambda=1 launch direction into the lambda=0 aligned chart by maximum positive real overlap and solve from the primary cap state. If direct lambda=1 to lambda=0 matching fails, run the predeclared lambda=1/2 bridge before classifying the control.",
+      "same_candidate_required": true,
+      "normalized_ambient_cap_state_distance_max": 5e-05,
+      "normalized_ambient_definition": "Euclidean distance after interleaving the common dimensionless w=(a1/a_b,phi1/phi_b,a2/a_b,phi2/phi_b,a3/a_b,phi3/phi_b,T/0.7) coordinates into R14.",
+      "interpretation": "A repeated determinant sign without this state matching is not evidence that the same local candidate was tracked."
+    },
+    "required_path_ledger": [
+      "sampled Re(S) nonincrease with maximum positive increment at most 5e-8 and Im(S) drift at most 5e-8",
+      "maximum xi norm below the frozen flow box",
+      "independent solve_ivp event check with radius residual at most 2e-7 that the reported cap crossing is the first |T|=0.3 crossing on the integrated segment",
+      "field, chart, psi, and flow-time margins"
+    ],
+    "root_exhaustion_required_for_local_claim": false,
+    "global_integer_must_remain_null": true
+  },
+  "completion_contracts": {
+    "exact": [
+      {
+        "id": "P41.action.single_scalar_four_elements",
+        "kind": "symbolic_identity",
+        "required": true,
+        "criterion": "One symbolic S_4 scalar is the sum of four midpoint elements and generates every seven-component gradient and seven-by-seven Hessian.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P41.action.holomorphic_off_T_zero",
+        "kind": "symbolic_identity",
+        "required": true,
+        "criterion": "S_4 contains no conjugation for T nonzero and its T-zero simple-pole residue polynomial is not identically zero.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P41.reflection.two_source_covariance",
+        "kind": "symbolic_identity",
+        "required": true,
+        "criterion": "Action, gradient, and Hessian obey the joint signed-source reflection covariance.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P41.modes.DST_and_nested_orientation",
+        "kind": "exact_linear_algebra",
+        "required": true,
+        "criterion": "DST and nested full mode bases have determinant +1, parity (+,+,+,-,-,+,+), and positive transition determinant.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P41.nesting.affine_cycle_not_action",
+        "kind": "symbolic_identity_and_negative_control",
+        "required": true,
+        "criterion": "rI=id and the linear anchors and Gamma cap embed affinely, while S_4 composed with I is verified not to be identically S_2.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P41.orientation.middle_dimension_and_root_parity",
+        "kind": "exact_dimension_and_parity",
+        "required": true,
+        "criterion": "Gamma and K each have real dimension seven in R14 and negating all seven K columns reverses the determinant sign.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P41.guard.incomplete_data_force_global_nulls",
+        "kind": "typed_fail_closed_contract",
+        "required": true,
+        "criterion": "Incomplete arms, census, Stokes, nonlinear-manifold, end, and physical-cycle data force every bounded-chain and global coefficient to null.",
+        "failure_status": "INVALID_RUN"
+      }
+    ],
+    "numerical": [
+      {
+        "id": "P41.saddles.two_source_signed_grids",
+        "kind": "numerical_root_and_Hessian",
+        "required_for": "two-source saddle and response claims",
+        "criterion": "Every frozen signed-grid saddle satisfies all seven equations, is nondegenerate with the continued inertia, and matches its reflected partner.",
+        "failure_status": "SOURCE_SCOPED_INCONCLUSIVE"
+      },
+      {
+        "id": "P41.response.anchor_subtracted_two_source_matrix",
+        "kind": "numerical_response",
+        "required_for": "rank-two odd-response claim",
+        "criterion": "Record the signed half/full anchor-subtracted susceptibility matrix, singular spectrum, rank test, and reversal residual without forcing rank two.",
+        "failure_status": "STABLE_NUMERICAL_RANK_TWO_NOT_SUPPORTED"
+      },
+      {
+        "id": "P41.metric.one_fixed_mobility_two_sources",
+        "kind": "numerical_geometry",
+        "required_for": "all local-intersection claims",
+        "criterion": "One shared zero-source L_4_0 is used everywhere; its mobility, signed projectors, and reflected frames satisfy the frozen covariance tolerances.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P41.intersections.five_primary_full_R14_candidates",
+        "kind": "numerical_local_intersection",
+        "required_for": "two-source m=4 local robustness claim",
+        "criterion": "At the five primary source points, solve all fourteen real equations and record residual, rank, direct determinant, singular spectrum, parameter margins, and solver status.",
+        "failure_status": "NO_ROOT_FOUND_OR_NONTRANSVERSE_IN_FROZEN_SEARCH"
+      },
+      {
+        "id": "P41.orientation.direct_root_and_basis_controls",
+        "kind": "numerical_orientation",
+        "required_for": "within-m4 orientation audit and separately scoped m3/m4 sign comparison",
+        "criterion": "Within m4, direct and root-Jacobian signs obey odd parity, Gamma/K reversals flip sign, and DST/nested basis corrections preserve the reported direct sign. Any comparison with m3 is only between separately audited declared-coordinate signs; no common determinant line is inferred.",
+        "failure_status": "INVALID_ORIENTATION_RESULT"
+      },
+      {
+        "id": "P41.tangent.three_full_FD_controls",
+        "kind": "numerical_derivative_control",
+        "required_for": "transported-frame trust",
+        "criterion": "At shared_zero, phi_plus, and a_plus, a two-step full residual finite-difference Jacobian agrees with the strict-DOP853 variational Jacobian within the frozen plateau and operator-error thresholds.",
+        "failure_status": "TANGENT_CONTROL_FAILED"
+      },
+      {
+        "id": "P41.launch.radius_and_shape_controls",
+        "kind": "numerical_launch_surface_control",
+        "required_for": "finite-launch robustness claim",
+        "criterion": "The declared radius ladder and lambda=0 versus lambda=1 launch shapes are solved from the frozen sequential seeds and must satisfy the normalized ambient cap-state matching rule. A repeated sign without state matching does not pass. Disagreement triggers only the predeclared lambda=1/2 bridge and narrows the claim rather than changing the metric.",
+        "failure_status": "LAUNCH_SHAPE_SENSITIVE_OR_INCONCLUSIVE"
+      },
+      {
+        "id": "P41.path.first_cap_and_flow_box",
+        "kind": "numerical_path_ledger",
+        "required_for": "tracked cap-piece claim",
+        "criterion": "Each primary path satisfies the Morse-flow ledger, remains inside the flow box, and passes an independent first-cap event check.",
+        "failure_status": "PATH_OR_CAP_CLASSIFICATION_FAILED"
+      },
+      {
+        "id": "P41.guard.no_global_integer",
+        "kind": "typed_output_guard",
+        "required_for": "zero-exit production run",
+        "criterion": "Every bounded-chain, global, continuum, and quantum-gravity output remains explicitly null or open.",
+        "failure_status": "INVALID_RUN"
+      }
+    ]
+  },
+  "m3_comparison_bounds": {
+    "Phase40_phi_source_result": "A successful phi-only m=4 run may support only descriptive agreement of the separately internally audited m3 and m4 declared-coordinate sampled local signs. No cross-cutoff determinant-line invariant or continuation is constructed.",
+    "a_source_interpretation": "A successful independent a-only run and a stable rank-two response may support that the m=4 odd response is not restricted to the Phase40 phi-source axis.",
+    "nonnested_warning": "m=3 and m=4 grids are not nested. Their equal corrected signs are sampled agreement, not a canonical equality, regulator independence, or convergence.",
+    "dyadic_warning": "The m=2 to m=4 relation is a dyadic action/response regulator pair with an exact affine grid/cycle embedding, but not a shared K cycle or determinant line. Any later convergence claim requires at least another nested action/response refinement such as m=8 plus compatible physical-cycle data.",
+    "sign_mismatch_rule": "A raw mismatch must first be audited within each cutoff for row, mode, Gamma, K, chart, and added-mode orientation. A mismatch that survives those separate audits is compatible with cutoff or determinant-line-stabilization sensitivity of the sampled local signs; it is not by itself a global topological transition.",
+    "failure_rule": "Ordinary solver nonconvergence is inconclusive. A source-scoped robustness claim is contradicted only by a tracked and numerically resolved loss of transversality, a frozen-boundary or first-cap event, or a validated exhaustive local-degree result within a declared compact box.",
+    "fine_even_rule": "A nonzero or large fine-even response is a cutoff correction. It weakens an identification with a coarse branch but is not by itself absence of an m=4 local candidate.",
+    "continuum_convergence_proved": false
+  },
+  "required_fail_closed_outputs": {
+    "m2_and_m4_actions_identified": false,
+    "m2_and_m4_upward_cycles_identified": false,
+    "m2_and_m4_common_determinant_line_constructed": false,
+    "m3_and_m4_canonical_sign_equality_proved": false,
+    "m3_and_m4_common_determinant_line_constructed": false,
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "continuous_direction_coverage_proved": false,
+    "root_exhaustion_proved": false,
+    "exact_nonlinear_upward_manifold_certified": false,
+    "all_saddles_and_upward_components_complete": false,
+    "non_Stokes_chamber_certified": false,
+    "all_relative_good_ends_classified": false,
+    "physical_original_cycle_derived": false,
+    "metric_homotopy_tested": false,
+    "BFV_Pfaffian_Pin_orientation_computed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "quantum_gravity_explanation": null,
+    "gate1_status": "OPEN_PARTIAL_PROGRESS"
+  },
+  "result_classification_rules": {
+    "phi_local_robustness_supported_if": "All phi-source primary R14, reflection, orientation, tangent, path, radius, and launch-shape contracts pass in the frozen chart and tolerances.",
+    "a_local_robustness_supported_if": "All a-source primary R14, reflection, orientation, tangent, path, radius, and launch-shape contracts pass in the frozen chart and tolerances.",
+    "rank_two_response_supported_if": "The predeclared dimensionless, error-relative numerical rank rule passes for the two-source anchor-subtracted susceptibility; failure does not by itself prove exact algebraic rank deficiency.",
+    "source_scoped_contradiction_if": "A tracked branch has a resolved determinant zero or a frozen boundary/cap event, or a validated exhaustive local-degree calculation establishes the scoped negative result.",
+    "inconclusive_if": "A solver fails, a chart or time box is exhausted without classification, a finite-difference plateau is absent, a launch-shape result disagrees without resolved continuation, or the susceptibility rank is below its error floor.",
+    "global_promotion_never_allowed_by_this_phase": true
+  },
+  "promotion_boundary": "A successful Phase41 run may support only internally orientation-audited, frozen-metric, finite-launch, local m=4 cap candidates for the phi-only and a-only signed source axes, a scoped two-source numerical odd-response rank statement, and descriptive agreement or disagreement with separately audited lower-cutoff signs. It cannot establish a common cross-cutoff determinant line, equality of the m=2 and m=4 actions or upward cycles, canonical equality with m=3, cutoff or continuum convergence, a physical original cycle, a bounded-chain signed sum, a complete Picard-Lefschetz vector, Gate 1 closure, BFV/Pfaffian/Pin data, a conserved spinorial charge, SUSY breaking, a cosmological prediction, or quantum gravity."
+}
