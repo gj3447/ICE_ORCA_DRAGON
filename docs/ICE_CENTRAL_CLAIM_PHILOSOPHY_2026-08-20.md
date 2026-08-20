@@ -328,6 +328,12 @@ ICE는 이 기준에서는 이미 의미 있는 진전을 이뤘다. 하지만 �
 7. **음성 결과 보존:** 실패한 경로를 지우지 않고 이후 추론을 막는 지식으로 사용한다.
 8. **관측량으로 종료:** 최종 물리 주장은 parameter-independent discriminator에 도달해야 한다.
 
+이 규율을 실제 연구 루프로 적용하는 절차는
+[`decisions/ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md`](decisions/ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md)에
+정의한다. 핵심은 여기서 세운 원리도 자기검사에서 면제하지 않는 것이다. “전역 선택이
+필요하다”면 그 선택 규칙 자체의 유도 근거를 다시 묻고, “수학적 가능성은 물리적 실재가
+아니다”라는 판정을 이 철학과 seam 가설 자체에도 적용한다.
+
 ## 12. 최종 정식화
 
 ICE_ORCA_DRAGON의 철학적 hard core를 한 문단으로 정식화하면 다음과 같다.
