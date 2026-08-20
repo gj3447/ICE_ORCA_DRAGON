@@ -129,6 +129,7 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 37 closed local root and reduced-half-form holonomy | Chester–Friedman–Ursell; Witten (2010); Witten (2015); Freed–Hopkins | `CITES`-only coalescing-saddle, relative-cycle, fermion-Pfaffian, and Pin/reflection frameworks; none supplies the six BVP paths or sampled lift, turns root monodromy into a relative-cycle map, excludes intersample determinant zeros or alias winding, identifies the reduced bosonic half-form with a fermion Pfaffian or spacetime Pin lift, constructs the full BFV/SUGRA operator or supercharge, or derives a state |
 | Phase 38 Gate-1 identifiability and bounded end ledger | Witten (2010); Chester–Friedman–Ursell; Teitelboim (1983, PRL); Banihashemi–Jacobson | `CITES`-only relative-cycle, coalescing-saddle, causal-vs-gauge-invariant lapse, and below-origin-contour frameworks attached to the next open construction; none supplies a physical injectivity theorem or admissible completions, turns the finite surrogate into physical homology, provides the sampled continuation, promotes conjugation to an independent branch, proves continuous disjointness, classifies the box exits, fixes the global vector, or computes the hard CFU functions |
 | Phase 39 frozen \(m=2\) local joint-intersection pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing inherited through the Gate-1 opens; none supplies the frozen action, cycle/metric choices, discrete saddle, finite-time upward-chart patch, local six-real determinant signs, sampled first-hit ledger, or global completion. No new literature source is introduced by Phase 39 |
+| Phase 40 frozen \(m=3\) rank-one odd-response and local R10 pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing inherited through the still-open Gate 1; none supplies the three-midpoint action, rank-one phi source, odd response, fixed-mobility/launch-ellipsoid construction, five sampled local R10 signs, local clamp, or global completion. No new literature source is introduced by Phase 40 |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -336,5 +337,18 @@ relative cycle, certify the nonlinear upward manifold, search its straight arms 
 classify the sampled box exits as good ends, choose a non-Stokes lateral chamber, or supply cutoff and
 metric-homotopy stability. The calculation therefore stays a local Gate-1 pilot rather than a
 literature-backed global Picard--Lefschetz coefficient.
+
+Phase 40 likewise adds no source-derived physics claim. Its three-midpoint scalar, antisymmetric
+rank-one phi endpoint source, resolved odd block and sampled response, fixed delta-zero flow mobility,
+delta-dependent Morse launch ellipsoids, five local \(\mathbb R^{10}\) candidates, and K-launch clamp are
+repository calculations. The inherited sources do not promote the endpoint mutation to a physical time
+arrow or CPT breaking, supply the independent source needed to probe the full odd sector, identify a
+launch ellipsoid with a physical metric deformation, prove a continuous candidate branch, or provide an
+exact complete upward manifold. Witten's relative-cycle framework in particular keeps the five local
+signs distinct from a physical original-cycle pairing and global Picard--Lefschetz coefficient.
+Teitelboim and Banihashemi--Jacobson continue to frame lapse-prescription and integration-order questions;
+they do not select this frozen cycle candidate. No new source node or literature edge was added, and the
+missing \(m=4\)/cutoff comparison, arms, reintersections, component census, Stokes chamber, good ends,
+BFV/Pfaffian/Pin orientation, state, and global coefficient remain open.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

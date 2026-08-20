@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–39 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–40 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T09:56:05.857Z` graph update, the collection has 555 nodes and
-1527 edges. Validation verifies 82/82 stored hashes (78 artifacts and 4 policies). The
-Phase 16–39 run snapshots contain 391 named exact checks, 207 typed numerical-ledger checks, and one
-legacy separately recorded Phase 18 numerical control (208 numerical controls in all). These
+At the recorded `2026-08-20T12:23:10.518Z` graph update, the collection has 567 nodes and
+1570 edges. Validation verifies 86/86 stored hashes (82 artifacts and 4 policies). The
+Phase 16–40 run snapshots contain 403 named exact checks, 229 typed numerical-ledger checks, and one
+legacy separately recorded Phase 18 numerical control (230 numerical controls in all). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -49,6 +49,9 @@ confidence.
 ./ice ontology trace claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE --depth 2
 ./ice ontology trace claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH --depth 2
 ./ice ontology trace claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR --depth 2
+./ice ontology trace claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE --depth 2
+./ice ontology trace claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE --depth 2
+./ice ontology trace claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -87,6 +90,16 @@ straight arms or later cap intersections, exhaust roots or upward components, ce
 nonlinear upward manifold or a non-Stokes chamber, or classify all relative good ends. Consequently the
 bounded-chain sum, complete signed vector, and `global_n_sigma` remain null rather than zero, and Gate 1
 remains open.
+
+Phase 40 raises the local pilot to the first cutoff with a reflection-odd interior-history sector. In
+one frozen \(m=3\) regulator, a rank-one phi endpoint source has a nonzero anchor-subtracted,
+sign-reversing sampled odd response, while five sequentially tracked local \(\mathbb R^{10}\) cap-piece
+candidates have direct declared sign \(+1\) at the five sampled delta values. The flow mobility is fixed;
+the delta-dependent Morse launch ellipsoids and their radius ladder are chart data, not a metric-homotopy
+test. Only three points receive the full finite-difference and sampled-flow audit, and the local
+K-launch-coordinate clamp is not a full odd-sector ablation. The second source direction, \(m=4\), a
+continuous branch theorem, the entire chain, exact nonlinear upward manifold, Stokes chamber and good
+ends remain open, so every chain/global output stays null and Gate 1 remains open.
 
 ## How to read a claim
 

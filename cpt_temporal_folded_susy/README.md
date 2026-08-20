@@ -86,12 +86,15 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json` | feasibility 확인 뒤 production 전에 고정한 $m=2$ action·metric·lower-bypass chain·orientation·fail-closed 출력 입력. preregistration이나 scientific evidence가 아님 |
 | `phase39_finite_joint_intersection.py` | 같은 nonlinear $S_2$에서 discrete saddle·Hessian을 다시 만들고 finite-radius upward chart tangent를 운반해 두 cap piece의 직접 $6\times6$ local orientation을 계산하는 실행체 |
 | `PHASE39_FINITE_JOINT_INTERSECTION.md` | Phase 39 보고서 — 12 exact + 17 numerical checks. $r=.3,.2$의 declared configuration-coordinate local sign은 $+1$이지만 bounded-chain sum·complete vector·global $n_\sigma$는 `null`이고 Gate 1은 OPEN |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–39의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json` | $m=3$ reflection-odd 계산의 post-feasibility 입력과 실패 시 `null`로 남길 전역 출력을 고정한 workflow manifest. 최초 frame 가정의 실패와 signed-subspace transport 교정을 커밋 이력으로 보존 |
+| `phase40_m3_reflection_odd_intersection.py` | 하나의 SymPy scalar에서 $S_3$, gradient, Hessian을 만들고 rank-one endpoint mutation, signed spectral-subspace transport, full $10\times10$ local orientation과 대조군을 검증하는 실행체 |
+| `PHASE40_M3_REFLECTION_ODD_INTERSECTION.md` | Phase 40 보고서 — 12 exact + 22 numerical checks. 다섯 sampled $\delta$ 후보의 local sign은 $+1$이지만 source rank는 1이고 모든 global intersection 출력은 `null`; Gate 1은 OPEN |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–40의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 39)
+## 현재 경계 (Phase 40)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -345,6 +348,17 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   lateral Stokes chamber도 미고정이다. exact nonlinear $K$, 모든 root/component/end, reflection-odd
   history mode와 cutoff·metric·regulator 안정성이 없으므로 `bounded_chain_signed_sum`, complete
   vector, `global_n_sigma`는 모두 `null`이고 Gate 1은 계속 OPEN이다.
+- Phase 40은 $m=3$으로 올라가면서 처음 생기는 2차원 reflection-odd field sector를 명시적으로
+  분리한다. 다만 endpoint deformation은 $\phi$ 방향 하나뿐인 rank-one source다. Anchor를 뺀
+  odd response는 0이 아니며, $\delta=-.001,-.0005,0,.0005,.001$의 순차 continuation에서
+  full $10\times10$ direct local sign은 모두 $+1$이다. 고정된 $\delta=0$ mobility와
+  $\delta$별 signed-subspace launch ellipsoid를 구별했고, action/gradient/Hessian reflection,
+  endpoint-reflected 후보, 세 launch radius, variational tangent와 finite-difference Jacobian을
+  함께 검사했다.
+- 이 다섯 점은 연속 구간에서 determinant zero가 없다는 증명이 아니다. Local K-launch-coordinate
+  clamp는 full odd-sector ablation도 아니며, 단지 같은 neighborhood에서 full candidate를 재현하지
+  못한 대조군이다. 따라서 bounded-chain sum, complete signed vector, `global_n_sigma`는 계속
+  `null`이고 Gate 1은 OPEN이다.
 
 ## 다음 계산
 
@@ -354,9 +368,10 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   chart, Phase 34의 reduced branch pair, Phase 35의 relative endpoint-Jacobi transport, Phase 36의
   separate root-sheet lateral gate, Phase 37의 local closed root/half-form holonomy, Phase 38의
   inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger, Phase 39의
-  $m=2$ cap-piece local full-space witness에서 멈추지 않는다. 먼저 $m=3/4$ endpoint-asymmetry
-  mutation으로 첫 reflection-odd history mode와 orientation을 검사하고, 이미 feasible한 $m=5$
-  joint saddle로 올린다. 그 뒤
+  $m=2$ cap-piece local full-space witness, Phase 40의 rank-one $m=3$ reflection-odd local
+  continuation에서 멈추지 않는다. 다음에는 $m=4$에서 orientation-matched cutoff control을 만들고
+  독립적인 $a$-only source를 추가해 두 odd response 방향의 rank를 검사한다. 이후 이미 feasible한
+  $m=5$ joint saddle로 올린다. 그 뒤
   하나의 공통 incoming physical upward dual과
   원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
   line의 absolute orientation을 고정한다. Full joint upward cycle의

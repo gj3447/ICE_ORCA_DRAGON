@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T09:56:05.857Z`; 555 nodes, 1527 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 82/82 stored hashes (78 artifacts and 4 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-20T12:23:10.518Z`; 567 nodes, 1570 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 86/86 stored hashes (82 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -44,7 +44,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 37 make the local sheet exchange physical or establish a Pin/Pfaffian supercharge holonomy? | No. Both tracked BVP roots exchange on three finite enclosing loops, and the sampled reduced bosonic half-form has a conditional order-four conjugacy class with \(L^2=-I\). Bare root monodromy still preserves the Phase-17 parity-controlled basis equivalence. No original relative cycle, hard CFU coefficients, spacetime Pin lift, fermion Pfaffian line, full BFV/SUGRA operator, conserved spinorial charge, quantum constraint, or state is computed. | `claim:P37_LOCAL_BVP_ROOT_COVER_HAS_NONTRIVIAL_Z2_MONODROMY`; `claim:P37_SAMPLED_REDUCED_HALF_FORM_HAS_CONDITIONAL_ORDER_FOUR_HOLONOMY`; `claim:P37_ROOT_MONODROMY_ALONE_BREAKS_PHASE17_BASIS_EQUIVALENCE`; `open:p37-global-cycle-hard-cfu-full-bfv-pfaffian-gate` |
 | Does Phase 38 close Gate 1 or determine the global signed intersection vector? | No. It supports that the recorded projected/local data do not license inverse reconstruction without a physical injectivity theorem or admissible completions; its noninjective example is only a finite surrogate, not a physical relative-homology theorem. The conditional \(\Gamma_0\) local map is exact, and one tracked branch plus its conjugation control remains disjoint at sampled points through \(\operatorname{Re}T=16\), but no continuous census, complete joint cycle, full-joint sign, good-end classification, or global vector is obtained. Gate-2 hard-CFU work may run in parallel; only its physical promotion depends on Gate 1. | `claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION`; `claim:P38_ROOT_SWAP_CAN_REPLACE_GAUSS_MANIN_CYCLE_TRANSPORT`; `claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS`; `claim:P38_SAMPLED_TRACKED_ARMS_REMAIN_PROJECTED_DISJOINT_THROUGH_RET16`; `claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 39 directly compute a full-joint intersection sign and close Gate 1? | It directly computes two **local** six-real-dimensional signs: for one frozen \(m=2\) configuration action and one finite-radius, finite-time upward-chart patch, a numerically locally transverse candidate on each declared cap piece has configuration-coordinate sign `+1`. This no longer infers the sign from the lapse projection. It does not pair the entire bounded chain: straight arms and later cap reintersections are unsearched, root/upward-component exhaustion and the exact nonlinear upward manifold are uncertified, all recorded real saddles are critical-phase degenerate without a certified lateral chamber, and the good ends are incomplete. Thus `bounded_chain_signed_sum`, the complete vector, and `global_n_sigma` remain null; Gate 1 stays open. | `claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE`; `claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH`; `claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR`; `open:gate1-original-cycle-signed-global-intersections` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–39 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–39 scope guards |
+| Does Phase 40 establish an odd history sector or close Gate 1 at \(m=3\)? | It supports a nonzero anchor-subtracted, sign-reversing response of the first two-dimensional reflection-odd \((a,\phi)\) block to one rank-one antisymmetric **phi-only** endpoint source. It also records five sampled local full-\(\mathbb R^{10}\) candidates with direct declared signs `+1`, using one fixed delta-zero flow mobility and delta-dependent local Morse launch ellipsoids. The source does not probe the full odd sector; the five samples are not a continuous branch theorem; and the local K-launch clamp is neither a full odd-sector ablation nor a no-root result. All chain/global outputs remain null, meaning uncomputed rather than zero, and Gate 1 stays open. | `claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE`; `claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE`; `claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE`; `concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid`; `open:gate1-original-cycle-signed-global-intersections` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–40 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–40 scope guards |
 
 ### Phase 23 reading path
 
@@ -237,6 +238,31 @@ The next controlled lift is an \(m=3\) or \(m=4\) endpoint-asymmetric calculatio
 reflection-odd history mode, followed by \(m=5\), complete chain/dual-component searches, lateral Stokes
 data, good-end classification, and cutoff/metric/homotopy stability. Only that stronger object can
 promote the local signs into Gate 1's signed global vector.
+
+### Phase 40 reading path
+
+Phase 40 performs the first \(m=3\) endpoint-asymmetric local pilot but preserves the distinction between
+a source response, a launch-coordinate choice, and a global relative-cycle result:
+
+1. `claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE` is supported for
+   one frozen saddle family and one rank-one phi-only endpoint source. Exact reflection covariance and a
+   resolved two-dimensional odd Hessian block make the sampled response meaningful, but the unprobed
+   independent odd source prevents a full-odd-sector or physical-time-arrow inference;
+2. `concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid` keeps the delta-zero
+   inverse-metric mobility fixed across the run. The delta-dependent Procrustes-aligned signed-subspace
+   frames and launch ellipsoids parameterize local initial data; their variation is not a metric-homotopy
+   test or an exact unstable-manifold certificate;
+3. `claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE` is supported only at
+   the five declared delta values. All five direct mode-orientation-corrected signs are \(+1\), while
+   full finite-difference, variational, flow, and orientation audits are confined to three primary
+   points. No continuous branch or intersample nonzero-determinant theorem follows;
+4. the converged K-launch-coordinate clamp misses its local fit tolerance, but it freezes one launch
+   coordinate rather than spanning the full two-dimensional odd field sector. It therefore supplies a
+   scoped mutation diagnostic, not an ablation theorem and not a no-root claim;
+5. `claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE`
+   records an evidential-sufficiency boundary. The absent \(m=4\)/cutoff comparison, arms,
+   reintersections, exhaustive components, exact nonlinear K, Stokes chamber, and good ends keep the
+   bounded-chain sum, complete vector, and `global_n_sigma` null. Gate 1 remains open.
 
 ## Concept map
 
@@ -480,6 +506,15 @@ flowchart TD
   Local39 --> Guard39["Finite-radius/time K-chart patch<br/>not exact complete upward cycle"]
   Global39 --> Gate1_39["OPEN Gate 1 · chain sum, ends, Stokes, stability"]
   Guard39 --> Gate1_39
+
+  Programme --> P40["Phase 40 · frozen m=3 odd-response and local R10 pilot"]
+  P40 --> Odd40["Rank-one phi source gives sampled<br/>anchor-subtracted odd response · SUPPORTED"]
+  P40 --> Geometry40["Fixed flow mobility ≠ delta-dependent<br/>Morse launch ellipsoid"]
+  P40 --> Local40["Five sampled local R10 signs = +1<br/>SUPPORTED locally"]
+  P40 --> Boundary40["Local records do not license<br/>chain/global inference · SUPPORTED boundary"]
+  Geometry40 --> Local40
+  Local40 --> Boundary40
+  Boundary40 --> Gate1_40["OPEN Gate 1 · m=4/cutoff, full chain,<br/>ends, Stokes, stability"]
 ```
 
 The two supported Phase 17 nodes are distinct witnesses. One proves a finite doubled exchange algebra; the other proves a finite real sheet-mixing projector. The graph does not claim that they already coexist in one theory.
@@ -746,6 +781,8 @@ Every edge is read in stored `from → relation → to` direction.
 | `scope:p36-local-airy-connection-and-finite-radius-laterals` | Separately ordered CW/CCW Airy contour bases, exact contour/basis identities and conditional determinant bookkeeping, plus twelve tracked BVP root paths on three finite semicircle radii | Transport of one common physical upward dual, realization of formal \(K_U/K_L\) cycles by BVP roots, original-cycle arm selection, analytic hard quotient and Airy/Airy-prime amplitudes, zero-radius or between-sample theorem, absolute signs, full BFV/SUGRA determinant, global `n_sigma`, physical state, or SUSY scale |
 | `scope:p37-closed-local-root-and-reduced-half-form-holonomy` | Exact typed-map and finite-intertwiner controls, six enclosing BVP-root paths on three finite radii, thirteen determinant samples per path, and a same-basepoint minimal-jump reduced-half-form lift | Intersample zero/alias-winding theorem, original relative cycle or global intersection, hard CFU coefficients, spacetime Pin lift, fermion Pfaffian, full BFV/SUGRA operator or quantum master equation, conserved spinorial charge, physical state, or SUSY scale |
 | `scope:p38-finite-surrogate-and-bounded-reduced-ledger` | Finite schema surrogate, exact local cycle/dual law and conditional \(\Gamma_0\) representation, sampled reduced real ledger, one upper root/basin continued to three new checkpoints through \(\operatorname{Re}T=16\), and real-coefficient conjugation controls | Physical noninjectivity or nonuniqueness theorem, admissible physical completions, exact joint action/cycle/tangent frames, continuous no-crossing or independent lower-arm continuation, all sheets and good ends, global vector, promoted hard CFU kernel, BFV/Pfaffian/Pin line, charge, state, or spectrum |
+| `scope:p39-frozen-m2-configuration-local-joint-candidates` | One frozen two-segment configuration action, one positive-\(T\) saddle, two declared cap pieces, and one finite-radius, finite-time three-real-dimensional Morse-whitened K-chart patch in ambient \(\mathbb R^6\) | Entire bounded-chain pairing, arms/reintersections, exhaustive roots or upward components, exact nonlinear K, certified Stokes chamber/good ends, cutoff/metric/homotopy stability, global vector, BFV/Pfaffian/Pin data, charge, state, or spectrum |
+| `scope:p40-frozen-m3-rank-one-phi-source-local-r10-ledger` | One frozen three-segment action, one rank-one antisymmetric phi endpoint-source grid, one fixed delta-zero flow mobility, delta-dependent local Morse launch ellipsoids, one declared cap piece, and five sampled finite-time K-chart candidates in ambient \(\mathbb R^{10}\) | Independent odd source/full odd-sector probe, time-arrow or CPT-breaking inference, \(m=4\)/cutoff convergence, continuous branch or exhaustive census, metric homotopy, exact nonlinear K, entire chain/ends/Stokes data, global vector, BFV/Pfaffian/Pin data, charge, state, spectrum, observable prediction, or quantum gravity |
 
 ## Open construction ledger
 
@@ -831,6 +868,16 @@ patch, not a complete upward cycle or bounded-chain pairing. The unsearched arms
 incomplete root/component census, unresolved Stokes chamber and ends, and absent cutoff/metric/homotopy
 stability keep every chain/global integer null and Gate 1 open.
 
+Phase 40 raises the cutoff to \(m=3\) and introduces one rank-one antisymmetric phi endpoint source. It
+supports a nonzero anchor-subtracted, sign-reversing sampled response in the first resolved two-dimensional
+reflection-odd \((a,\phi)\) block, but does not probe its independent direction or establish a physical
+time arrow. With the delta-zero flow mobility held fixed and delta-dependent Morse launch ellipsoids used
+only to seed local charts, five sampled full-\(\mathbb R^{10}\) candidates have direct sign \(+1\).
+Only three primary points receive the full finite-difference/flow audit, the five samples do not prove a
+continuous branch, and the K-launch clamp is strictly local. With \(m=4\), cutoff stability, the complete
+chain/component census, exact nonlinear K, Stokes data, and good ends absent, all chain/global outputs
+remain null and Gate 1 remains open.
+
 ## Repository artifacts
 
 | Phase | Executable | Report | Observed evidence |
@@ -860,6 +907,7 @@ stability keep every chain/global integer null and Gate 1 open.
 | 37 | [`phase37_closed_fold_holonomy.py`](../../cpt_temporal_folded_susy/phase37_closed_fold_holonomy.py) | [`PHASE37_CLOSED_FOLD_HOLONOMY.md`](../../cpt_temporal_folded_susy/PHASE37_CLOSED_FOLD_HOLONOMY.md) | [`phase37-result.json`](./evidence/phase37-result.json) |
 | 38 | [`phase38_joint_cycle_identifiability.py`](../../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py) | [`PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md`](../../cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md) | [`phase38-result.json`](./evidence/phase38-result.json) |
 | 39 | [`phase39_finite_joint_intersection.py`](../../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py) | [`PHASE39_FINITE_JOINT_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md) · [`PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json) | [`phase39-result.json`](./evidence/phase39-result.json) |
+| 40 | [`phase40_m3_reflection_odd_intersection.py`](../../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py) | [`PHASE40_M3_REFLECTION_ODD_INTERSECTION.md`](../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md) · [`PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json) | [`phase40-result.json`](./evidence/phase40-result.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -890,9 +938,9 @@ The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOL
 
 Phase 24 adds one more unresolved bridge at `phase:p24`. The older
 `sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
-planning node and was deliberately not reused. Phases 25–39 add fifteen fresh unresolved phase lookups;
+planning node and was deliberately not reused. Phases 25–40 add sixteen fresh unresolved phase lookups;
 similarly numbered historical planning nodes were not reused. The recursive-audit policy and the ordered
-five-gate policy add two separate repository-workflow lookups, so there are twenty-five expected
+five-gate policy add two separate repository-workflow lookups, so there are twenty-six expected
 unresolved bridges in the current graph. The latter remains local because no authorized external UID or
 writer exists; no identity was invented for the roadmap.
 A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,

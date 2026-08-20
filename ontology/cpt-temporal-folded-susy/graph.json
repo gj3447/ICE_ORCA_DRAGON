@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T09:56:05.857Z",
+  "updated_at_utc": "2026-08-20T12:23:10.518Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -254,6 +254,15 @@
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
+      ]
+    },
+    {
+      "question": "Does Phase 40 establish a global intersection coefficient or cutoff convergence?",
+      "answer": "No. In one frozen m=3 regulator, a rank-one phi endpoint source has a nonzero anchor-subtracted sign-reversing odd response, and one local R10 cap-piece candidate with direct declared sign +1 is sequentially resolved at five sampled delta values. Only three points receive the full finite-difference and flow audit. The second endpoint-source direction, m=4, a continuous branch theorem, the entire chain, exact nonlinear K, complete saddle/component and end censuses, and a non-Stokes chamber remain absent; all chain/global outputs stay null and Gate 1 remains open.",
+      "claim_ids": [
+        "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+        "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+        "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
       ]
     }
   ],
@@ -616,6 +625,8 @@
         "claim:P18_FREE_CANONICAL_SEAM_GENERATES_POLE_SPLITTING",
         "claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44",
         "claim:P36_PHASE32_PLUS_PHASE35_UNIQUELY_SELECTS_ONE_OUTGOING_FOLD_ARM",
+        "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid",
+        "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
         "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
         "artifact:recursive-truth-meditation"
       ]
@@ -659,7 +670,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing, the declared local Gauss--Manin cycle map, and the distinct root permutation into the Phase-38 finite-surrogate audit and the Phase-39 frozen m=2 local full-space pilot. Retain the lack of a licensed inverse reconstruction, the conditional local coefficient law, and only two numerically resolved locally transverse cap-piece candidates on one finite-radius, finite-time K chart patch; stop before promoting them to an entire-chain pairing, exact nonlinear K, complete original joint cycle, certified Stokes chamber, or global intersection vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, and the Phase-40 m=3 rank-one signed-endpoint mutation. Retain only the five sampled local R10 +1 candidates and their fixed-mobility, delta-dependent launch-ellipsoid scope; stop before turning sampled continuation into a continuous branch, a local K-launch clamp into a full odd-sector ablation, or local candidates into an entire-chain pairing, cutoff limit, physical original cycle, certified Stokes chamber, or global vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -676,6 +687,10 @@
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+        "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid",
+        "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+        "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+        "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
       ]
@@ -6794,7 +6809,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phase 39 partially supplies one frozen m=2 finite-cutoff configuration action, one positive-T saddle, and two numerically resolved locally transverse candidates between separately declared cap pieces and one finite-radius, finite-time K chart patch. The construction debt remains open: search the straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric, regulator, anchor, and boundary-asymmetry stability before emitting a bounded-chain signed sum or global vector. The local candidates are not a pairing with the entire cap-plus-arm chain and do not select a preferred physical cycle.",
+      "summary": "Phases 39--40 partially supply frozen m=2 and m=3 finite-cutoff configuration actions and local cap-piece intersection candidates. Phase 40 adds a rank-one signed phi-endpoint probe, the first two-dimensional reflection-odd Hessian block, and five sampled local R10 +1 candidates under one fixed flow mobility and delta-dependent launch ellipsoids. The construction debt remains open: add the independent endpoint-source direction and m=4 control, search straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric-homotopy, regulator, anchor, and boundary stability before emitting a bounded-chain signed sum or global vector. The sampled local candidates do not pair the entire chain or select a preferred physical cycle.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -6982,6 +6997,172 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase39-result.json",
       "sha256": "6bc83c7cf3e5a6d65cc24ab71e1c9a2566ba30860eca5c2131bc848115bf6bfd"
+    },
+    {
+      "id": "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid",
+      "type": "concept",
+      "title": "Fixed flow mobility versus a delta-dependent Morse launch ellipsoid",
+      "summary": "In Phase 40, M_0=L_0 L_0^T is the fixed positive inverse-metric mobility in the original reference coordinates and g_0=M_0^{-1} is the corresponding Hermitian metric. The Procrustes-aligned signed-subspace frame and restricted inverse-square-root launch map J_delta instead define a delta-dependent local Morse-normalized launch ellipsoid. Varying J_delta or rescaling its launch radius does not change M_0 and is not a metric-homotopy test, exact unstable-manifold certificate, determinant-line transport, or Pin holonomy.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "phase:p40",
+      "type": "phase",
+      "title": "Phase 40 — m=3 reflection-odd local joint intersections",
+      "summary": "A Gate-1 local pilot at the first cutoff with a reflection-odd interior-history sector. It freezes one rank-one phi endpoint mutation and one delta-zero flow mobility, resolves the signed saddle family and odd response, follows one local R10 cap-piece candidate through five sampled deltas with sign +1, and fails closed on all bounded-chain and global intersection outputs.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "type": "claim",
+      "title": "The rank-one phi source has a nonzero anchor-subtracted sign-reversing odd response",
+      "summary": "Supported for one frozen m=3 saddle branch and the declared rank-one phi-only endpoint source. Exact reflection covariance separates a three-dimensional even sector from a two-dimensional a/phi odd block. At delta=+.001 the anchor-subtracted odd amplitude is approximately (5.23e-6,-8.83e-7), reverses under delta to -delta, and has a half-step/full-step susceptibility difference of 4.38e-6. Because the source rank is one while the odd field sector has dimension two, this does not probe the full odd sector or establish a physical time arrow, CPT breaking, or ontologically fundamental odd dynamics.",
+      "state": "SUPPORTED_FOR_ONE_FROZEN_M3_BRANCH_AND_RANK_ONE_PHI_SOURCE",
+      "claim_id": "P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "statement": "For the frozen m=3 action, tracked saddle branch, and declared rank-one antisymmetric phi endpoint source, the recorded odd response has a nonzero anchor-subtracted component, reverses under signed endpoint reflection, and is locally linear on the sampled delta grid.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "type": "claim",
+      "title": "Five sampled m=3 cap candidates have local full-R10 sign +1",
+      "summary": "Supported only at delta=-.001,-.0005,0,+.0005,+.001 for the declared cap piece and its tracked finite-time K chart patch. Each candidate is resolved in ten real coordinates with physical residual at most 1.14e-8, normalized sigma_min between .090655 and .090684, and direct mode-orientation-corrected sign +1. The endpoint and zero candidates receive the full two-step finite-difference, variational, flow, and orientation audit; the intermediate points are sequential continuation controls. The five samples do not prove a continuous branch, exclude an intersample determinant zero, certify exact nonlinear K, establish uniqueness, or exhaust other roots and components.",
+      "state": "SUPPORTED_ON_FIVE_SAMPLED_DELTAS_WITH_THREE_FULL_FD_AND_FLOW_AUDITS",
+      "claim_id": "P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "statement": "Within the frozen m=3 action, declared nodal and mode orientations, fixed flow mobility, and delta-dependent finite-radius finite-time K launch patches, one locally transverse full-R10 cap-piece candidate with direct sign +1 is numerically resolved at each of the five sampled delta values.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "type": "claim",
+      "title": "The recorded local m=3 data do not license a bounded-chain or global intersection inference",
+      "summary": "Supported as a completion and evidential-sufficiency boundary, not as a global no-go. Phase 40 does not compute m=4 or cutoff convergence, the second independent odd-sector source, straight-arm intersections, cap reintersections, root or upward-component exhaustion, exact nonlinear K, a certified non-Stokes chamber, every relative good end, or a physical original-cycle derivation. Therefore bounded_chain_signed_sum, complete_global_signed_intersection_vector, and global_n_sigma remain null; null is not a physical zero coefficient and Gate 1 remains open.",
+      "state": "SUPPORTED_AS_RECORDED_COMPLETION_AND_INFERENCE_BOUNDARY",
+      "claim_id": "P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "statement": "Because the recorded Phase-40 ledger lacks the declared chain, census, Stokes, end, physical-cycle, and cutoff-completion data, its local m=3 candidates do not license inference of a bounded-chain signed sum, complete global intersection vector, or global n_sigma.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards",
+      "type": "evidence",
+      "title": "Phase 40 exact m=3 action, reflection, mode, orientation, and null guards",
+      "summary": "Twelve exact checks verify the amended post-feasibility manifest contract, one holomorphic three-midpoint scalar and its derivatives, signed action/gradient/Hessian reflection covariance, the oriented DST-I parity and exact even/odd block separation, five-versus-five middle dimension in R10 with odd root-Jacobian parity, the holomorphic dual-flow identity, and the fail-closed null global outputs. The manifest and its amendment are workflow provenance rather than preregistration or scientific evidence.",
+      "state": "VERIFIED",
+      "observed_status": "12_EXACT_PASS",
+      "check_ids": [
+        "P40.input.frozen_manifest_contract",
+        "P40.action.single_scalar_three_midpoint_elements",
+        "P40.action.gradient_and_hessian_same_scalar",
+        "P40.action.holomorphic_with_simple_T_zero_pole",
+        "P40.reflection.action_signed_delta_covariance",
+        "P40.reflection.gradient_signed_delta_covariance",
+        "P40.reflection.hessian_signed_delta_covariance",
+        "P40.modes.oriented_DST_reflection_parity",
+        "P40.modes.delta_zero_even_odd_block_separation",
+        "P40.orientation.full_middle_dimension_and_root_parity",
+        "P40.flow.holomorphic_dual_flow_identity",
+        "P40.guard.incomplete_data_force_null_global_outputs"
+      ]
+    },
+    {
+      "id": "evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations",
+      "type": "evidence",
+      "title": "Phase 40 numerical signed saddles, odd response, local R10 candidates, and mutations",
+      "summary": "Twenty-two numerical checks resolve five nondegenerate signed-delta saddles, reflection-match their saddles, actions, Hessians and endpoint candidates, resolve the first gapped a/phi odd block and rank-one-source response, keep one reflection-covariant delta-zero mobility fixed while auditing delta-dependent Morse launch ellipsoids, and resolve five sampled local R10 +1 candidates. Three primary points receive full finite-difference, variational, orientation and sampled-flow audits; two intermediate points are continuation controls. A three-radius control rescales one launch-ellipsoid family. The converged local K-launch-coordinate clamp misses tolerance, but it is not a full odd-sector ablation or no-root theorem. The final guard emits no chain or global integer.",
+      "state": "VERIFIED",
+      "observed_status": "22_NUMERICAL_PASS",
+      "check_ids": [
+        "P40.saddle.signed_delta_grid_joint_roots",
+        "P40.reflection.saddles_actions_and_hessians_match",
+        "P40.modes.first_reflection_odd_block_is_resolved",
+        "P40.metric.delta_zero_metric_is_fixed_and_reflection_covariant",
+        "P40.mutation.phi_source_exposes_sign_reversing_odd_response",
+        "P40.intersection.minus_delta_full_ten_real_candidate",
+        "P40.orientation.minus_delta_direct_transversality",
+        "P40.tangent.minus_delta_independent_FD_control",
+        "P40.flow.minus_delta_Morse_control",
+        "P40.intersection.zero_delta_full_ten_real_candidate",
+        "P40.orientation.zero_delta_direct_transversality",
+        "P40.tangent.zero_delta_independent_FD_control",
+        "P40.flow.zero_delta_Morse_control",
+        "P40.intersection.plus_delta_full_ten_real_candidate",
+        "P40.orientation.plus_delta_direct_transversality",
+        "P40.tangent.plus_delta_independent_FD_control",
+        "P40.flow.plus_delta_Morse_control",
+        "P40.reflection.signed_local_candidates_match",
+        "P40.intersection.sampled_five_point_continuation_same_recorded_sign",
+        "P40.intersection.three_radius_local_sign_control",
+        "P40.mutation.K_launch_odd_coordinate_clamp_local_fit",
+        "P40.guard.local_higher_cutoff_data_do_not_emit_global_integer"
+      ]
+    },
+    {
+      "id": "scope:p40-frozen-m3-rank-one-phi-source-local-r10-ledger",
+      "type": "scope",
+      "title": "P40 frozen m=3 rank-one phi-source and local R10 ledger",
+      "summary": "One frozen three-segment midpoint configuration action, one rank-one antisymmetric phi endpoint-source grid, one fixed delta-zero inverse-metric mobility, delta-dependent local Morse launch ellipsoids, one declared cap piece, and tracked finite-time five-real-dimensional K chart patches in an ambient R10.",
+      "state": "ACTIVE",
+      "includes": [
+        "one holomorphic m=3 configuration action on C^4 x C-star_T and five nondegenerate tracked signed-delta saddles",
+        "exact signed reflection covariance, an oriented DST-I even-even-T-odd-odd basis, and the first two-dimensional a/phi reflection-odd Hessian block",
+        "one rank-one phi-only endpoint mutation and its nonzero anchor-subtracted sign-reversing sampled odd response",
+        "one fixed delta-zero Hermitian metric, equivalently its inverse-metric mobility M_0, held fixed across delta",
+        "delta-dependent Procrustes-aligned signed-subspace Morse launch ellipsoids and one tracked finite-radius finite-time K chart patch per sampled delta",
+        "five sampled local full-R10 cap-piece candidates with direct sign +1, three full finite-difference and flow audits, signed-reflection, orientation, launch-radius, and local K-launch-coordinate-clamp controls"
+      ],
+      "excludes": [
+        "the independent a-only endpoint source needed to probe the full two-dimensional odd field sector, or a physical time arrow or CPT-breaking source",
+        "m=4 agreement, cutoff convergence, a continuum limit, metric-homotopy invariance, or physical selection of the fixed mobility",
+        "a continuous delta-branch theorem, exclusion of intersample determinant zeros, interval-certified roots, root exhaustion, or uniqueness",
+        "a full odd-sector ablation or no-root theorem from the local K-launch-coordinate clamp",
+        "an exact nonlinear complete upward manifold, all saddles and upward components, the straight arms, later cap reintersections, or continuous first-hit control",
+        "a certified non-Stokes chamber, connecting flows and jumps, all relative good ends, or derivation of the Gaussian-lift candidate as the physical original cycle",
+        "a bounded-chain signed sum, complete global signed intersection vector, global n_sigma, Gate-1 closure, or interpretation of a null output as physical zero",
+        "canonical momenta, lapse gauge ghosts, fermions, gravitino, inhomogeneous modes, BFV/Pfaffian/Pin orientation, spinorial charge, persistent order parameter, particle poles, state, observable cosmological prediction, or quantum gravity"
+      ]
+    },
+    {
+      "id": "artifact:p40-input-manifest",
+      "type": "artifact",
+      "title": "Phase 40 amended frozen input manifest",
+      "summary": "The post-feasibility v1 manifest was introduced in dd2a9d54b386dcc7bb090f446d5d32aad59743e7 with SHA 897c9788cf1b2706ddf6e2c75f56f4ac7da1eb0aea64ea01cb31971a35920426, then transparently amended in a6b369e0a9518cd491f8116204ec67ab36fdf2a1 after a fail-closed run replaced ill-posed individual-eigenvector anchoring with invariant signed-subspace Procrustes transport. The current v1.1 bytes retain the action, source, delta grid, fixed mobility, cap, and promotion boundary and are neither preregistration nor scientific evidence; the raw amendment-time/commit-time mismatch remains recorded.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json",
+      "sha256": "60dfc9c31e45408c92b5fbcd1e1487bcd53b02a62ccf4ee71272f7c3dcc382ae",
+      "introduced_in_commit": "dd2a9d54b386dcc7bb090f446d5d32aad59743e7"
+    },
+    {
+      "id": "artifact:p40-script",
+      "type": "artifact",
+      "title": "Phase 40 executable",
+      "summary": "Exact m=3 action/reflection/mode/orientation/null guards and numerical signed-saddle, fixed-mobility, launch-ellipsoid, rank-one odd-response, five-point local R10, finite-difference, flow, reflection, radius, local clamp, and fail-closed audits.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py",
+      "sha256": "d7e71ed8a7561a586e7035366a92a3033dcb029bb9aa88ea595b38d4d7dacbc3",
+      "introduced_in_commit": "2f6bf27784de89518b6ce55de451781f73288d6e"
+    },
+    {
+      "id": "artifact:p40-report",
+      "type": "artifact",
+      "title": "Phase 40 report",
+      "summary": "Human-readable two-stage manifest provenance, failed-check repairs, exact reflection and odd-mode structure, fixed mobility versus launch-ellipsoid distinction, five sampled local R10 +1 candidates, strictly local K-launch clamp, and open Gate-1/global boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md",
+      "sha256": "ede77a67fa98adf224c76c5f2e22dac9c00f3650fa10ff7420aa6ee760ef8a42",
+      "introduced_in_commit": "2f6bf27784de89518b6ce55de451781f73288d6e"
+    },
+    {
+      "id": "artifact:p40-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 40 evidence snapshot",
+      "summary": "Persisted twelve-exact and twenty-two-numerical check payload observed on 2026-08-20, with split initial/amended manifest provenance, five sampled local +1 candidates, local clamp qualification, null global outputs, and Gate 1 open.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase40-result.json",
+      "sha256": "bf6b9f9b8b69b84807bb25748d2ff06c548566184c9003e4c5bb1b1f8b54d6dd"
     }
   ],
   "edges": [
@@ -16100,7 +16281,7 @@
       "from": "open:gate1-original-cycle-signed-global-intersections",
       "relation": "BLOCKED_BY",
       "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
-      "note": "Phase 39 partially supplies one frozen m=2 local cap-piece versus chart-patch construction, but entire-chain intersections, exact nonlinear K, complete census, Stokes chamber, stable signed sum, and global vector remain open. Parallel exploratory Gate-2 work is allowed; physical promotion still requires the Gate-1 typed output."
+      "note": "Phases 39--40 partially supply frozen m=2 and m=3 local cap-piece versus chart-patch constructions. Phase 40 adds one rank-one odd-sector probe and five sampled local R10 signs, but the second source direction, m=4/cutoff control, entire-chain intersections, exact nonlinear K, complete census, Stokes chamber, stable signed sum, and global vector remain open. Parallel exploratory Gate-2 work is allowed; physical promotion still requires the Gate-1 typed output."
     },
     {
       "id": "edge:1473",
@@ -16437,6 +16618,270 @@
       "from": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
       "relation": "MOTIVATES",
       "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1528",
+      "from": "phase:p40",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1529",
+      "from": "phase:p40",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p39"
+    },
+    {
+      "id": "edge:1530",
+      "from": "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1531",
+      "from": "artifact:p40-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1532",
+      "from": "artifact:p40-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1533",
+      "from": "artifact:p40-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1534",
+      "from": "artifact:p40-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1535",
+      "from": "artifact:p40-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p40-input-manifest"
+    },
+    {
+      "id": "edge:1536",
+      "from": "artifact:p40-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p39-script"
+    },
+    {
+      "id": "edge:1537",
+      "from": "artifact:p40-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p30-script"
+    },
+    {
+      "id": "edge:1538",
+      "from": "artifact:p40-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p32-script"
+    },
+    {
+      "id": "edge:1539",
+      "from": "evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards",
+      "relation": "PART_OF",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1540",
+      "from": "evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p40-script"
+    },
+    {
+      "id": "edge:1541",
+      "from": "evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p40-evidence-snapshot"
+    },
+    {
+      "id": "edge:1542",
+      "from": "evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations",
+      "relation": "PART_OF",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1543",
+      "from": "evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p40-script"
+    },
+    {
+      "id": "edge:1544",
+      "from": "evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p40-evidence-snapshot"
+    },
+    {
+      "id": "edge:1545",
+      "from": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "relation": "PART_OF",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1546",
+      "from": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p40-frozen-m3-rank-one-phi-source-local-r10-ledger"
+    },
+    {
+      "id": "edge:1547",
+      "from": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p40-report"
+    },
+    {
+      "id": "edge:1548",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "PART_OF",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1549",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p40-frozen-m3-rank-one-phi-source-local-r10-ledger"
+    },
+    {
+      "id": "edge:1550",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p40-report"
+    },
+    {
+      "id": "edge:1551",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "PART_OF",
+      "to": "phase:p40"
+    },
+    {
+      "id": "edge:1552",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p40-frozen-m3-rank-one-phi-source-local-r10-ledger"
+    },
+    {
+      "id": "edge:1553",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p40-report"
+    },
+    {
+      "id": "edge:1554",
+      "from": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1555",
+      "from": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1556",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1557",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1558",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p40-exact-m3-action-reflection-mode-orientation-and-null-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1559",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1560",
+      "from": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "relation": "ABOUT",
+      "to": "concept:literal-time-reflection"
+    },
+    {
+      "id": "edge:1561",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "ABOUT",
+      "to": "concept:recorded-local-intersection-versus-global-pl-coefficient"
+    },
+    {
+      "id": "edge:1562",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "ABOUT",
+      "to": "concept:fixed-flow-mobility-versus-delta-dependent-morse-launch-ellipsoid"
+    },
+    {
+      "id": "edge:1563",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "ABOUT",
+      "to": "concept:bounded-crossing-versus-global-intersection-number"
+    },
+    {
+      "id": "edge:1564",
+      "from": "claim:P40_RANK_ONE_PHI_SOURCE_HAS_ANCHOR_SUBTRACTED_SIGN_REVERSING_ODD_RESPONSE",
+      "relation": "EXTENDS",
+      "to": "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE"
+    },
+    {
+      "id": "edge:1565",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "EXTENDS",
+      "to": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH"
+    },
+    {
+      "id": "edge:1566",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION"
+    },
+    {
+      "id": "edge:1567",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
+    },
+    {
+      "id": "edge:1568",
+      "from": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1569",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1570",
+      "from": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
     }
   ],
   "kg_bridges": [
@@ -16756,6 +17201,16 @@
       "checked_at_utc": "2026-08-20T09:56:05.857Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase39 frozen m2 local joint intersection pilot",
       "note": "No authorized matching external UID exists; the frozen action, two cap-piece local candidates, finite chart patch, and fail-closed global outputs remain repository-local evidence, so no external identity was invented."
+    },
+    {
+      "local_node_id": "phase:p40",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-20T12:23:10.518Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase40 m3 reflection odd local R10 intersection audit",
+      "note": "No authorized matching external UID exists; the rank-one endpoint-source response, fixed-mobility launch-ellipsoid ledger, five sampled local candidates, and null global outputs remain repository-local evidence, so no external identity was invented."
     }
   ]
 }

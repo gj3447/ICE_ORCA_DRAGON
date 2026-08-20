@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 70 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 71 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,9 +374,9 @@ and
 
 ## Research ontology memory
 
-Phase 15R–39 is indexed in a repository-local typed research graph with **555 nodes and 1527 directed
-relations**. It preserves 134 claims and the Phase 16–39 run payloads: 391 named exact checks and 207
-typed numerical checks, or 208 numerical checks when the separately catalogued legacy Phase-18 control
+Phase 15R–40 is indexed in a repository-local typed research graph with **567 nodes and 1570 directed
+relations**. It preserves 137 claims and the Phase 16–40 run payloads: 403 named exact checks and 229
+typed numerical checks, or 230 numerical checks when the separately catalogued legacy Phase-18 control
 is included. The graph also preserves cautious bridges to the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
@@ -768,7 +768,7 @@ See
 and
 [`../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py`](../cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 39
+## Previous direct calculation — CPT × Temporal-Folded SUSY Phase 39
 
 Phase 39 returns exit 0 with **12 exact checks and 17 numerical checks**. It reads a separately committed
 post-feasibility input freeze and constructs the nonlinear two-segment midpoint action on
@@ -809,14 +809,60 @@ history mode, BFV/Pfaffian/Pin orientation, or physical original relative cycle 
 Accordingly `bounded_chain_signed_sum`, `complete_global_signed_intersection_vector`, and
 `global_n_sigma` are all `null`, and Gate 1 remains open.
 
-The next calculation is the same determinant API at $m=3$ or $m=4$ with a signed endpoint-asymmetry
-mutation to expose the first reflection-odd history mode, followed by the already feasible $m=5$ joint
-saddle and a complete relative-end/Stokes census.
+The next calculation was the same determinant API at $m=3$ with a signed endpoint-asymmetry mutation
+to expose the first reflection-odd history mode.
 
 See
 [`../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md)
 and
 [`../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py`](../cpt_temporal_folded_susy/phase39_finite_joint_intersection.py).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 40
+
+Phase 40 returns exit 0 with **12 exact checks and 22 numerical checks**. It raises the finite-cutoff
+configuration model to $m=3$, so the joint action has five complex variables and the local intersection
+problem lives in ten real dimensions. One SymPy scalar generates the action, gradient, and Hessian;
+exact checks cover their reflection covariance, the parity-adapted mode orientation, the root-Jacobian
+sign convention, the holomorphic-flow identity, and fail-closed global outputs.
+
+The signed endpoint mutation keeps $a_L=a_R$ and sets
+$\phi_L=\phi_b-\delta/2$, $\phi_R=\phi_b+\delta/2$. It therefore probes one source direction in the
+two-dimensional reflection-odd field sector, not the whole sector. At $\delta=0$, the saddle has inertia
+$(3_-,2_+)$; the parity-adapted Hessian has odd eigenvalues approximately
+$(-65208.7881,11360.4454)$ and even--odd cross-block norm $4.80\times10^{-12}$. The
+anchor-subtracted odd response at $\delta=.001$ is nonzero.
+
+With the $\delta=0$ positive mobility fixed and the signed spectral subspaces transported by Procrustes
+alignment, five sequentially continued local candidates give:
+
+| $\delta$ | max physical residual | normalized $\sigma_{\min}$ | direct declared-coordinate sign |
+|---:|---:|---:|---:|
+| $-.001$ | $6.05\times10^{-9}$ | 0.0906550 | +1 |
+| $-.0005$ | $7.13\times10^{-9}$ | 0.0906768 | +1 |
+| $0$ | $4.18\times10^{-9}$ | 0.0906841 | +1 |
+| $+.0005$ | $1.14\times10^{-8}$ | 0.0906768 | +1 |
+| $+.001$ | $4.80\times10^{-9}$ | 0.0906550 | +1 |
+
+The endpoint-reflected candidates agree, three launch radii preserve the sign, and audited variational
+tangents agree with finite-difference Jacobians in their recorded stable bands. A converged local fit
+that clamps two K-launch coordinates has residual $3.98\times10^{-4}$ and does not reproduce the full
+candidate at the $2\times10^{-7}$ tolerance. This is only a local coordinate-slice negative control,
+not a full odd-sector ablation.
+
+The five points do not prove a continuous determinant-nonzero branch, and the source has rank one.
+There is still no straight-arm/reintersection census, exact nonlinear upward manifold, lateral Stokes
+chamber, cutoff/metric/regulator independence, physical original relative cycle, or
+BFV/Pfaffian/Pin orientation. Accordingly `bounded_chain_signed_sum`,
+`complete_global_signed_intersection_vector`, and `global_n_sigma` remain `null`; Gate 1 remains open.
+
+The next cutoff control is $m=4$, with orientation matched to the lower cutoffs and an independent
+$a$-only endpoint source alongside the $\phi$-only source. That tests whether the two odd responses span
+the available odd sector before promotion to the feasible $m=5$ saddle and the global end/Stokes census.
+
+See
+[`../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md)
+and
+[`../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py`](../cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py).
 
 ## Historical scientific ledger
 

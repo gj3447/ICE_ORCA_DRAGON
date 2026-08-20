@@ -1,0 +1,316 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P40_M3_REFLECTION_ODD_INTERSECTION_20260820",
+  "phase": "P40",
+  "observed_at_utc": "2026-08-20T12:23:10.518Z",
+  "command": "uv run --locked python3 cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py",
+    "sha256": "d7e71ed8a7561a586e7035366a92a3033dcb029bb9aa88ea595b38d4d7dacbc3",
+    "introduced_in_commit": "2f6bf27784de89518b6ce55de451781f73288d6e"
+  },
+  "exact_checks": 12,
+  "checks": [
+    {
+      "id": "P40.input.frozen_manifest_contract",
+      "statement": "the separately committed post-feasibility manifest fixes the m=3 signed-mutation calculation without being relabelled as preregistration or evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.action.single_scalar_three_midpoint_elements",
+      "statement": "one symbolic S3 scalar is exactly the sum of three midpoint elements on five complex variables",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.action.gradient_and_hessian_same_scalar",
+      "statement": "every production gradient and Hessian entry is differentiated from the same symbolic action scalar",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.action.holomorphic_with_simple_T_zero_pole",
+      "statement": "S3 contains no hidden conjugation and its simple-pole residue polynomial at the excluded T=0 divisor is not identically zero",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.reflection.action_signed_delta_covariance",
+      "statement": "the three-segment action obeys S3(Rz;-delta)=S3(z;delta) exactly",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.reflection.gradient_signed_delta_covariance",
+      "statement": "the full five-component gradient transforms covariantly under signed endpoint reversal",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.reflection.hessian_signed_delta_covariance",
+      "statement": "the full five-by-five Hessian transforms by R H(delta) R under signed endpoint reversal",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.modes.oriented_DST_reflection_parity",
+      "statement": "the declared DST-I even-even-T-odd-odd basis has determinant +1 and reflection parity diag(+,+,+,-,-)",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.modes.delta_zero_even_odd_block_separation",
+      "statement": "at equal endpoints and a reflection-symmetric history the full Hessian separates exactly into three even and two odd directions",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.orientation.full_middle_dimension_and_root_parity",
+      "statement": "Gamma and K each have middle dimension five in R10 and [V_Gamma,-V_K] has the opposite sign from [V_Gamma,V_K]",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.flow.holomorphic_dual_flow_identity",
+      "statement": "for holomorphic S and dot(xi)=-conjugate(gradient S), dS/dt is exactly minus the squared gradient norm and is real",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.guard.incomplete_data_force_null_global_outputs",
+      "statement": "the frozen contract refuses every bounded-chain or global integer while the chain, census, Stokes, and end data are incomplete",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 22,
+  "numerical": [
+    {
+      "id": "P40.saddle.signed_delta_grid_joint_roots",
+      "statement": "all five signed-delta values have numerically resolved nondegenerate five-equation saddles with inertia (3-,2+)",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.reflection.saddles_actions_and_hessians_match",
+      "statement": "the independently solved signed branches match under node reflection in their saddles, actions, and Hessians",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.modes.first_reflection_odd_block_is_resolved",
+      "statement": "the m=3 delta-zero Hessian numerically resolves one a/phi reflection-odd block with a nonzero spectral gap",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.metric.delta_zero_metric_is_fixed_and_reflection_covariant",
+      "statement": "one delta-zero Morse-whitened Hermitian metric is fixed while signed projectors reflect covariantly and each Morse launch frame satisfies J-transpose H J=-I",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.mutation.phi_source_exposes_sign_reversing_odd_response",
+      "statement": "the declared rank-one phi endpoint source excites a nonzero tracked odd response, including a nonzero anchor-subtracted component, that reverses with delta and is locally linear on the frozen grid",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.intersection.minus_delta_full_ten_real_candidate",
+      "statement": "delta=-0.001 has one numerically resolved candidate in all ten real coordinates between the declared cap piece and finite-time K chart patch",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.orientation.minus_delta_direct_transversality",
+      "statement": "delta=-0.001 has a nonzero direct R10 determinant, the odd five-column root-Jacobian parity, and both orientation-reversal controls",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.tangent.minus_delta_independent_FD_control",
+      "statement": "delta=-0.001 a two-step central-difference ladder of the actual residual agrees in sign and matrix norm with the DOP853 variational frame",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.flow.minus_delta_Morse_control",
+      "statement": "delta=-0.001 sampled upward flow makes Re(S) nonincreasing, preserves Im(S), stays inside the xi-norm cap, and has no sampled earlier |T|=r crossing",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.intersection.zero_delta_full_ten_real_candidate",
+      "statement": "delta=+0 has one numerically resolved candidate in all ten real coordinates between the declared cap piece and finite-time K chart patch",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.orientation.zero_delta_direct_transversality",
+      "statement": "delta=+0 has a nonzero direct R10 determinant, the odd five-column root-Jacobian parity, and both orientation-reversal controls",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.tangent.zero_delta_independent_FD_control",
+      "statement": "delta=+0 a two-step central-difference ladder of the actual residual agrees in sign and matrix norm with the DOP853 variational frame",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.flow.zero_delta_Morse_control",
+      "statement": "delta=+0 sampled upward flow makes Re(S) nonincreasing, preserves Im(S), stays inside the xi-norm cap, and has no sampled earlier |T|=r crossing",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.intersection.plus_delta_full_ten_real_candidate",
+      "statement": "delta=+0.001 has one numerically resolved candidate in all ten real coordinates between the declared cap piece and finite-time K chart patch",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.orientation.plus_delta_direct_transversality",
+      "statement": "delta=+0.001 has a nonzero direct R10 determinant, the odd five-column root-Jacobian parity, and both orientation-reversal controls",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.tangent.plus_delta_independent_FD_control",
+      "statement": "delta=+0.001 a two-step central-difference ladder of the actual residual agrees in sign and matrix norm with the DOP853 variational frame",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.flow.plus_delta_Morse_control",
+      "statement": "delta=+0.001 sampled upward flow makes Re(S) nonincreasing, preserves Im(S), stays inside the xi-norm cap, and has no sampled earlier |T|=r crossing",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.reflection.signed_local_candidates_match",
+      "statement": "the plus/minus endpoint probes return reflection-matched cap candidates with the same declared local orientation sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.intersection.sampled_five_point_continuation_same_recorded_sign",
+      "statement": "the sequentially continued five-point delta grid has one common local sign and resolved residual at every sampled point, without asserting a continuous branch theorem",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.intersection.three_radius_local_sign_control",
+      "statement": "the delta=+.001 tracked candidate retains its local sign and transverse gap on the frozen half/base/double launch-radius ladder",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.mutation.K_launch_odd_coordinate_clamp_local_fit",
+      "statement": "the converged local fit with both frozen K-launch odd coordinates clamped fails the candidate tolerance and gives a same-unit residual worsening; it is not a full odd-sector ablation",
+      "status": "PASS"
+    },
+    {
+      "id": "P40.guard.local_higher_cutoff_data_do_not_emit_global_integer",
+      "statement": "the successful higher-cutoff local ledger leaves every bounded-chain and global Picard-Lefschetz integer null",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 12,
+    "numerical_checks": 22,
+    "calculation": "m=3 signed-endpoint reflection-odd local joint-intersection audit",
+    "gate": "Gate 1 -- original joint cycle and signed global intersections",
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json",
+      "initial_freeze_sha256": "897c9788cf1b2706ddf6e2c75f56f4ac7da1eb0aea64ea01cb31971a35920426",
+      "introduced_in_commit": "dd2a9d54b386dcc7bb090f446d5d32aad59743e7",
+      "final_sha256": "60dfc9c31e45408c92b5fbcd1e1487bcd53b02a62ccf4ee71272f7c3dcc382ae",
+      "amended_in_commit": "a6b369e0a9518cd491f8116204ec67ab36fdf2a1",
+      "amendment_clock_note": "the declared amendment time is later than the amendment commit timestamp; both raw values remain recorded",
+      "is_preregistration": false,
+      "is_scientific_evidence": false
+    },
+    "declared_model": {
+      "segment_count": 3,
+      "complex_dimension": 5,
+      "ambient_real_dimension": 10,
+      "endpoint_source": "phi-only antisymmetric signed delta",
+      "endpoint_source_rank": 1,
+      "full_reflection_odd_field_sector_dimension": 2,
+      "full_odd_sector_probed": false,
+      "flow_geometry": "one delta-zero Hermitian metric, equivalently its inverse-metric mobility, fixed across delta",
+      "launch_geometry": "delta-dependent Morse-normalized ellipsoids in Procrustes-aligned signed subspaces"
+    },
+    "reflection_and_mode_controls": {
+      "signed_projector_max_residual": 6.5225018791893494e-15,
+      "Takagi_J_transpose_H_J_plus_I_max_residual": 3.164377611515379e-13,
+      "candidate_reflection_max_abs": 5.218048215738236e-14,
+      "delta_zero_odd_block_eigenvalues": [
+        -65208.78807050927,
+        11360.445359059286
+      ],
+      "delta_zero_even_odd_cross_norm": 4.797074815625452e-12,
+      "anchor_subtracted_odd_amplitude_at_plus_delta": [
+        5.227857573778424e-6,
+        -8.829686157084025e-7
+      ],
+      "half_to_full_susceptibility_relative_difference": 4.384945468446301e-6
+    },
+    "sampled_local_candidate_ledger": [
+      {
+        "delta": -0.001,
+        "physical_residual_max_abs": 6.045037248547658e-9,
+        "direct_sign": 1,
+        "normalized_sigma_min": 0.09065495275043431,
+        "finite_difference_sign": -1,
+        "finite_difference_to_variational_relative_error": 8.29387860843317e-5,
+        "finite_difference_ladder_max_relative_difference": 0.012374344241920883
+      },
+      {
+        "delta": -0.0005,
+        "physical_residual_max_abs": 7.128996615257677e-9,
+        "direct_sign": 1,
+        "normalized_sigma_min": 0.09067684270364351,
+        "full_finite_difference_audit": false
+      },
+      {
+        "delta": 0.0,
+        "physical_residual_max_abs": 4.182237389738219e-9,
+        "direct_sign": 1,
+        "normalized_sigma_min": 0.09068414104048583,
+        "finite_difference_sign": -1,
+        "finite_difference_to_variational_relative_error": 8.687077487699517e-5,
+        "finite_difference_ladder_max_relative_difference": 0.008677793892612144
+      },
+      {
+        "delta": 0.0005,
+        "physical_residual_max_abs": 1.1405385857976569e-8,
+        "direct_sign": 1,
+        "normalized_sigma_min": 0.09067684269046741,
+        "full_finite_difference_audit": false
+      },
+      {
+        "delta": 0.001,
+        "physical_residual_max_abs": 4.799883102091229e-9,
+        "direct_sign": 1,
+        "normalized_sigma_min": 0.09065495280256501,
+        "finite_difference_sign": -1,
+        "finite_difference_to_variational_relative_error": 0.00011273533016458253,
+        "finite_difference_ladder_max_relative_difference": 0.010673486546837798
+      }
+    ],
+    "bounded_controls": {
+      "all_five_sampled_direct_signs": 1,
+      "continuous_branch_theorem_proved": false,
+      "plus_delta_launch_radius_ladder": [
+        0.00005,
+        0.0001,
+        0.0002
+      ],
+      "plus_delta_radius_ladder_signs": [
+        1,
+        1,
+        1
+      ],
+      "sampled_no_prior_cap_crossing_on_three_primary_paths": true,
+      "continuous_first_hit_proved": false,
+      "K_launch_odd_coordinate_clamp_local_fit": {
+        "optimizer_converged": true,
+        "optimality": 2.0079165857620443e-8,
+        "physical_residual_max_abs": 0.00039822470711614605,
+        "within_candidate_tolerance": false,
+        "full_odd_sector_ablation": false
+      }
+    },
+    "completion_ledger": {
+      "m4_computed": false,
+      "cutoff_convergence_proved": false,
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "root_exhaustion_proved": false,
+      "exact_nonlinear_upward_manifold_certified": false,
+      "all_saddles_and_upward_components_complete": false,
+      "non_Stokes_chamber_certified": false,
+      "all_relative_good_ends_classified": false,
+      "physical_original_cycle_derived": false,
+      "BFV_Pfaffian_Pin_orientation_computed": false
+    },
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "gate1_status": "OPEN_PARTIAL_M3_REFLECTION_ODD_LOCAL_PROGRESS",
+    "next_calculation": "orientation-matched m=4 parity/cutoff control with phi-only and independent a-only endpoint sources"
+  }
+}
