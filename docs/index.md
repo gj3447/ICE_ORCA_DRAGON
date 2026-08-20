@@ -25,6 +25,7 @@ npm run check
 | [`../README.md`](../README.md) | overview, repository layout, CLI, scientific scope, and current snapshot |
 | [`USERGUIDE.md`](USERGUIDE.md) | live-catalog usage and kernel workflow |
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
+| [`ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md) | philosophical synthesis of the central claim: formal possibility, global selection, persistent physical actuality |
 | [`../research/README.md`](../research/README.md) | organized hypercomplex/legacy-prediction code and report map |
 | [`SCIENTIFIC_TOOLBOX.md`](SCIENTIFIC_TOOLBOX.md) | installed symbolic, numerical, workflow, and formal-verification tools |
 | [`SCIENTIFIC_CLI_MANUAL.md`](SCIENTIFIC_CLI_MANUAL.md) | version-specific commands, examples, official documentation, and offline-manual index |

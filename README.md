@@ -23,6 +23,11 @@ The repository preserves speculative motivations while turning them into scoped 
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
 
+The programme's current philosophical synthesis is documented in
+[`docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md):
+mathematical structure supplies a grammar of possibilities, while physical actuality additionally
+requires global selection, a state and measure, persistent dynamics, and an observable map.
+
 ## What this workbench is testing
 
 | Research track | Central question | Current conclusion |
