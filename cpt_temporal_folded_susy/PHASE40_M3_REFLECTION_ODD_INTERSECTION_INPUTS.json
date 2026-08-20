@@ -1,0 +1,206 @@
+{
+  "schema_version": "ice.phase40.input-freeze.v1",
+  "phase": 40,
+  "gate": 1,
+  "frozen_at_utc": "2026-08-20T10:20:00Z",
+  "freeze_kind": "post_feasibility_workflow_input_freeze",
+  "authority": "repository-local computational workflow input",
+  "is_preregistration": false,
+  "is_scientific_evidence": false,
+  "non_evidence_disclaimer": "The symmetric m=3 saddle, an approximate symmetric cap hit, the existence of the first reflection-odd Hessian block, and exploratory local signs were inspected before this file was written. This manifest freezes the production mutation and audit contract; it does not erase that feasibility knowledge or count as evidence.",
+  "purpose": "Test whether the Phase39 local cap-piece witness survives the first added reflection-odd history sector and a signed endpoint-asymmetry probe, without promoting any local result to a bounded-chain or global Picard-Lefschetz coefficient.",
+  "model": {
+    "name": "three-segment midpoint Starobinsky minisuperspace configuration regulator",
+    "segment_count": 3,
+    "complex_variables_in_order": [
+      "a_1",
+      "phi_1",
+      "a_2",
+      "phi_2",
+      "T"
+    ],
+    "complex_dimension": 5,
+    "ambient_real_order": [
+      "Re(a_1)",
+      "Im(a_1)",
+      "Re(phi_1)",
+      "Im(phi_1)",
+      "Re(a_2)",
+      "Im(a_2)",
+      "Re(phi_2)",
+      "Im(phi_2)",
+      "Re(T)",
+      "Im(T)"
+    ],
+    "base_boundary": {
+      "a": 3.5668031935672753,
+      "phi": 1.0185809464006637,
+      "source": "Phase25 benchmark inherited without tuning to the Phase40 intersection"
+    },
+    "potential": "V(phi)=(3/4)*(1-exp(-sqrt(2/3)*phi))^2",
+    "action": "S_3=2*pi^2*sum_{e=0}^{2}[(-6*a_mid*(Delta a)^2+a_mid^3*(Delta phi)^2)/(2*T*h)+T*h*(-3*a_mid+a_mid^3*V(phi_mid))], h=1/3",
+    "analytic_domain": "C^4 times C-star in T; T=0 is excluded as an action pole",
+    "omitted_sectors": [
+      "canonical momenta",
+      "lapse gauge ghosts",
+      "fermions and gravitino",
+      "inhomogeneous modes",
+      "BFV/Pfaffian/Pin orientation line"
+    ]
+  },
+  "signed_endpoint_mutation": {
+    "source_direction": "phi only",
+    "definition": "a_L=a_R=a_b; phi_L=phi_b-delta/2; phi_R=phi_b+delta/2",
+    "delta_grid": [
+      -0.001,
+      -0.0005,
+      0.0,
+      0.0005,
+      0.001
+    ],
+    "time_reflection": "delta maps to -delta while node 1 maps to node 2 and node 2 maps to node 1",
+    "probe_interpretation": "The real endpoint mutation is a symmetry probe, not a physical time arrow, CPT-breaking source, or non-Stokes regulator.",
+    "full_odd_source_rank": 1,
+    "full_reflection_odd_field_sector_dimension": 2,
+    "full_odd_sector_probed": false
+  },
+  "reflection_and_mode_conventions": {
+    "nodal_reflection": "R(a1,phi1,a2,phi2,T)=(a2,phi2,a1,phi1,T)",
+    "exact_action_covariance": "S_3(R z;-delta)=S_3(z;delta)",
+    "mode_basis": "DST-I e_k(j)=sqrt(2/3)*sin(pi*k*j/3), j,k in {1,2}",
+    "mode_order": [
+      "a_even_k1",
+      "phi_even_k1",
+      "T_even",
+      "a_odd_k2",
+      "phi_odd_k2"
+    ],
+    "odd_amplitudes": "a_odd=(a_2-a_1)/sqrt(2); phi_odd=(phi_2-phi_1)/sqrt(2)",
+    "orientation_rule": "The declared mode basis is oriented to positive determinant relative to the frozen nodal order; any raw sign from another order must be corrected before comparison."
+  },
+  "saddle_protocol": {
+    "seed_source": "the symmetric m=3 feasibility saddle continued along the fixed signed delta grid",
+    "equations": "partial S_3 / partial(a_1,phi_1,a_2,phi_2,T)=0",
+    "required_residual_max": 1e-09,
+    "required_hessian_nonsingularity": true,
+    "signed_branch_match_required": true,
+    "saddle_census_complete": false
+  },
+  "gradient_metric": {
+    "type": "one constant positive Hermitian m=3 delta-zero Morse-whitened metric",
+    "reference_coordinate_definition": "w=(a1/a_b,phi1/phi_b,a2/a_b,phi2/phi_b,T/0.7)",
+    "construction": "Solve the delta=0 saddle, diagonalize its real symmetric H_w=O*Lambda*O^T with det(O)=+1, and set L_0=O*diag(abs(Lambda)^(-1/2)); use w=w_saddle(delta)+L_0*xi and the Euclidean Hermitian metric in xi for every delta.",
+    "global_constancy": "L_0 is held fixed across the entire signed delta grid and along every trajectory; it is not re-whitened at nonzero delta or recomputed along a flow.",
+    "upward_dual_flow_for_exp_minus_S": "dot(xi)=-conjugate(L_0^T*partial_w S_3)",
+    "reflection_covariance_required": true,
+    "metric_homotopy_tested": false
+  },
+  "upward_chart": {
+    "local_takagi_frame": "At each continued saddle, diagonalize L_0^T H_w L_0, match its nondegenerate signed eigendirections continuously to the delta-zero frame, and use the e^{-S} real/imaginary Takagi phases.",
+    "initial_radius": 0.0001,
+    "control_initial_radii": [
+      0.00005,
+      0.0002
+    ],
+    "post_feasibility_center_direction": [
+      0.0,
+      -0.25249094,
+      0.96759926,
+      0.0,
+      0.0
+    ],
+    "chart": "omega(u)=normalize(omega_center+B*u), u in R^4, with B an oriented orthonormal tangent basis satisfying det[B,omega_center]=+1",
+    "parameter_orientation": [
+      "u_1",
+      "u_2",
+      "u_3",
+      "u_4",
+      "flow_time"
+    ],
+    "flow_time_max": 13.5,
+    "flow_norm_max": 40.0,
+    "variational_tangent_transport": true,
+    "all_ends_classified": false
+  },
+  "declared_original_cycle_candidate": {
+    "status": "finite-window Gaussian-lift chain candidate, not a derived physical original relative cycle",
+    "lapse_variable": "N",
+    "wick_map": "T=i*N",
+    "oriented_lapse_path": "[-R,-r] followed by N=r*exp(i*theta), theta from -pi to 0, followed by [r,R]",
+    "finite_arm_cutoff_R": 1.2,
+    "primary_cap_radius": 0.3,
+    "cap_parameter": "psi=arg(T)=theta+pi/2, increasing from -pi/2 to pi/2",
+    "field_anchor": "For node j=1,2 use the saddle-independent linear interpolation qbar_j=(1-j/3)q_L+(j/3)q_R.",
+    "cap_embedding": "a_j=abar_j+exp(i*(psi/2-pi/2))*y_aj; phi_j=phibar_j+exp(i*psi/2)*y_phij; T=r*exp(i*psi)",
+    "parameter_orientation": [
+      "y_a1",
+      "y_phi1",
+      "y_a2",
+      "y_phi2",
+      "psi"
+    ],
+    "field_window": {
+      "each_y_min": -0.25,
+      "each_y_max": 0.25
+    },
+    "orientation_note": "Neither the Phase32 momentum-times-configuration normalization nor the Phase39 three-complex-dimensional raw sign is inherited. Phase40 declares and audits its own five-complex-dimensional nodal and mode orientations.",
+    "relative_homology_class_proved": false,
+    "uniform_good_end_decay_proved": false
+  },
+  "intersection_protocol": {
+    "equation": "Gamma(y_a1,y_phi1,y_a2,y_phi2,psi)=K(u_1,u_2,u_3,u_4,s)",
+    "local_orientation_sign": "sign det_R[V_Gamma,V_K] in the declared interleaved ambient order",
+    "root_jacobian_warning": "the solver residual Jacobian [V_Gamma,-V_K] differs by (-1)^5=-1 from the requested oriented-intersection determinant",
+    "primary_delta_values": [
+      -0.001,
+      0.0,
+      0.001
+    ],
+    "continuation_values": [
+      -0.0005,
+      0.0005
+    ],
+    "required_controls": [
+      "full ten-real-coordinate residual",
+      "column-normalized determinant sign and singular spectrum",
+      "variational tangent versus independent finite-difference residual Jacobian",
+      "Gamma and K orientation reversals",
+      "delta to minus-delta reflection matching",
+      "odd-mode clamp mutation",
+      "initial-radius controls"
+    ],
+    "root_exhaustion_required_for_local_claim": false,
+    "global_integer_must_remain_null": true
+  },
+  "required_fail_closed_outputs": {
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "root_exhaustion_proved": false,
+    "exact_nonlinear_upward_manifold_certified": false,
+    "non_Stokes_chamber_certified": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "gate1_status": "OPEN_PARTIAL_PROGRESS"
+  },
+  "planned_controls": {
+    "exact": [
+      "one symbolic S_3 scalar produces every gradient and Hessian",
+      "S_3 is holomorphic for T nonzero and meromorphic at T=0",
+      "action, gradient, and Hessian obey signed reflection covariance",
+      "the DST-I basis separates the delta-zero even and odd Hessian blocks",
+      "Gamma and K frames have the declared middle dimension and odd root-Jacobian parity",
+      "flow identities make Re(S) nonincreasing and Im(S) constant",
+      "incomplete chain, census, Stokes, or end data force every global integer output to null"
+    ],
+    "numerical": [
+      "continued delta-grid saddles satisfy all five joint equations and remain nondegenerate",
+      "signed saddles, actions, Hessians, odd amplitudes, and local candidates match under reflection",
+      "the declared phi-source produces a nonzero sign-reversing tracked odd response",
+      "full ten-real-dimensional local candidates are resolved at delta zero and the two primary signed endpoints",
+      "direct signs, singular gaps, tangent transport, finite-difference Jacobians, orientation mutations, and initial-radius controls are recorded",
+      "the odd-mode clamp is distinguished from the full chart rather than treated as equivalent"
+    ]
+  },
+  "promotion_boundary": "A successful run may support only one frozen m=3, phi-source, local cap-piece witness with the first reflection-odd history sector and signed endpoint mutation included. It cannot establish m=4 agreement, cutoff convergence, the physical original cycle, the entire bounded-chain pairing, a complete upward-cycle census, a global PL coefficient, Gate 1 closure, BFV/Pfaffian/Pin data, a conserved spinorial charge, SUSY breaking, or quantum gravity."
+}
