@@ -56,9 +56,10 @@ phi_plus     (delta_a=0,      delta_phi=+0.001)
 a_plus       (delta_a=+0.001, delta_phi=0)
 ~~~
 
-with the Phase-41 cap radius \(10^{-4}\), shape parameter \(\lambda=1\),
-fixed mobility, affine chart, and fourteen-component root parameters held
-immutable. The checkpoint is explicitly post-hoc regenerated; it is not a
+with the Phase-41 primary launch/sphere radius \(10^{-4}\), cap radius
+\(0.3\), shape parameter \(\lambda=1\), fixed mobility, affine chart, and
+fourteen-component root parameters held immutable. The checkpoint is
+explicitly post-hoc regenerated; it is not a
 byte archive of the original Phase-41 stdout, and historical root-vector
 identity with that stdout is not claimed. The input freeze was made after
 the Phase-41 tangent failure was known, so this is a controlled diagnostic,
