@@ -64,6 +64,8 @@
     "launch_radius": 0.0001,
     "independent_rhs_dps": 80,
     "independent_precision_probe_dps": [50, 80],
+    "source_path_execution": "consume the complete byte-pinned Phase-42 endpoint slot ledger for production_source_dop853, tight_source_dop853, and tight_source_radau; do not duplicate those identical completed integrations",
+    "independent_path_execution": "newly integrate all six declared signed perturbations per root with independent_exact_80dps_dop853",
     "independent_geometry": "binary64 fixed saddle, linear map, and evolving state lifted exactly into mpmath; exact-decimal Phase-43 gradient evaluated at the named dps and rounded once to complex128",
     "finite_difference_retention": "retain every declared sign and step; classify from the first adjacent pair and also report the full two-pair ladder; no step postselection"
   },
