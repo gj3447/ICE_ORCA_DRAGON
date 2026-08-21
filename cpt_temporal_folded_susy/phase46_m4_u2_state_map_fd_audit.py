@@ -287,6 +287,13 @@ def integrate_one(
             real_initial = context.phase41.interleaved(initial_xi)
 
             def real_rhs(_time: float, real_xi: np.ndarray) -> np.ndarray:
+                nonlocal evaluation_count
+                evaluation_count += 1
+                if evaluation_count % 50 == 0:
+                    progress(
+                        f"{point.label}: Radau source RHS "
+                        f"evaluations={evaluation_count}"
+                    )
                 xi = phase42.uninterleaved(real_xi)
                 return context.phase41.interleaved(
                     context.phase41.flow_xi(
@@ -340,9 +347,10 @@ def integrate_one(
 
         final_xi = xi_values[:, -1]
         solver = source_solver_record(solution, xi_values, spec)
-        solver["independent_rhs_evaluations"] = (
+        solver["instrumented_rhs_evaluations"] = (
             evaluation_count
-            if path_name == "independent_exact_80dps_dop853"
+            if path_name
+            in ("tight_source_radau", "independent_exact_80dps_dop853")
             else None
         )
         state_z = context.coordinate_scales * (
