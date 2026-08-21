@@ -1,6 +1,6 @@
 # ICE_ORCA_DRAGON user guide
 
-> Guide to the 74 committed entries currently exposed by the TypeScript/Effect CLI. Historical source files are
+> Guide to the 75 committed entries currently exposed by the TypeScript/Effect CLI. Historical source files are
 > not automatically runnable entries; `./ice list --json` is authoritative.
 
 ## Setup
@@ -69,6 +69,7 @@ This graph is a searchable evidence map, not an automatic physics verdict or ext
 ./ice run phase41_m4_two_source_intersection
 ./ice run phase42_m4_fixed_root_checkpoint
 ./ice run phase42_m4_fixed_root_tangent_disentanglement
+./ice run phase43_m4_high_precision_local_rhs_arbitration
 ```
 
 Phase 41 is an example where exit 0 means a structurally valid typed run, while its payload reports
@@ -83,6 +84,14 @@ contains exactly 8/8 exact and 6/8 numerical passes. Its
 run. The full tangent-disentanglement runner is heavyweight, may take hours, writes no repository file,
 and emits one large `RESULT_JSON=` transport record. The committed 7.5 MB raw result is the captured
 artifact; do not silently replace it with a prose-only summary.
+
+Phase 43 preserves the same typed-run distinction: exit 0 accompanies 7/7 exact and 4/6 numerical
+contracts. The two numerical `FAIL` records are complete non-invalidating scientific outcomes for the
+source-agreement and all-33 finite-difference universal predicates. They preserve the observed 13/90
+NumPy64-output tolerance crossings and five exceptions to the all-33 rule; they are not transport
+failures and do not prove a wrong formula or unique code defect. The runner emits one approximately
+51 MB `RESULT_JSON=` record and writes no result file itself. Use the committed 50,974,375-byte raw
+capture as the byte-full authority instead of attempting to summarize away the non-PASS records.
 
 Arguments after `--` are passed to the Python kernel as an argv array:
 
@@ -106,7 +115,7 @@ The table is orientation, not a replacement for `./ice list`.
 | Higgs and S-proofs | `prove_higgs_ZD_doublet`, `prove_s1_framing`, `prove_s2_CCWZ`, `prove_s3_higher_gauge`, `prove_s5_bv_ainfty`, `prove_s7_WW_evasion` |
 | queue diagnostics | `queue_01_orbit_analysis`, `queue_02_4condition_diagnostic`, `queue_03_threshold_sensitivity_scan`, `queue_04_hosotani_toy`, `queue_05_coleman_weinberg`, `queue_06_cooperative_vacuum`, `queue_08_g2_diagnostic`, `queue_09_SS3TG`, `queue_10_group_of_6`, `queue_11_xor_invariant` |
 | numerology controls | `numerology_hidden_scan`, `numerology_hidden_scan_v2_target_categories_2026-05-20`, `numerology_mc_judge`, `numerology_mc_judge_v3_abc` |
-| CPT × Temporal-Folded SUSY | `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian`, `phase22_finite_mode_seam_density`, `phase23_homogeneous_minisuperspace_density`, `phase24_connected_starobinsky_interval`, `phase25_connected_lapse_scan`, `phase26_global_lapse_flow`, `phase27_lorentzian_lapse_endpoint`, `phase28_thimble_bfv_intersection`, `phase29_zero_lapse_uniform_kernel`, `phase30_conformal_bfv_determinant_line`, `phase31_homogeneous_bfv_superhessian`, `phase32_below_origin_lapse_intersection`, `phase33_fold_airy_uniformization`, `phase34_directed_fold_dual_continuation`, `phase35_reduced_detline_transport`, `phase36_airy_gauss_manin_connection`, `phase37_closed_fold_holonomy`, `phase38_joint_cycle_identifiability`, `phase39_finite_joint_intersection`, `phase40_m3_reflection_odd_intersection`, `phase41_m4_two_source_intersection`, `phase42_m4_fixed_root_checkpoint`, `phase42_m4_fixed_root_tangent_disentanglement` |
+| CPT × Temporal-Folded SUSY | `phase17_time_line_fold_algebra`, `phase18_gaussian_seam_spectrum`, `phase19_closed_sugra_bounce`, `phase20_two_sheet_wdw_selection`, `phase21_connected_seam_gaussian`, `phase22_finite_mode_seam_density`, `phase23_homogeneous_minisuperspace_density`, `phase24_connected_starobinsky_interval`, `phase25_connected_lapse_scan`, `phase26_global_lapse_flow`, `phase27_lorentzian_lapse_endpoint`, `phase28_thimble_bfv_intersection`, `phase29_zero_lapse_uniform_kernel`, `phase30_conformal_bfv_determinant_line`, `phase31_homogeneous_bfv_superhessian`, `phase32_below_origin_lapse_intersection`, `phase33_fold_airy_uniformization`, `phase34_directed_fold_dual_continuation`, `phase35_reduced_detline_transport`, `phase36_airy_gauss_manin_connection`, `phase37_closed_fold_holonomy`, `phase38_joint_cycle_identifiability`, `phase39_finite_joint_intersection`, `phase40_m3_reflection_odd_intersection`, `phase41_m4_two_source_intersection`, `phase42_m4_fixed_root_checkpoint`, `phase42_m4_fixed_root_tangent_disentanglement`, `phase43_m4_high_precision_local_rhs_arbitration` |
 | other falsifiers/checks | `igrueqft_locality_falsifier`, `mb3_adelberger_verdict`, `verify_mp_mW_3_256`, `wilmot_theta_preservation_test`, `ww_unitarity_bound_analysis` |
 
 ## Read a result JSON

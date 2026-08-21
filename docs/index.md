@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 74 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 75 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -57,6 +57,7 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md) | $m=3$ reflection-odd source response, five direct local ten-real signs, signed-subspace/finite-difference controls, and the still-null bounded/global intersection outputs |
 | [`../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md`](../cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md) | $m=4$ two-source numerical-rank response, five local full-$\mathbb R^{14}$ roots, the sole tangent finite-difference plateau failure, and the still-null global intersection outputs |
 | [`../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md`](../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md) | fixed-root diagnosis of the Phase-41 tangent failure, scoped solver-noise/step-pair and local Hessian-action anomaly evidence, the inconclusive reference derivative, and the still-prohibited global promotion |
+| [`../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md`](../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md) | frozen 90-slot high-precision local-reference arbitration, 13/90 operational NumPy64-output mismatches, 28/33 same-step finite-difference evidence with five exceptions, and the still-untested integrated tangent and global cycle |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

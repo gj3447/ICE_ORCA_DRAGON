@@ -187,6 +187,7 @@ aims to explain, not evidence that the route is correct.
 | [Phase 40](cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md) | At $m=3$, a rank-one signed endpoint mutation exposes the first reflection-odd history sector. Five sequentially continued ten-real-dimensional local candidates at $\delta\in\{-.001,-.0005,0,.0005,.001\}$ all have direct declared coordinate sign $+1$; reflection, launch-radius, variational-tangent, and local odd-coordinate-clamp controls were run. | The source probes only one direction in the two-dimensional odd field sector. A five-point local branch is not a continuous homotopy proof, cutoff/metric/regulator stability, a bounded-chain sum, the physical original relative cycle, BFV/Pfaffian/Pin orientation, or global $n_\sigma$. All global outputs remain `null`; Gate 1 is open. |
 | [Phase 41](cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md) | At $m=4$, independent $\phi$-only and $a$-only endpoint sources give a stable numerical rank-two anchor-subtracted odd-response matrix in the frozen normalization. Five fourteen-real-dimensional local candidates are resolved with direct declared-coordinate sign $+1$ and root-Jacobian sign $-1$; 7/7 exact and 8/9 typed numerical contracts pass. | The sole failed contract is the three-point finite-difference tangent plateau check, even though its signs and operator errors pass. Consequently the separate $\phi$/$a$ local robustness claims remain inconclusive. No cross-cutoff determinant line, physical original cycle, bounded/global signed sum, cutoff or continuum limit, BFV/Pfaffian/Pin orientation, or global $n_\sigma$ is obtained; six promoted outputs remain `null` and Gate 1 is open. |
 | [Phase 42](cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md) | At three immutable Phase-41 roots, the failed $u_2$ control is reproduced without root, chart, sign, or step retuning. The frozen tests support solver-noise and old-step-pair-selection evidence at $\phi+$/$a+$ and find 12/11/10 reference-stable local Hessian-action identity violations at shared-zero/$\phi+$/$a+$; 8/8 exact and 6/8 numerical contracts pass. | The protocol-named local variational-RHS “bug evidence” is neither a demonstrated code defect nor a unique-cause result, and the appended time column supplies no independent bug evidence. The shared-zero fixed-$R_4$ $u_2$ reference misses its neighbor-stability threshold, so the reference tangent remains inconclusive. The normalized matrix homotopy is local only; all 16 completion flags remain false, six promoted outputs remain `null`, global promotion is prohibited, and Gate 1 is open. |
+| [Phase 43](cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md) | At all 90 frozen Phase-42 state-and-direction slots, independently rebuilt exact-symbolic and 80/120-decimal paths corroborate the local high-precision reference. Thirteen byte-pinned NumPy64 Hessian-action outputs cross the frozen $5\times10^{-13}$ tolerance, and 28/33 disclosed anomalies support the same-step binary64 finite-difference rule; 7/7 exact and 4/6 numerical contracts pass. | The 13/90 result is operational NumPy64-output mismatch evidence, not proof of a wrong formula or unique code defect. Five complete exceptions make the frozen all-33 finite-difference claim `NOT_SUPPORTED`; only $\phi+$ supports that rule at all 11 of its disclosed anomalies. No root, ODE, integrated tangent, time column, orientation, or global cycle is tested. The Phase-42 reference remains inconclusive, all 16 completion flags remain false, six promoted outputs remain `null`, and Gate 1 is open. |
 
 These results deliberately include negative answers. They close specific shortcuts without claiming a
 no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomplex mathematics.
@@ -232,7 +233,14 @@ no-go theorem for all SUSY theories, all two-sheet cosmologies, or all hypercomp
    defect: the appended time column is limited by endpoint-solver differences and is excluded as
    independent bug evidence, while the shared-zero fixed-$R_4$ $u_2$ reference itself misses the frozen
    neighbor-stability gate. A sufficient nonsingular homotopy between two normalized local matrices does
-   not orient a cycle or repair the inconclusive reference tangent. These phases
+   not orient a cycle or repair the inconclusive reference tangent. Phase 43 then recursively audits that
+   anomaly layer without changing a state, direction, step, or threshold. Its independent high-precision
+   reference is corroborated at 90/90 slots. Thirteen NumPy64 source outputs cross the frozen tolerance,
+   which is an operational pipeline mismatch rather than proof of a wrong formula or unique code defect.
+   Same-step binary64 finite-difference evidence holds at 28/33 disclosed anomalies, but five complete
+   exceptions defeat the frozen all-33 claim; only the $\phi+$ point supports it at every disclosed slot.
+   Because Phase 43 runs no root, ODE, integrated-tangent, time-column, orientation, or global-cycle path,
+   it neither repairs the Phase-42 reference tangent nor advances a local result into Gate 1. These phases
    do not transport the missing original physical cycle or derive a fermionic
    Pin/Pfaffian line. None identifies the
    complete original relative cycle or supplies the physical Van
@@ -261,14 +269,14 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 74 | `./ice list --json` |
+| runnable Python kernels | 75 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 594 nodes, 1669 edges, 145 claims: 78 `SUPPORTED`, 66 `CONTRADICTED`, 1 `INCONCLUSIVE` | `./ice ontology summary` |
-| indexed Phase 15R--42 payload | 93 artifacts, 87 evidence nodes, 28 phases, 45 scopes; 97/97 recorded hashes verified (93 artifacts + 4 policies); 26 validation warnings | ontology graph and validator |
-| named exact checks | 418 | phase result payloads in the ontology |
-| typed numerical checks | 246 current = 243 `PASS` + 2 `FAIL` + 1 `INCONCLUSIVE`; 247 including the separately catalogued passing legacy control = 244 `PASS` + 2 `FAIL` + 1 `INCONCLUSIVE` | phase result payloads in the ontology |
-| latest runnable CPT seam phase | Phase 42 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| research ontology | 607 nodes, 1717 edges, 149 claims: 81 `SUPPORTED`, 67 `CONTRADICTED`, 1 `INCONCLUSIVE` | `./ice ontology summary` |
+| indexed Phase 15R--43 payload | 98 artifacts, 89 evidence nodes, 29 phases, 46 scopes; 102/102 recorded hashes verified (98 artifacts + 4 policies); 26 validation warnings | ontology graph and validator |
+| named exact checks | 425, all `PASS` | phase result payloads in the ontology |
+| typed numerical checks | 252 current = 247 `PASS` + 4 `FAIL` + 1 `INCONCLUSIVE`; 253 including the separately catalogued passing legacy control = 248 `PASS` + 4 `FAIL` + 1 `INCONCLUSIVE` | phase result payloads in the ontology |
+| latest runnable CPT seam phase | Phase 43 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.

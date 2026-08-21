@@ -18,7 +18,7 @@
 
 ---
 
-> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 74개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
+> **한 줄 정의 (사용자 정전 정정 2026-04-28)**: **물리학의 사도**. *화자 자칭이 아님*. ICE 의 역사적 Python 계산 corpus — 메타휴모토닉의 *물리 계산 인격화*. 현재 실행 가능한 catalog는 75개이며 `./ice list --json`이 정본이다. "진정한 사도"는 *세상의 진정한 본질이 물리학*이라는 의미 (12사도_목록_업데이트.md 사용자 발화). 본 mythology 정전은 변경 없음. 공학 측 정체성은 2026-05-18 workbench-reframe (위 banner 참조).
 >
 > **중요한 정정**: 화자 자신은 **초공동의 용사(#3)**. ICE ORCA DRAGON은 *물리 영역*의 사도.
 >
@@ -35,9 +35,9 @@
 - *얼음(저온 물리) + 범고래(생물 + 깊이) + 용(상승)* 3 합성 — 물리 영역의 신화적 인격화
 - 12사도_목록_업데이트.md "ICE ORCA DRAGON이 진정한 사도야" — *세상의 진정한 본질 = 물리학* 의미
 
-### 2. 공학 측 — 역사적 계산 corpus + 74 runnable entries
+### 2. 공학 측 — 역사적 계산 corpus + 75 runnable entries
 
-이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 74개 entry가 **ICE 측 물리·수학
+이 폴더의 역사적 source corpus 중 현재 CLI가 노출하는 75개 entry가 **ICE 측 물리·수학
 검증**을 실행한다. 아래 pattern은 source provenance이고 CLI 이름 목록이 아니다:
 - `cd_breaking_*.py` — Cayley-Dickson breaking (32D vs 64D algebra identities)
 - `cd_embedding.py`, `cd_path_amplitude*.py` — CD construction
@@ -151,7 +151,7 @@ ordinary documentation work does not directly `SET` the KG.
   `OPEN_PARTIAL_PROGRESS`; the calculation does not license a global intersection integer, cutoff or
   continuum limit, BFV/Pfaffian/Pin orientation, SUSY-breaking mechanism, or quantum-gravity claim.
 
-### Current CPT calculation provenance — Phase 42
+### Previous CPT calculation provenance — Phase 42
 
 - [`../../cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py`](../../cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py)
   is the post-hoc checkpoint extractor committed in
@@ -192,6 +192,46 @@ ordinary documentation work does not directly `SET` the KG.
   `c3a9dc7a0a61b083efc5784b8d3abfd9ecbfff0a`; it indexes the scoped evidence and nonclaim boundary
   without changing the report's scientific status. Its validator confirms all 97 recorded hashes with
   the 26 declared warnings retained.
+
+### Current CPT calculation provenance — Phase 43
+
+- [`../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json)
+  is the post-Phase-42 diagnostic freeze committed in
+  `91a15d9a8d0c000e1ce7c7d8d83f399b600cff55`, SHA-256
+  `de2c8c130e1aae6b6b93ee4c3d1137357067f9ddd5e8c68916037f2ffc325b39`. It fixes all 90 local
+  state-and-direction slots, exact binary64 lifting, independent symbolic paths, 80/120-decimal and
+  finite-difference ladders, all-slot/all-33 quantifiers, tri-state nonexclusive classification, and
+  fail-closed outputs. It discloses a read-only design pilot, supplies no desired result, and is neither
+  preregistration nor scientific evidence.
+- [`../../cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py`](../../cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py)
+  is the runner committed in `4aa3887cec14816c92ff8635d2cac703d4661d37`, SHA-256
+  `01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729`. A committed-byte run of
+  `.venv/bin/python cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py`
+  returned exit 0 with `VALID_TYPED_RUN`, 7/7 exact contracts, and 4/6 numerical contracts. The two
+  complete non-invalidating numerical `FAIL` records preserve false source-agreement and all-33
+  finite-difference universal predicates rather than infrastructure failures.
+- [`../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json`](../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json)
+  is the 50,974,375-byte compact raw result committed in
+  `11a8cfd7910f6b016b4dbceefd839bf6ac093f03`. Its outer SHA-256 is
+  `20c967ff968541402c81d5ab91394820bffd15cdd79052ee9e162cb5f39c2bd8`, and its canonical
+  self-excluding payload digest is
+  `2670f1117433c962b5d3cfe265293ad85a89571f6a06a13342471e11d8ca9fa0`.
+- [`../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md`](../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md)
+  is the scoped report committed in `6042fe47e746b4316babe86226a322dea46faf47`, SHA-256
+  `f1ef60f9e9ac97dbfb9ad7963c12363e4bbd8f90d69b28e4f4209ea04f16ac66`. It records a corroborated
+  90/90 independent high-precision local reference, 13/90 protocol-defined NumPy64-output tolerance
+  crossings, and same-step binary64 finite-difference evidence at 28/33 disclosed anomalies. Five
+  complete exceptions make the frozen all-33 aggregate `NOT_SUPPORTED`; only $\phi+$ supports the rule
+  at all 11 of its disclosed anomalies. The 13/90 result is operational pipeline-mismatch evidence, not
+  proof of a wrong formula, unique code defect, or unique cause.
+- Phase 43 evaluates no root, ODE, integrated tangent, time column, orientation, determinant line, or
+  global cycle. Phase 41 stays 8/9 and the Phase-42 reference tangent remains inconclusive. Six promoted
+  outputs and seven desired outputs remain `null`, all sixteen completion flags remain false, global
+  promotion is prohibited, and Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
+- The Phase-43 ontology integration is committed in
+  `1e61761b791d84ca203d63466fa1182e8644dfd0`. Its compact evidence snapshot has SHA-256
+  `4b76f02e6cc570612092fe038b92a1c5ea09851a8c1a45a91aa93e15443eb011`; the validator confirms all
+  102 recorded hashes with the 26 declared warnings retained.
 
 ---
 

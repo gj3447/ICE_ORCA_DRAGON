@@ -98,12 +98,16 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `phase42_m4_fixed_root_tangent_disentanglement.py` | 세 fixed root에서 Phase-41 plateau를 재현하고 fixed derivative, solver/step, local variational identity와 normalized matrix homotopy를 분리 검사하는 실행체 |
 | `PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json` | Phase 42의 8/8 exact, 6/8 numerical 계약과 2,192-slot complete cause ledger를 보존한 raw result |
 | `PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md` | Phase 42 보고서 — $\phi+$/$a+$ solver-noise·step-pair evidence와 세 root의 protocol-defined local Hessian-action anomaly를 지지하지만 reference tangent는 inconclusive; 모든 global 승격은 금지되고 Gate 1은 OPEN |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–42의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json` | Phase 42의 90개 local state-and-direction slot, exact binary64 lift, 독립 symbolic model, 80/120-decimal ladder, all-slot/all-33 quantifier와 fail-closed 출력을 고정한 post-hoc diagnostic manifest |
+| `phase43_m4_high_precision_local_rhs_arbitration.py` | frozen $\xi,q$에서만 독립 action·Hessian·direct-gradient path와 high-precision finite differences를 계산하고 source-output·FD evidence를 비배타적으로 중재하는 실행체 |
+| `PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json` | Phase 43의 7/7 exact, 4/6 numerical 계약과 13,606-slot complete ledger를 보존한 50,974,375-byte raw result |
+| `PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md` | Phase 43 보고서 — 90/90 high-precision reference, 13/90 protocol NumPy64-output mismatch, 28/33 same-step FD evidence와 다섯 all-33 exceptions를 보존하며 integrated tangent와 Gate 1은 계속 미검증 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–43의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 42)
+## 현재 경계 (Phase 43)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -394,6 +398,20 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   homotopy에 대한 sufficient certificate일 뿐 determinant line, upward cycle orientation 또는
   physical original contour가 아니다. Six promoted outputs는 계속 `null`, 16 completion flags는
   `false`, global promotion은 `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
+- Phase 43은 root나 step을 다시 고르지 않고 Phase-42의 90개 frozen $\xi,q$ slot을 독립
+  exact-symbolic 및 80/120-decimal 경로로 중재했다. High-precision local reference는 90/90에서
+  `CORROBORATED`이고, byte-pinned NumPy64 Hessian action은 13/90에서 동결한
+  $5\times10^{-13}$ normwise tolerance를 넘는다. 이것은 protocol-defined local output mismatch
+  evidence이지 잘못된 formula나 하나의 code defect를 증명한 것이 아니다.
+- Disclosed anomaly 33개 중 28개는 같은 step의 binary64 finite-difference artifact rule을
+  지지하지만, 다섯 complete exception 때문에 frozen all-33 aggregate는 `NOT_SUPPORTED`다.
+  Point별 all-disclosed-anomaly rule은 $\phi+$의 11/11에서만 지지되고 shared-zero와 $a+$에서는
+  지지되지 않는다. 전체 계약은 7/7 exact, 4/6 numerical이며 두 non-PASS record는 완결된
+  non-invalidating scientific outcomes다.
+- Phase 43은 root, ODE, integrated tangent, time column, orientation, determinant line 또는 global
+  cycle을 계산하지 않았다. 따라서 Phase 41은 8/9, Phase-42 reference tangent는
+  `REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE`로 남는다. Six promoted outputs는 `null`, seven
+  desired outputs도 `null`, 16 completion flags는 `false`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
 ## 다음 계산
 
@@ -404,12 +422,13 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   separate root-sheet lateral gate, Phase 37의 local closed root/half-form holonomy, Phase 38의
   inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger, Phase 39의
   $m=2$ cap-piece local full-space witness, Phase 40의 rank-one $m=3$ reflection-odd local
-  continuation, Phase 41의 two-source $m=4$ full-$\mathbb R^{14}$ local roots와 Phase 42의
-  fixed-root tangent diagnosis에서 멈추지 않는다. Phase 42는 $\phi+$/$a+$의 solver-noise와
-  old-step-pair sensitivity를 분류했지만 shared-zero fixed-$R_4$ reference와 local Hessian-action
-  anomaly의 원인을 확정하지 못했다. 따라서 P42의 local normalized homotopy를 common
-  cross-cutoff determinant line으로 승격하지 않고, 먼저 immutable states에서 high-precision
-  Hessian/RHS identity와 stable derivative reference를 독립적으로 중재한다. 이후 이미 feasible한
+  continuation, Phase 41의 two-source $m=4$ full-$\mathbb R^{14}$ local roots, Phase 42의
+  fixed-root tangent diagnosis와 Phase 43의 frozen high-precision local arbitration에서 멈추지
+  않는다. Phase 43은 reference를 90/90에서 corroborate하고 13/90 NumPy64-output mismatch를
+  찾았지만, state formation, Hessian evaluation, contraction order, cancellation과 conditioning을
+  분리하지 않아 formula error나 unique code defect를 확정하지 않았다. 따라서 root·state·step·
+  threshold를 다시 고르지 않는 arithmetic-provenance/error-decomposition audit를 먼저 수행하고,
+  이 local 결과를 common cross-cutoff determinant line으로 승격하지 않는다. 이후 이미 feasible한
   $m=5$ joint saddle로 올리고 cutoff/metric homotopy를 실제로 구성한다. 그 뒤
   하나의 공통 incoming physical upward dual과
   원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant

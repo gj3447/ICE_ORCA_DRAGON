@@ -3,11 +3,11 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-20
+## Current state — 2026-08-21
 
 | Component | State |
 |---|---|
-| Runnable catalog | 74 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 75 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,14 +374,14 @@ and
 
 ## Research ontology memory
 
-Phase 15R–42 is indexed in a repository-local typed research graph with **594 nodes and 1669 directed
-relations**. It preserves 145 claims (78 `SUPPORTED`, 66 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
-Phase 16–42 run payloads: 418 named exact checks and 246 current typed numerical checks, split as 243
-`PASS`, 2 `FAIL`, and 1 `INCONCLUSIVE`. Including the separately catalogued passing legacy Phase-18
-control gives 247 typed numerical checks, split as 244 `PASS`, 2 `FAIL`, and 1 `INCONCLUSIVE`. The graph
-contains 93 artifacts, 87 evidence nodes, 28 phases, and 45 scopes; all 97 recorded hashes validate (93
-artifacts and 4 policies), with 26 declared validation warnings. It also preserves cautious bridges to
-the older SYMPOSIUM KG.
+Phase 15R–43 is indexed in a repository-local typed research graph with **607 nodes and 1717 directed
+relations**. It preserves 149 claims (81 `SUPPORTED`, 67 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
+Phase 16–43 run payloads: 425 named exact checks, all `PASS`, and 252 current typed numerical checks,
+split as 247 `PASS`, 4 `FAIL`, and 1 `INCONCLUSIVE`. Including the separately catalogued passing legacy
+Phase-18 control gives 253 typed numerical checks, split as 248 `PASS`, 4 `FAIL`, and 1 `INCONCLUSIVE`.
+The graph contains 98 artifacts, 89 evidence nodes, 29 phases, and 46 scopes; all 102 recorded hashes
+validate (98 artifacts and 4 policies), with 26 declared validation warnings. It also preserves cautious
+bridges to the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
   is the human concept map.
@@ -904,7 +904,7 @@ See
 and
 [`../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py`](../cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 42
+## Previous direct calculation — CPT × Temporal-Folded SUSY Phase 42
 
 Phase 42 returns exit 0 with **8/8 exact contracts and 6/8 numerical contracts**. Exit 0 denotes
 `VALID_TYPED_RUN`, not eight numerical passes. The two scientific non-PASS records are
@@ -949,6 +949,41 @@ See
 [`../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py`](../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py),
 and
 [`../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json`](../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 43
+
+Phase 43 returns exit 0 with **7/7 exact contracts and 4/6 numerical contracts**. Exit 0 denotes
+`VALID_TYPED_RUN`, not six numerical passes. The two complete non-invalidating numerical `FAIL` records
+retain the protocol's false universal predicates: source agreement fails because 13/90 NumPy64 outputs
+cross the frozen tolerance, and the all-33 finite-difference rule fails because five disclosed anomalies
+are complete exceptions.
+
+The run consumes all 90 immutable Phase-42 $\xi,q$ slots—three points, five flow fractions, and six
+directions—without root, state, direction, step, or threshold retuning. Independently rebuilt exact-
+symbolic, direct-gradient, 80/120-decimal, unchanged-step, and prospective small-step paths corroborate
+the local high-precision reference at 90/90 slots. Against that reference, 13 byte-pinned NumPy64
+Hessian-action outputs exceed the frozen $5\times10^{-13}$ normwise threshold. This is operational
+implementation-pipeline mismatch evidence only; it does not establish a wrong formula, one faulty code
+line, or a unique cause.
+
+The same-step binary64 finite-difference rule is supported at 28/33 disclosed Phase-42 anomalies:
+9/12 at shared-zero, 11/11 at $\phi+$, and 8/10 at $a+$. The five exceptions make the frozen all-33
+aggregate `NOT_SUPPORTED`; only $\phi+$ supports the pointwise all-disclosed-anomaly predicate. The
+classifications are nonexclusive, so the failed aggregate does not mean binary64 finite-difference
+error is absent.
+
+No root, saddle, ODE, integrated tangent, time column, reference tangent, orientation, determinant line,
+or global cycle is evaluated. Phase 41 therefore remains 8/9, and the Phase-42 reference tangent remains
+`REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE`. Six promoted outputs and seven desired outputs remain
+`null`; all sixteen completion flags remain false. Global promotion is `PROHIBITED`, Gate 1 remains
+`OPEN_PARTIAL_PROGRESS`, and the runnable catalog is now 75.
+
+See
+[`../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md`](../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md),
+[`../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json`](../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py`](../cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py),
+and
+[`../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json`](../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json).
 
 ## Historical scientific ledger
 
