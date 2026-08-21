@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–44 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–45 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-21T05:45:09Z` graph update, the collection has 619 nodes and
-1766 edges. Validation verifies 107/107 stored hashes (103 artifacts and 4 policies). The
-Phase 16–44 run snapshots contain 433 named exact checks, all `PASS`, and 259 typed numerical-ledger
-checks: 254 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
+At the recorded `2026-08-21T10:20:00Z` graph update, the collection has 632 nodes and
+1809 edges. Validation verifies 112/112 stored hashes (108 artifacts and 4 policies). The
+Phase 16–45 run snapshots contain 436 named exact checks, all `PASS`, and 265 typed numerical-ledger
+checks: 260 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
 NumPy64 outputs cross the frozen source threshold, and only 28/33 disclosed anomalies satisfy the
@@ -21,8 +21,12 @@ finite-difference rule, so its all-33 predicate fails. None of these typed non-P
 its zero-exit run. Phase 44 adds eight exact and seven numerical `PASS` records: exact identity of the
 declared source and independent formulas, closed all-slot telescopes, and declared forward-error-model
 coverage for all 13 disclosed mismatches and all 77 controls. These are local pinned-platform arithmetic
-results, not a unique-cause, integrated-tangent, or global-cycle result. One legacy separately recorded
-Phase-18 numerical control brings the numerical-record total to 260 (255
+results, not a unique-cause, integrated-tangent, or global-cycle result. Phase 45 adds three exact and
+six numerical `PASS` records: the independent 50/80-digit integrated tangents are stable under the
+retained projection, source/reference tangents and root Jacobians agree at the `1e-12` scale, and the
+historical `u2` failure remains unchanged. This narrows the local issue toward state-map finite
+differences without rewriting Phase 41 or closing Gate 1. One legacy separately recorded
+Phase-18 numerical control brings the numerical-record total to 266 (261
 pass, four fail, one inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
@@ -77,6 +81,10 @@ confidence.
 ./ice ontology trace claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL --depth 2
 ./ice ontology trace claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL --depth 2
 ./ice ontology trace claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION --depth 2
+./ice ontology trace claim:P45_INDEPENDENT_INTEGRATED_TANGENT_IS_PRECISION_STABLE_AT_THREE_FIXED_ROOTS --depth 2
+./ice ontology trace claim:P45_SOURCE_TANGENT_AND_ROOT_JACOBIAN_AGREE_WITH_INDEPENDENT_REFERENCE --depth 2
+./ice ontology trace claim:P45_TANGENT_CONTROL_FAILURE_IS_STABLE_TO_LOCAL_RHS_REPLACEMENT --depth 2
+./ice ontology trace claim:P45_LOCAL_STABILITY_DOES_NOT_LICENSE_GLOBAL_PROMOTION --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -194,6 +202,9 @@ invalid or converting a failed all-33 claim into evidence that finite-difference
 Phase 44 has no typed non-PASS record: its seven numerical `PASS` entries establish only their named
 local arithmetic contracts. Forward-model coverage is compatibility on the pinned platform, not proof
 of correct rounding, a unique causal stage, an integrated tangent, or a global physical construction.
+Phase 45 also has no typed non-PASS record. Its integrated-tangent agreement is limited to three fixed
+roots, one shared source state trajectory, and a final complex128 projection; it does not recompute the
+failed state-map finite-difference ladder or promote a local Jacobian sign into global topology.
 
 ## Identifier families
 

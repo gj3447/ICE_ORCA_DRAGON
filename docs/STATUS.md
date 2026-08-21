@@ -985,6 +985,36 @@ See
 and
 [`../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json`](../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json).
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 45
+
+Phase 45 returns exit 0 with `VALID_RUN` and the fixed classification
+`TANGENT_CONTROL_FAILURE_STABLE_TO_INDEPENDENT_RHS`. At the three immutable Phase-42 roots it integrates
+the six chart-tangent columns along one source NumPy64 state trajectory using the Phase-41 NumPy64
+Hessian action and independently rebuilt exact-decimal 50- and 80-digit Hessian actions.
+
+The retained 50/80-digit tangent samples agree exactly after complex128 projection. The maximum
+source/reference tangent discrepancy is `2.741e-12`, the maximum source/reference root-Jacobian
+discrepancy is `3.748e-12`, and the independent Jacobians remain within `1.101e-5` of the Phase-42 R4
+matrices with normalized sign `-1` at all three roots. Every one of the eighteen pre-output root-level
+tests passes.
+
+The historical Phase-41 `u2` plateau values remain `0.298850`, `0.221993`, and `0.795272`, above the
+frozen `0.02` failure threshold. Phase 45 does not recompute that finite-difference ladder; it shows
+that replacing the local tangent RHS does not materially change the integrated tangent or repair the
+historical control. The unresolved local issue is therefore narrowed toward state-flow finite
+differences, subtractive cancellation, solver truncation, or frozen step-pair selection.
+
+No root search, retuning, orientation selection, determinant line, complete cycle, good-end census,
+Stokes chamber, or global intersection is computed. Phase 41 stays 8/9, global promotion remains
+`PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and the runnable catalog is now 77.
+
+See
+[`../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY.md`](../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY.md),
+[`../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_INPUTS.json`](../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase45_m4_integrated_tangent_rhs_stability.py`](../cpt_temporal_folded_susy/phase45_m4_integrated_tangent_rhs_stability.py),
+and
+[`../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json`](../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json).
+
 ## Historical scientific ledger
 
 The rows below summarize previously committed outputs and audits. They are historical evidence, not a

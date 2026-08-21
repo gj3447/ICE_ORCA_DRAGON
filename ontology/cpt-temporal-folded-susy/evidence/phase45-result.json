@@ -1,0 +1,126 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P45_M4_INTEGRATED_TANGENT_RHS_STABILITY_20260821",
+  "phase": "P45",
+  "observed_at_utc": "2026-08-21T10:10:05Z",
+  "command": "proxmox-scratch run ice-phase45 --timeout 7200 -- ./ice run phase45_m4_integrated_tangent_rhs_stability",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase45_m4_integrated_tangent_rhs_stability.py",
+    "sha256": "e562314282ccf58be0c39aebc2b5a07c0c8bb818ae739f24ace6cad6a8f915b2",
+    "introduced_in_commit": "8657bb65651149dce0c00ad32c46544e68315562"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {
+      "id": "P45.freeze.pinned_roots_sources_paths_thresholds",
+      "statement": "The pre-output manifest pins the three Phase-42 roots, checkpoint and result, Phase-41 source, Phase-43 independent constructor, shared source-state trajectory, 50/80-dps paths, solver settings, metrics, thresholds, classification, and fail-closed interpretation boundary.",
+      "status": "PASS"
+    },
+    {
+      "id": "P45.scope.integrated_tangent_only",
+      "statement": "The run integrates one source state trajectory and three six-column tangent paths per fixed root, with no root search, retuning, orientation selection, determinant-line construction, or global-cycle computation.",
+      "status": "PASS"
+    },
+    {
+      "id": "P45.retention.valid_json_digest_and_global_guard",
+      "statement": "The 143,499-byte VALID_RUN result parses strictly, its self-excluding digest reproduces exactly, every requested solver and metric record is present and finite, global promotion remains prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 6,
+  "numerical": [
+    {
+      "id": "P45.reference.50dps_to_80dps_integrated_tangent",
+      "statement": "The retained independent 50- and 80-digit complex128 tangent samples agree exactly at all five fractions and all three roots, below the fixed 1e-10 limit.",
+      "status": "PASS"
+    },
+    {
+      "id": "P45.tangent.source_to_independent_reference",
+      "statement": "The largest source-to-80-digit integrated-tangent discrepancy is 2.740358830065345e-12, below the fixed 1e-8 limit at every root.",
+      "status": "PASS"
+    },
+    {
+      "id": "P45.jacobian.source_to_independent_reference",
+      "statement": "The largest source-to-80-digit root-Jacobian discrepancy is 3.747368822069235e-12, below the fixed 1e-8 limit at every root.",
+      "status": "PASS"
+    },
+    {
+      "id": "P45.jacobian.reference_to_phase42_R4",
+      "statement": "The largest 80-digit-reference to Phase-42 R4 root-Jacobian discrepancy is 1.1000932966149955e-5, below the fixed 0.005 limit at every root.",
+      "status": "PASS"
+    },
+    {
+      "id": "P45.orientation.reference_normalized_local_sign",
+      "statement": "All three 80-digit reference root Jacobians retain normalized sign -1 under the inherited declared-coordinate convention.",
+      "status": "PASS"
+    },
+    {
+      "id": "P45.classification.historical_u2_failure_stable_to_RHS",
+      "statement": "All three pinned historical u2 plateaus remain above 0.02 while the independent tangent and root Jacobian agree with the source paths, yielding TANGENT_CONTROL_FAILURE_STABLE_TO_INDEPENDENT_RHS.",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "m=4 fixed-root integrated tangent RHS stability",
+    "exact_checks": 3,
+    "numerical_checks": 6,
+    "run_status": "VALID_RUN",
+    "classification": "TANGENT_CONTROL_FAILURE_STABLE_TO_INDEPENDENT_RHS",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json",
+      "raw_result_outer_sha256": "b2be69bd38cbbc22425b926de830c5750fa7ae99b00830e828a528cc491a12d5",
+      "raw_result_payload_sha256_without_self": "b82ae1fdfb6b343ef5575ee8d0398500342189e801b9cce5db498ffcee931832",
+      "raw_result_introduced_in_commit": "6831c80c585eb64be3a40fb61a55c6b4a9dab8c5",
+      "raw_result_size_bytes": 143499,
+      "validation": "Strict JSON parse, finite-value retention, runner hash identity, and independent self-digest recomputation passed."
+    },
+    "root_metrics": {
+      "shared_zero": {
+        "reference_50dps_to_80dps_tangent_relative_max": 0.0,
+        "source_to_reference_tangent_relative_max": 1.5794572618932685e-12,
+        "source_to_reference_root_jacobian_relative": 4.98132138800479e-13,
+        "reference_root_jacobian_to_phase42_R4_relative": 1.079635680888664e-5,
+        "reference_normalized_sign": -1,
+        "historical_u2_plateau": 0.2988500216656352
+      },
+      "phi_plus": {
+        "reference_50dps_to_80dps_tangent_relative_max": 0.0,
+        "source_to_reference_tangent_relative_max": 1.3346047832312994e-12,
+        "source_to_reference_root_jacobian_relative": 6.075985143237454e-13,
+        "reference_root_jacobian_to_phase42_R4_relative": 1.1000932966149955e-5,
+        "reference_normalized_sign": -1,
+        "historical_u2_plateau": 0.22199327396012633
+      },
+      "a_plus": {
+        "reference_50dps_to_80dps_tangent_relative_max": 0.0,
+        "source_to_reference_tangent_relative_max": 2.740358830065345e-12,
+        "source_to_reference_root_jacobian_relative": 3.747368822069235e-12,
+        "reference_root_jacobian_to_phase42_R4_relative": 5.841318465912415e-6,
+        "reference_normalized_sign": -1,
+        "historical_u2_plateau": 0.7952717049287439
+      }
+    },
+    "claim_status": {
+      "independent_integrated_tangent_precision_stability": "SUPPORTED_AT_ALL_THREE_FIXED_ROOTS",
+      "source_integrated_tangent_agrees_with_independent_reference": "SUPPORTED_AT_ALL_THREE_FIXED_ROOTS",
+      "source_tangent_RHS_repair": "NOT_SUPPORTED",
+      "historical_phase41_tangent_control": "TANGENT_CONTROL_FAILED_UNCHANGED",
+      "historical_phase41_numerical_contracts": "8/9",
+      "finite_difference_state_map_unique_cause": "OPEN_NOT_TESTED",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "scope_boundary": {
+      "shared_source_state_trajectory": true,
+      "historical_u2_plateaus_recomputed": false,
+      "arbitrary_precision_internal_equality_claimed": false,
+      "root_search_or_retuning": false,
+      "orientation_selection_or_determinant_line": false,
+      "global_cycle_or_intersection": null
+    },
+    "next_calculation": "Freeze and run a u2 state-map finite-difference audit at the same roots with an independently specified high-accuracy state-flow reference, retaining every declared step so solver truncation, subtractive cancellation, and step-pair selection can be separated."
+  }
+}

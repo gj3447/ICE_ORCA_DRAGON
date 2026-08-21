@@ -351,6 +351,23 @@ Phase 44 freezes the Phase-43 13/77 split before decomposing every local arithme
    is not rewritten, sixteen prerequisites remain false, six global and seven desired outputs remain
    null, and Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 
+### Phase 45 reading path
+
+Phase 45 follows the Phase-44 arithmetic result into the integrated tangent at the three fixed roots:
+
+1. `claim:P45_INDEPENDENT_INTEGRATED_TANGENT_IS_PRECISION_STABLE_AT_THREE_FIXED_ROOTS` records that the
+   independent 50- and 80-digit tangent paths agree at all retained fractions after complex128
+   projection. It does not claim symbolic identity of internal arbitrary-precision states;
+2. `claim:P45_SOURCE_TANGENT_AND_ROOT_JACOBIAN_AGREE_WITH_INDEPENDENT_REFERENCE` records source/reference
+   tangent agreement within `2.741e-12`, root-Jacobian agreement within `3.748e-12`, reference/R4
+   agreement within `1.101e-5`, and normalized sign `-1` at all three roots;
+3. `claim:P45_TANGENT_CONTROL_FAILURE_IS_STABLE_TO_LOCAL_RHS_REPLACEMENT` records that the pinned
+   historical `u2` plateaus remain failed while source tangent-RHS repair is not supported. The
+   state-map finite-difference ladder is not recomputed, so its unique cause stays open;
+4. `claim:P45_LOCAL_STABILITY_DOES_NOT_LICENSE_GLOBAL_PROMOTION` keeps Phase 41 at 8/9 and records zero
+   new roots, orientations, determinant lines, complete chains, physical cycles, or global intersection
+   integers. Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
+
 ## Concept map
 
 ```mermaid

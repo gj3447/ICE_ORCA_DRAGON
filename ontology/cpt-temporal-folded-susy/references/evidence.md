@@ -2,17 +2,17 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–44 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), and [`phase44-result.json`](../evidence/phase44-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–45 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), and [`phase45-result.json`](../evidence/phase45-result.json).
 
 ## Reading `PASS` correctly
 
-All 433 Phase 16–44 named exact checks have `status: PASS`. The snapshots contain 259 typed
-numerical-ledger checks: 254 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
-separately recorded Phase-18 SciPy control brings the numerical-record total to 260: 70 controls through
+All 436 Phase 16–45 named exact checks have `status: PASS`. The snapshots contain 265 typed
+numerical-ledger checks: 260 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
+separately recorded Phase-18 SciPy control brings the numerical-record total to 266: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35,
 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, 22 in Phase 40, 9 in Phase 41, 8 in
-Phase 42, 6 in Phase 43, and 7 in Phase 44. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
+Phase 42, 6 in Phase 43, 7 in Phase 44, and 6 in Phase 45. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
 contracts. Phase 42
 contributes 8 exact `PASS` records and, after lossless schema mapping of the raw typed statuses, 6
 numerical `PASS`, one protocol-defined local-identity `FAIL`, and one reference-tangent `INCONCLUSIVE`.
@@ -32,7 +32,11 @@ the false all-33 sufficient claim into a universal negation of finite-difference
 contributes 8 exact and 7 numerical `PASS` records. They establish exact identity of the two declared
 formula constructions, complete all 90 signed telescopes, and cover the fixed 13/77 cohorts under one
 declared forward-error model. They do not establish correct rounding, one unique cause, integrated
-tangent stability, or global physical promotion. None of these records
+tangent stability, or global physical promotion. Phase 45 contributes 3 exact and 6 numerical `PASS`
+records. They establish 50/80-digit integrated-tangent stability after retained complex128 projection,
+source/reference tangent and root-Jacobian agreement at all three fixed roots, and stability of the
+historical failure to the local RHS replacement. They do not recompute the state-map finite-difference
+ladder, identify its unique cause, rewrite Phase 41, or license global promotion. None of these records
 means that a local candidate is an interval-certified root, that the finite-radius chart patch is the
 exact complete upward manifold, that the entire bounded chain was paired, that the physical original
 relative cycle or non-Stokes chamber is fixed, that a global coefficient is known, or that a hard CFU
@@ -1759,6 +1763,35 @@ result is pinned-platform compatibility with mixed rounding contributions. It is
 proof, a unique cause, a best-algorithm selection, authorization for a source rewrite, or evidence for
 an integrated tangent or global cycle.
 
+## Phase 45 check ledger
+
+### Frozen inputs, local-only scope, retention, and global guard — 3 exact PASS
+
+- `P45.freeze.pinned_roots_sources_paths_thresholds` — `PASS`
+- `P45.scope.integrated_tangent_only` — `PASS`
+- `P45.retention.valid_json_digest_and_global_guard` — `PASS`
+
+These checks bind the three fixed roots, pinned Phase-41/42/43 inputs, one shared source-state trajectory,
+source plus independent 50/80-digit tangent paths, DOP853 settings, retained samples, metrics,
+classification, valid result digest, and fail-closed Gate-1 boundary. No root search, retuning,
+orientation selection, determinant-line construction, or global-cycle computation occurs.
+
+### Integrated tangent, root Jacobian, sign, and historical-failure stability — 6 numerical PASS
+
+- `P45.reference.50dps_to_80dps_integrated_tangent` — `PASS`
+- `P45.tangent.source_to_independent_reference` — `PASS`
+- `P45.jacobian.source_to_independent_reference` — `PASS`
+- `P45.jacobian.reference_to_phase42_R4` — `PASS`
+- `P45.orientation.reference_normalized_local_sign` — `PASS`
+- `P45.classification.historical_u2_failure_stable_to_RHS` — `PASS`
+
+The retained 50/80-digit tangent samples agree exactly after complex128 projection. The largest
+source/reference tangent and root-Jacobian discrepancies are `2.741e-12` and `3.748e-12`; the largest
+reference/R4 Jacobian discrepancy is `1.101e-5`, and every normalized sign is `-1`. The pinned historical
+`u2` plateaus remain above `0.02`. This supports
+`TANGENT_CONTROL_FAILURE_STABLE_TO_INDEPENDENT_RHS`; it does not claim arbitrary-precision symbolic
+identity, an independently integrated state flow, or a unique cause of the finite-difference plateau.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1793,6 +1826,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase40_m3_reflection_odd_inter
 .venv/bin/python cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py
 .venv/bin/python cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py
 ./ice run phase44_m4_numpy64_local_rhs_error_decomposition
+proxmox-scratch run ice-phase45 --timeout 7200 -- ./ice run phase45_m4_integrated_tangent_rhs_stability
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
