@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T21:35:41Z",
+  "updated_at_utc": "2026-08-20T23:31:27Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -283,6 +283,16 @@
         "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
         "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
         "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED"
+      ]
+    },
+    {
+      "question": "Does Phase 43 identify one local code bug, repair the integrated tangent, or close Gate 1?",
+      "answer": "No. Its independent high-precision local reference is corroborated at all 90 frozen slots. The byte-pinned NumPy64 Hessian-action output crosses the frozen tolerance at 13 slots, which is an operational pipeline mismatch rather than proof of a wrong formula or unique code defect. Same-step binary64 finite-difference evidence is supported at 28 of the 33 disclosed Phase-42 anomalies, but the frozen all-33 claim is contradicted by five complete exceptions. No root, ODE, integrated tangent, time column, orientation, or global-cycle calculation was performed; Phase 41 stays 8/9, the Phase-42 reference remains inconclusive, and Gate 1 stays open.",
+      "claim_ids": [
+        "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+        "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+        "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+        "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION"
       ]
     }
   ],
@@ -635,7 +645,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phase 42 applies the same rule to Phase 41: it retains supported solver, step-pair, local-identity, and sufficient-homotopy evidence while refusing to select one unique cause or promote an unstable reference tangent.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42 and 43 apply the same rule to the retained tangent anomaly: they preserve solver, step-pair, local-identity, high-precision-reference, finite-difference, and NumPy64 pipeline evidence without selecting one unique cause, converting a failed all-slot sufficient claim into a universal negation, or promoting an untested integrated tangent.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -652,6 +662,10 @@
         "claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A",
         "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
         "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+        "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+        "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+        "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+        "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
         "artifact:recursive-truth-meditation"
       ]
@@ -695,7 +709,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, and the Phase-42 fixed-root tangent diagnosis. Retain the numerical rank-two response, five computed local R14 +1 candidates, point-scoped multi-label cause evidence, and sufficient normalized sign homotopy, but also retain the inconclusive shared-zero derivative reference. Stop before turning local diagnostics into a corrected production tangent, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, the Phase-42 fixed-root tangent diagnosis, and the Phase-43 frozen local high-precision arbitration. Retain the numerical rank-two response, five computed local R14 +1 candidates, sufficient normalized sign homotopy, a 90/90 corroborated local reference, the 13/90 operational NumPy64 mismatch ledger, and the 28/33 finite-difference evidence count. Also retain the inconclusive Phase-42 reference, the five exceptions to the all-33 sufficient claim, and the untested integrated tangent. Stop before turning local diagnostics into a corrected production tangent, formula-level bug verdict, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -724,6 +738,10 @@
         "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG",
         "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN",
         "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+        "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+        "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+        "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+        "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
       ]
@@ -7529,6 +7547,164 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase42-result.json",
       "sha256": "6ee84fd9fce5dcb336bf430a9fec562bc17fe1bb6d2969ac74a5c3cfcd76e140"
+    },
+    {
+      "id": "phase:p43",
+      "type": "phase",
+      "title": "Phase 43 — m=4 high-precision local RHS arbitration",
+      "summary": "A frozen all-90-slot local derivative arbitration following the Phase-42 Hessian-action anomalies. Seven exact and four of six numerical contracts pass; two complete non-invalidating universal predicates fail. An independent high-precision reference is corroborated at all slots, an operational NumPy64 source-output mismatch is supported at 13, and same-step binary64 finite-difference evidence is supported at 28 of 33 disclosed anomalies but not under the frozen all-33 rule. No root, ODE, integrated tangent, time-column, orientation, or global-cycle calculation is performed, and Gate 1 remains open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "type": "claim",
+      "title": "The independent high-precision local reference is corroborated at all 90 frozen slots",
+      "summary": "At every fixed state-and-direction slot, independently rebuilt exact Hessian and direct-gradient directional actions agree, their 80/120-decimal evaluations are stable, unchanged-step R4 controls in both normalization modes agree, and the fixed prospective small-step ladder remains stable under the precommitted normwise thresholds. This corroborates a local mathematical derivative reference for the frozen finite model; it does not prove physical correctness, state or tangent accuracy, integrated evolution, orientation, or a global intersection invariant.",
+      "state": "SUPPORTED_FOR_ALL_NINETY_FROZEN_LOCAL_SLOTS",
+      "claim_id": "P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "statement": "For all ninety frozen Phase-42 m=4 state-and-direction slots, the two independent high-precision derivative paths, the 80/120-decimal stability controls, and the fixed same-step and small-step R4 controls corroborate the declared local Hessian-action reference.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "type": "claim",
+      "title": "A protocol-defined NumPy64 local RHS output mismatch is supported without proving a code defect",
+      "summary": "Exactly 13 of 90 complete byte-pinned Phase-41 NumPy64 Hessian-action outputs exceed the frozen 5e-13 normwise threshold against the corroborated 120-decimal reference; the other 77 remain within it. The flags concentrate in directions 2, 3, and 5 and mostly at the final fraction. This is operational implementation-pipeline mismatch evidence only. Phase 43 does not separate state formation, Hessian evaluation, contraction order, matrix-vector rounding, cancellation, or conditioning and therefore does not establish a wrong symbolic formula, one unique source-code defect, or one unique cause.",
+      "state": "SUPPORTED_AS_PROTOCOL_DEFINED_LOCAL_NUMPY64_OUTPUT_MISMATCH_ONLY",
+      "claim_id": "P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "statement": "Within the frozen all-90-slot Phase-43 protocol, at least one and exactly thirteen NumPy64 local Hessian-action outputs cross the declared source-to-reference tolerance, while the calculation does not identify a formula error or unique implementation defect.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "type": "claim",
+      "title": "The frozen double-precision finite-difference rule does not explain all 33 Phase-42 anomalies",
+      "summary": "Contradicted only as the declared universal sufficient claim. Same-step binary64 finite-difference evidence is SUPPORTED at 28 of the 33 disclosed Phase-42 stable-violation slots, including 11/11 at phi_plus, but five complete direction-2 slots are NOT_SUPPORTED because their NumPy64 source outputs also cross the source threshold. The all-33 aggregate is therefore NOT_SUPPORTED. This does not negate a finite-difference contribution at the 28 supported slots or prove its absence anywhere.",
+      "state": "CONTRADICTED_BY_FROZEN_ALL_33_QUANTIFIER",
+      "claim_id": "P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "statement": "All thirty-three disclosed Phase-42 stable local Hessian-action anomalies satisfy the frozen Phase-43 sufficient rule for double-precision same-step finite-difference arithmetic evidence.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The local arbitration does not test integrated tangent evolution or license global promotion",
+      "summary": "Supported as an executed scope and promotion boundary. Phase 43 directly consumes frozen xi and q arrays and performs zero root, saddle, least-squares, ODE, dense-output, chart-transport, integrated-tangent, time-column, reference-tangent, orientation, determinant-line, or global-cycle evaluations. Phase 41 stays 8/9, the Phase-42 reference tangent remains inconclusive, all sixteen promoted prerequisites remain false, six global outputs and seven desired outputs remain null, null is not zero, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_LOCAL_ONLY_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "statement": "Phase 43's frozen-state local derivative arbitration neither tests integrated tangent or ODE behavior nor licenses a local orientation, original regulated cycle, bounded-chain sum, global signed intersection vector, cutoff or continuum limit, or quantum-gravity conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p43-exact-freeze-symbolic-retention-and-global-guards",
+      "type": "evidence",
+      "title": "Phase 43 exact freeze, symbolic-reference, retention, and global guards",
+      "summary": "Seven exact checks verify the manifest-runner-result order and provenance, strict Phase-42 state identity, frozen local-only scope with no root/ODE/time-column path, an independently rebuilt exact-rational action and directional identity, exact binary64 lifting and precision/metric conventions, all 13,606 terminal slots, seven null desired outputs, sixteen false prerequisites, six null global outputs, and Gate 1 open.",
+      "state": "VERIFIED",
+      "observed_status": "7_EXACT_PASS",
+      "check_ids": [
+        "P43.freeze.committed_artifacts_runner_and_environment",
+        "P43.input.strict_phase42_state_identity",
+        "P43.scope.local_only_no_solver_or_time_column",
+        "P43.symbolic.independent_action_and_directional_identity",
+        "P43.math.binary64_lift_precision_ladders_and_metrics",
+        "P43.retention.complete_slot_and_classification_schema",
+        "P43.guard.fail_closed_gate1_and_null_outputs"
+      ]
+    },
+    {
+      "id": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "type": "evidence",
+      "title": "Phase 43 numerical high-precision local RHS arbitration ledger",
+      "summary": "The six-record numerical ledger has four PASS records and two complete non-invalidating failed universal predicates. It exactly reproduces all 90 Phase-42 local source controls, corroborates all 90 independent references, records 13 NumPy64 source-output mismatches, and supports the same-step binary64 finite-difference rule at 28 of 33 disclosed anomalies while contradicting the all-33 claim through five complete exceptions. All classifications are nonexclusive, and integrated tangent evolution remains explicitly untested.",
+      "state": "VERIFIED_TYPED_LEDGER_WITH_TWO_NONINVALIDATING_FAILED_UNIVERSAL_PREDICATES",
+      "observed_status": "4_NUMERICAL_PASS_2_TYPED_NONINVALIDATING_FAIL",
+      "check_ids": [
+        "P43.reproduction.phase42_local_source_controls",
+        "P43.reference.independent_symbolic_and_precision_agreement",
+        "P43.reference.same_step_and_small_step_R4",
+        "P43.arbitration.source_RHS_implementation",
+        "P43.arbitration.phase42_stable_violations",
+        "P43.classification.complete_nonexclusive_local_ledger"
+      ]
+    },
+    {
+      "id": "scope:p43-ninety-frozen-local-m4-state-direction-slots",
+      "type": "scope",
+      "title": "P43 ninety-slot frozen local m=4 derivative arbitration",
+      "summary": "A post-result local algebra and real-direction differentiation audit at three immutable Phase-42 points, five fixed fractions, and six fixed directions per fraction, using exact binary64-ratio lifts, independently rebuilt symbolic derivatives, 80/120-decimal evaluation, unchanged Phase-42 steps, and one fixed prospective small-step ladder.",
+      "state": "ACTIVE",
+      "includes": [
+        "all 90 fixed xi,q slots from shared_zero, phi_plus, and a_plus with no favorable subsampling",
+        "all 33 disclosed Phase-42 reference-stable threshold violations as a frozen negative-control cohort",
+        "independent exact-rational Hessian and direct-gradient directional paths with 80/120-decimal precision controls",
+        "both fixed unchanged-step normalization modes and every predeclared prospective h value",
+        "byte-pinned Phase-41 NumPy64 source-output reproduction and uniform 5e-13 source-to-reference arbitration",
+        "complete tri-state slot, point, and global-local ledgers with no forced unique cause"
+      ],
+      "excludes": [
+        "proof that the independently rebuilt finite action is physically correct or that the stored states and directions approximate an exact trajectory",
+        "proof that a symbolic formula is wrong, one unique source-code defect exists, or one unique cause explains the Phase-42 anomalies",
+        "the unarchived report-time source-expression comparison as Phase-43 production evidence",
+        "a root, saddle, least-squares, ODE, dense-output, chart-transport, integrated-tangent, solver-noise, or time-column evaluation",
+        "a new reference tangent, local orientation, determinant sign, metric homotopy, or common determinant line",
+        "an exact nonlinear complete upward manifold, continuous branch, root/component census, Stokes chamber, or classified good ends",
+        "a physical original regulated cycle, bounded-chain signed sum, complete global signed vector, global n_sigma, cutoff or continuum limit, BFV/Pfaffian/Pin orientation, SUSY claim, cosmological prediction, or quantum-gravity explanation"
+      ]
+    },
+    {
+      "id": "artifact:p43-input-manifest",
+      "type": "artifact",
+      "title": "Phase 43 frozen local RHS arbitration input manifest",
+      "summary": "Post-Phase-42 diagnostic freeze for all 90 local state-and-direction slots. It fixes the independent symbolic model, exact binary64 lifting, 80/120-decimal and finite-difference ladders, uniform thresholds, all-slot and all-33 quantifiers, tri-state nonexclusive classifier, full retention, and fail-closed outputs. It discloses a precommit design pilot, supplies no desired result, and is neither preregistration nor scientific evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json",
+      "sha256": "de2c8c130e1aae6b6b93ee4c3d1137357067f9ddd5e8c68916037f2ffc325b39",
+      "introduced_in_commit": "91a15d9a8d0c000e1ce7c7d8d83f399b600cff55"
+    },
+    {
+      "id": "artifact:p43-script",
+      "type": "artifact",
+      "title": "Phase 43 high-precision local RHS arbitration executable",
+      "summary": "Committed 13,606-slot runner with seven exact and six typed numerical contracts for Phase-42 state rehydration, independent exact symbolic derivatives, 80/120-decimal fixed-step controls, source-output and disclosed-anomaly arbitration, complete nonexclusive classification, strict provenance, and global fail-closed guards.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+      "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729",
+      "introduced_in_commit": "4aa3887cec14816c92ff8635d2cac703d4661d37"
+    },
+    {
+      "id": "artifact:p43-raw-result",
+      "type": "artifact",
+      "title": "Phase 43 full raw result",
+      "summary": "The complete 50,974,375-byte compact result artifact captured from the committed runner: seven exact PASS records, four numerical PASS records, two complete non-invalidating typed non-PASS records, all 13,606 terminal slots, all 90 reference and source arbitration records, all 33 disclosed anomaly classifications, provenance, sixteen false prerequisites, six null global outputs, seven null desired outputs, and Gate 1 open.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json",
+      "sha256": "20c967ff968541402c81d5ab91394820bffd15cdd79052ee9e162cb5f39c2bd8",
+      "introduced_in_commit": "11a8cfd7910f6b016b4dbceefd839bf6ac093f03"
+    },
+    {
+      "id": "artifact:p43-report",
+      "type": "artifact",
+      "title": "Phase 43 report",
+      "summary": "Human-readable frozen-scope provenance, exact and typed numerical ledger, independent 90/90 high-precision reference, 13/90 operational NumPy64 mismatch table, 28/33 same-step finite-difference arbitration, five all-33 exceptions, strict interpretation boundaries, complete Gate-1 fail-closed ledger, and a scoped Phase-44 arithmetic-provenance next calculation. The unarchived report-time expression audit is explicitly excluded from Phase-43 production evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md",
+      "sha256": "f1ef60f9e9ac97dbfb9ad7963c12363e4bbd8f90d69b28e4f4209ea04f16ac66",
+      "introduced_in_commit": "6042fe47e746b4316babe86226a322dea46faf47"
+    },
+    {
+      "id": "artifact:p43-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 43 evidence snapshot",
+      "summary": "Compact typed extract of the full raw result preserving all seven exact and six numerical contract IDs, mapped schema statuses, 90/90 reference corroboration, all thirteen source-mismatch coordinates, the 28/33 finite-difference ledger and five exceptions, local-only exclusions, sixteen false prerequisites, six null global outputs, seven null desired outputs, and Gate 1 open. The separately pinned raw result remains the byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase43-result.json",
+      "sha256": "4b76f02e6cc570612092fe038b92a1c5ea09851a8c1a45a91aa93e15443eb011"
     }
   ],
   "edges": [
@@ -17855,6 +18031,301 @@
     {
       "id": "edge:1669",
       "from": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1670",
+      "from": "phase:p43",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1671",
+      "from": "phase:p43",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p42"
+    },
+    {
+      "id": "edge:1672",
+      "from": "artifact:p43-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1673",
+      "from": "artifact:p43-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1674",
+      "from": "artifact:p43-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1675",
+      "from": "artifact:p43-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1676",
+      "from": "artifact:p43-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1677",
+      "from": "artifact:p43-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-raw-result"
+    },
+    {
+      "id": "edge:1678",
+      "from": "artifact:p43-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-fixed-root-checkpoint"
+    },
+    {
+      "id": "edge:1679",
+      "from": "artifact:p43-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p43-input-manifest"
+    },
+    {
+      "id": "edge:1680",
+      "from": "artifact:p43-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-raw-result"
+    },
+    {
+      "id": "edge:1681",
+      "from": "artifact:p43-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:1682",
+      "from": "artifact:p43-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p43-script"
+    },
+    {
+      "id": "edge:1683",
+      "from": "artifact:p43-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p43-raw-result"
+    },
+    {
+      "id": "edge:1684",
+      "from": "artifact:p43-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p43-raw-result"
+    },
+    {
+      "id": "edge:1685",
+      "from": "evidence:p43-exact-freeze-symbolic-retention-and-global-guards",
+      "relation": "PART_OF",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1686",
+      "from": "evidence:p43-exact-freeze-symbolic-retention-and-global-guards",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p43-script"
+    },
+    {
+      "id": "edge:1687",
+      "from": "evidence:p43-exact-freeze-symbolic-retention-and-global-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p43-evidence-snapshot"
+    },
+    {
+      "id": "edge:1688",
+      "from": "evidence:p43-exact-freeze-symbolic-retention-and-global-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p43-raw-result"
+    },
+    {
+      "id": "edge:1689",
+      "from": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "relation": "PART_OF",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1690",
+      "from": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p43-script"
+    },
+    {
+      "id": "edge:1691",
+      "from": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p43-evidence-snapshot"
+    },
+    {
+      "id": "edge:1692",
+      "from": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p43-raw-result"
+    },
+    {
+      "id": "edge:1693",
+      "from": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "relation": "PART_OF",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1694",
+      "from": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p43-ninety-frozen-local-m4-state-direction-slots"
+    },
+    {
+      "id": "edge:1695",
+      "from": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p43-report"
+    },
+    {
+      "id": "edge:1696",
+      "from": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "relation": "PART_OF",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1697",
+      "from": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p43-ninety-frozen-local-m4-state-direction-slots"
+    },
+    {
+      "id": "edge:1698",
+      "from": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p43-report"
+    },
+    {
+      "id": "edge:1699",
+      "from": "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "relation": "PART_OF",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1700",
+      "from": "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p43-ninety-frozen-local-m4-state-direction-slots"
+    },
+    {
+      "id": "edge:1701",
+      "from": "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p43-report"
+    },
+    {
+      "id": "edge:1702",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1703",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p43-ninety-frozen-local-m4-state-direction-slots"
+    },
+    {
+      "id": "edge:1704",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p43-report"
+    },
+    {
+      "id": "edge:1705",
+      "from": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p43-exact-freeze-symbolic-retention-and-global-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1706",
+      "from": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1707",
+      "from": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1708",
+      "from": "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:1709",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p43-exact-freeze-symbolic-retention-and-global-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1710",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p43-numerical-high-precision-local-rhs-arbitration",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1711",
+      "from": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG"
+    },
+    {
+      "id": "edge:1712",
+      "from": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG"
+    },
+    {
+      "id": "edge:1713",
+      "from": "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG"
+    },
+    {
+      "id": "edge:1714",
+      "from": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
+      "note": "The frozen rules are nonexclusive: operational NumPy64 mismatch is supported at thirteen all-slot locations, while finite-difference evidence is separately supported at twenty-eight disclosed anomalies. Neither ledger selects one unique cause, and the failed all-33 sufficient claim is not a universal negation."
+    },
+    {
+      "id": "edge:1715",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED"
+    },
+    {
+      "id": "edge:1716",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1717",
+      "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
       "relation": "MOTIVATES",
       "to": "open:gate1-original-cycle-signed-global-intersections"
     }

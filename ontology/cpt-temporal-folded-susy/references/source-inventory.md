@@ -132,6 +132,7 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 40 frozen \(m=3\) rank-one odd-response and local R10 pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing inherited through the still-open Gate 1; none supplies the three-midpoint action, rank-one phi source, odd response, fixed-mobility/launch-ellipsoid construction, five sampled local R10 signs, local clamp, or global completion. No new literature source is introduced by Phase 40 |
 | Phase 41 frozen \(m=4\) two-source and local R14 pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing; none supplies the four-midpoint action, two-source response, five local R14 candidates, repairs the failed tangent contract, identifies a cross-cutoff determinant line, or licenses global completion. No new literature source is introduced by Phase 41 |
 | Phase 42 fixed-root tangent disentanglement | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none arbitrates the repository's solver-noise/step-pair diagnostics, local Hessian-action anomaly, endpoint time-column comparison, or sufficient normalized local-matrix homotopy. No new literature source is introduced by Phase 42 |
+| Phase 43 frozen local high-precision RHS arbitration | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none supplies the repository's independent exact/80/120-decimal derivative calculation, chooses its numerical thresholds, explains the 13/90 NumPy64 output mismatches or 28/33 finite-difference ledger, proves a formula defect, or promotes local arithmetic to an integrated tangent or global intersection invariant. No new literature source is introduced by Phase 43 |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -377,5 +378,19 @@ the frozen neighbor-stability threshold, so the all-column reference tangent rem
 Exactly 16 global-completion prerequisites remain false and 6 promoted outputs remain null. No new
 source node or literature edge was added; Gate 1 remains open and all global, continuum,
 BFV/Pfaffian/Pin, SUSY, and quantum-gravity promotions remain unlicensed.
+
+Phase 43 likewise adds no source-derived physics claim. Its exact binary64-ratio lifts, independently
+rebuilt four-element action, direct-gradient directional identity, 80/120-decimal evaluation,
+unchanged-step and prospective finite-difference ladders, uniform source threshold, 90-slot
+implementation ledger, and all-33 anomaly quantifier are repository calculations. The inherited
+relative-cycle and lapse-contour sources do not corroborate the local derivative reference, diagnose
+the 13 NumPy64 output flags, assign a formula error or unique code defect, explain the five exceptions
+to the all-33 sufficient finite-difference claim, or choose an arithmetic remediation. They also do not
+turn frozen local algebra into an integrated tangent, ODE solver-noise result, local orientation,
+determinant line, original regulated cycle, or global Picard--Lefschetz coefficient. Exactly 16
+global-completion prerequisites remain false, 6 global outputs and 7 desired outputs remain null, and
+the Phase-42 reference tangent remains inconclusive. No new source node or literature edge was added;
+Gate 1 remains open and all global, continuum, BFV/Pfaffian/Pin, SUSY, and quantum-gravity promotions
+remain unlicensed.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

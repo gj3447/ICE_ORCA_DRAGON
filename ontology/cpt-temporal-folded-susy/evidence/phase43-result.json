@@ -1,0 +1,337 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_20260820",
+  "phase": "P43",
+  "observed_at_utc": "2026-08-20T23:31:27Z",
+  "command": ".venv/bin/python cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+    "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729",
+    "introduced_in_commit": "4aa3887cec14816c92ff8635d2cac703d4661d37"
+  },
+  "exact_checks": 7,
+  "checks": [
+    {
+      "id": "P43.freeze.committed_artifacts_runner_and_environment",
+      "statement": "The manifest-to-runner-to-result order holds; the committed runner is tracked, clean, latest-blob-identical, ancestor-bound, and all artifact, source, lock, HEAD, runtime, pycache, and start/end TOCTOU pins match exactly.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.input.strict_phase42_state_identity",
+      "statement": "Strict JSON, outer/self hashes, schemas, statuses, all checkpoint array hashes, all six Phase-42 frozen trajectory array hashes, all six canonical subtree hashes, exact label/fraction/direction sets, terminal statuses, q duplicate identities, and disclosed 29/29/29 stable plus 12/11/10 violation counts pass without trusting stored pass booleans.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.scope.local_only_no_solver_or_time_column",
+      "statement": "The runner consumes the frozen xi,q arrays directly, calls no root/least-squares/ODE/dense-output/chart transport or integration routine, evaluates no time-column comparison, performs no state reconstruction or retuning, and retains INTEGRATED_TANGENT_EVOLUTION=NOT_TESTED_LOCAL_ONLY.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.symbolic.independent_action_and_directional_identity",
+      "statement": "The exact-rational four-element action is independently rebuilt; gradient/Hessian symmetry and direct real-epsilon directional identities pass exactly; the reference call-denylist and no-machine-float expression-tree audit pass.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.math.binary64_lift_precision_ladders_and_metrics",
+      "statement": "Exact binary64-ratio lifting, signed-zero retention, 80/120 workdps isolation, both fixed finite-difference ladders, R4 formulas, norm floor, decimal thresholds, no-float serialization, and no-skipping quantifiers equal this manifest.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.retention.complete_slot_and_classification_schema",
+      "statement": "Every predeclared source, symbolic, precision, endpoint, D2, R4, metric, slot-classification, point-aggregate, and global-local aggregate record is terminal exactly once; exceptions and nonfinite values are typed; the full raw artifact is retained before prose or graph updates.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.guard.fail_closed_gate1_and_null_outputs",
+      "statement": "All desired outputs remain null, the sixteen promoted prerequisites remain false, the six global outputs remain null, Phase 41 remains 8/9, Phase 42 remains inconclusive, global promotion remains prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 6,
+  "numerical": [
+    {
+      "id": "P43.reproduction.phase42_local_source_controls",
+      "statement": "At all ninety frozen slots the imported byte-pinned source reproduces stored Phase-42 analytic Hessian actions and the exact old-step D2/R4 controls within 5e-15 maximum absolute component error, and reproduces the disclosed stable/violation ledgers exactly.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.reference.independent_symbolic_and_precision_agreement",
+      "statement": "At all ninety slots the independent Hessian action and independently differentiated gradient action agree within 1e-50, their 80/120 evaluations agree within 1e-50, and the independently rebuilt 50-digit source-rounding control versus exact-decimal model difference remains within 1e-40.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.reference.same_step_and_small_step_R4",
+      "statement": "At all ninety slots the 120-dps R4 in both fixed normalization modes using the unchanged Phase-42 step sizes agrees with the symbolic reference within 1e-12, the preselected native-mpmath 1e-12 primary R4 agrees within 1e-30, and both fixed small-step neighbors satisfy the 1e-28 stability threshold; every declared mode and h at both precisions survives and is retained.",
+      "status": "PASS"
+    },
+    {
+      "id": "P43.arbitration.source_RHS_implementation",
+      "statement": "Every one of ninety slots has complete separate reference-corroboration and local-RHS-implementation-mismatch tri-states under the frozen rules; PASS means all ninety complete source NumPy64 Hessian actions agree with corroborated high-precision references within 5e-13.",
+      "status": "FAIL"
+    },
+    {
+      "id": "P43.arbitration.phase42_stable_violations",
+      "statement": "All 33 disclosed Phase-42 stable-violation slots have complete same-step binary64-versus-high-precision arbitration records; PASS means all 33 support the fixed DOUBLE_PRECISION_LOCAL_FD_ARTIFACT rule without changing their xi, q, epsilon values, or threshold.",
+      "status": "FAIL"
+    },
+    {
+      "id": "P43.classification.complete_nonexclusive_local_ledger",
+      "statement": "All slot, point, and global-local completion/evidence records are present, cite exact metric paths, retain non-anomaly and unstable slots, do not force a unique cause, and leave integrated tangent evolution explicitly untested.",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 7,
+    "numerical_checks": 6,
+    "calculation": "m=4 frozen-state high-precision local RHS arbitration",
+    "run_status": "VALID_TYPED_RUN",
+    "raw_numerical_status_counts": {
+      "PASS": 4,
+      "LOCAL_RHS_IMPLEMENTATION_MISMATCH_OR_INCONCLUSIVE": 1,
+      "PHASE42_LOCAL_ANOMALY_MIXED_OR_INCONCLUSIVE": 1
+    },
+    "raw_numerical_status_by_id": {
+      "P43.reproduction.phase42_local_source_controls": "PASS",
+      "P43.reference.independent_symbolic_and_precision_agreement": "PASS",
+      "P43.reference.same_step_and_small_step_R4": "PASS",
+      "P43.arbitration.source_RHS_implementation": "LOCAL_RHS_IMPLEMENTATION_MISMATCH_OR_INCONCLUSIVE",
+      "P43.arbitration.phase42_stable_violations": "PHASE42_LOCAL_ANOMALY_MIXED_OR_INCONCLUSIVE",
+      "P43.classification.complete_nonexclusive_local_ledger": "PASS"
+    },
+    "schema_status_mapping": {
+      "LOCAL_RHS_IMPLEMENTATION_MISMATCH_OR_INCONCLUSIVE": "FAIL",
+      "PHASE42_LOCAL_ANOMALY_MIXED_OR_INCONCLUSIVE": "FAIL",
+      "interpretation": "Both raw non-PASS records are complete, non-invalidating scientific threshold outcomes. Their repository evidence-schema status is FAIL because the stated universal PASS predicate is false; neither is an infrastructure failure or an invalid run."
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "full_raw_result_archived": true,
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json",
+      "raw_result_outer_sha256": "20c967ff968541402c81d5ab91394820bffd15cdd79052ee9e162cb5f39c2bd8",
+      "raw_result_payload_sha256_without_self": "2670f1117433c962b5d3cfe265293ad85a89571f6a06a13342471e11d8ca9fa0",
+      "raw_result_introduced_in_commit": "11a8cfd7910f6b016b4dbceefd839bf6ac093f03",
+      "raw_result_size_bytes": 50974375,
+      "observed_time_basis": "The raw runner payload contains no wall-clock field; observed_at_utc is the durable Git commit time of the byte-validated raw-result capture commit.",
+      "note": "This compact snapshot preserves all thirteen contract IDs, schema statuses and statements, the pointwise and global-local arbitration states, key frozen metrics, all thirteen mismatch coordinates, the local-only exclusions, and the complete fail-closed boundary. The byte-full numerical arrays and 13,606 terminal slot records remain authoritative in the separately hash-pinned raw result."
+    },
+    "frozen_inputs": {
+      "input_manifest": {
+        "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json",
+        "sha256": "de2c8c130e1aae6b6b93ee4c3d1137357067f9ddd5e8c68916037f2ffc325b39",
+        "introduced_in_commit": "91a15d9a8d0c000e1ce7c7d8d83f399b600cff55",
+        "status": "POST_RESULT_LOCAL_DIAGNOSTIC_INPUT_FREEZE",
+        "is_preregistration": false,
+        "is_scientific_evidence": false
+      },
+      "phase42_raw_result": {
+        "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json",
+        "sha256": "568e02cc8c4d730aba3a7a83febd3aa41cf14dfdb87b53950cc6fcc78c5bd013",
+        "introduced_in_commit": "d8c2fce3eb3e72a956a34776970c15642ed88047"
+      },
+      "phase42_checkpoint": {
+        "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+        "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+        "introduced_in_commit": "731579c37867a2041b65359bfc649be3b66900c7"
+      },
+      "desired_outputs_all_null": true,
+      "root_search_or_retuning_performed": false,
+      "known_precommit_design_pilot_is_production_evidence": false
+    },
+    "local_scope": {
+      "points": [
+        "shared_zero",
+        "phi_plus",
+        "a_plus"
+      ],
+      "fractions_per_point": 5,
+      "directions_per_fraction": 6,
+      "base_slots": 90,
+      "disclosed_phase42_stable_violation_slots": 33,
+      "noncohort_slots_retained_but_excluded_from_FD_claim": 57,
+      "root_solver_evaluations": 0,
+      "ODE_solver_evaluations": 0,
+      "integrated_tangent_evaluations": 0,
+      "time_column_evaluated": false,
+      "new_reference_tangent_or_orientation_calculation": false,
+      "global_promotion": "PROHIBITED"
+    },
+    "retention_ledger": {
+      "declared_slots": 13606,
+      "terminal_slots": 13606,
+      "terminal_status": "SUCCESS",
+      "base_slots": 90,
+      "source_pipeline_slots": 1170,
+      "independent_analytic_reference_slots": 540,
+      "same_step_slots": 3960,
+      "prospective_slots": 7560,
+      "classification_slots": 270,
+      "point_and_global_aggregate_slots": 14,
+      "symbolic_model_and_boundary_slots": 2,
+      "start_end_HEAD_source_runner_runtime_worktree_pycache_equal": true
+    },
+    "frozen_thresholds": {
+      "phase42_source_vector_reproduction_max_abs": "5e-15",
+      "source_rounding_control_vs_independent_exact_decimal_relative_max": "1e-40",
+      "symbolic_hessian_vs_gradient_directional_relative_max": "1e-50",
+      "80_vs_120_precision_stability_relative_max": "1e-50",
+      "same_step_high_precision_R4_to_symbolic_relative_max": "1e-12",
+      "small_step_primary_R4_to_symbolic_relative_max": "1e-30",
+      "small_step_reference_neighbor_relative_max": "1e-28",
+      "source_numpy64_hessian_action_to_high_precision_relative_max": "5e-13",
+      "phase42_stable_violation_threshold_reproduced": "1e-7",
+      "phase42_reference_stability_threshold_reproduced": "1e-6"
+    },
+    "independent_reference": {
+      "status": "CORROBORATED",
+      "corroborated_slots": 90,
+      "total_slots": 90,
+      "exact_action_rebuilt_without_phase41_import": true,
+      "reference_backend": "SymPy lambdify modules='mpmath'",
+      "precision_dps": [
+        80,
+        120
+      ],
+      "largest_normwise_controls": {
+        "hessian_vs_direct_gradient_80_dps": "4.47104e-77",
+        "hessian_vs_direct_gradient_120_dps": "8.29849e-117",
+        "hessian_80_vs_120_dps": "3.48408e-77",
+        "direct_gradient_80_vs_120_dps": "5.94033e-77",
+        "rounding_control_80_vs_120_dps": "6.38981e-77",
+        "exact_decimal_vs_50_digit_coefficient_rounding": "3.39838e-47",
+        "same_step_R4_lifted_binary64_geometry": "1.45777e-16",
+        "same_step_R4_native_mpmath_geometry": "4.62718e-20",
+        "prospective_primary_h_1e-12": "2.89199e-49",
+        "prospective_neighbor_stability": "2.89199e-41"
+      },
+      "componentwise_cancellation_warning": "The largest retained exact-versus-rounding componentwise diagnostic is 7.42360e-37. It is not an acceptance-metric failure, but conditioning and cancellation remain unresolved."
+    },
+    "source_RHS_arbitration": {
+      "aggregate_evidence": "SUPPORTED",
+      "protocol_interpretation": "At thirteen frozen slots the byte-pinned Phase-41 NumPy64 Hessian-action output exceeds the uniform 5e-13 normwise threshold against the corroborated high-precision reference. This operational mismatch is not proof of a wrong symbolic formula, an integrated tangent bug, one unique code defect, or one unique cause.",
+      "supported_slots": 13,
+      "not_supported_slots": 77,
+      "inconclusive_slots": 0,
+      "point_counts": {
+        "shared_zero": {
+          "supported": 5,
+          "not_supported": 25
+        },
+        "phi_plus": {
+          "supported": 3,
+          "not_supported": 27
+        },
+        "a_plus": {
+          "supported": 5,
+          "not_supported": 25
+        }
+      },
+      "supported_slot_coordinates": [
+        "shared_zero|fraction=0.5|direction=2|phase42_anomaly=true",
+        "shared_zero|fraction=0.75|direction=2|phase42_anomaly=true",
+        "shared_zero|fraction=1|direction=2|phase42_anomaly=true",
+        "shared_zero|fraction=1|direction=3|phase42_anomaly=false",
+        "shared_zero|fraction=1|direction=5|phase42_anomaly=false",
+        "phi_plus|fraction=1|direction=2|phase42_anomaly=false",
+        "phi_plus|fraction=1|direction=3|phase42_anomaly=false",
+        "phi_plus|fraction=1|direction=5|phase42_anomaly=false",
+        "a_plus|fraction=0.25|direction=2|phase42_anomaly=true",
+        "a_plus|fraction=0.75|direction=2|phase42_anomaly=true",
+        "a_plus|fraction=1|direction=2|phase42_anomaly=false",
+        "a_plus|fraction=1|direction=3|phase42_anomaly=false",
+        "a_plus|fraction=1|direction=5|phase42_anomaly=false"
+      ],
+      "supported_relative_error_range": {
+        "minimum": "5.7659377619134509356e-13",
+        "maximum": "3.5565012563170942547e-12"
+      },
+      "report_time_source_expression_audit_is_production_evidence": false
+    },
+    "phase42_anomaly_FD_arbitration": {
+      "aggregate_evidence": "NOT_SUPPORTED",
+      "aggregate_quantifier": "SUPPORTED only if all 33 disclosed stable-violation slots are complete and SUPPORTED; all 33 are complete, but five are NOT_SUPPORTED.",
+      "supported_slots": 28,
+      "not_supported_slots": 5,
+      "inconclusive_slots": 0,
+      "point_counts": {
+        "shared_zero": {
+          "disclosed": 12,
+          "supported": 9,
+          "not_supported": 3,
+          "point_evidence": "NOT_SUPPORTED"
+        },
+        "phi_plus": {
+          "disclosed": 11,
+          "supported": 11,
+          "not_supported": 0,
+          "point_evidence": "SUPPORTED"
+        },
+        "a_plus": {
+          "disclosed": 10,
+          "supported": 8,
+          "not_supported": 2,
+          "point_evidence": "NOT_SUPPORTED"
+        }
+      },
+      "five_not_supported_slots": [
+        "shared_zero|fraction=0.5|direction=2",
+        "shared_zero|fraction=0.75|direction=2",
+        "shared_zero|fraction=1|direction=2",
+        "a_plus|fraction=0.25|direction=2",
+        "a_plus|fraction=0.75|direction=2"
+      ],
+      "interpretation": "The failed all-33 sufficient claim is not proof that binary64 finite-difference arithmetic contributed to none of the anomalies. Each of the five exceptions fails only because the source/reference threshold is crossed; its old finite-difference discrepancy is at least 2.02e5 times larger than that source discrepancy, so source mismatch magnitude alone does not explain the old anomaly."
+    },
+    "claim_status": {
+      "independent_high_precision_reference": "CORROBORATED",
+      "local_RHS_implementation_mismatch_evidence": "SUPPORTED",
+      "double_precision_local_FD_artifact_for_phase42_anomalies": "NOT_SUPPORTED",
+      "phase43_local_arbitration": "LOCAL_RHS_IMPLEMENTATION_MISMATCH_SUPPORTED",
+      "integrated_tangent_evolution": "NOT_TESTED_LOCAL_ONLY",
+      "ODE_solver_noise_component": "NOT_TESTED_LOCAL_ONLY",
+      "time_column_as_independent_bug_evidence": "EXCLUDED",
+      "phase42_reference_tangent": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+      "phase41_historical_status": "TANGENT_CONTROL_FAILED",
+      "phase41_numerical_contracts": "8/9",
+      "no_forced_unique_cause": true,
+      "scope": "ninety frozen local m=4 state-and-direction slots only",
+      "global_promotion": "PROHIBITED"
+    },
+    "completion_ledger": {
+      "m2_and_m4_actions_identified": false,
+      "m2_and_m4_upward_cycles_identified": false,
+      "m2_and_m4_common_determinant_line_constructed": false,
+      "m3_and_m4_canonical_sign_equality_proved": false,
+      "m3_and_m4_common_determinant_line_constructed": false,
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "continuous_direction_coverage_proved": false,
+      "root_exhaustion_proved": false,
+      "exact_nonlinear_upward_manifold_certified": false,
+      "all_saddles_and_upward_components_complete": false,
+      "non_Stokes_chamber_certified": false,
+      "all_relative_good_ends_classified": false,
+      "physical_original_cycle_derived": false,
+      "metric_homotopy_tested": false,
+      "BFV_Pfaffian_Pin_orientation_computed": false,
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "quantum_gravity_explanation": null,
+      "desired_phase43_local_arbitration": null,
+      "desired_local_RHS_implementation_verdict": null,
+      "desired_double_precision_FD_verdict": null,
+      "desired_integrated_tangent_verdict": null,
+      "desired_reference_corroboration": null,
+      "desired_local_orientation_sign": null,
+      "desired_global_intersection_coefficient": null,
+      "false_count": 16,
+      "global_null_count": 6,
+      "desired_null_count": 7,
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    }
+  }
+}

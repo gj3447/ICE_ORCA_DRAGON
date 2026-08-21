@@ -8,15 +8,19 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–42 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–43 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T21:35:41Z` graph update, the collection has 594 nodes and
-1669 edges. Validation verifies 97/97 stored hashes (93 artifacts and 4 policies). The
-Phase 16–42 run snapshots contain 418 named exact checks, all `PASS`, and 246 typed numerical-ledger
-checks: 243 `PASS`, two `FAIL`, and one `INCONCLUSIVE`. The added Phase-42 non-PASS records preserve
-one protocol-defined local identity non-support result as `FAIL` and one derivative-reference result as
-`INCONCLUSIVE`; neither invalidates the zero-exit typed run. One legacy separately recorded Phase-18
-numerical control brings the numerical-record total to 247 (244 pass, two fail, one inconclusive). These
+At the recorded `2026-08-20T23:31:27Z` graph update, the collection has 607 nodes and
+1717 edges. Validation verifies 102/102 stored hashes (98 artifacts and 4 policies). The
+Phase 16–43 run snapshots contain 425 named exact checks, all `PASS`, and 252 typed numerical-ledger
+checks: 247 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
+identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
+adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
+NumPy64 outputs cross the frozen source threshold, and only 28/33 disclosed anomalies satisfy the
+finite-difference rule, so its all-33 predicate fails. None of these typed non-PASS records invalidates
+its zero-exit run. One
+legacy separately recorded Phase-18 numerical control brings the numerical-record total to 253 (248
+pass, four fail, one inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -63,6 +67,10 @@ confidence.
 ./ice ontology trace claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG --depth 2
 ./ice ontology trace claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN --depth 2
 ./ice ontology trace claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED --depth 2
+./ice ontology trace claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS --depth 2
+./ice ontology trace claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT --depth 2
+./ice ontology trace claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES --depth 2
+./ice ontology trace claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -134,6 +142,16 @@ sufficient normalized local matrix homotopy preserves sign `-1` at all three poi
 reference tangent therefore remains inconclusive; Phase 41 stays 8/9, sixteen prerequisites remain
 false, six promoted outputs remain null, and Gate 1 remains open.
 
+Phase 43 recursively audits the local derivative layer without rerunning a root or tangent ODE. Its
+independently rebuilt exact and 80/120-decimal reference is corroborated at all 90 frozen slots. The
+byte-pinned NumPy64 Hessian-action output crosses the uniform `5e-13` normwise threshold at 13/90
+slots, which supports an operational pipeline mismatch but not a wrong formula, unique code defect, or
+unique cause. The fixed same-step binary64 finite-difference rule is supported at 28/33 disclosed
+Phase-42 anomalies, but five complete exceptions contradict the frozen all-33 sufficient claim. No
+integrated tangent, ODE solver-noise, time-column, reference-tangent, local orientation, determinant,
+or global-cycle result is added. Phase 41 stays 8/9, Phase 42 stays inconclusive, sixteen prerequisites
+remain false, six global outputs and seven desired outputs remain null, and Gate 1 remains open.
+
 ## How to read a claim
 
 Follow a claim in this order:
@@ -152,7 +170,10 @@ physical proposition. In Phase 41 the tangent-control `FAIL` leaves the stronger
 outputs inconclusive while the separately accepted local-root claim remains supported. In Phase 42 one
 typed `FAIL` records a local numerical identity that is not supported and one `INCONCLUSIVE` preserves
 an unstable derivative reference; neither is a failed run or proof of a software defect. Conversely, a
-passing counterexample check can attach to a claim with `polarity: CONTRADICTS`.
+passing counterexample check can attach to a claim with `polarity: CONTRADICTS`. In Phase 43 the two
+schema-level `FAIL` records are complete, non-invalidating failures of universal sufficient predicates:
+they preserve the 13/90 source-mismatch and 28/33 finite-difference outcomes without calling the run
+invalid or converting a failed all-33 claim into evidence that finite-difference error is absent.
 
 ## Identifier families
 
