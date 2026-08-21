@@ -1,0 +1,98 @@
+{
+  "schema": "ice-phase46-u2-state-map-fd-audit-inputs/v1",
+  "phase": 46,
+  "frozen_at_utc": "2026-08-21T00:00:00Z",
+  "scope": {
+    "question": "At the three existing Phase-42 fixed roots, does the historical u2 finite-difference plateau failure persist when the state map is recomputed with tighter source solvers and an independently reconstructed high-precision local RHS?",
+    "calculation_workbench_only": true,
+    "targets_in_order": ["shared_zero", "phi_plus", "a_plus"],
+    "parameter_index": 8,
+    "parameter_name": "u2",
+    "root_search": false,
+    "parameter_retuning": false,
+    "orientation_selection": false,
+    "determinant_line": false,
+    "global_cycle_or_intersection": false
+  },
+  "pinned_inputs": {
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6"
+    },
+    "phase42_result": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json",
+      "commit": "d8c2fce3eb3e72a956a34776970c15642ed88047",
+      "sha256": "568e02cc8c4d730aba3a7a83febd3aa41cf14dfdb87b53950cc6fcc78c5bd013"
+    },
+    "phase41_source": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530"
+    },
+    "independent_reference_source": {
+      "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+      "commit": "4aa3887cec14816c92ff8635d2cac703d4661d37",
+      "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729"
+    },
+    "phase45_result": {
+      "path": "cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json",
+      "commit": "6831c80c585eb64be3a40fb61a55c6b4a9dab8c5",
+      "sha256": "b2be69bd38cbbc22425b926de830c5750fa7ae99b00830e828a528cc491a12d5"
+    },
+    "phase45_source": {
+      "path": "cpt_temporal_folded_susy/phase45_m4_integrated_tangent_rhs_stability.py",
+      "commit": "8657bb65651149dce0c00ad32c46544e68315562",
+      "sha256": "e562314282ccf58be0c39aebc2b5a07c0c8bb818ae739f24ace6cad6a8f915b2"
+    }
+  },
+  "fixed_numerics": {
+    "central_difference_steps_in_order": [2e-6, 5e-7, 1e-7],
+    "perturbation_signs_in_order": [1, -1],
+    "state_paths_in_order": [
+      "production_source_dop853",
+      "tight_source_dop853",
+      "tight_source_radau",
+      "independent_exact_80dps_dop853"
+    ],
+    "state_solvers": {
+      "production_source_dop853": {"method": "DOP853", "rtol": 2e-10, "atol": 2e-12, "max_step": 0.04},
+      "tight_source_dop853": {"method": "DOP853", "rtol": 2e-12, "atol": 2e-14, "max_step": 0.01},
+      "tight_source_radau": {"method": "Radau", "rtol": 5e-12, "atol": 5e-14, "max_step": 0.01},
+      "independent_exact_80dps_dop853": {"method": "DOP853", "rtol": 2e-12, "atol": 2e-14, "max_step": 0.01}
+    },
+    "launch_radius": 0.0001,
+    "independent_rhs_dps": 80,
+    "independent_precision_probe_dps": [50, 80],
+    "independent_geometry": "binary64 fixed saddle, linear map, and evolving state lifted exactly into mpmath; exact-decimal Phase-43 gradient evaluated at the named dps and rounded once to complex128",
+    "finite_difference_retention": "retain every declared sign and step; classify from the first adjacent pair and also report the full two-pair ladder; no step postselection"
+  },
+  "fixed_metrics_and_thresholds": {
+    "phase41_plateau_metric": "norm(D(h1)-D(h2))/max(norm(D(h1)),1e-30)",
+    "symmetric_relative": "norm(x-y)/max(norm(x),norm(y),1e-300)",
+    "historical_u2_plateau_reproduction_absolute_max": 5e-12,
+    "independent_50dps_to_80dps_rhs_probe_relative_max": 1e-12,
+    "tight_source_endpoint_to_independent_relative_max": 1e-8,
+    "radau_source_endpoint_to_independent_relative_max": 1e-8,
+    "tight_source_D2_to_independent_relative_max": 0.005,
+    "radau_source_D2_to_independent_relative_max": 0.005,
+    "independent_D2_to_phase45_tangent_column_relative_max": 0.005,
+    "stable_adjacent_step_relative_change_max": 0.02,
+    "historical_u2_plateau_failure_threshold": 0.02
+  },
+  "classification": {
+    "production_artifact": "the historical production first-pair plateau fails, the independently reconstructed full ladder passes, both tight source solvers agree with the independent endpoints and D2 columns, and independent D2 agrees with the Phase-45 independent tangent column",
+    "local_rhs_repair": "the independent full ladder passes and agrees with the Phase-45 independent tangent column, but at least one tight source solver disagrees with the independent endpoints or D2 column",
+    "inconclusive": "input identity, solver completion, independent precision probes, historical reproduction, independent ladder, or Phase-45 tangent comparison fails",
+    "production_artifact_label": "PRODUCTION_STATE_MAP_PLATEAU_ARTIFACT_SUPPORTED",
+    "local_rhs_repair_label": "LOCAL_FLOW_RHS_REPAIR_SUPPORTED",
+    "inconclusive_label": "U2_STATE_MAP_FD_AUDIT_INCONCLUSIVE"
+  },
+  "interpretation_boundary": {
+    "historical_phase41_contract_is_not_rewritten": true,
+    "a_numerical_plateau_repair_is_not_a_physics_claim": true,
+    "the_independent_rhs_is_local_numerical_evidence_only": true,
+    "global_promotion": "PROHIBITED",
+    "gate1_before_run": "OPEN_PARTIAL_PROGRESS"
+  }
+}
