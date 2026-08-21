@@ -1,0 +1,836 @@
+{
+  "phase": 44,
+  "title": "m=4 all-slot NumPy64 local-RHS forward-error decomposition",
+  "created_at_utc": "2026-08-20T23:39:18Z",
+  "frozen_at_utc": "2026-08-21T01:01:27Z",
+  "status": "PREREGISTERED_POST_PHASE43_DIAGNOSTIC_INPUT_FREEZE",
+  "is_preregistration": true,
+  "is_scientific_evidence": false,
+  "purpose": "At every one of the ninety frozen Phase-43 state-and-direction slots, decompose the already disclosed NumPy64 source-Hessian-action discrepancy into exact symbolic formula identity, source-coefficient formation, binary64 w-state formation, Hessian scalar-expression evaluation, and matrix/vector contraction stages. The thirteen Phase-43 threshold exceedances are a disclosed cohort, not a selected sample: the identical trace, telescoping, alternative-contraction, conditioning, forward-error-envelope, retention, and tri-state rules apply to all ninety slots. This local arithmetic audit does not evaluate a root, trajectory, ODE, time column, integrated tangent, orientation, determinant line, or global intersection.",
+  "epistemic_scope": {
+    "known_result_precedes_this_freeze": true,
+    "phase43_result_is_immutable_historical_input": "Phase 43 completed 7/7 exact and 4/6 numerical contracts in a VALID_TYPED_RUN, corroborated the independent 120-dps local reference at 90/90 slots, and reported 13/90 source NumPy64 actions above its fixed 5e-13 relative threshold.",
+    "new_result_scope": "Operation-level and stage-level local floating-point diagnostics for the exact same binary64 saddle, L, xi, and q operands and the exact same three source variants used in Phase 43.",
+    "all_ninety_slots_are_required": true,
+    "thirteen_mismatch_slots_are_disclosed_but_never_selected": true,
+    "seventy_seven_within_threshold_slots_are_required_negative_controls": true,
+    "no_slot_step_component_order_or_algorithm_may_be_selected_after_observation": true,
+    "formula_identity_rounding_contributions_and_unresolved_residual_are_separate_nonexclusive_claims": true,
+    "forward_error_coverage_is_compatibility_with_a_declared_model_not_proof_of_unique_cause": true,
+    "alternative_contraction_accuracy_is_diagnostic_not_a_replacement_production_implementation": true,
+    "not_a_root_or_saddle_search": true,
+    "not_an_ODE_or_tangent_reintegration": true,
+    "not_an_integrated_variational_evolution_test": true,
+    "time_column_evaluations": 0,
+    "not_a_new_reference_tangent_or_orientation_calculation": true,
+    "not_a_determinant_line_construction": true,
+    "not_a_bounded_or_global_intersection_calculation": true,
+    "not_a_cutoff_or_continuum_limit": true,
+    "no_physical_or_global_claim_may_be_promoted": true
+  },
+  "immutable_artifacts": {
+    "phase43_input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json",
+      "commit": "91a15d9a8d0c000e1ce7c7d8d83f399b600cff55",
+      "outer_file_sha256_including_final_LF": "de2c8c130e1aae6b6b93ee4c3d1137357067f9ddd5e8c68916037f2ffc325b39",
+      "size_bytes": 48018,
+      "verification_role": "Pins the equations, exact-decimal reference semantics, ninety-slot order, Phase-42 state provenance, and Phase-43 thresholds that this phase must reproduce without reinterpretation."
+    },
+    "phase43_runner": {
+      "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+      "commit": "4aa3887cec14816c92ff8635d2cac703d4661d37",
+      "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729",
+      "size_bytes": 219633,
+      "verification_role": "Pins the exact executed Phase-43 reference and source-boundary implementation. Phase 44 may independently reproduce declared equations but may not silently edit, monkeypatch, or substitute this historical runner."
+    },
+    "phase43_raw_result": {
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json",
+      "commit": "11a8cfd7910f6b016b4dbceefd839bf6ac093f03",
+      "outer_file_sha256_including_final_LF": "20c967ff968541402c81d5ab91394820bffd15cdd79052ee9e162cb5f39c2bd8",
+      "size_bytes": 50974375,
+      "schema": "ice-phase43-high-precision-local-rhs-arbitration/v1",
+      "result_payload_sha256_without_self": "2670f1117433c962b5d3cfe265293ad85a89571f6a06a13342471e11d8ca9fa0",
+      "run_status": "VALID_TYPED_RUN",
+      "exit_code": 0,
+      "canonical_subtree_pins": {
+        "base_outcomes_count": 90,
+        "base_outcomes_sha256": "552c0ce3a815b80f9dfba157f4e112ec581490314baad65492b86d875675ca8d",
+        "local_aggregation_sha256": "4b0713cbd3c2370c05807aade78d017258b53838f83a9cdd0b8206e226f897f4",
+        "numerical_records_sha256": "8533b9200bdf0c14d25cb3e6622a694faddcae871f37bfc1a2569fe81e2f3496",
+        "ninety_input_records_sha256": "0767248cf9225292a6335f9fcae63f580e591a0146db91f76f08c542bf9dc95c",
+        "ninety_source_analytic_records_sha256": "7af7a56f85c104b1f0a7c9e0601659e175f6cbb90c200f96b7b4ad1b6cd08116",
+        "ninety_reference_hessian_120_records_sha256": "fb8c7fc8b6e96420cfd71b54d8c7f8dca0cd142c4b628462c1279a76c3dc23f2",
+        "canonicalization": "json.dumps(sort_keys=True,separators=(',',':'),allow_nan=False) over the named subtree; slot-record collections are objects keyed by lexicographically sorted canonical slot key."
+      },
+      "verification_role": "Only source of the frozen ninety input records, stored source and 120-dps reference vectors, disclosed thirteen-slot cohort, and historical Phase-43 classifications."
+    },
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "outer_file_sha256_including_final_LF": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+      "size_bytes": 422981,
+      "schema": "ice-phase42-fixed-root-checkpoint/v1",
+      "checkpoint_payload_sha256_without_self": "e05c6cae4d34cf0bc7615a4801c7c96d163f974edc70d7f6d623102ee9dd63e2",
+      "verification_role": "Authoritative frozen binary64 saddle_w and real linear_map operands. No reconstructed metric or saddle is allowed."
+    },
+    "phase41_target_implementation": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530",
+      "size_bytes": 124534,
+      "verification_role": "Byte-pinned production NumPy64 symbolic-to-numeric callable and matrix-chain target. It is inspected and evaluated as the object under audit, never treated as the independent reference."
+    },
+    "phase41_input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "commit": "58181447b558fa204406b732badd5c2fd541bb47",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e",
+      "size_bytes": 37879
+    },
+    "dependency_locks": {
+      "pyproject": {
+        "path": "pyproject.toml",
+        "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+        "sha256": "ae68ad259121fb948c176b5b724db19c6f45ea48e8ad49d5b74a73e623067891",
+        "size_bytes": 312
+      },
+      "uv_lock": {
+        "path": "uv.lock",
+        "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+        "sha256": "8afebaf1d11eb0e31ee6398e4a88b2742acb887920a7ec12a5f3d581c1c99527",
+        "size_bytes": 9301
+      }
+    },
+    "drift_policy": "A missing file, strict-JSON failure, outer/self/subtree hash mismatch, schema/status/exit mismatch, source or lock drift, non-ancestor pin, runtime drift, dirty or untracked production runner, or start/end TOCTOU mismatch is INVALID_RUN with exit 2. No alternate result, reconstructed state, edited source, relaxed threshold, selected cohort-only run, or hand-transcribed operand is allowed."
+  },
+  "three_stage_commit_and_run_protocol": {
+    "stage_1_manifest": "Commit this manifest alone before the Phase-44 runner exists. This file intentionally contains no runner commit, runner hash, raw-result hash, observed Phase-44 value, or desired diagnosis.",
+    "stage_2_runner": "Implement and commit the runner after Stage 1. It must embed the committed manifest path, commit, and SHA-256. Production execution is forbidden until the runner is tracked, clean for its path, byte-identical to its latest committed blob, and its commit is an ancestor of HEAD.",
+    "stage_2_start_end_guard": "At numerical start retain the manifest, all immutable artifact and lock pins, runner path/SHA/latest commit/blob, HEAD, strict runtime, generated-callable source/code fingerprints, thread environment, and repository pycache snapshot. Immediately before RESULT_JSON recompute and require exact equality.",
+    "stage_3_raw_result": "Capture and strictly validate the complete RESULT_JSON outside the repository, then atomically add and commit it before any Phase-44 report, ontology evidence, general documentation, or Phase-45 input is written.",
+    "production_run_before_manifest_commit_forbidden": true,
+    "production_run_before_runner_commit_forbidden": true,
+    "report_graph_or_next_phase_before_raw_result_commit_forbidden": true,
+    "runner_binding_policy": "The future runner binds this manifest only after its Stage-1 commit. A dynamic input path, dirty runner, uncommitted implementation, or runner that changes its own trace specification is invalid."
+  },
+  "strict_json_and_binary64_decode": {
+    "duplicate_keys_rejected": true,
+    "NaN_Infinity_rejected": true,
+    "UTF8_and_exact_outer_bytes_required": true,
+    "single_final_LF_required_for_pinned_artifacts": true,
+    "self_digest_recomputed_after_removing_only_the_named_self_field": true,
+    "canonicalization": "json.dumps(sort_keys=True,separators=(',',':'),allow_nan=False) encoded as UTF-8 with no LF for self digests and canonical subtree pins.",
+    "complex_decode": "Allocate complex128 first and assign .real and .imag buffers separately; verify shape, finiteness, dtype, signed-zero metadata, and canonical little-endian C-order raw SHA-256 before use.",
+    "exact_binary64_lift": "Lift every finite nonzero Python or NumPy binary64 real component from as_integer_ratio numerator/denominator into an exact rational and then mpmath at 120 dps. Preserve signbit metadata for both zeros. Parsing the shortest JSON decimal or converting an mp value through float is forbidden.",
+    "stored_phase43_mp_decode": "Parse every stored Phase-43 arbitrary-precision string directly with mpmath inside workdps(120); JSON floating conversion is forbidden."
+  },
+  "strict_runtime_environment": {
+    "launch_executable": ".venv/bin/python",
+    "resolved_python_executable": "/usr/bin/python3.13",
+    "sys_dont_write_bytecode_required": true,
+    "repository_file_writes_allowed": false,
+    "source_and_environment_TOCTOU_recheck_before_RESULT_JSON": true,
+    "fingerprint": {
+      "python_implementation": "CPython",
+      "python_version": "3.13.5",
+      "python_build": [
+        "main",
+        "Jul 15 2026 20:25:40"
+      ],
+      "python_compiler": "GCC 14.2.0",
+      "numpy_version": "2.5.2",
+      "scipy_version": "1.18.0",
+      "sympy_version": "1.14.0",
+      "mpmath_version": "1.3.0",
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "machine": "x86_64",
+      "byteorder": "little",
+      "libc": [
+        "glibc",
+        "2.41"
+      ],
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null
+      }
+    },
+    "precision_protocol": "Every high-precision slot and trace replay runs inside a fresh mpmath.workdps(120) context. Global mp.dps leakage, adaptive precision, fallback precision, or float round-trip is invalid.",
+    "numpy_error_policy": "Use numpy.errstate(all='raise') around every audited source and alternative operation. Any overflow, divide-by-zero, invalid, underflow trap, nonfinite value, or subnormal-model ambiguity is retained and makes the affected scientific classification INCONCLUSIVE unless it prevents source reproduction, which is INVALID_RUN."
+  },
+  "frozen_slot_universe": {
+    "points_in_fixed_order": [
+      "shared_zero",
+      "phi_plus",
+      "a_plus"
+    ],
+    "flow_fractions_in_fixed_order": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75",
+      "1"
+    ],
+    "transported_direction_indices_in_fixed_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "slot_count": 90,
+    "evaluation_order": "point major, then flow-fraction order, then direction order exactly as listed; the disclosed mismatch label is joined only after all slot keys are preenumerated.",
+    "source_variants": {
+      "shared_zero": {
+        "delta_a": "0",
+        "delta_phi": "0"
+      },
+      "phi_plus": {
+        "delta_a": "0",
+        "delta_phi": "0.001"
+      },
+      "a_plus": {
+        "delta_a": "0.001",
+        "delta_phi": "0"
+      }
+    },
+    "input_record_path_template": "$.slot_ledger['input|point={point}|fraction={fraction}|direction={direction}']",
+    "source_record_path_template": "$.slot_ledger['source|point={point}|fraction={fraction}|direction={direction}|analytic']",
+    "reference_record_path_template": "$.slot_ledger['reference|point={point}|fraction={fraction}|direction={direction}|dps=120|method=hessian']",
+    "all_input_source_reference_records_must_be_SUCCESS": true,
+    "no_state_or_direction_reconstruction": "Use P43 input-record xi/q ratio and raw-byte identities plus the pinned checkpoint saddle_w/L arrays. Do not run solve_ivp, dense output, root, least_squares, chart transport, tangent transport, interpolation, or averaging."
+  },
+  "known_prior_results_and_audit_disclosure": {
+    "phase43_exact_and_numerical_contracts": "7/7 exact; 4/6 numerical",
+    "phase43_reference_corroboration": "90/90",
+    "phase43_source_reproduction": "90/90 byte-pinned source actions reproduced Phase 42 exactly; maximum absolute component difference 0.0.",
+    "phase43_source_threshold": "5e-13 symmetric relative",
+    "phase43_source_mismatch_count": 13,
+    "phase43_source_within_threshold_count": 77,
+    "mismatch_counts_by_point": {
+      "shared_zero": 5,
+      "phi_plus": 3,
+      "a_plus": 5
+    },
+    "all_thirteen_disclosed_mismatch_slots": [
+      {
+        "point": "shared_zero",
+        "fraction": "0.5",
+        "direction": 2,
+        "phase42_disclosed_anomaly": true,
+        "phase43_relative": "1.04582893155353895623789621365016512256655894153899506282664356926367434889166285711242674644625509722562037623459988845e-12"
+      },
+      {
+        "point": "shared_zero",
+        "fraction": "0.75",
+        "direction": 2,
+        "phase42_disclosed_anomaly": true,
+        "phase43_relative": "5.97026199347203292338907540273650704696297058502229411805128026386465041176457441453959354303487460561285688766132991838e-13"
+      },
+      {
+        "point": "shared_zero",
+        "fraction": "1",
+        "direction": 2,
+        "phase42_disclosed_anomaly": true,
+        "phase43_relative": "3.03896855778014366654231553867618804253501813187581456875787784555145201751973544521492729912080732868358648661968316328e-12"
+      },
+      {
+        "point": "shared_zero",
+        "fraction": "1",
+        "direction": 3,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "3.55650125631709425474296098766211699032840737737962907619678402100671579909910730719536967146366657703138011450007937537e-12"
+      },
+      {
+        "point": "shared_zero",
+        "fraction": "1",
+        "direction": 5,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "1.62760997609829800970570162569376718138691786075255497081380925771620004422298362507033590230786088808800076653628467620e-12"
+      },
+      {
+        "point": "phi_plus",
+        "fraction": "1",
+        "direction": 2,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "1.08037099001634852679499899889799422464988440442479622610881692605773417525277557961213377442462225848564045575656606846e-12"
+      },
+      {
+        "point": "phi_plus",
+        "fraction": "1",
+        "direction": 3,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "1.24734428508122175890554584746647930783975582945699310434382652877399545128996943733830920449600049004742785124651829029e-12"
+      },
+      {
+        "point": "phi_plus",
+        "fraction": "1",
+        "direction": 5,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "5.76593776191345093561772728809570998121686208547021639497090958005005686190723612794722025887545885433450293310321462934e-13"
+      },
+      {
+        "point": "a_plus",
+        "fraction": "0.25",
+        "direction": 2,
+        "phase42_disclosed_anomaly": true,
+        "phase43_relative": "1.01266464506949496451009217990568783624349724940474811589952770161730625607611775616850448591760490277123602965431597499e-12"
+      },
+      {
+        "point": "a_plus",
+        "fraction": "0.75",
+        "direction": 2,
+        "phase42_disclosed_anomaly": true,
+        "phase43_relative": "1.08038454148068356685126139898469410853675814215738828557846319020550504714550491643718241100453134673202900661770890195e-12"
+      },
+      {
+        "point": "a_plus",
+        "fraction": "1",
+        "direction": 2,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "1.72594595366415108559515029932639105024439810306869453486114993375901371690275703040674045892874018436494322323504691224e-12"
+      },
+      {
+        "point": "a_plus",
+        "fraction": "1",
+        "direction": 3,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "2.03466938986003422296174362275737512946165898949623558364876321143785659315893335184205788885046555495957476825897715369e-12"
+      },
+      {
+        "point": "a_plus",
+        "fraction": "1",
+        "direction": 5,
+        "phase42_disclosed_anomaly": false,
+        "phase43_relative": "9.28486264328944261438939261813355343974983677957891268453140432272545861481510334217687249893785332821632149638189662463e-13"
+      }
+    ],
+    "phase42_anomaly_overlap": {
+      "disclosed_anomaly_slots": 33,
+      "phase43_double_FD_supported": 28,
+      "phase43_double_FD_not_supported": 5,
+      "five_not_supported_slots_are_exactly_source_mismatch_slots": true
+    },
+    "observed_pattern_is_not_a_sampling_rule": "The thirteen known exceedances concentrate in directions 2, 3, and 5 and at later flow fractions, while five overlap the Phase-42 anomaly cohort. This is a retrospective observation only; it may not alter evaluation order, thresholds, formulas, contraction variants, or all-slot quantifiers.",
+    "phase43_precommit_pilot_disclosed": {
+      "not_phase43_or_phase44_evidence": true,
+      "coverage": "90/90 slots in two normalization modes",
+      "reported_120_dps_same_step_max_relative_native_mpmath_geometry": "4.6272e-20",
+      "reported_120_dps_same_step_max_relative_lifted_binary64_geometry": "1.4578e-16"
+    },
+    "phase44_precommit_numerical_pilot_performed": false,
+    "phase44_precommit_generated_callable_structural_audit": {
+      "scientific_slot_values_evaluated": 0,
+      "role": "The pinned Phase-41 module was imported only to inspect the generated Hessian callable syntax before freezing the AST interpreter. No xi, q, source action, reference action, telescope, envelope, or classification was evaluated.",
+      "observed_AST_node_types_for_all_three_variants": [
+        "Add",
+        "Assign",
+        "BinOp",
+        "Call",
+        "Constant",
+        "Div",
+        "FunctionDef",
+        "List",
+        "Load",
+        "Module",
+        "Mult",
+        "Name",
+        "Pow",
+        "Return",
+        "Store",
+        "Sub",
+        "USub",
+        "UnaryOp",
+        "arg",
+        "arguments"
+      ],
+      "observed_callable_names_for_all_three_variants": [
+        "array",
+        "exp",
+        "sqrt"
+      ],
+      "observed_read_only_nonstate_global_names": [
+        "array",
+        "exp",
+        "pi",
+        "sqrt"
+      ],
+      "dummy_alpha_normalization": "Rename the generated positional argument and all matching _Dummy_[0-9]+ load/store names to _INPUT before ast.dump(annotate_fields=True,include_attributes=False); no other node or literal is changed.",
+      "normalized_AST_sha256": {
+        "shared_zero": "ae8e76581e4b3715083add020e300224ff1e01a7c33d011802a33e7fdda91043",
+        "phi_plus": "611f045b1c2343dd65f54f12ea3fef2c1123cf9f0098728a2c8c2715977ee7c2",
+        "a_plus": "9cb94b283b5e3e79a720f877653b9780f7c70bc365da250195820d27bf3c6942"
+      },
+      "required_runner_treatment": "Recompute and require the normalized AST hashes before numerical evaluation. Raw generated-source and code-object hashes are also retained at start/end, but are not compared with the preregistration because irrelevant SymPy Dummy numbering may differ."
+    },
+    "phase44_manifest_review_is_structural_only": "Read-only schema, quantifier, arithmetic-bound, provenance, and scope review before the manifest commit is not a Phase-44 production calculation and supplies no slot value or verdict."
+  },
+  "symbolic_formula_identity_protocol": {
+    "independent_model": "Rebuild the four midpoint-element action from the Phase-43 declared equations using new symbols, exact Integer/Rational constants, symbolic base_a/base_phi/delta_a/delta_phi and seven symbolic coordinate scales. No Phase-41 expression or callable may enter this independent construction.",
+    "source_side_model": "Import the pinned Phase-41 module only on the source side, obtain its pre-substitution action_z and variables, map its symbols by declared semantic name, replace coordinate scaling by the same seven independent symbolic scale placeholders, and differentiate to a 7x7 Hessian. Source-side access is retained in the audit ledger and may not leak into the independent constructor.",
+    "componentwise_canonicalization": "For each of the three delta variants and each of 49 Hessian components, map symbols explicitly, form source-minus-independent, then apply together, cancel, and expand in that fixed order. Retain pre/post srepr SHA-256, operation counts, free-symbol sets, and the final exact numerator/denominator. Exact zero means identity; a nonzero exact expression is retained as formula-mismatch evidence rather than invalidating the run.",
+    "action_and_gradient_cross_checks": "Also compare the four-element action and seven gradient components exactly before the Hessian comparison. A disagreement at any level is separately retained; later equality may not erase an earlier nonidentity.",
+    "float_tree_rule": "No sp.Float, Python float, NumPy scalar, evalf, lambdify, or numerical substitution may enter either exact canonical expression. Machine-float presence in the exact identity path is INVALID_RUN.",
+    "independence_denylist": [
+      "eval",
+      "exec",
+      "sympy.parsing.parse_expr",
+      "copying phase41 action_w, gradient_w, or hessian_w into the independent constructor",
+      "using a Phase-43 stored pass boolean as an identity result"
+    ],
+    "identity_evidence_states": [
+      "SUPPORTED",
+      "NOT_SUPPORTED",
+      "INCONCLUSIVE"
+    ]
+  },
+  "byte_faithful_numpy64_trace_protocol": {
+    "authoritative_source_expression": "Use pinned phase41.numeric_model(delta_a,delta_phi), phase41.xi_to_w, phase41.hessian_at, and phase41.hessian_xi only as production targets. Retain inspect.getsource text, AST dump, code-object bytecode/constants/names, and SHA-256 for each of the three generated Hessian callables at start and end.",
+    "source_operation_boundaries_in_fixed_order": [
+      "u64 = linear_map @ xi",
+      "w64 = saddle_w + u64",
+      "H64 = phase41.hessian_at(model,w64)",
+      "B1_64 = linear_map.T @ H64",
+      "B2_64 = B1_64 @ linear_map",
+      "y64 = B2_64 @ q",
+      "A64 = -numpy.conjugate(y64)"
+    ],
+    "left_association_requirement": "The three contraction boundaries are the exact Python left association implemented by phase41.hessian_xi followed by @q. Reconstructing B1_64 and B2_64 separately must be raw-byte identical to phase41.hessian_xi; A64 must be raw-byte identical to the stored P43 source vector.",
+    "generated_callable_AST_interpreter": "Parse the generated Hessian callable source with ast.parse. Permit only the structural nodes needed for one FunctionDef, arguments, one fixed tuple-unpacking Assign, one Return, Load/Store names, nested list construction and the source array constructor; permit only scalar literals, indexing, unary plus/minus, addition, subtraction, multiplication, true division, fixed integer powers, and the callable globals array, exp, and sqrt plus the read-only constant pi. Verify those globals are the pinned NumPy objects and execute every child in original AST order with the exact CPython/NumPy scalar types supplied by the callable. Every visited evaluation node creates a canonical event containing stable node path, operation, operand types and binary64 hex/ratio/signbit identities, output identity, exact 120-dps counterpart, local residual, envelope radius, utilization, and terminal status. Any other dynamic name, call, attribute, comprehension, branch, eval, exec, or AST rewrite is invalid.",
+    "complete_trace_commitment": "Every canonical AST event enters an outcome-independent streaming commitment in fixed node order: encode with json.dumps(sort_keys=True,separators=(',',':'),allow_nan=False), prefix the UTF-8 byte length as unsigned eight-byte big-endian, and update SHA-256. Restart fixed chunks every 256 events and retain every chunk SHA-256, the whole-trace SHA-256, per-Hessian-entry subtree SHA-256, event counts, operation/status histograms, and final H entry/error/envelope summaries. Retain the full canonical event payload for every non-SUCCESS, nonfinite, local-model-exceeding, or exception event. Successful within-model event payloads are committed but not duplicated in the raw JSON. This is a preregistered storage rule, not favorable node selection.",
+    "constant_subtree_boundary": "Before any slot, identify every maximal AST subtree with no w-variable dependency, execute it byte-faithfully once per source variant, and pin its node set and binary64 output. S1 exact-lifts these constant-subtree outputs, including compiled decimal literals, NumPy pi, sqrt(6), powers, and state-independent exp values; S2 and the exact counterpart of S3 reuse those fixed lifts. This assigns state-independent callable rounding to coefficient formation and prevents it from being counted again as state-dependent Hessian evaluation.",
+    "AST_reproduction_requirement": "The whitelisted interpreter must reproduce all 49 H64 complex128 entries bit-for-bit for each variant at every one of the 30 states for that point. It diagnoses scalar-expression order; it does not claim visibility into private BLAS/FMA internals of numpy.matmul.",
+    "signed_zero_policy": "Retain signbits at every source boundary and trace node. Numerical comparisons treat +0 and -0 as equal magnitudes, while raw identity checks require their signs exactly.",
+    "no_platform_substitution": "No longdouble, float128, JAX, PyTorch, numexpr, alternate BLAS, compiler fast-math, vectorized rewrite, or changed thread environment may replace the pinned source path."
+  },
+  "hybrid_telescoping_protocol": {
+    "authoritative_precision_decimal_digits": 120,
+    "common_outer_operation": "Every stage is a seven-vector A=-conjugate(y). Conjugation and unary negation are applied componentwise only after the declared inner product; signed-zero metadata is retained.",
+    "stages_in_fixed_order": [
+      {
+        "id": "S0_exact_decimal_reference_exact_w",
+        "definition": "A from the independent exact-decimal Phase-43 formula, exact-lifted saddle/L/xi/q operands, and w_exact=saddle+L*xi formed wholly at 120 dps."
+      },
+      {
+        "id": "S1_source_coefficients_exact_w",
+        "definition": "Replace the independent exact-decimal expression by the source-formula expression with exact rational lifts of every maximal state-independent generated-callable AST subtree, including compiled literals, NumPy pi, sqrt(6), powers, and constant exp values; evaluate all remaining state-dependent scalar expressions and contractions at 120 dps at w_exact. If and only if exact formula identity is established, S1-S0 isolates coefficient and constant-subtree formation. Otherwise it is retained as a combined formula/coefficients bridge and receives no coefficient-only attribution."
+      },
+      {
+        "id": "S2_source_coefficients_lifted_w64",
+        "definition": "Replace only w_exact by the exact binary64-ratio lift of byte-faithful w64; keep the source-coefficient expression and all Hessian/contraction arithmetic at 120 dps. S2-S1 isolates u64/w64 state formation."
+      },
+      {
+        "id": "S3_lifted_H64_exact_contractions",
+        "definition": "Replace only the exact source-semantics Hessian at lifted w64 by the exact lift of all 49 byte-faithful H64 entries; contract exact-lifted L and q at 120 dps. S3-S2 isolates scalar Hessian evaluation."
+      },
+      {
+        "id": "S4_lifted_B1_64_exact_tail",
+        "definition": "Replace exact L.T*H64 by the exact lift of byte-faithful B1_64; evaluate the remaining *L*q tail at 120 dps. S4-S3 isolates the first NumPy64 matrix product."
+      },
+      {
+        "id": "S5_lifted_B2_64_exact_q",
+        "definition": "Replace exact lifted-B1_64*L by the exact lift of byte-faithful B2_64; evaluate the remaining *q at 120 dps. S5-S4 isolates the second NumPy64 matrix product."
+      },
+      {
+        "id": "S6_lifted_y64_exact_outer",
+        "definition": "Replace exact lifted-B2_64*q by the exact lift of byte-faithful y64, then apply high-precision -conjugate. S6-S5 isolates the final NumPy64 matrix-vector product."
+      },
+      {
+        "id": "S7_lifted_A64",
+        "definition": "Exact-lift the byte-faithful A64 output including signed-zero metadata. S7-S6 isolates and verifies the outer conjugation/negation boundary; nonzero magnitude here is unexpected but retained."
+      }
+    ],
+    "fixed_deltas": [
+      "D_coeff=S1-S0 (coefficient-only conditional on exact formula identity; otherwise combined formula/coefficients bridge)",
+      "D_state=S2-S1",
+      "D_hessian=S3-S2",
+      "D_matmul_1=S4-S3",
+      "D_matmul_2=S5-S4",
+      "D_matvec=S6-S5",
+      "D_outer=S7-S6"
+    ],
+    "closure_identity": "At each slot, S7-S0 equals the ordered sum of all seven D vectors within the fixed 1e-100 high-precision closure bounds. The contribution vectors are nonexclusive and may reinforce or cancel; no largest-stage winner or unique cause is selected.",
+    "reference_reproduction": "S0 must reproduce the stored P43 120-dps Hessian reference within 1e-100 symmetric relative and maximum-component relative metrics. S7 must reproduce the stored P43 source vector bit-for-bit before lifting.",
+    "component_retention": "Retain every stage and delta as seven complex 120-digit strings, plus vector norms, per-component absolute/relative differences, phase43-total-error fractions, pairwise cosine-like real inner-product alignments, and signed cancellation among deltas."
+  },
+  "alternative_contraction_protocol": {
+    "input_matrix": "Use the same pinned binary64 linear_map array and the same byte-faithful H64 and q complex128 arrays as the source path. Their exact ratio lifts are used only for 120-dps references, condition indices, and error metrics; every alternative contraction itself remains float64/complex128. No alternative may reevaluate H, change w, normalize q, or change dtype.",
+    "associations_in_fixed_order": [
+      {
+        "id": "left_matrix_chain",
+        "expression": "((L.T*H64)*L)*q"
+      },
+      {
+        "id": "vector_first_chain",
+        "expression": "L.T*(H64*(L*q))"
+      }
+    ],
+    "summation_algorithms_in_fixed_order": [
+      {
+        "id": "explicit_naive",
+        "definition": "For each complex dot, form products and update a complex128 accumulator sequentially for index 0,1,...,6; start from +0.0+0.0j and retain every partial sum."
+      },
+      {
+        "id": "fixed_pairwise",
+        "definition": "Form the seven complex128 products in index order, then reduce the fixed tree ((t0+t1)+(t2+t3))+((t4+t5)+t6), retaining every tree node."
+      },
+      {
+        "id": "componentwise_kahan",
+        "definition": "Apply the standard Kahan recurrence separately to the real and imaginary binary64 components of the seven products in index order, starting sum and compensation at +0.0, and retain each sum/compensation state."
+      }
+    ],
+    "cartesian_product_required": "Evaluate and retain all six association-by-summation combinations at all ninety slots. The NumPy source path is a seventh fixed contraction path and is not presumed equivalent to explicit_naive.",
+    "alternative_outer_operation": "For every association-by-summation path retain its inner y_alt vector, then form and retain A_alt=-conjugate(y_alt) componentwise in complex128 with signed-zero metadata. All scientific comparisons use A_alt; y_alt is retained to separate the contraction from the common outer operation.",
+    "comparison_policy": "Compare every A_alt independently with S3, S0, and S7 using the frozen metrics, and compare y_alt with the corresponding pre-outer reference. Retain all errors and signed differences; do not report only the minimum, choose a favorable algorithm, replace the production output, or infer that lower local error proves a globally better integrator."
+  },
+  "conditioning_and_forward_error_protocol": {
+    "unit_roundoff": "u=2**-53 as an exact Rational",
+    "gamma_definition": "gamma(k)=k*u/(1-k*u), evaluated from the exact rational before 120-dps serialization.",
+    "complex_dot_operation_budgets": {
+      "numpy_source_assumption": 56,
+      "explicit_naive": 56,
+      "fixed_pairwise": 54,
+      "componentwise_kahan": 98
+    },
+    "complex_dot_bound_reason": "For seven terms, explicit naive uses a conservative 42 real operations for seven complex products plus 14 for seven complex accumulator updates; the fixed pairwise tree uses 42 plus 12 for six complex additions; componentwise Kahan uses the same 42 product operations plus eight real recurrence operations per term. gamma(56), gamma(54), and gamma(98) apply to their named algorithms only. gamma(56) is the fixed source NumPy/BLAS compatibility assumption and the common Phase-43 cancellation-risk scale; no alternative algorithm's tighter or looser behavior changes the source classification bound.",
+    "coefficient_formation_envelope": "Only after exact formula identity is established, reproduce the Phase-43 independent 50-decimal source-rounding control and require its unchanged 1e-40 relative bound against the exact-decimal model. For each maximal state-independent generated-callable subtree, start from the exact 50-decimal coefficient semantics, give each CPython decimal-to-binary64 literal and NumPy pi constant one ulp, give NumPy sqrt and exp nodes eight ulps per real/imaginary component, and propagate basic operations by the same disk rules. Then compare D_coeff with this fixed combined 50-decimal-plus-binary64 coefficient envelope. Formula mismatch/inconclusive identity, a failed 1e-40 control, or a failed ulp assumption makes coefficient and total model coverage INCONCLUSIVE; the allowance is never enlarged.",
+    "state_formation_envelope": "For every component of u=L*xi, propagate gamma(56)*sum_j(abs(L_ij*xi_j)); then add saddle with one further componentwise u roundoff. Compare actual lifted u64/w64 errors with these radii and propagate the resulting w disk through the exact source-semantics Hessian. No overflow, underflow, or denominator floor may be hidden.",
+    "scalar_AST_envelope": {
+      "addition_and_subtraction": "Propagate input disk radii by r_a+r_b. For the actual complex output, bound real and imaginary local roundings separately by u/(1-u) times the absolute rounded component and combine those two bounds by Euclidean norm. Unary plus/minus has zero magnitude error but preserves signbit records.",
+      "multiplication": "Propagate input disks by abs(a)*r_b+abs(b)*r_a+r_a*r_b. For the local complex multiply, use gamma(3)*(abs(a_re*b_re)+abs(a_im*b_im)) for the real component and gamma(3)*(abs(a_re*b_im)+abs(a_im*b_re)) for the imaginary component, then combine by Euclidean norm. Each actual local residual must lie within this fixed operation-aware bound; otherwise model coverage is INCONCLUSIVE rather than enlarging the bound.",
+      "division": "Require the denominator disk to exclude zero and propagate center uncertainty by (r_a+abs(a/b)*r_b)/(abs(b)-r_b). Complex division's platform-local rounding is a fixed eight-ulp assumption on each output component, checked against the exact 120-dps quotient of exact-lifted child centers; an exceedance makes model coverage INCONCLUSIVE.",
+      "fixed_integer_power": "Only nonnegative integer exponents appearing in the pinned AST are allowed. Propagate an input disk by (abs(z)+r)**n-abs(z)**n and apply a fixed eight-ulp local assumption separately to the real and imaginary output components; any other exponent or an exceedance is INCONCLUSIVE or invalid as declared by the AST whitelist.",
+      "numpy_exp": "For every nonconstant exp node, compare the actual complex128 numpy.exp result with mpmath.exp of the exact-lifted input. The declared platform-model local radius is eight ulps separately on the real and imaginary output components, with ulp(0)=2**-1074. Propagate the input disk through exp with sup(abs(exp(z))) on that disk before adding the local radius. State-independent exp nodes belong to the fixed constant-subtree boundary and are not double-counted here.",
+      "numpy_sqrt": "The generated callable uses sqrt only in state-independent subtrees such as sqrt(6); compare it with mpmath.sqrt of the exact-lifted input under the fixed eight-ulp component model, then exact-lift its actual pinned NumPy64 result at the coefficient boundary. A state-dependent sqrt node is undeclared and invalid.",
+      "exp_assumption_policy": "Eight ulps is a fixed diagnostic platform assumption, not a universal NumPy/libm theorem. A local exceedance makes model-based Hessian and total-envelope coverage INCONCLUSIVE and is retained; it is not silently enlarged after observation.",
+      "observed_residual_envelope": "Separately propagate the measured exact local residual at every AST node. This a posteriori trace must contain the actual H64 error and is retained as accounting evidence, not counted as prospective model coverage."
+    },
+    "matrix_chain_envelope": "For each source B1, B2, and y boundary, propagate incoming component radii plus gamma(56)*sum(abs(term)) for the exact lifted operands at that boundary. Require the actual lifted output to lie inside the propagated componentwise disks to classify the declared source standard model as covering that stage. Apply gamma(56), gamma(54), or gamma(98) separately to naive, pairwise, or Kahan alternative diagnostics; alternative coverage never substitutes for failed source coverage.",
+    "total_source_envelope": "Propagate the fixed 50-decimal-plus-binary64 coefficient, state-formation, operation-aware model-based Hessian-AST, and three source contraction radii through the S0-to-S7 chain. The independently observed D_coeff and D_state are retained as signed telescope vectors and must each lie inside their own preregistered generation envelopes; they are not substituted as tautological radii. Formula nonidentity is not absorbed into any rounding radius. Coverage requires the 50-decimal control plus literal/pi/sqrt/exp/division/power/basic-operation assumptions to pass, all seven complex source components to lie inside their declared disks, and the normwise discrepancy to be no larger than the propagated 2-norm radius.",
+    "conditioning_indices": {
+      "expanded_component_cancellation": "For output r, kappa_expand_r=sum_{i,j,k}|L_ir*H_ij*L_jk*q_k|/max(|(L.T*H*L*q)_r|,1e-100), evaluated at S3 operands at 120 dps.",
+      "dot_cancellation": "For every dot in each association and source boundary, kappa_dot=sum_j|term_j|/max(|sum_j term_j|,1e-100). Retain all component values, maxima, medians, and the algebraic j=0,...,6 term order. For the source NumPy path this is a conditioning expansion only and makes no claim about private BLAS/FMA reduction order.",
+      "normwise_chain": "kappa_chain=||L.T||_2*||H||_2*||L||_2*||q||_2/max(||L.T*H*L*q||_2,1e-100), with singular values computed at 120 dps and retained as diagnostic approximations.",
+      "state_secant": "kappa_state=rel(S2,S1)/max(rel(w64_lift,w_exact),1e-100); this is a fixed secant diagnostic at the observed rounding displacement, not a global condition number.",
+      "roundoff_risk_indicator": "gamma(56)*max_r(kappa_expand_r), compared descriptively and by the frozen P43 5e-13 scale without selecting a component."
+    },
+    "envelope_limitations": "Coverage supports compatibility with this declared binary64 forward-error model only. It does not prove the source is correctly rounded, prove a unique causal stage, prove absence of a formula defect outside these expressions, or certify any integrated tangent evolution."
+  },
+  "metric_definitions": {
+    "mp_vector_norm": "sqrt(sum(abs(z_i)**2)) at 120 dps.",
+    "symmetric_relative": "rel(x,y)=||x-y||_2/max(||x||_2,||y||_2,1e-100).",
+    "max_component_relative": "max_i abs(x_i-y_i)/max(abs(x_i),abs(y_i),1e-100).",
+    "max_component_absolute": "max_i abs(x_i-y_i).",
+    "stage_fraction": "||D_stage||_2/max(||S7-S0||_2,1e-100), retained for every stage even when greater than one because stages can cancel.",
+    "resolved_delta_relative": "For adjacent stages, resolved_delta_relative(Sk,Sk-1)=rel(Sk,Sk-1)=||Sk-Sk-1||_2/max(||Sk||_2,||Sk-1||_2,1e-100). This and only this metric is compared with resolved_stage_delta_relative_floor.",
+    "delta_alignment": "Re(sum_i conjugate(D_i)*D_j)/(max(||D_i||_2*||D_j||_2,1e-100)); descriptive only.",
+    "envelope_utilization": "For each component, abs(actual-reference)/max(radius,1e-100); coverage requires every value <=1 with no failed prerequisite.",
+    "propagated_vector_norm_radius": "For seven componentwise complex-disk radii r_i, the normwise radius is sqrt(sum_i r_i**2). The normwise coverage utilization uses this value and never a selected component radius.",
+    "ulp_distance": "Absolute difference between the exact 120-dps value and the exact lift of the binary64 result divided by the exact binary64 spacing at that result; computed separately for real and imaginary components.",
+    "binary64_identity": "Shape, dtype, signbits, float.hex values, as_integer_ratio values, and canonical little-endian C-order raw SHA-256."
+  },
+  "acceptance_thresholds": {
+    "phase43_source_mismatch_relative_reproduction": "5e-13",
+    "phase43_reference_reproduction_relative_max": "1e-100",
+    "hybrid_telescoping_closure_relative_max": "1e-100",
+    "hybrid_telescoping_closure_absolute_max": "1e-100",
+    "resolved_stage_delta_relative_floor": "1e-90",
+    "source_50_decimal_rounding_control_relative_max": "1e-40",
+    "python_literal_and_numpy_pi_component_ulp_model_max": "1",
+    "numpy_sqrt_component_ulp_model_max": "8",
+    "numpy_exp_component_ulp_model_max": "8",
+    "numpy_complex_division_and_integer_power_component_ulp_model_max": "8",
+    "forward_envelope_component_utilization_max": "1",
+    "forward_envelope_norm_utilization_max": "1",
+    "cancellation_capable_risk_scale": "5e-13",
+    "source_raw_reproduction_max_abs": "0",
+    "threshold_policy": "Every threshold and quantifier was frozen after full disclosure of Phase-43 outcomes but before a Phase-44 runner or production value existed. A failure may not authorize a new ulp allowance, norm floor, precision, slot subset, operation order, contraction algorithm, association, or envelope multiplier."
+  },
+  "classification_protocol": {
+    "tri_state": [
+      "SUPPORTED",
+      "NOT_SUPPORTED",
+      "INCONCLUSIVE"
+    ],
+    "completion_is_separate_from_evidence": true,
+    "formula_mismatch_evidence": {
+      "SUPPORTED": "At least one exact action, gradient, or Hessian canonical difference is nonzero for the source variant.",
+      "NOT_SUPPORTED": "All exact action, seven gradient, and 49 Hessian component differences are identically zero under the declared symbolic constant placeholders.",
+      "INCONCLUSIVE": "Construction, symbol mapping, canonicalization, or retention is incomplete."
+    },
+    "coefficient_literal_rounding_contribution": {
+      "SUPPORTED": "Exact formula identity is established and resolved_delta_relative(S1,S0) exceeds the frozen 1e-90 floor.",
+      "NOT_SUPPORTED": "Exact formula identity is established and the complete resolved_delta_relative(S1,S0) is at or below the floor.",
+      "INCONCLUSIVE": "Formula mismatch evidence is SUPPORTED, formula identity is inconclusive, or either stage or coefficient-literal trace is incomplete. In this state S1-S0 remains the combined formula/coefficients bridge and is not relabeled coefficient rounding."
+    },
+    "state_formation_rounding_contribution": {
+      "SUPPORTED": "resolved_delta_relative(S2,S1) exceeds the frozen 1e-90 floor and byte-faithful u64/w64 identities are complete.",
+      "NOT_SUPPORTED": "The complete resolved_delta_relative(S2,S1) is at or below the floor.",
+      "INCONCLUSIVE": "A required state boundary or exact lift is incomplete."
+    },
+    "hessian_evaluation_rounding_contribution": {
+      "SUPPORTED": "resolved_delta_relative(S3,S2) exceeds the frozen 1e-90 floor and the AST interpreter reproduces H64 exactly.",
+      "NOT_SUPPORTED": "The complete resolved_delta_relative(S3,S2) is at or below the floor.",
+      "INCONCLUSIVE": "The scalar trace, exact semantics, or H64 identity is incomplete."
+    },
+    "contraction_rounding_contribution": {
+      "SUPPORTED": "At least one of resolved_delta_relative(S4,S3), resolved_delta_relative(S5,S4), or resolved_delta_relative(S6,S5) exceeds the frozen 1e-90 floor with complete raw source boundaries.",
+      "NOT_SUPPORTED": "All three complete resolved-delta metrics are at or below the floor.",
+      "INCONCLUSIVE": "Any contraction boundary is incomplete."
+    },
+    "cancellation_capable_of_phase43_scale": {
+      "SUPPORTED": "gamma(56)*max(kappa_expand_r) is at least 5e-13.",
+      "NOT_SUPPORTED": "The complete fixed indicator is below 5e-13.",
+      "INCONCLUSIVE": "A term expansion, condition index, or exact S3 operand is incomplete."
+    },
+    "declared_forward_error_model_coverage": {
+      "SUPPORTED": "The exact formula is identical; the 50-decimal control and literal/pi/sqrt/exp/division/integer-power/basic-operation assumptions all pass; the state and three contraction bounds are complete; and every component plus the normwise S7-to-S0 discrepancy lies within the preregistered propagated envelope.",
+      "NOT_SUPPORTED": "All prerequisites complete but at least one component or normwise utilization exceeds one.",
+      "INCONCLUSIVE": "Formula identity is not established; the 50-decimal control fails; a literal/pi/sqrt/exp/division/integer-power/basic-operation local model fails; a denominator disk crosses zero; an arithmetic exception occurs; or any required state, Hessian, contraction, component, or norm radius is incomplete."
+    },
+    "unresolved_beyond_declared_model": {
+      "SUPPORTED": "Exact formula identity is established and complete declared forward-error coverage is NOT_SUPPORTED.",
+      "NOT_SUPPORTED": "Exact formula identity is established and declared forward-error coverage is SUPPORTED.",
+      "INCONCLUSIVE": "Formula mismatch evidence is SUPPORTED or any identity/coverage prerequisite is inconclusive; a known formula mismatch and an unresolved numerical cause are not forcibly collapsed."
+    },
+    "alternative_contractions": "Each of the six fixed alternatives receives independent completion and error metrics only. No best-method, winner, or any-method existential scientific verdict is allowed.",
+    "point_aggregates": "For each evidence kind, SUPPORTED means at least one of thirty complete slots supports it; NOT_SUPPORTED requires all thirty complete slots not support it; otherwise INCONCLUSIVE. Also retain all-thirty universal coverage separately so existential contribution evidence cannot masquerade as universal explanation.",
+    "global_all_slot_aggregate": "For each evidence kind, retain existential-any and universal-all quantifiers separately over all ninety. Neither may replace the other.",
+    "disclosed_thirteen_aggregate": "ALL_13_WITHIN_DECLARED_FORWARD_ERROR_MODEL is SUPPORTED only if all thirteen disclosed mismatch slots are complete and coverage-SUPPORTED; NOT_SUPPORTED if all thirteen are complete and at least one is coverage-NOT_SUPPORTED; otherwise INCONCLUSIVE. The 77-slot negative-control aggregate is computed under the identical rule.",
+    "no_forced_unique_cause": true,
+    "historical_phase43_mismatch_label_is_not_overwritten": "Phase 44 adds scoped diagnostic evidence. It may not retroactively rewrite the committed Phase-43 threshold classifications or claim an integrated code correction."
+  },
+  "contracts": {
+    "exact": [
+      {
+        "id": "P44.freeze.committed_artifacts_runner_runtime_and_TOCTOU",
+        "criterion": "Manifest-runner-result ordering, all pinned artifacts and subtrees, committed clean runner binding, locks, runtime, generated-callable fingerprints, HEAD, worktree, pycache, and start/end TOCTOU identities match exactly.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P44.input.all_90_phase43_slots_and_13_disclosure_identity",
+        "criterion": "Strict decode and hashes pass; all 90 fixed input/source/reference records are SUCCESS; point/fraction/direction sets and order are exact; the 13/77 split, full thirteen-slot list and values, 5/3/5 point counts, and five Phase-42-anomaly overlaps reproduce without trusting summary booleans.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P44.scope.local_arithmetic_only",
+        "criterion": "There are zero root, least-squares, ODE, dense-output, trajectory, chart-transport, time-column, integrated-tangent, orientation, determinant-line, and global-intersection evaluations.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P44.symbolic.independent_componentwise_canonicalization",
+        "criterion": "Independent and source-side boundaries remain disjoint; exact action, gradient, and 3x49 Hessian comparisons are complete with fixed together/cancel/expand order, no machine float, and retained expressions. A valid nonzero difference is scientific mismatch evidence, not infrastructure failure.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P44.trace.byte_faithful_numpy64_boundaries_and_AST",
+        "criterion": "All source u,w,H,B1,B2,y,A boundaries and generated-callable AST evaluations are complete; every AST event enters the fixed canonical whole/chunk/per-entry commitments and terminal histograms; every exceptional or model-exceeding event is fully expanded; code/source fingerprints and raw identities hold; and the interpreter reproduces H bit-for-bit.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P44.math.fixed_hybrid_contractions_conditioning_and_envelopes",
+        "criterion": "All eight hybrid stages, seven deltas, six alternative contractions, exact lifts, 120-dps contexts, fixed term orders, source gamma(56) plus alternative gamma(56/54/98), condition indices, model and observed envelopes, thresholds, and no-selection quantifiers equal this manifest.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P44.retention.complete_nonexclusive_tri_state_ledger",
+        "criterion": "Every predeclared formula, slot, stage, delta, trace, contraction, metric, envelope, evidence, point/global/cohort aggregate, exception, and dependency path is terminal exactly once; completion and evidence are separate; no best algorithm or unique cause is forced.",
+        "failure_status": "INVALID_RUN"
+      },
+      {
+        "id": "P44.guard.fail_closed_gate1_and_null_outputs",
+        "criterion": "All seven desired outputs remain null, the sixteen promoted prerequisites remain false, six global outputs remain null, historical Phase-41/42/43 statuses are retained, global promotion is prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+        "failure_status": "INVALID_RUN"
+      }
+    ],
+    "numerical": [
+      {
+        "id": "P44.reproduction.phase43_source_and_reference_vectors",
+        "criterion": "At all ninety slots S7 reproduces the stored source action bit-for-bit, S0 reproduces the stored 120-dps reference within 1e-100, and exactly the disclosed thirteen slots exceed the unchanged 5e-13 metric.",
+        "failure_status": "PHASE43_SOURCE_REFERENCE_OR_PLATFORM_DRIFT",
+        "failure_invalidates_run": true
+      },
+      {
+        "id": "P44.formula.exact_componentwise_identity",
+        "criterion": "All three source variants have exact action, gradient, and 49 Hessian component identity with the independent equation model.",
+        "failure_status": "SYMBOLIC_FORMULA_MISMATCH_SUPPORTED",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P44.decomposition.hybrid_telescoping_closure",
+        "criterion": "All ninety ordered S0-to-S7 telescopes close within both 1e-100 bounds, source boundary identities hold, and every stage/delta metric is finite and retained.",
+        "failure_status": "HYBRID_DECOMPOSITION_INCOMPLETE_OR_INCONSISTENT",
+        "failure_invalidates_run": true
+      },
+      {
+        "id": "P44.forward_error.all_90_declared_model_coverage",
+        "criterion": "Every one of ninety slots has established formula identity; passes the fixed 50-decimal, literal/pi, eight-ulp sqrt/exp/division/integer-power, operation-aware basic, state, and gamma(56) contraction prerequisites; and lies within the propagated componentwise and normwise envelopes.",
+        "failure_status": "DECLARED_FLOAT64_FORWARD_ERROR_MODEL_NOT_UNIVERSALLY_SUPPORTED",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P44.forward_error.all_13_phase43_mismatches_covered",
+        "criterion": "All thirteen disclosed Phase-43 mismatch slots, without selection or threshold change, are complete and lie within the declared forward-error model.",
+        "failure_status": "PHASE43_MISMATCH_COHORT_MIXED_OR_UNRESOLVED",
+        "failure_invalidates_run": false
+      },
+      {
+        "id": "P44.contractions.complete_six_way_all_slot_comparison",
+        "criterion": "All six fixed association-by-summation alternatives and the source path are complete at all ninety slots with every partial sum, error metric, cancellation index, and no winner selection retained.",
+        "failure_status": "CONTRACTION_DIAGNOSTIC_LEDGER_INCOMPLETE",
+        "failure_invalidates_run": true
+      },
+      {
+        "id": "P44.classification.complete_nonexclusive_causal_ledger",
+        "criterion": "Formula, coefficient, state, Hessian, contraction, cancellation, coverage, and unresolved tri-states plus existential/universal point/global and 13/77 cohort aggregates are all complete, path-cited, acyclic, and do not force exclusivity or an integrated verdict.",
+        "failure_status": "LOCAL_CAUSAL_LEDGER_INCOMPLETE",
+        "failure_invalidates_run": true
+      }
+    ]
+  },
+  "declared_output_retention": {
+    "stdout_policy": "Exactly one final RESULT_JSON record on stdout; progress, symbolic timing, trace timing, and slot timing go only to stderr.",
+    "result_artifact": {
+      "path": "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json",
+      "schema": "ice-phase44-numpy64-local-rhs-error-decomposition/v1",
+      "stdout_prefix": "RESULT_JSON=",
+      "stored_prefix": null,
+      "stored_format": "One compact sort_keys JSON object followed by exactly one LF; transport prefix removed.",
+      "outer_file_sha256": null,
+      "payload_digest_field_name": "result_payload_sha256_without_self",
+      "payload_sha256_without_self": null,
+      "null_hash_reason": "No Phase-44 result exists at input-freeze time; observed digests are outputs and cannot be targets."
+    },
+    "future_runner_path": "cpt_temporal_folded_susy/phase44_m4_numpy64_local_rhs_error_decomposition.py",
+    "slot_terminal_statuses": [
+      "SUCCESS",
+      "EVALUATION_FAILED",
+      "NOT_RUN_UPSTREAM_INVALID"
+    ],
+    "preenumeration_rule": "Before numerical evaluation, enumerate the 90 base slots, 3x action/gradient/49-component exact identity records, all source and AST trace nodes discovered from the start-pinned callable sources, fixed 256-event trace chunks, per-entry and whole-trace commitments, 8 stages, 7 deltas, 6 alternative contractions with fixed internal nodes, every condition/envelope record, eight slot evidence kinds, point/global existential and universal aggregates, and both 13/77 cohorts. Freeze the resulting key set and count; no later insertion, deletion, duplicate, or outcome-dependent branch is valid. The number of fully expanded exception events is outcome-dependent, but their keys must be members of the frozen node set and every non-SUCCESS/model-exceeding event must appear.",
+    "arbitrary_precision_serialization": "Serialize each finite nonzero mp real as mp.nstr(value,n=120,strip_zeros=False,min_fixed=0,max_fixed=0), exact zero as '0.0', and complex vectors as [real_string,imag_string] pairs with dps=120. Never serialize an mp value as JSON float.",
+    "retain_per_base_slot": [
+      "P43 source paths and exact xi/q/saddle/L binary64 hex, ratio, signbit, and raw identities",
+      "byte-faithful u64,w64,H64,B1_64,B2_64,y64,A64 boundaries",
+      "complete canonical Hessian AST trace commitments: every 256-event chunk hash, whole-trace hash, per-Hessian-entry subtree hash, event/operation/status counts, final entry error/envelope summaries, and full payload for every non-SUCCESS or model-exceeding event",
+      "S0 through S7 and all seven ordered deltas",
+      "all six alternative contraction outputs and every partial sum/compensation/tree node",
+      "expanded-term, dot, chain, state, and roundoff-risk conditioning indices",
+      "model-based and observed-residual forward envelopes with component and norm utilizations",
+      "all stage metrics, delta fractions/alignments, completion states, tri-state evidence, and canonical dependency paths"
+    ],
+    "retain_global": [
+      "strict artifact, source, runtime, runner, callable, worktree, pycache, and TOCTOU provenance",
+      "exact independent/source expression fingerprints, all componentwise canonical differences, and all unique fixed constant-subtree records deduplicated by normalized subtree hash with complete occurrence paths",
+      "full preenumerated key ledger and terminal-status histogram",
+      "thirteen disclosed mismatches and seventy-seven controls with no-selection proof",
+      "all exact and numerical contract records",
+      "point/global existential and universal plus 13/77 cohort aggregates",
+      "unchanged fail-closed Gate-1 ledger"
+    ],
+    "exception_policy": "Catch numerical exceptions at the smallest predeclared trace or slot, retain completed siblings, and terminalize dependencies explicitly. Infrastructure, provenance, strict-input, source-reproduction, exact-trace, telescope-closure, retention, or fail-closed failures emit a finite INVALID_RUN skeleton and exit 2; complete threshold failures remain typed scientific outcomes and exit 0.",
+    "atomic_capture_sequence": [
+      "Run only the committed clean runner against the committed manifest and pinned inputs with pipefail, retaining exit code.",
+      "Parse exactly one complete RESULT_JSON in memory with duplicate-key and NaN/Infinity rejection.",
+      "Validate schema, canonical mp strings, self-excluding digest, slot completeness, and outer hash in an external staging directory.",
+      "Move no partial artifact into the repository; add the fully validated compact JSON plus one LF and commit it as a separate result unit.",
+      "Only after the raw-result commit may prose, ontology, general documentation, or a later phase consume Phase-44 evidence."
+    ],
+    "archive_policy": "A complete cryptographic commitment to every all-slot operation event, all fixed chunk/per-entry hashes and histograms, all exceptional/model-exceeding node payloads, and the complete vector/envelope ledger is mandatory. The pinned source, normalized AST, interpreter, inputs, and event encoding make successful event streams exactly replayable without inflating the committed JSON by hundreds of megabytes. A selected thirteen-slot table, maximum-only summary, prose diagnosis, or best-algorithm report is not a substitute."
+  },
+  "required_fail_closed_outputs": {
+    "m2_and_m4_actions_identified": false,
+    "m2_and_m4_upward_cycles_identified": false,
+    "m2_and_m4_common_determinant_line_constructed": false,
+    "m3_and_m4_canonical_sign_equality_proved": false,
+    "m3_and_m4_common_determinant_line_constructed": false,
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "continuous_direction_coverage_proved": false,
+    "root_exhaustion_proved": false,
+    "exact_nonlinear_upward_manifold_certified": false,
+    "all_saddles_and_upward_components_complete": false,
+    "non_Stokes_chamber_certified": false,
+    "all_relative_good_ends_classified": false,
+    "physical_original_cycle_derived": false,
+    "metric_homotopy_tested": false,
+    "BFV_Pfaffian_Pin_orientation_computed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "quantum_gravity_explanation": null,
+    "gate1_status": "OPEN_PARTIAL_PROGRESS"
+  },
+  "historical_statuses_must_remain": {
+    "phase41_numerical_contracts": "8/9",
+    "phase41_tangent_status": "TANGENT_CONTROL_FAILED",
+    "phase42_reference_tangent": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+    "phase42_protocol_local_anomaly_label": "VARIATIONAL_RHS_BUG_EVIDENCE",
+    "phase43_exact_and_numerical_contracts": "7/7 exact; 4/6 numerical",
+    "phase43_independent_reference": "CORROBORATED",
+    "phase43_local_RHS_implementation_mismatch_evidence": "SUPPORTED",
+    "phase43_double_precision_local_FD_artifact_for_phase42_anomalies": "NOT_SUPPORTED",
+    "phase43_local_arbitration": "LOCAL_RHS_IMPLEMENTATION_MISMATCH_SUPPORTED",
+    "integrated_tangent_evolution": "NOT_TESTED_LOCAL_ONLY",
+    "phase43_ODE_solver_noise_component": "NOT_TESTED_LOCAL_ONLY",
+    "time_column_as_independent_bug_evidence": "EXCLUDED",
+    "global_promotion": "PROHIBITED"
+  },
+  "desired_outputs": {
+    "desired_phase44_overall_diagnosis": null,
+    "desired_formula_identity_verdict": null,
+    "desired_dominant_rounding_stage": null,
+    "desired_all_13_forward_error_coverage": null,
+    "desired_integrated_tangent_verdict": null,
+    "desired_local_orientation_sign": null,
+    "desired_global_intersection_coefficient": null
+  },
+  "run_semantics": {
+    "exact_contract_count": 8,
+    "numerical_contract_count": 7,
+    "valid_scientific_inconclusive_exit_code": 0,
+    "invalid_run_exit_code": 2,
+    "valid_typed_scientific_outcomes": [
+      "SYMBOLIC_FORMULA_IDENTITY_SUPPORTED",
+      "SYMBOLIC_FORMULA_MISMATCH_SUPPORTED",
+      "DECLARED_FLOAT64_FORWARD_ERROR_MODEL_SUPPORTED_ALL_13",
+      "PHASE43_MISMATCH_COHORT_MIXED_OR_UNRESOLVED",
+      "LOCAL_ROUNDING_CONTRIBUTIONS_MIXED_NONEXCLUSIVE",
+      "UNRESOLVED_BEYOND_DECLARED_MODEL_SUPPORTED",
+      "INTEGRATED_TANGENT_EVOLUTION_NOT_TESTED_LOCAL_ONLY"
+    ],
+    "INVALID_RUN_conditions": [
+      "artifact, source, lock, schema, hash, subtree, runtime, commit, runner, callable, HEAD, worktree, pycache, or start/end TOCTOU drift",
+      "failure to reproduce any of ninety P43 source/reference vectors, exact 13/77 cohort, or fixed 5e-13 labels",
+      "machine float or source-expression leakage in the exact independent symbolic constructor",
+      "forbidden or dynamically rewritten AST node, source boundary, association, summation order, precision, threshold, or envelope multiplier",
+      "root, least-squares, ODE, dense-output, trajectory, chart-transport, time-column, integrated-tangent, orientation, determinant-line, or global evaluation",
+      "slot selection, best-method selection, hidden fallback, clipping, normalization, state reconstruction, adaptive precision, or retuning",
+      "missing, duplicate, nonterminal, nonfinite, float-truncated mp, telescope-inconsistent, path-dangling, cyclic, or forced-exclusive ledger record",
+      "missing or non-null fail-closed global output, non-null desired output, or any Gate-1 promotion"
+    ],
+    "numerical_failure_policy": "A complete exact formula nonidentity, forward-envelope exceedance, exp-model failure, high cancellation, or unresolved scientific classification is a valid typed result and exits 0. Provenance, source reproduction, trace identity, telescope closure, required retention, or fail-closed boundary failure is INVALID_RUN and exits 2.",
+    "result_emission": "When this manifest can be parsed, emit one finite fail-closed RESULT_JSON skeleton even for INVALID_RUN, then exit 2. No progress text may enter stdout."
+  },
+  "claim_promotion_policy": {
+    "strongest_allowed_positive_claim": "At the ninety frozen local m=4 Phase-43 state-and-direction slots on the pinned CPython/NumPy/libc platform, the exact source formula is or is not componentwise identical to the independently rebuilt formula, named binary64 stages do or do not make detectable nonexclusive contributions, and the thirteen disclosed source-output mismatches are or are not compatible with the preregistered local forward-error model.",
+    "envelope_coverage_proves_unique_rounding_cause": false,
+    "formula_identity_proves_source_callable_correctly_rounded": false,
+    "alternative_contraction_improvement_authorizes_source_rewrite": false,
+    "local_source_diagnosis_proves_integrated_tangent_evolution": false,
+    "local_source_diagnosis_proves_all_phase41_solver_behavior": false,
+    "phase41_9_of_9_may_be_claimed": false,
+    "phase42_reference_tangent_may_be_promoted": false,
+    "phase43_historical_labels_may_be_rewritten": false,
+    "local_orientation_or_determinant_sign_may_be_promoted": false,
+    "global_intersection_may_be_claimed": false,
+    "common_determinant_line_may_be_claimed": false,
+    "cutoff_or_continuum_convergence_may_be_claimed": false,
+    "SUSY_holography_emergent_spacetime_or_quantum_gravity_explanation_may_be_claimed": false,
+    "gate1_must_remain_open": true
+  }
+}
