@@ -397,6 +397,7 @@ def run() -> dict[str, Any]:
         for dps in (50, 80):
             path_name = f"independent_exact_{dps}dps"
             progress(f"{label}: independent exact {dps}-dps tangent")
+            evaluation_count = 0
 
             def reference_rhs(
                 xi: np.ndarray,
@@ -404,6 +405,13 @@ def run() -> dict[str, Any]:
                 *,
                 digits: int = dps,
             ) -> np.ndarray:
+                nonlocal evaluation_count
+                evaluation_count += 1
+                if evaluation_count % 250 == 0:
+                    progress(
+                        f"{label}: independent exact {digits}-dps "
+                        f"RHS evaluations={evaluation_count}"
+                    )
                 return reference_tangent_action(
                     phase43,
                     evaluator,
