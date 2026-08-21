@@ -2,10 +2,10 @@
 """Phase 46: audit the historical u2 state-map finite-difference plateau.
 
 The three Phase-42 roots and the historical three-step u2 ladder stay fixed.
-For every signed perturbation this calculation evaluates the production state
-map, two tighter source-RHS solvers, and the independently reconstructed
-Phase-43 exact-decimal local flow RHS.  It does not search for roots, retune
-parameters, or make a global intersection claim.
+For every signed perturbation this calculation consumes the complete pinned
+Phase-42 production/tight/Radau endpoints and newly integrates the independently
+reconstructed Phase-43 exact-decimal local flow RHS.  It does not search for
+roots, retune parameters, or make a global intersection claim.
 """
 
 from __future__ import annotations
@@ -50,8 +50,8 @@ PHASE45_RESULT_PATH = SCRIPT_PATH.with_name(
     "PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json"
 )
 
-INPUT_COMMIT = "1e0a6a63aa6c6e604800cc0a7a33ecdde3a23f6b"
-INPUT_SHA256 = "786808d48191925892c270205ea6711d7d787c3569b7dbff04251598a8a94c48"
+INPUT_COMMIT = "3a7c905e1cc634b7cea40f127f2d9975ce99b78e"
+INPUT_SHA256 = "e69f31aeedc4078a9c801757399890d4c4f5ae01b1f24eb915567f3a2efe8b16"
 PHASE42_INPUT_SHA256 = "1cc88c489b5240019aaf339b25d0cebac9b4a1560b09cbec9c3079ce2067afb6"
 RESULT_SCHEMA = "ice-phase46-u2-state-map-fd-audit/v1"
 RESULT_PREFIX = "RESULT_JSON="
@@ -372,6 +372,80 @@ def integrate_one(
     }
 
 
+def decode_phase42_complex_vector(value: Any, *, label: str) -> np.ndarray:
+    try:
+        output = np.asarray(
+            [complex(float(item[0]), float(item[1])) for item in value],
+            dtype=np.complex128,
+        )
+    except (TypeError, ValueError, IndexError) as exc:
+        raise InvalidRun(f"cannot decode Phase42 complex vector: {label}") from exc
+    if output.shape != (7,) or not np.all(np.isfinite(output)):
+        raise InvalidRun(f"invalid Phase42 complex vector: {label}")
+    return output
+
+
+def retained_phase42_state_map(
+    phase42_result: Mapping[str, Any],
+    point_label: str,
+    path_name: str,
+    step: float,
+    sign: int,
+) -> dict[str, Any]:
+    tier_by_path = {
+        "production_source_dop853": "production_state",
+        "tight_source_dop853": "tight_state",
+        "tight_source_radau": "radau_state",
+    }
+    try:
+        tier = tier_by_path[path_name]
+    except KeyError as exc:
+        raise InvalidRun(f"no Phase42 retained tier for {path_name}") from exc
+    direction = "plus" if sign == 1 else "minus"
+    key = (
+        f"endpoint|{point_label}|{tier}|affine|col=8|"
+        f"h={format(step, '.17g')}|{direction}"
+    )
+    try:
+        slot = phase42_result["slot_ledger"][key]
+    except KeyError as exc:
+        raise InvalidRun(f"missing Phase42 endpoint slot: {key}") from exc
+    if slot.get("terminal_status") != "SUCCESS" or slot.get("error") is not None:
+        raise InvalidRun(f"incomplete Phase42 endpoint slot: {key}")
+    metadata = slot["metadata"]
+    if (
+        metadata.get("point") != point_label
+        or metadata.get("tier") != tier
+        or metadata.get("column") != 8
+        or float(metadata.get("h")) != step
+        or int(metadata.get("sign")) != sign
+        or metadata.get("chart_kind") != "affine"
+    ):
+        raise InvalidRun(f"Phase42 endpoint metadata drift: {key}")
+    payload = slot["payload"]
+    residual = np.asarray(payload["scaled_residual"], dtype=np.float64)
+    if residual.shape != (14,) or not np.all(np.isfinite(residual)):
+        raise InvalidRun(f"invalid Phase42 retained residual: {key}")
+    return {
+        "initial_xi": decode_phase42_complex_vector(
+            payload["initial_xi"], label=f"{key}.initial_xi"
+        ),
+        "endpoint_xi": decode_phase42_complex_vector(
+            payload["endpoint_xi"], label=f"{key}.endpoint_xi"
+        ),
+        "endpoint_state_z": decode_phase42_complex_vector(
+            payload["k_state_z"], label=f"{key}.k_state_z"
+        ),
+        "residual": residual,
+        "solver": dict(payload["solver"]),
+        "retained_source": {
+            "artifact": PHASE42_RESULT_PATH.relative_to(REPO_ROOT).as_posix(),
+            "slot_key": key,
+            "terminal_status": slot["terminal_status"],
+        },
+    }
+
+
 def run() -> dict[str, Any]:
     manifest, _manifest_raw = load_unique_json(INPUT_PATH)
     if manifest.get("schema") != "ice-phase46-u2-state-map-fd-audit-inputs/v1":
@@ -417,7 +491,10 @@ def run() -> dict[str, Any]:
     points: dict[str, Any] = {}
 
     for label in manifest["scope"]["targets_in_order"]:
-        progress(f"{label}: build evaluator and solve 24 retained state maps")
+        progress(
+            f"{label}: consume 18 pinned source endpoints and solve "
+            "6 independent state maps"
+        )
         point = context.points[label]
         evaluator = phase43.make_reference_evaluators(
             format(point.source_point[0], ".17g"),
@@ -438,20 +515,25 @@ def run() -> dict[str, Any]:
                 parameters = point.parameters.copy()
                 parameters[8] += sign * step
                 for path_name in paths:
-                    progress(f"{label}: {slot} {path_name}")
-                    record = integrate_one(
-                        phase42,
-                        phase43,
-                        context,
-                        point,
-                        parameters,
-                        path_name,
-                        numerics["state_solvers"][path_name],
-                        evaluator,
-                        saddle_mp,
-                        linear_mp,
-                        int(numerics["independent_rhs_dps"]),
-                    )
+                    if path_name == "independent_exact_80dps_dop853":
+                        progress(f"{label}: {slot} newly integrate {path_name}")
+                        record = integrate_one(
+                            phase42,
+                            phase43,
+                            context,
+                            point,
+                            parameters,
+                            path_name,
+                            numerics["state_solvers"][path_name],
+                            evaluator,
+                            saddle_mp,
+                            linear_mp,
+                            int(numerics["independent_rhs_dps"]),
+                        )
+                    else:
+                        record = retained_phase42_state_map(
+                            phase42_result, label, path_name, step, sign
+                        )
                     retained[path_name][slot] = record
                     if path_name == "independent_exact_80dps_dop853":
                         for location, xi in (
