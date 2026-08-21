@@ -5856,10 +5856,10 @@ def p44_generic_independent_action() -> tuple[
         for index in range(4)
     )
     action_z = sp.expand(sum(elements, sp.Integer(0)))
-    action_w = action_z.subs(
+    independent_action = action_z.subs(
         {z[index]: scales[index] * w[index] for index in range(7)}
     )
-    return action_w, tuple(z), tuple(w), tuple(scales), base_a, base_phi, delta_a, delta_phi
+    return independent_action, tuple(z), tuple(w), tuple(scales), base_a, base_phi, delta_a, delta_phi
 
 
 def p44_canonical_difference(left: sp.Expr, right: sp.Expr) -> dict[str, Any]:
