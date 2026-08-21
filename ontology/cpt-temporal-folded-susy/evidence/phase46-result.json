@@ -1,0 +1,140 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P46_M4_U2_STATE_MAP_FD_AUDIT_20260821",
+  "phase": "P46",
+  "observed_at_utc": "2026-08-21T17:18:40Z",
+  "command": "proxmox-scratch run ice-phase46 --timeout 7200 -- ./ice run phase46_m4_u2_state_map_fd_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py",
+    "sha256": "a71badb3c49a4af44e5e4a1b8bec244593f1de5a43c3b0d71d729f92ef147d55",
+    "introduced_in_commit": "45cab780121370ba3bd125ffcabfbf00a37cacc1"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {
+      "id": "P46.freeze.pinned_roots_source_slots_independent_paths_thresholds",
+      "statement": "The final pre-output manifest pins the three Phase-42 roots, 54 complete source endpoint slots, Phase-43 independent gradient construction, Phase-45 tangent columns, three u2 steps, both signs, solver settings, metrics, thresholds, classification, and global fail-closed boundary.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.scope.u2_state_map_only",
+      "statement": "The run consumes the complete pinned production/tight/Radau source endpoints and newly integrates eighteen independent u2 state endpoints, with no root search, retuning, orientation selection, determinant-line construction, or global-cycle computation.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.retention.valid_json_digest_paths_probes_and_global_guard",
+      "statement": "The 206,749-byte VALID_RUN result parses strictly, its self-excluding digest reproduces exactly, all 72 state paths and 36 precision probes are retained and finite, global promotion remains prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P46.reproduction.historical_production_u2_plateaus",
+      "statement": "The production first-pair plateaus reproduce the Phase-41 values 0.2988500216656352, 0.22199327396012633, and 0.7952717049287439 exactly, and all remain above 0.02.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.reference.50dps_to_80dps_local_flow_rhs_probes",
+      "statement": "All 36 retained launch/endpoint local flow RHS probes agree exactly after the final complex128 projection, below the fixed 1e-12 limit.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.reference.independent_full_u2_ladder",
+      "statement": "Both adjacent-step plateaus of the independent 80-digit local-flow path pass at all three roots; the largest retained value is 2.018382869505497e-7, below 0.02.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.endpoint.source_solvers_to_independent_reference",
+      "statement": "The largest tight-DOP853 and Radau endpoint-state discrepancies from the independent path are 3.0216619477847167e-9 and 2.0705188108534083e-9, below the fixed 1e-8 endpoint limits.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.derivative.tight_source_to_independent_reference",
+      "statement": "At every root the tight-source finite-difference column maximum exceeds the fixed 0.005 agreement threshold; the overall maximum is 0.870142708876642.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.derivative.radau_source_to_independent_reference",
+      "statement": "At every root the Radau-source finite-difference column maximum exceeds the fixed 0.005 agreement threshold; the overall maximum is 0.023791343755768544.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.derivative.independent_state_map_to_phase45_tangent",
+      "statement": "Every independent state-map u2 column agrees with the Phase-45 independent tangent column; the largest retained discrepancy is 2.857837749465637e-7, below 0.005.",
+      "status": "PASS"
+    },
+    {
+      "id": "P46.classification.local_flow_rhs_repair",
+      "statement": "The independent precision, full-ladder, and Phase-45 tangent prerequisites pass while both source derivative-column aggregates fail, yielding LOCAL_FLOW_RHS_REPAIR_SUPPORTED under the frozen nonexclusive interpretation boundary.",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "m=4 fixed-root u2 state-map finite-difference audit",
+    "exact_checks": 3,
+    "numerical_checks": 8,
+    "run_status": "VALID_RUN",
+    "classification": "LOCAL_FLOW_RHS_REPAIR_SUPPORTED",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json",
+      "raw_result_outer_sha256": "8349eb669c542dfb13555554f3f81d70f2843520240ab66ccbbca4226081fad0",
+      "raw_result_payload_sha256_without_self": "e0cb161869ded53a727b18eec59242202c007473a2e045a3f4e96e1ee5d473cd",
+      "raw_result_introduced_in_commit": "e7a8ec45a26e4af9297ad5694111436e43c0bd6a",
+      "raw_result_size_bytes": 206749,
+      "validation": "Strict JSON parse, finite-value retention, 54 pinned source slot identities, runner hash identity, complete path/probe counts, and independent self-digest recomputation passed."
+    },
+    "root_metrics": {
+      "shared_zero": {
+        "historical_production_first_pair_plateau": 0.2988500216656352,
+        "independent_adjacent_plateaus": [1.2266718807385027e-8, 2.7847001717973397e-8],
+        "tight_endpoint_to_independent_relative_max": 3.0216619477847167e-9,
+        "radau_endpoint_to_independent_relative_max": 2.0705188108534083e-9,
+        "tight_columns_to_independent_relative_max": 0.44284961073210277,
+        "radau_columns_to_independent_relative_max": 0.023791343755768544,
+        "independent_columns_to_phase45_tangent_relative_max": 6.80859578328624e-8
+      },
+      "phi_plus": {
+        "historical_production_first_pair_plateau": 0.22199327396012633,
+        "independent_adjacent_plateaus": [9.263604862135506e-8, 1.055701245341968e-7],
+        "tight_endpoint_to_independent_relative_max": 1.726396621616283e-9,
+        "radau_endpoint_to_independent_relative_max": 2.1891970291404285e-10,
+        "tight_columns_to_independent_relative_max": 0.870142708876642,
+        "radau_columns_to_independent_relative_max": 0.01804594012202448,
+        "independent_columns_to_phase45_tangent_relative_max": 2.857837749465637e-7
+      },
+      "a_plus": {
+        "historical_production_first_pair_plateau": 0.7952717049287439,
+        "independent_adjacent_plateaus": [5.702029262349612e-8, 2.018382869505497e-7],
+        "tight_endpoint_to_independent_relative_max": 1.4613723134160624e-9,
+        "radau_endpoint_to_independent_relative_max": 1.660205638773498e-10,
+        "tight_columns_to_independent_relative_max": 0.8667360896847829,
+        "radau_columns_to_independent_relative_max": 0.022360931181150148,
+        "independent_columns_to_phase45_tangent_relative_max": 1.1409768354135585e-7
+      }
+    },
+    "claim_status": {
+      "independent_state_map_u2_ladder_stability": "SUPPORTED_AT_ALL_THREE_FIXED_ROOTS",
+      "independent_state_map_agrees_with_independent_tangent": "SUPPORTED_AT_ALL_THREE_FIXED_ROOTS",
+      "local_flow_rhs_repair": "SUPPORTED_UNDER_FIXED_COMPLEX128_PROJECTION",
+      "unique_source_arithmetic_or_solver_cause": "OPEN_NOT_SEPARATED",
+      "wrong_source_formula": "NOT_ESTABLISHED",
+      "historical_phase41_tangent_control": "TANGENT_CONTROL_FAILED_UNCHANGED_AS_PROVENANCE",
+      "historical_phase41_numerical_contracts": "8/9",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "scope_boundary": {
+      "phase42_source_endpoints_reused": 54,
+      "new_independent_state_integrations": 18,
+      "arbitrary_precision_state_integrator_claimed": false,
+      "root_search_or_retuning": false,
+      "orientation_selection_or_determinant_line": false,
+      "global_cycle_or_intersection": null
+    },
+    "next_calculation": "Freeze a source-gradient local-flow error budget along the retained independent paths, decompose coefficient/state/gradient/contraction rounding, and propagate local bounds through endpoint accumulation and 1/(2h) finite-difference amplification without another root search."
+  }
+}

@@ -2,17 +2,17 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–45 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), and [`phase45-result.json`](../evidence/phase45-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–46 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), and [`phase46-result.json`](../evidence/phase46-result.json).
 
 ## Reading `PASS` correctly
 
-All 436 Phase 16–45 named exact checks have `status: PASS`. The snapshots contain 265 typed
-numerical-ledger checks: 260 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
-separately recorded Phase-18 SciPy control brings the numerical-record total to 266: 70 controls through
+All 439 Phase 16–46 named exact checks have `status: PASS`. The snapshots contain 273 typed
+numerical-ledger checks: 268 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
+separately recorded Phase-18 SciPy control brings the numerical-record total to 274: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35,
 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, 22 in Phase 40, 9 in Phase 41, 8 in
-Phase 42, 6 in Phase 43, 7 in Phase 44, and 6 in Phase 45. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
+Phase 42, 6 in Phase 43, 7 in Phase 44, 6 in Phase 45, and 8 in Phase 46. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
 contracts. Phase 42
 contributes 8 exact `PASS` records and, after lossless schema mapping of the raw typed statuses, 6
 numerical `PASS`, one protocol-defined local-identity `FAIL`, and one reference-tangent `INCONCLUSIVE`.
@@ -36,7 +36,12 @@ tangent stability, or global physical promotion. Phase 45 contributes 3 exact an
 records. They establish 50/80-digit integrated-tangent stability after retained complex128 projection,
 source/reference tangent and root-Jacobian agreement at all three fixed roots, and stability of the
 historical failure to the local RHS replacement. They do not recompute the state-map finite-difference
-ladder, identify its unique cause, rewrite Phase 41, or license global promotion. None of these records
+ladder, identify its unique cause, rewrite Phase 41, or license global promotion. Phase 46 contributes
+3 exact and 8 numerical `PASS` records. They establish a stable independent three-step state-map ladder,
+agreement with the Phase-45 independent tangent, source endpoint agreement, source derivative-column
+disagreement, and the scoped `LOCAL_FLOW_RHS_REPAIR_SUPPORTED` classification. They do not prove a wrong
+source formula, select one coefficient/state/gradient/solver/subtraction cause, rewrite Phase 41, or
+license global promotion. None of these records
 means that a local candidate is an interval-certified root, that the finite-radius chart patch is the
 exact complete upward manifold, that the entire bounded chain was paired, that the physical original
 relative cycle or non-Stokes chamber is fixed, that a global coefficient is known, or that a hard CFU
@@ -1792,6 +1797,38 @@ reference/R4 Jacobian discrepancy is `1.101e-5`, and every normalized sign is `-
 `TANGENT_CONTROL_FAILURE_STABLE_TO_INDEPENDENT_RHS`; it does not claim arbitrary-precision symbolic
 identity, an independently integrated state flow, or a unique cause of the finite-difference plateau.
 
+## Phase 46 check ledger
+
+### Frozen source slots, independent paths, retention, and global guard — 3 exact PASS
+
+- `P46.freeze.pinned_roots_source_slots_independent_paths_thresholds` — `PASS`
+- `P46.scope.u2_state_map_only` — `PASS`
+- `P46.retention.valid_json_digest_paths_probes_and_global_guard` — `PASS`
+
+These checks bind the three fixed roots, 54 complete pinned source endpoint slots, eighteen newly
+integrated independent signed endpoints, all three historical `u2` steps, both signs, Phase-45 tangent
+columns, solver settings, metrics, classification, complete result digest, and fail-closed Gate-1
+boundary. No root search, retuning, orientation selection, determinant-line construction, or global
+cycle computation occurs.
+
+### Historical reproduction, independent ladder, source comparison, and repair — 8 numerical PASS
+
+- `P46.reproduction.historical_production_u2_plateaus` — `PASS`
+- `P46.reference.50dps_to_80dps_local_flow_rhs_probes` — `PASS`
+- `P46.reference.independent_full_u2_ladder` — `PASS`
+- `P46.endpoint.source_solvers_to_independent_reference` — `PASS`
+- `P46.derivative.tight_source_to_independent_reference` — `PASS`
+- `P46.derivative.radau_source_to_independent_reference` — `PASS`
+- `P46.derivative.independent_state_map_to_phase45_tangent` — `PASS`
+- `P46.classification.local_flow_rhs_repair` — `PASS`
+
+The historical production first-pair plateaus reproduce exactly and remain failed. The largest
+independent adjacent plateau is `2.019e-7`; all 36 precision probes pass, and independent state-map
+columns agree with Phase-45 tangent columns to at worst `2.858e-7`. Tight/Radau endpoints agree with the
+independent states within `3.022e-9`/`2.071e-9`, but their derivative-column maxima reach `0.8701` and
+`0.02379`, above `0.005` at every root. The resulting local-flow repair label is scoped to the frozen
+projection and does not prove a formula defect or unique cause.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1827,6 +1864,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase40_m3_reflection_odd_inter
 .venv/bin/python cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py
 ./ice run phase44_m4_numpy64_local_rhs_error_decomposition
 proxmox-scratch run ice-phase45 --timeout 7200 -- ./ice run phase45_m4_integrated_tangent_rhs_stability
+proxmox-scratch run ice-phase46 --timeout 7200 -- ./ice run phase46_m4_u2_state_map_fd_audit
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.

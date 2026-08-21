@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-21T05:45:09Z`; 619 nodes, 1766 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 107/107 stored hashes (103 artifacts and 4 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-21T17:18:40Z`; 644 nodes, 1845 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 117/117 stored hashes (113 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -49,7 +49,9 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 42 repair the tangent or prove a variational code bug? | No. It supports solver-noise and old-step-pair evidence at `phi_plus` and `a_plus`, and separately supports a protocol-defined local Hessian-action identity anomaly at all three fixed roots. The time-column discrepancy is an endpoint solver/state comparison, not independent bug evidence. A sufficient normalized local matrix homotopy preserves sign `-1`, but the `shared_zero` `u2` reference is not stable under its frozen neighbor rule, so the reference tangent remains inconclusive. Phase 41 stays 8/9, all global outputs remain fail-closed, and Gate 1 stays open. | `claim:P42_SOLVER_NOISE_AND_FROZEN_STEP_PAIR_ARTIFACT_SUPPORTED_AT_PHI_AND_A`; `claim:P42_LOCAL_HESSIAN_ACTION_IDENTITY_ANOMALY_IS_SUPPORTED_WITHOUT_PROVING_A_BUG`; `claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN`; `claim:P42_REFERENCE_TANGENT_REMAINS_INCONCLUSIVE_AND_GLOBAL_PROMOTION_IS_PROHIBITED`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 43 prove one local code bug, repair the integrated tangent, or close Gate 1? | No. It corroborates an independent high-precision local reference at all 90 frozen slots. The byte-pinned NumPy64 Hessian action crosses the frozen tolerance at 13 slots, but that operational mismatch does not identify a wrong formula or unique defect. Same-step binary64 finite-difference evidence is supported at 28/33 disclosed anomalies, while five complete exceptions contradict the frozen all-33 claim. No root, ODE, integrated tangent, time column, orientation, or global cycle is tested; Phase 41 stays 8/9, the Phase-42 reference remains inconclusive, and Gate 1 stays open. | `claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS`; `claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT`; `claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES`; `claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 44 identify a wrong formula or one rounding cause, repair the tangent, or close Gate 1? | No. The declared source and independent action, gradient, and Hessian formulas are exactly identical componentwise. All 90 signed arithmetic telescopes close, and one fixed forward-error model covers all 13 disclosed mismatches and all 77 controls. Coefficient, state, Hessian, and contraction contributions are mixed, nonexclusive, and potentially cancelling in both cohorts, so no unique stage or defect is selected. No root, ODE, integrated tangent, time column, orientation, determinant line, or global cycle is tested; the Phase-43 label is preserved and Gate 1 remains `OPEN_PARTIAL_PROGRESS`. | `claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL`; `claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL`; `claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION`; `open:gate1-original-cycle-signed-global-intersections` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–44 advance one homogeneous lapse/thimble/BFV route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–44 scope guards |
+| Does Phase 45 repair the Phase-41 tangent control by replacing the local tangent RHS? | No. The independent 50/80-digit tangent paths are stable and agree with the source tangent and root Jacobian at the `1e-12` scale, while the historical `u2` plateaus remain failed. Phase 45 narrows the issue to the state-map finite-difference layer without recomputing it or closing Gate 1. | `claim:P45_INDEPENDENT_INTEGRATED_TANGENT_IS_PRECISION_STABLE_AT_THREE_FIXED_ROOTS`; `claim:P45_SOURCE_TANGENT_AND_ROOT_JACOBIAN_AGREE_WITH_INDEPENDENT_REFERENCE`; `claim:P45_TANGENT_CONTROL_FAILURE_IS_STABLE_TO_LOCAL_RHS_REPLACEMENT`; `claim:P45_LOCAL_STABILITY_DOES_NOT_LICENSE_GLOBAL_PROMOTION` |
+| Does Phase 46 repair the failed `u2` state-map ladder or prove a source formula bug? | It repairs the ladder under the frozen independent local-flow comparison, but does not prove a formula bug. Independent plateaus are at most `2.019e-7` and agree with Phase-45 tangents; close source endpoints amplify into tight/Radau derivative-column failures. The mixed source arithmetic, solver accumulation, and subtraction budget remains open, Phase 41 stays 8/9 as provenance, and Gate 1 stays open. | `claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT`; `claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION`; `claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–46 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–46 scope guards |
 
 ### Phase 23 reading path
 
@@ -367,6 +369,22 @@ Phase 45 follows the Phase-44 arithmetic result into the integrated tangent at t
 4. `claim:P45_LOCAL_STABILITY_DOES_NOT_LICENSE_GLOBAL_PROMOTION` keeps Phase 41 at 8/9 and records zero
    new roots, orientations, determinant lines, complete chains, physical cycles, or global intersection
    integers. Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
+
+### Phase 46 reading path
+
+Phase 46 follows the Phase-45 tangent result into the complete historical `u2` state-map ladder:
+
+1. `claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT` records both adjacent
+   plateau pairs below `2.019e-7`, 36/36 stable 50/80-digit probes after complex128 projection, and
+   agreement with the Phase-45 independent tangent columns below `2.858e-7` at all three roots;
+2. `claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION` records exact reproduction of
+   the historical production failures, source endpoint agreement at the `1e-9` scale, and tight/Radau
+   derivative-column disagreement above `0.005`, yielding the frozen scoped repair classification;
+3. `claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION` keeps the
+   80-digit-local-RHS/complex128-integrator boundary explicit. It does not identify one coefficient,
+   state, gradient, solver, or subtraction cause, rewrite Phase 41, or compute a global object;
+4. `open:p46-source-gradient-flow-error-budget` is the next local diagnostic. The distinct physical
+   Gate-1 original-cycle and global-intersection debt remains open.
 
 ## Concept map
 

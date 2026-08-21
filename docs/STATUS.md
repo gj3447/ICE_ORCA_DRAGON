@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 75 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 78 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -1014,6 +1014,38 @@ See
 [`../cpt_temporal_folded_susy/phase45_m4_integrated_tangent_rhs_stability.py`](../cpt_temporal_folded_susy/phase45_m4_integrated_tangent_rhs_stability.py),
 and
 [`../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json`](../cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 46
+
+Phase 46 returns exit 0 with `VALID_RUN` and the fixed classification
+`LOCAL_FLOW_RHS_REPAIR_SUPPORTED`. At the same three immutable Phase-42 roots it consumes all 54
+complete production/tight-DOP853/Radau endpoint slots from the byte-pinned Phase-42 result and newly
+integrates eighteen signed endpoints with the independently reconstructed 80-digit local flow RHS.
+All three historical `u2` steps (`2e-6`, `5e-7`, `1e-7`) and both signs are retained.
+
+The independent path passes both adjacent-step plateau tests at every root; its largest plateau is
+`2.019e-7` against the frozen `0.02` limit. Its finite-difference columns agree with the Phase-45
+independent tangent columns to at worst `2.858e-7` against the `0.005` limit, and all 36 retained
+50/80-digit local RHS probes agree exactly after final complex128 projection.
+
+The source tight-DOP853 and Radau endpoints remain close to the independent endpoints, at worst
+`3.022e-9` and `2.071e-9`. The small central differences amplify those endpoint deviations: tight
+source columns differ by as much as `0.8701`, and Radau columns by as much as `0.02379`; both source
+column aggregates cross the frozen `0.005` limit at all three roots. This supports local flow-RHS
+repair under the declared projection, not a wrong-formula verdict or one unique coefficient/state/
+gradient/solver/subtraction cause.
+
+The historical Phase-41 result remains 8/9 as provenance. No root search, retuning, orientation
+selection, determinant line, complete cycle, good-end census, Stokes chamber, or global intersection is
+computed. Global promotion remains `PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and the runnable
+catalog is now 78.
+
+See
+[`../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT.md`](../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT.md),
+[`../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_INPUTS.json`](../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py`](../cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py),
+and
+[`../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json`](../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json).
 
 ## Historical scientific ledger
 
