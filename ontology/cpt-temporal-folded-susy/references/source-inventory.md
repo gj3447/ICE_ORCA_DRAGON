@@ -133,6 +133,7 @@ Every source above has `state: PRIMARY` in the local graph. That is a source cla
 | Phase 41 frozen \(m=4\) two-source and local R14 pilot | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only relative-cycle and lapse-contour framing; none supplies the four-midpoint action, two-source response, five local R14 candidates, repairs the failed tangent contract, identifies a cross-cutoff determinant line, or licenses global completion. No new literature source is introduced by Phase 41 |
 | Phase 42 fixed-root tangent disentanglement | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none arbitrates the repository's solver-noise/step-pair diagnostics, local Hessian-action anomaly, endpoint time-column comparison, or sufficient normalized local-matrix homotopy. No new literature source is introduced by Phase 42 |
 | Phase 43 frozen local high-precision RHS arbitration | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none supplies the repository's independent exact/80/120-decimal derivative calculation, chooses its numerical thresholds, explains the 13/90 NumPy64 output mismatches or 28/33 finite-difference ledger, proves a formula defect, or promotes local arithmetic to an integrated tangent or global intersection invariant. No new literature source is introduced by Phase 43 |
+| Phase 44 frozen NumPy64 local RHS error decomposition | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none supplies the repository's exact independent/source formula comparison, byte-faithful AST trace, S0-to-S7 signed decomposition, six contraction alternatives, fixed forward-error envelopes, 13/77 cohort coverage, or nonexclusive mixed-rounding interpretation. No source proves correct rounding, selects one causal stage, repairs the integrated tangent, or licenses a global intersection invariant. No new literature source is introduced by Phase 44 |
 
 Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
 ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
@@ -152,7 +153,7 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other sixty-two graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–42 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The other sixty-two graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–44 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
 
 ## Uncovered construction needs
 
@@ -392,5 +393,19 @@ global-completion prerequisites remain false, 6 global outputs and 7 desired out
 the Phase-42 reference tangent remains inconclusive. No new source node or literature edge was added;
 Gate 1 remains open and all global, continuum, BFV/Pfaffian/Pin, SUSY, and quantum-gravity promotions
 remain unlicensed.
+
+Phase 44 likewise adds no source-derived physics claim. Its exact componentwise comparison of the
+declared source and independent formulas, byte-faithful NumPy64 boundary and AST traces, signed
+S0-to-S7 telescopes, six fixed contraction alternatives, conditioning diagnostics, declared
+forward-error envelopes, complete 13/77 cohort coverage, and nonexclusive tri-state ledger are
+repository calculations. The inherited sources do not supply those formulas or traces, prove correct
+rounding, select a unique coefficient/state/Hessian/contraction cause, identify a best algorithm,
+authorize a source rewrite, or turn forward-envelope coverage into an integrated-tangent stability
+result. They also do not turn this frozen local arithmetic into a local orientation, common determinant
+line, original regulated cycle, or global Picard--Lefschetz coefficient. Exactly 16
+global-completion prerequisites remain false, 6 global outputs and 7 desired outputs remain null, the
+Phase-42 reference tangent remains inconclusive, and the historical Phase-43 13/90 label is preserved.
+No new source node or literature edge was added; Gate 1 remains `OPEN_PARTIAL_PROGRESS` and all global,
+continuum, BFV/Pfaffian/Pin, SUSY, and quantum-gravity promotions remain unlicensed.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

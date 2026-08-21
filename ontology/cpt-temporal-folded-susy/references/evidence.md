@@ -2,17 +2,17 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–43 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), and [`phase43-result.json`](../evidence/phase43-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–44 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), and [`phase44-result.json`](../evidence/phase44-result.json).
 
 ## Reading `PASS` correctly
 
-All 425 Phase 16–43 named exact checks have `status: PASS`. The snapshots contain 252 typed
-numerical-ledger checks: 247 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
-separately recorded Phase-18 SciPy control brings the numerical-record total to 253: 70 controls through
+All 433 Phase 16–44 named exact checks have `status: PASS`. The snapshots contain 259 typed
+numerical-ledger checks: 254 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
+separately recorded Phase-18 SciPy control brings the numerical-record total to 260: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35,
 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, 22 in Phase 40, 9 in Phase 41, 8 in
-Phase 42, and 6 in Phase 43. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
+Phase 42, 6 in Phase 43, and 7 in Phase 44. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
 contracts. Phase 42
 contributes 8 exact `PASS` records and, after lossless schema mapping of the raw typed statuses, 6
 numerical `PASS`, one protocol-defined local-identity `FAIL`, and one reference-tangent `INCONCLUSIVE`.
@@ -28,8 +28,11 @@ lossless schema mapping, 4 numerical `PASS` plus two complete non-invalidating `
 first universal PASS predicate fails because 13/90 NumPy64 local Hessian-action outputs cross the frozen
 source threshold. The second fails because only 28/33 disclosed anomalies satisfy the frozen same-step
 finite-difference rule. Those failures do not invalidate the run, prove a unique code defect, or turn
-the false all-33 sufficient claim into a universal negation of finite-difference effects. None of these
-records
+the false all-33 sufficient claim into a universal negation of finite-difference effects. Phase 44
+contributes 8 exact and 7 numerical `PASS` records. They establish exact identity of the two declared
+formula constructions, complete all 90 signed telescopes, and cover the fixed 13/77 cohorts under one
+declared forward-error model. They do not establish correct rounding, one unique cause, integrated
+tangent stability, or global physical promotion. None of these records
 means that a local candidate is an interval-certified root, that the finite-radius chart patch is the
 exact complete upward manifold, that the entire bounded chain was paired, that the physical original
 relative cycle or non-Stokes chamber is fixed, that a global coefficient is known, or that a hard CFU
@@ -77,6 +80,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 41 | `result:P41_M4_TWO_SOURCE_INTERSECTION_20260820`; `2026-08-20T14:28:45.166Z` | `cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py`; SHA-256 `377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530`; introduced in `a31a8627b0e0e210dea96d1d69dad80ccaa6decd` | Exit `0`; 7 exact PASS plus 8 numerical PASS and 1 tangent-control FAIL; valid typed run |
 | 42 | `result:P42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_20260820`; `2026-08-20T21:35:41Z` | `cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py`; SHA-256 `1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019`; introduced in `1c0d7fed4aa99c6424ec659dae8ba6f24b791926` | Exit `0`; 8 exact PASS plus 6 numerical PASS, 1 local-identity FAIL, and 1 reference-tangent INCONCLUSIVE; valid typed run. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
 | 43 | `result:P43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_20260820`; `2026-08-20T23:31:27Z` | `cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py`; SHA-256 `01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729`; introduced in `4aa3887cec14816c92ff8635d2cac703d4661d37` | Exit `0`; 7 exact PASS plus 4 numerical PASS and 2 complete non-invalidating FAIL records for the source-agreement and all-33 finite-difference universal predicates; valid typed run. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
+| 44 | `result:P44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_20260821`; `2026-08-21T05:37:22Z` | `cpt_temporal_folded_susy/phase44_m4_numpy64_local_rhs_error_decomposition.py`; SHA-256 `220123fe069cad3e3178d7e87656cf61240d153d0762041169288c3d9cb9dc52`; corrected clean runner introduced in `d13af382fe65cc50f74fbc83861e41c0e7236341` | Exit `0`; 8 exact PASS plus 7 numerical PASS; all 13,474 terminal records succeed and the typed run is valid. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -160,6 +164,28 @@ boundary while delegating byte-full arrays and 13,606 terminal records to the ra
 has SHA-256 `f1ef60f9e9ac97dbfb9ad7963c12363e4bbd8f90d69b28e4f4209ea04f16ac66` in
 `6042fe47e746b4316babe86226a322dea46faf47`. Its explicitly unarchived report-time source-expression
 comparison is interpretive context, not Phase-43 production evidence or a contract pass.
+
+The Phase 44 preregistered post-Phase-43 diagnostic manifest has SHA-256
+`4680381aae27ff2faec75960c9bc382336efec2b518098c90a257f542eda9044` and first appears in
+`03943e8b2b140a5f1b8724d1e2d4439d14964552`. It freezes all 90 slots, the complete 13/77 join,
+independent/source formula boundaries, byte-faithful AST traces, S0-to-S7 signed stages, six
+contraction alternatives, the forward-error model, nonexclusive tri-states, full retention, null
+desired outputs, and fail-closed Gate-1 boundaries. An initial committed-run exit `2` exposed a
+self-denylist collision with the independent constructor's local name; no failed result was committed.
+Commit `d13af382fe65cc50f74fbc83861e41c0e7236341` renames only that local result, without changing the
+mathematical expression, and yields runner SHA-256
+`220123fe069cad3e3178d7e87656cf61240d153d0762041169288c3d9cb9dc52`. The byte-full raw result has
+outer SHA-256 `bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75`, canonical payload digest
+`43fd5a69e590e0190f0fc8e5c3c2bc5d8cd32848d80b6c7ef79064c08b7d886e`, payload-without-self digest
+`71fbf86dec8807e6c931c1be279723ce96d91abfa1890bb0782b1cee67f5df8f`, size 529,370,671 bytes, and
+capture commit `4e75a4fe9ce909fa62794f5a550a3409f6e0fc9f`. Strict external validation rejected duplicate keys and
+nonfinite values, checked 1,392,585 canonical nonzero 120-digit strings, and confirmed all 13,474
+terminal records. The compact typed snapshot hash is
+`9c13da15a16323d91093fbd9da3e23f6a56049d4758cc18c39c2a450adf065f1`; it preserves all 8+7 IDs,
+artifact and correction provenance, exact identity, signed-stage and forward-envelope aggregates,
+13/77 cohort coverage, local-only exclusions, and the 16-false/6-global-null/7-desired-null boundary.
+The report has SHA-256 `e9a1409e2564bc5b0633f34f4ffc4e65764aacd58ec30610b59981bdd28f9149` in
+`3afe8a4f97fdfc2728700108bb603a32cea764b3`.
 
 ## Evidence-to-claim index
 
@@ -1685,6 +1711,54 @@ contract or production-evidence record. Integrated tangent evolution and the ODE
 component remain `NOT_TESTED_LOCAL_ONLY`; the time column remains excluded; Phase 41 stays 8/9 and the
 Phase-42 reference tangent stays inconclusive.
 
+## Phase 44 check ledger
+
+### Frozen inputs, exact formula/trace boundaries, retention, and global guards — 8 exact PASS
+
+- `P44.freeze.committed_artifacts_runner_runtime_and_TOCTOU` — `PASS`
+- `P44.input.all_90_phase43_slots_and_13_disclosure_identity` — `PASS`
+- `P44.scope.local_arithmetic_only` — `PASS`
+- `P44.symbolic.independent_componentwise_canonicalization` — `PASS`
+- `P44.trace.byte_faithful_numpy64_boundaries_and_AST` — `PASS`
+- `P44.math.fixed_hybrid_contractions_conditioning_and_envelopes` — `PASS`
+- `P44.retention.complete_nonexclusive_tri_state_ledger` — `PASS`
+- `P44.guard.fail_closed_gate1_and_null_outputs` — `PASS`
+
+These checks bind the manifest, corrected clean runner, raw result, all 90 Phase-43 slots, complete
+post-freeze 13/77 join, independent exact formulas, byte-faithful source boundaries, generated-callable
+AST traces, S0-to-S7 signed stages, six contraction alternatives, conditioning indices, fixed
+forward-error envelopes, and nonexclusive tri-state rules. All 13,474 records terminate as `SUCCESS`
+and the 34,530-edge dependency graph is acyclic. Start/end HEAD, source, runner, runtime, worktree,
+pycache, and callable fingerprints agree. Zero root, least-squares, ODE, integrated-tangent,
+time-column, orientation, determinant-line, or global-intersection evaluations occur. Seven desired
+outputs remain null, sixteen prerequisites remain false, six global outputs remain null, and Gate 1
+stays `OPEN_PARTIAL_PROGRESS`.
+
+### All-slot signed decomposition and declared forward model — 7 numerical PASS
+
+- `P44.reproduction.phase43_source_and_reference_vectors` — `PASS`
+- `P44.formula.exact_componentwise_identity` — `PASS`
+- `P44.decomposition.hybrid_telescoping_closure` — `PASS`
+- `P44.forward_error.all_90_declared_model_coverage` — `PASS`
+- `P44.forward_error.all_13_phase43_mismatches_covered` — `PASS`
+- `P44.contractions.complete_six_way_all_slot_comparison` — `PASS`
+- `P44.classification.complete_nonexclusive_causal_ledger` — `PASS`
+
+All 90 source vectors reproduce bit-for-bit and all 90 stored 120-decimal references reproduce within
+`1e-100`; the unchanged `5e-13` metric recovers exactly 13 disclosed mismatches and 77 controls.
+Source-minus-independent canonicalization is exactly zero for three actions, 21 gradient components,
+and 147 Hessian components. Every signed telescope closes with zero observed residual. Coefficient,
+state, Hessian, and contraction contributions are nonzero at 90/90 slots; the outer-product delta is
+zero. The cancellation-risk indicator crosses the frozen Phase-43 scale at 90/90 slots.
+
+The fixed forward model covers all 13 disclosed mismatches and all 77 controls. Maximum complete-source
+normwise and componentwise utilizations are approximately `0.0097675` and `0.0178199`; maximum
+any-stage values are approximately `0.0897750` and `0.340514`. All six contraction alternatives
+complete at all slots. Both cohorts have the same nonexclusive tri-state pattern, so the supported
+result is pinned-platform compatibility with mixed rounding contributions. It is not correct-rounding
+proof, a unique cause, a best-algorithm selection, authorization for a source rewrite, or evidence for
+an integrated tangent or global cycle.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1718,6 +1792,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase40_m3_reflection_odd_inter
 .venv/bin/python cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py
 .venv/bin/python cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py
 .venv/bin/python cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py
+./ice run phase44_m4_numpy64_local_rhs_error_decomposition
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
@@ -2271,5 +2346,30 @@ universal all-33 sufficient claim: 28 disclosed anomalies support the finite-dif
 complete slots do not. The fourth preserves zero root, ODE, integrated-tangent, time-column,
 orientation, determinant-line, and global-cycle evaluations; its null outputs are unknown rather than
 zero coefficients, and Gate 1 stays open.
+
+Phase 44 decomposes that local NumPy64 layer without changing the Phase-43 historical label:
+
+```text
+claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p44-exact-freeze-formula-trace-retention-and-global-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p44-numerical-all-slot-mixed-forward-error-decomposition
+  → VALID_WITHIN → scope:p44-ninety-frozen-local-m4-arithmetic-slots
+
+claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p44-exact-freeze-formula-trace-retention-and-global-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p44-numerical-all-slot-mixed-forward-error-decomposition
+  → VALID_WITHIN → scope:p44-ninety-frozen-local-m4-arithmetic-slots
+
+claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p44-exact-freeze-formula-trace-retention-and-global-guards
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:p44-numerical-all-slot-mixed-forward-error-decomposition
+  → MOTIVATES → open:gate1-original-cycle-signed-global-intersections
+```
+
+The first claim excludes a mismatch between the two declared formula constructions but does not prove
+physical or integrated-solver correctness. The second records complete forward-model coverage with
+mixed, signed, nonexclusive contributions and no unique cause. The third preserves the zero-count
+root/ODE/tangent/time/orientation/global scope, the 16 false prerequisites, six global nulls, seven
+desired nulls, and Gate 1 `OPEN_PARTIAL_PROGRESS` status.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

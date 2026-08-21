@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_20260821",
+  "phase": "P44",
+  "observed_at_utc": "2026-08-21T05:37:22Z",
+  "command": "./ice run phase44_m4_numpy64_local_rhs_error_decomposition",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase44_m4_numpy64_local_rhs_error_decomposition.py",
+    "sha256": "220123fe069cad3e3178d7e87656cf61240d153d0762041169288c3d9cb9dc52",
+    "introduced_in_commit": "d13af382fe65cc50f74fbc83861e41c0e7236341"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P44.freeze.committed_artifacts_runner_runtime_and_TOCTOU",
+      "statement": "The manifest-runner-result order, pinned artifacts and subtrees, committed clean runner, locks, runtime, generated-callable fingerprints, HEAD, worktree, pycache, and start/end TOCTOU identities all match.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.input.all_90_phase43_slots_and_13_disclosure_identity",
+      "statement": "Strict decode and hashes pass for all ninety Phase-43 source/reference records; the complete 13/77 split, 5/3/5 point counts, and five Phase-42-anomaly overlaps reproduce after the key freeze.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.scope.local_arithmetic_only",
+      "statement": "The run performs zero root, least-squares, ODE, dense-output, trajectory, chart-transport, time-column, integrated-tangent, orientation, determinant-line, and global-intersection evaluations.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.symbolic.independent_componentwise_canonicalization",
+      "statement": "Independent and source boundaries remain disjoint; the three actions, twenty-one gradient components, and 147 Hessian components complete the fixed exact canonicalization with no machine float and full retained expressions.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.trace.byte_faithful_numpy64_boundaries_and_AST",
+      "statement": "All source u, w, H, B1, B2, y, and A boundaries and generated-callable AST evaluations complete with exact raw identities, fixed event commitments, terminal histograms, and start/end fingerprints.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.math.fixed_hybrid_contractions_conditioning_and_envelopes",
+      "statement": "All eight stages, seven deltas, six alternative contractions, exact lifts, fixed term orders, conditioning indices, model envelopes, thresholds, and no-selection quantifiers equal the frozen manifest.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.retention.complete_nonexclusive_tri_state_ledger",
+      "statement": "All 13,474 formula, slot, stage, delta, trace, contraction, metric, envelope, evidence, aggregate, exception, and dependency records terminate exactly once without forcing a best algorithm or unique cause.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.guard.fail_closed_gate1_and_null_outputs",
+      "statement": "All desired outputs remain null, promoted prerequisites remain false, global outputs remain null, historical Phase-41/42/43 statuses are retained, global promotion is prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 7,
+  "numerical": [
+    {
+      "id": "P44.reproduction.phase43_source_and_reference_vectors",
+      "statement": "At all ninety slots S7 reproduces the stored source action bit-for-bit, S0 reproduces the stored 120-dps reference within 1e-100, and exactly the disclosed thirteen slots exceed the unchanged 5e-13 metric.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.formula.exact_componentwise_identity",
+      "statement": "All three source variants have exact action, gradient, and 49-component Hessian identity with the independent equation model.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.decomposition.hybrid_telescoping_closure",
+      "statement": "All ninety ordered S0-to-S7 telescopes close within both 1e-100 bounds and every retained stage and delta metric is finite.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.forward_error.all_90_declared_model_coverage",
+      "statement": "Every slot establishes formula identity, passes all fixed coefficient, state, scalar-AST, and contraction prerequisites, and lies inside the propagated componentwise and normwise envelopes.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.forward_error.all_13_phase43_mismatches_covered",
+      "statement": "All thirteen disclosed Phase-43 mismatch slots, without selection or threshold change, are complete and lie inside the declared forward-error model.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.contractions.complete_six_way_all_slot_comparison",
+      "statement": "All six fixed association-by-summation alternatives and the source path complete at all ninety slots with every partial sum, error metric, cancellation index, and no-winner rule retained.",
+      "status": "PASS"
+    },
+    {
+      "id": "P44.classification.complete_nonexclusive_causal_ledger",
+      "statement": "The eight nonexclusive tri-state evidence kinds and their point, global, and 13/77 cohort aggregates are complete, acyclic, path-cited, and do not force an integrated verdict.",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "m=4 all-slot NumPy64 local RHS error decomposition",
+    "run_status": "VALID_TYPED_RUN",
+    "exact_checks": 8,
+    "numerical_checks": 7,
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "full_raw_result_archived": true,
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json",
+      "raw_result_outer_sha256": "bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75",
+      "raw_result_payload_sha256": "43fd5a69e590e0190f0fc8e5c3c2bc5d8cd32848d80b6c7ef79064c08b7d886e",
+      "raw_result_payload_sha256_without_self": "71fbf86dec8807e6c931c1be279723ce96d91abfa1890bb0782b1cee67f5df8f",
+      "raw_result_introduced_in_commit": "4e75a4fe9ce909fa62794f5a550a3409f6e0fc9f",
+      "raw_result_size_bytes": 529370671,
+      "observed_time_basis": "The raw payload has no wall-clock field; observed_at_utc is the durable commit time of the byte-validated raw-result capture.",
+      "validation": "Exactly one exit-0 RESULT_JSON was strictly decoded with duplicate-key and nonfinite rejection; canonical JSON, 1,392,585 nonzero 120-digit mp strings, the self-excluding digest, the frozen key digest, and 13,474 terminal SUCCESS records were independently verified."
+    },
+    "runner_correction_provenance": {
+      "initial_committed_run_exit": 2,
+      "initial_result_committed": false,
+      "reason": "The independent constructor local name action_w matched the constructor-source denylist.",
+      "correction_commit": "d13af382fe65cc50f74fbc83861e41c0e7236341",
+      "correction_scope": "Rename only the local symbolic result to independent_action; the mathematical expression is unchanged.",
+      "successful_run_pins_corrected_clean_runner": true
+    },
+    "frozen_inputs": {
+      "input_manifest": {
+        "path": "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_INPUTS.json",
+        "sha256": "4680381aae27ff2faec75960c9bc382336efec2b518098c90a257f542eda9044",
+        "introduced_in_commit": "03943e8b2b140a5f1b8724d1e2d4439d14964552",
+        "status": "PREREGISTERED_POST_PHASE43_DIAGNOSTIC_INPUT_FREEZE",
+        "is_preregistration": true,
+        "is_scientific_evidence": false
+      },
+      "phase43_raw_result_sha256": "20c967ff968541402c81d5ab91394820bffd15cdd79052ee9e162cb5f39c2bd8",
+      "phase42_checkpoint_sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+      "cohort_joined_after_complete_key_freeze": true,
+      "desired_outputs_all_null": true
+    },
+    "local_scope": {
+      "points": [
+        "shared_zero",
+        "phi_plus",
+        "a_plus"
+      ],
+      "fractions_per_point": 5,
+      "directions_per_fraction": 6,
+      "base_slots": 90,
+      "disclosed_phase43_mismatch_slots": 13,
+      "control_slots": 77,
+      "root_solver_evaluations": 0,
+      "ODE_solver_evaluations": 0,
+      "integrated_tangent_evaluations": 0,
+      "time_column_evaluations": 0,
+      "orientation_or_determinant_line_evaluations": 0,
+      "global_promotion": "PROHIBITED"
+    },
+    "retention_ledger": {
+      "declared_records": 13474,
+      "terminal_records": 13474,
+      "terminal_status": "SUCCESS",
+      "AST_trace_commitment_records": 8730,
+      "hybrid_stage_and_delta_records": 1350,
+      "alternative_contraction_records": 540,
+      "conditioning_and_forward_envelope_records": 1260,
+      "tri_state_evidence_and_aggregate_records": 816,
+      "dependency_edges": 34530,
+      "dependency_graph_acyclic": true,
+      "start_end_HEAD_source_runner_runtime_worktree_pycache_callable_equal": true
+    },
+    "exact_formula_identity": {
+      "status": "SUPPORTED",
+      "variants": 3,
+      "action_components_compared": 3,
+      "gradient_components_compared": 21,
+      "hessian_components_compared": 147,
+      "nonzero_canonical_differences": 0,
+      "formula_mismatch_evidence": "NOT_SUPPORTED",
+      "scope_note": "Identity is limited to the declared source and independent four-element expressions and does not prove integrated solver or physical-model correctness."
+    },
+    "source_reference_reproduction": {
+      "source_bitwise_reproduced_slots": 90,
+      "reference_reproduced_within_1e_100_slots": 90,
+      "phase43_threshold": "5e-13",
+      "disclosed_mismatch_count": 13,
+      "control_count": 77,
+      "disclosed_relative_range": {
+        "minimum": "5.7659377619134509356e-13",
+        "median": "1.0803845414806835669e-12",
+        "maximum": "3.5565012563170942547e-12"
+      },
+      "control_relative_range": {
+        "minimum": "2.0719626240658485047e-16",
+        "median": "5.5391071083431194213e-15",
+        "maximum": "4.2852187893915275743e-13"
+      },
+      "historical_phase43_labels_rewritten": false
+    },
+    "hybrid_decomposition": {
+      "telescopes_closed": 90,
+      "closure_relative_maximum": "0.0",
+      "closure_absolute_maximum": "0.0",
+      "nonzero_slots_by_delta": {
+        "D_coeff": 90,
+        "D_state": 90,
+        "D_hessian": 90,
+        "D_matmul_1": 90,
+        "D_matmul_2": 90,
+        "D_matvec": 90,
+        "D_outer": 0
+      },
+      "maximum_resolved_relative_by_delta": {
+        "D_coeff": "2.8353515738098058820e-12",
+        "D_state": "2.7321525668855239339e-14",
+        "D_hessian": "1.9915204150761822987e-12",
+        "D_matmul_1": "4.3732760511043897807e-16",
+        "D_matmul_2": "2.4810877918273962997e-16",
+        "D_matvec": "2.0831278520208351808e-16",
+        "D_outer": "0.0"
+      },
+      "interpretation": "Signed contribution vectors can reinforce or cancel; phase43-total-error fractions are not weights and no largest-stage or unique-cause verdict is permitted."
+    },
+    "declared_forward_error_model": {
+      "all_90_covered": "SUPPORTED",
+      "all_13_disclosed_covered": "SUPPORTED",
+      "all_77_controls_covered": "SUPPORTED",
+      "same_rules_applied_without_selection": true,
+      "maximum_total_source_norm_utilization": "9.7675113056737774314e-3",
+      "maximum_total_source_component_utilization": "1.7819875355731256695e-2",
+      "maximum_any_stage_norm_utilization": "8.9774971636893241056e-2",
+      "maximum_any_stage_component_utilization": "3.4051387192263896140e-1",
+      "unresolved_beyond_declared_model": "NOT_SUPPORTED",
+      "limitation": "Coverage supports compatibility with the pinned platform model; it does not prove correct rounding, a unique cause, or integrated tangent stability."
+    },
+    "nonexclusive_classification": {
+      "coefficient_rounding": "SUPPORTED_AT_90_OF_90",
+      "state_rounding": "SUPPORTED_AT_90_OF_90",
+      "hessian_rounding": "SUPPORTED_AT_90_OF_90",
+      "contraction_rounding": "SUPPORTED_AT_90_OF_90",
+      "cancellation_scale": "SUPPORTED_AT_90_OF_90",
+      "formula_mismatch": "NOT_SUPPORTED_AT_90_OF_90",
+      "forward_error_coverage": "SUPPORTED_AT_90_OF_90",
+      "unresolved_beyond_model": "NOT_SUPPORTED_AT_90_OF_90",
+      "disclosed_and_control_cohorts_have_same_tri_state_pattern": true,
+      "no_unique_cause_forced": true
+    },
+    "conditioning_and_alternatives": {
+      "expanded_component_cancellation_range": [
+        "2.0077521065090709354e2",
+        "1.0139092115525419217e16"
+      ],
+      "source_dot_kappa_maximum": "8.6849690178109334121e16",
+      "gamma56_max_kappa_expand_range": [
+        "1.2482694651761846606e-12",
+        "6.3037259686529956844e1"
+      ],
+      "risk_indicator_at_or_above_5e_13_slots": 90,
+      "alternative_paths": 6,
+      "alternative_paths_complete_at_all_slots": true,
+      "largest_alternative_to_S3_or_S7_symmetric_relative": "1.1135244450532082969e-15",
+      "best_algorithm_selected": false,
+      "source_rewrite_authorized": false
+    },
+    "claim_status": {
+      "phase44_local_arithmetic_diagnosis": "LOCAL_ROUNDING_CONTRIBUTIONS_MIXED_NONEXCLUSIVE",
+      "exact_formula_identity": "SUPPORTED",
+      "declared_float64_forward_error_model_all_13": "SUPPORTED",
+      "integrated_tangent_evolution": "NOT_TESTED_LOCAL_ONLY",
+      "ODE_solver_noise_component": "NOT_TESTED_LOCAL_ONLY",
+      "phase41_historical_status": "TANGENT_CONTROL_FAILED",
+      "phase41_numerical_contracts": "8/9",
+      "phase42_reference_tangent": "REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE",
+      "phase43_historical_mismatch_label": "SUPPORTED_AT_13_OF_90_UNCHANGED",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "completion_ledger": {
+      "m2_and_m4_actions_identified": false,
+      "m2_and_m4_upward_cycles_identified": false,
+      "m2_and_m4_common_determinant_line_constructed": false,
+      "m3_and_m4_canonical_sign_equality_proved": false,
+      "m3_and_m4_common_determinant_line_constructed": false,
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "continuous_direction_coverage_proved": false,
+      "root_exhaustion_proved": false,
+      "exact_nonlinear_upward_manifold_certified": false,
+      "all_saddles_and_upward_components_complete": false,
+      "non_Stokes_chamber_certified": false,
+      "all_relative_good_ends_classified": false,
+      "physical_original_cycle_derived": false,
+      "metric_homotopy_tested": false,
+      "BFV_Pfaffian_Pin_orientation_computed": false,
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "quantum_gravity_explanation": null,
+      "desired_phase44_overall_diagnosis": null,
+      "desired_formula_identity_verdict": null,
+      "desired_dominant_rounding_stage": null,
+      "desired_all_13_forward_error_coverage": null,
+      "desired_integrated_tangent_verdict": null,
+      "desired_local_orientation_sign": null,
+      "desired_global_intersection_coefficient": null,
+      "false_count": 16,
+      "global_null_count": 6,
+      "desired_null_count": 7,
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    }
+  }
+}

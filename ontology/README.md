@@ -8,18 +8,21 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–43 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–44 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-20T23:31:27Z` graph update, the collection has 607 nodes and
-1717 edges. Validation verifies 102/102 stored hashes (98 artifacts and 4 policies). The
-Phase 16–43 run snapshots contain 425 named exact checks, all `PASS`, and 252 typed numerical-ledger
-checks: 247 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
+At the recorded `2026-08-21T05:45:09Z` graph update, the collection has 619 nodes and
+1766 edges. Validation verifies 107/107 stored hashes (103 artifacts and 4 policies). The
+Phase 16–44 run snapshots contain 433 named exact checks, all `PASS`, and 259 typed numerical-ledger
+checks: 254 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
 NumPy64 outputs cross the frozen source threshold, and only 28/33 disclosed anomalies satisfy the
 finite-difference rule, so its all-33 predicate fails. None of these typed non-PASS records invalidates
-its zero-exit run. One
-legacy separately recorded Phase-18 numerical control brings the numerical-record total to 253 (248
+its zero-exit run. Phase 44 adds eight exact and seven numerical `PASS` records: exact identity of the
+declared source and independent formulas, closed all-slot telescopes, and declared forward-error-model
+coverage for all 13 disclosed mismatches and all 77 controls. These are local pinned-platform arithmetic
+results, not a unique-cause, integrated-tangent, or global-cycle result. One legacy separately recorded
+Phase-18 numerical control brings the numerical-record total to 260 (255
 pass, four fail, one inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
@@ -71,6 +74,9 @@ confidence.
 ./ice ontology trace claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT --depth 2
 ./ice ontology trace claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES --depth 2
 ./ice ontology trace claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION --depth 2
+./ice ontology trace claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL --depth 2
+./ice ontology trace claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL --depth 2
+./ice ontology trace claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -152,6 +158,17 @@ integrated tangent, ODE solver-noise, time-column, reference-tangent, local orie
 or global-cycle result is added. Phase 41 stays 8/9, Phase 42 stays inconclusive, sixteen prerequisites
 remain false, six global outputs and seven desired outputs remain null, and Gate 1 remains open.
 
+Phase 44 decomposes that frozen NumPy64 layer without rerunning a root, ODE, or integrated tangent.
+For all three declared source variants, exact canonicalization finds zero difference between the
+source and independent action, gradient, and Hessian expressions. Across all 90 frozen slots, the
+signed S0-to-S7 telescopes close; coefficient, state, Hessian, and contraction contributions are
+nonzero and potentially cancelling, while the declared componentwise and normwise forward-error model
+covers all 13 disclosed mismatches and all 77 controls. The same nonexclusive tri-state pattern occurs
+in both cohorts, so no unique stage, defect, or cause is selected and no source rewrite is authorized.
+Phase 41 stays 8/9, the Phase-42 reference tangent stays inconclusive, the historical Phase-43 13/90
+label is preserved, sixteen prerequisites remain false, six global and seven desired outputs remain
+null, and Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
+
 ## How to read a claim
 
 Follow a claim in this order:
@@ -174,6 +191,9 @@ passing counterexample check can attach to a claim with `polarity: CONTRADICTS`.
 schema-level `FAIL` records are complete, non-invalidating failures of universal sufficient predicates:
 they preserve the 13/90 source-mismatch and 28/33 finite-difference outcomes without calling the run
 invalid or converting a failed all-33 claim into evidence that finite-difference error is absent.
+Phase 44 has no typed non-PASS record: its seven numerical `PASS` entries establish only their named
+local arithmetic contracts. Forward-model coverage is compatibility on the pinned platform, not proof
+of correct rounding, a unique causal stage, an integrated tangent, or a global physical construction.
 
 ## Identifier families
 

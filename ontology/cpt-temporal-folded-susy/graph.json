@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-20T23:31:27Z",
+  "updated_at_utc": "2026-08-21T05:45:09Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -293,6 +293,15 @@
         "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
         "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
         "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION"
+      ]
+    },
+    {
+      "question": "Does Phase 44 find a wrong local formula, one unique rounding defect, or a repaired tangent?",
+      "answer": "No. The declared source action, gradient, and Hessian are exactly identical to the independent construction. Coefficient formation, state formation, scalar Hessian evaluation, contraction arithmetic, and cancellation-capable conditioning make nonexclusive contributions at all 90 frozen slots. The fixed forward-error model covers all 13 disclosed Phase-43 mismatches and all 77 controls, with no beyond-model residual supported. This is pinned-platform local arithmetic compatibility, not proof of correct rounding or one unique cause. No root, ODE, integrated tangent, time column, orientation, or global cycle is tested; historical Phase-43 labels remain unchanged and Gate 1 stays open.",
+      "claim_ids": [
+        "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+        "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+        "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION"
       ]
     }
   ],
@@ -645,7 +654,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42 and 43 apply the same rule to the retained tangent anomaly: they preserve solver, step-pair, local-identity, high-precision-reference, finite-difference, and NumPy64 pipeline evidence without selecting one unique cause, converting a failed all-slot sufficient claim into a universal negation, or promoting an untested integrated tangent.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–44 apply the same rule to the retained tangent anomaly: they preserve solver, step-pair, local-identity, high-precision-reference, finite-difference, NumPy64 pipeline, exact-formula, signed-stage, conditioning, and forward-model evidence without selecting one unique cause, converting a failed sufficient claim into a universal negation, or promoting an untested integrated tangent.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -666,6 +675,9 @@
         "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
         "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
         "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+        "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+        "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
         "artifact:recursive-truth-meditation"
       ]
@@ -709,7 +721,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, the Phase-42 fixed-root tangent diagnosis, and the Phase-43 frozen local high-precision arbitration. Retain the numerical rank-two response, five computed local R14 +1 candidates, sufficient normalized sign homotopy, a 90/90 corroborated local reference, the 13/90 operational NumPy64 mismatch ledger, and the 28/33 finite-difference evidence count. Also retain the inconclusive Phase-42 reference, the five exceptions to the all-33 sufficient claim, and the untested integrated tangent. Stop before turning local diagnostics into a corrected production tangent, formula-level bug verdict, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, the Phase-42 fixed-root tangent diagnosis, the Phase-43 frozen local high-precision arbitration, and the Phase-44 all-slot arithmetic decomposition. Retain the numerical rank-two response, five computed local R14 +1 candidates, sufficient normalized sign homotopy, a 90/90 corroborated local reference, the historical 13/90 operational NumPy64 mismatch ledger, exact declared formula identity, and 13/13 plus 77/77 fixed forward-model coverage with mixed nonexclusive contributions. Also retain the inconclusive Phase-42 reference, the five exceptions to the Phase-43 all-33 sufficient claim, and the still-untested integrated tangent. Stop before turning local compatibility into correct-rounding proof, one unique cause, a corrected production tangent, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -742,6 +754,9 @@
         "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
         "claim:P43_DOUBLE_PRECISION_FD_ARTIFACT_EXPLAINS_ALL_33_PHASE42_ANOMALIES",
         "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+        "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+        "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
       ]
@@ -7705,6 +7720,155 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase43-result.json",
       "sha256": "4b76f02e6cc570612092fe038b92a1c5ea09851a8c1a45a91aa93e15443eb011"
+    },
+    {
+      "id": "phase:p44",
+      "type": "phase",
+      "title": "Phase 44 — m=4 NumPy64 local RHS error decomposition",
+      "summary": "A preregistered all-90-slot arithmetic-provenance audit of the Phase-43 NumPy64 local RHS mismatch ledger. Eight exact and seven numerical contracts pass. The declared source action, gradient, and Hessian are exactly identical to an independent construction; fixed signed stages show mixed nonexclusive coefficient, state, Hessian, and contraction contributions; and one declared forward-error model covers all 13 disclosed mismatches and all 77 controls. No root, ODE, integrated tangent, time column, orientation, or global-cycle calculation is performed, historical labels are preserved, and Gate 1 remains open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "type": "claim",
+      "title": "The declared source formula is exactly identical to the independent model",
+      "summary": "For shared_zero, phi_plus, and a_plus, source-minus-independent canonicalization gives exact zero for all three actions, twenty-one gradient components, and 147 Hessian components. The independent constructor uses exact symbolic constants and no Phase-41 expression; the source expression is mapped separately by semantic name. Formula-mismatch evidence is therefore NOT_SUPPORTED within these declared expressions. This does not prove physical correctness, correct rounding, state accuracy, or integrated solver correctness.",
+      "state": "SUPPORTED_FOR_ALL_THREE_DECLARED_SOURCE_VARIANTS",
+      "claim_id": "P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "statement": "For the three frozen Phase-44 source variants, the declared Phase-41 four-element action, its seven-component gradient, and its 7x7 Hessian are exactly componentwise identical to the independently reconstructed symbolic model under the fixed canonicalization.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "type": "claim",
+      "title": "All disclosed NumPy64 mismatches fit the declared mixed forward-error model without identifying one cause",
+      "summary": "All ninety S0-to-S7 telescopes close, coefficient, state, Hessian, and contraction deltas are detectably nonzero at every slot, and the cancellation-risk indicator crosses the frozen Phase-43 scale at every slot. The preregistered componentwise and normwise model covers all 13 disclosed Phase-43 mismatches and all 77 controls; the largest complete-source norm and component utilizations are about 0.00977 and 0.01782. No beyond-model residual is supported. Because the signed contributions can cancel and both cohorts have the same tri-state pattern, this is pinned-platform compatibility with mixed nonexclusive rounding, not proof of correct rounding, one unique defect, or one unique causal stage.",
+      "state": "SUPPORTED_AS_DECLARED_PINNED_PLATFORM_FORWARD_MODEL_COMPATIBILITY",
+      "claim_id": "P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "statement": "At all ninety frozen Phase-43 state-and-direction slots, including every one of the thirteen disclosed NumPy64 threshold crossings, the complete source/reference discrepancy lies within the fixed Phase-44 binary64 forward-error model while multiple named arithmetic stages contribute nonexclusively.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The local arithmetic decomposition does not repair the tangent or license global promotion",
+      "summary": "Supported as an executed scope and promotion boundary. Phase 44 consumes frozen xi and q arrays and performs zero root, least-squares, ODE, integrated-tangent, time-column, orientation, determinant-line, or global-cycle evaluations. It selects no contraction winner and authorizes no source rewrite. Phase 41 stays 8/9, the Phase-42 reference tangent remains inconclusive, the historical Phase-43 13/90 label is unchanged, promoted prerequisites remain false, global outputs remain null, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_LOCAL_ARITHMETIC_ONLY_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "statement": "Phase 44's frozen-state arithmetic decomposition neither tests or repairs integrated tangent evolution nor licenses a production rewrite, local orientation, original regulated cycle, bounded-chain sum, global signed intersection vector, cutoff or continuum limit, or quantum-gravity conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "type": "evidence",
+      "title": "Phase 44 exact freeze, formula, trace, retention, and global guards",
+      "summary": "Eight exact checks verify manifest-runner-result ordering, all ninety frozen inputs and the post-freeze 13/77 join, local-arithmetic-only scope, independent componentwise formula canonicalization, byte-faithful source and AST traces, the fixed hybrid and forward-model conventions, all 13,474 terminal records with an acyclic dependency graph, null desired outputs, false prerequisites, null global outputs, and Gate 1 open.",
+      "state": "VERIFIED",
+      "observed_status": "8_EXACT_PASS",
+      "check_ids": [
+        "P44.freeze.committed_artifacts_runner_runtime_and_TOCTOU",
+        "P44.input.all_90_phase43_slots_and_13_disclosure_identity",
+        "P44.scope.local_arithmetic_only",
+        "P44.symbolic.independent_componentwise_canonicalization",
+        "P44.trace.byte_faithful_numpy64_boundaries_and_AST",
+        "P44.math.fixed_hybrid_contractions_conditioning_and_envelopes",
+        "P44.retention.complete_nonexclusive_tri_state_ledger",
+        "P44.guard.fail_closed_gate1_and_null_outputs"
+      ]
+    },
+    {
+      "id": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "type": "evidence",
+      "title": "Phase 44 numerical all-slot mixed forward-error decomposition ledger",
+      "summary": "All seven numerical checks pass. They reproduce all ninety Phase-43 source/reference vectors and the exact 13/77 split, support exact formula identity, close all ninety signed telescopes, cover all ninety slots and all thirteen disclosed mismatches under the fixed forward-error model, complete all six contraction alternatives at every slot, and retain the nonexclusive tri-state causal ledger without selecting a winner or integrated verdict.",
+      "state": "VERIFIED",
+      "observed_status": "7_NUMERICAL_PASS",
+      "check_ids": [
+        "P44.reproduction.phase43_source_and_reference_vectors",
+        "P44.formula.exact_componentwise_identity",
+        "P44.decomposition.hybrid_telescoping_closure",
+        "P44.forward_error.all_90_declared_model_coverage",
+        "P44.forward_error.all_13_phase43_mismatches_covered",
+        "P44.contractions.complete_six_way_all_slot_comparison",
+        "P44.classification.complete_nonexclusive_causal_ledger"
+      ]
+    },
+    {
+      "id": "scope:p44-ninety-frozen-local-m4-arithmetic-slots",
+      "type": "scope",
+      "title": "P44 ninety-slot frozen local m=4 arithmetic decomposition",
+      "summary": "A preregistered local numerical-arithmetic audit at the ninety immutable Phase-43 xi,q slots on one pinned CPython/NumPy platform, with an exact independent/source formula comparison, byte-faithful source boundaries and AST trace, fixed S0-to-S7 signed telescope, six fixed contraction alternatives, conditioning diagnostics, and one fixed componentwise and normwise forward-error model.",
+      "state": "ACTIVE",
+      "includes": [
+        "all 90 fixed xi,q slots at shared_zero, phi_plus, and a_plus with the 13 disclosed and 77 control cohorts joined after key freeze",
+        "exact action, gradient, and Hessian canonicalization for all three source variants",
+        "byte-faithful u64, w64, H64, B1_64, B2_64, y64, and A64 boundaries plus committed generated-callable AST traces",
+        "all eight hybrid stages, seven signed deltas, six alternative contraction paths, and fixed conditioning indices",
+        "one preregistered coefficient, state, scalar-AST, contraction, and complete-source forward-error model",
+        "complete nonexclusive slot, point, global, and 13/77 cohort evidence with no best-method or unique-cause selection"
+      ],
+      "excludes": [
+        "a universal theorem about NumPy, libm, BLAS, FMA, correct rounding, or another platform",
+        "proof that one stage uniquely causes the final discrepancy or that a lower-error alternative is globally better",
+        "a root, saddle, least-squares, ODE, dense-output, trajectory, integrated-tangent, solver-noise, or time-column evaluation",
+        "a corrected production tangent, source rewrite, new reference tangent, local orientation, determinant sign, or common determinant line",
+        "an exact nonlinear complete upward manifold, continuous branch, root/component census, Stokes chamber, or classified good ends",
+        "a physical original regulated cycle, bounded-chain signed sum, complete global signed vector, global n_sigma, cutoff or continuum limit, BFV/Pfaffian/Pin orientation, SUSY claim, cosmological prediction, or quantum-gravity explanation"
+      ]
+    },
+    {
+      "id": "artifact:p44-input-manifest",
+      "type": "artifact",
+      "title": "Phase 44 frozen NumPy64 RHS decomposition input manifest",
+      "summary": "Preregistered post-Phase-43 diagnostic freeze for all ninety local arithmetic slots. It fixes independent/source formula comparison, byte-faithful AST and boundary traces, the S0-to-S7 telescope, six contraction alternatives, forward-error assumptions, nonexclusive tri-state rules, full retention, null desired outputs, and fail-closed Gate-1 boundaries. The manifest itself is not scientific evidence.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_INPUTS.json",
+      "sha256": "4680381aae27ff2faec75960c9bc382336efec2b518098c90a257f542eda9044",
+      "introduced_in_commit": "03943e8b2b140a5f1b8724d1e2d4439d14964552"
+    },
+    {
+      "id": "artifact:p44-script",
+      "type": "artifact",
+      "title": "Phase 44 NumPy64 local RHS decomposition executable",
+      "summary": "Committed 13,474-record runner with eight exact and seven numerical contracts for exact formula identity, byte-faithful NumPy64 tracing, fixed signed hybrid decomposition, six contraction alternatives, conditioning, declared forward-error coverage, complete nonexclusive classification, strict provenance, and global fail-closed guards. The successful source includes the local-name correction committed after an initial exit-2 guard collision; the mathematical expression did not change.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase44_m4_numpy64_local_rhs_error_decomposition.py",
+      "sha256": "220123fe069cad3e3178d7e87656cf61240d153d0762041169288c3d9cb9dc52",
+      "introduced_in_commit": "d13af382fe65cc50f74fbc83861e41c0e7236341"
+    },
+    {
+      "id": "artifact:p44-raw-result",
+      "type": "artifact",
+      "title": "Phase 44 full raw result",
+      "summary": "The complete 529,370,671-byte compact result artifact captured from the corrected clean committed runner: eight exact and seven numerical PASS records, all 13,474 terminal records, all ninety source and reference reproductions, exact formula ledger, complete AST commitments, signed stages and deltas, six alternatives per slot, forward envelopes, tri-state aggregates, provenance, false prerequisites, null outputs, and Gate 1 open.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json",
+      "sha256": "bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75",
+      "introduced_in_commit": "4e75a4fe9ce909fa62794f5a550a3409f6e0fc9f"
+    },
+    {
+      "id": "artifact:p44-report",
+      "type": "artifact",
+      "title": "Phase 44 report",
+      "summary": "Human-readable execution provenance, formula and source-boundary conventions, exact and numerical ledgers, signed S0-to-S7 decomposition, 13/13 and 77/77 forward-model coverage, conditioning and contraction-order diagnostics, nonexclusive interpretation boundary, unchanged historical statuses, open Gate 1, and a separately frozen integrated-tangent stability next calculation.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION.md",
+      "sha256": "e9a1409e2564bc5b0633f34f4ffc4e65764aacd58ec30610b59981bdd28f9149",
+      "introduced_in_commit": "3afe8a4f97fdfc2728700108bb603a32cea764b3"
+    },
+    {
+      "id": "artifact:p44-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 44 evidence snapshot",
+      "summary": "Compact typed extract of the full raw result preserving all eight exact and seven numerical contract IDs, artifact and correction provenance, formula identity, the signed-stage ledger, fixed forward-model coverage for both cohorts, conditioning and alternative summaries, local-only exclusions, false prerequisites, null global and desired outputs, and Gate 1 open. The separately pinned raw result remains the byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase44-result.json",
+      "sha256": "9c13da15a16323d91093fbd9da3e23f6a56049d4758cc18c39c2a450adf065f1"
     }
   ],
   "edges": [
@@ -18328,6 +18492,308 @@
       "from": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
       "relation": "MOTIVATES",
       "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1718",
+      "from": "phase:p44",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1719",
+      "from": "phase:p44",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p43"
+    },
+    {
+      "id": "edge:1720",
+      "from": "scope:p44-ninety-frozen-local-m4-arithmetic-slots",
+      "relation": "PART_OF",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1721",
+      "from": "artifact:p44-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1722",
+      "from": "artifact:p44-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1723",
+      "from": "artifact:p44-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1724",
+      "from": "artifact:p44-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1725",
+      "from": "artifact:p44-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1726",
+      "from": "artifact:p44-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p43-raw-result"
+    },
+    {
+      "id": "edge:1727",
+      "from": "artifact:p44-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-fixed-root-checkpoint"
+    },
+    {
+      "id": "edge:1728",
+      "from": "artifact:p44-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:1729",
+      "from": "artifact:p44-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p44-input-manifest"
+    },
+    {
+      "id": "edge:1730",
+      "from": "artifact:p44-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p43-raw-result"
+    },
+    {
+      "id": "edge:1731",
+      "from": "artifact:p44-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-fixed-root-checkpoint"
+    },
+    {
+      "id": "edge:1732",
+      "from": "artifact:p44-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:1733",
+      "from": "artifact:p44-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p44-script"
+    },
+    {
+      "id": "edge:1734",
+      "from": "artifact:p44-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p44-raw-result"
+    },
+    {
+      "id": "edge:1735",
+      "from": "artifact:p44-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p44-raw-result"
+    },
+    {
+      "id": "edge:1736",
+      "from": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "relation": "PART_OF",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1737",
+      "from": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p44-script"
+    },
+    {
+      "id": "edge:1738",
+      "from": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p44-evidence-snapshot"
+    },
+    {
+      "id": "edge:1739",
+      "from": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p44-raw-result"
+    },
+    {
+      "id": "edge:1740",
+      "from": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "relation": "PART_OF",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1741",
+      "from": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p44-script"
+    },
+    {
+      "id": "edge:1742",
+      "from": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p44-evidence-snapshot"
+    },
+    {
+      "id": "edge:1743",
+      "from": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p44-raw-result"
+    },
+    {
+      "id": "edge:1744",
+      "from": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "relation": "PART_OF",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1745",
+      "from": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p44-ninety-frozen-local-m4-arithmetic-slots"
+    },
+    {
+      "id": "edge:1746",
+      "from": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p44-report"
+    },
+    {
+      "id": "edge:1747",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "PART_OF",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1748",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p44-ninety-frozen-local-m4-arithmetic-slots"
+    },
+    {
+      "id": "edge:1749",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p44-report"
+    },
+    {
+      "id": "edge:1750",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p44"
+    },
+    {
+      "id": "edge:1751",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p44-ninety-frozen-local-m4-arithmetic-slots"
+    },
+    {
+      "id": "edge:1752",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p44-report"
+    },
+    {
+      "id": "edge:1753",
+      "from": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1754",
+      "from": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1755",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1756",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1757",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p44-exact-freeze-formula-trace-retention-and-global-guards",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1758",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p44-numerical-all-slot-mixed-forward-error-decomposition",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1759",
+      "from": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT"
+    },
+    {
+      "id": "edge:1760",
+      "from": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P43_INDEPENDENT_HIGH_PRECISION_LOCAL_REFERENCE_IS_CORROBORATED_AT_ALL_FROZEN_SLOTS"
+    },
+    {
+      "id": "edge:1761",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT"
+    },
+    {
+      "id": "edge:1762",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "EXTENDS",
+      "to": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "note": "Phase 44 preserves the historical 13/90 threshold crossing and adds a narrower arithmetic result: exact formula identity, mixed signed contributions, and declared forward-model coverage for all thirteen mismatches and all seventy-seven controls. Coverage does not erase the Phase-43 operational label or prove one cause."
+    },
+    {
+      "id": "edge:1763",
+      "from": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P43_NUMPY64_LOCAL_RHS_OUTPUT_MISMATCH_IS_SUPPORTED_WITHOUT_PROVING_A_CODE_DEFECT",
+      "note": "The frozen metrics ask different questions. Phase 43 records whether source/reference error exceeds 5e-13; Phase 44 asks whether that complete error lies inside one preregistered forward envelope. Both can be supported simultaneously."
+    },
+    {
+      "id": "edge:1764",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P43_LOCAL_ARBITRATION_DOES_NOT_TEST_INTEGRATED_TANGENT_OR_LICENSE_GLOBAL_PROMOTION"
+    },
+    {
+      "id": "edge:1765",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1766",
+      "from": "claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
     }
   ],
   "kg_bridges": [
@@ -18657,6 +19123,16 @@
       "checked_at_utc": "2026-08-20T12:23:10.518Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase40 m3 reflection odd local R10 intersection audit",
       "note": "No authorized matching external UID exists; the rank-one endpoint-source response, fixed-mobility launch-ellipsoid ledger, five sampled local candidates, and null global outputs remain repository-local evidence, so no external identity was invented."
+    },
+    {
+      "local_node_id": "phase:p44",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-21T05:45:09Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase44 NumPy64 local RHS error decomposition",
+      "note": "No authorized exact external correspondence or writer is available. The exact-formula identity, mixed nonexclusive arithmetic contributions, pinned-platform forward-model coverage, and open Gate-1 boundary remain repository-local evidence; no external UID was invented."
     }
   ]
 }
