@@ -1,0 +1,70 @@
+{
+  "schema": "ice-phase45-integrated-tangent-rhs-stability-inputs/v1",
+  "phase": 45,
+  "frozen_at_utc": "2026-08-21T00:00:00Z",
+  "scope": {
+    "question": "At the three existing Phase-42 fixed roots, is the integrated tangent stable when the local NumPy64 Hessian-action RHS is replaced by an independently reconstructed precision-stable RHS?",
+    "calculation_workbench_only": true,
+    "targets_in_order": ["shared_zero", "phi_plus", "a_plus"],
+    "root_search": false,
+    "state_map_replacement": false,
+    "orientation_selection": false,
+    "determinant_line": false,
+    "global_cycle_or_intersection": false
+  },
+  "pinned_inputs": {
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6"
+    },
+    "phase42_result": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json",
+      "commit": "d8c2fce3eb3e72a956a34776970c15642ed88047",
+      "sha256": "568e02cc8c4d730aba3a7a83febd3aa41cf14dfdb87b53950cc6fcc78c5bd013"
+    },
+    "phase41_source": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530"
+    },
+    "independent_reference_source": {
+      "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+      "commit": "4aa3887cec14816c92ff8635d2cac703d4661d37",
+      "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729"
+    }
+  },
+  "fixed_numerics": {
+    "state_path": "one source NumPy64 state-only DOP853 dense solution per root",
+    "state_solver": {"method": "DOP853", "rtol": 2e-12, "atol": 2e-14, "max_step": 0.01},
+    "tangent_solver": {"method": "DOP853", "rtol": 2e-12, "atol": 2e-14, "max_step": 0.01},
+    "sample_fractions": [0.0, 0.25, 0.5, 0.75, 1.0],
+    "tangent_paths_in_order": ["source_numpy64", "independent_exact_50dps", "independent_exact_80dps"],
+    "independent_geometry": "binary64 fixed saddle, linear map, state, and tangent lifted exactly into mpmath; exact-decimal Phase-43 action coefficients; complete Hessian contraction evaluated at the named dps and rounded once to complex128",
+    "reference_path": "independent_exact_80dps"
+  },
+  "fixed_metrics_and_thresholds": {
+    "symmetric_relative": "norm(x-y)/max(norm(x),norm(y),1e-300)",
+    "reference_50dps_to_80dps_tangent_relative_max": 1e-10,
+    "source_to_reference_tangent_relative_max": 1e-8,
+    "source_to_reference_root_jacobian_relative_max": 1e-8,
+    "reference_root_jacobian_to_phase42_R4_relative_max": 0.005,
+    "reference_root_jacobian_normalized_sign_must_equal": -1,
+    "historical_u2_plateau_failure_threshold": 0.02
+  },
+  "classification": {
+    "stable": "all three roots pass every fixed threshold, both independent precisions agree, the source/reference tangent and root Jacobian agree, the reference root Jacobian remains close to Phase-42 R4 with sign -1, and the unchanged historical u2 plateau remains above 0.02",
+    "repaired": "at least one root has a source/reference tangent or root-Jacobian mismatch above threshold while both independent precisions agree and the reference root Jacobian passes the R4/sign tests",
+    "inconclusive": "the independent precision pair, solver completion, R4 comparison, sign check, input identity, or retention check fails",
+    "stable_label": "TANGENT_CONTROL_FAILURE_STABLE_TO_INDEPENDENT_RHS",
+    "repaired_label": "SOURCE_TANGENT_RHS_REPAIR_SUPPORTED",
+    "inconclusive_label": "INTEGRATED_TANGENT_RHS_STABILITY_INCONCLUSIVE"
+  },
+  "interpretation_boundary": {
+    "historical_phase41_contract_is_not_rewritten": true,
+    "a_stable_result_does_not_prove_the_finite_difference_plateau_is_physical": true,
+    "a_repaired_tangent_is_local_numerical_evidence_only": true,
+    "global_promotion": "PROHIBITED",
+    "gate1_before_run": "OPEN_PARTIAL_PROGRESS"
+  }
+}
