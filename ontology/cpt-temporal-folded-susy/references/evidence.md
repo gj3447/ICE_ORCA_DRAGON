@@ -2,17 +2,17 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–46 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), and [`phase46-result.json`](../evidence/phase46-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–47 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), [`phase46-result.json`](../evidence/phase46-result.json), and [`phase47-result.json`](../evidence/phase47-result.json).
 
 ## Reading `PASS` correctly
 
-All 439 Phase 16–46 named exact checks have `status: PASS`. The snapshots contain 273 typed
-numerical-ledger checks: 268 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
-separately recorded Phase-18 SciPy control brings the numerical-record total to 274: 70 controls through
+All 442 Phase 16–47 named exact checks have `status: PASS`. The snapshots contain 279 typed
+numerical-ledger checks: 274 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. One legacy
+separately recorded Phase-18 SciPy control brings the numerical-record total to 280: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35,
 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, 22 in Phase 40, 9 in Phase 41, 8 in
-Phase 42, 6 in Phase 43, 7 in Phase 44, 6 in Phase 45, and 8 in Phase 46. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
+Phase 42, 6 in Phase 43, 7 in Phase 44, 6 in Phase 45, 8 in Phase 46, and 6 in Phase 47. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
 contracts. Phase 42
 contributes 8 exact `PASS` records and, after lossless schema mapping of the raw typed statuses, 6
 numerical `PASS`, one protocol-defined local-identity `FAIL`, and one reference-tangent `INCONCLUSIVE`.
@@ -41,7 +41,12 @@ ladder, identify its unique cause, rewrite Phase 41, or license global promotion
 agreement with the Phase-45 independent tangent, source endpoint agreement, source derivative-column
 disagreement, and the scoped `LOCAL_FLOW_RHS_REPAIR_SUPPORTED` classification. They do not prove a wrong
 source formula, select one coefficient/state/gradient/solver/subtraction cause, rewrite Phase 41, or
-license global promotion. None of these records
+license global promotion. Phase 47 contributes 3 exact and 6 numerical `PASS` records. They establish
+bitwise source-boundary reproduction, stable 80/120-digit projections, closure of all 36 retained-state
+and 18 paired-derivative signed telescopes, and the generated gradient-evaluation delta as the largest
+retained stage norm in every slot. They do not isolate one unique generated-callable suboperation,
+integrate a gradient-only repair, sample intermediate states, bound endpoint/solver accumulation,
+rewrite Phase 41, or license global promotion. None of these records
 means that a local candidate is an interval-certified root, that the finite-radius chart patch is the
 exact complete upward manifold, that the entire bounded chain was paired, that the physical original
 relative cycle or non-Stokes chamber is fixed, that a global coefficient is known, or that a hard CFU
@@ -90,6 +95,9 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 42 | `result:P42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_20260820`; `2026-08-20T21:35:41Z` | `cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py`; SHA-256 `1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019`; introduced in `1c0d7fed4aa99c6424ec659dae8ba6f24b791926` | Exit `0`; 8 exact PASS plus 6 numerical PASS, 1 local-identity FAIL, and 1 reference-tangent INCONCLUSIVE; valid typed run. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
 | 43 | `result:P43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_20260820`; `2026-08-20T23:31:27Z` | `cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py`; SHA-256 `01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729`; introduced in `4aa3887cec14816c92ff8635d2cac703d4661d37` | Exit `0`; 7 exact PASS plus 4 numerical PASS and 2 complete non-invalidating FAIL records for the source-agreement and all-33 finite-difference universal predicates; valid typed run. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
 | 44 | `result:P44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_20260821`; `2026-08-21T05:37:22Z` | `cpt_temporal_folded_susy/phase44_m4_numpy64_local_rhs_error_decomposition.py`; SHA-256 `220123fe069cad3e3178d7e87656cf61240d153d0762041169288c3d9cb9dc52`; corrected clean runner introduced in `d13af382fe65cc50f74fbc83861e41c0e7236341` | Exit `0`; 8 exact PASS plus 7 numerical PASS; all 13,474 terminal records succeed and the typed run is valid. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
+| 45 | `result:P45_M4_INTEGRATED_TANGENT_RHS_STABILITY_20260821`; `2026-08-21T10:10:05Z` | `cpt_temporal_folded_susy/phase45_m4_integrated_tangent_rhs_stability.py`; SHA-256 `e562314282ccf58be0c39aebc2b5a07c0c8bb818ae739f24ace6cad6a8f915b2`; introduced in `8657bb65651149dce0c00ad32c46544e68315562` | Exit `0`; 3 exact PASS plus 6 numerical PASS; `TANGENT_CONTROL_FAILURE_STABLE_TO_INDEPENDENT_RHS`. |
+| 46 | `result:P46_M4_U2_STATE_MAP_FD_AUDIT_20260821`; `2026-08-21T17:18:40Z` | `cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py`; SHA-256 `a71badb3c49a4af44e5e4a1b8bec244593f1de5a43c3b0d71d729f92ef147d55`; introduced in `45cab780121370ba3bd125ffcabfbf00a37cacc1` | Exit `0`; 3 exact PASS plus 8 numerical PASS; `LOCAL_FLOW_RHS_REPAIR_SUPPORTED`. |
+| 47 | `result:P47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_20260822`; `2026-08-22T03:54:17Z` | `cpt_temporal_folded_susy/phase47_m4_source_gradient_flow_error_budget.py`; SHA-256 `945744a9f9c022f371d2516c01aa806317020d947fcaa47a0cc7f962dc82d091`; introduced in `6627d585280e443aa9d3eea1f9c61b15c3e788ae` | Exit `0`; 3 exact PASS plus 6 numerical PASS; `LOCAL_SOURCE_GRADIENT_MIXED_ARITHMETIC_BUDGET_SUPPORTED`. The raw payload lacks a wall-clock field, so the snapshot observation time records the repository indexing event after the byte-validated raw-result capture. |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -289,6 +297,7 @@ The report has SHA-256 `e9a1409e2564bc5b0633f34f4ffc4e65764aacd58ec30610b59981bd
 | `evidence:p42-numerical-fixed-root-tangent-and-cause-ledger` | 6 PASS + 1 local-identity FAIL + 1 reference INCONCLUSIVE | Solver noise and frozen-step-pair artifact at phi-plus/a-plus — `SUPPORTS`; protocol-defined local Hessian-action anomaly at all three points without bug proof — `SUPPORTS`; sufficient normalized local matrix homotopy — `SUPPORTS`; reference tangent and any global promotion remain inconclusive/prohibited — `SUPPORTS` as an evidential-sufficiency boundary | Three immutable local m=4 roots, 2,192 retained terminal slots, 915 successful solver attempts, fixed old ladders, fixed R4 and local real-direction diagnostics, tri-state multi-cause ledger, and sufficient-only normalized-matrix homotopy. The appended time-column discrepancy compares different solver endpoints, lies within the endpoint solver/state envelope, and is not independent bug evidence |
 | `evidence:p43-exact-freeze-symbolic-retention-and-global-guards` | 7 exact PASS | Independent high-precision local reference — `SUPPORTS` together with the numerical group; local-only scope and global-promotion boundary — `SUPPORTS` | Manifest/runner/result order, strict Phase-42 state identity, independent exact-rational action and directional identity, binary64 lifting and 80/120-decimal conventions, all 13,606 terminal slots, zero root/ODE/time-column paths, 16 false prerequisites, 6 null global outputs, 7 null desired outputs, and Gate 1 open |
 | `evidence:p43-numerical-high-precision-local-rhs-arbitration` | 4 PASS + 2 complete non-invalidating FAIL | 90/90 independent high-precision reference — `SUPPORTS`; 13/90 operational NumPy64 source-output mismatch without defect proof — `SUPPORTS`; all 33 anomalies satisfy the fixed finite-difference rule — `CONTRADICTS` with 28 supported and 5 exceptions; integrated tangent/global promotion boundary — `SUPPORTS` | All 90 frozen local m=4 xi,q slots; fixed exact, 80/120-decimal, same-step, and prospective ladders; all 33 disclosed Phase-42 anomalies; uniform normwise thresholds; nonexclusive classifications. No formula-level identity theorem, unique defect, root, ODE, integrated tangent, time-column, orientation, determinant-line, or global-cycle result |
+| `evidence:p47-source-gradient-flow-error-budget` | 3 exact PASS + 6 numerical PASS | Closed retained-state and paired-Dh source-flow telescopes — `SUPPORTS`; generated gradient evaluation is the largest retained stage norm — `SUPPORTS` descriptively; no endpoint propagation or global promotion — `SUPPORTS` as a scope boundary | All 36 Phase-46 launch/endpoint states and 18 frozen u2 derivative pairs; exact lifts, one six-stage signed mixed-arithmetic budget, and no new trajectory or intermediate sampling. No unique suboperation, corrected integrated path, endpoint/solver bound, root, orientation, determinant line, or global-cycle result |
 
 ## Phase 16 check ledger
 
@@ -1829,6 +1838,44 @@ independent states within `3.022e-9`/`2.071e-9`, but their derivative-column max
 `0.02379`, above `0.005` at every root. The resulting local-flow repair label is scoped to the frozen
 projection and does not prove a formula defect or unique cause.
 
+## Phase 47 check ledger
+
+### Frozen retained states, local-only scope, retention, and global guard — 3 exact PASS
+
+- `P47.freeze.retained_states_stages_thresholds` — `PASS`
+- `P47.scope.local_launch_endpoint_budget_only` — `PASS`
+- `P47.retention.valid_json_digest_provenance_and_global_guard` — `PASS`
+
+These checks bind all 36 Phase-46 launch/endpoint states, all 18 paired `u2` derivative slots, the
+Phase-41 source and Phase-43 exact-decimal conventions, the Phase-44 formula-identity control, six
+stages, five signed deltas, precision probes, thresholds, the complete raw-result digest, and the
+fail-closed interpretation boundary. No new trajectory, intermediate state, propagator, root,
+orientation, determinant line, or global cycle is computed.
+
+### Source reproduction, precision, telescope closure, and retained-stage budget — 6 numerical PASS
+
+- `P47.reproduction.source_boundaries_and_final_lift` — `PASS`
+- `P47.reference.80dps_to_120dps_projection` — `PASS`
+- `P47.decomposition.state_telescopes` — `PASS`
+- `P47.decomposition.paired_Dh_telescopes` — `PASS`
+- `P47.budget.gradient_evaluation_largest_retained_delta` — `PASS`
+- `P47.classification.local_source_gradient_mixed_arithmetic_budget` — `PASS`
+
+The pinned source gradient and flow reproduce bit for bit, and independent 80/120-digit evaluations
+project identically to complex128. All 36 state telescopes and 18 paired-Dh telescopes close with
+maximum residuals `5.076e-116` and `1.363e-107`. Generated gradient evaluation has the largest signed-
+stage norm in 36/36 and 18/18 slots, with maxima `2.447e-11` and `9.823e-5`; state formation reaches
+`1.139e-13` and `5.350e-7`, contraction reaches `1.130e-16` and `3.640e-10`, source-symbolic deltas are
+negligible, and the outer delta is zero. The largest-stage count is descriptive, not a unique-cause
+classifier: multiple generated-callable suboperations remain bundled and signed stages can cancel.
+
+`open:p46-source-gradient-flow-error-budget` therefore stays `OPEN`: Phase 47 supplies launch/endpoint
+arithmetic decomposition but no intermediate propagation or solver-accumulation bound. The narrower
+`open:p48-gradient-hybrid-error-transport-control` asks whether a gradient-only adapter reproduces the
+independent integrated endpoints, columns, plateaus, and sensitivity reference. Historical Phase 41
+remains 8/9, Phases 44 and 46 remain unchanged, global promotion is `PROHIBITED`, and Gate 1 remains
+`OPEN_PARTIAL_PROGRESS`.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -1865,6 +1912,7 @@ uv run --locked python3 cpt_temporal_folded_susy/phase40_m3_reflection_odd_inter
 ./ice run phase44_m4_numpy64_local_rhs_error_decomposition
 proxmox-scratch run ice-phase45 --timeout 7200 -- ./ice run phase45_m4_integrated_tangent_rhs_stability
 proxmox-scratch run ice-phase46 --timeout 7200 -- ./ice run phase46_m4_u2_state_map_fd_audit
+proxmox-scratch run ice-phase47 --timeout 7200 -- ./ice run phase47_m4_source_gradient_flow_error_budget
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.

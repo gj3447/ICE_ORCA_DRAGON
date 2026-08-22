@@ -2,7 +2,7 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-21T17:18:40Z`; 644 nodes, 1845 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 117/117 stored hashes (113 artifacts and 4 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-22T03:54:17Z`; 656 nodes, 1886 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 122/122 stored hashes (118 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -51,7 +51,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 44 identify a wrong formula or one rounding cause, repair the tangent, or close Gate 1? | No. The declared source and independent action, gradient, and Hessian formulas are exactly identical componentwise. All 90 signed arithmetic telescopes close, and one fixed forward-error model covers all 13 disclosed mismatches and all 77 controls. Coefficient, state, Hessian, and contraction contributions are mixed, nonexclusive, and potentially cancelling in both cohorts, so no unique stage or defect is selected. No root, ODE, integrated tangent, time column, orientation, determinant line, or global cycle is tested; the Phase-43 label is preserved and Gate 1 remains `OPEN_PARTIAL_PROGRESS`. | `claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL`; `claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL`; `claim:P44_LOCAL_ARITHMETIC_DECOMPOSITION_DOES_NOT_REPAIR_THE_TANGENT_OR_LICENSE_GLOBAL_PROMOTION`; `open:gate1-original-cycle-signed-global-intersections` |
 | Does Phase 45 repair the Phase-41 tangent control by replacing the local tangent RHS? | No. The independent 50/80-digit tangent paths are stable and agree with the source tangent and root Jacobian at the `1e-12` scale, while the historical `u2` plateaus remain failed. Phase 45 narrows the issue to the state-map finite-difference layer without recomputing it or closing Gate 1. | `claim:P45_INDEPENDENT_INTEGRATED_TANGENT_IS_PRECISION_STABLE_AT_THREE_FIXED_ROOTS`; `claim:P45_SOURCE_TANGENT_AND_ROOT_JACOBIAN_AGREE_WITH_INDEPENDENT_REFERENCE`; `claim:P45_TANGENT_CONTROL_FAILURE_IS_STABLE_TO_LOCAL_RHS_REPLACEMENT`; `claim:P45_LOCAL_STABILITY_DOES_NOT_LICENSE_GLOBAL_PROMOTION` |
 | Does Phase 46 repair the failed `u2` state-map ladder or prove a source formula bug? | It repairs the ladder under the frozen independent local-flow comparison, but does not prove a formula bug. Independent plateaus are at most `2.019e-7` and agree with Phase-45 tangents; close source endpoints amplify into tight/Radau derivative-column failures. The mixed source arithmetic, solver accumulation, and subtraction budget remains open, Phase 41 stays 8/9 as provenance, and Gate 1 stays open. | `claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT`; `claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION`; `claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–46 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–46 scope guards |
+| Does Phase 47 prove that changing only the generated gradient fixes the integrated paths? | No. It closes the declared mixed-arithmetic telescope at all 36 retained launch/endpoint states and all 18 paired derivatives, and generated gradient evaluation has the largest stage norm in every slot. That prioritizes a gradient-only hybrid test but does not select one unique suboperation, integrate a repaired path, sample the interior, or bound endpoint/solver accumulation. Phase 41 remains 8/9; Phases 44 and 46 are unchanged; Gate 1 stays open. | `claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS`; `claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE`; `claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget`; `open:p48-gradient-hybrid-error-transport-control` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–47 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–47 scope guards |
 
 ### Phase 23 reading path
 
@@ -385,6 +386,24 @@ Phase 46 follows the Phase-45 tangent result into the complete historical `u2` s
    state, gradient, solver, or subtraction cause, rewrite Phase 41, or compute a global object;
 4. `open:p46-source-gradient-flow-error-budget` is the next local diagnostic. The distinct physical
    Gate-1 original-cycle and global-intersection debt remains open.
+
+### Phase 47 reading path
+
+Phase 47 partially follows the Phase-46 source-gradient budget without closing its propagation half:
+
+1. `claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS` records bitwise source-boundary
+   reproduction, stable 80/120-digit projections, and closed signed telescopes at all 36 states and all
+   18 paired derivatives;
+2. `claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE` records the
+   generated-gradient delta as the largest stage norm in 36/36 and 18/18 slots. This is a descriptive
+   signed-budget result, not a unique-cause or faulty-suboperation verdict;
+3. `claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION` preserves
+   the missing intermediate-path, repaired-integration, sensitivity-propagator, solver-accumulation, and
+   global-cycle boundaries. Phase 41 remains 8/9; Phases 44 and 46 remain unchanged;
+4. `open:p46-source-gradient-flow-error-budget` stays open for the complete intermediate propagation
+   and solver budget. `open:p48-gradient-hybrid-error-transport-control` narrows the next calculation to
+   a gradient-only hybrid path with retained checkpoints and error transport. Gate 1 remains separately
+   `OPEN_PARTIAL_PROGRESS`.
 
 ## Concept map
 

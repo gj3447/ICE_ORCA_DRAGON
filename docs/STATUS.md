@@ -3,11 +3,11 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-21
+## Current state — 2026-08-22
 
 | Component | State |
 |---|---|
-| Runnable catalog | 78 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 79 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -1046,6 +1046,39 @@ See
 [`../cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py`](../cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py),
 and
 [`../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json`](../cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 47
+
+Phase 47 returns exit 0 with `VALID_RUN` and the fixed classification
+`LOCAL_SOURCE_GRADIENT_MIXED_ARITHMETIC_BUDGET_SUPPORTED`. It reuses the launch and endpoint states from
+all eighteen independent Phase-46 `u2` paths and evaluates one frozen six-stage source-flow telescope at
+all 36 states and after all 18 central-difference `1/(2h)` pairings. No new trajectory is integrated.
+
+All 36 state telescopes and all 18 paired-derivative telescopes close. Their maximum component residuals
+are `5.076e-116` and `1.363e-107`; independent 80/120-digit flow evaluations are identical after final
+complex128 projection. The pinned Phase-41 `gradient_at` and `flow_xi` boundaries also reproduce bit for
+bit, while the Phase-44 source/reference formula-mismatch state remains `NOT_SUPPORTED`.
+
+The generated NumPy gradient-evaluation delta is the largest retained signed-stage norm at every state
+and paired-derivative slot. Its maxima are `2.447e-11` and `9.823e-5`, compared with `1.139e-13` and
+`5.350e-7` for state formation, `1.130e-16` and `3.640e-10` for contraction, negligible source-symbolic
+deltas, and zero outer minus-conjugation deltas. This is descriptive localization, not proof of one
+faulty suboperation: the stage still combines constant lowering, scalar operation order, elementary
+functions, and NumPy rounding, and signed contributions can cancel.
+
+Phase 47 therefore prioritizes a gradient-only, one-projection hybrid as the next integrated control but
+does not validate that repair. Phase 46 retained no intermediate states, so intermediate error transport,
+endpoint accumulation, and solver accumulation remain open. The historical Phase-41 result remains 8/9;
+Phases 44 and 46 remain unchanged. No root search, orientation, determinant line, complete cycle, Stokes
+chamber, or global intersection is computed. Global promotion remains `PROHIBITED`, Gate 1 remains
+`OPEN_PARTIAL_PROGRESS`, and the committed runnable catalog is now 79.
+
+See
+[`../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET.md`](../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET.md),
+[`../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_INPUTS.json`](../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase47_m4_source_gradient_flow_error_budget.py`](../cpt_temporal_folded_susy/phase47_m4_source_gradient_flow_error_budget.py),
+and
+[`../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json`](../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json).
 
 ## Historical scientific ledger
 

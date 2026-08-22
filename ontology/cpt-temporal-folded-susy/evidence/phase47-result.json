@@ -1,0 +1,150 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_20260822",
+  "phase": "P47",
+  "observed_at_utc": "2026-08-22T03:54:17Z",
+  "command": "proxmox-scratch run ice-phase47 --timeout 7200 -- ./ice run phase47_m4_source_gradient_flow_error_budget",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase47_m4_source_gradient_flow_error_budget.py",
+    "sha256": "945744a9f9c022f371d2516c01aa806317020d947fcaa47a0cc7f962dc82d091",
+    "introduced_in_commit": "6627d585280e443aa9d3eea1f9c61b15c3e788ae"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {
+      "id": "P47.freeze.retained_states_stages_thresholds",
+      "statement": "The committed pre-output manifest fixes all 36 Phase-46 launch/endpoint states, all 18 paired u2 derivative slots, the Phase-41 and Phase-43 expressions, the Phase-44 formula-identity control, six telescope stages, five signed deltas, precision probes, thresholds, and fail-closed classification.",
+      "status": "PASS"
+    },
+    {
+      "id": "P47.scope.local_launch_endpoint_budget_only",
+      "statement": "The calculation evaluates only the retained launch and endpoint states; it performs no new trajectory integration, intermediate-path sampling, endpoint error propagation, solver-accumulation bound, root search, orientation selection, or global-cycle computation.",
+      "status": "PASS"
+    },
+    {
+      "id": "P47.retention.valid_json_digest_provenance_and_global_guard",
+      "statement": "The 1,117,072-byte VALID_RUN result parses strictly, its self-excluding digest reproduces exactly, all declared state and paired-derivative slots are complete, pinned provenance is present, global promotion remains prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 6,
+  "numerical": [
+    {
+      "id": "P47.reproduction.source_boundaries_and_final_lift",
+      "statement": "The pinned Phase-41 gradient_at and flow_xi outputs reproduce bit for bit at all 36 states, and every final source-flow lift is exact.",
+      "status": "PASS"
+    },
+    {
+      "id": "P47.reference.80dps_to_120dps_projection",
+      "statement": "Independent 80- and 120-digit exact-decimal flow evaluations are identical after final complex128 projection at all 36 retained states, below the fixed 1e-12 relative limit.",
+      "status": "PASS"
+    },
+    {
+      "id": "P47.decomposition.state_telescopes",
+      "statement": "All 36 six-stage local-flow telescopes close componentwise; the largest residual is 5.075883674631298e-116, below the fixed 1e-70 limit.",
+      "status": "PASS"
+    },
+    {
+      "id": "P47.decomposition.paired_Dh_telescopes",
+      "statement": "All 18 frozen central-difference derivative telescopes close after 1/(2h) amplification; the largest residual is 1.3625471488026082e-107, below the fixed 1e-60 limit.",
+      "status": "PASS"
+    },
+    {
+      "id": "P47.budget.gradient_evaluation_largest_retained_delta",
+      "statement": "The generated NumPy gradient-evaluation delta has the largest signed-stage norm at all 36 state slots and all 18 paired derivative slots; its maxima are 2.4473380972030836e-11 and 9.823211067973115e-5, respectively. This count is descriptive and is not a unique-cause classifier.",
+      "status": "PASS"
+    },
+    {
+      "id": "P47.classification.local_source_gradient_mixed_arithmetic_budget",
+      "statement": "All frozen slot, reproduction, precision, telescope, and Phase-44 formula-identity prerequisites pass, yielding LOCAL_SOURCE_GRADIENT_MIXED_ARITHMETIC_BUDGET_SUPPORTED without claiming an integrated repair or endpoint propagation bound.",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "m=4 retained-state source-gradient flow error budget",
+    "exact_checks": 3,
+    "numerical_checks": 6,
+    "run_status": "VALID_RUN",
+    "classification": "LOCAL_SOURCE_GRADIENT_MIXED_ARITHMETIC_BUDGET_SUPPORTED",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json",
+      "raw_result_outer_sha256": "d58b443a5a220b93a59d2b74c86bd1a3169c40c6297a4d0b4d86eae15e61b576",
+      "raw_result_payload_sha256_without_self": "f81cfab8249a7584055416adbf89410ef2aca9079db1fb3f6f8b1269750236d3",
+      "raw_result_introduced_in_commit": "1d31c220257f326479d5ee0ec27cdf3e3f29a5ff",
+      "raw_result_size_bytes": 1117072,
+      "validation": "Strict JSON parse, complete slot counts, pinned runner and input identities, independent self-digest recomputation, bitwise source reproduction, precision probes, and both telescope closures passed."
+    },
+    "aggregate_metrics": {
+      "state_slots": 36,
+      "paired_Dh_slots": 18,
+      "independent_projection_relative_max": 0.0,
+      "source_to_reference_symmetric_relative_max": "3.8831789157395214e-8",
+      "state_telescope_max_component_absolute_max": "5.0758836746312984e-116",
+      "paired_Dh_telescope_max_component_absolute_max": "1.3625471488026082e-107",
+      "state_delta_norm_max_by_stage": {
+        "source_symbolic_semantics": "2.1142133758543733e-46",
+        "state_formation": "1.1387137632773463e-13",
+        "gradient_evaluation": "2.4473380972030836e-11",
+        "contraction": "1.1297147949690274e-16",
+        "outer_minus_conjugation": "0"
+      },
+      "paired_Dh_delta_norm_max_by_stage": {
+        "source_symbolic_semantics": "1.1812537269672992e-47",
+        "state_formation": "5.350254732145522e-7",
+        "gradient_evaluation": "9.823211067973115e-5",
+        "contraction": "3.6404822356500625e-10",
+        "outer_minus_conjugation": "0"
+      },
+      "largest_gradient_evaluation_stage_counts": {
+        "state_slots": "36/36",
+        "paired_Dh_slots": "18/18"
+      }
+    },
+    "location_metrics": {
+      "shared_zero": {
+        "state_source_relative_max_launch": "3.8831789157395214e-8",
+        "state_source_relative_max_endpoint": "2.675607321344916e-11",
+        "paired_Dh_source_relative_max_launch": "2.735819376068284e-2",
+        "paired_Dh_source_relative_max_endpoint": "1.398659472078116e-7"
+      },
+      "phi_plus": {
+        "state_source_relative_max_launch": "2.572266044122199e-8",
+        "state_source_relative_max_endpoint": "1.2023255241641604e-11",
+        "paired_Dh_source_relative_max_launch": "5.295443069766962e-2",
+        "paired_Dh_source_relative_max_endpoint": "3.766360224563935e-6"
+      },
+      "a_plus": {
+        "state_source_relative_max_launch": "3.459566456460845e-8",
+        "state_source_relative_max_endpoint": "1.53376669758082e-11",
+        "paired_Dh_source_relative_max_launch": "2.2696957292055286e-1",
+        "paired_Dh_source_relative_max_endpoint": "1.0069597936514402e-6"
+      }
+    },
+    "claim_status": {
+      "local_state_and_paired_derivative_telescopes": "SUPPORTED_AT_ALL_FROZEN_SLOTS",
+      "phase44_formula_mismatch": "NOT_SUPPORTED_UNCHANGED",
+      "gradient_evaluation_largest_retained_stage": "SUPPORTED_AS_DESCRIPTIVE_SLOTWISE_RESULT",
+      "unique_gradient_suboperation_or_code_defect": "NOT_ESTABLISHED",
+      "gradient_only_integrated_repair": "OPEN_NOT_RUN",
+      "endpoint_error_propagation_or_solver_accumulation": "OPEN_NOT_BOUNDED",
+      "historical_phase41_numerical_contracts": "8/9",
+      "historical_phase44_and_phase46_results": "UNCHANGED",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "scope_boundary": {
+      "phase46_retained_state_slots_reused": 36,
+      "new_trajectory_integrations": 0,
+      "intermediate_path_samples": 0,
+      "complex_step_authorized": false,
+      "largest_stage_is_unique_cause": false,
+      "root_search_or_retuning": false,
+      "orientation_selection_or_determinant_line": false,
+      "global_cycle_or_intersection": null
+    },
+    "next_calculation": "Freeze a Phase-48 gradient-only hybrid control on the eighteen fixed paths, compare source, gradient-repaired, and fully independent RHS integrations under the same settings, retain intermediate checkpoints, and propagate local errors with a sensitivity/error-transport equation against the existing Phase-46 endpoint, column, plateau, and corrected-sensitivity limits."
+  }
+}

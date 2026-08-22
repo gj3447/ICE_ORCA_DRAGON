@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–46 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–47 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-21T17:18:40Z` graph update, the collection has 644 nodes and
-1845 edges. Validation verifies 117/117 stored hashes (113 artifacts and 4 policies). The
-Phase 16–46 run snapshots contain 439 named exact checks, all `PASS`, and 273 typed numerical-ledger
-checks: 268 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
+At the recorded `2026-08-22T03:54:17Z` graph update, the collection has 656 nodes and
+1886 edges. Validation verifies 122/122 stored hashes (118 artifacts and 4 policies). The
+Phase 16–47 run snapshots contain 442 named exact checks, all `PASS`, and 279 typed numerical-ledger
+checks: 274 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
 NumPy64 outputs cross the frozen source threshold, and only 28/33 disclosed anomalies satisfy the
@@ -29,8 +29,12 @@ differences without rewriting Phase 41 or closing Gate 1. Phase 46 adds three ex
 `PASS` records: the independent state-map ladder and Phase-45 tangent agree at all three roots, while
 source endpoints that are close at the `1e-9` scale amplify into tight/Radau derivative-column failures.
 Its scoped local-flow repair does not identify a wrong formula or one unique arithmetic/solver cause,
-rewrite Phase 41, or close Gate 1. One legacy separately recorded Phase-18 numerical control brings the
-numerical-record total to 274 (269
+rewrite Phase 41, or close Gate 1. Phase 47 adds three exact and six numerical `PASS` records: all 36
+retained-state and 18 paired-derivative signed telescopes close, independent 80/120-digit projections
+agree, and the generated gradient-evaluation delta is the largest retained stage norm in every slot.
+This descriptive localization neither identifies one unique suboperation nor integrates or validates a
+gradient-only repair; intermediate propagation and solver accumulation remain open. One legacy
+separately recorded Phase-18 numerical control brings the numerical-record total to 280 (275
 pass, four fail, one inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
@@ -92,6 +96,9 @@ confidence.
 ./ice ontology trace claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT --depth 2
 ./ice ontology trace claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION --depth 2
 ./ice ontology trace claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION --depth 2
+./ice ontology trace claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS --depth 2
+./ice ontology trace claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE --depth 2
+./ice ontology trace claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -216,6 +223,11 @@ failed state-map finite-difference ladder or promote a local Jacobian sign into 
 fixed local numerical comparison: an 80-digit local RHS inside a complex128 integrator repairs the
 three-step ladder and agrees with the independent tangent, but this does not prove a wrong source
 formula, unique arithmetic/solver cause, arbitrary-precision state theorem, or global topology.
+Phase 47 also has no typed non-PASS record. Its closed retained-state and paired-Dh telescopes localize
+the largest signed-stage norm to generated gradient evaluation under the frozen budget, but the stage
+still combines multiple suboperations and signed terms can cancel. Because the run integrates no new
+trajectory and retains no intermediate path, it does not establish a gradient-only repair, endpoint
+error-transport or solver bound, unique defect, or global topology.
 
 ## Identifier families
 

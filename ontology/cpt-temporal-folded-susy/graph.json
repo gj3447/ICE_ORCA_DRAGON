@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-21T17:18:40Z",
+  "updated_at_utc": "2026-08-22T03:54:17Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -321,6 +321,15 @@
         "claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT",
         "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION",
         "claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION"
+      ]
+    },
+    {
+      "question": "Does Phase 47 identify the source-flow discrepancy or prove that a gradient-only repair fixes the integrated paths?",
+      "answer": "It closes a fixed signed mixed-arithmetic budget at all 36 retained launch/endpoint states and all 18 paired u2 derivative slots. The generated NumPy gradient-evaluation delta has the largest stage norm in every slot, while source-symbolic semantics, state formation, contraction, and the outer operation are smaller under the declared telescope. This prioritizes a gradient-only hybrid control; it does not identify one unique NumPy suboperation, integrate the repair, sample intermediate paths, or bound endpoint and solver accumulation. Phase 41 remains 8/9, Phase 44 and Phase 46 remain unchanged, global promotion is prohibited, and Gate 1 remains open.",
+      "claim_ids": [
+        "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+        "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+        "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION"
       ]
     }
   ],
@@ -673,7 +682,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–46 apply the same rule to the retained tangent anomaly: they preserve solver, step-pair, local-identity, high-precision-reference, finite-difference, NumPy64 pipeline, exact-formula, signed-stage, conditioning, forward-model, integrated-tangent, and independently reconstructed state-flow evidence. Phase 46 supports a scoped local-flow repair without selecting one unique arithmetic/solver cause, converting a failed sufficient claim into a universal negation, rewriting the historical control, or promoting a local stability result into a global claim.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–47 apply the same rule to the retained tangent anomaly: they preserve solver, step-pair, local-identity, high-precision-reference, finite-difference, NumPy64 pipeline, exact-formula, signed-stage, conditioning, forward-model, integrated-tangent, independently reconstructed state-flow, and retained-state source-gradient budget evidence. Phase 47 closes the declared launch/endpoint arithmetic telescopes and identifies the generated gradient-evaluation stage as the largest retained signed delta without selecting one unique suboperation, claiming an integrated repair, rewriting the historical control, or promoting a local stability result into a global claim.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -704,7 +713,11 @@
         "claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT",
         "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION",
         "claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+        "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+        "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p46-source-gradient-flow-error-budget",
+        "open:p48-gradient-hybrid-error-transport-control",
         "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
         "artifact:recursive-truth-meditation"
       ]
@@ -748,7 +761,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, the Phase-42 fixed-root tangent diagnosis, the Phase-43 frozen local high-precision arbitration, the Phase-44 all-slot arithmetic decomposition, the Phase-45 integrated-tangent RHS stability test, and the Phase-46 independent u2 state-map audit. Retain the numerical rank-two response, five computed local R14 +1 candidates, sufficient normalized sign homotopy, a 90/90 corroborated local reference, the historical 13/90 operational NumPy64 mismatch ledger, exact declared formula identity, 13/13 plus 77/77 fixed forward-model coverage with mixed nonexclusive contributions, independent tangent stability, and independent state-map/tangent agreement at all three fixed roots. Also retain the inconclusive historical Phase-42 reference, the five exceptions to the Phase-43 all-33 sufficient claim, exact reproduction of the historical u2 failure, and Phase-46's scoped local-flow repair without a unique source error budget. Stop before turning local compatibility into correct-rounding proof, one unique formula/solver cause, a rewritten Phase-41 contract, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, the Phase-42 fixed-root tangent diagnosis, the Phase-43 frozen local high-precision arbitration, the Phase-44 all-slot arithmetic decomposition, the Phase-45 integrated-tangent RHS stability test, the Phase-46 independent u2 state-map audit, and the Phase-47 retained-state source-gradient budget. Retain the numerical rank-two response, five computed local R14 +1 candidates, sufficient normalized sign homotopy, a 90/90 corroborated local reference, the historical 13/90 operational NumPy64 mismatch ledger, exact declared formula identity, 13/13 plus 77/77 fixed forward-model coverage with mixed nonexclusive contributions, independent tangent stability, independent state-map/tangent agreement, and closed source-flow arithmetic telescopes whose generated-gradient stage has the largest norm at all retained slots. Also retain the inconclusive historical Phase-42 reference, the five exceptions to the Phase-43 all-33 sufficient claim, exact reproduction of the historical u2 failure, Phase-46's scoped full-RHS repair, and the still-open intermediate-path and error-transport budget. Stop before turning local compatibility into correct-rounding proof, one unique formula/solver cause, a gradient-only integrated repair, a rewritten Phase-41 contract, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -791,9 +804,27 @@
         "claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT",
         "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION",
         "claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+        "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+        "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p46-source-gradient-flow-error-budget",
+        "open:p48-gradient-hybrid-error-transport-control",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
+      ]
+    },
+    {
+      "id": "reading-path:p47-source-gradient-budget-to-hybrid-control",
+      "title": "From the retained source-gradient budget to a corrected integrated control",
+      "summary": "Start with Phase 46's independent full-RHS repair, follow Phase 47's exact source reproduction and closed launch/endpoint arithmetic telescopes, retain the generated gradient-evaluation delta as the largest descriptive stage without calling it a unique defect, and stop at the missing intermediate-path propagation and gradient-only hybrid integration. The separate Gate-1 physical-cycle problem remains open.",
+      "nodes": [
+        "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION",
+        "open:p46-source-gradient-flow-error-budget",
+        "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+        "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+        "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+        "open:p48-gradient-hybrid-error-transport-control",
+        "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
   ],
@@ -8135,7 +8166,7 @@
       "id": "open:p46-source-gradient-flow-error-budget",
       "type": "open_problem",
       "title": "Decompose source local-flow error and finite-difference amplification",
-      "summary": "Along the retained independent state paths, freeze launch/intermediate/endpoint samples and compare Phase-41 flow_xi with the exact Phase-43 gradient. Decompose coefficient, state, gradient, and contraction rounding, propagate the local bounds to endpoint accumulation, and test their amplification through every retained 1/(2h) difference. This is a narrower local tool-control problem and does not replace the physical Gate-1 original-cycle debt.",
+      "summary": "Phase 47 closes the declared source-gradient arithmetic telescope at the retained launch and endpoint states and after all frozen 1/(2h) pairings, but Phase 46 retained no intermediate states and Phase 47 runs no new trajectory. Intermediate-path sampling, local-error transport to endpoint accumulation, and separation from solver accumulation therefore remain open. This local tool-control problem does not replace the physical Gate-1 original-cycle debt.",
       "question": "Which mixed source arithmetic and solver-accumulation contributions quantitatively account for the endpoint error that is amplified in the historical u2 finite-difference ladder?",
       "state": "OPEN"
     },
@@ -8192,6 +8223,144 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase46-result.json",
       "sha256": "3b7271f81d8b2be678b656da745a149305f244760c6a7530da7fad90ee7184c7"
+    },
+    {
+      "id": "phase:p47",
+      "type": "phase",
+      "title": "Phase 47 — m=4 source-gradient flow error budget",
+      "summary": "A pre-output retained-state audit that evaluates a six-stage signed source-flow telescope at the launch and endpoint states from all eighteen independent Phase-46 u2 paths, then applies the same telescope to all frozen central-difference pairs. All 36 state and 18 paired-Dh telescopes close, and the generated NumPy gradient-evaluation delta is the largest retained stage norm in every slot. The classification is LOCAL_SOURCE_GRADIENT_MIXED_ARITHMETIC_BUDGET_SUPPORTED. No new trajectory or intermediate state is integrated, so the endpoint propagation and solver-accumulation problem remains open; Phase 41 stays 8/9 and Gate 1 remains open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "type": "claim",
+      "title": "The declared local source-flow arithmetic telescopes close at every retained slot",
+      "summary": "The six-stage signed telescope closes at all 36 retained launch/endpoint states with maximum component residual 5.076e-116 and at all 18 frozen 1/(2h) paired derivatives with maximum residual 1.363e-107. Independent 80/120-digit flow projections are identical after final complex128 projection, and the pinned source gradient and flow boundaries reproduce bit for bit.",
+      "state": "SUPPORTED_AT_ALL_FROZEN_STATE_AND_PAIRED_DERIVATIVE_SLOTS",
+      "claim_id": "P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "statement": "Under the frozen exact-lift, source-expression, state-formation, generated-gradient, contraction, and outer-operation conventions, the Phase-41 source-to-reference local-flow discrepancy is completely represented by the declared signed telescope at all 36 retained states and all 18 paired u2 derivative slots.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "type": "claim",
+      "title": "Generated gradient evaluation is the largest retained mixed-arithmetic stage",
+      "summary": "The generated NumPy gradient-evaluation delta has the largest signed-stage norm in 36/36 state slots and 18/18 paired-Dh slots. Its maxima are 2.447e-11 and 9.823e-5, compared with 1.139e-13 and 5.350e-7 for state formation, 1.130e-16 and 3.640e-10 for contraction, negligible source-symbolic deltas, and zero outer deltas. This slotwise ordering is descriptive: the gradient stage still bundles constant lowering, scalar operation ordering, elementary functions, and NumPy rounding, and signed stages can cancel.",
+      "state": "SUPPORTED_AS_DESCRIPTIVE_SLOTWISE_BUDGET_RESULT",
+      "claim_id": "P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "statement": "Within the fixed Phase-47 signed telescope, the generated NumPy gradient-evaluation delta is the largest retained stage norm at every audited state and paired derivative slot, without establishing one unique faulty suboperation or causal defect.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The Phase-47 local budget does not bound endpoint propagation or license global promotion",
+      "summary": "Supported as an executed scope boundary. Phase 47 reuses only launch and endpoint states, integrates no repaired trajectory, samples no interior points, and constructs no sensitivity propagator or solver-accumulation bound. It therefore prioritizes but does not validate a gradient-only hybrid repair. It also performs no root search, orientation selection, determinant-line construction, full-chain or end census, Stokes classification, original-cycle construction, or signed global intersection. Historical Phases 41, 44, and 46 remain unchanged, global promotion is prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_LOCAL_ERROR_BUDGET_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "statement": "A closed retained-state arithmetic budget and largest local gradient-evaluation stage do not establish a corrected integrated path, endpoint error-transport theorem, unique code defect, global signed intersection, or physical conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p47-source-gradient-flow-error-budget",
+      "type": "evidence",
+      "title": "Phase 47 retained-state source-gradient flow error-budget ledger",
+      "summary": "Three exact/protocol checks and six numerical checks pass. They verify the frozen states, stages, thresholds, local-only scope, complete digest and provenance, bitwise source reproduction, 80/120-digit projection stability, closure of all 36 state and 18 paired-Dh telescopes, the descriptive all-slot gradient-stage ordering, the scoped budget classification, and the fail-closed endpoint/global boundary.",
+      "state": "VERIFIED",
+      "observed_status": "3_EXACT_AND_6_NUMERICAL_PASS",
+      "check_ids": [
+        "P47.freeze.retained_states_stages_thresholds",
+        "P47.scope.local_launch_endpoint_budget_only",
+        "P47.retention.valid_json_digest_provenance_and_global_guard",
+        "P47.reproduction.source_boundaries_and_final_lift",
+        "P47.reference.80dps_to_120dps_projection",
+        "P47.decomposition.state_telescopes",
+        "P47.decomposition.paired_Dh_telescopes",
+        "P47.budget.gradient_evaluation_largest_retained_delta",
+        "P47.classification.local_source_gradient_mixed_arithmetic_budget"
+      ]
+    },
+    {
+      "id": "scope:p47-retained-launch-endpoint-flow-budget",
+      "type": "scope",
+      "title": "P47 retained launch/endpoint source-flow arithmetic budget",
+      "summary": "Three immutable Phase-42 m=4 roots, all 36 launch/endpoint states retained from eighteen independent Phase-46 paths, all 18 frozen central-difference pairs, one exact-decimal reference, one pinned source expression, a six-stage signed mixed-arithmetic telescope, 80/120-digit projection checks, and no new state integration.",
+      "state": "ACTIVE",
+      "includes": [
+        "shared_zero, phi_plus, and a_plus without root search or retuning",
+        "u2 steps 2e-6, 5e-7, and 1e-7 with both signs and both retained locations",
+        "exact binary-ratio lifts of fixed source states and geometry, exact-decimal reference gradient, and the pinned Phase-41 source expression",
+        "source-symbolic, state-formation, generated-gradient, contraction, and outer signed deltas at 100 digits",
+        "all state and paired-Dh telescope residuals, source reproduction, independent projection probes, stage maxima, and fail-closed classification"
+      ],
+      "excludes": [
+        "intermediate trajectory states, new state integration, or a corrected gradient-only hybrid path",
+        "a fundamental/sensitivity propagator, endpoint error-transport bound, or solver-accumulation separation",
+        "one unique generated-callable suboperation, universal NumPy/libm/BLAS theorem, or proof of a wrong source formula",
+        "complex-step differentiation, a new root, orientation selection, common determinant line, complete chain or end census, Stokes chamber, physical original cycle, global intersection, SUSY state, or quantum-gravity result"
+      ]
+    },
+    {
+      "id": "open:p48-gradient-hybrid-error-transport-control",
+      "type": "open_problem",
+      "title": "Integrate a gradient-only hybrid control with intermediate error transport",
+      "summary": "Freeze source, gradient-repaired, and fully independent RHS paths for the same eighteen signed u2 trajectories under common DOP853 settings. Retain intermediate checkpoints, integrate the variational/error-transport equation, and test whether replacing only the generated gradient evaluation reproduces the independent endpoints, u2 columns, adjacent plateaus, and sensitivity reference within the already declared limits. This is narrower than the still-open complete Phase-46 source-gradient/solver budget and does not replace Gate 1.",
+      "question": "Does a one-projection exact/high-precision gradient adapter remove the observed integrated endpoint and u2 derivative discrepancy, and can the remaining state-formation, contraction, solver, and subtraction contributions be closed by an intermediate-path sensitivity budget?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:p47-input-manifest",
+      "type": "artifact",
+      "title": "Phase 47 frozen source-gradient error-budget input manifest",
+      "summary": "Final pre-output freeze of all 36 retained states, 18 paired derivatives, exact/source conventions, six stages, five signed deltas, precision probes, thresholds, classification, and fail-closed interpretation boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_INPUTS.json",
+      "sha256": "a4934e2b5f45297f82921a3df7d131afffa184691551cc3c02bb516c36b9fb6e",
+      "introduced_in_commit": "9ad082f1b9edb66421c682545b9a35aa91e4d94c"
+    },
+    {
+      "id": "artifact:p47-script",
+      "type": "artifact",
+      "title": "Phase 47 source-gradient flow error-budget executable",
+      "summary": "Runner that validates the pinned artifacts, reproduces source gradient and flow boundaries bitwise, evaluates independent 80/120-digit controls, constructs every state and paired-Dh signed telescope, retains complete slot data, classifies fail-closed, and emits a canonical self-digested result without integrating a new trajectory.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase47_m4_source_gradient_flow_error_budget.py",
+      "sha256": "945744a9f9c022f371d2516c01aa806317020d947fcaa47a0cc7f962dc82d091",
+      "introduced_in_commit": "6627d585280e443aa9d3eea1f9c61b15c3e788ae"
+    },
+    {
+      "id": "artifact:p47-raw-result",
+      "type": "artifact",
+      "title": "Phase 47 full raw result",
+      "summary": "The complete 1,117,072-byte VALID_RUN result with 36 retained state slots, 18 paired-Dh slots, bitwise source boundaries, 80/120-digit projections, every stage and signed delta, exact telescope residuals, descriptive stage aggregates, provenance, self-digest, and Gate 1 open.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json",
+      "sha256": "d58b443a5a220b93a59d2b74c86bd1a3169c40c6297a4d0b4d86eae15e61b576",
+      "introduced_in_commit": "1d31c220257f326479d5ee0ec27cdf3e3f29a5ff"
+    },
+    {
+      "id": "artifact:p47-report",
+      "type": "artifact",
+      "title": "Phase 47 report",
+      "summary": "Human-readable frozen inputs, bounded scratch provenance, exact/source conventions, six-stage state and paired-Dh budgets, location metrics, descriptive gradient-stage localization, scoped repair inference, open propagation debt, preserved historical statuses, and Gate 1 boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET.md",
+      "sha256": "cb022ad02aff9f3d543c6f7efd802ddf707cbb410bc1f97cac78b1945a781d24",
+      "introduced_in_commit": "23dd3bdac0937a1b1cf9e2feae1f0a8db7bb7749"
+    },
+    {
+      "id": "artifact:p47-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 47 evidence snapshot",
+      "summary": "Compact typed extract preserving all three exact/protocol and six numerical check IDs, aggregate and location metrics, artifact provenance, scoped budget classification, descriptive-not-unique stage boundary, open intermediate propagation and hybrid repair, prohibited global promotion, and open Gate 1. The pinned raw result remains the byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase47-result.json",
+      "sha256": "8a5bc7253ed5c923b5c68c42c38b52f2ba168c14718605eea6e4b01103e62ec1"
     }
   ],
   "edges": [
@@ -19599,6 +19768,256 @@
       "from": "artifact:p46-raw-result",
       "relation": "DERIVED_FROM",
       "to": "artifact:p45-raw-result"
+    },
+    {
+      "id": "edge:1846",
+      "from": "phase:p47",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1847",
+      "from": "phase:p47",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p46"
+    },
+    {
+      "id": "edge:1848",
+      "from": "scope:p47-retained-launch-endpoint-flow-budget",
+      "relation": "PART_OF",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1849",
+      "from": "artifact:p47-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1850",
+      "from": "artifact:p47-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1851",
+      "from": "artifact:p47-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1852",
+      "from": "artifact:p47-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1853",
+      "from": "artifact:p47-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1854",
+      "from": "evidence:p47-source-gradient-flow-error-budget",
+      "relation": "PART_OF",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1855",
+      "from": "evidence:p47-source-gradient-flow-error-budget",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p47-script"
+    },
+    {
+      "id": "edge:1856",
+      "from": "evidence:p47-source-gradient-flow-error-budget",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p47-evidence-snapshot"
+    },
+    {
+      "id": "edge:1857",
+      "from": "evidence:p47-source-gradient-flow-error-budget",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p47-raw-result"
+    },
+    {
+      "id": "edge:1858",
+      "from": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "relation": "PART_OF",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1859",
+      "from": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p47-retained-launch-endpoint-flow-budget"
+    },
+    {
+      "id": "edge:1860",
+      "from": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p47-report"
+    },
+    {
+      "id": "edge:1861",
+      "from": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p47-source-gradient-flow-error-budget",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1862",
+      "from": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "relation": "PART_OF",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1863",
+      "from": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p47-retained-launch-endpoint-flow-budget"
+    },
+    {
+      "id": "edge:1864",
+      "from": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p47-report"
+    },
+    {
+      "id": "edge:1865",
+      "from": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p47-source-gradient-flow-error-budget",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1866",
+      "from": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1867",
+      "from": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p47-retained-launch-endpoint-flow-budget"
+    },
+    {
+      "id": "edge:1868",
+      "from": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p47-report"
+    },
+    {
+      "id": "edge:1869",
+      "from": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p47-source-gradient-flow-error-budget",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1870",
+      "from": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p46-source-gradient-flow-error-budget"
+    },
+    {
+      "id": "edge:1871",
+      "from": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION"
+    },
+    {
+      "id": "edge:1872",
+      "from": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION"
+    },
+    {
+      "id": "edge:1873",
+      "from": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "relation": "EXTENDS",
+      "to": "claim:P44_ALL_DISCLOSED_NUMPY64_MISMATCHES_FIT_THE_DECLARED_MIXED_FORWARD_ERROR_MODEL",
+      "note": "Phase 44 decomposes Hessian-action arithmetic at ninety tangent slots; Phase 47 separately decomposes source-gradient flow arithmetic at 36 retained state slots and 18 paired derivatives. The all-slot largest-stage count is descriptive and neither overwrites Phase 44 nor proves one unique suboperation."
+    },
+    {
+      "id": "edge:1874",
+      "from": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION"
+    },
+    {
+      "id": "edge:1875",
+      "from": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE",
+      "relation": "MOTIVATES",
+      "to": "open:p48-gradient-hybrid-error-transport-control"
+    },
+    {
+      "id": "edge:1876",
+      "from": "open:p48-gradient-hybrid-error-transport-control",
+      "relation": "PART_OF",
+      "to": "phase:p47"
+    },
+    {
+      "id": "edge:1877",
+      "from": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1878",
+      "from": "claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1879",
+      "from": "artifact:p47-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p46-raw-result"
+    },
+    {
+      "id": "edge:1880",
+      "from": "artifact:p47-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p47-input-manifest"
+    },
+    {
+      "id": "edge:1881",
+      "from": "artifact:p47-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p47-script"
+    },
+    {
+      "id": "edge:1882",
+      "from": "artifact:p47-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p46-raw-result"
+    },
+    {
+      "id": "edge:1883",
+      "from": "artifact:p47-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p47-raw-result"
+    },
+    {
+      "id": "edge:1884",
+      "from": "artifact:p47-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p47-raw-result"
+    },
+    {
+      "id": "edge:1885",
+      "from": "claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P44_DECLARED_SOURCE_FORMULA_IS_EXACTLY_IDENTICAL_TO_THE_INDEPENDENT_MODEL"
+    },
+    {
+      "id": "edge:1886",
+      "from": "artifact:p47-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p44-raw-result"
     }
   ],
   "kg_bridges": [
@@ -19948,6 +20367,16 @@
       "checked_at_utc": "2026-08-21T17:18:40Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase46 m4 u2 state-map finite-difference independent local-flow RHS audit",
       "note": "No authorized exact external correspondence or writer is available. The scoped local-flow repair, retained historical provenance, narrower source-gradient error budget, and open Gate-1 boundary remain repository-local evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "phase:p47",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-22T03:54:17Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase47 m4 retained-state source-gradient flow mixed-arithmetic error budget",
+      "note": "No authorized exact external correspondence or writer is available. The closed retained-state telescopes, descriptive generated-gradient stage localization, open intermediate propagation, and Gate-1 boundary remain repository-local evidence; no external UID was invented."
     }
   ]
 }
