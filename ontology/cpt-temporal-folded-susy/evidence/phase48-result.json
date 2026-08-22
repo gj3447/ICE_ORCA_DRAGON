@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_20260822",
+  "phase": "P48",
+  "observed_at_utc": "2026-08-22T04:08:22Z",
+  "command": "proxmox-scratch run ice-phase48 --timeout 7200 -- ./ice run phase48_m4_clongdouble_gradient_repair_state_map",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase48_m4_clongdouble_gradient_repair_state_map.py",
+    "sha256": "63bc9f3eaf7f9d994d52898a39ae494988dfd573216385397d65fd2cae9b3986",
+    "introduced_in_commit": "1137832f08a9ee625e4a84e0cfa754a52858f778"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {
+      "id": "P48.freeze.platform_paths_thresholds_and_references",
+      "statement": "The committed pre-output manifest fixes the NumPy long-double platform contract, three immutable roots, u2 index 8, all three steps and both signs, one gradient-only hybrid convention, DOP853 settings, five trajectory fractions, Phase-46 independent endpoints, Phase-45 tangent columns, thresholds, and fail-closed classification.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.scope.gradient_only_clongdouble_state_map_ablation",
+      "statement": "Only the generated gradient callable is evaluated as clongdouble before one complex128 projection; source state formation, L.T contraction, integration, cap, residual, roots, and ladder remain fixed, with no new tangent integration, root search, retuning, orientation, or global-cycle calculation.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.retention.valid_json_digest_paths_probes_and_global_guard",
+      "statement": "The 165,031-byte VALID_RUN result parses strictly, its self-excluding digest reproduces exactly, all eighteen paths and ninety trajectory probes are retained, pinned provenance is present, global promotion remains prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 10,
+  "numerical": [
+    {
+      "id": "P48.platform.clongdouble_contract",
+      "statement": "The run reproduces 32-byte clongdouble, 16-byte longdouble, 63 stored mantissa bits excluding the implicit bit, and epsilon 1.084202172485504434e-19 on the pinned platform.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.integration.requested_path_count_is_18",
+      "statement": "The frozen three-root, three-step, two-sign design requests exactly eighteen hybrid integrations.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.integration.all_hybrid_paths_complete",
+      "statement": "All eighteen DOP853 hybrid paths complete successfully, with 15,362--15,407 RHS evaluations and 1,024--1,027 accepted steps per path.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.reference.phase46_independent_prerequisites",
+      "statement": "The pinned Phase-46 independent state-map prerequisites remain complete and passed.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.reference.phase47_gradient_localization_prerequisites",
+      "statement": "The pinned Phase-47 all-slot gradient-localization prerequisites remain complete and passed.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.trajectory.all_local_flow_probes_agree",
+      "statement": "All ninety retained trajectory-local flow probes pass the fixed 5e-8 symmetric-relative limit; the rootwise maxima are 1.6792423077438258e-8, 2.018030405578102e-9, and 6.451030806005247e-10.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.endpoint.all_hybrid_states_agree",
+      "statement": "All hybrid endpoint states pass the fixed 1e-8 comparison with the Phase-46 independent endpoints; the rootwise maxima are 2.060026491404566e-9, 2.0844502433900124e-10, and 1.3237090714168427e-10.",
+      "status": "PASS"
+    },
+    {
+      "id": "P48.ladder.all_hybrid_full_ladders_are_stable",
+      "statement": "Only a_plus passes both adjacent-step plateau comparisons; shared_zero reaches 0.025305638207328448 and phi_plus reaches 0.055828840647439086, above the fixed 0.02 limit, so the frozen all-root full-ladder predicate fails.",
+      "status": "FAIL"
+    },
+    {
+      "id": "P48.derivative.all_columns_agree_with_independent",
+      "statement": "The maximum hybrid-to-independent derivative-column discrepancies are 0.025617251567717207, 0.05208231164934439, and 0.008222211509490825, each above the fixed 0.005 all-step limit.",
+      "status": "FAIL"
+    },
+    {
+      "id": "P48.derivative.all_columns_agree_with_phase45_tangent",
+      "statement": "The maximum hybrid-to-Phase-45 tangent discrepancies are 0.02561722124848284, 0.05208259487832754, and 0.008222324875091296, each above the fixed 0.005 all-step limit.",
+      "status": "FAIL"
+    }
+  ],
+  "payload": {
+    "calculation": "m=4 clongdouble gradient-only u2 state-map repair control",
+    "exact_checks": 3,
+    "numerical_checks": 10,
+    "run_status": "VALID_RUN",
+    "classification": "GRADIENT_ONLY_CLONGDOUBLE_STATE_MAP_REPAIR_NOT_SUFFICIENT",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json",
+      "raw_result_outer_sha256": "4c5eeb004724c08a4f5d08368d425c885f1ecf2ef02a0bbb0d915d122c2df5fc",
+      "raw_result_payload_sha256_without_self": "10fc01de6eb8ab85c31cc48a0163a2599106d01f9e0699cfc062549cb0fce73b",
+      "raw_result_introduced_in_commit": "8260ea2fc23a6141de5e1efca91a760bfebfa703",
+      "raw_result_size_bytes": 165031,
+      "validation": "Strict JSON parse, independent self-digest recomputation, pinned artifact identities, platform-contract checks, all path and probe counts, and all aggregate predicates were independently inspected."
+    },
+    "platform": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "clongdouble_itemsize_bytes": 32,
+      "longdouble_itemsize_bytes": 16,
+      "longdouble_mantissa_bits_excluding_implicit_bit": 63,
+      "longdouble_epsilon": "1.084202172485504434e-19"
+    },
+    "aggregate": {
+      "requested_hybrid_paths": 18,
+      "completed_hybrid_paths": 18,
+      "retained_trajectory_probes": 90,
+      "roots_passing_local_flow_limit": "3/3",
+      "roots_passing_endpoint_state_limit": "3/3",
+      "roots_passing_full_ladder": "1/3",
+      "roots_passing_all_independent_column_limits": "0/3",
+      "roots_passing_all_phase45_tangent_limits": "0/3"
+    },
+    "location_metrics": {
+      "shared_zero": {
+        "trajectory_local_flow_relative_max": "1.6792423077438258e-8",
+        "endpoint_state_relative_max": "2.060026491404566e-9",
+        "hybrid_Dh_to_independent_relative_max": "2.5617251567717207e-2",
+        "hybrid_Dh_to_phase45_tangent_relative_max": "2.561722124848284e-2",
+        "hybrid_adjacent_plateaus": [
+          "3.4501577916874846e-4",
+          "2.5305638207328448e-2"
+        ]
+      },
+      "phi_plus": {
+        "trajectory_local_flow_relative_max": "2.018030405578102e-9",
+        "endpoint_state_relative_max": "2.0844502433900124e-10",
+        "hybrid_Dh_to_independent_relative_max": "5.208231164934439e-2",
+        "hybrid_Dh_to_phase45_tangent_relative_max": "5.208259487832754e-2",
+        "hybrid_adjacent_plateaus": [
+          "3.140813674381553e-3",
+          "5.5828840647439086e-2"
+        ]
+      },
+      "a_plus": {
+        "trajectory_local_flow_relative_max": "6.451030806005247e-10",
+        "endpoint_state_relative_max": "1.3237090714168427e-10",
+        "hybrid_Dh_to_independent_relative_max": "8.222211509490825e-3",
+        "hybrid_Dh_to_phase45_tangent_relative_max": "8.222324875091296e-3",
+        "hybrid_adjacent_plateaus": [
+          "6.261814989320354e-3",
+          "5.177183415082102e-3"
+        ]
+      }
+    },
+    "claim_status": {
+      "gradient_only_local_flow_and_endpoint_state": "SUPPORTED_WITHIN_PINNED_PLATFORM_AND_THRESHOLDS",
+      "gradient_only_full_u2_ladder_repair": "CONTRADICTED_BY_FROZEN_ALL_ROOT_PREDICATE",
+      "gradient_only_derivative_agreement": "CONTRADICTED_AT_ALL_THREE_ROOTS",
+      "phase47_gradient_stage_contribution": "SUPPORTED_AS_MATERIAL_NOT_UNIQUE",
+      "historical_phase41_numerical_contracts": "8/9_UNCHANGED",
+      "historical_phase44_phase45_phase46_phase47_results": "UNCHANGED",
+      "formal_endpoint_error_propagator_bound": "NOT_COMPUTED",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "scope_boundary": {
+      "gradient_only_platform_specific_ablation": true,
+      "source_state_formation_promoted": false,
+      "L_transpose_contraction_promoted": false,
+      "new_tangent_integration": false,
+      "root_search_or_retuning": false,
+      "orientation_selection_or_determinant_line": false,
+      "global_cycle_or_intersection": null
+    },
+    "next_calculation": "Promote source state formation, generated gradient evaluation, and L.T contraction together to the same long-double arithmetic, project the complete flow once to complex128, and repeat the frozen eighteen-path endpoint, full-ladder, independent-column, and Phase-45 tangent comparisons."
+  }
+}

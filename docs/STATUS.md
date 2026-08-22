@@ -1080,6 +1080,39 @@ See
 and
 [`../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json`](../cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json).
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 48
+
+Phase 48 returns exit 0 with `VALID_RUN` and the fixed classification
+`GRADIENT_ONLY_CLONGDOUBLE_STATE_MAP_REPAIR_NOT_SUFFICIENT`. On the pinned NumPy platform it integrates
+all eighteen frozen `u2` paths after promoting only the generated gradient-callable evaluation to
+`clongdouble`, then projecting that gradient once to complex128. Source state formation, `L.T`
+contraction, DOP853, cap/residual, roots, and the three-step ladder remain fixed.
+
+All eighteen integrations and ninety intermediate same-state local-flow probes complete. Every probe
+passes `5e-8`, and every endpoint state agrees with the Phase-46 independent endpoint below `1e-8`;
+the rootwise endpoint maxima are `2.060e-9`, `2.084e-10`, and `1.324e-10`. This records a material
+normwise improvement from the gradient-stage ablation.
+
+The complete derivative control nevertheless fails. Only `a_plus` passes both adjacent plateaus;
+`shared_zero` reaches `0.02531` and `phi_plus` reaches `0.05583`, above `0.02`. Every root exceeds the
+all-step `0.005` limit against both the Phase-46 independent columns and Phase-45 tangents, with maxima
+from `0.008222` to `0.05208`. No failed step is dropped. The result is therefore a useful negative
+control: a pinned-platform long-double gradient alone is not sufficient for the full `u2` ladder.
+
+Phase 48 does not construct a formal endpoint propagator or separate state formation, contraction,
+solver accumulation, and final subtraction. It does not rewrite Phase 41, weaken Phases 44–47, prove
+one source formula defect, or establish a portable binary128 implementation. No root, orientation,
+determinant line, complete cycle, Stokes chamber, or global intersection is computed. Global promotion
+remains `PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and Phase 48 raised the committed runnable
+catalog to 80.
+
+See
+[`../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP.md`](../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP.md),
+[`../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_INPUTS.json`](../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase48_m4_clongdouble_gradient_repair_state_map.py`](../cpt_temporal_folded_susy/phase48_m4_clongdouble_gradient_repair_state_map.py),
+and
+[`../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json`](../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json).
+
 ## Historical scientific ledger
 
 The rows below summarize previously committed outputs and audits. They are historical evidence, not a

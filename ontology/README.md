@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–47 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–48 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-22T03:54:17Z` graph update, the collection has 656 nodes and
-1886 edges. Validation verifies 122/122 stored hashes (118 artifacts and 4 policies). The
-Phase 16–47 run snapshots contain 442 named exact checks, all `PASS`, and 279 typed numerical-ledger
-checks: 274 `PASS`, four `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
+At the recorded `2026-08-22T04:08:22Z` graph update, the collection has 667 nodes and
+1928 edges. Validation verifies 127/127 stored hashes (123 artifacts and 4 policies). The
+Phase 16–48 run snapshots contain 445 named exact checks, all `PASS`, and 289 typed numerical-ledger
+checks: 281 `PASS`, seven `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
 NumPy64 outputs cross the frozen source threshold, and only 28/33 disclosed anomalies satisfy the
@@ -34,8 +34,13 @@ retained-state and 18 paired-derivative signed telescopes close, independent 80/
 agree, and the generated gradient-evaluation delta is the largest retained stage norm in every slot.
 This descriptive localization neither identifies one unique suboperation nor integrates or validates a
 gradient-only repair; intermediate propagation and solver accumulation remain open. One legacy
-separately recorded Phase-18 numerical control brings the numerical-record total to 280 (275
-pass, four fail, one inconclusive). These
+Phase 48 adds three exact `PASS`, seven numerical `PASS`, and three complete non-invalidating numerical
+`FAIL` records. All eighteen gradient-only clongdouble paths, ninety intermediate local-flow probes,
+and endpoint-state limits pass, but only one of three full ladders is stable and every root misses both
+all-step derivative-reference limits. This useful negative control contradicts sufficiency of the
+gradient-only adapter without weakening the Phase-46 independent full-flow result. One legacy
+separately recorded Phase-18 numerical control brings the numerical-record total to 290 (282
+pass, seven fail, one inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -99,6 +104,9 @@ confidence.
 ./ice ontology trace claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS --depth 2
 ./ice ontology trace claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE --depth 2
 ./ice ontology trace claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION --depth 2
+./ice ontology trace claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS --depth 2
+./ice ontology trace claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER --depth 2
+./ice ontology trace claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -228,6 +236,12 @@ the largest signed-stage norm to generated gradient evaluation under the frozen 
 still combines multiple suboperations and signed terms can cancel. Because the run integrates no new
 trajectory and retains no intermediate path, it does not establish a gradient-only repair, endpoint
 error-transport or solver bound, unique defect, or global topology.
+Phase 48 retains three typed numerical `FAIL` records without invalidating its zero-exit run. They are
+failures of the universal all-root full-ladder, independent-column, and Phase-45 tangent predicates.
+The simultaneously passing local-flow and endpoint-state controls make the result a useful
+platform-specific negative control: the gradient-only adapter improves the integrated paths but is not
+sufficient for the complete derivative ladder. It is not evidence against the Phase-46 independent
+full-flow path, a portable long-double theorem, one unique defect, or global topology.
 
 ## Identifier families
 
