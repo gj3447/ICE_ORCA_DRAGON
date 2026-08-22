@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 79 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 82 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -374,13 +374,14 @@ and
 
 ## Research ontology memory
 
-Phase 15R–43 is indexed in a repository-local typed research graph with **607 nodes and 1717 directed
-relations**. It preserves 149 claims (81 `SUPPORTED`, 67 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
-Phase 16–43 run payloads: 425 named exact checks, all `PASS`, and 252 current typed numerical checks,
-split as 247 `PASS`, 4 `FAIL`, and 1 `INCONCLUSIVE`. Including the separately catalogued passing legacy
-Phase-18 control gives 253 typed numerical checks, split as 248 `PASS`, 4 `FAIL`, and 1 `INCONCLUSIVE`.
-The graph contains 98 artifacts, 89 evidence nodes, 29 phases, and 46 scopes; all 102 recorded hashes
-validate (98 artifacts and 4 policies), with 26 declared validation warnings. It also preserves cautious
+Phase 15R–50 is indexed in a repository-local typed research graph with **691 nodes and 2015 directed
+relations**. It preserves 171 claims (102 `SUPPORTED`, 68 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
+Phase 16–50 run payloads: 454 named exact checks, all `PASS`, and 308 current typed numerical checks,
+split as 300 `PASS`, 7 `FAIL`, and 1 `INCONCLUSIVE`. Including the separately catalogued passing legacy
+Phase-18 control gives 309 typed numerical checks, split as 301 `PASS`, 7 `FAIL`, and 1 `INCONCLUSIVE`.
+The graph contains 133 artifacts, 97 evidence nodes, 36 phases, 53 scopes, and 55 open problems; all
+137 recorded hashes validate (133 artifacts and 4 policies), with 29 declared validation warnings. It
+also preserves cautious
 bridges to the older SYMPOSIUM KG.
 
 - [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
@@ -1143,6 +1144,47 @@ See
 [`../cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py`](../cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py),
 and
 [`../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json`](../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json).
+
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 50
+
+Phase 50 returns exit 0 with `VALID_RUN` and
+`LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS`.
+It embeds the five retained Phase-41 source-labelled (m=4) saddles into one declared common ambient
+space, adds two explicitly chosen stabilizer directions, and samples a fixed action homotopy to the
+native (m=5) midpoint action. This is a workbench bridge between two finite regulators, not an exact
+action nesting: the frozen symbolic witness gives \(S_5\circ P-S_4=54\pi^2\ne0\).
+
+All five branches complete the 17-node fine continuation, the 9-node coarse control, and the full
+reverse path with sampled inertia `(5-,4+,0)`. The largest gradient residual is `7.746e-10`, the
+smallest absolute Hessian eigenvalue is `4.19425`, the largest coarse/fine distance is `5.138e-12`, and
+the largest forward/reverse distance is `5.578e-12`. All thirty retained implicit-versus-two-step
+finite-difference tangent columns pass; the worst relative discrepancy is `2.377e-6` against the fixed
+`0.005` limit.
+
+The declared affine-invariant and affine SPD metric paths remain positive and reflection covariant.
+Across both metric choices and the action-first, metric-first, and diagonal orderings, the minimum
+consecutive local upward-nine-plane overlap is `0.991143`, the minimum endpoint overlap is
+`0.9999999999999993`, and all 45 endpoint orientation comparisons have sign `+1`. Half/double
+stabilizer mutations return to the same sampled (m=5) endpoints within `4.451e-12`; an added-basis
+sign flip changes only the raw coordinate sign after the declared correction.
+
+These observations support one explicitly stabilized, sampled local saddle and tangent-plane route.
+They do not continue the Phase-41 Gamma–K intersections, construct nonlinear upward manifolds, search
+straight arms or cap reintersections, exhaust roots or upward components, fix Stokes data or relative
+good ends, identify a physical original cycle, prove a cutoff/continuum limit, or construct a common
+BFV/Pfaffian/Pin determinant line. All global outputs remain `null`, global promotion remains
+`PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and the separate Phase-49 formal endpoint and
+portable-flow-adapter problem remains open. The next direct calculation is one frozen (m=5) Gamma–K
+local candidate over this declared bridge, with residual, transversality, path, tangent, reflection,
+and stabilizer controls retained before any broader cycle claim. Phase 50 raises the committed runnable
+catalog to 82.
+
+See
+[`../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md`](../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md),
+[`../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json`](../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py`](../cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py),
+and
+[`../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json`](../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json).
 
 ## Historical scientific ledger
 

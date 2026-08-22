@@ -102,12 +102,19 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `phase43_m4_high_precision_local_rhs_arbitration.py` | frozen $\xi,q$에서만 독립 action·Hessian·direct-gradient path와 high-precision finite differences를 계산하고 source-output·FD evidence를 비배타적으로 중재하는 실행체 |
 | `PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json` | Phase 43의 7/7 exact, 4/6 numerical 계약과 13,606-slot complete ledger를 보존한 50,974,375-byte raw result |
 | `PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md` | Phase 43 보고서 — 90/90 high-precision reference, 13/90 protocol NumPy64-output mismatch, 28/33 same-step FD evidence와 다섯 all-33 exceptions를 보존하며 integrated tangent와 Gate 1은 계속 미검증 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–43의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_INPUTS.json` · `phase44_m4_numpy64_local_rhs_error_decomposition.py` · `PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json` · `PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION.md` | Phase 44 입력·실행체·raw result·보고서 — source/independent formula는 exact-identical이고 90개 telescope가 닫히지만 13/77 모두 mixed nonexclusive arithmetic model에 들어가 unique defect는 선택되지 않음 |
+| `PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_INPUTS.json` · `phase45_m4_integrated_tangent_rhs_stability.py` · `PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json` · `PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY.md` | Phase 45 입력·실행체·raw result·보고서 — 독립 50/80-digit tangent와 source tangent/root Jacobian은 안정적으로 일치하지만 역사적 state-map `u2` 실패는 그대로 유지 |
+| `PHASE46_M4_U2_STATE_MAP_FD_AUDIT_INPUTS.json` · `phase46_m4_u2_state_map_fd_audit.py` · `PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json` · `PHASE46_M4_U2_STATE_MAP_FD_AUDIT.md` | Phase 46 입력·실행체·raw result·보고서 — 독립 local-flow state-map ladder는 tangent와 일치해 scoped repair를 지지하지만 source/solver/subtraction의 유일 원인은 결정하지 않음 |
+| `PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_INPUTS.json` · `phase47_m4_source_gradient_flow_error_budget.py` · `PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json` · `PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET.md` | Phase 47 입력·실행체·raw result·보고서 — 36 state/18 paired-derivative telescope가 닫히고 generated-gradient stage가 가장 크지만 propagation이나 unique suboperation은 미확정 |
+| `PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_INPUTS.json` · `phase48_m4_clongdouble_gradient_repair_state_map.py` · `PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json` · `PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP.md` | Phase 48 입력·실행체·raw result·보고서 — gradient-only clongdouble path/probe/endpoint는 통과하지만 full ladder와 두 derivative-reference aggregate가 실패하는 negative control |
+| `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json` · `phase49_m4_clongdouble_full_flow_state_map_repair.py` · `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json` · `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR.md` | Phase 49 입력·실행체·raw result·보고서 — complete local flow 뒤 한 번 projection하는 pinned-platform adapter가 모든 frozen control을 통과하지만 formal endpoint bound와 portability는 미해결 |
+| `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json` · `phase50_m4_m5_joint_saddle_homotopy.py` · `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json` · `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md` | Phase 50 입력·실행체·raw result·보고서 — 다섯 (m=4) saddle과 local upward nine-plane을 선언된 stabilized action/SPD-metric path로 (m=5)까지 운반; Gamma–K intersection, cutoff theorem, global cycle은 미계산 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–50의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 43)
+## 현재 경계 (Phase 50)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -412,31 +419,48 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   cycle을 계산하지 않았다. 따라서 Phase 41은 8/9, Phase-42 reference tangent는
   `REFERENCE_DERIVATIVE_OR_TANGENT_INCONCLUSIVE`로 남는다. Six promoted outputs는 `null`, seven
   desired outputs도 `null`, 16 completion flags는 `false`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
+- Phase 44는 source와 independent action/gradient/Hessian 식이 exact-identical임을 확인하고 90개
+  signed arithmetic telescope를 모두 닫았다. 그러나 coefficient, state formation, Hessian,
+  contraction 기여는 13개 mismatch와 77개 control 모두에서 섞이고 상쇄 가능하므로 unique defect나
+  source rewrite는 지지되지 않는다. Phase 45의 독립 50/80-digit integrated tangent와 source tangent,
+  root Jacobian은 세 root에서 안정적으로 일치하지만 역사적 `u2` state-map plateau 실패는 유지된다.
+- Phase 46의 독립 high-precision local-flow state-map ladder는 세 root 모두에서 안정되고 Phase-45
+  tangent와 일치해 `LOCAL_FLOW_RHS_REPAIR_SUPPORTED`를 지지한다. Phase 47은 36개 retained state와
+  18개 paired derivative의 mixed-arithmetic budget을 닫고 generated-gradient evaluation을 가장 큰
+  retained stage로 찾았지만, 하나의 unique suboperation이나 endpoint/solver propagation bound를
+  확정하지 않았다.
+- Phase 48의 gradient-only clongdouble adapter는 18개 path, 90개 probe, endpoint-state control을
+  통과하지만 full ladder와 두 all-step derivative-reference aggregate를 통과하지 못한다. Phase 49는
+  extended precision을 state formation부터 outer minus-conjugation까지 complete local flow에 유지한 뒤
+  solver boundary에서 한 번 projection하여 모든 frozen ladder/reference control을 통과한다. 이것은
+  pinned platform의 implementation choice일 뿐 formal endpoint-error transport나 portable long-double
+  adapter theorem은 아니다.
+- Phase 50은 다섯 retained source-labelled (m=4) saddle을 선언된 common ambient에 embed하고 두
+  added-mode stabilizer를 둔 뒤 native (m=5) midpoint action까지 하나의 sampled homotopy를 계산한다.
+  다섯 fine/coarse/reverse path가 모두 `(5-,4+,0)` inertia로 끝나고, 두 SPD metric choice와 세
+  action/metric ordering이 같은 oriented local upward nine-plane endpoint를 준다. Exact nonnesting
+  witness는 \(S_5\circ P-S_4=54\pi^2\ne0\)이므로 이 bridge는 action equality나 cutoff theorem이 아니다.
+  Phase-41 Gamma–K intersections, nonlinear upward manifolds, arms/reintersections, component/end census,
+  Stokes data, physical original cycle와 BFV/Pfaffian/Pin determinant line은 계산하지 않았다. 모든
+  global output은 `null`, promotion은 `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-- **PL/BFV global gate:** Phase 32의 tracked projected lapse-base crossing, Phase 33의 local Airy
-  chart, Phase 34의 reduced branch pair, Phase 35의 relative endpoint-Jacobi transport, Phase 36의
-  separate root-sheet lateral gate, Phase 37의 local closed root/half-form holonomy, Phase 38의
-  inverse-reconstruction obstruction과 \(\operatorname{Re}T=16\) bounded ledger, Phase 39의
-  $m=2$ cap-piece local full-space witness, Phase 40의 rank-one $m=3$ reflection-odd local
-  continuation, Phase 41의 two-source $m=4$ full-$\mathbb R^{14}$ local roots, Phase 42의
-  fixed-root tangent diagnosis와 Phase 43의 frozen high-precision local arbitration에서 멈추지
-  않는다. Phase 43은 reference를 90/90에서 corroborate하고 13/90 NumPy64-output mismatch를
-  찾았지만, state formation, Hessian evaluation, contraction order, cancellation과 conditioning을
-  분리하지 않아 formula error나 unique code defect를 확정하지 않았다. 따라서 root·state·step·
-  threshold를 다시 고르지 않는 arithmetic-provenance/error-decomposition audit를 먼저 수행하고,
-  이 local 결과를 common cross-cutoff determinant line으로 승격하지 않는다. 이후 이미 feasible한
-  $m=5$ joint saddle로 올리고 cutoff/metric homotopy를 실제로 구성한다. 그 뒤
-  하나의 공통 incoming physical upward dual과
-  원래 cycle을 fold의 outgoing arm에 연결하고 physical Van Vleck/BFV determinant
-  line의 absolute orientation을 고정한다. Full joint upward cycle의
-  모든 arm과 complex BVP sheet 및 asymptotic good end를 열거하고, separately specified physical lapse contour와의 전체 intersection
-  sum을 계산한 뒤 endpoint·mode regulator를 제거한다. 동시에 Phase 31 hybrid를 constraint-reduced
-  inhomogeneous graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로
-  확장해 determinant-line orientation과 gauge-fixing independence를 검사한다.
+- **PL/BFV global gate:** Phase 50이 선언한 \(m=4\to m=5\) action/SPD-metric bridge 위에서 실제
+  frozen (m=5) Gamma–K local candidate 하나를 먼저 continuation한다. (\mathbb R^{18}) residual,
+  transversality, direct orientation, variational/finite-difference tangent, fine/coarse/reverse path,
+  reflection과 stabilizer mutation control을 모두 유지하고, saddle와 tangent-plane transport만으로
+  intersection continuation을 대신하지 않는다. 그 뒤 straight arm과 later cap reintersection을
+  검색하고, 모든 saddle/upward component, complex BVP sheet, Stokes data와 relative good end를
+  열거한다. Separately specified physical original cycle과 lapse contour를 정한 뒤에만 complete
+  intersection sum과 regulator-removal을 시도한다. Phase 50의 sampled stabilizer bridge는 exact
+  action nesting, common physical determinant line, cutoff/continuum theorem이 아니며, Phase 49의
+  formal endpoint-error transport와 portable-flow-adapter debt도 별도 numerical follow-up으로 남는다.
+  동시에 Phase 31 hybrid를 constraint-reduced inhomogeneous
+  graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로 확장해
+  determinant-line orientation과 gauge-fixing independence를 검사한다.
 - **Hard-CFU parallel track:** regular hard quotient와 CFU coefficients \(A,B\)의 탐색 계산은 Gate 1과
   병렬로 진행할 수 있다. 다만 그것을 original joint-cycle coefficient와 결합해 physical uniform
   kernel로 승격하는 단계만 Gate 1의 cycle vector와 signed intersections에 의존한다.

@@ -2,18 +2,18 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–49 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), [`phase46-result.json`](../evidence/phase46-result.json), [`phase47-result.json`](../evidence/phase47-result.json), [`phase48-result.json`](../evidence/phase48-result.json), and [`phase49-result.json`](../evidence/phase49-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–50 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), [`phase46-result.json`](../evidence/phase46-result.json), [`phase47-result.json`](../evidence/phase47-result.json), [`phase48-result.json`](../evidence/phase48-result.json), [`phase49-result.json`](../evidence/phase49-result.json), and [`phase50-result.json`](../evidence/phase50-result.json).
 
 ## Reading `PASS` correctly
 
-All 448 Phase 16–49 named exact checks have `status: PASS`. The snapshots contain 300 typed
-numerical-ledger checks: 292 `PASS`, seven `FAIL`, and one `INCONCLUSIVE`. One legacy
-separately recorded Phase-18 SciPy control brings the numerical-record total to 301: 70 controls through
+All 454 Phase 16–50 named exact checks have `status: PASS`. The snapshots contain 308 typed
+numerical-ledger checks: 300 `PASS`, seven `FAIL`, and one `INCONCLUSIVE`. One legacy
+separately recorded Phase-18 SciPy control brings the numerical-record total to 309: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35,
 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, 22 in Phase 40, 9 in Phase 41, 8 in
 Phase 42, 6 in Phase 43, 7 in Phase 44, 6 in Phase 45, 8 in Phase 46, 6 in Phase 47, 10 in Phase 48,
-and 11 in Phase 49. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
+11 in Phase 49, and 8 in Phase 50. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
 contracts. Phase 42
 contributes 8 exact `PASS` records and, after lossless schema mapping of the raw typed statuses, 6
 numerical `PASS`, one protocol-defined local-identity `FAIL`, and one reference-tangent `INCONCLUSIVE`.
@@ -57,7 +57,12 @@ exact and 11 numerical `PASS` records. All complete-flow paths, probes,
 endpoint states, full ladders, and both derivative references pass after retaining clongdouble through
 complete local-flow evaluation before one complex128 solver-boundary projection. This resolves the
 pinned-platform implementation choice but not formal endpoint transport, solver/subtraction separation,
-or portability. None of these records
+or portability. Phase 50 contributes 6 exact and 8 numerical `PASS` records. They verify the pinned
+common-ambient embedding, action nonnesting, five sampled fine/coarse/reverse saddle paths, reflection
+covariance, two-step tangent agreement, two positive metric paths, three local upward-plane transport
+orderings, and stabilizer/basis controls. They do not continue a Gamma–K intersection, enclose every
+homotopy parameter, construct a nonlinear upward manifold or physical determinant line, or establish a
+cutoff/global result. None of these records
 means that a local candidate is an interval-certified root, that the finite-radius chart patch is the
 exact complete upward manifold, that the entire bounded chain was paired, that the physical original
 relative cycle or non-Stokes chamber is fixed, that a global coefficient is known, or that a hard CFU
@@ -111,6 +116,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 47 | `result:P47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_20260822`; `2026-08-22T03:54:17Z` | `cpt_temporal_folded_susy/phase47_m4_source_gradient_flow_error_budget.py`; SHA-256 `945744a9f9c022f371d2516c01aa806317020d947fcaa47a0cc7f962dc82d091`; introduced in `6627d585280e443aa9d3eea1f9c61b15c3e788ae` | Exit `0`; 3 exact PASS plus 6 numerical PASS; `LOCAL_SOURCE_GRADIENT_MIXED_ARITHMETIC_BUDGET_SUPPORTED`. The raw payload lacks a wall-clock field, so the snapshot observation time records the repository indexing event after the byte-validated raw-result capture. |
 | 48 | `result:P48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_20260822`; `2026-08-22T04:08:22Z` | `cpt_temporal_folded_susy/phase48_m4_clongdouble_gradient_repair_state_map.py`; SHA-256 `63bc9f3eaf7f9d994d52898a39ae494988dfd573216385397d65fd2cae9b3986`; introduced in `1137832f08a9ee625e4a84e0cfa754a52858f778` | Exit `0`; 3 exact PASS plus 7 numerical PASS and 3 complete non-invalidating FAIL; `GRADIENT_ONLY_CLONGDOUBLE_STATE_MAP_REPAIR_NOT_SUFFICIENT`. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
 | 49 | `result:P49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_20260822`; `2026-08-22T04:19:02Z` | `cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py`; SHA-256 `f7f03d8ca08c3406cfbae4825b64fb5c2cac89797ea005519fc12c489947abb2`; introduced in `b41e7f2b0c75b922a9fa0d775ceee5d5607e5189` | Exit `0`; 3 exact PASS plus 11 numerical PASS; `FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_SUPPORTED`. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
+| 50 | `result:P50_M4_M5_JOINT_SADDLE_HOMOTOPY_20260822`; `2026-08-22T17:00:24Z` | `cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py`; SHA-256 `77290311ad58198ace94f36e919a59fe19a330c5f49bb8c1ed8b6d15af697d90`; introduced in `f00b3e16b1cbb52302f097b2ae0360ec8b140224` | Exit `0`; 6 exact PASS plus 8 numerical PASS; `LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS`. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -217,6 +223,22 @@ artifact and correction provenance, exact identity, signed-stage and forward-env
 The report has SHA-256 `e9a1409e2564bc5b0633f34f4ffc4e65764aacd58ec30610b59981bdd28f9149` in
 `3afe8a4f97fdfc2728700108bb603a32cea764b3`.
 
+The effective Phase 50 input manifest has SHA-256
+`24706b3b44c1ff426c7b593370acdb324cd39b7998c05ef52e3ba5b88d1e6444` in
+`5e6f04ed7ce40672169c4b6e0cfad8180ec985af`; that pre-output commit clarifies the lambda-zero mobility
+endpoint without changing the frozen branches, meshes, stabilizers, mutations, thresholds, or desired
+classification. The runner has SHA-256
+`77290311ad58198ace94f36e919a59fe19a330c5f49bb8c1ed8b6d15af697d90` in
+`f00b3e16b1cbb52302f097b2ae0360ec8b140224`. The 1,159,794-byte raw result has outer SHA-256
+`22594a5d7c513625384fbdb466101c073f3896a2be597704fa216c9643adbb44`, payload-without-self digest
+`7300500ac7643301f593e720faaae858ea4ccf57b163fd99996b07a2758abc94`, and capture commit
+`4305c77f264bbe5fb62ea9d333129998e04d37c7`. The report has SHA-256
+`b1c6ed6f2aad89ecd497c0245e0988b9f575091ea2c68cc82529dae4a79759b6` in
+`9950f275cfa5501e718715dfa987acffd52d5527`. The compact typed snapshot has SHA-256
+`1e0e68167e32e006d8a02123a7749b65457d7e4addedfc1dc8c55721b3b6c8eb`. These artifacts record one
+explicitly stabilized local bridge; their provenance does not turn it into exact action nesting,
+regulator independence, or a physical cutoff theorem.
+
 ## Evidence-to-claim index
 
 | Evidence group | Checks | Claim and polarity | Scope/source |
@@ -313,6 +335,7 @@ The report has SHA-256 `e9a1409e2564bc5b0633f34f4ffc4e65764aacd58ec30610b59981bd
 | `evidence:p47-source-gradient-flow-error-budget` | 3 exact PASS + 6 numerical PASS | Closed retained-state and paired-Dh source-flow telescopes — `SUPPORTS`; generated gradient evaluation is the largest retained stage norm — `SUPPORTS` descriptively; no endpoint propagation or global promotion — `SUPPORTS` as a scope boundary | All 36 Phase-46 launch/endpoint states and 18 frozen u2 derivative pairs; exact lifts, one six-stage signed mixed-arithmetic budget, and no new trajectory or intermediate sampling. No unique suboperation, corrected integrated path, endpoint/solver bound, root, orientation, determinant line, or global-cycle result |
 | `evidence:p48-gradient-only-clongdouble-state-map-control` | 3 exact PASS + 7 numerical PASS + 3 complete non-invalidating FAIL | Local-flow and endpoint-state agreement — `SUPPORTS`; sufficiency of the gradient-only full-ladder repair — `CONTRADICTS`; open propagation/global-promotion boundary — `SUPPORTS` | Three immutable roots, three u2 steps, both signs, eighteen pinned-platform hybrid paths, ninety same-state probes, complete all-step retention, Phase-46 independent endpoints/columns, and Phase-45 tangents. No portable binary128 theorem, formal propagation bound, unique defect, root, orientation, determinant line, or global-cycle result |
 | `evidence:p49-complete-flow-clongdouble-state-map-control` | 3 exact PASS + 11 numerical PASS | Every frozen complete-flow state-map control — `SUPPORTS`; late complete-flow projection boundary in the Phase-48/49 ablation — `SUPPORTS`; no portability/formal/global promotion — `SUPPORTS` as a scope boundary | Three immutable roots, three u2 steps, both signs, eighteen pinned-platform complete-flow paths, ninety probes, complete all-step retention, Phase-46 independent endpoints/columns, Phase-45 tangents, and retained Phase-48 negative control. No portable binary128 theorem, formal endpoint propagator, unique defect, root, orientation, determinant line, or global-cycle result |
+| `evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport` | 6 exact PASS + 8 numerical PASS | Five frozen (m=4) saddles continue to (m=5) on the declared stabilized paths — `SUPPORTS`; local upward-nine-plane endpoint orientation agrees across the frozen paths — `SUPPORTS`; sampled local transport is not cutoff/global stability — `SUPPORTS` as a scope boundary | Five source-labelled branches, 17-node fine/9-node coarse/full reverse saddle paths, two tangent steps, two SPD metric choices, three action/metric orderings, reflection controls, and half/double stabilizer plus basis mutations. No exact action nesting, Gamma–K continuation, nonlinear upward manifold, unsampled no-zero theorem, determinant line, cutoff limit, original cycle, or global integer |
 
 ## Phase 16 check ledger
 
@@ -1963,6 +1986,50 @@ choice in favor of one late complete-flow projection on this platform. Formal en
 solver/subtraction separation, and portability remain open; global promotion is `PROHIBITED` and Gate 1
 remains `OPEN_PARTIAL_PROGRESS`.
 
+## Phase 50 check ledger
+
+### Pinned inputs, action, embedding, reflection, nonnesting, and global guard — 6 exact PASS
+
+- `P50.inputs.pinned_provenance` — `PASS`
+- `P50.action.single_scalar_five_elements` — `PASS`
+- `P50.embedding.retraction_complement_and_orientation` — `PASS`
+- `P50.reflection.source_embedding_covariance` — `PASS`
+- `P50.homotopy.stabilized_lift_not_action_nesting` — `PASS`
+- `P50.guard.sampled_local_transport_forces_global_nulls` — `PASS`
+
+These checks pin the effective manifest and upstream bytes, derive the five-element gradient and Hessian
+from one scalar, verify the centered lift/retraction/complement and positive ambient orientation, retain
+reflection covariance, and record the exact `54*pi**2` nonnesting witness. The global guard forces the
+cycle, intersection, cutoff, continuum, and physical outputs to remain null. The artificial added-mode
+stabilizers are therefore a declared bridge convention, not evidence that the two regulator actions are
+identical.
+
+### Saddle, reflection, tangent, metric, orientation, mutation, and promotion controls — 8 numerical PASS
+
+- `P50.saddles.five_forward_fine_paths` — `PASS`
+- `P50.saddles.reverse_and_mesh_controls` — `PASS`
+- `P50.reflection.five_branch_covariance` — `PASS`
+- `P50.tangent.implicit_vs_two_step_fd` — `PASS`
+- `P50.metric.two_spd_paths` — `PASS`
+- `P50.orientation.three_path_upward_plane_transport` — `PASS`
+- `P50.mutation.stabilizer_and_added_basis_controls` — `PASS`
+- `P50.guard.no_global_promotion` — `PASS`
+
+All five branches complete 85 fine, 45 coarse, and 85 reverse records with sampled inertia
+`(5-,4+,0)`. The maximum gradient residual is `7.746299157673775e-10`, minimum absolute Hessian
+eigenvalue is `4.194252303680798`, maximum coarse/fine distance is `5.1377440799401886e-12`, and
+maximum forward/reverse distance is `5.5782105354325814e-12`. All thirty tangent columns pass; the
+largest implicit/two-step relative discrepancy is `2.3770289832612e-6`. Both SPD metric paths pass,
+the minimum consecutive upward-plane overlap is `0.9911429762563002`, the minimum path-endpoint overlap
+is `0.9999999999999993`, and every retained endpoint orientation sign is `+1`. Half/double stabilizer
+mutations return within `4.450789017109177e-12` of the nominal (m=5) endpoints.
+
+The supported classification is confined to these sampled paths and controls. Phase 50 does not
+continue a Phase-41 Gamma–K candidate, integrate a nonlinear upward manifold, search all arms or cap
+reintersections, exhaust roots/components/ends, fix a Stokes chamber or physical original cycle, prove a
+cutoff limit, or emit a global signed intersection. Global promotion remains `PROHIBITED`, Gate 1 stays
+`OPEN_PARTIAL_PROGRESS`, and Phase 49's formal endpoint/portable-adapter problem remains separately open.
+
 ## Reproduction commands
 
 The commands recorded in the snapshots are:
@@ -2002,6 +2069,7 @@ proxmox-scratch run ice-phase46 --timeout 7200 -- ./ice run phase46_m4_u2_state_
 proxmox-scratch run ice-phase47 --timeout 7200 -- ./ice run phase47_m4_source_gradient_flow_error_budget
 proxmox-scratch run ice-phase48 --timeout 7200 -- ./ice run phase48_m4_clongdouble_gradient_repair_state_map
 proxmox-scratch run ice-phase49 --timeout 7200 -- ./ice run phase49_m4_clongdouble_full_flow_state_map_repair
+proxmox-scratch run p50a --timeout 300 -- bash -lc './ice run phase50_m4_m5_joint_saddle_homotopy > /tmp/ice-p50a.stdout 2> /tmp/ice-p50a.stderr'
 ```
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.

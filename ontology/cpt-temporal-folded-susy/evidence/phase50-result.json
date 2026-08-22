@@ -1,0 +1,198 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P50_M4_M5_JOINT_SADDLE_HOMOTOPY_20260822",
+  "phase": "P50",
+  "observed_at_utc": "2026-08-22T17:00:24Z",
+  "command": "proxmox-scratch run p50a --timeout 300 -- bash -lc './ice run phase50_m4_m5_joint_saddle_homotopy > /tmp/ice-p50a.stdout 2> /tmp/ice-p50a.stderr'",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py",
+    "sha256": "77290311ad58198ace94f36e919a59fe19a330c5f49bb8c1ed8b6d15af697d90",
+    "introduced_in_commit": "f00b3e16b1cbb52302f097b2ae0360ec8b140224"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {
+      "id": "P50.inputs.pinned_provenance",
+      "statement": "the frozen manifest and every pinned upstream artifact reproduce their declared bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.action.single_scalar_five_elements",
+      "statement": "one holomorphic five-element midpoint scalar generates the m=5 gradient and Hessian off T=0",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.embedding.retraction_complement_and_orientation",
+      "statement": "the centered affine lift has an exact left inverse, a normalized complement, and positive global orientation",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.reflection.source_embedding_covariance",
+      "statement": "the m=5 action, centered prolongation, and two added odd modes obey signed-source nodal reflection",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.homotopy.stabilized_lift_not_action_nesting",
+      "statement": "the declared bridge has the frozen lambda endpoints but the affine m=4 grid is not an exact m=5 action nesting",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.guard.sampled_local_transport_forces_global_nulls",
+      "statement": "the sampled stabilized saddle and local-plane transport cannot emit a cutoff limit, physical cycle, or global integer",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P50.saddles.five_forward_fine_paths",
+      "statement": "all five frozen source-labelled branches complete the 17-node stabilized m4-to-m5 saddle path with the required residual, gap, norm, and inertia",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.saddles.reverse_and_mesh_controls",
+      "statement": "the coarse and fine meshes select the same sampled branches and fine reverse continuation returns to every forward node",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.reflection.five_branch_covariance",
+      "statement": "the shared branch is reflection fixed and both signed source pairs remain reflected roots with equal actions at every fine node",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.tangent.implicit_vs_two_step_fd",
+      "statement": "the implicit saddle-path tangent agrees with both retained central-difference steps at three lambda values on every branch",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.metric.two_spd_paths",
+      "statement": "the affine-invariant geodesic and affine mutation remain positive, conditioned, and reflection covariant on the frozen metric mesh",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.orientation.three_path_upward_plane_transport",
+      "statement": "the local nine-plane transports continuously and returns with the same oriented endpoint over action-first, metric-first, and diagonal paths for both metric choices",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.mutation.stabilizer_and_added_basis_controls",
+      "statement": "half/double added-mode stabilizers retain the same sampled m5 endpoints and inertia, while one added-basis flip changes only the raw coordinate sign",
+      "status": "PASS"
+    },
+    {
+      "id": "P50.guard.no_global_promotion",
+      "statement": "all global, physical-cycle, cutoff-limit, and continuum outputs remain null and Gate 1 remains open",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "sampled stabilized m=4-to-m=5 joint-saddle and local upward-plane transport",
+    "exact_checks": 6,
+    "numerical_checks": 8,
+    "run_status": "VALID_RUN",
+    "classification": "LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json",
+      "input_manifest_sha256": "24706b3b44c1ff426c7b593370acdb324cd39b7998c05ef52e3ba5b88d1e6444",
+      "input_manifest_commit": "5e6f04ed7ce40672169c4b6e0cfad8180ec985af",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json",
+      "raw_result_outer_sha256": "22594a5d7c513625384fbdb466101c073f3896a2be597704fa216c9643adbb44",
+      "raw_result_payload_sha256_without_self": "7300500ac7643301f593e720faaae858ea4ccf57b163fd99996b07a2758abc94",
+      "raw_result_introduced_in_commit": "4305c77f264bbe5fb62ea9d333129998e04d37c7",
+      "raw_result_size_bytes": 1159794,
+      "validation": "Strict unique-key and nonfinite-token JSON parsing, independent canonical self-digest recomputation, manifest and runner hash matching, and complete exact, numerical, and retained-record counts passed."
+    },
+    "platform": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41"
+    },
+    "record_counts": {
+      "source_labelled_branches": 5,
+      "fine_forward_nodes": 85,
+      "coarse_forward_nodes": 45,
+      "fine_reverse_nodes": 85,
+      "two_step_tangent_records": 30,
+      "metric_path_samples": 34,
+      "stabilizer_mutation_forward_and_reverse_nodes": 340
+    },
+    "aggregate": {
+      "fine_lambda_nodes_per_branch": 17,
+      "maximum_gradient_max_abs": 7.746299157673775e-10,
+      "minimum_hessian_absolute_eigenvalue": 4.194252303680798,
+      "maximum_lambda0_embedded_start_distance": 1.7112637515023307e-12,
+      "maximum_coarse_fine_common_node_distance": 5.1377440799401886e-12,
+      "maximum_forward_reverse_node_distance": 5.5782105354325814e-12,
+      "maximum_tangent_symmetric_relative": 2.3770289832612e-6,
+      "maximum_tangent_adjacent_step_relative": 2.281209217383747e-6,
+      "minimum_consecutive_upward_plane_principal_overlap": 0.9911429762563002,
+      "minimum_path_endpoint_upward_plane_principal_overlap": 0.9999999999999993,
+      "maximum_stabilizer_mutation_endpoint_distance": 4.450789017109177e-12,
+      "reproduced_hessian_zero_or_branch_loss": false,
+      "reproduced_inertia_change_records": []
+    },
+    "scope": {
+      "calculated_facts": [
+        "one declared m=4-to-m=5 common-ambient action homotopy",
+        "five source-labelled saddle continuations on fixed coarse and fine lambda meshes",
+        "Hessian nondegeneracy and inertia along those sampled paths",
+        "forward/reverse, mesh, reflection, and implicit-tangent controls",
+        "two positive local metric paths and their local upward-plane orientation transport",
+        "two predeclared added-mode stabilizer-scale mutations"
+      ],
+      "not_computed": [
+        "Gamma-K local intersection continuation from m=4 to m=5",
+        "nonlinear upward manifolds or flow trajectories",
+        "straight-arm or cap-reintersection searches",
+        "root or upward-component exhaustion",
+        "Stokes walls or relative good ends",
+        "a physical original joint relative cycle",
+        "a common physical determinant, BFV, Pfaffian, or Pin line",
+        "a cutoff or continuum limit",
+        "a global signed intersection vector or physical claim"
+      ],
+      "sampled_local_calculation_only": true,
+      "calculation_workbench_only": true,
+      "phase41_gamma_k_intersections_continued": false,
+      "cutoff_or_continuum_theorem": false,
+      "physics_claim": false
+    },
+    "promoted_outputs": {
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "physical_original_cycle": null
+    },
+    "auxiliary_validation": {
+      "role": "AUXILIARY_ARITHMETIC_BACKEND_CROSS_CHECK_ONLY",
+      "authoritative_typed_check": false,
+      "retained_in_raw_result": false,
+      "method": "An independent 80-digit mpmath backend evaluated the frozen SymPy m=5 gradient and Hessian at the five serialized lambda=1 endpoints.",
+      "endpoints_checked": 5,
+      "all_endpoint_hessian_inertias": {
+        "negative": 5,
+        "positive": 4,
+        "zero": 0
+      },
+      "maximum_gradient_component_abs": "2.3613363335141515e-11",
+      "maximum_minimum_absolute_hessian_eigenvalue_difference": "3.0941688446315333e-11",
+      "interpretation": "This is an arithmetic/backend cross-check of the committed JSON and does not add or replace an authoritative exact or numerical check."
+    },
+    "claim_status": {
+      "declared_stabilized_saddle_bridge": "SUPPORTED_ON_FROZEN_SAMPLED_PATHS",
+      "local_upward_plane_transport": "SUPPORTED_ON_FROZEN_SAMPLED_PATHS",
+      "regulator_independence": "NOT_ESTABLISHED",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "next_calculation": "Continue an actual frozen m=5 Gamma-K local candidate over the now-declared action/metric bridge, then search straight arms, cap reintersections, complete upward components, Stokes data, and relative good ends without treating this sampled local saddle transport as a cutoff theorem."
+  }
+}

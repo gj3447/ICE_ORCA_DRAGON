@@ -8,12 +8,13 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–49 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–50 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-22T04:19:02Z` graph update, the collection has 679 nodes and
-1975 edges. Validation verifies 132/132 stored hashes (128 artifacts and 4 policies). The
-Phase 16–49 run snapshots contain 448 named exact checks, all `PASS`, and 300 typed numerical-ledger
-checks: 292 `PASS`, seven `FAIL`, and one `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
+At the recorded `2026-08-22T17:00:24Z` Phase 50 graph update, the collection has 691 nodes and 2015
+edges. Validation verifies 137/137 stored hashes (133 artifacts and 4 policies). The Phase 16–50 run
+snapshots contain 454 named exact checks, all `PASS`, and 308 typed numerical-ledger checks: 300
+`PASS`, seven `FAIL`, and one
+`INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
 NumPy64 outputs cross the frozen source threshold, and only 28/33 disclosed anomalies satisfy the
@@ -43,8 +44,13 @@ exact and eleven numerical `PASS` records: all eighteen complete-flow paths, nin
 states, all full ladders, and both derivative references pass after retaining clongdouble through the
 complete local flow before one solver-boundary projection. This resolves only the pinned-platform
 implementation choice; formal endpoint transport, solver/subtraction separation, and portability remain
-open. One legacy separately recorded Phase-18 numerical control brings the numerical-record total to
-301 (293 pass, seven fail, one inconclusive). These
+open. Phase 50 adds six exact and eight numerical `PASS` records. All five source-labelled saddles
+complete the declared stabilized \(m=4\to m=5\) fine, coarse, and reverse paths with fixed inertia;
+both positive metric choices and all three action/metric orderings return the same oriented local upward
+nine-plane at the sampled endpoint. This is one finite-dimensional, regulator-dependent local bridge,
+not a Gamma–K intersection continuation, cutoff theorem, nonlinear upward manifold, determinant line,
+global cycle, or physical claim. One legacy separately recorded Phase-18 numerical control brings the
+numerical-record total to 309 (301 pass, seven fail, one inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -114,6 +120,9 @@ confidence.
 ./ice ontology trace claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS --depth 2
 ./ice ontology trace claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION --depth 2
 ./ice ontology trace claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION --depth 2
+./ice ontology trace claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS --depth 2
+./ice ontology trace claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT --depth 2
+./ice ontology trace claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -253,6 +262,12 @@ Phase 49 has no typed non-PASS record. Its all-control success is scoped to the 
 NumPy path, fixed roots and steps, and complex128 solver state. The Phase-48 failures remain valid and
 form the negative half of the paired ablation. Phase 49 does not supply a formal error propagator,
 portable long-double implementation, unique formula defect, or global topology.
+Phase 50 also has no typed non-PASS record. Its six exact and eight numerical checks certify only the
+declared common-ambient embedding, sampled stabilized saddle paths, two SPD metric paths, local
+upward-nine-plane endpoint agreement, and the frozen reflection, tangent, mesh, reverse, stabilizer,
+and basis controls. The artificial stabilizers and sampled meshes do not establish action nesting,
+regulator independence, an unsampled no-zero theorem, a Gamma–K intersection, nonlinear upward manifold,
+physical determinant line, cutoff limit, or global topology.
 
 ## Identifier families
 

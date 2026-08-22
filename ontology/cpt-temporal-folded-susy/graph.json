@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-22T04:19:02Z",
+  "updated_at_utc": "2026-08-22T17:00:24Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -348,6 +348,15 @@
         "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
         "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
         "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION"
+      ]
+    },
+    {
+      "question": "Does Phase 50 provide a canonical cutoff limit or global intersection by carrying the m=4 saddles to m=5?",
+      "answer": "No. It constructs one explicitly stabilized common-ambient action bridge and two positive metric paths. All five frozen source-labelled saddles complete the sampled forward, reverse, mesh, tangent, reflection, and stabilizer controls, and their local upward nine-planes have the same oriented m=5 endpoint. This supports only the declared local paths: no Gamma--K intersection, nonlinear upward manifold, complete end census, physical determinant line, original cycle, cutoff theorem, global vector, or physics claim is computed; Gate 1 remains open.",
+      "claim_ids": [
+        "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+        "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+        "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION"
       ]
     }
   ],
@@ -786,7 +795,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–49, ending with the paired gradient-only and complete-flow clongdouble ablations. Retain the historical local candidates and failures, independent tangent and state-map references, closed source-flow telescopes, Phase-48's passing normwise controls plus failed derivative predicates, and Phase-49's all-step complete-flow repair on the pinned platform. Stop before turning this local implementation result into correct-rounding proof, one universal cause, a formal endpoint bound, portable long-double recipe, rewritten Phase-41 contract, determinant line, complete original cycle, Stokes chamber, or global vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–50. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, and Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport. Stop before turning these local calculations into correct-rounding proof, a formal endpoint bound, portable long-double recipe, Gamma--K continuation, nonlinear upward manifold, canonical cutoff determinant line, complete original cycle, Stokes chamber, global vector, or physical claim.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -838,6 +847,10 @@
         "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
         "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
         "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+        "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+        "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+        "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -8675,6 +8688,147 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase49-result.json",
       "sha256": "79f5f046efd6c10fe3edd227419dbd2c5f485659fec319d57da35b697ec4145d"
+    },
+    {
+      "id": "phase:p50",
+      "type": "phase",
+      "title": "Phase 50 — sampled stabilized m=4 to m=5 joint-saddle and local-plane transport",
+      "summary": "One declared nine-dimensional common ambient space carries the five retained Phase-41/42 m=4 saddles to native m=5 midpoint-action saddles through an explicitly stabilized action homotopy. All frozen fine, coarse, reverse, reflection, implicit-tangent, SPD-metric, upward-plane, and half/double-stabilizer controls pass. The classification is LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS. This is a sampled local workbench construction, not Gamma--K continuation, a canonical cutoff limit, global cycle, or physics claim; Gate 1 remains open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+      "type": "claim",
+      "title": "The five frozen m=4 saddles continue to m=5 on the declared stabilized paths",
+      "summary": "All five source-labelled branches complete the 17-node forward path, nine-node mesh control, full reverse path, and both half/double stabilizer mutations with sampled Hessian inertia (5-,4+,0). The worst gradient residual is 7.746e-10, minimum absolute Hessian eigenvalue 4.194, coarse/fine distance 5.138e-12, and forward/reverse distance 5.578e-12. This supports only the frozen stabilized bridge and sampled nodes; it is not an action-nesting or regulator-independence theorem.",
+      "state": "SUPPORTED_WITHIN_FROZEN_STABILIZED_ACTION_PATHS",
+      "claim_id": "P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+      "statement": "For the five immutable source-labelled m=4 roots, the declared common-ambient stabilized action paths retain accepted nondegenerate saddles with inertia (5-,4+,0) on every frozen fine, coarse, reverse, reflection, tangent, and stabilizer-control sample through the native m=5 endpoint.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+      "type": "claim",
+      "title": "The local upward nine-plane transport has a consistent oriented endpoint",
+      "summary": "The affine-invariant SPD geodesic and affine metric mutation remain positive, conditioned, and reflection covariant. Cholesky-whitened signed subspaces transported by action-first, metric-first, and diagonal paths have minimum consecutive principal overlap 0.991143, minimum endpoint overlap 0.9999999999999993, and orientation sign +1 in all 45 endpoint comparisons. This is local tangent-plane transport and contains no nonlinear upward manifold, Gamma--K intersection, or physical determinant line.",
+      "state": "SUPPORTED_WITHIN_FROZEN_LOCAL_ACTION_METRIC_PATHS",
+      "claim_id": "P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+      "statement": "For both frozen positive metric paths and all five saddle branches, the declared local upward nine-plane transports continuously along the action-first, metric-first, and diagonal samples and reaches the same oriented m=5 endpoint within the frozen overlap thresholds.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "type": "claim",
+      "title": "The sampled local transport does not establish cutoff stability or a global intersection",
+      "summary": "Supported as an executed sufficiency boundary. The m=4 and m=5 actions are exactly nonnested at the frozen witness, the bridge contains artificial added-mode stabilizers, lambda is sampled rather than formally enclosed, and only local tangent planes are transported. No Gamma--K continuation, nonlinear flow, complete root/component/end census, Stokes data, physical original cycle, common BFV/Pfaffian/Pin determinant line, cutoff theorem, global signed vector, or physics claim is computed. Six global outputs remain null, global promotion is prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_CUTOFF_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "statement": "A passing sampled stabilized saddle and local upward-plane transport between m=4 and m=5 is insufficient to establish regulator independence, a canonical cross-cutoff determinant line, a complete original cycle, a global signed intersection vector, or any physical conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "type": "evidence",
+      "title": "Phase 50 stabilized m=4 to m=5 saddle and upward-plane transport ledger",
+      "summary": "Six exact/protocol and eight numerical checks pass. The ledger retains five fine/coarse/reverse branches, thirty tangent finite-difference columns, two SPD metric paths, three local-plane path orderings, reflection pairs, 340 stabilizer-mutation nodes, the basis-gauge control, complete artifact provenance, strict global nulls, and open Gate 1. The separately recorded 80-digit endpoint check is auxiliary arithmetic validation and not an additional authoritative typed check.",
+      "state": "VERIFIED",
+      "observed_status": "6_EXACT_AND_8_NUMERICAL_PASS",
+      "check_ids": [
+        "P50.inputs.pinned_provenance",
+        "P50.action.single_scalar_five_elements",
+        "P50.embedding.retraction_complement_and_orientation",
+        "P50.reflection.source_embedding_covariance",
+        "P50.homotopy.stabilized_lift_not_action_nesting",
+        "P50.guard.sampled_local_transport_forces_global_nulls",
+        "P50.saddles.five_forward_fine_paths",
+        "P50.saddles.reverse_and_mesh_controls",
+        "P50.reflection.five_branch_covariance",
+        "P50.tangent.implicit_vs_two_step_fd",
+        "P50.metric.two_spd_paths",
+        "P50.orientation.three_path_upward_plane_transport",
+        "P50.mutation.stabilizer_and_added_basis_controls",
+        "P50.guard.no_global_promotion"
+      ]
+    },
+    {
+      "id": "scope:p50-frozen-stabilized-m4-m5-saddle-and-local-upward-plane-transport",
+      "type": "scope",
+      "title": "P50 frozen stabilized m=4 to m=5 saddle and local upward-plane transport",
+      "summary": "Five immutable source-labelled m=4 roots; one exact centered prolongation and normalized added odd mode per field; one nine-dimensional stabilized action interpolation; fixed fine, coarse, reverse, tangent, metric, and stabilizer-mutation samples; two positive mobility paths; local Cholesky-whitened signed-subspace transport; fail-closed solver and global-output rules.",
+      "state": "ACTIVE",
+      "includes": [
+        "shared_zero, phi_minus, phi_plus, a_minus, and a_plus without branch retuning",
+        "17-node fine, nine-node coarse, full reverse, and three-point two-step tangent controls",
+        "the affine-invariant SPD geodesic plus affine mutation and action-first, metric-first, and diagonal plane paths",
+        "source reflection, half/double stabilizers, added-basis sign gauge, strict artifact hashes, and null global guards"
+      ],
+      "excludes": [
+        "a proof between sampled lambda or metric nodes, exact action nesting, or regulator/cutoff independence",
+        "Gamma--K local intersection continuation, nonlinear upward manifolds, straight arms, cap reintersections, or root/component/end exhaustion",
+        "Stokes classification, a physical original cycle, common BFV/Pfaffian/Pin determinant line, global signed intersection, continuum limit, SUSY state, or physics claim"
+      ]
+    },
+    {
+      "id": "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
+      "type": "open_problem",
+      "title": "Continue one frozen m=5 Gamma--K local intersection candidate",
+      "summary": "Phase 50 supplies native m=5 saddle endpoints and a declared local action/metric orientation convention but does not continue the Phase-41 Gamma--K cap intersections or integrate nonlinear flows. The next local calculation must freeze an actual m=5 candidate and re-run full R18 residual, transversality, path, reflection, and tangent controls before any arm, reintersection, component, Stokes, end, or global-cycle census.",
+      "question": "Can one frozen m=5 Gamma--K candidate be constructed and validated with complete local residual, transversality, path, reflection, and tangent controls without treating the sampled saddle bridge as a cutoff theorem?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:p50-input-manifest",
+      "type": "artifact",
+      "title": "Phase 50 frozen m=4 to m=5 saddle-homotopy input manifest",
+      "summary": "Post-feasibility freeze of the five branches, exact common-ambient embedding, stabilizers, action and metric paths, meshes, tangent steps, mutations, thresholds, disclosed pilot, fail-closed classifications, and strict global boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json",
+      "sha256": "24706b3b44c1ff426c7b593370acdb324cd39b7998c05ef52e3ba5b88d1e6444",
+      "introduced_in_commit": "5e6f04ed7ce40672169c4b6e0cfad8180ec985af"
+    },
+    {
+      "id": "artifact:p50-script",
+      "type": "artifact",
+      "title": "Phase 50 saddle-homotopy and local-plane executable",
+      "summary": "Python runner that validates all pinned inputs; evaluates exact m=5 action, embedding, reflection, and nonnesting controls; solves every frozen saddle path and mutation; audits tangent, SPD metric, and local upward-plane transport; classifies failures fail-closed; and emits a canonical self-digested result.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py",
+      "sha256": "77290311ad58198ace94f36e919a59fe19a330c5f49bb8c1ed8b6d15af697d90",
+      "introduced_in_commit": "f00b3e16b1cbb52302f097b2ae0360ec8b140224"
+    },
+    {
+      "id": "artifact:p50-raw-result",
+      "type": "artifact",
+      "title": "Phase 50 full raw result",
+      "summary": "The complete 1,159,794-byte VALID_RUN result with 85 fine, 45 coarse, 85 reverse, 30 tangent-column, 34 metric, and 340 stabilizer-mutation records; six exact and eight numerical passes; all branch, reflection, metric, orientation, mutation, provenance, self-digest, and global-null data; and Gate 1 open.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json",
+      "sha256": "22594a5d7c513625384fbdb466101c073f3896a2be597704fa216c9643adbb44",
+      "introduced_in_commit": "4305c77f264bbe5fb62ea9d333129998e04d37c7"
+    },
+    {
+      "id": "artifact:p50-report",
+      "type": "artifact",
+      "title": "Phase 50 report",
+      "summary": "Human-readable provenance, common-ambient action bridge, all saddle and tangent controls, positive metric paths, local upward-plane orientation, stabilizer and basis mutations, auxiliary 80-digit arithmetic check, calculated-fact/inference/open-hypothesis separation, and strict cutoff/global/physical boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md",
+      "sha256": "b1c6ed6f2aad89ecd497c0245e0988b9f575091ea2c68cc82529dae4a79759b6",
+      "introduced_in_commit": "9950f275cfa5501e718715dfa987acffd52d5527"
+    },
+    {
+      "id": "artifact:p50-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 50 evidence snapshot",
+      "summary": "Compact typed extract preserving all six exact/protocol and eight numerical checks, artifact and run provenance, branch and record counts, aggregate path/metric/orientation/mutation metrics, auxiliary endpoint arithmetic validation, six null global outputs, prohibited promotion, open Gamma--K continuation, and open Gate 1. The pinned raw result remains byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase50-result.json",
+      "sha256": "1e0e68167e32e006d8a02123a7749b65457d7e4addedfc1dc8c55721b3b6c8eb"
     }
   ],
   "edges": [
@@ -20874,6 +21028,251 @@
       "from": "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
       "relation": "FOLLOW_UP_TO",
       "to": "open:p46-source-gradient-flow-error-budget"
+    },
+    {
+      "id": "edge:1976",
+      "from": "phase:p50",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1977",
+      "from": "phase:p50",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1978",
+      "from": "scope:p50-frozen-stabilized-m4-m5-saddle-and-local-upward-plane-transport",
+      "relation": "PART_OF",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1979",
+      "from": "artifact:p50-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1980",
+      "from": "artifact:p50-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1981",
+      "from": "artifact:p50-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1982",
+      "from": "artifact:p50-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1983",
+      "from": "artifact:p50-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1984",
+      "from": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "relation": "PART_OF",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1985",
+      "from": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p50-script"
+    },
+    {
+      "id": "edge:1986",
+      "from": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p50-evidence-snapshot"
+    },
+    {
+      "id": "edge:1987",
+      "from": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p50-raw-result"
+    },
+    {
+      "id": "edge:1988",
+      "from": "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+      "relation": "PART_OF",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1989",
+      "from": "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p50-frozen-stabilized-m4-m5-saddle-and-local-upward-plane-transport"
+    },
+    {
+      "id": "edge:1990",
+      "from": "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p50-report"
+    },
+    {
+      "id": "edge:1991",
+      "from": "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1992",
+      "from": "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+      "relation": "PART_OF",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1993",
+      "from": "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p50-frozen-stabilized-m4-m5-saddle-and-local-upward-plane-transport"
+    },
+    {
+      "id": "edge:1994",
+      "from": "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p50-report"
+    },
+    {
+      "id": "edge:1995",
+      "from": "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1996",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "PART_OF",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:1997",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p50-frozen-stabilized-m4-m5-saddle-and-local-upward-plane-transport"
+    },
+    {
+      "id": "edge:1998",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p50-report"
+    },
+    {
+      "id": "edge:1999",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2000",
+      "from": "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+    },
+    {
+      "id": "edge:2001",
+      "from": "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P42_NORMALIZED_LOCAL_MATRIX_HOMOTOPY_SUFFICIENTLY_PRESERVES_FIXED_ROOT_SIGN"
+    },
+    {
+      "id": "edge:2002",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "EXTENDS",
+      "to": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "note": "Phase 50 adds one explicit stabilized common-ambient local saddle and tangent-plane bridge, but the two discrete actions are exactly nonnested at the frozen witness and no Gamma--K cap intersection or global determinant line is continued. It therefore sharpens rather than removes the Phase-41 cross-cutoff sufficiency boundary."
+    },
+    {
+      "id": "edge:2003",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:p50-frozen-m5-gamma-k-local-intersection-continuation"
+    },
+    {
+      "id": "edge:2004",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:2005",
+      "from": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:2006",
+      "from": "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
+      "relation": "PART_OF",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:2007",
+      "from": "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:2008",
+      "from": "artifact:p50-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-input-manifest"
+    },
+    {
+      "id": "edge:2009",
+      "from": "artifact:p50-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p41-script"
+    },
+    {
+      "id": "edge:2010",
+      "from": "artifact:p50-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-fixed-root-checkpoint"
+    },
+    {
+      "id": "edge:2011",
+      "from": "artifact:p50-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p49-raw-result",
+      "note": "Readiness provenance only: Phase 49 closes the preceding m=4 local-flow implementation audit, but its flow data do not enter the static Phase-50 saddle equations."
+    },
+    {
+      "id": "edge:2012",
+      "from": "artifact:p50-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p50-input-manifest"
+    },
+    {
+      "id": "edge:2013",
+      "from": "artifact:p50-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p50-script"
+    },
+    {
+      "id": "edge:2014",
+      "from": "artifact:p50-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p50-raw-result"
+    },
+    {
+      "id": "edge:2015",
+      "from": "artifact:p50-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p50-raw-result"
     }
   ],
   "kg_bridges": [

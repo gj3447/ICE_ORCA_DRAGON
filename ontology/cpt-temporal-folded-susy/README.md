@@ -2,7 +2,11 @@
 
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
-Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated `2026-08-22T03:54:17Z`; 656 nodes, 1886 edges). Run details live in the [evidence guide](./references/evidence.md); literature coverage lives in the [source inventory](./references/source-inventory.md). The current validator verifies 122/122 stored hashes (118 artifacts and 4 policies).
+Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
+`2026-08-22T17:00:24Z`; 691 nodes, 2015 edges). Run details live in the
+[evidence guide](./references/evidence.md);
+literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
+verifies 137/137 stored hashes (133 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -54,7 +58,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 47 prove that changing only the generated gradient fixes the integrated paths? | No. It closes the declared mixed-arithmetic telescope at all 36 retained launch/endpoint states and all 18 paired derivatives, and generated gradient evaluation has the largest stage norm in every slot. That prioritizes a gradient-only hybrid test but does not select one unique suboperation, integrate a repaired path, sample the interior, or bound endpoint/solver accumulation. Phase 41 remains 8/9; Phases 44 and 46 are unchanged; Gate 1 stays open. | `claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS`; `claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE`; `claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget`; `open:p48-gradient-hybrid-error-transport-control` |
 | Does Phase 48's gradient-only clongdouble adapter repair the full `u2` ladder? | No. All eighteen paths, ninety intermediate local-flow probes, and endpoint-state limits pass on the pinned platform, but only `a_plus` has a stable full ladder and every root fails the all-step `0.005` derivative limits against both the Phase-46 independent columns and Phase-45 tangents. This is a useful negative control: promoting only the generated gradient materially improves the paths but is not sufficient. The propagation/solver budget and Gate 1 remain open. | `claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS`; `claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER`; `claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget`; `open:p48-gradient-hybrid-error-transport-control` |
 | Does Phase 49 repair the frozen `u2` ladder with a practical NumPy implementation? | Yes within the pinned long-double platform contract. Retaining clongdouble through state formation, generated gradient, `L.T` contraction, and outer minus-conjugation before one complete-flow complex128 projection makes all eighteen paths, ninety probes, endpoint states, full ladders, independent columns, and tangent comparisons pass. The worst derivative discrepancy is `0.001216`, below `0.005`. This resolves the scoped implementation choice, not formal endpoint transport, portability, a formula defect, or Gate 1. | `claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS`; `claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION`; `claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION`; `open:p49-formal-endpoint-transport-and-portable-flow-adapter` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–49 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–49 scope guards |
+| Does Phase 50 establish a cutoff-stable \(m=4\to m=5\) cycle transport? | No. It supports one explicitly stabilized, sampled common-ambient route for five frozen source-labelled saddles and their local upward nine-planes. All fine/coarse/reverse, tangent, reflection, metric-path, stabilizer, and basis controls pass, with no sampled Hessian zero or inertia change. The action bridge is not an exact nesting, and no Phase-41 Gamma–K intersection, nonlinear upward manifold, physical determinant line, cutoff limit, global cycle, or physics result is continued. | `claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS`; `claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT`; `claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION`; `open:p50-frozen-m5-gamma-k-local-intersection-continuation` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–50 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–50 scope guards |
 
 ### Phase 23 reading path
 
@@ -243,10 +248,11 @@ relative-homology pairing:
    census, uncertified exact nonlinear manifold and non-Stokes chamber, and unresolved relative good
    ends. Its null outputs mean "not computed," not a zero intersection number.
 
-The next controlled lift is an \(m=3\) or \(m=4\) endpoint-asymmetric calculation that exposes the first
-reflection-odd history mode, followed by \(m=5\), complete chain/dual-component searches, lateral Stokes
-data, good-end classification, and cutoff/metric/homotopy stability. Only that stronger object can
-promote the local signs into Gate 1's signed global vector.
+At the Phase-39 boundary, the next controlled lift was an \(m=3\) or \(m=4\) endpoint-asymmetric
+calculation exposing the first reflection-odd history mode, followed by \(m=5\), complete
+chain/dual-component searches, lateral Stokes data, good-end classification, and
+cutoff/metric/homotopy stability. Phases 40–50 now cover the local steps described later, but the
+complete object required for Gate 1's signed global vector remains missing.
 
 ### Phase 40 reading path
 
@@ -420,9 +426,11 @@ Phase 48 executes the gradient-only integrated ablation and retains its negative
 3. `claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION` keeps the
    missing variational propagation, state-formation, contraction, solver-accumulation, subtraction,
    portability, and global-cycle boundaries explicit;
-4. `open:p48-gradient-hybrid-error-transport-control` remains open for that propagation decomposition,
-   nested inside the broader `open:p46-source-gradient-flow-error-budget`. Historical Phases 41 and
-   44–47 are unchanged, global promotion is prohibited, and Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
+4. `open:p48-gradient-hybrid-error-transport-control` was the then-open implementation problem. Phase 49
+   subsequently resolves only its gradient-only-versus-late-projection choice and leaves formal
+   transport/portability under `open:p49-formal-endpoint-transport-and-portable-flow-adapter`, nested
+   inside the broader source/solver budget. Historical Phases 41 and 44–47 are unchanged, global
+   promotion is prohibited, and Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 
 ### Phase 49 reading path
 
@@ -441,6 +449,28 @@ debts:
 4. `claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION` preserves Phase 41
    at 8/9, Phases 44–48 unchanged, global promotion prohibited, and Gate 1
    `OPEN_PARTIAL_PROGRESS`.
+
+### Phase 50 reading path
+
+Phase 50 leaves the (m=4) arithmetic-repair branch and tests one declared finite-cutoff saddle and
+local-plane bridge without promoting it into a cycle theorem:
+
+1. `claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS` records all five
+   fine, coarse, and reverse saddle paths, fixed `(5-,4+,0)` sampled inertia, reflection covariance,
+   and the two-step tangent controls. The added stabilizers define the bridge; the exact nonnesting
+   witness prevents identifying it with equality of the (m=4) and (m=5) actions;
+2. `claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT` records the two
+   positive metric choices and three action/metric orderings. Their endpoint planes agree with positive
+   orientation under the frozen convention, but only local tangent planes—not Gamma or K manifolds—are
+   transported;
+3. `claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION`
+   retains the artificial-stabilizer, sampled-mesh, unsampled-degeneracy, nonlinear-manifold,
+   determinant-line, physical-cycle, cutoff, and global-promotion boundaries. Phase 49's formal
+   endpoint/portable-adapter debt remains a separate open problem;
+4. `open:p50-frozen-m5-gamma-k-local-intersection-continuation` is the next local calculation: continue
+   one actual frozen (m=5) Gamma–K candidate over the declared bridge with residual,
+   transversality, path, tangent, reflection, and stabilizer controls. The broader component/end census,
+   Stokes data, original cycle, and Gate 1 remain open independently.
 
 ## Concept map
 
