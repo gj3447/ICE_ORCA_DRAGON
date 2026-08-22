@@ -1,0 +1,146 @@
+{
+  "schema": "ice-phase47-source-gradient-flow-error-budget-inputs/v1",
+  "phase": 47,
+  "status": "FROZEN_BEFORE_PHASE47_NUMERICAL_OUTPUT",
+  "scope": {
+    "question": "At the launch and endpoint states retained by the eighteen Phase-46 independent u2 paths, can the Phase-41 source flow discrepancy be closed by a fixed coefficient/state/gradient/contraction/outer-arithmetic telescope, and how is each stage amplified by the frozen central-difference steps?",
+    "calculation_workbench_only": true,
+    "targets_in_order": [
+      "shared_zero",
+      "phi_plus",
+      "a_plus"
+    ],
+    "state_path": "independent_exact_80dps_dop853",
+    "locations_in_order": [
+      "launch",
+      "endpoint"
+    ],
+    "central_difference_steps_in_order": [
+      0.000002,
+      5e-7,
+      1e-7
+    ],
+    "perturbation_signs_in_order": [
+      1,
+      -1
+    ],
+    "state_slot_count": 36,
+    "paired_derivative_slot_count": 18,
+    "root_search": false,
+    "parameter_retuning": false,
+    "new_trajectory_integration": false,
+    "intermediate_trajectory_sampling": false,
+    "endpoint_propagator_or_solver_accumulation_bound": false,
+    "global_cycle_or_intersection": false
+  },
+  "equations_and_conventions": {
+    "source_flow": "F64(xi)=-conj(L.T @ gradient64(saddle+L@xi))",
+    "independent_flow": "F0(xi)=-conj(L^T grad_exact(saddle+L xi)) with every fixed binary64 geometry input lifted by its exact integer ratio",
+    "central_difference": "D_h(F)=(F(xi_plus)-F(xi_minus))/(2h)",
+    "complex_convention": "transpose L.T, followed by componentwise complex conjugation and a leading minus sign",
+    "source_coefficient_semantics": "the pinned Phase-41 SymPy gradient expression, including its 50-digit Float literals, evaluated with mpmath before any NumPy scalar arithmetic",
+    "classification_is_noncausal": "stage deltas form a signed mixed-arithmetic budget; a largest norm is descriptive and is not a unique-cause claim"
+  },
+  "fixed_telescope": {
+    "stage_ids_in_order": [
+      "S0_exact_decimal_reference_exact_w",
+      "S1_source_coefficients_exact_w",
+      "S2_source_coefficients_lifted_w64",
+      "S3_lifted_gradient64_exact_contraction",
+      "S4_lifted_matvec64_exact_outer",
+      "S5_lifted_source_flow64"
+    ],
+    "delta_ids_in_order": [
+      "D_coefficients",
+      "D_state_formation",
+      "D_gradient_evaluation",
+      "D_contraction",
+      "D_outer"
+    ],
+    "telescope": "sum_i D_i = S5 - S0 componentwise",
+    "source_boundary_operations_in_order": [
+      "u64=L@xi",
+      "w64=saddle+u64",
+      "gradient64=Phase41.gradient_at(model,w64)",
+      "matvec64=L.T@gradient64",
+      "flow64=-numpy.conjugate(matvec64)"
+    ]
+  },
+  "fixed_numerics": {
+    "authoritative_mpmath_dps": 100,
+    "independent_projection_probe_dps_in_order": [
+      80,
+      120
+    ],
+    "retained_mpmath_digits": 50,
+    "binary64_projection": "complex128",
+    "state_reuse": "consume the byte-pinned Phase-46 initial_xi and endpoint_xi records; do not reintegrate"
+  },
+  "fixed_metrics_and_thresholds": {
+    "symmetric_relative": "norm(x-y)/max(norm(x),norm(y),1e-300)",
+    "max_component_absolute": "max_i(abs(x_i-y_i))",
+    "independent_80dps_to_120dps_complex128_relative_max": 1e-12,
+    "source_flow64_bitwise_reproduction_required": true,
+    "source_gradient64_bitwise_reproduction_required": true,
+    "mp_stage_telescope_max_component_absolute_max": "1e-70",
+    "paired_Dh_stage_telescope_max_component_absolute_max": "1e-60",
+    "detectable_stage_norm_floor": "1e-90",
+    "phase44_formula_mismatch_required_global_state": "NOT_SUPPORTED"
+  },
+  "classification": {
+    "budget_supported_label": "LOCAL_SOURCE_GRADIENT_MIXED_ARITHMETIC_BUDGET_SUPPORTED",
+    "inconclusive_label": "SOURCE_GRADIENT_FLOW_ERROR_BUDGET_INCONCLUSIVE",
+    "budget_supported": "all 36 retained states are complete; the independent 80/120 projections agree; source gradient and flow are reproduced bitwise; both state and paired-Dh telescopes close; and the pinned Phase-44 global formula-mismatch state remains NOT_SUPPORTED",
+    "inconclusive": "any pinned-input, slot-completion, precision, source-reproduction, telescope, or Phase-44 formula-identity prerequisite fails"
+  },
+  "pinned_inputs": {
+    "phase42_input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json",
+      "commit": "dc21816b9fef9ad658fdd728e73453ffeee46f4d",
+      "sha256": "1cc88c489b5240019aaf339b25d0cebac9b4a1560b09cbec9c3079ce2067afb6"
+    },
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6"
+    },
+    "phase42_source": {
+      "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py",
+      "commit": "1c0d7fed4aa99c6424ec659dae8ba6f24b791926",
+      "sha256": "1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019"
+    },
+    "phase41_source": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530"
+    },
+    "independent_reference_source": {
+      "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+      "commit": "4aa3887cec14816c92ff8635d2cac703d4661d37",
+      "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729"
+    },
+    "phase44_result": {
+      "path": "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json",
+      "commit": "4e75a4fe9ce909fa62794f5a550a3409f6e0fc9f",
+      "sha256": "bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75"
+    },
+    "phase46_result": {
+      "path": "cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json",
+      "commit": "e7a8ec45a26e4af9297ad5694111436e43c0bd6a",
+      "sha256": "8349eb669c542dfb13555554f3f81d70f2843520240ab66ccbbca4226081fad0"
+    },
+    "phase46_source": {
+      "path": "cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py",
+      "commit": "45cab780121370ba3bd125ffcabfbf00a37cacc1",
+      "sha256": "a71badb3c49a4af44e5e4a1b8bec244593f1de5a43c3b0d71d729f92ef147d55"
+    }
+  },
+  "interpretation_boundary": {
+    "historical_phase41_and_phase46_results_unchanged": true,
+    "phase44_formula_identity_result_unchanged": true,
+    "a_closed_local_telescope_is_not_an_endpoint_propagation_bound": true,
+    "a_largest_stage_is_not_a_unique_defect": true,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS"
+  }
+}
