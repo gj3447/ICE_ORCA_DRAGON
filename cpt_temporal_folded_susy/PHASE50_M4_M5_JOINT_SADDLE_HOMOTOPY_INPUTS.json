@@ -94,7 +94,7 @@
     "stabilizer_mutation_rule": "multiply both kappa values by the listed positive scale, rerun every branch, and require the same lambda=1 roots and the same nonzero inertia; this is a candidate-path robustness test, not regulator independence"
   },
   "metric_and_local_orientation": {
-    "endpoint_mobility": "At the shared-zero saddle at lambda=0 or 1, diagonalize the real Hessian H=O Lambda O^T with det(O)=+1 and define the positive mobility M=O*diag(abs(Lambda)^(-1))*O^T.",
+    "endpoint_mobility": "At lambda=0, inherit the byte-pinned Phase-42 shared-zero m=4 mobility M4 and define M0=B*blockdiag(M4,1/abs(kappa_a),1/abs(kappa_phi))*B.T. At the shared-zero lambda=1 m=5 saddle, diagonalize the real Hessian H5=O Lambda O.T with det(O)=+1 and define M1=O*diag(abs(Lambda)^(-1))*O.T. Both are positive mobilities in the same frozen m=5 nodal coordinates.",
     "primary_metric_path": "M_geo(mu)=M0^(1/2)*(M0^(-1/2)*M1*M0^(-1/2))^mu*M0^(1/2), evaluated with symmetric positive-definite matrix powers",
     "mutation_metric_path": "M_affine(mu)=(1-mu)*M0+mu*M1",
     "positive_factor": "Use the lower Cholesky factor L with positive diagonal, so M=L*L.T and det(L)>0.",
@@ -107,6 +107,11 @@
     },
     "orientation_scope": "This transports only the local saddle upward tangent orientation inside the declared common ambient space. It is not a Gamma-K intersection sign or a physical determinant line.",
     "basis_gauge_control": "Negating the added-a basis column makes det(B) and the raw augmented-basis sign flip; multiplying them gives an invariant corrected sign. The physical lifted action is unchanged because the corresponding added coordinate also changes sign."
+  },
+  "pre_output_clarification": {
+    "status": "MANIFEST_ONLY_CLARIFICATION_BEFORE_COMMITTED_RUNNER_OR_AUTHORITATIVE_RESULT",
+    "change": "The lambda=0 mobility is explicitly the Phase-42 m=4 mobility plus inverse-absolute-stabilizer mobilities pushed forward by B; lambda=1 remains the native m=5 Hessian mobility. This resolves an endpoint-metric wording ambiguity and changes no source branch, mesh, stabilizer, threshold, disclosed pilot observation, or desired result.",
+    "authoritative_phase50_output_observed_before_this_clarification": false
   },
   "fixed_numerics": {
     "primary_solver": {"library": "scipy.optimize.root", "method": "hybr", "xtol": 1e-11, "analytic_hessian_jacobian": true},
