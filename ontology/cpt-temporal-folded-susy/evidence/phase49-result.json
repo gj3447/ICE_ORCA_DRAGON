@@ -1,0 +1,195 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_20260822",
+  "phase": "P49",
+  "observed_at_utc": "2026-08-22T04:19:02Z",
+  "command": "proxmox-scratch run ice-phase49 --timeout 7200 -- ./ice run phase49_m4_clongdouble_full_flow_state_map_repair",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py",
+    "sha256": "f7f03d8ca08c3406cfbae4825b64fb5c2cac89797ea005519fc12c489947abb2",
+    "introduced_in_commit": "b41e7f2b0c75b922a9fa0d775ceee5d5607e5189"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {
+      "id": "P49.freeze.platform_paths_thresholds_and_references",
+      "statement": "The committed pre-output manifest fixes the NumPy long-double platform contract, three immutable roots, u2 index 8, every step and sign, complete-flow clongdouble convention, DOP853 settings, five trajectory fractions, Phase-45/46/47/48 references, thresholds, disclosed pilot, and fail-closed classification.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.scope.full_flow_clongdouble_state_map_ablation",
+      "statement": "State formation, generated gradient evaluation, L.T contraction, and outer minus-conjugation are evaluated together in clongdouble before one complete-flow complex128 projection at the solver boundary; the complex128 solver state, chart, cap, residual, roots, and ladder remain fixed.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.retention.valid_json_digest_paths_probes_and_global_guard",
+      "statement": "The 165,513-byte VALID_RUN result parses strictly, its self-excluding digest reproduces exactly, all eighteen paths and ninety probes are retained, pinned provenance is present, global promotion remains prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 11,
+  "numerical": [
+    {
+      "id": "P49.platform.clongdouble_contract",
+      "statement": "The run reproduces 32-byte clongdouble, 16-byte longdouble, 63 stored mantissa bits excluding the implicit bit, and epsilon 1.084202172485504434e-19 on the pinned platform.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.integration.requested_path_count_is_18",
+      "statement": "The frozen three-root, three-step, two-sign design requests exactly eighteen complete-flow hybrid integrations.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.integration.all_hybrid_paths_complete",
+      "statement": "All eighteen DOP853 complete-flow hybrid paths finish successfully with 15,362--15,407 RHS evaluations and 1,024--1,027 accepted steps per path.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.reference.phase46_independent_prerequisites",
+      "statement": "The pinned Phase-46 independent state-map prerequisites remain complete and passed.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.reference.phase47_gradient_localization_prerequisites",
+      "statement": "The pinned Phase-47 all-slot gradient-localization prerequisites remain complete and passed.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.reference.phase48_gradient_only_negative_control",
+      "statement": "The pinned Phase-48 gradient-only not-sufficient classification and its complete negative-control predicates reproduce as prerequisites.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.trajectory.all_local_flow_probes_agree",
+      "statement": "All ninety retained trajectory-local flow probes pass the fixed 5e-8 symmetric-relative limit; the largest rootwise maximum is 1.6782247927955977e-8.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.endpoint.all_hybrid_states_agree",
+      "statement": "Every complete-flow endpoint state passes the fixed 1e-8 comparison with the Phase-46 independent endpoint; the largest rootwise maximum is 2.041226052343841e-9.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.ladder.all_hybrid_full_ladders_are_stable",
+      "statement": "All three roots pass both adjacent-step plateau comparisons; the largest plateau is 0.0014009984907594015, below the fixed 0.02 limit.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.derivative.all_columns_agree_with_independent",
+      "statement": "Every retained complete-flow derivative column agrees with the Phase-46 independent finite difference under the fixed 0.005 all-step limit; the largest discrepancy is 0.0012159190347880555.",
+      "status": "PASS"
+    },
+    {
+      "id": "P49.derivative.all_columns_agree_with_phase45_tangent",
+      "statement": "Every retained complete-flow derivative column agrees with the Phase-45 independent tangent under the fixed 0.005 all-step limit; the largest discrepancy is 0.00121594999434492.",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "m=4 clongdouble complete-flow u2 state-map repair control",
+    "exact_checks": 3,
+    "numerical_checks": 11,
+    "run_status": "VALID_RUN",
+    "classification": "FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_SUPPORTED",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json",
+      "raw_result_outer_sha256": "787e6aee62193af0b78041cae42eb38c13afef281b7d0560c07ad3a2958da531",
+      "raw_result_payload_sha256_without_self": "c8063283f8ac66918cbabcd3d3a71d3bfdcfdba734067306486164737d4e3c9f",
+      "raw_result_introduced_in_commit": "078753a9406f5e71730f7946df7ac8dcfa3a9d52",
+      "raw_result_size_bytes": 165513,
+      "validation": "Strict JSON parse, independent canonical self-digest recomputation, pinned artifact identities, platform contract, all path and probe counts, and all eleven aggregate predicates passed."
+    },
+    "platform": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "clongdouble_itemsize_bytes": 32,
+      "longdouble_itemsize_bytes": 16,
+      "longdouble_mantissa_bits_excluding_implicit_bit": 63,
+      "longdouble_epsilon": "1.084202172485504434e-19"
+    },
+    "aggregate": {
+      "requested_hybrid_paths": 18,
+      "completed_hybrid_paths": 18,
+      "retained_trajectory_probes": 90,
+      "roots_passing_local_flow_limit": "3/3",
+      "roots_passing_endpoint_state_limit": "3/3",
+      "roots_passing_full_ladder": "3/3",
+      "roots_passing_all_independent_column_limits": "3/3",
+      "roots_passing_all_phase45_tangent_limits": "3/3"
+    },
+    "location_metrics": {
+      "shared_zero": {
+        "trajectory_local_flow_relative_max": "1.6782247927955977e-8",
+        "endpoint_state_relative_max": "2.041226052343841e-9",
+        "hybrid_Dh_to_independent_relative_max": "1.2159190347880555e-3",
+        "hybrid_Dh_to_phase45_tangent_relative_max": "1.21594999434492e-3",
+        "hybrid_adjacent_plateaus": [
+          "2.0823467016228803e-4",
+          "1.4009984907594015e-3"
+        ]
+      },
+      "phi_plus": {
+        "trajectory_local_flow_relative_max": "1.9930898724539825e-9",
+        "endpoint_state_relative_max": "1.7592572678416914e-10",
+        "hybrid_Dh_to_independent_relative_max": "6.49080529147583e-4",
+        "hybrid_Dh_to_phase45_tangent_relative_max": "6.493646886302244e-4",
+        "hybrid_adjacent_plateaus": [
+          "1.4044468083339074e-4",
+          "4.994007219168558e-4"
+        ]
+      },
+      "a_plus": {
+        "trajectory_local_flow_relative_max": "4.6400443415980283e-10",
+        "endpoint_state_relative_max": "1.0074014902205987e-10",
+        "hybrid_Dh_to_independent_relative_max": "6.437580335553189e-4",
+        "hybrid_Dh_to_phase45_tangent_relative_max": "6.438450036884434e-4",
+        "hybrid_adjacent_plateaus": [
+          "1.5960310493393158e-4",
+          "8.221323533670801e-4"
+        ]
+      }
+    },
+    "phase48_to_phase49_improvement": {
+      "worst_derivative_column_factor_by_root": {
+        "shared_zero": "approximately 21.1",
+        "phi_plus": "approximately 80.2",
+        "a_plus": "approximately 12.8"
+      },
+      "worst_adjacent_plateau_factor_by_root": {
+        "shared_zero": "approximately 18.1",
+        "phi_plus": "approximately 111.8",
+        "a_plus": "approximately 7.62"
+      }
+    },
+    "claim_status": {
+      "complete_flow_state_map_and_tangent_controls": "SUPPORTED_WITHIN_PINNED_PLATFORM_AND_THRESHOLDS",
+      "late_complete_flow_projection_implementation_boundary": "SUPPORTED_BY_PHASE48_49_PAIRED_ABLATION",
+      "gradient_only_repair": "NOT_SUFFICIENT_UNCHANGED",
+      "formal_endpoint_error_propagator_bound": "NOT_COMPUTED",
+      "portable_long_double_implementation": "OPEN_PLATFORM_CONTRACT_REQUIRED",
+      "historical_phase41_numerical_contracts": "8/9_UNCHANGED",
+      "historical_phase44_phase45_phase46_phase47_phase48_results": "UNCHANGED",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "scope_boundary": {
+      "full_flow_platform_specific_ablation": true,
+      "state_formation_gradient_contraction_outer_promoted": true,
+      "complete_flow_projected_once_at_solver_boundary": true,
+      "complex128_solver_state": true,
+      "formal_endpoint_error_propagator_bound": false,
+      "portable_binary128_theorem": false,
+      "new_tangent_integration": false,
+      "root_search_or_retuning": false,
+      "orientation_selection_or_determinant_line": false,
+      "global_cycle_or_intersection": null
+    },
+    "next_calculation": "Separate the now-supported pinned-platform implementation recipe from a portable adapter contract and, if a formal numerical guarantee is required, integrate a variational or fundamental-matrix error-transport bound that accounts for solver accumulation and endpoint subtraction."
+  }
+}

@@ -53,7 +53,8 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 | Does Phase 46 repair the failed `u2` state-map ladder or prove a source formula bug? | It repairs the ladder under the frozen independent local-flow comparison, but does not prove a formula bug. Independent plateaus are at most `2.019e-7` and agree with Phase-45 tangents; close source endpoints amplify into tight/Radau derivative-column failures. The mixed source arithmetic, solver accumulation, and subtraction budget remains open, Phase 41 stays 8/9 as provenance, and Gate 1 stays open. | `claim:P46_INDEPENDENT_STATE_MAP_U2_LADDER_IS_STABLE_AND_AGREES_WITH_TANGENT`; `claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION`; `claim:P46_LOCAL_REPAIR_DOES_NOT_PROVE_SOURCE_FORMULA_DEFECT_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget` |
 | Does Phase 47 prove that changing only the generated gradient fixes the integrated paths? | No. It closes the declared mixed-arithmetic telescope at all 36 retained launch/endpoint states and all 18 paired derivatives, and generated gradient evaluation has the largest stage norm in every slot. That prioritizes a gradient-only hybrid test but does not select one unique suboperation, integrate a repaired path, sample the interior, or bound endpoint/solver accumulation. Phase 41 remains 8/9; Phases 44 and 46 are unchanged; Gate 1 stays open. | `claim:P47_LOCAL_SOURCE_FLOW_TELESCOPES_CLOSE_AT_ALL_RETAINED_SLOTS`; `claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE`; `claim:P47_LOCAL_BUDGET_DOES_NOT_BOUND_ENDPOINT_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget`; `open:p48-gradient-hybrid-error-transport-control` |
 | Does Phase 48's gradient-only clongdouble adapter repair the full `u2` ladder? | No. All eighteen paths, ninety intermediate local-flow probes, and endpoint-state limits pass on the pinned platform, but only `a_plus` has a stable full ladder and every root fails the all-step `0.005` derivative limits against both the Phase-46 independent columns and Phase-45 tangents. This is a useful negative control: promoting only the generated gradient materially improves the paths but is not sufficient. The propagation/solver budget and Gate 1 remain open. | `claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS`; `claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER`; `claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget`; `open:p48-gradient-hybrid-error-transport-control` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–48 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–48 scope guards |
+| Does Phase 49 repair the frozen `u2` ladder with a practical NumPy implementation? | Yes within the pinned long-double platform contract. Retaining clongdouble through state formation, generated gradient, `L.T` contraction, and outer minus-conjugation before one complete-flow complex128 projection makes all eighteen paths, ninety probes, endpoint states, full ladders, independent columns, and tangent comparisons pass. The worst derivative discrepancy is `0.001216`, below `0.005`. This resolves the scoped implementation choice, not formal endpoint transport, portability, a formula defect, or Gate 1. | `claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS`; `claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION`; `claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION`; `open:p49-formal-endpoint-transport-and-portable-flow-adapter` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–49 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–49 scope guards |
 
 ### Phase 23 reading path
 
@@ -422,6 +423,24 @@ Phase 48 executes the gradient-only integrated ablation and retains its negative
 4. `open:p48-gradient-hybrid-error-transport-control` remains open for that propagation decomposition,
    nested inside the broader `open:p46-source-gradient-flow-error-budget`. Historical Phases 41 and
    44–47 are unchanged, global promotion is prohibited, and Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
+
+### Phase 49 reading path
+
+Phase 49 completes the paired implementation ablation without closing the formal numerical or physical
+debts:
+
+1. `claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS` records all eighteen paths,
+   ninety probes, endpoint states, full ladders, and both derivative references below their frozen
+   limits, with no dropped root, step, sign, probe, or path;
+2. `claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION` compares the retained
+   Phase-48 gradient-only failures with the otherwise fixed Phase-49 success. It supports keeping
+   clongdouble through complete-flow contraction before one solver-boundary projection on this platform;
+3. `open:p48-gradient-hybrid-error-transport-control` is resolved only as that implementation choice.
+   `open:p49-formal-endpoint-transport-and-portable-flow-adapter` keeps the formal propagator,
+   solver/subtraction separation, and cross-platform adapter contract open;
+4. `claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION` preserves Phase 41
+   at 8/9, Phases 44–48 unchanged, global promotion prohibited, and Gate 1
+   `OPEN_PARTIAL_PROGRESS`.
 
 ## Concept map
 

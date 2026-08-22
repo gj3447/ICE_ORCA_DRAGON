@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-22T04:08:22Z",
+  "updated_at_utc": "2026-08-22T04:19:02Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -339,6 +339,15 @@
         "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS",
         "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER",
         "claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION"
+      ]
+    },
+    {
+      "question": "Does Phase 49 provide a practical repair for the frozen u2 state-map ladder?",
+      "answer": "Yes, within the pinned NumPy long-double platform and frozen comparison contract. Evaluating state formation, generated gradient, L.T contraction, and outer minus-conjugation together in clongdouble before one complete-flow complex128 projection makes all eighteen paths, ninety probes, endpoint states, all three full ladders, every Phase-46 column comparison, and every Phase-45 tangent comparison pass. The worst derivative discrepancy is 0.001216 below 0.005. This resolves the scoped implementation-choice control, not a formal endpoint-error theorem, portable long-double implementation, source-formula defect, global cycle, or physical claim; Gate 1 remains open.",
+      "claim_ids": [
+        "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+        "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+        "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION"
       ]
     }
   ],
@@ -691,7 +700,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–48 apply the same rule to the retained tangent anomaly: they preserve solver, step-pair, local-identity, high-precision-reference, finite-difference, NumPy64 pipeline, exact-formula, signed-stage, conditioning, forward-model, integrated-tangent, independently reconstructed state-flow, retained-state source-gradient budget, and gradient-only integrated-ablation evidence. Phase 48 retains its passing local-flow and endpoint controls together with the failed full-ladder and derivative predicates, so the candidate-selection pilot cannot privilege the gradient-only adapter or promote a local improvement into a global claim.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–49 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, and ablation record. Phase 49 retains the Phase-48 gradient-only failures while the otherwise fixed full-flow path passes all controls; this supports a pinned-platform late-projection implementation boundary without erasing the negative control or promoting it to a portable, formal, or global result.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -728,8 +737,12 @@
         "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS",
         "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER",
         "claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+        "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+        "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
+        "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
         "open:p36-original-cycle-hard-determinant-and-global-bfv-state",
         "artifact:recursive-truth-meditation"
       ]
@@ -773,7 +786,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through the Phase-38 identifiability audit, the Phase-39 m=2 local pilot, the Phase-40 m=3 rank-one mutation, the Phase-41 m=4 two-source control, the Phase-42 fixed-root tangent diagnosis, the Phase-43 frozen local high-precision arbitration, the Phase-44 all-slot arithmetic decomposition, the Phase-45 integrated-tangent RHS stability test, the Phase-46 independent u2 state-map audit, the Phase-47 retained-state source-gradient budget, and the Phase-48 gradient-only integrated ablation. Retain the numerical rank-two response, five computed local R14 +1 candidates, sufficient normalized sign homotopy, a 90/90 corroborated local reference, the historical 13/90 operational NumPy64 mismatch ledger, exact declared formula identity, 13/13 plus 77/77 fixed forward-model coverage with mixed nonexclusive contributions, independent tangent stability, independent state-map/tangent agreement, closed source-flow arithmetic telescopes, and Phase-48's passing local-flow and endpoint controls. Also retain the inconclusive historical Phase-42 reference, the five exceptions to the Phase-43 all-33 sufficient claim, exact reproduction of the historical u2 failure, Phase-46's scoped full-RHS repair, and Phase-48's failed all-root full-ladder and derivative predicates. Stop before turning local compatibility into correct-rounding proof, one unique formula/solver cause, a sufficient gradient-only repair, a rewritten Phase-41 contract, common determinant line, cutoff limit, entire-chain pairing, physical original cycle, certified Stokes chamber, or global vector.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–49, ending with the paired gradient-only and complete-flow clongdouble ablations. Retain the historical local candidates and failures, independent tangent and state-map references, closed source-flow telescopes, Phase-48's passing normwise controls plus failed derivative predicates, and Phase-49's all-step complete-flow repair on the pinned platform. Stop before turning this local implementation result into correct-rounding proof, one universal cause, a formal endpoint bound, portable long-double recipe, rewritten Phase-41 contract, determinant line, complete original cycle, Stokes chamber, or global vector.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -822,16 +835,20 @@
         "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS",
         "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER",
         "claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+        "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+        "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
+        "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
         "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
         "open:gate2-hard-cfu-airy-coefficients"
       ]
     },
     {
       "id": "reading-path:p47-source-gradient-budget-to-hybrid-control",
-      "title": "From the retained source-gradient budget through the gradient-only negative control",
-      "summary": "Start with Phase 46's independent full-RHS repair, follow Phase 47's exact source reproduction and closed launch/endpoint arithmetic telescopes, then retain Phase 48's gradient-only clongdouble adapter as a platform-specific ablation. Its local-flow probes and endpoint states pass, but its full-ladder and derivative predicates fail, so stop before calling it a sufficient repair. Intermediate error transport and the complete mixed source/solver budget remain open; the separate Gate-1 physical-cycle problem also remains open.",
+      "title": "From the retained source-gradient budget to a pinned-platform full-flow repair",
+      "summary": "Start with Phase 46's independent reference, follow Phase 47's closed source arithmetic budget and Phase 48's gradient-only negative control, then compare the Phase-49 complete-flow clongdouble path under the same roots, steps, solver settings, and references. All Phase-49 controls pass, resolving the scoped implementation choice in favor of one late complete-flow projection on this platform. Stop at the still-open formal endpoint transport, portable adapter, complete source/solver budget, and separate Gate-1 physical-cycle problem.",
       "nodes": [
         "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION",
         "open:p46-source-gradient-flow-error-budget",
@@ -842,6 +859,10 @@
         "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER",
         "claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p48-gradient-hybrid-error-transport-control",
+        "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+        "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+        "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+        "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
@@ -8184,7 +8205,7 @@
       "id": "open:p46-source-gradient-flow-error-budget",
       "type": "open_problem",
       "title": "Decompose source local-flow error and finite-difference amplification",
-      "summary": "Phase 47 closes the declared source-gradient arithmetic telescope at the retained launch and endpoint states and after all frozen 1/(2h) pairings, but Phase 46 retained no intermediate states and Phase 47 runs no new trajectory. Intermediate-path sampling, local-error transport to endpoint accumulation, and separation from solver accumulation therefore remain open. This local tool-control problem does not replace the physical Gate-1 original-cycle debt.",
+      "summary": "Phase 47 closes the retained-state source-gradient arithmetic telescope, Phase 48 shows that promoting the gradient alone is not sufficient, and Phase 49 supplies a passing pinned-platform implementation by retaining clongdouble through complete-flow contraction before one solver-boundary projection. A formal local-error transport to endpoint accumulation, separation from solver accumulation and subtraction, and a portable arithmetic contract remain open. This local tool-control problem does not replace the physical Gate-1 original-cycle debt.",
       "question": "Which mixed source arithmetic and solver-accumulation contributions quantitatively account for the endpoint error that is amplified in the historical u2 finite-difference ladder?",
       "state": "OPEN"
     },
@@ -8321,10 +8342,10 @@
     {
       "id": "open:p48-gradient-hybrid-error-transport-control",
       "type": "open_problem",
-      "title": "Close the intermediate error transport left by the gradient-only negative control",
-      "summary": "Phase 48 now integrates the same eighteen signed u2 trajectories with a platform-specific clongdouble generated-gradient adapter and retains five checkpoints per path. Its local-flow and endpoint-state limits pass, but the full ladder and both derivative references fail, so replacing only the generated gradient is not sufficient. A variational/fundamental-matrix propagation bound and a separation of state formation, contraction, solver accumulation, and endpoint subtraction remain open. This is narrower than the still-open complete Phase-46 source-gradient/solver budget and does not replace Gate 1.",
-      "question": "How do the remaining state-formation, contraction, solver, and subtraction errors propagate along the path to produce the failed small-step derivative columns after the gradient-only ablation?",
-      "state": "OPEN"
+      "title": "Select the gradient-only or late complete-flow clongdouble implementation control",
+      "summary": "Resolved in its scoped implementation-choice part by the paired Phases 48–49 ablation. Under identical roots, steps, solver settings, and references, gradient-only promotion fails the all-root ladder and derivative predicates, while retaining clongdouble through state formation, generated gradient, L.T contraction, and outer minus-conjugation before one complete-flow complex128 projection passes every frozen control. Formal endpoint propagation, solver/subtraction decomposition, and portability are split into open:p49-formal-endpoint-transport-and-portable-flow-adapter.",
+      "question": "On the pinned NumPy long-double platform, is gradient-only promotion sufficient, or must extended precision be retained through the complete local flow before one solver-boundary projection?",
+      "state": "RESOLVED_BY_PHASE49_WITH_PINNED_PLATFORM_LATE_COMPLETE_FLOW_PROJECTION"
     },
     {
       "id": "artifact:p47-input-manifest",
@@ -8512,6 +8533,148 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase48-result.json",
       "sha256": "de41727a795b5f11025755c72a7f6a78a5c63ce951e6d8f356bee778fa6afec3"
+    },
+    {
+      "id": "phase:p49",
+      "type": "phase",
+      "title": "Phase 49 — m=4 clongdouble complete-flow state-map repair control",
+      "summary": "A pre-output pinned-platform ablation that integrates all eighteen frozen u2 paths while evaluating state formation, the generated gradient, L.T contraction, and outer minus-conjugation together in clongdouble before one complete-flow complex128 projection at the DOP853 boundary. All ninety local-flow probes, endpoint states, complete ladders, Phase-46 independent columns, and Phase-45 tangent comparisons pass. The classification is FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_SUPPORTED. This resolves the scoped implementation control without establishing a formal endpoint bound, portable long-double recipe, global cycle, or physical claim; Phase 41 stays 8/9 and Gate 1 remains open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "type": "claim",
+      "title": "The complete-flow clongdouble path passes every frozen state-map control",
+      "summary": "On the pinned 32-byte clongdouble platform, all eighteen paths and ninety probes complete. Every local-flow comparison is below 5e-8, every endpoint state is below 1e-8, all adjacent plateaus are below 0.02, and every derivative column agrees with both the Phase-46 independent finite difference and Phase-45 tangent below 0.005. The largest derivative discrepancy is 0.001216 and the largest plateau is 0.001401; no root, step, sign, probe, or path is dropped.",
+      "state": "SUPPORTED_WITHIN_PINNED_PLATFORM_AND_ALL_FROZEN_CONTROLS",
+      "claim_id": "P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "statement": "For the three immutable roots, all three u2 steps and both signs, common DOP853 settings, retained references, and pinned NumPy long-double contract, the complete-flow clongdouble adapter satisfies every frozen path, probe, endpoint, full-ladder, independent-column, and tangent-column predicate.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "type": "claim",
+      "title": "The Phase-48/49 ablation supports projection only after complete local-flow evaluation",
+      "summary": "Under otherwise identical roots, steps, solver settings, references, and platform, the Phase-48 gradient-only adapter fails all-root ladder and derivative predicates while the Phase-49 adapter passes them after retaining clongdouble through state formation, generated gradient, L.T contraction, and outer minus-conjugation. Worst derivative discrepancies improve by factors about 12.8–80.2. This selects the late complete-flow projection as the validated recipe for this workbench and platform, not as a universal necessity theorem.",
+      "state": "SUPPORTED_BY_PAIRED_PINNED_PLATFORM_ABLATION",
+      "claim_id": "P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "statement": "Within the paired Phase-48/49 design, retaining extended precision through the complete local flow before one complex128 solver-boundary projection is the supported implementation boundary, whereas projecting immediately after the generated gradient is not sufficient.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The scoped complete-flow repair does not prove portability or license global promotion",
+      "summary": "Supported as an executed scope boundary. Phase 49 keeps a complex128 solver state, constructs no variational or fundamental-matrix error bound, does not separate solver accumulation from endpoint subtraction, and proves no property of platforms with a different clongdouble representation. It performs no new tangent integration, root search, orientation, determinant-line construction, complete cycle/end census, Stokes classification, original-cycle construction, or signed global intersection. Historical Phases 41 and 44–48 remain unchanged, global promotion is prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_PLATFORM_IMPLEMENTATION_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "statement": "Passing every frozen pinned-platform implementation control neither supplies a formal endpoint-error theorem or portable long-double adapter nor establishes a source-formula defect, global signed intersection, or physical conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "type": "evidence",
+      "title": "Phase 49 complete-flow clongdouble integrated-ablation ledger",
+      "summary": "Three exact/protocol and eleven typed numerical checks pass. They verify the freeze and scope, complete digest and provenance, platform contract, exact eighteen-path design and completion, retained Phase-46/47/48 prerequisites, all ninety local-flow probes, every endpoint state, all three full ladders, and every independent and tangent derivative-column comparison. The supported label is limited to the pinned platform and frozen controls.",
+      "state": "VERIFIED",
+      "observed_status": "3_EXACT_AND_11_NUMERICAL_PASS",
+      "check_ids": [
+        "P49.freeze.platform_paths_thresholds_and_references",
+        "P49.scope.full_flow_clongdouble_state_map_ablation",
+        "P49.retention.valid_json_digest_paths_probes_and_global_guard",
+        "P49.platform.clongdouble_contract",
+        "P49.integration.requested_path_count_is_18",
+        "P49.integration.all_hybrid_paths_complete",
+        "P49.reference.phase46_independent_prerequisites",
+        "P49.reference.phase47_gradient_localization_prerequisites",
+        "P49.reference.phase48_gradient_only_negative_control",
+        "P49.trajectory.all_local_flow_probes_agree",
+        "P49.endpoint.all_hybrid_states_agree",
+        "P49.ladder.all_hybrid_full_ladders_are_stable",
+        "P49.derivative.all_columns_agree_with_independent",
+        "P49.derivative.all_columns_agree_with_phase45_tangent"
+      ]
+    },
+    {
+      "id": "scope:p49-complete-flow-clongdouble-eighteen-path-control",
+      "type": "scope",
+      "title": "P49 pinned-platform complete-flow clongdouble eighteen-path control",
+      "summary": "Three immutable Phase-42 roots, u2 index 8, three fixed steps with both signs, eighteen new complete-flow DOP853 integrations, five same-state probes per path, Phase-46 independent endpoints and columns, Phase-45 tangents, Phase-48 negative control, one NumPy long-double platform contract, all-step retention, and fail-closed classification.",
+      "state": "ACTIVE",
+      "includes": [
+        "shared_zero, phi_plus, and a_plus without root search or retuning",
+        "u2 steps 2e-6, 5e-7, and 1e-7 with both signs and no post-output selection",
+        "clongdouble saddle plus L at xi state formation, actual clongdouble generated-gradient evaluation, clongdouble L.T contraction and outer minus-conjugation, followed by one complete-flow complex128 projection",
+        "DOP853 rtol 2e-12, atol 2e-14, max_step 0.01, dense output, five trajectory fractions, endpoints, all columns, both adjacent plateaus, and both derivative references"
+      ],
+      "excludes": [
+        "an arbitrary-precision or all-platform state integrator theorem, portable binary128 claim, or platform without the validated dtype contract",
+        "a variational/fundamental-matrix endpoint bound or quantitative separation of solver accumulation and final subtraction",
+        "rewriting Phase 41 or changing Phase-44 through Phase-48 historical results",
+        "a new root, orientation selection, common determinant line, complete chain/end census, Stokes chamber, physical original cycle, global signed intersection, SUSY state, or quantum-gravity result"
+      ]
+    },
+    {
+      "id": "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
+      "type": "open_problem",
+      "title": "Separate formal endpoint transport from a portable complete-flow adapter",
+      "summary": "Phase 49 supplies a practical pinned-platform recipe and passes every frozen state-map control, but it does not integrate a variational/fundamental-matrix error bound, isolate solver accumulation from final subtraction, or define behavior on platforms whose clongdouble contract differs. A portable adapter must validate precision and dtype behavior or fall back to the Phase-43 exact/high-precision reference. This remains a local computation-control question and does not replace Gate 1.",
+      "question": "Can the supported late-projection recipe be equipped with a formal endpoint error-transport bound and a portable runtime contract across platforms with different long-double representations?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:p49-input-manifest",
+      "type": "artifact",
+      "title": "Phase 49 frozen complete-flow clongdouble input manifest",
+      "summary": "Final pre-output freeze of the platform, roots, u2 steps and signs, complete-flow convention, DOP853 settings, trajectory probes, Phase-45 through Phase-48 references, thresholds, disclosed nonauthoritative pilot, classification, and fail-closed boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json",
+      "sha256": "ec97937fd4643b2d3ebfccc70ff82e4348ea92086b5b0588aec33bf24fdebcc5",
+      "introduced_in_commit": "57d1431653e01969a0a136d7f847a63f81ea2daf"
+    },
+    {
+      "id": "artifact:p49-script",
+      "type": "artifact",
+      "title": "Phase 49 complete-flow clongdouble state-map executable",
+      "summary": "Runner that validates pinned artifacts and actual clongdouble evaluation, integrates all eighteen complete-flow paths with dense probes, compares Phase-46 endpoints and columns plus Phase-45 tangents, retains every step and sign, classifies fail-closed, and emits one canonical self-digested result.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py",
+      "sha256": "f7f03d8ca08c3406cfbae4825b64fb5c2cac89797ea005519fc12c489947abb2",
+      "introduced_in_commit": "b41e7f2b0c75b922a9fa0d775ceee5d5607e5189"
+    },
+    {
+      "id": "artifact:p49-raw-result",
+      "type": "artifact",
+      "title": "Phase 49 full raw result",
+      "summary": "The complete 165,513-byte VALID_RUN result with all eighteen paths, ninety probes, platform validation, solver ledgers, endpoints and residuals, every finite-difference column and plateau, Phase-45 tangent comparisons, eleven passing aggregate predicates, provenance, self-digest, and Gate 1 open.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json",
+      "sha256": "787e6aee62193af0b78041cae42eb38c13afef281b7d0560c07ad3a2958da531",
+      "introduced_in_commit": "078753a9406f5e71730f7946df7ac8dcfa3a9d52"
+    },
+    {
+      "id": "artifact:p49-report",
+      "type": "artifact",
+      "title": "Phase 49 report",
+      "summary": "Human-readable frozen inputs and pilot disclosure, guarded-run provenance, complete-flow clongdouble convention, all root and step metrics, Phase-48 paired-ablation improvement, supported pinned-platform implementation recipe, remaining formal/portable boundary, and Gate 1 guard.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR.md",
+      "sha256": "91ded44c0a7825f98d4b55d8bcae6814dcb0731b1ddf1b2bf91c867ed62e31f8",
+      "introduced_in_commit": "334a3341c76609b0bd3d894406d1e43e53390cda"
+    },
+    {
+      "id": "artifact:p49-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 49 evidence snapshot",
+      "summary": "Compact typed extract preserving all three exact/protocol and eleven numerical checks, platform and run provenance, root metrics, paired-ablation interpretation, resolved implementation control, open formal/portable debt, prohibited global promotion, and open Gate 1. The pinned raw result remains byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase49-result.json",
+      "sha256": "79f5f046efd6c10fe3edd227419dbd2c5f485659fec319d57da35b697ec4145d"
     }
   ],
   "edges": [
@@ -20425,6 +20588,292 @@
       "from": "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION"
+    },
+    {
+      "id": "edge:1929",
+      "from": "phase:p49",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:1930",
+      "from": "phase:p49",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p48"
+    },
+    {
+      "id": "edge:1931",
+      "from": "scope:p49-complete-flow-clongdouble-eighteen-path-control",
+      "relation": "PART_OF",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1932",
+      "from": "artifact:p49-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1933",
+      "from": "artifact:p49-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1934",
+      "from": "artifact:p49-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1935",
+      "from": "artifact:p49-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1936",
+      "from": "artifact:p49-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1937",
+      "from": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "relation": "PART_OF",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1938",
+      "from": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p49-script"
+    },
+    {
+      "id": "edge:1939",
+      "from": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p49-evidence-snapshot"
+    },
+    {
+      "id": "edge:1940",
+      "from": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p49-raw-result"
+    },
+    {
+      "id": "edge:1941",
+      "from": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "relation": "PART_OF",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1942",
+      "from": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p49-complete-flow-clongdouble-eighteen-path-control"
+    },
+    {
+      "id": "edge:1943",
+      "from": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p49-report"
+    },
+    {
+      "id": "edge:1944",
+      "from": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1945",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "PART_OF",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1946",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p49-complete-flow-clongdouble-eighteen-path-control"
+    },
+    {
+      "id": "edge:1947",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p49-report"
+    },
+    {
+      "id": "edge:1948",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1949",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1950",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p49-complete-flow-clongdouble-eighteen-path-control"
+    },
+    {
+      "id": "edge:1951",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p49-report"
+    },
+    {
+      "id": "edge:1952",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p49-complete-flow-clongdouble-state-map-control",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:1953",
+      "from": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION"
+    },
+    {
+      "id": "edge:1954",
+      "from": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p48-gradient-hybrid-error-transport-control"
+    },
+    {
+      "id": "edge:1955",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER"
+    },
+    {
+      "id": "edge:1956",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P47_GENERATED_GRADIENT_EVALUATION_IS_LARGEST_RETAINED_MIXED_ARITHMETIC_STAGE"
+    },
+    {
+      "id": "edge:1957",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "EXTENDS",
+      "to": "claim:P46_LOCAL_FLOW_RHS_REPAIR_IS_SUPPORTED_UNDER_FIXED_PROJECTION",
+      "note": "Phase 46 establishes the exact/high-precision reference repair. Phases 48–49 compare two practical NumPy long-double boundaries and support late complete-flow projection on the pinned platform without replacing or weakening that reference."
+    },
+    {
+      "id": "edge:1958",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION"
+    },
+    {
+      "id": "edge:1959",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p46-source-gradient-flow-error-budget"
+    },
+    {
+      "id": "edge:1960",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p49-formal-endpoint-transport-and-portable-flow-adapter"
+    },
+    {
+      "id": "edge:1961",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:1962",
+      "from": "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:1963",
+      "from": "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
+      "relation": "PART_OF",
+      "to": "phase:p49"
+    },
+    {
+      "id": "edge:1964",
+      "from": "artifact:p49-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p48-raw-result"
+    },
+    {
+      "id": "edge:1965",
+      "from": "artifact:p49-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p49-input-manifest"
+    },
+    {
+      "id": "edge:1966",
+      "from": "artifact:p49-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p49-script"
+    },
+    {
+      "id": "edge:1967",
+      "from": "artifact:p49-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p45-raw-result"
+    },
+    {
+      "id": "edge:1968",
+      "from": "artifact:p49-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p46-raw-result"
+    },
+    {
+      "id": "edge:1969",
+      "from": "artifact:p49-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p47-raw-result"
+    },
+    {
+      "id": "edge:1970",
+      "from": "artifact:p49-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p48-raw-result"
+    },
+    {
+      "id": "edge:1971",
+      "from": "artifact:p49-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p49-raw-result"
+    },
+    {
+      "id": "edge:1972",
+      "from": "artifact:p49-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p49-raw-result"
+    },
+    {
+      "id": "edge:1973",
+      "from": "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p48-gradient-hybrid-error-transport-control"
+    },
+    {
+      "id": "edge:1974",
+      "from": "claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS"
+    },
+    {
+      "id": "edge:1975",
+      "from": "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p46-source-gradient-flow-error-budget"
     }
   ],
   "kg_bridges": [

@@ -1113,6 +1113,37 @@ See
 and
 [`../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json`](../cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json).
 
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 49
+
+Phase 49 returns exit 0 with `VALID_RUN` and
+`FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_SUPPORTED`. It retains `clongdouble` through
+`saddle + L @ xi`, generated-gradient evaluation, `L.T` contraction, and outer minus-conjugation, then
+projects the complete seven-component flow once to complex128 at the DOP853 boundary. The solver state,
+roots, steps, chart, cap/residual, and comparison references remain fixed.
+
+All eighteen integrations and ninety probes complete. Every endpoint state passes `1e-8`, all three
+full ladders pass `0.02`, and every retained derivative column passes `0.005` against both the Phase-46
+independent finite difference and Phase-45 tangent. The largest derivative discrepancy is `0.001216`;
+the largest adjacent plateau is `0.001401`. No root, step, sign, probe, or path is dropped.
+
+Together with Phase 48, this resolves the pinned-platform implementation choice: projecting the
+gradient early is insufficient, while one projection after complete local-flow evaluation passes all
+frozen controls. It does not supply a formal endpoint propagator, isolate solver accumulation from
+final subtraction, or establish portability to platforms with a different long-double representation.
+The broader source/solver budget therefore remains open in those respects.
+
+Phase 49 does not rewrite Phase 41, alter Phases 44–48, prove a source-formula defect, perform a new
+root/tangent/orientation calculation, or compute a determinant line, complete cycle, Stokes chamber, or
+global intersection. Global promotion remains `PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and
+Phase 49 raised the committed runnable catalog to 81.
+
+See
+[`../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR.md`](../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR.md),
+[`../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json`](../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py`](../cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py),
+and
+[`../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json`](../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json).
+
 ## Historical scientific ledger
 
 The rows below summarize previously committed outputs and audits. They are historical evidence, not a
