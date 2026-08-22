@@ -38,20 +38,20 @@
     "independent_flow": "F0(xi)=-conj(L^T grad_exact(saddle+L xi)) with every fixed binary64 geometry input lifted by its exact integer ratio",
     "central_difference": "D_h(F)=(F(xi_plus)-F(xi_minus))/(2h)",
     "complex_convention": "transpose L.T, followed by componentwise complex conjugation and a leading minus sign",
-    "source_coefficient_semantics": "the pinned Phase-41 SymPy gradient expression, including its 50-digit Float literals, evaluated with mpmath before any NumPy scalar arithmetic",
+    "source_symbolic_semantics": "the pinned Phase-41 SymPy gradient expression, including its 50-digit Float literals, evaluated with mpmath before any NumPy scalar arithmetic; generated-callable constant lowering and scalar evaluation remain together in D_gradient_evaluation",
     "classification_is_noncausal": "stage deltas form a signed mixed-arithmetic budget; a largest norm is descriptive and is not a unique-cause claim"
   },
   "fixed_telescope": {
     "stage_ids_in_order": [
       "S0_exact_decimal_reference_exact_w",
-      "S1_source_coefficients_exact_w",
-      "S2_source_coefficients_lifted_w64",
+      "S1_source_symbolic_expression_exact_w",
+      "S2_source_symbolic_expression_lifted_w64",
       "S3_lifted_gradient64_exact_contraction",
       "S4_lifted_matvec64_exact_outer",
       "S5_lifted_source_flow64"
     ],
     "delta_ids_in_order": [
-      "D_coefficients",
+      "D_source_symbolic_semantics",
       "D_state_formation",
       "D_gradient_evaluation",
       "D_contraction",
