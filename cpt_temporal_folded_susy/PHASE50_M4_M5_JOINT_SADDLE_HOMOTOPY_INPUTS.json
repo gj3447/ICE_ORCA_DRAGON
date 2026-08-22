@@ -1,0 +1,193 @@
+{
+  "schema": "ice-phase50-m4-m5-joint-saddle-homotopy-inputs/v1",
+  "phase": 50,
+  "status": "FROZEN_AFTER_DISCLOSED_FEASIBILITY_PILOT_BEFORE_AUTHORITATIVE_HOMOTOPY_OUTPUT",
+  "scope": {
+    "question": "Do the five immutable Phase-41 source-labelled m=4 joint saddles continue through one explicitly stabilized common-ambient action homotopy to the corresponding m=5 midpoint-action saddles without a root loss or Hessian zero, and do two declared positive metric paths transport the local upward tangent orientation consistently?",
+    "calculation_workbench_only": true,
+    "targets_in_order": [
+      {"label": "shared_zero", "delta_a": 0.0, "delta_phi": 0.0},
+      {"label": "phi_minus", "delta_a": 0.0, "delta_phi": -0.001},
+      {"label": "phi_plus", "delta_a": 0.0, "delta_phi": 0.001},
+      {"label": "a_minus", "delta_a": -0.001, "delta_phi": 0.0},
+      {"label": "a_plus", "delta_a": 0.001, "delta_phi": 0.0}
+    ],
+    "computed": [
+      "one declared m=4-to-m=5 common-ambient action homotopy",
+      "five source-labelled saddle continuations on fixed coarse and fine lambda meshes",
+      "Hessian nondegeneracy and inertia along those sampled paths",
+      "forward/reverse, mesh, reflection, and implicit-tangent controls",
+      "two positive local metric paths and their local upward-plane orientation transport",
+      "two predeclared added-mode stabilizer-scale mutations"
+    ],
+    "not_computed": [
+      "Gamma-K local intersection continuation from m=4 to m=5",
+      "nonlinear upward manifolds or flow trajectories",
+      "straight-arm or cap-reintersection searches",
+      "root or upward-component exhaustion",
+      "Stokes walls or relative good ends",
+      "a physical original joint relative cycle",
+      "a common physical determinant, BFV, Pfaffian, or Pin line",
+      "a cutoff or continuum limit",
+      "a global signed intersection vector or physical claim"
+    ]
+  },
+  "disclosed_feasibility_pilot": {
+    "status": "NONAUTHORITATIVE_POST_FEASIBILITY_INFORMATION",
+    "date_utc": "2026-08-22",
+    "implementation": "A temporary Python/SymPy/SciPy calculation built the prospective m=5 midpoint action, embedded the retained m=4 roots, and ran the proposed 17-point forward/reverse continuation for the nominal and half/double stabilizer scales. No repository result artifact was written.",
+    "prospective_nominal_stabilizers": {"added_a": -140000.0, "added_phi": 24000.0},
+    "observed_m5_zero_source_saddle_w_approximate": [
+      1.00325406,
+      0.98779859,
+      1.00486312,
+      0.98172418,
+      1.00486312,
+      0.98172418,
+      1.00325406,
+      0.98779859,
+      1.02180540
+    ],
+    "observed_m5_zero_source_hessian_inertia": {"negative": 5, "positive": 4, "zero": 0},
+    "observed_all_five_nominal_paths_minimum_hessian_absolute_eigenvalue": 4.1942523036748875,
+    "observed_all_five_nominal_paths_maximum_gradient_absolute_residual": 7.776046473395581e-10,
+    "observed_all_five_nominal_paths_maximum_reverse_endpoint_distance": 1.8250968019291683e-12,
+    "observed_half_and_double_stabilizer_paths": "all five paths retained inertia (5-,4+) and returned to the embedded m=4 roots; the worst disclosed residual was 8.236e-10 and the smallest disclosed absolute Hessian eigenvalue was 4.194",
+    "desired_support_classification": null,
+    "desired_orientation_sign": null,
+    "authoritative_evidence": false
+  },
+  "model_conventions": {
+    "base_boundary": {"a": 3.5668031935672753, "phi": 1.0185809464006637},
+    "coordinate_scales": {"a": 3.5668031935672753, "phi": 1.0185809464006637, "T": 0.7},
+    "potential": "V(phi)=(3/4)*(1-exp(-sqrt(2/3)*phi))^2",
+    "midpoint_action": "S_m=2*pi^2*sum_{e=0}^{m-1}[(-6*a_mid*(Delta a)^2+a_mid^3*(Delta phi)^2)/(2*T*h)+T*h*(-3*a_mid+a_mid^3*V(phi_mid))], h=1/m",
+    "source_endpoints": "a_L=a_b*(1-delta_a/2), a_R=a_b*(1+delta_a/2), phi_L=phi_b-delta_phi/2, phi_R=phi_b+delta_phi/2",
+    "m4_complex_order": ["a1", "phi1", "a2", "phi2", "a3", "phi3", "T"],
+    "m5_complex_order": ["a1", "phi1", "a2", "phi2", "a3", "phi3", "a4", "phi4", "T"],
+    "realification_order": "interleaved real and imaginary parts in the declared complex order",
+    "holomorphic_domain": "T is nonzero; this saddle calculation follows the retained positive-real-T branch"
+  },
+  "common_ambient_embedding": {
+    "ambient": "the nine-complex-dimensional m=5 nodal coordinate space",
+    "anchor_m": "the source-dependent affine endpoint interpolant sampled at j/m, with T anchor zero",
+    "single_field_prolongation_P_5_from_4": [
+      ["4/5", "0", "0"],
+      ["2/5", "3/5", "0"],
+      ["0", "3/5", "2/5"],
+      ["0", "0", "4/5"]
+    ],
+    "added_reflection_odd_mode_q": ["-1/sqrt(10)", "2/sqrt(10)", "-2/sqrt(10)", "1/sqrt(10)"],
+    "full_basis_column_order": ["m4_a1", "m4_phi1", "m4_a2", "m4_phi2", "m4_a3", "m4_phi3", "m4_T", "added_a", "added_phi"],
+    "full_basis_definition": "B interleaves P separately in the a and phi rows, copies T, and places q in the final a and phi columns",
+    "full_basis_determinant": "1152/3125",
+    "left_coordinates": "c=B^(-1)*(w5-anchor5); w4=anchor4+c[0:7], y_a=c[7], y_phi=c[8]",
+    "reflection": "m5 nodal reversal intertwines B with m4 nodal reversal plus parity -1 on each added mode",
+    "orientation": "det(B)>0 fixes the common-ambient coordinate orientation; no field-by-field sign correction is permitted. Flipping exactly one added column is a required basis-gauge mutation and must flip only the raw basis sign."
+  },
+  "action_homotopy": {
+    "added_mode_stabilizers": {"kappa_a": -140000.0, "kappa_phi": 24000.0},
+    "lifted_m4_action": "S4_lift(w5)=S4(anchor4+c[0:7])+(kappa_a/2)*c[7]^2+(kappa_phi/2)*c[8]^2",
+    "homotopy": "S_lambda=(1-lambda)*S4_lift+lambda*S5",
+    "endpoint_meaning": "lambda=0 is an explicitly stabilized lift of the Phase-41 action, not equality with S5; lambda=1 is the m=5 midpoint action. S5 composed with the zero-added-mode affine m=4 embedding must be retained as an exact symbolic nonidentity control against action nesting.",
+    "stabilizer_scale_mutations_in_order": [0.5, 2.0],
+    "stabilizer_mutation_rule": "multiply both kappa values by the listed positive scale, rerun every branch, and require the same lambda=1 roots and the same nonzero inertia; this is a candidate-path robustness test, not regulator independence"
+  },
+  "metric_and_local_orientation": {
+    "endpoint_mobility": "At the shared-zero saddle at lambda=0 or 1, diagonalize the real Hessian H=O Lambda O^T with det(O)=+1 and define the positive mobility M=O*diag(abs(Lambda)^(-1))*O^T.",
+    "primary_metric_path": "M_geo(mu)=M0^(1/2)*(M0^(-1/2)*M1*M0^(-1/2))^mu*M0^(1/2), evaluated with symmetric positive-definite matrix powers",
+    "mutation_metric_path": "M_affine(mu)=(1-mu)*M0+mu*M1",
+    "positive_factor": "Use the lower Cholesky factor L with positive diagonal, so M=L*L.T and det(L)>0.",
+    "local_upward_plane": "Diagonalize L.T*H_lambda*L. Map negative eigenvectors with a negative-real phase and positive eigenvectors with a positive-imaginary phase through L, realify in the frozen ambient order, and transport each nine-frame by signed-block orthogonal Procrustes alignment. Individual eigenvector signs are not invariant data.",
+    "two_parameter_paths": {
+      "action_then_metric": "first (lambda,mu)=(t,0), then (1,t)",
+      "metric_then_action": "first (lambda,mu)=(0,t), then (t,1)",
+      "diagonal": "(lambda,mu)=(t,t)",
+      "rule": "The saddle depends only on lambda. Re-solving or changing a saddle as mu changes is an implementation error. Compare the transported endpoint upward planes and oriented-frame holonomies across all three paths."
+    },
+    "orientation_scope": "This transports only the local saddle upward tangent orientation inside the declared common ambient space. It is not a Gamma-K intersection sign or a physical determinant line.",
+    "basis_gauge_control": "Negating the added-a basis column makes det(B) and the raw augmented-basis sign flip; multiplying them gives an invariant corrected sign. The physical lifted action is unchanged because the corresponding added coordinate also changes sign."
+  },
+  "fixed_numerics": {
+    "primary_solver": {"library": "scipy.optimize.root", "method": "hybr", "xtol": 1e-11, "analytic_hessian_jacobian": true},
+    "fine_lambda_mesh_in_order": [0.0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375, 1.0],
+    "coarse_lambda_mesh_in_order": [0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0],
+    "metric_mu_mesh_in_order": [0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0],
+    "continuation": "Start every branch from its immutable Phase-42 m=4 saddle embedded at lambda=0. Continue forward in the listed order. Reverse from the forward lambda=1 root without substituting a reflected or desired root.",
+    "implicit_tangent_lambda_samples_in_order": [0.25, 0.5, 0.75],
+    "implicit_tangent_central_steps_in_order": [0.0002, 0.00005],
+    "implicit_tangent": "dw/dlambda=-H_lambda^(-1)*(gradient_S5-gradient_S4_lift) at a continued root",
+    "finite_difference_tangent": "independently re-solve at lambda plus/minus h from the frozen central root and form the signed central difference; retain both steps without selection",
+    "retention": "retain every branch, mesh node, reverse node, tangent step, stabilizer mutation, metric-path sample, solver message, residual, Hessian spectrum, action, and orientation diagnostic"
+  },
+  "fixed_thresholds": {
+    "gradient_max_abs": 2e-8,
+    "saddle_w_norm_max": 5.0,
+    "hessian_min_abs_eigenvalue": 0.1,
+    "required_hessian_inertia": {"negative": 5, "positive": 4, "zero": 0},
+    "forward_reverse_endpoint_distance_max": 1e-8,
+    "coarse_fine_common_node_distance_max": 1e-8,
+    "source_reflection_root_distance_max": 1e-8,
+    "source_reflection_action_absolute_max": 1e-8,
+    "implicit_to_finite_difference_tangent_symmetric_relative_max": 0.005,
+    "adjacent_tangent_step_relative_change_max": 0.02,
+    "metric_min_eigenvalue": 1e-10,
+    "metric_condition_number_max": 1e8,
+    "metric_reflection_relative_error_max": 1e-9,
+    "consecutive_upward_plane_min_principal_overlap": 0.8,
+    "primary_to_mutation_upward_plane_min_principal_overlap": 0.8,
+    "transport_path_endpoint_upward_plane_min_principal_overlap": 0.999999,
+    "stabilizer_mutation_endpoint_distance_max": 1e-8
+  },
+  "classification": {
+    "supported_label": "LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS",
+    "contradicted_label": "M4_M5_DECLARED_HOMOTOPY_CANDIDATE_CONTRADICTED",
+    "inconclusive_label": "M4_M5_LOCAL_SADDLE_METRIC_HOMOTOPY_INCONCLUSIVE",
+    "supported": "All exact contracts, five fine forward paths, reverse and coarse-mesh controls, reflection pairs, implicit-tangent ladders, positive metric paths, local upward-plane transports, and both stabilizer mutations pass the frozen checks.",
+    "contradicted": "A Hessian zero or branch loss is reproduced on both meshes and in reverse or stabilizer controls while input, solver, and finite-precision validity checks remain intact. This contradicts only the declared homotopy candidate.",
+    "inconclusive": "Any provenance, solver, mesh, tangent, metric, orientation, or mutation validity control fails without the independently reproduced zero or branch-loss pattern required for the contradicted label."
+  },
+  "pinned_inputs": {
+    "phase41_input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "commit": "58181447b558fa204406b732badd5c2fd541bb47",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e"
+    },
+    "phase41_source": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530"
+    },
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6"
+    },
+    "phase49_result_upstream_readiness_only": {
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json",
+      "commit": "078753a9406f5e71730f7946df7ac8dcfa3a9d52",
+      "sha256": "787e6aee62193af0b78041cae42eb38c13afef281b7d0560c07ad3a2958da531",
+      "role": "confirms the preceding m=4 local-flow implementation audit is complete; it is not used in the static saddle equations of Phase 50"
+    }
+  },
+  "required_outputs": {
+    "exact_check_count": 6,
+    "numerical_check_count": 8,
+    "all_five_branches_and_all_failures_retained": true,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "physical_original_cycle": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_promotion": "PROHIBITED"
+  },
+  "interpretation_boundary": {
+    "phase41_local_intersections_are_not_continued": true,
+    "phase49_flow_adapter_is_not_exercised_by_this_static_saddle_calculation": true,
+    "a_sampled_nondegenerate_action_homotopy_is_not_a_cutoff_limit": true,
+    "a_local_upward_tangent_orientation_is_not_a_common_physical_determinant_line": true,
+    "no_physics_claim": true
+  }
+}
