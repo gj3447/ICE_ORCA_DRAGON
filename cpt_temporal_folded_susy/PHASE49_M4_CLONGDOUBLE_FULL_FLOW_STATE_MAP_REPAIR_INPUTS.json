@@ -1,0 +1,183 @@
+{
+  "schema": "ice-phase49-clongdouble-full-flow-state-map-repair-inputs/v1",
+  "phase": 49,
+  "status": "FROZEN_AFTER_DISCLOSED_LOCAL_PILOT_BEFORE_INTEGRATED_OUTPUT",
+  "scope": {
+    "question": "At the three immutable Phase-42 roots, does evaluating source state formation, the generated gradient, and the L.T contraction together in NumPy clongdouble, followed by one final complex128 flow cast, reproduce the Phase-46 independent u2 state-map endpoints, stable three-step columns, and Phase-45 tangent column?",
+    "calculation_workbench_only": true,
+    "targets_in_order": [
+      "shared_zero",
+      "phi_plus",
+      "a_plus"
+    ],
+    "parameter_index": 8,
+    "parameter_name": "u2",
+    "central_difference_steps_in_order": [
+      0.000002,
+      5e-7,
+      1e-7
+    ],
+    "perturbation_signs_in_order": [
+      1,
+      -1
+    ],
+    "new_hybrid_state_path_count": 18,
+    "trajectory_sample_fractions_in_order": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "root_search": false,
+    "parameter_retuning": false,
+    "orientation_selection": false,
+    "new_tangent_integration": false,
+    "global_cycle_or_intersection": false
+  },
+  "disclosed_exploratory_pilot": {
+    "status": "NONAUTHORITATIVE_CANDIDATE_SELECTION_BEFORE_MANIFEST_FREEZE",
+    "date_utc": "2026-08-22",
+    "command_scope": "all 36 Phase-47 retained launch/endpoint states; cast xi, the pinned L, and saddle to NumPy clongdouble, form w=saddle+L@xi, evaluate the generated gradient callable, contract L.T@gradient, apply the outer minus-conjugation entirely in clongdouble, cast only the complete flow once to complex128, and compare with the retained Phase-47 S0 reference",
+    "clongdouble_itemsize_observed": 32,
+    "paired_local_Dh_relative_max_source_to_reference": {
+      "shared_zero": 0.02735819376071235,
+      "phi_plus": 0.0529544310044348,
+      "a_plus": 0.22696957293014206
+    },
+    "candidate_selection": "the full-flow clongdouble hybrid was selected because all three paired pilot maxima were below 7e-5 and materially smaller than the gradient-only pilot, while every retained state-flow maximum remained below the frozen 5e-8 trajectory scale",
+    "integrated_endpoint_or_plateau_output_observed": false,
+    "used_as_authoritative_evidence": false,
+    "paired_local_Dh_relative_max_full_flow_hybrid_to_reference": {
+      "shared_zero": 0.0000660554172526493,
+      "phi_plus": 0.000050786092583768476,
+      "a_plus": 0.00004306183178518375
+    },
+    "state_local_flow_relative_max_full_flow_hybrid_to_reference": {
+      "shared_zero": {
+        "launch": 1.67822479e-8,
+        "endpoint": 1.05765909e-11
+      },
+      "phi_plus": {
+        "launch": 1.99308987e-9,
+        "endpoint": 1.34514567e-12
+      },
+      "a_plus": {
+        "launch": 4.64004434e-10,
+        "endpoint": 1.79881206e-13
+      }
+    }
+  },
+  "hybrid_flow_convention": {
+    "clongdouble_state_formation": "xiLD=clongdouble(xi), LLD=clongdouble(L), saddleLD=clongdouble(saddle), and wLD=saddleLD+LLD@xiLD",
+    "clongdouble_gradient": "evaluate the pinned Phase-41 model.gradient_function(tuple(wLD)) and require an actual clongdouble result",
+    "clongdouble_contraction": "F_long=-numpy.conjugate(LLD.T @ gradient_long), retaining L.T rather than a Hermitian transpose",
+    "single_projection": "cast the complete seven-component clongdouble flow once to complex128 at the RHS boundary",
+    "unchanged_source_operations": [
+      "chart and launch state",
+      "complex128 DOP853 state integration",
+      "cap state, coordinate scaling, and residual"
+    ],
+    "not_the_full_phase43_exact_decimal_replacement": true
+  },
+  "fixed_platform_contract": {
+    "numpy_clongdouble_itemsize_bytes": 32,
+    "numpy_longdouble_itemsize_bytes": 16,
+    "numpy_longdouble_mantissa_bits_excluding_implicit_bit": 63,
+    "numpy_longdouble_epsilon": "1.084202172485504434e-19",
+    "platform_dependence": "this repair candidate is valid only on a runtime reproducing the declared NumPy long-double contract"
+  },
+  "fixed_numerics": {
+    "hybrid_state_solver": {
+      "method": "DOP853",
+      "rtol": 2e-12,
+      "atol": 2e-14,
+      "max_step": 0.01,
+      "dense_output": true
+    },
+    "launch_radius": 0.0001,
+    "independent_local_flow_probe_dps": 80,
+    "source_execution": "newly integrate all eighteen declared hybrid paths",
+    "reference_execution": "consume the eighteen byte-pinned Phase-46 independent endpoints, the three Phase-45 independent tangent u2 columns, and the Phase-48 negative control; do not duplicate those completed calculations",
+    "retention": "retain every hybrid launch, five trajectory samples, endpoint, residual, solver ledger, local-flow probe, central-difference column, and adjacent plateau"
+  },
+  "fixed_metrics_and_thresholds": {
+    "phase41_plateau_metric": "norm(D(h1)-D(h2))/max(norm(D(h1)),1e-30)",
+    "symmetric_relative": "norm(x-y)/max(norm(x),norm(y),1e-300)",
+    "hybrid_trajectory_local_flow_to_independent_relative_max": 5e-8,
+    "hybrid_endpoint_state_to_independent_relative_max": 1e-8,
+    "hybrid_Dh_column_to_independent_relative_max": 0.005,
+    "hybrid_Dh_column_to_phase45_tangent_relative_max": 0.005,
+    "hybrid_stable_adjacent_step_relative_change_max": 0.02,
+    "phase46_independent_full_ladder_must_remain_passed": true,
+    "phase47_gradient_evaluation_must_remain_largest_in_all_state_and_paired_slots": true,
+    "phase48_gradient_only_not_sufficient_must_remain_observed": true
+  },
+  "classification": {
+    "repair_supported_label": "FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_SUPPORTED",
+    "repair_not_sufficient_label": "FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_NOT_SUFFICIENT",
+    "inconclusive_label": "CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INCONCLUSIVE",
+    "repair_supported": "the platform contract, all eighteen integrations, intermediate local-flow probes, endpoint comparisons, full three-step hybrid ladder, hybrid/independent columns, and hybrid/Phase-45 tangent comparisons pass their frozen checks while the Phase-46 through Phase-48 prerequisites remain intact",
+    "repair_not_sufficient": "all provenance, platform, integration, and Phase-46 through Phase-48 prerequisites pass, but at least one hybrid local-flow, endpoint, column, tangent, or full-ladder check fails",
+    "inconclusive": "a pinned input, platform contract, retained reference, solver completion, or Phase-46/47/48 prerequisite fails"
+  },
+  "pinned_inputs": {
+    "phase42_input_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json",
+      "commit": "dc21816b9fef9ad658fdd728e73453ffeee46f4d",
+      "sha256": "1cc88c489b5240019aaf339b25d0cebac9b4a1560b09cbec9c3079ce2067afb6"
+    },
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6"
+    },
+    "phase42_source": {
+      "path": "cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py",
+      "commit": "1c0d7fed4aa99c6424ec659dae8ba6f24b791926",
+      "sha256": "1414664c3b7d3da99364d11c0b639ff99c8ecc71c141f99bfaa6c4e367893019"
+    },
+    "phase41_source": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530"
+    },
+    "independent_reference_source": {
+      "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+      "commit": "4aa3887cec14816c92ff8635d2cac703d4661d37",
+      "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729"
+    },
+    "phase45_result": {
+      "path": "cpt_temporal_folded_susy/PHASE45_M4_INTEGRATED_TANGENT_RHS_STABILITY_RESULT.json",
+      "commit": "6831c80c585eb64be3a40fb61a55c6b4a9dab8c5",
+      "sha256": "b2be69bd38cbbc22425b926de830c5750fa7ae99b00830e828a528cc491a12d5"
+    },
+    "phase46_result": {
+      "path": "cpt_temporal_folded_susy/PHASE46_M4_U2_STATE_MAP_FD_AUDIT_RESULT.json",
+      "commit": "e7a8ec45a26e4af9297ad5694111436e43c0bd6a",
+      "sha256": "8349eb669c542dfb13555554f3f81d70f2843520240ab66ccbbca4226081fad0"
+    },
+    "phase46_source": {
+      "path": "cpt_temporal_folded_susy/phase46_m4_u2_state_map_fd_audit.py",
+      "commit": "45cab780121370ba3bd125ffcabfbf00a37cacc1",
+      "sha256": "a71badb3c49a4af44e5e4a1b8bec244593f1de5a43c3b0d71d729f92ef147d55"
+    },
+    "phase47_result": {
+      "path": "cpt_temporal_folded_susy/PHASE47_M4_SOURCE_GRADIENT_FLOW_ERROR_BUDGET_RESULT.json",
+      "commit": "1d31c220257f326479d5ee0ec27cdf3e3f29a5ff",
+      "sha256": "d58b443a5a220b93a59d2b74c86bd1a3169c40c6297a4d0b4d86eae15e61b576"
+    },
+    "phase48_result": {
+      "path": "cpt_temporal_folded_susy/PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json",
+      "commit": "8260ea2fc23a6141de5e1efca91a760bfebfa703",
+      "sha256": "4c5eeb004724c08a4f5d08368d425c885f1ecf2ef02a0bbb0d915d122c2df5fc"
+    }
+  },
+  "interpretation_boundary": {
+    "historical_phase41_phase45_phase46_phase47_phase48_results_unchanged": true,
+    "platform_specific_repair_not_a_portable_formula_change": true,
+    "successful_state_map_ablation_would_not_be_a_formal_endpoint_error_propagator_bound": true,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS"
+  }
+}
