@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 83 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 84 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -1145,42 +1145,43 @@ See
 and
 [`../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json`](../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 51
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 52
 
-Phase 51 returns exit 0 with `VALID_RUN` and
-`PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE`. It continues the frozen Phase-42 \(\phi+\)
-Gamma–K candidate through the Phase-50 diagonal stabilized-action/affine-invariant-SPD-metric path
-using the actual nonlinear (m=5) flow in \(\mathbb R^{18}\). A separately initialized \(\phi-\) path is
-retained as the reflection control. This is a calculation-workbench result, not a physics claim.
+Phase 52 returns exit 0 with `VALID_RUN` and
+`P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_ELEMENT_LOCAL_RHS_REPAIR_SUPPORTED_ON_FROZEN_SIX_SLOTS`.
+It audits only the two Phase-51 sources at \(\lambda=0,0.5,1\); it is a static evaluator calculation,
+not a root, continuation, global-intersection, TOE, or physics result.
 
-All 6 exact checks pass. Of 10 numerical checks, 9 pass: the fine-forward \(\phi+\) and \(\phi-\)
-continuations, \(\phi+\) coarse and reverse paths, independent reflection comparison, full-\(J\)
-finite differences at \(\lambda=0,0.5,1\), the \(\lambda=0.5\) outer-path tangent, endpoint radius and
-launch-shape mutations, and every retained action/first-cap ledger. Thus the nonlinear continuation
-machinery and all declared path, derivative, endpoint, and ledger controls completed within their
-frozen gates.
+All 7 exact checks and 6 of 7 numerical checks pass. The six historical center-launch evaluator
+records reproduce with maximum numeric-leaf difference 0. Tracing the actual pinned Phase-51
+production callables before output coercion finds 19 hidden binary64 temporaries in each of the (m=4)
+and (m=5) joint-CSE DAGs at every slot: ten NumPy `float64` values plus nine Python floats. The
+historical raw result and emitted `VALID_RUN` status remain immutable, but the confirmed violation
+means the Phase-51 all-temporaries-`clongdouble` protocol validity is `NOT_UPHELD`.
 
-The sole non-passing numerical check is the paired CSE/non-CSE evaluator consistency control. Its
-maximum same-point RHS relative error is `1.6900132129978792e-8`, above the frozen `5e-10` limit, even
-though the associated trajectory-state differences remain much smaller. The fail-closed contract
-therefore keeps the whole local result `INCONCLUSIVE`; the other passing checks do not override that
-backend inconsistency.
+The predeclared fixed-order element-local `clongdouble` candidate passes the independent direct
+120-decimal reference at all six slots. Its worst gradient and RHS relative errors are
+`7.0509324896283509e-11` and `1.5668639302791577e-10`, below the unchanged `5e-10` gates. The sole
+numerical non-pass is the global long-namespace joint-CSE accuracy negative control: its dtype contract
+passes, but its worst gradient/RHS errors are `7.14955260647903e-10` and
+`7.62505691985326e-9`. Reference 80/120 stability, direct CSE/plain agreement, runtime trace
+completeness, and every staged telescope pass. A second committed-run verification under scratch label
+`p52x` returned exit 0 and emitted a `RESULT_JSON` byte-identical to the 659,213-byte canonical result;
+`npm run check` also passed strict typechecking and 22/22 tests.
 
-Phase 51 does not search straight arms or later cap reintersections, exhaust directions, roots,
-saddles, or upward components, determine Stokes data or all relative good ends, derive a physical
-original cycle, construct a common determinant line, or prove a cutoff/continuum limit. All global
-outputs remain `null`, global promotion remains `PROHIBITED`, and Gate 1 remains
-`OPEN_PARTIAL_PROGRESS`. The next direct calculation is a backend-consistency repair: isolate the
-CSE/non-CSE clongdouble RHS discrepancy under the same state formation and contraction conventions,
-then rerun the unchanged continuation/reflection/FD/tangent/endpoint/ledger suite before any broader
-cycle work. Phase 51 raises the committed runnable catalog to 83.
+Phase 52 does not rerun any Gamma–K root, nonlinear flow, continuation, reflection, full-\(J\) finite
+difference, tangent, endpoint, orientation, action, or first-cap control. A separately frozen Phase 53
+must install the repaired production gradient path and replay the entire unchanged Phase-51 suite
+before any local supported continuation label can be reconsidered. All global outputs remain `null`,
+global promotion remains `PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and the committed
+runnable catalog is now 84.
 
 See
-[`../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md),
-[`../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json`](../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json),
-[`../cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py`](../cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py),
+[`../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md`](../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md),
+[`../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json`](../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase52_m5_cse_runtime_dtype_and_rhs_repair.py`](../cpt_temporal_folded_susy/phase52_m5_cse_runtime_dtype_and_rhs_repair.py),
 and
-[`../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json`](../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json).
+[`../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json`](../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json).
 
 ## Historical scientific ledger
 

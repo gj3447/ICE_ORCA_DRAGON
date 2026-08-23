@@ -110,12 +110,13 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json` · `phase49_m4_clongdouble_full_flow_state_map_repair.py` · `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json` · `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR.md` | Phase 49 입력·실행체·raw result·보고서 — complete local flow 뒤 한 번 projection하는 pinned-platform adapter가 모든 frozen control을 통과하지만 formal endpoint bound와 portability는 미해결 |
 | `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json` · `phase50_m4_m5_joint_saddle_homotopy.py` · `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json` · `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md` | Phase 50 입력·실행체·raw result·보고서 — 다섯 (m=4) saddle과 local upward nine-plane을 선언된 stabilized action/SPD-metric path로 (m=5)까지 운반; Gamma–K intersection, cutoff theorem, global cycle은 미계산 |
 | `PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json` · `phase51_m5_gamma_k_local_continuation.py` · `PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json` · `PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md` | Phase 51 입력·실행체·raw result·보고서 — frozen \(\phi+\) Gamma–K candidate와 독립 \(\phi-\) reflection control을 실제 nonlinear (m=5) flow로 continuation; 6/6 exact와 9/10 numerical은 통과했지만 CSE/non-CSE RHS consistency gate 하나가 실패해 local 결론은 `INCONCLUSIVE` |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–51의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json` · `phase52_m5_cse_runtime_dtype_and_rhs_repair.py` · `PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json` · `PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md` | Phase 52 입력·실행체·raw result·보고서 — Phase-51 CSE 내부의 19개 hidden binary64 temporary를 재현하고 element-local `clongdouble` RHS가 frozen six slots에서 `5e-10` gate를 통과함을 지지; 정적 evaluator 결과이므로 Phase 53 전체 continuation 재실행 전 local 승격 금지 |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–52의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 51)
+## 현재 경계 (Phase 52)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -453,15 +454,28 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   따라서 분류는 `PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE`이며 계산된 local candidate를
   물리적 intersection coefficient나 global cycle로 승격하지 않는다. 모든 global output은 계속
   `null`, promotion은 `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
+- Phase 52는 Phase-51의 두 source와 \(\lambda=0,0.5,1\)에서 고정된 여섯 center-launch evaluator
+  record를 numeric leaf 차이 0으로 재현했다. 실제 pinned joint-CSE callable을 output coercion 전에
+  추적하자 (m=4)와 (m=5) 각각에서 NumPy `float64` 10개와 Python float 9개, 합계 19개의 hidden
+  binary64 temporary가 모든 slot에서 나왔다. 따라서 Phase-51의 역사적 emitted `VALID_RUN`과 raw
+  result는 보존하지만 all-temporaries-`clongdouble` protocol validity는 `NOT_UPHELD`다.
+- 같은 Phase 52의 fixed-order element-local `clongdouble` 후보는 독립 direct 120-decimal reference에
+  대해 여섯 slot 모두 통과했고, worst gradient/RHS relative error는 각각
+  `7.0509325e-11`/`1.5668639e-10`으로 동결 `5e-10` gate 아래다. 반면 global long-namespace joint-CSE
+  negative control은 dtype은 고쳤어도 worst RHS `7.6250569e-9`으로 실패했다. 이 결과는 정적
+  evaluator repair일 뿐 root·flow·continuation evidence가 아니므로 Phase 53의 전체 재실행 전에
+  Phase-51 supported label을 복구하지 않는다. 모든 global output은 `null`, promotion은
+  `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-- **PL/BFV global gate:** 먼저 Phase 51의 CSE/non-CSE clongdouble RHS 차이를 같은 입력·dtype·축약
-  단계에서 분해해 \(5\times10^{-10}\) consistency gate를 만족하는 backend 경로를 고정하고, 기존
-  continuation/reflection/FD/tangent/endpoint/ledger control을 그대로 재실행한다. 이 local evaluator
-  debt가 닫힌 뒤에만 straight arm과 later cap reintersection을 검색하고, 모든 saddle/upward
+- **PL/BFV global gate:** Phase 52가 static six-slot에서 지지한 element-local `clongdouble` gradient
+  path를 별도 Phase-53 manifest와 runner에 고정하고, Phase-51의 three paired trajectories와 전체
+  continuation/reflection/full-\(J\) FD/tangent/endpoint/orientation/action/first-cap control을 threshold
+  변경 없이 그대로 재실행한다. 이 full evaluator replay가 통과한 뒤에만 straight arm과 later cap
+  reintersection을 검색하고, 모든 saddle/upward
   component, complex BVP sheet, Stokes data와 relative good end를 열거한다. Separately specified
   physical original cycle과 lapse contour를 정한 뒤에만 complete intersection sum과 regulator-removal을
   시도한다. Phase 50의 sampled stabilizer bridge는 exact
