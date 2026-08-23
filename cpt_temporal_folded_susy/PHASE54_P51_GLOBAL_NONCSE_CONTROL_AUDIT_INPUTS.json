@@ -1,0 +1,411 @@
+{
+  "schema": "ice-phase54-p51-global-noncse-control-audit-inputs/v1",
+  "phase": 54,
+  "status": "FROZEN_BEFORE_RUNNER_OR_ANY_PHASE54_OUTPUT",
+  "frozen_at_utc": "2026-08-23T13:25:04Z",
+  "manifest_introduction_commit": "TO_BE_BOUND_AFTER_INITIAL_COMMIT",
+  "repository_head_observed_at_freeze": "a502d4d514c1864d2ba880551fad48ea4b858bad",
+  "scope": {
+    "question": "On the six actual Phase-53 source-by-lambda launch states, does the historical Phase-51 global non-CSE active lambda-blended gradient or completed RHS fail the frozen direct-global 120-decimal accuracy gate, and does a frozen global-versus-element-local by standard-versus-long within-callable 2-by-2 audit localize the arithmetic mechanism without replaying continuation?",
+    "calculation_workbench_only": true,
+    "computed": [
+      "static stage-by-stage gradient and completed-RHS comparisons for a core four-cell evaluator matrix and two contextual controls at exactly six Phase-53 launch states",
+      "independent direct global SymPy/mpmath references at 80 and 120 decimal digits",
+      "raw m4 gradient, lifted m4 gradient, raw m5 gradient, lambda blend, ordinary A_lambda transpose contraction, and one outer minus-conjugation",
+      "controlled 2-by-2 differences, fixed vector-difference telescopes, and absolute, relative, raw-dtype, and canonical-digest ledgers"
+    ],
+    "not_computed": [
+      "any saddle, Gamma--K root, nonlinear flow ODE, trajectory fraction, continuation, reflection, finite-difference, tangent, endpoint, action, first-cap, orientation, or topology replay",
+      "a Phase-51 or Phase-53 continuation reclassification or a rewrite of any historical result",
+      "other states, sources, lambdas, roots, charts, arms, cap reintersections, components, ends, cutoff or continuum limits, global cycles, physics, or TOE claims"
+    ],
+    "historical_boundary": "Phase 51 remains immutable and its all-temporaries-clongdouble protocol remains NOT_UPHELD. Phase 53 remains a separate VALID_RUN with an inconclusive local classification. Phase 54 audits only the arithmetic accuracy role of the saved Phase-51 global non-CSE control on six static states."
+  },
+  "disclosed_prior_evidence": {
+    "Phase52": "The static element-local evaluator passed its six-slot direct 120-decimal gradient/RHS gates; the long-namespace joint-CSE accuracy control did not.",
+    "Phase53": "The coherent element-local production evaluator passed the independent six-slot 80/120-decimal full reference, while the inherited saved Phase-51 global non-CSE paired-evaluator RHS gate remained non-passing.",
+    "role": "These are disclosed prior results. They motivate the audit but do not alter its frozen thresholds or permit slot, stage, evaluator, or output selection."
+  },
+  "pinned_inputs": {
+    "phase52_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json",
+      "git_commit": "75cce4131cea3a1b69eed4436caaf72ce50b9b11",
+      "git_blob_oid": "3bdfd43f7f6df5d7c7c3512452324c71a9a77b81",
+      "sha256": "5766d8cdaf599428d01eeb785c319ba9418e3c5e56f6275fd9d1229d4f7e0238",
+      "size_bytes": 21702
+    },
+    "phase52_runner": {
+      "path": "cpt_temporal_folded_susy/phase52_m5_cse_runtime_dtype_and_rhs_repair.py",
+      "git_commit": "3d70edab931cde249220c78f4041287a415b2eb2",
+      "git_blob_oid": "002cfd3ac353f1469501cf769e40fdfe9d398062",
+      "sha256": "3e2c241d3eb001cb8de79190aa3c71b86f470d4e78d03fb67200d2d20a572916",
+      "size_bytes": 105645
+    },
+    "phase52_result": {
+      "path": "cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json",
+      "git_commit": "c766f0715de7b6cfabe68ea357182f2cbd8d821d",
+      "git_blob_oid": "33c800715949c48b3744b033eb97f315ba607d40",
+      "sha256": "be29daadd7a338d4b71a445c7c364444de0c60ffb7afe45393d5419a24731ffd",
+      "size_bytes": 659213,
+      "required_run_status": "VALID_RUN",
+      "required_classification": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_ELEMENT_LOCAL_RHS_REPAIR_SUPPORTED_ON_FROZEN_SIX_SLOTS",
+      "result_payload_sha256_without_self": "524ddaf02568702e8a5a7f98d14e08b8ff168aab0d4b2446a32ae0d94d16ddb5"
+    },
+    "phase53_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_INPUTS.json",
+      "git_commit": "c2f29917c974f19f4178e85e3b48dd057c316e69",
+      "git_blob_oid": "8e0497304809c4fab8bd6b6bd719d291fa64a835",
+      "sha256": "551acf717e8f7d53353ce962fef2301d11fd2c16db64d8500e768842ddbef71a",
+      "size_bytes": 37806
+    },
+    "phase53_runner": {
+      "path": "cpt_temporal_folded_susy/phase53_m5_element_local_full_continuation.py",
+      "git_commit": "fe1ad0b325b207d79208db416fab5aa2f9661105",
+      "git_blob_oid": "866d06c7c79175e0d89012da9f8cc09ca2f35c4d",
+      "sha256": "42434fce5cf3c40dd2c53c42a3a0b1ca39dde0df8df2934d0e33525947ab9f2a",
+      "size_bytes": 163474
+    },
+    "phase53_result": {
+      "path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json",
+      "git_commit": "a9a7e6018d2a94749c4f7213501fa061187fd62a",
+      "git_blob_oid": "07e895aaf8d95437e48b3bd37865eac0ba664e24",
+      "sha256": "15cca28d8821a25ba0d0870570d2f42d9a1d8ac7f439a3b9833f500384f58d17",
+      "size_bytes": 2085497,
+      "required_run_status": "VALID_RUN",
+      "required_classification": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+      "result_payload_sha256_without_self": "3a0c233d65ac4175dbd44c4e238864dcfc4fbd59c8829469522bd9977ff88fc4"
+    }
+  },
+  "pin_validation": {
+    "strict_parse": "Reject duplicate keys, NaN, Infinity, overflow-to-nonfinite numbers, schema drift, self-digest drift, and any working-byte or named commit-blob mismatch before evaluation.",
+    "transitive_consistency": "Flatten the Phase-52 and Phase-53 declarations of their Phase-51/41/42/49/50 and lockfile inputs and require byte-identical agreement wherever the same path is declared.",
+    "ordering": "The bound Phase-54 manifest commit must predate and be an ancestor of every Phase-54 runner or result commit.",
+    "post_rehash": "Rehash this manifest, the future committed runner, and all six pinned artifacts after evaluation.",
+    "volatile_identity_policy": "Process-local Python id(...) integers serialized by Phase 53 are pinned historical bytes but are not Phase-54 callable identity evidence. Phase 54 must use source hashes, generated DAG fingerprints, and explicit role labels and must not serialize a native id(...) as a stable cross-process identifier."
+  },
+  "slots": {
+    "source_order": [
+      "phi_plus",
+      "phi_minus"
+    ],
+    "lambda_order": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "count": 6,
+    "source_pointer": "/six_slot_full_evaluator_reference/records",
+    "state_pointer_within_record": "/input_state_w5",
+    "state_policy": "Consume the dtype-explicit complex256 decimal pairs from the pinned Phase-53 result. Do not re-solve, copy a Phase-50 cache, or substitute a nearby state.",
+    "state_digest_algorithm": "SHA256 of json.dumps(input_state_w5, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode('utf-8') after strict parsing.",
+    "records": [
+      {
+        "slot": "phi_plus:lambda=0.0",
+        "state_canonical_bytes": 676,
+        "state_sha256": "49576b8d4d2db1df13a2c7e09e5f5308ac896a7df1fb108d50effe8f530d4fbe"
+      },
+      {
+        "slot": "phi_plus:lambda=0.5",
+        "state_canonical_bytes": 676,
+        "state_sha256": "873d1f1a4312be0e91b929191028b5289710fdb687fc5d0eaa653117f1c9903c"
+      },
+      {
+        "slot": "phi_plus:lambda=1.0",
+        "state_canonical_bytes": 676,
+        "state_sha256": "3de5756bed49ea8d51fe1b40bb603564753b8a1c0f33d03bf91385578bf6a20f"
+      },
+      {
+        "slot": "phi_minus:lambda=0.0",
+        "state_canonical_bytes": 676,
+        "state_sha256": "da33889eb664d4cb7accf323eed6515f6624ae258b1304c0402d3d7661265ae9"
+      },
+      {
+        "slot": "phi_minus:lambda=0.5",
+        "state_canonical_bytes": 676,
+        "state_sha256": "60beb5350b3cf9010f77f1dfbca2e0ae68db55abd7bf5e51dd3f2061a80026f2"
+      },
+      {
+        "slot": "phi_minus:lambda=1.0",
+        "state_canonical_bytes": 676,
+        "state_sha256": "45aca3aacb8652f75e6620e17e58500592419bd52570a490307f325c59f556ab"
+      }
+    ],
+    "no_slot_selection_replacement_or_reordering": true
+  },
+  "stage_contract": {
+    "order": [
+      "m4_raw_gradient",
+      "m4_lifted_gradient",
+      "m5_raw_gradient",
+      "lambda_blended_gradient",
+      "A_lambda_transpose_contraction",
+      "outer_minus_conjugation"
+    ],
+    "state_map": "With the pinned source evaluator, c=inverse_basis_long@(w5-anchor5) and w4=anchor4+c[:7].",
+    "m4_lift": "g4_common=[g4, kappa_a*c[7], kappa_phi*c[8]] and m4_lifted_gradient=inverse_basis_long.T@g4_common.",
+    "blend": "lambda_blended_gradient=(1-lambda)*m4_lifted_gradient+lambda*m5_raw_gradient.",
+    "contraction": "A_lambda_transpose_contraction=A_lambda.T@lambda_blended_gradient with the ordinary transpose.",
+    "outer": "outer_minus_conjugation=-conjugate(A_lambda_transpose_contraction) exactly once.",
+    "dimensions": {
+      "m4_raw_gradient": 7,
+      "m4_lifted_gradient": 9,
+      "m5_raw_gradient": 9,
+      "lambda_blended_gradient": 9,
+      "A_lambda_transpose_contraction": 9,
+      "outer_minus_conjugation": 9
+    },
+    "prohibited": [
+      "Hermitian transpose",
+      "a second or omitted outer conjugation",
+      "complex128 projection before a complete native outer RHS exists",
+      "stage reordering, expansion retuning, favorable summation order, or post-output slot exclusion"
+    ]
+  },
+  "evaluators": {
+    "order": [
+      "GN_std",
+      "GN_long",
+      "EL_std",
+      "EL_long",
+      "phase51_global_CSE_context",
+      "phase52_long_namespace_joint_CSE_context"
+    ],
+    "core_matrix": {
+      "rows": [
+        "global_nonCSE_single_expression",
+        "element_local_canonical_CSE_fixed_left_to_right_sum"
+      ],
+      "columns": [
+        "standard_NumPy_callable_and_accumulation_arithmetic",
+        "LongNumPyPrinter_LONG_MODULES_callable_and_accumulation_arithmetic"
+      ],
+      "cells": {
+        "global_nonCSE_single_expression|standard_NumPy_callable_and_accumulation_arithmetic": "GN_std",
+        "global_nonCSE_single_expression|LongNumPyPrinter_LONG_MODULES_callable_and_accumulation_arithmetic": "GN_long",
+        "element_local_canonical_CSE_fixed_left_to_right_sum|standard_NumPy_callable_and_accumulation_arithmetic": "EL_std",
+        "element_local_canonical_CSE_fixed_left_to_right_sum|LongNumPyPrinter_LONG_MODULES_callable_and_accumulation_arithmetic": "EL_long"
+      }
+    },
+    "GN_std": {
+      "construction": "Invoke the actual saved pinned Phase-51 LongCallableSet.evaluate(..., plain=True) path and its joint_plain global gradient-plus-Hessian lambdify callable with cse=False; use only the returned gradient slice. Instrument the exact saved joint_plain return to retain its raw tuple and dtypes before the declared LongCallableSet np.asarray(..., dtype=clongdouble) wrapper boundary, and require the captured post-boundary gradient to equal the historical evaluate output. A newly lambdified gradient-only look-alike is not this historical control.",
+      "role": "historical control under audit and standard/global core cell"
+    },
+    "GN_long": {
+      "construction": "Use the exact same pinned unreduced joint gradient-plus-Hessian expression tuple, output order, argument order, input states, cse=False schedule, gradient slice, and declared post-call clongdouble wrapper boundary as GN_std, but compile the joint tuple with the pinned Phase-52 LongNumPyPrinter and LONG_MODULES. Every generated literal, function boundary, raw scalar, and runtime dtype is audited; no element split, output-arity change, or CSE replacement is allowed.",
+      "role": "long/global core cell isolating namespace, literal, and arithmetic precision from decomposition"
+    },
+    "EL_std": {
+      "construction": "Reuse the exact Phase-53 source-substituted per-element canonical gradient CSE plans, element order, replacement DAGs, and back-substitution identities, but compile and evaluate each element with the standard SymPy NumPy printer/modules and without LongNumPyPrinter or LONG_MODULES. Record every raw temporary and contribution before coercion, cast each complete contribution only at the declared complex128 accumulator boundary, then sum componentwise in the exact fixed left-to-right element order with complex128 arithmetic. Record that complete raw gradient and dtype before the common clongdouble stage-boundary cast. A changed element DAG/order or undeclared coercion is forbidden.",
+      "symbolic_plan_binding": "Before printer rendering, require ordered element expressions, canonical replacements, reduced outputs, replacement counts, dummy-normalized DAGs, and exact back-substitution to equal EL_long. Compute and retain distinct standard generated-source hashes; the long generated-source projection digest is not falsely reused as an EL_std source digest.",
+      "role": "standard/element-local core cell; element decomposition/order is held fixed while callable and accumulator precision differ from EL_long"
+    },
+    "EL_long": {
+      "construction": "The pinned Phase-53 source-substituted per-element gradient CSE plans with fixed left-to-right clongdouble accumulation.",
+      "required_projection_sha256": "8359762ba056bd7a300bceba8d4bf7e83e22149f5795c37f5b6ee0a4a212ad4e",
+      "required_projection_canonical_bytes": 4141,
+      "role": "exact Phase-53 production evaluator and long/element-local core cell"
+    },
+    "phase51_global_CSE_context": {
+      "construction": "The actual pinned Phase-51 global joint gradient-plus-Hessian canonical CSE callable; use only its gradient slice and preserve its standard NumPy native arithmetic.",
+      "role": "contextual historical production control outside the core matrix"
+    },
+    "phase52_long_namespace_joint_CSE_context": {
+      "construction": "The pinned Phase-52 LongNumPyPrinter/LONG_MODULES version of the same global joint CSE DAG with clongdouble literals, functions, temporaries, and raw outputs.",
+      "role": "contextual typed global joint-CSE control outside the core matrix"
+    },
+    "controlled_contrasts": [
+      "GN_std -> GN_long: change only standard versus long printer/modules inside the same unreduced global non-CSE joint gradient-plus-Hessian tuple; output arity/order, gradient slice, declared wrapper cast, and downstream stages are identical",
+      "EL_std -> EL_long: change only standard-complex128 versus long-clongdouble callable and accumulator arithmetic inside the same per-element CSE DAGs and fixed element order; the raw summed gradient is recorded before the common boundary cast and downstream stages are identical",
+      "GN_std -> EL_std: change only global non-CSE versus element-local CSE/fixed-sum decomposition under the standard namespace",
+      "GN_long -> EL_long: change only global non-CSE versus element-local CSE/fixed-sum decomposition under the long namespace"
+    ],
+    "common_post_callable_boundary": "For every native evaluator, first retain the complete pre-downstream m4 and m5 gradient vectors and their true dtypes. For GN_std, GN_long, and the joint-CSE controls, also retain the entire ordered raw joint tuple before applying the exact declared LongCallableSet clongdouble wrapper and gradient slice. For EL_std and EL_long, retain every contribution and the complete fixed-order summed gradient before casting that complete gradient to clongdouble when needed. The resulting stage-ready gradient must equal the declared historical or production path. From that single declared boundary onward use the same pinned inverse-basis lift, lambda blend, ordinary factor transpose, and one outer minus-conjugation in fixed clongdouble arithmetic; no duplicate cast may be counted as evidence.",
+    "binding_policy": "Bind every implementation by pinned source, generated source/DAG hash, back-substitution identity, callable role, output arity/order, and audited raw dtype. The four core cells must differ only along their declared row or column; a reimplemented look-alike, hash-only relabel, coercion before raw recording, undeclared additional or dtype-hiding coercion, omitted declared boundary cast, or hidden schedule change is INVALID_RUN."
+  },
+  "reference": {
+    "expression_sources": {
+      "m4": "The source-substituted global gradient from pinned phase41.numeric_model(delta_a, delta_phi).",
+      "m5": "The source-substituted global gradient from pinned phase50.m5_numeric_model(delta_a, delta_phi)."
+    },
+    "backend": "Evaluate unreduced global expressions directly with SymPy evalf at the active precision and perform the lift, blend, ordinary transpose contraction, and outer minus-conjugation only with mpmath mp.mpf/mp.mpc algebra.",
+    "precision_tiers_decimal_digits": [
+      80,
+      120
+    ],
+    "authoritative_tier_decimal_digits": 120,
+    "input_lift": "Construct mp.mpc values directly from the pinned complex256 decimal pairs; reconstruct native clongdouble values from the same pairs and require exact decimal round-trip.",
+    "symbolic_CSE_control": "At both precision tiers evaluate the canonical symbolic replacement DAG with SymPy substitutions and compare it to the unreduced direct expression. Neither path may call NumPy lambdify or consume a native evaluator output.",
+    "independence_boundary": "The direct reference independently checks arithmetic for the same finite symbolic model; it is not an independent physical model or a physics validation."
+  },
+  "metrics_and_thresholds": {
+    "primary_relative": "||x-y||_2/max(||x||_2,||y||_2,1e-100)",
+    "retained_absolute": "Retain normwise and maximum-component absolute differences at every slot, evaluator, and stage.",
+    "reference_80_vs_120_relative_max": "1e-40",
+    "symbolic_CSE_vs_unreduced_relative_max": "1e-40",
+    "gradient_stage_relative_max": "5e-10",
+    "completed_RHS_stage_relative_max": "5e-10",
+    "telescope_relative_closure_max": "5e-18",
+    "stage_threshold_map": {
+      "m4_raw_gradient": "gradient_stage_relative_max",
+      "m4_lifted_gradient": "gradient_stage_relative_max",
+      "m5_raw_gradient": "gradient_stage_relative_max",
+      "lambda_blended_gradient": "gradient_stage_relative_max",
+      "A_lambda_transpose_contraction": "completed_RHS_stage_relative_max",
+      "outer_minus_conjugation": "completed_RHS_stage_relative_max"
+    },
+    "activity_policy": {
+      "m4_raw_gradient_and_lifted": "active only when 1-lambda is nonzero; at lambda=1 retain them as inactive diagnostics",
+      "m5_raw_gradient": "active only when lambda is nonzero; at lambda=0 retain it as an inactive diagnostic",
+      "lambda_blended_gradient_contraction_and_outer": "active at all six slots",
+      "classification_selector_stages": [
+        "lambda_blended_gradient",
+        "outer_minus_conjugation"
+      ],
+      "classification_selector_policy": "Only GN_std records at the two selector stages confirm or fail to confirm the historical-control accuracy nonpass. GN_long and EL_std select only the detailed attribution after GN_std nonpass is confirmed; EL_long must pass both selector stages or the run is INVALID_RUN. Raw, lifted, and contraction stages remain first-nonpass diagnostics only."
+    },
+    "telescope_chains": [
+      "GN_std -> EL_long -> direct_global_120",
+      "GN_long -> EL_long -> direct_global_120",
+      "EL_std -> EL_long -> direct_global_120",
+      "phase51_global_CSE_context -> EL_long -> direct_global_120",
+      "phase52_long_namespace_joint_CSE_context -> EL_long -> direct_global_120"
+    ],
+    "telescope_identity": "For each chain, slot, and stage require (left-middle)+(middle-reference)-(left-reference) to close under the frozen relative tolerance.",
+    "threshold_policy": "All thresholds are copied unchanged from the pinned Phase-51/52 contracts. No Phase-53 or Phase-54 observed value may weaken them."
+  },
+  "expected_topology": {
+    "slot_count": 6,
+    "core_matrix_evaluator_count": 4,
+    "contextual_evaluator_count": 2,
+    "native_evaluator_count": 6,
+    "stage_count": 6,
+    "native_stage_vector_count": 216,
+    "direct_reference_stage_vector_count": 72,
+    "symbolic_CSE_reference_stage_vector_count": 72,
+    "native_to_direct_120_comparison_count": 216,
+    "core_controlled_contrast_record_count": 144,
+    "core_selector_record_count": 48,
+    "telescope_record_count": 180,
+    "saddle_solve_count": 0,
+    "root_solve_count": 0,
+    "ODE_integration_count": 0,
+    "trajectory_fraction_count": 0,
+    "continuation_or_classification_replay_count": 0
+  },
+  "checks": {
+    "exact": [
+      "P54.inputs.byte_pins_commits_blobs_and_self_digests",
+      "P54.slots.exact_Phase53_six_launch_state_bytes",
+      "P54.contract.core_2x2_evaluator_bindings_and_controlled_differences",
+      "P54.contract.two_contextual_evaluator_bindings_and_six_stage_order",
+      "P54.reference.direct_global_expression_independence",
+      "P54.conventions.ordinary_transpose_single_outer_conjugation",
+      "P54.guard.static_classification_and_global_nulls"
+    ],
+    "numerical": [
+      "P54.reference.80_120_and_symbolic_CSE_plain_stability",
+      "P54.matrix.GN_std_vs_direct_120",
+      "P54.matrix.GN_long_vs_direct_120",
+      "P54.matrix.EL_std_vs_direct_120",
+      "P54.matrix.EL_long_vs_direct_120",
+      "P54.context.Phase51_global_CSE_vs_direct_120",
+      "P54.context.Phase52_long_namespace_joint_CSE_vs_direct_120",
+      "P54.arithmetic.core_contrasts_and_six_stage_telescopes"
+    ]
+  },
+  "classification": {
+    "scientific_classification_prerequisite": "Every scientific label requires a valid and complete run, both 80/120 and symbolic-CSE reference gates, all five-chain 5e-18 telescope closures, all 6-by-2 selector records for each core evaluator, exact topology, and every global null guard to pass.",
+    "invalid_run": {
+      "label": "INVALID_RUN",
+      "if": "Any byte pin, commit blob, self-digest, strict JSON, runtime, slot digest, evaluator binding, stage identity/order/dimension, direct-reference independence, 80/120 reference-stability gate, symbolic-CSE reference-stability gate, telescope completeness or 5e-18 closure, topology, provenance, or null-boundary prerequisite fails, or EL_long exceeds the direct-120 threshold at either selector stage on any slot."
+    },
+    "historical_control_accuracy_nonpass_confirmed_long_precision_only_sufficient": {
+      "label": "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_LONG_PRECISION_ONLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+      "if": "GN_std exceeds the mapped 5e-10 direct-120 threshold at either selector stage on at least one slot, EL_long passes both selector stages on all slots, GN_long passes both selector stages on all slots, and EL_std does not."
+    },
+    "historical_control_accuracy_nonpass_confirmed_element_local_schedule_only_sufficient": {
+      "label": "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_ELEMENT_LOCAL_SCHEDULE_ONLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+      "if": "GN_std exceeds the mapped 5e-10 direct-120 threshold at either selector stage on at least one slot, EL_long passes both selector stages on all slots, EL_std passes both selector stages on all slots, and GN_long does not."
+    },
+    "historical_control_accuracy_nonpass_confirmed_both_independently_sufficient": {
+      "label": "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_BOTH_LONG_PRECISION_AND_ELEMENT_LOCAL_SCHEDULE_INDEPENDENTLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+      "if": "GN_std exceeds the mapped 5e-10 direct-120 threshold at either selector stage on at least one slot, EL_long, GN_long, and EL_std each pass both selector stages on all slots."
+    },
+    "historical_control_accuracy_nonpass_confirmed_interaction_required": {
+      "label": "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_PRECISION_X_SCHEDULE_INTERACTION_REQUIRED_ON_PHASE53_SIX_SLOTS",
+      "if": "GN_std exceeds the mapped 5e-10 direct-120 threshold at either selector stage on at least one slot, EL_long passes both selector stages on all slots, and neither GN_long nor EL_std passes both selector stages on all slots."
+    },
+    "historical_control_accuracy_nonpass_not_confirmed": {
+      "label": "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_ACCURACY_NONPASS_NOT_CONFIRMED_ON_PHASE53_SIX_SLOTS",
+      "if": "The run is valid and complete, both reference-stability gates and all telescope gates pass, EL_long passes both selector stages on all slots, and GN_std stays at or below the mapped 5e-10 direct-120 thresholds at both selector stages on all six slots. GN_long and EL_std remain diagnostic in this branch."
+    },
+    "allowed_scientific_labels": [
+      "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_LONG_PRECISION_ONLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+      "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_ELEMENT_LOCAL_SCHEDULE_ONLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+      "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_BOTH_LONG_PRECISION_AND_ELEMENT_LOCAL_SCHEDULE_INDEPENDENTLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+      "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_PRECISION_X_SCHEDULE_INTERACTION_REQUIRED_ON_PHASE53_SIX_SLOTS",
+      "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_ACCURACY_NONPASS_NOT_CONFIRMED_ON_PHASE53_SIX_SLOTS"
+    ],
+    "selector_pass_definition": "An evaluator passes a selector only if every one of its 6 slots by 2 selector-stage comparisons is at or below the mapped 5e-10 direct-120 threshold. Equality passes. Contextual controls never select a label.",
+    "other_stage_and_evaluator_results_role": "Record all values and PASS/NONPASS statuses, including inactive endpoint branches and the first diagnostic stage of divergence, but raw, lifted, contraction, and contextual-control records do not select any label or broader repair, continuation, or physical classification.",
+    "Phase51_reclassification_allowed": false,
+    "Phase53_reclassification_allowed": false,
+    "trajectory_or_root_inference_allowed": false,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS"
+  },
+  "runtime_contract": {
+    "python_implementation": "CPython",
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.2",
+    "scipy_version": "1.18.0",
+    "sympy_version": "1.14.0",
+    "mpmath_version": "1.3.0",
+    "longdouble_itemsize_bytes": 16,
+    "clongdouble_itemsize_bytes": 32,
+    "longdouble_mantissa_bits_excluding_implicit": 63,
+    "longdouble_epsilon": "1.084202172485504434e-19",
+    "required_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "policy": "Any runtime or required thread-environment drift is INVALID_RUN; retain observable BLAS/LAPACK backend configuration."
+  },
+  "run_semantics": {
+    "pre_authoritative_mode": "A future --validate-only mode may parse pins, verify committed blobs, bind expressions/evaluators, and check topology without evaluating numerical slots.",
+    "authoritative_mode": "Only a runner commit descending from the later bound manifest commit may emit a result. Evaluate all predeclared slots, variants, stages, reference tiers, and telescopes and retain every failure.",
+    "no_feasibility_pilot_or_post_output_selection": true,
+    "historical_results_mutated": false
+  },
+  "required_outputs": {
+    "result_path": "cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_RESULT.json",
+    "result_schema": "ice-phase54-p51-global-noncse-control-audit/v1",
+    "stdout_prefix": "RESULT_JSON=",
+    "result_payload_self_digest_field": "result_payload_sha256_without_self",
+    "exact_check_count": 7,
+    "numerical_check_count": 8,
+    "strict_unique_finite_JSON": true,
+    "preenumerate_and_retain_all_records": true,
+    "historical_Phase51_classification_after": null,
+    "historical_Phase53_classification_after": null,
+    "continuation_reclassification": null,
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "root_exhaustion_proved": false,
+    "all_saddles_and_upward_components_complete": false,
+    "physical_original_cycle_derived": false,
+    "common_determinant_line_constructed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "promoted_output": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "physics_claim": null,
+    "TOE_claim": null
+  }
+}
