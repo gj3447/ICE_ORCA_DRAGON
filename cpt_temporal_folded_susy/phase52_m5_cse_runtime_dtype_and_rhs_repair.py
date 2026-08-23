@@ -621,6 +621,20 @@ def git_output(*arguments: str) -> str:
     return completed.stdout.strip()
 
 
+def committed_blob_guard(relative: str, commit: str) -> dict[str, Any]:
+    working_blob = git_output("hash-object", "--", relative)
+    committed_blob = git_output("rev-parse", f"{commit}:{relative}")
+    if working_blob != committed_blob:
+        raise InvalidRun(
+            f"declared commit does not contain the pinned working bytes: {relative}"
+        )
+    return {
+        "working_blob_oid": working_blob,
+        "committed_blob_oid": committed_blob,
+        "commit_blob_matches": True,
+    }
+
+
 def runtime_record() -> dict[str, Any]:
     return {
         "python_implementation": platform.python_implementation(),
@@ -705,12 +719,14 @@ def validate_inputs(
                     "result_payload_sha256_without_self"
                 ):
                     raise InvalidRun(f"pinned result self digest drift: {label}")
+        commit = str(require(specification, "commit", where=f"pinned_inputs.{label}"))
         observed[label] = {
             "path": relative,
-            "commit": str(require(specification, "commit", where=f"pinned_inputs.{label}")),
+            "commit": commit,
             "sha256": digest,
             "size_bytes": size,
             "role": specification.get("role"),
+            **committed_blob_guard(relative, commit),
         }
 
     p51_manifest = loaded.get("phase51_manifest")
@@ -724,12 +740,41 @@ def validate_inputs(
     ):
         raise InvalidRun("Phase51 historical status/classification drift")
 
+    p51_pinned = require(p51_manifest, "pinned_inputs", where="Phase51 manifest")
+    for nested_label, specification_raw in p51_pinned.items():
+        if not isinstance(specification_raw, Mapping):
+            raise InvalidRun(f"invalid Phase51 transitive pin: {nested_label}")
+        specification = specification_raw
+        where = f"Phase51 pinned_inputs.{nested_label}"
+        relative = str(require(specification, "path", where=where))
+        commit = str(require(specification, "commit", where=where))
+        path = REPO_ROOT / relative
+        pinned_raw = path.read_bytes()
+        digest = hashlib.sha256(pinned_raw).hexdigest()
+        expected = str(require(specification, "sha256", where=where))
+        if digest != expected:
+            raise InvalidRun(f"Phase51 transitive input SHA drift: {nested_label}")
+        size = len(pinned_raw)
+        if "size_bytes" in specification and size != int(specification["size_bytes"]):
+            raise InvalidRun(f"Phase51 transitive input size drift: {nested_label}")
+        observed[f"phase51_transitive::{nested_label}"] = {
+            "path": relative,
+            "commit": commit,
+            "sha256": digest,
+            "size_bytes": size,
+            "role": "Phase51 transitive pin",
+            **committed_blob_guard(relative, commit),
+        }
+
     runner_guard = {
         "runner_sha256_at_start": sha256_path(SCRIPT_PATH),
         "authoritative": authoritative,
         "runner_commit": None,
         "runner_clean": None,
         "manifest_is_ancestor": None,
+        "manifest_commit_blob_guard": committed_blob_guard(
+            str(INPUT_PATH.relative_to(REPO_ROOT)), INPUT_COMMIT
+        ),
     }
     if authoritative:
         relative_runner = str(SCRIPT_PATH.relative_to(REPO_ROOT))
@@ -745,7 +790,14 @@ def validate_inputs(
         if not ancestor or commit == INPUT_COMMIT:
             raise InvalidRun("Phase52 runner commit does not postdate its manifest")
         runner_guard.update(
-            {"runner_commit": commit, "runner_clean": True, "manifest_is_ancestor": True}
+            {
+                "runner_commit": commit,
+                "runner_clean": True,
+                "manifest_is_ancestor": True,
+                "runner_commit_blob_guard": committed_blob_guard(
+                    relative_runner, commit
+                ),
+            }
         )
     return observed, p51_manifest, p51_result, runner_guard
 
