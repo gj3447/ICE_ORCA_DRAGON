@@ -1,23 +1,24 @@
 {
   "schema": "ice-phase52-m5-cse-runtime-dtype-and-rhs-repair-inputs/v1",
   "phase": 52,
-  "status": "FROZEN_AFTER_DISCLOSED_SIX_SLOT_FEASIBILITY_PILOTS_BEFORE_COMMITTED_RUNNER_OR_AUTHORITATIVE_OUTPUT",
+  "status": "FROZEN_AFTER_DISCLOSED_SIX_SLOT_FEASIBILITY_PILOTS_AND_READ_ONLY_PRE_RUNNER_DESIGN_AUDIT",
   "frozen_at_utc": "2026-08-23T08:09:37Z",
   "repository_head_observed_at_freeze": "086cdd8aa51db965fae216fe6aecf8fda0e19432",
-  "manifest_introduction_commit": null,
+  "manifest_introduction_commit": "d0851c8462d2417d36b49f94169f658cbf38861b",
   "scope": {
     "question": "At the six immutable Phase-51 source-by-lambda launch states, did the production joint-CSE callable actually retain clongdouble in every temporary, and can a predeclared element-local clongdouble gradient path agree with an 80/120-decimal same-expression reference under the unchanged 5e-10 RHS gate?",
     "calculation_workbench_only": true,
     "computed": [
       "strict reproduction of the six Phase-51 center-launch CSE/non-CSE evaluator records",
+      "deterministic Phase-51 saddle and launch-node reconstruction at lambda 0, 0.5, and 1 for both frozen sources solely to recreate those six evaluator states",
       "runtime dtype tracing of every generated CSE temporary and every raw output before coercion",
       "staged m4-gradient, lifted-basis, m5-gradient, lambda-blend, A_lambda.T contraction, and outer-conjugation ledgers",
-      "same-expression mpmath references at 80 and 120 decimal digits",
+      "direct same-expression SymPy-evalf references with mpmath stage algebra at 80 and 120 decimal digits",
       "default joint-CSE, default non-CSE, long-namespace joint-CSE, and long-namespace element-local CSE variants",
       "one static candidate assessment under the unchanged Phase-51 5e-10 RHS threshold"
     ],
     "not_computed": [
-      "any root, saddle, ODE, trajectory, endpoint, tangent, orientation, or continuation rerun",
+      "any Gamma--K root, nonlinear K-flow ODE, trajectory, endpoint, tangent, orientation, or continuation rerun; the six explicitly allowed local saddle/node reconstructions are input recreation rather than new root evidence",
       "a retroactive rewrite of the immutable Phase-51 manifest, runner, or raw result",
       "a supported Phase-51 continuation label",
       "cross-platform long-double portability or a formal endpoint error bound",
@@ -73,6 +74,17 @@
     },
     "selection_role": "The pilots localized a concrete runtime-dtype and cancellation mechanism and selected the element-local candidate family. They did not evaluate that candidate at all six frozen slots, did not alter the inherited 5e-10 gate, and are not authoritative evidence.",
     "post_pilot_freeze": "Every slot, variant, precision, stage, metric, threshold, and classification below is fixed before an authoritative Phase-52 runner or result is committed."
+  },
+  "pre_runner_design_audit": {
+    "status": "COMPLETED_BEFORE_RUNNER_FILE_EXISTED",
+    "corrections": [
+      "allow the six deterministic Phase-51 saddle/node reconstructions required because the raw result does not serialize the six launch-state vectors",
+      "make every exact, reproduction, reference, trace, telescope, dtype, and global-guard prerequisite conjunctive before the supported classification",
+      "treat long-namespace joint-CSE accuracy as a diagnostic negative control while retaining its raw dtype contract as mandatory",
+      "identify the gradient-to-reference threshold as a new Phase-52 gate rather than a Phase-51 inheritance",
+      "freeze the exact runtime and extended-precision representation needed to interpret temporary dtype counts"
+    ],
+    "history_policy": "The original manifest-introduction commit is preserved; these corrections occur in a separate pre-runner commit and no authoritative value has been observed."
   },
   "pinned_inputs": {
     "phase51_manifest": {
@@ -155,6 +167,20 @@
     "count": 6,
     "no_slot_selection_or_replacement": true
   },
+  "runtime_contract": {
+    "python_implementation": "CPython",
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.2",
+    "scipy_version": "1.18.0",
+    "sympy_version": "1.14.0",
+    "mpmath_version": "1.3.0",
+    "longdouble_itemsize_bytes": 16,
+    "clongdouble_itemsize_bytes": 32,
+    "longdouble_mantissa_bits_excluding_implicit": 63,
+    "longdouble_epsilon": "1.084202172485504434e-19",
+    "generated_callable_source_fingerprints_required": true,
+    "policy": "Any version, dtype representation, generated replacement count, or callable-source fingerprint drift makes the run INVALID rather than changing the expected temporary ledger."
+  },
   "evaluator_variants": {
     "baseline_joint_CSE": "The byte-identical Phase-51 joint canonical CSE over gradient plus Hessian with the default NumPy lambdify namespace.",
     "baseline_nonCSE": "The byte-identical Phase-51 unreduced gradient with the default NumPy lambdify namespace and no replacement list or cache.",
@@ -180,7 +206,7 @@
       "m5_float64_temporary_count": 19,
       "baseline_all_temporaries_clongdouble_expected": false
     },
-    "required_repair_contract": "Every runtime CSE temporary and raw gradient output in both repaired variants must be NumPy complex256/clongdouble at all six slots. Trace completeness must equal the generated replacement count."
+    "required_repair_contract": "Every runtime CSE temporary and raw gradient output in both repaired variants must be NumPy complex256/clongdouble at all six slots. Trace completeness must equal the generated replacement count. This dtype condition is mandatory for both variants; long-namespace joint-CSE reference accuracy remains a diagnostic negative control and is not required for the primary element-local classification."
   },
   "reference": {
     "backend": "Direct SymPy evalf at the active precision over the same pinned source-substituted expanded gradients, with input substitutions built from mp-preserving decimal strings and all matrix products and conjugation retained in mpmath. NumPy lambdify, Python float literals, and native evaluator outputs are forbidden in the authoritative reference.",
@@ -215,7 +241,7 @@
     "candidate_RHS_to_120dps_relative_max": "5e-10",
     "inherited_phase51_CSE_nonCSE_RHS_relative_max": "5e-10",
     "native_telescope_relative_closure_max": "5e-18",
-    "threshold_policy": "The 5e-10 gradient/RHS gate is inherited without weakening from Phase 51. Decimal reference gates leave at least forty digits above the 80-dps floor. No observed authoritative result may change a threshold."
+    "threshold_policy": "The RHS 5e-10 gate is inherited without weakening from Phase 51. The gradient-to-reference 5e-10 gate is a new Phase-52 intermediate-arithmetic guard, chosen at the same scale after the disclosed feasibility pilot and before the authoritative six-slot result. Decimal reference gates leave at least forty digits above the 80-dps floor. No observed authoritative result may change a threshold."
   },
   "checks": {
     "exact": [
@@ -238,9 +264,20 @@
     ]
   },
   "classification": {
-    "primary_if_baseline_violation_reproduced_and_element_candidate_passes": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_ELEMENT_LOCAL_RHS_REPAIR_SUPPORTED_ON_FROZEN_SIX_SLOTS",
-    "if_baseline_violation_reproduced_but_element_candidate_fails": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_STATIC_RHS_REPAIR_NOT_SUFFICIENT",
-    "otherwise": "P51_EVALUATOR_RUNTIME_DTYPE_AND_RHS_ARITHMETIC_AUDIT_INCONCLUSIVE",
+    "invalid_run_prerequisites": "Manifest/source/runtime/pin/self-digest drift, duplicate or nonfinite JSON, exact symbolic identity failure, CSE back-substitution or trace incompleteness, repaired raw dtype failure, convention drift, or global-null guard failure is INVALID_RUN and cannot select a scientific classification.",
+    "scientific_prerequisites_for_supported_or_not_sufficient": [
+      "all seven exact checks pass",
+      "all six Phase-51 evaluator records reproduce within the frozen absolute tolerance",
+      "the baseline hidden-float64 violation reproduces with the frozen m4/m5 counts",
+      "the direct 80/120-digit reference and its high-precision CSE/non-CSE control are complete and stable",
+      "both repaired variants satisfy the mandatory temporary and raw-output clongdouble dtype contract",
+      "the staged telescope closes under its frozen tolerance",
+      "the classification and every local/global null guard are exact"
+    ],
+    "primary_if_all_prerequisites_and_element_candidate_gradient_and_RHS_pass": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_ELEMENT_LOCAL_RHS_REPAIR_SUPPORTED_ON_FROZEN_SIX_SLOTS",
+    "if_all_prerequisites_but_element_candidate_gradient_or_RHS_fails": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_STATIC_RHS_REPAIR_NOT_SUFFICIENT",
+    "if_a_scientific_reference_or_reproduction_prerequisite_is_incomplete_without_invalidating_the_run": "P51_EVALUATOR_RUNTIME_DTYPE_AND_RHS_ARITHMETIC_AUDIT_INCONCLUSIVE",
+    "long_namespace_joint_CSE_accuracy_role": "DIAGNOSTIC_NEGATIVE_CONTROL_NOT_A_PRIMARY_CLASSIFICATION_PREREQUISITE",
     "Phase51_raw_result_mutated": false,
     "Phase51_historical_emitted_status": "VALID_RUN",
     "Phase51_protocol_validity_after_confirmed_hidden_float64": "NOT_UPHELD_IF_THE_FROZEN_ALL_TEMPORARIES_CLONGDOUBLE_CONTRACT_IS_REPRODUCIBLY_VIOLATED",
