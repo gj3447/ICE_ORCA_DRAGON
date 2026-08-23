@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–52 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–53 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-23T09:21:15Z` Phase 52 graph update, the collection has 714 nodes and 2089
-edges. Validation verifies 147/147 stored hashes (143 artifacts and 4 policies). The Phase 16–52 run
-snapshots contain 467 named exact checks, all `PASS`, and 325 typed numerical-ledger checks: 315
-`PASS`, eight `FAIL`, and two
+At the recorded `2026-08-23T12:47:02Z` Phase 53 graph update, the collection has 725 nodes and 2128
+edges. Validation verifies 151/151 stored hashes (147 artifacts and 4 policies). The Phase 16–53 run
+snapshots contain 475 named exact checks, all `PASS`, and 336 typed numerical-ledger checks: 325
+`PASS`, eight `FAIL`, and three
 `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
@@ -54,14 +54,17 @@ numerical `INCONCLUSIVE` record. All frozen continuation, reflection, full-J, pa
 action, and first-cap controls pass, but the CSE/non-CSE same-point RHS relative comparison reaches
 `1.690e-8` against `5e-10`. The valid run is consequently local-continuation `INCONCLUSIVE`, not
 no-root or contradicted; the Phase-50 continuation problem and Gate 1 remain open. One legacy separately
-recorded Phase-18 numerical control brings the numerical-record total to 326
-(316 pass, eight fail, two inconclusive). Phase 52 reproduces 19 hidden binary64 temporaries in each
+recorded Phase-18 numerical control brings the numerical-record total to 337
+(326 pass, eight fail, three inconclusive). Phase 52 reproduces 19 hidden binary64 temporaries in each
 pinned m=4 and m=5 joint CSE evaluation and supports an element-local clongdouble repair on the six
 static source/lambda slots: maximum gradient and RHS relative errors are `7.051e-11` and `1.567e-10`,
 below `5e-10`. The dtype-correct joint long-namespace candidate remains a declared non-invalidating
-accuracy `FAIL` at `7.625e-9`. This narrows the Phase-51 evaluator problem without reclassifying its
-historical continuation; Phase 53 must run the full repaired path, and no global or physics promotion is
-licensed. These
+accuracy `FAIL` at `7.625e-9`. Phase 53 then executes the complete frozen replay. All eight exact and
+ten of eleven numerical gates pass, including the independent six-slot 80/120-decimal full-evaluator
+reference, 54 canonical Hessian probes, 68 accepted roots, 146 retained integrations, and all
+action/first-cap ledgers. The sole comparison to the saved pinned Phase-51 global non-CSE backend remains
+`INCONCLUSIVE` at `6.645e-9` against `5e-10`; this narrows the next calculation to that backend rather
+than authorizing straight-arm search or any global, physics, or TOE promotion. These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -140,7 +143,11 @@ confidence.
 ./ice ontology trace claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED --depth 2
 ./ice ontology trace claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS --depth 2
 ./ice ontology trace claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION --depth 2
+./ice ontology trace claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS --depth 2
+./ice ontology trace claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND --depth 2
+./ice ontology trace claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION --depth 2
 ./ice ontology trace open:p53-full-repaired-phase51-continuation-rerun --depth 2
+./ice ontology trace open:p54-pinned-phase51-global-noncse-backend-diagnostic --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -299,8 +306,12 @@ CSE paths; the prior all-temporaries-clongdouble protocol validity is therefore 
 the historical bytes and emitted status remain unchanged. The element-local clongdouble candidate
 passes all six static gradient/RHS comparisons, while the joint long-namespace candidate misses the RHS
 threshold. This resolves `open:p51-cse-noncse-clongdouble-rhs-consistency` only on the frozen six static
-slots. `open:p53-full-repaired-phase51-continuation-rerun` now carries the required full-path replay;
-until it runs, Phase 51 is not reclassified and all global, physical, and TOE promotions remain barred.
+slots. Phase 53 has now executed the full-path replay, so
+`open:p53-full-repaired-phase51-continuation-rerun` is narrowed to its sole failed evaluator comparison.
+The repaired evaluator passes its independent six-slot full-evaluator reference, but comparison with the
+saved pinned Phase-51 global non-CSE numerical backend remains `INCONCLUSIVE`. The next bounded problem is
+`open:p54-pinned-phase51-global-noncse-backend-diagnostic`; straight arms remain unsearched and all
+global, physical, and TOE promotions remain barred.
 
 ## Identifier families
 

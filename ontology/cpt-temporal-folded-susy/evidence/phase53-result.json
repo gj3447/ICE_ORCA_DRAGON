@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_20260823",
+  "phase": "P53",
+  "observed_at_utc": "2026-08-23T12:47:02Z",
+  "command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 proxmox-scratch run p53a --timeout 7200 -- ./ice run phase53_m5_element_local_full_continuation",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase53_m5_element_local_full_continuation.py",
+    "sha256": "42434fce5cf3c40dd2c53c42a3a0b1ca39dde0df8df2934d0e33525947ab9f2a",
+    "introduced_in_commit": "fe1ad0b325b207d79208db416fab5aa2f9661105"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P53.inputs.byte_pins_self_digests_and_committed_blobs",
+      "statement": "all frozen bytes, self-digests, named commits, and working/commit blobs agree",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.contract.Phase51_semantics_inherited_except_evaluator",
+      "statement": "the complete Phase51 semantic contract is inherited with only the evaluator overlay",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.symbolic.action_gradient_hessian_element_identities",
+      "statement": "exact-decimal element sums equal action/gradient/Hessian, derivatives agree, and Hessians are symmetric",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.symbolic.Phase52_gradient_DAG_exact_reuse",
+      "statement": "the production element-gradient plans exactly reuse the Phase52 projection and fingerprint",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.symbolic.action_hessian_CSE_back_substitution",
+      "statement": "every separate element action and Hessian CSE plan back-substitutes exactly",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.dtype.full_evaluator_raw_clongdouble",
+      "statement": "all raw generated temporaries and outputs are exact np.clongdouble at all six slots",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.conventions.fixed_order_complete_evaluator_and_solver_boundary",
+      "statement": "fixed-order complete evaluator consumers retain ordinary transpose, one outer conjugation, and one solver-boundary cast",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.guard.local_global_physics_TOE_nulls",
+      "statement": "the local replay retains every global, physics, contradiction, cutoff, continuum, and TOE null boundary",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 11,
+  "numerical": [
+    {
+      "id": "P53.reference.six_slot_80_120_full_evaluator",
+      "statement": "all six slots satisfy the frozen 80/120-decimal and production/full-reference thresholds",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.saddles.Phase50_reproduction",
+      "statement": "both sources reproduce every common Phase50 saddle with the frozen inertia and residual gates",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.intersections.lambda0_lifts",
+      "statement": "both independently solved lambda=0 R18 intersections replay the embedded Phase42 local candidates",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.intersections.fine_forward_both_sources",
+      "statement": "independent phi_plus and phi_minus fine17 paths retain accepted roots and complete action/first-cap ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.intersections.coarse_and_reverse",
+      "statement": "the independent phi_plus coarse9 and reverse17 paths match fine17 ambient states with corrected tangent gauges and complete ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.reflection.independent_phi_pair",
+      "statement": "independently solved reflected fine paths agree in saddle, action, cap state, transversality, and determinant-corrected orientation",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.derivative.full_J_at_0_half_1",
+      "statement": "two complete frozen-step R18 state-map finite-difference matrices agree with the variational Jacobian at lambda 0, 0.5, and 1",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.tangent.lambda_half",
+      "statement": "the lambda=0.5 implicit tangent agrees with four independently accepted off-node roots and their path ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.evaluator.full_repaired_pairs_and_trajectories",
+      "statement": "the complete repaired action/gradient/Hessian evaluator agrees with the saved pinned Phase51 global non-CSE control at every paired point and trajectory fraction",
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "id": "P53.endpoint.radius_and_shape",
+      "statement": "both radius and both launch-shape controls retain accepted same-candidate states, corrected orientations, and first-cap/action ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P53.guard.full_semantic_replay_topology_and_nulls",
+      "statement": "the full semantic replay has the exact frozen execution topology, no fallback, and local/global nulls",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "full pinned Phase51 semantic replay with one coherent element-local clongdouble action, gradient, and Hessian evaluator",
+    "exact_checks": 8,
+    "numerical_checks": 11,
+    "run_status": "VALID_RUN",
+    "classification": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_INPUTS.json",
+      "input_manifest_sha256": "551acf717e8f7d53353ce962fef2301d11fd2c16db64d8500e768842ddbef71a",
+      "input_manifest_commit": "c2f29917c974f19f4178e85e3b48dd057c316e69",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json",
+      "raw_result_outer_sha256": "15cca28d8821a25ba0d0870570d2f42d9a1d8ac7f439a3b9833f500384f58d17",
+      "raw_result_payload_sha256_without_self": "3a0c233d65ac4175dbd44c4e238864dcfc4fbd59c8829469522bd9977ff88fc4",
+      "raw_result_introduced_in_commit": "a9a7e6018d2a94749c4f7213501fa061187fd62a",
+      "raw_result_size_bytes": 2085497,
+      "validation": "Strict committed-byte and self-digest guards, exact inherited-contract and symbolic checks, raw clongdouble tracing, fixed-order consumer binding, exact replay topology, no-fallback ledgers, and eight exact plus eleven typed numerical records establish a complete valid run. The single INCONCLUSIVE numerical record is a scientific gate nonpass, not an invalid run."
+    },
+    "platform": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "longdouble_itemsize_bytes": 16,
+      "clongdouble_itemsize_bytes": 32,
+      "longdouble_mantissa_bits_excluding_implicit": 63,
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "single_thread_environment": true
+    },
+    "record_counts": {
+      "frozen_source_lambda_reference_slots": 6,
+      "canonical_complex_Hessian_probes": 54,
+      "raw_dtype_trace_records": 36,
+      "semantic_root_attempts": 68,
+      "semantic_roots_accepted": 68,
+      "retained_nonroot_nonFD_DOP853_integrations": 146,
+      "full_J_state_only_residual_calls": 216,
+      "full_J_column_step_records": 108,
+      "action_and_first_cap_ledgers": 68,
+      "same_point_evaluator_records": 6,
+      "trajectory_fraction_records": 15,
+      "no_fallback_categories": 9
+    },
+    "independent_six_slot_reference": {
+      "passed": true,
+      "backend": "independent pinned Phase41 numeric_model and Phase50 m5_numeric_model global action/gradient/Hessian expressions at 80 and 120 decimal digits; production alone invokes generated callables",
+      "maximum_quantity_80_vs_120_symmetric_relative": "7.38240371164184281881381892484842995760506597e-78",
+      "maximum_quantity_CSE_vs_plain_120_symmetric_relative": "3.6227029978116833903583366644252291643403189e-43",
+      "maximum_quantity_production_vs_plain_120_symmetric_relative": "1.56730271534658758268804685660904216519398161e-10",
+      "maximum_canonical_probe_production_vs_plain_120_symmetric_relative": "2.43928341160015314985159312650415727823485847e-15",
+      "reference_stability_threshold": "1e-40",
+      "production_accuracy_threshold": "5e-10"
+    },
+    "sole_numerical_nonpass": {
+      "check_id": "P53.evaluator.full_repaired_pairs_and_trajectories",
+      "inherited_check_id": "P51.evaluator.CSE_nonCSE_pairs",
+      "status": "INCONCLUSIVE",
+      "comparison_backend": "saved pinned Phase51 global non-CSE numerical evaluator",
+      "maximum_same_point_RHS_relative_error": 6.621940782815591e-9,
+      "maximum_trajectory_same_point_RHS_relative_error": 6.645199267098233e-9,
+      "maximum_same_point_Hessian_action_relative_error": 1.5516650742457068e-13,
+      "maximum_trajectory_Hessian_action_relative_error": 8.296475469932403e-13,
+      "maximum_trajectory_state_relative_error": 7.244929514708426e-10,
+      "RHS_relative_threshold": 5e-10,
+      "interpretation": "The repaired production evaluator passes the separately built global 120-decimal reference, while its inherited comparison to the saved pinned Phase51 global non-CSE numerical backend remains above threshold. This isolates the next diagnostic target without proving which backend operation is defective."
+    },
+    "replay_topology": {
+      "passed": true,
+      "semantic_path_counts": {
+        "phi_plus_fine_forward": 17,
+        "phi_plus_coarse_forward": 9,
+        "phi_plus_fine_reverse": 17,
+        "phi_minus_fine_forward": 17
+      },
+      "all_action_and_first_cap_ledgers_passed": true,
+      "no_fallback_ledger": {
+        "chart_recentering": 0,
+        "clipping": 0,
+        "copied_roots": 0,
+        "favorable_step_or_solver_replacement": 0,
+        "historical_result_reuse": 0,
+        "mesh_insertions": 0,
+        "random_restarts": 0,
+        "reflected_seed_substitutions": 0,
+        "validation_backend_used_for_production": 0
+      }
+    },
+    "scope": {
+      "calculated_facts": [
+        "a complete replay of the frozen Phase51 roots, nonlinear flows, fine/coarse/reverse paths, independent reflection, full-J finite differences, outer tangent, endpoint mutations, orientations, and action/first-cap ledgers",
+        "exact element-local action, gradient, and Hessian identities plus raw clongdouble implementation traces for the production evaluator",
+        "an independent six-slot global-expression 80/120-decimal full-evaluator reference with all 54 canonical Hessian probes",
+        "a retained comparison against the immutable saved Phase51 global non-CSE numerical backend"
+      ],
+      "not_computed": [
+        "a diagnosis or repair of the saved pinned Phase51 global non-CSE numerical backend",
+        "other roots, charts, straight arms, cap reintersections, directions, saddles, upward components, Stokes chambers, or relative good ends",
+        "portable agreement on another platform, a formal correct-rounding theorem, or a cutoff/continuum limit",
+        "a physical original cycle, common determinant line, global signed intersection, physics claim, or TOE"
+      ],
+      "calculation_workbench_only": true,
+      "phase51_and_phase52_historical_evidence_preserved": true,
+      "phase50_open_problem_resolved": false,
+      "root_nonexistence_or_contradiction_certified": false,
+      "physics_claim": false
+    },
+    "promoted_outputs": {
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "continuous_direction_coverage_proved": false,
+      "root_exhaustion_proved": false,
+      "all_saddles_and_upward_components_complete": false,
+      "non_Stokes_chamber_certified": false,
+      "all_relative_good_ends_classified": false,
+      "physical_original_cycle_derived": false,
+      "common_determinant_line_constructed": false,
+      "required_independent_contradiction_certificate": null,
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "promoted_output": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "physics_claim": null,
+      "TOE_claim": null
+    },
+    "claim_status": {
+      "full_repaired_semantic_replay": "COMPLETE_VALID_RUN",
+      "independent_six_slot_full_evaluator_reference": "PASS",
+      "pinned_Phase51_global_nonCSE_numerical_comparison": "INCONCLUSIVE",
+      "local_continuation_classification": "INCONCLUSIVE",
+      "straight_arm_search": "NOT_AUTHORIZED_YET",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "next_calculation": "Phase54 is restricted to gradient/RHS evaluator attribution at the six actual center-launch slots: compare the saved pinned Phase51 global non-CSE numerical evaluator, the repaired element-local production evaluator, and the separately rebuilt 80/120-decimal global reference while tracing literal constants, operation order, intermediate dtypes, output coercions, and the L.T/outer-conjugation RHS contraction. It must run no ODE, root solve, trajectory evaluation, transport, or reintegration and must not change states, formulas, thresholds, or historical bytes; trajectory transport or reintegration, if warranted by the Phase54 result, is deferred to a separate conditional Phase55 open question."
+  }
+}

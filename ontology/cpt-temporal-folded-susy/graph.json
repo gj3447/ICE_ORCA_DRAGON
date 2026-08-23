@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-23T09:21:15Z",
+  "updated_at_utc": "2026-08-23T12:47:02Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -369,11 +369,20 @@
     },
     {
       "question": "What does Phase 52 repair, and does it now support the Phase-51 continuation?",
-      "answer": "It reproduces a hidden dtype-contract violation in the actual Phase-51 CSE callables: each pinned m=4 and m=5 joint evaluation executes 19 binary64 temporaries despite complex256 outputs. An element-local clongdouble CSE passes all six static gradient and RHS comparisons, with maxima 7.051e-11 and 1.567e-10 below 5e-10; a joint long-namespace variant remains a declared accuracy negative control. This resolves only the narrow six-slot arithmetic question. Phase 51 is not reclassified, no repaired root or flow path has run, and no global, physical, or TOE claim follows. Phase 53 must replay the full continuation.",
+      "answer": "It reproduces a hidden dtype-contract violation in the actual Phase-51 CSE callables: each pinned m=4 and m=5 joint evaluation executes 19 binary64 temporaries despite complex256 outputs. An element-local clongdouble CSE passes all six static gradient and RHS comparisons, with maxima 7.051e-11 and 1.567e-10 below 5e-10; a joint long-namespace variant remains a declared accuracy negative control. Phase 52 itself resolves only the narrow six-slot arithmetic question and does not reclassify Phase 51. Phase 53 has since executed the full replay; its separate quick answer records the valid-inconclusive outcome.",
       "claim_ids": [
         "claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED",
         "claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS",
         "claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION"
+      ]
+    },
+    {
+      "question": "Does Phase 53 now support the repaired phi-plus continuation or a global intersection?",
+      "answer": "No. Phase 53 is a complete VALID_RUN: all eight exact checks and ten of eleven numerical checks pass, including 68 accepted semantic roots, 146 retained integrations, all action/first-cap ledgers, and an independent six-slot 80/120-decimal full-evaluator reference with 54 canonical Hessian probes. The sole inherited comparison to the saved pinned Phase-51 global non-CSE numerical backend remains INCONCLUSIVE, with maximum trajectory RHS relative error 6.645e-9 against 5e-10. This is not a no-root or contradiction certificate; straight arms were not searched and every global, cutoff, continuum, physics, and TOE output remains null.",
+      "claim_ids": [
+        "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+        "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+        "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION"
       ]
     }
   ],
@@ -726,7 +735,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–52 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, and evaluator record. Phase 49 retains the Phase-48 gradient-only failures while its full-flow path passes; Phase 52 likewise retains the joint long-namespace negative control and historical Phase-51 result while supporting only the element-local six-slot repair. Neither pinned-platform implementation result is promoted to a portable, formal, continuation, global, or physical conclusion.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–53 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, evaluator, and replay record. Phase 49 retains the Phase-48 gradient-only failures while its full-flow path passes; Phase 52 retains the joint long-namespace negative control; Phase 53 retains the sole pinned Phase-51 global non-CSE backend nonpass even though the repaired evaluator passes the independent six-slot reference. None of these pinned-platform implementation results is promoted to a portable, global, physical, or TOE conclusion.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -769,7 +778,11 @@
         "claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED",
         "claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS",
         "claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION",
+        "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+        "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+        "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
+        "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -816,7 +829,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–52. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, Phase-51's evaluator-gated nonlinear Gamma--K attempt, and Phase-52's hidden-binary64 diagnosis plus six-slot element-local repair. Stop before turning these static local calculations into correct-rounding proof, a formal endpoint bound, portable backend agreement, a supported repaired Gamma--K continuation, nonlinear upward-component census, canonical determinant line, complete original cycle, Stokes chamber, global vector, or physical claim.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–53. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, Phase-51's evaluator-gated nonlinear Gamma--K attempt, Phase-52's hidden-binary64 diagnosis plus six-slot element-local repair, and Phase-53's complete but still evaluator-inconclusive replay. Stop before diagnosing the pinned Phase-51 global non-CSE numerical backend, searching straight arms, claiming portable backend agreement, enumerating nonlinear upward components, or promoting any local ledger to a canonical determinant line, complete original cycle, Stokes chamber, global vector, physical claim, or TOE.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -878,7 +891,11 @@
         "claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED",
         "claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS",
         "claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION",
+        "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+        "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+        "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
+        "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -909,8 +926,8 @@
     },
     {
       "id": "reading-path:p50-m5-gamma-k-to-backend-consistency",
-      "title": "From the sampled m=5 saddle bridge through static evaluator repair to the full rerun",
-      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's historical 6/6 exact and 9/10 numerical ledger. Phase 52 reproduces hidden binary64 temporaries and supports an element-local clongdouble repair at six static states while retaining a joint-namespace negative control. Stop at the Phase-53 full repaired replay: the static audit does not reclassify Phase 51, infer no root, resolve the broader Phase-50 problem, or promote a local sampled path to a global cycle.",
+      "title": "From the sampled m=5 saddle bridge through repaired replay to the remaining backend diagnostic",
+      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's historical 6/6 exact and 9/10 numerical ledger. Phase 52 reproduces hidden binary64 temporaries and supports an element-local clongdouble repair at six static states while retaining a joint-namespace negative control. Phase 53 completes the full frozen replay: 8/8 exact and 10/11 numerical gates pass, including the independent six-slot full-evaluator reference, but the saved pinned Phase-51 global non-CSE backend comparison remains inconclusive. Diagnose that backend before any straight-arm search; do not infer no root, resolve the broader Phase-50 problem, or promote the local sampled paths to a global cycle.",
       "nodes": [
         "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
         "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
@@ -922,7 +939,11 @@
         "claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED",
         "claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS",
         "claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION",
+        "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+        "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+        "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
+        "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
@@ -8953,7 +8974,7 @@
       "id": "open:p51-cse-noncse-clongdouble-rhs-consistency",
       "type": "open_problem",
       "title": "Resolve the Phase 51 CSE/non-CSE clongdouble RHS consistency gate",
-      "summary": "Phase 52 reproduces the six historical source/lambda records exactly, traces 19 hidden binary64 temporaries in each pinned m=4 and m=5 joint CSE evaluation, and brings every static six-slot gradient and RHS comparison below 5e-10 with the element-local clongdouble CSE. This resolves the narrow static evaluator-consistency question only on the frozen platform and slots. The Phase-51 raw result and emitted INCONCLUSIVE label remain historical records; its all-temporaries-clongdouble protocol validity is not upheld, and a Phase-53 full repaired continuation rerun remains open.",
+      "summary": "Phase 52 reproduces the six historical source/lambda records exactly, traces 19 hidden binary64 temporaries in each pinned m=4 and m=5 joint CSE evaluation, and brings every static six-slot gradient and RHS comparison below 5e-10 with the element-local clongdouble CSE. Phase 53 then executes the full repaired replay and passes its independent six-slot global-expression reference, while the inherited comparison to the saved pinned Phase-51 global non-CSE numerical backend remains inconclusive. The production-evaluator repair is resolved only within this pinned reference scope; the immutable historical result is preserved and the saved-backend diagnostic is delegated to Phase 54.",
       "question": "Can a separately frozen evaluator-ordering or precision-boundary repair bring every Phase-51 CSE/non-CSE same-point RHS relative comparison below 5e-10 while preserving the same formulas, solved states, paths, thresholds, and historical result?",
       "state": "RESOLVED_NARROWLY_ON_FROZEN_SIX_STATIC_SLOTS"
     },
@@ -9095,10 +9116,10 @@
     {
       "id": "open:p53-full-repaired-phase51-continuation-rerun",
       "type": "open_problem",
-      "title": "Run the full Phase-51 continuation with the element-local clongdouble evaluator",
-      "summary": "Phase 52 supports the element-local evaluator only at six static same-state slots. A separately frozen Phase-53 run must substitute that evaluator into the actual production path and replay every Phase-51 root solve, nonlinear K flow, fine/coarse/reverse continuation, reflection, full-J, path-tangent, endpoint mutation, orientation, action/first-cap, evaluator, and global-null check without threshold or candidate retuning. Only that run may decide a new local continuation label; the broader root/component/end census and Phase-50/Gate-1 targets remain open.",
-      "question": "Does a full authoritative replay with the element-local clongdouble evaluator pass every frozen Phase-51 continuation and control gate without retuning, while preserving historical evidence and all global nulls?",
-      "state": "OPEN"
+      "title": "Resolve the sole failed evaluator comparison after the full Phase-51 replay",
+      "summary": "Phase 53 completed the full frozen Phase-51 semantic replay without retuning: all eight exact checks and ten of eleven numerical checks pass, including roots, nonlinear K flows, fine/coarse/reverse paths, reflection, full-J, tangent, endpoint mutations, orientations, all 68 action/first-cap ledgers, exact topology, no fallback, and the independent six-slot full-evaluator reference. This open problem is now narrowed to the sole inherited comparison between the repaired production evaluator and the saved pinned Phase-51 global non-CSE numerical backend. The broader root/component/end census and Phase-50/Gate-1 targets remain open.",
+      "question": "Why does the saved pinned Phase-51 global non-CSE numerical backend exceed the 5e-10 RHS gate against the independently referenced repaired evaluator at the six paired states and fifteen trajectory fractions?",
+      "state": "OPEN_NARROWED_TO_SOLE_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND_COMPARISON"
     },
     {
       "id": "artifact:p52-input-manifest",
@@ -9153,6 +9174,143 @@
       "path": "cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md",
       "sha256": "35615f3d68871b64335fd7bce5dbc4a18a472a81063dedaa4d26547887356017",
       "introduced_in_commit": "7cc963f676f083164eb0705d8479e17168835df5"
+    },
+    {
+      "id": "phase:p53",
+      "type": "phase",
+      "title": "Phase 53 — full element-local m=5 continuation replay",
+      "summary": "The frozen Phase-51 semantic suite is replayed end to end with the Phase-52 element-local clongdouble action, gradient, and Hessian evaluator. The run is VALID_RUN: all eight exact gates and ten of eleven numerical gates pass, including 68 accepted semantic roots, 146 retained nonroot/non-FD integrations, every action/first-cap ledger, exact no-fallback topology, and an independently rebuilt six-slot 80/120-decimal full-evaluator reference with 54 canonical Hessian probes. The sole inherited comparison to the saved pinned Phase-51 global non-CSE numerical backend remains INCONCLUSIVE, so the local continuation is not promoted and all global, physics, and TOE outputs remain null.",
+      "state": "ACTIVE_VALID_RUN_INCONCLUSIVE"
+    },
+    {
+      "id": "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+      "type": "claim",
+      "title": "The repaired replay passes the independent reference and every non-backend control",
+      "summary": "The complete frozen suite passes all eight exact checks and every numerical check except the inherited saved-backend comparison. The six direct global-expression reference slots pass their 80/120-decimal stability and 5e-10 production thresholds, including all 54 canonical complex Hessian probes. All 68 semantic roots, 146 retained integrations, reflection, full-J, tangent, endpoint, orientation, action/first-cap, topology, and no-fallback controls also pass.",
+      "state": "SUPPORTED_ON_FROZEN_PINNED_REPLAY",
+      "claim_id": "P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+      "statement": "On the pinned Phase-53 platform and frozen Phase-51 semantic suite, the element-local clongdouble production evaluator passes the independent six-slot 80/120-decimal full-evaluator reference and every replay control other than the separately retained comparison to the saved pinned Phase-51 global non-CSE numerical backend.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "type": "claim",
+      "title": "The full replay remains inconclusive only at the pinned Phase-51 global non-CSE backend",
+      "summary": "The sole nonpass is P53.evaluator.full_repaired_pairs_and_trajectories, inherited from P51.evaluator.CSE_nonCSE_pairs. Maximum same-point and trajectory RHS relative errors are 6.62194e-9 and 6.64520e-9 against 5e-10, while Hessian-action errors remain at most 8.29648e-13. Because the repaired evaluator separately passes the direct high-precision global reference, this result narrows the next diagnostic target but does not prove which saved-backend operation is defective.",
+      "state": "INCONCLUSIVE_AT_SOLE_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND_COMPARISON",
+      "claim_id": "P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "statement": "The complete valid Phase-53 replay retains exactly one inconclusive numerical gate: agreement of the independently referenced repaired evaluator with the saved pinned Phase-51 global non-CSE numerical backend at six paired states and fifteen trajectory fractions.",
+      "epistemic_state": "INCONCLUSIVE"
+    },
+    {
+      "id": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The valid local replay does not license straight-arm search results or global promotion",
+      "summary": "Phase 53 searched no straight arms, cap reintersections, additional charts, components, Stokes chambers, or relative good ends. It proves neither root exhaustion nor continuous direction coverage and constructs no determinant line or physical original cycle. The required contradiction certificate, bounded signed sum, global vector, n_sigma, cutoff, continuum, promoted, physics, and TOE outputs remain null; Gate 1 stays OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_LOCAL_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "statement": "A complete valid but evaluator-inconclusive replay of the frozen local continuation does not establish any unsearched straight-arm intersection, root/component/end census, global signed intersection, cutoff or continuum limit, physics claim, or TOE.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p53-m5-element-local-full-continuation-replay",
+      "type": "evidence",
+      "title": "Phase 53 full element-local continuation replay ledger",
+      "summary": "Eight exact and ten numerical checks pass; one typed numerical INCONCLUSIVE retains the sole saved pinned Phase-51 global non-CSE backend comparison. The ledger preserves independent six-slot 80/120-decimal action/gradient/Hessian references, 54 Hessian probes, 68 accepted roots, 146 retained integrations, full-J and tangent records, endpoint mutations, 68 action/first-cap ledgers, exact no-fallback topology, and all global, physics, and TOE nulls.",
+      "state": "VERIFIED_VALID_RUN_WITH_ONE_INCONCLUSIVE_BACKEND_COMPARISON",
+      "observed_status": "8_EXACT_PASS_10_NUMERICAL_PASS_1_NUMERICAL_INCONCLUSIVE",
+      "check_ids": [
+        "P53.inputs.byte_pins_self_digests_and_committed_blobs",
+        "P53.contract.Phase51_semantics_inherited_except_evaluator",
+        "P53.symbolic.action_gradient_hessian_element_identities",
+        "P53.symbolic.Phase52_gradient_DAG_exact_reuse",
+        "P53.symbolic.action_hessian_CSE_back_substitution",
+        "P53.dtype.full_evaluator_raw_clongdouble",
+        "P53.conventions.fixed_order_complete_evaluator_and_solver_boundary",
+        "P53.guard.local_global_physics_TOE_nulls",
+        "P53.reference.six_slot_80_120_full_evaluator",
+        "P53.saddles.Phase50_reproduction",
+        "P53.intersections.lambda0_lifts",
+        "P53.intersections.fine_forward_both_sources",
+        "P53.intersections.coarse_and_reverse",
+        "P53.reflection.independent_phi_pair",
+        "P53.derivative.full_J_at_0_half_1",
+        "P53.tangent.lambda_half",
+        "P53.evaluator.full_repaired_pairs_and_trajectories",
+        "P53.endpoint.radius_and_shape",
+        "P53.guard.full_semantic_replay_topology_and_nulls"
+      ]
+    },
+    {
+      "id": "scope:p53-full-repaired-phase51-semantic-replay",
+      "type": "scope",
+      "title": "P53 full repaired Phase-51 semantic replay",
+      "summary": "The exact frozen Phase-51 local continuation suite, with one declared evaluator overlay: separate element-local clongdouble action, gradient, and Hessian plans. It includes two sources, fine/coarse/reverse paths, reflection, full-J, tangent, endpoint mutations, fixed thresholds, exact topology, six direct reference slots, and the immutable saved Phase-51 global non-CSE control.",
+      "state": "ACTIVE",
+      "includes": [
+        "68 semantic root attempts and accepted roots across phi-plus fine17/coarse9/reverse17 and phi-minus fine17 paths",
+        "146 retained nonroot/non-FD integrations, 216 full-J residual calls, 108 column-step records, four outer-tangent roots, six paired trajectories, and 68 action/first-cap ledgers",
+        "six independent direct global-expression 80/120-decimal reference slots, 54 canonical Hessian probes, and 36 raw production dtype traces",
+        "one inherited comparison to the saved pinned Phase-51 global non-CSE numerical evaluator at six paired states and fifteen trajectory fractions",
+        "exact no-fallback, classification, historical nonrewrite, and local/global null guards"
+      ],
+      "excludes": [
+        "a diagnosis or modification of the saved pinned Phase-51 global non-CSE numerical backend",
+        "straight arms, cap reintersections, other roots, charts, directions, saddles, upward components, Stokes chambers, or relative good ends",
+        "another platform, a portable backend theorem, formal correct-rounding or propagation bounds, or cutoff/continuum limits",
+        "a determinant line, physical original cycle, global signed intersection, SUSY state, physics claim, or TOE"
+      ]
+    },
+    {
+      "id": "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+      "type": "open_problem",
+      "title": "Attribute the pinned Phase-51 global non-CSE gradient/RHS evaluator discrepancy at six center-launch slots",
+      "summary": "Phase 54 is restricted to the six actual center-launch slots and three unchanged gradient/RHS evaluators: the saved pinned Phase-51 global non-CSE numerical evaluator, the repaired element-local production evaluator, and the independently rebuilt 80/120-decimal global reference. Trace literal constants, operation order, intermediate dtypes, output coercions, and the L.T/outer-conjugation RHS contraction without changing states, formulas, historical bytes, or the 5e-10 gate; run no ODE, root solve, trajectory evaluation, transport, or reintegration. Trajectory transport or reintegration, if warranted by the Phase-54 result, is a separate conditional Phase-55 open question and is not part of Phase 54.",
+      "question": "Which bounded gradient-evaluation, dtype/coercion, or RHS-contraction operation in the saved pinned Phase-51 global non-CSE numerical evaluator accounts for the six-center-launch-slot discrepancy against the repaired production and independent 80/120-decimal reference evaluators?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:p53-input-manifest",
+      "type": "artifact",
+      "title": "Phase 53 frozen full-replay input manifest",
+      "summary": "Frozen Phase-51 semantic topology, element-local action/gradient/Hessian overlay, direct six-slot 80/120-decimal reference, eleven numerical gates, exact no-fallback counts, immutable historical inputs, and fail-closed local/global classification.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_INPUTS.json",
+      "sha256": "551acf717e8f7d53353ce962fef2301d11fd2c16db64d8500e768842ddbef71a",
+      "introduced_in_commit": "c2f29917c974f19f4178e85e3b48dd057c316e69"
+    },
+    {
+      "id": "artifact:p53-script",
+      "type": "artifact",
+      "title": "Phase 53 full element-local continuation replay executable",
+      "summary": "Python runner that validates frozen committed bytes, rebuilds the independent full-evaluator reference, executes the repaired production evaluator through the entire Phase-51 semantic suite, records exact topology and no-fallback controls, and emits a canonical self-digested result.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase53_m5_element_local_full_continuation.py",
+      "sha256": "42434fce5cf3c40dd2c53c42a3a0b1ca39dde0df8df2934d0e33525947ab9f2a",
+      "introduced_in_commit": "fe1ad0b325b207d79208db416fab5aa2f9661105"
+    },
+    {
+      "id": "artifact:p53-raw-result",
+      "type": "artifact",
+      "title": "Phase 53 full raw result",
+      "summary": "The complete 2,085,497-byte VALID_RUN result with eight exact passes, ten numerical passes, one numerical INCONCLUSIVE, independent six-slot and 54-probe reference evidence, exact 68-root/146-integration replay topology, all global nulls, classification PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE, and canonical payload self-digest 3a0c233d65ac4175dbd44c4e238864dcfc4fbd59c8829469522bd9977ff88fc4.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json",
+      "sha256": "15cca28d8821a25ba0d0870570d2f42d9a1d8ac7f439a3b9833f500384f58d17",
+      "introduced_in_commit": "a9a7e6018d2a94749c4f7213501fa061187fd62a"
+    },
+    {
+      "id": "artifact:p53-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 53 evidence snapshot",
+      "summary": "Compact typed extract preserving all eight exact and eleven numerical checks, command and platform, manifest/runner/result commits and hashes, result self-digest, six-slot reference maxima, exact topology counts, the sole pinned-backend INCONCLUSIVE, all global/physics/TOE nulls, and the bounded Phase-54 backend diagnostic. The pinned raw result remains byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase53-result.json",
+      "sha256": "466beaa9ac12bbeea5635a2d70fa676c14dc500010028091d22d128d04bbfe76"
     }
   ],
   "edges": [
@@ -21992,14 +22150,14 @@
       "from": "open:p53-full-repaired-phase51-continuation-rerun",
       "relation": "FOLLOW_UP_TO",
       "to": "open:p51-cse-noncse-clongdouble-rhs-consistency",
-      "note": "The narrow static consistency question is resolved, but no continuation label can change until the repaired production path is executed end to end."
+      "note": "The repaired production path has now executed end to end; its sole remaining nonpass is the saved pinned Phase-51 global non-CSE backend comparison delegated to the bounded Phase-54 diagnostic."
     },
     {
       "id": "edge:2080",
       "from": "open:p53-full-repaired-phase51-continuation-rerun",
       "relation": "FOLLOW_UP_TO",
       "to": "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
-      "note": "A successful full replay would address one frozen candidate continuation only; root/component/end exhaustion and the Gate-1 global-cycle problem would still remain open."
+      "note": "The complete replay remains evaluator-inconclusive and addresses only one frozen candidate; root/component/end exhaustion, straight arms, and the Gate-1 global-cycle problem remain open."
     },
     {
       "id": "edge:2081",
@@ -22054,6 +22212,249 @@
       "from": "artifact:p52-report",
       "relation": "DERIVED_FROM",
       "to": "artifact:p52-raw-result"
+    },
+    {
+      "id": "edge:2090",
+      "from": "phase:p53",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2091",
+      "from": "phase:p53",
+      "relation": "GOVERNED_BY",
+      "to": "policy:recursive-self-application-audit"
+    },
+    {
+      "id": "edge:2092",
+      "from": "phase:p53",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p52"
+    },
+    {
+      "id": "edge:2093",
+      "from": "scope:p53-full-repaired-phase51-semantic-replay",
+      "relation": "PART_OF",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2094",
+      "from": "artifact:p53-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2095",
+      "from": "artifact:p53-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2096",
+      "from": "artifact:p53-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2097",
+      "from": "artifact:p53-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2098",
+      "from": "evidence:p53-m5-element-local-full-continuation-replay",
+      "relation": "PART_OF",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2099",
+      "from": "evidence:p53-m5-element-local-full-continuation-replay",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p53-script"
+    },
+    {
+      "id": "edge:2100",
+      "from": "evidence:p53-m5-element-local-full-continuation-replay",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p53-evidence-snapshot"
+    },
+    {
+      "id": "edge:2101",
+      "from": "evidence:p53-m5-element-local-full-continuation-replay",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p53-raw-result"
+    },
+    {
+      "id": "edge:2102",
+      "from": "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+      "relation": "PART_OF",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2103",
+      "from": "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p53-full-repaired-phase51-semantic-replay"
+    },
+    {
+      "id": "edge:2104",
+      "from": "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p53-m5-element-local-full-continuation-replay",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2105",
+      "from": "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+      "relation": "EXTENDS",
+      "to": "claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS",
+      "note": "Phase 53 extends the six-slot static repair through the complete frozen Phase-51 replay while retaining the separate saved-backend gate."
+    },
+    {
+      "id": "edge:2106",
+      "from": "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p53-full-repaired-phase51-continuation-rerun",
+      "note": "The requested full roots, flows, derivatives, tangents, mutations, orientations, ledgers, reference, topology, and null guards all executed without retuning."
+    },
+    {
+      "id": "edge:2107",
+      "from": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "relation": "PART_OF",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2108",
+      "from": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p53-full-repaired-phase51-semantic-replay"
+    },
+    {
+      "id": "edge:2109",
+      "from": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p53-m5-element-local-full-continuation-replay",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2110",
+      "from": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p53-full-repaired-phase51-continuation-rerun",
+      "note": "The full replay is complete; only its inherited evaluator comparison remains nonpassing, so the open question is narrowed rather than silently closed."
+    },
+    {
+      "id": "edge:2111",
+      "from": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS"
+    },
+    {
+      "id": "edge:2112",
+      "from": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "relation": "MOTIVATES",
+      "to": "open:p54-pinned-phase51-global-noncse-backend-diagnostic"
+    },
+    {
+      "id": "edge:2113",
+      "from": "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
+      "relation": "BLOCKED_BY",
+      "to": "open:p54-pinned-phase51-global-noncse-backend-diagnostic"
+    },
+    {
+      "id": "edge:2114",
+      "from": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2115",
+      "from": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p53-full-repaired-phase51-semantic-replay"
+    },
+    {
+      "id": "edge:2116",
+      "from": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p53-m5-element-local-full-continuation-replay",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2117",
+      "from": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "relation": "EXTENDS",
+      "to": "claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION",
+      "note": "The static limitation is replaced by a complete local replay, but straight arms and every global object remain uncomputed."
+    },
+    {
+      "id": "edge:2118",
+      "from": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:2119",
+      "from": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+      "note": "The bounded evaluator diagnostic precedes any authorization to search straight arms."
+    },
+    {
+      "id": "edge:2120",
+      "from": "open:p53-full-repaired-phase51-continuation-rerun",
+      "relation": "PART_OF",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2121",
+      "from": "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+      "relation": "PART_OF",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2122",
+      "from": "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p53-full-repaired-phase51-continuation-rerun"
+    },
+    {
+      "id": "edge:2123",
+      "from": "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p51-cse-noncse-clongdouble-rhs-consistency",
+      "note": "Phase 52 resolved the production dtype defect and Phase 53 narrowed the surviving discrepancy to the immutable saved global non-CSE control."
+    },
+    {
+      "id": "edge:2124",
+      "from": "artifact:p53-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p52-raw-result"
+    },
+    {
+      "id": "edge:2125",
+      "from": "artifact:p53-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p53-input-manifest"
+    },
+    {
+      "id": "edge:2126",
+      "from": "artifact:p53-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p53-script"
+    },
+    {
+      "id": "edge:2127",
+      "from": "artifact:p53-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p53-raw-result"
+    },
+    {
+      "id": "edge:2128",
+      "from": "artifact:p53-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p51-raw-result"
     }
   ],
   "kg_bridges": [
@@ -22433,6 +22834,16 @@
       "checked_at_utc": "2026-08-23T09:21:15Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase52 m5 CSE runtime dtype static element-local RHS repair",
       "note": "No authorized exact external correspondence or writer is available. The hidden binary64 implementation finding, six-slot element-local repair, diagnostic negative control, Phase-53 rerun, and strict global boundary remain repository-local calculation-workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "phase:p53",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-23T12:47:02Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase53 m5 element-local full continuation replay pinned Phase51 global non-CSE backend",
+      "note": "No authorized exact external correspondence or writer is available. The complete valid-inconclusive replay, independent six-slot reference pass, sole saved-backend comparison nonpass, and strict global, physics, and TOE null boundary remain repository-local calculation-workbench evidence; no external UID was invented."
     }
   ]
 }

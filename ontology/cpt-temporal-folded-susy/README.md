@@ -60,8 +60,9 @@ verifies 147/147 stored hashes (143 artifacts and 4 policies).
 | Does Phase 49 repair the frozen `u2` ladder with a practical NumPy implementation? | Yes within the pinned long-double platform contract. Retaining clongdouble through state formation, generated gradient, `L.T` contraction, and outer minus-conjugation before one complete-flow complex128 projection makes all eighteen paths, ninety probes, endpoint states, full ladders, independent columns, and tangent comparisons pass. The worst derivative discrepancy is `0.001216`, below `0.005`. This resolves the scoped implementation choice, not formal endpoint transport, portability, a formula defect, or Gate 1. | `claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS`; `claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION`; `claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION`; `open:p49-formal-endpoint-transport-and-portable-flow-adapter` |
 | Does Phase 50 establish a cutoff-stable \(m=4\to m=5\) cycle transport? | No. It supports one explicitly stabilized, sampled common-ambient route for five frozen source-labelled saddles and their local upward nine-planes. All fine/coarse/reverse, tangent, reflection, metric-path, stabilizer, and basis controls pass, with no sampled Hessian zero or inertia change. The action bridge is not an exact nesting, and no Phase-41 Gamma–K intersection, nonlinear upward manifold, physical determinant line, cutoff limit, global cycle, or physics result is continued. | `claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS`; `claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT`; `claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION`; `open:p50-frozen-m5-gamma-k-local-intersection-continuation` |
 | Does Phase 51 support the frozen phi-plus \(m=5\) Gamma–K continuation? | Not yet. The run is valid and all 17/9/17 phi-plus path nodes, 17 independent phi-minus reflection nodes, three full-J controls, the path tangent, four endpoint mutations, and 68 action/first-cap ledgers pass. But the frozen CSE/non-CSE RHS relative gate reaches `1.690e-8` against `5e-10`, so the only licensed local label is `INCONCLUSIVE`. This is not no-root or contradicted, and it does not resolve the Phase-50 open problem or establish a global intersection. | `claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE`; `claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION`; `open:p51-cse-noncse-clongdouble-rhs-consistency` |
-| Does Phase 52 repair the evaluator and support the Phase-51 continuation? | It resolves only the static evaluator layer. The actual Phase-51 m=4 and m=5 joint CSE callables each execute 19 hidden binary64 temporaries. The element-local clongdouble candidate passes all six frozen gradient/RHS comparisons (`7.051e-11`/`1.567e-10` maxima below `5e-10`); the joint long-namespace candidate remains a declared accuracy negative control. No repaired root or flow path ran, so Phase 51 is not reclassified and Phase 53 must replay the full continuation. | `claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED`; `claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS`; `claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION`; `open:p53-full-repaired-phase51-continuation-rerun` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–52 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–52 scope guards |
+| Does Phase 52 repair the evaluator and support the Phase-51 continuation? | It resolves only the static evaluator layer. The actual Phase-51 m=4 and m=5 joint CSE callables each execute 19 hidden binary64 temporaries. The element-local clongdouble candidate passes all six frozen gradient/RHS comparisons (`7.051e-11`/`1.567e-10` maxima below `5e-10`); the joint long-namespace candidate remains a declared accuracy negative control. Phase 52 itself ran no repaired root or flow path and did not reclassify Phase 51. Phase 53 has since executed the full replay and is indexed in the next row. | `claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED`; `claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS`; `claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION`; `open:p53-full-repaired-phase51-continuation-rerun` |
+| Does Phase 53 support the repaired phi-plus continuation or establish a global intersection? | No. The complete replay is a `VALID_RUN`: 8/8 exact and 10/11 numerical gates pass, including 68 accepted roots, 146 retained integrations, all 68 action/first-cap ledgers, and an independent six-slot 80/120-decimal full-evaluator reference with 54 canonical Hessian probes. The sole inherited comparison to the saved pinned Phase-51 global non-CSE numerical backend remains `INCONCLUSIVE` (`6.645e-9` versus `5e-10`). Straight arms were not searched and every global, cutoff, continuum, physics, and TOE output remains null. | `claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS`; `claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND`; `claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION`; `open:p54-pinned-phase51-global-noncse-backend-diagnostic` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–53 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–53 scope guards |
 
 ### Phase 23 reading path
 
@@ -514,6 +515,29 @@ label:
 4. `claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION` keeps every
    unexecuted flow/path/control and every root/component/end, determinant, cutoff, continuum, global,
    physical, and TOE promotion explicitly outside scope. Gate 1 remains open.
+
+### Phase 53 reading path
+
+Phase 53 executes the previously open full replay and narrows, rather than erases, the remaining issue:
+
+1. `claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS` records a complete
+   frozen replay: all eight exact checks, 68 roots, 146 retained integrations, reflection, full-J,
+   tangent, endpoint mutations, orientations, and every action/first-cap and no-fallback ledger pass;
+2. the separately constructed six-slot global-expression reference passes at 80/120 decimal digits,
+   including all 54 canonical Hessian probes. The repaired production evaluator is therefore directly
+   supported on those slots without treating the saved Phase-51 numerical control as the reference;
+3. `claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND` preserves the
+   sole nonpass: maximum trajectory RHS disagreement with that immutable control is `6.645e-9` against
+   `5e-10`. This does not prove which backend operation is defective;
+4. `open:p53-full-repaired-phase51-continuation-rerun` is narrowed to that sole comparison, and
+   `open:p54-pinned-phase51-global-noncse-backend-diagnostic` freezes the next bounded calculation at the
+   six actual center-launch slots: gradient/RHS evaluator attribution only, with no ODE, root, trajectory,
+   transport, or reintegration. Any trajectory transport/reintegration is conditional on the Phase-54
+   result and remains a separate Phase-55 question rather than a current phase or evidence node. Straight
+   arms are not yet authorized;
+5. `claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION` retains every
+   root-exhaustion, component/end, determinant, cutoff, continuum, global, physical, and TOE null. Gate 1
+   remains `OPEN_PARTIAL_PROGRESS`.
 
 ## Concept map
 
@@ -1246,6 +1270,7 @@ Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 | 44 | [`phase44_m4_numpy64_local_rhs_error_decomposition.py`](../../cpt_temporal_folded_susy/phase44_m4_numpy64_local_rhs_error_decomposition.py) | [`PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION.md`](../../cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION.md) · [`PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_INPUTS.json) | [`phase44-result.json`](./evidence/phase44-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json) |
 | 51 | [`phase51_m5_gamma_k_local_continuation.py`](../../cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py) | [`PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md`](../../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md) · [`PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json) | [`phase51-result.json`](./evidence/phase51-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json) |
 | 52 | [`phase52_m5_cse_runtime_dtype_and_rhs_repair.py`](../../cpt_temporal_folded_susy/phase52_m5_cse_runtime_dtype_and_rhs_repair.py) | [`PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md`](../../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md) · [`PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json) | [`phase52-result.json`](./evidence/phase52-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json) |
+| 53 | [`phase53_m5_element_local_full_continuation.py`](../../cpt_temporal_folded_susy/phase53_m5_element_local_full_continuation.py) | [`PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_INPUTS.json) | [`phase53-result.json`](./evidence/phase53-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -1278,8 +1303,8 @@ Phase 24 adds one more unresolved bridge at `phase:p24`. The older
 `sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
 planning node and was deliberately not reused. Phases 25–40 add sixteen fresh unresolved phase lookups;
 similarly numbered historical planning nodes were not reused. The recursive-audit policy and the ordered
-five-gate policy add two separate repository-workflow lookups. Phases 44, 46, 47, 51, and 52 add five
-further repository-local phase lookups, so there are thirty-one expected unresolved bridges in the current
+five-gate policy add two separate repository-workflow lookups. Phases 44, 46, 47, 51, 52, and 53 add six
+further repository-local phase lookups, so there are thirty-two expected unresolved bridges in the current
 graph. The latter remain local because no authorized external UID or
 writer exists; no identity was invented for the roadmap.
 A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,
