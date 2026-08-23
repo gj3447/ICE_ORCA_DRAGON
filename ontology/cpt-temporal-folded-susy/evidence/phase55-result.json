@@ -1,0 +1,276 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_20260823",
+  "phase": "P55",
+  "observed_at_utc": "2026-08-23T17:23:52Z",
+  "command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py",
+    "sha256": "880fe68ab5a068f02045d116ab10835e72e3cc5a59793498a4b2ef245bf23dcf",
+    "introduced_in_commit": "ea7df7c04a9774ecb300f4e54684c54102fb9995"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P55.inputs.byte_pins_commits_blobs_self_digests_and_corrected_Phase54",
+      "statement": "26 recursive pins plus manifest and runner commits, blobs, bytes, self-digests, and the corrected Phase-54 classification matched",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.roots.three_saved_phi_plus_root_and_endpoint_digests",
+      "statement": "all three saved phi_plus roots, P50 saddles, intersections, endpoint targets, and residual scalars matched their frozen digests",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.launch.zero_solve_P50_saddle_pinned_reconstruction_and_identical_initials",
+      "statement": "three zero-solve P50-saddle-pinned launches passed and both backends consumed byte-identical initial complex128 buffers",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.evaluators.Phase54_core_bindings_and_Phase53_EL_long_projection",
+      "statement": "the Phase-54 four-core evaluator bindings and full Phase-53 element-local projection matched, with phi_plus as the only science source",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.ODE.six_attempt_slot_fraction_and_failure_placeholder_topology",
+      "statement": "six ODE attempt slots, five fractions per attempt, and every downstream evaluated or placeholder key matched the frozen topology",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.conventions.fixed_sum_Decimal_gates_ordinary_transpose_single_outer_conjugation_and_boundary",
+      "statement": "fixed element sums, exact Decimal gates, ordinary transpose, one outer minus-conjugation, and one solver-boundary cast were retained",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.reference.direct_global_independence_and_state_lift",
+      "statement": "the unreduced direct-global 80/120-decimal reference remained independent of native outputs and lifted completed state decimals",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.guard.validator_scope_historical_immutability_and_global_nulls",
+      "statement": "historical artifacts were immutable, prohibited-call counters stayed zero, required fields retained their null or false boundary, and global promotion remained PROHIBITED",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P55.reference.thirty_state_80_120_stability",
+      "statement": "all available direct-global references on thirty sampled states passed the frozen 80/120-decimal stability gate",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.reconstruction.EL_long_saved_Phase53_endpoints_and_residuals",
+      "statement": "raw NONPASS transported as FAIL: the lambda-0.5 reconstructed EL_long scaled residual and saved-scalar difference exceed the unchanged 2e-7 reconstruction gate",
+      "status": "FAIL"
+    },
+    {
+      "id": "P55.production_states.core_schedule_matrix_vs_direct_120",
+      "statement": "the complete fifteen-production-state aggregate selector matrix exactly reproduced GN_std=false, GN_long=false, EL_std=true, EL_long=true",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.candidate_states.EL_std_and_EL_long_vs_direct_120",
+      "statement": "candidate-state EL_std and EL_long active stages remained below their frozen direct-120 reference gates",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.same_point.EL_std_EL_long_blend_and_completed_RHS",
+      "statement": "same-point EL_std and EL_long blended gradients and completed RHS values passed the frozen pair gates",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.trajectory.all_fraction_and_endpoint_state_transfer",
+      "statement": "all fifteen paired physical trajectory fractions and all three endpoints passed the unchanged 2e-7 state-transfer gate",
+      "status": "PASS"
+    },
+    {
+      "id": "P55.residual.candidate_absolute_and_candidate_production_transfer",
+      "statement": "raw NONPASS transported as FAIL: both element-local backends have a lambda-0.5 absolute scaled residual above 2e-7 even though their residual-vector difference passes",
+      "status": "FAIL"
+    },
+    {
+      "id": "P55.arithmetic.telescopes_finiteness_solver_completion_and_returned_sample_xi_norm",
+      "statement": "all telescopes and finiteness checks passed, all six solvers completed, and every returned sample xi norm stayed below 40",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "numerical_checks": 8,
+    "calculation": "three-root P50-saddle-pinned launch reconstruction and element-local trajectory schedule-transfer audit",
+    "run_status": "VALID_RUN",
+    "classification": "P55_P50_SADDLE_PINNED_EL_LONG_TRAJECTORY_RECONSTRUCTION_NONPASS",
+    "status_transport": {
+      "raw_result_statuses": {
+        "PASS": 6,
+        "NONPASS": 2
+      },
+      "snapshot_statuses": {
+        "PASS": 6,
+        "FAIL": 2
+      },
+      "mapping": "The research-run-evidence/v1 schema has no NONPASS enum. Both raw NONPASS statuses are transported as FAIL without invalidating the zero-exit VALID_RUN. The reconstruction prerequisite is decisive for the frozen classification; the downstream candidate-residual aggregate is retained diagnostically after that branch is selected."
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json",
+      "input_manifest_sha256": "7d5730252356c886671c1d9877bcbb44e49f7e3830d5307d25f6ed951418685d",
+      "input_manifest_effective_commit": "10bb1ca9f735e6abc885206c049506da49c3a96e",
+      "input_manifest_git_blob_oid": "bb7b9c2409528918cf8a91d7ac3265d817cbfc2c",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_RESULT.json",
+      "raw_result_outer_sha256": "c67ed1d3a078bbde8cd7693aa7fe8a5f377c41d6f33a64476913bca2b4748738",
+      "raw_result_payload_sha256_without_self": "7409b408e9d86306c2e75fe2a175f13b36e55d978af6b3ad92c1f998995b9592",
+      "raw_result_introduced_in_commit": "d09b1f3c90f1a276d704c8454fe79e538baa3e57",
+      "raw_result_git_blob_oid": "b7a3574fa7fac4b98017e6bcf8571aaccb5ad8ce",
+      "raw_result_size_bytes": 5464568,
+      "post_evaluation_rehash_count": 28,
+      "post_evaluation_all_unchanged": true
+    },
+    "operational_wrapper": {
+      "guard": "proxmox-scratch run phase55-authoritative",
+      "runner_exit_code": 0,
+      "first_wrapper_exit_code": 1,
+      "first_wrapper_error": "post-parser referenced a superseded summary-key spelling after the runner completed",
+      "scientific_effect": "none; strict parsing, self-digest verification, and the independent rerun used the preserved complete payload"
+    },
+    "independent_reproduction": {
+      "guard": "proxmox-scratch run phase55-authoritative-repro",
+      "exit_code": 0,
+      "byte_identical": true,
+      "bytes": 5464568,
+      "sha256": "c67ed1d3a078bbde8cd7693aa7fe8a5f377c41d6f33a64476913bca2b4748738",
+      "self_digest": "7409b408e9d86306c2e75fe2a175f13b36e55d978af6b3ad92c1f998995b9592"
+    },
+    "runtime": {
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "python": "CPython 3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "longdouble_itemsize_bytes": 16,
+      "clongdouble_itemsize_bytes": 32,
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      }
+    },
+    "fixed_saddles": [
+      {
+        "lambda": 0.0,
+        "gradient_max_abs": "1.605326015291630112842532e-11",
+        "hessian_min_abs_eigenvalue": "4.194252303687439287216421e+00",
+        "inertia": [5, 4, 0],
+        "status": "PASS"
+      },
+      {
+        "lambda": 0.5,
+        "gradient_max_abs": "6.793096205990820091180638e-10",
+        "hessian_min_abs_eigenvalue": "4.220358798871558292375994e+00",
+        "inertia": [5, 4, 0],
+        "status": "PASS"
+      },
+      {
+        "lambda": 1.0,
+        "gradient_max_abs": "7.554616654470436287738266e-12",
+        "hessian_min_abs_eigenvalue": "4.251015820235481967870328e+00",
+        "inertia": [5, 4, 0],
+        "status": "PASS"
+      }
+    ],
+    "endpoint_and_residual_summary": [
+      {
+        "lambda": 0.0,
+        "EL_long_saved_endpoint_relative": "1.841428494445196551275089e-09",
+        "EL_std_EL_long_endpoint_relative": "7.984281198101096096018892e-12",
+        "EL_long_scaled_residual_max_abs": "1.898154316266292083491587e-08",
+        "saved_scaled_residual_max_abs": "3.145540391278385e-13",
+        "saved_scalar_absolute_difference": "1.898122860862379299641587e-8",
+        "status": "PASS"
+      },
+      {
+        "lambda": 0.5,
+        "EL_long_saved_endpoint_relative": "2.633122460998127799013128e-08",
+        "EL_std_EL_long_endpoint_relative": "7.945690926713899076226763e-12",
+        "EL_long_scaled_residual_max_abs": "2.675225930464415314308127e-07",
+        "EL_std_scaled_residual_max_abs": "2.674409721459269917431811e-07",
+        "saved_scaled_residual_max_abs": "2.644224917615098e-10",
+        "saved_scalar_absolute_difference": "2.672581705546800216308127e-7",
+        "candidate_production_residual_vector_max_abs_difference": "8.162090051453968763154820e-11",
+        "status": "NONPASS"
+      },
+      {
+        "lambda": 1.0,
+        "EL_long_saved_endpoint_relative": "8.275067543573593348187115e-11",
+        "EL_std_EL_long_endpoint_relative": "7.450873396267996795916830e-12",
+        "EL_long_scaled_residual_max_abs": "8.705973243903843780910540e-10",
+        "saved_scaled_residual_max_abs": "9.068878770466091e-14",
+        "saved_scalar_absolute_difference": "8.705066356026797171810540e-10",
+        "status": "PASS"
+      }
+    ],
+    "aggregate_schedule_matrix": {
+      "GN_std": false,
+      "GN_long": false,
+      "EL_std": true,
+      "EL_long": true,
+      "complete_production_selector_count": 120,
+      "status": "PASS"
+    },
+    "record_counts": {
+      "sampled_states": 30,
+      "native_stage_vectors": 540,
+      "active_native_comparisons": 450,
+      "direct_reference_stage_vectors": 360,
+      "native_to_direct_120_comparisons": 540,
+      "selectors": 180,
+      "controlled_contrasts": 450,
+      "telescopes": 360,
+      "raw_reference_gradients": 120,
+      "trajectory_pairs": 15,
+      "endpoint_pairs": 3,
+      "scaled_residuals": 6,
+      "all_placeholders": 0,
+      "canonical_key_sequence_sha256": "da2807b73b226bdf6d0f04d807080dd55967d43c1916aadc53b359ab8ed9363a"
+    },
+    "scope_boundary": {
+      "exact_Phase53_launch_claim_allowed": false,
+      "historical_Phase51_reclassified": false,
+      "historical_Phase53_reclassified": false,
+      "historical_Phase53_classification_preserved_as": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+      "qualified_Phase56_state_RHS_candidate": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "physics_claim": null,
+      "TOE_claim": null,
+      "phase56_is_diagnostic_only": true,
+      "next_open_problem": "diagnose the lambda-0.5 saved-residual reconstruction mismatch without weakening the frozen threshold or claiming unavailable exact Phase-53 launch bytes"
+    },
+    "required_global_nulls": {
+      "TOE_claim": null,
+      "all_saddles_and_upward_components_complete": false,
+      "bounded_chain_signed_sum": null,
+      "cap_reintersections_searched": false,
+      "common_determinant_line_constructed": false,
+      "complete_global_signed_intersection_vector": null,
+      "continuation_reclassification": null,
+      "continuum_limit": null,
+      "cutoff_limit": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_n_sigma": null,
+      "global_promotion": "PROHIBITED",
+      "historical_Phase51_classification_after": null,
+      "historical_Phase53_classification_after": null,
+      "physical_original_cycle_derived": false,
+      "physics_claim": null,
+      "promoted_output": null,
+      "root_exhaustion_proved": false,
+      "straight_arm_intersections_searched": false
+    }
+  }
+}

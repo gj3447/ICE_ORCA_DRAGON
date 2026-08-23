@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–54 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–55 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-23T15:10:33Z` Phase 54 graph update, the collection has 736 nodes and 2167
-edges. Validation verifies 155/155 stored hashes (151 artifacts and 4 policies). The Phase 16–54 run
-snapshots contain 482 named exact checks, all `PASS`, and 344 typed numerical-ledger checks: 329
-`PASS`, twelve `FAIL`, and three
+At the recorded `2026-08-23T17:29:50Z` Phase 55 graph update, the collection has 748 nodes and 2210
+edges. Validation verifies 160/160 stored hashes (156 artifacts and 4 policies). The Phase 16–55 run
+snapshots contain 490 named exact checks, all `PASS`, and 352 typed numerical-ledger checks: 335
+`PASS`, fourteen `FAIL`, and three
 `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
@@ -54,8 +54,8 @@ numerical `INCONCLUSIVE` record. All frozen continuation, reflection, full-J, pa
 action, and first-cap controls pass, but the CSE/non-CSE same-point RHS relative comparison reaches
 `1.690e-8` against `5e-10`. The valid run is consequently local-continuation `INCONCLUSIVE`, not
 no-root or contradicted; the Phase-50 continuation problem and Gate 1 remain open. One legacy separately
-recorded Phase-18 numerical control brings the numerical-record total to 345
-(330 pass, twelve fail, three inconclusive). Phase 52 reproduces 19 hidden binary64 temporaries in each
+recorded Phase-18 numerical control brings the numerical-record total to 353
+(336 pass, fourteen fail, three inconclusive). Phase 52 reproduces 19 hidden binary64 temporaries in each
 pinned m=4 and m=5 joint CSE evaluation and supports an element-local clongdouble repair on the six
 static source/lambda slots: maximum gradient and RHS relative errors are `7.051e-11` and `1.567e-10`,
 below `5e-10`. The dtype-correct joint long-namespace candidate remains a declared non-invalidating
@@ -70,7 +70,13 @@ both element-local cells pass all 12 selector records; the worst active relative
 `6.763e-9`, `7.598e-9`, `2.243e-10`, and `1.567e-10` against `5e-10`. This supports element-local
 schedule-only sufficiency on the six launch states, not a unique primitive defect or trajectory theorem.
 It runs zero roots and zero ODEs, leaves Phase 51 and Phase 53 unchanged, and opens only the bounded
-Phase-55 three-root/six-ODE trajectory-validator qualification. These
+Phase-55 three-root/six-ODE trajectory-validator qualification. Phase 55 completes that validator as a
+valid reconstruction `NONPASS`: all six ODEs and fifteen element-local trajectory pairs pass, and the
+Phase-54 schedule matrix is reproduced, but the explicitly P50-saddle-pinned lambda-half reconstruction
+has scaled residual `2.675e-7` and saved-scalar difference `2.673e-7`, both above the unchanged `2e-7`
+gate. The backend agreement is therefore diagnostic rather than a qualified schedule transfer. The
+Phase-56 full-replay candidate remains null; the next bounded problem is a one-root lambda-half
+saddle/launch provenance and residual-conditioning audit. These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -156,6 +162,10 @@ confidence.
 ./ice ontology trace open:p54-pinned-phase51-global-noncse-backend-diagnostic --depth 2
 ./ice ontology trace claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS --depth 2
 ./ice ontology trace open:p55-p53-trajectory-schedule-transfer-audit --depth 2
+./ice ontology trace claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF --depth 2
+./ice ontology trace claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS --depth 2
+./ice ontology trace claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION --depth 2
+./ice ontology trace open:p56-lambda-half-launch-residual-provenance-audit --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -320,12 +330,14 @@ The repaired evaluator passes its independent six-slot full-evaluator reference,
 saved pinned Phase-51 global non-CSE numerical backend remains `INCONCLUSIVE`. Phase 54 resolves the
 six-launch-state diagnostic narrowly: both global schedules fail and both element-local schedules pass,
 so `open:p54-pinned-phase51-global-noncse-backend-diagnostic` is closed only for that static matrix.
-Because Phase 53 did not serialize its fifteen intermediate fraction states, the next bounded problem is
-`open:p55-p53-trajectory-schedule-transfer-audit`. Phase 53 also did not serialize its authoritative
-recomputed launch objects, so the validator must label its pinned-Phase-50-saddle reconstructions as
-Phase-55 launches, reproduce saved Phase-53 endpoints/residuals first, and then regenerate exactly three
-production and three candidate paths without solving roots or saddles or replaying the continuation.
-Straight arms remain unsearched and all global, physical, and TOE promotions remain barred.
+Phase 55 then regenerates exactly three production and three candidate paths from explicitly labelled
+P50-saddle-pinned launches. All paired trajectories pass, but the lambda-half production residual does
+not reproduce the saved Phase-53 scalar under the unchanged reconstruction gate. Consequently
+`open:p55-p53-trajectory-schedule-transfer-audit` resolves as reconstruction `NONPASS`, not schedule
+qualification. The next bounded problem is `open:p56-lambda-half-launch-residual-provenance-audit`,
+which separates fresh Phase-53-algorithm center and launch effects from solver-profile sensitivity at
+that single root. Straight arms remain unsearched and all global, physical, and TOE promotions remain
+barred.
 
 ## Identifier families
 

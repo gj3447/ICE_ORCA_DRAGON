@@ -6,7 +6,7 @@ description: TypeScript/Effect control plane for locked Python research computat
 # ICE_ORCA_DRAGON documentation
 
 ICE_ORCA_DRAGON is a standalone computation workbench. Its TypeScript/Effect control plane discovers,
-runs, and reproduces locked Python kernels. The committed catalog contains 86 runnable entries; verify the
+runs, and reproduces locked Python kernels. The committed catalog contains 87 runnable entries; verify the
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
@@ -60,6 +60,7 @@ npm run check
 | [`../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md`](../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md) | frozen 90-slot high-precision local-reference arbitration, 13/90 operational NumPy64-output mismatches, 28/33 same-step finite-difference evidence with five exceptions, and the still-untested integrated tangent and global cycle |
 | [`../cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION.md) | latest full Phase-51 semantic replay with a coherent element-local action/gradient/Hessian evaluator; six-slot 80/120-decimal reference PASS, one inherited global non-CSE RHS agreement non-pass, valid local `INCONCLUSIVE`, and no global/physics/TOE promotion |
 | [`../cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT.md`](../cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT.md) | static six-state arithmetic attribution: both element-local schedules pass direct-120 selector gates while both global non-CSE evaluators do not; no trajectory, continuation, global, physics, or TOE inference |
+| [`../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md`](../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md) | three-root/six-ODE reconstructed trajectory audit: element-local backends agree, but the lambda-half P50-saddle-pinned residual misses the unchanged reconstruction gate; schedule transfer is not qualified, required fields remain null/false, and global promotion is prohibited |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | contribution and verification workflow |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | historical repository evolution |
 | [`audits/README.md`](audits/README.md) | reproducibility and method-audit index |

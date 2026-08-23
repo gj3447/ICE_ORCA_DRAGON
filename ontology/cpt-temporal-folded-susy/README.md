@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-23T15:10:33Z`; 736 nodes, 2167 edges). Run details live in the
+`2026-08-23T17:29:50Z`; 748 nodes, 2210 edges). Run details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 155/155 stored hashes (151 artifacts and 4 policies).
+verifies 160/160 stored hashes (156 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -63,7 +63,8 @@ verifies 155/155 stored hashes (151 artifacts and 4 policies).
 | Does Phase 52 repair the evaluator and support the Phase-51 continuation? | It resolves only the static evaluator layer. The actual Phase-51 m=4 and m=5 joint CSE callables each execute 19 hidden binary64 temporaries. The element-local clongdouble candidate passes all six frozen gradient/RHS comparisons (`7.051e-11`/`1.567e-10` maxima below `5e-10`); the joint long-namespace candidate remains a declared accuracy negative control. Phase 52 itself ran no repaired root or flow path and did not reclassify Phase 51. Phase 53 has since executed the full replay and is indexed in the next row. | `claim:P52_PHASE51_HIDDEN_BINARY64_CSE_CONTRACT_VIOLATION_IS_REPRODUCED`; `claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS`; `claim:P52_STATIC_REPAIR_DOES_NOT_RATIFY_PHASE51_CONTINUATION_OR_GLOBAL_INTERSECTION`; `open:p53-full-repaired-phase51-continuation-rerun` |
 | Does Phase 53 support the repaired phi-plus continuation or establish a global intersection? | No. The complete replay is a `VALID_RUN`: 8/8 exact and 10/11 numerical gates pass, including 68 accepted roots, 146 retained integrations, all 68 action/first-cap ledgers, and an independent six-slot 80/120-decimal full-evaluator reference with 54 canonical Hessian probes. The sole inherited comparison to the saved pinned Phase-51 global non-CSE numerical backend remains `INCONCLUSIVE` (`6.645e-9` versus `5e-10`). Straight arms were not searched and every global, cutoff, continuum, physics, and TOE output remains null. | `claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS`; `claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND`; `claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION`; `open:p54-pinned-phase51-global-noncse-backend-diagnostic` |
 | What did Phase 54 resolve about that backend discrepancy? | On the exact six launch states, both global schedules miss the `5e-10` selector while both element-local schedules pass all 12 selector records. Long arithmetic alone is insufficient; the tested element-local schedule is sufficient on this finite matrix. No trajectory was run, Phase 51 and Phase 53 remain unchanged, and every global/physics/TOE output stays null. | `claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS`; `claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS`; `claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION`; `open:p55-p53-trajectory-schedule-transfer-audit` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–54 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–54 scope guards |
+| Did Phase 55 qualify the element-local schedule on reconstructed trajectories? | No. All six ODEs completed, all fifteen `EL_std`/`EL_long` trajectory pairs passed, and the Phase-54 aggregate schedule matrix was reproduced. However, the explicitly P50-saddle-pinned reconstruction at `lambda=0.5` gave an `EL_long` scaled residual of `2.675e-7`, above the unchanged `2e-7` prerequisite; its saved-scalar difference was `2.673e-7`. The valid run therefore stops at reconstruction `NONPASS`, leaves the Phase-56 candidate null, and opens only a lambda-half launch-provenance/conditioning audit. | `claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF`; `claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS`; `claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION`; `open:p56-lambda-half-launch-residual-provenance-audit` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–55 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–55 scope guards |
 
 ### Phase 23 reading path
 
@@ -559,6 +560,31 @@ Phase 54 resolves the six-state backend question narrowly and opens a distinct t
 5. `claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION`
    preserves both historical labels and all global, cutoff, continuum, physics, and TOE nulls. Gate 1
    remains `OPEN_PARTIAL_PROGRESS`.
+
+### Phase 55 reading path
+
+Phase 55 runs the bounded trajectory validator but stops at its earlier reconstruction prerequisite:
+
+1. `claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF`
+   records that all three saved endpoints pass the unchanged `2e-7` coordinate gate, while the
+   lambda-half production residual (`2.6752259304644153e-7`) and saved-scalar difference
+   (`2.6725817055468002e-7`) do not. Endpoint proximity is therefore insufficient to reproduce the
+   saved residual scalar;
+2. `claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS` retains
+   all fifteen trajectory-pair passes, all three endpoint-pair passes, residual-vector differences at
+   the `8.22e-11` scale, and the exact Phase-54 aggregate schedule matrix. Under the frozen precedence,
+   these are diagnostics and do not qualify schedule transfer after the reconstruction NONPASS;
+3. `open:p55-p53-trajectory-schedule-transfer-audit` is resolved by the valid reconstruction-NONPASS
+   branch. It does not become a negative theorem about every possible faithful Phase-53 reconstruction;
+4. `open:p56-lambda-half-launch-residual-provenance-audit` is the next smallest calculation: rerun the
+   Phase-53 saddle-and-launch algorithm at the one failing root, separate center and launch effects in a
+   fixed factorial audit, and test a predeclared refined solver profile without selecting the favorable
+   answer. This Phase 56 label is diagnostic only; the full semantic replay remains deferred and
+   unqualified;
+5. `claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION`
+   keeps the Phase-56 full-replay candidate, historical reclassifications, global signed vector,
+   cutoff/continuum limits, physics claim, and TOE claim null. Gate 1 remains
+   `OPEN_PARTIAL_PROGRESS`.
 
 ## Concept map
 
@@ -1293,6 +1319,7 @@ Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 | 52 | [`phase52_m5_cse_runtime_dtype_and_rhs_repair.py`](../../cpt_temporal_folded_susy/phase52_m5_cse_runtime_dtype_and_rhs_repair.py) | [`PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md`](../../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR.md) · [`PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json) | [`phase52-result.json`](./evidence/phase52-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json) |
 | 53 | [`phase53_m5_element_local_full_continuation.py`](../../cpt_temporal_folded_susy/phase53_m5_element_local_full_continuation.py) | [`PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_INPUTS.json) | [`phase53-result.json`](./evidence/phase53-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json) |
 | 54 | [`phase54_p51_global_noncse_control_audit.py`](../../cpt_temporal_folded_susy/phase54_p51_global_noncse_control_audit.py) | [`PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_INPUTS.json) · [`PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT.md`](../../cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT.md) | [`phase54-result.json`](./evidence/phase54-result.json) · [corrected full raw result](../../cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_RESULT.json) |
+| 55 | [`phase55_p53_root_fixed_launch_schedule_transfer.py`](../../cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py) | [`PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json) · [`PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md`](../../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md) | [`phase55-result.json`](./evidence/phase55-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_RESULT.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 

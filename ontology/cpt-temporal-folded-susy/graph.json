@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-23T15:10:33Z",
+  "updated_at_utc": "2026-08-23T17:29:50Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -393,6 +393,15 @@
         "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
         "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION"
       ]
+    },
+    {
+      "question": "Did Phase 55 qualify element-local standard arithmetic for a full Phase-56 replay?",
+      "answer": "No. The run is valid and the two element-local backends agree on all fifteen sampled fractions, endpoints, and residual-vector transfer, while the Phase-54 aggregate matrix is reproduced. The earlier reconstruction prerequisite fails at lambda 0.5: the P50-saddle-pinned EL_long residual is 2.6752259e-7 and its difference from the saved Phase-53 scalar is 2.6725817e-7, both above 2e-7. Because Phase 53 did not serialize its authoritative launch objects, this is a reconstruction nonpass rather than a schedule-transfer verdict; the Phase-56 candidate is null and no historical, global, physics, or TOE promotion is licensed.",
+      "claim_ids": [
+        "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+        "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+        "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION"
+      ]
     }
   ],
   "reading_paths": [
@@ -744,7 +753,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–54 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, evaluator, replay, and static schedule-attribution record. Phase 49 retains the Phase-48 gradient-only failures while its full-flow path passes; Phase 52 retains the joint long-namespace negative control; Phase 53 retains the sole pinned Phase-51 global non-CSE backend nonpass; and Phase 54 retains both global-schedule failures while both element-local schedules pass the six-state matrix. None of these pinned-platform implementation results is promoted to a portable, trajectory-wide, global, physical, or TOE conclusion.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–55 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, evaluator, replay, static schedule-attribution, and trajectory-validator record. Phase 49 retains the Phase-48 gradient-only failures while its full-flow path passes; Phase 52 retains the joint long-namespace negative control; Phase 53 retains the sole pinned Phase-51 global non-CSE backend nonpass; Phase 54 retains both global-schedule failures while both element-local schedules pass the six-state matrix; and Phase 55 retains its decisive lambda-half reconstruction NONPASS even though the element-local trajectories agree. None of these pinned-platform implementation results is promoted to a portable, qualified full replay, global, physical, or TOE conclusion.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -793,9 +802,13 @@
         "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
         "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
         "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+        "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+        "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p55-p53-trajectory-schedule-transfer-audit",
+        "open:p56-lambda-half-launch-residual-provenance-audit",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -842,7 +855,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–54. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, Phase-51's evaluator-gated nonlinear Gamma--K attempt, Phase-52's hidden-binary64 diagnosis plus six-slot element-local repair, Phase-53's complete but still evaluator-inconclusive replay, and Phase-54's static attribution of the remaining control failure to the tested global schedule rather than precision alone. Stop before assuming trajectory transfer, searching straight arms, claiming portable backend agreement, enumerating nonlinear upward components, or promoting any local ledger to a canonical determinant line, complete original cycle, Stokes chamber, global vector, physical claim, or TOE.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–55. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, Phase-51's evaluator-gated nonlinear Gamma--K attempt, Phase-52's hidden-binary64 diagnosis plus six-slot element-local repair, Phase-53's complete but still evaluator-inconclusive replay, Phase-54's static attribution of the remaining control failure to the tested global schedule rather than precision alone, and Phase-55's valid reconstruction NONPASS at the lambda-half saved residual. Stop before treating the diagnostic EL_std/EL_long agreement as qualification, searching straight arms, claiming portable backend agreement, enumerating nonlinear upward components, or promoting any local ledger to a canonical determinant line, complete original cycle, Stokes chamber, global vector, physical claim, or TOE.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -910,9 +923,13 @@
         "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
         "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
         "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+        "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+        "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p55-p53-trajectory-schedule-transfer-audit",
+        "open:p56-lambda-half-launch-residual-provenance-audit",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -944,7 +961,7 @@
     {
       "id": "reading-path:p50-m5-gamma-k-to-backend-consistency",
       "title": "From the sampled m=5 saddle bridge through static schedule attribution",
-      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's historical 6/6 exact and 9/10 numerical ledger. Phase 52 reproduces hidden binary64 temporaries and supports an element-local clongdouble repair at six static states while retaining a joint-namespace negative control. Phase 53 completes the full frozen replay but remains historically inconclusive at the saved global non-CSE comparison. Phase 54 then shows that both global schedules fail and both element-local schedules pass the static six-state selector, supporting schedule-only sufficiency there. Qualify transfer along three explicitly reconstructed P50-saddle-pinned Phase-55 paths before any full replay or straight-arm search; do not infer no root, resolve the broader Phase-50 problem, or promote the local sampled paths to a global cycle.",
+      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's historical 6/6 exact and 9/10 numerical ledger. Phase 52 reproduces hidden binary64 temporaries and supports an element-local clongdouble repair at six static states while retaining a joint-namespace negative control. Phase 53 completes the full frozen replay but remains historically inconclusive at the saved global non-CSE comparison. Phase 54 then shows that both global schedules fail and both element-local schedules pass the static six-state selector. Phase 55 reproduces that aggregate matrix and records very close EL_std/EL_long paths, but the prerequisite P50-saddle-pinned reconstruction misses the saved Phase-53 scaled residual at lambda 0.5, so no Phase-56 full replay candidate is qualified. Diagnose that launch/residual provenance without weakening the threshold before any full replay or straight-arm search; do not infer no root, resolve the broader Phase-50 problem, or promote the local sampled paths to a global cycle.",
       "nodes": [
         "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
         "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
@@ -962,9 +979,13 @@
         "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
         "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
         "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+        "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+        "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p55-p53-trajectory-schedule-transfer-audit",
+        "open:p56-lambda-half-launch-residual-provenance-audit",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
@@ -9137,10 +9158,10 @@
     {
       "id": "open:p53-full-repaired-phase51-continuation-rerun",
       "type": "open_problem",
-      "title": "Qualify element-local schedule transfer before any second full replay",
-      "summary": "Phase 54 resolved the six-launch-state part of the inherited evaluator comparison narrowly: both global schedules miss the selector and both element-local schedules pass. The fifteen Phase-53 trajectory-fraction states and authoritative recomputed launch objects were not serialized, so the next bounded question requires three explicitly reconstructed P50-saddle-pinned Phase-55 paths with production EL_long and coherent EL_std, not solving roots or saddles or replaying the continuation. The broader root/component/end census and Phase-50/Gate-1 targets remain open.",
-      "question": "Does the Phase-54 element-local schedule attribution persist at five fixed fractions along each of the three P50-saddle-pinned Phase-55 reconstructed paths, and does coherent EL_std remain within frozen same-point, endpoint, and residual gates against production EL_long?",
-      "state": "OPEN_NARROWED_TO_TRAJECTORY_VALIDATOR_QUALIFICATION"
+      "title": "Narrowed by Phase 55 to lambda-half launch and residual provenance",
+      "summary": "Phase 55 executed the requested three-path validator. The Phase-54 aggregate matrix and all fifteen EL_std/EL_long trajectory pairs pass, but the earlier P50-saddle-pinned reconstruction prerequisite fails at lambda 0.5. Because Phase 53 did not serialize its authoritative saddle, factor, launch, or initial-xi bytes, the next bounded question is a one-root fresh-algorithm provenance and residual-conditioning diagnostic, not a second full replay. The broader root/component/end census and Phase-50/Gate-1 targets remain open.",
+      "question": "Does a fresh replay of the Phase-53 saddle-and-launch algorithm recover the saved lambda-half residual target, and how do center, launch, interaction, and solver-profile effects contribute without weakening the frozen gates?",
+      "state": "OPEN_NARROWED_TO_LAMBDA_HALF_LAUNCH_RESIDUAL_PROVENANCE_AUDIT"
     },
     {
       "id": "artifact:p52-input-manifest",
@@ -9417,10 +9438,10 @@
     {
       "id": "open:p55-p53-trajectory-schedule-transfer-audit",
       "type": "open_problem",
-      "title": "Qualify element-local schedule transfer along three P50-saddle-pinned Phase-55 paths",
-      "summary": "The fifteen Phase-53 trajectory-fraction states and its authoritative recomputed saddle/factor/launch objects were not serialized. Freeze a separate validator that reads the three pinned phi-plus/fine-forward roots and pinned Phase-50 saddles at lambda 0, 0.5, and 1 without solving them again. Reconstruct explicitly labelled P50-saddle-pinned Phase-55 launches with the Phase-53 EL_long Hessian, and require regenerated production endpoints and scaled residuals to match saved Phase-53 targets within 2e-7 before interpreting transfer. Run exactly three production EL_long and three coherent candidate EL_std state ODEs under the Phase-51 DOP853 settings, and compare five fixed fractions per trajectory with the same six-stage/direct-decimal, same-point, endpoint, and residual gates. Run no root or saddle solve, continuation, reflection, 68-root topology replay, or historical/global/physics/TOE reclassification.",
+      "title": "Resolved with reconstruction NONPASS: three-path element-local schedule-transfer audit",
+      "summary": "Phase 55 ran all six state ODE attempts and retained all thirty sampled states. The Phase-54 aggregate matrix was reproduced and EL_std/EL_long agreed on all fifteen paired fractions, endpoints, and residual-vector transfers. The earlier P50-saddle-pinned production reconstruction prerequisite failed at lambda 0.5: EL_long residual 2.6752259304644153e-7 and saved-scalar difference 2.6725817055468002e-7 exceed the unchanged 2e-7 gate. Because Phase 53 did not serialize its authoritative saddle, factor, launch, or initial-xi bytes, this is a reconstruction nonpass and the Phase-56 full-replay candidate remains null.",
       "question": "Does the Phase-54 schedule attribution persist across all fifteen P50-saddle-pinned Phase-55 trajectory-fraction states, and is coherent EL_std sufficiently close to EL_long to qualify a separately frozen full replay?",
-      "state": "OPEN"
+      "state": "RESOLVED_WITH_RECONSTRUCTION_NONPASS_AND_NO_PHASE56_FULL_REPLAY_CANDIDATE"
     },
     {
       "id": "artifact:p54-input-manifest",
@@ -9464,6 +9485,149 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase54-result.json",
       "sha256": "934e32b0f49a06b81d48c49e5816c33fecf05f2888c7c898d311da96652c35fe"
+    },
+    {
+      "id": "phase:p55",
+      "type": "phase",
+      "title": "Phase 55 — P50-saddle-pinned launch and trajectory schedule-transfer audit",
+      "summary": "A bounded three-root validator reconstructs explicitly labelled P50-saddle-pinned launches at lambda 0, 0.5, and 1, runs production EL_long and coherent EL_std state ODEs, and audits thirty sampled states against direct decimal references and saved Phase-53 endpoint targets. The run is VALID_RUN with eight exact passes, six numerical passes, one decisive reconstruction NONPASS, and one downstream retained diagnostic NONPASS. Element-local backends agree closely and the Phase-54 aggregate matrix is reproduced, but the lambda-half scaled residual misses the unchanged reconstruction gate, so no Phase-56 full-replay candidate is qualified. Required fields remain null or false, global_promotion is PROHIBITED, and physics, TOE, and promoted outputs remain null.",
+      "state": "ACTIVE_VALID_RECONSTRUCTION_NONPASS"
+    },
+    {
+      "id": "scope:p55-p50-saddle-pinned-launch-schedule-transfer",
+      "type": "scope",
+      "title": "P55 P50-saddle-pinned launch and trajectory schedule-transfer audit",
+      "summary": "Exactly one source label and three saved roots; three pinned P50 saddles; three zero-solve reconstructed launches; six state-only ODE attempts; five fixed fractions per attempt; four production evaluator cells plus two element-local candidate cells; direct-global 80/120-decimal references; unchanged Decimal gates; and strict historical and global null boundaries.",
+      "state": "ACTIVE",
+      "includes": [
+        "saved Phase-53 phi_plus fine-forward roots and targets at lambda 0, 0.5, and 1",
+        "P50-saddle-pinned Phase-55 launch reconstructions using the coherent Phase-53 element-local Hessian",
+        "three production EL_long and three coherent EL_std DOP853 state ODEs with five returned fractions each",
+        "native/reference stages, aggregate schedule selectors, backend pairs, endpoints, scaled residuals, telescopes, and exact record topology"
+      ],
+      "excludes": [
+        "an exact Phase-53 launch identity, because Phase 53 did not serialize authoritative saddle, factor, launch, or initial-xi bytes",
+        "a root or saddle solve, continuation or replay, reflection, tangent, finite-difference Jacobian, action, first-cap, or endpoint mutation",
+        "another source or root, straight arms, cap reintersections, root/component/end exhaustion, Stokes data, determinant line, or physical original cycle",
+        "Phase-51 or Phase-53 reclassification, a qualified Phase-56 full replay, cutoff or continuum limit, global signed intersection, physics claim, or TOE"
+      ]
+    },
+    {
+      "id": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "type": "evidence",
+      "title": "Phase 55 root-fixed launch and trajectory schedule-transfer ledger",
+      "summary": "Eight exact checks pass. Six numerical aggregates pass; the reconstruction prerequisite is a decisive NONPASS and the downstream candidate-residual aggregate is retained as a diagnostic NONPASS. All six ODEs complete; all thirty sampled-state records and 3,000 additional core audit records are evaluated with zero placeholders; all fifteen EL_std/EL_long trajectory pairs and three endpoint pairs pass; and the Phase-54 aggregate matrix matches exactly. At lambda 0.5 both element-local residual maxima exceed 2e-7 while their residual vectors differ by only 8.162090051453969e-11, selecting the reconstruction-NONPASS precedence branch.",
+      "state": "VERIFIED_VALID_RUN_WITH_TWO_DIAGNOSTIC_NONPASS_AGGREGATES",
+      "observed_status": "8_EXACT_PASS_6_NUMERICAL_PASS_1_DECISIVE_RECONSTRUCTION_NONPASS_1_RETAINED_DIAGNOSTIC_NONPASS",
+      "check_ids": [
+        "P55.inputs.byte_pins_commits_blobs_self_digests_and_corrected_Phase54",
+        "P55.roots.three_saved_phi_plus_root_and_endpoint_digests",
+        "P55.launch.zero_solve_P50_saddle_pinned_reconstruction_and_identical_initials",
+        "P55.evaluators.Phase54_core_bindings_and_Phase53_EL_long_projection",
+        "P55.ODE.six_attempt_slot_fraction_and_failure_placeholder_topology",
+        "P55.conventions.fixed_sum_Decimal_gates_ordinary_transpose_single_outer_conjugation_and_boundary",
+        "P55.reference.direct_global_independence_and_state_lift",
+        "P55.guard.validator_scope_historical_immutability_and_global_nulls",
+        "P55.reference.thirty_state_80_120_stability",
+        "P55.reconstruction.EL_long_saved_Phase53_endpoints_and_residuals",
+        "P55.production_states.core_schedule_matrix_vs_direct_120",
+        "P55.candidate_states.EL_std_and_EL_long_vs_direct_120",
+        "P55.same_point.EL_std_EL_long_blend_and_completed_RHS",
+        "P55.trajectory.all_fraction_and_endpoint_state_transfer",
+        "P55.residual.candidate_absolute_and_candidate_production_transfer",
+        "P55.arithmetic.telescopes_finiteness_solver_completion_and_returned_sample_xi_norm"
+      ]
+    },
+    {
+      "id": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "type": "claim",
+      "title": "The P50-saddle-pinned reconstruction misses the saved Phase-53 residual at lambda one-half",
+      "summary": "All three saved endpoints are reproduced within 2e-7, but the lambda-half EL_long scaled residual is 2.6752259304644153e-7 and its difference from the saved Phase-53 scalar is 2.6725817055468002e-7, both above the unchanged 2e-7 gate. The endpoint relative difference remains 2.633122460998128e-8, showing that endpoint-norm agreement alone does not imply scaled-residual reproduction.",
+      "state": "SUPPORTED_ON_THE_FROZEN_LAMBDA_HALF_RECONSTRUCTION",
+      "claim_id": "P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "statement": "On the explicitly labelled P50-saddle-pinned Phase-55 reconstruction at lambda 0.5, the production EL_long scaled endpoint residual and its saved-scalar difference exceed the frozen Phase-53 reconstruction threshold.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "type": "claim",
+      "title": "Element-local backend agreement is diagnostic after the reconstruction prerequisite fails",
+      "summary": "All fifteen paired trajectory fractions and all three endpoints pass with maximum relative difference 7.984281198101096e-12; the candidate/production residual-vector maximum differences are at most 8.215602801239247e-11; and the production schedule matrix is GN_std=false, GN_long=false, EL_std=true, EL_long=true. At lambda 0.5, however, both EL_long and EL_std absolute residuals are about 2.675e-7. Under the frozen precedence this close backend agreement is retained evidence but cannot qualify schedule transfer.",
+      "state": "SUPPORTED_AS_DIAGNOSTIC_AGREEMENT_NOT_QUALIFICATION",
+      "claim_id": "P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "statement": "On the thirty Phase-55 sampled states, EL_std and EL_long agree within every pair gate and reproduce the Phase-54 aggregate schedule matrix, but the prior reconstruction NONPASS prevents interpreting those diagnostics as a qualified state-RHS transfer.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The reconstruction NONPASS does not qualify Phase 56, reclassify Phase 53, or license global promotion",
+      "summary": "Phase 55 solves no root or saddle, does not replay continuation semantics, and cannot claim exact Phase-53 launches. The qualified Phase-56 state-RHS candidate, promoted output, historical reclassifications, global signed vector, cutoff/continuum limits, physics claim, and TOE claim remain null; root/census/determinant flags remain false; global_promotion is PROHIBITED; and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_RECONSTRUCTION_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "statement": "A valid bounded Phase-55 reconstruction NONPASS leaves the historical continuation labels unchanged and cannot authorize a Phase-56 full replay candidate or any global-cycle, physics, or TOE conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "open:p56-lambda-half-launch-residual-provenance-audit",
+      "type": "open_problem",
+      "title": "Phase 56 diagnostic only: lambda-half launch provenance and scaled-residual conditioning",
+      "summary": "Freeze one lambda-half, phi-plus, saved-root diagnostic. Re-run the Phase-53 saddle algorithm once from the pinned P50 saddle, compare its displacement with a static Newton prediction, and separate P50 versus fresh center and launch choices in a fixed 2 x 2 factorial EL_long ODE audit under primary and refined solver profiles. Retain saved-endpoint differences, full scaled-residual identities, the T-component amplification, center and launch effects, and the nonlinear interaction. Preserve every 2e-7 gate, use no favorable solver-profile selection, and do not call the fresh objects exact historical Phase-53 bytes. This Phase 56 label names only the diagnostic; a full semantic replay remains deferred and unqualified.",
+      "question": "Does replaying the Phase-53 saddle-and-launch algorithm at lambda 0.5 recover the saved residual target, and how much of the observed endpoint/residual change is attributable to center, launch, interaction, or solver-profile sensitivity?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:p55-input-manifest",
+      "type": "artifact",
+      "title": "Phase 55 frozen root-fixed schedule-transfer input manifest",
+      "summary": "Frozen three-root scope, P50-saddle-pinned zero-solve launches, six state ODE attempts, direct decimal references, fixed thresholds and counts, fail-closed classification precedence, immutable historical inputs, and global null boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json",
+      "sha256": "7d5730252356c886671c1d9877bcbb44e49f7e3830d5307d25f6ed951418685d",
+      "introduced_in_commit": "10bb1ca9f735e6abc885206c049506da49c3a96e"
+    },
+    {
+      "id": "artifact:p55-script",
+      "type": "artifact",
+      "title": "Phase 55 root-fixed launch and trajectory schedule-transfer executable",
+      "summary": "Python runner that validates recursive committed provenance, reconstructs P50-saddle-pinned launches, executes paired element-local state ODEs, evaluates all native/direct-reference and relation ledgers with exact Decimal gates, enforces historical and global nulls, and emits canonical self-digested JSON.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py",
+      "sha256": "880fe68ab5a068f02045d116ab10835e72e3cc5a59793498a4b2ef245bf23dcf",
+      "introduced_in_commit": "ea7df7c04a9774ecb300f4e54684c54102fb9995"
+    },
+    {
+      "id": "artifact:p55-raw-result",
+      "type": "artifact",
+      "title": "Phase 55 full raw result",
+      "summary": "The complete 5,464,568-byte VALID_RUN result with eight exact passes, six numerical passes, one decisive reconstruction NONPASS and one downstream retained diagnostic NONPASS, six successful ODE attempts, zero placeholders, exact thirty-state and relation ledgers, reconstruction-NONPASS classification, required null/false boundaries, global_promotion PROHIBITED, and canonical payload self-digest 7409b408e9d86306c2e75fe2a175f13b36e55d978af6b3ad92c1f998995b9592.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_RESULT.json",
+      "sha256": "c67ed1d3a078bbde8cd7693aa7fe8a5f377c41d6f33a64476913bca2b4748738",
+      "introduced_in_commit": "d09b1f3c90f1a276d704c8454fe79e538baa3e57"
+    },
+    {
+      "id": "artifact:p55-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 55 evidence snapshot",
+      "summary": "Compact typed extract preserving all eight exact and eight numerical checks, explicit NONPASS-to-FAIL schema transport, command and artifact provenance, byte-identical reproduction, saddle/endpoint/residual summaries, exact record counts, the null Phase-56 candidate, and every global, physics, and TOE boundary. The pinned raw result remains byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase55-result.json",
+      "sha256": "56e6a1d4fcc48e7d9f39b6762c85a23f0d6711b6f3faba9455439692599d1120"
+    },
+    {
+      "id": "artifact:p55-report",
+      "type": "artifact",
+      "title": "Phase 55 bounded result report",
+      "summary": "Human-readable report separating computed trajectory/backend agreement, the lambda-half reconstruction residual NONPASS, interpretation, open launch-provenance hypotheses, independent byte reproduction, and strict non-global scope.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md",
+      "sha256": "6e5b64f2ea9fb97e6ad3e92f0c34559b7d38b5bc882f87b17048fe1bc2f6aa0b"
     }
   ],
   "edges": [
@@ -22847,6 +23011,268 @@
       "from": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
       "relation": "CONTRASTS_WITH",
       "to": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS"
+    },
+    {
+      "id": "edge:2168",
+      "from": "phase:p55",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2169",
+      "from": "phase:p55",
+      "relation": "GOVERNED_BY",
+      "to": "policy:recursive-self-application-audit"
+    },
+    {
+      "id": "edge:2170",
+      "from": "phase:p55",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2171",
+      "from": "scope:p55-p50-saddle-pinned-launch-schedule-transfer",
+      "relation": "PART_OF",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2172",
+      "from": "artifact:p55-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2173",
+      "from": "artifact:p55-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2174",
+      "from": "artifact:p55-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2175",
+      "from": "artifact:p55-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2176",
+      "from": "artifact:p55-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2177",
+      "from": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "relation": "PART_OF",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2178",
+      "from": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p55-script"
+    },
+    {
+      "id": "edge:2179",
+      "from": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p55-evidence-snapshot"
+    },
+    {
+      "id": "edge:2180",
+      "from": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p55-raw-result"
+    },
+    {
+      "id": "edge:2181",
+      "from": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "relation": "PART_OF",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2182",
+      "from": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p55-p50-saddle-pinned-launch-schedule-transfer"
+    },
+    {
+      "id": "edge:2183",
+      "from": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2184",
+      "from": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p55-p53-trajectory-schedule-transfer-audit"
+    },
+    {
+      "id": "edge:2185",
+      "from": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "relation": "MOTIVATES",
+      "to": "open:p56-lambda-half-launch-residual-provenance-audit"
+    },
+    {
+      "id": "edge:2186",
+      "from": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "relation": "PART_OF",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2187",
+      "from": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p55-p50-saddle-pinned-launch-schedule-transfer"
+    },
+    {
+      "id": "edge:2188",
+      "from": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2189",
+      "from": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "relation": "EXTENDS",
+      "to": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "note": "Phase 55 extends only the retained diagnostic comparison set to fifteen paired trajectory fractions; the prior reconstruction NONPASS prevents a schedule-transfer qualification."
+    },
+    {
+      "id": "edge:2190",
+      "from": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF"
+    },
+    {
+      "id": "edge:2191",
+      "from": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "relation": "MOTIVATES",
+      "to": "open:p56-lambda-half-launch-residual-provenance-audit"
+    },
+    {
+      "id": "edge:2192",
+      "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2193",
+      "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p55-p50-saddle-pinned-launch-schedule-transfer"
+    },
+    {
+      "id": "edge:2194",
+      "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p55-p53-root-fixed-launch-schedule-transfer",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2195",
+      "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "EXTENDS",
+      "to": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION"
+    },
+    {
+      "id": "edge:2196",
+      "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:2197",
+      "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p56-lambda-half-launch-residual-provenance-audit"
+    },
+    {
+      "id": "edge:2198",
+      "from": "open:p56-lambda-half-launch-residual-provenance-audit",
+      "relation": "PART_OF",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2199",
+      "from": "open:p56-lambda-half-launch-residual-provenance-audit",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p55-p53-trajectory-schedule-transfer-audit"
+    },
+    {
+      "id": "edge:2200",
+      "from": "open:p56-lambda-half-launch-residual-provenance-audit",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p53-full-repaired-phase51-continuation-rerun"
+    },
+    {
+      "id": "edge:2201",
+      "from": "artifact:p55-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p50-raw-result"
+    },
+    {
+      "id": "edge:2202",
+      "from": "artifact:p55-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p53-raw-result"
+    },
+    {
+      "id": "edge:2203",
+      "from": "artifact:p55-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p54-raw-result"
+    },
+    {
+      "id": "edge:2204",
+      "from": "artifact:p55-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p55-input-manifest"
+    },
+    {
+      "id": "edge:2205",
+      "from": "artifact:p55-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p55-script"
+    },
+    {
+      "id": "edge:2206",
+      "from": "artifact:p55-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p55-raw-result"
+    },
+    {
+      "id": "edge:2207",
+      "from": "artifact:p55-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p55-raw-result"
+    },
+    {
+      "id": "edge:2208",
+      "from": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p55-report"
+    },
+    {
+      "id": "edge:2209",
+      "from": "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p55-report"
+    },
+    {
+      "id": "edge:2210",
+      "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p55-report"
     }
   ],
   "kg_bridges": [
