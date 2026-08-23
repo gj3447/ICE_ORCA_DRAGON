@@ -4,7 +4,7 @@
   "status": "FROZEN_BEFORE_RUNNER_OR_VALIDATE_ONLY_PILOT_OR_AUTHORITATIVE_OUTPUT",
   "frozen_at_utc": "2026-08-23T09:39:31Z",
   "repository_head_observed_at_freeze": "9fd2ea36ee64c5a3beecf7cd0ef61fadf202fddf",
-  "manifest_introduction_commit": null,
+  "manifest_introduction_commit": "4268ed2187df70f6525582027dde4f55a8f49d91",
   "scope": {
     "question": "When the complete immutable Phase-51 Gamma--K continuation is replayed with one coherent element-local long-namespace production evaluator for action, gradient, and Hessian, does the declared phi_plus local candidate satisfy every unchanged Phase-51 semantic gate?",
     "calculation_workbench_only": true,
@@ -461,9 +461,9 @@
       "P53.tangent.lambda_half",
       "P53.evaluator.full_repaired_pairs_and_trajectories",
       "P53.endpoint.radius_and_shape",
-      "P53.guard.full_semantic_replay_classification_and_nulls"
+      "P53.guard.full_semantic_replay_topology_and_nulls"
     ],
-    "conjunction": "All eight exact checks, all eleven numerical checks, and every nested Phase-51 semantic check and internal subcheck must pass for the supported classification."
+    "conjunction": "All eight exact checks, all eleven numerical checks, and every nested Phase-51 semantic check and internal subcheck must pass for the supported classification. The final topology-and-nulls check tests replay completeness, null/false guards, and the allowed label domain only; classification is derived afterward, so the gate is not circular."
   },
   "classification": {
     "invalid_run": {
@@ -483,7 +483,7 @@
     "Phase51_raw_result_mutated": false,
     "Phase52_raw_result_mutated": false,
     "global_promotion": "PROHIBITED",
-    "Gate1": "OPEN_PARTIAL_PROGRESS"
+    "gate1": "OPEN_PARTIAL_PROGRESS"
   },
   "required_outputs": {
     "result_path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json",
@@ -495,6 +495,8 @@
     "preenumerate_all_slots": true,
     "retain_all_failures": true,
     "strict_unique_finite_JSON": true,
+    "contradicted_output_allowed": false,
+    "required_independent_contradiction_certificate": null,
     "historical_phase51_result_sha256_after": "b74c8b735b32790c85d7e14fbf78fe16bf437995d707268d209d4a655c3d8531",
     "historical_phase52_result_sha256_after": "be29daadd7a338d4b71a445c7c364444de0c60ffb7afe45393d5419a24731ffd",
     "straight_arm_intersections_searched": false,
@@ -511,9 +513,16 @@
     "global_n_sigma": null,
     "cutoff_limit": null,
     "continuum_limit": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
     "physics_claim": null,
     "TOE_claim": null,
-    "promoted_output": null
+    "promoted_output_policy": {
+      "inconclusive": null,
+      "supported": "Retain exactly the Phase-51 scoped phi_plus lambda=1 local candidate object after every exact and numerical gate passes.",
+      "scope": "one frozen finite-dimensional local candidate only",
+      "global_interpretation_allowed": false
+    }
   },
   "run_semantics": {
     "valid_completed_scientific_exit_code": 0,
