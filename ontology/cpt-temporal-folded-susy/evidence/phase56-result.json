@@ -1,0 +1,290 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_20260823",
+  "phase": "P56",
+  "observed_at_utc": "2026-08-23T19:32:42Z",
+  "command": "proxmox-scratch run phase56-authoritative --timeout 7200 -- env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 ./ice run phase56_lambda_half_launch_provenance_residual_conditioning",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning.py",
+    "sha256": "083924f7f9fd0bb3baf8e681e2760cc54ef4a105f5a597b52aa3cdb58c6ac882",
+    "introduced_in_commit": "30ba59ff33e880065e99fa9be8d9c32b7dbd9f95"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P56.inputs.recursive_pins_commits_blobs_self_digests_and_runner_binding",
+      "statement": "29 recursive pins, commits, blobs, strict JSON/self-digests, runtime, and runner binding validate",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.target.single_phi_plus_lambda_half_root_saddle_endpoint_and_baseline_subtrees",
+      "statement": "one phi_plus lambda-half root, P50 saddle, endpoint, saddle summary, and Phase55 baseline subtree set is exact",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.algorithm.one_fresh_saddle_solve_and_zero_other_root_or_replay_calls",
+      "statement": "authoritative mode permits one fresh saddle solve and no other root/replay route; validate-only permits none",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.launch.two_centers_two_launches_and_exact_2x2_corner_construction",
+      "statement": "two centers, two Hessian-derived launches, and four ordered factorial corners retain the frozen definitions",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.ODE.eight_profile_corner_attempts_five_fraction_slots_and_placeholders",
+      "statement": "eight profile/corner attempts and forty ordered fraction slots are preenumerated and retained",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.conventions.EL_long_fixed_sum_ordinary_transpose_single_outer_conjugation_and_solver_boundary",
+      "statement": "EL_long fixed summation, ordinary transpose, one outer conjugation, and one completed solver-boundary cast remain bound",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.residual.full_vector_identity_effect_definitions_and_T_component_index",
+      "statement": "full-vector residual identities and center/launch/interaction definitions retain T as physical component 8",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.guard.historical_immutability_classification_precedence_and_global_nulls",
+      "statement": "historical classifications, precedence, calculation-workbench scope, and every global/physics/TOE null remain immutable",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P56.saddle.fresh_Phase53_algorithm_and_launch_validity",
+      "statement": "the one fresh Phase53-algorithm saddle and its Hessian-derived launch satisfy every frozen finite gate",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.newton.static_prediction_linear_identity_and_finite_comparison",
+      "statement": "the static Newton prediction solves H_real delta=-g_real to the frozen residual while retaining its descriptive actual comparison",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.baseline.primary_P50_P50_reproduces_Phase55",
+      "statement": "the primary P50/P50 corner reproduces the pinned Phase55 launch, five states, endpoint, residuals, nfev, and gate vector",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.ODE.eight_attempt_completion_finiteness_callback_counts_and_xi_norm",
+      "statement": "all eight profile/corner ODE attempts complete five finite samples with callback=nfev and xi norm below 40",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.gates.all_corner_profile_endpoint_and_residual_ledgers_complete",
+      "statement": "all eight endpoint/residual vectors, twenty-four scalar gates, and eight overall gate records are complete",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.profile.all_corner_three_gate_vectors_stable",
+      "statement": "all four corners retain the same target-gate vector and remain within endpoint/residual cross-profile thresholds",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.recovery.fresh_fresh_both_profiles_vs_saved_target",
+      "statement": "the fresh/fresh corner passes all three unchanged target gates under both solver profiles",
+      "status": "PASS"
+    },
+    {
+      "id": "P56.arithmetic.residual_identities_center_launch_interaction_and_T_conditioning",
+      "statement": "saved-endpoint residual identities and both-profile center/launch/interaction reconstructions close with T conditioning retained",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "numerical_checks": 8,
+    "calculation": "single-root lambda-half Phase53-algorithm saddle and launch-provenance residual-conditioning diagnostic",
+    "run_status": "VALID_RUN",
+    "classification": "P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_INPUTS.json",
+      "input_manifest_sha256": "94c2d0074e0d2a36f3ecb5d99e437ef2915948bbd059154f10098a890f30fb7c",
+      "input_manifest_effective_commit": "24b2d6d7f207941e782dfe9ceae08af6b2d2d24b",
+      "input_manifest_git_blob_oid": "0024f4e0fcdd0718c7bdc813412b348edd0589a6",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_RESULT.json",
+      "raw_result_outer_sha256": "c9163319405ed4ec696076f7516c32fa8af290794a2e1cc4762090812f693d27",
+      "raw_result_payload_sha256_without_self": "56c567bf60fde04b7d68ab9a5c394faaf08e73e43fe1db36b082ba58e3c010b2",
+      "raw_result_introduced_in_commit": "389b464cfd0cc453c614da283efc5fc1e1cfc970",
+      "raw_result_git_blob_oid": "d9e931b761502865426b2356789ac9e7714f7dfc",
+      "raw_result_size_bytes": 321183,
+      "post_evaluation_rehash_count": 31,
+      "post_evaluation_all_unchanged": true
+    },
+    "independent_reproduction": {
+      "guard": "proxmox-scratch run p56-repro",
+      "exit_code": 0,
+      "stdout_byte_identical": true,
+      "stdout_bytes": 321195,
+      "stdout_sha256": "242653355f6184158f98e51631ad5cefa5936b6f78511cf76cfa5e7a751c7eb6",
+      "canonical_result_bytes": 321183,
+      "canonical_result_sha256": "c9163319405ed4ec696076f7516c32fa8af290794a2e1cc4762090812f693d27",
+      "self_digest": "56c567bf60fde04b7d68ab9a5c394faaf08e73e43fe1db36b082ba58e3c010b2"
+    },
+    "operational_wrapper": {
+      "authoritative_guard": "proxmox-scratch run phase56-authoritative",
+      "first_reproduction_wrapper_exit_code": 1,
+      "first_reproduction_wrapper_error": "overlong scratch label exceeded the derived tsx Unix-socket path limit before Python execution",
+      "scientific_effect": "none; the shorter independent reproduction completed and was byte-identical"
+    },
+    "runtime": {
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "python": "CPython 3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "longdouble_itemsize_bytes": 16,
+      "clongdouble_itemsize_bytes": 32,
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      }
+    },
+    "execution_topology": {
+      "source": "phi_plus",
+      "lambda": 0.5,
+      "saved_root_count": 1,
+      "fresh_saddle_root_calls": 1,
+      "solve_ivp_calls": 8,
+      "fraction_state_slots": 40,
+      "EL_long_callbacks": 37144,
+      "EL_std_callbacks": 0,
+      "Gamma_K_root_or_continuation_calls": 0,
+      "continuation_or_replay_calls": 0,
+      "tangent_event_reflection_calls": 0,
+      "finite_difference_calls": 0,
+      "action_or_first_cap_calls": 0
+    },
+    "fresh_saddle": {
+      "distance_to_pinned_phase50": "5.245664923524781035130414e-13",
+      "gradient_max_abs": "6.895659173875023917332783e-12",
+      "hessian_min_abs_real_eigenvalue": "4.220358798890757157096232e+00",
+      "hessian_inertia": [
+        5,
+        4,
+        0
+      ],
+      "solver_nfev": 4,
+      "status": "PASS",
+      "exact_historical_Phase53_saddle_bytes_claimed": false
+    },
+    "target_gate_order": [
+      "saved_endpoint_relative",
+      "scaled_residual_absolute",
+      "saved_residual_scalar_difference"
+    ],
+    "corner_gate_table": [
+      {
+        "corner": "P50_center__P50_launch",
+        "primary": [true, false, false],
+        "refined_diagnostic": [true, false, false],
+        "overall": "NONPASS"
+      },
+      {
+        "corner": "P50_center__fresh_launch",
+        "primary": [true, false, false],
+        "refined_diagnostic": [true, false, false],
+        "overall": "NONPASS"
+      },
+      {
+        "corner": "fresh_center__P50_launch",
+        "primary": [true, true, true],
+        "refined_diagnostic": [true, true, true],
+        "overall": "PASS"
+      },
+      {
+        "corner": "fresh_center__fresh_launch",
+        "primary": [true, true, true],
+        "refined_diagnostic": [true, true, true],
+        "overall": "PASS"
+      }
+    ],
+    "fresh_fresh_target_summary": {
+      "primary": {
+        "saved_endpoint_relative": "4.571942323393511e-17",
+        "scaled_residual_max_abs": "2.641451343369080e-10",
+        "saved_scalar_absolute_difference": "2.773574246017642e-13",
+        "status": "PASS"
+      },
+      "refined_diagnostic": {
+        "saved_endpoint_relative": "3.646286862238947e-14",
+        "scaled_residual_max_abs": "2.645138076827282e-10",
+        "saved_scalar_absolute_difference": "9.131592121838167e-14",
+        "status": "PASS"
+      }
+    },
+    "factorial_effect_maxima": {
+      "primary": {
+        "center_scaled_residual": "2.672601463947290106449914e-07",
+        "launch_scaled_residual": "1.704668152652186196866629e-12",
+        "interaction_scaled_residual": "2.041902130921287221214577e-14"
+      },
+      "refined_diagnostic": {
+        "center_scaled_residual": "2.672598471896238893130487e-07",
+        "launch_scaled_residual": "1.851058988583223518294835e-12",
+        "interaction_scaled_residual": "2.315608023243306007786543e-13"
+      },
+      "dominant_center_component": "real_T_coordinate_8_interleaved_index_16",
+      "causal_or_dominance_label_assigned": false
+    },
+    "complex_maximum_audit": {
+      "warning_retained": "the generic maximum helper casts complex arrays to longdouble before abs",
+      "all_effect_moduli_same": true,
+      "all_endpoint_closures_same": true,
+      "classification_affected": false,
+      "runner_reopened": false
+    },
+    "scope_boundary": {
+      "qualified_later_full_replay_launch_policy_candidate": "fresh_Phase53_algorithm_center_and_launch",
+      "candidate_label_is_execution_authorization": false,
+      "exact_historical_Phase53_launch_claim": false,
+      "full_semantic_replay_performed": false,
+      "historical_Phase51_reclassified": false,
+      "historical_Phase53_reclassified": false,
+      "historical_Phase55_reclassified": false,
+      "continuation_route": "KILL",
+      "full_replay_authorized": false,
+      "phase57_authorized": false,
+      "next_phase": null,
+      "operational_state": "BOUNDED_PAUSE",
+      "scientific_route": "OPEN",
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "physics_claim": null,
+      "TOE_claim": null
+    },
+    "required_global_nulls": {
+      "TOE_claim": null,
+      "all_saddles_and_upward_components_complete": false,
+      "bounded_chain_signed_sum": null,
+      "cap_reintersections_searched": false,
+      "common_determinant_line_constructed": false,
+      "complete_global_signed_intersection_vector": null,
+      "continuation_reclassification": null,
+      "continuum_limit": null,
+      "cutoff_limit": null,
+      "full_semantic_replay_performed": false,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_n_sigma": null,
+      "global_promotion": "PROHIBITED",
+      "historical_Phase51_classification_after": null,
+      "historical_Phase53_classification_after": null,
+      "historical_Phase55_classification_after": null,
+      "physical_original_cycle_derived": false,
+      "physics_claim": null,
+      "promoted_output": null,
+      "root_exhaustion_proved": false,
+      "straight_arm_intersections_searched": false
+    }
+  }
+}

@@ -2,18 +2,18 @@
 
 > This page is a human-readable memory and index over observed repository runs. It is **not** a preregistration, research contract, independent replication, peer review, final scientific verdict, or KG ratification.
 
-Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–55 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), [`phase46-result.json`](../evidence/phase46-result.json), [`phase47-result.json`](../evidence/phase47-result.json), [`phase48-result.json`](../evidence/phase48-result.json), [`phase49-result.json`](../evidence/phase49-result.json), [`phase50-result.json`](../evidence/phase50-result.json), [`phase51-result.json`](../evidence/phase51-result.json), [`phase52-result.json`](../evidence/phase52-result.json), [`phase53-result.json`](../evidence/phase53-result.json), [`phase54-result.json`](../evidence/phase54-result.json), and [`phase55-result.json`](../evidence/phase55-result.json).
+Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–56 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), [`phase46-result.json`](../evidence/phase46-result.json), [`phase47-result.json`](../evidence/phase47-result.json), [`phase48-result.json`](../evidence/phase48-result.json), [`phase49-result.json`](../evidence/phase49-result.json), [`phase50-result.json`](../evidence/phase50-result.json), [`phase51-result.json`](../evidence/phase51-result.json), [`phase52-result.json`](../evidence/phase52-result.json), [`phase53-result.json`](../evidence/phase53-result.json), [`phase54-result.json`](../evidence/phase54-result.json), [`phase55-result.json`](../evidence/phase55-result.json), and [`phase56-result.json`](../evidence/phase56-result.json).
 
 ## Reading `PASS` correctly
 
-All 490 Phase 16–55 named exact checks have `status: PASS`. The snapshots contain 352 typed
-numerical-ledger checks: 335 `PASS`, fourteen `FAIL`, and three `INCONCLUSIVE`. One legacy
-separately recorded Phase-18 SciPy control brings the numerical-record total to 353: 70 controls through
+All 498 Phase 16–56 named exact checks have `status: PASS`. The snapshots contain 360 typed
+numerical-ledger checks: 343 `PASS`, fourteen `FAIL`, and three `INCONCLUSIVE`. The legacy
+separately recorded Phase-18 SciPy control is included in that total: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
 in Phase 29, 10 in Phase 30, 11 in Phase 31, 7 in Phase 32, 7 in Phase 33, 10 in Phase 34, 8 in Phase 35,
 9 in Phase 36, 8 in Phase 37, 6 in Phase 38, 17 in Phase 39, 22 in Phase 40, 9 in Phase 41, 8 in
 Phase 42, 6 in Phase 43, 7 in Phase 44, 6 in Phase 45, 8 in Phase 46, 6 in Phase 47, 10 in Phase 48,
-11 in Phase 49, 8 in Phase 50, 10 in Phase 51, 7 in Phase 52, 11 in Phase 53, 8 in Phase 54, and 8 in Phase 55. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
+11 in Phase 49, 8 in Phase 50, 10 in Phase 51, 7 in Phase 52, 11 in Phase 53, 8 in Phase 54, 8 in Phase 55, and 8 in Phase 56. Phase 41 contributes 7 exact checks and passes 8 of its 9 numerical
 contracts. Phase 42
 contributes 8 exact `PASS` records and, after lossless schema mapping of the raw typed statuses, 6
 numerical `PASS`, one protocol-defined local-identity `FAIL`, and one reference-tangent `INCONCLUSIVE`.
@@ -86,7 +86,16 @@ candidate-residual aggregate is retained diagnostically after that branch. All s
 all fifteen element-local backend trajectory pairs pass, but the lambda-half P50-saddle-pinned
 reconstruction misses both frozen scaled-residual gates. The valid run therefore does not qualify a
 state-RHS transfer. Required fields remain null or false, physics/TOE/promoted output and the Phase-56
-candidate remain null, and global promotion is `PROHIBITED`. None of these records
+candidate remain null, and global promotion is `PROHIBITED`.
+Phase 56 contributes 8 exact and 8 numerical `PASS` aggregates. Its expected P50-center target
+`NONPASS` records are retained inside passing topology, completeness, baseline-reproduction, and
+profile-stability aggregates; they are not transported into hidden top-level failures. One fresh saddle
+root and eight EL_long ODEs complete, both fresh-center corners pass all three target gates under both
+profiles, and every forbidden continuation/replay path remains zero. This supports only a single-root
+factorial association. It does not claim exact historical Phase-53 bytes, a general causal theorem, a
+full replay, or a global result. The Ragnarok circuit breaker consumes the one-shot closeout, keeps the
+reconciliation route `KILL`, and records `next_phase=null` without closing Gate 1.
+None of these records
 means that a local candidate is an interval-certified root, that the finite-radius chart patch is the
 exact complete upward manifold, that the entire bounded chain was paired, that the physical original
 relative cycle or non-Stokes chamber is fixed, that a global coefficient is known, or that a hard CFU
@@ -146,6 +155,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | 53 | `result:P53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_20260823`; `2026-08-23T12:47:02Z` | `cpt_temporal_folded_susy/phase53_m5_element_local_full_continuation.py`; SHA-256 `42434fce5cf3c40dd2c53c42a3a0b1ca39dde0df8df2934d0e33525947ab9f2a`; introduced in `fe1ad0b325b207d79208db416fab5aa2f9661105` | Exit `0`; 8 exact PASS plus 10 numerical PASS and 1 numerical INCONCLUSIVE; `PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE`. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
 | 54 | `result:P54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_20260823`; `2026-08-23T15:07:52Z` | `cpt_temporal_folded_susy/phase54_p51_global_noncse_control_audit.py`; SHA-256 `07a6c398370b701a43dfcd35e69ad1440b9978cb09bf31be1609b0d44f163879`; introduced in `af8600b31dfbaa46a6da4366a5486e5a2e0d641a` | Exit `0`; 7 exact PASS plus 4 numerical PASS and 4 diagnostic FAIL transported from raw `NONPASS`; `P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_ELEMENT_LOCAL_SCHEDULE_ONLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS`. |
 | 55 | `result:P55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_20260823`; `2026-08-23T17:23:52Z` | `cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py`; SHA-256 `880fe68ab5a068f02045d116ab10835e72e3cc5a59793498a4b2ef245bf23dcf`; introduced in `ea7df7c04a9774ecb300f4e54684c54102fb9995` | Exit `0`; 8 exact PASS plus 6 numerical PASS and 2 FAIL transported from raw `NONPASS`: the reconstruction prerequisite is decisive and the downstream candidate-residual aggregate is retained diagnostically; `P55_P50_SADDLE_PINNED_EL_LONG_TRAJECTORY_RECONSTRUCTION_NONPASS`. The raw payload lacks a wall-clock field, so the observation time is the durable commit time of the byte-validated raw-result capture. |
+| 56 | `result:P56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_20260823`; `2026-08-23T19:32:42Z` | `cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning.py`; SHA-256 `083924f7f9fd0bb3baf8e681e2760cc54ef4a105f5a597b52aa3cdb58c6ac882`; introduced in `30ba59ff33e880065e99fa9be8d9c32b7dbd9f95` | Exit `0`; 8 exact PASS plus 8 numerical PASS; one fresh saddle root and eight EL_long ODEs; `P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET`. P50-center target NONPASS records are retained inside the passing aggregate ledgers. Route `KILL`, `next_phase=null`, Gate 1 open, and global promotion prohibited. |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -381,6 +391,7 @@ not turn the sampled roots into a supported cross-cutoff continuation, no-root r
 | `evidence:p50-stabilized-m4-m5-saddle-and-upward-plane-transport` | 6 exact PASS + 8 numerical PASS | Five frozen (m=4) saddles continue to (m=5) on the declared stabilized paths — `SUPPORTS`; local upward-nine-plane endpoint orientation agrees across the frozen paths — `SUPPORTS`; sampled local transport is not cutoff/global stability — `SUPPORTS` as a scope boundary | Five source-labelled branches, 17-node fine/9-node coarse/full reverse saddle paths, two tangent steps, two SPD metric choices, three action/metric orderings, reflection controls, and half/double stabilizer plus basis mutations. No exact action nesting, Gamma–K continuation, nonlinear upward manifold, unsampled no-zero theorem, determinant line, cutoff limit, original cycle, or global integer |
 | `evidence:p51-m5-gamma-k-local-continuation` | 6 exact PASS + 9 numerical PASS + 1 numerical INCONCLUSIVE | Frozen phi-plus local continuation remains inconclusive at the CSE/non-CSE RHS gate — `SUPPORTS` as a typed classification boundary; local run does not establish exhaustion or global intersection — `SUPPORTS` as a scope boundary | One phi-plus fine17/coarse9/reverse17 path, one independently initialized phi-minus fine17 path, 68 root/first-cap ledgers, three full-J nodes, one two-step path tangent, four endpoint mutations, and paired clongdouble evaluators. No contradiction certificate, other-root/chart/arm/component/end census, determinant line, cutoff limit, original cycle, global integer, or physics claim |
 | `evidence:p52-m5-cse-runtime-dtype-and-static-rhs-repair` | 7 exact PASS + 6 numerical PASS + 1 complete non-invalidating diagnostic FAIL | Hidden Phase-51 binary64 CSE contract violation — `SUPPORTS`; element-local clongdouble repair at six static slots — `SUPPORTS`; static repair does not ratify continuation/global result — `SUPPORTS` as a scope boundary | Six frozen source/lambda states, actual pinned m=4/m=5 CSE traces, exact identities, direct 80/120-decimal references, two dtype-correct candidates, closed stage telescopes, unchanged Phase-51 bytes, and global nulls. No repaired root, K-flow, continuation path, portability theorem, root/component/end census, determinant line, cutoff limit, original cycle, global integer, physics claim, or TOE |
+| `evidence:p56-lambda-half-launch-provenance-residual-conditioning` | 8 exact PASS + 8 numerical PASS | Fresh Phase-53-algorithm center/launch recovers the saved lambda-half target — `SUPPORTS`; frozen gate pattern associates recovery with fresh center without a causal theorem — `SUPPORTS`; no full replay, Phase 57, or global promotion — `SUPPORTS` as a scope boundary | One saved phi-plus lambda-half root, one fresh saddle solve, two centers, two launches, four factorial corners, two EL_long profiles, eight ODEs, complete endpoint/residual/effect ledgers, byte-identical reproduction, and strict Ragnarok/global null boundaries. No exact historical launch identity, continuation replay, another root/source/platform, causal theorem, root/component/end census, determinant line, original cycle, global integer, physics claim, TOE, or execution authorization |
 
 ## Phase 16 check ledger
 
@@ -2313,10 +2324,82 @@ used a superseded summary-key spelling after the runner had exited `0`; this ope
 change the complete payload and is not one of the scientific NONPASS records.
 
 Phase 55 resolves `open:p55-p53-trajectory-schedule-transfer-audit` as a bounded reconstruction
-`NONPASS`, not as failure of every faithful Phase-53 reconstruction. It opens only the diagnostic
-`open:p56-lambda-half-launch-residual-provenance-audit`; a Phase-56 full semantic replay remains
-deferred and unqualified. Its candidate and physics/TOE/promoted outputs remain null, required flags
-remain false, global promotion is `PROHIBITED`, and all global-cycle/cutoff/continuum values stay null.
+`NONPASS`, not as failure of every faithful Phase-53 reconstruction. Phase 56 has since resolved the
+diagnostic `open:p56-lambda-half-launch-residual-provenance-audit`; it does not rewrite the Phase-55
+classification. Phase-55 candidate and physics/TOE/promoted outputs remain null, required flags remain
+false, global promotion is `PROHIBITED`, and all global-cycle/cutoff/continuum values stay null.
+
+## Phase 56 terminal check ledger
+
+### Recursive provenance, target, solve topology, factorial construction, conventions, and scope — 8 exact PASS
+
+- `P56.inputs.recursive_pins_commits_blobs_self_digests_and_runner_binding` — `PASS`
+- `P56.target.single_phi_plus_lambda_half_root_saddle_endpoint_and_baseline_subtrees` — `PASS`
+- `P56.algorithm.one_fresh_saddle_solve_and_zero_other_root_or_replay_calls` — `PASS`
+- `P56.launch.two_centers_two_launches_and_exact_2x2_corner_construction` — `PASS`
+- `P56.ODE.eight_profile_corner_attempts_five_fraction_slots_and_placeholders` — `PASS`
+- `P56.conventions.EL_long_fixed_sum_ordinary_transpose_single_outer_conjugation_and_solver_boundary` — `PASS`
+- `P56.residual.full_vector_identity_effect_definitions_and_T_component_index` — `PASS`
+- `P56.guard.historical_immutability_classification_precedence_and_global_nulls` — `PASS`
+
+### Fresh saddle, baseline, eight ODEs, gate stability, recovery, and effect identities — 8 numerical PASS
+
+- `P56.saddle.fresh_Phase53_algorithm_and_launch_validity` — `PASS`
+- `P56.newton.static_prediction_linear_identity_and_finite_comparison` — `PASS`
+- `P56.baseline.primary_P50_P50_reproduces_Phase55` — `PASS`
+- `P56.ODE.eight_attempt_completion_finiteness_callback_counts_and_xi_norm` — `PASS`
+- `P56.gates.all_corner_profile_endpoint_and_residual_ledgers_complete` — `PASS`
+- `P56.profile.all_corner_three_gate_vectors_stable` — `PASS`
+- `P56.recovery.fresh_fresh_both_profiles_vs_saved_target` — `PASS`
+- `P56.arithmetic.residual_identities_center_launch_interaction_and_T_conditioning` — `PASS`
+
+The numerical aggregates include the frozen negative controls rather than concealing them. In the gate
+order endpoint/residual-absolute/saved-scalar-difference, the complete two-profile table is:
+
+| center / launch | primary | refined diagnostic | overall target |
+| --- | --- | --- | --- |
+| P50 / P50 | `[true,false,false]` | `[true,false,false]` | `NONPASS` |
+| P50 / fresh | `[true,false,false]` | `[true,false,false]` | `NONPASS` |
+| fresh / P50 | `[true,true,true]` | `[true,true,true]` | `PASS` |
+| fresh / fresh | `[true,true,true]` | `[true,true,true]` | `PASS` |
+
+One fresh saddle converged in four function evaluations, `5.245664923524781e-13` from the pinned P50
+saddle, with gradient maximum `6.895659173875024e-12`, minimum absolute real Hessian eigenvalue
+`4.220358798890757`, and inertia `(5-,4+,0)`. All eight state ODEs completed; the root-call count is one,
+the `solve_ivp` count is eight, and every Gamma--K continuation/replay, tangent/event, reflection,
+finite-difference, action, and first-cap counter is zero.
+
+The primary fresh/fresh endpoint relative distance, scaled residual maximum, and saved-scalar absolute
+difference are `4.571942323393511e-17`, `2.641451343369080e-10`, and
+`2.773574246017642e-13`; the refined values are `3.646286862238947e-14`,
+`2.645138076827282e-10`, and `9.131592121838167e-14`. The primary center, launch, and interaction
+residual-effect maxima are `2.672601463947290e-7`, `1.704668152652186e-12`, and
+`2.041902130921287e-14`, with real `T` the largest center component. The ledger explicitly records
+`causal_or_dominance_label_assigned=false`; this finite factorial association is not a general causal
+theorem.
+
+The byte-full canonical result is 321,183 bytes with outer SHA-256
+`c9163319405ed4ec696076f7516c32fa8af290794a2e1cc4762090812f693d27`, canonical self-digest
+`56c567bf60fde04b7d68ab9a5c394faaf08e73e43fe1db36b082ba58e3c010b2`, Git blob
+`d9e931b761502865426b2356789ac9e7714f7dfc`, and closeout commit
+`389b464cfd0cc453c614da283efc5fc1e1cfc970`. The compact snapshot SHA-256 is
+`444d8806590efe213eab1b5d6576bb7dd516358d04add50815f74c15a4c69571`; the report SHA-256 is
+`e853b4cdf60547ef503e9a4dfaac261e5f35450eeede8eddcb2b694589f04cee`. Authoritative and independent
+reproduction stdout are each 321,195 bytes and byte-identical with SHA-256
+`242653355f6184158f98e51631ad5cefa5936b6f78511cf76cfa5e7a751c7eb6`.
+
+Both successful runs retained a `ComplexWarning` from a generic helper that casts complex arrays to
+`longdouble` before `abs`. A read-only audit recomputed all six effect maxima with complex modulus and
+both endpoint factorial closures from the serialized vectors; every recorded maximum and closure was
+unchanged, so no status, classification, or digest changed. The helper remains a known generic
+hardening defect, but the consumed runner is not reopened on the killed route.
+
+The result classifies only the single frozen diagnostic as
+`P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET`. It does not establish exact
+historical Phase-53 saddle/launch bytes, a full continuation replay, or any historical reclassification.
+The candidate label is not execution authorization: `continuation_route=KILL`,
+`full_replay_authorized=false`, `phase57_authorized=false`, and `next_phase=null`. Gate 1 remains
+`OPEN_PARTIAL_PROGRESS`, global promotion remains `PROHIBITED`, and physics/TOE claims remain null.
 
 ## Reproduction commands
 
@@ -2364,11 +2447,17 @@ proxmox-scratch run p52r --timeout 7200 -- ./ice run phase52_m5_cse_runtime_dtyp
 env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 proxmox-scratch run p53a --timeout 7200 -- ./ice run phase53_m5_element_local_full_continuation
 env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 proxmox-scratch run p54b --timeout 7200 -- ./ice run phase54_p51_global_noncse_control_audit
 proxmox-scratch run phase55-authoritative-repro -- bash -lc 'env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/lagyeongjun/CD/ICE_ORCA_DRAGON/.venv/bin/python /home/lagyeongjun/CD/ICE_ORCA_DRAGON/cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py'
+proxmox-scratch run phase56-authoritative --timeout 7200 -- env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 ./ice run phase56_lambda_half_launch_provenance_residual_conditioning
+proxmox-scratch run p56-repro --timeout 7200 -- env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 ./ice run phase56_lambda_half_launch_provenance_residual_conditioning
 ```
 
 For Phase 55, the displayed line is the observed guarded reproduction wrapper. The snapshot's `command`
 field is its inner repository-relative `.venv/bin/python` invocation; the report preserves the same
 wrapper and inner command in multiline form.
+
+For Phase 56, these are historical observed commands only. The terminal exception is consumed and the
+active circuit breaker now rejects Phase-56 reruns; copying the commands does not grant execution
+authorization.
 
 To audit an observed result, compare the current executable hash with the snapshot's `script.sha256`, rerun the exact recorded command, and compare check IDs, statuses, statements, payload, exit code, and scope guard. A successful rerun increases reproducibility; it still does not constitute independent peer review or extend the declared scope.
 

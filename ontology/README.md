@@ -8,11 +8,11 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–55 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-23T17:29:50Z` Phase 55 graph update, the collection has 748 nodes and 2210
-edges. Validation verifies 160/160 stored hashes (156 artifacts and 4 policies). The Phase 16–55 run
-snapshots contain 490 named exact checks, all `PASS`, and 352 typed numerical-ledger checks: 335
+At the recorded `2026-08-23T19:47:02Z` Phase 56 graph update, the collection has 760 nodes and 2249
+edges. Validation verifies 166/166 stored hashes (161 artifacts and 5 policies). The Phase 16–56 run
+snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
 `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
@@ -53,9 +53,8 @@ global cycle, or physical claim. Phase 51 adds six exact `PASS`, nine numerical 
 numerical `INCONCLUSIVE` record. All frozen continuation, reflection, full-J, path-tangent, endpoint,
 action, and first-cap controls pass, but the CSE/non-CSE same-point RHS relative comparison reaches
 `1.690e-8` against `5e-10`. The valid run is consequently local-continuation `INCONCLUSIVE`, not
-no-root or contradicted; the Phase-50 continuation problem and Gate 1 remain open. One legacy separately
-recorded Phase-18 numerical control brings the numerical-record total to 353
-(336 pass, fourteen fail, three inconclusive). Phase 52 reproduces 19 hidden binary64 temporaries in each
+no-root or contradicted; the Phase-50 continuation problem and Gate 1 remain open. The separately
+recorded Phase-18 numerical control remains included in the collection totals above. Phase 52 reproduces 19 hidden binary64 temporaries in each
 pinned m=4 and m=5 joint CSE evaluation and supports an element-local clongdouble repair on the six
 static source/lambda slots: maximum gradient and RHS relative errors are `7.051e-11` and `1.567e-10`,
 below `5e-10`. The dtype-correct joint long-namespace candidate remains a declared non-invalidating
@@ -75,10 +74,14 @@ valid reconstruction `NONPASS`: all six ODEs and fifteen element-local trajector
 Phase-54 schedule matrix is reproduced, but the explicitly P50-saddle-pinned lambda-half reconstruction
 has scaled residual `2.675e-7` and saved-scalar difference `2.673e-7`, both above the unchanged `2e-7`
 gate. The backend agreement is therefore diagnostic rather than a qualified schedule transfer. The
-Phase-56 full-replay candidate remains null; the next bounded problem is a one-root lambda-half
-saddle/launch provenance and residual-conditioning audit. These
-counts describe repository records, not independent replications or global scientific
-confidence.
+Phase-56 full-replay candidate remains null. Phase 56 then executes the one permitted one-root
+lambda-half terminal diagnostic: all eight exact and eight numerical aggregates pass, one fresh saddle
+root and eight `EL_long` ODEs complete, both P50-center corners retain residual-target `NONPASS`, and
+both fresh-center corners recover the saved target under both frozen profiles. This supports a bounded
+factorial association, not exact historical Phase-53 bytes or a general causal theorem. The one-shot
+exception is consumed: the reconciliation route is `KILL`, full replay and Phase 57 are unauthorized,
+`next_phase=null`, Gate 1 remains open, and global promotion remains prohibited. These counts describe
+repository records, not independent replications or global scientific confidence.
 
 ## Read and validate it
 
@@ -166,6 +169,10 @@ confidence.
 ./ice ontology trace claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS --depth 2
 ./ice ontology trace claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION --depth 2
 ./ice ontology trace open:p56-lambda-half-launch-residual-provenance-audit --depth 2
+./ice ontology trace claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET --depth 2
+./ice ontology trace claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER --depth 2
+./ice ontology trace claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION --depth 2
+./ice ontology show policy:ragnarok-circuit-breaker
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -334,10 +341,12 @@ Phase 55 then regenerates exactly three production and three candidate paths fro
 P50-saddle-pinned launches. All paired trajectories pass, but the lambda-half production residual does
 not reproduce the saved Phase-53 scalar under the unchanged reconstruction gate. Consequently
 `open:p55-p53-trajectory-schedule-transfer-audit` resolves as reconstruction `NONPASS`, not schedule
-qualification. The next bounded problem is `open:p56-lambda-half-launch-residual-provenance-audit`,
-which separates fresh Phase-53-algorithm center and launch effects from solver-profile sensitivity at
-that single root. Straight arms remain unsearched and all global, physical, and TOE promotions remain
-barred.
+qualification. Phase 56 resolves `open:p56-lambda-half-launch-residual-provenance-audit`: both
+P50-center corners retain the residual-target NONPASS pattern while both fresh-center corners pass all
+three gates under both solver profiles. This is a single-root factorial association, not a causal
+theorem or exact historical launch identity. The Ragnarok policy consumes the terminal exception and
+kills the reconciliation route; no full replay or Phase 57 is authorized, `next_phase` is null, straight
+arms remain unsearched, and all global, physical, and TOE promotions remain barred.
 
 ## Identifier families
 

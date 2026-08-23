@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-23T17:29:50Z",
+  "updated_at_utc": "2026-08-23T19:47:02Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -402,6 +402,15 @@
         "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
         "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION"
       ]
+    },
+    {
+      "question": "What did the terminal Phase 56 diagnostic recover, and does it authorize another phase?",
+      "answer": "At the single saved phi_plus lambda-half root, one fresh Phase-53-algorithm saddle and the fixed 2 x 2 center/launch factorial completed as a VALID_RUN. Both P50-center corners retain the residual NONPASS pattern, while both fresh-center corners pass all three saved-target gates under both frozen solver profiles. This is a bounded launch-provenance association, not exact historical Phase-53 bytes or a general causal theorem. The candidate label is not execution authorization: the reconciliation route is KILL, Phase 57 and full replay are unauthorized, next_phase is null, Gate 1 remains OPEN_PARTIAL_PROGRESS, and global promotion is PROHIBITED.",
+      "claim_ids": [
+        "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+        "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+        "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION"
+      ]
     }
   ],
   "reading_paths": [
@@ -753,7 +762,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–55 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, evaluator, replay, static schedule-attribution, and trajectory-validator record. Phase 49 retains the Phase-48 gradient-only failures while its full-flow path passes; Phase 52 retains the joint long-namespace negative control; Phase 53 retains the sole pinned Phase-51 global non-CSE backend nonpass; Phase 54 retains both global-schedule failures while both element-local schedules pass the six-state matrix; and Phase 55 retains its decisive lambda-half reconstruction NONPASS even though the element-local trajectories agree. None of these pinned-platform implementation results is promoted to a portable, qualified full replay, global, physical, or TOE conclusion.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–56 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, evaluator, replay, schedule-attribution, trajectory-validator, and launch-factorial record. Phase 55 retains its decisive P50-center lambda-half reconstruction NONPASS; Phase 56 then retains that exact baseline while both fresh-center corners recover the target under two profiles. It assigns no general causal label, opens no full replay or offspring, and records the reconciliation route KILL with next_phase null. None of these pinned-platform results is promoted to a portable, global, physical, or TOE conclusion.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -805,6 +814,10 @@
         "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
         "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
         "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+        "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+        "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+        "policy:ragnarok-circuit-breaker",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p55-p53-trajectory-schedule-transfer-audit",
@@ -855,7 +868,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–55. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, Phase-51's evaluator-gated nonlinear Gamma--K attempt, Phase-52's hidden-binary64 diagnosis plus six-slot element-local repair, Phase-53's complete but still evaluator-inconclusive replay, Phase-54's static attribution of the remaining control failure to the tested global schedule rather than precision alone, and Phase-55's valid reconstruction NONPASS at the lambda-half saved residual. Stop before treating the diagnostic EL_std/EL_long agreement as qualification, searching straight arms, claiming portable backend agreement, enumerating nonlinear upward components, or promoting any local ledger to a canonical determinant line, complete original cycle, Stokes chamber, global vector, physical claim, or TOE.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–56. Retain the historical local candidates and failures, the Phase-50 sampled m=4-to-m=5 saddle bridge, Phase-51's evaluator-gated nonlinear attempt, Phase-52's hidden-binary64 diagnosis, Phase-53's complete but evaluator-inconclusive replay, Phase-54's static schedule attribution, Phase-55's valid P50-center reconstruction NONPASS, and Phase-56's bounded finding that both fresh-center corners recover the lambda-half target under both profiles. Stop at that finite factorial association: no exact historical launch, full replay, straight-arm/cap search, root/component/end census, original cycle, determinant line, Stokes chamber, global vector, physical claim, or TOE follows. The reconciliation route is operationally killed while Gate 1 remains scientifically open.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -926,6 +939,10 @@
         "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
         "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
         "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+        "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+        "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+        "policy:ragnarok-circuit-breaker",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p55-p53-trajectory-schedule-transfer-audit",
@@ -961,7 +978,7 @@
     {
       "id": "reading-path:p50-m5-gamma-k-to-backend-consistency",
       "title": "From the sampled m=5 saddle bridge through static schedule attribution",
-      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's historical 6/6 exact and 9/10 numerical ledger. Phase 52 reproduces hidden binary64 temporaries and supports an element-local clongdouble repair at six static states while retaining a joint-namespace negative control. Phase 53 completes the full frozen replay but remains historically inconclusive at the saved global non-CSE comparison. Phase 54 then shows that both global schedules fail and both element-local schedules pass the static six-state selector. Phase 55 reproduces that aggregate matrix and records very close EL_std/EL_long paths, but the prerequisite P50-saddle-pinned reconstruction misses the saved Phase-53 scaled residual at lambda 0.5, so no Phase-56 full replay candidate is qualified. Diagnose that launch/residual provenance without weakening the threshold before any full replay or straight-arm search; do not infer no root, resolve the broader Phase-50 problem, or promote the local sampled paths to a global cycle.",
+      "summary": "Start with Phase 50's sampled saddle bridge, retain Phase 51's historical evaluator-inconclusive nonlinear attempt, Phase 52's hidden-binary64 diagnosis and element-local repair, Phase 53's complete but saved-backend-inconclusive replay, and Phase 54's static schedule attribution. Phase 55 reproduces the matrix but its P50-center lambda-half residual misses the saved target. Phase 56 closes only that provenance question: both P50-center corners remain NONPASS and both fresh-center corners pass under both profiles, with no general causal label. The one-shot closeout is consumed, the reconciliation route is KILL, and no full replay, Phase 57, straight-arm search, global cycle, physics claim, or TOE conclusion is authorized.",
       "nodes": [
         "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
         "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
@@ -982,6 +999,10 @@
         "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
         "claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS",
         "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+        "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+        "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+        "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+        "policy:ragnarok-circuit-breaker",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p55-p53-trajectory-schedule-transfer-audit",
@@ -9158,10 +9179,10 @@
     {
       "id": "open:p53-full-repaired-phase51-continuation-rerun",
       "type": "open_problem",
-      "title": "Narrowed by Phase 55 to lambda-half launch and residual provenance",
-      "summary": "Phase 55 executed the requested three-path validator. The Phase-54 aggregate matrix and all fifteen EL_std/EL_long trajectory pairs pass, but the earlier P50-saddle-pinned reconstruction prerequisite fails at lambda 0.5. Because Phase 53 did not serialize its authoritative saddle, factor, launch, or initial-xi bytes, the next bounded question is a one-root fresh-algorithm provenance and residual-conditioning diagnostic, not a second full replay. The broader root/component/end census and Phase-50/Gate-1 targets remain open.",
-      "question": "Does a fresh replay of the Phase-53 saddle-and-launch algorithm recover the saved lambda-half residual target, and how do center, launch, interaction, and solver-profile effects contribute without weakening the frozen gates?",
-      "state": "OPEN_NARROWED_TO_LAMBDA_HALF_LAUNCH_RESIDUAL_PROVENANCE_AUDIT"
+      "title": "Scientific full-replay question remains open; the Phase-51→56 reconciliation route is killed",
+      "summary": "Phase 56 completed the one-root fresh-algorithm provenance diagnostic and recovered the saved lambda-half target in both fresh-center corners under both solver profiles. It did not perform a full continuation replay, serialize exact historical Phase-53 launch bytes, reclassify Phases 51, 53, or 55, or address the broader root/component/end census. The scientific question is therefore not answered, but the Ragnarok circuit breaker kills this saved-backend/reconstructed-launch reconciliation route operationally: no full replay or Phase 57 is authorized and next_phase is null. Gate 1 and the separately scoped scientific route remain open.",
+      "question": "Could a separately authorized and newly justified calculation ever establish a full continuation result without reviving the killed saved-backend/reconstructed-launch reconciliation loop?",
+      "state": "SCIENTIFICALLY_OPEN_EXECUTION_PROHIBITED_ON_KILLED_RECONCILIATION_ROUTE"
     },
     {
       "id": "artifact:p52-input-manifest",
@@ -9571,10 +9592,10 @@
     {
       "id": "open:p56-lambda-half-launch-residual-provenance-audit",
       "type": "open_problem",
-      "title": "Phase 56 diagnostic only: lambda-half launch provenance and scaled-residual conditioning",
-      "summary": "Freeze one lambda-half, phi-plus, saved-root diagnostic. Re-run the Phase-53 saddle algorithm once from the pinned P50 saddle, compare its displacement with a static Newton prediction, and separate P50 versus fresh center and launch choices in a fixed 2 x 2 factorial EL_long ODE audit under primary and refined solver profiles. Retain saved-endpoint differences, full scaled-residual identities, the T-component amplification, center and launch effects, and the nonlinear interaction. Preserve every 2e-7 gate, use no favorable solver-profile selection, and do not call the fresh objects exact historical Phase-53 bytes. This Phase 56 label names only the diagnostic; a full semantic replay remains deferred and unqualified.",
+      "title": "Resolved: lambda-half launch provenance and scaled-residual conditioning",
+      "summary": "Phase 56 ran the frozen one-root diagnostic with one fresh saddle solve and eight EL_long state ODEs. Under both primary and refined profiles, the two P50-center corners retained gate vector [PASS, NONPASS, NONPASS], while both fresh-center corners had [PASS, PASS, PASS]. The fresh/fresh corner recovered the saved target and the classification is P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET. The factorial records assign no general causal or dominance label, exact historical Phase-53 bytes are not claimed, and the descriptive candidate does not authorize full replay or Phase 57.",
       "question": "Does replaying the Phase-53 saddle-and-launch algorithm at lambda 0.5 recover the saved residual target, and how much of the observed endpoint/residual change is attributable to center, launch, interaction, or solver-profile sensitivity?",
-      "state": "OPEN"
+      "state": "RESOLVED_WITH_FRESH_ALGORITHM_RECOVERY_ON_FROZEN_DIAGNOSTIC"
     },
     {
       "id": "artifact:p55-input-manifest",
@@ -9628,6 +9649,152 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md",
       "sha256": "6e5b64f2ea9fb97e6ad3e92f0c34559b7d38b5bc882f87b17048fe1bc2f6aa0b"
+    },
+    {
+      "id": "policy:ragnarok-circuit-breaker",
+      "type": "policy",
+      "title": "Ragnarok bounded-pause circuit breaker",
+      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The one-shot Phase-56 terminal exception is consumed; Phase 51–56 reruns, variants, full replay, Phase 57+, and renamed offspring are unauthorized while the bounded pause is active. This policy is not scientific evidence, a Gate-1 no-go, a physics claim, or a TOE verdict; Gate 1 and the separately scoped scientific route remain open.",
+      "state": "ACTIVE_PHASE56_TERMINAL_CLOSEOUT_CONSUMED",
+      "path": "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md",
+      "sha256": "d8adfedd9426a411dcd6e0f1d862f9ce722687e30ca23d46a4f00a5206b2f8be",
+      "introduced_in_commit": "2324afb51783149fddeccdf53f3b2d315c6857f8"
+    },
+    {
+      "id": "phase:p56",
+      "type": "phase",
+      "title": "Phase 56 — lambda-half launch provenance and residual conditioning terminal closeout",
+      "summary": "The single permitted terminal diagnostic evaluates one saved phi_plus lambda-half root, one fresh Phase-53-algorithm saddle solve, a fixed P50/fresh-center by P50/fresh-launch factorial, and eight EL_long ODE attempts under two frozen profiles. The VALID_RUN passes eight exact and eight numerical aggregate checks. Both P50-center corners retain the expected residual NONPASS pattern while both fresh-center corners recover the saved target under both profiles, yielding P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET. This is bounded calculation-workbench evidence; the route is operationally KILL, next_phase is null, Gate 1 remains open, and global promotion is prohibited.",
+      "state": "COMPLETED_VALID_BOUNDED_RECOVERY_ROUTE_KILLED"
+    },
+    {
+      "id": "scope:p56-single-lambda-half-launch-provenance-residual-conditioning",
+      "type": "scope",
+      "title": "P56 single-root lambda-half launch-provenance diagnostic",
+      "summary": "Exactly one saved phi_plus lambda-half root; one permitted fresh saddle solve; P50 and fresh centers; P50 and fresh Hessian-derived launches; four ordered factorial corners; two frozen EL_long DOP853 profiles; eight ODE attempts; five fractions each; unchanged target gates; complete residual identities; and strict historical, global, physics, TOE, and Ragnarok boundaries.",
+      "state": "COMPLETED",
+      "includes": [
+        "the saved Phase-53 phi_plus lambda=0.5 root, target endpoint, scaled residual, pinned P50 saddle, and Phase-55 baseline subtree",
+        "one fresh Phase-53-algorithm saddle, two Hessian-derived launch choices, and the exact ordered 2 x 2 center/launch factorial",
+        "primary and refined-diagnostic EL_long profiles with four corners and five retained fractions per attempt",
+        "full endpoint and 18-component residual vectors, target-gate records, profile stability, center/launch/interaction identities, T conditioning, provenance, and independent byte reproduction"
+      ],
+      "excludes": [
+        "exact historical Phase-53 saddle, factor, launch, or initial-state byte identity",
+        "a Gamma--K root or continuation solve, full semantic replay, tangent, event, reflection, finite difference, action, first-cap, straight-arm, or cap-reintersection calculation",
+        "a general causal or dominance theorem, another source, root, lambda, platform, or solver-policy selection",
+        "Phase-51, Phase-53, or Phase-55 reclassification, root/component/end exhaustion, physical original cycle, determinant line, global signed vector, cutoff/continuum limit, physics claim, TOE, full replay authorization, or Phase 57"
+      ]
+    },
+    {
+      "id": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "type": "evidence",
+      "title": "Phase 56 lambda-half launch-provenance and residual-conditioning ledger",
+      "summary": "Eight exact and eight numerical aggregate checks pass. One fresh saddle root and all eight EL_long state ODEs complete; every forbidden root, replay, derivative, reflection, and action path remains at zero. The P50/P50 baseline reproduces Phase 55 exactly. Both P50-center corners have target vector [true,false,false], while both fresh-center corners have [true,true,true] under both profiles. The primary center, launch, and interaction residual-effect maxima are 2.672601463947290e-7, 1.704668152652186e-12, and 2.041902130921287e-14; no general causal label is assigned. The two authoritative stdout records are byte-identical, next_phase is null, and every global boundary is retained.",
+      "state": "VERIFIED_VALID_RUN_WITH_STABLE_FRESH_CENTER_RECOVERY_PATTERN",
+      "observed_status": "8_EXACT_PASS_8_NUMERICAL_PASS_WITH_EXPECTED_P50_CENTER_CORNER_NONPASS_RECORDS",
+      "check_ids": [
+        "P56.inputs.recursive_pins_commits_blobs_self_digests_and_runner_binding",
+        "P56.target.single_phi_plus_lambda_half_root_saddle_endpoint_and_baseline_subtrees",
+        "P56.algorithm.one_fresh_saddle_solve_and_zero_other_root_or_replay_calls",
+        "P56.launch.two_centers_two_launches_and_exact_2x2_corner_construction",
+        "P56.ODE.eight_profile_corner_attempts_five_fraction_slots_and_placeholders",
+        "P56.conventions.EL_long_fixed_sum_ordinary_transpose_single_outer_conjugation_and_solver_boundary",
+        "P56.residual.full_vector_identity_effect_definitions_and_T_component_index",
+        "P56.guard.historical_immutability_classification_precedence_and_global_nulls",
+        "P56.saddle.fresh_Phase53_algorithm_and_launch_validity",
+        "P56.newton.static_prediction_linear_identity_and_finite_comparison",
+        "P56.baseline.primary_P50_P50_reproduces_Phase55",
+        "P56.ODE.eight_attempt_completion_finiteness_callback_counts_and_xi_norm",
+        "P56.gates.all_corner_profile_endpoint_and_residual_ledgers_complete",
+        "P56.profile.all_corner_three_gate_vectors_stable",
+        "P56.recovery.fresh_fresh_both_profiles_vs_saved_target",
+        "P56.arithmetic.residual_identities_center_launch_interaction_and_T_conditioning"
+      ]
+    },
+    {
+      "id": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "type": "claim",
+      "title": "The fresh Phase-53-algorithm center and launch recover the saved lambda-half target",
+      "summary": "The fresh saddle converges 5.246e-13 from the pinned P50 saddle with gradient 6.896e-12, minimum Hessian gap 4.220, and inertia (5-,4+,0). The fresh/fresh corner passes saved-endpoint, absolute scaled-residual, and saved-scalar-difference gates under both profiles. Its primary values are 4.572e-17, 2.641e-10, and 2.774e-13; refined values are 3.646e-14, 2.645e-10, and 9.132e-14. These are results for the frozen diagnostic, not exact historical Phase-53 object identity.",
+      "state": "SUPPORTED_ON_SINGLE_FROZEN_LAMBDA_HALF_DIAGNOSTIC",
+      "claim_id": "P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "statement": "At the single saved phi_plus lambda=0.5 target, the fresh Phase-53-algorithm center with its fresh Hessian-derived launch passes all three unchanged target gates under both frozen EL_long solver profiles.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+      "type": "claim",
+      "title": "The frozen factorial gate pattern associates target recovery with the fresh center",
+      "summary": "For both profiles, P50/P50 and P50/fresh have gate vector [true,false,false], while fresh/P50 and fresh/fresh have [true,true,true]. The primary residual-effect maxima are 2.673e-7 for center, 1.705e-12 for launch, and 2.042e-14 for interaction, with real T the largest center component. The result explicitly records causal_or_dominance_label_assigned=false: this is an association within four frozen corners, not a general causal or dominance theorem.",
+      "state": "SUPPORTED_AS_BOUNDED_FACTORIAL_ASSOCIATION",
+      "claim_id": "P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+      "statement": "Within the frozen two-center, two-launch lambda-half factorial, changing from the P50 center to the fresh Phase-53-algorithm center changes both tested launch corners from residual-target NONPASS to PASS under both solver profiles, without licensing a general causal or dominance conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The bounded recovery does not authorize full replay, Phase 57, or global promotion",
+      "summary": "Phase 56 performs no continuation or full semantic replay and leaves Phases 51, 53, and 55 historically unchanged. Root/component/end exhaustion, straight arms, cap reintersections, determinant line, original cycle, global vector, cutoff and continuum outputs remain null or false. The descriptive candidate is not execution authorization; the Ragnarok policy keeps continuation_route=KILL, full_replay_authorized=false, phase57_authorized=false, and next_phase=null. Gate 1 remains OPEN_PARTIAL_PROGRESS and global promotion remains PROHIBITED.",
+      "state": "SUPPORTED_AS_DIAGNOSTIC_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "statement": "A passing single-root launch-provenance diagnostic neither reclassifies a historical continuation nor establishes or authorizes a full replay, Phase 57, global cycle, physics claim, or TOE conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:p56-input-manifest",
+      "type": "artifact",
+      "title": "Phase 56 frozen lambda-half launch-provenance input manifest",
+      "summary": "Pre-output freeze of the one-root target, recursive provenance pins, single fresh saddle solve, fixed 2 x 2 factorial, two EL_long solver profiles, exact thresholds and record topology, classification precedence, no-replay guards, and global null boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_INPUTS.json",
+      "sha256": "94c2d0074e0d2a36f3ecb5d99e437ef2915948bbd059154f10098a890f30fb7c",
+      "introduced_in_commit": "24b2d6d7f207941e782dfe9ceae08af6b2d2d24b"
+    },
+    {
+      "id": "artifact:p56-script",
+      "type": "artifact",
+      "title": "Phase 56 terminal launch-provenance diagnostic executable",
+      "summary": "Pinned Python runner that validates all recursive inputs, permits one fresh saddle solve and eight state ODEs, blocks every continuation/replay path, constructs the exact factorial, retains full endpoint/residual/effect ledgers, enforces historical and global boundaries, and emits canonical self-digested JSON.",
+      "state": "TRACKED_CONSUMED_NOT_EXECUTABLE_DURING_PAUSE",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning.py",
+      "sha256": "083924f7f9fd0bb3baf8e681e2760cc54ef4a105f5a597b52aa3cdb58c6ac882",
+      "introduced_in_commit": "30ba59ff33e880065e99fa9be8d9c32b7dbd9f95"
+    },
+    {
+      "id": "artifact:p56-raw-result",
+      "type": "artifact",
+      "title": "Phase 56 full raw result",
+      "summary": "The complete 321,183-byte VALID_RUN result with eight exact and eight numerical passes, one permitted fresh saddle root, eight completed EL_long ODEs, stable two-profile gate vectors, fresh-center recovery classification, strict null boundaries, Ragnarok containment fields, and canonical payload self-digest 56c567bf60fde04b7d68ab9a5c394faaf08e73e43fe1db36b082ba58e3c010b2.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_RESULT.json",
+      "sha256": "c9163319405ed4ec696076f7516c32fa8af290794a2e1cc4762090812f693d27",
+      "introduced_in_commit": "389b464cfd0cc453c614da283efc5fc1e1cfc970"
+    },
+    {
+      "id": "artifact:p56-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 56 evidence snapshot",
+      "summary": "Compact typed extract preserving all eight exact and eight numerical checks, command and artifact provenance, byte-identical reproduction, root/ODE/forbidden-call topology, fresh saddle and four-corner gate table, factorial-effect magnitudes, the retained complex-maximum warning audit, candidate nonauthorization, route KILL, next_phase null, and every global boundary. The pinned raw result remains byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase56-result.json",
+      "sha256": "444d8806590efe213eab1b5d6576bb7dd516358d04add50815f74c15a4c69571"
+    },
+    {
+      "id": "artifact:p56-report",
+      "type": "artifact",
+      "title": "Phase 56 terminal closeout report",
+      "summary": "Human-readable report separating the bounded recovery and factorial association from exact historical identity, general causality, full replay, global, physics, and TOE claims; retaining execution/reproduction provenance, complex-maximum warning audit, and the consumed Ragnarok closeout.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md",
+      "sha256": "e853b4cdf60547ef503e9a4dfaac261e5f35450eeede8eddcb2b694589f04cee",
+      "introduced_in_commit": "389b464cfd0cc453c614da283efc5fc1e1cfc970"
     }
   ],
   "edges": [
@@ -23273,6 +23440,248 @@
       "from": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
       "relation": "DOCUMENTED_BY",
       "to": "artifact:p55-report"
+    },
+    {
+      "id": "edge:2211",
+      "from": "phase:p56",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2212",
+      "from": "phase:p56",
+      "relation": "GOVERNED_BY",
+      "to": "policy:recursive-self-application-audit"
+    },
+    {
+      "id": "edge:2213",
+      "from": "phase:p56",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker"
+    },
+    {
+      "id": "edge:2214",
+      "from": "phase:p56",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p55"
+    },
+    {
+      "id": "edge:2215",
+      "from": "scope:p56-single-lambda-half-launch-provenance-residual-conditioning",
+      "relation": "PART_OF",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2216",
+      "from": "artifact:p56-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2217",
+      "from": "artifact:p56-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2218",
+      "from": "artifact:p56-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2219",
+      "from": "artifact:p56-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2220",
+      "from": "artifact:p56-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2221",
+      "from": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "relation": "PART_OF",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2222",
+      "from": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p56-script"
+    },
+    {
+      "id": "edge:2223",
+      "from": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p56-evidence-snapshot"
+    },
+    {
+      "id": "edge:2224",
+      "from": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p56-raw-result"
+    },
+    {
+      "id": "edge:2225",
+      "from": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "relation": "PART_OF",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2226",
+      "from": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p56-single-lambda-half-launch-provenance-residual-conditioning"
+    },
+    {
+      "id": "edge:2227",
+      "from": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2228",
+      "from": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p56-lambda-half-launch-residual-provenance-audit"
+    },
+    {
+      "id": "edge:2229",
+      "from": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF",
+      "note": "Phase 56 retains the Phase-55 P50/P50 miss as its exact baseline and changes the explicitly labelled center/launch construction; it does not rewrite Phase 55."
+    },
+    {
+      "id": "edge:2230",
+      "from": "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+      "relation": "PART_OF",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2231",
+      "from": "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p56-single-lambda-half-launch-provenance-residual-conditioning"
+    },
+    {
+      "id": "edge:2232",
+      "from": "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2233",
+      "from": "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+      "relation": "EXTENDS",
+      "to": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "note": "The factorial gate table scopes the recovery association without assigning a general causal or dominance label."
+    },
+    {
+      "id": "edge:2234",
+      "from": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p56"
+    },
+    {
+      "id": "edge:2235",
+      "from": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p56-single-lambda-half-launch-provenance-residual-conditioning"
+    },
+    {
+      "id": "edge:2236",
+      "from": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p56-lambda-half-launch-provenance-residual-conditioning",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2237",
+      "from": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "relation": "EXTENDS",
+      "to": "claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "note": "Phase 56 answers the bounded diagnostic while retaining every historical, global, physics, and TOE boundary."
+    },
+    {
+      "id": "edge:2238",
+      "from": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections",
+      "note": "Only the separately scoped scientific Gate-1 question remains open; this edge is not authorization to execute a new phase during the bounded pause."
+    },
+    {
+      "id": "edge:2239",
+      "from": "artifact:p56-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p50-raw-result"
+    },
+    {
+      "id": "edge:2240",
+      "from": "artifact:p56-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p53-raw-result"
+    },
+    {
+      "id": "edge:2241",
+      "from": "artifact:p56-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p55-raw-result"
+    },
+    {
+      "id": "edge:2242",
+      "from": "artifact:p56-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p56-input-manifest"
+    },
+    {
+      "id": "edge:2243",
+      "from": "artifact:p56-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p56-script"
+    },
+    {
+      "id": "edge:2244",
+      "from": "artifact:p56-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p56-raw-result"
+    },
+    {
+      "id": "edge:2245",
+      "from": "artifact:p56-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p56-raw-result"
+    },
+    {
+      "id": "edge:2246",
+      "from": "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p56-report"
+    },
+    {
+      "id": "edge:2247",
+      "from": "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p56-report"
+    },
+    {
+      "id": "edge:2248",
+      "from": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p56-report"
+    },
+    {
+      "id": "edge:2249",
+      "from": "programme:cpt-temporal-folded-susy",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "Operational containment only; the circuit breaker is not scientific evidence, a Gate-1 no-go, a physics claim, or a TOE verdict."
     }
   ],
   "kg_bridges": [
