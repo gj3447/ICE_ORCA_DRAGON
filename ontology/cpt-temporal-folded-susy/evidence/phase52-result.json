@@ -1,0 +1,208 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_20260823",
+  "phase": "P52",
+  "observed_at_utc": "2026-08-23T09:21:15Z",
+  "command": "proxmox-scratch run p52r --timeout 7200 -- ./ice run phase52_m5_cse_runtime_dtype_and_rhs_repair",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase52_m5_cse_runtime_dtype_and_rhs_repair.py",
+    "sha256": "3e2c241d3eb001cb8de79190aa3c71b86f470d4e78d03fb67200d2d20a572916",
+    "introduced_in_commit": "3d70edab931cde249220c78f4041287a415b2eb2"
+  },
+  "exact_checks": 7,
+  "checks": [
+    {
+      "id": "P52.inputs.byte_pins_self_digests_and_manifest_before_runner",
+      "statement": "the manifest, runner, direct and transitive inputs, committed blobs, self-digests, and end-of-run byte hashes match their frozen provenance",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.slots.exact_Phase51_six_state_construction",
+      "statement": "the two sources at lambda 0, 0.5, and 1 reconstruct the six frozen Phase-51 states exactly under the declared formulas",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.symbolic.element_gradient_sum_identity",
+      "statement": "the exact-rational sum of element gradients equals the declared global gradient for both m=4 and m=5",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.symbolic.CSE_back_substitution_and_DAG_fingerprints",
+      "statement": "every audited CSE plan back-substitutes exactly and its callable and DAG fingerprints match the frozen ledger",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.dtype.trace_completeness_and_raw_output_guard",
+      "statement": "runtime traces cover every replacement and raw output, exposing baseline binary64 temporaries while both repair candidates retain exact clongdouble scalars",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.conventions.stage_order_transpose_and_reference_isolation",
+      "statement": "stage order, transpose convention, direct 80/120-decimal reference isolation, and retained executable-rounding diagnostics match the manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.guard.historical_nonrewrite_and_global_nulls",
+      "statement": "the Phase-51 raw result remains byte-unchanged and every continuation, global, cutoff, continuum, physical, and TOE promotion field stays null or prohibited",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 7,
+  "numerical": [
+    {
+      "id": "P52.reproduction.Phase51_six_slot_evaluator_records",
+      "statement": "all six historical Phase-51 source/lambda evaluator records reproduce with zero retained numeric-leaf difference",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.audit.Phase51_all_CSE_temporaries_clongdouble",
+      "statement": "runtime tracing reproduces the hidden binary64 temporaries and therefore the Phase-51 all-CSE-temporaries-clongdouble contract violation",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.reference.mpmath_80_120_and_CSE_plain_stability",
+      "statement": "the isolated 80/120-decimal references and direct-CSE versus plain evaluations agree far below the frozen reference thresholds",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.repair.long_namespace_joint_CSE",
+      "statement": "the joint long-namespace CSE has the required dtype but remains an accuracy negative control because its six-slot RHS maximum exceeds 5e-10",
+      "status": "FAIL"
+    },
+    {
+      "id": "P52.repair.element_local_long_CSE",
+      "statement": "the element-local long CSE retains the required dtype and keeps all six frozen gradient and RHS comparisons below 5e-10",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.arithmetic.stage_telescope_and_cancellation",
+      "statement": "every signed stage telescope closes and the retained cancellation ledger is internally consistent",
+      "status": "PASS"
+    },
+    {
+      "id": "P52.guard.classification_and_nulls",
+      "statement": "the classification selects only the static six-slot element-local repair and preserves every Phase-53, global, and physical boundary",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "static pinned-platform audit and repair arbitration for the Phase-51 m=5 CSE/non-CSE evaluator gate",
+    "exact_checks": 7,
+    "numerical_checks": 7,
+    "run_status": "VALID_RUN",
+    "classification": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_ELEMENT_LOCAL_RHS_REPAIR_SUPPORTED_ON_FROZEN_SIX_SLOTS",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json",
+      "input_manifest_sha256": "5766d8cdaf599428d01eeb785c319ba9418e3c5e56f6275fd9d1229d4f7e0238",
+      "input_manifest_commit": "75cce4131cea3a1b69eed4436caaf72ce50b9b11",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json",
+      "raw_result_outer_sha256": "be29daadd7a338d4b71a445c7c364444de0c60ffb7afe45393d5419a24731ffd",
+      "raw_result_payload_sha256_without_self": "524ddaf02568702e8a5a7f98d14e08b8ff168aab0d4b2446a32ae0d94d16ddb5",
+      "raw_result_introduced_in_commit": "c766f0715de7b6cfabe68ea357182f2cbd8d821d",
+      "raw_result_size_bytes": 659213,
+      "generated_callable_ledger_sha256": "ef5c95e3e864b1cfc52828e75f61c31b6b661a5ba725cba57c22e1f0d34eb060",
+      "validation": "Strict unique-key finite JSON parsing, canonical self-digest recomputation, committed-blob guards, direct and Phase-51-transitive pin rehashes, exact callable fingerprints, and all seven exact plus seven typed numerical records passed provenance validation. The joint long-namespace accuracy failure is a declared non-invalidating negative control."
+    },
+    "platform": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "longdouble_itemsize_bytes": 16,
+      "clongdouble_itemsize_bytes": 32,
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41"
+    },
+    "record_counts": {
+      "frozen_source_lambda_slots": 6,
+      "source_labels": 2,
+      "lambda_values": 3,
+      "baseline_m4_and_m5_joint_CSE_evaluations": 12,
+      "element_local_m4_and_m5_element_evaluations": 54,
+      "baseline_binary64_temporaries_per_m4_or_m5_joint_evaluation": 19,
+      "baseline_numpy_float64_temporaries_per_joint_evaluation": 10,
+      "baseline_python_float_temporaries_per_joint_evaluation": 9
+    },
+    "aggregate": {
+      "maximum_six_slot_historical_RHS_relative_error": 1.6864238265787197e-8,
+      "maximum_element_local_gradient_relative_error": 7.050932489628351e-11,
+      "maximum_element_local_RHS_relative_error": 1.5668639302791578e-10,
+      "maximum_joint_long_namespace_gradient_relative_error": 7.149552606479028e-10,
+      "maximum_joint_long_namespace_RHS_relative_error": 7.625056919853255e-9,
+      "frozen_gradient_and_RHS_relative_threshold": 5e-10,
+      "maximum_80_vs_120_reference_relative_error": "6.568446046816121747823455297339298648571e-78",
+      "maximum_CSE_vs_plain_reference_relative_error": "2.869166608896741935094577723202214301443e-73",
+      "maximum_stage_telescope_relative_closure": 0.0
+    },
+    "runtime_dtype_finding": {
+      "historical_all_temporaries_clongdouble": false,
+      "baseline_hidden_float64_counts_reproduced": true,
+      "m4_joint_temporary_dtype_counts_per_slot": {
+        "complex256": 425,
+        "numpy_float64": 10,
+        "python_float64": 9
+      },
+      "m5_joint_temporary_dtype_counts_per_slot": {
+        "complex256": 525,
+        "numpy_float64": 10,
+        "python_float64": 9
+      },
+      "element_local_all_traced_scalars_exact_clongdouble": true,
+      "joint_long_namespace_all_traced_scalars_exact_clongdouble": true,
+      "phase51_protocol_validity": "NOT_UPHELD",
+      "phase51_historical_emitted_status": "VALID_RUN",
+      "phase51_raw_result_mutated": false
+    },
+    "repair_arbitration": {
+      "element_local_long_CSE": "SUPPORTED_ON_FROZEN_SIX_STATIC_SLOTS",
+      "joint_long_namespace_CSE": "DIAGNOSTIC_NEGATIVE_CONTROL_ACCURACY_NONPASS",
+      "phase53_full_rerun_required_before_any_local_supported_label": true
+    },
+    "scope": {
+      "calculated_facts": [
+        "runtime scalar dtypes for the actual pinned Phase-51 m=4 and m=5 CSE callables at six frozen source/lambda slots",
+        "exact symbolic element-sum and CSE back-substitution identities",
+        "independent 80/120-decimal static action-gradient and RHS references",
+        "same-state gradient and RHS accuracy for two dtype-correct repair candidates",
+        "closed per-stage arithmetic telescopes and cancellation diagnostics"
+      ],
+      "not_computed": [
+        "a Phase-51 continuation rerun with the repaired evaluator",
+        "re-solved roots, nonlinear flow trajectories, endpoint states, path tangents, or orientation ledgers under the repair",
+        "portable agreement on another platform or a formal correct-rounding theorem",
+        "other roots, charts, arms, cap reintersections, upward components, Stokes chambers, or relative good ends",
+        "a physical original cycle, common determinant line, cutoff or continuum limit, global signed intersection, TOE, or physics claim"
+      ],
+      "static_same_platform_arithmetic_only": true,
+      "calculation_workbench_only": true,
+      "phase51_historical_evidence_preserved": true,
+      "phase50_open_problem_resolved": false,
+      "root_nonexistence_or_contradiction_certified": false,
+      "cutoff_or_continuum_theorem": false,
+      "physics_claim": false
+    },
+    "promoted_outputs": {
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "promoted_output": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS"
+    },
+    "claim_status": {
+      "phase51_dtype_contract_violation": "REPRODUCED",
+      "element_local_static_repair": "SUPPORTED_ON_FROZEN_SIX_SLOTS",
+      "phase51_local_continuation_label": "NOT_RECLASSIFIED",
+      "phase53_full_repaired_rerun": "OPEN",
+      "phase50_gamma_k_open_problem": "OPEN",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "next_calculation": "Freeze and execute Phase 53 as a full authoritative replay of the Phase-51 continuation and every path, flow, derivative, endpoint, orientation, and null guard using the supported element-local evaluator; do not reuse the static six-slot result as a continuation label."
+  }
+}
