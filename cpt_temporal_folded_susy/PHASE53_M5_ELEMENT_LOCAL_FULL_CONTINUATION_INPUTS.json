@@ -1,0 +1,529 @@
+{
+  "schema": "ice-phase53-m5-element-local-full-continuation-inputs/v1",
+  "phase": 53,
+  "status": "FROZEN_BEFORE_RUNNER_OR_VALIDATE_ONLY_PILOT_OR_AUTHORITATIVE_OUTPUT",
+  "frozen_at_utc": "2026-08-23T09:39:31Z",
+  "repository_head_observed_at_freeze": "9fd2ea36ee64c5a3beecf7cd0ef61fadf202fddf",
+  "manifest_introduction_commit": null,
+  "scope": {
+    "question": "When the complete immutable Phase-51 Gamma--K continuation is replayed with one coherent element-local long-namespace production evaluator for action, gradient, and Hessian, does the declared phi_plus local candidate satisfy every unchanged Phase-51 semantic gate?",
+    "calculation_workbench_only": true,
+    "computed": [
+      "one full semantic replay of every Phase-51 fine-forward, coarse-forward, fine-reverse, and independently initialized phi_minus continuation",
+      "all Phase-51 saddle, lambda-zero lift, reflection, full-J finite-difference, outer lambda-tangent, endpoint mutation, action, path, and first-cap ledgers",
+      "a coherent element-local long-namespace action, gradient, and Hessian production evaluator with fixed-order clongdouble accumulation",
+      "exact action, gradient, and Hessian element-sum identities and exact CSE back-substitution checks",
+      "exact reuse of the Phase-52 element-gradient CSE plans and an independent six-slot 80/120-decimal action-gradient-Hessian reference audit",
+      "raw temporary and raw output dtype tracing before any solver-boundary cast"
+    ],
+    "not_computed": [
+      "any Phase-51 source, root seed, mesh, solver setting, numerical threshold, chart, sign, orientation, action, metric, convention, fallback, or classification-rule change",
+      "other roots, sources, charts, straight arms, cap reintersections, directions, saddles, upward components, or root exhaustion",
+      "interval, augmented-fold, local-degree, cross-platform long-double, cutoff, continuum, Stokes, determinant-line, or global-cycle certification",
+      "a physical original cycle, global intersection number, physics claim, or theory of everything"
+    ],
+    "historical_boundary": "Phase 51 remains an immutable historical result whose stronger all-temporaries-clongdouble protocol was not upheld by Phase 52. Phase 53 is a new full replay and may not rewrite or silently promote that raw result."
+  },
+  "phase51_contract_inheritance": {
+    "authoritative_manifest_pin": "pinned_inputs.phase51_manifest",
+    "policy": "The complete parsed Phase-51 manifest is the sole authority for sources, source order, target and reflected control, action and metric paths, coordinate and parameter orders, roots and seeds, cap and launch maps, charts, signs and parity, continuation meshes and direction, solver and integration numerics, finite-difference and endpoint controls, thresholds, fallback prohibitions, semantic checks, and local/global classification boundaries. Phase 53 does not restate those values.",
+    "inherited_json_pointers": [
+      "/scope/production_target",
+      "/scope/reflected_control",
+      "/model_path",
+      "/gamma_and_root_map",
+      "/launch_chart",
+      "/continuation",
+      "/evaluator/paired_sources",
+      "/evaluator/paired_lambdas",
+      "/evaluator/paired_trajectory_fractions",
+      "/evaluator/paired_reintegrations",
+      "/fixed_numerics",
+      "/controls",
+      "/thresholds",
+      "/classification",
+      "/required_outputs",
+      "/run_semantics"
+    ],
+    "only_permitted_overlay": {
+      "path": "/evaluator",
+      "replacement": "Replace the Phase-51 historical joint-CSE production action-gradient-Hessian implementation by the complete Phase-53 element-local evaluator declared below. Keep the ordinary A_lambda transpose, one outer minus-conjugation, complete-RHS complex128 solver-boundary cast, validation roles, paired slots, and every semantic threshold unchanged.",
+      "no_other_override": true
+    },
+    "semantic_replay": {
+      "required_phase51_exact_check_ids": [
+        "P51.inputs.byte_pins_and_manifest_before_runner",
+        "P51.action.Phase50_diagonal_path_identity",
+        "P51.cap.R18_middle_dimension_and_common_coordinate_lambda0_lift",
+        "P51.evaluator.CSE_symbolic_reconstruction_and_clongdouble_contract",
+        "P51.orientation.orders_chart_and_odd_K_parity",
+        "P51.guard.local_scope_forces_global_nulls"
+      ],
+      "required_phase51_numerical_check_ids": [
+        "P51.saddles.Phase50_reproduction",
+        "P51.intersections.lambda0_lifts",
+        "P51.intersections.fine_forward_both_sources",
+        "P51.intersections.coarse_and_reverse",
+        "P51.reflection.independent_phi_pair",
+        "P51.derivative.full_J_at_0_half_1",
+        "P51.tangent.lambda_half",
+        "P51.evaluator.CSE_nonCSE_pairs",
+        "P51.endpoint.radius_and_shape",
+        "P51.guard.classification_and_nulls"
+      ],
+      "mapping_rule": "Retain every Phase-51 semantic check and internal subcheck under the same identifier. For the evaluator check only, interpret production as the Phase-53 complete element-local action-gradient-Hessian evaluator and treat the Phase-51 non-CSE path solely as an independent validation control, never as a production Hessian provider.",
+      "preenumerate_every_phase51_slot": true,
+      "retain_every_failure": true,
+      "no_post_output_slot_or_gate_selection": true,
+      "expected_topology": {
+        "saddle_records": {
+          "attempt_count": 34,
+          "accepted_count": 34,
+          "per_source": 17
+        },
+        "primary_and_reflection_path_root_records": {
+          "phi_plus_fine_forward": 17,
+          "phi_plus_coarse_forward": 9,
+          "phi_plus_fine_reverse": 17,
+          "phi_minus_fine_forward": 17,
+          "subtotal": 60
+        },
+        "outer_lambda_tangent_records": {
+          "record_count": 2,
+          "step_count": 2,
+          "roots_per_record": 2,
+          "flow_ledgers_per_record": 2,
+          "accepted_root_subtotal": 4
+        },
+        "endpoint_mutations": {
+          "record_count": 4,
+          "accepted_root_subtotal": 4
+        },
+        "accepted_semantic_root_total": 68,
+      "action_and_first_cap_ledgers": {
+        "phi_plus_fine_forward": 17,
+        "phi_plus_coarse_forward": 9,
+        "phi_plus_fine_reverse": 17,
+        "phi_minus_fine_forward": 17,
+        "outer_lambda_tangent": 4,
+        "endpoint_mutations": 4,
+          "total": 68,
+          "samples_per_ledger": 101,
+          "required_event_status": "FIRST_CAP_EVENT",
+          "required_check_status": "PASS",
+          "all_values_finite": true
+        },
+        "evaluator_same_point_records": {
+          "source_count": 2,
+          "records_per_source": 3,
+          "total": 6
+        },
+        "trajectory_reintegrations": {
+          "lambda_count": 3,
+          "fractions_per_trajectory": 5,
+          "total_fraction_records": 15
+        },
+        "full_J_finite_difference_controls": {
+          "lambda_count": 3,
+          "columns_per_matrix": 18,
+          "central_difference_steps_per_column": 2,
+          "total_column_step_records": 108,
+          "K_flow_columns_requiring_integration": 9,
+          "plus_minus_integrations_per_step": 2,
+          "state_only_residual_calls_per_lambda": 72,
+          "state_only_residual_calls_total": 216,
+          "shared_baseline_K_integrations_per_lambda": 1,
+          "perturbed_K_integrations_per_lambda": 36,
+          "actual_state_integrations_per_lambda": 37,
+          "actual_state_integrations_total": 111,
+          "K_cache_hits_per_lambda": 35,
+          "K_cache_hits_total": 105,
+          "counter_policy": "Retain the 216 state-only residual calls, 111 actual state integrations, and 105 cache hits as dedicated full-J counters separately; these executions are additional to and must not be hidden inside the 146-record minimum retained integration topology.",
+          "cache_isolation": "A cache key must include evaluator/backend identity. Any cache collision or value reuse between the repaired production backend and the unreduced validation backend is INVALID_RUN."
+        },
+      "DOP853_records": {
+        "required_record_count": 146,
+        "composition": {
+          "action_trajectory_integrations": 68,
+          "first_cap_event_integrations": 68,
+          "paired_production_and_control_trajectory_integrations": 6,
+          "outer_tangent_plus_minus_state_integrations": 4
+        },
+          "historical_phase51_solver_steps_sum": 46597,
+          "solver_steps_sum_role": "DESCRIPTIVE_COMPARISON_ONLY",
+        "policy": "The 146 non-root, non-FD control integrations and their 68+68+6+4 composition are exact. The first 68 are the t_eval=101 action trajectories in the complete flow ledgers, not data-dependent Newton root-solve calls. Phase 51 omitted an explicit final execution ledger for the four outer-tangent plus/minus state integrations; Phase 53 must retain those four records. Root-solver integrate_k invocation counts are recorded separately but are not frozen because Newton and line-search call counts may change under repaired arithmetic. Retain the Phase-53 solver_steps sum and difference from 46597, but do not require equality because the repaired finite-arithmetic evaluator may legitimately alter adaptive DOP853 step placement while all inherited tolerances and semantic gates remain fixed."
+        },
+        "failure_policy": "Any missing, duplicate, extra, reordered, or mislabeled semantic slot or the wrong exact topology count is INVALID_RUN, not a smaller replay."
+      }
+    }
+  },
+  "full_element_local_evaluator": {
+    "source_model": "Use the same pinned 50-digit SymPy Float source elements, frozen source substitution, coordinate scales, m4 lift, lambda blend, and Phase-51 action convention. Build for each source and each of the four m4 or five m5 elements before global expansion.",
+    "plan_order": [
+      "action_scalar",
+      "gradient_vector",
+      "hessian_matrix"
+    ],
+    "separate_plan_requirement": "For every element build three separate sympy.cse(..., order='canonical') replacement plans: one for its action scalar, one for its gradient vector, and one for its Hessian matrix. A joint action-gradient-Hessian plan, a global-across-elements plan, or reuse of values across the three plans is prohibited.",
+    "action_plan": "Evaluate each element action through the Phase-52 dedicated long-namespace printer and namespace, then accumulate element scalars left-to-right in declared element index order using an np.clongdouble accumulator.",
+    "gradient_plan": {
+      "construction": "Byte-for-byte and structure-for-structure reuse the Phase-52 element-local gradient-only canonical CSE plans, printer, namespace, element order, component order, and fixed left-to-right clongdouble accumulation.",
+      "phase52_full_generated_callable_ledger_sha256": "ef5c95e3e864b1cfc52828e75f61c31b6b661a5ba725cba57c22e1f0d34eb060",
+      "phase52_element_gradient_projection_sha256": "8359762ba056bd7a300bceba8d4bf7e83e22149f5795c37f5b6ee0a4a212ad4e",
+      "projection_canonicalization": "From the pinned Phase-52 result symbolic_evaluator_ledger construct {'source_order':['phi_plus','phi_minus'],'elements':[{'source':s,'m4':ledger[s]['elements']['m4'],'m5':ledger[s]['elements']['m5']} for s in source_order]}; retain every entry field back_substitution, dag_sha256, index, replacement_count, and source_sha256; serialize UTF-8 with JSON sort_keys=true, separators=(',',':'), ensure_ascii=false. The canonical byte length is 4141.",
+      "drift_policy": "Any source digest, DAG digest, replacement count, index, order, projection digest, printer, or namespace drift is INVALID_RUN."
+    },
+    "hessian_plan": "Differentiate each pinned source-substituted element gradient with respect to the declared complex coordinate order, canonical-CSE that element Hessian alone, evaluate every entry in the long namespace, and accumulate each matrix entry left-to-right in element order using np.clongdouble.",
+    "production_use": {
+      "saddle_action": "Use the repaired fixed-order action evaluator for every action value and action ledger.",
+      "saddle_gradient_and_jacobian": "Use the repaired fixed-order gradient and Hessian evaluators for saddle equations and their analytic Jacobian.",
+      "flow_state": "Form the complete nonlinear state RHS from the repaired gradient, ordinary A_lambda.T, and exactly one outer minus-conjugation in clongdouble; cast the completed RHS once at the Phase-51 solve_ivp boundary.",
+      "flow_tangent": "Form every Hessian action and complete state-plus-variation RHS from the repaired Hessian in clongdouble; cast only each completed solver RHS once at the inherited boundary.",
+      "root_and_controls": "Use this same complete evaluator for production roots, acceptance, paths, variational tangents, finite differences, endpoint controls, and action and first-cap ledgers."
+    },
+    "long_namespace": "Use the pinned Phase-52 dedicated SymPy NumPy printer: every Float and non-integer Rational is emitted from decimal text as np.clongdouble, pi is bound from an 80-digit decimal string, sqrt and exp require and return np.clongdouble, and integer powers retain structural integer exponents.",
+    "fixed_accumulation": {
+      "element_order": "m4 indices 0,1,2,3 and m5 indices 0,1,2,3,4",
+      "component_order": "the inherited Phase-51 complex coordinate order",
+      "rule": "Initialize an np.clongdouble zero for every scalar, vector component, and Hessian entry and add completed element outputs strictly left-to-right; pairwise, tree, compensated, sorted-magnitude, BLAS-reduced, or Python-sum accumulation is prohibited."
+    },
+    "prohibited": [
+      "a repaired element-local gradient combined with a Phase-51 global non-CSE, historical joint-CSE, finite-difference, or other Hessian",
+      "a repaired gradient-only state flow with an unrepaired tangent or saddle Hessian path",
+      "post-output clongdouble coercion counted as raw dtype retention",
+      "any Python float, NumPy float64, complex128, or complex64 temporary before the declared complete solver-boundary cast",
+      "A_lambda.conj().T, an extra phi_minus conjugation, or more than one outer conjugation",
+      "cross-plan output caching, common-subexpression sharing, favorable output replacement, or non-CSE production repair",
+      "changing a Phase-51 root, seed, mesh, solver, threshold, chart, sign, convention, or fallback because of a Phase-53 output"
+    ]
+  },
+  "symbolic_and_dtype_contract": {
+    "exact_decimal_identity_family": "On the same separate exact-decimal Rational reconstruction used by Phase 52, require componentwise exact equality between the fixed-order element sums and the globally declared action, gradient, and Hessian; require d(action)/dw=gradient, d(gradient)/dw=Hessian, and Hessian symmetry in the inherited complex order.",
+    "executable_float_boundary": "The production plans remain the pinned 50-digit Float construction. Construction-order Float residuals against globally expanded expressions are retained as diagnostics and are never mislabeled as exact identities or used to relax a numerical gate.",
+    "CSE_back_substitution": "For every source, dimension, element, and action/gradient/Hessian plan, recursively back-substitute all replacements and require exact symbolic equality with that plan's unreduced element expression in its frozen output order.",
+    "gradient_reuse": "The projected Phase-53 gradient plan ledger must be exactly the pinned Phase-52 projection and fingerprint before any numerical work.",
+    "raw_dtype_trace": "Trace every generated local replacement and every raw action, gradient, and Hessian output scalar before frame destruction or array coercion. Trace completeness must equal every replacement and output count. Every value must be NumPy complex256/clongdouble; Python floats and NumPy float64 are failures.",
+    "runtime_scope": "Apply the raw dtype guard at all six independent source-by-lambda reference slots and retain generated plan counts and fingerprints globally. The actual production callables used by saddle, flow, tangent, finite-difference, endpoint, and ledger paths must be identity-bound to those audited plans.",
+    "hybrid_guard": "Record callable identities for action, gradient, Hessian, state RHS, tangent RHS, and saddle Jacobian at every semantic consumer. Any consumer bound to the historical Phase-51 non-CSE or joint-CSE Hessian makes the run INVALID."
+  },
+  "reference_audit": {
+    "slots": {
+      "source_order": [
+        "phi_plus",
+        "phi_minus"
+      ],
+      "lambda_order": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "point": "Exactly the Phase-51 declared_center_launch_initial_state recomputed from pinned inputs for each source-by-lambda pair before continuation.",
+      "count": 6,
+      "no_selection_or_replacement": true
+    },
+    "backend": "Direct SymPy evalf on the same pinned source-substituted action, gradient, and Hessian expressions at 80 and 120 decimal digits, with longdouble inputs lifted through unique 25-digit scientific decimal strings and all action, lift, blend, ordinary-transpose, conjugation, and Hessian-action algebra retained in mpmath. NumPy lambdify and native production outputs are forbidden in the reference.",
+    "precision_tiers_decimal_digits": [
+      80,
+      120
+    ],
+    "authoritative_tier_decimal_digits": 120,
+    "metrics": "Retain symmetric normwise relative, normwise absolute, and maximum-component absolute differences for action, gradient, Hessian, completed state RHS, and deterministic Hessian actions. Use a 1e-100 denominator floor only in the high-precision metric.",
+    "deterministic_hessian_probes": "Compare the complete Hessian matrix and its actions on every canonical complex-coordinate basis vector in inherited order; no favorable probe selection is allowed.",
+    "threshold_references": {
+      "80_vs_120_relative_max": "pinned Phase-52 manifest /thresholds/mpmath_80_vs_120_relative_max",
+      "direct_CSE_vs_unreduced_relative_max": "pinned Phase-52 manifest /thresholds/mpmath_CSE_vs_nonCSE_relative_max",
+      "gradient_and_completed_RHS_relative_max": "pinned Phase-52 manifest /thresholds/candidate_gradient_to_120dps_relative_max and /thresholds/candidate_RHS_to_120dps_relative_max",
+      "Hessian_action_relative_max": "pinned Phase-51 manifest /thresholds/CSE_nonCSE_hessian_action_relative_max",
+      "action_and_complete_Hessian_relative_max": "Use the unchanged inherited Phase-51 CSE_nonCSE_hessian_action_relative_max as the predeclared common finite-arithmetic scale; this adds no looser threshold."
+    },
+    "reference_role": "This tests same-expression finite arithmetic and complete evaluator coherence. It is not an independent derivation of the action, a physical validation, or a portability theorem."
+  },
+  "pre_authoritative_modes": {
+    "validate_only": {
+      "required_before_authoritative_run": true,
+      "required_command_environment": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1",
+      "allowed": [
+        "strictly parse and hash all pins and verify every named Git commit blob",
+        "validate result self-digests, runtime versions, platform dtype representation, schema, orders, and global-null declarations",
+        "construct every action, Phase-52-identical gradient, and Hessian CSE plan and perform exact identities, back-substitution, fingerprint, replacement-count, and raw-dtype trace-completeness checks",
+        "preenumerate all Phase-51 and Phase-53 output slots"
+      ],
+      "forbidden": "No root solve, ODE integration, continuation, endpoint mutation, finite-difference control, scientific classification, canonical result write, or authoritative claim may occur.",
+      "stdout_status": "VALIDATION_ONLY",
+      "evidence_role": "implementation validation only"
+    },
+    "pilot": {
+      "optional": true,
+      "required_command_environment": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1",
+      "frozen_scope": "After validate-only, evaluate only the six declared reference slots for raw dtype and 80/120-decimal action-gradient-Hessian comparison. Do not solve a saddle, root, trajectory, tangent, endpoint, or continuation node.",
+      "selection_role": "NONAUTHORITATIVE_IMPLEMENTATION_FEASIBILITY_ONLY",
+      "required_disclosure": "If run, preserve its command and complete output and disclose every value before the authoritative run.",
+      "cannot_change": "No plan, fingerprint, slot, precision, metric, threshold, Phase-51 semantic, classification, or fallback may change in response to the pilot.",
+      "canonical_result_write": false
+    },
+    "authoritative": {
+      "runner_must_be_committed_after_this_manifest": true,
+      "required_command_environment": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1",
+      "runner_and_manifest_working_bytes_must_match_named_committed_blobs": true,
+      "repository_must_be_clean_for_all_consumed_source_and_input_paths": true,
+      "complete_semantic_replay_required": true,
+      "single_finite_RESULT_JSON_line": true
+    }
+  },
+  "runtime_contract": {
+    "python_implementation": "CPython",
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.2",
+    "scipy_version": "1.18.0",
+    "sympy_version": "1.14.0",
+    "mpmath_version": "1.3.0",
+    "longdouble_itemsize_bytes": 16,
+    "clongdouble_itemsize_bytes": 32,
+    "longdouble_mantissa_bits_excluding_implicit": 63,
+    "longdouble_epsilon": "1.084202172485504434e-19",
+    "blas_and_thread_environment": {
+      "policy": "FROZEN_SINGLE_THREAD_INVALID_ON_DRIFT",
+      "required_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "command_prefix": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1",
+      "reason": "Freeze the relevant BLAS/OpenMP expression engines to one worker before Python starts so adaptive-solver and linear-algebra reductions are not exposed to an undeclared thread-count change. This is an execution reproducibility guard, not a Phase-51 source, solver, tolerance, mesh, or semantic-threshold change.",
+      "record_additional_if_present": [
+        "BLIS_NUM_THREADS",
+        "VECLIB_MAXIMUM_THREADS",
+        "GOTO_NUM_THREADS"
+      ],
+      "record_backend": "Retain NumPy and SciPy BLAS/LAPACK backend names and versions and any observable runtime threadpool counts without importing a new dependency solely for discovery.",
+      "authoritative_interpretation": "A missing or different required environment value is INVALID_RUN. Whether an underlying library ignores an irrelevant variable is recorded but does not weaken any exact topology, evaluator-reference, or Phase-51 semantic gate."
+    },
+    "policy": "Any runtime, representation, generated-plan, callable-binding, or consumed-byte drift is INVALID_RUN."
+  },
+  "pinned_inputs": {
+    "phase51_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json",
+      "commit": "80dda66aa57276de6e3940c35e58e89d34d28721",
+      "git_blob_oid": "fe7627278d0f1a4d7103419e20bc4ed04971413d",
+      "sha256": "0e9191d5c98cc1a56d7ffbcdd98ac02558457b87b6abf518ff754fbf4af7bd87",
+      "size_bytes": 23690
+    },
+    "phase51_runner": {
+      "path": "cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py",
+      "commit": "24508e323c2336c33d87ecf2786a46e0edb429ee",
+      "git_blob_oid": "87f3d51abe1a260db5e47d624acbb03e331fbfb7",
+      "sha256": "eb535f5a16687dccb47399e3ff7dceefe0ecabc6417574fd2f29abc008e1d7c9",
+      "size_bytes": 140963
+    },
+    "phase51_result": {
+      "path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json",
+      "commit": "ab14d0d0eacc09da64d5c8061fa0890179cd79aa",
+      "git_blob_oid": "155876206e19f020a6c7409ff646ef8bbd59f308",
+      "sha256": "b74c8b735b32790c85d7e14fbf78fe16bf437995d707268d209d4a655c3d8531",
+      "size_bytes": 1628760,
+      "result_payload_sha256_without_self": "153d2350c96114a137b0da3f2eaa37b9224a0081e602164702e28867cbd99e0d",
+      "required_run_status": "VALID_RUN",
+      "required_classification": "PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE"
+    },
+    "phase52_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_INPUTS.json",
+      "commit": "75cce4131cea3a1b69eed4436caaf72ce50b9b11",
+      "git_blob_oid": "3bdfd43f7f6df5d7c7c3512452324c71a9a77b81",
+      "sha256": "5766d8cdaf599428d01eeb785c319ba9418e3c5e56f6275fd9d1229d4f7e0238",
+      "size_bytes": 21702
+    },
+    "phase52_runner": {
+      "path": "cpt_temporal_folded_susy/phase52_m5_cse_runtime_dtype_and_rhs_repair.py",
+      "commit": "3d70edab931cde249220c78f4041287a415b2eb2",
+      "git_blob_oid": "002cfd3ac353f1469501cf769e40fdfe9d398062",
+      "sha256": "3e2c241d3eb001cb8de79190aa3c71b86f470d4e78d03fb67200d2d20a572916",
+      "size_bytes": 105645
+    },
+    "phase52_result": {
+      "path": "cpt_temporal_folded_susy/PHASE52_M5_CSE_RUNTIME_DTYPE_AND_RHS_REPAIR_RESULT.json",
+      "commit": "c766f0715de7b6cfabe68ea357182f2cbd8d821d",
+      "git_blob_oid": "33c800715949c48b3744b033eb97f315ba607d40",
+      "sha256": "be29daadd7a338d4b71a445c7c364444de0c60ffb7afe45393d5419a24731ffd",
+      "size_bytes": 659213,
+      "result_payload_sha256_without_self": "524ddaf02568702e8a5a7f98d14e08b8ff168aab0d4b2446a32ae0d94d16ddb5",
+      "required_run_status": "VALID_RUN",
+      "required_classification": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_ELEMENT_LOCAL_RHS_REPAIR_SUPPORTED_ON_FROZEN_SIX_SLOTS"
+    },
+    "phase41_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "commit": "58181447b558fa204406b732badd5c2fd541bb47",
+      "git_blob_oid": "f78af6ce0872373ab91e0a75eae8ac418bc98bb3",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e",
+      "size_bytes": 37879
+    },
+    "phase41_runner": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "git_blob_oid": "3ab64278bce6fc2e8802567082c4b5084001484d",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530",
+      "size_bytes": 124534
+    },
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "git_blob_oid": "7659c3174bd600f5d09ec0061426b8ee5eaa8b2f",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+      "size_bytes": 422981,
+      "self_digest": "e05c6cae4d34cf0bc7615a4801c7c96d163f974edc70d7f6d623102ee9dd63e2"
+    },
+    "phase49_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json",
+      "commit": "57d1431653e01969a0a136d7f847a63f81ea2daf",
+      "git_blob_oid": "fbe2e229a5c61d318c6b1c2c59b6bd79a4e064e1",
+      "sha256": "ec97937fd4643b2d3ebfccc70ff82e4348ea92086b5b0588aec33bf24fdebcc5",
+      "size_bytes": 9486
+    },
+    "phase49_runner": {
+      "path": "cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py",
+      "commit": "b41e7f2b0c75b922a9fa0d775ceee5d5607e5189",
+      "git_blob_oid": "18b6513c07d207b7faa8d5d4d2c1933f07b48d10",
+      "sha256": "f7f03d8ca08c3406cfbae4825b64fb5c2cac89797ea005519fc12c489947abb2",
+      "size_bytes": 30604
+    },
+    "phase49_result": {
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json",
+      "commit": "078753a9406f5e71730f7946df7ac8dcfa3a9d52",
+      "git_blob_oid": "acd1127de868c2de0e6a65c68cdcbb6524b742a9",
+      "sha256": "787e6aee62193af0b78041cae42eb38c13afef281b7d0560c07ad3a2958da531",
+      "size_bytes": 165513,
+      "result_payload_sha256_without_self": "c8063283f8ac66918cbabcd3d3a71d3bfdcfdba734067306486164737d4e3c9f",
+      "required_classification": "FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_SUPPORTED"
+    },
+    "phase50_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json",
+      "commit": "5e6f04ed7ce40672169c4b6e0cfad8180ec985af",
+      "git_blob_oid": "b28f5aa1c168e7cbbd0a9d1702548ac8f4e7d361",
+      "sha256": "24706b3b44c1ff426c7b593370acdb324cd39b7998c05ef52e3ba5b88d1e6444",
+      "size_bytes": 14221
+    },
+    "phase50_runner": {
+      "path": "cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py",
+      "commit": "f00b3e16b1cbb52302f097b2ae0360ec8b140224",
+      "git_blob_oid": "284fca0f670c8ae61b5a2333c3ac58aaf4aa234d",
+      "sha256": "77290311ad58198ace94f36e919a59fe19a330c5f49bb8c1ed8b6d15af697d90",
+      "size_bytes": 81520
+    },
+    "phase50_result": {
+      "path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json",
+      "commit": "4305c77f264bbe5fb62ea9d333129998e04d37c7",
+      "git_blob_oid": "a8fb42d18a9ae87d87a2e63f64e3dcd147f3ba50",
+      "sha256": "22594a5d7c513625384fbdb466101c073f3896a2be597704fa216c9643adbb44",
+      "size_bytes": 1159794,
+      "result_payload_sha256_without_self": "7300500ac7643301f593e720faaae858ea4ccf57b163fd99996b07a2758abc94",
+      "required_classification": "LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS"
+    },
+    "package_lock": {
+      "path": "package-lock.json",
+      "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+      "git_blob_oid": "7879f78a350066313bc21dce8233c6c7274f849c",
+      "sha256": "0dd02b48ebcf1550edb757ffffc8b03b5059438cca3b9d3cc605f18576cb8f4d",
+      "size_bytes": 81300
+    },
+    "uv_lock": {
+      "path": "uv.lock",
+      "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+      "git_blob_oid": "9452822a5b16f4511b97195fec4dd1f1d89c08ad",
+      "sha256": "8afebaf1d11eb0e31ee6398e4a88b2742acb887920a7ec12a5f3d581c1c99527",
+      "size_bytes": 9301
+    }
+  },
+  "pin_validation": {
+    "flattened_pin_count": 17,
+    "policy": "Hash the exact bytes used for parsing or import, reject duplicate and nonfinite JSON, require each working blob OID to equal git hash-object and the named commit:path blob OID, validate every declared result self-digest and required status/classification, retain every record through completion, and rehash all 17 paths plus the Phase-53 manifest and runner after numerical work.",
+    "nested_consistency": "The flattened Phase-41/42/49/50 and lock records must also agree exactly with the corresponding transitive pinned_inputs records inside the pinned Phase-51 and Phase-52 manifests. Any disagreement is INVALID_RUN.",
+    "runner_guard": "The authoritative runner commit must postdate and descend from the committed Phase-53 manifest, and its working bytes must equal its named commit blob at start and end."
+  },
+  "checks": {
+    "exact": [
+      "P53.inputs.byte_pins_self_digests_and_committed_blobs",
+      "P53.contract.Phase51_semantics_inherited_except_evaluator",
+      "P53.symbolic.action_gradient_hessian_element_identities",
+      "P53.symbolic.Phase52_gradient_DAG_exact_reuse",
+      "P53.symbolic.action_hessian_CSE_back_substitution",
+      "P53.dtype.full_evaluator_raw_clongdouble",
+      "P53.conventions.fixed_order_complete_evaluator_and_solver_boundary",
+      "P53.guard.local_global_physics_TOE_nulls"
+    ],
+    "numerical": [
+      "P53.reference.six_slot_80_120_full_evaluator",
+      "P53.saddles.Phase50_reproduction",
+      "P53.intersections.lambda0_lifts",
+      "P53.intersections.fine_forward_both_sources",
+      "P53.intersections.coarse_and_reverse",
+      "P53.reflection.independent_phi_pair",
+      "P53.derivative.full_J_at_0_half_1",
+      "P53.tangent.lambda_half",
+      "P53.evaluator.full_repaired_pairs_and_trajectories",
+      "P53.endpoint.radius_and_shape",
+      "P53.guard.full_semantic_replay_classification_and_nulls"
+    ],
+    "conjunction": "All eight exact checks, all eleven numerical checks, and every nested Phase-51 semantic check and internal subcheck must pass for the supported classification."
+  },
+  "classification": {
+    "invalid_run": {
+      "label": "INVALID_RUN",
+      "if": "Any manifest, pin, commit-blob, self-digest, runtime, source, schema, duplicate/nonfinite JSON, exact identity, CSE back-substitution, Phase-52 gradient fingerprint, raw dtype, trace completeness, callable-binding, fixed-order, solver-boundary, hybrid-Hessian, inherited-contract, slot, provenance, or null-boundary prerequisite fails."
+    },
+    "supported": {
+      "label": "PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_SUPPORTED_WITH_ELEMENT_LOCAL_FULL_EVALUATOR_ON_FROZEN_DIAGONAL_PATH",
+      "if": "The run is valid and complete; all Phase-53 exact and numerical checks pass; every unchanged Phase-51 semantic check and internal subcheck passes under the coherent full repaired evaluator; and every local/global/physics/TOE null guard is exact."
+    },
+    "inconclusive": {
+      "label": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+      "if": "The run is valid and complete but any finite numerical reference, saddle, root, boundary, rank, determinant, transversality, mesh, derivative, evaluator, reflection, endpoint, action, path, first-cap, or inherited scientific semantic check does not pass. Solver nonconvergence, seed loss, box exhaustion, or a small sampled singular value remains inconclusive and is not a no-root certificate."
+    },
+    "contradicted_selectable_by_runner": false,
+    "contradiction_boundary": "No separately frozen interval, augmented-fold, or local-degree certificate is implemented, so Phase 53 cannot select a contradicted or no-root label.",
+    "Phase51_raw_result_mutated": false,
+    "Phase52_raw_result_mutated": false,
+    "global_promotion": "PROHIBITED",
+    "Gate1": "OPEN_PARTIAL_PROGRESS"
+  },
+  "required_outputs": {
+    "result_path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json",
+    "result_schema": "ice-phase53-m5-element-local-full-continuation/v1",
+    "stdout_prefix": "RESULT_JSON=",
+    "result_payload_self_digest_field": "result_payload_sha256_without_self",
+    "exact_check_count": 8,
+    "numerical_check_count": 11,
+    "preenumerate_all_slots": true,
+    "retain_all_failures": true,
+    "strict_unique_finite_JSON": true,
+    "historical_phase51_result_sha256_after": "b74c8b735b32790c85d7e14fbf78fe16bf437995d707268d209d4a655c3d8531",
+    "historical_phase52_result_sha256_after": "be29daadd7a338d4b71a445c7c364444de0c60ffb7afe45393d5419a24731ffd",
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "continuous_direction_coverage_proved": false,
+    "root_exhaustion_proved": false,
+    "all_saddles_and_upward_components_complete": false,
+    "non_Stokes_chamber_certified": false,
+    "all_relative_good_ends_classified": false,
+    "physical_original_cycle_derived": false,
+    "common_determinant_line_constructed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "promoted_output": null
+  },
+  "run_semantics": {
+    "valid_completed_scientific_exit_code": 0,
+    "invalid_run_exit_code": 2,
+    "scientific_nonpass_does_not_change_exit_code": true,
+    "invalid_run": "An invalid prerequisite emits an INVALID_RUN diagnostic and no scientific supported or inconclusive label.",
+    "scientific_nonpass": "A complete valid replay with any numerical semantic non-pass emits the frozen inconclusive label and retains every failed record.",
+    "emission": "Emit exactly one strict finite RESULT_JSON line on stdout; progress goes only to stderr.",
+    "authoritative_repository_write": "The committed runner may write only the canonical Phase-53 result path. Scratch stdout and stderr remain external capture artifacts.",
+    "post_run_rehash": "Rehash the manifest, runner, all 17 flattened pins, and both immutable historical result files after every calculation and before classification.",
+    "boundary": "Even a supported Phase-53 label establishes only one finite-dimensional local Gamma--K continuation replay on one frozen diagonal path and same-platform arithmetic contract. It is not exhaustion, a global intersection, a physical cycle, a cutoff or continuum result, a physics claim, a TOE, or evidence that a TOE has been reached."
+  }
+}
