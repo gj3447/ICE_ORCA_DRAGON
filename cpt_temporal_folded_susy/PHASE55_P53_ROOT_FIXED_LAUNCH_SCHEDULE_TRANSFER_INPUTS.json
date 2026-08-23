@@ -4,7 +4,7 @@
   "status": "FROZEN_BEFORE_RUNNER_OR_ANY_PHASE55_OUTPUT",
   "frozen_at_utc": "2026-08-23T16:06:08Z",
   "repository_head_observed_at_freeze": "2dcba3b40db5f029a20632c8b5813e6b2eb863a8",
-  "manifest_introduction_commit": "TO_BE_BOUND_AFTER_INITIAL_COMMIT",
+  "manifest_introduction_commit": "de9fb6d22c44d5a271324967a85a4062264d6c1c",
   "scope": {
     "question": "On three P50-saddle-pinned Phase-55 launch reconstructions using the saved Phase-53 phi_plus fine-forward roots at lambda 0, 0.5, and 1, does the Phase-54 element-local-schedule attribution reproduce on the frozen fifteen-point production sample set, and does one coherent element-local standard-arithmetic state RHS transfer the reconstructed paths, endpoints, and scaled residuals relative to the element-local long-arithmetic production RHS?",
     "calculation_workbench_only": true,
