@@ -3,16 +3,16 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-22
+## Current state — 2026-08-23
 
 | Component | State |
 |---|---|
-| Runnable catalog | 82 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 83 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
 | Reproduction ledger | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` |
-| Local engineering gate | `npm run check` |
+| Local engineering gate | `npm run check` (strict typecheck + 22 tests) |
 | Environment gate | `./ice doctor` |
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
 
@@ -1145,46 +1145,42 @@ See
 and
 [`../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json`](../cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json).
 
-## Current direct calculation — CPT × Temporal-Folded SUSY Phase 50
+## Current direct calculation — CPT × Temporal-Folded SUSY Phase 51
 
-Phase 50 returns exit 0 with `VALID_RUN` and
-`LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS`.
-It embeds the five retained Phase-41 source-labelled (m=4) saddles into one declared common ambient
-space, adds two explicitly chosen stabilizer directions, and samples a fixed action homotopy to the
-native (m=5) midpoint action. This is a workbench bridge between two finite regulators, not an exact
-action nesting: the frozen symbolic witness gives \(S_5\circ P-S_4=54\pi^2\ne0\).
+Phase 51 returns exit 0 with `VALID_RUN` and
+`PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE`. It continues the frozen Phase-42 \(\phi+\)
+Gamma–K candidate through the Phase-50 diagonal stabilized-action/affine-invariant-SPD-metric path
+using the actual nonlinear (m=5) flow in \(\mathbb R^{18}\). A separately initialized \(\phi-\) path is
+retained as the reflection control. This is a calculation-workbench result, not a physics claim.
 
-All five branches complete the 17-node fine continuation, the 9-node coarse control, and the full
-reverse path with sampled inertia `(5-,4+,0)`. The largest gradient residual is `7.746e-10`, the
-smallest absolute Hessian eigenvalue is `4.19425`, the largest coarse/fine distance is `5.138e-12`, and
-the largest forward/reverse distance is `5.578e-12`. All thirty retained implicit-versus-two-step
-finite-difference tangent columns pass; the worst relative discrepancy is `2.377e-6` against the fixed
-`0.005` limit.
+All 6 exact checks pass. Of 10 numerical checks, 9 pass: the fine-forward \(\phi+\) and \(\phi-\)
+continuations, \(\phi+\) coarse and reverse paths, independent reflection comparison, full-\(J\)
+finite differences at \(\lambda=0,0.5,1\), the \(\lambda=0.5\) outer-path tangent, endpoint radius and
+launch-shape mutations, and every retained action/first-cap ledger. Thus the nonlinear continuation
+machinery and all declared path, derivative, endpoint, and ledger controls completed within their
+frozen gates.
 
-The declared affine-invariant and affine SPD metric paths remain positive and reflection covariant.
-Across both metric choices and the action-first, metric-first, and diagonal orderings, the minimum
-consecutive local upward-nine-plane overlap is `0.991143`, the minimum endpoint overlap is
-`0.9999999999999993`, and all 45 endpoint orientation comparisons have sign `+1`. Half/double
-stabilizer mutations return to the same sampled (m=5) endpoints within `4.451e-12`; an added-basis
-sign flip changes only the raw coordinate sign after the declared correction.
+The sole non-passing numerical check is the paired CSE/non-CSE evaluator consistency control. Its
+maximum same-point RHS relative error is `1.6900132129978792e-8`, above the frozen `5e-10` limit, even
+though the associated trajectory-state differences remain much smaller. The fail-closed contract
+therefore keeps the whole local result `INCONCLUSIVE`; the other passing checks do not override that
+backend inconsistency.
 
-These observations support one explicitly stabilized, sampled local saddle and tangent-plane route.
-They do not continue the Phase-41 Gamma–K intersections, construct nonlinear upward manifolds, search
-straight arms or cap reintersections, exhaust roots or upward components, fix Stokes data or relative
-good ends, identify a physical original cycle, prove a cutoff/continuum limit, or construct a common
-BFV/Pfaffian/Pin determinant line. All global outputs remain `null`, global promotion remains
-`PROHIBITED`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, and the separate Phase-49 formal endpoint and
-portable-flow-adapter problem remains open. The next direct calculation is one frozen (m=5) Gamma–K
-local candidate over this declared bridge, with residual, transversality, path, tangent, reflection,
-and stabilizer controls retained before any broader cycle claim. Phase 50 raises the committed runnable
-catalog to 82.
+Phase 51 does not search straight arms or later cap reintersections, exhaust directions, roots,
+saddles, or upward components, determine Stokes data or all relative good ends, derive a physical
+original cycle, construct a common determinant line, or prove a cutoff/continuum limit. All global
+outputs remain `null`, global promotion remains `PROHIBITED`, and Gate 1 remains
+`OPEN_PARTIAL_PROGRESS`. The next direct calculation is a backend-consistency repair: isolate the
+CSE/non-CSE clongdouble RHS discrepancy under the same state formation and contraction conventions,
+then rerun the unchanged continuation/reflection/FD/tangent/endpoint/ledger suite before any broader
+cycle work. Phase 51 raises the committed runnable catalog to 83.
 
 See
-[`../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md`](../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md),
-[`../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json`](../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json),
-[`../cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py`](../cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py),
+[`../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md`](../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md),
+[`../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json`](../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json),
+[`../cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py`](../cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py),
 and
-[`../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json`](../cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json).
+[`../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json`](../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json).
 
 ## Historical scientific ledger
 

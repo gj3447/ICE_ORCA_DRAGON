@@ -109,12 +109,13 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_INPUTS.json` · `phase48_m4_clongdouble_gradient_repair_state_map.py` · `PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP_RESULT.json` · `PHASE48_M4_CLONGDOUBLE_GRADIENT_REPAIR_STATE_MAP.md` | Phase 48 입력·실행체·raw result·보고서 — gradient-only clongdouble path/probe/endpoint는 통과하지만 full ladder와 두 derivative-reference aggregate가 실패하는 negative control |
 | `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json` · `phase49_m4_clongdouble_full_flow_state_map_repair.py` · `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json` · `PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR.md` | Phase 49 입력·실행체·raw result·보고서 — complete local flow 뒤 한 번 projection하는 pinned-platform adapter가 모든 frozen control을 통과하지만 formal endpoint bound와 portability는 미해결 |
 | `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json` · `phase50_m4_m5_joint_saddle_homotopy.py` · `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json` · `PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY.md` | Phase 50 입력·실행체·raw result·보고서 — 다섯 (m=4) saddle과 local upward nine-plane을 선언된 stabilized action/SPD-metric path로 (m=5)까지 운반; Gamma–K intersection, cutoff theorem, global cycle은 미계산 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–50의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json` · `phase51_m5_gamma_k_local_continuation.py` · `PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json` · `PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md` | Phase 51 입력·실행체·raw result·보고서 — frozen \(\phi+\) Gamma–K candidate와 독립 \(\phi-\) reflection control을 실제 nonlinear (m=5) flow로 continuation; 6/6 exact와 9/10 numerical은 통과했지만 CSE/non-CSE RHS consistency gate 하나가 실패해 local 결론은 `INCONCLUSIVE` |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–51의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 50)
+## 현재 경계 (Phase 51)
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -443,19 +444,27 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   Phase-41 Gamma–K intersections, nonlinear upward manifolds, arms/reintersections, component/end census,
   Stokes data, physical original cycle와 BFV/Pfaffian/Pin determinant line은 계산하지 않았다. 모든
   global output은 `null`, promotion은 `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
+- Phase 51은 Phase-42 \(\phi+\) local candidate를 Phase-50 diagonal bridge 위의 실제 nonlinear
+  \((m=5)\) Gamma–K flow로 continuation하고, 독립 초기화한 \(\phi-\) reflection path를 함께 검사했다.
+  실행은 `VALID_RUN`이며 6/6 exact와 9/10 numerical check가 통과했다. Fine/coarse/reverse
+  continuation, reflection, full-\(J\) finite difference, path tangent, endpoint radius/shape mutation과
+  모든 action/first-cap ledger는 통과했다. 유일한 비통과 항목은 CSE/non-CSE evaluator pair의 RHS
+  상대오차 gate로, 최대값 \(1.6900132\times10^{-8}\)이 동결 임계값 \(5\times10^{-10}\)을 넘었다.
+  따라서 분류는 `PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE`이며 계산된 local candidate를
+  물리적 intersection coefficient나 global cycle로 승격하지 않는다. 모든 global output은 계속
+  `null`, promotion은 `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
 ## 다음 계산
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
-- **PL/BFV global gate:** Phase 50이 선언한 \(m=4\to m=5\) action/SPD-metric bridge 위에서 실제
-  frozen (m=5) Gamma–K local candidate 하나를 먼저 continuation한다. (\mathbb R^{18}) residual,
-  transversality, direct orientation, variational/finite-difference tangent, fine/coarse/reverse path,
-  reflection과 stabilizer mutation control을 모두 유지하고, saddle와 tangent-plane transport만으로
-  intersection continuation을 대신하지 않는다. 그 뒤 straight arm과 later cap reintersection을
-  검색하고, 모든 saddle/upward component, complex BVP sheet, Stokes data와 relative good end를
-  열거한다. Separately specified physical original cycle과 lapse contour를 정한 뒤에만 complete
-  intersection sum과 regulator-removal을 시도한다. Phase 50의 sampled stabilizer bridge는 exact
+- **PL/BFV global gate:** 먼저 Phase 51의 CSE/non-CSE clongdouble RHS 차이를 같은 입력·dtype·축약
+  단계에서 분해해 \(5\times10^{-10}\) consistency gate를 만족하는 backend 경로를 고정하고, 기존
+  continuation/reflection/FD/tangent/endpoint/ledger control을 그대로 재실행한다. 이 local evaluator
+  debt가 닫힌 뒤에만 straight arm과 later cap reintersection을 검색하고, 모든 saddle/upward
+  component, complex BVP sheet, Stokes data와 relative good end를 열거한다. Separately specified
+  physical original cycle과 lapse contour를 정한 뒤에만 complete intersection sum과 regulator-removal을
+  시도한다. Phase 50의 sampled stabilizer bridge는 exact
   action nesting, common physical determinant line, cutoff/continuum theorem이 아니며, Phase 49의
   formal endpoint-error transport와 portable-flow-adapter debt도 별도 numerical follow-up으로 남는다.
   동시에 Phase 31 hybrid를 constraint-reduced inhomogeneous
