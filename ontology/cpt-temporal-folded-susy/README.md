@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-22T17:00:24Z`; 691 nodes, 2015 edges). Run details live in the
+`2026-08-23T03:58:50Z`; 702 nodes, 2050 edges). Run details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 137/137 stored hashes (133 artifacts and 4 policies).
+verifies 142/142 stored hashes (138 artifacts and 4 policies).
 
 ## Quick answers
 
@@ -59,7 +59,8 @@ verifies 137/137 stored hashes (133 artifacts and 4 policies).
 | Does Phase 48's gradient-only clongdouble adapter repair the full `u2` ladder? | No. All eighteen paths, ninety intermediate local-flow probes, and endpoint-state limits pass on the pinned platform, but only `a_plus` has a stable full ladder and every root fails the all-step `0.005` derivative limits against both the Phase-46 independent columns and Phase-45 tangents. This is a useful negative control: promoting only the generated gradient materially improves the paths but is not sufficient. The propagation/solver budget and Gate 1 remain open. | `claim:P48_GRADIENT_ONLY_CLONGDOUBLE_PATHS_MATCH_LOCAL_FLOW_AND_ENDPOINT_LIMITS`; `claim:P48_GRADIENT_ONLY_CLONGDOUBLE_REPAIRS_THE_FULL_U2_LADDER`; `claim:P48_PLATFORM_ABLATION_DOES_NOT_CLOSE_PROPAGATION_OR_LICENSE_GLOBAL_PROMOTION`; `open:p46-source-gradient-flow-error-budget`; `open:p48-gradient-hybrid-error-transport-control` |
 | Does Phase 49 repair the frozen `u2` ladder with a practical NumPy implementation? | Yes within the pinned long-double platform contract. Retaining clongdouble through state formation, generated gradient, `L.T` contraction, and outer minus-conjugation before one complete-flow complex128 projection makes all eighteen paths, ninety probes, endpoint states, full ladders, independent columns, and tangent comparisons pass. The worst derivative discrepancy is `0.001216`, below `0.005`. This resolves the scoped implementation choice, not formal endpoint transport, portability, a formula defect, or Gate 1. | `claim:P49_FULL_FLOW_CLONGDOUBLE_PASSES_ALL_FROZEN_STATE_MAP_CONTROLS`; `claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION`; `claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION`; `open:p49-formal-endpoint-transport-and-portable-flow-adapter` |
 | Does Phase 50 establish a cutoff-stable \(m=4\to m=5\) cycle transport? | No. It supports one explicitly stabilized, sampled common-ambient route for five frozen source-labelled saddles and their local upward nine-planes. All fine/coarse/reverse, tangent, reflection, metric-path, stabilizer, and basis controls pass, with no sampled Hessian zero or inertia change. The action bridge is not an exact nesting, and no Phase-41 Gamma–K intersection, nonlinear upward manifold, physical determinant line, cutoff limit, global cycle, or physics result is continued. | `claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS`; `claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT`; `claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION`; `open:p50-frozen-m5-gamma-k-local-intersection-continuation` |
-| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–50 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–50 scope guards |
+| Does Phase 51 support the frozen phi-plus \(m=5\) Gamma–K continuation? | Not yet. The run is valid and all 17/9/17 phi-plus path nodes, 17 independent phi-minus reflection nodes, three full-J controls, the path tangent, four endpoint mutations, and 68 action/first-cap ledgers pass. But the frozen CSE/non-CSE RHS relative gate reaches `1.690e-8` against `5e-10`, so the only licensed local label is `INCONCLUSIVE`. This is not no-root or contradicted, and it does not resolve the Phase-50 open problem or establish a global intersection. | `claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE`; `claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION`; `open:p51-cse-noncse-clongdouble-rhs-consistency` |
+| Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–51 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–51 scope guards |
 
 ### Phase 23 reading path
 
@@ -471,6 +472,27 @@ local-plane bridge without promoting it into a cycle theorem:
    one actual frozen (m=5) Gamma–K candidate over the declared bridge with residual,
    transversality, path, tangent, reflection, and stabilizer controls. The broader component/end census,
    Stokes data, original cycle, and Gate 1 remain open independently.
+
+### Phase 51 reading path
+
+Phase 51 executes one frozen version of the Phase-50 next calculation, but the immutable evaluator
+gate prevents promotion of the desired local label:
+
+1. `claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE`
+   records a valid `6/6` exact and `9/10` numerical run. The sampled phi-plus fine/coarse/reverse paths,
+   independent phi-minus reflection path, full-J, path-tangent, endpoint-mutation, orientation, action,
+   and first-cap controls pass, while the CSE/non-CSE same-point RHS relative comparison reaches
+   `1.690013e-8` against the frozen `5e-10` limit;
+2. the failed evaluator predicate is retained as `INCONCLUSIVE`. It is not evidence that a sampled root
+   is false and cannot select the protocol's unimplemented contradicted label, which required an
+   independent interval, augmented-fold, or local-degree certificate;
+3. `open:p51-cse-noncse-clongdouble-rhs-consistency` asks for a narrow evaluator-ordering or
+   precision-boundary repair under the same formulas, states, paths, and thresholds. The historical
+   Phase-51 result must remain unchanged;
+4. `claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION` preserves
+   unsearched roots, charts, arms, cap reintersections, upward components, Stokes data, relative good
+   ends, determinant line, cutoff/continuum limits, original cycle, and global vector. The Phase-50
+   open problem and Gate 1 therefore remain open.
 
 ## Concept map
 
@@ -1201,6 +1223,7 @@ Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 | 42 | [`phase42_m4_fixed_root_tangent_disentanglement.py`](../../cpt_temporal_folded_susy/phase42_m4_fixed_root_tangent_disentanglement.py) · [`phase42_m4_fixed_root_checkpoint.py`](../../cpt_temporal_folded_susy/phase42_m4_fixed_root_checkpoint.py) | [`PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT.md) · [`PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_INPUTS.json) · [`PHASE42_M4_FIXED_ROOT_CHECKPOINT.json`](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json) | [`phase42-result.json`](./evidence/phase42-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_TANGENT_DISENTANGLEMENT_RESULT.json) |
 | 43 | [`phase43_m4_high_precision_local_rhs_arbitration.py`](../../cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py) | [`PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md`](../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION.md) · [`PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json) | [`phase43-result.json`](./evidence/phase43-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json) |
 | 44 | [`phase44_m4_numpy64_local_rhs_error_decomposition.py`](../../cpt_temporal_folded_susy/phase44_m4_numpy64_local_rhs_error_decomposition.py) | [`PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION.md`](../../cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION.md) · [`PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_INPUTS.json) | [`phase44-result.json`](./evidence/phase44-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json) |
+| 51 | [`phase51_m5_gamma_k_local_continuation.py`](../../cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py) | [`PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md`](../../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md) · [`PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json) | [`phase51-result.json`](./evidence/phase51-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -1233,8 +1256,9 @@ Phase 24 adds one more unresolved bridge at `phase:p24`. The older
 `sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
 planning node and was deliberately not reused. Phases 25–40 add sixteen fresh unresolved phase lookups;
 similarly numbered historical planning nodes were not reused. The recursive-audit policy and the ordered
-five-gate policy add two separate repository-workflow lookups, so there are twenty-six expected
-unresolved bridges in the current graph. The latter remains local because no authorized external UID or
+five-gate policy add two separate repository-workflow lookups. Phases 44, 46, 47, and 51 add four
+further repository-local phase lookups, so there are thirty expected unresolved bridges in the current
+graph. The latter remain local because no authorized external UID or
 writer exists; no identity was invented for the roadmap.
 A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,
 review outcome, or KG ratification.

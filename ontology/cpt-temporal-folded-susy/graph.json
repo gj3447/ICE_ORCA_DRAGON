@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-22T17:00:24Z",
+  "updated_at_utc": "2026-08-23T03:58:50Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -357,6 +357,14 @@
         "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
         "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
         "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION"
+      ]
+    },
+    {
+      "question": "Does Phase 51 support the frozen phi_plus m=5 Gamma--K continuation or establish a global intersection?",
+      "answer": "Neither. The run is valid and six exact plus nine of ten numerical checks pass, including all sampled continuation, reflection, derivative, tangent, endpoint, action, and first-cap controls. The predeclared CSE/non-CSE same-point RHS relative gate reaches 1.690e-8 against 5e-10, so the only licensed local label is INCONCLUSIVE. This is not a no-root or contradiction certificate, does not resolve the Phase-50 Gamma--K open problem, and supplies no root/component/end exhaustion, original cycle, cutoff limit, global signed vector, or physics claim.",
+      "claim_ids": [
+        "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+        "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION"
       ]
     }
   ],
@@ -795,7 +803,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–50. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, and Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport. Stop before turning these local calculations into correct-rounding proof, a formal endpoint bound, portable long-double recipe, Gamma--K continuation, nonlinear upward manifold, canonical cutoff determinant line, complete original cycle, Stokes chamber, global vector, or physical claim.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–51. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, and Phase-51's valid but evaluator-gated nonlinear Gamma--K attempt. Stop before turning these local calculations into correct-rounding proof, a formal endpoint bound, portable backend agreement, a supported cross-cutoff Gamma--K continuation, nonlinear upward-component census, canonical determinant line, complete original cycle, Stokes chamber, global vector, or physical claim.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -851,6 +859,9 @@
         "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
         "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
         "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
+        "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+        "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+        "open:p51-cse-noncse-clongdouble-rhs-consistency",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -876,6 +887,21 @@
         "claim:P49_PHASE48_49_ABLATION_SUPPORTS_LATE_COMPLETE_FLOW_PROJECTION",
         "claim:P49_SCOPED_REPAIR_DOES_NOT_PROVE_PORTABILITY_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
+        "open:gate1-original-cycle-signed-global-intersections"
+      ]
+    },
+    {
+      "id": "reading-path:p50-m5-gamma-k-to-backend-consistency",
+      "title": "From the sampled m=5 saddle bridge to the still-inconclusive Gamma--K continuation",
+      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's valid 6/6 exact and 9/10 numerical ledger. The continuation, reflection, derivative, tangent, endpoint, and flow-ledger controls pass, but the frozen CSE/non-CSE RHS relative gate does not. Stop at the narrow backend-consistency repair; do not infer no root, resolve the Phase-50 open problem, or promote a local sampled path to a global cycle.",
+      "nodes": [
+        "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
+        "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
+        "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+        "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
+        "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+        "open:p51-cse-noncse-clongdouble-rhs-consistency",
+        "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
@@ -8829,6 +8855,140 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase50-result.json",
       "sha256": "1e0e68167e32e006d8a02123a7749b65457d7e4addedfc1dc8c55721b3b6c8eb"
+    },
+    {
+      "id": "phase:p51",
+      "type": "phase",
+      "title": "Phase 51 — nonlinear m=5 Gamma--K local-continuation attempt",
+      "summary": "The immutable Phase-42 phi_plus candidate is lifted into R18 and solved along the Phase-50 diagonal stabilized-action/SPD-metric path, with fine/coarse/reverse, independent phi_minus reflection, full-J, path-tangent, endpoint-mutation, action, and first-cap controls. The run is VALID_RUN with all six exact checks and nine of ten numerical checks passing. The frozen CSE/non-CSE RHS relative gate does not pass, so the classification is PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE. This is not a no-root result, does not resolve the Phase-50 open problem, and leaves Gate 1 open.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "type": "claim",
+      "title": "The frozen phi_plus Gamma--K continuation remains inconclusive at the CSE/non-CSE RHS gate",
+      "summary": "The valid run passes all six exact checks and nine numerical checks. All 17-node phi_plus fine-forward, nine-node coarse-forward, 17-node reverse, independent 17-node phi_minus reflection, three full-J, one two-step path-tangent, four endpoint-mutation, and 68 action/first-cap-ledger records pass their declared gates. However, the maximum paired same-point RHS relative error is 1.690013e-8 against the frozen 5e-10 threshold. That single typed numerical INCONCLUSIVE forces the fail-closed local classification; it neither proves a false root nor supplies a contradiction certificate.",
+      "state": "SUPPORTED_AS_INCONCLUSIVE_CLASSIFICATION_BOUNDARY",
+      "claim_id": "P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "statement": "Under the immutable Phase-51 protocol, the valid sampled phi_plus m=5 Gamma--K continuation cannot receive its supported label because the predeclared CSE/non-CSE same-point RHS relative comparison exceeds 5e-10; absent the separately required certificate, the licensed result is INCONCLUSIVE rather than contradicted or no-root.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "type": "claim",
+      "title": "The local Gamma--K run does not establish root exhaustion or a global intersection",
+      "summary": "Supported as an executed scope boundary. Only one phi_plus candidate and one reflected phi_minus control are followed on one finite R18 chart and sampled diagonal path. No other root, chart, straight arm, cap reintersection, upward component, Stokes chamber, relative good end, physical original cycle, common determinant line, cutoff limit, or continuum limit is completed. The corresponding exhaustion flags remain false and contradiction is not certified; all global values remain null, global promotion is prohibited, and Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_LOCAL_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "statement": "A valid but evaluator-inconclusive sampled R18 Gamma--K continuation of one frozen local candidate is insufficient to establish root or upward-component exhaustion, a non-Stokes chamber, a physical original cycle, a cutoff-stable determinant line, or any global signed intersection or physical conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:p51-m5-gamma-k-local-continuation",
+      "type": "evidence",
+      "title": "Phase 51 m=5 Gamma--K local-continuation ledger",
+      "summary": "Six exact checks pass; nine numerical checks pass and P51.evaluator.CSE_nonCSE_pairs is INCONCLUSIVE. The ledger preserves 60 primary/reflection path roots, four endpoint mutations, four outer-lambda roots, 68 complete action/first-cap ledgers, three full R18 finite-difference controls, the paired clongdouble evaluator records, strict provenance, the canonical result self-digest, global nulls, and open Gate 1.",
+      "state": "VERIFIED_WITH_TYPED_INCONCLUSIVE",
+      "observed_status": "6_EXACT_PASS_9_NUMERICAL_PASS_1_NUMERICAL_INCONCLUSIVE",
+      "check_ids": [
+        "P51.inputs.byte_pins_and_manifest_before_runner",
+        "P51.action.Phase50_diagonal_path_identity",
+        "P51.cap.R18_middle_dimension_and_common_coordinate_lambda0_lift",
+        "P51.evaluator.CSE_symbolic_reconstruction_and_clongdouble_contract",
+        "P51.orientation.orders_chart_and_odd_K_parity",
+        "P51.guard.local_scope_forces_global_nulls",
+        "P51.saddles.Phase50_reproduction",
+        "P51.intersections.lambda0_lifts",
+        "P51.intersections.fine_forward_both_sources",
+        "P51.intersections.coarse_and_reverse",
+        "P51.reflection.independent_phi_pair",
+        "P51.derivative.full_J_at_0_half_1",
+        "P51.tangent.lambda_half",
+        "P51.evaluator.CSE_nonCSE_pairs",
+        "P51.endpoint.radius_and_shape",
+        "P51.guard.classification_and_nulls"
+      ]
+    },
+    {
+      "id": "scope:p51-frozen-phi-plus-m5-gamma-k-local-continuation",
+      "type": "scope",
+      "title": "P51 frozen phi_plus m=5 Gamma--K local continuation",
+      "summary": "One immutable Phase-42 phi_plus launch lifted to R18; the Phase-50 diagonal stabilized-action and affine-invariant SPD-metric path; one independently initialized phi_minus reflection control; fixed fine/coarse/reverse meshes, finite differences, tangent steps, radius/shape mutations, CSE/non-CSE evaluator pairs, thresholds, platform, and fail-closed local classification.",
+      "state": "ACTIVE",
+      "includes": [
+        "phi_plus fine17/coarse9/reverse17 and independently initialized phi_minus fine17 paths",
+        "R18 residual, rank, determinant, transversality, boundary, action, first-cap, reflection, full-J, tangent, and endpoint-mutation controls",
+        "canonical CSE clongdouble production evaluation paired with a non-CSE clongdouble validation backend",
+        "strict byte provenance, one-result self-digest, prohibited contradiction without an independent certificate, and null global guards"
+      ],
+      "excludes": [
+        "a supported continuation label while the frozen RHS backend-consistency gate remains inconclusive",
+        "other source labels, candidates, roots, charts, straight arms, cap reintersections, or continuous direction coverage",
+        "root, saddle, upward-component, Stokes-chamber, or relative-good-end exhaustion and any no-root certificate",
+        "a physical original cycle, common determinant line, cutoff or continuum limit, global signed vector, SUSY state, or physics claim"
+      ]
+    },
+    {
+      "id": "open:p51-cse-noncse-clongdouble-rhs-consistency",
+      "type": "open_problem",
+      "title": "Resolve the Phase 51 CSE/non-CSE clongdouble RHS consistency gate",
+      "summary": "At the frozen source/lambda points and three solved central trajectories, paired CSE and non-CSE clongdouble RHS values reach relative discrepancies near 1.69e-8, above 5e-10, while Hessian-action, endpoint-state, residual-difference, continuation, and ledger gates pass. A narrow repair must localize the evaluator-ordering or precision boundary and rerun the immutable comparisons without retuning roots, paths, thresholds, or erasing the INCONCLUSIVE record.",
+      "question": "Can a separately frozen evaluator-ordering or precision-boundary repair bring every Phase-51 CSE/non-CSE same-point RHS relative comparison below 5e-10 while preserving the same formulas, solved states, paths, thresholds, and historical result?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:p51-input-manifest",
+      "type": "artifact",
+      "title": "Phase 51 frozen m=5 Gamma--K continuation input manifest",
+      "summary": "Post-feasibility freeze of the phi_plus target, independent phi_minus control, R18 Gamma--K equations, Phase-50 diagonal action/metric path, launch chart, meshes, derivative/tangent/endpoint controls, evaluator pairing, thresholds, classifications, and strict local/global boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json",
+      "sha256": "0e9191d5c98cc1a56d7ffbcdd98ac02558457b87b6abf518ff754fbf4af7bd87",
+      "introduced_in_commit": "80dda66aa57276de6e3940c35e58e89d34d28721"
+    },
+    {
+      "id": "artifact:p51-script",
+      "type": "artifact",
+      "title": "Phase 51 nonlinear Gamma--K continuation executable",
+      "summary": "Python runner that validates frozen provenance; builds canonical CSE and non-CSE clongdouble evaluators; integrates nonlinear m=5 K flows; solves and transports the R18 Gamma--K roots; audits all frozen path, reflection, derivative, tangent, mutation, ledger, orientation, evaluator, and global-null checks; and emits a canonical self-digested result.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py",
+      "sha256": "eb535f5a16687dccb47399e3ff7dceefe0ecabc6417574fd2f29abc008e1d7c9",
+      "introduced_in_commit": "24508e323c2336c33d87ecf2786a46e0edb429ee"
+    },
+    {
+      "id": "artifact:p51-raw-result",
+      "type": "artifact",
+      "title": "Phase 51 full raw result",
+      "summary": "The complete 1,628,760-byte VALID_RUN result with six exact passes, nine numerical passes, one numerical INCONCLUSIVE, all 68 accepted root/first-cap ledgers, full evaluator records, strict global nulls, classification PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE, and canonical payload self-digest 153d2350c96114a137b0da3f2eaa37b9224a0081e602164702e28867cbd99e0d.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json",
+      "sha256": "b74c8b735b32790c85d7e14fbf78fe16bf437995d707268d209d4a655c3d8531",
+      "introduced_in_commit": "ab14d0d0eacc09da64d5c8061fa0890179cd79aa"
+    },
+    {
+      "id": "artifact:p51-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 51 evidence snapshot",
+      "summary": "Compact typed extract preserving all six exact and ten numerical checks, command and platform, manifest/runner/result commits and hashes, result self-digest, record counts, aggregate path and control metrics, the sole evaluator INCONCLUSIVE, strict local/global scope, the still-open Phase-50 target, and the narrow backend-consistency repair problem. The pinned raw result remains byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase51-result.json",
+      "sha256": "af7e5cebbb2dfa0cd983e7396a84b900ff7a58d9e1b8f35c12418f5b0afb6331"
+    },
+    {
+      "id": "artifact:p51-report",
+      "type": "artifact",
+      "title": "Phase 51 report",
+      "summary": "Human-readable frozen question, R18 Gamma--K construction, action/metric and launch conventions, complete path/reflection/derivative/tangent/endpoint/evaluator ledgers, the sole CSE/non-CSE RHS-gate inconclusive result, calculated-fact/inference/open-hypothesis separation, and strict no-root/global/physical boundary.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION.md",
+      "sha256": "b3f23bb11fd0ae46fd1a90a3736c5fe553aca35ca5a448e12e001439ed7eacda",
+      "introduced_in_commit": "2def4e8e01623a8e10a5a9b0395f37420466ccf7"
     }
   ],
   "edges": [
@@ -21273,6 +21433,221 @@
       "from": "artifact:p50-evidence-snapshot",
       "relation": "DERIVED_FROM",
       "to": "artifact:p50-raw-result"
+    },
+    {
+      "id": "edge:2016",
+      "from": "phase:p51",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2017",
+      "from": "phase:p51",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p50"
+    },
+    {
+      "id": "edge:2018",
+      "from": "scope:p51-frozen-phi-plus-m5-gamma-k-local-continuation",
+      "relation": "PART_OF",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2019",
+      "from": "artifact:p51-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2020",
+      "from": "artifact:p51-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2021",
+      "from": "artifact:p51-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2022",
+      "from": "artifact:p51-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2023",
+      "from": "evidence:p51-m5-gamma-k-local-continuation",
+      "relation": "PART_OF",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2024",
+      "from": "evidence:p51-m5-gamma-k-local-continuation",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p51-script"
+    },
+    {
+      "id": "edge:2025",
+      "from": "evidence:p51-m5-gamma-k-local-continuation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p51-evidence-snapshot"
+    },
+    {
+      "id": "edge:2026",
+      "from": "evidence:p51-m5-gamma-k-local-continuation",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p51-raw-result"
+    },
+    {
+      "id": "edge:2027",
+      "from": "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "relation": "PART_OF",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2028",
+      "from": "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p51-frozen-phi-plus-m5-gamma-k-local-continuation"
+    },
+    {
+      "id": "edge:2029",
+      "from": "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p51-m5-gamma-k-local-continuation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2030",
+      "from": "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
+      "note": "Phase 51 executes one frozen candidate continuation attempt, but its required evaluator gate is INCONCLUSIVE; the broader Phase-50 open problem therefore remains OPEN rather than resolved."
+    },
+    {
+      "id": "edge:2031",
+      "from": "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "relation": "MOTIVATES",
+      "to": "open:p51-cse-noncse-clongdouble-rhs-consistency"
+    },
+    {
+      "id": "edge:2032",
+      "from": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "relation": "PART_OF",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2033",
+      "from": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p51-frozen-phi-plus-m5-gamma-k-local-continuation"
+    },
+    {
+      "id": "edge:2034",
+      "from": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p51-m5-gamma-k-local-continuation",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2035",
+      "from": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "relation": "EXTENDS",
+      "to": "claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION",
+      "note": "Phase 51 adds nonlinear local Gamma--K roots and flow ledgers on one frozen path, but its evaluator gate is inconclusive and no root/component/end census or cross-cutoff determinant line is constructed."
+    },
+    {
+      "id": "edge:2036",
+      "from": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:2037",
+      "from": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:2038",
+      "from": "open:p51-cse-noncse-clongdouble-rhs-consistency",
+      "relation": "PART_OF",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2039",
+      "from": "open:p51-cse-noncse-clongdouble-rhs-consistency",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p50-frozen-m5-gamma-k-local-intersection-continuation",
+      "note": "This is a narrow prerequisite for reclassifying the frozen Phase-51 attempt; it does not by itself settle the broader candidate-continuation or global-cycle problem."
+    },
+    {
+      "id": "edge:2040",
+      "from": "open:p51-cse-noncse-clongdouble-rhs-consistency",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p49-formal-endpoint-transport-and-portable-flow-adapter"
+    },
+    {
+      "id": "edge:2041",
+      "from": "artifact:p51-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p42-fixed-root-checkpoint"
+    },
+    {
+      "id": "edge:2042",
+      "from": "artifact:p51-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p49-raw-result"
+    },
+    {
+      "id": "edge:2043",
+      "from": "artifact:p51-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p50-raw-result"
+    },
+    {
+      "id": "edge:2044",
+      "from": "artifact:p51-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p51-input-manifest"
+    },
+    {
+      "id": "edge:2045",
+      "from": "artifact:p51-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p51-script"
+    },
+    {
+      "id": "edge:2046",
+      "from": "artifact:p51-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p51-raw-result"
+    },
+    {
+      "id": "edge:2047",
+      "from": "artifact:p51-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p51"
+    },
+    {
+      "id": "edge:2048",
+      "from": "claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p51-report"
+    },
+    {
+      "id": "edge:2049",
+      "from": "claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p51-report"
+    },
+    {
+      "id": "edge:2050",
+      "from": "artifact:p51-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p51-raw-result"
     }
   ],
   "kg_bridges": [
@@ -21632,6 +22007,16 @@
       "checked_at_utc": "2026-08-22T03:54:17Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase47 m4 retained-state source-gradient flow mixed-arithmetic error budget",
       "note": "No authorized exact external correspondence or writer is available. The closed retained-state telescopes, descriptive generated-gradient stage localization, open intermediate propagation, and Gate-1 boundary remain repository-local evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "phase:p51",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-23T03:58:50Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase51 m5 R18 Gamma K local continuation CSE nonCSE RHS consistency",
+      "note": "No authorized exact external correspondence or writer is available. The valid but evaluator-inconclusive local continuation, strict global-null boundary, and narrow backend-consistency repair remain repository-local evidence; no external UID was invented."
     }
   ]
 }

@@ -8,12 +8,12 @@
 | --- | --- | --- | --- |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–50 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–51 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-22T17:00:24Z` Phase 50 graph update, the collection has 691 nodes and 2015
-edges. Validation verifies 137/137 stored hashes (133 artifacts and 4 policies). The Phase 16–50 run
-snapshots contain 454 named exact checks, all `PASS`, and 308 typed numerical-ledger checks: 300
-`PASS`, seven `FAIL`, and one
+At the recorded `2026-08-23T03:58:50Z` Phase 51 graph update, the collection has 702 nodes and 2050
+edges. Validation verifies 142/142 stored hashes (138 artifacts and 4 policies). The Phase 16–51 run
+snapshots contain 460 named exact checks, all `PASS`, and 318 typed numerical-ledger checks: 309
+`PASS`, seven `FAIL`, and two
 `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
 identity non-support result as `FAIL` and one derivative-reference result as `INCONCLUSIVE`. Phase 43
 adds two complete, non-invalidating `FAIL` records for false universal PASS predicates: 13/90 local
@@ -49,8 +49,13 @@ complete the declared stabilized \(m=4\to m=5\) fine, coarse, and reverse paths 
 both positive metric choices and all three action/metric orderings return the same oriented local upward
 nine-plane at the sampled endpoint. This is one finite-dimensional, regulator-dependent local bridge,
 not a Gamma–K intersection continuation, cutoff theorem, nonlinear upward manifold, determinant line,
-global cycle, or physical claim. One legacy separately recorded Phase-18 numerical control brings the
-numerical-record total to 309 (301 pass, seven fail, one inconclusive). These
+global cycle, or physical claim. Phase 51 adds six exact `PASS`, nine numerical `PASS`, and one
+numerical `INCONCLUSIVE` record. All frozen continuation, reflection, full-J, path-tangent, endpoint,
+action, and first-cap controls pass, but the CSE/non-CSE same-point RHS relative comparison reaches
+`1.690e-8` against `5e-10`. The valid run is consequently local-continuation `INCONCLUSIVE`, not
+no-root or contradicted; the Phase-50 continuation problem and Gate 1 remain open. One legacy separately
+recorded Phase-18 numerical control brings the numerical-record total to 319 (310 pass, seven fail, two
+inconclusive). These
 counts describe repository records, not independent replications or global scientific
 confidence.
 
@@ -123,6 +128,9 @@ confidence.
 ./ice ontology trace claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS --depth 2
 ./ice ontology trace claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT --depth 2
 ./ice ontology trace claim:P50_SAMPLED_LOCAL_TRANSPORT_DOES_NOT_ESTABLISH_CUTOFF_STABILITY_OR_GLOBAL_INTERSECTION --depth 2
+./ice ontology trace claim:P51_FROZEN_PHI_PLUS_GAMMA_K_CONTINUATION_REMAINS_INCONCLUSIVE_AT_CSE_NONCSE_RHS_GATE --depth 2
+./ice ontology trace claim:P51_LOCAL_GAMMA_K_RUN_DOES_NOT_ESTABLISH_ROOT_EXHAUSTION_OR_GLOBAL_INTERSECTION --depth 2
+./ice ontology trace open:p51-cse-noncse-clongdouble-rhs-consistency --depth 2
 ./ice ontology show policy:ordered-five-gate-advancement
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
@@ -268,6 +276,13 @@ upward-nine-plane endpoint agreement, and the frozen reflection, tangent, mesh, 
 and basis controls. The artificial stabilizers and sampled meshes do not establish action nesting,
 regulator independence, an unsampled no-zero theorem, a Gamma–K intersection, nonlinear upward manifold,
 physical determinant line, cutoff limit, or global topology.
+Phase 51 retains one typed numerical `INCONCLUSIVE` without invalidating its zero-exit run. The CSE and
+non-CSE clongdouble same-point RHS relative gate reaches `1.690013e-8`, above its frozen `5e-10`
+threshold, although the paired Hessian-action, endpoint-state, residual-difference, all sampled root,
+reflection, derivative, tangent, mutation, and 68 action/first-cap-ledger controls pass. This supports
+the fail-closed inconclusive classification boundary, not the desired continuation label, a code-defect
+claim, root nonexistence, or contradiction. The narrow backend-consistency repair is open, as are the
+Phase-50 Gamma–K continuation target, root/component/end census, cutoff question, and global topology.
 
 ## Identifier families
 

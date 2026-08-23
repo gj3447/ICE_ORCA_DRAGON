@@ -1,0 +1,217 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P51_M5_GAMMA_K_LOCAL_CONTINUATION_20260823",
+  "phase": "P51",
+  "observed_at_utc": "2026-08-23T03:58:50Z",
+  "command": "proxmox-scratch run phase51-production --timeout 7200 -- uv run python cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py",
+    "sha256": "eb535f5a16687dccb47399e3ff7dceefe0ecabc6417574fd2f29abc008e1d7c9",
+    "introduced_in_commit": "24508e323c2336c33d87ecf2786a46e0edb429ee"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {
+      "id": "P51.inputs.byte_pins_and_manifest_before_runner",
+      "statement": "the frozen manifest, upstream byte pins, self-digests, readiness labels, and platform inputs validate before the runner",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.action.Phase50_diagonal_path_identity",
+      "statement": "the two frozen sources use the pinned Phase50 action and affine-invariant metric on the diagonal lambda=mu path",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.cap.R18_middle_dimension_and_common_coordinate_lambda0_lift",
+      "statement": "the R18 Gamma--K map, common A_lambda factor, cap, and source-specific lambda=0 P42 launch lift match the frozen conventions",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.evaluator.CSE_symbolic_reconstruction_and_clongdouble_contract",
+      "statement": "canonical joint CSE reconstructs exactly and the clongdouble state/RHS/Hessian-action contract agrees with the non-CSE evaluator",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.orientation.orders_chart_and_odd_K_parity",
+      "statement": "the frozen orders and positive S8/signed-frame gauges are retained and nine K columns imply odd root/direct determinant parity",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.guard.local_scope_forces_global_nulls",
+      "statement": "local workbench scope keeps contradiction, global, cutoff, continuum, and physical promotion fields null or prohibited",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 10,
+  "numerical": [
+    {
+      "id": "P51.saddles.Phase50_reproduction",
+      "statement": "both sources reproduce every common Phase50 saddle with the frozen inertia and residual gates",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.intersections.lambda0_lifts",
+      "statement": "both independently solved lambda=0 R18 intersections replay the embedded Phase42 local candidates",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.intersections.fine_forward_both_sources",
+      "statement": "independent phi_plus and phi_minus fine17 paths retain accepted roots and complete action/first-cap ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.intersections.coarse_and_reverse",
+      "statement": "the independent phi_plus coarse9 and reverse17 paths match fine17 ambient states with corrected tangent gauges and complete ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.reflection.independent_phi_pair",
+      "statement": "independently solved reflected fine paths agree in saddle, action, cap state, transversality, and determinant-corrected orientation",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.derivative.full_J_at_0_half_1",
+      "statement": "two complete frozen-step R18 state-map finite-difference matrices agree with the variational Jacobian at lambda 0, 0.5, and 1",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.tangent.lambda_half",
+      "statement": "the lambda=0.5 implicit tangent agrees with four independently accepted off-node roots and their path ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.evaluator.CSE_nonCSE_pairs",
+      "statement": "non-CSE reintegration of the three solved central phi_plus trajectories agrees at all frozen fractions, endpoints, and residuals",
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "id": "P51.endpoint.radius_and_shape",
+      "statement": "both radius and both launch-shape controls retain accepted same-candidate states, corrected orientations, and first-cap/action ledgers",
+      "status": "PASS"
+    },
+    {
+      "id": "P51.guard.classification_and_nulls",
+      "statement": "the runner can select only the frozen supported or inconclusive local label and retains every global/null guard",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "calculation": "nonlinear m=5 R18 Gamma--K local-candidate continuation on the frozen Phase50 diagonal action/metric path",
+    "exact_checks": 6,
+    "numerical_checks": 10,
+    "run_status": "VALID_RUN",
+    "classification": "PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json",
+      "input_manifest_sha256": "0e9191d5c98cc1a56d7ffbcdd98ac02558457b87b6abf518ff754fbf4af7bd87",
+      "input_manifest_commit": "80dda66aa57276de6e3940c35e58e89d34d28721",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json",
+      "raw_result_outer_sha256": "b74c8b735b32790c85d7e14fbf78fe16bf437995d707268d209d4a655c3d8531",
+      "raw_result_payload_sha256_without_self": "153d2350c96114a137b0da3f2eaa37b9224a0081e602164702e28867cbd99e0d",
+      "raw_result_introduced_in_commit": "ab14d0d0eacc09da64d5c8061fa0890179cd79aa",
+      "raw_result_size_bytes": 1628760,
+      "validation": "Strict finite JSON parsing, canonical self-digest recomputation, manifest and runner hash matching, and all six exact plus all ten typed numerical records passed provenance validation. One numerical record is deliberately retained as INCONCLUSIVE."
+    },
+    "platform": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "longdouble_itemsize_bytes": 16,
+      "clongdouble_itemsize_bytes": 32,
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41"
+    },
+    "record_counts": {
+      "phi_plus_fine_forward_nodes": 17,
+      "phi_plus_coarse_forward_nodes": 9,
+      "phi_plus_fine_reverse_nodes": 17,
+      "phi_minus_fine_forward_nodes": 17,
+      "endpoint_mutation_roots": 4,
+      "accepted_primary_endpoint_and_outer_root_records": 68,
+      "complete_action_and_first_cap_ledgers": 68,
+      "full_R18_finite_difference_nodes": 3,
+      "outer_lambda_tangent_off_node_roots": 4,
+      "CSE_nonCSE_solved_trajectory_pairs": 3
+    },
+    "aggregate": {
+      "maximum_physical_residual_max_abs": 1.3601034870298727e-9,
+      "maximum_scaled_residual_max_abs": 1.943004981471247e-9,
+      "maximum_factor_identity_relative_residual": 2.840530113065621e-15,
+      "minimum_root_normalized_sigma_min": 0.02173857012897364,
+      "minimum_direct_normalized_sigma_min": 0.0646752454914707,
+      "maximum_phase50_saddle_reproduction_distance": 2.5440076297660087e-12,
+      "maximum_saddle_gradient_max_abs": 1.833957671056735e-11,
+      "minimum_hessian_absolute_eigenvalue": 4.194252303685617,
+      "maximum_lambda0_embedded_cap_state_distance": 1.0998852351705318e-11,
+      "maximum_coarse_fine_cap_state_distance": 1.1743637599964304e-11,
+      "maximum_forward_reverse_cap_state_distance": 8.781213181977374e-12,
+      "maximum_phi_reflection_cap_state_distance": 6.772712364508198e-16,
+      "maximum_full_J_operator_relative_error": 4.388472893644344e-6,
+      "maximum_full_J_column_relative_error": 9.238275719067396e-4,
+      "maximum_full_J_adjacent_step_relative_change": 0.006452762204470265,
+      "maximum_path_tangent_resolved_relative_error": 3.6333204347898974e-8,
+      "path_tangent_adjacent_step_relative_change": 1.9693339104520579e-4,
+      "maximum_endpoint_mutation_state_distance": 1.8256921922145788e-14,
+      "maximum_first_cap_time_difference": 5.7239031292510845e-9,
+      "maximum_first_cap_state_distance": 4.885057988690487e-11,
+      "minimum_flow_norm_margin": 38.69663876765532
+    },
+    "inconclusive_evaluator_gate": {
+      "check_id": "P51.evaluator.CSE_nonCSE_pairs",
+      "frozen_rhs_relative_threshold": 5e-10,
+      "maximum_same_point_rhs_relative_error": 1.6900132129978792e-8,
+      "maximum_phi_plus_same_point_rhs_relative_error": 1.6833497075890415e-8,
+      "maximum_phi_minus_same_point_rhs_relative_error": 1.6864238265787197e-8,
+      "maximum_hessian_action_relative_error": 1.0131981840426202e-12,
+      "maximum_endpoint_state_relative_error": 1.5860126402065552e-9,
+      "maximum_scaled_residual_absolute_difference": 1.6300571765397772e-8,
+      "other_frozen_evaluator_thresholds_passed": true,
+      "interpretation": "The same-point CSE/non-CSE RHS relative comparison exceeds its predeclared threshold. This forces the local continuation classification to INCONCLUSIVE; it is neither a no-root certificate nor evidence that the accepted sampled roots are false."
+    },
+    "scope": {
+      "calculated_facts": [
+        "one phi_plus fine/coarse/reverse nonlinear Gamma--K R18 continuation on the frozen Phase50 diagonal path",
+        "one independently initialized phi_minus fine-forward reflection-control path",
+        "sampled residual, rank, transversality, orientation, action, and first-cap ledgers",
+        "full state-map finite differences at lambda 0, 0.5, and 1 and one outer-lambda tangent control",
+        "two endpoint-radius and two endpoint-shape mutations",
+        "paired CSE and non-CSE clongdouble evaluator comparisons"
+      ],
+      "not_computed": [
+        "a backend-consistent supported continuation label",
+        "other source labels, roots, launch charts, straight arms, or cap reintersections",
+        "direction, root, saddle, upward-component, or relative-good-end exhaustion",
+        "interval, augmented-fold, local-degree, non-Stokes, or original-cycle certification",
+        "a common physical determinant line, cutoff or continuum theorem, global signed intersection, or physics claim"
+      ],
+      "sampled_local_calculation_only": true,
+      "calculation_workbench_only": true,
+      "phase50_open_problem_resolved": false,
+      "root_nonexistence_or_contradiction_certified": false,
+      "cutoff_or_continuum_theorem": false,
+      "physics_claim": false
+    },
+    "promoted_outputs": {
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "promoted_output": null,
+      "physical_original_cycle_derived": false
+    },
+    "claim_status": {
+      "valid_run": true,
+      "local_continuation": "INCONCLUSIVE_AT_FROZEN_CSE_NONCSE_RHS_GATE",
+      "no_root_or_contradiction": "NOT_ESTABLISHED",
+      "phase50_gamma_k_open_problem": "OPEN",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "next_calculation": "Freeze and test a narrow CSE/non-CSE clongdouble RHS-consistency repair while preserving the same solved states, evaluator contracts, thresholds, and all historical Phase51 records; only then rerun the local continuation label. Root/component/end census and the Phase50 Gamma--K open problem remain open."
+  }
+}
