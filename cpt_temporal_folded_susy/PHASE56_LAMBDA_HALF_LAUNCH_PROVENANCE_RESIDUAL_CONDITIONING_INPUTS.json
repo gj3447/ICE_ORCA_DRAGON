@@ -1,0 +1,445 @@
+{
+  "schema": "ice-phase56-lambda-half-launch-provenance-residual-conditioning-inputs/v1",
+  "phase": 56,
+  "status": "FROZEN_BEFORE_RUNNER_OR_ANY_PHASE56_OUTPUT",
+  "frozen_at_utc": "2026-08-23T17:54:41Z",
+  "repository_head_observed_at_freeze": "d9ca06ac84f1436aa420747e0b99a7c23f065db9",
+  "manifest_binding": "The future committed Phase-56 runner must pin this manifest's commit, Git blob OID, SHA-256, and byte length. The manifest intentionally does not contain a self-referential future commit hash.",
+  "scope": {
+    "question": "At the single saved phi_plus fine-forward lambda=0.5 root, does replaying the Phase-53 saddle-and-launch algorithm from the pinned Phase-50 saddle recover the saved Phase-53 endpoint residual under both frozen solver profiles, and how do center choice, Hessian-derived launch choice, their interaction, and solver-profile sensitivity contribute?",
+    "calculation_workbench_only": true,
+    "phase56_is_diagnostic_only": true,
+    "computed": [
+      "one fresh Phase-53-algorithm saddle solve at lambda=0.5 from the pinned Phase-50 saddle, using the coherent Phase-53 element-local long action/gradient/Hessian evaluator",
+      "one static Newton prediction at the pinned Phase-50 saddle, delta_s_N=-H_real^{-1} g_real, compared descriptively with the fresh solver displacement",
+      "two Hessian-derived launch frames, one evaluated at the pinned Phase-50 center and one at the fresh-solved center, with the same frozen mobility, factor, chart, radius, shape, root parameters, and flow time",
+      "a fixed 2 x 2 center/launch factorial with corners P50/P50, P50/fresh, fresh/P50, and fresh/fresh",
+      "eight ordered EL_long state-only DOP853 integrations: four factorial corners under the primary profile followed by the same four corners under the refined diagnostic profile",
+      "five fixed returned fractions per attempt, saved-endpoint comparisons, full scaled-residual vectors and identities, the real-T component, center and launch main effects, and the nonlinear interaction"
+    ],
+    "not_computed": [
+      "a Gamma--K root solve, Gamma--K continuation, continuation replay, tangent, finite-difference Jacobian, reflection, endpoint mutation, action ledger, first-cap ledger, evaluator schedule comparison, or EL_std ODE",
+      "another source, lambda, root, saddle branch, radius, shape, flow time, solver method, or favorable solver-profile selection",
+      "an exact byte reconstruction of the unavailable historical Phase-53 saddle, factor, launch, initial-xi, or intermediate trajectory states",
+      "a full Phase-56 semantic replay, straight-arm or cap-reintersection search, root/component/end exhaustion, Stokes analysis, determinant line, original cycle, global signed sum, cutoff/continuum limit, physics claim, or theory of everything"
+    ],
+    "historical_boundary": "Phase 51 and Phase 53 retain their historical INCONCLUSIVE classifications. Phase 55 remains a valid P50-saddle-pinned reconstruction NONPASS. A recovery classification may qualify only a fresh-algorithm center-and-launch policy as a candidate for a separately frozen later full replay; it does not itself perform or authorize that replay."
+  },
+  "pinned_inputs": {
+    "phase55_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json",
+      "git_commit": "10bb1ca9f735e6abc885206c049506da49c3a96e",
+      "git_blob_oid": "bb7b9c2409528918cf8a91d7ac3265d817cbfc2c",
+      "sha256": "7d5730252356c886671c1d9877bcbb44e49f7e3830d5307d25f6ed951418685d",
+      "size_bytes": 54905,
+      "required_schema": "ice-phase55-p53-root-fixed-launch-schedule-transfer-inputs/v1"
+    },
+    "phase55_runner": {
+      "path": "cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py",
+      "git_commit": "ea7df7c04a9774ecb300f4e54684c54102fb9995",
+      "git_blob_oid": "3a332a80e04d772bb4b0bdf235ac6fc2b6dfb1dc",
+      "sha256": "880fe68ab5a068f02045d116ab10835e72e3cc5a59793498a4b2ef245bf23dcf",
+      "size_bytes": 195098
+    },
+    "phase55_result": {
+      "path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_RESULT.json",
+      "git_commit": "d09b1f3c90f1a276d704c8454fe79e538baa3e57",
+      "git_blob_oid": "b7a3574fa7fac4b98017e6bcf8571aaccb5ad8ce",
+      "sha256": "c67ed1d3a078bbde8cd7693aa7fe8a5f377c41d6f33a64476913bca2b4748738",
+      "size_bytes": 5464568,
+      "required_schema": "ice-phase55-p53-root-fixed-launch-schedule-transfer/v1",
+      "required_run_status": "VALID_RUN",
+      "required_classification": "P55_P50_SADDLE_PINNED_EL_LONG_TRAJECTORY_RECONSTRUCTION_NONPASS",
+      "result_payload_sha256_without_self": "7409b408e9d86306c2e75fe2a175f13b36e55d978af6b3ad92c1f998995b9592",
+      "required_exact_check_count": 8,
+      "required_numerical_check_count": 8
+    }
+  },
+  "pin_validation": {
+    "top_level_pin_count": 3,
+    "expected_unique_consumed_path_count_after_recursive_flattening": 29,
+    "recursive_source": "Recursively flatten every pinned input declared by the Phase-55 manifest and all of its ancestors, then add the Phase-55 manifest, runner, and result exactly once.",
+    "strict_parse": "Reject duplicate keys, NaN, Infinity, overflow-to-nonfinite numbers, schema drift, classification drift, self-digest drift, and conflicting declarations for the same path.",
+    "commit_blob_policy": "For every recursively consumed artifact require the working blob OID, declared Git blob OID, and named commit:path blob OID to agree. Require the Phase-56 runner commit to descend from the commit that first records this frozen manifest and require the runner's working bytes to equal its named commit blob at start and end.",
+    "post_rehash": "Rehash all 29 consumed paths plus this manifest and the future committed runner after every numerical evaluation and before classification.",
+    "volatile_identity_policy": "Do not copy or serialize historical process-local id(...) values. Bind evaluators by source labels, roles, generated-source hashes, DAG hashes, exact expression identities, and explicit consumers."
+  },
+  "selected_lambda_half_contract": {
+    "source": "phi_plus",
+    "path": "fine_forward",
+    "lambda": 0.5,
+    "phase50_saddle_record_index": 8,
+    "root_parameter_count": 18,
+    "root_pointer_in_phase53": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/roots/0.5",
+    "phase50_saddle_pointer": "/points/phi_plus/nominal/fine_forward/records/8/w5",
+    "saved_endpoint_pointer_in_phase53": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/evaluator_validation/phi_plus_solved_trajectory_reintegrations/lambda=0.5/CSE_endpoint_state_z",
+    "saved_scaled_residual_pointer_in_phase53": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/8/scaled_residual_max_abs",
+    "root_sha256": "2a1721759e18a14b8ab7436888f6bcb5dd6aff6dc1f82ec951a7e46c54dff960",
+    "phase50_saddle_sha256": "2c4905554f6528f8a79f8e81b6740f95026af43d4809b7dc74ddabd4efc98431",
+    "saved_endpoint_sha256": "bdc2c7ed21e8fcb1629973d9dc52816d6d1b94e8d29da8107059389f0bf55c49",
+    "saved_scaled_residual_max_abs_decimal": "2.644224917615098e-10",
+    "saved_flow_time": 10.268898121002966,
+    "phase53_saddle_summary_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/8/saddle_reproduction",
+    "phase53_saddle_summary_canonical_bytes": 298,
+    "phase53_saddle_summary_sha256": "c5dac2c987ecfa67a93da21af603e09c574ce650fb6f451a8b92c2ef53f9d0ee",
+    "phase53_saddle_summary": {
+      "solver_success": true,
+      "nfev": 4,
+      "distance_to_pinned_phase50": 5.245664923524781e-13,
+      "gradient_max_abs": 6.895659173875024e-12,
+      "hessian_min_abs_eigenvalue": 4.220358798890757,
+      "hessian_inertia": {
+        "negative": 5,
+        "positive": 4,
+        "zero": 0
+      },
+      "accepted": true
+    },
+    "canonicalization": "For selected JSON subtrees use strict parse followed by json.dumps(sort_keys=true,separators=(',',':'),ensure_ascii=false,allow_nan=false), UTF-8. Phase-53 and Phase-55 array values remain authoritative binary64 JSON values; no unavailable precision may be invented."
+  },
+  "phase55_baseline_contract": {
+    "saved_target_pointer": "/saved_targets/1",
+    "saved_target_canonical_bytes": 3195,
+    "saved_target_sha256": "aee4e727a0aef4833bbc22040b260ad0215b8e4b98e600d6179f8f12eeb23bd7",
+    "launch_pointer": "/launch_reconstructions/1",
+    "launch_canonical_bytes": 12032,
+    "launch_sha256": "6498d7ed91a175cf78e15621ba18d9e5ea9264e21982c3353304981db6907e9c",
+    "primary_ode_attempt_pointer": "/ODE_attempts/2",
+    "primary_ode_attempt_canonical_bytes": 1437,
+    "primary_ode_attempt_sha256": "a1ea9414609b8f77ac088d454fed85dbefe237cd605637306f27dfc1e6ba3c12",
+    "primary_relation_projection": "Select the lambda=0.5 EL_long saved-endpoint and scaled-residual records into a canonical object with keys saved_endpoint and scaled_residual.",
+    "primary_relation_projection_canonical_bytes": 2526,
+    "primary_relation_projection_sha256": "271b71065a549ce7ddf23bceee79db11fe1e959742c58686051eb404f1b237af",
+    "expected_primary_nfev": 3101,
+    "expected_endpoint_relative_to_saved_decimal": "2.633122460998127799013128e-8",
+    "expected_scaled_residual_max_abs_decimal": "2.675225930464415314308127e-7",
+    "expected_saved_scalar_absolute_difference_decimal": "2.672581705546800216308127e-7",
+    "primary_p50_initial_xi_complex128_raw_c_order_bytes": 144,
+    "primary_p50_initial_xi_complex128_raw_c_order_sha256": "93ccd10700004608c388edc1e60ab39812a810471d609e2475972d9f12700d4e",
+    "primary_p50_initial_xi_digest_policy": "Reconstruct the P50 launch by the frozen formula, cast once to a fresh C-contiguous numpy.complex128 array, and hash exactly ndarray.tobytes(order='C').",
+    "all_five_physical_states_selection": {
+      "pointers_in_phase55_result": [
+        "/audit_ledgers/sampled_states/10",
+        "/audit_ledgers/sampled_states/11",
+        "/audit_ledgers/sampled_states/12",
+        "/audit_ledgers/sampled_states/13",
+        "/audit_ledgers/sampled_states/14"
+      ],
+      "required_attributes_in_order": {
+        "family": "production",
+        "trajectory_backend": "EL_long",
+        "lambda": 0.5,
+        "fractions": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "required_runtime_contract": {
+      "comparison": "Require exact equality to the corresponding fields in the pinned Phase-55 result /runtime record before any numerical evaluation.",
+      "python_implementation": "CPython",
+      "python_version": "3.13.5",
+      "numpy_version": "2.5.2",
+      "scipy_version": "1.18.0",
+      "sympy_version": "1.14.0",
+      "mpmath_version": "1.3.0",
+      "longdouble_itemsize_bytes": 16,
+      "clongdouble_itemsize_bytes": 32,
+      "longdouble_mantissa_bits_excluding_implicit": 63,
+      "longdouble_epsilon": "1.084202172485504434e-19"
+    },
+    "baseline_reproduction_thresholds": {
+      "all_five_physical_states_relative_max": "2e-12",
+      "all_five_physical_states_metric": "For every ordered fraction use ||z_Phase56-z_Phase55||_2/max(||z_Phase55||_2,1e-30); Phase55 is always the directed reference.",
+      "endpoint_relative_to_phase55_primary": "2e-12",
+      "scaled_residual_vector_max_abs_difference": "2e-12",
+      "scaled_residual_scalar_absolute_difference": "2e-12"
+    },
+    "required_primary_gate_vector": {
+      "saved_endpoint_relative_pass": true,
+      "scaled_residual_absolute_pass": false,
+      "saved_residual_scalar_difference_pass": false,
+      "overall_target_pass": false
+    }
+  },
+  "fresh_saddle_and_launch_contract": {
+    "algorithm": {
+      "entrypoint": "Phase51 SourceContext.saddle with the Phase53 CompleteElementLocalEvaluator installed as the context evaluator",
+      "initial_candidate": "the pinned Phase-50 phi_plus lambda=0.5 saddle",
+      "solver": "scipy.optimize.root",
+      "method": "hybr",
+      "jacobian": "analytic real part of the coherent Phase53 element-local long Hessian",
+      "xtol": 1e-11,
+      "maxfev": 200,
+      "allowed_saddle_root_call_count": 1,
+      "allowed_other_root_call_count": 0
+    },
+    "fresh_saddle_gates": {
+      "solver_success_required": true,
+      "finite_required": true,
+      "gradient_max_abs_max": "2e-8",
+      "distance_to_pinned_phase50_max": "1e-8",
+      "hessian_min_abs_eigenvalue_min": "0.1",
+      "hessian_imag_max_abs_max": "5e-10",
+      "required_inertia": {
+        "negative": 5,
+        "positive": 4,
+        "zero": 0
+      }
+    },
+    "launch_gates": {
+      "applied_to": [
+        "P50",
+        "fresh"
+      ],
+      "finite_required": true,
+      "hessian_imag_max_abs_max": "5e-10",
+      "required_inertia": {
+        "negative": 5,
+        "positive": 4,
+        "zero": 0
+      },
+      "factor_mobility_relative_max": "5e-12",
+      "factor_mobility_relative_formula": "||factor @ factor.T - mobility||_2 / max(||mobility||_2,1e-30)",
+      "factor_inverse_identity": "Retain factor@factor_inverse and factor_inverse@factor identity residuals as diagnostics only; neither substitutes for the inherited factor-mobility gate.",
+      "signed_frame_determinant_strictly_positive": true,
+      "factor_and_factor_inverse_cross_center_policy": "Require exact array equality between the P50 and fresh nodes because the frozen mobility factor is saddle-independent.",
+      "classification_applicability": "Failure of a correctly reconstructed fresh launch selects P56_FRESH_SADDLE_OR_LAUNCH_RECONSTRUCTION_NONPASS. Any P50 launch drift from the pinned Phase-55 launch or initial-xi digest is exclusively a Phase-55 baseline/provenance failure and cannot select the fresh-launch classification."
+    },
+    "historical_summary_comparison": "Retain differences from the pinned Phase-53 saddle summary but do not require unavailable saddle-byte identity. Solver source, options, evaluator source/DAG bindings, accepted gates, and call topology are exact requirements; the old summary is an observed comparison.",
+    "launch_common": {
+      "radius": 0.0001,
+      "shape_key": "lambda_1",
+      "mobility_factor": "the same lambda=0.5 factor for both centers; it depends on the frozen mobility path, not on the saddle",
+      "chart_direction": "the same direction from saved root parameters[9:17] for both launches",
+      "flow_time": "saved root parameter[17]",
+      "launch_rule": "Phase51 deterministic oriented Hessian-xi eigenframe, signed negative/positive blocks, Procrustes alignment, determinant repair, and shape exponent 1",
+      "exact_historical_Phase53_launch_claim_allowed": false
+    },
+    "newton_prediction": {
+      "formula": "delta_s_N = -solve(H_real(P50), g_real(P50))",
+      "required_linear_solve_residual_max_abs": "1e-15",
+      "retained_comparisons": [
+        "predicted and actual displacement vectors",
+        "Euclidean norms and max components",
+        "cosine when both norms are nonzero",
+        "actual-minus-predicted norm and relative norm",
+        "gradient at P50, predicted point, and fresh solved point"
+      ],
+      "causal_boundary": "The Newton comparison is descriptive and cannot by itself select recovery or dominance."
+    }
+  },
+  "factorial_contract": {
+    "center_order": [
+      "P50",
+      "fresh"
+    ],
+    "launch_order": [
+      "P50",
+      "fresh"
+    ],
+    "corner_order": [
+      "P50_center__P50_launch",
+      "P50_center__fresh_launch",
+      "fresh_center__P50_launch",
+      "fresh_center__fresh_launch"
+    ],
+    "corner_definition": "A center chooses node.saddle_w. A launch chooses the Hessian-derived launch coefficient factor_inverse@launch_w and therefore the initial xi. All corners use the same factor, root chart direction, radius, flow time, scales, EL_long RHS, and endpoint cap target.",
+    "initial_xi_formula": "radius * (factor_inverse @ selected_launch_w) @ chart_direction",
+    "state_formula": "selected_center + factor @ xi",
+    "effect_ledger_per_profile": {
+      "center_effect": "z_fresh_center__P50_launch - z_P50_center__P50_launch",
+      "launch_effect": "z_P50_center__fresh_launch - z_P50_center__P50_launch",
+      "interaction": "z_fresh_center__fresh_launch - z_fresh_center__P50_launch - z_P50_center__fresh_launch + z_P50_center__P50_launch",
+      "full_vector_reconstruction_identity": "(z_fresh_center__fresh_launch-z_P50_center__P50_launch) - (center_effect+launch_effect+interaction)",
+      "full_vector_reconstruction_identity_max_abs": "5e-18",
+      "applies_independently_to": [
+        "endpoint complex vector",
+        "scaled-residual interleaved real vector"
+      ]
+    },
+    "effect_policy": "Retain full complex vectors, norms, maximum components, scaled-residual effects, and T components. Do not introduce a post-observation dominance threshold or label one effect as causal from magnitude alone."
+  },
+  "ode_contract": {
+    "backend": "EL_long",
+    "method": "DOP853",
+    "fraction_order": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "profile_order": [
+      "primary",
+      "refined_diagnostic"
+    ],
+    "profiles": {
+      "primary": {
+        "rtol": 2e-10,
+        "atol": 2e-12,
+        "max_step": 0.04,
+        "role": "exact Phase-55 solver profile"
+      },
+      "refined_diagnostic": {
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "max_step": 0.02,
+        "role": "predeclared sensitivity diagnostic; never selected as a favorable replacement"
+      }
+    },
+    "attempt_order": "profile-major then corner_order",
+    "exact_attempt_count": 8,
+    "exact_fraction_slot_count": 40,
+    "solver_boundary": "Each callback retains clongdouble through state materialization and complete EL_long RHS, then casts the completed RHS once to complex128. Each initial xi is cast once to a fresh C-contiguous complex128 buffer.",
+    "completion": "Every attempt must return all five requested t_eval values, report success, have callback count equal to nfev, retain finite values, and keep every returned xi norm strictly below 40. No event or tangent integration is allowed."
+  },
+  "residual_and_gate_contract": {
+    "saved_endpoint_metric": "norm(z_corner-z_saved)/max(norm(z_saved),1e-30)",
+    "scaled_residual": "interleave((gamma_cap(parameters[:9])[0].astype(numpy.complex128)-z_corner.astype(numpy.complex128))/scales5.astype(numpy.float64))",
+    "gating_dtype_policy": "The target gate and every saved/corner residual comparison must reproduce the Phase-55 complex128 subtraction and float64 scale division exactly. clongdouble diagnostics may be retained separately but cannot replace or select any gate.",
+    "saved_residual_vector": "recompute the same full vector from the pinned saved Phase-53 endpoint and verify its maximum equals the pinned saved scalar under the baseline scalar threshold",
+    "identity": "r_corner-r_saved = -interleave((z_corner-z_saved)/scales5)",
+    "identity_max_abs_threshold": "5e-18",
+    "target_gates": {
+      "saved_endpoint_relative_max": "2e-7",
+      "scaled_residual_max_abs_max": "2e-7",
+      "saved_residual_scalar_absolute_difference_max": "2e-7"
+    },
+    "corner_target_pass": "all three target gates pass",
+    "profile_stability": {
+      "gate_policy": "For every corner, the ordered three-gate Boolean vector and corner_target_pass must be identical under primary and refined_diagnostic. P50/P50 must remain target-NONPASS under both profiles.",
+      "endpoint_cross_profile_relative_difference_max": "2e-7",
+      "endpoint_cross_profile_metric": "||z_refined-z_primary||_2/max(||z_primary||_2,1e-30), with primary as the directed reference",
+      "scaled_residual_cross_profile_max_abs_difference_max": "2e-7",
+      "scaled_residual_cross_profile_metric": "max(abs(r_refined-r_primary)) using the declared complex128-gated interleaved residual vectors",
+      "selection_policy": "Refined values are reported but never substituted for primary values."
+    },
+    "T_component_ledger": "Retain endpoint difference, residual difference, and identity terms for physical component index 8, real and imaginary parts, including the frozen scales5[8] value and whether either T component attains the maximum absolute residual difference.",
+    "exact_decimal_policy": "Use Decimal(str(value)) or retained full-precision decimal strings for every material threshold and reported maximum comparison. Do not relax a threshold after observation."
+  },
+  "classification_precedence": [
+    "INVALID_RUN",
+    "P56_FRESH_SADDLE_OR_LAUNCH_RECONSTRUCTION_NONPASS",
+    "P56_PHASE55_P50_BASELINE_NOT_REPRODUCED",
+    "P56_FACTORIAL_ODE_COMPLETION_OR_FLOW_NORM_NONPASS",
+    "P56_LAMBDA_HALF_GATE_SOLVER_PROFILE_UNSTABLE",
+    "P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+    "P56_FRESH_PHASE53_ALGORITHM_LAUNCH_DOES_NOT_RECOVER_SAVED_LAMBDA_HALF_TARGET"
+  ],
+  "classification_rules": {
+    "INVALID_RUN": "Any provenance, schema, finite-number, exact topology, evaluator binding, root-call topology, formula, convention, self-digest, or required null-boundary failure.",
+    "P56_FRESH_SADDLE_OR_LAUNCH_RECONSTRUCTION_NONPASS": "The correctly pinned fresh saddle solve or fresh Hessian-derived launch is finite but fails a declared scientific saddle/launch gate; retain all eight ODE slots as causally linked placeholders. P50 launch drift instead selects the baseline/provenance rule.",
+    "P56_PHASE55_P50_BASELINE_NOT_REPRODUCED": "The primary P50/P50 corner does not reproduce the pinned Phase-55 launch, five physical states, endpoint, residual vector/scalars, nfev, and three-gate vector under the frozen baseline thresholds.",
+    "P56_FACTORIAL_ODE_COMPLETION_OR_FLOW_NORM_NONPASS": "At least one correctly constructed factorial/profile ODE does not complete all five fractions or violates the strict xi-norm cap.",
+    "P56_LAMBDA_HALF_GATE_SOLVER_PROFILE_UNSTABLE": "At least one corner has a different ordered target-gate Boolean vector or corner_target_pass, exceeds either frozen endpoint/residual cross-profile difference threshold, or violates the requirement that P50/P50 remains target-NONPASS under both profiles.",
+    "P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET": "All prior prerequisites pass, P50/P50 is target-NONPASS under both profiles, and fresh/fresh passes all three unchanged target gates under both profiles.",
+    "P56_FRESH_PHASE53_ALGORITHM_LAUNCH_DOES_NOT_RECOVER_SAVED_LAMBDA_HALF_TARGET": "All prior prerequisites pass and the stable fresh/fresh corner does not pass all three unchanged target gates under both profiles.",
+    "no_mixed_corner_precedence": "The two mixed corners are retained for decomposition and profile stability but cannot independently select recovery."
+  },
+  "check_contract": {
+    "exact_check_ids": [
+      "P56.inputs.recursive_pins_commits_blobs_self_digests_and_runner_binding",
+      "P56.target.single_phi_plus_lambda_half_root_saddle_endpoint_and_baseline_subtrees",
+      "P56.algorithm.one_fresh_saddle_solve_and_zero_other_root_or_replay_calls",
+      "P56.launch.two_centers_two_launches_and_exact_2x2_corner_construction",
+      "P56.ODE.eight_profile_corner_attempts_five_fraction_slots_and_placeholders",
+      "P56.conventions.EL_long_fixed_sum_ordinary_transpose_single_outer_conjugation_and_solver_boundary",
+      "P56.residual.full_vector_identity_effect_definitions_and_T_component_index",
+      "P56.guard.historical_immutability_classification_precedence_and_global_nulls"
+    ],
+    "numerical_check_ids": [
+      "P56.saddle.fresh_Phase53_algorithm_and_launch_validity",
+      "P56.newton.static_prediction_linear_identity_and_finite_comparison",
+      "P56.baseline.primary_P50_P50_reproduces_Phase55",
+      "P56.ODE.eight_attempt_completion_finiteness_callback_counts_and_xi_norm",
+      "P56.gates.all_corner_profile_endpoint_and_residual_ledgers_complete",
+      "P56.profile.all_corner_three_gate_vectors_stable",
+      "P56.recovery.fresh_fresh_both_profiles_vs_saved_target",
+      "P56.arithmetic.residual_identities_center_launch_interaction_and_T_conditioning"
+    ],
+    "exact_check_count": 8,
+    "numerical_check_count": 8,
+    "status_policy": "Exact structural checks use PASS/FAIL and any exact FAIL makes INVALID_RUN. Numerical checks use PASS/NONPASS with explicit applicability. Recovery and nonrecovery are both valid bounded outcomes under classification precedence."
+  },
+  "required_outputs": {
+    "result_path": "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_RESULT.json",
+    "result_schema": "ice-phase56-lambda-half-launch-provenance-residual-conditioning/v1",
+    "stdout_prefix": "RESULT_JSON=",
+    "result_payload_self_digest_field": "result_payload_sha256_without_self",
+    "strict_unique_finite_JSON": true,
+    "preenumerate_and_retain_all_records": true,
+    "preenumerated_record_topology": {
+      "selection_records": {
+        "sources": 1,
+        "lambdas": 1,
+        "saved_roots": 1,
+        "pinned_P50_centers": 1,
+        "fresh_saddle_solves": 1,
+        "newton_predictions": 1
+      },
+      "center_records": 2,
+      "launch_records": 2,
+      "factorial_corner_records": 4,
+      "solver_profile_records": 2,
+      "ODE_attempt_slots": 8,
+      "fraction_state_slots": 40,
+      "endpoint_records": 8,
+      "scaled_residual_vector_records": 8,
+      "scalar_target_gate_records": 24,
+      "overall_corner_gate_records": 8,
+      "saved_endpoint_residual_identity_records": 8,
+      "factorial_effect_records": 6,
+      "factorial_effect_record_definition": "Two profiles times center, launch, and interaction; every record carries both endpoint-vector and residual-vector effects plus their reconstruction identities.",
+      "profile_stability_records": 4,
+      "authoritative_root_call_count": 1,
+      "validate_only_root_call_count": 0,
+      "authoritative_solve_ivp_call_count": "exactly 8 when the phase-wide fresh saddle/launch prerequisite passes, otherwise 0 with all eight ODE attempt slots retained as typed placeholders",
+      "validate_only_solve_ivp_call_count": 0,
+      "deterministic_orders": "center_order, launch_order, corner_order, profile_order, attempt_order, and fraction_order are exactly those declared above. No failed or inapplicable record is omitted."
+    },
+    "historical_Phase51_classification_after": null,
+    "historical_Phase53_classification_after": null,
+    "historical_Phase53_classification_preserved_as": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+    "historical_Phase55_classification_after": null,
+    "historical_Phase55_classification_preserved_as": "P55_P50_SADDLE_PINNED_EL_LONG_TRAJECTORY_RECONSTRUCTION_NONPASS",
+    "continuation_reclassification": null,
+    "qualified_later_full_replay_launch_policy_candidate": {
+      "if_classification": "P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      "then_exact_result_value": "fresh_Phase53_algorithm_center_and_launch",
+      "else_exact_result_value": null
+    },
+    "full_semantic_replay_performed": false,
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "root_exhaustion_proved": false,
+    "all_saddles_and_upward_components_complete": false,
+    "physical_original_cycle_derived": false,
+    "common_determinant_line_constructed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "promoted_output": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "physics_claim": null,
+    "TOE_claim": null
+  },
+  "execution_environment": {
+    "python": "CPython 3.13.5 from uv.lock/.venv; require exact equality to the pinned Phase-55 runtime record",
+    "numpy_scipy_sympy_mpmath": "NumPy 2.5.2, SciPy 1.18.0, SymPy 1.14.0, mpmath 1.3.0 from the locked repository environment",
+    "extended_precision": "numpy.longdouble itemsize 16 bytes, numpy.clongdouble itemsize 32 bytes, 63 explicit mantissa bits, epsilon 1.084202172485504434e-19; require exact equality to Phase 55",
+    "required_thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "heavy_run_guard": "Run authoritative and independent reproduction through proxmox-scratch with the required thread environment. Validate-only mode must execute zero root solves and zero ODEs."
+  }
+}
