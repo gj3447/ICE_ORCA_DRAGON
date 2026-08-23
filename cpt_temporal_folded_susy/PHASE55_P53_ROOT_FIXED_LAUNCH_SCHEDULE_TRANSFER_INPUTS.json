@@ -1,0 +1,629 @@
+{
+  "schema": "ice-phase55-p53-root-fixed-launch-schedule-transfer-inputs/v1",
+  "phase": 55,
+  "status": "FROZEN_BEFORE_RUNNER_OR_ANY_PHASE55_OUTPUT",
+  "frozen_at_utc": "2026-08-23T16:06:08Z",
+  "repository_head_observed_at_freeze": "2dcba3b40db5f029a20632c8b5813e6b2eb863a8",
+  "manifest_introduction_commit": "TO_BE_BOUND_AFTER_INITIAL_COMMIT",
+  "scope": {
+    "question": "On three P50-saddle-pinned Phase-55 launch reconstructions using the saved Phase-53 phi_plus fine-forward roots at lambda 0, 0.5, and 1, does the Phase-54 element-local-schedule attribution reproduce on the frozen fifteen-point production sample set, and does one coherent element-local standard-arithmetic state RHS transfer the reconstructed paths, endpoints, and scaled residuals relative to the element-local long-arithmetic production RHS?",
+    "calculation_workbench_only": true,
+    "computed": [
+      "three zero-solve launch reconstructions from the pinned Phase-50 saddles, Phase-51 geometry, Phase-53 complete element-local long Hessian, and the three saved Phase-53 root parameter vectors",
+      "six ordered state-only ODE attempt slots: three EL_long production and three coherent EL_std candidate slots; solve_ivp is called for both backends only when the matching zero-solve Phase-55 launch reconstruction passes",
+      "five fixed fraction slots per logical trajectory at 0, 0.25, 0.5, 0.75, and 1, yielding thirty sampled-state-or-failure-placeholder slots, up to thirty evaluated sampled states, and fifteen backend-paired fraction-record-or-placeholder slots",
+      "the Phase-54 four-cell evaluator matrix at every available EL_long production state and the EL_std/EL_long pair at every available EL_std candidate state, with causally linked NOT_EVALUATED placeholders in all unavailable predeclared audit slots",
+      "six static arithmetic stages, direct-global 80/120-decimal references, controlled contrasts, telescopes, endpoint reproduction, state transfer, and scaled-residual transfer"
+    ],
+    "not_computed": [
+      "a saddle solve, Gamma--K root solve, Gamma--K continuation solve, continuation-node ledger, continuation replay, root repair, root selection, or mesh change",
+      "a tangent, finite-difference Jacobian, endpoint mutation, reflection, action, first-cap, root/direct-determinant orientation replay beyond the signed-frame/Procrustes launch-frame orientation used by reconstruction, rank, transversality, or topology replay",
+      "a pointwise requirement that either global schedule fail at every trajectory fraction",
+      "a Phase-51 or Phase-53 reclassification, another source or root, root exhaustion, straight arm, cap reintersection, global cycle, cutoff or continuum limit, physics claim, or theory of everything"
+    ],
+    "historical_boundary": "Phase 51 remains immutable and its all-temporaries-clongdouble protocol remains NOT_UPHELD. Phase 53 remains a separate VALID_RUN with an inconclusive local classification. Phase 54 remains a six-static-state arithmetic attribution. Phase 55 is only a bounded trajectory validator for deciding whether EL_std may be considered by a later separately frozen Phase-56 replay."
+  },
+  "pinned_inputs": {
+    "phase54_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_INPUTS.json",
+      "git_commit": "c020a13a0c2c7963920ca17365f27fe6544fa0d9",
+      "git_blob_oid": "e065da49560a74008f1520eee4d73afdc8c89e97",
+      "sha256": "4a8f6282a09659e24dc938fa4ae1383c8b5c61f4e2f231b21fcde61637b1fc97",
+      "size_bytes": 28734,
+      "required_schema": "ice-phase54-p51-global-noncse-control-audit-inputs/v1"
+    },
+    "phase54_runner": {
+      "path": "cpt_temporal_folded_susy/phase54_p51_global_noncse_control_audit.py",
+      "git_commit": "af8600b31dfbaa46a6da4366a5486e5a2e0d641a",
+      "git_blob_oid": "f42f1a145337278e26d87d5875bfb6145f1f651d",
+      "sha256": "07a6c398370b701a43dfcd35e69ad1440b9978cb09bf31be1609b0d44f163879",
+      "size_bytes": 129901,
+      "role": "corrected Decimal-exact aggregate-summary runner"
+    },
+    "phase54_result": {
+      "path": "cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_RESULT.json",
+      "git_commit": "d78cf107a9cdca8caf0c5a2933e358e60d3c1a9c",
+      "git_blob_oid": "1f3162f4f9f5a2e9f15728751ec807806289a5a7",
+      "sha256": "daabdcf2a8f74ead3908cfa87a3a8b71befd8db57f61c4c0c47153ea948bfd32",
+      "size_bytes": 5652559,
+      "required_schema": "ice-phase54-p51-global-noncse-control-audit/v1",
+      "required_run_status": "VALID_RUN",
+      "required_classification": "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_ELEMENT_LOCAL_SCHEDULE_ONLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+      "result_payload_sha256_without_self": "7b0b98563b254e38626dc9c2cc4cf9f833ed0fa3d11c057675b6af9c94b94fa5",
+      "required_exact_check_count": 7,
+      "required_numerical_check_count": 8,
+      "required_selector_matrix": {
+        "GN_std": false,
+        "GN_long": false,
+        "EL_std": true,
+        "EL_long": true
+      },
+      "superseded_result_commit_prohibited": "0ed3d7f"
+    }
+  },
+  "pin_validation": {
+    "top_level_pin_count": 3,
+    "expected_unique_consumed_path_count_after_recursive_flattening": 26,
+    "recursive_source": "Recursively flatten every pinned input declared by the pinned Phase-54 manifest, including its Phase-52 and Phase-53 manifests and their Phase-41/42/43/49/50/51 and lockfile inputs. Add the Phase-54 manifest, corrected runner, and corrected result exactly once.",
+    "required_transitive_phase53": {
+      "manifest": {
+        "git_commit": "c2f29917c974f19f4178e85e3b48dd057c316e69",
+        "git_blob_oid": "8e0497304809c4fab8bd6b6bd719d291fa64a835",
+        "sha256": "551acf717e8f7d53353ce962fef2301d11fd2c16db64d8500e768842ddbef71a",
+        "size_bytes": 37806
+      },
+      "runner": {
+        "git_commit": "fe1ad0b325b207d79208db416fab5aa2f9661105",
+        "git_blob_oid": "866d06c7c79175e0d89012da9f8cc09ca2f35c4d",
+        "sha256": "42434fce5cf3c40dd2c53c42a3a0b1ca39dde0df8df2934d0e33525947ab9f2a",
+        "size_bytes": 163474
+      },
+      "result": {
+        "git_commit": "a9a7e6018d2a94749c4f7213501fa061187fd62a",
+        "git_blob_oid": "07e895aaf8d95437e48b3bd37865eac0ba664e24",
+        "sha256": "15cca28d8821a25ba0d0870570d2f42d9a1d8ac7f439a3b9833f500384f58d17",
+        "size_bytes": 2085497,
+        "required_run_status": "VALID_RUN",
+        "required_classification": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+        "result_payload_sha256_without_self": "3a0c233d65ac4175dbd44c4e238864dcfc4fbd59c8829469522bd9977ff88fc4"
+      }
+    },
+    "strict_parse": "Reject duplicate keys, NaN, Infinity, overflow-to-nonfinite numbers, schema drift, and every result self-digest drift before construction.",
+    "commit_blob_policy": "For every recursively flattened artifact require the working blob OID, declared Git blob OID, and named commit:path blob OID to agree. Require cross-manifest declarations for the same path to agree exactly.",
+    "runner_binding": "The future Phase-55 runner commit must postdate and descend from the commit that binds this manifest. Its start and end bytes must equal its named commit blob.",
+    "post_rehash": "Rehash all 26 consumed paths plus this manifest and the future committed runner after every numerical evaluation and before classification.",
+    "volatile_identity_policy": "Historical process-local Python id(...) integers remain pinned file bytes but may not be compared, copied, or serialized as Phase-55 callable evidence. Use role labels, generated-source hashes, DAG hashes, exact alias/equivalence booleans, and explicit consumer binding."
+  },
+  "disclosed_prior_evidence": {
+    "Phase53": "The coherent EL_long full replay was VALID_RUN but remained locally inconclusive. Its three paired global-control trajectory records retained only fractions and metrics plus endpoints, not the fifteen intermediate state vectors or the recomputed saddle, launch matrix, or initial xi.",
+    "Phase54": "On six static launch states EL_std and EL_long passed every selector record, while GN_std and GN_long did not; this localized the observed static finite-arithmetic mechanism to element-local schedule sufficiency on that six-state set only.",
+    "nonpointwise_warning": "The Phase-53 saved global-control RHS discrepancy already falls below 5e-10 at several later fractions. Phase 55 therefore applies the Phase-54 all-slots pass definition to the complete fifteen-state set and does not require a GN nonpass at every individual fraction.",
+    "role": "These results motivate and constrain Phase 55 but may not relax a threshold, remove a state, change a root, or preselect the output label."
+  },
+  "saved_root_and_target_contract": {
+    "source": "phi_plus",
+    "path": "fine_forward",
+    "lambda_order": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "root_parameter_count": 18,
+    "canonicalization": "Strictly parse the Phase-53 result, then serialize the selected subtree with json.dumps(sort_keys=true,separators=(',',':'),ensure_ascii=false,allow_nan=false) encoded as UTF-8.",
+    "records": [
+      {
+        "lambda": 0.0,
+        "p50_saddle_record_pointer": "/points/phi_plus/nominal/fine_forward/records/0",
+        "p50_saddle_pointer": "/points/phi_plus/nominal/fine_forward/records/0/w5",
+        "p50_saddle_canonical_bytes": 169,
+        "p50_saddle_sha256": "1feea34acb660d2b0090c36918dd6fce9014ff205b5a33e945ec6af3000753fe",
+        "root_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/roots/0.0",
+        "fine_record_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/0",
+        "fine_record_required_label": "phi_plus:fine:lambda=0",
+        "intersection_state_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/0/intersection_z",
+        "saved_scaled_residual_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/0/scaled_residual_max_abs",
+        "saved_endpoint_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/evaluator_validation/phi_plus_solved_trajectory_reintegrations/lambda=0.0/CSE_endpoint_state_z",
+        "root_canonical_bytes": 405,
+        "root_sha256": "80e821e9879f0e844bdbfbf68599c17c2ca04809e1b6eac8f267c538240b594f",
+        "intersection_state_canonical_bytes": 438,
+        "intersection_state_sha256": "9fab4399678d6f9082532b0b3ba3b9d4048e759bddd213cbc904b6c4305d09b8",
+        "saved_endpoint_canonical_bytes": 451,
+        "saved_endpoint_sha256": "9c8925d5bf74777937a11cba6056b49335115a10da3eddc45bb4d61223063b33",
+        "saved_scaled_residual_max_abs": 3.145540391278385e-13
+      },
+      {
+        "lambda": 0.5,
+        "p50_saddle_record_pointer": "/points/phi_plus/nominal/fine_forward/records/8",
+        "p50_saddle_pointer": "/points/phi_plus/nominal/fine_forward/records/8/w5",
+        "p50_saddle_canonical_bytes": 171,
+        "p50_saddle_sha256": "2c4905554f6528f8a79f8e81b6740f95026af43d4809b7dc74ddabd4efc98431",
+        "root_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/roots/0.5",
+        "fine_record_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/8",
+        "fine_record_required_label": "phi_plus:fine:lambda=0.5",
+        "intersection_state_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/8/intersection_z",
+        "saved_scaled_residual_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/8/scaled_residual_max_abs",
+        "saved_endpoint_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/evaluator_validation/phi_plus_solved_trajectory_reintegrations/lambda=0.5/CSE_endpoint_state_z",
+        "root_canonical_bytes": 405,
+        "root_sha256": "2a1721759e18a14b8ab7436888f6bcb5dd6aff6dc1f82ec951a7e46c54dff960",
+        "intersection_state_canonical_bytes": 435,
+        "intersection_state_sha256": "704faaf6ffac4df97e54f32386bf029fee3ee8fd51bf51b65753cd2423f2224d",
+        "saved_endpoint_canonical_bytes": 457,
+        "saved_endpoint_sha256": "bdc2c7ed21e8fcb1629973d9dc52816d6d1b94e8d29da8107059389f0bf55c49",
+        "saved_scaled_residual_max_abs": 2.644224917615098e-10
+      },
+      {
+        "lambda": 1.0,
+        "p50_saddle_record_pointer": "/points/phi_plus/nominal/fine_forward/records/16",
+        "p50_saddle_pointer": "/points/phi_plus/nominal/fine_forward/records/16/w5",
+        "p50_saddle_canonical_bytes": 171,
+        "p50_saddle_sha256": "bdceaa5cf424fc9832ec5dbf8682127be75bd2086cd568cae516d0cc27efd307",
+        "root_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/roots/1.0",
+        "fine_record_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/16",
+        "fine_record_required_label": "phi_plus:fine:lambda=1",
+        "intersection_state_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/16/intersection_z",
+        "saved_scaled_residual_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/primary_phi_plus/fine_forward/records/16/scaled_residual_max_abs",
+        "saved_endpoint_pointer": "/wrapped_Phase51_semantic_replay/payload_without_original_self_field/evaluator_validation/phi_plus_solved_trajectory_reintegrations/lambda=1.0/CSE_endpoint_state_z",
+        "root_canonical_bytes": 400,
+        "root_sha256": "ea1e457a4c7db5f6630fe2b625c91c67fd0e1f81a59362ffd2a822317625bde8",
+        "intersection_state_canonical_bytes": 435,
+        "intersection_state_sha256": "f5ed01f67caf40858a760949e7ce4c7c885f3c42b3fc9db5bcb694c5ed86392b",
+        "saved_endpoint_canonical_bytes": 447,
+        "saved_endpoint_sha256": "4440e2c0c16df99a12e1b254a03038e1dfbef524ffc3588ef3a74358e97aea64",
+        "saved_scaled_residual_max_abs": 9.068878770466091e-14
+      }
+    ],
+    "record_requirements": "The inherited Phase-51 source-context constructor may parse the pinned seventeen-record Phase-50 fine-forward saddle map as construction data. Exactly the three selected Phase-50 saddle records may be selected, freshly evaluated, copied into the Phase-55 saddle cache, or used scientifically; each must have the declared lambda, accepted=true, finite=true, inertia 5 negative/4 positive/0 zero, and the pinned w5 digest. Each selected Phase-53 fine-forward record must have the declared lambda and exact fine_record_required_label, accepted=true, status=PASS, and parameters exactly equal to the selected roots object value. No other saddle may be evaluated/cached/used scientifically and no other root may be consumed.",
+    "precision_boundary": "The saved root parameters are authoritative binary64 JSON values. Phase 55 may not invent unavailable precision or describe them as an exact higher-precision reconstruction."
+  },
+  "zero_solve_launch_reconstruction": {
+    "policy": "P50_SADDLE_PINNED_PHASE55_RECONSTRUCTION",
+    "reason": "Phase 53 did not serialize its recomputed saddle_w, factor, launch_w, or initial_xi. Exact authoritative-Phase53 launch reconstruction and zero saddle solves cannot both be claimed.",
+    "steps": [
+      "Rebuild the pinned Phase-51 phi_plus source context and the Phase-53 complete EL_long evaluator from recursively validated inputs. The inherited constructor may parse its pinned seventeen-record Phase-50 fine-forward saddle map, but this parse alone is not scientific saddle selection or evaluation.",
+      "For each declared lambda select only its pinned Phase-50 phi_plus saddle subtree from that inherited map, re-evaluate its complete gradient and Hessian under Phase-53 EL_long without solving, and retain finiteness, gradient maximum, minimum absolute real-Hessian eigenvalue, imaginary-Hessian maximum, and inertia. No other loaded saddle may be freshly evaluated, cached, or used downstream.",
+      "Only after the fixed-saddle validation passes, copy that pinned saddle into the matching SourceContext saddle cache and construct exactly one node with the inherited primary radius 1e-4 and primary shape lambda_1, using the Phase-51 mobility, factor, chart and orientation conventions and the Phase-53 EL_long Hessian.",
+      "Use saved parameters[9:17] and parameters[17] to form the launch direction, initial xi, and flow time exactly as the pinned Phase-51 integrate_k state-only path.",
+      "Hash and retain the reconstructed saddle, factor, launch, chart direction, initial xi, and completed initial physical state under reconstruction_hash_canonicalization. Feed the same C-contiguous complex128 solver-boundary initial-xi bytes to the EL_long and EL_std integrations."
+    ],
+    "reconstruction_hash_canonicalization": "For every clongdouble-derived reconstructed object, serialize a strict UTF-8 canonical JSON object containing its role, shape, logical dtype, and C-order scalar components as real/imaginary shortest round-trip NumPy scientific-decimal strings; use sort_keys=true, separators=(',',':'), ensure_ascii=false, allow_nan=false, then SHA-256 those bytes. Never hash raw longdouble/clongdouble storage because x87 padding is not semantic. For initial-state backend identity, cast exactly once to native-endian complex128, make one C-contiguous buffer, hash its tobytes(order='C'), and require byte identity between the two solver inputs and that retained hash.",
+    "fixed_saddle_validation": {
+      "gradient_max_abs_max": "2e-8",
+      "hessian_min_abs_eigenvalue_min": "0.1",
+      "hessian_imag_max_abs_max": "5e-10",
+      "required_inertia": {
+        "negative": 5,
+        "positive": 4,
+        "zero": 0
+      },
+      "finite_required": true,
+      "classification_policy": "A pointer, subtree digest, lambda, accepted/finite flag, or structural record drift is INVALID_RUN. A finite correctly pinned fixed saddle whose fresh finite Phase-53 EL_long numerical gradient/Hessian exceeds a declared magnitude, gap, or inertia threshold selects the reconstruction-NONPASS branch for that lambda; do not cache it or construct a node. A nonfinite fresh gradient, Hessian, eigenvalue, launch-frame object, or initial state is INVALID_RUN under the global nonfinite policy. Retain both backend attempt slots and every descendant audit slot as causally linked NOT_EVALUATED placeholders only for the scientific reconstruction-NONPASS case, then continue later lambdas."
+    },
+    "guard_instrumentation": "Install counted raising sentinels on both public scipy.optimize.root and every imported module-scope alias, including phase51.root. Wrap SourceContext.saddle so each call asserts the rounded lambda key is already present in _saddle_cache before delegating; a cache miss is INVALID before any solver route. Install counted raising sentinels on inherited phase51.integrate_k and its phase51.solve_ivp alias. Route every allowed state-only integration through one runner-owned counted wrapper around the public SciPy solve_ivp entrypoint and require its actual call count to satisfy expected_topology. Guard aliases before any launch or ODE construction and retain every counter.",
+    "exact_Phase53_launch_claim_allowed": false,
+    "scientific_prerequisite": "Each reconstructed EL_long trajectory must complete and its endpoint and scaled residual must satisfy the saved-Phase53 reproduction thresholds before either schedule attribution or EL_std qualification is selectable.",
+    "prohibited": [
+      "calling scipy.optimize.root or SourceContext.saddle on a cache miss",
+      "using a saved endpoint as an initial state or integrating backward from it",
+      "solving or repairing a Gamma--K root",
+      "substituting a Phase-53 six-slot center-launch state for a root-specific launch",
+      "claiming byte identity with the unavailable authoritative Phase-53 launch"
+    ]
+  },
+  "evaluator_contract": {
+    "core_order": [
+      "GN_std",
+      "GN_long",
+      "EL_std",
+      "EL_long"
+    ],
+    "integrated_backends": [
+      "EL_long",
+      "EL_std"
+    ],
+    "EL_long": "Use the exact Phase-53 per-element long-namespace gradient plans, element order, generated callables, and componentwise fixed left-to-right clongdouble accumulation. The production ODE callback must be identity-bound by stable role and source/DAG hashes to this evaluator.",
+    "EL_std": "Use the exact same per-element canonical gradient CSE expressions, DAGs, element order, component order, and no cross-element sharing as EL_long, but compile with the standard SymPy NumPy printer/modules, convert each complete element contribution at the complex128 accumulator boundary, and add componentwise in fixed left-to-right complex128 order. Cast only the complete summed gradient to clongdouble at the common downstream boundary.",
+    "GN_std_and_GN_long": "Reuse the exact Phase-54 bound global non-CSE joint gradient-plus-Hessian schedules and gradient slices only for sampled-state attribution. They may not drive an ODE, choose a root, or repair a trajectory.",
+    "required_EL_long_projection_sha256": "8359762ba056bd7a300bceba8d4bf7e83e22149f5795c37f5b6ee0a4a212ad4e",
+    "required_EL_long_projection_canonical_bytes": 4141,
+    "hot_loop_policy": "Compile and bind lightweight EL_long and EL_std gradient callables once. Do not allocate or serialize Phase-54 raw trace ledgers inside solve_ivp RHS calls. Run full binding, dtype, stage, and reference audits at every available retained sampled state, and emit causally linked NOT_EVALUATED placeholders for every unavailable predeclared audit slot.",
+    "fixed_accumulation": {
+      "m4_element_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "m5_element_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "rule": "For each vector component add completed element contributions strictly left-to-right. Python sum, NumPy reduction, BLAS reduction, pairwise, tree, compensated, sorted-magnitude, cross-element CSE, and output substitution are prohibited."
+    },
+    "common_downstream": "After the declared callable boundary use the same inverse-basis state map, m4 lift, lambda blend, ordinary A_lambda transpose contraction, and exactly one outer minus-conjugation in clongdouble. Cast only the completed state RHS once to complex128 at the solve_ivp boundary."
+  },
+  "ode_contract": {
+    "source_order": [
+      "phi_plus"
+    ],
+    "lambda_order": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "backend_order": [
+      "EL_long",
+      "EL_std"
+    ],
+    "trajectory_fraction_order": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "t_eval": "For each root use np.asarray(trajectory_fraction_order,dtype=float) multiplied by that root's saved parameters[17]. Require exact endpoints 0 and flow_time and exact retained fraction labels.",
+    "method": "DOP853",
+    "rtol": 2e-10,
+    "atol": 2e-12,
+    "max_step": 0.04,
+    "with_tangent": false,
+    "event": false,
+    "returned_t_eval_sample_xi_norm_strict_max": 40.0,
+    "solver_boundary": "The internal solver state is complex128. Reconstruct each sampled xi and w in clongdouble for evaluator and direct-reference work; return only one completed complex128 RHS to solve_ivp.",
+    "attempt_policy": "Predeclare and process all six logical attempt slots in lambda-major, backend-minor order and retain five ordered state or failure-placeholder records for each. If fixed-saddle/launch reconstruction is unavailable, retain a NOT_ATTEMPTED_UPSTREAM_RECONSTRUCTION_NONPASS attempt record for both backends and call no solver for that lambda. If the launch exists, call solve_ivp for both backends even when the first call scientifically fails. A scientific nonconvergence may select a nonqualification label but may not remove later slots or alter ledger topology.",
+    "step_reporting": "For a successful attempt solution.t.size must equal five because t_eval has five points; this count must not be reported as the adaptive solver's internal step count. A retained failed attempt may return zero through four ordered t_eval samples, which are audited as available states, with causally linked placeholders for the remaining fraction slots. Retain success, message, nfev, njev, nlu, returned t count, fraction identities, and the maximum xi norm over available returned t_eval samples only. This is not an adaptive-internal-path maximum.",
+    "no_data_dependent_early_stop": true
+  },
+  "sampled_state_audit": {
+    "stage_order": [
+      "m4_raw_gradient",
+      "m4_lifted_gradient",
+      "m5_raw_gradient",
+      "lambda_blended_gradient",
+      "A_lambda_transpose_contraction",
+      "outer_minus_conjugation"
+    ],
+    "stage_dimensions": [
+      7,
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "production_state_evaluators": [
+      "GN_std",
+      "GN_long",
+      "EL_std",
+      "EL_long"
+    ],
+    "candidate_state_evaluators": [
+      "EL_std",
+      "EL_long"
+    ],
+    "production_controlled_contrasts": [
+      "GN_std -> GN_long",
+      "EL_std -> EL_long",
+      "GN_std -> EL_std",
+      "GN_long -> EL_long"
+    ],
+    "candidate_controlled_contrasts": [
+      "EL_std -> EL_long"
+    ],
+    "production_telescope_chains": [
+      "GN_std -> EL_long -> direct_global_120",
+      "GN_long -> EL_long -> direct_global_120",
+      "EL_std -> EL_long -> direct_global_120"
+    ],
+    "candidate_telescope_chains": [
+      "EL_std -> EL_long -> direct_global_120"
+    ],
+    "activity_policy": {
+      "m4_raw_gradient_and_lifted": "active only when 1-lambda is nonzero",
+      "m5_raw_gradient": "active only when lambda is nonzero",
+      "lambda_blended_gradient_contraction_and_outer": "active at every sampled state",
+      "classification_selector_stages": [
+        "lambda_blended_gradient",
+        "outer_minus_conjugation"
+      ],
+      "inactive_stages": "retain as diagnostics but never use for a selector or qualification"
+    },
+    "aggregate_schedule_attribution": {
+      "unit": "the complete ordered set of fifteen EL_long production trajectory states",
+      "pass_definition": "An evaluator passes only if all thirty of its fifteen-state by two-selector comparisons are at or below 5e-10. Equality passes.",
+      "required_matrix_for_transfer": {
+        "GN_std": false,
+        "GN_long": false,
+        "EL_std": true,
+        "EL_long": true
+      },
+      "GN_nonpass_definition": "False means at least one selector record is above threshold somewhere in the complete fifteen-state set.",
+      "pointwise_GN_nonpass_required": false,
+      "post_output_state_or_fraction_selection": false
+    }
+  },
+  "reference_contract": {
+    "backend": "At every available retained sampled state evaluate the unreduced pinned global m4 and m5 gradient expressions directly with SymPy evalf at the active precision. Perform the lift, blend, ordinary transpose contraction, and one outer minus-conjugation only with mpmath mpf/mpc algebra; retain causally linked NOT_EVALUATED placeholders for unavailable predeclared reference slots.",
+    "precision_tiers_decimal_digits": [
+      80,
+      120
+    ],
+    "authoritative_tier_decimal_digits": 120,
+    "input_lift": "Use the completed native state_w5, not raw xi or scaled physical z. For every real and imaginary component call np.format_float_scientific(np.longdouble(value), precision=24, unique=False, trim='k'); require both value and signed-zero round-trip through np.longdouble, then construct mpmath mpf/mpc values directly from those exact strings. No alternate round-tripping decimal spelling is allowed.",
+    "independence": "The direct reference may not invoke a native generated evaluator, NumPy lambdify, a Phase-54 native output, or an ODE RHS output. It checks arithmetic for the same finite symbolic model and is not an independent physical model.",
+    "symbolic_CSE_reference_required": false,
+    "reference_state_or_failure_placeholder_slot_count": 30,
+    "full_success_reference_state_count": 30,
+    "full_success_reference_raw_gradient_evaluation_count": 120,
+    "failure_placeholder_policy": "A sampled state that is unavailable only because its declared launch reconstruction retained a scientific nonpass or its ODE attempt returned a retained scientific failure produces an explicit NOT_EVALUATED reference placeholder for every predeclared tier, gradient, and stage slot. It is not silently dropped or treated as PASS. Every reference that is actually evaluated must satisfy the independence and 80/120 stability prerequisites."
+  },
+  "metrics_and_thresholds": {
+    "native_reference_relative_metric": "||x-y||_2/max(||x||_2,||y||_2,1e-100)",
+    "physical_state_materialization": "At every retained fraction form z_backend = source.scales5 * (node.saddle_w + node.factor @ xi_backend), with xi lifted from the complex128 solver state to clongdouble and the state map evaluated in the inherited order. Do not compare raw xi as the trajectory-state gate.",
+    "state_transfer_relative_metric": "For each paired fraction use ||z_EL_std-z_EL_long||_2/max(||z_EL_long||_2,1e-30). The endpoint-state metric is the same formula at fraction 1.",
+    "saved_endpoint_reproduction_relative_metric": "For each lambda use ||z_EL_long_endpoint-z_Phase53_saved_endpoint||_2/max(||z_Phase53_saved_endpoint||_2,1e-30).",
+    "scaled_residual_construction": "For backend b form r_b = interleaved((gamma_cap(source, parameters[:9])[0] - z_b_endpoint) / source.scales5) in the inherited interleaved order, then residual_max_b = max(abs(r_b)). No additional ODE, root evaluation, endpoint substitution, or unavailable saved residual vector is implied.",
+    "saved_scaled_residual_comparison": "Compare abs(residual_max_EL_long - saved_scaled_residual_max_abs) with 2e-7. Phase53 retained only this scalar target, so no vector-identity claim is allowed.",
+    "candidate_production_scaled_residual_difference": "Compare max(abs(r_EL_std-r_EL_long)) with 2e-7 and retain both full residual vectors, both maxima, and their difference.",
+    "retained_absolute_metrics": "Retain normwise and maximum-component absolute differences for every stage, endpoint, and scaled residual.",
+    "reference_80_vs_120_relative_max": "1e-40",
+    "gradient_stage_relative_max": "5e-10",
+    "completed_RHS_stage_relative_max": "5e-10",
+    "same_point_EL_std_EL_long_blend_and_RHS_relative_max": "5e-10",
+    "telescope_relative_closure_max": "5e-18",
+    "reconstructed_EL_long_endpoint_to_saved_Phase53_relative_max": "2e-7",
+    "reconstructed_EL_long_scaled_residual_max_abs": "2e-7",
+    "reconstructed_EL_long_saved_scaled_residual_absolute_difference_max": "2e-7",
+    "trajectory_state_relative_max": "2e-7",
+    "endpoint_state_relative_max": "2e-7",
+    "candidate_scaled_residual_max_abs": "2e-7",
+    "candidate_production_scaled_residual_absolute_difference_max": "2e-7",
+    "returned_t_eval_sample_xi_norm_strict_max": "40",
+    "Decimal_exact_gate_and_aggregate_policy": "Retain every high-precision metric and threshold as a canonical decimal string. Compare gates, select winners, and compute every reported maximum with exact decimal.Decimal values parsed directly from those retained strings, or while still inside the metric's declared higher-precision work context. Return the exact winning retained string. Default-dps mpmath reparsing, binary float conversion for a gate or maximum, rounded aggregate reconstruction, and lexicographic string ordering are prohibited.",
+    "threshold_policy": "The finite-arithmetic, endpoint, residual, solver, and flow thresholds are copied from the pinned Phase-51/52/54 contracts. No Phase-55 observation may weaken them."
+  },
+  "expected_topology": {
+    "source_count": 1,
+    "lambda_count": 3,
+    "consumed_root_count": 3,
+    "inherited_context_loaded_saddle_record_count": 17,
+    "scientifically_selected_fixed_saddle_count": 3,
+    "fixed_saddle_validation_attempt_count": 3,
+    "launch_reconstruction_attempt_or_scientific_nonpass_placeholder_record_count": 3,
+    "full_success_evaluated_launch_reconstruction_count": 3,
+    "saddle_solve_count": 0,
+    "Gamma_K_root_solve_count": 0,
+    "ODE_attempt_or_upstream_placeholder_record_count": 6,
+    "EL_long_attempt_or_upstream_placeholder_record_count": 3,
+    "EL_std_attempt_or_upstream_placeholder_record_count": 3,
+    "full_success_solve_ivp_call_count": 6,
+    "actual_solve_ivp_call_count_allowed": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "actual_solve_ivp_call_count_rule": "Exactly two state-only calls for each lambda whose fixed-saddle and launch reconstruction passes; zero for each lambda whose reconstruction does not pass.",
+    "tangent_ODE_attempt_count": 0,
+    "event_integration_attempt_count": 0,
+    "trajectory_fraction_value_count": 5,
+    "sampled_state_or_failure_placeholder_count": 30,
+    "successful_qualification_sampled_state_count": 30,
+    "backend_paired_fraction_record_or_placeholder_count": 15,
+    "full_success_evaluated_backend_paired_fraction_record_count": 15,
+    "endpoint_pair_record_or_placeholder_count": 3,
+    "full_success_evaluated_endpoint_pair_record_count": 3,
+    "initial_state_identity_record_or_upstream_nonpass_placeholder_count": 3,
+    "full_success_evaluated_initial_state_identity_record_count": 3,
+    "scaled_residual_record_or_placeholder_count": 6,
+    "full_success_evaluated_scaled_residual_record_count": 6,
+    "Gamma_K_continuation_node_ledger_count": 0,
+    "continuation_or_classification_replay_count": 0,
+    "finite_difference_count": 0,
+    "reflection_count": 0,
+    "endpoint_mutation_count": 0,
+    "action_or_first_cap_ledger_count": 0
+  },
+  "expected_audit_counts": {
+    "count_kind": "Fixed ledger-slot counts. Every slot contains either one evaluated record or one causally linked NOT_EVALUATED failure placeholder; these numbers are not unconditional claims that all vectors were numerically evaluated.",
+    "production_sampled_state_or_failure_placeholder_count": 15,
+    "candidate_sampled_state_or_failure_placeholder_count": 15,
+    "total_sampled_state_or_failure_placeholder_count": 30,
+    "production_native_stage_vector_or_placeholder_record_count": 360,
+    "candidate_native_stage_vector_or_placeholder_record_count": 180,
+    "native_stage_vector_or_placeholder_record_count": 540,
+    "active_native_stage_comparison_or_placeholder_record_count": 450,
+    "direct_reference_stage_vector_or_placeholder_record_count_80_and_120_combined": 360,
+    "native_to_direct_120_comparison_or_placeholder_record_count": 540,
+    "production_selector_or_placeholder_record_count": 120,
+    "candidate_selector_or_placeholder_record_count": 60,
+    "selector_or_placeholder_record_count": 180,
+    "production_controlled_contrast_or_placeholder_record_count": 360,
+    "candidate_controlled_contrast_or_placeholder_record_count": 90,
+    "controlled_contrast_or_placeholder_record_count": 450,
+    "production_telescope_or_placeholder_record_count": 270,
+    "candidate_telescope_or_placeholder_record_count": 90,
+    "telescope_or_placeholder_record_count": 360,
+    "direct_reference_raw_gradient_evaluation_or_placeholder_record_count": 120,
+    "full_success_evaluated_counts": {
+      "sampled_states": 30,
+      "native_stage_vectors": 540,
+      "active_native_stage_comparisons": 450,
+      "direct_reference_stage_vectors_80_and_120_combined": 360,
+      "native_to_direct_120_comparisons": 540,
+      "selector_records": 180,
+      "controlled_contrast_records": 450,
+      "telescope_records": 360,
+      "direct_reference_raw_gradient_evaluations": 120
+    },
+    "evaluated_count_relations": "Let P and C be the numbers of retained successful production and candidate sampled states. Actual native vectors and native-to-direct comparisons are 24*P+12*C; direct-reference stage vectors are 12*(P+C); selectors are 8*P+4*C; controlled contrasts are 24*P+6*C; telescopes are 18*P+6*C; raw reference gradients are 4*(P+C). Active comparison count is the sum of the frozen lambda-dependent activity flags over evaluated native records. Each corresponding placeholder count is its fixed ledger-slot count minus its evaluated count.",
+    "failure_placeholder_policy": "A placeholder is allowed only downstream of the matching retained scientific launch-reconstruction nonpass or failed ODE attempt. Every placeholder carries its applicable source, backend, lambda, fraction, state/evaluator/tier/stage/selector/contrast/telescope/trajectory-pair/endpoint-pair/initial-identity/residual/aggregate/numerical-check role, activity flag when applicable, causal failure ID, and status NOT_EVALUATED. A placeholder when all inputs for that slot exist, an evaluated record when a required input does not exist, or a missing downstream slot is INVALID_RUN. Reconstruction, schedule-attribution, and qualified labels require the full-success subsets stated by their precedence rules.",
+    "conditional_placeholder_rules": {
+      "sampled_state": "Evaluate each fraction whose solver sample was actually returned; emit a state placeholder only for an unattempted integration or an unreturned later t_eval fraction.",
+      "initial_state_identity": "Evaluate when the matching launch reconstruction passes, before either ODE result is known; otherwise emit one reconstruction-linked placeholder.",
+      "trajectory_pair": "Evaluate only when both backend states at the matching lambda/fraction exist; otherwise emit one placeholder linked to the missing backend attempt.",
+      "endpoint_pair": "Evaluate only when both fraction-1 backend states exist; otherwise emit one placeholder linked to the missing endpoint.",
+      "scaled_residual": "Evaluate a backend residual only when that backend endpoint exists; otherwise emit one placeholder linked to the missing endpoint.",
+      "state_audit_descendants": "For every unavailable sampled state emit every predeclared evaluator, tier, raw-gradient, stage, comparison, selector, contrast, and telescope placeholder.",
+      "aggregate_schedule_attribution": "Evaluate only when all fifteen production states and their required selector records exist; otherwise emit one aggregate placeholder linked to the first missing prerequisite in frozen order.",
+      "numerical_checks": "Retain all eight check objects. Evaluate a check when all of its declared prerequisite records exist; otherwise set it to NOT_EVALUATED with the frozen-order causal failure IDs. A nonfinite evaluated value, unstable evaluated reference, or incomplete evaluated telescope is INVALID_RUN rather than a placeholder cause."
+    },
+    "count_policy": "Every slot, stage, evaluator, contrast, telescope, selector, direct reference, and failure placeholder is predeclared. A missing, duplicate, extra, reordered, or mislabeled record is INVALID_RUN."
+  },
+  "checks": {
+    "exact": [
+      "P55.inputs.byte_pins_commits_blobs_self_digests_and_corrected_Phase54",
+      "P55.roots.three_saved_phi_plus_root_and_endpoint_digests",
+      "P55.launch.zero_solve_P50_saddle_pinned_reconstruction_and_identical_initials",
+      "P55.evaluators.Phase54_core_bindings_and_Phase53_EL_long_projection",
+      "P55.ODE.six_attempt_slot_fraction_and_failure_placeholder_topology",
+      "P55.conventions.fixed_sum_Decimal_gates_ordinary_transpose_single_outer_conjugation_and_boundary",
+      "P55.reference.direct_global_independence_and_state_lift",
+      "P55.guard.validator_scope_historical_immutability_and_global_nulls"
+    ],
+    "numerical": [
+      "P55.reference.thirty_state_80_120_stability",
+      "P55.reconstruction.EL_long_saved_Phase53_endpoints_and_residuals",
+      "P55.production_states.core_schedule_matrix_vs_direct_120",
+      "P55.candidate_states.EL_std_and_EL_long_vs_direct_120",
+      "P55.same_point.EL_std_EL_long_blend_and_completed_RHS",
+      "P55.trajectory.all_fraction_and_endpoint_state_transfer",
+      "P55.residual.candidate_absolute_and_candidate_production_transfer",
+      "P55.arithmetic.telescopes_finiteness_solver_completion_and_returned_sample_xi_norm"
+    ],
+    "qualification_conjunction": "The qualified label additionally requires all six ODE attempts to succeed, all thirty sample states to exist, zero NOT_EVALUATED placeholders, reconstructed EL_long reproduction to pass, every active EL_long direct-reference baseline gate to pass on both state families, the aggregate production-state schedule matrix to equal the declared Phase-54 pattern, and every EL_std candidate direct, pair, state, endpoint, and residual gate to pass.",
+    "EL_long_reference_baseline_policy": "EL_long is the production schedule and the middle of every declared telescope. Any active EL_long-to-direct-120 nonpass on an evaluated production or candidate state selects the higher-precedence EL_long baseline-NONPASS label. It may not be folded into schedule-attribution-not-reproduced or EL_std-not-qualified.",
+    "downstream_unavailability_status": "Every numerical check object is retained. A check whose required records are causally unavailable only because a declared launch reconstruction retained a scientific nonpass or an ODE attempt returned a retained scientific failure receives NOT_EVALUATED, not PASS or INVALID by itself. NOT_EVALUATED cannot select schedule-attribution or qualified labels. A missing check object, an unjustified NOT_EVALUATED, or instability/failure in a reference or telescope that was actually evaluated is INVALID_RUN.",
+    "reference_prerequisite": "For every evaluated state, the 80/120 reference-stability and telescope-completeness/closure portions are validity prerequisites, not favorable scientific selectors. Declared downstream placeholders caused by a retained ODE scientific failure remain valid bookkeeping but make the corresponding downstream scientific gate unavailable."
+  },
+  "classification": {
+    "precedence": [
+      "INVALID_RUN",
+      "P55_P50_SADDLE_PINNED_EL_LONG_TRAJECTORY_RECONSTRUCTION_NONPASS",
+      "P55_EL_LONG_DIRECT_REFERENCE_BASELINE_NONPASS_ON_PHASE55_SAMPLED_STATES",
+      "P55_PHASE54_SCHEDULE_ONLY_ATTRIBUTION_NOT_REPRODUCED_ON_PHASE55_RECONSTRUCTED_TRAJECTORY_SAMPLE_SET",
+      "P55_EL_STD_TRAJECTORY_SCHEDULE_TRANSFER_QUALIFIED_ON_THREE_P53_ROOTS_WITH_P50_SADDLE_PINNED_LAUNCHES",
+      "P55_EL_STD_TRAJECTORY_SCHEDULE_TRANSFER_NOT_QUALIFIED_ON_THREE_P53_ROOTS_WITH_P50_SADDLE_PINNED_LAUNCHES"
+    ],
+    "invalid_run": {
+      "label": "INVALID_RUN",
+      "if": "Any invalidity gate, exact check, byte/commit/blob/self-digest, strict-JSON, runtime, root/endpoint digest, binding, initial-state identity, prohibited-call, attempt topology, record count/order, convention, direct-reference independence, 80/120 stability, telescope completeness/closure, provenance, rehash, or global-null prerequisite fails."
+    },
+    "reconstruction_nonpass": {
+      "label": "P55_P50_SADDLE_PINNED_EL_LONG_TRAJECTORY_RECONSTRUCTION_NONPASS",
+      "if": "The run is otherwise valid and all six logical attempt slots and downstream placeholders are retained, but any finite pinned fixed saddle exceeds its fresh finite Phase-53 EL_long numerical magnitude, gap, or inertia threshold, any required launch is scientifically unavailable, any finite EL_long ODE does not complete, any required EL_long sampled state is unavailable, or any finite EL_long saved-endpoint, scaled-residual, or returned-t_eval-sample xi-norm gate does not pass. Any nonfinite evaluated value instead selects INVALID_RUN. No schedule-transfer inference is allowed."
+    },
+    "EL_long_reference_baseline_nonpass": {
+      "label": "P55_EL_LONG_DIRECT_REFERENCE_BASELINE_NONPASS_ON_PHASE55_SAMPLED_STATES",
+      "if": "The fixed-launch EL_long reconstruction passes, but any evaluated active EL_long stage exceeds 5e-10 against direct-global 120 decimals on a production state or on an available candidate state. This is a production/reference-baseline nonpass, not evidence against schedule transfer and not an EL_std qualification result."
+    },
+    "schedule_attribution_not_reproduced": {
+      "label": "P55_PHASE54_SCHEDULE_ONLY_ATTRIBUTION_NOT_REPRODUCED_ON_PHASE55_RECONSTRUCTED_TRAJECTORY_SAMPLE_SET",
+      "if": "The fixed-launch EL_long reconstruction and all active EL_long direct-reference baseline gates pass, but the complete fifteen-production-state aggregate selector matrix is not exactly GN_std=false, GN_long=false, EL_std=true, EL_long=true. Every state remains retained; pointwise GN failure is not required. No EL_std trajectory qualification is allowed."
+    },
+    "qualified": {
+      "label": "P55_EL_STD_TRAJECTORY_SCHEDULE_TRANSFER_QUALIFIED_ON_THREE_P53_ROOTS_WITH_P50_SADDLE_PINNED_LAUNCHES",
+      "if": "The run is valid and complete, the EL_long reconstruction, active EL_long baseline, and aggregate schedule-attribution gates pass, all EL_std direct-reference gates pass on candidate states, every same-point pair gate passes on both state families, all fifteen trajectory-state comparisons and three endpoint comparisons pass, and all candidate and candidate-versus-production scaled-residual gates pass."
+    },
+    "not_qualified": {
+      "label": "P55_EL_STD_TRAJECTORY_SCHEDULE_TRANSFER_NOT_QUALIFIED_ON_THREE_P53_ROOTS_WITH_P50_SADDLE_PINNED_LAUNCHES",
+      "if": "The run is valid and every predeclared ledger slot is complete, and the fixed-launch reconstruction, active EL_long baseline, and aggregate schedule-attribution gates pass, but one or more finite EL_std candidate direct-reference, same-point pair, trajectory-state, endpoint, scaled-residual, solver-completion, or returned-t_eval-sample xi-norm gates do not pass or remain causally NOT_EVALUATED after a retained candidate ODE failure. Any nonfinite evaluated value instead selects INVALID_RUN."
+    },
+    "allowed_scientific_labels": [
+      "P55_P50_SADDLE_PINNED_EL_LONG_TRAJECTORY_RECONSTRUCTION_NONPASS",
+      "P55_EL_LONG_DIRECT_REFERENCE_BASELINE_NONPASS_ON_PHASE55_SAMPLED_STATES",
+      "P55_PHASE54_SCHEDULE_ONLY_ATTRIBUTION_NOT_REPRODUCED_ON_PHASE55_RECONSTRUCTED_TRAJECTORY_SAMPLE_SET",
+      "P55_EL_STD_TRAJECTORY_SCHEDULE_TRANSFER_QUALIFIED_ON_THREE_P53_ROOTS_WITH_P50_SADDLE_PINNED_LAUNCHES",
+      "P55_EL_STD_TRAJECTORY_SCHEDULE_TRANSFER_NOT_QUALIFIED_ON_THREE_P53_ROOTS_WITH_P50_SADDLE_PINNED_LAUNCHES"
+    ],
+    "Phase51_reclassification_allowed": false,
+    "Phase53_reclassification_allowed": false,
+    "pointwise_GN_nonpass_required": false,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS"
+  },
+  "invalidity_gates": [
+    "The corrected Phase-54 top-level triple or any recursively flattened declaration, commit blob, working byte, schema, status, self-digest, classification, exact-check count, numerical-check count, or selector matrix drifts.",
+    "The future runner consumes the superseded Phase-54 result, a different Phase-53 result, an unpinned source, a saved intermediate state that Phase 53 did not serialize, or a fourth root.",
+    "A selected Phase-50 saddle record/subtree, Phase-53 root, fine-forward record, intersection state, saved residual scalar, saved endpoint, lambda, order, accepted/status/finite flag, canonical byte count, or digest drifts.",
+    "A saddle cache miss occurs, scipy.optimize.root, the imported phase51.root alias, or a Gamma--K root routine is called, an inherited phase51.integrate_k/solve_ivp alias escapes its sentinel, a state ODE bypasses the runner-owned counted solve_ivp wrapper, a saved endpoint becomes an initial state, or any root, launch, seed, radius, shape, chart, flow time, fraction, solver, or tolerance is repaired or replaced.",
+    "EL_std and EL_long do not share the exact declared per-element symbolic plans and order, the Phase-53 EL_long projection drifts, or a hot-loop callable is not stably identity-bound to its audited implementation.",
+    "An undeclared reduction, coercion, conjugation, Hermitian transpose, early complex128 projection, multiple solver-boundary cast, hidden cross-element sharing, output cache, or favorable output substitution occurs.",
+    "The two backends receive different initial xi bytes for a reconstructed lambda, fewer or more than six logical ODE attempt-or-upstream-placeholder records occur, the actual solve_ivp call count is not exactly twice the successful-launch count, any later slot/call is skipped after a scientific nonpass, or a required state/failure placeholder is missing.",
+    "A root solve, saddle solve, tangent ODE, event integration, Gamma--K continuation/node-ledger replay, reflection, finite-difference, endpoint mutation, action, first-cap, or classification replay count is nonzero contrary to the exact topology. The three declared fresh fixed-saddle validations and their launch-frame SourceContext.node constructions are not prohibited continuation replays.",
+    "A ledger slot, state, evaluator, stage, active/inactive flag, selector, contrast, telescope, direct reference, residual, or endpoint is missing, duplicated, reordered, mislabeled, nonfinite when evaluated, or excluded after observation; or a NOT_EVALUATED placeholder lacks the exact matching upstream failure, replaces an available state, or omits any descendant slot. A detected nonfinite is never emitted as a JSON number: retain finite=false plus its gate ID, role, component index, dtype, and value_class string NaN, +Infinity, or -Infinity, then select INVALID_RUN.",
+    "An evaluated direct reference invokes a native evaluator or fails its 80/120 stability prerequisite, or any evaluated telescope is missing or exceeds 5e-18 closure.",
+    "A high-precision metric or threshold is not retained as a canonical decimal string, a gate or winning maximum is selected through binary float, default-dps mpmath reparsing, rounded aggregate reconstruction, or lexicographic ordering, or an aggregate does not reproduce the exact winning retained string.",
+    "A process-local Python id(...) is used as cross-process evidence, a consumed byte changes during evaluation, or the authoritative result is emitted from a dirty consumed source/input path.",
+    "Any historical result is mutated or any local/global/physics/TOE null boundary is weakened."
+  ],
+  "runtime_contract": {
+    "python_implementation": "CPython",
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.2",
+    "scipy_version": "1.18.0",
+    "sympy_version": "1.14.0",
+    "mpmath_version": "1.3.0",
+    "longdouble_itemsize_bytes": 16,
+    "clongdouble_itemsize_bytes": 32,
+    "longdouble_mantissa_bits_excluding_implicit": 63,
+    "longdouble_epsilon": "1.084202172485504434e-19",
+    "required_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "required_command_environment": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1",
+    "policy": "Any runtime, long-double representation, or required thread-environment drift is INVALID_RUN. Retain observable NumPy/SciPy BLAS and LAPACK build configuration."
+  },
+  "required_outputs": {
+    "result_path": "cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_RESULT.json",
+    "result_schema": "ice-phase55-p53-root-fixed-launch-schedule-transfer/v1",
+    "stdout_prefix": "RESULT_JSON=",
+    "result_payload_self_digest_field": "result_payload_sha256_without_self",
+    "exact_check_count": 8,
+    "numerical_check_count": 8,
+    "strict_unique_finite_JSON": true,
+    "preenumerate_and_retain_all_records": true,
+    "historical_Phase51_classification_after": null,
+    "historical_Phase53_classification_after": null,
+    "historical_Phase53_classification_preserved_as": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+    "continuation_reclassification": null,
+    "qualified_Phase56_state_RHS_candidate": {
+      "if_classification": "P55_EL_STD_TRAJECTORY_SCHEDULE_TRANSFER_QUALIFIED_ON_THREE_P53_ROOTS_WITH_P50_SADDLE_PINNED_LAUNCHES",
+      "then_exact_result_value": "EL_std_state_RHS_schedule_only",
+      "else_exact_result_value": null
+    },
+    "Phase56_candidate_boundary": "The conditional output qualifies only the EL_std state-RHS schedule. Phase 56 must separately freeze saddle, launch-Hessian, action, tangent/Hessian, and any full-evaluator backend choices.",
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "root_exhaustion_proved": false,
+    "all_saddles_and_upward_components_complete": false,
+    "physical_original_cycle_derived": false,
+    "common_determinant_line_constructed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "promoted_output": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "physics_claim": null,
+    "TOE_claim": null
+  },
+  "run_semantics": {
+    "pre_authoritative_mode": "A future --validate-only mode may parse and flatten pins, verify committed blobs and self-digests, bind evaluator plans, reconstruct three zero-solve launches, preenumerate all records, and install prohibited-call counters. It may not call solve_ivp, evaluate a scientific sample, write the canonical result, or select a scientific label.",
+    "authoritative_mode": "Only a committed runner descending from the bound manifest may process all six declared ODE attempt slots and all predeclared sample/audit slots. It calls solve_ivp exactly twice for each successfully reconstructed launch and emits causally linked upstream placeholders otherwise. Every scientific nonpass is retained and classification occurs only after all slots, audits, and post-evaluation rehashes complete.",
+    "valid_completed_scientific_exit_code": 0,
+    "invalid_run_exit_code": 2,
+    "scientific_nonpass_does_not_change_exit_code": true,
+    "single_result_line": true,
+    "historical_results_mutated": false,
+    "boundary": "Even the qualified label establishes only that one coherent EL_std state-RHS schedule passed a bounded three-root, thirty-state transfer validator under one pinned same-platform finite-arithmetic contract. It does not qualify an EL_std saddle, launch Hessian, action, tangent/Hessian, or complete evaluator backend; Phase 56 must freeze those choices separately. It does not replay Phase 53, prove another root, establish a local intersection, exhaust roots, determine a global cycle, reach a cutoff or continuum limit, make a physics claim, or reach a TOE."
+  }
+}
