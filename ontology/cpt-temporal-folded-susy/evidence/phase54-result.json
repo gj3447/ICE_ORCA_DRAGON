@@ -1,0 +1,239 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:P54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_20260823",
+  "phase": "P54",
+  "observed_at_utc": "2026-08-23T15:07:52Z",
+  "command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 proxmox-scratch run p54b --timeout 7200 -- ./ice run phase54_p51_global_noncse_control_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/phase54_p51_global_noncse_control_audit.py",
+    "sha256": "07a6c398370b701a43dfcd35e69ad1440b9978cb09bf31be1609b0d44f163879",
+    "introduced_in_commit": "af8600b31dfbaa46a6da4366a5486e5a2e0d641a"
+  },
+  "exact_checks": 7,
+  "checks": [
+    {
+      "id": "P54.inputs.byte_pins_commits_blobs_and_self_digests",
+      "statement": "all direct and transitive byte, commit, blob, runtime, and self-digest pins matched",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.slots.exact_Phase53_six_launch_state_bytes",
+      "statement": "the exact ordered Phase53 six launch-state objects and decimal pairs were consumed",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.contract.core_2x2_evaluator_bindings_and_controlled_differences",
+      "statement": "the core 2x2 cells preserve their declared joint/element DAG and arithmetic differences",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.contract.two_contextual_evaluator_bindings_and_six_stage_order",
+      "statement": "both contextual evaluators and the six-stage order are exactly bound",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.reference.direct_global_expression_independence",
+      "statement": "the direct global evalf and symbolic-CSE references are independent of native outputs",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.conventions.ordinary_transpose_single_outer_conjugation",
+      "statement": "ordinary transpose and exactly one outer minus-conjugation are bound",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.guard.static_classification_and_global_nulls",
+      "statement": "the run is static and every continuation/global/physics/TOE output remains null",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 8,
+  "numerical": [
+    {
+      "id": "P54.reference.80_120_and_symbolic_CSE_plain_stability",
+      "statement": "direct 80/120 and symbolic-CSE/unreduced references stay below 1e-40",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.matrix.GN_std_vs_direct_120",
+      "statement": "diagnostic NONPASS transported as FAIL: GN_std active stages exceed the direct-global 120-digit gate",
+      "status": "FAIL"
+    },
+    {
+      "id": "P54.matrix.GN_long_vs_direct_120",
+      "statement": "diagnostic NONPASS transported as FAIL: GN_long active stages exceed the direct-global 120-digit gate",
+      "status": "FAIL"
+    },
+    {
+      "id": "P54.matrix.EL_std_vs_direct_120",
+      "statement": "EL_std active stages stay below the direct-global 120-digit gate",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.matrix.EL_long_vs_direct_120",
+      "statement": "EL_long active stages stay below the direct-global 120-digit gate",
+      "status": "PASS"
+    },
+    {
+      "id": "P54.context.Phase51_global_CSE_vs_direct_120",
+      "statement": "diagnostic NONPASS transported as FAIL: the Phase51 global-CSE context exceeds the direct-global 120-digit gate",
+      "status": "FAIL"
+    },
+    {
+      "id": "P54.context.Phase52_long_namespace_joint_CSE_vs_direct_120",
+      "statement": "diagnostic NONPASS transported as FAIL: the Phase52 long-namespace joint-CSE context exceeds the direct-global 120-digit gate",
+      "status": "FAIL"
+    },
+    {
+      "id": "P54.arithmetic.core_contrasts_and_six_stage_telescopes",
+      "statement": "all controlled contrasts were retained and all five-chain telescopes closed below 5e-18",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 7,
+    "numerical_checks": 8,
+    "calculation": "static six-state attribution of global non-CSE versus element-local schedule and standard versus long arithmetic",
+    "run_status": "VALID_RUN",
+    "classification": "P51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_CONFIRMED_ELEMENT_LOCAL_SCHEDULE_ONLY_SUFFICIENT_ON_PHASE53_SIX_SLOTS",
+    "status_transport": {
+      "raw_result_statuses": {
+        "PASS": 4,
+        "NONPASS": 4
+      },
+      "snapshot_statuses": {
+        "PASS": 4,
+        "FAIL": 4
+      },
+      "mapping": "The research-run-evidence/v1 schema has no NONPASS enum. Each raw diagnostic NONPASS is transported as FAIL without making the VALID_RUN invalid or changing its frozen classification."
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_INPUTS.json",
+      "input_manifest_sha256": "4a8f6282a09659e24dc938fa4ae1383c8b5c61f4e2f231b21fcde61637b1fc97",
+      "input_manifest_commit": "c020a13a0c2c7963920ca17365f27fe6544fa0d9",
+      "raw_result_path": "cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_RESULT.json",
+      "raw_result_outer_sha256": "daabdcf2a8f74ead3908cfa87a3a8b71befd8db57f61c4c0c47153ea948bfd32",
+      "raw_result_payload_sha256_without_self": "7b0b98563b254e38626dc9c2cc4cf9f833ed0fa3d11c057675b6af9c94b94fa5",
+      "raw_result_introduced_in_commit": "d78cf107a9cdca8caf0c5a2933e358e60d3c1a9c",
+      "raw_result_git_blob_oid": "1f3162f4f9f5a2e9f15728751ec807806289a5a7",
+      "raw_result_size_bytes": 5652559,
+      "superseded_result_commit": "0ed3d7f5c11627f7cee79d23922d9fc56e8496c1",
+      "supersession_reason": "The first result's seven aggregate maximum strings were reparsed at default mpmath precision. The corrected runner uses exact Decimal comparisons and returns each winning retained string; the corrected result differs in exactly the expected thirteen provenance, summary, and self-digest leaves, with no scientific-record drift.",
+      "validation": "Strict finite JSON and self-digest checks, exact summary-to-ledger maxima, 7/7 exact checks, exact predeclared record counts, selector/classification consistency, 25/25 post-evaluation rehashes, and independent diff audit establish the corrected result."
+    },
+    "platform": {
+      "python": "3.13.5",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "longdouble_itemsize_bytes": 16,
+      "clongdouble_itemsize_bytes": 32,
+      "longdouble_mantissa_bits_excluding_implicit": 63,
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "single_thread_environment": true
+    },
+    "record_counts": {
+      "slots": 6,
+      "core_evaluators": 4,
+      "contextual_evaluators": 2,
+      "stages": 6,
+      "native_stage_vectors": 216,
+      "direct_reference_stage_vectors": 72,
+      "symbolic_CSE_reference_stage_vectors": 72,
+      "reference_comparisons": 108,
+      "native_to_direct_120_comparisons": 216,
+      "controlled_contrasts": 144,
+      "selector_records": 48,
+      "telescope_records": 180,
+      "telescope_summaries": 30,
+      "raw_call_traces": 36,
+      "convention_proofs": 36
+    },
+    "reference_and_telescope_controls": {
+      "maximum_reference_symmetric_relative": "3.8888258381866368164329540703471185093613273262753e-73",
+      "reference_threshold": "1e-40",
+      "maximum_telescope_relative_closure": 0.0,
+      "telescope_threshold": "5e-18",
+      "all_reference_and_telescope_gates_passed": true
+    },
+    "core_selector_matrix": {
+      "GN_std": false,
+      "GN_long": false,
+      "EL_std": true,
+      "EL_long": true
+    },
+    "maximum_active_symmetric_relative": {
+      "GN_std": "0.0000000067626817995313780292914117169251232490579660640487",
+      "GN_long": "0.0000000075983301847305741879882302542707909100235106454879",
+      "EL_std": "0.00000000022425697272607489143457991687527080600161942778023",
+      "EL_long": "0.00000000015673027153465875826880468566090421651939816135183",
+      "threshold": "5e-10"
+    },
+    "stage_localization": {
+      "GN_std_first_nonpassing_stage": "m5_raw_gradient",
+      "GN_long_first_nonpassing_stage": "m5_raw_gradient",
+      "EL_std_all_six_stages_pass": true,
+      "EL_long_all_six_stages_pass": true,
+      "interpretation": "Both precision levels pass under the element-local schedule and both fail under the global non-CSE schedule. Long precision alone is not sufficient on the six frozen states; the audit does not identify a unique elementary operation or prove correct rounding."
+    },
+    "execution_topology": {
+      "root_solves": 0,
+      "saddle_solves": 0,
+      "ODE_integrations": 0,
+      "trajectory_fractions": 0,
+      "continuation_or_classification_replays": 0,
+      "static_factor_reconstruction_only": true
+    },
+    "scope": {
+      "calculated_facts": [
+        "the same six Phase53 launch states evaluated by a controlled four-cell schedule/precision matrix and two contextual controls",
+        "six common algebra stages compared with independent direct-global 80/120-decimal and symbolic-CSE references",
+        "exact source, DAG, dtype, transpose, outer-conjugation, record-count, and null-boundary controls"
+      ],
+      "interpretation": "Element-local schedule alone is sufficient for the frozen selector gates on these six static states.",
+      "not_computed": [
+        "the fifteen Phase53 trajectory-fraction states, which were not serialized and require a separately frozen ODE regeneration",
+        "a new root, saddle, trajectory qualification, continuation replay, reflection, endpoint, or topology result",
+        "a unique primitive floating-point defect, portable correct-rounding theorem, global intersection, determinant line, physical cycle, cutoff/continuum limit, physics claim, or TOE"
+      ],
+      "phase51_reclassified": false,
+      "phase53_reclassified": false,
+      "calculation_workbench_only": true
+    },
+    "promoted_outputs": {
+      "straight_arm_intersections_searched": false,
+      "cap_reintersections_searched": false,
+      "root_exhaustion_proved": false,
+      "all_saddles_and_upward_components_complete": false,
+      "physical_original_cycle_derived": false,
+      "common_determinant_line_constructed": false,
+      "bounded_chain_signed_sum": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "cutoff_limit": null,
+      "continuum_limit": null,
+      "historical_Phase51_classification_after": null,
+      "historical_Phase53_classification_after": null,
+      "continuation_reclassification": null,
+      "promoted_output": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "physics_claim": null,
+      "TOE_claim": null
+    },
+    "claim_status": {
+      "global_nonCSE_accuracy_nonpass_on_six_static_states": "CONFIRMED",
+      "element_local_schedule_only_sufficiency_on_six_static_states": "SUPPORTED",
+      "long_precision_only_sufficiency": "NOT_SUPPORTED",
+      "trajectory_schedule_transfer": "NOT_COMPUTED",
+      "Phase53_historical_classification": "UNCHANGED_INCONCLUSIVE",
+      "global_promotion": "PROHIBITED",
+      "gate1_status": "OPEN_PARTIAL_PROGRESS"
+    },
+    "next_calculation": "Freeze Phase55 as a bounded trajectory-validator qualification. Read the three pinned Phase53 phi_plus/fine_forward roots and pinned Phase50 saddles at lambda 0, 0.5, and 1 without solving them again. Phase53 did not serialize its intermediate states or authoritative recomputed saddle/factor/launch objects, so reconstruct explicitly labelled P50-saddle-pinned Phase55 launches with the Phase53 EL_long Hessian and require regenerated production endpoints and scaled residuals to match saved Phase53 targets within 2e-7. Run exactly three production EL_long and three coherent candidate EL_std state ODEs with the frozen Phase51 DOP853 settings; compare five fixed fractions per trajectory to direct-global 80/120-decimal references and the same six-stage gates. Do not run root or saddle solves, continuation, reflection, the 68-root replay, or any historical/global/physics/TOE reclassification."
+  }
+}

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-23T12:47:02Z",
+  "updated_at_utc": "2026-08-23T15:10:33Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -384,6 +384,15 @@
         "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
         "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION"
       ]
+    },
+    {
+      "question": "What did Phase 54 resolve about the Phase-51 global non-CSE discrepancy?",
+      "answer": "On the exact six Phase-53 launch states, both global non-CSE schedules miss the frozen 5e-10 selector while both element-local schedules pass all 12 selector records. This supports element-local schedule-only sufficiency for that static six-state matrix, not a unique primitive defect or a trajectory theorem. Phase 51 and Phase 53 remain historically unchanged, and every global, physics, and TOE output remains null.",
+      "claim_ids": [
+        "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+        "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+        "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION"
+      ]
     }
   ],
   "reading_paths": [
@@ -735,7 +744,7 @@
     {
       "id": "reading-path:no-privileged-recursive-self-application",
       "title": "Apply every proposed bridge and selection rule back to itself",
-      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–53 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, evaluator, and replay record. Phase 49 retains the Phase-48 gradient-only failures while its full-flow path passes; Phase 52 retains the joint long-namespace negative control; Phase 53 retains the sole pinned Phase-51 global non-CSE backend nonpass even though the repaired evaluator passes the independent six-slot reference. None of these pinned-platform implementation results is promoted to a portable, global, physical, or TOE conclusion.",
+      "summary": "Use the active no-privileged-exception policy to freeze conditions, seek counterexamples, ablate and reverse a bridge, recursively test the rule that selected it, demand invariants and observables, and leave genuine underdetermination open instead of privileging the preferred branch. Phases 42–54 preserve every solver, step-pair, local-identity, high-precision-reference, finite-difference, arithmetic, integrated-tangent, reconstructed state-flow, source-gradient-budget, ablation, evaluator, replay, and static schedule-attribution record. Phase 49 retains the Phase-48 gradient-only failures while its full-flow path passes; Phase 52 retains the joint long-namespace negative control; Phase 53 retains the sole pinned Phase-51 global non-CSE backend nonpass; and Phase 54 retains both global-schedule failures while both element-local schedules pass the six-state matrix. None of these pinned-platform implementation results is promoted to a portable, trajectory-wide, global, physical, or TOE conclusion.",
       "nodes": [
         "artifact:ice-central-philosophy",
         "concept:invariant-difference-amplitude-and-record",
@@ -781,8 +790,12 @@
         "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
         "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
         "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+        "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+        "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+        "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+        "open:p55-p53-trajectory-schedule-transfer-audit",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -829,7 +842,7 @@
     {
       "id": "reading-path:projected-lapse-data-to-joint-cycle-identifiability",
       "title": "From projected lapse data to the still-unidentified original joint cycle",
-      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–53. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, Phase-51's evaluator-gated nonlinear Gamma--K attempt, Phase-52's hidden-binary64 diagnosis plus six-slot element-local repair, and Phase-53's complete but still evaluator-inconclusive replay. Stop before diagnosing the pinned Phase-51 global non-CSE numerical backend, searching straight arms, claiming portable backend agreement, enumerating nonlinear upward components, or promoting any local ledger to a canonical determinant line, complete original cycle, Stokes chamber, global vector, physical claim, or TOE.",
+      "summary": "Follow the recorded projected crossing and local Gauss--Manin law through Phases 38–54. Retain the historical local candidates and failures, independent tangent and state-map references, the Phase-48 negative control, Phase-49's pinned-platform complete-flow repair, Phase-50's sampled stabilized m=4-to-m=5 saddle and local upward-plane transport, Phase-51's evaluator-gated nonlinear Gamma--K attempt, Phase-52's hidden-binary64 diagnosis plus six-slot element-local repair, Phase-53's complete but still evaluator-inconclusive replay, and Phase-54's static attribution of the remaining control failure to the tested global schedule rather than precision alone. Stop before assuming trajectory transfer, searching straight arms, claiming portable backend agreement, enumerating nonlinear upward components, or promoting any local ledger to a canonical determinant line, complete original cycle, Stokes chamber, global vector, physical claim, or TOE.",
       "nodes": [
         "claim:P32_SPECIFIED_BELOW_ORIGIN_FULL_LINE_HAS_RECORDED_PROJECTED_BASE_CROSSING",
         "concept:recorded-local-intersection-versus-global-pl-coefficient",
@@ -894,8 +907,12 @@
         "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
         "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
         "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+        "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+        "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+        "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+        "open:p55-p53-trajectory-schedule-transfer-audit",
         "open:p46-source-gradient-flow-error-budget",
         "open:p48-gradient-hybrid-error-transport-control",
         "open:p49-formal-endpoint-transport-and-portable-flow-adapter",
@@ -926,8 +943,8 @@
     },
     {
       "id": "reading-path:p50-m5-gamma-k-to-backend-consistency",
-      "title": "From the sampled m=5 saddle bridge through repaired replay to the remaining backend diagnostic",
-      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's historical 6/6 exact and 9/10 numerical ledger. Phase 52 reproduces hidden binary64 temporaries and supports an element-local clongdouble repair at six static states while retaining a joint-namespace negative control. Phase 53 completes the full frozen replay: 8/8 exact and 10/11 numerical gates pass, including the independent six-slot full-evaluator reference, but the saved pinned Phase-51 global non-CSE backend comparison remains inconclusive. Diagnose that backend before any straight-arm search; do not infer no root, resolve the broader Phase-50 problem, or promote the local sampled paths to a global cycle.",
+      "title": "From the sampled m=5 saddle bridge through static schedule attribution",
+      "summary": "Start with Phase 50's declared stabilized saddle and local-plane bridge, retain its still-open request for an actual nonlinear m=5 Gamma--K continuation, then read Phase 51's historical 6/6 exact and 9/10 numerical ledger. Phase 52 reproduces hidden binary64 temporaries and supports an element-local clongdouble repair at six static states while retaining a joint-namespace negative control. Phase 53 completes the full frozen replay but remains historically inconclusive at the saved global non-CSE comparison. Phase 54 then shows that both global schedules fail and both element-local schedules pass the static six-state selector, supporting schedule-only sufficiency there. Qualify transfer along three explicitly reconstructed P50-saddle-pinned Phase-55 paths before any full replay or straight-arm search; do not infer no root, resolve the broader Phase-50 problem, or promote the local sampled paths to a global cycle.",
       "nodes": [
         "claim:P50_FIVE_FROZEN_M4_SADDLES_CONTINUE_TO_M5_ON_DECLARED_STABILIZED_PATHS",
         "claim:P50_LOCAL_UPWARD_NINE_PLANE_TRANSPORT_HAS_CONSISTENT_ORIENTED_ENDPOINT",
@@ -942,8 +959,12 @@
         "claim:P53_REPAIRED_REPLAY_PASSES_INDEPENDENT_REFERENCE_AND_NONBACKEND_CONTROLS",
         "claim:P53_FULL_REPLAY_REMAINS_INCONCLUSIVE_AT_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND",
         "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+        "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+        "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+        "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
         "open:p53-full-repaired-phase51-continuation-rerun",
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
+        "open:p55-p53-trajectory-schedule-transfer-audit",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
@@ -9116,10 +9137,10 @@
     {
       "id": "open:p53-full-repaired-phase51-continuation-rerun",
       "type": "open_problem",
-      "title": "Resolve the sole failed evaluator comparison after the full Phase-51 replay",
-      "summary": "Phase 53 completed the full frozen Phase-51 semantic replay without retuning: all eight exact checks and ten of eleven numerical checks pass, including roots, nonlinear K flows, fine/coarse/reverse paths, reflection, full-J, tangent, endpoint mutations, orientations, all 68 action/first-cap ledgers, exact topology, no fallback, and the independent six-slot full-evaluator reference. This open problem is now narrowed to the sole inherited comparison between the repaired production evaluator and the saved pinned Phase-51 global non-CSE numerical backend. The broader root/component/end census and Phase-50/Gate-1 targets remain open.",
-      "question": "Why does the saved pinned Phase-51 global non-CSE numerical backend exceed the 5e-10 RHS gate against the independently referenced repaired evaluator at the six paired states and fifteen trajectory fractions?",
-      "state": "OPEN_NARROWED_TO_SOLE_PINNED_PHASE51_GLOBAL_NONCSE_BACKEND_COMPARISON"
+      "title": "Qualify element-local schedule transfer before any second full replay",
+      "summary": "Phase 54 resolved the six-launch-state part of the inherited evaluator comparison narrowly: both global schedules miss the selector and both element-local schedules pass. The fifteen Phase-53 trajectory-fraction states and authoritative recomputed launch objects were not serialized, so the next bounded question requires three explicitly reconstructed P50-saddle-pinned Phase-55 paths with production EL_long and coherent EL_std, not solving roots or saddles or replaying the continuation. The broader root/component/end census and Phase-50/Gate-1 targets remain open.",
+      "question": "Does the Phase-54 element-local schedule attribution persist at five fixed fractions along each of the three P50-saddle-pinned Phase-55 reconstructed paths, and does coherent EL_std remain within frozen same-point, endpoint, and residual gates against production EL_long?",
+      "state": "OPEN_NARROWED_TO_TRAJECTORY_VALIDATOR_QUALIFICATION"
     },
     {
       "id": "artifact:p52-input-manifest",
@@ -9264,10 +9285,10 @@
     {
       "id": "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
       "type": "open_problem",
-      "title": "Attribute the pinned Phase-51 global non-CSE gradient/RHS evaluator discrepancy at six center-launch slots",
-      "summary": "Phase 54 is restricted to the six actual center-launch slots and three unchanged gradient/RHS evaluators: the saved pinned Phase-51 global non-CSE numerical evaluator, the repaired element-local production evaluator, and the independently rebuilt 80/120-decimal global reference. Trace literal constants, operation order, intermediate dtypes, output coercions, and the L.T/outer-conjugation RHS contraction without changing states, formulas, historical bytes, or the 5e-10 gate; run no ODE, root solve, trajectory evaluation, transport, or reintegration. Trajectory transport or reintegration, if warranted by the Phase-54 result, is a separate conditional Phase-55 open question and is not part of Phase 54.",
-      "question": "Which bounded gradient-evaluation, dtype/coercion, or RHS-contraction operation in the saved pinned Phase-51 global non-CSE numerical evaluator accounts for the six-center-launch-slot discrepancy against the repaired production and independent 80/120-decimal reference evaluators?",
-      "state": "OPEN"
+      "title": "Resolved narrowly: attribute the six-state global non-CSE discrepancy",
+      "summary": "Phase 54 compared the exact six center-launch states through a core global-versus-element-local by standard-versus-long matrix, two contextual joint-CSE controls, six common stages, and independent direct-global 80/120-decimal references. Both global schedules fail and both element-local schedules pass all selector records, so the discrepancy is attributed to the tested evaluation schedule rather than precision alone on this finite matrix. The audit does not identify a unique primitive operation, establish trajectory transfer, or reclassify Phase 51 or Phase 53.",
+      "question": "Which tested factor accounts for the six-center-launch-slot discrepancy: global versus element-local schedule, or standard versus long arithmetic?",
+      "state": "RESOLVED_NARROWLY_TO_ELEMENT_LOCAL_SCHEDULE_ON_SIX_STATIC_SLOTS"
     },
     {
       "id": "artifact:p53-input-manifest",
@@ -9311,6 +9332,138 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/phase53-result.json",
       "sha256": "466beaa9ac12bbeea5635a2d70fa676c14dc500010028091d22d128d04bbfe76"
+    },
+    {
+      "id": "phase:p54",
+      "type": "phase",
+      "title": "Phase 54 — six-state global non-CSE schedule audit",
+      "summary": "A static core 2 x 2 evaluator matrix separates global versus element-local schedule from standard versus long arithmetic on the exact six Phase-53 launch states. The corrected authoritative run is VALID_RUN with seven exact passes, four numerical passes, and four retained diagnostic NONPASS results. Both global schedules fail the frozen selector while both element-local schedules pass all 12 selector records, supporting element-local schedule-only sufficiency on this finite matrix. No root, ODE, trajectory, continuation, global, physics, or TOE output is produced.",
+      "state": "ACTIVE_VALID_STATIC_ATTRIBUTION"
+    },
+    {
+      "id": "scope:p54-six-state-global-noncse-schedule-audit",
+      "type": "scope",
+      "title": "P54 six-state global non-CSE schedule audit",
+      "summary": "Exactly two source labels by lambda 0, 0.5, and 1; four controlled core evaluators, two contextual joint-CSE controls, six common algebra stages, direct-global 80/120-decimal and symbolic-CSE references, exact Decimal gates, fixed thresholds, static topology, immutable historical bytes, and fail-closed local/global boundaries.",
+      "state": "ACTIVE",
+      "includes": [
+        "six exact Phase-53 center-launch states and their retained decimal-pair bytes",
+        "global non-CSE and element-local schedules under standard and long arithmetic",
+        "six-stage native/reference comparisons, controlled contrasts, telescopes, dtype traces, and convention proofs",
+        "unchanged 1e-40 reference, 5e-10 native, and 5e-18 telescope thresholds"
+      ],
+      "excludes": [
+        "root or saddle solves, ODE integrations, trajectory fractions, continuation, reflection, or semantic replay",
+        "a unique primitive floating-point defect, correct-rounding theorem, portability result, or trajectory-transfer theorem",
+        "straight arms, cap reintersections, root/component/end exhaustion, determinant line, physical original cycle, or global signed intersection",
+        "Phase-51 or Phase-53 reclassification, cutoff or continuum limit, physics claim, or TOE"
+      ]
+    },
+    {
+      "id": "evidence:p54-p51-global-noncse-control-audit",
+      "type": "evidence",
+      "title": "Phase 54 global non-CSE control audit ledger",
+      "summary": "Seven exact checks pass. Four numerical aggregates pass and four contextual diagnostic aggregates retain NONPASS: reference stability, both element-local schedules, and all contrast/telescope closures pass; both global non-CSE schedules and both joint-CSE contexts do not. The corrected ledger preserves 216 native comparisons, 108 reference comparisons, 144 controlled contrasts, 48 selectors, 180 telescopes, 36 raw-call traces, 36 convention proofs, exact static topology, and all global, physics, and TOE nulls.",
+      "state": "VERIFIED_VALID_RUN_WITH_FOUR_DIAGNOSTIC_NONPASS_AGGREGATES",
+      "observed_status": "7_EXACT_PASS_4_NUMERICAL_PASS_4_NUMERICAL_DIAGNOSTIC_NONPASS",
+      "check_ids": [
+        "P54.inputs.byte_pins_commits_blobs_and_self_digests",
+        "P54.slots.exact_Phase53_six_launch_state_bytes",
+        "P54.contract.core_2x2_evaluator_bindings_and_controlled_differences",
+        "P54.contract.two_contextual_evaluator_bindings_and_six_stage_order",
+        "P54.reference.direct_global_expression_independence",
+        "P54.conventions.ordinary_transpose_single_outer_conjugation",
+        "P54.guard.static_classification_and_global_nulls",
+        "P54.reference.80_120_and_symbolic_CSE_plain_stability",
+        "P54.matrix.GN_std_vs_direct_120",
+        "P54.matrix.GN_long_vs_direct_120",
+        "P54.matrix.EL_std_vs_direct_120",
+        "P54.matrix.EL_long_vs_direct_120",
+        "P54.context.Phase51_global_CSE_vs_direct_120",
+        "P54.context.Phase52_long_namespace_joint_CSE_vs_direct_120",
+        "P54.arithmetic.core_contrasts_and_six_stage_telescopes"
+      ]
+    },
+    {
+      "id": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "type": "claim",
+      "title": "The Phase-51 global non-CSE gradient/RHS nonpass is confirmed on six static slots",
+      "summary": "Against the corrected direct-global 120-decimal reference, GN_std and GN_long have maximum active relative errors 6.762681799531378e-9 and 7.598330184730574e-9, above 5e-10. Each passes only four of twelve selector records; both first fail at the active m5 raw-gradient stage. Independent reference stability, exact bindings, conventions, and record counts pass.",
+      "state": "SUPPORTED_ON_FROZEN_SIX_STATIC_SLOTS",
+      "claim_id": "P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "statement": "On the exact six Phase-53 center-launch states, both tested global non-CSE gradient schedules exceed the frozen 5e-10 active gradient/RHS selector against the independent direct-global decimal reference.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "type": "claim",
+      "title": "Element-local schedule alone is sufficient on the six static slots",
+      "summary": "EL_std and EL_long each pass all 12 selector records. Their maximum active relative errors are 2.242569727260749e-10 and 1.567302715346588e-10, below 5e-10, while both precision variants of the global schedule fail. Thus changing schedule is sufficient in this matrix and changing global arithmetic precision alone is not; uniqueness and trajectory transfer are untested.",
+      "state": "SUPPORTED_ON_FROZEN_SIX_STATIC_SLOTS",
+      "claim_id": "P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "statement": "On the pinned platform and exact six-state Phase-54 matrix, the fixed element-local evaluation schedule satisfies every frozen selector under both standard and long arithmetic, whereas both global schedules do not.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "type": "claim",
+      "title": "The static arithmetic attribution does not reclassify Phase 51 or Phase 53 or license global promotion",
+      "summary": "Phase 54 executes zero root solves, saddle solves, ODE integrations, trajectory fractions, or continuation replays. It leaves historical Phase-51 and Phase-53 classifications unchanged and every straight-arm, cap, exhaustion, determinant, original-cycle, global-vector, cutoff, continuum, physics, and TOE field null or false. Gate 1 remains OPEN_PARTIAL_PROGRESS.",
+      "state": "SUPPORTED_AS_STATIC_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "statement": "A valid six-state static evaluator attribution cannot reclassify either historical continuation result or establish any trajectory, global-cycle, physics, or TOE conclusion.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "open:p55-p53-trajectory-schedule-transfer-audit",
+      "type": "open_problem",
+      "title": "Qualify element-local schedule transfer along three P50-saddle-pinned Phase-55 paths",
+      "summary": "The fifteen Phase-53 trajectory-fraction states and its authoritative recomputed saddle/factor/launch objects were not serialized. Freeze a separate validator that reads the three pinned phi-plus/fine-forward roots and pinned Phase-50 saddles at lambda 0, 0.5, and 1 without solving them again. Reconstruct explicitly labelled P50-saddle-pinned Phase-55 launches with the Phase-53 EL_long Hessian, and require regenerated production endpoints and scaled residuals to match saved Phase-53 targets within 2e-7 before interpreting transfer. Run exactly three production EL_long and three coherent candidate EL_std state ODEs under the Phase-51 DOP853 settings, and compare five fixed fractions per trajectory with the same six-stage/direct-decimal, same-point, endpoint, and residual gates. Run no root or saddle solve, continuation, reflection, 68-root topology replay, or historical/global/physics/TOE reclassification.",
+      "question": "Does the Phase-54 schedule attribution persist across all fifteen P50-saddle-pinned Phase-55 trajectory-fraction states, and is coherent EL_std sufficiently close to EL_long to qualify a separately frozen full replay?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:p54-input-manifest",
+      "type": "artifact",
+      "title": "Phase 54 frozen static audit input manifest",
+      "summary": "Frozen six-state matrix, evaluator bindings, exact source/DAG and dtype controls, direct and symbolic decimal references, fixed thresholds and counts, static-only topology, historical nonrewrite, and fail-closed classification table.",
+      "state": "TRACKED",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_INPUTS.json",
+      "sha256": "4a8f6282a09659e24dc938fa4ae1383c8b5c61f4e2f231b21fcde61637b1fc97",
+      "introduced_in_commit": "c020a13a0c2c7963920ca17365f27fe6544fa0d9"
+    },
+    {
+      "id": "artifact:p54-script",
+      "type": "artifact",
+      "title": "Phase 54 static global non-CSE control audit executable",
+      "summary": "Corrected Python runner that validates committed provenance, evaluates the controlled schedule/arithmetic matrix and references, compares retained decimals exactly with Decimal, verifies all ledgers and null guards, and emits a canonical self-digested result.",
+      "state": "TRACKED",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase54_p51_global_noncse_control_audit.py",
+      "sha256": "07a6c398370b701a43dfcd35e69ad1440b9978cb09bf31be1609b0d44f163879",
+      "introduced_in_commit": "af8600b31dfbaa46a6da4366a5486e5a2e0d641a"
+    },
+    {
+      "id": "artifact:p54-raw-result",
+      "type": "artifact",
+      "title": "Phase 54 corrected full raw result",
+      "summary": "The complete 5,652,559-byte corrected VALID_RUN result with seven exact passes, four numerical passes, four retained diagnostic NONPASS aggregates, exact 216/108/144/48/180 core ledger counts, static topology, all global nulls, schedule-only classification, and canonical payload self-digest 7b0b98563b254e38626dc9c2cc4cf9f833ed0fa3d11c057675b6af9c94b94fa5. It supersedes only seven rounded aggregate strings and provenance in the earlier result; no scientific record changed.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_RESULT.json",
+      "sha256": "daabdcf2a8f74ead3908cfa87a3a8b71befd8db57f61c4c0c47153ea948bfd32",
+      "introduced_in_commit": "d78cf107a9cdca8caf0c5a2933e358e60d3c1a9c"
+    },
+    {
+      "id": "artifact:p54-evidence-snapshot",
+      "type": "artifact",
+      "title": "Phase 54 evidence snapshot",
+      "summary": "Compact typed extract preserving all seven exact and eight numerical checks, explicit NONPASS-to-FAIL schema transport, corrected command and provenance, selector matrix and exact decimal maxima, record counts, static topology, historical nonrewrite, all global/physics/TOE nulls, and the bounded Phase-55 validator question. The corrected pinned raw result remains byte-full authority.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase54-result.json",
+      "sha256": "934e32b0f49a06b81d48c49e5816c33fecf05f2888c7c898d311da96652c35fe"
     }
   ],
   "edges": [
@@ -22455,6 +22608,245 @@
       "from": "artifact:p53-input-manifest",
       "relation": "DERIVED_FROM",
       "to": "artifact:p51-raw-result"
+    },
+    {
+      "id": "edge:2129",
+      "from": "phase:p54",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2130",
+      "from": "phase:p54",
+      "relation": "GOVERNED_BY",
+      "to": "policy:recursive-self-application-audit"
+    },
+    {
+      "id": "edge:2131",
+      "from": "phase:p54",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p53"
+    },
+    {
+      "id": "edge:2132",
+      "from": "scope:p54-six-state-global-noncse-schedule-audit",
+      "relation": "PART_OF",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2133",
+      "from": "artifact:p54-input-manifest",
+      "relation": "RECORDS",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2134",
+      "from": "artifact:p54-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2135",
+      "from": "artifact:p54-raw-result",
+      "relation": "RECORDS",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2136",
+      "from": "artifact:p54-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2137",
+      "from": "evidence:p54-p51-global-noncse-control-audit",
+      "relation": "PART_OF",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2138",
+      "from": "evidence:p54-p51-global-noncse-control-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p54-script"
+    },
+    {
+      "id": "edge:2139",
+      "from": "evidence:p54-p51-global-noncse-control-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p54-evidence-snapshot"
+    },
+    {
+      "id": "edge:2140",
+      "from": "evidence:p54-p51-global-noncse-control-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p54-raw-result"
+    },
+    {
+      "id": "edge:2141",
+      "from": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "relation": "PART_OF",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2142",
+      "from": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p54-six-state-global-noncse-schedule-audit"
+    },
+    {
+      "id": "edge:2143",
+      "from": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p54-p51-global-noncse-control-audit",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2144",
+      "from": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p54-pinned-phase51-global-noncse-backend-diagnostic"
+    },
+    {
+      "id": "edge:2145",
+      "from": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p53-full-repaired-phase51-continuation-rerun"
+    },
+    {
+      "id": "edge:2146",
+      "from": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "relation": "PART_OF",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2147",
+      "from": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p54-six-state-global-noncse-schedule-audit"
+    },
+    {
+      "id": "edge:2148",
+      "from": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p54-p51-global-noncse-control-audit",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2149",
+      "from": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "relation": "EXTENDS",
+      "to": "claim:P52_ELEMENT_LOCAL_CLONGDOUBLE_RHS_REPAIR_IS_SUPPORTED_ON_SIX_STATIC_SLOTS",
+      "note": "Phase 54 holds schedule and arithmetic dimensions apart and shows that the element-local schedule passes under both tested precision levels on the same six states."
+    },
+    {
+      "id": "edge:2150",
+      "from": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p54-pinned-phase51-global-noncse-backend-diagnostic"
+    },
+    {
+      "id": "edge:2151",
+      "from": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS",
+      "relation": "MOTIVATES",
+      "to": "open:p55-p53-trajectory-schedule-transfer-audit"
+    },
+    {
+      "id": "edge:2152",
+      "from": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "PART_OF",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2153",
+      "from": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p54-six-state-global-noncse-schedule-audit"
+    },
+    {
+      "id": "edge:2154",
+      "from": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p54-p51-global-noncse-control-audit",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2155",
+      "from": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "EXTENDS",
+      "to": "claim:P53_VALID_LOCAL_REPLAY_DOES_NOT_LICENSE_STRAIGHT_ARM_OR_GLOBAL_PROMOTION",
+      "note": "The static attribution narrows the implementation mechanism but adds no trajectory, continuation, or global-cycle evidence."
+    },
+    {
+      "id": "edge:2156",
+      "from": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections"
+    },
+    {
+      "id": "edge:2157",
+      "from": "claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION",
+      "relation": "MOTIVATES",
+      "to": "open:p55-p53-trajectory-schedule-transfer-audit"
+    },
+    {
+      "id": "edge:2158",
+      "from": "open:p55-p53-trajectory-schedule-transfer-audit",
+      "relation": "PART_OF",
+      "to": "phase:p54"
+    },
+    {
+      "id": "edge:2159",
+      "from": "open:p55-p53-trajectory-schedule-transfer-audit",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p54-pinned-phase51-global-noncse-backend-diagnostic"
+    },
+    {
+      "id": "edge:2160",
+      "from": "open:p55-p53-trajectory-schedule-transfer-audit",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p53-full-repaired-phase51-continuation-rerun"
+    },
+    {
+      "id": "edge:2161",
+      "from": "artifact:p54-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p51-raw-result"
+    },
+    {
+      "id": "edge:2162",
+      "from": "artifact:p54-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p52-raw-result"
+    },
+    {
+      "id": "edge:2163",
+      "from": "artifact:p54-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p53-raw-result"
+    },
+    {
+      "id": "edge:2164",
+      "from": "artifact:p54-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p54-input-manifest"
+    },
+    {
+      "id": "edge:2165",
+      "from": "artifact:p54-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p54-script"
+    },
+    {
+      "id": "edge:2166",
+      "from": "artifact:p54-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p54-raw-result"
+    },
+    {
+      "id": "edge:2167",
+      "from": "claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS"
     }
   ],
   "kg_bridges": [
