@@ -15,6 +15,7 @@ the six native/reference numerical records.
 from __future__ import annotations
 
 import argparse
+from decimal import Decimal, InvalidOperation
 import hashlib
 import importlib.util
 import inspect
@@ -124,9 +125,9 @@ NUMERICAL_CHECK_IDS = (
     "P54.arithmetic.core_contrasts_and_six_stage_telescopes",
 )
 
-REFERENCE_THRESHOLD = mp.mpf("1e-40")
-NATIVE_THRESHOLD = mp.mpf("5e-10")
-TELESCOPE_THRESHOLD = mp.mpf("5e-18")
+REFERENCE_THRESHOLD = Decimal("1e-40")
+NATIVE_THRESHOLD = Decimal("5e-10")
+TELESCOPE_THRESHOLD = Decimal("5e-18")
 EXPECTED_PROJECTION_SHA256 = (
     "8359762ba056bd7a300bceba8d4bf7e83e22149f5795c37f5b6ee0a4a212ad4e"
 )
@@ -227,6 +228,18 @@ def mp_text(value: Any, digits: int = 50) -> str:
     if not mp.isfinite(number):
         raise InvalidRun("cannot serialize a nonfinite mpmath real")
     return mp.nstr(number, n=digits, strip_zeros=False)
+
+
+def exact_decimal(value: Any, *, label: str) -> Decimal:
+    """Parse a retained decimal string without mpmath context rounding."""
+
+    try:
+        number = Decimal(str(value))
+    except InvalidOperation as error:
+        raise InvalidRun(f"invalid retained decimal at {label}: {value!r}") from error
+    if not number.is_finite():
+        raise InvalidRun(f"nonfinite retained decimal at {label}")
+    return number
 
 
 def json_ready(value: Any) -> Any:
@@ -1860,7 +1873,7 @@ def stage_active(stage: str, lambda_value: float) -> bool:
     return True
 
 
-def threshold_for_stage(_stage: str) -> mp.mpf:
+def threshold_for_stage(_stage: str) -> Decimal:
     # Both frozen gradient and completed-RHS limits are 5e-10.  The explicit
     # stage field retained below still distinguishes their semantic roles.
     return NATIVE_THRESHOLD
@@ -2182,7 +2195,10 @@ def evaluate_references(
                     metric = mp_comparison(
                         reference["CSE"][stage], reference["direct"][stage]
                     )
-                relative = mp.mpf(metric["symmetric_relative_decimal"])
+                relative = exact_decimal(
+                    metric["symmetric_relative_decimal"],
+                    label=f"reference symbolic-CSE comparison {slot.key}:{digits}:{stage}",
+                )
                 passed = relative <= REFERENCE_THRESHOLD
                 all_passed = all_passed and passed
                 comparison_ledger.append(
@@ -2202,7 +2218,10 @@ def evaluate_references(
                 metric = mp_comparison(
                     tiers[80]["direct"][stage], tiers[120]["direct"][stage]
                 )
-            relative = mp.mpf(metric["symmetric_relative_decimal"])
+            relative = exact_decimal(
+                metric["symmetric_relative_decimal"],
+                label=f"reference 80/120 comparison {slot.key}:{stage}",
+            )
             passed = relative <= REFERENCE_THRESHOLD
             all_passed = all_passed and passed
             comparison_ledger.append(
@@ -2292,7 +2311,10 @@ def native_reference_comparisons(
                     metric = setup.p52.native_to_mp_comparison_record(
                         stages[stage], reference[stage]
                     )
-                relative = mp.mpf(metric["symmetric_relative_decimal"])
+                relative = exact_decimal(
+                    metric["symmetric_relative_decimal"],
+                    label=f"native/direct comparison {slot.key}:{evaluator}:{stage}",
+                )
                 threshold = threshold_for_stage(stage)
                 passed = relative <= threshold
                 active = stage_active(stage, slot.lambda_value)
@@ -2377,7 +2399,10 @@ def telescope_records(
             telescope = setup.p52.telescope_record(
                 native[slot.key][left]["stages"], middle, reference
             )
-            maximum = mp.mpf(str(telescope["maximum_relative_closure"]))
+            maximum = exact_decimal(
+                telescope["maximum_relative_closure"],
+                label=f"telescope summary {slot.key}:{left}",
+            )
             summary_passed = maximum <= TELESCOPE_THRESHOLD
             all_passed = all_passed and summary_passed
             summaries.append(
@@ -2401,7 +2426,10 @@ def telescope_records(
                 closure = np.asarray(
                     stage_record["closure_vector"], dtype=np.clongdouble
                 )
-                relative = mp.mpf(str(stage_record["relative_closure"]))
+                relative = exact_decimal(
+                    stage_record["relative_closure"],
+                    label=f"telescope stage {slot.key}:{left}:{stage}",
+                )
                 passed = relative <= TELESCOPE_THRESHOLD
                 all_passed = all_passed and passed
                 stage_ledger.append(
@@ -2480,13 +2508,20 @@ def convention_numerical_proof(
 def max_metric_decimal(
     records: Iterable[Mapping[str, Any]], pointer: Sequence[str]
 ) -> str:
-    maximum = mp.mpf("0")
+    maximum: Decimal | None = None
+    maximum_text: str | None = None
     for record in records:
         value: Any = record
         for key in pointer:
             value = value[key]
-        maximum = max(maximum, mp.mpf(str(value)))
-    return mp_text(maximum)
+        value_text = str(value)
+        number = exact_decimal(value_text, label="/".join(pointer))
+        if maximum is None or number > maximum:
+            maximum = number
+            maximum_text = value_text
+    if maximum_text is None:
+        raise InvalidRun(f"cannot summarize an empty metric ledger at {'/'.join(pointer)}")
+    return maximum_text
 
 
 def selector_and_classification(
