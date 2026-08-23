@@ -1,0 +1,275 @@
+{
+  "schema": "ice-phase52-m5-cse-runtime-dtype-and-rhs-repair-inputs/v1",
+  "phase": 52,
+  "status": "FROZEN_AFTER_DISCLOSED_SIX_SLOT_FEASIBILITY_PILOTS_BEFORE_COMMITTED_RUNNER_OR_AUTHORITATIVE_OUTPUT",
+  "frozen_at_utc": "2026-08-23T08:09:37Z",
+  "repository_head_observed_at_freeze": "086cdd8aa51db965fae216fe6aecf8fda0e19432",
+  "manifest_introduction_commit": null,
+  "scope": {
+    "question": "At the six immutable Phase-51 source-by-lambda launch states, did the production joint-CSE callable actually retain clongdouble in every temporary, and can a predeclared element-local clongdouble gradient path agree with an 80/120-decimal same-expression reference under the unchanged 5e-10 RHS gate?",
+    "calculation_workbench_only": true,
+    "computed": [
+      "strict reproduction of the six Phase-51 center-launch CSE/non-CSE evaluator records",
+      "runtime dtype tracing of every generated CSE temporary and every raw output before coercion",
+      "staged m4-gradient, lifted-basis, m5-gradient, lambda-blend, A_lambda.T contraction, and outer-conjugation ledgers",
+      "same-expression mpmath references at 80 and 120 decimal digits",
+      "default joint-CSE, default non-CSE, long-namespace joint-CSE, and long-namespace element-local CSE variants",
+      "one static candidate assessment under the unchanged Phase-51 5e-10 RHS threshold"
+    ],
+    "not_computed": [
+      "any root, saddle, ODE, trajectory, endpoint, tangent, orientation, or continuation rerun",
+      "a retroactive rewrite of the immutable Phase-51 manifest, runner, or raw result",
+      "a supported Phase-51 continuation label",
+      "cross-platform long-double portability or a formal endpoint error bound",
+      "other roots, charts, arms, cap reintersections, components, Stokes data, ends, determinant lines, cutoff or continuum limits, global cycles, or physics claims"
+    ]
+  },
+  "disclosed_feasibility_pilots": {
+    "status": "NONAUTHORITATIVE_METHOD_SELECTION_ONLY",
+    "date_utc": "2026-08-23",
+    "observations_known_before_freeze": {
+      "phase51_native_gradient_relative_range": [
+        2.848270700645171E-10,
+        6.616547129073412E-10
+      ],
+      "phase51_native_rhs_relative_range": [
+        6.271640075854194E-9,
+        1.6864238265787197E-8
+      ],
+      "A_transpose_relative_amplification_range": [
+        14.019261229376978,
+        40.23531312845855
+      ],
+      "factor_condition_number_range": [
+        179.1772068506885,
+        240.61977754637704
+      ],
+      "default_joint_CSE_RHS_to_80dps_reference_max": 2.36291897554E-8,
+      "default_nonCSE_RHS_to_80dps_reference_max": 6.77742881005E-9,
+      "mpmath_CSE_to_nonCSE_RHS_relative_max": 1.59529399639E-72,
+      "baseline_CSE_temporary_dtype_counts": {
+        "m4": {
+          "float64": 19,
+          "complex256": 425,
+          "total": 444
+        },
+        "m5": {
+          "float64": 19,
+          "complex256": 525,
+          "total": 544
+        }
+      },
+      "representative_float64_temporaries": [
+        "pi**2",
+        "sqrt(6)",
+        "constant prefactors and constant transcendental subexpressions"
+      ],
+      "long_namespace_joint_CSE_to_long_namespace_nonCSE_rhs_relative_at_phi_plus_lambdas": [
+        1.212E-11,
+        1.281E-11,
+        2.909E-11
+      ],
+      "element_local_CSE_phi_plus_lambda1_rhs_to_80dps_reference": 2.24314E-10
+    },
+    "selection_role": "The pilots localized a concrete runtime-dtype and cancellation mechanism and selected the element-local candidate family. They did not evaluate that candidate at all six frozen slots, did not alter the inherited 5e-10 gate, and are not authoritative evidence.",
+    "post_pilot_freeze": "Every slot, variant, precision, stage, metric, threshold, and classification below is fixed before an authoritative Phase-52 runner or result is committed."
+  },
+  "pinned_inputs": {
+    "phase51_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_INPUTS.json",
+      "commit": "80dda66aa57276de6e3940c35e58e89d34d28721",
+      "sha256": "0e9191d5c98cc1a56d7ffbcdd98ac02558457b87b6abf518ff754fbf4af7bd87"
+    },
+    "phase51_runner": {
+      "path": "cpt_temporal_folded_susy/phase51_m5_gamma_k_local_continuation.py",
+      "commit": "24508e323c2336c33d87ecf2786a46e0edb429ee",
+      "sha256": "eb535f5a16687dccb47399e3ff7dceefe0ecabc6417574fd2f29abc008e1d7c9"
+    },
+    "phase51_result": {
+      "path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json",
+      "commit": "ab14d0d0eacc09da64d5c8061fa0890179cd79aa",
+      "sha256": "b74c8b735b32790c85d7e14fbf78fe16bf437995d707268d209d4a655c3d8531",
+      "size_bytes": 1628760,
+      "result_payload_sha256_without_self": "153d2350c96114a137b0da3f2eaa37b9224a0081e602164702e28867cbd99e0d",
+      "run_status": "VALID_RUN",
+      "classification": "PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE"
+    },
+    "phase43_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_INPUTS.json",
+      "commit": "91a15d9a8d0c000e1ce7c7d8d83f399b600cff55",
+      "sha256": "de2c8c130e1aae6b6b93ee4c3d1137357067f9ddd5e8c68916037f2ffc325b39",
+      "role": "80/120-decimal reference and finite-arithmetic arbitration precedent"
+    },
+    "phase43_runner": {
+      "path": "cpt_temporal_folded_susy/phase43_m4_high_precision_local_rhs_arbitration.py",
+      "commit": "4aa3887cec14816c92ff8635d2cac703d4661d37",
+      "sha256": "01e0727d2269f6b2d555455157b1c49cda96fb4966fb00eab5b3635d690f3729"
+    },
+    "phase43_result": {
+      "path": "cpt_temporal_folded_susy/PHASE43_M4_HIGH_PRECISION_LOCAL_RHS_ARBITRATION_RESULT.json",
+      "commit": "11a8cfd7910f6b016b4dbceefd839bf6ac093f03",
+      "sha256": "20c967ff968541402c81d5ab91394820bffd15cdd79052ee9e162cb5f39c2bd8",
+      "size_bytes": 50974375,
+      "result_payload_sha256_without_self": "2670f1117433c962b5d3cfe265293ad85a89571f6a06a13342471e11d8ca9fa0"
+    },
+    "phase49_manifest": {
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json",
+      "commit": "57d1431653e01969a0a136d7f847a63f81ea2daf",
+      "sha256": "ec97937fd4643b2d3ebfccc70ff82e4348ea92086b5b0588aec33bf24fdebcc5",
+      "role": "raw-output dtype guard and complete-flow clongdouble precedent"
+    },
+    "phase49_runner": {
+      "path": "cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py",
+      "commit": "b41e7f2b0c75b922a9fa0d775ceee5d5607e5189",
+      "sha256": "f7f03d8ca08c3406cfbae4825b64fb5c2cac89797ea005519fc12c489947abb2"
+    },
+    "phase49_result": {
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json",
+      "commit": "078753a9406f5e71730f7946df7ac8dcfa3a9d52",
+      "sha256": "787e6aee62193af0b78041cae42eb38c13afef281b7d0560c07ad3a2958da531",
+      "size_bytes": 165513,
+      "result_payload_sha256_without_self": "c8063283f8ac66918cbabcd3d3a71d3bfdcfdba734067306486164737d4e3c9f"
+    },
+    "package_lock": {
+      "path": "package-lock.json",
+      "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+      "sha256": "0dd02b48ebcf1550edb757ffffc8b03b5059438cca3b9d3cc605f18576cb8f4d"
+    },
+    "uv_lock": {
+      "path": "uv.lock",
+      "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+      "sha256": "8afebaf1d11eb0e31ee6398e4a88b2742acb887920a7ec12a5f3d581c1c99527"
+    }
+  },
+  "slots": {
+    "source_order": [
+      "phi_plus",
+      "phi_minus"
+    ],
+    "lambda_order": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "state": "Exactly the Phase-51 declared_center_launch_initial_state recomputed from its byte-pinned source context: saddle_w + radius*(launch_w@chart.center).",
+    "count": 6,
+    "no_slot_selection_or_replacement": true
+  },
+  "evaluator_variants": {
+    "baseline_joint_CSE": "The byte-identical Phase-51 joint canonical CSE over gradient plus Hessian with the default NumPy lambdify namespace.",
+    "baseline_nonCSE": "The byte-identical Phase-51 unreduced gradient with the default NumPy lambdify namespace and no replacement list or cache.",
+    "long_namespace_joint_CSE": "The same joint canonical CSE, but use a dedicated SymPy NumPy printer that emits every Float and non-integer Rational from decimal text as np.clongdouble, binds pi from an 80-digit decimal string, and wraps sqrt and exp so every scalar input and return is np.clongdouble. Integer powers remain structural integer exponents. No post-output upcast may count as retention.",
+    "element_local_long_CSE": {
+      "role": "primary static repair candidate",
+      "construction": "Before global expansion, substitute the frozen source and coordinate scales into each of the four m4 or five m5 midpoint elements, differentiate every element separately, run canonical CSE separately on each element-gradient vector, evaluate every Float, non-integer Rational, pi, sqrt, exp, temporary, and raw output through the dedicated clongdouble printer/namespace, and sum element contributions componentwise in the fixed left-to-right element order with clongdouble accumulation.",
+      "exact_identity": "The symbolic sum of element gradients must equal the pinned expanded global gradient componentwise before numerical evaluation.",
+      "flow_boundary": "Keep the lifted-basis transform, lambda blend, A_lambda.T contraction, and outer minus-conjugation in clongdouble. No complex128 cast is performed in this static phase."
+    },
+    "prohibited": [
+      "post-output clongdouble coercion counted as proof of raw temporary dtype",
+      "hidden Python float or NumPy float64 CSE temporaries in either repaired candidate",
+      "Hermitian A_lambda transpose",
+      "a favorable slot, precision, element order, summation order, backend, threshold, or reference selected after output",
+      "using a repaired value to rewrite the Phase-51 raw result"
+    ]
+  },
+  "runtime_dtype_audit": {
+    "method": "Use Python tracing at each generated callable return to inspect every local CSE temporary before frame destruction; separately inspect every raw output scalar before np.asarray coercion.",
+    "required_baseline_reproduction": {
+      "m4_float64_temporary_count": 19,
+      "m5_float64_temporary_count": 19,
+      "baseline_all_temporaries_clongdouble_expected": false
+    },
+    "required_repair_contract": "Every runtime CSE temporary and raw gradient output in both repaired variants must be NumPy complex256/clongdouble at all six slots. Trace completeness must equal the generated replacement count."
+  },
+  "reference": {
+    "backend": "Direct SymPy evalf at the active precision over the same pinned source-substituted expanded gradients, with input substitutions built from mp-preserving decimal strings and all matrix products and conjugation retained in mpmath. NumPy lambdify, Python float literals, and native evaluator outputs are forbidden in the authoritative reference.",
+    "precision_tiers_decimal_digits": [
+      80,
+      120
+    ],
+    "authoritative_tier_decimal_digits": 120,
+    "input_lift": "Round-trip every NumPy longdouble real and imaginary component through a unique 25-digit scientific decimal string; require exact NumPy longdouble round-trip before constructing mp.mpf/mp.mpc.",
+    "independence_boundary": "This reference independently evaluates the same symbolic expressions and arithmetic stages; it tests evaluator arithmetic, not the physical correctness of the finite model.",
+    "CSE_control": "At each tier evaluate the canonical replacement DAG directly with SymPy evalf substitutions and compare it with direct unreduced-expression evalf. Neither path may use lambdify, Python float conversion, or native NumPy outputs."
+  },
+  "metrics": {
+    "primary_relative": "symmetric normwise relative error ||x-y||_2/max(||x||_2,||y||_2,1e-100)",
+    "retained_absolute": "normwise and maximum-component absolute differences are retained at every stage",
+    "cancellation_index": "sum of absolute term contributions divided by the absolute completed component, with 1e-100 floor",
+    "stage_order": [
+      "m4_raw_gradient",
+      "m4_lifted_gradient",
+      "m5_raw_gradient",
+      "lambda_blended_gradient",
+      "A_lambda_transpose_contraction",
+      "outer_minus_conjugation"
+    ],
+    "telescope": "Retain the closed baseline-to-candidate and candidate-to-reference vector differences at every declared stage; outer conjugation must add no unexplained error."
+  },
+  "thresholds": {
+    "phase51_record_reproduction_absolute_max": 5E-16,
+    "mpmath_80_vs_120_relative_max": "1e-40",
+    "mpmath_CSE_vs_nonCSE_relative_max": "1e-40",
+    "candidate_gradient_to_120dps_relative_max": "5e-10",
+    "candidate_RHS_to_120dps_relative_max": "5e-10",
+    "inherited_phase51_CSE_nonCSE_RHS_relative_max": "5e-10",
+    "native_telescope_relative_closure_max": "5e-18",
+    "threshold_policy": "The 5e-10 gradient/RHS gate is inherited without weakening from Phase 51. Decimal reference gates leave at least forty digits above the 80-dps floor. No observed authoritative result may change a threshold."
+  },
+  "checks": {
+    "exact": [
+      "P52.inputs.byte_pins_self_digests_and_manifest_before_runner",
+      "P52.slots.exact_Phase51_six_state_construction",
+      "P52.symbolic.element_gradient_sum_identity",
+      "P52.symbolic.CSE_back_substitution_and_DAG_fingerprints",
+      "P52.dtype.trace_completeness_and_raw_output_guard",
+      "P52.conventions.stage_order_transpose_and_reference_isolation",
+      "P52.guard.historical_nonrewrite_and_global_nulls"
+    ],
+    "numerical": [
+      "P52.reproduction.Phase51_six_slot_evaluator_records",
+      "P52.audit.Phase51_all_CSE_temporaries_clongdouble",
+      "P52.reference.mpmath_80_120_and_CSE_plain_stability",
+      "P52.repair.long_namespace_joint_CSE",
+      "P52.repair.element_local_long_CSE",
+      "P52.arithmetic.stage_telescope_and_cancellation",
+      "P52.guard.classification_and_nulls"
+    ]
+  },
+  "classification": {
+    "primary_if_baseline_violation_reproduced_and_element_candidate_passes": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_ELEMENT_LOCAL_RHS_REPAIR_SUPPORTED_ON_FROZEN_SIX_SLOTS",
+    "if_baseline_violation_reproduced_but_element_candidate_fails": "P51_CSE_DTYPE_CONTRACT_VIOLATION_REPRODUCED_STATIC_RHS_REPAIR_NOT_SUFFICIENT",
+    "otherwise": "P51_EVALUATOR_RUNTIME_DTYPE_AND_RHS_ARITHMETIC_AUDIT_INCONCLUSIVE",
+    "Phase51_raw_result_mutated": false,
+    "Phase51_historical_emitted_status": "VALID_RUN",
+    "Phase51_protocol_validity_after_confirmed_hidden_float64": "NOT_UPHELD_IF_THE_FROZEN_ALL_TEMPORARIES_CLONGDOUBLE_CONTRACT_IS_REPRODUCIBLY_VIOLATED",
+    "Phase51_scientific_label_may_be_promoted": false,
+    "Phase53_full_rerun_required_before_any_local_supported_label": true,
+    "global_promotion": "PROHIBITED",
+    "Gate1": "OPEN_PARTIAL_PROGRESS"
+  },
+  "required_outputs": {
+    "exact_check_count": 7,
+    "numerical_check_count": 7,
+    "typed_baseline_dtype_failure_is_non_infrastructure": true,
+    "result_self_digest": true,
+    "strict_finite_JSON": true,
+    "promoted_output": null,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null
+  },
+  "run_semantics": {
+    "valid_completed_diagnostic_exit_code": 0,
+    "invalid_run_exit_code": 2,
+    "scientific_nonpass_does_not_change_exit_code": true,
+    "runner_commit_must_postdate_manifest_commit": true,
+    "authoritative_result_must_use_the_committed_runner": true,
+    "repository_writes_during_calculation": "Only the canonical result JSON may be written by the committed runner; production scratch stdout/stderr are external capture artifacts.",
+    "next_step_if_repair_supported": "Freeze a separate Phase-53 runner that replaces the production gradient path, replays the three paired trajectories, and reruns the complete Phase-51 continuation/reflection/FD/tangent/endpoint/ledger suite without weakening any gate.",
+    "boundary": "A static same-platform arithmetic repair is neither a root result, a continuation result, a portable backend theorem, a global intersection, a physical cycle, a TOE, nor a physics claim."
+  }
+}
