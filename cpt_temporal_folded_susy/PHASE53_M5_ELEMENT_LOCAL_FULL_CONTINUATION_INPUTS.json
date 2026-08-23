@@ -76,10 +76,11 @@
       "retain_every_failure": true,
       "no_post_output_slot_or_gate_selection": true,
       "expected_topology": {
-        "saddle_records": {
-          "attempt_count": 34,
-          "accepted_count": 34,
-          "per_source": 17
+      "saddle_records": {
+        "attempt_count": 34,
+        "accepted_count": 34,
+        "per_source": 17,
+        "unique_saddle_solves_including_four_outer_tangent_off_mesh_values": 38
         },
         "primary_and_reflection_path_root_records": {
           "phi_plus_fine_forward": 17,
@@ -152,8 +153,19 @@
           "historical_phase51_solver_steps_sum": 46597,
           "solver_steps_sum_role": "DESCRIPTIVE_COMPARISON_ONLY",
         "policy": "The 146 non-root, non-FD control integrations and their 68+68+6+4 composition are exact. The first 68 are the t_eval=101 action trajectories in the complete flow ledgers, not data-dependent Newton root-solve calls. Phase 51 omitted an explicit final execution ledger for the four outer-tangent plus/minus state integrations; Phase 53 must retain those four records. Root-solver integrate_k invocation counts are recorded separately but are not frozen because Newton and line-search call counts may change under repaired arithmetic. Retain the Phase-53 solver_steps sum and difference from 46597, but do not require equality because the repaired finite-arithmetic evaluator may legitimately alter adaptive DOP853 step placement while all inherited tolerances and semantic gates remain fixed."
-        },
-        "failure_policy": "Any missing, duplicate, extra, reordered, or mislabeled semantic slot or the wrong exact topology count is INVALID_RUN, not a smaller replay."
+      },
+      "no_fallback_ledger": {
+        "historical_result_reuse": 0,
+        "copied_roots": 0,
+        "random_restarts": 0,
+        "reflected_seed_substitutions": 0,
+        "mesh_insertions": 0,
+        "chart_recentering": 0,
+        "clipping": 0,
+        "favorable_step_or_solver_replacement": 0,
+        "validation_backend_used_for_production": 0
+      },
+      "failure_policy": "Any missing, duplicate, extra, reordered, or mislabeled semantic slot or the wrong exact topology count is INVALID_RUN, not a smaller replay."
       }
     }
   },
