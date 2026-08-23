@@ -1,0 +1,556 @@
+{
+  "schema": "ice-phase51-m5-gamma-k-local-continuation-inputs/v1",
+  "phase": 51,
+  "status": "FROZEN_AFTER_DISCLOSED_FEASIBILITY_PILOT_BEFORE_COMMITTED_RUNNER_OR_AUTHORITATIVE_OUTPUT",
+  "frozen_at_utc": "2026-08-23T02:33:27Z",
+  "repository_head_observed_at_freeze": "ff83b23ed80d95d7adc8b90fd191a07e6872bf44",
+  "manifest_introduction_commit": null,
+  "scope": {
+    "question": "Does the immutable Phase-42 phi_plus Gamma-K candidate continue as one transverse nonlinear m=5 R18 cap candidate along the Phase-50 diagonal stabilized-action/SPD-metric path, with an independently initialized phi_minus reflection control?",
+    "calculation_workbench_only": true,
+    "production_target": {
+      "label": "phi_plus",
+      "delta_a": 0.0,
+      "delta_phi": 0.001
+    },
+    "reflected_control": {
+      "label": "phi_minus",
+      "delta_a": 0.0,
+      "delta_phi": -0.001,
+      "independent_initialization_required": true
+    },
+    "computed": [
+      "fine-forward, coarse-forward, and fine-reverse nonlinear Gamma-K continuation for phi_plus",
+      "one independently initialized fine-forward phi_minus reflection-control path",
+      "R18 residual, rank, transversality, orientation, path, and first-cap ledgers",
+      "full-J finite differences at lambda 0, 0.5, and 1 for phi_plus",
+      "one phi_plus path-tangent control at lambda 0.5",
+      "phi_plus lambda=1 radius and launch-shape controls",
+      "CSE clongdouble production evaluation with paired non-CSE clongdouble validation"
+    ],
+    "not_computed": [
+      "other sources, roots, charts, straight arms, or cap reintersections",
+      "direction, root, saddle, or upward-component exhaustion",
+      "interval, augmented-fold, or local-degree certification",
+      "Stokes data, all relative good ends, or a physical original cycle",
+      "a common physical determinant line, cutoff or continuum limit, global integer, or physics claim"
+    ]
+  },
+  "disclosed_feasibility_pilot": {
+    "status": "NONAUTHORITATIVE_SHARED_ZERO_METHOD_FEASIBILITY_ONLY",
+    "date_utc": "2026-08-23",
+    "backend": "non-CSE NumPy clongdouble gradient/flow with DOP853 rtol=8e-11, atol=8e-13, max_step=0.025",
+    "source": "shared_zero",
+    "lambda0": {
+      "initial_residual_max_abs": 1.4218810906463375E-8,
+      "solved_residual_max_abs": 8.156364472711175E-12,
+      "nfev": 13,
+      "njev": 3,
+      "parameter_distance_from_lift": 1.4045E-8,
+      "normalized_sigma_min": 0.0146988252,
+      "normalized_condition_number": 152.052,
+      "root_jacobian_sign": -1,
+      "flow_time": 10.2640396634
+    },
+    "lambda_one_sixteenth": {
+      "initial_residual_max_abs": 0.00145225168,
+      "solved_residual_max_abs": 9.68441993E-11,
+      "nfev": 13,
+      "njev": 2,
+      "parameter_distance_from_previous": 0.00207205,
+      "normalized_sigma_min": 0.0158270843,
+      "normalized_condition_number": 141.183,
+      "root_jacobian_sign": -1,
+      "flow_time": 10.2656776117
+    },
+    "arithmetic_backend_feasibility": {
+      "observed_CSE_to_nonCSE_lambda0_endpoint_state_relative": 6.13E-8,
+      "role": "pre-freeze feasibility observation used only to avoid an impossible paired-backend threshold; the frozen 2e-7 endpoint threshold is more than three times this observation and remains far below the 5e-5 same-candidate radius/shape bound"
+    },
+    "boundary": "This pilot used neither production source, did not use the frozen CSE evaluator, observed no phi_plus endpoint, and supplies no target sign, threshold, or classification."
+  },
+  "model_path": {
+    "complex_order": [
+      "a1",
+      "phi1",
+      "a2",
+      "phi2",
+      "a3",
+      "phi3",
+      "a4",
+      "phi4",
+      "T"
+    ],
+    "real_order": "interleaved real and imaginary parts in complex_order",
+    "coordinate_scales": [
+      3.5668031935672753,
+      1.0185809464006637,
+      3.5668031935672753,
+      1.0185809464006637,
+      3.5668031935672753,
+      1.0185809464006637,
+      3.5668031935672753,
+      1.0185809464006637,
+      0.7
+    ],
+    "action": "Exactly the pinned Phase-50 S_lambda=(1-lambda)*S4_lift+lambda*S5 with its positive-determinant common basis B, kappa_a=-140000, and kappa_phi=24000.",
+    "metric": "Exactly the pinned Phase-50 primary affine-invariant SPD geodesic M_geo(mu), evaluated only on the diagonal mu=lambda.",
+    "saddles": "Solve each source independently on lambda; require reproduction of the pinned Phase-50 saddle at every common mesh node. No reflected root may replace an independent solve.",
+    "factor": "Let A0=B*blockdiag(L4,abs(kappa_a)^(-1/2),kappa_phi^(-1/2)), using the pinned Phase-42 L4 and Phase-50 B. Set A_lambda=M_lambda^(1/2)*M0^(-1/2)*A0 with principal SPD powers. Require A_lambda*A_lambda.T=M_lambda and exact return to A0 at lambda=0.",
+    "flow": "With w=w_saddle+A_lambda*xi, integrate dot(xi)=-conjugate(A_lambda.T*gradient_w S_lambda(w)); lambda and source stay fixed on each trajectory and A.T is not Hermitian."
+  },
+  "gamma_and_root_map": {
+    "cap_radius": 0.3,
+    "source_endpoints": "a_L=a_b*(1-delta_a/2), a_R=a_b*(1+delta_a/2), phi_L=phi_b-delta_phi/2, phi_R=phi_b+delta_phi/2",
+    "anchors": "qbar_j=(1-j/5)*q_L+(j/5)*q_R for j=1,2,3,4",
+    "cap": "Let d_a=P*(y_a1,y_a2,y_a3)+q*y_added_a and d_phi=P*(y_phi1,y_phi2,y_phi3)+q*y_added_phi using the pinned Phase-50 P and q. Then a_j=abar_j+exp(i*(psi/2-pi/2))*d_a[j], phi_j=phibar_j+exp(i*psi/2)*d_phi[j], and T=0.3*exp(i*psi).",
+    "root_parameter_order": [
+      "y_a1",
+      "y_phi1",
+      "y_a2",
+      "y_phi2",
+      "y_a3",
+      "y_phi3",
+      "y_added_a",
+      "y_added_phi",
+      "psi",
+      "u1",
+      "u2",
+      "u3",
+      "u4",
+      "u5",
+      "u6",
+      "u_added_a",
+      "u_added_phi",
+      "flow_time"
+    ],
+    "parameter_bounds": {
+      "lower": [
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -1.5707963267948966,
+        -0.6,
+        -0.6,
+        -0.6,
+        -0.6,
+        -0.6,
+        -0.6,
+        -0.6,
+        -0.6,
+        0.1
+      ],
+      "upper": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        1.5707963267948966,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        13.5
+      ],
+      "order": "root_parameter_order"
+    },
+    "equation": "Gamma5(y,psi;source)-K5_lambda(u,flow_time;source)=0 in R18",
+    "scaled_residual": "Realify D^(-1)*(Gamma5-K5) in the frozen real order, with D given by coordinate_scales.",
+    "Gamma_tangent": "Use the six exact Phase-50 P columns, the two exact q added-mode columns, and d_psi a_j=(i/2)*(a_j-abar_j), d_psi phi_j=(i/2)*(phi_j-phibar_j), d_psi T=i*T.",
+    "K_tangent": "Integrate eight real chart variations with dZ/dt=-conjugate((A_lambda.T*H(w)*A_lambda)*Z) and append the positive endpoint flow vector for flow_time.",
+    "variational_root_jacobian": "[V_Gamma,-V_K]",
+    "direct_orientation": "sign det_R[V_Gamma,V_K] after positive column normalization",
+    "parity": "Nine K columns imply root_jacobian_sign=-direct_orientation_sign.",
+    "desired_direct_orientation_sign": null,
+    "desired_root_jacobian_sign": null
+  },
+  "launch_chart": {
+    "signed_frame": "At every node form H_xi=A_lambda.T*H_lambda*A_lambda, order its five-negative and four-positive real subspaces, align each signed block by determinant-aware orthogonal Procrustes transport, and recompute the signed restricted-Hessian launch shape.",
+    "primary_shape_exponent": 1.0,
+    "shape": "Apply the inverse positive square root of each absolute signed Hessian restriction raised to shape_exponent before its phase.",
+    "launch_radius": 0.0001,
+    "sphere": "S8",
+    "lambda0_launch": "For each source augment its immutable Phase-42 primary J4 exactly by the added signed directions (-1,+i) in factor coordinates. The Phase-51 lambda=0 physical launch must replay A0*blockdiag(J4,-1,+i) to the frozen relative threshold.",
+    "chart": "Freeze omega_center=(Phase42 center7,0,0) and C=[embedded Phase42 7x6 tangent,e_added_a,e_added_phi], so det[C,omega_center]=+1. Use omega(u)=normalize(omega_center+C*u) without recentering.",
+    "lambda0_seed": "Copy the immutable Phase-42 six Gamma y, psi, six chart u, and flow_time; set eta_a=eta_phi=u_added_a=u_added_phi=0. The cap function applies P and q at evaluation time.",
+    "u_bounds": [
+      -0.6,
+      0.6
+    ],
+    "flow_time_bounds": [
+      0.1,
+      13.5
+    ],
+    "flow_norm_max": 40.0
+  },
+  "continuation": {
+    "source_order": [
+      "phi_plus",
+      "phi_minus"
+    ],
+    "fine_forward": [
+      0.0,
+      0.0625,
+      0.125,
+      0.1875,
+      0.25,
+      0.3125,
+      0.375,
+      0.4375,
+      0.5,
+      0.5625,
+      0.625,
+      0.6875,
+      0.75,
+      0.8125,
+      0.875,
+      0.9375,
+      1.0
+    ],
+    "coarse_forward": [
+      0.0,
+      0.125,
+      0.25,
+      0.375,
+      0.5,
+      0.625,
+      0.75,
+      0.875,
+      1.0
+    ],
+    "fine_reverse": [
+      1.0,
+      0.9375,
+      0.875,
+      0.8125,
+      0.75,
+      0.6875,
+      0.625,
+      0.5625,
+      0.5,
+      0.4375,
+      0.375,
+      0.3125,
+      0.25,
+      0.1875,
+      0.125,
+      0.0625,
+      0.0
+    ],
+    "seed_rule": "phi_plus fine and coarse start from separately solved lambda=0 lifts; its reverse starts only from its fine-forward lambda=1 root. phi_minus runs one independent fine-forward path from its own lambda=0 lift. Each forward node uses only its immediately preceding node.",
+    "matching": "Compare normalized ambient cap states and determinant-corrected tangents at common nodes; raw chart coordinates are not invariant matching data.",
+    "fallback": "No random restart, extra direction, reflected seed substitution, chart recentering, clipping, mesh insertion, or favorable solver/step replacement."
+  },
+  "evaluator": {
+    "platform": {
+      "clongdouble_itemsize": 32,
+      "longdouble_itemsize": 16,
+      "longdouble_mantissa_bits_excluding_implicit": 63,
+      "longdouble_epsilon": "1.084202172485504434e-19"
+    },
+    "symbolic_source": "One SymPy S_lambda generates the nine-component holomorphic gradient and 9x9 Hessian.",
+    "production": "Run one deterministic sympy.cse(...,order='canonical') pass jointly over gradient and Hessian. Evaluate state formation, all CSE temporaries, gradient, Hessian action, A_lambda.T contraction, and outer conjugation in NumPy clongdouble; cast each complete RHS once to complex128 at solve_ivp.",
+    "validation": "Evaluate the unreduced non-CSE gradient and Hessian independently in clongdouble with no CSE replacement list or output cache.",
+    "exact_check": "Back-substitute the CSE replacements and require exact symbolic equality with every non-CSE gradient and Hessian expression.",
+    "paired_sources": [
+      "phi_plus",
+      "phi_minus"
+    ],
+    "paired_lambdas": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "paired_trajectory_fractions": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "paired_reintegrations": "Independently reintegrate the three phi_plus central trajectories at lambda 0, 0.5, and 1 with the non-CSE backend; validation may not replace a production root.",
+    "prohibited": [
+      "hidden float64 production temporaries",
+      "early complex128 projection",
+      "A_lambda.conj().T",
+      "using non-CSE output to select or repair production"
+    ]
+  },
+  "fixed_numerics": {
+    "integration": {
+      "method": "DOP853",
+      "state": {
+        "rtol": 2E-10,
+        "atol": 2E-12,
+        "max_step": 0.04
+      },
+      "tangent": {
+        "rtol": 8E-11,
+        "atol": 8E-13,
+        "max_step": 0.025
+      }
+    },
+    "damped_newton": {
+      "implementation": "custom deterministic Newton step np.linalg.lstsq(J,-R,rcond=None) with state-only residual-decrease line search",
+      "max_iterations": 8,
+      "target_scaled_residual_max_abs": 2E-9,
+      "damping_sequence": [
+        1.0,
+        0.5,
+        0.25,
+        0.125,
+        0.0625,
+        0.03125,
+        0.015625
+      ],
+      "minimum_damping": 0.015625,
+      "acceptance": "The trial remains strictly inside the frozen parameter box and its state-only Euclidean residual norm is smaller than the current norm; otherwise continue the frozen halving sequence.",
+      "outcome_independent": true
+    },
+    "saddle_solver": {
+      "library": "scipy.optimize.root",
+      "method": "hybr",
+      "xtol": 1E-11,
+      "maxfev": 200,
+      "analytic_hessian_jacobian": true
+    },
+    "flow_ledger_sample_count": 101,
+    "same_map": "The CSE-clongdouble flow map used for production roots is also used for acceptance, path ledgers, variational tangents, and finite differences."
+  },
+  "controls": {
+    "full_J_FD": {
+      "source": "phi_plus",
+      "lambdas": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "state_only": true,
+      "steps": {
+        "Gamma_y_and_psi": [
+          0.000002,
+          5E-7
+        ],
+        "K_old_u1_through_u6_and_added_u": [
+          0.000002,
+          5E-7
+        ],
+        "K_flow_time": [
+          0.000005,
+          0.000001
+        ]
+      },
+      "rule": "Retain both central-difference matrices for all eighteen columns; compare the larger-step matrix with the variational J and the two FD matrices with each other; no columnwise step selection."
+    },
+    "path_tangent": {
+      "source": "phi_plus",
+      "lambda": 0.5,
+      "steps": [
+        0.0002,
+        0.00005
+      ],
+      "implicit": "At fixed central p, central-difference the complete residual in lambda including re-solved saddle, metric, frame, chart, and nonlinear flow, then solve dp/dlambda=-J^(-1)*dR/dlambda.",
+      "resolved": "Independently solve roots at lambda plus/minus h and central-difference their consistently transported parameter vectors.",
+      "rule": "Retain both steps, all four off-node roots, both tangent pairs, solve residuals, and adjacent-step metrics."
+    },
+    "endpoint": {
+      "source": "phi_plus",
+      "lambda": 1.0,
+      "radius_controls": [
+        0.00005,
+        0.0002
+      ],
+      "shape_controls": [
+        0.5,
+        0.0
+      ],
+      "radius_seed": "Preserve the primary physical direction and shift time by log(primary_radius/control_radius).",
+      "shape_seed": "Map the primary physical direction by maximum positive overlap into the control shape.",
+      "same_candidate": "Require normalized cap-state match, transversality, corrected sign, path ledger, and first-cap ledger; sign alone is insufficient."
+    },
+    "reflection": "At every fine node compare independently solved phi_minus with nodal reflection of phi_plus for saddle, action, cap state, transversality, and determinant-corrected sign.",
+    "path": "For every accepted primary/control path retain Re(S) monotonicity, Im(S) drift, xi norm, 101 samples, and an independent first-|T|=0.3 solve_ivp event check."
+  },
+  "thresholds": {
+    "phase50_saddle_reproduction_distance_max": 1E-8,
+    "saddle_gradient_max_abs": 2E-8,
+    "saddle_hessian_min_abs_eigenvalue": 0.1,
+    "saddle_inertia": {
+      "negative": 5,
+      "positive": 4,
+      "zero": 0
+    },
+    "physical_residual_max_abs": 2E-7,
+    "scaled_residual_max_abs": 2E-7,
+    "Gamma_rank": 9,
+    "K_rank": 9,
+    "normalized_transversality_sigma_min": 0.0002,
+    "factor_identity_relative_max": 5E-12,
+    "lambda0_launch_replay_relative_max": 5E-13,
+    "mesh_reverse_cap_state_distance_max": 0.00005,
+    "reflection_cap_state_distance_max": 0.00005,
+    "reflection_action_absolute_max": 2E-7,
+    "full_J_FD_variational_operator_relative_max": 0.02,
+    "full_J_FD_max_column_relative_max": 0.02,
+    "full_J_FD_adjacent_relative_max": 0.02,
+    "path_tangent_implicit_resolved_relative_max": 0.01,
+    "path_tangent_adjacent_relative_max": 0.02,
+    "CSE_nonCSE_rhs_relative_max": 5E-10,
+    "CSE_nonCSE_hessian_action_relative_max": 5E-10,
+    "CSE_nonCSE_endpoint_state_relative_max": 2E-7,
+    "CSE_nonCSE_scaled_residual_absolute_difference_max": 2E-7,
+    "CSE_nonCSE_residual_relative_is_descriptive_only": true,
+    "endpoint_control_cap_state_distance_max": 0.00005,
+    "ReS_max_positive_sample_increment": 5E-8,
+    "ImS_max_drift": 5E-8,
+    "first_cap_radius_residual_max": 2E-7,
+    "first_cap_time_difference_max": 5E-6,
+    "first_cap_endpoint_state_distance_max": 2E-6,
+    "minimum_u_margin": 0.01,
+    "minimum_y_margin": 0.005,
+    "minimum_psi_margin": 0.005,
+    "minimum_flow_time_margin": 0.02,
+    "minimum_flow_norm_margin": 0.1
+  },
+  "classification": {
+    "supported_label": "PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_SUPPORTED_ON_FROZEN_DIAGONAL_PATH",
+    "contradicted_label": "PHI_PLUS_DECLARED_LOCAL_CONTINUATION_CANDIDATE_CONTRADICTED",
+    "inconclusive_label": "PHI_PLUS_M5_GAMMA_K_LOCAL_CONTINUATION_INCONCLUSIVE",
+    "supported_if": "All provenance/platform checks and every target, reflection, mesh, reverse, derivative, evaluator, endpoint, path, boundary, rank, transversality, and orientation check pass.",
+    "contradicted_selectable_by_runner": false,
+    "contradicted_required_independent_certificate": "A separately frozen interval, augmented-fold, or local-degree certificate; Phase 51 implements none.",
+    "contradicted_if_certificate_existed": "Only a certificate that independently resolves a transversality zero or frozen boundary/first-cap event could contradict this declared candidate/path.",
+    "inconclusive_if": "Any rank, determinant, boundary, cap, solver, mesh, derivative, evaluator, reflection, or endpoint check does not pass. Ordinary solver nonconvergence, seed loss, box exhaustion, or a small sampled singular value is never a no-root or contradiction certificate.",
+    "global_promotion_allowed": false
+  },
+  "pinned_inputs": {
+    "phase41_input": {
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "commit": "58181447b558fa204406b732badd5c2fd541bb47",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e"
+    },
+    "phase41_source": {
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "commit": "a31a8627b0e0e210dea96d1d69dad80ccaa6decd",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530"
+    },
+    "phase42_checkpoint": {
+      "path": "cpt_temporal_folded_susy/PHASE42_M4_FIXED_ROOT_CHECKPOINT.json",
+      "commit": "731579c37867a2041b65359bfc649be3b66900c7",
+      "sha256": "ad51bac8eff42e4d300b7872886053c1a6110812ed43b57cdd0e4dbf961891c6",
+      "self_digest": "e05c6cae4d34cf0bc7615a4801c7c96d163f974edc70d7f6d623102ee9dd63e2"
+    },
+    "phase49_input": {
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_INPUTS.json",
+      "commit": "57d1431653e01969a0a136d7f847a63f81ea2daf",
+      "sha256": "ec97937fd4643b2d3ebfccc70ff82e4348ea92086b5b0588aec33bf24fdebcc5"
+    },
+    "phase49_source": {
+      "path": "cpt_temporal_folded_susy/phase49_m4_clongdouble_full_flow_state_map_repair.py",
+      "commit": "b41e7f2b0c75b922a9fa0d775ceee5d5607e5189",
+      "sha256": "f7f03d8ca08c3406cfbae4825b64fb5c2cac89797ea005519fc12c489947abb2"
+    },
+    "phase49_result": {
+      "path": "cpt_temporal_folded_susy/PHASE49_M4_CLONGDOUBLE_FULL_FLOW_STATE_MAP_REPAIR_RESULT.json",
+      "commit": "078753a9406f5e71730f7946df7ac8dcfa3a9d52",
+      "sha256": "787e6aee62193af0b78041cae42eb38c13afef281b7d0560c07ad3a2958da531",
+      "self_digest": "c8063283f8ac66918cbabcd3d3a71d3bfdcfdba734067306486164737d4e3c9f",
+      "required_classification": "FULL_FLOW_CLONGDOUBLE_STATE_MAP_REPAIR_SUPPORTED"
+    },
+    "phase50_input": {
+      "path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_INPUTS.json",
+      "commit": "5e6f04ed7ce40672169c4b6e0cfad8180ec985af",
+      "sha256": "24706b3b44c1ff426c7b593370acdb324cd39b7998c05ef52e3ba5b88d1e6444"
+    },
+    "phase50_source": {
+      "path": "cpt_temporal_folded_susy/phase50_m4_m5_joint_saddle_homotopy.py",
+      "commit": "f00b3e16b1cbb52302f097b2ae0360ec8b140224",
+      "sha256": "77290311ad58198ace94f36e919a59fe19a330c5f49bb8c1ed8b6d15af697d90"
+    },
+    "phase50_result": {
+      "path": "cpt_temporal_folded_susy/PHASE50_M4_M5_JOINT_SADDLE_HOMOTOPY_RESULT.json",
+      "commit": "4305c77f264bbe5fb62ea9d333129998e04d37c7",
+      "sha256": "22594a5d7c513625384fbdb466101c073f3896a2be597704fa216c9643adbb44",
+      "self_digest": "7300500ac7643301f593e720faaae858ea4ccf57b163fd99996b07a2758abc94",
+      "required_classification": "LOCAL_STABILIZED_M4_M5_SADDLE_UPWARD_PLANE_TRANSPORT_SUPPORTED_ON_FROZEN_PATHS"
+    },
+    "package_lock": {
+      "path": "package-lock.json",
+      "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+      "sha256": "0dd02b48ebcf1550edb757ffffc8b03b5059438cca3b9d3cc605f18576cb8f4d"
+    },
+    "uv_lock": {
+      "path": "uv.lock",
+      "commit": "5aa9be8904bd4dd6325ef7c826b47c9581be004f",
+      "sha256": "8afebaf1d11eb0e31ee6398e4a88b2742acb887920a7ec12a5f3d581c1c99527"
+    }
+  },
+  "checks": {
+    "exact": [
+      "P51.inputs.byte_pins_and_manifest_before_runner",
+      "P51.action.Phase50_diagonal_path_identity",
+      "P51.cap.R18_middle_dimension_and_common_coordinate_lambda0_lift",
+      "P51.evaluator.CSE_symbolic_reconstruction_and_clongdouble_contract",
+      "P51.orientation.orders_chart_and_odd_K_parity",
+      "P51.guard.local_scope_forces_global_nulls"
+    ],
+    "numerical": [
+      "P51.saddles.Phase50_reproduction",
+      "P51.intersections.lambda0_lifts",
+      "P51.intersections.fine_forward_both_sources",
+      "P51.intersections.coarse_and_reverse",
+      "P51.reflection.independent_phi_pair",
+      "P51.derivative.full_J_at_0_half_1",
+      "P51.tangent.lambda_half",
+      "P51.evaluator.CSE_nonCSE_pairs",
+      "P51.endpoint.radius_and_shape",
+      "P51.guard.classification_and_nulls"
+    ]
+  },
+  "required_outputs": {
+    "result_path": "cpt_temporal_folded_susy/PHASE51_M5_GAMMA_K_LOCAL_CONTINUATION_RESULT.json",
+    "result_schema": "ice-phase51-m5-gamma-k-local-continuation/v1",
+    "stdout_prefix": "RESULT_JSON=",
+    "result_payload_self_digest_field": "result_payload_sha256_without_self",
+    "preenumerate_all_slots": true,
+    "retain_all_failures": true,
+    "contradicted_output_allowed": false,
+    "required_independent_contradiction_certificate": null,
+    "straight_arm_intersections_searched": false,
+    "cap_reintersections_searched": false,
+    "continuous_direction_coverage_proved": false,
+    "root_exhaustion_proved": false,
+    "all_saddles_and_upward_components_complete": false,
+    "non_Stokes_chamber_certified": false,
+    "all_relative_good_ends_classified": false,
+    "physical_original_cycle_derived": false,
+    "common_determinant_line_constructed": false,
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "cutoff_limit": null,
+    "continuum_limit": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS"
+  },
+  "run_semantics": {
+    "valid_scientific_exit_code": 0,
+    "invalid_run_exit_code": 2,
+    "invalid_run": "Input/hash/platform/CSE reconstruction/dtype/order/slot/global-null drift, undeclared fallback, or nonfinite JSON is INVALID_RUN.",
+    "scientific_failure": "Every complete rank, determinant, boundary, cap, solver, mesh, derivative, evaluator, reflection, or endpoint non-pass is retained as INCONCLUSIVE because the required independent contradiction certificate is absent.",
+    "emission": "Emit exactly one finite RESULT_JSON line on stdout; progress goes to stderr."
+  }
+}
