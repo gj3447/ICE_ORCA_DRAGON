@@ -88,8 +88,11 @@ export const ragnarokStatus = {
     kill_scope:
       "PHASE_51_TO_56_SAVED_BACKEND_AND_RECONSTRUCTED_LAUNCH_RECONCILIATION",
     terminal_closeout_phase: 56,
-    maximum_allowed_core_phase: 56,
-    blocked_from_core_phase: 57,
+    terminal_closeout_completed: true,
+    terminal_closeout_completed_at_utc: "2026-08-23T19:32:42Z",
+    terminal_closeout_reproduced_at_utc: "2026-08-23T19:36:16Z",
+    maximum_allowed_core_phase: 50,
+    blocked_from_core_phase: 51,
     next_phase: null,
     frozen_historical_run_allowlist_through_phase: 50,
     frozen_historical_run_allowlist: [...frozenHistoricalCoreScripts],
@@ -99,7 +102,19 @@ export const ragnarokStatus = {
     terminal_closeout_script:
       "cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning",
     terminal_closeout_runner_sha256: terminalCloseoutRunnerSha256,
-    execution_provenance: "PINNED_RUNNER_HASH_AND_CLEAN_CORE_DIRECTORY",
+    terminal_closeout_result: {
+      path: "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_RESULT.json",
+      sha256: "c9163319405ed4ec696076f7516c32fa8af290794a2e1cc4762090812f693d27",
+      payload_sha256_without_self:
+        "56c567bf60fde04b7d68ab9a5c394faaf08e73e43fe1db36b082ba58e3c010b2",
+      run_status: "VALID_RUN",
+      classification:
+        "P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
+      authoritative_and_reproduction_byte_identical: true,
+      next_phase: null
+    },
+    execution_provenance:
+      "PINNED_RUNNER_HASH_CLEAN_CORE_AND_COMMITTED_TERMINAL_RESULT",
     direct_python_bypass_authorized: false
   },
   repository_transport: {
@@ -208,11 +223,11 @@ export const researchRunDecision = (relpath: string) => {
   }
   if (normalized === ragnarokStatus.containment.terminal_closeout_script) {
     return {
-      allowed: true,
-      reason: "TERMINAL_CLOSEOUT" as const,
+      allowed: false,
+      reason: "TERMINAL_CLOSEOUT_CONSUMED" as const,
       normalized_relpath: normalized,
       maximum_phase: maximumPhase,
-      expected_sha256: terminalCloseoutRunnerSha256
+      expected_sha256: null
     }
   }
   if (frozenHistoricalCoreScripts.has(normalized)) {
@@ -241,11 +256,11 @@ const blockedRunError = (
     phase !== null && phase >= ragnarokStatus.containment.blocked_from_core_phase
       ? `core research phase ${phase}`
       : phase === ragnarokStatus.containment.terminal_closeout_phase
-        ? `non-terminal Phase ${phase} script '${relpath}'`
+        ? `completed terminal Phase ${phase} script '${relpath}'`
         : `core research script '${relpath}'`
   return iceError(
     "RESEARCH_PHASE_PAUSED",
-    `${prefix} is blocked by ${ragnarokStatus.operational_state}; only the frozen historical allowlist through Phase ${ragnarokStatus.containment.frozen_historical_run_allowlist_through_phase} and the exact Phase ${ragnarokStatus.containment.terminal_closeout_phase} terminal closeout are executable; inspect \`ice status\``,
+    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout has been consumed and only the frozen historical allowlist through Phase ${ragnarokStatus.containment.frozen_historical_run_allowlist_through_phase} remains executable; inspect \`ice status\``,
     2
   )
 }
@@ -423,7 +438,7 @@ export const formatRagnarokStatus = (json: boolean): string => {
     `Ragnarok circuit breaker: ${ragnarokStatus.operational_state}`,
     `Continuation route: ${ragnarokStatus.containment.continuation_route}`,
     `Kill scope: ${ragnarokStatus.containment.kill_scope}`,
-    `Executable core: ${ragnarokStatus.containment.frozen_historical_run_allowlist.length} frozen historical scripts through Phase ${ragnarokStatus.containment.frozen_historical_run_allowlist_through_phase} plus the exact Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout`,
+    `Executable core: ${ragnarokStatus.containment.frozen_historical_run_allowlist.length} frozen historical scripts through Phase ${ragnarokStatus.containment.frozen_historical_run_allowlist_through_phase}; Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout consumed`,
     `Execution provenance: ${ragnarokStatus.containment.execution_provenance}`,
     `Next phase: ${String(ragnarokStatus.containment.next_phase)}; every other core path is blocked`,
     `Gate 1: ${ragnarokStatus.scientific_state.gate1}`,

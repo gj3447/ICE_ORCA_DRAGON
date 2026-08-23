@@ -1,6 +1,6 @@
 # ICE Ragnarok 회로 차단기
 
-> **상태:** ACTIVE operational containment
+> **상태:** ACTIVE operational containment — Phase 56 terminal closeout consumed
 > **발효:** 2026-08-23
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
@@ -22,14 +22,13 @@ Phase 56 종결 진단과 함께 `KILL`한다. 실패 원인을 더 작은 evalu
 Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
 - 운영 상태는 `BOUNDED_PAUSE`다.
-- Phase 56은 이미 동결된 질문을 닫고 결과를 보고하기 위한 유일한 terminal-closeout 예외다.
+- Phase 56의 유일한 terminal-closeout 예외는 실행·독립 재현을 완료해 소진됐다.
 - 정확히 동결된 Phase 11–50 실행체만 역사 검산용 allowlist로 허용한다. KILL 범위인 Phase
   51–55 재실행, Phase 56 변종, Phase 토큰이 없거나 이름을 바꾼 새 core 실행체, Phase 57 이상은
   `./ice run`과 `./ice repro`에서 `RESEARCH_PHASE_PAUSED`로 거부한다.
-- Phase 56 예외는
-  `cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning.py`
-  하나와 정확히 일치해야 한다. 복합 파일명이나 낮은 Phase 번호 재사용으로 우회할 수 없다.
-- 허용된 41개 역사 runner와 Phase 56 runner는 SHA-256까지 고정한다. core 디렉터리에 tracked
+- Phase 56 runner와 결과 identity는 종결 provenance로 보존하지만 더는 실행 allowlist가 아니다.
+  복합 파일명이나 낮은 Phase 번호 재사용으로 우회할 수 없다.
+- 허용된 41개 역사 runner는 SHA-256까지 고정한다. core 디렉터리에 tracked
   수정이나 untracked 파일이 하나라도 있으면 실행 전에 `RESEARCH_CORE_DIRTY`, 허용 경로의 bytes가
   다르면 `RESEARCH_RUNNER_HASH_MISMATCH`로 닫는다. `./`, `..`, 역슬래시, absolute path로 core
   판정을 우회할 수 없고 workspace 밖으로 나가는 경로는 거부한다.
@@ -40,6 +39,28 @@ Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
 정본 상태는 `./ice status`와 `./ice status --json`으로 읽는다. 7일 pause는 Phase 56 실행
 시각이 아니라 이 containment의 2026-08-23 발효일부터 계산한다.
+
+## Phase 56 terminal closeout
+
+2026-08-23T19:32:42Z authoritative run과 19:36:16Z 독립 재현은 모두 exit `0`이었고 stdout
+321,195 bytes가 byte-identical했다. canonical result는 321,183 bytes, SHA-256
+`c9163319405ed4ec696076f7516c32fa8af290794a2e1cc4762090812f693d27`, self-excluding digest
+`56c567bf60fde04b7d68ab9a5c394faaf08e73e43fe1db36b082ba58e3c010b2`다.
+
+```text
+run_status = VALID_RUN
+classification = P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET
+root calls = 1
+solve_ivp calls = 8
+forbidden root/replay calls = 0
+next_phase = null
+```
+
+두 solver profile에서 P50-center 두 corner는 residual gate NONPASS를 유지했고 fresh-center 두
+corner는 저장 endpoint/residual target을 회복했다. 이 분류는 single-root bounded diagnostic의
+과학적 기록일 뿐 실행 권한이 아니다. `full_replay_authorized=false`, `phase57_authorized=false`,
+`continuation_route=KILL`은 그대로다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
+`PROHIBITED`, physics/TOE claim은 `null`이다.
 
 ## 과학적 경계
 
@@ -108,6 +129,6 @@ checkout에서 tree·재현·ontology 검증 → force-push와 collaborator re-c
 
 `./ice run`/`./ice repro` 차단기는 canonical relative path, frozen runner hash와 clean core tree를
 검사하지만 이미 실행 중인 프로세스를 종료하지 않고 직접 Python 호출을 기술적으로
-봉쇄하지도 않는다. 발효 시점의 프로세스 검사에서는 Phase 56/57 연구 프로세스가 남아 있지
-않았고, 이후의 직접 우회는 이 결정과 `AGENTS.md` 위반이다. 자격증명 값이나 인증 로그는 이
+봉쇄하지도 않는다. terminal closeout 뒤 제어면은 Phase 56도 `RESEARCH_PHASE_PAUSED`로 거부한다.
+이후의 직접 우회는 이 결정과 `AGENTS.md` 위반이다. 자격증명 값이나 인증 로그는 이
 문서의 evidence가 아니며 저장소에 복사하지 않는다.

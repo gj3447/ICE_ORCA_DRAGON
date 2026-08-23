@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 84 committed entries; `./ice list --json` is authoritative for the working tree |
+| Runnable catalog | 88 committed entries; `./ice list --json` is authoritative for the working tree |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -15,7 +15,8 @@
 | Local engineering gate | `npm run check` (strict typecheck + Vitest suite) |
 | Environment gate | `./ice doctor` |
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
-| Ragnarok containment | `BOUNDED_PAUSE`; frozen P11–P50 allowlist + exact P56 closeout only; P51–P55 reruns, P56 variants, renamed core work, and P57+ blocked |
+| Ragnarok containment | `BOUNDED_PAUSE`; Phase 56 closeout consumed; only the frozen P11–P50 historical allowlist remains executable; P51+ and renamed core work blocked |
+| Phase 56 closeout | `VALID_RUN`; fresh center/launch recovers the saved lambda-half target under both profiles; `next_phase=null` |
 | Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
 | Remote transport | `BLOCKED_OVERSIZED_GIT_OBJECT` pending explicitly authorized artifact externalization and history remediation |
 
@@ -24,10 +25,10 @@ count or rough “N+” inventory as the runnable catalog.
 
 ### Active Ragnarok containment
 
-`./ice status` is the typed operational authority. Phase 56 may answer only its already frozen
-lambda-half launch-provenance/residual-conditioning question and then must set `next_phase = null`.
-Only the exact frozen Phase 11–50 historical allowlist and designated Phase 56 terminal script execute;
-their runner SHA-256 must match and the core directory must be clean.
+`./ice status` is the typed operational authority. Phase 56 answered its frozen lambda-half
+launch-provenance/residual-conditioning question and set `next_phase = null`; the one-shot closeout
+permission is now consumed. Only the exact frozen Phase 11–50 historical allowlist executes; runner
+SHA-256 must match and the core directory must be clean.
 The Phase-51→56 saved-backend/reconstructed-launch reconciliation route may not rerun Phase 51–55,
 substitute another Phase 56, generate Phase 57, perform a full replay, relax a threshold, or create
 another evaluator/dtype/solver/residual/provenance descendant.
@@ -38,6 +39,20 @@ This containment does not erase real scoped progress or convert open science int
 `PROHIBITED`. The exact scope, reopening conditions, 529,370,671-byte Phase-44 Git blocker, and
 non-destructive remediation boundary are recorded in
 [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md).
+
+### Phase 56 terminal result
+
+The guarded authoritative run and an independent scratch reproduction were byte-identical. Both exited
+`0` with 8/8 exact checks and 8/8 numerical checks PASS, one permitted fresh saddle solve, eight permitted
+`EL_long` state ODEs, and every forbidden root/replay counter at zero. Both fresh-center corners recovered
+the saved lambda-half endpoint/residual target under the primary and refined profiles; both P50-center
+corners retained the Phase-55 residual NONPASS pattern. The scoped classification is
+`P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET`.
+
+This is a bounded launch-provenance diagnostic. It does not claim exact historical Phase-53 launch bytes,
+reclassify Phase 51/53/55, authorize a full replay, or supply a global cycle, physics claim, or TOE claim.
+The full result and warning audit are in
+[`PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md`](../cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md).
 
 ## Reproduction status
 

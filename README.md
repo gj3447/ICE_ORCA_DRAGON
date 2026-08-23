@@ -24,8 +24,8 @@ results, numerical controls, physical interpretations, failed constructions, and
 reported separately.
 
 > **Operational pause (2026-08-23):** The Phase 51–56 saved-backend/reconstructed-launch
-> reconciliation route is `KILL`. Only the frozen Phase 11–50 historical allowlist and one exact
-> Phase 56 terminal-closeout script remain executable; Phase 51–55 reruns, Phase 56 variants, renamed
+> reconciliation route is `KILL`. The exact Phase 56 terminal closeout has been consumed; only the
+> frozen Phase 11–50 historical allowlist remains executable. Phase 51+, renamed
 > core work, and Phase 57+ are blocked. Allowed runners are SHA-256-bound and require a clean core tree.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. Remote push is also blocked until the tracked 529 MB
@@ -278,14 +278,14 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 75 | `./ice list --json` |
+| runnable Python kernels | 88 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
 | research ontology | 607 nodes, 1717 edges, 149 claims: 81 `SUPPORTED`, 67 `CONTRADICTED`, 1 `INCONCLUSIVE` | `./ice ontology summary` |
 | indexed Phase 15R--43 payload | 98 artifacts, 89 evidence nodes, 29 phases, 46 scopes; 102/102 recorded hashes verified (98 artifacts + 4 policies); 26 validation warnings | ontology graph and validator |
 | named exact checks | 425, all `PASS` | phase result payloads in the ontology |
 | typed numerical checks | 252 current = 247 `PASS` + 4 `FAIL` + 1 `INCONCLUSIVE`; 253 including the separately catalogued passing legacy control = 248 `PASS` + 4 `FAIL` + 1 `INCONCLUSIVE` | phase result payloads in the ontology |
-| latest runnable CPT seam phase | Phase 43 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) |
+| latest committed CPT seam phase | Phase 56 terminal closeout (execution consumed) | [`PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md`](cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.

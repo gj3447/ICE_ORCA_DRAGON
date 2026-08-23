@@ -2193,7 +2193,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "89d42fd915de66007dcbce59e207da74ff1eff55f4090f370ceac44bea24a637",
+      "sha256": "0533f9c710abc6e810fb8a54bccaa905939cf97c478a86ad6b4ad9a88ad0df1c",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -2203,7 +2203,7 @@
       "summary": "New calculations require source, equations, observed output, independent checks, and scoped interpretation, but no mandatory research contract, preregistration ritual, or KG ratification.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "89d42fd915de66007dcbce59e207da74ff1eff55f4090f370ceac44bea24a637",
+      "sha256": "0533f9c710abc6e810fb8a54bccaa905939cf97c478a86ad6b4ad9a88ad0df1c",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
     },
     {

@@ -90,15 +90,15 @@ it("canonicalizes traversal and rejects root escape before routing", () => {
   ).toBe(false)
 })
 
-it("classifies ordinary kernels and only the exact Phase 56 closeout", () => {
+it("classifies ordinary kernels and keeps the consumed Phase 56 closeout blocked", () => {
   expect(researchRunDecision("research/hypercomplex/demo").reason).toBe(
     "NON_CORE"
   )
-  expect(
-    researchRunDecision(
-      "cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning"
-    ).reason
-  ).toBe("TERMINAL_CLOSEOUT")
+  const closeout = researchRunDecision(
+    "cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning"
+  )
+  expect(closeout.allowed).toBe(false)
+  expect(closeout.reason).toBe("TERMINAL_CLOSEOUT_CONSUMED")
 })
 
 it("allows only frozen history through Phase 50 and blocks killed-route reruns", async () => {
@@ -189,7 +189,18 @@ it("blocks an unclassified resolved core script before Python execution", async 
   }
 })
 
-it("rejects clean but non-frozen terminal bytes and any dirty core tree", async () => {
+it("blocks the consumed terminal runner before Python execution", async () => {
+  const error = await Effect.runPromise(
+    runScript(
+      "phase56_lambda_half_launch_provenance_residual_conditioning",
+      []
+    ).pipe(Effect.flip, Effect.provide(RepositoryLayer))
+  )
+  expect(error.code).toBe("RESEARCH_PHASE_PAUSED")
+  expect(error.message).toContain("closeout has been consumed")
+})
+
+it("rejects clean but non-frozen historical bytes and any dirty core tree", async () => {
   const root = await mkdtemp(join(tmpdir(), "ice-ragnarok-provenance-"))
   const runGit = (args: ReadonlyArray<string>): void => {
     const result = spawnSync("git", args, { cwd: root, encoding: "utf8" })
@@ -202,7 +213,7 @@ it("rejects clean but non-frozen terminal bytes and any dirty core tree", async 
     await mkdir(researchDirectory)
     const runner = join(
       researchDirectory,
-      "phase56_lambda_half_launch_provenance_residual_conditioning.py"
+      "phase50_m4_m5_joint_saddle_homotopy.py"
     )
     await writeFile(
       runner,
@@ -225,19 +236,19 @@ it("rejects clean but non-frozen terminal bytes and any dirty core tree", async 
       Layer.succeed(Workspace, workspaceFromRoot(root))
     )
     const mismatch = await Effect.runPromise(
-      runScript(
-        "phase56_lambda_half_launch_provenance_residual_conditioning",
-        []
-      ).pipe(Effect.flip, Effect.provide(TestLayer))
+      runScript("phase50_m4_m5_joint_saddle_homotopy", []).pipe(
+        Effect.flip,
+        Effect.provide(TestLayer)
+      )
     )
     expect(mismatch.code).toBe("RESEARCH_RUNNER_HASH_MISMATCH")
 
     await writeFile(runner, `${await readFile(runner, "utf8")}# dirty\n`)
     const dirty = await Effect.runPromise(
-      runScript(
-        "phase56_lambda_half_launch_provenance_residual_conditioning",
-        []
-      ).pipe(Effect.flip, Effect.provide(TestLayer))
+      runScript("phase50_m4_m5_joint_saddle_homotopy", []).pipe(
+        Effect.flip,
+        Effect.provide(TestLayer)
+      )
     )
     expect(dirty.code).toBe("RESEARCH_CORE_DIRTY")
   } finally {
@@ -300,7 +311,11 @@ it("returns exit 2 and the typed pause error from the real CLI", () => {
 it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.operational_state).toBe("BOUNDED_PAUSE")
   expect(ragnarokStatus.containment.continuation_route).toBe("KILL")
-  expect(ragnarokStatus.containment.maximum_allowed_core_phase).toBe(56)
+  expect(ragnarokStatus.containment.maximum_allowed_core_phase).toBe(50)
+  expect(ragnarokStatus.containment.terminal_closeout_completed).toBe(true)
+  expect(ragnarokStatus.containment.terminal_closeout_result.next_phase).toBe(
+    null
+  )
   expect(ragnarokStatus.containment.next_phase).toBe(null)
   expect(ragnarokStatus.containment.frozen_historical_run_allowlist).toEqual([
     ...frozenHistoricalCoreScripts
