@@ -3,7 +3,7 @@
   "phase": 54,
   "status": "FROZEN_BEFORE_RUNNER_OR_ANY_PHASE54_OUTPUT",
   "frozen_at_utc": "2026-08-23T13:25:04Z",
-  "manifest_introduction_commit": "TO_BE_BOUND_AFTER_INITIAL_COMMIT",
+  "manifest_introduction_commit": "cceaf7b91318627bea9ae5dca287716e971eb043",
   "repository_head_observed_at_freeze": "a502d4d514c1864d2ba880551fad48ea4b858bad",
   "scope": {
     "question": "On the six actual Phase-53 source-by-lambda launch states, does the historical Phase-51 global non-CSE active lambda-blended gradient or completed RHS fail the frozen direct-global 120-decimal accuracy gate, and does a frozen global-versus-element-local by standard-versus-long within-callable 2-by-2 audit localize the arithmetic mechanism without replaying continuation?",
