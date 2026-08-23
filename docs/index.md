@@ -13,6 +13,7 @@ current set with `./ice list --json` rather than copied prose counts.
 npm ci
 uv sync --locked
 ./ice doctor
+./ice status
 npm run check
 ./ice list
 ./ice ontology validate
@@ -25,6 +26,7 @@ npm run check
 | [`../README.md`](../README.md) | overview, repository layout, CLI, scientific scope, and current snapshot |
 | [`USERGUIDE.md`](USERGUIDE.md) | live-catalog usage and kernel workflow |
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
+| [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md) | frozen core allowlist through Phase 50, one exact Phase-56 terminal closeout, fail-closed new core execution, scoped route KILL, and oversized-Git-object containment |
 | [`ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md) | philosophical synthesis of formal possibility, invariant physical difference, amplitude, persistent record, and evidence |
 | [`ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md) | intuitive meditation on invariance, non-privilege, seams, memory, and the limits of recursive consistency |
 | [`../research/README.md`](../research/README.md) | organized hypercomplex/legacy-prediction code and report map |
@@ -78,6 +80,7 @@ speculation. See [`../AGENTS.md`](../AGENTS.md).
 
 | Need | Command |
 |---|---|
+| inspect operational research pause | `./ice status` or `./ice status --json` |
 | inspect environment | `./ice doctor` |
 | list runnable kernels | `./ice list` or `./ice list --json` |
 | inspect one entry | `./ice info <name>` |

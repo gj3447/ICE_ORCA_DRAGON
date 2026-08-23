@@ -5,6 +5,11 @@ import { discoverScripts, resolveScript } from "./catalog.ts"
 import { doctor } from "./doctor.ts"
 import { iceError, type IceError } from "./errors.ts"
 import { inherit } from "./process.ts"
+import {
+  formatRagnarokStatus,
+  guardResearchQuery,
+  guardResearchRun
+} from "./research-pause.ts"
 import { outputForScript } from "./repro/manifest.ts"
 import {
   listReproCases,
@@ -69,8 +74,10 @@ export const runScript = (
   Effect.gen(function* () {
     const workspace = yield* Workspace
     const path = yield* Path.Path
+    yield* guardResearchQuery(query)
     const entry = yield* discoverScripts.pipe(
-      Effect.flatMap((entries) => resolveScript(entries, query))
+      Effect.flatMap((entries) => resolveScript(entries, query)),
+      Effect.flatMap(guardResearchRun)
     )
     const scriptArgs = args[0] === "--" ? args.slice(1) : args
     const exitCode = yield* inherit({
@@ -105,6 +112,10 @@ export const scriptInfo = (
   })
 
 export const doctorCommand: typeof doctor = doctor
+
+export const researchStatusCommand = (
+  json: boolean
+): Effect.Effect<void> => Console.log(formatRagnarokStatus(json))
 
 export const reproCommand = (
   options: ReproOptions & { readonly list: boolean }

@@ -23,6 +23,15 @@ The repository preserves speculative motivations while turning them into scoped 
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
 
+> **Operational pause (2026-08-23):** The Phase 51–56 saved-backend/reconstructed-launch
+> reconciliation route is `KILL`. Only the frozen Phase 11–50 historical allowlist and one exact
+> Phase 56 terminal-closeout script remain executable; Phase 51–55 reruns, Phase 56 variants, renamed
+> core work, and Phase 57+ are blocked. Allowed runners are SHA-256-bound and require a clean core tree.
+> Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
+> Inspect the typed state with `./ice status`. Remote push is also blocked until the tracked 529 MB
+> Phase-44 Git object is externalized through an explicitly authorized history-remediation procedure.
+> See the [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md).
+
 The programme's current philosophical synthesis is documented in
 [`docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md):
 mathematical structure supplies candidate possibilities; physical content requires quotienting
@@ -290,6 +299,7 @@ by `uv.lock`.
 npm ci
 uv sync --locked
 ./ice doctor
+./ice status
 ./ice list
 ```
 
@@ -297,6 +307,7 @@ Canonical commands:
 
 ```bash
 ./ice doctor
+./ice status [--json]
 ./ice list [--json]
 ./ice info <name>
 ./ice run <name> [-- <kernel args>]

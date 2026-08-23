@@ -12,12 +12,32 @@
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
 | Reproduction ledger | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` |
-| Local engineering gate | `npm run check` (strict typecheck + 22 tests) |
+| Local engineering gate | `npm run check` (strict typecheck + Vitest suite) |
 | Environment gate | `./ice doctor` |
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
+| Ragnarok containment | `BOUNDED_PAUSE`; frozen P11–P50 allowlist + exact P56 closeout only; P51–P55 reruns, P56 variants, renamed core work, and P57+ blocked |
+| Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
+| Remote transport | `BLOCKED_OVERSIZED_GIT_OBJECT` pending explicitly authorized artifact externalization and history remediation |
 
 Historical source/result inventories contain more files than the live CLI. Do not use a copied prose
 count or rough “N+” inventory as the runnable catalog.
+
+### Active Ragnarok containment
+
+`./ice status` is the typed operational authority. Phase 56 may answer only its already frozen
+lambda-half launch-provenance/residual-conditioning question and then must set `next_phase = null`.
+Only the exact frozen Phase 11–50 historical allowlist and designated Phase 56 terminal script execute;
+their runner SHA-256 must match and the core directory must be clean.
+The Phase-51→56 saved-backend/reconstructed-launch reconciliation route may not rerun Phase 51–55,
+substitute another Phase 56, generate Phase 57, perform a full replay, relax a threshold, or create
+another evaluator/dtype/solver/residual/provenance descendant.
+Review becomes eligible on 2026-08-30 but never resumes automatically.
+
+This containment does not erase real scoped progress or convert open science into a no-go. Gate 1 remains
+`OPEN_PARTIAL_PROGRESS`, required global/physics outputs remain null, and global promotion remains
+`PROHIBITED`. The exact scope, reopening conditions, 529,370,671-byte Phase-44 Git blocker, and
+non-destructive remediation boundary are recorded in
+[`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md).
 
 ## Reproduction status
 

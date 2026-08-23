@@ -119,7 +119,14 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 55)
+## 현재 경계 (Phase 55 + Phase 56 terminal closeout)
+
+> **Ragnarok containment (2026-08-23):** Phase 51→56의 saved-backend/reconstructed-launch
+> reconciliation 경로는 Phase 56 종결 진단과 함께 `KILL`한다. Phase 56은 유일한 terminal-closeout
+> 예외이며 정확히 동결된 Phase 11–50 역사 실행체 외의 Phase 51–55 재실행, Phase 56 변종,
+> renamed core work, Phase 57+, full replay와 같은 채무의 자동 후속 Phase는 금지된다. Gate 1은
+> `OPEN_PARTIAL_PROGRESS`, global promotion은 `PROHIBITED`이고 scientific route 자체는 `OPEN`이다.
+> `../docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`와 `./ice status`가 이 경계를 정한다.
 
 - Phase 11 strong 허용 class와 unrestricted-lapse rescaling을 포함한 weak dilation은 명시한
   가정 아래 open-interval bulk에서 canonical frame change로 제거되며 endpoint
@@ -513,7 +520,13 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   field는 `null` 또는 `false`, physics/TOE/promoted output은 `null`, global promotion은
   `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
-## 다음 계산
+## 종결 계산과 bounded pause
+
+아래에 기록된 역사적 follow-up queue 가운데 현재 승인된 계산은 이미 동결된 **Phase 56
+lambda-half launch provenance / residual-conditioning audit 한 번뿐**이다. 이 계산은 결과에
+상관없이 `next_phase = null`로 닫고 Phase 57이나 full replay를 열지 않는다. 2026-08-30 이후에도
+회로 차단기 결정의 모든 조건과 사용자의 명시적 승인이 없으면 아래 장기 항목을 실행 queue로
+해석하지 않는다.
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
@@ -529,18 +542,19 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   `(5-,4+,0)`, sample `||xi||<40` gate를 그대로 적용하며 refined 결과를 유리하게 선택하지 않는다.
   모든 endpoint에 대해 scaled-residual identity, T-component amplification, center effect, launch effect와
   nonlinear interaction을 보존한다. Fresh/fresh corner가 두 profile에서 모두 저장 target을 회복하는지
-  여부만 분류하고, fresh object를 exact historical Phase-53 launch라고 부르지 않는다. 이 진단이 끝나도
-  Phase-56 **full replay**는 별도 candidate qualification 없이는 열지 않는다. 그 replay까지 통과한 뒤에만
-  straight arm과 later cap reintersection을 검색하고, 모든 saddle/upward component, complex BVP sheet,
-  Stokes data와 relative good end를 열거한다. Separately specified physical original cycle과 lapse contour를
-  정한 뒤에만 complete intersection sum과 regulator-removal을 시도한다. Phase 50의 sampled stabilizer
+  여부만 분류하고, fresh object를 exact historical Phase-53 launch라고 부르지 않는다. 이 진단 뒤
+  Phase-56 **full replay**와 straight-arm/cap-reintersection 검색은 열리지 않는다. 별도 direct-Gate-1
+  route가 모든 재개 조건과 사용자 승인을 충족하는 경우에만 모든 saddle/upward component, complex
+  BVP sheet, Stokes data와 relative good end를 열거하고, separately specified physical original cycle과 lapse contour를 정한 뒤
+  complete intersection sum과 regulator-removal을 시도할 수 있다. Phase 50의 sampled stabilizer
   bridge는 exact action nesting, common physical determinant line, cutoff/continuum theorem이 아니며,
   Phase 49의 formal endpoint-error transport와 portable-flow-adapter debt도 별도 numerical follow-up으로
   남는다. 동시에 Phase 31 hybrid를 constraint-reduced inhomogeneous
   graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로 확장해
   determinant-line orientation과 gauge-fixing independence를 검사한다.
-- **Hard-CFU parallel track:** regular hard quotient와 CFU coefficients \(A,B\)의 탐색 계산은 Gate 1과
-  병렬로 진행할 수 있다. 다만 그것을 original joint-cycle coefficient와 결합해 physical uniform
+- **Hard-CFU parallel track (과학적으로 conditional, 운영상 paused):** regular hard quotient와 CFU
+  coefficients \(A,B\)의 탐색 계산은 논리적으로 Gate 1과 병렬일 수 있지만 현재 회로 차단기 아래서는
+  실행하지 않는다. 재개 조건과 사용자 승인이 충족된 뒤에도 그것을 original joint-cycle coefficient와 결합해 physical uniform
   kernel로 승격하는 단계만 Gate 1의 cycle vector와 signed intersections에 의존한다.
 - **Three-form seam-kernel gate:** compact three-form SUGRA boundary state 또는 charged-membrane
   saddle에서 실제 \(C_{n\ell}\), charge/tension, boundary ensemble과 determinant prefactor를

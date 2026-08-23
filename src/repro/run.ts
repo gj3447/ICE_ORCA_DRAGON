@@ -3,6 +3,7 @@ import * as Path from "@effect/platform/Path"
 import { Clock, Console, Effect } from "effect"
 import { iceError, type IceError } from "../errors.ts"
 import { capture } from "../process.ts"
+import { guardResearchRelpaths } from "../research-pause.ts"
 import { Workspace } from "../workspace.ts"
 import { compareComputed, decodeJsonObject, type Difference } from "./compare.ts"
 import { reproCases, type ReproCase } from "./manifest.ts"
@@ -340,6 +341,7 @@ export const runRepro = (
       const fs = yield* FileSystem.FileSystem
       const path = yield* Path.Path
       const selected = yield* selectCases(options.only)
+      yield* guardResearchRelpaths(selected.map((entry) => entry.script))
       const temporary = yield* fs.makeTempDirectoryScoped({ prefix: "ice-repro-" }).pipe(
         Effect.mapError((error) =>
           iceError("TEMP_DIRECTORY_FAILED", `cannot create temp directory: ${String(error)}`)

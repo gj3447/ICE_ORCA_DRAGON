@@ -4,6 +4,7 @@ import { Console, Effect, Layer } from "effect"
 import {
   doctorCommand,
   listScripts,
+  researchStatusCommand,
   reproCommand,
   runScript,
   scriptInfo,
@@ -19,6 +20,14 @@ const json = Options.boolean("json").pipe(
 
 const list = Command.make("list", { json }, ({ json }) => listScripts(json)).pipe(
   Command.withDescription("list runnable numerical-kernel scripts")
+)
+
+const status = Command.make("status", { json }, ({ json }) =>
+  researchStatusCommand(json)
+).pipe(
+  Command.withDescription(
+    "show the operational research pause separately from scientific status"
+  )
 )
 
 const scriptName = Args.text({ name: "name" })
@@ -71,7 +80,15 @@ const root = Command.make("ice", {}, () =>
   Console.log("Use `ice --help` to inspect the Effect control plane.")
 ).pipe(
   Command.withDescription("ICE_ORCA_DRAGON functional workbench control plane"),
-  Command.withSubcommands([list, run, info, doctor, repro, ontologyCommand])
+  Command.withSubcommands([
+    status,
+    list,
+    run,
+    info,
+    doctor,
+    repro,
+    ontologyCommand
+  ])
 )
 
 const cli = Command.run(root, {

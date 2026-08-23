@@ -16,6 +16,28 @@
   **erase 금지**다 (narrative-feedback-loop, Eilu va-Eilu). 격하가 아니라 층 분리다.
 - 이 둘을 동시에 지키는 것이 이 저장소에서 가장 자주 틀리는 지점이다.
 
+## Ragnarok 회로 차단기 — ACTIVE
+
+`docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`가 현재 core 연구의 실행 경계를
+정한다. `./ice status`가 기계 판독 가능한 정본이다.
+
+- Phase 51→56의 saved-backend/reconstructed-launch reconciliation 경로는 **KILL**이다.
+- Phase 56은 동결된 질문을 닫는 terminal-closeout 예외다. 그 결과와 무관하게 Phase 57 이상,
+  full replay, 같은 evaluator/dtype/solver/residual/provenance 채무의 자동 offspring를 만들거나
+  실행하지 않는다. 직접 Python 실행으로 제어면을 우회하지 않는다.
+- 제어면은 정확히 동결된 Phase 11–50 역사 실행체와 지정된 Phase 56 terminal script 하나만
+  허용한다. Phase 51–55 재실행, 다른 Phase 56 이름, 낮은 번호 재사용, Phase 토큰 없는 새 core
+  실행체는 모두 차단한다. `repro`도 같은 경계를 적용한다.
+- 허용 경로도 runner SHA-256과 clean `cpt_temporal_folded_susy/` provenance가 일치해야 한다.
+  traversal/absolute path, dirty·untracked core 파일, 허용 이름에 다른 bytes 덮어쓰기는 실행하지
+  않는다.
+- 2026-08-30은 재검토 자격일일 뿐 자동 재개일이 아니다. 새 core Phase는 결정문 조건 전부와
+  사용자의 명시적 승인을 요구한다.
+- 이는 과학적 Gate 1 KILL이 아니다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
+  `PROHIBITED`, scientific route는 `OPEN`이다.
+- Phase 44의 529,370,671-byte Git blob(호스팅 한도 100 MB 초과) 때문에 원격 push는 차단한다. 이력 정리는 파괴적 작업이므로
+  별도 사용자 승인 없이 amend/rebase/reset/filter/LFS migration/force-push를 하지 않는다.
+
 ## Commands
 
 제어면은 **Node 24 + strict TypeScript + Effect 3**이며 `package-lock.json`으로 고정한다.
@@ -28,6 +50,7 @@ uv sync --locked
 ```
 
 - 환경 진단: `./ice doctor` (동일 명령: `npm run ice -- doctor`)
+- 연구 중단 상태: `./ice status` (`--json` 지원)
 - 실행 가능한 스크립트 열거: `./ice list` (`--json` 지원)
 - 스크립트 실행: `./ice run <name|relpath> [-- args...]`
   (해당 스크립트의 *자기 디렉토리*에서 실행되고 exit code 를 그대로 전파한다)
@@ -43,7 +66,7 @@ uv sync --locked
 `name` 은 stem 또는 relpath, unique-prefix 매칭이 된다.
 
 `test/`에는 Effect/Vitest 제어면 계약 검사가 있다 (`npm run check` = strict typecheck +
-21 tests). 자동 GitHub Actions CI는 아직 없다.
+Vitest suite). 자동 GitHub Actions CI는 아직 없다.
 이 검사는 도구 회귀만 막는다. "단위검사가 통과했다"는 물리 연구 완료 근거가 아니며,
 계산 결과와 물리적 해석은 분리해서 보고한다.
 
