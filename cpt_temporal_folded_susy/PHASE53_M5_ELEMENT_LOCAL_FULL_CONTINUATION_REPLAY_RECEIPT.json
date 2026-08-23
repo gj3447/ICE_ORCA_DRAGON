@@ -1,0 +1,83 @@
+{
+  "schema": "ice-phase53-independent-rerun-receipt/v1",
+  "phase": 53,
+  "purpose": "Independent rerun of the committed Phase-53 full semantic replay, with an exact audit of process-local identity fields.",
+  "authoritative_result": {
+    "path": "cpt_temporal_folded_susy/PHASE53_M5_ELEMENT_LOCAL_FULL_CONTINUATION_RESULT.json",
+    "commit": "a9a7e6018d2a94749c4f7213501fa061187fd62a",
+    "bytes": 2085497,
+    "raw_sha256": "15cca28d8821a25ba0d0870570d2f42d9a1d8ac7f439a3b9833f500384f58d17",
+    "result_payload_sha256_without_self": "3a0c233d65ac4175dbd44c4e238864dcfc4fbd59c8829469522bd9977ff88fc4",
+    "self_digest_verified": true
+  },
+  "rerun": {
+    "head_before_and_after": "c020a13a0c2c7963920ca17365f27fe6544fa0d9",
+    "runner_commit": "fe1ad0b325b207d79208db416fab5aa2f9661105",
+    "started_at_utc": "2026-08-23T12:47:18Z",
+    "completed_at_utc": "2026-08-23T14:35:37Z",
+    "elapsed_seconds_at_whole_second_timestamp_resolution": 6499,
+    "command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 proxmox-scratch run p53r --timeout 9000 -- ./ice run phase53_m5_element_local_full_continuation",
+    "exit_code": 0,
+    "ephemeral_scratch_path": "/var/tmp/orca/runs/ice_orca_dragon.p53r.20260823T124718Z.P9R27t",
+    "ephemeral_scratch_removed_by_wrapper_after_exit": true,
+    "stdout_log": {
+      "path": "/var/tmp/phase53-repro.a9a7e60/stdout.log",
+      "bytes": 2085509,
+      "sha256": "c80961d7498691a9ae0206254daf01d59ac04689e39fe381ec1df4ffccad3052",
+      "result_json_record_count": 1
+    },
+    "stderr_log": {
+      "path": "/var/tmp/phase53-repro.a9a7e60/stderr.log",
+      "bytes": 10708,
+      "sha256": "3a7c1644a56db41ae3ea03ab952a220bd5dda9879844a1d31d15fc67bac46a4b"
+    },
+    "result_payload": {
+      "bytes": 2085497,
+      "raw_sha256": "52c779cbf0f2c4349ffca4e698ad09896894916e1dda2c584ac24d2c204a32ef",
+      "result_payload_sha256_without_self": "8b589d60ee137e238f0d07e1a68b14056ae3eb6792283ce4491abd45bc2d64af",
+      "self_digest_verified": true,
+      "strict_unique_finite_json": true,
+      "schema": "ice-phase53-m5-element-local-full-continuation/v1",
+      "run_status": "VALID_RUN",
+      "classification": "PHI_PLUS_M5_ELEMENT_LOCAL_FULL_CONTINUATION_REPLAY_INCONCLUSIVE",
+      "exact_checks_passed": 8,
+      "exact_checks_total": 8,
+      "numerical_checks_passed": 10,
+      "numerical_checks_total": 11
+    }
+  },
+  "comparison_policy": {
+    "raw_byte_identity_required": false,
+    "reason": "The result deliberately serializes process-local Python identity integers. Their values may differ between processes while their paths and alias/equality partition must remain exact.",
+    "volatile_leaf_definition": "An integer but not boolean leaf whose JSON-pointer path contains the case-insensitive substring 'identity'.",
+    "normalization": "Remove only the root result_payload_sha256_without_self field. Replace each volatile identity integer by PROCESS_LOCAL_IDENTITY_CLASS_SHA256:<sha256(canonical sorted JSON-pointer group)> for its within-payload equality class. Preserve every other key, value, type, list order, and alias partition exactly.",
+    "canonical_json": "UTF-8, keys sorted, separators comma/colon without spaces, ensure_ascii=false, finite values only"
+  },
+  "comparison": {
+    "raw_bytes_identical": false,
+    "raw_diff_leaf_count": 402,
+    "changed_process_local_identity_integer_leaves": 401,
+    "changed_derived_self_digest_leaves": 1,
+    "unexpected_nonidentity_diff_count": 0,
+    "identity_leaf_count_authoritative": 401,
+    "identity_leaf_count_rerun": 401,
+    "identity_path_set_sha256_authoritative": "3932aab8fb96de1468d5ad6fc7d960b3e9b2725d5efc1ac3383358cb91e02d75",
+    "identity_path_set_sha256_rerun": "3932aab8fb96de1468d5ad6fc7d960b3e9b2725d5efc1ac3383358cb91e02d75",
+    "identity_path_sets_exact": true,
+    "identity_equality_class_count_authoritative": 16,
+    "identity_equality_class_count_rerun": 16,
+    "identity_equality_partition_sha256_authoritative": "10ff373c6ac078b4ebe0cb9a247b082e4a1fcca2a0f957efc01d30945e22c506",
+    "identity_equality_partition_sha256_rerun": "10ff373c6ac078b4ebe0cb9a247b082e4a1fcca2a0f957efc01d30945e22c506",
+    "identity_equality_partitions_exact": true,
+    "normalized_canonical_sha256_authoritative": "fc1b6a8bc95345efbd1c25d36d9c69b14a3e22f901431bdd7f6669f19650e08c",
+    "normalized_canonical_sha256_rerun": "fc1b6a8bc95345efbd1c25d36d9c69b14a3e22f901431bdd7f6669f19650e08c",
+    "normalized_payloads_exact": true,
+    "terminal_schema_status_classification_checks_and_nulls_exact": true
+  },
+  "verdict": "INDEPENDENT_RERUN_EXACT_AFTER_PROCESS_LOCAL_IDENTITY_NORMALIZATION",
+  "scientific_effect": "Reproduces the Phase-53 valid local INCONCLUSIVE result; it does not reclassify Phase 51 or Phase 53 and adds no global, physics, or TOE claim.",
+  "physics_claim": null,
+  "TOE_claim": null,
+  "global_promotion": "PROHIBITED",
+  "gate1": "OPEN_PARTIAL_PROGRESS"
+}
