@@ -29,7 +29,7 @@ reported separately.
 > core work, and Phase 57+ are blocked. Allowed runners are SHA-256-bound and require a clean core tree.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
-> the unpublished tail to an exact-path Git LFS object; remote verification is pending. See the
+> the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the
 > [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md)
 > and the [LFS migration ledger](docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
 

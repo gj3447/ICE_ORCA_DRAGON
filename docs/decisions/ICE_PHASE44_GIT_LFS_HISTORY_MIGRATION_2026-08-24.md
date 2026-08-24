@@ -2,7 +2,7 @@
 
 Date: 2026-08-24 UTC
 
-Status: `LFS_MIGRATED_PUSH_PENDING`
+Status: `PUSHED_WITH_GIT_LFS`
 
 Scope: repository transport and historical provenance only
 
@@ -117,9 +117,17 @@ Content SHA-256 checks and the hydrated current artifacts remain unchanged.
 
 ## Remote receipt
 
-At this attestation commit, the Git LFS object upload and remote `main` verification remain pending.
-The active status is fail-closed as `LFS_MIGRATED_PUSH_PENDING`. A follow-up receipt may change it only
-after both the LFS object and the ordinary Git ref are read back from GitHub.
+The 529,370,671-byte LFS object uploaded successfully, followed by a non-force fast-forward of `main`
+from `dde2ff928e1a2019119e45b70148da9e19fbb3b4` to
+`b524abd08201699a674e723538835ee92545c966`. At `2026-08-24T06:08:08Z`, `git ls-remote`
+returned that exact head.
+
+A new single-branch clone with smudging initially disabled then pulled the object from GitHub. The
+read-back had SHA-256
+`bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75` and size
+`529,370,671`; `git lfs fsck`, strict TypeScript, Vitest `39/39`, and ontology validation with 166/166
+hashes and zero errors all passed in that fresh clone. The pre-LFS head was absent, as expected. This
+receipt commit follows the verified remote head and does not alter the migrated LFS object.
 
 ## Sources
 

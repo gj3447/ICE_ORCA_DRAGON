@@ -18,7 +18,7 @@
 | Ragnarok containment | `BOUNDED_PAUSE`; Phase 56 closeout consumed; only the frozen P11–P50 historical allowlist remains executable; P51+ and renamed core work blocked |
 | Phase 56 closeout | `VALID_RUN`; fresh center/launch recovers the saved lambda-half target under both profiles; `next_phase=null` |
 | Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
-| Remote transport | `LFS_MIGRATED_PUSH_PENDING`; exact Phase-44 path is a 529,370,671-byte Git LFS object, with 76 rewritten unpublished commits and no force-push requirement |
+| Remote transport | `PUSHED_WITH_GIT_LFS`; exact Phase-44 path is a 529,370,671-byte Git LFS object, with 76 rewritten unpublished commits, no force-push, and a verified fresh remote read-back |
 
 Historical source/result inventories contain more files than the live CLI. Do not use a copied prose
 count or rough “N+” inventory as the runnable catalog.

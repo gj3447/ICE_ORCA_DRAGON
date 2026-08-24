@@ -329,7 +329,7 @@ it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.scientific_state.physics_claim).toBe(null)
   expect(ragnarokStatus.auto_resume).toBe(false)
   expect(ragnarokStatus.repository_transport.push_status).toBe(
-    "LFS_MIGRATED_PUSH_PENDING"
+    "PUSHED_WITH_GIT_LFS"
   )
   expect(ragnarokStatus.repository_transport.transport_mode).toBe(
     "GIT_LFS_EXACT_PATH"
@@ -344,7 +344,10 @@ it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.repository_transport.migration.force_push_required).toBe(
     false
   )
-  expect(ragnarokStatus.repository_transport.remote_push.verified).toBe(false)
+  expect(ragnarokStatus.repository_transport.remote_push.verified).toBe(true)
+  expect(
+    ragnarokStatus.repository_transport.remote_push.lfs_readback_verified
+  ).toBe(true)
 })
 
 it("renders stable human and machine-readable status", () => {

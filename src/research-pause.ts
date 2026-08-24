@@ -118,7 +118,7 @@ export const ragnarokStatus = {
     direct_python_bypass_authorized: false
   },
   repository_transport: {
-    push_status: "LFS_MIGRATED_PUSH_PENDING",
+    push_status: "PUSHED_WITH_GIT_LFS",
     transport_mode: "GIT_LFS_EXACT_PATH",
     ordinary_git_hosting_limit: "100 MB",
     migrated_object: {
@@ -161,9 +161,14 @@ export const ragnarokStatus = {
     },
     remote_push: {
       authorized_on: "2026-08-24",
-      verified: false,
-      verified_at_utc: null,
-      verified_remote_head: null
+      verified: true,
+      verified_at_utc: "2026-08-24T06:08:08Z",
+      verified_remote_head:
+        "b524abd08201699a674e723538835ee92545c966",
+      lfs_readback_verified: true,
+      lfs_readback_sha256:
+        "bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75",
+      lfs_readback_bytes: 529_370_671
     },
     history_remediation_requires_explicit_user_authorization: false
   },
