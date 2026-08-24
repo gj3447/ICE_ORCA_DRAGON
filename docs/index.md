@@ -10,6 +10,8 @@ runs, and reproduces locked Python kernels. The committed catalog contains 88 ru
 current set with `./ice list --json` rather than copied prose counts.
 
 ```bash
+git lfs install --local
+git lfs pull --include="cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json"
 npm ci
 uv sync --locked
 ./ice doctor
@@ -27,6 +29,7 @@ npm run check
 | [`USERGUIDE.md`](USERGUIDE.md) | live-catalog usage and kernel workflow |
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
 | [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md) | frozen core allowlist through Phase 50, consumed Phase-56 terminal closeout, fail-closed Phase 51+ execution, scoped route KILL, and oversized-Git-object containment |
+| [`decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md) | exact-path Phase-44 Git LFS migration, old/new commit map, recovery bundle identity, and remote transport receipt |
 | [`ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md) | philosophical synthesis of formal possibility, invariant physical difference, amplitude, persistent record, and evidence |
 | [`ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md) | intuitive meditation on invariance, non-privilege, seams, memory, and the limits of recursive consistency |
 | [`../research/README.md`](../research/README.md) | organized hypercomplex/legacy-prediction code and report map |

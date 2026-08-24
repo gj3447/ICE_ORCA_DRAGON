@@ -3,7 +3,7 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-23
+## Current state — 2026-08-24
 
 | Component | State |
 |---|---|
@@ -18,7 +18,7 @@
 | Ragnarok containment | `BOUNDED_PAUSE`; Phase 56 closeout consumed; only the frozen P11–P50 historical allowlist remains executable; P51+ and renamed core work blocked |
 | Phase 56 closeout | `VALID_RUN`; fresh center/launch recovers the saved lambda-half target under both profiles; `next_phase=null` |
 | Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
-| Remote transport | `BLOCKED_OVERSIZED_GIT_OBJECT` pending explicitly authorized artifact externalization and history remediation |
+| Remote transport | `LFS_MIGRATED_PUSH_PENDING`; exact Phase-44 path is a 529,370,671-byte Git LFS object, with 76 rewritten unpublished commits and no force-push requirement |
 
 Historical source/result inventories contain more files than the live CLI. Do not use a copied prose
 count or rough “N+” inventory as the runnable catalog.
@@ -36,9 +36,11 @@ Review becomes eligible on 2026-08-30 but never resumes automatically.
 
 This containment does not erase real scoped progress or convert open science into a no-go. Gate 1 remains
 `OPEN_PARTIAL_PROGRESS`, required global/physics outputs remain null, and global promotion remains
-`PROHIBITED`. The exact scope, reopening conditions, 529,370,671-byte Phase-44 Git blocker, and
-non-destructive remediation boundary are recorded in
+`PROHIBITED`. The exact scope and reopening conditions are recorded in
 [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md).
+The Phase-44 transport blocker has been migrated to Git LFS without changing its bytes; the pre-LFS
+commit namespace, 76-row object map, local recovery bundle, and validation boundary are recorded in
+[`decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
 
 ### Phase 56 terminal result
 

@@ -35,16 +35,22 @@
   사용자의 명시적 승인을 요구한다.
 - 이는 과학적 Gate 1 KILL이 아니다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
   `PROHIBITED`, scientific route는 `OPEN`이다.
-- Phase 44의 529,370,671-byte Git blob(호스팅 한도 100 MB 초과) 때문에 원격 push는 차단한다. 이력 정리는 파괴적 작업이므로
-  별도 사용자 승인 없이 amend/rebase/reset/filter/LFS migration/force-push를 하지 않는다.
+- Phase 44의 529,370,671-byte 결과는 2026-08-24 사용자 승인 아래 exact-path Git LFS로
+  이관됐다. pre-LFS backup ref는 로컬 복구용이므로 `git push --all`/mirror 대상에 넣지 않는다.
+  이후에도 100 MB 초과 산출물을 ordinary Git에 넣거나 별도 승인 없이 추가 이력 재작성을 하지
+  않는다. 전송 상태와 provenance map은 `./ice status`와
+  `docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`를 따른다.
 
 ## Commands
 
 제어면은 **Node 24 + strict TypeScript + Effect 3**이며 `package-lock.json`으로 고정한다.
 계산면은 기존 NumPy/SciPy/SymPy Python 커널이며 **Python 3.13 + `uv.lock`**으로
-고정한다. 호스트 전역에 설치하지 말고 최초 1회 두 lock을 설치한다.
+고정한다. Phase-44 원문 수화에는 Git LFS가 필요하다. 호스트 전역 Python/Node에 설치하지 말고
+최초 1회 LFS와 두 lock을 준비한다.
 
 ```bash
+git lfs install --local
+git lfs pull --include="cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json"
 npm ci
 uv sync --locked
 ```

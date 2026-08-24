@@ -96,7 +96,7 @@ KILL의 적용 대상은 위의 방법 경로이며 Gate 1이나 CPT × Temporal
 나중에 독립 출처에서 hash 인증된 형태로 회수되면, 사용자의 별도 승인 아래 **비번호 archival
 reproduction audit**만 검토할 수 있다. 그 감사는 route 재개, 다음 Phase 또는 승격 권한이 아니다.
 
-## 원격 전송 차단과 비파괴 수습
+## 원격 전송 차단과 승인된 수습
 
 읽기 전용 검사에서 다음 사실을 확인했다.
 
@@ -120,10 +120,18 @@ GitHub는 일반 Git에서 100 MB를 넘는 단일 객체를 차단하므로 현
 - 재구성 가능한 산출물은 source, input, version, checksum, 생성 명령만 Git에 남기고 payload는
   승인된 외부 artifact storage 또는 Git LFS로 옮긴다.
 
-이력 수습은 파괴적·협업 조정 작업이므로 별도 사용자 승인 뒤에만 수행한다. 승인 시에는
-안전 사본 작성 → artifact backend와 checksum 확정 → 명시한 refs만 filter/LFS migration → 새
-checkout에서 tree·재현·ontology 검증 → force-push와 collaborator re-clone 조정 순서로 한다.
-현재 결정은 어떤 amend, rebase, reset, filter 또는 push도 승인하지 않는다.
+이 단락은 2026-08-23 최초 차단 시점의 상태를 보존한다. 사용자는 2026-08-24 이력 재작성과
+Git LFS 외부화를 명시적으로 승인했다. 승인된 수습은 정확한 Phase-44 결과 경로 하나와
+`4e75a4f...`부터의 미공개 76커밋에만 적용되었고, `origin/main`과 그 뒤 첫 40개 로컬 커밋은
+그대로 보존되었다. 일반 Git의 529,370,671-byte blob은 동일 내용 SHA-256의 LFS pointer로
+교체되었으며 force-push는 필요하지 않다.
+
+과거 결과·manifest·runner에 기록된 pre-LFS commit SHA는 실행 당시 provenance이므로 치환하지
+않는다. old/new 76행 map과 원 DAG bundle이 두 namespace를 연결한다. 정확한 객체, 명령,
+검증, backup과 remote receipt는
+[`ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md)에
+기록한다. 이 transport 수습은 Ragnarok pause, route `KILL`, Gate 1 또는 어떤 과학 분류도 바꾸지
+않는다.
 
 ## 구현 한계
 

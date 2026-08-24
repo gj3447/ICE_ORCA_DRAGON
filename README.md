@@ -28,9 +28,10 @@ reported separately.
 > frozen Phase 11–50 historical allowlist remains executable. Phase 51+, renamed
 > core work, and Phase 57+ are blocked. Allowed runners are SHA-256-bound and require a clean core tree.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
-> Inspect the typed state with `./ice status`. Remote push is also blocked until the tracked 529 MB
-> Phase-44 Git object is externalized through an explicitly authorized history-remediation procedure.
-> See the [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md).
+> Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
+> the unpublished tail to an exact-path Git LFS object; remote verification is pending. See the
+> [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md)
+> and the [LFS migration ledger](docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
 
 The programme's current philosophical synthesis is documented in
 [`docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md):
@@ -296,6 +297,8 @@ The control plane is strict TypeScript using Effect. Numerical kernels use the P
 by `uv.lock`.
 
 ```bash
+git lfs install --local
+git lfs pull --include="cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json"
 npm ci
 uv sync --locked
 ./ice doctor

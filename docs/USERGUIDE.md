@@ -6,13 +6,17 @@
 ## Setup
 
 ```bash
+git lfs install --local
+git lfs pull --include="cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json"
 npm ci
 uv sync --locked
 ./ice doctor
 ```
 
-`doctor` validates the Node major, package lock, Python version, uv lock, and required numerical
-packages. A READY report describes the environment, not the truth of a scientific claim.
+The LFS pull hydrates the 529,370,671-byte Phase-44 evidence object; ontology hash validation requires
+the hydrated bytes rather than the 134-byte pointer. `doctor` validates the Node major, package lock,
+Python version, uv lock, and required numerical packages. A READY report describes the environment, not
+the truth of a scientific claim.
 
 ## Discover before running
 

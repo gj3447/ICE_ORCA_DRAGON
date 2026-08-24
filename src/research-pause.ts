@@ -118,15 +118,54 @@ export const ragnarokStatus = {
     direct_python_bypass_authorized: false
   },
   repository_transport: {
-    push_status: "BLOCKED_OVERSIZED_GIT_OBJECT",
+    push_status: "LFS_MIGRATED_PUSH_PENDING",
+    transport_mode: "GIT_LFS_EXACT_PATH",
     ordinary_git_hosting_limit: "100 MB",
-    oversized_object: {
+    migrated_object: {
       path: "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json",
-      blob_oid: "b7d32b0547967d39ee69decb4e186fc8b9244c8a",
+      pre_migration_blob_oid:
+        "b7d32b0547967d39ee69decb4e186fc8b9244c8a",
+      pointer_blob_oid: "d8372d861b7e7de6419c9d32d178ba716320dc1e",
+      content_and_lfs_oid_sha256:
+        "bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75",
       blob_bytes: 529_370_671,
-      introduced_by: "4e75a4fe9ce909fa62794f5a550a3409f6e0fc9f"
+      pre_migration_introduced_by:
+        "4e75a4fe9ce909fa62794f5a550a3409f6e0fc9f",
+      migrated_introduced_by:
+        "18a17b643874e74f7486fe9e009066eba8a467cb",
+      gitattributes_rule:
+        "cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json filter=lfs diff=lfs merge=lfs -text"
     },
-    history_remediation_requires_explicit_user_authorization: true
+    migration: {
+      user_authorized_on: "2026-08-24",
+      completed: true,
+      force_push_required: false,
+      preserved_pre_boundary_commits: 40,
+      rewritten_commits: 76,
+      phase44_parent:
+        "d13af382fe65cc50f74fbc83861e41c0e7236341",
+      pre_migration_head:
+        "42c3e92b0519c99783777a4da41346192005dbb2",
+      migrated_head_before_attestation:
+        "f36e84c6be3471d8202c9ccf4925f3830bd5d310",
+      object_map_path:
+        "docs/decisions/ICE_PHASE44_GIT_LFS_OBJECT_MAP_2026-08-24.csv",
+      object_map_sha256:
+        "1882806fe40f0e4858d5e985f52a12b765e9d90781ce170ba5c21c9d43c58a31",
+      local_backup_ref: "backup/pre-lfs-main-20260824",
+      local_bundle_path:
+        ".git/migration-backups/pre-lfs-main-42c3e92-20260824.bundle",
+      local_bundle_sha256:
+        "6c8c7e4aefb71ccf74b7a3da1b15758ca16bc558817c9570f4c7fe9902c7a990",
+      local_bundle_bytes: 136_996_036
+    },
+    remote_push: {
+      authorized_on: "2026-08-24",
+      verified: false,
+      verified_at_utc: null,
+      verified_remote_head: null
+    },
+    history_remediation_requires_explicit_user_authorization: false
   },
   reopen_requirements: [
     "explicit user approval after review eligibility",
@@ -135,7 +174,7 @@ export const ragnarokStatus = {
     "a complete pre-run census of saddles, upward cycles, complex sheets, and asymptotic ends",
     "a new counterexample, invariant, observable discriminator, or model-class reduction",
     "a predeclared KEEP/NARROW/BRANCH/EQUIVALENCE/KILL/OPEN table plus one-phase runtime and artifact caps",
-    "resolution or externalization of the ordinary-Git object above"
+    "verified availability of the migrated Phase-44 LFS object and its provenance map"
   ],
   killed_route_recovery_policy:
     "hash-authenticated recovery of missing authoritative Phase-53 bytes may authorize a separately approved archival reproduction audit, never a new numbered continuation or automatic route reopening"

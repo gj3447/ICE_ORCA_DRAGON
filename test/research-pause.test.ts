@@ -329,8 +329,22 @@ it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.scientific_state.physics_claim).toBe(null)
   expect(ragnarokStatus.auto_resume).toBe(false)
   expect(ragnarokStatus.repository_transport.push_status).toBe(
-    "BLOCKED_OVERSIZED_GIT_OBJECT"
+    "LFS_MIGRATED_PUSH_PENDING"
   )
+  expect(ragnarokStatus.repository_transport.transport_mode).toBe(
+    "GIT_LFS_EXACT_PATH"
+  )
+  expect(
+    ragnarokStatus.repository_transport.migrated_object
+      .content_and_lfs_oid_sha256
+  ).toBe("bcbebb6cbf64c91107ce72a699436206b91d4f65bcc5037729768fb23fbc9b75")
+  expect(ragnarokStatus.repository_transport.migration.rewritten_commits).toBe(
+    76
+  )
+  expect(ragnarokStatus.repository_transport.migration.force_push_required).toBe(
+    false
+  )
+  expect(ragnarokStatus.repository_transport.remote_push.verified).toBe(false)
 })
 
 it("renders stable human and machine-readable status", () => {
