@@ -1,0 +1,673 @@
+{
+  "$schema": "../schema/research-graph-v1.schema.json",
+  "schema_version": "research-graph/v1",
+  "graph_id": "research-graph:hypercomplex",
+  "title": "ICE hypercomplex hypothesis-testbench research graph",
+  "description": "A repository-local memory and index graph for the finite Cayley-Dickson and sedenion calculations. It separates computed algebraic facts, interpretation, invalid or superseded methods, and open physical hypotheses without promoting the corpus to a Standard Model embedding or TOE.",
+  "updated_at_utc": "2026-08-25T09:32:41Z",
+  "canonical_file": "ontology/hypercomplex/graph.json",
+  "source_inventory": "ontology/hypercomplex/references/source-inventory.md",
+  "quick_answers": [
+    {
+      "question": "What does the robust number 42 count?",
+      "answer": "The direct calculation distinguishes 42 unordered assessor axis-planes (seven classes of six), 84 signed vectors e_a +/- e_b with a<b, and 168 representations when both index orders are counted. Annihilating-pair totals need their own sign and ordering convention; none of these counts establishes 42 Higgs particles.",
+      "claim_ids": [
+        "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN",
+        "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS"
+      ]
+    },
+    {
+      "question": "Did the projected custodial SU(2) x SU(2) construction close?",
+      "answer": "No. All 42 frozen candidates fail both projected closure conditions; the later portability audit also finds combined rank three rather than the required rank six.",
+      "claim_ids": [
+        "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2"
+      ]
+    },
+    {
+      "question": "Can Queue 03 be used as portable threshold evidence?",
+      "answer": "No. Its entrywise commutator maximum changes under an orthogonal change of null-space basis, so its threshold categories are quarantined as NONPORTABLE_FAIL and provide no new physics verdict.",
+      "claim_ids": [
+        "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE"
+      ]
+    },
+    {
+      "question": "Was a g2 representation established by the projected sedenion construction?",
+      "answer": "No. The original projection is a method artifact. A later sidecar recovers rank 14 and antisymmetry, but its declared full Lie-closure and Casimir validation is contradicted by the recorded controls.",
+      "claim_ids": [
+        "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION",
+        "claim:HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY",
+        "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION"
+      ]
+    },
+    {
+      "question": "Was an explicit S3 automorphism subgroup computed?",
+      "answer": "Yes within the declared Cayley-Dickson convention: the two generators preserve all tested products, satisfy the S3 presentation, and generate a group of order six. The older claim that this refuted Wilmot was later withdrawn.",
+      "claim_ids": [
+        "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP",
+        "claim:HYPER_QUEUE09_REFUTES_WILMOT"
+      ]
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "reading-path:hyper-zd-structure",
+      "title": "From multiplication to the finite zero-divisor structure",
+      "summary": "Start with the fixed multiplication convention, distinguish assessor planes, signed vectors, index-ordered representations, and annihilating pairs, and then read the seven-by-six and XOR regularities without adding a particle referent.",
+      "nodes": [
+        "concept:cayley-dickson-multiplication-convention",
+        "concept:sedenion-assessor-nullspace-orbit",
+        "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN",
+        "claim:HYPER_XOR_ORBIT_LABEL",
+        "evidence:hyper-finite-structural-ledger"
+      ]
+    },
+    {
+      "id": "reading-path:hyper-higher-algebra",
+      "title": "Finite associator and higher-algebra witnesses",
+      "summary": "Follow the recorded Jacobiator, associator, Stasheff, and BV checks while keeping their finite-array scope explicit.",
+      "nodes": [
+        "concept:cayley-dickson-multiplication-convention",
+        "claim:HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES",
+        "evidence:hyper-finite-structural-ledger",
+        "scope:hypercomplex-workbench-layer-boundary"
+      ]
+    },
+    {
+      "id": "reading-path:hyper-projection-failure",
+      "title": "Where projection loses closure and portability",
+      "summary": "Move from four-dimensional null spaces to the frozen projected triples, their 42-of-42 closure failure, and the basis-dependent Queue-03 metric quarantine.",
+      "nodes": [
+        "concept:sedenion-assessor-nullspace-orbit",
+        "concept:projected-versus-ambient-symmetry",
+        "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2",
+        "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE",
+        "evidence:hyper-projection-and-portability-ledger",
+        "open:hyper-basis-invariant-projected-diagnostic"
+      ]
+    },
+    {
+      "id": "reading-path:hyper-g2-lifecycle",
+      "title": "Projected g2 claim and partial repair",
+      "summary": "Contrast the rank-16 projected method artifact with the later rank-14 sidecar and its still-failed full validation controls.",
+      "nodes": [
+        "concept:projected-versus-ambient-symmetry",
+        "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION",
+        "claim:HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY",
+        "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION",
+        "evidence:hyper-toy-and-g2-lifecycle",
+        "open:hyper-result-producer-and-interpretation-provenance"
+      ]
+    },
+    {
+      "id": "reading-path:hyper-s3-interpretation",
+      "title": "The S3 calculation and its interpretation boundary",
+      "summary": "Keep the three passing multiplication/group gates while following the later correction that withdrew the Wilmot-refutation language and avoiding a three-generation inference.",
+      "nodes": [
+        "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP",
+        "claim:HYPER_QUEUE09_REFUTES_WILMOT",
+        "evidence:hyper-s3-three-gate-lifecycle",
+        "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS",
+        "open:hyper-algebra-to-physics-discriminator"
+      ]
+    }
+  ],
+  "node_type_legend": {
+    "programme": "overall research question",
+    "concept": "reusable definition or distinction",
+    "claim": "falsifiable or scoped statement",
+    "evidence": "observed calculation, diagnostic, or audit group",
+    "scope": "assumptions, layer boundary, and exclusions",
+    "open_problem": "missing construction or unresolved question",
+    "artifact": "hash-pinned tracked repository file"
+  },
+  "relation_legend": {
+    "PART_OF": "belongs to the hypercomplex testbench",
+    "ABOUT": "claim concerns a reusable concept",
+    "HAS_EVIDENCE": "claim points to supporting or contradicting evidence; see polarity",
+    "DEFINED_IN": "an evidence distinction is implemented by a hash-pinned source",
+    "RECORDED_IN": "evidence is persisted or explained in a tracked artifact",
+    "DERIVED_FROM": "evidence is separately reconstructed by a hash-pinned implementation",
+    "VALID_WITHIN": "claim is limited by the declared workbench scope",
+    "FOLLOW_UP_TO": "open problem is a distinct follow-up to a scoped claim",
+    "BLOCKED_BY": "promotion is blocked by an unresolved problem",
+    "CONTRASTS_WITH": "one claim or evidence record corrects a distinct earlier interpretation"
+  },
+  "nodes": [
+    {
+      "id": "programme:hypercomplex-hypothesis-testbench",
+      "type": "programme",
+      "title": "Hypercomplex hypothesis testbench",
+      "summary": "Finite Cayley-Dickson and sedenion calculations plus explicit tests of proposed representation and physics maps; algebraic outputs, interpretation, and open hypotheses remain separate.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:cayley-dickson-multiplication-convention",
+      "type": "concept",
+      "title": "Declared Cayley-Dickson multiplication convention",
+      "summary": "The recursive product and basis/sign convention implemented by cd_core.py and the adjacent legacy kernels; a result under this convention is not automatically convention independent.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:sedenion-assessor-nullspace-orbit",
+      "type": "concept",
+      "title": "Sedenion assessor, null-space, and orbit structure",
+      "summary": "The finite basis-element structures historically compressed as '42 ZD pairs' are separated into 42 unordered assessor axis-planes, 84 signed vectors e_a +/- e_b for a<b, 168 index-ordered representations, and explicitly conventioned annihilating-pair counts; the assessors form seven six-element classes.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "concept:projected-versus-ambient-symmetry",
+      "type": "concept",
+      "title": "Projected versus ambient algebraic symmetry",
+      "summary": "A Lie algebra that closes in the ambient algebra need not remain closed after restriction to a selected null space; rank, closure, nondegeneracy, and basis invariance must be checked after projection.",
+      "state": "ACTIVE"
+    },
+    {
+      "id": "scope:hypercomplex-workbench-layer-boundary",
+      "type": "scope",
+      "title": "Hypercomplex workbench evidence boundary",
+      "summary": "The graph records finite algebraic and numerical outputs without converting them into Standard Model, particle, observable, or TOE claims.",
+      "state": "ACTIVE",
+      "includes": [
+        "declared Cayley-Dickson convention and finite arrays",
+        "sedenion assessor, null-space, orbit, and multiplication diagnostics",
+        "finite associator and higher-algebra identity checks",
+        "projected closure, rank, Casimir, and portability diagnostics",
+        "local toy-potential minima and mechanism controls",
+        "result provenance and interpretation lifecycle"
+      ],
+      "excludes": [
+        "a proof for every Cayley-Dickson convention or dimension",
+        "a Standard Model embedding",
+        "identification of assessors with physical Higgs particles",
+        "a measured mass, mixing angle, coupling, or new-particle prediction",
+        "external peer ratification or external KG promotion",
+        "a theory-of-everything claim"
+      ]
+    },
+    {
+      "id": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN",
+      "type": "claim",
+      "claim_id": "HYPER_ZD_ASSESSOR_ORBIT_CHAIN",
+      "title": "The finite sedenion assessor and orbit chain is reproduced",
+      "statement": "Under the declared sedenion multiplication convention, the direct calculation records 42 unordered assessor axis-planes organized into seven six-element classes, 84 signed primitive vectors e_a +/- e_b with a<b, and 168 representations when both index orders are counted.",
+      "summary": "Supported as a finite combinatorial statement. These are distinct counted objects, not three synonyms. The historical labels '42 ZD pairs' and 'Higgs candidates' are not inherited; annihilating-pair totals require an explicit sign and ordering convention.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:HYPER_XOR_ORBIT_LABEL",
+      "type": "claim",
+      "claim_id": "HYPER_XOR_ORBIT_LABEL",
+      "title": "The recorded XOR label reproduces the seven assessor classes",
+      "statement": "For the frozen finite multiplication table, all 105 tested multiplication relations match the XOR label and the 42 assessor records take one of seven class labels.",
+      "summary": "Supported within the finite basis convention; no particle quantum number follows from the label.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES",
+      "type": "claim",
+      "claim_id": "HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES",
+      "title": "The recorded finite higher-algebra identities pass",
+      "statement": "The frozen S3 and S5 result arrays record the tested Jacobiator-associator, Stasheff, Hochschild-cocycle, and BV residual identities within their declared finite cases.",
+      "summary": "Supported as finite exact or numerical checks, not as a general theorem over all elements or a physical interaction model.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2",
+      "type": "claim",
+      "claim_id": "HYPER_PROJECTED_CUSTODIAL_SU2XSU2",
+      "title": "The frozen projected triples realize custodial SU(2) x SU(2)",
+      "statement": "For each of the 42 frozen null-space candidates, the selected projected left and right triples separately close and span independent rank-three factors whose combined rank is six.",
+      "summary": "Contradicted: 42 of 42 fail both declared closure conditions, and the portability audit measures combined rank three rather than six.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE",
+      "type": "claim",
+      "claim_id": "HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE",
+      "title": "Queue 03 supplies a basis-portable threshold verdict",
+      "statement": "The legacy entrywise maximum of the projected cross-commutator is invariant under an orthogonal change of null-space basis, so its threshold crossings define a portable scientific verdict.",
+      "summary": "Contradicted by the adversarial rotation audit. The legacy output is retained as history but classified NONPORTABLE_FAIL with no new physics verdict.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "QUARANTINED"
+    },
+    {
+      "id": "claim:HYPER_TOY_VACUUM_MINIMA",
+      "type": "claim",
+      "claim_id": "HYPER_TOY_VACUUM_MINIMA",
+      "title": "The frozen toy vacuum scans contain the recorded local minima",
+      "statement": "Within the explicit Queue-04 and Queue-05 toy potentials, the stored optimizer outputs contain the declared theta-near-pi and bounded symmetry-breaking minima for the enumerated cases.",
+      "summary": "Supported only for the implemented toy potentials; it is not a Standard Model vacuum or an external physical prediction.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_LOCAL"
+    },
+    {
+      "id": "claim:HYPER_COOPERATIVE_GAMMA_SELECTION",
+      "type": "claim",
+      "claim_id": "HYPER_COOPERATIVE_GAMMA_SELECTION",
+      "title": "Inter-orbit gamma repulsion causes the recorded single-orbit selection",
+      "statement": "The repaired Queue-06 single-orbit result requires nonzero cooperative gamma coupling and is not already selected by the asymmetric alpha depths.",
+      "summary": "Contradicted: the committed repair finds gamma_critical=0; the alpha perturbation already selects orbit one.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:HYPER_ALPHA_PERTURBATION_SELECTION",
+      "type": "claim",
+      "claim_id": "HYPER_ALPHA_PERTURBATION_SELECTION",
+      "title": "The repaired toy selects one orbit through the alpha perturbation",
+      "statement": "Within the repaired finite Queue-06 toy, the alpha-depth asymmetry alone produces the stored single-active-orbit minimum at gamma equal to zero.",
+      "summary": "Supported locally by the repaired output; its mapped historical runner is superseded and the result is not a physical vacuum claim.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_LOCAL"
+    },
+    {
+      "id": "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION",
+      "type": "claim",
+      "claim_id": "HYPER_PROJECTED_SEDENION_G2_REPRESENTATION",
+      "title": "The original projected sedenion construction establishes the g2 representation",
+      "statement": "Applying the octonion inner-derivation formula in the non-alternative sedenion ambient and projecting to the seven orbit representatives yields a closed irreducible rank-14 g2 representation.",
+      "summary": "Contradicted: the diagnostic finds rank 16 and a non-scalar Casimir. The original confirmation was demoted to METHOD_ARTIFACT.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "METHOD_ARTIFACT"
+    },
+    {
+      "id": "claim:HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY",
+      "type": "claim",
+      "claim_id": "HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY",
+      "title": "The automorphism-embedded sidecar recovers rank 14 and antisymmetry",
+      "statement": "Within the recorded automorphism-embedded sidecar, the generated action has rank 14 and passes the declared antisymmetry check.",
+      "summary": "Supported only for the recorded sidecar construction; this does not imply full Lie-closure, scalar Casimir, a sedenion-ambient g2 theorem, or a physics embedding.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED"
+    },
+    {
+      "id": "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION",
+      "type": "claim",
+      "claim_id": "HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION",
+      "title": "The automorphism-embedded sidecar fully validates the repaired g2 action",
+      "statement": "The later 15-dimensional automorphism-embedded sidecar supplies rank, antisymmetry, Lie-closure, and Casimir controls sufficient to validate the full repaired representation.",
+      "summary": "Contradicted by the recorded full controls: despite rank 14 and antisymmetry, the sidecar reports a D3 Lie-closure residual near one and D4 Casimir spread one. Producer provenance remains a separate open issue.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_FULL_CONTROLS"
+    },
+    {
+      "id": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP",
+      "type": "claim",
+      "claim_id": "HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP",
+      "title": "The explicit sigma and Psi maps generate an S3 automorphism subgroup",
+      "statement": "Under the declared multiplication convention, sigma and Psi preserve all 256 tested basis products, have presentation orders 2, 3, and 2, and generate a six-element group with order fingerprint one identity, three involutions, and two order-three elements.",
+      "summary": "Supported as the explicit finite three-gate calculation. It does not by itself prove a direct-product decomposition, a three-generation model, or a physical symmetry.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "claim:HYPER_QUEUE09_REFUTES_WILMOT",
+      "type": "claim",
+      "claim_id": "HYPER_QUEUE09_REFUTES_WILMOT",
+      "title": "The Queue-09 multiplication test refutes Wilmot 2025",
+      "statement": "Because the two explicit maps pass multiplication preservation, Wilmot 2025 claimed that no S3 automorphism exists and is therefore refuted.",
+      "summary": "Contradicted by the 2026-07-12 source correction: Wilmot does not make the attributed G2-only claim, and the Brown/Wilmot distinction is reframed as strong versus weak automorphism criteria.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "SUPERSEDED_INTERPRETATION"
+    },
+    {
+      "id": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS",
+      "type": "claim",
+      "claim_id": "HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS",
+      "title": "The finite algebraic regularities establish Standard Model referents",
+      "statement": "The currently indexed hypercomplex subset jointly determines physical Higgs fields, gauge groups, three generations, measured constants, or new particles from its assessor counts, orbit labels, higher-algebra identities, and automorphism checks.",
+      "summary": "Not established in the indexed subset. No validated referent map is present and several specific projected routes are contradicted, while the finite algebraic facts remain useful. Partial coverage is not a universal no-go theorem, so an external discriminator remains open.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "NOT_ESTABLISHED_IN_INDEXED_SUBSET"
+    },
+    {
+      "id": "evidence:hyper-finite-structural-ledger",
+      "type": "evidence",
+      "title": "Finite sedenion structure and higher-algebra result ledger",
+      "summary": "The committed results record the assessor list, seven six-element classes, 105-of-105 XOR agreement, and the declared finite S3/S5 identity residuals. The direct Avenue-3 scripts separate 42 assessor planes, 84 signed vectors with a<b, and 168 index-ordered representations; they also report 168 unordered any-sign annihilating unit-pairs and 336 ordered products, while the all-plus count changes from 84 ordered to 42 after unordered canonicalization. Bare 'pair' language is therefore withheld.",
+      "state": "VERIFIED_SCOPED",
+      "observed_status": "FINITE_STRUCTURAL_CHECKS_PASS_WITH_TERMINOLOGY_CORRECTION",
+      "check_ids": [
+        "HYPER.structural.assessor_planes_42",
+        "HYPER.structural.signed_vectors_a_lt_b_84",
+        "HYPER.structural.index_ordered_representations_168",
+        "HYPER.structural.unordered_any_sign_annihilating_pairs_168",
+        "HYPER.structural.ordered_any_sign_annihilating_products_336",
+        "HYPER.structural.all_plus_ordered_84_unordered_42",
+        "HYPER.structural.orbits_7_by_6",
+        "HYPER.structural.xor_105_of_105",
+        "HYPER.structural.jacobi_associator",
+        "HYPER.structural.bv_bounded"
+      ],
+      "source_anchors": [
+        "research/hypercomplex/prove_higgs_results.json",
+        "research/hypercomplex/queue_01_orbit_results.json",
+        "research/hypercomplex/queue_11_xor_results.json",
+        "research/hypercomplex/prove_s3_results.json",
+        "research/hypercomplex/prove_s5_results.json",
+        "docs/provenance/SOURCES.md:59-65",
+        "avenue3_decisive_test_2026-06-05/avenue3_phase1_SUMMARY.py:36-87",
+        "avenue3_decisive_test_2026-06-05/RESULTS.md:27-34",
+        "avenue3_decisive_test_2026-06-05/naesengmoon_indep_sedenion.py:128-244"
+      ],
+      "content_hashes": {
+        "research/hypercomplex/prove_higgs_results.json": "c48a0618aa2f65675707e87685d002543f8c65127af570d2dc1417bb0ec6a5e7",
+        "research/hypercomplex/queue_01_orbit_results.json": "e11bb068315318458a2c92ffdee4fab92dee1508ebf8e16fbc0c14b90c529f97",
+        "research/hypercomplex/queue_11_xor_results.json": "f7e11fa550fc20211e3c73619ec7a3f3c036802a9b84537580f93f9abe558ba3",
+        "research/hypercomplex/prove_s3_results.json": "98e95ff7aa2e490c18cb61f6e84fb2b63850e5786159a07fb7884afd93d96783",
+        "research/hypercomplex/prove_s5_results.json": "c65c2210ea09db0d464029477778ad2bf1c16e79a05ee087e82384b857ab4000",
+        "docs/provenance/SOURCES.md": "b85b0a2bd4636854df1ae2a6e71c45ea9f717bbca00eea0aab598c031d6a1387",
+        "avenue3_decisive_test_2026-06-05/avenue3_phase1_SUMMARY.py": "e8e84f0485733ad737eae7e30a5178dc144934f404b413ba9860743431d35e2e",
+        "avenue3_decisive_test_2026-06-05/RESULTS.md": "c6959373872adf22c811d67e65ebca8135deb49f20127f85103960eefce1c6ee",
+        "avenue3_decisive_test_2026-06-05/naesengmoon_indep_sedenion.py": "f37c46489fb3c826440c1ba2ee6cabb70c6ea3aa3ea8c09e62fb0d7dff89295d"
+      }
+    },
+    {
+      "id": "evidence:hyper-projection-and-portability-ledger",
+      "type": "evidence",
+      "title": "Projected closure failure and Queue-03 portability audit",
+      "summary": "The four-condition diagnostic reports 42 of 42 FAIL_BOTH_CLOSURE. The later adversarial audit shows that Queue-03's entrywise metric changes under valid basis rotations while spectral and Frobenius controls remain invariant.",
+      "state": "VERIFIED_NEGATIVE",
+      "observed_status": "42_FAIL_BOTH_CLOSURE_AND_QUEUE03_NONPORTABLE_FAIL",
+      "check_ids": [
+        "HYPER.projection.left_closure_42_fail",
+        "HYPER.projection.right_closure_42_fail",
+        "HYPER.projection.combined_rank_3_not_6",
+        "HYPER.portability.entrywise_metric_changes",
+        "HYPER.portability.spectral_metric_invariant"
+      ],
+      "source_anchors": [
+        "research/hypercomplex/queue_02_4condition_diagnostic_results.json",
+        "research/hypercomplex/queue_02_custodial_results.json",
+        "research/hypercomplex/queue_03_threshold_sensitivity_results.json",
+        "docs/audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md",
+        "docs/audits/REPRODUCIBILITY_2026-06-08.md"
+      ],
+      "content_hashes": {
+        "research/hypercomplex/queue_02_4condition_diagnostic_results.json": "b1156becae4ef0ebeb37ad95750e16860ce8cfc5f472c99d281a607a81eccec3",
+        "research/hypercomplex/queue_02_custodial_results.json": "b0a1a8d82308cf2276619b8756271a0de23786f65c9e89f4407c84f3381a8b0f",
+        "research/hypercomplex/queue_03_threshold_sensitivity_results.json": "847473fcea56045e7db67c731f4728b9e6be96ea6b69f1b03ef8a1daa21da2fb",
+        "docs/audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md": "8633c2846fbc313e6ae7975269c4024f21d94de66a4b548a7c11a728880234cc",
+        "docs/audits/REPRODUCIBILITY_2026-06-08.md": "9e117b06e92229c4d007b1bb7481eeb40b86692e149e78dba947d29b95c4443b"
+      }
+    },
+    {
+      "id": "evidence:hyper-toy-and-g2-lifecycle",
+      "type": "evidence",
+      "title": "Toy-vacuum and g2 method lifecycle",
+      "summary": "Queue 04/05 record local toy minima; the repaired Queue-06 output attributes its single-orbit result to alpha depth rather than cooperative gamma. Queue 08 demotes the projected rank-16 construction and leaves the rank-14 sidecar only partially checked.",
+      "state": "MIXED_SCOPED",
+      "observed_status": "TOY_LOCAL_WITH_COOPERATIVE_REFUTATION_G2_ARTIFACT_AND_PARTIAL_REPAIR",
+      "check_ids": [
+        "HYPER.toy.hosotani_local_minimum",
+        "HYPER.toy.cw_local_minima",
+        "HYPER.toy.gamma_critical_zero",
+        "HYPER.g2.projected_rank_16",
+        "HYPER.g2.projected_casimir_nonscalar",
+        "HYPER.g2.sidecar_rank_14",
+        "HYPER.g2.sidecar_full_validation_incomplete"
+      ],
+      "source_anchors": [
+        "research/hypercomplex/queue_04_hosotani_results.json",
+        "research/hypercomplex/queue_05_cw_results.json",
+        "research/hypercomplex/queue_06_coop_results.json",
+        "research/hypercomplex/inconclusive_redo.py",
+        "research/hypercomplex/queue_08_g2_diagnostic_results.json",
+        "research/hypercomplex/queue_08_g2_results.json",
+        "research/hypercomplex/queue_08_g2_aut_octonion_results.json"
+      ],
+      "content_hashes": {
+        "research/hypercomplex/queue_04_hosotani_results.json": "24e3e73de698bdb289fa251065e2bd9056d17ba2a3437864a5b2cbae0691b78e",
+        "research/hypercomplex/queue_05_cw_results.json": "ebf1c45ead58af790052a886bbd9fe7618524a814fc5fd40f2c460319897bfd0",
+        "research/hypercomplex/queue_06_coop_results.json": "3d171ee22851a03858a57e163ceca413ff841a7f86b54cfdf23dcc7e36a69728",
+        "research/hypercomplex/inconclusive_redo.py": "36c2050336a3ee26e2fe1f32f880d7b342122198981d2522d29cc5ee8832c6c3",
+        "research/hypercomplex/queue_08_g2_diagnostic_results.json": "a6cd6d648f3d63a9c497ab7cbd86ca9c79a8eb596f66803bd21b1563b3562e7a",
+        "research/hypercomplex/queue_08_g2_results.json": "87592711c5921643ecb21d7172146073754c3f4c7cb7afc3849ddb68e15197e5",
+        "research/hypercomplex/queue_08_g2_aut_octonion_results.json": "c246085dad820a99907a5fa45e6d707f0a1037ff89b91d57dfdefcc07c4cccf3"
+      }
+    },
+    {
+      "id": "evidence:hyper-s3-three-gate-lifecycle",
+      "type": "evidence",
+      "title": "Queue-09 S3 three-gate result and later interpretation correction",
+      "summary": "The result JSON records passing multiplication, presentation, and group-structure gates. The current source header preserves that computation but explicitly supersedes the claim that Wilmot asserted Aut(S)=G2 only or was refuted.",
+      "state": "VERIFIED_WITH_SUPERSEDED_PROSE",
+      "observed_status": "PASS_ALL_WITH_WILMOT_REFUTATION_WITHDRAWN",
+      "check_ids": [
+        "HYPER.s3.sigma_0_of_256_fail",
+        "HYPER.s3.psi_0_of_256_fail",
+        "HYPER.s3.presentation_2_3_2",
+        "HYPER.s3.group_order_6",
+        "HYPER.s3.wilmot_interpretation_superseded"
+      ],
+      "source_anchors": [
+        "research/hypercomplex/queue_09_SS3TG_results.json",
+        "research/hypercomplex/queue_09_SS3TG.py:9-20",
+        "research/hypercomplex/queue_09_s3_results.json"
+      ],
+      "content_hashes": {
+        "research/hypercomplex/queue_09_SS3TG_results.json": "48e34c31844bb3b4f44c92f68f8e333547a7ced6754328f574a136151434ef3d",
+        "research/hypercomplex/queue_09_SS3TG.py": "1ea1025926ae69ac665c479530c19f767c2433928e065d0108e9d7b2d53790cc",
+        "research/hypercomplex/queue_09_s3_results.json": "dfb896b4a787ccc71673658e09ecbf750a9168cc4e81eb1ac4104a36bf05bac4"
+      }
+    },
+    {
+      "id": "artifact:hyper-prove-higgs-result",
+      "type": "artifact",
+      "title": "Historical assessor and Higgs-candidate result",
+      "summary": "The raw historical JSON recording the 42 coordinate-pair list and two invariant triples per record; its 'Higgs candidate' and '42 ZD pairs' labels are not promoted by this graph.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "historical_result_json",
+      "path": "research/hypercomplex/prove_higgs_results.json",
+      "sha256": "c48a0618aa2f65675707e87685d002543f8c65127af570d2dc1417bb0ec6a5e7"
+    },
+    {
+      "id": "artifact:hyper-queue03-portability-audit",
+      "type": "artifact",
+      "title": "Queue-03 basis-portability audit",
+      "summary": "The adversarial method audit that establishes the legacy entrywise metric is nonportable and specifies the requirements for a basis-invariant successor.",
+      "state": "HASH_PINNED_CURRENT",
+      "artifact_kind": "audit_markdown",
+      "path": "docs/audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md",
+      "sha256": "8633c2846fbc313e6ae7975269c4024f21d94de66a4b548a7c11a728880234cc"
+    },
+    {
+      "id": "artifact:hyper-queue08-diagnostic-result",
+      "type": "artifact",
+      "title": "Queue-08 projected-g2 diagnostic result",
+      "summary": "The D1-D4 result that demotes the original projected construction to METHOD_ARTIFACT after rank and Casimir failures.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "diagnostic_result_json",
+      "path": "research/hypercomplex/queue_08_g2_diagnostic_results.json",
+      "sha256": "a6cd6d648f3d63a9c497ab7cbd86ca9c79a8eb596f66803bd21b1563b3562e7a"
+    },
+    {
+      "id": "artifact:hyper-queue09-three-gate-result",
+      "type": "artifact",
+      "title": "Queue-09 explicit S3 three-gate result",
+      "summary": "The raw PASS_ALL result for multiplication preservation, presentation orders, and generated group structure; its Wilmot-refutation prose is superseded separately.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "result_json_with_superseded_interpretation",
+      "path": "research/hypercomplex/queue_09_SS3TG_results.json",
+      "sha256": "48e34c31844bb3b4f44c92f68f8e333547a7ced6754328f574a136151434ef3d"
+    },
+    {
+      "id": "artifact:hyper-queue09-source-correction",
+      "type": "artifact",
+      "title": "Queue-09 source with 2026-07-12 interpretation correction",
+      "summary": "The current producer source whose header preserves the multiplication test and withdraws the older description of Wilmot as asserting Aut(S)=G2 only.",
+      "state": "HASH_PINNED_CURRENT",
+      "artifact_kind": "python_source_with_interpretation_erratum",
+      "path": "research/hypercomplex/queue_09_SS3TG.py",
+      "sha256": "1ea1025926ae69ac665c479530c19f767c2433928e065d0108e9d7b2d53790cc"
+    },
+    {
+      "id": "artifact:hyper-avenue3-count-script",
+      "type": "artifact",
+      "title": "Avenue-3 exact assessor-count source",
+      "summary": "The exact-arithmetic source that prints the distinct assessor-plane, signed-vector, index-order, annihilating-pair, and box-kite counts under its declared Cayley-Dickson convention.",
+      "state": "HASH_PINNED_CURRENT",
+      "artifact_kind": "python_exact_calculation_source",
+      "path": "avenue3_decisive_test_2026-06-05/avenue3_phase1_SUMMARY.py",
+      "sha256": "e8e84f0485733ad737eae7e30a5178dc144934f404b413ba9860743431d35e2e"
+    },
+    {
+      "id": "artifact:hyper-avenue3-results",
+      "type": "artifact",
+      "title": "Avenue-3 decisive-test report",
+      "summary": "The historical report preserving the Avenue-3 negative physics verdict and its compact 42/84/168 terminology; the graph uses the scripts for the more precise object and ordering distinctions.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "historical_result_markdown",
+      "path": "avenue3_decisive_test_2026-06-05/RESULTS.md",
+      "sha256": "c6959373872adf22c811d67e65ebca8135deb49f20127f85103960eefce1c6ee"
+    },
+    {
+      "id": "artifact:hyper-avenue3-independent-script",
+      "type": "artifact",
+      "title": "Avenue-3 separate sedenion reconstruction",
+      "summary": "A separate implementation that rebuilds the multiplication and reproduces 42 assessor planes, 168 index-ordered representations, 168 unordered any-sign annihilating unit-pairs, 336 ordered products, and seven six-assessor box-kites.",
+      "state": "HASH_PINNED_CURRENT",
+      "artifact_kind": "python_independent_reconstruction_source",
+      "path": "avenue3_decisive_test_2026-06-05/naesengmoon_indep_sedenion.py",
+      "sha256": "f37c46489fb3c826440c1ba2ee6cabb70c6ea3aa3ea8c09e62fb0d7dff89295d"
+    },
+    {
+      "id": "open:hyper-basis-invariant-projected-diagnostic",
+      "type": "open_problem",
+      "title": "Build a basis-invariant projected-symmetry diagnostic",
+      "summary": "A new method must fail closed on closure and nondegeneracy, require combined rank six, use invariant operator norms, and replace the scalar Hosotani multiplier with an operator-level transformation.",
+      "state": "OPEN",
+      "question": "Can a separately named and independently checked projected diagnostic satisfy closure, nondegeneracy, rank-six, and basis-invariance gates before making any custodial or vacuum inference?"
+    },
+    {
+      "id": "open:hyper-result-producer-and-interpretation-provenance",
+      "type": "open_problem",
+      "title": "Repair result-producer and interpretation provenance",
+      "summary": "Several historical results have superseded mapped runners, archived-only producers, absent adjacent outputs, or verdict prose later corrected in source comments.",
+      "state": "OPEN",
+      "question": "Can each retained result be linked to an active hash-pinned producer and an explicit current interpretation without rewriting the historical payload?"
+    },
+    {
+      "id": "open:hyper-algebra-to-physics-discriminator",
+      "type": "open_problem",
+      "title": "Supply an external algebra-to-physics discriminator",
+      "summary": "The current corpus has reusable finite algebra but no validated map to a Higgs field, gauge group, family spectrum, measured parameter, or new particle.",
+      "state": "OPEN",
+      "question": "What independently testable, source-derived observable distinguishes a hypercomplex physical map from post-hoc labeling of the same finite algebraic regularities?"
+    }
+  ],
+  "edges": [
+    { "id": "edge:001", "from": "concept:cayley-dickson-multiplication-convention", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:002", "from": "concept:sedenion-assessor-nullspace-orbit", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:003", "from": "concept:projected-versus-ambient-symmetry", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:004", "from": "scope:hypercomplex-workbench-layer-boundary", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:005", "from": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:006", "from": "claim:HYPER_XOR_ORBIT_LABEL", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:007", "from": "claim:HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:008", "from": "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:009", "from": "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:010", "from": "claim:HYPER_TOY_VACUUM_MINIMA", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:011", "from": "claim:HYPER_COOPERATIVE_GAMMA_SELECTION", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:012", "from": "claim:HYPER_ALPHA_PERTURBATION_SELECTION", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:013", "from": "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:014", "from": "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:015", "from": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:016", "from": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:017", "from": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:018", "from": "evidence:hyper-finite-structural-ledger", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:019", "from": "evidence:hyper-projection-and-portability-ledger", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:020", "from": "evidence:hyper-toy-and-g2-lifecycle", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:021", "from": "evidence:hyper-s3-three-gate-lifecycle", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:022", "from": "artifact:hyper-prove-higgs-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:023", "from": "artifact:hyper-queue03-portability-audit", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:024", "from": "artifact:hyper-queue08-diagnostic-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:025", "from": "artifact:hyper-queue09-three-gate-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:026", "from": "artifact:hyper-queue09-source-correction", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:027", "from": "open:hyper-basis-invariant-projected-diagnostic", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:028", "from": "open:hyper-result-producer-and-interpretation-provenance", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:029", "from": "open:hyper-algebra-to-physics-discriminator", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+
+    { "id": "edge:030", "from": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:031", "from": "claim:HYPER_XOR_ORBIT_LABEL", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:032", "from": "claim:HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:033", "from": "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:034", "from": "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:035", "from": "claim:HYPER_TOY_VACUUM_MINIMA", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:036", "from": "claim:HYPER_COOPERATIVE_GAMMA_SELECTION", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:037", "from": "claim:HYPER_ALPHA_PERTURBATION_SELECTION", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:038", "from": "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:039", "from": "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:040", "from": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:041", "from": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:042", "from": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+
+    { "id": "edge:043", "from": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-finite-structural-ledger", "polarity": "SUPPORTS" },
+    { "id": "edge:044", "from": "claim:HYPER_XOR_ORBIT_LABEL", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-finite-structural-ledger", "polarity": "SUPPORTS" },
+    { "id": "edge:045", "from": "claim:HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-finite-structural-ledger", "polarity": "SUPPORTS" },
+    { "id": "edge:046", "from": "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-projection-and-portability-ledger", "polarity": "CONTRADICTS" },
+    { "id": "edge:047", "from": "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-projection-and-portability-ledger", "polarity": "CONTRADICTS" },
+    { "id": "edge:048", "from": "claim:HYPER_TOY_VACUUM_MINIMA", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-toy-and-g2-lifecycle", "polarity": "SUPPORTS" },
+    { "id": "edge:049", "from": "claim:HYPER_COOPERATIVE_GAMMA_SELECTION", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-toy-and-g2-lifecycle", "polarity": "CONTRADICTS" },
+    { "id": "edge:050", "from": "claim:HYPER_ALPHA_PERTURBATION_SELECTION", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-toy-and-g2-lifecycle", "polarity": "SUPPORTS" },
+    { "id": "edge:051", "from": "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-toy-and-g2-lifecycle", "polarity": "CONTRADICTS" },
+    { "id": "edge:052", "from": "claim:HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-toy-and-g2-lifecycle", "polarity": "SUPPORTS", "note": "The sidecar records rank 14 and antisymmetry." },
+    { "id": "edge:053", "from": "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-toy-and-g2-lifecycle", "polarity": "CONTRADICTS", "note": "The same sidecar leaves the full Lie-closure and Casimir controls non-passing or qualified." },
+    { "id": "edge:054", "from": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-s3-three-gate-lifecycle", "polarity": "SUPPORTS" },
+    { "id": "edge:055", "from": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-s3-three-gate-lifecycle", "polarity": "CONTRADICTS" },
+    { "id": "edge:056", "from": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-finite-structural-ledger", "polarity": "CONTRADICTS", "note": "The finite ledger establishes algebraic regularities but contains no physical referent map, so it does not jointly determine the listed Standard Model objects." },
+    { "id": "edge:057", "from": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-projection-and-portability-ledger", "polarity": "CONTRADICTS", "note": "The tested projected custodial route fails and Queue 03 is nonportable." },
+    { "id": "edge:058", "from": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-toy-and-g2-lifecycle", "polarity": "CONTRADICTS", "note": "Toy minima and the g2 method lifecycle do not establish physical referents." },
+
+    { "id": "edge:059", "from": "evidence:hyper-finite-structural-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-prove-higgs-result" },
+    { "id": "edge:060", "from": "evidence:hyper-projection-and-portability-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-queue03-portability-audit" },
+    { "id": "edge:061", "from": "evidence:hyper-toy-and-g2-lifecycle", "relation": "RECORDED_IN", "to": "artifact:hyper-queue08-diagnostic-result" },
+    { "id": "edge:062", "from": "evidence:hyper-s3-three-gate-lifecycle", "relation": "RECORDED_IN", "to": "artifact:hyper-queue09-three-gate-result" },
+    { "id": "edge:063", "from": "evidence:hyper-s3-three-gate-lifecycle", "relation": "RECORDED_IN", "to": "artifact:hyper-queue09-source-correction" },
+
+    { "id": "edge:064", "from": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN", "relation": "ABOUT", "to": "concept:sedenion-assessor-nullspace-orbit" },
+    { "id": "edge:065", "from": "claim:HYPER_XOR_ORBIT_LABEL", "relation": "ABOUT", "to": "concept:sedenion-assessor-nullspace-orbit" },
+    { "id": "edge:066", "from": "claim:HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES", "relation": "ABOUT", "to": "concept:cayley-dickson-multiplication-convention" },
+    { "id": "edge:067", "from": "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2", "relation": "ABOUT", "to": "concept:projected-versus-ambient-symmetry" },
+    { "id": "edge:068", "from": "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE", "relation": "ABOUT", "to": "concept:projected-versus-ambient-symmetry" },
+    { "id": "edge:069", "from": "claim:HYPER_TOY_VACUUM_MINIMA", "relation": "ABOUT", "to": "concept:sedenion-assessor-nullspace-orbit" },
+    { "id": "edge:070", "from": "claim:HYPER_COOPERATIVE_GAMMA_SELECTION", "relation": "ABOUT", "to": "concept:sedenion-assessor-nullspace-orbit" },
+    { "id": "edge:071", "from": "claim:HYPER_ALPHA_PERTURBATION_SELECTION", "relation": "ABOUT", "to": "concept:sedenion-assessor-nullspace-orbit" },
+    { "id": "edge:072", "from": "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION", "relation": "ABOUT", "to": "concept:projected-versus-ambient-symmetry" },
+    { "id": "edge:073", "from": "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION", "relation": "ABOUT", "to": "concept:projected-versus-ambient-symmetry" },
+    { "id": "edge:074", "from": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP", "relation": "ABOUT", "to": "concept:cayley-dickson-multiplication-convention" },
+    { "id": "edge:075", "from": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "relation": "ABOUT", "to": "concept:cayley-dickson-multiplication-convention" },
+
+    { "id": "edge:076", "from": "open:hyper-basis-invariant-projected-diagnostic", "relation": "FOLLOW_UP_TO", "to": "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE" },
+    { "id": "edge:077", "from": "open:hyper-basis-invariant-projected-diagnostic", "relation": "FOLLOW_UP_TO", "to": "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2" },
+    { "id": "edge:078", "from": "open:hyper-result-producer-and-interpretation-provenance", "relation": "FOLLOW_UP_TO", "to": "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION" },
+    { "id": "edge:079", "from": "open:hyper-result-producer-and-interpretation-provenance", "relation": "FOLLOW_UP_TO", "to": "claim:HYPER_QUEUE09_REFUTES_WILMOT" },
+    { "id": "edge:080", "from": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS", "relation": "BLOCKED_BY", "to": "open:hyper-algebra-to-physics-discriminator" },
+    { "id": "edge:081", "from": "claim:HYPER_AUTO_EMBEDDED_G2_FULL_VALIDATION", "relation": "BLOCKED_BY", "to": "open:hyper-result-producer-and-interpretation-provenance" },
+    { "id": "edge:082", "from": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "relation": "CONTRASTS_WITH", "to": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP", "note": "The subgroup calculation survives while the literature-dispute interpretation does not." },
+    { "id": "edge:083", "from": "claim:HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:084", "from": "claim:HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY", "relation": "VALID_WITHIN", "to": "scope:hypercomplex-workbench-layer-boundary" },
+    { "id": "edge:085", "from": "claim:HYPER_AUTO_EMBEDDED_G2_RANK14_ANTISYMMETRY", "relation": "ABOUT", "to": "concept:projected-versus-ambient-symmetry" },
+    { "id": "edge:086", "from": "artifact:hyper-avenue3-count-script", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:087", "from": "artifact:hyper-avenue3-results", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:088", "from": "artifact:hyper-avenue3-independent-script", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:089", "from": "evidence:hyper-finite-structural-ledger", "relation": "DEFINED_IN", "to": "artifact:hyper-avenue3-count-script" },
+    { "id": "edge:090", "from": "evidence:hyper-finite-structural-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-avenue3-results" },
+    { "id": "edge:091", "from": "evidence:hyper-finite-structural-ledger", "relation": "DERIVED_FROM", "to": "artifact:hyper-avenue3-independent-script" }
+  ],
+  "kg_bridges": [
+    {
+      "local_node_id": "programme:hypercomplex-hypothesis-testbench",
+      "system": "external-research-kg",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-25T08:54:45Z",
+      "lookup_key": "ICE hypercomplex hypothesis testbench",
+      "note": "No authorized writer or exact external target was available; no UID was invented."
+    }
+  ]
+}

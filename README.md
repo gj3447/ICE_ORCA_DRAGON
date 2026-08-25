@@ -285,10 +285,10 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 | runnable Python kernels | 88 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology | 607 nodes, 1717 edges, 149 claims: 81 `SUPPORTED`, 67 `CONTRADICTED`, 1 `INCONCLUSIVE` | `./ice ontology summary` |
-| indexed Phase 15R--43 payload | 98 artifacts, 89 evidence nodes, 29 phases, 46 scopes; 102/102 recorded hashes verified (98 artifacts + 4 policies); 26 validation warnings | ontology graph and validator |
-| named exact checks | 425, all `PASS` | phase result payloads in the ontology |
-| typed numerical checks | 252 current = 247 `PASS` + 4 `FAIL` + 1 `INCONCLUSIVE`; 253 including the separately catalogued passing legacy control = 248 `PASS` + 4 `FAIL` + 1 `INCONCLUSIVE` | phase result payloads in the ontology |
+| research ontology collection | 3 independent graphs; 876 nodes, 2489 edges, 220 claims: 127 `SUPPORTED`, 88 `CONTRADICTED`, 5 `INCONCLUSIVE` | `./ice ontology summary` |
+| hash-tracked ontology records | 119 evidence nodes, 197 artifacts, 8 policies; 205/205 recorded hashes verified; 33 explicit unresolved-bridge warnings | `./ice ontology validate` |
+| named exact checks in the CPT Phase 16--56 snapshots | 498, all `PASS` | CPT phase result payloads in the ontology |
+| typed numerical checks in those snapshots | 360 = 343 `PASS` + 14 `FAIL` + 3 `INCONCLUSIVE` | CPT phase result payloads in the ontology |
 | latest committed CPT seam phase | Phase 56 terminal closeout (execution consumed) | [`PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md`](cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
@@ -320,7 +320,12 @@ Canonical commands:
 ./ice repro [--list] [--only <mapped-name>]
 ./ice ontology validate
 ./ice ontology summary
+./ice ontology guide [--graph <key>] [--path <id>]
 ```
+
+`ontology validate` streams every recorded artifact for the full hash gate. The read-only ontology
+commands (`summary`, `show`, `trace`, and `guide`) validate graph structure and semantics without
+reopening large artifact payloads.
 
 `npm run ice -- <command>` is the package-script equivalent. `./ice` is the repository entry point.
 
@@ -402,17 +407,20 @@ See the [Queue 03 portability audit](docs/audits/QUEUE03_PORTABILITY_AUDIT_2026-
 
 ## Research ontology
 
-The repository-local [CPT × Temporal-Folded SUSY research graph](ontology/cpt-temporal-folded-susy/README.md)
-links scoped claims, executable evidence, sources, and open problems. It is a memory/index layer, not a
-research contract or automatic physics verdict.
+The repository-local [research ontology collection](ontology/README.md) catalogs three independent
+graphs: [hypercomplex](ontology/hypercomplex/README.md),
+[legacy predictions and narrative](ontology/legacy-predictions/README.md), and
+[CPT × Temporal-Folded SUSY](ontology/cpt-temporal-folded-susy/README.md). Cross-graph reading paths are
+explicitly navigation-only. The collection is a memory/index layer, not a research contract, external-KG
+write, or automatic physics verdict.
 
 ```bash
 ./ice ontology validate
 ./ice ontology summary
-./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
-./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
-./ice ontology trace claim:P24_CONSTRAINT_PRESERVING_MIXED_HESSIAN_HAS_RANK_ONE --depth 2
-./ice ontology trace claim:P33_RECORDED_DIRICHLET_CAUSTIC_HAS_SIMPLE_FOLD_AIRY_SCALE --depth 2
+./ice ontology guide --path current-status-in-five-stops
+./ice ontology guide --graph hypercomplex --path hyper-projection-failure
+./ice ontology show legacy::claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS
+./ice ontology trace cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
 ```
 
 ## Scientific scope

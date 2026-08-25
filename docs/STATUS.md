@@ -411,24 +411,21 @@ and
 
 ## Research ontology memory
 
-Phase 15R–50 is indexed in a repository-local typed research graph with **691 nodes and 2015 directed
-relations**. It preserves 171 claims (102 `SUPPORTED`, 68 `CONTRADICTED`, 1 `INCONCLUSIVE`) and the
-Phase 16–50 run payloads: 454 named exact checks, all `PASS`, and 308 current typed numerical checks,
-split as 300 `PASS`, 7 `FAIL`, and 1 `INCONCLUSIVE`. Including the separately catalogued passing legacy
-Phase-18 control gives 309 typed numerical checks, split as 301 `PASS`, 7 `FAIL`, and 1 `INCONCLUSIVE`.
-The graph contains 133 artifacts, 97 evidence nodes, 36 phases, 53 scopes, and 55 open problems; all
-137 recorded hashes validate (133 artifacts and 4 policies), with 29 declared validation warnings. It
-also preserves cautious
-bridges to the older SYMPOSIUM KG.
+The repository-local collection now catalogs three independent graphs—hypercomplex, legacy
+predictions/narrative, and CPT temporal-folded SUSY—with **876 nodes and 2489 directed relations**. It
+preserves 220 scoped claims (127 `SUPPORTED`, 88 `CONTRADICTED`, 5 `INCONCLUSIVE`), 119 evidence nodes,
+and 67 open problems. All 205 hash-bearing records validate (197 artifacts and 8 policies). The 33
+warnings are explicit unresolved external bridges, not validation failures. The CPT graph retains the
+Phase 16–56 snapshots and the post-Phase-56 hard stop; neither the collection nor its navigation paths
+authorize Phase 57, close Gate 1, or promote a physics claim.
 
-- [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md)
-  is the human concept map.
-- [`../ontology/cpt-temporal-folded-susy/graph.json`](../ontology/cpt-temporal-folded-susy/graph.json)
-  is the machine-readable record.
+- [`../ontology/README.md`](../ontology/README.md) is the human collection map.
+- [`../ontology/collection.json`](../ontology/collection.json) registers graph boundaries, honest
+  coverage, qualified quick answers, and navigation-only cross-graph paths.
 - `./ice ontology validate` checks IDs, endpoints, claim/evidence polarity, source and scope shape,
-  persisted check IDs, artifact/policy hashes, and bridge syntax.
-- `./ice ontology show <id>` and `./ice ontology trace <id>` expose the result without scanning every
-  phase report.
+  persisted check IDs, artifact/policy hashes, collection paths, coverage, and bridge syntax.
+- `./ice ontology guide [--graph <key>] [--path <id>]`, `show`, and `trace` expose bounded reading paths
+  and qualified nodes without scanning every phase report.
 
 This layer is memory and navigation, not a new research contract, scientific ratification, or automatic
 external-KG write. A `RELATED` bridge is not identity, and unresolved external mappings remain explicit.

@@ -56,7 +56,7 @@
 
 | 결과 | 파일 | 상태 |
 |---|---|---|
-| 42 sedenion ZD **assessors** | [`prove_higgs_results.json`](../../research/hypercomplex/prove_higgs_results.json) | ✓ 외부 검증 (Lygeros 2006 "42 Assessors"). 정밀: 42 = **assessors** (7 box-kite × 6), ZD-*pair* count은 84, primitive units 168 (de Marrais chain, 독립 재계산 2026-06-05). "42 ZD pairs"는 assessor count의 느슨한 라벨 — 숫자 42 보존, 용어만 정밀화. → [`RESULTS.md`](../../avenue3_decisive_test_2026-06-05/RESULTS.md) |
+| 42 sedenion ZD **assessors** | [`prove_higgs_results.json`](../../research/hypercomplex/prove_higgs_results.json) | ✓ 외부 검증 (Lygeros 2006 "42 Assessors"). 정밀: 42 = unordered assessor axis-planes (7 box-kite × 6), 84 = signed vectors `e_a±e_b` with `a<b`, 168 = both index orders. Annihilating-*pair* totals must state sign/order convention: the direct scripts report 168 unordered any-sign pairs and 336 ordered products, while the all-plus enumeration is 84 ordered or 42 after unordered canonicalization. "42 ZD pairs"는 느슨한 역사 라벨이며 숫자 42만 assessor count로 보존한다. → [`RESULTS.md`](../../avenue3_decisive_test_2026-06-05/RESULTS.md) |
 | Der(S) = g₂ 14D | [`sedenion_g2_deep.py`](../../_archive/variants/sedenion_g2_deep.py) | ✓ 수치 검증, 외부 peer 미검증 (arXiv preprint 권장) |
 | Koide Q = 2/3 | [`derive_dimensionless_results.json`](../../research/legacy_predictions/derive_dimensionless_results.json) | ICE derivation/predictivity claim relation: `CONTRADICTS`; fitting risk: `NUMEROLOGY_HOLD` — MC null P(E\|~H)=1.000 |
 | mass_ratios | [`derive_mass_ratios_results.json`](../../research/legacy_predictions/derive_mass_ratios_results.json) | **자체 verdict: "ICE cannot genuinely derive" 0/15 genuine** |

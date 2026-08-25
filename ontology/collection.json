@@ -1,0 +1,414 @@
+{
+  "$schema": "schema/research-collection-v1.schema.json",
+  "schema_version": "research-collection/v1",
+  "collection_id": "research-collection:ice-orca-dragon",
+  "title": "ICE ORCA DRAGON research memory collection",
+  "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
+  "updated_at_utc": "2026-08-25T09:32:41Z",
+  "canonical_file": "ontology/collection.json",
+  "default_graph": "hypercomplex",
+  "graphs": [
+    {
+      "key": "hypercomplex",
+      "graph_id": "research-graph:hypercomplex",
+      "path": "ontology/hypercomplex/graph.json",
+      "guide": "ontology/hypercomplex/README.md",
+      "entry_node": "programme:hypercomplex-hypothesis-testbench",
+      "coverage": "PARTIAL",
+      "corpus_roots": [
+        "research/hypercomplex",
+        "avenue3_decisive_test_2026-06-05"
+      ],
+      "includes": [
+        "representative finite Cayley-Dickson and sedenion structure claims",
+        "projected closure, portability, toy-potential, g2, S3, and XOR verdicts",
+        "selected Avenue-3 exact-count sources and report needed to disambiguate 42/84/168",
+        "selected audit and provenance artifacts needed to interpret those verdicts"
+      ],
+      "excludes": [
+        "an exhaustive node for every historical result JSON",
+        "a Standard Model embedding or automatic physics interpretation",
+        "external KG ratification"
+      ]
+    },
+    {
+      "key": "legacy",
+      "graph_id": "research-graph:legacy-predictions",
+      "path": "ontology/legacy-predictions/graph.json",
+      "guide": "ontology/legacy-predictions/README.md",
+      "entry_node": "programme:ice-legacy-predictions",
+      "coverage": "PARTIAL",
+      "corpus_roots": [
+        "research/legacy_predictions"
+      ],
+      "includes": [
+        "user-primary narrative sources as source nodes rather than evidence artifacts",
+        "mass, dimensionless, P01-P15, gravity, hidden-scan, and provenance verdicts",
+        "formalization and quotation-provenance open problems"
+      ],
+      "excludes": [
+        "a claim that preservation of the narrative proves physics",
+        "an exhaustive archive of every conversation-derived phrase",
+        "untracked sibling files as repository artifacts"
+      ]
+    },
+    {
+      "key": "cpt",
+      "graph_id": "research-graph:cpt-temporal-folded-susy",
+      "path": "ontology/cpt-temporal-folded-susy/graph.json",
+      "guide": "ontology/cpt-temporal-folded-susy/README.md",
+      "entry_node": "programme:cpt-temporal-folded-susy",
+      "coverage": "DETAILED",
+      "corpus_roots": [
+        "cpt_temporal_folded_susy"
+      ],
+      "includes": [
+        "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
+        "the bounded Phase-56 terminal diagnostic and post-Phase-56 hard stop",
+        "selected philosophy records as non-evidential artifacts"
+      ],
+      "excludes": [
+        "authorization for Phase 57 or a new reconciliation route",
+        "a closed Gate 1 or a global Picard-Lefschetz coefficient",
+        "a physics or TOE promotion"
+      ]
+    }
+  ],
+  "quick_answers": [
+    {
+      "question": "Is ICE ORCA DRAGON one undifferentiated knowledge graph?",
+      "answer": "No. Hypercomplex algebra, legacy prediction/narrative history, and CPT temporal-folded SUSY remain independent research or memory graphs. This collection supplies only qualified navigation between them.",
+      "refs": [
+        {
+          "graph": "hypercomplex",
+          "node": "programme:hypercomplex-hypothesis-testbench"
+        },
+        {
+          "graph": "legacy",
+          "node": "programme:ice-legacy-predictions"
+        },
+        {
+          "graph": "cpt",
+          "node": "programme:cpt-temporal-folded-susy"
+        }
+      ]
+    },
+    {
+      "question": "What survives in the hypercomplex programme?",
+      "answer": "Several finite algebraic structures survive in their declared convention, including the assessor orbit chain, XOR regularity, finite identities, and an explicit S3 subgroup. The currently indexed hypercomplex subset does not establish Standard Model referents.",
+      "refs": [
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_XOR_ORBIT_LABEL"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_FINITE_HIGHER_ALGEBRA_IDENTITIES"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS"
+        }
+      ]
+    },
+    {
+      "question": "Did the legacy numerical predictions pass their recorded gates?",
+      "answer": "No genuine P01-P15 or gravity signal survives the stored gates, and Git does not independently timestamp the declared prediction lists before their comparisons.",
+      "refs": [
+        {
+          "graph": "legacy",
+          "node": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL"
+        },
+        {
+          "graph": "legacy",
+          "node": "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE"
+        },
+        {
+          "graph": "legacy",
+          "node": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS"
+        }
+      ]
+    },
+    {
+      "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
+      "answer": "No. Phase 56 consumed the bounded diagnostic exception and forbids full replay, Phase 57, and global promotion. The straight-line KILL closes only its declared model class; Gate 1 remains open.",
+      "refs": [
+        {
+          "graph": "cpt",
+          "node": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections"
+        }
+      ]
+    },
+    {
+      "question": "Is the user-primary ICE narrative preserved as evidence?",
+      "answer": "It is preserved as primary narrative and motivation, not promoted into computational evidence. Exact source-backed wording is separated from later interpretation.",
+      "refs": [
+        {
+          "graph": "legacy",
+          "node": "source:mind-ice-self-list"
+        },
+        {
+          "graph": "legacy",
+          "node": "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH"
+        },
+        {
+          "graph": "legacy",
+          "node": "scope:legacy-user-primary-narrative"
+        }
+      ]
+    },
+    {
+      "question": "Has any of this been promoted into an external KG or a physics verdict?",
+      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 33 bridges remain unresolved. The repository ontology is only a memory and index layer.",
+      "refs": [
+        {
+          "graph": "hypercomplex",
+          "node": "programme:hypercomplex-hypothesis-testbench"
+        },
+        {
+          "graph": "legacy",
+          "node": "scope:legacy-l2l3-computations"
+        },
+        {
+          "graph": "cpt",
+          "node": "programme:cpt-temporal-folded-susy"
+        }
+      ]
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "collection-path:current-status-in-five-stops",
+      "title": "Current status in five stops",
+      "summary": "Read five independent status samples: finite algebra that survives, its interpretation boundary, a legacy null gate, the Phase-56 stop, and the still-open Gate 1 problem. Their order is navigation, not a shared evidence or gate chain.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN",
+          "why": "A scoped algebraic result that survives"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS",
+          "why": "The currently indexed hypercomplex subset does not establish the proposed physics referents"
+        },
+        {
+          "graph": "legacy",
+          "node": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
+          "why": "The historical prediction belt fails its stored corrected gate"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+          "why": "The operational hard stop"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections",
+          "why": "The unresolved scientific bottleneck"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:narrative-to-workbench-boundary",
+      "title": "Narrative preservation to workbench boundary",
+      "summary": "Read the source-backed narrative, its preserved textual claim, the permanent layer separation, and then the two active computational programmes. The sequence is motivational navigation, not a derivation.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "legacy",
+          "node": "source:mind-ice-self-list"
+        },
+        {
+          "graph": "legacy",
+          "node": "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH"
+        },
+        {
+          "graph": "legacy",
+          "node": "policy:ice-workbench-reframe"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "programme:hypercomplex-hypothesis-testbench"
+        },
+        {
+          "graph": "cpt",
+          "node": "programme:cpt-temporal-folded-susy"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:algebra-and-interpretation-fork",
+      "title": "Algebra survives while several interpretations fail or remain open",
+      "summary": "Follow supported finite structure through basis and projection failures to the surviving explicit S3 computation and the physics promotion that remains unestablished in the indexed subset.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_ZD_ASSESSOR_ORBIT_CHAIN"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_PROJECTED_CUSTODIAL_SU2XSU2"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_QUEUE03_PORTABLE_THRESHOLD_EVIDENCE"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_PROJECTED_SEDENION_G2_REPRESENTATION"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:provenance-before-promotion",
+      "title": "Provenance before promotion",
+      "summary": "Compare the legacy same-commit preregistration limitation, the hypercomplex producer/interpretation debt, and the CPT circuit breaker that prevents recursive evidence-harness debt from authorizing a new phase.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "legacy",
+          "node": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS"
+        },
+        {
+          "graph": "legacy",
+          "node": "open:legacy-genuine-preregistration-and-source-refresh"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "open:hyper-result-producer-and-interpretation-provenance"
+        },
+        {
+          "graph": "cpt",
+          "node": "policy:ragnarok-circuit-breaker"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:open-problems-without-promotion",
+      "title": "Open problems without automatic promotion",
+      "summary": "Three genuinely open lanes are retained without treating their coexistence as mutual support: an algebra-to-observable discriminator, a genuinely prior legacy test, and the original-cycle Gate 1 construction.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "hypercomplex",
+          "node": "open:hyper-algebra-to-physics-discriminator"
+        },
+        {
+          "graph": "legacy",
+          "node": "open:legacy-genuine-preregistration-and-source-refresh"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections"
+        }
+      ]
+    }
+  ],
+  "coverage_ledger": [
+    {
+      "path": "research/hypercomplex",
+      "status": "PARTIAL",
+      "graph": "hypercomplex",
+      "reason": "Representative calculation families and their decisive result/audit records are indexed; the directory is not exhaustively mirrored file by file."
+    },
+    {
+      "path": "research/legacy_predictions",
+      "status": "PARTIAL",
+      "graph": "legacy",
+      "reason": "The principal prediction, null-control, gravity, and provenance ledgers are indexed; historical files without a material verdict role are not all separate nodes."
+    },
+    {
+      "path": "cpt_temporal_folded_susy",
+      "status": "INDEXED",
+      "graph": "cpt",
+      "reason": "Phase 16-56 claim/evidence history is detailed, including the Phase-56 terminal boundary; indexing is not a physics promotion."
+    },
+    {
+      "path": "docs",
+      "status": "UNINDEXED",
+      "reason": "Selected hash-tracked policies and audits are referenced by programme graphs, but the docs tree as a whole is not systematically indexed."
+    },
+    {
+      "path": "claimB_loop",
+      "status": "UNINDEXED",
+      "reason": "No programme graph currently claims systematic coverage of this focused research root."
+    },
+    {
+      "path": "aut_direct_product_test_2026-07-12",
+      "status": "UNINDEXED",
+      "reason": "The named experiment is not yet represented as a programme graph."
+    },
+    {
+      "path": "avenue3_decisive_test_2026-06-05",
+      "status": "PARTIAL",
+      "graph": "hypercomplex",
+      "reason": "The exact count source, report, and separate reconstruction are hash-indexed to disambiguate 42/84/168; the experiment directory is not exhaustively mirrored."
+    },
+    {
+      "path": "igrueqft_locality_falsifier_2026-07-12",
+      "status": "UNINDEXED",
+      "reason": "The named experiment is not yet represented as a programme graph."
+    },
+    {
+      "path": "wilmot_theta_preservation_test_2026-07-12",
+      "status": "UNINDEXED",
+      "reason": "Relevant interpretation corrections are indexed in hypercomplex, but this directory is not exhaustively represented."
+    },
+    {
+      "path": "research/reports",
+      "status": "ARCHIVE",
+      "reason": "Report snapshots are preserved as historical material rather than a separately indexed evidence graph."
+    },
+    {
+      "path": "_archive",
+      "status": "ARCHIVE",
+      "reason": "Historical archive content is intentionally outside active programme coverage."
+    },
+    {
+      "path": "_findings",
+      "status": "UNINDEXED",
+      "reason": "Finding notes are not automatically promoted into claim or evidence nodes."
+    },
+    {
+      "path": "papers",
+      "status": "ARCHIVE",
+      "reason": "Paper material is retained separately and is not an active research-graph corpus root."
+    },
+    {
+      "path": "output",
+      "status": "ARCHIVE",
+      "reason": "Generated output is not treated as indexed evidence unless a graph explicitly hash-tracks a selected artifact."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-collection-v1.schema.json",
+  "title": "Research graph collection and cross-graph navigation",
+  "description": "Repository-local catalog of independent research graphs. Cross-graph paths are navigation aids, not scientific evidence edges.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "collection_id",
+    "title",
+    "description",
+    "updated_at_utc",
+    "canonical_file",
+    "default_graph",
+    "graphs",
+    "quick_answers",
+    "reading_paths",
+    "coverage_ledger"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": "research-collection/v1" },
+    "collection_id": {
+      "type": "string",
+      "pattern": "^research-collection:[a-z0-9-]+$"
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "updated_at_utc": { "type": "string", "format": "date-time" },
+    "canonical_file": { "const": "ontology/collection.json" },
+    "default_graph": { "type": "string", "pattern": "^(?!all$)[a-z0-9-]+$" },
+    "graphs": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": { "$ref": "#/$defs/graphDescriptor" }
+    },
+    "quick_answers": {
+      "type": "array",
+      "maxItems": 64,
+      "items": { "$ref": "#/$defs/quickAnswer" }
+    },
+    "reading_paths": {
+      "type": "array",
+      "maxItems": 32,
+      "items": { "$ref": "#/$defs/readingPath" }
+    },
+    "coverage_ledger": {
+      "type": "array",
+      "maxItems": 256,
+      "items": { "$ref": "#/$defs/coverageEntry" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "entityId": {
+      "type": "string",
+      "pattern": "^[a-z_]+:[A-Za-z0-9_.:-]+$"
+    },
+    "graphDescriptor": {
+      "type": "object",
+      "required": [
+        "key",
+        "graph_id",
+        "path",
+        "guide",
+        "entry_node",
+        "coverage",
+        "corpus_roots",
+        "includes",
+        "excludes"
+      ],
+      "properties": {
+        "key": { "type": "string", "pattern": "^(?!all$)[a-z0-9-]+$" },
+        "graph_id": {
+          "type": "string",
+          "pattern": "^research-graph:[a-z0-9-]+$"
+        },
+        "path": { "type": "string", "minLength": 1 },
+        "guide": { "type": "string", "minLength": 1 },
+        "entry_node": { "$ref": "#/$defs/entityId" },
+        "coverage": { "enum": ["DETAILED", "PARTIAL", "INDEX_ONLY"] },
+        "corpus_roots": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "includes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "excludes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "qualifiedRef": {
+      "type": "object",
+      "required": ["graph", "node"],
+      "properties": {
+        "graph": { "type": "string", "pattern": "^(?!all$)[a-z0-9-]+$" },
+        "node": { "$ref": "#/$defs/entityId" },
+        "why": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "quickAnswer": {
+      "type": "object",
+      "required": ["question", "answer", "refs"],
+      "properties": {
+        "question": { "type": "string", "minLength": 1 },
+        "answer": { "type": "string", "minLength": 1 },
+        "refs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": { "$ref": "#/$defs/qualifiedRef" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "readingPath": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "summary",
+        "navigation_only",
+        "stops"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^collection-path:" },
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "navigation_only": { "const": true },
+        "stops": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": { "$ref": "#/$defs/qualifiedRef" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "coverageEntry": {
+      "type": "object",
+      "required": ["path", "status", "reason"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["INDEXED", "PARTIAL", "UNINDEXED", "ARCHIVE"] },
+        "graph": { "type": "string", "pattern": "^(?!all$)[a-z0-9-]+$" },
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

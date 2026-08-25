@@ -2,6 +2,7 @@ import { Args, Command, Options } from "@effect/cli"
 import { Console, Effect } from "effect"
 import { setExitCode } from "../commands.ts"
 import {
+  ontologyGuideCommand,
   ontologyShowCommand,
   ontologySummaryCommand,
   ontologyTraceCommand,
@@ -12,11 +13,18 @@ const json = Options.boolean("json").pipe(
   Options.withDescription("emit machine-readable JSON")
 )
 
+const graph = Options.text("graph").pipe(
+  Options.withDefault("all"),
+  Options.withDescription(
+    "graph key from ontology/collection.json; default searches or summarizes all"
+  )
+)
+
 const validateCommand = Command.make(
   "validate",
-  { json },
-  ({ json }) =>
-    ontologyValidateCommand(json).pipe(
+  { json, graph },
+  ({ json, graph }) =>
+    ontologyValidateCommand(json, graph).pipe(
       Effect.flatMap((report) => setExitCode(report.valid ? 0 : 1))
     )
 ).pipe(
@@ -27,16 +35,16 @@ const validateCommand = Command.make(
 
 const summaryCommand = Command.make(
   "summary",
-  { json },
-  ({ json }) => ontologySummaryCommand(json)
+  { json, graph },
+  ({ json, graph }) => ontologySummaryCommand(json, graph)
 ).pipe(Command.withDescription("summarize ontology nodes, claims, and bridges"))
 
 const nodeId = Args.text({ name: "id" })
 
 const showCommand = Command.make(
   "show",
-  { id: nodeId, json },
-  ({ id, json }) => ontologyShowCommand(id, json)
+  { id: nodeId, json, graph },
+  ({ id, json, graph }) => ontologyShowCommand(id, json, graph)
 ).pipe(Command.withDescription("show one node with adjacent edges and KG bridges"))
 
 const depth = Options.integer("depth").pipe(
@@ -46,9 +54,29 @@ const depth = Options.integer("depth").pipe(
 
 const traceCommand = Command.make(
   "trace",
-  { id: nodeId, depth, json },
-  ({ id, depth, json }) => ontologyTraceCommand(id, depth, json)
+  { id: nodeId, depth, json, graph },
+  ({ id, depth, json, graph }) =>
+    ontologyTraceCommand(id, depth, json, graph)
 ).pipe(Command.withDescription("trace the bounded relation neighborhood of one node"))
+
+const guideCommand = Command.make(
+  "guide",
+  {
+    json,
+    graph,
+    path: Options.text("path").pipe(
+      Options.withDefault(""),
+      Options.withDescription(
+        "show one collection-path or reading-path ID instead of every path"
+      )
+    )
+  },
+  ({ json, graph, path }) => ontologyGuideCommand(json, graph, path)
+).pipe(
+  Command.withDescription(
+    "show quick answers, bounded reading paths, and honest coverage gaps"
+  )
+)
 
 export const ontologyCommand = Command.make("ontology", {}, () =>
   Console.log("Use `ice ontology --help` to inspect ontology commands.")
@@ -57,6 +85,7 @@ export const ontologyCommand = Command.make("ontology", {}, () =>
   Command.withSubcommands([
     validateCommand,
     summaryCommand,
+    guideCommand,
     showCommand,
     traceCommand
   ])

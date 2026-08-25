@@ -6,12 +6,19 @@
 
 | Programme | Human entry point | Machine record | Evidence and sources |
 | --- | --- | --- | --- |
+| Hypercomplex hypothesis testbench | [Programme guide](./hypercomplex/README.md) | [Research graph](./hypercomplex/graph.json) | [Source inventory](./hypercomplex/references/source-inventory.md) |
+| Legacy predictions and narrative | [Programme guide](./legacy-predictions/README.md) | [Research graph](./legacy-predictions/graph.json) | [Source inventory](./legacy-predictions/references/source-inventory.md) |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
 
-The graph uses [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 snapshots use [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+The [collection manifest](./collection.json) uses
+[`research-collection/v1`](./schema/research-collection-v1.schema.json); each independent graph uses
+[`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 snapshots use
+[`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-23T19:47:02Z` Phase 56 graph update, the collection has 760 nodes and 2249
-edges. Validation verifies 166/166 stored hashes (161 artifacts and 5 policies). The Phase 16–56 run
+At the recorded `2026-08-25T09:32:41Z` collection update, the three graphs have 876 nodes, 2489 edges,
+and 220 claims: 127 supported, 88 contradicted, and 5 inconclusive. Validation verifies all 205 stored
+hashes (197 artifacts and 8 policies); 33 unresolved external bridges remain explicit warnings. The
+Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
 `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
@@ -85,9 +92,17 @@ repository records, not independent replications or global scientific confidence
 
 ## Read and validate it
 
+`validate` is deliberately the expensive integrity command and streams every hash-tracked artifact.
+The read commands (`summary`, `show`, `trace`, and `guide`) perform structural and semantic collection
+validation without reopening artifact payloads; intuitive lookup therefore does not depend on the
+529 MB Phase-44 LFS object.
+
 ```bash
 ./ice ontology validate
 ./ice ontology summary
+./ice ontology guide --path current-status-in-five-stops
+./ice ontology guide --graph hypercomplex --path hyper-projection-failure
+./ice ontology guide --graph legacy --path legacy-preregistration-provenance
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2
@@ -177,8 +192,11 @@ repository records, not independent replications or global scientific confidence
 ./ice ontology trace open:gate5-persistent-order-and-pole-splitting --depth 5
 ```
 
-Every command also accepts `--json`. `show` accepts either a full node ID or a bare stable `claim_id`;
-`trace` walks incoming and outgoing relations to the requested bounded depth.
+Every command also accepts `--json`. Use `--graph hypercomplex`, `--graph legacy`, or `--graph cpt` to
+restrict a query; `key::node-id` is the unambiguous qualified form. `guide --path` accepts the stable ID
+with or without its `collection-path:`/`reading-path:` prefix. Cross-graph paths are navigation-only;
+`trace` stays inside one graph while walking incoming and outgoing relations to the requested bounded
+depth.
 
 The active `policy:recursive-self-application-audit` records the user-requested no-privileged-exception
 lesson. Its own audit narrows it from universal literal recursion to a type-correct audit wherever a

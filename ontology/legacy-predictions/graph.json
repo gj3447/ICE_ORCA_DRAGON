@@ -1,0 +1,1627 @@
+{
+  "$schema": "../schema/research-graph-v1.schema.json",
+  "schema_version": "research-graph/v1",
+  "graph_id": "research-graph:legacy-predictions",
+  "title": "ICE legacy predictions and narrative research graph",
+  "description": "A repository-local memory graph that preserves user-primary ICE narrative sources while separating them from historical L2/L3 prediction calculations, null controls, provenance limitations, and open formalization work. It records scoped computational outcomes without promoting them to physics or TOE claims.",
+  "updated_at_utc": "2026-08-25T09:32:41Z",
+  "canonical_file": "ontology/legacy-predictions/graph.json",
+  "source_inventory": "ontology/legacy-predictions/references/source-inventory.md",
+  "quick_answers": [
+    {
+      "question": "Did the legacy ICE mass, scale, Koide, or proton/W predictions succeed?",
+      "answer": "No under their recorded scopes: the mass search reports zero genuine targets, the L-star candidates are not uniquely selected, the Koide null hit probability is 1, and the broad proton/W fitting family has random-fit probability about 0.812.",
+      "claim_ids": [
+        "claim:LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+        "claim:LEGACY_LSTAR_IS_UNIQUELY_SELECTED",
+        "claim:KOIDE_MATCH_IS_ICE_INFORMATIVE",
+        "claim:MPMW_SMALL_INTEGER_FIT_IS_ICE_INFORMATIVE"
+      ]
+    },
+    {
+      "question": "Were the P01-P15 and gravity lists independently preregistered before comparison?",
+      "answer": "Their payloads carry integrity hashes, but each prediction list and its associated comparison output first entered Git in the same commit. The repository therefore does not establish an independent pre-comparison timestamp.",
+      "claim_ids": [
+        "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS"
+      ]
+    },
+    {
+      "question": "Did the recorded gravity escape-lane candidate set produce a genuine signal?",
+      "answer": "No. The authoritative stored classifier records zero SIGNAL_GENUINE outcomes: two rejected, two consistent-but-unfalsifiable, one structural null, one vacuous, and one deferred. The separate P-G03 quick control is not a full cosmology fit.",
+      "claim_ids": [
+        "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+        "claim:PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT"
+      ]
+    },
+    {
+      "question": "Is the MB1 form-uniqueness escape lane proved?",
+      "answer": "No. The observed sibling Lean file is Git-ignored and untracked, its forcing predicate is an axiom, and the key uniqueness theorem contains sorry. It is an open lead, not durable proof evidence.",
+      "claim_ids": [
+        "claim:MB1_FORM_UNIQUENESS_IS_PROVED",
+        "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED"
+      ]
+    },
+    {
+      "question": "Does preserving the ICE narrative make it computational or physics evidence?",
+      "answer": "No. The source-backed phrase 'all is hypergraph' and the ICED/frozen imagery are preserved as user-primary narrative motivation. Later physics-apostle and sexvoid syntheses are separately attributed and never used as calculation evidence.",
+      "claim_ids": [
+        "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+        "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST"
+      ]
+    },
+    {
+      "question": "Do raw SIGNAL_GENUINE labels in the hidden scans establish positive predictions?",
+      "answer": "No. In those records a zero null-hit rate can also mean the primitive family cannot reach the target. The later human audit correctly treats those cases as structural incapacity or an uninformative null, not positive evidence.",
+      "claim_ids": [
+        "claim:RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS"
+      ]
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "reading-path:legacy-narrative-without-erasure",
+      "title": "Narrative without evidential promotion",
+      "summary": "Read the user-primary packet, the exact source-backed statement, the attribution guard, and the workbench policy boundary in that order.",
+      "nodes": [
+        "source:mind-ice-self-list",
+        "source:mind-frozen-river-song",
+        "source:mind-ice-fragment",
+        "source:mind-apostle-list-update",
+        "concept:user-primary-narrative-preservation",
+        "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+        "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+        "policy:ice-workbench-reframe"
+      ]
+    },
+    {
+      "id": "reading-path:legacy-number-to-null-control",
+      "title": "From attractive number to scoped null result",
+      "summary": "Follow the historical derivations through the Monte Carlo, look-elsewhere, reachability, and P01-P15 controls without treating raw labels as physical findings.",
+      "nodes": [
+        "claim:LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+        "claim:LEGACY_LSTAR_IS_UNIQUELY_SELECTED",
+        "claim:KOIDE_MATCH_IS_ICE_INFORMATIVE",
+        "claim:MPMW_SMALL_INTEGER_FIT_IS_ICE_INFORMATIVE",
+        "concept:null-reachability-versus-signal",
+        "evidence:legacy-numerology-null-audit",
+        "claim:RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS",
+        "evidence:legacy-p15-check-audit"
+      ]
+    },
+    {
+      "id": "reading-path:legacy-preregistration-provenance",
+      "title": "Why the historical preregistration label is limited",
+      "summary": "Compare payload integrity with Git chronology, then continue to the open requirement for a genuinely prior, source-refreshed test.",
+      "nodes": [
+        "concept:payload-integrity-versus-preregistration-time",
+        "artifact:legacy-p15-declared-list",
+        "artifact:legacy-p15-check-result",
+        "artifact:legacy-gravity-declared-list",
+        "artifact:legacy-mb3-verdict-result",
+        "evidence:legacy-git-prereg-provenance-audit",
+        "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+        "open:legacy-genuine-preregistration-and-source-refresh"
+      ]
+    },
+    {
+      "id": "reading-path:legacy-gravity-and-form-uniqueness",
+      "title": "Gravity candidate ledger and remaining escape-lane obligations",
+      "summary": "Read the stored gravity tally, semantic corrections, OQ2 pullback, local Lean limitation, and deferred full cosmology fit as separate scopes.",
+      "nodes": [
+        "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+        "claim:ADELBERGER_SCREEN_PASS_DISCRIMINATES_ICE",
+        "concept:assessor-pair-semantic-correction",
+        "claim:LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+        "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED",
+        "claim:MB1_FORM_UNIQUENESS_IS_PROVED",
+        "claim:PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT",
+        "open:legacy-form-uniqueness-with-corrected-primitives",
+        "open:legacy-pg03-full-source-backed-fit"
+      ]
+    }
+  ],
+  "node_type_legend": {
+    "programme": "overall research and preservation question",
+    "phase": "bounded historical calculation cycle",
+    "concept": "reusable epistemic or semantic distinction",
+    "claim": "scoped statement with explicit epistemic state",
+    "evidence": "observed committed output or bounded read-only audit, with status stated",
+    "scope": "assumptions, inclusions, and exclusions",
+    "open_problem": "missing calculation, provenance, or proof obligation",
+    "source": "literature or user-primary source; sibling sources are hash-recorded but not repository artifacts",
+    "artifact": "tracked file inside this repository",
+    "policy": "repository interpretation or workflow boundary, never scientific evidence"
+  },
+  "relation_legend": {
+    "PART_OF": "belongs to a programme or bounded layer",
+    "ABOUT": "claim concerns a concept",
+    "HAS_EVIDENCE": "claim points to supporting or contradicting evidence; see polarity",
+    "DEFINED_IN": "evidence checks are implemented in an executable",
+    "RECORDED_IN": "evidence is persisted in a tracked result or report",
+    "DERIVED_FROM": "evidence uses a source or declared input artifact",
+    "DOCUMENTED_BY": "claim or programme has a human-readable tracked report",
+    "DOCUMENTS": "artifact documents a source or concept",
+    "IMPLEMENTS": "artifact implements a calculation or policy",
+    "RECORDS": "artifact records a calculation or programme state",
+    "VALID_WITHIN": "claim is limited by a scope node",
+    "BLOCKED_BY": "claim cannot be promoted until an open problem is solved",
+    "MOTIVATES": "result or narrative motivates a distinct follow-up without proving it",
+    "EXTENDS": "new policy or result refines an older record without erasing it",
+    "FOLLOW_UP_TO": "new claim tests a continuation of an older target",
+    "CONTRASTS_WITH": "distinguishes epistemic layers or sharper statements",
+    "CITES": "node cites a source",
+    "USES_TOOLING": "programme uses a tooling reference",
+    "GOVERNED_BY": "workflow or interpretation boundary, not evidential support"
+  },
+  "nodes": [
+    {
+      "id": "programme:ice-legacy-predictions",
+      "type": "programme",
+      "title": "ICE legacy prediction and narrative workbench",
+      "summary": "Preserves user-primary ICE narrative and historical prediction calculations while indexing their null controls, contradictions, provenance limits, and still-open proof obligations as distinct layers.",
+      "state": "WORKBENCH_ARCHIVAL_ACTIVE"
+    },
+    {
+      "id": "concept:ice-three-layer-disclosure",
+      "type": "concept",
+      "title": "ICE three-layer disclosure",
+      "summary": "Separates user-primary mythology, implemented algebra/computation, and proposed L2/L3 physical interpretation so that one layer cannot silently promote another.",
+      "state": "ACTIVE_DISTINCTION"
+    },
+    {
+      "id": "concept:user-primary-narrative-preservation",
+      "type": "concept",
+      "title": "User-primary narrative preservation",
+      "summary": "Keeps original names, images, and statements without adjudicating them as scientific propositions or erasing them after computational contradiction.",
+      "state": "PRESERVED_NOT_ADJUDICATED"
+    },
+    {
+      "id": "concept:payload-integrity-versus-preregistration-time",
+      "type": "concept",
+      "title": "Payload integrity is not prior timestamp provenance",
+      "summary": "A SHA-256 digest can bind a payload's bytes, but it does not show that those bytes were independently committed before comparison when list and result first enter Git together.",
+      "state": "ACTIVE_PROVENANCE_GUARD"
+    },
+    {
+      "id": "concept:null-reachability-versus-signal",
+      "type": "concept",
+      "title": "Null rarity versus target reachability",
+      "summary": "A zero or small null-hit probability is not a positive signal unless the implemented primitive family actually reaches the target through a declared derivation.",
+      "state": "ACTIVE_INTERPRETATION_GUARD"
+    },
+    {
+      "id": "concept:assessor-pair-semantic-correction",
+      "type": "concept",
+      "title": "Assessor and zero-divisor-pair count correction",
+      "summary": "Current repository provenance distinguishes 42 unordered assessor axis-planes, 84 signed vectors e_a +/- e_b with a<b, and 168 index-ordered representations. Annihilating-pair totals require an explicit sign/order convention; legacy '42 ZD pairs' preserves only a loose historical label.",
+      "state": "CURRENT_TERMINOLOGY"
+    },
+    {
+      "id": "policy:ice-physics-partial-retreat",
+      "type": "policy",
+      "title": "Historical ICE physics-prediction partial retreat",
+      "summary": "Historical predecessor that retained algebra and user narrative while retreating from direct physical-prediction claims; later superseded by the permanent workbench reframe.",
+      "state": "HISTORICAL_PREDECESSOR",
+      "path": "docs/decisions/ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md",
+      "sha256": "1213a25659b3e41f1a1f9e35ea8d08c5d4cc5f682ea23ade2bcd6dd02324fb79",
+      "introduced_in_commit": "94b349cb21b74c6f0779d620c84c86e4e19fc99b"
+    },
+    {
+      "id": "policy:ice-workbench-reframe",
+      "type": "policy",
+      "title": "ICE workbench permanent reframe",
+      "summary": "Active layer boundary: the repository is a hypothesis-testing computation workbench, narrative remains preserved, and numerical coincidence is not a physics claim.",
+      "state": "ACTIVE",
+      "path": "docs/decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md",
+      "sha256": "e884e729531ee30a77360406a3c9db7285e7ac6dc06b81d3187af6d4c2c1cd6b",
+      "introduced_in_commit": "42ffa0d31b36bde5f41be91a166a3d00a43495c8"
+    },
+    {
+      "id": "scope:legacy-user-primary-narrative",
+      "type": "scope",
+      "title": "User-primary narrative scope",
+      "summary": "Textual preservation and attribution scope for the observed sibling MIND packet.",
+      "state": "ACTIVE",
+      "includes": [
+        "exact observed source wording",
+        "document identity and observed SHA-256",
+        "later interpretation when explicitly labelled as interpretation"
+      ],
+      "excludes": [
+        "scientific evidence",
+        "physics or TOE promotion",
+        "invented verbatim quotations",
+        "adjudication of symbolic truth"
+      ]
+    },
+    {
+      "id": "scope:legacy-l2l3-computations",
+      "type": "scope",
+      "title": "Historical L2/L3 computation scope",
+      "summary": "Committed legacy scripts, result JSON, their declared target registries, and their own fixed null and look-elsewhere rules.",
+      "state": "HISTORICAL_SCOPED",
+      "includes": [
+        "implemented searches and stored outputs",
+        "declared Monte Carlo nulls",
+        "stored classification fields",
+        "read-only arithmetic reconciliation"
+      ],
+      "excludes": [
+        "current experimental source validation",
+        "independent replication",
+        "physical mechanism",
+        "current physics-theory status",
+        "TOE claim"
+      ]
+    },
+    {
+      "id": "scope:legacy-git-provenance",
+      "type": "scope",
+      "title": "Git and hash provenance scope",
+      "summary": "What current hashes and first-introduction commits can and cannot establish about historical ordering.",
+      "state": "ACTIVE_AUDIT_SCOPE",
+      "includes": [
+        "current file SHA-256",
+        "embedded canonical-payload hashes",
+        "first repository commit containing each tracked artifact"
+      ],
+      "excludes": [
+        "uncommitted creation time",
+        "conversation chronology not preserved in Git",
+        "independent pre-comparison commitment when list and result share a first commit"
+      ]
+    },
+    {
+      "id": "scope:legacy-gravity-quick-controls",
+      "type": "scope",
+      "title": "Historical gravity and cosmology quick-control scope",
+      "summary": "The seven recorded candidate forms, stored bound comparisons, and two proxy interpretations of P-G03.",
+      "state": "HISTORICAL_SCOPED",
+      "includes": [
+        "stored P-G01 through P-G07 classifier",
+        "recorded epsilon candidates",
+        "P-G03 back-of-envelope proxy mappings"
+      ],
+      "excludes": [
+        "full DESI and Planck likelihood",
+        "source-refreshed present-day constraints",
+        "uniquely algebra-forced correction form",
+        "validated gravity theory"
+      ]
+    },
+    {
+      "id": "source:mind-ice-self-list",
+      "type": "source",
+      "title": "User-primary 'I am ICE ORCA DRAGON' text",
+      "summary": "Observed sibling source containing the ICE name list and the line that everything is a hypergraph; it does not contain the four later physics/sexvoid synthesis phrases verbatim.",
+      "state": "USER_PRIMARY_OBSERVED",
+      "citation": "User-primary MIND text, 나는야 ice orca dragon",
+      "uri": "repo-sibling://MIND/metahumotonic/나는야_ice_orca_dragon.md",
+      "version": "MIND commit 9ba1e705cf7df66bc609e991b8a9c65e76b3a12d; observed 2026-08-25",
+      "content_hashes": {
+        "sha256": "d3618a67a3cb2748db09505a8d7649d162328758cf85159e76a6af161b3d8f18"
+      },
+      "source_anchors": [
+        "line 1 title",
+        "CHU list entry",
+        "final line: 그냥 모든것은 하이퍼그래프"
+      ]
+    },
+    {
+      "id": "source:mind-frozen-river-song",
+      "type": "source",
+      "title": "User-primary frozen-river song",
+      "summary": "Observed sibling source for repeated ICED wording, frozen-heart imagery, absolute-zero preservation, and salvation language.",
+      "state": "USER_PRIMARY_OBSERVED",
+      "citation": "User-primary MIND text, 얼어붙은 강물의 노래",
+      "uri": "repo-sibling://MIND/metahumotonic/얼어붙은_강물의_노래.md",
+      "version": "MIND commit 9ba1e705cf7df66bc609e991b8a9c65e76b3a12d; observed 2026-08-25",
+      "content_hashes": {
+        "sha256": "52b8a5ee9a28ee290f5a588d14e4043156420f158b3e4d5de5d39414d899f981"
+      },
+      "source_anchors": [
+        "repeated ICED sequence",
+        "absolute-zero frozen-heart passage"
+      ]
+    },
+    {
+      "id": "source:mind-ice-fragment",
+      "type": "source",
+      "title": "User-primary ice fragment",
+      "summary": "Observed sibling poem fragment about a frozen heart, retained as narrative imagery only.",
+      "state": "USER_PRIMARY_OBSERVED",
+      "citation": "User-primary MIND text, 얼음장",
+      "uri": "repo-sibling://MIND/metahumotonic/얼음장.md",
+      "version": "MIND commit 9ba1e705cf7df66bc609e991b8a9c65e76b3a12d; observed 2026-08-25",
+      "content_hashes": {
+        "sha256": "8c64cf61322a55ab7a12e05c421d30f94993cb48a239d7c49497663c4f35cc87"
+      },
+      "source_anchors": [
+        "frozen-heart image"
+      ]
+    },
+    {
+      "id": "source:mind-apostle-list-update",
+      "type": "source",
+      "title": "User-primary apostle-list update",
+      "summary": "Observed sibling source that names ICE ORCA DRAGON as the second and true apostle; it does not itself spell out the later physics/TOE interpretation.",
+      "state": "USER_PRIMARY_OBSERVED",
+      "citation": "User-primary MIND text, 12사도 목록 업데이트",
+      "uri": "repo-sibling://MIND/metahumotonic/12사도_목록_업데이트.md",
+      "version": "MIND commit 9ba1e705cf7df66bc609e991b8a9c65e76b3a12d; observed 2026-08-25",
+      "content_hashes": {
+        "sha256": "30a7d39f1911fd4e2fc379537be7bd45dbf27277298048942f439c877c9e65e8"
+      },
+      "source_anchors": [
+        "numbered apostle list",
+        "ICE ORCA DRAGON이 진정한 사도야"
+      ]
+    },
+    {
+      "id": "source:mind-mb1-local-skeleton",
+      "type": "source",
+      "title": "Local untracked MB1 Phase-3 Lean skeleton",
+      "summary": "Observed sibling file only: MIND ignores the lean_formalization tree, algebraically_forced is an axiom, form_uniqueness_conjecture contains sorry, and the closure lemma concludes True.",
+      "state": "LOCAL_UNTRACKED_GIT_IGNORED",
+      "citation": "Local MIND Lean file, SedenionPhase3_FormUniqueness.lean",
+      "uri": "repo-sibling://MIND/lean_formalization/sedenion_uniqueness/SedenionPhase3_FormUniqueness.lean",
+      "version": "untracked Git-ignored snapshot observed 2026-08-25",
+      "content_hashes": {
+        "sha256": "aa4fe0f803ddaef104cba8693ca5862caf5134206378ff20e3bd30a4882977c4"
+      },
+      "source_anchors": [
+        "algebraically_forced axiom",
+        "form_uniqueness_conjecture sorry",
+        "escape_lane_closed_if_unique_form_rejected concludes True"
+      ]
+    },
+    {
+      "id": "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+      "type": "claim",
+      "claim_id": "PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+      "title": "The primary ICE self-list says everything is a hypergraph",
+      "statement": "The observed user-primary file 나는야_ice_orca_dragon.md contains the statement '그냥 모든것은 하이퍼그래프'.",
+      "summary": "Supported as textual content and preserved as narrative motivation; it is not a scientific claim about the world.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_AS_TEXT"
+    },
+    {
+      "id": "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+      "type": "claim",
+      "claim_id": "LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+      "title": "Later physics and sexvoid phrases are verbatim in the ICE self-list",
+      "statement": "The four phrases later quoted by the retreat and reframe documents are verbatim lines in 나는야_ice_orca_dragon.md.",
+      "summary": "Contradicted by direct source inspection. ICED and absolute-zero imagery occur in other MIND texts, while physics/TOE and sexvoid synthesis require separate attribution.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_SOURCE_ATTRIBUTION"
+    },
+    {
+      "id": "claim:LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+      "type": "claim",
+      "claim_id": "LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+      "title": "ICE primitives genuinely derive recorded mass ratios",
+      "statement": "The implemented legacy ICE search genuinely derives at least one of the fifteen recorded target mass ratios without post-hoc fitting.",
+      "summary": "Contradicted inside the stored calculation: 531 candidate ratios were compared with fifteen targets and genuine_predictions is zero.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_IN_RECORDED_SEARCH"
+    },
+    {
+      "id": "claim:LEGACY_LSTAR_IS_UNIQUELY_SELECTED",
+      "type": "claim",
+      "claim_id": "LEGACY_LSTAR_IS_UNIQUELY_SELECTED",
+      "title": "ICE internal structure uniquely selects L-star",
+      "statement": "The recorded doubling, entropy, or product constructions uniquely select an observable L-star from ICE structure.",
+      "summary": "Contradicted by the stored self-refutation: the candidates depend on unselected N or equivalent choices and do not yield a unique internal scale.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_IN_RECORDED_SEARCH"
+    },
+    {
+      "id": "claim:KOIDE_MATCH_IS_ICE_INFORMATIVE",
+      "type": "claim",
+      "claim_id": "KOIDE_MATCH_IS_ICE_INFORMATIVE",
+      "title": "The Koide 2/3 match is informative ICE evidence",
+      "statement": "Within the declared 499-candidate and eight-target null, the exact Koide Q=2/3 match carries information beyond small-integer look-elsewhere coincidence.",
+      "summary": "Contradicted by the stored Monte Carlo result p_any_target_hit=1.0.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_DECLARED_NULL"
+    },
+    {
+      "id": "claim:MPMW_SMALL_INTEGER_FIT_IS_ICE_INFORMATIVE",
+      "type": "claim",
+      "claim_id": "MPMW_SMALL_INTEGER_FIT_IS_ICE_INFORMATIVE",
+      "title": "The proton/W small-integer fit is informative ICE evidence",
+      "statement": "The literal 3*256 or broad a*2^n fitting family provides an informative ICE derivation of the proton/W ratio rather than a rational-approximation artifact.",
+      "summary": "Contradicted in the stored controls: even the reciprocal literal is about 88.8 percent off, and 81.18 percent of random ratios admit a 0.1-percent a*2^n fit in the declared search.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_DIRECT_AND_NULL_CONTROLS"
+    },
+    {
+      "id": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
+      "type": "claim",
+      "claim_id": "DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
+      "title": "The declared P01-P15 set contains a genuine PDG signal",
+      "statement": "At least one match in the stored fifteen-prediction by twenty-observable comparison passes its own corrected SIGNAL_GENUINE gate.",
+      "summary": "Contradicted by the stored result: seven matched pairs arise from only P01, P02, and P15, every corrected p-value is 1, and SIGNAL_GENUINE is zero.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_STORED_GATE"
+    },
+    {
+      "id": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+      "type": "claim",
+      "claim_id": "LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+      "title": "Git independently timestamps the prediction sets before comparison",
+      "statement": "Git history establishes that both the P01-P15 list and gravity list were committed independently before their associated comparison results existed.",
+      "summary": "Contradicted by first-introduction history: P01-P15 list and result share commit 42ffa0d, while the gravity list and MB3 result share commit 9f39648. Embedded hashes establish payload integrity only.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_GIT_CHRONOLOGY"
+    },
+    {
+      "id": "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+      "type": "claim",
+      "claim_id": "RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+      "title": "The recorded P-G01-P-G07 gravity set has a genuine signal",
+      "statement": "The authoritative stored MB3 classifier assigns SIGNAL_GENUINE to at least one of the seven gravity candidates.",
+      "summary": "Contradicted by the stored tally: zero genuine, two refuted, two consistent-but-unfalsifiable, one structural null, one vacuous, and one deferred.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_STORED_CLASSIFIER"
+    },
+    {
+      "id": "claim:ADELBERGER_SCREEN_PASS_DISCRIMINATES_ICE",
+      "type": "claim",
+      "claim_id": "ADELBERGER_SCREEN_PASS_DISCRIMINATES_ICE",
+      "title": "Passing the historical Adelberger screen discriminates ICE",
+      "statement": "Passing the stored wide-prior power-law screening gate alone supplies positive evidence for an ICE-specific correction form.",
+      "summary": "Contradicted under the declared null: 23.84 percent of random power laws pass, and no algebraically unique form is established.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_PERMISSIVE_NULL"
+    },
+    {
+      "id": "claim:RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS",
+      "type": "claim",
+      "claim_id": "RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS",
+      "title": "Raw hidden-scan SIGNAL_GENUINE labels are positive predictions",
+      "statement": "The raw v1 and v2 SIGNAL_GENUINE labels establish reachable, positively derived ICE predictions.",
+      "summary": "Contradicted by reachability inspection and the reports' own correction: zero null hits often mean the primitive ratio set cannot reach the target, so these labels represent structural incapacity or an uninformative null.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_REACHABILITY_AUDIT"
+    },
+    {
+      "id": "claim:LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+      "type": "claim",
+      "claim_id": "LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+      "title": "The legacy number 42 is the exact zero-divisor-pair count",
+      "statement": "The legacy gravity and prediction records' label '42 ZD pairs' is the current exact combinatorial pair count.",
+      "summary": "Contradicted by the current repository source map: 42 counts unordered assessor axis-planes, while 84 and 168 count signed vectors and index-ordered representations. A bare annihilating-pair total is convention-dependent; the legacy numeric inputs remain preserved historically.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_TERMINOLOGY_CORRECTION"
+    },
+    {
+      "id": "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED",
+      "type": "claim",
+      "claim_id": "OQ2_NEFF11_IS_UNIQUELY_FORCED",
+      "title": "The effective dimension n_eff=11 is uniquely forced",
+      "statement": "The sedenion structure uniquely forces n_eff=11 rather than the other historically enumerated dimension readings.",
+      "summary": "Inconclusive and pulled back. The same-day decision log records competing meanings for 4, 11, 12, and 14 and withdraws the delegated selection pending a constructive proof.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "PULLED_BACK_UNRESOLVED"
+    },
+    {
+      "id": "claim:MB1_FORM_UNIQUENESS_IS_PROVED",
+      "type": "claim",
+      "claim_id": "MB1_FORM_UNIQUENESS_IS_PROVED",
+      "title": "MB1 form uniqueness has a durable Lean proof",
+      "statement": "A tracked, durable Lean proof establishes that ICE algebra uniquely selects one gravity-correction form.",
+      "summary": "Contradicted by the observed local source: the tree is Git-ignored, the forcing predicate is axiomatic, the key theorem contains sorry, and the closure lemma has a vacuous True conclusion.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_FORMALIZATION_AUDIT"
+    },
+    {
+      "id": "claim:PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT",
+      "type": "claim",
+      "claim_id": "PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT",
+      "title": "A full cosmology fit refutes P-G03 gamma=1/14",
+      "statement": "The P-G03 gamma=1/14 candidate is refuted by a completed, source-backed full DESI and Planck likelihood fit.",
+      "summary": "Inconclusive. The repository contains two back-of-envelope proxy interpretations reporting tension, while the result explicitly records the full fit as DEFERRED.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "INCONCLUSIVE_FULL_FIT_DEFERRED"
+    },
+    {
+      "id": "evidence:legacy-narrative-source-audit",
+      "type": "evidence",
+      "title": "Read-only narrative source attribution audit",
+      "summary": "Direct inspection and SHA-256 recording of four tracked MIND texts separates exact wording from later synthesis without copying sibling files into repository artifacts.",
+      "state": "OBSERVED",
+      "observed_status": "SOURCE_HASHES_OBSERVED_TEXT_ATTRIBUTION_SCOPED",
+      "check_ids": [
+        "legacy.narrative.self_list_all_hypergraph_present",
+        "legacy.narrative.four_later_phrases_not_verbatim_in_self_list",
+        "legacy.narrative.iced_absolute_zero_in_separate_source",
+        "legacy.narrative.true_apostle_in_list_update"
+      ]
+    },
+    {
+      "id": "evidence:legacy-derived-output-audit",
+      "type": "evidence",
+      "title": "Legacy mass-ratio and L-star output audit",
+      "summary": "Read-only inspection of committed outputs records 531 mass-ratio candidates, fifteen targets, zero genuine predictions, and a self-refuted non-unique L-star selection.",
+      "state": "HISTORICAL_RECORDED",
+      "observed_status": "COMMITTED_OUTPUTS_READ_ZERO_GENUINE_AND_NONUNIQUE",
+      "check_ids": [
+        "legacy.mass_ratios.genuine_predictions_zero",
+        "legacy.mass_ratios.target_count_fifteen",
+        "legacy.lstar.self_refutation_true",
+        "legacy.lstar.unique_internal_selection_absent"
+      ]
+    },
+    {
+      "id": "evidence:legacy-numerology-null-audit",
+      "type": "evidence",
+      "title": "Legacy Koide, proton/W, and epsilon null controls",
+      "summary": "Stored Monte Carlo and direct controls report Koide p=1, broad a*2^n random-fit probability 0.8118, reciprocal literal error about 88.8 percent, and epsilon screening pass rate 0.2384.",
+      "state": "HISTORICAL_RECORDED",
+      "observed_status": "DECLARED_NULLS_READ_WITHOUT_RERUN",
+      "check_ids": [
+        "legacy.koide.p_any_target_hit_1",
+        "legacy.mpmw.random_fit_probability_0p8118",
+        "legacy.mpmw.reciprocal_relative_error_0p888454",
+        "legacy.epsilon.null_screen_pass_rate_0p2384"
+      ]
+    },
+    {
+      "id": "evidence:legacy-p15-check-audit",
+      "type": "evidence",
+      "title": "P01-P15 stored comparison audit",
+      "summary": "The result records fifteen predictions, twenty observables, seven matched pairs from three unique predictions, corrected p=1 for every match, and zero genuine signals. Consequently twelve predictions have no matched pair and 293 of 300 pairs are nonmatches; older prose counts of thirteen and 247 are not propagated.",
+      "state": "HISTORICAL_RECORDED",
+      "observed_status": "STORED_GATE_ZERO_SIGNAL_GENUINE",
+      "check_ids": [
+        "legacy.p15.prediction_count_fifteen",
+        "legacy.p15.observable_count_twenty",
+        "legacy.p15.matched_pairs_seven",
+        "legacy.p15.unique_matched_predictions_three",
+        "legacy.p15.signal_genuine_zero"
+      ]
+    },
+    {
+      "id": "evidence:legacy-git-prereg-provenance-audit",
+      "type": "evidence",
+      "title": "Historical prediction-list Git chronology audit",
+      "summary": "The P01-P15 list and comparison first appear together in 42ffa0d; the gravity list and MB3 result first appear together in 9f39648. Embedded canonical hashes remain useful byte-integrity records but do not establish temporal independence.",
+      "state": "VERIFIED_GIT_HISTORY",
+      "observed_status": "SAME_FIRST_COMMIT_FOR_LIST_AND_RESULT",
+      "check_ids": [
+        "legacy.provenance.p15_same_first_commit_42ffa0d",
+        "legacy.provenance.gravity_same_first_commit_9f39648",
+        "legacy.provenance.payload_hash_not_timestamp"
+      ]
+    },
+    {
+      "id": "evidence:legacy-gravity-ledger-audit",
+      "type": "evidence",
+      "title": "Recorded P-G01-P-G07 gravity classifier audit",
+      "summary": "The authoritative machine tally sums to seven candidates: two refuted, two consistent-but-unfalsifiable, one structural null, one vacuous, and one deferred, with zero genuine. Later prose that lists P-G03 as both refuted and marginal is not used as the tally.",
+      "state": "HISTORICAL_RECORDED",
+      "observed_status": "ZERO_SIGNAL_GENUINE_TWO_REFUTED_ONE_DEFERRED",
+      "check_ids": [
+        "legacy.gravity.signal_genuine_zero",
+        "legacy.gravity.refuted_two",
+        "legacy.gravity.consistent_unfalsifiable_two",
+        "legacy.gravity.structural_null_one",
+        "legacy.gravity.vacuous_one",
+        "legacy.gravity.deferred_one"
+      ]
+    },
+    {
+      "id": "evidence:legacy-hidden-scan-semantics-audit",
+      "type": "evidence",
+      "title": "Hidden-scan reachability and raw-label audit",
+      "summary": "The v1 machine result labels two unreachable mass targets SIGNAL_GENUINE before its report reinterprets them as structural incapacity; v2 similarly emits eleven raw genuine labels in target families where null non-reachability is not positive derivation.",
+      "state": "HISTORICAL_LABEL_CORRECTED",
+      "observed_status": "RAW_SIGNAL_LABELS_NOT_POSITIVE_EVIDENCE",
+      "check_ids": [
+        "legacy.hidden_v1.raw_signal_labels_two",
+        "legacy.hidden_v1.reachability_correction_structural_incapacity",
+        "legacy.hidden_v2.raw_signal_labels_eleven",
+        "legacy.hidden_v2.null_nonreachability_not_derivation"
+      ]
+    },
+    {
+      "id": "evidence:legacy-oq2-pullback-audit",
+      "type": "evidence",
+      "title": "OQ2 n_eff=11 pullback record",
+      "summary": "The status banner supersedes the historical delegated choice: multiple dimension readings and amplitude freedom create a numerology hazard, so n_eff=11 is withdrawn to unresolved.",
+      "state": "HISTORICAL_PULLBACK",
+      "observed_status": "PULLED_BACK_TO_UNRESOLVED",
+      "check_ids": [
+        "legacy.oq2.status_banner_pulled_back",
+        "legacy.oq2.candidate_dimension_ambiguity",
+        "legacy.oq2.amplitude_not_forced"
+      ]
+    },
+    {
+      "id": "evidence:legacy-mb1-formalization-audit",
+      "type": "evidence",
+      "title": "Local MB1 Lean source audit",
+      "summary": "Read-only source inspection finds a Git-ignored local tree, one axiomatic forcing predicate, a sorry-marked uniqueness theorem, and vacuous True conclusions; no Lean build was claimed or run in this audit.",
+      "state": "LOCAL_SOURCE_OBSERVED_NOT_DURABLE",
+      "observed_status": "UNTRACKED_AXIOM_SORRY_NO_COMPLETED_UNIQUENESS_PROOF",
+      "check_ids": [
+        "legacy.mb1.tree_git_ignored",
+        "legacy.mb1.algebraically_forced_is_axiom",
+        "legacy.mb1.form_uniqueness_contains_sorry",
+        "legacy.mb1.closure_conclusion_true"
+      ]
+    },
+    {
+      "id": "evidence:legacy-pg03-quick-control-audit",
+      "type": "evidence",
+      "title": "P-G03 cosmology quick-control audit",
+      "summary": "The committed quick control records a roughly 30.44 factor mismatch in one proxy and a 2.74-sigma proxy in another, while explicitly marking a full DESI/Planck fit as deferred.",
+      "state": "HISTORICAL_PROXY_INCONCLUSIVE",
+      "observed_status": "QUICK_TENSION_FULL_FIT_DEFERRED",
+      "check_ids": [
+        "legacy.pg03.proxy_one_mismatch_30p44",
+        "legacy.pg03.proxy_two_sigma_2p74",
+        "legacy.pg03.full_fit_deferred"
+      ]
+    },
+    {
+      "id": "evidence:legacy-assessor-label-audit",
+      "type": "evidence",
+      "title": "Legacy 42-count terminology audit",
+      "summary": "The current tracked source map preserves 42 as the unordered assessor-plane count, distinguishes 84 signed vectors with a<b from 168 index-ordered representations, and requires explicit sign/order conventions for annihilating-pair totals.",
+      "state": "CURRENT_TERMINOLOGY_RECONCILED",
+      "observed_status": "FORTY_TWO_ASSESSORS_NOT_EXACT_PAIR_COUNT",
+      "check_ids": [
+        "legacy.counts.assessor_planes_42",
+        "legacy.counts.signed_vectors_a_lt_b_84",
+        "legacy.counts.index_ordered_representations_168"
+      ]
+    },
+    {
+      "id": "open:legacy-narrative-quote-provenance",
+      "type": "open_problem",
+      "title": "Resolve provenance of later ICE physics phrases",
+      "summary": "Locate a preserved user utterance or correctly classify each phrase as later interpretation rather than attributing all four to one short source file.",
+      "question": "Which exact source, if any, supports each later physics-apostle, three-part composite, and sexvoid phrase as user-primary wording?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:legacy-genuine-preregistration-and-source-refresh",
+      "type": "open_problem",
+      "title": "Run a genuinely prior, source-refreshed test",
+      "summary": "Any future prediction test needs a separate prior commit, frozen targets and decision rule, primary experimental sources, and a later comparison commit.",
+      "question": "Can a new algebra-derived target be committed independently before a source-backed comparison and survive its declared null and look-elsewhere controls?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:legacy-form-uniqueness-with-corrected-primitives",
+      "type": "open_problem",
+      "title": "Prove or disprove substantive form uniqueness",
+      "summary": "Replace axioms, sorry, vacuous conclusions, and the 42-pair label with a tracked construction that distinguishes assessor, pair, locus, and effective-dimension objects.",
+      "question": "Does a tracked formal model of the corrected sedenion objects uniquely force a falsifiable correction form and amplitude?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:legacy-pg03-full-source-backed-fit",
+      "type": "open_problem",
+      "title": "Perform the deferred full P-G03 fit",
+      "summary": "A current primary-source likelihood and dimensionally specified model would be required before classifying gamma=1/14 against cosmology.",
+      "question": "What does a fully specified and source-backed DESI, Planck, and supernova likelihood say about the P-G03 model relative to its baseline?",
+      "state": "OPEN"
+    },
+    {
+      "id": "artifact:legacy-provenance-source-map",
+      "type": "artifact",
+      "title": "Current ICE provenance source map",
+      "summary": "Tracked layer map and current 42-assessor terminology correction.",
+      "state": "TRACKED",
+      "artifact_kind": "provenance-guide",
+      "path": "docs/provenance/SOURCES.md",
+      "sha256": "b85b0a2bd4636854df1ae2a6e71c45ea9f717bbca00eea0aab598c031d6a1387"
+    },
+    {
+      "id": "artifact:legacy-mass-ratio-script",
+      "type": "artifact",
+      "title": "Legacy mass-ratio executable",
+      "summary": "Producer of the stored fifteen-target mass-ratio result.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "research/legacy_predictions/derive_mass_ratios_ICE.py",
+      "sha256": "8acf1851b3f8032932e9671a29ef74fa5e5c83e1a57b872f36115d3bc2a606ad"
+    },
+    {
+      "id": "artifact:legacy-mass-ratio-result",
+      "type": "artifact",
+      "title": "Legacy mass-ratio result",
+      "summary": "Committed result reporting 531 candidates, fifteen targets, and zero genuine predictions.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/derive_mass_ratios_results.json",
+      "sha256": "ce86e109e0054e43798fc9126a86c3e6fd2d01c952282c7c5d58cf487063b932"
+    },
+    {
+      "id": "artifact:legacy-lstar-script",
+      "type": "artifact",
+      "title": "Legacy L-star executable",
+      "summary": "Producer of the doubling, entropy, and product length-scale candidates.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "research/legacy_predictions/derive_Lstar_from_ICE.py",
+      "sha256": "79d4b560bb4eebb5e7e7e6a01125d2078115c1523274c8dd76c5dbb7f9171da1"
+    },
+    {
+      "id": "artifact:legacy-lstar-result",
+      "type": "artifact",
+      "title": "Legacy L-star result",
+      "summary": "Committed self-refutation that no unique internal L-star selector was found.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/derive_Lstar_results.json",
+      "sha256": "c4d2da0af831ffcd7740a3688ffe425f356345280813a5d8c671b7872239b1e8"
+    },
+    {
+      "id": "artifact:legacy-dimensionless-result",
+      "type": "artifact",
+      "title": "Legacy dimensionless-match result",
+      "summary": "Committed 499-ratio match registry with the later NUMEROLOGY_CONFIRMED verdict.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/derive_dimensionless_results.json",
+      "sha256": "33c892c81e0375f2dcf4cd9bc6fe028d2c214ad8aaeafc1e0a2b5e48107ec4d1"
+    },
+    {
+      "id": "artifact:legacy-numerology-mc-script",
+      "type": "artifact",
+      "title": "Legacy numerology Monte Carlo executable",
+      "summary": "Implements the recorded Koide, proton/W, and epsilon null models.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "research/legacy_predictions/numerology_mc_judge.py",
+      "sha256": "aaa051a84171f8d370a5d7d5b49a385327d5606a6660d75eae916f7dc3b1856a"
+    },
+    {
+      "id": "artifact:legacy-numerology-mc-result",
+      "type": "artifact",
+      "title": "Legacy numerology Monte Carlo result",
+      "summary": "Committed null-model probabilities for Koide, proton/W fitting, and epsilon screening.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/numerology_mc_results.json",
+      "sha256": "f09b99a28e3cf0522a6552e4e4f288589d7ecd389f0d5be7ab0910cd1e7c5fd7"
+    },
+    {
+      "id": "artifact:legacy-mpmw-result",
+      "type": "artifact",
+      "title": "Legacy proton/W verification result",
+      "summary": "Committed direct and broad-family fitting diagnostics for the proton/W claim.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/verify_mp_mW_results.json",
+      "sha256": "65e40c0c4347a1624a8ae55346da04945090d7f956117ad095e827a8295ce948"
+    },
+    {
+      "id": "artifact:legacy-p15-declared-list",
+      "type": "artifact",
+      "title": "Historical P01-P15 declared prediction list",
+      "summary": "Carries embedded canonical prediction-list hash 0bbcbe40272c3811f68e05b391c7746016cf54ca7fc2f28f39f03d0fb98900c2; first committed together with its comparison result.",
+      "state": "TRACKED_HISTORICAL_DECLARED_PREREGISTRATION",
+      "artifact_kind": "declared-input-set",
+      "path": "research/legacy_predictions/ice_prereg_predictions_2026-05-18.json",
+      "sha256": "0247c7133257729169307ff4965182c589cc7ebf3f5f650c8e08ea05d2e68f6e",
+      "introduced_in_commit": "42ffa0d31b36bde5f41be91a166a3d00a43495c8"
+    },
+    {
+      "id": "artifact:legacy-p15-check-script",
+      "type": "artifact",
+      "title": "P01-P15 comparison executable",
+      "summary": "Reads the declared list and applies the stored twenty-observable Monte Carlo and Bonferroni comparison.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "research/legacy_predictions/ice_prereg_check.py",
+      "sha256": "4bef8ba543d687f4ff0a95a37c5a4b29720664fee5531c27166927ac462111c9",
+      "introduced_in_commit": "42ffa0d31b36bde5f41be91a166a3d00a43495c8"
+    },
+    {
+      "id": "artifact:legacy-p15-check-result",
+      "type": "artifact",
+      "title": "P01-P15 comparison result",
+      "summary": "Records seven matched pairs, corrected p=1 throughout, and zero genuine signals; first committed with the declared list.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/ice_prereg_check_results.json",
+      "sha256": "044e8e7316768cdb9f6c669c096624faeec2350eb6f36642beb89b859a78c181",
+      "introduced_in_commit": "42ffa0d31b36bde5f41be91a166a3d00a43495c8"
+    },
+    {
+      "id": "artifact:legacy-gravity-declared-list",
+      "type": "artifact",
+      "title": "Historical P-G01-P-G07 declared gravity list",
+      "summary": "Carries embedded canonical payload hash 2e1f6820e7a0f812c915a6165dd65b42bcf320c286c8bb048751698cac335299; first committed together with the MB3 comparison result.",
+      "state": "TRACKED_HISTORICAL_DECLARED_PREREGISTRATION",
+      "artifact_kind": "declared-input-set",
+      "path": "research/legacy_predictions/gravity_prereg_predictions_2026-05-19.json",
+      "sha256": "c213c19068191614a1bfde1b1eb59cfd5cb2a1be1ff943623a749eb2179a6c19",
+      "introduced_in_commit": "9f3964896b29263c36e7f192f45df19784204c38"
+    },
+    {
+      "id": "artifact:legacy-epsilon-result",
+      "type": "artifact",
+      "title": "Historical epsilon candidate result",
+      "summary": "Raw recorded Yukawa, power-law, logarithmic, and oscillatory candidate screen outputs.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/derive_epsilon_results.json",
+      "sha256": "d626eb7fcea9390a775b26f0213e52fb3f9a0a3d35a5e81b18c5057aeed92c79"
+    },
+    {
+      "id": "artifact:legacy-mb3-verdict-script",
+      "type": "artifact",
+      "title": "Historical MB3 gravity classifier executable",
+      "summary": "Maps the seven declared gravity candidates to the recorded classifier categories.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "research/legacy_predictions/mb3_adelberger_verdict.py",
+      "sha256": "ce506fc66af163e1c0f41b919dd120e05c06b62444dab52124abb880786ad5a2",
+      "introduced_in_commit": "9f3964896b29263c36e7f192f45df19784204c38"
+    },
+    {
+      "id": "artifact:legacy-mb3-verdict-result",
+      "type": "artifact",
+      "title": "Historical MB3 gravity classifier result",
+      "summary": "Authoritative stored seven-candidate tally with zero genuine and P-G03 deferred.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/mb3_verdict_2026-05-19.json",
+      "sha256": "37769d98f994dbce6764e2565f2d1641b57aa30188a264fe103292da42561e24",
+      "introduced_in_commit": "9f3964896b29263c36e7f192f45df19784204c38"
+    },
+    {
+      "id": "artifact:legacy-pg03-script",
+      "type": "artifact",
+      "title": "Historical P-G03 quick-control executable",
+      "summary": "Implements two proxy mappings rather than a full likelihood fit.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "research/legacy_predictions/mb3_cosmology_check_PG03.py",
+      "sha256": "23712c9a17ffe77fb73d2ddc5ad65fb6684aa809ee676bccb90a8f3517e382f7",
+      "introduced_in_commit": "9f3964896b29263c36e7f192f45df19784204c38"
+    },
+    {
+      "id": "artifact:legacy-pg03-result",
+      "type": "artifact",
+      "title": "Historical P-G03 quick-control result",
+      "summary": "Records two proxy tensions and explicitly marks the full DESI/Planck fit deferred.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/mb3_PG03_cosmology_check_2026-05-19.json",
+      "sha256": "9c6b9cb6f3e4836a7a44ffff52abbade49b298a06f3c1f75d2d22262e7e5e6f4",
+      "introduced_in_commit": "9f3964896b29263c36e7f192f45df19784204c38"
+    },
+    {
+      "id": "artifact:legacy-hidden-v1-result",
+      "type": "artifact",
+      "title": "Historical hidden-scan v1 result",
+      "summary": "Raw result whose two SIGNAL_GENUINE labels are corrected to structural incapacity by target-reachability inspection.",
+      "state": "TRACKED_HISTORICAL_RAW_LABELS",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/numerology_hidden_scan_results.json",
+      "sha256": "a3a57bd5a75ff5d5b315387896b5f0590465f9fcc844aff61a8afde4ef7e0c92"
+    },
+    {
+      "id": "artifact:legacy-hidden-v2-result",
+      "type": "artifact",
+      "title": "Historical hidden-scan v2 result",
+      "summary": "Raw four-family result with eleven SIGNAL_GENUINE labels that do not by themselves establish reachable derived claims.",
+      "state": "TRACKED_HISTORICAL_RAW_LABELS",
+      "artifact_kind": "result",
+      "path": "research/legacy_predictions/numerology_hidden_scan_v2_results_2026-05-20.json",
+      "sha256": "14af2864e6972fa6b5c548eda82b74eab2a04ca237dd38294373817c2820a9f5"
+    },
+    {
+      "id": "artifact:legacy-oq2-pullback-report",
+      "type": "artifact",
+      "title": "OQ2 n_eff decision and pullback report",
+      "summary": "Status-first lifecycle record; the pullback banner governs the historical delegated body.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "report",
+      "path": "research/legacy_predictions/reports/OQ2_DECISION_LOG_2026-05-18.md",
+      "sha256": "bcaffa922cdf2f87ad82f0c6e78237ee64183c47f5a045c03d5a79d1704f5158"
+    },
+    {
+      "id": "artifact:legacy-l2l3-ledger",
+      "type": "artifact",
+      "title": "Historical L2/L3 numerology ledger",
+      "summary": "Human synthesis of legacy null and reachability outcomes; machine-result counts are preferred where the prose aggregate disagrees.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "report",
+      "path": "research/legacy_predictions/reports/L2L3_NUMEROLOGY_LEDGER_2026-06-01.md",
+      "sha256": "c201b2a8a089b2f0f09294948ec45cb81ba0d54fc896ad3b577fbbf3f2d9187b"
+    },
+    {
+      "id": "artifact:legacy-escape-lane-report",
+      "type": "artifact",
+      "title": "Historical MB1-MB3-MB4 escape-lane synthesis",
+      "summary": "Human synthesis preserved for history; its doubled P-G03 tally and formalization-strength language are narrowed by direct artifact audits.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "report",
+      "path": "research/legacy_predictions/reports/ESCAPE_LANE_MB1_MB3_MB4_SYNTHESIS_2026-05-19.md",
+      "sha256": "aa9a8769d31413dd0e3a6e43f73f17586bd92e0dc81da9776eab88c3860bb0d9"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:001",
+      "from": "programme:ice-legacy-predictions",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ice-workbench-reframe"
+    },
+    {
+      "id": "edge:002",
+      "from": "policy:ice-workbench-reframe",
+      "relation": "EXTENDS",
+      "to": "policy:ice-physics-partial-retreat",
+      "note": "The permanent workbench reframe supersedes the earlier reversible retreat without erasing it."
+    },
+    {
+      "id": "edge:003",
+      "from": "concept:user-primary-narrative-preservation",
+      "relation": "MOTIVATES",
+      "to": "programme:ice-legacy-predictions",
+      "note": "Narrative motivates preservation and inquiry but supplies no scientific evidence edge."
+    },
+    {
+      "id": "edge:004",
+      "from": "concept:ice-three-layer-disclosure",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:005",
+      "from": "concept:user-primary-narrative-preservation",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:006",
+      "from": "concept:payload-integrity-versus-preregistration-time",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:007",
+      "from": "concept:null-reachability-versus-signal",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:008",
+      "from": "concept:assessor-pair-semantic-correction",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:009",
+      "from": "scope:legacy-user-primary-narrative",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:010",
+      "from": "scope:legacy-l2l3-computations",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:011",
+      "from": "scope:legacy-git-provenance",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:012",
+      "from": "scope:legacy-gravity-quick-controls",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:013",
+      "from": "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:014",
+      "from": "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:015",
+      "from": "claim:LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:016",
+      "from": "claim:LEGACY_LSTAR_IS_UNIQUELY_SELECTED",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:017",
+      "from": "claim:KOIDE_MATCH_IS_ICE_INFORMATIVE",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:018",
+      "from": "claim:MPMW_SMALL_INTEGER_FIT_IS_ICE_INFORMATIVE",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:019",
+      "from": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:020",
+      "from": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:021",
+      "from": "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:022",
+      "from": "claim:ADELBERGER_SCREEN_PASS_DISCRIMINATES_ICE",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:023",
+      "from": "claim:RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:024",
+      "from": "claim:LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:025",
+      "from": "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:026",
+      "from": "claim:MB1_FORM_UNIQUENESS_IS_PROVED",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:027",
+      "from": "claim:PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT",
+      "relation": "PART_OF",
+      "to": "programme:ice-legacy-predictions"
+    },
+    {
+      "id": "edge:028",
+      "from": "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+      "relation": "ABOUT",
+      "to": "concept:user-primary-narrative-preservation"
+    },
+    {
+      "id": "edge:029",
+      "from": "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+      "relation": "ABOUT",
+      "to": "concept:user-primary-narrative-preservation"
+    },
+    {
+      "id": "edge:030",
+      "from": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+      "relation": "ABOUT",
+      "to": "concept:payload-integrity-versus-preregistration-time"
+    },
+    {
+      "id": "edge:031",
+      "from": "claim:RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS",
+      "relation": "ABOUT",
+      "to": "concept:null-reachability-versus-signal"
+    },
+    {
+      "id": "edge:032",
+      "from": "claim:LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+      "relation": "ABOUT",
+      "to": "concept:assessor-pair-semantic-correction"
+    },
+    {
+      "id": "edge:033",
+      "from": "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-user-primary-narrative"
+    },
+    {
+      "id": "edge:034",
+      "from": "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-user-primary-narrative"
+    },
+    {
+      "id": "edge:035",
+      "from": "claim:LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:036",
+      "from": "claim:LEGACY_LSTAR_IS_UNIQUELY_SELECTED",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:037",
+      "from": "claim:KOIDE_MATCH_IS_ICE_INFORMATIVE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:038",
+      "from": "claim:MPMW_SMALL_INTEGER_FIT_IS_ICE_INFORMATIVE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:039",
+      "from": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:040",
+      "from": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-git-provenance"
+    },
+    {
+      "id": "edge:041",
+      "from": "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-gravity-quick-controls"
+    },
+    {
+      "id": "edge:042",
+      "from": "claim:ADELBERGER_SCREEN_PASS_DISCRIMINATES_ICE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:043",
+      "from": "claim:RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:044",
+      "from": "claim:LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-l2l3-computations"
+    },
+    {
+      "id": "edge:045",
+      "from": "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-gravity-quick-controls"
+    },
+    {
+      "id": "edge:046",
+      "from": "claim:MB1_FORM_UNIQUENESS_IS_PROVED",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-git-provenance"
+    },
+    {
+      "id": "edge:047",
+      "from": "claim:PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:legacy-gravity-quick-controls"
+    },
+    {
+      "id": "edge:048",
+      "from": "claim:PRIMARY_TEXT_STATES_ALL_IS_HYPERGRAPH",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-narrative-source-audit",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:049",
+      "from": "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-narrative-source-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:050",
+      "from": "claim:LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-derived-output-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:051",
+      "from": "claim:LEGACY_LSTAR_IS_UNIQUELY_SELECTED",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-derived-output-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:052",
+      "from": "claim:KOIDE_MATCH_IS_ICE_INFORMATIVE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-numerology-null-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:053",
+      "from": "claim:MPMW_SMALL_INTEGER_FIT_IS_ICE_INFORMATIVE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-numerology-null-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:054",
+      "from": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-p15-check-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:055",
+      "from": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-git-prereg-provenance-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:056",
+      "from": "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-gravity-ledger-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:057",
+      "from": "claim:ADELBERGER_SCREEN_PASS_DISCRIMINATES_ICE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-numerology-null-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:058",
+      "from": "claim:RAW_HIDDEN_SCAN_SIGNAL_LABELS_ESTABLISH_POSITIVE_PREDICTIONS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-hidden-scan-semantics-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:059",
+      "from": "claim:LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-assessor-label-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:060",
+      "from": "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-oq2-pullback-audit",
+      "polarity": "CONTRADICTS",
+      "note": "The pullback contradicts promotion of uniqueness; it does not prove that the numerical value eleven is mathematically impossible."
+    },
+    {
+      "id": "edge:061",
+      "from": "claim:MB1_FORM_UNIQUENESS_IS_PROVED",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-mb1-formalization-audit",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:062",
+      "from": "claim:PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:legacy-pg03-quick-control-audit",
+      "polarity": "CONTRADICTS",
+      "note": "The proxy audit explicitly defers the full cosmology fit, so it contradicts the premise that a completed full fit has already refuted gamma; the claim remains INCONCLUSIVE."
+    },
+    {
+      "id": "edge:063",
+      "from": "evidence:legacy-narrative-source-audit",
+      "relation": "DERIVED_FROM",
+      "to": "source:mind-ice-self-list"
+    },
+    {
+      "id": "edge:064",
+      "from": "evidence:legacy-narrative-source-audit",
+      "relation": "DERIVED_FROM",
+      "to": "source:mind-frozen-river-song"
+    },
+    {
+      "id": "edge:065",
+      "from": "evidence:legacy-narrative-source-audit",
+      "relation": "DERIVED_FROM",
+      "to": "source:mind-ice-fragment"
+    },
+    {
+      "id": "edge:066",
+      "from": "evidence:legacy-narrative-source-audit",
+      "relation": "DERIVED_FROM",
+      "to": "source:mind-apostle-list-update"
+    },
+    {
+      "id": "edge:067",
+      "from": "evidence:legacy-derived-output-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:legacy-mass-ratio-script"
+    },
+    {
+      "id": "edge:068",
+      "from": "evidence:legacy-derived-output-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-mass-ratio-result"
+    },
+    {
+      "id": "edge:069",
+      "from": "evidence:legacy-derived-output-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:legacy-lstar-script"
+    },
+    {
+      "id": "edge:070",
+      "from": "evidence:legacy-derived-output-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-lstar-result"
+    },
+    {
+      "id": "edge:071",
+      "from": "evidence:legacy-numerology-null-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:legacy-numerology-mc-script"
+    },
+    {
+      "id": "edge:072",
+      "from": "evidence:legacy-numerology-null-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-numerology-mc-result"
+    },
+    {
+      "id": "edge:073",
+      "from": "evidence:legacy-numerology-null-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-dimensionless-result"
+    },
+    {
+      "id": "edge:074",
+      "from": "evidence:legacy-numerology-null-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-mpmw-result"
+    },
+    {
+      "id": "edge:075",
+      "from": "evidence:legacy-p15-check-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:legacy-p15-check-script"
+    },
+    {
+      "id": "edge:076",
+      "from": "evidence:legacy-p15-check-audit",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:legacy-p15-declared-list"
+    },
+    {
+      "id": "edge:077",
+      "from": "evidence:legacy-p15-check-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-p15-check-result"
+    },
+    {
+      "id": "edge:078",
+      "from": "evidence:legacy-git-prereg-provenance-audit",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:legacy-p15-declared-list"
+    },
+    {
+      "id": "edge:079",
+      "from": "evidence:legacy-git-prereg-provenance-audit",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:legacy-p15-check-result"
+    },
+    {
+      "id": "edge:080",
+      "from": "evidence:legacy-git-prereg-provenance-audit",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:legacy-gravity-declared-list"
+    },
+    {
+      "id": "edge:081",
+      "from": "evidence:legacy-git-prereg-provenance-audit",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:legacy-mb3-verdict-result"
+    },
+    {
+      "id": "edge:082",
+      "from": "evidence:legacy-gravity-ledger-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:legacy-mb3-verdict-script"
+    },
+    {
+      "id": "edge:083",
+      "from": "evidence:legacy-gravity-ledger-audit",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:legacy-gravity-declared-list"
+    },
+    {
+      "id": "edge:084",
+      "from": "evidence:legacy-gravity-ledger-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-epsilon-result"
+    },
+    {
+      "id": "edge:085",
+      "from": "evidence:legacy-gravity-ledger-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-mb3-verdict-result"
+    },
+    {
+      "id": "edge:086",
+      "from": "evidence:legacy-hidden-scan-semantics-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-hidden-v1-result"
+    },
+    {
+      "id": "edge:087",
+      "from": "evidence:legacy-hidden-scan-semantics-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-hidden-v2-result"
+    },
+    {
+      "id": "edge:088",
+      "from": "evidence:legacy-hidden-scan-semantics-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-l2l3-ledger"
+    },
+    {
+      "id": "edge:089",
+      "from": "evidence:legacy-oq2-pullback-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-oq2-pullback-report"
+    },
+    {
+      "id": "edge:090",
+      "from": "evidence:legacy-mb1-formalization-audit",
+      "relation": "DERIVED_FROM",
+      "to": "source:mind-mb1-local-skeleton"
+    },
+    {
+      "id": "edge:091",
+      "from": "evidence:legacy-pg03-quick-control-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:legacy-pg03-script"
+    },
+    {
+      "id": "edge:092",
+      "from": "evidence:legacy-pg03-quick-control-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-pg03-result"
+    },
+    {
+      "id": "edge:093",
+      "from": "evidence:legacy-assessor-label-audit",
+      "relation": "RECORDED_IN",
+      "to": "artifact:legacy-provenance-source-map"
+    },
+    {
+      "id": "edge:094",
+      "from": "artifact:legacy-provenance-source-map",
+      "relation": "DOCUMENTS",
+      "to": "source:mind-ice-self-list"
+    },
+    {
+      "id": "edge:095",
+      "from": "artifact:legacy-provenance-source-map",
+      "relation": "DOCUMENTS",
+      "to": "source:mind-frozen-river-song"
+    },
+    {
+      "id": "edge:096",
+      "from": "claim:LEGACY_MASS_RATIOS_ARE_GENUINELY_DERIVED",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:legacy-l2l3-ledger"
+    },
+    {
+      "id": "edge:097",
+      "from": "claim:KOIDE_MATCH_IS_ICE_INFORMATIVE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:legacy-l2l3-ledger"
+    },
+    {
+      "id": "edge:098",
+      "from": "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:legacy-oq2-pullback-report"
+    },
+    {
+      "id": "edge:099",
+      "from": "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:legacy-escape-lane-report"
+    },
+    {
+      "id": "edge:100",
+      "from": "claim:OQ2_NEFF11_IS_UNIQUELY_FORCED",
+      "relation": "BLOCKED_BY",
+      "to": "open:legacy-form-uniqueness-with-corrected-primitives"
+    },
+    {
+      "id": "edge:101",
+      "from": "claim:PG03_GAMMA_IS_REFUTED_BY_FULL_COSMOLOGY_FIT",
+      "relation": "BLOCKED_BY",
+      "to": "open:legacy-pg03-full-source-backed-fit"
+    },
+    {
+      "id": "edge:102",
+      "from": "claim:LATER_PHYSICS_PHRASES_ARE_VERBATIM_IN_ICE_SELF_LIST",
+      "relation": "MOTIVATES",
+      "to": "open:legacy-narrative-quote-provenance",
+      "note": "Resolving the source does not reverse the scoped finding that the phrases are absent from the named self-list."
+    },
+    {
+      "id": "edge:103",
+      "from": "claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS",
+      "relation": "MOTIVATES",
+      "to": "open:legacy-genuine-preregistration-and-source-refresh",
+      "note": "A future valid precommit is a new test, not a rewrite of historical chronology."
+    },
+    {
+      "id": "edge:104",
+      "from": "claim:RECORDED_GRAVITY_SET_HAS_SIGNAL_GENUINE",
+      "relation": "MOTIVATES",
+      "to": "open:legacy-genuine-preregistration-and-source-refresh",
+      "note": "A new candidate would require new source-backed evidence and cannot inherit signal status from this ledger."
+    },
+    {
+      "id": "edge:105",
+      "from": "claim:MB1_FORM_UNIQUENESS_IS_PROVED",
+      "relation": "MOTIVATES",
+      "to": "open:legacy-form-uniqueness-with-corrected-primitives",
+      "note": "A substantive future proof would be a distinct artifact and would not make the current untracked skeleton a completed proof."
+    },
+    {
+      "id": "edge:106",
+      "from": "claim:LEGACY_FORTY_TWO_LABEL_IS_EXACT_ZD_PAIR_COUNT",
+      "relation": "MOTIVATES",
+      "to": "open:legacy-form-uniqueness-with-corrected-primitives"
+    },
+    {
+      "id": "edge:107",
+      "from": "concept:user-primary-narrative-preservation",
+      "relation": "CONTRASTS_WITH",
+      "to": "concept:ice-three-layer-disclosure",
+      "note": "Narrative preservation is one disclosed layer; it is neither contradicted nor scientifically supported by L2/L3 calculations."
+    },
+    {
+      "id": "edge:108",
+      "from": "programme:ice-legacy-predictions",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:legacy-provenance-source-map"
+    }
+  ],
+  "kg_bridges": []
+}

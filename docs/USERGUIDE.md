@@ -35,11 +35,21 @@ Research claims are a separate catalog from runnable kernels. Inspect and valida
 ```bash
 ./ice ontology validate
 ./ice ontology summary
-./ice ontology show claim:P17_STANDARD_LOCAL_Q_HALF_EXCHANGE
-./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
+./ice ontology guide --path current-status-in-five-stops
+./ice ontology guide --graph hypercomplex --path hyper-projection-failure
+./ice ontology show legacy::claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL
+./ice ontology trace cpt::claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ```
 
-This graph is a searchable evidence map, not an automatic physics verdict or external-KG mutation.
+Use `--graph hypercomplex`, `--graph legacy`, or `--graph cpt` to restrict a query. A qualified ID such
+as `legacy::claim:...` is unambiguous even when local IDs overlap. Cross-graph guide paths are
+navigation-only: the three graphs remain independent research or memory graphs, not automatic physics
+verdicts or external-KG mutations.
+
+`./ice ontology validate` is the full integrity gate: it streams and hashes every tracked artifact,
+including the 529 MB Phase-44 LFS object. `summary`, `show`, `trace`, and `guide` instead validate the
+collection schema, graph semantics, and repository paths without reopening artifact payloads, so normal
+navigation still works before that large LFS object is hydrated.
 
 ## Run one kernel
 
