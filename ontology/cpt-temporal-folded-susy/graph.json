@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-25T06:49:27Z",
+  "updated_at_utc": "2026-08-25T13:33:06Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -249,14 +249,16 @@
     },
     {
       "question": "Does Phase 39 compute the cap-chain pairing or close Gate 1?",
-      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit now contradicts the unbounded straight-field-ray completion and excludes every constant complex straight phi line on the inherited fixed-a, pure-imaginary-lapse m=2 slice: one field end is not relative-good. This does not cancel either local candidate or sign. Curved or piecewise contours, nonzero-Re(T) laterals, other regulators, the original joint cycle, the complete end/intersection census, global n_sigma, physics, and TOE outputs remain open or null; Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
+      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. An execution-free exact review then constructs a non-equivalent phase-locked affine/curved fixed-a scalar fiber with two uniform good phi ends across the finite lower-bypass regulator. This preserves the scoped straight KILL and makes real partial progress, but it supplies no scale-factor or mixed ends, regulator removal, source-derived original joint cycle, complete census/intersection vector, physics, or TOE. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
       "claim_ids": [
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
         "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
-        "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
+        "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+        "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+        "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO"
       ]
     },
     {
@@ -413,6 +415,14 @@
         "claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET",
         "claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER",
         "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION"
+      ]
+    },
+    {
+      "question": "Did the straight-lift KILL eliminate every nonlinear or affine field-end completion?",
+      "answer": "No. The executed no-go exhausts the anchor-through homogeneous ansatz delta=q*y. An execution-free exact derivation now gives a phase-locked affine tail delta=x+i*arg(T)/kappa with two uniform good phi ends across the finite lower-bypass lapse regulator, and a smooth compact bend can retain the Phase-39 central field window exactly. This is a BRANCH for one fixed-a scalar fiber, not a physical original cycle: scale-factor and joint ends, regulator removal, new connector intersections, complete saddle/upward/sheet/Stokes census, orientation, global n_sigma, physics, and TOE remain open or null.",
+      "claim_ids": [
+        "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+        "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO"
       ]
     }
   ],
@@ -1010,6 +1020,22 @@
         "open:p54-pinned-phase51-global-noncse-backend-diagnostic",
         "open:p55-p53-trajectory-schedule-transfer-audit",
         "open:p56-lambda-half-launch-residual-provenance-audit",
+        "open:gate1-original-cycle-signed-global-intersections"
+      ]
+    },
+    {
+      "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
+      "title": "From the anchored straight-line KILL to one explicit phase-locked good-end branch",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the executed bad-end result only to its actual delta=q*y anchor-through scope, then follow the execution-free exact construction delta=x+i*arg(T)/kappa across the finite lower-bypass lapse path. The field-end obstruction is removed for one fixed-a scalar fiber and the central window can be retained by a smooth compact bend. Stop before source-derived original-cycle selection, scale-factor and joint ends, regulator removal, new connector intersections, complete census, orientation, global coefficients, or physics promotion.",
+      "nodes": [
+        "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+        "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+        "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+        "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+        "concept:gate1-phase-locked-affine-field-end-family",
+        "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+        "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+        "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
@@ -6933,7 +6959,7 @@
       "id": "open:gate1-original-cycle-signed-global-intersections",
       "type": "open_problem",
       "title": "Gate 1 — transport the original cycle and fix signed global intersections",
-      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The non-numbered straight-lift end audit kills the Phase-39 unbounded straight-ray completion and the full constant-complex-straight-phi-line model class only on the inherited fixed-a, pure-imaginary-lapse m=2 slice, while preserving the Phase-39 finite-window local candidates and signs. A new candidate must instead specify a curved or piecewise good-end contour, a nonzero-Re(T) lateral, or another explicitly derived regulator, then supply one original joint lapse--field--gauge relative cycle and transport it through every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, and good end to compute a complete orientation-stable integer vector. The present global, physical-cycle, physics, and TOE outputs are null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
+      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The non-numbered straight-lift audit kills the Phase-39 unbounded declared rays and the full anchor-through homogeneous delta=q*y class on the inherited fixed-a, pure-imaginary-lapse m=2 slice, while preserving the finite-window local candidates and signs. The later execution-free phase-locked construction supplies one explicit fixed-a scalar phi fiber with two uniform good ends across the finite lower-bypass regulator, so the old KILL is not an affine/curved universal no-go. That branch must still be selected or rejected by a source-derived original-class prescription and extended through scale-factor and mixed ends, regulator removal, new connector intersections, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. The global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
       "state": "OPEN",
       "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
     },
@@ -7127,7 +7153,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded, non-numbered straight-lift audit closes one previously listed debt negatively: the Phase-39 conjugate straight rays have an exact bad negative-phi subsequence, and no constant complex straight phi line has two relative-good ends on the fixed-a, pure-imaginary-lapse m=2 slice. That straight completion and model class are KILL, not the local signs or Gate 1. The construction debt now branches to a curved or piecewise contour, nonzero-Re(T) lateral, or another derived regulator, followed by cap reintersections, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Curved and full-joint classes were not tested, and the original physical cycle remains unidentified.",
+      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded, non-numbered straight-lift audit closes one previously listed debt negatively: the Phase-39 conjugate straight rays have an exact bad negative-phi subsequence, and no anchor-through homogeneous field line delta=qy with constant q and no affine intercept has two relative-good ends on the fixed-a, pure-imaginary-lapse m=2 slice. That scoped completion class is KILL, not the local signs or Gate 1. A subsequent execution-free exact construction supplies one fixed-a, finite-[r,R], lower-bypass scalar-fiber family with phase-locked affine tails and a smooth compact curved connector whose two scalar ends are uniformly relative-good. It does not select an original or source-derived joint cycle and does not compute connector or cap reintersections. The remaining debt includes source selection, the scale-factor and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -9813,24 +9839,24 @@
       "id": "concept:gate1-straight-lift-end-admissibility-calculation",
       "type": "concept",
       "title": "Non-numbered Gate-1 straight-lift end-admissibility calculation",
-      "summary": "A completed VALID_RUN that reduces the inherited Phase-39 two-element scalar on one fixed-a, pure-imaginary-lapse m=2 slice, tests both declared conjugate half-angle field rays and the exhaustive constant-complex-straight-phi-line class for necessary exp(-S_2) relative-good ends, and stops before any root, ODE, saddle/upward/intersection census, numbered successor, or global promotion.",
+      "summary": "A completed VALID_RUN that reduces the inherited Phase-39 two-element scalar on one fixed-a, pure-imaginary-lapse m=2 slice, tests both declared conjugate half-angle field rays and the exhaustive anchor-through homogeneous class delta=q*y for necessary exp(-S_2) relative-good ends, and stops before affine translations, curved contours, any root, ODE, saddle/upward/intersection census, numbered successor, or global promotion.",
       "state": "COMPLETED_VALID_RUN_CANDIDATE_AND_MODEL_CLASS_KILLED"
     },
     {
       "id": "scope:gate1-fixed-a-pure-imaginary-lapse-straight-phi-lines",
       "type": "scope",
-      "title": "Gate-1 fixed-a pure-imaginary-lapse straight-field-line scope",
-      "summary": "The inherited Phase-39 m=2 equal-boundary fixed-a slice with T=+i n or -i n, the declared conjugate half-angle rays, and the full constant complex straight phi-line class, tested only for necessary relative-good behavior of the two field ends under the exp(-S_2) convention.",
+      "title": "Gate-1 fixed-a pure-imaginary-lapse anchor-through straight-field-line scope",
+      "summary": "The inherited Phase-39 m=2 equal-boundary fixed-a slice with T=+i n or -i n, the declared conjugate half-angle rays, and the full homogeneous delta=q*y class through the endpoint anchor, tested only for necessary relative-good behavior of the two field ends under the exp(-S_2) convention.",
       "state": "COMPLETED_NARROW_MODEL_CLASS_AUDIT",
       "includes": [
         "the inherited Phase-39 two-element action at a1=a_boundary with fixed positive a and n",
         "both pure-imaginary lapse arms T=+i*n and T=-i*n",
-        "the declared conjugate half-angle field rays and all constant q=u+i*v straight phi lines",
+        "the declared conjugate half-angle field rays and all anchor-through homogeneous delta=(u+i*v)*y straight phi lines",
         "the good-end requirement Re(S_2) to positive infinity for exp(-S_2)",
         "an exact bad subsequence and an independent 80-decimal direct two-element action check"
       ],
       "excludes": [
-        "curved or piecewise field contours, nonzero-Re(T) laterals, and other explicitly derived regulator cycles",
+        "affine-translated straight lines, curved or piecewise field contours, nonzero-Re(T) laterals, and other explicitly derived regulator cycles",
         "varying a, cap or scale-factor infinity for a redesigned nonlinear cycle, and full joint lapse-field-gauge or BFV cycles",
         "a complete saddle, upward-cycle, sheet, singularity, Stokes, relative-end, or intersection census",
         "a physical original cycle, global signed vector or n_sigma, physics claim, TOE claim, or numbered next phase"
@@ -9839,8 +9865,8 @@
     {
       "id": "evidence:gate1-straight-lift-end-admissibility",
       "type": "evidence",
-      "title": "Gate-1 straight-lift exact end and constant-line-class audit",
-      "summary": "The result contains fourteen passing exact entries: twelve executable SymPy identities or limits plus two declarative guards independently reviewed from the bad escape sequence and exhaustive s*u*v sign split; five numerical checks also pass. The two conjugate arms have identical real action; the positive-phi end approaches the positive quadratic coefficient, while an explicit sequence on the negative-phi end drives Re(S_2) exponentially to minus infinity on both arms. The sign cases exclude every constant complex straight phi line from having two relative-good ends on the declared slice. Direct 80-decimal evaluation matches both endpoint forms to at worst 2.1420019e-79 relative error; the last bad scaled ratio is -0.999999990353330728. The payload's unscaled_exponential_limit name is inaccurate, nested/top-level decision suffixes alias the same slice, and top-level model_class_decision is authoritative. No root, ODE, evaluator reconciliation, or automatic descendant runs.",
+      "title": "Gate-1 straight-lift exact end and anchor-through line-class audit",
+      "summary": "The result contains fourteen passing exact entries: twelve executable SymPy identities or limits plus two declarative guards independently reviewed from the bad escape sequence and exhaustive s*u*v sign split; five numerical checks also pass. The two conjugate arms have identical real action; the positive-phi end approaches the positive quadratic coefficient, while an explicit sequence on the negative-phi end drives Re(S_2) exponentially to minus infinity on both arms. The sign cases exclude every anchor-through homogeneous line delta=q*y from having two relative-good ends on the declared slice. Direct 80-decimal evaluation matches both endpoint forms to at worst 2.1420019e-79 relative error; the last bad scaled ratio is -0.999999990353330728. The payload's broad constant-line label is authoritative only for that frozen no-intercept ansatz; affine translations and compact bends were not tested. No root, ODE, evaluator reconciliation, or automatic descendant runs.",
       "state": "VERIFIED_VALID_RUN_12_EXECUTABLE_EXACT_2_DECLARATIVE_REVIEWED_5_NUMERICAL_PASS",
       "observed_status": "VALID_RUN_14_EXACT_RESULT_ENTRIES_12_EXECUTABLE_2_DECLARATIVE_REVIEWED_5_NUMERICAL_PASS",
       "check_ids": [
@@ -9878,21 +9904,21 @@
     {
       "id": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
       "type": "claim",
-      "title": "A constant straight phi line has two good ends on the declared slice",
-      "summary": "Contradicted for the complete constant-complex-straight-line model class on the fixed-a, pure-imaginary-lapse m=2 slice. The disjoint cases s*u*v<0, u*v=0, and s*u*v>0 exhaust the class: they respectively have a bad negative-quadratic decay end, a zero-or-bounded real part at an end, or an exponentially bad subsequence that dominates the positive quadratic term. The model-class decision is KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE.",
+      "title": "An anchor-through homogeneous straight phi line has two good ends on the declared slice",
+      "summary": "Contradicted for the complete no-intercept class delta=(u+i*v)*y on the fixed-a, pure-imaginary-lapse m=2 slice. The disjoint cases s*u*v<0, u*v=0, and s*u*v>0 exhaust that class: they respectively have a bad negative-quadratic decay end, a zero-or-bounded real part at an end, or an exponentially bad subsequence that dominates the positive quadratic term. The stored model-class label KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE must be read with this implemented anchor-through scope and does not include affine translations.",
       "state": "CONTRADICTED_MODEL_CLASS_EXCLUDED_ON_DECLARED_SLICE",
       "claim_id": "G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
-      "statement": "There exists a constant complex straight phi line on the inherited fixed-a, pure-imaginary-lapse m=2 slice whose two field ends are both relative-good for exp(-S_2).",
+      "statement": "There exists an anchor-through homogeneous complex straight phi line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice whose two field ends are both relative-good for exp(-S_2).",
       "epistemic_state": "CONTRADICTED"
     },
     {
       "id": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
       "type": "claim",
       "title": "The straight-line KILL closes only the declared model class, not Gate 1",
-      "summary": "Supported as the exact scope and promotion boundary. The run preserves the Phase-39 finite-window local candidates and signs, kills only the straight completion and constant straight-line class on its declared slice, and leaves curved or piecewise contours, nonzero-Re(T) laterals, other regulators, varying-a and full-joint/BFV constructions untested. Gate 1 is OPEN_PARTIAL_PROGRESS, global promotion is PROHIBITED, automatic_next is null, and the original cycle, complete vector, global n_sigma, physics, and TOE outputs are all null.",
+      "summary": "Supported as the exact scope and promotion boundary. The run preserves the Phase-39 finite-window local candidates and signs, kills only the declared rays and anchor-through homogeneous delta=q*y class, and leaves affine-translated, curved or piecewise contours, nonzero-Re(T) laterals, other regulators, varying-a and full-joint/BFV constructions untested. A later exact analytic branch supplies one such phase-locked affine/curved fixed-a scalar completion without closing Gate 1. Gate 1 is OPEN_PARTIAL_PROGRESS, global promotion is PROHIBITED, automatic_next is null, and the original cycle, complete vector, global n_sigma, physics, and TOE outputs are all null.",
       "state": "SUPPORTED_AS_NARROW_MODEL_CLASS_AND_GLOBAL_PROMOTION_BOUNDARY",
       "claim_id": "G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
-      "statement": "The bounded straight-lift audit kills only the declared straight completion and constant straight-phi-line model class, preserves the Phase-39 local candidates and signs, leaves nonlinear and non-pure-imaginary alternatives open, and does not close Gate 1 or emit any global, physics, or TOE output.",
+      "statement": "The bounded straight-lift audit kills only the declared straight completion and anchor-through homogeneous delta=q*y model class, preserves the Phase-39 local candidates and signs, leaves affine, nonlinear, and non-pure-imaginary alternatives open, and does not close Gate 1 or emit any global, physics, or TOE output.",
       "epistemic_state": "SUPPORTED"
     },
     {
@@ -9935,17 +9961,112 @@
       "state": "TRACKED",
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-straight-lift-end-admissibility-result.json",
-      "sha256": "efd369506bf17a04be4a08812b92f3881a5a08240654da6f9d959e402ca4c3e0"
+      "sha256": "abfc6d46cfa7078c6b44c32f3783c93ae4376557f0c54546ffe2a43da01a1ad1"
     },
     {
       "id": "artifact:gate1-straight-lift-report",
       "type": "artifact",
       "title": "Gate-1 straight-lift end-admissibility report",
-      "summary": "Human-readable separation of the exact bad-end and constant-line-class exclusions from preserved Phase-39 local signs, untested nonlinear alternatives, the still-open Gate 1, and null global, physics, and TOE outputs, with source, command, runtime, and independent direct-action provenance.",
+      "summary": "Human-readable separation of the exact bad-end and anchor-through homogeneous delta=q*y exclusion from preserved Phase-39 local signs, untested affine/nonlinear alternatives, the later phase-locked branch, the still-open Gate 1, and null global, physics, and TOE outputs, with source, command, runtime, and independent direct-action provenance.",
       "state": "TRACKED",
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY.md",
-      "sha256": "c3913f11070afbd15bb99218207498eadb661d2465501c44f8364219cd83d89a"
+      "sha256": "b6cdf590f353c45b2765b74b2acff8c300f9f17e9af97924e1a1ecc9c21caa37"
+    },
+    {
+      "id": "concept:gate1-phase-locked-affine-field-end-family",
+      "type": "concept",
+      "title": "Gate-1 phase-locked affine field-end family",
+      "summary": "The execution-free fixed-a m=2 scalar construction T=rho*exp(i*psi), delta=x+i*psi/kappa. Its imaginary translation cancels the lapse phase in the full-rate Starobinsky exponential, giving a positive negative-x end while the kinetic term gives a positive quadratic interior-cap or linear arm-end positive-x limit. A smooth compact bend can retain the Phase-39 central field window exactly.",
+      "state": "EXACT_ANALYTIC_BRANCH_WITHIN_FINITE_REGULATOR_SCOPE"
+    },
+    {
+      "id": "scope:gate1-fixed-a-finite-lower-bypass-phase-locked-phi-fiber",
+      "type": "scope",
+      "title": "Fixed-a finite-lower-bypass phase-locked phi-fiber scope",
+      "summary": "One complex phi_1 fiber of the inherited m=2 scalar action at fixed positive real a and real boundary phi, over the complete finite lower-bypass lapse path with 0<r<=rho<=R and -pi/2<=psi<=pi/2. It tests uniform scalar field-end decay and an exact central-window-preserving smooth connector only.",
+      "state": "SUPPORTED_SCALAR_FIELD_END_SCOPE_ONLY",
+      "includes": [
+        "the inherited exact Phase-39 fixed-a m=2 scalar action and exp(-S_2) convention",
+        "T=rho*exp(i*psi) on both pure-imaginary arms and the right-half-plane cap for fixed finite r and R",
+        "the affine ends delta=x+i*psi/kappa and their exact uniform asymptotics",
+        "an explicit C-infinity compact bend equal to the Phase-39 phi line throughout |y_phi|<=0.25",
+        "the reduced-fiber divider test that places the two ends in distinct high-good-region components"
+      ],
+      "excludes": [
+        "varying or complex a_1, scale-factor faces, mixed a_1-phi_1 ends, and the full three-real-dimensional chain",
+        "r to zero, R to infinity, joint regulator removal, or arbitrary lapse infinity",
+        "new connector intersections and a complete saddle, upward-cycle, sheet, end, or Stokes census",
+        "canonical momenta, gauge/BFV body, determinant/Pfaffian/Pin orientation, or a physical original cycle",
+        "a bounded/global signed vector, n_sigma, physics claim, TOE claim, numbered phase, or execution authorization"
+      ]
+    },
+    {
+      "id": "evidence:gate1-phase-locked-affine-field-end-analytic-proof",
+      "type": "evidence",
+      "title": "Exact phase-locked affine field-end derivation",
+      "summary": "Direct substitution gives T*exp(-kappa*delta)=rho*exp(-kappa*x)>0 and an exact real-action identity. The negative-x action divided by exp(-kappa*x) has positive limit (3/2)*pi^2*a^3*rho*exp(-2*kappa*phi); the positive-x interior phases have a positive quadratic limit and both arm endpoints a positive linear limit. Compact phase splitting makes the bounds uniform for fixed 0<r<=rho<=R. An explicit smooth cutoff retains the Phase-39 central phi window, remains injective and immersed, and preserves arm conjugation. Two independent algebra reviews agreed. No scientific runner, root, ODE, evaluator, or numerical sample was executed.",
+      "state": "INDEPENDENTLY_REVIEWED_EXECUTION_FREE_EXACT_DERIVATION",
+      "observed_status": "NINE_ANALYTIC_OBLIGATIONS_PROVED_TWO_INDEPENDENT_REVIEWS_ZERO_SCIENTIFIC_CALLS",
+      "check_ids": [
+        "G1.AFFINE.exact.phase_locked_real_action_identity",
+        "G1.AFFINE.end.negative_x_uniform_good",
+        "G1.AFFINE.end.positive_x_interior_good",
+        "G1.AFFINE.end.positive_x_arm_endpoints_good",
+        "G1.AFFINE.end.positive_x_uniform_phase_bound",
+        "G1.AFFINE.connector.phase39_window_exactly_retained",
+        "G1.AFFINE.connector.injective_immersed_conjugate",
+        "G1.AFFINE.relative_ends.distinct_reduced_good_components",
+        "G1.AFFINE.scope.prior_kill_is_anchor_through_only"
+      ]
+    },
+    {
+      "id": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "type": "claim",
+      "title": "The phase-locked fixed-a scalar phi fiber has two uniform good ends",
+      "summary": "Supported exactly for the finite lower-bypass regulator. Across T=rho*exp(i*psi), 0<r<=rho<=R and -pi/2<=psi<=pi/2, delta=x+i*psi/kappa sends Re(S_2) to positive infinity at both x ends uniformly in psi and rho. A smooth compact bend preserves the entire Phase-39 central phi window and the two arm contours glue by conjugation. This proves scalar field-end admissibility for one explicit branch only; it does not prove the varying-a full chain, regulator removal, a physical original cycle, any intersection coefficient, or physics.",
+      "state": "SUPPORTED_AS_EXACT_FIXED_A_FINITE_REGULATOR_SCALAR_FIELD_END_BRANCH",
+      "claim_id": "G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "statement": "For the inherited fixed-a m=2 scalar action and any fixed finite lower-bypass regulator 0<r<=|T|<=R, the phase-locked family delta=x+i*arg(T)/kappa admits a smooth Phase-39-window-preserving completion whose two phi-field ends are uniformly relative-good for exp(-S_2).",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "type": "claim",
+      "title": "The anchored linear KILL is not an affine or curved no-go",
+      "summary": "Supported as a scope clarification with a constructive counterexample to the broader reading. The executed case split exhausts delta=q*y through the endpoint anchor; it contains no affine intercept. The phase-locked affine tail has two good ends and its compactly bent completion changes the relative boundary class, so it is neither killed by the prior result nor a reparameterization. The historical KILL remains valid inside its corrected anchor-through scope.",
+      "state": "SUPPORTED_AS_SCOPE_CLARIFICATION_AND_NON_EQUIVALENT_BRANCH",
+      "claim_id": "G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "statement": "The Gate-1 straight-lift result excludes the frozen anchor-through homogeneous class delta=q*y but does not exclude affine-translated or compactly bent field contours, one of which now has an exact two-good-end construction on the same fixed-a scalar slice.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "type": "open_problem",
+      "title": "Extend or reject the phase-locked scalar fiber as a source-derived full joint cycle",
+      "summary": "The scalar phi-end obstruction is removed for one explicit fixed-a finite-regulator family, but no primary-source-derived regulator selects it and the scale-factor/mixed ends, regulator removal, connector intersections, complete dual census, Stokes data, determinant orientation, and BFV body remain absent. The next direct discriminator must decide whether one pre-fixed source-derived original-class prescription selects, narrows, or kills this branch without reviving the Phase-51--56 reconciliation route.",
+      "state": "OPEN_TYPED_SELECTION_AND_FULL_JOINT_EXTENSION",
+      "question": "Does one independently derived original-cycle or regulator prescription select the phase-locked phi fiber and extend it through all scale-factor, joint, regulator-removal, census, Stokes, and orientation obligations, or does it KILL/NARROW the branch before global intersections are attempted?"
+    },
+    {
+      "id": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
+      "type": "artifact",
+      "title": "Gate-1 phase-locked affine analytic evidence snapshot",
+      "summary": "Compact execution-free record of the inherited action, exact real-part identity, nine proved analytic obligations, two-review agreement, zero scientific calls, BRANCH decision, strict finite-regulator fixed-a scope, and null global, physics, and TOE outputs.",
+      "state": "TRACKED_EXECUTION_FREE_ANALYTIC_EVIDENCE",
+      "artifact_kind": "analytic_evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-phase-locked-affine-field-end-analytic.json",
+      "sha256": "851528926b4fe5e9ba3b005c44af6376712a14f16b7a53dc98224897385dfefe"
+    },
+    {
+      "id": "artifact:gate1-phase-locked-affine-field-end-report",
+      "type": "artifact",
+      "title": "Gate-1 phase-locked affine field-end analytic report",
+      "summary": "Human-readable exact proof of the lapse-phase cancellation, uniform two-end bounds, smooth central-window connector, reduced end-component separation, corrected straight-KILL scope, independent review, and still-open full-joint obligations.",
+      "state": "TRACKED_EXECUTION_FREE_ANALYTIC_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_PHASE_LOCKED_AFFINE_FIELD_END_CONSTRUCTION.md",
+      "sha256": "be9d0583a7ff3599f04bf0f8c92c3dea694cf1595b15c9a5c438e789b150cd6c"
     }
   ],
   "edges": [
@@ -24092,6 +24213,190 @@
       "relation": "EXTENDS",
       "to": "policy:ragnarok-circuit-breaker",
       "note": "A consumed one-shot scientific exception that preserves the Phase-51--56 route KILL, no numbered successor, and no automatic descendant."
+    },
+    {
+      "id": "edge:2291",
+      "from": "concept:gate1-phase-locked-affine-field-end-family",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2292",
+      "from": "concept:gate1-phase-locked-affine-field-end-family",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "note": "This is an execution-free analytic branch extracted from the open affine/curved scope after the one-shot anchor-through straight calculation; it is not an automatic descendant or new phase."
+    },
+    {
+      "id": "edge:2293",
+      "from": "concept:gate1-phase-locked-affine-field-end-family",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-finite-lower-bypass-phase-locked-phi-fiber"
+    },
+    {
+      "id": "edge:2294",
+      "from": "concept:gate1-phase-locked-affine-field-end-family",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz",
+      "note": "Relative-cycle good-region framing only; the exact phase-locked contour and its gravitational action are repository derivations."
+    },
+    {
+      "id": "edge:2295",
+      "from": "concept:gate1-phase-locked-affine-field-end-family",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "The source frames the configuration-representation below-origin lapse contour but does not select the phase-locked field lift."
+    },
+    {
+      "id": "edge:2296",
+      "from": "concept:gate1-phase-locked-affine-field-end-family",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The scientific route remains open but no runner or numbered phase was authorized; this node records execution-free analysis only."
+    },
+    {
+      "id": "edge:2297",
+      "from": "scope:gate1-fixed-a-finite-lower-bypass-phase-locked-phi-fiber",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2298",
+      "from": "evidence:gate1-phase-locked-affine-field-end-analytic-proof",
+      "relation": "PART_OF",
+      "to": "concept:gate1-phase-locked-affine-field-end-family"
+    },
+    {
+      "id": "edge:2299",
+      "from": "evidence:gate1-phase-locked-affine-field-end-analytic-proof",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence"
+    },
+    {
+      "id": "edge:2300",
+      "from": "evidence:gate1-phase-locked-affine-field-end-analytic-proof",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-straight-lift-evidence-snapshot",
+      "note": "The inherited reduced action and exact good-end convention are reused; no result status or execution receipt is reclassified."
+    },
+    {
+      "id": "edge:2301",
+      "from": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "relation": "PART_OF",
+      "to": "concept:gate1-phase-locked-affine-field-end-family"
+    },
+    {
+      "id": "edge:2302",
+      "from": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-finite-lower-bypass-phase-locked-phi-fiber"
+    },
+    {
+      "id": "edge:2303",
+      "from": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-phase-locked-affine-field-end-analytic-proof",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2304",
+      "from": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
+    },
+    {
+      "id": "edge:2305",
+      "from": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "note": "The older contradicted claim is limited to no-intercept delta=q*y lines. The new affine/curved branch changes the relative ends and therefore does not reverse that scoped result."
+    },
+    {
+      "id": "edge:2306",
+      "from": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-phase-locked-affine-field-end-report"
+    },
+    {
+      "id": "edge:2307",
+      "from": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle"
+    },
+    {
+      "id": "edge:2308",
+      "from": "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "relation": "PART_OF",
+      "to": "concept:gate1-phase-locked-affine-field-end-family"
+    },
+    {
+      "id": "edge:2309",
+      "from": "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-finite-lower-bypass-phase-locked-phi-fiber"
+    },
+    {
+      "id": "edge:2310",
+      "from": "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-phase-locked-affine-field-end-analytic-proof",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2311",
+      "from": "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "relation": "EXTENDS",
+      "to": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "note": "The earlier scope boundary is sharpened constructively: one explicit branch now occupies part of the affine/curved space it left open."
+    },
+    {
+      "id": "edge:2312",
+      "from": "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS"
+    },
+    {
+      "id": "edge:2313",
+      "from": "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-phase-locked-affine-field-end-report"
+    },
+    {
+      "id": "edge:2314",
+      "from": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
+      "relation": "RECORDS",
+      "to": "concept:gate1-phase-locked-affine-field-end-family"
+    },
+    {
+      "id": "edge:2315",
+      "from": "artifact:gate1-phase-locked-affine-field-end-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-phase-locked-affine-field-end-family"
+    },
+    {
+      "id": "edge:2316",
+      "from": "artifact:gate1-phase-locked-affine-field-end-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence"
+    },
+    {
+      "id": "edge:2317",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2318",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS"
+    },
+    {
+      "id": "edge:2319",
+      "from": "open:gate1-original-cycle-signed-global-intersections",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "note": "The explicit scalar field-end branch must still be selected or rejected by an original-class prescription and extended through the omitted joint obligations before any global signed vector."
     }
   ],
   "kg_bridges": [

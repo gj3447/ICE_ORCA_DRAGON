@@ -15,9 +15,9 @@ The [collection manifest](./collection.json) uses
 [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 snapshots use
 [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-25T09:32:41Z` collection update, the three graphs have 876 nodes, 2489 edges,
-and 220 claims: 127 supported, 88 contradicted, and 5 inconclusive. Validation verifies all 205 stored
-hashes (197 artifacts and 8 policies); 33 unresolved external bridges remain explicit warnings. The
+At the recorded `2026-08-25T13:33:06Z` collection update, the three graphs have 884 nodes, 2518 edges,
+and 222 claims: 129 supported, 88 contradicted, and 5 inconclusive. Validation verifies all 207 stored
+hashes (199 artifacts and 8 policies); 33 unresolved external bridges remain explicit warnings. The
 Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
@@ -87,8 +87,13 @@ root and eight `EL_long` ODEs complete, both P50-center corners retain residual-
 both fresh-center corners recover the saved target under both frozen profiles. This supports a bounded
 factorial association, not exact historical Phase-53 bytes or a general causal theorem. The one-shot
 exception is consumed: the reconciliation route is `KILL`, full replay and Phase 57 are unauthorized,
-`next_phase=null`, Gate 1 remains open, and global promotion remains prohibited. These counts describe
-repository records, not independent replications or global scientific confidence.
+`next_phase=null`, Gate 1 remains open, and global promotion remains prohibited. A later execution-free
+exact review narrows the straight KILL to its implemented anchor-through \(\delta=qy\) class and
+constructs one phase-locked affine/curved fixed-\(a\) scalar branch with two uniform good field ends
+across the finite lower-bypass regulator. That proof adds no run-ledger checks and does not supply
+scale-factor/joint ends, regulator removal, a complete census, an original cycle, a global coefficient,
+physics, or TOE. These counts describe repository records, not independent replications or global
+scientific confidence.
 
 ## Read and validate it
 
@@ -103,6 +108,7 @@ validation without reopening artifact payloads; intuitive lookup therefore does 
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph legacy --path legacy-preregistration-provenance
+./ice ontology guide --graph cpt --path gate1-anchor-through-kill-to-phase-locked-branch
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2

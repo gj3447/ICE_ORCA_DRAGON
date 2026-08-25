@@ -169,11 +169,11 @@
       "includes": [
         "the inherited Phase-39 m=2 equal-boundary fixed-a slice",
         "T=+i*n and T=-i*n pure-imaginary lapse arms",
-        "the declared conjugate half-angle rays and every constant complex straight phi line",
+        "the declared conjugate half-angle rays and every anchor-through homogeneous line delta=(u+i*v)*y",
         "necessary exp(-S_2) relative-good field-end behavior"
       ],
       "excludes": [
-        "curved or piecewise field contours",
+        "affine-translated straight lines and curved or piecewise field contours",
         "nonzero-Re(T) laterals and other explicitly derived regulator cycles",
         "varying a and full joint lapse-field-gauge or BFV cycles",
         "a complete saddle, upward-cycle, sheet, Stokes, intersection, or relative-end census"
@@ -203,7 +203,8 @@
       "conclusion_changing_error_found": false,
       "payload_field_caveats": [
         "exact_calculation.unscaled_exponential_limit is actually the coefficient of the scaled limit exp(-t_j/sqrt(3))*Re(S_2(-t_j)); bad_subsequence_scaled_limit and the report equation are authoritative for its meaning",
-        "the nested decision suffix ON_FIXED_A_PURE_IMAGINARY_LAPSE_SLICE and the top-level suffix ON_DECLARED_SLICE name the same frozen slice; top-level model_class_decision is authoritative"
+        "the nested decision suffix ON_FIXED_A_PURE_IMAGINARY_LAPSE_SLICE and the top-level suffix ON_DECLARED_SLICE name the same frozen slice; top-level model_class_decision is authoritative",
+        "the model-class label CONSTANT_STRAIGHT refers to the frozen no-intercept ansatz delta=q*y; affine translations and compact bends are outside the executed case split"
       ]
     },
     "numerical_metrics": {

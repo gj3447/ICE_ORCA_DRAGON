@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-23T19:47:02Z`; 760 nodes, 2249 edges). Run details live in the
+`2026-08-25T13:33:06Z`; 780 nodes, 2319 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 166/166 stored hashes (161 artifacts and 5 policies).
+verifies 174/174 stored hashes (168 artifacts and 6 policies).
 
 ## Quick answers
 
@@ -65,7 +65,27 @@ verifies 166/166 stored hashes (161 artifacts and 5 policies).
 | What did Phase 54 resolve about that backend discrepancy? | On the exact six launch states, both global schedules miss the `5e-10` selector while both element-local schedules pass all 12 selector records. Long arithmetic alone is insufficient; the tested element-local schedule is sufficient on this finite matrix. No trajectory was run, Phase 51 and Phase 53 remain unchanged, and every global/physics/TOE output stays null. | `claim:P54_PHASE51_GLOBAL_NONCSE_ACTIVE_GRADIENT_RHS_NONPASS_IS_CONFIRMED_ON_SIX_STATIC_SLOTS`; `claim:P54_ELEMENT_LOCAL_SCHEDULE_ALONE_IS_SUFFICIENT_ON_SIX_STATIC_SLOTS`; `claim:P54_STATIC_ARITHMETIC_ATTRIBUTION_DOES_NOT_RECLASSIFY_PHASE51_OR_PHASE53_OR_LICENSE_GLOBAL_PROMOTION`; `open:p55-p53-trajectory-schedule-transfer-audit` |
 | Did Phase 55 qualify the element-local schedule on reconstructed trajectories? | No. All six ODEs completed, all fifteen `EL_std`/`EL_long` trajectory pairs passed, and the Phase-54 aggregate schedule matrix was reproduced. However, the explicitly P50-saddle-pinned reconstruction at `lambda=0.5` gave an `EL_long` scaled residual of `2.675e-7`, above the unchanged `2e-7` prerequisite; its saved-scalar difference was `2.673e-7`. The valid run therefore stops at reconstruction `NONPASS`; Phase 56 separately diagnoses that miss without rewriting it. | `claim:P55_P50_SADDLE_PINNED_RECONSTRUCTION_MISSES_SAVED_PHASE53_RESIDUAL_AT_LAMBDA_HALF`; `claim:P55_ELEMENT_LOCAL_BACKEND_AGREEMENT_IS_DIAGNOSTIC_AFTER_RECONSTRUCTION_NONPASS`; `claim:P55_RECONSTRUCTION_NONPASS_DOES_NOT_QUALIFY_PHASE56_OR_RECLASSIFY_PHASE53_OR_LICENSE_GLOBAL_PROMOTION`; `open:p56-lambda-half-launch-residual-provenance-audit` |
 | What did terminal Phase 56 recover, and does it authorize another phase? | At the single saved `phi_plus`, `lambda=0.5` root, both P50-center corners retain `[PASS, NONPASS, NONPASS]` while both fresh-center corners pass all three target gates under both frozen profiles. This supports a bounded association with the fresh center, not exact historical Phase-53 bytes or a general causal theorem. The one-shot closeout is consumed: route `KILL`, full replay and Phase 57 unauthorized, `next_phase=null`, Gate 1 open, and global promotion prohibited. | `claim:P56_FRESH_PHASE53_ALGORITHM_CENTER_AND_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET`; `claim:P56_FROZEN_FACTORIAL_GATE_PATTERN_ASSOCIATES_TARGET_RECOVERY_WITH_FRESH_CENTER`; `claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION`; `policy:ragnarok-circuit-breaker` |
+| Did the straight-lift KILL eliminate every affine or curved field-end completion? | No. The executed case split exhausts the anchor-through homogeneous ansatz \(\delta=qy\). An execution-free exact derivation now gives \(\delta=x+i\arg(T)/\kappa\), with two uniform good \(\phi_1\) ends across the finite lower-bypass lapse path; a smooth compact bend retains the Phase-39 central window exactly. This is one fixed-\(a\) scalar-fiber `BRANCH`, not a full joint/original cycle. Scale-factor and mixed ends, regulator removal, connector intersections, complete census/Stokes/orientation, `global_n_sigma`, physics, and TOE remain open or null. | `claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS`; `claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO`; `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle` |
 | Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–56 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–56 scope guards |
+
+### Gate-1 straight KILL to phase-locked branch
+
+The graph's `reading-path:gate1-anchor-through-kill-to-phase-locked-branch` should be read in this
+order:
+
+1. Phase 39 retains two bounded local cap witnesses; it does not supply good ends or a global signed
+   vector.
+2. The executed straight audit kills the declared rays and the full **anchor-through**
+   \(\delta=qy\) class on its fixed-\(a\), pure-imaginary-lapse slice.
+3. The later exact analytic identity for \(T=\rho e^{i\psi}\),
+   \(\delta=x+i\psi/\kappa\) gives a positive full-rate negative-\(x\) end and positive kinetic
+   positive-\(x\) end uniformly on a fixed finite lower-bypass regulator.
+4. A smooth compact bend can equal the original Phase-39 field line throughout
+   \(|y_\phi|\leq0.25\) and use the phase-locked affine ends outside. This is a genuine `BRANCH`, not
+   `EQUIVALENCE` and not a reversal of the scoped straight KILL.
+5. Stop at `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle`: source-derived selection,
+   complex scale-factor/mixed ends, regulator removal, new intersections, complete saddle/upward/sheet/
+   Stokes census, determinant/BFV orientation and the global vector remain missing.
 
 ### Phase 23 reading path
 

@@ -1,0 +1,99 @@
+{
+  "schema_version": "ice.gate1.phase-locked-affine-field-end.analytic-evidence.v1",
+  "recorded_on": "2026-08-25",
+  "evidence_kind": "EXECUTION_FREE_EXACT_ANALYTIC_DERIVATION_WITH_TWO_INDEPENDENT_ALGEBRA_REVIEWS",
+  "inherited_model": {
+    "action": "S2=4*pi^2*a^3*delta^2/T+2*pi^2*T*(-3*a+(3/4)*a^3*(1-exp(-kappa*(phi+delta/2)))^2)",
+    "kappa": "sqrt(2/3)",
+    "integrand": "exp(-S2)",
+    "good_end": "Re(S2) tends to positive infinity",
+    "source_runner_sha256": "c2cfac73e303d0f46d86c1577fc31cc1cd2ff5e0dfd809e9bdd6b75a38aaaa7e",
+    "source_phase39_input_sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"
+  },
+  "scope": {
+    "a": "fixed positive real",
+    "phi": "fixed real boundary value",
+    "T": "rho*exp(i*psi), 0<r<=rho<=R<infinity, -pi/2<=psi<=pi/2",
+    "delta_asymptote": "x+i*psi/kappa",
+    "field_dimension": "one complex phi_1 fiber on the m=2 fixed-a slice",
+    "finite_field_window": "Phase-39 |y_phi|<=0.25 retained by an explicit C-infinity compact bend"
+  },
+  "exact_identity": "Re(S2)=(4*pi^2*a^3/rho)*((x^2-psi^2/kappa^2)*cos(psi)+2*x*(psi/kappa)*sin(psi))+2*pi^2*rho*((-3*a+(3/4)*a^3)*cos(psi)-(3/2)*a^3*E*exp(-kappa*x/2)*cos(psi/2)+(3/4)*a^3*E^2*exp(-kappa*x)), E=exp(-kappa*phi)",
+  "checks": [
+    {
+      "id": "G1.AFFINE.exact.phase_locked_real_action_identity",
+      "status": "PROVED_BY_DIRECT_EXACT_SUBSTITUTION",
+      "statement": "T*exp(-kappa*delta)=rho*exp(-kappa*x), so the full-rate Starobinsky term is positive and psi-independent."
+    },
+    {
+      "id": "G1.AFFINE.end.negative_x_uniform_good",
+      "status": "PROVED_BY_NORMALIZED_LIMIT",
+      "statement": "exp(kappa*x)*Re(S2) tends to (3/2)*pi^2*a^3*rho*exp(-2*kappa*phi)>0 uniformly for rho in [r,R] and psi in [-pi/2,pi/2]."
+    },
+    {
+      "id": "G1.AFFINE.end.positive_x_interior_good",
+      "status": "PROVED_BY_NORMALIZED_LIMIT",
+      "statement": "For |psi|<pi/2, Re(S2)/x^2 tends to 4*pi^2*a^3*cos(psi)/rho>0."
+    },
+    {
+      "id": "G1.AFFINE.end.positive_x_arm_endpoints_good",
+      "status": "PROVED_BY_NORMALIZED_LIMIT",
+      "statement": "At psi=plus-or-minus pi/2, Re(S2)/x tends to 4*pi^3*a^3/(kappa*rho)>0."
+    },
+    {
+      "id": "G1.AFFINE.end.positive_x_uniform_phase_bound",
+      "status": "PROVED_BY_COMPACT_PHASE_SPLIT",
+      "statement": "A central phase interval has a uniform positive quadratic bound and the endpoint intervals have a uniform positive linear bound."
+    },
+    {
+      "id": "G1.AFFINE.connector.phase39_window_exactly_retained",
+      "status": "PROVED_BY_EXPLICIT_SMOOTH_CUTOFF",
+      "statement": "The C-infinity curve equals the Phase-39 half-angle line throughout |y_phi|<=0.25 and equals the phase-locked affine tail outside a compact interval."
+    },
+    {
+      "id": "G1.AFFINE.connector.injective_immersed_conjugate",
+      "status": "PROVED_FROM_PARAMETERIZATION",
+      "statement": "Re(delta)=x makes every fiber injective and immersed, while delta_{-psi}=conjugate(delta_psi)."
+    },
+    {
+      "id": "G1.AFFINE.relative_ends.distinct_reduced_good_components",
+      "status": "PROVED_BY_VERTICAL_DIVIDER_BOUND",
+      "statement": "On Re(delta)=0 the kinetic real part is nonpositive and the potential real part is bounded, so sufficiently high good regions cannot connect the two ends within the fixed scalar fiber."
+    },
+    {
+      "id": "G1.AFFINE.scope.prior_kill_is_anchor_through_only",
+      "status": "PROVED_BY_FROZEN_INPUT_AND_RUNNER_REVIEW",
+      "statement": "The exhaustive prior case split has delta=q*y and does not include an affine intercept or a compactly bent contour."
+    }
+  ],
+  "independent_review": {
+    "review_count": 2,
+    "agreement": "BOTH_REVIEWS_RECOVERED_THE_IDENTITY_LIMITS_UNIFORMITY_AND_SCOPE_BOUNDARY",
+    "new_scientific_runner_executed": false,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "evaluator_calls": 0,
+    "numerical_samples": 0
+  },
+  "decision": {
+    "field_end": "BRANCH_EXACT_GOOD_PHI_END_COMPLETION_FOR_ONE_FIXED_A_FINITE_RHO_M2_FIELD_FIBER_FAMILY",
+    "prior_straight_kill": "KEEP_WITH_ANCHOR_THROUGH_SCOPE_CLARIFICATION",
+    "programme_impact": "NARROW_STRAIGHT_KILL_AND_OPEN_EXPLICIT_CURVED_BRANCH",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_promotion": "PROHIBITED",
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "toe_claim": null,
+    "automatic_next": null
+  },
+  "exclusions": [
+    "varying or complex a_1 and mixed a_1-phi_1 ends",
+    "r to zero, R to infinity, or a joint regulator-removal theorem",
+    "new connector intersections or a complete saddle/upward-cycle/sheet/end census",
+    "a Stokes chamber, determinant/Pfaffian/Pin orientation, or BFV body",
+    "a physical original cycle, signed global vector, physics claim, or TOE claim",
+    "authorization for a new runner, numbered phase, retry, or automatic descendant"
+  ],
+  "report": "cpt_temporal_folded_susy/GATE1_PHASE_LOCKED_AFFINE_FIELD_END_CONSTRUCTION.md"
+}

@@ -3,7 +3,7 @@
 ## 결과
 
 번호 없는 bounded 계산 `Gate1StraightLiftEndAdmissibility`는 Phase 39의 \(m=2\)
-finite-window configuration chain을 상수 복소 직선 field line으로 무한 연장하는 후보를
+finite-window configuration chain을 endpoint anchor를 지나는 상수 방향 직선 field line으로 무한 연장하는 후보를
 배제한다.
 
 ```text
@@ -18,7 +18,9 @@ automatic_next       = null
 
 이는 Phase 39의 finite-window local intersection 후보와 두 local sign \(+1\)을 취소하지
 않는다. 배제되는 것은 fixed-\(a\), pure-imaginary-lapse \(m=2\) slice에서의 **무한 상수
-직선 \(\phi\)-completion**이다. Curved/piecewise field contour,
+직선 \(\phi\)-completion**이다. 여기서 result의 `CONSTANT_STRAIGHT`는 frozen runner가 실제로
+case split한 \(\delta=qy\), 즉 anchor-through homogeneous line을 뜻한다. Affine-translated line은
+그 class에 포함되지 않는다. Curved/piecewise field contour,
 nonzero-\(\operatorname{Re}T\) lateral, 다른 regulator와 full joint/BFV cycle은 열려 있다.
 
 ## 입력, source와 convention
@@ -132,7 +134,8 @@ admissible하지 않다.
    \(t_j=(\pi/2+2\pi j)/(\kappa|v|)\) subsequence의 음의 full-rate exponential이
    quadratic와 half-rate 항을 압도한다.
 
-따라서 이 declared slice에서는 어떤 constant complex straight \(\phi\)-line도 두 field end를
+따라서 이 declared slice에서는 어떤 anchor-through homogeneous complex straight
+\(\phi\)-line \(\delta=qy\)도 두 field end를
 모두 good으로 만들지 못한다.
 
 ## 실제 실행과 독립 검산
@@ -195,13 +198,20 @@ canonical payload SHA-256은
 - nested decision 문자열 `...ON_FIXED_A_PURE_IMAGINARY_LAPSE_SLICE`와 top-level
   `...ON_DECLARED_SLICE`는 같은 동결 slice를 가리키는 두 표기다. 기계 판정은 top-level
   `model_class_decision`을 정본으로 사용한다.
+- `KILL_CONSTANT_STRAIGHT_FIELD_LINES...`라는 result label은 intercept 없는 frozen ansatz
+  \(\delta=qy\)의 표기다. 이후 exact analytic review는 phase-locked affine tail
+  \(\delta=x+i\arg(T)/\kappa\)가 두 good ends를 가질 수 있음을 보였다. 따라서 이 label을
+  모든 affine straight line의 no-go로 확장하지 않는다. 별도 construction과 경계는
+  [`GATE1_PHASE_LOCKED_AFFINE_FIELD_END_CONSTRUCTION.md`](GATE1_PHASE_LOCKED_AFFINE_FIELD_END_CONSTRUCTION.md)에
+  기록한다.
 
 ## 계산된 사실, 해석, 열린 문제
 
 계산된 사실:
 
 - Phase-39 두 arm의 직선 \(\phi\) lift는 한쪽에 exact bad subsequence가 있다.
-- declared slice의 모든 constant complex straight \(\phi\)-line class가 적어도 한 good-end
+- declared slice의 모든 anchor-through homogeneous complex straight \(\phi\)-line
+  \(\delta=qy\) class가 적어도 한 good-end
   조건을 잃는다.
 
 해석:

@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-25T09:32:41Z",
+  "updated_at_utc": "2026-08-25T13:33:06Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -65,6 +65,7 @@
       "includes": [
         "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
         "the bounded Phase-56 terminal diagnostic and post-Phase-56 hard stop",
+        "the execution-free Gate-1 phase-locked affine field-end branch and its full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -139,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 consumed the bounded diagnostic exception and forbids full replay, Phase 57, and global promotion. The straight-line KILL closes only its declared model class; Gate 1 remains open.",
+      "answer": "No. Phase 56 consumed the bounded diagnostic exception and forbids full replay, Phase 57, and global promotion. The straight-line KILL closes only its anchor-through homogeneous model class. A later execution-free exact construction opens one phase-locked affine good-field-end branch, but the source-derived full joint cycle and global vector remain unresolved, so Gate 1 stays open.",
       "refs": [
         {
           "graph": "cpt",
@@ -148,6 +149,10 @@
         {
           "graph": "cpt",
           "node": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS"
         },
         {
           "graph": "cpt",
