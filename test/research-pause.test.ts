@@ -9,6 +9,10 @@ import { spawnSync } from "node:child_process"
 import { discoverScripts } from "../src/catalog.ts"
 import { runScript } from "../src/commands.ts"
 import {
+  boundedGate1InputSha256,
+  boundedGate1InvocationDecision,
+  boundedGate1Script,
+  boundedGate1ScriptSha256,
   canonicalResearchRelpath,
   corePhaseNumbersFromRelpath,
   formatRagnarokStatus,
@@ -118,6 +122,60 @@ it("allows only frozen history through Phase 50 and blocks killed-route reruns",
     )
     expect(error.code).toBe("RESEARCH_PHASE_PAUSED")
   }
+})
+
+it("opens exactly one hash-pinned non-numbered direct Gate-1 calculation", async () => {
+  const direct = researchRunDecision(boundedGate1Script)
+  expect(direct.allowed).toBe(true)
+  expect(direct.reason).toBe("BOUNDED_GATE1_DIRECT")
+  expect(direct.expected_sha256).toBe(boundedGate1ScriptSha256)
+
+  for (const blocked of [
+    `${boundedGate1Script}_retry`,
+    "cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility_replay",
+    "cpt_temporal_folded_susy/gate1_next_calculation"
+  ]) {
+    expect(researchRunDecision(blocked).allowed).toBe(false)
+  }
+})
+
+it("requires the exact bounded Gate-1 name and forbids arguments", () => {
+  const basename = boundedGate1Script.split("/").at(-1)
+  expect(basename).toBeDefined()
+  expect(
+    boundedGate1InvocationDecision(
+      boundedGate1Script,
+      boundedGate1Script,
+      []
+    )
+  ).toEqual({ allowed: true, reason: "AUTHORIZED" })
+  expect(
+    boundedGate1InvocationDecision(basename!, boundedGate1Script, [])
+  ).toEqual({ allowed: true, reason: "AUTHORIZED" })
+  expect(
+    boundedGate1InvocationDecision("gate1_straight", boundedGate1Script, [])
+  ).toEqual({ allowed: false, reason: "EXACT_NAME_REQUIRED" })
+  expect(
+    boundedGate1InvocationDecision(basename!, boundedGate1Script, ["--fast"])
+  ).toEqual({ allowed: false, reason: "ARGUMENTS_FORBIDDEN" })
+})
+
+it("binds the bounded Gate-1 runner and frozen input to their declared hashes", async () => {
+  const runner = await readFile(
+    join(process.cwd(), `${boundedGate1Script}.py`)
+  )
+  const input = await readFile(
+    join(
+      process.cwd(),
+      "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json"
+    )
+  )
+  expect(createHash("sha256").update(runner).digest("hex")).toBe(
+    boundedGate1ScriptSha256
+  )
+  expect(createHash("sha256").update(input).digest("hex")).toBe(
+    boundedGate1InputSha256
+  )
 })
 
 it("freezes the complete current core catalog through Phase 50", async () => {
@@ -309,7 +367,16 @@ it("returns exit 2 and the typed pause error from the real CLI", () => {
 })
 
 it("keeps operational containment distinct from the scientific verdict", () => {
-  expect(ragnarokStatus.operational_state).toBe("BOUNDED_PAUSE")
+  expect(ragnarokStatus.schema).toBe("ice-ragnarok-circuit-breaker/v2")
+  expect(ragnarokStatus.operational_state).toBe("GATE1_BOUNDED_RESUME")
+  expect(ragnarokStatus.resume_authorization.approved_on).toBe("2026-08-25")
+  expect(ragnarokStatus.resume_authorization.overrides_only).toBe(
+    "SCHEDULED_REVIEW_WAIT_FOR_THIS_EXACT_CALCULATION"
+  )
+  expect(ragnarokStatus.gate1_window.state).toBe("CALC_AUTHORIZED")
+  expect(ragnarokStatus.gate1_window.exact_script).toBe(boundedGate1Script)
+  expect(ragnarokStatus.gate1_window.execution_enabled).toBe(true)
+  expect(ragnarokStatus.gate1_window.automatic_next).toBe(null)
   expect(ragnarokStatus.containment.continuation_route).toBe("KILL")
   expect(ragnarokStatus.containment.maximum_allowed_core_phase).toBe(50)
   expect(ragnarokStatus.containment.terminal_closeout_completed).toBe(true)
@@ -352,7 +419,7 @@ it("keeps operational containment distinct from the scientific verdict", () => {
 
 it("renders stable human and machine-readable status", () => {
   expect(formatRagnarokStatus(false)).toContain(
-    "Ragnarok circuit breaker: BOUNDED_PAUSE"
+    "Ragnarok circuit breaker: GATE1_BOUNDED_RESUME"
   )
   expect(JSON.parse(formatRagnarokStatus(true))).toEqual(ragnarokStatus)
 })

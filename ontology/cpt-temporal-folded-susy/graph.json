@@ -2214,7 +2214,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "ae0c0a8db8257132c47ac17504231d5d4329817f6aba2f2226a0fbc7df787633",
+      "sha256": "61c9e8341e670712053be130acb3681e73098669ff338d1d68d2e7fb4bcc05a4",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -2224,7 +2224,7 @@
       "summary": "New calculations require source, equations, observed output, independent checks, and scoped interpretation, but no mandatory research contract, preregistration ritual, or KG ratification.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "ae0c0a8db8257132c47ac17504231d5d4329817f6aba2f2226a0fbc7df787633",
+      "sha256": "61c9e8341e670712053be130acb3681e73098669ff338d1d68d2e7fb4bcc05a4",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
     },
     {
@@ -9657,7 +9657,7 @@
       "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The one-shot Phase-56 terminal exception is consumed; Phase 51–56 reruns, variants, full replay, Phase 57+, and renamed offspring are unauthorized while the bounded pause is active. This policy is not scientific evidence, a Gate-1 no-go, a physics claim, or a TOE verdict; Gate 1 and the separately scoped scientific route remain open.",
       "state": "ACTIVE_PHASE56_TERMINAL_CLOSEOUT_CONSUMED",
       "path": "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md",
-      "sha256": "282486b036a156fa5de2ac9d659b9ccf65578193b0ce85b967c5bf787c4fe3db",
+      "sha256": "6d9a27ad4e48ec79d7b6eadfb6666bab75a6fcbdde4cbc35543e089f95c781cc",
       "introduced_in_commit": "2324afb51783149fddeccdf53f3b2d315c6857f8"
     },
     {

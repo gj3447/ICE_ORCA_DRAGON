@@ -63,13 +63,70 @@ export const frozenHistoricalCoreScripts: ReadonlySet<string> = new Set(
 export const terminalCloseoutRunnerSha256 =
   "083924f7f9fd0bb3baf8e681e2760cc54ef4a105f5a597b52aa3cdb58c6ac882"
 
+export const boundedGate1Script =
+  "cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility"
+export const boundedGate1ScriptSha256 =
+  "c2cfac73e303d0f46d86c1577fc31cc1cd2ff5e0dfd809e9bdd6b75a38aaaa7e"
+export const boundedGate1InputSha256 =
+  "a3bc97461c7989cd5bb471accf46f0c2196de41c3030e9eef2248c4f09a47fdb"
+export const boundedGate1ExecutionEnabled: boolean = true
+
+export const boundedGate1InvocationDecision = (
+  query: string,
+  relpath: string,
+  args: ReadonlyArray<string>
+) => {
+  const normalizedQuery = canonicalResearchRelpath(query)
+  const basename = relpath.split("/").at(-1) ?? relpath
+  if (normalizedQuery !== relpath && normalizedQuery !== basename) {
+    return { allowed: false, reason: "EXACT_NAME_REQUIRED" as const }
+  }
+  if (args.length > 0) {
+    return { allowed: false, reason: "ARGUMENTS_FORBIDDEN" as const }
+  }
+  return { allowed: true, reason: "AUTHORIZED" as const }
+}
+
 export const ragnarokStatus = {
-  schema: "ice-ragnarok-circuit-breaker/v1",
+  schema: "ice-ragnarok-circuit-breaker/v2",
   effective_date: "2026-08-23",
-  operational_state: "BOUNDED_PAUSE",
+  operational_state: "GATE1_BOUNDED_RESUME",
   pause_started_on: "2026-08-23",
   review_eligible_on: "2026-08-30",
   auto_resume: false,
+  resume_authorization: {
+    id: "GATE1_DIRECT_20260825_01",
+    authorized_by: "USER",
+    approved_on: "2026-08-25",
+    effective_immediately: true,
+    overrides_only: "SCHEDULED_REVIEW_WAIT_FOR_THIS_EXACT_CALCULATION",
+    scope: "DIRECT_GATE1_END_ADMISSIBILITY_MODEL_CLASS_REDUCTION",
+    does_not_reopen_killed_route: true
+  },
+  gate1_window: {
+    state: "CALC_AUTHORIZED",
+    automatic_next: null,
+    maximum_launches: 1,
+    exact_script: boundedGate1Script,
+    runner_sha256: boundedGate1ScriptSha256,
+    input: {
+      path: "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json",
+      sha256: boundedGate1InputSha256
+    },
+    result_path:
+      "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_RESULT.json",
+    resource_caps: {
+      wall_clock_seconds: 30,
+      artifact_bytes: 250_000,
+      stdout_bytes: 65_536,
+      stderr_bytes: 65_536,
+      root_calls: 0,
+      ode_calls: 0,
+      evaluator_reconciliation_calls: 0,
+      automatic_descendants: 0
+    },
+    execution_enabled: boundedGate1ExecutionEnabled
+  },
   verdicts: {
     ragnarok_pattern: "PRESENT",
     scientific_progress: "PARTIAL",
@@ -114,7 +171,7 @@ export const ragnarokStatus = {
       next_phase: null
     },
     execution_provenance:
-      "PINNED_RUNNER_HASH_CLEAN_CORE_AND_COMMITTED_TERMINAL_RESULT",
+      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_BOUNDED_GATE1_WINDOW",
     direct_python_bypass_authorized: false
   },
   repository_transport: {
@@ -173,7 +230,7 @@ export const ragnarokStatus = {
     history_remediation_requires_explicit_user_authorization: false
   },
   reopen_requirements: [
-    "explicit user approval after review eligibility",
+    "explicit user approval; any waiver of the scheduled review wait must be exact-scope and must not reopen the killed route",
     "a direct Gate-1 typed object rather than another reconciliation descendant",
     "pre-run serialization and hash pinning of the original joint cycle, orientation, singular divisor, endpoint prescription, regulator, Stokes chamber, and relative-end inputs",
     "a complete pre-run census of saddles, upward cycles, complex sheets, and asymptotic ends",
@@ -283,6 +340,15 @@ export const researchRunDecision = (relpath: string) => {
       expected_sha256: frozenHistoricalCoreScriptSha256.get(normalized) ?? null
     }
   }
+  if (normalized === boundedGate1Script && boundedGate1ExecutionEnabled) {
+    return {
+      allowed: true,
+      reason: "BOUNDED_GATE1_DIRECT" as const,
+      normalized_relpath: normalized,
+      maximum_phase: maximumPhase,
+      expected_sha256: boundedGate1ScriptSha256
+    }
+  }
   return {
     allowed: false,
     reason: "CORE_ROUTE_PAUSED" as const,
@@ -304,7 +370,7 @@ const blockedRunError = (
         : `core research script '${relpath}'`
   return iceError(
     "RESEARCH_PHASE_PAUSED",
-    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout has been consumed and only the frozen historical allowlist through Phase ${ragnarokStatus.containment.frozen_historical_run_allowlist_through_phase} remains executable; inspect \`ice status\``,
+    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout has been consumed, the killed route remains closed, and execution is limited to the frozen historical allowlist plus any exact hash-pinned Gate-1 window shown by \`ice status\``,
     2
   )
 }
@@ -484,10 +550,11 @@ export const formatRagnarokStatus = (json: boolean): string => {
     `Kill scope: ${ragnarokStatus.containment.kill_scope}`,
     `Executable core: ${ragnarokStatus.containment.frozen_historical_run_allowlist.length} frozen historical scripts through Phase ${ragnarokStatus.containment.frozen_historical_run_allowlist_through_phase}; Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout consumed`,
     `Execution provenance: ${ragnarokStatus.containment.execution_provenance}`,
-    `Next phase: ${String(ragnarokStatus.containment.next_phase)}; every other core path is blocked`,
+    `Bounded Gate 1: ${ragnarokStatus.gate1_window.state}; ${ragnarokStatus.gate1_window.exact_script}; execution enabled=${String(ragnarokStatus.gate1_window.execution_enabled)}`,
+    `Next phase: ${String(ragnarokStatus.containment.next_phase)}; no automatic descendant is authorized`,
     `Gate 1: ${ragnarokStatus.scientific_state.gate1}`,
     `Scientific route: ${ragnarokStatus.scientific_state.scientific_route}`,
-    `Review eligible: ${ragnarokStatus.review_eligible_on} (no automatic resume)`,
+    `Historical review date: ${ragnarokStatus.review_eligible_on}; exact-window wait override approved ${ragnarokStatus.resume_authorization.approved_on} (no automatic resume)`,
     `Repository push: ${ragnarokStatus.repository_transport.push_status}`,
     "Decision: docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md"
   ].join("\n")

@@ -4,11 +4,14 @@ import { Console, Effect } from "effect"
 import { discoverScripts, resolveScript } from "./catalog.ts"
 import { doctor } from "./doctor.ts"
 import { iceError, type IceError } from "./errors.ts"
-import { inherit } from "./process.ts"
+import { capture, inherit } from "./process.ts"
 import {
+  boundedGate1InvocationDecision,
   formatRagnarokStatus,
   guardResearchQuery,
-  guardResearchRun
+  guardResearchRun,
+  researchRunDecision,
+  ragnarokStatus
 } from "./research-pause.ts"
 import { outputForScript } from "./repro/manifest.ts"
 import {
@@ -73,6 +76,7 @@ export const runScript = (
 > =>
   Effect.gen(function* () {
     const workspace = yield* Workspace
+    const fs = yield* FileSystem.FileSystem
     const path = yield* Path.Path
     yield* guardResearchQuery(query)
     const entry = yield* discoverScripts.pipe(
@@ -80,6 +84,80 @@ export const runScript = (
       Effect.flatMap(guardResearchRun)
     )
     const scriptArgs = args[0] === "--" ? args.slice(1) : args
+    const decision = researchRunDecision(entry.relpath)
+    if (decision.reason === "BOUNDED_GATE1_DIRECT") {
+      const invocation = boundedGate1InvocationDecision(
+        query,
+        entry.relpath,
+        scriptArgs
+      )
+      if (!invocation.allowed) {
+        return yield* Effect.fail(
+          iceError(
+            invocation.reason === "EXACT_NAME_REQUIRED"
+              ? "RESEARCH_EXACT_NAME_REQUIRED"
+              : "RESEARCH_ARGUMENTS_FORBIDDEN",
+            invocation.reason === "EXACT_NAME_REQUIRED"
+              ? `bounded Gate-1 execution requires the exact name or relpath '${entry.relpath}'`
+              : `bounded Gate-1 execution accepts no script arguments`,
+            2
+          )
+        )
+      }
+      const caps = ragnarokStatus.gate1_window.resource_caps
+      const execution = yield* capture(
+        {
+          command: workspace.python,
+          args: [path.basename(entry.file)],
+          cwd: path.dirname(entry.file)
+        },
+        caps.wall_clock_seconds
+      )
+      const encoder = new TextEncoder()
+      const stdoutBytes = encoder.encode(execution.stdout).byteLength
+      const stderrBytes = encoder.encode(execution.stderr).byteLength
+      if (stdoutBytes > caps.stdout_bytes || stderrBytes > caps.stderr_bytes) {
+        return yield* Effect.fail(
+          iceError(
+            "RESEARCH_OUTPUT_CAP_EXCEEDED",
+            `bounded Gate-1 output exceeded its cap (stdout ${stdoutBytes}/${caps.stdout_bytes}, stderr ${stderrBytes}/${caps.stderr_bytes})`,
+            2
+          )
+        )
+      }
+      if (execution.stdout.trim().length > 0) {
+        yield* Console.log(execution.stdout.trimEnd())
+      }
+      if (execution.stderr.trim().length > 0) {
+        yield* Console.error(execution.stderr.trimEnd())
+      }
+      if (execution.exitCode === 0) {
+        const resultFile = path.join(
+          workspace.root,
+          ragnarokStatus.gate1_window.result_path
+        )
+        const resultBytes = yield* fs.readFile(resultFile).pipe(
+          Effect.mapError((error) =>
+            iceError(
+              "RESEARCH_RESULT_MISSING",
+              `bounded Gate-1 runner exited zero without a readable result: ${String(error)}`,
+              2
+            )
+          )
+        )
+        if (resultBytes.byteLength > caps.artifact_bytes) {
+          return yield* Effect.fail(
+            iceError(
+              "RESEARCH_ARTIFACT_CAP_EXCEEDED",
+              `bounded Gate-1 result exceeded ${caps.artifact_bytes} bytes (observed ${resultBytes.byteLength})`,
+              2
+            )
+          )
+        }
+      }
+      yield* setExitCode(execution.exitCode)
+      return
+    }
     const exitCode = yield* inherit({
       command: workspace.python,
       args: [path.basename(entry.file), ...scriptArgs],

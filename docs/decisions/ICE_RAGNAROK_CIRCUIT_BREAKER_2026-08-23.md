@@ -5,6 +5,11 @@
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
 
+> **2026-08-25 국소 개정:** 사용자가 즉시 연구 재개를 명시 승인하여 예정 대기만 정확히
+> hash-pin된 번호 없는 Gate-1 end-admissibility 계산 한 개에 한해 면제했다. Phase 51--56
+> route `KILL`, Phase 57 차단과 `next_phase=null`은 바뀌지 않는다. 정본 범위와 상한은
+> [`ICE_GATE1_BOUNDED_RESUME_2026-08-25.md`](ICE_GATE1_BOUNDED_RESUME_2026-08-25.md)다.
+
 ## 결정
 
 현재 판정은 다음 세 문장을 동시에 보존한다.
@@ -79,8 +84,10 @@ KILL의 적용 대상은 위의 방법 경로이며 Gate 1이나 CPT × Temporal
 
 ## 재개 조건
 
-2026-08-30 이후에도 다음 조건을 **모두** 만족하고 사용자가 명시적으로 승인해야 새 core Phase를
-검토할 수 있다.
+일반 새 core Phase에는 2026-08-30 이후에도 다음 조건을 **모두** 만족하고 사용자가 명시적으로
+승인해야 한다. 2026-08-25 국소 개정은 새 core Phase가 아니라, saddle/intersection 계산보다
+앞선 necessary end-admissibility model-class reduction 한 개이므로 그 날짜 대기만 정확한
+runner/input hash와 fail-closed null 출력 아래 면제한다.
 
 1. 같은 reconciliation이 아니라 Gate 1의 typed object를 직접 계산한다.
 2. original joint cycle, orientation, singular divisor, endpoint prescription, regulator, Stokes

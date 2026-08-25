@@ -1,0 +1,292 @@
+{
+  "schema_version": "ice.gate1.straight-lift-end-admissibility.input.v1",
+  "calculation_id": "Gate1StraightLiftEndAdmissibility",
+  "gate": 1,
+  "numbered_phase": null,
+  "frozen_on": "2026-08-25",
+  "freeze_kind": "pre_run_bounded_direct_gate1_input_freeze",
+  "authority": "repository-local computational-workbench input authorized by the user's explicit immediate-resumption instruction on 2026-08-25",
+  "purpose": "Test a necessary relative-good-end condition for the straight unbounded field-ray completion of the Phase 39 m=2 declared lower-bypass Gaussian lift, and reduce the constant complex straight-field-line model class on the fixed-a, pure-imaginary-lapse slice, before any saddle, upward-flow, intersection, or evaluator calculation.",
+  "primary_sources": [
+    {
+      "id": "source:witten-2010-picard-lefschetz",
+      "citation": "E. Witten, Analytic Continuation Of Chern-Simons Theory, arXiv:1001.2933v4, section 3.1.1",
+      "locator": "https://arxiv.org/abs/1001.2933",
+      "role": "For an exp(I) integral, a noncompact relative-cycle end must lie where Re(I) tends to minus infinity. Here I=-S_2, so the necessary condition is Re(S_2) tending to plus infinity.",
+      "scope_warning": "The source supplies the relative-homology framework, not this gravitational action or a physical original cycle."
+    },
+    {
+      "id": "source:banihashemi-jacobson-2025",
+      "citation": "B. Banihashemi and T. Jacobson, On the lapse contour, Phys. Rev. D 111 (2025) 066014, arXiv:2405.10307",
+      "locator": "https://arxiv.org/abs/2405.10307",
+      "role": "Boundary framing for the below-origin lapse contour after momenta are integrated before lapse.",
+      "scope_warning": "The source does not choose the repository's field lift, prove its convergence, or compute a Picard-Lefschetz coefficient."
+    }
+  ],
+  "repository_provenance": {
+    "inherited_input": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+    "inherited_input_sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4",
+    "inherited_fields": [
+      "m=2 midpoint action",
+      "equal Phase 25 endpoint benchmark",
+      "lower-bypass lapse path",
+      "continuously unwrapped straight field rays",
+      "ambient and chart orientation"
+    ],
+    "non_inheritance": "No Phase 39 local intersection sign, saddle, upward-flow trajectory, metric, or result is used as an input."
+  },
+  "model": {
+    "name": "two-segment midpoint Starobinsky minisuperspace configuration regulator",
+    "segment_count": 2,
+    "complex_variables_in_order": [
+      "a_1",
+      "phi_1",
+      "T"
+    ],
+    "ambient_real_order": [
+      "Re(a_1)",
+      "Im(a_1)",
+      "Re(phi_1)",
+      "Im(phi_1)",
+      "Re(T)",
+      "Im(T)"
+    ],
+    "fixed_boundary": {
+      "a": "3.5668031935672753",
+      "phi": "1.0185809464006637",
+      "source": "Phase 25 benchmark inherited through the Phase 39 frozen input"
+    },
+    "potential": "V(phi)=(3/4)*(1-exp(-sqrt(2/3)*phi))^2",
+    "action": "S_2=2*pi^2*sum_{e=0}^{1} [(-6*a_mid*(Delta a)^2+a_mid^3*(Delta phi)^2)/(2*T*h)+T*h*(-3*a_mid+a_mid^3*V(phi_mid))], h=1/2",
+    "integrand_convention": "exp(-S_2)",
+    "analytic_domain": "C^2 times C-star in T"
+  },
+  "joint_cycle_candidate": {
+    "status": "declared finite-window configuration-chain candidate, not a derived physical original joint relative cycle",
+    "lapse_variable": "N",
+    "wick_map": "T=i*N",
+    "lapse_path": "[-R,-r] followed by the lower semicircle around N=0 followed by [r,R]",
+    "lapse_orientation": "increasing N from the negative arm to the positive arm",
+    "field_anchor": "a_1=a_boundary and phi_1=phi_boundary at y_a=y_phi=0",
+    "negative_arm_embedding": "N<0, a_1=a_boundary+exp(-3*pi*i/4)*y_a, phi_1=phi_boundary+exp(-pi*i/4)*y_phi, T=i*N",
+    "cap_embedding": "a_1=a_boundary+exp(i*(psi/2-pi/2))*y_a, phi_1=phi_boundary+exp(i*psi/2)*y_phi, T=r*exp(i*psi), psi in [-pi/2,pi/2]",
+    "positive_arm_embedding": "N>0, a_1=a_boundary+exp(-pi*i/4)*y_a, phi_1=phi_boundary+exp(pi*i/4)*y_phi, T=i*N",
+    "chart_parameter_orientations": {
+      "negative_arm": [
+        "y_a",
+        "y_phi",
+        "N"
+      ],
+      "cap": [
+        "y_a",
+        "y_phi",
+        "psi"
+      ],
+      "positive_arm": [
+        "y_a",
+        "y_phi",
+        "N"
+      ]
+    },
+    "chain_coefficient": 1,
+    "physical_original_cycle_derived": false,
+    "canonical_momenta_included": false,
+    "gauge_BFV_body_included": false,
+    "BFV_Pfaffian_Pin_orientation_included": false
+  },
+  "orientation": {
+    "calculation_scope": "The end witness fixes a_1=a_boundary and follows the declared y_phi orientation. No intersection determinant or global orientation line is computed.",
+    "positive_arm_phi_ray": "q_plus=exp(pi*i/4)",
+    "negative_arm_phi_ray": "q_minus=exp(-pi*i/4)",
+    "bad_end_parameterization": "y_phi=-t with t>0 increasing toward infinity",
+    "good_end_parameterization": "y_phi=+t with t>0 increasing toward infinity"
+  },
+  "singular_divisor": {
+    "components": [
+      {
+        "equation": "T=0",
+        "classification": "excluded simple action pole in the m=2 model",
+        "bypass": "lower lapse semicircle at finite radius r"
+      }
+    ],
+    "complete_for_full_BFV_space": false
+  },
+  "endpoint_prescription": {
+    "field_boundaries": "equal fixed (a,phi) endpoints inherited from Phase 25",
+    "lapse_lateral": "below N=0",
+    "field_ray_join": "continuously unwrapped half-angle phases from negative arm through cap to positive arm",
+    "physical_polarization_derived": false
+  },
+  "regulator": {
+    "m": 2,
+    "arm_cutoff_R": "1.2",
+    "cap_radii": [
+      "0.3",
+      "0.2"
+    ],
+    "finite_field_window_in_phase39": {
+      "y_a": [
+        "-0.25",
+        "0.25"
+      ],
+      "y_phi": [
+        "-0.25",
+        "0.25"
+      ]
+    },
+    "tested_unbounded_completion": "hold y_a=0 and extend the inherited straight y_phi rays to both signs of infinity at any fixed 0<abs(N)<=R",
+    "removal_order": "No regulator limit is taken; failure of one necessary end condition short-circuits further completion tests."
+  },
+  "stokes_chamber": {
+    "status": "NOT_CERTIFIED_AND_NOT_USED",
+    "reason": "This calculation tests an upstream necessary convergence condition on the declared chain and launches no saddle, flow, thimble, or Stokes jump.",
+    "promotion_guard": "A result cannot be promoted to an intersection vector or Gate 1 closure."
+  },
+  "relative_pair": {
+    "exponent": "I=-S_2",
+    "good_end_criterion": "Re(I) tends to -infinity, equivalently Re(S_2) tends to +infinity",
+    "bad_end_witness_criterion": "one escape sequence in the declared chain with Re(S_2) tending to -infinity is sufficient to reject that unbounded straight-ray completion as a relative cycle",
+    "relative_good_region": "the conventional X_{-T} region at infinity where Re(-S_2)<=-T; this is the allowed relative boundary, not the singular-divisor/bad-set notation used elsewhere in the programme",
+    "end_census": [
+      {
+        "id": "negative_arm_phi_plus_infinity",
+        "planned_test": "exact leading asymptotic and numerical direct-action control"
+      },
+      {
+        "id": "negative_arm_phi_minus_infinity",
+        "planned_test": "exact explicit subsequence and numerical direct-action control"
+      },
+      {
+        "id": "positive_arm_phi_plus_infinity",
+        "planned_test": "exact leading asymptotic and numerical direct-action control"
+      },
+      {
+        "id": "positive_arm_phi_minus_infinity",
+        "planned_test": "exact explicit subsequence and numerical direct-action control"
+      },
+      {
+        "id": "cap_phi_infinities",
+        "planned_test": "not needed after a predeclared arm-end KILL; remains OPEN for any redesigned nonlinear cap"
+      },
+      {
+        "id": "a_field_infinities",
+        "planned_test": "not needed after a predeclared arm-end KILL; remains OPEN for any redesigned nonlinear field cycle"
+      },
+      {
+        "id": "N_plus_or_minus_infinity",
+        "planned_test": "outside this finite-R candidate audit"
+      },
+      {
+        "id": "T_zero_divisor",
+        "planned_test": "excluded by the inherited lower bypass; no r-to-zero limit is claimed"
+      },
+      {
+        "id": "finite_field_window_faces",
+        "planned_test": "unpaired boundaries in the finite Phase 39 chain; the straight unbounded completion is the candidate tested here"
+      }
+    ]
+  },
+  "saddle_sheet_upward_end_census": {
+    "saddles": "NOT_LAUNCHED_BY_NECESSARY_END_CONDITION_SHORT_CIRCUIT",
+    "upward_cycles": "NOT_LAUNCHED_BY_NECESSARY_END_CONDITION_SHORT_CIRCUIT",
+    "complex_sheets": "the two inherited straight arm embeddings only; no saddle sheets are inferred",
+    "stokes_jumps": "NOT_LAUNCHED_BY_NECESSARY_END_CONDITION_SHORT_CIRCUIT",
+    "policy": "If either straight arm has a proved bad field end, classify the candidate before any dual census. If not, return OPEN without starting an automatic descendant."
+  },
+  "exact_plan": {
+    "slice": "a_1=a_boundary, phi_1=phi_boundary+q_s*y_phi, q_s=exp(s*pi*i/4), T=i*s*n with s in {-1,+1}, n>0",
+    "reduced_action": "S_slice=4*pi^2*a^3*delta_phi^2/T+2*pi^2*T*(-3*a+a^3*V(phi+delta_phi/2))",
+    "definitions": "kappa=sqrt(2/3), alpha=kappa/sqrt(2)=1/sqrt(3)",
+    "bad_subsequence": "t_j=sqrt(3)*(pi/2+2*pi*j), y_phi=-t_j",
+    "required_limit": "Re(S_slice(t_j))/[(3/2)*pi^2*a^3*n*exp(-2*kappa*phi)*exp(alpha*t_j)] -> -1",
+    "positive_end_control": "Re(S_slice(y_phi=+t))/t^2 -> 4*pi^2*a^3/n > 0"
+  },
+  "model_class_reduction_plan": {
+    "class": "constant complex straight phi line q=u+i*v at fixed a_1=a_boundary and pure-imaginary T=s*i*n, n>0",
+    "kinetic_real_part": "Re(S_kinetic)=8*pi^2*a^3*s*u*v*y_phi^2/n",
+    "cases": [
+      {
+        "condition": "s*u*v<0",
+        "certificate": "choose the field direction in which the Starobinsky exponential decays; the negative quadratic kinetic real part then tends to -infinity"
+      },
+      {
+        "condition": "u*v=0",
+        "certificate": "the kinetic real part vanishes and the remaining real part is zero or bounded on at least one end, so it does not tend to +infinity"
+      },
+      {
+        "condition": "s*u*v>0",
+        "certificate": "the kinetic term is positive, but on the exponential-growth end an explicit oscillatory subsequence makes the leading Starobinsky term tend to -infinity"
+      }
+    ],
+    "scope": "This excludes constant straight field lines only on the declared fixed-a, pure-imaginary-lapse slice. Curved or piecewise field cycles, a nonzero Re(T) lateral, and other regulators remain separate branches."
+  },
+  "numerical_plan": {
+    "precision_decimal_digits": 80,
+    "fixed_abs_N": "1.0",
+    "bad_subsequence_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "positive_end_t_values": [
+      "20",
+      "40",
+      "80"
+    ],
+    "independent_control": "compare the full inherited complex action evaluated directly with the separately derived closed-form real part on both lapse arms"
+  },
+  "decision_table": [
+    {
+      "condition": "exact bad subsequence on both arms and independent direct-action agreement",
+      "candidate": "KILL",
+      "model_class": "KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE",
+      "programme_impact": "NARROW",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "meaning": "Reject the Phase 39 straight unbounded completion and its constant-straight-line model class on the declared slice, without closing Gate 1."
+    },
+    {
+      "condition": "exact asymptotics do not establish a bad end and all checks remain valid",
+      "candidate": "OPEN",
+      "model_class": "OPEN",
+      "programme_impact": "OPEN",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "meaning": "Do not infer admissibility; design a separate bounded census."
+    },
+    {
+      "condition": "two parameterizations are exact reorientations of one chain with unchanged end class",
+      "candidate": "EQUIVALENCE",
+      "model_class": "EQUIVALENCE",
+      "programme_impact": "EQUIVALENCE",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "meaning": "Do not create a new scientific branch."
+    },
+    {
+      "condition": "manifest, symbolic reduction, or independent numerical control mismatches",
+      "candidate": "KILL",
+      "model_class": "OPEN",
+      "programme_impact": "KILL_INVALID_RUN",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "meaning": "Mark the run invalid; do not use any result."
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 30,
+    "artifact_bytes": 250000,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "evaluator_reconciliation_calls": 0,
+    "maximum_bad_subsequence_samples_per_arm": 6,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "physical_original_cycle": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED"
+  }
+}
