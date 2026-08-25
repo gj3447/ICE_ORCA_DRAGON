@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-23T19:47:02Z",
+  "updated_at_utc": "2026-08-25T06:49:27Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -249,11 +249,14 @@
     },
     {
       "question": "Does Phase 39 compute the cap-chain pairing or close Gate 1?",
-      "answer": "No. In one frozen m=2 configuration-space model it resolves one positive-T saddle and, separately for the r=.3 and r=.2 cap pieces, one locally transverse candidate against one finite-radius, finite-time K chart patch. Both direct declared configuration-coordinate signs are +1, with the actual solver finite-difference residual-Jacobian signs equal to -1 as required by the exact odd-dimensional parity convention. Straight arms, cap reintersections, root exhaustion, exact nonlinear K, a non-Stokes chamber, the bounded-chain signed sum, the complete global vector, and n_sigma remain unresolved or null.",
+      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit now contradicts the unbounded straight-field-ray completion and excludes every constant complex straight phi line on the inherited fixed-a, pure-imaginary-lapse m=2 slice: one field end is not relative-good. This does not cancel either local candidate or sign. Curved or piecewise contours, nonzero-Re(T) laterals, other regulators, the original joint cycle, the complete end/intersection census, global n_sigma, physics, and TOE outputs remain open or null; Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
       "claim_ids": [
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
-        "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
+        "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+        "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+        "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+        "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
       ]
     },
     {
@@ -2214,7 +2217,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "61c9e8341e670712053be130acb3681e73098669ff338d1d68d2e7fb4bcc05a4",
+      "sha256": "e4e2e76251194d0d6aa9e685023abdbcca3877791d22020d0db97c05d4bee413",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -2224,7 +2227,7 @@
       "summary": "New calculations require source, equations, observed output, independent checks, and scoped interpretation, but no mandatory research contract, preregistration ritual, or KG ratification.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "61c9e8341e670712053be130acb3681e73098669ff338d1d68d2e7fb4bcc05a4",
+      "sha256": "e4e2e76251194d0d6aa9e685023abdbcca3877791d22020d0db97c05d4bee413",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
     },
     {
@@ -6930,7 +6933,7 @@
       "id": "open:gate1-original-cycle-signed-global-intersections",
       "type": "open_problem",
       "title": "Gate 1 — transport the original cycle and fix signed global intersections",
-      "summary": "Specify one regulated original joint lapse--field--gauge relative cycle before inspecting the result, transport it through the fold to every relevant saddle, upward cycle, complex sheet, singular divisor, Stokes jump, and good end, and compute the complete orientation-stable integer intersection vector. A projected crossing, one bounded arm, or one preferred lapse bypass does not close this gate; a complete stable zero vector is a valid negative resolution.",
+      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The non-numbered straight-lift end audit kills the Phase-39 unbounded straight-ray completion and the full constant-complex-straight-phi-line model class only on the inherited fixed-a, pure-imaginary-lapse m=2 slice, while preserving the Phase-39 finite-window local candidates and signs. A new candidate must instead specify a curved or piecewise good-end contour, a nonzero-Re(T) lateral, or another explicitly derived regulator, then supply one original joint lapse--field--gauge relative cycle and transport it through every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, and good end to compute a complete orientation-stable integer vector. The present global, physical-cycle, physics, and TOE outputs are null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
       "state": "OPEN",
       "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
     },
@@ -7124,7 +7127,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--41 partially supply frozen m=2, m=3, and m=4 finite-cutoff configuration actions and local cap-piece intersection candidates. Phase 42 diagnoses the retained m=4 tangent failure without retuning: solver-noise and old step-pair evidence are supported at phi_plus and a_plus, stable local Hessian-action identity anomalies are supported at all three audited roots without proving a code bug, and a sufficient normalized local homotopy preserves the sampled sign. The shared-zero u2 finite-difference reference still misses its frozen neighbor-stability threshold, so the reference tangent remains inconclusive. The construction debt remains open: independently arbitrate the local RHS/tangent reference at higher precision, then search straight arms and cap reintersections, exhaust roots and upward components, certify exact nonlinear K and a non-Stokes chamber, classify every boundary, and test cutoff, metric-homotopy, regulator, anchor, and boundary stability before emitting a bounded-chain signed sum or global vector. The sampled local candidates do not pair the entire chain or select a preferred physical cycle.",
+      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded, non-numbered straight-lift audit closes one previously listed debt negatively: the Phase-39 conjugate straight rays have an exact bad negative-phi subsequence, and no constant complex straight phi line has two relative-good ends on the fixed-a, pure-imaginary-lapse m=2 slice. That straight completion and model class are KILL, not the local signs or Gate 1. The construction debt now branches to a curved or piecewise contour, nonzero-Re(T) lateral, or another derived regulator, followed by cap reintersections, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Curved and full-joint classes were not tested, and the original physical cycle remains unidentified.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -9654,10 +9657,10 @@
       "id": "policy:ragnarok-circuit-breaker",
       "type": "policy",
       "title": "Ragnarok bounded-pause circuit breaker",
-      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The one-shot Phase-56 terminal exception is consumed; Phase 51–56 reruns, variants, full replay, Phase 57+, and renamed offspring are unauthorized while the bounded pause is active. This policy is not scientific evidence, a Gate-1 no-go, a physics claim, or a TOE verdict; Gate 1 and the separately scoped scientific route remain open.",
-      "state": "ACTIVE_PHASE56_TERMINAL_CLOSEOUT_CONSUMED",
+      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The one-shot Phase-56 terminal exception and the separately authorized non-numbered Gate-1 straight-lift window are both consumed; Phase 51–56 reruns, variants, full replay, Phase 57+, Gate-1 retry, and renamed offspring are unauthorized while result review is active. This policy is not scientific evidence, a Gate-1 no-go, a physics claim, or a TOE verdict; Gate 1 and the separately scoped scientific route remain open.",
+      "state": "ACTIVE_GATE1_RESULT_REVIEW_PHASE56_AND_GATE1_WINDOWS_CONSUMED",
       "path": "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md",
-      "sha256": "6d9a27ad4e48ec79d7b6eadfb6666bab75a6fcbdde4cbc35543e089f95c781cc",
+      "sha256": "08c277d35532413a38ef356224362ec394c161a5a98bb5f7b3fa034e47eef47e",
       "introduced_in_commit": "2324afb51783149fddeccdf53f3b2d315c6857f8"
     },
     {
@@ -9795,6 +9798,154 @@
       "path": "cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md",
       "sha256": "e853b4cdf60547ef503e9a4dfaac261e5f35450eeede8eddcb2b694589f04cee",
       "introduced_in_commit": "389b464cfd0cc453c614da283efc5fc1e1cfc970"
+    },
+    {
+      "id": "policy:gate1-bounded-resume-20260825",
+      "type": "policy",
+      "title": "Consumed one-shot Gate-1 bounded resume",
+      "summary": "The user's 2026-08-25 immediate-resume authorization opened exactly one non-numbered straight-lift end-admissibility calculation with fixed runner/input hashes, no arguments or retries, a 30-second and 250,000-byte cap, zero root/ODE/evaluator calls, and zero automatic descendants. The VALID_RUN consumed the window; its independent implementation audit records twelve executable exact identities/limits plus two separately reviewed declarative guards and two payload naming caveats without changing the conclusion. It does not revive the killed Phase-51--56 reconciliation route, authorize a numbered successor, close Gate 1, or support physics or TOE promotion.",
+      "state": "CONSUMED_VALID_RUN_NO_AUTOMATIC_NEXT",
+      "path": "docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md",
+      "sha256": "ee254b4305016ef577060b97440fb00c989097bec15c502a8a51f70407d3957c",
+      "introduced_in_commit": "20713f74240ffa120f898359f10e28b15719e954"
+    },
+    {
+      "id": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "type": "concept",
+      "title": "Non-numbered Gate-1 straight-lift end-admissibility calculation",
+      "summary": "A completed VALID_RUN that reduces the inherited Phase-39 two-element scalar on one fixed-a, pure-imaginary-lapse m=2 slice, tests both declared conjugate half-angle field rays and the exhaustive constant-complex-straight-phi-line class for necessary exp(-S_2) relative-good ends, and stops before any root, ODE, saddle/upward/intersection census, numbered successor, or global promotion.",
+      "state": "COMPLETED_VALID_RUN_CANDIDATE_AND_MODEL_CLASS_KILLED"
+    },
+    {
+      "id": "scope:gate1-fixed-a-pure-imaginary-lapse-straight-phi-lines",
+      "type": "scope",
+      "title": "Gate-1 fixed-a pure-imaginary-lapse straight-field-line scope",
+      "summary": "The inherited Phase-39 m=2 equal-boundary fixed-a slice with T=+i n or -i n, the declared conjugate half-angle rays, and the full constant complex straight phi-line class, tested only for necessary relative-good behavior of the two field ends under the exp(-S_2) convention.",
+      "state": "COMPLETED_NARROW_MODEL_CLASS_AUDIT",
+      "includes": [
+        "the inherited Phase-39 two-element action at a1=a_boundary with fixed positive a and n",
+        "both pure-imaginary lapse arms T=+i*n and T=-i*n",
+        "the declared conjugate half-angle field rays and all constant q=u+i*v straight phi lines",
+        "the good-end requirement Re(S_2) to positive infinity for exp(-S_2)",
+        "an exact bad subsequence and an independent 80-decimal direct two-element action check"
+      ],
+      "excludes": [
+        "curved or piecewise field contours, nonzero-Re(T) laterals, and other explicitly derived regulator cycles",
+        "varying a, cap or scale-factor infinity for a redesigned nonlinear cycle, and full joint lapse-field-gauge or BFV cycles",
+        "a complete saddle, upward-cycle, sheet, singularity, Stokes, relative-end, or intersection census",
+        "a physical original cycle, global signed vector or n_sigma, physics claim, TOE claim, or numbered next phase"
+      ]
+    },
+    {
+      "id": "evidence:gate1-straight-lift-end-admissibility",
+      "type": "evidence",
+      "title": "Gate-1 straight-lift exact end and constant-line-class audit",
+      "summary": "The result contains fourteen passing exact entries: twelve executable SymPy identities or limits plus two declarative guards independently reviewed from the bad escape sequence and exhaustive s*u*v sign split; five numerical checks also pass. The two conjugate arms have identical real action; the positive-phi end approaches the positive quadratic coefficient, while an explicit sequence on the negative-phi end drives Re(S_2) exponentially to minus infinity on both arms. The sign cases exclude every constant complex straight phi line from having two relative-good ends on the declared slice. Direct 80-decimal evaluation matches both endpoint forms to at worst 2.1420019e-79 relative error; the last bad scaled ratio is -0.999999990353330728. The payload's unscaled_exponential_limit name is inaccurate, nested/top-level decision suffixes alias the same slice, and top-level model_class_decision is authoritative. No root, ODE, evaluator reconciliation, or automatic descendant runs.",
+      "state": "VERIFIED_VALID_RUN_12_EXECUTABLE_EXACT_2_DECLARATIVE_REVIEWED_5_NUMERICAL_PASS",
+      "observed_status": "VALID_RUN_14_EXACT_RESULT_ENTRIES_12_EXECUTABLE_2_DECLARATIVE_REVIEWED_5_NUMERICAL_PASS",
+      "check_ids": [
+        "P39.G1.end.action_reduces_from_two_element_scalar",
+        "P39.G1.end.growth_rate_is_inverse_sqrt_three",
+        "P39.G1.end.negative_arm_phase_identities",
+        "P39.G1.end.positive_arm_phase_identities",
+        "P39.G1.end.subleading_terms_vanish_on_bad_subsequence",
+        "P39.G1.end.positive_phi_end_is_good_on_witness_slice",
+        "P39.G1.end.bad_subsequence_has_negative_exponential_coefficient",
+        "P39.G1.guard.bad_end_short_circuits_global_outputs",
+        "P39.G1.model_class.negative_arm_general_kinetic_real_part",
+        "P39.G1.model_class.positive_arm_general_kinetic_real_part",
+        "P39.G1.model_class.negative_kinetic_case_has_bad_decay_end",
+        "P39.G1.model_class.axis_aligned_lines_lack_two_good_ends",
+        "P39.G1.model_class.positive_kinetic_case_has_exponential_bad_subsequence",
+        "P39.G1.model_class.constant_straight_line_cases_are_exhaustive",
+        "P39.G1.end.direct_action_matches_bad_closed_form",
+        "P39.G1.end.conjugate_arms_have_identical_real_action",
+        "P39.G1.end.sampled_bad_subsequence_is_negative_and_asymptotic",
+        "P39.G1.end.direct_action_matches_positive_closed_form",
+        "P39.G1.end.sampled_positive_end_tracks_positive_quadratic_limit"
+      ]
+    },
+    {
+      "id": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "type": "claim",
+      "title": "The Phase-39 straight field rays admit an unbounded relative-cycle completion",
+      "summary": "Contradicted on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Both declared conjugate rays have a good positive-phi end but share an explicit negative-phi sequence along which Re(S_2) tends exponentially to minus infinity, so exp(-S_2) grows rather than decays. The unbounded straight completion is KILL. This leaves the finite-window Phase-39 local candidates and their direct local signs unchanged.",
+      "state": "CONTRADICTED_STRAIGHT_UNBOUNDED_COMPLETION_KILL_LOCAL_SIGNS_KEEP",
+      "claim_id": "G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "statement": "The Phase-39 declared conjugate straight field rays can be extended unboundedly at fixed a and pure-imaginary lapse to form an admissible exp(-S_2) relative-cycle completion with two relative-good field ends.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "type": "claim",
+      "title": "A constant straight phi line has two good ends on the declared slice",
+      "summary": "Contradicted for the complete constant-complex-straight-line model class on the fixed-a, pure-imaginary-lapse m=2 slice. The disjoint cases s*u*v<0, u*v=0, and s*u*v>0 exhaust the class: they respectively have a bad negative-quadratic decay end, a zero-or-bounded real part at an end, or an exponentially bad subsequence that dominates the positive quadratic term. The model-class decision is KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE.",
+      "state": "CONTRADICTED_MODEL_CLASS_EXCLUDED_ON_DECLARED_SLICE",
+      "claim_id": "G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "statement": "There exists a constant complex straight phi line on the inherited fixed-a, pure-imaginary-lapse m=2 slice whose two field ends are both relative-good for exp(-S_2).",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "type": "claim",
+      "title": "The straight-line KILL closes only the declared model class, not Gate 1",
+      "summary": "Supported as the exact scope and promotion boundary. The run preserves the Phase-39 finite-window local candidates and signs, kills only the straight completion and constant straight-line class on its declared slice, and leaves curved or piecewise contours, nonzero-Re(T) laterals, other regulators, varying-a and full-joint/BFV constructions untested. Gate 1 is OPEN_PARTIAL_PROGRESS, global promotion is PROHIBITED, automatic_next is null, and the original cycle, complete vector, global n_sigma, physics, and TOE outputs are all null.",
+      "state": "SUPPORTED_AS_NARROW_MODEL_CLASS_AND_GLOBAL_PROMOTION_BOUNDARY",
+      "claim_id": "G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "statement": "The bounded straight-lift audit kills only the declared straight completion and constant straight-phi-line model class, preserves the Phase-39 local candidates and signs, leaves nonlinear and non-pure-imaginary alternatives open, and does not close Gate 1 or emit any global, physics, or TOE output.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:gate1-straight-lift-input-manifest",
+      "type": "artifact",
+      "title": "Gate-1 straight-lift bounded input manifest",
+      "summary": "Pre-output freeze of the inherited Phase-39 action, slice and embedding, exp(-S_2) good-end convention, exhaustive constant-line cases, source boundaries, resource caps, classification table, local-sign preservation, global null outputs, and no-descendant rule.",
+      "state": "TRACKED_CONSUMED_ONE_SHOT",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json",
+      "sha256": "a3bc97461c7989cd5bb471accf46f0c2196de41c3030e9eef2248c4f09a47fdb",
+      "introduced_in_commit": "20713f74240ffa120f898359f10e28b15719e954"
+    },
+    {
+      "id": "artifact:gate1-straight-lift-script",
+      "type": "artifact",
+      "title": "Gate-1 straight-lift end-admissibility executable",
+      "summary": "Pinned one-shot Python runner that validates the frozen input, performs exact SymPy reduction and constant-line case exhaustion, independently evaluates the unreduced two-element action at 80 decimals, enforces zero root/ODE/evaluator/descendant calls, and emits canonical self-digested JSON.",
+      "state": "TRACKED_CONSUMED_NOT_REEXECUTABLE_WITHOUT_NEW_APPROVAL",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility.py",
+      "sha256": "c2cfac73e303d0f46d86c1577fc31cc1cd2ff5e0dfd809e9bdd6b75a38aaaa7e",
+      "introduced_in_commit": "20713f74240ffa120f898359f10e28b15719e954"
+    },
+    {
+      "id": "artifact:gate1-straight-lift-raw-result",
+      "type": "artifact",
+      "title": "Gate-1 straight-lift full raw result",
+      "summary": "The authoritative 13,624-byte VALID_RUN result with fourteen passing exact entries (twelve executable identities/limits and two independently reviewed declarative guards), five numerical passes, candidate KILL, authoritative top-level constant-straight-line model-class KILL, preserved Phase-39 local signs, OPEN_PARTIAL_PROGRESS Gate 1, prohibited promotion, all global/physics/TOE outputs null, and canonical payload digest b7b90718ca963a4ee22c97d02cac52699b0e7e95d4eb93d5856264cd1cd92b93.",
+      "state": "TRACKED",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_RESULT.json",
+      "sha256": "821fbd88601b886acdd02fc77d5a877d7f6f8257454c9d3f39aa033b644b99b9"
+    },
+    {
+      "id": "artifact:gate1-straight-lift-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 straight-lift compact evidence snapshot",
+      "summary": "Compact typed extract preserving all fourteen exact result entries, their twelve-executable/two-declarative accounting and implementation-audit caveats, five numerical checks, the v1 P39 inheritance transport and authoritative G1 check IDs, command and runner/input/result hashes, exact scope, endpoint facts, numerical metrics, decisions, null outputs, and zero-call resource ledger. No numbered phase is created.",
+      "state": "TRACKED",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-straight-lift-end-admissibility-result.json",
+      "sha256": "efd369506bf17a04be4a08812b92f3881a5a08240654da6f9d959e402ca4c3e0"
+    },
+    {
+      "id": "artifact:gate1-straight-lift-report",
+      "type": "artifact",
+      "title": "Gate-1 straight-lift end-admissibility report",
+      "summary": "Human-readable separation of the exact bad-end and constant-line-class exclusions from preserved Phase-39 local signs, untested nonlinear alternatives, the still-open Gate 1, and null global, physics, and TOE outputs, with source, command, runtime, and independent direct-action provenance.",
+      "state": "TRACKED",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY.md",
+      "sha256": "c3913f11070afbd15bb99218207498eadb661d2465501c44f8364219cd83d89a"
     }
   ],
   "edges": [
@@ -23682,6 +23833,265 @@
       "relation": "GOVERNED_BY",
       "to": "policy:ragnarok-circuit-breaker",
       "note": "Operational containment only; the circuit breaker is not scientific evidence, a Gate-1 no-go, a physics claim, or a TOE verdict."
+    },
+    {
+      "id": "edge:2250",
+      "from": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2251",
+      "from": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p39",
+      "note": "This is a non-numbered bounded audit of the inherited Phase-39 straight field-ray completion, not a Phase-39 rerun or a new numbered phase."
+    },
+    {
+      "id": "edge:2252",
+      "from": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-pure-imaginary-lapse-straight-phi-lines"
+    },
+    {
+      "id": "edge:2253",
+      "from": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz",
+      "note": "Relative-cycle good-end framing only; Witten does not select this gravitational action or original cycle."
+    },
+    {
+      "id": "edge:2254",
+      "from": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "Configuration-representation below-origin lapse-contour boundary only; the source does not choose or validate the field lift."
+    },
+    {
+      "id": "edge:2255",
+      "from": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "relation": "GOVERNED_BY",
+      "to": "policy:gate1-bounded-resume-20260825"
+    },
+    {
+      "id": "edge:2256",
+      "from": "concept:gate1-straight-lift-end-admissibility-calculation",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The bounded exception does not reopen the killed Phase-51--56 reconciliation route or authorize an automatic descendant."
+    },
+    {
+      "id": "edge:2257",
+      "from": "artifact:gate1-straight-lift-input-manifest",
+      "relation": "RECORDS",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2258",
+      "from": "artifact:gate1-straight-lift-script",
+      "relation": "IMPLEMENTS",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2259",
+      "from": "artifact:gate1-straight-lift-raw-result",
+      "relation": "RECORDS",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2260",
+      "from": "artifact:gate1-straight-lift-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2261",
+      "from": "artifact:gate1-straight-lift-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2262",
+      "from": "artifact:gate1-straight-lift-input-manifest",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p39-input-manifest",
+      "note": "Only the inherited Phase-39 m=2 action and declared straight-ray data are reused; the bounded input adds an end-admissibility question and strict caps."
+    },
+    {
+      "id": "edge:2263",
+      "from": "artifact:gate1-straight-lift-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-straight-lift-input-manifest"
+    },
+    {
+      "id": "edge:2264",
+      "from": "artifact:gate1-straight-lift-script",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:p39-script",
+      "note": "The runner independently reduces the same recorded two-element scalar but performs no Phase-39 root, flow, or intersection replay."
+    },
+    {
+      "id": "edge:2265",
+      "from": "artifact:gate1-straight-lift-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-straight-lift-script"
+    },
+    {
+      "id": "edge:2266",
+      "from": "artifact:gate1-straight-lift-raw-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-straight-lift-input-manifest"
+    },
+    {
+      "id": "edge:2267",
+      "from": "artifact:gate1-straight-lift-evidence-snapshot",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-straight-lift-raw-result"
+    },
+    {
+      "id": "edge:2268",
+      "from": "artifact:gate1-straight-lift-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-straight-lift-raw-result"
+    },
+    {
+      "id": "edge:2269",
+      "from": "evidence:gate1-straight-lift-end-admissibility",
+      "relation": "PART_OF",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2270",
+      "from": "evidence:gate1-straight-lift-end-admissibility",
+      "relation": "DEFINED_IN",
+      "to": "artifact:gate1-straight-lift-script"
+    },
+    {
+      "id": "edge:2271",
+      "from": "evidence:gate1-straight-lift-end-admissibility",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-straight-lift-evidence-snapshot"
+    },
+    {
+      "id": "edge:2272",
+      "from": "evidence:gate1-straight-lift-end-admissibility",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-straight-lift-raw-result"
+    },
+    {
+      "id": "edge:2273",
+      "from": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "relation": "PART_OF",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2274",
+      "from": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-pure-imaginary-lapse-straight-phi-lines"
+    },
+    {
+      "id": "edge:2275",
+      "from": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-straight-lift-end-admissibility",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2276",
+      "from": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH"
+    },
+    {
+      "id": "edge:2277",
+      "from": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "note": "The later evidence kills only the unbounded straight lift; it explicitly preserves both finite-window local candidates and their direct signs."
+    },
+    {
+      "id": "edge:2278",
+      "from": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-straight-lift-report"
+    },
+    {
+      "id": "edge:2279",
+      "from": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "relation": "PART_OF",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2280",
+      "from": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-pure-imaginary-lapse-straight-phi-lines"
+    },
+    {
+      "id": "edge:2281",
+      "from": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-straight-lift-end-admissibility",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2282",
+      "from": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "relation": "EXTENDS",
+      "to": "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
+      "note": "The exhaustive constant-line case split strictly widens the declared-ray counterexample only within the same fixed-a pure-imaginary-lapse slice."
+    },
+    {
+      "id": "edge:2283",
+      "from": "claim:G1_FIXED_A_PURE_IMAGINARY_LAPSE_CONSTANT_STRAIGHT_PHI_LINE_HAS_TWO_GOOD_ENDS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-straight-lift-report"
+    },
+    {
+      "id": "edge:2284",
+      "from": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "relation": "PART_OF",
+      "to": "concept:gate1-straight-lift-end-admissibility-calculation"
+    },
+    {
+      "id": "edge:2285",
+      "from": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-pure-imaginary-lapse-straight-phi-lines"
+    },
+    {
+      "id": "edge:2286",
+      "from": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-straight-lift-end-admissibility",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2287",
+      "from": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-original-cycle-signed-global-intersections",
+      "note": "A different explicitly derived contour or regulator must satisfy all good ends before the still-open global transport question can be answered."
+    },
+    {
+      "id": "edge:2288",
+      "from": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "relation": "MOTIVATES",
+      "to": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    },
+    {
+      "id": "edge:2289",
+      "from": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-straight-lift-report"
+    },
+    {
+      "id": "edge:2290",
+      "from": "policy:gate1-bounded-resume-20260825",
+      "relation": "EXTENDS",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "A consumed one-shot scientific exception that preserves the Phase-51--56 route KILL, no numbered successor, and no automatic descendant."
     }
   ],
   "kg_bridges": [

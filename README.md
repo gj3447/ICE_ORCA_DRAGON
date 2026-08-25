@@ -23,11 +23,12 @@ The repository preserves speculative motivations while turning them into scoped 
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
 
-> **Bounded Gate-1 resume (2026-08-25):** The Phase 51–56 saved-backend/reconstructed-launch
+> **Bounded Gate-1 result review (2026-08-25):** The Phase 51–56 saved-backend/reconstructed-launch
 > reconciliation route remains `KILL`, and the exact Phase 56 terminal closeout remains consumed.
-> Alongside the frozen Phase 11–50 historical allowlist, one non-numbered, exact-hash Gate-1
-> end-admissibility calculation is authorized under strict runtime/artifact caps. Phase 51+, renamed
-> descendants, and Phase 57+ remain blocked. Allowed runners are SHA-256-bound and require a clean core tree.
+> One non-numbered, exact-hash Gate-1 end-admissibility calculation ran under strict caps and has also
+> been consumed. It kills the Phase-39 straight unbounded field completion and the constant-straight-line
+> model class on its declared slice, not Gate 1. Only the frozen Phase 11–50 historical allowlist is now
+> executable; Phase 51+, renamed descendants, Phase 57+, and a retry of the bounded calculation are blocked.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
 > the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the

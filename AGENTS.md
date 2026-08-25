@@ -25,11 +25,12 @@
 - Phase 56 terminal-closeout 예외는 동결된 질문의 실행·독립 재현을 마쳐 소진됐다. 그 결과와
   무관하게 Phase 57 이상, full replay, 같은 evaluator/dtype/solver/residual/provenance 채무의
   자동 offspring를 만들거나 실행하지 않는다. 직접 Python 실행으로 제어면을 우회하지 않는다.
-- 제어면은 정확히 동결된 Phase 11–50 역사 실행체와, 2026-08-25 사용자가 즉시 승인한
-  `GATE1_DIRECT_20260825_01` exact hash-pinned runner 한 개만 허용한다. 후자는 Phase-39 straight
-  field-ray end admissibility를 검사하는 번호 없는 bounded 계산이며, 인자·unique prefix·retry와
-  자동 후손을 받지 않는다. 완료된 Phase 56을 포함한 Phase 51+, 낮은 번호 재사용과 그 밖의
-  Phase 토큰 없는 새 core 실행체는 모두 차단한다. `repro`도 같은 경계를 적용한다.
+- 제어면은 현재 정확히 동결된 Phase 11–50 역사 실행체만 허용한다. 2026-08-25 사용자가 즉시
+  승인한 `GATE1_DIRECT_20260825_01` exact hash-pinned runner는 Phase-39 straight field-ray end
+  admissibility 계산을 정상 완료해 **소진됐으며 재실행하지 않는다**. 결과는 straight completion과
+  declared slice의 constant-straight-line model class만 `KILL`, Gate 1은
+  `OPEN_PARTIAL_PROGRESS`다. 완료된 Phase 56을 포함한 Phase 51+, 낮은 번호 재사용과 그 밖의
+  Phase 토큰 없는 새 core 실행체도 모두 차단한다. `repro`도 같은 경계를 적용한다.
 - 허용 경로도 runner SHA-256과 clean `cpt_temporal_folded_susy/` provenance가 일치해야 한다.
   traversal/absolute path, dirty·untracked core 파일, 허용 이름에 다른 bytes 덮어쓰기는 실행하지
   않는다.

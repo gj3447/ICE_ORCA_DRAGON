@@ -124,11 +124,14 @@ it("allows only frozen history through Phase 50 and blocks killed-route reruns",
   }
 })
 
-it("opens exactly one hash-pinned non-numbered direct Gate-1 calculation", async () => {
+it("records the consumed hash-pinned Gate-1 calculation and blocks relaunch", async () => {
   const direct = researchRunDecision(boundedGate1Script)
-  expect(direct.allowed).toBe(true)
-  expect(direct.reason).toBe("BOUNDED_GATE1_DIRECT")
-  expect(direct.expected_sha256).toBe(boundedGate1ScriptSha256)
+  expect(direct.allowed).toBe(false)
+  expect(direct.reason).toBe("CORE_ROUTE_PAUSED")
+  expect(direct.expected_sha256).toBe(null)
+  expect(ragnarokStatus.gate1_window.runner_sha256).toBe(
+    boundedGate1ScriptSha256
+  )
 
   for (const blocked of [
     `${boundedGate1Script}_retry`,
@@ -176,6 +179,67 @@ it("binds the bounded Gate-1 runner and frozen input to their declared hashes", 
   expect(createHash("sha256").update(input).digest("hex")).toBe(
     boundedGate1InputSha256
   )
+})
+
+it("binds the consumed Gate-1 receipt to the result and its null promotions", async () => {
+  const resultBytes = await readFile(
+    join(
+      process.cwd(),
+      "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_RESULT.json"
+    )
+  )
+  const receipt = ragnarokStatus.gate1_window.consumed
+  const result = JSON.parse(resultBytes.toString("utf8")) as {
+    readonly run_status: string
+    readonly gate1_decision: string
+    readonly global_promotion: string
+    readonly automatic_next: null
+    readonly result_payload_sha256_without_self: string
+    readonly exact_checks: ReadonlyArray<{ readonly passed: boolean }>
+    readonly numerical_checks: ReadonlyArray<{ readonly passed: boolean }>
+    readonly promoted_outputs: {
+      readonly TOE_claim: null
+      readonly complete_global_signed_intersection_vector: null
+      readonly global_n_sigma: null
+      readonly physical_original_cycle: null
+      readonly physics_claim: null
+    }
+  }
+
+  expect(createHash("sha256").update(resultBytes).digest("hex")).toBe(
+    receipt.result_sha256
+  )
+  expect(resultBytes.byteLength).toBe(receipt.result_bytes)
+  expect(result.result_payload_sha256_without_self).toBe(
+    receipt.payload_sha256_without_self
+  )
+  expect(result.run_status).toBe("VALID_RUN")
+  expect(result.gate1_decision).toBe("OPEN_PARTIAL_PROGRESS")
+  expect(result.global_promotion).toBe("PROHIBITED")
+  expect(result.automatic_next).toBeNull()
+  expect(result.exact_checks).toHaveLength(receipt.exact_checks_passed)
+  expect(result.exact_checks.every(({ passed }) => passed)).toBe(true)
+  expect(result.numerical_checks).toHaveLength(
+    receipt.numerical_checks_passed
+  )
+  expect(result.numerical_checks.every(({ passed }) => passed)).toBe(true)
+  expect(
+    receipt.independent_review.executable_exact_identities_and_limits
+  ).toBe(12)
+  expect(
+    receipt.independent_review.declarative_guards_reviewed_separately
+  ).toBe(2)
+  expect(receipt.independent_review.conclusion_changed).toBe(false)
+  expect(receipt.independent_review.authoritative_decision_field).toBe(
+    "top-level model_class_decision"
+  )
+  expect(result.promoted_outputs).toEqual({
+    TOE_claim: null,
+    complete_global_signed_intersection_vector: null,
+    global_n_sigma: null,
+    physical_original_cycle: null,
+    physics_claim: null
+  })
 })
 
 it("freezes the complete current core catalog through Phase 50", async () => {
@@ -368,15 +432,20 @@ it("returns exit 2 and the typed pause error from the real CLI", () => {
 
 it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.schema).toBe("ice-ragnarok-circuit-breaker/v2")
-  expect(ragnarokStatus.operational_state).toBe("GATE1_BOUNDED_RESUME")
+  expect(ragnarokStatus.operational_state).toBe("GATE1_RESULT_REVIEW")
   expect(ragnarokStatus.resume_authorization.approved_on).toBe("2026-08-25")
   expect(ragnarokStatus.resume_authorization.overrides_only).toBe(
     "SCHEDULED_REVIEW_WAIT_FOR_THIS_EXACT_CALCULATION"
   )
-  expect(ragnarokStatus.gate1_window.state).toBe("CALC_AUTHORIZED")
+  expect(ragnarokStatus.gate1_window.state).toBe("CONSUMED")
   expect(ragnarokStatus.gate1_window.exact_script).toBe(boundedGate1Script)
-  expect(ragnarokStatus.gate1_window.execution_enabled).toBe(true)
+  expect(ragnarokStatus.gate1_window.execution_enabled).toBe(false)
   expect(ragnarokStatus.gate1_window.automatic_next).toBe(null)
+  expect(ragnarokStatus.gate1_window.consumed.run_status).toBe("VALID_RUN")
+  expect(ragnarokStatus.gate1_window.consumed.candidate_decision).toBe("KILL")
+  expect(ragnarokStatus.gate1_window.consumed.gate1).toBe(
+    "OPEN_PARTIAL_PROGRESS"
+  )
   expect(ragnarokStatus.containment.continuation_route).toBe("KILL")
   expect(ragnarokStatus.containment.maximum_allowed_core_phase).toBe(50)
   expect(ragnarokStatus.containment.terminal_closeout_completed).toBe(true)
@@ -419,7 +488,7 @@ it("keeps operational containment distinct from the scientific verdict", () => {
 
 it("renders stable human and machine-readable status", () => {
   expect(formatRagnarokStatus(false)).toContain(
-    "Ragnarok circuit breaker: GATE1_BOUNDED_RESUME"
+    "Ragnarok circuit breaker: GATE1_RESULT_REVIEW"
   )
   expect(JSON.parse(formatRagnarokStatus(true))).toEqual(ragnarokStatus)
 })

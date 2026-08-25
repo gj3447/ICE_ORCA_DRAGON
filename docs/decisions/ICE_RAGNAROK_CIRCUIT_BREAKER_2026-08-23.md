@@ -1,13 +1,16 @@
 # ICE Ragnarok 회로 차단기
 
-> **상태:** ACTIVE operational containment — Phase 56 terminal closeout consumed
+> **상태:** ACTIVE operational containment — Phase 56 및 bounded Gate-1 window consumed,
+> `GATE1_RESULT_REVIEW`
 > **발효:** 2026-08-23
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
 
 > **2026-08-25 국소 개정:** 사용자가 즉시 연구 재개를 명시 승인하여 예정 대기만 정확히
-> hash-pin된 번호 없는 Gate-1 end-admissibility 계산 한 개에 한해 면제했다. Phase 51--56
-> route `KILL`, Phase 57 차단과 `next_phase=null`은 바뀌지 않는다. 정본 범위와 상한은
+> hash-pin된 번호 없는 Gate-1 end-admissibility 계산 한 개에 한해 면제했다. 그 계산은
+> `VALID_RUN`으로 끝나 window가 소진됐고, straight completion 및 declared slice의
+> constant-straight-line class만 `KILL`했다. Gate 1은 `OPEN_PARTIAL_PROGRESS`다. Phase 51--56
+> route `KILL`, Phase 57 차단과 `next_phase=null`은 바뀌지 않는다. 정본 범위·상한·receipt는
 > [`ICE_GATE1_BOUNDED_RESUME_2026-08-25.md`](ICE_GATE1_BOUNDED_RESUME_2026-08-25.md)다.
 
 ## 결정
@@ -26,8 +29,10 @@ launch/provenance conditioning으로 이어진 **저장 backend 및 재구성 la
 Phase 56 종결 진단과 함께 `KILL`한다. 실패 원인을 더 작은 evaluator·dtype·solver·residual·provenance
 Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
-- 운영 상태는 `BOUNDED_PAUSE`다.
+- 운영 상태는 bounded 계산 결과를 기록한 `GATE1_RESULT_REVIEW`이며 containment는 계속 active다.
 - Phase 56의 유일한 terminal-closeout 예외는 실행·독립 재현을 완료해 소진됐다.
+- 2026-08-25의 번호 없는 Gate-1 exact window도 한 번의 `VALID_RUN` 뒤 소진됐으며 retry나
+  자동 후손을 허용하지 않는다.
 - 정확히 동결된 Phase 11–50 실행체만 역사 검산용 allowlist로 허용한다. KILL 범위인 Phase
   51–55 재실행, Phase 56 변종, Phase 토큰이 없거나 이름을 바꾼 새 core 실행체, Phase 57 이상은
   `./ice run`과 `./ice repro`에서 `RESEARCH_PHASE_PAUSED`로 거부한다.
@@ -87,7 +92,8 @@ KILL의 적용 대상은 위의 방법 경로이며 Gate 1이나 CPT × Temporal
 일반 새 core Phase에는 2026-08-30 이후에도 다음 조건을 **모두** 만족하고 사용자가 명시적으로
 승인해야 한다. 2026-08-25 국소 개정은 새 core Phase가 아니라, saddle/intersection 계산보다
 앞선 necessary end-admissibility model-class reduction 한 개이므로 그 날짜 대기만 정확한
-runner/input hash와 fail-closed null 출력 아래 면제한다.
+runner/input hash와 fail-closed null 출력 아래 면제했다. 그 일회성 예외는 이미 소진됐으며
+현재 열린 실행 권한이 아니다.
 
 1. 같은 reconciliation이 아니라 Gate 1의 typed object를 직접 계산한다.
 2. original joint cycle, orientation, singular divisor, endpoint prescription, regulator, Stokes

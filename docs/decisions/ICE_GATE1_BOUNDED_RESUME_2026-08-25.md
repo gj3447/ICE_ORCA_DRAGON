@@ -1,6 +1,6 @@
 # Gate 1 단일 bounded 재개
 
-> **상태:** `CALC_AUTHORIZED` — 실행 전
+> **상태:** `CONSUMED` — 2026-08-25 `VALID_RUN`, 결과 검토 단계
 > **승인:** 2026-08-25 사용자의 명시적 즉시 연구 재개 지시
 > **범위:** 번호 없는 direct Gate-1 end-admissibility 계산 한 개
 > **비권한:** Phase 51–56 경로 재개, Phase 57, full replay, Gate 1 closure, 물리학 또는 TOE 주장
@@ -117,3 +117,34 @@ admissibility가 실패하면 즉시 후보를 분류하며, 실패하지 않아
 
 실행 뒤에는 성공·실패와 무관하게 이 exact window를 소비 상태로 바꾸고 자동 retry를 만들지
 않는다. 다음 연구 질문은 이 결과를 먼저 해석한 뒤 별도 bounded 승인으로만 연다.
+
+## 실행 후 receipt
+
+고정 runner는 제어면을 통해 한 번 실행되어 2.42초에 exit `0`으로 끝났다.
+
+```text
+run_status           = VALID_RUN
+classification       = GATE1_PHASE39_STRAIGHT_FIELD_RAY_COMPLETION_HAS_BAD_NEGATIVE_PHI_ENDS
+exact result entries = 14 PASS (12 executable identities/limits + 2 declarative guards)
+numerical checks     = 5/5 PASS
+candidate            = KILL
+constant-line class  = KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE
+programme impact     = NARROW
+Gate 1               = OPEN_PARTIAL_PROGRESS
+global_n_sigma       = null
+automatic_next       = null
+```
+
+결과는 13,624 bytes, SHA-256
+`821fbd88601b886acdd02fc77d5a877d7f6f8257454c9d3f39aa033b644b99b9`이며 self-field 제외
+payload SHA-256은
+`b7b90718ca963a4ee22c97d02cac52699b0e7e95d4eb93d5856264cd1cd92b93`다. 계산·해석·열린
+범위는
+[`GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY.md`](../../cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY.md)에
+기록한다. Exact window는 소진됐고 재실행과 자동 후손은 차단된다.
+
+실행 후 독립 구현 감사는 두 declarative guard를 수학·정책상 별도로 확인했으며 결론 변경은
+없었다. 또한 result의 `exact_calculation.unscaled_exponential_limit`가 실제로는 scaled-limit
+계수라는 필드명 문제와, 같은 slice를 가리키는 nested/top-level decision 문자열 차이를 기록했다.
+원본 result와 runner는 실행 provenance를 보존하고, 해석상 정본은 위 보고서와 top-level
+`model_class_decision`이다.

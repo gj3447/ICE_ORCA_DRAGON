@@ -1,0 +1,304 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1StraightLiftEndAdmissibility",
+  "candidate_decision": "KILL",
+  "classification": "GATE1_PHASE39_STRAIGHT_FIELD_RAY_COMPLETION_HAS_BAD_NEGATIVE_PHI_ENDS",
+  "computed_facts": [
+    "on the inherited m=2 a_1=a_boundary slice, both conjugate straight lapse arms have the same exact Re(S_2)",
+    "the y_phi=+infinity direction is good on that slice because Re(S_2) grows quadratically positive",
+    "the y_phi=-infinity direction contains an explicit sequence on both arms where Re(S_2) tends exponentially to minus infinity",
+    "therefore the straight unbounded field-ray completion of the Phase 39 declared finite-window candidate is not an admissible exp(-S_2) relative cycle",
+    "more generally, no constant complex straight phi line has two relative-good field ends on the fixed-a, pure-imaginary-lapse m=2 slice"
+  ],
+  "exact_calculation": {
+    "arm_identities": {
+      "negative": {
+        "T": "-I*n",
+        "cross_real_identity": "sin(theta/2)",
+        "leading_real_identity": "-sin(theta)",
+        "q": "sqrt(2)*(1 - I)/2",
+        "q_squared_over_T": "1/n"
+      },
+      "positive": {
+        "T": "I*n",
+        "cross_real_identity": "sin(theta/2)",
+        "leading_real_identity": "-sin(theta)",
+        "q": "sqrt(2)*(1 + I)/2",
+        "q_squared_over_T": "1/n"
+      }
+    },
+    "bad_end_real_part": "3*pi**2*a**3*n*exp(sqrt(3)*t/6)*exp(-sqrt(6)*phi/3)*sin(sqrt(3)*t/6) - 3*pi**2*a**3*n*exp(sqrt(3)*t/3)*exp(-2*sqrt(6)*phi/3)*sin(sqrt(3)*t/3)/2 + 4*pi**2*a**3*t**2/n",
+    "bad_subsequence": "t_j=sqrt(3)*(pi/2+2*pi*j), j>=0",
+    "bad_subsequence_scaled_limit": "-1 after division by (3/2)*pi^2*a^3*n*exp(-2*kappa*phi)*exp(t_j/sqrt(3))",
+    "constant_straight_line_model_class": {
+      "axis_aligned_case": "zero kinetic real part and zero-or-bounded potential real part on at least one end",
+      "decision": "KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_FIXED_A_PURE_IMAGINARY_LAPSE_SLICE",
+      "general_kinetic_real_parts": {
+        "negative": "-8*pi**2*a**3*u*v*y**2/n",
+        "positive": "8*pi**2*a**3*u*v*y**2/n"
+      },
+      "negative_kinetic_case": "bad decay end from negative quadratic growth",
+      "positive_kinetic_case": "bad exponential-growth subsequence t_j=(pi/2+2*pi*j)/(kappa*abs(v))"
+    },
+    "growth_rate": "sqrt(3)/3",
+    "kappa": "sqrt(6)/3",
+    "positive_end_quadratic_limit": "4*pi**2*a**3/n",
+    "positive_end_real_part": "3*pi**2*a**3*n*exp(-sqrt(3)*t/3)*exp(-2*sqrt(6)*phi/3)*sin(sqrt(3)*t/3)/2 - 3*pi**2*a**3*n*exp(-sqrt(3)*t/6)*exp(-sqrt(6)*phi/3)*sin(sqrt(3)*t/6) + 4*pi**2*a**3*t**2/n",
+    "reduced_action": "2*pi**2*T*(3*a**3*(1 - exp(-sqrt(6)*(delta/2 + phi)/3))**2/4 - 3*a) + 4*pi**2*a**3*delta**2/T",
+    "unscaled_exponential_limit": "-3*pi**2*a**3*n*exp(-2*sqrt(6)*phi/3)/2"
+  },
+  "exact_checks": [
+    {
+      "id": "G1.end.action_reduces_from_two_element_scalar",
+      "passed": true,
+      "statement": "the equal-endpoint a1=a_boundary slice of the inherited two-element scalar is exactly S_slice=4*pi^2*a^3*delta^2/T+2*pi^2*T*(-3*a+a^3*V(phi+delta/2))"
+    },
+    {
+      "id": "G1.end.growth_rate_is_inverse_sqrt_three",
+      "passed": true,
+      "statement": "the exponential growth rate along either half-angle arm is kappa/sqrt(2)=1/sqrt(3)"
+    },
+    {
+      "id": "G1.end.negative_arm_phase_identities",
+      "passed": true,
+      "statement": "the negative lapse arm has positive quadratic kinetic real part and the same two Starobinsky real-part phase identities as its conjugate arm"
+    },
+    {
+      "id": "G1.end.positive_arm_phase_identities",
+      "passed": true,
+      "statement": "the positive lapse arm has positive quadratic kinetic real part and the same two Starobinsky real-part phase identities as its conjugate arm"
+    },
+    {
+      "id": "G1.end.subleading_terms_vanish_on_bad_subsequence",
+      "passed": true,
+      "statement": "after division by the positive leading exponential scale, the polynomial kinetic correction and the half-rate exponential correction both vanish"
+    },
+    {
+      "id": "G1.end.positive_phi_end_is_good_on_witness_slice",
+      "passed": true,
+      "statement": "for y_phi=+t on either straight arm, Re(S_slice)/t^2 tends to the strictly positive kinetic coefficient 4*pi^2*a^3/n"
+    },
+    {
+      "id": "G1.end.bad_subsequence_has_negative_exponential_coefficient",
+      "passed": true,
+      "statement": "at t_j=sqrt(3)*(pi/2+2*pi*j), the normalized leading coefficient is strictly negative for a,n>0"
+    },
+    {
+      "id": "G1.guard.bad_end_short_circuits_global_outputs",
+      "passed": true,
+      "statement": "one declared-chain escape sequence with Re(S_2) tending to minus infinity rejects this straight completion before any saddle/upward/intersection census and cannot emit global_n_sigma"
+    },
+    {
+      "id": "G1.model_class.negative_arm_general_kinetic_real_part",
+      "passed": true,
+      "statement": "for a constant q=u+i*v line on the negative pure-imaginary lapse arm, Re(S_kinetic)=8*pi^2*a^3*s*u*v*y^2/n"
+    },
+    {
+      "id": "G1.model_class.positive_arm_general_kinetic_real_part",
+      "passed": true,
+      "statement": "for a constant q=u+i*v line on the positive pure-imaginary lapse arm, Re(S_kinetic)=8*pi^2*a^3*s*u*v*y^2/n"
+    },
+    {
+      "id": "G1.model_class.negative_kinetic_case_has_bad_decay_end",
+      "passed": true,
+      "statement": "when s*u*v<0, choose the end with u*y>0: the Starobinsky exponential decays while the negative quadratic kinetic real part tends to minus infinity"
+    },
+    {
+      "id": "G1.model_class.axis_aligned_lines_lack_two_good_ends",
+      "passed": true,
+      "statement": "when u*v=0, the kinetic real part vanishes; a real field line leaves the pure-imaginary potential contribution with zero real part, while a pure-imaginary line has only bounded oscillatory exponential modulus"
+    },
+    {
+      "id": "G1.model_class.positive_kinetic_case_has_exponential_bad_subsequence",
+      "passed": true,
+      "statement": "when s*u*v>0, reflect signs to s=+1,u>0,v>0 and take y=-t_j with t_j=(pi/2+2*pi*j)/(kappa*v): the negative full-rate Starobinsky exponential dominates the positive quadratic and half-rate terms"
+    },
+    {
+      "id": "G1.model_class.constant_straight_line_cases_are_exhaustive",
+      "passed": true,
+      "statement": "the disjoint cases s*u*v<0, u*v=0, and s*u*v>0 exhaust constant complex straight phi lines on either pure-imaginary lapse arm; none has two relative-good field ends on the fixed-a slice"
+    }
+  ],
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "gate1_status": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json",
+    "sha256": "a3bc97461c7989cd5bb471accf46f0c2196de41c3030e9eef2248c4f09a47fdb"
+  },
+  "interpretation": "The Phase 39 straight Gaussian field rays are local asymptotic directions only. On the declared slice, every constant complex straight field line fails at least one necessary end condition, so further Gate 1 work must branch to a curved or piecewise good-end contour, a nonzero-Re(T) lateral, or another explicitly derived regulator cycle.",
+  "model_class_decision": "KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE",
+  "not_computed": [
+    "a physical original joint cycle",
+    "cap or scale-factor infinity for a redesigned nonlinear cycle",
+    "a complete saddle, upward-cycle, complex-sheet, Stokes, or relative-end census",
+    "any local or global intersection coefficient",
+    "canonical momenta, BFV ghosts, fermions, Pfaffian/Pin data, or a spinorial charge",
+    "a physics or TOE claim"
+  ],
+  "numbered_phase": null,
+  "numerical_calculation": {
+    "bad_subsequence_records": [
+      {
+        "ReS_negative_arm": "-17417.4673509402201",
+        "ReS_positive_arm": "-17417.4673509402201",
+        "direct_formula_relative_error": "2.1420019e-79",
+        "index": 1,
+        "normalized_by_positive_leading_scale": "-0.0531120666314455961",
+        "t": "13.6034952317566339"
+      },
+      {
+        "ReS_negative_arm": "-174048253.584433182",
+        "ReS_positive_arm": "-174048253.584433182",
+        "direct_formula_relative_error": "3.739635e-80",
+        "index": 2,
+        "normalized_by_positive_leading_scale": "-0.991117529887794273",
+        "t": "24.486291417161941"
+      },
+      {
+        "ReS_negative_arm": "-94045664604.7723005",
+        "ReS_positive_arm": "-94045664604.7723005",
+        "direct_formula_relative_error": "2.1569012e-80",
+        "index": 3,
+        "normalized_by_positive_leading_scale": "-1.00009569971927918",
+        "t": "35.3690876025672481"
+      },
+      {
+        "ReS_negative_arm": "-50355585652912.6435",
+        "ReS_positive_arm": "-50355585652912.6435",
+        "direct_formula_relative_error": "2.0624876e-80",
+        "index": 4,
+        "normalized_by_positive_leading_scale": "-0.999994758492695158",
+        "t": "46.2518837879725552"
+      },
+      {
+        "ReS_negative_arm": "-26965143277399225.3",
+        "ReS_positive_arm": "-26965143277399225.3",
+        "direct_formula_relative_error": "5.3525631e-80",
+        "index": 5,
+        "normalized_by_positive_leading_scale": "-1.00000022300045935",
+        "t": "57.1346799733778623"
+      },
+      {
+        "ReS_negative_arm": "-1.44396058557441183e+19",
+        "ReS_positive_arm": "-1.44396058557441183e+19",
+        "direct_formula_relative_error": "8.8887253e-80",
+        "index": 6,
+        "normalized_by_positive_leading_scale": "-0.999999990353330728",
+        "t": "68.0174761587831694"
+      }
+    ],
+    "fixed_abs_N": "1.0",
+    "positive_end_records": [
+      {
+        "ReS_negative_arm": "716568.487911769839",
+        "ReS_over_t_squared": "1791.4212197794246",
+        "ReS_positive_arm": "716568.487911769839",
+        "direct_formula_relative_error": "0.0",
+        "t": "20"
+      },
+      {
+        "ReS_negative_arm": "2866270.41202737537",
+        "ReS_over_t_squared": "1791.41900751710961",
+        "ReS_positive_arm": "2866270.41202737537",
+        "direct_formula_relative_error": "1.5426731e-81",
+        "t": "40"
+      },
+      {
+        "ReS_negative_arm": "11465081.6288496868",
+        "ReS_over_t_squared": "1791.41900450776356",
+        "ReS_positive_arm": "11465081.6288496868",
+        "direct_formula_relative_error": "1.5426731e-81",
+        "t": "80"
+      }
+    ],
+    "precision_decimal_digits": 80
+  },
+  "numerical_checks": [
+    {
+      "id": "G1.end.direct_action_matches_bad_closed_form",
+      "metrics": {
+        "maximum_relative_error": "2.1420019e-79",
+        "precision_decimal_digits": 80
+      },
+      "passed": true,
+      "statement": "80-decimal direct evaluation of the unreduced two-element action agrees with the separately derived bad-end real-part formula on both arms"
+    },
+    {
+      "id": "G1.end.conjugate_arms_have_identical_real_action",
+      "metrics": {
+        "maximum_relative_difference": "0.0"
+      },
+      "passed": true,
+      "statement": "the frozen positive and negative lapse arms give the same Re(S_2) on their conjugate straight field rays"
+    },
+    {
+      "id": "G1.end.sampled_bad_subsequence_is_negative_and_asymptotic",
+      "metrics": {
+        "last_distance_from_minus_one": "9.6466693e-9",
+        "last_scaled_ratio": "-0.999999990353330728",
+        "sample_count_per_arm": 6
+      },
+      "passed": true,
+      "statement": "every frozen j=1..6 witness has negative Re(S_2), and the leading-scale ratio approaches -1"
+    },
+    {
+      "id": "G1.end.direct_action_matches_positive_closed_form",
+      "metrics": {
+        "maximum_relative_error": "1.5426731e-81"
+      },
+      "passed": true,
+      "statement": "the independent direct action also agrees with the positive-end closed form on both arms"
+    },
+    {
+      "id": "G1.end.sampled_positive_end_tracks_positive_quadratic_limit",
+      "metrics": {
+        "exact_quadratic_coefficient": "1791.41900450775594",
+        "last_observed_coefficient": "1791.41900450776356",
+        "last_relative_error": "4.2508589e-15"
+      },
+      "passed": true,
+      "statement": "the y_phi=+t controls remain positive and approach the exact quadratic coefficient"
+    }
+  ],
+  "observed_calls": {
+    "automatic_descendants": 0,
+    "evaluator_reconciliation_calls": 0,
+    "ode_calls": 0,
+    "root_calls": 0
+  },
+  "preserved_results": [
+    "Phase 39 finite-window local intersection candidates and their local signs",
+    "all Phase 40-50 scoped calculations, failures, and inconclusive results"
+  ],
+  "programme_impact": "NARROW",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "physical_original_cycle": null,
+    "physics_claim": null
+  },
+  "resource_contract": {
+    "artifact_bytes": 250000,
+    "automatic_descendants": 0,
+    "evaluator_reconciliation_calls": 0,
+    "maximum_bad_subsequence_samples_per_arm": 6,
+    "ode_calls": 0,
+    "root_calls": 0,
+    "wall_clock_seconds": 30
+  },
+  "result_payload_sha256_without_self": "b7b90718ca963a4ee22c97d02cac52699b0e7e95d4eb93d5856264cd1cd92b93",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility.py",
+    "sha256": "c2cfac73e303d0f46d86c1577fc31cc1cd2ff5e0dfd809e9bdd6b75a38aaaa7e"
+  },
+  "runtime": {
+    "mpmath": "1.3.0",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "schema_version": "ice.gate1.straight-lift-end-admissibility.result.v1"
+}

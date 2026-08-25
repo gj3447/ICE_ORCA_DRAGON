@@ -1,0 +1,254 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_20260825",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-25T06:49:27Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility.py",
+    "sha256": "c2cfac73e303d0f46d86c1577fc31cc1cd2ff5e0dfd809e9bdd6b75a38aaaa7e",
+    "introduced_in_commit": "20713f74240ffa120f898359f10e28b15719e954"
+  },
+  "exact_checks": 14,
+  "checks": [
+    {
+      "id": "P39.G1.end.action_reduces_from_two_element_scalar",
+      "statement": "the equal-endpoint a1=a_boundary slice of the inherited two-element scalar is exactly S_slice=4*pi^2*a^3*delta^2/T+2*pi^2*T*(-3*a+a^3*V(phi+delta/2))",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.growth_rate_is_inverse_sqrt_three",
+      "statement": "the exponential growth rate along either half-angle arm is kappa/sqrt(2)=1/sqrt(3)",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.negative_arm_phase_identities",
+      "statement": "the negative lapse arm has positive quadratic kinetic real part and the same two Starobinsky real-part phase identities as its conjugate arm",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.positive_arm_phase_identities",
+      "statement": "the positive lapse arm has positive quadratic kinetic real part and the same two Starobinsky real-part phase identities as its conjugate arm",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.subleading_terms_vanish_on_bad_subsequence",
+      "statement": "after division by the positive leading exponential scale, the polynomial kinetic correction and the half-rate exponential correction both vanish",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.positive_phi_end_is_good_on_witness_slice",
+      "statement": "for y_phi=+t on either straight arm, Re(S_slice)/t^2 tends to the strictly positive kinetic coefficient 4*pi^2*a^3/n",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.bad_subsequence_has_negative_exponential_coefficient",
+      "statement": "at t_j=sqrt(3)*(pi/2+2*pi*j), the normalized leading coefficient is strictly negative for a,n>0",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.guard.bad_end_short_circuits_global_outputs",
+      "statement": "one declared-chain escape sequence with Re(S_2) tending to minus infinity rejects this straight completion before any saddle/upward/intersection census and cannot emit global_n_sigma",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.model_class.negative_arm_general_kinetic_real_part",
+      "statement": "for a constant q=u+i*v line on the negative pure-imaginary lapse arm, Re(S_kinetic)=8*pi^2*a^3*s*u*v*y^2/n",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.model_class.positive_arm_general_kinetic_real_part",
+      "statement": "for a constant q=u+i*v line on the positive pure-imaginary lapse arm, Re(S_kinetic)=8*pi^2*a^3*s*u*v*y^2/n",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.model_class.negative_kinetic_case_has_bad_decay_end",
+      "statement": "when s*u*v<0, choose the end with u*y>0: the Starobinsky exponential decays while the negative quadratic kinetic real part tends to minus infinity",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.model_class.axis_aligned_lines_lack_two_good_ends",
+      "statement": "when u*v=0, the kinetic real part vanishes; a real field line leaves the pure-imaginary potential contribution with zero real part, while a pure-imaginary line has only bounded oscillatory exponential modulus",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.model_class.positive_kinetic_case_has_exponential_bad_subsequence",
+      "statement": "when s*u*v>0, reflect signs to s=+1,u>0,v>0 and take y=-t_j with t_j=(pi/2+2*pi*j)/(kappa*v): the negative full-rate Starobinsky exponential dominates the positive quadratic and half-rate terms",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.model_class.constant_straight_line_cases_are_exhaustive",
+      "statement": "the disjoint cases s*u*v<0, u*v=0, and s*u*v>0 exhaust constant complex straight phi lines on either pure-imaginary lapse arm; none has two relative-good field ends on the fixed-a slice",
+      "status": "PASS"
+    }
+  ],
+  "numerical_checks": 5,
+  "numerical": [
+    {
+      "id": "P39.G1.end.direct_action_matches_bad_closed_form",
+      "statement": "80-decimal direct evaluation of the unreduced two-element action agrees with the separately derived bad-end real-part formula on both arms",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.conjugate_arms_have_identical_real_action",
+      "statement": "the frozen positive and negative lapse arms give the same Re(S_2) on their conjugate straight field rays",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.sampled_bad_subsequence_is_negative_and_asymptotic",
+      "statement": "every frozen j=1..6 witness has negative Re(S_2), and the leading-scale ratio approaches -1",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.direct_action_matches_positive_closed_form",
+      "statement": "the independent direct action also agrees with the positive-end closed form on both arms",
+      "status": "PASS"
+    },
+    {
+      "id": "P39.G1.end.sampled_positive_end_tracks_positive_quadratic_limit",
+      "statement": "the y_phi=+t controls remain positive and approach the exact quadratic coefficient",
+      "status": "PASS"
+    }
+  ],
+  "payload": {
+    "exact_checks": 14,
+    "numerical_checks": 5,
+    "calculation": {
+      "calculation_id": "Gate1StraightLiftEndAdmissibility",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_PHASE39_STRAIGHT_FIELD_RAY_COMPLETION_HAS_BAD_NEGATIVE_PHI_ENDS"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes the inherited model slice required by research-run-evidence/v1; this run has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative G1.* check id",
+      "authoritative_exact_check_ids": [
+        "G1.end.action_reduces_from_two_element_scalar",
+        "G1.end.growth_rate_is_inverse_sqrt_three",
+        "G1.end.negative_arm_phase_identities",
+        "G1.end.positive_arm_phase_identities",
+        "G1.end.subleading_terms_vanish_on_bad_subsequence",
+        "G1.end.positive_phi_end_is_good_on_witness_slice",
+        "G1.end.bad_subsequence_has_negative_exponential_coefficient",
+        "G1.guard.bad_end_short_circuits_global_outputs",
+        "G1.model_class.negative_arm_general_kinetic_real_part",
+        "G1.model_class.positive_arm_general_kinetic_real_part",
+        "G1.model_class.negative_kinetic_case_has_bad_decay_end",
+        "G1.model_class.axis_aligned_lines_lack_two_good_ends",
+        "G1.model_class.positive_kinetic_case_has_exponential_bad_subsequence",
+        "G1.model_class.constant_straight_line_cases_are_exhaustive"
+      ],
+      "authoritative_numerical_check_ids": [
+        "G1.end.direct_action_matches_bad_closed_form",
+        "G1.end.conjugate_arms_have_identical_real_action",
+        "G1.end.sampled_bad_subsequence_is_negative_and_asymptotic",
+        "G1.end.direct_action_matches_positive_closed_form",
+        "G1.end.sampled_positive_end_tracks_positive_quadratic_limit"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json",
+      "input_manifest_sha256": "a3bc97461c7989cd5bb471accf46f0c2196de41c3030e9eef2248c4f09a47fdb",
+      "input_manifest_introduced_in_commit": "20713f74240ffa120f898359f10e28b15719e954",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_RESULT.json",
+      "raw_result_outer_sha256": "821fbd88601b886acdd02fc77d5a877d7f6f8257454c9d3f39aa033b644b99b9",
+      "raw_result_payload_sha256_without_self": "b7b90718ca963a4ee22c97d02cac52699b0e7e95d4eb93d5856264cd1cd92b93",
+      "raw_result_size_bytes": 13624
+    },
+    "runtime": {
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41"
+    },
+    "scope": {
+      "includes": [
+        "the inherited Phase-39 m=2 equal-boundary fixed-a slice",
+        "T=+i*n and T=-i*n pure-imaginary lapse arms",
+        "the declared conjugate half-angle rays and every constant complex straight phi line",
+        "necessary exp(-S_2) relative-good field-end behavior"
+      ],
+      "excludes": [
+        "curved or piecewise field contours",
+        "nonzero-Re(T) laterals and other explicitly derived regulator cycles",
+        "varying a and full joint lapse-field-gauge or BFV cycles",
+        "a complete saddle, upward-cycle, sheet, Stokes, intersection, or relative-end census"
+      ]
+    },
+    "computed_facts": {
+      "conjugate_arms_have_same_real_action": true,
+      "positive_phi_end": "GOOD_ON_DECLARED_SLICE",
+      "negative_phi_end": "BAD_ON_EXPLICIT_SUBSEQUENCE_ON_BOTH_ARMS",
+      "bad_subsequence": "t_j=sqrt(3)*(pi/2+2*pi*j)",
+      "bad_subsequence_scaled_limit": "-1",
+      "growth_rate": "1/sqrt(3)",
+      "constant_straight_line_cases_exhausted": [
+        "s*u*v<0",
+        "u*v=0",
+        "s*u*v>0"
+      ]
+    },
+    "independent_implementation_audit": {
+      "exact_result_entries": 14,
+      "executable_sympy_identities_or_limits": 12,
+      "declarative_guard_entries": [
+        "G1.guard.bad_end_short_circuits_global_outputs",
+        "G1.model_class.constant_straight_line_cases_are_exhaustive"
+      ],
+      "declarative_guard_review": "independently confirmed from the bad escape sequence and the mutually exclusive, exhaustive s*u*v<0, u*v=0, s*u*v>0 case split",
+      "conclusion_changing_error_found": false,
+      "payload_field_caveats": [
+        "exact_calculation.unscaled_exponential_limit is actually the coefficient of the scaled limit exp(-t_j/sqrt(3))*Re(S_2(-t_j)); bad_subsequence_scaled_limit and the report equation are authoritative for its meaning",
+        "the nested decision suffix ON_FIXED_A_PURE_IMAGINARY_LAPSE_SLICE and the top-level suffix ON_DECLARED_SLICE name the same frozen slice; top-level model_class_decision is authoritative"
+      ]
+    },
+    "numerical_metrics": {
+      "bad_closed_form_maximum_relative_error": "2.1420019e-79",
+      "conjugate_arm_maximum_relative_difference": "0.0",
+      "last_bad_scaled_ratio": "-0.999999990353330728",
+      "last_bad_distance_from_minus_one": "9.6466693e-9",
+      "bad_sample_count_per_arm": 6,
+      "positive_closed_form_maximum_relative_error": "1.5426731e-81",
+      "positive_exact_quadratic_coefficient": "1791.41900450775594",
+      "positive_last_observed_coefficient": "1791.41900450776356",
+      "positive_last_relative_error": "4.2508589e-15"
+    },
+    "decisions": {
+      "candidate_decision": "KILL",
+      "model_class_decision": "KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE",
+      "programme_impact": "NARROW",
+      "preserved_results": [
+        "Phase 39 finite-window local intersection candidates and their local signs",
+        "all Phase 40-50 scoped calculations, failures, and inconclusive results"
+      ],
+      "open_alternatives": [
+        "curved or piecewise good-end contours",
+        "nonzero-Re(T) laterals",
+        "other explicitly derived regulator cycles"
+      ],
+      "gate1_status": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null,
+      "promoted_outputs": {
+        "TOE_claim": null,
+        "complete_global_signed_intersection_vector": null,
+        "global_n_sigma": null,
+        "physical_original_cycle": null,
+        "physics_claim": null
+      }
+    },
+    "resource_contract": {
+      "artifact_bytes": 250000,
+      "wall_clock_seconds": 30,
+      "maximum_bad_subsequence_samples_per_arm": 6,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "evaluator_reconciliation_calls": 0,
+      "automatic_descendants": 0
+    }
+  }
+}

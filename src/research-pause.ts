@@ -69,7 +69,7 @@ export const boundedGate1ScriptSha256 =
   "c2cfac73e303d0f46d86c1577fc31cc1cd2ff5e0dfd809e9bdd6b75a38aaaa7e"
 export const boundedGate1InputSha256 =
   "a3bc97461c7989cd5bb471accf46f0c2196de41c3030e9eef2248c4f09a47fdb"
-export const boundedGate1ExecutionEnabled: boolean = true
+export const boundedGate1ExecutionEnabled: boolean = false
 
 export const boundedGate1InvocationDecision = (
   query: string,
@@ -90,7 +90,7 @@ export const boundedGate1InvocationDecision = (
 export const ragnarokStatus = {
   schema: "ice-ragnarok-circuit-breaker/v2",
   effective_date: "2026-08-23",
-  operational_state: "GATE1_BOUNDED_RESUME",
+  operational_state: "GATE1_RESULT_REVIEW",
   pause_started_on: "2026-08-23",
   review_eligible_on: "2026-08-30",
   auto_resume: false,
@@ -104,7 +104,7 @@ export const ragnarokStatus = {
     does_not_reopen_killed_route: true
   },
   gate1_window: {
-    state: "CALC_AUTHORIZED",
+    state: "CONSUMED",
     automatic_next: null,
     maximum_launches: 1,
     exact_script: boundedGate1Script,
@@ -125,7 +125,40 @@ export const ragnarokStatus = {
       evaluator_reconciliation_calls: 0,
       automatic_descendants: 0
     },
-    execution_enabled: boundedGate1ExecutionEnabled
+    execution_enabled: boundedGate1ExecutionEnabled,
+    consumed: {
+      consumed_on: "2026-08-25",
+      command:
+        "./ice run cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility",
+      result_sha256:
+        "821fbd88601b886acdd02fc77d5a877d7f6f8257454c9d3f39aa033b644b99b9",
+      payload_sha256_without_self:
+        "b7b90718ca963a4ee22c97d02cac52699b0e7e95d4eb93d5856264cd1cd92b93",
+      result_bytes: 13_624,
+      run_status: "VALID_RUN",
+      classification:
+        "GATE1_PHASE39_STRAIGHT_FIELD_RAY_COMPLETION_HAS_BAD_NEGATIVE_PHI_ENDS",
+      exact_checks_passed: 14,
+      numerical_checks_passed: 5,
+      candidate_decision: "KILL",
+      model_class_decision:
+        "KILL_CONSTANT_STRAIGHT_FIELD_LINES_ON_DECLARED_SLICE",
+      programme_impact: "NARROW",
+      gate1: "OPEN_PARTIAL_PROGRESS",
+      global_n_sigma: null,
+      automatic_next: null,
+      independent_review: {
+        reviewed_on: "2026-08-25",
+        conclusion_changed: false,
+        executable_exact_identities_and_limits: 12,
+        declarative_guards_reviewed_separately: 2,
+        authoritative_decision_field: "top-level model_class_decision",
+        immutable_result_caveats: [
+          "exact_calculation.unscaled_exponential_limit stores the scaled-limit coefficient",
+          "the nested and top-level model-class decision strings name the same declared fixed-a pure-imaginary-lapse slice"
+        ]
+      }
+    }
   },
   verdicts: {
     ragnarok_pattern: "PRESENT",
@@ -171,7 +204,7 @@ export const ragnarokStatus = {
       next_phase: null
     },
     execution_provenance:
-      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_BOUNDED_GATE1_WINDOW",
+      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_CONSUMED_GATE1_RESULT",
     direct_python_bypass_authorized: false
   },
   repository_transport: {
