@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-26T10:02:27Z`; 811 nodes, 2415 edges). Run and analytic-evidence details live in the
+`2026-08-26T15:01:35Z`; 821 nodes, 2447 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 183/183 stored hashes (175 artifacts and 8 policies).
+verifies 185/185 stored hashes (177 artifacts and 8 policies).
 
 ## Quick answers
 
@@ -68,9 +68,10 @@ verifies 183/183 stored hashes (175 artifacts and 8 policies).
 | Did the straight-lift KILL eliminate every affine or curved field-end completion? | No. The executed case split exhausts the anchor-through homogeneous ansatz \(\delta=qy\). An execution-free exact derivation gives \(\delta=x+i\arg(T)/\kappa\) two uniform good ends, and the follow-up phase-band theorem shows that every continuous horizontal affine tail with a strictly positive full-rate coefficient and two good arm ends is contractible to it inside one principal fixed-\(a\) scalar-fiber class. This is not a full joint/original cycle; all joint and global obligations remain open or null. | `claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS`; `claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO`; `claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS`; `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle` |
 | Do good-end convergence or the bounded scalar source link uniquely select phase lock? | No. Exact positive-real cancellation uniquely picks \(b(\psi)=\psi/\kappa\), but convergence admits \(b_\lambda=\lambda\psi/\kappa\) for every \(0<\lambda<2\), all in the same reduced class. The consumed source-link one-shot supplies a path- and order-specified comparison for a **newly declared** fixed-\(a\), \(m=2\) scalar phase-space control: exact momentum elimination and full-action homotopy directly match the declared \(0<\lambda\le1\) \(\Gamma_\lambda\) representatives with scalar orientation `+1` on lapse tests supported away from \(N=0\). The later zero-lapse one-shot was `INVALID_RUN` at a SymPy structural-equality false negative and wrote no result, so it neither contradicts the square identity nor constructs the zero-including full \(q\)-paired distribution. The scoped reduced-class `KEEP` remains nonzero-arm only; \(\lambda=1\) and the physical original joint cycle remain unselected. | `claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE`; `claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK`; `claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN`; `claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION`; `claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE` |
 | Can one common lapse lateral make the unchanged real \(p_a,p_\phi\) source absolutely convergent? | No in the finite \(m=2\) control: \(N-i0\) damps the scalar block but grows the negative-kinetic scale block, and \(N+i0\) reverses them. Declared centered complex momentum rays exactly reproduce the fiberwise Gaussian pushforward, while the negative-arm \(-1\) comes from a standard-Fresnel frozen-\(A\) flat-tangent comparison. This does not derive source-to-thimble deformation, simultaneous nonlinear configuration admissibility, \(p_a\) gauge fixing, FP/BFV orientation, zero lapse or a physical original cycle. | `claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES`; `claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD`; `scope:gate1-m2-bosonic-nonzero-lapse-source-pushforward` |
+| Does the homogeneous trace gauge remove the local negative momentum direction, and can it simply be appended to the old \(m=2\) source? | The first answer is locally yes away from the FP horizon \(a^2V=2\): \(Q=2\log a\), \(P_{\rm tr}=ap_a/2\) is canonical, and the constraint plus trace gauge reduces rather than merely deletes \(p_a\). The second answer is no: the inherited endpoint-preserving constant-lapse condition already fixes its sole nonzero lapse-gauge mode, the ordinary static trace representative has \(N=0\) where regular, and endpoint transversality changes the action/state problem. The formal lower-lateral scalar fiber remains convergent, but a replacement improved-static or time-dependent BFV source must be rederived. | `claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION`; `claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE`; `claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT` |
 | Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–56 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–56 scope guards |
 
-### Gate-1 straight KILL to bosonic source obstruction
+### Gate-1 straight KILL to trace-gauge redirect
 
 The graph's `reading-path:gate1-anchor-through-kill-to-phase-locked-branch` should be read in this
 order:
@@ -101,7 +102,16 @@ order:
    out absolute convergence of their unchanged real axes under either one common lateral sign. The
    declared complex rays pass the fiberwise Gaussian check, but their \(-1\) negative-arm ledger is a
    frozen-\(A\) flat tangent, not a simultaneous nonlinear joint-cycle theorem.
-10. Stop at `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle`: the \(N=0\) contact term and
+10. The bounded trace-gauge discriminator derives the integrated homogeneous trace pair, its exact
+   Lorentzian FP bracket, the on-shell horizon \(a^2V=2\), and genuine local simple-root reduction.
+   Signed root residues remain pre-orientation data; the elementary delta ledger uses their absolute
+   Jacobians.
+11. Appending that static trace delta/FP factor to the inherited proper-time, fixed-\(a\), \(m=2\)
+   source is `KILL`. Its endpoint-preserving constant-lapse condition already fixes the sole nonzero
+   lapse-gauge mode, and a transverse endpoint chart requires a transformed action/state problem. This
+   does not kill a separately rederived improved-static or time-dependent trace gauge.
+12. Stop at `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle`: the replacement gauge,
+   endpoint states, BFV measure, \(N=0\) contact term and
    zero-including full \(q\)-paired distribution remain unconstructed. Complex scale-factor/mixed ends,
    regulator removal, new intersections, complete saddle/upward/sheet/Stokes census, determinant/BFV
    orientation and the global vector remain missing.
@@ -1384,6 +1394,7 @@ Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 | 55 | [`phase55_p53_root_fixed_launch_schedule_transfer.py`](../../cpt_temporal_folded_susy/phase55_p53_root_fixed_launch_schedule_transfer.py) | [`PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json) · [`PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md`](../../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md) | [`phase55-result.json`](./evidence/phase55-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_RESULT.json) |
 | 56 | [`phase56_lambda_half_launch_provenance_residual_conditioning.py`](../../cpt_temporal_folded_susy/phase56_lambda_half_launch_provenance_residual_conditioning.py) | [`PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_INPUTS.json`](../../cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_INPUTS.json) · [`PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md`](../../cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md) | [`phase56-result.json`](./evidence/phase56-result.json) · [full raw result](../../cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_RESULT.json) |
 | Gate 1 bosonic canonical source (non-numbered) | [`gate1_bosonic_canonical_source_pushforward.py`](../../cpt_temporal_folded_susy/gate1_bosonic_canonical_source_pushforward.py) | [`GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_INPUTS.json) · [`GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md`](../../cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md) | [`gate1-bosonic-canonical-source-pushforward-result.json`](./evidence/gate1-bosonic-canonical-source-pushforward-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_RESULT.json) |
+| Gate 1 trace-gauge FP admissibility (non-numbered) | [`gate1_trace_gauge_fp_admissibility.py`](../../cpt_temporal_folded_susy/gate1_trace_gauge_fp_admissibility.py) | [`GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_INPUTS.json) · [`GATE1_TRACE_GAUGE_FP_ADMISSIBILITY.md`](../../cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY.md) | [`gate1-trace-gauge-fp-admissibility-result.json`](./evidence/gate1-trace-gauge-fp-admissibility-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -1417,8 +1428,9 @@ Phase 24 adds one more unresolved bridge at `phase:p24`. The older
 planning node and was deliberately not reused. Phases 25–40 add sixteen fresh unresolved phase lookups;
 similarly numbered historical planning nodes were not reused. The recursive-audit policy and the ordered
 five-gate policy add two separate repository-workflow lookups. Phases 44, 46, 47, 51, 52, and 53 add six
-further repository-local phase lookups. The invalid scalar zero-lapse control and the finite bosonic
-single-lateral claim add two more local lookups, so there are thirty-four expected unresolved bridges in
+further repository-local phase lookups. The invalid scalar zero-lapse control, finite bosonic
+single-lateral claim, and unchanged-source trace-gauge append claim add three more local lookups, so
+there are thirty-five expected unresolved bridges in
 the current graph. The latter remain local because no authorized external UID or
 writer exists; no identity was invented for the roadmap.
 A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,

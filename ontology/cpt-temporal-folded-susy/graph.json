@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-26T10:02:27Z",
+  "updated_at_utc": "2026-08-26T15:01:35Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -441,6 +441,15 @@
         "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
         "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES",
         "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD"
+      ]
+    },
+    {
+      "question": "Can the trace gauge now remove the negative p_a Gaussian and repair the finite m=2 source?",
+      "answer": "Only locally, and not by deletion or by appending another FP delta to the unchanged source. The integrated homogeneous trace pair gives a genuine constraint-gauge reduction on existing simple shell-root charts with a>0 and a^2 V != 2; the remaining real p_phi fiber is lower-lateral Gaussian convergent. But the inherited m=2 source already fixes its sole endpoint-preserving nonzero lapse-gauge mode in proper-time gauge, and its fixed-a endpoint problem cannot be reused unchanged. A separately rederived improved-static or time-dependent replacement gauge/action/BFV/endpoint-state construction remains open, so Gate 1 and all physical/TOE outputs stay open or null.",
+      "claim_ids": [
+        "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+        "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+        "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT"
       ]
     }
   ],
@@ -1043,8 +1052,8 @@
     },
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
-      "title": "From the anchored straight-line KILL to the bosonic source obstruction",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control then kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes while keeping declared complex Gaussian rays as a nonphysical finite branch. Stop at the still-open source-to-thimble deformation, p_a gauge/FP/BFV completion, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
+      "title": "From the anchored straight-line KILL to the trace-gauge replacement boundary",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge follow-up keeps a genuine local simple-root reduction and lower-lateral scalar fiber, but kills appending that gauge to the unchanged proper-time/fixed-a source. Stop at the still-open replacement action/gauge/BFV/endpoint-state construction, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1065,6 +1074,10 @@
         "concept:gate1-bosonic-canonical-source-pushforward-control",
         "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES",
         "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD",
+        "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+        "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+        "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+        "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
         "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -10073,10 +10086,10 @@
     {
       "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "type": "open_problem",
-      "title": "Extend the nonzero-arm scalar source link through zero lapse and the full joint cycle",
-      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The later full-bosonic m=2 control adds a necessary obstruction: neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. Its declared centered complex rays exactly reproduce the finite pushforward, but their deformation from a lapse-first source is not established. Lambda=1 and a physical original cycle remain unselected. The full q-paired N=0 distribution, possible contact terms, a stated p_a gauge and FP/BFV measure, scale-factor/mixed ends, regulator removal, connector intersections, complete dual census, Stokes data and full determinant orientation remain absent.",
-      "state": "OPEN_AFTER_SINGLE_LATERAL_BOSONIC_OBSTRUCTION_AND_UNDERIVED_COMPLEX_BRANCH",
-      "question": "Can a stated p_a gauge/FP/BFV prescription and zero-lapse distribution derive the declared finite complex momentum branch from a source, and can that branch then be extended through every scale-factor/mixed end, determinant, intersection and regulator limit into a physical full joint cycle?"
+      "title": "Derive the replacement trace-gauge source, then extend through zero lapse and the full joint cycle",
+      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The trace-gauge follow-up now proves a genuine local simple-root constraint reduction away from a^2 V=2 and formal lower-lateral convergence of its remaining scalar fiber, but it also shows that this gauge cannot be appended to the unchanged proper-time/fixed-a source. A separately rederived replacement gauge, action, local constraint/lapse measure, BFV completion, and endpoint-state construction is therefore the next debt; improved static and time-dependent variants both remain open. Lambda=1, zero lapse, source deformation, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
+      "state": "OPEN_AFTER_LOCAL_TRACE_REDUCTION_AND_UNCHANGED_PROPER_TIME_SOURCE_APPEND_KILL",
+      "question": "Can an improved-static or time-dependent trace-gauge replacement with its own action, endpoint states and FP/BFV measure be derived from local lapse/constraint variables, reproduce its constraint projector, and then connect through zero lapse and every relative end, determinant and intersection into a physical full joint cycle?"
     },
     {
       "id": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
@@ -10486,6 +10499,138 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md",
       "sha256": "31c267819fae11c089de5b0ba833bf093b25965ad5ecf369703ef564934f79b3"
+    },
+    {
+      "id": "source:henneaux-teitelboim-vergara-1992",
+      "type": "source",
+      "title": "Gauge invariance for generally covariant systems",
+      "summary": "Primary canonical-gauge reference used only for transversality, gauge-related endpoint states, improved boundary actions and componentwise gauge orientation. It does not prove that the repository's improved-static or time-dependent trace-gauge replacement exists globally.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "M. Henneaux, C. Teitelboim and J. D. Vergara, Gauge invariance for generally covariant systems, Nuclear Physics B 387 (1992) 391–418",
+      "uri": "https://doi.org/10.1016/0550-3213(92)90166-9",
+      "version": "Nucl. Phys. B 387 (1992) 391–418; arXiv:hep-th/9205092"
+    },
+    {
+      "id": "source:marolf-1996-minisuperspace-path-integrals",
+      "type": "source",
+      "title": "Path integrals and instantons in quantum gravity: Minisuperspace models",
+      "summary": "Primary full-real-lapse and gauge-fixed minisuperspace path-integral reference. It is not used as a general signed-versus-absolute determinant theorem for the momentum gauge; the simple-root absolute delta Jacobian is derived locally in the repository.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "D. Marolf, Path integrals and instantons in quantum gravity: Minisuperspace models, Physical Review D 53 (1996) 6979–6990",
+      "uri": "https://doi.org/10.1103/PhysRevD.53.6979",
+      "version": "Phys. Rev. D 53 (1996) 6979–6990; arXiv:gr-qc/9602019"
+    },
+    {
+      "id": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "type": "concept",
+      "title": "Gate-1 homogeneous trace-gauge FP admissibility control",
+      "summary": "A bounded non-numbered Lorentzian calculation distinguishes genuine local constraint-gauge reduction from deletion of p_a, derives the homogeneous integrated-trace canonical pair and FP horizon, separates signed pre-orientation from the absolute simple-root delta ledger, checks the inherited m=2 proper-time lapse rank and endpoint transversality, and tests the remaining formal lower-lateral scalar Gaussian. It is not a replacement BFV source or physical cycle.",
+      "state": "COMPLETED_VALID_LOCAL_REDUCTION_AND_UNCHANGED_SOURCE_APPEND_DISCRIMINATOR"
+    },
+    {
+      "id": "scope:gate1-local-homogeneous-trace-gauge-simple-root-and-m2-append",
+      "type": "scope",
+      "title": "Local homogeneous trace-gauge simple-root and unchanged m=2 append scope",
+      "summary": "The exact domain separating the local Lorentzian trace constraint-gauge result and formal scalar Gaussian from the uncomputed replacement gauge, global orbit, fixed-a equivalence, source deformation and physical-cycle obligations.",
+      "state": "CLOSED_COMPUTED_LOCAL_SCOPE_GLOBAL_REPLACEMENT_OPEN",
+      "includes": [
+        "a>0 homogeneous phase space and the integrated trace pair Q=2 log(a), P_tr=a p_a/2",
+        "existing simple C_L=0 roots with D_L nonzero and the exact on-shell horizon a^2 V=2",
+        "signed pre-orientation and elementary absolute simple-root delta ledgers",
+        "the inherited endpoint-preserving m=2 lapse variation and its constant-lapse proper-time condition",
+        "one chosen swapped endpoint chart and the formal local a=1,V=0 polynomial-Gaussian benchmark"
+      ],
+      "excludes": [
+        "global orbit coverage, a fundamental region, a Gribov-copy theorem or determinant-line orientation",
+        "an improved static or time-dependent replacement gauge, action, endpoint states or full BFV measure",
+        "an exactly gauge-invariant replacement m=2 lattice or equivalence with the old fixed-a kernel",
+        "full lapse-to-delta constraint reconstruction, source deformation, zero lapse or relative-end control",
+        "a physical original cycle, global n_sigma, physics claim or TOE claim"
+      ]
+    },
+    {
+      "id": "evidence:gate1-trace-gauge-fp-admissibility",
+      "type": "evidence",
+      "title": "Gate-1 trace-gauge exact and high-precision evidence",
+      "summary": "The VALID_RUN contains 22 passing exact checks, five separately reviewed analytic scope guards and two passing polynomial-Gaussian quadratures. It proves the trace canonical/FP/shell/root identities, a^2 V=2 horizon, deletion-versus-reduction rank, inherited m=2 lapse rank, endpoint chart transversality and formal lower-lateral scalar convergence. Two prior attempts wrote no result and were corrected only for SymPy structural equality. Three read-only reviews found no conclusion-changing error; global and physical outputs remain open or null.",
+      "state": "VALID_RUN_INDEPENDENTLY_REVIEWED_LOCAL_KEEP_AND_UNCHANGED_SOURCE_APPEND_KILL",
+      "observed_status": "VALID_RUN",
+      "check_ids": [
+    "P39.G1.trace.canonical_pair_and_one_form",
+    "P39.G1.trace.lorentzian_euclidean_constraint_wick_map",
+    "P39.G1.trace.lorentzian_fp_bracket",
+    "P39.G1.trace.fp_wick_algebraic_sign",
+    "P39.G1.trace.fp_shell_identity",
+    "P39.G1.trace.reflection_neck_wick_sign_control",
+    "P39.G1.trace.homogeneous_trace_rescaling_measure",
+    "P39.G1.trace.delta_jacobian_and_root_derivative",
+    "P39.G1.trace.constraint_gauge_dirac_rank",
+    "P39.G1.trace.deletion_versus_reduction_rank",
+    "P39.G1.trace.zero_trace_shell_polynomial",
+    "P39.G1.trace.fp_horizon_and_two_sheet_orientation",
+    "P39.G1.trace.signed_and_absolute_root_ledgers",
+    "P39.G1.trace.gauge_preservation_obstruction",
+    "P39.G1.trace.m2_proper_time_gauge_rank",
+    "P39.G1.trace.endpoint_polarization_and_reduced_action",
+    "P39.G1.trace.endpoint_chart_transversality",
+    "P39.G1.trace.intrinsic_clock_comparison",
+    "P39.G1.trace.remaining_scalar_lateral_convergence",
+    "P39.G1.trace.flat_minimum_shell_and_delta_target",
+    "P39.G1.trace.polynomial_gaussian_formula",
+    "P39.G1.trace.gauge_orientation_mutation_control",
+    "P39.G1.trace.quadrature.lower_lateral_1",
+    "P39.G1.trace.quadrature.lower_lateral_2"
+      ]
+    },
+    {
+      "id": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+      "type": "claim",
+      "title": "The homogeneous trace pair gives a local simple-root constraint reduction",
+      "summary": "Supported on existing shell-root charts with a>0 and D_L nonzero. The exact pair Q=2 log(a), P_tr=a p_a/2 is canonical; delta(P_tr-f) with the FP bracket reduces the constraint-gauge pair, while p_a=0 alone leaves a degenerate three-dimensional pullback. The on-shell horizon is a^2 V=2. This is not a global gauge, fundamental region, BFV gauge-fermion theorem or physical cycle.",
+      "state": "SUPPORTED_ON_EXISTING_LOCAL_SIMPLE_ROOT_CHARTS_AWAY_FROM_FP_HORIZON",
+      "claim_id": "G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+      "statement": "For a>0 on an existing simple Lorentzian shell root with D_L={P_tr-f,C_L} nonzero, the homogeneous integrated trace pair defines a genuine local constraint-gauge reduction rather than deletion of p_a.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "type": "claim",
+      "title": "A static trace FP gauge can be appended to the unchanged proper-time m=2 source",
+      "summary": "Contradicted as an unchanged-source shortcut. In the inherited endpoint-preserving m=2 lapse variation, N0=N1 already fixes the sole nonzero gauge mode and leaves T invariant; the static ordinary representative has N=0 where regular, and imposing the gauge at endpoints requires a transformed action/state problem. This does not reject a separately rederived improved-static or time-dependent replacement gauge.",
+      "state": "CONTRADICTED_AS_ADDITIONAL_GAUGE_ON_UNCHANGED_CONSTANT_LAPSE_FIXED_A_SOURCE",
+      "claim_id": "G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "statement": "The existing constant-lapse proper-time-gauge, fixed-a finite m=2 source can be converted into the trace-gauge source merely by appending static trace delta and FP factors without rederiving its gauge, action, endpoint states or measure.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+      "type": "claim",
+      "title": "Local trace reduction leaves a lower-lateral convergent real scalar fiber",
+      "summary": "Supported only for the formal local reduced fiber. After the trace constraint-gauge pair removes the negative p_a direction, the remaining FP insertion is quadratic in p_phi and z=N-i epsilon gives a positive real Gaussian coefficient; two 70-digit quadratures pass a 1e-45 threshold. This is not a full BFV source, lapse contour identity, source deformation or physical cycle.",
+      "state": "SUPPORTED_IN_FORMAL_LOCAL_REDUCED_SCALAR_FIBER_ONLY",
+      "claim_id": "G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+      "statement": "Within the declared local trace-reduced homogeneous fiber, the polynomial FP insertion times the real p_phi Gaussian is absolutely convergent for z=N-i epsilon with epsilon>0 and divergent for the opposite lateral sign.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:gate1-trace-gauge-fp-admissibility-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 trace-gauge FP admissibility evidence snapshot",
+      "summary": "Compact typed extract of the three-attempt ledger, successful command, frozen and semantic-fix commits, 22 exact checks, two numerical checks, five separate theorem guards, input/runner/result/report hashes, three independent reviews, narrow verdict and fail-closed promoted outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-trace-gauge-fp-admissibility-result.json",
+      "sha256": "2d65c10e3e57ee5a7d567c13a3efe016dcfac91913fb838adc18e1371ea13a5c"
+    },
+    {
+      "id": "artifact:gate1-trace-gauge-fp-admissibility-report",
+      "type": "artifact",
+      "title": "Gate-1 homogeneous trace-gauge FP admissibility report",
+      "summary": "Human-readable derivation of the trace pair, Lorentzian FP bracket and Wick sign, reduction-versus-deletion rank, simple-root horizon and orientation ledgers, static-representative nuance, inherited m=2 lapse rank, endpoint transversality, formal scalar Gaussian, failed-harness provenance, independent review and replacement-gauge boundary.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY.md",
+      "sha256": "6eda1a134f145242587dec674e40f7659bbc4deb16d9d22095358a3cf9c46188"
     }
   ],
   "edges": [
@@ -25431,6 +25576,204 @@
       "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD"
+    },
+    {
+      "id": "edge:2416",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2417",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-bosonic-canonical-source-pushforward-control"
+    },
+    {
+      "id": "edge:2418",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-local-homogeneous-trace-gauge-simple-root-and-m2-append"
+    },
+    {
+      "id": "edge:2419",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025"
+    },
+    {
+      "id": "edge:2420",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992"
+    },
+    {
+      "id": "edge:2421",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "CITES",
+      "to": "source:marolf-1996-minisuperspace-path-integrals"
+    },
+    {
+      "id": "edge:2422",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "CITES",
+      "to": "source:halliwell-1988"
+    },
+    {
+      "id": "edge:2423",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "CITES",
+      "to": "source:rogers-2000-gauge-fixing-bfv"
+    },
+    {
+      "id": "edge:2424",
+      "from": "evidence:gate1-trace-gauge-fp-admissibility",
+      "relation": "PART_OF",
+      "to": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control"
+    },
+    {
+      "id": "edge:2425",
+      "from": "evidence:gate1-trace-gauge-fp-admissibility",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-trace-gauge-fp-admissibility-evidence-snapshot"
+    },
+    {
+      "id": "edge:2426",
+      "from": "artifact:gate1-trace-gauge-fp-admissibility-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control"
+    },
+    {
+      "id": "edge:2427",
+      "from": "artifact:gate1-trace-gauge-fp-admissibility-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control"
+    },
+    {
+      "id": "edge:2428",
+      "from": "artifact:gate1-trace-gauge-fp-admissibility-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-trace-gauge-fp-admissibility-evidence-snapshot"
+    },
+    {
+      "id": "edge:2429",
+      "from": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+      "relation": "PART_OF",
+      "to": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control"
+    },
+    {
+      "id": "edge:2430",
+      "from": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-local-homogeneous-trace-gauge-simple-root-and-m2-append"
+    },
+    {
+      "id": "edge:2431",
+      "from": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-trace-gauge-fp-admissibility",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2432",
+      "from": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES"
+    },
+    {
+      "id": "edge:2433",
+      "from": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-trace-gauge-fp-admissibility-report"
+    },
+    {
+      "id": "edge:2434",
+      "from": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control"
+    },
+    {
+      "id": "edge:2435",
+      "from": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-local-homogeneous-trace-gauge-simple-root-and-m2-append"
+    },
+    {
+      "id": "edge:2436",
+      "from": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-trace-gauge-fp-admissibility",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2437",
+      "from": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES"
+    },
+    {
+      "id": "edge:2438",
+      "from": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "note": "The unchanged-source append is killed; the open problem now requires a separately rederived improved-static or time-dependent gauge, action, endpoint states and BFV measure."
+    },
+    {
+      "id": "edge:2439",
+      "from": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-trace-gauge-fp-admissibility-report"
+    },
+    {
+      "id": "edge:2440",
+      "from": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+      "relation": "PART_OF",
+      "to": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control"
+    },
+    {
+      "id": "edge:2441",
+      "from": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-local-homogeneous-trace-gauge-simple-root-and-m2-append"
+    },
+    {
+      "id": "edge:2442",
+      "from": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-trace-gauge-fp-admissibility",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2443",
+      "from": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION"
+    },
+    {
+      "id": "edge:2444",
+      "from": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-trace-gauge-fp-admissibility-report"
+    },
+    {
+      "id": "edge:2445",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-trace-gauge-fp-admissibility",
+      "polarity": "SUPPORTS",
+      "note": "The local trace reduction and formal scalar convergence still supply no replacement gauge-fixed source, full BFV measure, source deformation, determinant-line orientation or physical joint cycle."
+    },
+    {
+      "id": "edge:2446",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE"
+    },
+    {
+      "id": "edge:2447",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION"
     }
   ],
   "kg_bridges": [
@@ -25840,6 +26183,16 @@
       "checked_at_utc": "2026-08-26T10:02:27Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 finite m2 bosonic unchanged real pa pphi single common lateral absolute convergence obstruction",
       "note": "No authorized exact external correspondence or writer is available. The narrowly scoped convergence-sign contradiction, declared complex-branch match and all null physical/global outputs remain repository-local workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-26T15:01:35Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 homogeneous trace gauge FP local reduction unchanged proper-time m2 append discriminator",
+      "note": "No authorized exact external correspondence or writer is available. The local simple-root reduction, unchanged-source append contradiction, formal scalar convergence and strict global/physics/TOE null boundary remain repository-local workbench evidence; no external UID was invented."
     }
   ]
 }

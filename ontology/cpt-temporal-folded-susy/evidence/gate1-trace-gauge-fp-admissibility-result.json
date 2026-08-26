@@ -1,0 +1,294 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_20260826",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-26T14:49:39.388Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_trace_gauge_fp_admissibility",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_trace_gauge_fp_admissibility.py",
+    "sha256": "f9fb9fd97a85aa312e60e4edba0e1415f260eb9507fc46015dc5b4351c311110",
+    "introduced_in_commit": "284c0ba8852affe68521b900abdd319cc9123cfa"
+  },
+  "exact_checks": 22,
+  "checks": [
+    {
+      "id": "P39.G1.trace.canonical_pair_and_one_form",
+      "status": "PASS",
+      "statement": "Q=2*log(a), P_tr=a*p_a/2 is canonical and exactly preserves p_a*da"
+    },
+    {
+      "id": "P39.G1.trace.lorentzian_euclidean_constraint_wick_map",
+      "status": "PASS",
+      "statement": "the repository convention p_L=i*p_E gives C_L(q,i*p_E)=-C_E(q,p_E)"
+    },
+    {
+      "id": "P39.G1.trace.lorentzian_fp_bracket",
+      "status": "PASS",
+      "statement": "the Lorentzian homogeneous trace FP bracket is derived exactly rather than imported from the Euclidean clock scan"
+    },
+    {
+      "id": "P39.G1.trace.fp_wick_algebraic_sign",
+      "status": "PASS",
+      "statement": "under p_L=i*p_E the Lorentzian and Euclidean trace FP bracket formulas have opposite algebraic sign"
+    },
+    {
+      "id": "P39.G1.trace.fp_shell_identity",
+      "status": "PASS",
+      "statement": "D_L=(3/2)*C_L+6*pi^2*a*(2-a^2*V), so the shell FP horizon is a^2*V=2"
+    },
+    {
+      "id": "P39.G1.trace.reflection_neck_wick_sign_control",
+      "status": "PASS",
+      "statement": "the reflection neck has Lorentzian trace FP -6*pi^2*a and Euclidean trace FP +6*pi^2*a"
+    },
+    {
+      "id": "P39.G1.trace.homogeneous_trace_rescaling_measure",
+      "status": "PASS",
+      "statement": "on p_a=0 the delta(P_tr) trace determinant product equals the delta(p_a) determinant product for a>0"
+    },
+    {
+      "id": "P39.G1.trace.delta_jacobian_and_root_derivative",
+      "status": "PASS",
+      "statement": "delta(P_tr-f)=(2/a)delta(p_a-2f/a) and its effective signed FP factor is -dC_f/da"
+    },
+    {
+      "id": "P39.G1.trace.constraint_gauge_dirac_rank",
+      "status": "PASS",
+      "statement": "the constraint-gauge Dirac matrix has rank two exactly where the FP bracket is nonzero"
+    },
+    {
+      "id": "P39.G1.trace.deletion_versus_reduction_rank",
+      "status": "PASS",
+      "statement": "p_a=0 alone leaves a rank-two presymplectic form on three dimensions, while a simple constraint-gauge root leaves the nondegenerate scalar pair"
+    },
+    {
+      "id": "P39.G1.trace.zero_trace_shell_polynomial",
+      "status": "PASS",
+      "statement": "at f=0 the shell is p_phi^2=8*pi^4*a^4*(3-a^2*V)"
+    },
+    {
+      "id": "P39.G1.trace.fp_horizon_and_two_sheet_orientation",
+      "status": "PASS",
+      "statement": "on the V>0 shell domain 0<u<=3, u=2 is the exact kappa=4 FP horizon and the two positive kappa=2 a-root sheets have opposite pre-orientation signed residues"
+    },
+    {
+      "id": "P39.G1.trace.signed_and_absolute_root_ledgers",
+      "status": "PASS",
+      "statement": "using effective_fp=-dC_f/da, signed a-root residues follow sgn(D), whereas the elementary absolute delta Jacobian gives +1 on either simple root"
+    },
+    {
+      "id": "P39.G1.trace.gauge_preservation_obstruction",
+      "status": "PASS",
+      "statement": "dot(chi)=N*D-dot(f) makes the ordinary regular static classical representative have N=0; within this representative nonzero N requires time-dependent f"
+    },
+    {
+      "id": "P39.G1.trace.m2_proper_time_gauge_rank",
+      "status": "PASS",
+      "statement": "N0=N1 fixes the sole endpoint-preserving m=2 lapse gauge mode while T=(N0+N1)/2 remains invariant"
+    },
+    {
+      "id": "P39.G1.trace.endpoint_polarization_and_reduced_action",
+      "status": "PASS",
+      "statement": "subtracting [P_tr*Q] changes fixed-Q endpoints to fixed-P_tr, and f*Qdot=[fQ]dot-fdot*Q"
+    },
+    {
+      "id": "P39.G1.trace.endpoint_chart_transversality",
+      "status": "PASS",
+      "statement": "the original fixed-Q chart fails static P_tr=0 endpoint transversality, while the chosen swapped chart (Q',P')=(P_tr,-Q) has derivative D_L and is locally transverse where D_L is nonzero"
+    },
+    {
+      "id": "P39.G1.trace.intrinsic_clock_comparison",
+      "status": "PASS",
+      "statement": "the scale coordinate clock is singular at p_a=0, while a scalar clock does not remove the negative p_a block"
+    },
+    {
+      "id": "P39.G1.trace.remaining_scalar_lateral_convergence",
+      "status": "PASS",
+      "statement": "after local trace reduction the FP factor is polynomial and N-i*epsilon damps the remaining real p_phi Gaussian while N+i*epsilon grows"
+    },
+    {
+      "id": "P39.G1.trace.flat_minimum_shell_and_delta_target",
+      "status": "PASS",
+      "statement": "at a=1,V=0 the effective FP polynomial is positive and the two constraint roots give the exact raw cosine target"
+    },
+    {
+      "id": "P39.G1.trace.polynomial_gaussian_formula",
+      "status": "PASS",
+      "statement": "the effective quadratic FP insertion follows by -d/dalpha of the convergent sourced Gaussian"
+    },
+    {
+      "id": "P39.G1.trace.gauge_orientation_mutation_control",
+      "status": "PASS",
+      "statement": "reversing chi and its gauge orientation together preserves the oriented ledger; the signed determinant alone flips"
+    }
+  ],
+  "numerical_checks": 2,
+  "numerical": [
+    {
+      "id": "P39.G1.trace.quadrature.lower_lateral_1",
+      "status": "PASS",
+      "statement": "at z=-0.4i the formal local polynomial-weighted scalar Gaussian matches the exact moment with relative error 3.42937e-70 below tolerance 1e-45"
+    },
+    {
+      "id": "P39.G1.trace.quadrature.lower_lateral_2",
+      "status": "PASS",
+      "statement": "at z=0.2-0.4i the formal local polynomial-weighted scalar Gaussian matches the exact moment with relative error 9.16035e-65 below tolerance 1e-45"
+    }
+  ],
+  "payload": {
+    "exact_checks": 22,
+    "numerical_checks": 2,
+    "calculation": {
+      "calculation_id": "Gate1TraceGaugeFpAdmissibility",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_LOCAL_TRACE_FP_REDUCTION_EXISTS_UNCHANGED_PROPER_TIME_M2_ADDITIONAL_GAUGE_APPEND_NOT_LICENSED",
+      "verdict": "LOCAL_TRACE_GAUGE_FIBER_KEEP_UNCHANGED_PROPER_TIME_M2_APPEND_KILLED",
+      "programme_impact": "NARROW_AND_REDIRECT"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited finite m=2 provenance required by research-run-evidence/v1; this bounded calculation has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative G1.trace.* check id",
+      "authoritative_exact_check_ids": [
+        "G1.trace.canonical_pair_and_one_form",
+        "G1.trace.lorentzian_euclidean_constraint_wick_map",
+        "G1.trace.lorentzian_fp_bracket",
+        "G1.trace.fp_wick_algebraic_sign",
+        "G1.trace.fp_shell_identity",
+        "G1.trace.reflection_neck_wick_sign_control",
+        "G1.trace.homogeneous_trace_rescaling_measure",
+        "G1.trace.delta_jacobian_and_root_derivative",
+        "G1.trace.constraint_gauge_dirac_rank",
+        "G1.trace.deletion_versus_reduction_rank",
+        "G1.trace.zero_trace_shell_polynomial",
+        "G1.trace.fp_horizon_and_two_sheet_orientation",
+        "G1.trace.signed_and_absolute_root_ledgers",
+        "G1.trace.gauge_preservation_obstruction",
+        "G1.trace.m2_proper_time_gauge_rank",
+        "G1.trace.endpoint_polarization_and_reduced_action",
+        "G1.trace.endpoint_chart_transversality",
+        "G1.trace.intrinsic_clock_comparison",
+        "G1.trace.remaining_scalar_lateral_convergence",
+        "G1.trace.flat_minimum_shell_and_delta_target",
+        "G1.trace.polynomial_gaussian_formula",
+        "G1.trace.gauge_orientation_mutation_control"
+      ],
+      "authoritative_numerical_check_ids": [
+        "G1.trace.quadrature.lower_lateral_1",
+        "G1.trace.quadrature.lower_lateral_2"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "definition_commit": "2d7b89cbe4fe95caf4fa09962a9b25b1853fd4e7",
+      "semantic_derivative_fix_commit": "e8ea27782ccf8877011d7057b1c58b713c2ee282",
+      "semantic_benchmark_fix_commit": "284c0ba8852affe68521b900abdd319cc9123cfa",
+      "raw_result_commit": "e9b9fb66448b16fa735b4a9aae8704e448c81ab5",
+      "report_commit": "ccba4ab42c570f04bd5836b5b900bf3b7700d3f7",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_INPUTS.json",
+      "input_manifest_sha256": "513e14db2db7991fdda43f6049336ba092abcb7cb335c0bb696328ca746ee12d",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json",
+      "raw_result_outer_sha256": "b6215136abf6d4018456024789ad4160dac1c28af20bd32078bf8edfc0e0d5fe",
+      "raw_result_payload_sha256_without_self": "c9f8878e27a9d20d92d2807f60232aa03e1efaaa87b9c3c8e75d527d541f059e",
+      "raw_result_size_bytes": 19274,
+      "report_path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY.md",
+      "report_sha256": "6eda1a134f145242587dec674e40f7659bbc4deb16d9d22095358a3cf9c46188"
+    },
+    "attempt_ledger": {
+      "attempts": 3,
+      "attempt_1": {
+        "exit_code": 1,
+        "wall_time_seconds": 2.398762057,
+        "failed_check": "G1.trace.fp_horizon_and_two_sheet_orientation",
+        "failure_kind": "SYMPY_STRUCTURAL_EQUALITY_FALSE_NEGATIVE",
+        "result_written": false
+      },
+      "attempt_2": {
+        "exit_code": 1,
+        "wall_time_seconds": 2.719936737,
+        "failed_check": "G1.trace.flat_minimum_shell_and_delta_target",
+        "failure_kind": "SYMPY_STRUCTURAL_EQUALITY_FALSE_NEGATIVE",
+        "result_written": false
+      },
+      "attempt_3": {
+        "exit_code": 0,
+        "wall_time_seconds": 3.856629195,
+        "run_status": "VALID_RUN",
+        "result_written": true
+      },
+      "scientific_decision_changed_by_harness_fixes": false
+    },
+    "computed_facts": {
+      "homogeneous_trace_pair": "CANONICAL",
+      "local_trace_constraint_gauge": "ON_SHELL_LOCALLY_REGULAR_AT_EXISTING_SIMPLE_ROOTS_AWAY_FROM_A2V_EQ_2",
+      "naive_pa_deletion": "DEGENERATE_NOT_REDUCTION",
+      "ordinary_static_regular_classical_representative": "N_ZERO",
+      "m2_proper_time_nonzero_gauge_mode": "ALREADY_FIXED_WITHIN_INHERITED_ENDPOINT_PRESERVING_LAPSE_VARIATION",
+      "append_trace_to_unchanged_current_m2_source": "NOT_LICENSED_AS_ADDITIONAL_FP_GAUGE_IN_CURRENT_CONSTANT_LAPSE_TRUNCATION",
+      "improved_static_canonical_gauge_with_endpoint_transform": "OPEN_NOT_COMPUTED",
+      "time_dependent_trace_gauge": "OPEN_CANDIDATE_NOT_COMPUTED",
+      "formal_local_lower_lateral_scalar_fiber": "ABSOLUTELY_CONVERGENT",
+      "global_trace_gauge": "OPEN"
+    },
+    "numerical_metrics": {
+      "precision_digits": 70,
+      "relative_tolerance": "1e-45",
+      "relative_errors": [
+        "3.42936782870775732053135e-70",
+        "9.16034931809647614469886e-65"
+      ],
+      "interpretation": "formal local polynomial-Gaussian normalization sanity checks, not full BFV source or contour evidence"
+    },
+    "theorem_guards": {
+      "count": 5,
+      "status": "SEPARATELY_REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_22_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.guard.local_fp_reduction",
+        "G1.guard.signed_versus_absolute_fp",
+        "G1.guard.static_gauge_preservation",
+        "G1.guard.polynomial_gaussian",
+        "G1.guard.m2_gauge_rank_scope"
+      ]
+    },
+    "scope": {
+      "includes": [
+        "homogeneous integrated trace canonical normalization and Lorentzian/Euclidean algebraic Wick signs",
+        "local simple-root constraint-gauge reduction, FP horizon and pre-orientation versus absolute root ledgers",
+        "inherited endpoint-preserving m=2 lapse-sector rank and unchanged-source append obstruction",
+        "chosen swapped endpoint chart and formal lower-lateral local scalar Gaussian"
+      ],
+      "excludes": [
+        "global gauge orbit coverage, fundamental region, Gribov-copy theorem or determinant-line orientation",
+        "an improved static or time-dependent replacement gauge/action/endpoint-state/BFV construction",
+        "an exactly gauge-invariant replacement m=2 discretization or equivalence with the fixed-a kernel",
+        "source deformation, zero lapse, relative ends, Stokes data, global intersections, physics or TOE"
+      ]
+    },
+    "independent_read_only_review": {
+      "reviews": 3,
+      "conclusion_changing_error_after_valid_run": false,
+      "input_runner_result_hashes_recomputed": true,
+      "canonical_payload_digest_recomputed": true,
+      "all_22_exact_formulas_reviewed": true,
+      "both_numerical_errors_reviewed": true,
+      "literature_attribution_reviewed": true,
+      "static_gauge_scope_narrowed_before_valid_run": true,
+      "signed_absolute_and_endpoint_scope_reviewed": true
+    },
+    "promoted_outputs": {
+      "physical_original_cycle": null,
+      "full_joint_orientation": null,
+      "full_m2_bfv_measure": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "automatic_next": null
+    }
+  }
+}
