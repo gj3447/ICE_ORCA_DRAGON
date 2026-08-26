@@ -1,0 +1,178 @@
+{
+  "schema_version": "ice.gate1.bosonic-canonical-source-pushforward.input.v1",
+  "calculation_id": "Gate1M2BosonicCanonicalSourcePushforward",
+  "numbered_phase": null,
+  "question": "For the finite m=2 homogeneous bosonic canonical action, can one common N-i0 or N+i0 prescription integrate both real gravitational and scalar momenta first; if not, do the declared steepest Gaussian rays reproduce the configuration action and where does the negative-arm orientation glue enter?",
+  "kind": "EXACT_FINITE_M2_CANONICAL_SOURCE_FALSIFIER_WITH_HIGH_PRECISION_GAUSSIAN_CHECK",
+  "epistemic_scope": "REDUCED_BOSONIC_NONZERO_LAPSE_CONTROL_NOT_PHYSICAL_ORIGINAL_CYCLE",
+  "repository_sources": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md",
+      "role": "Lorentzian action, H_L, T=iN and p_L=i p_E convention"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE30_CONFORMAL_BFV_DETERMINANT_LINE.md",
+      "role": "signature (-,+) configuration rays and the independently normalized C/|N| versus holomorphic C/N boundary mismatch"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md",
+      "role": "finite midpoint canonical action, exact momentum elimination and Schur complement"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md",
+      "role": "declared lapse-dependent gravity/scalar momentum rays and explicit warning that the retained conformal momentum was removed in the cited source"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_RESULT.json",
+      "role": "fixed-a scalar-only ablation target on nonzero below-origin lapse arms"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Banihashemi and Jacobson, On the lapse contour, Phys. Rev. D 111, 066014 (2025), arXiv:2405.10307",
+      "url": "https://doi.org/10.1103/PhysRevD.111.066014",
+      "used_for": "full-real lapse and momentum-first below-origin prescription after the negative gravitational trace momentum is gauge-fixed away",
+      "not_used_for": "a real p_a contour, a global maximal-slicing theorem, the repository field lift, determinant orientation or n_sigma"
+    },
+    {
+      "source": "Witten, Analytic Continuation Of Chern-Simons Theory, arXiv:1001.2933",
+      "url": "https://arxiv.org/abs/1001.2933",
+      "used_for": "relative-cycle and oriented intersection framework only",
+      "not_used_for": "selection of this finite minisuperspace cycle"
+    },
+    {
+      "source": "Gibbons, Hawking and Perry, Path Integrals and the Indefiniteness of the Gravitational Action, Nucl. Phys. B 138 (1978) 141",
+      "url": "https://doi.org/10.1016/0550-3213(78)90161-X",
+      "used_for": "general conformal-factor contour obstruction only",
+      "not_used_for": "the finite m=2 orientation ledger computed here"
+    }
+  ],
+  "model": {
+    "m": 2,
+    "h": "1/2",
+    "hbar": "positive real symbol; numerical checks set hbar=1",
+    "fixed_endpoints": "a_0=a_2=a_b>0 and phi_0=phi_2=phi_b real",
+    "interior": "a_1=a_b+x with a_1>0; phi_1=phi_b+q",
+    "midpoint": "A=a_b+x/2 and Phi=phi_b+q/2",
+    "mu_g": "12*pi^2*A",
+    "mu_s": "2*pi^2*A^3",
+    "potential": "V(Phi)=3/4*(1-exp(-sqrt(2/3)*Phi))^2",
+    "potential_block": "U=2*pi^2*(-3*A+A^3*V(Phi))",
+    "lapse": "z=N-i*epsilon for the lower lateral or z=N+i*epsilon for the upper lateral; z is nonzero",
+    "wick_map": "T=i*z",
+    "canonical_action": "I_2=x*(p_a0-p_a1)+q*(p_phi0-p_phi1)+z*(p_a0^2+p_a1^2)/(4*mu_g)-z*(p_phi0^2+p_phi1^2)/(4*mu_s)-z*U"
+  },
+  "source_and_target_cycles": {
+    "lapse_first_source": "N in R oriented -infinity to +infinity, x and q real, all four momenta real, interpreted distributionally before any momentum-first interchange",
+    "ordered_orientation": "dp_a0 wedge dp_phi0 wedge dp_a1 wedge dp_phi1 wedge dx wedge dq wedge dN",
+    "liouville_momentum_measure": "product_e[(dp_a,e wedge dp_phi,e)/(2*pi*hbar)^2]",
+    "momentum_first_ray_at_z_rho_theta": [
+      "p_a,e-p_a,e^star=exp(i*(pi/4-theta/2))*y_a,e",
+      "p_phi,e-p_phi,e^star=exp(i*(-pi/4-theta/2))*y_phi,e"
+    ],
+    "configuration_ray_at_z_rho_theta": [
+      "x=exp(i*(theta/2-pi/4))*X",
+      "q=exp(i*(theta/2+pi/4))*Q"
+    ],
+    "ray_status": "DECLARED_FINITE_GAUSSIAN_THIMBLES_NOT_DERIVED_PHYSICAL_ORIGINAL"
+  },
+  "exact_plan": {
+    "stationary_momenta": [
+      "p_a0^star=-2*mu_g*x/z",
+      "p_a1^star=+2*mu_g*x/z",
+      "p_phi0^star=+2*mu_s*q/z",
+      "p_phi1^star=-2*mu_s*q/z"
+    ],
+    "onshell_action": "I_2^star=-2*mu_g*x^2/z+2*mu_s*q^2/z-z*U",
+    "configuration_action": "I_E,2=-2*mu_g*x^2/T+2*mu_s*q^2/T+T*U with i*I_2^star=-I_E,2",
+    "momentum_prefactors": [
+      "J_g=i*mu_g/(pi*hbar*z)",
+      "J_s=mu_s/(pi*i*hbar*z)",
+      "J_g*J_s=mu_g*mu_s/(pi^2*hbar^2*z^2)=24*pi^2*A^4/(hbar^2*z^2)"
+    ],
+    "all_real_lateral_test": "For z=N-i*epsilon the real p_phi quadratic is damped and real p_a grows; for z=N+i*epsilon the real p_a quadratic is damped and real p_phi grows. No one lateral sign damps both real blocks.",
+    "cap_glue": "Transport theta from 0 to plus or minus pi. The two p_a and two p_phi ray Jacobians multiply to +1, while the one x and one q configuration-ray Jacobians multiply to -1.",
+    "flat_kernel": "After the finite momentum pushforward and flat x,q convolution, the independently normalized real kernel is C/|N| while one holomorphic sheet is C/N, C=sqrt(mu_g*mu_s)/(2*pi*hbar). The negative-arm -1 is configuration/determinant-line glue, not a second momentum Jacobian.",
+    "orientation_mutation": "Reverse exactly one momentum ray orientation; the ordered Gaussian result must flip sign."
+  },
+  "numerical_plan": {
+    "precision_digits": 70,
+    "benchmark": {
+      "a_b": "3.5668031935672753",
+      "phi_b": "1.0185809464006637",
+      "x": "0.03125",
+      "q": "-0.046875",
+      "hbar": "1"
+    },
+    "lateral_points": [
+      ["0.6", "-0.15"],
+      ["-0.6", "-0.15"],
+      ["0.6", "0.15"],
+      ["-0.6", "0.15"]
+    ],
+    "check": "Parameterize the original square-completion remainder on each centered steepest ray, perform four independent one-dimensional high-precision quadratures, and compare their product with J_g*J_s.",
+    "relative_tolerance": "1e-45"
+  },
+  "decision_table": [
+    {
+      "condition": "no common all-real lateral regulator exists, both centered ray blocks reproduce the exact configuration pushforward, momentum cap glue is +1, configuration cap glue is -1, and the scale-factor relative ends remain unproved",
+      "verdict": "CONFORMAL_PRESCRIPTION_AND_DETLINE_GLUE_REQUIRED",
+      "programme_impact": "NARROW",
+      "meaning": "Reject the literal all-real momentum-first source link; retain the declared finite Gaussian pushforward only as a branch requiring a conformal prescription and independent determinant-line/BFV completion."
+    },
+    {
+      "condition": "one common lateral prescription damps every real momentum block and the exact pushforward and orientation checks pass",
+      "verdict": "ALL_REAL_MOMENTUM_SOURCE_LINK_KEEP",
+      "programme_impact": "KEEP",
+      "meaning": "The reduced all-real source survives this necessary convergence test, without establishing the full relative ends or BFV cycle."
+    },
+    {
+      "condition": "a centered Gaussian ray fails to reproduce the exact Schur/Legendre pushforward or the independently computed orientation ledger",
+      "verdict": "KILL_DECLARED_M2_GAUSSIAN_PUSHFORWARD",
+      "programme_impact": "KILL",
+      "meaning": "Reject this finite m=2 canonical-to-configuration construction."
+    },
+    {
+      "condition": "the exact and independent numerical checks do not select one of the prior rows",
+      "verdict": "INCONCLUSIVE",
+      "programme_impact": "OPEN",
+      "meaning": "Keep the source-link problem open without changing a physical or global claim."
+    }
+  ],
+  "computed_scope": [
+    "finite m=2 midpoint canonical algebra at nonzero complex lapse",
+    "real-axis convergence signs for both lateral prescriptions",
+    "centered Gaussian momentum pushforward and ordered ray orientation",
+    "lower and upper half-turn momentum/configuration glue",
+    "flat kinetic C/|N| versus C/N ablation"
+  ],
+  "not_computed": [
+    "deformation of the lapse-first all-real distribution to the declared momentum thimbles",
+    "a_1=0, A=0, a_1 to infinity or mixed scale-field relative ends",
+    "nonlinear configuration-cycle admissibility with the Starobinsky potential",
+    "gauge fixing of p_a, Faddeev-Popov measure, BFV ghosts or absolute determinant orientation",
+    "zero-lapse full distribution, saddle/upward-cycle/Stokes census, cutoff removal or continuum limit",
+    "physical_original_cycle, global_n_sigma, physics claim or TOE claim"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "physical_original_cycle": null,
+    "full_joint_orientation": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
