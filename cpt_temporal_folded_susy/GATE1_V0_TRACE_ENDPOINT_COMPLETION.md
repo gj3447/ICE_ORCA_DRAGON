@@ -31,7 +31,8 @@ promoted construction.  The result closes the local triangle formed by
 This narrows the replacement endpoint route beyond the preceding result,
 which only killed appending a trace delta to the unchanged proper-time source.
 It does **not** construct a full off-shell BFV action, normalized endpoint
-states, the old fixed-\(a\) kernel equivalence, the full-real-lapse projector,
+states, the old fixed-\(a\) kernel equivalence, the full-real-lapse
+distributional \(\delta(\hat C)\) physical-inner-product kernel,
 a global fundamental region, a physical cycle, physics, or a TOE.
 
 The successful execution passed 16 exact checks, seven separately scoped
@@ -55,8 +56,11 @@ They do not construct the endpoint action used below.  Their degenerate
 spatially flat homogeneous \(V=0\) example does not apply directly: the
 present control retains the closed-FRW curvature term \(-6\pi^2a\).
 
-Marolf's full-real-lapse constraint projector remains the comparison target.
-No projector matrix element or lapse-contour equivalence is calculated here.
+Marolf's full-real-lapse distributional \(\delta(\hat C)\)
+physical-inner-product or group-averaging kernel remains the comparison
+target.  On continuous zero spectrum this is not asserted to be an idempotent
+projection operator.  No such kernel or lapse-contour equivalence is
+calculated here.
 
 Primary sources:
 
@@ -338,20 +342,40 @@ The raw canonical pure-gauge orbit action follows from the shell one-form:
 S_{0,\rm raw}^{\rm td}=P_2-P_1=\frac14.
 \]
 
-Since \(F_i=-P_i\), the actual directed endpoint correction is
+Since \(F_i=-P_i\), the directed finite-flow boundary quantity is
 
 \[
 [F]_{1}^{2}=F_2-F_1=-\frac14.
 \]
 
-The relational action therefore closes with an explicit orientation ledger:
+It first gives the raw action of the endpoint-flowed static representative:
+
+\[
+S_{0,\rm raw}^{\rm static}
+=S_{0,\rm raw}^{\rm td}+[F]_{1}^{2}
+=0.
+\]
+
+With the HTV improved-static convention, the finite boundary term is then
+subtracted from that raw static action:
+
+\[
+S_{\rm HTV}^{\rm static}
+=S_{0,\rm raw}^{\rm static}-[F]_{1}^{2}
+=\frac14.
+\]
+
+The fixed-\(\Phi_*\) relational variational problem is a third ledger:
 
 \[
 S_{\rm rel}
-=S_{0,\rm raw}^{\rm td}+[F]_{1}^{2}
 =S_{0,\rm raw}^{\rm td}-[P]_{1}^{2}
 =0.
 \]
+
+The numerical equality
+\(S_{0,\rm raw}^{\rm static}=S_{\rm rel}=0\) on this pure-gauge benchmark
+does not identify the two variational problems or their endpoint states.
 
 ## 7. Independent numerical control
 
@@ -404,17 +428,24 @@ authority.
 
 One later command was rejected by the control plane before Python execution
 because this report draft was untracked inside the calculation directory.  It
-changed no result.  After preserving the draft outside the core directory,
-the final frozen invocation exited 0 after about 3.01 seconds and wrote one
-20,437 byte result.  Independent post-run checks verified all stored exact,
-numerical, and theorem-guard statuses, the zero scientific-NONPASS count, the
-input and runner hashes, and the canonical payload self-hash.
+changed no result.  After preserving the draft outside the core directory, a
+post-Ragnarok frozen invocation exited 0.
+
+A final primary-source audit then separated the raw endpoint-flow action, the
+HTV improved-static action, and the relational action exactly as above, and
+replaced overly strong projector terminology for Marolf's continuous-spectrum
+\(\delta(\hat C)\) kernel.  Commit `541edc8` froze that distinction before
+the final result was regenerated.  The last frozen invocation exited 0 after
+about 3.05 seconds and wrote one 21,615 byte result; the local relational
+verdict did not change.  Independent post-run checks verified all stored
+exact, numerical, and theorem-guard statuses, the zero scientific-NONPASS
+count, the input and runner hashes, and the canonical payload self-hash.
 
 ```text
-input SHA-256   2a7d31d99ae61ee7877e07aeda98fc8e771952880a5d7bbd5a2cc4d4bf4c01a5
-runner SHA-256  fa5e0df0129cc77a1df3a8c1598a81a39f582af29582d11fe252acdf4a3a508d
-result SHA-256  b39aea33cdde01b83768323eb5bbae2c126f20b56cd1f40aef1778e6cbd640e3
-payload hash    ea97b7c1d06a3a9d735bd1cb4974d4299d9366b9029bb1b8db50db24456210b8
+input SHA-256   f8ea44a52139e74eda81e0fbaf7d7c60cd1d46342c3cc824b608c35b997871d6
+runner SHA-256  36cb11409760f39eb34678736903c705127188fc60a1a76e4de5059e20d5ba2a
+result SHA-256  7e16ff45f14078dea9fa0726e2489d22299aa35e573fa89047143794712be28a
+payload hash    5a030c04d56d91e137bf34a623f8382df248b4974541d59571152f43988cff68
 ```
 
 ## 9. What changed, and what remains open
@@ -441,7 +472,8 @@ Still-open hypotheses and constructions:
 - a normalized endpoint-state transform and full replacement BFV measure;
 - a bounded replacement-source discretization distinct from the old
   constant-lapse fixed-\(a\) source;
-- comparison with the full-real-lapse projector and regulator removal;
+- comparison with the full-real-lapse distributional \(\delta(\hat C)\)
+  physical-inner-product kernel and regulator removal;
 - global orbit coverage, determinant-line orientation, and a physical
   original cycle.
 
