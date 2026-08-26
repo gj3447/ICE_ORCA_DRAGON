@@ -377,20 +377,26 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
         "the ordered map (chi,C,Phi_star,p) has Jacobian D, giving dPhi_star*dp after delta(C) delta(chi) D on D>0",
     )
 
-    q_star_p_shell = sp.simplify(
-        (sp.diff(constraint, trace_p) / (12 * sp.pi**2 * a)).subs(
-            p**2, shell_p_squared
-        )
+    q_star_p_shell = sp.diff(constraint, trace_p) / (
+        12 * sp.pi**2 * a
     )
-    q_star_scalar_shell = sp.simplify(
-        (sp.diff(constraint, p) / (12 * sp.pi**2 * a)).subs(
-            p**2, shell_p_squared
-        )
+    q_star_scalar_shell = sp.diff(constraint, p) / (
+        12 * sp.pi**2 * a
     )
     audit.check_exact(
         "G1.endpoint.implicit_root_derivatives",
-        sp.simplify(q_star_p_trace - q_star_p_shell) == 0
-        and sp.simplify(q_star_p - q_star_scalar_shell) == 0,
+        sp.simplify(
+            (q_star_p_trace - q_star_p_shell).subs(
+                p**2, shell_p_squared
+            )
+        )
+        == 0
+        and sp.simplify(
+            (q_star_p - q_star_scalar_shell).subs(
+                p**2, shell_p_squared
+            )
+        )
+        == 0,
         "implicit differentiation gives Q_star,y=C_y/D for y=P,p on the shell",
     )
 
@@ -406,14 +412,19 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
 
     audit.check_exact(
         "G1.endpoint.reduced_full_flow_match",
-        sp.simplify(f_dot * q_star_p - reconstructed_lapse * sp.diff(constraint, p)).subs(
-            p**2, shell_p_squared
+        sp.simplify(
+            (
+                f_dot * q_star_p
+                - reconstructed_lapse * sp.diff(constraint, p)
+            ).subs(p**2, shell_p_squared)
         )
         == 0
         and sp.simplify(
-            f_dot * q_star_p_trace
-            - reconstructed_lapse * sp.diff(constraint, trace_p)
-        ).subs(p**2, shell_p_squared)
+            (
+                f_dot * q_star_p_trace
+                - reconstructed_lapse * sp.diff(constraint, trace_p)
+            ).subs(p**2, shell_p_squared)
+        )
         == 0,
         "H_red=dot(f)*Q_star reconstructs the full constrained phi and Q velocities on shell",
     )
