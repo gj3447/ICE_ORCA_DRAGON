@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-26T15:17:19Z",
+  "updated_at_utc": "2026-08-26T15:59:23Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -65,7 +65,7 @@
       "includes": [
         "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, and still-open replacement-gauge/zero-lapse/full-joint boundary",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one frozen closed-FRW V0 classical local on-shell relational endpoint action, and the still-open off-shell/quantum/BFV/delta(C)-kernel/zero-lapse/full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -140,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime without one-shot receipts. The straight-line KILL closes only its anchor-through homogeneous class, and the ordered scalar control keeps only a nonzero-arm link. The finite bosonic control shows that neither one common lateral sign absolutely damps unchanged real p_a,p_phi axes. A later exact trace-gauge control keeps a genuine local simple-root reduction and its lower-lateral scalar fiber, but kills merely appending a static trace delta/FP factor to the unchanged proper-time fixed-a m=2 source. A separately rederived replacement gauge, action, endpoints and BFV measure, plus source deformation, zero lapse, the physical joint cycle and global vector, remain open or null. Gate 1 stays open.",
+      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime without one-shot receipts. The straight-line KILL closes only its anchor-through homogeneous class, and the ordered scalar control keeps only a nonzero-arm link. The finite bosonic control shows that neither one common lateral sign absolutely damps unchanged real p_a,p_phi axes. A later trace-gauge control keeps a genuine local simple-root reduction and kills merely appending a static trace delta/FP factor to the unchanged proper-time fixed-a m=2 source. Its closed-FRW V0 successor keeps one narrower classical local on-shell fixed-Phi relational endpoint action, with raw-static, HTV improved-static, relational and auxiliary mixed-polarization ledgers separated. A full off-shell chart, normalized quantum endpoint states, replacement ghost/BFV source, old fixed-a equality, full-real-lapse distributional delta(C) physical-inner-product kernel, zero lapse, physical joint cycle and global vector remain open or null. Gate 1 stays open and automatic_next is null.",
       "refs": [
         {
           "graph": "cpt",
@@ -180,7 +180,7 @@
         },
         {
           "graph": "cpt",
-          "node": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT"
+          "node": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION"
         },
         {
           "graph": "cpt",
@@ -212,7 +212,7 @@
     },
     {
       "question": "Has any of this been promoted into an external KG or a physics verdict?",
-      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 36 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
+      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 37 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
       "refs": [
         {
           "graph": "hypercomplex",
@@ -259,7 +259,7 @@
         {
           "graph": "cpt",
           "node": "open:gate1-original-cycle-signed-global-intersections",
-          "why": "The unresolved global bottleneck downstream of the open replacement trace-gauge source"
+        "why": "The unresolved global bottleneck downstream of the locally completed V0 relational action and still-open off-shell, endpoint-state, ghost/BFV, delta(C)-kernel and replacement-source construction"
         }
       ]
     },
@@ -389,7 +389,7 @@
       "path": "cpt_temporal_folded_susy",
       "status": "INDEXED",
       "graph": "cpt",
-      "reason": "Phase 16-56 claim/evidence history is detailed, including the Phase-56 terminal boundary; indexing is not a physics promotion."
+      "reason": "Phase 16-56 claim/evidence history and the bounded non-numbered Gate-1 lineage through the V0 local on-shell relational endpoint action are detailed; indexing is not a physics promotion, and the full BFV/delta(C)/global boundary remains open."
     },
     {
       "path": "docs",

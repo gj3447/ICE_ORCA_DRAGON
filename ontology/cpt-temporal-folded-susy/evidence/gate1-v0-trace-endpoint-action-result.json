@@ -1,0 +1,323 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_TRACE_ENDPOINT_ACTION_20260826",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-26T15:59:23.377Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py",
+    "sha256": "36cb11409760f39eb34678736903c705127188fc60a1a76e4de5059e20d5ba2a",
+    "introduced_in_commit": "541edc8e75ce8b48a06a825ebc90c7e2cd3737ef"
+  },
+  "exact_checks": 16,
+  "checks": [
+    {
+      "id": "P39.G1.endpoint.trace_pair",
+      "status": "PASS",
+      "statement": "Q=2*log(a), P=a*p_a/2 is canonical and preserves the Liouville one-form"
+    },
+    {
+      "id": "P39.G1.endpoint.closed_frw_v0_shell",
+      "status": "PASS",
+      "statement": "C=0 is exactly R=3*p^2-2*P^2=72*pi^4*a^4 and Q_star=log(R/(72*pi^4))/2"
+    },
+    {
+      "id": "P39.G1.endpoint.trace_fp_off_and_on_shell",
+      "status": "PASS",
+      "statement": "D={P,C}=-C_Q and D|C=0=12*pi^2*a is strictly positive for a>0"
+    },
+    {
+      "id": "P39.G1.endpoint.dirac_coordinate_derivatives",
+      "status": "PASS",
+      "statement": "the local relational coordinate has the exact P and p derivatives required on R>0"
+    },
+    {
+      "id": "P39.G1.endpoint.dirac_invariance_on_shell",
+      "status": "PASS",
+      "statement": "{Phi_star,C}=0 on the closed-FRW V=0 constraint shell"
+    },
+    {
+      "id": "P39.G1.endpoint.shell_one_form",
+      "status": "PASS",
+      "statement": "on shell P*dQ_star+p*dphi=p*dPhi_star+dP, so the local relational endpoint potential is B_red=P"
+    },
+    {
+      "id": "P39.G1.endpoint.mixed_polarization_boundary_action",
+      "status": "PASS",
+      "statement": "the separate auxiliary S-[P*Q] problem has fixed-(P,phi) endpoint variation -Q*dP+p*dphi and H_red=+dot(f)*Q_star after P=f(s)"
+    },
+    {
+      "id": "P39.G1.endpoint.static_chart_transversality",
+      "status": "PASS",
+      "statement": "the original fixed-Q chart is not transverse at static P=0, while the swapped trace chart has derivative D where D is nonzero"
+    },
+    {
+      "id": "P39.G1.endpoint.finite_boundary_generator_integrand",
+      "status": "PASS",
+      "statement": "(P*C_P+p*C_p-C)/D=1 on shell, so the finite endpoint generator from P_i to zero is F_i=-P_i"
+    },
+    {
+      "id": "P39.G1.endpoint.local_fp_measure_jacobian",
+      "status": "PASS",
+      "statement": "the ordered map (chi,C,Phi_star,p) has Jacobian D and reduces the local FP measure to dPhi_star*dp on D>0"
+    },
+    {
+      "id": "P39.G1.endpoint.implicit_root_derivatives",
+      "status": "PASS",
+      "statement": "implicit differentiation gives Q_star,y=C_y/D for y=P,p on the shell"
+    },
+    {
+      "id": "P39.G1.endpoint.time_dependent_gauge_preservation",
+      "status": "PASS",
+      "statement": "dot(P)=N*D=dot(f), hence N=dot(f)/D and is positive on the frozen D>0 and dot(f)>0 component"
+    },
+    {
+      "id": "P39.G1.endpoint.reduced_full_flow_match",
+      "status": "PASS",
+      "statement": "the auxiliary H_red=dot(f)*Q_star reconstructs the full constrained phi and Q velocities on shell"
+    },
+    {
+      "id": "P39.G1.endpoint.frozen_component_margins",
+      "status": "PASS",
+      "statement": "on p=+1 and 0<=P<=1/2, dR/dP=-4P and R>=5/2, while dP/dmu=D>0 gives one monotone local static hit"
+    },
+    {
+      "id": "P39.G1.endpoint.orbit_triangle_orientation",
+      "status": "PASS",
+      "statement": "T+mu_2-mu_1=0 follows exactly from oriented path concatenation for the same dP/D one-form"
+    },
+    {
+      "id": "P39.G1.endpoint.action_triangle",
+      "status": "PASS",
+      "statement": "S0_raw_static=S0_raw_td+[F]=0 after endpoint flow, S_HTV_static=S0_raw_static-[F]=1/4, and the distinct fixed-Phi_star relational action S0_raw_td-[P]=0"
+    }
+  ],
+  "numerical_checks": 5,
+  "numerical": [
+    {
+      "id": "P39.G1.endpoint.quadrature.T",
+      "status": "PASS",
+      "statement": "tanh-sinh and 48-node Gauss-Legendre T agree with relative error 7.639e-91 below 1e-60"
+    },
+    {
+      "id": "P39.G1.endpoint.quadrature.mu1",
+      "status": "PASS",
+      "statement": "tanh-sinh and 48-node Gauss-Legendre mu1 agree with relative error 6.509e-91 below 1e-60"
+    },
+    {
+      "id": "P39.G1.endpoint.quadrature.mu2",
+      "status": "PASS",
+      "statement": "tanh-sinh and 48-node Gauss-Legendre mu2 agree with relative error 1.443e-87 below 1e-60"
+    },
+    {
+      "id": "P39.G1.endpoint.quadrature.tanh_sinh_orbit_closure",
+      "status": "PASS",
+      "statement": "the tanh-sinh oriented endpoint triangle closes to working-precision zero below 1e-60"
+    },
+    {
+      "id": "P39.G1.endpoint.quadrature.gauss_legendre_orbit_closure",
+      "status": "PASS",
+      "statement": "the 48-node Gauss-Legendre oriented endpoint triangle closes with absolute residual 4.301e-89 below 1e-60"
+    }
+  ],
+  "payload": {
+    "exact_checks": 16,
+    "numerical_checks": 5,
+    "calculation": {
+      "calculation_id": "Gate1V0TraceEndpointCompletion",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION_KEEP_FULL_BFV_AND_DELTA_C_KERNEL_OPEN",
+      "verdict": "KEEP_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "programme_impact": "NARROW_LOCAL_ENDPOINT_ROUTE_NO_AUTOMATIC_SUCCESSOR"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited finite m=2 Gate-1 provenance required by research-run-evidence/v1; this bounded calculation has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative G1.endpoint.* check id",
+      "authoritative_exact_check_ids": [
+        "G1.endpoint.trace_pair",
+        "G1.endpoint.closed_frw_v0_shell",
+        "G1.endpoint.trace_fp_off_and_on_shell",
+        "G1.endpoint.dirac_coordinate_derivatives",
+        "G1.endpoint.dirac_invariance_on_shell",
+        "G1.endpoint.shell_one_form",
+        "G1.endpoint.mixed_polarization_boundary_action",
+        "G1.endpoint.static_chart_transversality",
+        "G1.endpoint.finite_boundary_generator_integrand",
+        "G1.endpoint.local_fp_measure_jacobian",
+        "G1.endpoint.implicit_root_derivatives",
+        "G1.endpoint.time_dependent_gauge_preservation",
+        "G1.endpoint.reduced_full_flow_match",
+        "G1.endpoint.frozen_component_margins",
+        "G1.endpoint.orbit_triangle_orientation",
+        "G1.endpoint.action_triangle"
+      ],
+      "authoritative_numerical_check_ids": [
+        "G1.endpoint.quadrature.T",
+        "G1.endpoint.quadrature.mu1",
+        "G1.endpoint.quadrature.mu2",
+        "G1.endpoint.quadrature.tanh_sinh_orbit_closure",
+        "G1.endpoint.quadrature.gauss_legendre_orbit_closure"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "definition_commit": "d14d15d4b18f3b37e2a76572c5100bff3409f153",
+      "semantic_shell_fix_commit": "e1485deca4fdb80ac9f9b2a104cdc12d08523ddb",
+      "provisional_result_commit": "46a9631ce002b852fbb1b74958d37ea7c66ad63c",
+      "terminal_nonpass_and_scope_fix_commit": "b3d7946a6612ffe4f448a8e2cece4978ad09a0d9",
+      "htv_relational_action_and_delta_c_scope_fix_commit": "541edc8e75ce8b48a06a825ebc90c7e2cd3737ef",
+      "final_raw_result_commit": "aab4f4cd0392d8322a765d37df4b0f0842fb30a8",
+      "report_commit": "7cf27050ebeb045c04b4921d7bd22ac9dde35dd5",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION_INPUTS.json",
+      "input_manifest_sha256": "f8ea44a52139e74eda81e0fbaf7d7c60cd1d46342c3cc824b608c35b997871d6",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION_RESULT.json",
+      "raw_result_outer_sha256": "7e16ff45f14078dea9fa0726e2489d22299aa35e573fa89047143794712be28a",
+      "raw_result_payload_sha256_without_self": "5a030c04d56d91e137bf34a623f8382df248b4974541d59571152f43988cff68",
+      "raw_result_size_bytes": 21615,
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION.md",
+      "report_sha256": "bd43d0698f1a74533ee4af7f5b85998a9c103edd510a36248912c3ed9bf431ac"
+    },
+    "attempt_ledger": {
+      "command_attempts": 5,
+      "attempt_1": {
+        "exit_code": 1,
+        "wall_time_seconds": 2.221337819,
+        "failed_check": "G1.endpoint.implicit_root_derivatives",
+        "failure_kind": "SHELL_SUBSTITUTION_APPLIED_TO_ONLY_ONE_SIDE_OF_SYMBOLIC_RESIDUAL",
+        "result_written": false
+      },
+      "attempt_2": {
+        "exit_code": 0,
+        "wall_time_seconds": 2.952961644,
+        "run_status": "VALID_RUN",
+        "result_written": true,
+        "status": "PROVISIONAL_SUPERSEDED_AFTER_INDEPENDENT_RAGNAROK_AND_SCOPE_AUDIT"
+      },
+      "attempt_3": {
+        "exit_code": 2,
+        "python_execution_started": false,
+        "failure_kind": "CONTROL_PLANE_RESEARCH_CORE_DIRTY_REPORT_DRAFT",
+        "result_written": false
+      },
+      "attempt_4": {
+        "exit_code": 0,
+        "wall_time_seconds": 3.010845933,
+        "run_status": "VALID_RUN",
+        "result_written": true,
+        "status": "SUPERSEDED_AFTER_PRIMARY_SOURCE_ACTION_LEDGER_AUDIT"
+      },
+      "attempt_5": {
+        "exit_code": 0,
+        "wall_time_seconds": 3.04780072,
+        "run_status": "VALID_RUN",
+        "result_written": true,
+        "status": "FINAL_FROZEN_RESULT"
+      },
+      "scientific_decision_changed_by_harness_fixes": false,
+      "epistemic_scope_narrowed_after_independent_review": true
+    },
+    "ragnarok_termination_audit": {
+      "scientific_nonpass_policy": "RECORD_VALID_TERMINAL_RESULT",
+      "integrity_or_schema_failure_policy": "RAISE_WITHOUT_RESULT",
+      "reachable_frozen_rows": [
+        "KEEP_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+        "KILL_IMPROVED_STATIC_IMPLEMENTATION_KEEP_TIME_DEPENDENT_CANDIDATE",
+        "KILL_BOTH_ON_FIXED_BENCHMARK",
+        "INCONCLUSIVE"
+      ],
+      "arbitrary_arguments": "REJECTED",
+      "open_dependencies": "NOT_EXECUTION_AUTHORIZATION",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    },
+    "computed_facts": {
+      "constraint_component": "REGULAR_P_POSITIVE_R_POSITIVE_D_POSITIVE",
+      "local_relational_endpoint_coordinate": "EXISTS",
+      "on_shell_endpoint_potential": "B_RED_EQUALS_P",
+      "finite_static_hit": "UNIQUE_ON_FROZEN_COMPONENT",
+      "finite_endpoint_generator": "F_I_EQUALS_MINUS_P_I",
+      "local_fp_measure": "REDUCES_TO_DPHI_STAR_DP",
+      "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D",
+      "reduced_full_flow": "MATCHES_ON_SHELL_IN_DISTINCT_AUXILIARY_MIXED_POLARIZATION_PROBLEM",
+      "orbit_triangle": "CLOSES",
+      "relational_action_triangle": "CLOSES",
+      "raw_static_action_after_endpoint_flow": "ZERO_ON_FROZEN_PURE_GAUGE_ORBIT",
+      "htv_improved_static_action": "DELTA_P_DISTINCT_FROM_RELATIONAL_ACTION",
+      "full_off_shell_bfv_completion": "NOT_COMPUTED",
+      "full_real_lapse_delta_C_kernel": "NOT_COMPUTED",
+      "normalized_quantum_endpoint_state_transform": "NOT_COMPUTED",
+      "old_fixed_a_kernel_equivalence": "NOT_COMPUTED"
+    },
+    "numerical_metrics": {
+      "precision_digits": 90,
+      "relative_tolerance": "1e-60",
+      "T": "0.015061791827002973963714448295444799927360029737717",
+      "mu1": "-0.014729604078831877086499170141806851540232259723326",
+      "mu2": "-0.029791395905834851050213618437251651467592289461043",
+      "gauss_legendre_orbit_closure": "4.30063434164969192993277e-89",
+      "interpretation": "cross-method control of one smooth finite-flow integrand, not an independent physical replication"
+    },
+    "theorem_guards": {
+      "count": 7,
+      "status": "SEPARATELY_REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_16_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.endpoint.guard.local_shell_completion",
+        "G1.endpoint.guard.endpoint_state_scope",
+        "G1.endpoint.guard.variational_problem_separation",
+        "G1.endpoint.guard.finite_flow_scope",
+        "G1.endpoint.guard.signed_absolute_fp",
+        "G1.endpoint.guard.curved_v0_scope",
+        "G1.endpoint.guard.delta_c_kernel_boundary"
+      ]
+    },
+    "scope": {
+      "includes": [
+        "the frozen p=+1 closed-FRW V=0 component with 0<=P<=1/2, R>=5/2 and D>0",
+        "the weak relational coordinate, on-shell one-form and classical endpoint potential B_red=P",
+        "the finite endpoint flow F_i=-P_i, raw static action after flow, HTV improved-static ledger, and separately oriented relational action triangle",
+        "the local canonical-limit FP Jacobian and time-dependent same-constraint-orbit control",
+        "the distinct auxiliary fixed-(P,phi) reduced Hamiltonian and its on-shell full-flow velocity match"
+      ],
+      "excludes": [
+        "a full off-shell canonical transformation or normalized quantum endpoint-state transform",
+        "ghost, antighost and multiplier endpoint conditions or a full replacement BFV measure",
+        "equivalence with the old fixed-a kernel, a replacement lattice, zero-lapse distribution or full-real-lapse delta(C) physical-inner-product kernel",
+        "global orbit coverage, a fundamental region, determinant-line orientation or a physical original cycle",
+        "global n_sigma, physics claim, TOE claim or automatic successor"
+      ]
+    },
+    "independent_read_only_review": {
+      "reviews_completed_before_snapshot": 3,
+      "mathematics_and_signs_recomputed": true,
+      "literature_and_bfv_scope_reviewed": true,
+      "conclusion_changing_mathematical_error": false,
+      "ragnarok_terminal_nonpass_blocker_repaired": true,
+      "relational_and_mixed_variational_problems_separated": true,
+      "raw_static_htv_improved_and_relational_action_ledgers_separated": true,
+      "continuous_spectrum_delta_c_projector_overstatement_removed": true,
+      "input_runner_result_hashes_recomputed": true,
+      "canonical_payload_digest_recomputed": true
+    },
+    "promoted_outputs": {
+      "physical_original_cycle": null,
+      "full_joint_orientation": null,
+      "determinant_line_orientation": null,
+      "full_m2_bfv_measure": null,
+      "full_replacement_bfv_measure": null,
+      "full_real_lapse_delta_C_kernel": null,
+      "endpoint_state_transform": null,
+      "old_fixed_a_kernel_equivalence": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "automatic_next": null
+    }
+  }
+}

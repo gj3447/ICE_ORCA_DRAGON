@@ -15,9 +15,9 @@ The [collection manifest](./collection.json) uses
 [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 and non-numbered Gate-1 run snapshots use
 [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-26T15:17:19Z` collection update, the three graphs have 925 nodes, 2652 edges,
-and 233 claims: 137 supported, 91 contradicted, and 5 inconclusive. Validation verifies all 218 stored
-hashes (208 artifacts and 10 policies); 36 unresolved external bridges remain explicit warnings. The
+At the recorded `2026-08-26T15:59:23Z` collection update, the three graphs have 931 nodes, 2677 edges,
+and 234 claims: 138 supported, 91 contradicted, and 5 inconclusive. Validation verifies all 220 stored
+hashes (210 artifacts and 10 policies); 37 unresolved external bridges remain explicit warnings. The
 Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
@@ -115,7 +115,17 @@ horizon and formal lower-lateral convergence of the remaining scalar fiber. It c
 shortcut of appending a static trace delta/FP factor to the unchanged proper-time fixed-\(a\), \(m=2\)
 source. A replacement gauge, action, endpoint-state problem and BFV measure remain an open dependency,
 not an automatic next run; `automatic_next=null`, Gate 1 remains open, and all physical/global/TOE
-outputs remain null. None of this supplies scale-factor/joint ends, regulator removal, a complete census, an original cycle,
+outputs remain null. Its bounded closed-FRW \(V=0\) successor then records 16 exact `PASS` entries,
+seven reviewed analytic scope guards, and five numerical `PASS` checks from six high-precision
+quadratures. On the frozen \(p_\phi=+1\), \(0\le P\le1/2\), \(R>0\), \(D>0\) component it supports
+one classical local on-shell fixed-\(\Phi_*\) relational endpoint action, finite local static hit, local
+FP reduction, and time-dependent same-orbit control. The raw-static, HTV improved-static, relational,
+and auxiliary mixed-polarization actions are separate ledgers. All four frozen scientific decision
+rows terminate as valid results, and scientific NONPASS no longer creates a diagnostic descendant.
+The full off-shell chart, normalized quantum endpoint states, replacement ghost/BFV source, old
+fixed-\(a\) equality and full-real-lapse distributional \(\delta(C)\) physical-inner-product kernel
+remain open; `automatic_next=null`, Gate 1 stays open, and global/physics/TOE outputs stay null. None of
+this supplies scale-factor/joint ends, regulator removal, a complete census, an original cycle,
 a global coefficient, physics, or TOE. These counts describe repository records, not independent
 replications or global scientific confidence.
 
@@ -137,6 +147,8 @@ validation without reopening artifact payloads; intuitive lookup therefore does 
 ./ice ontology trace cpt::claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD --depth 2
 ./ice ontology show cpt::claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE
 ./ice ontology trace cpt::claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION --depth 2
+./ice ontology show cpt::claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION
+./ice ontology trace cpt::claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION --depth 2
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2

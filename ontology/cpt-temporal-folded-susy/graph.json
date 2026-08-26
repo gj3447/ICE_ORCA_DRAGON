@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-26T15:17:19Z",
+  "updated_at_utc": "2026-08-26T15:59:23Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -445,11 +445,12 @@
     },
     {
       "question": "Can the trace gauge now remove the negative p_a Gaussian and repair the finite m=2 source?",
-      "answer": "Only locally, and not by deletion or by appending another FP delta to the unchanged source. The integrated homogeneous trace pair gives a genuine constraint-gauge reduction on existing simple shell-root charts with a>0 and a^2 V != 2; the remaining real p_phi fiber is lower-lateral Gaussian convergent. But the inherited m=2 source already fixes its sole endpoint-preserving nonzero lapse-gauge mode in proper-time gauge, and its fixed-a endpoint problem cannot be reused unchanged. A separately rederived improved-static or time-dependent replacement gauge/action/BFV/endpoint-state construction remains open, so Gate 1 and all physical/TOE outputs stay open or null.",
+      "answer": "Only locally, and not by deletion or by appending another FP delta to the unchanged source. The integrated homogeneous trace pair gives a genuine constraint-gauge reduction on existing simple shell-root charts with a>0 and a^2 V != 2; the remaining real p_phi fiber is lower-lateral Gaussian convergent. The next closed-FRW V=0 control constructs a classical local on-shell fixed-Phi_star relational endpoint action, finite local static hit and time-dependent same-constraint-orbit control on one frozen p-positive component. The inherited fixed-a m=2 endpoint problem still cannot be reused unchanged, and the off-shell chart, quantum endpoint states, ghost/BFV replacement source, full-real-lapse delta(C) kernel and every global/physical output remain open or null.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
-        "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT"
+        "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+        "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION"
       ]
     }
   ],
@@ -1052,8 +1053,8 @@
     },
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
-      "title": "From the anchored straight-line KILL to the trace-gauge replacement boundary",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge follow-up keeps a genuine local simple-root reduction and lower-lateral scalar fiber, but kills appending that gauge to the unchanged proper-time/fixed-a source. Stop at the still-open replacement action/gauge/BFV/endpoint-state construction, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
+      "title": "From the anchored straight-line KILL to the local trace endpoint-action boundary",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The first trace-gauge follow-up keeps a genuine local simple-root reduction and lower-lateral scalar fiber while killing append-to-unchanged-source. The closed-FRW V=0 follow-up then keeps a classical local on-shell relational endpoint action on one p-positive component. Stop at the still-open off-shell chart, quantum endpoint state, ghost/BFV replacement source, full-real-lapse delta(C) kernel, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1078,6 +1079,8 @@
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
         "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
+        "concept:gate1-v0-trace-relational-endpoint-action-control",
+        "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
         "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -7002,7 +7005,7 @@
       "id": "open:gate1-original-cycle-signed-global-intersections",
       "type": "open_problem",
       "title": "Gate 1 — transport the original cycle and fix signed global intersections",
-      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The later finite bosonic canonical control proves that one common N-i0 or N+i0 cannot absolutely damp unchanged real p_a,p_phi axes; its declared centered complex rays reproduce the finite Gaussian pushforward with momentum cap glue +1 and configuration glue -1, but no source-to-thimble deformation or physical determinant line follows. A source-derived original class must still specify the p_a gauge/FP/BFV completion, zero lapse, scale-factor and mixed ends, regulator removal, connector intersections, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
+      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The later finite bosonic canonical control proves that one common N-i0 or N+i0 cannot absolutely damp unchanged real p_a,p_phi axes; its declared centered complex rays reproduce the finite Gaussian pushforward with momentum cap glue +1 and configuration glue -1, but no source-to-thimble deformation or physical determinant line follows. The closed-FRW V=0 trace follow-up now supplies one classical local on-shell relational endpoint action on a frozen p-positive component, but no off-shell chart, quantum endpoint state, full BFV source, full-real-lapse delta(C) kernel or old fixed-a equality. A source-derived original class must still specify those local-to-source debts plus zero lapse, scale-factor and mixed ends, regulator removal, connector intersections, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
       "state": "OPEN",
       "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
     },
@@ -10087,9 +10090,9 @@
       "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "type": "open_problem",
       "title": "Derive the replacement trace-gauge source, then extend through zero lapse and the full joint cycle",
-      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The trace-gauge follow-up now proves a genuine local simple-root constraint reduction away from a^2 V=2 and formal lower-lateral convergence of its remaining scalar fiber, but it also shows that this gauge cannot be appended to the unchanged proper-time/fixed-a source. A separately rederived replacement gauge, action, local constraint/lapse measure, BFV completion, and endpoint-state construction is therefore the next debt; improved static and time-dependent variants both remain open. Lambda=1, zero lapse, source deformation, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
-      "state": "OPEN_AFTER_LOCAL_TRACE_REDUCTION_AND_UNCHANGED_PROPER_TIME_SOURCE_APPEND_KILL",
-      "question": "Can an improved-static or time-dependent trace-gauge replacement with its own action, endpoint states and FP/BFV measure be derived from local lapse/constraint variables, reproduce its constraint projector, and then connect through zero lapse and every relative end, determinant and intersection into a physical full joint cycle?"
+      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The first trace-gauge follow-up proves a genuine local simple-root constraint reduction away from a^2 V=2 and formal lower-lateral convergence of its remaining scalar fiber, while killing append-to-unchanged-source. The closed-FRW V=0 follow-up now closes the classical local on-shell relational endpoint action, finite local hit and time-dependent same-orbit control on one frozen p-positive component. A full off-shell canonical chart, normalized endpoint-state transform, ghost/BFV sector, replacement source/lattice, old fixed-a equality and full-real-lapse delta(C) kernel remain open; these dependencies carry no automatic execution authority. Lambda=1, zero lapse, source deformation, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
+      "state": "OPEN_AFTER_LOCAL_TRACE_REDUCTION_APPEND_KILL_AND_V0_ON_SHELL_RELATIONAL_ACTION_KEEP",
+      "question": "Can the local trace-gauge action be extended to a full off-shell canonical chart, quantum endpoint states and replacement FP/BFV source that represents the full-real-lapse distributional delta(C) kernel, and then connect through zero lapse and every relative end, determinant and intersection into a physical full joint cycle?"
     },
     {
       "id": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
@@ -10193,7 +10196,7 @@
       "id": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
       "type": "claim",
       "title": "Current records do not establish a phase-locked joint cycle",
-      "summary": "Supported as an evidence-scope statement, not as proof of physical inequivalence. The ordered scalar control establishes a nonzero-lapse-arm link to the declared 0<lambda<=1 Gamma_lambda representatives, but is newly declared rather than a recovered physical original cycle and leaves N=0 open. The full-bosonic m=2 control further shows that one common lateral sign cannot absolutely damp unchanged real p_a,p_phi axes; its matching complex Gaussian rays remain declared rather than source-derived and require a p_a gauge/FP/BFV and determinant-line completion. Phase 30 fixes only literal real-field arm restrictions, the below-origin sources select no full field/joint lift, and Phase 39 serializes its finite chain as not derived physical-original data. No full joint cycle or global coefficient follows.",
+      "summary": "Supported as an evidence-scope statement, not as proof of physical inequivalence. The ordered scalar control establishes a nonzero-lapse-arm link to the declared 0<lambda<=1 Gamma_lambda representatives, but is newly declared rather than a recovered physical original cycle and leaves N=0 open. The full-bosonic m=2 control further shows that one common lateral sign cannot absolutely damp unchanged real p_a,p_phi axes; its matching complex Gaussian rays remain declared rather than source-derived and require a p_a gauge/FP/BFV and determinant-line completion. The later closed-FRW V=0 calculation adds a classical local on-shell relational endpoint action on one p-positive component, but explicitly leaves the off-shell/quantum/BFV replacement source, full-real-lapse delta(C) kernel, old fixed-a equality and all global data null. Phase 30 fixes only literal real-field arm restrictions, the below-origin sources select no full field/joint lift, and Phase 39 serializes its finite chain as not derived physical-original data. No full joint cycle or global coefficient follows.",
       "state": "SUPPORTED_AS_CURRENT_RECORD_NONESTABLISHMENT_NOT_PHYSICAL_INEQUIVALENCE",
       "claim_id": "G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
       "statement": "The current repository records do not establish or source-select the phase-locked contour as the physical original joint cycle.",
@@ -10631,6 +10634,95 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY.md",
       "sha256": "6eda1a134f145242587dec674e40f7659bbc4deb16d9d22095358a3cf9c46188"
+    },
+    {
+      "id": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "type": "concept",
+      "title": "Gate-1 closed-FRW V=0 trace relational endpoint-action control",
+      "summary": "A bounded non-numbered exact calculation follows the prior local trace-gauge reduction into one frozen p_phi=+1, R>0, D>0 closed-FRW V=0 component. It constructs the weak relational coordinate Phi_star and on-shell potential B_red=P, integrates the finite P-to-zero endpoint flow, reduces the local FP measure, and checks a time-dependent same-constraint-orbit control. It keeps only a classical local on-shell relational action; the raw static, HTV improved-static and auxiliary mixed-polarization action ledgers remain explicitly distinct.",
+      "state": "COMPLETED_VALID_LOCAL_ON_SHELL_RELATIONAL_ACTION_CONTROL_NO_AUTOMATIC_SUCCESSOR"
+    },
+    {
+      "id": "scope:gate1-closed-frw-v0-local-on-shell-trace-endpoint-action",
+      "type": "scope",
+      "title": "Closed-FRW V=0 local on-shell trace endpoint-action scope",
+      "summary": "The exact frozen domain of the relational endpoint-action result and its boundary from every off-shell, quantum, BFV, old-kernel, full-real-lapse and global construction.",
+      "state": "CLOSED_COMPUTED_LOCAL_CLASSICAL_ACTION_FULL_REPLACEMENT_AND_GLOBAL_SCOPE_OPEN",
+      "includes": [
+        "closed-FRW V=0 with the curvature term retained, p_phi=+1 and 0<=P<=1/2",
+        "R=3*p_phi^2-2*P^2>=5/2, D=12*pi^2*a>0 and one monotone local P-to-zero hit",
+        "the weak on-shell relational coordinate Phi_star, B_red=P and fixed-Phi_star action S0-[P]",
+        "the finite endpoint generator F_i=-P_i and separate raw-static and HTV improved-static ledgers",
+        "the local canonical-limit FP Jacobian and time-dependent same-constraint-orbit control"
+      ],
+      "excludes": [
+        "a full off-shell canonical transformation or normalized quantum endpoint-state transform",
+        "ghost, antighost and multiplier endpoint conditions, gauge fermion or full replacement BFV measure",
+        "a replacement lattice or equality with the old constant-lapse fixed-a kernel",
+        "the full-real-lapse distributional delta(C) physical-inner-product kernel or zero-lapse distribution",
+        "global orbit coverage, Gribov resolution, determinant-line orientation, physical original cycle, global n_sigma, physics or TOE"
+      ]
+    },
+    {
+      "id": "evidence:gate1-v0-trace-endpoint-action",
+      "type": "evidence",
+      "title": "Gate-1 V=0 trace relational endpoint-action evidence",
+      "summary": "The final VALID_RUN records 16 exact PASS checks, seven separately reviewed analytic scope guards and five numerical PASS checks from six high-precision quadratures, with zero scientific NONPASS, roots, ODEs or descendants. Three read-only reviews preserved the local relational verdict while repairing terminal NONPASS reachability, separating raw-static, HTV improved-static, relational and mixed-polarization ledgers, and removing projector overstatement for the continuous-spectrum delta(C) kernel.",
+      "state": "VALID_RUN_INDEPENDENTLY_REVIEWED_LOCAL_ON_SHELL_RELATIONAL_ACTION_KEEP",
+      "observed_status": "VALID_RUN",
+      "check_ids": [
+        "P39.G1.endpoint.trace_pair",
+        "P39.G1.endpoint.closed_frw_v0_shell",
+        "P39.G1.endpoint.trace_fp_off_and_on_shell",
+        "P39.G1.endpoint.dirac_coordinate_derivatives",
+        "P39.G1.endpoint.dirac_invariance_on_shell",
+        "P39.G1.endpoint.shell_one_form",
+        "P39.G1.endpoint.mixed_polarization_boundary_action",
+        "P39.G1.endpoint.static_chart_transversality",
+        "P39.G1.endpoint.finite_boundary_generator_integrand",
+        "P39.G1.endpoint.local_fp_measure_jacobian",
+        "P39.G1.endpoint.implicit_root_derivatives",
+        "P39.G1.endpoint.time_dependent_gauge_preservation",
+        "P39.G1.endpoint.reduced_full_flow_match",
+        "P39.G1.endpoint.frozen_component_margins",
+        "P39.G1.endpoint.orbit_triangle_orientation",
+        "P39.G1.endpoint.action_triangle",
+        "P39.G1.endpoint.quadrature.T",
+        "P39.G1.endpoint.quadrature.mu1",
+        "P39.G1.endpoint.quadrature.mu2",
+        "P39.G1.endpoint.quadrature.tanh_sinh_orbit_closure",
+        "P39.G1.endpoint.quadrature.gauss_legendre_orbit_closure"
+      ]
+    },
+    {
+      "id": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "type": "claim",
+      "title": "The closed-FRW V=0 trace gauge has a local on-shell relational endpoint action",
+      "summary": "Supported only on the frozen p_phi=+1, 0<=P<=1/2, R>0, D>0 component. The weak relational coordinate Phi_star is invariant on shell, P*dQ_star+p_phi*dphi=p_phi*dPhi_star+dP gives B_red=P, the local FP measure reduces to dPhi_star*dp_phi, and the finite P-to-zero flow plus time-dependent representative close their separately scoped action/orbit ledgers. This is not a full off-shell canonical transformation, quantum endpoint-state completion, BFV source, old fixed-a kernel equality, full-real-lapse delta(C) kernel or global gauge theorem.",
+      "state": "SUPPORTED_ON_FROZEN_P_POSITIVE_LOCAL_ON_SHELL_COMPONENT_ONLY",
+      "claim_id": "G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "statement": "On the frozen closed-FRW V=0 component with p_phi=+1, 0<=P<=1/2, R>0 and D>0, the trace-gauge constraint shell admits the declared classical local fixed-Phi_star relational endpoint action S0-[P], finite local static hit and canonical-limit FP reduction.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:gate1-v0-trace-endpoint-action-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V=0 trace endpoint-action evidence snapshot",
+      "summary": "Compact typed extract of the five-command attempt ledger, final command, definition and repair commits, 16 exact checks, five numerical checks, seven theorem guards, all input/runner/result/report hashes, terminal scientific-NONPASS policy, three independent reviews, narrow verdict and fail-closed outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-trace-endpoint-action-result.json",
+      "sha256": "80f475a812bd5b031176ac21a9fee1d9b29e2a1f32571f4778a47567a7c87cec"
+    },
+    {
+      "id": "artifact:gate1-v0-trace-endpoint-action-report",
+      "type": "artifact",
+      "title": "Gate-1 closed-FRW V=0 relational endpoint-action report",
+      "summary": "Human-readable derivation of the shell, weak relational coordinate, on-shell one-form, finite endpoint flow, local FP measure, time-dependent control, raw-static versus HTV improved-static versus relational action ledgers, quadrature cross-check, terminal NONPASS repair and strict full-BFV, delta(C)-kernel, global and physical boundary.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION.md",
+      "sha256": "bd43d0698f1a74533ee4af7f5b85998a9c103edd510a36248912c3ed9bf431ac"
     }
   ],
   "edges": [
@@ -25816,6 +25908,166 @@
       "relation": "DERIVED_FROM",
       "to": "evidence:gate1-bosonic-canonical-source-pushforward",
       "note": "The prior finite mixed-signature momentum obstruction motivates a genuine constraint-gauge reduction; its declared complex rays are not reused as a physical source deformation."
+    },
+    {
+      "id": "edge:2454",
+      "from": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2455",
+      "from": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control"
+    },
+    {
+      "id": "edge:2456",
+      "from": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-closed-frw-v0-local-on-shell-trace-endpoint-action"
+    },
+    {
+      "id": "edge:2457",
+      "from": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025"
+    },
+    {
+      "id": "edge:2458",
+      "from": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992"
+    },
+    {
+      "id": "edge:2459",
+      "from": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "relation": "CITES",
+      "to": "source:marolf-1996-minisuperspace-path-integrals"
+    },
+    {
+      "id": "edge:2460",
+      "from": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "Scientific NONPASS selects a predeclared terminal result row; open dependencies authorize no successor, automatic_next is null, and the run creates no numbered phase or descendant."
+    },
+    {
+      "id": "edge:2461",
+      "from": "evidence:gate1-v0-trace-endpoint-action",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-trace-relational-endpoint-action-control"
+    },
+    {
+      "id": "edge:2462",
+      "from": "evidence:gate1-v0-trace-endpoint-action",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-trace-endpoint-action-evidence-snapshot"
+    },
+    {
+      "id": "edge:2463",
+      "from": "evidence:gate1-v0-trace-endpoint-action",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-trace-gauge-fp-admissibility",
+      "note": "The prior local trace reduction and unchanged-source append KILL supply the immediate question; their historical result remains unchanged."
+    },
+    {
+      "id": "edge:2464",
+      "from": "evidence:gate1-v0-trace-endpoint-action",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p27-wick-map",
+      "note": "Inherits the explicit Lorentzian closed-FRW constraint convention only."
+    },
+    {
+      "id": "edge:2465",
+      "from": "evidence:gate1-v0-trace-endpoint-action",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p28-homogeneous-bfv",
+      "note": "Uses the BFV and endpoint boundary as a noncomputed comparison, not as a completed replacement source."
+    },
+    {
+      "id": "edge:2466",
+      "from": "evidence:gate1-v0-trace-endpoint-action",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p29-reduced-bfv-modulus",
+      "note": "Preserves the fixed-parameter modulus and zero-lapse distributional boundary as open."
+    },
+    {
+      "id": "edge:2467",
+      "from": "evidence:gate1-v0-trace-endpoint-action",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p31-extrinsic-clock-and-polarization",
+      "note": "Inherits the endpoint-polarization obstruction while separating relational, mixed and HTV action ledgers."
+    },
+    {
+      "id": "edge:2468",
+      "from": "artifact:gate1-v0-trace-endpoint-action-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-trace-relational-endpoint-action-control"
+    },
+    {
+      "id": "edge:2469",
+      "from": "artifact:gate1-v0-trace-endpoint-action-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-trace-relational-endpoint-action-control"
+    },
+    {
+      "id": "edge:2470",
+      "from": "artifact:gate1-v0-trace-endpoint-action-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-v0-trace-endpoint-action-evidence-snapshot"
+    },
+    {
+      "id": "edge:2471",
+      "from": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-trace-relational-endpoint-action-control"
+    },
+    {
+      "id": "edge:2472",
+      "from": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-closed-frw-v0-local-on-shell-trace-endpoint-action"
+    },
+    {
+      "id": "edge:2473",
+      "from": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-trace-endpoint-action",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2474",
+      "from": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION"
+    },
+    {
+      "id": "edge:2475",
+      "from": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-trace-endpoint-action-report"
+    },
+    {
+      "id": "edge:2476",
+      "from": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "note": "The local on-shell action is kept, but the off-shell chart, endpoint-state transform, ghost/BFV source, full-real-lapse delta(C) kernel and global cycle remain open without execution authority."
+    },
+    {
+      "id": "edge:2477",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-trace-endpoint-action",
+      "polarity": "SUPPORTS",
+      "note": "A local classical on-shell endpoint action on one frozen component is not a source-selected full joint cycle or global intersection vector."
+    },
+    {
+      "id": "edge:2478",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION"
     }
   ],
   "kg_bridges": [
@@ -26235,6 +26487,16 @@
       "checked_at_utc": "2026-08-26T15:01:35Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 homogeneous trace gauge FP local reduction unchanged proper-time m2 append discriminator",
       "note": "No authorized exact external correspondence or writer is available. The local simple-root reduction, unchanged-source append contradiction, formal scalar convergence and strict global/physics/TOE null boundary remain repository-local workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-26T15:59:23Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 closed FRW V0 trace gauge local on-shell relational endpoint action",
+      "note": "No authorized exact external correspondence or writer is available. The frozen p-positive local classical action, finite endpoint flow, local FP reduction, strict off-shell/BFV/delta(C)-kernel/global boundary and null physics/TOE outputs remain repository-local workbench evidence; no external UID was invented."
     }
   ]
 }
