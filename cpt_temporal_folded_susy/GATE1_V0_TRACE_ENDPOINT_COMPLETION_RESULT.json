@@ -1,11 +1,19 @@
 {
   "automatic_next": null,
   "calculation_id": "Gate1V0TraceEndpointCompletion",
-  "classification": "GATE1_V0_TRACE_ENDPOINT_TRIANGLE_LOCAL_KEEP_FULL_BFV_PROJECTOR_OPEN",
+  "classification": "GATE1_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION_KEEP_FULL_BFV_PROJECTOR_OPEN",
   "decision_trace": {
+    "check_partitions": {
+      "all_scientific_pass": true,
+      "core_pass": true,
+      "failed_scientific_ids": [],
+      "relational_pass": true,
+      "time_control_pass": true
+    },
     "matched_predeclared_condition": "all shell, Dirac-coordinate, one-form, transversality, finite-flow, local-FP, gauge-preservation, orbit-triangle, and improved-action checks pass",
-    "meaning": "keep the local closed-FRW V=0 relational endpoint completion of the static trace slice and retain the time-dependent representative as an exact same-orbit control; full BFV and projector claims remain open",
-    "source_boundary": "HTV supplies the endpoint and finite-gauge framework, not this model-specific completion; Banihashemi-Jacobson supply the local trace-gauge FP premise, not endpoint completion; Marolf supplies the still-uncomputed full projector target"
+    "meaning": "keep the classical local closed-FRW V=0 on-shell relational endpoint action on the frozen p-positive component and retain the time-dependent representative as a same-constraint-orbit control; this is not a quantum endpoint-state, full BFV, or projector completion",
+    "scientific_nonpass_policy": "record VALID_RUN and select a frozen NONPASS row; do not raise or authorize a descendant harness-repair loop",
+    "source_boundary": "HTV supplies the endpoint and finite-gauge framework, not this model-specific classical on-shell action; Banihashemi-Jacobson supply the local trace-gauge FP premise, not an endpoint-state completion; Marolf supplies the still-uncomputed full projector target"
   },
   "environment": {
     "mpmath": "1.3.0",
@@ -15,6 +23,29 @@
   },
   "exact_calculation": {
     "computed_facts": {
+      "constraint_component": "REGULAR_P_POSITIVE_R_POSITIVE_D_POSITIVE",
+      "finite_endpoint_generator": "F_I_EQUALS_MINUS_P_I",
+      "finite_static_hit": "UNIQUE_ON_FROZEN_COMPONENT",
+      "full_off_shell_bfv_completion": "NOT_COMPUTED",
+      "local_fp_measure": "REDUCES_TO_DPHI_STAR_DP",
+      "local_relational_endpoint_coordinate": "EXISTS",
+      "normalized_quantum_endpoint_state_transform": "NOT_COMPUTED",
+      "old_fixed_a_kernel_equivalence": "NOT_COMPUTED",
+      "on_shell_endpoint_potential": "B_RED_EQUALS_P",
+      "orbit_triangle": "CLOSES",
+      "reduced_full_flow": "MATCHES_ON_SHELL",
+      "relational_action_triangle": "CLOSES",
+      "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D"
+    },
+    "finite_endpoint_flow": {
+      "actual_endpoint_correction_F2_minus_F1": "-1/4",
+      "benchmark_F1": "-1/4",
+      "benchmark_F2": "-1/2",
+      "boundary_integrand_on_shell": "1",
+      "flow_equation": "dP/dmu=D",
+      "static_hit_generator": "F_i=-P_i"
+    },
+    "identity_targets": {
       "constraint_component": "REGULAR_R_POSITIVE_D_POSITIVE",
       "finite_endpoint_generator": "F_I_EQUALS_MINUS_P_I",
       "finite_static_hit": "UNIQUE_ON_FROZEN_COMPONENT",
@@ -28,13 +59,6 @@
       "reduced_full_flow": "MATCHES_ON_SHELL",
       "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D"
     },
-    "finite_endpoint_flow": {
-      "benchmark_F1": "-1/4",
-      "benchmark_F2": "-1/2",
-      "boundary_integrand_on_shell": "1",
-      "flow_equation": "dP/dmu=D",
-      "static_hit_generator": "F_i=-P_i"
-    },
     "local_fp_measure": {
       "absolute_delta_ledger": "positive on this D>0 component only",
       "jacobian": "D",
@@ -46,13 +70,15 @@
       "action": "S_[P,phi]=S0-[P*Q]",
       "boundary_variation": "[-Q*dP+p*dphi]_1^2",
       "full_reduced_velocity_match": true,
+      "pure_orbit_action": "P2-P1-(P2*Q2-P1*Q1), generally not zero",
       "reduced_action": "integral(p*phi_dot-f_dot*Q_star) ds",
-      "reduced_hamiltonian": "H_red=+f_dot*Q_star"
+      "reduced_hamiltonian": "H_red=+f_dot*Q_star",
+      "relation_to_verdict": "AUXILIARY_DISTINCT_VARIATIONAL_PROBLEM_NOT_THE_RELATIONAL_ACTION_VERDICT"
     },
-    "relational_endpoint_completion": {
+    "relational_endpoint_action": {
       "Phi_star": "phi - sqrt(6)*atanh(sqrt(6)*P/(3*p))/2",
       "boundary_potential": "B_red=P",
-      "dirac_bracket_on_shell": "0",
+      "constraint_poisson_bracket_on_shell": "0",
       "improved_action": "S_imp=S0-[P]",
       "original_fixed_Q_static_transversality": "FAILS_AT_P_ZERO",
       "shell_one_form": "P*dQ_star+p*dphi=p*dPhi_star+dP",
@@ -60,14 +86,16 @@
     },
     "time_dependent_representative": {
       "F1_minus_F2": "1/4",
+      "F2_minus_F1_actual_correction": "-1/4",
       "N": "f_dot/D",
       "P1": "1/4",
       "P2": "1/2",
       "R_min": "5/2",
       "f": "1/4+s/4",
-      "improved_orbit_action": "0",
       "p": "1",
-      "raw_orbit_action": "1/4"
+      "raw_S0_orbit_action": "1/4",
+      "relational_orbit_action": "0",
+      "scope": "CLASSICALLY_SAME_CONSTRAINT_ORBIT_CONTROL_ON_P_POSITIVE_COMPONENT"
     },
     "trace_chart": {
       "D_off_shell": "(-2*P**2 + 24*pi**4*a**4 + 3*p**2)/(8*pi**2*a**3)",
@@ -115,7 +143,7 @@
     {
       "id": "G1.endpoint.mixed_polarization_boundary_action",
       "passed": true,
-      "statement": "S-[P*Q] has fixed-(P,phi) endpoint variation -Q*dP+p*dphi and reduced Hamiltonian H_red=dot(f)*Q_star"
+      "statement": "the separate auxiliary S-[P*Q] problem has fixed-(P,phi) endpoint variation -Q*dP+p*dphi and, only after P=f(s), H_red=+dot(f)*Q_star"
     },
     {
       "id": "G1.endpoint.static_chart_transversality",
@@ -150,7 +178,7 @@
     {
       "id": "G1.endpoint.frozen_component_margins",
       "passed": true,
-      "statement": "for p=1 and 0<=P<=1/2, R>=5/2, a>0 and D>0; the monotone flow has one static P=0 hit"
+      "statement": "on the frozen p=+1 component and 0<=P<=1/2, dR/dP=-4P and R>=5/2, while dP/dmu=D>0 gives one monotone local static hit"
     },
     {
       "id": "G1.endpoint.orbit_triangle_orientation",
@@ -160,22 +188,29 @@
     {
       "id": "G1.endpoint.action_triangle",
       "passed": true,
-      "statement": "S_td=P2-P1=F1-F2=1/4 and the relational endpoint improvement S0-[P] gives zero on the pure gauge orbit"
+      "statement": "S0_raw_td=P2-P1=F1-F2=1/4, the actual correction is F2-F1=-1/4, and the relational action S0_raw+[F] gives zero on the pure gauge orbit"
     }
   ],
   "frozen_input_contract": {
     "computed_scope": [
-      "exact closed-FRW V=0 constraint-shell reduction in one R>0,D>0 component",
+      "exact closed-FRW V=0 constraint-shell reduction in the frozen p=+1, R>0, D>0 connected component",
       "local relational endpoint coordinate and on-shell symplectic potential",
       "finite endpoint flow to the static trace slice",
       "local canonical-limit FP Jacobian",
       "time-dependent gauge preservation and exact orbit/action triangles",
       "independent high-precision quadrature of the finite flow parameters"
     ],
-    "epistemic_scope": "ONE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_PROJECTOR_OR_FIXED_A_KERNEL_EQUIVALENCE",
+    "epistemic_scope": "ONE_FROZEN_P_POSITIVE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_PROJECTOR_OR_FIXED_A_KERNEL_EQUIVALENCE",
+    "execution_contract": {
+      "arguments": "NONE",
+      "integrity_or_schema_failure": "RAISE_WITHOUT_WRITING_A_RESULT",
+      "open_dependencies": "NOT_EXECUTION_AUTHORIZATION",
+      "scientific_nonpass": "RECORD_A_VALID_RESULT_AND_SELECT_A_PREDECLARED_NONPASS_ROW"
+    },
     "kind": "EXACT_CLOSED_FRW_V0_TRACE_ENDPOINT_AND_GAUGE_ORBIT_TRIANGLE_WITH_INDEPENDENT_HIGH_PRECISION_QUADRATURE",
     "not_computed": [
       "a full off-shell canonical transformation and ghost/antighost/b endpoint construction",
+      "a normalized quantum endpoint-state transform",
       "the full m=2 BFV measure or gauge fermion",
       "equality with the existing fixed-(a,phi) kernel or its constant-lapse finite discretization",
       "the full-real-lapse Marolf projector matrix element",
@@ -183,13 +218,13 @@
       "global orbit coverage, a fundamental region, Gribov-copy census, determinant-line orientation, or all scalar-momentum sectors",
       "physical original cycle, global n_sigma, a physics claim, or a TOE claim"
     ],
-    "question": "In the closed-FRW V(phi)=0 control sector, does a source-faithful local endpoint completion of the static trace gauge P=0 exist, and is the time-dependent trace gauge P=f(s) an exactly gauge-related representative once the endpoint action, finite endpoint flow, and local FP measure are included?"
+    "question": "In the closed-FRW V(phi)=0 control sector, does a classical local on-shell relational endpoint action for the static trace gauge P=0 exist, and is the time-dependent trace gauge P=f(s) an exactly gauge-related representative once the endpoint action, finite endpoint flow, and local FP measure are included?"
   },
   "gate1_decision": "OPEN_PARTIAL_PROGRESS",
   "global_promotion": "PROHIBITED",
   "input": {
     "path": "cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION_INPUTS.json",
-    "sha256": "a9e3055a8014d16af7bcab815bd88b26ed2f2b22f53e66322d39d0ec596dd638"
+    "sha256": "2a7d31d99ae61ee7877e07aeda98fc8e771952880a5d7bbd5a2cc4d4bf4c01a5"
   },
   "numbered_phase": null,
   "numerical_calculation": {
@@ -269,23 +304,35 @@
       "tolerance": "1.0000000e-60"
     }
   ],
-  "open_dependencies": [
-    "full off-shell canonical chart and HTV-compatible ghost/antighost/b endpoint conditions",
-    "normalized endpoint-state transform and full replacement BFV measure",
-    "a bounded replacement-source discretization distinct from the old constant-lapse fixed-a source",
-    "comparison with the full-real-lapse projector and regulator removal",
-    "global orbit coverage, determinant-line orientation, and physical original cycle"
-  ],
-  "programme_impact": "NARROW_AND_ADVANCE_LOCAL_ENDPOINT_ROUTE",
+  "open_dependencies": {
+    "automatic_successor": null,
+    "execution_authorization": "NONE",
+    "items": [
+      "full off-shell canonical chart and HTV-compatible ghost/antighost/b endpoint conditions",
+      "normalized endpoint-state transform and full replacement BFV measure",
+      "a bounded replacement-source discretization distinct from the old constant-lapse fixed-a source",
+      "comparison with the full-real-lapse projector and regulator removal",
+      "global orbit coverage, determinant-line orientation, and physical original cycle"
+    ],
+    "status": "NOT_EXECUTION_AUTHORIZATION"
+  },
+  "programme_impact": "NARROW_LOCAL_ENDPOINT_ROUTE_NO_AUTOMATIC_SUCCESSOR",
   "promoted_outputs": {
     "TOE_claim": null,
     "complete_global_signed_intersection_vector": null,
+    "determinant_line_orientation": null,
+    "endpoint_state_transform": null,
     "full_joint_orientation": null,
     "full_m2_bfv_measure": null,
+    "full_off_shell_canonical_transform": null,
     "full_projector_matrix_element": null,
+    "full_replacement_bfv_measure": null,
+    "global_fundamental_region": null,
     "global_n_sigma": null,
+    "old_fixed_a_kernel_equivalence": null,
     "physical_original_cycle": null,
-    "physics_claim": null
+    "physics_claim": null,
+    "zero_lapse_distribution": null
   },
   "resource_accounting": {
     "adjacent_result_files": 1,
@@ -293,33 +340,35 @@
     "automatic_descendants": 0,
     "ode_calls": 0,
     "quadratures": 6,
-    "root_calls": 0
+    "root_calls": 0,
+    "scientific_nonpass_count": 0
   },
-  "result_payload_sha256_without_self": "447c097679ec3d9a64e1e6fc52852719ac925f63d552f0b0908157cda7bc4fc3",
+  "result_payload_sha256_without_self": "ea97b7c1d06a3a9d735bd1cb4974d4299d9366b9029bb1b8db50db24456210b8",
   "run_status": "VALID_RUN",
   "runner": {
     "path": "cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py",
-    "sha256": "9fc0f560820e758f1d19faf8dc2ad04f80a1c65ee3d5b279c071c6deb1eaaf5e"
+    "sha256": "fa5e0df0129cc77a1df3a8c1598a81a39f582af29582d11fe252acdf4a3a508d"
   },
   "schema_version": "ice.gate1.v0-trace-endpoint-completion.result.v1",
   "scope_status": {
+    "determinant_line_orientation": null,
     "endpoint_state_transform": null,
     "full_joint_orientation": null,
     "full_off_shell_canonical_transform": null,
     "full_projector_matrix_element": null,
     "full_replacement_bfv_measure": null,
     "global_fundamental_region": null,
-    "local_v0_relational_endpoint_completion": "KEEP_ON_FROZEN_R_POSITIVE_D_POSITIVE_COMPONENT",
+    "local_v0_relational_endpoint_action": "KEEP_CLASSICAL_ON_SHELL_ACTION_ON_FROZEN_P_POSITIVE_COMPONENT",
     "old_fixed_a_kernel_equivalence": null,
     "physical_original_cycle": null,
-    "time_dependent_trace_representative": "KEEP_AS_EXACT_SAME_ORBIT_CONTROL",
+    "time_dependent_trace_representative": "KEEP_AS_CLASSICALLY_SAME_CONSTRAINT_ORBIT_CONTROL",
     "zero_lapse_distribution": null
   },
   "theorem_guards": [
     {
-      "domain": "closed-FRW V=0, p=1 benchmark component with R>0 and D>0",
+      "domain": "closed-FRW V=0, frozen p=+1 component with R>0 and D>0",
       "id": "G1.endpoint.guard.local_shell_completion",
-      "statement": "the relational endpoint completion is established only on this local constraint component; a full off-shell canonical transformation is not inferred",
+      "statement": "the relational endpoint action is established only on this local on-shell constraint component; a full off-shell canonical transformation or quantum endpoint-state completion is not inferred",
       "theorem": "local coisotropic reduction and on-shell symplectic-potential decomposition",
       "verified": true
     },
@@ -328,6 +377,13 @@
       "id": "G1.endpoint.guard.endpoint_state_scope",
       "statement": "the classical boundary potential is computed, but a normalized quantum endpoint-state transform and ghost endpoint sector remain uncomputed",
       "theorem": "HTV endpoint boundary action and gauge-related endpoint data",
+      "verified": true
+    },
+    {
+      "domain": "relational fixed-Phi_star action S0-[P] versus auxiliary fixed-(P,phi) action S0-[P*Q]",
+      "id": "G1.endpoint.guard.variational_problem_separation",
+      "statement": "the verdict concerns only the classical local on-shell relational action; H_red=+dot(f)*Q_star belongs to the auxiliary mixed-polarization problem and is not asserted to have zero action on the orbit triangle",
+      "theorem": "separation of relational and mixed-polarization endpoint variational problems",
       "verified": true
     },
     {
@@ -381,5 +437,5 @@
       "sha256": "6ab0707bd4c133c62087c90b1e0b7131609491c0e10ee004b5ef08dbf2c2760b"
     }
   ],
-  "verdict": "KEEP_IMPROVED_STATIC_LOCAL_ENDPOINT_COMPLETION"
+  "verdict": "KEEP_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION"
 }
