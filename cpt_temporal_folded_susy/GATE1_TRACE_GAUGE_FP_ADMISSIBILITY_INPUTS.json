@@ -1,0 +1,160 @@
+{
+  "schema_version": "ice.gate1.trace-gauge-fp-admissibility.input.v1",
+  "calculation_id": "Gate1TraceGaugeFpAdmissibility",
+  "numbered_phase": null,
+  "question": "Does the homogeneous Lorentzian trace-momentum condition define a genuine local constraint-gauge reduction that removes the negative p_a Gaussian, and can the static condition be appended to the already proper-time-gauge finite m=2 source without changing its lapse gauge or endpoint polarization?",
+  "kind": "EXACT_LOCAL_TRACE_GAUGE_REDUCTION_AND_UNCHANGED_PROPER_TIME_M2_APPEND_FALSIFIER_WITH_HIGH_PRECISION_GAUSSIAN_CHECK",
+  "epistemic_scope": "LOCAL_HOMOGENEOUS_CONSTRAINT_FIBER_AND_FINITE_M2_GAUGE_RANK_CONTROL_NOT_FULL_BFV_OR_PHYSICAL_CYCLE",
+  "repository_sources": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md",
+      "role": "Lorentzian and Euclidean homogeneous constraints, p_L=i p_E continuation, and lapse-sign convention"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md",
+      "role": "homogeneous proper-time BFV gauge, endpoint-vanishing gauge parameters, and surviving lapse modulus"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md",
+      "role": "direct finite-interval lapse variation, endpoint-vanishing gauge parameter, invariant proper length, and fixed-parameter modulus measure"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md",
+      "role": "finite proper-time-gauge canonical block, local Euclidean p_a clock diagnostic, and endpoint-polarization obstruction"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_RESULT.json",
+      "role": "finite m=2 mixed-signature real-momentum obstruction that motivates a genuine gauge reduction"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Banihashemi and Jacobson, On the lapse contour, Phys. Rev. D 111, 066014 (2025), arXiv:2405.10307",
+      "url": "https://doi.org/10.1103/PhysRevD.111.066014",
+      "used_for": "the constraint-plus-gauge FP measure and the local trace-momentum gauge premise preceding the below-origin momentum-first convergence argument",
+      "not_used_for": "a global maximal-slicing theorem, a homogeneous static nonzero-lapse gauge, this finite m=2 BFV measure, endpoint polarization, determinant-line orientation, or a physical original cycle"
+    },
+    {
+      "source": "Henneaux, Teitelboim and Vergara, Gauge invariance for generally covariant systems, Nucl. Phys. B 387 (1992) 391, arXiv:hep-th/9205092",
+      "url": "https://doi.org/10.1016/0550-3213(92)90166-9",
+      "used_for": "canonical-gauge transversality, endpoint-state transformation, boundary terms, and connected-component gauge orientation",
+      "not_used_for": "global admissibility of the repository trace gauge or equality with the fixed-a kernel"
+    },
+    {
+      "source": "Marolf, Path integrals and instantons in quantum gravity: Minisuperspace models, Phys. Rev. D 53 (1996) 6979, arXiv:gr-qc/9602019",
+      "url": "https://doi.org/10.1103/PhysRevD.53.6979",
+      "used_for": "the full-real-lapse minisuperspace constraint projection and gauge-fixed path-integral setting",
+      "not_used_for": "a general theorem for this momentum gauge, identifying the signed ghost determinant with the elementary absolute simple-root delta Jacobian, or choosing a global lapse contour"
+    },
+    {
+      "source": "Halliwell, Derivation of the Wheeler-DeWitt equation from a path integral for minisuperspace models, Phys. Rev. D 38 (1988) 2468",
+      "url": "https://doi.org/10.1103/PhysRevD.38.2468",
+      "used_for": "the proper-time gauge reduction to a global lapse integral and the distinction between a full-line Wheeler-DeWitt homogeneous solution and a half-line Green-function object",
+      "not_used_for": "the trace-gauge algebra or a global Fradkin-Vilkovisky conclusion for restricted lapse ranges"
+    }
+  ],
+  "model": {
+    "phase_space": "a>0, p_a, phi, p_phi with {a,p_a}={phi,p_phi}=1",
+    "lorentzian_constraint": "C_L=-p_a^2/(24*pi^2*a)+p_phi^2/(4*pi^2*a^3)+2*pi^2*(-3*a+a^3*V(phi))",
+    "euclidean_constraint": "C_E=-p_Ea^2/(24*pi^2*a)+p_Ephi^2/(4*pi^2*a^3)+2*pi^2*(3*a-a^3*V(phi))",
+    "wick_map": "p_L=i*p_E and C_L(q,i*p_E)=-C_E(q,p_E)",
+    "homogeneous_trace_pair": "under the declared homogeneous ADM reduction, the integrated trace is P_tr=a*p_a/2 and Q=2*log(a), so P_tr*dQ=p_a*da. This is not an identification with the unintegrated local density p(x).",
+    "gauge": "chi=P_tr-f(s)",
+    "lapse_projector_sign": "exp(-i*z*C_L/hbar), with z=N-i*epsilon lower and z=N+i*epsilon upper",
+    "finite_m2_gauge_variation": "h=1/2, epsilon_0=epsilon_2=0, delta(N_0,N_1)=(2*epsilon_1,-2*epsilon_1)"
+  },
+  "exact_plan": {
+    "trace_fp_bracket": "D_L={P_tr,C_L}=-p_a^2/(16*pi^2*a)+3*p_phi^2/(8*pi^2*a^3)+3*pi^2*a*(1-a^2*V)",
+    "shell_identity": "D_L=(3/2)*C_L+6*pi^2*a*(2-a^2*V), hence D_L|C=0=6*pi^2*a*(2-a^2*V)",
+    "gauge_delta": "delta(chi)=(2/a)*delta(p_a-2*f/a)",
+    "root_orientation": "for C_f=C_L(a,p_a=2*f/a), (2/a)*D_L|chi=-dC_f/da; signed roots carry sgn(D_L), while the absolute reduced Jacobian gives +1 per simple root",
+    "static_preservation": "dot(chi)=N*D_L-dot(f); in the ordinary homogeneous classical representative, f=0 with D_L!=0 forces N=0, while D_L=0 is an inadmissible FP horizon. This does not exclude a separately improved static canonical-gauge action and transformed endpoint states.",
+    "f_zero_shell": "p_phi^2=8*pi^4*a^4*(3-a^2*V); for V>0, kappa=p_phi^2*V^2/(8*pi^4)=u^2*(3-u), u=a^2*V",
+    "horizon_and_sheets": "for V>0 the shell domain is 0<u<=3; u=2 is its maximum kappa=4 and on-shell FP horizon. At kappa=2 the positive roots u=1 and u=1+sqrt(3) have opposite pre-orientation signed FP residues, not an already fixed global relative sign.",
+    "m2_rank": "delta T=0, delta(N_0-N_1)=4*epsilon_1, so N_0=N_1 fixes the sole endpoint-preserving nonzero gauge mode and leaves T as modulus",
+    "endpoint_polarization": "the original fixed-Q chart is not transverse at P_tr=0. A chosen fixed-P_tr endpoint implementation subtracts [P_tr*Q] and is transverse where D_L!=0; Phase 31's fixed-p_a chart instead subtracts [a*p_a]. HTV requires gauge-related endpoint states and the corresponding boundary term, not uniquely pure momentum polarization.",
+    "local_frozen_gaussian": "after the formal local trace reduction, the effective FP polynomial cannot spoil lower-lateral real-p_phi Gaussian damping; the upper lateral grows",
+    "orientation_ledgers": "the signed Grassmann determinant and absolute reduced-orbit Jacobian are recorded separately; reversing the gauge and its orientation together leaves the oriented result invariant"
+  },
+  "numerical_plan": {
+    "precision_digits": 70,
+    "benchmark": {
+      "a": "1",
+      "V": "0",
+      "f": "0",
+      "q": "0.125",
+      "hbar": "1"
+    },
+    "lower_lateral_points": [
+      ["0", "0.4"],
+      ["0.2", "0.4"]
+    ],
+    "integral": "At a=1,V=f=0 compare the real-p_phi quadrature of (3*p_phi^2/(4*pi^2)+6*pi^2)*exp(-i*z*(p_phi^2/(4*pi^2)-6*pi^2)+i*p_phi*q) with its exact polynomial-Gaussian formula for z=N-i*epsilon.",
+    "relative_tolerance": "1e-45"
+  },
+  "decision_table": [
+    {
+      "condition": "the trace pair, local on-shell FP/shell/Jacobian identities, two-sheet pre-orientation ledger, ordinary static-representative preservation equation, proper-time m2 rank, endpoint transversality change, and lower-lateral local Gaussian checks all pass",
+      "verdict": "LOCAL_TRACE_GAUGE_FIBER_KEEP_UNCHANGED_PROPER_TIME_M2_APPEND_KILLED",
+      "programme_impact": "NARROW_AND_REDIRECT",
+      "meaning": "Keep a genuine local trace-gauge constraint fiber as an ingredient, but reject appending trace deltas to the unchanged nonzero-lapse proper-time/fixed-a source. A separately rederived replacement gauge, action, FP/BFV measure, and endpoint-state construction is required; an improved static canonical gauge and a time-dependent f(s) gauge both remain open."
+    },
+    {
+      "condition": "the local constraint-gauge pair or its FP/Jacobian orientation identities fail",
+      "verdict": "KILL_HOMOGENEOUS_TRACE_GAUGE_REDUCTION",
+      "programme_impact": "KILL_LOCAL_ROUTE",
+      "meaning": "Reject this homogeneous trace-gauge route even as a local reduction."
+    },
+    {
+      "condition": "the current proper-time m2 source retains an unfixed endpoint-preserving gauge mode that licenses an additional trace FP gauge with unchanged endpoint states",
+      "verdict": "ADDITIONAL_TRACE_GAUGE_UNCHANGED_M2_KEEP",
+      "programme_impact": "KEEP_CANDIDATE",
+      "meaning": "Keep the static append-to-source route for a separately derived BFV test."
+    },
+    {
+      "condition": "the exact checks do not select a prior row",
+      "verdict": "INCONCLUSIVE",
+      "programme_impact": "OPEN",
+      "meaning": "Leave the gauge-reduction link open without promotion."
+    }
+  ],
+  "computed_scope": [
+    "exact homogeneous trace canonical normalization",
+    "Lorentzian and Euclidean FP brackets and Wick sign",
+    "local constraint-gauge transversality, delta Jacobian, signed and absolute root ledgers",
+    "f=0 frozen-potential root sheets and exact FP horizon",
+    "ordinary static-representative gauge preservation and finite m=2 proper-time gauge rank",
+    "endpoint transversality, a chosen endpoint-polarization transform, and lower-lateral local scalar Gaussian controls"
+  ],
+  "not_computed": [
+    "an improved static canonical-gauge replacement with transformed endpoint states and boundary action",
+    "a time-dependent f(s), its reduced Hamiltonian trajectory, boundary states, or full replacement BFV gauge fermion",
+    "an exact gauge-invariant m=2 discretization with local lapse and constraint at each element",
+    "global maximal slicing, fundamental region, orbit-copy census, Gribov resolution, or determinant-line orientation",
+    "equivalence to the existing fixed-(a,phi) kernel or deformation of its all-real source",
+    "zero-lapse contact terms, scale-factor or mixed relative ends, regulator removal, Stokes data, or global lapse thimbles",
+    "physical original cycle, global n_sigma, physics claim, or TOE claim"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "physical_original_cycle": null,
+    "full_joint_orientation": null,
+    "full_m2_bfv_measure": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
