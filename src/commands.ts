@@ -8,7 +8,9 @@ import { capture, inherit } from "./process.ts"
 import {
   acquireBoundedGate1SourceLinkLaunch,
   acquireBoundedGate1ZeroLapseLaunch,
+  boundedCoreRunCaps,
   boundedGate1InvocationDecision,
+  coreResearchRoot,
   decodeBoundedGate1SourceLinkResult,
   decodeBoundedGate1ZeroLapseResult,
   formatRagnarokStatus,
@@ -32,6 +34,87 @@ export const setExitCode = (code: number): Effect.Effect<void> =>
       process.exitCode = code
     }
   })
+
+const nulPaths = (source: string): ReadonlyArray<string> =>
+  source.split("\0").filter((value) => value.length > 0)
+
+const inspectBoundedCoreArtifacts: Effect.Effect<
+  { readonly files: ReadonlyArray<string>; readonly bytes: number },
+  IceError,
+  | Workspace
+  | FileSystem.FileSystem
+  | Path.Path
+  | import("@effect/platform/CommandExecutor").CommandExecutor
+> = Effect.gen(function* () {
+  const workspace = yield* Workspace
+  const fs = yield* FileSystem.FileSystem
+  const path = yield* Path.Path
+  const [tracked, untracked, deleted] = yield* Effect.all(
+    [
+      capture({
+        command: "git",
+        args: ["diff", "--name-only", "-z", "--diff-filter=ACMRTUXB", "--", coreResearchRoot],
+        cwd: workspace.root
+      }),
+      capture({
+        command: "git",
+        args: ["ls-files", "--others", "--exclude-standard", "-z", "--", coreResearchRoot],
+        cwd: workspace.root
+      }),
+      capture({
+        command: "git",
+        args: ["diff", "--name-only", "-z", "--diff-filter=D", "--", coreResearchRoot],
+        cwd: workspace.root
+      })
+    ],
+    { concurrency: 3 }
+  )
+  for (const result of [tracked, untracked, deleted]) {
+    if (result.exitCode !== 0) {
+      return yield* Effect.fail(
+        iceError(
+          "RESEARCH_ARTIFACT_AUDIT_FAILED",
+          `cannot inspect bounded core artifacts: ${result.stderr.trim() || `git exited ${result.exitCode}`}`,
+          2
+        )
+      )
+    }
+  }
+  const deletedPaths = nulPaths(deleted.stdout)
+  if (deletedPaths.length > 0) {
+    return yield* Effect.fail(
+      iceError(
+        "RESEARCH_DESTRUCTIVE_ARTIFACT_CHANGE",
+        `bounded core execution deleted tracked paths: ${deletedPaths.join(", ")}`,
+        2
+      )
+    )
+  }
+  const files = [...new Set([...nulPaths(tracked.stdout), ...nulPaths(untracked.stdout)])]
+  let bytes = 0
+  for (const file of files) {
+    const info = yield* fs.stat(path.join(workspace.root, file)).pipe(
+      Effect.mapError((error) =>
+        iceError(
+          "RESEARCH_ARTIFACT_AUDIT_FAILED",
+          `cannot inspect bounded artifact ${file}: ${String(error)}`,
+          2
+        )
+      )
+    )
+    if (info.type !== "File") {
+      return yield* Effect.fail(
+        iceError(
+          "RESEARCH_ARTIFACT_AUDIT_FAILED",
+          `bounded artifact ${file} is ${info.type}, expected File`,
+          2
+        )
+      )
+    }
+    bytes += Number(info.size)
+  }
+  return { files, bytes }
+})
 
 export const listScripts = (
   json: boolean
@@ -89,6 +172,52 @@ export const runScript = (
     )
     const scriptArgs = args[0] === "--" ? args.slice(1) : args
     const decision = researchRunDecision(entry.relpath)
+    if (decision.reason === "BOUNDED_NEW_CORE") {
+      const execution = yield* capture(
+        {
+          command: workspace.python,
+          args: [path.basename(entry.file), ...scriptArgs],
+          cwd: path.dirname(entry.file)
+        },
+        boundedCoreRunCaps.wall_clock_seconds
+      )
+      const encoder = new TextEncoder()
+      const stdoutBytes = encoder.encode(execution.stdout).byteLength
+      const stderrBytes = encoder.encode(execution.stderr).byteLength
+      if (
+        stdoutBytes > boundedCoreRunCaps.stdout_bytes ||
+        stderrBytes > boundedCoreRunCaps.stderr_bytes
+      ) {
+        return yield* Effect.fail(
+          iceError(
+            "RESEARCH_OUTPUT_CAP_EXCEEDED",
+            `bounded core output exceeded its cap (stdout ${stdoutBytes}/${boundedCoreRunCaps.stdout_bytes}, stderr ${stderrBytes}/${boundedCoreRunCaps.stderr_bytes})`,
+            2
+          )
+        )
+      }
+      const artifacts = yield* inspectBoundedCoreArtifacts
+      if (
+        artifacts.files.length > boundedCoreRunCaps.changed_artifact_files ||
+        artifacts.bytes > boundedCoreRunCaps.changed_artifact_bytes
+      ) {
+        return yield* Effect.fail(
+          iceError(
+            "RESEARCH_ARTIFACT_CAP_EXCEEDED",
+            `bounded core artifacts exceeded their cap (${artifacts.files.length}/${boundedCoreRunCaps.changed_artifact_files} files, ${artifacts.bytes}/${boundedCoreRunCaps.changed_artifact_bytes} bytes)`,
+            2
+          )
+        )
+      }
+      if (execution.stdout.trim().length > 0) {
+        yield* Console.log(execution.stdout.trimEnd())
+      }
+      if (execution.stderr.trim().length > 0) {
+        yield* Console.error(execution.stderr.trimEnd())
+      }
+      yield* setExitCode(execution.exitCode)
+      return
+    }
     if (
       decision.reason === "BOUNDED_GATE1_DIRECT" ||
       decision.reason === "BOUNDED_GATE1_SOURCE_LINK" ||

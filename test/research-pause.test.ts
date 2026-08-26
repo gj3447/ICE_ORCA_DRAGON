@@ -73,7 +73,7 @@ it("uses the greatest phase token so compound names cannot bypass the pause", ()
   expect(maximumCorePhaseFromRelpath(relpath)).toBe(57)
 })
 
-it("uses token boundaries and fail-closes unclassified core paths", () => {
+it("uses token boundaries and opens only unnumbered core paths", () => {
   expect(
     corePhaseNumbersFromRelpath(
       "cpt_temporal_folded_susy/metaphase57_control"
@@ -83,10 +83,10 @@ it("uses token boundaries and fail-closes unclassified core paths", () => {
   expect(
     researchRunDecision("cpt_temporal_folded_susy/metaphase57_control")
       .allowed
-  ).toBe(false)
+  ).toBe(true)
   expect(
     researchRunDecision("cpt_temporal_folded_susy/next_repair").allowed
-  ).toBe(false)
+  ).toBe(true)
   expect(
     researchRunDecision("cpt_temporal_folded_susy/p57_repair").allowed
   ).toBe(false)
@@ -145,7 +145,7 @@ it("allows only frozen history through Phase 50 and blocks killed-route reruns",
 it("records the consumed hash-pinned Gate-1 calculation and blocks relaunch", async () => {
   const direct = researchRunDecision(boundedGate1Script)
   expect(direct.allowed).toBe(false)
-  expect(direct.reason).toBe("CORE_ROUTE_PAUSED")
+  expect(direct.reason).toBe("CONSUMED_CORE_RUN")
   expect(direct.expected_sha256).toBe(null)
   expect(ragnarokStatus.gate1_window.runner_sha256).toBe(
     boundedGate1ScriptSha256
@@ -153,11 +153,14 @@ it("records the consumed hash-pinned Gate-1 calculation and blocks relaunch", as
 
   for (const blocked of [
     `${boundedGate1Script}_retry`,
-    "cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility_replay",
-    "cpt_temporal_folded_susy/gate1_next_calculation"
+    "cpt_temporal_folded_susy/gate1_straight_lift_end_admissibility_replay"
   ]) {
     expect(researchRunDecision(blocked).allowed).toBe(false)
   }
+  expect(
+    researchRunDecision("cpt_temporal_folded_susy/gate1_next_calculation")
+      .reason
+  ).toBe("BOUNDED_NEW_CORE")
 })
 
 it("requires the exact bounded Gate-1 name and forbids arguments", () => {
@@ -184,7 +187,7 @@ it("requires the exact bounded Gate-1 name and forbids arguments", () => {
 it("records both exact Gate-1 windows as consumed and blocks descendants", () => {
   const sourceLink = researchRunDecision(boundedGate1SourceLinkScript)
   expect(sourceLink.allowed).toBe(false)
-  expect(sourceLink.reason).toBe("CORE_ROUTE_PAUSED")
+  expect(sourceLink.reason).toBe("CONSUMED_CORE_RUN")
   expect(sourceLink.expected_sha256).toBe(null)
   expect(researchRunDecision(boundedGate1Script).allowed).toBe(false)
 
@@ -230,7 +233,7 @@ it("records both exact Gate-1 windows as consumed and blocks descendants", () =>
 it("keeps the consumed zero-lapse one-shot and all descendants closed", () => {
   const decision = researchRunDecision(boundedGate1ZeroLapseScript)
   expect(decision.allowed).toBe(false)
-  expect(decision.reason).toBe("CORE_ROUTE_PAUSED")
+  expect(decision.reason).toBe("CONSUMED_CORE_RUN")
   expect(decision.maximum_phase).toBe(null)
   expect(decision.expected_sha256).toBe(null)
   expect(researchRunDecision(boundedGate1Script).allowed).toBe(false)
@@ -816,6 +819,65 @@ it("blocks an unclassified resolved core script before Python execution", async 
   }
 })
 
+it("runs a clean tracked unnumbered core script through the generic bounded shell", async () => {
+  const root = await mkdtemp(join(tmpdir(), "ice-bounded-core-"))
+  const runGit = (args: ReadonlyArray<string>): void => {
+    const result = spawnSync("git", args, { cwd: root, encoding: "utf8" })
+    if (result.status !== 0) {
+      throw new Error(result.stderr || result.stdout)
+    }
+  }
+  try {
+    const researchDirectory = join(root, "cpt_temporal_folded_susy")
+    await mkdir(researchDirectory)
+    await writeFile(
+      join(researchDirectory, "gate1_new_bounded_control.py"),
+      [
+        "from pathlib import Path",
+        "if __name__ == '__main__':",
+        "    Path('GATE1_NEW_BOUNDED_RESULT.json').write_text('\\n{}\\n'.strip() + '\\n')",
+        "    print('bounded-ok')",
+        ""
+      ].join("\n")
+    )
+    runGit(["init", "-q"])
+    runGit(["add", "."])
+    runGit([
+      "-c",
+      "user.name=ICE Test",
+      "-c",
+      "user.email=ice-test@example.invalid",
+      "commit",
+      "-qm",
+      "fixture"
+    ])
+
+    const base = workspaceFromRoot(root)
+    const TestLayer = Layer.mergeAll(
+      NodeContext.layer,
+      Layer.succeed(Workspace, {
+        ...base,
+        python: join(process.cwd(), ".venv/bin/python")
+      })
+    )
+    await expect(
+      Effect.runPromise(
+        runScript("gate1_new_bounded_control", []).pipe(
+          Effect.provide(TestLayer)
+        )
+      )
+    ).resolves.toBe(undefined)
+    expect(
+      await readFile(
+        join(researchDirectory, "GATE1_NEW_BOUNDED_RESULT.json"),
+        "utf8"
+      )
+    ).toBe("{}\n")
+  } finally {
+    await rm(root, { recursive: true, force: true })
+  }
+})
+
 it("blocks the consumed terminal runner before Python execution", async () => {
   const error = await Effect.runPromise(
     runScript(
@@ -980,10 +1042,16 @@ it("returns exit 2 and the typed pause error from the real CLI", () => {
 })
 
 it("keeps operational containment distinct from the scientific verdict", () => {
-  expect(ragnarokStatus.schema).toBe("ice-ragnarok-circuit-breaker/v2")
+  expect(ragnarokStatus.schema).toBe("ice-ragnarok-circuit-breaker/v3")
   expect(ragnarokStatus.operational_state).toBe(
-    "GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN"
+    "BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED"
   )
+  expect(ragnarokStatus.bounded_science_runtime).toMatchObject({
+    state: "ACTIVE",
+    policy: "GENERIC_BOUNDED_UNNUMBERED_CORE",
+    per_window_receipts_required: false,
+    numbered_descendants_allowed: false
+  })
   expect(ragnarokStatus.resume_authorization.approved_on).toBe("2026-08-25")
   expect(ragnarokStatus.resume_authorization.overrides_only).toBe(
     "SCHEDULED_REVIEW_WAIT_FOR_THIS_EXACT_CALCULATION"
@@ -1168,7 +1236,10 @@ it("keeps operational containment distinct from the scientific verdict", () => {
 
 it("renders stable human and machine-readable status", () => {
   expect(formatRagnarokStatus(false)).toContain(
-    "Ragnarok circuit breaker: GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN"
+    "Research runtime: BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED"
+  )
+  expect(formatRagnarokStatus(false)).toContain(
+    "New unnumbered core: bounded execution enabled; per-window receipts=false"
   )
   expect(formatRagnarokStatus(false)).toContain(
     "Scalar source link: CONSUMED"

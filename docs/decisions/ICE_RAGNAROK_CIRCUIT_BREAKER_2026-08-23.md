@@ -1,10 +1,17 @@
 # ICE Ragnarok 회로 차단기
 
-> **상태:** ACTIVE operational containment — Phase 56 및 세 bounded Gate-1 window consumed,
-> no active research window, `GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN`
+> **상태:** `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED` — Phase 51--56
+> reconciliation과 consumed runner는 닫고, 새 번호 없는 core 계산은 일반 bounded runtime으로 연다.
 > **발효:** 2026-08-23
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
+
+> **2026-08-26 runtime 개정:** 세 one-shot window의 결과와 receipt는 역사 provenance로
+> 보존하되 더는 새 연구의 실행 모델로 복제하지 않는다. 새 번호 없는 core runner는 committed
+> clean source에서 실행하며 120초, stdout/stderr 각 262,144 bytes, 변경 artifact 12개 및 합계
+> 1,000,000 bytes의 공통 상한을 적용한다. 별도 launch receipt나 결과 선소진은 없다. 과거
+> consumed runner와 이름을 붙인 후손, 새 numbered Phase, Phase 51--56 reconciliation은 계속
+> 차단한다. 아래의 one-shot authorization과 receipt 설명은 해당 역사 실행의 기록이다.
 
 > **2026-08-25 국소 개정:** 사용자가 즉시 연구 재개를 명시 승인하여 예정 대기만 정확히
 > hash-pin된 번호 없는 Gate-1 end-admissibility 계산 한 개에 한해 면제했다. 그 계산은
@@ -49,8 +56,8 @@ launch/provenance conditioning으로 이어진 **저장 backend 및 재구성 la
 Phase 56 종결 진단과 함께 `KILL`한다. 실패 원인을 더 작은 evaluator·dtype·solver·residual·provenance
 Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
-- 운영 상태는 `GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN`이며 active bounded research window는 없다.
-  containment는 계속 active다.
+- 운영 상태는 `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED`다. 새 번호 없는 계산은
+  공통 bounded runtime에서 열리고, killed reconciliation containment는 계속 active다.
 - Phase 56의 유일한 terminal-closeout 예외는 실행·독립 재현을 완료해 소진됐다.
 - 2026-08-25의 번호 없는 Gate-1 exact window도 한 번의 `VALID_RUN` 뒤 소진됐으며 retry나
   자동 후손을 허용하지 않는다.
@@ -62,16 +69,16 @@ Phase로 다시 낳는 자동 연장은 허용하지 않는다.
   verdict는 없고 zero-lapse distribution은 `OPEN`이다. receipt가 window를 소진했으므로 수정 runner,
   retry, `repro`, rename 또는 자동 descendant는 허용하지 않는다.
 - 정확히 동결된 Phase 11–50 실행체는 역사 검산용 allowlist로 허용한다. KILL 범위인 Phase
-  51–55 재실행, Phase 56 변종, Phase 토큰이 없거나 이름을 바꾼 새 core 실행체, Phase 57 이상은
-  `./ice run`과 `./ice repro`에서 `RESEARCH_PHASE_PAUSED`로 거부한다.
+  51–55 재실행, Phase 56 변종과 모든 새 numbered descendant는 `./ice run`과 `./ice repro`에서
+  `RESEARCH_PHASE_PAUSED`로 거부한다. 새 번호 없는 core 실행체는 위 공통 상한 아래 허용한다.
 - Phase 56 runner와 결과 identity는 종결 provenance로 보존하지만 더는 실행 allowlist가 아니다.
   복합 파일명이나 낮은 Phase 번호 재사용으로 우회할 수 없다.
 - 허용된 41개 역사 runner는 SHA-256까지 고정한다. core 디렉터리에 tracked
   수정이나 untracked 파일이 하나라도 있으면 실행 전에 `RESEARCH_CORE_DIRTY`, 허용 경로의 bytes가
   다르면 `RESEARCH_RUNNER_HASH_MISMATCH`로 닫는다. `./`, `..`, 역슬래시, absolute path로 core
   판정을 우회할 수 없고 workspace 밖으로 나가는 경로는 거부한다.
-- 직접 `python ...` 실행이나 다른 실행기를 사용한 우회도 승인되지 않는다. 코드 차단기는
-  협력적 제어면이므로 이 규칙이 그 나머지 표면을 닫는다.
+- 직접 `python ...` 실행이나 다른 실행기 우회는 사용하지 않는다. 새 연구도 `./ice run`의
+  Effect-scoped timeout, output 및 artifact 검사를 통과한다.
 - Phase 56 결과와 무관하게 `next_phase = null`이다. full replay, Phase 57, threshold 완화 또는
   같은 reconciliation의 새 이름 붙이기는 자동으로 열리지 않는다.
 

@@ -23,7 +23,7 @@ The repository preserves speculative motivations while turning them into scoped 
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
 
-> **Bounded Gate-1 zero-lapse review (2026-08-26):** The Phase 51–56 saved-backend/reconstructed-launch
+> **Bounded research runtime (2026-08-26):** The Phase 51–56 saved-backend/reconstructed-launch
 > reconciliation route remains `KILL`, and the exact Phase 56 terminal closeout remains consumed.
 > One non-numbered, exact-hash Gate-1 end-admissibility calculation ran under strict caps and has also
 > been consumed. It kills the Phase-39 straight unbounded field completion and the constant-straight-line
@@ -35,9 +35,9 @@ reported separately.
 > invocation exited `1` before writing a result because an asymmetric SymPy structural-equality guard gave
 > a false negative after the preceding square rewrite passed. This is not counterevidence to the square
 > identity, but it supplies no canonical-boundary or extension verdict: the zero-lapse distribution remains
-> open. No bounded research runner is now active; only the frozen Phase 11–50 historical allowlist is
-> executable. Phase 51+, renamed descendants, Phase 57+, replay, retries, and the corrected runner are blocked
-> absent new explicit authorization.
+> open. The per-window one-shot mechanism is now retired for new work: clean committed, unnumbered core
+> calculations run under shared time/output/artifact caps without launch receipts. Consumed runners,
+> Phase 51–56 reconciliation, and all new numbered descendants remain blocked.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
 > the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the

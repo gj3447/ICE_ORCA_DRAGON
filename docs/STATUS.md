@@ -15,7 +15,7 @@
 | Local engineering gate | `npm run check` (strict typecheck + Vitest suite) |
 | Environment gate | `./ice doctor` |
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
-| Ragnarok containment | `GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN`; Phase 56 and all three non-numbered Gate-1 windows are consumed; no bounded research runner is active; P51+, replay, retry, corrected zero-lapse runner, and renamed core work remain blocked |
+| Ragnarok containment | `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED`; P51–56 reconciliation, numbered descendants, and consumed runners stay blocked, while clean committed unnumbered core calculations use generic runtime/output/artifact caps without one-shot receipts |
 | Phase 56 closeout | `VALID_RUN`; fresh center/launch recovers the saved lambda-half target under both profiles; `next_phase=null` |
 | Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
 | Remote transport | `PUSHED_WITH_GIT_LFS`; exact Phase-44 path is a 529,370,671-byte Git LFS object, with 76 rewritten unpublished commits, no force-push, and a verified fresh remote read-back |
@@ -23,9 +23,15 @@
 Historical source/result inventories contain more files than the live CLI. Do not use a copied prose
 count or rough “N+” inventory as the runnable catalog.
 
-### Active Ragnarok containment
+### Bounded research runtime and retained containment
 
-`./ice status` is the typed operational authority. Phase 56 answered its frozen lambda-half
+`./ice status` is the typed operational authority. The one-shot mechanism is now historical rather than
+the template for new work. Clean committed unnumbered core runners execute with one common policy: 120 s,
+262,144 bytes each for stdout/stderr, at most 12 changed artifacts and 1,000,000 changed bytes. There is no
+per-window launch receipt. The killed Phase-51→56 route, every new numbered descendant, and the three
+consumed Gate-1 runners remain closed.
+
+Phase 56 answered its frozen lambda-half
 launch-provenance/residual-conditioning question and set `next_phase = null`; the one-shot closeout
 permission is now consumed. The 2026-08-25 straight-lift window is also consumed. On 2026-08-26 the user
 separately authorized exactly one no-argument invocation of the hash-pinned, non-numbered
@@ -37,11 +43,13 @@ hash-pinned, no-argument invocation of `gate1_scalar_zero_lapse_extension`, aime
 exact guard and wrote no result. The preceding square rewrite passed; independent read-only review identified
 an asymmetric SymPy structural comparison as a harness false negative, not scientific counterevidence.
 The exclusive receipt nevertheless consumed the one-shot. No retry or reproduction surface is authorized;
-only the frozen Phase 11–50 historical allowlist executes.
+the frozen Phase 11–50 historical allowlist remains hash-pinned, while distinct unnumbered science runs use
+the generic bounded path.
 The Phase-51→56 saved-backend/reconstructed-launch reconciliation route may not rerun Phase 51–55,
 substitute another Phase 56, generate Phase 57, perform a full replay, relax a threshold, or create
 another evaluator/dtype/solver/residual/provenance descendant.
-Review becomes eligible on 2026-08-30 but never resumes automatically.
+The former 2026-08-30 review date no longer gates distinct unnumbered calculations; it never reopens the
+killed numbered route.
 
 The exact source-link authorization, limit order, decision table, and null-output boundary are recorded in
 [`decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`](decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md).

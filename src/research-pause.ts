@@ -7,9 +7,9 @@ import { iceError, type IceError } from "./errors.ts"
 import { capture } from "./process.ts"
 import { Workspace } from "./workspace.ts"
 
-const coreResearchRoot = "cpt_temporal_folded_susy/"
+export const coreResearchRoot = "cpt_temporal_folded_susy/"
 const phaseToken =
-  /(?:^|[/_\s-])phase[\s_-]?([0-9]+)[a-z]?(?=$|[/_\s-])/gi
+  /(?:^|[/_\s-])p(?:hase)?[\s_-]?([0-9]+)[a-z]?(?=$|[/_\s-])/gi
 
 export const frozenHistoricalCoreScriptSha256: ReadonlyMap<string, string> =
   new Map([
@@ -103,6 +103,27 @@ export const boundedGate1ZeroLapseAuthorizationId =
   "GATE1_ZERO_LAPSE_20260826_01"
 export const boundedGate1ZeroLapseExecutionEnabled: boolean = false
 
+export const boundedCoreRunCaps = {
+  wall_clock_seconds: 120,
+  stdout_bytes: 262_144,
+  stderr_bytes: 262_144,
+  changed_artifact_files: 12,
+  changed_artifact_bytes: 1_000_000
+} as const
+
+const consumedCoreScriptRoots: ReadonlyArray<string> = [
+  boundedGate1Script,
+  boundedGate1SourceLinkScript,
+  boundedGate1ZeroLapseScript,
+  "cpt_temporal_folded_susy/gate1_source_link",
+  "cpt_temporal_folded_susy/gate1_zero_lapse"
+]
+
+const isConsumedCoreScript = (relpath: string): boolean =>
+  consumedCoreScriptRoots.some(
+    (root) => relpath === root || relpath.startsWith(`${root}_`)
+  )
+
 export const boundedGate1InvocationDecision = (
   query: string,
   relpath: string,
@@ -119,12 +140,20 @@ export const boundedGate1InvocationDecision = (
 }
 
 export const ragnarokStatus = {
-  schema: "ice-ragnarok-circuit-breaker/v2",
+  schema: "ice-ragnarok-circuit-breaker/v3",
   effective_date: "2026-08-26",
-  operational_state: "GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN",
+  operational_state: "BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED",
   pause_started_on: "2026-08-23",
   review_eligible_on: "2026-08-30",
   auto_resume: false,
+  bounded_science_runtime: {
+    state: "ACTIVE",
+    policy: "GENERIC_BOUNDED_UNNUMBERED_CORE",
+    per_window_receipts_required: false,
+    consumed_windows_are_history_only: true,
+    numbered_descendants_allowed: false,
+    caps: boundedCoreRunCaps
+  },
   resume_authorization: {
     id: "GATE1_DIRECT_20260825_01",
     authorized_by: "USER",
@@ -589,6 +618,15 @@ export const researchRunDecision = (relpath: string) => {
       expected_sha256: frozenHistoricalCoreScriptSha256.get(normalized) ?? null
     }
   }
+  if (isConsumedCoreScript(normalized)) {
+    return {
+      allowed: false,
+      reason: "CONSUMED_CORE_RUN" as const,
+      normalized_relpath: normalized,
+      maximum_phase: maximumPhase,
+      expected_sha256: null
+    }
+  }
   if (
     normalized === boundedGate1ZeroLapseScript &&
     boundedGate1ZeroLapseExecutionEnabled
@@ -622,9 +660,18 @@ export const researchRunDecision = (relpath: string) => {
       expected_sha256: boundedGate1ScriptSha256
     }
   }
+  if (maximumPhase !== null) {
+    return {
+      allowed: false,
+      reason: "NUMBERED_CORE_DESCENDANT_BLOCKED" as const,
+      normalized_relpath: normalized,
+      maximum_phase: maximumPhase,
+      expected_sha256: null
+    }
+  }
   return {
-    allowed: false,
-    reason: "CORE_ROUTE_PAUSED" as const,
+    allowed: true,
+    reason: "BOUNDED_NEW_CORE" as const,
     normalized_relpath: normalized,
     maximum_phase: maximumPhase,
     expected_sha256: null
@@ -637,13 +684,13 @@ const blockedRunError = (
 ): IceError => {
   const prefix =
     phase !== null && phase >= ragnarokStatus.containment.blocked_from_core_phase
-      ? `core research phase ${phase}`
+      ? `core research phase ${phase} script '${relpath}'`
       : phase === ragnarokStatus.containment.terminal_closeout_phase
         ? `completed terminal Phase ${phase} script '${relpath}'`
         : `core research script '${relpath}'`
   return iceError(
     "RESEARCH_PHASE_PAUSED",
-    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the completed Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout and consumed bounded Gate-1 windows remain closed, the killed route remains closed, and execution is limited to the frozen historical allowlist plus any exact hash-pinned window shown by \`ice status\``,
+    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the completed Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout, its numbered descendants, and consumed bounded Gate-1 windows remain closed. New unnumbered core calculations use the generic bounded runtime shown by \`ice status\``,
     2
   )
 }
@@ -822,7 +869,9 @@ export const guardResearchRun = (
   }
   const expectedSha256 = decision.expected_sha256
   if (expectedSha256 === null) {
-    return Effect.succeed(entry)
+    return decision.reason === "BOUNDED_NEW_CORE"
+      ? guardCoreDirectoryClean.pipe(Effect.as(entry))
+      : Effect.succeed(entry)
   }
   return Effect.gen(function* () {
     const workspace = yield* Workspace
@@ -1137,19 +1186,21 @@ export const formatRagnarokStatus = (json: boolean): string => {
   }
 
   return [
-    `Ragnarok circuit breaker: ${ragnarokStatus.operational_state}`,
+    `Research runtime: ${ragnarokStatus.operational_state}`,
     `Continuation route: ${ragnarokStatus.containment.continuation_route}`,
     `Kill scope: ${ragnarokStatus.containment.kill_scope}`,
+    `New unnumbered core: bounded execution enabled; per-window receipts=${String(ragnarokStatus.bounded_science_runtime.per_window_receipts_required)}`,
+    `Generic caps: ${ragnarokStatus.bounded_science_runtime.caps.wall_clock_seconds}s, ${ragnarokStatus.bounded_science_runtime.caps.changed_artifact_files} changed files, ${ragnarokStatus.bounded_science_runtime.caps.changed_artifact_bytes} changed bytes`,
     `Executable core: ${ragnarokStatus.containment.frozen_historical_run_allowlist.length} frozen historical scripts through Phase ${ragnarokStatus.containment.frozen_historical_run_allowlist_through_phase}; Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout consumed`,
     `Execution provenance: ${ragnarokStatus.containment.execution_provenance}`,
     `Bounded Gate 1: ${ragnarokStatus.gate1_window.state}; ${ragnarokStatus.gate1_window.exact_script}; execution enabled=${String(ragnarokStatus.gate1_window.execution_enabled)}`,
     `Scalar source link: ${ragnarokStatus.source_link_window.state}; ${ragnarokStatus.source_link_window.exact_script}; execution enabled=${String(ragnarokStatus.source_link_window.execution_enabled)}`,
     `Scalar zero-lapse extension: ${ragnarokStatus.zero_lapse_window.state}; ${ragnarokStatus.zero_lapse_window.exact_script}; execution enabled=${String(ragnarokStatus.zero_lapse_window.execution_enabled)}`,
     `Scalar zero-lapse closeout: ${ragnarokStatus.zero_lapse_window.consumed.run_status}; result artifact=${ragnarokStatus.zero_lapse_window.consumed.result_artifact}; retry/repro blocked`,
-    `Next phase: ${String(ragnarokStatus.containment.next_phase)}; no automatic descendant is authorized`,
+    `Next numbered phase: ${String(ragnarokStatus.containment.next_phase)}; numbered descendants remain blocked`,
     `Gate 1: ${ragnarokStatus.scientific_state.gate1}`,
     `Scientific route: ${ragnarokStatus.scientific_state.scientific_route}`,
-    `Historical review date: ${ragnarokStatus.review_eligible_on}; latest exact-window wait override approved ${ragnarokStatus.zero_lapse_authorization.approved_on} (no automatic resume)`,
+    `Historical one-shot windows remain immutable evidence; new calculations do not consume launch receipts`,
     `Repository push: ${ragnarokStatus.repository_transport.push_status}`,
     "Decision: docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md"
   ].join("\n")

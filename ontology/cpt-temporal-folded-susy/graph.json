@@ -9706,10 +9706,10 @@
       "id": "policy:ragnarok-circuit-breaker",
       "type": "policy",
       "title": "Ragnarok bounded-pause circuit breaker",
-      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The Phase-56 terminal exception and all three non-numbered Gate-1 windows are consumed. The fixed-a m=2 scalar zero-lapse extension one-shot ended INVALID_RUN at a SymPy structural-equality false negative with no result; corrected execution, retry, reproduction, Phase 51–56, Phase 57, full replay, renamed offspring and global promotion remain blocked. This policy is not scientific evidence, a Gate-1 no-go, a physical-original-cycle claim, or a TOE verdict.",
-      "state": "ACTIVE_NO_RESEARCH_WINDOW_ZERO_LAPSE_CONSUMED_INVALID_RUN",
+      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The Phase-56 terminal exception and all three non-numbered Gate-1 one-shot windows remain consumed historical provenance. Distinct clean committed unnumbered core calculations now run under generic time, output, changed-file and changed-byte caps without per-window receipts; consumed runners, new numbered descendants, Phase 51–56 reconciliation and full replay stay blocked. This policy is not scientific evidence, a Gate-1 no-go, a physical-original-cycle claim, or a TOE verdict.",
+      "state": "ACTIVE_BOUNDED_SCIENCE_KILLED_RECONCILIATION_CLOSED",
       "path": "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md",
-      "sha256": "1d9402e41f9addc2b0b23e14e71c5d865eea71e89055384526400e5eaf9dc215",
+      "sha256": "f0108bb3bef23b6db074dcde52823fc765ab62c3e904e021656f09fdd13cc631",
       "introduced_in_commit": "2324afb51783149fddeccdf53f3b2d315c6857f8"
     },
     {
