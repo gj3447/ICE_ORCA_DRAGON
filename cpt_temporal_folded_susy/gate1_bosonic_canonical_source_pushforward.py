@@ -35,7 +35,7 @@ RUNNER_RELPATH = (
     "cpt_temporal_folded_susy/gate1_bosonic_canonical_source_pushforward.py"
 )
 EXPECTED_INPUT_SHA256 = (
-    "b2572eb98593a5cfe0746abb4c4aa99f5eb25ab1c6651617f1a14b0d9cd7de30"
+    "fc3f1061a053639665c87c0b9f6badddda49e6d63dc93d183c3aadfec89f9eaf"
 )
 CALCULATION_ID = "Gate1M2BosonicCanonicalSourcePushforward"
 RESULT_SCHEMA = "ice.gate1.bosonic-canonical-source-pushforward.result.v1"
@@ -387,30 +387,80 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     )
 
     C = sp.sqrt(mu_g * mu_s) / (2 * sp.pi * hbar)
-    real_configuration_integral = (
+    real_momentum_magnitude = mu_g * mu_s / (
+        sp.pi**2 * hbar**2 * n**2
+    )
+    positive_real_momentum_phases = [
+        sp.exp(sp.I * sp.pi / 4),
+        sp.exp(-sp.I * sp.pi / 4),
+        sp.exp(sp.I * sp.pi / 4),
+        sp.exp(-sp.I * sp.pi / 4),
+    ]
+    negative_real_momentum_phases = [
+        sp.exp(-sp.I * sp.pi / 4),
+        sp.exp(sp.I * sp.pi / 4),
+        sp.exp(-sp.I * sp.pi / 4),
+        sp.exp(sp.I * sp.pi / 4),
+    ]
+    positive_real_momentum_integral = sp.simplify(
+        sp.prod(positive_real_momentum_phases) * real_momentum_magnitude
+    )
+    negative_real_momentum_integral = sp.simplify(
+        sp.prod(negative_real_momentum_phases) * real_momentum_magnitude
+    )
+    real_configuration_magnitude = (
         sp.pi * hbar * n / (2 * sp.sqrt(mu_g * mu_s))
     )
-    positive_real_kernel = sp.simplify(
-        (mu_g * mu_s / (sp.pi**2 * hbar**2 * n**2))
-        * real_configuration_integral
+    positive_real_configuration_phases = [
+        sp.exp(-sp.I * sp.pi / 4),
+        sp.exp(sp.I * sp.pi / 4),
+    ]
+    negative_real_configuration_phases = [
+        sp.exp(sp.I * sp.pi / 4),
+        sp.exp(-sp.I * sp.pi / 4),
+    ]
+    positive_real_configuration_integral = sp.simplify(
+        sp.prod(positive_real_configuration_phases)
+        * real_configuration_magnitude
     )
-    negative_real_kernel = positive_real_kernel
-    holomorphic_configuration_integral = (
-        sp.pi * hbar * z / (2 * sp.sqrt(mu_g * mu_s))
+    negative_real_configuration_integral = sp.simplify(
+        sp.prod(negative_real_configuration_phases)
+        * real_configuration_magnitude
+    )
+    positive_real_kernel = sp.simplify(
+        positive_real_momentum_integral
+        * positive_real_configuration_integral
+    )
+    negative_real_kernel = sp.simplify(
+        negative_real_momentum_integral
+        * negative_real_configuration_integral
+    )
+    holomorphic_configuration_integral = sp.simplify(
+        x_ray
+        * q_ray
+        * sp.pi
+        * hbar
+        * rho
+        / (2 * sp.sqrt(mu_g * mu_s))
     )
     holomorphic_kernel = sp.simplify(
-        (mu_g * mu_s / (sp.pi**2 * hbar**2 * z**2))
-        * holomorphic_configuration_integral
+        J_total * holomorphic_configuration_integral
     )
-    negative_holomorphic_kernel = sp.simplify(holomorphic_kernel.subs(z, -n))
+    negative_holomorphic_kernel = sp.simplify(
+        holomorphic_kernel.subs(theta, sp.pi)
+    )
     audit.check_exact(
         "G1.bosonic.flat_kernel_detline_glue",
         sp.simplify(positive_real_kernel - C / n) == 0
         and sp.simplify(negative_real_kernel - C / n) == 0
-        and sp.simplify(holomorphic_kernel - C / z) == 0
-        and sp.simplify(negative_holomorphic_kernel / negative_real_kernel + 1)
+        and sp.simplify(holomorphic_kernel - C / z_polar) == 0
+        and sp.simplify(
+            negative_holomorphic_kernel
+            / negative_real_kernel.subs(n, rho)
+            + 1
+        )
         == 0,
-        "the real flat kernel is C/|N|, one holomorphic sheet is C/N, and their negative-arm ratio is -1",
+        "explicit real momentum/configuration Fresnel phases give C/|N|, the transported x,q ray Jacobians give C/z, and their negative-arm ratio is -1",
     )
     audit.check_exact(
         "G1.bosonic.orientation_mutation_control",
@@ -467,6 +517,7 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "scalar_pair": str(J_s),
             "total": str(J_total),
             "total_simplified": "24*pi^2*A^4/(hbar^2*z^2)",
+            "orientation_convention": "J_g and J_s are scalar Gaussian-factor products; the total uses the pinned interleaved order without regrouping the wedge measure",
         },
         "cap_orientation": {
             "lower_momentum": str(lower_momentum_glue),
@@ -482,7 +533,19 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
         },
         "flat_kernel": {
             "C": str(C),
-            "independently_normalized_real": "C/Abs(N)",
+            "positive_real_momentum_phases": [
+                str(value) for value in positive_real_momentum_phases
+            ],
+            "negative_real_momentum_phases": [
+                str(value) for value in negative_real_momentum_phases
+            ],
+            "positive_real_configuration_phases": [
+                str(value) for value in positive_real_configuration_phases
+            ],
+            "negative_real_configuration_phases": [
+                str(value) for value in negative_real_configuration_phases
+            ],
+            "real_kernel": "C/Abs(N)",
             "holomorphic_sheet": str(holomorphic_kernel),
             "negative_arm_ratio": "-1",
         },
@@ -590,7 +653,7 @@ def numerical_calculation(
             f"G1.bosonic.quadrature.lateral_point_{index}",
             relative_error,
             tolerance,
-            "four independently integrated original linear-plus-quadratic momentum factors reproduce J_g*J_s on the declared centered rays",
+            "as a normalization sanity check, four independently integrated original linear-plus-quadratic momentum factors reproduce the interleaved-order scalar product J_g*J_s on the declared centered rays; this is not a source-deformation test",
             point_record,
         )
         records.append(
@@ -641,9 +704,11 @@ def select_decision(exact: dict[str, Any]) -> dict[str, str]:
                 "relative ends remain unproved"
             ),
             "meaning": (
-                "reject the literal all-real momentum-first source link; retain the "
-                "declared finite Gaussian pushforward only as a branch requiring a "
-                "conformal prescription and independent determinant-line/BFV completion"
+                "reject only the claimed absolutely convergent momentum-first "
+                "pushforward on unchanged real p_a,p_phi axes using one common "
+                "lateral sign; retain the declared finite Gaussian pushforward only "
+                "as a branch requiring a conformal prescription and independent "
+                "determinant-line/BFV completion"
             ),
         }
     raise AssertionError("exact facts did not select a predeclared decision row")
@@ -662,7 +727,7 @@ def build_result(
         "calculation_id": CALCULATION_ID,
         "numbered_phase": None,
         "run_status": "VALID_RUN",
-        "classification": "GATE1_M2_ALL_REAL_MOMENTUM_SOURCE_OBSTRUCTED_COMPLEX_GAUSSIAN_PUSHFORWARD_MATCHES",
+        "classification": "GATE1_M2_UNCHANGED_REAL_PA_PPHI_SINGLE_I0_NOT_ABSOLUTELY_CONVERGENT_COMPLEX_GAUSSIAN_PUSHFORWARD_MATCHES",
         "verdict": decision["verdict"],
         "programme_impact": decision["programme_impact"],
         "input": {"path": INPUT_RELPATH, "sha256": input_sha256},
@@ -679,13 +744,17 @@ def build_result(
             "meaning": decision["meaning"],
             "source_control_status": "DECLARED_COMPLEX_FINITE_GAUSSIAN_BRANCH_NOT_PHYSICAL_ORIGINAL",
             "primary_source_boundary": (
-                "the cited momentum-first below-origin prescription first gauge-fixes "
-                "away the negative gravitational trace momentum; it does not license "
-                "an all-real retained p_a contour here"
+                "Banihashemi-Jacobson's momentum-first convergence argument assumes "
+                "a gauge fixing that eliminates the negative full-theory "
+                "trace-momentum Gaussian, illustrated by p=q_ij*p^ij=0; under that "
+                "assumption N-i*epsilon damps the remaining positive momentum block. "
+                "This finite m=2 control instead retains a negative-kinetic "
+                "minisuperspace p_a block, so the source does not authorize an "
+                "unchanged real-p_a momentum-first contour"
             ),
         },
         "scope_status": {
-            "all_real_bosonic_momentum_first_source": "REJECTED_BY_CONVERGENCE_SIGNS",
+            "unchanged_real_pa_pphi_momentum_first_with_single_common_i0": "NOT_ABSOLUTELY_CONVERGENT",
             "declared_complex_centered_momentum_rays": "KEEP_AS_FINITE_GAUSSIAN_BRANCH",
             "scale_factor_relative_ends": "OPEN",
             "nonlinear_Starobinsky_configuration_cycle": "OPEN",

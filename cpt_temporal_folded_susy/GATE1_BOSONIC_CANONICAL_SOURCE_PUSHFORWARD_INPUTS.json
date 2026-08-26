@@ -2,7 +2,7 @@
   "schema_version": "ice.gate1.bosonic-canonical-source-pushforward.input.v1",
   "calculation_id": "Gate1M2BosonicCanonicalSourcePushforward",
   "numbered_phase": null,
-  "question": "For the finite m=2 homogeneous bosonic canonical action, can one common N-i0 or N+i0 prescription integrate both real gravitational and scalar momenta first; if not, do the declared steepest Gaussian rays reproduce the configuration action and where does the negative-arm orientation glue enter?",
+  "question": "For the finite m=2 homogeneous bosonic canonical action, can one common N-i0 or N+i0 prescription make the unchanged real scale-factor and scalar momentum axes absolutely convergent before the lapse integration; if not, do the declared steepest Gaussian rays reproduce the configuration action and where does the negative-arm orientation glue enter?",
   "kind": "EXACT_FINITE_M2_CANONICAL_SOURCE_FALSIFIER_WITH_HIGH_PRECISION_GAUSSIAN_CHECK",
   "epistemic_scope": "REDUCED_BOSONIC_NONZERO_LAPSE_CONTROL_NOT_PHYSICAL_ORIGINAL_CYCLE",
   "repository_sources": [
@@ -20,7 +20,7 @@
     },
     {
       "path": "cpt_temporal_folded_susy/PHASE32_BELOW_ORIGIN_LAPSE_INTERSECTION.md",
-      "role": "declared lapse-dependent gravity/scalar momentum rays and explicit warning that the retained conformal momentum was removed in the cited source"
+      "role": "declared lapse-dependent gravity/scalar momentum rays and explicit warning that the cited full-theory convergence argument assumes removal of its negative trace-momentum Gaussian, whereas this finite minisuperspace control retains a negative-kinetic p_a block"
     },
     {
       "path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_RESULT.json",
@@ -31,8 +31,8 @@
     {
       "source": "Banihashemi and Jacobson, On the lapse contour, Phys. Rev. D 111, 066014 (2025), arXiv:2405.10307",
       "url": "https://doi.org/10.1103/PhysRevD.111.066014",
-      "used_for": "full-real lapse and momentum-first below-origin prescription after the negative gravitational trace momentum is gauge-fixed away",
-      "not_used_for": "a real p_a contour, a global maximal-slicing theorem, the repository field lift, determinant orientation or n_sigma"
+      "used_for": "momentum-first convergence under an assumed gauge fixing that eliminates the negative full-theory trace-momentum Gaussian, illustrated by p=q_ij*p^ij=0; under that assumption N-i*epsilon damps the remaining positive momentum block",
+      "not_used_for": "identification of minisuperspace p_a with the full trace density, an unchanged real p_a contour, a global maximal-slicing theorem, the repository field lift, determinant orientation or n_sigma"
     },
     {
       "source": "Witten, Analytic Continuation Of Chern-Simons Theory, arXiv:1001.2933",
@@ -65,6 +65,7 @@
   "source_and_target_cycles": {
     "lapse_first_source": "N in R oriented -infinity to +infinity, x and q real, all four momenta real, interpreted distributionally before any momentum-first interchange",
     "ordered_orientation": "dp_a0 wedge dp_phi0 wedge dp_a1 wedge dp_phi1 wedge dx wedge dq wedge dN",
+    "pair_prefactor_convention": "J_g and J_s denote scalar products of one-dimensional Gaussian factors. The authoritative total is evaluated in the pinned interleaved momentum order; no wedge reordering into a grouped gravity-then-scalar measure is performed.",
     "liouville_momentum_measure": "product_e[(dp_a,e wedge dp_phi,e)/(2*pi*hbar)^2]",
     "momentum_first_ray_at_z_rho_theta": [
       "p_a,e-p_a,e^star=exp(i*(pi/4-theta/2))*y_a,e",
@@ -110,7 +111,7 @@
       ["0.6", "0.15"],
       ["-0.6", "0.15"]
     ],
-    "check": "Parameterize the original square-completion remainder on each centered steepest ray, perform four independent one-dimensional high-precision quadratures, and compare their product with J_g*J_s.",
+    "check": "As a normalization sanity check, parameterize the original square-completion remainder on each centered steepest ray, perform four independent one-dimensional high-precision quadratures, and compare their interleaved-order scalar product with J_g*J_s. This does not test source-to-thimble deformation.",
     "relative_tolerance": "1e-45"
   },
   "decision_table": [
@@ -118,7 +119,7 @@
       "condition": "no common all-real lateral regulator exists, both centered ray blocks reproduce the exact configuration pushforward, momentum cap glue is +1, configuration cap glue is -1, and the scale-factor relative ends remain unproved",
       "verdict": "CONFORMAL_PRESCRIPTION_AND_DETLINE_GLUE_REQUIRED",
       "programme_impact": "NARROW",
-      "meaning": "Reject the literal all-real momentum-first source link; retain the declared finite Gaussian pushforward only as a branch requiring a conformal prescription and independent determinant-line/BFV completion."
+      "meaning": "Reject only the claimed absolutely convergent momentum-first pushforward on unchanged real p_a,p_phi axes using one common lateral sign; retain the declared finite Gaussian pushforward only as a branch requiring a conformal prescription and independent determinant-line/BFV completion."
     },
     {
       "condition": "one common lateral prescription damps every real momentum block and the exact pushforward and orientation checks pass",
@@ -148,6 +149,7 @@
   ],
   "not_computed": [
     "deformation of the lapse-first all-real distribution to the declared momentum thimbles",
+    "alternative distributional all-real definitions, independently regulated momentum blocks or a gauge-fixed reduction",
     "a_1=0, A=0, a_1 to infinity or mixed scale-field relative ends",
     "nonlinear configuration-cycle admissibility with the Starobinsky potential",
     "gauge fixing of p_a, Faddeev-Popov measure, BFV ghosts or absolute determinant orientation",
