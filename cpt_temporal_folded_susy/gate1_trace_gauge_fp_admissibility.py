@@ -506,11 +506,18 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     )
     audit.check_exact(
         "G1.trace.flat_minimum_shell_and_delta_target",
-        benchmark_fp == 3 * p_phi**2 / (4 * sp.pi**2) + 6 * sp.pi**2
+        sp.simplify(
+            benchmark_fp
+            - (3 * p_phi**2 / (4 * sp.pi**2) + 6 * sp.pi**2)
+        )
+        == 0
         and benchmark_fp.is_positive is True
-        and benchmark_constraint.subs(p_phi, shell_root) == 0
-        and benchmark_constraint.subs(p_phi, -shell_root) == 0
-        and benchmark_fp.subs(p_phi, shell_root) == 24 * sp.pi**2
+        and sp.simplify(benchmark_constraint.subs(p_phi, shell_root)) == 0
+        and sp.simplify(benchmark_constraint.subs(p_phi, -shell_root)) == 0
+        and sp.simplify(
+            benchmark_fp.subs(p_phi, shell_root) - 24 * sp.pi**2
+        )
+        == 0
         and sp.simplify(reconstructed_delta_target - raw_delta_target) == 0,
         "at a=1,V=0 the effective FP polynomial is positive and the two constraint roots give the exact raw cosine target",
     )
