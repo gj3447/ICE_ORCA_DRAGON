@@ -2,9 +2,9 @@
   "schema_version": "ice.gate1.v0-trace-endpoint-completion.input.v1",
   "calculation_id": "Gate1V0TraceEndpointCompletion",
   "numbered_phase": null,
-  "question": "In the closed-FRW V(phi)=0 control sector, does a source-faithful local endpoint completion of the static trace gauge P=0 exist, and is the time-dependent trace gauge P=f(s) an exactly gauge-related representative once the endpoint action, finite endpoint flow, and local FP measure are included?",
+  "question": "In the closed-FRW V(phi)=0 control sector, does a classical local on-shell relational endpoint action for the static trace gauge P=0 exist, and is the time-dependent trace gauge P=f(s) an exactly gauge-related representative once the endpoint action, finite endpoint flow, and local FP measure are included?",
   "kind": "EXACT_CLOSED_FRW_V0_TRACE_ENDPOINT_AND_GAUGE_ORBIT_TRIANGLE_WITH_INDEPENDENT_HIGH_PRECISION_QUADRATURE",
-  "epistemic_scope": "ONE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_PROJECTOR_OR_FIXED_A_KERNEL_EQUIVALENCE",
+  "epistemic_scope": "ONE_FROZEN_P_POSITIVE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_PROJECTOR_OR_FIXED_A_KERNEL_EQUIVALENCE",
   "repository_sources": [
     {
       "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json",
@@ -17,6 +17,10 @@
     {
       "path": "cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md",
       "role": "proper-time BFV endpoint conditions and surviving lapse modulus whose source is not silently reused here"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md",
+      "role": "fixed-parameter modulus and zero-lapse distributional boundary that remain outside this local endpoint calculation"
     },
     {
       "path": "cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md",
@@ -51,7 +55,7 @@
     "local_dirac_coordinate": "Phi_star=phi-sqrt(3/2)*atanh(sqrt(2/3)*P/p)",
     "static_gauge": "P=0 with relational endpoint data Phi_star",
     "time_dependent_gauge": "P=f(s), f(s)=1/4+s/4 for 0<=s<=1",
-    "benchmark": "p=1, P1=1/4, P2=1/2, hence R>=5/2 and D>0 throughout"
+    "benchmark": "p=+1 on the p>0 connected component, P1=1/4, P2=1/2, hence R>=5/2 and D>0 throughout"
   },
   "exact_plan": {
     "constraint_solution": "Q_star(P,p)=log(R/(72*pi^4))/2 and C(Q_star,P,p)=0",
@@ -63,7 +67,8 @@
     "local_fp_measure": "on D>0, dQ dP dphi dp delta(C) delta(P-f) D=dPhi_star dp",
     "gauge_preservation": "dot(P)=N*D=dot(f), hence N=dot(f)/D",
     "orbit_triangle": "T=integral(P1 to P2)dP/D, mu_i=integral(P_i to 0)dP/D, and T+mu_2-mu_1=0",
-    "action_triangle": "S_td=P2-P1, F1-F2=P2-P1, and S_imp=S_td-(P2-P1)=0"
+    "action_triangle": "S0_raw_td=P2-P1, F_i=-P_i, the actual endpoint correction is [F]_1^2=F2-F1=-(P2-P1), and S_rel=S0_raw_td+[F]_1^2=0",
+    "variational_problem_separation": "the verdict concerns fixed relational Phi_star with S0-[P]; the auxiliary fixed-(P,phi) action S0-[P*Q] alone has H_red=+dot(f)*Q_star"
   },
   "numerical_plan": {
     "precision_digits": 90,
@@ -72,16 +77,16 @@
     "P2": "0.5",
     "independent_methods": [
       "mpmath tanh-sinh quadrature",
-      "48-node Gauss-Legendre quadrature constructed independently from polynomial roots"
+      "mpmath 48-node Gauss-Legendre rule"
     ],
     "relative_tolerance": "1e-60"
   },
   "decision_table": [
     {
       "condition": "all shell, Dirac-coordinate, one-form, transversality, finite-flow, local-FP, gauge-preservation, orbit-triangle, and improved-action checks pass",
-      "verdict": "KEEP_IMPROVED_STATIC_LOCAL_ENDPOINT_COMPLETION",
-      "programme_impact": "NARROW_AND_ADVANCE_LOCAL_ENDPOINT_ROUTE",
-      "meaning": "Keep the local V=0 relational endpoint completion of the static trace slice; retain the time-dependent representative as an exact same-orbit control, not as an independent promotion."
+      "verdict": "KEEP_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "programme_impact": "NARROW_LOCAL_ENDPOINT_ROUTE_NO_AUTOMATIC_SUCCESSOR",
+      "meaning": "Keep the classical local V=0 on-shell relational endpoint action of the static trace slice; retain the time-dependent representative as an exact same-constraint-orbit control, not as an independent promotion or quantum endpoint-state completion."
     },
     {
       "condition": "the static relational endpoint or finite boundary-generator identities fail while D remains nonzero and the time-dependent preservation and orbit identities pass",
@@ -103,7 +108,7 @@
     }
   ],
   "computed_scope": [
-    "exact closed-FRW V=0 constraint-shell reduction in one R>0,D>0 component",
+    "exact closed-FRW V=0 constraint-shell reduction in the frozen p=+1, R>0, D>0 connected component",
     "local relational endpoint coordinate and on-shell symplectic potential",
     "finite endpoint flow to the static trace slice",
     "local canonical-limit FP Jacobian",
@@ -112,6 +117,7 @@
   ],
   "not_computed": [
     "a full off-shell canonical transformation and ghost/antighost/b endpoint construction",
+    "a normalized quantum endpoint-state transform",
     "the full m=2 BFV measure or gauge fermion",
     "equality with the existing fixed-(a,phi) kernel or its constant-lapse finite discretization",
     "the full-real-lapse Marolf projector matrix element",
@@ -129,10 +135,23 @@
     "ode_calls": 0,
     "automatic_descendants": 0
   },
+  "execution_contract": {
+    "arguments": "NONE",
+    "scientific_nonpass": "RECORD_A_VALID_RESULT_AND_SELECT_A_PREDECLARED_NONPASS_ROW",
+    "integrity_or_schema_failure": "RAISE_WITHOUT_WRITING_A_RESULT",
+    "open_dependencies": "NOT_EXECUTION_AUTHORIZATION"
+  },
   "required_fail_closed_outputs": {
     "physical_original_cycle": null,
     "full_joint_orientation": null,
     "full_m2_bfv_measure": null,
+    "full_off_shell_canonical_transform": null,
+    "full_replacement_bfv_measure": null,
+    "endpoint_state_transform": null,
+    "old_fixed_a_kernel_equivalence": null,
+    "zero_lapse_distribution": null,
+    "global_fundamental_region": null,
+    "determinant_line_orientation": null,
     "full_projector_matrix_element": null,
     "complete_global_signed_intersection_vector": null,
     "global_n_sigma": null,

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Gate 1 -- closed-FRW V=0 trace-gauge endpoint triangle.
 
-This bounded, non-numbered calculation constructs one local relational
-endpoint completion of the static trace slice P=0 and compares it with a
-time-dependent representative P=f(s) on the same constraint orbit.  It checks
+This bounded, non-numbered calculation constructs one classical local
+on-shell relational endpoint action for the static trace slice P=0 and
+compares it with a time-dependent representative P=f(s) on the same
+constraint orbit.  It checks
 the constraint shell, Dirac endpoint coordinate, pulled-back one-form, finite
 endpoint gauge flow, local canonical-limit FP measure, reduced Hamiltonian,
 and the orbit/action triangles exactly.  Two independent high-precision
@@ -21,6 +22,7 @@ from __future__ import annotations
 import hashlib
 import json
 import platform
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable
@@ -36,7 +38,7 @@ RUNNER_RELPATH = (
     "cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py"
 )
 EXPECTED_INPUT_SHA256 = (
-    "a9e3055a8014d16af7bcab815bd88b26ed2f2b22f53e66322d39d0ec596dd638"
+    "2a7d31d99ae61ee7877e07aeda98fc8e771952880a5d7bbd5a2cc4d4bf4c01a5"
 )
 CALCULATION_ID = "Gate1V0TraceEndpointCompletion"
 RESULT_SCHEMA = "ice.gate1.v0-trace-endpoint-completion.result.v1"
@@ -67,19 +69,21 @@ class Audit:
     numerical: list[dict[str, Any]] = field(default_factory=list)
     theorem_guards: list[dict[str, Any]] = field(default_factory=list)
     seen_ids: set[str] = field(default_factory=set, repr=False)
+    statuses: dict[str, bool] = field(default_factory=dict, repr=False)
 
     def register_id(self, check_id: str) -> None:
         if check_id in self.seen_ids:
             raise AssertionError(f"duplicate audit id: {check_id}")
         self.seen_ids.add(check_id)
 
-    def check_exact(self, check_id: str, passed: bool, statement: str) -> None:
+    def check_exact(self, check_id: str, passed: bool, statement: str) -> bool:
         self.register_id(check_id)
-        if not passed:
-            raise AssertionError(f"[EXACT FAIL] {check_id}: {statement}")
+        passed = bool(passed)
+        self.statuses[check_id] = passed
         self.exact.append(
-            {"id": check_id, "passed": True, "statement": statement}
+            {"id": check_id, "passed": passed, "statement": statement}
         )
+        return passed
 
     def check_numerical(
         self,
@@ -89,9 +93,10 @@ class Audit:
         error_kind: str,
         statement: str,
         details: dict[str, Any],
-    ) -> None:
+    ) -> bool:
         self.register_id(check_id)
         passed = bool(error <= tolerance)
+        self.statuses[check_id] = passed
         record = {
             "id": check_id,
             "passed": passed,
@@ -101,12 +106,8 @@ class Audit:
             "tolerance": mp_string(tolerance, 8),
             **details,
         }
-        if not passed:
-            raise AssertionError(
-                f"[NUMERICAL FAIL] {check_id}: {error_kind} error "
-                f"{error} exceeds {tolerance}"
-            )
         self.numerical.append(record)
+        return passed
 
     def guard_theorem(
         self,
@@ -129,6 +130,18 @@ class Audit:
                 "domain": domain,
                 "statement": statement,
             }
+        )
+
+    def passed(self, check_id: str) -> bool:
+        if check_id not in self.statuses:
+            raise AssertionError(f"unknown scientific check id: {check_id}")
+        return self.statuses[check_id]
+
+    def failed_scientific_ids(self) -> list[str]:
+        return sorted(
+            check_id
+            for check_id, passed in self.statuses.items()
+            if not passed
         )
 
 
@@ -183,10 +196,24 @@ def load_frozen_input() -> tuple[dict[str, Any], str, dict[str, str]]:
         "automatic_descendants": 0,
     }:
         raise AssertionError("resource cap mutation")
+    if payload["execution_contract"] != {
+        "arguments": "NONE",
+        "scientific_nonpass": "RECORD_A_VALID_RESULT_AND_SELECT_A_PREDECLARED_NONPASS_ROW",
+        "integrity_or_schema_failure": "RAISE_WITHOUT_WRITING_A_RESULT",
+        "open_dependencies": "NOT_EXECUTION_AUTHORIZATION",
+    }:
+        raise AssertionError("execution contract mutation")
     expected_nulls = {
         "physical_original_cycle": None,
         "full_joint_orientation": None,
         "full_m2_bfv_measure": None,
+        "full_off_shell_canonical_transform": None,
+        "full_replacement_bfv_measure": None,
+        "endpoint_state_transform": None,
+        "old_fixed_a_kernel_equivalence": None,
+        "zero_lapse_distribution": None,
+        "global_fundamental_region": None,
+        "determinant_line_orientation": None,
         "full_projector_matrix_element": None,
         "complete_global_signed_intersection_vector": None,
         "global_n_sigma": None,
@@ -198,6 +225,12 @@ def load_frozen_input() -> tuple[dict[str, Any], str, dict[str, str]]:
     }
     if payload["required_fail_closed_outputs"] != expected_nulls:
         raise AssertionError("fail-closed output mutation")
+
+    declared_sources = {
+        source["path"] for source in payload["repository_sources"]
+    }
+    if declared_sources != set(UPSTREAM_HASHES):
+        raise AssertionError("declared repository source set mutation")
 
     observed_upstream: dict[str, str] = {}
     root = repository_root()
@@ -287,7 +320,7 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
         "the declared local relational coordinate has the exact P and p derivatives required on R>0",
     )
 
-    dirac_bracket = sp.simplify(
+    constraint_poisson_bracket = sp.simplify(
         phi_star_p_trace * trace_fp + sp.diff(constraint, p)
     )
     shell_p_squared = (
@@ -295,7 +328,10 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     ) / 3
     audit.check_exact(
         "G1.endpoint.dirac_invariance_on_shell",
-        sp.simplify(dirac_bracket.subs(p**2, shell_p_squared)) == 0,
+        sp.simplify(
+            constraint_poisson_bracket.subs(p**2, shell_p_squared)
+        )
+        == 0,
         "{Phi_star,C}=0 on the closed-FRW V=0 constraint shell",
     )
 
@@ -321,14 +357,20 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
         original_endpoint_variation
         - (trace_p * d_q + q * d_p_trace)
     )
+    q_dot, trace_p_dot = sp.symbols("Q_dot P_dot", real=True)
+    mixed_bulk_trace_term = sp.simplify(
+        trace_p * q_dot
+        - (trace_p_dot * q + trace_p * q_dot)
+    )
     audit.check_exact(
         "G1.endpoint.mixed_polarization_boundary_action",
         sp.simplify(
             improved_endpoint_variation
             - (-q * d_p_trace + p * d_phi)
         )
-        == 0,
-        "S-[P*Q] has fixed-(P,phi) endpoint variation -Q*dP+p*dphi and reduced Hamiltonian H_red=dot(f)*Q_star",
+        == 0
+        and sp.simplify(mixed_bulk_trace_term + trace_p_dot * q) == 0,
+        "the separate auxiliary S-[P*Q] problem has fixed-(P,phi) endpoint variation -Q*dP+p*dphi and, only after P=f(s), H_red=+dot(f)*Q_star",
     )
 
     constraint_p = sp.diff(constraint, trace_p)
@@ -437,8 +479,10 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
         "G1.endpoint.frozen_component_margins",
         benchmark_r1 == sp.Rational(23, 8)
         and benchmark_r2 == sp.Rational(5, 2)
-        and benchmark_r2 > 0,
-        "for p=1 and 0<=P<=1/2, R>=5/2, a>0 and D>0; the monotone flow has one static P=0 hit",
+        and benchmark_r2 > 0
+        and sp.simplify(sp.diff(shell_discriminant, trace_p) + 4 * trace_p)
+        == 0,
+        "on the frozen p=+1 component and 0<=P<=1/2, dR/dP=-4P and R>=5/2, while dP/dmu=D>0 gives one monotone local static hit",
     )
 
     antiderivative = sp.Function("A")
@@ -454,26 +498,25 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     )
 
     raw_orbit_action = sp.simplify(p2 - p1)
-    boundary_difference = sp.simplify(p2 - p1)
     finite_f1 = -p1
     finite_f2 = -p2
     improved_orbit_action = sp.simplify(
-        raw_orbit_action - boundary_difference
+        raw_orbit_action + finite_f2 - finite_f1
     )
     audit.check_exact(
         "G1.endpoint.action_triangle",
         raw_orbit_action == sp.Rational(1, 4)
         and sp.simplify(finite_f1 - finite_f2 - raw_orbit_action) == 0
         and improved_orbit_action == 0,
-        "S_td=P2-P1=F1-F2=1/4 and the relational endpoint improvement S0-[P] gives zero on the pure gauge orbit",
+        "S0_raw_td=P2-P1=F1-F2=1/4, the actual correction is F2-F1=-1/4, and the relational action S0_raw+[F] gives zero on the pure gauge orbit",
     )
 
     audit.guard_theorem(
         "G1.endpoint.guard.local_shell_completion",
         True,
         "local coisotropic reduction and on-shell symplectic-potential decomposition",
-        "closed-FRW V=0, p=1 benchmark component with R>0 and D>0",
-        "the relational endpoint completion is established only on this local constraint component; a full off-shell canonical transformation is not inferred",
+        "closed-FRW V=0, frozen p=+1 component with R>0 and D>0",
+        "the relational endpoint action is established only on this local on-shell constraint component; a full off-shell canonical transformation or quantum endpoint-state completion is not inferred",
     )
     audit.guard_theorem(
         "G1.endpoint.guard.endpoint_state_scope",
@@ -481,6 +524,13 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
         "HTV endpoint boundary action and gauge-related endpoint data",
         "classical local endpoint coordinates Phi_star and static P=0 slice",
         "the classical boundary potential is computed, but a normalized quantum endpoint-state transform and ghost endpoint sector remain uncomputed",
+    )
+    audit.guard_theorem(
+        "G1.endpoint.guard.variational_problem_separation",
+        True,
+        "separation of relational and mixed-polarization endpoint variational problems",
+        "relational fixed-Phi_star action S0-[P] versus auxiliary fixed-(P,phi) action S0-[P*Q]",
+        "the verdict concerns only the classical local on-shell relational action; H_red=+dot(f)*Q_star belongs to the auxiliary mixed-polarization problem and is not asserted to have zero action on the orbit triangle",
     )
     audit.guard_theorem(
         "G1.endpoint.guard.finite_flow_scope",
@@ -523,9 +573,9 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "D_off_shell": str(trace_fp),
             "D_on_shell": "12*pi^2*a",
         },
-        "relational_endpoint_completion": {
+        "relational_endpoint_action": {
             "Phi_star": str(phi_star),
-            "dirac_bracket_on_shell": "0",
+            "constraint_poisson_bracket_on_shell": "0",
             "shell_one_form": "P*dQ_star+p*dphi=p*dPhi_star+dP",
             "boundary_potential": "B_red=P",
             "improved_action": "S_imp=S0-[P]",
@@ -533,10 +583,12 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "swapped_trace_chart_transversality": "D_NONZERO",
         },
         "mixed_endpoint_action": {
+            "relation_to_verdict": "AUXILIARY_DISTINCT_VARIATIONAL_PROBLEM_NOT_THE_RELATIONAL_ACTION_VERDICT",
             "action": "S_[P,phi]=S0-[P*Q]",
             "boundary_variation": "[-Q*dP+p*dphi]_1^2",
             "reduced_action": "integral(p*phi_dot-f_dot*Q_star) ds",
             "reduced_hamiltonian": "H_red=+f_dot*Q_star",
+            "pure_orbit_action": "P2-P1-(P2*Q2-P1*Q1), generally not zero",
             "full_reduced_velocity_match": True,
         },
         "finite_endpoint_flow": {
@@ -545,6 +597,9 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "static_hit_generator": "F_i=-P_i",
             "benchmark_F1": str(finite_f1),
             "benchmark_F2": str(finite_f2),
+            "actual_endpoint_correction_F2_minus_F1": str(
+                sp.simplify(finite_f2 - finite_f1)
+            ),
         },
         "local_fp_measure": {
             "ordered_coordinates": "(chi,C,Phi_star,p)",
@@ -554,17 +609,21 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "absolute_delta_ledger": "positive on this D>0 component only",
         },
         "time_dependent_representative": {
+            "scope": "CLASSICALLY_SAME_CONSTRAINT_ORBIT_CONTROL_ON_P_POSITIVE_COMPONENT",
             "f": "1/4+s/4",
             "p": "1",
             "P1": str(p1),
             "P2": str(p2),
             "N": "f_dot/D",
             "R_min": str(benchmark_r2),
-            "raw_orbit_action": str(raw_orbit_action),
+            "raw_S0_orbit_action": str(raw_orbit_action),
             "F1_minus_F2": str(sp.simplify(finite_f1 - finite_f2)),
-            "improved_orbit_action": str(improved_orbit_action),
+            "F2_minus_F1_actual_correction": str(
+                sp.simplify(finite_f2 - finite_f1)
+            ),
+            "relational_orbit_action": str(improved_orbit_action),
         },
-        "computed_facts": {
+        "identity_targets": {
             "constraint_component": "REGULAR_R_POSITIVE_D_POSITIVE",
             "local_relational_endpoint_coordinate": "EXISTS",
             "on_shell_endpoint_potential": "B_RED_EQUALS_P",
@@ -630,7 +689,9 @@ def numerical_calculation(
     tanh_sinh: dict[str, mp.mpf] = {}
     gauss_legendre: dict[str, mp.mpf] = {}
     for name, (lower, upper) in intervals.items():
-        tanh_value = mp.quad(inverse_fp, [lower, upper])
+        tanh_value = mp.quad(
+            inverse_fp, [lower, upper], method="tanh-sinh"
+        )
         gauss_value = gauss_legendre_integral(
             inverse_fp, lower, upper, nodes
         )
@@ -697,39 +758,171 @@ def numerical_calculation(
     }
 
 
-def select_decision(exact: dict[str, Any]) -> dict[str, str]:
-    facts = exact["computed_facts"]
-    expected = {
-        "constraint_component": "REGULAR_R_POSITIVE_D_POSITIVE",
-        "local_relational_endpoint_coordinate": "EXISTS",
-        "on_shell_endpoint_potential": "B_RED_EQUALS_P",
-        "finite_static_hit": "UNIQUE_ON_FROZEN_COMPONENT",
-        "finite_endpoint_generator": "F_I_EQUALS_MINUS_P_I",
-        "local_fp_measure": "REDUCES_TO_DPHI_STAR_DP",
-        "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D",
-        "reduced_full_flow": "MATCHES_ON_SHELL",
-        "orbit_triangle": "CLOSES",
-        "improved_action_triangle": "CLOSES",
+def select_decision(
+    frozen_input: dict[str, Any], audit: Audit
+) -> dict[str, Any]:
+    core_ids = {
+        "G1.endpoint.trace_pair",
+        "G1.endpoint.closed_frw_v0_shell",
+        "G1.endpoint.trace_fp_off_and_on_shell",
+        "G1.endpoint.time_dependent_gauge_preservation",
+        "G1.endpoint.frozen_component_margins",
+    }
+    relational_ids = {
+        "G1.endpoint.dirac_coordinate_derivatives",
+        "G1.endpoint.dirac_invariance_on_shell",
+        "G1.endpoint.shell_one_form",
+        "G1.endpoint.static_chart_transversality",
+        "G1.endpoint.finite_boundary_generator_integrand",
+        "G1.endpoint.local_fp_measure_jacobian",
+        "G1.endpoint.action_triangle",
+    }
+    time_control_ids = core_ids | {
+        "G1.endpoint.mixed_polarization_boundary_action",
+        "G1.endpoint.local_fp_measure_jacobian",
+        "G1.endpoint.implicit_root_derivatives",
+        "G1.endpoint.reduced_full_flow_match",
+        "G1.endpoint.orbit_triangle_orientation",
+        "G1.endpoint.quadrature.T",
+        "G1.endpoint.quadrature.mu1",
+        "G1.endpoint.quadrature.mu2",
+        "G1.endpoint.quadrature.tanh_sinh_orbit_closure",
+        "G1.endpoint.quadrature.gauss_legendre_orbit_closure",
+    }
+    all_scientific_ids = {
+        record["id"] for record in audit.exact + audit.numerical
+    }
+    declared_ids = core_ids | relational_ids | time_control_ids
+    if all_scientific_ids != declared_ids:
+        missing = sorted(declared_ids - all_scientific_ids)
+        unexpected = sorted(all_scientific_ids - declared_ids)
+        raise AssertionError(
+            f"decision check partition mutation: missing={missing}, "
+            f"unexpected={unexpected}"
+        )
+
+    all_pass = all(audit.passed(check_id) for check_id in all_scientific_ids)
+    core_pass = all(audit.passed(check_id) for check_id in core_ids)
+    relational_pass = all(
+        audit.passed(check_id) for check_id in relational_ids
+    )
+    time_control_pass = all(
+        audit.passed(check_id) for check_id in time_control_ids
+    )
+
+    common_facts = {
         "full_off_shell_bfv_completion": "NOT_COMPUTED",
+        "normalized_quantum_endpoint_state_transform": "NOT_COMPUTED",
         "old_fixed_a_kernel_equivalence": "NOT_COMPUTED",
     }
-    if all(facts.get(key) == value for key, value in expected.items()):
-        return {
-            "verdict": "KEEP_IMPROVED_STATIC_LOCAL_ENDPOINT_COMPLETION",
-            "programme_impact": "NARROW_AND_ADVANCE_LOCAL_ENDPOINT_ROUTE",
+    if all_pass:
+        decision: dict[str, Any] = {
+            "classification": "GATE1_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION_KEEP_FULL_BFV_PROJECTOR_OPEN",
+            "verdict": "KEEP_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+            "programme_impact": "NARROW_LOCAL_ENDPOINT_ROUTE_NO_AUTOMATIC_SUCCESSOR",
             "matched_predeclared_condition": (
                 "all shell, Dirac-coordinate, one-form, transversality, "
                 "finite-flow, local-FP, gauge-preservation, orbit-triangle, "
                 "and improved-action checks pass"
             ),
             "meaning": (
-                "keep the local closed-FRW V=0 relational endpoint "
-                "completion of the static trace slice and retain the "
-                "time-dependent representative as an exact same-orbit "
-                "control; full BFV and projector claims remain open"
+                "keep the classical local closed-FRW V=0 on-shell "
+                "relational endpoint action on the frozen p-positive "
+                "component and retain the time-dependent representative as "
+                "a same-constraint-orbit control; this is not a quantum "
+                "endpoint-state, full BFV, or projector completion"
             ),
+            "relational_scope": "KEEP_CLASSICAL_ON_SHELL_ACTION_ON_FROZEN_P_POSITIVE_COMPONENT",
+            "time_control_scope": "KEEP_AS_CLASSICALLY_SAME_CONSTRAINT_ORBIT_CONTROL",
+            "computed_facts": {
+                "constraint_component": "REGULAR_P_POSITIVE_R_POSITIVE_D_POSITIVE",
+                "local_relational_endpoint_coordinate": "EXISTS",
+                "on_shell_endpoint_potential": "B_RED_EQUALS_P",
+                "finite_static_hit": "UNIQUE_ON_FROZEN_COMPONENT",
+                "finite_endpoint_generator": "F_I_EQUALS_MINUS_P_I",
+                "local_fp_measure": "REDUCES_TO_DPHI_STAR_DP",
+                "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D",
+                "reduced_full_flow": "MATCHES_ON_SHELL",
+                "orbit_triangle": "CLOSES",
+                "relational_action_triangle": "CLOSES",
+                **common_facts,
+            },
         }
-    raise AssertionError("exact facts did not select a predeclared decision row")
+    elif not core_pass:
+        decision = {
+            "classification": "GATE1_V0_TRACE_FROZEN_COMPONENT_KILLED",
+            "verdict": "KILL_BOTH_ON_FIXED_BENCHMARK",
+            "programme_impact": "KILL_LOCAL_V0_TRACE_ROUTE",
+            "matched_predeclared_condition": (
+                "R is nonpositive, D vanishes, the static hit is nonunique "
+                "on the fixed benchmark, or gauge preservation fails"
+            ),
+            "meaning": "reject both local representatives on the frozen benchmark",
+            "relational_scope": "KILL_ON_FROZEN_COMPONENT",
+            "time_control_scope": "KILL_ON_FROZEN_COMPONENT",
+            "computed_facts": {
+                "constraint_component": "SCIENTIFIC_NONPASS",
+                "local_relational_endpoint_coordinate": "NOT_PROMOTED",
+                "time_dependent_preservation": "NOT_PROMOTED",
+                **common_facts,
+            },
+        }
+    elif time_control_pass and not relational_pass:
+        decision = {
+            "classification": "GATE1_V0_RELATIONAL_ENDPOINT_ACTION_KILLED_TIME_DEPENDENT_CANDIDATE_OPEN",
+            "verdict": "KILL_IMPROVED_STATIC_IMPLEMENTATION_KEEP_TIME_DEPENDENT_CANDIDATE",
+            "programme_impact": "REDIRECT_TO_TIME_DEPENDENT_REPLACEMENT",
+            "matched_predeclared_condition": (
+                "the static relational endpoint or finite boundary-generator "
+                "identities fail while D remains nonzero and the "
+                "time-dependent preservation and orbit identities pass"
+            ),
+            "meaning": (
+                "reject the relational endpoint implementation but retain "
+                "only the separately derived time-dependent candidate"
+            ),
+            "relational_scope": "KILL_IMPLEMENTATION",
+            "time_control_scope": "KEEP_CANDIDATE_NOT_PROMOTED",
+            "computed_facts": {
+                "constraint_component": "REGULAR_P_POSITIVE_R_POSITIVE_D_POSITIVE",
+                "local_relational_endpoint_coordinate": "SCIENTIFIC_NONPASS",
+                "time_dependent_preservation": "PASSES_LOCAL_CONTROL",
+                **common_facts,
+            },
+        }
+    else:
+        decision = {
+            "classification": "GATE1_V0_TRACE_ENDPOINT_ACTION_INCONCLUSIVE",
+            "verdict": "INCONCLUSIVE",
+            "programme_impact": "OPEN",
+            "matched_predeclared_condition": (
+                "the exact checks do not select a prior row"
+            ),
+            "meaning": "leave the local endpoint route open without promotion",
+            "relational_scope": "INCONCLUSIVE",
+            "time_control_scope": "INCONCLUSIVE",
+            "computed_facts": {
+                "constraint_component": "CORE_PASSES_BUT_ROUTE_NOT_SELECTED",
+                "local_relational_endpoint_coordinate": "INCONCLUSIVE",
+                "time_dependent_preservation": "INCONCLUSIVE",
+                **common_facts,
+            },
+        }
+
+    declared_rows = {
+        (row["verdict"], row["programme_impact"])
+        for row in frozen_input["decision_table"]
+    }
+    if (decision["verdict"], decision["programme_impact"]) not in declared_rows:
+        raise AssertionError("selected decision is not a frozen decision row")
+    decision["check_partitions"] = {
+        "core_pass": core_pass,
+        "relational_pass": relational_pass,
+        "time_control_pass": time_control_pass,
+        "all_scientific_pass": all_pass,
+        "failed_scientific_ids": audit.failed_scientific_ids(),
+    }
+    return decision
 
 
 def build_result(
@@ -742,13 +935,14 @@ def build_result(
     runner_sha256 = sha256_bytes(runner_path.read_bytes())
     exact = exact_calculation(audit)
     numerical = numerical_calculation(frozen_input, audit)
-    decision = select_decision(exact)
+    decision = select_decision(frozen_input, audit)
+    exact["computed_facts"] = decision["computed_facts"]
     result: dict[str, Any] = {
         "schema_version": RESULT_SCHEMA,
         "calculation_id": CALCULATION_ID,
         "numbered_phase": None,
         "run_status": "VALID_RUN",
-        "classification": "GATE1_V0_TRACE_ENDPOINT_TRIANGLE_LOCAL_KEEP_FULL_BFV_PROJECTOR_OPEN",
+        "classification": decision["classification"],
         "verdict": decision["verdict"],
         "programme_impact": decision["programme_impact"],
         "input": {"path": INPUT_RELPATH, "sha256": input_sha256},
@@ -767,16 +961,26 @@ def build_result(
                 "matched_predeclared_condition"
             ],
             "meaning": decision["meaning"],
+            "check_partitions": decision["check_partitions"],
+            "scientific_nonpass_policy": (
+                "record VALID_RUN and select a frozen NONPASS row; do not "
+                "raise or authorize a descendant harness-repair loop"
+            ),
             "source_boundary": (
                 "HTV supplies the endpoint and finite-gauge framework, not "
-                "this model-specific completion; Banihashemi-Jacobson supply "
-                "the local trace-gauge FP premise, not endpoint completion; "
+                "this model-specific classical on-shell action; "
+                "Banihashemi-Jacobson supply the local trace-gauge FP premise, "
+                "not an endpoint-state completion; "
                 "Marolf supplies the still-uncomputed full projector target"
             ),
         },
         "scope_status": {
-            "local_v0_relational_endpoint_completion": "KEEP_ON_FROZEN_R_POSITIVE_D_POSITIVE_COMPONENT",
-            "time_dependent_trace_representative": "KEEP_AS_EXACT_SAME_ORBIT_CONTROL",
+            "local_v0_relational_endpoint_action": decision[
+                "relational_scope"
+            ],
+            "time_dependent_trace_representative": decision[
+                "time_control_scope"
+            ],
             "full_off_shell_canonical_transform": None,
             "full_replacement_bfv_measure": None,
             "endpoint_state_transform": None,
@@ -784,16 +988,22 @@ def build_result(
             "full_projector_matrix_element": None,
             "zero_lapse_distribution": None,
             "global_fundamental_region": None,
+            "determinant_line_orientation": None,
             "full_joint_orientation": None,
             "physical_original_cycle": None,
         },
-        "open_dependencies": [
-            "full off-shell canonical chart and HTV-compatible ghost/antighost/b endpoint conditions",
-            "normalized endpoint-state transform and full replacement BFV measure",
-            "a bounded replacement-source discretization distinct from the old constant-lapse fixed-a source",
-            "comparison with the full-real-lapse projector and regulator removal",
-            "global orbit coverage, determinant-line orientation, and physical original cycle",
-        ],
+        "open_dependencies": {
+            "execution_authorization": "NONE",
+            "automatic_successor": None,
+            "status": "NOT_EXECUTION_AUTHORIZATION",
+            "items": [
+                "full off-shell canonical chart and HTV-compatible ghost/antighost/b endpoint conditions",
+                "normalized endpoint-state transform and full replacement BFV measure",
+                "a bounded replacement-source discretization distinct from the old constant-lapse fixed-a source",
+                "comparison with the full-real-lapse projector and regulator removal",
+                "global orbit coverage, determinant-line orientation, and physical original cycle",
+            ],
+        },
         "gate1_decision": "OPEN_PARTIAL_PROGRESS",
         "global_promotion": "PROHIBITED",
         "automatic_next": None,
@@ -802,6 +1012,13 @@ def build_result(
             "complete_global_signed_intersection_vector": None,
             "full_joint_orientation": None,
             "full_m2_bfv_measure": None,
+            "full_off_shell_canonical_transform": None,
+            "full_replacement_bfv_measure": None,
+            "endpoint_state_transform": None,
+            "old_fixed_a_kernel_equivalence": None,
+            "zero_lapse_distribution": None,
+            "global_fundamental_region": None,
+            "determinant_line_orientation": None,
             "full_projector_matrix_element": None,
             "global_n_sigma": None,
             "physical_original_cycle": None,
@@ -814,6 +1031,9 @@ def build_result(
             "automatic_descendants": 0,
             "adjacent_result_files": 1,
             "artifact_cap_bytes": ARTIFACT_CAP_BYTES,
+            "scientific_nonpass_count": len(
+                audit.failed_scientific_ids()
+            ),
         },
         "environment": {
             "python": platform.python_version(),
@@ -827,6 +1047,7 @@ def build_result(
             "epistemic_scope": frozen_input["epistemic_scope"],
             "computed_scope": frozen_input["computed_scope"],
             "not_computed": frozen_input["not_computed"],
+            "execution_contract": frozen_input["execution_contract"],
         },
     }
     result["result_payload_sha256_without_self"] = sha256_bytes(
@@ -836,6 +1057,8 @@ def build_result(
 
 
 def main() -> None:
+    if sys.argv[1:]:
+        raise AssertionError("this frozen calculation accepts no arguments")
     frozen_input, input_sha256, upstream_provenance = load_frozen_input()
     audit = Audit()
     result = build_result(
@@ -861,9 +1084,18 @@ def main() -> None:
                 "classification": result["classification"],
                 "verdict": result["verdict"],
                 "programme_impact": result["programme_impact"],
-                "exact_checks_passed": len(audit.exact),
+                "exact_checks_passed": sum(
+                    record["passed"] for record in audit.exact
+                ),
+                "exact_checks_total": len(audit.exact),
                 "theorem_guards_verified": len(audit.theorem_guards),
-                "numerical_checks_passed": len(audit.numerical),
+                "numerical_checks_passed": sum(
+                    record["passed"] for record in audit.numerical
+                ),
+                "numerical_checks_total": len(audit.numerical),
+                "scientific_nonpass_count": len(
+                    audit.failed_scientific_ids()
+                ),
                 "quadratures": result["resource_accounting"]["quadratures"],
                 "gate1": result["gate1_decision"],
                 "global_n_sigma": None,
