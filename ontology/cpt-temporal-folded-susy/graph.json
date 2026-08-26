@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-26T00:23:11Z",
+  "updated_at_utc": "2026-08-26T04:08:59Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -2258,7 +2258,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "e4e2e76251194d0d6aa9e685023abdbcca3877791d22020d0db97c05d4bee413",
+      "sha256": "2029e8015c7d4472c88de4b34d31d649f8c2376cbe914e5b00a666caa3e99a8c",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -2268,7 +2268,7 @@
       "summary": "New calculations require source, equations, observed output, independent checks, and scoped interpretation, but no mandatory research contract, preregistration ritual, or KG ratification.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "e4e2e76251194d0d6aa9e685023abdbcca3877791d22020d0db97c05d4bee413",
+      "sha256": "2029e8015c7d4472c88de4b34d31d649f8c2376cbe914e5b00a666caa3e99a8c",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
     },
     {
@@ -9698,10 +9698,10 @@
       "id": "policy:ragnarok-circuit-breaker",
       "type": "policy",
       "title": "Ragnarok bounded-pause circuit breaker",
-      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The one-shot Phase-56 terminal exception and the separately authorized non-numbered Gate-1 straight-lift window are both consumed; Phase 51–56 reruns, variants, full replay, Phase 57+, Gate-1 retry, and renamed offspring are unauthorized while result review is active. This policy is not scientific evidence, a Gate-1 no-go, a physics claim, or a TOE verdict; Gate 1 and the separately scoped scientific route remain open.",
-      "state": "ACTIVE_GATE1_RESULT_REVIEW_PHASE56_AND_GATE1_WINDOWS_CONSUMED",
+      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The Phase-56 terminal exception and 2026-08-25 straight-lift window are consumed. A separate 2026-08-26 non-numbered, exact-hash scalar source-link discriminator is authorized for one terminal run-only invocation with an exclusive launch receipt; it does not reopen Phase 51–56, Phase 57, full replay, retry, reproduction, or renamed offspring. This policy is not scientific evidence, a Gate-1 no-go, a physical-original-cycle claim, or a TOE verdict; Gate 1 and the separately scoped scientific route remain open.",
+      "state": "ACTIVE_GATE1_SOURCE_LINK_AUTHORIZED_ONE_SHOT",
       "path": "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md",
-      "sha256": "08c277d35532413a38ef356224362ec394c161a5a98bb5f7b3fa034e47eef47e",
+      "sha256": "578c989045a022e7929c5cb8374b439244ff3eaad8cfaba305790f3e8945aa23",
       "introduced_in_commit": "2324afb51783149fddeccdf53f3b2d315c6857f8"
     },
     {

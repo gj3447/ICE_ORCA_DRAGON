@@ -6,7 +6,9 @@ import { doctor } from "./doctor.ts"
 import { iceError, type IceError } from "./errors.ts"
 import { capture, inherit } from "./process.ts"
 import {
+  acquireBoundedGate1SourceLinkLaunch,
   boundedGate1InvocationDecision,
+  decodeBoundedGate1SourceLinkResult,
   formatRagnarokStatus,
   guardResearchQuery,
   guardResearchRun,
@@ -85,7 +87,11 @@ export const runScript = (
     )
     const scriptArgs = args[0] === "--" ? args.slice(1) : args
     const decision = researchRunDecision(entry.relpath)
-    if (decision.reason === "BOUNDED_GATE1_DIRECT") {
+    if (
+      decision.reason === "BOUNDED_GATE1_DIRECT" ||
+      decision.reason === "BOUNDED_GATE1_SOURCE_LINK"
+    ) {
+      const isSourceLink = decision.reason === "BOUNDED_GATE1_SOURCE_LINK"
       const invocation = boundedGate1InvocationDecision(
         query,
         entry.relpath,
@@ -104,7 +110,13 @@ export const runScript = (
           )
         )
       }
-      const caps = ragnarokStatus.gate1_window.resource_caps
+      const window = isSourceLink
+        ? ragnarokStatus.source_link_window
+        : ragnarokStatus.gate1_window
+      if (isSourceLink) {
+        yield* acquireBoundedGate1SourceLinkLaunch
+      }
+      const caps = window.resource_caps
       const execution = yield* capture(
         {
           command: workspace.python,
@@ -134,7 +146,7 @@ export const runScript = (
       if (execution.exitCode === 0) {
         const resultFile = path.join(
           workspace.root,
-          ragnarokStatus.gate1_window.result_path
+          window.result_path
         )
         const resultBytes = yield* fs.readFile(resultFile).pipe(
           Effect.mapError((error) =>
@@ -153,6 +165,19 @@ export const runScript = (
               2
             )
           )
+        }
+        if (isSourceLink) {
+          const resultText = yield* Effect.try({
+            try: () =>
+              new TextDecoder("utf-8", { fatal: true }).decode(resultBytes),
+            catch: (error) =>
+              iceError(
+                "RESEARCH_RESULT_SCHEMA_INVALID",
+                `cannot decode the bounded source-link result as UTF-8 JSON: ${String(error)}`,
+                2
+              )
+          })
+          yield* decodeBoundedGate1SourceLinkResult(resultText)
         }
       }
       yield* setExitCode(execution.exitCode)

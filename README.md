@@ -23,17 +23,21 @@ The repository preserves speculative motivations while turning them into scoped 
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
 
-> **Bounded Gate-1 result review (2026-08-25):** The Phase 51–56 saved-backend/reconstructed-launch
+> **Bounded Gate-1 source-link authorization (2026-08-26):** The Phase 51–56 saved-backend/reconstructed-launch
 > reconciliation route remains `KILL`, and the exact Phase 56 terminal closeout remains consumed.
 > One non-numbered, exact-hash Gate-1 end-admissibility calculation ran under strict caps and has also
 > been consumed. It kills the Phase-39 straight unbounded field completion and the constant-straight-line
-> model class on its declared slice, not Gate 1. Only the frozen Phase 11–50 historical allowlist is now
-> executable; Phase 51+, renamed descendants, Phase 57+, and a retry of the bounded calculation are blocked.
+> model class on its declared slice, not Gate 1. A separate, non-numbered exact-hash window now permits
+> exactly one no-argument execution of the fixed-\(a\), \(m=2\) scalar phase-space/source-link discriminator.
+> It declares a bounded test cycle rather than recovering a physical original joint cycle. Apart from that
+> sole terminal invocation, only the frozen Phase 11–50 historical allowlist is executable; Phase 51+,
+> renamed descendants, Phase 57+, replay, and retries are blocked.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
 > the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the
 > [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md),
 > the [bounded Gate-1 resume](docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md), and the
+> [bounded scalar source-link resume](docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md), and the
 > [LFS migration ledger](docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
 
 The programme's current philosophical synthesis is documented in

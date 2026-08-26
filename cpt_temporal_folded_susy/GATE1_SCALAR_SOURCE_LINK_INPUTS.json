@@ -1,0 +1,215 @@
+{
+  "schema_version": "ice.gate1.scalar-source-link.input.v1",
+  "authorization": {
+    "id": "GATE1_SOURCE_LINK_20260826_01",
+    "authorized_by": "USER",
+    "approved_on": "2026-08-26",
+    "user_instruction": "다음 연구 진행해줘",
+    "scope": "DIRECT_GATE1_M2_SCALAR_PHASE_SPACE_SOURCE_LINK",
+    "does_not_reopen_killed_route": true,
+    "numbered_phase": null,
+    "automatic_next": null
+  },
+  "question": "Does one explicitly declared real m=2 scalar phase-space control induce the same regulated affine-family amplitude and principal Gaussian lapse-boundary distribution with the same scalar orientation?",
+  "kind": "EXACT_BOUNDED_DISTRIBUTIONAL_CONTROL",
+  "epistemic_label": "NEW_TEST_CYCLE_DECLARATION_NOT_DERIVED_PHYSICAL_ORIGINAL",
+  "source_scope": {
+    "recorded": [
+      "Phase 27 records the Wick map T=i*N, fixed-real-q endpoint polarization, and the local below-origin side.",
+      "Phase 30 records literal real configuration-field restrictions on real nonzero lapse arms and a separate local Gaussian normalization.",
+      "Phase 31 records the canonical finite-cutoff action and algebraic momentum elimination but leaves the absolute momentum-contour and determinant-line orientation open.",
+      "Phase 32 declares a below-origin full-line bypass and a local coupled Gaussian lift but does not derive a physical original joint cycle."
+    ],
+    "new_declaration": "The real scalar momentum histories, their order, measure, and orientation below are a bounded test control, not recovered physical-original data.",
+    "literature": [
+      {
+        "source": "Witten 2010, arXiv:1001.2933",
+        "role": "relative-cycle and contour-deformation framework only"
+      },
+      {
+        "source": "Banihashemi-Jacobson 2025, arXiv:2405.10307",
+        "role": "below-origin lapse prescription in its stated full-real-lapse momentum-first construction only"
+      }
+    ]
+  },
+  "model": {
+    "m": 2,
+    "h": "1/2",
+    "hbar": "positive symbol, then set to 1",
+    "fixed_a": "positive real; benchmark 3.5668031935672753",
+    "fixed_real_phi_endpoints": [
+      "1.0185809464006637",
+      "1.0185809464006637"
+    ],
+    "kappa": "sqrt(2/3)",
+    "potential": "V(phi)=3/4*(1-exp(-kappa*phi))^2",
+    "interior_coordinate": "delta=phi_1-phi_boundary",
+    "lorentzian_element": "p_e*Delta_phi_e-h*N*(p_e^2/(4*pi^2*a^3)-2*pi^2*(3*a-a^3*V(phi_mid)))",
+    "wick_map": "T=i*N",
+    "configuration_action": "S_2=4*pi^2*a^3*delta^2/T+2*pi^2*T*(-3*a+a^3*V(phi_boundary+delta/2))",
+    "integrand_identity": "exp(i*S_L)=exp(-S_2) after exact scalar momentum integration and T=i*N"
+  },
+  "declared_scalar_phase_space_control": {
+    "endpoint_polarization": "FIXED_REAL_PHI",
+    "phi_1": "phi_boundary+u with u in R oriented from -infinity to +infinity",
+    "momenta": [
+      "p_phi_0 in R oriented from -infinity to +infinity",
+      "p_phi_1 in R oriented from -infinity to +infinity"
+    ],
+    "ordered_measure": "dp_phi_0 wedge dp_phi_1 wedge du/(2*pi*hbar)^2",
+    "integration_order": "p_phi_0, then p_phi_1, then u",
+    "branch": "principal Gaussian square roots continued from Re(T)>0",
+    "status": "NEW_BOUNDED_SCALAR_CONTROL",
+    "excluded": [
+      "p_a or varying-a histories",
+      "BFV gauge and ghost variables",
+      "a physical-original or CPT/Pin-derived cycle",
+      "an absolute full determinant-line orientation"
+    ]
+  },
+  "lapse_boundary_control": {
+    "object": "FINITE_ARM_FULL_REAL_BOUNDARY_VALUE_CONTROL_NOT_POSITIVE_HALF_LINE_GREEN_FUNCTION",
+    "path": "N=x-i*epsilon with x in [-R,R], epsilon>0, oriented from -R to +R",
+    "T_path": "T=epsilon+i*x in the open right half-plane",
+    "R": "6/5 fixed",
+    "epsilon": "positive regulator followed only by the declared distributional limit",
+    "provenance": "NEW_EXPLICIT_HORIZONTAL_REGULATOR_ON_THE_RECORDED_BELOW_ORIGIN_SIDE",
+    "not_identified_with": "the Phase-39 finite lower semicircle",
+    "excluded_limits": [
+      "R to infinity",
+      "large-lapse convergence",
+      "m to infinity"
+    ]
+  },
+  "affine_family": {
+    "T": "rho*exp(i*psi) with Re(T)>0 and -pi/2<psi<pi/2",
+    "Gamma_lambda": "delta=u+i*lambda*psi/kappa",
+    "lambda": "0<lambda<=1",
+    "orientation": "u increasing",
+    "homotopy_to_real_control": "delta_s=u+i*s*lambda*psi/kappa, 0<=s<=1",
+    "phase_defect": "d_s=(1-s*lambda)*psi",
+    "inherit_phase32_or_phase39_intersection_signs": false,
+    "inherit_phase39_compact_connector": false
+  },
+  "exact_plan": {
+    "momentum_stationary_points": [
+      "p_phi_0=4*pi^2*a^3*delta/N",
+      "p_phi_1=-4*pi^2*a^3*delta/N"
+    ],
+    "momentum_first_prefactor": "2*pi*a^3/T",
+    "momentum_first_configuration_integrand": "(2*pi*a^3/T)*exp(-S_2(delta,T))",
+    "full_action_contour_test": "At fixed epsilon,R,lambda the real line and Gamma_lambda are connected by an entire rectangular homotopy whose positive and negative field connectors vanish by the kinetic and Starobinsky end bounds.",
+    "pure_q_gaussian_negative_control": "Dropping the Starobinsky potential gives a closed-form real-line principal Gaussian, but every nonzero horizontal arm shift has one exponentially growing kinetic end at Re(T)=0; it therefore cannot certify the affine-family source link.",
+    "real_lapse_arm_momentum_prefactor": [
+      "x>0: J_p=-i*2*pi*a^3/(hbar*abs(x))",
+      "x<0: J_p=+i*2*pi*a^3/(hbar*abs(x))"
+    ],
+    "distribution_test": "The fixed-nonzero-lapse arm limit is tested on C_c^infinity((-R,0) union (0,R)). J_p itself has the standard below-origin boundary distribution (2*pi*a^3/hbar)*(pi*delta(x)-i*PV(1/x)); what remains OPEN is the zero-including C_c^infinity((-R,R)) distribution of the full q-paired amplitude. The runner must not infer that full pairing from J_p alone or from the inadmissible pure-q-Gaussian shortcut.",
+    "orientation_test": "Both scalar momenta retain the declared order and principal branch, while d(delta)/du=1 on every Gamma_lambda; the scoped scalar orientation ratio is +1."
+  },
+  "fixed_limit_order": [
+    "At fixed epsilon>0, finite R, and 0<lambda<=1, integrate p_phi_0 and p_phi_1 first with the full Gaussian prefactor and branch.",
+    "Remove a symmetric field cutoff Y by the declared entire contour homotopy, proving the regulated full-action equality before any lapse limit.",
+    "Pair the fixed-nonzero-x equality with C_c^infinity((-R,0) union (0,R)) lapse tests.",
+    "Take epsilon to 0+ at fixed lambda on the two nonzero-lapse arms, where the full Starobinsky action retains good ends.",
+    "Take lambda to 0+ on those arm distributions; regulated equality is lambda-independent, so no scalar orientation jump is introduced there.",
+    "Test, but do not assume, extension to zero-including C_c^infinity((-R,R)); the pure-q-Gaussian shortcut is inadmissible on shifted arms.",
+    "Do not take R to infinity, m to infinity, a varying-a limit, a BFV limit, or an automatic descendant."
+  ],
+  "singular_divisor": {
+    "components": [
+      {
+        "equation": "T=0",
+        "status": "excluded at finite epsilon and approached only through the declared principal distributional boundary control"
+      }
+    ],
+    "complete_for_full_joint_space": false
+  },
+  "endpoint_prescription": {
+    "field": "equal fixed real Dirichlet phi endpoints",
+    "lapse": "finite horizontal N=x-i*epsilon boundary-value control",
+    "momentum_endpoint_polarization": "not introduced",
+    "physical_polarization_derived": false
+  },
+  "stokes_chamber": {
+    "status": "NOT_USED",
+    "reason": "The calculation uses exact Gaussian elimination and an entire contour homotopy, not a saddle/upward-cycle decomposition.",
+    "promotion_guard": "No Stokes coefficient, full joint intersection, or global n_sigma may be emitted."
+  },
+  "pre_run_census": {
+    "momentum_saddles": "exactly one nondegenerate Gaussian saddle for each of p_phi_0 and p_phi_1 at every T!=0 and delta",
+    "configuration_saddles": "not used or enumerated because no thimble decomposition is performed",
+    "upward_cycles": "not launched",
+    "complex_sheets": "one principal Re(T)>0 Gaussian branch with its two real-lapse boundary phases",
+    "asymptotic_ends": [
+      "p_phi_0 plus and minus infinity: Gaussian-damped for epsilon>0",
+      "p_phi_1 plus and minus infinity: Gaussian-damped for epsilon>0",
+      "delta plus infinity: kinetic connector bound",
+      "delta minus infinity: strict Starobinsky phase-band connector bound",
+      "x equals plus or minus R: finite test boundary only",
+      "T equals zero: excluded before the declared principal distributional limit"
+    ],
+    "full_joint_census_complete": false,
+    "policy": "No saddle, flow, sheet, or intersection inference is permitted beyond the explicitly enumerated Gaussian control."
+  },
+  "decision_table": [
+    {
+      "condition": "exact momentum-first identity, regulated full-action contour equality, principal distributional boundary equality, and scalar orientation ratio +1 all pass",
+      "verdict": "MATCH_IN_DECLARED_SCALAR_CONTROL",
+      "programme_impact": "NARROW",
+      "meaning": "No scalar Gaussian or regulated fixed-a contour obstruction separates the declared real phase-space control from Gamma_lambda; this does not identify a physical original full joint cycle."
+    },
+    {
+      "condition": "finite-epsilon equality holds but the declared boundary or orientation depends on side, order, or branch",
+      "verdict": "SIDE_OR_ORDER_DEPENDENT_BRANCH",
+      "programme_impact": "BRANCH",
+      "meaning": "Preserve distinct regulated scalar source-link branches."
+    },
+    {
+      "condition": "the nonzero-lapse arm source link and scalar orientation match, but the zero-lapse distribution cannot be established without the inadmissible pure-q-Gaussian shortcut or an excluded limit",
+      "verdict": "NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN",
+      "programme_impact": "NARROW",
+      "meaning": "Keep the fixed-nonzero-lapse reduced scalar source link while leaving the full zero-lapse and joint-cycle question open."
+    },
+    {
+      "condition": "the exact momentum-first or contour identity mismatches",
+      "verdict": "MISMATCH_KILL_DECLARED_LINK",
+      "programme_impact": "KILL",
+      "meaning": "Reject only this declared scalar source-link construction."
+    },
+    {
+      "condition": "a required exact boundary statement cannot be established without an excluded limit or undeclared orientation",
+      "verdict": "INCONCLUSIVE",
+      "programme_impact": "OPEN",
+      "meaning": "Do not infer source equivalence and do not start an automatic descendant."
+    },
+    {
+      "condition": "input hash, schema, resource cap, or exact audit fails",
+      "verdict": "INVALID_RUN",
+      "programme_impact": "KILL_INVALID_RUN",
+      "meaning": "Use no scientific output."
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 30,
+    "artifact_bytes": 250000,
+    "stdout_bytes": 65536,
+    "stderr_bytes": 65536,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "evaluator_reconciliation_calls": 0,
+    "numerical_samples": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "physical_original_cycle": null,
+    "full_joint_orientation": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}

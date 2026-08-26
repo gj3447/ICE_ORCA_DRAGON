@@ -115,6 +115,9 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_INPUTS.json` · `phase54_p51_global_noncse_control_audit.py` · `PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT_RESULT.json` · `PHASE54_P51_GLOBAL_NONCSE_CONTROL_AUDIT.md` | Phase 54 입력·실행체·교정 raw result·보고서 — six static launch state의 core `2 x 2`와 두 context를 direct 80/120-decimal reference에 대조; global non-CSE standard/long은 selector NONPASS, element-local standard/long은 12/12 PASS라 element-local schedule-only sufficiency를 지지하되 trajectory/continuation 재분류와 global/physics/TOE 승격은 없음 |
 | `PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_INPUTS.json` · `phase55_p53_root_fixed_launch_schedule_transfer.py` · `PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER_RESULT.json` · `PHASE55_P53_ROOT_FIXED_LAUNCH_SCHEDULE_TRANSFER.md` | Phase 55 입력·실행체·raw result·보고서 — 세 P50-saddle-pinned launch와 EL_long/EL_std state ODE 여섯 개를 검사; 15개 paired fraction과 Phase-54 aggregate matrix는 통과하지만 lambda=0.5 scaled residual reconstruction이 `2e-7` gate를 넘어 valid `NONPASS`; Phase-56 full-replay candidate·physics/TOE/promoted output은 `null`, required flags는 `false`, global promotion은 `PROHIBITED` |
 | `PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_INPUTS.json` · `phase56_lambda_half_launch_provenance_residual_conditioning.py` · `PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_RESULT.json` · `PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md` | Phase 56 terminal closeout — lambda=0.5에서 fresh Phase-53-algorithm center/launch와 고정 `2 x 2` factorial, EL_long ODE 8개를 검사; 두 profile 모두 fresh-center 두 corner가 저장 target을 회복해 8/8 exact·8/8 numerical PASS. 이는 bounded diagnostic이며 full replay/Phase 57 실행권이 아니고 `next_phase=null`, route `KILL`, Gate 1 OPEN, physics/TOE `null` |
+| `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json` · `gate1_straight_lift_end_admissibility.py` · `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_RESULT.json` · `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY.md` | 2026-08-25 번호 없는 bounded Gate-1 계산 — Phase-39 straight completion과 declared constant-straight-line slice만 `KILL`; window는 소진됐고 Gate 1은 OPEN |
+| `GATE1_AFFINE_PHASE_BAND_RELATIVE_CLASS.md` · `GATE1_AFFINE_PHASE_BAND_ANALYTIC_EVIDENCE.json` | 소진 결과 뒤의 비실행 exact 분석 — \(0<\lambda<2\) affine phase-band가 양 끝을 살릴 수 있음을 분류하지만 source-derived joint cycle이나 대표 선택은 하지 않음 |
+| `GATE1_SCALAR_SOURCE_LINK_INPUTS.json` · `gate1_scalar_source_link.py` | 2026-08-26 번호 없는 일회성 source-link discriminator의 frozen input·runner — 새 fixed-\(a\), \(m=2\) scalar \((q,p)\) test control과 affine family의 비영 lapse-arm 연결만 검사하며 physical original/full joint/BFV/TOE 승격은 금지 |
 | `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–56의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
@@ -521,12 +524,15 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
   field는 `null` 또는 `false`, physics/TOE/promoted output은 `null`, global promotion은
   `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다.
 
-## 종결 계산과 bounded pause
+## 종결 계산과 bounded direct Gate-1 work
 
-동결된 **Phase 56 lambda-half launch provenance / residual-conditioning audit 한 번**은 완료됐고
-그 실행권도 소진됐다. 현재 승인된 새 core 계산은 없다. 결과는 `next_phase = null`로 닫혔고
-Phase 57이나 full replay를 열지 않는다. 2026-08-30 이후에도 회로 차단기 결정의 모든 조건과
-사용자의 명시적 승인이 없으면 아래 장기 항목을 실행 queue로 해석하지 않는다.
+동결된 **Phase 56 lambda-half launch provenance / residual-conditioning audit 한 번**과
+2026-08-25 straight-lift window는 완료·소진됐다. 2026-08-26에는 새로 선언한 fixed-\(a\),
+\(m=2\) scalar \((q,p)\) control과 affine scalar class의 source link를 묻는 번호 없는 exact runner
+한 번만 별도 승인됐다. 성공·실패·timeout과 무관하게 terminal invocation으로 소진하며, 물리
+원본 joint cycle을 복원했다고 전제하지 않는다. `next_phase = null`은 유지되고 Phase 57이나 full
+replay를 열지 않는다. 2026-08-30 이후에도 회로 차단기 결정의 모든 조건과 사용자의 명시적 승인이
+없으면 아래 장기 항목을 실행 queue로 해석하지 않는다.
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
@@ -546,6 +552,8 @@ Phase 57이나 full replay를 열지 않는다. 2026-08-30 이후에도 회로 �
   남는다. 동시에 Phase 31 hybrid를 constraint-reduced inhomogeneous
   graviton·matter·gravitino·Goldstino·ghost superdeterminant와 BFV/BV Ward identity로 확장해
   determinant-line orientation과 gauge-fixing independence를 검사한다.
+  2026-08-26 scalar source-link discriminator는 이 full PL/BFV gate의 충족이나 면제가 아니라,
+  그보다 앞선 reduced fixed-\(a\), finite-regulator source-link obstruction만 분리하는 계산이다.
 - **Hard-CFU parallel track (과학적으로 conditional, 운영상 paused):** regular hard quotient와 CFU
   coefficients \(A,B\)의 탐색 계산은 논리적으로 Gate 1과 병렬일 수 있지만 현재 회로 차단기 아래서는
   실행하지 않는다. 재개 조건과 사용자 승인이 충족된 뒤에도 그것을 original joint-cycle coefficient와 결합해 physical uniform
