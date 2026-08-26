@@ -1,7 +1,7 @@
 {
   "automatic_next": null,
   "calculation_id": "Gate1V0TraceEndpointCompletion",
-  "classification": "GATE1_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION_KEEP_FULL_BFV_PROJECTOR_OPEN",
+  "classification": "GATE1_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION_KEEP_FULL_BFV_AND_DELTA_C_KERNEL_OPEN",
   "decision_trace": {
     "check_partitions": {
       "all_scientific_pass": true,
@@ -10,10 +10,10 @@
       "relational_pass": true,
       "time_control_pass": true
     },
-    "matched_predeclared_condition": "all shell, Dirac-coordinate, one-form, transversality, finite-flow, local-FP, gauge-preservation, orbit-triangle, and improved-action checks pass",
-    "meaning": "keep the classical local closed-FRW V=0 on-shell relational endpoint action on the frozen p-positive component and retain the time-dependent representative as a same-constraint-orbit control; this is not a quantum endpoint-state, full BFV, or projector completion",
+    "matched_predeclared_condition": "all shell, Dirac-coordinate, one-form, transversality, finite-flow, local-FP, gauge-preservation, orbit-triangle, and separately scoped raw-flow, HTV-static, and relational-action checks pass",
+    "meaning": "keep the classical local closed-FRW V=0 on-shell relational endpoint action on the frozen p-positive component and retain the time-dependent representative as a same-constraint-orbit control; this is not a quantum endpoint-state, full BFV, or full-real-lapse delta(C) kernel completion",
     "scientific_nonpass_policy": "record VALID_RUN and select a frozen NONPASS row; do not raise or authorize a descendant harness-repair loop",
-    "source_boundary": "HTV supplies the endpoint and finite-gauge framework, not this model-specific classical on-shell action; Banihashemi-Jacobson supply the local trace-gauge FP premise, not an endpoint-state completion; Marolf supplies the still-uncomputed full projector target"
+    "source_boundary": "HTV supplies the endpoint and finite-gauge framework, not this model-specific classical on-shell action; Banihashemi-Jacobson supply the local trace-gauge FP premise, not an endpoint-state completion; Marolf supplies the still-uncomputed full-real-lapse distributional delta(C) physical-inner-product target, not an idempotent projector on continuous zero spectrum"
   },
   "environment": {
     "mpmath": "1.3.0",
@@ -27,12 +27,15 @@
       "finite_endpoint_generator": "F_I_EQUALS_MINUS_P_I",
       "finite_static_hit": "UNIQUE_ON_FROZEN_COMPONENT",
       "full_off_shell_bfv_completion": "NOT_COMPUTED",
+      "full_real_lapse_delta_C_kernel": "NOT_COMPUTED",
+      "htv_improved_static_action": "DELTA_P_DISTINCT_FROM_RELATIONAL_ACTION",
       "local_fp_measure": "REDUCES_TO_DPHI_STAR_DP",
       "local_relational_endpoint_coordinate": "EXISTS",
       "normalized_quantum_endpoint_state_transform": "NOT_COMPUTED",
       "old_fixed_a_kernel_equivalence": "NOT_COMPUTED",
       "on_shell_endpoint_potential": "B_RED_EQUALS_P",
       "orbit_triangle": "CLOSES",
+      "raw_static_action_after_endpoint_flow": "ZERO_ON_FROZEN_PURE_GAUGE_ORBIT",
       "reduced_full_flow": "MATCHES_ON_SHELL",
       "relational_action_triangle": "CLOSES",
       "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D"
@@ -43,6 +46,9 @@
       "benchmark_F2": "-1/2",
       "boundary_integrand_on_shell": "1",
       "flow_equation": "dP/dmu=D",
+      "htv_improved_static_action": "1/4",
+      "ledger_warning": "S0_raw_td+[F] is the raw static action after endpoint flow; the HTV improved static action subtracts [F] once more and is distinct from the relational S0-[P] action",
+      "raw_static_action_after_flow": "0",
       "static_hit_generator": "F_i=-P_i"
     },
     "identity_targets": {
@@ -50,12 +56,12 @@
       "finite_endpoint_generator": "F_I_EQUALS_MINUS_P_I",
       "finite_static_hit": "UNIQUE_ON_FROZEN_COMPONENT",
       "full_off_shell_bfv_completion": "NOT_COMPUTED",
-      "improved_action_triangle": "CLOSES",
       "local_fp_measure": "REDUCES_TO_DPHI_STAR_DP",
       "local_relational_endpoint_coordinate": "EXISTS",
       "old_fixed_a_kernel_equivalence": "NOT_COMPUTED",
       "on_shell_endpoint_potential": "B_RED_EQUALS_P",
       "orbit_triangle": "CLOSES",
+      "raw_flow_and_relational_action_ledgers": "CLOSE_SEPARATELY_HTV_IMPROVED_STATIC_REMAINS_DISTINCT",
       "reduced_full_flow": "MATCHES_ON_SHELL",
       "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D"
     },
@@ -92,9 +98,11 @@
       "P2": "1/2",
       "R_min": "5/2",
       "f": "1/4+s/4",
+      "htv_improved_static_action": "1/4",
       "p": "1",
       "raw_S0_orbit_action": "1/4",
-      "relational_orbit_action": "0",
+      "raw_static_action_after_endpoint_flow": "0",
+      "relational_fixed_Phi_star_orbit_action": "0",
       "scope": "CLASSICALLY_SAME_CONSTRAINT_ORBIT_CONTROL_ON_P_POSITIVE_COMPONENT"
     },
     "trace_chart": {
@@ -188,7 +196,7 @@
     {
       "id": "G1.endpoint.action_triangle",
       "passed": true,
-      "statement": "S0_raw_td=P2-P1=F1-F2=1/4, the actual correction is F2-F1=-1/4, and the relational action S0_raw+[F] gives zero on the pure gauge orbit"
+      "statement": "S0_raw_static=S0_raw_td+[F]=0 after the endpoint flow, S_HTV_static=S0_raw_static-[F]=1/4, and the distinct fixed-Phi_star relational action S0_raw_td-[P]=0"
     }
   ],
   "frozen_input_contract": {
@@ -200,7 +208,7 @@
       "time-dependent gauge preservation and exact orbit/action triangles",
       "independent high-precision quadrature of the finite flow parameters"
     ],
-    "epistemic_scope": "ONE_FROZEN_P_POSITIVE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_PROJECTOR_OR_FIXED_A_KERNEL_EQUIVALENCE",
+    "epistemic_scope": "ONE_FROZEN_P_POSITIVE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_OR_FULL_REAL_LAPSE_DELTA_C_KERNEL_OR_FIXED_A_KERNEL_EQUIVALENCE",
     "execution_contract": {
       "arguments": "NONE",
       "integrity_or_schema_failure": "RAISE_WITHOUT_WRITING_A_RESULT",
@@ -213,7 +221,7 @@
       "a normalized quantum endpoint-state transform",
       "the full m=2 BFV measure or gauge fermion",
       "equality with the existing fixed-(a,phi) kernel or its constant-lapse finite discretization",
-      "the full-real-lapse Marolf projector matrix element",
+      "the full-real-lapse Marolf distributional delta(C) physical-inner-product or group-averaging kernel",
       "the Banihashemi-Jacobson momentum integral and lapse-contour interchange in the replacement source",
       "global orbit coverage, a fundamental region, Gribov-copy census, determinant-line orientation, or all scalar-momentum sectors",
       "physical original cycle, global n_sigma, a physics claim, or a TOE claim"
@@ -224,7 +232,7 @@
   "global_promotion": "PROHIBITED",
   "input": {
     "path": "cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION_INPUTS.json",
-    "sha256": "2a7d31d99ae61ee7877e07aeda98fc8e771952880a5d7bbd5a2cc4d4bf4c01a5"
+    "sha256": "f8ea44a52139e74eda81e0fbaf7d7c60cd1d46342c3cc824b608c35b997871d6"
   },
   "numbered_phase": null,
   "numerical_calculation": {
@@ -311,7 +319,7 @@
       "full off-shell canonical chart and HTV-compatible ghost/antighost/b endpoint conditions",
       "normalized endpoint-state transform and full replacement BFV measure",
       "a bounded replacement-source discretization distinct from the old constant-lapse fixed-a source",
-      "comparison with the full-real-lapse projector and regulator removal",
+      "comparison with the full-real-lapse distributional delta(C) physical-inner-product kernel and regulator removal",
       "global orbit coverage, determinant-line orientation, and physical original cycle"
     ],
     "status": "NOT_EXECUTION_AUTHORIZATION"
@@ -325,7 +333,7 @@
     "full_joint_orientation": null,
     "full_m2_bfv_measure": null,
     "full_off_shell_canonical_transform": null,
-    "full_projector_matrix_element": null,
+    "full_real_lapse_delta_C_kernel": null,
     "full_replacement_bfv_measure": null,
     "global_fundamental_region": null,
     "global_n_sigma": null,
@@ -343,11 +351,11 @@
     "root_calls": 0,
     "scientific_nonpass_count": 0
   },
-  "result_payload_sha256_without_self": "ea97b7c1d06a3a9d735bd1cb4974d4299d9366b9029bb1b8db50db24456210b8",
+  "result_payload_sha256_without_self": "5a030c04d56d91e137bf34a623f8382df248b4974541d59571152f43988cff68",
   "run_status": "VALID_RUN",
   "runner": {
     "path": "cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py",
-    "sha256": "fa5e0df0129cc77a1df3a8c1598a81a39f582af29582d11fe252acdf4a3a508d"
+    "sha256": "36cb11409760f39eb34678736903c705127188fc60a1a76e4de5059e20d5ba2a"
   },
   "schema_version": "ice.gate1.v0-trace-endpoint-completion.result.v1",
   "scope_status": {
@@ -355,7 +363,7 @@
     "endpoint_state_transform": null,
     "full_joint_orientation": null,
     "full_off_shell_canonical_transform": null,
-    "full_projector_matrix_element": null,
+    "full_real_lapse_delta_C_kernel": null,
     "full_replacement_bfv_measure": null,
     "global_fundamental_region": null,
     "local_v0_relational_endpoint_action": "KEEP_CLASSICAL_ON_SHELL_ACTION_ON_FROZEN_P_POSITIVE_COMPONENT",
@@ -380,10 +388,10 @@
       "verified": true
     },
     {
-      "domain": "relational fixed-Phi_star action S0-[P] versus auxiliary fixed-(P,phi) action S0-[P*Q]",
+      "domain": "relational fixed-Phi_star action S0-[P], auxiliary fixed-(P,phi) action S0-[P*Q], and raw-static plus HTV finite endpoint correction",
       "id": "G1.endpoint.guard.variational_problem_separation",
-      "statement": "the verdict concerns only the classical local on-shell relational action; H_red=+dot(f)*Q_star belongs to the auxiliary mixed-polarization problem and is not asserted to have zero action on the orbit triangle",
-      "theorem": "separation of relational and mixed-polarization endpoint variational problems",
+      "statement": "the verdict concerns only the classical local on-shell relational action; H_red=+dot(f)*Q_star belongs to the auxiliary mixed-polarization problem, while S0_raw_td+[F] is the raw static action after flow and not the HTV improved action",
+      "theorem": "separation of relational, mixed-polarization and HTV improved-static action ledgers",
       "verified": true
     },
     {
@@ -409,9 +417,9 @@
     },
     {
       "domain": "one classical gauge chart without the full BFV ghost action or lapse integration",
-      "id": "G1.endpoint.guard.projector_boundary",
-      "statement": "neither the Marolf projector matrix element nor equality with the repository fixed-a kernel is computed",
-      "theorem": "local canonical-limit FP reduction versus the full-real-lapse constraint projector",
+      "id": "G1.endpoint.guard.delta_c_kernel_boundary",
+      "statement": "neither the Marolf group-averaging kernel nor equality with the repository fixed-a kernel is computed; delta(C) is not called an idempotent projector on continuous zero spectrum",
+      "theorem": "local canonical-limit FP reduction versus the full-real-lapse distributional delta(C) physical-inner-product kernel",
       "verified": true
     }
   ],
