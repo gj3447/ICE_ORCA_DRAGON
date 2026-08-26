@@ -360,7 +360,7 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     ]
     audit.check_exact(
         "G1.trace.fp_horizon_and_two_sheet_orientation",
-        branch_derivative == 3 * u * (2 - u)
+        sp.simplify(branch_derivative - 3 * u * (2 - u)) == 0
         and branch_function.subs(u, 2) == 4
         and kappa_two_factor == (u - 1) * (u**2 - 2 * u - 2)
         and root_residuals == [0, 0]
