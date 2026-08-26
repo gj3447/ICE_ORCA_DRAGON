@@ -1,0 +1,410 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1TraceGaugeFpAdmissibility",
+  "classification": "GATE1_LOCAL_TRACE_FP_REDUCTION_EXISTS_UNCHANGED_PROPER_TIME_M2_ADDITIONAL_GAUGE_APPEND_NOT_LICENSED",
+  "decision_trace": {
+    "matched_predeclared_condition": "the trace pair, local on-shell FP/shell/Jacobian identities, two-sheet pre-orientation ledger, ordinary static-representative preservation equation, proper-time m2 rank, endpoint transversality change, and lower-lateral local Gaussian checks all pass",
+    "meaning": "keep a genuine local trace-gauge constraint fiber as an ingredient, but reject appending trace deltas to the unchanged nonzero-lapse proper-time/fixed-a source; a separately rederived replacement gauge, action, FP/BFV measure, and endpoint-state construction is required, while improved static and time-dependent variants remain open",
+    "primary_source_boundary": "Banihashemi-Jacobson require a constraint-plus-gauge FP measure before applying the lower-lateral momentum-first argument and offer trace momentum zero only as a local gauge premise. The homogeneous preservation equation, finite m2 lapse rank, endpoint polarization, and signed/absolute ledgers are derived here and are not supplied by that source.",
+    "source_control_status": "LOCAL_REDUCTION_INGREDIENT_NOT_UNCHANGED_CURRENT_M2_SOURCE_REPAIR"
+  },
+  "environment": {
+    "mpmath": "1.3.0",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "canonical_trace_pair": {
+      "P_tr": "a*p_a/2",
+      "Q": "2*log(a)",
+      "one_form": "P_tr*dQ=p_a*da",
+      "poisson_bracket": "1"
+    },
+    "computed_facts": {
+      "append_trace_to_unchanged_current_m2_source": "NOT_LICENSED_AS_ADDITIONAL_FP_GAUGE_IN_CURRENT_CONSTANT_LAPSE_TRUNCATION",
+      "endpoint_treatment": "REQUIRES_ACTION_STATE_TRANSFORM_IF_GAUGE_IS_IMPOSED_AT_ENDPOINTS",
+      "global_trace_gauge": "OPEN",
+      "homogeneous_trace_pair": "CANONICAL",
+      "improved_static_canonical_gauge_with_endpoint_transform": "OPEN_NOT_COMPUTED",
+      "local_trace_constraint_gauge": "ON_SHELL_LOCALLY_REGULAR_AT_EXISTING_SIMPLE_ROOTS_AWAY_FROM_A2V_EQ_2",
+      "lower_lateral_formal_local_scalar_fiber": "ABSOLUTELY_CONVERGENT",
+      "m2_proper_time_nonzero_gauge_mode": "ALREADY_FIXED",
+      "naive_pa_deletion": "DEGENERATE_NOT_REDUCTION",
+      "ordinary_static_regular_classical_representative": "N_ZERO",
+      "replacement_canonical_gauge_construction": "REQUIRED_NOT_COMPUTED",
+      "time_dependent_trace_gauge": "OPEN_CANDIDATE_NOT_COMPUTED",
+      "upper_lateral_formal_local_scalar_fiber": "DIVERGENT"
+    },
+    "constraints": {
+      "euclidean": "2*pi**2*(-V*a**3 + 3*a) - p_Ea**2/(24*pi**2*a) + p_Ephi**2/(4*pi**2*a**3)",
+      "lorentzian": "2*pi**2*(V*a**3 - 3*a) - p_a**2/(24*pi**2*a) + p_phi**2/(4*pi**2*a**3)",
+      "wick_identity": "C_L(q,i*p_E)=-C_E(q,p_E)"
+    },
+    "endpoint_polarization": {
+      "existing_kernel": "fixed-(a,phi)",
+      "phase31_pa_fixed_momentum_boundary_term": "-[a*p_a]",
+      "same_boundary_problem_without_transform": false,
+      "trace_pair_fixed_momentum_boundary_term": "-[P_tr*Q]"
+    },
+    "gauge_preservation": {
+      "equation": "dot(chi)=N*D_L-dot(f)",
+      "improved_static_replacement_constructed": false,
+      "static_regular_solution": "N=0",
+      "time_dependent_local_solution": "N=dot(f)/D_L",
+      "time_dependent_replacement_constructed": false
+    },
+    "local_reduction": {
+      "constraint_after_gauge": "(24*pi**4*a**4*(V*a**2 - 3) - 2*f**2 + 3*p_phi**2)/(12*pi**2*a**3)",
+      "deletion_pullback_dimension": 3,
+      "deletion_pullback_rank": 2,
+      "effective_signed_fp_after_pa_delta": "(24*pi**4*a**4*(-V*a**2 + 1) - 2*f**2 + 3*p_phi**2)/(4*pi**2*a**4)",
+      "reduced_scalar_dimension": 2,
+      "reduced_scalar_rank": 2,
+      "root_derivative_identity": "(2/a)*D_L=-dC_f/da"
+    },
+    "m2_gauge_rank": {
+      "delta_N0_minus_N1": "4*epsilon_1",
+      "delta_T": "0",
+      "delta_lapses": [
+        "2*epsilon_1",
+        "-2*epsilon_1"
+      ],
+      "proper_time_condition": "N0=N1",
+      "rank": 1
+    },
+    "remaining_scalar_fiber": {
+      "effective_fp_at_f_zero": "-3*(8*pi**4*V*a**6 - 8*pi**4*a**4 - p_phi**2)/(4*pi**2*a**4)",
+      "flat_minimum_constraint": "(p_phi**2 - 24*pi**4)/(4*pi**2)",
+      "flat_minimum_effective_fp": "3*(p_phi**2 + 8*pi**4)/(4*pi**2)",
+      "flat_minimum_raw_delta_target": "8*sqrt(6)*pi**2*cos(2*sqrt(6)*pi**2*q/hbar)",
+      "flat_minimum_shell_roots": [
+        "-2*sqrt(6)*pi**2",
+        "2*sqrt(6)*pi**2"
+      ],
+      "lower_alpha_real": "epsilon/(4*pi**2*a**3*hbar)",
+      "upper_alpha_real": "-epsilon/(4*pi**2*a**3*hbar)"
+    },
+    "trace_fp": {
+      "euclidean_off_shell": "(48*pi**4*a**4*(V*a**2 - 1) - a**2*p_Ea**2 + 6*p_Ephi**2)/(16*pi**2*a**3)",
+      "horizon": "a^2*V=2",
+      "lorentzian_off_shell": "(48*pi**4*a**4*(-V*a**2 + 1) - a**2*p_a**2 + 6*p_phi**2)/(16*pi**2*a**3)",
+      "reflection_neck_euclidean": "6*pi**2*a",
+      "reflection_neck_lorentzian": "-6*pi**2*a",
+      "shell": "6*pi**2*a*(-V*a**2 + 2)"
+    },
+    "zero_trace_root_structure": {
+      "absolute_root_ledger": "+1 per simple root",
+      "branch_derivative": "-3*u*(u - 2)",
+      "dimensionless_equation": "kappa=u^2*(3-u)",
+      "horizon": {
+        "kappa": "4",
+        "u": "2"
+      },
+      "kappa_2_orientation_factors": [
+        "1",
+        "1 - sqrt(3)"
+      ],
+      "kappa_2_positive_roots": [
+        "1",
+        "1 + sqrt(3)"
+      ],
+      "shell": "p_phi^2=8*pi^4*a^4*(3-a^2*V)",
+      "signed_root_ledger": "sgn(D_L)"
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.trace.canonical_pair_and_one_form",
+      "passed": true,
+      "statement": "Q=2*log(a), P_tr=a*p_a/2 is canonical and exactly preserves p_a*da"
+    },
+    {
+      "id": "G1.trace.lorentzian_euclidean_constraint_wick_map",
+      "passed": true,
+      "statement": "the repository convention p_L=i*p_E gives C_L(q,i*p_E)=-C_E(q,p_E)"
+    },
+    {
+      "id": "G1.trace.lorentzian_fp_bracket",
+      "passed": true,
+      "statement": "the Lorentzian homogeneous trace FP bracket is derived exactly rather than imported from the Euclidean clock scan"
+    },
+    {
+      "id": "G1.trace.fp_wick_algebraic_sign",
+      "passed": true,
+      "statement": "under p_L=i*p_E the Lorentzian and Euclidean trace FP bracket formulas have opposite algebraic sign"
+    },
+    {
+      "id": "G1.trace.fp_shell_identity",
+      "passed": true,
+      "statement": "D_L=(3/2)*C_L+6*pi^2*a*(2-a^2*V), so the shell FP horizon is a^2*V=2"
+    },
+    {
+      "id": "G1.trace.reflection_neck_wick_sign_control",
+      "passed": true,
+      "statement": "the reflection neck has Lorentzian trace FP -6*pi^2*a and Euclidean trace FP +6*pi^2*a"
+    },
+    {
+      "id": "G1.trace.homogeneous_trace_rescaling_measure",
+      "passed": true,
+      "statement": "on p_a=0 the delta(P_tr) trace determinant product equals the delta(p_a) determinant product for a>0"
+    },
+    {
+      "id": "G1.trace.delta_jacobian_and_root_derivative",
+      "passed": true,
+      "statement": "delta(P_tr-f)=(2/a)delta(p_a-2f/a) and its effective signed FP factor is -dC_f/da"
+    },
+    {
+      "id": "G1.trace.constraint_gauge_dirac_rank",
+      "passed": true,
+      "statement": "the constraint-gauge Dirac matrix has rank two exactly where the FP bracket is nonzero"
+    },
+    {
+      "id": "G1.trace.deletion_versus_reduction_rank",
+      "passed": true,
+      "statement": "p_a=0 alone leaves a rank-two presymplectic form on three dimensions, while a simple constraint-gauge root leaves the nondegenerate scalar pair"
+    },
+    {
+      "id": "G1.trace.zero_trace_shell_polynomial",
+      "passed": true,
+      "statement": "at f=0 the shell is p_phi^2=8*pi^4*a^4*(3-a^2*V)"
+    },
+    {
+      "id": "G1.trace.fp_horizon_and_two_sheet_orientation",
+      "passed": true,
+      "statement": "on the V>0 shell domain 0<u<=3, u=2 is the exact kappa=4 FP horizon and the two positive kappa=2 a-root sheets have opposite pre-orientation signed residues"
+    },
+    {
+      "id": "G1.trace.signed_and_absolute_root_ledgers",
+      "passed": true,
+      "statement": "using effective_fp=-dC_f/da, signed a-root residues follow sgn(D), whereas the elementary absolute delta Jacobian gives +1 on either simple root"
+    },
+    {
+      "id": "G1.trace.gauge_preservation_obstruction",
+      "passed": true,
+      "statement": "dot(chi)=N*D-dot(f) makes the ordinary regular static classical representative have N=0; within this representative nonzero N requires time-dependent f"
+    },
+    {
+      "id": "G1.trace.m2_proper_time_gauge_rank",
+      "passed": true,
+      "statement": "N0=N1 fixes the sole endpoint-preserving m=2 lapse gauge mode while T=(N0+N1)/2 remains invariant"
+    },
+    {
+      "id": "G1.trace.endpoint_polarization_and_reduced_action",
+      "passed": true,
+      "statement": "subtracting [P_tr*Q] changes fixed-Q endpoints to fixed-P_tr, and f*Qdot=[fQ]dot-fdot*Q"
+    },
+    {
+      "id": "G1.trace.endpoint_chart_transversality",
+      "passed": true,
+      "statement": "the original fixed-Q chart fails static P_tr=0 endpoint transversality, while the chosen swapped chart (Q',P')=(P_tr,-Q) has derivative D_L and is locally transverse where D_L is nonzero"
+    },
+    {
+      "id": "G1.trace.intrinsic_clock_comparison",
+      "passed": true,
+      "statement": "the scale coordinate clock is singular at p_a=0, while a scalar clock does not remove the negative p_a block"
+    },
+    {
+      "id": "G1.trace.remaining_scalar_lateral_convergence",
+      "passed": true,
+      "statement": "after local trace reduction the FP factor is polynomial and N-i*epsilon damps the remaining real p_phi Gaussian while N+i*epsilon grows"
+    },
+    {
+      "id": "G1.trace.flat_minimum_shell_and_delta_target",
+      "passed": true,
+      "statement": "at a=1,V=0 the effective FP polynomial is positive and the two constraint roots give the exact raw cosine target"
+    },
+    {
+      "id": "G1.trace.polynomial_gaussian_formula",
+      "passed": true,
+      "statement": "the effective quadratic FP insertion follows by -d/dalpha of the convergent sourced Gaussian"
+    },
+    {
+      "id": "G1.trace.gauge_orientation_mutation_control",
+      "passed": true,
+      "statement": "reversing chi and its gauge orientation together preserves the oriented ledger; the signed determinant alone flips"
+    }
+  ],
+  "frozen_input_contract": {
+    "computed_scope": [
+      "exact homogeneous trace canonical normalization",
+      "Lorentzian and Euclidean FP brackets and Wick sign",
+      "local constraint-gauge transversality, delta Jacobian, signed and absolute root ledgers",
+      "f=0 frozen-potential root sheets and exact FP horizon",
+      "ordinary static-representative gauge preservation and finite m=2 proper-time gauge rank",
+      "endpoint transversality, a chosen endpoint-polarization transform, and lower-lateral local scalar Gaussian controls"
+    ],
+    "epistemic_scope": "LOCAL_HOMOGENEOUS_CONSTRAINT_FIBER_AND_FINITE_M2_GAUGE_RANK_CONTROL_NOT_FULL_BFV_OR_PHYSICAL_CYCLE",
+    "kind": "EXACT_LOCAL_TRACE_GAUGE_REDUCTION_AND_UNCHANGED_PROPER_TIME_M2_APPEND_FALSIFIER_WITH_HIGH_PRECISION_GAUSSIAN_CHECK",
+    "not_computed": [
+      "an improved static canonical-gauge replacement with transformed endpoint states and boundary action",
+      "a time-dependent f(s), its reduced Hamiltonian trajectory, boundary states, or full replacement BFV gauge fermion",
+      "an exact gauge-invariant m=2 discretization with local lapse and constraint at each element",
+      "global maximal slicing, fundamental region, orbit-copy census, Gribov resolution, or determinant-line orientation",
+      "equivalence to the existing fixed-(a,phi) kernel or deformation of its all-real source",
+      "zero-lapse contact terms, scale-factor or mixed relative ends, regulator removal, Stokes data, or global lapse thimbles",
+      "physical original cycle, global n_sigma, physics claim, or TOE claim"
+    ],
+    "question": "Does the homogeneous Lorentzian trace-momentum condition define a genuine local constraint-gauge reduction that removes the negative p_a Gaussian, and can the static condition be appended to the already proper-time-gauge finite m=2 source without changing its lapse gauge or endpoint polarization?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_INPUTS.json",
+    "sha256": "513e14db2db7991fdda43f6049336ba092abcb7cb335c0bb696328ca746ee12d"
+  },
+  "numbered_phase": null,
+  "numerical_calculation": {
+    "benchmark": {
+      "V": "0.0",
+      "a": "1.000000000000000000000000000000000000000",
+      "f": "0.0",
+      "hbar": "1.000000000000000000000000000000000000000",
+      "q": "0.1250000000000000000000000000000000000000"
+    },
+    "lower_lateral_point_summaries": [
+      {
+        "point": 1,
+        "relative_error": "3.42936782870775732053135e-70",
+        "z": {
+          "imag": "-0.4000000000000000000000000000000000000000",
+          "real": "0.0"
+        }
+      },
+      {
+        "point": 2,
+        "relative_error": "9.16034931809647614469886e-65",
+        "z": {
+          "imag": "-0.4000000000000000000000000000000000000000",
+          "real": "0.2000000000000000000000000000000000000000"
+        }
+      }
+    ],
+    "ode_calls": 0,
+    "precision_digits": 70,
+    "quadratures": 2,
+    "root_calls": 0
+  },
+  "numerical_checks": [
+    {
+      "alpha": {
+        "imag": "0.0",
+        "real": "0.01013211836423377714438794632097276389044"
+      },
+      "expected": {
+        "imag": "0.0",
+        "real": "13936317047676.58941807960027969547465433"
+      },
+      "id": "G1.trace.quadrature.lower_lateral_1",
+      "observed": {
+        "imag": "0.0",
+        "real": "13936317047676.58941807960027969547465433"
+      },
+      "passed": true,
+      "relative_error": "3.42936782870775732053135e-70",
+      "relative_tolerance": "1.0000000e-45",
+      "statement": "the real-p_phi integral with the effective trace FP polynomial matches the exact sourced Gaussian moment on the formal local lower-lateral fiber",
+      "z": {
+        "imag": "-0.4000000000000000000000000000000000000000",
+        "real": "0.0"
+      }
+    },
+    {
+      "alpha": {
+        "imag": "0.005066059182116888572193973160486381945218",
+        "real": "0.01013211836423377714438794632097276389044"
+      },
+      "expected": {
+        "imag": "-10287576009594.78986869792622284486774444",
+        "real": "10098072757893.36260321154341951259764384"
+      },
+      "id": "G1.trace.quadrature.lower_lateral_2",
+      "observed": {
+        "imag": "-10287576009594.78986869792622284486774444",
+        "real": "10098072757893.36260321154341951259764384"
+      },
+      "passed": true,
+      "relative_error": "9.16034931809647614469886e-65",
+      "relative_tolerance": "1.0000000e-45",
+      "statement": "the real-p_phi integral with the effective trace FP polynomial matches the exact sourced Gaussian moment on the formal local lower-lateral fiber",
+      "z": {
+        "imag": "-0.4000000000000000000000000000000000000000",
+        "real": "0.2000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "programme_impact": "NARROW_AND_REDIRECT",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "complete_global_signed_intersection_vector": null,
+    "full_joint_orientation": null,
+    "full_m2_bfv_measure": null,
+    "global_n_sigma": null,
+    "physical_original_cycle": null,
+    "physics_claim": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "ode_calls": 0,
+    "quadratures": 2,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "c9f8878e27a9d20d92d2807f60232aa03e1efaaa87b9c3c8e75d527d541f059e",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_trace_gauge_fp_admissibility.py",
+    "sha256": "f9fb9fd97a85aa312e60e4edba0e1415f260eb9507fc46015dc5b4351c311110"
+  },
+  "schema_version": "ice.gate1.trace-gauge-fp-admissibility.result.v1",
+  "scope_status": {
+    "append_to_unchanged_proper_time_m2_source": "NOT_LICENSED_AS_AN_ADDITIONAL_FP_GAUGE",
+    "fixed_a_kernel_equivalence": "NOT_ESTABLISHED_NOT_THE_SAME_BOUNDARY_PROBLEM_WITHOUT_ENDPOINT_TRANSFORM",
+    "full_m2_bfv_measure": null,
+    "global_fundamental_region": "OPEN",
+    "improved_static_canonical_gauge_replacement": "OPEN_NOT_COMPUTED",
+    "local_homogeneous_trace_constraint_gauge": "KEEP_ON_EXISTING_SIMPLE_ROOT_CHARTS_AWAY_FROM_FP_HORIZON",
+    "ordinary_static_regular_classical_representative_lapse": "N_ZERO",
+    "physical_original_cycle": null,
+    "time_dependent_replacement_gauge": "OPEN_CANDIDATE_NOT_COMPUTED"
+  },
+  "theorem_guards": [
+    {
+      "domain": "a>0, C_L=0, chi=P_tr-f=0, D_L={chi,C_L} nonzero; one connected local root chart at a time",
+      "id": "G1.guard.local_fp_reduction",
+      "statement": "the exact delta Jacobian and Dirac rank justify only a local reduction; global orbit coverage and Gribov-copy removal are not inferred",
+      "theorem": "finite-dimensional single-constraint Faddeev--Popov reduction at simple transverse roots",
+      "verified": true
+    },
+    {
+      "domain": "simple roots with an explicitly chosen gauge orientation",
+      "id": "G1.guard.signed_versus_absolute_fp",
+      "statement": "opposite pre-orientation signed root residues are not silently converted into a physical negative-arm or global relative sign; componentwise gauge orientation remains a separate choice and the absolute ledger stays positive",
+      "theorem": "separation of the Grassmann signed determinant from the reduced-orbit absolute Jacobian",
+      "verified": true
+    },
+    {
+      "domain": "homogeneous multiplier N and dot(chi)=partial_s(chi)+{chi,N*C_L}; D_L nonzero",
+      "id": "G1.guard.static_gauge_preservation",
+      "statement": "the N=0 conclusion describes the ordinary static homogeneous classical representative; it excludes neither an improved-boundary static canonical-gauge path integral nor the full inhomogeneous maximal-slicing lapse equation",
+      "theorem": "Hamiltonian preservation of an explicitly time-dependent canonical gauge",
+      "verified": true
+    },
+    {
+      "domain": "a>0, hbar>0, z=N-i*epsilon with epsilon>0, and a degree-two FP insertion",
+      "id": "G1.guard.polynomial_gaussian",
+      "statement": "absolute convergence is established for the formal local reduced scalar fiber only, not for a rederived m=2 BFV source",
+      "theorem": "sourced real Gaussian moments for Re(alpha)>0",
+      "verified": true
+    },
+    {
+      "domain": "h=1/2, epsilon_0=epsilon_2=0, proper-time condition N0=N1",
+      "id": "G1.guard.m2_gauge_rank_scope",
+      "statement": "the rank check shows no residual nonzero lapse-gauge mode in the current source; it does not construct an exactly gauge-invariant replacement discretization",
+      "theorem": "rank of the endpoint-preserving finite m=2 lapse variation",
+      "verified": true
+    }
+  ],
+  "verdict": "LOCAL_TRACE_GAUGE_FIBER_KEEP_UNCHANGED_PROPER_TIME_M2_APPEND_KILLED"
+}
