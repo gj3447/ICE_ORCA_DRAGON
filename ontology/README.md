@@ -15,9 +15,9 @@ The [collection manifest](./collection.json) uses
 [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 snapshots use
 [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-25T13:33:06Z` collection update, the three graphs have 884 nodes, 2518 edges,
-and 222 claims: 129 supported, 88 contradicted, and 5 inconclusive. Validation verifies all 207 stored
-hashes (199 artifacts and 8 policies); 33 unresolved external bridges remain explicit warnings. The
+At the recorded `2026-08-26T00:23:11Z` collection update, the three graphs have 893 nodes, 2549 edges,
+and 226 claims: 132 supported, 89 contradicted, and 5 inconclusive. Validation verifies all 209 stored
+hashes (201 artifacts and 8 policies); 33 unresolved external bridges remain explicit warnings. The
 Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
@@ -90,7 +90,13 @@ exception is consumed: the reconciliation route is `KILL`, full replay and Phase
 `next_phase=null`, Gate 1 remains open, and global promotion remains prohibited. A later execution-free
 exact review narrows the straight KILL to its implemented anchor-through \(\delta=qy\) class and
 constructs one phase-locked affine/curved fixed-\(a\) scalar branch with two uniform good field ends
-across the finite lower-bypass regulator. That proof adds no run-ledger checks and does not supply
+across the finite lower-bypass regulator. A second exact review expands the branch into a strict
+full-rate-good horizontal-affine phase band, proves that its two-arm-admissible tails contract to one
+principal reduced class, and separates exact phase cancellation from convergence: the continuous
+\(0<\lambda<2\) family disproves representative uniqueness. The literal real-field arm restrictions are
+the oscillatory boundary; extending \(b=0\) across the complex cap is only a candidate lift, and current
+records do not establish a source-selected joint cycle. These proofs add no
+run-ledger checks and do not supply
 scale-factor/joint ends, regulator removal, a complete census, an original cycle, a global coefficient,
 physics, or TOE. These counts describe repository records, not independent replications or global
 scientific confidence.

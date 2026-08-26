@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-25T13:33:06Z",
+  "updated_at_utc": "2026-08-26T00:23:11Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -65,7 +65,7 @@
       "includes": [
         "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
         "the bounded Phase-56 terminal diagnostic and post-Phase-56 hard stop",
-        "the execution-free Gate-1 phase-locked affine field-end branch and its full-joint boundary",
+        "the execution-free Gate-1 phase-locked branch, principal affine phase-band reduction, and full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -140,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 consumed the bounded diagnostic exception and forbids full replay, Phase 57, and global promotion. The straight-line KILL closes only its anchor-through homogeneous model class. A later execution-free exact construction opens one phase-locked affine good-field-end branch, but the source-derived full joint cycle and global vector remain unresolved, so Gate 1 stays open.",
+      "answer": "No. Phase 56 consumed the bounded diagnostic exception and forbids full replay, Phase 57, and global promotion. The straight-line KILL closes only its anchor-through homogeneous model class. Execution-free exact work opens a phase-locked affine good-field-end branch and narrows the strict full-rate-good horizontal affine tails to one principal reduced class, but convergence does not select its representative and the recorded sources do not supply the physical joint cycle or global vector. Gate 1 stays open.",
       "refs": [
         {
           "graph": "cpt",
@@ -153,6 +153,14 @@
         {
           "graph": "cpt",
           "node": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE"
         },
         {
           "graph": "cpt",

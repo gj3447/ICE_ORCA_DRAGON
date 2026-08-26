@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-25T13:33:06Z",
+  "updated_at_utc": "2026-08-26T00:23:11Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -419,10 +419,20 @@
     },
     {
       "question": "Did the straight-lift KILL eliminate every nonlinear or affine field-end completion?",
-      "answer": "No. The executed no-go exhausts the anchor-through homogeneous ansatz delta=q*y. An execution-free exact derivation now gives a phase-locked affine tail delta=x+i*arg(T)/kappa with two uniform good phi ends across the finite lower-bypass lapse regulator, and a smooth compact bend can retain the Phase-39 central field window exactly. This is a BRANCH for one fixed-a scalar fiber, not a physical original cycle: scale-factor and joint ends, regulator removal, new connector intersections, complete saddle/upward/sheet/Stokes census, orientation, global n_sigma, physics, and TOE remain open or null.",
+      "answer": "No. The executed no-go exhausts the anchor-through homogeneous ansatz delta=q*y. An execution-free exact derivation gives a phase-locked affine tail delta=x+i*arg(T)/kappa with two uniform good phi ends, and a second exact derivation shows that every continuous horizontal affine tail with a strictly positive full-rate coefficient and two good arm ends lies in one principal phase band contractible to that representative. This is a fixed-a finite-regulator scalar-fiber class, not a physical original cycle: source selection, scale-factor and joint ends, regulator removal, complete census, orientation, global n_sigma, physics, and TOE remain open or null.",
       "claim_ids": [
         "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
-        "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO"
+        "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+        "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS"
+      ]
+    },
+    {
+      "question": "Do good-end convergence or the recorded lapse sources uniquely select the phase-locked contour?",
+      "answer": "No. Exact positive-real cancellation of the full-rate Starobinsky phase uniquely picks b(psi)=psi/kappa inside the robust horizontal-affine class, but convergence alone admits b_lambda=lambda*psi/kappa for every 0<lambda<2; all such tails are in the same reduced scalar-fiber class. The recorded literal real-field arm restrictions are the lambda=0 oscillatory boundary; extending b=0 across the complex cap is only a candidate lift. The below-origin lapse sources do not supply the specified limiting-family and orientation comparison. Phase lock is therefore a canonical maximum-damping representative, not yet a source-selected physical joint cycle.",
+      "claim_ids": [
+        "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+        "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+        "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE"
       ]
     }
   ],
@@ -1025,8 +1035,8 @@
     },
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
-      "title": "From the anchored straight-line KILL to one explicit phase-locked good-end branch",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the executed bad-end result only to its actual delta=q*y anchor-through scope, then follow the execution-free exact construction delta=x+i*arg(T)/kappa across the finite lower-bypass lapse path. The field-end obstruction is removed for one fixed-a scalar fiber and the central window can be retained by a smooth compact bend. Stop before source-derived original-cycle selection, scale-factor and joint ends, regulator removal, new connector intersections, complete census, orientation, global coefficients, or physics promotion.",
+      "title": "From the anchored straight-line KILL through the principal affine phase band",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the executed bad-end result only to its actual delta=q*y anchor-through scope, then follow the explicit phase-locked two-good-end construction. The next exact step enlarges that point to the strict full-rate-good horizontal-affine model class: two arm-end signs force one principal phase band and an explicit uniform homotopy contracts it to phase lock. Exact cancellation selects that representative, while convergence admits a continuous lambda family and the recorded real-field arm restrictions remain the oscillatory boundary. Extending b=0 across the complex cap is a candidate lift, not a source-selected member. Stop before the specified limiting-family phase-space/orientation comparison, full joint ends, regulator removal, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1035,6 +1045,11 @@
         "concept:gate1-phase-locked-affine-field-end-family",
         "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
         "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
+        "concept:gate1-principal-affine-phase-band-relative-class",
+        "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+        "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+        "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+        "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
         "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -10044,9 +10059,9 @@
       "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "type": "open_problem",
       "title": "Extend or reject the phase-locked scalar fiber as a source-derived full joint cycle",
-      "summary": "The scalar phi-end obstruction is removed for one explicit fixed-a finite-regulator family, but no primary-source-derived regulator selects it and the scale-factor/mixed ends, regulator removal, connector intersections, complete dual census, Stokes data, determinant orientation, and BFV body remain absent. The next direct discriminator must decide whether one pre-fixed source-derived original-class prescription selects, narrows, or kills this branch without reviving the Phase-51--56 reconciliation route.",
+      "summary": "The strict full-rate-good horizontal-affine tail ambiguity is now narrowed to one principal fixed-a finite-regulator scalar-fiber relative class, and exact phase cancellation selects its maximum-damping phase-locked representative. Goodness does not select that representative, however. The recorded literal real-field arm restrictions are the oscillatory boundary; extending b=0 across the complex cap is only a candidate lift. Existing sources do not provide the path- and order-specified limiting-family phase-space and orientation comparison needed to identify the reduced class with an original cycle. Scale-factor/mixed ends, regulator removal, connector intersections, complete dual census, Stokes data, determinant orientation, and BFV body also remain absent.",
       "state": "OPEN_TYPED_SELECTION_AND_FULL_JOINT_EXTENSION",
-      "question": "Does one independently derived original-cycle or regulator prescription select the phase-locked phi fiber and extend it through all scale-factor, joint, regulator-removal, census, Stokes, and orientation obligations, or does it KILL/NARROW the branch before global intersections are attempted?"
+      "question": "After fixing Gamma_lambda by b_lambda=lambda*psi/kappa together with the order of lambda-to-zero-plus, field-cutoff removal, lapse i0/cap limit, measure, and orientation, does exact momentum integration of the literal real scalar phase-space cycle produce the same limiting distribution and orientation, and can the resulting source link then extend through all remaining joint obligations?"
     },
     {
       "id": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
@@ -10067,6 +10082,114 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_PHASE_LOCKED_AFFINE_FIELD_END_CONSTRUCTION.md",
       "sha256": "be9d0583a7ff3599f04bf0f8c92c3dea694cf1595b15c9a5c438e789b150cd6c"
+    },
+    {
+      "id": "concept:gate1-principal-affine-phase-band-relative-class",
+      "type": "concept",
+      "title": "Gate-1 principal affine phase band and reduced relative class",
+      "summary": "For continuous horizontal tails delta=x+i*b(psi), strict positivity of the full-rate Starobinsky coefficient defines cosine-positive winding bands. Requiring both positive-x lapse-arm ends excludes every nonprincipal band. The principal band is contractible through uniformly good tails to b=psi/kappa while retaining the Phase-39 central window, so this robust fixed-a scalar-tail model class carries one reduced relative-homotopy class.",
+      "state": "EXACT_ANALYTIC_MODEL_CLASS_REDUCTION_WITHIN_FINITE_REGULATOR_SCOPE"
+    },
+    {
+      "id": "scope:gate1-fixed-a-finite-lower-bypass-robust-horizontal-affine-phi-tails",
+      "type": "scope",
+      "title": "Fixed-a robust horizontal-affine phi-tail phase-band scope",
+      "summary": "Continuous bounded real b(psi) in delta=x+i*b(psi) over the finite lower-bypass phase interval, restricted to a strictly positive full-rate Starobinsky coefficient and two good positive-x arm ends. It includes the uniform phase-band homotopy and central-window connector but excludes coefficient-zero boundaries, nonhorizontal asymptotes, varying-a joint ends, regulator removal, source selection, and global cycles.",
+      "state": "SUPPORTED_REDUCED_SCALAR_TAIL_CLASSIFICATION_ONLY",
+      "includes": [
+        "the inherited fixed-a m=2 scalar action and exp(-S_2) convention",
+        "continuous bounded real b(psi) in horizontal affine tails delta=x+i*b(psi)",
+        "strictly positive full-rate Starobinsky coefficient throughout the finite lapse phase interval",
+        "two good positive-x lapse-arm ends and the resulting principal winding band",
+        "the explicit uniform contraction to phase lock and a Phase-39-window-preserving compact connector"
+      ],
+      "excludes": [
+        "full-rate coefficient-zero boundaries and their half-rate or polynomial subcases",
+        "nonhorizontal or nonlinear asymptotic classes and any exhaustion theorem for all good ends",
+        "varying or complex a_1, mixed joint ends, r to zero, R to infinity, or regulator removal",
+        "a distributional source comparison, Maslov or determinant orientation, BFV body, or physical original cycle",
+        "a global signed vector, physics claim, TOE claim, numbered phase, runner, or execution authorization"
+      ]
+    },
+    {
+      "id": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "type": "evidence",
+      "title": "Exact affine phase-band and reduced-class derivation",
+      "summary": "The general normalized negative-end limit is proportional to cos(psi-kappa*b). Continuity gives one winding band, the two positive-x arm signs force the principal band, and b_s=(1-s)b+s*psi/kappa contracts it uniformly to phase lock. The explicit 0<lambda<2 family disproves representative uniqueness from goodness, while exact phase cancellation uniquely selects lambda=1. A source audit places the literal real-field arm restrictions at the oscillatory lambda=0 boundary, treats a b=0 complex-cap extension only as a candidate lift, and finds no existing specified limiting-family or orientation selection. Three independent read-only reviews agreed after this scope correction; no scientific computation ran.",
+      "state": "INDEPENDENTLY_REVIEWED_EXECUTION_FREE_EXACT_DERIVATION",
+      "observed_status": "TEN_ANALYTIC_OBLIGATIONS_PROVED_THREE_INDEPENDENT_REVIEWS_ZERO_SCIENTIFIC_CALLS",
+      "check_ids": [
+        "G1.BAND.limit.general_horizontal_affine_full_rate",
+        "G1.BAND.robust.connected_winding_band",
+        "G1.BAND.end.positive_x_arm_signs",
+        "G1.BAND.winding.principal_band_only",
+        "G1.BAND.homotopy.contracts_to_phase_lock",
+        "G1.BAND.connector.phase39_window_fixed_during_homotopy",
+        "G1.BAND.representative.goodness_not_unique",
+        "G1.BAND.representative.exact_cancellation_unique",
+        "G1.BAND.source.literal_real_arm_restriction_is_boundary",
+        "G1.BAND.scope.no_source_or_global_promotion"
+      ]
+    },
+    {
+      "id": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+      "type": "claim",
+      "title": "Robust horizontal-affine phi tails form one principal reduced class",
+      "summary": "Supported exactly inside the declared strict full-rate fixed-a finite-regulator scope. Continuity puts the phase defect in one cosine-positive winding band, both positive-x arm ends force the principal band, and an explicit uniform homotopy contracts every such tail to phase lock while preserving the Phase-39 central window. This is not an exhaustion of coefficient-zero or nonlinear tails and not a full joint relative-homology theorem.",
+      "state": "SUPPORTED_AS_EXACT_ROBUST_AFFINE_SCALAR_TAIL_CLASSIFICATION",
+      "claim_id": "G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+      "statement": "Within the inherited fixed-a m=2 scalar fiber and finite lower-bypass regulator, every continuous horizontal affine tail with strictly positive full-rate coefficient and two good arm ends lies in one principal phase band and is relative-homotopic through uniformly good tails to delta=x+i*psi/kappa.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+      "type": "claim",
+      "title": "Exact full-rate cancellation selects the principal phase-lock representative",
+      "summary": "Supported within the robust horizontal-affine scalar-tail class. Requiring T*exp(-kappa*delta) to be positive real removes an imaginary x-slope and fixes b=psi/kappa modulo 2*pi/kappa; continuity plus conjugation or the two arm-end signs removes the nonprincipal shifts. This is a mathematical maximum-damping criterion, not a source-derived physical principle.",
+      "state": "SUPPORTED_AS_UNIQUE_EXACT_CANCELLATION_REPRESENTATIVE_NOT_SOURCE_SELECTION",
+      "claim_id": "G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+      "statement": "Exact positive-real cancellation of the full-rate Starobinsky phase, together with the two good lapse-arm ends or conjugation, uniquely selects delta=x+i*psi/kappa among the classified horizontal affine tails.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+      "type": "claim",
+      "title": "Uniform good-end convergence uniquely selects exact phase lock",
+      "summary": "Contradicted within the declared scalar-tail scope. The continuous conjugation-compatible family b_lambda=lambda*psi/kappa has two uniform good ends for every 0<lambda<2, while only lambda=1 exactly cancels the full-rate phase. The representatives are homotopic inside one reduced class, but goodness alone does not choose one embedding.",
+      "state": "CONTRADICTED_BY_EXPLICIT_CONTINUOUS_COUNTERFAMILY",
+      "claim_id": "G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+      "statement": "Uniform relative-good field ends alone uniquely determine the phase-locked representative delta=x+i*psi/kappa within the robust horizontal-affine scalar-tail model class.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "type": "claim",
+      "title": "Current records do not establish a phase-locked joint cycle",
+      "summary": "Supported as an evidence-scope statement, not as proof of physical inequivalence. Phase 30 directly fixes only literal real-field restrictions on the real-lapse arms; extending b=0 across the complex cap is a candidate lift. The below-origin sources select no field lift, and Phase 39 serializes its finite chain as not a derived physical original cycle. A fully specified limiting-family phase-space and orientation comparison is still required, so possible regulated equivalence remains open and no full joint cycle or global coefficient follows.",
+      "state": "SUPPORTED_AS_CURRENT_RECORD_NONESTABLISHMENT_NOT_PHYSICAL_INEQUIVALENCE",
+      "claim_id": "G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "statement": "The current repository records do not establish or source-select the phase-locked contour as the physical original joint cycle.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:gate1-affine-phase-band-relative-class-analytic-evidence",
+      "type": "artifact",
+      "title": "Gate-1 affine phase-band analytic evidence snapshot",
+      "summary": "Compact execution-free record of the general phase-defect limit, principal-band selection, contracting homotopy, nonunique lambda counterfamily, exact-cancellation representative, literal-real arm boundary, source provenance, three-review agreement after scope correction, strict exclusions, and null global outputs.",
+      "state": "TRACKED_EXECUTION_FREE_ANALYTIC_EVIDENCE",
+      "artifact_kind": "analytic_evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-affine-phase-band-relative-class-analytic.json",
+      "sha256": "b0cdb88468cb9948f14e4262061958f6ae3bb43d5c83a13404fe10dff525a137"
+    },
+    {
+      "id": "artifact:gate1-affine-phase-band-relative-class-report",
+      "type": "artifact",
+      "title": "Gate-1 affine phase-band and reduced-class report",
+      "summary": "Human-readable exact proof of the robust principal phase band, two-arm winding exclusion, uniform contraction to phase lock, convergence nonuniqueness, literal-real arm boundary, candidate-cap-lift caveat, source-selection audit, next specified limiting-family discriminator, and strict fixed-a scalar-fiber boundary.",
+      "state": "TRACKED_EXECUTION_FREE_ANALYTIC_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_AFFINE_PHASE_BAND_RELATIVE_CLASS.md",
+      "sha256": "eba9460c2138e48e51fd4da24c23c3803c58a88e243d4489f3f937bb639b4fc4"
     }
   ],
   "edges": [
@@ -24397,6 +24520,202 @@
       "relation": "BLOCKED_BY",
       "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "note": "The explicit scalar field-end branch must still be selected or rejected by an original-class prescription and extended through the omitted joint obligations before any global signed vector."
+    },
+    {
+      "id": "edge:2320",
+      "from": "concept:gate1-principal-affine-phase-band-relative-class",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2321",
+      "from": "concept:gate1-principal-affine-phase-band-relative-class",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-phase-locked-affine-field-end-family",
+      "note": "This execution-free analysis enlarges the single phase-locked representative to a bounded robust horizontal-affine model-class classification; it is not a new phase or runner descendant."
+    },
+    {
+      "id": "edge:2322",
+      "from": "concept:gate1-principal-affine-phase-band-relative-class",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-finite-lower-bypass-robust-horizontal-affine-phi-tails"
+    },
+    {
+      "id": "edge:2323",
+      "from": "concept:gate1-principal-affine-phase-band-relative-class",
+      "relation": "CITES",
+      "to": "source:witten-2010-picard-lefschetz",
+      "note": "Relative-cycle framing only; the phase-band inequalities and homotopy are repository derivations."
+    },
+    {
+      "id": "edge:2324",
+      "from": "concept:gate1-principal-affine-phase-band-relative-class",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "The source supports a below-origin lapse prescription in its stated representation but does not select the scalar field tail or orientation."
+    },
+    {
+      "id": "edge:2325",
+      "from": "concept:gate1-principal-affine-phase-band-relative-class",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "Only execution-free exact analysis and repository-local indexing were performed; no runner or numbered phase was authorized."
+    },
+    {
+      "id": "edge:2326",
+      "from": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "relation": "PART_OF",
+      "to": "concept:gate1-principal-affine-phase-band-relative-class"
+    },
+    {
+      "id": "edge:2327",
+      "from": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-affine-phase-band-relative-class-analytic-evidence"
+    },
+    {
+      "id": "edge:2328",
+      "from": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-phase-locked-affine-field-end-analytic-proof"
+    },
+    {
+      "id": "edge:2329",
+      "from": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+      "relation": "PART_OF",
+      "to": "concept:gate1-principal-affine-phase-band-relative-class"
+    },
+    {
+      "id": "edge:2330",
+      "from": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-finite-lower-bypass-robust-horizontal-affine-phi-tails"
+    },
+    {
+      "id": "edge:2331",
+      "from": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2332",
+      "from": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+      "relation": "EXTENDS",
+      "to": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
+      "note": "The earlier explicit representative is now the contraction target for the strict robust horizontal-affine scalar-tail band."
+    },
+    {
+      "id": "edge:2333",
+      "from": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-affine-phase-band-relative-class-report"
+    },
+    {
+      "id": "edge:2334",
+      "from": "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-principal-affine-phase-band-relative-class"
+    },
+    {
+      "id": "edge:2335",
+      "from": "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-finite-lower-bypass-robust-horizontal-affine-phi-tails"
+    },
+    {
+      "id": "edge:2336",
+      "from": "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2337",
+      "from": "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-affine-phase-band-relative-class-report"
+    },
+    {
+      "id": "edge:2338",
+      "from": "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+      "relation": "PART_OF",
+      "to": "concept:gate1-principal-affine-phase-band-relative-class"
+    },
+    {
+      "id": "edge:2339",
+      "from": "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-finite-lower-bypass-robust-horizontal-affine-phi-tails"
+    },
+    {
+      "id": "edge:2340",
+      "from": "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2341",
+      "from": "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
+      "note": "Exact cancellation is a stronger condition than convergence; the lambda counterfamily separates the two statements."
+    },
+    {
+      "id": "edge:2342",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-principal-affine-phase-band-relative-class"
+    },
+    {
+      "id": "edge:2343",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-affine-phase-band-relative-class-analytic-proof",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2344",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION"
+    },
+    {
+      "id": "edge:2345",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle"
+    },
+    {
+      "id": "edge:2346",
+      "from": "artifact:gate1-affine-phase-band-relative-class-analytic-evidence",
+      "relation": "RECORDS",
+      "to": "concept:gate1-principal-affine-phase-band-relative-class"
+    },
+    {
+      "id": "edge:2347",
+      "from": "artifact:gate1-affine-phase-band-relative-class-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-principal-affine-phase-band-relative-class"
+    },
+    {
+      "id": "edge:2348",
+      "from": "artifact:gate1-affine-phase-band-relative-class-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-affine-phase-band-relative-class-analytic-evidence"
+    },
+    {
+      "id": "edge:2349",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS"
+    },
+    {
+      "id": "edge:2350",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE"
     }
   ],
   "kg_bridges": [
