@@ -12,8 +12,9 @@ quadratures check the finite flow parameters.
 
 The result is restricted to one R>0, D>0 component of the closed-FRW V=0
 workbench.  It is not a full off-shell BFV endpoint construction, a proof of
-equivalence with the old fixed-a kernel, a full-real-lapse projector matrix
-element, a global gauge theorem, a physics claim, or a TOE claim.  It writes
+equivalence with the old fixed-a kernel, a full-real-lapse distributional
+delta(C) physical-inner-product kernel, a global gauge theorem, a physics
+claim, or a TOE claim.  It writes
 one adjacent JSON result and starts no descendant calculation.
 """
 
@@ -38,7 +39,7 @@ RUNNER_RELPATH = (
     "cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py"
 )
 EXPECTED_INPUT_SHA256 = (
-    "2a7d31d99ae61ee7877e07aeda98fc8e771952880a5d7bbd5a2cc4d4bf4c01a5"
+    "f8ea44a52139e74eda81e0fbaf7d7c60cd1d46342c3cc824b608c35b997871d6"
 )
 CALCULATION_ID = "Gate1V0TraceEndpointCompletion"
 RESULT_SCHEMA = "ice.gate1.v0-trace-endpoint-completion.result.v1"
@@ -214,7 +215,7 @@ def load_frozen_input() -> tuple[dict[str, Any], str, dict[str, str]]:
         "zero_lapse_distribution": None,
         "global_fundamental_region": None,
         "determinant_line_orientation": None,
-        "full_projector_matrix_element": None,
+        "full_real_lapse_delta_C_kernel": None,
         "complete_global_signed_intersection_vector": None,
         "global_n_sigma": None,
         "physics_claim": None,
@@ -500,15 +501,25 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     raw_orbit_action = sp.simplify(p2 - p1)
     finite_f1 = -p1
     finite_f2 = -p2
-    improved_orbit_action = sp.simplify(
+    finite_endpoint_correction = sp.simplify(finite_f2 - finite_f1)
+    raw_static_action_after_flow = sp.simplify(
         raw_orbit_action + finite_f2 - finite_f1
+    )
+    htv_improved_static_action = sp.simplify(
+        raw_static_action_after_flow - finite_endpoint_correction
+    )
+    relational_orbit_action = sp.simplify(
+        raw_orbit_action - (p2 - p1)
     )
     audit.check_exact(
         "G1.endpoint.action_triangle",
         raw_orbit_action == sp.Rational(1, 4)
         and sp.simplify(finite_f1 - finite_f2 - raw_orbit_action) == 0
-        and improved_orbit_action == 0,
-        "S0_raw_td=P2-P1=F1-F2=1/4, the actual correction is F2-F1=-1/4, and the relational action S0_raw+[F] gives zero on the pure gauge orbit",
+        and finite_endpoint_correction == -sp.Rational(1, 4)
+        and raw_static_action_after_flow == 0
+        and htv_improved_static_action == sp.Rational(1, 4)
+        and relational_orbit_action == 0,
+        "S0_raw_static=S0_raw_td+[F]=0 after the endpoint flow, S_HTV_static=S0_raw_static-[F]=1/4, and the distinct fixed-Phi_star relational action S0_raw_td-[P]=0",
     )
 
     audit.guard_theorem(
@@ -528,9 +539,9 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     audit.guard_theorem(
         "G1.endpoint.guard.variational_problem_separation",
         True,
-        "separation of relational and mixed-polarization endpoint variational problems",
-        "relational fixed-Phi_star action S0-[P] versus auxiliary fixed-(P,phi) action S0-[P*Q]",
-        "the verdict concerns only the classical local on-shell relational action; H_red=+dot(f)*Q_star belongs to the auxiliary mixed-polarization problem and is not asserted to have zero action on the orbit triangle",
+        "separation of relational, mixed-polarization and HTV improved-static action ledgers",
+        "relational fixed-Phi_star action S0-[P], auxiliary fixed-(P,phi) action S0-[P*Q], and raw-static plus HTV finite endpoint correction",
+        "the verdict concerns only the classical local on-shell relational action; H_red=+dot(f)*Q_star belongs to the auxiliary mixed-polarization problem, while S0_raw_td+[F] is the raw static action after flow and not the HTV improved action",
     )
     audit.guard_theorem(
         "G1.endpoint.guard.finite_flow_scope",
@@ -554,11 +565,11 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
         "D=12*pi^2*a on shell here; this does not contradict the separate spatially flat V=0 degeneracy",
     )
     audit.guard_theorem(
-        "G1.endpoint.guard.projector_boundary",
+        "G1.endpoint.guard.delta_c_kernel_boundary",
         True,
-        "local canonical-limit FP reduction versus the full-real-lapse constraint projector",
+        "local canonical-limit FP reduction versus the full-real-lapse distributional delta(C) physical-inner-product kernel",
         "one classical gauge chart without the full BFV ghost action or lapse integration",
-        "neither the Marolf projector matrix element nor equality with the repository fixed-a kernel is computed",
+        "neither the Marolf group-averaging kernel nor equality with the repository fixed-a kernel is computed; delta(C) is not called an idempotent projector on continuous zero spectrum",
     )
 
     return {
@@ -598,8 +609,15 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "benchmark_F1": str(finite_f1),
             "benchmark_F2": str(finite_f2),
             "actual_endpoint_correction_F2_minus_F1": str(
-                sp.simplify(finite_f2 - finite_f1)
+                finite_endpoint_correction
             ),
+            "raw_static_action_after_flow": str(
+                raw_static_action_after_flow
+            ),
+            "htv_improved_static_action": str(
+                htv_improved_static_action
+            ),
+            "ledger_warning": "S0_raw_td+[F] is the raw static action after endpoint flow; the HTV improved static action subtracts [F] once more and is distinct from the relational S0-[P] action",
         },
         "local_fp_measure": {
             "ordered_coordinates": "(chi,C,Phi_star,p)",
@@ -619,9 +637,17 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "raw_S0_orbit_action": str(raw_orbit_action),
             "F1_minus_F2": str(sp.simplify(finite_f1 - finite_f2)),
             "F2_minus_F1_actual_correction": str(
-                sp.simplify(finite_f2 - finite_f1)
+                finite_endpoint_correction
             ),
-            "relational_orbit_action": str(improved_orbit_action),
+            "raw_static_action_after_endpoint_flow": str(
+                raw_static_action_after_flow
+            ),
+            "htv_improved_static_action": str(
+                htv_improved_static_action
+            ),
+            "relational_fixed_Phi_star_orbit_action": str(
+                relational_orbit_action
+            ),
         },
         "identity_targets": {
             "constraint_component": "REGULAR_R_POSITIVE_D_POSITIVE",
@@ -633,7 +659,7 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
             "time_dependent_preservation": "N_EQUALS_F_DOT_OVER_D",
             "reduced_full_flow": "MATCHES_ON_SHELL",
             "orbit_triangle": "CLOSES",
-            "improved_action_triangle": "CLOSES",
+            "raw_flow_and_relational_action_ledgers": "CLOSE_SEPARATELY_HTV_IMPROVED_STATIC_REMAINS_DISTINCT",
             "full_off_shell_bfv_completion": "NOT_COMPUTED",
             "old_fixed_a_kernel_equivalence": "NOT_COMPUTED",
         },
@@ -812,25 +838,26 @@ def select_decision(
 
     common_facts = {
         "full_off_shell_bfv_completion": "NOT_COMPUTED",
+        "full_real_lapse_delta_C_kernel": "NOT_COMPUTED",
         "normalized_quantum_endpoint_state_transform": "NOT_COMPUTED",
         "old_fixed_a_kernel_equivalence": "NOT_COMPUTED",
     }
     if all_pass:
         decision: dict[str, Any] = {
-            "classification": "GATE1_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION_KEEP_FULL_BFV_PROJECTOR_OPEN",
+            "classification": "GATE1_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION_KEEP_FULL_BFV_AND_DELTA_C_KERNEL_OPEN",
             "verdict": "KEEP_V0_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
             "programme_impact": "NARROW_LOCAL_ENDPOINT_ROUTE_NO_AUTOMATIC_SUCCESSOR",
             "matched_predeclared_condition": (
                 "all shell, Dirac-coordinate, one-form, transversality, "
                 "finite-flow, local-FP, gauge-preservation, orbit-triangle, "
-                "and improved-action checks pass"
+                "and separately scoped raw-flow, HTV-static, and relational-action checks pass"
             ),
             "meaning": (
                 "keep the classical local closed-FRW V=0 on-shell "
                 "relational endpoint action on the frozen p-positive "
                 "component and retain the time-dependent representative as "
                 "a same-constraint-orbit control; this is not a quantum "
-                "endpoint-state, full BFV, or projector completion"
+                "endpoint-state, full BFV, or full-real-lapse delta(C) kernel completion"
             ),
             "relational_scope": "KEEP_CLASSICAL_ON_SHELL_ACTION_ON_FROZEN_P_POSITIVE_COMPONENT",
             "time_control_scope": "KEEP_AS_CLASSICALLY_SAME_CONSTRAINT_ORBIT_CONTROL",
@@ -845,6 +872,8 @@ def select_decision(
                 "reduced_full_flow": "MATCHES_ON_SHELL",
                 "orbit_triangle": "CLOSES",
                 "relational_action_triangle": "CLOSES",
+                "raw_static_action_after_endpoint_flow": "ZERO_ON_FROZEN_PURE_GAUGE_ORBIT",
+                "htv_improved_static_action": "DELTA_P_DISTINCT_FROM_RELATIONAL_ACTION",
                 **common_facts,
             },
         }
@@ -971,7 +1000,9 @@ def build_result(
                 "this model-specific classical on-shell action; "
                 "Banihashemi-Jacobson supply the local trace-gauge FP premise, "
                 "not an endpoint-state completion; "
-                "Marolf supplies the still-uncomputed full projector target"
+                "Marolf supplies the still-uncomputed full-real-lapse "
+                "distributional delta(C) physical-inner-product target, "
+                "not an idempotent projector on continuous zero spectrum"
             ),
         },
         "scope_status": {
@@ -985,7 +1016,7 @@ def build_result(
             "full_replacement_bfv_measure": None,
             "endpoint_state_transform": None,
             "old_fixed_a_kernel_equivalence": None,
-            "full_projector_matrix_element": None,
+            "full_real_lapse_delta_C_kernel": None,
             "zero_lapse_distribution": None,
             "global_fundamental_region": None,
             "determinant_line_orientation": None,
@@ -1000,7 +1031,7 @@ def build_result(
                 "full off-shell canonical chart and HTV-compatible ghost/antighost/b endpoint conditions",
                 "normalized endpoint-state transform and full replacement BFV measure",
                 "a bounded replacement-source discretization distinct from the old constant-lapse fixed-a source",
-                "comparison with the full-real-lapse projector and regulator removal",
+                "comparison with the full-real-lapse distributional delta(C) physical-inner-product kernel and regulator removal",
                 "global orbit coverage, determinant-line orientation, and physical original cycle",
             ],
         },
@@ -1019,7 +1050,7 @@ def build_result(
             "zero_lapse_distribution": None,
             "global_fundamental_region": None,
             "determinant_line_orientation": None,
-            "full_projector_matrix_element": None,
+            "full_real_lapse_delta_C_kernel": None,
             "global_n_sigma": None,
             "physical_original_cycle": None,
             "physics_claim": None,

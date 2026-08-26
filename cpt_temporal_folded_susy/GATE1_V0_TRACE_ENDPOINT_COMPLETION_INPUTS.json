@@ -4,7 +4,7 @@
   "numbered_phase": null,
   "question": "In the closed-FRW V(phi)=0 control sector, does a classical local on-shell relational endpoint action for the static trace gauge P=0 exist, and is the time-dependent trace gauge P=f(s) an exactly gauge-related representative once the endpoint action, finite endpoint flow, and local FP measure are included?",
   "kind": "EXACT_CLOSED_FRW_V0_TRACE_ENDPOINT_AND_GAUGE_ORBIT_TRIANGLE_WITH_INDEPENDENT_HIGH_PRECISION_QUADRATURE",
-  "epistemic_scope": "ONE_FROZEN_P_POSITIVE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_PROJECTOR_OR_FIXED_A_KERNEL_EQUIVALENCE",
+  "epistemic_scope": "ONE_FROZEN_P_POSITIVE_CONNECTED_LOCAL_CONSTRAINT_COMPONENT_WITH_R_POSITIVE_AND_D_POSITIVE_NOT_FULL_BFV_OR_FULL_REAL_LAPSE_DELTA_C_KERNEL_OR_FIXED_A_KERNEL_EQUIVALENCE",
   "repository_sources": [
     {
       "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json",
@@ -43,8 +43,8 @@
     {
       "source": "Marolf, Path integrals and instantons in quantum gravity: Minisuperspace models, Phys. Rev. D 53 (1996) 6979, arXiv:gr-qc/9602019",
       "url": "https://doi.org/10.1103/PhysRevD.53.6979",
-      "used_for": "the full-real-lapse constraint projector as the still-uncomputed comparison target",
-      "not_used_for": "identifying this local FP reduction with the full projector matrix element"
+      "used_for": "the full-real-lapse distributional delta(C) physical-inner-product or group-averaging kernel as the still-uncomputed comparison target",
+      "not_used_for": "calling delta(C) an idempotent projector on continuous zero spectrum or identifying this local FP reduction with the full group-averaging kernel"
     }
   ],
   "model": {
@@ -67,8 +67,10 @@
     "local_fp_measure": "on D>0, dQ dP dphi dp delta(C) delta(P-f) D=dPhi_star dp",
     "gauge_preservation": "dot(P)=N*D=dot(f), hence N=dot(f)/D",
     "orbit_triangle": "T=integral(P1 to P2)dP/D, mu_i=integral(P_i to 0)dP/D, and T+mu_2-mu_1=0",
-    "action_triangle": "S0_raw_td=P2-P1, F_i=-P_i, the actual endpoint correction is [F]_1^2=F2-F1=-(P2-P1), and S_rel=S0_raw_td+[F]_1^2=0",
-    "variational_problem_separation": "the verdict concerns fixed relational Phi_star with S0-[P]; the auxiliary fixed-(P,phi) action S0-[P*Q] alone has H_red=+dot(f)*Q_star"
+    "raw_flow_triangle": "S0_raw_td=P2-P1, F_i=-P_i, [F]_1^2=F2-F1=-(P2-P1), and the raw static action after endpoint flow is S0_raw_static=S0_raw_td+[F]_1^2=0",
+    "relational_action": "for fixed relational Phi_star, S_rel=S0_raw_td-[P]_1^2=0",
+    "htv_improved_static_action": "with the HTV convention, S_HTV_static=S0_raw_static-[F]_1^2=P2-P1; it is not S_rel",
+    "variational_problem_separation": "the verdict concerns fixed relational Phi_star with S0-[P]; the auxiliary fixed-(P,phi) action S0-[P*Q] alone has H_red=+dot(f)*Q_star; the HTV improved static action is a third distinct ledger"
   },
   "numerical_plan": {
     "precision_digits": 90,
@@ -120,7 +122,7 @@
     "a normalized quantum endpoint-state transform",
     "the full m=2 BFV measure or gauge fermion",
     "equality with the existing fixed-(a,phi) kernel or its constant-lapse finite discretization",
-    "the full-real-lapse Marolf projector matrix element",
+    "the full-real-lapse Marolf distributional delta(C) physical-inner-product or group-averaging kernel",
     "the Banihashemi-Jacobson momentum integral and lapse-contour interchange in the replacement source",
     "global orbit coverage, a fundamental region, Gribov-copy census, determinant-line orientation, or all scalar-momentum sectors",
     "physical original cycle, global n_sigma, a physics claim, or a TOE claim"
@@ -152,7 +154,7 @@
     "zero_lapse_distribution": null,
     "global_fundamental_region": null,
     "determinant_line_orientation": null,
-    "full_projector_matrix_element": null,
+    "full_real_lapse_delta_C_kernel": null,
     "complete_global_signed_intersection_vector": null,
     "global_n_sigma": null,
     "physics_claim": null,
