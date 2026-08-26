@@ -85,14 +85,31 @@ export const boundedGate1SourceLinkAuthorizationId =
   "GATE1_SOURCE_LINK_20260826_01"
 export const boundedGate1SourceLinkExecutionEnabled: boolean = false
 
+export const boundedGate1ZeroLapseScript =
+  "cpt_temporal_folded_susy/gate1_scalar_zero_lapse_extension"
+export const boundedGate1ZeroLapseScriptSha256 =
+  "f7a7135f5d17ce283ef3dfe444b052499f85b9b3b6956be93a81d34ed106c58e"
+export const boundedGate1ZeroLapseInputPath =
+  "cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION_INPUTS.json"
+export const boundedGate1ZeroLapseInputSha256 =
+  "5667cb42bbc7eb72ae50de05cc1b0abfbc12bf22c8036f6c59c6f5427644cd0e"
+export const boundedGate1ZeroLapseUpstreamResultPath =
+  "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_RESULT.json"
+export const boundedGate1ZeroLapseUpstreamResultSha256 =
+  "ad7c7f9ccf79047d0994eea3667b07c1fbb9795e7187c9730c5c6d819956f243"
+export const boundedGate1ZeroLapseResultPath =
+  "cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION_RESULT.json"
+export const boundedGate1ZeroLapseAuthorizationId =
+  "GATE1_ZERO_LAPSE_20260826_01"
+export const boundedGate1ZeroLapseExecutionEnabled: boolean = true
+
 export const boundedGate1InvocationDecision = (
   query: string,
   relpath: string,
   args: ReadonlyArray<string>
 ) => {
-  const normalizedQuery = canonicalResearchRelpath(query)
   const basename = relpath.split("/").at(-1) ?? relpath
-  if (normalizedQuery !== relpath && normalizedQuery !== basename) {
+  if (query !== relpath && query !== basename) {
     return { allowed: false, reason: "EXACT_NAME_REQUIRED" as const }
   }
   if (args.length > 0) {
@@ -104,7 +121,7 @@ export const boundedGate1InvocationDecision = (
 export const ragnarokStatus = {
   schema: "ice-ragnarok-circuit-breaker/v2",
   effective_date: "2026-08-26",
-  operational_state: "GATE1_SOURCE_LINK_RESULT_REVIEW",
+  operational_state: "GATE1_ZERO_LAPSE_AUTHORIZED",
   pause_started_on: "2026-08-23",
   review_eligible_on: "2026-08-30",
   auto_resume: false,
@@ -265,6 +282,52 @@ export const ragnarokStatus = {
       }
     }
   },
+  zero_lapse_authorization: {
+    id: boundedGate1ZeroLapseAuthorizationId,
+    authorized_by: "USER",
+    approved_on: "2026-08-26",
+    effective_immediately: true,
+    overrides_only: "SCHEDULED_REVIEW_WAIT_FOR_THIS_EXACT_CALCULATION",
+    scope: "DIRECT_GATE1_M2_SCALAR_ZERO_LAPSE_EXTENSION",
+    does_not_reopen_killed_route: true,
+    phase57_authorized: false,
+    full_replay_authorized: false,
+    numbered_phase: null
+  },
+  zero_lapse_window: {
+    state: "AUTHORIZED",
+    automatic_next: null,
+    maximum_launches: 1,
+    exact_script: boundedGate1ZeroLapseScript,
+    runner_sha256: boundedGate1ZeroLapseScriptSha256,
+    input: {
+      path: boundedGate1ZeroLapseInputPath,
+      sha256: boundedGate1ZeroLapseInputSha256
+    },
+    upstream_result: {
+      path: boundedGate1ZeroLapseUpstreamResultPath,
+      sha256: boundedGate1ZeroLapseUpstreamResultSha256
+    },
+    result_path: boundedGate1ZeroLapseResultPath,
+    launch_receipt_path:
+      ".git/ice-launches/GATE1_ZERO_LAPSE_20260826_01",
+    allowed_args: [],
+    allowed_outcomes: [
+      "UNIQUE_SCALING_DEGREE_PRESERVING_EXTENSION"
+    ],
+    resource_caps: {
+      wall_clock_seconds: 30,
+      artifact_bytes: 250_000,
+      stdout_bytes: 65_536,
+      stderr_bytes: 65_536,
+      root_calls: 0,
+      ode_calls: 0,
+      evaluator_reconciliation_calls: 0,
+      numerical_samples: 0,
+      automatic_descendants: 0
+    },
+    execution_enabled: boundedGate1ZeroLapseExecutionEnabled
+  },
   verdicts: {
     ragnarok_pattern: "PRESENT",
     scientific_progress: "PARTIAL",
@@ -310,7 +373,7 @@ export const ragnarokStatus = {
       next_phase: null
     },
     execution_provenance:
-      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_CONSUMED_SOURCE_LINK_RESULT",
+      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_EXCLUSIVE_ZERO_LAPSE_ONE_SHOT",
     direct_python_bypass_authorized: false
   },
   repository_transport: {
@@ -480,6 +543,18 @@ export const researchRunDecision = (relpath: string) => {
     }
   }
   if (
+    normalized === boundedGate1ZeroLapseScript &&
+    boundedGate1ZeroLapseExecutionEnabled
+  ) {
+    return {
+      allowed: true,
+      reason: "BOUNDED_GATE1_ZERO_LAPSE" as const,
+      normalized_relpath: normalized,
+      maximum_phase: maximumPhase,
+      expected_sha256: boundedGate1ZeroLapseScriptSha256
+    }
+  }
+  if (
     normalized === boundedGate1SourceLinkScript &&
     boundedGate1SourceLinkExecutionEnabled
   ) {
@@ -521,7 +596,7 @@ const blockedRunError = (
         : `core research script '${relpath}'`
   return iceError(
     "RESEARCH_PHASE_PAUSED",
-    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout and both bounded Gate-1 windows have been consumed, the killed route remains closed, and execution is limited to the frozen historical allowlist unless \`ice status\` explicitly records a future hash-pinned window`,
+    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the completed Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout and consumed bounded Gate-1 windows remain closed, the killed route remains closed, and execution is limited to the frozen historical allowlist plus any exact hash-pinned window shown by \`ice status\``,
     2
   )
 }
@@ -632,11 +707,18 @@ export const guardResearchRelpaths = (
           blockedRunError(decision.normalized_relpath, decision.maximum_phase)
         )
       }
-      if (decision.reason === "BOUNDED_GATE1_SOURCE_LINK") {
+      if (
+        decision.reason === "BOUNDED_GATE1_SOURCE_LINK" ||
+        decision.reason === "BOUNDED_GATE1_ZERO_LAPSE"
+      ) {
+        const exactScript =
+          decision.reason === "BOUNDED_GATE1_ZERO_LAPSE"
+            ? boundedGate1ZeroLapseScript
+            : boundedGate1SourceLinkScript
         return yield* Effect.fail(
           iceError(
             "RESEARCH_REPRO_FORBIDDEN",
-            `the one-shot source-link discriminator is authorized only through \`ice run ${boundedGate1SourceLinkScript}\`; reproduction and copied-run surfaces remain blocked`,
+            `the one-shot Gate-1 discriminator is authorized only through \`ice run ${exactScript}\`; reproduction and copied-run surfaces remain blocked`,
             2
           )
         )
@@ -708,6 +790,20 @@ export const guardResearchRun = (
         `${workspace.root}/${boundedGate1SourceLinkInputPath}`,
         boundedGate1SourceLinkInputSha256,
         "RESEARCH_INPUT_HASH_MISMATCH"
+      )
+    }
+    if (decision.reason === "BOUNDED_GATE1_ZERO_LAPSE") {
+      yield* guardPinnedCoreFile(
+        boundedGate1ZeroLapseInputPath,
+        `${workspace.root}/${boundedGate1ZeroLapseInputPath}`,
+        boundedGate1ZeroLapseInputSha256,
+        "RESEARCH_INPUT_HASH_MISMATCH"
+      )
+      yield* guardPinnedCoreFile(
+        boundedGate1ZeroLapseUpstreamResultPath,
+        `${workspace.root}/${boundedGate1ZeroLapseUpstreamResultPath}`,
+        boundedGate1ZeroLapseUpstreamResultSha256,
+        "RESEARCH_UPSTREAM_HASH_MISMATCH"
       )
     }
     return entry
@@ -786,6 +882,78 @@ export const acquireBoundedGate1SourceLinkLaunch: Effect.Effect<
   )
 })
 
+export const acquireBoundedGate1ZeroLapseLaunch: Effect.Effect<
+  void,
+  IceError,
+  | Workspace
+  | FileSystem.FileSystem
+  | Path.Path
+  | import("@effect/platform/CommandExecutor").CommandExecutor
+> = Effect.gen(function* () {
+  const workspace = yield* Workspace
+  const fs = yield* FileSystem.FileSystem
+  const path = yield* Path.Path
+  const resultFile = path.join(
+    workspace.root,
+    boundedGate1ZeroLapseResultPath
+  )
+  const resultExists = yield* fs.exists(resultFile).pipe(
+    Effect.mapError((error) =>
+      iceError(
+        "RESEARCH_PROVENANCE_FAILED",
+        `cannot check for a stale bounded result: ${String(error)}`
+      )
+    )
+  )
+  if (resultExists) {
+    return yield* Effect.fail(
+      iceError(
+        "RESEARCH_RESULT_PREEXISTS",
+        `the one-shot zero-lapse result already exists at ${boundedGate1ZeroLapseResultPath}; refusing to read or overwrite a stale artifact`,
+        2
+      )
+    )
+  }
+
+  const gitPath = yield* capture({
+    command: "git",
+    args: ["rev-parse", "--git-path", "ice-launches"],
+    cwd: workspace.root
+  })
+  if (gitPath.exitCode !== 0 || gitPath.stdout.trim().length === 0) {
+    return yield* Effect.fail(
+      iceError(
+        "RESEARCH_PROVENANCE_FAILED",
+        `cannot resolve the private launch-receipt directory: ${gitPath.stderr.trim() || `git exited ${gitPath.exitCode}`}`,
+        2
+      )
+    )
+  }
+  const launchRoot = path.resolve(workspace.root, gitPath.stdout.trim())
+  yield* fs.makeDirectory(launchRoot, { recursive: true }).pipe(
+    Effect.mapError((error) =>
+      iceError(
+        "RESEARCH_PROVENANCE_FAILED",
+        `cannot prepare the private launch-receipt directory: ${String(error)}`,
+        2
+      )
+    )
+  )
+  const receiptDirectory = path.join(
+    launchRoot,
+    boundedGate1ZeroLapseAuthorizationId
+  )
+  yield* fs.makeDirectory(receiptDirectory).pipe(
+    Effect.mapError(() =>
+      iceError(
+        "RESEARCH_WINDOW_CONSUMED",
+        `the exclusive launch receipt ${ragnarokStatus.zero_lapse_window.launch_receipt_path} already exists or cannot be acquired; a second, concurrent, or post-failure launch is forbidden`,
+        2
+      )
+    )
+  )
+})
+
 const BoundedGate1SourceLinkResultFromString = Schema.parseJson(
   Schema.Struct({
     schema_version: Schema.Literal("ice.gate1.scalar-source-link.result.v1"),
@@ -845,6 +1013,77 @@ export const decodeBoundedGate1SourceLinkResult = (
     )
   )
 
+const BoundedGate1ZeroLapseResultFromString = Schema.parseJson(
+  Schema.Struct({
+    schema_version: Schema.Literal(
+      "ice.gate1.scalar-zero-lapse-extension.result.v1"
+    ),
+    authorization_id: Schema.Literal(
+      boundedGate1ZeroLapseAuthorizationId
+    ),
+    calculation_id: Schema.Literal("Gate1M2ScalarZeroLapseExtension"),
+    numbered_phase: Schema.Null,
+    run_status: Schema.Literal("VALID_RUN"),
+    classification: Schema.String,
+    verdict: Schema.Literal(
+      "UNIQUE_SCALING_DEGREE_PRESERVING_EXTENSION"
+    ),
+    programme_impact: Schema.Literal("NARROW"),
+    input: Schema.Struct({
+      path: Schema.Literal(boundedGate1ZeroLapseInputPath),
+      sha256: Schema.Literal(boundedGate1ZeroLapseInputSha256)
+    }),
+    runner: Schema.Struct({
+      path: Schema.Literal(`${boundedGate1ZeroLapseScript}.py`),
+      sha256: Schema.Literal(boundedGate1ZeroLapseScriptSha256)
+    }),
+    upstream_result: Schema.Struct({
+      path: Schema.Literal(boundedGate1ZeroLapseUpstreamResultPath),
+      sha256: Schema.Literal(boundedGate1ZeroLapseUpstreamResultSha256)
+    }),
+    numerical_checks: Schema.Tuple(),
+    gate1_decision: Schema.Literal("OPEN_PARTIAL_PROGRESS"),
+    global_promotion: Schema.Literal("PROHIBITED"),
+    automatic_next: Schema.Null,
+    promoted_outputs: Schema.Struct({
+      TOE_claim: Schema.Null,
+      complete_global_signed_intersection_vector: Schema.Null,
+      full_joint_orientation: Schema.Null,
+      global_n_sigma: Schema.Null,
+      physical_original_cycle: Schema.Null,
+      physics_claim: Schema.Null
+    }),
+    resource_accounting: Schema.Struct({
+      root_calls: Schema.Literal(0),
+      ode_calls: Schema.Literal(0),
+      evaluator_reconciliation_calls: Schema.Literal(0),
+      numerical_samples: Schema.Literal(0),
+      automatic_descendants: Schema.Literal(0),
+      adjacent_result_files: Schema.Literal(1),
+      artifact_cap_bytes: Schema.Literal(250_000)
+    })
+  })
+)
+
+export type BoundedGate1ZeroLapseResult = Schema.Schema.Type<
+  typeof BoundedGate1ZeroLapseResultFromString
+>
+
+export const decodeBoundedGate1ZeroLapseResult = (
+  source: string
+): Effect.Effect<BoundedGate1ZeroLapseResult, IceError> =>
+  Schema.decodeUnknown(BoundedGate1ZeroLapseResultFromString)(source, {
+    errors: "all"
+  }).pipe(
+    Effect.mapError((error) =>
+      iceError(
+        "RESEARCH_RESULT_SCHEMA_INVALID",
+        `the bounded zero-lapse result failed its authorization/hash/null-output contract: ${String(error)}`,
+        2
+      )
+    )
+  )
+
 export const formatRagnarokStatus = (json: boolean): string => {
   if (json) {
     return JSON.stringify(ragnarokStatus, null, 2)
@@ -858,10 +1097,11 @@ export const formatRagnarokStatus = (json: boolean): string => {
     `Execution provenance: ${ragnarokStatus.containment.execution_provenance}`,
     `Bounded Gate 1: ${ragnarokStatus.gate1_window.state}; ${ragnarokStatus.gate1_window.exact_script}; execution enabled=${String(ragnarokStatus.gate1_window.execution_enabled)}`,
     `Scalar source link: ${ragnarokStatus.source_link_window.state}; ${ragnarokStatus.source_link_window.exact_script}; execution enabled=${String(ragnarokStatus.source_link_window.execution_enabled)}`,
+    `Scalar zero-lapse extension: ${ragnarokStatus.zero_lapse_window.state}; ${ragnarokStatus.zero_lapse_window.exact_script}; execution enabled=${String(ragnarokStatus.zero_lapse_window.execution_enabled)}`,
     `Next phase: ${String(ragnarokStatus.containment.next_phase)}; no automatic descendant is authorized`,
     `Gate 1: ${ragnarokStatus.scientific_state.gate1}`,
     `Scientific route: ${ragnarokStatus.scientific_state.scientific_route}`,
-    `Historical review date: ${ragnarokStatus.review_eligible_on}; latest exact-window wait override approved ${ragnarokStatus.source_link_authorization.approved_on} (no automatic resume)`,
+    `Historical review date: ${ragnarokStatus.review_eligible_on}; latest exact-window wait override approved ${ragnarokStatus.zero_lapse_authorization.approved_on} (no automatic resume)`,
     `Repository push: ${ragnarokStatus.repository_transport.push_status}`,
     "Decision: docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md"
   ].join("\n")

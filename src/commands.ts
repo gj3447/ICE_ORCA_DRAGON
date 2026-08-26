@@ -7,8 +7,10 @@ import { iceError, type IceError } from "./errors.ts"
 import { capture, inherit } from "./process.ts"
 import {
   acquireBoundedGate1SourceLinkLaunch,
+  acquireBoundedGate1ZeroLapseLaunch,
   boundedGate1InvocationDecision,
   decodeBoundedGate1SourceLinkResult,
+  decodeBoundedGate1ZeroLapseResult,
   formatRagnarokStatus,
   guardResearchQuery,
   guardResearchRun,
@@ -89,9 +91,11 @@ export const runScript = (
     const decision = researchRunDecision(entry.relpath)
     if (
       decision.reason === "BOUNDED_GATE1_DIRECT" ||
-      decision.reason === "BOUNDED_GATE1_SOURCE_LINK"
+      decision.reason === "BOUNDED_GATE1_SOURCE_LINK" ||
+      decision.reason === "BOUNDED_GATE1_ZERO_LAPSE"
     ) {
       const isSourceLink = decision.reason === "BOUNDED_GATE1_SOURCE_LINK"
+      const isZeroLapse = decision.reason === "BOUNDED_GATE1_ZERO_LAPSE"
       const invocation = boundedGate1InvocationDecision(
         query,
         entry.relpath,
@@ -110,11 +114,16 @@ export const runScript = (
           )
         )
       }
-      const window = isSourceLink
-        ? ragnarokStatus.source_link_window
-        : ragnarokStatus.gate1_window
+      const window = isZeroLapse
+        ? ragnarokStatus.zero_lapse_window
+        : isSourceLink
+          ? ragnarokStatus.source_link_window
+          : ragnarokStatus.gate1_window
       if (isSourceLink) {
         yield* acquireBoundedGate1SourceLinkLaunch
+      }
+      if (isZeroLapse) {
+        yield* acquireBoundedGate1ZeroLapseLaunch
       }
       const caps = window.resource_caps
       const execution = yield* capture(
@@ -166,18 +175,22 @@ export const runScript = (
             )
           )
         }
-        if (isSourceLink) {
+        if (isSourceLink || isZeroLapse) {
           const resultText = yield* Effect.try({
             try: () =>
               new TextDecoder("utf-8", { fatal: true }).decode(resultBytes),
             catch: (error) =>
               iceError(
                 "RESEARCH_RESULT_SCHEMA_INVALID",
-                `cannot decode the bounded source-link result as UTF-8 JSON: ${String(error)}`,
+                `cannot decode the bounded Gate-1 result as UTF-8 JSON: ${String(error)}`,
                 2
               )
           })
-          yield* decodeBoundedGate1SourceLinkResult(resultText)
+          if (isZeroLapse) {
+            yield* decodeBoundedGate1ZeroLapseResult(resultText)
+          } else {
+            yield* decodeBoundedGate1SourceLinkResult(resultText)
+          }
         }
       }
       yield* setExitCode(execution.exitCode)

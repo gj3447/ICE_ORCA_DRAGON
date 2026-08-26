@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-26T04:18:00Z",
+  "updated_at_utc": "2026-08-26T05:38:09Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -140,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and both bounded Gate-1 windows are consumed; full replay, Phase 57 and global promotion remain forbidden. The straight-line KILL closes only its anchor-through homogeneous class. Exact work narrows affine tails to one reduced class; the ordered scalar one-shot directly links the newly declared scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms, and the prior contraction supports the scoped reduced-class KEEP. It neither selects lambda=1 nor establishes the zero-including full q-paired distribution, physical joint cycle or global vector. Gate 1 stays open.",
+      "answer": "No. Phase 56 and two prior bounded Gate-1 windows are consumed; full replay, Phase 57 and global promotion remain forbidden. The straight-line KILL closes only its anchor-through homogeneous class. Exact work narrows affine tails to one reduced class; the ordered scalar one-shot directly links the newly declared scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms. One exact-hash one-shot is now authorized only to test that scalar control's full-q canonical boundary through N=0 and scaling-degree-preserving contact ambiguity. It cannot select lambda=1, recover a physical joint cycle or emit a global vector. Gate 1 stays open.",
       "refs": [
         {
           "graph": "cpt",

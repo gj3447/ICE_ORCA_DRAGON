@@ -1,7 +1,7 @@
 # ICE Ragnarok 회로 차단기
 
 > **상태:** ACTIVE operational containment — Phase 56 및 두 bounded Gate-1 window consumed,
-> `GATE1_SOURCE_LINK_RESULT_REVIEW`
+> scalar zero-lapse one-shot authorized, `GATE1_ZERO_LAPSE_AUTHORIZED`
 > **발효:** 2026-08-23
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
@@ -20,6 +20,13 @@
 > Phase 57/full replay 차단, `next_phase=null`은 바뀌지 않는다. 정본은
 > [`ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md)다.
 
+> **2026-08-26 zero-lapse 국소 개정:** 사용자의 계속 연구 지시는 직전 결과가 명시한 다음
+> 장애물, 즉 같은 fixed-\(a\), \(m=2\) scalar control의 full \(q\)-paired \(N=0\) canonical
+> boundary/contact 문제 한 개에 한해 예정 대기를 면제한다. exact-hash, one-shot, no-argument,
+> private receipt와 fail-closed null 경계는
+> [`ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md)에
+> 동결했다. 이것은 Phase 57, full replay, retry, 자동 후손 또는 TOE 권한이 아니다.
+
 ## 결정
 
 현재 판정은 다음 세 문장을 동시에 보존한다.
@@ -36,7 +43,7 @@ launch/provenance conditioning으로 이어진 **저장 backend 및 재구성 la
 Phase 56 종결 진단과 함께 `KILL`한다. 실패 원인을 더 작은 evaluator·dtype·solver·residual·provenance
 Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
-- 운영 상태는 별도 scalar source-link 결과를 기록한 `GATE1_SOURCE_LINK_RESULT_REVIEW`이며
+- 운영 상태는 exact scalar zero-lapse one-shot만 연 `GATE1_ZERO_LAPSE_AUTHORIZED`이며
   containment는 계속 active다.
 - Phase 56의 유일한 terminal-closeout 예외는 실행·독립 재현을 완료해 소진됐다.
 - 2026-08-25의 번호 없는 Gate-1 exact window도 한 번의 `VALID_RUN` 뒤 소진됐으며 retry나
@@ -44,6 +51,9 @@ Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 - 2026-08-26의 번호 없는 `gate1_scalar_source_link`는 runner/input SHA-256, exact basename 또는
   relpath, 무인자, clean core, 30초/250,000-byte 상한 아래 한 번 실행되어 소진됐다. `.git` 내부
   exclusive launch receipt가 재실행을 차단하며 retry/repro/rename은 허용하지 않는다.
+- `gate1_scalar_zero_lapse_extension`만 새 runner/input SHA-256과 upstream result hash에 묶여
+  `AUTHORIZED_NOT_YET_RUN`이다. exact 이름·무인자 `ice run` 한 번 외에는 실행할 수 없고,
+  receipt가 생기는 즉시 성공/실패/timeout과 무관하게 소진된다. `repro`는 허용하지 않는다.
 - 정확히 동결된 Phase 11–50 실행체는 역사 검산용 allowlist로 허용한다. KILL 범위인 Phase
   51–55 재실행, Phase 56 변종, Phase 토큰이 없거나 이름을 바꾼 새 core 실행체, Phase 57 이상은
   `./ice run`과 `./ice repro`에서 `RESEARCH_PHASE_PAUSED`로 거부한다.

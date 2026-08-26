@@ -25,7 +25,7 @@
 - Phase 56 terminal-closeout 예외는 동결된 질문의 실행·독립 재현을 마쳐 소진됐다. 그 결과와
   무관하게 Phase 57 이상, full replay, 같은 evaluator/dtype/solver/residual/provenance 채무의
   자동 offspring를 만들거나 실행하지 않는다. 직접 Python 실행으로 제어면을 우회하지 않는다.
-- 제어면은 현재 정확히 동결된 Phase 11–50 역사 실행체만 허용한다.
+- 제어면은 동결된 Phase 11–50 역사 실행체와 아래에 명시한 현재의 단일 bounded window만 허용한다.
   2026-08-25 사용자가 즉시
   승인한 `GATE1_DIRECT_20260825_01` exact hash-pinned runner는 Phase-39 straight field-ray end
   admissibility 계산을 정상 완료해 **소진됐으며 재실행하지 않는다**. 결과는 straight completion과
@@ -36,8 +36,13 @@
   source link만 검사하는 번호 없는 exact-hash runner 한 번이었다. `VALID_RUN`으로 끝나
   **소진됐으며 재실행하지 않는다**. 비영 lapse arm의 reduced scalar link와 orientation \(+1\)은
   `KEEP`, zero-including full \(q\)-paired distribution은 `OPEN`이고 Gate 1은 계속
-  `OPEN_PARTIAL_PROGRESS`다. 이는 physical original joint cycle 복원, Phase 51–56 route 재개,
-  Phase 57/full replay 또는 자동 후손 권한이 아니다. `repro`도 같은 경계를 적용한다.
+  `OPEN_PARTIAL_PROGRESS`다. 직전 결과가 남긴 바로 그 장애물에 한해 사용자의 계속 연구 지시가
+  `GATE1_ZERO_LAPSE_20260826_01`을 승인했다. 이는 같은 fixed-\(a\), \(m=2\) control의 full
+  \(q\)-paired canonical boundary와 scaling-degree-preserving contact ambiguity만 검사하는 번호 없는
+  exact-hash runner **한 번**이다. 현재 `AUTHORIZED_NOT_YET_RUN`이며 exact name, 무인자,
+  clean core, runner/input/upstream hash, private exclusive receipt와 30초/250,000-byte 상한을 지킨다.
+  이는 physical original joint cycle 복원, Phase 51–56 route 재개, Phase 57/full replay 또는 자동
+  후손 권한이 아니다. `repro`도 같은 경계를 적용한다.
 - 허용 경로도 runner SHA-256과 clean `cpt_temporal_folded_susy/` provenance가 일치해야 한다.
   traversal/absolute path, dirty·untracked core 파일, 허용 이름에 다른 bytes 덮어쓰기는 실행하지
   않는다.
@@ -45,7 +50,8 @@
   2026-08-25 및 2026-08-26 지시는 그 예정 대기만 각 exact Gate-1 계산에 한해 면제했으며,
   일반 재개나 새 numbered Phase 권한이 아니다. 상세 범위는
   `docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md`와
-  `docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`를 따른다.
+  `docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`,
+  `docs/decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`를 따른다.
 - 이는 과학적 Gate 1 KILL이 아니다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
   `PROHIBITED`, scientific route는 `OPEN`이다.
 - Phase 44의 529,370,671-byte 결과는 2026-08-24 사용자 승인 아래 exact-path Git LFS로

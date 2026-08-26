@@ -1,0 +1,157 @@
+{
+  "schema_version": "ice.gate1.scalar-zero-lapse-extension.input.v1",
+  "authorization": {
+    "id": "GATE1_ZERO_LAPSE_20260826_01",
+    "authorized_by": "USER",
+    "approved_on": "2026-08-26",
+    "user_instruction": "TOE 가 될때까지 작업 계속 쭉쭉 진행해줘",
+    "scope": "DIRECT_GATE1_M2_SCALAR_ZERO_LAPSE_EXTENSION",
+    "does_not_reopen_killed_route": true,
+    "numbered_phase": null,
+    "automatic_next": null
+  },
+  "question": "For the already declared fixed-a, m=2 ordered scalar control, does the full q-paired holomorphic amplitude have a canonical distributional boundary through N=0, and is its scaling-degree-preserving extension free of point-supported ambiguity?",
+  "kind": "EXACT_BOUNDED_HOLOMORPHIC_BOUNDARY_CONTROL",
+  "epistemic_label": "FOLLOW_UP_WITHIN_DECLARED_TEST_CYCLE_NOT_PHYSICAL_ORIGINAL",
+  "upstream_result": {
+    "path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_RESULT.json",
+    "sha256": "ad7c7f9ccf79047d0994eea3667b07c1fbb9795e7187c9730c5c6d819956f243",
+    "payload_sha256_without_self": "a3e9f17e7a5d0838cd295427bd161aabb2260b9d15f32b3364b1794ad997d04b",
+    "inherited_fact": "The declared scalar source link is KEEP with orientation +1 on lapse tests supported away from N=0.",
+    "open_fact": "The full q-paired boundary on tests crossing N=0 was not established."
+  },
+  "source_and_convention_scope": {
+    "repository_sources": [
+      "Phase 27 fixes T=i*N and the below-origin boundary side; the consumed Gate-1 scalar source-link control separately declares z=N-i*epsilon and T=i*z=epsilon+i*N.",
+      "Phase 29 concerns a different endpoint vector Delta q=(Delta a,Delta phi); its delta_flat^(2) kernel limit is not this interior-scalar lapse distribution.",
+      "Phase 30 concerns the full signature (-,+) configuration determinant line; it is not the orientation of this scalar momentum block.",
+      "The consumed Gate-1 scalar source-link result fixes the ordered scalar measure, full Starobinsky action and nonzero-arm equality used here."
+    ],
+    "analytic_sources": [
+      {
+        "source": "Chakrabarti-Shafikov 2017, arXiv:1505.01230, Proposition 2.2, Theorem 1.1, Theorem 2.4 and Proposition 2.7",
+        "role": "polynomial-growth topology, distributional boundary current, canonical ambient extension and continuous boundary map, applied only after localization to the smooth finite-R boundary segment"
+      },
+      {
+        "source": "Brunetti-Fredenhagen 2000, arXiv:math-ph/9903028, Theorem 5.2",
+        "role": "uniqueness of an extension preserving scaling degree omega<d and exclusion of point-supported ambiguity at that scaling degree"
+      }
+    ],
+    "not_imported_from_sources": [
+      "the fixed-a m=2 scalar test cycle",
+      "the Starobinsky amplitude bound",
+      "a physical original joint cycle",
+      "a BFV or determinant-line orientation",
+      "a physics or TOE claim"
+    ]
+  },
+  "model": {
+    "m": 2,
+    "h": "1/2",
+    "a": "positive real; inherited benchmark 3.5668031935672753 is not sampled by this exact run",
+    "hbar": "positive real",
+    "phi": "fixed real equal endpoint value; inherited benchmark 1.0185809464006637 is not sampled by this exact run",
+    "kappa": "sqrt(2/3)",
+    "potential": "V(varphi)=3/4*(1-exp(-kappa*varphi))^2",
+    "T": "epsilon+i*N with epsilon>0 and N real",
+    "c": "4*pi^2*a^3/hbar",
+    "u_of_q": "(2*pi^2/hbar)*[-3*a+a^3*V(phi+q/2)]",
+    "amplitude": "A(T)=(2*pi*a^3/(hbar*T))*integral_R exp[-c*q^2/T-T*u(q)] dq",
+    "lapse_test_space": "C_c^infinity((-R,R)) with fixed R=6/5"
+  },
+  "exact_strategy": {
+    "global_square": "With A_phi=exp(-kappa*phi), u(q)=-6*pi^2*a/hbar+(3*pi^2*a^3/(2*hbar))*(1-A_phi*exp(-kappa*q/2))^2, hence u(q)>=-6*pi^2*a/hbar on all real q.",
+    "full_tail_bound": "The full real-q integral, including the noncompact negative Starobinsky tail, obeys |A(epsilon+i*N)|<=sqrt(pi*a^3/hbar)*exp(6*pi^2*a*epsilon/hbar)*epsilon^(-1/2).",
+    "boundary_existence": "Holomorphy for Re(T)>0 plus the uniform polynomial boundary bound gives a canonical distributional boundary on (-R,R).",
+    "scaling_limit": "For F_r(w)=sqrt(r)*A(r*w), the same global bound is uniform in localized A^(-1). Dominated convergence on positive real w gives sqrt(pi*a^3/hbar)*w^(-1/2); Montel uniqueness plus the compact A^(-1) to A^(-2) inclusion upgrades compact-open convergence to A^(-2), and continuity of the canonical boundary map gives the boundary quasiasymptotic.",
+    "extension_uniqueness": "The boundary has scaling degree 1/2<1. Brunetti-Fredenhagen Theorem 5.2 makes the scaling-degree-preserving extension unique; delta^(k) has scaling degree 1+k and cannot be added while preserving 1/2.",
+    "negative_control": "Do not distribute the separate J_p boundary (delta plus PV) through the q integral. The finite-epsilon full product is paired first because the q integral is not a smooth multiplier at T=0."
+  },
+  "fixed_limit_order": [
+    "At fixed epsilon>0, integrate the full real q line with the inherited full Starobinsky potential and ordered momentum prefactor already established upstream.",
+    "Use the global square lower bound before taking any lapse boundary or small-T limit; do not replace the negative q tail by a pure Gaussian.",
+    "Take the canonical epsilon to 0+ boundary in D'((-R,R)) at fixed R=6/5.",
+    "For the local scaling audit, scale T=r*w and q=sqrt(r)*x, establish the interior normal-family limit, then take its canonical boundary value.",
+    "Apply extension uniqueness only with the qualifier that scaling degree 1/2 is preserved.",
+    "Do not take R to infinity, vary a, add BFV variables, take m to infinity, launch roots/ODEs, or authorize an automatic descendant."
+  ],
+  "theorem_guards": [
+    {
+      "id": "G1.zero.guard.holomorphic_full_q_amplitude",
+      "claim": "Dominated differentiation on compact subsets of Re(T)>0 makes the full real-q amplitude holomorphic."
+    },
+    {
+      "id": "G1.zero.guard.canonical_distributional_boundary",
+      "claim": "The localized polynomial-growth holomorphic amplitude has a canonical distributional boundary on (-R,R)."
+    },
+    {
+      "id": "G1.zero.guard.boundary_quasiasymptotic",
+      "claim": "The scaled family is uniformly bounded in localized A^(-1); Montel convergence and the compact A^(-1) to A^(-2) inclusion give A^(-2) convergence, which the continuous canonical boundary map transfers to a nonzero boundary limit of scaling degree exactly 1/2."
+    },
+    {
+      "id": "G1.zero.guard.unique_scaling_degree_extension",
+      "claim": "In one dimension, scaling degree 1/2<1 gives a unique extension preserving that degree, while every delta derivative has degree at least 1."
+    }
+  ],
+  "decision_table": [
+    {
+      "condition": "the full-tail bound, canonical boundary, nonzero leading quasiasymptotic and scaling-degree-preserving uniqueness all hold",
+      "verdict": "UNIQUE_SCALING_DEGREE_PRESERVING_EXTENSION",
+      "programme_impact": "NARROW",
+      "meaning": "The declared scalar zero-lapse distribution exists canonically and admits no point-supported freedom at scaling degree 1/2; the physical full joint cycle remains open."
+    },
+    {
+      "condition": "a canonical boundary exists but its fixed regulator boundary contains a point-supported component or has scaling degree at least 1",
+      "verdict": "CANONICAL_EXTENSION_WITH_POINT_SUPPORT",
+      "programme_impact": "BRANCH",
+      "meaning": "Preserve the regulator-defined scalar boundary but record its point-supported term and extension freedom."
+    },
+    {
+      "condition": "the boundary depends on side, test space or the frozen limit order",
+      "verdict": "SIDE_OR_LIMIT_ORDER_DEPENDENT_BRANCH",
+      "programme_impact": "BRANCH",
+      "meaning": "Do not identify a single zero-lapse scalar extension."
+    },
+    {
+      "condition": "the global bound or distributional boundary proof fails",
+      "verdict": "NO_DISTRIBUTIONAL_EXTENSION",
+      "programme_impact": "KILL",
+      "meaning": "Kill only the zero-lapse completion of this declared scalar link."
+    },
+    {
+      "condition": "the exact or theorem guards do not decide the question",
+      "verdict": "INCONCLUSIVE",
+      "programme_impact": "OPEN",
+      "meaning": "Leave the scalar zero-lapse distribution open without launching a descendant."
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 30,
+    "artifact_bytes": 250000,
+    "stdout_bytes": 65536,
+    "stderr_bytes": 65536,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "evaluator_reconciliation_calls": 0,
+    "numerical_samples": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "physical_original_cycle": null,
+    "full_joint_orientation": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "excluded": [
+    "re-execution or reproduction of either consumed Gate-1 runner",
+    "Phase 51-56 reconciliation, Phase 57, full replay, retry or renamed descendants",
+    "varying a, p_a, conformal/gravitational blocks, BFV ghosts or determinant-line orientation",
+    "R to infinity, m to infinity, continuum, cutoff-removal or physical measure claims",
+    "lambda=1 selection, physical original cycle, global intersection, physics claim or TOE"
+  ]
+}
