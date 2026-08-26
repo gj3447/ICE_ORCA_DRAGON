@@ -118,7 +118,8 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json` · `gate1_straight_lift_end_admissibility.py` · `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_RESULT.json` · `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY.md` | 2026-08-25 번호 없는 bounded Gate-1 계산 — Phase-39 straight completion과 declared constant-straight-line slice만 `KILL`; window는 소진됐고 Gate 1은 OPEN |
 | `GATE1_AFFINE_PHASE_BAND_RELATIVE_CLASS.md` · `GATE1_AFFINE_PHASE_BAND_ANALYTIC_EVIDENCE.json` | 소진 결과 뒤의 비실행 exact 분석 — \(0<\lambda<2\) affine phase-band가 양 끝을 살릴 수 있음을 분류하지만 source-derived joint cycle이나 대표 선택은 하지 않음 |
 | `GATE1_SCALAR_SOURCE_LINK_INPUTS.json` · `gate1_scalar_source_link.py` · `GATE1_SCALAR_SOURCE_LINK_RESULT.json` · `GATE1_SCALAR_SOURCE_LINK.md` | 2026-08-26 번호 없는 일회성 source-link discriminator — 16/16 exact와 별도 analytic guard 3개가 새 fixed-\(a\), \(m=2\) scalar \((q,p)\) test control과 affine family의 비영 lapse-arm link/orientation \(+1\)을 지지; zero-including full \(q\)-paired distribution은 OPEN, physical original/full joint/BFV/TOE 출력은 `null`, window는 소진 |
-| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–56의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
+| `GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_INPUTS.json` · `gate1_bosonic_canonical_source_pushforward.py` · `GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_RESULT.json` · `GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md` | 2026-08-26 generic bounded runtime의 번호 없는 finite \(m=2\) bosonic control — 17/17 exact, theorem guard 2개, 70-digit numerical 4/4 PASS. 한 공통 \(N\pm i0\)는 unchanged real \(p_a,p_\phi\) 축을 함께 절대수렴시키지 못하지만 declared centered complex rays는 fiberwise Gaussian pushforward를 재현한다. frozen-\(A\) flat tangent의 negative-arm ratio는 \(-1\); nonlinear configuration/source deformation/gauge·FP·BFV/zero lapse/original cycle은 OPEN |
+| `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–56과 번호 없는 Gate-1 계산의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
@@ -128,7 +129,9 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 > **Ragnarok containment (2026-08-23):** Phase 51→56의 saved-backend/reconstructed-launch
 > reconciliation 경로는 Phase 56 종결 진단과 함께 `KILL`한다. Phase 56의 유일한 terminal-closeout
 > 예외는 소진됐으며 정확히 동결된 Phase 11–50 역사 실행체 외의 Phase 51–55 재실행, Phase 56 재실행·변종,
-> renamed core work, Phase 57+, full replay와 같은 채무의 자동 후속 Phase는 금지된다. Gate 1은
+> rename/retry한 소비 runner, Phase 57+, full replay와 같은 채무의 자동 후속 Phase는 금지된다.
+> 반면 clean committed 번호 없는 새 core 계산은 `./ice run`의 공통 시간·출력·artifact 상한 아래
+> 실행할 수 있으며 새 one-shot receipt를 만들지 않는다. Gate 1은
 > `OPEN_PARTIAL_PROGRESS`, global promotion은 `PROHIBITED`이고 scientific route 자체는 `OPEN`이다.
 > `../docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`와 `./ice status`가 이 경계를 정한다.
 
@@ -527,13 +530,16 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 ## 종결 계산과 bounded direct Gate-1 work
 
 동결된 **Phase 56 lambda-half launch provenance / residual-conditioning audit 한 번**과
-2026-08-25 straight-lift window는 완료·소진됐다. 2026-08-26에는 새로 선언한 fixed-\(a\),
+과거 세 Gate-1 one-shot window는 완료·소진됐다. 2026-08-26에는 새로 선언한 fixed-\(a\),
 \(m=2\) scalar \((q,p)\) control과 affine scalar class의 source link를 묻는 번호 없는 exact runner
 한 번만 별도 승인됐고 `VALID_RUN` 뒤 소진됐다. 비영 lapse arm link는 scalar orientation \(+1\)로
 `KEEP`, zero-including full \(q\)-paired distribution은 `OPEN`이며 물리 원본 joint cycle을 복원하지
-않았다. `next_phase = null`은 유지되고 Phase 57이나 full
-replay를 열지 않는다. 2026-08-30 이후에도 회로 차단기 결정의 모든 조건과 사용자의 명시적 승인이
-없으면 아래 장기 항목을 실행 queue로 해석하지 않는다.
+않았다. 이후 generic bounded runtime에서 distinct finite \(m=2\) bosonic canonical-source 계산이
+완료됐다. 한 공통 lateral sign은 unchanged real \(p_a,p_\phi\) 축을 함께 절대수렴시키지 못했고,
+declared complex momentum rays는 fiberwise pushforward를 재현했다. frozen-\(A\) flat tangent의
+negative-arm ratio는 \(-1\)이지만 simultaneous nonlinear configuration cycle은 미구성이다.
+`next_phase = null`은 유지되고 Phase 57이나 full replay를 열지 않는다. 2026-08-30은 distinct
+번호 없는 계산의 대기 조건도, killed numbered route의 자동 재개일도 아니다.
 
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
@@ -544,10 +550,12 @@ replay를 열지 않는다. 2026-08-30 이후에도 회로 차단기 결정의 �
   saved-scalar difference gates를 통과했다. 따라서 bounded 분류는
   `P56_FRESH_PHASE53_ALGORITHM_LAUNCH_RECOVERS_SAVED_LAMBDA_HALF_TARGET`이다. 이는 exact historical
   Phase-53 launch, full replay 또는 causal dominance 주장이 아니다. Phase-56 **full replay**와
-  straight-arm/cap-reintersection 검색은 열리지 않는다. 별도 direct-Gate-1
-  route가 모든 재개 조건과 사용자 승인을 충족하는 경우에만 모든 saddle/upward component, complex
-  BVP sheet, Stokes data와 relative good end를 열거하고, separately specified physical original cycle과 lapse contour를 정한 뒤
-  complete intersection sum과 regulator-removal을 시도할 수 있다. Phase 50의 sampled stabilizer
+  straight-arm/cap-reintersection 검색은 그 killed route의 자동 후속으로 열리지 않는다. 별개의 clean
+  committed 번호 없는 계산은 generic caps 안에서 하나의 명시적 source/gauge/end discriminator를
+  다룰 수 있다. 모든 saddle/upward component, complex BVP sheet, Stokes data와 relative good end를
+  열거하고 separately specified physical original cycle과 lapse contour를 정한 뒤 complete
+  intersection sum과 regulator-removal을 시도하는 일은 자동 offspring가 아니라 독립 검증 단위로
+  분해해야 한다. Phase 50의 sampled stabilizer
   bridge는 exact action nesting, common physical determinant line, cutoff/continuum theorem이 아니며,
   Phase 49의 formal endpoint-error transport와 portable-flow-adapter debt도 별도 numerical follow-up으로
   남는다. 동시에 Phase 31 hybrid를 constraint-reduced inhomogeneous
@@ -555,10 +563,11 @@ replay를 열지 않는다. 2026-08-30 이후에도 회로 차단기 결정의 �
   determinant-line orientation과 gauge-fixing independence를 검사한다.
   2026-08-26 scalar source-link discriminator는 이 full PL/BFV gate의 충족이나 면제가 아니라,
   그보다 앞선 reduced fixed-\(a\), finite-regulator source-link obstruction만 분리하는 계산이다.
-- **Hard-CFU parallel track (과학적으로 conditional, 운영상 paused):** regular hard quotient와 CFU
-  coefficients \(A,B\)의 탐색 계산은 논리적으로 Gate 1과 병렬일 수 있지만 현재 회로 차단기 아래서는
-  실행하지 않는다. 재개 조건과 사용자 승인이 충족된 뒤에도 그것을 original joint-cycle coefficient와 결합해 physical uniform
-  kernel로 승격하는 단계만 Gate 1의 cycle vector와 signed intersections에 의존한다.
+- **Hard-CFU parallel track (과학적으로 conditional):** regular hard quotient와 CFU coefficients
+  \(A,B\)의 탐색 계산은 논리적으로 Gate 1과 병렬이며, distinct clean committed 번호 없는 bounded
+  작업 단위로 실행할 수 있다. 그 결과가 다음 계산을 자동 승인하지 않으며, original joint-cycle
+  coefficient와 결합해 physical uniform kernel로 승격하는 단계는 Gate 1의 cycle vector와 signed
+  intersections에 의존한다.
 - **Three-form seam-kernel gate:** compact three-form SUGRA boundary state 또는 charged-membrane
   saddle에서 실제 \(C_{n\ell}\), charge/tension, boundary ensemble과 determinant prefactor를
   유도한다. 그 뒤에만 regulated determinant와 joint \((n,\phi)\) measure의 내부 peak를 검사한다.

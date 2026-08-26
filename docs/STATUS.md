@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Discovered catalog | 91 committed entries; `./ice list --json` is authoritative and execution remains subject to the circuit breaker |
+| Discovered catalog | 92 committed entries; `./ice list --json` is authoritative and execution remains subject to the circuit breaker |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -78,6 +78,24 @@ the declared \(0<\lambda\le1\) \(\Gamma_\lambda\) representatives on tests suppo
 `NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN`: the nonzero-arm reduced scalar link is `KEEP`, but the zero-including
 full \(q\)-paired distribution, phase-lock selection and physical joint cycle remain open. See
 [`GATE1_SCALAR_SOURCE_LINK.md`](../cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK.md).
+
+### Gate-1 bosonic canonical-source pushforward result
+
+The generic bounded runtime completed one distinct non-numbered finite \(m=2\) control in 10.581 seconds.
+All 17 exact checks, two scoped theorem guards, and four 70-digit quadrature-product sanity checks pass.
+For \(z=N-i\epsilon\), the unchanged real \(p_a\) block grows while \(p_\phi\) damps; for
+\(z=N+i\epsilon\), the signs reverse. Thus neither one-common-lateral choice makes all four unchanged
+real momentum axes absolutely convergent before lapse integration.
+
+Separately declared centered complex momentum rays reproduce the exact fiberwise Gaussian pushforward
+\(24\pi^2A^4/(\hbar^2z^2)\). Their momentum half-turn ledger is \(+1\); a standard-Fresnel,
+frozen-\(A\) flat tangent comparison gives \(C/|N|\) on the real arms versus \(C/z\) on the transported
+sheet and hence negative-arm ratio \(-1\). This does not establish simultaneous nonlinear configuration
+admissibility, a deformation from the real source, \(p_a\) gauge fixing, FP/BFV orientation, zero lapse,
+or a physical original cycle. The scoped verdict is
+`CONFORMAL_PRESCRIPTION_AND_DETLINE_GLUE_REQUIRED`; Gate 1 remains `OPEN_PARTIAL_PROGRESS` and every
+global/physics/TOE output remains null. See
+[`GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md`](../cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md).
 
 This containment does not erase real scoped progress or convert open science into a no-go. Gate 1 remains
 `OPEN_PARTIAL_PROGRESS`, required global/physics outputs remain null, and global promotion remains
@@ -457,11 +475,12 @@ and
 ## Research ontology memory
 
 The repository-local collection now catalogs three independent graphs—hypercomplex, legacy
-predictions/narrative, and CPT temporal-folded SUSY—with **899 nodes and 2566 directed relations**. It
-preserves 227 scoped claims (133 `SUPPORTED`, 89 `CONTRADICTED`, 5 `INCONCLUSIVE`), 122 evidence nodes,
-and 68 open problems. All 211 hash-bearing records validate (202 artifacts and 9 policies). The 33
+predictions/narrative, and CPT temporal-folded SUSY—with **915 nodes and 2614 directed relations**. It
+preserves 230 scoped claims (135 `SUPPORTED`, 90 `CONTRADICTED`, 5 `INCONCLUSIVE`), 124 evidence nodes,
+and 68 open problems. All 216 hash-bearing records validate (206 artifacts and 10 policies). The 35
 warnings are explicit unresolved external bridges, not validation failures. The CPT graph retains the
-Phase 16–56 snapshots, the consumed bounded Gate-1 results, and the post-Phase-56 hard stop; neither the collection nor its navigation paths
+Phase 16–56 snapshots, the historical consumed Gate-1 results, the killed numbered reconciliation route,
+and generic bounded unnumbered science; neither the collection nor its navigation paths
 authorize Phase 57, close Gate 1, or promote a physics claim.
 
 - [`../ontology/README.md`](../ontology/README.md) is the human collection map.

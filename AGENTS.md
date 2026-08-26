@@ -21,39 +21,22 @@
 `docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`가 현재 core 연구의 실행 경계를
 정한다. `./ice status`가 기계 판독 가능한 정본이다.
 
-- Phase 51→56의 saved-backend/reconstructed-launch reconciliation 경로는 **KILL**이다.
-- Phase 56 terminal-closeout 예외는 동결된 질문의 실행·독립 재현을 마쳐 소진됐다. 그 결과와
-  무관하게 Phase 57 이상, full replay, 같은 evaluator/dtype/solver/residual/provenance 채무의
-  자동 offspring를 만들거나 실행하지 않는다. 직접 Python 실행으로 제어면을 우회하지 않는다.
-- 제어면은 동결된 Phase 11–50 역사 실행체만 허용한다. 아래 세 bounded window는 모두 소진됐다.
-  2026-08-25 사용자가 즉시
-  승인한 `GATE1_DIRECT_20260825_01` exact hash-pinned runner는 Phase-39 straight field-ray end
-  admissibility 계산을 정상 완료해 **소진됐으며 재실행하지 않는다**. 결과는 straight completion과
-  declared slice의 constant-straight-line model class만 `KILL`, Gate 1은
-  `OPEN_PARTIAL_PROGRESS`다. 완료된 Phase 56을 포함한 Phase 51+, 낮은 번호 재사용과 그 밖의
-  Phase 토큰 없는 새 core 실행체도 모두 차단한다. 단, 2026-08-26 사용자가 별도 승인한
-  `GATE1_SOURCE_LINK_20260826_01`은 새로 선언한 fixed-\(a\), \(m=2\) scalar \((q,p)\) control의
-  source link만 검사하는 번호 없는 exact-hash runner 한 번이었다. `VALID_RUN`으로 끝나
-  **소진됐으며 재실행하지 않는다**. 비영 lapse arm의 reduced scalar link와 orientation \(+1\)은
-  `KEEP`, zero-including full \(q\)-paired distribution은 `OPEN`이고 Gate 1은 계속
-  `OPEN_PARTIAL_PROGRESS`다. 직전 결과가 남긴 바로 그 장애물에 한해 사용자의 계속 연구 지시가
-  `GATE1_ZERO_LAPSE_20260826_01`을 승인했다. 이는 같은 fixed-\(a\), \(m=2\) control의 full
-  \(q\)-paired canonical boundary와 scaling-degree-preserving contact ambiguity만 검사하는 번호 없는
-  exact-hash runner **한 번**이었다. 실제 invocation은 두 번째 exact guard의 SymPy structural
-  equality false negative에서 exit `1`로 끝나 `INVALID_RUN`이며 result를 쓰지 못했다. square identity의
-  수학적 반증은 아니지만 canonical boundary나 extension verdict의 증거도 아니다. exclusive receipt가
-  window를 **소진**했으므로 수정 runner, retry, `repro` 또는 자동 후손을 실행하지 않는다. zero-lapse
-  distribution은 `OPEN`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다. 이는 physical original joint cycle 복원,
-  Phase 51–56 route 재개, Phase 57/full replay 또는 TOE 권한이 아니다.
-- 허용 경로도 runner SHA-256과 clean `cpt_temporal_folded_susy/` provenance가 일치해야 한다.
-  traversal/absolute path, dirty·untracked core 파일, 허용 이름에 다른 bytes 덮어쓰기는 실행하지
-  않는다.
-- 2026-08-30은 일반 새 core Phase의 재검토 자격일일 뿐 자동 재개일이 아니다. 사용자의
-  2026-08-25 및 2026-08-26 지시는 그 예정 대기만 각 exact Gate-1 계산에 한해 면제했으며,
-  일반 재개, 실패한 zero-lapse runner의 재시도나 새 numbered Phase 권한이 아니다. 상세 범위는
-  `docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md`와
-  `docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`,
-  `docs/decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`를 따른다.
+- Phase 51→56의 saved-backend/reconstructed-launch reconciliation 경로는 **KILL**이고 Phase 56
+  terminal closeout은 소진됐다. Phase 57 이상, full replay, 번호를 낮춰 재사용한 후속 Phase와 같은
+  evaluator/dtype/solver/residual/provenance 채무의 자동 offspring는 실행하지 않는다. 직접 Python
+  실행으로 제어면을 우회하지 않는다.
+- 정확히 동결된 Phase 11–50 runner는 hash-pinned 역사 검산 allowlist다. Phase 51–56과 과거 세
+  Gate-1 one-shot runner는 결과 provenance로 보존하되 재실행·rename·retry하지 않는다.
+- **새 연구는 번호 없는 core 계산으로 열려 있다.** clean committed runner만 `./ice run`을 통해
+  실행하며 공통 상한은 120초, stdout/stderr 각 262,144 bytes, 변경 artifact 12개/1,000,000
+  bytes다. per-window authorization이나 launch receipt를 새 작업의 재귀 계약으로 만들지 않는다.
+  Phase 토큰을 붙인 새 descendant, traversal/absolute path, dirty·untracked core tree는 계속
+  차단한다.
+- generic bounded 계산 하나의 결과는 다음 계산을 자동 생성하거나 승인하지 않는다. 새 질문은 이전
+  evidence가 실질적으로 남긴 과학적 장애물을 직접 겨냥하고, 입력·소스·가정·상한·null 출력을
+  고정한 독립 작업 단위여야 한다.
+- 2026-08-30은 더 이상 서로 다른 번호 없는 계산의 대기 조건이 아니며, numbered route를 자동으로
+  다시 여는 날짜도 아니다.
 - 이는 과학적 Gate 1 KILL이 아니다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
   `PROHIBITED`, scientific route는 `OPEN`이다.
 - Phase 44의 529,370,671-byte 결과는 2026-08-24 사용자 승인 아래 exact-path Git LFS로

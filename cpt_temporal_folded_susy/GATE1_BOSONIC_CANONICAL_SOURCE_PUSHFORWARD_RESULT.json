@@ -1,0 +1,478 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1M2BosonicCanonicalSourcePushforward",
+  "classification": "GATE1_M2_UNCHANGED_REAL_PA_PPHI_SINGLE_I0_NOT_ABSOLUTELY_CONVERGENT_COMPLEX_GAUSSIAN_PUSHFORWARD_MATCHES",
+  "decision_trace": {
+    "matched_predeclared_condition": "no common all-real lateral regulator exists, both centered ray blocks reproduce the exact configuration pushforward, momentum cap glue is +1, configuration cap glue is -1, and the scale-factor relative ends remain unproved",
+    "meaning": "reject only the claimed absolutely convergent momentum-first pushforward on unchanged real p_a,p_phi axes using one common lateral sign; retain the declared finite Gaussian pushforward only as a branch requiring a conformal prescription and independent determinant-line/BFV completion",
+    "primary_source_boundary": "Banihashemi-Jacobson's momentum-first convergence argument assumes a gauge fixing that eliminates the negative full-theory trace-momentum Gaussian, illustrated by p=q_ij*p^ij=0; under that assumption N-i*epsilon damps the remaining positive momentum block. This finite m=2 control instead retains a negative-kinetic minisuperspace p_a block, so the source does not authorize an unchanged real-p_a momentum-first contour",
+    "source_control_status": "DECLARED_COMPLEX_FINITE_GAUSSIAN_BRANCH_NOT_PHYSICAL_ORIGINAL"
+  },
+  "environment": {
+    "mpmath": "1.3.0",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "canonical_action": "q*(p_phi0 - p_phi1) + x*(p_a0 - p_a1) - 2*pi**2*z*(3*A**3*(1 - exp(-sqrt(6)*Phi/3))**2/4 - 3*A) + z*(p_a0**2 + p_a1**2)/(48*pi**2*A) - z*(p_phi0**2 + p_phi1**2)/(8*pi**2*A**3)",
+    "cap_orientation": {
+      "lower_configuration": "-1",
+      "lower_momentum": "1",
+      "lower_total": "-1",
+      "upper_configuration": "-1",
+      "upper_momentum": "1",
+      "upper_total": "-1"
+    },
+    "computed_facts": {
+      "common_single_i0_real_momentum_regulator": "IMPOSSIBLE_FOR_SIGNATURE_MINUS_PLUS",
+      "configuration_cap_glue": "-1",
+      "fixed_nonzero_z_centered_steepest_ray_pushforward": "EXACT_MATCH",
+      "full_flat_kernel_glue": "-1",
+      "momentum_cap_glue": "+1",
+      "one_ray_orientation_mutation": "SIGN_FLIP_RECOVERED",
+      "scalar_source_link_ablation": "RECOVERED"
+    },
+    "declared_rays": {
+      "gravity": "exp(I*(-theta/2 + pi/4))",
+      "gravity_exponent": "-rho*y**2/(48*pi**2*A*hbar)",
+      "scalar": "exp(I*(-theta/2 - pi/4))",
+      "scalar_exponent": "-rho*y**2/(8*pi**2*A**3*hbar)"
+    },
+    "euclidean_configuration_action": "4*pi**2*A**3*q**2/T - 24*pi**2*A*x**2/T + 2*pi**2*T*(3*A**3*(1 - exp(-sqrt(6)*Phi/3))**2/4 - 3*A)",
+    "flat_kernel": {
+      "C": "sqrt(6)*pi*A**2/hbar",
+      "holomorphic_sheet": "sqrt(6)*pi*A**2*exp(-I*theta)/(hbar*rho)",
+      "negative_arm_ratio": "-1",
+      "negative_real_configuration_phases": [
+        "exp(I*pi/4)",
+        "exp(-I*pi/4)"
+      ],
+      "negative_real_momentum_phases": [
+        "exp(-I*pi/4)",
+        "exp(I*pi/4)",
+        "exp(-I*pi/4)",
+        "exp(I*pi/4)"
+      ],
+      "positive_real_configuration_phases": [
+        "exp(-I*pi/4)",
+        "exp(I*pi/4)"
+      ],
+      "positive_real_momentum_phases": [
+        "exp(I*pi/4)",
+        "exp(-I*pi/4)",
+        "exp(I*pi/4)",
+        "exp(-I*pi/4)"
+      ],
+      "real_kernel": "C/Abs(N)"
+    },
+    "momentum_prefactors": {
+      "gravity_pair": "12*I*pi*A*exp(-I*theta)/(hbar*rho)",
+      "orientation_convention": "J_g and J_s are scalar Gaussian-factor products; the total uses the pinned interleaved order without regrouping the wedge measure",
+      "scalar_pair": "-2*I*pi*A**3*exp(-I*theta)/(hbar*rho)",
+      "total": "24*pi**2*A**4*exp(-2*I*theta)/(hbar**2*rho**2)",
+      "total_simplified": "24*pi^2*A^4/(hbar^2*z^2)"
+    },
+    "on_shell_action": "4*pi**2*A**3*q**2/z - 24*pi**2*A*x**2/z - 2*pi**2*z*(3*A**3*(1 - exp(-sqrt(6)*Phi/3))**2/4 - 3*A)",
+    "real_axis_quadratic_exponent_coefficients": {
+      "lower_N_minus_i_epsilon": {
+        "gravity": "epsilon/(48*pi**2*A*hbar)",
+        "scalar": "-epsilon/(8*pi**2*A**3*hbar)"
+      },
+      "upper_N_plus_i_epsilon": {
+        "gravity": "-epsilon/(48*pi**2*A*hbar)",
+        "scalar": "epsilon/(8*pi**2*A**3*hbar)"
+      }
+    },
+    "stationary_momenta": {
+      "p_a0": "-24*pi**2*A*x/z",
+      "p_a1": "24*pi**2*A*x/z",
+      "p_phi0": "4*pi**2*A**3*q/z",
+      "p_phi1": "-4*pi**2*A**3*q/z"
+    },
+    "symbols": {
+      "T": "I*z",
+      "U": "2*pi**2*(3*A**3*(1 - exp(-sqrt(6)*Phi/3))**2/4 - 3*A)",
+      "mu_g": "12*pi**2*A",
+      "mu_s": "2*pi**2*A**3"
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.bosonic.inherited_m2_canonical_action",
+      "passed": true,
+      "statement": "two h=1/2 Lorentzian midpoint elements reduce exactly to the frozen m=2 canonical action"
+    },
+    {
+      "id": "G1.bosonic.stationary_momenta",
+      "passed": true,
+      "statement": "all four algebraic momentum equations have the declared nonzero-z saddle"
+    },
+    {
+      "id": "G1.bosonic.square_completion_and_pushforward",
+      "passed": true,
+      "statement": "the exact four-momentum square completion gives I*= -2*mu_g*x^2/z+2*mu_s*q^2/z-z*U"
+    },
+    {
+      "id": "G1.bosonic.wick_configuration_identity",
+      "passed": true,
+      "statement": "T=i*z gives i*I*=-I_E with the gravitational and scalar signs retained"
+    },
+    {
+      "id": "G1.bosonic.lower_lateral_real_axis_signs",
+      "passed": true,
+      "statement": "for z=N-i*epsilon the real p_a Gaussian grows while the real p_phi Gaussian decays"
+    },
+    {
+      "id": "G1.bosonic.upper_lateral_real_axis_signs",
+      "passed": true,
+      "statement": "for z=N+i*epsilon the real p_a Gaussian decays while the real p_phi Gaussian grows"
+    },
+    {
+      "id": "G1.bosonic.no_common_all_real_lateral_regulator",
+      "passed": true,
+      "statement": "the signature (-,+) momentum blocks admit no one N-i0 or N+i0 sign that damps both real axes"
+    },
+    {
+      "id": "G1.bosonic.gravity_steepest_ray_decay",
+      "passed": true,
+      "statement": "the declared centered scale-factor momentum ray converts its exponent exactly to a negative real Gaussian"
+    },
+    {
+      "id": "G1.bosonic.scalar_steepest_ray_decay",
+      "passed": true,
+      "statement": "the declared centered scalar momentum ray converts its exponent exactly to a negative real Gaussian"
+    },
+    {
+      "id": "G1.bosonic.gravity_pair_prefactor",
+      "passed": true,
+      "statement": "the two ordered p_a rays give J_g=i*mu_g/(pi*hbar*z)"
+    },
+    {
+      "id": "G1.bosonic.scalar_pair_prefactor",
+      "passed": true,
+      "statement": "the two ordered p_phi rays give J_s=mu_s/(pi*i*hbar*z)"
+    },
+    {
+      "id": "G1.bosonic.total_momentum_prefactor",
+      "passed": true,
+      "statement": "the four-momentum pushforward is 24*pi^2*A^4/(hbar^2*z^2)"
+    },
+    {
+      "id": "G1.bosonic.scalar_source_link_ablation",
+      "passed": true,
+      "statement": "holding the scale factor fixed recovers the prior m=2 scalar prefactor 2*pi*A^3/(hbar*T)"
+    },
+    {
+      "id": "G1.bosonic.lower_cap_orientation",
+      "passed": true,
+      "statement": "on theta:0->-pi the four momentum Jacobians glue by +1 and the x,q rays by -1"
+    },
+    {
+      "id": "G1.bosonic.upper_cap_orientation",
+      "passed": true,
+      "statement": "on theta:0->+pi the four momentum Jacobians glue by +1 and the x,q rays by -1"
+    },
+    {
+      "id": "G1.bosonic.flat_kernel_detline_glue",
+      "passed": true,
+      "statement": "explicit real momentum/configuration Fresnel phases give C/|N|, the transported x,q ray Jacobians give C/z, and their negative-arm ratio is -1"
+    },
+    {
+      "id": "G1.bosonic.orientation_mutation_control",
+      "passed": true,
+      "statement": "reversing exactly one ordered momentum ray flips the Gaussian pushforward sign"
+    }
+  ],
+  "frozen_input_contract": {
+    "epistemic_scope": "REDUCED_BOSONIC_NONZERO_LAPSE_CONTROL_NOT_PHYSICAL_ORIGINAL_CYCLE",
+    "kind": "EXACT_FINITE_M2_CANONICAL_SOURCE_FALSIFIER_WITH_HIGH_PRECISION_GAUSSIAN_CHECK",
+    "not_computed": [
+      "deformation of the lapse-first all-real distribution to the declared momentum thimbles",
+      "alternative distributional all-real definitions, independently regulated momentum blocks or a gauge-fixed reduction",
+      "a_1=0, A=0, a_1 to infinity or mixed scale-field relative ends",
+      "nonlinear configuration-cycle admissibility with the Starobinsky potential",
+      "gauge fixing of p_a, Faddeev-Popov measure, BFV ghosts or absolute determinant orientation",
+      "zero-lapse full distribution, saddle/upward-cycle/Stokes census, cutoff removal or continuum limit",
+      "physical_original_cycle, global_n_sigma, physics claim or TOE claim"
+    ],
+    "question": "For the finite m=2 homogeneous bosonic canonical action, can one common N-i0 or N+i0 prescription make the unchanged real scale-factor and scalar momentum axes absolutely convergent before the lapse integration; if not, do the declared steepest Gaussian rays reproduce the configuration action and where does the negative-arm orientation glue enter?",
+    "source_and_target_cycles": {
+      "configuration_ray_at_z_rho_theta": [
+        "x=exp(i*(theta/2-pi/4))*X",
+        "q=exp(i*(theta/2+pi/4))*Q"
+      ],
+      "lapse_first_source": "N in R oriented -infinity to +infinity, x and q real, all four momenta real, interpreted distributionally before any momentum-first interchange",
+      "liouville_momentum_measure": "product_e[(dp_a,e wedge dp_phi,e)/(2*pi*hbar)^2]",
+      "momentum_first_ray_at_z_rho_theta": [
+        "p_a,e-p_a,e^star=exp(i*(pi/4-theta/2))*y_a,e",
+        "p_phi,e-p_phi,e^star=exp(i*(-pi/4-theta/2))*y_phi,e"
+      ],
+      "ordered_orientation": "dp_a0 wedge dp_phi0 wedge dp_a1 wedge dp_phi1 wedge dx wedge dq wedge dN",
+      "pair_prefactor_convention": "J_g and J_s denote scalar products of one-dimensional Gaussian factors. The authoritative total is evaluated in the pinned interleaved momentum order; no wedge reordering into a grouped gravity-then-scalar measure is performed.",
+      "ray_status": "DECLARED_FINITE_GAUSSIAN_THIMBLES_NOT_DERIVED_PHYSICAL_ORIGINAL"
+    }
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_INPUTS.json",
+    "sha256": "fc3f1061a053639665c87c0b9f6badddda49e6d63dc93d183c3aadfec89f9eaf"
+  },
+  "numbered_phase": null,
+  "numerical_calculation": {
+    "benchmark": {
+      "a_b": "3.566803193567275300000000000000000000000",
+      "hbar": "1.000000000000000000000000000000000000000",
+      "midpoint_A": "3.582428193567275300000000000000000000000",
+      "midpoint_Phi": "0.9951434464006637000000000000000000000000",
+      "mu_g": "424.2857887898181723109140911528160584133",
+      "mu_s": "907.5325768220520494170961501865663732385",
+      "phi_b": "1.018580946400663700000000000000000000000",
+      "q": "-0.04687500000000000000000000000000000000000",
+      "x": "0.03125000000000000000000000000000000000000"
+    },
+    "lateral_point_summaries": [
+      {
+        "point": 1,
+        "relative_error": "4.19578379815056734458718e-71",
+        "z": {
+          "imag": "-0.1500000000000000000000000000000000000000",
+          "real": "0.6000000000000000000000000000000000000000"
+        }
+      },
+      {
+        "point": 2,
+        "relative_error": "4.19578379815056734458718e-71",
+        "z": {
+          "imag": "-0.1500000000000000000000000000000000000000",
+          "real": "-0.6000000000000000000000000000000000000000"
+        }
+      },
+      {
+        "point": 3,
+        "relative_error": "3.90317197347979955063505e-71",
+        "z": {
+          "imag": "0.1500000000000000000000000000000000000000",
+          "real": "0.6000000000000000000000000000000000000000"
+        }
+      },
+      {
+        "point": 4,
+        "relative_error": "1.30105732449326651687835e-71",
+        "z": {
+          "imag": "0.1500000000000000000000000000000000000000",
+          "real": "-0.6000000000000000000000000000000000000000"
+        }
+      }
+    ],
+    "ode_calls": 0,
+    "precision_digits": 70,
+    "quadratures": 16,
+    "root_calls": 0
+  },
+  "numerical_checks": [
+    {
+      "expected": {
+        "imag": "47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "id": "G1.bosonic.quadrature.lateral_point_1",
+      "individual_integrals": [
+        {
+          "imag": "11.64758459615887363486863124317430578730",
+          "real": "9.094159244280346287119323084429935019822"
+        },
+        {
+          "imag": "-13.30039146703387303015497530984836329416",
+          "real": "17.03482758691959102317271967208930504340"
+        },
+        {
+          "imag": "11.64758459615887363486863124317430578730",
+          "real": "9.094159244280346287119323084429935019822"
+        },
+        {
+          "imag": "-13.30039146703387303015497530984836329416",
+          "real": "17.03482758691959102317271967208930504340"
+        }
+      ],
+      "observed": {
+        "imag": "47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "passed": true,
+      "relative_error": "4.19578379815056734458718e-71",
+      "relative_tolerance": "1.0000000e-45",
+      "statement": "as a normalization sanity check, four independently integrated original linear-plus-quadratic momentum factors reproduce the interleaved-order scalar product J_g*J_s on the declared centered rays; this is not a source-deformation test",
+      "theta": "-0.244978663126864154172082481211",
+      "z": {
+        "imag": "-0.1500000000000000000000000000000000000000",
+        "real": "0.6000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "expected": {
+        "imag": "-47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "id": "G1.bosonic.quadrature.lateral_point_2",
+      "individual_integrals": [
+        {
+          "imag": "11.64758459615887363486863124317430578730",
+          "real": "-9.094159244280346287119323084429935019822"
+        },
+        {
+          "imag": "13.30039146703387303015497530984836329416",
+          "real": "17.03482758691959102317271967208930504340"
+        },
+        {
+          "imag": "11.64758459615887363486863124317430578730",
+          "real": "-9.094159244280346287119323084429935019822"
+        },
+        {
+          "imag": "13.30039146703387303015497530984836329416",
+          "real": "17.03482758691959102317271967208930504340"
+        }
+      ],
+      "observed": {
+        "imag": "-47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "passed": true,
+      "relative_error": "4.19578379815056734458718e-71",
+      "relative_tolerance": "1.0000000e-45",
+      "statement": "as a normalization sanity check, four independently integrated original linear-plus-quadratic momentum factors reproduce the interleaved-order scalar product J_g*J_s on the declared centered rays; this is not a source-deformation test",
+      "theta": "-2.89661399046292908429056090207",
+      "z": {
+        "imag": "-0.1500000000000000000000000000000000000000",
+        "real": "-0.6000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "expected": {
+        "imag": "-47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "id": "G1.bosonic.quadrature.lateral_point_3",
+      "individual_integrals": [
+        {
+          "imag": "9.094159244280346287119323084429935019822",
+          "real": "11.64758459615887363486863124317430578730"
+        },
+        {
+          "imag": "-17.03482758691959102317271967208930504340",
+          "real": "13.30039146703387303015497530984836329416"
+        },
+        {
+          "imag": "9.094159244280346287119323084429935019822",
+          "real": "11.64758459615887363486863124317430578730"
+        },
+        {
+          "imag": "-17.03482758691959102317271967208930504340",
+          "real": "13.30039146703387303015497530984836329416"
+        }
+      ],
+      "observed": {
+        "imag": "-47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "passed": true,
+      "relative_error": "3.90317197347979955063505e-71",
+      "relative_tolerance": "1.0000000e-45",
+      "statement": "as a normalization sanity check, four independently integrated original linear-plus-quadratic momentum factors reproduce the interleaved-order scalar product J_g*J_s on the declared centered rays; this is not a source-deformation test",
+      "theta": "0.244978663126864154172082481211",
+      "z": {
+        "imag": "0.1500000000000000000000000000000000000000",
+        "real": "0.6000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "expected": {
+        "imag": "47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "id": "G1.bosonic.quadrature.lateral_point_4",
+      "individual_integrals": [
+        {
+          "imag": "-9.094159244280346287119323084429935019822",
+          "real": "11.64758459615887363486863124317430578730"
+        },
+        {
+          "imag": "-17.03482758691959102317271967208930504340",
+          "real": "-13.30039146703387303015497530984836329416"
+        },
+        {
+          "imag": "-9.094159244280346287119323084429935019822",
+          "real": "11.64758459615887363486863124317430578730"
+        },
+        {
+          "imag": "-17.03482758691959102317271967208930504340",
+          "real": "-13.30039146703387303015497530984836329416"
+        }
+      ],
+      "observed": {
+        "imag": "47998.82319410311855275459598717513270155",
+        "real": "89997.79348894334728641486747595337381540"
+      },
+      "passed": true,
+      "relative_error": "1.30105732449326651687835e-71",
+      "relative_tolerance": "1.0000000e-45",
+      "statement": "as a normalization sanity check, four independently integrated original linear-plus-quadratic momentum factors reproduce the interleaved-order scalar product J_g*J_s on the declared centered rays; this is not a source-deformation test",
+      "theta": "2.89661399046292908429056090207",
+      "z": {
+        "imag": "0.1500000000000000000000000000000000000000",
+        "real": "-0.6000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "programme_impact": "NARROW",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "complete_global_signed_intersection_vector": null,
+    "full_joint_orientation": null,
+    "global_n_sigma": null,
+    "physical_original_cycle": null,
+    "physics_claim": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "lateral_points": 4,
+    "ode_calls": 0,
+    "quadratures": 16,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "4c6be750b82009eb987a087d6e51f35bb520c9cf8052b9835aa396d6253d4ba4",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_bosonic_canonical_source_pushforward.py",
+    "sha256": "fe557b1d86522bf1966513f32edb7555b8ddad770095d3c2412ab4571bbd1533"
+  },
+  "schema_version": "ice.gate1.bosonic-canonical-source-pushforward.result.v1",
+  "scope_status": {
+    "declared_complex_centered_momentum_rays": "KEEP_AS_FINITE_GAUSSIAN_BRANCH",
+    "nonlinear_Starobinsky_configuration_cycle": "OPEN",
+    "p_a_gauge_fixing_FP_BFV_detline": "OPEN",
+    "physical_original_cycle": null,
+    "scale_factor_relative_ends": "OPEN",
+    "unchanged_real_pa_pphi_momentum_first_with_single_common_i0": "NOT_ABSOLUTELY_CONVERGENT"
+  },
+  "theorem_guards": [
+    {
+      "domain": "A>0, hbar>0, z=rho*exp(i*theta) with rho>0; each centered ray parameter runs from -infinity to +infinity",
+      "id": "G1.guard.centered_complex_gaussian",
+      "statement": "the ray exponents are strictly negative real quadratics and the four normalized integrals may be multiplied; this does not prove deformation from the all-real physical source",
+      "theorem": "one-dimensional entire Gaussian integral on an explicitly oriented steepest line",
+      "verified": true
+    },
+    {
+      "domain": "theta in [0,+pi] or [0,-pi], z nonzero, ordered measure dp_a0 wedge dp_phi0 wedge dp_a1 wedge dp_phi1 wedge dx wedge dq",
+      "id": "G1.guard.half_turn_orientation_ledger",
+      "statement": "endpoint Jacobian ratios determine the finite cap glue; no BFV ghost or absolute determinant orientation is supplied",
+      "theorem": "orientation transport by the explicit nonvanishing ray parameterizations",
+      "verified": true
+    }
+  ],
+  "verdict": "CONFORMAL_PRESCRIPTION_AND_DETLINE_GLUE_REQUIRED"
+}

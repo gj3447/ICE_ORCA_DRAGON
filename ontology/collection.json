@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-26T05:51:04Z",
+  "updated_at_utc": "2026-08-26T10:10:43Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -64,8 +64,8 @@
       ],
       "includes": [
         "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
-        "the bounded Phase-56 terminal diagnostic and post-Phase-56 hard stop",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, and still-open zero-lapse/full-joint boundary",
+        "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, and still-open gauge/zero-lapse/full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -140,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and all three bounded Gate-1 windows are consumed; full replay, Phase 57, retry and global promotion remain forbidden. The straight-line KILL closes only its anchor-through homogeneous class. Exact work narrows affine tails to one reduced class; the ordered scalar source-link one-shot directly links the newly declared scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms. The subsequent zero-lapse one-shot was INVALID_RUN at a SymPy structural-equality false negative and wrote no result, so it neither contradicts the square identity nor establishes the full-q canonical boundary. Lambda=1, the zero-lapse extension, physical joint cycle and global vector remain open or null. Gate 1 stays open.",
+      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations now use one generic capped runtime without one-shot receipts. The straight-line KILL closes only its anchor-through homogeneous class, and the ordered scalar control keeps only a nonzero-arm link. The finite bosonic control further shows that neither one common lateral sign absolutely damps unchanged real p_a,p_phi axes; declared complex rays reproduce a fiberwise Gaussian pushforward, with only a frozen-A flat-tangent negative-arm ledger. Source deformation, simultaneous nonlinear configuration admissibility, p_a gauge/FP/BFV completion, zero lapse, the physical joint cycle and global vector remain open or null. Gate 1 stays open.",
       "refs": [
         {
           "graph": "cpt",
@@ -172,6 +172,14 @@
         },
         {
           "graph": "cpt",
+          "node": "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD"
+        },
+        {
+          "graph": "cpt",
           "node": "open:gate1-original-cycle-signed-global-intersections"
         }
       ]
@@ -196,7 +204,7 @@
     },
     {
       "question": "Has any of this been promoted into an external KG or a physics verdict?",
-      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 33 bridges remain unresolved. The repository ontology is only a memory and index layer.",
+      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 35 bridges remain unresolved. The repository ontology is only a memory and index layer.",
       "refs": [
         {
           "graph": "hypercomplex",
@@ -217,7 +225,7 @@
     {
       "id": "collection-path:current-status-in-five-stops",
       "title": "Current status in five stops",
-      "summary": "Read five independent status samples: finite algebra that survives, its interpretation boundary, a legacy null gate, the Phase-56 stop, and the still-open Gate 1 problem. Their order is navigation, not a shared evidence or gate chain.",
+      "summary": "Read five independent status samples: finite algebra that survives, its interpretation boundary, a legacy null gate, the Phase-56 numbered-route stop, and the still-open Gate 1 problem. Distinct unnumbered calculations remain available under the generic bounded runtime; the order is navigation, not a shared evidence or gate chain.",
       "navigation_only": true,
       "stops": [
         {
@@ -238,7 +246,7 @@
         {
           "graph": "cpt",
           "node": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
-          "why": "The operational hard stop"
+          "why": "The operational hard stop on numbered reconciliation descendants, not on distinct generic bounded science"
         },
         {
           "graph": "cpt",

@@ -4,7 +4,7 @@
 
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
-[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-72-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
+[![Runnable kernels](https://img.shields.io/badge/Committed_kernels-92-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
@@ -38,6 +38,12 @@ reported separately.
 > open. The per-window one-shot mechanism is now retired for new work: clean committed, unnumbered core
 > calculations run under shared time/output/artifact caps without launch receipts. Consumed runners,
 > Phase 51–56 reconciliation, and all new numbered descendants remain blocked.
+> Under that generic runtime, a finite \(m=2\) bosonic canonical-source control has completed. No one
+> common \(N-i0\) or \(N+i0\) sign absolutely damps the unchanged real \(p_a,p_\phi\) axes; declared
+> centered complex momentum rays do reproduce the finite fiberwise Gaussian pushforward. The
+> negative-arm \(-1\) is established only in a frozen-\(A\) flat tangent ledger, while simultaneous
+> nonlinear configuration admissibility, gauge/FP/BFV completion, zero lapse and the physical original
+> cycle remain open.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
 > the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the
@@ -293,14 +299,14 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| discovered Python kernels | 90 | `./ice list --json` |
+| discovered Python kernels | 92 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology collection | 3 independent graphs; 899 nodes, 2566 edges, 227 claims: 133 `SUPPORTED`, 89 `CONTRADICTED`, 5 `INCONCLUSIVE` | `./ice ontology summary` |
-| hash-tracked ontology records | 122 evidence nodes, 68 open problems, 202 artifacts, 9 policies; 211/211 recorded hashes verified; 33 explicit unresolved-bridge warnings | `./ice ontology validate` |
+| research ontology collection | 3 independent graphs; 915 nodes, 2614 edges, 230 claims: 135 `SUPPORTED`, 90 `CONTRADICTED`, 5 `INCONCLUSIVE` | `./ice ontology summary` |
+| hash-tracked ontology records | 124 evidence nodes, 68 open problems, 206 artifacts, 10 policies; 216/216 recorded hashes verified; 35 explicit unresolved-bridge warnings | `./ice ontology validate` |
 | named exact checks in the CPT Phase 16--56 snapshots | 498, all `PASS` | CPT phase result payloads in the ontology |
 | typed numerical checks in those snapshots | 360 = 343 `PASS` + 14 `FAIL` + 3 `INCONCLUSIVE` | CPT phase result payloads in the ontology |
-| latest committed CPT seam phase | Phase 56 terminal closeout (execution consumed) | [`PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md`](cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md) |
+| latest CPT direct calculation | non-numbered (m=2) bosonic canonical-source pushforward | [`GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md`](cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.
@@ -431,6 +437,8 @@ write, or automatic physics verdict.
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology show legacy::claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS
+./ice ontology show cpt::claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES
+./ice ontology trace cpt::claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD --depth 2
 ./ice ontology trace cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
 ```
 

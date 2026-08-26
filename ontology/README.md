@@ -12,12 +12,12 @@
 
 The [collection manifest](./collection.json) uses
 [`research-collection/v1`](./schema/research-collection-v1.schema.json); each independent graph uses
-[`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 snapshots use
+[`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 and non-numbered Gate-1 run snapshots use
 [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-26T04:18:00Z` collection update, the three graphs have 899 nodes, 2566 edges,
-and 227 claims: 133 supported, 89 contradicted, and 5 inconclusive. Validation verifies all 211 stored
-hashes (202 artifacts and 9 policies); 33 unresolved external bridges remain explicit warnings. The
+At the recorded `2026-08-26T10:10:43Z` collection update, the three graphs have 915 nodes, 2614 edges,
+and 230 claims: 135 supported, 90 contradicted, and 5 inconclusive. Validation verifies all 216 stored
+hashes (206 artifacts and 10 policies); 35 unresolved external bridges remain explicit warnings. The
 Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
@@ -101,7 +101,14 @@ reviewed analytic theorem guards, and zero numerical checks. For a newly declare
 ordered scalar control it keeps the source link with scalar orientation `+1` on lapse tests supported
 away from \(N=0\), while the zero-including full \(q\)-paired distribution remains open. Those 16 entries
 are not folded into the Phase 16–56 total, and the three theorem guards are not machine-check entries.
-None of this supplies scale-factor/joint ends, regulator removal, a complete census, an original cycle,
+The next generic bounded, non-numbered finite \(m=2\) bosonic control separately records 17 exact
+`PASS` entries, two theorem guards and four 70-digit numerical `PASS` checks. Opposite kinetic signs
+show that neither one common \(N-i0\) nor \(N+i0\) absolutely damps the unchanged real
+\(p_a,p_\phi\) axes. Declared centered complex momentum rays reproduce the fiberwise Gaussian
+pushforward, and a standard-Fresnel frozen-\(A\) flat tangent gives the negative-arm ratio \(-1\).
+That result does not prove simultaneous nonlinear configuration admissibility, source deformation,
+gauge/FP/BFV completion, zero lapse or a physical original cycle. Its entries are also kept separate
+from the numbered Phase 16–56 totals. None of this supplies scale-factor/joint ends, regulator removal, a complete census, an original cycle,
 a global coefficient, physics, or TOE. These counts describe repository records, not independent
 replications or global scientific confidence.
 
@@ -119,6 +126,8 @@ validation without reopening artifact payloads; intuitive lookup therefore does 
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph legacy --path legacy-preregistration-provenance
 ./ice ontology guide --graph cpt --path gate1-anchor-through-kill-to-phase-locked-branch
+./ice ontology show cpt::claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES
+./ice ontology trace cpt::claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD --depth 2
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2
@@ -380,7 +389,9 @@ P50-center corners retain the residual-target NONPASS pattern while both fresh-c
 three gates under both solver profiles. This is a single-root factorial association, not a causal
 theorem or exact historical launch identity. The Ragnarok policy consumes the terminal exception and
 kills the reconciliation route; no full replay or Phase 57 is authorized, `next_phase` is null, straight
-arms remain unsearched, and all global, physical, and TOE promotions remain barred.
+arms remain unsearched, and all global, physical, and TOE promotions remain barred. That killed-route
+stop does not close distinct clean committed unnumbered calculations under the generic bounded runtime;
+each such calculation is an independent unit and does not authorize an automatic descendant.
 
 ## Identifier families
 
