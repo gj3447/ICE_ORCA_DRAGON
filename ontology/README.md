@@ -15,9 +15,9 @@ The [collection manifest](./collection.json) uses
 [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 and non-numbered Gate-1 run snapshots use
 [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-26T10:10:43Z` collection update, the three graphs have 915 nodes, 2614 edges,
-and 230 claims: 135 supported, 90 contradicted, and 5 inconclusive. Validation verifies all 216 stored
-hashes (206 artifacts and 10 policies); 35 unresolved external bridges remain explicit warnings. The
+At the recorded `2026-08-26T15:17:19Z` collection update, the three graphs have 925 nodes, 2652 edges,
+and 233 claims: 137 supported, 91 contradicted, and 5 inconclusive. Validation verifies all 218 stored
+hashes (208 artifacts and 10 policies); 36 unresolved external bridges remain explicit warnings. The
 Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
@@ -108,7 +108,14 @@ show that neither one common \(N-i0\) nor \(N+i0\) absolutely damps the unchange
 pushforward, and a standard-Fresnel frozen-\(A\) flat tangent gives the negative-arm ratio \(-1\).
 That result does not prove simultaneous nonlinear configuration admissibility, source deformation,
 gauge/FP/BFV completion, zero lapse or a physical original cycle. Its entries are also kept separate
-from the numbered Phase 16–56 totals. None of this supplies scale-factor/joint ends, regulator removal, a complete census, an original cycle,
+from the numbered Phase 16–56 totals. The subsequent non-numbered trace-gauge control separately records
+22 executable exact `PASS` entries, five reviewed analytic scope guards, and two numerical `PASS`
+checks. It supports a genuine local homogeneous simple-root constraint reduction away from the FP
+horizon and formal lower-lateral convergence of the remaining scalar fiber. It contradicts only the
+shortcut of appending a static trace delta/FP factor to the unchanged proper-time fixed-\(a\), \(m=2\)
+source. A replacement gauge, action, endpoint-state problem and BFV measure remain an open dependency,
+not an automatic next run; `automatic_next=null`, Gate 1 remains open, and all physical/global/TOE
+outputs remain null. None of this supplies scale-factor/joint ends, regulator removal, a complete census, an original cycle,
 a global coefficient, physics, or TOE. These counts describe repository records, not independent
 replications or global scientific confidence.
 
@@ -128,6 +135,8 @@ validation without reopening artifact payloads; intuitive lookup therefore does 
 ./ice ontology guide --graph cpt --path gate1-anchor-through-kill-to-phase-locked-branch
 ./ice ontology show cpt::claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES
 ./ice ontology trace cpt::claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD --depth 2
+./ice ontology show cpt::claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE
+./ice ontology trace cpt::claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION --depth 2
 ./ice ontology show claim:P16_BGG_BOSONIC_KINETIC_PARENT
 ./ice ontology trace claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ./ice ontology trace claim:P20_LEADING_DE_SITTER_WDW_ENVELOPE_SELECTS_5P44 --depth 2

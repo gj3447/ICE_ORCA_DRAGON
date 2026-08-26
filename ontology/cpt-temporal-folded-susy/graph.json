@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-26T15:01:35Z",
+  "updated_at_utc": "2026-08-26T15:17:19Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -25774,6 +25774,48 @@
       "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION"
+    },
+    {
+      "id": "edge:2448",
+      "from": "concept:gate1-homogeneous-trace-gauge-fp-admissibility-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "A clean committed unnumbered runner used the generic bounded runtime; it created no numbered phase, automatic descendant or reconciliation-route authorization."
+    },
+    {
+      "id": "edge:2449",
+      "from": "evidence:gate1-trace-gauge-fp-admissibility",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p27-wick-map",
+      "note": "Inherits only the explicit Lorentzian/Euclidean constraint and momentum-continuation convention."
+    },
+    {
+      "id": "edge:2450",
+      "from": "evidence:gate1-trace-gauge-fp-admissibility",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p28-homogeneous-bfv",
+      "note": "Inherits the endpoint-vanishing homogeneous proper-time gauge and surviving lapse-modulus boundary."
+    },
+    {
+      "id": "edge:2451",
+      "from": "evidence:gate1-trace-gauge-fp-admissibility",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p29-reduced-bfv-modulus",
+      "note": "Inherits the finite-interval lapse variation and fixed-parameter modulus convention."
+    },
+    {
+      "id": "edge:2452",
+      "from": "evidence:gate1-trace-gauge-fp-admissibility",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:p31-extrinsic-clock-and-polarization",
+      "note": "Inherits the extrinsic-clock and endpoint-polarization obstruction, not a physical BFV determinant."
+    },
+    {
+      "id": "edge:2453",
+      "from": "evidence:gate1-trace-gauge-fp-admissibility",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-bosonic-canonical-source-pushforward",
+      "note": "The prior finite mixed-signature momentum obstruction motivates a genuine constraint-gauge reduction; its declared complex rays are not reused as a physical source deformation."
     }
   ],
   "kg_bridges": [

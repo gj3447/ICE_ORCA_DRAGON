@@ -3109,7 +3109,7 @@ The local result is exact away from the FP horizon; it neither constructs a glob
 signed root residues with an oriented physical determinant. The unchanged-source append is killed
 because the inherited proper-time condition, endpoint states and action cannot be left untouched. The
 formal scalar Gaussian is retained only as a local reduced-fiber benchmark. Gate 1 therefore remains
-`OPEN_PARTIAL_PROGRESS`, with the replacement gauge-fixed source as the next bounded construction and
-all physical/global/TOE outputs null.
+`OPEN_PARTIAL_PROGRESS`, with the replacement gauge-fixed source retained as an open dependency rather
+than execution authorization; `automatic_next=null` and all physical/global/TOE outputs remain null.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

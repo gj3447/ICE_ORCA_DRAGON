@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-26T10:10:43Z",
+  "updated_at_utc": "2026-08-26T15:17:19Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -65,7 +65,7 @@
       "includes": [
         "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, and still-open gauge/zero-lapse/full-joint boundary",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, and still-open replacement-gauge/zero-lapse/full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -140,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations now use one generic capped runtime without one-shot receipts. The straight-line KILL closes only its anchor-through homogeneous class, and the ordered scalar control keeps only a nonzero-arm link. The finite bosonic control further shows that neither one common lateral sign absolutely damps unchanged real p_a,p_phi axes; declared complex rays reproduce a fiberwise Gaussian pushforward, with only a frozen-A flat-tangent negative-arm ledger. Source deformation, simultaneous nonlinear configuration admissibility, p_a gauge/FP/BFV completion, zero lapse, the physical joint cycle and global vector remain open or null. Gate 1 stays open.",
+      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime without one-shot receipts. The straight-line KILL closes only its anchor-through homogeneous class, and the ordered scalar control keeps only a nonzero-arm link. The finite bosonic control shows that neither one common lateral sign absolutely damps unchanged real p_a,p_phi axes. A later exact trace-gauge control keeps a genuine local simple-root reduction and its lower-lateral scalar fiber, but kills merely appending a static trace delta/FP factor to the unchanged proper-time fixed-a m=2 source. A separately rederived replacement gauge, action, endpoints and BFV measure, plus source deformation, zero lapse, the physical joint cycle and global vector, remain open or null. Gate 1 stays open.",
       "refs": [
         {
           "graph": "cpt",
@@ -149,14 +149,6 @@
         {
           "graph": "cpt",
           "node": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_ROBUST_HORIZONTAL_AFFINE_PHI_TAILS_FORM_ONE_PRINCIPAL_REDUCED_CLASS"
         },
         {
           "graph": "cpt",
@@ -177,6 +169,22 @@
         {
           "graph": "cpt",
           "node": "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle"
         },
         {
           "graph": "cpt",
@@ -204,7 +212,7 @@
     },
     {
       "question": "Has any of this been promoted into an external KG or a physics verdict?",
-      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 35 bridges remain unresolved. The repository ontology is only a memory and index layer.",
+      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 36 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
       "refs": [
         {
           "graph": "hypercomplex",
@@ -251,7 +259,7 @@
         {
           "graph": "cpt",
           "node": "open:gate1-original-cycle-signed-global-intersections",
-          "why": "The unresolved scientific bottleneck"
+          "why": "The unresolved global bottleneck downstream of the open replacement trace-gauge source"
         }
       ]
     },
