@@ -15,7 +15,7 @@
 | Local engineering gate | `npm run check` (strict typecheck + Vitest suite) |
 | Environment gate | `./ice doctor` |
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
-| Ragnarok containment | `GATE1_ZERO_LAPSE_AUTHORIZED`; Phase 56 and two prior non-numbered Gate-1 windows are consumed; one exact-hash scalar zero-lapse one-shot is authorized; P51+, replay, retry, and renamed core work remain blocked |
+| Ragnarok containment | `GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN`; Phase 56 and all three non-numbered Gate-1 windows are consumed; no bounded research runner is active; P51+, replay, retry, corrected zero-lapse runner, and renamed core work remain blocked |
 | Phase 56 closeout | `VALID_RUN`; fresh center/launch recovers the saved lambda-half target under both profiles; `next_phase=null` |
 | Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
 | Remote transport | `PUSHED_WITH_GIT_LFS`; exact Phase-44 path is a 529,370,671-byte Git LFS object, with 76 rewritten unpublished commits, no force-push, and a verified fresh remote read-back |
@@ -31,10 +31,13 @@ permission is now consumed. The 2026-08-25 straight-lift window is also consumed
 separately authorized exactly one no-argument invocation of the hash-pinned, non-numbered
 `gate1_scalar_source_link` discriminator. It completed as a `VALID_RUN` and its exclusive private launch
 receipt consumed the window. It uses a newly declared fixed-\(a\), \(m=2\) scalar phase-space control and
-does not recover a physical original cycle. The user's continuation instruction now authorizes exactly one
+does not recover a physical original cycle. The user's continuation instruction authorized exactly one
 hash-pinned, no-argument invocation of `gate1_scalar_zero_lapse_extension`, aimed only at the full
-\(q\)-paired canonical boundary through \(N=0\). No retry or reproduction surface is authorized; apart from
-that one-shot, only the frozen Phase 11–50 historical allowlist executes.
+\(q\)-paired canonical boundary through \(N=0\). That invocation exited `1` after `2.349 s` at the second
+exact guard and wrote no result. The preceding square rewrite passed; independent read-only review identified
+an asymmetric SymPy structural comparison as a harness false negative, not scientific counterevidence.
+The exclusive receipt nevertheless consumed the one-shot. No retry or reproduction surface is authorized;
+only the frozen Phase 11–50 historical allowlist executes.
 The Phase-51→56 saved-backend/reconstructed-launch reconciliation route may not rerun Phase 51–55,
 substitute another Phase 56, generate Phase 57, perform a full replay, relax a threshold, or create
 another evaluator/dtype/solver/residual/provenance descendant.
@@ -45,6 +48,17 @@ The exact source-link authorization, limit order, decision table, and null-outpu
 The zero-lapse runner/input hashes, analytic theorem guards, decision table and stricter uniqueness qualifier
 are frozen in
 [`decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`](decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md).
+
+### Gate-1 scalar zero-lapse invalid run
+
+The sole authorized invocation started at `2026-08-26T05:42:12Z`, acquired its exclusive receipt, and
+exited `1` in Bash-measured `2.349 s`. One exact check passed before
+`G1.zero.global_lower_offset` failed; theorem guards and numerical checks were not reached. No result JSON,
+result hash, payload digest, or scientific verdict exists. The formula is not contradicted, but the intended
+canonical-boundary and scaling-degree conclusion is not established by this run. The inherited zero-lapse
+status remains `OPEN`, Gate 1 remains `OPEN_PARTIAL_PROGRESS`, global promotion remains `PROHIBITED`, and
+all physical/global/physics/TOE fields remain null. See
+[`GATE1_SCALAR_ZERO_LAPSE_EXTENSION.md`](../cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION.md).
 
 ### Gate-1 scalar source-link result
 

@@ -31,10 +31,13 @@ reported separately.
 > scalar phase-space/source-link discriminator has now completed its sole terminal invocation. It keeps the
 > declared reduced scalar source link with orientation \(+1\) on nonzero lapse arms, while the zero-including
 > full \(q\)-paired distribution and physical original joint cycle remain open. That window is consumed.
-> One further exact-hash, non-numbered, no-argument one-shot is now authorized solely to test the canonical
-> full-\(q\) boundary through \(N=0\) and its scaling-degree-preserving contact ambiguity. Apart from that
-> bounded runner, only the frozen Phase 11–50 historical allowlist is executable; Phase 51+, renamed
-> descendants, Phase 57+, replay, and retries are blocked.
+> The further exact-hash, non-numbered, no-argument zero-lapse one-shot has also been consumed. Its sole
+> invocation exited `1` before writing a result because an asymmetric SymPy structural-equality guard gave
+> a false negative after the preceding square rewrite passed. This is not counterevidence to the square
+> identity, but it supplies no canonical-boundary or extension verdict: the zero-lapse distribution remains
+> open. No bounded research runner is now active; only the frozen Phase 11–50 historical allowlist is
+> executable. Phase 51+, renamed descendants, Phase 57+, replay, retries, and the corrected runner are blocked
+> absent new explicit authorization.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
 > the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the

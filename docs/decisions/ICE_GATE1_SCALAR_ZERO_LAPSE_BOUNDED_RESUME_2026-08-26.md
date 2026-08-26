@@ -1,6 +1,6 @@
 # Gate 1 scalar zero-lapse extension 단일 bounded 재개
 
-> **상태:** `AUTHORIZED_NOT_YET_RUN`
+> **상태:** `CONSUMED_INVALID_RUN_NO_RESULT`
 > **승인:** `GATE1_ZERO_LAPSE_20260826_01`
 > **범위:** 번호 없는 fixed-\(a\), \(m=2\) full \(q\)-paired scalar boundary 계산 한 번
 > **Gate 1:** 실행 결과와 무관하게 `OPEN_PARTIAL_PROGRESS`
@@ -12,6 +12,21 @@
 scalar control의 \(N=0\) 분포 extension을 한 번 검사할 권한으로 해석한다. 이 권한은
 Phase 51→56의 killed saved-backend/reconstructed-launch 경로, Phase 57, full replay, 재시도,
 `repro`, 이름을 바꾼 후손 또는 TOE 승격을 열지 않는다.
+
+이 window는 authorization commit
+`1f0fc7d17cc704577db601071e46563a37db24f0` 뒤 실제 runner invocation 한 번으로 소진됐다.
+실행은 `2026-08-26T05:42:12Z`에 시작해 Bash 기준 `2.349 s` 뒤 exit `1`로 끝났고,
+exclusive receipt는 `2026-08-26T05:42:14.025056895Z`에 생성됐다. result 파일은 쓰이지
+않았다. 따라서 이 문서 아래의 계산 대상과 판정표는 동결된 **사전 계획**이며, 어느 과학 판정
+행도 이번 실행 결과로 선택되지 않았다.
+
+실패 check는 `G1.zero.global_lower_offset`이다. 바로 앞 square rewrite check는 통과했지만,
+두 번째 check가 `simplify(lhs) == unsimplified_rhs` 형태의 SymPy structural equality를 사용해
+수학적으로 같은 서로 다른 expression tree를 `False`로 판정했다. 독립 read-only 감사는
+zero-difference predicate가 올바른 검사라고 확인했다. 그러므로 이 실패는
+`HARNESS_STRUCTURAL_EQUALITY_FALSE_NEGATIVE_NOT_SCIENTIFIC_COUNTEREVIDENCE`이며 아래 square
+identity나 tail bound의 반증이 아니다. 동시에 유효 result가 없으므로 canonical boundary,
+scaling degree 또는 extension verdict의 증거도 아니다.
 
 기존 source-link one-shot은 비영 lapse arm의 reduced scalar link와 orientation \(+1\)만
 `KEEP`하고, tests crossing \(N=0\)의 full \(q\)-paired distribution을 `OPEN`으로 남겼다.
@@ -129,6 +144,10 @@ degree 분포를 인위적으로 더하는 행위 자체가 논리적으로 불�
 physics claim 또는 TOE claim을 만들지 않는다. 그 필드는 모두 `null`, global promotion은
 `PROHIBITED`, Gate 1은 `OPEN_PARTIAL_PROGRESS`, `automatic_next=null`이다.
 
+실제 실행은 판정표에 도달하기 전에 harness check에서 중단됐다. authoritative 상태는
+`INVALID_RUN`, scientific verdict와 decision-table row는 `null`, zero-lapse distribution은 직전
+source-link 결과의 `OPEN`을 그대로 상속한다.
+
 ## 자원과 금지면
 
 ```text
@@ -145,5 +164,8 @@ automatic descendants      = 0
 orientation, \(R\to\infty\), \(m\to\infty\), continuum/cutoff theorem, \(\lambda=1\) selection,
 physical measure, original joint cycle, global intersection과 모든 physics/TOE 승격이다.
 
-실행 뒤에는 실제 stdout, exit, wall time, result bytes/hash/self-digest, exact checks와 별도 theorem
-guards를 기록하고, 이 창을 비활성화한 뒤 온톨로지 successor claim/evidence/scope에만 반영한다.
+실제 stdout은 비어 있었고 exit `1`, wall time `2.349 s`, exact PASS 1개 뒤 exact FAIL 1개,
+theorem guard와 numerical check는 각각 0개였다. result가 없으므로 result bytes/hash/self-digest는
+모두 `null`이다. receipt가 window를 소비했으며 retry, `repro`, 수정 runner 실행과 automatic
+descendant는 새 명시적 승인 없이는 금지한다. Gate 1과 모든 global/physics/TOE null 경계는
+변하지 않는다.

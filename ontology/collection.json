@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-26T05:38:09Z",
+  "updated_at_utc": "2026-08-26T05:51:04Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -65,7 +65,7 @@
       "includes": [
         "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
         "the bounded Phase-56 terminal diagnostic and post-Phase-56 hard stop",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, and zero-lapse/full-joint boundary",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, and still-open zero-lapse/full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -140,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and two prior bounded Gate-1 windows are consumed; full replay, Phase 57 and global promotion remain forbidden. The straight-line KILL closes only its anchor-through homogeneous class. Exact work narrows affine tails to one reduced class; the ordered scalar one-shot directly links the newly declared scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms. One exact-hash one-shot is now authorized only to test that scalar control's full-q canonical boundary through N=0 and scaling-degree-preserving contact ambiguity. It cannot select lambda=1, recover a physical joint cycle or emit a global vector. Gate 1 stays open.",
+      "answer": "No. Phase 56 and all three bounded Gate-1 windows are consumed; full replay, Phase 57, retry and global promotion remain forbidden. The straight-line KILL closes only its anchor-through homogeneous class. Exact work narrows affine tails to one reduced class; the ordered scalar source-link one-shot directly links the newly declared scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms. The subsequent zero-lapse one-shot was INVALID_RUN at a SymPy structural-equality false negative and wrote no result, so it neither contradicts the square identity nor establishes the full-q canonical boundary. Lambda=1, the zero-lapse extension, physical joint cycle and global vector remain open or null. Gate 1 stays open.",
       "refs": [
         {
           "graph": "cpt",
@@ -165,6 +165,10 @@
         {
           "graph": "cpt",
           "node": "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION"
         },
         {
           "graph": "cpt",

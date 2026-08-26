@@ -101,7 +101,7 @@ export const boundedGate1ZeroLapseResultPath =
   "cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION_RESULT.json"
 export const boundedGate1ZeroLapseAuthorizationId =
   "GATE1_ZERO_LAPSE_20260826_01"
-export const boundedGate1ZeroLapseExecutionEnabled: boolean = true
+export const boundedGate1ZeroLapseExecutionEnabled: boolean = false
 
 export const boundedGate1InvocationDecision = (
   query: string,
@@ -121,7 +121,7 @@ export const boundedGate1InvocationDecision = (
 export const ragnarokStatus = {
   schema: "ice-ragnarok-circuit-breaker/v2",
   effective_date: "2026-08-26",
-  operational_state: "GATE1_ZERO_LAPSE_AUTHORIZED",
+  operational_state: "GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN",
   pause_started_on: "2026-08-23",
   review_eligible_on: "2026-08-30",
   auto_resume: false,
@@ -295,7 +295,7 @@ export const ragnarokStatus = {
     numbered_phase: null
   },
   zero_lapse_window: {
-    state: "AUTHORIZED",
+    state: "CONSUMED",
     automatic_next: null,
     maximum_launches: 1,
     exact_script: boundedGate1ZeroLapseScript,
@@ -313,7 +313,8 @@ export const ragnarokStatus = {
       ".git/ice-launches/GATE1_ZERO_LAPSE_20260826_01",
     allowed_args: [],
     allowed_outcomes: [
-      "UNIQUE_SCALING_DEGREE_PRESERVING_EXTENSION"
+      "UNIQUE_SCALING_DEGREE_PRESERVING_EXTENSION",
+      "INVALID_RUN"
     ],
     resource_caps: {
       wall_clock_seconds: 30,
@@ -326,7 +327,53 @@ export const ragnarokStatus = {
       numerical_samples: 0,
       automatic_descendants: 0
     },
-    execution_enabled: boundedGate1ZeroLapseExecutionEnabled
+    execution_enabled: boundedGate1ZeroLapseExecutionEnabled,
+    consumed: {
+      consumed_on: "2026-08-26",
+      observed_at_utc: "2026-08-26T05:42:12Z",
+      receipt_created_at_utc: "2026-08-26T05:42:14.025056895Z",
+      receipt_contents: [],
+      command:
+        "./ice run cpt_temporal_folded_susy/gate1_scalar_zero_lapse_extension",
+      authorization_commit: "1f0fc7d17cc704577db601071e46563a37db24f0",
+      launch_receipt:
+        ".git/ice-launches/GATE1_ZERO_LAPSE_20260826_01",
+      authorized_launches_observed: 1,
+      run_status: "INVALID_RUN",
+      exit_code: 1,
+      wall_time_seconds: 2.349,
+      wall_clock_source: "BASH_TIMEFORMAT",
+      failed_check_id: "G1.zero.global_lower_offset",
+      exact_checks_passed_before_failure: 1,
+      theorem_guards_reached: 0,
+      numerical_checks: 0,
+      failure_observation:
+        "EXCLUSIVE_LAUNCH_RECEIPT_PRESENT_RESULT_ARTIFACT_ABSENT",
+      failure_interpretation:
+        "HARNESS_STRUCTURAL_EQUALITY_FALSE_NEGATIVE_NOT_SCIENTIFIC_COUNTEREVIDENCE",
+      result_artifact: "ABSENT",
+      result_present: false,
+      result_path: boundedGate1ZeroLapseResultPath,
+      result_sha256: null,
+      payload_sha256_without_self: null,
+      result_bytes: null,
+      result_schema_validation: "NOT_PERFORMED_RESULT_ABSENT",
+      scientific_output_usable: false,
+      verdict: null,
+      decision_table_row: null,
+      programme_impact: null,
+      inherited_zero_lapse_distribution: "OPEN",
+      gate1: "OPEN_PARTIAL_PROGRESS",
+      global_promotion: "PROHIBITED",
+      physical_original_cycle: null,
+      full_joint_orientation: null,
+      global_n_sigma: null,
+      physics_claim: null,
+      TOE_claim: null,
+      retry_authorized: false,
+      repro_authorized: false,
+      automatic_next: null
+    }
   },
   verdicts: {
     ragnarok_pattern: "PRESENT",
@@ -373,7 +420,7 @@ export const ragnarokStatus = {
       next_phase: null
     },
     execution_provenance:
-      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_EXCLUSIVE_ZERO_LAPSE_ONE_SHOT",
+      "PINNED_RUNNER_INPUT_UPSTREAM_HASH_CLEAN_CORE_EXCLUSIVE_ZERO_LAPSE_RECEIPT_CONSUMED_INVALID_RUN_NO_RESULT",
     direct_python_bypass_authorized: false
   },
   repository_transport: {
@@ -1098,6 +1145,7 @@ export const formatRagnarokStatus = (json: boolean): string => {
     `Bounded Gate 1: ${ragnarokStatus.gate1_window.state}; ${ragnarokStatus.gate1_window.exact_script}; execution enabled=${String(ragnarokStatus.gate1_window.execution_enabled)}`,
     `Scalar source link: ${ragnarokStatus.source_link_window.state}; ${ragnarokStatus.source_link_window.exact_script}; execution enabled=${String(ragnarokStatus.source_link_window.execution_enabled)}`,
     `Scalar zero-lapse extension: ${ragnarokStatus.zero_lapse_window.state}; ${ragnarokStatus.zero_lapse_window.exact_script}; execution enabled=${String(ragnarokStatus.zero_lapse_window.execution_enabled)}`,
+    `Scalar zero-lapse closeout: ${ragnarokStatus.zero_lapse_window.consumed.run_status}; result artifact=${ragnarokStatus.zero_lapse_window.consumed.result_artifact}; retry/repro blocked`,
     `Next phase: ${String(ragnarokStatus.containment.next_phase)}; no automatic descendant is authorized`,
     `Gate 1: ${ragnarokStatus.scientific_state.gate1}`,
     `Scientific route: ${ragnarokStatus.scientific_state.scientific_route}`,

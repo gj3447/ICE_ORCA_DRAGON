@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-26T05:38:09Z",
+  "updated_at_utc": "2026-08-26T05:51:04Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -249,7 +249,7 @@
     },
     {
       "question": "Does Phase 39 compute the cap-chain pairing or close Gate 1?",
-      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A one-shot ordered phase-space control directly links the newly declared real scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms; combined with the prior contraction this supports the scoped reduced-class KEEP, while the zero-including full q-paired distribution and physical joint cycle remain open. This preserves the scoped straight KILL and makes real partial progress, but supplies no scale-factor/mixed ends, regulator removal, complete census/intersection vector, physics, or TOE. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
+      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A one-shot ordered phase-space control directly links the newly declared real scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms; combined with the prior contraction this supports the scoped reduced-class KEEP. The subsequent zero-lapse one-shot was INVALID_RUN at a SymPy structural-equality false negative and wrote no result, so it neither contradicts the square identity nor establishes the zero-including full q-paired distribution. The physical joint cycle, scale-factor/mixed ends, regulator removal, complete census/intersection vector, physics, and TOE remain open or null. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
       "claim_ids": [
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
@@ -259,7 +259,8 @@
         "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1",
         "claim:G1_PHASE_LOCKED_AFFINE_PHI_FIBER_HAS_TWO_UNIFORM_GOOD_ENDS",
         "claim:G1_ANCHORED_LINEAR_KILL_IS_NOT_AN_AFFINE_OR_CURVED_NO_GO",
-        "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN"
+        "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN",
+        "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION"
       ]
     },
     {
@@ -429,12 +430,13 @@
     },
     {
       "question": "Do good-end convergence or the bounded scalar source link uniquely select the phase-locked contour?",
-      "answer": "No. Exact positive-real cancellation uniquely picks b(psi)=psi/kappa inside the robust horizontal-affine class, but convergence alone admits b_lambda=lambda*psi/kappa for every 0<lambda<2. The one-shot ordered scalar phase-space control directly establishes equality between the newly declared real scalar control and the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse tests; together with the prior phase-band contraction this supports the scoped reduced-class KEEP, but it does not select lambda=1. The zero-including full q-paired distribution, contact terms and physical full joint/BFV cycle remain open. Phase lock is therefore a canonical maximum-damping representative, not a source-selected physical joint cycle.",
+      "answer": "No. Exact positive-real cancellation uniquely picks b(psi)=psi/kappa inside the robust horizontal-affine class, but convergence alone admits b_lambda=lambda*psi/kappa for every 0<lambda<2. The one-shot ordered scalar phase-space control directly establishes equality between the newly declared real scalar control and the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse tests; together with the prior phase-band contraction this supports the scoped reduced-class KEEP, but it does not select lambda=1. The subsequent zero-lapse one-shot was INVALID_RUN at a SymPy structural-equality false negative and emitted no result. It is neither counterevidence nor a canonical-boundary verdict, so the zero-including full q-paired distribution, contact terms and physical full joint/BFV cycle remain open. Phase lock is therefore a canonical maximum-damping representative, not a source-selected physical joint cycle.",
       "claim_ids": [
         "claim:G1_EXACT_FULL_RATE_CANCELLATION_SELECTS_PRINCIPAL_PHASE_LOCK_REPRESENTATIVE",
         "claim:G1_UNIFORM_GOODNESS_UNIQUELY_SELECTS_EXACT_PHASE_LOCK",
         "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
-        "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN"
+        "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN",
+        "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION"
       ]
     }
   ],
@@ -1038,7 +1040,7 @@
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
       "title": "From the anchored straight-line KILL to a scoped scalar source link",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. Exact cancellation selects one representative while convergence admits a continuous lambda family. The one-shot ordered scalar phase-space control directly establishes equality and orientation +1 for the declared 0<lambda<=1 Gamma_lambda representatives on nonzero lapse tests; with the prior contraction this supports the scoped reduced-class KEEP without selecting lambda=1. Stop at the zero-including full q-paired distribution, contact terms, source-derived full joint/BFV cycle, regulator removal, census, global coefficients, or physics promotion.",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. Exact cancellation selects one representative while convergence admits a continuous lambda family. The one-shot ordered scalar phase-space control directly establishes equality and orientation +1 for the declared 0<lambda<=1 Gamma_lambda representatives on nonzero lapse tests; with the prior contraction this supports the scoped reduced-class KEEP without selecting lambda=1. The next zero-lapse one-shot is retained only as INVALID_RUN provenance after a SymPy structural-equality false negative and no result. Stop at the still-open zero-including full q-paired distribution, contact terms, source-derived full joint/BFV cycle, regulator removal, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1054,6 +1056,8 @@
         "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
         "concept:gate1-scalar-source-link-distributional-control",
         "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN",
+        "concept:gate1-scalar-zero-lapse-extension-control",
+        "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
         "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -2262,7 +2266,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "4d983b6e491b3ef0c2f4cd29be636b8997a8dae397cccadba99f933881ebd469",
+      "sha256": "e1865138592984dad0518da3871530ba229356132e22b728f4b431067750a3b9",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -2272,7 +2276,7 @@
       "summary": "New calculations require source, equations, observed output, independent checks, and scoped interpretation, but no mandatory research contract, preregistration ritual, or KG ratification.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "4d983b6e491b3ef0c2f4cd29be636b8997a8dae397cccadba99f933881ebd469",
+      "sha256": "e1865138592984dad0518da3871530ba229356132e22b728f4b431067750a3b9",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
     },
     {
@@ -9702,10 +9706,10 @@
       "id": "policy:ragnarok-circuit-breaker",
       "type": "policy",
       "title": "Ragnarok bounded-pause circuit breaker",
-      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The Phase-56 terminal exception and two prior non-numbered Gate-1 windows are consumed. One exact-hash fixed-a m=2 scalar zero-lapse extension one-shot is authorized solely to test the full-q canonical boundary and scaling-degree-preserving contact ambiguity; it does not reopen Phase 51–56, Phase 57, full replay, retry, reproduction, renamed offspring or global promotion. This policy is not scientific evidence, a Gate-1 no-go, a physical-original-cycle claim, or a TOE verdict.",
-      "state": "ACTIVE_GATE1_ZERO_LAPSE_AUTHORIZED_TWO_PRIOR_WINDOWS_CONSUMED",
+      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop. The Phase-56 terminal exception and all three non-numbered Gate-1 windows are consumed. The fixed-a m=2 scalar zero-lapse extension one-shot ended INVALID_RUN at a SymPy structural-equality false negative with no result; corrected execution, retry, reproduction, Phase 51–56, Phase 57, full replay, renamed offspring and global promotion remain blocked. This policy is not scientific evidence, a Gate-1 no-go, a physical-original-cycle claim, or a TOE verdict.",
+      "state": "ACTIVE_NO_RESEARCH_WINDOW_ZERO_LAPSE_CONSUMED_INVALID_RUN",
       "path": "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md",
-      "sha256": "dac8c35080b75869511fe154efb3ad259b38a48bfac3638e642a7f3075132614",
+      "sha256": "1d9402e41f9addc2b0b23e14e71c5d865eea71e89055384526400e5eaf9dc215",
       "introduced_in_commit": "2324afb51783149fddeccdf53f3b2d315c6857f8"
     },
     {
@@ -10063,8 +10067,8 @@
       "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "type": "open_problem",
       "title": "Extend the nonzero-arm scalar source link through zero lapse and the full joint cycle",
-      "summary": "A one-shot ordered real scalar phase-space control directly agrees with the declared 0<lambda<=1 Gamma_lambda representatives with scalar orientation +1 on lapse tests supported away from N=0; combined with the prior principal-band contraction this supports the scoped reduced-class KEEP. This does not select lambda=1 or recover a physical original cycle. The full q-paired distribution on tests crossing N=0, possible contact terms, uniform interchange of field and lapse limits, scale-factor/mixed ends, regulator removal, connector intersections, complete dual census, Stokes data, full determinant orientation, and BFV body remain absent.",
-      "state": "OPEN_ZERO_LAPSE_DISTRIBUTION_AND_FULL_JOINT_EXTENSION",
+      "summary": "A one-shot ordered real scalar phase-space control directly agrees with the declared 0<lambda<=1 Gamma_lambda representatives with scalar orientation +1 on lapse tests supported away from N=0; combined with the prior principal-band contraction this supports the scoped reduced-class KEEP. The sole authorized zero-lapse invocation then stopped at a SymPy structural-equality false negative, wrote no result and supplied neither counterevidence nor an extension verdict. Lambda=1 and a physical original cycle remain unselected. The full q-paired distribution on tests crossing N=0, possible contact terms, uniform interchange of field and lapse limits, scale-factor/mixed ends, regulator removal, connector intersections, complete dual census, Stokes data, full determinant orientation, and BFV body remain absent.",
+      "state": "OPEN_AFTER_CONSUMED_INVALID_ZERO_LAPSE_RUN_AND_FULL_JOINT_EXTENSION",
       "question": "Does the full q-paired amplitude extend with the required contact terms and orientation to lapse tests crossing N=0, and can that scoped scalar link then be embedded in a source-derived physical full joint/BFV cycle with all remaining ends, determinants, intersections and regulator limits?"
     },
     {
@@ -10277,6 +10281,104 @@
       "path": "docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md",
       "sha256": "2d40aaa31a7bc274d50c3a89732886d374186724e595ea2441dca51c9bbf5c2e",
       "introduced_in_commit": "392076099bd0282d0954b377792a18960c0a43f3"
+    },
+    {
+      "id": "concept:gate1-scalar-zero-lapse-extension-control",
+      "type": "concept",
+      "title": "Gate-1 scalar zero-lapse extension one-shot control",
+      "summary": "A non-numbered exact-hash control was frozen to pair the full fixed-a m=2 scalar q amplitude before taking the N=0 boundary and then test canonical boundary continuity and scaling-degree-preserving contact ambiguity. Its sole invocation passed the full Starobinsky square rewrite, failed the next asymmetric SymPy structural-equality guard, wrote no result, and is retained only as INVALID_RUN provenance.",
+      "state": "CONSUMED_INVALID_RUN_NO_SCIENTIFIC_VERDICT"
+    },
+    {
+      "id": "scope:gate1-fixed-a-m2-scalar-zero-lapse-contact-control",
+      "type": "scope",
+      "title": "Fixed-a m=2 scalar zero-lapse contact-control scope",
+      "summary": "The planned and now consumed scope for the full-q scalar boundary through N=0; the invalid run did not decide this scope.",
+      "state": "CONSUMED_UNDECIDED_SCOPE",
+      "includes": [
+        "fixed positive a and hbar, inherited m=2 Starobinsky scalar action and T=epsilon+i*N",
+        "the full real-q amplitude at finite epsilon before the lapse boundary limit",
+        "lapse tests in C_c^infinity((-6/5,6/5)) and scaling degree at N=0",
+        "one exact no-argument launch with zero numerical, root, ODE or descendant calls"
+      ],
+      "excludes": [
+        "varying a, p_a, conformal or gravitational blocks and mixed field ends",
+        "BFV, ghost, Pfaffian, determinant-line or physical-measure orientation",
+        "a physical original cycle, full joint intersection, global n_sigma, physics or TOE promotion",
+        "retry, reproduction, corrected runner execution or automatic descendants"
+      ]
+    },
+    {
+      "id": "evidence:gate1-scalar-zero-lapse-invalid-run",
+      "type": "evidence",
+      "title": "Gate-1 scalar zero-lapse invalid-run closeout evidence",
+      "summary": "The consumed sole launch exited 1 in 2.349 seconds after one exact PASS and one exact FAIL, before theorem guards, numerical checks or result emission. Independent read-only algebra review localized the failure to asymmetric SymPy structural equality and confirmed it is not scientific counterevidence; no canonical-boundary or scaling-degree verdict exists.",
+      "state": "INVALID_RUN_HARNESS_FALSE_NEGATIVE_NO_SCIENTIFIC_VERDICT",
+      "observed_status": "INVALID_RUN",
+      "check_ids": [
+        "P39.G1.zero.starobinsky_global_square",
+        "P39.G1.zero.global_lower_offset"
+      ]
+    },
+    {
+      "id": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "type": "claim",
+      "title": "The consumed zero-lapse one-shot is invalid and does not establish an extension",
+      "summary": "Supported only as an execution-provenance and scope claim. The sole authorized fixed-a m=2 scalar zero-lapse invocation acquired its exclusive receipt, passed the first square rewrite, then stopped on a structural-equality false negative and emitted no result. It does not refute the mathematical square identity, but it also does not support a canonical boundary, scaling degree, point-contact classification or zero-lapse KEEP. The inherited zero-lapse status remains OPEN.",
+      "state": "SUPPORTED_INVALID_RUN_NO_SCIENTIFIC_PROMOTION",
+      "claim_id": "G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "statement": "The sole GATE1_ZERO_LAPSE_20260826_01 invocation is an INVALID_RUN with no result; its harness false negative is not scientific counterevidence and cannot establish the planned scalar zero-lapse extension, so the inherited zero-lapse distribution remains OPEN.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:gate1-scalar-zero-lapse-invalid-run-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 scalar zero-lapse invalid-run evidence snapshot",
+      "summary": "Typed closeout extract of the consumed launch, receipt, frozen hashes, exit and wall time, one passing and one failing exact check, absent result, independent harness diagnosis, inherited OPEN state and fail-closed global outputs.",
+      "state": "TRACKED_INVALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-scalar-zero-lapse-invalid-run.json",
+      "sha256": "8fc40481b9745b68ef01437b7823cfcdc5fb43c4da57f4db116c42822339a4c4"
+    },
+    {
+      "id": "artifact:gate1-scalar-zero-lapse-invalid-run-report",
+      "type": "artifact",
+      "title": "Gate-1 scalar zero-lapse invalid-run closeout report",
+      "summary": "Human-readable record separating the true square identity, the SymPy structural-equality harness false negative, actual launch provenance, absent result, inherited OPEN status, null promotions and retry boundary.",
+      "state": "TRACKED_INVALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION.md",
+      "sha256": "02c9b6f2c82b921e4dea5bedb8fa43901923e50e0c9c932dc8f8a260daeab0b5"
+    },
+    {
+      "id": "policy:gate1-scalar-zero-lapse-bounded-resume-20260826",
+      "type": "policy",
+      "title": "Gate-1 scalar zero-lapse bounded one-shot",
+      "summary": "The user-authorized non-numbered exact-hash window froze one full-q scalar zero-lapse calculation, runner/input/upstream identities, no-argument run-only surface, exclusive receipt, resource caps, decision table and null outputs. The sole INVALID_RUN consumed the window without a result; retry, reproduction, corrected execution, Phase 57, full replay and automatic descendants remain unauthorized.",
+      "state": "CONSUMED_INVALID_RUN_NO_RESULT_NO_RETRY",
+      "path": "docs/decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md",
+      "sha256": "73b0e0db97e60358c778286f0fc8e9b048f76ba3eac9be5fc8ff5c11c76b7aae",
+      "introduced_in_commit": "1f0fc7d17cc704577db601071e46563a37db24f0"
+    },
+    {
+      "id": "source:chakrabarti-shafikov-2017-boundary-values",
+      "type": "source",
+      "title": "Distributional boundary values of holomorphic functions on product domains",
+      "summary": "Primary mathematical source for polynomial-growth distributional boundary values and continuous canonical extension. It was predeclared for the zero-lapse control, but the invalid runner stopped before its theorem guards and produced no application evidence.",
+      "state": "PRIMARY_CITES_ONLY_NOT_REACHED_BY_INVALID_RUN",
+      "citation": "D. Chakrabarti and R. Shafikov, Distributional boundary values of holomorphic functions on product domains",
+      "uri": "https://arxiv.org/abs/1505.01230",
+      "version": "arXiv:1505.01230"
+    },
+    {
+      "id": "source:brunetti-fredenhagen-2000-scaling-degree",
+      "type": "source",
+      "title": "Microlocal Analysis and Interacting Quantum Field Theories: Renormalization on Physical Backgrounds",
+      "summary": "Primary mathematical-physics source for scaling-degree-preserving distribution extension. It was predeclared for the one-dimensional lapse contact analysis, but the invalid runner produced no boundary distribution or scaling-degree evidence to which the theorem could be applied.",
+      "state": "PRIMARY_CITES_ONLY_NOT_REACHED_BY_INVALID_RUN",
+      "citation": "R. Brunetti and K. Fredenhagen, Microlocal Analysis and Interacting Quantum Field Theories: Renormalization on Physical Backgrounds",
+      "uri": "https://arxiv.org/abs/math-ph/9903028",
+      "version": "arXiv:math-ph/9903028"
     }
   ],
   "edges": [
@@ -24911,6 +25013,124 @@
       "relation": "EXTENDS",
       "to": "policy:ragnarok-circuit-breaker",
       "note": "The exact one-shot waived only the scheduled-review wait for this scalar discriminator; its consumed result leaves the killed reconciliation route and every global promotion boundary unchanged."
+    },
+    {
+      "id": "edge:2368",
+      "from": "concept:gate1-scalar-zero-lapse-extension-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2369",
+      "from": "concept:gate1-scalar-zero-lapse-extension-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-scalar-source-link-distributional-control",
+      "note": "The zero-lapse window targeted the exact open boundary left by the valid nonzero-arm source-link result, but its invalid run did not close that boundary."
+    },
+    {
+      "id": "edge:2370",
+      "from": "concept:gate1-scalar-zero-lapse-extension-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-m2-scalar-zero-lapse-contact-control"
+    },
+    {
+      "id": "edge:2371",
+      "from": "concept:gate1-scalar-zero-lapse-extension-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:gate1-scalar-zero-lapse-bounded-resume-20260826"
+    },
+    {
+      "id": "edge:2372",
+      "from": "concept:gate1-scalar-zero-lapse-extension-control",
+      "relation": "CITES",
+      "to": "source:chakrabarti-shafikov-2017-boundary-values",
+      "note": "CITES-only planned boundary-value topology; the invalid runner stopped before this theorem guard and supplied no application evidence."
+    },
+    {
+      "id": "edge:2373",
+      "from": "concept:gate1-scalar-zero-lapse-extension-control",
+      "relation": "CITES",
+      "to": "source:brunetti-fredenhagen-2000-scaling-degree",
+      "note": "CITES-only planned scaling-degree extension theorem; no boundary distribution or scaling degree was produced by the invalid run."
+    },
+    {
+      "id": "edge:2374",
+      "from": "evidence:gate1-scalar-zero-lapse-invalid-run",
+      "relation": "PART_OF",
+      "to": "concept:gate1-scalar-zero-lapse-extension-control"
+    },
+    {
+      "id": "edge:2375",
+      "from": "evidence:gate1-scalar-zero-lapse-invalid-run",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-scalar-zero-lapse-invalid-run-evidence-snapshot"
+    },
+    {
+      "id": "edge:2376",
+      "from": "artifact:gate1-scalar-zero-lapse-invalid-run-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-scalar-zero-lapse-extension-control"
+    },
+    {
+      "id": "edge:2377",
+      "from": "artifact:gate1-scalar-zero-lapse-invalid-run-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-scalar-zero-lapse-extension-control"
+    },
+    {
+      "id": "edge:2378",
+      "from": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "relation": "PART_OF",
+      "to": "concept:gate1-scalar-zero-lapse-extension-control"
+    },
+    {
+      "id": "edge:2379",
+      "from": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-fixed-a-m2-scalar-zero-lapse-contact-control"
+    },
+    {
+      "id": "edge:2380",
+      "from": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-scalar-zero-lapse-invalid-run",
+      "polarity": "SUPPORTS",
+      "note": "Supports only the execution-provenance statement that the run is invalid and non-promoting; it is not evidence against or for the planned zero-lapse mathematical verdict."
+    },
+    {
+      "id": "edge:2381",
+      "from": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN"
+    },
+    {
+      "id": "edge:2382",
+      "from": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "note": "The scientific zero-lapse and full-joint obstruction remains open; this relation does not authorize a retry or automatic descendant."
+    },
+    {
+      "id": "edge:2383",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "note": "The open problem is retained after an invalid harness run, not generated as a new automatic computation task."
+    },
+    {
+      "id": "edge:2384",
+      "from": "policy:gate1-scalar-zero-lapse-bounded-resume-20260826",
+      "relation": "EXTENDS",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The exact one-shot waived only the scheduled-review wait for this scalar discriminator; the consumed invalid run leaves the killed reconciliation route, retry ban and every global promotion boundary unchanged."
+    },
+    {
+      "id": "edge:2385",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-scalar-zero-lapse-invalid-run",
+      "polarity": "SUPPORTS",
+      "note": "The absent result cannot supply the zero-lapse scalar extension or any physical full-joint/BFV cycle; this does not turn absence into a physical no-go."
     }
   ],
   "kg_bridges": [
@@ -25300,6 +25520,16 @@
       "checked_at_utc": "2026-08-23T12:47:02Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase53 m5 element-local full continuation replay pinned Phase51 global non-CSE backend",
       "note": "No authorized exact external correspondence or writer is available. The complete valid-inconclusive replay, independent six-slot reference pass, sole saved-backend comparison nonpass, and strict global, physics, and TOE null boundary remain repository-local calculation-workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-26T05:51:04Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 fixed-a m2 scalar zero-lapse one-shot invalid structural equality no result",
+      "note": "No authorized exact external correspondence or writer is available. The consumed invalid-run provenance, inherited zero-lapse OPEN state and strict global/physics/TOE null boundary remain repository-local; no external UID was invented."
     }
   ]
 }

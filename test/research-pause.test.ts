@@ -227,14 +227,12 @@ it("records both exact Gate-1 windows as consumed and blocks descendants", () =>
   }
 })
 
-it("authorizes only the exact non-numbered zero-lapse one-shot", () => {
+it("keeps the consumed zero-lapse one-shot and all descendants closed", () => {
   const decision = researchRunDecision(boundedGate1ZeroLapseScript)
-  expect(decision.allowed).toBe(true)
-  expect(decision.reason).toBe("BOUNDED_GATE1_ZERO_LAPSE")
+  expect(decision.allowed).toBe(false)
+  expect(decision.reason).toBe("CORE_ROUTE_PAUSED")
   expect(decision.maximum_phase).toBe(null)
-  expect(decision.expected_sha256).toBe(
-    boundedGate1ZeroLapseScriptSha256
-  )
+  expect(decision.expected_sha256).toBe(null)
   expect(researchRunDecision(boundedGate1Script).allowed).toBe(false)
   expect(researchRunDecision(boundedGate1SourceLinkScript).allowed).toBe(
     false
@@ -471,7 +469,7 @@ it("decodes only source-link results with the pinned identity, hashes, and null 
   }
 })
 
-it("decodes only the exact zero-lapse verdict with pinned hashes and null promotions", async () => {
+it("preserves the frozen successful-result schema without treating INVALID_RUN as evidence", async () => {
   const valid = {
     schema_version:
       "ice.gate1.scalar-zero-lapse-extension.result.v1",
@@ -528,6 +526,10 @@ it("decodes only the exact zero-lapse verdict with pinned hashes and null promot
   })
 
   for (const invalid of [
+    {
+      ...valid,
+      run_status: "INVALID_RUN"
+    },
     {
       ...valid,
       verdict: "INCONCLUSIVE"
@@ -883,103 +885,17 @@ it("rejects clean but non-frozen historical bytes and any dirty core tree", asyn
   }
 })
 
-it("rejects committed zero-lapse runner, input, and upstream mutations before Python spawn", async () => {
-  const root = await mkdtemp(join(tmpdir(), "ice-zero-lapse-hash-"))
-  const runGit = (args: ReadonlyArray<string>): void => {
-    const result = spawnSync("git", args, { cwd: root, encoding: "utf8" })
-    if (result.status !== 0) {
-      throw new Error(result.stderr || result.stdout)
-    }
-  }
-  try {
-    const researchDirectory = join(root, "cpt_temporal_folded_susy")
-    await mkdir(researchDirectory)
-    const runnerBytes = await readFile(
-      join(process.cwd(), `${boundedGate1ZeroLapseScript}.py`)
+it("blocks the consumed zero-lapse runner before Python execution", async () => {
+  const error = await Effect.runPromise(
+    runScript("gate1_scalar_zero_lapse_extension", []).pipe(
+      Effect.flip,
+      Effect.provide(RepositoryLayer)
     )
-    const inputBytes = await readFile(
-      join(process.cwd(), boundedGate1ZeroLapseInputPath)
-    )
-    const upstreamBytes = await readFile(
-      join(process.cwd(), boundedGate1ZeroLapseUpstreamResultPath)
-    )
-    const runnerPath = join(root, `${boundedGate1ZeroLapseScript}.py`)
-    const inputPath = join(root, boundedGate1ZeroLapseInputPath)
-    const upstreamPath = join(
-      root,
-      boundedGate1ZeroLapseUpstreamResultPath
-    )
-    await writeFile(runnerPath, new Uint8Array([...runnerBytes, 0x0a]))
-    await writeFile(inputPath, inputBytes)
-    runGit(["init", "-q"])
-    runGit(["add", "."])
-    runGit([
-      "-c",
-      "user.name=ICE Test",
-      "-c",
-      "user.email=ice-test@example.invalid",
-      "commit",
-      "-qm",
-      "mutated runner"
-    ])
-
-    const TestLayer = Layer.mergeAll(
-      NodeContext.layer,
-      Layer.succeed(Workspace, workspaceFromRoot(root))
-    )
-    const runnerError = await Effect.runPromise(
-      runScript("gate1_scalar_zero_lapse_extension", []).pipe(
-        Effect.flip,
-        Effect.provide(TestLayer)
-      )
-    )
-    expect(runnerError.code).toBe("RESEARCH_RUNNER_HASH_MISMATCH")
-
-    await writeFile(runnerPath, runnerBytes)
-    await writeFile(inputPath, new Uint8Array([...inputBytes, 0x0a]))
-    runGit(["add", "."])
-    runGit([
-      "-c",
-      "user.name=ICE Test",
-      "-c",
-      "user.email=ice-test@example.invalid",
-      "commit",
-      "-qm",
-      "mutated input"
-    ])
-    const inputError = await Effect.runPromise(
-      runScript("gate1_scalar_zero_lapse_extension", []).pipe(
-        Effect.flip,
-        Effect.provide(TestLayer)
-      )
-    )
-    expect(inputError.code).toBe("RESEARCH_INPUT_HASH_MISMATCH")
-
-    await writeFile(inputPath, inputBytes)
-    await writeFile(
-      upstreamPath,
-      new Uint8Array([...upstreamBytes, 0x0a])
-    )
-    runGit(["add", "."])
-    runGit([
-      "-c",
-      "user.name=ICE Test",
-      "-c",
-      "user.email=ice-test@example.invalid",
-      "commit",
-      "-qm",
-      "mutated upstream"
-    ])
-    const upstreamError = await Effect.runPromise(
-      runScript("gate1_scalar_zero_lapse_extension", []).pipe(
-        Effect.flip,
-        Effect.provide(TestLayer)
-      )
-    )
-    expect(upstreamError.code).toBe("RESEARCH_UPSTREAM_HASH_MISMATCH")
-  } finally {
-    await rm(root, { recursive: true, force: true })
-  }
+  )
+  expect(error.code).toBe("RESEARCH_PHASE_PAUSED")
+  expect(error.message).toContain(
+    "consumed bounded Gate-1 windows remain closed"
+  )
 })
 
 it("blocks the consumed source-link runner before Python execution", async () => {
@@ -1034,7 +950,7 @@ it("applies the same fail-closed guard to reproduction script paths", async () =
       Effect.provide(RepositoryLayer)
     )
   )
-  expect(zeroLapseError.code).toBe("RESEARCH_REPRO_FORBIDDEN")
+  expect(zeroLapseError.code).toBe("RESEARCH_PHASE_PAUSED")
 
   for (const traversal of [
     "././cpt_temporal_folded_susy/phase57_repro_bypass.py",
@@ -1066,7 +982,7 @@ it("returns exit 2 and the typed pause error from the real CLI", () => {
 it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.schema).toBe("ice-ragnarok-circuit-breaker/v2")
   expect(ragnarokStatus.operational_state).toBe(
-    "GATE1_ZERO_LAPSE_AUTHORIZED"
+    "GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN"
   )
   expect(ragnarokStatus.resume_authorization.approved_on).toBe("2026-08-25")
   expect(ragnarokStatus.resume_authorization.overrides_only).toBe(
@@ -1131,7 +1047,7 @@ it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.zero_lapse_authorization.full_replay_authorized).toBe(
     false
   )
-  expect(ragnarokStatus.zero_lapse_window.state).toBe("AUTHORIZED")
+  expect(ragnarokStatus.zero_lapse_window.state).toBe("CONSUMED")
   expect(ragnarokStatus.zero_lapse_window.exact_script).toBe(
     boundedGate1ZeroLapseScript
   )
@@ -1146,11 +1062,12 @@ it("keeps operational containment distinct from the scientific verdict", () => {
     path: boundedGate1ZeroLapseUpstreamResultPath,
     sha256: boundedGate1ZeroLapseUpstreamResultSha256
   })
-  expect(ragnarokStatus.zero_lapse_window.execution_enabled).toBe(true)
+  expect(ragnarokStatus.zero_lapse_window.execution_enabled).toBe(false)
   expect(ragnarokStatus.zero_lapse_window.maximum_launches).toBe(1)
   expect(ragnarokStatus.zero_lapse_window.allowed_args).toEqual([])
   expect(ragnarokStatus.zero_lapse_window.allowed_outcomes).toEqual([
-    "UNIQUE_SCALING_DEGREE_PRESERVING_EXTENSION"
+    "UNIQUE_SCALING_DEGREE_PRESERVING_EXTENSION",
+    "INVALID_RUN"
   ])
   expect(ragnarokStatus.zero_lapse_window.resource_caps).toEqual({
     wall_clock_seconds: 30,
@@ -1164,6 +1081,50 @@ it("keeps operational containment distinct from the scientific verdict", () => {
     automatic_descendants: 0
   })
   expect(ragnarokStatus.zero_lapse_window.automatic_next).toBe(null)
+  expect(ragnarokStatus.zero_lapse_window.consumed).toMatchObject({
+    consumed_on: "2026-08-26",
+    observed_at_utc: "2026-08-26T05:42:12Z",
+    receipt_created_at_utc: "2026-08-26T05:42:14.025056895Z",
+    receipt_contents: [],
+    authorization_commit: "1f0fc7d17cc704577db601071e46563a37db24f0",
+    launch_receipt:
+      ".git/ice-launches/GATE1_ZERO_LAPSE_20260826_01",
+    authorized_launches_observed: 1,
+    run_status: "INVALID_RUN",
+    exit_code: 1,
+    wall_time_seconds: 2.349,
+    wall_clock_source: "BASH_TIMEFORMAT",
+    failed_check_id: "G1.zero.global_lower_offset",
+    exact_checks_passed_before_failure: 1,
+    theorem_guards_reached: 0,
+    numerical_checks: 0,
+    failure_observation:
+      "EXCLUSIVE_LAUNCH_RECEIPT_PRESENT_RESULT_ARTIFACT_ABSENT",
+    failure_interpretation:
+      "HARNESS_STRUCTURAL_EQUALITY_FALSE_NEGATIVE_NOT_SCIENTIFIC_COUNTEREVIDENCE",
+    result_artifact: "ABSENT",
+    result_present: false,
+    result_path: boundedGate1ZeroLapseResultPath,
+    result_sha256: null,
+    payload_sha256_without_self: null,
+    result_bytes: null,
+    result_schema_validation: "NOT_PERFORMED_RESULT_ABSENT",
+    scientific_output_usable: false,
+    verdict: null,
+    decision_table_row: null,
+    programme_impact: null,
+    inherited_zero_lapse_distribution: "OPEN",
+    gate1: "OPEN_PARTIAL_PROGRESS",
+    global_promotion: "PROHIBITED",
+    physical_original_cycle: null,
+    full_joint_orientation: null,
+    global_n_sigma: null,
+    physics_claim: null,
+    TOE_claim: null,
+    retry_authorized: false,
+    repro_authorized: false,
+    automatic_next: null
+  })
   expect(ragnarokStatus.containment.continuation_route).toBe("KILL")
   expect(ragnarokStatus.containment.maximum_allowed_core_phase).toBe(50)
   expect(ragnarokStatus.containment.terminal_closeout_completed).toBe(true)
@@ -1207,13 +1168,16 @@ it("keeps operational containment distinct from the scientific verdict", () => {
 
 it("renders stable human and machine-readable status", () => {
   expect(formatRagnarokStatus(false)).toContain(
-    "Ragnarok circuit breaker: GATE1_ZERO_LAPSE_AUTHORIZED"
+    "Ragnarok circuit breaker: GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN"
   )
   expect(formatRagnarokStatus(false)).toContain(
     "Scalar source link: CONSUMED"
   )
   expect(formatRagnarokStatus(false)).toContain(
-    "Scalar zero-lapse extension: AUTHORIZED"
+    "Scalar zero-lapse extension: CONSUMED"
+  )
+  expect(formatRagnarokStatus(false)).toContain(
+    "Scalar zero-lapse closeout: INVALID_RUN; result artifact=ABSENT; retry/repro blocked"
   )
   expect(JSON.parse(formatRagnarokStatus(true))).toEqual(ragnarokStatus)
 })

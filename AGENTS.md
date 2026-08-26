@@ -25,7 +25,7 @@
 - Phase 56 terminal-closeout 예외는 동결된 질문의 실행·독립 재현을 마쳐 소진됐다. 그 결과와
   무관하게 Phase 57 이상, full replay, 같은 evaluator/dtype/solver/residual/provenance 채무의
   자동 offspring를 만들거나 실행하지 않는다. 직접 Python 실행으로 제어면을 우회하지 않는다.
-- 제어면은 동결된 Phase 11–50 역사 실행체와 아래에 명시한 현재의 단일 bounded window만 허용한다.
+- 제어면은 동결된 Phase 11–50 역사 실행체만 허용한다. 아래 세 bounded window는 모두 소진됐다.
   2026-08-25 사용자가 즉시
   승인한 `GATE1_DIRECT_20260825_01` exact hash-pinned runner는 Phase-39 straight field-ray end
   admissibility 계산을 정상 완료해 **소진됐으며 재실행하지 않는다**. 결과는 straight completion과
@@ -39,16 +39,18 @@
   `OPEN_PARTIAL_PROGRESS`다. 직전 결과가 남긴 바로 그 장애물에 한해 사용자의 계속 연구 지시가
   `GATE1_ZERO_LAPSE_20260826_01`을 승인했다. 이는 같은 fixed-\(a\), \(m=2\) control의 full
   \(q\)-paired canonical boundary와 scaling-degree-preserving contact ambiguity만 검사하는 번호 없는
-  exact-hash runner **한 번**이다. 현재 `AUTHORIZED_NOT_YET_RUN`이며 exact name, 무인자,
-  clean core, runner/input/upstream hash, private exclusive receipt와 30초/250,000-byte 상한을 지킨다.
-  이는 physical original joint cycle 복원, Phase 51–56 route 재개, Phase 57/full replay 또는 자동
-  후손 권한이 아니다. `repro`도 같은 경계를 적용한다.
+  exact-hash runner **한 번**이었다. 실제 invocation은 두 번째 exact guard의 SymPy structural
+  equality false negative에서 exit `1`로 끝나 `INVALID_RUN`이며 result를 쓰지 못했다. square identity의
+  수학적 반증은 아니지만 canonical boundary나 extension verdict의 증거도 아니다. exclusive receipt가
+  window를 **소진**했으므로 수정 runner, retry, `repro` 또는 자동 후손을 실행하지 않는다. zero-lapse
+  distribution은 `OPEN`, Gate 1은 `OPEN_PARTIAL_PROGRESS`다. 이는 physical original joint cycle 복원,
+  Phase 51–56 route 재개, Phase 57/full replay 또는 TOE 권한이 아니다.
 - 허용 경로도 runner SHA-256과 clean `cpt_temporal_folded_susy/` provenance가 일치해야 한다.
   traversal/absolute path, dirty·untracked core 파일, 허용 이름에 다른 bytes 덮어쓰기는 실행하지
   않는다.
 - 2026-08-30은 일반 새 core Phase의 재검토 자격일일 뿐 자동 재개일이 아니다. 사용자의
   2026-08-25 및 2026-08-26 지시는 그 예정 대기만 각 exact Gate-1 계산에 한해 면제했으며,
-  일반 재개나 새 numbered Phase 권한이 아니다. 상세 범위는
+  일반 재개, 실패한 zero-lapse runner의 재시도나 새 numbered Phase 권한이 아니다. 상세 범위는
   `docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md`와
   `docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`,
   `docs/decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`를 따른다.

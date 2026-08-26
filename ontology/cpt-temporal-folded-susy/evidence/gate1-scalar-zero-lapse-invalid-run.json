@@ -1,0 +1,153 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_SCALAR_ZERO_LAPSE_INVALID_RUN_20260826_01",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-26T05:42:12Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_scalar_zero_lapse_extension",
+  "exit_code": 1,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_scalar_zero_lapse_extension.py",
+    "sha256": "f7a7135f5d17ce283ef3dfe444b052499f85b9b3b6956be93a81d34ed106c58e",
+    "introduced_in_commit": "1f0fc7d17cc704577db601071e46563a37db24f0"
+  },
+  "exact_checks": 2,
+  "checks": [
+    {
+      "id": "P39.G1.zero.starobinsky_global_square",
+      "status": "PASS",
+      "statement": "the original full Starobinsky rate agrees exactly with the square form used by the frozen runner"
+    },
+    {
+      "id": "P39.G1.zero.global_lower_offset",
+      "status": "FAIL",
+      "statement": "the runner stopped when an asymmetrically simplified expression was compared to its unsimplified right-hand side with SymPy structural equality"
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 2,
+    "numerical_checks": 0,
+    "calculation": {
+      "authorization_id": "GATE1_ZERO_LAPSE_20260826_01",
+      "calculation_id": "Gate1M2ScalarZeroLapseExtension",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "INVALID_RUN",
+      "classification": "GATE1_SCALAR_ZERO_LAPSE_HARNESS_STRUCTURAL_EQUALITY_FALSE_NEGATIVE",
+      "verdict": null,
+      "programme_impact": null
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited fixed-a m=2 model provenance required by research-run-evidence/v1; this one-shot has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each observed authoritative G1.zero.* exact check id",
+      "authoritative_exact_check_ids": [
+        "G1.zero.starobinsky_global_square",
+        "G1.zero.global_lower_offset"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_invalid_run_closeout",
+      "authorization_commit": "1f0fc7d17cc704577db601071e46563a37db24f0",
+      "authorization_decision_path": "docs/decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md",
+      "authorization_decision_sha256": "afad6e26b8445db8a7e1e04e31397768662c0ea6b1a2ecf0210bdd84fece6e61",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION_INPUTS.json",
+      "input_manifest_sha256": "5667cb42bbc7eb72ae50de05cc1b0abfbc12bf22c8036f6c59c6f5427644cd0e",
+      "input_manifest_introduced_in_commit": "1f0fc7d17cc704577db601071e46563a37db24f0",
+      "upstream_result_path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_RESULT.json",
+      "upstream_result_sha256": "ad7c7f9ccf79047d0994eea3667b07c1fbb9795e7187c9730c5c6d819956f243",
+      "launch_receipt": {
+        "path": ".git/ice-launches/GATE1_ZERO_LAPSE_20260826_01",
+        "kind": "empty_exclusive_directory",
+        "birth_utc": "2026-08-26T05:42:14.025056895Z",
+        "contents": [],
+        "acquired": true,
+        "authorized_launches_observed": 1
+      },
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION_RESULT.json",
+      "raw_result_present": false,
+      "raw_result_outer_sha256": null,
+      "raw_result_payload_sha256_without_self": null,
+      "raw_result_size_bytes": null,
+      "report_path": "cpt_temporal_folded_susy/GATE1_SCALAR_ZERO_LAPSE_EXTENSION.md",
+      "report_sha256": "02c9b6f2c82b921e4dea5bedb8fa43901923e50e0c9c932dc8f8a260daeab0b5"
+    },
+    "runtime": {
+      "start_utc": "2026-08-26T05:42:12Z",
+      "wall_time_seconds": 2.349,
+      "wall_clock_source": "Bash time with TIMEFORMAT='WALL_SECONDS=%3R'",
+      "wall_clock_cap_seconds": 30,
+      "exit_code": 1,
+      "arguments": [],
+      "stdout_result_prefix_emitted": false,
+      "stderr_complete_capture_persisted": false,
+      "stderr_cap_bytes": 65536,
+      "stderr_cap_exceeded": false,
+      "stderr_terminal_exception": "AssertionError",
+      "stderr_tail": "AssertionError: [EXACT FAIL] G1.zero.global_lower_offset: u(q)+6*pi^2*a/hbar is exactly a positive coefficient times a real square for a,hbar>0",
+      "root_calls": 0,
+      "ode_calls": 0,
+      "evaluator_reconciliation_calls": 0,
+      "numerical_samples": 0,
+      "automatic_descendants": 0,
+      "adjacent_result_files": 0
+    },
+    "failure": {
+      "stage": "EXACT_CALCULATION_BEFORE_RESULT_BUILD_AND_WRITE",
+      "failed_check_id": "G1.zero.global_lower_offset",
+      "exact_checks_attempted": 2,
+      "exact_checks_passed_before_failure": 1,
+      "exact_checks_failed": 1,
+      "theorem_guards_reached": 0,
+      "numerical_checks_reached": 0,
+      "cause": "the predicate simplified only u_square+lower_offset and then used SymPy structural equality against the unsimplified square expression",
+      "source_construction": "u_square is defined as -lower_offset plus square_coefficient times the same square",
+      "interpretation": "HARNESS_STRUCTURAL_EQUALITY_FALSE_NEGATIVE_NOT_SCIENTIFIC_COUNTEREVIDENCE",
+      "mathematical_identity_refuted": false,
+      "canonical_boundary_question_decided": false
+    },
+    "source_scope": {
+      "frozen_sources": [
+        "Phase 27 T=i*N and below-origin side",
+        "consumed Gate-1 scalar source-link result",
+        "Chakrabarti-Shafikov arXiv:1505.01230",
+        "Brunetti-Fredenhagen arXiv:math-ph/9903028"
+      ],
+      "analytic_theorem_guards_reached": [],
+      "new_source_claims_made": false
+    },
+    "inherited_scientific_state": {
+      "nonzero_lapse_declared_scalar_source_link": "KEEP",
+      "zero_lapse_distribution": "OPEN",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "scientific_verdict_from_this_run": null,
+      "decision_table_row_matched": null
+    },
+    "promoted_outputs": {
+      "physical_original_cycle": null,
+      "full_joint_orientation": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "automatic_next": null
+    },
+    "closeout": {
+      "window_state": "CONSUMED_FAILED_EXACT_CHECK",
+      "execution_enabled": false,
+      "maximum_launches": 1,
+      "launch_receipt_acquired": true,
+      "result_present": false,
+      "run_status": "INVALID_RUN",
+      "scientific_verdict": null,
+      "retry_authorized": false,
+      "reproduction_authorized": false,
+      "automatic_next": null,
+      "runner_reexecuted_during_review": false,
+      "runner_edited_during_review": false
+    }
+  }
+}

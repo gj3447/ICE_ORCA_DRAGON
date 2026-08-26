@@ -1,7 +1,7 @@
 # ICE Ragnarok 회로 차단기
 
-> **상태:** ACTIVE operational containment — Phase 56 및 두 bounded Gate-1 window consumed,
-> scalar zero-lapse one-shot authorized, `GATE1_ZERO_LAPSE_AUTHORIZED`
+> **상태:** ACTIVE operational containment — Phase 56 및 세 bounded Gate-1 window consumed,
+> no active research window, `GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN`
 > **발효:** 2026-08-23
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
@@ -27,6 +27,12 @@
 > [`ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md)에
 > 동결했다. 이것은 Phase 57, full replay, retry, 자동 후손 또는 TOE 권한이 아니다.
 
+> **2026-08-26 zero-lapse 실행 종결:** sole invocation은 Bash 기준 `2.349 s`, exit `1`로
+> 끝났고 result를 쓰지 못했다. 실패 지점은 `G1.zero.global_lower_offset`이며, 독립 감사는
+> asymmetric SymPy structural equality의 harness false negative로 판정했다. 이는 square identity의
+> 반증이 아니지만 canonical boundary/extension verdict의 증거도 아니다. exclusive receipt가
+> window를 소진했으며 retry, `repro`, 수정 runner 및 자동 후손은 승인되지 않는다.
+
 ## 결정
 
 현재 판정은 다음 세 문장을 동시에 보존한다.
@@ -43,7 +49,7 @@ launch/provenance conditioning으로 이어진 **저장 backend 및 재구성 la
 Phase 56 종결 진단과 함께 `KILL`한다. 실패 원인을 더 작은 evaluator·dtype·solver·residual·provenance
 Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
-- 운영 상태는 exact scalar zero-lapse one-shot만 연 `GATE1_ZERO_LAPSE_AUTHORIZED`이며
+- 운영 상태는 `GATE1_ZERO_LAPSE_CONSUMED_INVALID_RUN`이며 active bounded research window는 없다.
   containment는 계속 active다.
 - Phase 56의 유일한 terminal-closeout 예외는 실행·독립 재현을 완료해 소진됐다.
 - 2026-08-25의 번호 없는 Gate-1 exact window도 한 번의 `VALID_RUN` 뒤 소진됐으며 retry나
@@ -51,9 +57,10 @@ Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 - 2026-08-26의 번호 없는 `gate1_scalar_source_link`는 runner/input SHA-256, exact basename 또는
   relpath, 무인자, clean core, 30초/250,000-byte 상한 아래 한 번 실행되어 소진됐다. `.git` 내부
   exclusive launch receipt가 재실행을 차단하며 retry/repro/rename은 허용하지 않는다.
-- `gate1_scalar_zero_lapse_extension`만 새 runner/input SHA-256과 upstream result hash에 묶여
-  `AUTHORIZED_NOT_YET_RUN`이다. exact 이름·무인자 `ice run` 한 번 외에는 실행할 수 없고,
-  receipt가 생기는 즉시 성공/실패/timeout과 무관하게 소진된다. `repro`는 허용하지 않는다.
+- `gate1_scalar_zero_lapse_extension`은 새 runner/input SHA-256과 upstream result hash에 묶인 sole
+  invocation에서 exact PASS 1개 뒤 structural-equality exact FAIL 1개로 중단됐다. result와 scientific
+  verdict는 없고 zero-lapse distribution은 `OPEN`이다. receipt가 window를 소진했으므로 수정 runner,
+  retry, `repro`, rename 또는 자동 descendant는 허용하지 않는다.
 - 정확히 동결된 Phase 11–50 실행체는 역사 검산용 allowlist로 허용한다. KILL 범위인 Phase
   51–55 재실행, Phase 56 변종, Phase 토큰이 없거나 이름을 바꾼 새 core 실행체, Phase 57 이상은
   `./ice run`과 `./ice repro`에서 `RESEARCH_PHASE_PAUSED`로 거부한다.
