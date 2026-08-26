@@ -23,21 +23,22 @@ The repository preserves speculative motivations while turning them into scoped 
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
 
-> **Bounded Gate-1 source-link authorization (2026-08-26):** The Phase 51–56 saved-backend/reconstructed-launch
+> **Bounded Gate-1 source-link result review (2026-08-26):** The Phase 51–56 saved-backend/reconstructed-launch
 > reconciliation route remains `KILL`, and the exact Phase 56 terminal closeout remains consumed.
 > One non-numbered, exact-hash Gate-1 end-admissibility calculation ran under strict caps and has also
 > been consumed. It kills the Phase-39 straight unbounded field completion and the constant-straight-line
-> model class on its declared slice, not Gate 1. A separate, non-numbered exact-hash window now permits
-> exactly one no-argument execution of the fixed-\(a\), \(m=2\) scalar phase-space/source-link discriminator.
-> It declares a bounded test cycle rather than recovering a physical original joint cycle. Apart from that
-> sole terminal invocation, only the frozen Phase 11–50 historical allowlist is executable; Phase 51+,
-> renamed descendants, Phase 57+, replay, and retries are blocked.
+> model class on its declared slice, not Gate 1. A separate, non-numbered exact-hash fixed-\(a\), \(m=2\)
+> scalar phase-space/source-link discriminator has now completed its sole terminal invocation. It keeps the
+> declared reduced scalar source link with orientation \(+1\) on nonzero lapse arms, while the zero-including
+> full \(q\)-paired distribution and physical original joint cycle remain open. The window is consumed.
+> Only the frozen Phase 11–50 historical allowlist is executable; Phase 51+, renamed descendants, Phase 57+,
+> replay, and retries are blocked.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
 > Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
 > the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the
 > [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md),
-> the [bounded Gate-1 resume](docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md), and the
-> [bounded scalar source-link resume](docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md), and the
+> the [bounded Gate-1 resume](docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md),
+> the [bounded scalar source-link resume](docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md), and the
 > [LFS migration ledger](docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
 
 The programme's current philosophical synthesis is documented in
@@ -286,11 +287,11 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 
 | Surface | Committed state at this revision | Authority |
 |---|---:|---|
-| runnable Python kernels | 88 | `./ice list --json` |
+| discovered Python kernels | 90 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology collection | 3 independent graphs; 876 nodes, 2489 edges, 220 claims: 127 `SUPPORTED`, 88 `CONTRADICTED`, 5 `INCONCLUSIVE` | `./ice ontology summary` |
-| hash-tracked ontology records | 119 evidence nodes, 197 artifacts, 8 policies; 205/205 recorded hashes verified; 33 explicit unresolved-bridge warnings | `./ice ontology validate` |
+| research ontology collection | 3 independent graphs; 899 nodes, 2566 edges, 227 claims: 133 `SUPPORTED`, 89 `CONTRADICTED`, 5 `INCONCLUSIVE` | `./ice ontology summary` |
+| hash-tracked ontology records | 122 evidence nodes, 68 open problems, 202 artifacts, 9 policies; 211/211 recorded hashes verified; 33 explicit unresolved-bridge warnings | `./ice ontology validate` |
 | named exact checks in the CPT Phase 16--56 snapshots | 498, all `PASS` | CPT phase result payloads in the ontology |
 | typed numerical checks in those snapshots | 360 = 343 `PASS` + 14 `FAIL` + 3 `INCONCLUSIVE` | CPT phase result payloads in the ontology |
 | latest committed CPT seam phase | Phase 56 terminal closeout (execution consumed) | [`PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md`](cpt_temporal_folded_susy/PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md) |

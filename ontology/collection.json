@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-26T00:23:11Z",
+  "updated_at_utc": "2026-08-26T04:18:00Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -65,7 +65,7 @@
       "includes": [
         "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
         "the bounded Phase-56 terminal diagnostic and post-Phase-56 hard stop",
-        "the execution-free Gate-1 phase-locked branch, principal affine phase-band reduction, and full-joint boundary",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, and zero-lapse/full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -140,7 +140,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 consumed the bounded diagnostic exception and forbids full replay, Phase 57, and global promotion. The straight-line KILL closes only its anchor-through homogeneous model class. Execution-free exact work opens a phase-locked affine good-field-end branch and narrows the strict full-rate-good horizontal affine tails to one principal reduced class, but convergence does not select its representative and the recorded sources do not supply the physical joint cycle or global vector. Gate 1 stays open.",
+      "answer": "No. Phase 56 and both bounded Gate-1 windows are consumed; full replay, Phase 57 and global promotion remain forbidden. The straight-line KILL closes only its anchor-through homogeneous class. Exact work narrows affine tails to one reduced class; the ordered scalar one-shot directly links the newly declared scalar control to the declared 0<lambda<=1 Gamma_lambda representatives with orientation +1 on nonzero lapse arms, and the prior contraction supports the scoped reduced-class KEEP. It neither selects lambda=1 nor establishes the zero-including full q-paired distribution, physical joint cycle or global vector. Gate 1 stays open.",
       "refs": [
         {
           "graph": "cpt",
@@ -161,6 +161,10 @@
         {
           "graph": "cpt",
           "node": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN"
         },
         {
           "graph": "cpt",

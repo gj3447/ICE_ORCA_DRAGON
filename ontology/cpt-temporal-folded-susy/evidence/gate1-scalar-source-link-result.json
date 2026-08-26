@@ -1,0 +1,233 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_SCALAR_SOURCE_LINK_20260826_01",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-26T04:12:08Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_scalar_source_link",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_scalar_source_link.py",
+    "sha256": "896f73384368f2fb20779ca780acd7676abc794d45796a3577a965f169947fbe",
+    "introduced_in_commit": "392076099bd0282d0954b377792a18960c0a43f3"
+  },
+  "exact_checks": 16,
+  "checks": [
+    {
+      "id": "P39.G1.source.inherited_m2_phase_space_action",
+      "status": "PASS",
+      "statement": "the two h=1/2 scalar elements reduce exactly to q(p0-p1)-z(p0^2+p1^2)/(4*mu)-z*U(q)"
+    },
+    {
+      "id": "P39.G1.source.stationary_scalar_momenta",
+      "status": "PASS",
+      "statement": "the unique scalar Gaussian saddle is p0=2*mu*q/z and p1=-2*mu*q/z for z!=0"
+    },
+    {
+      "id": "P39.G1.source.momentum_elimination",
+      "status": "PASS",
+      "statement": "eliminating both scalar momenta gives I2=2*mu*q^2/z-z*U(q)"
+    },
+    {
+      "id": "P39.G1.source.two_momentum_square_completion",
+      "status": "PASS",
+      "statement": "the ordered two-momentum integral is a product of two identical damped Gaussian translations"
+    },
+    {
+      "id": "P39.G1.source.ordered_gaussian_prefactor",
+      "status": "PASS",
+      "statement": "with dp0 wedge dp1/(2*pi*hbar)^2, Re(i*z)=epsilon>0 and the Gaussian-plane theorem gives Jp=mu/(pi*i*hbar*z)"
+    },
+    {
+      "id": "P39.G1.source.wick_integrand_identity",
+      "status": "PASS",
+      "statement": "under T=i*z, exp(i*I2/hbar)=exp(-S2/hbar) after momentum elimination"
+    },
+    {
+      "id": "P39.G1.source.prefactor_in_T_convention",
+      "status": "PASS",
+      "statement": "the same ordered scalar prefactor is Jp=2*pi*a^3/(hbar*T)"
+    },
+    {
+      "id": "P39.G1.source.positive_lapse_fresnel_orientation",
+      "status": "PASS",
+      "statement": "for N>0 each ordered real momentum contributes exp(-i*pi/4), so their product is -i and Jp=-i*2*pi*a^3/(hbar*N)"
+    },
+    {
+      "id": "P39.G1.source.negative_lapse_fresnel_orientation",
+      "status": "PASS",
+      "statement": "for N<0 each ordered real momentum contributes exp(+i*pi/4), so their product is +i and Jp=+i*2*pi*a^3/(hbar*abs(N))"
+    },
+    {
+      "id": "P39.G1.source.arm_prefactors_are_conjugate",
+      "status": "PASS",
+      "statement": "the two real-lapse scalar prefactors glue by complex conjugation with no extra combined BFV/Maslov sign inside the declared scalar control"
+    },
+    {
+      "id": "P39.G1.source.affine_homotopy_phase_defect",
+      "status": "PASS",
+      "statement": "along q=u+i*s*lambda*psi/kappa the full-rate Starobinsky phase defect is (1-s*lambda)*psi"
+    },
+    {
+      "id": "P39.G1.source.positive_field_end_coefficient",
+      "status": "PASS",
+      "statement": "for abs(psi)<pi/2 the positive-field end has the strictly positive quadratic coefficient 2*mu*cos(psi)/rho"
+    },
+    {
+      "id": "P39.G1.source.rectangular_connector_measures",
+      "status": "PASS",
+      "statement": "horizontal pieces retain dq=du and finite-cutoff vertical connectors retain their explicit dq=i*lambda*psi/kappa ds orientation"
+    },
+    {
+      "id": "P39.G1.source.pure_q_gaussian_is_not_affine_certificate",
+      "status": "PASS",
+      "statement": "on either Gamma_lambda boundary arm the kinetic-only real part is linear in u and therefore tends to minus infinity at one end for every lambda>0"
+    },
+    {
+      "id": "P39.G1.source.boundary_arm_end_coefficients",
+      "status": "PASS",
+      "statement": "at T=+/-i*n, the negative-field Starobinsky coefficient contains sin(lambda*pi/2)>0 and the positive-field kinetic exponent grows as 4*pi^3*a^3*lambda*u/(kappa*n)"
+    },
+    {
+      "id": "P39.G1.source.zero_lapse_divisor_remains",
+      "status": "PASS",
+      "statement": "the momentum-first prefactor retains the z=0 divisor; its standard boundary distribution does not establish the full q-paired distribution on tests whose support crosses N=0"
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 16,
+    "numerical_checks": 0,
+    "calculation": {
+      "authorization_id": "GATE1_SOURCE_LINK_20260826_01",
+      "calculation_id": "Gate1M2ScalarPhaseSpaceSourceLink",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_NONZERO_LAPSE_SCALAR_SOURCE_LINK_MATCHES_ZERO_LAPSE_DISTRIBUTION_OPEN",
+      "verdict": "NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN",
+      "programme_impact": "NARROW"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited m=2 model provenance required by research-run-evidence/v1; this exact control has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative G1.source.* exact check id",
+      "authoritative_exact_check_ids": [
+        "G1.source.inherited_m2_phase_space_action",
+        "G1.source.stationary_scalar_momenta",
+        "G1.source.momentum_elimination",
+        "G1.source.two_momentum_square_completion",
+        "G1.source.ordered_gaussian_prefactor",
+        "G1.source.wick_integrand_identity",
+        "G1.source.prefactor_in_T_convention",
+        "G1.source.positive_lapse_fresnel_orientation",
+        "G1.source.negative_lapse_fresnel_orientation",
+        "G1.source.arm_prefactors_are_conjugate",
+        "G1.source.affine_homotopy_phase_defect",
+        "G1.source.positive_field_end_coefficient",
+        "G1.source.rectangular_connector_measures",
+        "G1.source.pure_q_gaussian_is_not_affine_certificate",
+        "G1.source.boundary_arm_end_coefficients",
+        "G1.source.zero_lapse_divisor_remains"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "authorization_commit": "392076099bd0282d0954b377792a18960c0a43f3",
+      "authorization_decision_path": "docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md",
+      "authorization_decision_sha256": "2d40aaa31a7bc274d50c3a89732886d374186724e595ea2441dca51c9bbf5c2e",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_INPUTS.json",
+      "input_manifest_sha256": "182ab0d04b2869cf01be39e0f73c02919ca4c9c17867f267e3daea915247ebd1",
+      "input_manifest_introduced_in_commit": "392076099bd0282d0954b377792a18960c0a43f3",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_RESULT.json",
+      "raw_result_outer_sha256": "ad7c7f9ccf79047d0994eea3667b07c1fbb9795e7187c9730c5c6d819956f243",
+      "raw_result_payload_sha256_without_self": "a3e9f17e7a5d0838cd295427bd161aabb2260b9d15f32b3364b1794ad997d04b",
+      "raw_result_size_bytes": 11117,
+      "report_path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK.md",
+      "report_sha256": "1bad856817974749633216b013f681bd2c2891a3d06c6b453ba945a942b36d68"
+    },
+    "runtime": {
+      "wall_time_seconds": 2.791651251,
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+      "root_calls": 0,
+      "ode_calls": 0,
+      "evaluator_reconciliation_calls": 0,
+      "automatic_descendants": 0
+    },
+    "scope": {
+      "declared_control_status": "NEW_BOUNDED_SCALAR_CONTROL_NOT_PHYSICAL_ORIGINAL",
+      "includes": [
+        "fixed positive a and the inherited m=2 scalar action",
+        "ordered real p0, p1 and q measure dp0 wedge dp1 wedge dq/(2*pi*hbar)^2",
+        "finite R=6/5 and the frozen epsilon-to-zero then lambda-to-zero order",
+        "0<lambda<=1 affine Gamma family and lapse tests in C_c^infinity((-R,0) union (0,R))",
+        "the scoped scalar orientation ratio +1"
+      ],
+      "excludes": [
+        "zero-including full q-paired lapse distributions and contact terms",
+        "lambda=1 or physical phase-lock source selection",
+        "varying a, p_a, BFV, ghost, Pfaffian or full determinant-line orientation",
+        "R-to-infinity, m-to-infinity, roots, ODEs, Stokes or intersection census",
+        "a physical original joint cycle, global n_sigma, physics or TOE promotion"
+      ]
+    },
+    "computed_facts": {
+      "stationary_momenta": {
+        "p0": "4*pi^2*a^3*q/(N-i*epsilon)",
+        "p1": "-4*pi^2*a^3*q/(N-i*epsilon)"
+      },
+      "momentum_prefactor": "2*pi*a^3/(hbar*T)",
+      "positive_lapse_scalar_phase": "-i",
+      "negative_lapse_scalar_phase": "+i",
+      "scalar_orientation_ratio": "+1",
+      "finite_epsilon_real_to_affine_equality": true,
+      "fixed_nonzero_lapse_arm_equality": true,
+      "lambda_family_equivalent_on_nonzero_arms": true,
+      "phase_locked_representative_selected": false,
+      "pure_q_gaussian_may_certify_source_link": false,
+      "reduced_affine_class_nonzero_arm_source_link": "KEEP",
+      "zero_lapse_distribution": "OPEN"
+    },
+    "theorem_guards": [
+      {
+        "id": "G1.guard.damped_gaussian_translation",
+        "verified": true,
+        "theorem": "two-dimensional Gaussian integral with Re(A)>0",
+        "domain": "epsilon>0, z=N-i*epsilon, a>0, hbar>0"
+      },
+      {
+        "id": "G1.guard.entire_rectangular_contour_homotopy",
+        "verified": true,
+        "theorem": "Cauchy deformation on finite rectangles followed by end bounds",
+        "domain": "Re(T)>0, abs(psi)<pi/2, 0<lambda<=1, 0<=s<=1"
+      },
+      {
+        "id": "G1.guard.nonzero_lapse_boundary_pairing",
+        "verified": true,
+        "theorem": "compact-support dominated boundary limit on each closed sub-arm away from zero",
+        "domain": "C_c^infinity((-R,0) union (0,R)), fixed R=6/5 and fixed 0<lambda<=1"
+      }
+    ],
+    "independent_read_only_review": {
+      "raw_payload_digest_recomputed": true,
+      "unique_exact_ids": 16,
+      "exact_entries_reviewed": 16,
+      "analytic_theorem_guards_reviewed_separately": 3,
+      "runner_reexecuted": false,
+      "conclusion_changing_error_found": false
+    },
+    "promoted_outputs": {
+      "physical_original_cycle": null,
+      "full_joint_orientation": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "automatic_next": null
+    }
+  }
+}

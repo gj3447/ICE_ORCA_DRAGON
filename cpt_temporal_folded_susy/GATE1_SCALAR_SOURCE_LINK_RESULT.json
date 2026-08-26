@@ -1,0 +1,228 @@
+{
+  "authorization_id": "GATE1_SOURCE_LINK_20260826_01",
+  "automatic_next": null,
+  "calculation_id": "Gate1M2ScalarPhaseSpaceSourceLink",
+  "classification": "GATE1_NONZERO_LAPSE_SCALAR_SOURCE_LINK_MATCHES_ZERO_LAPSE_DISTRIBUTION_OPEN",
+  "decision_trace": {
+    "matched_predeclared_condition": "the nonzero-lapse arm source link and scalar orientation match, but the zero-lapse distribution cannot be established without the inadmissible pure-q-Gaussian shortcut or an excluded limit",
+    "meaning": "keep only the fixed-a m=2 reduced scalar source link on the two nonzero lapse arms; the zero-lapse distribution and full joint cycle remain open",
+    "source_control_status": "NEW_BOUNDED_SCALAR_CONTROL_NOT_PHYSICAL_ORIGINAL"
+  },
+  "environment": {
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "affine_homotopy": {
+      "boundary_negative_end_factor": "sin(pi*lambda/2)",
+      "boundary_positive_end_coefficient": "2*sqrt(6)*pi**3*a**3*lambda/n",
+      "horizontal_measure": "dq=du",
+      "negative_end_leading_real_coefficient": "3*pi**2*a**3*rho*exp(-2*sqrt(6)*phi/3)*cos(psi*(-lambda*s + 1))/2",
+      "phase_defect": "psi*(-lambda*s + 1)",
+      "positive_end_kinetic_coefficient": "4*pi**2*a**3*cos(psi)/rho",
+      "q": "sqrt(6)*I*lambda*psi*s/2 + u",
+      "vertical_connector_measure": "dq=i*lambda*psi/kappa ds"
+    },
+    "configuration_action": "-4*I*pi**2*a**3*q**2/(N - I*epsilon) + 2*I*pi**2*(N - I*epsilon)*(3*a**3*(1 - exp(-sqrt(6)*(phi + q/2)/3))**2/4 - 3*a)",
+    "eliminated_action": "pi**2*a*(8*a**2*q**2*exp(sqrt(6)*(2*phi + q)/3) + 3*(N - I*epsilon)**2*(-a**2*(1 - exp(sqrt(6)*(2*phi + q)/6))**2 + 4*exp(sqrt(6)*(2*phi + q)/3)))*exp(-sqrt(6)*(2*phi + q)/3)/(2*(N - I*epsilon))",
+    "lorentzian_action": "q*(p_0 - p_1) - 2*pi**2*(N - I*epsilon)*(3*a**3*(1 - exp(-sqrt(6)*(phi + q/2)/3))**2/4 - 3*a) - (N - I*epsilon)*(p_0**2 + p_1**2)/(8*pi**2*a**3)",
+    "momentum_prefactor": "-2*I*pi*a**3/(hbar*(N - I*epsilon))",
+    "momentum_prefactor_in_T": "-2*I*pi*a**3/(hbar*(N - I*epsilon))",
+    "open_scope": {
+      "N_zero_contact_terms": "OPEN",
+      "full_joint_orientation": null,
+      "momentum_prefactor_boundary_distribution": "(2*pi*a^3/hbar)*(pi*delta(N)-i*PV(1/N))",
+      "physical_original_cycle": null,
+      "varying_a_or_BFV_extension": null,
+      "zero_including_lapse_distribution": "OPEN"
+    },
+    "proved_scope": {
+      "finite_epsilon_full_action_real_to_affine_equality": true,
+      "fixed_nonzero_lapse_arm_boundary_equality": true,
+      "lambda_family_equivalent_on_nonzero_arms": true,
+      "lambda_one_selected": false,
+      "scalar_orientation_ratio": "+1"
+    },
+    "pure_q_gaussian_negative_control": {
+      "boundary_arm_real_part": "2*sqrt(6)*pi**3*a**3*lambda*u/n",
+      "may_certify_source_link": false,
+      "status": "ONE_EXPONENTIALLY_GROWING_END_FOR_EVERY_NONZERO_SHIFT"
+    },
+    "real_lapse_arm_prefactors": {
+      "negative": "2*I*pi*a**3/(hbar*n)",
+      "ordered_slice_phases": {
+        "negative": "exp(+i*pi/4) twice",
+        "positive": "exp(-i*pi/4) twice"
+      },
+      "positive": "-2*I*pi*a**3/(hbar*n)"
+    },
+    "stationary_momenta": {
+      "p_phi_0": "4*pi**2*a**3*q/(N - I*epsilon)",
+      "p_phi_1": "-4*pi**2*a**3*q/(N - I*epsilon)"
+    },
+    "symbols": {
+      "T": "I*(N - I*epsilon)",
+      "U_of_q": "2*pi**2*(3*a**3*(1 - exp(-sqrt(6)*(phi + q/2)/3))**2/4 - 3*a)",
+      "kappa": "sqrt(6)/3",
+      "mu": "2*pi**2*a**3",
+      "z": "N - I*epsilon"
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.source.inherited_m2_phase_space_action",
+      "passed": true,
+      "statement": "the two h=1/2 scalar elements reduce exactly to q(p0-p1)-z(p0^2+p1^2)/(4*mu)-z*U(q)"
+    },
+    {
+      "id": "G1.source.stationary_scalar_momenta",
+      "passed": true,
+      "statement": "the unique scalar Gaussian saddle is p0=2*mu*q/z and p1=-2*mu*q/z for z!=0"
+    },
+    {
+      "id": "G1.source.momentum_elimination",
+      "passed": true,
+      "statement": "eliminating both scalar momenta gives I2=2*mu*q^2/z-z*U(q)"
+    },
+    {
+      "id": "G1.source.two_momentum_square_completion",
+      "passed": true,
+      "statement": "the ordered two-momentum integral is a product of two identical damped Gaussian translations"
+    },
+    {
+      "id": "G1.source.ordered_gaussian_prefactor",
+      "passed": true,
+      "statement": "with dp0 wedge dp1/(2*pi*hbar)^2, Re(i*z)=epsilon>0 and the Gaussian-plane theorem gives Jp=mu/(pi*i*hbar*z)"
+    },
+    {
+      "id": "G1.source.wick_integrand_identity",
+      "passed": true,
+      "statement": "under T=i*z, exp(i*I2/hbar)=exp(-S2/hbar) after momentum elimination"
+    },
+    {
+      "id": "G1.source.prefactor_in_T_convention",
+      "passed": true,
+      "statement": "the same ordered scalar prefactor is Jp=2*pi*a^3/(hbar*T)"
+    },
+    {
+      "id": "G1.source.positive_lapse_fresnel_orientation",
+      "passed": true,
+      "statement": "for N>0 each ordered real momentum contributes exp(-i*pi/4), so their product is -i and Jp=-i*2*pi*a^3/(hbar*N)"
+    },
+    {
+      "id": "G1.source.negative_lapse_fresnel_orientation",
+      "passed": true,
+      "statement": "for N<0 each ordered real momentum contributes exp(+i*pi/4), so their product is +i and Jp=+i*2*pi*a^3/(hbar*abs(N))"
+    },
+    {
+      "id": "G1.source.arm_prefactors_are_conjugate",
+      "passed": true,
+      "statement": "the two real-lapse scalar prefactors glue by complex conjugation with no extra combined BFV/Maslov sign"
+    },
+    {
+      "id": "G1.source.affine_homotopy_phase_defect",
+      "passed": true,
+      "statement": "along q=u+i*s*lambda*psi/kappa the full-rate Starobinsky phase defect is (1-s*lambda)*psi"
+    },
+    {
+      "id": "G1.source.positive_field_end_coefficient",
+      "passed": true,
+      "statement": "for |psi|<pi/2 the positive-field end has the strictly positive quadratic coefficient 2*mu*cos(psi)/rho"
+    },
+    {
+      "id": "G1.source.rectangular_connector_measures",
+      "passed": true,
+      "statement": "horizontal pieces retain dq=du and finite-cutoff vertical connectors retain their explicit dq=i*lambda*psi/kappa ds orientation"
+    },
+    {
+      "id": "G1.source.pure_q_gaussian_is_not_affine_certificate",
+      "passed": true,
+      "statement": "on either Gamma_lambda boundary arm the kinetic-only real part is linear in u and therefore tends to minus infinity at one end for every lambda>0"
+    },
+    {
+      "id": "G1.source.boundary_arm_end_coefficients",
+      "passed": true,
+      "statement": "at T=+/-i*n, the negative-field Starobinsky coefficient contains sin(lambda*pi/2)>0 and the positive-field kinetic exponent grows as 4*pi^3*a^3*lambda*u/(kappa*n)"
+    },
+    {
+      "id": "G1.source.zero_lapse_divisor_remains",
+      "passed": true,
+      "statement": "the momentum-first prefactor retains the z=0 divisor; its own delta-plus-principal-value boundary is standard, but fixed-nonzero-arm equality does not establish the full q-paired distribution on tests whose support crosses N=0"
+    }
+  ],
+  "frozen_input_contract": {
+    "epistemic_label": "NEW_TEST_CYCLE_DECLARATION_NOT_DERIVED_PHYSICAL_ORIGINAL",
+    "fixed_limit_order": [
+      "At fixed epsilon>0, finite R, and 0<lambda<=1, integrate p_phi_0 and p_phi_1 first with the full Gaussian prefactor and branch.",
+      "Remove a symmetric field cutoff Y by the declared entire contour homotopy, proving the regulated full-action equality before any lapse limit.",
+      "Pair the fixed-nonzero-x equality with C_c^infinity((-R,0) union (0,R)) lapse tests.",
+      "Take epsilon to 0+ at fixed lambda on the two nonzero-lapse arms, where the full Starobinsky action retains good ends.",
+      "Take lambda to 0+ on those arm distributions; regulated equality is lambda-independent, so no scalar orientation jump is introduced there.",
+      "Test, but do not assume, extension to zero-including C_c^infinity((-R,R)); the pure-q-Gaussian shortcut is inadmissible on shifted arms.",
+      "Do not take R to infinity, m to infinity, a varying-a limit, a BFV limit, or an automatic descendant."
+    ],
+    "kind": "EXACT_BOUNDED_DISTRIBUTIONAL_CONTROL",
+    "question": "Does one explicitly declared real m=2 scalar phase-space control induce the same regulated affine-family amplitude and principal Gaussian lapse-boundary distribution with the same scalar orientation?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_INPUTS.json",
+    "sha256": "182ab0d04b2869cf01be39e0f73c02919ca4c9c17867f267e3daea915247ebd1"
+  },
+  "numbered_phase": null,
+  "numerical_checks": [],
+  "phase_locked_representative_selected": false,
+  "programme_impact": "NARROW",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "complete_global_signed_intersection_vector": null,
+    "full_joint_orientation": null,
+    "global_n_sigma": null,
+    "physical_original_cycle": null,
+    "physics_claim": null
+  },
+  "reduced_affine_class_nonzero_arm_source_link": "KEEP",
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 250000,
+    "automatic_descendants": 0,
+    "evaluator_reconciliation_calls": 0,
+    "numerical_samples": 0,
+    "ode_calls": 0,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "a3e9f17e7a5d0838cd295427bd161aabb2260b9d15f32b3364b1794ad997d04b",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_scalar_source_link.py",
+    "sha256": "896f73384368f2fb20779ca780acd7676abc794d45796a3577a965f169947fbe"
+  },
+  "schema_version": "ice.gate1.scalar-source-link.result.v1",
+  "theorem_guards": [
+    {
+      "domain": "epsilon>0, z=N-i*epsilon, a>0, hbar>0",
+      "id": "G1.guard.damped_gaussian_translation",
+      "statement": "the completed-square translations are entire and the ordered real momentum integral has the pinned principal normalization",
+      "theorem": "two-dimensional Gaussian integral with Re(A)>0",
+      "verified": true
+    },
+    {
+      "domain": "Re(T)>0, |psi|<pi/2, 0<lambda<=1, 0<=s<=1",
+      "id": "G1.guard.entire_rectangular_contour_homotopy",
+      "statement": "the integrand is entire in q; cos((1-s*lambda)*psi)>0 controls the negative Starobinsky end and 2*mu*cos(psi)/rho>0 controls the positive kinetic end, with connector measures retained",
+      "theorem": "Cauchy deformation on finite rectangles followed by end bounds",
+      "verified": true
+    },
+    {
+      "domain": "test functions in C_c^infinity((-R,0) union (0,R)), fixed R=6/5 and fixed 0<lambda<=1",
+      "id": "G1.guard.nonzero_lapse_boundary_pairing",
+      "statement": "finite-epsilon equality passes to the two fixed-nonzero boundary arms; lambda-independence gives the same lambda->0+ arm distribution without selecting lambda=1",
+      "theorem": "compact-support dominated boundary limit on each closed sub-arm away from zero",
+      "verified": true
+    }
+  ],
+  "verdict": "NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN",
+  "zero_lapse_distribution": "OPEN"
+}

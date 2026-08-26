@@ -1,6 +1,6 @@
 # Gate 1 scalar source-link 단일 bounded 재개
 
-> **상태:** `AUTHORIZED_NOT_CONSUMED`
+> **상태:** `CONSUMED` — 2026-08-26 `VALID_RUN`, 결과 검토 단계
 > **승인:** 2026-08-26 사용자의 명시적 “다음 연구 진행” 지시
 > **권한 ID:** `GATE1_SOURCE_LINK_20260826_01`
 > **범위:** 번호 없는 fixed-\(a\), \(m=2\) scalar phase-space/source-link exact 계산 한 번
@@ -112,5 +112,37 @@ physics/TOE claim은 `null`, Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion
 
 ## 실행 후 receipt
 
-아직 실행하지 않았다. Authorization commit과 engineering/KG validation 뒤 위 exact command를
-한 번만 실행하고, 성공 또는 실패의 실제 receipt을 이 절에 기록한다.
+Authorization commit `392076099bd0282d0954b377792a18960c0a43f3` 뒤 frozen command를 정확히
+한 번 실행했다. 2.791651251초에 exit `0`이었고 exclusive private receipt가 window를 소진했다.
+
+```text
+run_status                                      = VALID_RUN
+classification                                  = GATE1_NONZERO_LAPSE_SCALAR_SOURCE_LINK_MATCHES_ZERO_LAPSE_DISTRIBUTION_OPEN
+verdict                                          = NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN
+exact checks                                     = 16/16 PASS
+analytic theorem guards                          = 3/3 separately reviewed
+numerical checks                                 = 0
+reduced_affine_class_nonzero_arm_source_link     = KEEP
+scalar orientation ratio                         = +1
+zero-lapse full q-paired distribution             = OPEN
+phase-locked representative selected              = false
+programme impact                                 = NARROW
+Gate 1                                           = OPEN_PARTIAL_PROGRESS
+global promotion                                 = PROHIBITED
+automatic_next                                   = null
+```
+
+결과는 11,117 bytes, SHA-256
+`ad7c7f9ccf79047d0994eea3667b07c1fbb9795e7187c9730c5c6d819956f243`이며 self-field 제외
+payload SHA-256은
+`a3e9f17e7a5d0838cd295427bd161aabb2260b9d15f32b3364b1794ad997d04b`다. 독립 읽기 전용 감사가
+digest, 16개 executable exact result entry, 세 theorem guard, momentum prefactor와 arm phase 및 end coefficient를
+재검산했으며 결론 변경은 없었다. theorem guard는 numerical check나 별도 runner 재실행이 아니라
+exact coefficient에 표준 Gaussian/Cauchy/dominated-boundary 정리를 적용한 analytic guard다.
+
+해석 정본은
+[`GATE1_SCALAR_SOURCE_LINK.md`](../../cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK.md)다. 이
+receipt은 비영 lapse-arm reduced scalar link만 `KEEP`한다. zero-including full \(q\)-paired
+distribution, \(\lambda=1\) source selection, physical original/full joint/BFV cycle, global coefficient와
+physics/TOE claim은 여전히 `OPEN` 또는 `null`이다. retry, replay, renamed descendant와 automatic
+continuation은 금지된다.

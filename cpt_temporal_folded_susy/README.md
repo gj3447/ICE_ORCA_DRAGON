@@ -117,13 +117,13 @@ manifest·receipt가 그 경로들을 sha-바인딩하므로 **이동하지 않�
 | `PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_INPUTS.json` · `phase56_lambda_half_launch_provenance_residual_conditioning.py` · `PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING_RESULT.json` · `PHASE56_LAMBDA_HALF_LAUNCH_PROVENANCE_RESIDUAL_CONDITIONING.md` | Phase 56 terminal closeout — lambda=0.5에서 fresh Phase-53-algorithm center/launch와 고정 `2 x 2` factorial, EL_long ODE 8개를 검사; 두 profile 모두 fresh-center 두 corner가 저장 target을 회복해 8/8 exact·8/8 numerical PASS. 이는 bounded diagnostic이며 full replay/Phase 57 실행권이 아니고 `next_phase=null`, route `KILL`, Gate 1 OPEN, physics/TOE `null` |
 | `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_INPUTS.json` · `gate1_straight_lift_end_admissibility.py` · `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY_RESULT.json` · `GATE1_STRAIGHT_LIFT_END_ADMISSIBILITY.md` | 2026-08-25 번호 없는 bounded Gate-1 계산 — Phase-39 straight completion과 declared constant-straight-line slice만 `KILL`; window는 소진됐고 Gate 1은 OPEN |
 | `GATE1_AFFINE_PHASE_BAND_RELATIVE_CLASS.md` · `GATE1_AFFINE_PHASE_BAND_ANALYTIC_EVIDENCE.json` | 소진 결과 뒤의 비실행 exact 분석 — \(0<\lambda<2\) affine phase-band가 양 끝을 살릴 수 있음을 분류하지만 source-derived joint cycle이나 대표 선택은 하지 않음 |
-| `GATE1_SCALAR_SOURCE_LINK_INPUTS.json` · `gate1_scalar_source_link.py` | 2026-08-26 번호 없는 일회성 source-link discriminator의 frozen input·runner — 새 fixed-\(a\), \(m=2\) scalar \((q,p)\) test control과 affine family의 비영 lapse-arm 연결만 검사하며 physical original/full joint/BFV/TOE 승격은 금지 |
+| `GATE1_SCALAR_SOURCE_LINK_INPUTS.json` · `gate1_scalar_source_link.py` · `GATE1_SCALAR_SOURCE_LINK_RESULT.json` · `GATE1_SCALAR_SOURCE_LINK.md` | 2026-08-26 번호 없는 일회성 source-link discriminator — 16/16 exact와 별도 analytic guard 3개가 새 fixed-\(a\), \(m=2\) scalar \((q,p)\) test control과 affine family의 비영 lapse-arm link/orientation \(+1\)을 지지; zero-including full \(q\)-paired distribution은 OPEN, physical original/full joint/BFV/TOE 출력은 `null`, window는 소진 |
 | `../ontology/cpt-temporal-folded-susy/graph.json` | Phase 15R–56의 concept→claim→evidence→scope→open-problem 연결을 담은 기계 판독 정본 |
 | `../ontology/cpt-temporal-folded-susy/README.md` | 위 그래프를 결과 중심으로 읽는 개념 지도와 추적 명령 |
 
 SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경유 v2).
 
-## 현재 경계 (Phase 55 + Phase 56 terminal closeout)
+## 현재 경계 (Phase 56 terminal closeout + bounded direct Gate-1 work)
 
 > **Ragnarok containment (2026-08-23):** Phase 51→56의 saved-backend/reconstructed-launch
 > reconciliation 경로는 Phase 56 종결 진단과 함께 `KILL`한다. Phase 56의 유일한 terminal-closeout
@@ -529,8 +529,9 @@ SYMPOSIUM측 원본 커밋: `c1f10f6` (2026-08-11, 5-반박자 적대감사 경�
 동결된 **Phase 56 lambda-half launch provenance / residual-conditioning audit 한 번**과
 2026-08-25 straight-lift window는 완료·소진됐다. 2026-08-26에는 새로 선언한 fixed-\(a\),
 \(m=2\) scalar \((q,p)\) control과 affine scalar class의 source link를 묻는 번호 없는 exact runner
-한 번만 별도 승인됐다. 성공·실패·timeout과 무관하게 terminal invocation으로 소진하며, 물리
-원본 joint cycle을 복원했다고 전제하지 않는다. `next_phase = null`은 유지되고 Phase 57이나 full
+한 번만 별도 승인됐고 `VALID_RUN` 뒤 소진됐다. 비영 lapse arm link는 scalar orientation \(+1\)로
+`KEEP`, zero-including full \(q\)-paired distribution은 `OPEN`이며 물리 원본 joint cycle을 복원하지
+않았다. `next_phase = null`은 유지되고 Phase 57이나 full
 replay를 열지 않는다. 2026-08-30 이후에도 회로 차단기 결정의 모든 조건과 사용자의 명시적 승인이
 없으면 아래 장기 항목을 실행 queue로 해석하지 않는다.
 

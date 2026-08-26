@@ -83,7 +83,7 @@ export const boundedGate1SourceLinkResultPath =
   "cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK_RESULT.json"
 export const boundedGate1SourceLinkAuthorizationId =
   "GATE1_SOURCE_LINK_20260826_01"
-export const boundedGate1SourceLinkExecutionEnabled: boolean = true
+export const boundedGate1SourceLinkExecutionEnabled: boolean = false
 
 export const boundedGate1InvocationDecision = (
   query: string,
@@ -104,7 +104,7 @@ export const boundedGate1InvocationDecision = (
 export const ragnarokStatus = {
   schema: "ice-ragnarok-circuit-breaker/v2",
   effective_date: "2026-08-26",
-  operational_state: "GATE1_SOURCE_LINK_AUTHORIZED",
+  operational_state: "GATE1_SOURCE_LINK_RESULT_REVIEW",
   pause_started_on: "2026-08-23",
   review_eligible_on: "2026-08-30",
   auto_resume: false,
@@ -187,7 +187,7 @@ export const ragnarokStatus = {
     numbered_phase: null
   },
   source_link_window: {
-    state: "AUTHORIZED_NOT_CONSUMED",
+    state: "CONSUMED",
     automatic_next: null,
     maximum_launches: 1,
     exact_script: boundedGate1SourceLinkScript,
@@ -219,7 +219,51 @@ export const ragnarokStatus = {
       numerical_samples: 0,
       automatic_descendants: 0
     },
-    execution_enabled: boundedGate1SourceLinkExecutionEnabled
+    execution_enabled: boundedGate1SourceLinkExecutionEnabled,
+    consumed: {
+      consumed_on: "2026-08-26",
+      observed_at_utc: "2026-08-26T04:12:08Z",
+      command:
+        "./ice run cpt_temporal_folded_susy/gate1_scalar_source_link",
+      authorization_commit: "392076099bd0282d0954b377792a18960c0a43f3",
+      launch_receipt:
+        ".git/ice-launches/GATE1_SOURCE_LINK_20260826_01",
+      wall_time_seconds: 2.791651251,
+      result_sha256:
+        "ad7c7f9ccf79047d0994eea3667b07c1fbb9795e7187c9730c5c6d819956f243",
+      payload_sha256_without_self:
+        "a3e9f17e7a5d0838cd295427bd161aabb2260b9d15f32b3364b1794ad997d04b",
+      result_bytes: 11_117,
+      run_status: "VALID_RUN",
+      classification:
+        "GATE1_NONZERO_LAPSE_SCALAR_SOURCE_LINK_MATCHES_ZERO_LAPSE_DISTRIBUTION_OPEN",
+      verdict: "NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN",
+      reduced_affine_class_nonzero_arm_source_link: "KEEP",
+      zero_lapse_distribution: "OPEN",
+      scalar_orientation_ratio: "+1",
+      phase_locked_representative_selected: false,
+      programme_impact: "NARROW",
+      exact_checks_passed: 16,
+      theorem_guards_verified: 3,
+      numerical_checks: 0,
+      gate1: "OPEN_PARTIAL_PROGRESS",
+      global_promotion: "PROHIBITED",
+      physical_original_cycle: null,
+      full_joint_orientation: null,
+      global_n_sigma: null,
+      physics_claim: null,
+      TOE_claim: null,
+      automatic_next: null,
+      independent_review: {
+        reviewed_on: "2026-08-26",
+        conclusion_changed: false,
+        raw_payload_digest_recomputed: true,
+        exact_entries_reviewed: 16,
+        theorem_guards_reviewed_separately: 3,
+        numerical_checks_expected: 0,
+        authoritative_decision_field: "top-level verdict"
+      }
+    }
   },
   verdicts: {
     ragnarok_pattern: "PRESENT",
@@ -266,7 +310,7 @@ export const ragnarokStatus = {
       next_phase: null
     },
     execution_provenance:
-      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_EXCLUSIVE_SOURCE_LINK_ONE_SHOT",
+      "PINNED_RUNNER_AND_INPUT_HASH_CLEAN_CORE_CONSUMED_SOURCE_LINK_RESULT",
     direct_python_bypass_authorized: false
   },
   repository_transport: {
@@ -477,7 +521,7 @@ const blockedRunError = (
         : `core research script '${relpath}'`
   return iceError(
     "RESEARCH_PHASE_PAUSED",
-    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout has been consumed, the killed route remains closed, and execution is limited to the frozen historical allowlist plus any exact hash-pinned Gate-1 window shown by \`ice status\``,
+    `${prefix} is blocked by ${ragnarokStatus.operational_state}; the Phase ${ragnarokStatus.containment.terminal_closeout_phase} closeout and both bounded Gate-1 windows have been consumed, the killed route remains closed, and execution is limited to the frozen historical allowlist unless \`ice status\` explicitly records a future hash-pinned window`,
     2
   )
 }

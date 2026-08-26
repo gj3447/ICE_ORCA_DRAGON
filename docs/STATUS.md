@@ -7,7 +7,7 @@
 
 | Component | State |
 |---|---|
-| Runnable catalog | 88 committed entries; `./ice list --json` is authoritative for the working tree |
+| Discovered catalog | 90 committed entries; `./ice list --json` is authoritative and execution remains subject to the circuit breaker |
 | Control plane | strict TypeScript, Effect 3, Node 24 contract, exact `package-lock.json` |
 | Numerical runtime | Python 3.13 contract with exact `uv.lock` |
 | Mapped reproduction cases | 14 |
@@ -15,7 +15,7 @@
 | Local engineering gate | `npm run check` (strict typecheck + Vitest suite) |
 | Environment gate | `./ice doctor` |
 | Scientific workflow | lean source → calculation → independent check → scoped interpretation |
-| Ragnarok containment | `GATE1_SOURCE_LINK_AUTHORIZED`; Phase 56 and the 2026-08-25 window are consumed; one exact unnumbered scalar source-link invocation is authorized alongside the frozen P11–P50 historical allowlist; P51+, replay, retry, and renamed core work remain blocked |
+| Ragnarok containment | `GATE1_SOURCE_LINK_RESULT_REVIEW`; Phase 56 and both non-numbered Gate-1 windows are consumed; only the frozen P11–P50 historical allowlist is executable; P51+, replay, retry, and renamed core work remain blocked |
 | Phase 56 closeout | `VALID_RUN`; fresh center/launch recovers the saved lambda-half target under both profiles; `next_phase=null` |
 | Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
 | Remote transport | `PUSHED_WITH_GIT_LFS`; exact Phase-44 path is a 529,370,671-byte Git LFS object, with 76 rewritten unpublished commits, no force-push, and a verified fresh remote read-back |
@@ -29,11 +29,10 @@ count or rough “N+” inventory as the runnable catalog.
 launch-provenance/residual-conditioning question and set `next_phase = null`; the one-shot closeout
 permission is now consumed. The 2026-08-25 straight-lift window is also consumed. On 2026-08-26 the user
 separately authorized exactly one no-argument invocation of the hash-pinned, non-numbered
-`gate1_scalar_source_link` discriminator. It uses a newly declared fixed-\(a\), \(m=2\) scalar phase-space
-control and does not recover a physical original cycle. Its runner and input hashes must both match, the
-core directory must be clean, and an exclusive private launch receipt consumes success, failure, or timeout.
-No reproduction surface is authorized. Apart from this exact exception, only the frozen Phase 11–50
-historical allowlist executes.
+`gate1_scalar_source_link` discriminator. It completed as a `VALID_RUN` and its exclusive private launch
+receipt consumed the window. It uses a newly declared fixed-\(a\), \(m=2\) scalar phase-space control and
+does not recover a physical original cycle. No retry or reproduction surface is authorized. Only the frozen
+Phase 11–50 historical allowlist now executes.
 The Phase-51→56 saved-backend/reconstructed-launch reconciliation route may not rerun Phase 51–55,
 substitute another Phase 56, generate Phase 57, perform a full replay, relax a threshold, or create
 another evaluator/dtype/solver/residual/provenance descendant.
@@ -41,6 +40,17 @@ Review becomes eligible on 2026-08-30 but never resumes automatically.
 
 The exact source-link authorization, limit order, decision table, and null-output boundary are recorded in
 [`decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`](decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md).
+
+### Gate-1 scalar source-link result
+
+The terminal invocation exited `0` in 2.79 seconds with 16/16 executable exact result entries PASS, three separately
+reviewed analytic theorem guards, and zero numerical/root/ODE/reconciliation/descendant calls. Ordered
+momentum integration gives \(J_p=2\pi a^3/(\hbar T)\), with conjugate \(-i,+i\) phases on the positive and
+negative lapse arms. The full Starobinsky contour homotopy preserves scalar orientation \(+1\) and matches
+the declared \(0<\lambda\le1\) \(\Gamma_\lambda\) representatives on tests supported away from \(N=0\). The scoped verdict is
+`NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN`: the nonzero-arm reduced scalar link is `KEEP`, but the zero-including
+full \(q\)-paired distribution, phase-lock selection and physical joint cycle remain open. See
+[`GATE1_SCALAR_SOURCE_LINK.md`](../cpt_temporal_folded_susy/GATE1_SCALAR_SOURCE_LINK.md).
 
 This containment does not erase real scoped progress or convert open science into a no-go. Gate 1 remains
 `OPEN_PARTIAL_PROGRESS`, required global/physics outputs remain null, and global promotion remains
@@ -420,11 +430,11 @@ and
 ## Research ontology memory
 
 The repository-local collection now catalogs three independent graphs—hypercomplex, legacy
-predictions/narrative, and CPT temporal-folded SUSY—with **876 nodes and 2489 directed relations**. It
-preserves 220 scoped claims (127 `SUPPORTED`, 88 `CONTRADICTED`, 5 `INCONCLUSIVE`), 119 evidence nodes,
-and 67 open problems. All 205 hash-bearing records validate (197 artifacts and 8 policies). The 33
+predictions/narrative, and CPT temporal-folded SUSY—with **899 nodes and 2566 directed relations**. It
+preserves 227 scoped claims (133 `SUPPORTED`, 89 `CONTRADICTED`, 5 `INCONCLUSIVE`), 122 evidence nodes,
+and 68 open problems. All 211 hash-bearing records validate (202 artifacts and 9 policies). The 33
 warnings are explicit unresolved external bridges, not validation failures. The CPT graph retains the
-Phase 16–56 snapshots and the post-Phase-56 hard stop; neither the collection nor its navigation paths
+Phase 16–56 snapshots, the consumed bounded Gate-1 results, and the post-Phase-56 hard stop; neither the collection nor its navigation paths
 authorize Phase 57, close Gate 1, or promote a physics claim.
 
 - [`../ontology/README.md`](../ontology/README.md) is the human collection map.

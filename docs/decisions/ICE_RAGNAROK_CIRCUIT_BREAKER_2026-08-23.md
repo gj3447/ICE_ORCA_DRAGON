@@ -1,7 +1,7 @@
 # ICE Ragnarok 회로 차단기
 
-> **상태:** ACTIVE operational containment — Phase 56 및 2026-08-25 Gate-1 window consumed;
-> 2026-08-26 scalar source-link one-shot `AUTHORIZED_NOT_CONSUMED`, `GATE1_SOURCE_LINK_AUTHORIZED`
+> **상태:** ACTIVE operational containment — Phase 56 및 두 bounded Gate-1 window consumed,
+> `GATE1_SOURCE_LINK_RESULT_REVIEW`
 > **발효:** 2026-08-23
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
@@ -15,8 +15,8 @@
 
 > **2026-08-26 국소 개정:** 사용자가 다음 연구 진행을 명시하여 예정 대기만 새로 선언한
 > fixed-\(a\), \(m=2\) scalar phase-space/source-link exact 계산 한 개에 한해 면제했다. 이 계산은
-> physical original cycle을 회수하지 않고 `NEW_BOUNDED_SCALAR_CONTROL`을 검사한다. 성공·실패·
-> timeout 모두 terminal invocation 한 번으로 window를 소진하며, Phase 51--56 route `KILL`,
+> physical original cycle을 회수하지 않고 `NEW_BOUNDED_SCALAR_CONTROL`을 검사했다. `VALID_RUN`으로
+> 끝나 window가 소진됐으며, Phase 51--56 route `KILL`,
 > Phase 57/full replay 차단, `next_phase=null`은 바뀌지 않는다. 정본은
 > [`ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md)다.
 
@@ -36,14 +36,14 @@ launch/provenance conditioning으로 이어진 **저장 backend 및 재구성 la
 Phase 56 종결 진단과 함께 `KILL`한다. 실패 원인을 더 작은 evaluator·dtype·solver·residual·provenance
 Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
-- 운영 상태는 별도 scalar source-link one-shot을 기록한 `GATE1_SOURCE_LINK_AUTHORIZED`이며
+- 운영 상태는 별도 scalar source-link 결과를 기록한 `GATE1_SOURCE_LINK_RESULT_REVIEW`이며
   containment는 계속 active다.
 - Phase 56의 유일한 terminal-closeout 예외는 실행·독립 재현을 완료해 소진됐다.
 - 2026-08-25의 번호 없는 Gate-1 exact window도 한 번의 `VALID_RUN` 뒤 소진됐으며 retry나
   자동 후손을 허용하지 않는다.
 - 2026-08-26의 번호 없는 `gate1_scalar_source_link`는 runner/input SHA-256, exact basename 또는
-  relpath, 무인자, clean core, 30초/250,000-byte 상한 아래 딱 한 번 `run`에서만 허용한다. `.git`
-  내부 exclusive launch receipt가 성공·실패·timeout을 모두 소비하며 retry/repro/rename은 차단한다.
+  relpath, 무인자, clean core, 30초/250,000-byte 상한 아래 한 번 실행되어 소진됐다. `.git` 내부
+  exclusive launch receipt가 재실행을 차단하며 retry/repro/rename은 허용하지 않는다.
 - 정확히 동결된 Phase 11–50 실행체는 역사 검산용 allowlist로 허용한다. KILL 범위인 Phase
   51–55 재실행, Phase 56 변종, Phase 토큰이 없거나 이름을 바꾼 새 core 실행체, Phase 57 이상은
   `./ice run`과 `./ice repro`에서 `RESEARCH_PHASE_PAUSED`로 거부한다.
@@ -82,6 +82,33 @@ corner는 저장 endpoint/residual target을 회복했다. 이 분류는 single-
 과학적 기록일 뿐 실행 권한이 아니다. `full_replay_authorized=false`, `phase57_authorized=false`,
 `continuation_route=KILL`은 그대로다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
 `PROHIBITED`, physics/TOE claim은 `null`이다.
+
+## Gate-1 scalar source-link terminal result
+
+2026-08-26T04:12:08Z exact command는 2.791651251초에 exit `0`으로 끝났다. canonical result는
+11,117 bytes, SHA-256
+`ad7c7f9ccf79047d0994eea3667b07c1fbb9795e7187c9730c5c6d819956f243`, self-field 제외 digest는
+`a3e9f17e7a5d0838cd295427bd161aabb2260b9d15f32b3364b1794ad997d04b`다.
+
+```text
+run_status                 = VALID_RUN
+classification             = GATE1_NONZERO_LAPSE_SCALAR_SOURCE_LINK_MATCHES_ZERO_LAPSE_DISTRIBUTION_OPEN
+exact checks               = 16/16 PASS
+analytic theorem guards    = 3/3 separately reviewed
+numerical/root/ODE calls   = 0/0/0
+nonzero-arm scalar link    = KEEP, orientation +1
+zero-lapse full q pairing  = OPEN
+phase-lock selected        = false
+Gate 1                     = OPEN_PARTIAL_PROGRESS
+global promotion           = PROHIBITED
+automatic_next             = null
+```
+
+이는 새로 선언한 fixed-\(a\), \(m=2\) scalar control의 비영 lapse-arm source link만 지지한다.
+\(N=0\)을 포함한 full \(q\)-paired distribution, physical original/full joint/BFV cycle, global
+coefficient와 physics/TOE claim은 얻지 않았다. 독립 읽기 전용 감사가 payload digest, momentum
+prefactor와 두 arm 위상, end coefficients, 16개 executable exact result entry와 세 analytic guard를 재검산했고 결론을
+바꾸지 않았다. runner는 재실행하지 않았다.
 
 ## 과학적 경계
 

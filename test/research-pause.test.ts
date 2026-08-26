@@ -171,13 +171,11 @@ it("requires the exact bounded Gate-1 name and forbids arguments", () => {
   ).toEqual({ allowed: false, reason: "ARGUMENTS_FORBIDDEN" })
 })
 
-it("authorizes only the new exact source-link runner and keeps the old window consumed", () => {
+it("records both exact Gate-1 windows as consumed and blocks descendants", () => {
   const sourceLink = researchRunDecision(boundedGate1SourceLinkScript)
-  expect(sourceLink.allowed).toBe(true)
-  expect(sourceLink.reason).toBe("BOUNDED_GATE1_SOURCE_LINK")
-  expect(sourceLink.expected_sha256).toBe(
-    boundedGate1SourceLinkScriptSha256
-  )
+  expect(sourceLink.allowed).toBe(false)
+  expect(sourceLink.reason).toBe("CORE_ROUTE_PAUSED")
+  expect(sourceLink.expected_sha256).toBe(null)
   expect(researchRunDecision(boundedGate1Script).allowed).toBe(false)
 
   const basename = boundedGate1SourceLinkScript.split("/").at(-1)!
@@ -376,6 +374,60 @@ it("decodes only source-link results with the pinned identity, hashes, and null 
   }
 })
 
+it("binds the consumed source-link receipt to the one-shot result", async () => {
+  const resultBytes = await readFile(
+    join(process.cwd(), boundedGate1SourceLinkResultPath)
+  )
+  const result = JSON.parse(resultBytes.toString("utf8")) as {
+    readonly run_status: string
+    readonly verdict: string
+    readonly result_payload_sha256_without_self: string
+    readonly exact_checks: ReadonlyArray<{ readonly passed: boolean }>
+    readonly theorem_guards: ReadonlyArray<{ readonly verified: boolean }>
+    readonly numerical_checks: ReadonlyArray<unknown>
+    readonly gate1_decision: string
+    readonly global_promotion: string
+    readonly automatic_next: null
+    readonly promoted_outputs: {
+      readonly TOE_claim: null
+      readonly complete_global_signed_intersection_vector: null
+      readonly full_joint_orientation: null
+      readonly global_n_sigma: null
+      readonly physical_original_cycle: null
+      readonly physics_claim: null
+    }
+  }
+  const receipt = ragnarokStatus.source_link_window.consumed
+
+  expect(createHash("sha256").update(resultBytes).digest("hex")).toBe(
+    receipt.result_sha256
+  )
+  expect(resultBytes.byteLength).toBe(receipt.result_bytes)
+  expect(result.result_payload_sha256_without_self).toBe(
+    receipt.payload_sha256_without_self
+  )
+  expect(result.run_status).toBe("VALID_RUN")
+  expect(result.verdict).toBe("NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN")
+  expect(result.exact_checks).toHaveLength(receipt.exact_checks_passed)
+  expect(result.exact_checks.every(({ passed }) => passed)).toBe(true)
+  expect(result.theorem_guards).toHaveLength(
+    receipt.theorem_guards_verified
+  )
+  expect(result.theorem_guards.every(({ verified }) => verified)).toBe(true)
+  expect(result.numerical_checks).toHaveLength(0)
+  expect(result.gate1_decision).toBe("OPEN_PARTIAL_PROGRESS")
+  expect(result.global_promotion).toBe("PROHIBITED")
+  expect(result.automatic_next).toBeNull()
+  expect(result.promoted_outputs).toEqual({
+    TOE_claim: null,
+    complete_global_signed_intersection_vector: null,
+    full_joint_orientation: null,
+    global_n_sigma: null,
+    physical_original_cycle: null,
+    physics_claim: null
+  })
+})
+
 it("acquires the source-link launch receipt atomically and rejects a second launch", async () => {
   const root = await mkdtemp(join(tmpdir(), "ice-source-link-launch-"))
   try {
@@ -509,7 +561,7 @@ it("blocks the consumed terminal runner before Python execution", async () => {
     ).pipe(Effect.flip, Effect.provide(RepositoryLayer))
   )
   expect(error.code).toBe("RESEARCH_PHASE_PAUSED")
-  expect(error.message).toContain("closeout has been consumed")
+  expect(error.message).toContain("both bounded Gate-1 windows have been consumed")
 })
 
 it("rejects clean but non-frozen historical bytes and any dirty core tree", async () => {
@@ -568,67 +620,15 @@ it("rejects clean but non-frozen historical bytes and any dirty core tree", asyn
   }
 })
 
-it("rejects a clean committed source-link input mutation before Python spawn", async () => {
-  const root = await mkdtemp(join(tmpdir(), "ice-source-link-input-"))
-  const runGit = (args: ReadonlyArray<string>): void => {
-    const result = spawnSync("git", args, { cwd: root, encoding: "utf8" })
-    if (result.status !== 0) {
-      throw new Error(result.stderr || result.stdout)
-    }
-  }
-  try {
-    const researchDirectory = join(root, "cpt_temporal_folded_susy")
-    await mkdir(researchDirectory)
-    await writeFile(
-      join(root, `${boundedGate1SourceLinkScript}.py`),
-      await readFile(
-        join(process.cwd(), `${boundedGate1SourceLinkScript}.py`)
-      )
+it("blocks the consumed source-link runner before Python execution", async () => {
+  const error = await Effect.runPromise(
+    runScript("gate1_scalar_source_link", []).pipe(
+      Effect.flip,
+      Effect.provide(RepositoryLayer)
     )
-    const input = await readFile(
-      join(process.cwd(), boundedGate1SourceLinkInputPath)
-    )
-    await writeFile(join(root, boundedGate1SourceLinkInputPath), input)
-    runGit(["init", "-q"])
-    runGit(["add", "."])
-    runGit([
-      "-c",
-      "user.name=ICE Test",
-      "-c",
-      "user.email=ice-test@example.invalid",
-      "commit",
-      "-qm",
-      "fixture"
-    ])
-    await writeFile(
-      join(root, boundedGate1SourceLinkInputPath),
-      new Uint8Array([...input, 0x0a])
-    )
-    runGit(["add", boundedGate1SourceLinkInputPath])
-    runGit([
-      "-c",
-      "user.name=ICE Test",
-      "-c",
-      "user.email=ice-test@example.invalid",
-      "commit",
-      "-qm",
-      "mutated input"
-    ])
-
-    const TestLayer = Layer.mergeAll(
-      NodeContext.layer,
-      Layer.succeed(Workspace, workspaceFromRoot(root))
-    )
-    const error = await Effect.runPromise(
-      runScript("gate1_scalar_source_link", []).pipe(
-        Effect.flip,
-        Effect.provide(TestLayer)
-      )
-    )
-    expect(error.code).toBe("RESEARCH_INPUT_HASH_MISMATCH")
-  } finally {
-    await rm(root, { recursive: true, force: true })
-  }
+  )
+  expect(error.code).toBe("RESEARCH_PHASE_PAUSED")
+  expect(error.message).toContain("both bounded Gate-1 windows have been consumed")
 })
 
 it("blocks a raw missing Phase 57 query before catalog resolution", async () => {
@@ -662,7 +662,7 @@ it("applies the same fail-closed guard to reproduction script paths", async () =
       Effect.provide(RepositoryLayer)
     )
   )
-  expect(sourceLinkError.code).toBe("RESEARCH_REPRO_FORBIDDEN")
+  expect(sourceLinkError.code).toBe("RESEARCH_PHASE_PAUSED")
 
   for (const traversal of [
     "././cpt_temporal_folded_susy/phase57_repro_bypass.py",
@@ -694,7 +694,7 @@ it("returns exit 2 and the typed pause error from the real CLI", () => {
 it("keeps operational containment distinct from the scientific verdict", () => {
   expect(ragnarokStatus.schema).toBe("ice-ragnarok-circuit-breaker/v2")
   expect(ragnarokStatus.operational_state).toBe(
-    "GATE1_SOURCE_LINK_AUTHORIZED"
+    "GATE1_SOURCE_LINK_RESULT_REVIEW"
   )
   expect(ragnarokStatus.resume_authorization.approved_on).toBe("2026-08-25")
   expect(ragnarokStatus.resume_authorization.overrides_only).toBe(
@@ -717,7 +717,7 @@ it("keeps operational containment distinct from the scientific verdict", () => {
     false
   )
   expect(ragnarokStatus.source_link_window.state).toBe(
-    "AUTHORIZED_NOT_CONSUMED"
+    "CONSUMED"
   )
   expect(ragnarokStatus.source_link_window.exact_script).toBe(
     boundedGate1SourceLinkScript
@@ -729,10 +729,26 @@ it("keeps operational containment distinct from the scientific verdict", () => {
     path: boundedGate1SourceLinkInputPath,
     sha256: boundedGate1SourceLinkInputSha256
   })
-  expect(ragnarokStatus.source_link_window.execution_enabled).toBe(true)
+  expect(ragnarokStatus.source_link_window.execution_enabled).toBe(false)
   expect(ragnarokStatus.source_link_window.maximum_launches).toBe(1)
   expect(ragnarokStatus.source_link_window.allowed_args).toEqual([])
   expect(ragnarokStatus.source_link_window.automatic_next).toBe(null)
+  expect(ragnarokStatus.source_link_window.consumed.run_status).toBe(
+    "VALID_RUN"
+  )
+  expect(ragnarokStatus.source_link_window.consumed.verdict).toBe(
+    "NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN"
+  )
+  expect(
+    ragnarokStatus.source_link_window.consumed
+      .reduced_affine_class_nonzero_arm_source_link
+  ).toBe("KEEP")
+  expect(ragnarokStatus.source_link_window.consumed.zero_lapse_distribution).toBe(
+    "OPEN"
+  )
+  expect(ragnarokStatus.source_link_window.consumed.exact_checks_passed).toBe(16)
+  expect(ragnarokStatus.source_link_window.consumed.theorem_guards_verified).toBe(3)
+  expect(ragnarokStatus.source_link_window.consumed.global_n_sigma).toBe(null)
   expect(ragnarokStatus.containment.continuation_route).toBe("KILL")
   expect(ragnarokStatus.containment.maximum_allowed_core_phase).toBe(50)
   expect(ragnarokStatus.containment.terminal_closeout_completed).toBe(true)
@@ -776,10 +792,10 @@ it("keeps operational containment distinct from the scientific verdict", () => {
 
 it("renders stable human and machine-readable status", () => {
   expect(formatRagnarokStatus(false)).toContain(
-    "Ragnarok circuit breaker: GATE1_SOURCE_LINK_AUTHORIZED"
+    "Ragnarok circuit breaker: GATE1_SOURCE_LINK_RESULT_REVIEW"
   )
   expect(formatRagnarokStatus(false)).toContain(
-    "Scalar source link: AUTHORIZED_NOT_CONSUMED"
+    "Scalar source link: CONSUMED"
   )
   expect(JSON.parse(formatRagnarokStatus(true))).toEqual(ragnarokStatus)
 })

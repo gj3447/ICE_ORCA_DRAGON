@@ -319,6 +319,13 @@ mismatch면 그 link는 `KILL`이다. 어느 경우도 varying-\(a\), full joint
 global \(n_\sigma\)를 자동으로 계산하지 않는다. 활성 circuit breaker 아래 이 실행은 승인되지
 않았으며 여기서는 사양만 기록한다.
 
+> **후속 상태 (2026-08-26):** 위 문장은 이 보고서 작성 시점의 실행 상태다. 사용자가 이후
+> 별도 번호 없는 exact one-shot을 승인했고, 그 계산은
+> [`GATE1_SCALAR_SOURCE_LINK.md`](GATE1_SCALAR_SOURCE_LINK.md)의
+> `NONZERO_ARM_MATCH_ZERO_LAPSE_OPEN`으로 완료·소진됐다. 비영 lapse-arm reduced scalar link는
+> orientation \(+1\)로 `KEEP`됐지만 zero-including full \(q\)-paired distribution과 physical joint
+> cycle은 여전히 열려 있다.
+
 ## 9. 검토와 최종 범위
 
 세 독립 read-only 검토가 action 전개, phase-band inequality, winding-band endpoint sign,
