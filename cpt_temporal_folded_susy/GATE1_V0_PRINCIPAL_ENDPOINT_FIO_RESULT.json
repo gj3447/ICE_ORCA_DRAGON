@@ -1,0 +1,430 @@
+{
+  "schema_version": "ice.gate1.v0-principal-endpoint-fio.result.v1",
+  "calculation_id": "Gate1V0PrincipalEndpointFIO",
+  "numbered_phase": null,
+  "run_status": "VALID_RUN",
+  "classification": "GATE1_V0_PRINCIPAL_ENDPOINT_FIO_NONPROMOTED",
+  "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
+  "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_LEAVE_ONE_TERM_EXACT_NORMALIZATION_OPEN",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_INPUTS.json",
+    "sha256": "9f3bb3ff0758b0eacfd5ee6c42cd71ca1bf44c99ae822c35b768690031a4585f"
+  },
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio.py",
+    "sha256": "ec4edd56c4c965582f4da35c89d982e70340be0b808a789ace78e43cbcca8288"
+  },
+  "upstream_provenance": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART.md",
+      "sha256": "cdbe94f79b55db371e46d62455535af7d58d96ac2e6b21edae9e58b34d93e79f"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json",
+      "sha256": "6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE29_ZERO_LAPSE_UNIFORM_KERNEL.md",
+      "sha256": "d3aa7abf86f4a65b98fbfd3bc9e9d8cf7d9c9cd596c2fcac34d113097e52f7ec"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md",
+      "sha256": "6ab0707bd4c133c62087c90b1e0b7131609491c0e10ee004b5ef08dbf2c2760b"
+    }
+  ],
+  "exact_calculation": {
+    "canonical_graph": {
+      "phase": "S=-W(c,P,p)",
+      "relations": [
+        "T=W_c",
+        "Q=-W_P",
+        "Phi-phi=W_p"
+      ],
+      "mixed_hessian": "S_cP=-1/D",
+      "twist_magnitude": "1/D>0",
+      "principal_half_density": "D^(-1/2)",
+      "kernel": "delta(p-p_prime)*(2*pi*hbar)^(-1/2)*D^(-1/2)*exp(-i*W/hbar)",
+      "endpoint_phase_critical_value": "-B"
+    },
+    "shell_lineage": {
+      "c": 0,
+      "Q0": "log((3*p^2-2*P^2)/(72*pi^4))/2",
+      "W0": "-P*Q0+P-sqrt(3/2)*p*atanh(sqrt(2/3)*P/p)",
+      "W0_P": "-Q0",
+      "W0_p": "Phi_star-phi"
+    },
+    "exact_one_term_discriminator": {
+      "M": "W_cP=1/D",
+      "required_coarea_density": "M_sec=(T(P_plus)-T(P_minus))/(P_plus-P_minus)",
+      "one_term_density": "M_geom=sqrt(M(P_plus)*M(P_minus))",
+      "local_ratio": "1+deltaP^2/(6*A0^2*D0^2)+O(deltaP^4)",
+      "c_zero_ratio": "1+deltaP^2/(36*p^2)+O(deltaP^4)",
+      "finite_shell_inequality": "M_geom>M_sec for symmetric nonzero endpoints",
+      "conclusion": "EXACT_UNITARITY_NONPASS_FOR_UNCORRECTED_ONE_TERM_KERNEL"
+    }
+  },
+  "numerical_calculation": {
+    "precision_digits": 100,
+    "p": "1.00000000000000000000000000000000000000000000000000000000000",
+    "methods": [
+      "mpmath arbitrary-precision quadrature",
+      "Gauss hypergeometric closed antiderivative"
+    ],
+    "samples": [
+      {
+        "x": "0.0125000000000000000000000000000000000000000000000000000000000",
+        "deltaP": "0.0250000000000000000000000000000000000000000000000000000000000",
+        "direct_secant_mean": "0.759842281705137594924081340592478846346459504533865104880950",
+        "hypergeometric_secant_mean": "0.759842281705137594924081340592478846346459504533865104880950",
+        "endpoint_geometric_mean": "0.759855474327581759877044423553725742690719075982558010565854",
+        "M_geom_over_M_sec": "1.00001736231684101576156368065230048401841079484077301797552",
+        "series_coefficient_estimate": "0.0277797069456252185018890436807744294572717452368287608378106"
+      },
+      {
+        "x": "0.0250000000000000000000000000000000000000000000000000000000000",
+        "deltaP": "0.0500000000000000000000000000000000000000000000000000000000000",
+        "direct_secant_mean": "0.759862072958414957789672971008316852992665786381387900847109",
+        "hypergeometric_secant_mean": "0.759862072958414957789672971008316852992665786381387900847109",
+        "endpoint_geometric_mean": "0.759914855820486775670034771849103639134882055890249212238229",
+        "M_geom_over_M_sec": "1.00006946374078958212848534003484237541023424838928430390532",
+        "series_coefficient_estimate": "0.0277854963158328513941360139369501640936993557137215621265257"
+      },
+      {
+        "x": "0.0500000000000000000000000000000000000000000000000000000000000",
+        "deltaP": "0.100000000000000000000000000000000000000000000000000000000000",
+        "direct_secant_mean": "0.759941284402622781081135959960300080900437597306541921657931",
+        "hypergeometric_secant_mean": "0.759941284402622781081135959960300080900437597306541921657931",
+        "endpoint_geometric_mean": "0.760152614056537769748430672156532820130720328262487309406420",
+        "M_geom_over_M_sec": "1.00027808681835348818752584851037125222742875551446803847279",
+        "series_coefficient_estimate": "0.0278086818353488187525848510371252227428755514468038472791540"
+      }
+    ],
+    "quadratures": 3,
+    "special_function_evaluations": 3,
+    "root_calls": 0,
+    "ode_calls": 0
+  },
+  "exact_checks": [
+    {
+      "id": "G1.fio.canonical_phase_sign",
+      "passed": true,
+      "statement": "S=-W has S_c=-T and S_P=Q, fixing exp(-iW/hbar) in the declared momentum convention"
+    },
+    {
+      "id": "G1.fio.principal_operator_relations",
+      "passed": true,
+      "statement": "i*hbar*d_c and integration by parts against i*hbar*d_P recover T and Q at principal order; amplitude derivatives are subprincipal"
+    },
+    {
+      "id": "G1.fio.positive_twist_and_half_density",
+      "passed": true,
+      "statement": "|S_cP|=W_cP=1/D>0 and the Lebesgue principal half-density is D^(-1/2)"
+    },
+    {
+      "id": "G1.fio.local_maslov_branch",
+      "passed": true,
+      "statement": "the twist Hessian has fixed positive magnitude on U_plus, so no local mixed-projection caustic changes the compact-interior Maslov branch"
+    },
+    {
+      "id": "G1.fio.endpoint_phase_critical_value",
+      "passed": true,
+      "statement": "Psi=c*T+p*(Phi-phi)-P*Q-W has the Darboux critical equations and critical value -B"
+    },
+    {
+      "id": "G1.fio.shell_generator_lineage",
+      "passed": true,
+      "statement": "the explicit c=0 W0 recovers W0_P=-Q0 and W0_p=Phi_star-phi"
+    },
+    {
+      "id": "G1.fio.coarea_local_curvature",
+      "passed": false,
+      "statement": "at P_bar=0, M_P=0 and M_PP=2/(A^2*D^3)>0 for M=W_cP=1/D"
+    },
+    {
+      "id": "G1.fio.coarea_geometric_vs_secant_series",
+      "passed": true,
+      "statement": "the one-term composition density has M_geom/M_sec=1+(M_PP/M)*deltaP^2/12+O(deltaP^4)"
+    },
+    {
+      "id": "G1.fio.shell_exact_unitarity_nonpass_coefficient",
+      "passed": true,
+      "statement": "at c=0 the exact-one-term coarea ratio begins 1+deltaP^2/(36*p^2), so it is not identically one"
+    },
+    {
+      "id": "G1.fio.shell_strict_monotonicity",
+      "passed": true,
+      "statement": "at c=0, M is proportional to R^(-1/4) and is strictly increasing for 0<P<sqrt(3/2)*p"
+    }
+  ],
+  "theorem_guards": [
+    {
+      "id": "G1.fio.guard.principal_microlocal_scope",
+      "verified": true,
+      "theorem": "nondegenerate phase and principal FIO composition calculus",
+      "domain": "smooth compact cutoffs strictly inside U_plus and its chart image",
+      "statement": "the phase and half-density define a principal-order microlocally unitary FIO; no global operator norm or endpoint-boundary theorem is inferred"
+    },
+    {
+      "id": "G1.fio.guard.exact_coarea_nonpass",
+      "verified": true,
+      "theorem": "strict endpoint-versus-integral-mean inequality for a continuous increasing function",
+      "domain": "c=0, p>0 and symmetric endpoints P_plus=x, P_minus=-x with 0<x<sqrt(3/2)*p",
+      "statement": "M_geom=M(x) is strictly larger than M_sec=x^(-1)*integral_0^x M(u)du, so the uncorrected one-term kernel fails exact coarea delta normalization"
+    },
+    {
+      "id": "G1.fio.guard.exact_transform_boundary",
+      "verified": true,
+      "theorem": "principal symbol versus full-symbol quantization",
+      "domain": "the single amplitude D^(-1/2) with no hbar-dependent corrections",
+      "statement": "the nonpass kills exact unitarity only for this one-term kernel; a corrected symbol or independently defined spectral transform is not excluded"
+    },
+    {
+      "id": "G1.fio.guard.polarization_boundary",
+      "verified": true,
+      "theorem": "momentum-polarization canonical graph",
+      "domain": "old (P,p) to new (c,p) with a spectator delta in p",
+      "statement": "no fixed-(Q,phi) to fixed-(T,Phi) coordinate kernel, physical endpoint measure or normalizable c=0 state is constructed"
+    },
+    {
+      "id": "G1.fio.guard.bfv_boundary",
+      "verified": true,
+      "theorem": "bosonic FIO versus extended BFV phase space",
+      "domain": "no multiplier momentum, ghosts, antighosts, BRST charge, gauge fermion or fermionic endpoint term",
+      "statement": "the principal FIO does not supply the replacement BFV source or determinant-line orientation"
+    },
+    {
+      "id": "G1.fio.guard.delta_c_boundary",
+      "verified": true,
+      "theorem": "endpoint momentum representation versus group-averaged constraint distribution",
+      "domain": "c labels the new momentum coordinate; no full-real-lapse integration or spectral measure is performed",
+      "statement": "this c representation is not the Marolf delta(C) rigging map and delta(C) is not called a bounded projector on continuous zero spectrum"
+    }
+  ],
+  "numerical_checks": [
+    {
+      "id": "G1.fio.numerical.quadrature_hypergeometric_agreement",
+      "passed": true,
+      "statement": "direct high-precision quadrature and the closed hypergeometric secant mean agree",
+      "error_kind": "absolute",
+      "error": "0.0",
+      "tolerance": "1.00000000000e-80",
+      "maximum_error": "0.0"
+    },
+    {
+      "id": "G1.fio.numerical.finite_coarea_ratio_nonpass",
+      "passed": true,
+      "statement": "M_geom/M_sec is strictly greater than one at every frozen nonzero symmetric shell pair",
+      "error_kind": "strict_positive_margin_failure",
+      "error": "0.0",
+      "tolerance": "0.0",
+      "minimum_ratio_minus_one": "0.0000173623168410157615636806523004840184107948407730179755236316"
+    },
+    {
+      "id": "G1.fio.numerical.local_series_coefficient",
+      "passed": true,
+      "statement": "the frozen finite ratios approach the exact coefficient 1/(36*p^2)",
+      "error_kind": "absolute",
+      "error": "0.0000309040575710409748070732593474",
+      "tolerance": "0.000200000000000",
+      "target_coefficient": "0.0277777777777777777777777777777777777777777777777777777777778",
+      "maximum_error": "0.0000309040575710409748070732593474449650977736690260695013761950",
+      "samples": [
+        {
+          "x": "0.0125000000000000000000000000000000000000000000000000000000000",
+          "deltaP": "0.0250000000000000000000000000000000000000000000000000000000000",
+          "direct_secant_mean": "0.759842281705137594924081340592478846346459504533865104880950",
+          "hypergeometric_secant_mean": "0.759842281705137594924081340592478846346459504533865104880950",
+          "endpoint_geometric_mean": "0.759855474327581759877044423553725742690719075982558010565854",
+          "M_geom_over_M_sec": "1.00001736231684101576156368065230048401841079484077301797552",
+          "series_coefficient_estimate": "0.0277797069456252185018890436807744294572717452368287608378106"
+        },
+        {
+          "x": "0.0250000000000000000000000000000000000000000000000000000000000",
+          "deltaP": "0.0500000000000000000000000000000000000000000000000000000000000",
+          "direct_secant_mean": "0.759862072958414957789672971008316852992665786381387900847109",
+          "hypergeometric_secant_mean": "0.759862072958414957789672971008316852992665786381387900847109",
+          "endpoint_geometric_mean": "0.759914855820486775670034771849103639134882055890249212238229",
+          "M_geom_over_M_sec": "1.00006946374078958212848534003484237541023424838928430390532",
+          "series_coefficient_estimate": "0.0277854963158328513941360139369501640936993557137215621265257"
+        },
+        {
+          "x": "0.0500000000000000000000000000000000000000000000000000000000000",
+          "deltaP": "0.100000000000000000000000000000000000000000000000000000000000",
+          "direct_secant_mean": "0.759941284402622781081135959960300080900437597306541921657931",
+          "hypergeometric_secant_mean": "0.759941284402622781081135959960300080900437597306541921657931",
+          "endpoint_geometric_mean": "0.760152614056537769748430672156532820130720328262487309406420",
+          "M_geom_over_M_sec": "1.00027808681835348818752584851037125222742875551446803847279",
+          "series_coefficient_estimate": "0.0278086818353488187525848510371252227428755514468038472791540"
+        }
+      ]
+    }
+  ],
+  "decision_trace": {
+    "meaning": "keep the compact-interior principal momentum FIO and its fixed local Maslov branch; reject exact finite-hbar unitarity only for the uncorrected one-term Van Vleck kernel; retain full-symbol, domain, BFV and delta(C) work as open without automatic execution authority",
+    "check_partitions": {
+      "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
+      "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_LEAVE_ONE_TERM_EXACT_NORMALIZATION_OPEN",
+      "principal_pass": true,
+      "coarea_nonpass": false,
+      "numerical_pass": true,
+      "all_scientific_pass": false,
+      "failed_scientific_ids": [
+        "G1.fio.coarea_local_curvature"
+      ],
+      "reachable_frozen_rows": [
+        {
+          "verdict": "INCONCLUSIVE",
+          "programme_impact": "NO_PROMOTION_PENDING_INDEPENDENT_CONTROL"
+        },
+        {
+          "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
+          "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_LEAVE_ONE_TERM_EXACT_NORMALIZATION_OPEN"
+        },
+        {
+          "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+          "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_REQUIRE_SUBPRINCIPAL_SYMBOL_AND_DOMAIN_BEFORE_ANY_EXACT_OR_BFV_LIFT"
+        },
+        {
+          "verdict": "KILL_PROPOSED_V0_PRINCIPAL_ENDPOINT_FIO",
+          "programme_impact": "RETAIN_CLASSICAL_DARBOUX_CHART_ONLY"
+        }
+      ]
+    },
+    "source_boundary": "HTV frames endpoint canonical data; Garcia-Vergara-Urrutia frames omitted BFV boundary data; Van Vleck and Hormander frame principal semiclassical/FIO scope; Marolf frames the distinct full-real-lapse delta(C) rigging distribution. None derives this repository-specific kernel or licenses a global normalized physical endpoint state."
+  },
+  "scope_status": {
+    "local_v0_principal_momentum_endpoint_fio": null,
+    "local_maslov_branch": null,
+    "uncorrected_one_term_exact_unitarity": null,
+    "normalized_quantum_endpoint_state_transform": null,
+    "exact_quantum_endpoint_state_transform": null,
+    "global_quantum_endpoint_state_transform": null,
+    "subprincipal_full_symbol": null,
+    "operator_ordering": null,
+    "self_adjoint_domain": null,
+    "physical_endpoint_measure": null,
+    "coordinate_polarization_endpoint_kernel": null,
+    "ghost_endpoint_sector": null,
+    "replacement_gauge_fermion": null,
+    "full_replacement_bfv_measure": null,
+    "replacement_source_discretization": null,
+    "old_fixed_a_kernel_equivalence": null,
+    "zero_lapse_distribution": null,
+    "full_real_lapse_delta_C_kernel": null,
+    "global_offshell_canonical_atlas": null,
+    "global_maslov_orientation": null,
+    "determinant_line_orientation": null,
+    "physical_original_cycle": null
+  },
+  "ragnarok_termination_audit": {
+    "scientific_nonpass_policy": "RECORD_VALID_TERMINAL_RESULT",
+    "integrity_or_schema_failure_policy": "RAISE_WITHOUT_RESULT",
+    "reachable_frozen_rows": [
+      {
+        "verdict": "INCONCLUSIVE",
+        "programme_impact": "NO_PROMOTION_PENDING_INDEPENDENT_CONTROL"
+      },
+      {
+        "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
+        "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_LEAVE_ONE_TERM_EXACT_NORMALIZATION_OPEN"
+      },
+      {
+        "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+        "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_REQUIRE_SUBPRINCIPAL_SYMBOL_AND_DOMAIN_BEFORE_ANY_EXACT_OR_BFV_LIFT"
+      },
+      {
+        "verdict": "KILL_PROPOSED_V0_PRINCIPAL_ENDPOINT_FIO",
+        "programme_impact": "RETAIN_CLASSICAL_DARBOUX_CHART_ONLY"
+      }
+    ],
+    "arbitrary_arguments": "REJECTED",
+    "open_dependencies": "NOT_EXECUTION_AUTHORIZATION",
+    "automatic_descendants": 0,
+    "automatic_next": null
+  },
+  "open_dependencies": {
+    "execution_authorization": "NONE",
+    "automatic_successor": null,
+    "status": "NOT_EXECUTION_AUTHORIZATION",
+    "items": [
+      "a subprincipal/full hbar-dependent symbol and its ordering",
+      "self-adjoint domains, spectral measure and R=0/p=0 edge conditions",
+      "a global normalized endpoint transform and global Maslov data",
+      "ghost endpoints, BRST charge, gauge fermion and replacement BFV source",
+      "old fixed-a kernel comparison, zero lapse and the full-real-lapse delta(C) rigging map",
+      "other components, global atlas, determinant orientation and physical original cycle"
+    ]
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "automatic_next": null,
+  "promoted_outputs": {
+    "normalized_quantum_endpoint_state_transform": null,
+    "exact_quantum_endpoint_state_transform": null,
+    "global_quantum_endpoint_state_transform": null,
+    "coordinate_polarization_endpoint_kernel": null,
+    "exact_constraint_diagonalization": null,
+    "physical_endpoint_state": null,
+    "physical_endpoint_measure": null,
+    "ghost_endpoint_sector": null,
+    "replacement_gauge_fermion": null,
+    "full_replacement_bfv_measure": null,
+    "replacement_source_discretization": null,
+    "old_fixed_a_kernel_equivalence": null,
+    "zero_lapse_distribution": null,
+    "full_real_lapse_delta_C_kernel": null,
+    "global_offshell_canonical_atlas": null,
+    "global_maslov_orientation": null,
+    "determinant_line_orientation": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "resource_accounting": {
+    "root_calls": 0,
+    "quadratures": 3,
+    "special_function_evaluations": 3,
+    "ode_calls": 0,
+    "automatic_descendants": 0,
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "scientific_nonpass_count": 1
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41"
+  },
+  "frozen_input_contract": {
+    "question": "On compact interiors of the closed-FRW V=0 Darboux component U_plus, does the mixed generator W define the canonical phase and positive principal half-density of a local momentum-polarization semiclassical FIO, and does the resulting one-term Van Vleck kernel satisfy exact finite-hbar coarea unitarity?",
+    "kind": "EXACT_LOCAL_PRINCIPAL_FIO_AND_ONE_TERM_EXACT_UNITARITY_DISCRIMINATOR_WITH_HIGH_PRECISION_SHELL_CONTROL",
+    "epistemic_scope": "COMPACT_INTERIORS_OF_ONE_P_POSITIVE_R_POSITIVE_DARBOUX_COMPONENT_PRINCIPAL_SEMICLASSICAL_ORDER_ONLY_WITH_AN_EXACT_NONPASS_FOR_THE_UNCORRECTED_ONE_TERM_KERNEL_NOT_A_GLOBAL_NORMALIZED_ENDPOINT_TRANSFORM_NOT_BFV_NOT_DELTA_C",
+    "computed_scope": [
+      "the old-(P,p) to new-(c,p) momentum-polarization phase on compact interiors of U_plus",
+      "the positive principal half-density D^(-1/2) and fixed local Maslov branch",
+      "principal-order operator and canonical-relation matching",
+      "the explicit c=0 generator and its recovery of Q0 and Phi_star",
+      "an exact coarea discriminator for the uncorrected one-term kernel",
+      "independent high-precision shell quadrature and hypergeometric controls"
+    ],
+    "not_computed": [
+      "an exact or globally normalized quantum endpoint-state transform, full symbol, ordering, self-adjoint domain, spectral measure or edge boundary condition",
+      "a fixed-(Q,phi) to fixed-(T,Phi) coordinate-polarization kernel",
+      "ghost, antighost, multiplier endpoints, nilpotent BRST charge, gauge fermion or replacement BFV source",
+      "the old fixed-(a,phi) kernel equivalence, zero-lapse extension or full-real-lapse distributional delta(C) rigging map",
+      "other components, a global atlas, global Maslov or determinant-line orientation, Gribov census, physical original cycle, physics claim or TOE"
+    ],
+    "execution_contract": {
+      "arguments": "NONE",
+      "scientific_nonpass": "RECORD_A_VALID_RESULT_AND_SELECT_A_PREDECLARED_TERMINAL_ROW",
+      "integrity_or_schema_failure": "RAISE_WITHOUT_WRITING_A_RESULT",
+      "open_dependencies": "NOT_EXECUTION_AUTHORIZATION"
+    }
+  },
+  "result_payload_sha256_without_self": "7acb5b053994364ac80898dc559bb2f301838ead2ad2f7213d959194248059ec"
+}
