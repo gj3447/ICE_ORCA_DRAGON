@@ -1,7 +1,7 @@
 {
   "automatic_next": null,
   "calculation_id": "Gate1V0BfvM2SpectralTrajectory",
-  "classification": "GATE1_V0_M2_SPECTRAL_BFV_MODE_EXTENSION_NONPASS",
+  "classification": "GATE1_V0_M2_ONE_MODE_RELATIVE_BFV_QUARTET_KEEP_TRAJECTORY_ZERO_MODE_COMPLETION_UNDERDETERMINED",
   "computed_scope": [
     "one exact m=2 hybrid spectral projection of the local improved-static BFV gauge/ghost action",
     "endpoint-vanishing sine modes and nilpotent projected generator map",
@@ -9,7 +9,7 @@
     "two explicit inequivalent zero-mode ledgers under gauge-fermion rescaling"
   ],
   "decision_trace": {
-    "matched_predeclared_condition": "the projected action, endpoint conditions, nilpotent mode maps or determinant-Pfaffian identity fails",
+    "matched_predeclared_condition": "the basis, projected action, endpoint/BRST mode maps and relative determinant-Pfaffian identities pass, while the retained and eliminated zero-mode ledgers remain inequivalent",
     "relative_boundary": "determinant/Pfaffian equality is same-regulator and relative only",
     "scope_meaning": "one formal local m=2 hybrid spectral gauge/ghost tangent mode with a frozen p0>0 physical spectator and no certified finite-amplitude chart containment",
     "zero_mode_boundary": "two explicit ledgers are inequivalent, so no unique trajectory measure is promoted"
@@ -88,7 +88,7 @@
       "source": "projection of hash-pinned bracket-derived continuum images"
     },
     "core_flags": {
-      "basis_orthonormal": false,
+      "basis_sector_normalization_and_overlaps": true,
       "bosonic_gauge_matrix": true,
       "derivative_relation": true,
       "endpoint_mode_stability": true,
@@ -221,9 +221,9 @@
       "statement": "the frozen static-spectral comparison survived while leaving the trajectory measure null"
     },
     {
-      "id": "G1.m2.basis.orthonormality",
-      "passed": false,
-      "statement": "e0,e_c,e_s are exactly orthonormal on the unit interval"
+      "id": "G1.m2.basis.sector_normalization_and_overlaps",
+      "passed": true,
+      "statement": "the sector functions have unit norm and the required e0-e_c/e_c-e_s orthogonality; the distinct-boundary-sector overlap int(e0*e_s)=2*sqrt(2)/pi is explicitly retained"
     },
     {
       "id": "G1.m2.basis.derivative_relation",
@@ -320,7 +320,7 @@
   "global_promotion": "PROHIBITED",
   "input": {
     "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_INPUTS.json",
-    "sha256": "a761df0ac41e14e0f12f31ea89a6c9764602b00cb38cac9ca4c11cd430cb4553"
+    "sha256": "dc301d233540b5d635d448c4e2c1cf897e6c9ae612493a5ab11a1d44b403eb77"
   },
   "not_computed": [
     "a nonlinear integration over physical p,Phi trajectories or amplitudes reaching the U_plus chart edge",
@@ -331,7 +331,7 @@
   ],
   "numbered_phase": null,
   "numerical_checks": [],
-  "programme_impact": "RETAIN_STATIC_SOURCE_ONLY",
+  "programme_impact": "KEEP_MINIMAL_NONZERO_MODE_RELATIVE_CONTROL_ONLY",
   "promoted_outputs": {
     "TOE_claim": null,
     "absolute_finite_bfv_measure": null,
@@ -357,11 +357,11 @@
     "quadratures": 0,
     "root_calls": 0
   },
-  "result_payload_sha256_without_self": "9d255cfc11fdb52cc1494c66e6ae17911405c77bde35263816ab6794192b323a",
+  "result_payload_sha256_without_self": "a12b719f2961363610c93ecf07d0185de316497708b809b4b2b1aca7bdfec92b",
   "run_status": "VALID_RUN",
   "runner": {
     "path": "cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py",
-    "sha256": "4aba838defb4af6f765166eef2ed905f4cdbcd4b6583f816f8245ef7904d1c9a"
+    "sha256": "71b3a6707c8b3d6a40f58e3a812de42a90ca6463de736d949bbf77f381a6e382"
   },
   "schema_version": "ice.gate1.v0-bfv-m2-spectral-trajectory.result.v1",
   "theorem_guards": [
@@ -482,5 +482,5 @@
       "verdict": "KEEP_V0_LOCAL_STATIC_ZERO_MODE_SPECTRAL_PAIRING_COMPATIBILITY"
     }
   ],
-  "verdict": "KILL_V0_DECLARED_M2_SPECTRAL_BFV_MODE_EXTENSION"
+  "verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS"
 }
