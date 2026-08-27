@@ -1,0 +1,117 @@
+{
+  "schema_version": "ice.gate1.v0-endpoint-subprincipal-nonuniqueness.input.v1",
+  "calculation_id": "Gate1V0EndpointSubprincipalNonuniqueness",
+  "numbered_phase": null,
+  "question": "Do the declared data B, the positive principal half-density D^(-1/2), the target Hilbert representation H_D and its self-adjoint multiplication constraint M_c uniquely determine an exact normalized endpoint-state completion within that declared data class?",
+  "kind": "EXACT_CONDITIONAL_UNITARY_SUBPRINCIPAL_FAMILY_AND_FROZEN_TEST_STATE_NONUNIQUENESS_DISCRIMINATOR",
+  "epistemic_scope": "DECLARED_TARGET_HD_MC_REPRESENTATION_AND_LOCAL_PRINCIPAL_FIO_DATA_CLASS_ONLY_NOT_ALL_POSSIBLE_EXACT_INTERTWINING_OR_ENDPOINT_CONDITIONS_NOT_AN_EXISTENCE_PROOF",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json",
+      "sha256": "1a530b810c744b7108c915308f4d23e6329abb901780f76ac958922e62ed8eef",
+      "payload_sha256_without_self": "f23c8fbd167b5041d7473cb69a05621768d44b95cd73aab02aaee0ea719bc5e7",
+      "required_verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+      "role": "fixes B through W, the canonical relation and principal half-density while killing exact unitarity of the uncorrected one-term kernel"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json",
+      "sha256": "4447980c687724f6160da35a2e985c59a4619e4aa2a4072b3cd78afbaad15f48",
+      "payload_sha256_without_self": "4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd",
+      "required_verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN",
+      "role": "supplies only the declared target L2(dc dp) representation and self-adjoint M_c domain"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Henneaux, Teitelboim and Vergara, Gauge invariance for generally covariant systems, arXiv:hep-th/9205092",
+      "url": "https://arxiv.org/abs/hep-th/9205092",
+      "used_for": "the requirement to transform endpoint actions and endpoint state data consistently",
+      "not_used_for": "selecting an exact full symbol or proving uniqueness of a quantum endpoint transform"
+    },
+    {
+      "source": "Hormander, Fourier integral operators. I, Acta Math. 127 (1971) 79",
+      "url": "https://doi.org/10.1007/BF02392052",
+      "used_for": "the separation of canonical relation and principal symbol from lower-order symbol data",
+      "not_used_for": "a model-specific exact unitary completion"
+    }
+  ],
+  "conditional_family": {
+    "hypothesis": "suppose at least one exact unitary completion U_0 from a chosen old endpoint Hilbert space to H_D exists",
+    "target_unitary": "V_kappa,hbar=exp(i*hbar*kappa*c) acting by multiplication on H_D",
+    "family": "U_kappa=V_kappa,hbar*U_0",
+    "kernel_relation": "K_kappa(c,p;P,p_prime)=exp(i*hbar*kappa*c)*K_0(c,p;P,p_prime)",
+    "classical_action_relation": "exp(-i*W/hbar)*exp(i*hbar*kappa*c)=exp(i*(-W+hbar^2*kappa*c)/hbar)",
+    "principal_symbol_relation": "a_kappa=a_0+hbar*(a_1+i*kappa*c*a_0)+O(hbar^2)",
+    "constraint_relation": "V_kappa commutes strongly with M_c and preserves D(M_c)",
+    "shell_relation": "V_kappa(0,p)=1, so the declared order-zero delta(M_c) pairing is unchanged"
+  },
+  "exact_plan": [
+    "hash-verify the principal FIO and local spectral-domain inputs",
+    "verify V_kappa has unit modulus, is exactly unitary on L2(dc dp), commutes with M_c and preserves its maximal domain",
+    "verify postcomposition preserves exact unitarity conditional on any U_0",
+    "verify the added action is O(hbar^2), the canonical relation and B are unchanged at classical order, and the principal half-density is unchanged while the subprincipal coefficient shifts",
+    "verify the family is nontrivial on one normalized Gaussian-half-line test state",
+    "verify V_kappa equals one on c=0, so a later delta(M_c) pairing cannot choose kappa",
+    "retain the prior coarea KILL for the uncorrected one-term kernel and keep exact-transform existence open"
+  ],
+  "numerical_plan": {
+    "precision_digits": 80,
+    "alpha": "0.7",
+    "hbar": "0.3",
+    "kappa_values": ["0.5", "1.0", "2.0"],
+    "relative_tolerance": "1e-60",
+    "quadrature": "direct c-line Gaussian characteristic-function integration; the normalized p>0 factor integrates exactly to one"
+  },
+  "decision_table": [
+    {
+      "condition": "the conditional unitary family preserves the classical B, canonical relation, principal half-density and M_c domain but changes a lower symbol and a finite-hbar test state",
+      "verdict": "KILL_UNIQUENESS_FROM_DECLARED_B_A0_HD_MC_DATA",
+      "programme_impact": "NARROW_REQUIRE_ADDITIONAL_FULL_SYMBOL_AND_INTERTWINING_DATA",
+      "meaning": "B, D^(-1/2), H_D and M_c cannot select a unique completion inside the class that fixes only those data; extra exact intertwining or endpoint conditions may restrict the family, and existence remains open"
+    },
+    {
+      "condition": "the proposed family is not unitary, changes the principal data, or is identical on every test state",
+      "verdict": "INCONCLUSIVE_ENDPOINT_COMPLETION_UNIQUENESS",
+      "programme_impact": "OPEN",
+      "meaning": "this discriminator does not settle whether the supplied data determine a completion"
+    }
+  ],
+  "computed_scope": [
+    "one exact target-unitary subprincipal family conditional on any exact endpoint completion",
+    "preservation of the local constraint domain and zero spectral fiber",
+    "a closed-form and high-precision witness that finite-hbar operators differ"
+  ],
+  "not_computed": [
+    "existence or construction of U_0 or any exact endpoint-state transform",
+    "full-symbol transport equations, exact old-variable intertwining, edge conditions or global Maslov gluing",
+    "a coordinate-polarization kernel, old fixed-a kernel equivalence, BFV trajectory measure or full-real-lapse group average",
+    "a physical endpoint state, physical cycle, physics claim or TOE claim"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 3,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "exact_endpoint_state_transform": null,
+    "exact_endpoint_transform_existence": null,
+    "selected_subprincipal_symbol": null,
+    "original_variable_constraint_ordering": null,
+    "physical_inner_product": null,
+    "full_real_lapse_delta_C": null,
+    "full_bfv_trajectory_measure": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
