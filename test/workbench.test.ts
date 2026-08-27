@@ -32,6 +32,16 @@ it("quarantines queue03 and keeps queue06 explicitly superseded", () => {
   ).toBe("superseded")
 })
 
+it("maps the V0 principal endpoint FIO as a portable committed result", () => {
+  const fio = reproCases.find(
+    (entry) => entry.name === "gate1_v0_principal_endpoint_fio"
+  )
+  expect(fio?.policy).toBe("portable")
+  expect(fio?.output).toBe(
+    "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json"
+  )
+})
+
 layer(AppLayer)("reproduction manifest", (it) => {
   it.effect("maps every case to an adjacent tracked script and output", () =>
     Effect.gen(function* () {

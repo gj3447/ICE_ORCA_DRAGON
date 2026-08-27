@@ -208,6 +208,14 @@ export const reproCases = [
     output: "research/legacy_predictions/verify_mp_mW_results.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "gate1_v0_principal_endpoint_fio",
+    script: "cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 
