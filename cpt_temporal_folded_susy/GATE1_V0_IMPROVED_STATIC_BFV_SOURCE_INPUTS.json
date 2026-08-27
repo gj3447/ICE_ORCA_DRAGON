@@ -1,0 +1,191 @@
+{
+  "schema_version": "ice.gate1.v0-improved-static-bfv-source.input.v1",
+  "calculation_id": "Gate1V0ImprovedStaticBfvSource",
+  "numbered_phase": null,
+  "question": "On the closed-FRW V=0 U_plus component, does the hash-verified exact Darboux constraint coordinate support an internally consistent local HTV-improved static BFV replacement-source algebra, with a bracket-derived nilpotent Abelian BRST charge, BRST-compatible endpoint polarization, an explicitly normalized oriented gauge zero-mode convention, and compatibility with the declared reduced canonical identity convention?",
+  "kind": "EXACT_LOCAL_IMPROVED_STATIC_BFV_REPLACEMENT_SOURCE_ALGEBRA_ZERO_MODE_AND_DECLARED_REDUCED_IDENTITY_CONTROL",
+  "epistemic_scope": "LOCAL_V0_UPLUS_EXTENDED_PHASE_SPACE_AND_ZERO_MODE_ENDPOINT_SOURCE_NOT_FULL_PATH_BFV_MEASURE_NOT_OLD_KERNEL_NOT_GLOBAL_CYCLE",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json",
+      "sha256": "b6215136abf6d4018456024789ad4160dac1c28af20bd32078bf8edfc0e0d5fe",
+      "payload_sha256_without_self": "c9f8878e27a9d20d92d2807f60232aa03e1efaaa87b9c3c8e75d527d541f059e",
+      "required_verdict": "LOCAL_TRACE_GAUGE_FIBER_KEEP_UNCHANGED_PROPER_TIME_M2_APPEND_KILLED",
+      "role": "kills the append-to-unchanged-proper-time shortcut and leaves a separately derived improved-static replacement open"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json",
+      "sha256": "6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7",
+      "payload_sha256_without_self": "38bfaee2fee30399bc3f1c16c17c0330bc97f6343306a9f5860d296b67a11cd5",
+      "required_verdict": "KEEP_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART",
+      "role": "supplies the exact U_plus canonical chart, positive local FP factor, and endpoint boundary potential used by this source"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Henneaux, Teitelboim and Vergara, Gauge invariance for generally covariant systems, Nucl. Phys. B 387 (1992) 391-418, arXiv:hep-th/9205092",
+      "url": "https://arxiv.org/abs/hep-th/9205092",
+      "used_for": "the improved endpoint action, gauge-related endpoint states, local transversality, and permissibility of time-independent canonical gauges in generally covariant systems",
+      "not_used_for": "deriving the repository Darboux chart, proving a global trace gauge, normalizing this endpoint source, or equating it to the old proper-time kernel"
+    },
+    {
+      "source": "Garcia, Vergara and Urrutia, BRST-BFV quantization and the Schwinger action principle, Int. J. Mod. Phys. A 11 (1996) 2689-2706, arXiv:hep-th/9511092",
+      "url": "https://arxiv.org/abs/hep-th/9511092",
+      "used_for": "the extended multiplier pair, nilpotent BRST-BFV charge, fermionic gauge fixing, improved boundary term, and endpoint conditions with constraint ghost, antighost, and multiplier momentum set to zero",
+      "not_used_for": "the model-specific constraint, this gauge fermion, a global BFV determinant, or a physical state"
+    },
+    {
+      "source": "Marolf, Path integrals and instantons in quantum gravity: Minisuperspace models, Phys. Rev. D 53 (1996) 6979-6990, arXiv:gr-qc/9602019",
+      "url": "https://arxiv.org/abs/gr-qc/9602019",
+      "used_for": "the full-real-lapse distributional delta(C) rigging map as a comparison target that remains open",
+      "not_used_for": "identifying the local zero-mode endpoint source or relational identity below with a full-real-lapse physical inner product"
+    },
+    {
+      "source": "Banihashemi and Jacobson, On the lapse contour in the gravitational path integral, Phys. Rev. D 111 (2025) 066014, arXiv:2405.10307",
+      "url": "https://arxiv.org/abs/2405.10307",
+      "used_for": "constraint-plus-gauge FP context and the need to distinguish a derived momentum gauge from an unchanged real-momentum source",
+      "not_used_for": "the improved endpoint source, its ghost convention, or a global contour choice"
+    }
+  ],
+  "model": {
+    "component": "U_plus={p>0,R=3*p^2-2*P^2>0}",
+    "original_pairs": "{Q,P}=1 and {phi,p}=1, with Q=2*log(a), P=a*p_a/2 and a>0",
+    "constraint": "C=-P^2/(6*pi^2*a^3)+p^2/(4*pi^2*a^3)-6*pi^2*a",
+    "implicit_root": "for every real c=C and (P,p) in U_plus, 72*pi^4*a^4+12*pi^2*c*a^3-R=0 has one smooth positive root",
+    "positive_factor": "D=-C_Q=(R+24*pi^4*a^4)/(8*pi^2*a^3)>0",
+    "darboux_chart": "W(c,P,p)=-integral_0^P Q(c,u,p)du, T=W_c, Phi=phi+W_p, with {T,c}=1 and {Phi,p}=1",
+    "static_slice": "T_P=1/D>0 and T(c,0,p)=0, so T=0 iff P=0 on the declared component",
+    "endpoint_potential": "B=P*Q+W-c*T-p*W_p, so P*dQ+p*dphi=c*dT+p*dPhi+dB and S_D=S0-[B]"
+  },
+  "bfv_convention": {
+    "bosonic_pairs": [
+      ["T", "c"],
+      ["Phi", "p"],
+      ["N", "Pi"]
+    ],
+    "odd_order": ["c_g", "bar_c", "rho", "bar_rho"],
+    "odd_canonical_pairs": [
+      ["c_g", "bar_rho"],
+      ["bar_c", "rho"]
+    ],
+    "ghost_numbers": {
+      "c_g": 1,
+      "bar_c": -1,
+      "rho": 1,
+      "bar_rho": -1
+    },
+    "brst_charge": "Omega=c_g*c+rho*Pi",
+    "graded_bracket": "use right derivatives on the left argument and left derivatives on the right argument; each odd canonical pair has the symmetric contribution (F right-d_theta)(left-d_pi G)+(F right-d_pi)(left-d_theta G)",
+    "brst_differential": "derive sF={F,Omega} from the complete graded BFV Poisson bracket; the resulting images are sT=c_g, sN=rho, sbar_c=Pi, sbar_rho=c, with c,Pi,Phi,p,c_g,rho invariant",
+    "gauge_fermion": "Psi=bar_c*T+bar_rho*N",
+    "gauge_fixing_density": "sPsi=Pi*T+N*c-c_g*bar_c-rho*bar_rho in the frozen odd order, derived from the graded bracket rather than an independently declared odd derivation",
+    "hamiltonian_sign": "following Garcia-Vergara-Urrutia, H_BFV=-{Psi,Omega} for vanishing canonical Hamiltonian, so the first-order action contains +sPsi",
+    "first_order_kinetic_terms": "c*Tdot+p*Phidot-N*Pidot+bar_c_dot*rho+c_g_dot*bar_rho",
+    "multiplier_kinetic_boundary": "-N*Pidot=Pi*Ndot-d(N*Pi)/dt; the boundary difference -[N*Pi] vanishes under the declared endpoint condition Pi=0",
+    "endpoint_data": "fix T=0 and Phi at both endpoints; impose c_g=bar_c=Pi=0 there; the conjugate c and N,rho,bar_rho are not silently fixed at the endpoints",
+    "endpoint_ideal": "(T,Pi,c_g,bar_c), with fixed Phi BRST invariant; c is explicitly absent from the endpoint ideal",
+    "local_zero_mode_phase": "exp[(i/hbar)*(Pi*T+N*c-c_g*bar_c-rho*bar_rho)]",
+    "local_source": "the declared full-real Fourier zero-mode measures dPi/(2*pi*hbar) and dN/(2*pi*hbar) give delta(T)*delta(c); delta(c) is a bulk/zero-mode integration result, not an endpoint boundary condition",
+    "berezin_orientation": "coefficient extraction uses the frozen monomial c_g*bar_c*rho*bar_rho",
+    "berezin_measure_normalization": "Integral_oriented Dtheta F := -hbar^2*[c_g*bar_c*rho*bar_rho]F, so the raw coefficient -1/hbar^2 of the quantum ghost phase is normalized to +1; this is a declared local zero-mode convention, not an absolute full BFV path measure",
+    "construction_origin": "NEW_DARBOUX_ENDPOINT_POLARIZATION",
+    "old_source_factor": null,
+    "imported_lapse_modulus": null,
+    "imported_fixed_a_endpoint": null
+  },
+  "relational_identity_control": {
+    "reduced_one_form": "p*dPhi",
+    "one_step_reduced_action": "S_red=p*(Phi_2-Phi_1)",
+    "declared_measure": "dp/(2*pi*hbar), after the separately normalized local gauge zero-mode factor",
+    "regulated_kernel": "K_epsilon(x)=integral dp/(2*pi*hbar) exp(i*p*x/hbar-epsilon*p^2/hbar^2)=exp(-x^2/(4*epsilon))/(2*sqrt(pi*epsilon))",
+    "test_function": "g_alpha(x)=exp(-alpha*x^2)",
+    "exact_pairing": "integral dx K_epsilon(x)g_alpha(x)=1/sqrt(1+4*alpha*epsilon)",
+    "distributional_limit": "epsilon->0+ gives g_alpha(0)=1",
+    "scope_warning": "this is a consistency check of the declared canonical identity distribution for the single reduced relational pair; it is not derived as a two-endpoint full BFV trajectory kernel and is not a full-real-lapse delta(C) rigging map"
+  },
+  "exact_plan": [
+    "hash-verify the upstream chart and recheck the downstream D>0, {T,c}=1, static-slice and local delta(P)*D=delta(T) identities used here",
+    "verify the Darboux one-form and endpoint boundary cancellation",
+    "implement the complete even graded BFV Poisson bracket, verify its declared fundamental pairs, and derive every BRST generator image from Omega",
+    "verify Omega has ghost number one and {Omega,Omega}=0, then derive sPsi and verify {sPsi,Omega}=0",
+    "verify the declared endpoint ideal (T,Pi,c_g,bar_c), excluding c, is BRST stable and fixed Phi is invariant",
+    "verify the two-by-two constraint-gauge FP matrix is the identity",
+    "evaluate the actual quantum ghost phase's raw ordered Berezin coefficient -1/hbar^2 and the declared normalized zero-mode factor +1",
+    "verify the declared bosonic Fourier phase has unit pairing matrix and contract a generic Phi,p-dependent local test polynomial to its T=c=0 value",
+    "derive the regulated identity pairing from S_red and the separately declared reduced canonical measure, and verify its epsilon->0 distributional limit",
+    "keep the old proper-time source, full path BFV measure, full-real-lapse delta(C), global cycle and every physics output fail-closed"
+  ],
+  "numerical_plan": {
+    "precision_digits": 80,
+    "alpha": "0.7",
+    "epsilon_values": ["0.2", "0.05", "0.01"],
+    "relative_tolerance": "1e-60",
+    "quadrature": "compare direct real-x integration of K_epsilon(x)*exp(-alpha*x^2) with 1/sqrt(1+4*alpha*epsilon)"
+  },
+  "decision_table": [
+    {
+      "condition": "upstream provenance is exact; the Darboux/static identities, bracket-derived BRST nilpotency, gauge-fixing density, endpoint stability, FP/normalized-Berezin convention, local zero-mode contraction and declared reduced relational identity control all pass",
+      "verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA",
+      "programme_impact": "NARROW_LOCAL_KEEP",
+      "meaning": "keep one internally consistent local U_plus improved-static BFV replacement-source algebra and its zero-mode convention, compatible with the separately declared reduced canonical identity; a two-endpoint full BFV trajectory kernel, absolute path measure, old-kernel equality, full-real-lapse delta(C), other gauges/components and global physics remain open"
+    },
+    {
+      "condition": "the frozen BRST charge is nonnilpotent, the endpoint ideal is not BRST stable, or the FP/Berezin factor is singular or inconsistently oriented",
+      "verdict": "KILL_V0_IMPROVED_STATIC_BFV_SOURCE_ALGEBRA",
+      "programme_impact": "KILL_LOCAL_SOURCE_IMPLEMENTATION",
+      "meaning": "reject this improved-static local BFV source implementation without inferring a no-go for other gauges"
+    },
+    {
+      "condition": "the local BFV algebra passes but the relational identity normalization is not established",
+      "verdict": "NARROW_V0_BFV_ALGEBRA_IDENTITY_OPEN",
+      "programme_impact": "NARROW_AND_OPEN",
+      "meaning": "retain only the algebraic source and zero-mode convention; do not promote the reduced canonical identity control to KEEP"
+    },
+    {
+      "condition": "the construction reuses the old proper-time/fixed-a source by appending delta(T) or an FP determinant",
+      "verdict": "KILL_APPEND_SHORTCUT",
+      "programme_impact": "KILL_PREVIOUSLY_EXCLUDED_MODEL_CLASS",
+      "meaning": "the calculation is not a replacement source and falls in the already killed append-only class"
+    }
+  ],
+  "computed_scope": [
+    "the exact classical U_plus Darboux and improved endpoint ledger needed by the source",
+    "one explicitly oriented Abelian extended BFV algebra and gauge fermion",
+    "BRST-compatible local endpoint conditions",
+    "the componentwise zero-mode FP/Fourier/Berezin source contraction under explicitly declared measures",
+    "compatibility with the separately declared regulated canonical identity distribution of the reduced relational Phi pair"
+  ],
+  "not_computed": [
+    "a time-dependent trace gauge or comparison of two gauge fermions",
+    "a two-endpoint, finite m=2, or continuum BFV trajectory integral with local lapse at every element",
+    "an absolute normalization of a full BFV functional measure or physical inner product",
+    "equality to the old fixed-(a,phi) proper-time kernel or a source deformation from it",
+    "a full-real-lapse group average or distributional delta(C) rigging map",
+    "zero-lapse contact terms, regulator removal for the constraint projector, or a spectral measure",
+    "other Darboux components, a global gauge atlas, Gribov-copy census, determinant-line or Pfaffian orientation",
+    "a physical original cycle, global n_sigma, physics claim or TOE claim"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "physical_original_cycle": null,
+    "full_joint_orientation": null,
+    "full_m2_bfv_measure": null,
+    "full_real_lapse_delta_C": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
