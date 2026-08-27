@@ -56,6 +56,7 @@
   "m2_spectral_projection": {
     "basis": "e0=1, e_c=sqrt(2)*cos(pi*s), e_s=sqrt(2)*sin(pi*s)",
     "derivative": "d e_s/ds=pi*e_c",
+    "sector_overlap": "each function has unit norm; e0 is orthogonal to e_c and e_c to e_s, while integral(e0*e_s)=2*sqrt(2)/pi is nonzero because the Dirichlet and cosine/zero fields use different boundary sectors",
     "dirichlet_modes": "T=T1*e_s, Pi=Pi1*e_s, c_g=g1*e_s, bar_c=b1*e_s",
     "cosine_and_zero_modes": "c=c0+c1*e_c, N=N0+N1*e_c, rho=rho0+rho1*e_c, bar_rho=br0+br1*e_c",
     "physical_spectator": "p=p0>0, Phi=Phi0+s*DeltaPhi",
@@ -70,7 +71,7 @@
   },
   "exact_plan": [
     "hash-verify the static BFV source and the successful frozen spectral pairing",
-    "verify the orthonormal sine/cosine basis, derivative relation and exact endpoint vanishing",
+    "verify unit normalization in each boundary sector, the required e0-e_c and e_c-e_s orthogonality, the nonzero e0-e_s cross-sector overlap, the derivative relation and exact endpoint vanishing",
     "project every even and odd kinetic/gauge-fixing term and recover the frozen m=2 action coefficients",
     "verify the mode BRST generator images are nilpotent and preserve the endpoint-vanishing sine sector, using the pinned bracket-derived continuum images",
     "build the nonzero bosonic gauge matrix A=[[pi,lambda],[lambda,-pi]] and verify det(A)=-(pi^2+lambda^2)",

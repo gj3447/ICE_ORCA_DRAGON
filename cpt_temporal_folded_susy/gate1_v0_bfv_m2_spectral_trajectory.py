@@ -36,7 +36,7 @@ RUNNER_RELPATH = (
     "cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py"
 )
 EXPECTED_INPUT_SHA256 = (
-    "a761df0ac41e14e0f12f31ea89a6c9764602b00cb38cac9ca4c11cd430cb4553"
+    "dc301d233540b5d635d448c4e2c1cf897e6c9ae612493a5ab11a1d44b403eb77"
 )
 CALCULATION_ID = "Gate1V0BfvM2SpectralTrajectory"
 RESULT_SCHEMA = "ice.gate1.v0-bfv-m2-spectral-trajectory.result.v1"
@@ -260,10 +260,16 @@ def exact_calculation(
             basis[row] * basis[column], (s, 0, 1)
         ),
     )
-    basis_orthonormal = audit.observe(
-        "G1.m2.basis.orthonormality",
-        gram == sp.eye(3),
-        "e0,e_c,e_s are exactly orthonormal on the unit interval",
+    basis_sector_pass = audit.observe(
+        "G1.m2.basis.sector_normalization_and_overlaps",
+        all(gram[index, index] == 1 for index in range(3))
+        and gram[0, 1] == 0
+        and gram[1, 0] == 0
+        and gram[1, 2] == 0
+        and gram[2, 1] == 0
+        and sp.simplify(gram[0, 2] - 2 * sp.sqrt(2) / sp.pi) == 0
+        and sp.simplify(gram[2, 0] - 2 * sp.sqrt(2) / sp.pi) == 0,
+        "the sector functions have unit norm and the required e0-e_c/e_c-e_s orthogonality; the distinct-boundary-sector overlap int(e0*e_s)=2*sqrt(2)/pi is explicitly retained",
     )
     derivative_relation = audit.observe(
         "G1.m2.basis.derivative_relation",
@@ -512,7 +518,7 @@ def exact_calculation(
     core_flags = {
         "upstream_static_bfv_contract": upstream_contract,
         "static_spectral_prerequisite": prerequisite,
-        "basis_orthonormal": basis_orthonormal,
+        "basis_sector_normalization_and_overlaps": basis_sector_pass,
         "derivative_relation": derivative_relation,
         "endpoint_vanishing": endpoint_vanishing,
         "minimal_nonzero_mode": minimal_nonzero,
