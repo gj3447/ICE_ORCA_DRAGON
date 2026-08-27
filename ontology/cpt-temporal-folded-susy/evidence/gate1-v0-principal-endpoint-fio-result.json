@@ -121,7 +121,9 @@
       "initial_result_commit": "75677a6743d0b482d45f22505aab86c20edea06c",
       "semantic_evaluator_repair_commit": "a58b2366b162cdb664663f9adb88ba56bdb3bb85",
       "final_raw_result_commit": "38f326839044fb54acec1180636179deba0221b9",
-      "report_commit": "ab978a528d7238ac6e4438edda3570c9295ed335",
+      "initial_report_commit": "ab978a528d7238ac6e4438edda3570c9295ed335",
+      "citation_correction_commit": "32d38a11ce9ab00e6fdcbd090d04096e73d6891c",
+      "final_report_commit": "32d38a11ce9ab00e6fdcbd090d04096e73d6891c",
       "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_INPUTS.json",
       "input_manifest_sha256": "9f3bb3ff0758b0eacfd5ee6c42cd71ca1bf44c99ae822c35b768690031a4585f",
       "runner_sha256": "7a5ed69028cfb3721f563bb5370a3267bf8ef1bfe3c5e8698a545578b5c1fd53",
@@ -130,7 +132,7 @@
       "raw_result_payload_sha256_without_self": "f23c8fbd167b5041d7473cb69a05621768d44b95cd73aab02aaee0ea719bc5e7",
       "raw_result_size_bytes": 21401,
       "report_path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md",
-      "report_sha256": "2b6fa7de22628ed9b94d3c1d31637bdff53aa48b4ac4a3216eee95c7f67171d9"
+      "report_sha256": "46abeb217b9529c7cc170b89ec5f5faf69d26b298f379a51aa3d7bcafb32a9ff"
     },
     "attempt_ledger": {
       "scientific_command_attempts": 2,

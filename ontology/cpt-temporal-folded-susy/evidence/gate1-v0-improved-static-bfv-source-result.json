@@ -1,0 +1,285 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_20260827",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-27T08:25:25Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_improved_static_bfv_source",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_improved_static_bfv_source.py",
+    "sha256": "62f52d079c62b9b84ccea6562e44b952067cd6c8e10f7d1a9673cc124b949ccf",
+    "introduced_in_commit": "a0eb33c13b91b6a1b8a7407bf015d9b2093d2d04"
+  },
+  "exact_checks": 21,
+  "checks": [
+    {
+      "id": "P39.G1.bfv.domain.positive_trace_factor",
+      "status": "PASS",
+      "statement": "D=(R+24*pi^4*a^4)/(8*pi^2*a^3) is positive for a>0 and R>0 on U_plus"
+    },
+    {
+      "id": "P39.G1.bfv.bracket.fundamental_pairs",
+      "status": "PASS",
+      "statement": "the implemented graded bracket is antisymmetric on each even pair and symmetric on each odd pair"
+    },
+    {
+      "id": "P39.G1.bfv.canonical.fp_matrix",
+      "status": "PASS",
+      "statement": "the gauges (T,N) and constraints (c,Pi) form an oriented unit local FP matrix"
+    },
+    {
+      "id": "P39.G1.bfv.canonical.static_slice_coarea",
+      "status": "PASS",
+      "statement": "T_P=1/D>0 with T(c,0,p)=0 makes P=0 equivalent to T=0 and delta(P)*D=delta(T) locally"
+    },
+    {
+      "id": "P39.G1.bfv.endpoint.improved_one_form",
+      "status": "PASS",
+      "statement": "P*dQ+p*dphi=c*dT+p*dPhi+dB, so S_D=S0-[B] has the transformed endpoint variation"
+    },
+    {
+      "id": "P39.G1.bfv.endpoint.static_normalization",
+      "status": "PASS",
+      "statement": "the integral normalization at P=T=0 gives B=0 on the improved-static representative"
+    },
+    {
+      "id": "P39.G1.bfv.brst.charge_nilpotence",
+      "status": "PASS",
+      "statement": "Omega=c_g*c+rho*Pi has ghost number one and {Omega,Omega}=0 under the implemented graded bracket"
+    },
+    {
+      "id": "P39.G1.bfv.brst.generator_images_from_omega",
+      "status": "PASS",
+      "statement": "all bosonic and odd BRST generator images are derived as {F,Omega}, not supplied as a separate differential"
+    },
+    {
+      "id": "P39.G1.bfv.brst.complete_generator_nilpotence",
+      "status": "PASS",
+      "statement": "s^2 vanishes on every bosonic and odd generator, including the nonminimal endpoint sector"
+    },
+    {
+      "id": "P39.G1.bfv.gauge_fermion.derived_density",
+      "status": "PASS",
+      "statement": "Psi=bar_c*T+bar_rho*N has ghost number -1 and the bracket gives sPsi=Pi*T+N*c-c_g*bar_c-rho*bar_rho"
+    },
+    {
+      "id": "P39.G1.bfv.gauge_fermion.brst_invariance",
+      "status": "PASS",
+      "statement": "the bracket-derived gauge-fixing density is BRST closed because {sPsi,Omega}=0"
+    },
+    {
+      "id": "P39.G1.bfv.endpoint.multiplier_kinetic_boundary",
+      "status": "PASS",
+      "statement": "-N*dPi=Pi*dN-d(N*Pi), and the boundary difference -[N*Pi] vanishes when endpoint Pi=0"
+    },
+    {
+      "id": "P39.G1.bfv.endpoint.brst_stable_ideal",
+      "status": "PASS",
+      "statement": "the endpoint ideal (T,Pi,c_g,bar_c), excluding c, is BRST stable and fixed Phi is invariant"
+    },
+    {
+      "id": "P39.G1.bfv.source.replacement_structure",
+      "status": "PASS",
+      "statement": "the frozen source declares a new Darboux endpoint polarization and imports no old fixed-a factor or lapse modulus"
+    },
+    {
+      "id": "P39.G1.bfv.source.unit_berezin_orientation",
+      "status": "PASS",
+      "statement": "the quantum ghost phase has raw top coefficient -1/hbar^2 and the declared oriented measure -hbar^2 times coefficient extraction gives +1"
+    },
+    {
+      "id": "P39.G1.bfv.source.bosonic_fourier_pairing",
+      "status": "PASS",
+      "statement": "the phase Pi*T+N*c has unit pairing matrix, so the declared full-real dPi and dN Fourier measures yield delta(T)delta(c)"
+    },
+    {
+      "id": "P39.G1.bfv.source.local_endpoint_contraction",
+      "status": "PASS",
+      "statement": "the declared zero-mode delta(T)delta(c) and normalized ghost factor preserve generic Phi,p dependence as F_0(Phi,p)"
+    },
+    {
+      "id": "P39.G1.bfv.relational.declared_canonical_measure",
+      "status": "PASS",
+      "statement": "S_red=p*(Phi_2-Phi_1) with the separately declared dp/(2*pi*hbar) measure defines the regulated canonical identity control"
+    },
+    {
+      "id": "P39.G1.bfv.relational.regulated_identity_pairing",
+      "status": "PASS",
+      "statement": "the regulated Fourier identity kernel pairs with exp(-alpha*x^2) as 1/sqrt(1+4*alpha*epsilon)"
+    },
+    {
+      "id": "P39.G1.bfv.relational.distributional_identity_limit",
+      "status": "PASS",
+      "statement": "epsilon->0+ gives the test value at the origin, establishing only the reduced Phi identity distribution"
+    },
+    {
+      "id": "P39.G1.bfv.relational.sampled_limit_monotonicity",
+      "status": "PASS",
+      "statement": "the frozen decreasing regulator sequence approaches the exact distributional test value monotonically"
+    }
+  ],
+  "numerical_checks": 3,
+  "numerical": [
+    {
+      "id": "P39.G1.bfv.relational.quadrature_1",
+      "status": "PASS",
+      "statement": "at epsilon=0.2 the direct 80-digit integral matches 1/sqrt(1+4*alpha*epsilon) with zero recorded relative error"
+    },
+    {
+      "id": "P39.G1.bfv.relational.quadrature_2",
+      "status": "PASS",
+      "statement": "at epsilon=0.05 the direct 80-digit integral matches the exact pairing with relative error 1.126e-81"
+    },
+    {
+      "id": "P39.G1.bfv.relational.quadrature_3",
+      "status": "PASS",
+      "statement": "at epsilon=0.01 the direct 80-digit integral matches 1/sqrt(1+4*alpha*epsilon) with zero recorded relative error"
+    }
+  ],
+  "payload": {
+    "exact_checks": 21,
+    "numerical_checks": 3,
+    "calculation": {
+      "calculation_id": "Gate1V0ImprovedStaticBfvSource",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_V0_LOCAL_IMPROVED_STATIC_BFV_SOURCE_BRST_ENDPOINT_AND_RELATIONAL_IDENTITY_KEEP_FULL_PATH_DELTA_C_AND_GLOBAL_OPEN",
+      "verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA",
+      "programme_impact": "NARROW_LOCAL_KEEP"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited finite m=2 Gate-1 provenance required by research-run-evidence/v1; this bounded calculation has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative G1.bfv.* check id",
+      "authoritative_exact_check_ids": [
+        "G1.bfv.domain.positive_trace_factor",
+        "G1.bfv.bracket.fundamental_pairs",
+        "G1.bfv.canonical.fp_matrix",
+        "G1.bfv.canonical.static_slice_coarea",
+        "G1.bfv.endpoint.improved_one_form",
+        "G1.bfv.endpoint.static_normalization",
+        "G1.bfv.brst.charge_nilpotence",
+        "G1.bfv.brst.generator_images_from_omega",
+        "G1.bfv.brst.complete_generator_nilpotence",
+        "G1.bfv.gauge_fermion.derived_density",
+        "G1.bfv.gauge_fermion.brst_invariance",
+        "G1.bfv.endpoint.multiplier_kinetic_boundary",
+        "G1.bfv.endpoint.brst_stable_ideal",
+        "G1.bfv.source.replacement_structure",
+        "G1.bfv.source.unit_berezin_orientation",
+        "G1.bfv.source.bosonic_fourier_pairing",
+        "G1.bfv.source.local_endpoint_contraction",
+        "G1.bfv.relational.declared_canonical_measure",
+        "G1.bfv.relational.regulated_identity_pairing",
+        "G1.bfv.relational.distributional_identity_limit",
+        "G1.bfv.relational.sampled_limit_monotonicity"
+      ],
+      "authoritative_numerical_check_ids": [
+        "G1.bfv.relational.quadrature_1",
+        "G1.bfv.relational.quadrature_2",
+        "G1.bfv.relational.quadrature_3"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "definition_commit": "a0eb33c13b91b6a1b8a7407bf015d9b2093d2d04",
+      "final_raw_result_commit": "3e068389788676c69e8782eb9d34a2edb0416c96",
+      "report_commit": "0432364008468519200a2f7654eb021518228b85",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_INPUTS.json",
+      "input_manifest_sha256": "ad9297d33b5fa2e3da4b31969e4d412d5f7891e20ce15b43de6e5476964261a3",
+      "runner_sha256": "62f52d079c62b9b84ccea6562e44b952067cd6c8e10f7d1a9673cc124b949ccf",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "raw_result_outer_sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "raw_result_payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "raw_result_size_bytes": 26688,
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE.md",
+      "report_sha256": "326e9403c60570895f0b58d6809dce33c655f2cf87aff1a4ddcbdeb75181f220"
+    },
+    "attempt_ledger": {
+      "scientific_command_attempts": 1,
+      "attempt_1": {
+        "logical_command": "./ice run cpt_temporal_folded_susy/gate1_v0_improved_static_bfv_source",
+        "exit_code": 0,
+        "wall_time_seconds": 2.606376245,
+        "run_status": "VALID_RUN",
+        "result_written": true,
+        "status": "FINAL_FROZEN_RESULT"
+      },
+      "scientific_decision_changed_after_run": false,
+      "epistemic_scope_narrowed_after_review": false
+    },
+    "ragnarok_termination_audit": {
+      "runtime_policy": "GENERIC_BOUNDED_UNNUMBERED_CORE",
+      "scientific_nonpass_policy": "RECORD_PREDECLARED_TERMINAL_RESULT",
+      "integrity_or_schema_failure_policy": "RAISE_WITHOUT_RESULT",
+      "arbitrary_arguments": "REJECTED",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    },
+    "computed_facts": {
+      "source_origin": "NEW_DARBOUX_ENDPOINT_REPLACEMENT_NOT_OLD_SOURCE_APPEND",
+      "constraint_component": "UPLUS_P_POSITIVE_R_POSITIVE",
+      "graded_bfv_charge": "OMEGA_EQUALS_CG_C_PLUS_RHO_PI_NILPOTENT",
+      "gauge_fermion_density": "SPSI_EQUALS_PI_T_PLUS_N_C_MINUS_CG_BARC_MINUS_RHO_BARRHO",
+      "endpoint_ideal": "T_PI_CG_BARC_BRST_STABLE_C_EXCLUDED",
+      "local_bosonic_source": "DECLARED_FOURIER_DELTA_T_DELTA_C",
+      "local_oriented_ghost_factor": "PLUS_ONE_UNDER_DECLARED_MINUS_HBAR2_TOP_MEASURE",
+      "reduced_relational_identity": "KEEP_AS_DECLARED_CANONICAL_COMPATIBILITY_CONTROL",
+      "two_endpoint_or_full_path_bfv_kernel": "NOT_COMPUTED",
+      "absolute_bfv_measure": "NOT_COMPUTED",
+      "old_kernel_equivalence": "NOT_COMPUTED",
+      "full_real_lapse_delta_C": "NOT_COMPUTED",
+      "global_source_and_cycle": "NOT_COMPUTED"
+    },
+    "numerical_metrics": {
+      "precision_digits": 80,
+      "alpha": "0.7",
+      "epsilon_values": ["0.2", "0.05", "0.01"],
+      "pairing_values": [
+        "0.800640769025435667416268348838435187317046151024571321596535",
+        "0.936585811581693965860659996982079879498446295566717553857729",
+        "0.986287303940589558251072992287629832616839167811367392635698"
+      ],
+      "sampled_limit_monotone": true,
+      "quadratures": 3,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "interpretation": "independent high-precision arithmetic control of a declared reduced canonical identity formula, not a derived full BFV propagator or physical replication"
+    },
+    "theorem_guards": {
+      "count": 6,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_21_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.bfv.guard.improved_static_endpoint_scope",
+        "G1.bfv.guard.bfv_endpoint_conditions",
+        "G1.bfv.guard.local_zero_mode_only",
+        "G1.bfv.guard.relational_identity_not_delta_c",
+        "G1.bfv.guard.static_not_proper_time",
+        "G1.bfv.guard.component_and_global_boundary"
+      ]
+    },
+    "scope_status": {
+      "local_v0_uplus_improved_static_bfv_source_algebra": "KEEP",
+      "local_relational_identity_distribution": "KEEP_AS_DECLARED_CANONICAL_COMPATIBILITY_CONTROL",
+      "two_endpoint_full_bfv_kernel": null,
+      "finite_m2_or_continuum_bfv_measure": null,
+      "absolute_functional_measure": null,
+      "old_fixed_a_kernel_equivalence": null,
+      "full_real_lapse_delta_C": null,
+      "global_gauge_atlas_and_cycle": null
+    },
+    "fail_closed_outputs": {
+      "physical_original_cycle": null,
+      "full_joint_orientation": null,
+      "full_m2_bfv_measure": null,
+      "full_real_lapse_delta_C": null,
+      "global_n_sigma": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    }
+  }
+}

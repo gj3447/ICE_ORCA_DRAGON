@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-27T06:40:59Z",
+  "updated_at_utc": "2026-08-27T08:32:12Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -71,7 +71,7 @@
         "Phase 11-56 claims, evidence snapshots or historical provenance pointers, scopes, policies, and open gates",
         "the Phase 11-15R collar-to-interface-to-charge-to-parent lineage, including the Phase 15A invalid-sequence break",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, and the still-open full-symbol/ordering/domain/other-component/global-atlas/BFV/delta(C)-kernel/zero-lapse/full-joint boundary",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the still-open normalized-endpoint/spectral-delta(C)/full-trajectory/other-component/global-atlas/zero-lapse/full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -451,7 +451,7 @@
       "path": "cpt_temporal_folded_susy",
       "status": "INDEXED",
       "graph": "cpt",
-      "reason": "Phase 11-56 claim/evidence history is indexed, including historical artifact pointers for Phase 11-15R, the Phase 15A invalid-sequence boundary, and the bounded non-numbered Gate-1 lineage through the V0 local action, U_plus Darboux chart, principal momentum FIO and one-term exact-unitarity KILL. Indexing is not physics promotion; the full-symbol/domain, other-component/global-atlas, BFV/delta(C) and physical-cycle boundary remains open."
+      "reason": "Phase 11-56 claim/evidence history is indexed, including historical artifact pointers for Phase 11-15R, the Phase 15A invalid-sequence boundary, and the bounded non-numbered Gate-1 lineage through the V0 local action, U_plus Darboux chart, principal momentum FIO, one-term exact-unitarity KILL and improved-static BFV zero-mode source algebra. Indexing is not physics promotion; the normalized endpoint/spectral delta(C), full trajectory, other-component/global-atlas and physical-cycle boundary remains open."
     },
     {
       "path": "docs",

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-27T06:31:04Z",
+  "updated_at_utc": "2026-08-27T08:32:12Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -456,7 +456,7 @@
     },
     {
       "question": "Can the trace-gauge V0 chart now supply quantum endpoint states and repair the finite m=2 source?",
-      "answer": "It now supplies one additional but still local layer. On compact interiors of U_plus, the old-(P,p) to new-(c,p) phase S=-W and half-density D^(-1/2) define a principal momentum-polarization FIO with a fixed local Maslov branch and exact c=0 lineage. The uncorrected one-term Van Vleck kernel is not exactly unitary: its geometric-mean composition density is strictly larger than the required secant/coarea density on symmetric nonzero c=0 pairs. This kills exact unitarity only for that one-term amplitude, not a corrected full-symbol or spectral transform. A normalized global endpoint operator, ordering and domains, coordinate polarization, ghost/BFV replacement source, old-kernel equality, full-real-lapse delta(C) kernel and every global or physical output remain open or null.",
+      "answer": "It now supplies two additional but still local layers. On compact interiors of U_plus, the phase S=-W and half-density D^(-1/2) define a principal momentum-polarization FIO; exact finite-hbar unitarity of its uncorrected one-term amplitude is contradicted without excluding a corrected full symbol. Separately, one improved-static finite BFV zero-mode replacement-source algebra is internally consistent: bracket-derived nilpotent Omega, endpoint ideal (T,Pi,c_g,bar_c), declared Fourier delta(T)delta(c), oriented ghost factor +1 and reduced-Phi identity compatibility. This does not yet supply a normalized endpoint-state transform, Hilbert measure, ordering/domain, spectral delta(C), two-endpoint/full-trajectory BFV kernel, old-kernel equality or any global/physical output.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -464,7 +464,8 @@
         "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
         "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
         "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
-        "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY"
+        "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+        "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA"
       ]
     }
   ],
@@ -1097,8 +1098,8 @@
     },
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
-      "title": "From the anchored straight-line KILL to the V0 local principal-FIO boundary",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and then an exact U_plus classical Darboux chart. The latest bounded result quantizes that chart only at principal microlocal order and kills exact unitarity of the uncorrected one-term Van Vleck amplitude by a geometric-versus-secant coarea discriminator. Stop before a corrected full symbol, ordering and domains, global endpoint operator, other-component atlas, ghost/BFV replacement source, full-real-lapse delta(C) kernel, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
+      "title": "From the anchored straight-line KILL to the V0 local BFV zero-mode boundary",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and an exact U_plus classical Darboux chart. One bounded result quantizes that chart only at principal microlocal order and kills exact unitarity of the uncorrected one-term amplitude. The newest result separately keeps one improved-static finite BFV zero-mode replacement-source algebra with explicitly declared measures. Stop before a normalized endpoint transform and spectral delta(C) comparison, corrected full symbol, ordering and domains, two-endpoint/full-trajectory BFV kernel, absolute measure, other-component atlas, old-kernel equality, source deformation, zero lapse, scale/mixed ends, determinant orientation, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1130,6 +1131,8 @@
         "concept:gate1-v0-principal-endpoint-fio-control",
         "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
         "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+        "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+        "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
         "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -5508,11 +5511,11 @@
       "id": "source:garcia-vergara-urrutia-1995",
       "type": "source",
       "title": "BRST–BFV quantization and the Schwinger action principle",
-      "summary": "Primary source for endpoint BRST boundary conditions and boundary terms; it does not determine this gravitational determinant or physical endpoint measure.",
+      "summary": "Primary source for the extended multiplier/ghost BFV action, BRST charge, fermionic gauge fixing, endpoint BRST boundary conditions and boundary terms; it does not determine the repository gauge fermion, zero-mode measure convention, gravitational determinant or physical endpoint measure.",
       "state": "PRIMARY",
-      "citation": "J. A. García, J. D. Vergara and L. F. Urrutia, BRST–BFV quantization and the Schwinger action principle",
+      "citation": "J. A. García, J. D. Vergara and L. F. Urrutia, BRST–BFV quantization and the Schwinger action principle, International Journal of Modern Physics A 11 (1996) 2689–2706",
       "uri": "https://arxiv.org/abs/hep-th/9511092",
-      "version": "arXiv:hep-th/9511092v1"
+      "version": "Int. J. Mod. Phys. A 11 (1996) 2689–2706; arXiv:hep-th/9511092v1; doi:10.1142/S0217751X96001309"
     },
     {
       "id": "artifact:p29-script",
@@ -10138,10 +10141,10 @@
     {
       "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "type": "open_problem",
-      "title": "Lift the V0 local principal FIO to a corrected global endpoint transform and replacement BFV source, then extend through zero lapse and the full joint cycle",
-      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The trace-gauge branch proves a local simple-root reduction away from a^2 V=2 while killing append-to-unchanged-source, then constructs a closed-FRW V0 on-shell relational endpoint action and an exact classical off-shell Darboux chart on U_plus={p_phi>0,R>0}. The newest result lifts that chart only on compact interiors to the principal momentum-polarization FIO with phase -W, half-density D^(-1/2), fixed local Maslov branch and exact c=0 lineage. It also kills exact finite-hbar unitarity of the uncorrected one-term Van Vleck kernel because the geometric-mean composition density differs strictly from the required secant/coarea density. A corrected full symbol or spectral transform is not excluded. Ordering, self-adjoint domains, edge conditions, global normalization and Maslov gluing, coordinate polarization, ghost/BFV sector, replacement source/lattice, old fixed-a equality and full-real-lapse distributional delta(C) kernel remain open without automatic execution authority. Lambda=1, zero lapse, source deformation, other components, global orbit coverage, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
-      "state": "OPEN_AFTER_V0_LOCAL_PRINCIPAL_FIO_KEEP_ONE_TERM_EXACT_UNITARITY_KILL_FULL_SYMBOL_BFV_DELTA_C_AND_GLOBAL_SCOPE_OPEN",
-      "question": "Can the kept U_plus principal FIO be completed by a derived full symbol, ordering, self-adjoint domains, edge conditions and global Maslov data into a normalized endpoint transform, then extended with ghost/BFV endpoint data to a replacement source representing the full-real-lapse distributional delta(C) rigging map and connected through zero lapse, other components and every relative end into a physical full joint cycle?"
+      "title": "Normalize the V0 endpoint transform and spectral pairing beyond the local BFV zero-mode algebra, then extend through a full trajectory source, zero lapse and the joint cycle",
+      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The trace-gauge branch proves a local simple-root reduction away from a^2 V=2 while killing append-to-unchanged-source, then constructs a closed-FRW V0 on-shell relational endpoint action and an exact classical off-shell Darboux chart on U_plus={p_phi>0,R>0}. One follow-up keeps the compact-interior principal momentum FIO while killing exact finite-hbar unitarity of its uncorrected one-term amplitude. The newest result separately derives one internally consistent improved-static Abelian BFV zero-mode replacement-source algebra on U_plus, including a BRST-stable endpoint ideal, declared Fourier delta(T)delta(c), oriented ghost factor and compatibility with a separately declared reduced Phi identity. It does not supply a normalized endpoint-state transform, Hilbert measure, ordering, self-adjoint domain, spectral delta(C) pairing, two-endpoint or finite-m trajectory kernel, absolute functional measure, source lattice, old fixed-a equality or zero-lapse extension. Those quantum-target obligations, a corrected full symbol, other components, global orbit coverage, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain open without automatic execution authority.",
+      "state": "OPEN_AFTER_V0_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_SOURCE_KEEP_FULL_SYMBOL_SPECTRAL_FULL_PATH_DELTA_C_AND_GLOBAL_SCOPE_OPEN",
+      "question": "Can a declared Hilbert measure, ordering and self-adjoint domain for the kept U_plus constraint normalize the B-induced endpoint-state transform and make its improved-static local pairing agree with a spectral delta(C) pairing on frozen test states; only then can that target be extended to a two-endpoint or finite-m BFV trajectory source, zero lapse, other components and a physical full joint cycle?"
     },
     {
       "id": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
@@ -10245,7 +10248,7 @@
       "id": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
       "type": "claim",
       "title": "Current records do not establish a phase-locked joint cycle",
-      "summary": "Supported as an evidence-scope statement, not as proof of physical inequivalence. The ordered scalar control establishes a nonzero-lapse-arm link to the declared 0<lambda<=1 Gamma_lambda representatives, but is newly declared rather than a recovered physical original cycle and leaves N=0 open. The full-bosonic m=2 control further shows that one common lateral sign cannot absolutely damp unchanged real p_a,p_phi axes; its matching complex Gaussian rays remain declared rather than source-derived and require a p_a gauge/FP/BFV and determinant-line completion. The closed-FRW V=0 lineage first adds a classical local on-shell relational endpoint action and then an exact classical componentwise off-shell Darboux chart on U_plus, with c=0 recovery. The chart explicitly leaves normalized quantum endpoint states, the ghost/BFV replacement source, full-real-lapse distributional delta(C) kernel, old fixed-a equality, zero lapse, other components and all global data null. Phase 30 fixes only literal real-field arm restrictions, the below-origin sources select no full field/joint lift, and Phase 39 serializes its finite chain as not derived physical-original data. No full joint cycle or global coefficient follows.",
+      "summary": "Supported as an evidence-scope statement, not as proof of physical inequivalence. The ordered scalar control establishes a nonzero-lapse-arm link to the declared 0<lambda<=1 Gamma_lambda representatives, but is newly declared rather than a recovered physical original cycle and leaves N=0 open. The full-bosonic m=2 control further shows that one common lateral sign cannot absolutely damp unchanged real p_a,p_phi axes; its matching complex Gaussian rays remain declared rather than source-derived and require a p_a gauge/FP/BFV and determinant-line completion. The closed-FRW V=0 lineage supplies a classical on-shell endpoint action, an exact componentwise off-shell Darboux chart, a compact-interior principal momentum FIO, and now one internally consistent improved-static BFV zero-mode replacement-source algebra on U_plus. The newest KEEP is limited to bracket-derived local BRST data, endpoint polarization, declared Fourier/Berezin normalization and reduced-identity compatibility; it supplies no normalized endpoint-state transform, spectral delta(C), two-endpoint/full-trajectory source, old fixed-a equality, zero lapse, determinant line, other component or global data. Phase 30 fixes only literal real-field arm restrictions, the below-origin sources select no full field/joint lift, and Phase 39 serializes its finite chain as not derived physical-original data. No full joint cycle or global coefficient follows.",
       "state": "SUPPORTED_AS_CURRENT_RECORD_NONESTABLISHMENT_NOT_PHYSICAL_INEQUIVALENCE",
       "claim_id": "G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
       "statement": "The current repository records do not establish or source-select the phase-locked contour as the physical original joint cycle.",
@@ -10963,7 +10966,7 @@
       "state": "TRACKED_VALID_RUN_EVIDENCE",
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-principal-endpoint-fio-result.json",
-      "sha256": "9dbc7c3564cf42ab0f0969c50439dc31d77aefdedada5b23f9cc4197aa8fd005"
+      "sha256": "456514a60ddb7ba8eaa8a7002695393b7179343f2f8ef5ff406bb9156e25ef6e"
     },
     {
       "id": "artifact:gate1-v0-principal-endpoint-fio-report",
@@ -10973,7 +10976,99 @@
       "state": "TRACKED_VALID_RUN_REPORT",
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md",
-      "sha256": "2b6fa7de22628ed9b94d3c1d31637bdff53aa48b4ac4a3216eee95c7f67171d9"
+      "sha256": "46abeb217b9529c7cc170b89ec5f5faf69d26b298f379a51aa3d7bcafb32a9ff"
+    },
+    {
+      "id": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "type": "concept",
+      "title": "Gate-1 V0 local improved-static BFV zero-mode replacement-source control",
+      "summary": "A bounded non-numbered calculation consumes the hash-verified U_plus Darboux chart and the prior unchanged-source append KILL. It implements the complete graded bracket for one finite declared bosonic/ghost zero-mode algebra, derives the BRST differential and gauge-fixing density, separates the endpoint ideal from the N-produced constraint delta, fixes one oriented local Berezin convention, and checks compatibility with a separately declared reduced Phi identity. It creates no automatic successor and does not construct a full trajectory kernel or physical state.",
+      "state": "COMPLETED_VALID_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_SOURCE_ALGEBRA_KEEP_NO_AUTOMATIC_SUCCESSOR"
+    },
+    {
+      "id": "scope:gate1-v0-uplus-improved-static-bfv-endpoint-zero-mode-source",
+      "type": "scope",
+      "title": "Closed-FRW V0 U_plus improved-static BFV endpoint zero-mode source scope",
+      "summary": "One componentwise Darboux endpoint polarization, finite Abelian BFV zero-mode algebra and explicitly declared FP/Fourier/Berezin conventions, separated from a normalized endpoint transform, full trajectory functional measure, spectral delta(C), global gauge/cycle data and every physical claim.",
+      "state": "CLOSED_LOCAL_ZERO_MODE_SOURCE_ALGEBRA_FULL_QUANTUM_TARGET_TRAJECTORY_AND_GLOBAL_SCOPE_OPEN",
+      "includes": [
+        "U_plus={p_phi>0,3*p_phi^2-2*P^2>0} with the hash-verified Darboux pairs (T,c) and (Phi,p_phi)",
+        "the finite declared bosonic pair (N,Pi), odd pairs (c_g,bar_rho) and (bar_c,rho), graded bracket, Omega=c_g*c+rho*Pi and Psi=bar_c*T+bar_rho*N",
+        "the BRST-stable endpoint ideal (T,Pi,c_g,bar_c), fixed invariant Phi and c excluded from endpoint boundary data",
+        "declared full-real dPi and dN Fourier zero-mode measures producing delta(T)delta(c) and the oriented -hbar^2 top-coefficient convention producing ghost factor +1",
+        "compatibility with the separately declared S_red=p_phi*(Phi_2-Phi_1), dp_phi/(2*pi*hbar) regulated identity distribution"
+      ],
+      "excludes": [
+        "a normalized exact endpoint-state transform, Hilbert measure, operator ordering, self-adjoint domain, spectral measure or rigging-map delta(C)",
+        "a two-endpoint, finite-m or continuum BFV trajectory kernel, source lattice, nonzero-mode determinant, absolute functional measure, Pfaffian line or Gribov theorem",
+        "equality to or deformation from the old fixed-a nonzero-proper-time kernel and any zero-lapse completion",
+        "other Darboux components, global gauge atlas, Maslov or determinant-line gluing, physical original cycle or global n_sigma",
+        "a physical state, observable, external discrimination, physics claim or TOE claim"
+      ]
+    },
+    {
+      "id": "evidence:gate1-v0-improved-static-bfv-source",
+      "type": "evidence",
+      "title": "Gate-1 V0 local improved-static BFV zero-mode source evidence",
+      "summary": "The single final VALID_RUN records 21 executable exact PASS checks, six reviewed analytic scope guards and three numerical PASS checks from three 80-digit quadratures. It derives every BRST generator image from the graded bracket, keeps the endpoint ideal excluding c, records raw versus normalized Berezin coefficients, and keeps only a declared reduced-identity compatibility control. It uses zero roots, zero ODEs and zero descendants while leaving the full path, spectral delta(C), old-kernel, global, physics and TOE outputs null.",
+      "state": "VALID_RUN_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_SOURCE_ALGEBRA_KEEP",
+      "observed_status": "VALID_RUN",
+      "check_ids": [
+        "P39.G1.bfv.domain.positive_trace_factor",
+        "P39.G1.bfv.bracket.fundamental_pairs",
+        "P39.G1.bfv.canonical.fp_matrix",
+        "P39.G1.bfv.canonical.static_slice_coarea",
+        "P39.G1.bfv.endpoint.improved_one_form",
+        "P39.G1.bfv.endpoint.static_normalization",
+        "P39.G1.bfv.brst.charge_nilpotence",
+        "P39.G1.bfv.brst.generator_images_from_omega",
+        "P39.G1.bfv.brst.complete_generator_nilpotence",
+        "P39.G1.bfv.gauge_fermion.derived_density",
+        "P39.G1.bfv.gauge_fermion.brst_invariance",
+        "P39.G1.bfv.endpoint.multiplier_kinetic_boundary",
+        "P39.G1.bfv.endpoint.brst_stable_ideal",
+        "P39.G1.bfv.source.replacement_structure",
+        "P39.G1.bfv.source.unit_berezin_orientation",
+        "P39.G1.bfv.source.bosonic_fourier_pairing",
+        "P39.G1.bfv.source.local_endpoint_contraction",
+        "P39.G1.bfv.relational.declared_canonical_measure",
+        "P39.G1.bfv.relational.regulated_identity_pairing",
+        "P39.G1.bfv.relational.distributional_identity_limit",
+        "P39.G1.bfv.relational.sampled_limit_monotonicity",
+        "P39.G1.bfv.relational.quadrature_1",
+        "P39.G1.bfv.relational.quadrature_2",
+        "P39.G1.bfv.relational.quadrature_3"
+      ]
+    },
+    {
+      "id": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "type": "claim",
+      "title": "The closed-FRW V0 U_plus component has a local improved-static BFV zero-mode replacement-source algebra",
+      "summary": "Supported only for one finite declared zero-mode convention on U_plus. The bracket-derived Omega is nilpotent, Psi gives sPsi=Pi*T+N*c-c_g*bar_c-rho*bar_rho, the endpoint ideal (T,Pi,c_g,bar_c) is BRST stable with c excluded, and declared Fourier/Berezin measures give delta(T)delta(c) times an oriented ghost factor +1. The reduced Phi identity is a separate declared canonical compatibility control. This is not a normalized endpoint-state transform, full trajectory BFV kernel, absolute measure, old-kernel equality, spectral delta(C), global cycle, physics result or TOE.",
+      "state": "SUPPORTED_ON_UPLUS_LOCAL_ZERO_MODE_ENDPOINT_SOURCE_ALGEBRA_ONLY",
+      "claim_id": "G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "statement": "On the closed-FRW V0 U_plus component, the Darboux endpoint polarization admits one internally consistent HTV-improved static Abelian BFV zero-mode replacement-source algebra with bracket-derived nilpotent Omega, BRST-stable endpoint ideal (T,Pi,c_g,bar_c), explicitly declared unit FP/Fourier/Berezin convention and compatibility with a separately declared reduced Phi identity distribution.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:gate1-v0-improved-static-bfv-source-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 improved-static BFV source evidence snapshot",
+      "summary": "Compact typed extract of the one capped invocation, 21 exact checks, three numerical checks, six reviewed analytic guards, input/runner/result/report hashes, local U_plus zero-mode scope, NARROW_LOCAL_KEEP verdict and fail-closed full-path, delta(C), global, physics and TOE outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-improved-static-bfv-source-result.json",
+      "sha256": "2d72ceb78e09012a875416f060058f3b2accef85708a351185dc6496772319e7"
+    },
+    {
+      "id": "artifact:gate1-v0-improved-static-bfv-source-report",
+      "type": "artifact",
+      "title": "Gate-1 closed-FRW V0 local improved-static BFV source report",
+      "summary": "Human-readable separation of the pinned Darboux input, graded BFV bracket, endpoint ideal, Fourier origin of delta(c), oriented ghost zero-mode convention, reduced identity compatibility, checked facts, interpretation, open physical hypotheses and next spectral-pairing discriminator.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE.md",
+      "sha256": "326e9403c60570895f0b58d6809dce33c655f2cf87aff1a4ddcbdeb75181f220"
     },
     {
       "id": "phase:p11",
@@ -28183,6 +28278,164 @@
       "relation": "FOLLOW_UP_TO",
       "to": "open:p15a-fresh-parent-sign-repair",
       "note": "The valid census resolves only the frozen two-source full-off-shell question."
+    },
+    {
+      "id": "edge:2671",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2672",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-principal-endpoint-fio-control",
+      "note": "Addresses the separately open ghost/multiplier endpoint-source algebra without repairing or reversing the principal FIO one-term exact-unitarity KILL."
+    },
+    {
+      "id": "edge:2673",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "note": "Consumes the pinned U_plus chart and its boundary potential as classical input rather than independently rederiving them."
+    },
+    {
+      "id": "edge:2674",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-uplus-improved-static-bfv-endpoint-zero-mode-source"
+    },
+    {
+      "id": "edge:2675",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992",
+      "note": "Cites the improved endpoint-action and time-independent canonical-gauge framework, not a derivation of the repository chart or local measure convention."
+    },
+    {
+      "id": "edge:2676",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Cites the extended multiplier/ghost BRST-BFV and endpoint framework, not the model-specific gauge fermion, absolute measure or physical state."
+    },
+    {
+      "id": "edge:2677",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "CITES",
+      "to": "source:marolf-1996-minisuperspace-path-integrals",
+      "note": "Cites the distinct full-real-lapse distributional rigging-map target; the local N zero-mode delta(c) is not identified with a completed spectral delta(C)."
+    },
+    {
+      "id": "edge:2678",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "Cites constraint-plus-gauge and lapse-contour context only; the improved-static source algebra and orientation remain repository conventions."
+    },
+    {
+      "id": "edge:2679",
+      "from": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The generic unnumbered run used one committed bounded runner, wrote one adjacent result, created no descendant, and leaves automatic_next null."
+    },
+    {
+      "id": "edge:2680",
+      "from": "evidence:gate1-v0-improved-static-bfv-source",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control"
+    },
+    {
+      "id": "edge:2681",
+      "from": "evidence:gate1-v0-improved-static-bfv-source",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-improved-static-bfv-source-evidence-snapshot"
+    },
+    {
+      "id": "edge:2682",
+      "from": "evidence:gate1-v0-improved-static-bfv-source",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-offshell-darboux-chart",
+      "note": "Pins the U_plus chart, D positivity, static slice and endpoint potential without promoting the chart beyond its original classical scope."
+    },
+    {
+      "id": "edge:2683",
+      "from": "evidence:gate1-v0-improved-static-bfv-source",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-trace-gauge-fp-admissibility",
+      "note": "Inherits the unchanged-source append KILL and answers only the separately derived local improved-static zero-mode algebra branch."
+    },
+    {
+      "id": "edge:2684",
+      "from": "artifact:gate1-v0-improved-static-bfv-source-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control"
+    },
+    {
+      "id": "edge:2685",
+      "from": "artifact:gate1-v0-improved-static-bfv-source-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control"
+    },
+    {
+      "id": "edge:2686",
+      "from": "artifact:gate1-v0-improved-static-bfv-source-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-v0-improved-static-bfv-source-evidence-snapshot"
+    },
+    {
+      "id": "edge:2687",
+      "from": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control"
+    },
+    {
+      "id": "edge:2688",
+      "from": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-uplus-improved-static-bfv-endpoint-zero-mode-source"
+    },
+    {
+      "id": "edge:2689",
+      "from": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-improved-static-bfv-source",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2690",
+      "from": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
+      "note": "The supported object is a newly derived Darboux-polarized local source algebra; it does not reverse the contradiction of the append-to-unchanged-source shortcut."
+    },
+    {
+      "id": "edge:2691",
+      "from": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-improved-static-bfv-source-report"
+    },
+    {
+      "id": "edge:2692",
+      "from": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "note": "The next discriminator is a normalized endpoint-state transform versus spectral delta(C) pairing; this edge grants no execution authority."
+    },
+    {
+      "id": "edge:2693",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-improved-static-bfv-source",
+      "polarity": "SUPPORTS",
+      "note": "A local zero-mode source algebra and declared reduced identity do not source-select a full trajectory contour, zero-lapse completion, determinant orientation or global intersection vector."
+    },
+    {
+      "id": "edge:2694",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA"
     }
   ],
   "kg_bridges": [
@@ -28642,6 +28895,16 @@
       "checked_at_utc": "2026-08-27T05:21:55Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 uncorrected one-term Van Vleck exact finite hbar unitarity coarea nonpass",
       "note": "No authorized exact external correspondence or writer is available. The narrow contradiction applies only to the displayed one-term amplitude and does not exclude a corrected full-symbol or spectral transform; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T08:32:12Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 closed FRW V0 Uplus improved static BFV zero mode replacement endpoint source algebra",
+      "note": "No authorized exact external correspondence or writer is available. The local bracket, endpoint ideal, declared Fourier/Berezin convention, reduced-identity compatibility and strict full-path/spectral/global/physics/TOE boundary remain repository-local workbench evidence; no external UID was invented."
     },
     {
       "local_node_id": "phase:p14a",

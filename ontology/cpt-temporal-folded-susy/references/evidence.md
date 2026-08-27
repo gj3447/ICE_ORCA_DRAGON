@@ -8,6 +8,8 @@ The same directory also contains the non-numbered [`gate1-straight-lift-end-admi
 
 The next bounded [`gate1-v0-offshell-darboux-chart-result.json`](../evidence/gate1-v0-offshell-darboux-chart-result.json) connects that shell result to an exact classical Darboux chart on the full open \(p>0,\ R>0\) component across arbitrary real \(c=C\). It recovers \(\Phi_*\) and \(B=P\) at \(c=0\), while keeping every other component, global atlas, normalized quantum endpoint transform, ghost/BFV source, full-real-lapse \(\delta(C)\) kernel and physical/global promotion open or null.
 
+The bounded [`gate1-v0-principal-endpoint-fio-result.json`](../evidence/gate1-v0-principal-endpoint-fio-result.json) then keeps the compact-interior principal momentum FIO while contradicting exact finite-\(\hbar\) unitarity only for its uncorrected one-term amplitude. The newest [`gate1-v0-improved-static-bfv-source-result.json`](../evidence/gate1-v0-improved-static-bfv-source-result.json) follows a separate local branch: it records one bracket-derived, BRST-compatible improved-static BFV zero-mode replacement-source algebra with explicitly declared Fourier and Berezin measures. Neither snapshot supplies a normalized endpoint-state transform, spectral \(\delta(\widehat C)\), full trajectory measure, global cycle, physics claim or TOE.
+
 ## Historical Phase 11–15R evidence backfill
 
 These phases predate the current typed evidence-snapshot convention. The graph therefore points to
@@ -63,6 +65,15 @@ analytic scope guards, and three numerical `PASS` checks from six root-method ca
 from the numbered totals. Its KEEP is one classical Darboux chart on \(\mathcal U_+\) and its open
 image; it is not an all-component/global canonical transform, quantum endpoint state, BFV source,
 \(\delta(C)\) kernel, physical cycle, physics claim, or TOE result.
+The V0 principal-FIO snapshot separately transports 10 executable exact `PASS` entries, six reviewed
+analytic scope guards, and three numerical `PASS` checks from three 100-digit quadratures and three
+hypergeometric controls. Its KEEP is principal and compact-interior only; the same result contradicts
+exact unitarity only for the uncorrected one-term amplitude.
+The V0 improved-static BFV snapshot separately transports 21 executable exact `PASS` entries, six
+reviewed analytic scope guards, and three numerical `PASS` checks from three 80-digit quadratures. Its
+KEEP is one finite local zero-mode source algebra under explicitly declared measures. It is not an
+absolute BFV functional measure, normalized endpoint operator, spectral \(\delta(\widehat C)\), full
+trajectory kernel, physical cycle, physics claim, or TOE result.
 The legacy separately recorded Phase-18 SciPy control is included in the numbered numerical
 total: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
@@ -3236,5 +3247,34 @@ endpoint states, the ghost/multiplier/BRST sector, replacement source, old fixed
 the full-real-lapse distributional \(\delta(C)\) kernel, zero lapse, determinant line, physical original
 cycle and global vector remain open or null. Gate 1 stays `OPEN_PARTIAL_PROGRESS`, with no automatic
 successor or physics/TOE promotion.
+
+The principal-FIO and improved-static BFV successors add two distinct local quantum controls without
+closing the endpoint problem:
+
+```text
+claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:gate1-v0-principal-endpoint-fio
+  → VALID_WITHIN → scope:gate1-v0-compact-interior-principal-momentum-endpoint-fio
+
+claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY
+  → HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:gate1-v0-principal-endpoint-fio
+
+claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:gate1-v0-improved-static-bfv-source
+  → VALID_WITHIN → scope:gate1-v0-uplus-improved-static-bfv-endpoint-zero-mode-source
+
+evidence:gate1-v0-improved-static-bfv-source
+  → DERIVED_FROM → evidence:gate1-v0-offshell-darboux-chart
+  → DERIVED_FROM → evidence:gate1-trace-gauge-fp-admissibility
+```
+
+The BFV result is a separately derived Darboux-polarized local source algebra, so it does not reverse
+the KILL of appending a static trace delta to the unchanged proper-time source. Its \(\delta(c)\) comes
+from the declared \(N\) Fourier zero mode rather than endpoint boundary data, and its ghost factor
+\(+1\) uses an explicitly declared oriented coefficient-extraction convention. A Hilbert measure,
+ordering, self-adjoint domain, normalized endpoint transform, spectral \(\delta(\widehat C)\) comparison,
+two-endpoint/full-trajectory BFV kernel, absolute measure, old-kernel equality, zero lapse, other
+components, determinant line and global cycle remain open. Gate 1 stays `OPEN_PARTIAL_PROGRESS`, with
+`automatic_next=null` and no physical or TOE promotion.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.
