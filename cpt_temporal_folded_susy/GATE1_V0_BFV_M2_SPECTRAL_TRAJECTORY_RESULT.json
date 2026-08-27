@@ -1,0 +1,486 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1V0BfvM2SpectralTrajectory",
+  "classification": "GATE1_V0_M2_SPECTRAL_BFV_MODE_EXTENSION_NONPASS",
+  "computed_scope": [
+    "one exact m=2 hybrid spectral projection of the local improved-static BFV gauge/ghost action",
+    "endpoint-vanishing sine modes and nilpotent projected generator map",
+    "the nonzero bosonic determinant and ghost Pfaffian relative polynomial identity",
+    "two explicit inequivalent zero-mode ledgers under gauge-fermion rescaling"
+  ],
+  "decision_trace": {
+    "matched_predeclared_condition": "the projected action, endpoint conditions, nilpotent mode maps or determinant-Pfaffian identity fails",
+    "relative_boundary": "determinant/Pfaffian equality is same-regulator and relative only",
+    "scope_meaning": "one formal local m=2 hybrid spectral gauge/ghost tangent mode with a frozen p0>0 physical spectator and no certified finite-amplitude chart containment",
+    "zero_mode_boundary": "two explicit ledgers are inequivalent, so no unique trajectory measure is promoted"
+  },
+  "environment": {
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "basis": {
+      "d_e_s": "sqrt(2)*pi*cos(pi*s)",
+      "e0": "1",
+      "e_c": "sqrt(2)*cos(pi*s)",
+      "e_s": "sqrt(2)*sin(pi*s)",
+      "endpoint_values_e_s": [
+        "0",
+        "0"
+      ],
+      "gram_matrix": [
+        [
+          "1",
+          "0",
+          "2*sqrt(2)/pi"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "2*sqrt(2)/pi",
+          "0",
+          "1"
+        ]
+      ],
+      "regulator_status": "HYBRID_CONTINUUM_SPECTRAL_ONE_MODE"
+    },
+    "brst_modes": {
+      "endpoint_sine_sector_stable": true,
+      "images": {
+        "N0": "rho0",
+        "N1": "rho1",
+        "Phi0": null,
+        "Phi1": null,
+        "Pi1": null,
+        "T1": "g1",
+        "b1": "Pi1",
+        "br0": "c0",
+        "br1": "c1",
+        "c0": null,
+        "c1": null,
+        "g1": null,
+        "p0": null,
+        "rho0": null,
+        "rho1": null
+      },
+      "nilpotent": true,
+      "second_images": {
+        "N0": null,
+        "N1": null,
+        "Phi0": null,
+        "Phi1": null,
+        "Pi1": null,
+        "T1": null,
+        "b1": null,
+        "br0": null,
+        "br1": null,
+        "c0": null,
+        "c1": null,
+        "g1": null,
+        "p0": null,
+        "rho0": null,
+        "rho1": null
+      },
+      "source": "projection of hash-pinned bracket-derived continuum images"
+    },
+    "core_flags": {
+      "basis_orthonormal": false,
+      "bosonic_gauge_matrix": true,
+      "derivative_relation": true,
+      "endpoint_mode_stability": true,
+      "endpoint_vanishing": true,
+      "even_projection": true,
+      "ghost_pfaffian": true,
+      "ghost_projection": true,
+      "minimal_nonzero_mode": true,
+      "projected_nilpotence": true,
+      "relative_polynomial_match": true,
+      "retained_zero_ledger": true,
+      "sampled_lambda_match": true,
+      "static_spectral_prerequisite": true,
+      "upstream_static_bfv_contract": true
+    },
+    "nonzero_relative_control": {
+      "absolute_measure_or_phase": null,
+      "bosonic_cross_matrix": [
+        [
+          "pi",
+          "lambda"
+        ],
+        [
+          "lambda",
+          "-pi"
+        ]
+      ],
+      "bosonic_determinant": "-lambda**2 - pi**2",
+      "bosonic_mode_order": [
+        "T1",
+        "N1",
+        "c1",
+        "Pi1"
+      ],
+      "ghost_determinant": "(lambda**2 + pi**2)**2",
+      "ghost_matrix": [
+        [
+          "0",
+          "-lambda",
+          "0",
+          "pi"
+        ],
+        [
+          "lambda",
+          "0",
+          "pi",
+          "0"
+        ],
+        [
+          "0",
+          "-pi",
+          "0",
+          "-lambda"
+        ],
+        [
+          "-pi",
+          "0",
+          "lambda",
+          "0"
+        ]
+      ],
+      "ghost_pfaffian": "lambda**2 + pi**2",
+      "relative_polynomial": "lambda**2 + pi**2"
+    },
+    "projected_action": {
+      "bosonic": "DeltaPhi*p0 - pi*N1*Pi1 + pi*T1*c1 + lambda*(N0*c0 + N1*c1 + Pi1*T1)",
+      "continuum_source": "c*Tdot+p*Phidot-N*Pidot+bar_c_dot*rho+c_g_dot*bar_rho+lambda*sPsi",
+      "ghost_coefficients": {
+        "b1*rho1": "pi",
+        "g1*b1": "-lambda",
+        "g1*br1": "pi",
+        "rho0*br0": "-lambda",
+        "rho1*br1": "-lambda"
+      },
+      "ghost_order": [
+        "g1",
+        "b1",
+        "rho1",
+        "br1"
+      ],
+      "physical_spectator": "p0*DeltaPhi with p0>0"
+    },
+    "zero_mode_ambiguity": true,
+    "zero_mode_ledgers": {
+      "common_bosonic_fourier": {
+        "distribution": "delta(lambda*c0)=delta(c0)/lambda for lambda>0",
+        "jacobian": "1/lambda",
+        "measure": "dN0/(2*pi*hbar)",
+        "phase": "lambda*N0*c0"
+      },
+      "eliminated_algebraic_pair": {
+        "combined_relative_factor": "1/lambda",
+        "ghost_factor": null
+      },
+      "eliminated_samples": [
+        "2",
+        "1",
+        "1/2"
+      ],
+      "inequivalent": true,
+      "retained_algebraic_pair": {
+        "combined_relative_factor": "1",
+        "declared_oriented_measure": "I*hbar",
+        "ghost_factor": "lambda",
+        "ghost_phase": "-lambda*rho0*br0",
+        "raw_top_coefficient": "-I*lambda/hbar"
+      },
+      "retained_samples": [
+        "1",
+        "1",
+        "1"
+      ],
+      "sample_lambda_values": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "unique_completion": null
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.m2.upstream.static_bfv_contract",
+      "passed": true,
+      "statement": "the pinned static source supplies sPsi, endpoint ideal and odd order but explicitly no full path measure"
+    },
+    {
+      "id": "G1.m2.upstream.static_spectral_prerequisite",
+      "passed": true,
+      "statement": "the frozen static-spectral comparison survived while leaving the trajectory measure null"
+    },
+    {
+      "id": "G1.m2.basis.orthonormality",
+      "passed": false,
+      "statement": "e0,e_c,e_s are exactly orthonormal on the unit interval"
+    },
+    {
+      "id": "G1.m2.basis.derivative_relation",
+      "passed": true,
+      "statement": "the one Dirichlet sine mode differentiates to pi times its cosine partner"
+    },
+    {
+      "id": "G1.m2.endpoint.sine_modes_vanish",
+      "passed": true,
+      "statement": "T,Pi,c_g,bar_c sine modes obey both endpoint conditions exactly"
+    },
+    {
+      "id": "G1.m2.basis.minimal_nonzero_mode_count",
+      "passed": true,
+      "statement": "m=1 has no endpoint-vanishing nonzero mode while m=2 has exactly the k=1 mode used here"
+    },
+    {
+      "id": "G1.m2.action.even_projection",
+      "passed": true,
+      "statement": "direct basis projection recovers the frozen physical spectator plus the declared m=2 bosonic gauge action"
+    },
+    {
+      "id": "G1.m2.action.ghost_projection",
+      "passed": true,
+      "statement": "the projected ordered ghost action is pi*b1*rho1+pi*g1*br1-lambda*(g1*b1+rho0*br0+rho1*br1)"
+    },
+    {
+      "id": "G1.m2.brst.projected_generator_nilpotence",
+      "passed": true,
+      "statement": "the pinned bracket-derived generator images project to sT1=g1, sN_i=rho_i, sb1=Pi1, sbr_i=c_i and square to zero"
+    },
+    {
+      "id": "G1.m2.brst.endpoint_mode_stability",
+      "passed": true,
+      "statement": "the endpoint-vanishing T,Pi,c_g,bar_c sine sector is BRST stable and the fixed physical endpoints are invariant"
+    },
+    {
+      "id": "G1.m2.nonzero.bosonic_gauge_matrix",
+      "passed": true,
+      "statement": "the nonzero bosonic gauge matrix is [[pi,lambda],[lambda,-pi]] with determinant -(pi^2+lambda^2)"
+    },
+    {
+      "id": "G1.m2.nonzero.ghost_pfaffian",
+      "passed": true,
+      "statement": "the ordered (g1,b1,rho1,br1) ghost matrix has Pfaffian pi^2+lambda^2 and determinant Pf^2"
+    },
+    {
+      "id": "G1.m2.nonzero.relative_determinant_pfaffian_match",
+      "passed": true,
+      "statement": "the nonzero bosonic Jacobian magnitude and ghost Pfaffian share the same pi^2+lambda^2 polynomial only as a same-regulator relative identity"
+    },
+    {
+      "id": "G1.m2.nonzero.sampled_lambda_identity",
+      "passed": true,
+      "statement": "the exact relative polynomial identity survives the frozen positive lambda samples 1/2,1,2"
+    },
+    {
+      "id": "G1.m2.zero.retained_pair_relative_cancellation",
+      "passed": true,
+      "statement": "with the explicitly declared i*hbar coefficient-extraction orientation, the retained rho0,br0 factor lambda cancels delta(lambda*c0)'s 1/lambda Jacobian"
+    },
+    {
+      "id": "G1.m2.zero.ledger_inequivalence",
+      "passed": true,
+      "statement": "retaining the algebraic zero ghost pair gives a lambda-independent relative unit, while eliminating it leaves 1/lambda; the pinned inputs do not choose between them"
+    }
+  ],
+  "frozen_input_contract": {
+    "decision_table": [
+      {
+        "condition": "the basis, projected action, endpoint/BRST mode maps and relative determinant-Pfaffian identities pass, while the retained and eliminated zero-mode ledgers remain inequivalent",
+        "meaning": "one local m=2 hybrid spectral gauge/ghost mode is algebraically consistent, but no unique full finite-trajectory measure or zero-mode completion follows",
+        "programme_impact": "KEEP_MINIMAL_NONZERO_MODE_RELATIVE_CONTROL_ONLY",
+        "verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS"
+      },
+      {
+        "condition": "the projected action, endpoint conditions, nilpotent mode maps or determinant-Pfaffian identity fails",
+        "meaning": "reject this finite-mode extension without changing the prior static and spectral results",
+        "programme_impact": "RETAIN_STATIC_SOURCE_ONLY",
+        "verdict": "KILL_V0_DECLARED_M2_SPECTRAL_BFV_MODE_EXTENSION"
+      },
+      {
+        "condition": "the nonzero mode identities pass and the zero-mode completion is uniquely fixed by the pinned inputs",
+        "meaning": "keep only the declared finite regulator; continuum and physical path claims remain open",
+        "programme_impact": "CLOSE_DECLARED_FINITE_REGULATOR_ONLY",
+        "verdict": "KEEP_V0_M2_RELATIVE_BFV_MODE_AND_ZERO_COMPLETION"
+      }
+    ],
+    "epistemic_scope": "FORMAL_LOCAL_GAUGE_GHOST_TANGENT_MODE_PROJECTION_WITH_P_POSITIVE_PHYSICAL_SPECTATOR_AND_NO_CERTIFIED_FINITE_AMPLITUDE_CHART_CONTAINMENT_NOT_A_FULL_PATH_INTEGRAL_OR_ABSOLUTE_MEASURE",
+    "kind": "EXACT_LOCAL_ONE_DIRICHLET_MODE_M2_HYBRID_SPECTRAL_BFV_TRAJECTORY_ACTION_RELATIVE_SUPERDETERMINANT_AND_ZERO_MODE_AMBIGUITY_CONTROL",
+    "question": "After the frozen static-versus-spectral pairing survives, does the smallest nontrivial one-Dirichlet-mode m=2 projection of the local U_plus improved-static BFV action preserve the endpoint conditions and produce matching bosonic gauge determinant and ghost Pfaffian factors, and does the prior zero-mode input uniquely determine the finite-trajectory zero-mode completion?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_INPUTS.json",
+    "sha256": "a761df0ac41e14e0f12f31ea89a6c9764602b00cb38cac9ca4c11cd430cb4553"
+  },
+  "not_computed": [
+    "a nonlinear integration over physical p,Phi trajectories or amplitudes reaching the U_plus chart edge",
+    "an absolute finite-dimensional or functional BFV measure, contour phase, Pfaffian orientation or continuum limit",
+    "a unique global lapse-modulus prescription, full-real-lapse group average or zero-lapse contact terms",
+    "an exact endpoint transform, old fixed-a kernel equivalence, global atlas, Gribov census or physical cycle",
+    "a physical inner product, observable prediction, physics claim or TOE claim"
+  ],
+  "numbered_phase": null,
+  "numerical_checks": [],
+  "programme_impact": "RETAIN_STATIC_SOURCE_ONLY",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "absolute_finite_bfv_measure": null,
+    "automatic_next": null,
+    "continuum_bfv_limit": null,
+    "exact_endpoint_state_transform": null,
+    "full_bfv_trajectory_measure": null,
+    "full_real_lapse_delta_C": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_n_sigma": null,
+    "global_promotion": "PROHIBITED",
+    "old_fixed_a_kernel_equivalence": null,
+    "physical_inner_product": null,
+    "physical_original_cycle": null,
+    "physics_claim": null,
+    "unique_trajectory_zero_mode_completion": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "ode_calls": 0,
+    "quadratures": 0,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "9d255cfc11fdb52cc1494c66e6ae17911405c77bde35263816ab6794192b323a",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py",
+    "sha256": "4aba838defb4af6f765166eef2ed905f4cdbcd4b6583f816f8245ef7904d1c9a"
+  },
+  "schema_version": "ice.gate1.v0-bfv-m2-spectral-trajectory.result.v1",
+  "theorem_guards": [
+    {
+      "domain": "d e_s/ds=pi e_c is exact before any midpoint projection",
+      "id": "G1.m2.guard.hybrid_spectral_only",
+      "statement": "this is a hybrid spectral finite regulator, not an exact midpoint-difference gauge symmetry, nonlinear lattice solution or continuum convergence result",
+      "theorem": "one-mode continuum sine/cosine projection",
+      "verified": true
+    },
+    {
+      "domain": "one common ordered nonzero gauge/ghost regulator",
+      "id": "G1.m2.guard.relative_not_absolute",
+      "statement": "matching pi^2+lambda^2 does not assign the bosonic Fourier/Gaussian contour phase, absolute Pfaffian orientation or functional-measure normalization",
+      "theorem": "finite-dimensional determinant/Pfaffian polynomial comparison",
+      "verified": true
+    },
+    {
+      "domain": "p(s)=p0>0 and Phi linear, while nonzero gauge amplitudes are only formal local tangent variables",
+      "id": "G1.m2.guard.physical_spectator",
+      "statement": "no finite-amplitude inverse-chart containment, nonlinear physical trajectory integration, chart-edge crossing or global Darboux atlas is certified",
+      "theorem": "local U_plus component protection",
+      "verified": true
+    },
+    {
+      "domain": "the static source retains a normalized finite zero-mode quartet while historical trajectory regulators may eliminate the rho0,br0 pair or retain N0 as a modulus",
+      "id": "G1.m2.guard.zero_mode_ambiguity",
+      "statement": "the two explicit ledgers prove underdetermination by the pinned inputs; no unique trajectory zero-mode completion is promoted",
+      "theorem": "separation of algebraic zero ghosts and lapse modulus conventions",
+      "verified": true
+    },
+    {
+      "domain": "one local gauge/ghost mode and a frozen physical spectator",
+      "id": "G1.m2.guard.no_full_bfv_or_physics",
+      "statement": "full BFV trajectory measure, full-real-lapse delta(C), old-kernel equality, physical cycle, observable, physics and TOE remain null",
+      "theorem": "bounded workbench interpretation",
+      "verified": true
+    }
+  ],
+  "upstream_provenance": [
+    {
+      "contract": {
+        "brst_generator_images": {
+          "N": [
+            {
+              "coefficient": "1",
+              "monomial": "rho"
+            }
+          ],
+          "Phi": [],
+          "Pi": [],
+          "T": [
+            {
+              "coefficient": "1",
+              "monomial": "c_g"
+            }
+          ],
+          "bar_c": [
+            {
+              "coefficient": "Pi",
+              "monomial": "1"
+            }
+          ],
+          "bar_rho": [
+            {
+              "coefficient": "c",
+              "monomial": "1"
+            }
+          ],
+          "c": [],
+          "c_g": [],
+          "p": [],
+          "rho": []
+        },
+        "endpoint_ideal": [
+          "T",
+          "Pi",
+          "c_g",
+          "bar_c"
+        ],
+        "full_path_constructed": false,
+        "kind": "static_bfv",
+        "odd_order": [
+          "c_g",
+          "bar_c",
+          "rho",
+          "bar_rho"
+        ],
+        "sPsi": [
+          {
+            "coefficient": "N*c + Pi*T",
+            "monomial": "1"
+          },
+          {
+            "coefficient": "-1",
+            "monomial": "c_g*bar_c"
+          },
+          {
+            "coefficient": "-1",
+            "monomial": "rho*bar_rho"
+          }
+        ]
+      },
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA"
+    },
+    {
+      "contract": {
+        "equals_static_matrix": true,
+        "full_bfv_trajectory_measure": null,
+        "kind": "static_spectral"
+      },
+      "path": "cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_RESULT.json",
+      "payload_sha256_without_self": "820ce5fd01c1655a6e38c18e529be5f495e61f11490582a0cee84b491c0516b6",
+      "sha256": "0b2c748bb99a11409b820796941538dd926f82eb04198e217a9c3ba780f2a7b4",
+      "verdict": "KEEP_V0_LOCAL_STATIC_ZERO_MODE_SPECTRAL_PAIRING_COMPATIBILITY"
+    }
+  ],
+  "verdict": "KILL_V0_DECLARED_M2_SPECTRAL_BFV_MODE_EXTENSION"
+}
