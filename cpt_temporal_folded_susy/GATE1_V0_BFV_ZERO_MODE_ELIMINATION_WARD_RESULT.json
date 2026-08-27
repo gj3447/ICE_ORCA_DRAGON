@@ -1,0 +1,369 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1V0BfvZeroModeEliminationWard",
+  "classification": "GATE1_V0_LOCAL_BFV_ZERO_GHOST_DIRECT_AND_WEIGHTED_ELIMINATION_EQUIVALENT_UNWEIGHTED_DELETION_KILL_LAPSE_COMPLETION_OPEN",
+  "computed_scope": [
+    "one hash-pinned algebraic N0,c0,rho0,bar_rho0 BFV zero block",
+    "nilpotence and BRST closure under the inherited right-acting bracket convention",
+    "direct oriented Berezin integration and correct weighted algebraic elimination",
+    "the relative constant-lambda gauge-fermion scaling Ward coefficient and an unweighted-deletion negative control"
+  ],
+  "decision_trace": {
+    "matched_predeclared_condition": "direct Berezin integration and weighted algebraic elimination both contribute lambda, cancel the bosonic 1/lambda Jacobian, and satisfy the scaling Ward check while unweighted deletion fails",
+    "rescaling_boundary": "constant gauge-fermion lambda scaling is not the field-dependent constraint densitization C to H",
+    "revision_boundary": "the prior retained-versus-eliminated ghost-ledger mismatch is narrowed to an invalid unweighted deletion; the broader lapse/trajectory ambiguity remains",
+    "scope_meaning": "one algebraic BFV zero block and one pinned odd orientation only"
+  },
+  "environment": {
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "flags": {
+      "bosonic_delta_scaling": true,
+      "correct_route_equivalence": true,
+      "direct_berezin_factor": true,
+      "local_prior_mismatch_repaired": true,
+      "nondegenerate_odd_hessian": true,
+      "prior_mismatch_pinned": true,
+      "projected_nilpotence": true,
+      "sampled_discrimination": true,
+      "scaling_ward_identity": true,
+      "static_brst_contract": true,
+      "stationary_ghost_solution": true,
+      "unweighted_negative_control": true,
+      "weighted_elimination_factor": true,
+      "zero_action_brst_closed": true
+    },
+    "ghost_gaussian": {
+      "action_hessian": [
+        [
+          "0",
+          "-lambda"
+        ],
+        [
+          "lambda",
+          "0"
+        ]
+      ],
+      "action_hessian_determinant": "lambda**2",
+      "action_hessian_pfaffian_before_exponent_measure_orientation": "-lambda",
+      "direct_factor": "lambda",
+      "exponent_top_coefficient": "-I*lambda/hbar",
+      "left_equations": [
+        "-bar_rho0*lambda",
+        "lambda*rho0"
+      ],
+      "odd_order": [
+        "rho0",
+        "bar_rho0"
+      ],
+      "oriented_extraction_measure": "I*hbar",
+      "stationary_solution": {
+        "bar_rho0": "0",
+        "rho0": "0"
+      },
+      "unweighted_deletion_factor": "1",
+      "weighted_elimination_factor": "lambda"
+    },
+    "pinned_zero_block": {
+      "action": "S0=lambda*(N0*c0-rho0*bar_rho0)",
+      "lambda_domain": "lambda>0",
+      "right_brst_images": {
+        "N0": "rho0",
+        "bar_rho0": "c0",
+        "c0": null,
+        "rho0": null
+      },
+      "right_brst_product_variations": {
+        "s(N0*c0)": "c0*rho0",
+        "s(rho0*bar_rho0)": "c0*rho0",
+        "sS0": "0"
+      },
+      "squared_images": {
+        "N0": null,
+        "bar_rho0": null,
+        "c0": null,
+        "rho0": null
+      }
+    },
+    "prior_result_revision": {
+      "corrected_eliminated_factor": "1",
+      "identified_missing_factor": "lambda",
+      "prior_eliminated_factor": "1/lambda",
+      "prior_eliminated_ghost_factor": null,
+      "prior_retained_factor": "1",
+      "remaining_reason": "the lapse N0 contour/modulus and boundary prescription were not selected",
+      "unique_trajectory_zero_mode_completion": null,
+      "unweighted_deletion_status": "KILL_AS_GHOST_GAUSSIAN_ELIMINATION"
+    },
+    "relative_distribution_ledgers": {
+      "common_bosonic_distribution": "delta(c0)/lambda",
+      "direct_retention": {
+        "delta_c0_coefficient": "1",
+        "ghost_factor": "lambda"
+      },
+      "direct_samples": [
+        "1",
+        "1",
+        "1"
+      ],
+      "lambda_derivatives": {
+        "direct": "0",
+        "unweighted_deletion": "-1/lambda**2",
+        "weighted_elimination": "0"
+      },
+      "sample_lambda": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "unweighted_deletion_negative_control": {
+        "delta_c0_coefficient": "1/lambda",
+        "ghost_factor": "1"
+      },
+      "unweighted_deletion_samples": [
+        "2",
+        "1",
+        "1/2"
+      ],
+      "weighted_algebraic_elimination": {
+        "delta_c0_coefficient": "1",
+        "ghost_factor": "lambda"
+      },
+      "weighted_elimination_samples": [
+        "1",
+        "1",
+        "1"
+      ]
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.zero_ward.upstream.static_brst_contract",
+      "passed": true,
+      "statement": "the hash-pinned static source has Omega=c_g*c+rho*Pi, the required generator images, and vanishing squared images"
+    },
+    {
+      "id": "G1.zero_ward.upstream.prior_ledger_mismatch",
+      "passed": true,
+      "statement": "the prior result really compared a retained lambda factor with an eliminated ledger whose odd Gaussian factor was null"
+    },
+    {
+      "id": "G1.zero_ward.brst.generator_nilpotence",
+      "passed": true,
+      "statement": "the projected right-BRST images sN0=rho0, sbar_rho0=c0, srho0=sc0=0 square to zero"
+    },
+    {
+      "id": "G1.zero_ward.brst.action_closure",
+      "passed": true,
+      "statement": "under the inherited right-acting bracket rule s(N0*c0)=s(rho0*bar_rho0)=rho0*c0, so sS0=0"
+    },
+    {
+      "id": "G1.zero_ward.direct.berezin_factor",
+      "passed": true,
+      "statement": "nilpotence truncates exp(-i*lambda*rho0*bar_rho0/hbar), and the pinned i*hbar extraction gives the direct ghost factor lambda"
+    },
+    {
+      "id": "G1.zero_ward.elimination.odd_hessian",
+      "passed": true,
+      "statement": "the ordered action Hessian for (rho0,bar_rho0) is nondegenerate for lambda>0, with determinant lambda^2 and Pfaffian -lambda before the pinned exponent/measure orientation"
+    },
+    {
+      "id": "G1.zero_ward.elimination.stationary_ghost_solution",
+      "passed": true,
+      "statement": "the algebraic ghost equations have the unique stationary solution rho0=bar_rho0=0 for lambda>0"
+    },
+    {
+      "id": "G1.zero_ward.elimination.induced_oriented_factor",
+      "passed": true,
+      "statement": "integrating out the nondegenerate odd Gaussian leaves its oriented factor lambda; solving the stationary equations does not set that factor to one"
+    },
+    {
+      "id": "G1.zero_ward.bosonic.positive_lambda_delta_scaling",
+      "passed": true,
+      "statement": "the full-real N0 Fourier integral gives delta(lambda*c0)=delta(c0)/lambda for lambda>0"
+    },
+    {
+      "id": "G1.zero_ward.combined.direct_equals_weighted_elimination",
+      "passed": true,
+      "statement": "both correct routes give the same relative distribution delta(c0)"
+    },
+    {
+      "id": "G1.zero_ward.combined.unweighted_deletion_negative_control",
+      "passed": true,
+      "statement": "deleting the pair without its induced factor leaves the spurious coefficient 1/lambda"
+    },
+    {
+      "id": "G1.zero_ward.scaling.relative_ward_identity",
+      "passed": true,
+      "statement": "the direct and weighted-elimination relative coefficients obey d_lambda Z0=0, while unweighted deletion violates it"
+    },
+    {
+      "id": "G1.zero_ward.scaling.sampled_discrimination",
+      "passed": true,
+      "statement": "at lambda=1/2,1,2 both correct ledgers stay one and the negative control gives 2,1,1/2"
+    },
+    {
+      "id": "G1.zero_ward.scope.prior_mismatch_is_unweighted_deletion",
+      "passed": true,
+      "statement": "the tested prior mismatch is exactly repaired by the previously omitted induced odd factor, not by changing the pinned action or orientation"
+    }
+  ],
+  "frozen_input_contract": {
+    "decision_table": [
+      {
+        "condition": "direct Berezin integration and weighted algebraic elimination both contribute lambda, cancel the bosonic 1/lambda Jacobian, and satisfy the scaling Ward check while unweighted deletion fails",
+        "meaning": "the retained-versus-eliminated mismatch was caused by dropping the odd Gaussian determinant; keep the local equivalence and kill unweighted deletion, without claiming a unique full trajectory completion",
+        "programme_impact": "CLOSE_ONE_LOCAL_ZERO_MODE_LEDGER_MISMATCH_ONLY",
+        "verdict": "NARROW_V0_BFV_ZERO_GHOST_ELIMINATION_REQUIRES_INDUCED_DETERMINANT"
+      },
+      {
+        "condition": "direct integration and weighted elimination disagree in the pinned orientation, the zero action is not BRST closed, or either fails the lambda Ward check",
+        "meaning": "reject this proposed resolution and leave both local ledgers unresolved",
+        "programme_impact": "RETAIN_THE_PRIOR_AMBIGUITY_AND_STATIC_SOURCE_ONLY",
+        "verdict": "KILL_V0_DECLARED_BFV_ZERO_BLOCK"
+      },
+      {
+        "condition": "the negative control is lambda independent or agrees with the retained route without an induced factor",
+        "meaning": "the calculation did not distinguish genuine elimination from unweighted deletion",
+        "programme_impact": "NO_LEDGER_RESOLUTION",
+        "verdict": "KILL_V0_ZERO_MODE_NEGATIVE_CONTROL_DISCRIMINATION"
+      }
+    ],
+    "epistemic_scope": "ONE_ALGEBRAIC_ZERO_MODE_BLOCK_WITH_A_PINNED_ODD_ORIENTATION_AND_POSITIVE_CONSTANT_GAUGE_FERMION_SCALE_NOT_A_FULL_TRAJECTORY_MEASURE_NOT_A_LAPSE_CONTOUR_NOT_CONSTRAINT_DENSITIZATION_INVARIANCE",
+    "kind": "EXACT_LOCAL_BFV_ZERO_MODE_BEREZIN_ELIMINATION_INDUCED_PFAFFIAN_NEGATIVE_CONTROL_AND_GAUGE_FERMION_SCALING_WARD_CONTROL",
+    "primary_sources": [
+      {
+        "not_used_for": "choosing the repository-specific finite zero-mode orientation or absolute measure",
+        "source": "Henneaux, Teitelboim and Vergara, Gauge invariance for generally covariant systems, arXiv:hep-th/9205092",
+        "url": "https://arxiv.org/abs/hep-th/9205092",
+        "used_for": "BRST-BFV improved actions, endpoint-compatible canonical gauges, and gauge-fermion independence boundaries"
+      },
+      {
+        "not_used_for": "proving that this zero block is a full gravitational path integral",
+        "source": "Garcia, Vergara and Urrutia, BRST-BFV quantization and the Schwinger action principle, arXiv:hep-th/9511092",
+        "url": "https://arxiv.org/abs/hep-th/9511092",
+        "used_for": "the multiplier/ghost canonical action and BRST-BFV endpoint pattern"
+      },
+      {
+        "not_used_for": "fixing a lapse contour, zero-lapse prescription, or absolute BFV normalization",
+        "source": "Marolf, Group averaging and refined algebraic quantization: Where are we now?, arXiv:gr-qc/0011112",
+        "url": "https://arxiv.org/abs/gr-qc/0011112",
+        "used_for": "the distributional full-real group-average interpretation of the bosonic Fourier factor"
+      }
+    ],
+    "question": "For the hash-pinned local V0 BFV zero block S0=lambda*(N0*c0-rho0*bar_rho0) with lambda>0, do direct Berezin integration and algebraic elimination of the ghost pair with its induced determinant give the same relative delta(c0) distribution and gauge-fermion scaling Ward identity, thereby identifying unweighted deletion as the source of the prior retained-versus-eliminated ledger mismatch?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_INPUTS.json",
+    "sha256": "912492397b0488562eacce1b37d8998faf73ad0c6b30d716fc3e8da98d99ecdd"
+  },
+  "not_computed": [
+    "a unique choice between integrating N0 over the full real line, treating it as a modulus, or imposing another gravitational lapse contour",
+    "zero-lapse contact terms, endpoint ghost boundary conditions beyond the pinned block, Gribov data or a global gauge slice",
+    "an absolute BFV normalization, Pfaffian orientation independent of the pinned convention, continuum limit or anomaly analysis",
+    "equivalence between a constant gauge-fermion scale and a field-dependent rescaling of the Hamiltonian constraint",
+    "the raw-C physical inner product, an exact endpoint transform, the full BFV trajectory measure or BRST cohomology",
+    "quantum gravity, empirical observables, physics or TOE"
+  ],
+  "numbered_phase": null,
+  "numerical_checks": [],
+  "programme_impact": "CLOSE_ONE_LOCAL_ZERO_MODE_LEDGER_MISMATCH_ONLY",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "absolute_finite_bfv_measure": null,
+    "automatic_next": null,
+    "brst_cohomology": null,
+    "constraint_densitization_equivalence": null,
+    "continuum_bfv_limit": null,
+    "exact_endpoint_state_transform": null,
+    "full_bfv_trajectory_measure": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_n_sigma": null,
+    "global_promotion": "PROHIBITED",
+    "lapse_modulus_or_contour_selection": null,
+    "physical_original_cycle": null,
+    "physics_claim": null,
+    "quantum_gravity_claim": null,
+    "raw_C_physical_inner_product": null,
+    "unique_trajectory_zero_mode_completion": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "ode_calls": 0,
+    "quadratures": 0,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "22c8423c347084eb07e8167bb38101ab50a74cc3335b5d3f471099a1f54f0a6b",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py",
+    "sha256": "8462ccb52cbfc3ba588a6182e4e288f645d4524b0fbefbd016fd08f3d83b5c6a"
+  },
+  "schema_version": "ice.gate1.v0-bfv-zero-mode-elimination-ward.result.v1",
+  "theorem_guards": [
+    {
+      "conclusion_and_scope": "direct integration and algebraic elimination with the full induced odd Gaussian factor must agree at this finite zero block; unweighted deletion is not Gaussian integration",
+      "hypotheses": "rho0 and bar_rho0 are one ordered Grassmann pair, the bilinear Hessian is nondegenerate for lambda>0, the exponent is exp(iS0/hbar), and the upstream oriented extraction is i*hbar",
+      "id": "G1.zero_ward.guard.finite_berezin_gaussian",
+      "theorem": "finite-dimensional Berezin Gaussian integration",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the bosonic factor is delta(c0)/lambda; this theorem guard does not select the full-real lapse contour from gravitational physics",
+      "hypotheses": "N0 is integrated over the full real line with dN0/(2*pi*hbar), lambda is a positive constant, and c0 is a real test-distribution coordinate",
+      "id": "G1.zero_ward.guard.fourier_delta_scaling",
+      "theorem": "distributional Fourier identity and delta-function scaling",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the relative zero-block coefficient is lambda independent for the two correct Gaussian routes; no continuum anomaly, endpoint anomaly or full path-integral gauge independence is inferred",
+      "hypotheses": "the zero action is the hash-pinned restriction of lambda*sPsi, the inherited right-BRST variation is nilpotent and closes S0, and the finite algebraic measure has no boundary term",
+      "id": "G1.zero_ward.guard.local_scaling_ward",
+      "theorem": "finite-dimensional BRST-exact gauge-fermion scaling identity",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the prior ghost-ledger mismatch is closed, but unique trajectory zero-mode completion, zero-lapse terms and the gravitational lapse prescription remain open",
+      "hypotheses": "only the rho0,bar_rho0 Gaussian is eliminated; the calculation assumes rather than derives full-real N0 integration and does not compare it with a modulus or restricted contour",
+      "id": "G1.zero_ward.guard.lapse_completion_still_open",
+      "theorem": "separation of algebraic ghost elimination from lapse-modulus and contour choices",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "this Ward check does not prove quantum equivalence of raw C and a densitized constraint and supplies no raw-C physical inner product",
+      "hypotheses": "lambda is a positive constant multiplying one gauge fermion, whereas H=12*pi^2*exp(3Q/2)*C uses a field-dependent classical constraint multiplier before ordering",
+      "id": "G1.zero_ward.guard.constant_lambda_not_constraint_densitization",
+      "theorem": "scope separation for two distinct rescalings",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the result is a local bookkeeping theorem, not a full BFV quantization, quantum-gravity evidence, physics, or a TOE result",
+      "hypotheses": "one algebraic quartet block with a pinned orientation and no nonzero continuum tower, absolute Pfaffian line, cohomology, inhomogeneous gravity, observables or empirical map",
+      "id": "G1.zero_ward.guard.no_full_bfv_or_physics",
+      "theorem": "bounded workbench interpretation",
+      "verified": true
+    }
+  ],
+  "upstream_provenance": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json",
+      "payload_sha256_without_self": "a12b719f2961363610c93ecf07d0185de316497708b809b4b2b1aca7bdfec92b",
+      "sha256": "15beb4c1bd44d0d7aa8f34b7ea2f656c42452130b10817585b7a6c134ac4aef7",
+      "verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS"
+    }
+  ],
+  "verdict": "NARROW_V0_BFV_ZERO_GHOST_ELIMINATION_REQUIRES_INDUCED_DETERMINANT"
+}
