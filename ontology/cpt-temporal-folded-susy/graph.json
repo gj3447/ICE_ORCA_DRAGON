@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-27T08:32:12Z",
+  "updated_at_utc": "2026-08-27T09:58:21Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -455,8 +455,8 @@
       ]
     },
     {
-      "question": "Can the trace-gauge V0 chart now supply quantum endpoint states and repair the finite m=2 source?",
-      "answer": "It now supplies two additional but still local layers. On compact interiors of U_plus, the phase S=-W and half-density D^(-1/2) define a principal momentum-polarization FIO; exact finite-hbar unitarity of its uncorrected one-term amplitude is contradicted without excluding a corrected full symbol. Separately, one improved-static finite BFV zero-mode replacement-source algebra is internally consistent: bracket-derived nilpotent Omega, endpoint ideal (T,Pi,c_g,bar_c), declared Fourier delta(T)delta(c), oriented ghost factor +1 and reduced-Phi identity compatibility. This does not yet supply a normalized endpoint-state transform, Hilbert measure, ordering/domain, spectral delta(C), two-endpoint/full-trajectory BFV kernel, old-kernel equality or any global/physical output.",
+      "question": "How far did the trace-gauge V0 spectral-to-m2 BFV chain get?",
+      "answer": "It now supplies four additional but still local workbench layers. On the declared L2(dc dp) U_plus momentum base, C-hat=M_c has its maximal self-adjoint multiplication domain and an order-zero distributional c=0 fiber form. The declared B, principal half-density, Hilbert space and M_c do not uniquely select an exact endpoint completion; existence remains open. The improved-static pairing agrees with the order-zero M_c form on three frozen p>0 test states. One m=2 nonzero BFV quartet has a relative determinant/Pfaffian match, but two inequivalent zero-mode ledgers prevent a unique trajectory completion. No exact endpoint transform, original-variable ordering, full path measure, physical inner product, global cycle, physics result or TOE claim follows.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -465,7 +465,12 @@
         "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
         "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
         "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
-        "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA"
+        "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+        "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+        "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+        "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+        "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+        "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION"
       ]
     }
   ],
@@ -1099,7 +1104,7 @@
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
       "title": "From the anchored straight-line KILL to the V0 local BFV zero-mode boundary",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and an exact U_plus classical Darboux chart. One bounded result quantizes that chart only at principal microlocal order and kills exact unitarity of the uncorrected one-term amplitude. The newest result separately keeps one improved-static finite BFV zero-mode replacement-source algebra with explicitly declared measures. Stop before a normalized endpoint transform and spectral delta(C) comparison, corrected full symbol, ordering and domains, two-endpoint/full-trajectory BFV kernel, absolute measure, other-component atlas, old-kernel equality, source deformation, zero lapse, scale/mixed ends, determinant orientation, census, global coefficients, or physics promotion.",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and an exact U_plus classical Darboux chart. A principal FIO and improved-static BFV zero-mode source then feed the user-directed spectral-to-m2 chain: the declared M_c operator domain is self-adjoint, the declared endpoint data do not select a unique exact completion, the frozen static form matches the order-zero spectral c=0 fiber, and one nonzero m=2 quartet has only a relative determinant/Pfaffian match. Stop at the two inequivalent trajectory zero-mode ledgers, before an exact endpoint transform, original-variable ordering, full BFV measure, absolute contour/Pfaffian orientation, other-component atlas, old-kernel equality, source deformation, zero lapse, scale/mixed ends, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1130,10 +1135,17 @@
         "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
         "concept:gate1-v0-principal-endpoint-fio-control",
         "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
-        "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
-        "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
-        "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
-        "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
     }
@@ -11069,6 +11081,207 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE.md",
       "sha256": "326e9403c60570895f0b58d6809dce33c655f2cf87aff1a4ddcbdeb75181f220"
+    },
+    {
+      "id": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "type": "concept",
+      "title": "Gate-1 V0 local spectral-to-m2 BFV workbench chain",
+      "summary": "Four separately bounded, user-directed, non-numbered calculations follow the improved-static source. They declare and audit the local M_c spectral representation, test whether B and the principal data uniquely determine an exact endpoint completion, compare the static source with an order-zero spectral c=0 test form, and project one minimal nonzero m=2 BFV quartet. The chain closes only local representation and frozen-form questions, contradicts two uniqueness claims, and creates no automatic successor or physical promotion.",
+      "state": "COMPLETED_VALID_LOCAL_SPECTRAL_TO_M2_CHAIN_WITH_ENDPOINT_AND_ZERO_MODE_UNIQUENESS_KILLS_NO_AUTOMATIC_SUCCESSOR"
+    },
+    {
+      "id": "scope:gate1-v0-local-spectral-to-m2-bfv-chain",
+      "type": "scope",
+      "title": "Closed-FRW V0 U_plus local spectral-to-m2 BFV scope",
+      "summary": "The declared U_plus Darboux momentum representation, order-zero c=0 test form and one formal mixed-boundary m=2 gauge/ghost tangent mode, separated from an exact endpoint transform, original-variable quantum theory, absolute trajectory measure, global cycle and physical interpretation.",
+      "state": "CLOSED_LOCAL_OPERATOR_FROZEN_PAIRING_AND_RELATIVE_ONE_MODE_SCOPE_FULL_ENDPOINT_TRAJECTORY_AND_GLOBAL_SCOPE_OPEN",
+      "includes": [
+        "H_D=L2(R_c times R_positive_p,dc dp), C_hat_D=M_c on its maximal multiplication domain and the distributional c=0 fiber form on the declared test space",
+        "the conditional endpoint family U_kappa=exp(i*hbar*kappa*c)U_0 inside the mixed declared B,a0,H_D,M_c data class",
+        "three frozen p>0 Gaussian-polynomial test states, their exact 3 by 3 static Gram matrix and Gaussian delta regulator",
+        "one direct mixed-boundary m=2 sine/cosine projection with frozen p=p0>0 and relative nonzero determinant/Pfaffian comparison",
+        "the retained versus eliminated algebraic ghost zero-mode ledgers at lambda=1/2,1,2"
+      ],
+      "excludes": [
+        "existence or construction of an exact normalized endpoint-state transform, a selected subprincipal symbol or exact observable intertwining",
+        "original closed-FRW constraint ordering, edge extensions, p<0 completion, self-adjoint Phi generator or physical inner product",
+        "an arbitrary-state rigging-map theorem, full-real-lapse group average, exact two-endpoint BFV kernel or continuum limit",
+        "an absolute bosonic contour phase, Pfaffian orientation, functional measure, unique lapse-modulus or trajectory zero-mode prescription",
+        "finite-amplitude chart containment, other Darboux components, global atlas or Gribov census, physical cycle, observable, physics claim or TOE claim"
+      ]
+    },
+    {
+      "id": "evidence:gate1-v0-constraint-spectral-domain",
+      "type": "evidence",
+      "title": "Gate-1 V0 local constraint spectral-domain evidence",
+      "summary": "The final VALID_RUN records eight exact PASS checks and four reviewed analytic guards. It verifies the real multiplication operator, nonreal resolvent identity and bound, maximal-domain witnesses, PVM algebra, distributional zero-fiber witness, singleton distinction and positive-half-line Fourier boundary, with no quadratures, roots, ODEs or descendants.",
+      "state": "VALID_RUN_LOCAL_SELF_ADJOINT_MC_DOMAIN_AND_DISTRIBUTIONAL_ZERO_FIBER_KEEP",
+      "observed_status": "VALID_RUN_8_EXACT_PASS_4_ANALYTIC_GUARDS"
+    },
+    {
+      "id": "evidence:gate1-v0-endpoint-subprincipal-nonuniqueness",
+      "type": "evidence",
+      "title": "Gate-1 V0 endpoint subprincipal nonuniqueness evidence",
+      "summary": "The final VALID_RUN records ten exact and three 80-digit numerical PASS checks plus five reviewed analytic guards. Conditional on any exact completion U_0 in the declared class, exp(i*hbar*kappa*c) produces distinct exact-unitary completions with the same B, canonical graph and principal half-density. The initial INCONCLUSIVE symbolic-positivity result and its exact monotonicity repair remain committed provenance; existence of U_0 was not computed.",
+      "state": "VALID_RUN_DECLARED_ENDPOINT_DATA_UNIQUENESS_KILL_EXISTENCE_OPEN",
+      "observed_status": "VALID_RUN_10_EXACT_PASS_3_NUMERICAL_PASS_5_ANALYTIC_GUARDS"
+    },
+    {
+      "id": "evidence:gate1-v0-static-spectral-pairing",
+      "type": "evidence",
+      "title": "Gate-1 V0 frozen static-spectral pairing evidence",
+      "summary": "The VALID_RUN records eleven exact and 36 independent 80-digit numerical PASS checks plus four reviewed analytic guards. The exact positive-definite 3 by 3 static form equals order-zero M_c fiber evaluation on the frozen p>0 test family, and nine p integrals plus 27 regulated c integrals reproduce the analytic entries and limit.",
+      "state": "VALID_RUN_FROZEN_STATIC_ZERO_MODE_ORDER_ZERO_SPECTRAL_FORM_KEEP",
+      "observed_status": "VALID_RUN_11_EXACT_PASS_36_NUMERICAL_PASS_4_ANALYTIC_GUARDS"
+    },
+    {
+      "id": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "type": "evidence",
+      "title": "Gate-1 V0 minimal m2 spectral BFV trajectory evidence",
+      "summary": "The corrected final VALID_RUN records sixteen exact PASS checks and five reviewed analytic guards. Direct mixed-boundary substitution retains int(e0*e_s)=2*sqrt(2)/pi, verifies the projected action and BRST maps, and matches the nonzero bosonic determinant magnitude with the ghost Pfaffian only relatively. The first common-orthonormal-basis KILL is preserved in history; two inequivalent zero-mode ledgers leave the trajectory completion underdetermined.",
+      "state": "VALID_RUN_M2_RELATIVE_NONZERO_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS",
+      "observed_status": "VALID_RUN_16_EXACT_PASS_5_ANALYTIC_GUARDS",
+      "check_ids": [
+        "P39.G1.m2.upstream.static_bfv_contract",
+        "P39.G1.m2.upstream.static_spectral_prerequisite",
+        "P39.G1.m2.basis.sector_normalization_and_overlaps",
+        "P39.G1.m2.basis.derivative_relation",
+        "P39.G1.m2.endpoint.sine_modes_vanish",
+        "P39.G1.m2.basis.minimal_nonzero_mode_count",
+        "P39.G1.m2.action.even_projection",
+        "P39.G1.m2.action.ghost_projection",
+        "P39.G1.m2.brst.projected_generator_nilpotence",
+        "P39.G1.m2.brst.endpoint_mode_stability",
+        "P39.G1.m2.nonzero.bosonic_gauge_matrix",
+        "P39.G1.m2.nonzero.ghost_pfaffian",
+        "P39.G1.m2.nonzero.relative_determinant_pfaffian_match",
+        "P39.G1.m2.nonzero.sampled_lambda_identity",
+        "P39.G1.m2.zero.retained_pair_relative_cancellation",
+        "P39.G1.m2.zero.ledger_inequivalence"
+      ]
+    },
+    {
+      "id": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "type": "claim",
+      "title": "The declared V0 U_plus constraint is a self-adjoint maximal multiplication operator",
+      "summary": "Supported only in the declared Darboux momentum representation H_D=L2(dc dp) with p>0. C_hat_D=M_c on the maximal domain {psi:c psi in H_D} is self-adjoint with the indicator PVM. E({0}) is zero in Lebesgue L2 while delta(M_c) is a distributional c=0 fiber form on the declared test space. This does not derive an original-variable ordering, p=0 edge condition, physical measure or rigging map.",
+      "state": "SUPPORTED_IN_DECLARED_LOCAL_DARBOUX_MULTIPLICATION_REPRESENTATION_ONLY",
+      "claim_id": "G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "statement": "On the declared U_plus Darboux momentum Hilbert space L2(R_c times R_positive_p,dc dp), the constraint C_hat_D=M_c with maximal multiplication domain is self-adjoint and has the standard multiplication PVM.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "type": "claim",
+      "title": "The declared V0 B, principal symbol, H_D and M_c uniquely select an exact endpoint completion",
+      "summary": "Contradicted only inside the mixed declared data class, conditional on existence of one exact completion U_0. The family exp(i*hbar*kappa*c)U_0 remains exactly unitary, strongly commutes with M_c, preserves its maximal domain, fixes B, the canonical graph and a0, and changes a lower symbol while acting identically on c=0. Additional exact intertwining, full-symbol, endpoint-domain, edge or gluing data could restrict the family; existence of U_0 remains open.",
+      "state": "CONTRADICTED_FOR_UNIQUENESS_FROM_DECLARED_DATA_ONLY_EXISTENCE_OPEN",
+      "claim_id": "G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "statement": "The classical boundary potential B, principal half-density a0, declared Hilbert space H_D and multiplication constraint M_c alone select at most one exact unitary endpoint-state completion compatible with those data.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "type": "claim",
+      "title": "The V0 static zero mode equals the order-zero M_c form on the frozen tests",
+      "summary": "Supported only for three declared p>0 Gaussian-polynomial test states and the order-zero c=0 fiber form. Static Fourier/Berezin contraction and spectral fiber evaluation give the same positive-definite 3 by 3 matrix, with independent Gaussian-regulator quadratures approaching it. This is not an arbitrary-state theorem, normalized endpoint transform, full group average or physical inner product.",
+      "state": "SUPPORTED_FOR_FROZEN_THREE_STATE_ORDER_ZERO_TEST_FORM_ONLY",
+      "claim_id": "G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "statement": "For the three frozen p-positive Gaussian-polynomial test states, the improved-static BFV zero-mode pairing equals the order-zero distributional delta(M_c) c=0 fiber form entry by entry.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "type": "claim",
+      "title": "The V0 m2 nonzero BFV quartet has a relative determinant/Pfaffian match",
+      "summary": "Supported only for one formal local hybrid spectral mode with a frozen p0>0 spectator. Direct projection gives bosonic determinant -(pi^2+lambda^2) and ordered ghost Pfaffian pi^2+lambda^2 for the same regulator. This relative polynomial identity supplies no absolute bosonic contour phase, Pfaffian orientation, nonlinear chart containment, functional measure or continuum theorem.",
+      "state": "SUPPORTED_FOR_ONE_DECLARED_RELATIVE_M2_NONZERO_MODE_ONLY",
+      "claim_id": "G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "statement": "For the declared direct mixed-boundary m=2 projection, the magnitude polynomial of the nonzero bosonic gauge matrix determinant equals the ordered ghost Pfaffian polynomial pi^2+lambda^2 under the same regulator.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "type": "claim",
+      "title": "The pinned V0 static inputs uniquely select the trajectory zero-mode completion",
+      "summary": "Contradicted for the two explicit admissible ledgers visible in the declared finite-mode inputs. Fourier integration over N0 gives delta(lambda*c0)=delta(c0)/lambda. Retaining the algebraic rho0,bar-rho0 pair supplies lambda and yields unit relative factor; eliminating that pair leaves 1/lambda. The inputs do not choose between them or a lapse-modulus prescription, so no unique full trajectory measure is promoted.",
+      "state": "CONTRADICTED_BY_RETAINED_AND_ELIMINATED_ZERO_MODE_LEDGERS",
+      "claim_id": "G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "statement": "The pinned improved-static source and historical trajectory conventions uniquely determine how the algebraic ghost zero pair and lapse zero mode complete the finite m=2 BFV trajectory measure.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "artifact:gate1-v0-constraint-spectral-domain-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 constraint spectral-domain raw result",
+      "summary": "The complete 11,403-byte VALID_RUN result with eight exact passes, four analytic guards, local multiplication-domain KEEP, all original-ordering, physical-measure, full-path, global, physics and TOE outputs null, and payload digest 4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json",
+      "sha256": "4447980c687724f6160da35a2e985c59a4619e4aa2a4072b3cd78afbaad15f48",
+      "introduced_in_commit": "d6301df863547aeb21212e1890fe27a66daa2e91"
+    },
+    {
+      "id": "artifact:gate1-v0-endpoint-subprincipal-nonuniqueness-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 endpoint subprincipal nonuniqueness raw result",
+      "summary": "The complete 15,624-byte final VALID_RUN result with ten exact and three numerical passes, five analytic guards, uniqueness KILL, exact-completion existence null, preserved initial INCONCLUSIVE provenance and payload digest e5520c2b1aa66c233c67a317e4191be2e8eb43f33ff75886ce7bd079259a7887.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_RESULT.json",
+      "sha256": "5be03cf1d9c8796298d5d561fa77506d88b8063409226e837693c001feaaff2f",
+      "introduced_in_commit": "e40330a155141be8d04ab59eccc05d165ebb9f72"
+    },
+    {
+      "id": "artifact:gate1-v0-static-spectral-pairing-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 frozen static-spectral pairing raw result",
+      "summary": "The complete 49,595-byte VALID_RUN result with eleven exact and 36 numerical passes, four analytic guards, frozen order-zero pairing KEEP, all arbitrary-state, full-path, physical and TOE outputs null, and payload digest 820ce5fd01c1655a6e38c18e529be5f495e61f11490582a0cee84b491c0516b6.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_RESULT.json",
+      "sha256": "0b2c748bb99a11409b820796941538dd926f82eb04198e217a9c3ba780f2a7b4",
+      "introduced_in_commit": "3c770c3f3f5a63032232f34466a1cc7cdd3ee1f8"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-m2-spectral-trajectory-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 minimal m2 spectral BFV trajectory raw result",
+      "summary": "The complete 17,883-byte corrected VALID_RUN result with sixteen exact passes, five analytic guards, relative nonzero-mode KEEP, ambiguous zero-mode completion, strict full-measure, global, physics and TOE nulls, and payload digest a12b719f2961363610c93ecf07d0185de316497708b809b4b2b1aca7bdfec92b.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json",
+      "sha256": "15beb4c1bd44d0d7aa8f34b7ea2f656c42452130b10817585b7a6c134ac4aef7",
+      "introduced_in_commit": "542f6c5dad1c10cd88e3c77fc48061396a7d5980"
+    },
+    {
+      "id": "artifact:gate1-v0-spectral-to-m2-bfv-chain-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 spectral-to-m2 BFV chain evidence snapshot",
+      "summary": "Typed extract of the final corrected m=2 run with sixteen exact checks, five analytic guards, all four upstream final result hashes and counts, both repaired nonpass ledgers, user-directed bounded-chain provenance, relative one-mode KEEP, zero-mode ambiguity and fail-closed endpoint, full-path, global, physics and TOE outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-spectral-to-m2-bfv-chain-result.json",
+      "sha256": "85a7b73bf761393e7da670bee98ba4625522d39a59c651358b1a9ecc781d6e23"
+    },
+    {
+      "id": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report",
+      "type": "artifact",
+      "title": "Gate-1 V0 spectral-to-m2 BFV chain report",
+      "summary": "Human-readable separation of the declared local self-adjoint multiplication representation, endpoint-completion nonuniqueness, frozen static-spectral test form, mixed-boundary m=2 relative quartet, inequivalent zero-mode ledgers, commands, hashes, repaired nonpass history, sources and strict workbench boundary.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN.md",
+      "sha256": "f142910ec897818096947199c71cf6ec0575a064b44af3a9d9df01566619c5cd",
+      "introduced_in_commit": "1f0776441474cbd79d51bf93983570c74157053d"
+    },
+    {
+      "id": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "type": "open_problem",
+      "title": "Exact V0 endpoint transform and trajectory zero-mode completion",
+      "summary": "The local multiplication domain and frozen pairing survive, but the declared principal endpoint data leave a kappa-family of lower-symbol completions and the m=2 finite trajectory exposes inequivalent retained/eliminated zero-mode ledgers. The missing discriminator must add exact full-symbol/intertwining/edge data and a justified lapse, ghost-zero-mode, contour and orientation prescription without importing a physical conclusion.",
+      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Which additional exact intertwining, full-symbol, endpoint-domain and branch data construct a normalized endpoint transform, and which independently justified lapse/ghost-zero-mode and contour prescription extends it to a unique finite BFV trajectory measure?"
     },
     {
       "id": "phase:p11",
@@ -28436,6 +28649,375 @@
       "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA"
+    },
+    {
+      "id": "edge:2695",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2696",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-improved-static-bfv-zero-mode-source-control",
+      "note": "Consumes the pinned local source algebra and addresses the explicitly user-authorized operator, pairing and minimal nonzero-mode questions without promoting the source to a full path measure."
+    },
+    {
+      "id": "edge:2697",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-principal-endpoint-fio-control",
+      "note": "Tests what the prior B and principal half-density can and cannot select after the uncorrected one-term exact-unitarity KILL; it does not repair that kernel."
+    },
+    {
+      "id": "edge:2698",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:2699",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Cites refined algebraic quantization for the distributional constraint-form framework only; the frozen c=0 fiber control is not promoted to a physical rigging map."
+    },
+    {
+      "id": "edge:2700",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "CITES",
+      "to": "source:hormander-1971-fourier-integral-operators-i",
+      "note": "Cites the local principal and lower-symbol distinction; it does not select the repository endpoint completion or global edge data."
+    },
+    {
+      "id": "edge:2701",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992",
+      "note": "Cites improved endpoint actions and BFV boundary conditions, not a unique repository zero-mode or lapse prescription."
+    },
+    {
+      "id": "edge:2702",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Cites the extended multiplier/ghost BFV framework; the finite mixed-boundary projection and orientation ledgers remain repository conventions."
+    },
+    {
+      "id": "edge:2703",
+      "from": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The user separately authorized four bounded non-numbered questions; each used a committed ./ice runner, produced one adjacent result, stayed within caps and created no automatic descendant."
+    },
+    {
+      "id": "edge:2704",
+      "from": "evidence:gate1-v0-constraint-spectral-domain",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2705",
+      "from": "evidence:gate1-v0-constraint-spectral-domain",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-constraint-spectral-domain-result"
+    },
+    {
+      "id": "edge:2706",
+      "from": "evidence:gate1-v0-constraint-spectral-domain",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-offshell-darboux-chart",
+      "note": "Declares a local momentum-space Hilbert convention for the pinned U_plus Darboux coordinates; it does not derive an original-variable quantum measure."
+    },
+    {
+      "id": "edge:2707",
+      "from": "evidence:gate1-v0-endpoint-subprincipal-nonuniqueness",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2708",
+      "from": "evidence:gate1-v0-endpoint-subprincipal-nonuniqueness",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-endpoint-subprincipal-nonuniqueness-result"
+    },
+    {
+      "id": "edge:2709",
+      "from": "evidence:gate1-v0-endpoint-subprincipal-nonuniqueness",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-principal-endpoint-fio",
+      "note": "Holds the classical graph and principal half-density fixed while varying a lower symbol, conditional on an exact completion."
+    },
+    {
+      "id": "edge:2710",
+      "from": "evidence:gate1-v0-endpoint-subprincipal-nonuniqueness",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-constraint-spectral-domain",
+      "note": "Uses exact unitary multipliers that strongly commute with M_c and preserve its maximal declared domain."
+    },
+    {
+      "id": "edge:2711",
+      "from": "evidence:gate1-v0-static-spectral-pairing",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2712",
+      "from": "evidence:gate1-v0-static-spectral-pairing",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-static-spectral-pairing-result"
+    },
+    {
+      "id": "edge:2713",
+      "from": "evidence:gate1-v0-static-spectral-pairing",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-improved-static-bfv-source",
+      "note": "Consumes only the declared static Fourier/Berezin zero-mode normalization and not a full BFV trajectory measure."
+    },
+    {
+      "id": "edge:2714",
+      "from": "evidence:gate1-v0-static-spectral-pairing",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-constraint-spectral-domain",
+      "note": "Compares the static form with the order-zero distributional c=0 fiber, not with an ordinary zero-eigenvalue projector."
+    },
+    {
+      "id": "edge:2715",
+      "from": "evidence:gate1-v0-static-spectral-pairing",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-endpoint-subprincipal-nonuniqueness",
+      "note": "Verifies that the c=0 test form is invariant across the displayed kappa family and therefore cannot select its lower symbol."
+    },
+    {
+      "id": "edge:2716",
+      "from": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2717",
+      "from": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-bfv-m2-spectral-trajectory-result"
+    },
+    {
+      "id": "edge:2718",
+      "from": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-spectral-to-m2-bfv-chain-evidence-snapshot"
+    },
+    {
+      "id": "edge:2719",
+      "from": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-improved-static-bfv-source",
+      "note": "Projects the pinned bracket-derived source into one direct mixed-boundary mode while retaining the static source's explicit full-path null."
+    },
+    {
+      "id": "edge:2720",
+      "from": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-static-spectral-pairing",
+      "note": "The final runner requires the frozen static-spectral prerequisite to survive before testing one nonzero quartet."
+    },
+    {
+      "id": "edge:2721",
+      "from": "artifact:gate1-v0-spectral-to-m2-bfv-chain-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2722",
+      "from": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2723",
+      "from": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-v0-spectral-to-m2-bfv-chain-evidence-snapshot"
+    },
+    {
+      "id": "edge:2724",
+      "from": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2725",
+      "from": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:2726",
+      "from": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-constraint-spectral-domain",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2727",
+      "from": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report"
+    },
+    {
+      "id": "edge:2728",
+      "from": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2729",
+      "from": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:2730",
+      "from": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-endpoint-subprincipal-nonuniqueness",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2731",
+      "from": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report"
+    },
+    {
+      "id": "edge:2732",
+      "from": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "note": "The earlier claim is contradicted for one uncorrected amplitude; this later contradiction addresses uniqueness from the surviving declared principal data and still leaves exact-completion existence open."
+    },
+    {
+      "id": "edge:2733",
+      "from": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2734",
+      "from": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:2735",
+      "from": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-static-spectral-pairing",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2736",
+      "from": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report"
+    },
+    {
+      "id": "edge:2737",
+      "from": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2738",
+      "from": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:2739",
+      "from": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2740",
+      "from": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report"
+    },
+    {
+      "id": "edge:2741",
+      "from": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control"
+    },
+    {
+      "id": "edge:2742",
+      "from": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:2743",
+      "from": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2744",
+      "from": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report"
+    },
+    {
+      "id": "edge:2745",
+      "from": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "note": "The missing discriminator is additional exact full-symbol, intertwining, endpoint-domain and edge data; this edge grants no execution authority."
+    },
+    {
+      "id": "edge:2746",
+      "from": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "note": "A new independent question must justify the ghost-zero-mode, lapse-modulus, contour and absolute orientation prescription; no descendant is automatic."
+    },
+    {
+      "id": "edge:2747",
+      "from": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH"
+    },
+    {
+      "id": "edge:2748",
+      "from": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "note": "Adds one declared local multiplication-operator realization without changing the prior chart's classical and componentwise scope."
+    },
+    {
+      "id": "edge:2749",
+      "from": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA",
+      "note": "Tests the source's declared zero-mode normalization on one finite spectral test family rather than promoting it to a full path kernel."
+    },
+    {
+      "id": "edge:2750",
+      "from": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "note": "Extends only to the smallest nonzero boundary-compatible gauge/ghost mode after the frozen order-zero form survives."
+    },
+    {
+      "id": "edge:2751",
+      "from": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "note": "The relative nonzero-mode match survives, but it does not decide the separately contradicted zero-mode uniqueness claim."
     }
   ],
   "kg_bridges": [
@@ -28905,6 +29487,56 @@
       "checked_at_utc": "2026-08-27T08:32:12Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 closed FRW V0 Uplus improved static BFV zero mode replacement endpoint source algebra",
       "note": "No authorized exact external correspondence or writer is available. The local bracket, endpoint ideal, declared Fourier/Berezin convention, reduced-identity compatibility and strict full-path/spectral/global/physics/TOE boundary remain repository-local workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T09:58:21Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 Uplus declared self-adjoint maximal multiplication constraint operator",
+      "note": "No authorized exact external correspondence or writer is available. The declared local H_D and M_c realization, distributional zero-fiber boundary and strict original-ordering, physical-measure, global, physics and TOE nulls remain repository-local workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T09:58:21Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 boundary potential principal symbol Hilbert space multiplication constraint exact endpoint completion uniqueness",
+      "note": "No authorized exact external correspondence or writer is available. The scoped kappa-family uniqueness contradiction is conditional on one exact completion and leaves existence, extra intertwining/domain data, global edges, physics and TOE null; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T09:58:21Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 improved static zero mode order zero multiplication constraint spectral form frozen tests",
+      "note": "No authorized exact external correspondence or writer is available. The equality is restricted to one frozen three-state order-zero test form and is not a physical group average, arbitrary-state theorem or endpoint transform; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T09:58:21Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 m2 nonzero BFV quartet relative determinant Pfaffian match",
+      "note": "No authorized exact external correspondence or writer is available. The same-regulator one-mode relative identity supplies no absolute contour phase, Pfaffian orientation, trajectory measure, continuum theorem, physics or TOE output; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T09:58:21Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 pinned static inputs unique BFV trajectory ghost lapse zero mode completion",
+      "note": "No authorized exact external correspondence or writer is available. The retained and eliminated zero-mode ledgers contradict uniqueness only for the pinned inputs and leave a justified lapse, ghost, contour, absolute measure, physics and TOE completion open; no external UID was invented."
     },
     {
       "local_node_id": "phase:p14a",

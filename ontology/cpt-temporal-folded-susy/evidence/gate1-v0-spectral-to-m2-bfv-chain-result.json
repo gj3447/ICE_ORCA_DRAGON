@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN_20260827",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-27T09:47:12Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py",
+    "sha256": "71b3a6707c8b3d6a40f58e3a812de42a90ca6463de736d949bbf77f381a6e382",
+    "introduced_in_commit": "176d78365fa79fa4840fd11b7bd16c338d61d442"
+  },
+  "exact_checks": 16,
+  "checks": [
+    {
+      "id": "P39.G1.m2.upstream.static_bfv_contract",
+      "status": "PASS",
+      "statement": "the pinned static source supplies sPsi, endpoint ideal and odd order but explicitly no full path measure"
+    },
+    {
+      "id": "P39.G1.m2.upstream.static_spectral_prerequisite",
+      "status": "PASS",
+      "statement": "the frozen static-spectral comparison survived while leaving the trajectory measure null"
+    },
+    {
+      "id": "P39.G1.m2.basis.sector_normalization_and_overlaps",
+      "status": "PASS",
+      "statement": "the sector functions have unit norm and the required e0-e_c/e_c-e_s orthogonality; the distinct-boundary-sector overlap int(e0*e_s)=2*sqrt(2)/pi is explicitly retained"
+    },
+    {
+      "id": "P39.G1.m2.basis.derivative_relation",
+      "status": "PASS",
+      "statement": "the one Dirichlet sine mode differentiates to pi times its cosine partner"
+    },
+    {
+      "id": "P39.G1.m2.endpoint.sine_modes_vanish",
+      "status": "PASS",
+      "statement": "T,Pi,c_g,bar_c sine modes obey both endpoint conditions exactly"
+    },
+    {
+      "id": "P39.G1.m2.basis.minimal_nonzero_mode_count",
+      "status": "PASS",
+      "statement": "m=1 has no endpoint-vanishing nonzero mode while m=2 has exactly the k=1 mode used here"
+    },
+    {
+      "id": "P39.G1.m2.action.even_projection",
+      "status": "PASS",
+      "statement": "direct basis projection recovers the frozen physical spectator plus the declared m=2 bosonic gauge action"
+    },
+    {
+      "id": "P39.G1.m2.action.ghost_projection",
+      "status": "PASS",
+      "statement": "the projected ordered ghost action is pi*b1*rho1+pi*g1*br1-lambda*(g1*b1+rho0*br0+rho1*br1)"
+    },
+    {
+      "id": "P39.G1.m2.brst.projected_generator_nilpotence",
+      "status": "PASS",
+      "statement": "the pinned bracket-derived generator images project to sT1=g1, sN_i=rho_i, sb1=Pi1, sbr_i=c_i and square to zero"
+    },
+    {
+      "id": "P39.G1.m2.brst.endpoint_mode_stability",
+      "status": "PASS",
+      "statement": "the endpoint-vanishing T,Pi,c_g,bar_c sine sector is BRST stable and the fixed physical endpoints are invariant"
+    },
+    {
+      "id": "P39.G1.m2.nonzero.bosonic_gauge_matrix",
+      "status": "PASS",
+      "statement": "the nonzero bosonic gauge matrix is [[pi,lambda],[lambda,-pi]] with determinant -(pi^2+lambda^2)"
+    },
+    {
+      "id": "P39.G1.m2.nonzero.ghost_pfaffian",
+      "status": "PASS",
+      "statement": "the ordered (g1,b1,rho1,br1) ghost matrix has Pfaffian pi^2+lambda^2 and determinant Pf^2"
+    },
+    {
+      "id": "P39.G1.m2.nonzero.relative_determinant_pfaffian_match",
+      "status": "PASS",
+      "statement": "the nonzero bosonic Jacobian magnitude and ghost Pfaffian share the same pi^2+lambda^2 polynomial only as a same-regulator relative identity"
+    },
+    {
+      "id": "P39.G1.m2.nonzero.sampled_lambda_identity",
+      "status": "PASS",
+      "statement": "the exact relative polynomial identity survives the frozen positive lambda samples 1/2,1,2"
+    },
+    {
+      "id": "P39.G1.m2.zero.retained_pair_relative_cancellation",
+      "status": "PASS",
+      "statement": "with the explicitly declared i*hbar coefficient-extraction orientation, the retained rho0,br0 factor lambda cancels delta(lambda*c0)'s 1/lambda Jacobian"
+    },
+    {
+      "id": "P39.G1.m2.zero.ledger_inequivalence",
+      "status": "PASS",
+      "statement": "retaining the algebraic zero ghost pair gives a lambda-independent relative unit, while eliminating it leaves 1/lambda; the pinned inputs do not choose between them"
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 16,
+    "numerical_checks": 0,
+    "calculation": {
+      "calculation_id": "Gate1V0SpectralToM2BfvChain",
+      "final_executable_calculation_id": "Gate1V0BfvM2SpectralTrajectory",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_V0_M2_ONE_MODE_RELATIVE_BFV_QUARTET_KEEP_TRAJECTORY_ZERO_MODE_COMPLETION_UNDERDETERMINED",
+      "verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS",
+      "programme_impact": "KEEP_MINIMAL_NONZERO_MODE_RELATIVE_CONTROL_ONLY"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited finite m=2 Gate-1 provenance required by research-run-evidence/v1; this user-directed bounded chain and its final executable calculation have numbered_phase=null and create no new phase",
+      "outer_check_ids_semantics": "the outer P39.G1.m2.* IDs are schema-required transport aliases only; they are not raw runner IDs and do not denote a Phase-39 execution",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative raw G1.m2.* check id only in the typed snapshot",
+      "authoritative_exact_check_ids": [
+        "G1.m2.upstream.static_bfv_contract",
+        "G1.m2.upstream.static_spectral_prerequisite",
+        "G1.m2.basis.sector_normalization_and_overlaps",
+        "G1.m2.basis.derivative_relation",
+        "G1.m2.endpoint.sine_modes_vanish",
+        "G1.m2.basis.minimal_nonzero_mode_count",
+        "G1.m2.action.even_projection",
+        "G1.m2.action.ghost_projection",
+        "G1.m2.brst.projected_generator_nilpotence",
+        "G1.m2.brst.endpoint_mode_stability",
+        "G1.m2.nonzero.bosonic_gauge_matrix",
+        "G1.m2.nonzero.ghost_pfaffian",
+        "G1.m2.nonzero.relative_determinant_pfaffian_match",
+        "G1.m2.nonzero.sampled_lambda_identity",
+        "G1.m2.zero.retained_pair_relative_cancellation",
+        "G1.m2.zero.ledger_inequivalence"
+      ],
+      "authoritative_numerical_check_ids": []
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract_of_final_m2_run_with_hash_pinned_chain_inputs",
+      "final_definition_commit": "176d78365fa79fa4840fd11b7bd16c338d61d442",
+      "final_raw_result_commit": "542f6c5dad1c10cd88e3c77fc48061396a7d5980",
+      "report_commit": "1f0776441474cbd79d51bf93983570c74157053d",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_INPUTS.json",
+      "input_manifest_sha256": "dc301d233540b5d635d448c4e2c1cf897e6c9ae612493a5ab11a1d44b403eb77",
+      "runner_sha256": "71b3a6707c8b3d6a40f58e3a812de42a90ca6463de736d949bbf77f381a6e382",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json",
+      "raw_result_outer_sha256": "15beb4c1bd44d0d7aa8f34b7ea2f656c42452130b10817585b7a6c134ac4aef7",
+      "raw_result_payload_sha256_without_self": "a12b719f2961363610c93ecf07d0185de316497708b809b4b2b1aca7bdfec92b",
+      "raw_result_size_bytes": 17883,
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN.md",
+      "report_sha256": "f142910ec897818096947199c71cf6ec0575a064b44af3a9d9df01566619c5cd"
+    },
+    "chain_results": [
+      {
+        "direction": 1,
+        "calculation_id": "Gate1V0ConstraintSpectralDomain",
+        "command": "./ice run cpt_temporal_folded_susy/gate1_v0_constraint_spectral_domain",
+        "final_result_commit": "d6301df863547aeb21212e1890fe27a66daa2e91",
+        "raw_result_outer_sha256": "4447980c687724f6160da35a2e985c59a4619e4aa2a4072b3cd78afbaad15f48",
+        "raw_result_payload_sha256_without_self": "4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd",
+        "exact_checks": 8,
+        "numerical_checks": 0,
+        "verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN"
+      },
+      {
+        "direction": 2,
+        "calculation_id": "Gate1V0EndpointSubprincipalNonuniqueness",
+        "command": "./ice run cpt_temporal_folded_susy/gate1_v0_endpoint_subprincipal_nonuniqueness",
+        "final_result_commit": "e40330a155141be8d04ab59eccc05d165ebb9f72",
+        "raw_result_outer_sha256": "5be03cf1d9c8796298d5d561fa77506d88b8063409226e837693c001feaaff2f",
+        "raw_result_payload_sha256_without_self": "e5520c2b1aa66c233c67a317e4191be2e8eb43f33ff75886ce7bd079259a7887",
+        "exact_checks": 10,
+        "numerical_checks": 3,
+        "verdict": "KILL_UNIQUENESS_FROM_DECLARED_B_A0_HD_MC_DATA"
+      },
+      {
+        "direction": 3,
+        "calculation_id": "Gate1V0StaticSpectralPairing",
+        "command": "./ice run cpt_temporal_folded_susy/gate1_v0_static_spectral_pairing",
+        "final_result_commit": "3c770c3f3f5a63032232f34466a1cc7cdd3ee1f8",
+        "raw_result_outer_sha256": "0b2c748bb99a11409b820796941538dd926f82eb04198e217a9c3ba780f2a7b4",
+        "raw_result_payload_sha256_without_self": "820ce5fd01c1655a6e38c18e529be5f495e61f11490582a0cee84b491c0516b6",
+        "exact_checks": 11,
+        "numerical_checks": 36,
+        "verdict": "KEEP_V0_LOCAL_STATIC_ZERO_MODE_SPECTRAL_PAIRING_COMPATIBILITY"
+      },
+      {
+        "direction": 4,
+        "calculation_id": "Gate1V0BfvM2SpectralTrajectory",
+        "command": "./ice run cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory",
+        "final_result_commit": "542f6c5dad1c10cd88e3c77fc48061396a7d5980",
+        "raw_result_outer_sha256": "15beb4c1bd44d0d7aa8f34b7ea2f656c42452130b10817585b7a6c134ac4aef7",
+        "raw_result_payload_sha256_without_self": "a12b719f2961363610c93ecf07d0185de316497708b809b4b2b1aca7bdfec92b",
+        "exact_checks": 16,
+        "numerical_checks": 0,
+        "verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS"
+      }
+    ],
+    "attempt_ledger": {
+      "endpoint_attempt_1": {
+        "result_commit": "271e8bb4547e2d08d3d2dcb16524fdebc6b3a3d3",
+        "verdict": "INCONCLUSIVE",
+        "reason": "a composite symbolic positivity heuristic was undecided"
+      },
+      "endpoint_repair": {
+        "definition_commit": "8e72f9e9d61d6197fec634e18e5dae0ea744dbce",
+        "final_result_commit": "e40330a155141be8d04ab59eccc05d165ebb9f72",
+        "reason": "the exact positive exponent and strict monotonicity of exp replaced the undecided heuristic"
+      },
+      "m2_attempt_1": {
+        "result_commit": "a250c89c81ab9703ada8445c3a2cb6d40a22415b",
+        "raw_result_outer_sha256": "b799bdcb4661303ee73fec5bddeac559fa4b2f22085ab6c47245fcb0f69f24cb",
+        "raw_result_payload_sha256_without_self": "9d255cfc11fdb52cc1494c66e6ae17911405c77bde35263816ab6794192b323a",
+        "verdict": "KILL_V0_DECLARED_M2_SPECTRAL_BFV_MODE_EXTENSION",
+        "failed_check": "G1.m2.basis.orthonormality",
+        "reason": "the first runner incorrectly required three functions from distinct boundary sectors to form one orthonormal basis"
+      },
+      "m2_repair": {
+        "definition_commit": "176d78365fa79fa4840fd11b7bd16c338d61d442",
+        "final_result_commit": "542f6c5dad1c10cd88e3c77fc48061396a7d5980",
+        "reason": "direct mixed-boundary substitution retains int(e0*e_s)=2*sqrt(2)/pi and removes the false common-basis requirement"
+      },
+      "historical_nonpasses_preserved": true
+    },
+    "ragnarok_termination_audit": {
+      "runtime_policy": "GENERIC_BOUNDED_UNNUMBERED_CORE",
+      "authorization": "USER_DIRECTED_FOUR_INDEPENDENT_DIRECTIONS",
+      "arbitrary_arguments": "REJECTED",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    },
+    "computed_facts": {
+      "local_constraint_operator": "SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR_MC_ON_DECLARED_L2_DC_DP",
+      "ordinary_zero_eigenspace": "E_SINGLETON_ZERO_IS_ZERO_IN_LEBESGUE_L2",
+      "order_zero_constraint_form": "DISTRIBUTIONAL_C_ZERO_FIBER_ON_DECLARED_TEST_SPACE",
+      "endpoint_transform_uniqueness": "CONTRADICTED_WITHIN_DECLARED_B_A0_HD_MC_DATA_CLASS",
+      "endpoint_transform_existence": "NOT_COMPUTED",
+      "static_spectral_pairing": "EXACT_ON_FROZEN_THREE_STATE_ORDER_ZERO_TEST_FORM",
+      "nonzero_m2_quartet": "RELATIVE_DETERMINANT_PFAFFIAN_POLYNOMIAL_MATCH",
+      "trajectory_zero_mode_completion": "UNDERDETERMINED_BY_TWO_INEQUIVALENT_LEDGERS",
+      "full_bfv_trajectory_measure": "NOT_COMPUTED"
+    },
+    "theorem_guards": {
+      "count": 5,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_16_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.m2.guard.hybrid_spectral_only",
+        "G1.m2.guard.relative_not_absolute",
+        "G1.m2.guard.physical_spectator",
+        "G1.m2.guard.zero_mode_ambiguity",
+        "G1.m2.guard.no_full_bfv_or_physics"
+      ]
+    },
+    "scope_status": {
+      "local_darboux_constraint_domain": "KEEP",
+      "endpoint_completion_uniqueness_from_declared_data": "KILL",
+      "endpoint_completion_existence": null,
+      "frozen_static_order_zero_spectral_pairing": "KEEP",
+      "one_mode_nonzero_relative_quartet": "KEEP",
+      "unique_trajectory_zero_mode_completion": null,
+      "absolute_finite_or_functional_bfv_measure": null,
+      "continuum_bfv_limit": null,
+      "physical_inner_product": null
+    },
+    "fail_closed_outputs": {
+      "exact_endpoint_state_transform": null,
+      "original_variable_ordering": null,
+      "physical_original_cycle": null,
+      "absolute_bfv_measure": null,
+      "full_bfv_trajectory_measure": null,
+      "full_real_lapse_delta_C": null,
+      "global_n_sigma": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    }
+  }
+}

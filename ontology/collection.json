@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-27T08:32:12Z",
+  "updated_at_utc": "2026-08-27T10:04:41Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -71,7 +71,7 @@
         "Phase 11-56 claims, evidence snapshots or historical provenance pointers, scopes, policies, and open gates",
         "the Phase 11-15R collar-to-interface-to-charge-to-parent lineage, including the Phase 15A invalid-sequence break",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the still-open normalized-endpoint/spectral-delta(C)/full-trajectory/other-component/global-atlas/zero-lapse/full-joint boundary",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the user-directed V0 chain through a declared self-adjoint M_c domain, endpoint-completion uniqueness KILL, frozen static/order-zero spectral-form KEEP, relative m=2 nonzero-quartet KEEP and trajectory zero-mode uniqueness KILL, with exact endpoint existence, full trajectory, other-component/global-atlas/zero-lapse/full-joint boundary still open",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -189,23 +189,11 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime. The trace-gauge branch now reaches an exact classical U_plus Darboux chart and, on compact interiors, a principal old-(P,p) to new-(c,p) FIO with phase -W, half-density D^(-1/2) and fixed local Maslov branch. The uncorrected one-term kernel is not exactly unitary because its geometric-mean composition density differs from the required secant/coarea density. That narrow KILL does not exclude a corrected full-symbol or spectral transform. Ordering, self-adjoint domains, edge conditions, global normalization and Maslov gluing, coordinate polarization, other components, replacement ghost/BFV source, old fixed-a equality, full-real-lapse distributional delta(C) rigging map, zero lapse, physical joint cycle and global vector remain open or null. Gate 1 stays open and automatic_next is null.",
+      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime. The trace-gauge branch reaches a classical U_plus Darboux chart, a compact-interior principal endpoint FIO, and one improved-static BFV zero-mode source. The latest user-directed chain declares H_D=L2(dc dp) and keeps C-hat=M_c on its maximal self-adjoint multiplication domain, but this is not an original-variable ordering or physical measure. B, a0, H_D and M_c do not uniquely select an exact endpoint completion, while existence remains open. The frozen static form matches the order-zero distributional c=0 fiber on three test states. One m=2 nonzero quartet has a relative determinant/Pfaffian match, but inequivalent zero-mode ledgers contradict a unique trajectory completion. Exact endpoint construction, edge data, arbitrary-state/full-real-lapse rigging map, absolute BFV measure, global cycle, physics and TOE outputs remain open or null. Gate 1 stays open and automatic_next is null.",
       "refs": [
         {
           "graph": "cpt",
           "node": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES"
         },
         {
           "graph": "cpt",
@@ -221,15 +209,27 @@
         },
         {
           "graph": "cpt",
-          "node": "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION"
+          "node": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR"
         },
         {
           "graph": "cpt",
-          "node": "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE"
+          "node": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION"
         },
         {
           "graph": "cpt",
-          "node": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION"
+          "node": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-exact-endpoint-and-trajectory-completion"
         },
         {
           "graph": "cpt",
@@ -261,7 +261,7 @@
     },
     {
       "question": "Has any of this been promoted into an external KG or a physics verdict?",
-      "answer": "No automatic promotion is claimed. Twelve exact or related legacy UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 44 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
+      "answer": "No automatic promotion is claimed. Twelve exact or related legacy UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 50 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
       "refs": [
         {
           "graph": "hypercomplex",
@@ -451,7 +451,7 @@
       "path": "cpt_temporal_folded_susy",
       "status": "INDEXED",
       "graph": "cpt",
-      "reason": "Phase 11-56 claim/evidence history is indexed, including historical artifact pointers for Phase 11-15R, the Phase 15A invalid-sequence boundary, and the bounded non-numbered Gate-1 lineage through the V0 local action, U_plus Darboux chart, principal momentum FIO, one-term exact-unitarity KILL and improved-static BFV zero-mode source algebra. Indexing is not physics promotion; the normalized endpoint/spectral delta(C), full trajectory, other-component/global-atlas and physical-cycle boundary remains open."
+      "reason": "Phase 11-56 claim/evidence history is indexed, including historical artifact pointers for Phase 11-15R, the Phase 15A invalid-sequence boundary, and the bounded non-numbered Gate-1 lineage through the V0 local action, U_plus Darboux chart, principal momentum FIO, one-term exact-unitarity KILL, improved-static BFV zero-mode source, declared local M_c domain, endpoint uniqueness KILL, frozen order-zero pairing KEEP and relative m=2 quartet with zero-mode uniqueness KILL. Indexing is not physics promotion; exact endpoint construction, arbitrary-state/full-real-lapse rigging, full trajectory, other-component/global-atlas and physical-cycle boundaries remain open."
     },
     {
       "path": "docs",

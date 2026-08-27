@@ -8,7 +8,9 @@ The same directory also contains the non-numbered [`gate1-straight-lift-end-admi
 
 The next bounded [`gate1-v0-offshell-darboux-chart-result.json`](../evidence/gate1-v0-offshell-darboux-chart-result.json) connects that shell result to an exact classical Darboux chart on the full open \(p>0,\ R>0\) component across arbitrary real \(c=C\). It recovers \(\Phi_*\) and \(B=P\) at \(c=0\), while keeping every other component, global atlas, normalized quantum endpoint transform, ghost/BFV source, full-real-lapse \(\delta(C)\) kernel and physical/global promotion open or null.
 
-The bounded [`gate1-v0-principal-endpoint-fio-result.json`](../evidence/gate1-v0-principal-endpoint-fio-result.json) then keeps the compact-interior principal momentum FIO while contradicting exact finite-\(\hbar\) unitarity only for its uncorrected one-term amplitude. The newest [`gate1-v0-improved-static-bfv-source-result.json`](../evidence/gate1-v0-improved-static-bfv-source-result.json) follows a separate local branch: it records one bracket-derived, BRST-compatible improved-static BFV zero-mode replacement-source algebra with explicitly declared Fourier and Berezin measures. Neither snapshot supplies a normalized endpoint-state transform, spectral \(\delta(\widehat C)\), full trajectory measure, global cycle, physics claim or TOE.
+The bounded [`gate1-v0-principal-endpoint-fio-result.json`](../evidence/gate1-v0-principal-endpoint-fio-result.json) then keeps the compact-interior principal momentum FIO while contradicting exact finite-\(\hbar\) unitarity only for its uncorrected one-term amplitude. The [`gate1-v0-improved-static-bfv-source-result.json`](../evidence/gate1-v0-improved-static-bfv-source-result.json) follows a separate local branch: it records one bracket-derived, BRST-compatible improved-static BFV zero-mode replacement-source algebra with explicitly declared Fourier and Berezin measures.
+
+The latest [`gate1-v0-spectral-to-m2-bfv-chain-result.json`](../evidence/gate1-v0-spectral-to-m2-bfv-chain-result.json) is a typed extract of the final corrected \(m=2\) run and hash-pins the three preceding raw chain results. Its schema-required outer `phase: P39` and `P39.G1.m2.*` check IDs are transport aliases only: the payload records `numbered_phase=null`, the authoritative raw `G1.m2.*` IDs, and that no Phase-39 execution or new numbered phase occurred. The four raw runs keep a declared self-adjoint \(M_c\) domain, contradict endpoint-completion uniqueness from the declared principal data while leaving existence open, keep one frozen static/order-zero spectral test form, and keep one relative nonzero \(m=2\) quartet while contradicting unique trajectory zero-mode completion. None supplies an exact endpoint transform, original-variable ordering, arbitrary-state/full-real-lapse physical rigging map, absolute trajectory measure, global cycle, physics claim or TOE.
 
 ## Historical Phase 11–15R evidence backfill
 
@@ -74,6 +76,13 @@ reviewed analytic scope guards, and three numerical `PASS` checks from three 80-
 KEEP is one finite local zero-mode source algebra under explicitly declared measures. It is not an
 absolute BFV functional measure, normalized endpoint operator, spectral \(\delta(\widehat C)\), full
 trajectory kernel, physical cycle, physics claim, or TOE result.
+The V0 spectral-to-\(m=2\) chain snapshot separately transports the final corrected runner's 16 exact
+`PASS` entries, five reviewed analytic scope guards and zero numerical checks. Its payload also pins the
+preceding final raw runs and their 8/0, 10/3 and 11/36 exact/numerical counts. The typed outer
+`P39.G1.m2.*` IDs are aliases required by the v1 evidence schema, not raw IDs or a Phase-39 execution.
+The final KEEP is only a same-regulator relative nonzero-mode determinant/Pfaffian identity; its two
+explicit zero-mode ledgers remain inequivalent, and all exact-endpoint, full-measure, global, physics and
+TOE outputs stay null.
 The legacy separately recorded Phase-18 SciPy control is included in the numbered numerical
 total: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
@@ -230,6 +239,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | Gate 1 trace-gauge FP admissibility (non-numbered) | `result:GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_20260826`; `2026-08-26T14:49:39.388Z` | `cpt_temporal_folded_susy/gate1_trace_gauge_fp_admissibility.py`; SHA-256 `f9fb9fd97a85aa312e60e4edba0e1415f260eb9507fc46015dc5b4351c311110`; semantic harness fixes finalized in `284c0ba8852affe68521b900abdd319cc9123cfa` | Exit `0` after `3.857 s`; 22 exact PASS, 5 separately reviewed analytic guards and 2 numerical PASS; local simple-root trace reduction and formal lower-lateral scalar convergence `KEEP`, append to unchanged proper-time fixed-\(a\) \(m=2\) source `KILL`, replacement gauge/action/endpoints/BFV `OPEN`, Gate 1 open and every global/physics/TOE output null. |
 | Gate 1 V0 trace endpoint action (non-numbered) | `result:GATE1_V0_TRACE_ENDPOINT_ACTION_20260826`; `2026-08-26T15:59:23.377Z` | `cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py`; SHA-256 `36cb11409760f39eb34678736903c705127188fc60a1a76e4de5059e20d5ba2a`; action-ledger and source-scope fixes finalized in `541edc8e75ce8b48a06a825ebc90c7e2cd3737ef`, final raw result in `aab4f4cd0392d8322a765d37df4b0f0842fb30a8` | Exit `0` after `3.048 s`; 16 exact PASS, 7 separately reviewed analytic guards and 5 numerical PASS from six quadratures; classical local on-shell fixed-\(\Phi_*\) relational action `KEEP` on one frozen closed-FRW \(V=0\) component; zero roots, ODEs and descendants; full off-shell chart, quantum endpoint states, replacement BFV source, full-real-lapse \(\delta(C)\) physical-inner-product kernel, old fixed-\(a\) equality, global cycle, physics and TOE remain open or null. |
 | Gate 1 V0 componentwise off-shell Darboux chart (non-numbered) | `result:GATE1_V0_OFFSHELL_DARBOUX_CHART_20260827`; `2026-08-27T04:52:42.051Z` | `cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart.py`; SHA-256 `c9532d0f74b5e4aa00d7a55915e872d2ac2f2efeaba909985d9acf760a10f6da`; introduced in `626230f4f5f35c3374c62774787ff6ac7b4cd990`, final raw result in `7e18e4bee6ab6a6d34ac7a5dc5e2f1b5b3c1fdfb` | Exit `0` after an observed capped invocation wall time of `2.273 s`; 18 exact PASS, 8 separately reviewed analytic guards and 3 numerical PASS from six root-method calls; classical componentwise chart `KEEP` on \(\mathcal U_+=\{p>0,R>0\}\), exact \(c=0\) recovery, zero quadratures/ODEs/descendants, and `automatic_next=null`; all-component/global, quantum endpoint, BFV, old-kernel, full-real-lapse \(\delta(C)\), physical-cycle, physics and TOE outputs remain open or null. |
+| Gate 1 V0 spectral-to-\(m=2\) BFV chain, final executable snapshot (non-numbered) | `result:GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN_20260827`; `2026-08-27T09:47:12Z` | `cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py`; SHA-256 `71b3a6707c8b3d6a40f58e3a812de42a90ca6463de736d949bbf77f381a6e382`; corrected mixed-boundary runner introduced in `176d78365fa79fa4840fd11b7bd16c338d61d442`, final raw result in `542f6c5dad1c10cd88e3c77fc48061396a7d5980` | Exit `0`; 16 exact PASS, 5 separately reviewed analytic guards and 0 numerical checks; relative nonzero \(m=2\) quartet `KEEP`, unique trajectory zero-mode completion null. Payload pins all four chain results, the endpoint `INCONCLUSIVE` repair and initial false-common-basis \(m=2\) `KILL`; `numbered_phase=null`, `automatic_next=null`, Gate 1 open, and every exact-endpoint/full-measure/global/physics/TOE output null. |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -3271,10 +3281,38 @@ evidence:gate1-v0-improved-static-bfv-source
 The BFV result is a separately derived Darboux-polarized local source algebra, so it does not reverse
 the KILL of appending a static trace delta to the unchanged proper-time source. Its \(\delta(c)\) comes
 from the declared \(N\) Fourier zero mode rather than endpoint boundary data, and its ghost factor
-\(+1\) uses an explicitly declared oriented coefficient-extraction convention. A Hilbert measure,
-ordering, self-adjoint domain, normalized endpoint transform, spectral \(\delta(\widehat C)\) comparison,
-two-endpoint/full-trajectory BFV kernel, absolute measure, old-kernel equality, zero lapse, other
-components, determinant line and global cycle remain open. Gate 1 stays `OPEN_PARTIAL_PROGRESS`, with
-`automatic_next=null` and no physical or TOE promotion.
+\(+1\) uses an explicitly declared oriented coefficient-extraction convention.
+
+The user-directed V0 spectral-to-\(m=2\) chain then adds four separately bounded controls:
+
+```text
+claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:gate1-v0-constraint-spectral-domain
+  → VALID_WITHIN → scope:gate1-v0-local-spectral-to-m2-bfv-chain
+
+claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION
+  → HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:gate1-v0-endpoint-subprincipal-nonuniqueness
+  → MOTIVATES → open:gate1-v0-exact-endpoint-and-trajectory-completion
+
+claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:gate1-v0-static-spectral-pairing
+
+claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:gate1-v0-bfv-m2-spectral-trajectory
+
+claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION
+  → HAS_EVIDENCE {polarity: CONTRADICTS} → evidence:gate1-v0-bfv-m2-spectral-trajectory
+  → MOTIVATES → open:gate1-v0-exact-endpoint-and-trajectory-completion
+```
+
+The first claim is only about the declared local multiplication representation; it is not an
+original-variable constraint ordering or physical measure. The endpoint contradiction is conditional
+on existence of one exact completion and does not rule out existence or additional exact data that
+select a representative. The static/spectral match is only a frozen three-state order-zero form. The
+\(m=2\) match is relative under one regulator and supplies no absolute contour or Pfaffian orientation.
+Two explicit zero-mode ledgers remain inequivalent. An exact normalized endpoint transform,
+arbitrary-state/full-real-lapse physical rigging map, two-endpoint/full-trajectory BFV kernel, absolute
+measure, old-kernel equality, zero lapse, other components, determinant line and global cycle remain
+open. Gate 1 stays `OPEN_PARTIAL_PROGRESS`, with `automatic_next=null` and no physical or TOE promotion.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.
