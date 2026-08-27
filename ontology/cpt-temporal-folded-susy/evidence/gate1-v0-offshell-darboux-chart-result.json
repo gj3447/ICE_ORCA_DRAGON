@@ -1,0 +1,326 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_OFFSHELL_DARBOUX_CHART_20260827",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-27T04:52:42.051Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart.py",
+    "sha256": "c9532d0f74b5e4aa00d7a55915e872d2ac2f2efeaba909985d9acf760a10f6da",
+    "introduced_in_commit": "626230f4f5f35c3374c62774787ff6ac7b4cd990"
+  },
+  "exact_checks": 18,
+  "checks": [
+    {
+      "id": "P39.G1.darboux.trace_pair_and_swapped_potential",
+      "status": "PASS",
+      "statement": "Q=2*log(a), P=a*p_a/2 is canonical and P*dQ=-Q*dP+d(P*Q)"
+    },
+    {
+      "id": "P39.G1.darboux.constraint_polynomial",
+      "status": "PASS",
+      "statement": "C=c is exactly F=72*pi^4*a^4+12*pi^2*c*a^3-R=0"
+    },
+    {
+      "id": "P39.G1.darboux.trace_fp_positive_identity",
+      "status": "PASS",
+      "statement": "D=-C_Q=(R+24*pi^4*a^4)/(8*pi^2*a^3)>0 on a>0 and R>0"
+    },
+    {
+      "id": "P39.G1.darboux.positive_root_existence",
+      "status": "PASS",
+      "statement": "F starts at -R and has positive quartic leading coefficient, so a positive root exists for R>0"
+    },
+    {
+      "id": "P39.G1.darboux.positive_root_uniqueness",
+      "status": "PASS",
+      "statement": "for c<0 the only positive turning point remains below zero in F, while for c>=0 F is increasing; the positive root is unique"
+    },
+    {
+      "id": "P39.G1.darboux.segment_domain",
+      "status": "PASS",
+      "statement": "the straight integration segment from 0 to P stays in R(u,p)>0 whenever R(P,p)>0"
+    },
+    {
+      "id": "P39.G1.darboux.implicit_root_derivatives",
+      "status": "PASS",
+      "statement": "implicit differentiation gives Q_c=-1/D, Q_P=C_P/D and Q_p=C_p/D"
+    },
+    {
+      "id": "P39.G1.darboux.generating_function_derivatives",
+      "status": "PASS",
+      "statement": "W_P=-Q, T_P=1/D and Phi_P=-C_p/D follow from W=-integral_0^P Q du"
+    },
+    {
+      "id": "P39.G1.darboux.canonical_one_form",
+      "status": "PASS",
+      "statement": "P*dQ+p*dphi=c*dT+p*dPhi+dB with B=P*Q+W-c*T-p*W_p"
+    },
+    {
+      "id": "P39.G1.darboux.endpoint_action_variation",
+      "status": "PASS",
+      "statement": "the transformed classical action is S_D=S0-[B] with endpoint variation c*dT+p*dPhi"
+    },
+    {
+      "id": "P39.G1.darboux.canonical_poisson_matrix",
+      "status": "PASS",
+      "statement": "{T,c}=1, {Phi,p}=1 and all cross brackets vanish, using T_p=Phi_c=W_cp"
+    },
+    {
+      "id": "P39.G1.darboux.symplectic_jacobian",
+      "status": "PASS",
+      "statement": "det d(T,c,Phi,p)/d(Q,P,phi,p)=1 on the regular component"
+    },
+    {
+      "id": "P39.G1.darboux.local_inverse_and_static_slice",
+      "status": "PASS",
+      "statement": "T_P=1/D>0 and the integral normalization T(c,0,p)=0 make P=0 equivalent to T=0 and P invertible onto the chart image"
+    },
+    {
+      "id": "P39.G1.darboux.shell_q_recovery",
+      "status": "PASS",
+      "statement": "at c=0 the implicit root recovers Q_star=log(R/(72*pi^4))/2"
+    },
+    {
+      "id": "P39.G1.darboux.shell_phi_star_recovery",
+      "status": "PASS",
+      "statement": "at c=0 the normalized W_p integral recovers the prior Phi_star exactly"
+    },
+    {
+      "id": "P39.G1.darboux.shell_boundary_potential_recovery",
+      "status": "PASS",
+      "statement": "B_0,P=P*Q_0,P+p*Q_0,p=1 and B_0(0,p)=0, hence B_0=P"
+    },
+    {
+      "id": "P39.G1.darboux.shell_fp_measure_recovery",
+      "status": "PASS",
+      "statement": "the canonical T gauge has FP factor {T,c}=1 and delta(P-f)*D maps locally to delta(T-T_f)"
+    },
+    {
+      "id": "P39.G1.darboux.action_ledger_separation",
+      "status": "PASS",
+      "statement": "on shell B_0=P=-F for the prior P-to-zero flow, while S0-[B] is not the distinct HTV improved-static ledger or old fixed-a action"
+    }
+  ],
+  "numerical_checks": 3,
+  "numerical": [
+    {
+      "id": "P39.G1.darboux.numerical.unique_positive_roots",
+      "status": "PASS",
+      "statement": "the independent polynomial-root census has exactly one positive real root at all three frozen c values"
+    },
+    {
+      "id": "P39.G1.darboux.numerical.root_method_agreement",
+      "status": "PASS",
+      "statement": "400-step high-precision bisection and arbitrary-precision polynomial roots agree"
+    },
+    {
+      "id": "P39.G1.darboux.numerical.root_residuals",
+      "status": "PASS",
+      "statement": "the independent polynomial roots satisfy the frozen implicit equation"
+    }
+  ],
+  "payload": {
+    "exact_checks": 18,
+    "numerical_checks": 3,
+    "calculation": {
+      "calculation_id": "Gate1V0OffshellDarbouxChart",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART_KEEP_QUANTUM_ENDPOINT_BFV_AND_DELTA_C_KERNEL_OPEN",
+      "verdict": "KEEP_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART",
+      "programme_impact": "CLOSE_CLASSICAL_COMPONENTWISE_OFFSHELL_CHART_ONLY_NO_AUTOMATIC_SUCCESSOR"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited finite m=2 Gate-1 provenance required by research-run-evidence/v1; this bounded calculation has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative G1.darboux.* check id",
+      "authoritative_exact_check_ids": [
+        "G1.darboux.trace_pair_and_swapped_potential",
+        "G1.darboux.constraint_polynomial",
+        "G1.darboux.trace_fp_positive_identity",
+        "G1.darboux.positive_root_existence",
+        "G1.darboux.positive_root_uniqueness",
+        "G1.darboux.segment_domain",
+        "G1.darboux.implicit_root_derivatives",
+        "G1.darboux.generating_function_derivatives",
+        "G1.darboux.canonical_one_form",
+        "G1.darboux.endpoint_action_variation",
+        "G1.darboux.canonical_poisson_matrix",
+        "G1.darboux.symplectic_jacobian",
+        "G1.darboux.local_inverse_and_static_slice",
+        "G1.darboux.shell_q_recovery",
+        "G1.darboux.shell_phi_star_recovery",
+        "G1.darboux.shell_boundary_potential_recovery",
+        "G1.darboux.shell_fp_measure_recovery",
+        "G1.darboux.action_ledger_separation"
+      ],
+      "authoritative_numerical_check_ids": [
+        "G1.darboux.numerical.unique_positive_roots",
+        "G1.darboux.numerical.root_method_agreement",
+        "G1.darboux.numerical.root_residuals"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "definition_commit": "626230f4f5f35c3374c62774787ff6ac7b4cd990",
+      "final_raw_result_commit": "7e18e4bee6ab6a6d34ac7a5dc5e2f1b5b3c1fdfb",
+      "report_commit": "e920503799a87d3e14e4f79ac4f183e129136424",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_INPUTS.json",
+      "input_manifest_sha256": "a5f02c67cf29227f861085073ccdbf8709280abb64b00fc2e54a1704fb524f6f",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json",
+      "raw_result_outer_sha256": "6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7",
+      "raw_result_payload_sha256_without_self": "38bfaee2fee30399bc3f1c16c17c0330bc97f6343306a9f5860d296b67a11cd5",
+      "raw_result_size_bytes": 22218,
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART.md",
+      "report_sha256": "cdbe94f79b55db371e46d62455535af7d58d96ac2e6b21edae9e58b34d93e79f"
+    },
+    "attempt_ledger": {
+      "scientific_command_attempts": 1,
+      "attempt_1": {
+        "logical_command": "./ice run cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart",
+        "actual_capped_invocation": "timeout --signal=TERM 120s ./ice run cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart",
+        "exit_code": 0,
+        "wall_time_seconds": 2.272798101,
+        "run_status": "VALID_RUN",
+        "result_written": true,
+        "status": "FINAL_FROZEN_RESULT"
+      },
+      "scientific_decision_changed_after_run": false,
+      "epistemic_scope_narrowed_after_review": false
+    },
+    "ragnarok_termination_audit": {
+      "scientific_nonpass_policy": "RECORD_VALID_TERMINAL_RESULT",
+      "integrity_or_schema_failure_policy": "RAISE_WITHOUT_RESULT",
+      "reachable_frozen_rows": [
+        "KEEP_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART",
+        "KEEP_V0_COMPONENTWISE_DARBOUX_CHART_KILL_DECLARED_ONSHELL_RECOVERY",
+        "KILL_OFFSHELL_EXTENSION_ON_DECLARED_COMPONENT",
+        "KILL_PROPOSED_OFFSHELL_CHART_KEEP_PRIOR_ONSHELL_RESULT",
+        "INCONCLUSIVE"
+      ],
+      "arbitrary_arguments": "REJECTED",
+      "open_dependencies": "NOT_EXECUTION_AUTHORIZATION",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    },
+    "computed_facts": {
+      "constraint_component": "UPLUS_P_POSITIVE_R_POSITIVE_ALL_REAL_C",
+      "positive_implicit_scale_factor_root": "UNIQUE_SMOOTH",
+      "trace_fp_bracket": "D_POSITIVE",
+      "classical_componentwise_darboux_chart": "KEEP_ON_UPLUS",
+      "canonical_coordinates": "T_C_PHI_P_WITH_UNIT_SYMPLECTIC_JACOBIAN",
+      "boundary_potential": "B_EQUALS_PQ_PLUS_W_MINUS_C_T_MINUS_P_WP",
+      "classical_endpoint_action": "S0_MINUS_BOUNDARY_B",
+      "prior_onshell_coordinate": "PHI_STAR_RECOVERED_AT_C_ZERO",
+      "prior_onshell_boundary_potential": "B_EQUALS_P_AT_C_ZERO",
+      "local_fp_measure": "RECOVERED_IN_CANONICAL_T_GAUGE",
+      "normalized_quantum_endpoint_state_transform": "NOT_COMPUTED",
+      "replacement_bfv_source": "NOT_COMPUTED",
+      "full_real_lapse_delta_C_kernel": "NOT_COMPUTED",
+      "old_fixed_a_kernel_equivalence": "NOT_COMPUTED"
+    },
+    "numerical_metrics": {
+      "precision_digits": 100,
+      "root_calls": 6,
+      "constraint_values": [
+        "-0.2",
+        "0",
+        "0.2"
+      ],
+      "maximum_method_agreement_error": "1.7859177988785546597121617942270952491436093669106e-102",
+      "maximum_normalized_polynomial_residual": "2.2859747825645499644315670966106819189038199896456e-101",
+      "absolute_tolerance": "1e-70",
+      "interpretation": "independent high-precision sanity control of three implicit roots, not a physical replication or quantum-kernel calculation"
+    },
+    "theorem_guards": {
+      "count": 8,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_18_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.darboux.guard.component_scope",
+        "G1.darboux.guard.implicit_regular_root",
+        "G1.darboux.guard.mixed_generator_regularity",
+        "G1.darboux.guard.componentwise_inverse",
+        "G1.darboux.guard.classical_endpoint_scope",
+        "G1.darboux.guard.bfv_boundary",
+        "G1.darboux.guard.delta_c_kernel_boundary",
+        "G1.darboux.guard.action_ledger_separation"
+      ]
+    },
+    "scope_status": {
+      "local_v0_componentwise_offshell_darboux_chart": "KEEP_CLASSICAL_COMPONENTWISE_ON_U_PLUS",
+      "prior_onshell_endpoint_recovery": "RECOVERS_PRIOR_PHI_STAR_AND_B_EQUALS_P",
+      "full_off_shell_canonical_transform": null,
+      "global_offshell_canonical_atlas": null,
+      "normalized_quantum_endpoint_state_transform": null,
+      "endpoint_state_transform": null,
+      "ghost_endpoint_sector": null,
+      "replacement_gauge_fermion": null,
+      "full_replacement_bfv_measure": null,
+      "replacement_source_discretization": null,
+      "old_fixed_a_kernel_equivalence": null,
+      "full_real_lapse_delta_C_kernel": null,
+      "zero_lapse_distribution": null,
+      "global_fundamental_region": null,
+      "gribov_copy_census": null,
+      "determinant_line_orientation": null,
+      "full_joint_orientation": null,
+      "physical_original_cycle": null
+    },
+    "scope": {
+      "includes": [
+        "the classical closed-FRW V=0 open component U_plus with p>0 and R=3*p^2-2*P^2>0 across arbitrary real c=C",
+        "the unique positive implicit scale-factor root and positive trace FP bracket D on that component",
+        "the smooth mixed generator W=-integral_0^P Q(c,u,p)du and canonical coordinates (T,c,Phi,p)",
+        "the exact one-form boundary potential B, unit symplectic Jacobian and classical action S0-[B]",
+        "the c=0 recovery of Q_star, Phi_star, B=P and the local canonical-gauge FP measure",
+        "three frozen high-precision root controls using six root calls"
+      ],
+      "excludes": [
+        "p<=0, R<=0, another connected component, a rectangular global fundamental region or all closed-FRW phase space",
+        "a normalized quantum endpoint-state transform, its measure, phase, operator domains or unitarity",
+        "ghost, antighost and multiplier endpoints, a BRST charge, replacement gauge fermion or full replacement BFV source",
+        "equality with the old fixed-a constant-lapse kernel or a replacement lattice",
+        "the full-real-lapse distributional delta(C) physical-inner-product kernel or zero-lapse regulator removal",
+        "global orbit coverage, Gribov census, determinant-line orientation, physical original cycle, global n_sigma, physics or TOE"
+      ]
+    },
+    "independent_read_only_review": {
+      "result_schema_and_check_ids_reviewed": true,
+      "input_runner_result_hashes_recomputed": true,
+      "canonical_payload_digest_recomputed": true,
+      "ragnarok_row_reachability_reviewed": true,
+      "marolf_delta_c_scope_reviewed": true,
+      "action_ledgers_kept_separate": true,
+      "conclusion_changing_error_found": false
+    },
+    "promoted_outputs": {
+      "TOE_claim": null,
+      "automatic_next": null,
+      "complete_global_signed_intersection_vector": null,
+      "determinant_line_orientation": null,
+      "endpoint_state_transform": null,
+      "full_joint_orientation": null,
+      "full_m2_bfv_measure": null,
+      "full_off_shell_canonical_transform": null,
+      "full_real_lapse_delta_C_kernel": null,
+      "full_replacement_bfv_measure": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "ghost_endpoint_sector": null,
+      "global_fundamental_region": null,
+      "global_n_sigma": null,
+      "global_offshell_canonical_atlas": null,
+      "global_promotion": "PROHIBITED",
+      "gribov_copy_census": null,
+      "normalized_quantum_endpoint_state_transform": null,
+      "old_fixed_a_kernel_equivalence": null,
+      "physical_original_cycle": null,
+      "physics_claim": null,
+      "replacement_gauge_fermion": null,
+      "replacement_source_discretization": null,
+      "zero_lapse_distribution": null
+    }
+  }
+}

@@ -6,6 +6,8 @@ Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–56 sn
 
 The same directory also contains the non-numbered [`gate1-straight-lift-end-admissibility-result.json`](../evidence/gate1-straight-lift-end-admissibility-result.json). Its schema-required `phase: P39` denotes inherited model provenance only; the payload records `numbered_phase=null` and creates no new phase. The later [`gate1-phase-locked-affine-field-end-analytic.json`](../evidence/gate1-phase-locked-affine-field-end-analytic.json) is explicitly execution-free analytic evidence, not a run snapshot: it records the exact phase-cancelled real-action identity, both uniform good-end limits, a smooth Phase-39-window-preserving connector, two independent algebra reviews, and strict full-cycle exclusions. The follow-up [`gate1-affine-phase-band-relative-class-analytic.json`](../evidence/gate1-affine-phase-band-relative-class-analytic.json) is also execution-free: it generalizes to continuous horizontal affine tails with a strict positive full-rate coefficient, proves their principal-band contraction, records the \(0<\lambda<2\) nonuniqueness family and the literal-real arm restriction as its oscillatory boundary, and preserves source-selection and global nulls after three independent read-only reviews. The consumed [`gate1-scalar-source-link-result.json`](../evidence/gate1-scalar-source-link-result.json) then records the one-shot exact comparison for a newly declared ordered scalar phase-space control on lapse tests supported away from \(N=0\); it does not create a numbered phase or recover a physical original cycle. The subsequent [`gate1-scalar-zero-lapse-invalid-run.json`](../evidence/gate1-scalar-zero-lapse-invalid-run.json) records a consumed `INVALID_RUN`: one exact check passed, the second hit a SymPy structural-equality false negative, no result was written, and no zero-lapse scientific verdict was promoted. The generic bounded [`gate1-bosonic-canonical-source-pushforward-result.json`](../evidence/gate1-bosonic-canonical-source-pushforward-result.json) then records the finite full-bosonic single-lateral obstruction and declared fiberwise complex-Gaussian branch without creating a numbered phase or closing Gate 1. The bounded [`gate1-trace-gauge-fp-admissibility-result.json`](../evidence/gate1-trace-gauge-fp-admissibility-result.json) records a genuine local simple-root trace reduction, kills only the unchanged-source static append, and redirects the open problem to a separately rederived gauge/action/endpoint/BFV source. Its bounded successor [`gate1-v0-trace-endpoint-action-result.json`](../evidence/gate1-v0-trace-endpoint-action-result.json) keeps one still narrower classical local on-shell fixed-\(\Phi_*\) relational endpoint action on a frozen closed-FRW \(V=0\) component. It keeps the raw-static, HTV improved-static, relational, and auxiliary mixed-polarization action ledgers distinct and leaves the off-shell, quantum endpoint-state, full BFV and full-real-lapse \(\delta(C)\) kernel construction open.
 
+The next bounded [`gate1-v0-offshell-darboux-chart-result.json`](../evidence/gate1-v0-offshell-darboux-chart-result.json) connects that shell result to an exact classical Darboux chart on the full open \(p>0,\ R>0\) component across arbitrary real \(c=C\). It recovers \(\Phi_*\) and \(B=P\) at \(c=0\), while keeping every other component, global atlas, normalized quantum endpoint transform, ghost/BFV source, full-real-lapse \(\delta(C)\) kernel and physical/global promotion open or null.
+
 ## Reading `PASS` correctly
 
 All 498 Phase 16–56 named exact checks have `status: PASS`. The snapshots contain 360 typed
@@ -25,6 +27,11 @@ reviewed analytic scope guards, and five numerical `PASS` checks obtained from s
 quadratures. It is also excluded from the numbered totals. Its KEEP is a classical local on-shell
 relational action statement, not a full endpoint-state, BFV, \(\delta(C)\)-kernel, global, physics, or
 TOE result.
+The V0 off-shell snapshot separately transports 18 executable exact `PASS` entries, eight reviewed
+analytic scope guards, and three numerical `PASS` checks from six root-method calls. It is excluded
+from the numbered totals. Its KEEP is one classical Darboux chart on \(\mathcal U_+\) and its open
+image; it is not an all-component/global canonical transform, quantum endpoint state, BFV source,
+\(\delta(C)\) kernel, physical cycle, physics claim, or TOE result.
 The legacy separately recorded Phase-18 SciPy control is included in the numbered numerical
 total: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
@@ -180,6 +187,7 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | Gate 1 bosonic canonical source (non-numbered) | `result:GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_20260826`; `2026-08-26T09:57:58Z` | `cpt_temporal_folded_susy/gate1_bosonic_canonical_source_pushforward.py`; SHA-256 `fe557b1d86522bf1966513f32edb7555b8ddad770095d3c2412ab4571bbd1533`; source-scope correction in `28ea65b5e5886f07364655efd9c78dbe65031103` | Exit `0` after `10.581 s`; 17 exact PASS, 2 scoped theorem guards and 4 numerical PASS; unchanged real \(p_a,p_\phi\) axes are not jointly absolutely convergent under either one-common-lateral sign, declared complex momentum rays reproduce the finite fiberwise pushforward, frozen-\(A\) flat-tangent negative-arm ratio `-1`, Gate 1 open and every global/physics/TOE output null. |
 | Gate 1 trace-gauge FP admissibility (non-numbered) | `result:GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_20260826`; `2026-08-26T14:49:39.388Z` | `cpt_temporal_folded_susy/gate1_trace_gauge_fp_admissibility.py`; SHA-256 `f9fb9fd97a85aa312e60e4edba0e1415f260eb9507fc46015dc5b4351c311110`; semantic harness fixes finalized in `284c0ba8852affe68521b900abdd319cc9123cfa` | Exit `0` after `3.857 s`; 22 exact PASS, 5 separately reviewed analytic guards and 2 numerical PASS; local simple-root trace reduction and formal lower-lateral scalar convergence `KEEP`, append to unchanged proper-time fixed-\(a\) \(m=2\) source `KILL`, replacement gauge/action/endpoints/BFV `OPEN`, Gate 1 open and every global/physics/TOE output null. |
 | Gate 1 V0 trace endpoint action (non-numbered) | `result:GATE1_V0_TRACE_ENDPOINT_ACTION_20260826`; `2026-08-26T15:59:23.377Z` | `cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py`; SHA-256 `36cb11409760f39eb34678736903c705127188fc60a1a76e4de5059e20d5ba2a`; action-ledger and source-scope fixes finalized in `541edc8e75ce8b48a06a825ebc90c7e2cd3737ef`, final raw result in `aab4f4cd0392d8322a765d37df4b0f0842fb30a8` | Exit `0` after `3.048 s`; 16 exact PASS, 7 separately reviewed analytic guards and 5 numerical PASS from six quadratures; classical local on-shell fixed-\(\Phi_*\) relational action `KEEP` on one frozen closed-FRW \(V=0\) component; zero roots, ODEs and descendants; full off-shell chart, quantum endpoint states, replacement BFV source, full-real-lapse \(\delta(C)\) physical-inner-product kernel, old fixed-\(a\) equality, global cycle, physics and TOE remain open or null. |
+| Gate 1 V0 componentwise off-shell Darboux chart (non-numbered) | `result:GATE1_V0_OFFSHELL_DARBOUX_CHART_20260827`; `2026-08-27T04:52:42.051Z` | `cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart.py`; SHA-256 `c9532d0f74b5e4aa00d7a55915e872d2ac2f2efeaba909985d9acf760a10f6da`; introduced in `626230f4f5f35c3374c62774787ff6ac7b4cd990`, final raw result in `7e18e4bee6ab6a6d34ac7a5dc5e2f1b5b3c1fdfb` | Exit `0` after an observed capped invocation wall time of `2.273 s`; 18 exact PASS, 8 separately reviewed analytic guards and 3 numerical PASS from six root-method calls; classical componentwise chart `KEEP` on \(\mathcal U_+=\{p>0,R>0\}\), exact \(c=0\) recovery, zero quadratures/ODEs/descendants, and `automatic_next=null`; all-component/global, quantum endpoint, BFV, old-kernel, full-real-lapse \(\delta(C)\), physical-cycle, physics and TOE outputs remain open or null. |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -235,6 +243,20 @@ fixed-\((P,\phi)\) action \(S_0-[PQ]\) has its own reduced Hamiltonian and is no
 problem. The six quadratures only cross-check one smooth finite-flow integrand. They do not construct
 the off-shell chart, quantum endpoint transform, ghost/BFV source or distributional full-real-lapse
 \(\delta(C)\) kernel.
+
+The V0 componentwise off-shell result is 22,218 bytes with outer SHA-256
+`6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7` and canonical
+self-excluding payload digest `38bfaee2fee30399bc3f1c16c17c0330bc97f6343306a9f5860d296b67a11cd5`.
+Its input hash is `a5f02c67cf29227f861085073ccdbf8709280abb64b00fc2e54a1704fb524f6f`;
+the evidence snapshot hash is `8c15033200f66f0463ef19e660013f1aca351b89fa366721f5830d5a4d80bb56`,
+and the reviewed report hash is `cdbe94f79b55db371e46d62455535af7d58d96ac2e6b21edae9e58b34d93e79f`.
+One capped invocation selected the full scoped KEEP with 18/18 exact and 3/3 numerical checks, six
+root-method calls, no scientific NONPASS and no descendant. All five scientific decision rows are
+reachable and terminal; an open dependency is not execution authorization. Three independent
+read-only audits reproduced the constraint root, sign and canonical matrix, checked literature/BFV
+scope, and verified the hashes and graph schema. The eight analytic guards remain separate from the
+executable exact count. The kept chart covers only \(p>0,R>0\) and its open image; the broad
+all-component/global transform remains null without contradiction.
 
 The Phase 25–28 report hashes are `921ffbb7…`, `99b7d7d7…`, `9db755b6…`, and `1c721018…`; the corresponding frozen snapshot hashes are `62e124dc…`, `69cea996…`, `121a440f…`, and `114374d8…`. Phase 28's executable first appears in `2065de0…`; its final report bytes, after source-scope and notation repair, first appear in `1d48edc6160ed915c1a13f21e6f82d7211e8e6fe`. Each executable, report, and snapshot is a distinct artifact node.
 
@@ -471,6 +493,7 @@ not turn the sampled roots into a supported cross-cutoff continuation, no-root r
 | `evidence:p56-lambda-half-launch-provenance-residual-conditioning` | 8 exact PASS + 8 numerical PASS | Fresh Phase-53-algorithm center/launch recovers the saved lambda-half target — `SUPPORTS`; frozen gate pattern associates recovery with fresh center without a causal theorem — `SUPPORTS`; no full replay, Phase 57, or global promotion — `SUPPORTS` as a scope boundary | One saved phi-plus lambda-half root, one fresh saddle solve, two centers, two launches, four factorial corners, two EL_long profiles, eight ODEs, complete endpoint/residual/effect ledgers, byte-identical reproduction, and strict Ragnarok/global null boundaries. No exact historical launch identity, continuation replay, another root/source/platform, causal theorem, root/component/end census, determinant line, original cycle, global integer, physics claim, TOE, or execution authorization |
 | `evidence:gate1-trace-gauge-fp-admissibility` | 22 exact PASS + 5 separate analytic guards + 2 numerical PASS | Local homogeneous trace pair gives simple-root reduction — `SUPPORTS`; static trace factor can be appended to the unchanged proper-time \(m=2\) source — `CONTRADICTS`; formal lower-lateral real scalar fiber converges — `SUPPORTS` | Existing Lorentzian shell-root charts with \(a>0\), nonzero FP bracket, inherited endpoint-preserving \(m=2\) lapse variation, one chosen transverse endpoint chart, and a formal local polynomial-Gaussian benchmark. No global orbit/fundamental region, replacement gauge/action/state/BFV measure, exact gauge-invariant lattice, source deformation, zero lapse, determinant-line orientation, original cycle, global integer, physics claim, or TOE |
 | `evidence:gate1-v0-trace-endpoint-action` | 16 exact PASS + 7 separate analytic guards + 5 numerical PASS | Frozen closed-FRW \(V=0\) trace chart has one classical local on-shell fixed-\(\Phi_*\) relational endpoint action — `SUPPORTS`; all four scientific decision rows terminate without recursive descendants — `SUPPORTS` as a harness boundary | \(p_\phi=+1\), \(0\le P\le1/2\), \(R\ge5/2\), \(D>0\); weak \(\Phi_*\), shell one-form, finite \(P\)-to-zero hit, local FP measure, time-dependent same-orbit control, and separate raw-static/HTV/relational/mixed ledgers. No full off-shell canonical chart, endpoint-state transform, ghost/BFV replacement source, old fixed-\(a\) equality, full-real-lapse \(\delta(C)\) kernel, global cycle, physics claim, TOE, or automatic successor |
+| `evidence:gate1-v0-offshell-darboux-chart` | 18 exact PASS + 8 separate analytic guards + 3 numerical PASS | Closed-FRW \(V=0\) has one classical componentwise off-shell Darboux chart on \(\mathcal U_+\) — `SUPPORTS`; its \(c=0\) restriction recovers \(\Phi_*\) and \(B=P\) — `SUPPORTS`; all five scientific rows are terminal — `SUPPORTS` as a harness boundary | \(p>0\), \(R=3p^2-2P^2>0\), arbitrary real \(c=C\), the unique positive root, mixed generator \(W\), canonical matrix/unit Jacobian, \(S_0-[B]\), and six-call root control. No other component, global atlas/fundamental region, normalized quantum endpoint transform, ghost/BFV source, old fixed-\(a\) equality, full-real-lapse \(\delta(C)\) kernel, physical cycle, physics claim, TOE, or automatic successor |
 
 ## Phase 16 check ledger
 
@@ -3158,5 +3181,29 @@ ghost/BFV endpoint sector, replacement source or lattice, old fixed-\(a\) kernel
 full-real-lapse distributional \(\delta(C)\) physical-inner-product kernel, zero-lapse distribution,
 global orbit/fundamental region, determinant line and physical original cycle remain open. Gate 1 stays
 `OPEN_PARTIAL_PROGRESS`; `automatic_next=null`, and global, physics and TOE outputs remain null.
+
+The next bounded V0 calculation makes the shell-to-off-shell connection explicit without creating
+Phase 57:
+
+```text
+claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART
+  → FOLLOW_UP_TO → claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION
+  → HAS_EVIDENCE {polarity: SUPPORTS} → evidence:gate1-v0-offshell-darboux-chart
+  → VALID_WITHIN → scope:gate1-closed-frw-v0-p-positive-r-positive-componentwise-offshell-darboux-chart
+
+evidence:gate1-v0-offshell-darboux-chart
+  → DERIVED_FROM → evidence:gate1-v0-trace-endpoint-action
+
+claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART
+  → MOTIVATES → open:gate1-phase-locked-fiber-to-source-derived-joint-cycle
+```
+
+The exact mixed generator gives a classical symplectomorphism only on \(\mathcal U_+\) and onto its
+open image. Its \(c=0\) restriction recovers the prior shell coordinate and action instead of replacing
+their provenance. Charts on other components, an all-component/global atlas, normalized quantum
+endpoint states, the ghost/multiplier/BRST sector, replacement source, old fixed-\(a\) kernel equality,
+the full-real-lapse distributional \(\delta(C)\) kernel, zero lapse, determinant line, physical original
+cycle and global vector remain open or null. Gate 1 stays `OPEN_PARTIAL_PROGRESS`, with no automatic
+successor or physics/TOE promotion.
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-26T15:59:23Z",
+  "updated_at_utc": "2026-08-27T04:52:42Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -445,12 +445,13 @@
     },
     {
       "question": "Can the trace gauge now remove the negative p_a Gaussian and repair the finite m=2 source?",
-      "answer": "Only locally, and not by deletion or by appending another FP delta to the unchanged source. The integrated homogeneous trace pair gives a genuine constraint-gauge reduction on existing simple shell-root charts with a>0 and a^2 V != 2; the remaining real p_phi fiber is lower-lateral Gaussian convergent. The next closed-FRW V=0 control constructs a classical local on-shell fixed-Phi_star relational endpoint action, finite local static hit and time-dependent same-constraint-orbit control on one frozen p-positive component. The inherited fixed-a m=2 endpoint problem still cannot be reused unchanged, and the off-shell chart, quantum endpoint states, ghost/BFV replacement source, full-real-lapse delta(C) kernel and every global/physical output remain open or null.",
+      "answer": "Only componentwise at the classical level, and not by deletion or by appending another FP delta to the unchanged source. The integrated homogeneous trace pair gives a genuine constraint-gauge reduction on existing simple shell-root charts with a>0 and a^2 V != 2; the remaining real p_phi fiber is lower-lateral Gaussian convergent. The first closed-FRW V=0 control constructs a local on-shell fixed-Phi_star relational endpoint action. Its bounded successor extends that result across arbitrary real constraint values c on U_plus={p_phi>0, 3*p_phi^2-2*P^2>0}: one smooth mixed generator gives a classical componentwise Darboux chart (T,c,Phi,p_phi), unit symplectic Jacobian, action S0-[B], and exact c=0 recovery. This is a chart onto its open component image, not an all-component global atlas. The inherited fixed-a m=2 endpoint problem still cannot be reused unchanged, and normalized quantum endpoint states, ghost/BFV replacement source, old-kernel equality, the full-real-lapse distributional delta(C) kernel and every global or physical output remain open or null.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
         "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
-        "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION"
+        "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+        "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART"
       ]
     }
   ],
@@ -1053,8 +1054,8 @@
     },
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
-      "title": "From the anchored straight-line KILL to the local trace endpoint-action boundary",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The first trace-gauge follow-up keeps a genuine local simple-root reduction and lower-lateral scalar fiber while killing append-to-unchanged-source. The closed-FRW V=0 follow-up then keeps a classical local on-shell relational endpoint action on one p-positive component. Stop at the still-open off-shell chart, quantum endpoint state, ghost/BFV replacement source, full-real-lapse delta(C) kernel, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
+      "title": "From the anchored straight-line KILL to the V0 componentwise Darboux boundary",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The first trace-gauge follow-up keeps a genuine local simple-root reduction and lower-lateral scalar fiber while killing append-to-unchanged-source. The first closed-FRW V=0 follow-up keeps a classical local on-shell relational endpoint action; its successor keeps an exact classical componentwise off-shell Darboux chart on U_plus and recovers that action at c=0. Stop at the still-open other-component or global atlas, normalized quantum endpoint state, ghost/BFV replacement source, full-real-lapse delta(C) kernel, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1081,6 +1082,8 @@
         "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
         "concept:gate1-v0-trace-relational-endpoint-action-control",
         "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+        "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+        "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
         "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -10089,10 +10092,10 @@
     {
       "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "type": "open_problem",
-      "title": "Derive the replacement trace-gauge source, then extend through zero lapse and the full joint cycle",
-      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The first trace-gauge follow-up proves a genuine local simple-root constraint reduction away from a^2 V=2 and formal lower-lateral convergence of its remaining scalar fiber, while killing append-to-unchanged-source. The closed-FRW V=0 follow-up now closes the classical local on-shell relational endpoint action, finite local hit and time-dependent same-orbit control on one frozen p-positive component. A full off-shell canonical chart, normalized endpoint-state transform, ghost/BFV sector, replacement source/lattice, old fixed-a equality and full-real-lapse delta(C) kernel remain open; these dependencies carry no automatic execution authority. Lambda=1, zero lapse, source deformation, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
-      "state": "OPEN_AFTER_LOCAL_TRACE_REDUCTION_APPEND_KILL_AND_V0_ON_SHELL_RELATIONAL_ACTION_KEEP",
-      "question": "Can the local trace-gauge action be extended to a full off-shell canonical chart, quantum endpoint states and replacement FP/BFV source that represents the full-real-lapse distributional delta(C) kernel, and then connect through zero lapse and every relative end, determinant and intersection into a physical full joint cycle?"
+      "title": "Lift the V0 componentwise Darboux chart to endpoint states and a replacement BFV source, then extend through zero lapse and the full joint cycle",
+      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The first trace-gauge follow-up proves a genuine local simple-root constraint reduction away from a^2 V=2 and formal lower-lateral convergence of its remaining scalar fiber, while killing append-to-unchanged-source. The first closed-FRW V=0 follow-up closes the classical local on-shell relational endpoint action. Its successor now keeps one exact classical off-shell Darboux chart on the open U_plus component p_phi>0, R>0 across arbitrary real c and recovers Phi_star, B=P and the local FP measure at c=0. This is not an all-component atlas or a quantum transform. A normalized endpoint-state transform, ghost/BFV sector, replacement source/lattice, old fixed-a equality and full-real-lapse distributional delta(C) kernel remain open; these dependencies carry no automatic execution authority. Lambda=1, zero lapse, source deformation, other components, global orbit coverage, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
+      "state": "OPEN_AFTER_V0_UPLUS_CLASSICAL_OFFSHELL_DARBOUX_CHART_KEEP_QUANTUM_BFV_DELTA_C_AND_GLOBAL_SCOPE_OPEN",
+      "question": "Can the U_plus classical componentwise Darboux chart be lifted to normalized quantum endpoint states and a replacement FP/BFV source representing the full-real-lapse distributional delta(C) kernel, extended to the missing components and zero lapse, and connected through every relative end, determinant and intersection into a physical full joint cycle?"
     },
     {
       "id": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
@@ -10196,7 +10199,7 @@
       "id": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
       "type": "claim",
       "title": "Current records do not establish a phase-locked joint cycle",
-      "summary": "Supported as an evidence-scope statement, not as proof of physical inequivalence. The ordered scalar control establishes a nonzero-lapse-arm link to the declared 0<lambda<=1 Gamma_lambda representatives, but is newly declared rather than a recovered physical original cycle and leaves N=0 open. The full-bosonic m=2 control further shows that one common lateral sign cannot absolutely damp unchanged real p_a,p_phi axes; its matching complex Gaussian rays remain declared rather than source-derived and require a p_a gauge/FP/BFV and determinant-line completion. The later closed-FRW V=0 calculation adds a classical local on-shell relational endpoint action on one p-positive component, but explicitly leaves the off-shell/quantum/BFV replacement source, full-real-lapse delta(C) kernel, old fixed-a equality and all global data null. Phase 30 fixes only literal real-field arm restrictions, the below-origin sources select no full field/joint lift, and Phase 39 serializes its finite chain as not derived physical-original data. No full joint cycle or global coefficient follows.",
+      "summary": "Supported as an evidence-scope statement, not as proof of physical inequivalence. The ordered scalar control establishes a nonzero-lapse-arm link to the declared 0<lambda<=1 Gamma_lambda representatives, but is newly declared rather than a recovered physical original cycle and leaves N=0 open. The full-bosonic m=2 control further shows that one common lateral sign cannot absolutely damp unchanged real p_a,p_phi axes; its matching complex Gaussian rays remain declared rather than source-derived and require a p_a gauge/FP/BFV and determinant-line completion. The closed-FRW V=0 lineage first adds a classical local on-shell relational endpoint action and then an exact classical componentwise off-shell Darboux chart on U_plus, with c=0 recovery. The chart explicitly leaves normalized quantum endpoint states, the ghost/BFV replacement source, full-real-lapse distributional delta(C) kernel, old fixed-a equality, zero lapse, other components and all global data null. Phase 30 fixes only literal real-field arm restrictions, the below-origin sources select no full field/joint lift, and Phase 39 serializes its finite chain as not derived physical-original data. No full joint cycle or global coefficient follows.",
       "state": "SUPPORTED_AS_CURRENT_RECORD_NONESTABLISHMENT_NOT_PHYSICAL_INEQUIVALENCE",
       "claim_id": "G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
       "statement": "The current repository records do not establish or source-select the phase-locked contour as the physical original joint cycle.",
@@ -10723,6 +10726,97 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION.md",
       "sha256": "bd43d0698f1a74533ee4af7f5b85998a9c103edd510a36248912c3ed9bf431ac"
+    },
+    {
+      "id": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "type": "concept",
+      "title": "Gate-1 closed-FRW V=0 componentwise off-shell Darboux-chart control",
+      "summary": "A bounded non-numbered calculation follows the prior V=0 on-shell relational endpoint result across arbitrary real constraint values c on the open U_plus component p_phi>0, R=3*p_phi^2-2*P^2>0. The smooth mixed generator W=-integral_0^P Q(c,u,p_phi)du gives classical coordinates (T,c,Phi,p_phi), an exact Liouville boundary potential B, unit symplectic Jacobian and c=0 recovery. The KEEP closes only this classical componentwise chart onto its open image and creates no automatic successor.",
+      "state": "COMPLETED_VALID_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART_NO_AUTOMATIC_SUCCESSOR"
+    },
+    {
+      "id": "scope:gate1-closed-frw-v0-p-positive-r-positive-componentwise-offshell-darboux-chart",
+      "type": "scope",
+      "title": "Closed-FRW V=0 p-positive R-positive componentwise off-shell Darboux scope",
+      "summary": "The exact U_plus classical chart, endpoint action and on-shell recovery, separated from every other component, quantum endpoint-state, BFV, old-kernel, full-real-lapse and global construction.",
+      "state": "CLOSED_COMPUTED_UPLUS_CLASSICAL_CHART_OTHER_COMPONENTS_QUANTUM_BFV_AND_GLOBAL_SCOPE_OPEN",
+      "includes": [
+        "closed-FRW V=0 with Q=2*log(a), P=a*p_a/2, p_phi>0 and R=3*p_phi^2-2*P^2>0",
+        "arbitrary real c=C, one unique smooth positive scale-factor root and D=-C_Q>0",
+        "the finite 0-to-P generator segment, W, T=W_c, Phi=phi+W_p and the inverse onto the open chart image",
+        "the exact one-form potential B=P*Q+W-c*T-p_phi*W_p, action S0-[B], canonical Poisson matrix and unit Jacobian",
+        "the c=0 recovery of Q_star, Phi_star, B=P and the local canonical-gauge FP measure",
+        "three frozen high-precision root controls using six root calls"
+      ],
+      "excludes": [
+        "p_phi<=0, R<=0, another connected component, a rectangular global fundamental region or all closed-FRW phase space",
+        "a normalized quantum endpoint-state transform, its measure, phase, operator domains or unitarity",
+        "ghost, antighost and multiplier endpoint conditions, a BRST charge, replacement gauge fermion or full replacement BFV source",
+        "a replacement lattice or equality with the old constant-lapse fixed-a kernel",
+        "the full-real-lapse distributional delta(C) physical-inner-product kernel or zero-lapse regulator removal",
+        "global orbit coverage, Gribov census, determinant-line orientation, physical original cycle, global n_sigma, physics or TOE"
+      ]
+    },
+    {
+      "id": "evidence:gate1-v0-offshell-darboux-chart",
+      "type": "evidence",
+      "title": "Gate-1 V0 componentwise off-shell Darboux-chart evidence",
+      "summary": "The one final VALID_RUN records 18 executable exact PASS checks, eight reviewed analytic scope guards and three numerical PASS checks from six high-precision root calls, with zero scientific NONPASS, quadratures, ODEs or descendants. It keeps the classical U_plus chart and exact c=0 lineage while preserving the quantum endpoint-state, BFV, old-kernel, full-real-lapse delta(C), other-component and global boundaries.",
+      "state": "VALID_RUN_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART_KEEP",
+      "observed_status": "VALID_RUN",
+      "check_ids": [
+        "P39.G1.darboux.trace_pair_and_swapped_potential",
+        "P39.G1.darboux.constraint_polynomial",
+        "P39.G1.darboux.trace_fp_positive_identity",
+        "P39.G1.darboux.positive_root_existence",
+        "P39.G1.darboux.positive_root_uniqueness",
+        "P39.G1.darboux.segment_domain",
+        "P39.G1.darboux.implicit_root_derivatives",
+        "P39.G1.darboux.generating_function_derivatives",
+        "P39.G1.darboux.canonical_one_form",
+        "P39.G1.darboux.endpoint_action_variation",
+        "P39.G1.darboux.canonical_poisson_matrix",
+        "P39.G1.darboux.symplectic_jacobian",
+        "P39.G1.darboux.local_inverse_and_static_slice",
+        "P39.G1.darboux.shell_q_recovery",
+        "P39.G1.darboux.shell_phi_star_recovery",
+        "P39.G1.darboux.shell_boundary_potential_recovery",
+        "P39.G1.darboux.shell_fp_measure_recovery",
+        "P39.G1.darboux.action_ledger_separation",
+        "P39.G1.darboux.numerical.unique_positive_roots",
+        "P39.G1.darboux.numerical.root_method_agreement",
+        "P39.G1.darboux.numerical.root_residuals"
+      ]
+    },
+    {
+      "id": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "type": "claim",
+      "title": "The closed-FRW V0 p-positive R-positive component has a classical off-shell Darboux chart",
+      "summary": "Supported only on U_plus={p_phi>0, R=3*p_phi^2-2*P^2>0}. For every real c the implicit scale-factor root is unique and smooth, D>0, and the mixed generator W produces canonical coordinates (T,c,Phi,p_phi), unit symplectic Jacobian and endpoint potential B. At c=0 the construction recovers the prior Phi_star, B=P and local FP measure. This is a classical componentwise chart onto its image, not an all-component atlas, normalized quantum endpoint transform, BFV source, old-kernel equality, full-real-lapse delta(C) kernel or global gauge theorem.",
+      "state": "SUPPORTED_ON_UPLUS_CLASSICAL_COMPONENT_ONLY",
+      "claim_id": "G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "statement": "On the open closed-FRW V=0 component p_phi>0 and 3*p_phi^2-2*P^2>0, the map generated by W(c,P,p_phi)=-integral_0^P Q(c,u,p_phi)du defines a classical componentwise off-shell Darboux chart (T,c,Phi,p_phi) onto its open image.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "artifact:gate1-v0-offshell-darboux-chart-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 off-shell Darboux-chart evidence snapshot",
+      "summary": "Compact typed extract of the one capped invocation, 18 exact checks, three numerical checks, eight reviewed analytic guards, input/runner/result/report hashes, five reachable terminal rows, U_plus scope, narrow KEEP and fail-closed quantum, BFV, delta(C), global, physics and TOE outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-offshell-darboux-chart-result.json",
+      "sha256": "8c15033200f66f0463ef19e660013f1aca351b89fa366721f5830d5a4d80bb56"
+    },
+    {
+      "id": "artifact:gate1-v0-offshell-darboux-chart-report",
+      "type": "artifact",
+      "title": "Gate-1 closed-FRW V0 componentwise off-shell Darboux-chart report",
+      "summary": "Human-readable derivation of the U_plus implicit-root theorem, positive trace bracket, mixed generator, canonical one-form, endpoint potential and action, Poisson matrix, unit Jacobian, componentwise inverse, c=0 recovery, numerical root controls, action-ledger separation, terminal Ragnarok rows and strict quantum/BFV/delta(C)/global boundary.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART.md",
+      "sha256": "cdbe94f79b55db371e46d62455535af7d58d96ac2e6b21edae9e58b34d93e79f"
     }
   ],
   "edges": [
@@ -26068,6 +26162,143 @@
       "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION"
+    },
+    {
+      "id": "edge:2479",
+      "from": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2480",
+      "from": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-trace-relational-endpoint-action-control",
+      "note": "Extends the immediate classical on-shell relational result across arbitrary real c on U_plus without rewriting its frozen evidence."
+    },
+    {
+      "id": "edge:2481",
+      "from": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-closed-frw-v0-p-positive-r-positive-componentwise-offshell-darboux-chart"
+    },
+    {
+      "id": "edge:2482",
+      "from": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992",
+      "note": "Cites the classical endpoint-improvement and transformed-endpoint-data framework, not a derivation of this model chart or a normalized quantum transform."
+    },
+    {
+      "id": "edge:2483",
+      "from": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "relation": "CITES",
+      "to": "source:banihashemi-jacobson-2025",
+      "note": "Cites reduced-phase-space, configuration-space and lapse-contour boundaries; the closed-FRW generator and chart remain repository calculations."
+    },
+    {
+      "id": "edge:2484",
+      "from": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "relation": "CITES",
+      "to": "source:marolf-1996-minisuperspace-path-integrals",
+      "note": "Cites the still-uncomputed full-real-lapse distributional physical-inner-product target only; a classical chart does not produce that kernel or an ordinary bounded projector."
+    },
+    {
+      "id": "edge:2485",
+      "from": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "All five frozen scientific rows terminate as VALID_RUN results, open dependencies authorize no successor, automatic_next is null, and the run creates no numbered phase or descendant."
+    },
+    {
+      "id": "edge:2486",
+      "from": "evidence:gate1-v0-offshell-darboux-chart",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-componentwise-offshell-darboux-chart-control"
+    },
+    {
+      "id": "edge:2487",
+      "from": "evidence:gate1-v0-offshell-darboux-chart",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-offshell-darboux-chart-evidence-snapshot"
+    },
+    {
+      "id": "edge:2488",
+      "from": "evidence:gate1-v0-offshell-darboux-chart",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-trace-endpoint-action",
+      "note": "The prior Phi_star, B=P and local FP result are the immediate c=0 lineage to be recovered, not overwritten or promoted beyond their scope."
+    },
+    {
+      "id": "edge:2489",
+      "from": "artifact:gate1-v0-offshell-darboux-chart-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-componentwise-offshell-darboux-chart-control"
+    },
+    {
+      "id": "edge:2490",
+      "from": "artifact:gate1-v0-offshell-darboux-chart-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-componentwise-offshell-darboux-chart-control"
+    },
+    {
+      "id": "edge:2491",
+      "from": "artifact:gate1-v0-offshell-darboux-chart-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-v0-offshell-darboux-chart-evidence-snapshot"
+    },
+    {
+      "id": "edge:2492",
+      "from": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-componentwise-offshell-darboux-chart-control"
+    },
+    {
+      "id": "edge:2493",
+      "from": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-closed-frw-v0-p-positive-r-positive-componentwise-offshell-darboux-chart"
+    },
+    {
+      "id": "edge:2494",
+      "from": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-offshell-darboux-chart",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2495",
+      "from": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
+      "note": "The off-shell chart exactly recovers the prior Phi_star, B=P action and canonical-gauge FP measure at c=0."
+    },
+    {
+      "id": "edge:2496",
+      "from": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-offshell-darboux-chart-report"
+    },
+    {
+      "id": "edge:2497",
+      "from": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "note": "The U_plus classical chart is kept, but normalized endpoint states, the ghost/BFV source, old-kernel comparison, full-real-lapse delta(C) kernel, zero lapse, other components and the global cycle remain open without execution authority."
+    },
+    {
+      "id": "edge:2498",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-offshell-darboux-chart",
+      "polarity": "SUPPORTS",
+      "note": "A classical componentwise Darboux chart on U_plus neither source-selects a joint contour nor supplies quantum/BFV, zero-lapse, determinant or global intersection data."
+    },
+    {
+      "id": "edge:2499",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART"
     }
   ],
   "kg_bridges": [
@@ -26497,6 +26728,16 @@
       "checked_at_utc": "2026-08-26T15:59:23Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 closed FRW V0 trace gauge local on-shell relational endpoint action",
       "note": "No authorized exact external correspondence or writer is available. The frozen p-positive local classical action, finite endpoint flow, local FP reduction, strict off-shell/BFV/delta(C)-kernel/global boundary and null physics/TOE outputs remain repository-local workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T04:52:42Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 closed FRW V0 p-positive R-positive component classical off-shell Darboux chart",
+      "note": "No authorized exact external correspondence or writer is available. The U_plus classical componentwise chart, c=0 endpoint recovery, strict quantum/BFV/delta(C)-kernel/global boundary and null physics/TOE outputs remain repository-local workbench evidence; no external UID was invented."
     }
   ]
 }
