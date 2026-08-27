@@ -1,0 +1,299 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_PRINCIPAL_ENDPOINT_FIO_20260827",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-27T05:21:55Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio.py",
+    "sha256": "7a5ed69028cfb3721f563bb5370a3267bf8ef1bfe3c5e8698a545578b5c1fd53",
+    "introduced_in_commit": "e09907376e180b569ca3b322790475c93137d426"
+  },
+  "exact_checks": 10,
+  "checks": [
+    {
+      "id": "P39.G1.fio.canonical_phase_sign",
+      "status": "PASS",
+      "statement": "S=-W has S_c=-T and S_P=Q, fixing exp(-iW/hbar) in the declared momentum convention"
+    },
+    {
+      "id": "P39.G1.fio.principal_operator_relations",
+      "status": "PASS",
+      "statement": "i*hbar*d_c and integration by parts against i*hbar*d_P recover T and Q at principal order; amplitude derivatives are subprincipal"
+    },
+    {
+      "id": "P39.G1.fio.positive_twist_and_half_density",
+      "status": "PASS",
+      "statement": "the mixed twist has magnitude W_cP=1/D>0 and the Lebesgue principal half-density is D^(-1/2)"
+    },
+    {
+      "id": "P39.G1.fio.local_maslov_branch",
+      "status": "PASS",
+      "statement": "the twist Hessian has fixed sign on U_plus, so no local mixed-projection caustic changes the compact-interior Maslov branch"
+    },
+    {
+      "id": "P39.G1.fio.endpoint_phase_critical_value",
+      "status": "PASS",
+      "statement": "Psi=c*T+p*(Phi-phi)-P*Q-W has the Darboux critical equations and critical value -B"
+    },
+    {
+      "id": "P39.G1.fio.shell_generator_lineage",
+      "status": "PASS",
+      "statement": "the explicit c=0 W0 recovers W0_P=-Q0 and W0_p=Phi_star-phi"
+    },
+    {
+      "id": "P39.G1.fio.coarea_local_curvature",
+      "status": "PASS",
+      "statement": "at P_bar=0, M_P=0 and M_PP=2/(A^2*D^3)>0 for M=W_cP=1/D"
+    },
+    {
+      "id": "P39.G1.fio.coarea_geometric_vs_secant_series",
+      "status": "PASS",
+      "statement": "the one-term composition density has M_geom/M_sec=1+(M_PP/M)*deltaP^2/12+O(deltaP^4)"
+    },
+    {
+      "id": "P39.G1.fio.shell_exact_unitarity_nonpass_coefficient",
+      "status": "PASS",
+      "statement": "at c=0 the exact-one-term coarea ratio begins 1+deltaP^2/(36*p^2), so it is not identically one"
+    },
+    {
+      "id": "P39.G1.fio.shell_strict_monotonicity",
+      "status": "PASS",
+      "statement": "at c=0, M is proportional to R^(-1/4) and is strictly increasing for 0<P<sqrt(3/2)*p"
+    }
+  ],
+  "numerical_checks": 3,
+  "numerical": [
+    {
+      "id": "P39.G1.fio.numerical.quadrature_hypergeometric_agreement",
+      "status": "PASS",
+      "statement": "direct 100-digit quadrature and the closed hypergeometric secant mean agree at all three frozen shell pairs"
+    },
+    {
+      "id": "P39.G1.fio.numerical.finite_coarea_ratio_nonpass",
+      "status": "PASS",
+      "statement": "M_geom/M_sec is strictly greater than one at every frozen nonzero symmetric shell pair"
+    },
+    {
+      "id": "P39.G1.fio.numerical.local_series_coefficient",
+      "status": "PASS",
+      "statement": "the frozen finite ratios approach the exact coefficient 1/(36*p^2) within the declared bound"
+    }
+  ],
+  "payload": {
+    "exact_checks": 10,
+    "numerical_checks": 3,
+    "calculation": {
+      "calculation_id": "Gate1V0PrincipalEndpointFIO",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KEPT_UNCORRECTED_ONE_TERM_EXACT_UNITARITY_KILLED",
+      "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+      "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_REQUIRE_SUBPRINCIPAL_SYMBOL_AND_DOMAIN_BEFORE_ANY_EXACT_OR_BFV_LIFT"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited finite m=2 Gate-1 provenance required by research-run-evidence/v1; this bounded calculation has numbered_phase=null and creates no new phase",
+      "check_id_rule": "the v1 transport prefix P39. is prepended to each authoritative G1.fio.* check id",
+      "authoritative_exact_check_ids": [
+        "G1.fio.canonical_phase_sign",
+        "G1.fio.principal_operator_relations",
+        "G1.fio.positive_twist_and_half_density",
+        "G1.fio.local_maslov_branch",
+        "G1.fio.endpoint_phase_critical_value",
+        "G1.fio.shell_generator_lineage",
+        "G1.fio.coarea_local_curvature",
+        "G1.fio.coarea_geometric_vs_secant_series",
+        "G1.fio.shell_exact_unitarity_nonpass_coefficient",
+        "G1.fio.shell_strict_monotonicity"
+      ],
+      "authoritative_numerical_check_ids": [
+        "G1.fio.numerical.quadrature_hypergeometric_agreement",
+        "G1.fio.numerical.finite_coarea_ratio_nonpass",
+        "G1.fio.numerical.local_series_coefficient"
+      ]
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "definition_commit": "e09907376e180b569ca3b322790475c93137d426",
+      "initial_result_commit": "75677a6743d0b482d45f22505aab86c20edea06c",
+      "semantic_evaluator_repair_commit": "a58b2366b162cdb664663f9adb88ba56bdb3bb85",
+      "final_raw_result_commit": "38f326839044fb54acec1180636179deba0221b9",
+      "report_commit": "ab978a528d7238ac6e4438edda3570c9295ed335",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_INPUTS.json",
+      "input_manifest_sha256": "9f3bb3ff0758b0eacfd5ee6c42cd71ca1bf44c99ae822c35b768690031a4585f",
+      "runner_sha256": "7a5ed69028cfb3721f563bb5370a3267bf8ef1bfe3c5e8698a545578b5c1fd53",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json",
+      "raw_result_outer_sha256": "1a530b810c744b7108c915308f4d23e6329abb901780f76ac958922e62ed8eef",
+      "raw_result_payload_sha256_without_self": "f23c8fbd167b5041d7473cb69a05621768d44b95cd73aab02aaee0ea719bc5e7",
+      "raw_result_size_bytes": 21401,
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md",
+      "report_sha256": "2b6fa7de22628ed9b94d3c1d31637bdff53aa48b4ac4a3216eee95c7f67171d9"
+    },
+    "attempt_ledger": {
+      "scientific_command_attempts": 2,
+      "attempt_1": {
+        "logical_command": "./ice run cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio",
+        "actual_capped_invocation": "timeout --signal=TERM 120s ./ice run cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio",
+        "exit_code": 0,
+        "wall_time_seconds": 2.208673012,
+        "run_status": "VALID_RUN",
+        "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
+        "result_written": true,
+        "status": "PRESERVED_IN_GIT_HISTORY_BEFORE_EVALUATOR_DIAGNOSIS"
+      },
+      "diagnosis": {
+        "failed_check": "G1.fio.coarea_local_curvature",
+        "cause": "SymPy expression-tree equality compared two algebraically identical factorizations of F_A",
+        "independent_residuals": ["F_A identity=0", "A_PP identity=0", "M_PP identity=0"],
+        "repair": "replace structural equality by simplify(lhs-rhs)==0"
+      },
+      "attempt_2": {
+        "logical_command": "./ice run cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio",
+        "actual_capped_invocation": "timeout --signal=TERM 120s ./ice run cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio",
+        "exit_code": 0,
+        "wall_time_seconds": 2.215723646,
+        "run_status": "VALID_RUN",
+        "result_written": true,
+        "status": "FINAL_FROZEN_RESULT"
+      },
+      "scientific_decision_changed_after_run": true,
+      "change_reason": "one isolated semantic-equality evaluator repair with exact zero residual; no model, domain, threshold, input, decision row or scientific formula changed",
+      "additional_retry": false
+    },
+    "ragnarok_termination_audit": {
+      "scientific_nonpass_policy": "RECORD_VALID_TERMINAL_RESULT",
+      "integrity_or_schema_failure_policy": "RAISE_WITHOUT_RESULT",
+      "reachable_frozen_rows": [
+        "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+        "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
+        "KILL_PROPOSED_V0_PRINCIPAL_ENDPOINT_FIO",
+        "INCONCLUSIVE"
+      ],
+      "arbitrary_arguments": "REJECTED",
+      "open_dependencies": "NOT_EXECUTION_AUTHORIZATION",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    },
+    "computed_facts": {
+      "constraint_component": "COMPACT_INTERIORS_OF_UPLUS_P_POSITIVE_R_POSITIVE",
+      "momentum_polarization": "OLD_P_P_TO_NEW_C_P_WITH_SPECTATOR_DELTA_P",
+      "phase": "S_EQUALS_MINUS_W",
+      "canonical_relations": "T_EQUALS_W_C_Q_EQUALS_MINUS_W_P_PHI_MINUS_PHI_EQUALS_W_P",
+      "principal_half_density": "D_POWER_MINUS_ONE_HALF",
+      "local_maslov_branch": "FIXED_BY_W_CP_POSITIVE",
+      "principal_microlocal_fio": "KEEP",
+      "uncorrected_one_term_exact_unitarity": "KILL_BY_GEOMETRIC_VERSUS_SECANT_COAREA_NONPASS",
+      "normalized_quantum_endpoint_state_transform": "NOT_COMPUTED",
+      "replacement_bfv_source": "NOT_COMPUTED",
+      "full_real_lapse_delta_C_kernel": "NOT_COMPUTED"
+    },
+    "numerical_metrics": {
+      "precision_digits": 100,
+      "root_calls": 0,
+      "quadratures": 3,
+      "special_function_evaluations": 3,
+      "deltaP_values": ["0.025", "0.05", "0.1"],
+      "M_geom_over_M_sec": [
+        "1.0000173623168410157615636806523004840",
+        "1.0000694637407895821284853400348423754",
+        "1.0002780868183534881875258485103712522"
+      ],
+      "quadrature_hypergeometric_maximum_error": "0",
+      "series_coefficient_target": "0.0277777777777777777777777777777777778",
+      "series_coefficient_maximum_error": "0.0000309040575710409748070732593474450",
+      "series_coefficient_tolerance": "0.0002",
+      "interpretation": "independent high-precision shell control of the exact coarea discriminator, not a physical replication or global operator test"
+    },
+    "theorem_guards": {
+      "count": 6,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_10_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.fio.guard.principal_microlocal_scope",
+        "G1.fio.guard.exact_coarea_nonpass",
+        "G1.fio.guard.exact_transform_boundary",
+        "G1.fio.guard.polarization_boundary",
+        "G1.fio.guard.bfv_boundary",
+        "G1.fio.guard.delta_c_boundary"
+      ]
+    },
+    "scope_status": {
+      "local_v0_principal_momentum_endpoint_fio": "KEEP_ON_COMPACT_INTERIORS_OF_U_PLUS",
+      "local_maslov_branch": "FIXED_BY_W_CP_POSITIVE_ON_U_PLUS",
+      "uncorrected_one_term_exact_unitarity": "KILL_BY_EXACT_COAREA_NONPASS",
+      "normalized_quantum_endpoint_state_transform": null,
+      "exact_quantum_endpoint_state_transform": null,
+      "global_quantum_endpoint_state_transform": null,
+      "subprincipal_full_symbol": null,
+      "operator_ordering": null,
+      "self_adjoint_domain": null,
+      "physical_endpoint_measure": null,
+      "coordinate_polarization_endpoint_kernel": null,
+      "ghost_endpoint_sector": null,
+      "replacement_gauge_fermion": null,
+      "full_replacement_bfv_measure": null,
+      "replacement_source_discretization": null,
+      "old_fixed_a_kernel_equivalence": null,
+      "zero_lapse_distribution": null,
+      "full_real_lapse_delta_C_kernel": null,
+      "global_offshell_canonical_atlas": null,
+      "global_maslov_orientation": null,
+      "determinant_line_orientation": null,
+      "physical_original_cycle": null
+    },
+    "scope": {
+      "includes": [
+        "the old-(P,p) to new-(c,p) momentum phase on smooth compact cutoffs strictly inside U_plus and its chart image",
+        "the positive principal half-density D^(-1/2), local Maslov branch and principal canonical relation",
+        "the explicit c=0 W0 recovery of Q0 and Phi_star",
+        "the exact finite symmetric-shell coarea nonpass for the uncorrected one-term kernel",
+        "three paired high-precision quadrature and hypergeometric controls"
+      ],
+      "excludes": [
+        "a full-symbol, exact or globally normalized endpoint transform, ordering, self-adjoint domain, spectral measure or R=0 edge condition",
+        "a fixed-(Q,phi) to fixed-(T,Phi) coordinate-polarization kernel or physical endpoint measure",
+        "ghost, antighost and multiplier endpoints, a BRST charge, gauge fermion or replacement BFV source",
+        "old fixed-a kernel equality, zero lapse or the full-real-lapse distributional delta(C) rigging map",
+        "other components, global atlas, global Maslov and determinant orientation, physical original cycle, global n_sigma, physics or TOE"
+      ]
+    },
+    "independent_read_only_review": {
+      "phase_sign_and_polarization_reviewed": true,
+      "principal_half_density_reviewed": true,
+      "coarea_geometric_vs_secant_derivation_reviewed": true,
+      "c_zero_finite_monotonicity_nonpass_reviewed": true,
+      "input_runner_result_hashes_recomputed": true,
+      "ragnarok_row_reachability_reviewed": true,
+      "bfv_and_delta_c_boundaries_reviewed": true,
+      "conclusion_changing_error_found_after_semantic_repair": false
+    },
+    "promoted_outputs": {
+      "normalized_quantum_endpoint_state_transform": null,
+      "exact_quantum_endpoint_state_transform": null,
+      "global_quantum_endpoint_state_transform": null,
+      "coordinate_polarization_endpoint_kernel": null,
+      "exact_constraint_diagonalization": null,
+      "physical_endpoint_state": null,
+      "physical_endpoint_measure": null,
+      "ghost_endpoint_sector": null,
+      "replacement_gauge_fermion": null,
+      "full_replacement_bfv_measure": null,
+      "replacement_source_discretization": null,
+      "old_fixed_a_kernel_equivalence": null,
+      "zero_lapse_distribution": null,
+      "full_real_lapse_delta_C_kernel": null,
+      "global_offshell_canonical_atlas": null,
+      "global_maslov_orientation": null,
+      "determinant_line_orientation": null,
+      "physical_original_cycle": null,
+      "global_n_sigma": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "automatic_next": null
+    }
+  }
+}

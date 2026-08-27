@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-27T04:52:42Z",
+  "updated_at_utc": "2026-08-27T05:21:55Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -444,14 +444,16 @@
       ]
     },
     {
-      "question": "Can the trace gauge now remove the negative p_a Gaussian and repair the finite m=2 source?",
-      "answer": "Only componentwise at the classical level, and not by deletion or by appending another FP delta to the unchanged source. The integrated homogeneous trace pair gives a genuine constraint-gauge reduction on existing simple shell-root charts with a>0 and a^2 V != 2; the remaining real p_phi fiber is lower-lateral Gaussian convergent. The first closed-FRW V=0 control constructs a local on-shell fixed-Phi_star relational endpoint action. Its bounded successor extends that result across arbitrary real constraint values c on U_plus={p_phi>0, 3*p_phi^2-2*P^2>0}: one smooth mixed generator gives a classical componentwise Darboux chart (T,c,Phi,p_phi), unit symplectic Jacobian, action S0-[B], and exact c=0 recovery. This is a chart onto its open component image, not an all-component global atlas. The inherited fixed-a m=2 endpoint problem still cannot be reused unchanged, and normalized quantum endpoint states, ghost/BFV replacement source, old-kernel equality, the full-real-lapse distributional delta(C) kernel and every global or physical output remain open or null.",
+      "question": "Can the trace-gauge V0 chart now supply quantum endpoint states and repair the finite m=2 source?",
+      "answer": "It now supplies one additional but still local layer. On compact interiors of U_plus, the old-(P,p) to new-(c,p) phase S=-W and half-density D^(-1/2) define a principal momentum-polarization FIO with a fixed local Maslov branch and exact c=0 lineage. The uncorrected one-term Van Vleck kernel is not exactly unitary: its geometric-mean composition density is strictly larger than the required secant/coarea density on symmetric nonzero c=0 pairs. This kills exact unitarity only for that one-term amplitude, not a corrected full-symbol or spectral transform. A normalized global endpoint operator, ordering and domains, coordinate polarization, ghost/BFV replacement source, old-kernel equality, full-real-lapse delta(C) kernel and every global or physical output remain open or null.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
         "claim:G1_LOCAL_TRACE_REDUCTION_LEAVES_LOWER_LATERAL_REAL_SCALAR_FIBER_CONVERGENT",
         "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
-        "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART"
+        "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+        "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+        "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY"
       ]
     }
   ],
@@ -1054,8 +1056,8 @@
     },
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
-      "title": "From the anchored straight-line KILL to the V0 componentwise Darboux boundary",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The first trace-gauge follow-up keeps a genuine local simple-root reduction and lower-lateral scalar fiber while killing append-to-unchanged-source. The first closed-FRW V=0 follow-up keeps a classical local on-shell relational endpoint action; its successor keeps an exact classical componentwise off-shell Darboux chart on U_plus and recovers that action at c=0. Stop at the still-open other-component or global atlas, normalized quantum endpoint state, ghost/BFV replacement source, full-real-lapse delta(C) kernel, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
+      "title": "From the anchored straight-line KILL to the V0 local principal-FIO boundary",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and then an exact U_plus classical Darboux chart. The latest bounded result quantizes that chart only at principal microlocal order and kills exact unitarity of the uncorrected one-term Van Vleck amplitude by a geometric-versus-secant coarea discriminator. Stop before a corrected full symbol, ordering and domains, global endpoint operator, other-component atlas, ghost/BFV replacement source, full-real-lapse delta(C) kernel, source deformation, zero lapse, scale/mixed ends, determinant orientation, regulator removal, census, global coefficients, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1084,6 +1086,9 @@
         "claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION",
         "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
         "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+        "concept:gate1-v0-principal-endpoint-fio-control",
+        "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+        "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
         "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -10092,10 +10097,10 @@
     {
       "id": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "type": "open_problem",
-      "title": "Lift the V0 componentwise Darboux chart to endpoint states and a replacement BFV source, then extend through zero lapse and the full joint cycle",
-      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The first trace-gauge follow-up proves a genuine local simple-root constraint reduction away from a^2 V=2 and formal lower-lateral convergence of its remaining scalar fiber, while killing append-to-unchanged-source. The first closed-FRW V=0 follow-up closes the classical local on-shell relational endpoint action. Its successor now keeps one exact classical off-shell Darboux chart on the open U_plus component p_phi>0, R>0 across arbitrary real c and recovers Phi_star, B=P and the local FP measure at c=0. This is not an all-component atlas or a quantum transform. A normalized endpoint-state transform, ghost/BFV sector, replacement source/lattice, old fixed-a equality and full-real-lapse distributional delta(C) kernel remain open; these dependencies carry no automatic execution authority. Lambda=1, zero lapse, source deformation, other components, global orbit coverage, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
-      "state": "OPEN_AFTER_V0_UPLUS_CLASSICAL_OFFSHELL_DARBOUX_CHART_KEEP_QUANTUM_BFV_DELTA_C_AND_GLOBAL_SCOPE_OPEN",
-      "question": "Can the U_plus classical componentwise Darboux chart be lifted to normalized quantum endpoint states and a replacement FP/BFV source representing the full-real-lapse distributional delta(C) kernel, extended to the missing components and zero lapse, and connected through every relative end, determinant and intersection into a physical full joint cycle?"
+      "title": "Lift the V0 local principal FIO to a corrected global endpoint transform and replacement BFV source, then extend through zero lapse and the full joint cycle",
+      "summary": "The ordered real scalar control agrees with the declared 0<lambda<=1 Gamma_lambda representatives on lapse tests away from N=0, while its zero-lapse successor was an INVALID_RUN with no extension verdict. The full-bosonic m=2 control shows that neither single lateral sign absolutely converges the unchanged real p_a,p_phi axes. The trace-gauge branch proves a local simple-root reduction away from a^2 V=2 while killing append-to-unchanged-source, then constructs a closed-FRW V0 on-shell relational endpoint action and an exact classical off-shell Darboux chart on U_plus={p_phi>0,R>0}. The newest result lifts that chart only on compact interiors to the principal momentum-polarization FIO with phase -W, half-density D^(-1/2), fixed local Maslov branch and exact c=0 lineage. It also kills exact finite-hbar unitarity of the uncorrected one-term Van Vleck kernel because the geometric-mean composition density differs strictly from the required secant/coarea density. A corrected full symbol or spectral transform is not excluded. Ordering, self-adjoint domains, edge conditions, global normalization and Maslov gluing, coordinate polarization, ghost/BFV sector, replacement source/lattice, old fixed-a equality and full-real-lapse distributional delta(C) kernel remain open without automatic execution authority. Lambda=1, zero lapse, source deformation, other components, global orbit coverage, scale/mixed ends, determinant orientation, global intersections and a physical original cycle remain unselected or absent.",
+      "state": "OPEN_AFTER_V0_LOCAL_PRINCIPAL_FIO_KEEP_ONE_TERM_EXACT_UNITARITY_KILL_FULL_SYMBOL_BFV_DELTA_C_AND_GLOBAL_SCOPE_OPEN",
+      "question": "Can the kept U_plus principal FIO be completed by a derived full symbol, ordering, self-adjoint domains, edge conditions and global Maslov data into a normalized endpoint transform, then extended with ghost/BFV endpoint data to a replacement source representing the full-real-lapse distributional delta(C) rigging map and connected through zero lapse, other components and every relative end into a physical full joint cycle?"
     },
     {
       "id": "artifact:gate1-phase-locked-affine-field-end-analytic-evidence",
@@ -10817,6 +10822,117 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART.md",
       "sha256": "cdbe94f79b55db371e46d62455535af7d58d96ac2e6b21edae9e58b34d93e79f"
+    },
+    {
+      "id": "source:hormander-1971-fourier-integral-operators-i",
+      "type": "source",
+      "title": "Fourier integral operators I",
+      "summary": "Primary mathematical source used only to frame local microlocal quantization of canonical relations and principal FIO symbols. It does not derive the repository phase, establish global unitarity, choose a physical endpoint measure or provide BFV data.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "L. Hörmander, Fourier integral operators. I, Acta Mathematica 127 (1971) 79–183",
+      "uri": "https://doi.org/10.1007/BF02392052",
+      "version": "Acta Math. 127 (1971) 79–183"
+    },
+    {
+      "id": "source:van-vleck-1928-correspondence-principle",
+      "type": "source",
+      "title": "The correspondence principle in the statistical interpretation of quantum mechanics",
+      "summary": "Primary historical source used only for the semiclassical determinant-amplitude context. It is not an exact finite-hbar normalization theorem for the nonlinear repository canonical transform.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "J. H. Van Vleck, The Correspondence Principle in the Statistical Interpretation of Quantum Mechanics, Proceedings of the National Academy of Sciences 14 (1928) 178–188",
+      "uri": "https://doi.org/10.1073/pnas.14.2.178",
+      "version": "PNAS 14 (1928) 178–188"
+    },
+    {
+      "id": "concept:gate1-v0-principal-endpoint-fio-control",
+      "type": "concept",
+      "title": "Gate-1 V0 local principal endpoint-FIO and exact one-term coarea control",
+      "summary": "A bounded non-numbered calculation follows the kept U_plus classical Darboux chart into the old-(P,p) to new-(c,p) momentum polarization. It fixes phase S=-W, principal half-density D^(-1/2), local Maslov branch, endpoint critical phase -B and c=0 lineage on compact interiors. A separate exact coarea discriminator compares the one-term geometric-mean composition density with the required secant density and kills exact finite-hbar unitarity of that uncorrected amplitude only. It creates no automatic successor.",
+      "state": "COMPLETED_VALID_LOCAL_PRINCIPAL_FIO_KEEP_ONE_TERM_EXACT_UNITARITY_KILL_NO_AUTOMATIC_SUCCESSOR"
+    },
+    {
+      "id": "scope:gate1-v0-compact-interior-principal-momentum-endpoint-fio",
+      "type": "scope",
+      "title": "Closed-FRW V0 compact-interior principal momentum-endpoint FIO scope",
+      "summary": "The principal momentum-polarization quantization of the U_plus Darboux graph and the exact nonunitarity discriminator for its uncorrected one-term amplitude, separated from full-symbol, global, coordinate-polarization, BFV, delta(C), cycle and physical constructions.",
+      "state": "CLOSED_PRINCIPAL_COMPACT_INTERIOR_FIO_AND_ONE_TERM_NONPASS_FULL_SYMBOL_BFV_AND_GLOBAL_SCOPE_OPEN",
+      "includes": [
+        "smooth compact cutoffs strictly inside U_plus={p_phi>0,3*p_phi^2-2*P^2>0} and its Darboux chart image",
+        "old momentum variables (P,p_phi), new momentum variables (c,p_phi), spectator delta(p_phi-p_phi_prime) and phase S=-W",
+        "the principal half-density D^(-1/2), fixed local Maslov branch and principal operator/canonical-relation matching",
+        "the endpoint phase critical value -B and exact c=0 W0 recovery of Q0 and Phi_star",
+        "the geometric-mean versus secant/coarea discriminator and three independent 100-digit shell controls"
+      ],
+      "excludes": [
+        "a subprincipal or full hbar-dependent symbol, exact or globally normalized endpoint transform, ordering, self-adjoint domain, spectral measure or R=0 and p_phi=0 edge condition",
+        "a fixed-(Q,phi) to fixed-(T,Phi) coordinate-polarization kernel, physical endpoint state or physical Wheeler-DeWitt measure",
+        "ghost, antighost and multiplier endpoints, BRST charge, gauge fermion, replacement BFV measure or source lattice",
+        "old fixed-a kernel equality, zero-lapse extension or full-real-lapse distributional delta(C) rigging map",
+        "other components, global atlas or Maslov gluing, determinant-line orientation, physical original cycle, global n_sigma, physics or TOE"
+      ]
+    },
+    {
+      "id": "evidence:gate1-v0-principal-endpoint-fio",
+      "type": "evidence",
+      "title": "Gate-1 V0 local principal endpoint-FIO and coarea evidence",
+      "summary": "The final VALID_RUN records 10 executable exact PASS checks, six reviewed analytic scope guards and three numerical PASS checks from three 100-digit quadratures plus three hypergeometric controls. The committed initial VALID_RUN preserves one expression-tree-equality NONPASS; a single semantic residual repair and replay closed it without changing the model, input, domain, thresholds or decision rows. The result keeps the compact-interior principal FIO and refutes exact unitarity only for the uncorrected one-term kernel, with zero roots, ODEs or descendants.",
+      "state": "VALID_RUN_LOCAL_PRINCIPAL_FIO_KEEP_ONE_TERM_EXACT_UNITARITY_KILL",
+      "observed_status": "VALID_RUN",
+      "check_ids": [
+        "P39.G1.fio.canonical_phase_sign",
+        "P39.G1.fio.principal_operator_relations",
+        "P39.G1.fio.positive_twist_and_half_density",
+        "P39.G1.fio.local_maslov_branch",
+        "P39.G1.fio.endpoint_phase_critical_value",
+        "P39.G1.fio.shell_generator_lineage",
+        "P39.G1.fio.coarea_local_curvature",
+        "P39.G1.fio.coarea_geometric_vs_secant_series",
+        "P39.G1.fio.shell_exact_unitarity_nonpass_coefficient",
+        "P39.G1.fio.shell_strict_monotonicity",
+        "P39.G1.fio.numerical.quadrature_hypergeometric_agreement",
+        "P39.G1.fio.numerical.finite_coarea_ratio_nonpass",
+        "P39.G1.fio.numerical.local_series_coefficient"
+      ]
+    },
+    {
+      "id": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "type": "claim",
+      "title": "The closed-FRW V0 Darboux graph admits a local principal momentum-endpoint FIO",
+      "summary": "Supported only on smooth compact cutoffs inside U_plus and its chart image. The phase -W has nonzero mixed Hessian -1/D, the Lebesgue principal half-density is D^(-1/2), the local Maslov branch is fixed, the endpoint critical phase is -B and c=0 recovers Q0 and Phi_star. This is a principal microlocal statement, not an exact or globally normalized endpoint operator, coordinate-polarization kernel, BFV source or delta(C) rigging map.",
+      "state": "SUPPORTED_ON_COMPACT_INTERIORS_AT_PRINCIPAL_MICROLOCAL_ORDER_ONLY",
+      "claim_id": "G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "statement": "On every smooth compact cutoff strictly inside the kept closed-FRW V0 U_plus Darboux component and its chart image, K_h=delta(p-p_prime)*(2*pi*h)^(-1/2)*D^(-1/2)*exp(-iW/h) quantizes the canonical graph as a principal momentum-polarization FIO with a fixed local Maslov branch.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "type": "claim",
+      "title": "The V0 uncorrected one-term Van Vleck kernel is exactly unitary",
+      "summary": "Contradicted for the displayed one-term amplitude. Exact adjoint-composition coarea normalization requires the secant mean M_sec of M=W_cP, while endpoint half-densities give the geometric mean M_geom. On c=0 symmetric nonzero pairs, M is strictly increasing in |P| and M_geom>M_sec; locally their ratio is 1+deltaP^2/(36p_phi^2)+O(deltaP^4). This does not contradict the possible existence of a corrected full-symbol or spectral transform after ordering, domains and edge data are supplied.",
+      "state": "CONTRADICTED_FOR_UNCORRECTED_ONE_TERM_AMPLITUDE_ONLY",
+      "claim_id": "G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "statement": "The single kernel delta(p-p_prime)*(2*pi*h)^(-1/2)*D^(-1/2)*exp(-iW/h), with no hbar-dependent symbol corrections, has exact finite-hbar delta-normalized adjoint composition on the declared U_plus momentum polarization.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "artifact:gate1-v0-principal-endpoint-fio-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 principal endpoint-FIO evidence snapshot",
+      "summary": "Compact typed extract of the two capped invocations, isolated semantic-equality repair, 10 final exact checks, three numerical checks, six reviewed analytic guards, all input/runner/result/report hashes, four reachable terminal rows, compact-interior scope, KEEP/KILL split and fail-closed exact/global/BFV/delta(C)/physics outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-principal-endpoint-fio-result.json",
+      "sha256": "9dbc7c3564cf42ab0f0969c50439dc31d77aefdedada5b23f9cc4197aa8fd005"
+    },
+    {
+      "id": "artifact:gate1-v0-principal-endpoint-fio-report",
+      "type": "artifact",
+      "title": "Gate-1 closed-FRW V0 local principal endpoint-FIO report",
+      "summary": "Human-readable derivation of the momentum polarization, phase sign, principal half-density, local Maslov branch, endpoint critical phase, c=0 generator, exact geometric-versus-secant coarea nonpass, high-precision controls, one bounded evaluator repair and strict full-symbol, global, BFV, delta(C), cycle and physical boundary.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md",
+      "sha256": "2b6fa7de22628ed9b94d3c1d31637bdff53aa48b4ac4a3216eee95c7f67171d9"
     }
   ],
   "edges": [
@@ -26299,6 +26415,189 @@
       "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART"
+    },
+    {
+      "id": "edge:2500",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2501",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-componentwise-offshell-darboux-chart-control",
+      "note": "Quantizes only the kept U_plus Darboux graph at principal microlocal order and preserves every exact/global/BFV boundary of the classical result."
+    },
+    {
+      "id": "edge:2502",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-compact-interior-principal-momentum-endpoint-fio"
+    },
+    {
+      "id": "edge:2503",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992",
+      "note": "Cites the transformed endpoint-data and boundary-action framework, not a derivation or normalization of the repository kernel."
+    },
+    {
+      "id": "edge:2504",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Cites the multiplier, ghost, BRST and fermionic endpoint data still absent from this bosonic principal FIO."
+    },
+    {
+      "id": "edge:2505",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "CITES",
+      "to": "source:marolf-1996-minisuperspace-path-integrals",
+      "note": "Cites the distinct full-real-lapse distributional rigging-map boundary; the endpoint momentum coordinate c is not identified with delta(C)."
+    },
+    {
+      "id": "edge:2506",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "CITES",
+      "to": "source:hormander-1971-fourier-integral-operators-i",
+      "note": "Cites local principal FIO and canonical-relation calculus only; global operator and model equations remain unprovided by the source."
+    },
+    {
+      "id": "edge:2507",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "CITES",
+      "to": "source:van-vleck-1928-correspondence-principle",
+      "note": "Cites the semiclassical determinant-amplitude context, not an exact finite-hbar unitarity theorem."
+    },
+    {
+      "id": "edge:2508",
+      "from": "concept:gate1-v0-principal-endpoint-fio-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "All four frozen scientific rows terminate as VALID_RUN results. One isolated structural-equality false negative was preserved, semantically repaired once and replayed once; no descendant or automatic next task was created."
+    },
+    {
+      "id": "edge:2509",
+      "from": "evidence:gate1-v0-principal-endpoint-fio",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-principal-endpoint-fio-control"
+    },
+    {
+      "id": "edge:2510",
+      "from": "evidence:gate1-v0-principal-endpoint-fio",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-principal-endpoint-fio-evidence-snapshot"
+    },
+    {
+      "id": "edge:2511",
+      "from": "evidence:gate1-v0-principal-endpoint-fio",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-offshell-darboux-chart",
+      "note": "The kept W, D, U_plus domain, boundary potential and c=0 lineage are frozen upstream rather than redefined."
+    },
+    {
+      "id": "edge:2512",
+      "from": "artifact:gate1-v0-principal-endpoint-fio-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-principal-endpoint-fio-control"
+    },
+    {
+      "id": "edge:2513",
+      "from": "artifact:gate1-v0-principal-endpoint-fio-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-principal-endpoint-fio-control"
+    },
+    {
+      "id": "edge:2514",
+      "from": "artifact:gate1-v0-principal-endpoint-fio-report",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-v0-principal-endpoint-fio-evidence-snapshot"
+    },
+    {
+      "id": "edge:2515",
+      "from": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-principal-endpoint-fio-control"
+    },
+    {
+      "id": "edge:2516",
+      "from": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-compact-interior-principal-momentum-endpoint-fio"
+    },
+    {
+      "id": "edge:2517",
+      "from": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-principal-endpoint-fio",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2518",
+      "from": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART",
+      "note": "The phase, half-density and c=0 recovery use the immediately prior classical graph without promoting it outside U_plus."
+    },
+    {
+      "id": "edge:2519",
+      "from": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-principal-endpoint-fio-report"
+    },
+    {
+      "id": "edge:2520",
+      "from": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "note": "A corrected full symbol, ordering, domains and global Maslov data are now explicit prerequisites before any BFV or delta(C) lift; this edge is not execution authority."
+    },
+    {
+      "id": "edge:2521",
+      "from": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-principal-endpoint-fio-control"
+    },
+    {
+      "id": "edge:2522",
+      "from": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-compact-interior-principal-momentum-endpoint-fio"
+    },
+    {
+      "id": "edge:2523",
+      "from": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-principal-endpoint-fio",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2524",
+      "from": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-principal-endpoint-fio-report"
+    },
+    {
+      "id": "edge:2525",
+      "from": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "note": "Principal microlocal unitarity and exact finite-hbar unitarity of one uncorrected amplitude are distinct claims."
+    },
+    {
+      "id": "edge:2526",
+      "from": "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-principal-endpoint-fio",
+      "polarity": "SUPPORTS",
+      "note": "The compact-interior principal FIO and one-term coarea nonpass provide no source selection, ghost/BFV data, zero-lapse extension, determinant orientation or global intersection coefficient."
+    },
+    {
+      "id": "edge:2527",
+      "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO"
     }
   ],
   "kg_bridges": [
@@ -26738,6 +27037,26 @@
       "checked_at_utc": "2026-08-27T04:52:42Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 closed FRW V0 p-positive R-positive component classical off-shell Darboux chart",
       "note": "No authorized exact external correspondence or writer is available. The U_plus classical componentwise chart, c=0 endpoint recovery, strict quantum/BFV/delta(C)-kernel/global boundary and null physics/TOE outputs remain repository-local workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T05:21:55Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 closed FRW V0 Uplus compact interior principal momentum endpoint Fourier integral operator",
+      "note": "No authorized exact external correspondence or writer is available. The principal microlocal KEEP, c=0 lineage, strict full-symbol/BFV/delta(C)/global boundary and null physics/TOE outputs remain repository-local workbench evidence; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T05:21:55Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 uncorrected one-term Van Vleck exact finite hbar unitarity coarea nonpass",
+      "note": "No authorized exact external correspondence or writer is available. The narrow contradiction applies only to the displayed one-term amplitude and does not exclude a corrected full-symbol or spectral transform; no external UID was invented."
     }
   ]
 }
