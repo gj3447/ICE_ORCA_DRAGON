@@ -1,0 +1,143 @@
+{
+  "schema_version": "ice.gate1.v0-bfv-m2-spectral-trajectory.input.v1",
+  "calculation_id": "Gate1V0BfvM2SpectralTrajectory",
+  "numbered_phase": null,
+  "question": "After the frozen static-versus-spectral pairing survives, does the smallest nontrivial one-Dirichlet-mode m=2 projection of the local U_plus improved-static BFV action preserve the endpoint conditions and produce matching bosonic gauge determinant and ghost Pfaffian factors, and does the prior zero-mode input uniquely determine the finite-trajectory zero-mode completion?",
+  "kind": "EXACT_LOCAL_ONE_DIRICHLET_MODE_M2_HYBRID_SPECTRAL_BFV_TRAJECTORY_ACTION_RELATIVE_SUPERDETERMINANT_AND_ZERO_MODE_AMBIGUITY_CONTROL",
+  "epistemic_scope": "FORMAL_LOCAL_GAUGE_GHOST_TANGENT_MODE_PROJECTION_WITH_P_POSITIVE_PHYSICAL_SPECTATOR_AND_NO_CERTIFIED_FINITE_AMPLITUDE_CHART_CONTAINMENT_NOT_A_FULL_PATH_INTEGRAL_OR_ABSOLUTE_MEASURE",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "required_verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA",
+      "role": "supplies the bracket-derived Omega, sPsi, endpoint ideal, kinetic convention and local zero-mode normalization"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_RESULT.json",
+      "sha256": "0b2c748bb99a11409b820796941538dd926f82eb04198e217a9c3ba780f2a7b4",
+      "payload_sha256_without_self": "820ce5fd01c1655a6e38c18e529be5f495e61f11490582a0cee84b491c0516b6",
+      "required_verdict": "KEEP_V0_LOCAL_STATIC_ZERO_MODE_SPECTRAL_PAIRING_COMPATIBILITY",
+      "role": "satisfies the user-directed condition for attempting the minimal trajectory extension while remaining only a frozen order-zero result"
+    }
+  ],
+  "repository_sources": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md",
+      "role": "historical hybrid continuum sine/cosine regulator and relative determinant-versus-Pfaffian boundary; it is not rerun or renamed"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md",
+      "role": "historical endpoint-vanishing BFV mode and lapse-modulus distinctions"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Henneaux, Teitelboim and Vergara, Gauge invariance for generally covariant systems, arXiv:hep-th/9205092",
+      "url": "https://arxiv.org/abs/hep-th/9205092",
+      "used_for": "the improved endpoint action and compatibility of time-independent canonical gauges with transformed endpoint data",
+      "not_used_for": "selecting this spectral truncation or its absolute measure"
+    },
+    {
+      "source": "Garcia, Vergara and Urrutia, BRST-BFV quantization and the Schwinger action principle, arXiv:hep-th/9511092",
+      "url": "https://arxiv.org/abs/hep-th/9511092",
+      "used_for": "the extended multiplier/ghost action and endpoint pattern",
+      "not_used_for": "proving this finite regulator is a continuum or physical path integral"
+    }
+  ],
+  "continuum_source": {
+    "action": "S=int_0^1 ds [c*Tdot+p*Phidot-N*Pidot+bar_c_dot*rho+c_g_dot*bar_rho+lambda*(Pi*T+N*c-c_g*bar_c-rho*bar_rho)]",
+    "brst_charge": "Omega=c_g*c+rho*Pi",
+    "gauge_fermion": "Psi_lambda=lambda*(bar_c*T+bar_rho*N)",
+    "endpoint_data": "T=0 and Phi fixed; Pi=c_g=bar_c=0 at s=0,1; c is not endpoint-fixed",
+    "component_protection": "freeze p(s)=p0>0 and Phi(s)=Phi0+s*(Phi1-Phi0) as a physical spectator; treat nonzero gauge modes as formal local tangent amplitudes, with no finite cutoff or inverse-chart containment certified",
+    "lambda_domain": "lambda>0"
+  },
+  "m2_spectral_projection": {
+    "basis": "e0=1, e_c=sqrt(2)*cos(pi*s), e_s=sqrt(2)*sin(pi*s)",
+    "derivative": "d e_s/ds=pi*e_c",
+    "dirichlet_modes": "T=T1*e_s, Pi=Pi1*e_s, c_g=g1*e_s, bar_c=b1*e_s",
+    "cosine_and_zero_modes": "c=c0+c1*e_c, N=N0+N1*e_c, rho=rho0+rho1*e_c, bar_rho=br0+br1*e_c",
+    "physical_spectator": "p=p0>0, Phi=Phi0+s*DeltaPhi",
+    "projected_bosonic_action": "p0*DeltaPhi+pi*c1*T1-pi*N1*Pi1+lambda*(Pi1*T1+N0*c0+N1*c1)",
+    "projected_ghost_action": "pi*b1*rho1+pi*g1*br1-lambda*(g1*b1+rho0*br0+rho1*br1)",
+    "regulator_status": "HYBRID_CONTINUUM_SPECTRAL_ONE_MODE_NOT_AN_EXACT_MIDPOINT_DIFFERENCE_OPERATOR"
+  },
+  "zero_mode_ledgers": {
+    "retained_pair": "integrate N0 with dN0/(2*pi*hbar), retain rho0,br0 with oriented extraction i*hbar*[rho0*br0]; delta(lambda*c0) gives delta(c0)/lambda and the ghost factor lambda, so the relative product is one for lambda>0",
+    "eliminated_pair": "eliminate rho0,br0 but still integrate N0 with the same Fourier measure; the remaining relative factor is delta(c0)/lambda",
+    "ambiguity_question": "the static source and historical trajectory conventions do not by themselves select between retaining the algebraic zero ghost pair, eliminating it, or retaining N0 as a modulus"
+  },
+  "exact_plan": [
+    "hash-verify the static BFV source and the successful frozen spectral pairing",
+    "verify the orthonormal sine/cosine basis, derivative relation and exact endpoint vanishing",
+    "project every even and odd kinetic/gauge-fixing term and recover the frozen m=2 action coefficients",
+    "verify the mode BRST generator images are nilpotent and preserve the endpoint-vanishing sine sector, using the pinned bracket-derived continuum images",
+    "build the nonzero bosonic gauge matrix A=[[pi,lambda],[lambda,-pi]] and verify det(A)=-(pi^2+lambda^2)",
+    "build the ordered ghost antisymmetric matrix for (g1,b1,rho1,br1) and verify Pf(F)=pi^2+lambda^2 and det(F)=Pf(F)^2",
+    "verify the nonzero determinant/Pfaffian polynomials match only as a relative same-regulator factor, without assigning an absolute Gaussian phase or Pfaffian orientation",
+    "compute both zero-mode ledgers and verify that only the retained algebraic ghost-pair convention cancels the lambda Jacobian",
+    "return NARROW rather than full KEEP because the upstream zero-mode result does not uniquely select a trajectory zero-mode prescription"
+  ],
+  "decision_table": [
+    {
+      "condition": "the basis, projected action, endpoint/BRST mode maps and relative determinant-Pfaffian identities pass, while the retained and eliminated zero-mode ledgers remain inequivalent",
+      "verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS",
+      "programme_impact": "KEEP_MINIMAL_NONZERO_MODE_RELATIVE_CONTROL_ONLY",
+      "meaning": "one local m=2 hybrid spectral gauge/ghost mode is algebraically consistent, but no unique full finite-trajectory measure or zero-mode completion follows"
+    },
+    {
+      "condition": "the projected action, endpoint conditions, nilpotent mode maps or determinant-Pfaffian identity fails",
+      "verdict": "KILL_V0_DECLARED_M2_SPECTRAL_BFV_MODE_EXTENSION",
+      "programme_impact": "RETAIN_STATIC_SOURCE_ONLY",
+      "meaning": "reject this finite-mode extension without changing the prior static and spectral results"
+    },
+    {
+      "condition": "the nonzero mode identities pass and the zero-mode completion is uniquely fixed by the pinned inputs",
+      "verdict": "KEEP_V0_M2_RELATIVE_BFV_MODE_AND_ZERO_COMPLETION",
+      "programme_impact": "CLOSE_DECLARED_FINITE_REGULATOR_ONLY",
+      "meaning": "keep only the declared finite regulator; continuum and physical path claims remain open"
+    }
+  ],
+  "computed_scope": [
+    "one exact m=2 hybrid spectral projection of the local improved-static BFV gauge/ghost action",
+    "endpoint-vanishing sine modes and nilpotent projected generator map",
+    "the nonzero bosonic determinant and ghost Pfaffian relative polynomial identity",
+    "two explicit inequivalent zero-mode ledgers under gauge-fermion rescaling"
+  ],
+  "not_computed": [
+    "a nonlinear integration over physical p,Phi trajectories or amplitudes reaching the U_plus chart edge",
+    "an absolute finite-dimensional or functional BFV measure, contour phase, Pfaffian orientation or continuum limit",
+    "a unique global lapse-modulus prescription, full-real-lapse group average or zero-lapse contact terms",
+    "an exact endpoint transform, old fixed-a kernel equivalence, global atlas, Gribov census or physical cycle",
+    "a physical inner product, observable prediction, physics claim or TOE claim"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "unique_trajectory_zero_mode_completion": null,
+    "absolute_finite_bfv_measure": null,
+    "full_bfv_trajectory_measure": null,
+    "continuum_bfv_limit": null,
+    "exact_endpoint_state_transform": null,
+    "physical_inner_product": null,
+    "full_real_lapse_delta_C": null,
+    "old_fixed_a_kernel_equivalence": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
