@@ -91,7 +91,8 @@ Primary sources:
   Nucl. Phys. B 387 (1992) 391–418.
 - J. A. García, J. D. Vergara, and L. F. Urrutia,
   [*BRST–BFV quantization and Schwinger's action principle*](https://arxiv.org/abs/hep-th/9511092),
-  Phys. Rev. D 53 (1996) 1368–1377.
+  Int. J. Mod. Phys. A 11 (1996) 2689–2706,
+  [doi:10.1142/S0217751X96001309](https://doi.org/10.1142/S0217751X96001309).
 - D. Marolf,
   [*Path integrals and instantons in quantum gravity: Minisuperspace models*](https://arxiv.org/abs/gr-qc/9602019),
   Phys. Rev. D 53 (1996) 6979–6990.
@@ -398,4 +399,3 @@ replacement source.  This report authorizes neither automatically.
 - `GATE1_V0_PRINCIPAL_ENDPOINT_FIO_INPUTS.json`
 - `gate1_v0_principal_endpoint_fio.py`
 - `GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json`
-
