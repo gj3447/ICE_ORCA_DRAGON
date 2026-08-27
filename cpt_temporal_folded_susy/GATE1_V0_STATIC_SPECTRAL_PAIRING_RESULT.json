@@ -1,0 +1,1173 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1V0StaticSpectralPairing",
+  "classification": "GATE1_V0_LOCAL_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_SPECTRAL_FORM_ON_FROZEN_TESTS_FULL_PATH_AND_PHYSICAL_RIGGING_OPEN",
+  "computed_scope": [
+    "the frozen 3-by-3 static zero-mode pairing matrix for p>0 test states",
+    "the matching order-zero delta(M_c) spectral matrix",
+    "entrywise exact Gaussian regulator removal and independent high-precision integration",
+    "invariance of the shell form under the explicit off-shell subprincipal family"
+  ],
+  "decision_trace": {
+    "endpoint_transform_boundary": "the comparison is invariant under the explicit off-shell subprincipal family and cannot select an exact transform",
+    "matched_predeclared_condition": "all upstream normalization pins, exact matrix identities, positivity, regulator limits and independent quadratures pass on p>0",
+    "scope_meaning": "one frozen local order-zero static-versus-spectral pairing comparison only"
+  },
+  "environment": {
+    "mpmath": "1.3.0",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "flags": {
+      "entrywise_regulator_limit": true,
+      "gaussian_regulator_formula": true,
+      "hermitian": true,
+      "positive_definite": true,
+      "source_normalization": true,
+      "spectral_distribution_boundary": true,
+      "static_half_line_formula": true,
+      "static_spectral_equality": true,
+      "subprincipal_family_invariance": true,
+      "subprincipal_shell_identity": true
+    },
+    "frozen_family": {
+      "component": "c in R and p>0",
+      "states": [
+        "exp(-1*c^2)*p^0*exp(-1*p)",
+        "exp(-2*c^2)*p^1*exp(-2*p)",
+        "exp(-3*c^2)*p^2*exp(-3*p)"
+      ]
+    },
+    "gaussian_regulator": {
+      "delta_epsilon": "exp(-c^2/(4*epsilon))/(2*sqrt(pi*epsilon))",
+      "epsilon_zero_matrix": [
+        [
+          "1/2",
+          "1/9",
+          "1/32"
+        ],
+        [
+          "1/9",
+          "1/32",
+          "6/625"
+        ],
+        [
+          "1/32",
+          "6/625",
+          "1/324"
+        ]
+      ],
+      "generic_factor": "1/sqrt(4*epsilon*total_alpha + 1)",
+      "matrix": [
+        [
+          "1/(2*sqrt(8*epsilon + 1))",
+          "1/(9*sqrt(12*epsilon + 1))",
+          "1/(32*sqrt(16*epsilon + 1))"
+        ],
+        [
+          "1/(9*sqrt(12*epsilon + 1))",
+          "1/(32*sqrt(16*epsilon + 1))",
+          "6/(625*sqrt(20*epsilon + 1))"
+        ],
+        [
+          "1/(32*sqrt(16*epsilon + 1))",
+          "6/(625*sqrt(20*epsilon + 1))",
+          "1/(324*sqrt(24*epsilon + 1))"
+        ]
+      ]
+    },
+    "spectral_form": {
+      "E_singleton_zero": true,
+      "bounded_projector": false,
+      "distribution": "order-zero delta(M_c)",
+      "equals_static_matrix": true,
+      "matrix": [
+        [
+          "1/2",
+          "1/9",
+          "1/32"
+        ],
+        [
+          "1/9",
+          "1/32",
+          "6/625"
+        ],
+        [
+          "1/32",
+          "6/625",
+          "1/324"
+        ]
+      ],
+      "operator": "M_c on L2(R_c times R_{+,p},dc dp)"
+    },
+    "static_zero_mode_form": {
+      "direct_p_integral_matrix": [
+        [
+          "1/2",
+          "1/9",
+          "1/32"
+        ],
+        [
+          "1/9",
+          "1/32",
+          "6/625"
+        ],
+        [
+          "1/32",
+          "6/625",
+          "1/324"
+        ]
+      ],
+      "matrix": [
+        [
+          "1/2",
+          "1/9",
+          "1/32"
+        ],
+        [
+          "1/9",
+          "1/32",
+          "6/625"
+        ],
+        [
+          "1/32",
+          "6/625",
+          "1/324"
+        ]
+      ],
+      "positive_definite": true,
+      "principal_minors": [
+        "1/2",
+        "17/5184",
+        "15994111/83980800000000"
+      ],
+      "source": "delta(T)*delta(c) times normalized ghost factor +1"
+    },
+    "subprincipal_boundary": {
+      "V_kappa_at_c_zero": "1",
+      "endpoint_transform_selected": false,
+      "order_zero_matrix_changed": false
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.pairing.upstream.static_normalization",
+      "passed": true,
+      "statement": "the pinned static source has unit Pi-T/N-c Fourier pairing and normalized oriented ghost factor +1"
+    },
+    {
+      "id": "G1.pairing.upstream.spectral_distribution_boundary",
+      "passed": true,
+      "statement": "the pinned target is the order-zero zero-fiber form of M_c, not E({0}) or a bounded projector"
+    },
+    {
+      "id": "G1.pairing.upstream.subprincipal_shell_identity",
+      "passed": true,
+      "statement": "the pinned off-shell subprincipal family equals one on c=0 and leaves the declared order-zero form unchanged"
+    },
+    {
+      "id": "G1.pairing.static.exact_half_line_matrix",
+      "passed": true,
+      "statement": "direct p>0 integration gives B_stat(j,k)=(j+k)!/(beta_j+beta_k)^(j+k+1) for every frozen pair"
+    },
+    {
+      "id": "G1.pairing.static.hermitian_matrix",
+      "passed": true,
+      "statement": "the exact static matrix is Hermitian"
+    },
+    {
+      "id": "G1.pairing.static.positive_definite_matrix",
+      "passed": true,
+      "statement": "all exact leading principal minors are positive, so the frozen static Gram matrix is positive definite"
+    },
+    {
+      "id": "G1.pairing.spectral.zero_fiber_equality",
+      "passed": true,
+      "statement": "evaluation of each psi_j at c=0 gives exactly the same p>0 matrix for delta(M_c)"
+    },
+    {
+      "id": "G1.pairing.spectral.gaussian_regulator_formula",
+      "passed": true,
+      "statement": "the normalized Gaussian delta regulator pairs with exp(-A*c^2) as 1/sqrt(1+4*epsilon*A)"
+    },
+    {
+      "id": "G1.pairing.spectral.entrywise_regulator_limit",
+      "passed": true,
+      "statement": "epsilon->0+ returns the exact static/spectral matrix entry by entry"
+    },
+    {
+      "id": "G1.pairing.spectral.subprincipal_family_invariance",
+      "passed": true,
+      "statement": "the explicit V_kappa family is invisible to this order-zero shell matrix and therefore is not normalized by the comparison"
+    },
+    {
+      "id": "G1.pairing.spectral.sampled_regulator_monotonicity",
+      "passed": true,
+      "statement": "every frozen regulated matrix entry approaches its static limit monotonically across the decreasing epsilon sequence"
+    }
+  ],
+  "frozen_input_contract": {
+    "decision_table": [
+      {
+        "condition": "all upstream normalization pins, exact matrix identities, positivity, regulator limits and independent quadratures pass on p>0",
+        "meaning": "the one declared local static zero-mode convention realizes the same frozen order-zero form as delta(M_c); no endpoint transform, path measure or physical group average is inferred",
+        "programme_impact": "CLOSE_FROZEN_ORDER_ZERO_PAIRING_ONLY",
+        "verdict": "KEEP_V0_LOCAL_STATIC_ZERO_MODE_SPECTRAL_PAIRING_COMPATIBILITY"
+      },
+      {
+        "condition": "a sign, hbar, 2*pi, ghost-orientation or matrix normalization differs",
+        "meaning": "reject the claimed bridge while preserving its independently valid inputs",
+        "programme_impact": "RETAIN_BFV_ALGEBRA_AND_SPECTRAL_DOMAIN_SEPARATELY",
+        "verdict": "KILL_V0_DECLARED_STATIC_ZERO_MODE_SPECTRAL_NORMALIZATION"
+      },
+      {
+        "condition": "the symbolic equality holds but the independent regulator integration fails",
+        "meaning": "retain only the formal matrix identity pending a reconciled regulator calculation",
+        "programme_impact": "OPEN",
+        "verdict": "NARROW_STATIC_SPECTRAL_PAIRING_NUMERICAL_CONTROL_OPEN"
+      }
+    ],
+    "epistemic_scope": "ONE_DECLARED_LOCAL_UPLUS_ZERO_MODE_NORMALIZATION_AND_ORDER_ZERO_SPECTRAL_TEST_FORM_NOT_A_FULL_GROUP_AVERAGE_NOT_A_PHYSICAL_INNER_PRODUCT_NOT_A_PATH_KERNEL",
+    "kind": "EXACT_FROZEN_TEST_MATRIX_STATIC_ZERO_MODE_VERSUS_SELF_ADJOINT_MULTIPLICATION_SPECTRAL_DELTA_COMPARISON_WITH_HIGH_PRECISION_REGULATOR_CONTROL",
+    "question": "For a frozen 3-by-3 family of test states on the p>0 Darboux momentum base, does the declared improved-static BFV zero-mode contraction define the same sesquilinear form as the order-zero spectral distribution delta(M_c), including an independently integrated Gaussian regulator removal?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_INPUTS.json",
+    "sha256": "f4f4005fa40432263c6b2d69ca50d4d41017956ee06b3938f2401172175525bf"
+  },
+  "not_computed": [
+    "a normalized exact endpoint-state transform or selected subprincipal symbol",
+    "an identity kernel in Phi on the p>0 half-line",
+    "a full-real-lapse group average, regulator theorem for arbitrary states or physical inner product",
+    "nonzero BFV trajectory modes, an absolute path measure, old-kernel equivalence or global cycle",
+    "physics, an observable prediction or a TOE claim"
+  ],
+  "numbered_phase": null,
+  "numerical_calculation": {
+    "epsilon_values": [
+      "0.2000000000000000000000000000000000000000",
+      "0.05000000000000000000000000000000000000000",
+      "0.01000000000000000000000000000000000000000"
+    ],
+    "ode_calls": 0,
+    "precision_digits": 80,
+    "quadratures": 36,
+    "regulator_records": [
+      {
+        "column": 0,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.310086836473021140475638970396298889659015242523406668766792",
+        "observed": "0.310086836473021140475638970396298889659015242523406668766792",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 0
+      },
+      {
+        "column": 1,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.0602584605051822700000148645866849225963843467236762353464559",
+        "observed": "0.0602584605051822700000148645866849225963843467236762353464559",
+        "passed": true,
+        "relative_error": "1.09343545442094877946277e-81",
+        "row": 0
+      },
+      {
+        "column": 2,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.0152484386398208309274122599412515654624033224158554061451518",
+        "observed": "0.0152484386398208309274122599412515654624033224158554061451518",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 0
+      },
+      {
+        "column": 0,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.0602584605051822700000148645866849225963843467236762353464559",
+        "observed": "0.0602584605051822700000148645866849225963843467236762353464559",
+        "passed": true,
+        "relative_error": "1.09343545442094877946277e-81",
+        "row": 1
+      },
+      {
+        "column": 1,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.0152484386398208309274122599412515654624033224158554061451518",
+        "observed": "0.0152484386398208309274122599412515654624033224158554061451518",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 2,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.00429325051679959621710561344396405037204598725045412939060012",
+        "observed": "0.00429325051679959621710561344396405037204598725045412939060012",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 0,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.0152484386398208309274122599412515654624033224158554061451518",
+        "observed": "0.0152484386398208309274122599412515654624033224158554061451518",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 1,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.00429325051679959621710561344396405037204598725045412939060012",
+        "observed": "0.00429325051679959621710561344396405037204598725045412939060012",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 2,
+        "epsilon": "0.2000000000000000000000000000000000000000",
+        "epsilon_index": 1,
+        "expected": "0.00128156604712561680290849734252645892426834316784310706173610",
+        "observed": "0.00128156604712561680290849734252645892426834316784310706173610",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 0,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.422577127364258288754809163682972646315392945056738594491409",
+        "observed": "0.422577127364258288754809163682972646315392945056738594491409",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 0
+      },
+      {
+        "column": 1,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.0878410461157883147777470429009088481588765316479226896349307",
+        "observed": "0.0878410461157883147777470429009088481588765316479226896349307",
+        "passed": true,
+        "relative_error": "1.50018106702279140314775e-81",
+        "row": 0
+      },
+      {
+        "column": 2,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.0232923747656228093375955590492841274525064412459533929611552",
+        "observed": "0.0232923747656228093375955590492841274525064412459533929611552",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 0
+      },
+      {
+        "column": 0,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.0878410461157883147777470429009088481588765316479226896349307",
+        "observed": "0.0878410461157883147777470429009088481588765316479226896349307",
+        "passed": true,
+        "relative_error": "1.50018106702279140314775e-81",
+        "row": 1
+      },
+      {
+        "column": 1,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.0232923747656228093375955590492841274525064412459533929611552",
+        "observed": "0.0232923747656228093375955590492841274525064412459533929611552",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 2,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.00678822509939085623424810587620655077713442500180935075124806",
+        "observed": "0.00678822509939085623424810587620655077713442500180935075124806",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 0,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.0232923747656228093375955590492841274525064412459533929611552",
+        "observed": "0.0232923747656228093375955590492841274525064412459533929611552",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 1,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.00678822509939085623424810587620655077713442500180935075124806",
+        "observed": "0.00678822509939085623424810587620655077713442500180935075124806",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 2,
+        "epsilon": "0.05000000000000000000000000000000000000000",
+        "epsilon_index": 2,
+        "expected": "0.00208086377303469779705706998900132240768235250255260987618760",
+        "observed": "0.00208086377303469779705706998900132240768235250255260987618760",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 0,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.481125224324688137090957317084964546373001459391772396682169",
+        "observed": "0.481125224324688137090957317084964546373001459391772396682169",
+        "passed": true,
+        "relative_error": "1.09557734766740309829245e-81",
+        "row": 0
+      },
+      {
+        "column": 1,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.104990131391452007559587926731716683559930919963589292871759",
+        "observed": "0.104990131391452007559587926731716683559930919963589292871759",
+        "passed": true,
+        "relative_error": "1.25514153134120642338685e-81",
+        "row": 0
+      },
+      {
+        "column": 2,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.0290148965901643536166525349759716032127969836295516639961228",
+        "observed": "0.0290148965901643536166525349759716032127969836295516639961228",
+        "passed": true,
+        "relative_error": "1.13542946707461531355131e-81",
+        "row": 0
+      },
+      {
+        "column": 0,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.104990131391452007559587926731716683559930919963589292871759",
+        "observed": "0.104990131391452007559587926731716683559930919963589292871759",
+        "passed": true,
+        "relative_error": "1.25514153134120642338685e-81",
+        "row": 1
+      },
+      {
+        "column": 1,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.0290148965901643536166525349759716032127969836295516639961228",
+        "observed": "0.0290148965901643536166525349759716032127969836295516639961228",
+        "passed": true,
+        "relative_error": "1.13542946707461531355131e-81",
+        "row": 1
+      },
+      {
+        "column": 2,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.00876356092008265781531151652481283414324391511996773206763031",
+        "observed": "0.00876356092008265781531151652481283414324391511996773206763031",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 0,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.0290148965901643536166525349759716032127969836295516639961228",
+        "observed": "0.0290148965901643536166525349759716032127969836295516639961228",
+        "passed": true,
+        "relative_error": "1.13542946707461531355131e-81",
+        "row": 2
+      },
+      {
+        "column": 1,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.00876356092008265781531151652481283414324391511996773206763031",
+        "observed": "0.00876356092008265781531151652481283414324391511996773206763031",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 2,
+        "epsilon": "0.01000000000000000000000000000000000000000",
+        "epsilon_index": 3,
+        "expected": "0.00277168675967245217150511315159226877761668328234289839902849",
+        "observed": "0.00277168675967245217150511315159226877761668328234289839902849",
+        "passed": true,
+        "relative_error": "2.97150899696982987656686e-81",
+        "row": 2
+      }
+    ],
+    "root_calls": 0,
+    "sampled_regulator_monotone": true,
+    "sampled_regulator_monotonicity_passed": true,
+    "static_records": [
+      {
+        "column": 0,
+        "expected": "0.500000000000000000000000000000000000000000000000000000000000",
+        "observed": "0.500000000000000000000000000000000000000000000000000000000000",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 0
+      },
+      {
+        "column": 1,
+        "expected": "0.111111111111111111111111111111111111111111111111111111111111",
+        "observed": "0.111111111111111111111111111111111111111111111111111111111111",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 0
+      },
+      {
+        "column": 2,
+        "expected": "0.0312500000000000000000000000000000000000000000000000000000000",
+        "observed": "0.0312500000000000000000000000000000000000000000000000000000000",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 0
+      },
+      {
+        "column": 0,
+        "expected": "0.111111111111111111111111111111111111111111111111111111111111",
+        "observed": "0.111111111111111111111111111111111111111111111111111111111111",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 1,
+        "expected": "0.0312500000000000000000000000000000000000000000000000000000000",
+        "observed": "0.0312500000000000000000000000000000000000000000000000000000000",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 2,
+        "expected": "0.00960000000000000000000000000000000000000000000000000000000000",
+        "observed": "0.00960000000000000000000000000000000000000000000000000000000000",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 1
+      },
+      {
+        "column": 0,
+        "expected": "0.0312500000000000000000000000000000000000000000000000000000000",
+        "observed": "0.0312500000000000000000000000000000000000000000000000000000000",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 1,
+        "expected": "0.00960000000000000000000000000000000000000000000000000000000000",
+        "observed": "0.00960000000000000000000000000000000000000000000000000000000000",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      },
+      {
+        "column": 2,
+        "expected": "0.00308641975308641975308641975308641975308641975308641975308642",
+        "observed": "0.00308641975308641975308641975308641975308641975308641975308642",
+        "passed": true,
+        "relative_error": "0.0",
+        "row": 2
+      }
+    ]
+  },
+  "numerical_checks": [
+    {
+      "column": 0,
+      "expected": "0.500000000000000000000000000000000000000000000000000000000000",
+      "id": "G1.pairing.static.p_quadrature_0_0",
+      "observed": "0.500000000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 1,
+      "expected": "0.111111111111111111111111111111111111111111111111111111111111",
+      "id": "G1.pairing.static.p_quadrature_0_1",
+      "observed": "0.111111111111111111111111111111111111111111111111111111111111",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 2,
+      "expected": "0.0312500000000000000000000000000000000000000000000000000000000",
+      "id": "G1.pairing.static.p_quadrature_0_2",
+      "observed": "0.0312500000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 0,
+      "expected": "0.111111111111111111111111111111111111111111111111111111111111",
+      "id": "G1.pairing.static.p_quadrature_1_0",
+      "observed": "0.111111111111111111111111111111111111111111111111111111111111",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 1,
+      "expected": "0.0312500000000000000000000000000000000000000000000000000000000",
+      "id": "G1.pairing.static.p_quadrature_1_1",
+      "observed": "0.0312500000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 2,
+      "expected": "0.00960000000000000000000000000000000000000000000000000000000000",
+      "id": "G1.pairing.static.p_quadrature_1_2",
+      "observed": "0.00960000000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 0,
+      "expected": "0.0312500000000000000000000000000000000000000000000000000000000",
+      "id": "G1.pairing.static.p_quadrature_2_0",
+      "observed": "0.0312500000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 1,
+      "expected": "0.00960000000000000000000000000000000000000000000000000000000000",
+      "id": "G1.pairing.static.p_quadrature_2_1",
+      "observed": "0.00960000000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 2,
+      "expected": "0.00308641975308641975308641975308641975308641975308641975308642",
+      "id": "G1.pairing.static.p_quadrature_2_2",
+      "observed": "0.00308641975308641975308641975308641975308641975308641975308642",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "direct p>0 quadrature matches the exact frozen static matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.18991316352697885952436102960370111034098475747659",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.310086836473021140475638970396298889659015242523406668766792",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_0_0",
+      "observed": "0.310086836473021140475638970396298889659015242523406668766792",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.050852650605928841111096246524426188514726764387435",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.0602584605051822700000148645866849225963843467236762353464559",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_0_1",
+      "observed": "0.0602584605051822700000148645866849225963843467236762353464559",
+      "passed": true,
+      "relative_error": "1.09343545442094877946277e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.016001561360179169072587740058748434537596677584145",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.0152484386398208309274122599412515654624033224158554061451518",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_0_2",
+      "observed": "0.0152484386398208309274122599412515654624033224158554061451518",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.050852650605928841111096246524426188514726764387435",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.0602584605051822700000148645866849225963843467236762353464559",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_1_0",
+      "observed": "0.0602584605051822700000148645866849225963843467236762353464559",
+      "passed": true,
+      "relative_error": "1.09343545442094877946277e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.016001561360179169072587740058748434537596677584145",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.0152484386398208309274122599412515654624033224158554061451518",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_1_1",
+      "observed": "0.0152484386398208309274122599412515654624033224158554061451518",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.0053067494832004037828943865560359496279540127495459",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.00429325051679959621710561344396405037204598725045412939060012",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_1_2",
+      "observed": "0.00429325051679959621710561344396405037204598725045412939060012",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.016001561360179169072587740058748434537596677584145",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.0152484386398208309274122599412515654624033224158554061451518",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_2_0",
+      "observed": "0.0152484386398208309274122599412515654624033224158554061451518",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.0053067494832004037828943865560359496279540127495459",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.00429325051679959621710561344396405037204598725045412939060012",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_2_1",
+      "observed": "0.00429325051679959621710561344396405037204598725045412939060012",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.0018048537059608029501779224105599608288180765852433",
+      "epsilon": "0.2000000000000000000000000000000000000000",
+      "expected": "0.00128156604712561680290849734252645892426834316784310706173610",
+      "id": "G1.pairing.spectral.regulator_quadrature_1_2_2",
+      "observed": "0.00128156604712561680290849734252645892426834316784310706173610",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.077422872635741711245190836317027353684607054943261",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.422577127364258288754809163682972646315392945056738594491409",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_0_0",
+      "observed": "0.422577127364258288754809163682972646315392945056738594491409",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.023270064995322796333364068210202262952234579463188",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.0878410461157883147777470429009088481588765316479226896349307",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_0_1",
+      "observed": "0.0878410461157883147777470429009088481588765316479226896349307",
+      "passed": true,
+      "relative_error": "1.50018106702279140314775e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.0079576252343771906624044409507158725474935587540466",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.0232923747656228093375955590492841274525064412459533929611552",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_0_2",
+      "observed": "0.0232923747656228093375955590492841274525064412459533929611552",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.023270064995322796333364068210202262952234579463188",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.0878410461157883147777470429009088481588765316479226896349307",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_1_0",
+      "observed": "0.0878410461157883147777470429009088481588765316479226896349307",
+      "passed": true,
+      "relative_error": "1.50018106702279140314775e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.0079576252343771906624044409507158725474935587540466",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.0232923747656228093375955590492841274525064412459533929611552",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_1_1",
+      "observed": "0.0232923747656228093375955590492841274525064412459533929611552",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.0028117749006091437657518941237934492228655749981906",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.00678822509939085623424810587620655077713442500180935075124806",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_1_2",
+      "observed": "0.00678822509939085623424810587620655077713442500180935075124806",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.0079576252343771906624044409507158725474935587540466",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.0232923747656228093375955590492841274525064412459533929611552",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_2_0",
+      "observed": "0.0232923747656228093375955590492841274525064412459533929611552",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.0028117749006091437657518941237934492228655749981906",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.00678822509939085623424810587620655077713442500180935075124806",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_2_1",
+      "observed": "0.00678822509939085623424810587620655077713442500180935075124806",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.0010055559800517219560293497640850973454040672505338",
+      "epsilon": "0.05000000000000000000000000000000000000000",
+      "expected": "0.00208086377303469779705706998900132240768235250255260987618760",
+      "id": "G1.pairing.spectral.regulator_quadrature_2_2_2",
+      "observed": "0.00208086377303469779705706998900132240768235250255260987618760",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.018874775675311862909042682915035453626998540608228",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.481125224324688137090957317084964546373001459391772396682169",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_0_0",
+      "observed": "0.481125224324688137090957317084964546373001459391772396682169",
+      "passed": true,
+      "relative_error": "1.09557734766740309829245e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.0061209797196591035515231843793944275511801911475218",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.104990131391452007559587926731716683559930919963589292871759",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_0_1",
+      "observed": "0.104990131391452007559587926731716683559930919963589292871759",
+      "passed": true,
+      "relative_error": "1.25514153134120642338685e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.0022351034098356463833474650240283967872030163704483",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.0290148965901643536166525349759716032127969836295516639961228",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_0_2",
+      "observed": "0.0290148965901643536166525349759716032127969836295516639961228",
+      "passed": true,
+      "relative_error": "1.13542946707461531355131e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 0,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.0061209797196591035515231843793944275511801911475218",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.104990131391452007559587926731716683559930919963589292871759",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_1_0",
+      "observed": "0.104990131391452007559587926731716683559930919963589292871759",
+      "passed": true,
+      "relative_error": "1.25514153134120642338685e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.0022351034098356463833474650240283967872030163704483",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.0290148965901643536166525349759716032127969836295516639961228",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_1_1",
+      "observed": "0.0290148965901643536166525349759716032127969836295516639961228",
+      "passed": true,
+      "relative_error": "1.13542946707461531355131e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.00083643907991734218468848347518716585675608488003227",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.00876356092008265781531151652481283414324391511996773206763031",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_1_2",
+      "observed": "0.00876356092008265781531151652481283414324391511996773206763031",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 1,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 0,
+      "distance_to_static": "0.0022351034098356463833474650240283967872030163704483",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.0290148965901643536166525349759716032127969836295516639961228",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_2_0",
+      "observed": "0.0290148965901643536166525349759716032127969836295516639961228",
+      "passed": true,
+      "relative_error": "1.13542946707461531355131e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 1,
+      "distance_to_static": "0.00083643907991734218468848347518716585675608488003227",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.00876356092008265781531151652481283414324391511996773206763031",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_2_1",
+      "observed": "0.00876356092008265781531151652481283414324391511996773206763031",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    },
+    {
+      "column": 2,
+      "distance_to_static": "0.00031473299341396758158130660149415097546973647074352",
+      "epsilon": "0.01000000000000000000000000000000000000000",
+      "expected": "0.00277168675967245217150511315159226877761668328234289839902849",
+      "id": "G1.pairing.spectral.regulator_quadrature_3_2_2",
+      "observed": "0.00277168675967245217150511315159226877761668328234289839902849",
+      "passed": true,
+      "relative_error": "2.97150899696982987656686e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "row": 2,
+      "statement": "independent c-line Gaussian regulator quadrature times the p>0 integral matches the exact regulated matrix entry"
+    }
+  ],
+  "programme_impact": "CLOSE_FROZEN_ORDER_ZERO_PAIRING_ONLY",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "automatic_next": null,
+    "exact_endpoint_state_transform": null,
+    "full_bfv_trajectory_measure": null,
+    "full_real_lapse_delta_C": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_n_sigma": null,
+    "global_promotion": "PROHIBITED",
+    "old_fixed_a_kernel_equivalence": null,
+    "physical_inner_product": null,
+    "physical_original_cycle": null,
+    "physics_claim": null,
+    "selected_subprincipal_symbol": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "ode_calls": 0,
+    "quadratures": 36,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "820ce5fd01c1655a6e38c18e529be5f495e61f11490582a0cee84b491c0516b6",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_static_spectral_pairing.py",
+    "sha256": "6f1c92b0460ea6d2fc94b92eb6caf05a0192788e9fc8310c950c09d0077abcc4"
+  },
+  "schema_version": "ice.gate1.v0-static-spectral-pairing.result.v1",
+  "theorem_guards": [
+    {
+      "domain": "the hash-pinned Pi,T,N,c and odd orientation with no nonzero trajectory modes",
+      "id": "G1.pairing.guard.static_source_scope",
+      "statement": "delta(c) is inserted once through the N zero-mode contraction; this calculation does not append a second delta or construct a two-endpoint path kernel",
+      "theorem": "declared finite zero-mode Fourier/Berezin contraction",
+      "verified": true
+    },
+    {
+      "domain": "the frozen smooth states on R_c times R_{+,p} and the order-zero delta(c) distribution",
+      "id": "G1.pairing.guard.order_zero_spectral_scope",
+      "statement": "agreement is a finite test-form compatibility result, not E({0}), a bounded projector, arbitrary-state regulator theorem or physical group average",
+      "theorem": "spectral direct-integral evaluation for M_c",
+      "verified": true
+    },
+    {
+      "domain": "all p integrations run from zero to infinity and no p<0 state is imported",
+      "id": "G1.pairing.guard.p_positive_only",
+      "statement": "the result does not establish a Phi identity kernel or a self-adjoint half-line coordinate generator",
+      "theorem": "U_plus component restriction",
+      "verified": true
+    },
+    {
+      "domain": "V_kappa(0,p)=1",
+      "id": "G1.pairing.guard.endpoint_nonuniqueness_survives",
+      "statement": "a KEEP here cannot select an exact endpoint transform or its lower symbol",
+      "theorem": "off-shell unitary freedom equal to one on the shell",
+      "verified": true
+    }
+  ],
+  "upstream_provenance": [
+    {
+      "contract": {
+        "bosonic_pairing_matrix": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "fourier_measures": [
+          "dPi/(2*pi*hbar)",
+          "dN/(2*pi*hbar)"
+        ],
+        "kind": "static_zero_mode",
+        "local_source": "delta(T)*delta(c) with normalized oriented ghost zero-mode factor +1",
+        "normalized_berezin_factor": "1"
+      },
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA"
+    },
+    {
+      "contract": {
+        "E_singleton_zero": true,
+        "delta_is_bounded_projector": false,
+        "form": "eta_0(psi,varphi)=int_0^infinity dp conjugate(psi(0,p))*varphi(0,p)",
+        "kind": "spectral_zero_fiber"
+      },
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json",
+      "payload_sha256_without_self": "4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd",
+      "sha256": "4447980c687724f6160da35a2e985c59a4619e4aa2a4072b3cd78afbaad15f48",
+      "verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN"
+    },
+    {
+      "contract": {
+        "V_at_c_zero": "1",
+        "delta_Mc_form_changed": false,
+        "kind": "subprincipal_shell"
+      },
+      "path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_RESULT.json",
+      "payload_sha256_without_self": "e5520c2b1aa66c233c67a317e4191be2e8eb43f33ff75886ce7bd079259a7887",
+      "sha256": "5be03cf1d9c8796298d5d561fa77506d88b8063409226e837693c001feaaff2f",
+      "verdict": "KILL_UNIQUENESS_FROM_DECLARED_B_A0_HD_MC_DATA"
+    }
+  ],
+  "verdict": "KEEP_V0_LOCAL_STATIC_ZERO_MODE_SPECTRAL_PAIRING_COMPATIBILITY"
+}
