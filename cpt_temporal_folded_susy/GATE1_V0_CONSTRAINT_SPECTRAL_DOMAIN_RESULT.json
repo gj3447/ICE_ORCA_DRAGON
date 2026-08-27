@@ -1,0 +1,222 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1V0ConstraintSpectralDomain",
+  "classification": "GATE1_V0_LOCAL_SELF_ADJOINT_MULTIPLICATION_CONSTRAINT_AND_DISTRIBUTIONAL_ZERO_FIBER_KEEP_ORIGINAL_ORDERING_AND_PHYSICAL_MEASURE_OPEN",
+  "computed_scope": [
+    "one local Hilbert measure convention on the U_plus Darboux momentum base",
+    "the maximal self-adjoint multiplication realization of the constraint coordinate c",
+    "its PVM and a dense rigged test-space zero-fiber sesquilinear form",
+    "the p>0 branch and distributional-projector scope boundaries"
+  ],
+  "decision_trace": {
+    "matched_predeclared_condition": "the upstream component and FIO boundary are exact; the maximal real multiplication operator, resolvent, PVM and rigged zero-fiber form are internally consistent",
+    "primary_source_boundary": "RAQ sources frame distributional constraint forms; all model-specific operator and test calculations are repository workbench results",
+    "scope_meaning": "one declared local U_plus Darboux momentum representation only"
+  },
+  "environment": {
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "flags": {
+      "maximal_domain_witnesses": true,
+      "p_positive_scope": true,
+      "pvm_boolean_algebra": true,
+      "real_multiplier": true,
+      "resolvent_bound": true,
+      "resolvent_identity": true,
+      "singleton_projection_distinction": true,
+      "zero_fiber_test_form": true
+    },
+    "half_line_boundary": {
+      "abel_regularized_positive_p_kernel": "1/(2*pi*hbar*(-I*displacement/hbar + epsilon))",
+      "component": "p>0",
+      "full_p_fourier_identity_imported": false,
+      "odd_part": "I*displacement/(pi*(displacement**2 + epsilon**2*hbar**2))",
+      "self_adjoint_Phi_edge_completion": null
+    },
+    "hilbert_representation": {
+      "action": "(M_c psi)(c,p)=c*psi(c,p)",
+      "base": "X_plus=R_c times R_{+,p}",
+      "constraint_operator": "M_c",
+      "hilbert_space": "L2(X_plus,dc*dp)",
+      "maximal_domain": "{psi in L2: c*psi in L2}",
+      "measure": "dc*dp",
+      "measure_status": "DECLARED_LOCAL_KINEMATICAL_LEBESGUE_HALF_DENSITY",
+      "ordering_status": "EXACT_MULTIPLICATION_ONLY_IN_THIS_REPRESENTATION",
+      "pvm": "E(Delta)=multiplication by 1_Delta(c)",
+      "resolvent": "1/(c - x - I*y)",
+      "resolvent_modulus_denominator": "-(-c + x + I*y)*(c - x + I*y)",
+      "self_adjoint": true,
+      "spectrum": "R"
+    },
+    "rigged_zero_fiber": {
+      "E_singleton_zero": true,
+      "delta_Mc_is_bounded_projector": false,
+      "eta_0_test_norm": "1/2",
+      "form": "eta_0(psi,varphi)=int_0^infinity dp conjugate(psi(0,p))*varphi(0,p)",
+      "frozen_test": "exp(-c^2)*exp(-p)",
+      "kinematical_norm_squared": "sqrt(2)*sqrt(pi)/4",
+      "physical_inner_product": null,
+      "test_space": "S(R_c) completed_tensor S(R_{+,p})"
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.spectral.operator.real_multiplier",
+      "passed": true,
+      "statement": "the Darboux constraint coordinate c is real on the declared momentum base"
+    },
+    {
+      "id": "G1.spectral.operator.resolvent_identity",
+      "passed": true,
+      "statement": "the candidate resolvent multiplier satisfies (M_c-z)R_z=I for Im(z)>0"
+    },
+    {
+      "id": "G1.spectral.operator.resolvent_bound",
+      "passed": true,
+      "statement": "|c-z|^2-(Im z)^2=(c-Re z)^2; real-square nonnegativity then gives ||R_z||<=1/|Im z|"
+    },
+    {
+      "id": "G1.spectral.operator.maximal_domain_witnesses",
+      "passed": true,
+      "statement": "the explicit tensors f_m=c^m*exp(-c^2)*exp(-p), m=0,1,2, obey both f_m in L2(X_plus) and c*f_m in L2(X_plus)"
+    },
+    {
+      "id": "G1.spectral.pvm.boolean_algebra",
+      "passed": true,
+      "statement": "indicator multiplication obeys E(A)^2=E(A), E(A)E(B)=E(A intersection B), and E(A)E(A^c)=0"
+    },
+    {
+      "id": "G1.spectral.rigging.zero_fiber_witness",
+      "passed": true,
+      "statement": "a frozen smooth rapidly decreasing half-line test has finite kinematical norm and nonzero eta_0=1/2"
+    },
+    {
+      "id": "G1.spectral.rigging.singleton_not_delta",
+      "passed": true,
+      "statement": "the c-Lebesgue singleton has measure zero, so E({0}) is the zero Hilbert projection while the frozen delta(M_c) test-space form is nonzero"
+    },
+    {
+      "id": "G1.spectral.branch.half_line_fourier_not_identity",
+      "passed": true,
+      "statement": "the Abel-regulated p>0 Fourier kernel has a nonzero odd imaginary part and is not the full-line delta(Phi_2-Phi_1) identity"
+    }
+  ],
+  "frozen_input_contract": {
+    "decision_table": [
+      {
+        "condition": "the upstream component and FIO boundary are exact; the maximal real multiplication operator, resolvent, PVM and rigged zero-fiber form are internally consistent",
+        "meaning": "keep one declared local kinematical representation and its self-adjoint multiplication constraint; original-variable ordering, endpoint-transform existence, physical measure and global completion remain open",
+        "programme_impact": "CLOSE_LOCAL_DARBOUX_REPRESENTATION_DOMAIN_ONLY",
+        "verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN"
+      },
+      {
+        "condition": "the resolvent identity/bound, reality, maximal-domain or PVM checks fail",
+        "meaning": "reject this local operator realization without changing the classical Darboux result",
+        "programme_impact": "RETAIN_CLASSICAL_CHART_ONLY",
+        "verdict": "KILL_V0_DECLARED_CONSTRAINT_SPECTRAL_REPRESENTATION"
+      },
+      {
+        "condition": "the representation silently imports p<0 or calls the full-p Fourier identity an U_plus spectral identity",
+        "meaning": "reject the branch-doubling shortcut",
+        "programme_impact": "RETAIN_LOCAL_MULTIPLICATION_FACTS_WITHOUT_THE_MUTATED_IDENTITY",
+        "verdict": "KILL_HALF_LINE_SCOPE_MUTATION"
+      }
+    ],
+    "epistemic_scope": "ONE_DECLARED_LOCAL_UPLUS_MOMENTUM_REPRESENTATION_NOT_AN_ORIGINAL_VARIABLE_ORDERING_NOT_A_GLOBAL_HILBERT_SPACE_NOT_A_PHYSICAL_INNER_PRODUCT",
+    "kind": "EXACT_LOCAL_DARBOUX_MOMENTUM_HILBERT_MEASURE_ORDERING_MAXIMAL_MULTIPLICATION_DOMAIN_AND_ZERO_FIBER_SPECTRAL_CONTROL",
+    "question": "On the declared closed-FRW V=0 U_plus Darboux momentum base X_plus=R_c times R_{+,p}, does the local Lebesgue half-density convention define a Hilbert representation in which C-hat is the self-adjoint maximal multiplication operator M_c, with an explicit PVM and a distributional zero-fiber pairing on a dense rigged test space?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_INPUTS.json",
+    "sha256": "c4c94665703a8bcc5877ceaed9da92afea2f7feb6cd4f550fa41139eee4e8287"
+  },
+  "not_computed": [
+    "an exact normalized endpoint transform from the old momentum or coordinate polarization",
+    "an ordering, self-adjoint extension or edge condition for the original closed-FRW constraint",
+    "a self-adjoint Phi generator across the p=0 half-line edge or a p<0 branch completion",
+    "a physical inner product, full-real-lapse group average, full BFV path measure or old-kernel equivalence",
+    "a global Darboux atlas, Gribov census, physical cycle, physics claim or TOE claim"
+  ],
+  "numbered_phase": null,
+  "numerical_checks": [],
+  "programme_impact": "CLOSE_LOCAL_DARBOUX_REPRESENTATION_DOMAIN_ONLY",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "automatic_next": null,
+    "exact_endpoint_state_transform": null,
+    "full_bfv_trajectory_measure": null,
+    "full_real_lapse_delta_C": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_n_sigma": null,
+    "global_promotion": "PROHIBITED",
+    "original_variable_constraint_ordering": null,
+    "physical_inner_product": null,
+    "physical_original_cycle": null,
+    "physics_claim": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "ode_calls": 0,
+    "quadratures": 0,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_constraint_spectral_domain.py",
+    "sha256": "9f82cbc06bb4d90888897fdc3ecc1c7ff537424a1a304015ad2d4f579e387640"
+  },
+  "schema_version": "ice.gate1.v0-constraint-spectral-domain.result.v1",
+  "theorem_guards": [
+    {
+      "conclusion_and_scope": "M_c is self-adjoint, has spectrum R and PVM E(Delta)=M_{1_Delta(c)} on this declared local Hilbert space only",
+      "hypotheses": "sigma-finite Lebesgue X_plus, real measurable multiplier c, maximal domain c*psi in L2, real-square nonnegativity, and bounded everywhere-defined nonreal resolvents verified above",
+      "id": "G1.spectral.guard.maximal_real_multiplication_theorem",
+      "theorem": "maximal real multiplication-operator theorem",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "eta_0(psi,varphi)=int_0^infinity conjugate(psi(0,p))*varphi(0,p) dp is positive and distributional; it is not E({0}), a bounded projector, or by itself a physical inner product",
+      "hypotheses": "the standard half-line Schwartz restriction topology makes S(R_c) tensor S(R_+) dense, nuclear, invariant under multiplication by c, and continuous under c=0 evaluation",
+      "id": "G1.spectral.guard.rigged_zero_fiber",
+      "theorem": "spectral direct-integral fiber evaluation on a dense smooth test space",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "no original-(Q,P,phi,p) ordering, domain, edge condition or exact constraint diagonalization is inferred",
+      "hypotheses": "the upstream one-term FIO failed exact finite-hbar unitarity and supplies only a principal microlocal canonical relation",
+      "id": "G1.spectral.guard.no_original_ordering_transfer",
+      "theorem": "unitary equivalence is required to transfer an exact operator realization",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the previous separately declared full-p relational identity is not reused as an U_plus identity or as evidence for a self-adjoint Phi generator at p=0",
+      "hypotheses": "U_plus has p>0 and no branch doubling was supplied",
+      "id": "G1.spectral.guard.p_positive_component",
+      "theorem": "componentwise chart scope",
+      "verified": true
+    }
+  ],
+  "upstream_provenance": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json",
+      "payload_sha256_without_self": "38bfaee2fee30399bc3f1c16c17c0330bc97f6343306a9f5860d296b67a11cd5",
+      "sha256": "6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7",
+      "verdict": "KEEP_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json",
+      "payload_sha256_without_self": "f23c8fbd167b5041d7473cb69a05621768d44b95cd73aab02aaee0ea719bc5e7",
+      "sha256": "1a530b810c744b7108c915308f4d23e6329abb901780f76ac958922e62ed8eef",
+      "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY"
+    }
+  ],
+  "verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN"
+}
