@@ -42,6 +42,16 @@ it("maps the V0 principal endpoint FIO as a portable committed result", () => {
   )
 })
 
+it("maps the V0 improved-static BFV source as a portable committed result", () => {
+  const source = reproCases.find(
+    (entry) => entry.name === "gate1_v0_improved_static_bfv_source"
+  )
+  expect(source?.policy).toBe("portable")
+  expect(source?.output).toBe(
+    "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json"
+  )
+})
+
 layer(AppLayer)("reproduction manifest", (it) => {
   it.effect("maps every case to an adjacent tracked script and output", () =>
     Effect.gen(function* () {
