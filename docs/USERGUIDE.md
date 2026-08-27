@@ -37,13 +37,14 @@ Research claims are a separate catalog from runnable kernels. Inspect and valida
 ./ice ontology summary
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
+./ice ontology guide --graph igrueqft --path igrueqft-negative-result-to-open-theory
 ./ice ontology show legacy::claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL
 ./ice ontology trace cpt::claim:P17_FUNDAMENTAL_DOUBLED_SHEET_EXCHANGE_ALGEBRA --depth 2
 ```
 
-Use `--graph hypercomplex`, `--graph legacy`, or `--graph cpt` to restrict a query. A qualified ID such
+Use `--graph hypercomplex`, `--graph legacy`, `--graph cpt`, or `--graph igrueqft` to restrict a query. A qualified ID such
 as `legacy::claim:...` is unambiguous even when local IDs overlap. Cross-graph guide paths are
-navigation-only: the three graphs remain independent research or memory graphs, not automatic physics
+navigation-only: the four graphs remain independent research or memory graphs, not automatic physics
 verdicts or external-KG mutations.
 
 `./ice ontology validate` is the full integrity gate: it streams and hashes every tracked artifact,

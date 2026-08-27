@@ -3,15 +3,16 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-27T04:52:42Z`; 833 nodes, 2499 edges). Run and analytic-evidence details live in the
+`2026-08-27T06:31:04Z`; 903 nodes, 2670 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 189/189 stored hashes (181 artifacts and 8 policies).
+verifies 216/216 stored hashes (208 artifacts and 8 policies).
 
 ## Quick answers
 
 | Question | Current scoped answer | Trace |
 | --- | --- | --- |
+| What happened between the collar calculation and Phase 16? | Phases 11–14A produced scoped exact collar, rigid-interface, formal-WKB and compact-T3 charge controls. Phase 15A is only an invalid sequencing receipt and licenses no science. Its independently frozen Phase 15R repair found one bosonic-only parent, but no full off-shell single parent, inside a two-source census. | `reading-path:collar-admissibility-to-single-source-parent-and-tangency`; `evidence:p15a-sequence-breach`; `evidence:p15r-run-result` |
 | Did the bosonic parent work? | Yes, for the BGG `(X,T,Y)` velocity block after one endpoint removal. This does not include lapse or algebraic auxiliary constraints. | `claim:P16_BGG_BOSONIC_KINETIC_PARENT` |
 | Did the specified strict off-shell FLRW truncation work? | No. Exact clean-point witnesses give nonzero discarded `b_i` and spin-3/2 normal components. | `claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY` |
 | Does the scoped rolling clock preserve a nonzero SUSY parameter? | No on the declared `W=0`, `F=0`, nonzero-rate Lorentzian-real slice; the parameter map has rank two. This does not remove the underlying local gauge symmetry. | `claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY` |
@@ -675,6 +676,33 @@ Phase 56 consumes the sole Ragnarok closeout exception and closes without an off
 5. `open:p53-full-repaired-phase51-continuation-rerun` remains a scientific question but cannot be
    executed by reviving the killed reconciliation route. Gate 1 remains `OPEN_PARTIAL_PROGRESS`, global
    promotion is `PROHIBITED`, and physics/TOE claims remain null.
+
+## Historical Phase 11 → 15R bridge
+
+The graph now preserves the previously implicit lead-in to Phase 16 as one provenance-safe path:
+
+1. **Phase 11:** exact homogeneous quadratic collar classification. Strong preservation gives the
+   `so(1,2)` mixed block plus an arbitrary symmetric momentum-quadratic block; weak preservation adds
+   a dilation. The 4D SUGRA origin and observable map remain open.
+2. **Phase 12:** one declared collar reduces to an endpoint twist, and an engineered rigid N=1 wall
+   exists only with matched multiplet data. A boson-only completion is contradicted; a local-SUGRA
+   uplift is unconstructed.
+3. **Phase 13A:** the declared principal operator retains formal WKB phases, while two finite-algebra
+   branch-exchange surrogates fail. The committed erratum prevents these finite controls from being
+   promoted to a physical supercharge theorem.
+4. **Phase 14A:** the rolling-goldstino residual and compact-T3 spatial-boundary charge shortcuts fail.
+   The selected physical charge and literal branch-superpartner claim remain inconclusive because the
+   matter-SUGRA canonical bridge is absent.
+5. **Phase 15A:** the frozen artifact order was breached before a valid scientific observation. The
+   graph records this as procedural provenance only—no `k2`, tangency or parent-sign conclusion is
+   derived from it.
+6. **Phase 15R:** a fresh Hohl/Kallosh census independently repairs the scoped question: Kallosh gives
+   the only bosonic-sign match, but neither source gives both that sign and the required full off-shell
+   coverage. This is a two-source census result, not a literature-wide no-go.
+
+Continue through `reading-path:collar-admissibility-to-single-source-parent-and-tangency` to see how
+that valid census motivates, but does not predetermine, Phase 16's independent BGG bosonic-parent and
+strict-tangency tests. No node in this path promotes a calculation to a physics or TOE claim.
 
 ## Concept map
 
@@ -1375,7 +1403,12 @@ Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 
 | Phase | Executable | Report | Observed evidence |
 | --- | --- | --- | --- |
-| 15R | — | — | [`PHASE15R_RUN_RESULT.json`](../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json) |
+| 11 | [`phase11_collar_admissibility.py`](../../cpt_temporal_folded_susy/phase11_collar_admissibility.py) | [`PHASE11_COLLAR_ADMISSIBILITY.md`](../../cpt_temporal_folded_susy/PHASE11_COLLAR_ADMISSIBILITY.md) | historical exact assertions; no named result recorder |
+| 12 | [`phase12_boundary_twist_interface.py`](../../cpt_temporal_folded_susy/phase12_boundary_twist_interface.py) | [`PHASE12_BOUNDARY_TWIST_INTERFACE.md`](../../cpt_temporal_folded_susy/PHASE12_BOUNDARY_TWIST_INTERFACE.md) | report plus frozen historical contract |
+| 13A | [`phase13a_lorentzian_branch_supercharge.py`](../../cpt_temporal_folded_susy/phase13a_lorentzian_branch_supercharge.py) | [`PHASE13A_LORENTZIAN_BRANCH_SUPERCHARGE.md`](../../cpt_temporal_folded_susy/PHASE13A_LORENTZIAN_BRANCH_SUPERCHARGE.md) | [`PHASE13A_ADVERSARIAL_ERRATUM.json`](../../cpt_temporal_folded_susy/PHASE13A_ADVERSARIAL_ERRATUM.json) is the authoritative scope correction |
+| 14A | [`phase14a_chiral_clock_charge_first.py`](../../cpt_temporal_folded_susy/phase14a_chiral_clock_charge_first.py) | [`PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md`](../../cpt_temporal_folded_susy/PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md) | [`PHASE14A_RUN_RESULT.json`](../../cpt_temporal_folded_susy/PHASE14A_RUN_RESULT.json) |
+| 15A | no valid executable/result | provenance packets only | [`PHASE15A_SEQUENCE_BREACH.json`](../../cpt_temporal_folded_susy/PHASE15A_SEQUENCE_BREACH.json); procedural evidence, no science |
+| 15R | [`phase15r_parent_sign_reproduction.py`](../../cpt_temporal_folded_susy/phase15r_parent_sign_reproduction.py) | [`PHASE15R_PARENT_SIGN_REPAIR.md`](../../cpt_temporal_folded_susy/PHASE15R_PARENT_SIGN_REPAIR.md) | [`PHASE15R_RUN_RESULT.json`](../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json) · [`PHASE15R_REPLAY_RECEIPT.json`](../../cpt_temporal_folded_susy/PHASE15R_REPLAY_RECEIPT.json) |
 | 16 | [`phase16_bgg_single_source.py`](../../cpt_temporal_folded_susy/phase16_bgg_single_source.py) | [`PHASE16_BGG_SINGLE_SOURCE.md`](../../cpt_temporal_folded_susy/PHASE16_BGG_SINGLE_SOURCE.md) · [`PHASE16_BGG_SOURCE_NOTES.md`](../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) | [`phase16-result.json`](./evidence/phase16-result.json) |
 | 17 | [`phase17_time_line_fold_algebra.py`](../../cpt_temporal_folded_susy/phase17_time_line_fold_algebra.py) | [`PHASE17_TIME_LINE_FOLD_ALGEBRA.md`](../../cpt_temporal_folded_susy/PHASE17_TIME_LINE_FOLD_ALGEBRA.md) | [`phase17-result.json`](./evidence/phase17-result.json) |
 | 18 | [`phase18_gaussian_seam_spectrum.py`](../../cpt_temporal_folded_susy/phase18_gaussian_seam_spectrum.py) | [`PHASE18_GAUSSIAN_SEAM_SPECTRUM.md`](../../cpt_temporal_folded_susy/PHASE18_GAUSSIAN_SEAM_SPECTRUM.md) | [`phase18-result.json`](./evidence/phase18-result.json) |
@@ -1415,6 +1448,7 @@ Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 | Gate 1 trace-gauge FP admissibility (non-numbered) | [`gate1_trace_gauge_fp_admissibility.py`](../../cpt_temporal_folded_susy/gate1_trace_gauge_fp_admissibility.py) | [`GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_INPUTS.json) · [`GATE1_TRACE_GAUGE_FP_ADMISSIBILITY.md`](../../cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY.md) | [`gate1-trace-gauge-fp-admissibility-result.json`](./evidence/gate1-trace-gauge-fp-admissibility-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json) |
 | Gate 1 closed-FRW \(V=0\) trace endpoint action (non-numbered) | [`gate1_v0_trace_endpoint_completion.py`](../../cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py) | [`GATE1_V0_TRACE_ENDPOINT_COMPLETION_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION_INPUTS.json) · [`GATE1_V0_TRACE_ENDPOINT_COMPLETION.md`](../../cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION.md) | [`gate1-v0-trace-endpoint-action-result.json`](./evidence/gate1-v0-trace-endpoint-action-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_TRACE_ENDPOINT_COMPLETION_RESULT.json) |
 | Gate 1 closed-FRW \(V=0\) componentwise off-shell Darboux chart (non-numbered) | [`gate1_v0_offshell_darboux_chart.py`](../../cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart.py) | [`GATE1_V0_OFFSHELL_DARBOUX_CHART_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_INPUTS.json) · [`GATE1_V0_OFFSHELL_DARBOUX_CHART.md`](../../cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART.md) | [`gate1-v0-offshell-darboux-chart-result.json`](./evidence/gate1-v0-offshell-darboux-chart-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json) |
+| Gate 1 closed-FRW \(V=0\) principal endpoint FIO (non-numbered) | [`gate1_v0_principal_endpoint_fio.py`](../../cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio.py) | [`GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md`](../../cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md) | [`gate1-v0-principal-endpoint-fio-result.json`](./evidence/gate1-v0-principal-endpoint-fio-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -1450,8 +1484,10 @@ similarly numbered historical planning nodes were not reused. The recursive-audi
 five-gate policy add two separate repository-workflow lookups. Phases 44, 46, 47, 51, 52, and 53 add six
 further repository-local phase lookups. The invalid scalar zero-lapse control, finite bosonic
 single-lateral claim, unchanged-source trace-gauge append claim, and closed-FRW \(V=0\) local
-relational endpoint-action claim add four more local lookups, so there are thirty-six expected unresolved bridges in
-the current graph. The latter remain local because no authorized external UID or
+relational endpoint-action claim add four more local lookups. The later V0 Darboux, principal-FIO and
+one-term exact-unitarity nodes add three; the Phase 14A historical calculation and Phase 15A
+sequence-breach evidence add two. There are therefore 41 expected unresolved bridges in the current
+graph. They remain local because no authorized external UID or
 writer exists; no identity was invented for the roadmap.
 A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,
 review outcome, or KG ratification.

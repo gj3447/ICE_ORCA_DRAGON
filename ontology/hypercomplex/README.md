@@ -10,6 +10,8 @@
 ALGEBRAIC_STRUCTURE        = PARTIALLY_SUPPORTED
 PROJECTED_PHYSICS_MAPS     = CONTRADICTED_OR_INCONCLUSIVE
 LEGACY_METHOD_PORTABILITY  = MIXED
+CLAIM_B_FINITE_ROUTE       = KILLED_WITHIN_PREREGISTERED_SCOPE
+FULL_INFINITE_TOWER        = UNCONSTRUCTED
 STANDARD_MODEL_EMBEDDING   = NOT_ESTABLISHED
 ```
 
@@ -24,7 +26,15 @@ Cayley–Dickson multiplication
 │  ├─ annihilating pairs require an explicit sign/order convention
 │  ├─ 7 × 6 assessor orbit organization
 │  ├─ XOR/multiplication label regularity
-│  └─ finite associator/Jacobi/BV identities
+│  ├─ finite associator/Jacobi/BV identities
+│  └─ explicit S3 subgroup
+│     ├─ centralizes the computed 14D derivation space
+│     └─ preserves the recorded Wilmot eq-9 theta tensor
+├─ infinite-tower Claim B finite route
+│  ├─ n=5..7 nullity-distribution stability → contradicted
+│  ├─ n=4..7 associator-distribution stability → contradicted
+│  ├─ registered composite Cauchy decrease → contradicted
+│  └─ infinite measure/action/gravity map → still unconstructed
 └─ proposed physics map
    ├─ projected custodial closure       → contradicted
    ├─ basis-dependent Queue-03 threshold → quarantined
@@ -33,7 +43,7 @@ Cayley–Dickson multiplication
    └─ Standard Model or Higgs referent  → not established
 ```
 
-## Five reading paths
+## Seven reading paths
 
 1. **What the number 42 actually counts**
 
@@ -68,6 +78,25 @@ Cayley–Dickson multiplication
    Queue 09's explicit S3 computation survives, while the older “Wilmot refuted” prose was later
    withdrawn. Queue 03 is deliberately `NONPORTABLE_FAIL`, not a successful reproduction.
 
+6. **What the later S3 audits add—and do not add**
+
+   The direct-action calculation reconstructs a 14-dimensional numerical derivation space and finds
+   that conjugation by the explicit sigma and Psi generators acts as the identity on that space within
+   (8.9\times10^{-16}). A separate two-convention calculation aligns the transcribed Wilmot eq-9
+   theta tensor with the alternating structure constants up to a global sign and finds sigma/Psi
+   preservation residuals (0) and (2.78\times10^{-17}). These are finite scoped results. They do not
+   prove completeness of `Aut(S)`, integrate every component, or implement Wilmot's cross-primary
+   realization.
+
+7. **Why the finite Claim B route is sealed without becoming a universal no-go**
+
+   The preregistered loop records total-variation distances (0.476190) and (0.488189) for the
+   (n=5,6,7) nullity distributions, consecutive associator-distribution KS statistics (0.1484),
+   (0.1072), and (0.1036), and a failed composite Cauchy-decreasing predicate. That kills the
+   registered finite statistical-stability route. It does not define the infinite-dimensional limit,
+   path-space measure, action, renormalization, or gravity observable, nor prove that every alternative
+   completion is impossible.
+
 ## Quick answers
 
 - **Are there 42 Higgs particles?** No. The robust finite count is 42 assessor planes in seven
@@ -78,8 +107,12 @@ Cayley–Dickson multiplication
   space.
 - **Was g2 established inside the sedenions?** The original projected construction is a method
   artifact. The later rank-14 sidecar remains incomplete.
-- **Was an S3 subgroup computed?** Yes, within the fixed Cayley–Dickson convention. That does not refute
-  Wilmot or explain three particle generations.
+- **Was an S3 subgroup computed?** Yes. Its recorded action also centralizes the computed derivation
+  space and preserves the implemented theta tensor. This does not prove the full global automorphism
+  decomposition, refute Wilmot, or explain three particle generations.
+- **Did Claim B produce a stable infinite-tower limit?** No under the stored finite-level predicates.
+  The finite route is sealed, but the infinite object and physics map were never constructed by those
+  tests.
 
 ## Evidence discipline
 
@@ -105,6 +138,8 @@ The reproducibility ledger currently distinguishes:
 ./ice ontology guide --graph hypercomplex
 ./ice ontology show HYPER_ZD_ASSESSOR_ORBIT_CHAIN
 ./ice ontology trace HYPER_PROJECTED_SEDENION_G2_REPRESENTATION --depth 3
+./ice ontology guide --graph hypercomplex --path hyper-claimb-sealed-finite-route
+./ice ontology trace HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE --depth 2
 ```
 
 The machine record is [`graph.json`](./graph.json); source and result roles are listed in

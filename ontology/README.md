@@ -9,16 +9,23 @@
 | Hypercomplex hypothesis testbench | [Programme guide](./hypercomplex/README.md) | [Research graph](./hypercomplex/graph.json) | [Source inventory](./hypercomplex/references/source-inventory.md) |
 | Legacy predictions and narrative | [Programme guide](./legacy-predictions/README.md) | [Research graph](./legacy-predictions/graph.json) | [Source inventory](./legacy-predictions/references/source-inventory.md) |
 | CPT × Temporal-Folded SUSY | [Programme guide](./cpt-temporal-folded-susy/README.md) | [Research graph](./cpt-temporal-folded-susy/graph.json) | [Evidence guide](./cpt-temporal-folded-susy/references/evidence.md) · [Source inventory](./cpt-temporal-folded-susy/references/source-inventory.md) |
+| IG-RUEQFT locality audit | [Programme guide](./igrueqft-locality/README.md) | [Research graph](./igrueqft-locality/graph.json) | [Source inventory](./igrueqft-locality/references/source-inventory.md) |
 
 The [collection manifest](./collection.json) uses
 [`research-collection/v1`](./schema/research-collection-v1.schema.json); each independent graph uses
 [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 and non-numbered Gate-1 run snapshots use
 [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-27T04:52:42Z` collection update, the three graphs have 937 nodes, 2698 edges,
-and 235 claims: 139 supported, 91 contradicted, and 5 inconclusive. Validation verifies all 222 stored
-hashes (212 artifacts and 10 policies); 38 unresolved external bridges remain explicit warnings. The
-Phase 16–56 run
+At the recorded `2026-08-27T06:40:59Z` collection update, the four graphs have 1,045 nodes, 2,957 edges,
+and 263 claims: 149 supported, 103 contradicted, and 11 inconclusive. Validation verifies all 261 stored
+hashes (251 artifacts and 10 policies); 44 unresolved external bridges remain explicit warnings. The
+CPT graph now also hash-indexes the Phase 11–15R historical lead-in, with Phase 15A kept strictly as an
+invalid-sequence provenance break rather than scientific evidence. The independent IG-RUEQFT graph
+records one finite (N=64) free-U(1) locality oracle: its registered bulk-volume predicate is
+contradicted and the observed dephased entropy remains subvolume on the sampled sizes, while a general
+interacting/continuum verdict stays inconclusive. Neither result is a physics or TOE promotion.
+
+The Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343
 `PASS`, fourteen `FAIL`, and three
 `INCONCLUSIVE`. Phase 42 preserves one protocol-defined local
@@ -153,6 +160,10 @@ validation without reopening artifact payloads; intuitive lookup therefore does 
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph legacy --path legacy-preregistration-provenance
+./ice ontology guide --graph igrueqft --path igrueqft-negative-result-to-open-theory
+./ice ontology show igrueqft::claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL
+./ice ontology trace igrueqft::open:igrueqft-continuum-interacting-locality-discriminator --depth 2
+./ice ontology guide --graph cpt --path collar-admissibility-to-single-source-parent-and-tangency
 ./ice ontology guide --graph cpt --path gate1-anchor-through-kill-to-phase-locked-branch
 ./ice ontology show cpt::claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES
 ./ice ontology trace cpt::claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD --depth 2

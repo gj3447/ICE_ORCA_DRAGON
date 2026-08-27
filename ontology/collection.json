@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-27T05:21:55Z",
+  "updated_at_utc": "2026-08-27T06:40:59Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -17,13 +17,18 @@
       "coverage": "PARTIAL",
       "corpus_roots": [
         "research/hypercomplex",
-        "avenue3_decisive_test_2026-06-05"
+        "avenue3_decisive_test_2026-06-05",
+        "claimB_loop",
+        "aut_direct_product_test_2026-07-12",
+        "wilmot_theta_preservation_test_2026-07-12"
       ],
       "includes": [
         "representative finite Cayley-Dickson and sedenion structure claims",
         "projected closure, portability, toy-potential, g2, S3, and XOR verdicts",
         "selected Avenue-3 exact-count sources and report needed to disambiguate 42/84/168",
-        "selected audit and provenance artifacts needed to interpret those verdicts"
+        "selected audit and provenance artifacts needed to interpret those verdicts",
+        "ClaimB finite n=4-7 stability controls and the scoped infinite-tower boundary",
+        "direct S3 action and Wilmot theta-preservation calculations"
       ],
       "excludes": [
         "an exhaustive node for every historical result JSON",
@@ -63,7 +68,8 @@
         "cpt_temporal_folded_susy"
       ],
       "includes": [
-        "Phase 16-56 claims, evidence snapshots, scopes, policies, and open gates",
+        "Phase 11-56 claims, evidence snapshots or historical provenance pointers, scopes, policies, and open gates",
+        "the Phase 11-15R collar-to-interface-to-charge-to-parent lineage, including the Phase 15A invalid-sequence break",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
         "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, and the still-open full-symbol/ordering/domain/other-component/global-atlas/BFV/delta(C)-kernel/zero-lapse/full-joint boundary",
         "selected philosophy records as non-evidential artifacts"
@@ -73,12 +79,33 @@
         "a closed Gate 1 or a global Picard-Lefschetz coefficient",
         "a physics or TOE promotion"
       ]
+    },
+    {
+      "key": "igrueqft",
+      "graph_id": "research-graph:igrueqft-locality",
+      "path": "ontology/igrueqft-locality/graph.json",
+      "guide": "ontology/igrueqft-locality/README.md",
+      "entry_node": "programme:igrueqft-locality-audit",
+      "coverage": "DETAILED",
+      "corpus_roots": [
+        "igrueqft_locality_falsifier_2026-07-12"
+      ],
+      "includes": [
+        "one finite N=64 free-U(1) charge-dephasing locality oracle and its scoped negative result",
+        "hash-pinned producer, result, adversarial audit, and source-boundary report",
+        "the distinction between failure of the recorded bulk-locality shortcut and the still-open interacting continuum programme"
+      ],
+      "excludes": [
+        "a universal thermodynamic-limit theorem or complete proposal-specific action",
+        "general validation or refutation of every IG-RUEQFT realization",
+        "ICE equivalence, physics or TOE promotion, or external KG ratification"
+      ]
     }
   ],
   "quick_answers": [
     {
       "question": "Is ICE ORCA DRAGON one undifferentiated knowledge graph?",
-      "answer": "No. Hypercomplex algebra, legacy prediction/narrative history, and CPT temporal-folded SUSY remain independent research or memory graphs. This collection supplies only qualified navigation between them.",
+      "answer": "No. Hypercomplex algebra, legacy prediction/narrative history, CPT temporal-folded SUSY, and an independent IG-RUEQFT locality audit remain separate graphs. This collection supplies only qualified navigation between them.",
       "refs": [
         {
           "graph": "hypercomplex",
@@ -91,6 +118,10 @@
         {
           "graph": "cpt",
           "node": "programme:cpt-temporal-folded-susy"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "programme:igrueqft-locality-audit"
         }
       ]
     },
@@ -117,6 +148,24 @@
         {
           "graph": "hypercomplex",
           "node": "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS"
+        }
+      ]
+    },
+    {
+      "question": "Did the finite IG-RUEQFT locality oracle validate bulk locality?",
+      "answer": "No for the frozen N=64 free-U(1) charge-dephasing discriminator: the entropy ratios decrease rather than approaching the registered bulk-volume predicate. The same result does not refute all interacting or continuum IG-RUEQFT realizations.",
+      "refs": [
+        {
+          "graph": "igrueqft",
+          "node": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME"
         }
       ]
     },
@@ -212,7 +261,7 @@
     },
     {
       "question": "Has any of this been promoted into an external KG or a physics verdict?",
-      "answer": "No automatic promotion is claimed. Eight historical CPT UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 40 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
+      "answer": "No automatic promotion is claimed. Twelve exact or related legacy UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 44 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
       "refs": [
         {
           "graph": "hypercomplex",
@@ -225,6 +274,10 @@
         {
           "graph": "cpt",
           "node": "programme:cpt-temporal-folded-susy"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "programme:igrueqft-locality-audit"
         }
       ]
     }
@@ -232,8 +285,8 @@
   "reading_paths": [
     {
       "id": "collection-path:current-status-in-five-stops",
-      "title": "Current status in five stops",
-      "summary": "Read five independent status samples: finite algebra that survives, its interpretation boundary, a legacy null gate, the Phase-56 numbered-route stop, and the still-open Gate 1 problem. Distinct unnumbered calculations remain available under the generic bounded runtime; the order is navigation, not a shared evidence or gate chain.",
+      "title": "Current status overview",
+      "summary": "Read six independent status samples: finite algebra that survives, its interpretation boundary, a legacy null gate, a scoped IG-RUEQFT locality nonpass, the Phase-56 numbered-route stop, and the still-open Gate 1 problem. The order is navigation, not a shared evidence or gate chain.",
       "navigation_only": true,
       "stops": [
         {
@@ -250,6 +303,11 @@
           "graph": "legacy",
           "node": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
           "why": "The historical prediction belt fails its stored corrected gate"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL",
+          "why": "One finite free-U(1) bulk-locality shortcut fails without becoming a universal theory verdict"
         },
         {
           "graph": "cpt",
@@ -354,7 +412,7 @@
     {
       "id": "collection-path:open-problems-without-promotion",
       "title": "Open problems without automatic promotion",
-      "summary": "Three genuinely open lanes are retained without treating their coexistence as mutual support: an algebra-to-observable discriminator, a genuinely prior legacy test, and the original-cycle Gate 1 construction.",
+      "summary": "Four genuinely open lanes are retained without treating their coexistence as mutual support: an algebra-to-observable discriminator, a genuinely prior legacy test, the IG-RUEQFT interacting-continuum discriminator, and the original-cycle Gate 1 construction.",
       "navigation_only": true,
       "stops": [
         {
@@ -364,6 +422,10 @@
         {
           "graph": "legacy",
           "node": "open:legacy-genuine-preregistration-and-source-refresh"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "open:igrueqft-continuum-interacting-locality-discriminator"
         },
         {
           "graph": "cpt",
@@ -389,7 +451,7 @@
       "path": "cpt_temporal_folded_susy",
       "status": "INDEXED",
       "graph": "cpt",
-    "reason": "Phase 16-56 claim/evidence history and the bounded non-numbered Gate-1 lineage through the V0 local on-shell action, U_plus classical componentwise Darboux chart, compact-interior principal momentum FIO and uncorrected one-term exact-unitarity KILL are detailed; indexing is not a physics promotion, and the corrected full-symbol/domain, other-component/global-atlas, full BFV/delta(C) and physical-cycle boundary remains open."
+      "reason": "Phase 11-56 claim/evidence history is indexed, including historical artifact pointers for Phase 11-15R, the Phase 15A invalid-sequence boundary, and the bounded non-numbered Gate-1 lineage through the V0 local action, U_plus Darboux chart, principal momentum FIO and one-term exact-unitarity KILL. Indexing is not physics promotion; the full-symbol/domain, other-component/global-atlas, BFV/delta(C) and physical-cycle boundary remains open."
     },
     {
       "path": "docs",
@@ -398,13 +460,15 @@
     },
     {
       "path": "claimB_loop",
-      "status": "UNINDEXED",
-      "reason": "No programme graph currently claims systematic coverage of this focused research root."
+      "status": "PARTIAL",
+      "graph": "hypercomplex",
+      "reason": "The sealed finite n=4-7 nullity, associator and prediction-family ledgers plus their infinite-tower interpretation boundary are hash-indexed; this is not a continuum-gravity result."
     },
     {
       "path": "aut_direct_product_test_2026-07-12",
-      "status": "UNINDEXED",
-      "reason": "The named experiment is not yet represented as a programme graph."
+      "status": "PARTIAL",
+      "graph": "hypercomplex",
+      "reason": "The direct S3 action/centralizer calculation and producer are hash-indexed with the narrower subgroup-versus-full-automorphism distinction."
     },
     {
       "path": "avenue3_decisive_test_2026-06-05",
@@ -414,18 +478,20 @@
     },
     {
       "path": "igrueqft_locality_falsifier_2026-07-12",
-      "status": "UNINDEXED",
-      "reason": "The named experiment is not yet represented as a programme graph."
+      "status": "INDEXED",
+      "graph": "igrueqft",
+      "reason": "The complete two-file finite free-U(1) locality oracle is hash-indexed with selected scope reports; it is a scoped negative result, not a general theory verdict."
     },
     {
       "path": "wilmot_theta_preservation_test_2026-07-12",
-      "status": "UNINDEXED",
-      "reason": "Relevant interpretation corrections are indexed in hypercomplex, but this directory is not exhaustively represented."
+      "status": "PARTIAL",
+      "graph": "hypercomplex",
+      "reason": "The Wilmot Eq. 9 theta-preservation executable, result and report are hash-indexed with a strict recorded-action-versus-full-Aut(S) boundary."
     },
     {
       "path": "research/reports",
       "status": "ARCHIVE",
-      "reason": "Report snapshots are preserved as historical material rather than a separately indexed evidence graph."
+      "reason": "Most report snapshots remain archive material. Selected Avenue-3, hypercomplex and IG-RUEQFT reports are individually hash-indexed by their programme graphs without implying coverage of the whole tree."
     },
     {
       "path": "_archive",

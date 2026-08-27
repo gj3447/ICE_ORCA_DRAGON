@@ -8,6 +8,37 @@ The same directory also contains the non-numbered [`gate1-straight-lift-end-admi
 
 The next bounded [`gate1-v0-offshell-darboux-chart-result.json`](../evidence/gate1-v0-offshell-darboux-chart-result.json) connects that shell result to an exact classical Darboux chart on the full open \(p>0,\ R>0\) component across arbitrary real \(c=C\). It recovers \(\Phi_*\) and \(B=P\) at \(c=0\), while keeping every other component, global atlas, normalized quantum endpoint transform, ghost/BFV source, full-real-lapse \(\delta(C)\) kernel and physical/global promotion open or null.
 
+## Historical Phase 11–15R evidence backfill
+
+These phases predate the current typed evidence-snapshot convention. The graph therefore points to
+their immutable historical executables, reports, results and provenance packets without pretending
+that every older artifact is a `research-run-evidence/v1` snapshot.
+
+| Phase | Observed record | Authoritative evidence boundary |
+| --- | --- | --- |
+| 11 | `EXIT_0_ALL_EXACT_ASSERTIONS_PASSED_NO_NAMED_RECORDER` | The runner/report hashes are verified. `P11.backfill.E152`–`E156` are explicitly retrospective semantic locators, not original stdout check IDs. |
+| 12 | `38_EXACT_PASS_9_MUTANTS_REJECTED_EXIT_0` | Exact endpoint-twist and engineered rigid-wall scope only; no local-SUGRA uplift. |
+| 13A | `21_EXACT_PASS_8_MUTANTS_REJECTED_EXIT_0_POST_HOC_SCOPE_CORRECTED` | The report and `PHASE13A_ADVERSARIAL_ERRATUM.json` are jointly authoritative; formal and finite controls do not construct a physical charge. |
+| 14A | `24_EXACT_PASS_7_MUTANTS_REJECTED_6_SCOPE_GUARDS_EXIT_0` | The committed result, charge ledger and compact-T3 scope support two narrow contradictions and an inconclusive physical-charge boundary. |
+| 15A | `INVALID_INCONCLUSIVE_PREREG_OR_PROVENANCE_INVALID_NO_RUN_RESULT` | `PHASE15A_SEQUENCE_BREACH.json` records only a sequencing failure. `k2` was not validly evaluated, and no scientific inference is transported. |
+| 15R | `47_PASS_17_MUTANT_CATEGORIES_18_FIXTURES_4_GUARDS_24_OF_24_PRIOR_MATCH_EXIT_0` | Fresh two-source census plus replay: one bosonic-only parent, no full off-shell single parent inside that census. It is not derived from Phase 15A. |
+
+The principal pinned files are:
+
+| Phase | Executable / result | SHA-256 |
+| --- | --- | --- |
+| 11 | `phase11_collar_admissibility.py` | `2b2184ec43f8e2e07bd1b07e1699112b6531a547c02be392c92db53e2a271529` |
+| 12 | `phase12_boundary_twist_interface.py` | `78657ca4f906054615806578d9ee93ce52561a046ac593addf148d3ca3ab43f5` |
+| 13A | `phase13a_lorentzian_branch_supercharge.py` | `3fc9c66cd5010833e98544194b1b5410479c9e6daae0fc714255a468a5eedf05` |
+| 14A | `PHASE14A_RUN_RESULT.json` | `681ac364ef275aff01701f3f8f611681e090f421cf65bb45ae09ed253b79de44` |
+| 15A | `PHASE15A_SEQUENCE_BREACH.json` | `300eb37043a7901c3595cce3dffa2b1204ef35677420e8d8c6c92c9652148a87` |
+| 15R | `PHASE15R_RUN_RESULT.json` | `aa4b19116088a3ea52c71b8b7643233a05c3164132b8d2e47c859ff588f98fbe` |
+| 15R | `phase15r_parent_sign_reproduction.py` | `af3e3d021e995833a634b1fb7afda7d1cd4faace60113bb425d467301424f40d` |
+
+All additional contracts, source packets, ledgers, reports and replay receipts are individual artifact
+nodes with verified content hashes and first-add commits in `graph.json`. Historical contracts are
+retained as provenance; they do not govern new work.
+
 ## Reading `PASS` correctly
 
 All 498 Phase 16–56 named exact checks have `status: PASS`. The snapshots contain 360 typed

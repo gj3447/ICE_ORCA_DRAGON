@@ -4,7 +4,7 @@
   "graph_id": "research-graph:hypercomplex",
   "title": "ICE hypercomplex hypothesis-testbench research graph",
   "description": "A repository-local memory and index graph for the finite Cayley-Dickson and sedenion calculations. It separates computed algebraic facts, interpretation, invalid or superseded methods, and open physical hypotheses without promoting the corpus to a Standard Model embedding or TOE.",
-  "updated_at_utc": "2026-08-25T09:32:41Z",
+  "updated_at_utc": "2026-08-27T06:40:59Z",
   "canonical_file": "ontology/hypercomplex/graph.json",
   "source_inventory": "ontology/hypercomplex/references/source-inventory.md",
   "quick_answers": [
@@ -41,10 +41,23 @@
     },
     {
       "question": "Was an explicit S3 automorphism subgroup computed?",
-      "answer": "Yes within the declared Cayley-Dickson convention: the two generators preserve all tested products, satisfy the S3 presentation, and generate a group of order six. The older claim that this refuted Wilmot was later withdrawn.",
+      "answer": "Yes within the declared Cayley-Dickson convention: the two generators preserve all tested products, satisfy the S3 presentation, and generate a group of order six. A later finite action audit finds that the two generators centralize the computed 14-dimensional derivation space, and a separate two-convention audit finds that they preserve the transcribed Wilmot eq-9 theta tensor. These results do not prove the full global automorphism-group decomposition. The older claim that this refuted Wilmot was withdrawn.",
       "claim_ids": [
         "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP",
+        "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE",
+        "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA",
+        "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION",
         "claim:HYPER_QUEUE09_REFUTES_WILMOT"
+      ]
+    },
+    {
+      "question": "Did the sealed Claim B calculations support a stable infinite Cayley-Dickson tower limit?",
+      "answer": "No under their preregistered finite-level criteria. The n=5..7 nullity distributions remain far apart, the n=4..7 associator distributions reconfigure, and the recorded prediction family fails its declared Cauchy-decreasing predicate. This kills that finite statistical route; it neither constructs nor universally disproves an infinite-dimensional path integral or a gravity map.",
+      "claim_ids": [
+        "claim:HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7",
+        "claim:HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7",
+        "claim:HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7",
+        "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY"
       ]
     }
   ],
@@ -100,14 +113,34 @@
     },
     {
       "id": "reading-path:hyper-s3-interpretation",
-      "title": "The S3 calculation and its interpretation boundary",
-      "summary": "Keep the three passing multiplication/group gates while following the later correction that withdrew the Wilmot-refutation language and avoiding a three-generation inference.",
+      "title": "The S3 subgroup, derivation action, theta test, and interpretation boundary",
+      "summary": "Keep the multiplication/group gates, the computed trivial action on the 14-dimensional derivation space, and theta preservation in the two recorded conventions while following the correction that withdrew the Wilmot-refutation language. Stop before a full Aut(S) classification or particle-generation inference.",
       "nodes": [
         "claim:HYPER_EXPLICIT_S3_AUTOMORPHISM_SUBGROUP",
+        "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE",
+        "evidence:hyper-s3-direct-action-ledger",
+        "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA",
+        "evidence:hyper-wilmot-theta-lifecycle",
+        "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION",
         "claim:HYPER_QUEUE09_REFUTES_WILMOT",
         "evidence:hyper-s3-three-gate-lifecycle",
         "claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS",
         "open:hyper-algebra-to-physics-discriminator"
+      ]
+    },
+    {
+      "id": "reading-path:hyper-claimb-sealed-finite-route",
+      "title": "The sealed finite-level Claim B route and its remaining boundary",
+      "summary": "Start with the distinction between a finite sedenion truncation and an infinite Cayley-Dickson tower, inspect the three preregistered finite-level non-stability results, and stop before treating them as a constructed infinite-dimensional measure, gravity map, or universal no-go.",
+      "nodes": [
+        "concept:infinite-cd-tower-truncation-stability",
+        "scope:hyper-claimb-n4-n7-sealed-loop",
+        "claim:HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7",
+        "claim:HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7",
+        "claim:HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7",
+        "evidence:hyper-claimb-sealed-finite-level-ledger",
+        "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY",
+        "open:hyper-infinite-tower-continuum-observable-map"
       ]
     }
   ],
@@ -558,6 +591,314 @@
       "summary": "The current corpus has reusable finite algebra but no validated map to a Higgs field, gauge group, family spectrum, measured parameter, or new particle.",
       "state": "OPEN",
       "question": "What independently testable, source-derived observable distinguishes a hypercomplex physical map from post-hoc labeling of the same finite algebraic regularities?"
+    },
+    {
+      "id": "concept:infinite-cd-tower-truncation-stability",
+      "type": "concept",
+      "title": "Infinite Cayley-Dickson tower versus finite truncation stability",
+      "summary": "A finite calculation at levels n=4 through 7 can test registered convergence predicates for selected statistics, but it is not an infinite-dimensional algebra, a path-space measure, a continuum action, or a gravity observable map.",
+      "state": "ACTIVE_SCOPE_DISTINCTION"
+    },
+    {
+      "id": "concept:sedenion-automorphism-action-and-calibration",
+      "type": "concept",
+      "title": "Sedenion automorphism action and calibration boundary",
+      "summary": "The explicit S3 subgroup, its conjugation action on a computed derivation space, and preservation of one transcribed calibration tensor are distinct finite statements. None alone classifies the complete automorphism group across all realizations or conventions.",
+      "state": "ACTIVE_SCOPE_DISTINCTION"
+    },
+    {
+      "id": "scope:hyper-claimb-n4-n7-sealed-loop",
+      "type": "scope",
+      "title": "Claim B preregistered n=4 through n=7 finite-level loop",
+      "summary": "The sealed loop evaluates selected nullity, associator-ratio, and composite prediction-family statistics at finite Cayley-Dickson levels under the thresholds stored in its preregistration.",
+      "state": "FROZEN_HISTORICAL_PROTOCOL",
+      "includes": [
+        "simple zero-divisor nullity distributions at n=5,6,7",
+        "seed-42 associator-ratio samples at n=4,5,6,7",
+        "the stored prediction family of mean associator ratio, modal nullity, and zero-divisor density",
+        "the committed preregistration and byte-identical repeated verdicts"
+      ],
+      "excludes": [
+        "an n to infinity convergence theorem",
+        "a chosen direct, inverse, Hilbert, or other infinite-dimensional completion",
+        "a path-integral measure, action, renormalization, or gravity observable",
+        "a universal no-go for every possible Cayley-Dickson tower construction",
+        "a physics or TOE promotion"
+      ]
+    },
+    {
+      "id": "scope:hyper-s3-direct-action-and-theta-audit",
+      "type": "scope",
+      "title": "Finite S3 derivation-action and theta-preservation audit",
+      "summary": "The audits use the repository's declared finite multiplication tables, a numerically computed 14-dimensional derivation space, the explicit sigma and Psi matrices, and two recorded Cayley-Dickson sign conventions.",
+      "state": "FROZEN_FINITE_AUDIT",
+      "includes": [
+        "basis multiplication preservation of sigma and Psi",
+        "dimension and residual checks for the computed derivation space",
+        "conjugation action of sigma and Psi on that computed space",
+        "alignment and preservation of the transcribed Wilmot eq-9 theta tensor in two conventions"
+      ],
+      "excludes": [
+        "a symbolic classification of every derivation or automorphism",
+        "a proof that the full automorphism group is exactly G2 times S3",
+        "Wilmot's cross-primary Clifford realization",
+        "a physical family, gauge, or particle interpretation"
+      ]
+    },
+    {
+      "id": "claim:HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7",
+      "type": "claim",
+      "claim_id": "HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7",
+      "title": "The recorded Claim B nullity distribution stabilizes from n=5 to n=7",
+      "statement": "Under the sealed-loop predicate, the simple-zero-divisor nullity distributions at n=5,6,7 approach one another with total-variation distances below 0.05 and a decreasing n=6 to n=7 distance.",
+      "summary": "Contradicted by the committed result: TV(5,6)=0.476190 and TV(6,7)=0.488189, both far above 0.05, with the latter slightly larger.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_PREREGISTERED_FINITE_TEST"
+    },
+    {
+      "id": "claim:HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7",
+      "type": "claim",
+      "claim_id": "HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7",
+      "title": "The recorded Claim B associator distribution stabilizes from n=4 to n=7",
+      "statement": "Under the sealed-loop predicate, consecutive seed-42 associator-ratio distributions cease to reconfigure, with no two consecutive Kolmogorov-Smirnov statistics above 0.05.",
+      "summary": "Contradicted: the recorded consecutive KS statistics are 0.1484, 0.1072, and 0.1036, so the registered reconfiguration condition is met repeatedly even though the mean changes become smaller.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_PREREGISTERED_FINITE_TEST"
+    },
+    {
+      "id": "claim:HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7",
+      "type": "claim",
+      "claim_id": "HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7",
+      "title": "The recorded Claim B prediction family is Cauchy-decreasing from n=5 to n=7",
+      "statement": "For every stored component of P_n=(mean associator ratio, modal nullity, zero-divisor density), the n=6 to n=7 change is strictly smaller than the n=5 to n=6 change and passes the registered guards.",
+      "summary": "Contradicted by the stored predicate result, which records cauchy_ok=false and a zero-denominator guard for modal nullity. The finite result is labelled DRIFTING rather than a theorem about n to infinity.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_BY_PREREGISTERED_FINITE_TEST"
+    },
+    {
+      "id": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY",
+      "type": "claim",
+      "claim_id": "HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY",
+      "title": "The finite Claim B loop establishes or universally rules out infinite-tower gravity",
+      "statement": "The n=4 through n=7 statistical loop alone defines the infinite Cayley-Dickson limit, its path-integral measure and action, and a gravity observable map, or else proves that no such construction can exist.",
+      "summary": "Not established. The loop kills its registered finite statistical stability route and retains the algebra-to-observable barrier; it neither constructs the infinite object nor supplies a universal no-go over other completions and measures.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "NOT_ESTABLISHED_BY_FINITE_LOOP"
+    },
+    {
+      "id": "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE",
+      "type": "claim",
+      "claim_id": "HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE",
+      "title": "The explicit S3 action centralizes the computed derivation space",
+      "statement": "In the recorded finite matrix audit, the sedenion derivation equations have a 14-dimensional numerical null space and conjugation by both explicit S3 generators acts as the identity on that computed space within 8.9e-16 infinity norm.",
+      "summary": "Supported as a finite numerical action statement with positive and fake-map controls. It supports a direct action on the computed derivation factor, not a classification of the full automorphism group.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_NUMERICAL"
+    },
+    {
+      "id": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA",
+      "type": "claim",
+      "claim_id": "HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA",
+      "title": "The explicit S3 maps preserve the recorded Wilmot eq-9 theta tensor",
+      "statement": "For both stored Cayley-Dickson sign conventions, the independently transcribed Wilmot eq-9 theta support aligns exactly up to the recorded global sign with the alternating structure constants, and sigma and Psi preserve it with residuals 0 and 2.78e-17.",
+      "summary": "Supported for the two implemented conventions and one transcribed tensor. This corrects the old same-convention 'Wilmot refuted' story and leaves the cross-primary realization open.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_NUMERICAL"
+    },
+    {
+      "id": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION",
+      "type": "claim",
+      "claim_id": "HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION",
+      "title": "The finite direct-action test proves the full automorphism-group decomposition",
+      "statement": "The computed 14-dimensional derivation space and trivial conjugation action of the explicit S3 generators are sufficient by themselves to prove that every sedenion automorphism lies in a globally classified direct product Aut(S)=G2 x S3.",
+      "summary": "Not established by the finite audit. The calculation identifies an explicit subgroup action and centralization of a computed infinitesimal space, but does not prove completeness, connected-component integration, absence of other automorphisms, or cross-primary equivalence.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "NOT_ESTABLISHED_BY_FINITE_ACTION_TEST"
+    },
+    {
+      "id": "evidence:hyper-claimb-sealed-finite-level-ledger",
+      "type": "evidence",
+      "title": "Claim B sealed finite-level stability ledger",
+      "summary": "The preregistered n=4 through n=7 outputs record two unstable distribution tests and one failed composite Cauchy-decreasing predicate, with byte-identical repeated verdicts. The final report labels the registered route KILL_SEALED while preserving the finite-versus-infinite and algebra-versus-gravity boundaries.",
+      "state": "VERIFIED_HISTORICAL_NEGATIVE",
+      "observed_status": "FINITE_STATISTICAL_ROUTE_KILL_WITH_INFINITE_CONSTRUCTION_UNRESOLVED",
+      "check_ids": [
+        "HYPER.claimb.c1.tv_5_6_0p476190",
+        "HYPER.claimb.c1.tv_6_7_0p488189",
+        "HYPER.claimb.c2.ks_4_5_0p1484",
+        "HYPER.claimb.c2.ks_5_6_0p1072",
+        "HYPER.claimb.c2.ks_6_7_0p1036",
+        "HYPER.claimb.c3.cauchy_ok_false",
+        "HYPER.claimb.repro.byte_identical",
+        "HYPER.claimb.scope.no_infinite_measure_or_gravity_map"
+      ],
+      "source_anchors": [
+        "claimB_loop/prereg_claimB_loop_20260724.json",
+        "claimB_loop/results_c1_zd_nullity_spectrum.json",
+        "claimB_loop/results_c2_associator_distribution.json",
+        "claimB_loop/results_c3_truncation_stability.json",
+        "claimB_loop/CLAIMB_LOOP_FINAL_REPORT_2026-07-24.md"
+      ],
+      "content_hashes": {
+        "claimB_loop/prereg_claimB_loop_20260724.json": "7c999e578942ce0aa7d6d142a3b88e5779746782e047a8fb757912da21d2904b",
+        "claimB_loop/results_c1_zd_nullity_spectrum.json": "0e762c73c0794000551f4ac365a49f69ac42a05183c83cc97bb2484f0c80eca1",
+        "claimB_loop/results_c2_associator_distribution.json": "f6a4f14ebccaaa164214f48dc4a3b0078ce53bd2f9e1ac9fa2e16d42852bf5fa",
+        "claimB_loop/results_c3_truncation_stability.json": "3742d9cff34301d974686a52b7adc1b42c78c79053e93eea12e09834e608ca3d",
+        "claimB_loop/CLAIMB_LOOP_FINAL_REPORT_2026-07-24.md": "5c767d76fe988c8582d286d67a54be82a133ad5b41a49de317fae129d46b4bab"
+      }
+    },
+    {
+      "id": "evidence:hyper-s3-direct-action-ledger",
+      "type": "evidence",
+      "title": "S3 action on the computed derivation space",
+      "summary": "The direct null-space construction records derivation dimension 14 with a singular gap, verifies the derivation law near 1e-15, rechecks the S3 generators and fake-map controls, and measures identity action on the computed derivation basis below 9e-16.",
+      "state": "VERIFIED_SCOPED_NUMERICAL",
+      "observed_status": "COMPUTED_DERIVATION_SPACE_DIM14_AND_S3_ACTION_TRIVIAL",
+      "check_ids": [
+        "HYPER.aut.derivation_dimension_14",
+        "HYPER.aut.derivation_law_residual_1p04e-15",
+        "HYPER.aut.sigma_psi_orders_2_3",
+        "HYPER.aut.fake_map_discriminates",
+        "HYPER.aut.s3_action_identity_below_9e-16"
+      ],
+      "source_anchors": [
+        "aut_direct_product_test_2026-07-12/RESULT.json",
+        "aut_direct_product_test_2026-07-12/aut_s3_direct_product_test.py"
+      ],
+      "content_hashes": {
+        "aut_direct_product_test_2026-07-12/RESULT.json": "792f377cf0440703322fca84bde07f8f252c9d822a1db3e66f492985486c9929",
+        "aut_direct_product_test_2026-07-12/aut_s3_direct_product_test.py": "51d06bb33e1e8746d9978a1d5f35582ffd5ed299846584752188777edda7c87f"
+      }
+    },
+    {
+      "id": "evidence:hyper-wilmot-theta-lifecycle",
+      "type": "evidence",
+      "title": "Wilmot theta-preservation and interpretation-correction ledger",
+      "summary": "The two-convention result records exact support/sign alignment, sigma residual zero, Psi residual 2.78e-17, derivation and random-orthogonal controls, and the current report's correction that Wilmot did not assert the previously attributed no-S3 conclusion.",
+      "state": "VERIFIED_WITH_SCOPE_CORRECTION",
+      "observed_status": "THETA_PRESERVED_IN_TWO_RECORDED_CONVENTIONS_AND_OLD_REFUTATION_WITHDRAWN",
+      "check_ids": [
+        "HYPER.wilmot.theta_support_identical_both_conventions",
+        "HYPER.wilmot.theta_best_scale_plus_or_minus_one",
+        "HYPER.wilmot.sigma_residual_zero",
+        "HYPER.wilmot.psi_residual_2p78e-17",
+        "HYPER.wilmot.random_o15_discriminates",
+        "HYPER.wilmot.old_g2_only_attribution_withdrawn"
+      ],
+      "source_anchors": [
+        "wilmot_theta_preservation_test_2026-07-12/RESULT.json",
+        "wilmot_theta_preservation_test_2026-07-12/wilmot_theta_preservation_test.py",
+        "wilmot_theta_preservation_test_2026-07-12/WILMOT_3FORM_CRITERION_TEST_2026-07-12.md"
+      ],
+      "content_hashes": {
+        "wilmot_theta_preservation_test_2026-07-12/RESULT.json": "a025b99ccb3a73c548437746576c519c13218f370d8546d0de81cf8bed82b112",
+        "wilmot_theta_preservation_test_2026-07-12/wilmot_theta_preservation_test.py": "90eafef960148bb15a6aab284f75ceac37f312358ce3d606f9427e34b2249dce",
+        "wilmot_theta_preservation_test_2026-07-12/WILMOT_3FORM_CRITERION_TEST_2026-07-12.md": "9cc50ba54a406b4e5d7e8daa7dbb96b193058e06d3aea910a7a6aea5dcb24a99"
+      }
+    },
+    {
+      "id": "artifact:hyper-claimb-preregistration",
+      "type": "artifact",
+      "title": "Claim B finite-level sealed-loop preregistration",
+      "summary": "The historical thresholds and branch predicates used by the three finite-level calculations.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "historical_preregistration_json",
+      "path": "claimB_loop/prereg_claimB_loop_20260724.json",
+      "sha256": "7c999e578942ce0aa7d6d142a3b88e5779746782e047a8fb757912da21d2904b",
+      "introduced_in_commit": "655e3bd87d4f11e21698b03c02e91acb9af82eca"
+    },
+    {
+      "id": "artifact:hyper-claimb-nullity-result",
+      "type": "artifact",
+      "title": "Claim B nullity-distribution result",
+      "summary": "The historical n=5 through n=7 total-variation result and byte-identical replay record.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "historical_result_json",
+      "path": "claimB_loop/results_c1_zd_nullity_spectrum.json",
+      "sha256": "0e762c73c0794000551f4ac365a49f69ac42a05183c83cc97bb2484f0c80eca1",
+      "introduced_in_commit": "655e3bd87d4f11e21698b03c02e91acb9af82eca"
+    },
+    {
+      "id": "artifact:hyper-claimb-associator-result",
+      "type": "artifact",
+      "title": "Claim B associator-distribution result",
+      "summary": "The historical n=4 through n=7 seeded distribution and consecutive KS statistics.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "historical_result_json",
+      "path": "claimB_loop/results_c2_associator_distribution.json",
+      "sha256": "f6a4f14ebccaaa164214f48dc4a3b0078ce53bd2f9e1ac9fa2e16d42852bf5fa",
+      "introduced_in_commit": "655e3bd87d4f11e21698b03c02e91acb9af82eca"
+    },
+    {
+      "id": "artifact:hyper-claimb-truncation-result",
+      "type": "artifact",
+      "title": "Claim B composite truncation-stability result",
+      "summary": "The historical three-component prediction family and failed Cauchy-decreasing predicate.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "historical_result_json",
+      "path": "claimB_loop/results_c3_truncation_stability.json",
+      "sha256": "3742d9cff34301d974686a52b7adc1b42c78c79053e93eea12e09834e608ca3d",
+      "introduced_in_commit": "655e3bd87d4f11e21698b03c02e91acb9af82eca"
+    },
+    {
+      "id": "artifact:hyper-claimb-final-report",
+      "type": "artifact",
+      "title": "Claim B sealed-loop final report",
+      "summary": "The historical synthesis that labels the registered finite route KILL_SEALED and retains the missing infinite measure and physics map.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "historical_research_report_markdown",
+      "path": "claimB_loop/CLAIMB_LOOP_FINAL_REPORT_2026-07-24.md",
+      "sha256": "5c767d76fe988c8582d286d67a54be82a133ad5b41a49de317fae129d46b4bab",
+      "introduced_in_commit": "655e3bd87d4f11e21698b03c02e91acb9af82eca"
+    },
+    {
+      "id": "artifact:hyper-s3-direct-action-result",
+      "type": "artifact",
+      "title": "S3 direct derivation-action result",
+      "summary": "The recorded derivation dimension, S3 normalizer/action residuals, and fake-map controls.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "numerical_result_json",
+      "path": "aut_direct_product_test_2026-07-12/RESULT.json",
+      "sha256": "792f377cf0440703322fca84bde07f8f252c9d822a1db3e66f492985486c9929",
+      "introduced_in_commit": "b8a65d15858639c05ec65135f47483708cd6606e"
+    },
+    {
+      "id": "artifact:hyper-wilmot-theta-result",
+      "type": "artifact",
+      "title": "Wilmot theta-preservation result",
+      "summary": "The recorded two-convention alignment, preservation, positive-control, and discrimination values.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "numerical_result_json",
+      "path": "wilmot_theta_preservation_test_2026-07-12/RESULT.json",
+      "sha256": "a025b99ccb3a73c548437746576c519c13218f370d8546d0de81cf8bed82b112",
+      "introduced_in_commit": "9501719250ff3f94dad674d8e3d8b40922e15783"
+    },
+    {
+      "id": "artifact:hyper-wilmot-theta-report",
+      "type": "artifact",
+      "title": "Wilmot theta criterion and attribution-correction report",
+      "summary": "The current human report that separates same-primary theta preservation from the still-open cross-primary realization and withdraws the old literature attribution.",
+      "state": "HASH_PINNED_CURRENT",
+      "artifact_kind": "research_report_markdown",
+      "path": "wilmot_theta_preservation_test_2026-07-12/WILMOT_3FORM_CRITERION_TEST_2026-07-12.md",
+      "sha256": "9cc50ba54a406b4e5d7e8daa7dbb96b193058e06d3aea910a7a6aea5dcb24a99",
+      "introduced_in_commit": "6e0724dca68d03d175f756ed1835bca069addb0c"
+    },
+    {
+      "id": "open:hyper-infinite-tower-continuum-observable-map",
+      "type": "open_problem",
+      "title": "Define the infinite tower and an observable map",
+      "summary": "The finite-level KILL does not choose an infinite-dimensional completion, path-space measure, action, level weighting, renormalization, or independently testable gravity observable.",
+      "state": "OPEN",
+      "question": "Can a mathematically specified infinite Cayley-Dickson completion carry a controlled measure and action that derive an observable not fitted after the fact?"
+    },
+    {
+      "id": "open:hyper-wilmot-cross-primary-realization",
+      "type": "open_problem",
+      "title": "Implement the Wilmot cross-primary realization",
+      "summary": "The same-primary matrix audit does not implement the Clifford rotation that transports one calibration primary to another, so the strong/weak cross-primary distinction is not computationally closed.",
+      "state": "OPEN",
+      "question": "Can the explicit cross-primary rotation and target calibration be encoded and independently checked without conflating it with the same-convention algebra automorphism matrices?"
     }
   ],
   "edges": [
@@ -656,7 +997,66 @@
     { "id": "edge:088", "from": "artifact:hyper-avenue3-independent-script", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
     { "id": "edge:089", "from": "evidence:hyper-finite-structural-ledger", "relation": "DEFINED_IN", "to": "artifact:hyper-avenue3-count-script" },
     { "id": "edge:090", "from": "evidence:hyper-finite-structural-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-avenue3-results" },
-    { "id": "edge:091", "from": "evidence:hyper-finite-structural-ledger", "relation": "DERIVED_FROM", "to": "artifact:hyper-avenue3-independent-script" }
+    { "id": "edge:091", "from": "evidence:hyper-finite-structural-ledger", "relation": "DERIVED_FROM", "to": "artifact:hyper-avenue3-independent-script" },
+    { "id": "edge:092", "from": "concept:infinite-cd-tower-truncation-stability", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:093", "from": "concept:sedenion-automorphism-action-and-calibration", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:094", "from": "scope:hyper-claimb-n4-n7-sealed-loop", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:095", "from": "scope:hyper-s3-direct-action-and-theta-audit", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:096", "from": "claim:HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:097", "from": "claim:HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:098", "from": "claim:HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:099", "from": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:100", "from": "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:101", "from": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:102", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:103", "from": "evidence:hyper-claimb-sealed-finite-level-ledger", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:104", "from": "evidence:hyper-s3-direct-action-ledger", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:105", "from": "evidence:hyper-wilmot-theta-lifecycle", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:106", "from": "artifact:hyper-claimb-preregistration", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:107", "from": "artifact:hyper-claimb-nullity-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:108", "from": "artifact:hyper-claimb-associator-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:109", "from": "artifact:hyper-claimb-truncation-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:110", "from": "artifact:hyper-claimb-final-report", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:111", "from": "artifact:hyper-s3-direct-action-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:112", "from": "artifact:hyper-wilmot-theta-result", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:113", "from": "artifact:hyper-wilmot-theta-report", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:114", "from": "open:hyper-infinite-tower-continuum-observable-map", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:115", "from": "open:hyper-wilmot-cross-primary-realization", "relation": "PART_OF", "to": "programme:hypercomplex-hypothesis-testbench" },
+    { "id": "edge:116", "from": "claim:HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-claimb-sealed-finite-level-ledger", "polarity": "CONTRADICTS" },
+    { "id": "edge:117", "from": "claim:HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-claimb-sealed-finite-level-ledger", "polarity": "CONTRADICTS" },
+    { "id": "edge:118", "from": "claim:HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-claimb-sealed-finite-level-ledger", "polarity": "CONTRADICTS" },
+    { "id": "edge:119", "from": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-claimb-sealed-finite-level-ledger", "polarity": "CONTRADICTS", "note": "The evidence records a finite-route KILL and explicitly withholds an infinite construction or universal no-go." },
+    { "id": "edge:120", "from": "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-s3-direct-action-ledger", "polarity": "SUPPORTS" },
+    { "id": "edge:121", "from": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-wilmot-theta-lifecycle", "polarity": "SUPPORTS" },
+    { "id": "edge:122", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "HAS_EVIDENCE", "to": "evidence:hyper-s3-direct-action-ledger", "polarity": "CONTRADICTS", "note": "The finite action ledger does not test completeness of the full automorphism group." },
+    { "id": "edge:123", "from": "claim:HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7", "relation": "VALID_WITHIN", "to": "scope:hyper-claimb-n4-n7-sealed-loop" },
+    { "id": "edge:124", "from": "claim:HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7", "relation": "VALID_WITHIN", "to": "scope:hyper-claimb-n4-n7-sealed-loop" },
+    { "id": "edge:125", "from": "claim:HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7", "relation": "VALID_WITHIN", "to": "scope:hyper-claimb-n4-n7-sealed-loop" },
+    { "id": "edge:126", "from": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY", "relation": "VALID_WITHIN", "to": "scope:hyper-claimb-n4-n7-sealed-loop" },
+    { "id": "edge:127", "from": "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE", "relation": "VALID_WITHIN", "to": "scope:hyper-s3-direct-action-and-theta-audit" },
+    { "id": "edge:128", "from": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA", "relation": "VALID_WITHIN", "to": "scope:hyper-s3-direct-action-and-theta-audit" },
+    { "id": "edge:129", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "VALID_WITHIN", "to": "scope:hyper-s3-direct-action-and-theta-audit" },
+    { "id": "edge:130", "from": "claim:HYPER_CLAIMB_NULLITY_DISTRIBUTION_STABILIZES_N5_N7", "relation": "ABOUT", "to": "concept:infinite-cd-tower-truncation-stability" },
+    { "id": "edge:131", "from": "claim:HYPER_CLAIMB_ASSOCIATOR_DISTRIBUTION_STABILIZES_N4_N7", "relation": "ABOUT", "to": "concept:infinite-cd-tower-truncation-stability" },
+    { "id": "edge:132", "from": "claim:HYPER_CLAIMB_PREDICTION_FAMILY_IS_CAUCHY_DECREASING_N5_N7", "relation": "ABOUT", "to": "concept:infinite-cd-tower-truncation-stability" },
+    { "id": "edge:133", "from": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY", "relation": "ABOUT", "to": "concept:infinite-cd-tower-truncation-stability" },
+    { "id": "edge:134", "from": "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE", "relation": "ABOUT", "to": "concept:sedenion-automorphism-action-and-calibration" },
+    { "id": "edge:135", "from": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA", "relation": "ABOUT", "to": "concept:sedenion-automorphism-action-and-calibration" },
+    { "id": "edge:136", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "ABOUT", "to": "concept:sedenion-automorphism-action-and-calibration" },
+    { "id": "edge:137", "from": "evidence:hyper-claimb-sealed-finite-level-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-claimb-nullity-result" },
+    { "id": "edge:138", "from": "evidence:hyper-claimb-sealed-finite-level-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-claimb-associator-result" },
+    { "id": "edge:139", "from": "evidence:hyper-claimb-sealed-finite-level-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-claimb-truncation-result" },
+    { "id": "edge:140", "from": "evidence:hyper-claimb-sealed-finite-level-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-claimb-final-report" },
+    { "id": "edge:141", "from": "evidence:hyper-claimb-sealed-finite-level-ledger", "relation": "DEFINED_IN", "to": "artifact:hyper-claimb-preregistration" },
+    { "id": "edge:142", "from": "evidence:hyper-s3-direct-action-ledger", "relation": "RECORDED_IN", "to": "artifact:hyper-s3-direct-action-result" },
+    { "id": "edge:143", "from": "evidence:hyper-wilmot-theta-lifecycle", "relation": "RECORDED_IN", "to": "artifact:hyper-wilmot-theta-result" },
+    { "id": "edge:144", "from": "evidence:hyper-wilmot-theta-lifecycle", "relation": "RECORDED_IN", "to": "artifact:hyper-wilmot-theta-report" },
+    { "id": "edge:145", "from": "open:hyper-infinite-tower-continuum-observable-map", "relation": "FOLLOW_UP_TO", "to": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY" },
+    { "id": "edge:146", "from": "open:hyper-wilmot-cross-primary-realization", "relation": "FOLLOW_UP_TO", "to": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA" },
+    { "id": "edge:147", "from": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY", "relation": "BLOCKED_BY", "to": "open:hyper-infinite-tower-continuum-observable-map" },
+    { "id": "edge:148", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "BLOCKED_BY", "to": "open:hyper-wilmot-cross-primary-realization" },
+    { "id": "edge:149", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "CONTRASTS_WITH", "to": "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE", "note": "The local centralization result survives while completeness of the global decomposition is not established." },
+    { "id": "edge:150", "from": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA", "relation": "CONTRASTS_WITH", "to": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "note": "The direct tensor test and source correction replace the obsolete refutation framing." }
   ],
   "kg_bridges": [
     {
@@ -668,6 +1068,46 @@
       "checked_at_utc": "2026-08-25T08:54:45Z",
       "lookup_key": "ICE hypercomplex hypothesis testbench",
       "note": "No authorized writer or exact external target was available; no UID was invented."
+    },
+    {
+      "local_node_id": "open:hyper-infinite-tower-continuum-observable-map",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:HomeKgImported:oq-infinite-cd-tower-path-integral-gravity-untested-2026-05-19",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-27T06:40:59Z",
+      "lookup_key": "infinite Cayley-Dickson tower path integral gravity",
+      "note": "Live ontology_get returned one collision-free historical open-question record. It predates the finite sealed loop and is related, not identical to its post-loop construction boundary."
+    },
+    {
+      "local_node_id": "concept:sedenion-automorphism-action-and-calibration",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:CanonicalDispute:aut-sedenion-brown-vs-wilmot-competing-verdict-2026-05-19",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-27T06:40:59Z",
+      "lookup_key": "Brown Wilmot sedenion automorphism dispute",
+      "note": "The collision-free legacy dispute record is a historical framing node; the repository's finite action and theta evidence remain local."
+    },
+    {
+      "local_node_id": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:LakatosNode:ice-orca-dragon/wilmot_eq9_theta_criterion_test",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-27T06:40:59Z",
+      "lookup_key": "wilmot_eq9_theta_criterion_test",
+      "note": "Live ontology_get returned one collision-free experiment label. Its sparse external record is not a substitute for the repository result, hashes, or scope."
+    },
+    {
+      "local_node_id": "evidence:hyper-claimb-sealed-finite-level-ledger",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T06:40:59Z",
+      "lookup_key": "Claim B sealed finite level loop final verdict 2026-07-24",
+      "note": "No matching live result node or writable upsert surface was available; no UID was invented."
     }
   ]
 }

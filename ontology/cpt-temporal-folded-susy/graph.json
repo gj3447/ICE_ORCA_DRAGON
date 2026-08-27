@@ -4,10 +4,21 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-27T05:21:55Z",
+  "updated_at_utc": "2026-08-27T06:31:04Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
+    {
+      "question": "What happened before the Phase 16 BGG test?",
+      "answer": "Phases 11–14A established only scoped collar, boundary-interface, formal-WKB and compact-T3 charge results. Phase 15A then breached its frozen artifact order and licensed no scientific inference; Phase 15R replaced that invalid route with a fresh two-source census, finding one bosonic-only parent but no full off-shell single parent in that census.",
+      "claim_ids": [
+        "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+        "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+        "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+        "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS"
+      ]
+    },
     {
       "question": "Did the bosonic parent work?",
       "answer": "Yes, in the scoped BGG (X,T,Y) kinetic block.",
@@ -458,6 +469,36 @@
     }
   ],
   "reading_paths": [
+    {
+      "id": "reading-path:collar-admissibility-to-single-source-parent-and-tangency",
+      "title": "From collar admissibility to the single-source parent and tangency tests",
+      "summary": "Follow the historical Phase 11–14A calculations, keep the Phase 15A sequencing breach procedural rather than scientific, then continue through the valid Phase 15R census to the independent Phase 16 BGG parent and tangency controls. None of these scoped calculations promotes the programme to a physics or TOE claim.",
+      "nodes": [
+        "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+        "claim:P11_SYMMETRIC_QP_SQUEEZER_IS_STRONG_OR_WEAK_CONSTRAINT_ADMISSIBLE",
+        "open:p11-4d-sugra-origin-and-observable-map",
+        "claim:P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+        "claim:P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+        "claim:P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+        "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+        "claim:P13A_DECLARED_LOCAL_PRINCIPAL_OPERATOR_RETAINS_EACH_FORMAL_WKB_PHASE",
+        "claim:P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+        "claim:P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+        "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+        "claim:P14A_ROLLING_CHIRAL_CLOCK_PRESERVES_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+        "claim:P14A_COMPACT_T3_HAS_REGGE_TEITELBOIM_SPATIAL_BOUNDARY_CHARGE_CHANNEL",
+        "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+        "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+        "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+        "claim:P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+        "open:p15a-fresh-parent-sign-repair",
+        "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+        "claim:P16_BGG_BOSONIC_KINETIC_PARENT",
+        "claim:P16_SPECIFIED_OFF_SHELL_FLRW_GAMMA_TRACE_TANGENCY",
+        "claim:P16_ROLLING_CHIRAL_CLOCK_BACKGROUND_PRESERVED_SUSY"
+      ]
+    },
     {
       "id": "reading-path:bosonic-to-susy",
       "title": "Why the bosonic model passes but the specified SUSY truncation fails",
@@ -1462,9 +1503,9 @@
       "id": "evidence:p15r-run-result",
       "type": "evidence",
       "title": "Phase 15R committed run result",
-      "summary": "Pointer to the committed two-source parent-sign result with stable target claim IDs; its Hohl/Kallosh source ledger remains authoritative in the Phase 15R packet rather than being duplicated here.",
-      "state": "VERIFIED",
-      "observed_status": "EXIT_0"
+      "summary": "The committed two-source census records 47 positive checks, 17 rejected mutant categories across 18 fixtures, four scope guards, and 24/24 prior matches. Its Hohl/Kallosh source ledger remains authoritative in the frozen packet.",
+      "state": "VERIFIED_HISTORICAL_VALID_REPAIR",
+      "observed_status": "47_PASS_17_MUTANT_CATEGORIES_18_FIXTURES_4_GUARDS_24_OF_24_PRIOR_MATCH_EXIT_0"
     },
     {
       "id": "evidence:p16-bosonic",
@@ -10933,6 +10974,652 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md",
       "sha256": "2b6fa7de22628ed9b94d3c1d31637bdff53aa48b4ac4a3216eee95c7f67171d9"
+    },
+    {
+      "id": "phase:p11",
+      "type": "phase",
+      "title": "Phase 11 — homogeneous quadratic collar admissibility",
+      "summary": "Historical exact symbolic classification of strong and weak homogeneous quadratic collar generators. It is a canonical workbench result, not a derived 4D supergravity interface or observable prediction.",
+      "state": "HISTORICAL_COMPLETED_EXACT"
+    },
+    {
+      "id": "phase:p12",
+      "type": "phase",
+      "title": "Phase 12 — boundary twist and rigid Wess–Zumino interface",
+      "summary": "Historical exact calculation relating an admissible open-interval collar to an endpoint canonical twist and constructing an engineered rigid N=1 wall witness, while leaving a matter-coupled local-supergravity uplift open.",
+      "state": "HISTORICAL_COMPLETED_EXACT"
+    },
+    {
+      "id": "phase:p13a",
+      "type": "phase",
+      "title": "Phase 13A — formal WKB branch and finite charge controls",
+      "summary": "Historical exact formal-WKB and finite-algebra controls. A post-hoc erratum narrows the valid scope and prevents finite-kernel results from being promoted to a physical branch-superpartner theorem.",
+      "state": "HISTORICAL_COMPLETED_WITH_SCOPE_ERRATUM"
+    },
+    {
+      "id": "phase:p14a",
+      "type": "phase",
+      "title": "Phase 14A — chiral-clock charge-first test",
+      "summary": "Historical exact compact-T3 charge calculation. It closes two proposed charge channels in the frozen template while leaving the selected physical charge and literal branch-superpartner claim unconstructed.",
+      "state": "HISTORICAL_COMPLETED_EXACT"
+    },
+    {
+      "id": "phase:p15a",
+      "type": "phase",
+      "title": "Phase 15A — invalid precommit sequence",
+      "summary": "Historical provenance record only: the frozen artifact order was breached before a valid scientific observation. No off-shell, parent-sign or k2 scientific inference is licensed by this phase.",
+      "state": "INVALID_SEQUENCE_BREACH_NO_SCIENTIFIC_INFERENCE"
+    },
+    {
+      "id": "scope:p11-homogeneous-quadratic-collar-admissibility",
+      "type": "scope",
+      "title": "Phase 11 homogeneous quadratic collar scope",
+      "summary": "Strong and weak preservation tests for the declared homogeneous quadratic canonical collar ansatz.",
+      "state": "CLOSED_HISTORICAL_SCOPE",
+      "includes": [
+        "exact Poisson-bracket classification in the declared homogeneous quadratic ansatz",
+        "strong and weak constraint preservation",
+        "arbitrary symmetric momentum-quadratic block in the strong class"
+      ],
+      "excludes": [
+        "a derivation from 4D local supergravity",
+        "localized boundary probes",
+        "a physical observable or TOE conclusion"
+      ]
+    },
+    {
+      "id": "scope:p12-open-interval-rigid-wz-interface",
+      "type": "scope",
+      "title": "Phase 12 open-interval and rigid WZ wall scope",
+      "summary": "The declared endpoint twist and engineered rigid N=1 Wess–Zumino wall, separated from a matter-coupled local-supergravity uplift.",
+      "state": "CLOSED_EXACT_LOCAL_INTERFACE_SCOPE",
+      "includes": [
+        "open-interval canonical reduction of the declared collar",
+        "engineered rigid N=1 multiplet wall and matching connection"
+      ],
+      "excludes": [
+        "boson-only completion as an N=1 interface",
+        "a specified matter-coupled local-supergravity construction",
+        "global or physical promotion"
+      ]
+    },
+    {
+      "id": "scope:p13a-formal-wkb-and-finite-algebra",
+      "type": "scope",
+      "title": "Phase 13A formal WKB and finite-algebra scope",
+      "summary": "Formal local principal-operator phases and finite positive-kernel/CAR controls only; the adversarial erratum is part of the authoritative scope.",
+      "state": "CLOSED_WITH_POST_HOC_SCOPE_CORRECTION",
+      "includes": [
+        "formal WKB phase retention by the declared local principal operator",
+        "finite-dimensional kernel and odd-CAR algebra controls"
+      ],
+      "excludes": [
+        "a relational projector domain",
+        "a physical supercharge",
+        "literal expanding/contracting branch superpartners"
+      ]
+    },
+    {
+      "id": "scope:p14a-compact-t3-selected-charge-template",
+      "type": "scope",
+      "title": "Phase 14A compact-T3 selected charge-template scope",
+      "summary": "The frozen rolling chiral clock and selected Regge–Teitelboim charge template on compact T3.",
+      "state": "CLOSED_CHARGE_TEMPLATE_SCOPE",
+      "includes": [
+        "the declared compact-T3 boundary conditions",
+        "the selected goldstino residual and RT charge template",
+        "the committed charge ledger and exact result"
+      ],
+      "excludes": [
+        "noncompact spatial infinity",
+        "a constructed matter-supergravity canonical bridge",
+        "a nonzero physical supercharge or branch-superpartner theorem"
+      ]
+    },
+    {
+      "id": "scope:p15a-frozen-sequencing-only",
+      "type": "scope",
+      "title": "Phase 15A frozen sequencing and provenance scope",
+      "summary": "Only the artifact-order breach and its inference prohibition are in scope; the intended k2 scientific test was not validly evaluated.",
+      "state": "INVALID_FOR_SCIENTIFIC_INFERENCE",
+      "includes": [
+        "frozen artifact order",
+        "provenance timing",
+        "the recorded sequence-breach receipt"
+      ],
+      "excludes": [
+        "k2 evaluation",
+        "off-shell tangency",
+        "parent-sign physics",
+        "any Phase 15R result as a derivation from Phase 15A"
+      ]
+    },
+    {
+      "id": "evidence:p11-exact-collar-classification",
+      "type": "evidence",
+      "title": "Phase 11 exact collar classification",
+      "summary": "The historical executable completed all exact assertions. Because it predates named check recording, E152–E156 below are retrospective semantic locators, not claimed original stdout IDs.",
+      "state": "VERIFIED_HISTORICAL_EXACT_WITH_RETROSPECTIVE_LOCATORS",
+      "observed_status": "EXIT_0_ALL_EXACT_ASSERTIONS_PASSED_NO_NAMED_RECORDER",
+      "check_ids": [
+        "P11.backfill.E152",
+        "P11.backfill.E153",
+        "P11.backfill.E154",
+        "P11.backfill.E155",
+        "P11.backfill.E156"
+      ]
+    },
+    {
+      "id": "evidence:p12-boundary-twist-interface",
+      "type": "evidence",
+      "title": "Phase 12 exact boundary-twist interface result",
+      "summary": "The historical first run recorded 38 exact passes and rejected nine mutant controls inside the frozen interface scope.",
+      "state": "VERIFIED_HISTORICAL_EXACT",
+      "observed_status": "38_EXACT_PASS_9_MUTANTS_REJECTED_EXIT_0"
+    },
+    {
+      "id": "evidence:p13a-formal-wkb-finite-algebra",
+      "type": "evidence",
+      "title": "Phase 13A formal-WKB and finite-algebra result",
+      "summary": "The historical run recorded 21 exact passes and eight rejected mutants; the committed adversarial erratum is authoritative for its corrected scope.",
+      "state": "VERIFIED_HISTORICAL_WITH_POST_HOC_SCOPE_CORRECTION",
+      "observed_status": "21_EXACT_PASS_8_MUTANTS_REJECTED_EXIT_0_POST_HOC_SCOPE_CORRECTED"
+    },
+    {
+      "id": "evidence:p14a-charge-first-result",
+      "type": "evidence",
+      "title": "Phase 14A committed charge-first result",
+      "summary": "The exact run recorded 24 passes, seven rejected mutants and six scope guards for the frozen compact-T3 charge template.",
+      "state": "VERIFIED_HISTORICAL_EXACT",
+      "observed_status": "24_EXACT_PASS_7_MUTANTS_REJECTED_6_SCOPE_GUARDS_EXIT_0"
+    },
+    {
+      "id": "evidence:p15a-sequence-breach",
+      "type": "evidence",
+      "title": "Phase 15A sequence-breach provenance",
+      "summary": "The committed breach receipt proves only that the frozen artifact order was violated before a valid scientific observation. Its locators are retrospective provenance labels and no run result exists.",
+      "state": "INVALID_RUN_PROVENANCE_ONLY",
+      "observed_status": "INVALID_INCONCLUSIVE_PREREG_OR_PROVENANCE_INVALID_NO_RUN_RESULT",
+      "check_ids": [
+        "P15A.provenance.artifact_order_breach",
+        "P15A.provenance.no_ratified_inference",
+        "P15A.provenance.k2_not_evaluated"
+      ]
+    },
+    {
+      "id": "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "type": "claim",
+      "claim_id": "P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "title": "The strong homogeneous quadratic collar class is so(1,2) plus an arbitrary momentum-quadratic block",
+      "statement": "Within the declared homogeneous quadratic ansatz, exact strong preservation reduces the mixed block to so(1,2) while leaving an arbitrary symmetric momentum-quadratic block.",
+      "summary": "Supported by exact symbolic classification; a momentum shear is one example, not the whole free symmetric block.",
+      "epistemic_state": "SUPPORTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P11_SYMMETRIC_QP_SQUEEZER_IS_STRONG_OR_WEAK_CONSTRAINT_ADMISSIBLE",
+      "type": "claim",
+      "claim_id": "P11_SYMMETRIC_QP_SQUEEZER_IS_STRONG_OR_WEAK_CONSTRAINT_ADMISSIBLE",
+      "title": "A symmetric qp squeezer is strong- or weak-constraint admissible",
+      "statement": "The declared symmetric qp squeezing generator preserves the frozen constraint either strongly or weakly.",
+      "summary": "Contradicted inside the homogeneous quadratic ansatz.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P11_WEAK_DILATION_EXTENDS_THE_STRONG_CLASS",
+      "type": "claim",
+      "claim_id": "P11_WEAK_DILATION_EXTENDS_THE_STRONG_CLASS",
+      "title": "Weak preservation adds a dilation direction",
+      "statement": "Allowing preservation modulo the frozen constraint adds the declared dilation generator beyond the strong class.",
+      "summary": "Supported within the Phase 11 weak-preservation scope.",
+      "epistemic_state": "SUPPORTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+      "type": "claim",
+      "claim_id": "P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+      "title": "The declared admissible collar reduces to an endpoint canonical twist",
+      "statement": "On the frozen open interval, the declared admissible collar is exactly represented by the corresponding endpoint canonical twist.",
+      "summary": "Supported only for the declared collar and endpoint conventions.",
+      "epistemic_state": "SUPPORTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+      "type": "claim",
+      "claim_id": "P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+      "title": "An engineered rigid N=1 wall with a matched multiplet connection exists",
+      "statement": "The Phase 12 frozen construction supplies a rigid N=1 Wess–Zumino wall whose declared bosonic and fermionic interface data match.",
+      "summary": "Supported as an engineered rigid witness, not as a local-supergravity uplift.",
+      "epistemic_state": "SUPPORTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+      "type": "claim",
+      "claim_id": "P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+      "title": "A boson-only collar is an N=1 completion",
+      "statement": "The bosonic collar by itself supplies the frozen N=1 interface completion.",
+      "summary": "Contradicted; the engineered witness requires the matched multiplet connection.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "type": "claim",
+      "claim_id": "P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "title": "The specified matter-coupled local-SUGRA uplift is constructed",
+      "statement": "Phase 12 constructs a complete matter-coupled local-supergravity uplift of the rigid wall interface.",
+      "summary": "Inconclusive/unconstructed; the rigid witness does not establish this stronger interface.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "OPEN_HISTORICAL_BOUNDARY"
+    },
+    {
+      "id": "claim:P13A_DECLARED_LOCAL_PRINCIPAL_OPERATOR_RETAINS_EACH_FORMAL_WKB_PHASE",
+      "type": "claim",
+      "claim_id": "P13A_DECLARED_LOCAL_PRINCIPAL_OPERATOR_RETAINS_EACH_FORMAL_WKB_PHASE",
+      "title": "The declared local principal operator retains each formal WKB phase",
+      "statement": "Within the formal local principal-symbol calculation, each declared WKB phase is retained under the tested operator action.",
+      "summary": "Supported as a formal principal-symbol fact only.",
+      "epistemic_state": "SUPPORTED",
+      "state": "HISTORICAL_FORMAL_EXACT"
+    },
+    {
+      "id": "claim:P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+      "type": "claim",
+      "claim_id": "P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+      "title": "A positive finite-kernel branch-flipping Q has a nonzero kernel map",
+      "statement": "In the frozen positive finite-kernel model, the proposed branch-flipping odd operator has a nonzero map within the declared kernel.",
+      "summary": "Contradicted by the exact finite-algebra control.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "HISTORICAL_FINITE_CONTROL"
+    },
+    {
+      "id": "claim:P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+      "type": "claim",
+      "claim_id": "P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+      "title": "Odd CAR closure forces branch exchange",
+      "statement": "The frozen odd CAR algebra alone forces the intended expanding/contracting branch exchange.",
+      "summary": "Contradicted in the declared finite algebra; closure does not by itself select the branch interpretation.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "HISTORICAL_FINITE_CONTROL"
+    },
+    {
+      "id": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "type": "claim",
+      "claim_id": "P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "title": "The formal WKB branches are literal superpartners",
+      "statement": "The formal opposite WKB phases are related by a constructed physical supercharge and are therefore literal superpartners.",
+      "summary": "Inconclusive: formal phase retention and finite algebra controls do not construct the relational projector domain or physical charge.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "OPEN_HISTORICAL_BOUNDARY"
+    },
+    {
+      "id": "claim:P14A_ROLLING_CHIRAL_CLOCK_PRESERVES_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "type": "claim",
+      "claim_id": "P14A_ROLLING_CHIRAL_CLOCK_PRESERVES_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "title": "The rolling chiral clock preserves a nonzero goldstino gauge residual",
+      "statement": "Under the frozen Phase 14A transformations and compact-T3 conditions, a nonzero goldstino gauge residual survives as the proposed charge channel.",
+      "summary": "Contradicted inside the declared template.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P14A_COMPACT_T3_HAS_REGGE_TEITELBOIM_SPATIAL_BOUNDARY_CHARGE_CHANNEL",
+      "type": "claim",
+      "claim_id": "P14A_COMPACT_T3_HAS_REGGE_TEITELBOIM_SPATIAL_BOUNDARY_CHARGE_CHANNEL",
+      "title": "Compact T3 has the proposed Regge–Teitelboim spatial-boundary charge channel",
+      "statement": "The frozen compact-T3 slice supplies the proposed nonzero Regge–Teitelboim spatial-boundary charge channel.",
+      "summary": "Contradicted because compact T3 has no spatial boundary of the required kind.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "HISTORICAL_SCOPED_EXACT"
+    },
+    {
+      "id": "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "type": "claim",
+      "claim_id": "P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "title": "The selected goldstino RT template yields a nonzero physical charge",
+      "statement": "After all constraints, compensators, domains and boundary data are supplied, the selected Phase 14A template defines a nonzero physical supersymmetry charge.",
+      "summary": "Inconclusive/unconstructed; the two tested shortcuts fail and the matter-SUGRA canonical bridge remains missing.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "OPEN_HISTORICAL_BOUNDARY"
+    },
+    {
+      "id": "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+      "type": "claim",
+      "claim_id": "P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+      "title": "Phase 15A breached the frozen artifact order before a valid scientific observation",
+      "statement": "The Phase 15A artifact chronology violates its own frozen precommit/provenance ordering before any valid scientific result was recorded.",
+      "summary": "Supported as a procedural provenance fact only.",
+      "epistemic_state": "SUPPORTED",
+      "state": "PROCEDURAL_ONLY"
+    },
+    {
+      "id": "claim:P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+      "type": "claim",
+      "claim_id": "P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+      "title": "The Phase 15A sequence breach licenses an off-shell or parent-sign inference",
+      "statement": "The invalid Phase 15A chronology can be used as scientific evidence about off-shell tangency, parent sign or the intended k2 target.",
+      "summary": "Contradicted procedurally: no scientific target was validly evaluated, so no such inference is licensed.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "PROCEDURAL_NO_INFERENCE"
+    },
+    {
+      "id": "open:p11-4d-sugra-origin-and-observable-map",
+      "type": "open_problem",
+      "title": "Derive the Phase 11 collar from 4D SUGRA and map an observable",
+      "summary": "The exact canonical classification still lacks a source-derived 4D local-supergravity origin and a physical observable map.",
+      "question": "Can a specified 4D local-SUGRA system derive the collar class and connect it to a gauge-invariant observable?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p12-localized-boundary-probes-and-local-sugra-uplift",
+      "type": "open_problem",
+      "title": "Localize the Phase 12 probes and construct a local-SUGRA uplift",
+      "summary": "The rigid interface witness does not yet supply localized boundary probes, gravity multiplet data, constraints or a matter-coupled local-supergravity completion.",
+      "question": "Can the rigid wall be embedded into a fully specified matter-coupled local-SUGRA boundary interface?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p13a-relational-projector-domain-and-physical-charge",
+      "type": "open_problem",
+      "title": "Construct the relational projector domain and physical charge",
+      "summary": "Formal WKB and finite-algebra controls leave the Hilbert/rigged domain, projector, conserved charge and branch action unspecified.",
+      "question": "Is there a defined relational projector domain carrying a physical charge that acts nontrivially between the intended branches?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p14a-matter-sugra-canonical-bridge",
+      "type": "open_problem",
+      "title": "Construct the Phase 14A matter-SUGRA canonical bridge",
+      "summary": "A physical charge requires the missing constraint, compensator, boundary/domain and canonical-generator bridge rather than either killed shortcut.",
+      "question": "Can a source-derived matter-supergravity canonical analysis produce a well-defined nonzero physical charge in an admissible geometry?",
+      "state": "OPEN"
+    },
+    {
+      "id": "open:p15a-fresh-parent-sign-repair",
+      "type": "open_problem",
+      "title": "Replace the invalid Phase 15A path with a fresh parent-sign calculation",
+      "summary": "This procedural repair was resolved only by the independently frozen Phase 15R census; no Phase 15A scientific inference was inherited.",
+      "question": "Can a fresh preregistered calculation test the scoped parent-sign question without relying on the invalid Phase 15A sequence?",
+      "state": "RESOLVED_BY_PHASE15R_FROZEN_CENSUS_ONLY"
+    },
+    {
+      "id": "artifact:p11-script",
+      "type": "artifact",
+      "title": "Phase 11 collar-admissibility executable",
+      "summary": "Historical exact SymPy runner; it predates the repository's named check-recorder convention.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase11_collar_admissibility.py",
+      "sha256": "2b2184ec43f8e2e07bd1b07e1699112b6531a547c02be392c92db53e2a271529",
+      "introduced_in_commit": "5bbc780376b26c3b9cc0cb4d50849e8801c7df78"
+    },
+    {
+      "id": "artifact:p11-report",
+      "type": "artifact",
+      "title": "Phase 11 collar-admissibility report",
+      "summary": "Human-readable historical derivation and exact assertion ledger.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE11_COLLAR_ADMISSIBILITY.md",
+      "sha256": "8d3d6616edb1b40a71e47eb489138ab8456eb6ee155563fd1faefb98dc4690fa",
+      "introduced_in_commit": "5bbc780376b26c3b9cc0cb4d50849e8801c7df78"
+    },
+    {
+      "id": "artifact:p12-script",
+      "type": "artifact",
+      "title": "Phase 12 boundary-twist interface executable",
+      "summary": "Historical exact SymPy runner for the endpoint twist and rigid-wall controls.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase12_boundary_twist_interface.py",
+      "sha256": "78657ca4f906054615806578d9ee93ce52561a046ac593addf148d3ca3ab43f5",
+      "introduced_in_commit": "8642a6aca69d5b5631b3e90f93000bf62b344504"
+    },
+    {
+      "id": "artifact:p12-report",
+      "type": "artifact",
+      "title": "Phase 12 boundary-twist interface report",
+      "summary": "Human-readable historical calculation and scope boundary.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE12_BOUNDARY_TWIST_INTERFACE.md",
+      "sha256": "0aafabf2b42d1724e98c6cb38e38e39f5c49aa56abb5eb24f3d28e19a6e5612a",
+      "introduced_in_commit": "8642a6aca69d5b5631b3e90f93000bf62b344504"
+    },
+    {
+      "id": "artifact:p12-contract",
+      "type": "artifact",
+      "title": "Phase 12 historical research contract",
+      "summary": "Frozen historical provenance contract; retained as input metadata rather than a current governance requirement.",
+      "state": "TRACKED_HISTORICAL_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE12_RESEARCH_CONTRACT.json",
+      "sha256": "9573cf98009199ff8eb712d858273fb4ce1f97b053ccfd9c1f231fbd63e7722d",
+      "introduced_in_commit": "8642a6aca69d5b5631b3e90f93000bf62b344504"
+    },
+    {
+      "id": "artifact:p13a-script",
+      "type": "artifact",
+      "title": "Phase 13A Lorentzian branch-supercharge executable",
+      "summary": "Historical exact runner for the formal WKB and finite-algebra controls.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase13a_lorentzian_branch_supercharge.py",
+      "sha256": "3fc9c66cd5010833e98544194b1b5410479c9e6daae0fc714255a468a5eedf05",
+      "introduced_in_commit": "46551e6f1f32c1f2b4dc4dcd33f1d93e228997f8"
+    },
+    {
+      "id": "artifact:p13a-report",
+      "type": "artifact",
+      "title": "Phase 13A Lorentzian branch-supercharge report",
+      "summary": "Human-readable historical report; read together with the adversarial erratum.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE13A_LORENTZIAN_BRANCH_SUPERCHARGE.md",
+      "sha256": "20101298e4dca758758f2310b99e4bc3964f4a5147f3182b4b348012823a744e",
+      "introduced_in_commit": "66c0d01f7ba56698c6d2ea7d4fc18f5c60f372d6"
+    },
+    {
+      "id": "artifact:p13a-contract",
+      "type": "artifact",
+      "title": "Phase 13A historical research contract",
+      "summary": "Frozen historical provenance contract; it does not govern new work.",
+      "state": "TRACKED_HISTORICAL_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE13A_RESEARCH_CONTRACT.json",
+      "sha256": "d62d1a9b952016dacfd5881f94b17ae2879f664dae7e5f838867690f750bb067",
+      "introduced_in_commit": "c41b6a68367ea6ca33ed033e5406223fc2c0b6d6"
+    },
+    {
+      "id": "artifact:p13a-erratum",
+      "type": "artifact",
+      "title": "Phase 13A adversarial scope erratum",
+      "summary": "Authoritative post-hoc scope correction preventing formal and finite controls from being promoted to a physical branch-superpartner construction.",
+      "state": "TRACKED_AUTHORITATIVE_SCOPE_CORRECTION",
+      "artifact_kind": "checkpoint",
+      "path": "cpt_temporal_folded_susy/PHASE13A_ADVERSARIAL_ERRATUM.json",
+      "sha256": "eec037baa7c12c7260914f6907a97634d58d88ffe1b49b998c512e4c5907a044",
+      "introduced_in_commit": "46551e6f1f32c1f2b4dc4dcd33f1d93e228997f8"
+    },
+    {
+      "id": "artifact:p14a-script",
+      "type": "artifact",
+      "title": "Phase 14A chiral-clock charge-first executable",
+      "summary": "Historical exact runner for the frozen compact-T3 charge-template controls.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase14a_chiral_clock_charge_first.py",
+      "sha256": "1c92f295329d511e661f5d8b9d83b6f767e3c8aee45be86e98f6cc95c133bb2b",
+      "introduced_in_commit": "6d6b0f7ada9fd8dfdf6475ca8e90f095d9b9e01c"
+    },
+    {
+      "id": "artifact:p14a-report",
+      "type": "artifact",
+      "title": "Phase 14A chiral-clock charge-first report",
+      "summary": "Human-readable historical report and scope boundary for the selected charge template.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE14A_CHIRAL_CLOCK_CHARGE_FIRST.md",
+      "sha256": "e7e83fa65cab0ab0c228e56f3debb55b02fad71b21838a755aae4b725f5670ce",
+      "introduced_in_commit": "2bed88c3d1216e303e3f42ae8aae7f0476d09564"
+    },
+    {
+      "id": "artifact:p14a-result",
+      "type": "artifact",
+      "title": "Phase 14A committed run result",
+      "summary": "Machine-readable historical result for the exact checks, mutants and scope guards.",
+      "state": "TRACKED_HISTORICAL",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/PHASE14A_RUN_RESULT.json",
+      "sha256": "681ac364ef275aff01701f3f8f611681e090f421cf65bb45ae09ed253b79de44",
+      "introduced_in_commit": "2bed88c3d1216e303e3f42ae8aae7f0476d09564"
+    },
+    {
+      "id": "artifact:p14a-contract",
+      "type": "artifact",
+      "title": "Phase 14A historical research contract",
+      "summary": "Frozen historical provenance contract; it is retained for replay context only.",
+      "state": "TRACKED_HISTORICAL_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE14A_RESEARCH_CONTRACT.json",
+      "sha256": "9536a7fb85db853c4450e6265ffe856c7133af5dbd384fb76545134ceb00426e",
+      "introduced_in_commit": "86194e16f9ddb585292ff6569bc415163e917c99"
+    },
+    {
+      "id": "artifact:p14a-source-packet",
+      "type": "artifact",
+      "title": "Phase 14A source packet",
+      "summary": "Frozen source and convention packet used by the historical calculation.",
+      "state": "TRACKED_HISTORICAL_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE14A_SOURCE_PACKET.json",
+      "sha256": "5f63b748d646ff5a78c3ada7d76026834a449dc4af53613551961b554b6b6fcc",
+      "introduced_in_commit": "9dd53338b8904a385f3cf06a5686676a0fe3fe6c"
+    },
+    {
+      "id": "artifact:p14a-charge-ledger",
+      "type": "artifact",
+      "title": "Phase 14A charge ledger",
+      "summary": "Frozen charge-channel and convention ledger for the compact-T3 template.",
+      "state": "TRACKED_HISTORICAL_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE14A_CHARGE_LEDGER.json",
+      "sha256": "70369df41e49ef86528e44404e251d2890667370a869f5277b5fe8555554582a",
+      "introduced_in_commit": "9dd53338b8904a385f3cf06a5686676a0fe3fe6c"
+    },
+    {
+      "id": "artifact:p15a-contract",
+      "type": "artifact",
+      "title": "Phase 15A historical research contract",
+      "summary": "The frozen contract whose artifact-order requirement was breached; provenance only.",
+      "state": "TRACKED_INVALID_SEQUENCE_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE15A_RESEARCH_CONTRACT.json",
+      "sha256": "017f77e5d419c8f622954b0139a8a54f706e0f9865865fee76152451aa9b9213",
+      "introduced_in_commit": "9b86eead62ac53ac8466d132b63fbf92f292e368"
+    },
+    {
+      "id": "artifact:p15a-source-packet",
+      "type": "artifact",
+      "title": "Phase 15A source packet",
+      "summary": "Frozen source packet retained to reconstruct the invalid sequence; not scientific evidence.",
+      "state": "TRACKED_INVALID_SEQUENCE_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE15A_SOURCE_PACKET.json",
+      "sha256": "285dc3de0108137c4ed99904035e267fd3a6570a47abd38418d64eda38da502a",
+      "introduced_in_commit": "8622bf77c09daa573f5acdc354c3083fae81d01a"
+    },
+    {
+      "id": "artifact:p15a-convention-map",
+      "type": "artifact",
+      "title": "Phase 15A convention map",
+      "summary": "Frozen convention map retained only for provenance reconstruction.",
+      "state": "TRACKED_INVALID_SEQUENCE_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE15A_CONVENTION_MAP.json",
+      "sha256": "84ca8b47b3df845897d7339e5c2dddef0dcf828ff888a48753a77ed08c98526d",
+      "introduced_in_commit": "8622bf77c09daa573f5acdc354c3083fae81d01a"
+    },
+    {
+      "id": "artifact:p15a-mode-ledger",
+      "type": "artifact",
+      "title": "Phase 15A mode and compensator ledger",
+      "summary": "Frozen mode/compensator input retained only for provenance reconstruction.",
+      "state": "TRACKED_INVALID_SEQUENCE_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE15A_MODE_COMPENSATOR_LEDGER.json",
+      "sha256": "5521ba126035f9a35ade9260ca2fdf2a80fcbeeae432da39fabc8cda28d526e8",
+      "introduced_in_commit": "8622bf77c09daa573f5acdc354c3083fae81d01a"
+    },
+    {
+      "id": "artifact:p15a-sequence-breach",
+      "type": "artifact",
+      "title": "Phase 15A sequence-breach receipt",
+      "summary": "Authoritative machine-readable receipt that records the invalid artifact order and prohibits scientific inference.",
+      "state": "TRACKED_INVALID_SEQUENCE_PROVENANCE",
+      "artifact_kind": "checkpoint",
+      "path": "cpt_temporal_folded_susy/PHASE15A_SEQUENCE_BREACH.json",
+      "sha256": "300eb37043a7901c3595cce3dffa2b1204ef35677420e8d8c6c92c9652148a87",
+      "introduced_in_commit": "621320a3524a809b6aac7f55195cdc16ea6aaab0"
+    },
+    {
+      "id": "artifact:p15r-script",
+      "type": "artifact",
+      "title": "Phase 15R parent-sign reproduction executable",
+      "summary": "Fresh exact runner for the frozen Hohl/Kallosh two-source census.",
+      "state": "TRACKED_HISTORICAL_VALID_REPAIR",
+      "artifact_kind": "executable",
+      "path": "cpt_temporal_folded_susy/phase15r_parent_sign_reproduction.py",
+      "sha256": "af3e3d021e995833a634b1fb7afda7d1cd4faace60113bb425d467301424f40d",
+      "introduced_in_commit": "433b4920155d63afd07f74a5800f88c25216d94d"
+    },
+    {
+      "id": "artifact:p15r-report",
+      "type": "artifact",
+      "title": "Phase 15R parent-sign repair report",
+      "summary": "Human-readable two-source census, exact result and strict scope boundary.",
+      "state": "TRACKED_HISTORICAL_VALID_REPAIR",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/PHASE15R_PARENT_SIGN_REPAIR.md",
+      "sha256": "54f61669520a97d738b4e6c8a172339baaccc9152ce248b74b04995a77063e12",
+      "introduced_in_commit": "0c0a4a89c69a2cfc4329261d4fdb4cc775866f9b"
+    },
+    {
+      "id": "artifact:p15r-replay",
+      "type": "artifact",
+      "title": "Phase 15R replay receipt",
+      "summary": "Independent replay provenance for the committed frozen-census result.",
+      "state": "TRACKED_HISTORICAL_VALID_REPAIR",
+      "artifact_kind": "checkpoint",
+      "path": "cpt_temporal_folded_susy/PHASE15R_REPLAY_RECEIPT.json",
+      "sha256": "17aa0d8bd7c200a37fd0c64482b56dfa398603b4c9869d5aa6e32f7594ed1ac3",
+      "introduced_in_commit": "84182da49068183448d0538d698ad26c02944365"
+    },
+    {
+      "id": "artifact:p15r-contract",
+      "type": "artifact",
+      "title": "Phase 15R historical research contract",
+      "summary": "Frozen historical provenance contract for the repair cycle; retained for replay context only.",
+      "state": "TRACKED_HISTORICAL_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE15R_RESEARCH_CONTRACT.json",
+      "sha256": "efbd691451508f9188d487af01b99fac81edc432143ca543055f65baa16670b7",
+      "introduced_in_commit": "34dd2d3fc533d94113f5ea98d3eafc3721565be4"
+    },
+    {
+      "id": "artifact:p15r-source-packet",
+      "type": "artifact",
+      "title": "Phase 15R source and convention packet",
+      "summary": "Frozen Hohl/Kallosh source and convention inventory defining the two-source census.",
+      "state": "TRACKED_HISTORICAL_PROVENANCE",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/PHASE15R_SOURCE_CONVENTION_PACKET.json",
+      "sha256": "29b43a2bc926192b860da3b3f70fde9a29eaf75f4a5b963de51498152412f3bd",
+      "introduced_in_commit": "72819da9d9c078b1f7c0d4942d8f069e9c75d656"
     }
   ],
   "edges": [
@@ -11036,8 +11723,8 @@
       "id": "edge:017",
       "from": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
       "relation": "PART_OF",
-      "to": "programme:cpt-temporal-folded-susy",
-      "note": "Historical programme-level pointer only; it is not asserted to be a Phase 15R result node."
+      "to": "phase:p14a",
+      "note": "Historical Phase 14A target now linked to its actual scope and result lineage; it is not asserted to be a Phase 15R result node."
     },
     {
       "id": "edge:018",
@@ -26598,6 +27285,904 @@
       "from": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
       "relation": "FOLLOW_UP_TO",
       "to": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO"
+    },
+  {
+      "id": "edge:2528",
+      "from": "phase:p11",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2529",
+      "from": "phase:p12",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2530",
+      "from": "phase:p13a",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2531",
+      "from": "phase:p14a",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2532",
+      "from": "phase:p15a",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2533",
+      "from": "phase:p12",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p11",
+      "note": "The boundary-interface calculation follows the exact collar classification."
+    },
+    {
+      "id": "edge:2534",
+      "from": "phase:p13a",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p12",
+      "note": "The formal branch/charge controls test the next interface question without upgrading the rigid witness."
+    },
+    {
+      "id": "edge:2535",
+      "from": "phase:p14a",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p13a",
+      "note": "The charge-first calculation replaces formal branch language with a frozen canonical charge template."
+    },
+    {
+      "id": "edge:2536",
+      "from": "phase:p15a",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p14a",
+      "note": "The intended next calculation followed Phase 14A but became invalid at its own artifact-order gate."
+    },
+    {
+      "id": "edge:2537",
+      "from": "phase:p15r",
+      "relation": "FOLLOW_UP_TO",
+      "to": "phase:p15a",
+      "note": "Phase 15R is an independent fresh repair of the parent-sign question; it derives no scientific fact from the invalid Phase 15A sequence."
+    },
+    {
+      "id": "edge:2538",
+      "from": "scope:p11-homogeneous-quadratic-collar-admissibility",
+      "relation": "PART_OF",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2539",
+      "from": "evidence:p11-exact-collar-classification",
+      "relation": "PART_OF",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2540",
+      "from": "open:p11-4d-sugra-origin-and-observable-map",
+      "relation": "PART_OF",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2541",
+      "from": "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "relation": "PART_OF",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2542",
+      "from": "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p11-exact-collar-classification",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2543",
+      "from": "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p11-homogeneous-quadratic-collar-admissibility"
+    },
+    {
+      "id": "edge:2544",
+      "from": "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p11-report"
+    },
+    {
+      "id": "edge:2545",
+      "from": "claim:P11_SYMMETRIC_QP_SQUEEZER_IS_STRONG_OR_WEAK_CONSTRAINT_ADMISSIBLE",
+      "relation": "PART_OF",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2546",
+      "from": "claim:P11_SYMMETRIC_QP_SQUEEZER_IS_STRONG_OR_WEAK_CONSTRAINT_ADMISSIBLE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p11-exact-collar-classification",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2547",
+      "from": "claim:P11_SYMMETRIC_QP_SQUEEZER_IS_STRONG_OR_WEAK_CONSTRAINT_ADMISSIBLE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p11-homogeneous-quadratic-collar-admissibility"
+    },
+    {
+      "id": "edge:2548",
+      "from": "claim:P11_SYMMETRIC_QP_SQUEEZER_IS_STRONG_OR_WEAK_CONSTRAINT_ADMISSIBLE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p11-report"
+    },
+    {
+      "id": "edge:2549",
+      "from": "claim:P11_WEAK_DILATION_EXTENDS_THE_STRONG_CLASS",
+      "relation": "PART_OF",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2550",
+      "from": "claim:P11_WEAK_DILATION_EXTENDS_THE_STRONG_CLASS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p11-exact-collar-classification",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2551",
+      "from": "claim:P11_WEAK_DILATION_EXTENDS_THE_STRONG_CLASS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p11-homogeneous-quadratic-collar-admissibility"
+    },
+    {
+      "id": "edge:2552",
+      "from": "claim:P11_WEAK_DILATION_EXTENDS_THE_STRONG_CLASS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p11-report"
+    },
+    {
+      "id": "edge:2553",
+      "from": "scope:p12-open-interval-rigid-wz-interface",
+      "relation": "PART_OF",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2554",
+      "from": "evidence:p12-boundary-twist-interface",
+      "relation": "PART_OF",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2555",
+      "from": "open:p12-localized-boundary-probes-and-local-sugra-uplift",
+      "relation": "PART_OF",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2556",
+      "from": "claim:P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+      "relation": "PART_OF",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2557",
+      "from": "claim:P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p12-boundary-twist-interface",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2558",
+      "from": "claim:P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p12-open-interval-rigid-wz-interface"
+    },
+    {
+      "id": "edge:2559",
+      "from": "claim:P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p12-report"
+    },
+    {
+      "id": "edge:2560",
+      "from": "claim:P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+      "relation": "PART_OF",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2561",
+      "from": "claim:P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p12-boundary-twist-interface",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2562",
+      "from": "claim:P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p12-open-interval-rigid-wz-interface"
+    },
+    {
+      "id": "edge:2563",
+      "from": "claim:P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p12-report"
+    },
+    {
+      "id": "edge:2564",
+      "from": "claim:P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+      "relation": "PART_OF",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2565",
+      "from": "claim:P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p12-boundary-twist-interface",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2566",
+      "from": "claim:P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p12-open-interval-rigid-wz-interface"
+    },
+    {
+      "id": "edge:2567",
+      "from": "claim:P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p12-report"
+    },
+    {
+      "id": "edge:2568",
+      "from": "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "relation": "PART_OF",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2569",
+      "from": "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p12-boundary-twist-interface",
+      "polarity": "SUPPORTS",
+      "note": "The evidence supports the recorded INCONCLUSIVE/unconstructed boundary, not the truth of the stronger claim."
+    },
+    {
+      "id": "edge:2570",
+      "from": "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p12-open-interval-rigid-wz-interface"
+    },
+    {
+      "id": "edge:2571",
+      "from": "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p12-report"
+    },
+    {
+      "id": "edge:2572",
+      "from": "scope:p13a-formal-wkb-and-finite-algebra",
+      "relation": "PART_OF",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2573",
+      "from": "evidence:p13a-formal-wkb-finite-algebra",
+      "relation": "PART_OF",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2574",
+      "from": "open:p13a-relational-projector-domain-and-physical-charge",
+      "relation": "PART_OF",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2575",
+      "from": "claim:P13A_DECLARED_LOCAL_PRINCIPAL_OPERATOR_RETAINS_EACH_FORMAL_WKB_PHASE",
+      "relation": "PART_OF",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2576",
+      "from": "claim:P13A_DECLARED_LOCAL_PRINCIPAL_OPERATOR_RETAINS_EACH_FORMAL_WKB_PHASE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p13a-formal-wkb-finite-algebra",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2577",
+      "from": "claim:P13A_DECLARED_LOCAL_PRINCIPAL_OPERATOR_RETAINS_EACH_FORMAL_WKB_PHASE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p13a-formal-wkb-and-finite-algebra"
+    },
+    {
+      "id": "edge:2578",
+      "from": "claim:P13A_DECLARED_LOCAL_PRINCIPAL_OPERATOR_RETAINS_EACH_FORMAL_WKB_PHASE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p13a-report"
+    },
+    {
+      "id": "edge:2579",
+      "from": "claim:P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+      "relation": "PART_OF",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2580",
+      "from": "claim:P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p13a-formal-wkb-finite-algebra",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2581",
+      "from": "claim:P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p13a-formal-wkb-and-finite-algebra"
+    },
+    {
+      "id": "edge:2582",
+      "from": "claim:P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p13a-report"
+    },
+    {
+      "id": "edge:2583",
+      "from": "claim:P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+      "relation": "PART_OF",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2584",
+      "from": "claim:P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p13a-formal-wkb-finite-algebra",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2585",
+      "from": "claim:P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p13a-formal-wkb-and-finite-algebra"
+    },
+    {
+      "id": "edge:2586",
+      "from": "claim:P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p13a-report"
+    },
+    {
+      "id": "edge:2587",
+      "from": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "relation": "PART_OF",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2588",
+      "from": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p13a-formal-wkb-finite-algebra",
+      "polarity": "SUPPORTS",
+      "note": "The evidence supports the recorded INCONCLUSIVE/unconstructed boundary, not the truth of the stronger claim."
+    },
+    {
+      "id": "edge:2589",
+      "from": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p13a-formal-wkb-and-finite-algebra"
+    },
+    {
+      "id": "edge:2590",
+      "from": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p13a-report"
+    },
+    {
+      "id": "edge:2591",
+      "from": "scope:p14a-compact-t3-selected-charge-template",
+      "relation": "PART_OF",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2592",
+      "from": "evidence:p14a-charge-first-result",
+      "relation": "PART_OF",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2593",
+      "from": "open:p14a-matter-sugra-canonical-bridge",
+      "relation": "PART_OF",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2594",
+      "from": "claim:P14A_ROLLING_CHIRAL_CLOCK_PRESERVES_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "relation": "PART_OF",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2595",
+      "from": "claim:P14A_ROLLING_CHIRAL_CLOCK_PRESERVES_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p14a-charge-first-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2596",
+      "from": "claim:P14A_ROLLING_CHIRAL_CLOCK_PRESERVES_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p14a-compact-t3-selected-charge-template"
+    },
+    {
+      "id": "edge:2597",
+      "from": "claim:P14A_ROLLING_CHIRAL_CLOCK_PRESERVES_NONZERO_GOLDSTINO_GAUGE_RESIDUAL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p14a-report"
+    },
+    {
+      "id": "edge:2598",
+      "from": "claim:P14A_COMPACT_T3_HAS_REGGE_TEITELBOIM_SPATIAL_BOUNDARY_CHARGE_CHANNEL",
+      "relation": "PART_OF",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2599",
+      "from": "claim:P14A_COMPACT_T3_HAS_REGGE_TEITELBOIM_SPATIAL_BOUNDARY_CHARGE_CHANNEL",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p14a-charge-first-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2600",
+      "from": "claim:P14A_COMPACT_T3_HAS_REGGE_TEITELBOIM_SPATIAL_BOUNDARY_CHARGE_CHANNEL",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p14a-compact-t3-selected-charge-template"
+    },
+    {
+      "id": "edge:2601",
+      "from": "claim:P14A_COMPACT_T3_HAS_REGGE_TEITELBOIM_SPATIAL_BOUNDARY_CHARGE_CHANNEL",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p14a-report"
+    },
+    {
+      "id": "edge:2602",
+      "from": "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "relation": "PART_OF",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2603",
+      "from": "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p14a-charge-first-result",
+      "polarity": "SUPPORTS",
+      "note": "The evidence supports the recorded INCONCLUSIVE/unconstructed boundary, not the truth of the stronger claim."
+    },
+    {
+      "id": "edge:2604",
+      "from": "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p14a-compact-t3-selected-charge-template"
+    },
+    {
+      "id": "edge:2605",
+      "from": "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p14a-report"
+    },
+    {
+      "id": "edge:2606",
+      "from": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p14a-charge-first-result",
+      "polarity": "SUPPORTS",
+      "note": "The evidence supports the recorded INCONCLUSIVE/unconstructed boundary, not the truth of the stronger claim."
+    },
+    {
+      "id": "edge:2607",
+      "from": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p14a-compact-t3-selected-charge-template"
+    },
+    {
+      "id": "edge:2608",
+      "from": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p14a-report"
+    },
+    {
+      "id": "edge:2609",
+      "from": "scope:p15a-frozen-sequencing-only",
+      "relation": "PART_OF",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2610",
+      "from": "evidence:p15a-sequence-breach",
+      "relation": "PART_OF",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2611",
+      "from": "open:p15a-fresh-parent-sign-repair",
+      "relation": "PART_OF",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2612",
+      "from": "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+      "relation": "PART_OF",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2613",
+      "from": "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p15a-sequence-breach",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2614",
+      "from": "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p15a-frozen-sequencing-only"
+    },
+    {
+      "id": "edge:2615",
+      "from": "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p15a-sequence-breach"
+    },
+    {
+      "id": "edge:2616",
+      "from": "claim:P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+      "relation": "PART_OF",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2617",
+      "from": "claim:P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:p15a-sequence-breach",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2618",
+      "from": "claim:P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:p15a-frozen-sequencing-only"
+    },
+    {
+      "id": "edge:2619",
+      "from": "claim:P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:p15a-sequence-breach"
+    },
+    {
+      "id": "edge:2620",
+      "from": "artifact:p11-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2621",
+      "from": "artifact:p11-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p11"
+    },
+    {
+      "id": "edge:2622",
+      "from": "artifact:p12-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2623",
+      "from": "artifact:p12-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2624",
+      "from": "artifact:p12-contract",
+      "relation": "DOCUMENTS",
+      "to": "phase:p12"
+    },
+    {
+      "id": "edge:2625",
+      "from": "artifact:p13a-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2626",
+      "from": "artifact:p13a-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2627",
+      "from": "artifact:p13a-contract",
+      "relation": "DOCUMENTS",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2628",
+      "from": "artifact:p13a-erratum",
+      "relation": "RECORDS",
+      "to": "phase:p13a"
+    },
+    {
+      "id": "edge:2629",
+      "from": "artifact:p14a-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2630",
+      "from": "artifact:p14a-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2631",
+      "from": "artifact:p14a-result",
+      "relation": "RECORDS",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2632",
+      "from": "artifact:p14a-contract",
+      "relation": "DOCUMENTS",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2633",
+      "from": "artifact:p14a-source-packet",
+      "relation": "DOCUMENTS",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2634",
+      "from": "artifact:p14a-charge-ledger",
+      "relation": "DOCUMENTS",
+      "to": "phase:p14a"
+    },
+    {
+      "id": "edge:2635",
+      "from": "artifact:p15a-contract",
+      "relation": "DOCUMENTS",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2636",
+      "from": "artifact:p15a-source-packet",
+      "relation": "DOCUMENTS",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2637",
+      "from": "artifact:p15a-convention-map",
+      "relation": "DOCUMENTS",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2638",
+      "from": "artifact:p15a-mode-ledger",
+      "relation": "DOCUMENTS",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2639",
+      "from": "artifact:p15a-sequence-breach",
+      "relation": "RECORDS",
+      "to": "phase:p15a"
+    },
+    {
+      "id": "edge:2640",
+      "from": "artifact:p15r-script",
+      "relation": "IMPLEMENTS",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:2641",
+      "from": "artifact:p15r-report",
+      "relation": "DOCUMENTS",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:2642",
+      "from": "artifact:p15r-replay",
+      "relation": "RECORDS",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:2643",
+      "from": "artifact:p15r-contract",
+      "relation": "DOCUMENTS",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:2644",
+      "from": "artifact:p15r-source-packet",
+      "relation": "DOCUMENTS",
+      "to": "phase:p15r"
+    },
+    {
+      "id": "edge:2645",
+      "from": "evidence:p11-exact-collar-classification",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p11-script"
+    },
+    {
+      "id": "edge:2646",
+      "from": "evidence:p11-exact-collar-classification",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p11-report"
+    },
+    {
+      "id": "edge:2647",
+      "from": "evidence:p12-boundary-twist-interface",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p12-script"
+    },
+    {
+      "id": "edge:2648",
+      "from": "evidence:p12-boundary-twist-interface",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p12-report"
+    },
+    {
+      "id": "edge:2649",
+      "from": "evidence:p13a-formal-wkb-finite-algebra",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p13a-script"
+    },
+    {
+      "id": "edge:2650",
+      "from": "evidence:p13a-formal-wkb-finite-algebra",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p13a-report"
+    },
+    {
+      "id": "edge:2651",
+      "from": "evidence:p13a-formal-wkb-finite-algebra",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p13a-erratum"
+    },
+    {
+      "id": "edge:2652",
+      "from": "evidence:p14a-charge-first-result",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p14a-script"
+    },
+    {
+      "id": "edge:2653",
+      "from": "evidence:p14a-charge-first-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p14a-result"
+    },
+    {
+      "id": "edge:2654",
+      "from": "evidence:p15a-sequence-breach",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p15a-sequence-breach"
+    },
+    {
+      "id": "edge:2655",
+      "from": "evidence:p15r-run-result",
+      "relation": "DEFINED_IN",
+      "to": "artifact:p15r-script"
+    },
+    {
+      "id": "edge:2656",
+      "from": "evidence:p15r-run-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:p15r-replay"
+    },
+    {
+      "id": "edge:2657",
+      "from": "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "relation": "MOTIVATES",
+      "to": "open:p11-4d-sugra-origin-and-observable-map",
+      "note": "The exact canonical class does not supply its own 4D SUGRA origin or observable."
+    },
+    {
+      "id": "edge:2658",
+      "from": "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "relation": "MOTIVATES",
+      "to": "open:p12-localized-boundary-probes-and-local-sugra-uplift",
+      "note": "The rigid witness stops before a local-SUGRA construction."
+    },
+    {
+      "id": "edge:2659",
+      "from": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "relation": "MOTIVATES",
+      "to": "open:p13a-relational-projector-domain-and-physical-charge",
+      "note": "A physical charge and relational projector domain are the missing discriminators."
+    },
+    {
+      "id": "edge:2660",
+      "from": "claim:P14A_SELECTED_GOLDSTINO_RT_TEMPLATE_NONZERO_PHYSICAL_CHARGE",
+      "relation": "MOTIVATES",
+      "to": "open:p14a-matter-sugra-canonical-bridge",
+      "note": "The killed shortcuts leave the source-derived canonical bridge open."
+    },
+    {
+      "id": "edge:2661",
+      "from": "claim:P15A_PRECOMMIT_SCIENTIFIC_OBSERVATION_BREACHED_FROZEN_ARTIFACT_ORDER",
+      "relation": "MOTIVATES",
+      "to": "open:p15a-fresh-parent-sign-repair",
+      "note": "The breach required a fresh independent calculation rather than a reinterpretation of invalid output."
+    },
+    {
+      "id": "edge:2662",
+      "from": "claim:P12_DECLARED_ADMISSIBLE_COLLAR_REDUCES_TO_ENDPOINT_CANONICAL_TWIST",
+      "relation": "EXTENDS",
+      "to": "claim:P11_STRONG_HOMOGENEOUS_QUADRATIC_COLLAR_CLASS_IS_SO12_PLUS_ARBITRARY_MOMENTUM_QUADRATIC_BLOCK",
+      "note": "The endpoint reduction applies one declared collar; it does not replace the Phase 11 classification."
+    },
+    {
+      "id": "edge:2663",
+      "from": "claim:P12_BOSON_ONLY_COLLAR_IS_AN_N1_COMPLETION",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P12_ENGINEERED_RIGID_N1_WALL_WITH_MATCHED_MULTIPLET_CONNECTION_EXISTS",
+      "note": "The full rigid witness needs matched multiplet data."
+    },
+    {
+      "id": "edge:2664",
+      "from": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P12_SPECIFIED_MATTER_COUPLED_LOCAL_SUGRA_UPLIFT_IS_CONSTRUCTED",
+      "note": "The formal test does not close the missing local-SUGRA interface."
+    },
+    {
+      "id": "edge:2665",
+      "from": "claim:P13A_POSITIVE_FINITE_KERNEL_BRANCH_FLIPPING_Q_HAS_NONZERO_KERNEL_MAP",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "note": "A finite-kernel null result constrains one surrogate, not every physical realization."
+    },
+    {
+      "id": "edge:2666",
+      "from": "claim:P13A_ODD_CAR_CLOSURE_FORCES_BRANCH_EXCHANGE",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "note": "Algebraic closure alone does not choose branch semantics."
+    },
+    {
+      "id": "edge:2667",
+      "from": "claim:P14A_LITERAL_BRANCH_SUPERPARTNER",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:P13A_LITERAL_WKB_BRANCH_SUPERPARTNER",
+      "note": "Phase 14A asks for a concrete charge channel instead of relying on formal labels."
+    },
+    {
+      "id": "edge:2668",
+      "from": "claim:P15A_SEQUENCE_BREACH_LICENSES_OFFSHELL_TANGENCY_OR_PARENT_SIGN_INFERENCE",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "note": "The valid Phase 15R census is independent evidence; Phase 15A licenses no scientific comparison."
+    },
+    {
+      "id": "edge:2669",
+      "from": "claim:P15R_BOSONIC_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p15a-fresh-parent-sign-repair",
+      "note": "The valid census resolves only the frozen bosonic repair."
+    },
+    {
+      "id": "edge:2670",
+      "from": "claim:P15R_FULL_OFFSHELL_SINGLE_SOURCE_PARENT_EXISTS_IN_FROZEN_CENSUS",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:p15a-fresh-parent-sign-repair",
+      "note": "The valid census resolves only the frozen two-source full-off-shell question."
     }
   ],
   "kg_bridges": [
@@ -27057,6 +28642,26 @@
       "checked_at_utc": "2026-08-27T05:21:55Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 uncorrected one-term Van Vleck exact finite hbar unitarity coarea nonpass",
       "note": "No authorized exact external correspondence or writer is available. The narrow contradiction applies only to the displayed one-term amplitude and does not exclude a corrected full-symbol or spectral transform; no external UID was invented."
+    },
+    {
+      "local_node_id": "phase:p14a",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T06:39:14Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase14A compact T3 chiral clock charge first goldstino Regge Teitelboim",
+      "note": "Read-only exact/keyword searches found no authorized external node for this historical scoped calculation. Its compact-T3 contradictions, inconclusive physical-charge boundary and artifact hashes remain repository-local; no external UID was invented."
+    },
+    {
+      "local_node_id": "evidence:p15a-sequence-breach",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T06:39:14Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Phase15A invalid sequence breach no scientific inference",
+      "note": "Read-only exact/keyword searches found no authorized external provenance node. This bridge intentionally preserves the sequence breach as procedural evidence only and does not externalize a scientific result; no external UID was invented."
     }
   ]
 }

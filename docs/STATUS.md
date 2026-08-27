@@ -474,13 +474,17 @@ and
 
 ## Research ontology memory
 
-The repository-local collection now catalogs three independent graphs—hypercomplex, legacy
-predictions/narrative, and CPT temporal-folded SUSY—with **915 nodes and 2614 directed relations**. It
-preserves 230 scoped claims (135 `SUPPORTED`, 90 `CONTRADICTED`, 5 `INCONCLUSIVE`), 124 evidence nodes,
-and 68 open problems. All 216 hash-bearing records validate (206 artifacts and 10 policies). The 35
+The repository-local collection now catalogs four independent graphs—hypercomplex, legacy
+predictions/narrative, CPT temporal-folded SUSY, and a separate IG-RUEQFT locality audit—with **1045
+nodes and 2957 directed relations**. It preserves 263 scoped claims (149 `SUPPORTED`, 103
+`CONTRADICTED`, 11 `INCONCLUSIVE`), 137 evidence nodes, and 77 open problems. All 261 hash-bearing
+records validate (251 artifacts and 10 policies). The 44
 warnings are explicit unresolved external bridges, not validation failures. The CPT graph retains the
-Phase 16–56 snapshots, the historical consumed Gate-1 results, the killed numbered reconciliation route,
-and generic bounded unnumbered science; neither the collection nor its navigation paths
+Phase 11–15R historical lead-in, Phase 16–56 snapshots, the historical consumed Gate-1 results, the
+killed numbered reconciliation route, and generic bounded unnumbered science. Phase 15A is explicitly
+procedural invalid-run provenance and licenses no scientific inference. The IG-RUEQFT graph records a
+finite free-U(1) bulk-locality nonpass without promoting it to a universal theory verdict. Neither the
+collection nor its navigation paths
 authorize Phase 57, close Gate 1, or promote a physics claim.
 
 - [`../ontology/README.md`](../ontology/README.md) is the human collection map.

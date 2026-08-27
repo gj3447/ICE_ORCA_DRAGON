@@ -88,6 +88,7 @@ Every source above has a `PRIMARY*` source state in the local graph. That is a s
 
 | Claim family | Graph sources | Coverage type |
 | --- | --- | --- |
+| Historical Phase 11–15R collar, rigid-wall, formal-WKB, compact-T3 charge and parent-sign lineage | Phase-local reports, contracts and source/convention packets; P15R Hohl v1/Kallosh v3 packet | Repository calculation evidence is hash-indexed separately from literature framing. The backfill preserves exact facts, contradictions, inconclusive construction boundaries and the Phase 15A invalid-sequence break; it does not assert literature completeness, a physical branch-superpartner theorem, or a TOE result. Primary-source node expansion remains a separate curation task because the frozen packets already preserve exact citations and locators. |
 | Phase 16 bosonic parent, strict tangency, rolling clock | BGG `hep-th/0005225v1` | Three `DERIVED_FROM` edges from evidence |
 | Standard local SUSY and reflection-composed charge | Haag–Łopuszański–Sohnius | Two `CITES` edges establishing the standard closure baseline |
 | Ordinary real temporal seam | Belyaev–van Nieuwenhuizen; Di Pietro–Klinghoffer–Shamir; Skenderis–Townsend | Three `CITES` edges: spatial positive controls and continuation/reality warnings |
@@ -143,11 +144,12 @@ Every source above has a `PRIMARY*` source state in the local graph. That is a s
 | Phase 44 frozen NumPy64 local RHS error decomposition | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none supplies the repository's exact independent/source formula comparison, byte-faithful AST trace, S0-to-S7 signed decomposition, six contraction alternatives, fixed forward-error envelopes, 13/77 cohort coverage, or nonexclusive mixed-rounding interpretation. No source proves correct rounding, selects one causal stage, repairs the integrated tangent, or licenses a global intersection invariant. No new literature source is introduced by Phase 44 |
 | Non-numbered Gate-1 straight-lift, phase-band, scalar-source, finite bosonic canonical, trace-gauge, V0 endpoint, off-shell and principal-FIO controls | Witten (2010); Banihashemi–Jacobson; Gibbons–Hawking–Perry; Henneaux–Teitelboim–Vergara; García–Vergara–Urrutia; Marolf (1996); Halliwell (1988); Rogers; Hörmander; Van Vleck | Witten supplies only relative-cycle/good-end framing. Banihashemi–Jacobson supplies the local trace-gauge/FP premise and spatially flat benchmark, not a global slicing theorem or this curved chart. Henneaux–Teitelboim–Vergara supplies endpoint-transformation/improved-action framing; García–Vergara–Urrutia bounds the omitted BFV endpoint data; Marolf and Halliwell bound full-lapse minisuperspace readings; Rogers separates local FP nonvanishing from global admissibility; Hörmander and Van Vleck frame principal microlocal and semiclassical determinant scope. Repository evidence supplies the bad subsequence, affine class, scalar-source link, convergence obstruction, trace reduction, relational action, U_plus classical Darboux chart, local principal momentum FIO and exact coarea nonpass for its uncorrected one-term amplitude. It does not supply a corrected full symbol, ordering, domains, global normalization, other-component atlas, replacement BFV source, old fixed-a equality, full-real-lapse delta(C) rigging map, zero lapse, physical cycle, global coefficient, physics or TOE. |
 
-Phase 15R is intentionally represented as a historical **result pointer**, not a duplicated source
-ledger. Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative
-in [`PHASE15R_SOURCE_CONVENTION_PACKET.json`](../../../cpt_temporal_folded_susy/PHASE15R_SOURCE_CONVENTION_PACKET.json).
-The local graph therefore does not imply source completeness for Phase 15R; it preserves only the two
-scoped target states needed to understand why Phase 16 tested BGG.
+Phase 15R remains a historical **scoped census**, not a duplicated or literature-wide source ledger.
+Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative in
+[`PHASE15R_SOURCE_CONVENTION_PACKET.json`](../../../cpt_temporal_folded_susy/PHASE15R_SOURCE_CONVENTION_PACKET.json).
+The local graph now also pins its runner, report, result, replay and provenance artifacts and connects
+them to the Phase 11–15A lead-in. This does not imply source completeness: it preserves only the two
+frozen-census target states needed to understand why Phase 16 independently tested BGG.
 
 ## Source pinning
 

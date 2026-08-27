@@ -1,0 +1,281 @@
+{
+  "$schema": "../schema/research-graph-v1.schema.json",
+  "schema_version": "research-graph/v1",
+  "graph_id": "research-graph:igrueqft-locality",
+  "title": "IG-RUEQFT locality audit research graph",
+  "description": "A repository-local memory and index graph for the scoped IG-RUEQFT information-gauge locality audit. It separates the external proposal, one finite free-fermion oracle, its negative locality result, and the still-open interacting and continuum questions without treating the oracle as a general refutation of the full programme.",
+  "updated_at_utc": "2026-08-27T06:40:59Z",
+  "canonical_file": "ontology/igrueqft-locality/graph.json",
+  "source_inventory": "ontology/igrueqft-locality/references/source-inventory.md",
+  "quick_answers": [
+    {
+      "question": "Did U(1) group averaging make the recorded entanglement term a bulk-local density?",
+      "answer": "No in the frozen N=64 free-fermion oracle. The upper bound on the charge-dephased entropy divided by L squared falls from 0.4520 at L=4 to 0.1475 at L=16, while the entropy remains compatible with log-enhanced boundary scaling rather than volume scaling.",
+      "claim_ids": [
+        "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL",
+        "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME"
+      ]
+    },
+    {
+      "question": "Does that one oracle refute all of IG-RUEQFT?",
+      "answer": "No general verdict is established. The calculation is a finite free U(1) model and does not implement the proposal's interacting matter action, information-gauge field, continuum stress tensor, renormalization, or empirical predictions.",
+      "claim_ids": [
+        "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME"
+      ]
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "reading-path:igrueqft-locality-oracle",
+      "title": "From the proposed locality repair to the finite negative oracle",
+      "summary": "Start with the information-gauge proposal as an external object, read the bulk-versus-boundary scaling discriminator, inspect the finite charge-dephasing result, and stop at its explicit scope boundary.",
+      "nodes": [
+        "programme:igrueqft-locality-audit",
+        "concept:igrueqft-information-gauge-repair",
+        "concept:igrueqft-bulk-versus-boundary-entropy-scaling",
+        "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL",
+        "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME",
+        "evidence:igrueqft-free-fermion-charge-dephasing-oracle",
+        "scope:igrueqft-finite-free-u1-oracle"
+      ]
+    },
+    {
+      "id": "reading-path:igrueqft-negative-result-to-open-theory",
+      "title": "What the negative oracle leaves open",
+      "summary": "Separate a decisive failure of the displayed group-averaging shortcut in one model from a universal no-go, then follow the missing proposal-specific action and continuum discriminator.",
+      "nodes": [
+        "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME",
+        "scope:igrueqft-finite-free-u1-oracle",
+        "open:igrueqft-proposal-specific-local-action",
+        "open:igrueqft-continuum-interacting-locality-discriminator"
+      ]
+    }
+  ],
+  "node_type_legend": {
+    "programme": "the scoped external-theory audit programme",
+    "concept": "reusable proposal or scaling distinction",
+    "claim": "falsifiable statement with explicit scope",
+    "evidence": "observed finite calculation and audit ledger",
+    "scope": "model assumptions and exclusions",
+    "open_problem": "missing construction or discriminator",
+    "artifact": "hash-pinned tracked repository file"
+  },
+  "relation_legend": {
+    "PART_OF": "belongs to the IG-RUEQFT locality audit",
+    "ABOUT": "claim concerns a reusable concept",
+    "HAS_EVIDENCE": "claim points to supporting or contradicting evidence; see polarity",
+    "DEFINED_IN": "the calculation is implemented by a hash-pinned source",
+    "RECORDED_IN": "evidence is persisted in a tracked result or report",
+    "DOCUMENTED_BY": "a claim or programme is explained by a tracked report",
+    "VALID_WITHIN": "claim is limited by the declared finite-model scope",
+    "FOLLOW_UP_TO": "open problem follows from a scoped result",
+    "BLOCKED_BY": "a broader conclusion is blocked by a missing construction"
+  },
+  "nodes": [
+    {
+      "id": "programme:igrueqft-locality-audit",
+      "type": "programme",
+      "title": "IG-RUEQFT information-gauge locality audit",
+      "summary": "A bounded audit of whether charge-sector group averaging converts an entanglement contribution into a bulk-local density, kept separate from the full external proposal and from ICE's other research programmes.",
+      "state": "ACTIVE_SCOPED_AUDIT"
+    },
+    {
+      "id": "concept:igrueqft-information-gauge-repair",
+      "type": "concept",
+      "title": "IG-RUEQFT information-gauge locality repair",
+      "summary": "The external proposal's attempt to treat subsystem-cut ambiguity as a local gauge redundancy. The repository tests only one charge-dephasing consequence and does not identify this proposal with ICE.",
+      "state": "EXTERNAL_PROPOSAL_UNDER_AUDIT"
+    },
+    {
+      "id": "concept:igrueqft-bulk-versus-boundary-entropy-scaling",
+      "type": "concept",
+      "title": "Bulk-volume versus boundary entropy scaling",
+      "summary": "The frozen discriminator asks whether entropy divided by region volume tends toward a nonzero constant, as required by the tested bulk-density shortcut, or decreases while boundary-type scaling survives.",
+      "state": "ACTIVE_DISCRIMINATOR"
+    },
+    {
+      "id": "scope:igrueqft-finite-free-u1-oracle",
+      "type": "scope",
+      "title": "Finite free-U(1) locality-oracle scope",
+      "summary": "The calculation uses one N=64 two-dimensional free-fermion torus, square regions L=4 through 16, U(1) charge dephasing, correlation-matrix entropy, and a Poisson-binomial charge-entropy upper bound.",
+      "state": "FROZEN_FINITE_MODEL",
+      "includes": [
+        "one two-dimensional tight-binding free-fermion Fermi sea",
+        "finite square regions L=4,6,8,10,12,14,16",
+        "U(1) charge-sector dephasing bracket S_A <= S_inv <= S_A + H(P_A)",
+        "subvolume versus L squared and log-enhanced boundary-scaling diagnostics"
+      ],
+      "excludes": [
+        "a continuum or thermodynamic-limit theorem",
+        "the proposal's interacting matter action or information-gauge field dynamics",
+        "renormalized stress tensor, BRST completion, or empirical prediction",
+        "a universal theorem for every gauge group or quantum field theory",
+        "a general refutation or validation of IG-RUEQFT",
+        "an ICE equivalence, physics promotion, or TOE claim"
+      ]
+    },
+    {
+      "id": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL",
+      "type": "claim",
+      "claim_id": "IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL",
+      "title": "Charge group averaging makes the recorded entanglement term bulk local",
+      "statement": "In the frozen N=64 free-U(1) oracle, charge-sector group averaging changes the entanglement contribution into an extensive bulk density whose entropy-to-volume ratio remains approximately constant as L grows from 4 to 16.",
+      "summary": "Contradicted in the declared finite model: even the computed upper bracket for the dephased entropy divided by L squared falls strongly with L, while the unaveraged entropy remains compatible with log-enhanced boundary scaling.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_IN_FROZEN_ORACLE"
+    },
+    {
+      "id": "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME",
+      "type": "claim",
+      "claim_id": "IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME",
+      "title": "The recorded charge-dephased entropy remains subvolume",
+      "statement": "For every sampled L in the frozen free-fermion oracle, the exact bracket S_A <= S_inv <= S_A + H(P_A) has an upper entropy-to-volume ratio that decreases across the scan, from 0.4519503958 at L=4 to 0.1474721981 at L=16.",
+      "summary": "Supported as a finite numerical statement. It is evidence against the tested bulk-density shortcut, not a continuum asymptotic theorem.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_FINITE_NUMERICAL"
+    },
+    {
+      "id": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME",
+      "type": "claim",
+      "claim_id": "IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME",
+      "title": "The single free oracle refutes the full IG-RUEQFT programme",
+      "statement": "The frozen free-U(1) calculation alone is sufficient to reject every interacting, continuum, gauge-completed, or phenomenological realization of IG-RUEQFT.",
+      "summary": "Not established. The recorded result blocks the displayed group-averaging locality shortcut in one free model, while proposal-specific dynamics and broader universality remain untested.",
+      "epistemic_state": "INCONCLUSIVE",
+      "state": "NOT_ESTABLISHED_BY_SCOPED_ORACLE"
+    },
+    {
+      "id": "evidence:igrueqft-free-fermion-charge-dephasing-oracle",
+      "type": "evidence",
+      "title": "Finite free-fermion charge-dephasing locality oracle",
+      "summary": "The committed result records seven region sizes. S_A/L squared falls from 0.345408 to 0.137253 and the exact upper bracket (S_A+H)/L squared falls from 0.451950 to 0.147472; S_A/(L log L) changes from 0.901892 at L=6 to 0.792055 at L=16. These observed finite trends contradict the registered volume-scaling predicate without proving a continuum theorem.",
+      "state": "VERIFIED_SCOPED_NEGATIVE",
+      "observed_status": "FINITE_FREE_U1_GROUP_AVERAGING_DOES_NOT_PASS_BULK_LOCALITY_DISCRIMINATOR",
+      "source_anchors": [
+        "igrueqft_locality_falsifier_2026-07-12/RESULT.json",
+        "igrueqft_locality_falsifier_2026-07-12/igrueqft_locality_falsifier.py:1-98",
+        "research/reports/thothsaem/THOTHSAEM_IGRUEQFT_NAESENGMOON_2026-07-12.md:61-80",
+        "research/reports/thothsaem/THOTHSAEM_UEQFT_SOURCING_2026-07-12.md:121-151"
+      ],
+      "content_hashes": {
+        "igrueqft_locality_falsifier_2026-07-12/RESULT.json": "8c2197aac3459237c1f1ccada89135f8d386f99afa691ee842ef5998018b9560",
+        "igrueqft_locality_falsifier_2026-07-12/igrueqft_locality_falsifier.py": "4810f241c178f076d290212cfd9bbbb4d28d5acc942af8cf43e99f9151028a29",
+        "research/reports/thothsaem/THOTHSAEM_IGRUEQFT_NAESENGMOON_2026-07-12.md": "d9978ddfa950659744a74942c99be87416079217eefb4d1995c2ba2e52e10b5f",
+        "research/reports/thothsaem/THOTHSAEM_UEQFT_SOURCING_2026-07-12.md": "042c5dc90fb4e2bf91df01216bdef2431dd87e44ff81a923b75d7a81392103d9"
+      }
+    },
+    {
+      "id": "artifact:igrueqft-locality-result",
+      "type": "artifact",
+      "title": "IG-RUEQFT finite locality-oracle result",
+      "summary": "The committed numerical result carrying all seven entropy rows and the bounded verdict string.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "numerical_result_json",
+      "path": "igrueqft_locality_falsifier_2026-07-12/RESULT.json",
+      "sha256": "8c2197aac3459237c1f1ccada89135f8d386f99afa691ee842ef5998018b9560",
+      "introduced_in_commit": "28d051449bbd3acc57391c32f77a2fb8e9137e77"
+    },
+    {
+      "id": "artifact:igrueqft-locality-runner",
+      "type": "artifact",
+      "title": "IG-RUEQFT finite locality-oracle runner",
+      "summary": "The NumPy correlation-matrix and Poisson-binomial implementation that produces the tracked result.",
+      "state": "HASH_PINNED_CURRENT",
+      "artifact_kind": "python_numerical_calculation_source",
+      "path": "igrueqft_locality_falsifier_2026-07-12/igrueqft_locality_falsifier.py",
+      "sha256": "4810f241c178f076d290212cfd9bbbb4d28d5acc942af8cf43e99f9151028a29",
+      "introduced_in_commit": "28d051449bbd3acc57391c32f77a2fb8e9137e77"
+    },
+    {
+      "id": "artifact:igrueqft-naesengmoon-report",
+      "type": "artifact",
+      "title": "IG-RUEQFT adversarial locality report",
+      "summary": "The human audit that states the group-averaging failure and explicitly limits it to the concrete free-theory model.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "research_audit_markdown",
+      "path": "research/reports/thothsaem/THOTHSAEM_IGRUEQFT_NAESENGMOON_2026-07-12.md",
+      "sha256": "d9978ddfa950659744a74942c99be87416079217eefb4d1995c2ba2e52e10b5f",
+      "introduced_in_commit": "6e0724dca68d03d175f756ed1835bca069addb0c"
+    },
+    {
+      "id": "artifact:igrueqft-source-boundary-report",
+      "type": "artifact",
+      "title": "UEQFT and IG-RUEQFT source-boundary report",
+      "summary": "The repository report distinguishing the external programme from the ICE overlay and recording proposal status and sourcing limitations.",
+      "state": "HASH_PINNED_HISTORICAL",
+      "artifact_kind": "source_audit_markdown",
+      "path": "research/reports/thothsaem/THOTHSAEM_UEQFT_SOURCING_2026-07-12.md",
+      "sha256": "042c5dc90fb4e2bf91df01216bdef2431dd87e44ff81a923b75d7a81392103d9",
+      "introduced_in_commit": "6e0724dca68d03d175f756ed1835bca069addb0c"
+    },
+    {
+      "id": "open:igrueqft-proposal-specific-local-action",
+      "type": "open_problem",
+      "title": "Supply the proposal-specific local action and coupling",
+      "summary": "The repository has not implemented the external proposal's complete information-gauge field, matter coupling, constraints, and stress tensor in a common convention.",
+      "state": "OPEN",
+      "question": "What explicit action and gauge transformation law produces a well-defined local matter and information-flow coupling that can be checked independently?"
+    },
+    {
+      "id": "open:igrueqft-continuum-interacting-locality-discriminator",
+      "type": "open_problem",
+      "title": "Build a continuum interacting locality discriminator",
+      "summary": "The finite free-model trend is decisive only for its registered shortcut; a broader test needs controlled size scaling, interactions, gauge constraints, and a local stress-tensor or renormalization criterion.",
+      "state": "OPEN",
+      "question": "Does a proposal-specific interacting continuum construction change the subvolume entropy bound or instead reproduce the same nonlocal boundary dependence?"
+    }
+  ],
+  "edges": [
+    { "id": "edge:001", "from": "concept:igrueqft-information-gauge-repair", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:002", "from": "concept:igrueqft-bulk-versus-boundary-entropy-scaling", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:003", "from": "scope:igrueqft-finite-free-u1-oracle", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:004", "from": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:005", "from": "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:006", "from": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:007", "from": "evidence:igrueqft-free-fermion-charge-dephasing-oracle", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:008", "from": "artifact:igrueqft-locality-result", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:009", "from": "artifact:igrueqft-locality-runner", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:010", "from": "artifact:igrueqft-naesengmoon-report", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:011", "from": "artifact:igrueqft-source-boundary-report", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:012", "from": "open:igrueqft-proposal-specific-local-action", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:013", "from": "open:igrueqft-continuum-interacting-locality-discriminator", "relation": "PART_OF", "to": "programme:igrueqft-locality-audit" },
+    { "id": "edge:014", "from": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL", "relation": "HAS_EVIDENCE", "to": "evidence:igrueqft-free-fermion-charge-dephasing-oracle", "polarity": "CONTRADICTS" },
+    { "id": "edge:015", "from": "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME", "relation": "HAS_EVIDENCE", "to": "evidence:igrueqft-free-fermion-charge-dephasing-oracle", "polarity": "SUPPORTS" },
+    { "id": "edge:016", "from": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME", "relation": "HAS_EVIDENCE", "to": "evidence:igrueqft-free-fermion-charge-dephasing-oracle", "polarity": "CONTRADICTS", "note": "The evidence explicitly excludes a universal programme-level conclusion." },
+    { "id": "edge:017", "from": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL", "relation": "VALID_WITHIN", "to": "scope:igrueqft-finite-free-u1-oracle" },
+    { "id": "edge:018", "from": "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME", "relation": "VALID_WITHIN", "to": "scope:igrueqft-finite-free-u1-oracle" },
+    { "id": "edge:019", "from": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME", "relation": "VALID_WITHIN", "to": "scope:igrueqft-finite-free-u1-oracle" },
+    { "id": "edge:020", "from": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL", "relation": "ABOUT", "to": "concept:igrueqft-information-gauge-repair" },
+    { "id": "edge:021", "from": "claim:IGRUEQFT_RECORDED_CHARGE_DEPHASED_ENTROPY_REMAINS_SUBVOLUME", "relation": "ABOUT", "to": "concept:igrueqft-bulk-versus-boundary-entropy-scaling" },
+    { "id": "edge:022", "from": "evidence:igrueqft-free-fermion-charge-dephasing-oracle", "relation": "RECORDED_IN", "to": "artifact:igrueqft-locality-result" },
+    { "id": "edge:023", "from": "evidence:igrueqft-free-fermion-charge-dephasing-oracle", "relation": "DEFINED_IN", "to": "artifact:igrueqft-locality-runner" },
+    { "id": "edge:024", "from": "evidence:igrueqft-free-fermion-charge-dephasing-oracle", "relation": "RECORDED_IN", "to": "artifact:igrueqft-naesengmoon-report" },
+    { "id": "edge:025", "from": "programme:igrueqft-locality-audit", "relation": "DOCUMENTED_BY", "to": "artifact:igrueqft-source-boundary-report" },
+    { "id": "edge:026", "from": "open:igrueqft-proposal-specific-local-action", "relation": "FOLLOW_UP_TO", "to": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME" },
+    { "id": "edge:027", "from": "open:igrueqft-continuum-interacting-locality-discriminator", "relation": "FOLLOW_UP_TO", "to": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL" },
+    { "id": "edge:028", "from": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME", "relation": "BLOCKED_BY", "to": "open:igrueqft-proposal-specific-local-action" },
+    { "id": "edge:029", "from": "claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME", "relation": "BLOCKED_BY", "to": "open:igrueqft-continuum-interacting-locality-discriminator" }
+  ],
+  "kg_bridges": [
+    {
+      "local_node_id": "concept:igrueqft-information-gauge-repair",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:BookConcept:ig-rueqft_(information-gauge_+_rueqft)",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-27T06:40:59Z",
+      "lookup_key": "IG-RUEQFT",
+      "note": "Live ontology_get returned one collision-free legacy BookConcept. It is a proposal-level related record, not the repository validation result and not external ratification."
+    },
+    {
+      "local_node_id": "claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T06:40:59Z",
+      "lookup_key": "IG-RUEQFT group averaging entanglement bulk locality free fermion oracle 2026-07-12",
+      "note": "No collision-free live validation-result node was found and the available MCP is read-only; no external UID was invented."
+    }
+  ]
+}

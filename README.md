@@ -12,13 +12,16 @@
 </div>
 
 ICE_ORCA_DRAGON is a reproducible hypothesis-testing workbench, not a completed unified theory. It
-contains two deliberately separated research programmes:
+contains two deliberately separated ICE research programmes plus one independently scoped
+external-theory audit:
 
 - exact and numerical tests of Cayley–Dickson, sedenion, zero-divisor, and legacy prediction claims;
 - a CPT × Temporal-Folded SUSY programme studying doubled time histories, quantum seam states,
   closed-FRW/SUGRA backgrounds, Wheeler–DeWitt selection, and possible supersymmetry breaking.
+- a finite free-U(1) IG-RUEQFT locality audit, kept separate from ICE and from any general verdict on
+  that external proposal.
 
-The two tracks share an execution and evidence system; they are **not currently derived from one another**.
+These lanes share an execution and evidence system; they are **not currently derived from one another**.
 The repository preserves speculative motivations while turning them into scoped calculations. Exact
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
@@ -67,6 +70,7 @@ An intuitive, explicitly non-evidential companion is
 |---|---|---|
 | Hypercomplex algebra | Which structures in Cayley–Dickson algebras, sedenions, zero divisors, associators, and proposed group actions survive exact or basis-invariant tests? | Reusable algebraic results exist, but no Standard Model embedding or new particle prediction has been established. |
 | CPT × Temporal-Folded SUSY | Can two CPT/Pin-related histories be joined by a physical quantum seam while ordinary SUSY acts within each sheet, and can that structure select initial data or generate lasting observable SUSY breaking? | Finite algebraic, state, and cosmological witnesses exist. A full seam action, persistent soft spectrum, and unique observable prediction do not yet exist. |
+| IG-RUEQFT locality audit | Does one frozen free-U(1) charge-dephasing oracle turn entanglement into an extensive bulk density? | No in the finite N=64 scan. This scoped nonpass is not a thermodynamic-limit theorem or a refutation of all interacting/continuum realizations. |
 
 ### Hypercomplex-algebra programme
 
@@ -302,11 +306,11 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 | discovered Python kernels | 92 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology collection | 3 independent graphs; 915 nodes, 2614 edges, 230 claims: 135 `SUPPORTED`, 90 `CONTRADICTED`, 5 `INCONCLUSIVE` | `./ice ontology summary` |
-| hash-tracked ontology records | 124 evidence nodes, 68 open problems, 206 artifacts, 10 policies; 216/216 recorded hashes verified; 35 explicit unresolved-bridge warnings | `./ice ontology validate` |
+| research ontology collection | 4 independent graphs; 1045 nodes, 2957 edges, 263 claims: 149 `SUPPORTED`, 103 `CONTRADICTED`, 11 `INCONCLUSIVE` | `./ice ontology summary` |
+| hash-tracked ontology records | 137 evidence nodes, 77 open problems, 251 artifacts, 10 policies; 261/261 recorded hashes verified; 44 explicit unresolved-bridge warnings | `./ice ontology validate` |
 | named exact checks in the CPT Phase 16--56 snapshots | 498, all `PASS` | CPT phase result payloads in the ontology |
 | typed numerical checks in those snapshots | 360 = 343 `PASS` + 14 `FAIL` + 3 `INCONCLUSIVE` | CPT phase result payloads in the ontology |
-| latest CPT direct calculation | non-numbered (m=2) bosonic canonical-source pushforward | [`GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md`](cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md) |
+| latest CPT direct calculation | non-numbered closed-FRW V0 principal endpoint FIO and one-term exact-unitarity discriminator | [`GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md`](cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md) |
 
 The counts above describe the committed repository snapshot. `./ice list --json` is the authority for a
 working tree that contains additional local kernels.
@@ -357,6 +361,7 @@ legal documents. Research code and historical reports live in named areas.
 | [`research/hypercomplex/`](research/hypercomplex) | Cayley–Dickson/sedenion kernels and adjacent JSON results | included |
 | [`research/legacy_predictions/`](research/legacy_predictions) | dimensional, preregistration, and numerology-era kernels/results | included |
 | [`cpt_temporal_folded_susy/`](cpt_temporal_folded_susy) | current phase scripts, reports, and frozen inputs | included |
+| [`igrueqft_locality_falsifier_2026-07-12/`](igrueqft_locality_falsifier_2026-07-12) | finite external-theory locality oracle and result | included |
 | [`claimB_loop/`](claimB_loop) and named experiment directories | focused research programmes | included when a script has a main guard |
 | [`ontology/`](ontology) | typed claims, evidence snapshots, scopes, sources, and open problems | not applicable |
 | [`docs/`](docs) | current guides, decisions, audits, and provenance | excluded |
@@ -424,10 +429,11 @@ See the [Queue 03 portability audit](docs/audits/QUEUE03_PORTABILITY_AUDIT_2026-
 
 ## Research ontology
 
-The repository-local [research ontology collection](ontology/README.md) catalogs three independent
+The repository-local [research ontology collection](ontology/README.md) catalogs four independent
 graphs: [hypercomplex](ontology/hypercomplex/README.md),
 [legacy predictions and narrative](ontology/legacy-predictions/README.md), and
-[CPT × Temporal-Folded SUSY](ontology/cpt-temporal-folded-susy/README.md). Cross-graph reading paths are
+[CPT × Temporal-Folded SUSY](ontology/cpt-temporal-folded-susy/README.md), plus the separate
+[IG-RUEQFT locality audit](ontology/igrueqft-locality/README.md). Cross-graph reading paths are
 explicitly navigation-only. The collection is a memory/index layer, not a research contract, external-KG
 write, or automatic physics verdict.
 
@@ -436,7 +442,10 @@ write, or automatic physics verdict.
 ./ice ontology summary
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
+./ice ontology guide --graph igrueqft --path igrueqft-negative-result-to-open-theory
+./ice ontology show igrueqft::claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL
 ./ice ontology show legacy::claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS
+./ice ontology guide --graph cpt --path collar-admissibility-to-single-source-parent-and-tangency
 ./ice ontology show cpt::claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES
 ./ice ontology trace cpt::claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD --depth 2
 ./ice ontology trace cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
