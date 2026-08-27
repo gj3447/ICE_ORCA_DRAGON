@@ -224,6 +224,39 @@ export const reproCases = [
       "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "gate1_v0_constraint_spectral_domain",
+    script: "cpt_temporal_folded_susy/gate1_v0_constraint_spectral_domain.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "gate1_v0_endpoint_subprincipal_nonuniqueness",
+    script:
+      "cpt_temporal_folded_susy/gate1_v0_endpoint_subprincipal_nonuniqueness.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "gate1_v0_static_spectral_pairing",
+    script: "cpt_temporal_folded_susy/gate1_v0_static_spectral_pairing.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "gate1_v0_bfv_m2_spectral_trajectory",
+    script: "cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 

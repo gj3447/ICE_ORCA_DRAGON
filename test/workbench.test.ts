@@ -52,6 +52,33 @@ it("maps the V0 improved-static BFV source as a portable committed result", () =
   )
 })
 
+it("maps the V0 spectral-to-m2 BFV controls as portable committed results", () => {
+  const expected = new Map([
+    [
+      "gate1_v0_constraint_spectral_domain",
+      "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json"
+    ],
+    [
+      "gate1_v0_endpoint_subprincipal_nonuniqueness",
+      "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_RESULT.json"
+    ],
+    [
+      "gate1_v0_static_spectral_pairing",
+      "cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_RESULT.json"
+    ],
+    [
+      "gate1_v0_bfv_m2_spectral_trajectory",
+      "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json"
+    ]
+  ])
+
+  for (const [name, output] of expected) {
+    const entry = reproCases.find((candidate) => candidate.name === name)
+    expect(entry?.policy).toBe("portable")
+    expect(entry?.output).toBe(output)
+  }
+})
+
 layer(AppLayer)("reproduction manifest", (it) => {
   it.effect("maps every case to an adjacent tracked script and output", () =>
     Effect.gen(function* () {
