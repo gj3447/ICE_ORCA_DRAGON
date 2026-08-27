@@ -1,0 +1,132 @@
+{
+  "schema_version": "ice.gate1.v0-static-spectral-pairing.input.v1",
+  "calculation_id": "Gate1V0StaticSpectralPairing",
+  "numbered_phase": null,
+  "question": "For a frozen 3-by-3 family of test states on the p>0 Darboux momentum base, does the declared improved-static BFV zero-mode contraction define the same sesquilinear form as the order-zero spectral distribution delta(M_c), including an independently integrated Gaussian regulator removal?",
+  "kind": "EXACT_FROZEN_TEST_MATRIX_STATIC_ZERO_MODE_VERSUS_SELF_ADJOINT_MULTIPLICATION_SPECTRAL_DELTA_COMPARISON_WITH_HIGH_PRECISION_REGULATOR_CONTROL",
+  "epistemic_scope": "ONE_DECLARED_LOCAL_UPLUS_ZERO_MODE_NORMALIZATION_AND_ORDER_ZERO_SPECTRAL_TEST_FORM_NOT_A_FULL_GROUP_AVERAGE_NOT_A_PHYSICAL_INNER_PRODUCT_NOT_A_PATH_KERNEL",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "required_verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA",
+      "role": "supplies the declared dPi/(2*pi*hbar), dN/(2*pi*hbar), oriented ghost normalization and local delta(T)delta(c) contraction"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json",
+      "sha256": "4447980c687724f6160da35a2e985c59a4619e4aa2a4072b3cd78afbaad15f48",
+      "payload_sha256_without_self": "4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd",
+      "required_verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN",
+      "role": "supplies H_D=L2(R_c times R_{+,p},dc dp), M_c and the order-zero zero-fiber form"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_RESULT.json",
+      "sha256": "5be03cf1d9c8796298d5d561fa77506d88b8063409226e837693c001feaaff2f",
+      "payload_sha256_without_self": "e5520c2b1aa66c233c67a317e4191be2e8eb43f33ff75886ce7bd079259a7887",
+      "required_verdict": "KILL_UNIQUENESS_FROM_DECLARED_B_A0_HD_MC_DATA",
+      "role": "supplies the explicit off-shell unitary freedom that equals one on c=0 and therefore should not affect this order-zero comparison"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Marolf, Refined Algebraic Quantization: Systems with a single constraint, arXiv:gr-qc/9508015",
+      "url": "https://arxiv.org/abs/gr-qc/9508015",
+      "used_for": "the distributional single-constraint zero-spectrum and auxiliary-structure boundary",
+      "not_used_for": "deriving this local static source or its frozen normalization"
+    },
+    {
+      "source": "Giulini, Group Averaging and Refined Algebraic Quantization, arXiv:gr-qc/0003040",
+      "url": "https://arxiv.org/abs/gr-qc/0003040",
+      "used_for": "the distinction between rigging distributions and bounded projectors",
+      "not_used_for": "promoting a finite test-family match to a physical group average"
+    }
+  ],
+  "frozen_test_family": {
+    "states": "psi_j(c,p)=exp(-alpha_j*c^2)*p^j*exp(-beta_j*p), j=0,1,2",
+    "alpha_values": ["1", "2", "3"],
+    "beta_values": ["1", "2", "3"],
+    "component": "c in R and p>0 only",
+    "static_form": "B_stat(j,k)=integral_0^infinity dp conjugate(psi_j(0,p))*psi_k(0,p)",
+    "spectral_form": "B_spec(j,k)=<psi_j,delta(M_c)psi_k>",
+    "exact_matrix": "(j+k)!/(beta_j+beta_k)^(j+k+1)",
+    "regulator": "delta_epsilon(c)=exp(-c^2/(4*epsilon))/(2*sqrt(pi*epsilon))",
+    "regulated_matrix": "B_epsilon(j,k)=B_stat(j,k)/sqrt(1+4*epsilon*(alpha_j+alpha_k))"
+  },
+  "exact_plan": [
+    "hash-verify the static-source, spectral-domain and subprincipal-family results",
+    "verify the upstream source really has unit bosonic Fourier pairing and normalized oriented ghost factor +1",
+    "derive the full rational 3-by-3 static pairing matrix on p>0 and verify Hermiticity and positive definiteness",
+    "derive the same order-zero matrix by the spectral zero-fiber form of M_c",
+    "derive the exact Gaussian-regulated matrix and its epsilon to zero limit entry by entry",
+    "verify the subprincipal family equals one at c=0 and hence leaves this order-zero matrix unchanged",
+    "compare independent high-precision p and c quadratures with the exact static and regulated entries",
+    "do not insert a second delta(c), import p<0, or identify this finite test-form comparison with a full trajectory or physical group average"
+  ],
+  "numerical_plan": {
+    "precision_digits": 80,
+    "epsilon_values": ["0.2", "0.05", "0.01"],
+    "relative_tolerance": "1e-60",
+    "quadratures": 36,
+    "method": "nine direct p-half-line integrals plus twenty-seven direct c-line Gaussian regulator integrals"
+  },
+  "decision_table": [
+    {
+      "condition": "all upstream normalization pins, exact matrix identities, positivity, regulator limits and independent quadratures pass on p>0",
+      "verdict": "KEEP_V0_LOCAL_STATIC_ZERO_MODE_SPECTRAL_PAIRING_COMPATIBILITY",
+      "programme_impact": "CLOSE_FROZEN_ORDER_ZERO_PAIRING_ONLY",
+      "meaning": "the one declared local static zero-mode convention realizes the same frozen order-zero form as delta(M_c); no endpoint transform, path measure or physical group average is inferred"
+    },
+    {
+      "condition": "a sign, hbar, 2*pi, ghost-orientation or matrix normalization differs",
+      "verdict": "KILL_V0_DECLARED_STATIC_ZERO_MODE_SPECTRAL_NORMALIZATION",
+      "programme_impact": "RETAIN_BFV_ALGEBRA_AND_SPECTRAL_DOMAIN_SEPARATELY",
+      "meaning": "reject the claimed bridge while preserving its independently valid inputs"
+    },
+    {
+      "condition": "the symbolic equality holds but the independent regulator integration fails",
+      "verdict": "NARROW_STATIC_SPECTRAL_PAIRING_NUMERICAL_CONTROL_OPEN",
+      "programme_impact": "OPEN",
+      "meaning": "retain only the formal matrix identity pending a reconciled regulator calculation"
+    }
+  ],
+  "computed_scope": [
+    "the frozen 3-by-3 static zero-mode pairing matrix for p>0 test states",
+    "the matching order-zero delta(M_c) spectral matrix",
+    "entrywise exact Gaussian regulator removal and independent high-precision integration",
+    "invariance of the shell form under the explicit off-shell subprincipal family"
+  ],
+  "not_computed": [
+    "a normalized exact endpoint-state transform or selected subprincipal symbol",
+    "an identity kernel in Phi on the p>0 half-line",
+    "a full-real-lapse group average, regulator theorem for arbitrary states or physical inner product",
+    "nonzero BFV trajectory modes, an absolute path measure, old-kernel equivalence or global cycle",
+    "physics, an observable prediction or a TOE claim"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 36,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "exact_endpoint_state_transform": null,
+    "selected_subprincipal_symbol": null,
+    "physical_inner_product": null,
+    "full_real_lapse_delta_C": null,
+    "full_bfv_trajectory_measure": null,
+    "old_fixed_a_kernel_equivalence": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
