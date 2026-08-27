@@ -273,15 +273,14 @@ def exact_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]]:
     observed_characteristic = sp.integrate(
         normalized_density * multiplier, (c, -sp.oo, sp.oo)
     )
-    expected_characteristic = sp.exp(
-        -(hbar * kappa) ** 2 / (8 * alpha)
-    )
+    positive_exponent = (hbar * kappa) ** 2 / (8 * alpha)
+    expected_characteristic = sp.exp(-positive_exponent)
     distance_squared = 2 * (1 - expected_characteristic)
     distinct = audit.observe(
         "G1.endpoint.subprincipal.distinct_test_operators",
         sp.simplify(observed_characteristic - expected_characteristic) == 0
-        and distance_squared.is_positive is True,
-        "a normalized Gaussian times positive-half-line output state has ||(V_kappa-I)psi||^2=2[1-exp(-(hbar*kappa)^2/(8*alpha))]>0",
+        and positive_exponent.is_positive is True,
+        "the exact overlap gives ||(V_kappa-I)psi||^2=2[1-exp(-x)] with x=(hbar*kappa)^2/(8*alpha)>0, hence strict positivity by monotonicity of exp",
     )
     prior_nonunitary_boundary = audit.observe(
         "G1.endpoint.subprincipal.one_term_nonpass_retained",
@@ -312,6 +311,12 @@ def exact_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]]:
         "zero-fiber invariance under a multiplier equal to one on the shell",
         "V_kappa(0,p)=1 and V_kappa commutes with M_c",
         "even a successful declared order-zero delta(M_c) comparison cannot normalize the off-shell subprincipal family",
+    )
+    audit.guard(
+        "G1.endpoint.guard.strict_test_distance",
+        "strict monotonicity of the real exponential",
+        "x=(hbar*kappa)^2/(8*alpha)>0 for the frozen positive hbar, kappa and alpha assumptions",
+        "exp(-x)<1, so the exact state-distance formula 2[1-exp(-x)] is strictly positive without relying on a composite SymPy positivity heuristic",
     )
 
     flags = {
