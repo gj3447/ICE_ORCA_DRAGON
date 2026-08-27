@@ -370,8 +370,11 @@ def exact_calculation(audit: Audit) -> dict[str, Any]:
     m_pp = sp.simplify(-12 * sp.pi**2 * a_pp_expected / d_on_root**2)
     audit.check_exact(
         "G1.fio.coarea_local_curvature",
-        sp.factor(root_derivative)
-        == 24 * sp.pi**2 * scale_factor**2 * d_on_root
+        sp.simplify(
+            root_derivative
+            - 24 * sp.pi**2 * scale_factor**2 * d_on_root
+        )
+        == 0
         and sp.simplify(a_pp_at_zero - a_pp_expected) == 0
         and sp.simplify(
             m_pp - 2 / (scale_factor**2 * d_on_root**3)
