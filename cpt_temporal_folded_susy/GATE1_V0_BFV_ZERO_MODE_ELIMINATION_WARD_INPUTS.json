@@ -1,0 +1,154 @@
+{
+  "schema_version": "ice.gate1.v0-bfv-zero-mode-elimination-ward.input.v1",
+  "calculation_id": "Gate1V0BfvZeroModeEliminationWard",
+  "numbered_phase": null,
+  "question": "For the hash-pinned local V0 BFV zero block S0=lambda*(N0*c0-rho0*bar_rho0) with lambda>0, do direct Berezin integration and algebraic elimination of the ghost pair with its induced determinant give the same relative delta(c0) distribution and gauge-fermion scaling Ward identity, thereby identifying unweighted deletion as the source of the prior retained-versus-eliminated ledger mismatch?",
+  "kind": "EXACT_LOCAL_BFV_ZERO_MODE_BEREZIN_ELIMINATION_INDUCED_PFAFFIAN_NEGATIVE_CONTROL_AND_GAUGE_FERMION_SCALING_WARD_CONTROL",
+  "epistemic_scope": "ONE_ALGEBRAIC_ZERO_MODE_BLOCK_WITH_A_PINNED_ODD_ORIENTATION_AND_POSITIVE_CONSTANT_GAUGE_FERMION_SCALE_NOT_A_FULL_TRAJECTORY_MEASURE_NOT_A_LAPSE_CONTOUR_NOT_CONSTRAINT_DENSITIZATION_INVARIANCE",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "required_verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA",
+      "role": "pins Omega, the right-acting bracket convention, sPsi=Pi*T+N*c-c_g*bar_c-rho*bar_rho, nilpotence, and the local odd orientation"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json",
+      "sha256": "15beb4c1bd44d0d7aa8f34b7ea2f656c42452130b10817585b7a6c134ac4aef7",
+      "payload_sha256_without_self": "a12b719f2961363610c93ecf07d0185de316497708b809b4b2b1aca7bdfec92b",
+      "required_verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS",
+      "role": "pins the prior retained factor one and unweighted-eliminated factor 1/lambda mismatch that this calculation tests rather than assuming"
+    }
+  ],
+  "repository_sources": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE28_THIMBLE_BFV_INTERSECTION.md",
+      "role": "historical distinction between endpoint-vanishing ghosts and a lapse modulus; it is not rerun and remains outside this algebraic zero-block control"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE31_HOMOGENEOUS_BFV_SUPERHESSIAN.md",
+      "role": "historical same-regulator determinant/Pfaffian boundary; it is not renamed or treated as a continuum theorem"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Henneaux, Teitelboim and Vergara, Gauge invariance for generally covariant systems, arXiv:hep-th/9205092",
+      "url": "https://arxiv.org/abs/hep-th/9205092",
+      "used_for": "BRST-BFV improved actions, endpoint-compatible canonical gauges, and gauge-fermion independence boundaries",
+      "not_used_for": "choosing the repository-specific finite zero-mode orientation or absolute measure"
+    },
+    {
+      "source": "Garcia, Vergara and Urrutia, BRST-BFV quantization and the Schwinger action principle, arXiv:hep-th/9511092",
+      "url": "https://arxiv.org/abs/hep-th/9511092",
+      "used_for": "the multiplier/ghost canonical action and BRST-BFV endpoint pattern",
+      "not_used_for": "proving that this zero block is a full gravitational path integral"
+    },
+    {
+      "source": "Marolf, Group averaging and refined algebraic quantization: Where are we now?, arXiv:gr-qc/0011112",
+      "url": "https://arxiv.org/abs/gr-qc/0011112",
+      "used_for": "the distributional full-real group-average interpretation of the bosonic Fourier factor",
+      "not_used_for": "fixing a lapse contour, zero-lapse prescription, or absolute BFV normalization"
+    }
+  ],
+  "zero_block": {
+    "lambda_domain": "lambda>0",
+    "action": "S0(lambda)=lambda*(N0*c0-rho0*bar_rho0)",
+    "exponent": "exp(i*S0/hbar)",
+    "odd_order": [
+      "rho0",
+      "bar_rho0"
+    ],
+    "oriented_berezin_extraction": "i*hbar times the coefficient of rho0*bar_rho0",
+    "bosonic_fourier_measure": "dN0/(2*pi*hbar)",
+    "right_brst_images": {
+      "N0": "rho0",
+      "rho0": "0",
+      "bar_rho0": "c0",
+      "c0": "0"
+    },
+    "right_brst_product_rules_inherited_from_bracket": {
+      "s(N0*c0)": "rho0*c0",
+      "s(rho0*bar_rho0)": "rho0*c0"
+    },
+    "direct_route": "retain and Berezin-integrate rho0,bar_rho0",
+    "weighted_elimination_route": "solve the nondegenerate algebraic ghost equations and include the oriented induced odd Gaussian determinant/Pfaffian lambda",
+    "negative_control": "delete rho0,bar_rho0 and set their factor to one without the induced determinant"
+  },
+  "exact_plan": [
+    "hash-verify the improved-static source and prior m=2 result including its mismatch verdict",
+    "verify the pinned right-BRST generator images square to zero and the two inherited product variations cancel in sS0",
+    "expand exp(-i*lambda*rho0*bar_rho0/hbar) exactly and apply the pinned i*hbar Berezin extraction to obtain lambda",
+    "form the ordered two-ghost Hessian/Pfaffian and verify that correct algebraic elimination contributes the same lambda",
+    "verify the algebraic ghost equations are nondegenerate for lambda>0 and set only the stationary ghost values to zero, not their Gaussian determinant",
+    "apply the full-real N0 Fourier identity delta(lambda*c0)=delta(c0)/lambda for lambda>0",
+    "show that both direct retention and weighted elimination give relative delta(c0), while unweighted deletion gives delta(c0)/lambda",
+    "differentiate the three relative coefficients with respect to lambda and sample lambda=1/2,1,2 as a Ward and negative-control check",
+    "separate constant gauge-fermion rescaling from the Q-dependent classical constraint densitization used in the independent Liouville/KL model",
+    "leave lapse-modulus selection, boundary conditions, absolute signs/measures, continuum BFV, BRST cohomology and physical claims null"
+  ],
+  "decision_table": [
+    {
+      "condition": "direct Berezin integration and weighted algebraic elimination both contribute lambda, cancel the bosonic 1/lambda Jacobian, and satisfy the scaling Ward check while unweighted deletion fails",
+      "verdict": "NARROW_V0_BFV_ZERO_GHOST_ELIMINATION_REQUIRES_INDUCED_DETERMINANT",
+      "programme_impact": "CLOSE_ONE_LOCAL_ZERO_MODE_LEDGER_MISMATCH_ONLY",
+      "meaning": "the retained-versus-eliminated mismatch was caused by dropping the odd Gaussian determinant; keep the local equivalence and kill unweighted deletion, without claiming a unique full trajectory completion"
+    },
+    {
+      "condition": "direct integration and weighted elimination disagree in the pinned orientation, the zero action is not BRST closed, or either fails the lambda Ward check",
+      "verdict": "KILL_V0_DECLARED_BFV_ZERO_BLOCK",
+      "programme_impact": "RETAIN_THE_PRIOR_AMBIGUITY_AND_STATIC_SOURCE_ONLY",
+      "meaning": "reject this proposed resolution and leave both local ledgers unresolved"
+    },
+    {
+      "condition": "the negative control is lambda independent or agrees with the retained route without an induced factor",
+      "verdict": "KILL_V0_ZERO_MODE_NEGATIVE_CONTROL_DISCRIMINATION",
+      "programme_impact": "NO_LEDGER_RESOLUTION",
+      "meaning": "the calculation did not distinguish genuine elimination from unweighted deletion"
+    }
+  ],
+  "computed_scope": [
+    "one hash-pinned algebraic N0,c0,rho0,bar_rho0 BFV zero block",
+    "nilpotence and BRST closure under the inherited right-acting bracket convention",
+    "direct oriented Berezin integration and correct weighted algebraic elimination",
+    "the relative constant-lambda gauge-fermion scaling Ward coefficient and an unweighted-deletion negative control"
+  ],
+  "not_computed": [
+    "a unique choice between integrating N0 over the full real line, treating it as a modulus, or imposing another gravitational lapse contour",
+    "zero-lapse contact terms, endpoint ghost boundary conditions beyond the pinned block, Gribov data or a global gauge slice",
+    "an absolute BFV normalization, Pfaffian orientation independent of the pinned convention, continuum limit or anomaly analysis",
+    "equivalence between a constant gauge-fermion scale and a field-dependent rescaling of the Hamiltonian constraint",
+    "the raw-C physical inner product, an exact endpoint transform, the full BFV trajectory measure or BRST cohomology",
+    "quantum gravity, empirical observables, physics or TOE"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "unique_trajectory_zero_mode_completion": null,
+    "lapse_modulus_or_contour_selection": null,
+    "absolute_finite_bfv_measure": null,
+    "full_bfv_trajectory_measure": null,
+    "continuum_bfv_limit": null,
+    "brst_cohomology": null,
+    "constraint_densitization_equivalence": null,
+    "raw_C_physical_inner_product": null,
+    "exact_endpoint_state_transform": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
