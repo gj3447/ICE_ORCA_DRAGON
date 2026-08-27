@@ -1,0 +1,306 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1V0EndpointSubprincipalNonuniqueness",
+  "classification": "GATE1_V0_ENDPOINT_SUBPRINCIPAL_DISCRIMINATOR_NONPASS",
+  "computed_scope": [
+    "one exact target-unitary subprincipal family conditional on any exact endpoint completion",
+    "preservation of the local constraint domain and zero spectral fiber",
+    "a closed-form and high-precision witness that finite-hbar operators differ"
+  ],
+  "decision_trace": {
+    "matched_predeclared_condition": "the proposed family is not unitary, changes the principal data, or is identical on every test state",
+    "prior_nonpass": "the one-term Van Vleck kernel remains killed at exact finite hbar",
+    "scope_meaning": "nonuniqueness inside the class fixing only B, a_0, H_D and M_c; additional exact intertwining or endpoint-domain conditions were not tested, and existence remains open"
+  },
+  "environment": {
+    "mpmath": "1.3.0",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "conditional_family": {
+      "canonical_relation": "UNCHANGED",
+      "classical_W_and_B": "UNCHANGED",
+      "constraint_commutator": "[V_kappa,M_c]=0",
+      "exact_unitarity": "CONDITIONAL_ON_U_0",
+      "family": "U_kappa=V_kappa,hbar*U_0",
+      "hypothesis": "one exact unitary completion U_0 exists",
+      "kernel_action_correction": "c*hbar**2*kappa",
+      "lower_symbol": "I*a_0*c*kappa + a_1",
+      "maximal_domain_preserved": true,
+      "principal_half_density": "UNCHANGED",
+      "selected_kappa": null,
+      "target_unitary": "exp(I*c*hbar*kappa)"
+    },
+    "flags": {
+      "constraint_commutator": true,
+      "distinct_test_operators": false,
+      "maximal_domain_preservation": true,
+      "nontrivial_lower_symbol": true,
+      "prior_one_term_nonpass_retained": true,
+      "same_classical_boundary_data": true,
+      "same_principal_symbol": true,
+      "unit_modulus": true,
+      "zero_fiber_identity": true
+    },
+    "frozen_test_witness": {
+      "c_probability_density": "sqrt(2)*sqrt(alpha)*exp(-2*alpha*c**2)/sqrt(pi)",
+      "distance_squared": "2 - 2*exp(-hbar**2*kappa**2/(8*alpha))",
+      "overlap": "exp(-hbar**2*kappa**2/(8*alpha))",
+      "p_positive_normalized_factor": "sqrt(2*beta)*exp(-beta*p), beta>0",
+      "positive_for_hbar_kappa_nonzero": false
+    },
+    "logical_status": {
+      "exact_transform_existence": "OPEN_NOT_COMPUTED",
+      "uncorrected_one_term_exact_unitarity": "KILL_UPSTREAM",
+      "uniqueness_from_declared_B_a0_H_D_M_c_data": "OPEN"
+    },
+    "spectral_boundary": {
+      "V_at_c_zero": "1",
+      "can_zero_fiber_select_kappa": false,
+      "delta_Mc_form_changed": false
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.endpoint.subprincipal.unit_modulus",
+      "passed": true,
+      "statement": "V_kappa,hbar=exp(i*hbar*kappa*c) is an exact unit-modulus multiplier on L2(dc dp)"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.constraint_commutator",
+      "passed": true,
+      "statement": "V_kappa commutes strongly with the multiplication constraint M_c"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.maximal_domain_preservation",
+      "passed": true,
+      "statement": "pointwise |c V_kappa psi|^2=|c psi|^2 preserves the maximal domain D(M_c)"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.same_principal_symbol",
+      "passed": true,
+      "statement": "multiplication changes a_1 by i*kappa*c*a_0 while leaving the principal half-density a_0 unchanged"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.same_classical_boundary_data",
+      "passed": true,
+      "statement": "the kernel action changes by hbar^2*kappa*c, so W, B and the canonical relation are unchanged at classical and principal order"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.nontrivial_lower_symbol",
+      "passed": true,
+      "statement": "the lower symbol varies continuously with kappa away from c=0"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.zero_fiber_identity",
+      "passed": true,
+      "statement": "V_kappa is exactly one on c=0, so the delta(M_c) zero-fiber form cannot select kappa"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.distinct_test_operators",
+      "passed": false,
+      "statement": "a normalized Gaussian times positive-half-line output state has ||(V_kappa-I)psi||^2=2[1-exp(-(hbar*kappa)^2/(8*alpha))]>0"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.one_term_nonpass_retained",
+      "passed": true,
+      "statement": "the hash-verified upstream verdict still kills exact finite-hbar unitarity of the uncorrected one-term Van Vleck kernel"
+    },
+    {
+      "id": "G1.endpoint.subprincipal.sampled_distance_monotonicity",
+      "passed": true,
+      "statement": "the frozen finite-hbar state distance increases strictly across the positive kappa samples"
+    }
+  ],
+  "frozen_input_contract": {
+    "decision_table": [
+      {
+        "condition": "the conditional unitary family preserves the classical B, canonical relation, principal half-density and M_c domain but changes a lower symbol and a finite-hbar test state",
+        "meaning": "B, D^(-1/2), H_D and M_c cannot select a unique completion inside the class that fixes only those data; extra exact intertwining or endpoint conditions may restrict the family, and existence remains open",
+        "programme_impact": "NARROW_REQUIRE_ADDITIONAL_FULL_SYMBOL_AND_INTERTWINING_DATA",
+        "verdict": "KILL_UNIQUENESS_FROM_DECLARED_B_A0_HD_MC_DATA"
+      },
+      {
+        "condition": "the proposed family is not unitary, changes the principal data, or is identical on every test state",
+        "meaning": "this discriminator does not settle whether the supplied data determine a completion",
+        "programme_impact": "OPEN",
+        "verdict": "INCONCLUSIVE_ENDPOINT_COMPLETION_UNIQUENESS"
+      }
+    ],
+    "epistemic_scope": "DECLARED_TARGET_HD_MC_REPRESENTATION_AND_LOCAL_PRINCIPAL_FIO_DATA_CLASS_ONLY_NOT_ALL_POSSIBLE_EXACT_INTERTWINING_OR_ENDPOINT_CONDITIONS_NOT_AN_EXISTENCE_PROOF",
+    "kind": "EXACT_CONDITIONAL_UNITARY_SUBPRINCIPAL_FAMILY_AND_FROZEN_TEST_STATE_NONUNIQUENESS_DISCRIMINATOR",
+    "question": "Do the declared data B, the positive principal half-density D^(-1/2), the target Hilbert representation H_D and its self-adjoint multiplication constraint M_c uniquely determine an exact normalized endpoint-state completion within that declared data class?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_INPUTS.json",
+    "sha256": "ef58f191697fa24c08ef97fbb8ea323d3284d6dddf0ee162660272141260cabb"
+  },
+  "not_computed": [
+    "existence or construction of U_0 or any exact endpoint-state transform",
+    "full-symbol transport equations, exact old-variable intertwining, edge conditions or global Maslov gluing",
+    "a coordinate-polarization kernel, old fixed-a kernel equivalence, BFV trajectory measure or full-real-lapse group average",
+    "a physical endpoint state, physical cycle, physics claim or TOE claim"
+  ],
+  "numbered_phase": null,
+  "numerical_calculation": {
+    "alpha": "0.7000000000000000000000000000000000000000",
+    "hbar": "0.3000000000000000000000000000000000000000",
+    "ode_calls": 0,
+    "precision_digits": 80,
+    "quadratures": 3,
+    "records": [
+      {
+        "distance_squared": "0.0080195927083194999042613409599066616175743944016362",
+        "expected_overlap": "0.995990203645840250047869329520046669191212802799181898823639",
+        "index": 1,
+        "kappa": "0.5000000000000000000000000000000000000000",
+        "observed_overlap": "0.995990203645840250047869329520046669191212802799181898823639",
+        "passed": true,
+        "relative_error": "1.05846401948941023410965e-81"
+      },
+      {
+        "distance_squared": "0.031885944485642316089981745403937361547457990433573",
+        "expected_overlap": "0.984057027757178841955009127298031319226271004783213692350021",
+        "index": 2,
+        "kappa": "1.000000000000000000000000000000000000000",
+        "observed_overlap": "0.984057027757178841955009127298031319226271004783213692350021",
+        "passed": true,
+        "relative_error": "0.0"
+      },
+      {
+        "distance_squared": "0.12452592723087106562957956611847459151350233597436",
+        "expected_overlap": "0.937737036384564467185210216940762704243248832012819086553626",
+        "index": 3,
+        "kappa": "2.000000000000000000000000000000000000000",
+        "observed_overlap": "0.937737036384564467185210216940762704243248832012819086553626",
+        "passed": true,
+        "relative_error": "1.12421686828920177306572e-81"
+      }
+    ],
+    "root_calls": 0,
+    "sampled_distance_monotone": true,
+    "sampled_distance_monotonicity_passed": true
+  },
+  "numerical_checks": [
+    {
+      "alpha": "0.7000000000000000000000000000000000000000",
+      "distance_squared": "0.0080195927083194999042613409599066616175743944016362",
+      "expected": "0.995990203645840250047869329520046669191212802799181898823639",
+      "hbar": "0.3000000000000000000000000000000000000000",
+      "id": "G1.endpoint.subprincipal.gaussian_quadrature_1",
+      "kappa": "0.5000000000000000000000000000000000000000",
+      "observed": "0.995990203645840250047869329520046669191212802799181898823639",
+      "passed": true,
+      "relative_error": "1.05846401948941023410965e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "statement": "direct high-precision Gaussian characteristic integration matches the exact overlap"
+    },
+    {
+      "alpha": "0.7000000000000000000000000000000000000000",
+      "distance_squared": "0.031885944485642316089981745403937361547457990433573",
+      "expected": "0.984057027757178841955009127298031319226271004783213692350021",
+      "hbar": "0.3000000000000000000000000000000000000000",
+      "id": "G1.endpoint.subprincipal.gaussian_quadrature_2",
+      "kappa": "1.000000000000000000000000000000000000000",
+      "observed": "0.984057027757178841955009127298031319226271004783213692350021",
+      "passed": true,
+      "relative_error": "0.0",
+      "relative_tolerance": "1.0000000e-60",
+      "statement": "direct high-precision Gaussian characteristic integration matches the exact overlap"
+    },
+    {
+      "alpha": "0.7000000000000000000000000000000000000000",
+      "distance_squared": "0.12452592723087106562957956611847459151350233597436",
+      "expected": "0.937737036384564467185210216940762704243248832012819086553626",
+      "hbar": "0.3000000000000000000000000000000000000000",
+      "id": "G1.endpoint.subprincipal.gaussian_quadrature_3",
+      "kappa": "2.000000000000000000000000000000000000000",
+      "observed": "0.937737036384564467185210216940762704243248832012819086553626",
+      "passed": true,
+      "relative_error": "1.12421686828920177306572e-81",
+      "relative_tolerance": "1.0000000e-60",
+      "statement": "direct high-precision Gaussian characteristic integration matches the exact overlap"
+    }
+  ],
+  "programme_impact": "OPEN",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "automatic_next": null,
+    "exact_endpoint_state_transform": null,
+    "exact_endpoint_transform_existence": null,
+    "full_bfv_trajectory_measure": null,
+    "full_real_lapse_delta_C": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_n_sigma": null,
+    "global_promotion": "PROHIBITED",
+    "original_variable_constraint_ordering": null,
+    "physical_inner_product": null,
+    "physical_original_cycle": null,
+    "physics_claim": null,
+    "selected_subprincipal_symbol": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "ode_calls": 0,
+    "quadratures": 3,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "017823b8ec64f3c51ed5c0a75b3c40f080f4c6a394b872ee6a44a70cdf45b396",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_endpoint_subprincipal_nonuniqueness.py",
+    "sha256": "751588277f6d0ffe6816ecf1a79f1ab3da89fa67e63af958ed898743a8a6fbd2"
+  },
+  "schema_version": "ice.gate1.v0-endpoint-subprincipal-nonuniqueness.result.v1",
+  "theorem_guards": [
+    {
+      "conclusion_and_scope": "every U_kappa is exactly unitary inside the class fixing only B,a_0,H_D,M_c; surjectivity of U_0 transfers the explicit distinct target-state witness to a distinct old-space input state",
+      "hypotheses": "if U_0 is any exact unitary completion and V_kappa is the verified exact target unitary, then U_kappa=V_kappa U_0",
+      "id": "G1.endpoint.guard.conditional_unitary_family",
+      "theorem": "composition of unitary operators",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the calculation kills uniqueness from the declared B,a_0,H_D,M_c data class but neither constructs nor rules out an exact completion; extra exact observable intertwining or endpoint-domain conditions may restrict the family",
+      "hypotheses": "the construction starts with a conditional U_0 and the upstream one-term ansatz is not exactly unitary",
+      "id": "G1.endpoint.guard.existence_open",
+      "theorem": "logical separation of existence and uniqueness",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "selecting a completion needs additional lower/full-symbol, exact operator-intertwining, edge-domain and global gluing data not present in the inputs",
+      "hypotheses": "B fixes classical endpoint data and a_0 fixes only principal order",
+      "id": "G1.endpoint.guard.extra_data_required",
+      "theorem": "full semiclassical symbol and exact intertwining boundary",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "even a successful declared order-zero delta(M_c) comparison cannot normalize the off-shell subprincipal family",
+      "hypotheses": "V_kappa(0,p)=1 and V_kappa commutes with M_c",
+      "id": "G1.endpoint.guard.no_spectral_selection",
+      "theorem": "zero-fiber invariance under a multiplier equal to one on the shell",
+      "verified": true
+    }
+  ],
+  "upstream_provenance": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json",
+      "payload_sha256_without_self": "f23c8fbd167b5041d7473cb69a05621768d44b95cd73aab02aaee0ea719bc5e7",
+      "sha256": "1a530b810c744b7108c915308f4d23e6329abb901780f76ac958922e62ed8eef",
+      "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json",
+      "payload_sha256_without_self": "4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd",
+      "sha256": "4447980c687724f6160da35a2e985c59a4619e4aa2a4072b3cd78afbaad15f48",
+      "verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN"
+    }
+  ],
+  "verdict": "INCONCLUSIVE_ENDPOINT_COMPLETION_UNIQUENESS"
+}
