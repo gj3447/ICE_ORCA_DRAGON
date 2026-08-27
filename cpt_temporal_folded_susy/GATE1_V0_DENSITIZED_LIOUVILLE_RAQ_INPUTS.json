@@ -1,0 +1,137 @@
+{
+  "schema_version": "ice.gate1.v0-densitized-liouville-raq.input.v1",
+  "calculation_id": "Gate1V0DensitizedLiouvilleRaq",
+  "numbered_phase": null,
+  "question": "For the closed-FRW V=0 constraint on the p>0 branch, does the explicitly declared positive classical rescaling H=12*pi^2*exp(3Q/2)*C followed by the flat Schrödinger ordering on L2(dQ dphi) admit an exact Kontorovich-Lebedev spectral realization, and what distributional group-averaged physical measure follows for this selected densitized operator?",
+  "kind": "EXACT_ORIGINAL_COORDINATE_DENSITIZATION_ORDERING_KONTOROVICH_LEBEDEV_SPECTRAL_AND_SINGLE_CONSTRAINT_RAQ_CONTROL",
+  "epistemic_scope": "ONE_EXPLICITLY_DENSITIZED_AND_ORDER_FIXED_V0_MINISUPERSPACE_QUANTIZATION_ON_THE_P_POSITIVE_BRANCH_NOT_THE_RAW_C_OPERATOR_NOT_CONSTRAINT_RESCALING_INVARIANCE_NOT_QUANTUM_GRAVITY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json",
+      "sha256": "6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7",
+      "payload_sha256_without_self": "38bfaee2fee30399bc3f1c16c17c0330bc97f6343306a9f5860d296b67a11cd5",
+      "required_verdict": "KEEP_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART",
+      "role": "pins Q=2 log(a), the exact classical V=0 constraint, and the p>0 component without importing a quantum ordering"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CONSTRAINT_SPECTRAL_DOMAIN_RESULT.json",
+      "sha256": "4447980c687724f6160da35a2e985c59a4619e4aa2a4072b3cd78afbaad15f48",
+      "payload_sha256_without_self": "4b4b10bee3dfc6f559e0d67cc9e2c7a6360715e1a4ced60f5b1950242c3b78cd",
+      "required_verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN",
+      "role": "supplies only the previously declared local Mc comparison representation and its dp zero-fiber form, not an equivalence theorem"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, 10.25.1 and 10.43.30-31",
+      "url": "https://dlmf.nist.gov/10.43.v",
+      "used_for": "the modified-Bessel equation and the Kontorovich-Lebedev transform/inverse normalization",
+      "not_used_for": "choosing the cosmological constraint, densitization, ordering, branch, or physical interpretation"
+    },
+    {
+      "source": "Marolf, Refined Algebraic Quantization: Systems with a single constraint, arXiv:gr-qc/9508015",
+      "url": "https://arxiv.org/abs/gr-qc/9508015",
+      "used_for": "the single-constraint rigging-map and group-averaging framework",
+      "not_used_for": "deriving the repository-specific spectral multiplier or measure"
+    },
+    {
+      "source": "Giulini, Group Averaging and Refined Algebraic Quantization, arXiv:gr-qc/0003040",
+      "url": "https://arxiv.org/abs/gr-qc/0003040",
+      "used_for": "the distributional group-average and quotient/completion boundary",
+      "not_used_for": "asserting convergence outside the declared spectral test space"
+    },
+    {
+      "source": "Louko and Martinez-Pascual, Constraint rescaling in refined algebraic quantisation: momentum constraint, arXiv:1107.1092",
+      "url": "https://arxiv.org/abs/1107.1092",
+      "used_for": "the warning that classically equivalent constraint rescalings need not define equivalent quantum theories",
+      "not_used_for": "proving equivalence between H, the raw C operator, or the declared Mc representation"
+    }
+  ],
+  "declared_model": {
+    "classical_constraint": "C=-exp(-3Q/2)*P^2/(6*pi^2)+exp(-3Q/2)*p^2/(4*pi^2)-6*pi^2*exp(Q/2)",
+    "positive_rescaling": "H=12*pi^2*exp(3Q/2)*C=-2*P^2+3*p^2-72*pi^4*exp(2Q)",
+    "auxiliary_hilbert_space": "L2(R_Q times R_phi,dQ dphi)",
+    "schrodinger_representation": "P=-i*hbar*d_Q and p=-i*hbar*d_phi",
+    "ordered_operator": "H_hat=2*hbar^2*d_Q^2-3*hbar^2*d_phi^2-72*pi^4*exp(2Q)",
+    "fourier_convention": "psi(Q,phi)=(2*pi*hbar)^(-1/2)*integral_R exp(i*p*phi/hbar)*psi_tilde(Q,p) dp",
+    "component": "p>0 only",
+    "spectral_test_space": "C_c^infinity((0,infinity)_kappa times (0,infinity)_p), hence compactly supported away from both open edges",
+    "group_average_convention": "integral_R dN/(2*pi*hbar) exp(-i*N*H_hat/hbar)=delta(H_hat) on the declared spectral test space"
+  },
+  "exact_plan": [
+    "hash-verify both scoped upstream results",
+    "derive the positive classical densitization identity exactly",
+    "apply the declared flat Schrödinger ordering and Fourier transform only on the p>0 invariant sector",
+    "set z=6*pi^2*exp(Q)/hbar and derive H_p=-2*hbar^2*L+3*p^2 with L=-d_Q^2+z^2",
+    "use the modified-Bessel equation to derive L K_{i kappa}(z)=kappa^2 K_{i kappa}(z)",
+    "use the normalized Kontorovich-Lebedev transform chi_kappa=sqrt(2*kappa*sinh(pi*kappa))/pi*K_{i kappa} to select a self-adjoint spectral realization",
+    "solve the simple positive root 3*p^2-2*hbar^2*kappa^2=0 and apply the one-dimensional delta-function coarea factor",
+    "derive the physical measure dp/(2*sqrt(6)*hbar*p), its positive quotient completion, and the p=0 singular-edge exclusion",
+    "show that the selected physical space is unitarily reweighted to L2(dp) but is not identical to the prior declared dp fiber normalization",
+    "leave the raw C ordering/domain, quantum rescaling equivalence, exact endpoint transform, full BFV measure, and physics claims null"
+  ],
+  "decision_table": [
+    {
+      "condition": "the densitization, Bessel eigenvalue, KL normalization, spectral multiplier, positive root and coarea weight all pass under the declared test-space and theorem hypotheses",
+      "verdict": "KEEP_V0_ONE_DENSITIZED_LIOUVILLE_KL_RAQ_MODEL",
+      "programme_impact": "CLOSE_ONE_EXPLICITLY_RESCALED_ORDER_FIXED_QUANTUM_COSMOLOGY_MODEL_ONLY",
+      "meaning": "retain one exactly diagonalized minisuperspace constraint and its selected RAQ physical Hilbert measure; do not identify it with raw C, Mc, a full BFV theory, quantum gravity, or physics"
+    },
+    {
+      "condition": "any densitization, differential reduction, Bessel eigenvalue, zero root, coarea factor, positivity or witness norm check fails",
+      "verdict": "KILL_V0_DENSITIZED_LIOUVILLE_RAQ_MODEL",
+      "programme_impact": "RETAIN_PRIOR_LOCAL_MC_REPRESENTATION_ONLY",
+      "meaning": "reject this selected original-coordinate quantization"
+    },
+    {
+      "condition": "the result silently identifies dp/(2*sqrt(6)*hbar*p) with dp, includes the singular p=0 edge, or asserts invariance under rescaling C to H",
+      "verdict": "KILL_V0_RAQ_MEASURE_OR_RESCALING_SHORTCUT",
+      "programme_impact": "RETAIN_THE_FORMAL_DIFFERENTIAL_REDUCTION_WITHOUT_A_PHYSICAL_MEASURE_CLAIM",
+      "meaning": "reject the measure/equivalence shortcut while preserving any separately passing algebra"
+    }
+  ],
+  "computed_scope": [
+    "one exact positive classical densitization on the V=0 p>0 component",
+    "one flat Schrödinger ordering of the densitized original-coordinate constraint",
+    "one KL-Fourier self-adjoint spectral realization and its real multiplier",
+    "one distributional full-real-N group average on compact-interior spectral tests",
+    "the resulting weighted physical fiber and its explicit unitary reweighting to an abstract L2(dp) space"
+  ],
+  "not_computed": [
+    "a quantum operator, self-adjoint domain, rigging map or physical measure for the undensitized raw C",
+    "unitary equivalence under the field-dependent rescaling from C to H",
+    "an exact endpoint transform or identity with the prior declared Mc representation",
+    "the p=0 edge, p<0 component, both-branch completion or self-adjoint relational Phi observable",
+    "a lapse contour derived from the gravitational path integral, a full BFV trajectory measure, determinants, anomalies or BRST cohomology",
+    "inhomogeneous gravitational modes, gravitons, renormalization, semiclassical Einstein dynamics, empirical observables, quantum gravity, physics or TOE"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "raw_C_operator_and_domain": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "exact_endpoint_state_transform": null,
+    "declared_Mc_identity_equivalence": null,
+    "gauge_independent_physical_inner_product": null,
+    "p_zero_edge_completion": null,
+    "full_bfv_trajectory_measure": null,
+    "brst_cohomology": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
