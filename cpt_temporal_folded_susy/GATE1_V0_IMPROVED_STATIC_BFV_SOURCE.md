@@ -344,4 +344,3 @@ Pinned provenance:
   `62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55`;
 - independently recomputed payload SHA-256 without self:
   `c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925`.
-
