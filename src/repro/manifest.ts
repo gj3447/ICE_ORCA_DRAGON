@@ -257,6 +257,23 @@ export const reproCases = [
       "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "gate1_v0_densitized_liouville_raq",
+    script: "cpt_temporal_folded_susy/gate1_v0_densitized_liouville_raq.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "gate1_v0_bfv_zero_mode_elimination_ward",
+    script:
+      "cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 
