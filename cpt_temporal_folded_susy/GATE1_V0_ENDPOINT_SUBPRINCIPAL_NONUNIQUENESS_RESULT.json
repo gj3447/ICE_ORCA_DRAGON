@@ -1,14 +1,14 @@
 {
   "automatic_next": null,
   "calculation_id": "Gate1V0EndpointSubprincipalNonuniqueness",
-  "classification": "GATE1_V0_ENDPOINT_SUBPRINCIPAL_DISCRIMINATOR_NONPASS",
+  "classification": "GATE1_V0_ENDPOINT_B_AND_PRINCIPAL_HALF_DENSITY_DO_NOT_SELECT_UNIQUE_EXACT_COMPLETION_EXISTENCE_OPEN",
   "computed_scope": [
     "one exact target-unitary subprincipal family conditional on any exact endpoint completion",
     "preservation of the local constraint domain and zero spectral fiber",
     "a closed-form and high-precision witness that finite-hbar operators differ"
   ],
   "decision_trace": {
-    "matched_predeclared_condition": "the proposed family is not unitary, changes the principal data, or is identical on every test state",
+    "matched_predeclared_condition": "the conditional unitary family preserves the classical B, canonical relation, principal half-density and M_c domain but changes a lower symbol and a finite-hbar test state",
     "prior_nonpass": "the one-term Van Vleck kernel remains killed at exact finite hbar",
     "scope_meaning": "nonuniqueness inside the class fixing only B, a_0, H_D and M_c; additional exact intertwining or endpoint-domain conditions were not tested, and existence remains open"
   },
@@ -35,7 +35,7 @@
     },
     "flags": {
       "constraint_commutator": true,
-      "distinct_test_operators": false,
+      "distinct_test_operators": true,
       "maximal_domain_preservation": true,
       "nontrivial_lower_symbol": true,
       "prior_one_term_nonpass_retained": true,
@@ -49,12 +49,12 @@
       "distance_squared": "2 - 2*exp(-hbar**2*kappa**2/(8*alpha))",
       "overlap": "exp(-hbar**2*kappa**2/(8*alpha))",
       "p_positive_normalized_factor": "sqrt(2*beta)*exp(-beta*p), beta>0",
-      "positive_for_hbar_kappa_nonzero": false
+      "positive_for_hbar_kappa_nonzero": true
     },
     "logical_status": {
       "exact_transform_existence": "OPEN_NOT_COMPUTED",
       "uncorrected_one_term_exact_unitarity": "KILL_UPSTREAM",
-      "uniqueness_from_declared_B_a0_H_D_M_c_data": "OPEN"
+      "uniqueness_from_declared_B_a0_H_D_M_c_data": "KILL"
     },
     "spectral_boundary": {
       "V_at_c_zero": "1",
@@ -100,8 +100,8 @@
     },
     {
       "id": "G1.endpoint.subprincipal.distinct_test_operators",
-      "passed": false,
-      "statement": "a normalized Gaussian times positive-half-line output state has ||(V_kappa-I)psi||^2=2[1-exp(-(hbar*kappa)^2/(8*alpha))]>0"
+      "passed": true,
+      "statement": "the exact overlap gives ||(V_kappa-I)psi||^2=2[1-exp(-x)] with x=(hbar*kappa)^2/(8*alpha)>0, hence strict positivity by monotonicity of exp"
     },
     {
       "id": "G1.endpoint.subprincipal.one_term_nonpass_retained",
@@ -226,7 +226,7 @@
       "statement": "direct high-precision Gaussian characteristic integration matches the exact overlap"
     }
   ],
-  "programme_impact": "OPEN",
+  "programme_impact": "NARROW_REQUIRE_ADDITIONAL_FULL_SYMBOL_AND_INTERTWINING_DATA",
   "promoted_outputs": {
     "TOE_claim": null,
     "automatic_next": null,
@@ -251,11 +251,11 @@
     "quadratures": 3,
     "root_calls": 0
   },
-  "result_payload_sha256_without_self": "017823b8ec64f3c51ed5c0a75b3c40f080f4c6a394b872ee6a44a70cdf45b396",
+  "result_payload_sha256_without_self": "e5520c2b1aa66c233c67a317e4191be2e8eb43f33ff75886ce7bd079259a7887",
   "run_status": "VALID_RUN",
   "runner": {
     "path": "cpt_temporal_folded_susy/gate1_v0_endpoint_subprincipal_nonuniqueness.py",
-    "sha256": "751588277f6d0ffe6816ecf1a79f1ab3da89fa67e63af958ed898743a8a6fbd2"
+    "sha256": "aeebc41ebdf966193f7903c207ea2b523c0a06e7ae2130b796dfedc7687292c7"
   },
   "schema_version": "ice.gate1.v0-endpoint-subprincipal-nonuniqueness.result.v1",
   "theorem_guards": [
@@ -286,6 +286,13 @@
       "id": "G1.endpoint.guard.no_spectral_selection",
       "theorem": "zero-fiber invariance under a multiplier equal to one on the shell",
       "verified": true
+    },
+    {
+      "conclusion_and_scope": "exp(-x)<1, so the exact state-distance formula 2[1-exp(-x)] is strictly positive without relying on a composite SymPy positivity heuristic",
+      "hypotheses": "x=(hbar*kappa)^2/(8*alpha)>0 for the frozen positive hbar, kappa and alpha assumptions",
+      "id": "G1.endpoint.guard.strict_test_distance",
+      "theorem": "strict monotonicity of the real exponential",
+      "verified": true
     }
   ],
   "upstream_provenance": [
@@ -302,5 +309,5 @@
       "verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN"
     }
   ],
-  "verdict": "INCONCLUSIVE_ENDPOINT_COMPLETION_UNIQUENESS"
+  "verdict": "KILL_UNIQUENESS_FROM_DECLARED_B_A0_HD_MC_DATA"
 }
