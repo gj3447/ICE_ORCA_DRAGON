@@ -30,7 +30,8 @@ import {
 } from "./model.ts"
 import {
   decodeResearchRunEvidence,
-  validateEvidenceSnapshot
+  validateEvidenceSnapshot,
+  type ResearchRunEvidence
 } from "./run-evidence.ts"
 
 export const ONTOLOGY_GRAPH_RELPATH =
@@ -145,6 +146,37 @@ const readContainedWorkspaceFileString = (
     return yield* fs.readFileString(realPath).pipe(
       Effect.mapError((error) =>
         iceError(readErrorCode, `cannot read ${relpath}: ${String(error)}`)
+      )
+    )
+  })
+
+const hashContainedWorkspaceFile = (
+  relpath: string,
+  readErrorCode: string,
+  escapeErrorCode: string
+) =>
+  Effect.gen(function* () {
+    const fs = yield* FileSystem.FileSystem
+    const realPath = yield* resolveContainedWorkspacePath(
+      relpath,
+      readErrorCode,
+      escapeErrorCode
+    )
+    const info = yield* fs.stat(realPath).pipe(
+      Effect.mapError((error) =>
+        iceError(readErrorCode, `cannot inspect ${relpath}: ${String(error)}`)
+      )
+    )
+    if (info.type !== "File") {
+      return yield* Effect.fail(
+        iceError(readErrorCode, `${relpath} is ${info.type}, expected File`)
+      )
+    }
+    return yield* fs.stream(realPath).pipe(
+      Stream.runFold(createHash("sha256"), (hash, bytes) => hash.update(bytes)),
+      Effect.map((hash) => hash.digest("hex")),
+      Effect.mapError((error) =>
+        iceError(readErrorCode, `cannot hash ${relpath}: ${String(error)}`)
       )
     )
   })
@@ -335,6 +367,56 @@ export const auditEvidenceSnapshots = (graph: ResearchGraph) =>
   Effect.gen(function* () {
     const artifacts = graph.nodes.filter(isEvidenceSnapshotArtifact)
 
+    const auditScript = (
+      artifact: ArtifactNode,
+      snapshot: ResearchRunEvidence
+    ) => {
+      if (!isSafeArtifactPath(snapshot.script.path)) {
+        return Effect.succeed<ReadonlyArray<ValidationIssue>>([
+          {
+            severity: "error",
+            code: "EVIDENCE_SCRIPT_PATH_UNSAFE",
+            message: `path is not a safe repository-relative path: '${snapshot.script.path}'`,
+            subject: artifact.id
+          }
+        ])
+      }
+      return hashContainedWorkspaceFile(
+        snapshot.script.path,
+        "EVIDENCE_SCRIPT_READ_FAILED",
+        "EVIDENCE_SCRIPT_PATH_ESCAPES_WORKSPACE"
+      ).pipe(
+        Effect.map((observed): ReadonlyArray<ValidationIssue> =>
+          observed === snapshot.script.sha256
+            ? []
+            : [
+                {
+                  severity: "error",
+                  code: "EVIDENCE_SCRIPT_HASH_MISMATCH",
+                  message: `expected ${snapshot.script.sha256}, observed ${observed} for '${snapshot.script.path}'`,
+                  subject: artifact.id
+                }
+              ]
+        ),
+        Effect.catchAll((error) =>
+          Effect.succeed<ReadonlyArray<ValidationIssue>>([
+            {
+              severity: "error",
+              code:
+                error._tag === "IceError"
+                  ? error.code
+                  : "EVIDENCE_SCRIPT_READ_FAILED",
+              message:
+                error._tag === "IceError"
+                  ? error.message
+                  : `cannot read '${snapshot.script.path}': ${String(error)}`,
+              subject: artifact.id
+            }
+          ])
+        )
+      )
+    }
+
     const outcomes = yield* Effect.forEach(
       artifacts,
       (
@@ -364,10 +446,17 @@ export const auditEvidenceSnapshots = (graph: ResearchGraph) =>
           Effect.flatMap((source) =>
             decodeResearchRunEvidence(source, artifact.path)
           ),
-          Effect.map(
-            (snapshot): EvidenceSnapshotOutcome => ({
-              issues: validateEvidenceSnapshot(graph, artifact, snapshot)
-            })
+          Effect.flatMap((snapshot) =>
+            auditScript(artifact, snapshot).pipe(
+              Effect.map(
+                (scriptIssues): EvidenceSnapshotOutcome => ({
+                  issues: [
+                    ...validateEvidenceSnapshot(graph, artifact, snapshot),
+                    ...scriptIssues
+                  ]
+                })
+              )
+            )
           ),
           Effect.catchAll((error) =>
             Effect.succeed<EvidenceSnapshotOutcome>({

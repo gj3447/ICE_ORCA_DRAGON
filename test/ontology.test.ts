@@ -1,6 +1,9 @@
 import { NodeContext } from "@effect/platform-node"
+import * as FileSystem from "@effect/platform/FileSystem"
+import * as Path from "@effect/platform/Path"
 import { expect, it, layer } from "@effect/vitest"
 import { Effect, Layer } from "effect"
+import { createHash } from "node:crypto"
 import {
   makeValidationReport,
   resolveNode,
@@ -23,7 +26,11 @@ import {
   decodeResearchRunEvidence,
   validateEvidenceSnapshot
 } from "../src/ontology/run-evidence.ts"
-import { WorkspaceLive } from "../src/workspace.ts"
+import {
+  Workspace,
+  WorkspaceLive,
+  workspaceFromRoot
+} from "../src/workspace.ts"
 
 const fixture = () => ({
   $schema: "../schema/research-graph-v1.schema.json",
@@ -474,6 +481,71 @@ layer(AppLayer)("canonical ontology", (it) => {
           ?.artifact_kind
       ).toBe("result")
     })
+  )
+
+  it.effect("rejects a snapshot when its recorded runner hash drifts", () =>
+    Effect.scoped(
+      Effect.gen(function* () {
+        const fs = yield* FileSystem.FileSystem
+        const path = yield* Path.Path
+        const temporary = yield* fs.makeTempDirectoryScoped({
+          prefix: "ice-ontology-script-hash-"
+        })
+        yield* fs.makeDirectory(path.join(temporary, "evidence"), {
+          recursive: true
+        })
+        yield* fs.makeDirectory(path.join(temporary, "scripts"), {
+          recursive: true
+        })
+
+        const runner = "print('fixture')\n"
+        const runnerHash = createHash("sha256").update(runner).digest("hex")
+        yield* fs.writeFileString(
+          path.join(temporary, "scripts/runner.py"),
+          runner
+        )
+
+        const rawGraph = evidenceFixture()
+        const graph = yield* decodeResearchGraph(
+          JSON.stringify({
+            ...rawGraph,
+            nodes: rawGraph.nodes.map((node) =>
+              node.id === "artifact:test"
+                ? { ...node, path: "evidence/snapshot.json" }
+                : node
+            )
+          }),
+          "runner hash graph fixture"
+        )
+        yield* fs.writeFileString(
+          path.join(temporary, "evidence/snapshot.json"),
+          JSON.stringify({
+            ...runEvidenceFixture(),
+            script: {
+              ...runEvidenceFixture().script,
+              path: "scripts/runner.py",
+              sha256: runnerHash
+            }
+          })
+        )
+
+        const provideWorkspace = <A, E, R>(effect: Effect.Effect<A, E, R>) =>
+          effect.pipe(
+            Effect.provideService(Workspace, workspaceFromRoot(temporary))
+          )
+        const initial = yield* provideWorkspace(auditEvidenceSnapshots(graph))
+        expect(initial.issues).toEqual([])
+
+        yield* fs.writeFileString(
+          path.join(temporary, "scripts/runner.py"),
+          "print('drifted')\n"
+        )
+        const drifted = yield* provideWorkspace(auditEvidenceSnapshots(graph))
+        expect(drifted.issues.map(({ code }) => code)).toContain(
+          "EVIDENCE_SCRIPT_HASH_MISMATCH"
+        )
+      })
+    )
   )
 
   it.effect("reports content hash mismatches against real files", () =>
