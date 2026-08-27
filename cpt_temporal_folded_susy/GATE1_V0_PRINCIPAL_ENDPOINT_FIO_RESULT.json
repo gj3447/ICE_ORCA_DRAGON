@@ -3,16 +3,16 @@
   "calculation_id": "Gate1V0PrincipalEndpointFIO",
   "numbered_phase": null,
   "run_status": "VALID_RUN",
-  "classification": "GATE1_V0_PRINCIPAL_ENDPOINT_FIO_NONPROMOTED",
-  "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
-  "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_LEAVE_ONE_TERM_EXACT_NORMALIZATION_OPEN",
+  "classification": "GATE1_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KEPT_UNCORRECTED_ONE_TERM_EXACT_UNITARITY_KILLED",
+  "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+  "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_REQUIRE_SUBPRINCIPAL_SYMBOL_AND_DOMAIN_BEFORE_ANY_EXACT_OR_BFV_LIFT",
   "input": {
     "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_INPUTS.json",
     "sha256": "9f3bb3ff0758b0eacfd5ee6c42cd71ca1bf44c99ae822c35b768690031a4585f"
   },
   "runner": {
     "path": "cpt_temporal_folded_susy/gate1_v0_principal_endpoint_fio.py",
-    "sha256": "ec4edd56c4c965582f4da35c89d982e70340be0b808a789ace78e43cbcca8288"
+    "sha256": "7a5ed69028cfb3721f563bb5370a3267bf8ef1bfe3c5e8698a545578b5c1fd53"
   },
   "upstream_provenance": [
     {
@@ -137,7 +137,7 @@
     },
     {
       "id": "G1.fio.coarea_local_curvature",
-      "passed": false,
+      "passed": true,
       "statement": "at P_bar=0, M_P=0 and M_PP=2/(A^2*D^3)>0 for M=W_cP=1/D"
     },
     {
@@ -262,15 +262,13 @@
   "decision_trace": {
     "meaning": "keep the compact-interior principal momentum FIO and its fixed local Maslov branch; reject exact finite-hbar unitarity only for the uncorrected one-term Van Vleck kernel; retain full-symbol, domain, BFV and delta(C) work as open without automatic execution authority",
     "check_partitions": {
-      "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_EXACT_UNITARITY_INCONCLUSIVE",
-      "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_LEAVE_ONE_TERM_EXACT_NORMALIZATION_OPEN",
+      "verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+      "programme_impact": "CLOSE_PRINCIPAL_LOCAL_FIO_ONLY_REQUIRE_SUBPRINCIPAL_SYMBOL_AND_DOMAIN_BEFORE_ANY_EXACT_OR_BFV_LIFT",
       "principal_pass": true,
-      "coarea_nonpass": false,
+      "coarea_nonpass": true,
       "numerical_pass": true,
-      "all_scientific_pass": false,
-      "failed_scientific_ids": [
-        "G1.fio.coarea_local_curvature"
-      ],
+      "all_scientific_pass": true,
+      "failed_scientific_ids": [],
       "reachable_frozen_rows": [
         {
           "verdict": "INCONCLUSIVE",
@@ -293,9 +291,9 @@
     "source_boundary": "HTV frames endpoint canonical data; Garcia-Vergara-Urrutia frames omitted BFV boundary data; Van Vleck and Hormander frame principal semiclassical/FIO scope; Marolf frames the distinct full-real-lapse delta(C) rigging distribution. None derives this repository-specific kernel or licenses a global normalized physical endpoint state."
   },
   "scope_status": {
-    "local_v0_principal_momentum_endpoint_fio": null,
-    "local_maslov_branch": null,
-    "uncorrected_one_term_exact_unitarity": null,
+    "local_v0_principal_momentum_endpoint_fio": "KEEP_ON_COMPACT_INTERIORS_OF_U_PLUS",
+    "local_maslov_branch": "FIXED_BY_W_CP_POSITIVE_ON_U_PLUS",
+    "uncorrected_one_term_exact_unitarity": "KILL_BY_EXACT_COAREA_NONPASS",
     "normalized_quantum_endpoint_state_transform": null,
     "exact_quantum_endpoint_state_transform": null,
     "global_quantum_endpoint_state_transform": null,
@@ -392,7 +390,7 @@
     "automatic_descendants": 0,
     "adjacent_result_files": 1,
     "artifact_cap_bytes": 1000000,
-    "scientific_nonpass_count": 1
+    "scientific_nonpass_count": 0
   },
   "environment": {
     "python": "3.13.5",
@@ -426,5 +424,5 @@
       "open_dependencies": "NOT_EXECUTION_AUTHORIZATION"
     }
   },
-  "result_payload_sha256_without_self": "7acb5b053994364ac80898dc559bb2f301838ead2ad2f7213d959194248059ec"
+  "result_payload_sha256_without_self": "f23c8fbd167b5041d7473cb69a05621768d44b95cd73aab02aaee0ea719bc5e7"
 }
