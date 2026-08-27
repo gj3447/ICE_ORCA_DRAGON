@@ -1,0 +1,118 @@
+{
+  "schema_version": "ice.gate1.v0-constraint-spectral-domain.input.v1",
+  "calculation_id": "Gate1V0ConstraintSpectralDomain",
+  "numbered_phase": null,
+  "question": "On the declared closed-FRW V=0 U_plus Darboux momentum base X_plus=R_c times R_{+,p}, does the local Lebesgue half-density convention define a Hilbert representation in which C-hat is the self-adjoint maximal multiplication operator M_c, with an explicit PVM and a distributional zero-fiber pairing on a dense rigged test space?",
+  "kind": "EXACT_LOCAL_DARBOUX_MOMENTUM_HILBERT_MEASURE_ORDERING_MAXIMAL_MULTIPLICATION_DOMAIN_AND_ZERO_FIBER_SPECTRAL_CONTROL",
+  "epistemic_scope": "ONE_DECLARED_LOCAL_UPLUS_MOMENTUM_REPRESENTATION_NOT_AN_ORIGINAL_VARIABLE_ORDERING_NOT_A_GLOBAL_HILBERT_SPACE_NOT_A_PHYSICAL_INNER_PRODUCT",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json",
+      "sha256": "6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7",
+      "payload_sha256_without_self": "38bfaee2fee30399bc3f1c16c17c0330bc97f6343306a9f5860d296b67a11cd5",
+      "required_verdict": "KEEP_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART",
+      "role": "fixes the componentwise canonical pairs (T,c),(Phi,p), the chart image p>0, and the fact that no quantum measure or domain was previously supplied"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO_RESULT.json",
+      "sha256": "1a530b810c744b7108c915308f4d23e6329abb901780f76ac958922e62ed8eef",
+      "payload_sha256_without_self": "f23c8fbd167b5041d7473cb69a05621768d44b95cd73aab02aaee0ea719bc5e7",
+      "required_verdict": "KEEP_V0_LOCAL_PRINCIPAL_ENDPOINT_FIO_KILL_ONE_TERM_EXACT_UNITARITY",
+      "role": "fixes the local Lebesgue momentum and principal-half-density convention while forbidding transfer of this ordering back through the nonunitary one-term kernel"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Marolf, Refined Algebraic Quantization: Systems with a single constraint, arXiv:gr-qc/9508015",
+      "url": "https://arxiv.org/abs/gr-qc/9508015",
+      "used_for": "the distributional single-constraint rigging and auxiliary-structure boundary",
+      "not_used_for": "deriving the repository-specific Darboux chart, measure, operator, or physical inner product"
+    },
+    {
+      "source": "Giulini, Group Averaging and Refined Algebraic Quantization, arXiv:gr-qc/0003040",
+      "url": "https://arxiv.org/abs/gr-qc/0003040",
+      "used_for": "the distinction between group-averaged distributions and bounded Hilbert-space projectors",
+      "not_used_for": "selecting the local U_plus representation or an endpoint transform"
+    }
+  ],
+  "representation": {
+    "component": "U_plus with p>0 and R=3*p^2-2*P^2>0",
+    "momentum_base": "X_plus=R_c times R_{+,p}",
+    "hilbert_space": "H_D=L2(X_plus,dc*dp)",
+    "measure_status": "DECLARED_LOCAL_LEBESGUE_HALF_DENSITY_CONVENTION_NOT_PHYSICAL_MEASURE",
+    "constraint_operator": "(C_hat_D psi)(c,p)=c*psi(c,p)",
+    "maximal_domain": "D(C_hat_D)={psi in H_D: c*psi in H_D}",
+    "ordering": "NO_FACTOR_ORDERING_AMBIGUITY_FOR_THE_MULTIPLICATION_COORDINATE_c_IN_THIS_REPRESENTATION_ONLY",
+    "pvm": "(E(Delta)psi)(c,p)=1_Delta(c)*psi(c,p)",
+    "test_space": "S_D=S(R_c) completed_tensor S(R_{+,p}), with the half-line factor defined by rapidly decreasing smooth functions and all finite boundary jets allowed",
+    "zero_fiber_form": "eta_0(psi,varphi)=integral_0^infinity dp conjugate(psi(0,p))*varphi(0,p)"
+  },
+  "exact_plan": [
+    "hash-verify both upstream results and their scoped verdicts",
+    "verify the Darboux coordinate c is real and the selected base keeps the upstream p>0 component rather than silently doubling it",
+    "verify the resolvent multiplier r_z(c)=1/(c-z) satisfies (c-z)r_z=1 and the exact bound |r_z|<=1/|Im z| for Im z nonzero",
+    "apply the maximal real multiplication-operator theorem to conclude self-adjointness, spectrum R, and PVM multiplication by indicator functions",
+    "verify PVM Boolean algebra and that the singleton spectral projection E({0}) vanishes in Lebesgue L2 although the zero-fiber delta form is nonzero on test functions",
+    "keep the zero-fiber form distributional and explicitly separate it from an ordinary bounded projector or a physical inner product",
+    "record that no ordering or domain is transferred to the original variables because the prior one-term FIO failed exact finite-hbar unitarity",
+    "record that the prior full-p relational Fourier identity is not an identity kernel on the p>0 U_plus component"
+  ],
+  "decision_table": [
+    {
+      "condition": "the upstream component and FIO boundary are exact; the maximal real multiplication operator, resolvent, PVM and rigged zero-fiber form are internally consistent",
+      "verdict": "KEEP_V0_LOCAL_CONSTRAINT_MULTIPLICATION_SPECTRAL_DOMAIN",
+      "programme_impact": "CLOSE_LOCAL_DARBOUX_REPRESENTATION_DOMAIN_ONLY",
+      "meaning": "keep one declared local kinematical representation and its self-adjoint multiplication constraint; original-variable ordering, endpoint-transform existence, physical measure and global completion remain open"
+    },
+    {
+      "condition": "the resolvent identity/bound, reality, maximal-domain or PVM checks fail",
+      "verdict": "KILL_V0_DECLARED_CONSTRAINT_SPECTRAL_REPRESENTATION",
+      "programme_impact": "RETAIN_CLASSICAL_CHART_ONLY",
+      "meaning": "reject this local operator realization without changing the classical Darboux result"
+    },
+    {
+      "condition": "the representation silently imports p<0 or calls the full-p Fourier identity an U_plus spectral identity",
+      "verdict": "KILL_HALF_LINE_SCOPE_MUTATION",
+      "programme_impact": "RETAIN_LOCAL_MULTIPLICATION_FACTS_WITHOUT_THE_MUTATED_IDENTITY",
+      "meaning": "reject the branch-doubling shortcut"
+    }
+  ],
+  "computed_scope": [
+    "one local Hilbert measure convention on the U_plus Darboux momentum base",
+    "the maximal self-adjoint multiplication realization of the constraint coordinate c",
+    "its PVM and a dense rigged test-space zero-fiber sesquilinear form",
+    "the p>0 branch and distributional-projector scope boundaries"
+  ],
+  "not_computed": [
+    "an exact normalized endpoint transform from the old momentum or coordinate polarization",
+    "an ordering, self-adjoint extension or edge condition for the original closed-FRW constraint",
+    "a self-adjoint Phi generator across the p=0 half-line edge or a p<0 branch completion",
+    "a physical inner product, full-real-lapse group average, full BFV path measure or old-kernel equivalence",
+    "a global Darboux atlas, Gribov census, physical cycle, physics claim or TOE claim"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "exact_endpoint_state_transform": null,
+    "original_variable_constraint_ordering": null,
+    "physical_inner_product": null,
+    "full_real_lapse_delta_C": null,
+    "full_bfv_trajectory_measure": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
