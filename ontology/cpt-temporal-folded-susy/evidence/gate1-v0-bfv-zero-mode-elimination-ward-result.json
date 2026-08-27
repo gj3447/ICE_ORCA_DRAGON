@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_20260827",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-27T12:07:44Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py",
+    "sha256": "8462ccb52cbfc3ba588a6182e4e288f645d4524b0fbefbd016fd08f3d83b5c6a",
+    "introduced_in_commit": "35e3ab4b188b7fbc5f32fdeb60f96fb4e7c48cb4"
+  },
+  "exact_checks": 14,
+  "checks": [
+    {
+      "id": "P39.G1.zero_ward.upstream.static_brst_contract",
+      "status": "PASS",
+      "statement": "the hash-pinned static source has Omega=c_g*c+rho*Pi, the required generator images, and vanishing squared images"
+    },
+    {
+      "id": "P39.G1.zero_ward.upstream.prior_ledger_mismatch",
+      "status": "PASS",
+      "statement": "the prior result compared a retained lambda factor with an eliminated ledger whose odd Gaussian factor was null"
+    },
+    {
+      "id": "P39.G1.zero_ward.brst.generator_nilpotence",
+      "status": "PASS",
+      "statement": "the projected right-BRST images square to zero"
+    },
+    {
+      "id": "P39.G1.zero_ward.brst.action_closure",
+      "status": "PASS",
+      "statement": "under the inherited right-acting bracket rule s(N0*c0)=s(rho0*bar_rho0), so sS0=0"
+    },
+    {
+      "id": "P39.G1.zero_ward.direct.berezin_factor",
+      "status": "PASS",
+      "statement": "the pinned i*hbar extraction gives the direct ghost factor lambda"
+    },
+    {
+      "id": "P39.G1.zero_ward.elimination.odd_hessian",
+      "status": "PASS",
+      "statement": "the ordered odd action Hessian is nondegenerate for lambda>0, with determinant lambda^2 and Pfaffian -lambda before exponent/measure orientation"
+    },
+    {
+      "id": "P39.G1.zero_ward.elimination.stationary_ghost_solution",
+      "status": "PASS",
+      "statement": "the algebraic ghost equations have the unique stationary solution rho0=bar_rho0=0"
+    },
+    {
+      "id": "P39.G1.zero_ward.elimination.induced_oriented_factor",
+      "status": "PASS",
+      "statement": "integrating out the nondegenerate odd Gaussian leaves its oriented factor lambda"
+    },
+    {
+      "id": "P39.G1.zero_ward.bosonic.positive_lambda_delta_scaling",
+      "status": "PASS",
+      "statement": "the full-real N0 Fourier integral gives delta(lambda*c0)=delta(c0)/lambda for lambda>0"
+    },
+    {
+      "id": "P39.G1.zero_ward.combined.direct_equals_weighted_elimination",
+      "status": "PASS",
+      "statement": "direct retention and weighted elimination both give the relative distribution delta(c0)"
+    },
+    {
+      "id": "P39.G1.zero_ward.combined.unweighted_deletion_negative_control",
+      "status": "PASS",
+      "statement": "deleting the pair without its induced factor leaves the spurious coefficient 1/lambda"
+    },
+    {
+      "id": "P39.G1.zero_ward.scaling.relative_ward_identity",
+      "status": "PASS",
+      "statement": "the direct and weighted-elimination coefficients obey d_lambda Z0=0, while unweighted deletion violates it"
+    },
+    {
+      "id": "P39.G1.zero_ward.scaling.sampled_discrimination",
+      "status": "PASS",
+      "statement": "at lambda=1/2,1,2 both correct ledgers stay one and the negative control gives 2,1,1/2"
+    },
+    {
+      "id": "P39.G1.zero_ward.scope.prior_mismatch_is_unweighted_deletion",
+      "status": "PASS",
+      "statement": "the prior mismatch is repaired by the omitted induced odd factor without changing the pinned action or orientation"
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 14,
+    "numerical_checks": 0,
+    "calculation": {
+      "calculation_id": "Gate1V0BfvZeroModeEliminationWard",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_V0_LOCAL_BFV_ZERO_GHOST_DIRECT_AND_WEIGHTED_ELIMINATION_EQUIVALENT_UNWEIGHTED_DELETION_KILL_LAPSE_COMPLETION_OPEN",
+      "verdict": "NARROW_V0_BFV_ZERO_GHOST_ELIMINATION_REQUIRES_INDUCED_DETERMINANT",
+      "programme_impact": "CLOSE_ONE_LOCAL_ZERO_MODE_LEDGER_MISMATCH_ONLY"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited Gate-1 provenance required by research-run-evidence/v1; this calculation has numbered_phase=null and creates no new phase",
+      "outer_check_ids_semantics": "the outer P39.G1.zero_ward.* IDs are schema transport aliases only and do not denote a Phase-39 execution",
+      "authoritative_check_prefix": "G1.zero_ward."
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract_of_one_local_bfv_zero_mode_elimination_ward_run",
+      "definition_commit": "35e3ab4b188b7fbc5f32fdeb60f96fb4e7c48cb4",
+      "raw_result_commit": "0e24f46b17659bee2bc81fa294c468121af833fd",
+      "report_commit": "ce2c8a828dfdc6db4655c1c183ada7b4181db3b4",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_INPUTS.json",
+      "input_manifest_sha256": "912492397b0488562eacce1b37d8998faf73ad0c6b30d716fc3e8da98d99ecdd",
+      "runner_sha256": "8462ccb52cbfc3ba588a6182e4e288f645d4524b0fbefbd016fd08f3d83b5c6a",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json",
+      "raw_result_outer_sha256": "ac50dfa4564bc5728951a4dd4df4f032315c64e926c098714f6c690f37afc206",
+      "raw_result_payload_sha256_without_self": "22c8423c347084eb07e8167bb38101ab50a74cc3335b5d3f471099a1f54f0a6b",
+      "raw_result_size_bytes": 17908,
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_QUANTUM_COSMOLOGY_DERIVATION.md",
+      "report_sha256": "e61be89282b70afd617d66b901fb15082cc830f19e087397cc2cad022c5961f6"
+    },
+    "computed_facts": {
+      "direct_relative_delta_c0_factor": "1",
+      "weighted_elimination_relative_delta_c0_factor": "1",
+      "induced_oriented_ghost_factor": "lambda",
+      "unweighted_deletion_relative_factor": "1/lambda",
+      "unweighted_deletion_status": "KILL_AS_GHOST_GAUSSIAN_ELIMINATION",
+      "unique_trajectory_zero_mode_completion": "STILL_OPEN_DUE_TO_LAPSE_CONTOUR_OR_MODULUS"
+    },
+    "theorem_guards": {
+      "count": 6,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_14_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.zero_ward.guard.finite_berezin_gaussian",
+        "G1.zero_ward.guard.fourier_delta_scaling",
+        "G1.zero_ward.guard.local_scaling_ward",
+        "G1.zero_ward.guard.lapse_completion_still_open",
+        "G1.zero_ward.guard.constant_lambda_not_constraint_densitization",
+        "G1.zero_ward.guard.no_full_bfv_or_physics"
+      ]
+    },
+    "scope_status": {
+      "local_direct_weighted_elimination_equivalence": "KEEP",
+      "unweighted_zero_ghost_deletion": "KILL",
+      "unique_trajectory_zero_mode_completion": null,
+      "lapse_modulus_or_contour_selection": null,
+      "absolute_finite_bfv_measure": null,
+      "full_bfv_trajectory_measure": null
+    },
+    "fail_closed_outputs": {
+      "constraint_densitization_equivalence": null,
+      "raw_C_physical_inner_product": null,
+      "brst_cohomology": null,
+      "quantum_gravity_claim": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    },
+    "ragnarok_termination_audit": {
+      "runtime_policy": "GENERIC_BOUNDED_UNNUMBERED_CORE",
+      "authorization": "USER_DIRECTED_BFV_ZERO_MODE_DERIVATION",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    }
+  }
+}

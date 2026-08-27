@@ -1,0 +1,166 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_20260827",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-27T12:01:16Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_densitized_liouville_raq",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_densitized_liouville_raq.py",
+    "sha256": "b5e346ec2992e860ccf99ef0ec7d06e9f4cac2667137714bb32fbe1f647c18f2",
+    "introduced_in_commit": "a068835271fbcfafcaeee2e0126a8093318d95a9"
+  },
+  "exact_checks": 14,
+  "checks": [
+    {
+      "id": "P39.G1.densitized.classical.identity",
+      "status": "PASS",
+      "statement": "12*pi^2*exp(3Q/2)*C equals -2P^2+3p^2-72*pi^4*exp(2Q) exactly"
+    },
+    {
+      "id": "P39.G1.densitized.classical.positive_multiplier",
+      "status": "PASS",
+      "statement": "the declared classical rescaling multiplier is strictly positive for real Q"
+    },
+    {
+      "id": "P39.G1.densitized.operator.liouville_scale",
+      "status": "PASS",
+      "statement": "with z=6*pi^2*exp(Q)/hbar the exponential potential is 2*hbar^2*z^2"
+    },
+    {
+      "id": "P39.G1.densitized.spectral.bessel_eigenvalue",
+      "status": "PASS",
+      "statement": "the modified-Bessel equation at nu=i*kappa gives (-d_Q^2+z^2)K_{i kappa}(z)=kappa^2 K_{i kappa}(z)"
+    },
+    {
+      "id": "P39.G1.densitized.spectral.kl_normalization",
+      "status": "PASS",
+      "statement": "the symmetric kernel normalization squared equals the DLMF forward-transform coefficient"
+    },
+    {
+      "id": "P39.G1.densitized.spectral.kl_inverse_cancellation",
+      "status": "PASS",
+      "statement": "writing f_DLMF=kl_norm*A and K=chi/kl_norm converts the DLMF inverse into g=integral A*chi d kappa"
+    },
+    {
+      "id": "P39.G1.densitized.raq.simple_positive_zero",
+      "status": "PASS",
+      "statement": "on p>0 the spectral multiplier has the unique positive zero kappa_0=sqrt(3/2)*p/hbar"
+    },
+    {
+      "id": "P39.G1.densitized.raq.coarea_factor",
+      "status": "PASS",
+      "statement": "the positive-root coarea derivative is 2*sqrt(6)*hbar*p"
+    },
+    {
+      "id": "P39.G1.densitized.raq.positive_weight",
+      "status": "PASS",
+      "statement": "the selected group average induces the positive measure dp/(2*sqrt(6)*hbar*p)"
+    },
+    {
+      "id": "P39.G1.densitized.raq.two_positive_witness_norms",
+      "status": "PASS",
+      "statement": "the amplitudes p*exp(-p) and p^2*exp(-p) have finite strictly positive physical norms"
+    },
+    {
+      "id": "P39.G1.densitized.comparison.dp_not_identity_measure",
+      "status": "PASS",
+      "statement": "two witness ratios differ, so the derived dp/p measure is not the prior dp fiber up to one state-independent constant"
+    },
+    {
+      "id": "P39.G1.densitized.comparison.explicit_unitary_reweight",
+      "status": "PASS",
+      "statement": "J A=A/sqrt(2*sqrt(6)*hbar*p) is an isometry from the weighted physical space to abstract L2(dp)"
+    },
+    {
+      "id": "P39.G1.densitized.boundary.p_zero_singular",
+      "status": "PASS",
+      "statement": "the coarea root ceases to be simple at p=0 and the weight diverges, so the compact-interior result cannot include that edge"
+    },
+    {
+      "id": "P39.G1.densitized.operator.real_multiplier_resolvent",
+      "status": "PASS",
+      "statement": "the KL-Fourier spectral value is real and its nonreal resolvent satisfies the multiplication identity"
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 14,
+    "numerical_checks": 0,
+    "calculation": {
+      "calculation_id": "Gate1V0DensitizedLiouvilleRaq",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "classification": "GATE1_V0_ONE_DENSITIZED_ORIGINAL_COORDINATE_KL_SPECTRAL_REALIZATION_AND_WEIGHTED_RAQ_PHYSICAL_FIBER_KEEP_RAW_C_RESCALING_EQUIVALENCE_BFV_QUANTUM_GRAVITY_AND_PHYSICS_OPEN",
+      "verdict": "KEEP_V0_ONE_DENSITIZED_LIOUVILLE_KL_RAQ_MODEL",
+      "programme_impact": "CLOSE_ONE_EXPLICITLY_RESCALED_ORDER_FIXED_QUANTUM_COSMOLOGY_MODEL_ONLY"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited Gate-1 provenance required by research-run-evidence/v1; this calculation has numbered_phase=null and creates no new phase",
+      "outer_check_ids_semantics": "the outer P39.G1.densitized.* IDs are schema transport aliases only and do not denote a Phase-39 execution",
+      "authoritative_check_prefix": "G1.densitized."
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract_of_one_densitized_liouville_kl_raq_run",
+      "definition_commit": "a068835271fbcfafcaeee2e0126a8093318d95a9",
+      "raw_result_commit": "9b9ce7d641fc81a0470c630643b928d81c363c77",
+      "report_commit": "ce2c8a828dfdc6db4655c1c183ada7b4181db3b4",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_INPUTS.json",
+      "input_manifest_sha256": "92f340a331fb38590d64ac2c1e273dd7b17b7f7b1c91b0f2e05c8db58d1d55cd",
+      "runner_sha256": "b5e346ec2992e860ccf99ef0ec7d06e9f4cac2667137714bb32fbe1f647c18f2",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json",
+      "raw_result_outer_sha256": "2f54a47f775002d1a9c24749c729bc02ebf86dc5fa959b93e2518d925b9db806",
+      "raw_result_payload_sha256_without_self": "32c4cf7ae925d3fbbbba21d5e0e4466abdd80043e39db8312941c9548b346869",
+      "raw_result_size_bytes": 17117,
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_QUANTUM_COSMOLOGY_DERIVATION.md",
+      "report_sha256": "e61be89282b70afd617d66b901fb15082cc830f19e087397cc2cad022c5961f6"
+    },
+    "computed_facts": {
+      "selected_constraint": "H=12*pi^2*exp(3Q/2)*C",
+      "selected_spectral_multiplier": "3*p^2-2*hbar^2*kappa^2",
+      "positive_zero_root": "sqrt(3/2)*p/hbar",
+      "selected_raq_physical_measure": "dp/(2*sqrt(6)*hbar*p)",
+      "prior_dp_identity_measure_equivalence": "CONTRADICTED_BY_TWO_WITNESS_RATIOS",
+      "abstract_reweighting_to_L2_dp": "EXPLICIT_ISOMETRY_ONLY",
+      "p_zero_edge": "SINGULAR_NOT_COMPLETED"
+    },
+    "theorem_guards": {
+      "count": 5,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_14_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.densitized.guard.kl_plancherel",
+        "G1.densitized.guard.real_multiplication_self_adjoint",
+        "G1.densitized.guard.single_constraint_group_average",
+        "G1.densitized.guard.rescaling_noninvariance",
+        "G1.densitized.guard.not_full_quantum_gravity"
+      ]
+    },
+    "scope_status": {
+      "one_densitized_ordered_quantum_cosmology_model": "KEEP",
+      "selected_p_positive_physical_fiber": "KEEP",
+      "raw_C_operator_and_domain": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "declared_Mc_identity_equivalence": null,
+      "p_zero_edge_completion": null
+    },
+    "fail_closed_outputs": {
+      "full_bfv_trajectory_measure": null,
+      "physical_original_cycle": null,
+      "quantum_gravity_claim": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    },
+    "ragnarok_termination_audit": {
+      "runtime_policy": "GENERIC_BOUNDED_UNNUMBERED_CORE",
+      "authorization": "USER_DIRECTED_QUANTUM_COSMOLOGY_DERIVATION",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    }
+  }
+}

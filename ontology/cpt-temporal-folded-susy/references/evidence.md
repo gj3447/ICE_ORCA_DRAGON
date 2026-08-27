@@ -10,7 +10,9 @@ The next bounded [`gate1-v0-offshell-darboux-chart-result.json`](../evidence/gat
 
 The bounded [`gate1-v0-principal-endpoint-fio-result.json`](../evidence/gate1-v0-principal-endpoint-fio-result.json) then keeps the compact-interior principal momentum FIO while contradicting exact finite-\(\hbar\) unitarity only for its uncorrected one-term amplitude. The [`gate1-v0-improved-static-bfv-source-result.json`](../evidence/gate1-v0-improved-static-bfv-source-result.json) follows a separate local branch: it records one bracket-derived, BRST-compatible improved-static BFV zero-mode replacement-source algebra with explicitly declared Fourier and Berezin measures.
 
-The latest [`gate1-v0-spectral-to-m2-bfv-chain-result.json`](../evidence/gate1-v0-spectral-to-m2-bfv-chain-result.json) is a typed extract of the final corrected \(m=2\) run and hash-pins the three preceding raw chain results. Its schema-required outer `phase: P39` and `P39.G1.m2.*` check IDs are transport aliases only: the payload records `numbered_phase=null`, the authoritative raw `G1.m2.*` IDs, and that no Phase-39 execution or new numbered phase occurred. The four raw runs keep a declared self-adjoint \(M_c\) domain, contradict endpoint-completion uniqueness from the declared principal data while leaving existence open, keep one frozen static/order-zero spectral test form, and keep one relative nonzero \(m=2\) quartet while contradicting unique trajectory zero-mode completion. None supplies an exact endpoint transform, original-variable ordering, arbitrary-state/full-real-lapse physical rigging map, absolute trajectory measure, global cycle, physics claim or TOE.
+The historical [`gate1-v0-spectral-to-m2-bfv-chain-result.json`](../evidence/gate1-v0-spectral-to-m2-bfv-chain-result.json) is a typed extract of the corrected \(m=2\) run and hash-pins the three preceding raw chain results. Its schema-required outer `phase: P39` and `P39.G1.m2.*` check IDs are transport aliases only: the payload records `numbered_phase=null`, the authoritative raw `G1.m2.*` IDs, and that no Phase-39 execution or new numbered phase occurred. The four raw runs keep a declared self-adjoint \(M_c\) domain, contradict endpoint-completion uniqueness from the declared principal data while leaving existence open, keep one frozen static/order-zero spectral test form, and keep one relative nonzero \(m=2\) quartet. The latter's apparent zero-mode ambiguity is now historically refined by the Ward control below: direct Berezin integration and determinant-weighted elimination agree, while unweighted deletion is killed; lapse-modulus/contour and absolute-measure questions remain open.
+
+The later [`gate1-v0-densitized-liouville-raq-result.json`](../evidence/gate1-v0-densitized-liouville-raq-result.json) records 14/14 exact checks for one explicitly densitized, order-fixed Kontorovich--Lebedev/RAQ realization. Its selected positive fiber has physical measure \(dp/(2\sqrt6\hbar p)\), not the earlier declared \(dp\) identity measure. The raw \(C\) operator and domain, quantum constraint-rescaling equivalence, equivalence to the declared \(M_c\) identity, and the \(p=0\) edge remain null. The companion [`gate1-v0-bfv-zero-mode-elimination-ward-result.json`](../evidence/gate1-v0-bfv-zero-mode-elimination-ward-result.json) records 14/14 exact checks: direct Berezin integration equals determinant-weighted ghost elimination, whereas unweighted deletion is killed. It leaves the lapse modulus/contour, absolute finite or functional BFV measure, full trajectory completion, physics and TOE null.
 
 ## Historical Phase 11–15R evidence backfill
 
@@ -76,13 +78,14 @@ reviewed analytic scope guards, and three numerical `PASS` checks from three 80-
 KEEP is one finite local zero-mode source algebra under explicitly declared measures. It is not an
 absolute BFV functional measure, normalized endpoint operator, spectral \(\delta(\widehat C)\), full
 trajectory kernel, physical cycle, physics claim, or TOE result.
-The V0 spectral-to-\(m=2\) chain snapshot separately transports the final corrected runner's 16 exact
+The historical V0 spectral-to-\(m=2\) chain snapshot separately transports the final corrected runner's 16 exact
 `PASS` entries, five reviewed analytic scope guards and zero numerical checks. Its payload also pins the
 preceding final raw runs and their 8/0, 10/3 and 11/36 exact/numerical counts. The typed outer
 `P39.G1.m2.*` IDs are aliases required by the v1 evidence schema, not raw IDs or a Phase-39 execution.
-The final KEEP is only a same-regulator relative nonzero-mode determinant/Pfaffian identity; its two
-explicit zero-mode ledgers remain inequivalent, and all exact-endpoint, full-measure, global, physics and
-TOE outputs stay null.
+The historical KEEP is only a same-regulator relative nonzero-mode determinant/Pfaffian identity. At
+that stage the direct-retention and unweighted-deletion rows were recorded as inequivalent ledgers. The
+later Ward control identifies the latter as invalid elimination without its induced determinant; it does
+not change the exact-endpoint, lapse-contour, absolute-measure, global, physics or TOE null outputs.
 The legacy separately recorded Phase-18 SciPy control is included in the numbered numerical
 total: 70 controls through
 Phase 24 in the historical counting, then 12 in Phase 25, 9 in Phase 26, 8 in Phase 27, 9 in Phase 28, 7
@@ -240,6 +243,8 @@ Thus `P16.off_shell_b_i_obstruction: PASS` contributes to contradicting the clai
 | Gate 1 V0 trace endpoint action (non-numbered) | `result:GATE1_V0_TRACE_ENDPOINT_ACTION_20260826`; `2026-08-26T15:59:23.377Z` | `cpt_temporal_folded_susy/gate1_v0_trace_endpoint_completion.py`; SHA-256 `36cb11409760f39eb34678736903c705127188fc60a1a76e4de5059e20d5ba2a`; action-ledger and source-scope fixes finalized in `541edc8e75ce8b48a06a825ebc90c7e2cd3737ef`, final raw result in `aab4f4cd0392d8322a765d37df4b0f0842fb30a8` | Exit `0` after `3.048 s`; 16 exact PASS, 7 separately reviewed analytic guards and 5 numerical PASS from six quadratures; classical local on-shell fixed-\(\Phi_*\) relational action `KEEP` on one frozen closed-FRW \(V=0\) component; zero roots, ODEs and descendants; full off-shell chart, quantum endpoint states, replacement BFV source, full-real-lapse \(\delta(C)\) physical-inner-product kernel, old fixed-\(a\) equality, global cycle, physics and TOE remain open or null. |
 | Gate 1 V0 componentwise off-shell Darboux chart (non-numbered) | `result:GATE1_V0_OFFSHELL_DARBOUX_CHART_20260827`; `2026-08-27T04:52:42.051Z` | `cpt_temporal_folded_susy/gate1_v0_offshell_darboux_chart.py`; SHA-256 `c9532d0f74b5e4aa00d7a55915e872d2ac2f2efeaba909985d9acf760a10f6da`; introduced in `626230f4f5f35c3374c62774787ff6ac7b4cd990`, final raw result in `7e18e4bee6ab6a6d34ac7a5dc5e2f1b5b3c1fdfb` | Exit `0` after an observed capped invocation wall time of `2.273 s`; 18 exact PASS, 8 separately reviewed analytic guards and 3 numerical PASS from six root-method calls; classical componentwise chart `KEEP` on \(\mathcal U_+=\{p>0,R>0\}\), exact \(c=0\) recovery, zero quadratures/ODEs/descendants, and `automatic_next=null`; all-component/global, quantum endpoint, BFV, old-kernel, full-real-lapse \(\delta(C)\), physical-cycle, physics and TOE outputs remain open or null. |
 | Gate 1 V0 spectral-to-\(m=2\) BFV chain, final executable snapshot (non-numbered) | `result:GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN_20260827`; `2026-08-27T09:47:12Z` | `cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py`; SHA-256 `71b3a6707c8b3d6a40f58e3a812de42a90ca6463de736d949bbf77f381a6e382`; corrected mixed-boundary runner introduced in `176d78365fa79fa4840fd11b7bd16c338d61d442`, final raw result in `542f6c5dad1c10cd88e3c77fc48061396a7d5980` | Exit `0`; 16 exact PASS, 5 separately reviewed analytic guards and 0 numerical checks; relative nonzero \(m=2\) quartet `KEEP`, unique trajectory zero-mode completion null. Payload pins all four chain results, the endpoint `INCONCLUSIVE` repair and initial false-common-basis \(m=2\) `KILL`; `numbered_phase=null`, `automatic_next=null`, Gate 1 open, and every exact-endpoint/full-measure/global/physics/TOE output null. |
+| Gate 1 V0 selected densitized Liouville--KL RAQ (non-numbered) | `result:GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_20260827`; `2026-08-27T12:01:16Z` | `cpt_temporal_folded_susy/gate1_v0_densitized_liouville_raq.py`; SHA-256 `b5e346ec2992e860ccf99ef0ec7d06e9f4cac2667137714bb32fbe1f647c18f2`; introduced in `a068835271fbcfafcaeee2e0126a8093318d95a9`, final raw result in `9b9ce7d641fc81a0470c630643b928d81c363c77` | Exit `0`; 14 exact PASS, 5 separately reviewed analytic guards and 0 numerical checks; one selected densitized/order-fixed \(p>0\) KL/RAQ fiber `KEEP` with measure \(dp/(2\sqrt6\hbar p)\). Raw \(C\), rescaling equivalence, \(M_c\) identity, \(p=0\), BFV, quantum gravity, physics and TOE remain null. |
+| Gate 1 V0 BFV zero-mode elimination Ward control (non-numbered) | `result:GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_20260827`; `2026-08-27T12:07:44Z` | `cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py`; SHA-256 `8462ccb52cbfc3ba588a6182e4e288f645d4524b0fbefbd016fd08f3d83b5c6a`; introduced in `35e3ab4b188b7fbc5f32fdeb60f96fb4e7c48cb4`, final raw result in `0e24f46b17659bee2bc81fa294c468121af833fd` | Exit `0`; 14 exact PASS, 6 separately reviewed analytic guards and 0 numerical checks; direct Berezin integration equals induced-determinant elimination, while unweighted deletion is `KILL`. Lapse modulus/contour, absolute BFV measure, full trajectory, quantum gravity, physics and TOE remain null. |
 
 The Phase 15R evidence node points to the committed [`PHASE15R_RUN_RESULT.json`](../../../cpt_temporal_folded_susy/PHASE15R_RUN_RESULT.json). It is not duplicated under `ontology/.../evidence/`.
 
@@ -3310,9 +3315,34 @@ original-variable constraint ordering or physical measure. The endpoint contradi
 on existence of one exact completion and does not rule out existence or additional exact data that
 select a representative. The static/spectral match is only a frozen three-state order-zero form. The
 \(m=2\) match is relative under one regulator and supplies no absolute contour or Pfaffian orientation.
-Two explicit zero-mode ledgers remain inequivalent. An exact normalized endpoint transform,
+Two explicit zero-mode ledgers were treated as inequivalent at that historical stage. The later Ward
+control identifies the eliminated ledger as an unweighted-deletion negative control rather than an
+admissible Gaussian elimination. An exact normalized endpoint transform,
 arbitrary-state/full-real-lapse physical rigging map, two-endpoint/full-trajectory BFV kernel, absolute
-measure, old-kernel equality, zero lapse, other components, determinant line and global cycle remain
-open. Gate 1 stays `OPEN_PARTIAL_PROGRESS`, with `automatic_next=null` and no physical or TOE promotion.
+measure, old-kernel equality, zero lapse, other components, determinant line and global cycle remained
+open at that stage. Gate 1 stayed `OPEN_PARTIAL_PROGRESS`, with `automatic_next=null` and no physical or TOE promotion.
+
+Two later independent V0 controls refine that endpoint. The densitized Liouville/Kontorovich--Lebedev
+RAQ snapshot has 14/14 exact passes and keeps one order-fixed selected physical fiber with measure
+\(dp/(2\sqrt6\hbar p)\); it does not identify this with the earlier \(dp\) identity convention, define the
+raw \(C\) operator/domain, prove quantum rescaling equivalence, or complete the singular \(p=0\) edge.
+The Ward snapshot also has 14/14 exact passes: it keeps direct Berezin integration equal to
+determinant-weighted elimination and kills unweighted zero-ghost deletion. Neither result selects a
+lapse modulus or contour, constructs an absolute BFV measure or full trajectory kernel, or promotes a
+physical, quantum-gravity, physics, or TOE conclusion.
+
+The latest local concept flow is therefore:
+
+```text
+historical declared M_c spectral domain + frozen static pairing
+  → historical m=2 relative quartet / zero-mode ambiguity
+  → evidence:gate1-v0-densitized-liouville-raq-result
+      (14/14 exact; one densitized KL RAQ fiber, dp/(2*sqrt(6)*hbar*p))
+  → evidence:gate1-v0-bfv-zero-mode-elimination-ward-result
+      (14/14 exact; direct Berezin = weighted elimination;
+       unweighted deletion KILL)
+  → raw-C/domain, rescaling equivalence, p=0 completion, lapse contour/modulus,
+     absolute BFV measure, full trajectory, physics and TOE remain open or null.
+```
 
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

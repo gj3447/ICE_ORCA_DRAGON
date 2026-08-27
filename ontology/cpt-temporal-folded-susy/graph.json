@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-27T09:58:21Z",
+  "updated_at_utc": "2026-08-27T12:31:05Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -456,7 +456,7 @@
     },
     {
       "question": "How far did the trace-gauge V0 spectral-to-m2 BFV chain get?",
-      "answer": "It now supplies four additional but still local workbench layers. On the declared L2(dc dp) U_plus momentum base, C-hat=M_c has its maximal self-adjoint multiplication domain and an order-zero distributional c=0 fiber form. The declared B, principal half-density, Hilbert space and M_c do not uniquely select an exact endpoint completion; existence remains open. The improved-static pairing agrees with the order-zero M_c form on three frozen p>0 test states. One m=2 nonzero BFV quartet has a relative determinant/Pfaffian match, but two inequivalent zero-mode ledgers prevent a unique trajectory completion. No exact endpoint transform, original-variable ordering, full path measure, physical inner product, global cycle, physics result or TOE claim follows.",
+      "answer": "It now supplies six additional but still local workbench layers. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, one selected positively densitized and order-fixed original-coordinate Liouville model has a KL/RAQ positive p>0 fiber with measure dp/(2 sqrt(6) hbar p), which is not the prior dp static fiber measure up to one constant. Direct ghost retention and weighted ghost elimination agree; only unweighted zero-ghost deletion is KILL. Neither calculation selects a lapse contour/modulus, absolute BFV measure, raw-C rescaling equivalence or raw-C physical inner product, endpoint transform, global cycle, physics result or TOE claim.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -470,7 +470,11 @@
         "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION",
         "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
         "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
-        "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION"
+        "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+        "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+        "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+        "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+        "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
       ]
     }
   ],
@@ -1104,7 +1108,7 @@
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
       "title": "From the anchored straight-line KILL to the V0 local BFV zero-mode boundary",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and an exact U_plus classical Darboux chart. A principal FIO and improved-static BFV zero-mode source then feed the user-directed spectral-to-m2 chain: the declared M_c operator domain is self-adjoint, the declared endpoint data do not select a unique exact completion, the frozen static form matches the order-zero spectral c=0 fiber, and one nonzero m=2 quartet has only a relative determinant/Pfaffian match. Stop at the two inequivalent trajectory zero-mode ledgers, before an exact endpoint transform, original-variable ordering, full BFV measure, absolute contour/Pfaffian orientation, other-component atlas, old-kernel equality, source deformation, zero lapse, scale/mixed ends, census, global coefficients, or physics promotion.",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and an exact U_plus classical Darboux chart. A principal FIO and improved-static BFV zero-mode source then feed the spectral-to-m2 chain. The selected densitized Liouville constraint has a positive KL/RAQ fiber, but its physical measure is not the prior dp static-fiber measure. Locally, direct Berezin integration and algebraic zero-ghost elimination with its induced determinant agree; only unweighted deletion is KILL. Stop before raw-constraint rescaling equivalence, the p=0 completion, lapse modulus/contour, an absolute BFV measure, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1144,7 +1148,13 @@
       "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
       "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
       "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
       "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
       "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
       ]
@@ -11138,7 +11148,7 @@
       "id": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
       "type": "evidence",
       "title": "Gate-1 V0 minimal m2 spectral BFV trajectory evidence",
-      "summary": "The corrected final VALID_RUN records sixteen exact PASS checks and five reviewed analytic guards. Direct mixed-boundary substitution retains int(e0*e_s)=2*sqrt(2)/pi, verifies the projected action and BRST maps, and matches the nonzero bosonic determinant magnitude with the ghost Pfaffian only relatively. The first common-orthonormal-basis KILL is preserved in history; two inequivalent zero-mode ledgers leave the trajectory completion underdetermined.",
+      "summary": "The corrected final VALID_RUN records sixteen exact PASS checks and five reviewed analytic guards. Direct mixed-boundary substitution retains int(e0*e_s)=2*sqrt(2)/pi, verifies the projected action and BRST maps, and matches the nonzero bosonic determinant magnitude with the ghost Pfaffian only relatively. The later local Ward calculation resolves the apparent zero-mode ledger mismatch: direct Berezin treatment and induced-determinant elimination agree, while unweighted deletion is KILL. Lapse modulus, contour and absolute measure remain unselected.",
       "state": "VALID_RUN_M2_RELATIVE_NONZERO_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS",
       "observed_status": "VALID_RUN_16_EXACT_PASS_5_ANALYTIC_GUARDS",
       "check_ids": [
@@ -11204,10 +11214,10 @@
       "id": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
       "type": "claim",
       "title": "The pinned V0 static inputs uniquely select the trajectory zero-mode completion",
-      "summary": "Contradicted for the two explicit admissible ledgers visible in the declared finite-mode inputs. Fourier integration over N0 gives delta(lambda*c0)=delta(c0)/lambda. Retaining the algebraic rho0,bar-rho0 pair supplies lambda and yields unit relative factor; eliminating that pair leaves 1/lambda. The inputs do not choose between them or a lapse-modulus prescription, so no unique full trajectory measure is promoted.",
-      "state": "CONTRADICTED_BY_RETAINED_AND_ELIMINATED_ZERO_MODE_LEDGERS",
+      "summary": "Contradicted as a unique full-completion claim. Direct Berezin treatment and algebraic elimination with its induced oriented lambda determinant agree and yield delta(c0), so the former retained/eliminated mismatch was an unweighted-deletion bookkeeping error. The pinned inputs still do not select a lapse modulus, contour or absolute BFV measure, so no unique full trajectory completion follows.",
+      "state": "CONTRADICTED_BY_UNSELECTED_LAPSE_CONTOUR_MODULUS_AND_ABSOLUTE_MEASURE",
       "claim_id": "G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
-      "statement": "The pinned improved-static source and historical trajectory conventions uniquely determine how the algebraic ghost zero pair and lapse zero mode complete the finite m=2 BFV trajectory measure.",
+      "statement": "The pinned improved-static source and historical trajectory conventions uniquely determine an absolute finite m=2 BFV trajectory completion, including the lapse modulus, contour and measure.",
       "epistemic_state": "CONTRADICTED"
     },
     {
@@ -11268,7 +11278,7 @@
       "id": "artifact:gate1-v0-spectral-to-m2-bfv-chain-report",
       "type": "artifact",
       "title": "Gate-1 V0 spectral-to-m2 BFV chain report",
-      "summary": "Human-readable separation of the declared local self-adjoint multiplication representation, endpoint-completion nonuniqueness, frozen static-spectral test form, mixed-boundary m=2 relative quartet, inequivalent zero-mode ledgers, commands, hashes, repaired nonpass history, sources and strict workbench boundary.",
+      "summary": "Historical report separating the declared local self-adjoint multiplication representation, endpoint-completion nonuniqueness, frozen static-spectral test form and mixed-boundary m=2 relative quartet. It recorded an apparent retained/eliminated zero-mode mismatch that the later Ward report identifies as unweighted deletion without the induced determinant.",
       "state": "TRACKED_VALID_RUN_REPORT",
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN.md",
@@ -11279,9 +11289,9 @@
       "id": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
       "type": "open_problem",
       "title": "Exact V0 endpoint transform and trajectory zero-mode completion",
-      "summary": "The local multiplication domain and frozen pairing survive, but the declared principal endpoint data leave a kappa-family of lower-symbol completions and the m=2 finite trajectory exposes inequivalent retained/eliminated zero-mode ledgers. The missing discriminator must add exact full-symbol/intertwining/edge data and a justified lapse, ghost-zero-mode, contour and orientation prescription without importing a physical conclusion.",
+      "summary": "The local multiplication domain and frozen pairing survive, but principal endpoint data still leave a kappa-family of lower-symbol completions. Direct Berezin retention and induced-determinant ghost elimination now agree, so the earlier mismatch is narrowed to invalid unweighted deletion; lapse contour/modulus and absolute measure remain unselected. Separately, one positively densitized, order-fixed Liouville/KL RAQ model gives a weighted p-positive fiber that is not the prior dp fiber, while raw-C rescaling/domain equivalence remains open. The missing discriminator must add exact full-symbol/intertwining/edge data and independently justified rescaling, lapse, contour and orientation prescriptions without importing a physical conclusion.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Which additional exact intertwining, full-symbol, endpoint-domain and branch data construct a normalized endpoint transform, and which independently justified lapse/ghost-zero-mode and contour prescription extends it to a unique finite BFV trajectory measure?"
+      "question": "Which additional exact intertwining, full-symbol, endpoint-domain and branch data construct a normalized endpoint transform, and which independently justified constraint-rescaling, lapse-modulus, contour and absolute-measure prescription extends it to a finite BFV trajectory measure?"
     },
     {
       "id": "phase:p11",
@@ -11928,6 +11938,249 @@
       "path": "cpt_temporal_folded_susy/PHASE15R_SOURCE_CONVENTION_PACKET.json",
       "sha256": "29b43a2bc926192b860da3b3f70fde9a29eaf75f4a5b963de51498152412f3bd",
       "introduced_in_commit": "72819da9d9c078b1f7c0d4942d8f069e9c75d656"
+    },
+    {
+      "id": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "type": "concept",
+      "title": "Gate-1 V0 selected densitized Liouville/KL RAQ control",
+      "summary": "One explicitly positive-rescaled, flat-Schrödinger ordered V0 model on p>0 only; it is a workbench quantum-cosmology realization, not a raw-constraint or quantum-gravity promotion.",
+      "state": "COMPLETED_LOCAL_SELECTED_MODEL_ONLY"
+    },
+    {
+      "id": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "type": "concept",
+      "title": "Gate-1 V0 BFV zero-mode elimination Ward control",
+      "summary": "Local finite zero-mode comparison of direct Berezin retention, induced-determinant elimination and invalid unweighted deletion; lapse contour, modulus and absolute measure remain open.",
+      "state": "COMPLETED_LOCAL_ZERO_MODE_LEDGER_CONTROL_ONLY"
+    },
+    {
+      "id": "scope:gate1-v0-selected-densitized-liouville-kl-raq",
+      "type": "scope",
+      "title": "Selected V0 densitized Liouville/KL RAQ scope",
+      "summary": "H=12 pi^2 exp(3Q/2) C with one flat ordering, p>0, KL spectral variables and distributional RAQ only; rescaling equivalence, p=0 completion, raw C, physical gravity and TOE are excluded.",
+      "state": "LOCAL_DECLARED_SCOPE",
+      "includes": [
+        "the explicitly selected positive densitization H=12*pi^2*exp(3Q/2)*C",
+        "the flat Schrodinger ordering on L2(dQ dphi)",
+        "the Fourier--Kontorovich--Lebedev realization on kappa>0 and p>0",
+        "the selected distributional group average and its coarea measure",
+        "two witness comparisons with the prior declared dp static fiber"
+      ],
+      "excludes": [
+        "an ordering or self-adjoint domain for undensitized raw C",
+        "quantum equivalence under the field-dependent constraint rescaling",
+        "the singular p=0 edge and the p<0 branch",
+        "an exact endpoint transform or identity with the declared M_c model",
+        "a full BFV trajectory, quantum-gravity, physics or TOE conclusion"
+      ]
+    },
+    {
+      "id": "scope:gate1-v0-local-zero-mode-elimination-ward",
+      "type": "scope",
+      "title": "Local V0 BFV zero-mode elimination Ward scope",
+      "summary": "One algebraic lambda>0 zero-mode ledger with pinned BRST action and orientation; no lapse contour/modulus selection, absolute BFV measure, nonzero trajectory modes or physics conclusion.",
+      "state": "LOCAL_DECLARED_SCOPE",
+      "includes": [
+        "the pinned algebraic zero block S0=lambda*(N0*c0-rho0*bar_rho0) with lambda>0",
+        "the inherited right-acting BRST and oriented Berezin conventions",
+        "direct ghost integration and determinant-weighted algebraic elimination",
+        "the full-real N0 Fourier scaling as a local relative-distribution control",
+        "unweighted deletion as a negative control for the lambda Ward identity"
+      ],
+      "excludes": [
+        "selection of a gravitational lapse modulus or contour",
+        "an absolute finite or functional BFV measure and Pfaffian line",
+        "the nonzero-mode continuum or a full trajectory kernel",
+        "BRST cohomology or a physical inner product for raw C",
+        "a quantum-gravity, physics or TOE conclusion"
+      ]
+    },
+    {
+      "id": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "type": "claim",
+      "title": "The selected densitized Liouville constraint has a KL/RAQ positive physical fiber",
+      "summary": "Supported only for H=12 pi^2 exp(3Q/2)C with the declared flat ordering and p>0 branch. KL spectral analysis gives the selected positive simple root and RAQ measure dp/(2 sqrt(6) hbar p); p=0 and constraint-rescaling equivalence remain open.",
+      "state": "SUPPORTED_FOR_ONE_SELECTED_DENSITIZED_ORDER_FIXED_MODEL_ONLY",
+      "claim_id": "G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "statement": "The selected densitized, order-fixed V0 Liouville constraint admits a KL spectral realization whose p-positive RAQ zero fiber has a positive distributional measure.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "type": "claim",
+      "title": "The selected densitized RAQ measure equals the prior dp static fiber measure",
+      "summary": "Contradicted by two witness ratios: the selected measure is dp/(2 sqrt(6) hbar p), not dp times one state-independent constant. An abstract reweighting is an isometry only and does not prove raw-C or endpoint-transform equivalence.",
+      "state": "CONTRADICTED_BY_SELECTED_WEIGHTED_VERSUS_PRIOR_DP_WITNESSES",
+      "claim_id": "G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "statement": "The selected densitized RAQ physical measure equals the prior dp static-fiber measure up to one state-independent normalization.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "type": "claim",
+      "title": "Direct Berezin retention and weighted zero-ghost elimination agree",
+      "summary": "Supported for the pinned local lambda>0 algebraic zero pair: direct retention and elimination including its induced oriented determinant both yield relative delta(c0), and satisfy the local scaling Ward identity.",
+      "state": "SUPPORTED_FOR_PINNED_LOCAL_ZERO_MODE_LEDGER_ONLY",
+      "claim_id": "G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "statement": "For the declared local BFV zero mode, direct Berezin integration agrees with elimination that retains the induced oriented ghost factor.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "type": "claim",
+      "title": "Unweighted zero-ghost deletion is a valid trajectory ledger",
+      "summary": "Contradicted: deleting the nondegenerate algebraic ghost pair without its induced lambda factor leaves the spurious 1/lambda coefficient and violates the local scaling Ward identity. This KILL does not choose lapse contour, modulus or absolute measure.",
+      "state": "CONTRADICTED_AS_UNWEIGHTED_GHOST_GAUSSIAN_DELETION",
+      "claim_id": "G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "statement": "Deleting the local BFV algebraic zero-ghost pair without its induced determinant factor gives a valid finite trajectory ledger.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "type": "open_problem",
+      "title": "Raw V0 constraint rescaling and p-zero completion",
+      "summary": "The selected densitized model is internally controlled, but quantum equivalence to raw C, ordering/domain transport and the singular p=0 edge are not supplied.",
+      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Which ordering, domain and explicit map establish or refute raw-C versus selected-densitized constraint equivalence, and how is the p=0 edge completed?"
+    },
+    {
+      "id": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "type": "open_problem",
+      "title": "V0 lapse modulus, contour and absolute BFV measure",
+      "summary": "The zero-ghost mismatch is repaired only by retaining the induced determinant; no calculation selects the lapse modulus, contour, absolute orientation or full trajectory measure.",
+      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "What independently derived lapse-modulus, contour and absolute-measure prescription completes the finite BFV trajectory beyond the local zero-mode Ward control?"
+    },
+    {
+      "id": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "type": "evidence",
+      "title": "Gate-1 V0 densitized Liouville/KL RAQ evidence",
+      "summary": "VALID_RUN with fourteen exact passes: selected positive densitization, KL spectral realization, positive p>0 RAQ measure, dp comparison contradiction and p=0 singular boundary.",
+      "state": "VALID_RUN_SELECTED_DENSITIZED_KL_RAQ_KEEP",
+      "observed_status": "VALID_RUN_14_EXACT_PASS_5_ANALYTIC_GUARDS",
+      "check_ids": [
+        "P39.G1.densitized.classical.identity",
+        "P39.G1.densitized.classical.positive_multiplier",
+        "P39.G1.densitized.operator.liouville_scale",
+        "P39.G1.densitized.spectral.bessel_eigenvalue",
+        "P39.G1.densitized.spectral.kl_normalization",
+        "P39.G1.densitized.spectral.kl_inverse_cancellation",
+        "P39.G1.densitized.raq.simple_positive_zero",
+        "P39.G1.densitized.raq.coarea_factor",
+        "P39.G1.densitized.raq.positive_weight",
+        "P39.G1.densitized.raq.two_positive_witness_norms",
+        "P39.G1.densitized.comparison.dp_not_identity_measure",
+        "P39.G1.densitized.comparison.explicit_unitary_reweight",
+        "P39.G1.densitized.boundary.p_zero_singular",
+        "P39.G1.densitized.operator.real_multiplier_resolvent"
+      ]
+    },
+    {
+      "id": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "type": "evidence",
+      "title": "Gate-1 V0 BFV zero-mode elimination Ward evidence",
+      "summary": "VALID_RUN with fourteen exact passes: direct and induced-determinant elimination agree, unweighted deletion is KILL, and lapse completion remains null.",
+      "state": "VALID_RUN_ZERO_GHOST_WEIGHTED_ELIMINATION_KEEP_UNWEIGHTED_DELETION_KILL",
+      "observed_status": "VALID_RUN_14_EXACT_PASS_6_ANALYTIC_GUARDS",
+      "check_ids": [
+        "P39.G1.zero_ward.upstream.static_brst_contract",
+        "P39.G1.zero_ward.upstream.prior_ledger_mismatch",
+        "P39.G1.zero_ward.brst.generator_nilpotence",
+        "P39.G1.zero_ward.brst.action_closure",
+        "P39.G1.zero_ward.direct.berezin_factor",
+        "P39.G1.zero_ward.elimination.odd_hessian",
+        "P39.G1.zero_ward.elimination.stationary_ghost_solution",
+        "P39.G1.zero_ward.elimination.induced_oriented_factor",
+        "P39.G1.zero_ward.bosonic.positive_lambda_delta_scaling",
+        "P39.G1.zero_ward.combined.direct_equals_weighted_elimination",
+        "P39.G1.zero_ward.combined.unweighted_deletion_negative_control",
+        "P39.G1.zero_ward.scaling.relative_ward_identity",
+        "P39.G1.zero_ward.scaling.sampled_discrimination",
+        "P39.G1.zero_ward.scope.prior_mismatch_is_unweighted_deletion"
+      ]
+    },
+    {
+      "id": "source:nist-dlmf-bessel-kl",
+      "type": "source",
+      "title": "NIST Digital Library of Mathematical Functions, modified Bessel and Kontorovich--Lebedev transform",
+      "summary": "CITES-only normalization and inversion reference for the selected KL transform; it does not choose a quantum constraint rescaling or physical measure.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "NIST Digital Library of Mathematical Functions, Equation 10.25.1 and Equations 10.43.30--10.43.31, modified Bessel equation and Kontorovich--Lebedev transform pair.",
+      "uri": "https://dlmf.nist.gov/10.43",
+      "version": "DLMF 1.2.7, 2026-06-15"
+    },
+    {
+      "id": "source:giulini-2000-group-averaging-raq",
+      "type": "source",
+      "title": "Group Averaging and Refined Algebraic Quantization",
+      "summary": "CITES-only distributional group-averaging framework; it does not select this densitization, ordering, contour or physical gravity interpretation.",
+      "state": "PRIMARY",
+      "citation": "D. Giulini, Group Averaging and Refined Algebraic Quantization, arXiv:gr-qc/0003040 (2000).",
+      "uri": "https://arxiv.org/abs/gr-qc/0003040",
+      "version": "arXiv:gr-qc/0003040v1"
+    },
+    {
+      "id": "source:louko-martinez-pascual-2011",
+      "type": "source",
+      "title": "Constraint rescaling and refined algebraic quantisation",
+      "summary": "CITES-only warning that classically equivalent constraint rescalings need not yield equivalent quantum theories; it does not settle this repository model's rescaling/domain map.",
+      "state": "PRIMARY",
+      "citation": "J. Louko and E. Martínez-Pascual, Constraint rescaling in refined algebraic quantisation: momentum constraint, arXiv:1107.1092 (2011).",
+      "uri": "https://arxiv.org/abs/1107.1092",
+      "version": "arXiv:1107.1092v2"
+    },
+    {
+      "id": "artifact:gate1-v0-densitized-liouville-raq-raw-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 densitized Liouville/KL RAQ raw result",
+      "summary": "17,117-byte VALID_RUN raw result; payload digest 32c4cf7ae925d3fbbbba21d5e0e4466abdd80043e39db8312941c9548b346869.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json",
+      "sha256": "2f54a47f775002d1a9c24749c729bc02ebf86dc5fa959b93e2518d925b9db806",
+      "introduced_in_commit": "9b9ce7d641fc81a0470c630643b928d81c363c77"
+    },
+    {
+      "id": "artifact:gate1-v0-densitized-liouville-raq-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 densitized Liouville/KL RAQ evidence snapshot",
+      "summary": "Typed snapshot with command, fourteen exact checks, definition/raw/report commits and pinned hashes.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-densitized-liouville-raq-result.json",
+      "sha256": "ee9df7b1e15738b7c2882403e572f9e2c40a291ac4cdf4794ef5ec2a22e0273c"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-zero-mode-elimination-ward-raw-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 BFV zero-mode elimination Ward raw result",
+      "summary": "17,908-byte VALID_RUN raw result; payload digest 22c8423c347084eb07e8167bb38101ab50a74cc3335b5d3f471099a1f54f0a6b.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json",
+      "sha256": "ac50dfa4564bc5728951a4dd4df4f032315c64e926c098714f6c690f37afc206",
+      "introduced_in_commit": "0e24f46b17659bee2bc81fa294c468121af833fd"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-zero-mode-elimination-ward-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 BFV zero-mode elimination Ward evidence snapshot",
+      "summary": "Typed snapshot with command, fourteen exact checks, definition/raw/report commits and pinned hashes.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-bfv-zero-mode-elimination-ward-result.json",
+      "sha256": "7d2a6c4852adf7188a7532c2b7b0df6e963aa0d42484b47c585cfb13274be9b1"
+    },
+    {
+      "id": "artifact:gate1-v0-densitized-quantum-cosmology-derivation-report",
+      "type": "artifact",
+      "title": "Gate-1 V0 densitized quantum cosmology derivation report",
+      "summary": "Shared human-readable report for the selected densitized KL/RAQ calculation and the local zero-mode Ward repair, with strict workbench nulls.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_QUANTUM_COSMOLOGY_DERIVATION.md",
+      "sha256": "e61be89282b70afd617d66b901fb15082cc830f19e087397cc2cad022c5961f6",
+      "introduced_in_commit": "ce2c8a828dfdc6db4655c1c183ada7b4181db3b4"
     }
   ],
   "edges": [
@@ -29018,6 +29271,358 @@
       "relation": "FOLLOW_UP_TO",
       "to": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
       "note": "The relative nonzero-mode match survives, but it does not decide the separately contradicted zero-mode uniqueness claim."
+    },
+    {
+      "id": "edge:2752",
+      "from": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control"
+    },
+    {
+      "id": "edge:2753",
+      "from": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-densitized-liouville-raq-raw-result"
+    },
+    {
+      "id": "edge:2754",
+      "from": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-densitized-liouville-raq-evidence-snapshot"
+    },
+    {
+      "id": "edge:2755",
+      "from": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:2756",
+      "from": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-bfv-zero-mode-elimination-ward-raw-result"
+    },
+    {
+      "id": "edge:2757",
+      "from": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-bfv-zero-mode-elimination-ward-evidence-snapshot"
+    },
+    {
+      "id": "edge:2758",
+      "from": "artifact:gate1-v0-densitized-quantum-cosmology-derivation-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control"
+    },
+    {
+      "id": "edge:2759",
+      "from": "artifact:gate1-v0-densitized-quantum-cosmology-derivation-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:2760",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control"
+    },
+    {
+      "id": "edge:2761",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-densitized-liouville-kl-raq"
+    },
+    {
+      "id": "edge:2762",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2763",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-densitized-quantum-cosmology-derivation-report"
+    },
+    {
+      "id": "edge:2764",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control"
+    },
+    {
+      "id": "edge:2765",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-densitized-liouville-kl-raq"
+    },
+    {
+      "id": "edge:2766",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2767",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-densitized-quantum-cosmology-derivation-report"
+    },
+    {
+      "id": "edge:2768",
+      "from": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:2769",
+      "from": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-zero-mode-elimination-ward"
+    },
+    {
+      "id": "edge:2770",
+      "from": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2771",
+      "from": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-densitized-quantum-cosmology-derivation-report"
+    },
+    {
+      "id": "edge:2772",
+      "from": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:2773",
+      "from": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-zero-mode-elimination-ward"
+    },
+    {
+      "id": "edge:2774",
+      "from": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2775",
+      "from": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-densitized-quantum-cosmology-derivation-report"
+    },
+    {
+      "id": "edge:2776",
+      "from": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "polarity": "CONTRADICTS",
+      "note": "The Ward control removes the spurious unweighted ledger but leaves lapse-modulus, contour and absolute-measure uniqueness unresolved."
+    },
+    {
+      "id": "edge:2777",
+      "from": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH"
+    },
+    {
+      "id": "edge:2778",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+    },
+    {
+      "id": "edge:2779",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+    },
+    {
+      "id": "edge:2780",
+      "from": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+    },
+    {
+      "id": "edge:2781",
+      "from": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+    },
+    {
+      "id": "edge:2782",
+      "from": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+    },
+    {
+      "id": "edge:2783",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "CITES",
+      "to": "source:nist-dlmf-bessel-kl",
+      "note": "Cites the modified-Bessel equation and KL transform pair only; the repository selects the constraint, ordering, branch and RAQ interpretation."
+    },
+    {
+      "id": "edge:2784",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "CITES",
+      "to": "source:giulini-2000-group-averaging-raq",
+      "note": "Cites the distributional group-averaging and RAQ framework; it does not derive this spectral multiplier or physical measure."
+    },
+    {
+      "id": "edge:2785",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "CITES",
+      "to": "source:louko-martinez-pascual-2011",
+      "note": "Cites the quantum constraint-rescaling warning; it is a boundary against claiming raw-C equivalence, not evidence that this pair is inequivalent."
+    },
+    {
+      "id": "edge:2786",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2787",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "note": "Replaces no prior result; it adds one selected original-coordinate densitized model and compares its derived measure with the declared M_c fiber."
+    },
+    {
+      "id": "edge:2788",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-densitized-liouville-kl-raq"
+    },
+    {
+      "id": "edge:2789",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Cites single-constraint refined algebraic quantization only; the local transform, test space, root and normalization remain repository choices."
+    },
+    {
+      "id": "edge:2790",
+      "from": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "One clean committed unnumbered runner used the generic bounded runtime, wrote one adjacent result and created no automatic descendant."
+    },
+    {
+      "id": "edge:2791",
+      "from": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-offshell-darboux-chart",
+      "note": "The upstream result pins Q=2 log(a), the exact classical V0 constraint and the p-positive component without supplying the new ordering."
+    },
+    {
+      "id": "edge:2792",
+      "from": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-constraint-spectral-domain",
+      "note": "The upstream declared M_c domain supplies only the comparison dp fiber, not an equivalence theorem."
+    },
+    {
+      "id": "edge:2793",
+      "from": "artifact:gate1-v0-densitized-liouville-raq-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control"
+    },
+    {
+      "id": "edge:2794",
+      "from": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2795",
+      "from": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-spectral-to-m2-bfv-chain-control",
+      "note": "Rechecks the historical zero-mode ledger mismatch while preserving the relative nonzero-mode quartet and all full-measure nulls."
+    },
+    {
+      "id": "edge:2796",
+      "from": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-zero-mode-elimination-ward"
+    },
+    {
+      "id": "edge:2797",
+      "from": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992",
+      "note": "Cites improved BRST-BFV action and endpoint-gauge framing, not the pinned finite orientation or lapse contour."
+    },
+    {
+      "id": "edge:2798",
+      "from": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Cites the extended multiplier and ghost framework; the zero-block action and Berezin extraction remain repository conventions."
+    },
+    {
+      "id": "edge:2799",
+      "from": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Cites the full-real single-constraint distributional average only as a local relative control; no gravitational lapse contour is selected."
+    },
+    {
+      "id": "edge:2800",
+      "from": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "One clean committed unnumbered runner used the generic bounded runtime, wrote one adjacent result and created no automatic descendant."
+    },
+    {
+      "id": "edge:2801",
+      "from": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-improved-static-bfv-source",
+      "note": "The upstream result pins the BRST generator, right-acting bracket, zero-block source and finite odd orientation."
+    },
+    {
+      "id": "edge:2802",
+      "from": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "note": "The upstream result preserves the relative nonzero quartet and exposes the historical unweighted zero-ghost ledger tested here."
+    },
+    {
+      "id": "edge:2803",
+      "from": "artifact:gate1-v0-bfv-zero-mode-elimination-ward-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:2804",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control"
+    },
+    {
+      "id": "edge:2805",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:2806",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "note": "Narrows the trajectory boundary after the ghost ledger repair; it does not authorize an automatic successor calculation."
     }
   ],
   "kg_bridges": [
@@ -29536,7 +30141,47 @@
       "status": "UNRESOLVED",
       "checked_at_utc": "2026-08-27T09:58:21Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 pinned static inputs unique BFV trajectory ghost lapse zero mode completion",
-      "note": "No authorized exact external correspondence or writer is available. The retained and eliminated zero-mode ledgers contradict uniqueness only for the pinned inputs and leave a justified lapse, ghost, contour, absolute measure, physics and TOE completion open; no external UID was invented."
+      "note": "No authorized exact external correspondence or writer is available. Direct Berezin and induced-determinant elimination agree; only unweighted deletion is killed. Lapse modulus, contour and absolute measure remain unselected, with physics and TOE completion open; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T12:07:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 selected densitized Liouville constraint Kontorovich Lebedev RAQ positive physical fiber",
+      "note": "No authorized exact external correspondence or writer is available. This is a selected local densitized-constraint realization, not a raw-constraint rescaling theorem, p=0 completion, full BFV measure, physics or TOE result; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T12:07:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 densitized RAQ physical measure prior dp static fiber measure",
+      "note": "No authorized exact external correspondence or writer is available. The local calculation distinguishes the selected RAQ measure from the earlier dp static-fiber measure and does not establish raw-constraint equivalence or a physical inner product; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T12:07:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 direct Berezin weighted zero ghost elimination induced determinant Ward",
+      "note": "No authorized exact external correspondence or writer is available. This local oriented zero-mode identity selects neither a lapse modulus, contour, absolute measure, continuum theorem, physics nor TOE conclusion; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-27T12:07:44Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 unweighted zero ghost deletion trajectory ledger Ward",
+      "note": "No authorized exact external correspondence or writer is available. The local Ward check kills unweighted deletion but does not supply a global BFV measure or physical/TOE interpretation; no external UID was invented."
     },
     {
       "local_node_id": "phase:p14a",

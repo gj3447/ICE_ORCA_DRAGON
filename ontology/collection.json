@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-27T10:04:41Z",
+  "updated_at_utc": "2026-08-27T12:31:05Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -71,7 +71,7 @@
         "Phase 11-56 claims, evidence snapshots or historical provenance pointers, scopes, policies, and open gates",
         "the Phase 11-15R collar-to-interface-to-charge-to-parent lineage, including the Phase 15A invalid-sequence break",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the user-directed V0 chain through a declared self-adjoint M_c domain, endpoint-completion uniqueness KILL, frozen static/order-zero spectral-form KEEP, relative m=2 nonzero-quartet KEEP and trajectory zero-mode uniqueness KILL, with exact endpoint existence, full trajectory, other-component/global-atlas/zero-lapse/full-joint boundary still open",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the user-directed V0 chain through a selected densitized Liouville Fourier--KL RAQ p>0 model with physical measure dp/(2sqrt(6) hbar p), distinct from the static dp fiber measure, plus a local zero-mode Ward equality of direct Berezin and induced-determinant elimination with unweighted deletion KILL; raw C/rescaling/p=0 and lapse-modulus/contour/absolute-measure/full-trajectory completion remain open",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -189,7 +189,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime. The trace-gauge branch reaches a classical U_plus Darboux chart, a compact-interior principal endpoint FIO, and one improved-static BFV zero-mode source. The latest user-directed chain declares H_D=L2(dc dp) and keeps C-hat=M_c on its maximal self-adjoint multiplication domain, but this is not an original-variable ordering or physical measure. B, a0, H_D and M_c do not uniquely select an exact endpoint completion, while existence remains open. The frozen static form matches the order-zero distributional c=0 fiber on three test states. One m=2 nonzero quartet has a relative determinant/Pfaffian match, but inequivalent zero-mode ledgers contradict a unique trajectory completion. Exact endpoint construction, edge data, arbitrary-state/full-real-lapse rigging map, absolute BFV measure, global cycle, physics and TOE outputs remain open or null. Gate 1 stays open and automatic_next is null.",
+      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime. The trace-gauge branch reaches a classical U_plus Darboux chart, a compact-interior principal endpoint FIO, and one improved-static BFV zero-mode source. A selected densitization H=12pi^2 exp(3Q/2) C with flat ordering has a Fourier--Kontorovich--Lebedev RAQ p>0 model: kappa0=sqrt(3/2)p/hbar and physical measure dp/(2sqrt(6) hbar p), which is not the static dp fiber measure. Raw C, rescaling equivalence and p=0 remain open. The local BFV Ward control makes direct Berezin and induced-determinant elimination agree; unweighted deletion is KILL. Lapse modulus, contour and absolute BFV measure remain unselected, so unique full trajectory completion is still contradicted. Exact endpoint construction, edge data, arbitrary-state/full-real-lapse rigging map, global cycle, physics and TOE outputs remain open or null. Gate 1 stays open and automatic_next is null.",
       "refs": [
         {
           "graph": "cpt",
@@ -209,35 +209,35 @@
         },
         {
           "graph": "cpt",
-          "node": "claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH"
-        },
-        {
-          "graph": "cpt",
           "node": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION"
         },
         {
           "graph": "cpt",
+          "node": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+        },
+        {
+          "graph": "cpt",
           "node": "open:gate1-v0-exact-endpoint-and-trajectory-completion"
-        },
-        {
-          "graph": "cpt",
-          "node": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle"
-        },
-        {
-          "graph": "cpt",
-          "node": "open:gate1-original-cycle-signed-global-intersections"
         }
       ]
     },
@@ -261,7 +261,7 @@
     },
     {
       "question": "Has any of this been promoted into an external KG or a physics verdict?",
-      "answer": "No automatic promotion is claimed. Twelve exact or related legacy UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; 50 bridges remain unresolved across the collection. The repository ontology is only a memory and index layer.",
+      "answer": "No automatic promotion is claimed. Some exact or related legacy UID lookups resolve, but lookup resolution is neither external acceptance nor physics ratification; unresolved bridges remain repository-local across the collection. The repository ontology is only a memory and index layer.",
       "refs": [
         {
           "graph": "hypercomplex",

@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-27T09:58:21Z`; 927 nodes, 2751 edges). Run and analytic-evidence details live in the
+`2026-08-27T12:31:05Z`; 947 nodes, 2806 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 224/224 stored hashes (216 artifacts and 8 policies).
+verifies 229/229 stored hashes (221 artifacts and 8 policies).
 
 ## Quick answers
 
@@ -73,7 +73,7 @@ verifies 224/224 stored hashes (216 artifacts and 8 policies).
 | Did the first closed-FRW \(V=0\) follow-up construct that replacement endpoint problem? | It constructs one narrower piece: on the frozen \(p_\phi=+1\), \(0\le P\le1/2\), \(R>0\), \(D>0\) component, the weak relational coordinate \(\Phi_*\), on-shell potential \(B=P\), finite local static hit, local FP measure and time-dependent same-orbit control are mutually consistent. The KEEP is only the classical local fixed-\(\Phi_*\) action \(S_0-[P]\). The raw static action after endpoint flow, HTV improved-static action, and auxiliary fixed-\((P,\phi)\) action are separate ledgers. That result alone supplied no off-shell chart, quantum endpoint states, ghost/BFV replacement source, old fixed-\(a\) equality, full-real-lapse \(\delta(C)\) kernel, global cycle, physics or TOE. | `claim:G1_CLOSED_FRW_V0_TRACE_GAUGE_HAS_LOCAL_ON_SHELL_RELATIONAL_ENDPOINT_ACTION`; `scope:gate1-closed-frw-v0-local-on-shell-trace-endpoint-action`; `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle` |
 | Is that on-shell \(\Phi_*\) result now connected to an off-shell chart? | Yes, but only classically and componentwise. On \(\mathcal U_+=\{p>0,\,3p^2-2P^2>0\}\) and every real \(c=C\), the unique positive constraint root and \(W=-\int_0^P Q(c,u,p)du\) define the exact Darboux chart \((T,c,\Phi,p)=(W_c,C,\phi+W_p,p)\) onto its open image. Its boundary potential gives \(S_0-[B]\), and \(c=0\) recovers \(\Phi_*\) and \(B=P\). Other components, a global atlas, normalized quantum endpoints, ghost/BFV source, the Marolf \(\delta(C)\) kernel, old fixed-\(a\) equality, physical cycle, physics and TOE remain open or null. | `claim:G1_CLOSED_FRW_V0_P_POSITIVE_R_POSITIVE_COMPONENT_HAS_CLASSICAL_OFFSHELL_DARBOUX_CHART`; `scope:gate1-closed-frw-v0-p-positive-r-positive-componentwise-offshell-darboux-chart`; `evidence:gate1-v0-offshell-darboux-chart`; `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle` |
 | Does that Darboux chart now have a quantum endpoint transform? | It has one sharply limited quantum layer. On compact interiors of \(\mathcal U_+\), \(S=-W\) and \(D^{-1/2}\) define the old-\((P,p)\) to new-\((c,p)\) principal momentum-polarization FIO with a fixed local Maslov branch and exact \(c=0\) lineage. The uncorrected one-term kernel is not exactly unitary: in \(U_\hbar^*U_\hbar\), its endpoint geometric-mean density differs from the required secant/coarea density; on symmetric \(c=0\) pairs the ratio is strictly above one and starts as \(1+\delta P^2/(36p^2)\). This KILL is only for that one-term amplitude. A corrected full symbol or spectral transform is not excluded, while ordering, domains, global normalization, coordinate polarization, BFV, \(\delta(C)\), the physical cycle, physics and TOE remain open or null. | `claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO`; `claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY`; `scope:gate1-v0-compact-interior-principal-momentum-endpoint-fio`; `evidence:gate1-v0-principal-endpoint-fio`; `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle` |
-| How far does the \(\mathcal U_+\) spectral-to-\(m=2\) BFV chain go? | The improved-static source remains one local algebraic convention. The follow-up declares \(H_D=L^2(dc\,dp)\) and keeps \(\widehat C_D=M_c\) on its maximal self-adjoint multiplication domain, but this is not an original-variable ordering or physical measure. The declared \(B,a_0,H_D,M_c\) data do not uniquely select an exact endpoint completion; existence remains open. The static form equals the order-zero distributional \(c=0\) fiber on three frozen test states. One nonzero \(m=2\) quartet has a same-regulator relative determinant/Pfaffian match, while retained and eliminated zero-mode ledgers contradict a unique trajectory completion. No exact endpoint transform, arbitrary-state/full-real-lapse rigging map, absolute BFV measure, global cycle, physics or TOE result follows. | `claim:G1_CLOSED_FRW_V0_UPLUS_HAS_LOCAL_IMPROVED_STATIC_BFV_ZERO_MODE_REPLACEMENT_SOURCE_ALGEBRA`; `claim:G1_V0_DECLARED_UPLUS_CONSTRAINT_IS_SELF_ADJOINT_MAXIMAL_MULTIPLICATION_OPERATOR`; `claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION`; `claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS`; `claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH`; `claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION`; `open:gate1-v0-exact-endpoint-and-trajectory-completion` |
+| How far does the \(\mathcal U_+\) spectral-to-\(m=2\) BFV chain go? | The improved-static source remains one local algebraic convention. A selected densitization \(H=12\pi^2e^{3Q/2}C\), flat ordering, and Fourier--Kontorovich--Lebedev construction give a \(p>0\) RAQ model with \(\kappa_0=\sqrt{3/2}\,p/\hbar\) and physical measure \(dp/(2\sqrt6\hbar p)\); it is not the prior static \(dp\) fiber measure. Raw \(C\), quantum rescaling equivalence, and \(p=0\) remain open. In the local BFV zero block, direct Berezin integration equals elimination only when the induced determinant is retained; unweighted deletion is KILL. The lapse modulus, contour, and absolute measure remain unselected, so this does not complete a unique full trajectory. No exact endpoint transform, arbitrary-state/full-real-lapse rigging map, global cycle, physics or TOE result follows. | `claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER`; `claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE`; `claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE`; `claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER`; `open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion`; `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` |
 | Does any of this show that SUSY does not exist? | No. The graph rules out only the stated truncations and identifications. Phases 16–24 retain their declared bounds; Phases 25–56 advance one homogeneous lapse/thimble/BFV/local-workbench route without deriving a global saddle coefficient, positive state, flux-sector rule, or persistent soft spectrum. | Phase 16–56 scope guards |
 
 ### Gate-1 straight KILL to trace-gauge redirect
@@ -145,11 +145,17 @@ order:
 18. The static source and order-zero \(\delta(M_c)\) fiber agree entrywise on one frozen three-state
    \(p>0\) test family. The exact positive-definite \(3\times3\) matrix and 36 independent
    quadratures pass. This is not an arbitrary-state regulator theorem or physical group average.
-19. One direct mixed-boundary \(m=2\) projection keeps only a relative nonzero-mode control:
-   \(|\det A|=\operatorname{Pf}F=\pi^2+\lambda^2\) under the same regulator. Retaining the algebraic
-   ghost zero pair yields a unit relative factor, while eliminating it leaves \(1/\lambda\); the
-   pinned inputs therefore do not select a unique trajectory zero-mode completion.
-20. Stop at `open:gate1-v0-exact-endpoint-and-trajectory-completion` and
+19. A separate selected densitization \(H=12\pi^2e^{3Q/2}C\), flat \(L^2(dQ\,d\phi)\) ordering and
+   Fourier--Kontorovich--Lebedev transform give one \(p>0\) RAQ model. Its positive shell is
+   \(\kappa_0=\sqrt{3/2}\,p/\hbar\) and its coarea measure is \(dp/(2\sqrt6\hbar p)\), not the
+   earlier static \(dp\) fiber measure. This selects neither raw \(C\), constraint-rescaling
+   equivalence nor the singular \(p=0\) sector.
+20. The local BFV zero-block Ward control resolves the earlier bookkeeping mismatch: direct oriented
+   Berezin integration and ghost-pair elimination agree when the induced odd determinant \(\lambda\)
+   is retained, cancelling the bosonic \(\delta(\lambda c_0)\) Jacobian. Unweighted deletion leaves
+   \(1/\lambda\) and is KILL. This still selects no lapse modulus, contour, absolute measure or unique
+   full trajectory completion. Stop at `open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion`,
+   `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` and
    `open:gate1-phase-locked-fiber-to-source-derived-joint-cycle`: exact endpoint construction,
    selected lower/full symbol, original-variable ordering and edge domains, an arbitrary-state or
    full-real-lapse rigging map, global normalization and Maslov gluing, charts on other components,
@@ -1478,6 +1484,8 @@ Gate 1 remains `OPEN_PARTIAL_PROGRESS`.
 | Gate 1 closed-FRW \(V=0\) endpoint subprincipal nonuniqueness (non-numbered) | [`gate1_v0_endpoint_subprincipal_nonuniqueness.py`](../../cpt_temporal_folded_susy/gate1_v0_endpoint_subprincipal_nonuniqueness.py) | [`GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_INPUTS.json) · [chain report](../../cpt_temporal_folded_susy/GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN.md) | [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUBPRINCIPAL_NONUNIQUENESS_RESULT.json) |
 | Gate 1 closed-FRW \(V=0\) frozen static-spectral pairing (non-numbered) | [`gate1_v0_static_spectral_pairing.py`](../../cpt_temporal_folded_susy/gate1_v0_static_spectral_pairing.py) | [`GATE1_V0_STATIC_SPECTRAL_PAIRING_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_INPUTS.json) · [chain report](../../cpt_temporal_folded_susy/GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN.md) | [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_STATIC_SPECTRAL_PAIRING_RESULT.json) |
 | Gate 1 closed-FRW \(V=0\) minimal \(m=2\) spectral BFV trajectory control (non-numbered) | [`gate1_v0_bfv_m2_spectral_trajectory.py`](../../cpt_temporal_folded_susy/gate1_v0_bfv_m2_spectral_trajectory.py) | [`GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_INPUTS.json) · [chain report](../../cpt_temporal_folded_susy/GATE1_V0_SPECTRAL_TO_M2_BFV_CHAIN.md) | [`gate1-v0-spectral-to-m2-bfv-chain-result.json`](./evidence/gate1-v0-spectral-to-m2-bfv-chain-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json) |
+| Gate 1 closed-FRW \(V=0\) selected densitized Liouville--KL RAQ control (non-numbered) | [`gate1_v0_densitized_liouville_raq.py`](../../cpt_temporal_folded_susy/gate1_v0_densitized_liouville_raq.py) | [`GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_INPUTS.json) · [derivation report](../../cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_QUANTUM_COSMOLOGY_DERIVATION.md) | [`gate1-v0-densitized-liouville-raq-result.json`](./evidence/gate1-v0-densitized-liouville-raq-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json) |
+| Gate 1 closed-FRW \(V=0\) BFV zero-mode elimination Ward control (non-numbered) | [`gate1_v0_bfv_zero_mode_elimination_ward.py`](../../cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py) | [`GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_INPUTS.json`](../../cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_INPUTS.json) · [derivation report](../../cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_QUANTUM_COSMOLOGY_DERIVATION.md) | [`gate1-v0-bfv-zero-mode-elimination-ward-result.json`](./evidence/gate1-v0-bfv-zero-mode-elimination-ward-result.json) · [full raw result](../../cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json) |
 
 The graph also indexes [`docs/SCIENTIFIC_CLI_MANUAL.md`](../../docs/SCIENTIFIC_CLI_MANUAL.md) as tooling. Policy nodes and `GOVERNED_BY` edges describe workflow only; they cannot support or contradict a physics claim.
 
@@ -1487,7 +1495,7 @@ The programme has one `EXACT`, `RESOLVED` SYMPOSIUM bridge:
 
 - `programme:cpt-temporal-folded-susy` → `sym:LakatosTree:lakatostree_cpttemporalfoldedsusy_20260809`
 
-Six claim bridges and one concept bridge are `RELATED`, `RESOLVED` pointers to older nodes. In the table, each suffix expands to `sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/<suffix>`.
+Several claim and concept bridges are `RELATED`, `RESOLVED` pointers to older nodes. In the table, each suffix expands to `sym:LakatosNode:lakatostree_cpttemporalfoldedsusy_20260809/<suffix>`.
 
 | Local node | External UID suffix |
 | --- | --- |
@@ -1506,7 +1514,7 @@ The two Phase 15R claim lookups and the Phase 17 SK claim lookup remain `UNRESOL
 - `claim:P18_FREE_SEAM_CAN_PREPARE_NONSUSY_STATE`
 - `claim:P18_SHARP_SEAM_IS_UV_ADMISSIBLE`
 
-Phase 24 adds one more unresolved bridge at `phase:p24`. The older
+Phase 24 adds a further unresolved bridge at `phase:p24`. The older
 `sym:LakatosElement:lakatostree_cpttemporalfoldedsusy_20260809::p24` is a distinct 2026-08-09
 planning node and was deliberately not reused. Phases 25–40 add sixteen fresh unresolved phase lookups;
 similarly numbered historical planning nodes were not reused. The recursive-audit policy and the ordered
@@ -1517,8 +1525,8 @@ relational endpoint-action claim add four more local lookups. The later V0 Darbo
 one-term exact-unitarity and improved-static BFV zero-mode nodes add four; the Phase 14A historical
 calculation and Phase 15A sequence-breach evidence add two. The V0 spectral-to-\(m=2\) chain adds five
 claim lookups for the declared multiplication domain, endpoint-completion uniqueness, frozen spectral
-form, relative nonzero quartet and trajectory zero-mode uniqueness. There are therefore 47 expected unresolved bridges in the current
-graph. They remain local because no authorized external UID or
+form, relative nonzero quartet and trajectory zero-mode uniqueness. The subsequent selected densitized
+RAQ and local zero-mode Ward controls add repository-local lookups. These bridges remain local because no authorized external UID or
 writer exists; no identity was invented for the roadmap.
 A resolved UID proves only that the target exists; it is not an evidence receipt, equivalence assertion,
 review outcome, or KG ratification.
