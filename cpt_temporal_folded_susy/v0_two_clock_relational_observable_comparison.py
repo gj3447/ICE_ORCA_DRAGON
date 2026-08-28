@@ -310,7 +310,7 @@ def run(payload: dict[str, Any], input_sha: str, upstream: list[dict[str, str]])
     )
     audit.check(
         "V0.clock.overlap.scalar_map_monotone",
-        sp.simplify(
+        sp.trigsimp(
             sp.diff(P_at_phi, tau)
             - p * sp.sech(root_23 * (tau - Phi)) ** 2
         )
