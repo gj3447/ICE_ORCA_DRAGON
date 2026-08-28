@@ -400,8 +400,8 @@ DRAGON의 힘으로 GREAT WALL을 한 번에 열 수 있는 순간이 온다. �
 | `MIND/metahumotonic/재귀_아티스트_back2the.md` | HOH, GREAT WALL, NETWORK, SEXVOID, SPACE GIRL의 직접 정의와 방향성 |
 | `MIND/metahumotonic/호모니애미다니무쿠스.md` | 하이퍼그래프 외부, 존재/비존재의 경계와 REQUEST TREE 모티프 |
 | 사용자 대화, 2026-08-28 | 137억 년, 공식 드래곤폼·인간폼 지정 |
-| `Codex 이미지 … 04_24_39.png` | 현재 로컬의 공식 드래곤폼 시각 참조; 아직 저장소에 versioning되지 않음 |
-| `Codex 이미지 … 04_26_05.png` | 현재 로컬의 공식 인간폼 시각 참조; 아직 저장소에 versioning되지 않음 |
+| `Codex 이미지 … 04_24_39.png` | 공식 드래곤폼 시각 참조; 원본 PNG를 저장소에서 versioning |
+| `Codex 이미지 … 04_26_05.png` | 공식 인간폼 시각 참조; 원본 PNG를 저장소에서 versioning |
 
 저장소의 층위 경계는 [workbench reframe](../decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md),
 [source provenance](../provenance/SOURCES.md),
