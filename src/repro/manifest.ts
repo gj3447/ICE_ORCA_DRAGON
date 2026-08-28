@@ -276,6 +276,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "gate1_v0_full_p_regular_raq_completion",
+    script:
+      "cpt_temporal_folded_susy/gate1_v0_full_p_regular_raq_completion.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "gate1_v0_bfv_zero_mode_elimination_ward",
     script:
       "cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py",

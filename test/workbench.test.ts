@@ -79,6 +79,10 @@ it("maps the V0 spectral-to-m2 BFV controls as portable committed results", () =
       "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_RESULT.json"
     ],
     [
+      "gate1_v0_full_p_regular_raq_completion",
+      "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_RESULT.json"
+    ],
+    [
       "gate1_v0_bfv_zero_mode_elimination_ward",
       "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json"
     ]
