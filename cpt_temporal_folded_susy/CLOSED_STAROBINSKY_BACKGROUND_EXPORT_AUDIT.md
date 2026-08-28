@@ -55,3 +55,31 @@ n_s=1-6\epsilon_{V*}+2\eta_{V*},\quad r=16\epsilon_{V*}.
 These are leading slow-roll background formulas.  They are not a closed-FRW
 mode calculation, a Born--Oppenheimer/decoherence result, a Boltzmann-code
 input, or an observational likelihood fit.
+
+## Observed execution
+
+The clean committed runner was executed through
+
+```text
+./ice run closed_starobinsky_background_export_audit
+```
+
+It returned
+`KEEP_STAROBINSKY_LEADING_SLOW_ROLL_BACKGROUND_EXPORT_NOT_CLOSED_EVOLUTION_OR_LIKELIHOOD`.
+All 6 exact checks and all 9 bounded residual checks passed.  The exported
+central row at input `N_star=55` is
+
+\[
+\phi_*=5.3528685235,\quad H_*=6.4178161666\times10^{-6},\quad
+\mathcal P_{\cal R}=2.3858758082\times10^{-9},
+\]
+
+\[
+n_s=0.9649772222,\qquad r=0.0034982993.
+\]
+
+The result artifact SHA-256 is
+`af6334f0c8a3f745ecfedd37280a8cae457f2ec7adfb5effb3b33f29dbc193e1`.
+The historical Phase-19 evidence was hash-checked but its solver was not run.
+All closed-mode, reheating, BO/decoherence, CLASS/Cobaya, likelihood, and
+physical-claim fields remain null.
