@@ -119,13 +119,34 @@ equivalence.
 It also leaves BFV, continuum determinant-line, inhomogeneous, observational,
 physics, and TOE outputs null.
 
-## Intended execution
+## Observed execution
 
-After independent review and clean commit, use only the repository control
-plane:
+The independently reviewed, clean committed runner was executed only through
+the repository control plane:
 
 ```text
 ./ice run raw_c_zero_shell_characteristic_census
 ```
 
-No runner was executed during preparation of this draft.
+It returned
+`CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY`.
+All 4 exact and all 4 numerical checks passed, with 5 analytic theorem guards.
+The fixed scan found five sign-changing roots,
+
+\[
+\kappa\simeq
+2.02252723896,\ 3.93713906777,\ 5.40716563938,\
+6.71336772071,\ 7.92314731173,
+\]
+
+each paired with (p=\pm\sqrt{2/3}\,\kappa).  It used 5,739 Bessel
+evaluations and five bisection calls.  The maximum recurrence residual was
+`1.6164681704454604e-52`, the independent centered-derivative difference was
+`1.2249728950156537e-37`, and the maximum final bracket width was
+`2.6727647100921956e-51`.  The observed origin value was
+`-0.5669488972682367`.
+
+The result artifact SHA-256 is
+`75404989d6e4cf8e5a9120a99d3cdcc3a1187a27478f358f1ad9a64f963d53ed`.
+No spectral-density, transversality, rigging-map, physical-product, or
+constraint-rescaling field was promoted by this run.
