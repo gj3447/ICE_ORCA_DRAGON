@@ -285,6 +285,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "gate1_v0_raw_c_weighted_operator_domain_audit",
+    script:
+      "cpt_temporal_folded_susy/gate1_v0_raw_c_weighted_operator_domain_audit.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "gate1_v0_bfv_zero_mode_elimination_ward",
     script:
       "cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py",
