@@ -1,5 +1,21 @@
 # Declared raw-\(C\) constant-boundary direct-integral extension
 
+## Observed result
+
+The committed bounded run constructed the declared \(p\)-preserving
+decomposable extension:
+
+```text
+CONSTRUCT_DECLARED_RAW_C_P_PRESERVING_DIRECT_INTEGRAL_EXTENSION_RAQ_OPEN
+```
+
+All 6 executable exact checks and both bounded numerical checks passed, with
+5 separately recorded theorem guards.  Across 12 initial-value solves the
+maximum Wronskian error was \(1.35\times10^{-11}\) and the maximum
+\(p\leftrightarrow-p\) parity error was zero.  This establishes the declared
+extension only under the stated measurable-boundary-graph theorem scope; it
+does not select it physically.
+
 ## Question and scope
 
 The preceding raw-\(C\) audit classified the declared weighted fibers but deliberately
@@ -117,13 +133,13 @@ general \(p\)-mixing extensions, origin/gluing data, endpoint transform, absolut
 BFV measure, inhomogeneous closure, quantum anomaly, relational/decoherence and
 observational claims.
 
-## Intended execution
-
-After independent review, clean commit, and only through the repository control
-plane:
+## Execution
 
 ```text
 ./ice run raw_c_constant_boundary_direct_integral
+VALID_RUN; 6/6 exact checks; 2/2 numerical checks; 5 theorem guards
 ```
 
-No command has been run while this draft is being prepared.
+The result artifact is
+`RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json`, with outer SHA-256
+`52d623524ed8a80f006374231c02267d4b5d9b4df1c636a8e7a7fc74b3672db7`.
