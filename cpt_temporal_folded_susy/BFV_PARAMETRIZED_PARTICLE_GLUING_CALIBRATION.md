@@ -130,13 +130,22 @@ rescaling equivalence; inhomogeneous closure; quantum anomaly freedom;
 relational/decoherence and empirical predictions; quantum-gravity, physics,
 and TOE claims.
 
-## Intended execution
+## Observed execution
 
-After independent review and clean commit, execute only through the repository
-control plane:
+The clean committed runner was executed only through the repository control
+plane:
 
 ```text
 ./ice run bfv_parametrized_particle_gluing_calibration
 ```
 
-No runner was executed while preparing this draft.
+The run returned
+`CALIBRATED_PARAMETRIZED_PARTICLE_FINITE_BFV_NORMALIZATION_AND_GLUE_ONLY`.
+All 8 exact checks and the one bounded numerical check passed; the 12-sample
+Gaussian short-time diagnostic had maximum absolute error
+`9.9999999986250004e-06` against the declared `5e-5` bound.  Four analytic
+theorem guards retain the distributional and branch hypotheses.  The result
+artifact SHA-256 is
+`d373476f3e20f17c60431bb4fa21c22afda22087cb947e6257470f33c8c7ba3f`.
+
+This observed success does not alter any fail-closed gravity field.
