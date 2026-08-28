@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-28T01:09:07Z",
+  "updated_at_utc": "2026-08-28T01:51:25Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -471,6 +471,18 @@
         "claim:G1_V0_STATIC_ZERO_MODE_EQUALS_ORDER_ZERO_MC_FORM_ON_FROZEN_TESTS",
         "claim:G1_V0_M2_NONZERO_BFV_QUARTET_HAS_RELATIVE_DETERMINANT_PFAFFIAN_MATCH",
         "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
+        "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+        "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+        "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+        "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+        "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+        "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
+      ]
+    },
+    {
+      "question": "Where are the V0 formulas, philosophical implications, and next research bridges organized?",
+      "answer": "The formula ontology now follows raw C through positive densitization, the declared Schrodinger operator, Fourier--KL reduction, spectral multiplier/domain, RAQ coarea measure, Mc comparison, the p-zero cutoff boundary, and the BFV Gaussian Ward identity. A separate interpretive layer records that exact solvability is conditional, the physical measure is part of the quantization, determinant bookkeeping is required for gauge reduction, scoped negative results remove shortcuts rather than refute quantum gravity, and minisuperspace is a laboratory rather than a full spacetime theory. The forward roadmap connects these results to raw-C/H equivalence, global branch completion, an exact Mc intertwiner, an absolute BFV measure, anomaly-controlled inhomogeneous constraints, and relational-observable/semiclassical/empirical recovery. These are local KG memory edges with no automatic execution or external ratification.",
+      "claim_ids": [
         "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
         "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
@@ -1161,6 +1173,40 @@
       "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
       "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
         "open:gate1-original-cycle-signed-global-intersections"
+      ]
+    },
+    {
+      "id": "reading-path:gate1-v0-formula-philosophy-to-quantum-gravity-frontier",
+      "title": "From the selected V0 formula chain to the quantum-gravity frontier",
+      "summary": "Read the equations in derivational order, then cross the explicit boundary from computed facts to non-evidential interpretation. Finish at the dependency-labelled open problems: raw-C/H equivalence, global p-zero/p-negative completion, exact endpoint/Mc intertwining, lapse and absolute BFV measure, inhomogeneous Dirac/BFV closure, and relational-observable/semiclassical/empirical recovery. The path is ontology navigation only and creates no automatic successor.",
+      "nodes": [
+        "concept:gate1-v0-classical-positive-densitization",
+        "concept:gate1-v0-densitized-flat-schrodinger-operator",
+        "concept:gate1-v0-liouville-kl-spectral-reduction",
+        "concept:gate1-v0-densitized-spectral-multiplier-domain",
+        "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+        "concept:gate1-v0-densitized-raq-versus-darboux-mc-fiber",
+        "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+        "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+        "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+        "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+        "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+        "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+        "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+        "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+        "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
+        "concept:gate1-v0-physical-measure-as-quantization-data",
+        "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+        "concept:gate1-v0-negative-results-as-scope-refinement",
+        "concept:gate1-v0-minisuperspace-model-reality-boundary",
+        "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+        "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+        "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+        "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+        "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+        "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+        "artifact:gate1-v0-quantum-cosmology-ontology-map"
       ]
     }
   ],
@@ -12298,6 +12344,167 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-densitized-raq-p-zero-boundary-result.json",
       "sha256": "cc480acf393824f13fc0cabe3008e83a0cef95821aeab26f9ec1743015afa943"
+    },
+    {
+      "id": "concept:gate1-v0-classical-positive-densitization",
+      "type": "concept",
+      "title": "V0 classical positive densitization formula ledger",
+      "summary": "Q=2 log(a), P=a*p_a/2 and C=-exp(-3Q/2)P^2/(6*pi^2)+exp(-3Q/2)p^2/(4*pi^2)-6*pi^2*exp(Q/2). The selected positive rescaling is H=12*pi^2*exp(3Q/2)*C=-2P^2+3p^2-72*pi^4*exp(2Q). It preserves the classical zero set only up to reparametrization and does not establish quantum equivalence.",
+      "state": "INDEXED_FORMULA_LEDGER_COMPUTED_IDENTITY_WITH_QUANTUM_EQUIVALENCE_OPEN"
+    },
+    {
+      "id": "concept:gate1-v0-densitized-flat-schrodinger-operator",
+      "type": "concept",
+      "title": "V0 selected densitized flat Schrodinger operator ledger",
+      "summary": "On H_aux=L2(R_Q x R_phi,dQ dphi), P=-i*hbar*d_Q and p=-i*hbar*d_phi. Flat ordering of already-densitized H gives Hhat=2*hbar^2*d_Q^2-3*hbar^2*d_phi^2-72*pi^4*exp(2Q). This is not an ordering of raw C.",
+      "state": "INDEXED_SELECTED_OPERATOR_FORMULA_NOT_RAW_C_ORDERING"
+    },
+    {
+      "id": "concept:gate1-v0-liouville-kl-spectral-reduction",
+      "type": "concept",
+      "title": "V0 Fourier--Liouville--KL spectral reduction ledger",
+      "summary": "On p>0, z=(6*pi^2/hbar)*exp(Q), dQ=dz/z and L=-d_Q^2+z^2 give Hhat_p=-2*hbar^2*L+3p^2. The modified-Bessel equation yields L K_(i*kappa)=kappa^2 K_(i*kappa), with normalized kernel chi_kappa=sqrt(2*kappa*sinh(pi*kappa))/pi times K_(i*kappa).",
+      "state": "INDEXED_EXACT_SELECTED_FOURIER_KL_REDUCTION"
+    },
+    {
+      "id": "concept:gate1-v0-densitized-spectral-multiplier-domain",
+      "type": "concept",
+      "title": "V0 selected densitized spectral multiplier and domain ledger",
+      "summary": "The selected Fourier--KL realization is multiplication by h(kappa,p)=3*p^2-2*hbar^2*kappa^2 on L2(R_+,kappa x R_+,p,d kappa dp), with maximal domain D(Hhat)={A in L2: hA in L2}. Self-adjointness belongs to this selected real multiplication realization.",
+      "state": "INDEXED_SELECTED_SELF_ADJOINT_MULTIPLICATION_REALIZATION"
+    },
+    {
+      "id": "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+      "type": "concept",
+      "title": "V0 RAQ coarea zero-fiber measure ledger",
+      "summary": "The selected group average inserts delta(h). For p>0, kappa_0=sqrt(3/2)*p/hbar and |d_kappa h|=2*sqrt(6)*hbar*p, hence eta_H(A)[B]=integral_0^infinity dp/(2*sqrt(6)*hbar*p) Abar(kappa_0,p)B(kappa_0,p). The quotient completion is L2((0,infinity),dp/(2*sqrt(6)*hbar*p)).",
+      "state": "INDEXED_COMPUTED_P_POSITIVE_CONSTRAINT_ZERO_FIBER_MEASURE"
+    },
+    {
+      "id": "concept:gate1-v0-densitized-raq-versus-darboux-mc-fiber",
+      "type": "concept",
+      "title": "V0 selected RAQ versus declared Darboux Mc fiber ledger",
+      "summary": "The earlier Mc form uses eta_Mc=integral_0^infinity dp psibar(0,p)varphi(0,p), while the selected H form uses dp/(2*sqrt(6)*hbar*p). Two witnesses contradict equality under the identity map and one constant. J A=A/sqrt(2*sqrt(6)*hbar*p) is an abstract isometry only, not a raw-C/H/Mc intertwiner.",
+      "state": "INDEXED_MEASURE_COMPARISON_WITH_INTERTWINER_OPEN"
+    },
+    {
+      "id": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+      "type": "concept",
+      "title": "V0 RAQ p-zero cutoff and finite-part ledger",
+      "summary": "For A0=exp(-p), eta_epsilon=E1(2*epsilon)/(2*sqrt(6)*hbar)=[log(1/epsilon)-gamma-log(2)+o(1)]/(2*sqrt(6)*hbar), so a nonzero edge value diverges logarithmically. A1=p*exp(-p) has norm 1/(8*sqrt(6)*hbar), and A=O(p^alpha) is locally integrable for alpha>0. A finite part depends on an extra reference momentum p_star and is not canonical.",
+      "state": "INDEXED_COMPUTED_EDGE_DIVERGENCE_AND_NONCANONICAL_FINITE_PART"
+    },
+    {
+      "id": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+      "type": "concept",
+      "title": "V0 BFV zero-block Gaussian and Ward formula ledger",
+      "summary": "S0(lambda)=lambda*(N0*c0-rho0*bar_rho0), lambda>0, is closed under the pinned local BRST images. The N0 integral gives delta(c0)/lambda; the oriented odd Gaussian and induced determinant give lambda, with det(F)=lambda^2 and Pf(F)=-lambda. Direct and weighted elimination give delta(c0), while unweighted deletion gives delta(c0)/lambda and violates d_lambda Z=0.",
+      "state": "INDEXED_LOCAL_GAUSSIAN_WARD_IDENTITY_FULL_BFV_OPEN"
+    },
+    {
+      "id": "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
+      "type": "concept",
+      "title": "Classical rescaling versus quantum realization",
+      "summary": "A positive classical constraint rescaling can define a useful selected quantum realization without establishing quantum equivalence to the raw constraint. Equivalence requires explicit ordering, domains, boundary forms, an intertwiner, and compatible observables or rigging maps.",
+      "state": "ACTIVE_INTERPRETIVE_BOUNDARY_NOT_A_PHYSICS_THESIS"
+    },
+    {
+      "id": "concept:gate1-v0-physical-measure-as-quantization-data",
+      "type": "concept",
+      "title": "Physical measure as constitutive quantization data",
+      "summary": "A positive RAQ fiber measure is relative to an operator, ordering, test space, branch and group-average normalization. The dp versus dp/p difference changes normalizability and edge behavior; an abstract Hilbert-space isometry does not identify constraint lineage or observable meaning.",
+      "state": "ACTIVE_LOCAL_QUANTIZATION_DATA_DEPENDENCE_BOUNDARY"
+    },
+    {
+      "id": "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+      "type": "concept",
+      "title": "Gauge redundancy and determinant bookkeeping",
+      "summary": "Ghost variables are nonphysical redundancy bookkeeping, but removing them and discarding their induced determinant are different operations. The local Ward repair shows that an apparent contradiction may be a measure-accounting error, while leaving contour, Gribov, anomaly and full-measure independence open.",
+      "state": "ACTIVE_LOCAL_WARD_BOOKKEEPING_BOUNDARY"
+    },
+    {
+      "id": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "type": "concept",
+      "title": "Negative results as scope refinement",
+      "summary": "The current KILLs reject specified shortcuts: constant-normalization identity of two measures, naive nonzero p-zero extension, a canonical finite part from the cutoff alone, and unweighted ghost deletion. They do not refute quantum cosmology or quantum gravity; they identify which extra datum a successor must earn.",
+      "state": "ACTIVE_FALSIFIABILITY_AND_SCOPE_DISCIPLINE"
+    },
+    {
+      "id": "concept:gate1-v0-minisuperspace-model-reality-boundary",
+      "type": "concept",
+      "title": "Minisuperspace model versus quantum-spacetime reality boundary",
+      "summary": "Exact homogeneous solvability is genuine conditional knowledge but does not include local gravitons, the full Dirac algebra, anomaly control, relational observables, a semiclassical Einstein limit or an empirical map. The move from model to world requires these independently evidenced bridges.",
+      "state": "ACTIVE_MODEL_REALITY_AND_OBSERVABILITY_BOUNDARY"
+    },
+    {
+      "id": "scope:gate1-v0-formula-philosophy-and-roadmap-layer",
+      "type": "scope",
+      "title": "V0 formula, philosophy and forward-roadmap ontology scope",
+      "summary": "Repository-local indexing of already computed formulas, explicitly non-evidential interpretation, and dependency-labelled future questions.",
+      "state": "LOCAL_MEMORY_AND_NAVIGATION_SCOPE",
+      "includes": [
+        "formula transcription from the committed V0 RAQ, p-zero and BFV reports",
+        "separation of computed facts, interpretation and open hypotheses",
+        "philosophical implications that regulate inference without supplying evidence",
+        "forward questions with prerequisites and success/failure discriminators",
+        "typed local graph edges that preserve provenance and dependency"
+      ],
+      "excludes": [
+        "new calculation evidence or a change to any existing executable verdict",
+        "external KG ratification or an invented external UID",
+        "automatic execution authority for any roadmap node",
+        "a raw-C theory, canonical edge completion, absolute BFV measure or full quantum gravity",
+        "physics, empirical or TOE promotion"
+      ]
+    },
+    {
+      "id": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "type": "concept",
+      "title": "V0 quantum-cosmology forward research roadmap",
+      "summary": "A dependency map from the selected homogeneous RAQ and BFV controls to six independent debts: raw-C/H equivalence, p-zero/p-negative global completion, exact endpoint/Mc intertwining, absolute lapse/BFV measure, anomaly-controlled inhomogeneous constraints, and relational-observable/semiclassical/empirical recovery. It is planning metadata with no automatic execution authority.",
+      "state": "ACTIVE_LOCAL_ROADMAP_NO_AUTOMATIC_EXECUTION_AUTHORITY"
+    },
+    {
+      "id": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "type": "open_problem",
+      "title": "V0 p-zero, p-negative and global spectral completion",
+      "summary": "Prerequisite: the selected p-positive KL fiber and cutoff edge result. Success requires a stated symmetry/domain principle that fixes origin data, p-negative gluing, positivity and a global physical measure. Reference-scale, extension or sector-mixing dependence is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Which, if any, domain, symmetry or superselection principle canonically completes the selected p-positive fiber across p=0 and the p-negative branch?"
+    },
+    {
+      "id": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "type": "open_problem",
+      "title": "Exact V0 endpoint Mc intertwiner and full symbol",
+      "summary": "Prerequisites are the classical Darboux chart, principal FIO, selected operator domains and edge data. Success requires an exact unitary with full symbol and common domains that intertwines the relevant constraint operators and observables. A surviving lower-symbol family, edge form or domain obstruction is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Does an exact domain-preserving endpoint transform exist that relates the selected original-coordinate realization to Mc, and what full symbol and edge data determine or obstruct it?"
+    },
+    {
+      "id": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "type": "open_problem",
+      "title": "V0 inhomogeneous perturbations, Dirac algebra and anomaly",
+      "summary": "Prerequisites are a selected homogeneous domain, edge completion and BFV measure boundary. Success requires a declared finite perturbative truncation whose regulated constraints close, satisfy Jacobi consistency and give a nilpotent BFV charge. A regulator-stable anomaly, boundary leakage or clock/background dependence is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Can the homogeneous V0 construction be extended to explicitly inhomogeneous metric, matter and ghost modes with anomaly-controlled Dirac/BFV closure?"
+    },
+    {
+      "id": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "type": "open_problem",
+      "title": "V0 relational observables, semiclassical recovery and empirical bridge",
+      "summary": "Prerequisites are a physical product, selected contour and anomaly-controlled perturbations. Success requires self-adjoint relational observables, normalized semiclassical states, error-controlled Einstein recovery and an explicit observable-to-data map. Clock, domain or contour dependence, or the absence of an empirical discriminator, is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Which relational observables survive the completed constraints, recover semiclassical spacetime with controlled errors, and define a falsifiable map to data?"
+    },
+    {
+      "id": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "type": "artifact",
+      "title": "Gate-1 V0 formula, philosophy and ontology map",
+      "summary": "Human-readable synthesis of the selected model's main V0 formula chain, computed/interpretive/open layer separation, philosophical implications, and dependency-labelled research roadmap. It is an ontology map, not scientific evidence.",
+      "state": "TRACKED_NON_EVIDENTIAL_ONTOLOGY_MAP",
+      "artifact_kind": "ontology_map",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_QUANTUM_COSMOLOGY_ONTOLOGY_MAP.md",
+      "sha256": "984ac55b19cfc34b77b5dc49478e1b79586a6814e731963386c4e941f7ecfad7"
     }
   ],
   "edges": [
@@ -29883,6 +30090,645 @@
       "from": "artifact:gate1-v0-densitized-raq-p-zero-boundary-evidence-snapshot",
       "relation": "RECORDS",
       "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
+    },
+    {
+      "id": "edge:2829",
+      "from": "concept:gate1-v0-classical-positive-densitization",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2830",
+      "from": "concept:gate1-v0-densitized-flat-schrodinger-operator",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2831",
+      "from": "concept:gate1-v0-liouville-kl-spectral-reduction",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2832",
+      "from": "concept:gate1-v0-densitized-spectral-multiplier-domain",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2833",
+      "from": "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2834",
+      "from": "concept:gate1-v0-densitized-raq-versus-darboux-mc-fiber",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2835",
+      "from": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2836",
+      "from": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2837",
+      "from": "concept:gate1-v0-classical-positive-densitization",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2838",
+      "from": "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2839",
+      "from": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2840",
+      "from": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2841",
+      "from": "concept:gate1-v0-classical-positive-densitization",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "note": "Indexes the classical input and selected rescaling of the already completed RAQ control without creating new evidence."
+    },
+    {
+      "id": "edge:2842",
+      "from": "concept:gate1-v0-densitized-flat-schrodinger-operator",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-classical-positive-densitization"
+    },
+    {
+      "id": "edge:2843",
+      "from": "concept:gate1-v0-liouville-kl-spectral-reduction",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-flat-schrodinger-operator"
+    },
+    {
+      "id": "edge:2844",
+      "from": "concept:gate1-v0-densitized-spectral-multiplier-domain",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-liouville-kl-spectral-reduction"
+    },
+    {
+      "id": "edge:2845",
+      "from": "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-spectral-multiplier-domain"
+    },
+    {
+      "id": "edge:2846",
+      "from": "concept:gate1-v0-densitized-raq-versus-darboux-mc-fiber",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-raq-coarea-zero-fiber-measure"
+    },
+    {
+      "id": "edge:2847",
+      "from": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-raq-versus-darboux-mc-fiber"
+    },
+    {
+      "id": "edge:2848",
+      "from": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "note": "Indexes the later cutoff boundary result and preserves its noncanonical-completion null."
+    },
+    {
+      "id": "edge:2849",
+      "from": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control",
+      "note": "Indexes the already computed zero-block Gaussian and Ward identities without promoting them to a full BFV theorem."
+    },
+    {
+      "id": "edge:2850",
+      "from": "concept:gate1-v0-classical-positive-densitization",
+      "relation": "CITES",
+      "to": "source:louko-martinez-pascual-2011",
+      "note": "Cites the quantum constraint-rescaling boundary only; it does not decide this model's raw-C/H equivalence."
+    },
+    {
+      "id": "edge:2851",
+      "from": "concept:gate1-v0-liouville-kl-spectral-reduction",
+      "relation": "CITES",
+      "to": "source:nist-dlmf-bessel-kl",
+      "note": "Cites the modified-Bessel and KL identities, not the cosmological ordering or physical interpretation."
+    },
+    {
+      "id": "edge:2852",
+      "from": "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Cites single-constraint RAQ framing only; the multiplier, branch and coarea weight are repository calculations."
+    },
+    {
+      "id": "edge:2853",
+      "from": "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+      "relation": "CITES",
+      "to": "source:giulini-2000-group-averaging-raq",
+      "note": "Cites group-averaging scope and quotient framing, not a model-independent measure."
+    },
+    {
+      "id": "edge:2854",
+      "from": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+      "relation": "CITES",
+      "to": "source:nist-dlmf-exponential-integral",
+      "note": "Cites the E1 identity and asymptotics only; the witness and completion boundary are repository-local."
+    },
+    {
+      "id": "edge:2855",
+      "from": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992",
+      "note": "Cites BRST-BFV endpoint and gauge framing, not the repository's finite orientation or contour."
+    },
+    {
+      "id": "edge:2856",
+      "from": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Cites the multiplier and ghost framework; the displayed zero-block ledger is repository evidence."
+    },
+    {
+      "id": "edge:2857",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-raq-coarea-zero-fiber-measure"
+    },
+    {
+      "id": "edge:2858",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-raq-versus-darboux-mc-fiber"
+    },
+    {
+      "id": "edge:2859",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger"
+    },
+    {
+      "id": "edge:2860",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger"
+    },
+    {
+      "id": "edge:2861",
+      "from": "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity"
+    },
+    {
+      "id": "edge:2862",
+      "from": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity"
+    },
+    {
+      "id": "edge:2863",
+      "from": "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2864",
+      "from": "concept:gate1-v0-physical-measure-as-quantization-data",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2865",
+      "from": "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2866",
+      "from": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2867",
+      "from": "concept:gate1-v0-minisuperspace-model-reality-boundary",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2868",
+      "from": "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2869",
+      "from": "concept:gate1-v0-physical-measure-as-quantization-data",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2870",
+      "from": "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2871",
+      "from": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2872",
+      "from": "concept:gate1-v0-minisuperspace-model-reality-boundary",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2873",
+      "from": "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-classical-positive-densitization"
+    },
+    {
+      "id": "edge:2874",
+      "from": "concept:gate1-v0-physical-measure-as-quantization-data",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-raq-versus-darboux-mc-fiber"
+    },
+    {
+      "id": "edge:2875",
+      "from": "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity"
+    },
+    {
+      "id": "edge:2876",
+      "from": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger"
+    },
+    {
+      "id": "edge:2877",
+      "from": "concept:gate1-v0-minisuperspace-model-reality-boundary",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-raq-coarea-zero-fiber-measure"
+    },
+    {
+      "id": "edge:2878",
+      "from": "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
+      "relation": "CITES",
+      "to": "source:louko-martinez-pascual-2011",
+      "note": "Cites the rescaling warning as an interpretive boundary, not as evidence of inequivalence in this model."
+    },
+    {
+      "id": "edge:2879",
+      "from": "concept:gate1-v0-physical-measure-as-quantization-data",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Cites RAQ framing for auxiliary-choice and physical-product discipline only."
+    },
+    {
+      "id": "edge:2880",
+      "from": "concept:gate1-v0-physical-measure-as-quantization-data",
+      "relation": "CITES",
+      "to": "source:giulini-2000-group-averaging-raq",
+      "note": "Cites group-averaging scope; the philosophical interpretation has no evidential polarity."
+    },
+    {
+      "id": "edge:2881",
+      "from": "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992",
+      "note": "Cites the BRST-BFV framework without promoting the finite Ward block to full gauge independence."
+    },
+    {
+      "id": "edge:2882",
+      "from": "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+      "relation": "CITES",
+      "to": "source:garcia-vergara-urrutia-1995",
+      "note": "Cites the canonical ghost framework; the interpretation remains repository-local and non-evidential."
+    },
+    {
+      "id": "edge:2883",
+      "from": "concept:gate1-v0-minisuperspace-model-reality-boundary",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:invariant-difference-amplitude-and-record"
+    },
+    {
+      "id": "edge:2884",
+      "from": "concept:gate1-v0-minisuperspace-model-reality-boundary",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:recursive-objectivity-and-world-resistance"
+    },
+    {
+      "id": "edge:2885",
+      "from": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE"
+    },
+    {
+      "id": "edge:2886",
+      "from": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE"
+    },
+    {
+      "id": "edge:2887",
+      "from": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE"
+    },
+    {
+      "id": "edge:2888",
+      "from": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
+    },
+    {
+      "id": "edge:2889",
+      "from": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2890",
+      "from": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:2891",
+      "from": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The roadmap is memory and dependency metadata only; each future calculation requires a separate independent question and clean bounded runner."
+    },
+    {
+      "id": "edge:2892",
+      "from": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control"
+    },
+    {
+      "id": "edge:2893",
+      "from": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
+    },
+    {
+      "id": "edge:2894",
+      "from": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:2895",
+      "from": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-minisuperspace-model-reality-boundary"
+    },
+    {
+      "id": "edge:2896",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+    },
+    {
+      "id": "edge:2897",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+    },
+    {
+      "id": "edge:2898",
+      "from": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+    },
+    {
+      "id": "edge:2899",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+    },
+    {
+      "id": "edge:2900",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+    },
+    {
+      "id": "edge:2901",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+    },
+    {
+      "id": "edge:2902",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+    },
+    {
+      "id": "edge:2903",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "This open node is not an execution receipt and creates no automatic successor."
+    },
+    {
+      "id": "edge:2904",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "This open node is not an execution receipt and creates no automatic successor."
+    },
+    {
+      "id": "edge:2905",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "This open node is not an execution receipt and creates no automatic successor."
+    },
+    {
+      "id": "edge:2906",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "This open node is not an execution receipt and creates no automatic successor."
+    },
+    {
+      "id": "edge:2907",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "Narrows the already open edge debt to global origin and both-branch spectral gluing."
+    },
+    {
+      "id": "edge:2908",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
+    },
+    {
+      "id": "edge:2909",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
+      "note": "Separates the exact endpoint/Mc operator debt from the independently open lapse-measure debt."
+    },
+    {
+      "id": "edge:2910",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_CLOSED_FRW_V0_DARBOUX_GRAPH_ADMITS_LOCAL_PRINCIPAL_MOMENTUM_ENDPOINT_FIO"
+    },
+    {
+      "id": "edge:2911",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:G1_V0_DECLARED_B_A0_HD_MC_DATA_UNIQUELY_SELECT_EXACT_ENDPOINT_COMPLETION"
+    },
+    {
+      "id": "edge:2912",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+    },
+    {
+      "id": "edge:2913",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-p-zero-p-negative-global-spectral-completion"
+    },
+    {
+      "id": "edge:2914",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol"
+    },
+    {
+      "id": "edge:2915",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+    },
+    {
+      "id": "edge:2916",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly"
+    },
+    {
+      "id": "edge:2917",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+    },
+    {
+      "id": "edge:2918",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+    },
+    {
+      "id": "edge:2919",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:invariant-difference-amplitude-and-record",
+      "note": "A physical distinction requires invariant observables, amplitude, persistent record and an empirical discriminator."
+    },
+    {
+      "id": "edge:2920",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-classical-positive-densitization",
+      "note": "Formula transcription and interpretation map only; not new calculation evidence."
+    },
+    {
+      "id": "edge:2921",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-raq-coarea-zero-fiber-measure",
+      "note": "Formula transcription and interpretation map only; not new calculation evidence."
+    },
+    {
+      "id": "edge:2922",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger",
+      "note": "Formula transcription and interpretation map only; not new calculation evidence."
+    },
+    {
+      "id": "edge:2923",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity",
+      "note": "Formula transcription and interpretation map only; not new calculation evidence."
+    },
+    {
+      "id": "edge:2924",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
+      "note": "Philosophical interpretation only; no scientific evidential polarity."
+    },
+    {
+      "id": "edge:2925",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-physical-measure-as-quantization-data",
+      "note": "Philosophical interpretation only; no scientific evidential polarity."
+    },
+    {
+      "id": "edge:2926",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-gauge-redundancy-and-determinant-bookkeeping",
+      "note": "Philosophical interpretation only; no scientific evidential polarity."
+    },
+    {
+      "id": "edge:2927",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-negative-results-as-scope-refinement",
+      "note": "Philosophical interpretation only; no scientific evidential polarity."
+    },
+    {
+      "id": "edge:2928",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-minisuperspace-model-reality-boundary",
+      "note": "Philosophical interpretation only; no scientific evidential polarity."
+    },
+    {
+      "id": "edge:2929",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "note": "Roadmap and dependency metadata only; no automatic execution or promotion."
     }
   ],
   "kg_bridges": [

@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-28T01:09:07Z",
+  "updated_at_utc": "2026-08-28T01:51:25Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -72,7 +72,8 @@
         "the Phase 11-15R collar-to-interface-to-charge-to-parent lineage, including the Phase 15A invalid-sequence break",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
         "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the user-directed V0 chain through a selected densitized Liouville Fourier--KL RAQ p>0 model with physical measure dp/(2sqrt(6) hbar p), distinct from the static dp fiber measure; its cutoff p=0 boundary excludes a nonzero-edge witness, admits a vanishing witness and leaves finite-part reference scale noncanonical, while the local zero-mode Ward equality makes direct Berezin and induced-determinant elimination agree with unweighted deletion KILL; raw C/rescaling/canonical p=0 and lapse-modulus/contour/absolute-measure/full-trajectory completion remain open",
-        "selected philosophy records as non-evidential artifacts"
+        "selected philosophy records as non-evidential artifacts",
+        "the V0 formula-to-philosophy ontology map and dependency-labelled quantum-gravity research frontier"
       ],
       "excludes": [
         "authorization for Phase 57 or a new reconciliation route",
@@ -256,6 +257,56 @@
         {
           "graph": "legacy",
           "node": "scope:legacy-user-primary-narrative"
+        }
+      ]
+    },
+    {
+      "question": "Where is the current V0 formula, philosophy, and forward research map?",
+      "answer": "The CPT graph now follows the selected V0 equations from raw C through densitization, Fourier--KL spectral reduction, the RAQ coarea fiber, p-zero boundary behavior, and the local BFV Ward identity. Separate non-evidential concepts record the philosophical scope, and a dependency-labelled roadmap connects the open raw-C/H, global-edge, endpoint-intertwiner, absolute-BFV, inhomogeneous-constraint, and relational-observable problems. These links are repository-local navigation, not execution authority, external KG ratification, quantum-gravity validation, or a TOE claim.",
+      "refs": [
+        {
+          "graph": "cpt",
+          "node": "artifact:gate1-v0-quantum-cosmology-ontology-map"
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:gate1-v0-raq-coarea-zero-fiber-measure"
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:gate1-v0-raq-p-zero-cutoff-finite-part-ledger"
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:gate1-v0-bfv-zero-block-gaussian-ward-identity"
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:gate1-v0-minisuperspace-model-reality-boundary"
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-p-zero-p-negative-global-spectral-completion"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge"
         }
       ]
     },
