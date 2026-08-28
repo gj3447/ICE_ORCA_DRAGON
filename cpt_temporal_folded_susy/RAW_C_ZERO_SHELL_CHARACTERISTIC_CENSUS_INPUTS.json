@@ -1,0 +1,119 @@
+{
+  "schema_version": "ice.raw-c-zero-shell-characteristic-census.input.v1",
+  "calculation_id": "RawCZeroShellCharacteristicCensus",
+  "numbered_phase": null,
+  "question": "For the declared raw-C reference-boundary line Gamma_1,p=0, what sign-changing zero-shell characteristic roots occur in one fixed finite kappa window when the unique plus-end L2 solution is K_(i*kappa)(z)?",
+  "kind": "EXACT_SPECIAL_FUNCTION_AND_BOUNDED_ROOT_CENSUS",
+  "epistemic_scope": "DECLARED_RAW_C_GAMMA_1_EQUALS_ZERO_BOUNDARY_LINE_ZERO_CONSTRAINT_CHARACTERISTIC_ROOTS_ON_ONE_FIXED_FINITE_KAPPA_GRID",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json",
+      "sha256": "7daa40749b13920acfffe422a049e288cb3e67fc66de595b10681767ea036004",
+      "payload_sha256_without_self": "664af96fda1297c7524d86b3ffb79af08373377abc59bf127aeb8232b7e03bef",
+      "required_verdict": "NARROW_V0_RAW_C_CANDIDATE_HAS_FIBER_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN",
+      "role": "pins the declared weighted raw-C fiber, z variable, plus-end limit-point classification, and zero-energy modified-Bessel reduction"
+    }
+  ],
+  "repository_sources": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_INPUTS.json",
+      "sha256": "68d1c80ad33c03bcf96dc41187a7ac1cd067ded2116eda04e8ca7cce618d654d",
+      "used_for": "the declared p-preserving reference boundary line Gamma_1,p=0 and Q_0=-4 normalization convention; this input is a convention pin, not an executed upstream result"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified Bessel functions, sections 10.25, 10.29 and 10.40",
+      "url": "https://dlmf.nist.gov/10",
+      "used_for": "the modified-Bessel equation, K_nu derivative recurrence, and positive-real-z asymptotic selection of K_(i*kappa)",
+      "not_used_for": "a raw-C spectral measure, a group average, a rigging map, or a quantum-equivalence theorem"
+    },
+    {
+      "source": "Weyl, Ueber gewoehnliche Differentialgleichungen mit Singularitaeten und die zugehoerigen Entwicklungen willkuerlicher Funktionen, Math. Ann. 68 (1910) 220-269",
+      "url": "https://eudml.org/doc/158437",
+      "used_for": "the inherited limit-point statement that the plus end selects one L2 solution up to scale",
+      "not_used_for": "claiming that a finite root scan gives a global spectral resolution"
+    }
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "Q_0": "-4",
+    "z": "z=6*pi^2*exp(Q)/hbar",
+    "z_0": "6*pi^2*exp(-4)",
+    "kappa": "kappa=sqrt(3/2)*abs(p)/hbar",
+    "plus_end_L2_solution": "u_plus(Q;kappa)=K_(i*kappa)(z)",
+    "reference_pair": "c_p(Q_0)=1,c_p'(Q_0)=0; Gamma_1,p(u)=-W(u,c_p)|_(Q=Q_0) for a zero-energy solution",
+    "characteristic_function": "F(kappa)=z_0*partial_z K_(i*kappa)(z_0)=-(z_0/2)[K_(i*kappa-1)(z_0)+K_(i*kappa+1)(z_0)]",
+    "p_zero_rule": "F(0)=-z_0*K_1(z_0)<0, so p=0 is not a characteristic root",
+    "kappa_window": "[0,8]",
+    "grid_segments": 2048,
+    "precision_digits": 70,
+    "root_refinement_bisection_steps": 160,
+    "root_cap": 32,
+    "root_definition": "a sign-changing adjacent-grid bracket for real F(kappa), refined by bisection; even-multiplicity or sub-grid roots are not ruled out"
+  },
+  "assumptions": [
+    "the declared Gamma_1 convention is evaluated for the zero-energy plus-end L2 solution at the finite normalization point Q_0=-4, where c_p(Q_0)=1 and c_p'(Q_0)=0",
+    "for real kappa and positive z, K_(i*kappa)(z) and the stated derivative combination are real up to controlled numerical imaginary residue",
+    "the fixed-window grid census reports only roots evidenced by a sign change between adjacent grid samples; it is not a proof of absence of tangential, multiple, or sub-grid roots",
+    "the p sign is not independently scanned because kappa depends on abs(p); the runner nevertheless records the exact plus/minus-p parity consequence",
+    "the zero-shell boundary equation is only a characteristic condition for this declared extension and is not a spectral-density or group-averaging formula",
+    "a characteristic-root census does not provide eigenvalue-branch transversality d(lambda_j)/dp, spectral normalization, a rigging-map test space, or delta(C) derivative weights"
+  ],
+  "tasks": [
+    "derive the zero-energy modified-Bessel equation and identify K_(i*kappa)(z) as the plus-end L2 solution under the inherited endpoint scope",
+    "derive Gamma_1,p(K)=partial_Q K=z*partial_z K at Q_0=-4 from the declared c_p normalization",
+    "derive F(0)=-z_0*K_1(z_0)<0 and rule p=0 out of this characteristic root census",
+    "scan the fixed kappa window with fixed precision, grid, bisection and root cap for sign-changing F roots",
+    "verify independent derivative-residual, bracket-width, root-order/separation, imaginary-residue and plus/minus-p parity controls",
+    "leave spectral measure, delta(C) derivative weights, raw-C rigging map, physical inner product, C/H equivalence and all BFV/physical outputs null"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 32,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "bessel_function_evaluations": 20000,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "raw_C_spectral_measure": null,
+    "delta_C_derivative_weights": null,
+    "zero_shell_eigenvalue_branch_transversality": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "general_p_mixing_extension_classification": null,
+    "canonical_p_zero_origin_sector": null,
+    "absolute_bfv_measure": null,
+    "continuum_determinant_or_pfaffian_line": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all exact boundary, p-zero, scan accounting, residual, bracket, ordering, imaginary-residue and parity checks pass",
+      "verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY",
+      "programme_impact": "KEEP_FINITE_CHARACTERISTIC_CENSUS_WITHOUT_PROMOTING_SPECTRAL_OR_RAQ_DATA"
+    },
+    {
+      "condition": "any executable special-function, boundary, p-zero, scan or independent control fails",
+      "verdict": "KILL_RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS",
+      "programme_impact": "RETAIN_THE_DECLARED_BOUNDARY_LINE_BUT_DO_NOT_USE_THIS_NUMERICAL_CENSUS"
+    }
+  ]
+}
