@@ -1,0 +1,98 @@
+{
+  "schema_version": "ice.closed-starobinsky-background-export-audit.input.v1",
+  "calculation_id": "ClosedStarobinskyBackgroundExportAudit",
+  "numbered_phase": null,
+  "question": "For the declared Starobinsky potential in reduced Planck units, what independent leading potential-slow-roll background quantities follow at input pivot e-fold values N_star=50,55,60 and M=1.3e-5, without identifying those inputs with the historical closed-bounce accelerated-e-fold count?",
+  "kind": "EXACT_STAROBINSKY_POTENTIAL_SLOW_ROLL_DERIVATION_PLUS_BOUNDED_PIVOT_ROOT_AND_BACKGROUND_EXPORT",
+  "epistemic_scope": "REDUCED_PLANCK_UNITS_FLAT_LEADING_POTENTIAL_SLOW_ROLL_BACKGROUND_EXPORT_ONLY_NOT_CLOSED_MODE_EVOLUTION_NOT_A_REPLAY_OF_PHASE19_NOT_A_LIKELIHOOD_TEST",
+  "upstream_results": [
+    {
+      "path": "ontology/cpt-temporal-folded-susy/evidence/phase19-result.json",
+      "sha256": "ce6cf51547dad36dfbdbbba355b1b593c9fc1a6d45dd5cf0d0a772f07df80071",
+      "required_result_id": "result:P19_CLOSED_SUGRA_BOUNCE_20260816",
+      "required_exit_code": 0,
+      "required_exact_checks": 17,
+      "required_numerical_checks": 30,
+      "role": "pins the historical exact improved-Cecotti Starobinsky potential evidence only; this runner neither imports its bounce trajectory nor reruns or reproduces its Phase-19 solver"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "A. A. Starobinsky, A new type of isotropic cosmological models without singularity, Phys. Lett. B 91 (1980) 99-102",
+      "url": "https://doi.org/10.1016/0370-2693(80)90670-X",
+      "used_for": "the Starobinsky-potential inflationary background context",
+      "not_used_for": "a reheating history, a closed-universe mode equation, or a likelihood analysis"
+    },
+    {
+      "source": "R. Kallosh and A. Linde, Superconformal generalizations of the Starobinsky model, JCAP 06 (2013) 028",
+      "url": "https://arxiv.org/abs/1306.3214",
+      "used_for": "the improved-Cecotti realization whose trajectory gives the pinned potential",
+      "not_used_for": "selecting N_star, M, a quantum state, or a present-data fit"
+    },
+    {
+      "source": "A. R. Liddle and D. H. Lyth, Cosmological Inflation and Large-Scale Structure, Cambridge University Press (2000)",
+      "url": "https://doi.org/10.1017/CBO9781139175180",
+      "used_for": "leading potential slow-roll definitions and primordial-spectrum convention",
+      "not_used_for": "validating slow roll through a closed bounce or predicting a likelihood"
+    }
+  ],
+  "declared_model_and_units": {
+    "units": "reduced Planck units M_Pl=1",
+    "potential": "V(phi)=3*M^2/4*(1-exp(-sqrt(2/3)*phi))^2",
+    "alpha": "sqrt(2/3)",
+    "mass_scale_M": 1.3e-05,
+    "slow_roll_definitions": "epsilon_V=(1/2)(V_prime/V)^2, eta_V=V_double_prime/V, H_star=sqrt(V_star/3), P_R=V_star/(24*pi^2*epsilon_V), P_T=2*H_star^2/pi^2, n_s=1-6*epsilon_V+2*eta_V, r=16*epsilon_V",
+    "pivot_efolds": [50, 55, 60],
+    "pivot_definition": "N_star is an independent input to the potential-slow-roll integral N(phi_star)=integral_phi_end^phi_star V/V_prime dphi; it is not Phase19 N_acc and does not identify a bounce trajectory or reheating map",
+    "root_convention": "solve the monotone t=exp(alpha phi)>t_end form with bounded bracketing and absolute residual <=1e-11"
+  },
+  "exact_plan": [
+    "hash-verify the historical Phase19 evidence without loading, running, copying, or comparing its ODE trajectory",
+    "derive exact V_prime/V, epsilon_V, eta_V, epsilon_V=1 endpoint, and N(phi_star) primitive",
+    "solve only the declared monotone pivot equation independently for each input N_star",
+    "record phi_star, H_star, leading P_R, P_T, n_s and r with root and equation residuals",
+    "check reduced-Planck dimensional status and record that H_star=sqrt(V_star/3) is a slow-roll background proxy, not a closed-FRW bounce H(t)",
+    "leave reheating, closed-mode evolution, BO/decoherence, CLASS/Cobaya, public likelihood and physical-claim fields null"
+  ],
+  "decision_table": [
+    {
+      "condition": "the historical evidence pin is intact; exact formulae agree; every bounded pivot root and equation residual passes",
+      "verdict": "KEEP_STAROBINSKY_LEADING_SLOW_ROLL_BACKGROUND_EXPORT_NOT_CLOSED_EVOLUTION_OR_LIKELIHOOD",
+      "programme_impact": "EXPORT_DECLARED_BACKGROUND_INPUT_TABLE_ONLY",
+      "meaning": "the table is a declared leading-slow-roll background input packet, not a data fit or a prediction through the bounce"
+    },
+    {
+      "condition": "an evidence pin, exact identity, root residual, equation residual, or unit declaration fails",
+      "verdict": "KILL_DECLARED_STAROBINSKY_BACKGROUND_EXPORT",
+      "programme_impact": "DO_NOT_USE_THIS_BACKGROUND_PACKET_DOWNSTREAM",
+      "meaning": "reject this implementation without revising Phase19 or making a claim about the model's observational status"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 3,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "phase19_bounce_replay_or_reproduction": null,
+    "closed_background_evolution": null,
+    "reheating_history": null,
+    "closed_mode_evolution": null,
+    "born_oppenheimer_or_decoherence": null,
+    "relational_observables": null,
+    "class_or_cobaya_input": null,
+    "public_likelihood": null,
+    "observational_fit_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
