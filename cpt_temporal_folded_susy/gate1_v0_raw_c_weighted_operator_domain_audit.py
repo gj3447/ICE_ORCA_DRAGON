@@ -436,14 +436,16 @@ def exact_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]]:
     )
 
     small_zero_constant = small_nonzero_integral
-    small_zero_log = sp.integrate(
-        x ** sp.Rational(1, 2) * sp.log(x) ** 2, (x, 0, 1)
+    alpha = sp.symbols("alpha", real=True)
+    power_moment = 1 / (alpha + 1)
+    small_zero_log = sp.diff(power_moment, alpha, 2).subs(
+        alpha, sp.Rational(1, 2)
     )
     flags["minus_zero"] = audit.observe(
         "G1.rawc.endpoint.minus_zero_weighted_integrability",
         sp.simplify(small_zero_constant - sp.Rational(2, 3)) == 0
         and sp.simplify(small_zero_log - sp.Rational(16, 27)) == 0,
-        "for p=0 the independent 1 and log(x), equivalently 1 and Q, modes are separately weighted-integrable at x=0",
+        "for p=0 the independent 1 and log(x), equivalently 1 and Q, modes are separately weighted-integrable at x=0; the log-squared moment is evaluated by differentiating integral_0^1 x^alpha dx=1/(alpha+1)",
     )
 
     growing_weight = sp.exp(2 * x) / sp.sqrt(x)
