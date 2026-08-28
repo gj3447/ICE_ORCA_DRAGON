@@ -541,6 +541,14 @@ negative-arm ratio는 \(-1\)이지만 simultaneous nonlinear configuration cycle
 `next_phase = null`은 유지되고 Phase 57이나 full replay를 열지 않는다. 2026-08-30은 distinct
 번호 없는 계산의 대기 조건도, killed numbered route의 자동 재개일도 아니다.
 
+동일한 번호 없는 runtime에서 selected densitized \(V=0\) Liouville/KL/RAQ model의
+\(p=0\) boundary control도 완료됐다. `GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_INPUTS.json`,
+`gate1_v0_densitized_raq_p_zero_boundary.py`,
+`GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_RESULT.json`,
+`GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY.md`는 positive \(p>0\) shell measure의 nonzero-edge
+log divergence와 finite-part reference-scale ambiguity를 기록한다. 이는 canonical edge completion,
+raw-constraint equivalence, lapse/BFV completion 또는 물리 승격을 제공하지 않는다.
+
 고정된 \(t=0\) boundary를 억지로 half-BPS wall처럼 취급하지 않고 다음 해석을 병렬로 유지한다.
 
 - **PL/BFV global gate:** Phase 56은 `phi_plus`, lambda=0.5 저장 root 하나에서 Phase-53 saddle
