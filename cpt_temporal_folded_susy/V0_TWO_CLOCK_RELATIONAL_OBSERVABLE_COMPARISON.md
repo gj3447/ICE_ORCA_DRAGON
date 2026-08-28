@@ -1,0 +1,99 @@
+# Classical two-clock comparison on the closed-FRW \(V=0\) component
+
+## Scope
+
+This bounded, unnumbered calculation compares two classical clocks on the
+already derived component
+
+\[
+p>0,\qquad R=3p^2-2P^2>0,\qquad C=0.
+\]
+
+The clocks are the massless scalar \(\phi\) and the geometric trace momentum
+\(P=ap_a/2\).  The log-scale variable \(Q=2\log a\) is retained as a failure
+control.  The calculation constructs classical complete observables only.  It
+does not define a quantum clock change, raw-\(C\) physical inner product,
+Born--Oppenheimer correction, decoherence functional or likelihood.
+
+## Dirac coordinate and clock factors
+
+On shell,
+
+\[
+e^{2Q}=\frac{R}{72\pi^4},\qquad
+\Phi=\phi-\sqrt{\frac32}\,
+\operatorname{atanh}\!\left(\sqrt{\frac23}\frac{P}{p}\right).
+\]
+
+The invariant is weak rather than strong off shell:
+
+\[
+\{\Phi,C\}=\frac{3p}{2R}C\approx0,\qquad \{p,C\}=0.
+\]
+
+The two selected clock factors are positive on the declared orbit,
+
+\[
+\{\phi,C\}=\frac{e^{-3Q/2}p}{2\pi^2}>0,
+\]
+
+\[
+\{P,C\}=-C_Q\approx12\pi^2e^{Q/2}>0.
+\]
+
+In contrast,
+
+\[
+\{Q,C\}=-\frac{e^{-3Q/2}P}{3\pi^2}
+\]
+
+vanishes at \(P=0\).  Thus \(Q\) requires separate expanding and contracting
+clock charts.
+
+## Complete observables
+
+At scalar-clock reading \(\tau\),
+
+\[
+P_\phi(\tau)=\sqrt{\frac32}\,p\,
+\tanh\!\left[\sqrt{\frac23}(\tau-\Phi)\right],
+\]
+
+\[
+Q_\phi(\tau)=\frac12\log
+\frac{3p^2-2P_\phi(\tau)^2}{72\pi^4}.
+\]
+
+At trace-momentum reading \(\sigma\), with
+\(|\sigma|<\sqrt{3/2}\,p\),
+
+\[
+\phi_P(\sigma)=\Phi+\sqrt{\frac32}\,
+\operatorname{atanh}\!\left(\sqrt{\frac23}\frac{\sigma}{p}\right),
+\]
+
+\[
+Q_P(\sigma)=\frac12\log
+\frac{3p^2-2\sigma^2}{72\pi^4}.
+\]
+
+The executable checks current-reading recovery, the inverse relation
+\(P_\phi(\phi_P(\sigma))=\sigma\), equality of the two \(Q\) descriptions,
+monotonicity, and weak gauge invariance for functions of \((\Phi,p)\).
+
+## Boundary
+
+Classical agreement on the overlap does not imply unitary equivalence after
+quantization.  That later question requires the raw-\(C\) spectral/RAQ
+construction, physical inner product, self-adjoint clock observables and a
+controlled quantum reduction map.  A \(V\ne0\) bounce is also separate: the
+scalar and geometric clock factors must be checked anew and may vanish at its
+time-symmetric point.
+
+## Intended execution
+
+After the source is reviewed and committed, the only execution command is
+
+```text
+./ice run v0_two_clock_relational_observable_comparison
+```

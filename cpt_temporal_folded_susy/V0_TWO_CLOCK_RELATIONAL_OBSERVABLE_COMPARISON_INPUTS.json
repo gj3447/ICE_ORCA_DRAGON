@@ -1,0 +1,93 @@
+{
+  "schema_version": "ice.v0-two-clock-relational-observable-comparison.input.v1",
+  "calculation_id": "V0TwoClockRelationalObservableComparison",
+  "numbered_phase": null,
+  "question": "On the already derived p>0, R=3p^2-2P^2>0 component of the closed-FRW V=0 constraint surface, do the scalar clock phi and the geometric trace-momentum clock P define mutually consistent classical complete observables on their common chart, and where does the log-scale clock Q fail?",
+  "kind": "EXACT_CLASSICAL_TWO_CLOCK_COMPLETE_OBSERVABLE_AND_CLOCK_DOMAIN_AUDIT",
+  "epistemic_scope": "ONE_CLASSICAL_V0_CLOSED_FRW_CONSTRAINT_COMPONENT_SCALAR_CLOCK_VERSUS_TRACE_MOMENTUM_CLOCK_WITH_LOG_SCALE_FAILURE_CONTROL",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_OFFSHELL_DARBOUX_CHART_RESULT.json",
+      "sha256": "6fcae74d9344984682c097731906ef1d4b1c01c4862c42ba54db7c464a7659f7",
+      "payload_sha256_without_self": "38bfaee2fee30399bc3f1c16c17c0330bc97f6343306a9f5860d296b67a11cd5",
+      "required_verdict": "KEEP_V0_CLASSICAL_COMPONENTWISE_OFFSHELL_DARBOUX_CHART",
+      "role": "fixes the U_plus classical constraint component and the on-shell invariant Phi used here; it supplies no two-clock comparison or quantum clock map"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "B. Dittrich, Partial and Complete Observables for Canonical General Relativity, arXiv:gr-qc/0507106",
+      "url": "https://arxiv.org/abs/gr-qc/0507106",
+      "used_for": "the classical partial/complete-observable framework and the requirement to state a clock chart",
+      "not_used_for": "deriving the repository-specific closed-FRW invariant or proving a quantum clock equivalence"
+    },
+    {
+      "source": "P. A. Hoehn and A. Vanrietvelde, How to switch between relational quantum clocks, arXiv:1810.04153",
+      "url": "https://arxiv.org/abs/1810.04153",
+      "used_for": "the scope warning that clock changes require a clock-neutral constrained description and careful treatment of degenerate clock regions",
+      "not_used_for": "claiming that this classical calculation constructs their quantum reduction maps"
+    }
+  ],
+  "declared_model": {
+    "phase_space": "Q=2*log(a), P=a*p_a/2, phi, p with {Q,P}={phi,p}=1",
+    "constraint": "C=exp(-3Q/2)*(3p^2-2P^2)/(12*pi^2)-6*pi^2*exp(Q/2)",
+    "component": "p>0 and R=3p^2-2P^2>0",
+    "constraint_surface": "C=0 implies exp(2Q)=R/(72*pi^4)",
+    "dirac_coordinate": "Phi=phi-sqrt(3/2)*atanh(sqrt(2/3)*P/p), weakly commuting with C",
+    "clock_one": "scalar phi, with FP_phi={phi,C}>0 on the declared component",
+    "clock_two": "geometric trace momentum P, with FP_P={P,C}=-C_Q>0 on shell",
+    "failed_control_clock": "Q=2 log(a), whose FP factor {Q,C}=C_P vanishes at P=0 and changes sign"
+  },
+  "tasks": [
+    "verify the constraint-shell identity and the weak Dirac property of Phi",
+    "derive and sign-check the phi-clock and P-clock Faddeev-Popov factors",
+    "construct P_phi(tau), Q_phi(tau), phi_P(sigma), and Q_P(sigma) from Phi and p",
+    "verify clock reading recovery, weak gauge invariance, and mutual composition on the overlap",
+    "record the finite P-clock interval, the full scalar-clock range, and the Q-clock turning-point obstruction",
+    "leave quantum clock maps, physical inner products, V-nonzero evolution, BO, decoherence, likelihood, physics and TOE outputs null"
+  ],
+  "decision_table": [
+    {
+      "condition": "all exact constraint, Dirac, FP, complete-observable, overlap and clock-domain checks pass",
+      "verdict": "KEEP_V0_CLASSICAL_SCALAR_AND_TRACE_MOMENTUM_CLOCKS_AGREE_ON_OVERLAP_Q_CLOCK_TURNS",
+      "programme_impact": "KEEP_ONE_CLASSICAL_TWO_CLOCK_CHART_AND_REQUIRE_BRANCHING_FOR_LOG_SCALE_CLOCK",
+      "meaning": "the declared classical complete observables agree where both clocks are valid; no quantum equivalence follows"
+    },
+    {
+      "condition": "any exact identity or declared clock-domain check fails",
+      "verdict": "KILL_DECLARED_V0_TWO_CLOCK_RELATIONAL_COMPARISON",
+      "programme_impact": "RETAIN_THE_UPSTREAM_DARBOUX_CHART_AND_REOPEN_THE_CLOCK_FORMULAE",
+      "meaning": "reject this declared comparison without drawing a conclusion about other clocks or models"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "quantum_relational_observable": null,
+    "quantum_clock_change_map": null,
+    "clock_change_unitarity": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "V_nonzero_clock_completion": null,
+    "inhomogeneous_relational_observable": null,
+    "born_oppenheimer_correction": null,
+    "decoherence_functional": null,
+    "primordial_spectrum": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
