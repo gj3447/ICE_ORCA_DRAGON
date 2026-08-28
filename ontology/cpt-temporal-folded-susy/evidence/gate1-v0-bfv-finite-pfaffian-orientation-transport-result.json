@@ -1,0 +1,141 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T07:27:54Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_bfv_finite_pfaffian_orientation_transport",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_bfv_finite_pfaffian_orientation_transport.py",
+    "sha256": "4e590f1a7a9cffefda72acabebba546067b19db4a5f0313d596c111e34ce272c",
+    "introduced_in_commit": "98c6310d13345756440cafc84b94426bb387b623"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P39.G1.bfv.orientation.ordered_odd_blocks_antisymmetric",
+      "status": "PASS",
+      "statement": "The pinned zero, m=2, and concatenated odd Hessians are antisymmetric in their declared basis orders."
+    },
+    {
+      "id": "P39.G1.bfv.orientation.zero_block_pfaffian_and_determinant",
+      "status": "PASS",
+      "statement": "In the inherited (rho0,bar_rho0) order, Pf(A0)=-lambda and det(A0)=lambda^2."
+    },
+    {
+      "id": "P39.G1.bfv.orientation.m2_block_pfaffian_and_determinant",
+      "status": "PASS",
+      "statement": "In the inherited (g1,b1,rho1,br1) order, Pf(A1)=lambda^2+pi^2 and det(A1)=(lambda^2+pi^2)^2."
+    },
+    {
+      "id": "P39.G1.bfv.orientation.block_direct_sum_pfaffian",
+      "status": "PASS",
+      "statement": "The declared concatenated six-odd-variable order gives Pf(A0 direct-sum A1)=-lambda*(lambda^2+pi^2)."
+    },
+    {
+      "id": "P39.G1.bfv.orientation.positive_interval_relative_transport",
+      "status": "PASS",
+      "statement": "Pf(A(lambda))/Pf(A(1))=lambda*(lambda^2+pi^2)/(1+pi^2) is strictly positive on [1/2,2]."
+    },
+    {
+      "id": "P39.G1.bfv.orientation.lambda_zero_degeneracy",
+      "status": "PASS",
+      "statement": "At lambda=0 the zero block degenerates while the m=2 block remains nondegenerate."
+    },
+    {
+      "id": "P39.G1.bfv.orientation.negative_lambda_crossing_control",
+      "status": "PASS",
+      "statement": "The lambda=-1/2 control reverses the Pfaffian sign and every real continuation crosses the sole real zero lambda=0."
+    },
+    {
+      "id": "P39.G1.bfv.orientation.bosonic_contour_phase_separation",
+      "status": "PASS",
+      "statement": "det(M1)=-(lambda^2+pi^2)<0 does not select a bosonic Gaussian contour, Maslov phase, or square-root branch."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 8,
+    "numerical_checks": 0,
+    "calculation": {
+      "calculation_id": "Gate1V0BfvFinitePfaffianOrientationTransport",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "KEEP_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORT",
+      "programme_impact": "CLOSE_ONE_FINITE_RELATIVE_ODD_ORIENTATION_TRANSPORT_ONLY_KEEP_ABSOLUTE_BFV_MEASURE_OPEN"
+    },
+    "schema_transport": {
+      "phase_field": "P39 denotes inherited Gate-1 provenance required by research-run-evidence/v1; this calculation has numbered_phase=null and creates no new phase.",
+      "outer_check_ids_semantics": "The outer P39.G1.bfv.orientation.* IDs are schema-transport aliases only and do not denote a Phase-39 execution.",
+      "authoritative_check_prefix": "G1.bfv.orientation."
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact typed extract of one finite relative odd-Pfaffian orientation transport",
+      "definition_commit": "98c6310d13345756440cafc84b94426bb387b623",
+      "raw_result_commit": "d36445e3b4ea166bcd69b118f30532243f2270e6",
+      "reproduction_mapping_commit": "974ded457d1357159d7eb05c2624e091a6bd390f",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_INPUTS.json",
+      "input_manifest_sha256": "d88968a8193342a3ec6130b3a1a811b2e2f763cdf47cece58078a85326c21a79",
+      "runner_sha256": "4e590f1a7a9cffefda72acabebba546067b19db4a5f0313d596c111e34ce272c",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_RESULT.json",
+      "raw_result_outer_sha256": "1a4ecfb9c955e564e142aeb800b9e591eb425ed34765330f882452d1ac16e8c8",
+      "raw_result_payload_sha256_without_self": "ef341b5f2427f35e81d2cf25476b2fce8b7f7d640e3e46bed2995b8188b57ffc",
+      "report_path": "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT.md"
+    },
+    "computed_facts": {
+      "ordered_blocks": "A0(lambda) direct-sum A1(lambda)",
+      "combined_pfaffian": "-lambda*(lambda^2+pi^2)",
+      "relative_pfaffian_to_lambda_1": "lambda*(lambda^2+pi^2)/(1+pi^2)",
+      "positive_transport_interval": "[1/2,2]",
+      "lambda_zero_status": "A0_DEGENERATE_A1_NONDEGENERATE",
+      "negative_lambda_control": "SIGN_REVERSAL_REQUIRES_ZERO_CROSSING",
+      "bosonic_determinant": "-(lambda^2+pi^2)"
+    },
+    "theorem_guards": {
+      "count": 3,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_8_EXECUTABLE_EXACT_CHECKS",
+      "ids": [
+        "G1.bfv.orientation.guard.relative_reference_only",
+        "G1.bfv.orientation.guard.contour_endpoints_gribov_and_gluing_null",
+        "G1.bfv.orientation.guard.no_continuum_or_physics_promotion"
+      ]
+    },
+    "scope_status": {
+      "finite_relative_odd_orientation_transport": "KEEP",
+      "absolute_finite_bfv_measure": null,
+      "bosonic_contour_or_maslov_phase": null,
+      "endpoint_polarization_for_full_trajectory": null,
+      "gribov_copy_census_or_global_gauge_slice": null,
+      "two_slab_gluing": null,
+      "continuum_determinant_or_pfaffian_line": null,
+      "quantum_bfv_anomaly_freedom": null
+    },
+    "fail_closed_outputs": {
+      "absolute_finite_bfv_measure": null,
+      "full_bfv_trajectory_measure": null,
+      "bosonic_contour_or_maslov_phase": null,
+      "lapse_modulus_or_contour_selection": null,
+      "endpoint_polarization_for_full_trajectory": null,
+      "gribov_copy_census_or_global_gauge_slice": null,
+      "two_slab_gluing": null,
+      "continuum_determinant_or_pfaffian_line": null,
+      "brst_cohomology": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_gravity_claim": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    },
+    "ragnarok_termination_audit": {
+      "runtime_policy": "GENERIC_BOUNDED_UNNUMBERED_CORE",
+      "authorization": "USER_DIRECTED_FINITE_BFV_ORIENTATION_TRANSPORT",
+      "automatic_descendants": 0,
+      "automatic_next": null
+    }
+  }
+}

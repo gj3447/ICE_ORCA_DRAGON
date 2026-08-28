@@ -1,0 +1,86 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T07:27:30Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_endpoint_support_restricted_spectral_intertwiner",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_endpoint_support_restricted_spectral_intertwiner.py",
+    "sha256": "7f6618f455533bceca4d4534d1e8116a052204bfe259225cba66f4a37de7d9d2",
+    "introduced_in_commit": "9230bb472a584e6005dfb3b710d53940c6da7f74"
+  },
+  "exact_checks": 7,
+  "checks": [
+    {"id":"P39.G1.endpoint.spectral.coordinate_inverse_and_jacobian","status":"PASS","statement":"on Y_plus, kappa(c,p)=sqrt((3p^2-c)/(2hbar^2)) inverts c=h(kappa,p), and J=|partial_kappa h|=4hbar^2*kappa is strictly positive"},
+    {"id":"P39.G1.endpoint.spectral.delta_kernel_coarea_normalization","status":"PASS","statement":"the spectral graph kernel sqrt(J)*delta(c-h(kappa,p)) gives the declared J^(-1/2) pullback after the one-dimensional coarea factor"},
+    {"id":"P39.G1.endpoint.spectral.unitary_change_of_variables","status":"PASS","statement":"dc=J d kappa and J^(-1/2) make V an isometry from L2(dkappa dp) to L2(dc dp) only on Y_plus"},
+    {"id":"P39.G1.endpoint.spectral.operator_and_domain_intertwining","status":"PASS","statement":"V intertwines M_h with M_c_less and p with p, transporting their maximal multiplication domains"},
+    {"id":"P39.G1.endpoint.spectral.zero_fiber_measure_pullback","status":"PASS","statement":"at c=0 the target delta-fiber form pulls back to dp/(2*sqrt(6)*hbar*p), the selected-H shell weight"},
+    {"id":"P39.G1.endpoint.spectral.unrestricted_target_positive_measure_witness","status":"PASS","statement":"the explicit E witness 1_{1<p<2,4p^2<c<5p^2} has positive squared L2 norm 7/3"},
+    {"id":"P39.G1.endpoint.spectral.p_preserving_unrestricted_joint_support_obstruction","status":"PASS","statement":"the source joint E projection is zero while the unrestricted M_c target has a nonzero E projection, obstructing a simultaneous selected-H and p preserving unitary"}
+  ],
+  "payload": {
+    "exact_checks": 7,
+    "calculation": {
+      "calculation_id": "Gate1V0EndpointSupportRestrictedSpectralIntertwiner",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "NARROW_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+      "programme_impact": "KEEP_EXACT_SELECTED_H_SPECTRAL_COORDINATE_MAP_KILL_P_PRESERVING_UNRESTRICTED_MC_INTERTWINER_KEEP_RAW_C_AND_W_ENDPOINT_DEBTS_OPEN"
+    },
+    "schema_transport": {
+      "phase_field": "P39 is an inherited Gate-1 provenance placeholder required by research-run-evidence/v1; numbered_phase is null and this run creates no numbered phase or descendant.",
+      "authoritative_check_prefix": "G1.endpoint.spectral."
+    },
+    "execution_history": {
+      "definition_commit": "9230bb472a584e6005dfb3b710d53940c6da7f74",
+      "successful_result_commit": "3c0c5ceaa950357fa56b8aacbc48208bb6a73308",
+      "result_observed_at_utc": "2026-08-28T07:27:30Z",
+      "reproduction_mapping_commit": "974ded457d1357159d7eb05c2624e091a6bd390f",
+      "reproduction": "REPRO; 1 checked; 0 needs-attention"
+    },
+    "evidence_transport": {
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_INPUTS.json",
+      "input_manifest_sha256": "2ead98d6fb7aa502891b8399b278a3fd1a898c15985606b82a02502c6d05fde0",
+      "runner_sha256": "7f6618f455533bceca4d4534d1e8116a052204bfe259225cba66f4a37de7d9d2",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_RESULT.json",
+      "raw_result_outer_sha256": "2a51b52fd61001d15afa77e1f7bd5ba8b4b8438e7ec1303c62748d27ff3ad558",
+      "raw_result_payload_sha256_without_self": "c29c6d6bf9337f804c9da27bc6bc477f9751ab0432967550d88056cbf72d4936",
+      "raw_result_size_bytes": 12973
+    },
+    "computed_facts": {
+      "selected_H_source_space": "L2((0,infinity)_kappa times (0,infinity)_p,d kappa dp)",
+      "restricted_target": "Y_plus={(c,p):p>0,c<3p^2} with L2(dc dp)",
+      "coordinate_map": "c=3p^2-2*hbar^2*kappa^2; J=4*hbar^2*kappa",
+      "spectral_unitary": "(V A)(c,p)=J(c,p)^(-1/2) A(kappa(c,p),p)",
+      "zero_fiber_measure": "dp/(2*sqrt(6)*hbar*p)",
+      "unrestricted_target_obstruction": "no exact unitary simultaneously intertwining selected H and p with declared unrestricted (M_c,p)",
+      "old_W_endpoint_FIO": null,
+      "raw_C_operator_equivalence": null,
+      "global_kappa_zero_or_c_boundary_completion": null,
+      "cross_branch_gluing_or_origin_atom": null,
+      "absolute_bfv_measure": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "relational_observables_or_decoherence": null,
+      "empirical_likelihood": null,
+      "quantum_gravity_claim": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "automatic_next": null
+    },
+    "theorem_guards": {
+      "count": 5,
+      "status": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDITS_NOT_EXECUTABLE_NUMERICAL_PREDICATES",
+      "ids": [
+        "P39.G1.endpoint.spectral.guard.maximal_multiplication_and_unitary_conjugation",
+        "P39.G1.endpoint.spectral.guard.coarea_zero_fiber",
+        "P39.G1.endpoint.spectral.guard.joint_spectral_obstruction",
+        "P39.G1.endpoint.spectral.guard.compact_interior_fio_only",
+        "P39.G1.endpoint.spectral.guard.old_endpoint_kill_retained"
+      ]
+    }
+  }
+}
