@@ -34,6 +34,37 @@ bridges belong to different theorem classes and should not be treated as one ser
    (V=0), massless-scalar, closed-FRW sector has no standard inflation/reheating mechanism and therefore
    does not by itself produce a CMB likelihood input.
 
+## Repository follow-through on the map
+
+Three independent, unnumbered bounded calculations now sharpen Bridges 3--5.
+They are repository workbench evidence, not facts supplied by the papers in
+this literature inventory.
+
+- **Bridge 3, scoped progress:** the selected-\(H\) spectral-coordinate map is
+  exactly unitary onto the proper target \(p>0,c<3p^2\) and intertwines both
+  \(M_h\leftrightarrow M_c\) and \(p\leftrightarrow p\). The explicit target
+  witness \(1_{1<p<2,4p^2<c<5p^2}\) has norm squared \(7/3\), while its source
+  joint-spectral projection is zero. Hence the previously declared
+  unrestricted \((M_c,p)\) target cannot be reached by a \(p\)-preserving exact
+  unitary. This is not the old \(W(c,P,p)\) FIO and does not solve the raw-\(C\)
+  endpoint problem.
+- **Bridge 4, finite relative progress:** for the pinned zero and \(m=2\) odd
+  blocks, \(\operatorname{Pf}(A_0\oplus A_1)=-\lambda(\lambda^2+\pi^2)\).
+  Its relative sign is fixed on \([1/2,2]\), but the line degenerates at
+  \(\lambda=0\). No bosonic contour, endpoint polarization, Gribov census,
+  gluing law, continuum line or absolute measure is selected.
+- **Bridge 5, kinematic baseline only:** the unit-\(S^3\), one-pole zonal
+  \(L=2\) ledger finds explicit discarded \(Z_3,Z_4\) components. Its projected
+  associator is exactly reconstructed from those discarded remainders. This
+  separates one finite-cutoff artifact from a future anomaly test, but it does
+  not construct ADM+matter constraints or test HDA/Jacobi closure.
+
+Accordingly, Bridge 6 remains blocked by an actual classical closure result,
+a selected common raw operator domain and absolute BFV boundary/measure data.
+Relational/BO/decoherence and likelihood work remains downstream, and the
+current \(V=0\) sector still needs an explicit \(V\ne0\) or alternative
+perturbation-generation and reheating model before CMB comparison is defined.
+
 This map classifies papers as follows:
 
 - **D — direct:** its theorem or construction is close to the exact bridge question.

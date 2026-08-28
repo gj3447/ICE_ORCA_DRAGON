@@ -26,10 +26,18 @@ or TOE promotion. Gate 1 remains `OPEN_PARTIAL_PROGRESS`, global promotion is
   구성하는 데이터다.
 - **부정적 결과의 의미:** 현재 KILL은 잘못된 지름길만 제거한다. 양자우주론이나
   양자중력 전체가 틀렸다는 결론은 아니다.
-- **다음 연결 방향:** standard full-\(p\) 완성은 scoped `KEEP`으로 닫혔다. 그 뒤
-  raw \(C\leftrightarrow H\) domain 감사, microlocal/exact endpoint, absolute BFV,
-  고전 \(S^3\) closure, quantum anomaly, relational/BO/decoherence, 관측 likelihood를
-  서로 독립된 작업 단위로 연결한다.
+- **추가로 확인된 것:** 한 raw-\(C\) ordering은 fixed-\(p\)마다 자기수반 경계선이
+  추가로 필요하다. 선택된 \(H\)의 정확한 spectral-coordinate unitary는
+  \(c<3p^2\) 표적에만 닫히며, \(p\)를 보존한 채 unrestricted \(M_c\)로 가는
+  unitary는 공동스펙트럼 지지 때문에 막힌다.
+- **BFV와 \(S^3\)의 현재 진전:** 두 finite ghost block의 상대 Pfaffian orientation은
+  \(\lambda\in[1/2,2]\)에서 운반되지만 absolute measure는 아니다. unit \(S^3\)의
+  \(L=2\) zonal product ledger는 discarded \(Z_3,Z_4\) remainder가 projected
+  nonassociativity를 정확히 만든다는 것을 보였다. 이는 아직 HDA/anomaly 계산이 아니다.
+- **다음 연결 방향:** Stage 3은 support-restricted selected-\(H\) 부분만, Stage 4는
+  finite relative orientation만, Stage 5는 kinematic `5A`만 진전했다. raw global
+  domain, exact raw endpoint, absolute BFV, `5B` classical HDA, quantum anomaly,
+  relational/BO/decoherence, 관측 likelihood는 각각 독립된 작업 단위로 남는다.
 - **현재 경계:** 마지막 두 단계가 완성되기 전에는 이 결과를 양자중력 설명이나
   관측 가능한 물리 주장으로 승격하지 않는다.
 
@@ -367,6 +375,146 @@ accounting result. It does not choose a lapse contour or prove full BFV gauge
 independence. The constant \(\lambda\) scaling here is not the field-dependent
 constraint densitization \(C\mapsto H\).
 
+### 1.10 One declared weighted raw-\(C\) domain
+
+For the separately declared Hilbert space and left-weighted ordering
+
+\[
+\mathcal H_C=L^2(\mathbb R^2,f\,dQ\,d\phi),\qquad
+C_{\min}=f^{-1}\widehat H\big|_{C_c^\infty},\qquad
+f=12\pi^2e^{3Q/2},
+\]
+
+the unitary map \(U\chi=f^{1/2}\chi\) gives
+
+\[
+UC_{\min}U^{-1}=f^{-1/2}\widehat Hf^{-1/2}.
+\]
+
+After Fourier transformation in \(\phi\), every fixed-\(p\) minimal fiber is
+limit-circle at \(Q\to-\infty\), limit-point at \(Q\to+\infty\), and has
+deficiency indices
+
+\[
+\boxed{n_+(C_p)=n_-(C_p)=1.}
+\]
+
+Thus a boundary line is extra data for every fiber. The calculation does not
+select a measurable field of boundary lines, a general \(p\)-mixing extension,
+a raw rigging map, or \(C\leftrightarrow H\) quantum equivalence.
+
+### 1.11 Exact selected-\(H\) spectral coordinate and endpoint boundary
+
+On the \(p>0\) selected-\(H\) spectral space set
+
+\[
+c=h(\kappa,p)=3p^2-2\hbar^2\kappa^2,
+\quad
+\kappa(c,p)=\sqrt{\frac{3p^2-c}{2\hbar^2}},
+\quad
+J=\left|\frac{\partial c}{\partial\kappa}\right|
+=4\hbar^2\kappa.
+\]
+
+The exact change-of-variables unitary is
+
+\[
+\boxed{(VA)(c,p)=J(c,p)^{-1/2}A(\kappa(c,p),p)}
+\]
+
+from \(L^2(d\kappa\,dp)\) onto
+
+\[
+L^2\!\left(\{(c,p):p>0,\ c<3p^2\},dc\,dp\right),
+\]
+
+and it intertwines both \(M_h\leftrightarrow M_c\) on that restricted target
+and \(p\leftrightarrow p\), including maximal multiplication domains. At
+\(c=0\), \(J=2\sqrt6\hbar p\), so the delta-fiber pulls back to the selected
+\(dp/(2\sqrt6\hbar p)\) form.
+
+The unrestricted target contains the positive-measure witness
+
+\[
+E_0=\{1<p<2,\ 4p^2<c<5p^2\},\qquad
+\|1_{E_0}\|^2=\frac73,
+\]
+
+whereas the source joint spectrum has no support there. Hence no unitary can
+simultaneously intertwine \((M_h,p)\) with the previously declared
+unrestricted \((M_c,p)\). This says nothing against a unitary that abandons
+\(p\) preservation. The delta kernel is a compact-interior spectral graph FIO;
+it is not the old \(W(c,P,p)\) endpoint FIO, does not repair that one-term
+kernel, and supplies no global theorem at \(\kappa=0\).
+
+### 1.12 Finite relative BFV Pfaffian orientation
+
+For the hash-pinned ordered zero and \(m=2\) odd blocks,
+
+\[
+A_0=\begin{pmatrix}0&-\lambda\\ \lambda&0\end{pmatrix},
+\qquad
+\operatorname{Pf}A_0=-\lambda,
+\]
+
+\[
+\operatorname{Pf}A_1=\lambda^2+\pi^2,
+\qquad
+\operatorname{Pf}(A_0\oplus A_1)
+=-\lambda(\lambda^2+\pi^2).
+\]
+
+Relative to \(\lambda=1\), the ratio
+
+\[
+\frac{\operatorname{Pf}A(\lambda)}{\operatorname{Pf}A(1)}
+=\frac{\lambda(\lambda^2+\pi^2)}{1+\pi^2}>0
+\]
+
+on \([1/2,2]\). It vanishes at \(\lambda=0\), and the negative-\(\lambda\)
+control reverses sign only after crossing that degeneracy. This transports one
+relative finite odd-basis orientation. It does not select the bosonic Gaussian
+contour or square-root branch, endpoint polarization, Gribov sector, gluing,
+continuum determinant line, or absolute BFV normalization.
+
+### 1.13 Unit-\(S^3\), \(L=2\) scalar projection remainder
+
+For the normalized one-pole zonal harmonics
+
+\[
+Z_n(\chi)=(2\pi^2)^{-1/2}C_n^{(1)}(\cos\chi),
+\qquad
+\Delta_{S^3}Z_n=-n(n+2)Z_n,
+\]
+
+the exact character product is
+
+\[
+Z_lZ_m=(2\pi^2)^{-1/2}
+\sum_{k=0}^{\min(l,m)}Z_{l+m-2k}.
+\]
+
+At cutoff \(P_2\),
+
+\[
+Z_2^2=(2\pi^2)^{-1/2}(Z_4+Z_2+Z_0),
+\qquad
+\|R_{22}\|^2=\frac1{2\pi^2},
+\]
+
+so the truncated scalar subspace is not product-closed. The projected-product
+associator is
+
+\[
+P_2(P_2(Z_1Z_2)Z_2)-P_2(Z_1P_2(Z_2Z_2))
+=-\frac{Z_1}{2\pi^2},
+\]
+
+and is exactly reconstructed as
+\(-P_2(R_{12}Z_2)+P_2(Z_1R_{22})\). This is a kinematic truncation ledger,
+not a calculation of the ADM constraints, the hypersurface-deformation or
+Jacobi algebra, or quantum BFV nilpotency.
+
 ## 2. Computed facts, interpretation, and open hypotheses
 
 ### Computed facts
@@ -382,24 +530,39 @@ constraint densitization \(C\mapsto H\).
 - on the declared full-real-\(p\) regular shell, the completion is
   \(L^2(\mathbb R,dx)_+\oplus L^2(\mathbb R,dx)_-\), \(p=0\) lies at
   \(x=-\infty\), and no origin atom is inherited from the auxiliary measure;
+- for one declared weighted raw-\(C\) candidate, every fixed-\(p\) minimal
+  fiber is limit-circle/limit-point with indices \((1,1)\), so its
+  self-adjoint boundary line is not fixed by the classical rescaling;
+- the selected-\(H\) spectral-coordinate map is an exact \((M_h,p)\)
+  intertwiner only to \(c<3p^2\), while a positive-measure joint-support
+  witness obstructs the \(p\)-preserving unrestricted \(M_c\) target;
 - direct Berezin integration equals determinant-weighted ghost elimination;
-  unweighted ghost deletion fails the local Ward identity.
+  unweighted ghost deletion fails the local Ward identity;
+- one finite ordered zero-plus-\(m=2\) ghost family has constant relative
+  Pfaffian orientation on \(\lambda\in[1/2,2]\), with a zero at \(\lambda=0\);
+- the unit-\(S^3\), \(L=2\), one-pole scalar-zonal projection has explicit
+  discarded \(Z_3,Z_4\) modes, and its projected associator is exactly the
+  recorded truncation remainder.
 
 ### Interpretation
 
 The record has advanced from a declared local spectral fiber to one selected,
-order/domain-fixed minisuperspace realization and two sharp boundary discriminators.
-It shows how ordering, branch, test space, measure, edge domain, and determinant
-bookkeeping are constitutive data of the selected quantum model.
+order/domain-fixed minisuperspace realization, one raw-fiber domain diagnosis,
+one support-restricted exact spectral map, a finite relative determinant-line
+transport, and a first closed-\(S^3\) truncation control. It shows how ordering,
+branch, test space, support, measure, edge domain, determinant orientation and
+mode projection are constitutive data of the selected model.
 
 ### Open hypotheses
 
-No current result establishes a raw-\(C\) quantum theory, equivalence between
-raw \(C\), densitized \(H\), and \(M_c\), a canonical origin sector or
-cross-branch gluing beyond the standard selected-\(H\) direct sum, an absolute
-lapse/BFV measure, an inhomogeneous anomaly-free constraint algebra,
-relational observables, a semiclassical Einstein limit, an empirical
-prediction, quantum gravity, or a TOE.
+No current result selects a measurable global raw-\(C\) extension or rigging
+map, establishes equivalence between raw \(C\), densitized \(H\), and \(M_c\),
+constructs the old exact endpoint-state transform, supplies a canonical origin
+sector or cross-branch gluing beyond the standard selected-\(H\) direct sum, or
+fixes an absolute lapse/BFV measure. The \(S^3\) ledger is not the classical
+HDA/Jacobi calculation. Consequently no inhomogeneous anomaly-free constraint
+algebra, relational observable, semiclassical Einstein limit, empirical
+prediction, quantum-gravity theory, or TOE is established.
 
 ## 3. Philosophical implications
 
@@ -459,26 +622,29 @@ The explicit work order is
 ```text
 1 full-p regular completion [scoped KEEP]
   -> 2 raw-C operator/domain audit [fiber classification NARROW; global domain open]
-  -> 3 microlocal then exact endpoint
-  -> 4 absolute BFV
-  -> 5 classical closed-S3 HDA/Jacobi closure
+  -> 3 microlocal then exact endpoint [selected-H restricted-target NARROW]
+  -> 4 absolute BFV [finite relative orientation KEEP; absolute data open]
+  -> 5A closed-S3 scalar truncation ledger [kinematic KEEP]
+  -> 5B classical closed-S3 HDA/Jacobi closure [open]
   -> 6 quantum BFV anomaly
   -> 7 relational observables + BO/Ehrenfest + decoherence
   -> 8 non-flat transfer + observational likelihood
 ```
 
 This is an ordering ledger, not one recursively authorized calculation. Stage
-5 can start as an independent classical audit once its action and harmonic
-couplings are declared; Stage 6 remains downstream of raw-domain, BFV and
-classical-closure results.
+5A was independently executed, but it supplied only the projection-remainder
+baseline. Stage 5B can start once the full action, canonical variables and
+harmonic couplings are declared; Stage 6 remains downstream of a selected raw
+domain, absolute BFV data and actual classical-closure results.
 
 | Stage and node | Prerequisite | Success discriminator | Failure or branch discriminator |
 | --- | --- | --- | --- |
 | 1 `open:gate1-v0-p-zero-p-negative-global-spectral-completion` | the \(p>0\) KL fiber and cutoff edge result | **observed:** selected-\(H\) regular completion is the two \(L^2(dx)\) branches with no inherited origin atom | any nonstandard origin sector or gluing still needs independent data |
 | 2 `open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion` | one declared weighted raw-\(C\) candidate and the selected-\(H\) comparison target | **observed:** each fixed-\(p\) raw fiber is limit-circle at \(Q\to-\infty\), limit-point at \(Q\to+\infty\), with indices \((1,1)\); a measurable global extension and RAQ equivalence remain open | the classical multiplier alone does not select the fiber boundary line or establish quantum equivalence |
-| 3 `open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol` | the classical Darboux chart and principal FIO; a raw-\(C\) exact map additionally needs a selected global raw domain | a full symbol and common domains give the raw-\(C\) map, or a separately labelled selected-\(H\) support-restricted spectral intertwiner | the unrestricted selected-\(H\to M_c\) joint-support mismatch or lower-symbol/domain obstruction survives |
-| 4 `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` | the relative quartet and repaired zero-ghost Ward ledger | one contour/modulus/orientation prescription yields an absolute measure and passes Ward/gluing checks | contour, orientation, normalization or Gribov dependence persists |
-| 5 `open:gate1-v0-classical-s3-hda-closure` | full ADM+matter action, perturbative order and \(S^3\) coupling ledger | projected HDA and Jacobi identities close with the projection remainder separately bounded | a genuine classical remainder survives after cutoff error is removed |
+| 3 `open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol` | the classical Darboux chart and principal FIO; a raw-\(C\) exact map additionally needs a selected global raw domain | **observed partial:** the selected-\(H\) spectral map is exact to \(c<3p^2\); remaining success requires a raw-domain endpoint map or a deliberately restricted physical target | **observed obstruction:** no \(p\)-preserving exact unitary reaches the declared unrestricted \(M_c\); old-\(W\) full symbol and global edge stay open |
+| 4 `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` | the relative quartet and repaired zero-ghost Ward ledger | **observed partial:** one finite relative odd orientation transports on \([1/2,2]\); remaining success requires contour, endpoint, Gribov, determinant-line and gluing data to define an absolute measure | \(\lambda=0\) degeneracy, contour/orientation/normalization dependence or gluing failure persists |
+| 5A `concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger` | unit-\(S^3\) zonal convention and \(L=2\) projection | **observed:** exact product, parity, discarded-mode norms and associator/remainder identity | this row cannot pass or fail HDA closure because no canonical constraints are present |
+| 5B `open:gate1-v0-classical-s3-hda-closure` | full ADM+matter action, perturbative order, scalar/vector/tensor variables, projected Poisson brackets and the 5A remainder baseline | projected HDA and Jacobi identities close with the projection remainder separately bounded | a genuine classical remainder survives after cutoff error is removed |
 | 6 `open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly` | Stages 2, 4 and 5 plus a common operator domain | \(\widehat\Omega^2\) vanishes to declared perturbative, \(\hbar\) and cutoff orders | a regulator-stable operator anomaly or domain leakage remains |
 | 7 `open:gate1-v0-relational-observables-bo-decoherence` | physical product, Stage 6 modes, clocks and a selected contour | clock-cross-checked observables and BO/Ehrenfest/decoherence residuals meet fixed errors | observables or classical recovery remain clock/domain/contour dependent |
 | 8 `open:gate1-v0-empirical-likelihood-bridge` | Stage 7 plus an explicit \(V\ne0\) or alternative generation/reheating extension | discrete closed-universe spectra propagate through non-flat transfer to posterior-predictive tests | no primordial/late-time map or empirical discriminator exists |
@@ -504,10 +670,24 @@ declared weighted raw C candidate
   -> one boundary line per fixed p
   -> measurable global extension + RAQ equivalence still open
 
+selected-H spectral coordinates
+  -> exact unitary onto c<3p^2
+  -> exact M_h and p intertwining on that restricted target
+  -> positive-measure obstruction to p-preserving unrestricted M_c
+  -> old-W full symbol + raw-C endpoint map still open
+
 BFV source algebra
   -> zero-block Gaussian determinant
   -> local Ward equality
-  -> lapse/absolute-measure open problem
+  -> finite zero-plus-m2 relative Pfaffian orientation on positive lambda
+  -> lambda-zero degeneracy
+  -> contour/endpoint/Gribov/gluing/absolute-measure open problem
+
+unit-S3 zonal scalar ledger
+  -> L=2 exact product and projection
+  -> explicit discarded Z3/Z4 remainder
+  -> projected associator reconstructed from remainder
+  -> full ADM+matter HDA/Jacobi closure still open
 
 computed formula ledgers
   -> interpretation boundaries
@@ -533,12 +713,24 @@ ratification or automatic successor receipt.
 - [`GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT.md`](GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT.md)
   records the declared weighted raw-\(C\) ordering, fiber Weyl classification,
   boundary-form ledger, extension debt and still-null global measurable domain.
+- [`GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER.md`](GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER.md)
+  records the exact selected-\(H\) coordinate unitary, restricted target,
+  zero-fiber pullback and unrestricted joint-support obstruction.
+- [`GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT.md`](GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT.md)
+  records the finite relative odd-line orientation and the still-null absolute
+  BFV data.
+- [`GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER.md`](GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER.md)
+  records the unit-\(S^3\), \(L=2\) scalar projection remainder and its strict
+  non-HDA/non-anomaly boundary.
 - `evidence:gate1-v0-densitized-liouville-raq-result`,
   `evidence:gate1-v0-densitized-raq-p-zero-boundary-result`, and
   `evidence:gate1-v0-full-p-regular-raq-completion-result`,
   `evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result`, together with
-  `evidence:gate1-v0-bfv-zero-mode-elimination-ward-result`, carry executable
-  checks and provenance.
+  `evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result`,
+  `evidence:gate1-v0-bfv-zero-mode-elimination-ward-result`,
+  `evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result`, and
+  `evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result`, carry
+  executable checks and provenance.
 - `source:nist-dlmf-bessel-kl`,
   `source:nist-dlmf-exponential-integral`, `source:marolf-1995`,
   `source:giulini-2000-group-averaging-raq`, and

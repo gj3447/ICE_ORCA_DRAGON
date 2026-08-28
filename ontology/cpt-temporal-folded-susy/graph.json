@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-28T07:20:00Z",
+  "updated_at_utc": "2026-08-28T07:31:00Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -456,7 +456,7 @@
     },
     {
       "question": "How far did the trace-gauge V0 spectral-to-m2 BFV chain get?",
-      "answer": "The chain remains local but now includes a first raw-C domain result. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, the selected densitized Liouville model has its scoped KL/RAQ and full-real-p regular completion. For one separately declared weighted raw-C ordering, every fixed-p minimal fiber is limit-circle at Q=-infinity and limit-point at Q=+infinity with indices (1,1), so one boundary line is extra data. No measurable global raw-C extension, raw rigging map or C/H equivalence was constructed. Direct ghost retention and weighted elimination agree; unweighted deletion is KILL. No result selects an absolute BFV measure, exact endpoint state transform, anomaly-free inhomogeneous theory, empirical map, physics or TOE claim.",
+      "answer": "The chain now contains a selected-H p-positive exact coordinate unitary only to c<3p^2; the positive-measure complement obstructs a p-preserving intertwiner to declared unrestricted M_c. This is separate from the old W(c,P,p) FIO and leaves raw-C/global-edge work open. A finite positive-lambda odd-Pfaffian transport is KEEP only as a relative orientation identity: absolute BFV measure remains open. The L=2 S3 zonal scalar ledger is kinematic only: product closure fails and its projected associator is exactly the discarded remainder, not HDA or anomaly. Raw-C global extension/equivalence, HDA/Jacobi, quantum anomaly, relational recovery, V!=0 generation/reheating and likelihood all remain open; physics and TOE are null.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -479,12 +479,17 @@
         "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
         "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
-        "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
+        "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+        "claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+        "claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+        "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+        "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+        "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER"
       ]
     },
     {
       "question": "Where are the V0 formulas, philosophical implications, and next research bridges organized?",
-      "answer": "The formula ontology follows the selected-H chain through KL/RAQ and full-p completion, and separately records the declared weighted raw-C fiber/domain audit. A separate interpretive layer records that exact solvability is conditional and minisuperspace is a laboratory. The roadmap exposes eight stages: Stage 1 is scoped KEEP; Stage 2 now has a fixed-p NARROW while global extension/equivalence remains open; endpoint, absolute BFV, classical closed-S3 closure, quantum anomaly, relational/BO/decoherence and empirical likelihood follow as independent questions. These are local KG memory edges with no automatic execution or external ratification.",
+      "answer": "The ontology now records the selected-H Stage-3 restricted-target NARROW, a finite relative Stage-4 Pfaffian KEEP with absolute measure open, and a kinematic Stage-5A S3 scalar remainder KEEP while Stage-5B HDA/Jacobi remains open. Stage 6 requires actual HDA plus a selected raw-C common domain and absolute BFV data; Stages 7–8 remain blocked, and frozen V=0 has neither standard perturbation generation nor reheating. These are local KG memory edges with no automatic execution, physics promotion or external ratification.",
       "claim_ids": [
         "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
         "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
@@ -494,7 +499,12 @@
         "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
         "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
-        "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
+        "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
+        "claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+        "claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+        "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+        "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+        "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER"
       ]
     }
   ],
@@ -1184,7 +1194,7 @@
     {
       "id": "reading-path:gate1-v0-formula-philosophy-to-quantum-gravity-frontier",
       "title": "From the selected V0 formula chain to the quantum-gravity frontier",
-      "summary": "Read the equations in derivational order, then cross the explicit boundary from computed facts to non-evidential interpretation. Finish at the dependency-labelled open problems: raw-C/H equivalence, global p-zero/p-negative completion, exact endpoint/Mc intertwining, lapse and absolute BFV measure, inhomogeneous Dirac/BFV closure, and relational-observable/semiclassical/empirical recovery. The path is ontology navigation only and creates no automatic successor.",
+      "summary": "Read the selected-H chain through the support-restricted spectral target and the finite relative Pfaffian orientation ledger, then distinguish the L=2 scalar remainder control from HDA closure. Finish at raw-C/H equivalence, absolute BFV, actual HDA/Jacobi, common-domain quantum anomaly, relational recovery and a V-not-equal-zero generation/reheating extension before likelihood. The path is navigation only and creates no automatic successor.",
       "nodes": [
         "concept:gate1-v0-classical-positive-densitization",
         "concept:gate1-v0-densitized-flat-schrodinger-operator",
@@ -1202,6 +1212,17 @@
         "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
         "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
         "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+        "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+        "claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+        "claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+        "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+        "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+        "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+        "evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result",
+        "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+        "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+        "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER",
+        "evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
         "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
@@ -1215,7 +1236,11 @@
         "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
         "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
         "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+        "open:gate1-v0-classical-s3-hda-closure",
+        "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
         "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+        "open:gate1-v0-relational-observables-bo-decoherence",
+        "open:gate1-v0-empirical-likelihood-bridge",
         "artifact:gate1-v0-quantum-cosmology-ontology-map"
       ]
     }
@@ -12107,7 +12132,7 @@
       "id": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
       "type": "open_problem",
       "title": "V0 lapse modulus, contour and absolute BFV measure",
-      "summary": "The zero-ghost mismatch is repaired only by retaining the induced determinant; no calculation selects the lapse modulus, contour, absolute orientation or full trajectory measure.",
+      "summary": "The zero-ghost mismatch is repaired only by retaining the induced determinant, and one declared finite odd block now has a positive relative Pfaffian ratio on lambda in [1/2,2]. Neither result selects an absolute determinant/Pfaffian-line orientation, lapse modulus or contour, endpoint polarization, Gribov treatment, gluing law or continuum trajectory measure.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
       "question": "What independently derived lapse-modulus, contour and absolute-measure prescription completes the finite BFV trajectory beyond the local zero-mode Ward control?"
     },
@@ -12471,7 +12496,7 @@
       "id": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
       "type": "concept",
       "title": "V0 quantum-cosmology forward research roadmap",
-      "summary": "An eight-stage dependency map: selected-H full-p regular completion; raw-C operator/domain audit; microlocal then exact endpoint; absolute BFV; independently startable classical closed-S3 HDA/Jacobi closure; downstream quantum BFV anomaly; relational/BO/decoherence recovery; and only then empirical likelihood. Stage 1 has a scoped KEEP. Every later stage remains a separately bounded question with automatic_next null.",
+      "summary": "An eight-stage dependency map. Stage 1 has a scoped selected-H full-p KEEP; Stage 2 has a fixed-p raw-C NARROW with global extension/equivalence open; Stage 3 has an exact selected-H unitary only to the support-restricted target and an obstruction to the unrestricted p-preserving target; Stage 4 has only a finite relative Pfaffian KEEP; Stage 5A has only a kinematic closed-S3 projection-remainder ledger. Stage 5B HDA/Jacobi, Stage 6 operator BFV anomaly, Stage 7 relational/BO/decoherence recovery and Stage 8 likelihood remain independent downstream questions with automatic_next null.",
       "state": "ACTIVE_LOCAL_ROADMAP_NO_AUTOMATIC_EXECUTION_AUTHORITY"
     },
     {
@@ -12603,14 +12628,14 @@
       "id": "concept:gate1-v0-eight-stage-work-sequence",
       "type": "concept",
       "title": "Gate-1 V0 eight-stage research work sequence",
-      "summary": "Ordering ledger: selected-H full-p regular completion; raw-C operator/domain; microlocal then exact endpoint; absolute BFV; classical closed-S3 closure; quantum BFV anomaly; relational/BO/decoherence; empirical likelihood. Stage 1 has a scoped KEEP and Stage 2 has a fixed-p NARROW with global extension/equivalence open. Each later stage remains an independent bounded question and no result automatically launches its successor.",
+      "summary": "Ordering ledger: selected-H full-p regular completion; raw-C operator/domain; microlocal then exact endpoint; absolute BFV; classical closed-S3 closure; quantum BFV anomaly; relational/BO/decoherence; empirical likelihood. Stage 1 is a scoped KEEP, Stage 2 a fixed-p NARROW, Stage 3 an exact restricted-target KEEP plus unrestricted-target obstruction, Stage 4 a finite relative-only KEEP, and Stage 5A a kinematic projection-remainder KEEP. Global raw-C equivalence, absolute BFV, Stage 5B HDA/Jacobi and Stages 6-8 remain open. No result automatically launches its successor.",
       "state": "ACTIVE_LOCAL_ROADMAP_NO_AUTOMATIC_EXECUTION_AUTHORITY"
     },
     {
       "id": "open:gate1-v0-classical-s3-hda-closure",
       "type": "open_problem",
       "title": "Classical closed-S3 harmonic HDA and Jacobi closure",
-      "summary": "Independently startable classical lane. Declare the full ADM-plus-matter action, perturbative order, scalar/vector/tensor hyperspherical harmonics and Gaunt/Clebsch-Gordan product ledger. Test projected hypersurface-deformation and Jacobi identities while reporting the non-product-closed projection remainder separately from a genuine algebra failure.",
+      "summary": "Stage 5A now supplies an exact L=2 zonal-scalar product/projection remainder ledger and demonstrates why a cutoff associator can be a discarded-mode effect. Stage 5B remains independently open: declare the full ADM-plus-matter action, perturbative order, scalar/vector/tensor hyperspherical harmonics and Gaunt/Clebsch-Gordan ledger, then test projected hypersurface-deformation and Jacobi identities while separating truncation remainder from a genuine algebra failure.",
       "state": "OPEN_INDEPENDENT_CLASSICAL_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
       "question": "Does the declared closed-S3 perturbative truncation satisfy the classical HDA and Jacobi identities after projection remainder is explicitly separated?"
     },
@@ -12618,7 +12643,7 @@
       "id": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
       "type": "open_problem",
       "title": "Quantum inhomogeneous BFV nilpotency and anomaly",
-      "summary": "Downstream quantum lane. After a raw-domain choice, absolute BFV boundary data and classical closed-S3 closure, construct the regulated common-domain operator charge and test Omega-hat squared to declared perturbative, hbar and harmonic-cutoff orders. A vanishing expectation value is not operator anomaly freedom.",
+      "summary": "Downstream quantum lane, still blocked by a selected measurable raw-C common domain, absolute BFV boundary/orientation data and actual Stage-5B closed-S3 HDA/Jacobi closure. Then construct the regulated common-domain operator charge and test Omega-hat squared as an operator to declared perturbative, hbar and harmonic-cutoff orders. A vanishing expectation value is not operator anomaly freedom.",
       "state": "OPEN_BLOCKED_QUANTUM_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
       "question": "Does the regulated inhomogeneous BFV charge square to zero as an operator on a common domain after cutoff remainder is separated?"
     },
@@ -12626,7 +12651,7 @@
       "id": "open:gate1-v0-relational-observables-bo-decoherence",
       "type": "open_problem",
       "title": "Relational observables, Born-Oppenheimer recovery and decoherence",
-      "summary": "Construct clock-tied perturbative Dirac observables, cross-check a second admissible clock or gauge, and bound Hamilton-Jacobi, effective-Schrodinger norm, constraint-moment, Ehrenfest, backreaction and decoherence-functional residuals. This is pre-data work and supplies no likelihood by itself.",
+      "summary": "After quantum anomaly control and a physical inner product exist, construct clock-tied perturbative Dirac observables, cross-check a second admissible clock or gauge, and bound Hamilton-Jacobi, effective-Schrodinger norm, constraint-moment, Ehrenfest, backreaction and decoherence-functional residuals. This is pre-data work and supplies no likelihood by itself.",
       "state": "OPEN_REQUIRES_ANOMALY_CONTROL_AND_PHYSICAL_PRODUCT_NO_AUTOMATIC_EXECUTION_AUTHORITY",
       "question": "Which relational perturbation observables and semiclassical states recover classical spacetime with declared clock and decoherence error bounds?"
     },
@@ -13026,7 +13051,7 @@
       "state": "TRACKED_NON_EVIDENTIAL_LITERATURE_MAP",
       "artifact_kind": "literature_map",
       "path": "cpt_temporal_folded_susy/GATE1_V0_SIX_BRIDGE_LITERATURE_MAP_2026-08-28.md",
-      "sha256": "810665d38b7d99589f1ba6484f08195605ff92b74d4d47e972e37e13f4c1f6d7"
+      "sha256": "4f26caa43b7bd40fec25609ec5425331ca721ba850667d9b2e122766f57b02da"
     },
     {
       "id": "artifact:gate1-v0-six-bridge-paper-manifest",
@@ -13046,7 +13071,7 @@
       "state": "TRACKED_NON_EVIDENTIAL_ONTOLOGY_MAP",
       "artifact_kind": "ontology_map",
       "path": "cpt_temporal_folded_susy/GATE1_V0_QUANTUM_COSMOLOGY_ONTOLOGY_MAP.md",
-      "sha256": "c3c326c98230dc89e5ba9b53a0c2ebe9e7c83001c43b8025893cdddc59d95406"
+      "sha256": "ce02bde0e17ba881fd348f2443855b7852c7ae3c3993b97fe6eeec5c3455a661"
     },
     {
       "id": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
@@ -13172,6 +13197,335 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-raw-c-weighted-operator-domain-audit-result.json",
       "sha256": "5fcc450f1d8c2768ce07d44eb3e0e5a421958ad258f8b7a9764e840c9d8dfc6a"
+    },
+    {
+      "id": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "type": "concept",
+      "title": "Selected-H support-restricted spectral intertwiner",
+      "summary": "The selected p-positive H spectral coordinates give an exact unitary only to c<3p^2; this is not the old W endpoint FIO or a raw-C result.",
+      "state": "COMPLETED_SELECTED_H_RESTRICTED_TARGET_ONLY"
+    },
+    {
+      "id": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "type": "concept",
+      "title": "Finite relative odd-Pfaffian orientation transport",
+      "summary": "One finite positive-lambda relative orientation transport is controlled; absolute BFV measure, contour, gluing and continuum line remain open.",
+      "state": "COMPLETED_FINITE_RELATIVE_IDENTITY_ABSOLUTE_OPEN"
+    },
+    {
+      "id": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+      "type": "concept",
+      "title": "Closed S3 scalar zonal projection-remainder ledger",
+      "summary": "The L=2 zonal scalar product/projection ledger is kinematic: omitted harmonics produce a reconstructed projected associator, not an HDA or anomaly result.",
+      "state": "COMPLETED_KINEMATIC_STAGE5A_NOT_HDA"
+    },
+    {
+      "id": "claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+      "type": "claim",
+      "title": "Selected H has an exact unitary to the support-restricted c target",
+      "summary": "Supported only for p>0 selected-H spectral coordinates and Y_plus={c<3p^2}; it supplies neither raw-C equivalence nor an endpoint-state transform.",
+      "state": "SUPPORTED_SELECTED_H_RESTRICTED_TARGET_ONLY",
+      "claim_id": "G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+      "statement": "The selected H spectral coordinate map is unitary from L2(dkappa dp) to L2(Y_plus,dc dp) and intertwines M_h with M_c_less and p with p.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+      "type": "claim",
+      "title": "A p-preserving exact selected-H to unrestricted Mc intertwiner exists",
+      "summary": "Contradicted for simultaneous selected-H and p intertwining: the source support has c<3p^2 while the unrestricted target has a positive-measure complement.",
+      "state": "CONTRADICTED_FOR_P_PRESERVING_SELECTED_H_COMPARISON",
+      "claim_id": "G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+      "statement": "An exact unitary simultaneously intertwines selected H and p with the declared unrestricted (M_c,p).",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+      "type": "claim",
+      "title": "Finite positive-lambda relative Pfaffian transport is fixed",
+      "summary": "Supported only for the declared finite odd blocks and positive interval; it supplies no absolute BFV measure, contour or continuum Pfaffian line.",
+      "state": "SUPPORTED_FINITE_RELATIVE_ORIENTATION_ONLY",
+      "claim_id": "G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+      "statement": "The declared finite odd Pfaffian ratio is positive on lambda in [1/2,2].",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+      "type": "claim",
+      "title": "The L=2 zonal scalar subspace is product closed",
+      "summary": "Contradicted: Z2 times Z2 contains an omitted Z4 contribution.",
+      "state": "CONTRADICTED_FINITE_KINEMATIC_TRUNCATION_ONLY",
+      "claim_id": "G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+      "statement": "The declared L=2 scalar zonal subspace is closed under pointwise products.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER",
+      "type": "claim",
+      "title": "The L=2 projected associator is exactly the discarded remainder",
+      "summary": "Supported as a finite scalar projection identity only; it is explicitly not a hypersurface-deformation-algebra or quantum anomaly conclusion.",
+      "state": "SUPPORTED_KINEMATIC_REMAINDER_IDENTITY_NOT_HDA_OR_ANOMALY",
+      "claim_id": "G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER",
+      "statement": "The declared L=2 projected-product associator equals the explicit discarded-product remainder contribution.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+      "type": "evidence",
+      "title": "Selected-H support-restricted spectral intertwiner evidence",
+      "summary": "VALID_RUN with seven exact checks and five scope guards; the old W FIO KILL, raw-C debt and global kappa-zero boundary remain null.",
+      "state": "VALID_RUN_SELECTED_H_RESTRICTED_TARGET_NARROW",
+      "observed_status": "VALID_RUN_7_EXACT_PASS_5_ANALYTIC_GUARDS_REPRO",
+      "check_ids": ["P39.G1.endpoint.spectral.coordinate_inverse_and_jacobian","P39.G1.endpoint.spectral.delta_kernel_coarea_normalization","P39.G1.endpoint.spectral.unitary_change_of_variables","P39.G1.endpoint.spectral.operator_and_domain_intertwining","P39.G1.endpoint.spectral.zero_fiber_measure_pullback","P39.G1.endpoint.spectral.unrestricted_target_positive_measure_witness","P39.G1.endpoint.spectral.p_preserving_unrestricted_joint_support_obstruction"]
+    },
+    {
+      "id": "evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result",
+      "type": "evidence",
+      "title": "Finite relative Pfaffian orientation evidence",
+      "summary": "VALID_RUN with eight exact finite-block checks; absolute BFV, contour and continuum outputs remain null.",
+      "state": "VALID_RUN_FINITE_RELATIVE_KEEP_ABSOLUTE_OPEN",
+      "observed_status": "VALID_RUN_8_EXACT_PASS_3_SCOPE_GUARDS_REPRO",
+      "check_ids": [
+        "P39.G1.bfv.orientation.ordered_odd_blocks_antisymmetric",
+        "P39.G1.bfv.orientation.zero_block_pfaffian_and_determinant",
+        "P39.G1.bfv.orientation.m2_block_pfaffian_and_determinant",
+        "P39.G1.bfv.orientation.block_direct_sum_pfaffian",
+        "P39.G1.bfv.orientation.positive_interval_relative_transport",
+        "P39.G1.bfv.orientation.lambda_zero_degeneracy",
+        "P39.G1.bfv.orientation.negative_lambda_crossing_control",
+        "P39.G1.bfv.orientation.bosonic_contour_phase_separation"
+      ]
+    },
+    {
+      "id": "evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result",
+      "type": "evidence",
+      "title": "Closed S3 scalar projection remainder evidence",
+      "summary": "VALID_RUN with 56 exact kinematic checks; no HDA, Jacobi or anomaly claim is computed.",
+      "state": "VALID_RUN_STAGE5A_KINEMATIC_REMAINDER_NOT_HDA",
+      "observed_status": "VALID_RUN_56_EXACT_PASS_REPRO",
+      "check_ids": [
+        "P39.G1.s3scalar.orthonormality.n0.m0",
+        "P39.G1.s3scalar.orthonormality.n0.m1",
+        "P39.G1.s3scalar.orthonormality.n0.m2",
+        "P39.G1.s3scalar.orthonormality.n0.m3",
+        "P39.G1.s3scalar.orthonormality.n0.m4",
+        "P39.G1.s3scalar.orthonormality.n1.m0",
+        "P39.G1.s3scalar.orthonormality.n1.m1",
+        "P39.G1.s3scalar.orthonormality.n1.m2",
+        "P39.G1.s3scalar.orthonormality.n1.m3",
+        "P39.G1.s3scalar.orthonormality.n1.m4",
+        "P39.G1.s3scalar.orthonormality.n2.m0",
+        "P39.G1.s3scalar.orthonormality.n2.m1",
+        "P39.G1.s3scalar.orthonormality.n2.m2",
+        "P39.G1.s3scalar.orthonormality.n2.m3",
+        "P39.G1.s3scalar.orthonormality.n2.m4",
+        "P39.G1.s3scalar.orthonormality.n3.m0",
+        "P39.G1.s3scalar.orthonormality.n3.m1",
+        "P39.G1.s3scalar.orthonormality.n3.m2",
+        "P39.G1.s3scalar.orthonormality.n3.m3",
+        "P39.G1.s3scalar.orthonormality.n3.m4",
+        "P39.G1.s3scalar.orthonormality.n4.m0",
+        "P39.G1.s3scalar.orthonormality.n4.m1",
+        "P39.G1.s3scalar.orthonormality.n4.m2",
+        "P39.G1.s3scalar.orthonormality.n4.m3",
+        "P39.G1.s3scalar.orthonormality.n4.m4",
+        "P39.G1.s3scalar.laplacian.degree_0",
+        "P39.G1.s3scalar.laplacian.degree_1",
+        "P39.G1.s3scalar.laplacian.degree_2",
+        "P39.G1.s3scalar.laplacian.degree_3",
+        "P39.G1.s3scalar.laplacian.degree_4",
+        "P39.G1.s3scalar.product.l0.m0",
+        "P39.G1.s3scalar.antipodal.l0.m0.n0",
+        "P39.G1.s3scalar.product.l0.m1",
+        "P39.G1.s3scalar.antipodal.l0.m1.n1",
+        "P39.G1.s3scalar.product.l0.m2",
+        "P39.G1.s3scalar.antipodal.l0.m2.n2",
+        "P39.G1.s3scalar.product.l1.m0",
+        "P39.G1.s3scalar.antipodal.l1.m0.n1",
+        "P39.G1.s3scalar.product.l1.m1",
+        "P39.G1.s3scalar.antipodal.l1.m1.n2",
+        "P39.G1.s3scalar.antipodal.l1.m1.n0",
+        "P39.G1.s3scalar.product.l1.m2",
+        "P39.G1.s3scalar.antipodal.l1.m2.n3",
+        "P39.G1.s3scalar.antipodal.l1.m2.n1",
+        "P39.G1.s3scalar.product.l2.m0",
+        "P39.G1.s3scalar.antipodal.l2.m0.n2",
+        "P39.G1.s3scalar.product.l2.m1",
+        "P39.G1.s3scalar.antipodal.l2.m1.n3",
+        "P39.G1.s3scalar.antipodal.l2.m1.n1",
+        "P39.G1.s3scalar.product.l2.m2",
+        "P39.G1.s3scalar.antipodal.l2.m2.n4",
+        "P39.G1.s3scalar.antipodal.l2.m2.n2",
+        "P39.G1.s3scalar.antipodal.l2.m2.n0",
+        "P39.G1.s3scalar.cutoff.z2_square_has_omitted_z4",
+        "P39.G1.s3scalar.projected_product.associator_witness",
+        "P39.G1.s3scalar.projected_product.associator_reconstructed_from_remainders"
+      ]
+    },
+    {
+      "id": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-input",
+      "type": "artifact",
+      "title": "Selected-H support-restricted spectral intertwiner input",
+      "summary": "Hash-pinned selected-H source, restricted and unrestricted targets, decision table, caps and fail-closed outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_INPUTS.json",
+      "sha256": "2ead98d6fb7aa502891b8399b278a3fd1a898c15985606b82a02502c6d05fde0",
+      "introduced_in_commit": "9230bb472a584e6005dfb3b710d53940c6da7f74"
+    },
+    {
+      "id": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-runner",
+      "type": "artifact",
+      "title": "Selected-H support-restricted spectral intertwiner runner",
+      "summary": "Bounded exact coordinate, coarea, domain, zero-fiber and joint-support audit with no automatic descendant.",
+      "state": "TRACKED_COMMITTED_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_v0_endpoint_support_restricted_spectral_intertwiner.py",
+      "sha256": "7f6618f455533bceca4d4534d1e8116a052204bfe259225cba66f4a37de7d9d2",
+      "introduced_in_commit": "9230bb472a584e6005dfb3b710d53940c6da7f74"
+    },
+    {
+      "id": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-raw-result",
+      "type": "artifact",
+      "title": "Selected-H support-restricted spectral intertwiner raw result",
+      "summary": "12,973-byte VALID_RUN result; payload digest c29c6d6bf9337f804c9da27bc6bc477f9751ab0432967550d88056cbf72d4936.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_RESULT.json",
+      "sha256": "2a51b52fd61001d15afa77e1f7bd5ba8b4b8438e7ec1303c62748d27ff3ad558",
+      "introduced_in_commit": "3c0c5ceaa950357fa56b8aacbc48208bb6a73308"
+    },
+    {
+      "id": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-report",
+      "type": "artifact",
+      "title": "Selected-H support-restricted spectral intertwiner report",
+      "summary": "Human-readable coordinate unitary, zero-fiber, joint-support obstruction and endpoint-scope ledger.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER.md",
+      "sha256": "648d8b855aeed82e72df38dad671b55759f76d662c9c44bc59aaf27edd1cb2b7",
+      "introduced_in_commit": "d22376612231e2ff5c8458cb86518f692dff6bfd"
+    },
+    {
+      "id": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-evidence-snapshot",
+      "type": "artifact",
+      "title": "Selected-H support-restricted spectral intertwiner evidence snapshot",
+      "summary": "Typed snapshot preserving seven exact checks, five guards, hashes, commits, reproduction and fail-closed scope.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-endpoint-support-restricted-spectral-intertwiner-result.json",
+      "sha256": "5e0064f9a0532db1c82a4bcdabf8f9ca85ab180fda29b1890937f14f7214f8ad",
+      "introduced_in_commit": "d22376612231e2ff5c8458cb86518f692dff6bfd"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-input",
+      "type": "artifact",
+      "title": "Finite BFV Pfaffian orientation input",
+      "summary": "Hash-pinned zero and m=2 odd blocks, positive-lambda interval, decision table, caps and absolute-measure nulls.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_INPUTS.json",
+      "sha256": "d88968a8193342a3ec6130b3a1a811b2e2f763cdf47cece58078a85326c21a79",
+      "introduced_in_commit": "98c6310d13345756440cafc84b94426bb387b623"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-runner",
+      "type": "artifact",
+      "title": "Finite BFV Pfaffian orientation runner",
+      "summary": "Bounded exact antisymmetry, Pfaffian, determinant, interval-sign, zero-crossing and contour-separation audit.",
+      "state": "TRACKED_COMMITTED_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_v0_bfv_finite_pfaffian_orientation_transport.py",
+      "sha256": "4e590f1a7a9cffefda72acabebba546067b19db4a5f0313d596c111e34ce272c",
+      "introduced_in_commit": "98c6310d13345756440cafc84b94426bb387b623"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-raw-result",
+      "type": "artifact",
+      "title": "Finite BFV Pfaffian orientation raw result",
+      "summary": "13,378-byte VALID_RUN result; payload digest ef341b5f2427f35e81d2cf25476b2fce8b7f7d640e3e46bed2995b8188b57ffc.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_RESULT.json",
+      "sha256": "1a4ecfb9c955e564e142aeb800b9e591eb425ed34765330f882452d1ac16e8c8",
+      "introduced_in_commit": "d36445e3b4ea166bcd69b118f30532243f2270e6"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-report",
+      "type": "artifact",
+      "title": "Finite BFV Pfaffian orientation report",
+      "summary": "Human-readable finite-block formula, relative orientation, zero-degeneracy and absolute-measure boundary ledger.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT.md",
+      "sha256": "263a6291e8954647ee4aa2257059a2278ac79abd40cedbd178b2f0c0f418ff54",
+      "introduced_in_commit": "d22376612231e2ff5c8458cb86518f692dff6bfd"
+    },
+    {
+      "id": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-evidence-snapshot",
+      "type": "artifact",
+      "title": "Finite BFV Pfaffian orientation evidence snapshot",
+      "summary": "Typed snapshot preserving eight exact checks, three guards, hashes, commits, reproduction and absolute-measure nulls.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-bfv-finite-pfaffian-orientation-transport-result.json",
+      "sha256": "731140103a1c436fddcd793045bd4840673cc131ef1800c387b94131520c775b",
+      "introduced_in_commit": "d22376612231e2ff5c8458cb86518f692dff6bfd"
+    },
+    {
+      "id": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-input",
+      "type": "artifact",
+      "title": "Closed S3 scalar projection ledger input",
+      "summary": "Declared unit-S3 zonal basis, L=2 cutoff, exact task list, caps and HDA/anomaly fail-closed outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER_INPUTS.json",
+      "sha256": "e43d9be06aa2ec5e11b7fc9948c2e2742fac972d658431ccfd2f08f47317380b",
+      "introduced_in_commit": "80a441d57e794f794dd102c26d11729d9eed1b9b"
+    },
+    {
+      "id": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-runner",
+      "type": "artifact",
+      "title": "Closed S3 scalar projection ledger runner",
+      "summary": "Bounded exact orthonormality, Laplacian, product, parity, remainder and projected-associator audit.",
+      "state": "TRACKED_COMMITTED_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_v0_closed_s3_scalar_harmonic_projection_ledger.py",
+      "sha256": "bbfbefe9d011baed672bd916ca916aaf8b2a5e37f10e2397e811deddcfec15e7",
+      "introduced_in_commit": "80a441d57e794f794dd102c26d11729d9eed1b9b"
+    },
+    {
+      "id": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-raw-result",
+      "type": "artifact",
+      "title": "Closed S3 scalar projection ledger raw result",
+      "summary": "15,121-byte VALID_RUN result; payload digest 0cde7b2b20dbc74f21bf3f038b3997007b02148f80edafa2eca7344a601c56a3.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER_RESULT.json",
+      "sha256": "197292821ec8a6ebf83054a219e2896fbe20bbb6140ae29282416d12afa64c7b",
+      "introduced_in_commit": "27b85feee0869ce507c982c314d31e36518b6b58"
+    },
+    {
+      "id": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-report",
+      "type": "artifact",
+      "title": "Closed S3 scalar projection ledger report",
+      "summary": "Human-readable zonal normalization, omitted modes, associator reconstruction and non-HDA boundary ledger.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER.md",
+      "sha256": "586fd8d3d46250989a67ccc8ef49ae41ec390f266dff0c920a871e71bc31435c",
+      "introduced_in_commit": "d22376612231e2ff5c8458cb86518f692dff6bfd"
+    },
+    {
+      "id": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-evidence-snapshot",
+      "type": "artifact",
+      "title": "Closed S3 scalar projection ledger evidence snapshot",
+      "summary": "Typed snapshot preserving 56 exact checks, hashes, commits, reproduction and strict HDA/anomaly nulls.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result.json",
+      "sha256": "f21d4c70ee05fb32298074c10dfbf8dacd2e12df5eb09018bf308cb314fe055e",
+      "introduced_in_commit": "d22376612231e2ff5c8458cb86518f692dff6bfd"
     },
     {
       "id": "source:weyl-1910-singular-sturm-liouville",
@@ -32235,6 +32589,363 @@
       "relation": "DOCUMENTS",
       "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
       "note": "Formula and roadmap navigation only; the evidence remains in the committed result."
+    },
+    {"id":"edge:3055","from":"claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET","relation":"HAS_EVIDENCE","to":"evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result","polarity":"SUPPORTS"},
+    {"id":"edge:3056","from":"claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET","relation":"HAS_EVIDENCE","to":"evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result","polarity":"CONTRADICTS"},
+    {"id":"edge:3057","from":"claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS","relation":"HAS_EVIDENCE","to":"evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result","polarity":"SUPPORTS"},
+    {"id":"edge:3058","from":"claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED","relation":"HAS_EVIDENCE","to":"evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result","polarity":"CONTRADICTS"},
+    {"id":"edge:3059","from":"claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER","relation":"HAS_EVIDENCE","to":"evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result","polarity":"SUPPORTS"},
+    {
+      "id": "edge:3060",
+      "from": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3061",
+      "from": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:3062",
+      "from": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "A clean committed unnumbered runner answered only the pinned support question and created no automatic successor."
+    },
+    {
+      "id": "edge:3063",
+      "from": "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner"
+    },
+    {
+      "id": "edge:3064",
+      "from": "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "note": "Uses the selected-H multiplier and KL spectral coordinates without transferring the result to raw C."
+    },
+    {
+      "id": "edge:3065",
+      "from": "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "note": "Uses only the p-positive regular branch; the negative branch and origin/gluing choices are not silently inherited."
+    },
+    {
+      "id": "edge:3066",
+      "from": "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-constraint-spectral-domain",
+      "note": "Tests the declared multiplier target against its joint spectral support."
+    },
+    {
+      "id": "edge:3067",
+      "from": "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-raw-result"
+    },
+    {
+      "id": "edge:3068",
+      "from": "evidence:gate1-v0-endpoint-support-restricted-spectral-intertwiner-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-evidence-snapshot"
+    },
+    {
+      "id": "edge:3069",
+      "from": "claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner"
+    },
+    {
+      "id": "edge:3070",
+      "from": "claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:3071",
+      "from": "claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner"
+    },
+    {
+      "id": "edge:3072",
+      "from": "claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:3073",
+      "from": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner"
+    },
+    {
+      "id": "edge:3074",
+      "from": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner"
+    },
+    {
+      "id": "edge:3075",
+      "from": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "relation": "DEFINED_IN",
+      "to": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-input"
+    },
+    {
+      "id": "edge:3076",
+      "from": "artifact:gate1-v0-endpoint-support-restricted-spectral-intertwiner-runner",
+      "relation": "IMPLEMENTS",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner"
+    },
+    {
+      "id": "edge:3077",
+      "from": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "note": "This selected-H calculation does not resolve the raw-C domain or equivalence remainder."
+    },
+    {
+      "id": "edge:3078",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "note": "The selected-H restricted target is closed; raw-C, W-endpoint and global edge/full-symbol questions remain."
+    },
+    {
+      "id": "edge:3079",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner",
+      "note": "Records the scoped Stage-3 outcome without authorizing its open successors."
+    },
+    {
+      "id": "edge:3080",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-selected-h-support-restricted-spectral-intertwiner"
+    },
+    {
+      "id": "edge:3081",
+      "from": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3082",
+      "from": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:3083",
+      "from": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "A finite relative odd-sector question was run independently; absolute measure and continuum descendants were not launched."
+    },
+    {
+      "id": "edge:3084",
+      "from": "evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport"
+    },
+    {
+      "id": "edge:3085",
+      "from": "evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-bfv-zero-mode-elimination-ward-result",
+      "note": "Retains the induced determinant bookkeeping but adds no absolute normalization."
+    },
+    {
+      "id": "edge:3086",
+      "from": "evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-bfv-m2-spectral-trajectory",
+      "note": "Pins the declared finite nonzero quartet block only."
+    },
+    {
+      "id": "edge:3087",
+      "from": "evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-raw-result"
+    },
+    {
+      "id": "edge:3088",
+      "from": "evidence:gate1-v0-bfv-finite-pfaffian-orientation-transport-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-evidence-snapshot"
+    },
+    {
+      "id": "edge:3089",
+      "from": "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport"
+    },
+    {
+      "id": "edge:3090",
+      "from": "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-local-spectral-to-m2-bfv-chain"
+    },
+    {
+      "id": "edge:3091",
+      "from": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport"
+    },
+    {
+      "id": "edge:3092",
+      "from": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport"
+    },
+    {
+      "id": "edge:3093",
+      "from": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "relation": "DEFINED_IN",
+      "to": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-input"
+    },
+    {
+      "id": "edge:3094",
+      "from": "artifact:gate1-v0-bfv-finite-pfaffian-orientation-transport-runner",
+      "relation": "IMPLEMENTS",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport"
+    },
+    {
+      "id": "edge:3095",
+      "from": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-bfv-zero-mode-elimination-ward-control"
+    },
+    {
+      "id": "edge:3096",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "note": "Relative finite orientation is recorded; absolute determinant line, contour, endpoint, Gribov, gluing and continuum measure remain open."
+    },
+    {
+      "id": "edge:3097",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport",
+      "note": "Records the finite relative Stage-4 subresult without treating it as absolute BFV completion."
+    },
+    {
+      "id": "edge:3098",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-finite-bfv-pfaffian-orientation-transport"
+    },
+    {
+      "id": "edge:3099",
+      "from": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3100",
+      "from": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer",
+      "note": "Only the declared unit-S3 zonal scalar L=2 kinematic ledger is covered."
+    },
+    {
+      "id": "edge:3101",
+      "from": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The independent bounded Stage-5A kinematic control did not launch HDA or anomaly work."
+    },
+    {
+      "id": "edge:3102",
+      "from": "evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
+    },
+    {
+      "id": "edge:3103",
+      "from": "evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-raw-result"
+    },
+    {
+      "id": "edge:3104",
+      "from": "evidence:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-evidence-snapshot"
+    },
+    {
+      "id": "edge:3105",
+      "from": "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
+    },
+    {
+      "id": "edge:3106",
+      "from": "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:3107",
+      "from": "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
+    },
+    {
+      "id": "edge:3108",
+      "from": "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:3109",
+      "from": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
+    },
+    {
+      "id": "edge:3110",
+      "from": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
+    },
+    {
+      "id": "edge:3111",
+      "from": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+      "relation": "DEFINED_IN",
+      "to": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-input"
+    },
+    {
+      "id": "edge:3112",
+      "from": "artifact:gate1-v0-closed-s3-scalar-harmonic-projection-ledger-runner",
+      "relation": "IMPLEMENTS",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
+    },
+    {
+      "id": "edge:3113",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+      "note": "Stage 5B must add the full canonical constraints and projected Poisson/Jacobi tests; Stage 5A is not closure evidence."
+    },
+    {
+      "id": "edge:3114",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger",
+      "note": "Records the Stage-5A kinematic baseline without authorizing Stage 5B."
+    },
+    {
+      "id": "edge:3115",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
     }
   ],
   "kg_bridges": [
@@ -32834,6 +33545,56 @@
       "checked_at_utc": "2026-08-28T07:20:00Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 classical positive constraint rescaling automatic quantum equivalence",
       "note": "No authorized exact external correspondence or writer is available. The contradiction is only to automatic inference from the classical multiplier and does not prove inequivalence of every completion; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_SELECTED_H_EXACT_SPECTRAL_INTERTWINER_REQUIRES_SUPPORT_RESTRICTED_TARGET",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-28T07:31:00Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 selected H exact spectral intertwiner support restricted c less than 3 p squared target",
+      "note": "No authorized exact external correspondence or writer is available. This is repository-local selected-H workbench evidence on a restricted joint-spectral target, not a raw-C endpoint theorem, absolute BFV result, physics claim or TOE result; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_SELECTED_H_HAS_P_PRESERVING_EXACT_INTERTWINER_TO_UNRESTRICTED_MC_TARGET",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-28T07:31:00Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 selected H p preserving exact intertwiner unrestricted Mc joint spectral support obstruction",
+      "note": "No authorized exact external correspondence or writer is available. The local contradiction is scoped to simultaneous selected-H and p intertwining with the declared unrestricted target; it is not a no-go for restricted targets, raw-C realizations or all endpoint transforms, and no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-28T07:31:00Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 finite positive lambda odd Pfaffian relative orientation transport",
+      "note": "No authorized exact external correspondence or writer is available. The result is a finite relative Pfaffian sign identity only and supplies no absolute determinant line, contour, Gribov, gluing, continuum BFV measure, physics or TOE conclusion; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-28T07:31:00Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 closed S3 L2 zonal scalar subspace pointwise product closure contradiction",
+      "note": "No authorized exact external correspondence or writer is available. The contradiction concerns one finite zonal scalar truncation and is not evidence of classical HDA failure, quantum anomaly, physics or TOE; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-28T07:31:00Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 closed S3 L2 projected associator exact discarded harmonic remainder",
+      "note": "No authorized exact external correspondence or writer is available. This is a finite kinematic projection identity, explicitly not an HDA/Jacobi closure result, quantum anomaly result, observation, physics or TOE claim; no external UID was invented."
     }
   ]
 }

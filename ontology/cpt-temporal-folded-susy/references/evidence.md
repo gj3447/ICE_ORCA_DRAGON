@@ -18,6 +18,26 @@ The historical [`gate1-v0-spectral-to-m2-bfv-chain-result.json`](../evidence/gat
 
 The later [`gate1-v0-densitized-liouville-raq-result.json`](../evidence/gate1-v0-densitized-liouville-raq-result.json) records 14/14 exact checks for one explicitly densitized, order-fixed Kontorovich--Lebedev/RAQ realization. Its selected positive fiber has physical measure \(dp/(2\sqrt6\hbar p)\), not the earlier declared \(dp\) identity measure. The follow-up [`gate1-v0-full-p-regular-raq-completion-result.json`](../evidence/gate1-v0-full-p-regular-raq-completion-result.json) records the selected-\(H\) regular-shell completion as \(L^2(\mathbb R,dx)_+\oplus L^2(\mathbb R,dx)_-\), with \(x=\log(|p|/p_*)\): \(p=0\) is an infinite end, not a finite boundary, and the completion inherits neither an origin atom nor a branch-gluing condition. The independent [`gate1-v0-raw-c-weighted-operator-domain-audit-result.json`](../evidence/gate1-v0-raw-c-weighted-operator-domain-audit-result.json) records 14/14 exact and 2/2 numerical checks for one declared weighted raw-\(C\) ordering. Its fixed-\(p\) fibers are limit-circle at \(Q=-\infty\), limit-point at \(Q=+\infty\), with indices \((1,1)\); hence a boundary line is extra data. It does not construct a measurable global extension, raw rigging map or quantum rescaling equivalence. The companion [`gate1-v0-bfv-zero-mode-elimination-ward-result.json`](../evidence/gate1-v0-bfv-zero-mode-elimination-ward-result.json) records 14/14 exact checks: direct Berezin integration equals determinant-weighted ghost elimination, whereas unweighted deletion is killed. It leaves the lapse modulus/contour, absolute finite or functional BFV measure, full trajectory completion, physics and TOE null.
 
+Three subsequent independent controls advance only narrowly delimited pieces of
+the endpoint/BFV/inhomogeneous roadmap. The
+[`gate1-v0-endpoint-support-restricted-spectral-intertwiner-result.json`](../evidence/gate1-v0-endpoint-support-restricted-spectral-intertwiner-result.json)
+records 7/7 exact checks and five analytic guards: the selected-\(H\), \(p>0\)
+spectral coordinate is an exact unitary only onto \(c<3p^2\), and a
+positive-measure witness obstructs a \(p\)-preserving exact intertwiner to the
+declared unrestricted \(M_c\) target. It is neither a raw-\(C\) result nor the
+old endpoint-\(W\) FIO. The
+[`gate1-v0-bfv-finite-pfaffian-orientation-transport-result.json`](../evidence/gate1-v0-bfv-finite-pfaffian-orientation-transport-result.json)
+records 8/8 exact checks and three analytic guards for one finite ordered
+zero-plus-\(m=2\) odd family. Its relative Pfaffian sign transports on
+\(\lambda\in[1/2,2]\), while \(\lambda=0\) is degenerate and contour, Gribov,
+gluing, continuum and absolute-measure outputs remain null. Finally, the
+[`gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result.json`](../evidence/gate1-v0-closed-s3-scalar-harmonic-projection-ledger-result.json)
+records 56/56 exact checks for the unit-\(S^3\), one-pole zonal \(L=2\) product
+and projection ledger. Its nonzero omitted \(Z_3,Z_4\) modes exactly reconstruct
+the displayed projected associator. Because no ADM+matter constraint or
+Poisson bracket was included, this is truncation evidence, not HDA closure or
+quantum anomaly evidence.
+
 ## Historical Phase 11–15R evidence backfill
 
 These phases predate the current typed evidence-snapshot convention. The graph therefore points to
