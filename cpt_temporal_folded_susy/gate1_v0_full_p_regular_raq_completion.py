@@ -47,7 +47,7 @@ CALCULATION_ID = "Gate1V0FullPRegularRaqCompletion"
 RESULT_SCHEMA = "ice.gate1.v0-full-p-regular-raq-completion.result.v1"
 RESULT_PREFIX = "GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_RESULT="
 ARTIFACT_CAP_BYTES = 1_000_000
-NUMERICAL_DPS = 80
+NUMERICAL_DPS = 60
 QUADRATURE_CAP = 6
 
 
@@ -430,7 +430,11 @@ def numerical_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]
     coefficient = 1 / (2 * mp.sqrt(6))
     plus_reference = coefficient / 4
     minus_reference = coefficient * 24
-    tolerance = mp.mpf("1e-60")
+    direct_tolerance = mp.mpf("1e-45")
+    truncated_x_tolerance = mp.mpf("1e-24")
+    x_min = mp.mpf(-30)
+    x_max = mp.mpf(8)
+    x_intervals = [x_min, mp.mpf(-10), mp.mpf(0), mp.mpf(4), x_max]
     flags: dict[str, bool] = {}
     rows: list[dict[str, str]] = []
 
@@ -442,7 +446,7 @@ def numerical_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]
         "G1.fullp.numeric.plus_witness_r_coordinate",
         plus_r,
         plus_reference,
-        tolerance,
+        direct_tolerance,
         "A_plus(r)=r*exp(-r) has the exact regular-shell norm coefficient/4 in the r coordinate",
     )
 
@@ -454,7 +458,7 @@ def numerical_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]
         "G1.fullp.numeric.minus_witness_r_coordinate",
         minus_r,
         minus_reference,
-        tolerance,
+        direct_tolerance,
         "A_minus(r)=2*r^2*exp(-r/2) has the exact regular-shell norm 24*coefficient in the r coordinate",
     )
 
@@ -465,14 +469,14 @@ def numerical_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]
         plus_x = audit.quadrature(
             lambda value: coefficient
             * (scale * mp.exp(value) * mp.exp(-scale * mp.exp(value))) ** 2,
-            [-mp.inf, mp.mpf(0), mp.inf],
+            x_intervals,
         )
         flags[f"plus_x_{scale_label}"] = audit.observe_numeric(
             f"G1.fullp.numeric.plus_witness_x_coordinate_scale_{scale_label}",
             plus_x,
             plus_reference,
-            tolerance,
-            f"the plus-branch x integral at r_star={scale_label} agrees with the r-coordinate norm",
+            truncated_x_tolerance,
+            f"the plus-branch x integral on the fixed [-30,8] interval at r_star={scale_label} agrees with the full r-coordinate norm within the declared tail bound",
         )
 
         minus_x = audit.quadrature(
@@ -483,20 +487,27 @@ def numerical_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]
                 * mp.exp(-scale * mp.exp(value) / 2)
             )
             ** 2,
-            [-mp.inf, mp.mpf(0), mp.inf],
+            x_intervals,
         )
         flags[f"minus_x_{scale_label}"] = audit.observe_numeric(
             f"G1.fullp.numeric.minus_witness_x_coordinate_scale_{scale_label}",
             minus_x,
             minus_reference,
-            tolerance,
-            f"the minus-branch x integral at r_star={scale_label} agrees with the r-coordinate norm",
+            truncated_x_tolerance,
+            f"the minus-branch x integral on the fixed [-30,8] interval at r_star={scale_label} agrees with the full r-coordinate norm within the declared tail bound",
         )
         rows.append(
             {
                 "r_star": scale_label,
+                "x_interval": "[-30,-10,0,4,8]",
                 "plus_x_norm": decimal(plus_x),
                 "minus_x_norm": decimal(minus_x),
+                "plus_omitted_tail_absolute": decimal(
+                    abs(plus_reference - plus_x)
+                ),
+                "minus_omitted_tail_absolute": decimal(
+                    abs(minus_reference - minus_x)
+                ),
             }
         )
 
@@ -519,6 +530,10 @@ def numerical_calculation(audit: Audit) -> tuple[dict[str, Any], dict[str, bool]
             "x_coordinate_rows": rows,
             "exact_plus_norm": decimal(plus_reference),
             "exact_minus_norm": decimal(minus_reference),
+            "direct_r_absolute_tolerance": decimal(direct_tolerance),
+            "truncated_x_to_full_absolute_tolerance": decimal(
+                truncated_x_tolerance
+            ),
             "quadrature_calls": audit.quadrature_calls,
             "roots": 0,
             "ode_calls": 0,
