@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-27T12:31:05Z",
+  "updated_at_utc": "2026-08-28T01:09:07Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -456,7 +456,7 @@
     },
     {
       "question": "How far did the trace-gauge V0 spectral-to-m2 BFV chain get?",
-      "answer": "It now supplies six additional but still local workbench layers. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, one selected positively densitized and order-fixed original-coordinate Liouville model has a KL/RAQ positive p>0 fiber with measure dp/(2 sqrt(6) hbar p), which is not the prior dp static fiber measure up to one constant. Direct ghost retention and weighted ghost elimination agree; only unweighted zero-ghost deletion is KILL. Neither calculation selects a lapse contour/modulus, absolute BFV measure, raw-C rescaling equivalence or raw-C physical inner product, endpoint transform, global cycle, physics result or TOE claim.",
+      "answer": "It now supplies seven additional but still local workbench layers. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, one selected positively densitized and order-fixed original-coordinate Liouville model has a KL/RAQ positive p>0 fiber with measure dp/(2 sqrt(6) hbar p), which is not the prior dp static fiber measure up to one constant. Its p=0 cutoff control excludes a nonzero-edge witness by positive logarithmic divergence, admits a linearly vanishing witness, and shows finite-part reference-scale ambiguity; it does not select an endpoint completion. Direct ghost retention and weighted ghost elimination agree; only unweighted zero-ghost deletion is KILL. Neither calculation selects a lapse contour/modulus, absolute BFV measure, raw-C rescaling equivalence or raw-C physical inner product, endpoint transform, global cycle, physics result or TOE claim.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -473,6 +473,8 @@
         "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
         "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
         "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+        "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+        "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
       ]
@@ -1108,7 +1110,7 @@
     {
       "id": "reading-path:gate1-anchor-through-kill-to-phase-locked-branch",
       "title": "From the anchored straight-line KILL to the V0 local BFV zero-mode boundary",
-      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and an exact U_plus classical Darboux chart. A principal FIO and improved-static BFV zero-mode source then feed the spectral-to-m2 chain. The selected densitized Liouville constraint has a positive KL/RAQ fiber, but its physical measure is not the prior dp static-fiber measure. Locally, direct Berezin integration and algebraic zero-ghost elimination with its induced determinant agree; only unweighted deletion is KILL. Stop before raw-constraint rescaling equivalence, the p=0 completion, lapse modulus/contour, an absolute BFV measure, or physics promotion.",
+      "summary": "Start with the Phase-39 local cap witnesses, apply the bad-end result only to its delta=q*y anchor-through scope, then follow the phase-locked two-good-end construction and principal affine phase-band contraction. The ordered scalar control supplies a nonzero-arm link without selecting lambda=1; its zero-lapse successor is retained only as INVALID_RUN provenance. The finite full-bosonic control kills only one-common-lateral absolute convergence on unchanged real p_a,p_phi axes. The trace-gauge branch keeps a local simple-root reduction, a closed-FRW V0 on-shell relational action and an exact U_plus classical Darboux chart. A principal FIO and improved-static BFV zero-mode source then feed the spectral-to-m2 chain. The selected densitized Liouville constraint has a positive KL/RAQ fiber, but its physical measure is not the prior dp static-fiber measure; its p=0 cutoff control excludes a nonzero-edge witness, admits a vanishing witness and leaves reference-scale finite parts noncanonical. Locally, direct Berezin integration and algebraic zero-ghost elimination with its induced determinant agree; only unweighted deletion is KILL. Stop before raw-constraint rescaling equivalence, a canonical p=0 completion, lapse modulus/contour, an absolute BFV measure, or physics promotion.",
       "nodes": [
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
         "claim:G1_PHASE39_STRAIGHT_FIELD_RAYS_ADMIT_UNBOUNDED_RELATIVE_CYCLE_COMPLETION",
@@ -1150,6 +1152,8 @@
       "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION",
       "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
       "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
+      "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
       "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
       "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
       "open:gate1-v0-exact-endpoint-and-trajectory-completion",
@@ -12039,7 +12043,7 @@
       "id": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
       "type": "open_problem",
       "title": "Raw V0 constraint rescaling and p-zero completion",
-      "summary": "The selected densitized model is internally controlled, but quantum equivalence to raw C, ordering/domain transport and the singular p=0 edge are not supplied.",
+      "summary": "For the selected densitized H only, the positive cutoff form excludes the nonzero-edge witness by logarithmic divergence and admits a linearly vanishing witness; reference-scale finite parts are noncanonical. Quantum equivalence to raw C, ordering/domain transport, a canonical p=0 completion and all lapse/BFV/physics conclusions remain unsupplied.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
       "question": "Which ordering, domain and explicit map establish or refute raw-C versus selected-densitized constraint equivalence, and how is the p=0 edge completed?"
     },
@@ -12181,6 +12185,119 @@
       "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_QUANTUM_COSMOLOGY_DERIVATION.md",
       "sha256": "e61be89282b70afd617d66b901fb15082cc830f19e087397cc2cad022c5961f6",
       "introduced_in_commit": "ce2c8a828dfdc6db4655c1c183ada7b4181db3b4"
+    },
+    {
+      "id": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "type": "concept",
+      "title": "Gate-1 V0 selected densitized RAQ p-zero boundary control",
+      "summary": "A cutoff-only boundary discriminator for the already selected densitized H spectral model. It distinguishes a nonzero-edge divergence from an admitted vanishing witness and records finite-part scale ambiguity without selecting an endpoint completion.",
+      "state": "COMPLETED_LOCAL_SELECTED_MODEL_BOUNDARY_ONLY"
+    },
+    {
+      "id": "scope:gate1-v0-selected-densitized-raq-p-zero-cutoff",
+      "type": "scope",
+      "title": "Selected V0 densitized RAQ p-zero cutoff scope",
+      "summary": "The fixed H-hat p-positive ray, positive cutoff epsilon>0, selected witnesses and reference-scale comparison only; neither a raw-C theory nor a canonical origin completion.",
+      "state": "LOCAL_DECLARED_SCOPE",
+      "includes": [
+        "the selected densitized H spectral multiplier 3*p^2-2*hbar^2*kappa^2",
+        "the p-positive zero ray at every fixed cutoff epsilon>0",
+        "the exp(-p) nonzero-edge witness and p*exp(-p) vanishing witness",
+        "the explicit logarithmic finite-part reference-scale comparison"
+      ],
+      "excludes": [
+        "a delta(u*v) identity at the singular origin",
+        "a canonical p=0 counterterm, sector, superselection rule or rigging-map completion",
+        "raw C ordering, domain or rescaling equivalence",
+        "p<0 or both-branch completion, lapse contour/modulus, BFV trajectory measure, physics or TOE"
+      ]
+    },
+    {
+      "id": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "type": "claim",
+      "title": "The selected densitized H positive measure extends to a nonzero p-zero edge",
+      "summary": "Contradicted for the selected positive cutoff form: the exp(-p) witness has positive logarithmically divergent norm, while p*exp(-p) remains finite. This narrows a naive nonzero-edge extension only and does not choose a domain completion.",
+      "state": "CONTRADICTED_FOR_SELECTED_NONZERO_EDGE_WITNESS_ONLY",
+      "claim_id": "G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "statement": "The selected densitized H standard positive group-average measure extends across p=0 to a test domain containing amplitudes nonzero at the edge without extra data.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+      "type": "claim",
+      "title": "The selected densitized H p-zero finite part has a canonical reference scale",
+      "summary": "Contradicted for the declared logarithmic subtraction: changing the positive reference momentum changes the finite part. The calculation therefore leaves counterterm, sector and canonical completion open.",
+      "state": "CONTRADICTED_BY_REFERENCE_SCALE_SHIFT_IN_SELECTED_CUTOFF_FORM",
+      "claim_id": "G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+      "statement": "The selected densitized H cutoff algebra determines a canonical p=0 finite-part reference scale and hence a canonical endpoint completion.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "type": "evidence",
+      "title": "Gate-1 V0 densitized RAQ p-zero boundary evidence",
+      "summary": "VALID_RUN with ten exact passes, five independent high-precision quadrature passes and six analytic scope guards. It narrows the selected H p-zero boundary without a raw-C or canonical-edge conclusion.",
+      "state": "VALID_RUN_NARROW_SELECTED_P_ZERO_BOUNDARY_ONLY",
+      "observed_status": "VALID_RUN_10_EXACT_PASS_5_NUMERICAL_PASS_6_ANALYTIC_GUARDS",
+      "check_ids": [
+        "P39.G1.pzero.shell.xy_factorization",
+        "P39.G1.pzero.shell.xy_jacobian",
+        "P39.G1.pzero.shell.uv_factorization_and_jacobian",
+        "P39.G1.pzero.shell.cutoff_positive_ray_weight",
+        "P39.G1.pzero.nonzero_witness.e1_cutoff_identity",
+        "P39.G1.pzero.nonzero_witness.logarithmic_divergence",
+        "P39.G1.pzero.nonzero_witness.e1_finite_constant",
+        "P39.G1.pzero.vanishing_witness.finite_norm",
+        "P39.G1.pzero.finite_part.reference_scale_shift",
+        "P39.G1.pzero.domain.nonzero_and_vanishing_witness_separate",
+        "P39.G1.pzero.numeric.e1_direct_quadrature_1e-2",
+        "P39.G1.pzero.numeric.e1_direct_quadrature_1e-4",
+        "P39.G1.pzero.numeric.e1_direct_quadrature_1e-6",
+        "P39.G1.pzero.numeric.vanishing_witness_direct_quadrature",
+        "P39.G1.pzero.numeric.logarithmic_increment_coefficient"
+      ]
+    },
+    {
+      "id": "source:nist-dlmf-exponential-integral",
+      "type": "source",
+      "title": "NIST Digital Library of Mathematical Functions, exponential integral",
+      "summary": "CITES-only reference for the E1 integral and small-argument logarithmic identity used in the cutoff control; it neither selects a test domain nor an endpoint subtraction.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "NIST Digital Library of Mathematical Functions, Equations 6.2.1 and 6.2.4, exponential integral definitions and logarithmic decomposition.",
+      "uri": "https://dlmf.nist.gov/6.2",
+      "version": "DLMF 1.2.7, 2026-06-15"
+    },
+    {
+      "id": "artifact:gate1-v0-densitized-raq-p-zero-boundary-raw-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 densitized RAQ p-zero boundary raw result",
+      "summary": "19,115-byte VALID_RUN raw result; payload digest 56dd0ceace9aafc3693c672ad0452b428ec500b87fc38758da44de18aae4a6ad.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_RESULT.json",
+      "sha256": "ce8faee990550a7992df09004635dd9174face9839f38c62280f1bcfc67317f3",
+      "introduced_in_commit": "ca615bf715cdd6f7041ca4b86ce942cfc3927290"
+    },
+    {
+      "id": "artifact:gate1-v0-densitized-raq-p-zero-boundary-report",
+      "type": "artifact",
+      "title": "Gate-1 V0 densitized RAQ p-zero boundary report",
+      "summary": "Human-readable scope ledger for the selected cutoff boundary control and its explicit null outputs.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY.md",
+      "sha256": "a0d84f4f9897962d83745ad79faa60320df8d1b00bbd0a92e29e0c4f5768837c",
+      "introduced_in_commit": "6b58ca744013e728cbe93457dbb755ac3f956429"
+    },
+    {
+      "id": "artifact:gate1-v0-densitized-raq-p-zero-boundary-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 densitized RAQ p-zero boundary evidence snapshot",
+      "summary": "Typed extract preserving the command, runner/input/raw-result hashes, checks and fail-closed outputs of the single bounded run.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-densitized-raq-p-zero-boundary-result.json",
+      "sha256": "cc480acf393824f13fc0cabe3008e83a0cef95821aeab26f9ec1743015afa943"
     }
   ],
   "edges": [
@@ -29623,6 +29740,149 @@
       "relation": "FOLLOW_UP_TO",
       "to": "open:gate1-v0-exact-endpoint-and-trajectory-completion",
       "note": "Narrows the trajectory boundary after the ghost ledger repair; it does not authorize an automatic successor calculation."
+    },
+    {
+      "id": "edge:2807",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2808",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-liouville-kl-raq-control",
+      "note": "Uses the already selected densitized H p-positive spectral model and asks one distinct p-zero boundary question; it creates no automatic successor."
+    },
+    {
+      "id": "edge:2809",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-densitized-raq-p-zero-cutoff"
+    },
+    {
+      "id": "edge:2810",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "CITES",
+      "to": "source:nist-dlmf-exponential-integral",
+      "note": "DLMF supplies E1 identities only; witness selection, cutoff scope and endpoint conclusion are repository-local."
+    },
+    {
+      "id": "edge:2811",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Cites single-constraint RAQ framing only; it does not select an endpoint extension."
+    },
+    {
+      "id": "edge:2812",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "CITES",
+      "to": "source:giulini-2000-group-averaging-raq",
+      "note": "Cites group-averaging framework and auxiliary-choice boundary only."
+    },
+    {
+      "id": "edge:2813",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "CITES",
+      "to": "source:louko-martinez-pascual-2011",
+      "note": "Cites the rescaling/domain warning as a boundary against claiming raw-C equivalence."
+    },
+    {
+      "id": "edge:2814",
+      "from": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "One clean committed unnumbered runner used the generic bounded runtime, wrote one adjacent result and created no automatic descendant."
+    },
+    {
+      "id": "edge:2815",
+      "from": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
+    },
+    {
+      "id": "edge:2816",
+      "from": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "note": "The upstream result pins the selected densitized H spectral realization and p-positive measure; it does not supply an edge completion."
+    },
+    {
+      "id": "edge:2817",
+      "from": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-densitized-raq-p-zero-boundary-raw-result"
+    },
+    {
+      "id": "edge:2818",
+      "from": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-densitized-raq-p-zero-boundary-evidence-snapshot"
+    },
+    {
+      "id": "edge:2819",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
+    },
+    {
+      "id": "edge:2820",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-densitized-raq-p-zero-cutoff"
+    },
+    {
+      "id": "edge:2821",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2822",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "The contradiction rules out one naive selected-H edge extension; it neither selects nor authorizes a canonical completion."
+    },
+    {
+      "id": "edge:2823",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
+    },
+    {
+      "id": "edge:2824",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-densitized-raq-p-zero-cutoff"
+    },
+    {
+      "id": "edge:2825",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:2826",
+      "from": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "Scale ambiguity keeps counterterm, sector and canonical-completion data open; it creates no automatic successor."
+    },
+    {
+      "id": "edge:2827",
+      "from": "artifact:gate1-v0-densitized-raq-p-zero-boundary-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
+    },
+    {
+      "id": "edge:2828",
+      "from": "artifact:gate1-v0-densitized-raq-p-zero-boundary-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control"
     }
   ],
   "kg_bridges": [

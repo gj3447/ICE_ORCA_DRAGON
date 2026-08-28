@@ -1,0 +1,81 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T01:09:07Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_densitized_raq_p_zero_boundary",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_densitized_raq_p_zero_boundary.py",
+    "sha256": "507e88c353b1cb697ca59263c674a1f297787e70790478d440a7a28cc2b6bf84",
+    "introduced_in_commit": "b18905d6a3c8e9b5a2caafbe1bb1be32da1f2729"
+  },
+  "exact_checks": 10,
+  "checks": [
+    {"id":"P39.G1.pzero.shell.xy_factorization","status":"PASS","statement":"the selected multiplier factorizes as x^2-y^2 in the declared positive spectral variables"},
+    {"id":"P39.G1.pzero.shell.xy_jacobian","status":"PASS","statement":"the positive-quadrant Jacobian is sqrt(6)*hbar"},
+    {"id":"P39.G1.pzero.shell.uv_factorization_and_jacobian","status":"PASS","statement":"u=x+y and v=x-y give h=u*v with the stated Jacobian away from the origin"},
+    {"id":"P39.G1.pzero.shell.cutoff_positive_ray_weight","status":"PASS","statement":"for p>=epsilon>0 the selected shell measure is dp/(2*sqrt(6)*hbar*p), without applying a delta-product identity at the origin"},
+    {"id":"P39.G1.pzero.nonzero_witness.e1_cutoff_identity","status":"PASS","statement":"the nonzero-edge cutoff witness equals E1(2*epsilon)/(2*sqrt(6)*hbar)"},
+    {"id":"P39.G1.pzero.nonzero_witness.logarithmic_divergence","status":"PASS","statement":"the nonzero-edge witness diverges logarithmically as epsilon tends to zero"},
+    {"id":"P39.G1.pzero.nonzero_witness.e1_finite_constant","status":"PASS","statement":"the log-subtracted E1 witness has the stated noncanonical finite constant"},
+    {"id":"P39.G1.pzero.vanishing_witness.finite_norm","status":"PASS","statement":"the linearly vanishing witness p*exp(-p) has finite positive weighted norm"},
+    {"id":"P39.G1.pzero.finite_part.reference_scale_shift","status":"PASS","statement":"different positive reference momenta shift the finite part"},
+    {"id":"P39.G1.pzero.domain.nonzero_and_vanishing_witness_separate","status":"PASS","statement":"the selected positive interior measure excludes the nonzero-edge witness while admitting the vanishing witness"}
+  ],
+  "numerical_checks": 5,
+  "numerical": [
+    {"id":"P39.G1.pzero.numeric.e1_direct_quadrature_1e-2","status":"PASS","statement":"direct cutoff quadrature agrees with the E1 value at epsilon=1e-2"},
+    {"id":"P39.G1.pzero.numeric.e1_direct_quadrature_1e-4","status":"PASS","statement":"direct cutoff quadrature agrees with the E1 value at epsilon=1e-4"},
+    {"id":"P39.G1.pzero.numeric.e1_direct_quadrature_1e-6","status":"PASS","statement":"direct cutoff quadrature agrees with the E1 value at epsilon=1e-6"},
+    {"id":"P39.G1.pzero.numeric.vanishing_witness_direct_quadrature","status":"PASS","statement":"direct quadrature agrees with the finite vanishing-witness norm"},
+    {"id":"P39.G1.pzero.numeric.logarithmic_increment_coefficient","status":"PASS","statement":"the six-decade E1 increment agrees with the exact logarithmic coefficient within the declared tolerance"}
+  ],
+  "payload": {
+    "exact_checks": 10,
+    "numerical_checks": 5,
+    "calculation": {
+      "calculation_id": "Gate1V0DensitizedRaqPZeroBoundary",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "NARROW_V0_P_ZERO_STANDARD_GROUP_AVERAGE_REQUIRES_EXTRA_EDGE_DATA",
+      "programme_impact": "CLOSE_NAIVE_CUTOFF_ONLY_P_ZERO_COMPLETION_KEEP_CANONICAL_EDGE_COMPLETION_OPEN"
+    },
+    "schema_transport": {
+      "phase_field": "P39 is inherited Gate-1 provenance required by research-run-evidence/v1; numbered_phase is null and this run creates no phase.",
+      "outer_check_ids_semantics": "P39.G1.pzero.* is a schema-transport alias, not a Phase-39 execution.",
+      "authoritative_check_prefix": "G1.pzero."
+    },
+    "evidence_transport": {
+      "definition_commit": "b18905d6a3c8e9b5a2caafbe1bb1be32da1f2729",
+      "raw_result_commit": "ca615bf715cdd6f7041ca4b86ce942cfc3927290",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_INPUTS.json",
+      "input_manifest_sha256": "29eb383b81af623e20daf424edfecab24ceaa92fea348d321d6d6ead9bb84149",
+      "runner_sha256": "507e88c353b1cb697ca59263c674a1f297787e70790478d440a7a28cc2b6bf84",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_RESULT.json",
+      "raw_result_outer_sha256": "ce8faee990550a7992df09004635dd9174face9839f38c62280f1bcfc67317f3",
+      "raw_result_payload_sha256_without_self": "56dd0ceace9aafc3693c672ad0452b428ec500b87fc38758da44de18aae4a6ad",
+      "raw_result_size_bytes": 19115
+    },
+    "computed_facts": {
+      "selected_positive_ray_measure": "dp/(2*sqrt(6)*hbar*p) for p>=epsilon>0 only",
+      "nonzero_edge_witness": "exp(-p) has a positive logarithmically divergent cutoff norm",
+      "vanishing_edge_witness": "p*exp(-p) has finite positive norm 1/(8*sqrt(6)*hbar)",
+      "finite_part": "depends on an externally chosen positive reference scale",
+      "canonical_p_zero_completion": null,
+      "raw_C_operator_and_domain": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "lapse_modulus_or_contour_selection": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "automatic_next": null
+    },
+    "theorem_guards": {
+      "count": 6,
+      "status": "REVIEWED_ANALYTIC_SCOPE_GUARDS_NOT_ADDED_TO_10_EXECUTABLE_EXACT_CHECKS",
+      "ids": ["G1.pzero.guard.cutoff_coarea_only","G1.pzero.guard.e1_small_argument","G1.pzero.guard.positive_form_local_finiteness","G1.pzero.guard.vanishing_order_threshold","G1.pzero.guard.finite_part_is_extra_choice","G1.pzero.guard.constraint_rescaling_and_physics_scope"]
+    }
+  }
+}

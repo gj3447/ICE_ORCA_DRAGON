@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-27T12:31:05Z",
+  "updated_at_utc": "2026-08-28T01:09:07Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [
@@ -71,7 +71,7 @@
         "Phase 11-56 claims, evidence snapshots or historical provenance pointers, scopes, policies, and open gates",
         "the Phase 11-15R collar-to-interface-to-charge-to-parent lineage, including the Phase 15A invalid-sequence break",
         "the bounded Phase-56 terminal diagnostic and hard stop on its numbered reconciliation descendants, alongside generic bounded unnumbered science",
-        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the user-directed V0 chain through a selected densitized Liouville Fourier--KL RAQ p>0 model with physical measure dp/(2sqrt(6) hbar p), distinct from the static dp fiber measure, plus a local zero-mode Ward equality of direct Berezin and induced-determinant elimination with unweighted deletion KILL; raw C/rescaling/p=0 and lapse-modulus/contour/absolute-measure/full-trajectory completion remain open",
+        "the Gate-1 phase-locked branch, principal affine phase-band reduction, consumed nonzero-arm scalar source-link result, consumed invalid zero-lapse attempt, finite bosonic single-lateral obstruction and declared complex-ray pushforward, local homogeneous trace-gauge reduction, unchanged-source append KILL, one closed-FRW V0 classical local on-shell relational endpoint action, its exact classical U_plus componentwise off-shell Darboux continuation, the compact-interior principal momentum-FIO KEEP and uncorrected one-term exact-unitarity KILL, one local improved-static BFV zero-mode replacement-source algebra KEEP, and the user-directed V0 chain through a selected densitized Liouville Fourier--KL RAQ p>0 model with physical measure dp/(2sqrt(6) hbar p), distinct from the static dp fiber measure; its cutoff p=0 boundary excludes a nonzero-edge witness, admits a vanishing witness and leaves finite-part reference scale noncanonical, while the local zero-mode Ward equality makes direct Berezin and induced-determinant elimination agree with unweighted deletion KILL; raw C/rescaling/canonical p=0 and lapse-modulus/contour/absolute-measure/full-trajectory completion remain open",
         "selected philosophy records as non-evidential artifacts"
       ],
       "excludes": [
@@ -189,7 +189,7 @@
     },
     {
       "question": "Is the CPT Gate 1 route closed or ready for Phase 57?",
-      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime. The trace-gauge branch reaches a classical U_plus Darboux chart, a compact-interior principal endpoint FIO, and one improved-static BFV zero-mode source. A selected densitization H=12pi^2 exp(3Q/2) C with flat ordering has a Fourier--Kontorovich--Lebedev RAQ p>0 model: kappa0=sqrt(3/2)p/hbar and physical measure dp/(2sqrt(6) hbar p), which is not the static dp fiber measure. Raw C, rescaling equivalence and p=0 remain open. The local BFV Ward control makes direct Berezin and induced-determinant elimination agree; unweighted deletion is KILL. Lapse modulus, contour and absolute BFV measure remain unselected, so unique full trajectory completion is still contradicted. Exact endpoint construction, edge data, arbitrary-state/full-real-lapse rigging map, global cycle, physics and TOE outputs remain open or null. Gate 1 stays open and automatic_next is null.",
+      "answer": "No. Phase 56 and the three historical bounded Gate-1 windows are consumed; their retry, full replay, Phase 57 and global promotion remain forbidden. Distinct clean committed unnumbered calculations use one generic capped runtime. The trace-gauge branch reaches a classical U_plus Darboux chart, a compact-interior principal endpoint FIO, and one improved-static BFV zero-mode source. A selected densitization H=12pi^2 exp(3Q/2) C with flat ordering has a Fourier--Kontorovich--Lebedev RAQ p>0 model: kappa0=sqrt(3/2)p/hbar and physical measure dp/(2sqrt(6) hbar p), which is not the static dp fiber measure. Its p=0 cutoff control rules out a naive nonzero-edge extension by positive logarithmic divergence, admits a linearly vanishing witness, and leaves finite-part reference scale noncanonical; raw C, rescaling equivalence and a canonical p=0 completion remain open. The local BFV Ward control makes direct Berezin and induced-determinant elimination agree; unweighted deletion is KILL. Lapse modulus, contour and absolute BFV measure remain unselected, so unique full trajectory completion is still contradicted. Exact endpoint construction, arbitrary-state/full-real-lapse rigging map, global cycle, physics and TOE outputs remain open or null. Gate 1 stays open and automatic_next is null.",
       "refs": [
         {
           "graph": "cpt",
@@ -205,19 +205,19 @@
         },
         {
           "graph": "cpt",
-          "node": "claim:G1_V0_UNCORRECTED_ONE_TERM_VAN_VLECK_KERNEL_IS_EXACTLY_UNITARY"
-        },
-        {
-          "graph": "cpt",
-          "node": "claim:G1_V0_PINNED_STATIC_INPUTS_UNIQUELY_SELECT_TRAJECTORY_ZERO_MODE_COMPLETION"
-        },
-        {
-          "graph": "cpt",
           "node": "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER"
         },
         {
           "graph": "cpt",
           "node": "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE"
         },
         {
           "graph": "cpt",
@@ -451,7 +451,7 @@
       "path": "cpt_temporal_folded_susy",
       "status": "INDEXED",
       "graph": "cpt",
-      "reason": "Phase 11-56 claim/evidence history is indexed, including historical artifact pointers for Phase 11-15R, the Phase 15A invalid-sequence boundary, and the bounded non-numbered Gate-1 lineage through the V0 local action, U_plus Darboux chart, principal momentum FIO, one-term exact-unitarity KILL, improved-static BFV zero-mode source, declared local M_c domain, endpoint uniqueness KILL, frozen order-zero pairing KEEP and relative m=2 quartet with zero-mode uniqueness KILL. Indexing is not physics promotion; exact endpoint construction, arbitrary-state/full-real-lapse rigging, full trajectory, other-component/global-atlas and physical-cycle boundaries remain open."
+      "reason": "Phase 11-56 claim/evidence history is indexed, including historical artifact pointers for Phase 11-15R, the Phase 15A invalid-sequence boundary, and the bounded non-numbered Gate-1 lineage through the V0 local action, U_plus Darboux chart, principal momentum FIO, one-term exact-unitarity KILL, improved-static BFV zero-mode source, declared local M_c domain, endpoint uniqueness KILL, frozen order-zero pairing KEEP and relative m=2 quartet with zero-mode uniqueness KILL. The selected densitized H p=0 cutoff now excludes a nonzero-edge witness and leaves finite-part reference scale noncanonical, but selects no edge completion. Indexing is not physics promotion; raw-C equivalence, exact endpoint construction, arbitrary-state/full-real-lapse rigging, full trajectory, other-component/global-atlas and physical-cycle boundaries remain open."
     },
     {
       "path": "docs",
