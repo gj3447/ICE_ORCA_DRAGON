@@ -1,0 +1,89 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T06:20:41Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_full_p_regular_raq_completion",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_full_p_regular_raq_completion.py",
+    "sha256": "80687acb28b2c55c3f36e72229668ec6cdabfc5168e3426d13c28fd6b711ab1a",
+    "introduced_in_commit": "2b7c3a2c3d516635839920cc14081d28ecfd332f"
+  },
+  "exact_checks": 9,
+  "checks": [
+    {"id":"P39.G1.fullp.shell.unique_positive_kappa_root","status":"PASS","statement":"both p signs have the unique positive-kappa root kappa_0=sqrt(3/2)*r/hbar"},
+    {"id":"P39.G1.fullp.shell.transverse_coarea_derivative","status":"PASS","statement":"the regular-shell transverse derivative is 2*sqrt(6)*hbar*r"},
+    {"id":"P39.G1.fullp.shell.two_ray_measure","status":"PASS","statement":"each regular ray has measure dr/(2*sqrt(6)*hbar*r)"},
+    {"id":"P39.G1.fullp.log_coordinate.measure_jacobian","status":"PASS","statement":"x=log(r/r_star) maps the open ray to R with dr/r=dx and p=0 at x=-infinity"},
+    {"id":"P39.G1.fullp.log_coordinate.normalized_branch_isometry","status":"PASS","statement":"the normalized trace map converts each rigging norm to L2(dx) exactly"},
+    {"id":"P39.G1.fullp.log_coordinate.reference_scale_translation","status":"PASS","statement":"changing r_star is a unitary translation in x"},
+    {"id":"P39.G1.fullp.branches.disjoint_partition_no_cross_term","status":"PASS","statement":"the sign projectors are an orthogonal partition and the declared form has no cross-branch term"},
+    {"id":"P39.G1.fullp.branches.projector_sign_parity_algebra","status":"PASS","statement":"branch projectors, sign(p), and parity exchange satisfy the recorded two-branch algebra"},
+    {"id":"P39.G1.fullp.observables.p_and_sign_reduce_branches","status":"PASS","statement":"p acts as diag(r,-r) and is reduced by the branch projectors and sign operator"}
+  ],
+  "numerical_checks": 6,
+  "numerical": [
+    {"id":"P39.G1.fullp.numeric.plus_witness_r_coordinate","status":"PASS","statement":"direct r quadrature of the plus witness agrees with its exact norm"},
+    {"id":"P39.G1.fullp.numeric.minus_witness_r_coordinate","status":"PASS","statement":"direct r quadrature of the minus witness agrees with its exact norm"},
+    {"id":"P39.G1.fullp.numeric.plus_witness_x_coordinate_scale_1","status":"PASS","statement":"the truncated x quadrature at r_star=1 agrees with the full plus norm within its tail tolerance"},
+    {"id":"P39.G1.fullp.numeric.minus_witness_x_coordinate_scale_1","status":"PASS","statement":"the truncated x quadrature at r_star=1 agrees with the full minus norm within its tail tolerance"},
+    {"id":"P39.G1.fullp.numeric.plus_witness_x_coordinate_scale_7_over_5","status":"PASS","statement":"the truncated x quadrature at r_star=7/5 agrees with the full plus norm within its tail tolerance"},
+    {"id":"P39.G1.fullp.numeric.minus_witness_x_coordinate_scale_7_over_5","status":"PASS","statement":"the truncated x quadrature at r_star=7/5 agrees with the full minus norm within its tail tolerance"}
+  ],
+  "payload": {
+    "exact_checks": 9,
+    "numerical_checks": 6,
+    "calculation": {
+      "calculation_id": "Gate1V0FullPRegularRaqCompletion",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "KEEP_SELECTED_H_FULL_P_REGULAR_RAQ_DIRECT_SUM_NO_INHERITED_ORIGIN_ATOM",
+      "programme_impact": "CLOSE_STANDARD_FULL_P_REGULAR_SHELL_COMPLETION_KEEP_EXTRA_ORIGIN_OR_GLUING_CHOICES_OPEN"
+    },
+    "schema_transport": {
+      "phase_field": "P39 is an inherited Gate-1 provenance placeholder required by research-run-evidence/v1; numbered_phase is null and this run creates no numbered phase or descendant.",
+      "authoritative_check_prefix": "G1.fullp."
+    },
+    "execution_history": {
+      "first_attempt": "PROCESS_TIMEOUT at the 120-second shell cap during infinite-interval 80-digit x quadrature; no result artifact was written",
+      "repair_commit": "01a4b7ae4996e71d1b1bd7bd47bb6601e304a157",
+      "repair_scope": "fixed finite x interval plus explicit omitted-tail comparison; no scientific predicate changed",
+      "successful_result_commit": "def4e8e2ce5940a491738c635d1dcb490799c20c",
+      "reproduction_mapping_commit": "e0b6aa32d6a5143171b53b7acb0818805b97116e",
+      "reproduction": "REPRO; 1 checked; 0 needs-attention"
+    },
+    "evidence_transport": {
+      "definition_commit": "2b7c3a2c3d516635839920cc14081d28ecfd332f",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_INPUTS.json",
+      "input_manifest_sha256": "da922f82dbc6323386e22f2155bf62e2b8a4a547eb08a0700ac9ba82032b3df3",
+      "runner_sha256": "80687acb28b2c55c3f36e72229668ec6cdabfc5168e3426d13c28fd6b711ab1a",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_RESULT.json",
+      "raw_result_outer_sha256": "d9f789dfd38b9e719c016d0c1372c5a6d5c4c3198ce680a23fbc64178a474701",
+      "raw_result_payload_sha256_without_self": "411a0bca48c89ce93de68fa09ecb25fd6c30699aa251e88b97d5b5298fb172d9",
+      "raw_result_size_bytes": 21108
+    },
+    "computed_facts": {
+      "regular_shell_measure": "sum over sigma=+/- of dr/(2*sqrt(6)*hbar*r)",
+      "selected_H_full_p_regular_completion": "L2(R,dx)_plus direct-sum L2(R,dx)_minus",
+      "p_zero_location_on_each_regular_branch": "x=-infinity",
+      "auxiliary_zero_eigenprojection": 0,
+      "origin_atom_inherited": false,
+      "cross_branch_gluing_or_quotient": null,
+      "raw_C_operator_and_domain": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "absolute_bfv_measure": null,
+      "quantum_gravity_claim": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "automatic_next": null
+    },
+    "theorem_guards": {
+      "count": 6,
+      "status": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDITS_NOT_EXECUTABLE_NUMERICAL_PREDICATES",
+      "ids": ["G1.fullp.guard.regular_coarea_only","G1.fullp.guard.dense_regular_test_space","G1.fullp.guard.trace_range_and_completion","G1.fullp.guard.no_inherited_origin_atom","G1.fullp.guard.multiplication_observable_domain","G1.fullp.guard.scope_and_nonuniqueness"]
+    }
+  }
+}

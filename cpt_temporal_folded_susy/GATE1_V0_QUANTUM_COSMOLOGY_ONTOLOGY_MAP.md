@@ -18,16 +18,18 @@ or TOE promotion. Gate 1 remains `OPEN_PARTIAL_PROGRESS`, global promotion is
 ## 한눈에 보는 결론
 
 - **수학적으로 확인된 것:** 선택한 양의 densitization과 ordering 안에서는
-  Fourier--KL 변환, self-adjoint multiplier domain, (p>0) RAQ measure,
-  (p=0) cutoff 경계, 국소 BFV Ward 항등식까지 정확히 연결된다.
+  Fourier--KL 변환, self-adjoint multiplier domain, \(p>0\) RAQ measure,
+  \(p=0\) cutoff 경계, full-real-\(p\) regular-shell 두-가지 완성, 국소 BFV Ward
+  항등식까지 정확히 연결된다.
 - **철학적 의미:** 정확히 풀렸다는 말은 “선택한 모형 안에서 정확하다”는 뜻이다.
   물리적 측도, 경계조건, ghost determinant는 부수 장식이 아니라 양자이론을
   구성하는 데이터다.
 - **부정적 결과의 의미:** 현재 KILL은 잘못된 지름길만 제거한다. 양자우주론이나
   양자중력 전체가 틀렸다는 결론은 아니다.
-- **다음 연결 방향:** raw (C\leftrightarrow H) 동치, (p=0/p<0) 전역 완성,
-  exact endpoint intertwiner, absolute BFV measure, 비균질 Dirac/BFV anomaly,
-  relational observable과 semiclassical/empirical recovery 순으로 연결한다.
+- **다음 연결 방향:** standard full-\(p\) 완성은 scoped `KEEP`으로 닫혔다. 그 뒤
+  raw \(C\leftrightarrow H\) domain 감사, microlocal/exact endpoint, absolute BFV,
+  고전 \(S^3\) closure, quantum anomaly, relational/BO/decoherence, 관측 likelihood를
+  서로 독립된 작업 단위로 연결한다.
 - **현재 경계:** 마지막 두 단계가 완성되기 전에는 이 결과를 양자중력 설명이나
   관측 가능한 물리 주장으로 승격하지 않는다.
 
@@ -255,7 +257,44 @@ Changing \(p_\star\) changes the finite part. The cutoff therefore does not
 select a canonical counterterm, origin sector, superselection rule, or global
 branch gluing.
 
-### 1.8 BFV algebraic zero block and Ward identity
+### 1.8 Full-real-\(p\) regular-shell completion
+
+For the selected maximal multiplication operator, write \(p=\sigma r\),
+\(\sigma=\pm1\), \(r>0\). On both regular rays,
+
+\[
+\kappa_0(r)=\sqrt{\frac32}\frac r\hbar,
+\qquad
+\left|\partial_\kappa h\right|_{\kappa_0}
+=2\sqrt6\,\hbar r.
+\]
+
+The full regular-shell form is therefore
+
+\[
+\eta_{\rm reg}(A,B)=
+\sum_{\sigma=\pm1}\int_0^\infty
+\frac{dr}{2\sqrt6\,\hbar r}\,
+\overline{A(\kappa_0(r),\sigma r)}B(\kappa_0(r),\sigma r).
+\]
+
+With \(x=\log(r/r_\star)\), \(dr/r=dx\), and the normalized trace map gives
+
+\[
+\boxed{
+\overline{\Phi_{\rm reg}/\ker\eta_{\rm reg}}
+\simeq L^2(\mathbb R,dx)_+\oplus L^2(\mathbb R,dx)_-.
+}
+\]
+
+The point \(r=0\) is \(x=-\infty\), not a finite endpoint. The zero set of
+\(h\) has zero two-dimensional auxiliary Lebesgue measure, so the selected
+multiplication operator supplies no normalizable zero eigenprojection or
+independent origin atom. A finite part, origin distribution, parity quotient
+or cross-branch gluing law would be additional theory data. Changing
+\(r_\star\) merely translates \(x\) unitarily.
+
+### 1.9 BFV algebraic zero block and Ward identity
 
 The pinned local zero block is
 
@@ -340,6 +379,9 @@ constraint densitization \(C\mapsto H\).
 - a nonzero \(p=0\) edge witness diverges logarithmically, a linearly vanishing
   witness is finite, and a finite-part subtraction introduces an arbitrary
   reference scale;
+- on the declared full-real-\(p\) regular shell, the completion is
+  \(L^2(\mathbb R,dx)_+\oplus L^2(\mathbb R,dx)_-\), \(p=0\) lies at
+  \(x=-\infty\), and no origin atom is inherited from the auxiliary measure;
 - direct Berezin integration equals determinant-weighted ghost elimination;
   unweighted ghost deletion fails the local Ward identity.
 
@@ -353,10 +395,11 @@ bookkeeping are constitutive data of the selected quantum model.
 ### Open hypotheses
 
 No current result establishes a raw-\(C\) quantum theory, equivalence between
-raw \(C\), densitized \(H\), and \(M_c\), a canonical \(p=0\) or both-branch
-completion, an absolute lapse/BFV measure, an inhomogeneous anomaly-free
-constraint algebra, relational observables, a semiclassical Einstein limit,
-an empirical prediction, quantum gravity, or a TOE.
+raw \(C\), densitized \(H\), and \(M_c\), a canonical origin sector or
+cross-branch gluing beyond the standard selected-\(H\) direct sum, an absolute
+lapse/BFV measure, an inhomogeneous anomaly-free constraint algebra,
+relational observables, a semiclassical Einstein limit, an empirical
+prediction, quantum gravity, or a TOE.
 
 ## 3. Philosophical implications
 
@@ -408,17 +451,37 @@ observables, a classical limit, and empirical discrimination.
 
 ## 4. Forward research roadmap
 
-Each row is an independent open question. The dependency edges are memory and
+Each row is an independent question. The dependency edges are memory and
 planning metadata; they neither authorize execution nor predict success.
 
-| Direction | Prerequisite | Success discriminator | Failure or branch discriminator |
+The explicit work order is
+
+```text
+1 full-p regular completion [scoped KEEP]
+  -> 2 raw-C operator/domain audit
+  -> 3 microlocal then exact endpoint
+  -> 4 absolute BFV
+  -> 5 classical closed-S3 HDA/Jacobi closure
+  -> 6 quantum BFV anomaly
+  -> 7 relational observables + BO/Ehrenfest + decoherence
+  -> 8 non-flat transfer + observational likelihood
+```
+
+This is an ordering ledger, not one recursively authorized calculation. Stage
+5 can start as an independent classical audit once its action and harmonic
+couplings are declared; Stage 6 remains downstream of raw-domain, BFV and
+classical-closure results.
+
+| Stage and node | Prerequisite | Success discriminator | Failure or branch discriminator |
 | --- | --- | --- | --- |
-| `open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion` | symmetric raw-\(C\) and selected-\(H\) operators with declared dense cores and boundary forms | an explicit domain-preserving map carries the constraint action and RAQ pairing between them | deficiency indices, boundary terms, or state-dependent pairing ratios obstruct the proposed equivalence |
-| `open:gate1-v0-p-zero-p-negative-global-spectral-completion` | the \(p>0\) KL fiber and cutoff edge result | a symmetry/domain principle fixes origin data, \(p<0\) gluing, positivity, and the global physical measure | reference scale, extension choice, or sector mixing remains noncanonical |
-| `open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol` | the classical Darboux chart, principal FIO, selected spectral domains, and edge data | an exact unitary with full symbol and common domains intertwines the relevant constraint operators and observables | the lower-symbol family, edge form, or domain obstruction survives |
-| `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` | the relative nonzero quartet and repaired zero-ghost Ward ledger | one contour/modulus/orientation prescription yields an absolute measure and passes zero/nonzero determinant and Ward checks | contour, orientation, normalization, Gribov, or anomaly dependence persists |
-| `open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly` | a selected homogeneous domain and BFV measure boundary | a declared finite perturbative truncation has regulated constraint closure, Jacobi consistency, and nilpotent BFV charge | a regulator-stable anomaly, boundary leakage, or clock/background dependence appears |
-| `open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge` | a physical product, anomaly-controlled perturbations, and a selected contour | self-adjoint relational observables, normalized semiclassical states, error-controlled Einstein recovery, and an explicit data map | observables remain clock/domain/contour dependent or no empirical discriminator exists |
+| 1 `open:gate1-v0-p-zero-p-negative-global-spectral-completion` | the \(p>0\) KL fiber and cutoff edge result | **observed:** selected-\(H\) regular completion is the two \(L^2(dx)\) branches with no inherited origin atom | any nonstandard origin sector or gluing still needs independent data |
+| 2 `open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion` | symmetric raw-\(C\) and selected-\(H\) operators with declared dense cores and boundary forms | an explicit domain-preserving map carries constraint action, observables and RAQ pairing | deficiency indices, boundary terms or pairing ratios obstruct the proposed equivalence |
+| 3 `open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol` | Stage 2 plus the classical Darboux chart and principal FIO | a full symbol and common domains give the raw-\(C\) or support-restricted exact intertwiner | the selected \(H\to M_c\) joint-support mismatch or lower-symbol/domain obstruction survives |
+| 4 `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` | the relative quartet and repaired zero-ghost Ward ledger | one contour/modulus/orientation prescription yields an absolute measure and passes Ward/gluing checks | contour, orientation, normalization or Gribov dependence persists |
+| 5 `open:gate1-v0-classical-s3-hda-closure` | full ADM+matter action, perturbative order and \(S^3\) coupling ledger | projected HDA and Jacobi identities close with the projection remainder separately bounded | a genuine classical remainder survives after cutoff error is removed |
+| 6 `open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly` | Stages 2, 4 and 5 plus a common operator domain | \(\widehat\Omega^2\) vanishes to declared perturbative, \(\hbar\) and cutoff orders | a regulator-stable operator anomaly or domain leakage remains |
+| 7 `open:gate1-v0-relational-observables-bo-decoherence` | physical product, Stage 6 modes, clocks and a selected contour | clock-cross-checked observables and BO/Ehrenfest/decoherence residuals meet fixed errors | observables or classical recovery remain clock/domain/contour dependent |
+| 8 `open:gate1-v0-empirical-likelihood-bridge` | Stage 7 plus an explicit \(V\ne0\) or alternative generation/reheating extension | discrete closed-universe spectra propagate through non-flat transfer to posterior-predictive tests | no primordial/late-time map or empirical discriminator exists |
 
 ## 5. KG connection map
 
@@ -433,6 +496,7 @@ raw C
   -> RAQ coarea fiber
   -> comparison with M_c
   -> p-zero cutoff boundary
+  -> selected-H full-p two-branch regular completion
 
 BFV source algebra
   -> zero-block Gaussian determinant
@@ -441,10 +505,10 @@ BFV source algebra
 
 computed formula ledgers
   -> interpretation boundaries
-  -> forward-research roadmap
-  -> raw/equivalence + global-edge + exact-intertwiner + absolute-BFV opens
-  -> inhomogeneous constraint-algebra open
-  -> relational-observable/semiclassical/empirical open
+  -> eight-stage forward-research sequence
+  -> raw/domain + exact-intertwiner + absolute-BFV
+  -> classical S3 closure -> quantum BFV anomaly
+  -> relational/BO/decoherence -> empirical likelihood
 ```
 
 These are local typed edges. No external KG UID is invented, and no edge is a
@@ -457,9 +521,13 @@ ratification or automatic successor receipt.
 - [`GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY.md`](GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY.md)
   derives the cutoff, logarithmic divergence, vanishing-witness criterion, and
   finite-part scale ambiguity.
+- [`GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION.md`](GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION.md)
+  derives the two-ray coarea form, logarithmic branch coordinates, scoped
+  direct-sum completion and no-inherited-origin-atom boundary.
 - `evidence:gate1-v0-densitized-liouville-raq-result`,
   `evidence:gate1-v0-densitized-raq-p-zero-boundary-result`, and
-  `evidence:gate1-v0-bfv-zero-mode-elimination-ward-result` carry executable
+  `evidence:gate1-v0-full-p-regular-raq-completion-result`, together with
+  `evidence:gate1-v0-bfv-zero-mode-elimination-ward-result`, carry executable
   checks and provenance.
 - `source:nist-dlmf-bessel-kl`,
   `source:nist-dlmf-exponential-integral`, `source:marolf-1995`,

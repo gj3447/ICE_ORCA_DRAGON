@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-28T01:51:25Z",
+  "updated_at_utc": "2026-08-28T06:29:23Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -456,7 +456,7 @@
     },
     {
       "question": "How far did the trace-gauge V0 spectral-to-m2 BFV chain get?",
-      "answer": "It now supplies seven additional but still local workbench layers. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, one selected positively densitized and order-fixed original-coordinate Liouville model has a KL/RAQ positive p>0 fiber with measure dp/(2 sqrt(6) hbar p), which is not the prior dp static fiber measure up to one constant. Its p=0 cutoff control excludes a nonzero-edge witness by positive logarithmic divergence, admits a linearly vanishing witness, and shows finite-part reference-scale ambiguity; it does not select an endpoint completion. Direct ghost retention and weighted ghost elimination agree; only unweighted zero-ghost deletion is KILL. Neither calculation selects a lapse contour/modulus, absolute BFV measure, raw-C rescaling equivalence or raw-C physical inner product, endpoint transform, global cycle, physics result or TOE claim.",
+      "answer": "It now supplies eight additional but still local workbench layers. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, one selected positively densitized and order-fixed original-coordinate Liouville model has a KL/RAQ positive p>0 fiber with measure dp/(2 sqrt(6) hbar p), which is not the prior dp static fiber measure up to one constant. Its p=0 cutoff excludes a nonzero-edge witness and leaves finite-part scale ambiguity. The later full-real-p regular-shell calculation completes the selected H zero fiber as L2(R,dx)_plus direct-sum L2(R,dx)_minus, places p=0 at x=-infinity and inherits no auxiliary origin atom; nonstandard origin sectors or gluing remain extra data. Direct ghost retention and weighted ghost elimination agree; only unweighted zero-ghost deletion is KILL. No result selects an absolute BFV measure, raw-C domain/equivalence, exact endpoint transform, anomaly-free inhomogeneous theory, empirical map, physics or TOE claim.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -475,18 +475,20 @@
         "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+        "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
       ]
     },
     {
       "question": "Where are the V0 formulas, philosophical implications, and next research bridges organized?",
-      "answer": "The formula ontology now follows raw C through positive densitization, the declared Schrodinger operator, Fourier--KL reduction, spectral multiplier/domain, RAQ coarea measure, Mc comparison, the p-zero cutoff boundary, and the BFV Gaussian Ward identity. A separate interpretive layer records that exact solvability is conditional, the physical measure is part of the quantization, determinant bookkeeping is required for gauge reduction, scoped negative results remove shortcuts rather than refute quantum gravity, and minisuperspace is a laboratory rather than a full spacetime theory. The forward roadmap connects these results to raw-C/H equivalence, global branch completion, an exact Mc intertwiner, an absolute BFV measure, anomaly-controlled inhomogeneous constraints, and relational-observable/semiclassical/empirical recovery. These are local KG memory edges with no automatic execution or external ratification.",
+      "answer": "The formula ontology now follows raw C through positive densitization, the declared Schrodinger operator, Fourier--KL reduction, spectral multiplier/domain, RAQ coarea measure, Mc comparison, the p-zero cutoff boundary, the selected-H full-p regular completion, and the BFV Gaussian Ward identity. A separate interpretive layer records that exact solvability is conditional and minisuperspace is a laboratory. The roadmap now exposes eight stages: full-p, raw-C domain, microlocal/exact endpoint, absolute BFV, classical closed-S3 closure, quantum anomaly, relational/BO/decoherence, and empirical likelihood. The classical lane is independently startable; the quantum lane remains downstream. These are local KG memory edges with no automatic execution or external ratification.",
       "claim_ids": [
         "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
         "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+        "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
       ]
@@ -12088,10 +12090,10 @@
     {
       "id": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
       "type": "open_problem",
-      "title": "Raw V0 constraint rescaling and p-zero completion",
-      "summary": "For the selected densitized H only, the positive cutoff form excludes the nonzero-edge witness by logarithmic divergence and admits a linearly vanishing witness; reference-scale finite parts are noncanonical. Quantum equivalence to raw C, ordering/domain transport, a canonical p=0 completion and all lapse/BFV/physics conclusions remain unsupplied.",
+      "title": "Raw V0 constraint rescaling and operator-domain audit",
+      "summary": "The selected-H full-p regular completion is now separately closed in its scoped representation. This legacy-ID node now owns only the raw-C debt: declare its auxiliary measure, symmetric ordering, dense core, adjoint, endpoint boundary form, deficiency indices or decomposable extension family, then compare constraint action, observables and rigging forms with selected H. No raw-C realization or equivalence is inferred from the classical positive multiplier or the selected-H p-zero result.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Which ordering, domain and explicit map establish or refute raw-C versus selected-densitized constraint equivalence, and how is the p=0 edge completed?"
+      "question": "Which declared raw-C ordering and self-adjoint domain exist, and does an explicit domain- and observable-preserving map establish or refute equivalence with selected H?"
     },
     {
       "id": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
@@ -12461,16 +12463,16 @@
       "id": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
       "type": "concept",
       "title": "V0 quantum-cosmology forward research roadmap",
-      "summary": "A dependency map from the selected homogeneous RAQ and BFV controls to six independent debts: raw-C/H equivalence, p-zero/p-negative global completion, exact endpoint/Mc intertwining, absolute lapse/BFV measure, anomaly-controlled inhomogeneous constraints, and relational-observable/semiclassical/empirical recovery. It is planning metadata with no automatic execution authority.",
+      "summary": "An eight-stage dependency map: selected-H full-p regular completion; raw-C operator/domain audit; microlocal then exact endpoint; absolute BFV; independently startable classical closed-S3 HDA/Jacobi closure; downstream quantum BFV anomaly; relational/BO/decoherence recovery; and only then empirical likelihood. Stage 1 has a scoped KEEP. Every later stage remains a separately bounded question with automatic_next null.",
       "state": "ACTIVE_LOCAL_ROADMAP_NO_AUTOMATIC_EXECUTION_AUTHORITY"
     },
     {
       "id": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
       "type": "open_problem",
-      "title": "V0 p-zero, p-negative and global spectral completion",
-      "summary": "For the selected full real multiplier M_h, p=0 is not a finite self-adjoint-extension endpoint: after r=|p| and x=log(r/r_star), it is x=-infinity. The standard full zero-fiber candidate is the direct sum of independent p-positive and p-negative L2(dx) branches with no origin atom. The open work is to verify the full-p RAQ test space, observable domains and positivity, and to identify any genuinely independent symmetry or transfer law that could justify a nonstandard origin sector or branch gluing. This node authorizes no execution or promotion.",
-      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Does the declared full-p RAQ construction give the standard L2(dx) direct sum with no origin state, and what additional independently justified structure, if any, replaces that completion?"
+      "title": "V0 selected-H full-p completion and optional origin/gluing extensions",
+      "summary": "The declared selected-H regular-shell calculation now supports L2(R,dx)_plus direct-sum L2(R,dx)_minus, with p=0 at x=-infinity, exact branch observables, unitary reference-scale translation and no origin atom inherited from the auxiliary Lebesgue spectral projection. What remains open is not the standard completion but any independently justified nonstandard origin distribution, finite part, parity/CPT quotient or cross-branch gluing law. This scoped close supplies no raw-C result or automatic successor.",
+      "state": "SCOPED_STANDARD_SELECTED_H_COMPLETION_CLOSED_EXTRA_ORIGIN_AND_GLUING_HYPOTHESES_OPEN",
+      "question": "Is there any independently derived physical symmetry or transfer law that justifies adding an origin sector or quotient/gluing beyond the supported selected-H regular direct sum?"
     },
     {
       "id": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
@@ -12483,18 +12485,160 @@
     {
       "id": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
       "type": "open_problem",
-      "title": "V0 inhomogeneous perturbations, Dirac algebra and anomaly",
-      "summary": "This bridge has two lanes. A classical closed-S3 harmonic HDA/Jacobi audit can begin independently once the full action, perturbative order and product-coupling ledger are declared; a finite harmonic set is not product-closed, so projection remainder must be separated from anomaly. Quantum BFV nilpotency remains downstream of a selected ordering/domain and BFV measure. Success requires regulated operator closure and Omega-hat squared to vanish to declared perturbative, hbar and cutoff orders. This node authorizes no execution or promotion.",
-      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Can the homogeneous V0 construction be extended to explicitly inhomogeneous metric, matter and ghost modes with anomaly-controlled Dirac/BFV closure?"
+      "title": "V0 inhomogeneous Dirac/BFV roadmap umbrella",
+      "summary": "This legacy umbrella is split into an independently startable classical closed-S3 HDA/Jacobi node and a downstream quantum BFV nilpotency/anomaly node. It is navigation only and must not make prerequisites of the quantum lane look like blockers of the classical audit.",
+      "state": "ROADMAP_UMBRELLA_SPLIT_CLASSICAL_AND_QUANTUM_LANES_NO_EXECUTION_AUTHORITY",
+      "question": "See the separate classical-S3 closure and quantum-BFV anomaly child nodes."
     },
     {
       "id": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
       "type": "open_problem",
-      "title": "V0 relational observables, semiclassical recovery and empirical bridge",
-      "summary": "This bridge separates into relational clock-tied perturbation observables, error-controlled Born-Oppenheimer/WKB plus decoherence, and only then an empirical transfer/likelihood map. The present V=0 massless-scalar closed-FRW sector supplies no standard inflationary perturbation-generation or reheating model, so a data bridge requires an explicit V-not-equal-zero or alternative extension, initial state and late-time parameter map. Clock, domain, contour or state dependence remains a discriminator. This node authorizes no execution or promotion.",
-      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Which relational observables survive the completed constraints, recover semiclassical spacetime with controlled errors, and define a falsifiable map to data?"
+      "title": "V0 relational-to-empirical roadmap umbrella",
+      "summary": "This legacy umbrella is split into a relational-observable plus BO/Ehrenfest/decoherence node and a later empirical-likelihood node. The frozen V=0 massless-scalar sector has no standard inflationary generation or reheating map, so observational work remains downstream of an explicit extension.",
+      "state": "ROADMAP_UMBRELLA_SPLIT_RELATIONAL_AND_EMPIRICAL_LANES_NO_EXECUTION_AUTHORITY",
+      "question": "See the separate relational/semiclassical and empirical-likelihood child nodes."
+    },
+    {
+      "id": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "type": "concept",
+      "title": "Gate-1 V0 selected-H full-p regular-shell RAQ completion control",
+      "summary": "One selected maximal multiplication operator, full real p, Lebesgue auxiliary measure and regular-shell test space. Exact coarea and logarithmic coordinates plus independent quadratures support two L2 branches and no inherited origin atom; extra origin or gluing data remain outside scope.",
+      "state": "COMPLETED_LOCAL_SELECTED_H_REGULAR_SHELL_CONTROL_ONLY"
+    },
+    {
+      "id": "scope:gate1-v0-selected-h-full-p-regular-shell-raq",
+      "type": "scope",
+      "title": "Selected-H full-p regular-shell RAQ scope",
+      "summary": "The maximal M_h multiplier on kappa>0 and full real p, its Lebesgue auxiliary measure, Phi_reg away from p=0, and regular coarea only.",
+      "state": "LOCAL_DECLARED_SCOPE",
+      "includes": [
+        "h(kappa,p)=3*p^2-2*hbar^2*kappa^2 on L2((0,infinity)_kappa times R_p,d_kappa dp)",
+        "the two regular zero rays p=+/-r with r>0",
+        "the positive form sum_sigma dr/(2*sqrt(6)*hbar*r)",
+        "the normalized x=log(r/r_star) trace maps, branch projectors, sign(p), parity exchange and p multiplication",
+        "six fixed witness quadratures and six analytic hypothesis/scope audits"
+      ],
+      "excludes": [
+        "the critical-origin delta identity, an origin-supported atom or logarithmic finite part",
+        "a parity/CPT quotient or cross-branch gluing law",
+        "raw C ordering, extension, rigging form or rescaling equivalence",
+        "an exact endpoint transform, absolute BFV measure, inhomogeneous anomaly, empirical result, physics or TOE"
+      ]
+    },
+    {
+      "id": "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+      "type": "claim",
+      "title": "Selected-H full-p regular RAQ completes to two logarithmic branches with no inherited origin atom",
+      "summary": "Supported only for the declared selected-H regular-shell construction: the completion is L2(R,dx)_plus direct-sum L2(R,dx)_minus, p=0 is x=-infinity, changing r_star is a unitary translation, and the auxiliary multiplication operator has no zero eigenprojection or origin atom. Nonstandard origin distributions, finite parts or gluing remain extra choices.",
+      "state": "SUPPORTED_FOR_SELECTED_H_LEBESGUE_REGULAR_SHELL_SCOPE_ONLY",
+      "claim_id": "G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+      "statement": "For the declared selected-H full-real-p regular-shell RAQ test space, the physical completion is two L2 logarithmic branches and contains no origin atom inherited from the auxiliary spectral measure.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "type": "evidence",
+      "title": "Gate-1 V0 full-p regular-shell RAQ completion evidence",
+      "summary": "VALID_RUN with nine executable exact passes, six independent numerical passes and six analytic hypothesis/scope audits. The first slow implementation timed out without a result; the repaired committed runner reproduced exactly under the portable comparison policy.",
+      "state": "VALID_RUN_SELECTED_H_FULL_P_REGULAR_DIRECT_SUM_KEEP",
+      "observed_status": "VALID_RUN_9_EXACT_PASS_6_NUMERICAL_PASS_6_ANALYTIC_GUARDS_REPRO",
+      "check_ids": [
+        "P39.G1.fullp.shell.unique_positive_kappa_root",
+        "P39.G1.fullp.shell.transverse_coarea_derivative",
+        "P39.G1.fullp.shell.two_ray_measure",
+        "P39.G1.fullp.log_coordinate.measure_jacobian",
+        "P39.G1.fullp.log_coordinate.normalized_branch_isometry",
+        "P39.G1.fullp.log_coordinate.reference_scale_translation",
+        "P39.G1.fullp.branches.disjoint_partition_no_cross_term",
+        "P39.G1.fullp.branches.projector_sign_parity_algebra",
+        "P39.G1.fullp.observables.p_and_sign_reduce_branches",
+        "P39.G1.fullp.numeric.plus_witness_r_coordinate",
+        "P39.G1.fullp.numeric.minus_witness_r_coordinate",
+        "P39.G1.fullp.numeric.plus_witness_x_coordinate_scale_1",
+        "P39.G1.fullp.numeric.minus_witness_x_coordinate_scale_1",
+        "P39.G1.fullp.numeric.plus_witness_x_coordinate_scale_7_over_5",
+        "P39.G1.fullp.numeric.minus_witness_x_coordinate_scale_7_over_5"
+      ]
+    },
+    {
+      "id": "artifact:gate1-v0-full-p-regular-raq-completion-raw-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 full-p regular-shell RAQ completion raw result",
+      "summary": "21,108-byte VALID_RUN raw result; payload digest 411a0bca48c89ce93de68fa09ecb25fd6c30699aa251e88b97d5b5298fb172d9.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_RESULT.json",
+      "sha256": "d9f789dfd38b9e719c016d0c1372c5a6d5c4c3198ce680a23fbc64178a474701",
+      "introduced_in_commit": "def4e8e2ce5940a491738c635d1dcb490799c20c"
+    },
+    {
+      "id": "artifact:gate1-v0-full-p-regular-raq-completion-report",
+      "type": "artifact",
+      "title": "Gate-1 V0 full-p regular-shell RAQ completion report",
+      "summary": "Human-readable derivation, scope boundary, initial timeout and successful controlled-reproduction ledger.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION.md",
+      "sha256": "263d751781cc088b510cf979a37c1bf61741e1da3932e5e9cb9de3016c98c24c"
+    },
+    {
+      "id": "artifact:gate1-v0-full-p-regular-raq-completion-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 full-p regular-shell RAQ completion evidence snapshot",
+      "summary": "Typed snapshot preserving input, runner, result and commit hashes, exact/numerical checks, analytic guards, timeout repair and portable reproduction.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-full-p-regular-raq-completion-result.json",
+      "sha256": "578c311716a3ebc8ed165757955cb8b49ff1bce615410fe36ee1991719401086"
+    },
+    {
+      "id": "concept:gate1-v0-eight-stage-work-sequence",
+      "type": "concept",
+      "title": "Gate-1 V0 eight-stage research work sequence",
+      "summary": "Ordering ledger: selected-H full-p regular completion; raw-C operator/domain; microlocal then exact endpoint; absolute BFV; classical closed-S3 closure; quantum BFV anomaly; relational/BO/decoherence; empirical likelihood. Stage 1 has a scoped KEEP. Each later stage remains an independent bounded question and no result automatically launches its successor.",
+      "state": "ACTIVE_LOCAL_ROADMAP_NO_AUTOMATIC_EXECUTION_AUTHORITY"
+    },
+    {
+      "id": "open:gate1-v0-classical-s3-hda-closure",
+      "type": "open_problem",
+      "title": "Classical closed-S3 harmonic HDA and Jacobi closure",
+      "summary": "Independently startable classical lane. Declare the full ADM-plus-matter action, perturbative order, scalar/vector/tensor hyperspherical harmonics and Gaunt/Clebsch-Gordan product ledger. Test projected hypersurface-deformation and Jacobi identities while reporting the non-product-closed projection remainder separately from a genuine algebra failure.",
+      "state": "OPEN_INDEPENDENT_CLASSICAL_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Does the declared closed-S3 perturbative truncation satisfy the classical HDA and Jacobi identities after projection remainder is explicitly separated?"
+    },
+    {
+      "id": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "type": "open_problem",
+      "title": "Quantum inhomogeneous BFV nilpotency and anomaly",
+      "summary": "Downstream quantum lane. After a raw-domain choice, absolute BFV boundary data and classical closed-S3 closure, construct the regulated common-domain operator charge and test Omega-hat squared to declared perturbative, hbar and harmonic-cutoff orders. A vanishing expectation value is not operator anomaly freedom.",
+      "state": "OPEN_BLOCKED_QUANTUM_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Does the regulated inhomogeneous BFV charge square to zero as an operator on a common domain after cutoff remainder is separated?"
+    },
+    {
+      "id": "open:gate1-v0-relational-observables-bo-decoherence",
+      "type": "open_problem",
+      "title": "Relational observables, Born-Oppenheimer recovery and decoherence",
+      "summary": "Construct clock-tied perturbative Dirac observables, cross-check a second admissible clock or gauge, and bound Hamilton-Jacobi, effective-Schrodinger norm, constraint-moment, Ehrenfest, backreaction and decoherence-functional residuals. This is pre-data work and supplies no likelihood by itself.",
+      "state": "OPEN_REQUIRES_ANOMALY_CONTROL_AND_PHYSICAL_PRODUCT_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Which relational perturbation observables and semiclassical states recover classical spacetime with declared clock and decoherence error bounds?"
+    },
+    {
+      "id": "open:gate1-v0-empirical-likelihood-bridge",
+      "type": "open_problem",
+      "title": "Closed-universe primordial transfer and empirical likelihood bridge",
+      "summary": "Downstream data lane only. The current V=0 massless-scalar closed-FRW sector has no standard inflationary perturbation generation or reheating model. An explicit V-not-equal-zero or alternative extension, initial state, discrete primordial spectra and late-time parameter map must exist before non-flat CLASS, public likelihoods and posterior-predictive checks are scientifically defined.",
+      "state": "OPEN_BLOCKED_BY_RELATIONAL_AND_PERTURBATION_GENERATION_MODEL_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "After a real perturbation-generation and reheating extension exists, do its discrete closed-universe spectra survive non-flat transfer and current public likelihood tests?"
+    },
+    {
+      "id": "source:pawlowski-ashtekar-2012-positive-lambda-lqc",
+      "type": "source",
+      "title": "Positive cosmological constant in loop quantum cosmology",
+      "summary": "Primary contrast case with genuine self-adjoint-extension and gluing data; it does not supply an origin condition for the selected V0 multiplication operator.",
+      "state": "PRIMARY",
+      "citation": "T. Pawlowski and A. Ashtekar, Phys. Rev. D 85 (2012) 064001",
+      "uri": "https://arxiv.org/abs/1112.0360v1",
+      "version": "arXiv:1112.0360v1"
     },
     {
       "id": "source:giulini-marolf-1999-generality",
@@ -12894,7 +13038,7 @@
       "state": "TRACKED_NON_EVIDENTIAL_ONTOLOGY_MAP",
       "artifact_kind": "ontology_map",
       "path": "cpt_temporal_folded_susy/GATE1_V0_QUANTUM_COSMOLOGY_ONTOLOGY_MAP.md",
-      "sha256": "984ac55b19cfc34b77b5dc49478e1b79586a6814e731963386c4e941f7ecfad7"
+      "sha256": "b7940e6d98e690ef5399986bdde3cc8d0acd7a870f7e88d83996a458a4306973"
     }
   ],
   "edges": [
@@ -31004,47 +31148,47 @@
     {
       "id": "edge:2912",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
-      "relation": "BLOCKED_BY",
+      "relation": "ABOUT",
       "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
-      "note": "Blocks quantum/physical promotion, not the independently open classical closed-S3 HDA and Jacobi audit."
+      "note": "Legacy roadmap context only. The separate quantum child is blocked by raw-domain data; the classical child is not."
     },
     {
       "id": "edge:2913",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
-      "relation": "BLOCKED_BY",
+      "relation": "ABOUT",
       "to": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
-      "note": "Blocks quantum/physical promotion, not the independently open classical closed-S3 HDA and Jacobi audit."
+      "note": "Legacy roadmap context only; the selected-H standard full-p completion is now scoped KEEP and is not a classical-S3 blocker."
     },
     {
       "id": "edge:2914",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
-      "relation": "BLOCKED_BY",
+      "relation": "ABOUT",
       "to": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
-      "note": "Blocks quantum/physical promotion, not the independently open classical closed-S3 HDA and Jacobi audit."
+      "note": "Legacy roadmap context only; exact endpoint work is not a prerequisite for the independently declared classical-S3 audit."
     },
     {
       "id": "edge:2915",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
-      "relation": "BLOCKED_BY",
+      "relation": "ABOUT",
       "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
-      "note": "Blocks quantum BFV nilpotency and physical normalization, not the independently open classical closed-S3 HDA and Jacobi audit."
+      "note": "Legacy roadmap context only. The separate quantum child is blocked by BFV measure data; the classical child is not."
     },
     {
       "id": "edge:2916",
       "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
-      "relation": "BLOCKED_BY",
+      "relation": "ABOUT",
       "to": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly"
     },
     {
       "id": "edge:2917",
       "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
-      "relation": "BLOCKED_BY",
+      "relation": "ABOUT",
       "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
     },
     {
       "id": "edge:2918",
       "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
-      "relation": "BLOCKED_BY",
+      "relation": "ABOUT",
       "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
     },
     {
@@ -31328,125 +31472,403 @@
     },
     {
       "id": "edge:2962",
-      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
       "relation": "CITES",
       "to": "source:teitelboim-1973-hypersurface-deformation"
     },
     {
       "id": "edge:2963",
-      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
       "relation": "CITES",
       "to": "source:hojman-kuchar-teitelboim-1976"
     },
     {
       "id": "edge:2964",
-      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "from": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
       "relation": "CITES",
       "to": "source:kamenshchik-lyakhovich-1997-closed-bfv"
     },
     {
       "id": "edge:2965",
-      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "from": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
       "relation": "CITES",
       "to": "source:armendariz-picon-sengor-2016-brst-cosmological-perturbations"
     },
     {
       "id": "edge:2966",
-      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
       "relation": "CITES",
       "to": "source:dittrich-tambornino-2007-gauge-invariant-perturbations"
     },
     {
       "id": "edge:2967",
-      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
       "relation": "CITES",
       "to": "source:malkiewicz-2018-hamiltonian-cosmological-perturbations"
     },
     {
       "id": "edge:2968",
-      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
       "relation": "CITES",
       "to": "source:halliwell-hawking-1985-closed-perturbations",
       "note": "Closed-universe perturbation template only; no-boundary and inflationary assumptions are not inherited."
     },
     {
       "id": "edge:2969",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
       "relation": "CITES",
       "to": "source:giesel-herzog-singh-2018-geometrical-clocks"
     },
     {
       "id": "edge:2970",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
       "relation": "CITES",
       "to": "source:giesel-singh-winnekens-2019-dirac-dynamics"
     },
     {
       "id": "edge:2971",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
       "relation": "CITES",
       "to": "source:hoehn-vanrietvelde-2020-clock-switching"
     },
     {
       "id": "edge:2972",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
       "relation": "CITES",
       "to": "source:chataignier-2023-beyond-semiclassical-time"
     },
     {
       "id": "edge:2973",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
       "relation": "CITES",
       "to": "source:halliwell-1989-decoherence"
     },
     {
       "id": "edge:2974",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
       "relation": "CITES",
       "to": "source:kiefer-vardanyan-2022-closed-power-spectrum"
     },
     {
       "id": "edge:2975",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
       "relation": "CITES",
       "to": "source:class-2011-boltzmann-code"
     },
     {
       "id": "edge:2976",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
       "relation": "CITES",
       "to": "source:lesgourgues-tram-2014-nonflat-class"
     },
     {
       "id": "edge:2977",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
       "relation": "CITES",
       "to": "source:cobaya-2021"
     },
     {
       "id": "edge:2978",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
       "relation": "CITES",
       "to": "source:planck-2018-cosmological-parameters"
     },
     {
       "id": "edge:2979",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
       "relation": "CITES",
       "to": "source:planck-2018-inflation"
     },
     {
       "id": "edge:2980",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
       "relation": "CITES",
       "to": "source:act-dr6-louis-et-al-2025"
     },
     {
       "id": "edge:2981",
-      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
       "relation": "CITES",
       "to": "source:spt3g-d1-2025",
       "note": "Version-pinned current likelihood comparator only; it requires a complete primordial-to-late-time map and must be repinned at execution time."
+    },
+    {
+      "id": "edge:2982",
+      "from": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:2983",
+      "from": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-densitized-raq-p-zero-boundary-control",
+      "note": "Uses the selected-H interior and p-zero boundary results but asks the separate full-real-p regular-shell question; no automatic successor is created."
+    },
+    {
+      "id": "edge:2984",
+      "from": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-h-full-p-regular-shell-raq"
+    },
+    {
+      "id": "edge:2985",
+      "from": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "A clean committed unnumbered runner used the generic 120-second shell, wrote one adjacent result and started no descendant. The first slow implementation timed out without a result and was repaired in a separate commit."
+    },
+    {
+      "id": "edge:2986",
+      "from": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "relation": "CITES",
+      "to": "source:marolf-1995",
+      "note": "Single-constraint RAQ framing only; the two-ray formulas and scoped completion are repository evidence."
+    },
+    {
+      "id": "edge:2987",
+      "from": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "relation": "CITES",
+      "to": "source:han-thiemann-2010-rigging-direct-integral",
+      "note": "Direct-integral comparison and hypothesis discipline only; it does not make the critical zero fiber canonical."
+    },
+    {
+      "id": "edge:2988",
+      "from": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "relation": "CITES",
+      "to": "source:pawlowski-ashtekar-2012-positive-lambda-lqc",
+      "note": "Contrast case for genuine extension/gluing data; no LQC boundary condition is imported."
+    },
+    {
+      "id": "edge:2989",
+      "from": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-full-p-regular-raq-completion-control"
+    },
+    {
+      "id": "edge:2990",
+      "from": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-densitized-raq-p-zero-boundary-result",
+      "note": "The upstream boundary result excludes a naive nonzero origin trace and pins the finite-part ambiguity; it does not supply the negative branch."
+    },
+    {
+      "id": "edge:2991",
+      "from": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "note": "The upstream result pins the selected multiplier and positive-ray measure; the full-p branch calculation is new scoped evidence."
+    },
+    {
+      "id": "edge:2992",
+      "from": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-full-p-regular-raq-completion-raw-result"
+    },
+    {
+      "id": "edge:2993",
+      "from": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-full-p-regular-raq-completion-evidence-snapshot"
+    },
+    {
+      "id": "edge:2994",
+      "from": "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-full-p-regular-raq-completion-control"
+    },
+    {
+      "id": "edge:2995",
+      "from": "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-selected-h-full-p-regular-shell-raq"
+    },
+    {
+      "id": "edge:2996",
+      "from": "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:2997",
+      "from": "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "Closes only the selected-H standard full-p question and sharpens the next independent raw-C domain question; it does not authorize it automatically."
+    },
+    {
+      "id": "edge:2998",
+      "from": "artifact:gate1-v0-full-p-regular-raq-completion-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-full-p-regular-raq-completion-control"
+    },
+    {
+      "id": "edge:2999",
+      "from": "artifact:gate1-v0-full-p-regular-raq-completion-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-full-p-regular-raq-completion-control"
+    },
+    {
+      "id": "edge:3000",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "note": "The standard selected-H completion is scoped closed; the residual open question concerns only independently added nonstandard origin or gluing data."
+    },
+    {
+      "id": "edge:3001",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3002",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "The order is memory only. Every stage is an independent bounded question with automatic_next null; no numbered descendant is authorized."
+    },
+    {
+      "id": "edge:3003",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-quantum-cosmology-ontology-map"
+    },
+    {
+      "id": "edge:3004",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-six-bridge-literature-map"
+    },
+    {
+      "id": "edge:3005",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "note": "Stage 1; the standard selected-H regular completion is scoped KEEP, with only extra origin/gluing hypotheses still open."
+    },
+    {
+      "id": "edge:3006",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "Stage 2: raw-C operator and domain audit."
+    },
+    {
+      "id": "edge:3007",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "note": "Stage 3: microlocal full-symbol work followed by a separate exact operator question."
+    },
+    {
+      "id": "edge:3008",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "note": "Stage 4: absolute BFV measure and boundary/gluing data."
+    },
+    {
+      "id": "edge:3009",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-classical-s3-hda-closure",
+      "note": "Stage 5: independently startable classical closed-S3 closure audit."
+    },
+    {
+      "id": "edge:3010",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "note": "Stage 6: downstream quantum BFV anomaly audit."
+    },
+    {
+      "id": "edge:3011",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-relational-observables-bo-decoherence",
+      "note": "Stage 7: relational observables, Born-Oppenheimer/Ehrenfest recovery and decoherence."
+    },
+    {
+      "id": "edge:3012",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "ABOUT",
+      "to": "open:gate1-v0-empirical-likelihood-bridge",
+      "note": "Stage 8: non-flat transfer and public likelihood only after a real perturbation-generation model exists."
+    },
+    {
+      "id": "edge:3013",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
+      "relation": "PART_OF",
+      "to": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly"
+    },
+    {
+      "id": "edge:3014",
+      "from": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "relation": "PART_OF",
+      "to": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly"
+    },
+    {
+      "id": "edge:3015",
+      "from": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-classical-s3-hda-closure"
+    },
+    {
+      "id": "edge:3016",
+      "from": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+    },
+    {
+      "id": "edge:3017",
+      "from": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+    },
+    {
+      "id": "edge:3018",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
+      "relation": "PART_OF",
+      "to": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge"
+    },
+    {
+      "id": "edge:3019",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
+      "relation": "PART_OF",
+      "to": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge"
+    },
+    {
+      "id": "edge:3020",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly"
+    },
+    {
+      "id": "edge:3021",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+    },
+    {
+      "id": "edge:3022",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+    },
+    {
+      "id": "edge:3023",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
+      "relation": "BLOCKED_BY",
+      "to": "open:gate1-v0-relational-observables-bo-decoherence",
+      "note": "A complete relational primordial observable and error ledger is necessary but not sufficient; an explicit perturbation-generation and reheating extension is also required."
+    },
+    {
+      "id": "edge:3024",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
     }
   ],
   "kg_bridges": [
