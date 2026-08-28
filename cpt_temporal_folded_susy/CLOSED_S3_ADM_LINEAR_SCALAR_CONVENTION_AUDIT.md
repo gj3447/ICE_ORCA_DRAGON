@@ -1,5 +1,20 @@
 # Closed \(S^3\) ADM homogeneous and linear-scalar convention audit
 
+## Observed result
+
+The committed bounded run returned
+
+```text
+KEEP_CLOSED_S3_ADM_HOMOGENEOUS_AND_LINEAR_SCALAR_CONVENTION_BASELINE_NOT_HDA
+```
+
+All 43 exact checks passed.  In the declared \(G=1/(8\pi)\) convention, the
+homogeneous ADM Legendre transform reproduces the repository raw \(C\)
+exactly.  The unit-\(S^3\) volume/curvature, degrees 0--4 zonal normalization
+and Laplacian identities, and the deliberately kinematic longitudinal
+coordinate-generator checks also agree.  Full linear constraints, cubic
+constraints, HDA/Jacobi and BFV remain null.
+
 ## Scope
 
 This bounded, unnumbered calculation fixes a classical convention packet before
@@ -58,3 +73,14 @@ hyperspherical harmonics, their Gaunt/Clebsch--Gordan coefficients, and the
 off-shell constraint expansion through cubic order before testing \(DD,DH,HH\)
 or Jacobi identities.  Finite-cutoff remainders must remain distinct from an
 algebra residual.
+
+## Execution
+
+```text
+./ice run closed_s3_adm_linear_scalar_convention_audit
+VALID_RUN; 43/43 exact checks
+```
+
+The result artifact is
+`CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json`, with outer SHA-256
+`5d56bd94020ddebfda609ca8da3956cc75be5c74ad9b06cdb9ea3464ee616441`.
