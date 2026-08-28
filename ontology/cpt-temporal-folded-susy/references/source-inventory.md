@@ -86,7 +86,34 @@
 | `source:rogers-2000-gauge-fixing-bfv` — A. Rogers, [*Gauge Fixing and BFV Quantization*](https://arxiv.org/abs/hep-th/9902133), Class. Quantum Grav. 17 (2000) 389–397 | `CITES`-only gauge-fermion admissibility and Gribov-boundary framework for the Phase 31 hybrid-BFV completion boundary | Does not validate the hybrid spectral/midpoint regulator, prove gauge-parameter independence, or supply an absolute physical determinant |
 | `source:halliwell-ortiz-1993` — J. J. Halliwell, M. E. Ortiz, [*Sum-over-histories origin of the composition laws of relativistic quantum mechanics and quantum cosmology*](https://doi.org/10.1103/PhysRevD.48.748), Phys. Rev. D 48 (1993) 748–768 | `CITES`-only composition-law framing for distinguishing causal positive-proper-time kernels from constraint-supported objects in Phase 32 | Does not select the lapse contour class, compute the repository's projected crossing, or orient a signed full-joint/global intersection coefficient |
 
-Every source above has a `PRIMARY*` source state in the local graph. That is a source classification, not a claim that the seventy-two-item inventory exhausts the literature.
+### Six-bridge expansion (2026-08-28)
+
+The following primary-source groups support the six research bridges in the literature map. They are
+navigation and comparison sources only: no `CITES` edge turns a general theorem, another cosmological
+model, or an observational likelihood into repository calculation evidence.
+
+| Source node(s) | Bridge role | V0 boundary |
+| --- | --- | --- |
+| `source:giulini-marolf-1999-generality`; `source:giulini-marolf-1999-uniqueness` | RAQ generality and conditional uniqueness | Neither theorem proves that multiplying a constraint by a positive function preserves its quantum realization |
+| `source:han-thiemann-2010-rigging-direct-integral` | Rigging-map/direct-integral comparison under explicit hypotheses | Does not identify the raw (C) and selected densitized (H) zero fibers |
+| `source:feinberg-peleg-1995-wdw-self-adjoint`; `source:mostafazadeh-2004-kg-quantum-cosmology`; `source:gielen-menendez-pidal-2021-clock-unitarity` | Domains, positive products, frequency and clock dependence | Their models and endpoint structures are not the V0 (p=0) logarithmic edge |
+| `source:egorov-1969-canonical-transformations`; `source:duistermaat-hormander-1972-fio-ii` | Symbol transport, global FIO and Maslov data | Supply microlocal machinery, not an exact global (H\leftrightarrow M_c) unitary |
+| `source:barvinsky-1998-dirac-path-integral`; `source:govaerts-scholtz-2004-fv-theorem` | Boundary-sensitive constrained path integrals and limits of gauge-fixing independence | Do not choose the V0 contour, lapse modulus, or absolute normalization |
+| `source:cattaneo-mnev-reshetikhin-2012-classical-bvbfv`; `source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv` | Boundary BFV data, cutting and gluing | Framework only; no V0 bulk-boundary implementation is imported |
+| `source:batalin-fradkin-1983-operator-bfv`; `source:gribov-1978`; `source:singer-1978-gribov-ambiguity` | Open-algebra BRST and global gauge-section obstructions | Do not establish either nilpotency or Gribov copies for the selected finite model |
+| `source:quillen-1985-determinant-line`; `source:bismut-freed-1986-determinant-holonomy` | Determinant-line orientation, connection and holonomy | Require an applicable operator family; they do not manufacture an absolute BFV phase |
+| `source:teitelboim-1973-hypersurface-deformation`; `source:hojman-kuchar-teitelboim-1976` | Full hypersurface-deformation algebra and embeddability baseline | A homogeneous single constraint cannot test this algebra |
+| `source:kamenshchik-lyakhovich-1997-closed-bfv` | Discrete closed-space harmonics and BFV quantum nilpotency | Closest direct comparator, but its background/model is not the V0 closed-FRW system |
+| `source:armendariz-picon-sengor-2016-brst-cosmological-perturbations`; `source:dittrich-tambornino-2007-gauge-invariant-perturbations`; `source:malkiewicz-2018-hamiltonian-cosmological-perturbations` | BRST, Dirac-observable and reduced-phase-space cross-check routes | Do not settle the V0 interaction-order algebra, domains, or regulator anomaly |
+| `source:halliwell-hawking-1985-closed-perturbations` | Closed-universe scalar/vector/tensor perturbation template | Uses no-boundary/inflationary structure not supplied by V0 |
+| `source:giesel-herzog-singh-2018-geometrical-clocks`; `source:giesel-singh-winnekens-2019-dirac-dynamics`; `source:hoehn-vanrietvelde-2020-clock-switching`; `source:chataignier-2023-beyond-semiclassical-time` | Relational observables, clock switching and quantum-cosmology time | Do not select a global V0 clock or prove clock-independent predictions |
+| `source:halliwell-1989-decoherence`; `source:kiefer-vardanyan-2022-closed-power-spectrum` | Decoherence/WKB separation and a closed-inflation spectrum comparator | The spectrum paper assumes an inflationary extension absent from the frozen (V=0) model |
+| `source:class-2011-boltzmann-code`; `source:lesgourgues-tram-2014-nonflat-class`; `source:cobaya-2021` | Primordial-to-CMB transfer and likelihood machinery | Downstream only: a declared primordial spectrum, reheating history and parameter map are prerequisites |
+| `source:planck-2018-cosmological-parameters`; `source:planck-2018-inflation` | Published CMB parameter and inflation constraints | External comparators, not evidence for the proposed mechanism |
+| `source:act-dr6-louis-et-al-2025`; `source:spt3g-d1-2025` | Version-pinned current CMB spectra and likelihood frontiers | Preprint/release inputs must be repinned at execution time and still require an explicit observable map |
+
+Every source represented above has a `PRIMARY*` source state in the local graph. That is a source
+classification, not a claim that this inventory exhausts the literature.
 
 ## Claim-family coverage
 
@@ -147,6 +174,7 @@ Every source above has a `PRIMARY*` source state in the local graph. That is a s
 | Phase 43 frozen local high-precision RHS arbitration | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none supplies the repository's independent exact/80/120-decimal derivative calculation, chooses its numerical thresholds, explains the 13/90 NumPy64 output mismatches or 28/33 finite-difference ledger, proves a formula defect, or promotes local arithmetic to an integrated tangent or global intersection invariant. No new literature source is introduced by Phase 43 |
 | Phase 44 frozen NumPy64 local RHS error decomposition | Witten (2010); Teitelboim (1983, PRL); Banihashemi–Jacobson | Reused `CITES`-only framing inherited through the still-open Gate 1; none supplies the repository's exact independent/source formula comparison, byte-faithful AST trace, S0-to-S7 signed decomposition, six contraction alternatives, fixed forward-error envelopes, 13/77 cohort coverage, or nonexclusive mixed-rounding interpretation. No source proves correct rounding, selects one causal stage, repairs the integrated tangent, or licenses a global intersection invariant. No new literature source is introduced by Phase 44 |
 | Non-numbered Gate-1 straight-lift through V0 spectral-to-(m=2), densitized KL/RAQ, \(p=0\) boundary and zero-mode Ward controls | Witten (2010); Banihashemi–Jacobson; Gibbons–Hawking–Perry; Henneaux–Teitelboim–Vergara; García–Vergara–Urrutia; Marolf (1995, 1996); Giulini; Louko–Martinez-Pascual; NIST DLMF; Halliwell (1988); Rogers; Hörmander; Van Vleck | The earlier sources retain their local framing roles. NIST DLMF supplies only the modified-Bessel/Kontorovich--Lebedev and E1 identities; Marolf and Giulini frame single-constraint RAQ; Louko–Martinez-Pascual makes constraint-rescaling non-equivalence a hard boundary. Repository evidence now also supplies one selected densitized \(H\) spectral realization with positive \(p>0\) measure \(dp/(2\sqrt6\hbar p)\), whose cutoff boundary excludes a nonzero-edge witness and leaves a reference-scale ambiguity, and a Ward check showing direct Berezin integration equals determinant-weighted ghost elimination while unweighted deletion is invalid. It still does not supply a raw-\(C\) ordering/domain or rescaling equivalence, a canonical \(p=0\) edge, an exact normalized endpoint transform, a lapse modulus/contour, an absolute BFV functional measure, a physical cycle, quantum gravity, physics or TOE. |
+| Six-bridge literature expansion (2026-08-28) | RAQ/direct integrals and domains; Egorov/FIO theory; BFV/BV-BFV, Gribov and determinant-line theory; closed-space perturbative Dirac/BRST constructions; relational clocks and decoherence; CLASS/Cobaya plus Planck, ACT DR6 and SPT-3G D1 | All links are `CITES`-only and are indexed by the six-bridge literature map and version/hash manifest. The synthesis sharpens a selected joint-spectrum obstruction and runnable prerequisites, but it performs no new physics calculation, establishes no raw-(C\leftrightarrow H) equivalence, absolute BFV measure, anomaly-free inhomogeneous quantization, empirical fit, quantum-gravity theory or TOE result. Local PDF binaries are reconstructable and ignored. |
 
 Phase 15R remains a historical **scoped census**, not a duplicated or literature-wide source ledger.
 Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative in
@@ -167,7 +195,14 @@ BGG is the only source in the graph with a pinned archive version, local content
 - `Section4.tex`: `b0e03e31bf3e925936362a3691a23aa93f752372e08d27c518403ec97c6657aa`
 - Anchors: `Formdef`, `Leib`, `A.1`, `A.2`, `spincom`, `GRA.240–GRA.242`, `CPN.13`, `CPN.26`, `CPN.40`, `CPN.59`, `CPN.74–CPN.100`, `CPN.130`, `CPN.133–CPN.143`
 
-The other seventy-one graph sources have stable DOI/arXiv locators but no stored local content hash or equation-level anchor. Consequently, the Phase 17–44 and non-numbered Gate-1 literature links document source models, framing, and comparison boundaries while the exact and numerical results remain repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md) for the detailed BGG source ledger.
+The remaining graph sources have stable DOI/arXiv locators but generally no stored local content hash or
+equation-level anchor. The six-bridge expansion separately records SHA-256 hashes for its reconstructable
+local-only arXiv PDF cache. Consequently, the Phase 17–44 and non-numbered Gate-1 literature links
+document source models, framing, and comparison boundaries while the exact and numerical results remain
+repository evidence. See [`PHASE16_BGG_SOURCE_NOTES.md`](../../../cpt_temporal_folded_susy/PHASE16_BGG_SOURCE_NOTES.md)
+for the detailed BGG source ledger and
+[`GATE1_V0_SIX_BRIDGE_PAPER_MANIFEST_2026-08-28.tsv`](../../../cpt_temporal_folded_susy/GATE1_V0_SIX_BRIDGE_PAPER_MANIFEST_2026-08-28.tsv)
+for the new cache provenance.
 
 ## Uncovered construction needs
 

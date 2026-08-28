@@ -30,3 +30,4 @@ htmlcov/
 # Local scientific reference binaries (sources/checksums stay trackable)
 /output/pdf/tool-manuals/*.pdf
 /output/manual-bundles/*.zip
+/output/pdf/gate1-v0-six-bridges/*.pdf

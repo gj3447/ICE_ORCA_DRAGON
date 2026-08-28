@@ -12468,23 +12468,23 @@
       "id": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
       "type": "open_problem",
       "title": "V0 p-zero, p-negative and global spectral completion",
-      "summary": "Prerequisite: the selected p-positive KL fiber and cutoff edge result. Success requires a stated symmetry/domain principle that fixes origin data, p-negative gluing, positivity and a global physical measure. Reference-scale, extension or sector-mixing dependence is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "summary": "For the selected full real multiplier M_h, p=0 is not a finite self-adjoint-extension endpoint: after r=|p| and x=log(r/r_star), it is x=-infinity. The standard full zero-fiber candidate is the direct sum of independent p-positive and p-negative L2(dx) branches with no origin atom. The open work is to verify the full-p RAQ test space, observable domains and positivity, and to identify any genuinely independent symmetry or transfer law that could justify a nonstandard origin sector or branch gluing. This node authorizes no execution or promotion.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Which, if any, domain, symmetry or superselection principle canonically completes the selected p-positive fiber across p=0 and the p-negative branch?"
+      "question": "Does the declared full-p RAQ construction give the standard L2(dx) direct sum with no origin state, and what additional independently justified structure, if any, replaces that completion?"
     },
     {
       "id": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
       "type": "open_problem",
       "title": "Exact V0 endpoint Mc intertwiner and full symbol",
-      "summary": "Prerequisites are the classical Darboux chart, principal FIO, selected operator domains and edge data. Success requires an exact unitary with full symbol and common domains that intertwines the relevant constraint operators and observables. A surviving lower-symbol family, edge form or domain obstruction is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "summary": "The principal FIO remains a microlocal target. For the selected densitized H, however, an exact global unitary that preserves p and maps H to the declared unrestricted Mc is obstructed by the joint spectral supports: H has c<3p^2 for kappa>0 while the target admits all real c. The viable exact question must therefore use a fully declared raw-C realization or an explicitly restricted target and must compare spectral measure class, multiplicity, domains, boundary forms and the companion observables. This node authorizes no execution or promotion.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Does an exact domain-preserving endpoint transform exist that relates the selected original-coordinate realization to Mc, and what full symbol and edge data determine or obstruct it?"
+      "question": "After the raw-C realization and target support are fixed, does a domain- and observable-preserving exact endpoint transform exist, and what full-symbol, spectral and edge data determine or obstruct it?"
     },
     {
       "id": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
       "type": "open_problem",
       "title": "V0 inhomogeneous perturbations, Dirac algebra and anomaly",
-      "summary": "Prerequisites are a selected homogeneous domain, edge completion and BFV measure boundary. Success requires a declared finite perturbative truncation whose regulated constraints close, satisfy Jacobi consistency and give a nilpotent BFV charge. A regulator-stable anomaly, boundary leakage or clock/background dependence is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "summary": "This bridge has two lanes. A classical closed-S3 harmonic HDA/Jacobi audit can begin independently once the full action, perturbative order and product-coupling ledger are declared; a finite harmonic set is not product-closed, so projection remainder must be separated from anomaly. Quantum BFV nilpotency remains downstream of a selected ordering/domain and BFV measure. Success requires regulated operator closure and Omega-hat squared to vanish to declared perturbative, hbar and cutoff orders. This node authorizes no execution or promotion.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
       "question": "Can the homogeneous V0 construction be extended to explicitly inhomogeneous metric, matter and ghost modes with anomaly-controlled Dirac/BFV closure?"
     },
@@ -12492,9 +12492,399 @@
       "id": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
       "type": "open_problem",
       "title": "V0 relational observables, semiclassical recovery and empirical bridge",
-      "summary": "Prerequisites are a physical product, selected contour and anomaly-controlled perturbations. Success requires self-adjoint relational observables, normalized semiclassical states, error-controlled Einstein recovery and an explicit observable-to-data map. Clock, domain or contour dependence, or the absence of an empirical discriminator, is a branch or failure discriminator. This node authorizes no execution or promotion.",
+      "summary": "This bridge separates into relational clock-tied perturbation observables, error-controlled Born-Oppenheimer/WKB plus decoherence, and only then an empirical transfer/likelihood map. The present V=0 massless-scalar closed-FRW sector supplies no standard inflationary perturbation-generation or reheating model, so a data bridge requires an explicit V-not-equal-zero or alternative extension, initial state and late-time parameter map. Clock, domain, contour or state dependence remains a discriminator. This node authorizes no execution or promotion.",
       "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
       "question": "Which relational observables survive the completed constraints, recover semiclassical spacetime with controlled errors, and define a falsifiable map to data?"
+    },
+    {
+      "id": "source:giulini-marolf-1999-generality",
+      "type": "source",
+      "title": "On the Generality of Refined Algebraic Quantization",
+      "summary": "Primary RAQ domain and completeness framework; it does not choose the V0 raw-constraint ordering or extension.",
+      "state": "PRIMARY",
+      "citation": "D. Giulini and D. Marolf, Class. Quantum Grav. 16 (1999) 2479-2488",
+      "uri": "https://arxiv.org/abs/gr-qc/9812024v2",
+      "version": "arXiv:gr-qc/9812024v2"
+    },
+    {
+      "id": "source:giulini-marolf-1999-uniqueness",
+      "type": "source",
+      "title": "A Uniqueness Theorem for Constraint Quantization",
+      "summary": "Primary conditional rigging-map uniqueness theorem; it does not identify differently rescaled constraints.",
+      "state": "PRIMARY",
+      "citation": "D. Giulini and D. Marolf, Class. Quantum Grav. 16 (1999) 2489-2505",
+      "uri": "https://arxiv.org/abs/gr-qc/9902045v2",
+      "version": "arXiv:gr-qc/9902045v2"
+    },
+    {
+      "id": "source:han-thiemann-2010-rigging-direct-integral",
+      "type": "source",
+      "title": "Rigging inner product and master-constraint direct-integral decomposition",
+      "summary": "Primary sufficient-condition comparison between rigging maps and direct-integral zero sectors; it is not a raw-C/H equivalence theorem.",
+      "state": "PRIMARY",
+      "citation": "M. Han and T. Thiemann, J. Math. Phys. 51 (2010) 092501",
+      "uri": "https://arxiv.org/abs/0911.3431v1",
+      "version": "arXiv:0911.3431v1"
+    },
+    {
+      "id": "source:feinberg-peleg-1995-wdw-self-adjoint",
+      "type": "source",
+      "title": "Self-adjoint Wheeler-DeWitt operators and the problem of time",
+      "summary": "Primary minisuperspace example of physical dependence on Wheeler-DeWitt domains and extensions; its boundary is not the V0 p-zero spectral edge.",
+      "state": "PRIMARY",
+      "citation": "J. Feinberg and Y. Peleg, Phys. Rev. D 52 (1995) 1988-2000",
+      "uri": "https://arxiv.org/abs/hep-th/9503073v2",
+      "version": "arXiv:hep-th/9503073v2"
+    },
+    {
+      "id": "source:mostafazadeh-2004-kg-quantum-cosmology",
+      "type": "source",
+      "title": "Quantum mechanics of Klein-Gordon-type fields and quantum cosmology",
+      "summary": "Primary positive-inner-product and frequency-splitting framework; it does not make the selected p-positive RAQ branch a physical positive-frequency sector.",
+      "state": "PRIMARY",
+      "citation": "A. Mostafazadeh, Ann. Phys. 309 (2004) 1-48",
+      "uri": "https://arxiv.org/abs/gr-qc/0306003v3",
+      "version": "arXiv:gr-qc/0306003v3"
+    },
+    {
+      "id": "source:gielen-menendez-pidal-2021-clock-unitarity",
+      "type": "source",
+      "title": "Unitarity, clock dependence and quantum recollapse in quantum cosmology",
+      "summary": "Primary clock-dependence example showing that unitarity domains can change quantum cosmological dynamics; it is not the V0 model.",
+      "state": "PRIMARY",
+      "citation": "S. Gielen and L. Menendez-Pidal, arXiv:2109.02660",
+      "uri": "https://arxiv.org/abs/2109.02660v3",
+      "version": "arXiv:2109.02660v3"
+    },
+    {
+      "id": "source:egorov-1969-canonical-transformations",
+      "type": "source",
+      "title": "Canonical transformations of pseudodifferential operators",
+      "summary": "Original Egorov conjugation result; it supplies a symbol-level method, not an exact V0 closed-operator intertwiner.",
+      "state": "PRIMARY",
+      "citation": "Yu. V. Egorov, Uspekhi Mat. Nauk 24 (1969) 235-236",
+      "uri": "https://www.mathnet.ru/eng/rm5554",
+      "version": "journal record"
+    },
+    {
+      "id": "source:duistermaat-hormander-1972-fio-ii",
+      "type": "source",
+      "title": "Fourier integral operators II",
+      "summary": "Primary global FIO and Maslov-symbol framework; it does not fix the V0 endpoint domain or edge data.",
+      "state": "PRIMARY",
+      "citation": "J. J. Duistermaat and L. Hormander, Acta Math. 128 (1972) 183-269",
+      "uri": "https://doi.org/10.1007/BF02392165",
+      "version": "Acta Math. 128 (1972)"
+    },
+    {
+      "id": "source:barvinsky-1998-dirac-path-integral",
+      "type": "source",
+      "title": "Solution of quantum Dirac constraints via path integral",
+      "summary": "Primary one-loop determinant and boundary-sensitive Ward-identity construction; it does not fix the V0 absolute contour or measure.",
+      "state": "PRIMARY",
+      "citation": "A. O. Barvinsky, Nucl. Phys. B 520 (1998) 533-560",
+      "uri": "https://arxiv.org/abs/hep-th/9711164v1",
+      "version": "arXiv:hep-th/9711164v1"
+    },
+    {
+      "id": "source:govaerts-scholtz-2004-fv-theorem",
+      "type": "source",
+      "title": "Revisiting the Fradkin-Vilkovisky theorem",
+      "summary": "Primary limitation and gauge-admissibility analysis; it blocks unconditional nonperturbative gauge-fermion-independence claims.",
+      "state": "PRIMARY",
+      "citation": "J. Govaerts and F. G. Scholtz, J. Phys. A 37 (2004) 7359-7380",
+      "uri": "https://arxiv.org/abs/hep-th/0406099v1",
+      "version": "arXiv:hep-th/0406099v1"
+    },
+    {
+      "id": "source:cattaneo-mnev-reshetikhin-2012-classical-bvbfv",
+      "type": "source",
+      "title": "Classical BV theories on manifolds with boundary",
+      "summary": "Primary BV-BFV boundary framework; it provides the language for endpoints and gluing, not a V0 implementation.",
+      "state": "PRIMARY",
+      "citation": "A. S. Cattaneo, P. Mnev and N. Reshetikhin, arXiv:1201.0290",
+      "uri": "https://arxiv.org/abs/1201.0290v3",
+      "version": "arXiv:1201.0290v3"
+    },
+    {
+      "id": "source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv",
+      "type": "source",
+      "title": "Perturbative quantum gauge theories on manifolds with boundary",
+      "summary": "Primary perturbative quantum BV-BFV cutting and gluing framework; it does not select the V0 lapse modulus or normalization.",
+      "state": "PRIMARY",
+      "citation": "A. S. Cattaneo, P. Mnev and N. Reshetikhin, arXiv:1507.01221",
+      "uri": "https://arxiv.org/abs/1507.01221v2",
+      "version": "arXiv:1507.01221v2"
+    },
+    {
+      "id": "source:teitelboim-1973-hypersurface-deformation",
+      "type": "source",
+      "title": "How commutators of constraints reflect the spacetime structure",
+      "summary": "Primary hypersurface-deformation and embeddability baseline; the homogeneous single-constraint algebra does not test it.",
+      "state": "PRIMARY",
+      "citation": "C. Teitelboim, Ann. Phys. 79 (1973) 542-557",
+      "uri": "https://doi.org/10.1016/0003-4916(73)90096-1",
+      "version": "Ann. Phys. 79 (1973)"
+    },
+    {
+      "id": "source:hojman-kuchar-teitelboim-1976",
+      "type": "source",
+      "title": "Geometrodynamics regained",
+      "summary": "Primary relation between hypersurface deformations and canonical geometrodynamics; it is a full-theory comparator, not minisuperspace evidence.",
+      "state": "PRIMARY",
+      "citation": "S. A. Hojman, K. Kuchar and C. Teitelboim, Ann. Phys. 96 (1976) 88-135",
+      "uri": "https://doi.org/10.1016/0003-4916(76)90112-3",
+      "version": "Ann. Phys. 96 (1976)"
+    },
+    {
+      "id": "source:kamenshchik-lyakhovich-1997-closed-bfv",
+      "type": "source",
+      "title": "Hamiltonian BFV-BRST theory of closed quantum cosmological models",
+      "summary": "Primary discrete-harmonic closed-cosmology BFV construction and first quantum nilpotency test; its Bianchi-I model is not the V0 closed FRW model.",
+      "state": "PRIMARY",
+      "citation": "A. Yu. Kamenshchik and S. L. Lyakhovich, Nucl. Phys. B 495 (1997) 309-338",
+      "uri": "https://arxiv.org/abs/hep-th/9608130v1",
+      "version": "arXiv:hep-th/9608130v1"
+    },
+    {
+      "id": "source:armendariz-picon-sengor-2016-brst-cosmological-perturbations",
+      "type": "source",
+      "title": "BRST quantization of cosmological perturbations",
+      "summary": "Primary Hamiltonian BRST-versus-Dirac cosmological-perturbation comparator; it focuses mainly on the free theory.",
+      "state": "PRIMARY",
+      "citation": "C. Armendariz-Picon and G. Sengor, JCAP 11 (2016) 016",
+      "uri": "https://arxiv.org/abs/1606.03823v2",
+      "version": "arXiv:1606.03823v2"
+    },
+    {
+      "id": "source:dittrich-tambornino-2007-gauge-invariant-perturbations",
+      "type": "source",
+      "title": "Gauge-invariant perturbations around symmetry-reduced sectors of general relativity",
+      "summary": "Primary canonical gauge-invariant perturbation and backreaction framework; it does not establish the V0 quantum domains or anomaly freedom.",
+      "state": "PRIMARY",
+      "citation": "B. Dittrich and J. Tambornino, Class. Quantum Grav. 24 (2007) 4543-4586",
+      "uri": "https://arxiv.org/abs/gr-qc/0702093v1",
+      "version": "arXiv:gr-qc/0702093v1"
+    },
+    {
+      "id": "source:malkiewicz-2018-hamiltonian-cosmological-perturbations",
+      "type": "source",
+      "title": "Hamiltonian formalism and gauge-fixing conditions for cosmological perturbation theory",
+      "summary": "Primary Dirac-bracket and reduced-phase-space gauge comparison; it supplies a cross-check method rather than a V0 completion.",
+      "state": "PRIMARY",
+      "citation": "P. Malkiewicz, arXiv:1810.11621",
+      "uri": "https://arxiv.org/abs/1810.11621v3",
+      "version": "arXiv:1810.11621v3"
+    },
+    {
+      "id": "source:giesel-herzog-singh-2018-geometrical-clocks",
+      "type": "source",
+      "title": "Gauge-invariant variables for cosmological perturbation theory using geometrical clocks",
+      "summary": "Primary identification of standard perturbation variables with clock-tied Dirac observables; it does not choose a global V0 clock.",
+      "state": "PRIMARY",
+      "citation": "K. Giesel, A. Herzog and P. Singh, Class. Quantum Grav. 35 (2018)",
+      "uri": "https://arxiv.org/abs/1801.09630v3",
+      "version": "arXiv:1801.09630v3"
+    },
+    {
+      "id": "source:giesel-singh-winnekens-2019-dirac-dynamics",
+      "type": "source",
+      "title": "Dynamics of Dirac observables in canonical cosmological perturbation theory",
+      "summary": "Primary gauge-invariant evolution-equation construction in extended ADM phase space; it is a relational comparator, not an empirical map.",
+      "state": "PRIMARY",
+      "citation": "K. Giesel, P. Singh and D. Winnekens, Class. Quantum Grav. 36 (2019) 085009",
+      "uri": "https://arxiv.org/abs/1811.07972v2",
+      "version": "arXiv:1811.07972v2"
+    },
+    {
+      "id": "source:hoehn-vanrietvelde-2020-clock-switching",
+      "type": "source",
+      "title": "How to switch between relational quantum clocks",
+      "summary": "Primary clock-switching and zero-mode-regularization construction through a clock-neutral Dirac theory; it is not a V0 origin-state prescription.",
+      "state": "PRIMARY",
+      "citation": "P. A. Hoehn and A. Vanrietvelde, New J. Phys. 22 (2020) 123048",
+      "uri": "https://arxiv.org/abs/1810.04153v3",
+      "version": "arXiv:1810.04153v3"
+    },
+    {
+      "id": "source:chataignier-2023-beyond-semiclassical-time",
+      "type": "source",
+      "title": "Beyond semiclassical time: dynamics in quantum cosmology",
+      "summary": "Primary synthesis of relational inner products and perturbative Born-Oppenheimer unitarity; it does not derive the V0 observables.",
+      "state": "PRIMARY",
+      "citation": "L. Chataignier, J. Phys. Conf. Ser. 2533 (2023) 012029",
+      "uri": "https://arxiv.org/abs/2302.07903v1",
+      "version": "arXiv:2302.07903v1"
+    },
+    {
+      "id": "source:kiefer-vardanyan-2022-closed-power-spectrum",
+      "type": "source",
+      "title": "Power spectrum for perturbations in an inflationary model for a closed universe",
+      "summary": "Primary modern closed-universe Born-Oppenheimer-to-spectrum comparator; it assumes an inflationary model absent from the V0 sector.",
+      "state": "PRIMARY",
+      "citation": "C. Kiefer and T. Vardanyan, Gen. Rel. Grav. 54 (2022)",
+      "uri": "https://arxiv.org/abs/2111.07835v2",
+      "version": "arXiv:2111.07835v2"
+    },
+    {
+      "id": "source:lesgourgues-tram-2014-nonflat-class",
+      "type": "source",
+      "title": "Fast and accurate CMB computations in non-flat FLRW universes",
+      "summary": "Primary hyperspherical non-flat CLASS implementation; it becomes relevant only after a closed-universe primordial spectrum exists.",
+      "state": "PRIMARY",
+      "citation": "J. Lesgourgues and T. Tram, JCAP 09 (2014) 032",
+      "uri": "https://arxiv.org/abs/1312.2697v2",
+      "version": "arXiv:1312.2697v2"
+    },
+    {
+      "id": "source:class-2011-boltzmann-code",
+      "type": "source",
+      "title": "The Cosmic Linear Anisotropy Solving System",
+      "summary": "Primary CLASS Boltzmann-code paper; it propagates declared primordial inputs and does not create them from V0.",
+      "state": "PRIMARY",
+      "citation": "D. Blas, J. Lesgourgues and T. Tram, JCAP 07 (2011) 034",
+      "uri": "https://arxiv.org/abs/1104.2932v2",
+      "version": "arXiv:1104.2932v2"
+    },
+    {
+      "id": "source:cobaya-2021",
+      "type": "source",
+      "title": "Cobaya: Code for Bayesian Analysis of hierarchical physical models",
+      "summary": "Primary public likelihood and sampling framework; it is downstream of an explicit observable model.",
+      "state": "PRIMARY",
+      "citation": "J. Torrado and A. Lewis, JCAP 05 (2021) 057",
+      "uri": "https://arxiv.org/abs/2005.05290v2",
+      "version": "arXiv:2005.05290v2"
+    },
+    {
+      "id": "source:planck-2018-cosmological-parameters",
+      "type": "source",
+      "title": "Planck 2018 results VI: Cosmological parameters",
+      "summary": "Primary published CMB likelihood and parameter baseline; it does not validate a model without a primordial-to-late-time map.",
+      "state": "PRIMARY",
+      "citation": "Planck Collaboration, Astron. Astrophys. 641 (2020) A6",
+      "uri": "https://arxiv.org/abs/1807.06209v4",
+      "version": "arXiv:1807.06209v4"
+    },
+    {
+      "id": "source:planck-2018-inflation",
+      "type": "source",
+      "title": "Planck 2018 results X: Constraints on inflation",
+      "summary": "Primary published inflation constraint baseline; it is an external comparator, not evidence for the V0 mechanism.",
+      "state": "PRIMARY",
+      "citation": "Planck Collaboration, Astron. Astrophys. 641 (2020) A10",
+      "uri": "https://arxiv.org/abs/1807.06211v2",
+      "version": "arXiv:1807.06211v2"
+    },
+    {
+      "id": "source:act-dr6-louis-et-al-2025",
+      "type": "source",
+      "title": "ACT DR6 power spectra, likelihoods and Lambda-CDM parameters",
+      "summary": "Primary 2025 ACT collaboration release and public-likelihood baseline; its revision must be pinned at any future execution.",
+      "state": "PRIMARY",
+      "citation": "T. Louis et al. (ACT Collaboration), arXiv:2503.14452",
+      "uri": "https://arxiv.org/abs/2503.14452v2",
+      "version": "arXiv:2503.14452v2"
+    },
+    {
+      "id": "source:spt3g-d1-2025",
+      "type": "source",
+      "title": "SPT-3G D1 CMB temperature and polarization power spectra and cosmology",
+      "summary": "Primary 2025 SPT-3G collaboration release/preprint; it is a version-pinned external comparator only.",
+      "state": "PRIMARY",
+      "citation": "E. Camphuis et al. (SPT-3G Collaboration), arXiv:2506.20707",
+      "uri": "https://arxiv.org/abs/2506.20707v2",
+      "version": "arXiv:2506.20707v2"
+    },
+    {
+      "id": "source:halliwell-hawking-1985-closed-perturbations",
+      "type": "source",
+      "title": "Origin of structure in the Universe",
+      "summary": "Primary closed-universe homogeneous-plus-inhomogeneous perturbation construction; its no-boundary inflationary assumptions are not supplied by V0.",
+      "state": "PRIMARY",
+      "citation": "J. J. Halliwell and S. W. Hawking, Phys. Rev. D 31 (1985) 1777-1791",
+      "uri": "https://doi.org/10.1103/PhysRevD.31.1777",
+      "version": "Phys. Rev. D 31 (1985)"
+    },
+    {
+      "id": "source:halliwell-1989-decoherence",
+      "type": "source",
+      "title": "Decoherence in quantum cosmology",
+      "summary": "Primary demonstration that WKB peaking and decoherence are distinct classicality conditions; it is not a universal Einstein-limit theorem.",
+      "state": "PRIMARY",
+      "citation": "J. J. Halliwell, Phys. Rev. D 39 (1989) 2912-2923",
+      "uri": "https://doi.org/10.1103/PhysRevD.39.2912",
+      "version": "Phys. Rev. D 39 (1989)"
+    },
+    {
+      "id": "source:batalin-fradkin-1983-operator-bfv",
+      "type": "source",
+      "title": "Operator quantization of relativistic dynamical systems subject to first-class constraints",
+      "summary": "Primary operator BFV/BRST framework for open and higher-rank first-class algebras; it supplies no V0 ordering.",
+      "state": "PRIMARY",
+      "citation": "I. A. Batalin and E. S. Fradkin, Phys. Lett. B 128 (1983) 303-308",
+      "uri": "https://doi.org/10.1016/0370-2693(83)90265-4",
+      "version": "Phys. Lett. B 128 (1983)"
+    },
+    {
+      "id": "source:gribov-1978",
+      "type": "source",
+      "title": "Quantization of non-Abelian gauge theories",
+      "summary": "Primary gauge-copy and Faddeev-Popov-zero analysis; it is a global-admissibility warning, not a claim that the finite V0 gauge has copies.",
+      "state": "PRIMARY",
+      "citation": "V. N. Gribov, Nucl. Phys. B 139 (1978) 1-19",
+      "uri": "https://doi.org/10.1016/0550-3213(78)90175-X",
+      "version": "Nucl. Phys. B 139 (1978)"
+    },
+    {
+      "id": "source:singer-1978-gribov-ambiguity",
+      "type": "source",
+      "title": "Some remarks on the Gribov ambiguity",
+      "summary": "Primary topological obstruction to a universal gauge section; it does not establish the topology of the V0 finite orbit.",
+      "state": "PRIMARY",
+      "citation": "I. M. Singer, Commun. Math. Phys. 60 (1978) 7-12",
+      "uri": "https://doi.org/10.1007/BF01609471",
+      "version": "Commun. Math. Phys. 60 (1978)"
+    },
+    {
+      "id": "source:quillen-1985-determinant-line",
+      "type": "source",
+      "title": "Determinants of Cauchy-Riemann operators over a Riemann surface",
+      "summary": "Primary determinant-line construction; it motivates the family/orientation ledger but does not make the V0 regulator elliptic.",
+      "state": "PRIMARY",
+      "citation": "D. Quillen, Funct. Anal. Appl. 19 (1985) 31-34",
+      "uri": "https://doi.org/10.1007/BF01086022",
+      "version": "Funct. Anal. Appl. 19 (1985)"
+    },
+    {
+      "id": "source:bismut-freed-1986-determinant-holonomy",
+      "type": "source",
+      "title": "The analysis of elliptic families II",
+      "summary": "Primary determinant-bundle connection and holonomy framework; it does not supply a V0 absolute phase without an applicable operator family.",
+      "state": "PRIMARY",
+      "citation": "J.-M. Bismut and D. S. Freed, Commun. Math. Phys. 107 (1986) 103-163",
+      "uri": "https://doi.org/10.1007/BF01206955",
+      "version": "Commun. Math. Phys. 107 (1986)"
+    },
+    {
+      "id": "artifact:gate1-v0-six-bridge-literature-map",
+      "type": "artifact",
+      "title": "Gate-1 V0 six-bridge literature map",
+      "summary": "Human-readable primary-source-led map of the six research bridges, decisive boundaries, current observational releases and non-automatic work units. It is literature navigation, not calculation evidence.",
+      "state": "TRACKED_NON_EVIDENTIAL_LITERATURE_MAP",
+      "artifact_kind": "literature_map",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_SIX_BRIDGE_LITERATURE_MAP_2026-08-28.md",
+      "sha256": "810665d38b7d99589f1ba6484f08195605ff92b74d4d47e972e37e13f4c1f6d7"
+    },
+    {
+      "id": "artifact:gate1-v0-six-bridge-paper-manifest",
+      "type": "artifact",
+      "title": "Gate-1 V0 six-bridge paper manifest",
+      "summary": "Pinned arXiv versions, source URLs, local-only PDF paths and SHA-256 hashes for the 54-paper open-source cache. The binaries are ignored and reconstructable.",
+      "state": "TRACKED_SOURCE_PROVENANCE_MANIFEST_LOCAL_BINARIES_IGNORED",
+      "artifact_kind": "source_manifest",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_SIX_BRIDGE_PAPER_MANIFEST_2026-08-28.tsv",
+      "sha256": "82ed44c1e43188ff25b84b128aee60b37b76f0547215c2f1f762a0e760074873"
     },
     {
       "id": "artifact:gate1-v0-quantum-cosmology-ontology-map",
@@ -30615,25 +31005,29 @@
       "id": "edge:2912",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
       "relation": "BLOCKED_BY",
-      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "Blocks quantum/physical promotion, not the independently open classical closed-S3 HDA and Jacobi audit."
     },
     {
       "id": "edge:2913",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
       "relation": "BLOCKED_BY",
-      "to": "open:gate1-v0-p-zero-p-negative-global-spectral-completion"
+      "to": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "note": "Blocks quantum/physical promotion, not the independently open classical closed-S3 HDA and Jacobi audit."
     },
     {
       "id": "edge:2914",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
       "relation": "BLOCKED_BY",
-      "to": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol"
+      "to": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "note": "Blocks quantum/physical promotion, not the independently open classical closed-S3 HDA and Jacobi audit."
     },
     {
       "id": "edge:2915",
       "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
       "relation": "BLOCKED_BY",
-      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure"
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "note": "Blocks quantum BFV nilpotency and physical normalization, not the independently open classical closed-S3 HDA and Jacobi audit."
     },
     {
       "id": "edge:2916",
@@ -30729,6 +31123,330 @@
       "relation": "DOCUMENTS",
       "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
       "note": "Roadmap and dependency metadata only; no automatic execution or promotion."
+    },
+    {
+      "id": "edge:2930",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-quantum-cosmology-forward-research-roadmap",
+      "note": "Primary-source navigation and revised dependency map only; no new calculation evidence or automatic execution authority."
+    },
+    {
+      "id": "edge:2931",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:gate1-v0-six-bridge-paper-manifest",
+      "note": "The manifest supplies version, URL and local-cache hash provenance for open arXiv sources; DOI-only sources are identified directly in the map."
+    },
+    {
+      "id": "edge:2932",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "Literature route and proof obligations only."
+    },
+    {
+      "id": "edge:2933",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "note": "Literature route and proof obligations only."
+    },
+    {
+      "id": "edge:2934",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "note": "Literature route, joint-spectrum obstruction and revised target only."
+    },
+    {
+      "id": "edge:2935",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "note": "Literature route and absolute-measure proof obligations only."
+    },
+    {
+      "id": "edge:2936",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "note": "Separates the independently startable classical S3 algebra audit from downstream quantum BFV closure."
+    },
+    {
+      "id": "edge:2937",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "note": "Separates relational, semiclassical/decoherence and observational stages."
+    },
+    {
+      "id": "edge:2938",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "CITES",
+      "to": "source:giulini-marolf-1999-generality"
+    },
+    {
+      "id": "edge:2939",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "CITES",
+      "to": "source:giulini-marolf-1999-uniqueness"
+    },
+    {
+      "id": "edge:2940",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "CITES",
+      "to": "source:han-thiemann-2010-rigging-direct-integral"
+    },
+    {
+      "id": "edge:2941",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "CITES",
+      "to": "source:louko-martinez-pascual-2011",
+      "note": "Hard warning that classically equivalent constraint rescalings need not yield equivalent group-averaged quantum theories."
+    },
+    {
+      "id": "edge:2942",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "CITES",
+      "to": "source:feinberg-peleg-1995-wdw-self-adjoint"
+    },
+    {
+      "id": "edge:2943",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "CITES",
+      "to": "source:mostafazadeh-2004-kg-quantum-cosmology"
+    },
+    {
+      "id": "edge:2944",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "CITES",
+      "to": "source:gielen-menendez-pidal-2021-clock-unitarity"
+    },
+    {
+      "id": "edge:2945",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "CITES",
+      "to": "source:hoehn-vanrietvelde-2020-clock-switching"
+    },
+    {
+      "id": "edge:2946",
+      "from": "open:gate1-v0-p-zero-p-negative-global-spectral-completion",
+      "relation": "CITES",
+      "to": "source:han-thiemann-2010-rigging-direct-integral"
+    },
+    {
+      "id": "edge:2947",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "CITES",
+      "to": "source:egorov-1969-canonical-transformations"
+    },
+    {
+      "id": "edge:2948",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "CITES",
+      "to": "source:hormander-1971-fourier-integral-operators-i"
+    },
+    {
+      "id": "edge:2949",
+      "from": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "relation": "CITES",
+      "to": "source:duistermaat-hormander-1972-fio-ii",
+      "note": "FIO and symbol machinery does not bypass the selected joint-spectrum mismatch or domain question."
+    },
+    {
+      "id": "edge:2950",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:barvinsky-1998-dirac-path-integral"
+    },
+    {
+      "id": "edge:2951",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:govaerts-scholtz-2004-fv-theorem"
+    },
+    {
+      "id": "edge:2952",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:cattaneo-mnev-reshetikhin-2012-classical-bvbfv"
+    },
+    {
+      "id": "edge:2953",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv"
+    },
+    {
+      "id": "edge:2954",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:batalin-fradkin-1983-operator-bfv"
+    },
+    {
+      "id": "edge:2955",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:gribov-1978"
+    },
+    {
+      "id": "edge:2956",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:singer-1978-gribov-ambiguity"
+    },
+    {
+      "id": "edge:2957",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:quillen-1985-determinant-line"
+    },
+    {
+      "id": "edge:2958",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:bismut-freed-1986-determinant-holonomy"
+    },
+    {
+      "id": "edge:2959",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:forman-1987-functional-determinants"
+    },
+    {
+      "id": "edge:2960",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:rogers-2000-gauge-fixing-bfv"
+    },
+    {
+      "id": "edge:2961",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:henneaux-teitelboim-vergara-1992"
+    },
+    {
+      "id": "edge:2962",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "CITES",
+      "to": "source:teitelboim-1973-hypersurface-deformation"
+    },
+    {
+      "id": "edge:2963",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "CITES",
+      "to": "source:hojman-kuchar-teitelboim-1976"
+    },
+    {
+      "id": "edge:2964",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "CITES",
+      "to": "source:kamenshchik-lyakhovich-1997-closed-bfv"
+    },
+    {
+      "id": "edge:2965",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "CITES",
+      "to": "source:armendariz-picon-sengor-2016-brst-cosmological-perturbations"
+    },
+    {
+      "id": "edge:2966",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "CITES",
+      "to": "source:dittrich-tambornino-2007-gauge-invariant-perturbations"
+    },
+    {
+      "id": "edge:2967",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "CITES",
+      "to": "source:malkiewicz-2018-hamiltonian-cosmological-perturbations"
+    },
+    {
+      "id": "edge:2968",
+      "from": "open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly",
+      "relation": "CITES",
+      "to": "source:halliwell-hawking-1985-closed-perturbations",
+      "note": "Closed-universe perturbation template only; no-boundary and inflationary assumptions are not inherited."
+    },
+    {
+      "id": "edge:2969",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:giesel-herzog-singh-2018-geometrical-clocks"
+    },
+    {
+      "id": "edge:2970",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:giesel-singh-winnekens-2019-dirac-dynamics"
+    },
+    {
+      "id": "edge:2971",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:hoehn-vanrietvelde-2020-clock-switching"
+    },
+    {
+      "id": "edge:2972",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:chataignier-2023-beyond-semiclassical-time"
+    },
+    {
+      "id": "edge:2973",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:halliwell-1989-decoherence"
+    },
+    {
+      "id": "edge:2974",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:kiefer-vardanyan-2022-closed-power-spectrum"
+    },
+    {
+      "id": "edge:2975",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:class-2011-boltzmann-code"
+    },
+    {
+      "id": "edge:2976",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:lesgourgues-tram-2014-nonflat-class"
+    },
+    {
+      "id": "edge:2977",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:cobaya-2021"
+    },
+    {
+      "id": "edge:2978",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:planck-2018-cosmological-parameters"
+    },
+    {
+      "id": "edge:2979",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:planck-2018-inflation"
+    },
+    {
+      "id": "edge:2980",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:act-dr6-louis-et-al-2025"
+    },
+    {
+      "id": "edge:2981",
+      "from": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+      "relation": "CITES",
+      "to": "source:spt3g-d1-2025",
+      "note": "Version-pinned current likelihood comparator only; it requires a complete primordial-to-late-time map and must be repinned at execution time."
     }
   ],
   "kg_bridges": [
