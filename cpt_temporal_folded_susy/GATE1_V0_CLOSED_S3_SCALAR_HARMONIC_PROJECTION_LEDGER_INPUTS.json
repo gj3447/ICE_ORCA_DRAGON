@@ -1,0 +1,89 @@
+{
+  "schema_version": "ice.gate1.v0.closed-s3-scalar-harmonic-projection-ledger.input.v1",
+  "calculation_id": "Gate1V0ClosedS3ScalarHarmonicProjectionLedger",
+  "numbered_phase": null,
+  "question": "For one normalized scalar zonal harmonic subspace on the unit three-sphere and one finite cutoff L=2, what exact product coefficients survive projection and what normed product remainder is discarded?",
+  "kind": "EXACT_CLOSED_S3_SCALAR_ZONAL_PRODUCT_AND_PROJECTION_REMAINDER_LEDGER",
+  "epistemic_scope": "UNIT_RADIUS_S3_SCALAR_ZONAL_SUBSPACE_ABOUT_ONE_POLE_WITH_L_EQUALS_2_AND_NO_CANONICAL_CONSTRAINTS",
+  "primary_sources": [
+    {
+      "source": "A.Yu. Kamenshchik and S.L. Lyakhovich, Hamiltonian BFV-BRST theory of closed quantum cosmological models, Nucl. Phys. B495 (1997) 309-338, arXiv:hep-th/9608130v1",
+      "url": "https://arxiv.org/abs/hep-th/9608130v1",
+      "used_for": "closed-model harmonic-expansion and BFV motivation only",
+      "not_used_for": "the zonal normalization, a V0 action, a constraint algebra, BRST nilpotency, anomaly freedom, or a physical state"
+    },
+    {
+      "source": "J.J. Halliwell and S.W. Hawking, Origin of structure in the Universe, Phys. Rev. D31 (1985) 1777",
+      "url": "https://doi.org/10.1103/PhysRevD.31.1777",
+      "used_for": "closed-universe perturbation context only",
+      "not_used_for": "a transfer of no-boundary, inflationary, gauge, or perturbative assumptions into this algebraic ledger"
+    },
+    {
+      "source": "NIST Digital Library of Mathematical Functions, Chapter 18, Orthogonal Polynomials",
+      "url": "https://dlmf.nist.gov/18",
+      "used_for": "Gegenbauer-polynomial differential-equation and normalization convention cross-checks",
+      "not_used_for": "a full scalar-vector-tensor harmonic completeness theorem, ADM constraints, or HDA closure"
+    }
+  ],
+  "declared_geometry_and_basis": {
+    "manifold": "unit S3 with geodesic polar coordinate chi in [0,pi] and volume dV=sin(chi)^2 dchi dOmega_2",
+    "zonal_basis": "Z_n(chi)=(2*pi^2)^(-1/2) C_n^(1)(cos chi)=(2*pi^2)^(-1/2) sin((n+1)chi)/sin(chi), n>=0, with endpoint values defined by continuity",
+    "laplacian_convention": "Delta_S3 Z_n=-n(n+2) Z_n",
+    "cutoff": "P_L projects onto span{Z_0,Z_1,Z_2}; L=2",
+    "product_convention": "Z_l Z_m=(2*pi^2)^(-1/2) sum_{k=0}^{min(l,m)} Z_{l+m-2k}",
+    "symmetry_control": "the antipodal isometry acts as chi -> pi-chi and Z_n -> (-1)^n Z_n; every retained product coefficient obeys l+m-n even"
+  },
+  "tasks": [
+    "derive exact zonal orthonormality from the unit-S3 volume measure",
+    "verify the scalar Laplacian eigenvalue equation for n=0,1,2,3,4",
+    "verify the exact finite Gegenbauer character product identity for all l,m<=2",
+    "compute P_2(Z_l Z_m) and the orthogonal remainder for all l,m<=2",
+    "record exact remainder norms and exhibit Z_2 Z_2 as a nonzero omitted Z_4 witness",
+    "verify antipodal parity and parity compatibility of every declared product coefficient",
+    "verify a projected-product associator witness and compare it with the explicitly retained remainder ledger",
+    "leave all canonical, vector/tensor, HDA, BFV, anomaly, relational, empirical and physical conclusions null"
+  ],
+  "decision_table": [
+    {
+      "condition": "all exact basis, Laplacian, product, projection, remainder, parity and associator identities pass",
+      "verdict": "KEEP_CLOSED_S3_SCALAR_ZONAL_FINITE_CUTOFF_PRODUCT_REMAINDER_LEDGER_NOT_HDA",
+      "programme_impact": "RECORD_FINITE_SCALAR_TRUNCATION_REMAINDER_ONLY"
+    },
+    {
+      "condition": "any exact identity fails",
+      "verdict": "KILL_CLOSED_S3_SCALAR_ZONAL_PROJECTION_LEDGER",
+      "programme_impact": "NO_INFERENCE_ABOUT_CLOSED_S3_HARMONICS_OR_CONSTRAINT_CLOSURE"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "full_scalar_harmonic_completeness": null,
+    "scalar_vector_tensor_mode_closure": null,
+    "closed_s3_adm_matter_action": null,
+    "classical_hypersurface_deformation_algebra_closure": null,
+    "classical_jacobi_closure": null,
+    "quantum_bfv_charge": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "raw_C_operator_domain": null,
+    "absolute_bfv_measure": null,
+    "relational_observables": null,
+    "born_oppenheimer_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
