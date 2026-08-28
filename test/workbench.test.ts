@@ -87,6 +87,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
       "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json"
     ],
     [
+      "raw_c_constant_boundary_direct_integral",
+      "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json"
+    ],
+    [
       "gate1_v0_endpoint_support_restricted_spectral_intertwiner",
       "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_RESULT.json"
     ],
@@ -101,6 +105,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "gate1_v0_closed_s3_scalar_harmonic_projection_ledger",
       "cpt_temporal_folded_susy/GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER_RESULT.json"
+    ],
+    [
+      "closed_s3_adm_linear_scalar_convention_audit",
+      "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json"
     ]
   ])
 

@@ -294,6 +294,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "raw_c_constant_boundary_direct_integral",
+    script:
+      "cpt_temporal_folded_susy/raw_c_constant_boundary_direct_integral.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "gate1_v0_endpoint_support_restricted_spectral_intertwiner",
     script:
       "cpt_temporal_folded_susy/gate1_v0_endpoint_support_restricted_spectral_intertwiner.py",
@@ -326,6 +335,15 @@ export const reproCases = [
       "cpt_temporal_folded_susy/gate1_v0_closed_s3_scalar_harmonic_projection_ledger.py",
     output:
       "cpt_temporal_folded_susy/GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "closed_s3_adm_linear_scalar_convention_audit",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_adm_linear_scalar_convention_audit.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
     policy: "portable",
     compare: tight
   }
