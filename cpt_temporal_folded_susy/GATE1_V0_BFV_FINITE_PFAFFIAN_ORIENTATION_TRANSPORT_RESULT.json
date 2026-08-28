@@ -1,0 +1,253 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1V0BfvFinitePfaffianOrientationTransport",
+  "computed_scope": [
+    "one finite direct sum of the already pinned zero and one-mode nonzero odd Hessians",
+    "one relative orientation transport on lambda in [1/2,2] from a declared lambda=1 odd-basis orientation",
+    "one exact zero-crossing and negative-lambda control",
+    "one separation of odd Pfaffian sign transport from the bosonic contour phase"
+  ],
+  "decision_trace": {
+    "matched_predeclared_condition": "both pinned block formulas, their Pfaffians and determinants, the direct-sum identity, the positive-interval relative sign, the lambda-to-zero degeneracy, the negative-lambda control and the bosonic-contour separation all pass",
+    "primary_source_boundary": "determinant-line sources frame the distinction between a relative finite orientation and an absolute measure; the finite matrices and exact checks are repository workbench results",
+    "revision_boundary": "the earlier relative zero and m=2 factors are combined only to transport their declared odd-basis sign; contour, gluing and absolute normalization remain unselected",
+    "scope_meaning": "one finite relative odd-line sign transport on a declared positive lambda interval"
+  },
+  "environment": {
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "bosonic_boundary": {
+      "absolute_finite_bfv_measure": null,
+      "bosonic_contour_or_maslov_phase": null,
+      "det_M1": "-lambda**2 - pi**2"
+    },
+    "flags": {
+      "antisymmetric_blocks": true,
+      "bosonic_separation": true,
+      "direct_sum": true,
+      "negative_control": true,
+      "nonzero_block": true,
+      "positive_interval": true,
+      "zero_block": true,
+      "zero_degeneracy": true
+    },
+    "ordered_finite_blocks": {
+      "A0": "Matrix([[0, -lambda], [lambda, 0]])",
+      "A1": "Matrix([[0, -lambda, 0, pi], [lambda, 0, pi, 0], [0, -pi, 0, -lambda], [-pi, 0, lambda, 0]])",
+      "M1": "Matrix([[pi, lambda], [lambda, -pi]])",
+      "combined_order": [
+        "rho0",
+        "bar_rho0",
+        "g1",
+        "b1",
+        "rho1",
+        "br1"
+      ],
+      "nonzero_block_order": [
+        "g1",
+        "b1",
+        "rho1",
+        "br1"
+      ],
+      "zero_block_order": [
+        "rho0",
+        "bar_rho0"
+      ]
+    },
+    "pfaffian_line": {
+      "Pf_A0": "-lambda",
+      "Pf_A1": "lambda**2 + pi**2",
+      "Pf_combined": "-lambda*(lambda**2 + pi**2)",
+      "Pf_reference_lambda_1": "-pi**2 - 1",
+      "det_A0": "lambda**2",
+      "det_A1": "lambda**4 + 2*pi**2*lambda**2 + pi**4",
+      "lambda_zero_degeneracy": true,
+      "negative_lambda_transport_without_crossing": false,
+      "relative_Pf_to_lambda_1": "lambda*(lambda**2 + pi**2)/(1 + pi**2)",
+      "relative_orientation_fixed": true,
+      "transport_interval": "[1/2,2]"
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.bfv.orientation.ordered_odd_blocks_antisymmetric",
+      "passed": true,
+      "statement": "the pinned zero, m=2 and concatenated odd Hessians are exactly antisymmetric in their declared basis orders, so their Pfaffians are defined"
+    },
+    {
+      "id": "G1.bfv.orientation.zero_block_pfaffian_and_determinant",
+      "passed": true,
+      "statement": "in the inherited (rho0,bar_rho0) order, Pf(A0)=-lambda and det(A0)=lambda^2"
+    },
+    {
+      "id": "G1.bfv.orientation.m2_block_pfaffian_and_determinant",
+      "passed": true,
+      "statement": "in the inherited (g1,b1,rho1,br1) order, Pf(A1)=lambda^2+pi^2 and det(A1)=(lambda^2+pi^2)^2"
+    },
+    {
+      "id": "G1.bfv.orientation.block_direct_sum_pfaffian",
+      "passed": true,
+      "statement": "the concatenated six-odd-variable order gives Pf(A0 direct-sum A1)=-lambda*(lambda^2+pi^2)"
+    },
+    {
+      "id": "G1.bfv.orientation.positive_interval_relative_transport",
+      "passed": true,
+      "statement": "Pf(A(lambda))/Pf(A(1))=lambda*(lambda^2+pi^2)/(1+pi^2) is strictly positive on the declared [1/2,2] interval"
+    },
+    {
+      "id": "G1.bfv.orientation.lambda_zero_degeneracy",
+      "passed": true,
+      "statement": "lambda tends to zero degenerates A0 while A1 remains nondegenerate, so the positive-interval transport does not extend through zero"
+    },
+    {
+      "id": "G1.bfv.orientation.negative_lambda_crossing_control",
+      "passed": true,
+      "statement": "the lambda=-1/2 control reverses the Pfaffian sign, and every real continuation to it crosses the sole real zero lambda=0"
+    },
+    {
+      "id": "G1.bfv.orientation.bosonic_contour_phase_separation",
+      "passed": true,
+      "statement": "det(M1)=-(lambda^2+pi^2)<0, so the odd Pfaffian transport does not select a bosonic Gaussian contour, Maslov phase, or square-root branch"
+    }
+  ],
+  "frozen_input_contract": {
+    "decision_table": [
+      {
+        "condition": "both pinned block formulas, their Pfaffians and determinants, the direct-sum identity, the positive-interval relative sign, the lambda-to-zero degeneracy, the negative-lambda control and the bosonic-contour separation all pass",
+        "meaning": "the declared finite odd basis has a relative sign transport on one positive lambda interval from its pinned lambda=1 orientation; no absolute scalar measure is obtained",
+        "programme_impact": "CLOSE_ONE_FINITE_RELATIVE_ODD_ORIENTATION_TRANSPORT_ONLY_KEEP_ABSOLUTE_BFV_MEASURE_OPEN",
+        "verdict": "KEEP_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORT"
+      },
+      {
+        "condition": "any pinned formula, Pfaffian/determinant identity, nonvanishing, interval sign, zero-degeneracy, negative control or bosonic-contour separation check fails",
+        "programme_impact": "RETAIN_PRIOR_RELATIVE_GHOST_DETERMINANTS_WITHOUT_A_COMBINED_ORIENTATION_TRANSPORT_CLAIM",
+        "verdict": "KILL_V0_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_DISCRIMINATOR"
+      }
+    ],
+    "epistemic_scope": "ONE_DECLARED_FINITE_DIRECT_SUM_OF_PINNED_ZERO_AND_M2_GHOST_BLOCKS_WITH_A_RELATIVE_ODD_ORIENTATION_AT_LAMBDA_EQUALS_ONE_NOT_AN_ABSOLUTE_BFV_MEASURE",
+    "kind": "EXACT_FINITE_ORDERED_ODD_PFAFFIAN_LINE_TRANSPORT_ON_A_DECLARED_POSITIVE_LAMBDA_INTERVAL",
+    "primary_sources": [
+      {
+        "not_used_for": "selecting this finite ghost basis, its orientation, a contour, or an absolute normalization",
+        "source": "Quillen, Determinants of Cauchy-Riemann operators over a Riemann surface, Funct. Anal. Appl. 19 (1985) 31",
+        "url": "https://doi.org/10.1007/BF01086022",
+        "used_for": "the boundary that a determinant/Pfaffian of a family is line data before a scalar trivialization is fixed"
+      },
+      {
+        "not_used_for": "promoting this finite algebraic interval to a continuum determinant-line theorem",
+        "source": "Bismut and Freed, The analysis of elliptic families II, Commun. Math. Phys. 107 (1986) 103",
+        "url": "https://doi.org/10.1007/BF01206955",
+        "used_for": "orientation and transport language for a nonvanishing family"
+      },
+      {
+        "not_used_for": "proving a Gribov census, contour independence, or absolute BFV normalization",
+        "source": "Govaerts and Scholtz, Revisiting the Fradkin-Vilkovisky theorem, arXiv:hep-th/0406099v1",
+        "url": "https://arxiv.org/abs/hep-th/0406099v1",
+        "used_for": "the boundary that gauge-fermion independence does not by itself select a globally admissible measure"
+      }
+    ],
+    "question": "For the already pinned algebraic zero ghost block and one m=2 nonzero ghost block, does the ordered finite odd Pfaffian line have a nonvanishing, constant relative orientation on the declared positive gauge-fermion interval, without selecting a bosonic contour or an absolute BFV measure?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_INPUTS.json",
+    "sha256": "d88968a8193342a3ec6130b3a1a811b2e2f763cdf47cece58078a85326c21a79"
+  },
+  "not_computed": [
+    "an absolute finite-dimensional or functional BFV measure, scalar normalization, Pfaffian orientation independent of the declared reference basis, or a bosonic Gaussian contour/Maslov phase",
+    "a lapse modulus, lapse contour, zero-lapse contact term, endpoint polarization for a full trajectory, Gribov-copy census, global gauge slice, or gauge-fermion admissibility theorem",
+    "cutting/gluing of two trajectory slabs, a BV-BFV boundary state, continuum determinant/Pfaffian line, regulator removal, or BRST cohomology",
+    "a raw-C operator/domain result, raw-C/H equivalence, exact endpoint transform, inhomogeneous closure, quantum anomaly, relational observable, semiclassical limit, likelihood, quantum gravity, physics or TOE claim"
+  ],
+  "numbered_phase": null,
+  "numerical_checks": [],
+  "programme_impact": "CLOSE_ONE_FINITE_RELATIVE_ODD_ORIENTATION_TRANSPORT_ONLY_KEEP_ABSOLUTE_BFV_MEASURE_OPEN",
+  "required_fail_closed_outputs": {
+    "TOE_claim": null,
+    "absolute_finite_bfv_measure": null,
+    "automatic_next": null,
+    "bosonic_contour_or_maslov_phase": null,
+    "brst_cohomology": null,
+    "continuum_determinant_or_pfaffian_line": null,
+    "empirical_likelihood": null,
+    "endpoint_polarization_for_full_trajectory": null,
+    "exact_endpoint_state_transform": null,
+    "full_bfv_trajectory_measure": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_n_sigma": null,
+    "global_promotion": "PROHIBITED",
+    "gribov_copy_census_or_global_gauge_slice": null,
+    "inhomogeneous_constraint_closure": null,
+    "lapse_modulus_or_contour_selection": null,
+    "physical_original_cycle": null,
+    "physics_claim": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "quantum_gravity_claim": null,
+    "raw_C_operator_and_domain": null,
+    "relational_observables_or_decoherence": null,
+    "two_slab_gluing": null,
+    "zero_lapse_contact_terms": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "numerical_samples": 0,
+    "ode_calls": 0,
+    "quadratures": 0,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "ef341b5f2427f35e81d2cf25476b2fce8b7f7d640e3e46bed2995b8188b57ffc",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_bfv_finite_pfaffian_orientation_transport.py",
+    "sha256": "4e590f1a7a9cffefda72acabebba546067b19db4a5f0313d596c111e34ce272c"
+  },
+  "schema_version": "ice.gate1.v0-bfv-finite-pfaffian-orientation-transport.result.v1",
+  "theorem_guards": [
+    {
+      "conclusion_and_scope": "the calculation transports one relative sign only; it does not produce an orientation independent of its declared basis or reference",
+      "hypotheses": "the odd basis order and lambda=1 reference orientation are declared inputs, and the combined Pfaffian has no zero on [1/2,2]",
+      "id": "G1.bfv.orientation.guard.relative_reference_only",
+      "theorem": "Pfaffian line orientation of a nonvanishing finite family",
+      "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "absolute measure, contour, endpoints, Gribov data and two-slab gluing remain null",
+      "hypotheses": "no bosonic contour, lapse modulus, endpoint polarization, gauge-slice admissibility, Gribov analysis, or interface measure is included",
+      "id": "G1.bfv.orientation.guard.contour_endpoints_gribov_and_gluing_null",
+      "theorem": "separation of finite odd Gaussian algebra from a BFV trajectory measure",
+      "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "it supplies no continuum determinant line, anomaly conclusion, quantum gravity, physics or TOE claim",
+      "hypotheses": "the calculation contains two finite ghost blocks, no regulator removal, no BRST cohomology, and no raw-C, inhomogeneous, observable or empirical construction",
+      "id": "G1.bfv.orientation.guard.no_continuum_or_physics_promotion",
+      "theorem": "bounded workbench interpretation",
+      "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+      "verified": true
+    }
+  ],
+  "upstream_provenance": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json",
+      "payload_sha256_without_self": "22c8423c347084eb07e8167bb38101ab50a74cc3335b5d3f471099a1f54f0a6b",
+      "sha256": "ac50dfa4564bc5728951a4dd4df4f032315c64e926c098714f6c690f37afc206",
+      "verdict": "NARROW_V0_BFV_ZERO_GHOST_ELIMINATION_REQUIRES_INDUCED_DETERMINANT"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_BFV_M2_SPECTRAL_TRAJECTORY_RESULT.json",
+      "payload_sha256_without_self": "a12b719f2961363610c93ecf07d0185de316497708b809b4b2b1aca7bdfec92b",
+      "sha256": "15beb4c1bd44d0d7aa8f34b7ea2f656c42452130b10817585b7a6c134ac4aef7",
+      "verdict": "NARROW_V0_M2_RELATIVE_QUARTET_KEEP_ZERO_MODE_COMPLETION_AMBIGUOUS"
+    }
+  ],
+  "verdict": "KEEP_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORT"
+}
