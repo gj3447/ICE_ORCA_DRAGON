@@ -1,0 +1,171 @@
+{
+  "schema_version": "ice.gate1.v0-raw-c-weighted-operator-domain-audit.input.v1",
+  "calculation_id": "Gate1V0RawCWeightedOperatorDomainAudit",
+  "numbered_phase": null,
+  "question": "For one explicitly declared weighted-space quantization of the undensitized V=0 constraint C, is the minimal operator essentially self-adjoint, and if not what endpoint and measurable extension data are required before any C-to-H quantum-equivalence comparison is meaningful?",
+  "kind": "EXACT_SYMBOLIC_AND_BOUNDED_NUMERICAL_RAW_C_OPERATOR_DOMAIN_AUDIT",
+  "epistemic_scope": "ONE_DECLARED_LEFT_WEIGHTED_RAW_C_ORDERING_ON_L2_F_DQ_DPHI_ITS_FIBER_EXTENSIONS_AND_A_CONDITIONAL_P_PRESERVING_DIRECT_INTEGRAL_RECIPE",
+  "repository_sources": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_QUANTUM_COSMOLOGY_DERIVATION.md",
+      "sha256": "e61be89282b70afd617d66b901fb15082cc830f19e087397cc2cad022c5961f6",
+      "used_for": "the frozen classical C, positive f, H=fC, flat H-hat ordering, and explicit warning that rescaling need not preserve a quantum theory"
+    }
+  ],
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json",
+      "sha256": "2f54a47f775002d1a9c24749c729bc02ebf86dc5fa959b93e2518d925b9db806",
+      "payload_sha256_without_self": "32c4cf7ae925d3fbbbba21d5e0e4466abdd80043e39db8312941c9548b346869",
+      "required_verdict": "KEEP_V0_ONE_DENSITIZED_LIOUVILLE_KL_RAQ_MODEL",
+      "role": "fixes the selected densitized H comparison target but supplies no raw-C operator or equivalence"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_RESULT.json",
+      "sha256": "d9f789dfd38b9e719c016d0c1372c5a6d5c4c3198ce680a23fbc64178a474701",
+      "payload_sha256_without_self": "411a0bca48c89ce93de68fa09ecb25fd6c30699aa251e88b97d5b5298fb172d9",
+      "required_verdict": "KEEP_SELECTED_H_FULL_P_REGULAR_RAQ_DIRECT_SUM_NO_INHERITED_ORIGIN_ATOM",
+      "role": "fixes the selected-H full-p regular-shell completion; it neither authorizes nor answers the independent raw-C audit"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Louko and Martinez-Pascual, Constraint rescaling in refined algebraic quantisation: momentum constraint, arXiv:1107.1092v2",
+      "url": "https://arxiv.org/abs/1107.1092v2",
+      "used_for": "explicit branch cases in which classically equivalent rescalings are quantum-equivalent, lack a self-adjoint extension, or acquire extension and superselection ambiguity",
+      "not_used_for": "proving the endpoint classification or selecting an extension for this V0 differential expression"
+    },
+    {
+      "source": "Weyl, Ueber gewoehnliche Differentialgleichungen mit Singularitaeten und die zugehoerigen Entwicklungen willkuerlicher Funktionen, Math. Ann. 68 (1910) 220-269",
+      "url": "https://eudml.org/doc/158437",
+      "used_for": "the limit-point and limit-circle alternative for singular Sturm-Liouville endpoints",
+      "not_used_for": "choosing the raw-C measure, ordering, Fourier decomposition, extension, or physical product"
+    },
+    {
+      "source": "von Neumann, Allgemeine Eigenwerttheorie Hermitescher Funktionaloperatoren, Math. Ann. 102 (1929/30) 49-131",
+      "url": "https://doi.org/10.1007/BF01782338",
+      "used_for": "deficiency-space parametrization of self-adjoint extensions of a densely defined symmetric operator",
+      "not_used_for": "showing this candidate is symmetric or selecting a physical extension"
+    },
+    {
+      "source": "Nussbaum, Reduction Theory for Unbounded Closed Operators in Hilbert Space, Duke Math. J. 31 (1964) 33-44",
+      "url": "https://doi.org/10.1215/S0012-7094-64-03103-5",
+      "used_for": "the reduction boundary for decomposable unbounded closed operators",
+      "not_used_for": "turning fiberwise extension existence into a measurable global family without an explicit measurable choice"
+    },
+    {
+      "source": "Lennon, Direct Integrals, Math. Scand. 32 (1973) 123-132",
+      "url": "https://www.mscand.dk/article/download/11449/9466/30402",
+      "used_for": "measurable closed-fiber and self-adjoint direct-integral conditions",
+      "not_used_for": "classifying extensions that mix p fibers or proving C-to-H equivalence"
+    },
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified Bessel equations, asymptotics, and Wronskians, sections 10.25, 10.28, 10.30 and 10.40",
+      "url": "https://dlmf.nist.gov/10",
+      "used_for": "the exact zero-energy modified-Bessel reduction, endpoint asymptotics, and numerical Wronskian control",
+      "not_used_for": "the Weyl theorem, raw-C quantization choice, extension selection, or RAQ product"
+    }
+  ],
+  "declared_candidate": {
+    "positive_multiplier": "f(Q)=12*pi^2*exp(3*Q/2)",
+    "classical_relation": "H=f*C",
+    "weighted_auxiliary_space": "H_C=L2(R_Q times R_phi, f(Q) dQ dphi)",
+    "minimal_operator": "C_min=f(Q)^(-1)*H_hat on C_c^infinity(R_Q times R_phi)",
+    "densitized_flat_operator": "H_hat=2*hbar^2*d_Q^2-3*hbar^2*d_phi^2-72*pi^4*exp(2Q)",
+    "weighted_to_flat_unitary": "U chi=f^(1/2)*chi",
+    "flat_conjugate": "B_min=U*C_min*U^(-1)=g*H_hat*g with g=f^(-1/2)",
+    "fourier_base": "Lebesgue p in R, with -i*hbar*d_phi mapped to p",
+    "fiber_raw_expression": "C_p u=f^(-1)*(2*hbar^2*u''+(3*p^2-72*pi^4*exp(2Q))*u)",
+    "minimal_fiber_core": "C_c^infinity(R_Q)",
+    "extension_scope": "fixed-p self-adjoint extensions plus a conditional recipe for decomposable extensions that preserve p; no measurable global domain or resolvent field is claimed",
+    "no_selected_extension": "theta(p), any parity restriction, and any p-fiber mixing are not supplied by the classical rescaling"
+  },
+  "assumptions": [
+    "hbar is strictly positive; numerical diagnostics set hbar=1",
+    "the weighted measure, left-weighted ordering, C_c^infinity core, and full Lebesgue-p Fourier base are declared quantization inputs rather than consequences of classical C",
+    "the sign-reversed fiber expression is put in the standard real Sturm-Liouville form with leading coefficient 2*hbar^2, weight f>0, and locally integrable potential",
+    "Weyl endpoint type is independent of the nonreal spectral parameter once the declared Sturm-Liouville hypotheses hold",
+    "the zero-energy modified-Bessel solutions may therefore be used to classify endpoint type, but they do not themselves construct the nonreal deficiency vectors",
+    "a fiberwise U(1) extension statement is not promoted to the classification of all full-operator extensions",
+    "a Borel theta(p) is necessary but not by itself sufficient for a p-preserving decomposable extension; a measurable field of boundary maps, domains or resolvents must also be supplied",
+    "the p=0 fiber is audited separately but has Lebesgue measure zero unless an extra origin atom is declared"
+  ],
+  "tasks": [
+    "verify the frozen H=fC identity, weighted-space symmetry, unitary conjugation, and exact expanded flat operator",
+    "Fourier-decompose the candidate and derive the weighted deficiency equation",
+    "reduce the zero-energy fiber equation to the modified-Bessel equation for p nonzero and p=0",
+    "separately establish the Q-to-minus-infinity and Q-to-plus-infinity weighted integrability ledgers",
+    "apply the scoped Weyl and von Neumann guards to record one limit-circle and one limit-point endpoint per fiber",
+    "derive oscillatory Wronskian boundary coordinates for p nonzero and affine boundary coordinates for p=0",
+    "show that a fiber U(1) phase or real projective condition is extension data and is not canonically selected",
+    "record the conditional measurable-theta(p) direct-integral recipe, leave its global measurable domain/resolvent construction open, and record that p=0 is null in the Lebesgue base",
+    "independently check the Bessel differential equation and I/K Wronskian at fixed p and x samples without solving a deficiency ODE",
+    "leave the raw-C rigging map, C-to-H equivalence, endpoint transform, BFV, quantum-gravity, physics and TOE outputs null"
+  ],
+  "decision_table": [
+    {
+      "condition": "all executable operator, conjugation, fiber, Bessel, endpoint-integrability, boundary-form and numerical Bessel controls pass, and all Weyl, deficiency and direct-integral theorem hypotheses remain explicitly scoped",
+      "verdict": "NARROW_V0_RAW_C_CANDIDATE_HAS_FIBER_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN",
+      "programme_impact": "KEEP_RAW_C_MINIMAL_FIBER_CLASSIFICATION_BUT_KILL_AUTOMATIC_C_H_EQUIVALENCE"
+    },
+    {
+      "condition": "any executable operator, conjugation, fiber, Bessel, endpoint, boundary-form or independent numerical control fails",
+      "verdict": "KILL_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT",
+      "programme_impact": "RETAIN_SELECTED_H_RESULTS_AND_REOPEN_THE_RAW_C_CANDIDATE_CHOICE"
+    }
+  ],
+  "computed_scope": [
+    "one declared raw-C symmetric minimal operator and its flat conjugate",
+    "full Lebesgue-p fiber differential expressions",
+    "zero-energy Bessel endpoint asymptotics and weighted LP/LC classification under stated theorem guards",
+    "fiber boundary forms and the still-open measurable-field requirements for a p-preserving direct integral",
+    "bounded high-precision Bessel equation and Wronskian diagnostics with no roots, quadratures, or ODE solves"
+  ],
+  "not_computed": [
+    "a proof that the declared candidate is the unique or physically correct quantization of raw C",
+    "a selected theta(p), measurable global boundary-domain or resolvent field, p-preserving direct-integral extension, parity condition, p-mixing full extension, p=0 atom, origin sector, or branch gluing law",
+    "the raw-C spectral resolution, group average, rigging map, physical inner product, or observable algebra beyond p preservation",
+    "unitary or RAQ equivalence between raw C, selected H, or the declared Mc representation",
+    "an exact endpoint transform, full symbol, support-restricted target, or joint-observable intertwiner",
+    "a lapse contour, modulus, absolute BFV measure, determinant-line orientation, Gribov treatment, or gluing theorem",
+    "inhomogeneous closure, quantum anomaly freedom, relational observables, semiclassical recovery, decoherence, likelihood, quantum gravity, physics, or TOE"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "bessel_sample_points": 24,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "selected_raw_C_self_adjoint_extension": null,
+    "p_preserving_decomposable_self_adjoint_extension": null,
+    "general_full_operator_extension_classification": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "canonical_p_zero_origin_sector": null,
+    "cross_branch_gluing_or_quotient": null,
+    "exact_endpoint_state_transform": null,
+    "declared_Mc_identity_equivalence": null,
+    "lapse_modulus_or_contour_selection": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
