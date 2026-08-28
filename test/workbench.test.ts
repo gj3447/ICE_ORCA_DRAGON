@@ -117,6 +117,14 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "v0_two_clock_relational_observable_comparison",
       "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json"
+    ],
+    [
+      "bfv_parametrized_particle_gluing_calibration",
+      "cpt_temporal_folded_susy/BFV_PARAMETRIZED_PARTICLE_GLUING_CALIBRATION_RESULT.json"
+    ],
+    [
+      "closed_starobinsky_background_export_audit",
+      "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json"
     ]
   ])
 

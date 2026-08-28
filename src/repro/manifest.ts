@@ -364,6 +364,24 @@ export const reproCases = [
       "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "bfv_parametrized_particle_gluing_calibration",
+    script:
+      "cpt_temporal_folded_susy/bfv_parametrized_particle_gluing_calibration.py",
+    output:
+      "cpt_temporal_folded_susy/BFV_PARAMETRIZED_PARTICLE_GLUING_CALIBRATION_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "closed_starobinsky_background_export_audit",
+    script:
+      "cpt_temporal_folded_susy/closed_starobinsky_background_export_audit.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 
