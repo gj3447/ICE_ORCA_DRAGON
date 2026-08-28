@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T16:29:56Z",
+  "command": "./ice run closed_starobinsky_background_export_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/closed_starobinsky_background_export_audit.py",
+    "sha256": "d803c356c2b82e1f5d930c9ec3a1b012ac91ee95f9a2dd02ff96ab030df555f5",
+    "introduced_in_commit": "b66192345ef24ace7259d7f0a1a73886b729fe33"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {
+      "id": "P39.CSBE.exact.Vprime_over_V",
+      "status": "PASS",
+      "statement": "For x=exp(-sqrt(2/3)phi), V_prime/V=2 sqrt(2/3) x/(1-x)."
+    },
+    {
+      "id": "P39.CSBE.exact.epsilon_V",
+      "status": "PASS",
+      "statement": "epsilon_V=(4/3)x^2/(1-x)^2."
+    },
+    {
+      "id": "P39.CSBE.exact.eta_V",
+      "status": "PASS",
+      "statement": "eta_V=(4/3)x(2x-1)/(1-x)^2."
+    },
+    {
+      "id": "P39.CSBE.exact.epsilon_one_endpoint",
+      "status": "PASS",
+      "statement": "epsilon_V=1 gives t_end=exp(alpha phi_end)=1+2/sqrt(3)."
+    },
+    {
+      "id": "P39.CSBE.exact.N_primitive",
+      "status": "PASS",
+      "statement": "The N primitive is (3/4)(t-log t), with t=exp(alpha phi)."
+    },
+    {
+      "id": "P39.CSBE.exact.unit_status",
+      "status": "PASS",
+      "statement": "All exported quantities use the declared reduced-Planck convention; no observational normalization is inferred."
+    }
+  ],
+  "numerical_checks": 9,
+  "numerical": [
+    {
+      "id": "P39.CSBE.N50.pivot_root_residual",
+      "status": "PASS",
+      "statement": "The bounded monotone pivot root satisfies its declared N_star equation."
+    },
+    {
+      "id": "P39.CSBE.N50.H_equation_residual",
+      "status": "PASS",
+      "statement": "The exported H_star satisfies 3H_star^2=V_star within floating residual."
+    },
+    {
+      "id": "P39.CSBE.N50.power_ratio_residual",
+      "status": "PASS",
+      "statement": "The exported leading spectra obey P_T/P_R=r within floating residual."
+    },
+    {
+      "id": "P39.CSBE.N55.pivot_root_residual",
+      "status": "PASS",
+      "statement": "The bounded monotone pivot root satisfies its declared N_star equation."
+    },
+    {
+      "id": "P39.CSBE.N55.H_equation_residual",
+      "status": "PASS",
+      "statement": "The exported H_star satisfies 3H_star^2=V_star within floating residual."
+    },
+    {
+      "id": "P39.CSBE.N55.power_ratio_residual",
+      "status": "PASS",
+      "statement": "The exported leading spectra obey P_T/P_R=r within floating residual."
+    },
+    {
+      "id": "P39.CSBE.N60.pivot_root_residual",
+      "status": "PASS",
+      "statement": "The bounded monotone pivot root satisfies its declared N_star equation."
+    },
+    {
+      "id": "P39.CSBE.N60.H_equation_residual",
+      "status": "PASS",
+      "statement": "The exported H_star satisfies 3H_star^2=V_star within floating residual."
+    },
+    {
+      "id": "P39.CSBE.N60.power_ratio_residual",
+      "status": "PASS",
+      "statement": "The exported leading spectra obey P_T/P_R=r within floating residual."
+    }
+  ],
+  "payload": {
+    "exact_checks": 6,
+    "numerical_checks": 9,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json",
+      "payload_sha256_without_self": "cfc38115ef0781eaddf3c398e82f1319bc032997e61091b3ef3add33e3994104",
+      "verdict": "KEEP_STAROBINSKY_LEADING_SLOW_ROLL_BACKGROUND_EXPORT_NOT_CLOSED_EVOLUTION_OR_LIKELIHOOD",
+      "programme_impact": "EXPORT_DECLARED_BACKGROUND_INPUT_TABLE_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_INPUTS.json",
+      "sha256": "a40cfa5a8d1eafff152f80cd4ec2d19f1d94ca584db7f015ff2eb69e42691008"
+    },
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "automatic_next": null,
+      "born_oppenheimer_or_decoherence": null,
+      "class_or_cobaya_input": null,
+      "closed_background_evolution": null,
+      "closed_mode_evolution": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "observational_fit_claim": null,
+      "phase19_bounce_replay_or_reproduction": null,
+      "physics_claim": null,
+      "public_likelihood": null,
+      "reheating_history": null,
+      "relational_observables": null
+    }
+  }
+}

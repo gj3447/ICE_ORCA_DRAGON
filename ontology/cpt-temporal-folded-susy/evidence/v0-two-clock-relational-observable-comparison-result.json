@@ -1,0 +1,141 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T16:22:18Z",
+  "command": "./ice run v0_two_clock_relational_observable_comparison",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/v0_two_clock_relational_observable_comparison.py",
+    "sha256": "ddad1ea73e14b8546e7ca4e51a676bec663708a4ad2124c70deca3b4c9c912d2",
+    "introduced_in_commit": "f9de7a0e27330a17626171caf1ab451c283b85f7"
+  },
+  "exact_checks": 17,
+  "checks": [
+    {
+      "id": "P39.V0.clock.constraint.shell_defect",
+      "status": "PASS",
+      "statement": "C=0 is equivalent to exp(-3Q/2)R=72*pi^4*exp(Q/2), hence exp(2Q)=R/(72*pi^4)."
+    },
+    {
+      "id": "P39.V0.clock.dirac.Phi_weak_bracket",
+      "status": "PASS",
+      "statement": "The on-shell coordinate Phi obeys {Phi,C}=3p C/(2R) and is therefore weakly Dirac on R>0."
+    },
+    {
+      "id": "P39.V0.clock.dirac.p_strong_bracket",
+      "status": "PASS",
+      "statement": "The scalar momentum p strongly commutes with C."
+    },
+    {
+      "id": "P39.V0.clock.fp.scalar_exact",
+      "status": "PASS",
+      "statement": "The scalar-clock FP factor is {phi,C}=exp(-3Q/2)p/(2*pi^2)."
+    },
+    {
+      "id": "P39.V0.clock.fp.trace_momentum_exact",
+      "status": "PASS",
+      "statement": "The trace-momentum-clock FP factor is {P,C}=-C_Q."
+    },
+    {
+      "id": "P39.V0.clock.fp.trace_momentum_shell",
+      "status": "PASS",
+      "statement": "The exact identity {P,C}=12*pi^2*exp(Q/2)+3C/2 makes the P-clock FP factor positive on shell."
+    },
+    {
+      "id": "P39.V0.clock.fp.log_scale_turning_point",
+      "status": "PASS",
+      "statement": "The Q-clock FP factor is -exp(-3Q/2)P/(3*pi^2), so it vanishes and changes sign at P=0."
+    },
+    {
+      "id": "P39.V0.clock.complete.P_at_current_phi",
+      "status": "PASS",
+      "statement": "The scalar-clock complete observable P_phi(tau) returns P at tau=phi."
+    },
+    {
+      "id": "P39.V0.clock.complete.Q_at_current_phi",
+      "status": "PASS",
+      "statement": "The scalar-clock complete observable Q_phi(tau) returns the on-shell Q at tau=phi."
+    },
+    {
+      "id": "P39.V0.clock.complete.phi_at_current_P",
+      "status": "PASS",
+      "statement": "The P-clock complete observable phi_P(sigma) returns phi at sigma=P."
+    },
+    {
+      "id": "P39.V0.clock.complete.Q_at_current_P",
+      "status": "PASS",
+      "statement": "The P-clock complete observable Q_P(sigma) returns the on-shell Q at sigma=P."
+    },
+    {
+      "id": "P39.V0.clock.overlap.inverse_P_after_phi",
+      "status": "PASS",
+      "statement": "On |sigma|<sqrt(3/2)p, P_phi(phi_P(sigma))=sigma."
+    },
+    {
+      "id": "P39.V0.clock.overlap.Q_agreement",
+      "status": "PASS",
+      "statement": "The two clock descriptions assign the same Q on their common chart."
+    },
+    {
+      "id": "P39.V0.clock.overlap.scalar_map_monotone",
+      "status": "PASS",
+      "statement": "For p>0, d P_phi/d tau=p sech^2(...) is strictly positive."
+    },
+    {
+      "id": "P39.V0.clock.overlap.trace_map_monotone",
+      "status": "PASS",
+      "statement": "For |sigma|<sqrt(3/2)p, d phi_P/d sigma is strictly positive."
+    },
+    {
+      "id": "P39.V0.clock.domain.scalar_orbit_remainder",
+      "status": "PASS",
+      "statement": "The scalar clock covers the orbit with R=3p^2 sech^2(...)>0 for every finite tau."
+    },
+    {
+      "id": "P39.V0.clock.complete.generic_weak_invariance",
+      "status": "PASS",
+      "statement": "Every smooth complete observable written only in Phi, p and an external clock reading weakly commutes with C on this chart."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 17,
+    "numerical_checks": 0,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json",
+      "payload_sha256_without_self": "4add4297e0aceef9bd1e8d49fa18537d14465a84899930ce238852907964c124",
+      "verdict": "KEEP_V0_CLASSICAL_SCALAR_AND_TRACE_MOMENTUM_CLOCKS_AGREE_ON_OVERLAP_Q_CLOCK_TURNS",
+      "programme_impact": "KEEP_ONE_CLASSICAL_TWO_CLOCK_CHART_AND_REQUIRE_BRANCHING_FOR_LOG_SCALE_CLOCK"
+    },
+    "input_manifest": {
+      "numbered_phase": null,
+      "path": "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_INPUTS.json",
+      "sha256": "9cf45fab1c0325b0d80add256e1ebc9ffbcd8894ababd3f3612481054adafdc4"
+    },
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "V_nonzero_clock_completion": null,
+      "automatic_next": null,
+      "born_oppenheimer_correction": null,
+      "clock_change_unitarity": null,
+      "decoherence_functional": null,
+      "empirical_likelihood": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "inhomogeneous_relational_observable": null,
+      "physics_claim": null,
+      "primordial_spectrum": null,
+      "quantum_clock_change_map": null,
+      "quantum_gravity_claim": null,
+      "quantum_relational_observable": null,
+      "raw_C_physical_inner_product": null,
+      "raw_C_rigging_map": null
+    }
+  }
+}

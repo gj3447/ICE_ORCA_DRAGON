@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:BFV_PARAMETRIZED_PARTICLE_GLUING_CALIBRATION_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T16:29:28Z",
+  "command": "./ice run bfv_parametrized_particle_gluing_calibration",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/bfv_parametrized_particle_gluing_calibration.py",
+    "sha256": "8312173c9c73fd25d76d3b6d2b73da67a98ad3fd136ae8e5539166b0ded04784",
+    "introduced_in_commit": "9c00ca3af70eeace908e3c325ec770d9e513b898"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "P39.bfv.particle.gauge.fp_bracket_one",
+      "status": "PASS",
+      "statement": "{t-tau,p_t+p_x^2/(2m)}=1 exactly"
+    },
+    {
+      "id": "P39.bfv.particle.gauge.single_affine_intersection",
+      "status": "PASS",
+      "statement": "the affine gauge orbit shifts chi by epsilon and reaches chi=0 at one and only one epsilon"
+    },
+    {
+      "id": "P39.bfv.particle.ghost.ordered_block_antisymmetric",
+      "status": "PASS",
+      "statement": "A_gh is antisymmetric in the declared (bar_c,c) order"
+    },
+    {
+      "id": "P39.bfv.particle.ghost.pfaffian_orientation_plus_one",
+      "status": "PASS",
+      "statement": "Pf(A_gh)=+1 fixes the finite ordered ghost orientation"
+    },
+    {
+      "id": "P39.bfv.particle.kernel.two_slab_quadratic_completion",
+      "status": "PASS",
+      "statement": "the two-slab phase completes to the single T_1+T_2 free-particle phase"
+    },
+    {
+      "id": "P39.bfv.particle.kernel.two_slab_prefactor",
+      "status": "PASS",
+      "statement": "squared Fresnel prefactors and the completed Gaussian integral equal the T_1+T_2 squared prefactor"
+    },
+    {
+      "id": "P39.bfv.particle.kernel.i0_damping_sign",
+      "status": "PASS",
+      "statement": "for A>0 and epsilon>0, abs(exp(i*A/(T-i*epsilon)))=exp(-A*epsilon/(T^2+epsilon^2))<1"
+    },
+    {
+      "id": "P39.bfv.particle.lapse.clock_delta_selects_lambda",
+      "status": "PASS",
+      "statement": "the clock kernel delta(T-lambda) has the unique lapse support lambda=T; the full-real Fourier identity remains a distribution theorem guard"
+    }
+  ],
+  "numerical_checks": 1,
+  "numerical": [
+    {
+      "id": "P39.bfv.particle.numeric.short_time_gaussian_approximate_identity",
+      "status": "PASS",
+      "statement": "the declared +i0 free kernel approaches a Gaussian Schwartz test function at bounded small positive times"
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "numerical_checks": 1,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/BFV_PARAMETRIZED_PARTICLE_GLUING_CALIBRATION_RESULT.json",
+      "payload_sha256_without_self": "32e0e3f018bf88ec6193b5edb4c3b9df2ff693727f676020b44291ccec8cd590",
+      "verdict": "CALIBRATED_PARAMETRIZED_PARTICLE_FINITE_BFV_NORMALIZATION_AND_GLUE_ONLY",
+      "programme_impact": "KEEP_TOY_BFV_CALIBRATION_AS_A_CONVENTION_CHECK_WITHOUT_PROMOTING_GRAVITY_ABSOLUTE_MEASURE"
+    },
+    "input_manifest": {
+      "numbered_phase": null,
+      "path": "cpt_temporal_folded_susy/BFV_PARAMETRIZED_PARTICLE_GLUING_CALIBRATION_INPUTS.json",
+      "sha256": "326c74e89eebfa2b89ee4f6e95be15346499c3ce6798fb12d7665b6d5cc80fd9"
+    },
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "automatic_next": null,
+      "continuum_determinant_or_pfaffian_line": null,
+      "empirical_likelihood": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "gravity_bfv_gluing_theorem": null,
+      "gravity_endpoint_polarization": null,
+      "gravity_gribov_census": null,
+      "gravity_lapse_contour_selection": null,
+      "gravity_or_minisuperspace_absolute_bfv_measure": null,
+      "inhomogeneous_constraint_closure": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "quantum_gravity_claim": null,
+      "raw_C_operator_and_domain": null,
+      "raw_C_rigging_map": null,
+      "relational_observables_or_decoherence": null
+    }
+  }
+}

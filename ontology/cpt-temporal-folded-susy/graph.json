@@ -13824,6 +13824,66 @@
       "citation": "D. M. Gitman, I. V. Smirnov, B. L. Voronov and I. V. Tyutin, arXiv:1012.2588",
       "uri": "https://arxiv.org/abs/1012.2588",
       "version": "arXiv:1012.2588"
+    },
+    {
+      "id":"concept:closed-s3-scalar-derived-harmonic-ledger","type":"concept","title":"Closed-S3 scalar-derived harmonic normalization ledger","summary":"Unit round-S3 scalar-derived vector and tracefree-tensor normalization identities only; not a full SVT basis or HDA calculation.","state":"COMPLETED_SCALAR_DERIVED_NORMALIZATION_ONLY"
+    },
+    {
+      "id":"claim:CLOSED_S3_SCALAR_DERIVED_HARMONIC_NORMALIZATIONS_HOLD","type":"claim","title":"Declared scalar-derived harmonic normalizations hold","summary":"Supported for the unit-S3 scalar-derived constructions and listed low modes only; completeness, constraints and HDA remain open.","state":"SUPPORTED_SCALAR_DERIVED_NORMALIZATIONS_ONLY","claim_id":"CLOSED_S3_SCALAR_DERIVED_HARMONIC_NORMALIZATIONS_HOLD","statement":"The declared unit-S3 scalar-derived vector and tracefree tensor normalization identities hold in the audited range.","epistemic_state":"SUPPORTED"
+    },
+    {
+      "id":"evidence:closed-s3-scalar-derived-harmonic-ledger-result","type":"evidence","title":"Closed-S3 scalar-derived harmonic evidence","summary":"VALID_RUN with 26/26 exact checks; authoritative transport check IDs are recorded in its snapshot.","state":"VALID_RUN_NORMALIZATION_LEDGER_NOT_SVT_OR_HDA","observed_status":"VALID_RUN_26_EXACT_PASS_REPRO","check_ids":["P39.CS3SDH.general.integration_by_parts_gradient_norm","P39.CS3SDH.general.bochner_hessian_norm","P39.CS3SDH.general.tracefree_hessian_trace","P39.CS3SDH.general.tracefree_hessian_norm","P39.CS3SDH.general.tracefree_hessian_divergence","P39.CS3SDH.mode.n0.lambda","P39.CS3SDH.mode.n0.gradient_degeneracy","P39.CS3SDH.mode.n1.lambda","P39.CS3SDH.mode.n1.vector_normalization","P39.CS3SDH.mode.n1.vector_divergence","P39.CS3SDH.mode.n1.tracefree_hessian_degeneracy","P39.CS3SDH.mode.n2.lambda","P39.CS3SDH.mode.n2.vector_normalization","P39.CS3SDH.mode.n2.vector_divergence","P39.CS3SDH.mode.n2.tensor_normalization","P39.CS3SDH.mode.n2.tensor_divergence","P39.CS3SDH.mode.n3.lambda","P39.CS3SDH.mode.n3.vector_normalization","P39.CS3SDH.mode.n3.vector_divergence","P39.CS3SDH.mode.n3.tensor_normalization","P39.CS3SDH.mode.n3.tensor_divergence","P39.CS3SDH.mode.n4.lambda","P39.CS3SDH.mode.n4.vector_normalization","P39.CS3SDH.mode.n4.vector_divergence","P39.CS3SDH.mode.n4.tensor_normalization","P39.CS3SDH.mode.n4.tensor_divergence"]
+    },
+    {
+      "id":"artifact:closed-s3-scalar-derived-harmonic-result","type":"artifact","title":"Closed-S3 scalar-derived harmonic raw result","summary":"VALID_RUN result, payload digest 42750a31c83f27ffaa5fe5f4c18c408f2ff4ca82f7f0b3f909ece56d1c40a57e.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json","sha256":"3d67333d30b5baa4a24533993b93d9028367373f8195c7bdfde4e99885cfc66f"
+    },
+    {
+      "id":"artifact:closed-s3-scalar-derived-harmonic-evidence-snapshot","type":"artifact","title":"Closed-S3 scalar-derived harmonic evidence snapshot","summary":"Schema-valid run snapshot preserving source, runner, result and check records.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/closed-s3-scalar-derived-harmonic-ledger-result.json","sha256":"fa5e97c3ce952aef5bfd60fa5d54f80d18d5f2b4df3b00adae729d885174057a"
+    },
+    {
+      "id":"concept:v0-two-clock-relational-observable-comparison","type":"concept","title":"V0 classical two-clock relational comparison","summary":"Scalar and trace-momentum clocks agree only on their common monotone chart; log-scale clock turns and requires branching.","state":"COMPLETED_CLASSICAL_OVERLAP_COMPARISON_QUANTUM_OPEN"
+    },
+    {
+      "id":"claim:V0_TWO_CLASSICAL_CLOCKS_AGREE_ON_OVERLAP","type":"claim","title":"The declared V0 classical clocks agree on overlap","summary":"Supported only on the declared classical component and common monotone domain. No quantum clock-change map or inhomogeneous observable follows.","state":"SUPPORTED_CLASSICAL_OVERLAP_ONLY","claim_id":"V0_TWO_CLASSICAL_CLOCKS_AGREE_ON_OVERLAP","statement":"The declared scalar and trace-momentum clock complete observables agree on their common classical chart.","epistemic_state":"SUPPORTED"
+    },
+    {
+      "id":"evidence:v0-two-clock-relational-observable-comparison-result","type":"evidence","title":"V0 two-clock relational evidence","summary":"VALID_RUN with 17/17 exact checks and five scope guards; quantum and BO/decoherence conclusions remain null.","state":"VALID_RUN_CLASSICAL_TWO_CLOCK_OVERLAP_ONLY","observed_status":"VALID_RUN_17_EXACT_PASS_5_THEOREM_GUARDS_REPRO","check_ids":["P39.V0.clock.constraint.shell_defect","P39.V0.clock.dirac.Phi_weak_bracket","P39.V0.clock.dirac.p_strong_bracket","P39.V0.clock.fp.scalar_exact","P39.V0.clock.fp.trace_momentum_exact","P39.V0.clock.fp.trace_momentum_shell","P39.V0.clock.fp.log_scale_turning_point","P39.V0.clock.complete.P_at_current_phi","P39.V0.clock.complete.Q_at_current_phi","P39.V0.clock.complete.phi_at_current_P","P39.V0.clock.complete.Q_at_current_P","P39.V0.clock.overlap.inverse_P_after_phi","P39.V0.clock.overlap.Q_agreement","P39.V0.clock.overlap.scalar_map_monotone","P39.V0.clock.overlap.trace_map_monotone","P39.V0.clock.domain.scalar_orbit_remainder","P39.V0.clock.complete.generic_weak_invariance"]
+    },
+    {
+      "id":"artifact:v0-two-clock-relational-observable-result","type":"artifact","title":"V0 two-clock relational raw result","summary":"VALID_RUN result, payload digest 4add4297e0aceef9bd1e8d49fa18537d14465a84899930ce238852907964c124.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json","sha256":"f343f789f59299d1defac0a8d6ea8450236b2273459d00ee24453f679b68d58e"
+    },
+    {
+      "id":"artifact:v0-two-clock-relational-observable-evidence-snapshot","type":"artifact","title":"V0 two-clock relational evidence snapshot","summary":"Schema-valid run snapshot preserving source, runner, result and check records.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/v0-two-clock-relational-observable-comparison-result.json","sha256":"17f408072084ddf1842b1d578fb9b1889767741ffde13e34bee933a82d36d8de"
+    },
+    {
+      "id":"concept:bfv-parametrized-particle-gluing-calibration","type":"concept","title":"Finite parametrized-particle BFV gluing calibration","summary":"A finite affine gauge toy calibrates normalization and two-slab gluing only; it is not a gravity absolute-measure result.","state":"COMPLETED_TOY_BFV_GLUE_CALIBRATION_GRAVITY_OPEN"
+    },
+    {
+      "id":"claim:PARAMETRIZED_PARTICLE_FINITE_BFV_GLUE_HOLDS","type":"claim","title":"Declared finite parametrized-particle BFV gluing holds","summary":"Supported for the declared finite affine model only; gravity contour, Gribov, endpoint and absolute-measure obligations remain unresolved.","state":"SUPPORTED_TOY_FINITE_GLUE_ONLY","claim_id":"PARAMETRIZED_PARTICLE_FINITE_BFV_GLUE_HOLDS","statement":"The declared finite parametrized-particle BFV kernel satisfies its calibrated two-slab gluing identity.","epistemic_state":"SUPPORTED"
+    },
+    {
+      "id":"evidence:bfv-parametrized-particle-gluing-calibration-result","type":"evidence","title":"Parametrized-particle BFV gluing evidence","summary":"VALID_RUN with 8/8 exact and 1/1 numerical checks plus four guards; no gravity promotion.","state":"VALID_RUN_TOY_BFV_GLUE_ONLY","observed_status":"VALID_RUN_8_EXACT_PASS_1_NUMERICAL_PASS_4_THEOREM_GUARDS_REPRO","check_ids":["P39.bfv.particle.gauge.fp_bracket_one","P39.bfv.particle.gauge.single_affine_intersection","P39.bfv.particle.ghost.ordered_block_antisymmetric","P39.bfv.particle.ghost.pfaffian_orientation_plus_one","P39.bfv.particle.kernel.two_slab_quadratic_completion","P39.bfv.particle.kernel.two_slab_prefactor","P39.bfv.particle.kernel.i0_damping_sign","P39.bfv.particle.lapse.clock_delta_selects_lambda","P39.bfv.particle.numeric.short_time_gaussian_approximate_identity"]
+    },
+    {
+      "id":"artifact:bfv-parametrized-particle-gluing-result","type":"artifact","title":"Parametrized-particle BFV gluing raw result","summary":"VALID_RUN result, payload digest 32e0e3f018bf88ec6193b5edb4c3b9df2ff693727f676020b44291ccec8cd590.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/BFV_PARAMETRIZED_PARTICLE_GLUING_CALIBRATION_RESULT.json","sha256":"d373476f3e20f17c60431bb4fa21c22afda22087cb947e6257470f33c8c7ba3f"
+    },
+    {
+      "id":"artifact:bfv-parametrized-particle-gluing-evidence-snapshot","type":"artifact","title":"Parametrized-particle BFV gluing evidence snapshot","summary":"Schema-valid run snapshot preserving source, runner, result and check records.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/bfv-parametrized-particle-gluing-calibration-result.json","sha256":"fa6b04a4adcc91d5f2190b665f0c974457f7686a26ceb14dab2cdc6bdd1dfe74"
+    },
+    {
+      "id":"concept:closed-starobinsky-background-export-audit","type":"concept","title":"Closed Starobinsky leading slow-roll background export","summary":"A declared leading slow-roll table supplies background inputs only; no closed evolution, reheating, modes or likelihood is calculated.","state":"COMPLETED_BACKGROUND_EXPORT_ONLY"
+    },
+    {
+      "id":"claim:CLOSED_STAROBINSKY_LEADING_SLOW_ROLL_EXPORT_IS_REPRODUCIBLE","type":"claim","title":"Declared closed Starobinsky slow-roll export is reproducible","summary":"Supported for independently supplied N_star values and the declared leading potential slow-roll convention only.","state":"SUPPORTED_BACKGROUND_EXPORT_ONLY","claim_id":"CLOSED_STAROBINSKY_LEADING_SLOW_ROLL_EXPORT_IS_REPRODUCIBLE","statement":"The declared leading Starobinsky slow-roll background quantities are reproducibly exported at the audited N_star values.","epistemic_state":"SUPPORTED"
+    },
+    {
+      "id":"evidence:closed-starobinsky-background-export-audit-result","type":"evidence","title":"Closed Starobinsky background export evidence","summary":"VALID_RUN with 6/6 exact and 9/9 numerical checks; all BO, mode, reheating and likelihood outputs remain null.","state":"VALID_RUN_BACKGROUND_EXPORT_NOT_EVOLUTION_OR_LIKELIHOOD","observed_status":"VALID_RUN_6_EXACT_PASS_9_NUMERICAL_PASS_REPRO","check_ids":["P39.CSBE.exact.Vprime_over_V","P39.CSBE.exact.epsilon_V","P39.CSBE.exact.eta_V","P39.CSBE.exact.epsilon_one_endpoint","P39.CSBE.exact.N_primitive","P39.CSBE.exact.unit_status","P39.CSBE.N50.pivot_root_residual","P39.CSBE.N50.H_equation_residual","P39.CSBE.N50.power_ratio_residual","P39.CSBE.N55.pivot_root_residual","P39.CSBE.N55.H_equation_residual","P39.CSBE.N55.power_ratio_residual","P39.CSBE.N60.pivot_root_residual","P39.CSBE.N60.H_equation_residual","P39.CSBE.N60.power_ratio_residual"]
+    },
+    {
+      "id":"artifact:closed-starobinsky-background-export-result","type":"artifact","title":"Closed Starobinsky background export raw result","summary":"VALID_RUN result, payload digest cfc38115ef0781eaddf3c398e82f1319bc032997e61091b3ef3add33e3994104.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json","sha256":"af6334f0c8a3f745ecfedd37280a8cae457f2ec7adfb5effb3b33f29dbc193e1"
+    },
+    {
+      "id":"artifact:closed-starobinsky-background-export-evidence-snapshot","type":"artifact","title":"Closed Starobinsky background export evidence snapshot","summary":"Schema-valid run snapshot preserving source, runner, result and check records.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/closed-starobinsky-background-export-audit-result.json","sha256":"6371e69fe71a9929a53a8337638411673e49746eee3716d95e4cbb250d6612a9"
     }
   ],
   "edges": [
@@ -33388,7 +33448,27 @@
       "from": "concept:raw-c-constant-boundary-direct-integral",
       "relation": "CITES",
       "to": "source:gitman-smirnov-tyutin-voronov-2010-symmetry-preserving-extensions"
-    }
+    },
+    {"id":"edge:3146","from":"concept:closed-s3-scalar-derived-harmonic-ledger","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3147","from":"claim:CLOSED_S3_SCALAR_DERIVED_HARMONIC_NORMALIZATIONS_HOLD","relation":"HAS_EVIDENCE","to":"evidence:closed-s3-scalar-derived-harmonic-ledger-result","polarity":"SUPPORTS"},
+    {"id":"edge:3148","from":"evidence:closed-s3-scalar-derived-harmonic-ledger-result","relation":"DERIVED_FROM","to":"artifact:closed-s3-scalar-derived-harmonic-result"},
+    {"id":"edge:3149","from":"evidence:closed-s3-scalar-derived-harmonic-ledger-result","relation":"RECORDED_IN","to":"artifact:closed-s3-scalar-derived-harmonic-evidence-snapshot"},
+    {"id":"edge:3150","from":"concept:v0-two-clock-relational-observable-comparison","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3151","from":"claim:V0_TWO_CLASSICAL_CLOCKS_AGREE_ON_OVERLAP","relation":"HAS_EVIDENCE","to":"evidence:v0-two-clock-relational-observable-comparison-result","polarity":"SUPPORTS"},
+    {"id":"edge:3152","from":"evidence:v0-two-clock-relational-observable-comparison-result","relation":"DERIVED_FROM","to":"artifact:v0-two-clock-relational-observable-result"},
+    {"id":"edge:3153","from":"evidence:v0-two-clock-relational-observable-comparison-result","relation":"RECORDED_IN","to":"artifact:v0-two-clock-relational-observable-evidence-snapshot"},
+    {"id":"edge:3154","from":"concept:bfv-parametrized-particle-gluing-calibration","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3155","from":"claim:PARAMETRIZED_PARTICLE_FINITE_BFV_GLUE_HOLDS","relation":"HAS_EVIDENCE","to":"evidence:bfv-parametrized-particle-gluing-calibration-result","polarity":"SUPPORTS"},
+    {"id":"edge:3156","from":"evidence:bfv-parametrized-particle-gluing-calibration-result","relation":"DERIVED_FROM","to":"artifact:bfv-parametrized-particle-gluing-result"},
+    {"id":"edge:3157","from":"evidence:bfv-parametrized-particle-gluing-calibration-result","relation":"RECORDED_IN","to":"artifact:bfv-parametrized-particle-gluing-evidence-snapshot"},
+    {"id":"edge:3158","from":"concept:closed-starobinsky-background-export-audit","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3159","from":"claim:CLOSED_STAROBINSKY_LEADING_SLOW_ROLL_EXPORT_IS_REPRODUCIBLE","relation":"HAS_EVIDENCE","to":"evidence:closed-starobinsky-background-export-audit-result","polarity":"SUPPORTS"},
+    {"id":"edge:3160","from":"evidence:closed-starobinsky-background-export-audit-result","relation":"DERIVED_FROM","to":"artifact:closed-starobinsky-background-export-result"},
+    {"id":"edge:3161","from":"evidence:closed-starobinsky-background-export-audit-result","relation":"RECORDED_IN","to":"artifact:closed-starobinsky-background-export-evidence-snapshot"},
+    {"id":"edge:3162","from":"open:gate1-v0-classical-s3-hda-closure","relation":"FOLLOW_UP_TO","to":"concept:closed-s3-scalar-derived-harmonic-ledger","note":"The scalar-derived ledger fixes selected unit-S3 normalization identities only; full SVT, linear constraints, cubic HDA and Jacobi remain open."},
+    {"id":"edge:3163","from":"open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure","relation":"FOLLOW_UP_TO","to":"concept:bfv-parametrized-particle-gluing-calibration","note":"Finite parametrized-particle gluing is a toy calibration; gravity absolute measure, contour, Gribov and endpoint questions remain unresolved."},
+    {"id":"edge:3164","from":"open:gate1-v0-relational-observables-bo-decoherence","relation":"FOLLOW_UP_TO","to":"concept:v0-two-clock-relational-observable-comparison","note":"Classical overlap agreement does not supply a quantum clock-change map, physical product, Born-Oppenheimer recovery or decoherence result."},
+    {"id":"edge:3165","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"FOLLOW_UP_TO","to":"concept:closed-starobinsky-background-export-audit","note":"Leading slow-roll background export is not closed evolution, perturbation generation, reheating, CLASS/Cobaya transfer or observational likelihood."}
   ],
   "kg_bridges": [
     {
