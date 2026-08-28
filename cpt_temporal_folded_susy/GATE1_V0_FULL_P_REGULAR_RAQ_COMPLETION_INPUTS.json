@@ -1,0 +1,132 @@
+{
+  "schema_version": "ice.gate1.v0-full-p-regular-raq-completion.input.v1",
+  "calculation_id": "Gate1V0FullPRegularRaqCompletion",
+  "numbered_phase": null,
+  "question": "For the already selected densitized V=0 multiplication operator H_hat on the full real-p auxiliary spectral space, does the regular-shell RAQ test space complete to two independent L2(R,dx) branches with no origin atom inherited from the auxiliary spectral measure?",
+  "kind": "EXACT_AND_BOUNDED_NUMERICAL_SELECTED_H_FULL_P_REGULAR_SHELL_RAQ_COMPLETION",
+  "epistemic_scope": "ONE_SELECTED_DENSITIZED_H_MULTIPLICATION_OPERATOR_LEBESGUE_AUXILIARY_MEASURE_AND_REGULAR_SHELL_TEST_SPACE_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json",
+      "sha256": "2f54a47f775002d1a9c24749c729bc02ebf86dc5fa959b93e2518d925b9db806",
+      "payload_sha256_without_self": "32c4cf7ae925d3fbbbba21d5e0e4466abdd80043e39db8312941c9548b346869",
+      "required_verdict": "KEEP_V0_ONE_DENSITIZED_LIOUVILLE_KL_RAQ_MODEL",
+      "role": "fixes the selected H_hat spectral multiplier and positive-branch interior shell measure"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_RESULT.json",
+      "sha256": "ce8faee990550a7992df09004635dd9174face9839f38c62280f1bcfc67317f3",
+      "payload_sha256_without_self": "56dd0ceace9aafc3693c672ad0452b428ec500b87fc38758da44de18aae4a6ad",
+      "required_verdict": "NARROW_V0_P_ZERO_STANDARD_GROUP_AVERAGE_REQUIRES_EXTRA_EDGE_DATA",
+      "role": "fixes the logarithmic nonzero-edge obstruction and forbids treating a finite part as an automatically selected origin sector"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Marolf, Refined Algebraic Quantization: Systems with a Single Constraint, arXiv:gr-qc/9508015v3",
+      "url": "https://arxiv.org/abs/gr-qc/9508015v3",
+      "used_for": "single-constraint rigging-map and distributional zero-fiber framework",
+      "not_used_for": "selecting this repository's p=0 origin sector, branch gluing, or raw-C realization"
+    },
+    {
+      "source": "Han and Thiemann, Rigging Inner Product and Master Constraint Direct Integral Decomposition, arXiv:0911.3431v1",
+      "url": "https://arxiv.org/abs/0911.3431v1",
+      "used_for": "the conditional direct-integral comparison and the need to state the regularity and test-space hypotheses",
+      "not_used_for": "proving raw-C versus densitized-H equivalence or making a measure-zero fiber canonical"
+    },
+    {
+      "source": "Pawlowski and Ashtekar, Positive Cosmological Constant in Loop Quantum Cosmology, arXiv:1112.0360v1",
+      "url": "https://arxiv.org/abs/1112.0360v1",
+      "used_for": "a contrast case in which a genuine self-adjoint extension and gluing choice occurs",
+      "not_used_for": "importing an LQC boundary condition into the selected multiplication operator"
+    }
+  ],
+  "declared_model": {
+    "auxiliary_space": "L2((0,infinity)_kappa times R_p, d_kappa dp)",
+    "operator": "the maximal self-adjoint multiplication operator M_h",
+    "spectral_multiplier": "h(kappa,p)=3*p^2-2*hbar^2*kappa^2",
+    "test_space": "Phi_reg=C_c^infinity((0,infinity)_kappa times (R\\{0})_p)",
+    "regular_zero_shell": "p=sigma*r, sigma in {+1,-1}, r>0, kappa_0(r)=sqrt(3/2)*r/hbar",
+    "regular_shell_form": "sum_sigma integral_0^infinity conjugate(A(kappa_0(r),sigma*r))*B(kappa_0(r),sigma*r) dr/(2*sqrt(6)*hbar*r)",
+    "log_coordinate": "x=log(r/r_star), r_star>0",
+    "origin_rule": "no delta identity is applied at the critical origin and no origin-supported auxiliary atom or rigging functional is added"
+  },
+  "assumptions": [
+    "hbar and r_star are strictly positive; numerical checks use hbar=1",
+    "the selected maximal multiplication operator and Lebesgue auxiliary measure are not changed",
+    "Phi_reg is dense in the auxiliary Hilbert space because the excluded axes and origin are auxiliary-measure null",
+    "the regular coarea formula is applied only for r>0 where the transverse derivative is nonzero",
+    "completion means the Hilbert completion of Phi_reg modulo the null space of the declared regular-shell positive form",
+    "adding an origin atom, logarithmic finite part, parity/CPT quotient, or cross-branch gluing would define extra data outside this calculation"
+  ],
+  "tasks": [
+    "derive the unique positive-kappa root and transverse coarea derivative on both p signs",
+    "derive the full regular-shell form as the orthogonal sum of the positive and negative rays",
+    "construct the normalized x=log(r/r_star) branch maps and verify their exact isometry",
+    "show that changing r_star is only a unitary translation of x",
+    "record the branch projectors, sign observable, parity exchange, and p multiplication action without imposing a quotient",
+    "show that the selected auxiliary spectral projection has no zero eigenprojection or independent origin atom",
+    "independently compare fixed regular witness norms in r and x coordinates at two reference scales",
+    "leave raw C, exact endpoint, absolute BFV, inhomogeneous, relational, empirical, physics and TOE outputs null"
+  ],
+  "decision_table": [
+    {
+      "condition": "the executable root, coarea, disjoint-branch, normalized log-coordinate isometry, scale-translation and branch-operator checks plus all independent quadratures pass, while the density, trace-range and no-auxiliary-atom theorem hypotheses are explicitly scoped",
+      "verdict": "KEEP_SELECTED_H_FULL_P_REGULAR_RAQ_DIRECT_SUM_NO_INHERITED_ORIGIN_ATOM",
+      "programme_impact": "CLOSE_STANDARD_FULL_P_REGULAR_SHELL_COMPLETION_KEEP_EXTRA_ORIGIN_OR_GLUING_CHOICES_OPEN"
+    },
+    {
+      "condition": "any executable root, coarea, disjoint-branch, isometry, scale, branch-algebra, observable, or independent quadrature check fails",
+      "verdict": "KILL_SELECTED_H_FULL_P_REGULAR_RAQ_DIRECT_SUM_DISCRIMINATOR",
+      "programme_impact": "RETAIN_SEPARATE_P_POSITIVE_AND_P_ZERO_RESULTS_WITHOUT_A_FULL_P_COMPLETION_CLAIM"
+    }
+  ],
+  "computed_scope": [
+    "the regular zero shell of one selected full-real-p multiplication operator",
+    "the exact two-ray coarea form and normalized logarithmic coordinates",
+    "the regular-shell Hilbert completion and inherited multiplication observables",
+    "one auxiliary spectral-projection no-atom check",
+    "six bounded high-precision witness quadratures with no roots or ODEs"
+  ],
+  "not_computed": [
+    "an ordering, self-adjoint domain, extension, rigging map, or physical inner product for undensitized raw C",
+    "quantum equivalence between raw C, selected H, or the declared Mc representation",
+    "a canonical p=0 counterterm, finite part, origin-supported sector, boundary state, branch quotient, or CPT/parity gluing law",
+    "an exact endpoint transform, full symbol, restricted Mc target, or companion-observable intertwiner",
+    "a lapse contour, modulus, absolute BFV trajectory measure, determinant-line orientation, or gluing theorem",
+    "inhomogeneous constraints, S3 harmonic closure, operator anomaly, BRST cohomology, relational observables, semiclassical recovery, decoherence, likelihood, quantum gravity, physics, or TOE"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 6,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "raw_C_operator_and_domain": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "canonical_p_zero_origin_sector": null,
+    "cross_branch_gluing_or_quotient": null,
+    "exact_endpoint_state_transform": null,
+    "declared_Mc_identity_equivalence": null,
+    "lapse_modulus_or_contour_selection": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
