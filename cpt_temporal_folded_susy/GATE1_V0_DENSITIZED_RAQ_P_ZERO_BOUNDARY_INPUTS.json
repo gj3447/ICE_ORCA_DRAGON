@@ -1,0 +1,132 @@
+{
+  "schema_version": "ice.gate1.v0-densitized-raq-p-zero-boundary.input.v1",
+  "calculation_id": "Gate1V0DensitizedRaqPZeroBoundary",
+  "numbered_phase": null,
+  "question": "For the already selected densitized V=0 constraint H_hat with spectral multiplier h(kappa,p)=3*p^2-2*hbar^2*kappa^2, does the standard positive group-average measure on the p>0 zero ray extend across p=0 on a test domain containing amplitudes nonzero at the origin, or does a cutoff expose a logarithmic divergence and subtraction-scale ambiguity that require extra edge data?",
+  "kind": "EXACT_AND_BOUNDED_NUMERICAL_DENSITIZED_RAQ_P_ZERO_POSITIVE_MEASURE_BOUNDARY_CONTROL",
+  "epistemic_scope": "ONE_SELECTED_DENSITIZED_H_SPECTRAL_MODEL_AND_ITS_STANDARD_POSITIVE_GROUP_AVERAGE_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json",
+      "sha256": "2f54a47f775002d1a9c24749c729bc02ebf86dc5fa959b93e2518d925b9db806",
+      "payload_sha256_without_self": "32c4cf7ae925d3fbbbba21d5e0e4466abdd80043e39db8312941c9548b346869",
+      "required_verdict": "KEEP_V0_ONE_DENSITIZED_LIOUVILLE_KL_RAQ_MODEL",
+      "role": "fixes the selected H_hat spectral multiplier and the interior p>0 measure dp/(2*sqrt(6)*hbar*p) while leaving p=0 completion null"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, 6.2.1 and 6.2.4",
+      "url": "https://dlmf.nist.gov/6.2",
+      "used_for": "the defining integral E1(z)=integral_z^infinity exp(-t)dt/t and the identity E1(z)=Ein(z)-log(z)-EulerGamma",
+      "not_used_for": "selecting a cosmological test domain, endpoint counterterm, sector, or physical interpretation"
+    },
+    {
+      "source": "Marolf, Refined Algebraic Quantization: Systems with a single constraint, arXiv:gr-qc/9508015",
+      "url": "https://arxiv.org/abs/gr-qc/9508015",
+      "used_for": "the single-constraint refined-algebraic-quantization framework and its dependence on auxiliary choices",
+      "not_used_for": "deriving the repository-specific p=0 cutoff integral or selecting its completion"
+    },
+    {
+      "source": "Giulini, Group Averaging and Refined Algebraic Quantization, arXiv:gr-qc/0003040",
+      "url": "https://arxiv.org/abs/gr-qc/0003040",
+      "used_for": "the general group-averaging framework and its stated limitations and uniqueness questions",
+      "not_used_for": "turning this local minisuperspace boundary result into quantum gravity"
+    },
+    {
+      "source": "Louko and Martinez-Pascual, Constraint rescaling in refined algebraic quantisation: momentum constraint, arXiv:1107.1092",
+      "url": "https://arxiv.org/abs/1107.1092",
+      "used_for": "the boundary that classically equivalent constraint rescalings may yield quantum equivalence, failure, or self-adjoint-extension ambiguity depending on extra data",
+      "not_used_for": "claiming that their momentum-constraint examples solve raw C or the p=0 edge in this model"
+    }
+  ],
+  "declared_model": {
+    "upstream_operator": "the selected self-adjoint densitized H_hat in Fourier-Kontorovich-Lebedev variables",
+    "spectral_multiplier": "h(kappa,p)=3*p^2-2*hbar^2*kappa^2",
+    "branch": "closed first quadrant kappa>=0,p>=0 approached from the established open component kappa>0,p>0",
+    "positive_zero_ray": "kappa_0(p)=sqrt(3/2)*p/hbar",
+    "interior_measure": "dp/(2*sqrt(6)*hbar*p)",
+    "cutoff": "p>=epsilon with epsilon>0; no delta(uv) identity is asserted at the singular origin",
+    "nonzero_edge_witness": "A_0(p)=exp(-p)",
+    "vanishing_edge_witness": "A_1(p)=p*exp(-p)",
+    "subtraction_convention": "for a positive reference momentum p_star, inspect FP_pstar=lim_{epsilon->0+}[eta_epsilon[A_0,A_0]-log(p_star/epsilon)/(2*sqrt(6)*hbar)] only as a diagnostic, not as a selected rigging map"
+  },
+  "assumptions": [
+    "hbar is strictly positive and numerical witnesses use hbar=1",
+    "the upstream Fourier-Kontorovich-Lebedev spectral realization and p>0 coarea measure are not changed",
+    "the cutoff calculation agrees with the standard positive p>0 group average before the p=0 limit",
+    "a positive rigging form must assign finite norm to every amplitude admitted to its declared test domain",
+    "a subtraction scale or an origin-supported sector is extra data and is not selected by the cutoff itself"
+  ],
+  "tasks": [
+    "derive the x,y and u,v Jacobians and the zero-ray dp/p weight without using the singular delta(uv) identity at u=0",
+    "derive eta_epsilon[A_0,A_0]=E1(2*epsilon)/(2*sqrt(6)*hbar) and its universal logarithmic coefficient",
+    "derive the finite norm eta[A_1,A_1]=1/(8*sqrt(6)*hbar)",
+    "show that finite-part values at two positive reference momenta differ by a nonzero logarithm",
+    "independently compare direct high-precision quadrature with E1 at three fixed cutoffs and check the finite witness",
+    "leave raw C, rescaling equivalence, a canonical p=0 completion, endpoint data, lapse/BFV completion, physics and TOE outputs null"
+  ],
+  "decision_table": [
+    {
+      "condition": "the exact shell measure has dp/p, the nonzero-edge witness diverges logarithmically, the vanishing witness is finite, reference-scale finite parts differ, and all independent quadratures pass",
+      "verdict": "NARROW_V0_P_ZERO_STANDARD_GROUP_AVERAGE_REQUIRES_EXTRA_EDGE_DATA",
+      "programme_impact": "CLOSE_NAIVE_CUTOFF_ONLY_P_ZERO_COMPLETION_KEEP_CANONICAL_EDGE_COMPLETION_OPEN"
+    },
+    {
+      "condition": "the nonzero-edge witness has a finite cutoff-independent positive norm with no extra choice",
+      "verdict": "KEEP_V0_NAIVE_P_ZERO_POSITIVE_RAQ_EXTENSION",
+      "programme_impact": "CLOSE_SELECTED_H_P_ZERO_EDGE_WITHIN_THE_DECLARED_TEST_DOMAIN_ONLY"
+    },
+    {
+      "condition": "any Jacobian, shell weight, E1, logarithmic coefficient, finite witness, scale-shift, or independent quadrature check fails",
+      "verdict": "KILL_V0_P_ZERO_BOUNDARY_DISCRIMINATOR",
+      "programme_impact": "RETAIN_THE_UPSTREAM_P_GREATER_THAN_ZERO_RESULT_WITHOUT_A_NEW_EDGE_CLAIM"
+    }
+  ],
+  "computed_scope": [
+    "one exact change of variables for the selected spectral multiplier",
+    "one positive on-shell cutoff form for p>=epsilon>0",
+    "one nonzero-edge and one linearly vanishing-edge witness",
+    "one finite-part reference-scale comparison",
+    "seven bounded high-precision scalar quadratures with no roots or ODEs"
+  ],
+  "not_computed": [
+    "a quantum operator, ordering, self-adjoint domain, rigging map, or physical inner product for undensitized raw C",
+    "unitary equivalence between raw C, densitized H, or the declared Mc representation",
+    "a canonical p=0 endpoint counterterm, renormalization condition, origin-supported sector, or superselection rule",
+    "the p<0 component, both-branch completion, global chart, or self-adjoint relational Phi observable",
+    "a lapse contour or modulus, zero-lapse contact terms, full BFV trajectory measure, determinants, anomalies, or BRST cohomology",
+    "inhomogeneous metric modes, the local GR constraint algebra, gravitons, renormalization, observables, empirical predictions, quantum gravity, physics, or TOE"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 7,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "raw_C_operator_and_domain": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "declared_Mc_identity_equivalence": null,
+    "canonical_p_zero_edge_completion": null,
+    "p_zero_endpoint_counterterm_or_sector": null,
+    "gauge_independent_physical_inner_product": null,
+    "exact_endpoint_state_transform": null,
+    "lapse_modulus_or_contour_selection": null,
+    "full_bfv_trajectory_measure": null,
+    "brst_cohomology": null,
+    "physical_original_cycle": null,
+    "global_n_sigma": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
