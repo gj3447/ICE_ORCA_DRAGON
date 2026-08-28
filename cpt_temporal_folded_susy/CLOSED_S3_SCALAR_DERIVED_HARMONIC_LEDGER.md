@@ -1,5 +1,17 @@
 # Closed \(S^3\) scalar-derived harmonic ledger
 
+## Observed result
+
+The committed bounded run returned
+
+```text
+KEEP_CLOSED_S3_SCALAR_DERIVED_HARMONIC_NORMALIZATION_LEDGER_NOT_SVT_COMPLETENESS_OR_HDA
+```
+
+All 26 exact checks passed.  The general integrated identities and the
+\(n=0\) vector/\(n=1\) tracefree-tensor degeneracies agree for the explicit
+\(n=0,\ldots,4\) ledger.  This fixes scalar-derived normalizations only.
+
 ## Scope
 
 This bounded, unnumbered calculation starts from one normalized general scalar
@@ -54,3 +66,14 @@ tensor normalization begins at \(n=2\).
 These identities only set conventions needed before the future full SVT and
 Gaunt/Clebsch--Gordan ledger.  They cannot be read as finite-cutoff closure or
 as a quantum anomaly result.
+
+## Execution
+
+```text
+./ice run closed_s3_scalar_derived_harmonic_ledger
+VALID_RUN; 26/26 exact checks
+```
+
+The result artifact is
+`CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json`, with outer SHA-256
+`3d67333d30b5baa4a24533993b93d9028367373f8195c7bdfde4e99885cfc66f`.
