@@ -97,3 +97,20 @@ After the source is reviewed and committed, the only execution command is
 ```text
 ./ice run v0_two_clock_relational_observable_comparison
 ```
+
+## First execution observation
+
+The first committed-source run produced a valid artifact but selected the KILL
+row with 16/17 exact checks.  The sole failed check was the monotonicity
+identity
+
+\[
+\frac{dP_\phi}{d\tau}=p\operatorname{sech}^2
+\left[\sqrt{\frac23}(\tau-\Phi)\right].
+\]
+
+The runner asked generic `simplify` to reduce
+\(1-\tanh^2u-\operatorname{sech}^2u\); it did not apply the hyperbolic
+identity.  All formula, inverse-map, clock-factor and domain checks passed.
+This is recorded as a harness false negative, not contrary clock evidence.
+The failed raw artifact is preserved in Git history before any repair.
