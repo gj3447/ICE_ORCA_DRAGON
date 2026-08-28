@@ -458,7 +458,7 @@ The explicit work order is
 
 ```text
 1 full-p regular completion [scoped KEEP]
-  -> 2 raw-C operator/domain audit
+  -> 2 raw-C operator/domain audit [fiber classification NARROW; global domain open]
   -> 3 microlocal then exact endpoint
   -> 4 absolute BFV
   -> 5 classical closed-S3 HDA/Jacobi closure
@@ -475,8 +475,8 @@ classical-closure results.
 | Stage and node | Prerequisite | Success discriminator | Failure or branch discriminator |
 | --- | --- | --- | --- |
 | 1 `open:gate1-v0-p-zero-p-negative-global-spectral-completion` | the \(p>0\) KL fiber and cutoff edge result | **observed:** selected-\(H\) regular completion is the two \(L^2(dx)\) branches with no inherited origin atom | any nonstandard origin sector or gluing still needs independent data |
-| 2 `open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion` | symmetric raw-\(C\) and selected-\(H\) operators with declared dense cores and boundary forms | an explicit domain-preserving map carries constraint action, observables and RAQ pairing | deficiency indices, boundary terms or pairing ratios obstruct the proposed equivalence |
-| 3 `open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol` | Stage 2 plus the classical Darboux chart and principal FIO | a full symbol and common domains give the raw-\(C\) or support-restricted exact intertwiner | the selected \(H\to M_c\) joint-support mismatch or lower-symbol/domain obstruction survives |
+| 2 `open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion` | one declared weighted raw-\(C\) candidate and the selected-\(H\) comparison target | **observed:** each fixed-\(p\) raw fiber is limit-circle at \(Q\to-\infty\), limit-point at \(Q\to+\infty\), with indices \((1,1)\); a measurable global extension and RAQ equivalence remain open | the classical multiplier alone does not select the fiber boundary line or establish quantum equivalence |
+| 3 `open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol` | the classical Darboux chart and principal FIO; a raw-\(C\) exact map additionally needs a selected global raw domain | a full symbol and common domains give the raw-\(C\) map, or a separately labelled selected-\(H\) support-restricted spectral intertwiner | the unrestricted selected-\(H\to M_c\) joint-support mismatch or lower-symbol/domain obstruction survives |
 | 4 `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` | the relative quartet and repaired zero-ghost Ward ledger | one contour/modulus/orientation prescription yields an absolute measure and passes Ward/gluing checks | contour, orientation, normalization or Gribov dependence persists |
 | 5 `open:gate1-v0-classical-s3-hda-closure` | full ADM+matter action, perturbative order and \(S^3\) coupling ledger | projected HDA and Jacobi identities close with the projection remainder separately bounded | a genuine classical remainder survives after cutoff error is removed |
 | 6 `open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly` | Stages 2, 4 and 5 plus a common operator domain | \(\widehat\Omega^2\) vanishes to declared perturbative, \(\hbar\) and cutoff orders | a regulator-stable operator anomaly or domain leakage remains |
@@ -497,6 +497,12 @@ raw C
   -> comparison with M_c
   -> p-zero cutoff boundary
   -> selected-H full-p two-branch regular completion
+
+declared weighted raw C candidate
+  -> Fourier fibers
+  -> Q-minus limit-circle / Q-plus limit-point
+  -> one boundary line per fixed p
+  -> measurable global extension + RAQ equivalence still open
 
 BFV source algebra
   -> zero-block Gaussian determinant
@@ -524,16 +530,22 @@ ratification or automatic successor receipt.
 - [`GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION.md`](GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION.md)
   derives the two-ray coarea form, logarithmic branch coordinates, scoped
   direct-sum completion and no-inherited-origin-atom boundary.
+- [`GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT.md`](GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT.md)
+  records the declared weighted raw-\(C\) ordering, fiber Weyl classification,
+  boundary-form ledger, extension debt and still-null global measurable domain.
 - `evidence:gate1-v0-densitized-liouville-raq-result`,
   `evidence:gate1-v0-densitized-raq-p-zero-boundary-result`, and
-  `evidence:gate1-v0-full-p-regular-raq-completion-result`, together with
+  `evidence:gate1-v0-full-p-regular-raq-completion-result`,
+  `evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result`, together with
   `evidence:gate1-v0-bfv-zero-mode-elimination-ward-result`, carry executable
   checks and provenance.
 - `source:nist-dlmf-bessel-kl`,
   `source:nist-dlmf-exponential-integral`, `source:marolf-1995`,
   `source:giulini-2000-group-averaging-raq`, and
   `source:louko-martinez-pascual-2011` bound the special-function, RAQ, and
-  constraint-rescaling interpretation.
+  constraint-rescaling interpretation. Weyl's endpoint alternative, von
+  Neumann's extension theorem, and Nussbaum/Lennon direct-integral reduction
+  bound the raw-\(C\) fiber and global-measurability statements.
 
 The ontology remains a memory and navigation layer. Evidence remains in the
 committed calculation results, and philosophical interpretation remains

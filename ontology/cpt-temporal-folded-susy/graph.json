@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-28T06:29:23Z",
+  "updated_at_utc": "2026-08-28T07:20:00Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -456,7 +456,7 @@
     },
     {
       "question": "How far did the trace-gauge V0 spectral-to-m2 BFV chain get?",
-      "answer": "It now supplies eight additional but still local workbench layers. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, one selected positively densitized and order-fixed original-coordinate Liouville model has a KL/RAQ positive p>0 fiber with measure dp/(2 sqrt(6) hbar p), which is not the prior dp static fiber measure up to one constant. Its p=0 cutoff excludes a nonzero-edge witness and leaves finite-part scale ambiguity. The later full-real-p regular-shell calculation completes the selected H zero fiber as L2(R,dx)_plus direct-sum L2(R,dx)_minus, places p=0 at x=-infinity and inherits no auxiliary origin atom; nonstandard origin sectors or gluing remain extra data. Direct ghost retention and weighted ghost elimination agree; only unweighted zero-ghost deletion is KILL. No result selects an absolute BFV measure, raw-C domain/equivalence, exact endpoint transform, anomaly-free inhomogeneous theory, empirical map, physics or TOE claim.",
+      "answer": "The chain remains local but now includes a first raw-C domain result. Besides the declared M_c domain, endpoint nonuniqueness, frozen static pairing and one relative m=2 nonzero quartet, the selected densitized Liouville model has its scoped KL/RAQ and full-real-p regular completion. For one separately declared weighted raw-C ordering, every fixed-p minimal fiber is limit-circle at Q=-infinity and limit-point at Q=+infinity with indices (1,1), so one boundary line is extra data. No measurable global raw-C extension, raw rigging map or C/H equivalence was constructed. Direct ghost retention and weighted elimination agree; unweighted deletion is KILL. No result selects an absolute BFV measure, exact endpoint state transform, anomaly-free inhomogeneous theory, empirical map, physics or TOE claim.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -476,19 +476,23 @@
         "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
         "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+        "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+        "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
       ]
     },
     {
       "question": "Where are the V0 formulas, philosophical implications, and next research bridges organized?",
-      "answer": "The formula ontology now follows raw C through positive densitization, the declared Schrodinger operator, Fourier--KL reduction, spectral multiplier/domain, RAQ coarea measure, Mc comparison, the p-zero cutoff boundary, the selected-H full-p regular completion, and the BFV Gaussian Ward identity. A separate interpretive layer records that exact solvability is conditional and minisuperspace is a laboratory. The roadmap now exposes eight stages: full-p, raw-C domain, microlocal/exact endpoint, absolute BFV, classical closed-S3 closure, quantum anomaly, relational/BO/decoherence, and empirical likelihood. The classical lane is independently startable; the quantum lane remains downstream. These are local KG memory edges with no automatic execution or external ratification.",
+      "answer": "The formula ontology follows the selected-H chain through KL/RAQ and full-p completion, and separately records the declared weighted raw-C fiber/domain audit. A separate interpretive layer records that exact solvability is conditional and minisuperspace is a laboratory. The roadmap exposes eight stages: Stage 1 is scoped KEEP; Stage 2 now has a fixed-p NARROW while global extension/equivalence remains open; endpoint, absolute BFV, classical closed-S3 closure, quantum anomaly, relational/BO/decoherence and empirical likelihood follow as independent questions. These are local KG memory edges with no automatic execution or external ratification.",
       "claim_ids": [
         "claim:G1_V0_SELECTED_DENSITIZED_LIOUVILLE_CONSTRAINT_HAS_KL_RAQ_POSITIVE_PHYSICAL_FIBER",
         "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
         "claim:G1_V0_SELECTED_H_FULL_P_REGULAR_RAQ_COMPLETES_TO_TWO_LOG_BRANCHES_WITH_NO_INHERITED_ORIGIN_ATOM",
+        "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+        "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER"
       ]
@@ -1194,6 +1198,10 @@
         "claim:G1_V0_SELECTED_DENSITIZED_RAQ_PHYSICAL_MEASURE_EQUALS_PRIOR_DP_STATIC_FIBER_MEASURE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_STANDARD_POSITIVE_MEASURE_EXTENDS_TO_NONZERO_P_ZERO_EDGE",
         "claim:G1_V0_SELECTED_DENSITIZED_H_P_ZERO_FINITE_PART_HAS_CANONICAL_REFERENCE_SCALE",
+        "concept:gate1-v0-full-p-regular-raq-completion-control",
+        "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+        "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+        "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
         "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
@@ -12091,9 +12099,9 @@
       "id": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
       "type": "open_problem",
       "title": "Raw V0 constraint rescaling and operator-domain audit",
-      "summary": "The selected-H full-p regular completion is now separately closed in its scoped representation. This legacy-ID node now owns only the raw-C debt: declare its auxiliary measure, symmetric ordering, dense core, adjoint, endpoint boundary form, deficiency indices or decomposable extension family, then compare constraint action, observables and rigging forms with selected H. No raw-C realization or equivalence is inferred from the classical positive multiplier or the selected-H p-zero result.",
-      "state": "OPEN_REQUIRES_NEW_INDEPENDENT_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Which declared raw-C ordering and self-adjoint domain exist, and does an explicit domain- and observable-preserving map establish or refute equivalence with selected H?"
+      "summary": "One declared weighted raw-C minimal operator has now been audited: each fixed-p fiber is limit-circle at Q=-infinity, limit-point at Q=+infinity and has indices (1,1). The remaining debt is to select and construct a measurable global extension or classify relevant p-mixing alternatives, then build the raw-C spectral/RAQ product and compare domains, observables and rigging forms with selected H. The classical multiplier alone proves none of those steps.",
+      "state": "PARTIAL_FIXED_P_CLASSIFICATION_COMPLETE_GLOBAL_EXTENSION_AND_EQUIVALENCE_OPEN",
+      "question": "Does an explicitly selected measurable raw-C global domain exist, and does a domain-, observable- and rigging-form-preserving map establish equivalence with selected H?"
     },
     {
       "id": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
@@ -12595,7 +12603,7 @@
       "id": "concept:gate1-v0-eight-stage-work-sequence",
       "type": "concept",
       "title": "Gate-1 V0 eight-stage research work sequence",
-      "summary": "Ordering ledger: selected-H full-p regular completion; raw-C operator/domain; microlocal then exact endpoint; absolute BFV; classical closed-S3 closure; quantum BFV anomaly; relational/BO/decoherence; empirical likelihood. Stage 1 has a scoped KEEP. Each later stage remains an independent bounded question and no result automatically launches its successor.",
+      "summary": "Ordering ledger: selected-H full-p regular completion; raw-C operator/domain; microlocal then exact endpoint; absolute BFV; classical closed-S3 closure; quantum BFV anomaly; relational/BO/decoherence; empirical likelihood. Stage 1 has a scoped KEEP and Stage 2 has a fixed-p NARROW with global extension/equivalence open. Each later stage remains an independent bounded question and no result automatically launches its successor.",
       "state": "ACTIVE_LOCAL_ROADMAP_NO_AUTOMATIC_EXECUTION_AUTHORITY"
     },
     {
@@ -13038,7 +13046,172 @@
       "state": "TRACKED_NON_EVIDENTIAL_ONTOLOGY_MAP",
       "artifact_kind": "ontology_map",
       "path": "cpt_temporal_folded_susy/GATE1_V0_QUANTUM_COSMOLOGY_ONTOLOGY_MAP.md",
-      "sha256": "b7940e6d98e690ef5399986bdde3cc8d0acd7a870f7e88d83996a458a4306973"
+      "sha256": "c3c326c98230dc89e5ba9b53a0c2ebe9e7c83001c43b8025893cdddc59d95406"
+    },
+    {
+      "id": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "type": "concept",
+      "title": "Gate-1 V0 weighted raw-C operator and domain audit",
+      "summary": "One declared left-weighted raw-C candidate on L2(f dQ dphi), its Fourier fibers, Weyl endpoint classification and fixed-p boundary-form ledger. The result establishes fiber extension debt while leaving every selected or measurable global extension and every RAQ equivalence question open.",
+      "state": "COMPLETED_FIXED_P_CLASSIFICATION_GLOBAL_DOMAIN_OPEN"
+    },
+    {
+      "id": "scope:gate1-v0-declared-weighted-raw-c-candidate",
+      "type": "scope",
+      "title": "Declared weighted raw-C candidate scope",
+      "summary": "C_min=f^-1 H_hat on C_c^infinity in L2(f dQ dphi), f=12*pi^2 exp(3Q/2), with full Lebesgue-p Fourier base and no selected extension.",
+      "state": "LOCAL_DECLARED_SCOPE",
+      "includes": [
+        "the declared auxiliary weight, left-weighted ordering and compact core",
+        "the formal Fourier fibers and weighted deficiency equation",
+        "zero-energy Bessel endpoint integrability under scoped Weyl guards",
+        "fixed-p Wronskian boundary lines and bounded Bessel diagnostics"
+      ],
+      "excludes": [
+        "uniqueness or physical selection of the raw-C quantization",
+        "a measurable decomposable global extension or general p-mixing extension classification",
+        "a raw-C spectral resolution, rigging map or physical inner product",
+        "C-to-H or Mc equivalence, endpoint completion, BFV, physics or TOE"
+      ]
+    },
+    {
+      "id": "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+      "type": "claim",
+      "title": "The declared weighted raw-C fibers require boundary extension data",
+      "summary": "Supported under the stated Sturm-Liouville guards: Q=-infinity is limit-circle, Q=+infinity is limit-point, and every fixed-p minimal scalar fiber has deficiency indices (1,1). One real projective boundary line is therefore extra quantization data.",
+      "state": "SUPPORTED_FOR_DECLARED_FIXED_P_FIBERS_ONLY",
+      "claim_id": "G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+      "statement": "For the declared weighted raw-C ordering, each fixed-p minimal scalar fiber requires one self-adjoint boundary condition at Q=-infinity.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+      "type": "claim",
+      "title": "The classical relation H=fC automatically establishes quantum equivalence",
+      "summary": "Contradicted as an automatic inference for the declared comparison: the raw-C differential expression has noncanonical fixed-fiber domain data, while no measurable global extension, raw-C rigging form or observable intertwiner has been selected. This does not prove that every possible completion is inequivalent.",
+      "state": "CONTRADICTED_AS_AUTOMATIC_INFERENCE_NOT_ALL_COMPLETIONS",
+      "claim_id": "G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+      "statement": "The positive classical multiplier H=fC by itself fixes quantum domains and proves raw-C/selected-H equivalence.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "type": "evidence",
+      "title": "Gate-1 V0 weighted raw-C operator-domain evidence",
+      "summary": "VALID_RUN with fourteen executable exact passes, two bounded high-precision Bessel passes and nine analytic hypothesis/scope guards. Portable isolated reproduction passes; the earlier 13/14 harness false negative is preserved in history.",
+      "state": "VALID_RUN_FIXED_P_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN",
+      "observed_status": "VALID_RUN_14_EXACT_PASS_2_NUMERICAL_PASS_9_ANALYTIC_GUARDS_REPRO",
+      "check_ids": [
+        "P39.G1.rawc.classical.f_positive_and_H_equals_fC",
+        "P39.G1.rawc.weighted.unitary_map",
+        "P39.G1.rawc.weighted.symmetric_green_identity",
+        "P39.G1.rawc.flat.conjugation_and_expansion",
+        "P39.G1.rawc.fourier.formal_fiber_symbol",
+        "P39.G1.rawc.deficiency.weighted_equation",
+        "P39.G1.rawc.bessel.zero_energy_transform",
+        "P39.G1.rawc.bessel.p_zero_order_zero_equation",
+        "P39.G1.rawc.endpoint.minus_nonzero_weighted_integrability",
+        "P39.G1.rawc.endpoint.minus_zero_weighted_integrability",
+        "P39.G1.rawc.endpoint.plus_one_integrable_one_nonintegrable",
+        "P39.G1.rawc.boundary.nonzero_p_form_and_phase",
+        "P39.G1.rawc.boundary.zero_p_form_and_projective_condition",
+        "P39.G1.rawc.extension.distinct_fiber_domains",
+        "P39.G1.rawc.numeric.bessel_equation",
+        "P39.G1.rawc.numeric.bessel_wronskian"
+      ]
+    },
+    {
+      "id": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-input",
+      "type": "artifact",
+      "title": "Gate-1 V0 weighted raw-C operator-domain input manifest",
+      "summary": "Hash-pinned declared candidate, assumptions, source roles, decision table, caps and fail-closed outputs for the unnumbered audit.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_INPUTS.json",
+      "sha256": "0176dccf68298002ec598bd5acf4e1cb3b11b644a60a5644ac03bb39e800d9f6",
+      "introduced_in_commit": "81a09dd3155cd8b590da7e4357667e6fc3be4912"
+    },
+    {
+      "id": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-runner",
+      "type": "artifact",
+      "title": "Gate-1 V0 weighted raw-C operator-domain runner",
+      "summary": "Bounded symbolic and high-precision Bessel audit runner with one adjacent result and no automatic descendant.",
+      "state": "TRACKED_COMMITTED_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_v0_raw_c_weighted_operator_domain_audit.py",
+      "sha256": "ff32d72fa74c86512a26d9475e081ff27b64a979697ac8e9892ff855b8e1fc5e",
+      "introduced_in_commit": "81a09dd3155cd8b590da7e4357667e6fc3be4912"
+    },
+    {
+      "id": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-raw-result",
+      "type": "artifact",
+      "title": "Gate-1 V0 weighted raw-C operator-domain raw result",
+      "summary": "24,835-byte VALID_RUN result; payload digest 664af96fda1297c7524d86b3ffb79af08373377abc59bf127aeb8232b7e03bef.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json",
+      "sha256": "7daa40749b13920acfffe422a049e288cb3e67fc66de595b10681767ea036004",
+      "introduced_in_commit": "1c3bd81f0020dbd18ddfcae22f2b7db3e6797331"
+    },
+    {
+      "id": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-report",
+      "type": "artifact",
+      "title": "Gate-1 V0 weighted raw-C operator-domain report",
+      "summary": "Human-readable operator, endpoint, boundary-form, execution-history and open-scope ledger.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT.md",
+      "sha256": "b1b64c13d33520149b06215ec02d7b49b83982700778af9619fd01f103e62ca6"
+    },
+    {
+      "id": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 V0 weighted raw-C operator-domain evidence snapshot",
+      "summary": "Typed snapshot preserving input, runner, result and commit hashes, exact and numerical checks, theorem guards, initial harness false negative, repair and reproduction.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-v0-raw-c-weighted-operator-domain-audit-result.json",
+      "sha256": "5fcc450f1d8c2768ce07d44eb3e0e5a421958ad258f8b7a9764e840c9d8dfc6a"
+    },
+    {
+      "id": "source:weyl-1910-singular-sturm-liouville",
+      "type": "source",
+      "title": "Weyl's singular Sturm-Liouville endpoint alternative",
+      "summary": "Primary limit-point/limit-circle foundation applied only after the declared raw-C scalar fibers meet the real weighted Sturm-Liouville hypotheses.",
+      "state": "PRIMARY",
+      "citation": "H. Weyl, Math. Ann. 68 (1910) 220-269",
+      "uri": "https://eudml.org/doc/158437",
+      "version": "Math. Ann. 68 (1910)"
+    },
+    {
+      "id": "source:von-neumann-1930-self-adjoint-extensions",
+      "type": "source",
+      "title": "von Neumann self-adjoint extension theory",
+      "summary": "Primary deficiency-space foundation; fixed-fiber indices neither select a physical extension nor classify all p-mixing full-operator extensions.",
+      "state": "PRIMARY",
+      "citation": "J. von Neumann, Math. Ann. 102 (1930) 49-131",
+      "uri": "https://doi.org/10.1007/BF01782338",
+      "version": "Math. Ann. 102 (1930)"
+    },
+    {
+      "id": "source:nussbaum-1964-unbounded-reduction",
+      "type": "source",
+      "title": "Reduction theory for unbounded closed operators",
+      "summary": "Primary decomposability boundary; it does not turn fiberwise extension existence into a measurable global operator field.",
+      "state": "PRIMARY",
+      "citation": "A. E. Nussbaum, Duke Math. J. 31 (1964) 33-44",
+      "uri": "https://doi.org/10.1215/S0012-7094-64-03103-5",
+      "version": "Duke Math. J. 31 (1964)"
+    },
+    {
+      "id": "source:lennon-1973-direct-integrals",
+      "type": "source",
+      "title": "Direct integrals",
+      "summary": "Primary measurable closed-fiber and direct-integral conditions; no raw-C global domain follows without an explicit measurable field.",
+      "state": "PRIMARY",
+      "citation": "J. J. Lennon, Math. Scand. 32 (1973) 123-132",
+      "uri": "https://www.mscand.dk/article/download/11449/9466/30402",
+      "version": "Math. Scand. 32 (1973)"
     }
   ],
   "edges": [
@@ -31869,6 +32042,199 @@
       "from": "concept:gate1-v0-eight-stage-work-sequence",
       "relation": "VALID_WITHIN",
       "to": "scope:gate1-v0-formula-philosophy-and-roadmap-layer"
+    },
+    {
+      "id": "edge:3025",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3026",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-full-p-regular-raq-completion-control",
+      "note": "Uses the selected-H comparison target but asks an independent raw-C ordering/domain question; no equivalence is inherited."
+    },
+    {
+      "id": "edge:3027",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-declared-weighted-raw-c-candidate"
+    },
+    {
+      "id": "edge:3028",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "A clean committed unnumbered runner used the generic bounded shell, wrote one adjacent result and started no descendant."
+    },
+    {
+      "id": "edge:3029",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "CITES",
+      "to": "source:louko-martinez-pascual-2011",
+      "note": "Constraint-rescaling counterexamples are a scope warning, not evidence that every completion here is inequivalent."
+    },
+    {
+      "id": "edge:3030",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "CITES",
+      "to": "source:weyl-1910-singular-sturm-liouville"
+    },
+    {
+      "id": "edge:3031",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "CITES",
+      "to": "source:von-neumann-1930-self-adjoint-extensions"
+    },
+    {
+      "id": "edge:3032",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "CITES",
+      "to": "source:nussbaum-1964-unbounded-reduction"
+    },
+    {
+      "id": "edge:3033",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "CITES",
+      "to": "source:lennon-1973-direct-integrals"
+    },
+    {
+      "id": "edge:3034",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "CITES",
+      "to": "source:nist-dlmf-bessel-kl",
+      "note": "Modified-Bessel equations, asymptotics and Wronskians only; DLMF does not supply the Weyl or extension theorem."
+    },
+    {
+      "id": "edge:3035",
+      "from": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit"
+    },
+    {
+      "id": "edge:3036",
+      "from": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-full-p-regular-raq-completion-result",
+      "note": "Pins the selected-H full-p comparison boundary without transferring its domain to raw C."
+    },
+    {
+      "id": "edge:3037",
+      "from": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "relation": "DERIVED_FROM",
+      "to": "evidence:gate1-v0-densitized-liouville-raq-result",
+      "note": "Pins H-hat and the classical positive multiplier; the weighted raw operator is a newly declared quantization."
+    },
+    {
+      "id": "edge:3038",
+      "from": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-raw-result"
+    },
+    {
+      "id": "edge:3039",
+      "from": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-evidence-snapshot"
+    },
+    {
+      "id": "edge:3040",
+      "from": "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit"
+    },
+    {
+      "id": "edge:3041",
+      "from": "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-declared-weighted-raw-c-candidate"
+    },
+    {
+      "id": "edge:3042",
+      "from": "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:3043",
+      "from": "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+      "relation": "PART_OF",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit"
+    },
+    {
+      "id": "edge:3044",
+      "from": "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+      "relation": "VALID_WITHIN",
+      "to": "scope:gate1-v0-declared-weighted-raw-c-candidate"
+    },
+    {
+      "id": "edge:3045",
+      "from": "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:gate1-v0-raw-c-weighted-operator-domain-audit-result",
+      "polarity": "CONTRADICTS"
+    },
+    {
+      "id": "edge:3046",
+      "from": "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "The fixed-p classification closes one subquestion and leaves global measurability, extension selection and RAQ equivalence as independent debts."
+    },
+    {
+      "id": "edge:3047",
+      "from": "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+      "relation": "MOTIVATES",
+      "to": "open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol",
+      "note": "Any raw-C endpoint map now requires a selected measurable raw domain; a selected-H support-restricted spectral map is a separate question."
+    },
+    {
+      "id": "edge:3048",
+      "from": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit"
+    },
+    {
+      "id": "edge:3049",
+      "from": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-evidence-snapshot",
+      "relation": "RECORDS",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit"
+    },
+    {
+      "id": "edge:3050",
+      "from": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "relation": "DEFINED_IN",
+      "to": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-input"
+    },
+    {
+      "id": "edge:3051",
+      "from": "artifact:gate1-v0-raw-c-weighted-operator-domain-audit-runner",
+      "relation": "IMPLEMENTS",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit"
+    },
+    {
+      "id": "edge:3052",
+      "from": "concept:gate1-v0-eight-stage-work-sequence",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "note": "Stage 2 fixed-p classification is observed; its global domain/equivalence remainder stays open and no successor is automatically authorized."
+    },
+    {
+      "id": "edge:3053",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "note": "The legacy open node now retains only the post-audit global extension, RAQ and equivalence questions."
+    },
+    {
+      "id": "edge:3054",
+      "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
+      "note": "Formula and roadmap navigation only; the evidence remains in the committed result."
     }
   ],
   "kg_bridges": [
@@ -32448,6 +32814,26 @@
       "checked_at_utc": "2026-08-27T06:39:14Z",
       "lookup_key": "CPT Temporal-Folded SUSY Phase15A invalid sequence breach no scientific inference",
       "note": "Read-only exact/keyword searches found no authorized external provenance node. This bridge intentionally preserves the sequence breach as procedural evidence only and does not externalize a scientific result; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_V0_DECLARED_WEIGHTED_RAW_C_FIBERS_REQUIRE_EXTENSION_DATA",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-28T07:20:00Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 declared weighted raw C fiber limit circle limit point self adjoint extension data",
+      "note": "No authorized exact external correspondence or writer is available. The fixed-p Weyl classification and extension debt remain repository-local workbench evidence; no measurable global domain, physical product, quantum equivalence or external UID is claimed."
+    },
+    {
+      "local_node_id": "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-28T07:20:00Z",
+      "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 classical positive constraint rescaling automatic quantum equivalence",
+      "note": "No authorized exact external correspondence or writer is available. The contradiction is only to automatic inference from the classical multiplier and does not prove inequivalence of every completion; no external UID was invented."
     }
   ]
 }

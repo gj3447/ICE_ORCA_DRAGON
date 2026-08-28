@@ -16,14 +16,17 @@ The [collection manifest](./collection.json) uses
 [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 and non-numbered Gate-1 run snapshots use
 [`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
 
-At the recorded `2026-08-27T06:40:59Z` collection update, the four graphs have 1,045 nodes, 2,957 edges,
-and 263 claims: 149 supported, 103 contradicted, and 11 inconclusive. Validation verifies all 261 stored
-hashes (251 artifacts and 10 policies); 44 unresolved external bridges remain explicit warnings. The
+At the recorded `2026-08-28T07:20:00Z` collection update, the four graphs have 1,184 nodes, 3,341 edges,
+and 278 claims: 157 supported, 110 contradicted, and 11 inconclusive. Validation verifies all 288 stored
+hashes (278 artifacts and 10 policies); 56 unresolved external bridges remain explicit warnings. The
 CPT graph now also hash-indexes the Phase 11–15R historical lead-in, with Phase 15A kept strictly as an
 invalid-sequence provenance break rather than scientific evidence. The independent IG-RUEQFT graph
 records one finite (N=64) free-U(1) locality oracle: its registered bulk-volume predicate is
 contradicted and the observed dephased entropy remains subvolume on the sampled sizes, while a general
-interacting/continuum verdict stays inconclusive. Neither result is a physics or TOE promotion.
+interacting/continuum verdict stays inconclusive. In the V0 lane, one declared weighted raw-\(C\)
+candidate now has a fixed-\(p\) limit-circle/limit-point classification and \((1,1)\) extension debt;
+its measurable global domain and \(C/H\) equivalence remain open. None of these results is a physics or
+TOE promotion.
 
 The Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343

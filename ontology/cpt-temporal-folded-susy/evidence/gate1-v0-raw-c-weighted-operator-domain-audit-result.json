@@ -1,0 +1,92 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T07:07:24Z",
+  "command": "./ice run cpt_temporal_folded_susy/gate1_v0_raw_c_weighted_operator_domain_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_raw_c_weighted_operator_domain_audit.py",
+    "sha256": "ff32d72fa74c86512a26d9475e081ff27b64a979697ac8e9892ff855b8e1fc5e",
+    "introduced_in_commit": "81a09dd3155cd8b590da7e4357667e6fc3be4912"
+  },
+  "exact_checks": 14,
+  "checks": [
+    {"id":"P39.G1.rawc.classical.f_positive_and_H_equals_fC","status":"PASS","statement":"the declared positive multiplier gives H=fC exactly"},
+    {"id":"P39.G1.rawc.weighted.unitary_map","status":"PASS","statement":"the weighted-to-flat maps are inverse isometries and preserve the compact core"},
+    {"id":"P39.G1.rawc.weighted.symmetric_green_identity","status":"PASS","statement":"the declared raw-C candidate is symmetric on its compact core"},
+    {"id":"P39.G1.rawc.flat.conjugation_and_expansion","status":"PASS","statement":"g Hhat g has the recorded expanded flat expression"},
+    {"id":"P39.G1.rawc.fourier.formal_fiber_symbol","status":"PASS","statement":"the plane-wave symbol gives the declared formal fiber"},
+    {"id":"P39.G1.rawc.deficiency.weighted_equation","status":"PASS","statement":"the weighted deficiency equation is exact"},
+    {"id":"P39.G1.rawc.bessel.zero_energy_transform","status":"PASS","statement":"the z=0 fiber reduces to the stated modified-Bessel equation"},
+    {"id":"P39.G1.rawc.bessel.p_zero_order_zero_equation","status":"PASS","statement":"the p=0 fiber is separately the order-zero equation"},
+    {"id":"P39.G1.rawc.endpoint.minus_nonzero_weighted_integrability","status":"PASS","statement":"both nonzero-p small-x modes are weighted-integrable"},
+    {"id":"P39.G1.rawc.endpoint.minus_zero_weighted_integrability","status":"PASS","statement":"the p=0 constant and logarithmic modes are weighted-integrable"},
+    {"id":"P39.G1.rawc.endpoint.plus_one_integrable_one_nonintegrable","status":"PASS","statement":"only the K reference mode is weighted-integrable at the plus end"},
+    {"id":"P39.G1.rawc.boundary.nonzero_p_form_and_phase","status":"PASS","statement":"the oriented nonzero-p boundary ledger and U(1) line pass"},
+    {"id":"P39.G1.rawc.boundary.zero_p_form_and_projective_condition","status":"PASS","statement":"the oriented p=0 affine boundary ledger and real projective line pass"},
+    {"id":"P39.G1.rawc.extension.distinct_fiber_domains","status":"PASS","statement":"two distinct fiber boundary lines demonstrate noncanonicity"}
+  ],
+  "numerical_checks": 2,
+  "numerical": [
+    {"id":"P39.G1.rawc.numeric.bessel_equation","status":"PASS","statement":"24 finite Bessel samples satisfy the transformed equation; maximum normalized residual 6.48e-72 is below 1e-58"},
+    {"id":"P39.G1.rawc.numeric.bessel_wronskian","status":"PASS","statement":"12 reused I/K points satisfy W{I_nu,K_nu}=-1/x; maximum error 3.24e-70 is below 1e-58"}
+  ],
+  "payload": {
+    "exact_checks": 14,
+    "numerical_checks": 2,
+    "calculation": {
+      "calculation_id": "Gate1V0RawCWeightedOperatorDomainAudit",
+      "namespace": "GATE1_NON_NUMBERED",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "NARROW_V0_RAW_C_CANDIDATE_HAS_FIBER_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN",
+      "programme_impact": "KEEP_RAW_C_MINIMAL_FIBER_CLASSIFICATION_BUT_KILL_AUTOMATIC_C_H_EQUIVALENCE"
+    },
+    "schema_transport": {
+      "phase_field": "P39 is an inherited Gate-1 provenance placeholder required by research-run-evidence/v1; numbered_phase is null and this run creates no numbered phase or descendant.",
+      "authoritative_check_prefix": "G1.rawc."
+    },
+    "execution_history": {
+      "initial_result_commit": "7309cb801a00b75b3dc38caa3e76c480edb802e7",
+      "initial_observation": "VALID_RUN; 13/14 exact checks; 2/2 numerical checks; KILL row due to G1.rawc.endpoint.minus_zero_weighted_integrability",
+      "initial_failure_interpretation": "SymPy left the improper log-squared moment unevaluated; this was a harness false negative, not scientific counterevidence.",
+      "repair_commit": "a64e9efff62cf993388c88e7a6f41482bca0091b",
+      "repair_scope": "replace the unevaluated improper integral with the exact second derivative of integral_0^1 x^alpha dx=1/(alpha+1); the log-squared moment is 16/27",
+      "successful_result_commit": "1c3bd81f0020dbd18ddfcae22f2b7db3e6797331",
+      "reproduction_mapping_commit": "9029109d3603468066eb1d7814b5bdc2903a7c93",
+      "reproduction": "REPRO; 1 checked; 0 needs-attention"
+    },
+    "evidence_transport": {
+      "definition_commit": "81a09dd3155cd8b590da7e4357667e6fc3be4912",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_INPUTS.json",
+      "input_manifest_sha256": "0176dccf68298002ec598bd5acf4e1cb3b11b644a60a5644ac03bb39e800d9f6",
+      "runner_sha256": "ff32d72fa74c86512a26d9475e081ff27b64a979697ac8e9892ff855b8e1fc5e",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json",
+      "raw_result_outer_sha256": "7daa40749b13920acfffe422a049e288cb3e67fc66de595b10681767ea036004",
+      "raw_result_payload_sha256_without_self": "664af96fda1297c7524d86b3ffb79af08373377abc59bf127aeb8232b7e03bef",
+      "raw_result_size_bytes": 24835
+    },
+    "computed_facts": {
+      "declared_candidate": "C_min=f^(-1) H_hat on L2(f dQ dphi), with f=12*pi^2*exp(3Q/2)",
+      "fiber_endpoint_types": "Q=-infinity limit-circle; Q=+infinity limit-point",
+      "fiber_deficiency_indices": "n_plus=n_minus=1 for each fixed p under the stated Weyl guards",
+      "selected_raw_C_self_adjoint_extension": null,
+      "measurable_global_extension_constructed": false,
+      "p_zero_full_base_role": "Lebesgue-null unless an extra atom is declared",
+      "raw_C_rigging_map": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "absolute_bfv_measure": null,
+      "quantum_gravity_claim": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "automatic_next": null
+    },
+    "theorem_guards": {
+      "count": 9,
+      "status": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDITS_NOT_EXECUTABLE_NUMERICAL_PREDICATES",
+      "ids": ["G1.rawc.guard.declared_quantization_only","G1.rawc.guard.fourier_direct_integral_core","G1.rawc.guard.weyl_alternative","G1.rawc.guard.fiber_deficiency_indices","G1.rawc.guard.bessel_asymptotic_boundary_coordinates","G1.rawc.guard.fiber_boundary_maps_and_extensions","G1.rawc.guard.measurable_decomposable_family","G1.rawc.guard.general_full_extensions_and_p_zero","G1.rawc.guard.no_raq_or_equivalence_promotion"]
+    }
+  }
+}
