@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-28T07:31:00Z",
+  "updated_at_utc": "2026-08-28T16:19:02Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -12124,9 +12124,9 @@
       "id": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
       "type": "open_problem",
       "title": "Raw V0 constraint rescaling and operator-domain audit",
-      "summary": "One declared weighted raw-C minimal operator has now been audited: each fixed-p fiber is limit-circle at Q=-infinity, limit-point at Q=+infinity and has indices (1,1). The remaining debt is to select and construct a measurable global extension or classify relevant p-mixing alternatives, then build the raw-C spectral/RAQ product and compare domains, observables and rigging forms with selected H. The classical multiplier alone proves none of those steps.",
-      "state": "PARTIAL_FIXED_P_CLASSIFICATION_COMPLETE_GLOBAL_EXTENSION_AND_EQUIVALENCE_OPEN",
-      "question": "Does an explicitly selected measurable raw-C global domain exist, and does a domain-, observable- and rigging-form-preserving map establish equivalence with selected H?"
+      "summary": "One declared p-preserving Gamma_1=0 reference-boundary line now constructs a measurable decomposable raw-C self-adjoint extension over Lebesgue p. It is extra quantization data, not a unique or physical choice. Remaining debt is p-mixing extension classification where relevant, raw-C spectral resolution/RAQ/physical product, and domain-, observable- and rigging-form comparison with selected H; the classical multiplier proves none of these.",
+      "state": "PARTIAL_ONE_SELECTED_MEASURABLE_DECOMPOSABLE_EXTENSION_COMPLETE_SPECTRAL_RAQ_EQUIVALENCE_OPEN",
+      "question": "For the declared raw-C extension or relevant alternatives, what spectral/RAQ construction and domain-, observable- and rigging-form-preserving comparison, if any, establishes equivalence with selected H?"
     },
     {
       "id": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
@@ -12635,8 +12635,8 @@
       "id": "open:gate1-v0-classical-s3-hda-closure",
       "type": "open_problem",
       "title": "Classical closed-S3 harmonic HDA and Jacobi closure",
-      "summary": "Stage 5A now supplies an exact L=2 zonal-scalar product/projection remainder ledger and demonstrates why a cutoff associator can be a discarded-mode effect. Stage 5B remains independently open: declare the full ADM-plus-matter action, perturbative order, scalar/vector/tensor hyperspherical harmonics and Gaunt/Clebsch-Gordan ledger, then test projected hypersurface-deformation and Jacobi identities while separating truncation remainder from a genuine algebra failure.",
-      "state": "OPEN_INDEPENDENT_CLASSICAL_QUESTION_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "summary": "A homogeneous ADM-to-raw-C reduction plus zonal-scalar and declared longitudinal-coordinate convention baseline is now complete, alongside the earlier L=2 kinematic projection-remainder ledger. Full scalar/vector/tensor completeness, linear ADM Hamiltonian and momentum constraints, cubic contributions required for quadratic brackets, and projected HDA/Jacobi tests remain independently open.",
+      "state": "PARTIAL_HOMOGENEOUS_AND_KINEMATIC_BASELINE_COMPLETE_FULL_SVT_LINEAR_CUBIC_HDA_JACOBI_OPEN",
       "question": "Does the declared closed-S3 perturbative truncation satisfy the classical HDA and Jacobi identities after projection remainder is explicitly separated?"
     },
     {
@@ -13566,6 +13566,264 @@
       "citation": "J. J. Lennon, Math. Scand. 32 (1973) 123-132",
       "uri": "https://www.mscand.dk/article/download/11449/9466/30402",
       "version": "Math. Scand. 32 (1973)"
+    },
+    {
+      "id": "concept:raw-c-constant-boundary-direct-integral",
+      "type": "concept",
+      "title": "Declared raw-C constant-boundary direct-integral extension",
+      "summary": "One p-preserving decomposable self-adjoint extension is constructed from the declared Gamma_1=0 real reference boundary line. Its line is extra quantization data, not a physical selection or raw-C/H equivalence.",
+      "state": "COMPLETED_ONE_DECLARED_MEASURABLE_DECOMPOSABLE_EXTENSION_ONLY"
+    },
+    {
+      "id": "scope:raw-c-constant-boundary-direct-integral",
+      "type": "scope",
+      "title": "Raw-C constant-boundary extension scope",
+      "summary": "The scope is the prior left-weighted raw-C fibers over full Lebesgue p, a finite-Q normalized real reference pair and the declared Gamma_1,p=0 boundary graph, modulo almost-everywhere equality.",
+      "state": "LOCAL_DECLARED_SCOPE",
+      "includes": [
+        "one p-preserving measurable decomposable self-adjoint extension",
+        "parity invariance of the declared reference field",
+        "Lebesgue-null p=0 without an atom or branch gluing"
+      ],
+      "excludes": [
+        "physical uniqueness of the boundary line",
+        "p-mixing extension classification",
+        "raw-C spectral resolution, RAQ or physical inner product",
+        "raw-C/selected-H unitary or rigging-form equivalence",
+        "BFV, physics or TOE promotion"
+      ]
+    },
+    {
+      "id": "claim:RAW_C_DECLARED_CONSTANT_BOUNDARY_GIVES_DECOMPOSABLE_EXTENSION",
+      "type": "claim",
+      "title": "The declared constant raw-C boundary line gives one decomposable extension",
+      "summary": "Supported only under the stated inherited fiber and measurable-resolvent theorem guards: Gamma_1,p=0 defines a p-preserving direct-integral self-adjoint extension. It is declared extra data and is not uniquely or physically selected.",
+      "state": "SUPPORTED_DECLARED_DECOMPOSABLE_EXTENSION_ONLY",
+      "claim_id": "RAW_C_DECLARED_CONSTANT_BOUNDARY_GIVES_DECOMPOSABLE_EXTENSION",
+      "statement": "For the declared weighted raw-C fiber family, the measurable Gamma_1,p=0 reference boundary graph defines one p-preserving decomposable self-adjoint extension.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:raw-c-constant-boundary-direct-integral-result",
+      "type": "evidence",
+      "title": "Raw-C constant-boundary direct-integral evidence",
+      "summary": "VALID_RUN: 6/6 exact and 2/2 bounded numerical checks, with five explicitly scoped theorem guards. Authoritative raw check IDs and file hashes are preserved in the evidence snapshot.",
+      "state": "VALID_RUN_ONE_DECLARED_DECOMPOSABLE_EXTENSION_RAQ_OPEN",
+      "observed_status": "VALID_RUN_6_EXACT_PASS_2_NUMERICAL_PASS_5_THEOREM_GUARDS_REPRO",
+      "check_ids": [
+        "P39.rawc.direct_integral.reference.wronskian_conservation",
+        "P39.rawc.direct_integral.reference.wronskian_at_Q0",
+        "P39.rawc.direct_integral.parameter.p_even_coefficient",
+        "P39.rawc.direct_integral.boundary.symplectic_coordinates",
+        "P39.rawc.direct_integral.boundary.gamma1_zero_lagrangian",
+        "P39.rawc.direct_integral.parity.declared_line_invariant",
+        "P39.rawc.direct_integral.numeric.reference_wronskian",
+        "P39.rawc.direct_integral.numeric.reference_parity"
+      ]
+    },
+    {
+      "id": "artifact:raw-c-constant-boundary-direct-integral-input",
+      "type": "artifact",
+      "title": "Raw-C constant-boundary direct-integral input",
+      "summary": "Pinned candidate, sources, assumptions, caps and fail-closed outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input",
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_INPUTS.json",
+      "sha256": "68d1c80ad33c03bcf96dc41187a7ac1cd067ded2116eda04e8ca7cce618d654d",
+      "introduced_in_commit": "91dcc91a60ee65474a72848f6ed625685474321e"
+    },
+    {
+      "id": "artifact:raw-c-constant-boundary-direct-integral-runner",
+      "type": "artifact",
+      "title": "Raw-C constant-boundary direct-integral runner",
+      "summary": "Bounded symbolic and finite-interval diagnostic for one declared extension family.",
+      "state": "TRACKED_COMMITTED_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/raw_c_constant_boundary_direct_integral.py",
+      "sha256": "ef3d57f14b14e30d20409414c125281bee69a9e17181cec4331a9181f2e93505",
+      "introduced_in_commit": "91dcc91a60ee65474a72848f6ed625685474321e"
+    },
+    {
+      "id": "artifact:raw-c-constant-boundary-direct-integral-result",
+      "type": "artifact",
+      "title": "Raw-C constant-boundary direct-integral raw result",
+      "summary": "VALID_RUN raw result with payload digest 8b629856847b646c6dbc0469f4da77177d61be520688b96d5923d4452f58806b.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json",
+      "sha256": "52d623524ed8a80f006374231c02267d4b5d9b4df1c636a8e7a7fc74b3672db7",
+      "introduced_in_commit": "9905957951c48c5a68ff3b3ebdbbc9c3b8ca3f55"
+    },
+    {
+      "id": "artifact:raw-c-constant-boundary-direct-integral-report",
+      "type": "artifact",
+      "title": "Raw-C constant-boundary direct-integral report",
+      "summary": "Human-readable scope and result boundary for the declared raw-C extension.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL.md",
+      "sha256": "6100d422ae1f9a77f38a336514ddd3b8ecf042f640f8b3325346d1be3caf1ff9"
+    },
+    {
+      "id": "artifact:raw-c-constant-boundary-direct-integral-evidence-snapshot",
+      "type": "artifact",
+      "title": "Raw-C constant-boundary direct-integral evidence snapshot",
+      "summary": "Schema-valid compact evidence record with exact and numerical check IDs, guards and raw artifact hashes.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/raw-c-constant-boundary-direct-integral-result.json",
+      "sha256": "422009b8d2cc9980cfeab7c1098c52c9271dddf967bcfc2e2b98f4e8d98891dd"
+    },
+    {
+      "id": "concept:closed-s3-adm-linear-scalar-convention-baseline",
+      "type": "concept",
+      "title": "Closed-S3 ADM homogeneous and scalar convention baseline",
+      "summary": "The declared Einstein-Hilbert plus massless-scalar homogeneous reduction, raw-C variable match, zonal scalar basis and longitudinal scalar coordinate convention are mutually consistent. This is a convention baseline, not a full linear constraint or HDA calculation.",
+      "state": "COMPLETED_HOMOGENEOUS_AND_KINEMATIC_CONVENTION_BASELINE_ONLY"
+    },
+    {
+      "id": "scope:closed-s3-adm-linear-scalar-convention-baseline",
+      "type": "scope",
+      "title": "Closed-S3 ADM convention baseline scope",
+      "summary": "Unit S3, V=0 massless scalar, homogeneous ADM reduction, zonal scalar degrees zero through four and declared longitudinal coordinate checks only.",
+      "state": "LOCAL_DECLARED_SCOPE",
+      "includes": [
+        "homogeneous closed-FRW ADM-to-raw-C identity",
+        "zonal scalar orthonormality and Laplacian identities",
+        "declared linear longitudinal scalar coordinate consistency"
+      ],
+      "excludes": [
+        "full scalar-vector-tensor completeness",
+        "full linear ADM Hamiltonian or momentum constraints",
+        "cubic constraint expansion, HDA or Jacobi closure",
+        "BFV charge, quantum anomaly, physics or TOE promotion"
+      ]
+    },
+    {
+      "id": "claim:CLOSED_S3_ADM_HOMOGENEOUS_REDUCTION_MATCHES_REPOSITORY_RAW_C",
+      "type": "claim",
+      "title": "Declared closed-S3 homogeneous ADM reduction matches repository raw C",
+      "summary": "Supported for the declared action, units and canonical transformation only. The result also fixes a scalar-zonal and longitudinal-coordinate convention baseline, while full SVT and constraint closure remain open.",
+      "state": "SUPPORTED_HOMOGENEOUS_AND_KINEMATIC_CONVENTION_BASELINE_ONLY",
+      "claim_id": "CLOSED_S3_ADM_HOMOGENEOUS_REDUCTION_MATCHES_REPOSITORY_RAW_C",
+      "statement": "At the declared G, Q and P conventions, the homogeneous closed-FRW massless-scalar ADM constraint equals the repository raw C expression.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:closed-s3-adm-linear-scalar-convention-audit-result",
+      "type": "evidence",
+      "title": "Closed-S3 ADM linear-scalar convention evidence",
+      "summary": "VALID_RUN with 43/43 exact checks. The evidence fixes homogeneous and kinematic conventions only; full SVT, linear constraints, cubic HDA/Jacobi and BFV remain uncomputed.",
+      "state": "VALID_RUN_HOMOGENEOUS_AND_KINEMATIC_BASELINE_NOT_HDA",
+      "observed_status": "VALID_RUN_43_EXACT_PASS_REPRO",
+      "check_ids": [
+        "P39.CS3ADM.geometry.unit_s3_volume",
+        "P39.CS3ADM.geometry.unit_s3_scalar_curvature",
+        "P39.CS3ADM.homogeneous.extrinsic_curvature_combination",
+        "P39.CS3ADM.homogeneous.gravity_momentum",
+        "P39.CS3ADM.homogeneous.scalar_momentum",
+        "P39.CS3ADM.homogeneous.legendre_constraint",
+        "P39.CS3ADM.homogeneous.scalar_hamiltonian_term",
+        "P39.CS3ADM.homogeneous.repository_raw_C_match",
+        "P39.CS3ADM.homogeneous.Q_P_canonical",
+        "P39.CS3ADM.zonal.orthonormality.n0.m0",
+        "P39.CS3ADM.zonal.orthonormality.n0.m1",
+        "P39.CS3ADM.zonal.orthonormality.n0.m2",
+        "P39.CS3ADM.zonal.orthonormality.n0.m3",
+        "P39.CS3ADM.zonal.orthonormality.n0.m4",
+        "P39.CS3ADM.zonal.orthonormality.n1.m0",
+        "P39.CS3ADM.zonal.orthonormality.n1.m1",
+        "P39.CS3ADM.zonal.orthonormality.n1.m2",
+        "P39.CS3ADM.zonal.orthonormality.n1.m3",
+        "P39.CS3ADM.zonal.orthonormality.n1.m4",
+        "P39.CS3ADM.zonal.orthonormality.n2.m0",
+        "P39.CS3ADM.zonal.orthonormality.n2.m1",
+        "P39.CS3ADM.zonal.orthonormality.n2.m2",
+        "P39.CS3ADM.zonal.orthonormality.n2.m3",
+        "P39.CS3ADM.zonal.orthonormality.n2.m4",
+        "P39.CS3ADM.zonal.orthonormality.n3.m0",
+        "P39.CS3ADM.zonal.orthonormality.n3.m1",
+        "P39.CS3ADM.zonal.orthonormality.n3.m2",
+        "P39.CS3ADM.zonal.orthonormality.n3.m3",
+        "P39.CS3ADM.zonal.orthonormality.n3.m4",
+        "P39.CS3ADM.zonal.orthonormality.n4.m0",
+        "P39.CS3ADM.zonal.orthonormality.n4.m1",
+        "P39.CS3ADM.zonal.orthonormality.n4.m2",
+        "P39.CS3ADM.zonal.orthonormality.n4.m3",
+        "P39.CS3ADM.zonal.orthonormality.n4.m4",
+        "P39.CS3ADM.zonal.laplacian.degree_0",
+        "P39.CS3ADM.zonal.laplacian.degree_1",
+        "P39.CS3ADM.zonal.laplacian.degree_2",
+        "P39.CS3ADM.zonal.laplacian.degree_3",
+        "P39.CS3ADM.zonal.laplacian.degree_4",
+        "P39.CS3ADM.linear_gauge.generator_E2",
+        "P39.CS3ADM.linear_gauge.generator_E3",
+        "P39.CS3ADM.linear_gauge.generator_momenta_fixed",
+        "P39.CS3ADM.linear_gauge.metric_decomposition_match"
+      ]
+    },
+    {
+      "id": "artifact:closed-s3-adm-linear-scalar-convention-input",
+      "type": "artifact",
+      "title": "Closed-S3 ADM linear-scalar convention input",
+      "summary": "Pinned actions, conventions, sources, checks and fail-closed outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input",
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_INPUTS.json",
+      "sha256": "c61fe6ebbc82759865636be16189c9692626eb0bd9e616d6f7f63359ec58804f",
+      "introduced_in_commit": "b7a2796397eaa47043e83196faa1f72ea4064a89"
+    },
+    {
+      "id": "artifact:closed-s3-adm-linear-scalar-convention-runner",
+      "type": "artifact",
+      "title": "Closed-S3 ADM linear-scalar convention runner",
+      "summary": "Bounded exact convention audit; it performs no HDA or BFV calculation.",
+      "state": "TRACKED_COMMITTED_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/closed_s3_adm_linear_scalar_convention_audit.py",
+      "sha256": "7fcf6339a72081af6c89f6e7ddbf81eec3939b297c09ab604f30b121f56d191d",
+      "introduced_in_commit": "b7a2796397eaa47043e83196faa1f72ea4064a89"
+    },
+    {
+      "id": "artifact:closed-s3-adm-linear-scalar-convention-result",
+      "type": "artifact",
+      "title": "Closed-S3 ADM linear-scalar convention raw result",
+      "summary": "VALID_RUN raw result with payload digest 5178a20a464506595a02d25e97931e60eabfffb038902b977bc4737beaf8cdc1.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
+      "sha256": "5d56bd94020ddebfda609ca8da3956cc75be5c74ad9b06cdb9ea3464ee616441",
+      "introduced_in_commit": "6925290781270d12c708c4fb21dc32e845fc6b8b"
+    },
+    {
+      "id": "artifact:closed-s3-adm-linear-scalar-convention-report",
+      "type": "artifact",
+      "title": "Closed-S3 ADM linear-scalar convention report",
+      "summary": "Human-readable scope boundary for the homogeneous and kinematic convention audit.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT.md",
+      "sha256": "673997aef0d24793837fd7e841578604c9423c75e98cc7cde77b2bd1480df065"
+    },
+    {
+      "id": "artifact:closed-s3-adm-linear-scalar-convention-evidence-snapshot",
+      "type": "artifact",
+      "title": "Closed-S3 ADM linear-scalar convention evidence snapshot",
+      "summary": "Schema-valid compact evidence record with all authoritative check IDs and raw artifact hashes.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/closed-s3-adm-linear-scalar-convention-audit-result.json",
+      "sha256": "53823473fded93b294030f4ce071e3b59960258d4b9cb3b5d85b5e50202f034d"
+    },
+    {
+      "id": "source:gitman-smirnov-tyutin-voronov-2010-symmetry-preserving-extensions",
+      "type": "source",
+      "title": "Symmetry-preserving self-adjoint extensions",
+      "summary": "Primary route from a measurable symmetry-reduced boundary field to decomposable symmetry-preserving self-adjoint extensions; it does not select a physical boundary line or prove raw-C RAQ equivalence.",
+      "state": "PRIMARY",
+      "citation": "D. M. Gitman, I. V. Smirnov, B. L. Voronov and I. V. Tyutin, arXiv:1012.2588",
+      "uri": "https://arxiv.org/abs/1012.2588",
+      "version": "arXiv:1012.2588"
     }
   ],
   "edges": [
@@ -32946,6 +33204,190 @@
       "from": "artifact:gate1-v0-quantum-cosmology-ontology-map",
       "relation": "DOCUMENTS",
       "to": "concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger"
+    },
+    {
+      "id": "edge:3116",
+      "from": "concept:raw-c-constant-boundary-direct-integral",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3117",
+      "from": "concept:raw-c-constant-boundary-direct-integral",
+      "relation": "VALID_WITHIN",
+      "to": "scope:raw-c-constant-boundary-direct-integral"
+    },
+    {
+      "id": "edge:3118",
+      "from": "claim:RAW_C_DECLARED_CONSTANT_BOUNDARY_GIVES_DECOMPOSABLE_EXTENSION",
+      "relation": "PART_OF",
+      "to": "concept:raw-c-constant-boundary-direct-integral"
+    },
+    {
+      "id": "edge:3119",
+      "from": "claim:RAW_C_DECLARED_CONSTANT_BOUNDARY_GIVES_DECOMPOSABLE_EXTENSION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:raw-c-constant-boundary-direct-integral"
+    },
+    {
+      "id": "edge:3120",
+      "from": "claim:RAW_C_DECLARED_CONSTANT_BOUNDARY_GIVES_DECOMPOSABLE_EXTENSION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:raw-c-constant-boundary-direct-integral-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:3121",
+      "from": "evidence:raw-c-constant-boundary-direct-integral-result",
+      "relation": "ABOUT",
+      "to": "concept:raw-c-constant-boundary-direct-integral"
+    },
+    {
+      "id": "edge:3122",
+      "from": "artifact:raw-c-constant-boundary-direct-integral-input",
+      "relation": "DOCUMENTS",
+      "to": "concept:raw-c-constant-boundary-direct-integral"
+    },
+    {
+      "id": "edge:3123",
+      "from": "artifact:raw-c-constant-boundary-direct-integral-runner",
+      "relation": "IMPLEMENTS",
+      "to": "concept:raw-c-constant-boundary-direct-integral"
+    },
+    {
+      "id": "edge:3124",
+      "from": "evidence:raw-c-constant-boundary-direct-integral-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:raw-c-constant-boundary-direct-integral-result"
+    },
+    {
+      "id": "edge:3125",
+      "from": "artifact:raw-c-constant-boundary-direct-integral-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:raw-c-constant-boundary-direct-integral"
+    },
+    {
+      "id": "edge:3126",
+      "from": "evidence:raw-c-constant-boundary-direct-integral-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:raw-c-constant-boundary-direct-integral-evidence-snapshot"
+    },
+    {
+      "id": "edge:3127",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:raw-c-constant-boundary-direct-integral",
+      "note": "The selected measurable decomposable extension is complete only for one declared boundary field; spectral/RAQ/equivalence remains open and no successor is automatic."
+    },
+    {
+      "id": "edge:3128",
+      "from": "concept:raw-c-constant-boundary-direct-integral",
+      "relation": "CITES",
+      "to": "source:nussbaum-1964-unbounded-reduction"
+    },
+    {
+      "id": "edge:3129",
+      "from": "concept:raw-c-constant-boundary-direct-integral",
+      "relation": "CITES",
+      "to": "source:lennon-1973-direct-integrals"
+    },
+    {
+      "id": "edge:3130",
+      "from": "concept:raw-c-constant-boundary-direct-integral",
+      "relation": "CITES",
+      "to": "source:weyl-1910-singular-sturm-liouville"
+    },
+    {
+      "id": "edge:3131",
+      "from": "concept:closed-s3-adm-linear-scalar-convention-baseline",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3132",
+      "from": "concept:closed-s3-adm-linear-scalar-convention-baseline",
+      "relation": "VALID_WITHIN",
+      "to": "scope:closed-s3-adm-linear-scalar-convention-baseline"
+    },
+    {
+      "id": "edge:3133",
+      "from": "claim:CLOSED_S3_ADM_HOMOGENEOUS_REDUCTION_MATCHES_REPOSITORY_RAW_C",
+      "relation": "PART_OF",
+      "to": "concept:closed-s3-adm-linear-scalar-convention-baseline"
+    },
+    {
+      "id": "edge:3134",
+      "from": "claim:CLOSED_S3_ADM_HOMOGENEOUS_REDUCTION_MATCHES_REPOSITORY_RAW_C",
+      "relation": "VALID_WITHIN",
+      "to": "scope:closed-s3-adm-linear-scalar-convention-baseline"
+    },
+    {
+      "id": "edge:3135",
+      "from": "claim:CLOSED_S3_ADM_HOMOGENEOUS_REDUCTION_MATCHES_REPOSITORY_RAW_C",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:closed-s3-adm-linear-scalar-convention-audit-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:3136",
+      "from": "evidence:closed-s3-adm-linear-scalar-convention-audit-result",
+      "relation": "ABOUT",
+      "to": "concept:closed-s3-adm-linear-scalar-convention-baseline"
+    },
+    {
+      "id": "edge:3137",
+      "from": "artifact:closed-s3-adm-linear-scalar-convention-input",
+      "relation": "DOCUMENTS",
+      "to": "concept:closed-s3-adm-linear-scalar-convention-baseline"
+    },
+    {
+      "id": "edge:3138",
+      "from": "artifact:closed-s3-adm-linear-scalar-convention-runner",
+      "relation": "IMPLEMENTS",
+      "to": "concept:closed-s3-adm-linear-scalar-convention-baseline"
+    },
+    {
+      "id": "edge:3139",
+      "from": "evidence:closed-s3-adm-linear-scalar-convention-audit-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:closed-s3-adm-linear-scalar-convention-result"
+    },
+    {
+      "id": "edge:3140",
+      "from": "artifact:closed-s3-adm-linear-scalar-convention-report",
+      "relation": "DOCUMENTS",
+      "to": "concept:closed-s3-adm-linear-scalar-convention-baseline"
+    },
+    {
+      "id": "edge:3141",
+      "from": "evidence:closed-s3-adm-linear-scalar-convention-audit-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:closed-s3-adm-linear-scalar-convention-evidence-snapshot"
+    },
+    {
+      "id": "edge:3142",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
+      "relation": "FOLLOW_UP_TO",
+      "to": "concept:closed-s3-adm-linear-scalar-convention-baseline",
+      "note": "The baseline fixes homogeneous and kinematic conventions only; full SVT, linear constraints, cubic HDA and Jacobi remain open without automatic execution authority."
+    },
+    {
+      "id": "edge:3143",
+      "from": "concept:closed-s3-adm-linear-scalar-convention-baseline",
+      "relation": "CITES",
+      "to": "source:teitelboim-1973-hypersurface-deformation"
+    },
+    {
+      "id": "edge:3144",
+      "from": "concept:closed-s3-adm-linear-scalar-convention-baseline",
+      "relation": "CITES",
+      "to": "source:halliwell-hawking-1985-closed-perturbations"
+    },
+    {
+      "id": "edge:3145",
+      "from": "concept:raw-c-constant-boundary-direct-integral",
+      "relation": "CITES",
+      "to": "source:gitman-smirnov-tyutin-voronov-2010-symmetry-preserving-extensions"
     }
   ],
   "kg_bridges": [

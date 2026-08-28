@@ -18,6 +18,18 @@ The historical [`gate1-v0-spectral-to-m2-bfv-chain-result.json`](../evidence/gat
 
 The later [`gate1-v0-densitized-liouville-raq-result.json`](../evidence/gate1-v0-densitized-liouville-raq-result.json) records 14/14 exact checks for one explicitly densitized, order-fixed Kontorovich--Lebedev/RAQ realization. Its selected positive fiber has physical measure \(dp/(2\sqrt6\hbar p)\), not the earlier declared \(dp\) identity measure. The follow-up [`gate1-v0-full-p-regular-raq-completion-result.json`](../evidence/gate1-v0-full-p-regular-raq-completion-result.json) records the selected-\(H\) regular-shell completion as \(L^2(\mathbb R,dx)_+\oplus L^2(\mathbb R,dx)_-\), with \(x=\log(|p|/p_*)\): \(p=0\) is an infinite end, not a finite boundary, and the completion inherits neither an origin atom nor a branch-gluing condition. The independent [`gate1-v0-raw-c-weighted-operator-domain-audit-result.json`](../evidence/gate1-v0-raw-c-weighted-operator-domain-audit-result.json) records 14/14 exact and 2/2 numerical checks for one declared weighted raw-\(C\) ordering. Its fixed-\(p\) fibers are limit-circle at \(Q=-\infty\), limit-point at \(Q=+\infty\), with indices \((1,1)\); hence a boundary line is extra data. It does not construct a measurable global extension, raw rigging map or quantum rescaling equivalence. The companion [`gate1-v0-bfv-zero-mode-elimination-ward-result.json`](../evidence/gate1-v0-bfv-zero-mode-elimination-ward-result.json) records 14/14 exact checks: direct Berezin integration equals determinant-weighted ghost elimination, whereas unweighted deletion is killed. It leaves the lapse modulus/contour, absolute finite or functional BFV measure, full trajectory completion, physics and TOE null.
 
+Two newly indexed controls narrow the raw-domain and inhomogeneous-convention
+questions. The [`raw-c-constant-boundary-direct-integral-result.json`](../evidence/raw-c-constant-boundary-direct-integral-result.json)
+records 6/6 exact and 2/2 bounded numerical passes, plus five scoped theorem guards, for one declared
+parity-invariant `p`-preserving `Gamma_1,p=0` measurable direct-integral raw-C extension. The
+reference line is extra quantization data: it is neither unique nor physically selected, and raw spectral
+resolution, RAQ, physical product, relevant `p`-mixing extensions and raw-C/selected-H equivalence
+remain open. The accompanying
+[`closed-s3-adm-linear-scalar-convention-audit-result.json`](../evidence/closed-s3-adm-linear-scalar-convention-audit-result.json)
+records 43/43 exact passes for one homogeneous closed-FRW ADM-to-raw-C reduction and scalar-zonal/
+longitudinal-coordinate convention baseline. It does not compute full SVT completeness, linear ADM
+constraints, cubic HDA/Jacobi, BFV, anomaly, physics or TOE results.
+
 Three subsequent independent controls advance only narrowly delimited pieces of
 the endpoint/BFV/inhomogeneous roadmap. The
 [`gate1-v0-endpoint-support-restricted-spectral-intertwiner-result.json`](../evidence/gate1-v0-endpoint-support-restricted-spectral-intertwiner-result.json)

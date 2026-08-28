@@ -1,0 +1,293 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T16:12:46Z",
+  "command": "./ice run closed_s3_adm_linear_scalar_convention_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/closed_s3_adm_linear_scalar_convention_audit.py",
+    "sha256": "7fcf6339a72081af6c89f6e7ddbf81eec3939b297c09ab604f30b121f56d191d",
+    "introduced_in_commit": "6925290781270d12c708c4fb21dc32e845fc6b8b"
+  },
+  "exact_checks": 43,
+  "checks": [
+    {
+      "id": "P39.CS3ADM.geometry.unit_s3_volume",
+      "status": "PASS",
+      "statement": "The unit-S3 volume from dV=sin(chi)^2 dchi dOmega_2 is exactly 2*pi^2."
+    },
+    {
+      "id": "P39.CS3ADM.geometry.unit_s3_scalar_curvature",
+      "status": "PASS",
+      "statement": "The declared unit round S3 has Ricci_ab=2 gamma_ab and scalar curvature R[gamma]=6."
+    },
+    {
+      "id": "P39.CS3ADM.homogeneous.extrinsic_curvature_combination",
+      "status": "PASS",
+      "statement": "For q_ab=a^2 gamma_ab and the declared K_ab convention, K_ab K^ab-K^2=-6 adot^2/(N^2 a^2)."
+    },
+    {
+      "id": "P39.CS3ADM.homogeneous.gravity_momentum",
+      "status": "PASS",
+      "statement": "The declared ADM action gives p_a=-3*pi*a*adot/(2*G*N)."
+    },
+    {
+      "id": "P39.CS3ADM.homogeneous.scalar_momentum",
+      "status": "PASS",
+      "statement": "The massless homogeneous scalar action gives p_phi=2*pi^2*a^3*phi_dot/N."
+    },
+    {
+      "id": "P39.CS3ADM.homogeneous.legendre_constraint",
+      "status": "PASS",
+      "statement": "The homogeneous Legendre transform yields the declared closed-FRW massless-scalar ADM constraint."
+    },
+    {
+      "id": "P39.CS3ADM.homogeneous.scalar_hamiltonian_term",
+      "status": "PASS",
+      "statement": "The massless scalar Hamiltonian contribution is N*p_phi^2/(4*pi^2*a^3)."
+    },
+    {
+      "id": "P39.CS3ADM.homogeneous.repository_raw_C_match",
+      "status": "PASS",
+      "statement": "At G=1/(8*pi), Q=2 log(a), P=a p_a/2, the ADM reduction equals the repository raw C exactly."
+    },
+    {
+      "id": "P39.CS3ADM.homogeneous.Q_P_canonical",
+      "status": "PASS",
+      "statement": "The transformation Q=2 log(a), P=a p_a/2 obeys {Q,P}=1."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n0.m0",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n0.m1",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n0.m2",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n0.m3",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n0.m4",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n1.m0",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n1.m1",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n1.m2",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n1.m3",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n1.m4",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n2.m0",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n2.m1",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n2.m2",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n2.m3",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n2.m4",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n3.m0",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n3.m1",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n3.m2",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n3.m3",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n3.m4",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n4.m0",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n4.m1",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n4.m2",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n4.m3",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.orthonormality.n4.m4",
+      "status": "PASS",
+      "statement": "The declared zonal scalar basis is orthonormal in the unit-S3 volume measure."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.laplacian.degree_0",
+      "status": "PASS",
+      "statement": "The zonal scalar harmonic satisfies Delta_S3 Z_n=-n(n+2) Z_n."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.laplacian.degree_1",
+      "status": "PASS",
+      "statement": "The zonal scalar harmonic satisfies Delta_S3 Z_n=-n(n+2) Z_n."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.laplacian.degree_2",
+      "status": "PASS",
+      "statement": "The zonal scalar harmonic satisfies Delta_S3 Z_n=-n(n+2) Z_n."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.laplacian.degree_3",
+      "status": "PASS",
+      "statement": "The zonal scalar harmonic satisfies Delta_S3 Z_n=-n(n+2) Z_n."
+    },
+    {
+      "id": "P39.CS3ADM.zonal.laplacian.degree_4",
+      "status": "PASS",
+      "statement": "The zonal scalar harmonic satisfies Delta_S3 Z_n=-n(n+2) Z_n."
+    },
+    {
+      "id": "P39.CS3ADM.linear_gauge.generator_E2",
+      "status": "PASS",
+      "statement": "The declared longitudinal generator gives delta_L E_2=L_2."
+    },
+    {
+      "id": "P39.CS3ADM.linear_gauge.generator_E3",
+      "status": "PASS",
+      "statement": "The declared longitudinal generator gives delta_L E_3=L_3."
+    },
+    {
+      "id": "P39.CS3ADM.linear_gauge.generator_momenta_fixed",
+      "status": "PASS",
+      "statement": "For a coordinate-independent gradient parameter, the declared generator leaves Pi_E labels fixed."
+    },
+    {
+      "id": "P39.CS3ADM.linear_gauge.metric_decomposition_match",
+      "status": "PASS",
+      "statement": "In one harmonic coefficient, E_I -> E_I+L_I gives delta h_ab^(S)=2 L_I D_aD_b Q_I in the declared decomposition."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 43,
+    "numerical_checks": 0,
+    "schema_transport": {
+      "phase_field": "P39 is required by the legacy evidence schema only; numbered_phase is null and this is an unnumbered calculation.",
+      "authoritative_check_id_prefix": "CS3ADM."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
+      "sha256": "5d56bd94020ddebfda609ca8da3956cc75be5c74ad9b06cdb9ea3464ee616441",
+      "payload_sha256_without_self": "5178a20a464506595a02d25e97931e60eabfffb038902b977bc4737beaf8cdc1",
+      "verdict": "KEEP_CLOSED_S3_ADM_HOMOGENEOUS_AND_LINEAR_SCALAR_CONVENTION_BASELINE_NOT_HDA",
+      "programme_impact": "FIX_CONVENTIONS_FOR_A_SEPARATE_FULL_SVT_CONSTRAINT_EXPANSION"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_INPUTS.json",
+      "sha256": "c61fe6ebbc82759865636be16189c9692626eb0bd9e616d6f7f63359ec58804f"
+    },
+    "computed_scope": "homogeneous closed-FRW ADM reduction plus zonal scalar harmonic and declared longitudinal spatial-gauge coordinate consistency only",
+    "declared_conventions": {
+      "geometry": "unit S3 with q_ab=a^2 gamma_ab, Vol(S3,gamma)=2*pi^2, R[gamma]=6",
+      "gravity_action": "S_g=(16*pi*G)^(-1) integral dt d^3x N sqrt(q) (K_ab K^ab-K^2+R[q]), with K_ab=(2N)^(-1)(dot(q_ab)-D_a N_b-D_b N_a)",
+      "homogeneous_constraint": "C_ADM=-G*p_a^2/(3*pi*a)-3*pi*a/(4*G)+p_phi^2/(4*pi^2*a^3)",
+      "linear_scalar_gauge_coordinate": "h_ab^(S)=2*psi*gamma_ab+2*D_a D_b E; for xi_a=D_a L, declare delta_L E=L and use D_L^lin=sum_I L_I*Pi_E,I with {E_I,Pi_E,J}=delta_IJ",
+      "repository_raw_constraint": "C=-exp(-3*Q/2)*P^2/(6*pi^2)+exp(-3*Q/2)*p_phi^2/(4*pi^2)-6*pi^2*exp(Q/2)",
+      "repository_variables": "Q=2*log(a), P=a*p_a/2, {a,p_a}={phi,p_phi}=1",
+      "scalar_action": "S_phi=(1/2) integral dt d^3x N sqrt(q) ((n^mu partial_mu phi)^2-q^ab partial_a phi partial_b phi), with V(phi)=0",
+      "units": "G=1/(8*pi), hbar is absent because this is a classical exact audit",
+      "zonal_scalar_basis": "Z_n(chi)=(2*pi^2)^(-1/2) C_n^(1)(cos(chi))=(2*pi^2)^(-1/2) sin((n+1)chi)/sin(chi), n>=0"
+    },
+    "formulae": {
+      "declared_longitudinal_generator": "D_L^lin=L_2 Pi_E,2+L_3 Pi_E,3",
+      "homogeneous_constraint": "-G*p_a^2/(3*pi*a)-3*pi*a/(4*G)+p_phi^2/(4*pi^2*a^3)",
+      "raw_C_match_units": "G=1/(8*pi), Q=2*log(a), P=a*p_a/2",
+      "unit_s3_scalar_curvature": "6",
+      "unit_s3_volume": "2*pi^2",
+      "zonal_eigenvalue": "Delta_S3 Z_n=-n(n+2) Z_n"
+    },
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "absolute_bfv_measure": null,
+      "automatic_next": null,
+      "born_oppenheimer_or_decoherence": null,
+      "classical_hypersurface_deformation_algebra_closure": null,
+      "classical_jacobi_closure": null,
+      "cubic_adm_constraint_expansion": null,
+      "empirical_likelihood": null,
+      "full_linear_adm_hamiltonian_constraint": null,
+      "full_linear_adm_momentum_constraint": null,
+      "full_scalar_vector_tensor_harmonic_completeness": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_bfv_charge": null,
+      "raw_C_operator_domain": null,
+      "relational_observables": null
+    }
+  }
+}

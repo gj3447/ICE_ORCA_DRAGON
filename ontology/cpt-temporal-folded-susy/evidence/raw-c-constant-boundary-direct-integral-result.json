@@ -1,0 +1,163 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T16:12:04Z",
+  "command": "./ice run raw_c_constant_boundary_direct_integral",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_constant_boundary_direct_integral.py",
+    "sha256": "ef3d57f14b14e30d20409414c125281bee69a9e17181cec4331a9181f2e93505",
+    "introduced_in_commit": "9905957951c48c5a68ff3b3ebdbbc9c3b8ca3f55"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {
+      "id": "P39.rawc.direct_integral.reference.wronskian_conservation",
+      "status": "PASS",
+      "statement": "the reference equation has no first derivative, so W(c_p,s_p) is Q-independent"
+    },
+    {
+      "id": "P39.rawc.direct_integral.reference.wronskian_at_Q0",
+      "status": "PASS",
+      "statement": "c_p(-4)=1,c_p'(-4)=0,s_p(-4)=0,s_p'(-4)=1 gives W(c_p,s_p)=1"
+    },
+    {
+      "id": "P39.rawc.direct_integral.parameter.p_even_coefficient",
+      "status": "PASS",
+      "statement": "the reference ODE coefficient depends on p only through p^2"
+    },
+    {
+      "id": "P39.rawc.direct_integral.boundary.symplectic_coordinates",
+      "status": "PASS",
+      "statement": "with Gamma_0=W(u,s), Gamma_1=-W(u,c), the minus-end form is Gamma_0(u)^*Gamma_1(v)-Gamma_1(u)^*Gamma_0(v)"
+    },
+    {
+      "id": "P39.rawc.direct_integral.boundary.gamma1_zero_lagrangian",
+      "status": "PASS",
+      "statement": "the declared Gamma_1=0 reference boundary line annihilates the scalar boundary form"
+    },
+    {
+      "id": "P39.rawc.direct_integral.parity.declared_line_invariant",
+      "status": "PASS",
+      "statement": "ODE uniqueness with even coefficient and identical Q0 data gives c_-p=c_p and s_-p=s_p, hence P preserves Gamma_1=0"
+    }
+  ],
+  "numerical_checks": 2,
+  "numerical": [
+    {
+      "id": "P39.rawc.direct_integral.numeric.reference_wronskian",
+      "status": "PASS",
+      "statement": "the finite-interval normalized reference IVP preserves W(c_p,s_p)=1 at all bounded p,Q samples"
+    },
+    {
+      "id": "P39.rawc.direct_integral.numeric.reference_parity",
+      "status": "PASS",
+      "statement": "the numerical IVP reference pairs for p and -p agree at all bounded samples"
+    }
+  ],
+  "payload": {
+    "exact_checks": 6,
+    "numerical_checks": 2,
+    "schema_transport": {
+      "phase_field": "P39 is required by the legacy evidence schema only; numbered_phase is null and this is an unnumbered calculation.",
+      "authoritative_check_id_prefix": "rawc.direct_integral."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json",
+      "sha256": "52d623524ed8a80f006374231c02267d4b5d9b4df1c636a8e7a7fc74b3672db7",
+      "payload_sha256_without_self": "8b629856847b646c6dbc0469f4da77177d61be520688b96d5923d4452f58806b",
+      "verdict": "CONSTRUCT_DECLARED_RAW_C_P_PRESERVING_DIRECT_INTEGRAL_EXTENSION_RAQ_OPEN",
+      "programme_impact": "KEEP_ONE_DECLARED_RAW_C_DECOMPOSABLE_EXTENSION_WITHOUT_PROMOTING_RAQ_OR_C_H_EQUIVALENCE"
+    },
+    "input_manifest": {
+      "numbered_phase": null,
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_INPUTS.json",
+      "sha256": "68d1c80ad33c03bcf96dc41187a7ac1cd067ded2116eda04e8ca7cce618d654d"
+    },
+    "upstream_results": [
+      {
+        "path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json",
+        "payload_sha256_without_self": "664af96fda1297c7524d86b3ffb79af08373377abc59bf127aeb8232b7e03bef",
+        "sha256": "7daa40749b13920acfffe422a049e288cb3e67fc66de595b10681767ea036004",
+        "verdict": "NARROW_V0_RAW_C_CANDIDATE_HAS_FIBER_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN"
+      }
+    ],
+    "declared_candidate": {
+      "boundary_maps": "Gamma_0,p(u)=lim_(Q->-infinity) W(u,s_p); Gamma_1,p(u)=-lim_(Q->-infinity) W(u,c_p)",
+      "direct_integral_domain": "D(C_Gamma)={psi: psi(p) in D(C_p,Gamma) a.e. and integral ||C_p,Gamma psi(p)||^2 dp < infinity}",
+      "inherited_raw_C_fiber": "C_p=f^(-1)[2*hbar^2*d_Q^2+3*p^2-72*pi^4*exp(2Q)] on C_c^infinity(R_Q)",
+      "inherited_raw_C_space": "H_C=L2(R_Q times R_phi, f(Q) dQ dphi), f(Q)=12*pi^2*exp(3Q/2)",
+      "parity": "(P psi)(p,Q)=psi(-p,Q)",
+      "reference_equation": "2*hbar^2*y''+(3*p^2-72*pi^4*exp(2Q))*y=0",
+      "reference_normalization": "Q_0=-4; c_p(-4)=1,c_p'(-4)=0,s_p(-4)=0,s_p'(-4)=1",
+      "selected_boundary_line": "Gamma_1,p(u)=0 for Lebesgue-almost every p",
+      "selection_status": "declared constant line in the real reference coordinates; not derived from H=fC, parity, RAQ, BFV, or a physical principle"
+    },
+    "theorem_guards": [
+      {
+        "conclusion_and_scope": "D(C_p,Gamma)={u in D(C_p,max):Gamma_1,p(u)=0} is self-adjoint for every fixed p; this does not make the line unique or physical",
+        "hypotheses": "the pinned upstream result supplies the declared weighted fiber, limit-circle minus end, limit-point plus end, and indices (1,1); the reference boundary maps are the corresponding maximal-domain Wronskian limits",
+        "id": "rawc.direct_integral.guard.inherited_fixed_p_extension",
+        "theorem": "one limit-circle/one limit-point Sturm-Liouville extension theorem",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "(p,Q) -> c_p(Q),s_p(Q) is jointly continuous on compact Q intervals and provides a measurable reference field; this statement does not replace endpoint Wronskian limits by literal endpoint values",
+        "hypotheses": "the ODE coefficient is jointly continuous in (p,Q), even in p, and c_p,s_p use p-independent finite-Q initial data at Q0=-4",
+        "id": "rawc.direct_integral.guard.parameter_measurability",
+        "theorem": "continuous parameter dependence for linear initial-value systems",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "the selected boundary graph supplies a measurable self-adjoint fiber field, hence a decomposable extension up to Lebesgue-a.e. equality; this does not classify p-mixing extensions or turn the theorem route into a physical selection principle",
+        "hypotheses": "the jointly measurable real reference pair makes the Wronskian boundary graph Gamma_1,p=0 measurable; with the pinned maximal-fiber field, the measurable-graph extension theorem yields weak measurability of one nonreal resolvent on a countable dense compact-support test set",
+        "id": "rawc.direct_integral.guard.weak_resolvent_measurability",
+        "theorem": "measurable symmetry-preserving self-adjoint extension and decomposable unbounded-operator criterion",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "C_Gamma=integral^oplus C_p,Gamma dp is one declared p-preserving self-adjoint raw-C extension; no spectral/RAQ comparison is implied",
+        "hypotheses": "the prior guard supplies measurable self-adjoint fibers over Lebesgue dp and the domain uses square-integrable graph norm",
+        "id": "rawc.direct_integral.guard.direct_integral_self_adjointness",
+        "theorem": "direct integral of a measurable self-adjoint field",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "parity commutes with the declared decomposable extension, while the p=0 boundary datum creates neither an origin atom nor cross-branch gluing",
+        "hypotheses": "the base is full Lebesgue p and the reference field is even; {0} has zero base measure",
+        "id": "rawc.direct_integral.guard.p_zero_and_parity_scope",
+        "theorem": "Lebesgue direct-integral almost-everywhere equivalence",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      }
+    ],
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "absolute_bfv_measure": null,
+      "automatic_next": null,
+      "canonical_p_zero_origin_sector": null,
+      "cross_branch_gluing_or_quotient": null,
+      "empirical_likelihood": null,
+      "exact_endpoint_state_transform": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "general_p_mixing_extension_classification": null,
+      "global_promotion": "PROHIBITED",
+      "inhomogeneous_constraint_closure": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "quantum_gravity_claim": null,
+      "raw_C_physical_inner_product": null,
+      "raw_C_rigging_map": null,
+      "raw_C_spectral_resolution": null,
+      "relational_observables_or_decoherence": null,
+      "selected_H_raw_C_unitary_intertwiner": null
+    }
+  }
+}
