@@ -1,0 +1,360 @@
+{
+  "automatic_next": null,
+  "calculation_id": "Gate1V0DensitizedRaqPZeroBoundary",
+  "classification": "GATE1_V0_SELECTED_DENSITIZED_H_P_ZERO_NONZERO_EDGE_WITNESS_LOG_DIVERGENCE_VANISHING_WITNESS_FINITE_FINITE_PART_SCALE_AMBIGUITY",
+  "computed_scope": [
+    "one exact change of variables for the selected spectral multiplier",
+    "one positive on-shell cutoff form for p>=epsilon>0",
+    "one nonzero-edge and one linearly vanishing-edge witness",
+    "one finite-part reference-scale comparison",
+    "seven bounded high-precision scalar quadratures with no roots or ODEs"
+  ],
+  "decision_trace": {
+    "matched_predeclared_condition": "the exact shell measure has dp/p, the nonzero-edge witness diverges logarithmically, the vanishing witness is finite, reference-scale finite parts differ, and all independent quadratures pass",
+    "primary_source_boundary": "DLMF fixes the E1 identities and RAQ sources fix the framework; the cutoff witnesses, scale comparison, and scope verdict are repository workbench results",
+    "revision_boundary": "the upstream statement p=0 is singular is sharpened to a positive nonzero-edge log divergence plus an explicit finite-part scale ambiguity; no canonical completion is selected",
+    "scope_meaning": "one p=0 boundary discriminator for the already selected densitized H_hat positive group average"
+  },
+  "environment": {
+    "mpmath": "1.3.0",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "exact_calculation": {
+    "cutoff_shell_derivation": {
+      "coordinates": {
+        "u": "x+y",
+        "v": "x-y",
+        "x": "sqrt(3)*p",
+        "y": "sqrt(2)*hbar*kappa"
+      },
+      "cutoff_domain": "p>=epsilon>0, equivalently u>=2*sqrt(3)*epsilon on v=0",
+      "factorization": "h=x^2-y^2=u*v",
+      "jacobian_dxdy_over_dpdκ": "sqrt(6)*hbar",
+      "jacobian_dxdy_over_dudv_absolute": "1/2",
+      "origin_delta_identity_used": false,
+      "positive_shell_measure": "sqrt(6)/(12*hbar*p)*dp"
+    },
+    "endpoint_witnesses": {
+      "linearly_vanishing_edge": {
+        "admitted_by_weighted_space": true,
+        "amplitude": "p*exp(-p)",
+        "norm": "sqrt(6)/(48*hbar)"
+      },
+      "local_order_rule": "A=O(p^alpha) gives |A|^2 dp/p=O(p^(2*alpha-1))dp; alpha>0 is locally integrable",
+      "nonzero_edge": {
+        "admitted_by_naive_closed_edge_domain": false,
+        "amplitude": "exp(-p)",
+        "cutoff_norm": "sqrt(6)*expint(1, 2*epsilon)/(12*hbar)",
+        "endpoint_limit": "oo",
+        "finite_constant_after_log_subtraction": "-sqrt(6)*log(2)/(12*hbar) - sqrt(6)*EulerGamma/(12*hbar)",
+        "logarithmic_coefficient": "sqrt(6)/(12*hbar)"
+      }
+    },
+    "finite_part_diagnostic": {
+      "canonical_p_zero_edge_completion": null,
+      "canonical_reference_scale_selected": null,
+      "definition": "FP_pstar=lim_{epsilon->0+}[eta_epsilon(exp(-p),exp(-p))-log(p_star/epsilon)/(2*sqrt(6)*hbar)]",
+      "two_scale_difference": "log((q_star/p_star)**(sqrt(6)/(12*hbar)))",
+      "value": "sqrt(6)*(-log(2*p_star) - EulerGamma)/(12*hbar)"
+    },
+    "flags": {
+      "e1_cutoff_identity": true,
+      "e1_finite_constant": true,
+      "endpoint_domain_separation": true,
+      "finite_part_scale_ambiguity": true,
+      "nonzero_edge_log_divergence": true,
+      "positive_ray_weight": true,
+      "uv_factorization": true,
+      "vanishing_edge_finite": true,
+      "xy_factorization": true,
+      "xy_jacobian": true
+    },
+    "selected_spectral_model": {
+      "multiplier": "-2*hbar**2*kappa**2 + 3*p**2",
+      "positive_zero_ray": "kappa_0(p)=sqrt(3/2)*p/hbar",
+      "quantum_constraint_rescaling_equivalence": null,
+      "raw_C_operator_and_domain": null,
+      "upstream_interior_test_space": "C_c^infinity((0,infinity)_kappa times (0,infinity)_p)"
+    }
+  },
+  "exact_checks": [
+    {
+      "id": "G1.pzero.shell.xy_factorization",
+      "passed": true,
+      "statement": "x=sqrt(3)*p and y=sqrt(2)*hbar*kappa factor the selected multiplier as h=x^2-y^2"
+    },
+    {
+      "id": "G1.pzero.shell.xy_jacobian",
+      "passed": true,
+      "statement": "the positive-quadrant measure transforms as dx*dy=sqrt(6)*hbar*dp*dkappa"
+    },
+    {
+      "id": "G1.pzero.shell.uv_factorization_and_jacobian",
+      "passed": true,
+      "statement": "u=x+y and v=x-y give h=u*v and dx*dy=(1/2)*du*dv away from the singular origin"
+    },
+    {
+      "id": "G1.pzero.shell.cutoff_positive_ray_weight",
+      "passed": true,
+      "statement": "on v=0 with p>=epsilon>0 the coarea measure is dp/(2*sqrt(6)*hbar*p); no delta(u*v) formula is used at u=0"
+    },
+    {
+      "id": "G1.pzero.nonzero_witness.e1_cutoff_identity",
+      "passed": true,
+      "statement": "the cutoff norm of exp(-p) is E1(2*epsilon)/(2*sqrt(6)*hbar), with derivative minus exp(-2*epsilon)/(2*sqrt(6)*hbar*epsilon)"
+    },
+    {
+      "id": "G1.pzero.nonzero_witness.logarithmic_divergence",
+      "passed": true,
+      "statement": "the norm of an amplitude nonzero at p=0 diverges as log(1/epsilon)/(2*sqrt(6)*hbar)"
+    },
+    {
+      "id": "G1.pzero.nonzero_witness.e1_finite_constant",
+      "passed": true,
+      "statement": "after subtracting the universal log(1/epsilon), the E1 witness leaves (-EulerGamma-log(2))/(2*sqrt(6)*hbar)"
+    },
+    {
+      "id": "G1.pzero.vanishing_witness.finite_norm",
+      "passed": true,
+      "statement": "the amplitude p*exp(-p) vanishes linearly and has finite positive norm 1/(8*sqrt(6)*hbar)"
+    },
+    {
+      "id": "G1.pzero.finite_part.reference_scale_shift",
+      "passed": true,
+      "statement": "subtracting log(p_star/epsilon) leaves finite parts whose difference is log(q_star/p_star)/(2*sqrt(6)*hbar)"
+    },
+    {
+      "id": "G1.pzero.domain.nonzero_and_vanishing_witness_separate",
+      "passed": true,
+      "statement": "the same positive interior measure excludes the nonzero-edge witness but admits the linearly vanishing witness"
+    }
+  ],
+  "frozen_input_contract": {
+    "decision_table": [
+      {
+        "condition": "the exact shell measure has dp/p, the nonzero-edge witness diverges logarithmically, the vanishing witness is finite, reference-scale finite parts differ, and all independent quadratures pass",
+        "programme_impact": "CLOSE_NAIVE_CUTOFF_ONLY_P_ZERO_COMPLETION_KEEP_CANONICAL_EDGE_COMPLETION_OPEN",
+        "verdict": "NARROW_V0_P_ZERO_STANDARD_GROUP_AVERAGE_REQUIRES_EXTRA_EDGE_DATA"
+      },
+      {
+        "condition": "the nonzero-edge witness has a finite cutoff-independent positive norm with no extra choice",
+        "programme_impact": "CLOSE_SELECTED_H_P_ZERO_EDGE_WITHIN_THE_DECLARED_TEST_DOMAIN_ONLY",
+        "verdict": "KEEP_V0_NAIVE_P_ZERO_POSITIVE_RAQ_EXTENSION"
+      },
+      {
+        "condition": "any Jacobian, shell weight, E1, logarithmic coefficient, finite witness, scale-shift, or independent quadrature check fails",
+        "programme_impact": "RETAIN_THE_UPSTREAM_P_GREATER_THAN_ZERO_RESULT_WITHOUT_A_NEW_EDGE_CLAIM",
+        "verdict": "KILL_V0_P_ZERO_BOUNDARY_DISCRIMINATOR"
+      }
+    ],
+    "epistemic_scope": "ONE_SELECTED_DENSITIZED_H_SPECTRAL_MODEL_AND_ITS_STANDARD_POSITIVE_GROUP_AVERAGE_ONLY",
+    "kind": "EXACT_AND_BOUNDED_NUMERICAL_DENSITIZED_RAQ_P_ZERO_POSITIVE_MEASURE_BOUNDARY_CONTROL",
+    "primary_sources": [
+      {
+        "not_used_for": "selecting a cosmological test domain, endpoint counterterm, sector, or physical interpretation",
+        "source": "NIST Digital Library of Mathematical Functions, 6.2.1 and 6.2.4",
+        "url": "https://dlmf.nist.gov/6.2",
+        "used_for": "the defining integral E1(z)=integral_z^infinity exp(-t)dt/t and the identity E1(z)=Ein(z)-log(z)-EulerGamma"
+      },
+      {
+        "not_used_for": "deriving the repository-specific p=0 cutoff integral or selecting its completion",
+        "source": "Marolf, Refined Algebraic Quantization: Systems with a single constraint, arXiv:gr-qc/9508015",
+        "url": "https://arxiv.org/abs/gr-qc/9508015",
+        "used_for": "the single-constraint refined-algebraic-quantization framework and its dependence on auxiliary choices"
+      },
+      {
+        "not_used_for": "turning this local minisuperspace boundary result into quantum gravity",
+        "source": "Giulini, Group Averaging and Refined Algebraic Quantization, arXiv:gr-qc/0003040",
+        "url": "https://arxiv.org/abs/gr-qc/0003040",
+        "used_for": "the general group-averaging framework and its stated limitations and uniqueness questions"
+      },
+      {
+        "not_used_for": "claiming that their momentum-constraint examples solve raw C or the p=0 edge in this model",
+        "source": "Louko and Martinez-Pascual, Constraint rescaling in refined algebraic quantisation: momentum constraint, arXiv:1107.1092",
+        "url": "https://arxiv.org/abs/1107.1092",
+        "used_for": "the boundary that classically equivalent constraint rescalings may yield quantum equivalence, failure, or self-adjoint-extension ambiguity depending on extra data"
+      }
+    ],
+    "question": "For the already selected densitized V=0 constraint H_hat with spectral multiplier h(kappa,p)=3*p^2-2*hbar^2*kappa^2, does the standard positive group-average measure on the p>0 zero ray extend across p=0 on a test domain containing amplitudes nonzero at the origin, or does a cutoff expose a logarithmic divergence and subtraction-scale ambiguity that require extra edge data?"
+  },
+  "gate1_decision": "OPEN_PARTIAL_PROGRESS",
+  "global_promotion": "PROHIBITED",
+  "input": {
+    "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_INPUTS.json",
+    "sha256": "29eb383b81af623e20daf424edfecab24ceaa92fea348d321d6d6ead9bb84149"
+  },
+  "not_computed": [
+    "a quantum operator, ordering, self-adjoint domain, rigging map, or physical inner product for undensitized raw C",
+    "unitary equivalence between raw C, densitized H, or the declared Mc representation",
+    "a canonical p=0 endpoint counterterm, renormalization condition, origin-supported sector, or superselection rule",
+    "the p<0 component, both-branch completion, global chart, or self-adjoint relational Phi observable",
+    "a lapse contour or modulus, zero-lapse contact terms, full BFV trajectory measure, determinants, anomalies, or BRST cohomology",
+    "inhomogeneous metric modes, the local GR constraint algebra, gravitons, renormalization, observables, empirical predictions, quantum gravity, physics, or TOE"
+  ],
+  "numbered_phase": null,
+  "numerical_calculation": {
+    "cutoff_rows": [
+      {
+        "direct_norm": "0.684776858771002163810437018671967544950947308684229836672315",
+        "e1_norm": "0.684776858771002163810437018671967544950947308684229836672315",
+        "epsilon": "1e-2"
+      },
+      {
+        "direct_norm": "1.62078194854845551455940681134606981144344045854602951029907",
+        "e1_norm": "1.62078194854845551455940681134606981144344045854602951029907",
+        "epsilon": "1e-4"
+      },
+      {
+        "direct_norm": "2.56076796187104039930354920346091611241233995807700590721191",
+        "e1_norm": "2.56076796187104039930354920346091611241233995807700590721191",
+        "epsilon": "1e-6"
+      }
+    ],
+    "exact_log_coefficient": "0.204124145231931508183107006225490949330495623388055844036058",
+    "hbar": "1",
+    "ode_calls": 0,
+    "precision_decimal_digits": 80,
+    "quadrature_calls": 7,
+    "regular_witness_norm": "0.0510310363079828770457767515563727373326239058470139610090144",
+    "roots": 0,
+    "six_decade_log_slope": "0.204124115681979200689546976775667525146563856775831318664635"
+  },
+  "numerical_checks": [
+    {
+      "absolute_error": "0.0",
+      "absolute_tolerance": "1.00000000000000000000000000000000000000000000000000000000000e-65",
+      "id": "G1.pzero.numeric.e1_direct_quadrature_1e-2",
+      "observed": "0.684776858771002163810437018671967544950947308684229836672315",
+      "passed": true,
+      "reference": "0.684776858771002163810437018671967544950947308684229836672315",
+      "statement": "direct positive quadrature at epsilon=1e-2 agrees with E1(2*epsilon)/(2*sqrt(6))"
+    },
+    {
+      "absolute_error": "2.10843958864610464486971481025400380154199227647370151001555e-81",
+      "absolute_tolerance": "1.00000000000000000000000000000000000000000000000000000000000e-65",
+      "id": "G1.pzero.numeric.e1_direct_quadrature_1e-4",
+      "observed": "1.62078194854845551455940681134606981144344045854602951029907",
+      "passed": true,
+      "reference": "1.62078194854845551455940681134606981144344045854602951029907",
+      "statement": "direct positive quadrature at epsilon=1e-4 agrees with E1(2*epsilon)/(2*sqrt(6))"
+    },
+    {
+      "absolute_error": "7.59038251912597672153097331691441368555117219530532543605599e-80",
+      "absolute_tolerance": "1.00000000000000000000000000000000000000000000000000000000000e-65",
+      "id": "G1.pzero.numeric.e1_direct_quadrature_1e-6",
+      "observed": "2.56076796187104039930354920346091611241233995807700590721191",
+      "passed": true,
+      "reference": "2.56076796187104039930354920346091611241233995807700590721191",
+      "statement": "direct positive quadrature at epsilon=1e-6 agrees with E1(2*epsilon)/(2*sqrt(6))"
+    },
+    {
+      "absolute_error": "0.0",
+      "absolute_tolerance": "1.00000000000000000000000000000000000000000000000000000000000e-65",
+      "id": "G1.pzero.numeric.vanishing_witness_direct_quadrature",
+      "observed": "0.0510310363079828770457767515563727373326239058470139610090144",
+      "passed": true,
+      "reference": "0.0510310363079828770457767515563727373326239058470139610090144",
+      "statement": "direct quadrature of p*exp(-2p)/(2*sqrt(6)) agrees with 1/(8*sqrt(6))"
+    },
+    {
+      "absolute_error": "0.0000000295499523074935600294498234241839317666122245253714228710296",
+      "absolute_tolerance": "0.000000100000000000000000000000000000000000000000000000000000000000",
+      "id": "G1.pzero.numeric.logarithmic_increment_coefficient",
+      "observed": "0.204124115681979200689546976775667525146563856775831318664635",
+      "passed": true,
+      "reference": "0.204124145231931508183107006225490949330495623388055844036058",
+      "statement": "the six-decade E1 increment approaches the exact log coefficient 1/(2*sqrt(6))"
+    }
+  ],
+  "programme_impact": "CLOSE_NAIVE_CUTOFF_ONLY_P_ZERO_COMPLETION_KEEP_CANONICAL_EDGE_COMPLETION_OPEN",
+  "promoted_outputs": {
+    "TOE_claim": null,
+    "automatic_next": null,
+    "brst_cohomology": null,
+    "canonical_p_zero_edge_completion": null,
+    "declared_Mc_identity_equivalence": null,
+    "exact_endpoint_state_transform": null,
+    "full_bfv_trajectory_measure": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "gauge_independent_physical_inner_product": null,
+    "global_n_sigma": null,
+    "global_promotion": "PROHIBITED",
+    "lapse_modulus_or_contour_selection": null,
+    "p_zero_endpoint_counterterm_or_sector": null,
+    "physical_original_cycle": null,
+    "physics_claim": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "quantum_gravity_claim": null,
+    "raw_C_operator_and_domain": null
+  },
+  "resource_accounting": {
+    "adjacent_result_files": 1,
+    "artifact_cap_bytes": 1000000,
+    "automatic_descendants": 0,
+    "ode_calls": 0,
+    "quadratures": 7,
+    "root_calls": 0
+  },
+  "result_payload_sha256_without_self": "56dd0ceace9aafc3693c672ad0452b428ec500b87fc38758da44de18aae4a6ad",
+  "run_status": "VALID_RUN",
+  "runner": {
+    "path": "cpt_temporal_folded_susy/gate1_v0_densitized_raq_p_zero_boundary.py",
+    "sha256": "507e88c353b1cb697ca59263c674a1f297787e70790478d440a7a28cc2b6bf84"
+  },
+  "schema_version": "ice.gate1.v0-densitized-raq-p-zero-boundary.result.v1",
+  "theorem_guards": [
+    {
+      "conclusion_and_scope": "the dp/p shell measure is valid for every fixed cutoff; the calculation never asserts delta(u*v)=delta(v)/u at u=0",
+      "hypotheses": "epsilon>0 keeps p and kappa away from the only critical zero at the origin, and the positive zero ray has nonvanishing transverse derivative there",
+      "id": "G1.pzero.guard.cutoff_coarea_only",
+      "theorem": "regular-value delta/coarea identity",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the nonzero-edge witness has the recorded universal logarithmic divergence and finite constant; DLMF does not select an endpoint subtraction",
+      "hypotheses": "epsilon>0 and E1(2*epsilon)=integral_{2*epsilon}^infinity exp(-t)dt/t=Ein(2*epsilon)-log(2*epsilon)-EulerGamma",
+      "id": "G1.pzero.guard.e1_small_argument",
+      "theorem": "DLMF 6.2.1 and 6.2.4 exponential-integral identities",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the standard positive interior measure cannot assign A_0 a finite norm at p=0; an origin counterterm cannot cancel positive accumulated mass without changing positivity or the domain",
+      "hypotheses": "the proposed enlarged test domain contains A_0=exp(-p), whose diagonal cutoff form is monotone positive and diverges as epsilon tends to zero",
+      "id": "G1.pzero.guard.positive_form_local_finiteness",
+      "theorem": "finite-norm requirement for a positive rigging form",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "alpha>0 is locally integrable while alpha=0 has the logarithmic boundary witnessed here; this states a domain condition, not a canonical domain selection",
+      "hypotheses": "if an on-shell amplitude is O(p^alpha), its diagonal density is O(p^(2*alpha-1))dp near zero",
+      "id": "G1.pzero.guard.vanishing_order_threshold",
+      "theorem": "elementary endpoint integrability criterion",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "different reference momenta shift the finite value, so the cutoff algebra alone does not select a canonical p=0 rigging map, counterterm, or sector",
+      "hypotheses": "the subtraction log(p_star/epsilon) uses an externally chosen positive reference momentum p_star",
+      "id": "G1.pzero.guard.finite_part_is_extra_choice",
+      "theorem": "reference-scale dependence of logarithmic finite parts",
+      "verified": true
+    },
+    {
+      "conclusion_and_scope": "the result narrows one quantum-cosmology endpoint obstruction only; raw-C equivalence, full BFV, quantum gravity, physics, and TOE remain null",
+      "hypotheses": "the calculation holds the selected densitized H_hat fixed and includes no raw-C operator, lapse contour, inhomogeneous metric modes, observables, or empirical map",
+      "id": "G1.pzero.guard.constraint_rescaling_and_physics_scope",
+      "theorem": "constraint-rescaling and model-scope separation",
+      "verified": true
+    }
+  ],
+  "upstream_provenance": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_DENSITIZED_LIOUVILLE_RAQ_RESULT.json",
+      "payload_sha256_without_self": "32c4cf7ae925d3fbbbba21d5e0e4466abdd80043e39db8312941c9548b346869",
+      "sha256": "2f54a47f775002d1a9c24749c729bc02ebf86dc5fa959b93e2518d925b9db806",
+      "verdict": "KEEP_V0_ONE_DENSITIZED_LIOUVILLE_KL_RAQ_MODEL"
+    }
+  ],
+  "verdict": "NARROW_V0_P_ZERO_STANDARD_GROUP_AVERAGE_REQUIRES_EXTRA_EDGE_DATA"
+}
