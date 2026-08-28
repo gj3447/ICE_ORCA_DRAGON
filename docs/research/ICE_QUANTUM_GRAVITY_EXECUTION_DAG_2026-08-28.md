@@ -38,6 +38,26 @@
 
 역사적 실행체의 이름은 provenance 참조일 뿐 새 계산 이름의 템플릿이 아니다.
 
+## 2026-08-28 실행 갱신
+
+이번 작업에서 아래의 번호 없는 계산을 clean committed source로 실행했다. 표의 `완료`는
+각 행의 좁은 계산 범위만 뜻한다.
+
+| 연결부 | 실제로 계산된 것 | 관측 결과 | 남은 필수 단계 |
+|---|---|---|---|
+| 1 raw-\(C\) domain | `raw_c_constant_boundary_direct_integral` | 선언한 \(\Gamma_{1,p}=0\) line이 하나의 measurable, \(p\)-보존 decomposable 자기수반 확장을 이룸; exact 6/6, numerical 2/2 | 일반 \(p\)-mixing 분류와 물리적 boundary 선택 |
+| 1 raw-\(C\) zero shell | `raw_c_zero_shell_characteristic_census` | \(\kappa\in[0,8]\) sign-changing root 5개; \(F(0)<0\); exact 4/4, numerical 4/4 | \(\lambda_j(p)\) branch와 transversality, spectral normalization, test space, rigging form |
+| 2 closed \(S^3\) convention | `closed_s3_adm_linear_scalar_convention_audit` | homogeneous ADM/raw-\(C\) convention과 제한된 linear-zonal identities; exact 43/43 | complete SVT 및 실제 linear constraint brackets |
+| 2 harmonic derivative ledger | `closed_s3_scalar_derived_harmonic_ledger` | scalar-derived norm, \(n=0,1\) degeneracy와 derivative identities; exact 26/26 | transverse bases와 full Gaunt/Clebsch--Gordan data |
+| 2 nonlinear cutoff control | `closed_s3_zonal_scalar_convolution_cutoff_ledger` | cubic pairing projection 차이는 정확히 0이지만, 세 packet의 quadratic leakage와 iterated-convolution residual은 nonzero; exact 284/284 | full cubic ADM constraint, lapse/shift brackets, HDA/Jacobi scaling |
+| 4 finite BFV amplitude control | `bfv_parametrized_particle_gluing_calibration` | affine toy에서 full-real lapse distribution, endpoint kernel, ordered Pfaffian, \(+i0\), short-time limit과 two-slab glue를 함께 고정; exact 8/8, numerical 1/1 | gravity contour, Gribov census, continuum determinant line과 absolute/glued amplitude |
+| 5 two clocks | `v0_two_clock_relational_observable_comparison` | \(V=0\)의 \(\phi\)-clock과 \(P\)-clock은 공통 classical chart에서 역관계; \(Q\)-clock은 \(P=0\)에서 FP zero; exact 17/17 | quantum clock map, physical product, \(V\ne0\) turning-point chart |
+| 6 \(V\ne0\) background | `closed_starobinsky_background_export_audit` | 선언한 \(M=1.3\times10^{-5}\), \(N_*=50,55,60\) leading slow-roll 표; exact 6/6, residual 9/9 | closed-mode evolution, initial state/reheating, BO/decoherence, spectrum adapter와 likelihood |
+
+따라서 3의 중력 BFV charge는 아직 실행 가능한 입력을 갖지 못한다. 4의 finite toy 성공은 3의
+structure functions를 대신하지 않으며, 6의 background 표도 primordial spectrum을 대신하지 않는다.
+각 후속 runner는 바로 앞 결과가 아니라 위 표의 “남은 필수 단계”를 직접 겨냥해야 한다.
+
 ## 의존성 지도
 
 ```text
