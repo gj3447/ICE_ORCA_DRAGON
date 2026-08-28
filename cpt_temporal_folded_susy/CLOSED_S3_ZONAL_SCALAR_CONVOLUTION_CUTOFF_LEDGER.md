@@ -64,3 +64,27 @@ So a retained-versus-full cubic *pairing* difference is exactly zero and is
 recorded as such.  The actual hard-cutoff information is the discarded
 quadratic vector \((1-P_N)\phi^2\), its norm, and the residual produced when a
 projection is inserted between successive nonlinear convolutions.
+
+## Observed execution
+
+The clean committed runner was executed through
+
+```text
+./ice run closed_s3_zonal_scalar_convolution_cutoff_ledger
+```
+
+It returned
+`KEEP_CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_AND_HARD_CUTOFF_REMAINDER_LEDGER_NOT_ADM_OR_HDA`,
+with all 284 exact checks passing.  The three declared packets gave:
+
+| packet | \(\|(1-P_N)\phi^2\|^2\) | iterated-convolution residual norm squared |
+|---|---:|---:|
+| \(Q_2\), \(N=2\) | \(1/(2\pi^2)\) | \(1/(4\pi^4)\) |
+| \(Q_1+Q_2\), \(N=2\) | \(5/(2\pi^2)\) | \(13/(4\pi^4)\) |
+| \(Q_1-2Q_3\), \(N=3\) | \(8/\pi^2\) | \(16/\pi^4\) |
+
+For every packet the retained/full cubic pairing equality remained exactly
+true, while the displayed nonlinear vector remainders were nonzero.  The
+result artifact SHA-256 is
+`5b6713ff2ad47dcc9effd42e01c71c1ae408320634b1f81098302b14dc0cebd4`.
+No ADM constraint, HDA/Jacobi bracket, or BFV field was promoted.
