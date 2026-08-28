@@ -125,6 +125,14 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "closed_starobinsky_background_export_audit",
       "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json"
+    ],
+    [
+      "raw_c_zero_shell_characteristic_census",
+      "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json"
+    ],
+    [
+      "closed_s3_zonal_scalar_convolution_cutoff_ledger",
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json"
     ]
   ])
 

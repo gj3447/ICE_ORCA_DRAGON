@@ -382,6 +382,24 @@ export const reproCases = [
       "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "raw_c_zero_shell_characteristic_census",
+    script:
+      "cpt_temporal_folded_susy/raw_c_zero_shell_characteristic_census.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "closed_s3_zonal_scalar_convolution_cutoff_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_zonal_scalar_convolution_cutoff_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 
