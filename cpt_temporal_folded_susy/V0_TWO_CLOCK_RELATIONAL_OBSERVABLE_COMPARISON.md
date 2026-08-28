@@ -1,5 +1,18 @@
 # Classical two-clock comparison on the closed-FRW \(V=0\) component
 
+## Observed result
+
+After the scoped harness repair, the committed bounded run returned
+
+```text
+KEEP_V0_CLASSICAL_SCALAR_AND_TRACE_MOMENTUM_CLOCKS_AGREE_ON_OVERLAP_Q_CLOCK_TURNS
+```
+
+All 17 exact checks passed, with 5 separately recorded theorem/scope guards.
+Thus \(\phi\) and \(P\) give mutually inverse classical clock charts on their
+overlap, while \(Q\) has an FP zero at \(P=0\) and must be split into two
+branches.  No quantum clock equivalence follows.
+
 ## Scope
 
 This bounded, unnumbered calculation compares two classical clocks on the
@@ -90,13 +103,15 @@ controlled quantum reduction map.  A \(V\ne0\) bounce is also separate: the
 scalar and geometric clock factors must be checked anew and may vanish at its
 time-symmetric point.
 
-## Intended execution
-
-After the source is reviewed and committed, the only execution command is
+## Execution
 
 ```text
 ./ice run v0_two_clock_relational_observable_comparison
+VALID_RUN; 17/17 exact checks; 5 theorem guards
 ```
+
+The successful result artifact has outer SHA-256
+`f343f789f59299d1defac0a8d6ea8450236b2273459d00ee24453f679b68d58e`.
 
 ## First execution observation
 
