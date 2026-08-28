@@ -1,0 +1,116 @@
+{
+  "schema_version": "ice.raw-c-constant-boundary-direct-integral.input.v1",
+  "calculation_id": "RawCConstantBoundaryDirectIntegral",
+  "numbered_phase": null,
+  "question": "After the fixed-p raw-C classification, does one explicitly declared p-preserving constant reference-boundary line define a measurable direct-integral self-adjoint extension of that declared weighted raw-C operator?",
+  "kind": "EXACT_SYMBOLIC_AND_BOUNDED_NUMERICAL_DIRECT_INTEGRAL_DOMAIN_AUDIT",
+  "epistemic_scope": "ONE_DECLARED_LEFT_WEIGHTED_RAW_C_ORDERING_ONE_DECLARED_REFERENCE_BOUNDARY_LINE_AND_ITS_P_PRESERVING_DECOMPOSABLE_EXTENSION",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json",
+      "sha256": "7daa40749b13920acfffe422a049e288cb3e67fc66de595b10681767ea036004",
+      "payload_sha256_without_self": "664af96fda1297c7524d86b3ffb79af08373377abc59bf127aeb8232b7e03bef",
+      "required_verdict": "NARROW_V0_RAW_C_CANDIDATE_HAS_FIBER_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN",
+      "role": "fixes one declared weighted raw-C differential expression, its fixed-p limit-circle/limit-point classification, and the fact that no extension is selected by H=fC"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Nussbaum, Reduction Theory for Unbounded Closed Operators in Hilbert Space, Duke Math. J. 31 (1964) 33-44",
+      "url": "https://doi.org/10.1215/S0012-7094-64-03103-5",
+      "used_for": "the decomposable-operator and measurable-resolvent criterion used as a scoped direct-integral theorem guard",
+      "not_used_for": "selecting a physically preferred boundary line, proving RAQ, or comparing raw C with H"
+    },
+    {
+      "source": "Lennon, Direct Integrals, Math. Scand. 32 (1973) 123-132",
+      "url": "https://www.mscand.dk/article/download/11449/9466/30402",
+      "used_for": "measurable fields of closed/self-adjoint fiber operators and direct-integral construction",
+      "not_used_for": "classifying p-mixing extensions or proving a rigging-map equivalence"
+    },
+    {
+      "source": "Gitman, Smirnov, Tyutin and Voronov, Symmetry-preserving self-adjoint extensions, arXiv:1012.2588",
+      "url": "https://arxiv.org/abs/1012.2588",
+      "used_for": "the route from a measurable symmetry-reduced boundary field to decomposable symmetry-preserving self-adjoint extensions",
+      "not_used_for": "making the declared boundary line physically unique, proving raw-C RAQ, or establishing C/H equivalence"
+    },
+    {
+      "source": "Weyl, Ueber gewoehnliche Differentialgleichungen mit Singularitaeten und die zugehoerigen Entwicklungen willkuerlicher Funktionen, Math. Ann. 68 (1910) 220-269",
+      "url": "https://eudml.org/doc/158437",
+      "used_for": "the pre-existing limit-circle boundary-map setting for the scalar fibers",
+      "not_used_for": "the measurability proof or any physical selection rule"
+    }
+  ],
+  "declared_candidate": {
+    "inherited_raw_C_space": "H_C=L2(R_Q times R_phi, f(Q) dQ dphi), f(Q)=12*pi^2*exp(3Q/2)",
+    "inherited_raw_C_fiber": "C_p=f^(-1)[2*hbar^2*d_Q^2+3*p^2-72*pi^4*exp(2Q)] on C_c^infinity(R_Q)",
+    "reference_equation": "2*hbar^2*y''+(3*p^2-72*pi^4*exp(2Q))*y=0",
+    "reference_normalization": "Q_0=-4; c_p(-4)=1,c_p'(-4)=0,s_p(-4)=0,s_p'(-4)=1",
+    "boundary_maps": "Gamma_0,p(u)=lim_(Q->-infinity) W(u,s_p); Gamma_1,p(u)=-lim_(Q->-infinity) W(u,c_p)",
+    "selected_boundary_line": "Gamma_1,p(u)=0 for Lebesgue-almost every p",
+    "selection_status": "declared constant line in the real reference coordinates; not derived from H=fC, parity, RAQ, BFV, or a physical principle",
+    "direct_integral_domain": "D(C_Gamma)={psi: psi(p) in D(C_p,Gamma) a.e. and integral ||C_p,Gamma psi(p)||^2 dp < infinity}",
+    "parity": "(P psi)(p,Q)=psi(-p,Q)"
+  },
+  "assumptions": [
+    "the prior raw-C fiber endpoint classification and deficiency indices remain pinned by the upstream result",
+    "the real reference initial-value solutions and the limit-circle Wronskian boundary maps exist on the maximal fiber domains under the stated singular Sturm-Liouville hypotheses",
+    "joint continuity of finite-Q initial-value solutions in p^2 is used only to establish a measurable reference field, not to identify literal endpoint values",
+    "the measurable-resolvent/direct-integral theorem guard requires the stated weak measurability of one nonreal fiber resolvent; its hypotheses and scope must remain explicit",
+    "the singleton p=0 is Lebesgue-null and this calculation neither adds an origin atom nor glues p-positive and p-negative sectors",
+    "the selected constant reference-boundary line is additional quantization data and is not a unique or physical choice"
+  ],
+  "tasks": [
+    "verify the exact reference Wronskian normalization and the boundary symplectic form",
+    "verify that the selected Gamma_1=0 line is Lagrangian and gives a fixed-p self-adjoint extension under the inherited Weyl/von Neumann hypotheses",
+    "verify even p-dependence of the coefficient and normalized reference pair, hence parity invariance of the selected field",
+    "record parameter continuity on compact Q intervals and a scoped weak-resolvent measurability guard",
+    "construct only the declared p-preserving direct-integral domain under the measurable-field theorem guard",
+    "run bounded finite-interval numerical diagnostics of Wronskian conservation and p-parity for the normalized reference initial-value problem",
+    "leave raw-C spectral resolution, group averaging, rigging map, physical inner product, C/H equivalence, p-mixing extensions, endpoint transforms, BFV, physics and TOE outputs null"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 12,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "raw_C_spectral_resolution": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "general_p_mixing_extension_classification": null,
+    "canonical_p_zero_origin_sector": null,
+    "cross_branch_gluing_or_quotient": null,
+    "exact_endpoint_state_transform": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all executable reference-pair, Wronskian, parity and bounded diagnostic checks pass and every direct-integral theorem hypothesis is explicitly guarded",
+      "verdict": "CONSTRUCT_DECLARED_RAW_C_P_PRESERVING_DIRECT_INTEGRAL_EXTENSION_RAQ_OPEN",
+      "programme_impact": "KEEP_ONE_DECLARED_RAW_C_DECOMPOSABLE_EXTENSION_WITHOUT_PROMOTING_RAQ_OR_C_H_EQUIVALENCE"
+    },
+    {
+      "condition": "an executable algebraic, boundary-form, parity, or bounded diagnostic check fails",
+      "verdict": "KILL_DECLARED_RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_CANDIDATE",
+      "programme_impact": "RETAIN_FIXED_P_EXTENSION_DEBT_AND_REOPEN_THIS_DECLARED_BOUNDARY_LINE"
+    }
+  ]
+}
