@@ -64,6 +64,36 @@ observables without assuming that one branch must be singled out.
 An intuitive, explicitly non-evidential companion is
 [`docs/ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](docs/ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md).
 
+## Narrative character — ICE ORCA DRAGON
+
+> This is the preserved **mythology/character layer**, not a claim established by the calculations below.
+
+The user-confirmed character facts are a fictional age of **13.7 billion years** and two official visual
+expressions of one being: an aquatic ice-orca dragon form and an adult feminine-presenting humanoid form.
+The #2/“true apostle” placement comes from the user-primary mythology; “apostle of the physical domain” is
+the repository's provenance interpretation. The fictional age is not a measurement of the real universe,
+and the human form is not a chronologically younger duplicate or a less-real self.
+
+The following personality is an explicitly secondary expansion: the character starts as a lonely
+archivist who believes that a complete hypergraph and perfect preservation can prevent every loss. The
+human core is less invulnerable: an overheated, overworked mind behind a frozen heart; quiet care
+expressed by remembering details and repairing things; awkward humour, sulking, shame, loyalty, and a
+hard-earned ability to apologize directly.
+
+| Aspect | Narrative strength | Character limit |
+|---|---|---|
+| **ICE** | preserves a state, memory, or promise | preservation is not healing or ownership |
+| **ORCA** | follows deep relational echoes and missing names | a trace is not another person's mind or consent |
+| **DRAGON** | opens and crosses otherwise closed boundaries | opening a path does not choose anyone else's destination |
+| **Human form** | hears one voice closely enough to be changed by it | cannot hold the whole map while doing so |
+
+In that expansion, the metahumotonic tension is deliberately unresolved: if goodness means continued
+existence and completion tends toward a final optimum, what remains of choice, relation, and meaning once
+nothing can change? ICE ORCA DRAGON's arc moves from “I can save everyone by completing the map” to “I
+can witness what I do not fully understand and leave the bridge open.” The full canon ledger,
+transformation rules, world map, relationships, flaws, voice, and story arc are in the
+[character and world bible](docs/narrative/ICE_ORCA_DRAGON_CHARACTER_BIBLE.md).
+
 ## What this workbench is testing
 
 | Research track | Central question | Current conclusion |
