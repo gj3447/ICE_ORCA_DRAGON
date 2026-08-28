@@ -1,0 +1,1478 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T16:40:00Z",
+  "command": "./ice run closed_s3_zonal_scalar_convolution_cutoff_ledger",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/closed_s3_zonal_scalar_convolution_cutoff_ledger.py",
+    "sha256": "47a551b79dc2c3718ea15b2a7fddfaa864d60808390d9893dffed7676fecffbf",
+    "introduced_in_commit": "9a1a77b5a45768d919d3c78c878ab11353fb380c"
+  },
+  "exact_checks": 284,
+  "checks": [
+    {
+      "id": "P39.CS3ZC.orthonormality.n0.m0",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n0.m1",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n0.m2",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n0.m3",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n0.m4",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n1.m0",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n1.m1",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n1.m2",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n1.m3",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n1.m4",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n2.m0",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n2.m1",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n2.m2",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n2.m3",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n2.m4",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n3.m0",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n3.m1",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n3.m2",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n3.m3",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n3.m4",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n4.m0",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n4.m1",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n4.m2",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n4.m3",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.orthonormality.n4.m4",
+      "status": "PASS",
+      "statement": "The declared normalized zonal Q_n functions are orthonormal on unit S3."
+    },
+    {
+      "id": "P39.CS3ZC.product.U0.U0",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U0.U1",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U0.U2",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U0.U3",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U0.U4",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U1.U0",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U1.U1",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U1.U2",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U1.U3",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U1.U4",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U2.U0",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U2.U1",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U2.U2",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U2.U3",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U2.U4",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U3.U0",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U3.U1",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U3.U2",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U3.U3",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U3.U4",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U4.U0",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U4.U1",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U4.U2",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U4.U3",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.product.U4.U4",
+      "status": "PASS",
+      "statement": "The finite Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b0.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b1.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b2.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b3.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a0.b4.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b0.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b1.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b2.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b3.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a1.b4.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b0.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b1.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b2.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b3.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a2.b4.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b0.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b1.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b2.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b3.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a3.b4.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b0.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b1.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b2.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b3.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c0",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c1",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c2",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c3",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c4",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c5",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c6",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c7",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.gaunt.a4.b4.c8",
+      "status": "PASS",
+      "statement": "The zonal triple Gaunt coefficient is normalization iff the triangle/parity selection rule holds, and zero otherwise."
+    },
+    {
+      "id": "P39.CS3ZC.packet.single_Q2_at_N2.square_reconstruction",
+      "status": "PASS",
+      "statement": "The full nonlinear square is exactly the retained square plus its hard-cutoff remainder."
+    },
+    {
+      "id": "P39.CS3ZC.packet.single_Q2_at_N2.cubic_pairing_retention",
+      "status": "PASS",
+      "statement": "For phi in P_N, integral phi^3=<phi,phi^2>=<phi,P_N phi^2> exactly; this exact null does not make the full nonlinear product closed."
+    },
+    {
+      "id": "P39.CS3ZC.packet.single_Q2_at_N2.iterated_cubic_reconstruction",
+      "status": "PASS",
+      "statement": "The projected full cubic convolution is exactly the iterated hard-cutoff convolution plus the recorded residual."
+    },
+    {
+      "id": "P39.CS3ZC.packet.mixed_Q1_plus_Q2_at_N2.square_reconstruction",
+      "status": "PASS",
+      "statement": "The full nonlinear square is exactly the retained square plus its hard-cutoff remainder."
+    },
+    {
+      "id": "P39.CS3ZC.packet.mixed_Q1_plus_Q2_at_N2.cubic_pairing_retention",
+      "status": "PASS",
+      "statement": "For phi in P_N, integral phi^3=<phi,phi^2>=<phi,P_N phi^2> exactly; this exact null does not make the full nonlinear product closed."
+    },
+    {
+      "id": "P39.CS3ZC.packet.mixed_Q1_plus_Q2_at_N2.iterated_cubic_reconstruction",
+      "status": "PASS",
+      "statement": "The projected full cubic convolution is exactly the iterated hard-cutoff convolution plus the recorded residual."
+    },
+    {
+      "id": "P39.CS3ZC.packet.signed_Q1_minus_2Q3_at_N3.square_reconstruction",
+      "status": "PASS",
+      "statement": "The full nonlinear square is exactly the retained square plus its hard-cutoff remainder."
+    },
+    {
+      "id": "P39.CS3ZC.packet.signed_Q1_minus_2Q3_at_N3.cubic_pairing_retention",
+      "status": "PASS",
+      "statement": "For phi in P_N, integral phi^3=<phi,phi^2>=<phi,P_N phi^2> exactly; this exact null does not make the full nonlinear product closed."
+    },
+    {
+      "id": "P39.CS3ZC.packet.signed_Q1_minus_2Q3_at_N3.iterated_cubic_reconstruction",
+      "status": "PASS",
+      "statement": "The projected full cubic convolution is exactly the iterated hard-cutoff convolution plus the recorded residual."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 284,
+    "numerical_checks": 0,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
+      "payload_sha256_without_self": "863c7bf217b7d32eb0fb658139612361369fc5730a1549d20fb6029c74fc0166",
+      "verdict": "KEEP_CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_AND_HARD_CUTOFF_REMAINDER_LEDGER_NOT_ADM_OR_HDA",
+      "programme_impact": "RECORD_SCALAR_ZONAL_CONVOLUTION_DATA_FOR_A_SEPARATE_FULL_SVT_GAUNT_AND_CONSTRAINT_EXPANSION"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_INPUTS.json",
+      "sha256": "7e380dc78c84630986dcc07a49cc60b95ad5ab7819628fcd99c54fbf6b38cd1f",
+      "numbered_phase": null
+    },
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "absolute_bfv_measure": null,
+      "automatic_next": null,
+      "born_oppenheimer_or_decoherence": null,
+      "classical_hypersurface_deformation_algebra_closure": null,
+      "classical_jacobi_closure": null,
+      "empirical_likelihood": null,
+      "full_adm_cubic_constraint_expansion": null,
+      "full_gaunt_or_clebsch_gordan_ledger": null,
+      "full_scalar_vector_tensor_harmonic_completeness": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "lapse_shift_constraint_brackets": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_bfv_charge": null,
+      "raw_C_operator_domain": null,
+      "relational_observables": null,
+      "transverse_vector_tensor_harmonic_basis": null
+    }
+  }
+}

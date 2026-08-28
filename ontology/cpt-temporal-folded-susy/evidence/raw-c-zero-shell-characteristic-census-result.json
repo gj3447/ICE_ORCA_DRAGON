@@ -1,0 +1,102 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_20260828",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-28T16:40:00Z",
+  "command": "./ice run raw_c_zero_shell_characteristic_census",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_zero_shell_characteristic_census.py",
+    "sha256": "ae3ffbd96c273b74b1803e1f1bd713e5438dcc53a93f3df0a06dd940e7398819",
+    "introduced_in_commit": "0980b4ddb1765985955c480ff8eb05a64e15fb8d"
+  },
+  "exact_checks": 4,
+  "checks": [
+    {
+      "id": "P39.rawc.zero_shell.boundary.gamma1_of_K",
+      "status": "PASS",
+      "statement": "W(K,c_p)=K*c_p'-partial_Q(K)*c_p=-partial_Q(K) at Q_0, hence Gamma_1(K)=-W(K,c_p)=partial_Q K=z*partial_z K because c_p=1 and c_p'=0"
+    },
+    {
+      "id": "P39.rawc.zero_shell.kappa.abs_p_parity",
+      "status": "PASS",
+      "statement": "kappa=sqrt(3/2)*abs(p) is exactly invariant under p -> -p at hbar=1"
+    },
+    {
+      "id": "P39.rawc.zero_shell.numeric.p_zero_negative_value",
+      "status": "PASS",
+      "statement": "F(0) is strictly negative in the declared positive-z convention"
+    },
+    {
+      "id": "P39.rawc.zero_shell.numeric.root_ordering_and_separation",
+      "status": "PASS",
+      "statement": "reported roots are strictly ordered and their centers are separated by more than twice the maximum refined bracket width"
+    }
+  ],
+  "numerical_checks": 4,
+  "numerical": [
+    {
+      "id": "P39.rawc.zero_shell.numeric.root_recurrence_residual",
+      "status": "PASS",
+      "statement": "each reported root has small recurrence-characteristic residual"
+    },
+    {
+      "id": "P39.rawc.zero_shell.numeric.root_independent_centered_derivative",
+      "status": "PASS",
+      "statement": "the recurrence characteristic agrees with an independent centered z derivative at every reported root"
+    },
+    {
+      "id": "P39.rawc.zero_shell.numeric.root_bracket_width",
+      "status": "PASS",
+      "statement": "every refined sign-changing root bracket is below the fixed width threshold"
+    },
+    {
+      "id": "P39.rawc.zero_shell.numeric.real_characteristic_residue",
+      "status": "PASS",
+      "statement": "the real-kappa, positive-z characteristic and independent derivative are real within the declared precision"
+    }
+  ],
+  "payload": {
+    "exact_checks": 4,
+    "numerical_checks": 4,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json",
+      "payload_sha256_without_self": "88c246cc29f50da539c827e9d841c043cc60d7d6dc5e7c78c22b15b3e5d13ce7",
+      "verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY",
+      "programme_impact": "KEEP_FINITE_CHARACTERISTIC_CENSUS_WITHOUT_PROMOTING_SPECTRAL_OR_RAQ_DATA"
+    },
+    "input_manifest": {
+      "numbered_phase": null,
+      "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_INPUTS.json",
+      "sha256": "66d31a7238c5fec69ab62530829ed71923d5e4de6b3aef34f0d222a827f49ed2"
+    },
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "absolute_bfv_measure": null,
+      "automatic_next": null,
+      "canonical_p_zero_origin_sector": null,
+      "continuum_determinant_or_pfaffian_line": null,
+      "delta_C_derivative_weights": null,
+      "empirical_likelihood": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "general_p_mixing_extension_classification": null,
+      "global_promotion": "PROHIBITED",
+      "inhomogeneous_constraint_closure": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "quantum_gravity_claim": null,
+      "raw_C_physical_inner_product": null,
+      "raw_C_rigging_map": null,
+      "raw_C_rigging_test_space": null,
+      "raw_C_spectral_measure": null,
+      "relational_observables_or_decoherence": null,
+      "selected_H_raw_C_unitary_intertwiner": null,
+      "zero_shell_eigenvalue_branch_transversality": null
+    }
+  }
+}
