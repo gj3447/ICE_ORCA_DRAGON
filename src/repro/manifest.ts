@@ -346,6 +346,24 @@ export const reproCases = [
       "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "closed_s3_scalar_derived_harmonic_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_scalar_derived_harmonic_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "v0_two_clock_relational_observable_comparison",
+    script:
+      "cpt_temporal_folded_susy/v0_two_clock_relational_observable_comparison.py",
+    output:
+      "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 

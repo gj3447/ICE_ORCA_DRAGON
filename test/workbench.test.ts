@@ -109,6 +109,14 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "closed_s3_adm_linear_scalar_convention_audit",
       "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json"
+    ],
+    [
+      "closed_s3_scalar_derived_harmonic_ledger",
+      "cpt_temporal_folded_susy/CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json"
+    ],
+    [
+      "v0_two_clock_relational_observable_comparison",
+      "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json"
     ]
   ])
 
