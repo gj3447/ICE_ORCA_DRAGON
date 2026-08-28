@@ -294,11 +294,38 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "gate1_v0_endpoint_support_restricted_spectral_intertwiner",
+    script:
+      "cpt_temporal_folded_susy/gate1_v0_endpoint_support_restricted_spectral_intertwiner.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "gate1_v0_bfv_zero_mode_elimination_ward",
     script:
       "cpt_temporal_folded_susy/gate1_v0_bfv_zero_mode_elimination_ward.py",
     output:
       "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "gate1_v0_bfv_finite_pfaffian_orientation_transport",
+    script:
+      "cpt_temporal_folded_susy/gate1_v0_bfv_finite_pfaffian_orientation_transport.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "gate1_v0_closed_s3_scalar_harmonic_projection_ledger",
+    script:
+      "cpt_temporal_folded_susy/gate1_v0_closed_s3_scalar_harmonic_projection_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER_RESULT.json",
     policy: "portable",
     compare: tight
   }

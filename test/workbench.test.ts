@@ -52,7 +52,7 @@ it("maps the V0 improved-static BFV source as a portable committed result", () =
   )
 })
 
-it("maps the V0 spectral-to-m2 BFV controls as portable committed results", () => {
+it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
   const expected = new Map([
     [
       "gate1_v0_constraint_spectral_domain",
@@ -87,8 +87,20 @@ it("maps the V0 spectral-to-m2 BFV controls as portable committed results", () =
       "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json"
     ],
     [
+      "gate1_v0_endpoint_support_restricted_spectral_intertwiner",
+      "cpt_temporal_folded_susy/GATE1_V0_ENDPOINT_SUPPORT_RESTRICTED_SPECTRAL_INTERTWINER_RESULT.json"
+    ],
+    [
       "gate1_v0_bfv_zero_mode_elimination_ward",
       "cpt_temporal_folded_susy/GATE1_V0_BFV_ZERO_MODE_ELIMINATION_WARD_RESULT.json"
+    ],
+    [
+      "gate1_v0_bfv_finite_pfaffian_orientation_transport",
+      "cpt_temporal_folded_susy/GATE1_V0_BFV_FINITE_PFAFFIAN_ORIENTATION_TRANSPORT_RESULT.json"
+    ],
+    [
+      "gate1_v0_closed_s3_scalar_harmonic_projection_ledger",
+      "cpt_temporal_folded_susy/GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER_RESULT.json"
     ]
   ])
 
