@@ -20,7 +20,7 @@ INPUT_NAME = "RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_INPUTS.json"
 RESULT_NAME = "RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
 RUNNER_RELPATH = "cpt_temporal_folded_susy/raw_c_lambda_zero_bessel_ball_transport.py"
-EXPECTED_INPUT_SHA256 = "c2f5c0479c39b0c464fe3a04fb2b3c868c6b767b292f0f1a7ff3c43f20682607"
+EXPECTED_INPUT_SHA256 = "ba09a1c7d85cd77830f816526991d6f2cc62562a6dd74efa94ef8bbc104486c4"
 CALCULATION_ID = "RawCLambdaZeroBesselBallTransport"
 RESULT_SCHEMA = "ice.raw-c-lambda-zero-bessel-ball-transport.result.v1"
 RESULT_PREFIX = "RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT="
@@ -302,9 +302,10 @@ def endpoint_band_checks(
         "wkb_log_derivative_at_Qplus": q_wkb,
         "normalized_difference_at_Qplus": normalized_difference,
         "K_at_Q0_excludes_zero": bool(k0.abs_lower() > 0),
-        "wronskian_contains_one": bool(
+        "wronskian_contains_one_and_excludes_zero": bool(
             contains_real(wronskian_q.real, 1)
             and contains_real(wronskian_q.imag, 0)
+            and wronskian_q.abs_lower() > 0
         ),
         "scaled_K_at_Qplus_excludes_zero": bool(kplus.abs_lower() > 0),
         "tail_budget_contains_difference": bool(
@@ -394,11 +395,16 @@ def main() -> None:
         "precision_ladder_decimal_digits"
     ]
     step_ladder = cfg["declared_conventions"]["bisection_steps"]
-    tail_budget = arb(
-        tail["analytic_calculation"]["at_Q_plus_4"][
-            "sqrt_A_normalized_log_derivative_difference_bound"
-        ]
+    ctx.dps = int(max(precision_ladder))
+    tail_envelopes = tail["analytic_calculation"]["uniform_envelopes"]
+    tail_r_bar = exact_rational(tail_envelopes["R_bar"])
+    tail_eta_bar = exact_rational(tail_envelopes["eta_bar"])
+    tail_v_bar_exact = tail_r_bar / (
+        fmpq(6 * 9 * 7**2) * (fmpq(1) - tail_eta_bar)
     )
+    tail_v_bar = arb(tail_v_bar_exact)
+    tail_e_bar = (tail_v_bar / 2).exp() - 1
+    tail_budget = 2 * tail_e_bar / (1 - tail_e_bar)
     rows: list[dict[str, Any]] = []
 
     for index, source_row in enumerate(root_rows, start=1):
@@ -452,7 +458,7 @@ def main() -> None:
         audit.ball_check(
             f"rawc.ball.root{index}.precision_nesting",
             nested,
-            "The 120-digit, 96-step exact-rational sign bracket nests inside the independent 80-digit, 64-step bracket.",
+            "The 120-digit, 96-step exact-rational sign bracket nests inside the same-backend 80-digit, 64-step bracket.",
             low_width_exact=rational_text(low_right - low_left),
             high_width_exact=rational_text(high_right - high_left),
         )
@@ -472,8 +478,8 @@ def main() -> None:
         )
         audit.ball_check(
             f"rawc.ball.root{index}.wronskian",
-            endpoint["wronskian_contains_one"],
-            "The full bracket-band ball for W_Q(K_(i*kappa),I_(i*kappa)) contains one, retaining a node-safe independent solution pair.",
+            endpoint["wronskian_contains_one_and_excludes_zero"],
+            "The full bracket-band ball for W_Q(K_(i*kappa),I_(i*kappa)) contains one and excludes zero, retaining a node-safe linearly independent solution pair.",
             wronskian=endpoint["record"]["wronskian_Q_K_I"],
         )
         audit.ball_check(
@@ -485,8 +491,9 @@ def main() -> None:
         audit.ball_check(
             f"rawc.ball.root{index}.tail_containment",
             endpoint["tail_budget_contains_difference"],
-            "The exact lambda-zero Bessel log derivative is contained by the independently inherited Liouville-Green normalized tail budget at Qplus=4.",
-            inherited_tail_budget=tail_budget.str(digits_out),
+            "The exact lambda-zero Bessel log derivative is contained by the separately proved Liouville-Green normalized tail budget reconstructed from exact upstream rational envelopes at Qplus=4.",
+            reconstructed_tail_V_bar_exact=rational_text(tail_v_bar_exact),
+            reconstructed_tail_budget=tail_budget.str(digits_out),
             normalized_difference=endpoint["record"][
                 "normalized_difference_at_Qplus"
             ],
@@ -513,9 +520,15 @@ def main() -> None:
 
     audit.guard(
         "rawc.ball.guard.dlmf_bessel",
-        "DLMF sections 10.25, 10.28 and 10.29",
+        "DLMF sections 10.25, 10.27, 10.28 and 10.29",
         "x=6*pi^2*exp(Q)>0, nu=i*kappa, lambda=0, the K branch is recessive at positive infinity, and the derivative and Wronskian conventions are the declared ones",
         "The exact K representation and W_Q(K,I)=1 transport the lambda-zero recessive direction without an ill-conditioned raw fundamental matrix. DLMF does not provide the emitted ball enclosures or any nonzero-lambda, spectral or RAQ conclusion.",
+    )
+    audit.guard(
+        "rawc.ball.guard.real_characteristic",
+        "DLMF section 10.27 order symmetry plus complex conjugation for real positive argument",
+        "x0=6*pi^2*exp(-4)>0 and kappa is real; K_(-nu)(x0)=K_nu(x0), while conjugation maps K_(i*kappa)(x0) to K_(-i*kappa)(x0)",
+        "K_(i*kappa)(x0) and its Q derivative are real and continuous in real kappa, so F(kappa) is a real continuous characteristic on every certified bracket. This supplies the real-valued hypothesis used by the intermediate value theorem only at lambda=0.",
     )
     audit.guard(
         "rawc.ball.guard.arb_inclusion",
@@ -526,7 +539,7 @@ def main() -> None:
     audit.guard(
         "rawc.ball.guard.ivt",
         "Intermediate value theorem for the entire-in-order modified Bessel K characteristic",
-        "DLMF gives entire dependence on nu for fixed positive x, and every bracket has rigorously opposite finite endpoint signs",
+        "The real-characteristic guard establishes real continuity on real kappa, and every bracket has rigorously opposite finite endpoint signs",
         "Each bracket contains at least one real zero. This does not exclude an even number of additional roots, certify uniqueness, or prove that the five brackets exhaust kappa in [0,8].",
     )
     audit.guard(
@@ -580,6 +593,15 @@ def main() -> None:
                 "root_rows": rows,
                 "completeness": None,
                 "uniqueness_per_bracket": None,
+            },
+            "tail_budget_reconstruction": {
+                "R_bar_exact": rational_text(tail_r_bar),
+                "eta_bar_exact": rational_text(tail_eta_bar),
+                "V_bar_exact": rational_text(tail_v_bar_exact),
+                "normalized_log_derivative_budget_ball": tail_budget.str(
+                    digits_out
+                ),
+                "source_decimal_budget_used_as_input": False,
             },
             "next_mathematical_gap": "differentiate the plus-tail Volterra/Liouville-Green construction in lambda, then propagate the forced sensitivity in a validated node-safe two-component or Pruefer atlas",
         },

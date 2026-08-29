@@ -25,15 +25,15 @@
       "sha256": "ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39",
       "payload_sha256_without_self": "0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c",
       "required_verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY",
-      "role": "pins the Qplus=4 normalized log-derivative error budget used as an independent containment check"
+      "role": "pins the Qplus=4 normalized log-derivative error budget used as a separately proved analytic containment check"
     }
   ],
   "primary_sources": [
     {
-      "source": "NIST Digital Library of Mathematical Functions, modified Bessel equation, standard K solution, Wronskian and derivative recurrences, sections 10.25, 10.28 and 10.29",
+      "source": "NIST Digital Library of Mathematical Functions, modified Bessel equation, K order symmetry, Wronskian and derivative recurrences, sections 10.25, 10.27, 10.28 and 10.29",
       "url": "https://dlmf.nist.gov/10",
       "version": "DLMF 1.2.7, 2026-06-15",
-      "used_for": "the exact lambda-zero Bessel reduction, recessive K branch, Wronskian and derivative formulas",
+      "used_for": "the exact lambda-zero Bessel reduction, recessive K branch, K_(-nu)=K_nu and conjugation reality for nu=i*kappa at positive real x, Wronskian and derivative formulas",
       "not_used_for": "ball-arithmetic implementation correctness, nonzero-lambda transport, F_lambda, a spectral measure or RAQ"
     },
     {
@@ -80,9 +80,9 @@
     "verify every upstream file hash, payload hash, verdict and VALID_RUN state",
     "verify exactly the Q-to-x change of variables, the imaginary-order Bessel equation, p parity and the first-order lambda sensitivity forcing that remains open",
     "re-evaluate both ends of every upstream coarse root bracket with complex-order Bessel balls and require certified opposite real signs",
-    "bisect each bracket at 80 and 120 decimal digits, require every selected sign to exclude zero, and require the higher-precision bracket to nest inside the lower-precision bracket",
-    "on each high-precision bracket band, prove K_(i*kappa)(x0) excludes zero and the Q-Wronskian ball contains one",
-    "at Qplus=4, use scaled K values to avoid underflow and require the exact Bessel log derivative to lie inside the inherited Liouville-Green normalized error budget",
+    "bisect each bracket at 80 and 120 decimal digits with the same backend, require every selected sign to exclude zero, and require the higher-precision repeat bracket to nest inside the lower-precision bracket",
+    "on each high-precision bracket band, prove K_(i*kappa)(x0) excludes zero and the Q-Wronskian ball both contains one and excludes zero",
+    "at Qplus=4, reconstruct the inherited Liouville-Green normalized error budget from its exact rational R_bar and eta_bar with outward-rounded Arb operations, use scaled K values to avoid underflow, and require the exact Bessel log derivative to lie inside that budget",
     "write endpoint F_lambda, nonzero-lambda transport, spectral, RAQ, BFV, physical and TOE outputs as explicit nulls"
   ],
   "resource_caps": {
