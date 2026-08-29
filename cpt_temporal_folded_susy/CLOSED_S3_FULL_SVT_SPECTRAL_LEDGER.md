@@ -78,9 +78,27 @@ S_{ab}=D_aD_bQ+\frac{\lambda_n}{3}\gamma_{ab}Q,
 Thus \(S_{ab}\) vanishes at \(n=1\); it is normalized only for \(n\ge2\).
 All of these identities are harmonic bookkeeping, not ADM or BFV closure.
 
-This corrected definition has not yet been executed.  After a clean commit,
-the only authorized command is:
+## Observed execution
+
+The corrected definition was committed before execution and run only through
+the repository control plane:
 
 ```text
 ./ice run closed_s3_full_svt_spectral_ledger
+VALID_RUN; 37/37 executable checks; 5 source/theorem guards
+KEEP_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_LEDGER_NOT_COMPLETE_BASIS_OR_HDA
 ```
+
+The emitted result SHA-256 is
+`1f114845629f7f3ee1ea609af81a8804b65d5443912593a52e23d892957dfac3`.
+The exact cumulative sector counts were
+
+| cutoff \(N\) | scalar | transverse vector | TT tensor | total |
+|---:|---:|---:|---:|---:|
+| 2 | 14 | 22 | 10 | 46 |
+| 3 | 30 | 52 | 34 | 116 |
+| 5 | 91 | 170 | 140 | 401 |
+| 8 | 285 | 552 | 504 | 1341 |
+
+This successful transport/counting result does not change the null status of
+explicit bases, Gaunt data, ADM/HDA/Jacobi closure, or BFV construction.
