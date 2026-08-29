@@ -445,6 +445,24 @@ export const reproCases = [
       "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "closed_s3_zonal_conformal_trace_kinetic_cubic_vertex_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_zonal_conformal_trace_kinetic_cubic_vertex_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_TRACE_KINETIC_CUBIC_VERTEX_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
+    script:
+      "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TIME_SYMMETRIC_CLOCK_BOUNDARY_LOCAL_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 
