@@ -20,7 +20,7 @@ INPUT_NAME = "RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_INPUTS.json"
 RESULT_NAME = "RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
 RUNNER_RELPATH = "cpt_temporal_folded_susy/raw_c_lambda_zero_node_safe_green_transport.py"
-EXPECTED_INPUT_SHA256 = "2fc1dfbd703d665ca8b49138f8c7ef869b7eed9c83256dde6adbb4a57e8663c7"
+EXPECTED_INPUT_SHA256 = "61e436903e17086810fe57792191b3d5cf7a4db0f88a71695cfbb0c62cfbc1a4"
 CALCULATION_ID = "RawCLambdaZeroNodeSafeGreenTransport"
 RESULT_SCHEMA = "ice.raw-c-lambda-zero-node-safe-green-transport.result.v1"
 RESULT_PREFIX = "RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_RESULT="
@@ -74,7 +74,7 @@ def expected_caps() -> dict[str, int]:
         "changed_artifact_bytes": 1000000,
         "symbolic_operations": 1000,
         "ball_bessel_evaluations": 100000,
-        "quadrature_calls": 10,
+        "quadrature_calls": 60,
         "quadrature_callback_evaluations": 100000,
         "root_brackets": 5,
         "root_calls": 0,
@@ -212,6 +212,7 @@ def run_tier(audit: Audit, *, root_index: int, tier_index: int, band: arb, h_plu
     x0 = c * arb(-4).exp()
     xplus = c * arb(4).exp()
     cutoff = arb(conventions["finite_cutoff_X"])
+    segment_ends = [arb(value) for value in conventions["finite_subdivision_upper_endpoints"]]
     order = acb(0, band)
     k0 = bessel_k(audit, acb(x0), order)
     kplus = bessel_k(audit, acb(xplus), order)
@@ -232,13 +233,26 @@ def run_tier(audit: Audit, *, root_index: int, tier_index: int, band: arb, h_plu
             return acb("nan")
         return x.sqrt(analytic=analytic) * bessel_k(audit, x, order) ** 2
 
-    audit.quadrature_calls += 1
-    if audit.quadrature_calls > expected_caps()["quadrature_calls"]:
-        raise AssertionError("quadrature call cap exceeded")
     options = conventions["quadrature_options"]
-    finite = acb.integral(integrand, acb(x0), acb(cutoff), rel_tol=arb(rel_tol), abs_tol=arb(abs_tol), deg_limit=int(options["deg_limit"]), eval_limit=int(options["eval_limit_each"]), depth_limit=int(options["depth_limit"]), use_heap=bool(options["use_heap"]), verbose=False)
+    finite = acb(0)
+    segment_records: list[dict[str, Any]] = []
+    segment_left = x0
+    per_segment_abs_tol = arb(abs_tol) / len(segment_ends)
+    for segment_index, segment_right in enumerate(segment_ends, start=1):
+        callbacks_before = audit.quadrature_callback_evaluations
+        audit.quadrature_calls += 1
+        if audit.quadrature_calls > expected_caps()["quadrature_calls"]:
+            raise AssertionError("quadrature call cap exceeded")
+        piece = acb.integral(integrand, acb(segment_left), acb(segment_right), rel_tol=arb(rel_tol), abs_tol=per_segment_abs_tol, deg_limit=int(options["deg_limit"]), eval_limit=int(options["eval_limit_each"]), depth_limit=int(options["depth_limit"]), use_heap=bool(options["use_heap"]), verbose=False)
+        piece_ok = bool(piece.is_finite() and contains_zero(piece.imag))
+        segment_records.append({"segment_index": segment_index, "left": interval_record(segment_left, digits), "right": interval_record(segment_right, digits), "imaginary_enclosure_contains_zero": contains_zero(piece.imag), "finite": piece_ok, "callback_evaluations": audit.quadrature_callback_evaluations - callbacks_before, "integral": complex_ball_record(piece, digits)})
+        if not piece_ok:
+            finite = acb("nan")
+            break
+        finite += piece
+        segment_left = segment_right
     finite_ok = bool(finite.is_finite() and contains_zero(finite.imag) and finite.real.lower() > 0)
-    audit.ball_check(f"rawc.green.root{root_index}.tier{tier_index}.finite_green_integral", finite_ok, "The finite acb.integral imaginary enclosure contains zero and its real enclosure is strictly positive on the full band; exact real-valuedness is supplied separately by Bessel conjugation and order symmetry, and no h quotient occurs on this path.", callback_stats=stats, finite_integral=complex_ball_record(finite, digits), finite_integral_real_width_upper=(finite.real.upper() - finite.real.lower()).upper().str(digits, radius=False), requested_relative_tolerance=rel_tol, requested_absolute_tolerance=abs_tol)
+    audit.ball_check(f"rawc.green.root{root_index}.tier{tier_index}.finite_green_integral", finite_ok, "The sum of six fixed finite acb.integral enclosures has an imaginary interval containing zero and a strictly positive real enclosure on the full band; exact real-valuedness is supplied separately by Bessel conjugation and order symmetry, and no h quotient occurs on this path.", callback_stats=stats, finite_subsegments=segment_records, finite_integral=complex_ball_record(finite, digits), finite_integral_real_width_upper=(finite.real.upper() - finite.real.lower()).upper().str(digits, radius=False), requested_relative_tolerance=rel_tol, requested_absolute_tolerance=abs_tol, per_segment_absolute_tolerance=per_segment_abs_tol.str(digits, radius=False))
     tail = arb.pi() * (-2 * cutoff).exp() / (4 * sqrt_c * cutoff.sqrt())
     tail_ok = bool(tail.is_finite() and tail.lower() >= 0 and tail.upper() < arb(conventions["tail_upper_target"]).lower() and bridge.upper() < tail.upper())
     audit.ball_check(f"rawc.green.root{root_index}.tier{tier_index}.analytic_tail_and_plus_magnitude", tail_ok, "The DLMF majorant bounds the full x>=X endpoint Green tail, while the independently reconstructed J(4) magnitude is below that coarse allowance; this is only a non-contradiction scale sentinel, not a transport equality.", tail_upper=tail.upper().str(digits, radius=False), J_Qplus_magnitude_upper=bridge.upper().str(digits, radius=False), tail_target=conventions["tail_upper_target"])
@@ -251,7 +265,7 @@ def run_tier(audit: Audit, *, root_index: int, tier_index: int, band: arb, h_plu
     j_ok = bool(j_ball.lower() > 0 and (j_ball.upper() - j_ball.lower()).upper() < arb(max_j_width).lower())
     h_ok = bool(h0.lower() > 0 and (h0.upper() - h0.lower()).upper() < arb(max_h_width).lower())
     audit.ball_check(f"rawc.green.root{root_index}.tier{tier_index}.endpoint_boxes", j_ok and h_ok, "The direct smooth J(Q0) Green box and, using the exact Bessel reality theorem, its endpoint-only h(Q0)=J/u^2 quotient are positive and meet the declared width bounds; h was never evolved across an interior node.", J_Q0=interval_record(j_ball, digits), h_Q0=interval_record(h0, digits), maximum_J_width=max_j_width, maximum_h_width=max_h_width)
-    return {"decimal_digits": dps, "status": "CERTIFIED_TIER" if j_ok and h_ok else "UNRESOLVED_WIDTH", "same_backend_repeat": True, "relative_tolerance": rel_tol, "absolute_tolerance": abs_tol, "callback_stats": stats, "K_Q0": complex_ball_record(k0, digits), "K_Qplus": complex_ball_record(kplus, digits), "J_Qplus_magnitude_sanity": interval_record(bridge, digits), "finite_integral": complex_ball_record(finite, digits), "analytic_tail_upper": tail.upper().str(digits, radius=False), "J_Q0": interval_record(j_ball, digits), "h_Q0": interval_record(h0, digits)}, j_ball if j_ok and h_ok else None, h0 if j_ok and h_ok else None
+    return {"decimal_digits": dps, "status": "CERTIFIED_TIER" if j_ok and h_ok else "UNRESOLVED_WIDTH", "same_backend_repeat": True, "relative_tolerance": rel_tol, "absolute_tolerance": abs_tol, "per_segment_absolute_tolerance": per_segment_abs_tol.str(digits, radius=False), "callback_stats": stats, "finite_subsegments": segment_records, "K_Q0": complex_ball_record(k0, digits), "K_Qplus": complex_ball_record(kplus, digits), "J_Qplus_magnitude_sanity": interval_record(bridge, digits), "finite_integral": complex_ball_record(finite, digits), "analytic_tail_upper": tail.upper().str(digits, radius=False), "J_Q0": interval_record(j_ball, digits), "h_Q0": interval_record(h0, digits)}, j_ball if j_ok and h_ok else None, h0 if j_ok and h_ok else None
 
 
 def intersect(left: arb, right: arb) -> arb | None:
@@ -289,8 +303,10 @@ def main() -> None:
     x0_guard = c_guard * arb(-4).exp()
     cutoff_guard = arb(conventions["finite_cutoff_X"])
     xplus_guard = c_guard * arb(4).exp()
-    cutoff_order_ok = bool(x0_guard.lower() > 0 and x0_guard.upper() < cutoff_guard.lower() and cutoff_guard.upper() < xplus_guard.lower())
-    audit.ball_check("rawc.green.cutoff_order", cutoff_order_ok, "The outward balls certify 0<x0<X<xplus, so the finite positive-real integration segment and the manual x>=X tail precede the separately reconstructed plus endpoint.", x0=interval_record(x0_guard, int(conventions["ball_output_digits"])), cutoff=interval_record(cutoff_guard, int(conventions["ball_output_digits"])), xplus=interval_record(xplus_guard, int(conventions["ball_output_digits"])))
+    segment_ends_guard = [arb(value) for value in conventions["finite_subdivision_upper_endpoints"]]
+    ordered_points = [x0_guard, *segment_ends_guard, xplus_guard]
+    cutoff_order_ok = bool(len(segment_ends_guard) == 6 and conventions["finite_subdivision_upper_endpoints"][-1] == conventions["finite_cutoff_X"] and x0_guard.lower() > 0 and all(left.upper() < right.lower() for left, right in zip(ordered_points, ordered_points[1:], strict=True)))
+    audit.ball_check("rawc.green.cutoff_order", cutoff_order_ok, "The outward balls certify 0<x0<1.5<2<4<8<16<X=32<xplus, so the six finite positive-real integration subsegments and the manual x>=X tail are ordered before the separately reconstructed plus endpoint.", x0=interval_record(x0_guard, int(conventions["ball_output_digits"])), subdivision_upper_endpoints=[interval_record(value, int(conventions["ball_output_digits"])) for value in segment_ends_guard], cutoff=interval_record(cutoff_guard, int(conventions["ball_output_digits"])), xplus=interval_record(xplus_guard, int(conventions["ball_output_digits"])))
     rows: list[dict[str, Any]] = []
     for index, (brow, hrow) in enumerate(zip(bessel_rows, h_rows, strict=True), start=1):
         cert = brow["certified_high_precision_bracket"]
