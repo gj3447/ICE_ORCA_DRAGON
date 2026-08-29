@@ -87,12 +87,33 @@ The next real obstacle is an off-shell canonical treatment including lapse and
 shift with nonzonal scalar and SVT couplings.  These restricted zonal vertices
 do not remove that obstacle.
 
-## Intended execution
+## Observed bounded result
 
-After review and a clean commit, run only through the repository control plane:
+The committed runner was executed only through the repository control plane:
 
 ```text
 ./ice run closed_s3_zonal_conformal_trace_kinetic_cubic_vertex_ledger
 ```
 
-No runner was executed while preparing this draft.
+It produced a `VALID_RUN` with 42/42 exact checks and three source/scope
+guards.  With the common external factor left symbolic, the aligned
+\((\psi,\chi)=(Q_2,Q_2)\) packet has
+
+\[
+(K_0,K_1,K_2,K_3)
+=\left(2\pi^2,0,-\frac12,\frac{3\sqrt2}{4\pi}\right),
+\]
+
+while the mixed \((Q_1+Q_2,Q_2)\) packet has
+
+\[
+(K_0,K_1,K_2,K_3)
+=\left(2\pi^2,0,4,-\frac{3\sqrt2}{2\pi}\right).
+\]
+
+Both packets have nonzero exact quadratic and cubic tails beyond \(N=2\).
+This supplies a restricted kinetic companion to the curvature packet, not a
+combined ADM constraint or closure calculation.
+
+Result SHA-256:
+`8f962252978582635470ab404f06dec52c6fca7e9e40dbed6e42f8bdbc7a21d9`.
