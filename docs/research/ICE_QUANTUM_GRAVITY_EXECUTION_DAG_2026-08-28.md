@@ -58,6 +58,24 @@
 structure functions를 대신하지 않으며, 6의 background 표도 primordial spectrum을 대신하지 않는다.
 각 후속 runner는 바로 앞 결과가 아니라 위 표의 “남은 필수 단계”를 직접 겨냥해야 한다.
 
+## 2026-08-29 실행 갱신
+
+세 개의 새 번호 없는 계산을 각각 clean definition commit 뒤 `./ice run`으로 실행하고, committed
+result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. 세 재현 모두 `REPRO`,
+`needs-attention 0`이었다.
+
+| 연결부 | 실제로 계산된 것 | 관측 결과 | 줄어든 장애물 | 그대로 남은 장애물 |
+|---|---|---|---|---|
+| 1 raw-\(C\) zero shell | `raw_c_zero_shell_transversality_jacobian` | 5개 root에서 \(F_\kappa\ne0\), weighted Mellin norm과 5회 quadrature 일치, 조건부 \(1/|\lambda'|\approx0.0641\)–\(0.0747\); boolean 9/9, numerical 3/3 | 선언한 5개 root의 local simplicity와 local weight 후보를 수치로 고정 | \(F_\lambda\)는 moving-boundary Lagrange identity에 조건부다. nonzero-\(\lambda\) Weyl solve, global spectral measure, test space, rigging map과 RAQ는 null |
+| 2 closed \(S^3\) all-sector bookkeeping | `closed_s3_full_svt_spectral_ledger` | source-pinned scalar/transverse-vector/TT low-mode transport와 cutoff count; exact 37/37, theorem guard 5; \(N=8\) 총 1,341 modes | 세 sector의 rough/Hodge/명시적 Lichnerowicz convention, 저차 예외와 count 범위를 한 packet에 고정 | `FULL_SVT`는 세 sector를 모두 기록했다는 뜻뿐이다. explicit basis, chirality resolution, Gaunt/Clebsch--Gordan, ADM/HDA는 null |
+| 5–6 \(V\ne0\) two-clock domain | `homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit` | \(C_V=0=P\)에서 real-\(p\) domain \(y=e^QV\le3\), scalar-clock zero \(y=3\), \(P\)-clock FP zero \(y=2\), \(Q\)-clock factor zero; exact 12/12 | 이전의 잘못된 informal \(y=3/2\) 값을 제거하고 두 clock chart의 서로 다른 고전 경계를 고정 | 실제 trajectory가 어느 locus를 통과하는지, complete observable, quantum clock map, physical product, BO/decoherence와 likelihood는 null |
+
+이 갱신은 세 갈래를 완성하지 않았다. 다음 독립 질문은 각각 (a) nonzero-\(\lambda\) plus-end
+Weyl solution으로 \(F_\lambda\)를 직접 대조하는가, (b) 명시적 저차 SVT representative와 Gaunt
+data를 구성해 source convention을 실제 ADM coefficient 입력으로 바꾸는가, (c) 고정된
+Starobinsky closed-FRW initial data로 trajectory와 두 FP locus의 crossing 여부를 적분하는가이다.
+어느 결과도 다른 질문의 실행 또는 물리적 승격을 자동 승인하지 않는다.
+
 ## 의존성 지도
 
 ```text
