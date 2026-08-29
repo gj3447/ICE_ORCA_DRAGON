@@ -456,6 +456,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "closed_s3_zonal_conformal_v0_scalar_matter_cubic_vertex_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_zonal_conformal_v0_scalar_matter_cubic_vertex_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_V0_SCALAR_MATTER_CUBIC_VERTEX_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
     script:
       "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",
