@@ -52,5 +52,5 @@ and TOE fields remain null.  No result is included in this draft; after a
 clean commit it may only be run through:
 
 ```text
-./ice run homogeneous_closed_frw_starobinsky_p0_clock_boundary_local_ledger
+./ice run homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger
 ```

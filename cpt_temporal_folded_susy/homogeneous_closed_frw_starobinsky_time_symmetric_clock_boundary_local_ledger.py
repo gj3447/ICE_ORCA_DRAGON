@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local P=0 clock-boundary vector-field ledger; deliberately no ODE solve."""
+"""Local time-symmetric clock-boundary vector-field ledger; no ODE solve."""
 from __future__ import annotations
 
 import hashlib
@@ -14,12 +14,12 @@ import mpmath
 from mpmath import mp
 import sympy as sp
 
-INPUT_NAME = "HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_P0_CLOCK_BOUNDARY_LOCAL_LEDGER_INPUTS.json"
-RESULT_NAME = "HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_P0_CLOCK_BOUNDARY_LOCAL_LEDGER_RESULT.json"
+INPUT_NAME = "HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TIME_SYMMETRIC_CLOCK_BOUNDARY_LOCAL_LEDGER_INPUTS.json"
+RESULT_NAME = "HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TIME_SYMMETRIC_CLOCK_BOUNDARY_LOCAL_LEDGER_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
-RUNNER_RELPATH = "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_p0_clock_boundary_local_ledger.py"
-EXPECTED_INPUT_SHA256 = "e816103e4f5c92952c7b53572e6905a176e86cde1c2d42247d9cc4efa9f4a888"
-CALCULATION_ID = "HomogeneousClosedFrwStarobinskyP0ClockBoundaryLocalLedger"
+RUNNER_RELPATH = "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py"
+EXPECTED_INPUT_SHA256 = "a077ebf18bc49776f98135854fd9fe0ef6b69654ca6b4c276c834dec10f617d2"
+CALCULATION_ID = "HomogeneousClosedFrwStarobinskyTimeSymmetricClockBoundaryLocalLedger"
 ARTIFACT_CAP = 1_000_000
 
 
@@ -91,7 +91,7 @@ def main() -> None:
     if digest(raw) != EXPECTED_INPUT_SHA256:
         raise AssertionError("input hash mismatch")
     cfg = json.loads(raw)
-    if cfg.get("schema_version") != "ice.homogeneous-closed-frw-starobinsky-p0-clock-boundary-local-ledger.input.v1" or cfg["calculation_id"] != CALCULATION_ID or cfg["numbered_phase"] is not None:
+    if cfg.get("schema_version") != "ice.homogeneous-closed-frw-starobinsky-time-symmetric-clock-boundary-local-ledger.input.v1" or cfg["calculation_id"] != CALCULATION_ID or cfg["numbered_phase"] is not None:
         raise AssertionError("identity drift")
     if cfg["resource_caps"] != caps() or cfg["tolerances"] != tolerances() or cfg["required_fail_closed_outputs"] != nulls():
         raise AssertionError("cap/tolerance/fail-closed drift")
@@ -166,13 +166,13 @@ def main() -> None:
         rows.append({"N_star_input": row["N_star_input"], "phi_star": mp.nstr(phi_value, 30), "M": mp.nstr(M, 20), "V_phi_star": mp.nstr(potential, 30), "Vprime_phi_star": mp.nstr(vprime, 30), "representatives": derived})
     passed = all(item["passed"] for item in audit.exact + audit.numerical)
     verdict = "KEEP_LOCAL_P0_CLOCK_BOUNDARY_VECTOR_FIELD_LEDGER_NOT_TRAJECTORY_EVIDENCE" if passed else "KILL_LOCAL_P0_CLOCK_BOUNDARY_VECTOR_FIELD_LEDGER"
-    result: dict[str, Any] = {"schema_version": "ice.homogeneous-closed-frw-starobinsky-p0-clock-boundary-local-ledger.result.v1", "calculation_id": CALCULATION_ID, "numbered_phase": None, "run_status": "VALID_RUN", "verdict": verdict, "programme_impact": cfg["decision_table"][0 if passed else 1]["programme_impact"], "input_manifest": {"path": INPUT_RELPATH, "sha256": digest(raw)}, "upstream_results": [{"path": item["path"], "sha256": item["sha256"], "payload_sha256_without_self": item["payload_sha256_without_self"], "verdict": item["required_verdict"]} for item in cfg["upstream_results"]], "primary_sources": cfg["primary_sources"], "declared_conventions": cfg["declared_conventions"], "exact_checks": audit.exact, "numerical_checks": audit.numerical, "theorem_guards": audit.guards, "check_summary": {"exact_passed": sum(item["passed"] for item in audit.exact), "exact_total": len(audit.exact), "numerical_passed": sum(item["passed"] for item in audit.numerical), "numerical_total": len(audit.numerical), "theorem_guard_count": len(audit.guards), "all_executable_checks_passed": passed}, "numerical_calculation": {"derived_boundary_representatives": rows, "scope": "instantaneous local vector-field representatives only; no trajectory integration or crossing census"}, "required_fail_closed_outputs": nulls(), "resource_accounting": {"root_calls": 0, "quadratures": 0, "ode_calls": 0, "automatic_descendants": 0, "automatic_next": None}, "runner": {"path": RUNNER_RELPATH, "sha256": digest(Path(__file__).read_bytes())}, "environment": {"python": platform.python_version(), "sympy": sp.__version__, "mpmath": mpmath.__version__}}
+    result: dict[str, Any] = {"schema_version": "ice.homogeneous-closed-frw-starobinsky-time-symmetric-clock-boundary-local-ledger.result.v1", "calculation_id": CALCULATION_ID, "numbered_phase": None, "run_status": "VALID_RUN", "verdict": verdict, "programme_impact": cfg["decision_table"][0 if passed else 1]["programme_impact"], "input_manifest": {"path": INPUT_RELPATH, "sha256": digest(raw)}, "upstream_results": [{"path": item["path"], "sha256": item["sha256"], "payload_sha256_without_self": item["payload_sha256_without_self"], "verdict": item["required_verdict"]} for item in cfg["upstream_results"]], "primary_sources": cfg["primary_sources"], "declared_conventions": cfg["declared_conventions"], "exact_checks": audit.exact, "numerical_checks": audit.numerical, "theorem_guards": audit.guards, "check_summary": {"exact_passed": sum(item["passed"] for item in audit.exact), "exact_total": len(audit.exact), "numerical_passed": sum(item["passed"] for item in audit.numerical), "numerical_total": len(audit.numerical), "theorem_guard_count": len(audit.guards), "all_executable_checks_passed": passed}, "numerical_calculation": {"derived_boundary_representatives": rows, "scope": "instantaneous local vector-field representatives only; no trajectory integration or crossing census"}, "required_fail_closed_outputs": nulls(), "resource_accounting": {"root_calls": 0, "quadratures": 0, "ode_calls": 0, "automatic_descendants": 0, "automatic_next": None}, "runner": {"path": RUNNER_RELPATH, "sha256": digest(Path(__file__).read_bytes())}, "environment": {"python": platform.python_version(), "sympy": sp.__version__, "mpmath": mpmath.__version__}}
     result["result_payload_sha256_without_self"] = digest(canonical(result))
     encoded = canonical(result)
     if len(encoded) > ARTIFACT_CAP:
         raise AssertionError("result artifact cap exceeded")
     Path(__file__).with_name(RESULT_NAME).write_bytes(encoded)
-    print("HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_P0_CLOCK_BOUNDARY_LOCAL_LEDGER_RESULT=" + json.dumps({"run_status": "VALID_RUN", "verdict": verdict, "exact": result["check_summary"]["exact_total"], "numerical": result["check_summary"]["numerical_total"], "theorem_guards": result["check_summary"]["theorem_guard_count"], "result_sha256": digest(encoded), "result_size_bytes": len(encoded), "automatic_next": None}, sort_keys=True, separators=(",", ":")))
+    print("HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TIME_SYMMETRIC_CLOCK_BOUNDARY_LOCAL_LEDGER_RESULT=" + json.dumps({"run_status": "VALID_RUN", "verdict": verdict, "exact": result["check_summary"]["exact_total"], "numerical": result["check_summary"]["numerical_total"], "theorem_guards": result["check_summary"]["theorem_guard_count"], "result_sha256": digest(encoded), "result_size_bytes": len(encoded), "automatic_next": None}, sort_keys=True, separators=(",", ":")))
 
 
 if __name__ == "__main__":

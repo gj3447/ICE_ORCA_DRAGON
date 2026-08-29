@@ -1,6 +1,6 @@
 {
-  "schema_version": "ice.homogeneous-closed-frw-starobinsky-p0-clock-boundary-local-ledger.input.v1",
-  "calculation_id": "HomogeneousClosedFrwStarobinskyP0ClockBoundaryLocalLedger",
+  "schema_version": "ice.homogeneous-closed-frw-starobinsky-time-symmetric-clock-boundary-local-ledger.input.v1",
+  "calculation_id": "HomogeneousClosedFrwStarobinskyTimeSymmetricClockBoundaryLocalLedger",
   "numbered_phase": null,
   "question": "At the already exported three Starobinsky phi-star values, what local N=1 vector-field facts follow on the algebraically derived P=0, y=2 and y=3 clock-boundary representatives, without selecting an initial state or integrating a trajectory?",
   "kind": "EXACT_HOMOGENEOUS_HAMILTON_VECTOR_FIELD_AND_BOUNDED_DERIVED_BOUNDARY_REPRESENTATIVE_LEDGER",
