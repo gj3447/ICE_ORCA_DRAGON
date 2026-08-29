@@ -60,25 +60,32 @@ structure functions를 대신하지 않으며, 6의 background 표도 primordial
 
 ## 2026-08-29 실행 갱신
 
-일곱 개의 새 번호 없는 계산을 각각 clean definition commit 뒤 `./ice run`으로 실행하고, committed
-result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. 일곱 재현 모두 `REPRO`,
+아홉 개의 새 번호 없는 계산을 각각 clean definition commit 뒤 `./ice run`으로 실행하고, committed
+result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. 아홉 재현 모두 `REPRO`,
 `needs-attention 0`이었다.
 
 | 연결부 | 실제로 계산된 것 | 관측 결과 | 줄어든 장애물 | 그대로 남은 장애물 |
 |---|---|---|---|---|
 | 1 raw-\(C\) zero shell | `raw_c_zero_shell_transversality_jacobian` | 5개 root에서 \(F_\kappa\ne0\), weighted Mellin norm과 5회 quadrature 일치, 조건부 \(1/|\lambda'|\approx0.0641\)–\(0.0747\); boolean 9/9, numerical 3/3 | 선언한 5개 root의 local simplicity와 local weight 후보를 수치로 고정 | \(F_\lambda\)는 moving-boundary Lagrange identity에 조건부다. nonzero-\(\lambda\) Weyl solve, global spectral measure, test space, rigging map과 RAQ는 null |
 | 1 raw-\(C\) nonzero-\(\lambda\) local check | `raw_c_nonzero_lambda_weyl_flambda_check` | 두 \(Q_+\), 두 \(Q_-\), 세 차분 간격에서 직접 ODE를 풀어 조건부 정규화 \(F_\lambda\)와 최대 상대오차 \(2.66\times10^{-8}\); exact 4/4, numerical 40/40, ODE 4,305/4,500 | 이전의 conditional identity에 독립적인 finite-cutoff 수치 대조를 추가하고 Wronskian·cutoff 안정성을 고정 | 유한 WKB datum의 exact endpoint limit, 전역 spectral measure, direct-integral test space, rigging map, positivity와 RAQ는 여전히 null |
+| 1 raw-\(C\) real plus-tail control | `raw_c_plus_endpoint_liouville_green_tail_bound` | \(Q\ge4\), \(|\lambda|\le10^{-4}\), \(0\le\kappa\le8\)에서 exact 22/22, guard 3/3; \(V_{\rm analytic}=7.73285\times10^{-5}<V_{\rm bar}=9.44889\times10^{-5}\), \(E_{\rm bar}=4.72455\times10^{-5}\) | 무한대 recessive 조건을 \(Q_+=4\) datum으로 바꾸는 실수축 Liouville--Green tail 오차에 처음으로 명시적 균일 예산을 부여 | \(Q=4\to Q_0=-4\) validated transport, endpoint \(F/F_\lambda\), nonreal resolvent/Weyl \(m\), spectral measure, test space와 RAQ는 모두 null |
 | 2 closed \(S^3\) all-sector bookkeeping | `closed_s3_full_svt_spectral_ledger` | source-pinned scalar/transverse-vector/TT low-mode transport와 cutoff count; exact 37/37, theorem guard 5; \(N=8\) 총 1,341 modes | 세 sector의 rough/Hodge/명시적 Lichnerowicz convention, 저차 예외와 count 범위를 한 packet에 고정 | `FULL_SVT`는 세 sector를 모두 기록했다는 뜻뿐이다. explicit basis, chirality resolution, Gaunt/Clebsch--Gordan, ADM/HDA는 null |
 | 2 closed \(S^3\) cubic curvature packet | `closed_s3_zonal_conformal_curvature_cubic_vertex_ledger` | \(Q_2\) 및 \(Q_1+Q_2\) conformal packet의 \(\sqrt qR\)를 cubic까지 exact 전개; exact 52/52. 두 packet 모두 \(N=2\) 밖 quadratic·cubic tail이 nonzero | 하나의 spatial-curvature subvertex와 비선형 hard-cutoff leakage를 정확한 계수로 고정 | zonal conformal sector 하나뿐이다. full kinetic/shear, matter, lapse/shift, nonzonal/SVT Gaunt, full ADM constraint와 HDA/Jacobi는 null |
 | 2 closed \(S^3\) restricted kinetic packet | `closed_s3_zonal_conformal_trace_kinetic_cubic_vertex_ledger` | fixed-\(a\) trace cotangent ansatz에서 canonical \(\Pi\)와 DeWitt factor \(-2\pi G/(3a^3)\)를 고정하고 두 packet을 cubic까지 전개; exact 42/42, 두 \(N=2\) tail 모두 nonzero | curvature packet과 별개인 pure-trace kinetic subvertex 및 cutoff leakage를 정확한 계수로 고정 | \((a,p_a)\), tracefree/shear, matter, lapse/shift와 nonzonal/SVT가 빠진 restricted submanifold다. 두 packet을 합쳐도 full ADM/HDA가 아니다 |
+| 2 closed \(S^3\) restricted \(V=0\) scalar-matter packet | `closed_s3_zonal_conformal_v0_scalar_matter_cubic_vertex_ledger` | fixed-\(a\) conformal metric과 scalar cotangent ansatz에서 normal-constraint matter density를 cubic까지 전개; exact 39/39, guard 3/3. aligned \(Q_2\) packet의 \(Q_4\) cubic tail은 항상 nonzero이고 \(Q_6\) tail도 일반적으로 nonzero | curvature·trace-kinetic과 구분된 한 \(V=0\) scalar-matter normal subvertex와 hard-cutoff leakage를 exact coefficient로 고정 | matter shift/momentum constraint, \((a,p_a)\), shear, lapse/shift, nonzonal SVT와 실제 ADM/HDA/Jacobi는 null |
 | 5–6 \(V\ne0\) two-clock domain | `homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit` | \(C_V=0=P\)에서 real-\(p\) domain \(y=e^QV\le3\), scalar-clock zero \(y=3\), \(P\)-clock FP zero \(y=2\), \(Q\)-clock factor zero; exact 12/12 | 이전의 잘못된 informal \(y=3/2\) 값을 제거하고 두 clock chart의 서로 다른 고전 경계를 고정 | 실제 trajectory가 어느 locus를 통과하는지, complete observable, quantum clock map, physical product, BO/decoherence와 likelihood는 null |
 | 5–6 \(V\ne0\) local clock-boundary field | `homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger` | 세 pinned \(\phi_*\) decimal representative에서 \(y=2\)의 두 \(p\) branch는 반대 부호의 \(|\dot y|\approx(5.08,4.65,4.28)\times10^{-7}\), \(y=3,P=p=0\)은 \(\dot y=0\); exact 10/10, numerical 36/36 | \(P=0\) 제약면의 국소 transversality/tangency와 Hamilton vector field를 고정 | 대표점은 초기조건이 아니다. trajectory selection·integration·crossing, complete observable, quantum clock, BO/decoherence와 likelihood는 null |
 
-이 갱신은 세 갈래를 완성하지 않았다. 다음 독립 질문은 각각 (a) 유한-cutoff 대조를 exact endpoint
-control과 전역 spectral/test-space 자료로 올릴 수 있는가, (b) 명시적 저차 nonzonal SVT representative와
-Gaunt data, scale/shear·matter·lapse/shift 항을 합쳐 실제 off-shell ADM coefficient를 구성하는가, (c) 물리적
+이 갱신은 세 갈래를 완성하지 않았다. 다음 독립 질문은 각각 (a) 현재 real plus-tail bound를
+검증된 \([-4,4]\) transport와 nonreal resolvent·전역 spectral/test-space 자료로 올릴 수 있는가,
+(b) 명시적 저차 nonzonal SVT representative와 Gaunt data, scale/shear·matter·lapse/shift 항을 합쳐
+실제 off-shell ADM coefficient를 구성하는가, (c) 물리적
 해석과 분리된 명시적 seed protocol을 먼저 선언한 뒤에만 Starobinsky trajectory crossing을 적분할 것인가이다.
 어느 결과도 다른 질문의 실행 또는 물리적 승격을 자동 승인하지 않는다.
+
+raw-\(C\)의 정확한 남은 인증 순서와 현재 interval/ball ODE dependency 공백은
+[`RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md`](RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md)에
+분리했다.
 
 Starobinsky local ledger의 최초 `..._p0_...` 경로는 제어면의 numbered-phase token 검사에 의해 Python
 실행 전에 차단됐다. 이를 무번호 의미가 명백한 `..._time_symmetric_...`로 rename·commit한 뒤 실행했으며,
@@ -87,8 +94,9 @@ Starobinsky local ledger의 최초 `..._p0_...` 경로는 제어면의 numbered-
 ## 의존성 지도
 
 ```text
-1 raw-C global operator / RAQ
-  └─► 1.4 rescaling-equivalence comparison
+1 raw-C global operator
+  └─► 1.3 endpoint/spectral certification ─► 1.4 RAQ
+        └─► 1.5 rescaling-equivalence comparison
 
 2 ADM + S3 harmonic constraints
   └─► 2.4 cubic HDA/Jacobi + cutoff remainder
@@ -137,27 +145,38 @@ Starobinsky local ledger의 최초 `..._p0_...` 경로는 제어면의 numbered-
 | 실패 의미 | 그 family가 전역 operator를 정의하지 못함. 다른 family의 부재를 뜻하지 않는다 |
 | 의존성 | 1.1 |
 
-### 1.3 `raw_c_raq_zero_fiber`
+### 1.3 `raw_c_endpoint_spectral_certification`
 
 | 항목 | 내용 |
 |---|---|
-| 입력 | 1.2 operator, dense test space, lapse/group-average regularization, physical sesquilinear-form convention |
+| 입력 | 1.2 operator, real plus-tail bound, selected boundary condition, real/complex spectral-parameter boxes |
+| 계산 | validated \(Q_+\to Q_0\) transport와 endpoint \(F/F_\lambda\) enclosure를 먼저 만들고, 별도 nonreal resolvent에서 Weyl \(m\)-함수·spectral transform 자료를 검사 |
+| 출력 | real endpoint enclosure, unresolved subboxes, nonreal resolvent/\(m\)-function ledger와 선언한 extension의 spectral measure 후보 |
+| 성공 의미 | 선택한 extension과 parameter scope 안에서 RAQ가 참조할 spectral data가 인증됨 |
+| 실패 의미 | tail, compact transport, complex resolvent 또는 boundary-value 단계 중 닫히지 않는 위치를 기록함. 실수 root 표만으로 spectral measure를 선언하지 않음 |
+| 의존성 | 1.2; 상세 순서는 `RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md` |
+
+### 1.4 `raw_c_raq_zero_fiber`
+
+| 항목 | 내용 |
+|---|---|
+| 입력 | 1.2 operator, 1.3 spectral data, dense test space, lapse/group-average regularization, physical sesquilinear-form convention |
 | 계산 | spectral/distributional zero fiber, rigging form positivity, null quotient와 candidate observable action을 검사 |
 | 출력 | RAQ form, its null space, regularization dependence ledger |
 | 성공 의미 | 선언한 operator와 test space에 대한 physical-form 후보가 정의된다 |
 | 실패 의미 | zero fiber가 singular하거나 form이 positive/finite가 아님을 기록한다 |
-| 의존성 | 1.2 |
+| 의존성 | 1.2, 1.3 |
 
-### 1.4 `constraint_rescaling_quantum_comparison`
+### 1.5 `constraint_rescaling_quantum_comparison`
 
 | 항목 | 내용 |
 |---|---|
-| 입력 | 1.3 raw-(C) RAQ data, 비교 대상 (H=fC)의 domain/RAQ data, 허용 intertwiner와 observable class |
+| 입력 | 1.4 raw-(C) RAQ data, 비교 대상 (H=fC)의 domain/RAQ data, 허용 intertwiner와 observable class |
 | 계산 | spectral multiplicity, zero-fiber measure, domain map, selected observable intertwining을 비교 |
 | 출력 | `EQUIVALENT_IN_DECLARED_CLASS`, `INEQUIVALENT_WITNESS`, 또는 `OPEN` |
 | 성공 의미 | 명시한 class 안에서만 양자 동치 또는 반례가 나온다 |
 | 실패 의미 | 비교에 필요한 domain/observable이 정의되지 않았음을 뜻한다 |
-| 의존성 | 1.3 및 비교 대상의 독립 domain audit |
+| 의존성 | 1.4 및 비교 대상의 독립 domain audit |
 
 ## 2. closed (S^3) ADM constraint와 cutoff remainder
 
