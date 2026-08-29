@@ -427,6 +427,24 @@ export const reproCases = [
       "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "closed_s3_zonal_conformal_curvature_cubic_vertex_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_zonal_conformal_curvature_cubic_vertex_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "raw_c_nonzero_lambda_weyl_flambda_check",
+    script:
+      "cpt_temporal_folded_susy/raw_c_nonzero_lambda_weyl_flambda_check.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 

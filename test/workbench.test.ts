@@ -145,6 +145,14 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "raw_c_zero_shell_transversality_jacobian",
       "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_RESULT.json"
+    ],
+    [
+      "closed_s3_zonal_conformal_curvature_cubic_vertex_ledger",
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_LEDGER_RESULT.json"
+    ],
+    [
+      "raw_c_nonzero_lambda_weyl_flambda_check",
+      "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_RESULT.json"
     ]
   ])
 
