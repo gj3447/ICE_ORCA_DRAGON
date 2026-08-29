@@ -1,7 +1,7 @@
-# Homogeneous closed-FRW Starobinsky two-clock FP-domain audit — draft
+# Homogeneous closed-FRW Starobinsky two-clock FP-domain audit
 
-Status: unnumbered bounded exact runner draft. It has not been run, produces no
-committed result in this change, and does not authorize a successor calculation.
+Status: executed unnumbered bounded exact audit. It does not authorize a
+successor calculation.
 
 ## Pinned inputs and scope
 
@@ -92,7 +92,22 @@ clocks; BO/decoherence; SVT/ADM/HDA; BFV anomaly freedom; CLASS/Cobaya inputs;
 and likelihood or physical claims. The pinned background export cannot resolve
 the trajectory-crossing null because it has no \(Q,P,p\) data.
 
-No command has been run for this draft.
+## Observed execution
+
+The definition was committed before execution and run only through the
+repository control plane:
+
+```text
+./ice run homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit
+VALID_RUN; 12/12 executable exact checks; 2 theorem/scope guards
+KEEP_HOMOGENEOUS_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_IDENTITIES_NOT_COMPLETE_OR_QUANTUM_OBSERVABLES
+```
+
+The actual result SHA-256 is
+`a7d7816992ca1c30a21276bfb2a9ccb3e68f31ae9608f15187a7241a5e7b102b`.
+The run confirmed the scalar-clock zero at \(y=3\), the \(P\)-clock FP zero at
+\(y=2\), and the failure of \(Q\) as a clock on \(P=0\).  It did not determine
+whether any trajectory crosses either locus.
 
 ## Runner outcome protocol
 
@@ -102,5 +117,5 @@ SHA-256, run status, verdict, and payload-without-self hash. A passing exact
 ledger selects the stated `KEEP` verdict; any failed executable check selects
 the input's `KILL` verdict. The emitted result is designed to carry a canonical
 payload-without-self hash, while the concise stdout summary separately prints
-the SHA-256 of the serialized outer result. Neither hash is produced by this
-unexecuted draft.
+the SHA-256 of the serialized outer result. Both hashes are present in the
+committed result and were checked against the bytes written to disk.
