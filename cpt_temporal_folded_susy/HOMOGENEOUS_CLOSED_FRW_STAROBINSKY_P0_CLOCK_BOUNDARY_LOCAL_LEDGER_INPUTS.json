@@ -1,0 +1,41 @@
+{
+  "schema_version": "ice.homogeneous-closed-frw-starobinsky-p0-clock-boundary-local-ledger.input.v1",
+  "calculation_id": "HomogeneousClosedFrwStarobinskyP0ClockBoundaryLocalLedger",
+  "numbered_phase": null,
+  "question": "At the already exported three Starobinsky phi-star values, what local N=1 vector-field facts follow on the algebraically derived P=0, y=2 and y=3 clock-boundary representatives, without selecting an initial state or integrating a trajectory?",
+  "kind": "EXACT_HOMOGENEOUS_HAMILTON_VECTOR_FIELD_AND_BOUNDED_DERIVED_BOUNDARY_REPRESENTATIVE_LEDGER",
+  "epistemic_scope": "CLASSICAL_LOCAL_P0_CONSTRAINT_BOUNDARY_VECTOR_FIELD_IDENTITIES_ONLY_NOT_TRAJECTORY_INITIAL_DATA_OR_CROSSING_EVIDENCE",
+  "upstream_results": [
+    {"path": "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json", "sha256": "af6334f0c8a3f745ecfedd37280a8cae457f2ec7adfb5effb3b33f29dbc193e1", "payload_sha256_without_self": "cfc38115ef0781eaddf3c398e82f1319bc032997e61091b3ef3add33e3994104", "required_verdict": "KEEP_STAROBINSKY_LEADING_SLOW_ROLL_BACKGROUND_EXPORT_NOT_CLOSED_EVOLUTION_OR_LIKELIHOOD", "role": "pins M and exactly three exported phi_star values; it supplies no closed-FRW trajectory or initial-condition selection"},
+    {"path": "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT_RESULT.json", "sha256": "a7d7816992ca1c30a21276bfb2a9ccb3e68f31ae9608f15187a7241a5e7b102b", "payload_sha256_without_self": "2027f1ed6b64479c018cb01a6d89bf3e46eb5d8a732875fd57a1fd094bd0f6f3", "required_verdict": "KEEP_HOMOGENEOUS_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_IDENTITIES_NOT_COMPLETE_OR_QUANTUM_OBSERVABLES", "role": "pins the closed-FRW constraint, canonical convention, P=0 family, and y=2/y=3 clock-boundary identities"}
+  ],
+  "primary_sources": [
+    {"source": "J. J. Halliwell and S. W. Hawking, Origin of Structure in the Universe, Phys. Rev. D 31 (1985) 1777", "url": "https://doi.org/10.1103/PhysRevD.31.1777", "used_for": "closed-universe minisuperspace context", "not_used_for": "selecting a homogeneous cosmological initial state or establishing a trajectory"},
+    {"source": "A. A. Starobinsky, A new type of isotropic cosmological models without singularity, Phys. Lett. B 91 (1980) 99-102", "url": "https://doi.org/10.1016/0370-2693(80)90670-X", "used_for": "the potential context", "not_used_for": "a closed-FRW trajectory, bounce completion, or likelihood"}
+  ],
+  "declared_conventions": {
+    "lapse": "N=1 only; a positive lapse rescales the displayed local vector field and does not select an orbit",
+    "canonical_pairs": "{Q,P}={phi,p}=1 and cross brackets vanish",
+    "potential": "V(phi)=3*M^2/4*(1-exp(-sqrt(2/3)*phi))^2",
+    "constraint": "C=-exp(-3Q/2)*P^2/(6*pi^2)+exp(-3Q/2)*p^2/(4*pi^2)-6*pi^2*exp(Q/2)+2*pi^2*exp(3Q/2)*V(phi)",
+    "classification_variable": "y=exp(Q)*V(phi)",
+    "P0_constraint_family": "p^2=8*pi^4*exp(2Q)*(3-y), y<=3",
+    "derived_representatives": "for each pinned phi_star and y in {2,3}: P=0, Q=log(y/V(phi_star)); at y=2 use both p signs, at y=3 p=0",
+    "numeric_precision_digits": 70
+  },
+  "tasks": [
+    "verify both upstream result hashes, payload hashes, verdicts, and the exact exported pivot labels 50,55,60",
+    "derive the N=1 Hamilton equations and the P=0 constraint family",
+    "derive ydot=exp(-Q/2)*(-2*P*V+3*p*V_prime)/(6*pi^2), then prove y=2 representatives are transverse and y=3 representatives tangent at the displayed instant",
+    "prove dC/dt={C,C}=0 symbolically for the displayed autonomous Hamilton flow",
+    "evaluate the derived y=2 plus/minus-p and y=3 p=0 representatives for all three pinned phi_star values, checking constraint residuals, y reconstruction, branch/parity, and local ydot facts",
+    "leave trajectories and crossing claims null; make no ODE call"
+  ],
+  "resource_caps": {"wall_clock_seconds": 120, "stdout_bytes": 262144, "stderr_bytes": 262144, "changed_artifact_files": 12, "changed_artifact_bytes": 1000000, "root_calls": 0, "quadratures": 0, "ode_calls": 0, "automatic_descendants": 0},
+  "tolerances": {"constraint_relative": "1e-50", "y_reconstruction_absolute": "1e-50", "p_sign_symmetry_relative": "1e-50", "tangent_absolute": "1e-50", "minimum_transverse_abs_ydot": "1e-30"},
+  "required_fail_closed_outputs": {"trajectory_initial_condition_selection": null, "trajectory_integration": null, "trajectory_locus_crossing": null, "complete_relational_observables": null, "quantum_clock_change_map": null, "physical_inner_product": null, "born_oppenheimer_or_decoherence": null, "class_or_cobaya_input": null, "empirical_likelihood": null, "full_scalar_vector_tensor_or_adm_hda": null, "quantum_bfv_anomaly_freedom": null, "physics_claim": null, "TOE_claim": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "automatic_next": null},
+  "decision_table": [
+    {"condition": "all upstream pins and symbolic/numerical local boundary checks pass", "verdict": "KEEP_LOCAL_P0_CLOCK_BOUNDARY_VECTOR_FIELD_LEDGER_NOT_TRAJECTORY_EVIDENCE", "programme_impact": "RECORD_DERIVED_BOUNDARY_TRANSVERSALITY_AND_TANGENCY_ONLY_WITHOUT_SELECTING_INITIAL_DATA"},
+    {"condition": "any pin, algebraic identity, or representative residual/control fails", "verdict": "KILL_LOCAL_P0_CLOCK_BOUNDARY_VECTOR_FIELD_LEDGER", "programme_impact": "DO_NOT_USE_THIS_LOCAL_BOUNDARY_LEDGER"}
+  ]
+}
