@@ -400,6 +400,33 @@ export const reproCases = [
       "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
     policy: "portable",
     compare: tight
+  },
+  {
+    name: "closed_s3_full_svt_spectral_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_full_svt_spectral_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit",
+    script:
+      "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit.py",
+    output:
+      "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "raw_c_zero_shell_transversality_jacobian",
+    script:
+      "cpt_temporal_folded_susy/raw_c_zero_shell_transversality_jacobian.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_RESULT.json",
+    policy: "portable",
+    compare: tight
   }
 ] as const satisfies ReadonlyArray<ReproCase>
 

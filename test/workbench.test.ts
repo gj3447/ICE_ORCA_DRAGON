@@ -133,6 +133,18 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "closed_s3_zonal_scalar_convolution_cutoff_ledger",
       "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json"
+    ],
+    [
+      "closed_s3_full_svt_spectral_ledger",
+      "cpt_temporal_folded_susy/CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT.json"
+    ],
+    [
+      "homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit",
+      "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT_RESULT.json"
+    ],
+    [
+      "raw_c_zero_shell_transversality_jacobian",
+      "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_RESULT.json"
     ]
   ])
 
