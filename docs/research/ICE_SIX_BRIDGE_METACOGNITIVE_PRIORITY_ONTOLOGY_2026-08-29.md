@@ -34,8 +34,10 @@
 
 ## 1. 우선순위 결론
 
-현재 가장 빠른 1순위는 raw-\(C\)의 **differentiated plus-tail와 node-safe
-\(F,F_\lambda\) 검증**이다. 이유는 다음과 같다.
+현재 가장 빠른 1순위는 raw-\(C\)의 **node-safe sensitivity transport와 이후의
+정규화된 \(F,F_\lambda\) 검증**이다. scale-invariant differentiated plus-tail
+datum은 정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐다. 이유는
+다음과 같다.
 
 - 이미 선언해 둔 candidate self-adjoint boundary line, coarse root, finite-cutoff
   \(F_\lambda\) 대조와 real plus-tail bound가 있다.
@@ -52,7 +54,7 @@
 
 | 순위 | 목표 | 현재 상태 | 성공 게이트 | 실패·반증 출력 | 후속 연결 |
 |---:|---|---|---|---|---|
-| P1 | raw-\(C\) differentiated tail와 node-safe \(F,F_\lambda\) | **부분 돌파**: \(\lambda=0\) exact transport와 실근 존재 구간 5개 ball 인증 | \(\partial_\lambda\) tail datum + node crossing을 포함한 outward enclosure | tail derivative 미봉입, chart denominator가 0 포함, enclosure 비중첩/폭발 | P4 |
+| P1 | raw-\(C\) node-safe sensitivity transport와 정규화된 \(F,F_\lambda\) | **부분 돌파**: \(\lambda=0\) exact transport·실근 존재 구간 5개와 그 구간 전체의 scale-invariant \(h(4)\) ball 인증 | certified \(h(4)\)를 node crossing 전체에서 \(Q_0=-4\)까지 전달한 outward enclosure; amplitude 전에는 별도 normalization | chart denominator가 0 포함, 안전한 chart 전환 실패, enclosure 비중첩/폭발, normalization drift | P4 |
 | P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; 현재는 restricted zonal subvertices뿐 | scalar/vector/TT와 lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, 누락 sector, cutoff tail 미측정 | P3 |
 | P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | 오픈 | full-before-project bracket, Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
 | P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5 |
@@ -129,13 +131,14 @@ theorem/convention과 inclusion arithmetic의 1차 출처다. 실수성은 단�
 |---|---|
 | `CLOSED_NARROW` | \(\lambda=0\) real recessive direction의 exact \(+\infty\to Q_0\) 표현 |
 | `CLOSED_NARROW` | 선언한 다섯 bracket 각각의 실수 sign-changing root 존재 |
+| `CLOSED_NARROW` | 같은 다섯 bracket 전체에서 scale-invariant \(h(4)=\partial_\lambda[-u'/u]_{\lambda=0}\) outward enclosure |
 | `OPEN` | 각 bracket의 root uniqueness와 \([0,8]\) 전체 census completeness |
-| `OPEN_P1` | parameter-differentiated plus-tail boundary datum |
-| `OPEN_P1` | node-safe validated propagation과 endpoint \(F_\lambda\) enclosure |
+| `OPEN_P1` | certified \(h(4)\)의 node-safe \(Q=4\to-4\) validated propagation |
+| `OPEN_P1` | 명시적 plus-end amplitude normalization 뒤의 endpoint \(F_\lambda\) enclosure |
 | `OPEN_P4` | nonreal Weyl \(m\), spectral measure, test space, rigging map, RAQ |
 | `NULL` | raw-\(C\)/selected-\(H\) quantum equivalence, physics, quantum gravity, TOE |
 
-### 바로 다음의 가장 작은 독립 계산
+### 이번에 닫힌 scale-invariant tail datum
 
 \(v=\partial_\lambda u|_{\lambda=0}\)는, 먼저 \(\lambda\)-의존
 normalization을 고정했을 때,
@@ -154,16 +157,47 @@ A_\lambda=6\pi^2e^{3Q/2}
 예를 들어 \(u_\lambda/w_\lambda\to1\) 같은 plus-end normalization과
 \(w_\lambda\)의 action 기준점을 먼저 고정해야 한다.
 
-가장 작은 다음 계산은 amplitude보다 scale-invariant인
+amplitude보다 scale-invariant인
 
 \[
 g=-u'/u,\qquad h=\partial_\lambda g,
 \qquad h'=2gh-A_\lambda
 \]
 
-의 \(Q\ge4\) differentiated Volterra/Riccati tail enclosure 하나다. 기존 tail
-theorem은 이 \(h(4)\) 오차를 주지 않는다. 그 계산이 닫힌 뒤 node를 통과하는
-Prüfer/projective atlas로 민감도를 전달한다. 한 가능한 chart는
+에 대해 plus-end 조건은 \(h(\infty)=0\)이 아니라
+\(u(Q)^2h(Q)\to0\)이다. 따라서 정확히 \(\lambda=0\)에서
+
+\[
+h(Q)=u(Q)^{-2}\int_Q^\infty A_\lambda(s)u(s)^2\,ds>0.
+\]
+
+\(C=6\pi^2\), \(x=Ce^Q\), \(u=K_{i\kappa}(x)\)를 쓰면
+
+\[
+h(4;\kappa)=\frac{1}{\sqrt C\,K_{i\kappa}(x_+)^2}
+\int_{x_+}^{\infty}\sqrt{x}\,K_{i\kappa}(x)^2\,dx.
+\]
+
+`raw_c_lambda_zero_differentiated_plus_tail`은 이 항등식, rigorous finite
+`acb.integral`, DLMF 10.32.9에서 따온 별도 analytic tail bound를 결합했다.
+clean bounded run에서 exact 9/9, Arb-ball 70/70, theorem/scope guard 6개가
+통과했다. 다섯 root bracket 전체에서 \(h(4)\)는
+
+\[
+3.6942432085987834 < h(4;\kappa)
+< 3.6942535712156082
+\]
+
+안에 있고, 개별 enclosure 폭은 \(3.34\times10^{-26}\)에서
+\(4.62\times10^{-26}\), analytic tail upper bound는 모두
+\(6.02\times10^{-28}\)보다 작다. 80/120-digit 결과는 같은 backend의
+precision refinement이지 독립 구현이 아니다. 격리 재현은 `REPRO`,
+needs-attention 0이다.
+
+### 바로 다음의 가장 작은 독립 계산
+
+이제 가장 작은 다음 계산은 위의 certified \(h(4)\) ball을 node를 통과하는
+Prüfer/projective atlas로 \(Q_0=-4\)까지 전달하는 것이다. 한 가능한 chart는
 
 \[
 u=\rho\sin\theta,\qquad u'=\rho\cos\theta,
@@ -197,9 +231,9 @@ u=\rho\sin\theta,\qquad u'=\rho\cos\theta,
 [Brown--McCormack--Marletta](https://onlinelibrary.wiley.com/doi/10.1002/%28SICI%291522-2616%28200005%29213%3A1%3C17%3A%3AAID-MANA17%3E3.0.CO%3B2-R)다.
 이 문헌들은 현재 fiber의 \(F_\lambda\)를 대신 계산하지 않는다.
 
-P1의 fail-closed 조건은 다음과 같다.
+이 다음 P1 transport의 fail-closed 조건은 다음과 같다.
 
-- differentiated tail variation이 적분 가능하거나 작다는 증명이 없음;
+- 입력 \(h(4)\) ball 또는 local ODE remainder를 누락함;
 - plus-end normalization을 선언하지 않은 채 amplitude \(F_\lambda\)를 출력함;
 - interval chart의 denominator가 0을 포함하고 안전한 chart 전환도 없음;
 - refinement/precision 증가 시 enclosure가 중첩하지 않음;

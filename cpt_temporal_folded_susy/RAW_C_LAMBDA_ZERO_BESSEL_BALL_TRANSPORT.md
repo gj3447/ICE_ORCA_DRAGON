@@ -164,12 +164,16 @@ g=-u'/u,\qquad h=\partial_\lambda g,
 \qquad h'=2gh-A_\lambda,
 \]
 
-and certify only the differentiated plus-tail enclosure for \(h(4)\). A
-later calculation can propagate that datum through node crossings with an
-unwrapped Prüfer/projective atlas. An amplitude \(F_\lambda\) requires an
-explicit plus-end normalization as well. Until those separate steps succeed,
-\(F_\lambda\), nonreal Weyl data, the raw-\(C\) spectral measure, and RAQ
-remain explicit nulls.
+and certify only the differentiated plus-tail enclosure for \(h(4)\). That
+separate successor is now recorded in
+[`RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL.md`](RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL.md):
+it rigorously encloses the scale-invariant \(h(4)\) datum on all five brackets.
+It does not retroactively add a derivative to this run. The next calculation
+must propagate that datum through node crossings with an unwrapped
+Prüfer/projective atlas. An amplitude \(F_\lambda\) still requires an explicit
+plus-end normalization. Until those later steps succeed, \(F_\lambda\),
+nonreal Weyl data, the raw-\(C\) spectral measure, and RAQ remain explicit
+nulls.
 
 ## Provenance
 

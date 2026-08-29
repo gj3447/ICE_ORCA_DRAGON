@@ -81,13 +81,46 @@ special function으로 전달할 수 있다. 관측 결과는 exact 4/4, Arb bal
 \(F_\lambda\), nonzero-\(\lambda\) validated transport와 비실수 resolvent는
 닫지 않는다.
 
+### 같은 날 추가된 \(\lambda=0\) differentiated plus-tail datum
+
+번호 없는 `raw_c_lambda_zero_differentiated_plus_tail`은 direction의 임의
+amplitude에 무관한
+
+\[
+h(4;\kappa)=\left.\partial_\lambda[-u_Q/u]\right|_{\lambda=0}
+\]
+
+를 같은 다섯 root bracket 전체에서 봉입했다. 올바른 plus-end 조건은
+\(h(\infty)=0\)이 아니라 \(u^2h\to0\)이고, 이에 따라
+
+\[
+h(Q)=u(Q)^{-2}\int_Q^\infty A_\lambda(s)u(s)^2\,ds,
+\]
+
+\[
+h(4;\kappa)=\frac{1}{\sqrt{6\pi^2}\,K_{i\kappa}(x_+)^2}
+\int_{x_+}^\infty\sqrt{x}\,K_{i\kappa}(x)^2\,dx
+\]
+
+를 사용했다. finite part는 rigorous `acb.integral`, improper tail은
+DLMF 10.32.9의 integral representation으로부터 얻은 별도 analytic bound로
+감쌌다. 실행 결과는 exact 9/9, Arb-ball 70/70, theorem/scope guard 6개다.
+다섯 개별 enclosure는 모두 양수이고 전체 범위는 약
+\(3.6942432085987834\)에서 \(3.6942535712156082\), 개별 폭은
+\(4.62\times10^{-26}\) 이하, analytic tail upper bound는
+\(6.02\times10^{-28}\) 이하이다. 격리 재현도 `REPRO`, needs-attention 0이다.
+
+이는 **정확히 \(\lambda=0\), 다섯 bracket에서의 \(h(4)\)**만 닫는다.
+node-safe \(Q=4\to-4\) 전달, nonzero-\(\lambda\) tail, 정규화된
+\(F_\lambda\), spectral/RAQ 출력은 그대로 열려 있다.
+
 ## 아직 끊긴 연결부
 
 현재 결과에서 다음 결론으로 가는 논리적 연결은 모두 비어 있다.
 
-1. nonzero-\(\lambda\)의 \(Q_+=4\to Q_0=-4\) 검증 transport와
-   parameter-differentiated tail datum; \(\lambda=0\) direction은 exact Bessel로
-   좁게 완료
+1. certified \(\lambda=0\) \(h(4)\)의 node-safe \(Q_+=4\to Q_0=-4\)
+   transport와 nonzero-\(\lambda\) differentiated tail; \(\lambda=0\) direction과
+   다섯 bracket의 scale-invariant plus-tail datum은 좁게 완료
 2. 그 enclosure가 포함하는 endpoint \(F\)와 \(F_\lambda\)의 rigorous bound
 3. \(\operatorname{Im}z>0\)에서 선택한 자기수반 extension의 resolvent와
    Weyl--Titchmarsh \(m(z)\)
@@ -105,19 +138,18 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
 
 ## 다음 최소 인증 단위
 
-가장 가까운 독립 질문은 “현재 tail theorem을 \(\lambda\)로 미분해
-scale-invariant \(h=\partial_\lambda[-u'/u]\)의 \(Q_+=4\) datum 하나를
-감쌀 수 있는가?”다. node-safe \([-4,4]\) 전달과 정규화된
-\(F_\lambda\)는 그 다음의 별도 계산이다. 다음 계산을 열 경우 최소 입력과
-출력은 다음처럼 고정한다.
+가장 가까운 독립 질문은 “이미 인증한 scale-invariant
+\(h(4)=\partial_\lambda[-u'/u]_{\lambda=0}\) ball을 실제 solution node를
+지나 \(Q_0=-4\)까지 outward-rounded 상태로 전달할 수 있는가?”다.
+정규화된 \(F_\lambda\) amplitude는 그 다음의 별도 계산이다. 다음 transport를
+열 경우 최소 입력과 출력은 다음처럼 고정한다.
 
 ### 입력
 
-- 현재 결과의 input/result/runner hash와 \(Q_+=4\) tail error budget
+- 현재 \(h(4)\) 결과의 input/result/runner hash와 다섯 certified ball
 - 선택한 real parameter box와 endpoint/boundary convention
-- Riccati tail equation \(g'=g^2-A\)와 differentiated equation
-  \(h'=2gh-A_\lambda\), 그리고 differentiated
-  Volterra/Liouville--Green remainder
+- forced sensitivity equation 또는 동치인 unwrapped Prüfer/projective
+  variational system과 그 local remainder
 - 후속 amplitude 계산을 위한 plus-end \(\lambda\)-normalization 후보; 이
   계산은 normalization을 선택하지 않으면 \(h\)까지만 출력
 - overflow를 피하기 위한 scaling/projective chart와 chart-switch rule
@@ -133,7 +165,7 @@ scale-invariant \(h=\partial_\lambda[-u'/u]\)의 \(Q_+=4\) datum 하나를
   `UNRESOLVED_SUBBOX` 출력
 - direct integration, variational equation, finite difference 사이의 대조를
   하되 finite difference를 인증 근거로 사용하지 않는 구분
-- endpoint \(F,F_\lambda\)가 tail uncertainty와 transport uncertainty를 모두
+- endpoint sensitivity가 입력 tail uncertainty와 transport uncertainty를 모두
   포함하는지에 대한 fail-closed check
 - recessive direction만 고정한 상태에서 normalization-dependent
   \(F_\lambda\) amplitude를 출력하지 않는 guard
@@ -169,16 +201,17 @@ ODE truncation/wrapping과 chart switch가 자동 인증되지는 않는다. 다
   lock/source/version/rounding semantics와 작은 analytic anchor 회귀를 함께
   커밋한다.
 
-어느 경로도 differentiated tail datum을 대신하지 않는다. 해당 datum을 먼저
-해석적으로 봉입해야 한다. 새 dependency, 대형 계산 또는 descendant 실행은
-이 메모가 자동 승인하지 않는다.
+두 경로 모두 이제 확보한 differentiated tail datum을 **입력**으로 써야 하며,
+그 사실만으로 chart switch, compact transport 또는 normalization-dependent
+amplitude가 인증되지는 않는다. 새 dependency, 대형 계산 또는 descendant
+실행은 이 메모가 자동 승인하지 않는다.
 
 ## 이후 RAQ까지의 정확한 순서
 
 ```text
 real plus-tail bound                    완료(현재 좁은 범위)
   -> lambda=0 exact Bessel transport    완료(실수 direction과 5 existence brackets)
-    -> scale-invariant h tail datum     오픈
+    -> scale-invariant h tail datum     완료(lambda=0, 5 brackets의 h(4))
       -> node-safe h transport          오픈
         -> normalized F_lambda          오픈
       -> nonreal resolvent + Weyl m     오픈

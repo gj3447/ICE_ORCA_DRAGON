@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-29T12:50:00Z",
+  "updated_at_utc": "2026-08-29T15:40:30Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -509,9 +509,10 @@
     },
     {
       "question": "What did the first-priority raw-C calculation actually close?",
-      "answer": "Only at exactly lambda=0: the exact modified-Bessel recessive direction and at least one real sign-changing characteristic zero in each of five disjoint inherited ball-certified brackets. Root uniqueness/completeness, the scale-invariant differentiated tail datum, node-safe nonzero-lambda transport, normalized F_lambda, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
+      "answer": "Only at exactly lambda=0 and on five inherited brackets: the exact modified-Bessel recessive direction, at least one real sign-changing characteristic zero per bracket, and a rigorous normalization-invariant h(4)=partial_lambda[-u_Q/u] enclosure on every full bracket. Root uniqueness/completeness, node-safe Q=4-to--4 sensitivity transport, nonzero-lambda differentiated tails, normalized F_lambda, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
       "claim_ids": [
-        "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS"
+        "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
+        "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS"
       ]
     }
   ],
@@ -1253,18 +1254,22 @@
     },
     {
       "id": "reading-path:gate1-v0-metacognitive-priority-to-observation",
-      "title": "From the metacognitive priority map through the lambda-zero anchor to the observation gate",
-      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the completed lambda-zero ball anchor and its still-open differentiated endpoint step, then follow the independently startable nonreal spectral and S3/BFV lanes before relational and likelihood gates. Navigation only; it creates no automatic successor or physical promotion.",
+      "title": "From the metacognitive priority map through the lambda-zero tail datum to the observation gate",
+      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the completed lambda-zero ball anchor and differentiated h(4) tail datum, then stop at the still-open node-safe compact transport before following the independently startable nonreal spectral and S3/BFV lanes toward relational and likelihood gates. Navigation only; it creates no automatic successor or physical promotion.",
       "nodes": [
         "concept:gate1-v0-six-bridge-metacognitive-priority-map",
         "artifact:gate1-v0-six-bridge-metacognitive-priority-map",
         "concept:raw-c-validated-transport-certification-contract",
         "scope:gate1-v0-raw-c-validated-real-transport-p1",
-        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
         "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
         "scope:raw-c-lambda-zero-bessel-ball-transport",
         "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
         "evidence:raw-c-lambda-zero-bessel-ball-transport-result",
+        "concept:raw-c-lambda-zero-differentiated-plus-tail",
+        "scope:raw-c-lambda-zero-differentiated-plus-tail-five-root-brackets",
+        "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
+        "evidence:raw-c-lambda-zero-differentiated-plus-tail-result",
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
         "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
         "open:gate1-v0-classical-s3-hda-closure",
         "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
@@ -14141,10 +14146,10 @@
     {
       "id": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
       "type": "open_problem",
-      "title": "Raw-C differentiated plus-tail and node-safe endpoint transport",
-      "summary": "Priority 1 is only partially anchored: the lambda-zero exact Bessel direction and five existence brackets are complete, but a scale-invariant differentiated h tail datum, unwrapped node-safe compact transport, and explicitly normalized F_lambda amplitude remain missing. Nonreal spectral and RAQ outputs are separate open work.",
-      "state": "PRIORITY_1_PARTIALLY_ANCHORED_LAMBDA_ZERO_ONLY",
-      "question": "Can the declared raw-C real box first enclose h=partial_lambda[-u'/u] at Q=4 and then propagate it through every node and chart switch to Q=-4, before any explicitly normalized F_lambda amplitude is emitted?"
+      "title": "Raw-C node-safe sensitivity and normalized endpoint transport",
+      "summary": "Priority 1 has a closed-narrow lambda-zero h(4) datum on five certified brackets. The remaining compact problem is to propagate those balls through every node and chart switch from Q=4 to Q=-4; an explicitly normalized F_lambda amplitude and nonzero-lambda tails are later separate work. Nonreal spectral and RAQ outputs also remain open.",
+      "state": "PRIORITY_1_H_QPLUS_CLOSED_NARROW_NODE_SAFE_TRANSPORT_OPEN",
+      "question": "Can the five certified lambda-zero h(4) balls be propagated through every solution node and safe chart switch to Q=-4 with outward rounding, before any explicitly normalized F_lambda amplitude is emitted?"
     },
     {
       "id": "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
@@ -14220,7 +14225,7 @@
       "state": "TRACKED_RESEARCH_DECISION_MAP",
       "artifact_kind": "research_decision_map",
       "path": "docs/research/ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md",
-      "sha256": "766f18fdf89a04f7063d3dafdc28eb00106b21567951ce563c4ab9fb53a195aa"
+      "sha256": "221e267159646b4b645975eb7e5fa256c3c6b381ad75cf86440b95c833f9dda2"
     },
     {
       "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-inputs",
@@ -14256,11 +14261,11 @@
       "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-report",
       "type": "artifact",
       "title": "Raw-C lambda-zero Bessel ball transport report",
-      "summary": "Human-readable derivation, observed ball certificate, normalization caveat and remaining differentiated-tail boundary.",
+      "summary": "Human-readable derivation, observed ball certificate, normalization caveat and link to the completed differentiated-tail successor.",
       "state": "TRACKED_VALID_RUN_REPORT",
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT.md",
-      "sha256": "dddb792c0115369dd0c2c7d3988d9162a7227d508e6b83a1ce63000016da64c5"
+      "sha256": "90f2b7c13e23c7db8e778d8f04e9082c91fdd8837d50f26920bdd3fc13179e90"
     },
     {
       "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-evidence-snapshot",
@@ -14275,10 +14280,10 @@
     {
       "id": "source:nist-dlmf-modified-bessel-2026",
       "type": "source",
-      "title": "NIST DLMF modified-Bessel equation, symmetry, Wronskians and recurrences",
-      "summary": "CITES-only theorem and convention source for the exact lambda-zero reduction, recessive K branch, order/conjugation reality, Wronskian and derivative formulas; it does not supply repository ball enclosures or a raw-C operator conclusion.",
+      "title": "NIST DLMF modified-Bessel equation, identities and integral representation",
+      "summary": "CITES-only theorem and convention source for the exact lambda-zero reduction, recessive K branch, order/conjugation reality, Wronskian, derivative formulas and the 10.32.9 K integral used to derive the analytic h-tail bound; it does not supply repository ball enclosures or a raw-C operator conclusion.",
       "state": "PRIMARY_REFERENCE",
-      "citation": "NIST Digital Library of Mathematical Functions, sections 10.25 and 10.27--10.29.",
+      "citation": "NIST Digital Library of Mathematical Functions, sections 10.25, 10.27--10.29 and 10.32.9.",
       "uri": "https://dlmf.nist.gov/10",
       "version": "DLMF 1.2.7, 2026-06-15"
     },
@@ -14296,9 +14301,9 @@
       "id": "source:python-flint-acb-0-9-0",
       "type": "source",
       "title": "python-flint acb complex-ball interface",
-      "summary": "CITES-only locked software interface for FLINT/Arb complex-order Bessel balls; it is not a validated ODE theorem or evidence by itself.",
+      "summary": "CITES-only locked software interface for FLINT/Arb complex-order Bessel balls and rigorous finite acb.integral calls; it is not a validated ODE theorem, an improper-integral theorem or evidence by itself.",
       "state": "TECHNICAL_REFERENCE",
-      "citation": "python-flint acb complex-ball special-function interface.",
+      "citation": "python-flint acb complex-ball special-function and finite-integration interface.",
       "uri": "https://python-flint.readthedocs.io/en/latest/acb.html",
       "version": "python-flint 0.9.0"
     },
@@ -14401,6 +14406,104 @@
       "citation": "L. Chataignier and M. Kraemer, Unitarity of quantum-gravitational corrections to primordial fluctuations in the Born--Oppenheimer approach.",
       "uri": "https://arxiv.org/abs/2011.06426",
       "version": "arXiv:2011.06426v2"
+    },
+    {
+      "id": "concept:raw-c-lambda-zero-differentiated-plus-tail",
+      "type": "concept",
+      "title": "Raw-C lambda-zero differentiated plus-tail datum",
+      "summary": "At exactly lambda=0 the Green identity (u^2 h)'=-A_lambda u^2 and the modified-Bessel K representation reduce the normalization-invariant h(4)=partial_lambda[-u_Q/u] datum to a positive improper integral. The repository certifies it only on five inherited root brackets; no compact node transport or amplitude derivative follows.",
+      "state": "COMPLETED_NARROW_LAMBDA_ZERO_H_QPLUS_FIVE_BRACKETS"
+    },
+    {
+      "id": "scope:raw-c-lambda-zero-differentiated-plus-tail-five-root-brackets",
+      "type": "scope",
+      "title": "Lambda-zero differentiated raw-C plus-tail scope",
+      "summary": "Exact lambda-zero Qplus=4 differentiated logarithmic-derivative scope on five full inherited real-kappa brackets.",
+      "state": "DECLARED_LAMBDA_ZERO_H_QPLUS_FIVE_BRACKET_SCOPE",
+      "includes": [
+        "exactly lambda=0 and Qplus=4",
+        "the five full high-precision sign-changing kappa brackets inherited from the Bessel anchor",
+        "h=partial_lambda[-u_Q/u], invariant under nonzero lambda-dependent amplitude rescaling at lambda=0",
+        "the exact K_(i*kappa) Green integral, rigorous finite acb integration and an independent analytic improper-tail allowance",
+        "python-flint 0.9.0 Arb balls at 80 and 120 decimal digits with same-backend refinement checks"
+      ],
+      "excludes": [
+        "node-safe transport from Q=4 to Q0=-4",
+        "a normalized endpoint F_lambda amplitude or root velocity",
+        "a nonzero-lambda differentiated tail",
+        "root uniqueness or completeness on kappa in [0,8]",
+        "a nonreal resolvent, Weyl m-function, spectral measure, RAQ or C-H equivalence",
+        "physics, quantum gravity, TOE or automatic successor execution"
+      ]
+    },
+    {
+      "id": "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
+      "type": "claim",
+      "title": "Declared lambda-zero raw-C differentiated h(4) plus-tail enclosures hold",
+      "summary": "Supported only for normalization-invariant h(4) on the five full inherited lambda-zero kappa brackets. It does not support node-safe compact transport, normalized F_lambda, nonzero-lambda tails, spectral data, RAQ or equivalence.",
+      "state": "SUPPORTED_LAMBDA_ZERO_H_QPLUS_FIVE_BRACKET_SCOPE_ONLY",
+      "claim_id": "RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
+      "statement": "For the declared lambda-zero raw-C fiber and each of five inherited certified real-kappa brackets, the exact modified-Bessel Green integral plus rigorous finite ball integration and analytic improper-tail allowance gives a positive outward enclosure of h(4)=partial_lambda[-u_Q/u] on the entire bracket.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:raw-c-lambda-zero-differentiated-plus-tail-result",
+      "type": "evidence",
+      "title": "Raw-C lambda-zero differentiated plus-tail evidence",
+      "summary": "VALID_RUN with 9 exact and 70 Arb-ball checks plus six theorem/scope guards, ten finite quadratures, no ODE/root/finite-difference calls, five positive full-bracket h(4) enclosures and isolated REPRO; lambda-zero Qplus only.",
+      "state": "VALID_RUN_LAMBDA_ZERO_H_QPLUS_FIVE_BRACKETS_ONLY",
+      "observed_status": "VALID_RUN_9_EXACT_70_BALL_PASS_6_GUARDS_REPRO",
+      "check_ids": ["P39.rawc.h_tail.riccati","P39.rawc.h_tail.sensitivity","P39.rawc.h_tail.wronskian_derivative","P39.rawc.h_tail.integrating_factor","P39.rawc.h_tail.amplitude_rescaling_invariance","P39.rawc.h_tail.Q_to_x_density","P39.rawc.h_tail.scaled_bessel_cancellation","P39.rawc.h_tail.leading_growth_scale","P39.rawc.h_tail.exponential_tail_antiderivative","P39.rawc.h_tail.root1.band_coverage","P39.rawc.h_tail.root1.tier1.band_coverage","P39.rawc.h_tail.root1.tier1.denominator","P39.rawc.h_tail.root1.tier1.scaled_convention","P39.rawc.h_tail.root1.tier1.finite_quadrature","P39.rawc.h_tail.root1.tier1.improper_tail","P39.rawc.h_tail.root1.tier1.h_enclosure","P39.rawc.h_tail.root1.tier2.band_coverage","P39.rawc.h_tail.root1.tier2.denominator","P39.rawc.h_tail.root1.tier2.scaled_convention","P39.rawc.h_tail.root1.tier2.finite_quadrature","P39.rawc.h_tail.root1.tier2.improper_tail","P39.rawc.h_tail.root1.tier2.h_enclosure","P39.rawc.h_tail.root1.precision_refinement","P39.rawc.h_tail.root2.band_coverage","P39.rawc.h_tail.root2.tier1.band_coverage","P39.rawc.h_tail.root2.tier1.denominator","P39.rawc.h_tail.root2.tier1.scaled_convention","P39.rawc.h_tail.root2.tier1.finite_quadrature","P39.rawc.h_tail.root2.tier1.improper_tail","P39.rawc.h_tail.root2.tier1.h_enclosure","P39.rawc.h_tail.root2.tier2.band_coverage","P39.rawc.h_tail.root2.tier2.denominator","P39.rawc.h_tail.root2.tier2.scaled_convention","P39.rawc.h_tail.root2.tier2.finite_quadrature","P39.rawc.h_tail.root2.tier2.improper_tail","P39.rawc.h_tail.root2.tier2.h_enclosure","P39.rawc.h_tail.root2.precision_refinement","P39.rawc.h_tail.root3.band_coverage","P39.rawc.h_tail.root3.tier1.band_coverage","P39.rawc.h_tail.root3.tier1.denominator","P39.rawc.h_tail.root3.tier1.scaled_convention","P39.rawc.h_tail.root3.tier1.finite_quadrature","P39.rawc.h_tail.root3.tier1.improper_tail","P39.rawc.h_tail.root3.tier1.h_enclosure","P39.rawc.h_tail.root3.tier2.band_coverage","P39.rawc.h_tail.root3.tier2.denominator","P39.rawc.h_tail.root3.tier2.scaled_convention","P39.rawc.h_tail.root3.tier2.finite_quadrature","P39.rawc.h_tail.root3.tier2.improper_tail","P39.rawc.h_tail.root3.tier2.h_enclosure","P39.rawc.h_tail.root3.precision_refinement","P39.rawc.h_tail.root4.band_coverage","P39.rawc.h_tail.root4.tier1.band_coverage","P39.rawc.h_tail.root4.tier1.denominator","P39.rawc.h_tail.root4.tier1.scaled_convention","P39.rawc.h_tail.root4.tier1.finite_quadrature","P39.rawc.h_tail.root4.tier1.improper_tail","P39.rawc.h_tail.root4.tier1.h_enclosure","P39.rawc.h_tail.root4.tier2.band_coverage","P39.rawc.h_tail.root4.tier2.denominator","P39.rawc.h_tail.root4.tier2.scaled_convention","P39.rawc.h_tail.root4.tier2.finite_quadrature","P39.rawc.h_tail.root4.tier2.improper_tail","P39.rawc.h_tail.root4.tier2.h_enclosure","P39.rawc.h_tail.root4.precision_refinement","P39.rawc.h_tail.root5.band_coverage","P39.rawc.h_tail.root5.tier1.band_coverage","P39.rawc.h_tail.root5.tier1.denominator","P39.rawc.h_tail.root5.tier1.scaled_convention","P39.rawc.h_tail.root5.tier1.finite_quadrature","P39.rawc.h_tail.root5.tier1.improper_tail","P39.rawc.h_tail.root5.tier1.h_enclosure","P39.rawc.h_tail.root5.tier2.band_coverage","P39.rawc.h_tail.root5.tier2.denominator","P39.rawc.h_tail.root5.tier2.scaled_convention","P39.rawc.h_tail.root5.tier2.finite_quadrature","P39.rawc.h_tail.root5.tier2.improper_tail","P39.rawc.h_tail.root5.tier2.h_enclosure","P39.rawc.h_tail.root5.precision_refinement"]
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-differentiated-plus-tail-inputs",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero differentiated plus-tail inputs",
+      "summary": "Pinned question, exact Green identity, source roles, five bracket inputs, integration/tail caps and fail-closed null outputs.",
+      "state": "TRACKED_RUN_INPUTS",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_INPUTS.json",
+      "sha256": "91e8cb4ffcc8a310b6aebfddff508a70574907901cfb71a7d0807e6567c7f691"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-differentiated-plus-tail-runner",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero differentiated plus-tail runner",
+      "summary": "Bounded unnumbered exact-identity, Arb finite-quadrature and analytic-tail certificate runner.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/raw_c_lambda_zero_differentiated_plus_tail.py",
+      "sha256": "9b74027a7a2be9535e427e79a709cd57efdd2015ec5e872c6c1c96f159712dee"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-differentiated-plus-tail-result",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero differentiated plus-tail raw result",
+      "summary": "VALID_RUN result with payload digest a5ea98b1ec3c93173c5d8da2ce3ebafcb355737408db113d7d8f69b0882a90fc.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_RESULT.json",
+      "sha256": "7e1d3d74534392532ec800472a2a2bac8e2e87c5f5306ff3b2842d6a9d177ad6"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-differentiated-plus-tail-report",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero differentiated plus-tail report",
+      "summary": "Human-readable derivation, correct plus-end boundary condition, five observed h(4) enclosures, source roles, provenance and remaining node-safe boundary.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL.md",
+      "sha256": "2eacf76f75e95f383cb0ddab7048920670437dc6592405a249f74ffc897fdeab"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-differentiated-plus-tail-evidence-snapshot",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero differentiated plus-tail evidence snapshot",
+      "summary": "Schema-valid run snapshot preserving runner, inputs, 79 check aliases, result hashes, source roles, five enclosures and explicit nulls.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/raw-c-lambda-zero-differentiated-plus-tail-result.json",
+      "sha256": "7f01f6157d2ad4d2bf75f18f267a9c236b043971a2419158dea4d5fb449127c4"
     }
   ],
   "edges": [
@@ -34067,7 +34170,7 @@
     {"id":"edge:3244","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
     {"id":"edge:3245","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"EXTENDS","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"At exactly lambda=0 the exact Bessel representation reaches Q0 without a numerical fundamental matrix, but it does not differentiate the prior tail theorem."},
     {"id":"edge:3246","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"EXTENDS","to":"concept:raw-c-zero-shell-characteristic-census","note":"The five inherited coarse brackets are upgraded to outward ball-certified existence brackets only; uniqueness and census completeness remain open."},
-    {"id":"edge:3247","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The completed lambda-zero anchor exposes the next independent scale-invariant differentiated-tail problem; it does not launch it automatically."},
+    {"id":"edge:3247","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"MOTIVATES","to":"concept:raw-c-lambda-zero-differentiated-plus-tail","note":"The completed lambda-zero anchor supplies the exact K direction and five brackets used by the independent scale-invariant differentiated-tail calculation; it did not launch that calculation automatically."},
     {"id":"edge:3248","from":"claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS","relation":"ABOUT","to":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor"},
     {"id":"edge:3249","from":"claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS","relation":"HAS_EVIDENCE","to":"evidence:raw-c-lambda-zero-bessel-ball-transport-result","polarity":"SUPPORTS"},
     {"id":"edge:3250","from":"claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS","relation":"VALID_WITHIN","to":"scope:raw-c-lambda-zero-bessel-ball-transport"},
@@ -34113,7 +34216,22 @@
     {"id":"edge:3290","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"CITES","to":"source:cobaya-2021","note":"Likelihood/sampling interface only; it cannot supply missing model predictions."},
     {"id":"edge:3291","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"CITES","to":"source:act-dr6-louis-et-al-2025","note":"Version-pinned observational comparison target, not support for the model."},
     {"id":"edge:3292","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"CITES","to":"source:spt3g-d1-2025","note":"Version-pinned observational comparison target, not support for the model."},
-    {"id":"edge:3293","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly","note":"The older combined bridge remains an index; the map separates its classical HDA and quantum anomaly obligations."}
+    {"id":"edge:3293","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly","note":"The older combined bridge remains an index; the map separates its classical HDA and quantum anomaly obligations."},
+    {"id":"edge:3294","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3295","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"EXTENDS","to":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","note":"Uses the exact lambda-zero K direction and all five inherited full root brackets, but adds only the normalization-invariant Qplus derivative datum."},
+    {"id":"edge:3296","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The h(4) input is now closed-narrow; the next independent obstacle is node-safe Q=4-to--4 sensitivity transport, not a repeated tail calculation."},
+    {"id":"edge:3297","from":"claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS","relation":"ABOUT","to":"concept:raw-c-lambda-zero-differentiated-plus-tail"},
+    {"id":"edge:3298","from":"claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS","relation":"HAS_EVIDENCE","to":"evidence:raw-c-lambda-zero-differentiated-plus-tail-result","polarity":"SUPPORTS"},
+    {"id":"edge:3299","from":"claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS","relation":"VALID_WITHIN","to":"scope:raw-c-lambda-zero-differentiated-plus-tail-five-root-brackets"},
+    {"id":"edge:3300","from":"evidence:raw-c-lambda-zero-differentiated-plus-tail-result","relation":"DEFINED_IN","to":"artifact:raw-c-lambda-zero-differentiated-plus-tail-runner"},
+    {"id":"edge:3301","from":"evidence:raw-c-lambda-zero-differentiated-plus-tail-result","relation":"DERIVED_FROM","to":"artifact:raw-c-lambda-zero-differentiated-plus-tail-inputs"},
+    {"id":"edge:3302","from":"evidence:raw-c-lambda-zero-differentiated-plus-tail-result","relation":"RECORDED_IN","to":"artifact:raw-c-lambda-zero-differentiated-plus-tail-evidence-snapshot"},
+    {"id":"edge:3303","from":"evidence:raw-c-lambda-zero-differentiated-plus-tail-result","relation":"RECORDED_IN","to":"artifact:raw-c-lambda-zero-differentiated-plus-tail-result"},
+    {"id":"edge:3304","from":"claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-differentiated-plus-tail-report"},
+    {"id":"edge:3305","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-differentiated-plus-tail-report"},
+    {"id":"edge:3306","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"The exact K identities and 10.32.9 integral representation bound the analytic tail only; the emitted h balls are repository calculations."},
+    {"id":"edge:3307","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball inclusion semantics only; same-backend precision refinement is not independent validation."},
+    {"id":"edge:3308","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked Bessel and rigorous finite acb.integral interface; the improper integral was manually truncated and bounded analytically."}
   ],
   "kg_bridges": [
     {
@@ -34762,6 +34880,16 @@
       "checked_at_utc": "2026-08-28T07:31:00Z",
       "lookup_key": "CPT Temporal-Folded SUSY Gate1 V0 closed S3 L2 projected associator exact discarded harmonic remainder",
       "note": "No authorized exact external correspondence or writer is available. This is a finite kinematic projection identity, explicitly not an HDA/Jacobi closure result, quantum anomaly result, observation, physics or TOE claim; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-29T15:40:30Z",
+      "lookup_key": "ICE raw C lambda zero differentiated plus-tail normalization-invariant h at Qplus on five root brackets",
+      "note": "No authorized exact external correspondence or writer is available. The local result certifies only h(4) on five lambda-zero brackets and supplies no node-safe endpoint transport, normalized F_lambda, spectral measure, RAQ, quantum-gravity, physics or TOE claim; no external UID was invented."
     }
   ]
 }

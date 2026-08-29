@@ -69,6 +69,7 @@ result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. �
 | 1 raw-\(C\) zero shell | `raw_c_zero_shell_transversality_jacobian` | 5개 root에서 \(F_\kappa\ne0\), weighted Mellin norm과 5회 quadrature 일치, 조건부 \(1/|\lambda'|\approx0.0641\)–\(0.0747\); boolean 9/9, numerical 3/3 | 선언한 5개 root의 local simplicity와 local weight 후보를 수치로 고정 | \(F_\lambda\)는 moving-boundary Lagrange identity에 조건부다. nonzero-\(\lambda\) Weyl solve, global spectral measure, test space, rigging map과 RAQ는 null |
 | 1 raw-\(C\) nonzero-\(\lambda\) local check | `raw_c_nonzero_lambda_weyl_flambda_check` | 두 \(Q_+\), 두 \(Q_-\), 세 차분 간격에서 직접 ODE를 풀어 조건부 정규화 \(F_\lambda\)와 최대 상대오차 \(2.66\times10^{-8}\); exact 4/4, numerical 40/40, ODE 4,305/4,500 | 이전의 conditional identity에 독립적인 finite-cutoff 수치 대조를 추가하고 Wronskian·cutoff 안정성을 고정 | 유한 WKB datum의 exact endpoint limit, 전역 spectral measure, direct-integral test space, rigging map, positivity와 RAQ는 여전히 null |
 | 1 raw-\(C\) real plus-tail control | `raw_c_plus_endpoint_liouville_green_tail_bound` | \(Q\ge4\), \(|\lambda|\le10^{-4}\), \(0\le\kappa\le8\)에서 exact 22/22, guard 3/3; \(V_{\rm analytic}=7.73285\times10^{-5}<V_{\rm bar}=9.44889\times10^{-5}\), \(E_{\rm bar}=4.72455\times10^{-5}\) | 무한대 recessive 조건을 \(Q_+=4\) datum으로 바꾸는 실수축 Liouville--Green tail 오차에 처음으로 명시적 균일 예산을 부여 | \(Q=4\to Q_0=-4\) validated transport, endpoint \(F/F_\lambda\), nonreal resolvent/Weyl \(m\), spectral measure, test space와 RAQ는 모두 null |
+| 1 raw-\(C\) \(\lambda=0\) differentiated plus-tail | `raw_c_lambda_zero_differentiated_plus_tail` | 다섯 certified root bracket 전체에서 \(h(4)=\partial_\lambda[-u_Q/u]_{0}>0\); exact 9/9, Arb-ball 70/70, guard 6, 개별 폭 \(<4.62\times10^{-26}\), analytic tail \(<6.02\times10^{-28}\) | exact Bessel Green identity와 rigorous finite quadrature/analytic tail로 normalization-invariant \(h(4)\) datum을 좁게 인증 | node-safe \(Q=4\to-4\) sensitivity transport, nonzero-\(\lambda\) tail, normalized \(F_\lambda\), nonreal spectral data, RAQ는 null |
 | 2 closed \(S^3\) all-sector bookkeeping | `closed_s3_full_svt_spectral_ledger` | source-pinned scalar/transverse-vector/TT low-mode transport와 cutoff count; exact 37/37, theorem guard 5; \(N=8\) 총 1,341 modes | 세 sector의 rough/Hodge/명시적 Lichnerowicz convention, 저차 예외와 count 범위를 한 packet에 고정 | `FULL_SVT`는 세 sector를 모두 기록했다는 뜻뿐이다. explicit basis, chirality resolution, Gaunt/Clebsch--Gordan, ADM/HDA는 null |
 | 2 closed \(S^3\) cubic curvature packet | `closed_s3_zonal_conformal_curvature_cubic_vertex_ledger` | \(Q_2\) 및 \(Q_1+Q_2\) conformal packet의 \(\sqrt qR\)를 cubic까지 exact 전개; exact 52/52. 두 packet 모두 \(N=2\) 밖 quadratic·cubic tail이 nonzero | 하나의 spatial-curvature subvertex와 비선형 hard-cutoff leakage를 정확한 계수로 고정 | zonal conformal sector 하나뿐이다. full kinetic/shear, matter, lapse/shift, nonzonal/SVT Gaunt, full ADM constraint와 HDA/Jacobi는 null |
 | 2 closed \(S^3\) restricted kinetic packet | `closed_s3_zonal_conformal_trace_kinetic_cubic_vertex_ledger` | fixed-\(a\) trace cotangent ansatz에서 canonical \(\Pi\)와 DeWitt factor \(-2\pi G/(3a^3)\)를 고정하고 두 packet을 cubic까지 전개; exact 42/42, 두 \(N=2\) tail 모두 nonzero | curvature packet과 별개인 pure-trace kinetic subvertex 및 cutoff leakage를 정확한 계수로 고정 | \((a,p_a)\), tracefree/shear, matter, lapse/shift와 nonzonal/SVT가 빠진 restricted submanifold다. 두 packet을 합쳐도 full ADM/HDA가 아니다 |
@@ -94,14 +95,21 @@ matrix 없이 고정했다. exact 4/4, Arb ball 35/35, theorem/scope guard 5개�
 인증했다. `./ice repro --only raw_c_lambda_zero_bessel_ball_transport`는 `REPRO`,
 needs-attention 0이었다.
 
-이는 1.3의 \(\lambda=0\) anchor만 완료한다. 각 root의 uniqueness/completeness,
-differentiated plus-tail datum, node-safe \(F_\lambda\), nonreal Weyl \(m\), spectral
-measure, test space와 RAQ는 여전히 null이다. P1부터 P7까지의 가정·실패조건·문헌
-역할과 연결은
+그 뒤 `raw_c_lambda_zero_differentiated_plus_tail`을 별도 clean committed
+runner로 실행했다. exact Bessel Green identity, rigorous finite `acb.integral`과
+analytic improper-tail bound가 exact 9/9, Arb-ball 70/70, guard 6개를 통과했고,
+다섯 bracket 전체의 scale-invariant \(h(4)\)를 인증했다. 격리 재현은 `REPRO`,
+needs-attention 0이다.
+
+따라서 1.3의 \(\lambda=0\) anchor와 다섯 bracket의 differentiated plus-tail
+datum까지만 완료됐다. 각 root의 uniqueness/completeness, node-safe
+\(Q=4\to-4\) sensitivity transport, nonzero-\(\lambda\) tail, normalized
+\(F_\lambda\), nonreal Weyl \(m\), spectral measure, test space와 RAQ는 여전히
+null이다. P1부터 P7까지의 가정·실패조건·문헌 역할과 연결은
 [`ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md`](ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md)에
 분리했다.
 
-raw-\(C\)의 정확한 남은 인증 순서와 현재 validated ODE/differentiated-tail 공백은
+raw-\(C\)의 정확한 남은 인증 순서와 현재 node-safe validated ODE 공백은
 [`RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md`](RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md)에
 분리했다.
 
