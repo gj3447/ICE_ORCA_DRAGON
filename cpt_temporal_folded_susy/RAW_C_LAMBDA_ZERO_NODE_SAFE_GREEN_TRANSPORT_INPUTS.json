@@ -72,7 +72,7 @@
     "maximum_endpoint_h_widths": ["1e-6", "1e-14"],
     "tail_upper_target": "1e-28",
     "ball_output_digits": 45,
-    "quadrature_options": {"deg_limit": 96, "eval_limit_each": 5000, "depth_limit": 60, "use_heap": true},
+    "quadrature_options": {"deg_limit": 96, "eval_limit_each": 1500, "depth_limit": 60, "use_heap": true},
     "execution": "exact SymPy identities plus python-flint/Arb Bessel balls and finite acb.integral on six predetermined positive-real subsegments; no ODE solve, root solve, finite difference, Riccati h evolution or unbounded numerical quadrature"
   },
   "assumptions": [
