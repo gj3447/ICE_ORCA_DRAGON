@@ -483,6 +483,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "raw_c_lambda_zero_differentiated_plus_tail",
+    script:
+      "cpt_temporal_folded_susy/raw_c_lambda_zero_differentiated_plus_tail.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
     script:
       "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",

@@ -171,6 +171,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
       "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json"
     ],
     [
+      "raw_c_lambda_zero_differentiated_plus_tail",
+      "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_RESULT.json"
+    ],
+    [
       "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
       "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TIME_SYMMETRIC_CLOCK_BOUNDARY_LOCAL_LEDGER_RESULT.json"
     ]
