@@ -1,0 +1,111 @@
+{
+  "schema_version": "ice.homogeneous-closed-frw-starobinsky-two-clock-fp-domain-audit.input.v1",
+  "calculation_id": "HomogeneousClosedFrwStarobinskyTwoClockFpDomainAudit",
+  "numbered_phase": null,
+  "question": "In the pinned closed-FRW (Q,P;phi,p) convention, what exact scalar-clock, P-clock and Q-control Poisson factors and C_V=0 time-symmetric domains follow after adding the declared Starobinsky potential term?",
+  "kind": "EXACT_HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT",
+  "epistemic_scope": "HOMOGENEOUS_CLASSICAL_CONSTRAINT_AND_CLOCK_FP_DOMAIN_IDENTITIES_ONLY_NOT_COMPLETE_OBSERVABLES_NOT_QUANTUM_CLOCKS_NOT_BO_DECOHERENCE_NOT_LIKELIHOOD",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
+      "sha256": "5d56bd94020ddebfda609ca8da3956cc75be5c74ad9b06cdb9ea3464ee616441",
+      "required_run_status": "VALID_RUN",
+      "required_verdict": "KEEP_CLOSED_S3_ADM_HOMOGENEOUS_AND_LINEAR_SCALAR_CONVENTION_BASELINE_NOT_HDA",
+      "required_payload_sha256_without_self": "5178a20a464506595a02d25e97931e60eabfffb038902b977bc4737beaf8cdc1",
+      "role": "pins Q=2 log(a), P=a p_a/2, the V=0 raw constraint, and canonical Poisson convention; no full SVT or HDA result is imported"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json",
+      "sha256": "af6334f0c8a3f745ecfedd37280a8cae457f2ec7adfb5effb3b33f29dbc193e1",
+      "required_run_status": "VALID_RUN",
+      "required_verdict": "KEEP_STAROBINSKY_LEADING_SLOW_ROLL_BACKGROUND_EXPORT_NOT_CLOSED_EVOLUTION_OR_LIKELIHOOD",
+      "required_payload_sha256_without_self": "cfc38115ef0781eaddf3c398e82f1319bc032997e61091b3ef3add33e3994104",
+      "role": "pins the declared Starobinsky potential and reduced-Planck convention only; it supplies no Q/P/p closed-FRW trajectory"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "J. J. Halliwell and S. W. Hawking, Origin of Structure in the Universe, Phys. Rev. D 31 (1985) 1777",
+      "url": "https://doi.org/10.1103/PhysRevD.31.1777",
+      "used_for": "closed-universe minisuperspace and perturbative context",
+      "not_used_for": "a full ADM constraint expansion, a quantum clock construction, or a physical inner product"
+    },
+    {
+      "source": "A. A. Starobinsky, A new type of isotropic cosmological models without singularity, Phys. Lett. B 91 (1980) 99-102",
+      "url": "https://doi.org/10.1016/0370-2693(80)90670-X",
+      "used_for": "the Starobinsky-potential background context",
+      "not_used_for": "a closed-FRW trajectory, reheating map, or observational likelihood"
+    },
+    {
+      "source": "R. Kallosh and A. Linde, Superconformal generalizations of the Starobinsky model, JCAP 06 (2013) 028",
+      "url": "https://arxiv.org/abs/1306.3214",
+      "used_for": "the improved-Cecotti/Starobinsky potential convention",
+      "not_used_for": "selection of a homogeneous clock branch or a quantum state"
+    }
+  ],
+  "declared_conventions": {
+    "units": "G=1/(8*pi), reduced Planck units for V(phi), hbar absent",
+    "canonical_pairs": "{Q,P}={phi,p}=1 and all cross brackets vanish",
+    "potential": "V(phi)=3*M^2/4*(1-exp(-sqrt(2/3)*phi))^2 with M>0",
+    "constraint": "C_V=-exp(-3Q/2)*P^2/(6*pi^2)+exp(-3Q/2)*p^2/(4*pi^2)-6*pi^2*exp(Q/2)+2*pi^2*exp(3Q/2)*V(phi)",
+    "clocks": "scalar clock phi, trace-momentum clock P, and failure-control coordinate Q",
+    "time_symmetric_slice": "P=0",
+    "classification_variable": "y=exp(Q)*V(phi)"
+  },
+  "required_independent_cross_check": {
+    "scalar_clock_p_zero_locus_expected_y": 3,
+    "P_clock_FP_zero_locus_expected_y": 2,
+    "rule": "derive both loci directly from the declared C_V and independently by eliminating p^2 on C_V=0; the independent derivation is authoritative if any informal expectation disagrees"
+  },
+  "exact_plan": [
+    "hash-verify both upstream result artifacts and their stated limited roles",
+    "derive C_V from the pinned V=0 constraint plus 2*pi^2*exp(3Q/2)*V(phi)",
+    "derive {phi,C_V}, {P,C_V}, and {Q,C_V} using the declared canonical pairs",
+    "on C_V=0 and P=0 derive p^2 and classify the scalar-clock p=0 locus, P-clock Faddeev--Popov zero locus, and real-p allowed domain in y",
+    "derive V(phi)>=0, sign(V_prime), and dot(p)=-partial_phi C_V exactly, keeping branch information explicit",
+    "verify the P-clock locus both by substitution into the unreduced Poisson factor and by independent elimination using the constraint",
+    "record that the pinned background export has no Q/P/p trajectory and hence cannot determine which locus is crossed",
+    "leave complete observables, quantum clocks, BO/decoherence, CLASS/Cobaya and likelihood fields null"
+  ],
+  "decision_table": [
+    {
+      "condition": "both upstream hashes, statuses, verdicts and payload hashes match; all exact identities pass; theorem guards remain in scope",
+      "verdict": "KEEP_HOMOGENEOUS_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_IDENTITIES_NOT_COMPLETE_OR_QUANTUM_OBSERVABLES",
+      "programme_impact": "CLASSICAL_HOMOGENEOUS_CLOCK_DOMAIN_CONVENTION_ONLY_NO_TRAJECTORY_SELECTION",
+      "meaning": "the stated local clock-factor and P=0 domain identities are internally consistent; this is not a complete-observable, quantum-clock, or trajectory result"
+    },
+    {
+      "condition": "any pin or executable exact check fails",
+      "verdict": "KILL_HOMOGENEOUS_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT",
+      "programme_impact": "DO_NOT_USE_DECLARED_CLOCK_DOMAIN_PACKET",
+      "meaning": "reject this draft implementation without a claim about Starobinsky cosmology or quantum gravity"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "complete_relational_observables": null,
+    "quantum_clock_change_map": null,
+    "physical_inner_product": null,
+    "born_oppenheimer_or_decoherence": null,
+    "class_or_cobaya_input": null,
+    "empirical_likelihood": null,
+    "trajectory_locus_crossing": null,
+    "full_scalar_vector_tensor_or_adm_hda": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
