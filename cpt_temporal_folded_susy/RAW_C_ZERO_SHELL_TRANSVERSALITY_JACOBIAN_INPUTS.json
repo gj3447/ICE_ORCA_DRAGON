@@ -1,0 +1,54 @@
+{
+  "schema_version": "ice.raw-c-zero-shell-transversality-jacobian.input.v1",
+  "calculation_id": "RawCZeroShellTransversalityJacobian",
+  "numbered_phase": null,
+  "question": "For the five pinned sign-changing zero-shell roots of the declared raw-C Gamma_1,p=0 extension, do bounded numerical controls support local simplicity and, conditional on the declared moving-boundary Wronskian/Lagrange identity, what local delta(C) Jacobian 1/|d lambda_j/dp| follows?",
+  "kind": "EXACT_MELLIN_NORMALIZATION_AND_BOUNDED_LOCAL_SIMPLE_ROOT_JACOBIAN_LEDGER",
+  "epistemic_scope": "DECLARED_RAW_C_ZERO_SHELL_LOCAL_SIMPLE_ROOT_CONTROLS_AND_CONDITIONAL_LOCAL_DELTA_CONSTRAINT_JACOBIAN_ONLY",
+  "upstream_results": [{
+    "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json",
+    "sha256": "75404989d6e4cf8e5a9120a99d3cdcc3a1187a27478f358f1ad9a64f963d53ed",
+    "payload_sha256_without_self": "88c246cc29f50da539c827e9d841c043cc60d7d6dc5e7c78c22b15b3e5d13ce7",
+    "required_verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY",
+    "role": "pins exactly five declared finite-window characteristic roots and their p-branch convention; it does not supply spectral weights or RAQ"
+  }],
+  "primary_sources": [
+    {"source": "I. S. Gradshteyn and I. M. Ryzhik, Table of Integrals, Series, and Products, 8th ed., formula 6.576(4)", "url": "https://doi.org/10.1016/C2009-0-22509-0", "used_for": "the Mellin integral int_0^infinity x^(mu-1)K_nu(x)^2 dx used to normalize the declared weighted Lagrange identity", "not_used_for": "a full spectral theorem, raw-C rigging map, or C/H equivalence"},
+    {"source": "T. Kato, Perturbation Theory for Linear Operators, Springer (1995 reprint)", "url": "https://doi.org/10.1007/978-3-642-66282-9", "used_for": "the domain-dependence warning behind not applying a naive fixed-domain Hellmann-Feynman formula", "not_used_for": "proving that this one raw-C extension is physically selected"},
+    {"source": "NIST Digital Library of Mathematical Functions, modified Bessel functions, sections 10.25, 10.29 and 10.40", "url": "https://dlmf.nist.gov/10", "used_for": "the zero-shell K_(i*kappa) convention and numerical evaluation of the characteristic derivative", "not_used_for": "positivity of a physical Hilbert product or observable action"}
+  ],
+  "declared_conventions": {
+    "hbar": "1", "p_branch": "p>0 for reported lambda_prime; p<0 has the opposite slope because the declared spectrum is even in p", "Q_0": "-4", "z_0": "6*pi^2*exp(-4)", "kappa": "sqrt(3/2)*abs(p)/hbar", "zero_shell_solution": "u_0(Q)=K_(i*kappa)(z)", "boundary_line": "Gamma_1,p=0", "characteristic": "F(kappa)=z_0*partial_z K_(i*kappa)(z_0)", "root_count_required": 5,
+    "weighted_norm": "N_f=int_R f(Q) u_0(Q)^2 dQ, f(Q)=12*pi^2*exp(3Q/2)",
+    "mellin_reduction": "N_f=(sqrt(2/3)/pi)*int_0^infinity z^(1/2) K_(i*kappa)(z)^2 dz",
+    "mellin_closed_form": "int_0^infinity z^(mu-1)K_nu(z)^2 dz=2^(mu-3)*Gamma(mu/2)^2*Gamma(mu/2+nu)*Gamma(mu/2-nu)/Gamma(mu), mu=3/2, nu=i*kappa",
+    "wronskian_identity": "F_lambda(0)=-(1/(2*hbar^2*a))*N_f where a=u_0(Q_0)",
+    "positive_branch_derivative": "F_p=sqrt(3/2)*F_kappa at hbar=1; lambda_prime(p)=-F_p/F_lambda=2*hbar^2*a*F_p/N_f",
+    "precision_digits": 80, "finite_difference_step_kappa": "1e-20", "quadrature_precision_digits": 50, "quadrature_log_z_window": "[-60,8]", "quadrature_calls": 5
+  },
+  "assumptions": [
+    "the pinned census roots are treated as the five declared local root centers; this calculation does not claim an exhaustive root classification outside its fixed prior census",
+    "the generalized fiber equation is L_p u=lambda f u with the declared Gamma_1,p=0 boundary line and plus-end solution continuation",
+    "the Wronskian/Lagrange identity includes the p-dependent boundary-domain contribution through F_lambda and is the declared route to the local slope",
+    "the runner does not construct a nonzero-lambda plus-end Weyl solution or independently finite-difference F_lambda; every reported lambda slope and delta(C) Jacobian is conditional on the stated moving-boundary Lagrange identity and its hypotheses",
+    "N_f is positive for a nonzero real u_0 and finite because the f-weight becomes a z^(1/2) Mellin integrand",
+    "the optional bounded log-z quadrature is an independent numerical cross-check of the Mellin formula, not a replacement for endpoint/domain analysis",
+    "the naive fixed-domain Hellmann-Feynman expression based on integral |u_0|^2 dQ is not used: it diverges at the limit-circle minus end for K_(i*kappa), and it omits the p-dependent boundary-domain contribution"
+  ],
+  "tasks": [
+    "hash-verify the five-root census result and recover its root centers",
+    "derive the Wronskian/Lagrange formula F_lambda(0)=-N_f/(2*hbar^2*a) and the positive-p slope lambda_prime=2*hbar^2*a*F_p/N_f",
+    "reduce N_f to the stated z Mellin integral and evaluate its gamma-function closed form",
+    "compute F_kappa with centered-step refinement, a, N_f, conditional F_lambda, conditional lambda_prime and conditional 1/abs(lambda_prime) for each of the five pinned roots",
+    "check refined nonzero F_kappa, N_f, conditional F_lambda and conditional lambda slope, verify slope signs and the opposite negative-p branch slope, and cross-check N_f and complex leakage by five bounded log-z quadratures",
+    "leave global spectral measure, rigging test space/map, physical positivity, observable action, RAQ completion and C/H equivalence null"
+  ],
+  "resource_caps": {"wall_clock_seconds": 120, "stdout_bytes": 262144, "stderr_bytes": 262144, "changed_artifact_files": 12, "changed_artifact_bytes": 1000000, "root_calls": 0, "quadratures": 5, "ode_calls": 0, "bessel_function_evaluations": 20000, "automatic_descendants": 0},
+  "required_fail_closed_outputs": {
+    "global_raw_C_spectral_measure": null, "global_delta_C_measure": null, "raw_C_rigging_test_space": null, "raw_C_rigging_map": null, "raw_C_physical_inner_product": null, "physical_inner_product_positivity": null, "physical_observable_action": null, "raw_C_RAQ_completion": null, "quantum_constraint_rescaling_equivalence": null, "selected_H_raw_C_unitary_intertwiner": null, "general_p_mixing_extension_classification": null, "canonical_p_zero_origin_sector": null, "absolute_bfv_measure": null, "continuum_determinant_or_pfaffian_line": null, "inhomogeneous_constraint_closure": null, "quantum_bfv_anomaly_freedom": null, "relational_observables_or_decoherence": null, "empirical_likelihood": null, "quantum_gravity_claim": null, "physics_claim": null, "TOE_claim": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "automatic_next": null
+  },
+  "decision_table": [
+    {"condition": "the upstream five-root pin, Mellin normalization, explicitly conditional local Lagrange identity guard, refined nonzero simple-root checks, slope parity and bounded quadrature cross-checks all pass", "verdict": "KEEP_DECLARED_RAW_C_FIVE_LOCAL_SIMPLE_ROOT_JACOBIANS_ONLY", "programme_impact": "RECORD_LOCAL_JACOBIAN_FACTORS_WITHOUT_PROMOTING_A_GLOBAL_SPECTRAL_OR_RAQ_MEASURE"},
+    {"condition": "any upstream, Mellin, identity, simplicity, slope or quadrature control fails", "verdict": "KILL_DECLARED_RAW_C_LOCAL_TRANSVERSALITY_JACOBIAN_LEDGER", "programme_impact": "DO_NOT_USE_THE_DECLARED_LOCAL_JACOBIAN_FACTORS"}
+  ]
+}
