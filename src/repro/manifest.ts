@@ -492,6 +492,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "raw_c_lambda_zero_node_safe_green_transport",
+    script:
+      "cpt_temporal_folded_susy/raw_c_lambda_zero_node_safe_green_transport.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
     script:
       "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",
