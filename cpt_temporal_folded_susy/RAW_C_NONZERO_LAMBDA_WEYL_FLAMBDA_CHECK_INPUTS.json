@@ -1,0 +1,68 @@
+{
+  "schema_version": "ice.raw-c-nonzero-lambda-weyl-flambda-check.input.v1",
+  "calculation_id": "RawCNonzeroLambdaWeylFlambdaCheck",
+  "numbered_phase": null,
+  "question": "For the five pinned raw-C Gamma_1,p=0 zero-shell roots, do two finite plus-end Weyl initializations and two finite minus-end characteristic evaluations numerically agree with the previously conditional moving-boundary F_lambda identity near lambda=0?",
+  "kind": "BOUNDED_NONZERO_LAMBDA_PLUS_END_WEYL_CHARACTERISTIC_FINITE_DIFFERENCE_CHECK",
+  "epistemic_scope": "DECLARED_RAW_C_FIVE_LOCAL_ROOTS_FINITE_CUTOFF_NUMERICAL_CHECK_OF_ONE_MOVING_BOUNDARY_CHARACTERISTIC_DERIVATIVE_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json",
+      "sha256": "75404989d6e4cf8e5a9120a99d3cdcc3a1187a27478f358f1ad9a64f963d53ed",
+      "payload_sha256_without_self": "88c246cc29f50da539c827e9d841c043cc60d7d6dc5e7c78c22b15b3e5d13ce7",
+      "required_verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY",
+      "role": "pins exactly five declared sign-changing Gamma_1,p=0 zero-shell root centers and the p=plus/minus sqrt(2/3) kappa convention"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_RESULT.json",
+      "sha256": "cfc2179c87d84b875060d05f8ff2466106af73fd18da723dfb89da5468e1647e",
+      "payload_sha256_without_self": "73d1a7e38a26cf3db0bed8de88728ba353d95895f9cac08c9818217e8f6f3970",
+      "required_verdict": "KEEP_DECLARED_RAW_C_FIVE_LOCAL_SIMPLE_ROOT_JACOBIANS_ONLY",
+      "role": "pins the conditional Mellin/Lagrange prediction F_lambda(0)=-N_f/(2 a), its five a and N_f values, and its explicitly local scope"
+    }
+  ],
+  "primary_sources": [
+    {"source": "E. A. Coddington and N. Levinson, Theory of Ordinary Differential Equations (1955), chapters 1 and 3", "url": "https://archive.org/details/theoryofordinary0000codd", "used_for": "linear-system fundamental-solution existence and Wronskian/Lagrange bookkeeping on finite intervals", "not_used_for": "turning a finite-cutoff numerical Weyl initialization into an exact endpoint theorem"},
+    {"source": "NIST Digital Library of Mathematical Functions, sections 10.25, 10.29 and 10.40", "url": "https://dlmf.nist.gov/10", "used_for": "the lambda=0 K_(i kappa) convention and large-positive-z derivative convention used only to calibrate the finite plus-end initialization", "not_used_for": "a nonzero-lambda spectral measure, rigging map, or constraint-rescaling equivalence"},
+    {"source": "I. S. Gradshteyn and I. M. Ryzhik, Table of Integrals, Series, and Products, 8th ed., formula 6.576(4)", "url": "https://doi.org/10.1016/C2009-0-22509-0", "used_for": "the already-pinned weighted K-square Mellin norm in the conditional F_lambda reference value", "not_used_for": "proving an absolute spectral normalization or physical inner product"}
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "Q_0": "-4",
+    "p_positive": "p=sqrt(2/3)*kappa",
+    "fiber_equation": "2 u''+[3p^2-72*pi^4*exp(2Q)-12*pi^2*lambda*exp(3Q/2)]u=0",
+    "reference_boundary_pair": "c(Q_0)=1,c'(Q_0)=0, solved at lambda=0 for the pinned p",
+    "finite_minus_characteristic": "F_Qminus(lambda;p)=-W(u_lambda,c)(Q_minus), where u_lambda is normalized by u_lambda(Q_0)=1 after backwards propagation",
+    "lambda_zero_reference": "u_0(Q)=K_(i*kappa)(6*pi^2 exp(Q))/K_(i*kappa)(z_0), F_lambda(0)=-N_f/(2 a) before this normalization and equals -N_f/(2 a^2) after it",
+    "plus_end_initialization": "u(Q_plus)=1, u'(Q_plus)=-(sqrt(A)+A'/(4A)), A=(72*pi^4 exp(2Q)+12*pi^2 lambda exp(3Q/2)-3p^2)/2; finite-Q_plus WKB only",
+    "main_Q_plus": "1.6",
+    "control_Q_plus": "1.4",
+    "main_Q_minus": "-16",
+    "control_Q_minus": "-14",
+    "lambda_delta_ladder": ["1e-4", "5e-5", "2.5e-5"],
+    "method": "DOP853", "rtol": "1e-10", "atol": "1e-12", "segment_width": "0.5", "numeric_dtype": "numpy.float64 with upstream decimal strings rounded only at the finite-ODE comparison boundary"
+  },
+  "assumptions": [
+    "the pinned five roots are local centers only; no root continuation or classification outside that finite census is attempted",
+    "the large-positive-Q WKB datum is an explicitly finite approximate proxy for the nonzero-lambda plus-end Weyl solution; agreement between two Q_plus values is a cutoff control, not an endpoint proof",
+    "all backward propagation uses a two-component linear system with segmentwise amplitude renormalization, never a Riccati/log-derivative evolution; nodes therefore do not cause a division-by-u pole in the main route",
+    "the nonzero value at Q_0 required to normalize u_lambda is checked separately for every root, lambda, and plus cutoff",
+    "the finite-Q_minus characteristic uses the Wronskian against the fixed lambda=0 reference pair; its stabilization is required because it is not valid to substitute u_lambda'(Q_0) for this quantity at lambda nonzero",
+    "the conditional-Jacobian upstream prediction is a comparison reference, not assumed to be numerically established by this new finite-cutoff test"
+  ],
+  "tasks": [
+    "verify both upstream result hashes, payload hashes, verdicts, and five-root agreement",
+    "derive the finite-interval linear ODE, Wronskian sign, and scale conversion of the conditional F_lambda prediction after u(Q_0)=1 normalization",
+    "for every root and every lambda delta, integrate a scaled two-component system backward from each Q_plus, normalize at Q_0, then integrate u_lambda and c to both Q_minus values and evaluate -W there",
+    "compare central finite differences on the fixed delta ladder with the pinned conditional prediction; check delta refinement, plus cutoff, minus cutoff, lambda-zero residual, normalization denominator, parity, and Wronskian consistency",
+    "fail closed if a node-induced normalization zero, solver failure, nonpositive plus-end A, missing finite-difference plateau, cutoff drift, or disagreement exceeds declared tolerances",
+    "leave global spectral/RAQ/physical claims null"
+  ],
+  "resource_caps": {"wall_clock_seconds": 120, "stdout_bytes": 262144, "stderr_bytes": 262144, "changed_artifact_files": 12, "changed_artifact_bytes": 1000000, "ode_calls": 4500, "maximum_segments": 4500, "automatic_descendants": 0},
+  "tolerances": {"lambda_zero_characteristic": "2e-7", "delta_refinement_relative": "2e-3", "plus_cutoff_relative": "1e-2", "minus_cutoff_relative": "1e-3", "conditional_prediction_relative": "3e-2", "p_parity_relative": "1e-7", "lambda_zero_wronskian_absolute": "1e-9", "minimum_abs_normalization_at_Q0": "1e-9", "minimum_A_at_Qplus": "1"},
+  "required_fail_closed_outputs": {"global_raw_C_spectral_measure": null, "global_delta_C_measure": null, "raw_C_rigging_test_space": null, "raw_C_rigging_map": null, "raw_C_physical_inner_product": null, "physical_inner_product_positivity": null, "physical_observable_action": null, "raw_C_RAQ_completion": null, "quantum_constraint_rescaling_equivalence": null, "selected_H_raw_C_unitary_intertwiner": null, "general_p_mixing_extension_classification": null, "canonical_p_zero_origin_sector": null, "absolute_bfv_measure": null, "continuum_determinant_or_pfaffian_line": null, "inhomogeneous_constraint_closure": null, "quantum_bfv_anomaly_freedom": null, "relational_observables_or_decoherence": null, "empirical_likelihood": null, "quantum_gravity_claim": null, "physics_claim": null, "TOE_claim": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "automatic_next": null},
+  "decision_table": [
+    {"condition": "all finite-difference, cutoff, normalization, parity and conditional-prediction controls pass", "verdict": "KEEP_FINITE_CUTOFF_NONZERO_LAMBDA_CHECK_OF_DECLARED_RAW_C_LOCAL_FLAMBDA_ONLY", "programme_impact": "RECORD_A_NUMERICAL_FINITE_CUTOFF_CHECK_OF_THE_DECLARED_LOCAL_IDENTITY_WITHOUT_PROMOTING_RAQ_OR_GLOBAL_SPECTRAL_DATA"},
+    {"condition": "any upstream, solver, normalization, plateau, cutoff, or comparison control fails", "verdict": "KILL_FINITE_CUTOFF_NONZERO_LAMBDA_CHECK", "programme_impact": "DO_NOT_USE_THIS_FINITE_CUTOFF_NUMERICAL_CHECK; THE_ANALYTIC_CONDITIONAL_LEDGER_REMAINS_A_SEPARATE_SCOPED_RESULT"}
+  ]
+}
