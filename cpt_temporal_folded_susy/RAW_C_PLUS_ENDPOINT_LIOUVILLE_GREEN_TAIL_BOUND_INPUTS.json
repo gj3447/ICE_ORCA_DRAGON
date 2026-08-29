@@ -1,0 +1,48 @@
+{
+  "schema_version": "ice.raw-c-plus-endpoint-liouville-green-tail-bound.input.v1",
+  "calculation_id": "RawCPlusEndpointLiouvilleGreenTailBound",
+  "numbered_phase": null,
+  "question": "On the explicitly declared real box |lambda|<=1e-4, 0<=kappa<=8, p=sqrt(2/3)kappa and Q>=4, does an elementary Liouville-Green residual-tail estimate give a uniform, source-scoped plus-end error-control budget for the raw-C fiber equation?",
+  "kind": "BOUNDED_ANALYTIC_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_DIAGNOSTIC",
+  "epistemic_scope": "REAL_PLUS_ENDPOINT_TAIL_ONLY_WITHOUT_TRANSPORT_TO_Q0_OR_GLOBAL_SPECTRAL_OR_RAQ_DATA",
+  "upstream_results": [
+    {"path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json", "sha256": "7daa40749b13920acfffe422a049e288cb3e67fc66de595b10681767ea036004", "payload_sha256_without_self": "664af96fda1297c7524d86b3ffb79af08373377abc59bf127aeb8232b7e03bef", "required_verdict": "NARROW_V0_RAW_C_CANDIDATE_HAS_FIBER_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN", "role": "pins that the weighted raw-C fiber-domain/global-measurability debt remains open"},
+    {"path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json", "sha256": "52d623524ed8a80f006374231c02267d4b5d9b4df1c636a8e7a7fc74b3672db7", "payload_sha256_without_self": "8b629856847b646c6dbc0469f4da77177d61be520688b96d5923d4452f58806b", "required_verdict": "CONSTRUCT_DECLARED_RAW_C_P_PRESERVING_DIRECT_INTEGRAL_EXTENSION_RAQ_OPEN", "role": "pins a declared direct-integral extension while leaving RAQ open"},
+    {"path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json", "sha256": "75404989d6e4cf8e5a9120a99d3cdcc3a1187a27478f358f1ad9a64f963d53ed", "payload_sha256_without_self": "88c246cc29f50da539c827e9d841c043cc60d7d6dc5e7c78c22b15b3e5d13ce7", "required_verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY", "role": "pins that the prior zero-shell census is local and is not a spectral measure"},
+    {"path": "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_RESULT.json", "sha256": "19f159792dccbbd75f3a98e313ab4bb4be5aada7fa18678ed60d0316c45b9e36", "payload_sha256_without_self": "0d6a606ee8c76bdaaaca86b1d0e014256fb5830dbb3222c964afc5a2d029e7fe", "required_verdict": "KEEP_FINITE_CUTOFF_NONZERO_LAMBDA_CHECK_OF_DECLARED_RAW_C_LOCAL_FLAMBDA_ONLY", "role": "pins a finite-cutoff local F_lambda check and its explicit non-endpoint scope"}
+  ],
+  "primary_sources": [
+    {"source": "NIST Digital Library of Mathematical Functions, §2.7(iii), Liouville–Green Approximation Theorem, especially 2.7.23--2.7.25", "url": "https://dlmf.nist.gov/2.7.iii", "used_for": "the leading decaying Liouville–Green form and the source-scoped criterion that a positive smooth coefficient with an integrable error-control function supports tail error bounds, including the derivative clause", "not_used_for": "a numerical transport from Q=4 to Q0, an endpoint-to-boundary intertwiner, a nonreal resolvent or m-function, a spectral measure, or RAQ"}
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "Q_plus": "4",
+    "real_box": "Q>=4, |lambda|<=1e-4, 0<=kappa<=8, |p|=sqrt(2/3)*kappa; both p signs have the same coefficient",
+    "fiber_equation": "u''=A u, A=36*pi^4*exp(2Q)+6*pi^2*lambda*exp(3Q/2)-kappa^2",
+    "wkb_proxy": "w=A^(-1/4)*exp(-integral_Qplus^Q sqrt(A(s)) ds)",
+    "residual": "w''/w-A=5*(A')^2/(16*A^2)-A''/(4*A)",
+    "relative_perturbation": "delta=A/(36*pi^4*exp(2Q))-1=lambda*exp(-Q/2)/(6*pi^2)-kappa^2*exp(-2Q)/(36*pi^4)",
+    "elementary_relaxations": "pi>3 and exp(2)>7; hence exp(8)>7^4 and exp(-4)<1/7^2",
+    "eta_bar": "1e-5",
+    "execution": "exact SymPy identities plus rational high-precision evaluation only; no ODE solve, no sampling grid, no endpoint continuation"
+  },
+  "assumptions": [
+    "The calculation is restricted to the stated real parameter box. It does not address complex spectral parameter, negative Q, a turning point, or a p-mixing fiber extension.",
+    "The elementary bounds deliberately relax pi and e as declared. Their result is a uniform sufficient bound, not an optimized constant.",
+    "The DLMF theorem is used only after checking its relevant tail hypotheses in this restricted equation: smooth real A, uniform positivity, and integrable residual-control budget. The emitted budget is not represented as a full endpoint-to-Q0 transfer matrix estimate.",
+    "A small plus-tail error-control budget cannot determine F(Q0), F_lambda(Q0), a boundary condition at Q0, a nonreal Weyl m-function, or a spectral density without an additional validated transport or resolvent construction."
+  ],
+  "tasks": [
+    "verify all pinned upstream result hashes, payload hashes, verdicts, and VALID_RUN status",
+    "verify exactly the raw-C coefficient, the WKB residual identity, and the lambda=kappa=0 residual baseline",
+    "derive rational uniform bounds d0,d1,d2 for |delta|, |delta'|, |delta''| using only the declared elementary relaxations",
+    "verify d0<eta_bar, A>0, the residual envelope R_bar, the integrable tail budget V_bar, the amplitude-error bound E_bar, and the sqrt(A)-normalized log-derivative-difference bound at Q_plus=4",
+    "write all global spectral, RAQ, endpoint transport, and constraint-rescaling outputs as explicit nulls"
+  ],
+  "resource_caps": {"wall_clock_seconds": 120, "stdout_bytes": 262144, "stderr_bytes": 262144, "changed_artifact_files": 12, "changed_artifact_bytes": 1000000, "symbolic_operations": 1000, "root_calls": 0, "quadratures": 0, "ode_calls": 0, "sampling_points": 0, "automatic_descendants": 0},
+  "required_fail_closed_outputs": {"validated_Qplus_to_Q0_transport": null, "exact_plus_endpoint_to_Q0_boundary_transform": null, "endpoint_F_or_F_lambda": null, "nonreal_resolvent_or_weyl_m_function": null, "raw_C_spectral_measure": null, "global_delta_C_measure": null, "raw_C_rigging_test_space": null, "raw_C_rigging_map": null, "raw_C_physical_inner_product": null, "raw_C_RAQ_completion": null, "quantum_constraint_rescaling_equivalence": null, "selected_H_raw_C_unitary_intertwiner": null, "general_p_mixing_extension_classification": null, "canonical_p_zero_origin_sector": null, "absolute_bfv_measure": null, "continuum_determinant_or_pfaffian_line": null, "inhomogeneous_constraint_closure": null, "quantum_bfv_anomaly_freedom": null, "relational_observables_or_decoherence": null, "empirical_likelihood": null, "quantum_gravity_claim": null, "physics_claim": null, "TOE_claim": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "automatic_next": null},
+  "decision_table": [
+    {"condition": "all pinned-source, exact-identity, positivity, elementary-bound, and tail-integrability checks pass", "verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY", "programme_impact": "RECORD_A_UNIFORM_ANALYTIC_PLUS_TAIL_BUDGET_ONLY; DO_NOT_PROMOTE_TO_Q0_TRANSPORT_SPECTRAL_DATA_RAQ_OR_C_H_EQUIVALENCE"},
+    {"condition": "any source pin, identity, positivity, eta, or bound check fails", "verdict": "KILL_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND", "programme_impact": "DO_NOT_USE_THE_DECLARED_ELEMENTARY_PLUS_TAIL_BOUND; ALL_GLOBAL_AND_ENDPOINT_TO_BOUNDARY_OUTPUTS_REMAIN_NULL"}
+  ]
+}
