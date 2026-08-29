@@ -1,0 +1,145 @@
+{
+  "schema_version": "ice.raw-c-lambda-zero-differentiated-plus-tail.input.v1",
+  "calculation_id": "RawCLambdaZeroDifferentiatedPlusTail",
+  "numbered_phase": null,
+  "question": "At exactly lambda=0, can the scale-invariant differentiated logarithmic derivative h(4;kappa)=partial_lambda[-u_Q/u] be enclosed on all five previously certified characteristic-root brackets by an exact Bessel Green identity, rigorous finite acb quadrature, and an analytic improper-tail bound?",
+  "kind": "EXACT_GREEN_IDENTITY_WITH_ARBITRARY_PRECISION_BALL_QUADRATURE_AND_ANALYTIC_IMPROPER_TAIL",
+  "epistemic_scope": "LAMBDA_ZERO_H_AT_QPLUS_ON_FIVE_CERTIFIED_KAPPA_BRACKETS_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e",
+      "payload_sha256_without_self": "5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN",
+      "role": "pins the exact lambda-zero recessive Bessel direction and the five full high-precision kappa brackets"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified-Bessel order symmetry and integral representation, sections 10.27 and 10.32, especially 10.32.9",
+      "url": "https://dlmf.nist.gov/10.32.E9",
+      "version": "DLMF 1.2.7, 2026-06-15",
+      "used_for": "K_(i*kappa) reality together with order symmetry, and K_(i*kappa)(x)=integral exp(-x cosh t) cos(kappa t)dt for the uniform improper-tail majorant",
+      "not_used_for": "the emitted ball quadrature, nonzero-lambda transport, endpoint F_lambda, spectral data or RAQ"
+    },
+    {
+      "source": "Fredrik Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+      "url": "https://arxiv.org/abs/1611.02831",
+      "version": "IEEE Transactions on Computers 66 (2017) 1281-1292",
+      "used_for": "outward-rounded midpoint-radius inclusion semantics",
+      "not_used_for": "the Green identity, improper-tail theorem or a raw-C operator conclusion"
+    },
+    {
+      "source": "python-flint acb complex-ball integration and special-function interface",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb.html#flint.acb.integral",
+      "version": "python-flint 0.9.0",
+      "used_for": "locked access to rigorous finite acb.integral enclosures and scaled complex-order Bessel K balls, with the analytic flag forwarded to square root",
+      "not_used_for": "improper integration without a manual tail bound, or treating same-backend precision repeats as independent validation"
+    }
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "lambda": "0 exactly",
+    "Q_plus": "4",
+    "C": "6*pi^2",
+    "x": "x=C*exp(Q)",
+    "x_plus": "C*exp(4)",
+    "kappa_source": "the five full 120-digit sign-change brackets certified by the pinned upstream result",
+    "fiber_equation": "u_QQ=A*u with A=36*pi^4*exp(2Q)+6*pi^2*lambda*exp(3Q/2)-kappa^2",
+    "log_derivative": "g=-u_Q/u",
+    "scale_invariant_sensitivity": "h=partial_lambda g at lambda=0; h_Q=2*g*h-A_lambda",
+    "correct_plus_end_condition": "u(Q)^2*h(Q) tends to zero; h itself grows asymptotically and is not set to zero",
+    "green_identity": "h(Q)=u(Q)^(-2)*integral_Q^infinity A_lambda(s)*u(s)^2 ds",
+    "bessel_identity": "h(4)=C^(-1/2)*K_(i*kappa)(x_plus)^(-2)*integral_x_plus^infinity sqrt(x)*K_(i*kappa)(x)^2 dx",
+    "scaled_bessel": "S_kappa(x)=exp(x)*K_(i*kappa)(x)",
+    "quadrature_variable": "y=x-x_plus in [0,32]",
+    "finite_integrand": "sqrt(x_plus+y)*exp(-2y)*S_kappa(x_plus+y)^2",
+    "improper_tail_majorant": "J_tail<=pi*exp(-2Y)/(4*sqrt(x_plus+Y)); divide by sqrt(C)*S_kappa(x_plus)^2 for the h-tail",
+    "quadrature_cutoff_Y": "32",
+    "precision_ladder_decimal_digits": [80, 120],
+    "quadrature_relative_tolerances": ["1e-16", "1e-22"],
+    "quadrature_absolute_tolerances": ["1e-18", "1e-24"],
+    "maximum_h_widths": ["1e-12", "1e-18"],
+    "tail_upper_target": "1e-24",
+    "ball_output_digits": 45,
+    "quadrature_options": {
+      "deg_limit": 32,
+      "eval_limit_each": 5000,
+      "depth_limit": 30,
+      "use_heap": true
+    },
+    "execution": "exact SymPy identities plus python-flint/Arb Bessel balls and rigorous acb.integral on a finite positive-real segment; no ODE solve, root solve, finite difference or unbounded numerical quadrature"
+  },
+  "assumptions": [
+    "The calculation is exactly at lambda=0 and only on the five full upstream kappa brackets; it is neither a point sample nor a cover of all kappa in [0,8].",
+    "The exact Green identity is used directly. The earlier Liouville-Green error inequality is not differentiated and supplies no h error term here.",
+    "For real kappa and positive x, K_(i*kappa)(x) is real by conjugation and K order symmetry. The finite quadrature still retains the full complex ball and requires its imaginary part to contain zero.",
+    "The DLMF 10.32.9 representation and cosh(t)>=1+t^2/2 give |K_(i*kappa)(x)|<=K_0(x)<=exp(-x)*sqrt(pi/(2x)); this bounds only the manually separated improper tail.",
+    "Every denominator is evaluated on an entire exact-rational kappa bracket and must have a strictly positive real lower bound. A bracket for which zero is not excluded fails closed.",
+    "Both precision tiers use the same locked python-flint/FLINT-Arb backend. Their overlap and refinement are consistency checks, not independent validation.",
+    "A numerical amplitude F_lambda remains normalization-dependent away from an endpoint root. This calculation emits only the normalization-invariant h(4) datum and no endpoint transport."
+  ],
+  "tasks": [
+    "verify the upstream result hash, payload hash, verdict and VALID_RUN state, then load all five full certified high-precision kappa brackets",
+    "verify exactly the Riccati sensitivity equation, Green/Wronskian identity, Q-to-x measure factor, scaled-Bessel cancellation and amplitude-rescaling invariance",
+    "cover every exact-rational kappa bracket by one outward-rounded Arb interval and require the scaled K denominator to be real and strictly positive on the whole band",
+    "for each band at 80 and 120 decimal digits, use acb.integral on y in [0,32], forward the analytic flag to sqrt, cap every callback, and retain the full complex enclosure",
+    "derive the improper-tail bound independently from DLMF 10.32.9 and add its outward-rounded interval after dividing by the certified denominator lower bound",
+    "require each h enclosure to be positive and narrower than its declared tier target, require the two rigorous tier enclosures to overlap, and use their intersection as the final band certificate",
+    "write node-safe transport, endpoint F_lambda, spectral, RAQ, BFV, physical and TOE outputs as explicit nulls"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 1000,
+    "ball_bessel_evaluations": 100000,
+    "quadrature_calls": 10,
+    "quadrature_callback_evaluations": 100000,
+    "root_brackets": 5,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "nonzero_lambda_differentiated_tail": null,
+    "node_safe_Qplus_to_Q0_transport": null,
+    "endpoint_F_lambda_amplitude": null,
+    "endpoint_root_velocity": null,
+    "unique_or_complete_zero_shell_root_census": null,
+    "nonreal_resolvent_or_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all source pins, exact identities, full-band denominator checks, finite quadratures, analytic tail bounds, tier width checks and refinement intersections pass for all five brackets",
+      "verdict": "CERTIFY_LAMBDA_ZERO_SCALE_INVARIANT_H_QPLUS_ON_FIVE_ROOT_BRACKETS",
+      "programme_impact": "CLOSE_THE_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_DATUM_ON_THE_FIVE_CERTIFIED_ROOT_BRACKETS_ONLY_AND_ROUTE_NEXT_WORK_TO_NODE_SAFE_H_TRANSPORT"
+    },
+    {
+      "condition": "any source pin, exact identity, full-band denominator, finite quadrature, analytic-tail, width or refinement-overlap check fails",
+      "verdict": "LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_NOT_CERTIFIED",
+      "programme_impact": "KEEP_THE_EXACT_GREEN_IDENTITY_BUT_LEAVE_H_QPLUS_UNRESOLVED_ON_EVERY_FAILED_SUBBOX"
+    }
+  ]
+}
