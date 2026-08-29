@@ -34,10 +34,11 @@
 
 ## 1. 우선순위 결론
 
-현재 가장 빠른 1순위는 raw-\(C\)의 **node-safe sensitivity transport와 이후의
-정규화된 \(F,F_\lambda\) 검증**이다. scale-invariant differentiated plus-tail
-datum은 정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐다. 이유는
-다음과 같다.
+현재 가장 빠른 1순위는 raw-\(C\)의 **nonzero-\(\lambda\) minus-end
+\(\Gamma_1\) functional과 그 뒤의 declared \(F,F_\lambda\) 검증**이다.
+scale-invariant differentiated plus-tail datum과 direct smooth Green endpoint는
+정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐다. 이유는 다음과
+같다.
 
 - 이미 선언해 둔 candidate self-adjoint boundary line, coarse root, finite-cutoff
   \(F_\lambda\) 대조와 real plus-tail bound가 있다.
@@ -54,7 +55,7 @@ datum은 정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐다.
 
 | 순위 | 목표 | 현재 상태 | 성공 게이트 | 실패·반증 출력 | 후속 연결 |
 |---:|---|---|---|---|---|
-| P1 | raw-\(C\) node-safe sensitivity transport와 정규화된 \(F,F_\lambda\) | **부분 돌파**: \(\lambda=0\) exact transport·실근 존재 구간 5개와 그 구간 전체의 scale-invariant \(h(4)\) ball 인증 | certified \(h(4)\)를 node crossing 전체에서 \(Q_0=-4\)까지 전달한 outward enclosure; amplitude 전에는 별도 normalization | chart denominator가 0 포함, 안전한 chart 전환 실패, enclosure 비중첩/폭발, normalization drift | P4 |
+| P1 | raw-\(C\) nonzero-\(\lambda\) minus-end \(\Gamma_1\)와 declared \(F,F_\lambda\) | **부분 돌파**: \(\lambda=0\) exact direction·실근 존재 구간 5개, 전체-bracket \(h(4)\), direct smooth \(J(-4)\)와 endpoint \(h(-4)\) ball 인증 | selected reference field와 left-boundary contribution을 포함한 nonzero-\(\lambda\) \(\Gamma_1\) variation; 그 뒤에만 declared derivative | minus-end remainder/domain dependence, left term 누락, enclosure 비중첩/폭발, normalization drift | P4 |
 | P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; 현재는 restricted zonal subvertices뿐 | scalar/vector/TT와 lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, 누락 sector, cutoff tail 미측정 | P3 |
 | P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | 오픈 | full-before-project bracket, Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
 | P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5 |
@@ -65,7 +66,7 @@ datum은 정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐다.
 의존성은 다음과 같다.
 
 ```text
-P1 real-axis derivative endpoint ──┐
+P1 declared-boundary derivative ───┐
                                     ├─► spectral/RAQ cross-check
 P4 nonreal m / raw-C RAQ ──────────┘                    ───────┐
                                                               ├─► P5 quantum BFV* ─┐
@@ -132,9 +133,10 @@ theorem/convention과 inclusion arithmetic의 1차 출처다. 실수성은 단�
 | `CLOSED_NARROW` | \(\lambda=0\) real recessive direction의 exact \(+\infty\to Q_0\) 표현 |
 | `CLOSED_NARROW` | 선언한 다섯 bracket 각각의 실수 sign-changing root 존재 |
 | `CLOSED_NARROW` | 같은 다섯 bracket 전체에서 scale-invariant \(h(4)=\partial_\lambda[-u'/u]_{\lambda=0}\) outward enclosure |
+| `CLOSED_NARROW` | 같은 다섯 bracket 전체에서 direct smooth \(J(-4)=-W(u,\partial_\lambda u)>0\)와 endpoint-only \(h(-4)>0\) outward enclosure |
 | `OPEN` | 각 bracket의 root uniqueness와 \([0,8]\) 전체 census completeness |
-| `OPEN_P1` | certified \(h(4)\)의 node-safe \(Q=4\to-4\) validated propagation |
-| `OPEN_P1` | 명시적 plus-end amplitude normalization 뒤의 endpoint \(F_\lambda\) enclosure |
+| `OPEN_P1` | nonzero-\(\lambda\) minus-end \(\Gamma_1\) functional과 reference-field/left-boundary contribution |
+| `OPEN_P1` | 위 functional을 닫은 뒤의 declared endpoint \(F_\lambda\), eigenvalue slope 또는 root velocity |
 | `OPEN_P4` | nonreal Weyl \(m\), spectral measure, test space, rigging map, RAQ |
 | `NULL` | raw-\(C\)/selected-\(H\) quantum equivalence, physics, quantum gravity, TOE |
 
@@ -194,10 +196,40 @@ clean bounded run에서 exact 9/9, Arb-ball 70/70, theorem/scope guard 6개가
 precision refinement이지 독립 구현이 아니다. 격리 재현은 `REPRO`,
 needs-attention 0이다.
 
-### 바로 다음의 가장 작은 독립 계산
+### 이번에 추가로 닫힌 direct node-safe Green endpoint
 
-이제 가장 작은 다음 계산은 위의 certified \(h(4)\) ball을 node를 통과하는
-Prüfer/projective atlas로 \(Q_0=-4\)까지 전달하는 것이다. 한 가능한 chart는
+\(J=-W(u,\partial_\lambda u)=u^2h\)는 \(u\)의 node에서도 매끈하고
+\(J_Q=-A_\lambda u^2\)를 만족한다. 따라서 \(h\)를 node 사이로 나누어
+전개하지 않고
+
+\[
+J(-4;\kappa)=\frac1{\sqrt{6\pi^2}}
+\int_{6\pi^2e^{-4}}^\infty\sqrt{x}\,K_{i\kappa}(x)^2\,dx
+\]
+
+를 직접 ball-certify할 수 있다. `raw_c_lambda_zero_node_safe_green_transport`의
+clean bounded run은 exact 7/7, Arb-ball 61/61, guard 6개, 다섯 bracket
+5/5와 격리 `REPRO`를 통과했다. bracket 전체의 endpoint \(h(-4)\)는 각각
+
+\[
+0.1428500395,\quad0.5356890492,\quad0.9097203283,\quad
+1.2870710317,\quad1.6705600982
+\]
+
+부근의 엄밀한 positive interval이다. 처음의 single-segment quadrature는
+width gate를 닫지 못해 `NOT_CERTIFIED`로 보존했고, 같은 항등식을 여섯 fixed
+subsegment와 \(x\ge32\) analytic tail로 재구성한 뒤 성공했다.
+
+이것은 기존 \(h(4)\) datum의 numerical propagation이 아니라 direct exact
+Green-integral endpoint construction이다. \(h(4)u(4)^2\)는 magnitude
+sentinel이며 별도 \(Q=4\to-4\) decomposition equality는 계산하지 않았다.
+
+### 선택적 explicit compact decomposition route (현재 primary blocker 아님)
+
+lambda-zero endpoint 값 자체는 위 direct Green route로 닫혔다. 아래의
+Prüfer/projective atlas는 \(h(4)\) datum을 실제 compact state/flux로 분해해
+전파하는 독립적인 cross-check가 필요할 때 쓸 수 있지만, 현재 P1의 primary
+blocker는 아니다. 한 가능한 chart는
 
 \[
 u=\rho\sin\theta,\qquad u'=\rho\cos\theta,
@@ -231,7 +263,7 @@ u=\rho\sin\theta,\qquad u'=\rho\cos\theta,
 [Brown--McCormack--Marletta](https://onlinelibrary.wiley.com/doi/10.1002/%28SICI%291522-2616%28200005%29213%3A1%3C17%3A%3AAID-MANA17%3E3.0.CO%3B2-R)다.
 이 문헌들은 현재 fiber의 \(F_\lambda\)를 대신 계산하지 않는다.
 
-이 다음 P1 transport의 fail-closed 조건은 다음과 같다.
+이 선택적 compact-decomposition cross-check의 fail-closed 조건은 다음과 같다.
 
 - 입력 \(h(4)\) ball 또는 local ODE remainder를 누락함;
 - plus-end normalization을 선언하지 않은 채 amplitude \(F_\lambda\)를 출력함;
@@ -242,6 +274,28 @@ u=\rho\sin\theta,\qquad u'=\rho\cos\theta,
 
 어느 경우도 “가설 전체가 틀림”이 아니다. 정확한 실패 위치와 subbox를
 `UNRESOLVED`로 남긴다.
+
+### 실제 다음 P1 blocker: nonzero-\(\lambda\) minus-end \(\Gamma_1\)
+
+선언된 raw-\(C\) extension은 finite-\(Q_0\) Neumann 조건이 아니라
+
+\[
+\Gamma_{1,p}u=-\lim_{Q\to-\infty}W(u,c_p)=0
+\]
+
+이다. \(\lambda=0\)에서는 reference equation 때문에
+\(\Gamma_1=u_Q(Q_0)\)로 환원되지만, \(\lambda\ne0\)이면
+
+\[
+\Gamma_1(u)=u_Q(Q_0)-\lambda
+\int_{-\infty}^{Q_0}6\pi^2e^{3Q/2}u(Q)c_p(Q)\,dQ
+\]
+
+의 left-boundary contribution이 생긴다. 따라서 direct \(h(-4)\)를
+declared \(F_\lambda\), eigenvalue slope 또는 root velocity로 읽을 수 없다.
+다음 계산은 selected reference field, normalization, minus-end remainder와
+measurable \(p\)-family를 고정한 뒤 이 boundary variation을 검증해야 한다.
+그 전까지 normalized/declared amplitude 출력은 `null`이다.
 
 ## 3. P2–P3: closed-\(S^3\) ADM와 HDA
 
@@ -375,9 +429,11 @@ inflation/reheating을 제공하지 않으므로 직접 CMB likelihood는 차단
 ## 8. KG 읽기 규칙과 상태 갱신 규칙
 
 KG에서 먼저 `concept:gate1-v0-six-bridge-metacognitive-priority-map`을 읽고,
-P1 open problem, 새 \(\lambda=0\) claim/evidence, 나머지 P2–P7 open problem으로
-따라간다. `CITES` edge는 방법·정리 출처이지 claim support가 아니다. support는
-오직 tracked result와 evidence snapshot의 `HAS_EVIDENCE` edge가 담당한다.
+\(\lambda=0\) Bessel anchor, \(h(4)\) tail, direct Green endpoint의 세
+claim/evidence를 거쳐 retarget된 nonzero-\(\lambda\) \(\Gamma_1\) open
+problem과 나머지 P2–P7 open problem으로 따라간다. `CITES` edge는
+방법·정리 출처이지 claim support가 아니다. support는 오직 tracked result와
+evidence snapshot의 `HAS_EVIDENCE` edge가 담당한다.
 
 상태는 다음 사건이 있을 때만 바꾼다.
 
@@ -394,15 +450,18 @@ P1 open problem, 새 \(\lambda=0\) claim/evidence, 나머지 P2–P7 open proble
 
 ```text
 ./ice info raw_c_lambda_zero_bessel_ball_transport
-./ice run raw_c_lambda_zero_bessel_ball_transport
-./ice repro --only raw_c_lambda_zero_bessel_ball_transport
+./ice info raw_c_lambda_zero_differentiated_plus_tail
+./ice info raw_c_lambda_zero_node_safe_green_transport
+./ice repro --only raw_c_lambda_zero_node_safe_green_transport
 ./ice ontology validate
 ./ice ontology summary
 npm run check
 ```
 
 세부 수식과 exact intervals는
-`cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT.md`와
-그 인접 result JSON에 있다. 전체 task 분해는
+`cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT.md`,
+`cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL.md`,
+`cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT.md`와
+각 인접 result JSON에 있다. 전체 task 분해는
 `ICE_QUANTUM_GRAVITY_EXECUTION_DAG_2026-08-28.md`, P1 인증 순서는
 `RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md`가 담당한다.

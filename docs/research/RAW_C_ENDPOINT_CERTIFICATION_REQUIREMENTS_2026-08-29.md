@@ -110,18 +110,57 @@ DLMF 10.32.9의 integral representation으로부터 얻은 별도 analytic bound
 \(4.62\times10^{-26}\) 이하, analytic tail upper bound는
 \(6.02\times10^{-28}\) 이하이다. 격리 재현도 `REPRO`, needs-attention 0이다.
 
-이는 **정확히 \(\lambda=0\), 다섯 bracket에서의 \(h(4)\)**만 닫는다.
-node-safe \(Q=4\to-4\) 전달, nonzero-\(\lambda\) tail, 정규화된
-\(F_\lambda\), spectral/RAQ 출력은 그대로 열려 있다.
+이 결과 자체는 **정확히 \(\lambda=0\), 다섯 bracket에서의 \(h(4)\)**만
+닫는다. 아래의 후속 Green endpoint 계산이 별도로 \(J(-4)\)와 endpoint-only
+\(h(-4)\)를 닫았지만, nonzero-\(\lambda\) tail, declared minus-end
+\(\Gamma_1\) derivative, 정규화된 \(F_\lambda\), spectral/RAQ 출력은 그대로
+열려 있다.
+
+### 같은 날 추가된 \(\lambda=0\) node-safe Green endpoint
+
+번호 없는 `raw_c_lambda_zero_node_safe_green_transport`는 pole이 생길 수 있는
+\(h\)를 interior node 사이로 전개하지 않고
+
+\[
+J=-W(u,\partial_\lambda u)=u^2h,
+\qquad J_Q=-A_\lambda u^2
+\]
+
+를 매끈한 변수로 사용했다. exact Bessel representation은
+
+\[
+J(-4;\kappa)=\frac1{\sqrt{6\pi^2}}
+\int_{6\pi^2e^{-4}}^\infty
+\sqrt{x}\,K_{i\kappa}(x)^2\,dx
+\]
+
+를 준다. finite part를 여섯 고정 positive-real subsegment에서 rigorous
+`acb.integral`로 감싸고 \(x\ge32\)는 DLMF 10.32.9 기반 analytic tail로
+더했다. clean bounded run은 exact 7/7, Arb-ball 61/61, guard 6개와 다섯
+bracket 5/5를 통과했고 격리 재현도 `REPRO`다. bracket별 endpoint
+\(h(-4)\)는 약
+
+\[
+0.1428500395,\ 0.5356890492,\ 0.9097203283,\
+1.2870710317,\ 1.6705600982
+\]
+
+의 엄밀한 positive ball로 닫혔다.
+
+이는 기존 \(h(4)\) 상태를 수치 전파한 것이 아니라 direct Green-integral
+endpoint construction이다. \(h(4)u(4)^2\)는 magnitude sentinel일 뿐
+\(J(-4)=\int_{-4}^4A_\lambda u^2+J(4)\)의 별도 numerical decomposition은
+검사하지 않았다.
 
 ## 아직 끊긴 연결부
 
 현재 결과에서 다음 결론으로 가는 논리적 연결은 모두 비어 있다.
 
-1. certified \(\lambda=0\) \(h(4)\)의 node-safe \(Q_+=4\to Q_0=-4\)
-   transport와 nonzero-\(\lambda\) differentiated tail; \(\lambda=0\) direction과
-   다섯 bracket의 scale-invariant plus-tail datum은 좁게 완료
-2. 그 enclosure가 포함하는 endpoint \(F\)와 \(F_\lambda\)의 rigorous bound
+1. nonzero-\(\lambda\)에서 declared minus-end \(\Gamma_1\) functional과
+   reference-field boundary contribution; \(\lambda=0\) direction, \(h(4)\),
+   direct smooth \(J(-4)\)와 endpoint-only \(h(-4)\)는 다섯 bracket에서 좁게 완료
+2. 그 functional과 finite-\(Q_0\) proxy의 관계를 포함한 endpoint
+   \(F\), declared \(F_\lambda\)와 root-velocity bound
 3. \(\operatorname{Im}z>0\)에서 선택한 자기수반 extension의 resolvent와
    Weyl--Titchmarsh \(m(z)\)
 4. \(m\)-함수의 경계값/Stieltjes 자료로부터 얻는 spectral measure,
@@ -138,45 +177,43 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
 
 ## 다음 최소 인증 단위
 
-가장 가까운 독립 질문은 “이미 인증한 scale-invariant
-\(h(4)=\partial_\lambda[-u'/u]_{\lambda=0}\) ball을 실제 solution node를
-지나 \(Q_0=-4\)까지 outward-rounded 상태로 전달할 수 있는가?”다.
-정규화된 \(F_\lambda\) amplitude는 그 다음의 별도 계산이다. 다음 transport를
-열 경우 최소 입력과 출력은 다음처럼 고정한다.
+가장 가까운 독립 질문은 “nonzero-\(\lambda\)에서 선언한 minus-end
+\(\Gamma_1\) functional을 reference field와 같은 domain convention으로
+정의하고, finite-\(Q_0\) proxy에 빠진 left-boundary contribution까지
+outward-rounded enclosure로 검증할 수 있는가?”다. \(\lambda=0\) direct
+Green endpoint는 이미 닫혔으며, generic normalized \(F_\lambda\)나 root
+velocity를 이 boundary functional보다 먼저 선언하면 안 된다.
 
 ### 입력
 
-- 현재 \(h(4)\) 결과의 input/result/runner hash와 다섯 certified ball
-- 선택한 real parameter box와 endpoint/boundary convention
-- forced sensitivity equation 또는 동치인 unwrapped Prüfer/projective
-  variational system과 그 local remainder
-- 후속 amplitude 계산을 위한 plus-end \(\lambda\)-normalization 후보; 이
-  계산은 normalization을 선택하지 않으면 \(h\)까지만 출력
-- overflow를 피하기 위한 scaling/projective chart와 chart-switch rule
-- coefficient·rounding·truncation을 모두 포함하는 interval/ball arithmetic
-  convention
+- 현재 \(J(-4),h(-4)\) 결과의 input/result/runner hash와 다섯 certified ball
+- \(\Gamma_{1,p}u=-\lim_{Q\to-\infty}W(u,c_p)\)의 selected reference field,
+  normalization, maximal-domain convention과 measurable \(p\)-dependence
+- nonzero-\(\lambda\)에서 \(Q_0\) 왼쪽까지 포함하는 boundary variation
+  identity와 analytic/validated remainder
+- plus-end direction 또는 amplitude normalization을 어디에 쓰는지의 명시적
+  구분
+- coefficient·rounding·minus-end truncation을 모두 포함하는 interval/ball
+  arithmetic convention
 
 ### 반드시 검증할 것
 
-- 각 step의 local truncation remainder와 outward rounding
-- Wronskian enclosure가 0을 배제하는지 여부
-- step subdivision과 precision 증가에 대한 enclosure nesting
-- chart pole 또는 turning-point 후보가 생기면 성공으로 숨기지 않는
-  `UNRESOLVED_SUBBOX` 출력
-- direct integration, variational equation, finite difference 사이의 대조를
+- minus-end cutoff 제거 또는 analytic tail remainder와 outward rounding
+- reference Wronskian boundary map의 normalization/extension dependence
+- \(Q<Q_0\) left contribution을 누락한 finite-proxy 식을 fail-closed로 거부
+- parameter subdivision과 precision 증가에 대한 enclosure overlap/refinement
+- direct Green identity, boundary variation equation과 finite difference 대조를
   하되 finite difference를 인증 근거로 사용하지 않는 구분
-- endpoint sensitivity가 입력 tail uncertainty와 transport uncertainty를 모두
-  포함하는지에 대한 fail-closed check
 - recessive direction만 고정한 상태에서 normalization-dependent
-  \(F_\lambda\) amplitude를 출력하지 않는 guard
+  \(F_\lambda\), eigenvalue slope 또는 root velocity를 출력하지 않는 guard
 
 ### 가능한 좁은 결과
 
-- `CERTIFIED_REAL_ENDPOINT_BOX`: 선언한 실수 box에서 endpoint enclosure를
-  얻음
+- `CERTIFIED_NONZERO_LAMBDA_GAMMA1_VARIATION`: 선언한 extension과 실수 box에서
+  minus-end boundary variation enclosure를 얻음
 - `SUBDIVISION_REQUIRED`: 일부 parameter subbox만 인증됨
-- `TRANSPORT_NOT_CERTIFIED`: 폭발, pole, remainder 또는 precision budget 때문에
-  enclosure가 닫히지 않음
+- `BOUNDARY_VARIATION_NOT_CERTIFIED`: minus-end remainder, domain dependence 또는
+  precision budget 때문에 enclosure가 닫히지 않음
 
 어느 결과도 자동으로 비실수 resolvent, spectral measure 또는 RAQ를 승인하지
 않는다. real endpoint 인증 뒤에도 별도의 complex-\(z\) 계산에서 Herglotz/Nevanlinna
@@ -190,21 +227,23 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
 certificate도 같은 backend의 80/120-digit nesting과 0 배제 조건을 통과했다.
 두 precision tier는 **같은 구현의 반복**이지 독립 backend 검산은 아니다.
 
-남은 장애물은 일반 ball arithmetic의 부재가 아니라 validated
-parameter-dependent ODE다. python-flint의 special-function inclusion만으로
-ODE truncation/wrapping과 chart switch가 자동 인증되지는 않는다. 다음 구현은
+\(\lambda=0\) endpoint의 남은 장애물은 일반 ball arithmetic이나 node
+crossing이 아니다. exact Bessel Green route가 그 endpoint를 직접 닫았다.
+현재 장애물은 nonzero-\(\lambda\) minus-end boundary functional이다.
+python-flint의 special-function inclusion만으로 moving-domain boundary
+variation과 \(Q\to-\infty\) remainder가 자동 인증되지는 않는다. 다음 구현은
 둘 중 하나를 명시적으로 선택해야 한다.
 
-- Arb 위에 interval Taylor remainder와 Prüfer/projective chart 전환을 좁은
-  parameter subbox용으로 직접 구성한다.
+- Arb 위에 minus-end reference pair와 boundary variation의 interval Taylor
+  remainder를 좁은 parameter subbox용으로 직접 구성한다.
 - CAPD::DynSys 또는 VNODE-LP 같은 validated ODE backend를 별도 도입하고,
   lock/source/version/rounding semantics와 작은 analytic anchor 회귀를 함께
   커밋한다.
 
-두 경로 모두 이제 확보한 differentiated tail datum을 **입력**으로 써야 하며,
-그 사실만으로 chart switch, compact transport 또는 normalization-dependent
-amplitude가 인증되지는 않는다. 새 dependency, 대형 계산 또는 descendant
-실행은 이 메모가 자동 승인하지 않는다.
+두 경로 모두 이제 확보한 \(J(-4),h(-4)\) datum을 regression anchor로 쓸 수
+있지만, 그 사실만으로 declared \(\Gamma_1\) derivative나
+normalization-dependent amplitude가 인증되지는 않는다. 새 dependency, 대형
+계산 또는 descendant 실행은 이 메모가 자동 승인하지 않는다.
 
 ## 이후 RAQ까지의 정확한 순서
 
@@ -212,8 +251,9 @@ amplitude가 인증되지는 않는다. 새 dependency, 대형 계산 또는 des
 real plus-tail bound                    완료(현재 좁은 범위)
   -> lambda=0 exact Bessel transport    완료(실수 direction과 5 existence brackets)
     -> scale-invariant h tail datum     완료(lambda=0, 5 brackets의 h(4))
-      -> node-safe h transport          오픈
-        -> normalized F_lambda          오픈
+      -> direct smooth Green endpoint   완료(lambda=0, 5 brackets의 J(-4), endpoint h(-4))
+        -> nonzero-lambda minus-end Gamma1 functional  오픈
+          -> declared F_lambda/slope    오픈
       -> nonreal resolvent + Weyl m     오픈
         -> spectral measure/support     오픈
           -> test space + rigging form  오픈

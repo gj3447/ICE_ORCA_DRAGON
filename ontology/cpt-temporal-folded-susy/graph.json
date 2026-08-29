@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-29T15:40:30Z",
+  "updated_at_utc": "2026-08-29T16:55:00Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -509,10 +509,11 @@
     },
     {
       "question": "What did the first-priority raw-C calculation actually close?",
-      "answer": "Only at exactly lambda=0 and on five inherited brackets: the exact modified-Bessel recessive direction, at least one real sign-changing characteristic zero per bracket, and a rigorous normalization-invariant h(4)=partial_lambda[-u_Q/u] enclosure on every full bracket. Root uniqueness/completeness, node-safe Q=4-to--4 sensitivity transport, nonzero-lambda differentiated tails, normalized F_lambda, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
+      "answer": "Only at exactly lambda=0 and on five inherited brackets: the exact modified-Bessel recessive direction, at least one real sign-changing characteristic zero per bracket, a rigorous normalization-invariant h(4)=partial_lambda[-u_Q/u] enclosure, and a direct smooth Green construction of positive J(-4)=-W=u^2 h plus endpoint-only positive h(-4) on every full bracket. The endpoint result is not numerical propagation of the h(4) state. Root uniqueness/completeness, nonzero-lambda minus-end Gamma_1, declared F_lambda/root velocity, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
       "claim_ids": [
         "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
-        "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS"
+        "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
+        "claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS"
       ]
     }
   ],
@@ -1254,8 +1255,8 @@
     },
     {
       "id": "reading-path:gate1-v0-metacognitive-priority-to-observation",
-      "title": "From the metacognitive priority map through the lambda-zero tail datum to the observation gate",
-      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the completed lambda-zero ball anchor and differentiated h(4) tail datum, then stop at the still-open node-safe compact transport before following the independently startable nonreal spectral and S3/BFV lanes toward relational and likelihood gates. Navigation only; it creates no automatic successor or physical promotion.",
+      "title": "From the metacognitive priority map through the lambda-zero Green endpoint to the observation gate",
+      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the completed lambda-zero ball anchor, differentiated h(4) tail and direct smooth Green endpoint, then stop at the still-open nonzero-lambda minus-end Gamma_1 functional before following the independently startable nonreal spectral and S3/BFV lanes toward relational and likelihood gates. Navigation only; it creates no automatic successor or physical promotion.",
       "nodes": [
         "concept:gate1-v0-six-bridge-metacognitive-priority-map",
         "artifact:gate1-v0-six-bridge-metacognitive-priority-map",
@@ -1269,6 +1270,10 @@
         "scope:raw-c-lambda-zero-differentiated-plus-tail-five-root-brackets",
         "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
         "evidence:raw-c-lambda-zero-differentiated-plus-tail-result",
+        "concept:raw-c-lambda-zero-node-safe-green-endpoint-construction",
+        "scope:raw-c-lambda-zero-node-safe-green-endpoint-five-root-brackets",
+        "claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS",
+        "evidence:raw-c-lambda-zero-node-safe-green-transport-result",
         "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
         "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
         "open:gate1-v0-classical-s3-hda-closure",
@@ -14089,29 +14094,30 @@
       "id": "concept:gate1-v0-six-bridge-metacognitive-priority-map",
       "type": "concept",
       "title": "Gate-1 V0 six-bridge metacognitive priority map",
-      "summary": "Decision-complete local map of P1 raw-C differentiated endpoint work, P2 S3 cubic construction, P3 HDA/Jacobi, P4 nonreal raw-C spectral/RAQ/rescaling, P5 quantum BFV, P6 absolute BFV, and P7 clocks/BO/V-not-equal-zero likelihood. It records evidence, assumptions, falsifiers, gates and explicit nulls; navigation only, with no automatic execution or physical promotion.",
+      "summary": "Decision-complete local map of P1 raw-C differentiated tail, direct lambda-zero Green endpoint and nonzero-lambda minus-end Gamma_1 work, P2 S3 cubic construction, P3 HDA/Jacobi, P4 nonreal raw-C spectral/RAQ/rescaling, P5 quantum BFV, P6 absolute BFV, and P7 clocks/BO/V-not-equal-zero likelihood. It records evidence, assumptions, falsifiers, gates and explicit nulls; navigation only, with no automatic execution or physical promotion.",
       "state": "ACTIVE_LOCAL_PRIORITY_EPISTEMIC_LEDGER_NO_AUTOMATIC_EXECUTION_AUTHORITY"
     },
     {
       "id": "concept:raw-c-validated-transport-certification-contract",
       "type": "concept",
-      "title": "Raw-C validated transport certification contract",
-      "summary": "The priority-1 method separates a scale-invariant differentiated plus-tail enclosure for h=partial_lambda(-u'/u), an unwrapped node-safe projective transport, and any later normalization-dependent F_lambda amplitude. It fails closed on normalization drift, denominator-zero, non-nesting, remainder or width failure.",
-      "state": "ACTIVE_METHOD_CONTRACT_SCALE_INVARIANT_TAIL_BEFORE_NORMALIZED_AMPLITUDE"
+      "title": "Raw-C validated endpoint and boundary certification contract",
+      "summary": "The priority-1 method separates the scale-invariant h(4) tail, a direct smooth lambda-zero Green endpoint J(-4) with endpoint-only h(-4), the nonzero-lambda minus-end Gamma_1 functional including its left-boundary term, and only then any declared F_lambda amplitude or slope. It fails closed on normalization drift, denominator-zero, missing boundary terms, non-overlap, remainder or width failure.",
+      "state": "ACTIVE_METHOD_CONTRACT_LAMBDA_ZERO_ENDPOINT_BEFORE_NONZERO_LAMBDA_DECLARED_BOUNDARY"
     },
     {
       "id": "scope:gate1-v0-raw-c-validated-real-transport-p1",
       "type": "scope",
-      "title": "Priority-1 raw-C validated real transport scope",
-      "summary": "Real parameter and certification scope for the differentiated tail and later node-safe endpoint route.",
-      "state": "DECLARED_PRIORITY_1_REAL_VALIDATED_TRANSPORT_SCOPE",
+      "title": "Priority-1 raw-C validated real endpoint and boundary scope",
+      "summary": "Real parameter and certification scope for the differentiated tail, direct lambda-zero Green endpoint and later nonzero-lambda minus-end boundary functional.",
+      "state": "DECLARED_PRIORITY_1_REAL_ENDPOINT_AND_DECLARED_BOUNDARY_SCOPE",
       "includes": [
         "the declared real raw-C fiber and candidate self-adjoint boundary convention",
-        "Q>=4 differentiated scale-invariant h=partial_lambda(-u'/u) tail enclosure before compact transport",
-        "a later Q=4 to Q0=-4 unwrapped projective or Pruefer atlas with outward rounding",
+        "the completed Q>=4 differentiated scale-invariant h=partial_lambda(-u'/u) tail enclosure",
+        "the completed direct lambda-zero smooth Green endpoint J(-4) and endpoint-only h(-4) construction",
+        "a later nonzero-lambda minus-end Gamma_1 variation with selected reference field and left-boundary contribution",
         "the declared compact real box |lambda|<=1e-4 and 0<=kappa<=8, with subboxes allowed",
-        "an explicit plus-end lambda normalization before any amplitude F_lambda output",
-        "fail-closed subdivision, precision nesting, Wronskian and chart-switch checks"
+        "an explicit boundary and amplitude normalization before any declared F_lambda or slope output",
+        "fail-closed subdivision, precision overlap, Wronskian, minus-end remainder and domain checks"
       ],
       "excludes": [
         "a nonreal resolvent, Weyl m-function, spectral measure, test space, rigging map or RAQ",
@@ -14146,10 +14152,10 @@
     {
       "id": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
       "type": "open_problem",
-      "title": "Raw-C node-safe sensitivity and normalized endpoint transport",
-      "summary": "Priority 1 has a closed-narrow lambda-zero h(4) datum on five certified brackets. The remaining compact problem is to propagate those balls through every node and chart switch from Q=4 to Q=-4; an explicitly normalized F_lambda amplitude and nonzero-lambda tails are later separate work. Nonreal spectral and RAQ outputs also remain open.",
-      "state": "PRIORITY_1_H_QPLUS_CLOSED_NARROW_NODE_SAFE_TRANSPORT_OPEN",
-      "question": "Can the five certified lambda-zero h(4) balls be propagated through every solution node and safe chart switch to Q=-4 with outward rounding, before any explicitly normalized F_lambda amplitude is emitted?"
+      "title": "Raw-C nonzero-lambda minus-end Gamma_1 functional and extension derivative",
+      "summary": "Priority 1 now has closed-narrow lambda-zero h(4), direct smooth J(-4) and endpoint-only h(-4) boxes on five certified brackets. The Green endpoint is not numerical propagation of the h(4) state. The remaining declared-boundary problem is to define and validate the nonzero-lambda minus-end Gamma_1 functional with its reference-field and left-boundary contribution; only afterward may a finite-Q0 proxy derivative be related to a declared-extension F_lambda, slope or root velocity. Root uniqueness, nonreal spectral and RAQ outputs also remain open.",
+      "state": "PRIORITY_1_DIRECT_LAMBDA_ZERO_GREEN_ENDPOINT_CLOSED_MINUS_END_GAMMA1_OPEN",
+      "question": "Can the selected nonzero-lambda minus-end Gamma_1 functional, reference field, domain convention and left-boundary variation be outwardly certified before any finite-Q0 proxy derivative is promoted to a declared-extension F_lambda, slope or root velocity?"
     },
     {
       "id": "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
@@ -14225,7 +14231,7 @@
       "state": "TRACKED_RESEARCH_DECISION_MAP",
       "artifact_kind": "research_decision_map",
       "path": "docs/research/ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md",
-      "sha256": "221e267159646b4b645975eb7e5fa256c3c6b381ad75cf86440b95c833f9dda2"
+      "sha256": "9e8ed44fe15dcb1714a86eed96eed65281eeda33a42d963a13ef1e67527fe112"
     },
     {
       "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-inputs",
@@ -14504,6 +14510,104 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/raw-c-lambda-zero-differentiated-plus-tail-result.json",
       "sha256": "7f01f6157d2ad4d2bf75f18f267a9c236b043971a2419158dea4d5fb449127c4"
+    },
+    {
+      "id": "concept:raw-c-lambda-zero-node-safe-green-endpoint-construction",
+      "type": "concept",
+      "title": "Raw-C lambda-zero node-safe Green endpoint construction",
+      "summary": "At exactly lambda=0 the smooth differentiated Wronskian J=-W(u,partial_lambda u)=u^2h is constructed directly at Q0=-4 by an exact modified-Bessel Green integral. The construction does not evolve the pole-prone quotient h through interior zeros and is not numerical propagation of the upstream h(4) datum.",
+      "state": "COMPLETED_NARROW_LAMBDA_ZERO_GREEN_ENDPOINT_FIVE_BRACKETS"
+    },
+    {
+      "id": "scope:raw-c-lambda-zero-node-safe-green-endpoint-five-root-brackets",
+      "type": "scope",
+      "title": "Lambda-zero raw-C node-safe Green endpoint scope",
+      "summary": "Direct exact Green-integral endpoint scope at Q0=-4 on five full inherited real-kappa brackets.",
+      "state": "DECLARED_LAMBDA_ZERO_DIRECT_GREEN_ENDPOINT_FIVE_BRACKET_SCOPE",
+      "includes": [
+        "exactly lambda=0 and Q0=-4",
+        "the five full exact-rational kappa brackets inherited from the Bessel anchor",
+        "J=-W(u,partial_lambda u)=u^2h and J_Q=-A_lambda u^2 as the smooth node-safe variable",
+        "the direct C^(-1/2) integral of sqrt(x) K_(i*kappa)(x)^2 from x0 to infinity",
+        "six rigorous finite acb.integral subsegments, a separate x>=32 analytic tail, and 80/120-digit same-backend refinement",
+        "endpoint-only h(Q0)=J(Q0)/K_(i*kappa)(x0)^2 after whole-band nonvanishing"
+      ],
+      "excludes": [
+        "a raw h trajectory through interior nodes or a numerical Qplus-to-Q0 state/flux decomposition",
+        "nonzero-lambda transport, a normalized endpoint F_lambda amplitude, declared Gamma_1 derivative, eigenvalue slope or root velocity",
+        "root uniqueness or completeness on kappa in [0,8]",
+        "a nonreal resolvent, Weyl m-function, spectral measure, rigging data, RAQ or C-H equivalence",
+        "BFV, observation, physics, quantum gravity, TOE or automatic successor execution"
+      ]
+    },
+    {
+      "id": "claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS",
+      "type": "claim",
+      "title": "Declared lambda-zero raw-C smooth Green endpoint construction holds",
+      "summary": "Supported only for direct positive J(-4) and endpoint-only positive h(-4) boxes on five full inherited lambda-zero brackets. It is not an h(4) propagation theorem and supplies no declared extension derivative, spectrum, RAQ or physics claim.",
+      "state": "SUPPORTED_NARROW_DIRECT_GREEN_ENDPOINT_ONLY",
+      "claim_id": "RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS",
+      "statement": "For the declared lambda-zero raw-C fiber and every point of each of five inherited certified real-kappa brackets, the exact modified-Bessel Green integral plus rigorous finite ball quadrature and analytic tail certifies positive J(Q0) and, after whole-band endpoint nonvanishing, positive endpoint-only h(Q0), without evolving h through interior solution zeros.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:raw-c-lambda-zero-node-safe-green-transport-result",
+      "type": "evidence",
+      "title": "Raw-C lambda-zero node-safe Green endpoint evidence",
+      "summary": "VALID_RUN with 7 exact and 61 Arb-ball checks plus six theorem/scope guards, 60 finite subsegment quadratures, no ODE/root/finite-difference calls, five positive full-bracket J(-4) and endpoint-only h(-4) enclosures, and isolated REPRO.",
+      "state": "VALID_RUN_LAMBDA_ZERO_DIRECT_GREEN_ENDPOINT_ONLY",
+      "observed_status": "VALID_RUN_7_EXACT_61_BALL_PASS_6_GUARDS_5_BRACKETS_REPRO",
+      "check_ids": ["P39.rawc.green.wronskian_forcing","P39.rawc.green.smooth_flux","P39.rawc.green.smooth_flux_equation","P39.rawc.green.rescaling_J","P39.rawc.green.Q_to_x_density","P39.rawc.green.tail_antiderivative","P39.rawc.green.finite_proxy_at_zero","P39.rawc.green.cutoff_order","P39.rawc.green.root1.band_coverage","P39.rawc.green.root1.tier1.endpoint_denominator","P39.rawc.green.root1.tier1.plus_end_magnitude","P39.rawc.green.root1.tier1.finite_green_integral","P39.rawc.green.root1.tier1.analytic_tail_and_plus_magnitude","P39.rawc.green.root1.tier1.endpoint_boxes","P39.rawc.green.root1.tier2.endpoint_denominator","P39.rawc.green.root1.tier2.plus_end_magnitude","P39.rawc.green.root1.tier2.finite_green_integral","P39.rawc.green.root1.tier2.analytic_tail_and_plus_magnitude","P39.rawc.green.root1.tier2.endpoint_boxes","P39.rawc.green.root1.precision_refinement","P39.rawc.green.root2.band_coverage","P39.rawc.green.root2.tier1.endpoint_denominator","P39.rawc.green.root2.tier1.plus_end_magnitude","P39.rawc.green.root2.tier1.finite_green_integral","P39.rawc.green.root2.tier1.analytic_tail_and_plus_magnitude","P39.rawc.green.root2.tier1.endpoint_boxes","P39.rawc.green.root2.tier2.endpoint_denominator","P39.rawc.green.root2.tier2.plus_end_magnitude","P39.rawc.green.root2.tier2.finite_green_integral","P39.rawc.green.root2.tier2.analytic_tail_and_plus_magnitude","P39.rawc.green.root2.tier2.endpoint_boxes","P39.rawc.green.root2.precision_refinement","P39.rawc.green.root3.band_coverage","P39.rawc.green.root3.tier1.endpoint_denominator","P39.rawc.green.root3.tier1.plus_end_magnitude","P39.rawc.green.root3.tier1.finite_green_integral","P39.rawc.green.root3.tier1.analytic_tail_and_plus_magnitude","P39.rawc.green.root3.tier1.endpoint_boxes","P39.rawc.green.root3.tier2.endpoint_denominator","P39.rawc.green.root3.tier2.plus_end_magnitude","P39.rawc.green.root3.tier2.finite_green_integral","P39.rawc.green.root3.tier2.analytic_tail_and_plus_magnitude","P39.rawc.green.root3.tier2.endpoint_boxes","P39.rawc.green.root3.precision_refinement","P39.rawc.green.root4.band_coverage","P39.rawc.green.root4.tier1.endpoint_denominator","P39.rawc.green.root4.tier1.plus_end_magnitude","P39.rawc.green.root4.tier1.finite_green_integral","P39.rawc.green.root4.tier1.analytic_tail_and_plus_magnitude","P39.rawc.green.root4.tier1.endpoint_boxes","P39.rawc.green.root4.tier2.endpoint_denominator","P39.rawc.green.root4.tier2.plus_end_magnitude","P39.rawc.green.root4.tier2.finite_green_integral","P39.rawc.green.root4.tier2.analytic_tail_and_plus_magnitude","P39.rawc.green.root4.tier2.endpoint_boxes","P39.rawc.green.root4.precision_refinement","P39.rawc.green.root5.band_coverage","P39.rawc.green.root5.tier1.endpoint_denominator","P39.rawc.green.root5.tier1.plus_end_magnitude","P39.rawc.green.root5.tier1.finite_green_integral","P39.rawc.green.root5.tier1.analytic_tail_and_plus_magnitude","P39.rawc.green.root5.tier1.endpoint_boxes","P39.rawc.green.root5.tier2.endpoint_denominator","P39.rawc.green.root5.tier2.plus_end_magnitude","P39.rawc.green.root5.tier2.finite_green_integral","P39.rawc.green.root5.tier2.analytic_tail_and_plus_magnitude","P39.rawc.green.root5.tier2.endpoint_boxes","P39.rawc.green.root5.precision_refinement"]
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-node-safe-green-transport-inputs",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero node-safe Green endpoint inputs",
+      "summary": "Pinned exact Green question, source roles, six finite subsegments, analytic-tail bound, two precision tiers, resource caps and fail-closed extension/physics nulls.",
+      "state": "TRACKED_RUN_INPUTS",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_INPUTS.json",
+      "sha256": "005a47aab13238f6b7bf0c5a67fb1218d739e7839dfdc99cadd9ebdb74bb4346"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-node-safe-green-transport-runner",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero node-safe Green endpoint runner",
+      "summary": "Bounded unnumbered exact-identity, full-parameter-ball Bessel, six-segment finite-quadrature and analytic-tail certificate runner.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/raw_c_lambda_zero_node_safe_green_transport.py",
+      "sha256": "a056cdbdf23424d017afe2a445d4ea0f4f6f4f4a90e0814a922cf5d49f1b4717"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-node-safe-green-transport-result",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero node-safe Green endpoint raw result",
+      "summary": "VALID_RUN result with payload digest 9667d2ff56b0dfc41bfeb4d24e4c09ab2ba77ee4439906a5a8743bd5e0f43c4f.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_RESULT.json",
+      "sha256": "e0d53cb50d8ad5bfb7afca67a7c5223d4ac4d2fdebf8718833acc58c2eee304b"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-node-safe-green-transport-report",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero node-safe Green endpoint report",
+      "summary": "Human-readable derivation, six-segment quadrature path, five J(-4)/h(-4) enclosures, initial width failure, declared-boundary caveat, provenance and next minus-end Gamma_1 gap.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT.md",
+      "sha256": "dc756e63bb471e5c605b9f0e4c4fdb4cec41788c07c9ce17a888f9520633ebf4"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-node-safe-green-transport-evidence-snapshot",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero node-safe Green endpoint evidence snapshot",
+      "summary": "Schema-valid run snapshot preserving 68 check aliases, source artifacts, result hashes, five endpoint enclosures, resource accounting and explicit nulls.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/raw-c-lambda-zero-node-safe-green-transport-result.json",
+      "sha256": "1227c2d75a8b438dd2d98d7c6af80d2e0bd0eafd4ccf84385d62f733b4e6578f"
     }
   ],
   "edges": [
@@ -34219,7 +34323,7 @@
     {"id":"edge:3293","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly","note":"The older combined bridge remains an index; the map separates its classical HDA and quantum anomaly obligations."},
     {"id":"edge:3294","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
     {"id":"edge:3295","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"EXTENDS","to":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","note":"Uses the exact lambda-zero K direction and all five inherited full root brackets, but adds only the normalization-invariant Qplus derivative datum."},
-    {"id":"edge:3296","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The h(4) input is now closed-narrow; the next independent obstacle is node-safe Q=4-to--4 sensitivity transport, not a repeated tail calculation."},
+    {"id":"edge:3296","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"MOTIVATES","to":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","note":"The h(4) input motivated the separately authorized direct Green endpoint construction; it did not automatically launch it, and the latter is not a numerical propagation of the h(4) state."},
     {"id":"edge:3297","from":"claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS","relation":"ABOUT","to":"concept:raw-c-lambda-zero-differentiated-plus-tail"},
     {"id":"edge:3298","from":"claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS","relation":"HAS_EVIDENCE","to":"evidence:raw-c-lambda-zero-differentiated-plus-tail-result","polarity":"SUPPORTS"},
     {"id":"edge:3299","from":"claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS","relation":"VALID_WITHIN","to":"scope:raw-c-lambda-zero-differentiated-plus-tail-five-root-brackets"},
@@ -34231,7 +34335,23 @@
     {"id":"edge:3305","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-differentiated-plus-tail-report"},
     {"id":"edge:3306","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"The exact K identities and 10.32.9 integral representation bound the analytic tail only; the emitted h balls are repository calculations."},
     {"id":"edge:3307","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball inclusion semantics only; same-backend precision refinement is not independent validation."},
-    {"id":"edge:3308","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked Bessel and rigorous finite acb.integral interface; the improper integral was manually truncated and bounded analytically."}
+    {"id":"edge:3308","from":"concept:raw-c-lambda-zero-differentiated-plus-tail","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked Bessel and rigorous finite acb.integral interface; the improper integral was manually truncated and bounded analytically."},
+    {"id":"edge:3309","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3310","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"EXTENDS","to":"concept:raw-c-lambda-zero-differentiated-plus-tail","note":"Adds direct J(-4) and endpoint-only h(-4) boxes on the same five lambda-zero brackets; it does not convert the h(4) magnitude sentinel into a numerical propagation theorem."},
+    {"id":"edge:3311","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"EXTENDS","to":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","note":"Uses the exact K_(i*kappa) direction, full inherited brackets and endpoint nonvanishing supplied by the lambda-zero anchor."},
+    {"id":"edge:3312","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The direct lambda-zero endpoint is now closed-narrow; the next declared-boundary obstacle is the nonzero-lambda minus-end Gamma_1 functional and its left-boundary term."},
+    {"id":"edge:3313","from":"claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS","relation":"ABOUT","to":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction"},
+    {"id":"edge:3314","from":"claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS","relation":"HAS_EVIDENCE","to":"evidence:raw-c-lambda-zero-node-safe-green-transport-result","polarity":"SUPPORTS"},
+    {"id":"edge:3315","from":"claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS","relation":"VALID_WITHIN","to":"scope:raw-c-lambda-zero-node-safe-green-endpoint-five-root-brackets"},
+    {"id":"edge:3316","from":"evidence:raw-c-lambda-zero-node-safe-green-transport-result","relation":"DEFINED_IN","to":"artifact:raw-c-lambda-zero-node-safe-green-transport-runner"},
+    {"id":"edge:3317","from":"evidence:raw-c-lambda-zero-node-safe-green-transport-result","relation":"DERIVED_FROM","to":"artifact:raw-c-lambda-zero-node-safe-green-transport-inputs"},
+    {"id":"edge:3318","from":"evidence:raw-c-lambda-zero-node-safe-green-transport-result","relation":"RECORDED_IN","to":"artifact:raw-c-lambda-zero-node-safe-green-transport-evidence-snapshot"},
+    {"id":"edge:3319","from":"evidence:raw-c-lambda-zero-node-safe-green-transport-result","relation":"RECORDED_IN","to":"artifact:raw-c-lambda-zero-node-safe-green-transport-result"},
+    {"id":"edge:3320","from":"claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-node-safe-green-transport-report"},
+    {"id":"edge:3321","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-node-safe-green-transport-report"},
+    {"id":"edge:3322","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"Exact K identities, real-order symmetry and 10.32.9 tail majorant only; the five endpoint boxes are repository calculations."},
+    {"id":"edge:3323","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball inclusion semantics only; the two precision tiers use one backend and are not independent validation."},
+    {"id":"edge:3324","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked Bessel and rigorous finite acb.integral interface for six finite subsegments; the improper tail is bounded analytically."}
   ],
   "kg_bridges": [
     {
@@ -34890,6 +35010,16 @@
       "checked_at_utc": "2026-08-29T15:40:30Z",
       "lookup_key": "ICE raw C lambda zero differentiated plus-tail normalization-invariant h at Qplus on five root brackets",
       "note": "No authorized exact external correspondence or writer is available. The local result certifies only h(4) on five lambda-zero brackets and supplies no node-safe endpoint transport, normalized F_lambda, spectral measure, RAQ, quantum-gravity, physics or TOE claim; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-29T16:55:00Z",
+      "lookup_key": "ICE raw C lambda zero direct node safe Green Wronskian endpoint J and h at Q0 on five root brackets",
+      "note": "No authorized exact external correspondence or writer is available. The local result certifies only direct lambda-zero J(-4) and endpoint-only h(-4) boxes on five brackets. It is not h(4) propagation and supplies no nonzero-lambda Gamma_1 derivative, F_lambda, root velocity, spectral measure, RAQ, quantum-gravity, physics or TOE claim; no external UID was invented."
     }
   ]
 }
