@@ -1,0 +1,104 @@
+{
+  "schema_version": "ice.closed-s3-full-svt-spectral-ledger.input.v1",
+  "calculation_id": "ClosedS3FullSVTSpectralLedger",
+  "numbered_phase": null,
+  "question": "On the unit round S3, what are the declared rough/Hodge/Lichnerowicz spectral conventions, degeneracies, exceptional modes, scalar-derived normalization shifts, and exact cumulative sector counts for scalar, transverse-vector, and TT-tensor harmonic sectors?",
+  "kind": "EXACT_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_AND_WEYL_COUNT_LEDGER",
+  "epistemic_scope": "SPECTRAL_LABELS_DEGENERACIES_AND_DERIVED_HARMONIC_IDENTITIES_ON_UNIT_ROUND_S3_ONLY_NOT_EXPLICIT_COMPLETE_BASIS_FUNCTIONS_NOT_GAUNT_NOT_ADM_CONSTRAINTS_NOT_HDA",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json",
+      "sha256": "3d67333d30b5baa4a24533993b93d9028367373f8195c7bdfde4e99885cfc66f",
+      "payload_sha256_without_self": "42750a31c83f27ffaa5fe5f4c18c408f2ff4ca82f7f0b3f909ece56d1c40a57e",
+      "required_verdict": "KEEP_CLOSED_S3_SCALAR_DERIVED_HARMONIC_NORMALIZATION_LEDGER_NOT_SVT_COMPLETENESS_OR_HDA",
+      "role": "pins the unit-S3 scalar-derived gradient and tracefree-Hessian convention without promoting it to a full SVT basis"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
+      "sha256": "5b6713ff2ad47dcc9effd42e01c71c1ae408320634b1f81098302b14dc0cebd4",
+      "payload_sha256_without_self": "863c7bf217b7d32eb0fb658139612361369fc5730a1549d20fb6029c74fc0166",
+      "required_verdict": "KEEP_CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_AND_HARD_CUTOFF_REMAINDER_LEDGER_NOT_ADM_OR_HDA",
+      "role": "pins the prior zonal scalar convention and its explicit boundary that zonal convolution is not full SVT or HDA"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere, Gen. Rel. Grav. 49 (2017) 140, arXiv:1709.08020",
+      "url": "https://arxiv.org/abs/1709.08020",
+      "used_for": "unit-S3 scalar/vector/tensor Laplace, divergence, trace and normalization conventions including exceptional low-mode ranges",
+      "not_used_for": "a complete numerical basis realization, Gaunt coefficients, ADM constraints, or a physical prediction"
+    },
+    {
+      "source": "A. Higuchi, Symmetric Tensor Spherical Harmonics on the N-Sphere and Their Application to the de Sitter Group SO(N,1), J. Math. Phys. 28 (1987) 1553",
+      "url": "https://doi.org/10.1063/1.527513",
+      "used_for": "transverse-traceless symmetric-tensor harmonic spectral context",
+      "not_used_for": "the repository-local cutoff counts or any gravitational constraint algebra"
+    }
+  ],
+  "declared_conventions": {
+    "geometry": "unit round S3 with Ric_ab=2 gamma_ab and scalar curvature 6",
+    "scalar_sector": "n>=0; lambda_n=n(n+2); rough Delta_0=-D^2 eigenvalue lambda_n; degeneracy d_0=(n+1)^2",
+    "transverse_vector_sector": "n>=1; D^aV_a=0; rough Delta_1=-D^2 eigenvalue lambda_n-1; Hodge Delta_H=Delta_1+2 eigenvalue lambda_n+1; combined degeneracy d_1=2n(n+2)",
+    "tt_tensor_sector": "n>=2; D^aT_ab=0=T^a_a; rough Delta_2=-D^2 eigenvalue lambda_n-2; declared Delta_L=Delta_2+6 on tracefree symmetric tensors has eigenvalue lambda_n+4; combined degeneracy d_2=2(n-1)(n+3)",
+    "scalar_derived_vector": "G_a=lambda_n^(-1/2)D_aQ for n>=1; norm one; rough eigenvalue lambda_n-2; Hodge eigenvalue lambda_n",
+    "scalar_derived_tf_hessian": "S_ab=D_aD_bQ+(lambda_n/3)gamma_abQ; norm squared (2/3)lambda_n(lambda_n-3); normalized for n>=2; rough eigenvalue lambda_n-6; declared Lichnerowicz eigenvalue lambda_n",
+    "vector_derived_tensor": "A_ab=D_aV_b+D_bV_a for transverse unit V; norm squared 2(lambda_n-3); normalized for n>=2; rough eigenvalue lambda_n-5; declared Lichnerowicz eigenvalue lambda_n+1",
+    "exceptional_modes": "n=0 scalar is constant with vanishing gradient; n=1 scalar-derived TF Hessian vanishes; n=1 transverse vectors are Killing and their symmetrized gradients vanish; TT tensor sector starts at n=2",
+    "cutoffs": [2, 3, 5, 8]
+  },
+  "exact_plan": [
+    "hash-verify both prior harmonic results and retain their non-HDA boundaries",
+    "verify scalar, transverse-vector and TT-tensor eigenvalue/degeneracy polynomials and low-mode ranges",
+    "verify gradient scalar, tracefree-Hessian scalar, and symmetrized-gradient transverse-vector norm and rough/Lichnerowicz shift identities",
+    "verify n=0 and n=1 degeneracies and Killing/vanishing statements algebraically",
+    "derive sector cumulative counts and leading cubic Weyl coefficients at the declared cutoffs",
+    "keep rough, Hodge and declared Lichnerowicz Laplacians as distinct named expressions and test their shifts explicitly",
+    "leave explicit basis functions, Gaunt data, ADM constraints, HDA/Jacobi/BFV and all physical outputs null"
+  ],
+  "decision_table": [
+    {
+      "condition": "both upstream pins and all spectral, normalization, exceptional-mode, count and convention-separation identities pass",
+      "verdict": "KEEP_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_LEDGER_NOT_COMPLETE_BASIS_OR_HDA",
+      "programme_impact": "FIX_SVT_SPECTRAL_AND_COUNTING_CONVENTIONS_FOR_A_SEPARATE_EXPLICIT_BASIS_GAUNT_AND_ADM_EXPANSION",
+      "meaning": "only the declared spectral bookkeeping convention is retained"
+    },
+    {
+      "condition": "an upstream pin or any exact identity fails",
+      "verdict": "KILL_DECLARED_UNIT_CLOSED_S3_SVT_SPECTRAL_CONVENTION",
+      "programme_impact": "DO_NOT_USE_THIS_SVT_SPECTRAL_PACKET_FOR_CONSTRAINT_EXPANSION",
+      "meaning": "reject this convention packet without an inference about continuum GR, HDA or a quantum anomaly"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "explicit_complete_scalar_vector_tensor_basis_functions": null,
+    "full_gaunt_or_clebsch_gordan_ledger": null,
+    "full_adm_linear_constraint_expansion": null,
+    "full_adm_cubic_constraint_expansion": null,
+    "lapse_shift_constraint_brackets": null,
+    "classical_hypersurface_deformation_algebra_closure": null,
+    "classical_jacobi_closure": null,
+    "quantum_bfv_charge": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "raw_C_operator_domain": null,
+    "absolute_bfv_measure": null,
+    "relational_observables": null,
+    "born_oppenheimer_or_decoherence": null,
+    "empirical_likelihood": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
