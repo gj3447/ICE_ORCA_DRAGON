@@ -1,0 +1,142 @@
+{
+  "schema_version": "ice.raw-c-lambda-zero-bessel-ball-transport.input.v1",
+  "calculation_id": "RawCLambdaZeroBesselBallTransport",
+  "numbered_phase": null,
+  "question": "At exactly lambda=0, can the raw-C recessive solution be transported from the plus end to Q0=-4 by its exact modified-Bessel representation, with outward-rounded ball certificates for the five previously observed sign-changing characteristic brackets?",
+  "kind": "EXACT_BESSEL_REDUCTION_AND_ARBITRARY_PRECISION_BALL_ENDPOINT_CERTIFICATE",
+  "epistemic_scope": "LAMBDA_ZERO_REAL_RECESSIVE_DIRECTION_AND_FIVE_SIGN_CHANGE_EXISTENCE_BRACKETS_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_RAW_C_WEIGHTED_OPERATOR_DOMAIN_AUDIT_RESULT.json",
+      "sha256": "7daa40749b13920acfffe422a049e288cb3e67fc66de595b10681767ea036004",
+      "payload_sha256_without_self": "664af96fda1297c7524d86b3ffb79af08373377abc59bf127aeb8232b7e03bef",
+      "required_verdict": "NARROW_V0_RAW_C_CANDIDATE_HAS_FIBER_EXTENSION_DEBT_GLOBAL_MEASURABILITY_OPEN",
+      "role": "pins the declared weighted raw-C fiber, endpoint classification and lambda-zero modified-Bessel reduction"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json",
+      "sha256": "75404989d6e4cf8e5a9120a99d3cdcc3a1187a27478f358f1ad9a64f963d53ed",
+      "payload_sha256_without_self": "88c246cc29f50da539c827e9d841c043cc60d7d6dc5e7c78c22b15b3e5d13ce7",
+      "required_verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY",
+      "role": "provides the five coarse sign-change brackets to re-evaluate with rigorous ball arithmetic"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json",
+      "sha256": "ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39",
+      "payload_sha256_without_self": "0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c",
+      "required_verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY",
+      "role": "pins the Qplus=4 normalized log-derivative error budget used as an independent containment check"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified Bessel equation, standard K solution, Wronskian and derivative recurrences, sections 10.25, 10.28 and 10.29",
+      "url": "https://dlmf.nist.gov/10",
+      "version": "DLMF 1.2.7, 2026-06-15",
+      "used_for": "the exact lambda-zero Bessel reduction, recessive K branch, Wronskian and derivative formulas",
+      "not_used_for": "ball-arithmetic implementation correctness, nonzero-lambda transport, F_lambda, a spectral measure or RAQ"
+    },
+    {
+      "source": "Fredrik Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+      "url": "https://arxiv.org/abs/1611.02831",
+      "version": "IEEE Transactions on Computers 66 (2017) 1281-1292",
+      "used_for": "midpoint-radius ball inclusion semantics and outward-rounded special-function evaluation",
+      "not_used_for": "a validated ODE theorem or any raw-C operator conclusion"
+    },
+    {
+      "source": "python-flint acb complex-ball special-function interface",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb.html",
+      "version": "python-flint 0.9.0",
+      "used_for": "locked access to FLINT/Arb complex-order Bessel I and K balls",
+      "not_used_for": "claiming that an arbitrary floating-point computation is rigorous without explicit sign, containment and nesting checks"
+    }
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "lambda": "0 exactly",
+    "Q_plus": "4",
+    "Q_0": "-4",
+    "x": "x=6*pi^2*exp(Q)",
+    "kappa": "kappa=sqrt(3/2)*abs(p)",
+    "fiber_equation": "u_QQ=(36*pi^4*exp(2Q)-kappa^2)u",
+    "bessel_equation": "x^2*u_xx+x*u_x-(x^2-kappa^2)u=0 with order nu=i*kappa",
+    "recessive_solution": "u_plus(Q;kappa)=K_(i*kappa)(x)",
+    "characteristic": "F(kappa)=partial_Q u_plus(Q0;kappa)=-(x0/2)[K_(i*kappa-1)(x0)+K_(i*kappa+1)(x0)]",
+    "wronskian": "W_Q(K_(i*kappa),I_(i*kappa))=1",
+    "root_input": "the five upstream initial sign-change brackets, not the nonrigorous refined centers",
+    "precision_ladder_decimal_digits": [80, 120],
+    "bisection_steps": [64, 96],
+    "ball_output_digits": 50,
+    "execution": "exact SymPy change-of-variable identities plus python-flint/Arb balls; no ODE solve, finite difference, quadrature or parameter sampling grid"
+  },
+  "assumptions": [
+    "All numerical enclosures are conditional on python-flint 0.9.0 and its bundled FLINT/Arb implementation; the lock file and runtime version are recorded.",
+    "A sign-changing bracket proves at least one real characteristic zero by continuity. It does not by itself prove uniqueness or exclude even-multiplicity or additional sub-bracket zeros.",
+    "The exact Bessel representation transports the lambda-zero recessive solution direction without forming an ill-conditioned fundamental matrix. The ball checks cover the declared endpoint quantities and bracket bands, not every kappa in [0,8].",
+    "The Qplus Liouville-Green comparison checks only containment by the already proved lambda-zero tail budget. It is not reused as a differentiated lambda-tail theorem.",
+    "No lambda derivative is evaluated. Endpoint F_lambda, nonzero-lambda validated transport, nonreal Weyl m data, spectral measure, rigging map and C-to-H quantum equivalence remain null."
+  ],
+  "tasks": [
+    "verify every upstream file hash, payload hash, verdict and VALID_RUN state",
+    "verify exactly the Q-to-x change of variables, the imaginary-order Bessel equation, p parity and the first-order lambda sensitivity forcing that remains open",
+    "re-evaluate both ends of every upstream coarse root bracket with complex-order Bessel balls and require certified opposite real signs",
+    "bisect each bracket at 80 and 120 decimal digits, require every selected sign to exclude zero, and require the higher-precision bracket to nest inside the lower-precision bracket",
+    "on each high-precision bracket band, prove K_(i*kappa)(x0) excludes zero and the Q-Wronskian ball contains one",
+    "at Qplus=4, use scaled K values to avoid underflow and require the exact Bessel log derivative to lie inside the inherited Liouville-Green normalized error budget",
+    "write endpoint F_lambda, nonzero-lambda transport, spectral, RAQ, BFV, physical and TOE outputs as explicit nulls"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 1000,
+    "ball_bessel_evaluations": 5000,
+    "root_brackets": 5,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "nonzero_lambda_validated_transport": null,
+    "endpoint_F_lambda": null,
+    "unique_or_complete_zero_shell_root_census": null,
+    "nonreal_resolvent_or_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "global_delta_C_measure": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "general_p_mixing_extension_classification": null,
+    "canonical_p_zero_origin_sector": null,
+    "absolute_bfv_measure": null,
+    "continuum_determinant_or_pfaffian_line": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all source pins, exact identities, ball signs, bracket nesting, K nonvanishing, Wronskian and Qplus tail-containment checks pass",
+      "verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN",
+      "programme_impact": "CLOSE_THE_LAMBDA_ZERO_REAL_ENDPOINT_TRANSPORT_ANCHOR_ONLY_AND_ROUTE_NEXT_WORK_TO_DIFFERENTIATED_PLUS_TAIL_AND_NODE_SAFE_VARIATIONAL_TRANSPORT"
+    },
+    {
+      "condition": "any source pin, exact identity, ball sign, nesting, nonvanishing, Wronskian or tail-containment check fails",
+      "verdict": "LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_NOT_CERTIFIED",
+      "programme_impact": "RETAIN_THE_ANALYTIC_BESSEL_REDUCTION_BUT_DO_NOT_PROMOTE_THE_ENDPOINT_OR_ROOT_BRACKETS_TO_BALL_CERTIFICATES"
+    }
+  ]
+}
