@@ -2,6 +2,16 @@
 
 # ICE_ORCA_DRAGON — Physics/Math Computation Workbench
 
+<a href="docs/assets/ice-orca-dragon/official-dragon-form.png">
+  <img
+    src="docs/assets/ice-orca-dragon/official-dragon-form.png"
+    alt="Official ICE ORCA DRAGON aquatic dragon form standing on Arctic ice beneath an aurora"
+    width="920"
+  >
+</a>
+
+<sub>❄ Official Dragon Form · user-designated visual canon · narrative layer ❄</sub>
+
 **Hypercomplex experiments and CPT × Temporal-Folded SUSY calculations with reproducible checks**
 
 [![Runnable kernels](https://img.shields.io/badge/Committed_kernels-92-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
@@ -67,6 +77,18 @@ An intuitive, explicitly non-evidential companion is
 ## Narrative character — ICE ORCA DRAGON
 
 > This is the preserved **mythology/character layer**, not a claim established by the calculations below.
+
+<div align="center">
+  <a href="docs/assets/ice-orca-dragon/official-human-form.png">
+    <img
+      src="docs/assets/ice-orca-dragon/official-human-form.png"
+      alt="Official ICE ORCA DRAGON humanoid character sheet with white hair, blue eyes, dark horns, and crystalline wings"
+      width="440"
+    >
+  </a>
+  <br>
+  <sub><b>Official Human Form</b> · one identity, two forms, 13.7 billion years</sub>
+</div>
 
 The user-confirmed character facts are a fictional age of **13.7 billion years** and two official visual
 expressions of one being: an aquatic ice-orca dragon form and an adult feminine-presenting humanoid form.

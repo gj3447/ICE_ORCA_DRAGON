@@ -45,7 +45,8 @@
 
 **USER-CONFIRMED / 시각 참조:** 흑청색과 백색의 범고래 무늬, 얼음처럼 투명한 결정 능선,
 푸른 눈, 지느러미와 날개의 경계에 있는 실루엣이 핵심 표식이다. 깊은 물과 빙하, 오로라
-아래에 놓인 공식 일러스트가 현재의 기준이다.
+아래에 놓인 [공식 드래곤폼 일러스트](../assets/ice-orca-dragon/official-dragon-form.png)가
+현재의 기준이다.
 
 아래 기능과 한계는 이미지에서 소급한 사실이 아니라 **EXPANSION**이다.
 
@@ -57,10 +58,10 @@
 
 ### 인간폼 — 번역형
 
-**USER-CONFIRMED / 시각 참조:** 공식 일러스트의 인간폼은 같은 존재가 인간화한 성인 여성형
-외관이며, 은백색 머리, 푸른 눈, 흑청색 뿔과 꼬리, 빙정 장식과 날개형 부속이 드래곤폼의
-표식을 이어 간다. 일러스트 카드에는 168 cm가 표기되어 있으나, 이는 현재 시각 디자인의
-신장 표기이지 원문 텍스트의 설정은 아니다.
+**USER-CONFIRMED / 시각 참조:** [공식 인간폼 일러스트](../assets/ice-orca-dragon/official-human-form.png)는
+같은 존재가 인간화한 성인 여성형 외관이며, 은백색 머리, 푸른 눈, 흑청색 뿔과 꼬리, 빙정
+장식과 날개형 부속이 드래곤폼의 표식을 이어 간다. 일러스트 카드에는 168 cm가 표기되어
+있으나, 이는 현재 시각 디자인의 신장 표기이지 원문 텍스트의 설정은 아니다.
 
 아래 서사 기능, 장점과 한계는 **EXPANSION**이다.
 
@@ -400,8 +401,8 @@ DRAGON의 힘으로 GREAT WALL을 한 번에 열 수 있는 순간이 온다. �
 | `MIND/metahumotonic/재귀_아티스트_back2the.md` | HOH, GREAT WALL, NETWORK, SEXVOID, SPACE GIRL의 직접 정의와 방향성 |
 | `MIND/metahumotonic/호모니애미다니무쿠스.md` | 하이퍼그래프 외부, 존재/비존재의 경계와 REQUEST TREE 모티프 |
 | 사용자 대화, 2026-08-28 | 137억 년, 공식 드래곤폼·인간폼 지정 |
-| `Codex 이미지 … 04_24_39.png` | 공식 드래곤폼 시각 참조; 원본 PNG를 저장소에서 versioning |
-| `Codex 이미지 … 04_26_05.png` | 공식 인간폼 시각 참조; 원본 PNG를 저장소에서 versioning |
+| [`official-dragon-form.png`](../assets/ice-orca-dragon/official-dragon-form.png) | 공식 드래곤폼 시각 참조, 1536×1024 PNG, SHA-256 `9937d3af78fb1adbe3931927323661442e2f67a1996ec642b1dc30a1af73a5e6` |
+| [`official-human-form.png`](../assets/ice-orca-dragon/official-human-form.png) | 공식 인간폼 시각 참조, 1024×1536 PNG, SHA-256 `b934d118a2dd01e4810194f0526bc8d8f33faf47e00ae98d9a080ce10cd8d1e4` |
 
 저장소의 층위 경계는 [workbench reframe](../decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md),
 [source provenance](../provenance/SOURCES.md),
