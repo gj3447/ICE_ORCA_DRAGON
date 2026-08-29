@@ -1,0 +1,148 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT_20260829",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-29T04:27:36Z",
+  "command": "./ice run homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit.py",
+    "sha256": "1f32b1fe8b8c447c7bbc4388c5a947a916e258d84e4f4c108d88e79d4a77fe3a",
+    "introduced_in_commit": "9984166b4b75a37cae4dfaae1aa9b5b7ffa285ac"
+  },
+  "exact_checks": 12,
+  "checks": [
+    {
+      "id": "P39.SCV.exact.constraint.additive_potential",
+      "status": "PASS",
+      "statement": "C_V is the pinned V=0 constraint plus 2*pi^2 exp(3Q/2)V(phi)."
+    },
+    {
+      "id": "P39.SCV.exact.scalar_clock_factor",
+      "status": "PASS",
+      "statement": "{phi,C_V}=exp(-3Q/2)p/(2*pi^2)."
+    },
+    {
+      "id": "P39.SCV.exact.P_clock_factor",
+      "status": "PASS",
+      "statement": "{P,C_V}=-partial_Q C_V in the declared canonical convention."
+    },
+    {
+      "id": "P39.SCV.exact.Q_failure_control_factor",
+      "status": "PASS",
+      "statement": "{Q,C_V}=-exp(-3Q/2)P/(3*pi^2), so Q fails as a clock on P=0."
+    },
+    {
+      "id": "P39.SCV.exact.P0_constraint_elimination",
+      "status": "PASS",
+      "statement": "On C_V=0=P, p^2=8*pi^4 exp(2Q)(3-y), y=exp(Q)V."
+    },
+    {
+      "id": "P39.SCV.exact.scalar_clock_p_zero_locus",
+      "status": "PASS",
+      "statement": "The scalar-clock FP factor vanishes at p=0, which on P=0=C_V gives y=3."
+    },
+    {
+      "id": "P39.SCV.exact.P_clock_FP_locus_direct",
+      "status": "PASS",
+      "statement": "Direct substitution into {P,C_V} yields 6*pi^2 exp(Q/2)(2-y), so the P-clock FP zero is y=2."
+    },
+    {
+      "id": "P39.SCV.exact.P_clock_FP_locus_independent",
+      "status": "PASS",
+      "statement": "Independent constraint elimination agrees with the direct P-clock factor and its y=2 zero."
+    },
+    {
+      "id": "P39.SCV.exact.P_clock_expected_y",
+      "status": "PASS",
+      "statement": "The input records the independently derived P-clock locus y=2, not an unverified informal value."
+    },
+    {
+      "id": "P39.SCV.exact.starobinsky_Vprime",
+      "status": "PASS",
+      "statement": "V_prime=(3/2)M^2 sqrt(2/3)x(1-x), x=exp(-sqrt(2/3)phi)."
+    },
+    {
+      "id": "P39.SCV.exact.starobinsky_potential_square",
+      "status": "PASS",
+      "statement": "V is the declared nonnegative square times 3M^2/4."
+    },
+    {
+      "id": "P39.SCV.exact.p_evolution",
+      "status": "PASS",
+      "statement": "dot(p)={p,C_V}=-2*pi^2 exp(3Q/2)V_prime; it is negative for phi>0 and positive for phi<0."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 12,
+    "numerical_checks": 0,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT_RESULT.json",
+      "payload_sha256_without_self": "2027f1ed6b64479c018cb01a6d89bf3e46eb5d8a732875fd57a1fd094bd0f6f3",
+      "verdict": "KEEP_HOMOGENEOUS_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_IDENTITIES_NOT_COMPLETE_OR_QUANTUM_OBSERVABLES",
+      "programme_impact": "CLASSICAL_HOMOGENEOUS_CLOCK_DOMAIN_CONVENTION_ONLY_NO_TRAJECTORY_SELECTION"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TWO_CLOCK_FP_DOMAIN_AUDIT_INPUTS.json",
+      "sha256": "c2e1632e6d46fa3a433cfba6949d0a517e8a998f4a3736e45f05af1f07108539"
+    },
+    "upstream_results": [
+      {
+        "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
+        "payload_sha256_without_self": "5178a20a464506595a02d25e97931e60eabfffb038902b977bc4737beaf8cdc1",
+        "role": "pins Q=2 log(a), P=a p_a/2, the V=0 raw constraint, and canonical Poisson convention; no full SVT or HDA result is imported",
+        "run_status": "VALID_RUN",
+        "sha256": "5d56bd94020ddebfda609ca8da3956cc75be5c74ad9b06cdb9ea3464ee616441",
+        "verdict": "KEEP_CLOSED_S3_ADM_HOMOGENEOUS_AND_LINEAR_SCALAR_CONVENTION_BASELINE_NOT_HDA"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/CLOSED_STAROBINSKY_BACKGROUND_EXPORT_AUDIT_RESULT.json",
+        "payload_sha256_without_self": "cfc38115ef0781eaddf3c398e82f1319bc032997e61091b3ef3add33e3994104",
+        "role": "pins the declared Starobinsky potential and reduced-Planck convention only; it supplies no Q/P/p closed-FRW trajectory",
+        "run_status": "VALID_RUN",
+        "sha256": "af6334f0c8a3f745ecfedd37280a8cae457f2ec7adfb5effb3b33f29dbc193e1",
+        "verdict": "KEEP_STAROBINSKY_LEADING_SLOW_ROLL_BACKGROUND_EXPORT_NOT_CLOSED_EVOLUTION_OR_LIKELIHOOD"
+      }
+    ],
+    "primary_sources": null,
+    "theorem_guards": [
+      {
+        "conclusion_and_scope": "p^2=8*pi^4 exp(2Q)(3-y) permits real p exactly for y<=3, with p=0 at y=3. This is a homogeneous slice classification, not a trajectory result.",
+        "hypotheses": "Q is real, so 8*pi^4 exp(2Q)>0; p is required real on the declared P=0 slice",
+        "id": "SCV.guard.real_p_domain",
+        "theorem": "nonnegativity of a real square",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "V>=0, V_prime has the sign of phi, and dot(p) has the opposite sign. This does not integrate a trajectory or select a clock branch.",
+        "hypotheses": "M>0, x=exp(-sqrt(2/3)phi)>0, and 1-x has the sign of phi",
+        "id": "SCV.guard.starobinsky_signs",
+        "theorem": "positivity of exp and monotonicity of exp",
+        "verified": true
+      }
+    ],
+    "computed_scope": null,
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "automatic_next": null,
+      "born_oppenheimer_or_decoherence": null,
+      "class_or_cobaya_input": null,
+      "complete_relational_observables": null,
+      "empirical_likelihood": null,
+      "full_scalar_vector_tensor_or_adm_hda": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "physical_inner_product": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_clock_change_map": null,
+      "trajectory_locus_crossing": null
+    }
+  }
+}

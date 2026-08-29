@@ -1,0 +1,187 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_20260829",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-29T04:28:43Z",
+  "command": "./ice run raw_c_zero_shell_transversality_jacobian",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_zero_shell_transversality_jacobian.py",
+    "sha256": "96446cb493d5a40cc67853195fe03c6ed2330301f9e1f734ce7fbcad5881fd9a",
+    "introduced_in_commit": "593d7ba62d7238d793dbc71bc78e03a2858c9b61"
+  },
+  "exact_checks": 9,
+  "checks": [
+    {
+      "id": "P39.rawc.transverse.mellin.weight_change",
+      "status": "PASS",
+      "statement": "at hbar=1, f(Q)dQ=(sqrt(2/3)/pi) z^(1/2)dz under z=6*pi^2e^Q"
+    },
+    {
+      "id": "P39.rawc.transverse.implicit_slope",
+      "status": "PASS",
+      "statement": "-F_p/F_lambda=2*hbar^2*a*F_p/N_f"
+    },
+    {
+      "id": "P39.rawc.transverse.positive_branch.F_p",
+      "status": "PASS",
+      "statement": "on p>0 at hbar=1, F_p=sqrt(3/2)F_kappa"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.nonzero_F_kappa",
+      "status": "PASS",
+      "statement": "each pinned root has nonzero F_kappa and is locally simple in the declared characteristic variable"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.nonzero_a_at_Q0",
+      "status": "PASS",
+      "statement": "each a=K_(i*kappa)(z_0) is nonzero, so the declared F_lambda division is defined"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.positive_N_f",
+      "status": "PASS",
+      "statement": "each declared weighted Mellin norm is positive and nonzero"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.nonzero_F_lambda",
+      "status": "PASS",
+      "statement": "each moving-domain characteristic derivative F_lambda is nonzero"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.nonzero_lambda_slope",
+      "status": "PASS",
+      "statement": "each positive-p local eigenvalue slope is nonzero"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.slope_sign_and_negative_branch",
+      "status": "PASS",
+      "statement": "F_lambda has sign opposite a, and the negative-p branch has exactly the opposite local slope"
+    }
+  ],
+  "numerical_checks": 3,
+  "numerical": [
+    {
+      "id": "P39.rawc.transverse.numeric.characteristic_imaginary_residue",
+      "status": "PASS",
+      "statement": "all evaluated real-kappa K quantities are real within the declared precision"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.mellin_quadrature_crosscheck",
+      "status": "PASS",
+      "statement": "five bounded log-z quadratures agree with the Mellin closed-form N_f values"
+    },
+    {
+      "id": "P39.rawc.transverse.numeric.F_kappa_step_refinement",
+      "status": "PASS",
+      "statement": "centered F_kappa derivatives at steps h and h/2 agree before Richardson extrapolation"
+    }
+  ],
+  "payload": {
+    "exact_checks": 9,
+    "numerical_checks": 3,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_RESULT.json",
+      "payload_sha256_without_self": "73d1a7e38a26cf3db0bed8de88728ba353d95895f9cac08c9818217e8f6f3970",
+      "verdict": "KEEP_DECLARED_RAW_C_FIVE_LOCAL_SIMPLE_ROOT_JACOBIANS_ONLY",
+      "programme_impact": "RECORD_LOCAL_JACOBIAN_FACTORS_WITHOUT_PROMOTING_A_GLOBAL_SPECTRAL_OR_RAQ_MEASURE"
+    },
+    "input_manifest": {
+      "numbered_phase": null,
+      "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_INPUTS.json",
+      "sha256": "004e44ba94c39e45fafb802982aff3e0a78dda968d8cfc63587179ec688b9835"
+    },
+    "upstream_results": [
+      {
+        "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json",
+        "payload_sha256_without_self": "88c246cc29f50da539c827e9d841c043cc60d7d6dc5e7c78c22b15b3e5d13ce7",
+        "sha256": "75404989d6e4cf8e5a9120a99d3cdcc3a1187a27478f358f1ad9a64f963d53ed",
+        "verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY"
+      }
+    ],
+    "primary_sources": [
+      {
+        "not_used_for": "a full spectral theorem, raw-C rigging map, or C/H equivalence",
+        "source": "I. S. Gradshteyn and I. M. Ryzhik, Table of Integrals, Series, and Products, 8th ed., formula 6.576(4)",
+        "url": "https://doi.org/10.1016/C2009-0-22509-0",
+        "used_for": "the Mellin integral int_0^infinity x^(mu-1)K_nu(x)^2 dx used to normalize the declared weighted Lagrange identity"
+      },
+      {
+        "not_used_for": "proving that this one raw-C extension is physically selected",
+        "source": "T. Kato, Perturbation Theory for Linear Operators, Springer (1995 reprint)",
+        "url": "https://doi.org/10.1007/978-3-642-66282-9",
+        "used_for": "the domain-dependence warning behind not applying a naive fixed-domain Hellmann-Feynman formula"
+      },
+      {
+        "not_used_for": "positivity of a physical Hilbert product or observable action",
+        "source": "NIST Digital Library of Mathematical Functions, modified Bessel functions, sections 10.25, 10.29 and 10.40",
+        "url": "https://dlmf.nist.gov/10",
+        "used_for": "the zero-shell K_(i*kappa) convention and numerical evaluation of the characteristic derivative"
+      }
+    ],
+    "theorem_guards": [
+      {
+        "conclusion_and_scope": "F_lambda(0)=-N_f/(2*hbar^2*a); this supplies one local characteristic derivative only, not a global spectral theorem or rigging map",
+        "hypotheses": "u_0 is the declared plus-end zero-shell solution, a=u_0(Q_0) is nonzero at the pinned root, and F_lambda is the derivative of the characteristic boundary condition rather than a fixed-domain expectation value",
+        "id": "rawc.transverse.guard.moving_boundary_lagrange",
+        "theorem": "Lagrange identity for L_p u=lambda f u with a parameter-dependent self-adjoint boundary domain",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "N_f is finite and positive for each nonzero root under the declared normalization; this is not a physical inner-product positivity theorem",
+        "hypotheses": "mu=3/2 and nu=i*kappa with real kappa lie in the convergence range; the selected K solution is real on positive z",
+        "id": "rawc.transverse.guard.mellin_positive_norm",
+        "theorem": "Mellin integral of K_nu^2",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "a naive fixed-domain Hellmann-Feynman formula is not used and cannot replace the Wronskian/Lagrange calculation",
+        "hypotheses": "K_(i*kappa)(z) has nondecaying oscillatory magnitude as Q tends to minus infinity, so integral |u_0|^2 dQ diverges; moreover the extension boundary data vary with p",
+        "id": "rawc.transverse.guard.no_naive_fixed_domain_HF",
+        "theorem": "domain-sensitive perturbation theory",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "1/|lambda_prime| is a local Jacobian factor only; spectral normalization, test space, global summation and rigging-map data remain absent",
+        "hypotheses": "F_kappa and lambda_prime are nonzero at each pinned root and the statement is restricted to a local p branch",
+        "id": "rawc.transverse.guard.local_delta_scope",
+        "theorem": "simple-root delta-function change of variables",
+        "verification_mode": "ANALYTIC_HYPOTHESIS_AND_SCOPE_AUDIT_NOT_AN_EXECUTABLE_NUMERICAL_PREDICATE",
+        "verified": true
+      }
+    ],
+    "computed_scope": null,
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "absolute_bfv_measure": null,
+      "automatic_next": null,
+      "canonical_p_zero_origin_sector": null,
+      "continuum_determinant_or_pfaffian_line": null,
+      "empirical_likelihood": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "general_p_mixing_extension_classification": null,
+      "global_delta_C_measure": null,
+      "global_promotion": "PROHIBITED",
+      "global_raw_C_spectral_measure": null,
+      "inhomogeneous_constraint_closure": null,
+      "physical_inner_product_positivity": null,
+      "physical_observable_action": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "quantum_gravity_claim": null,
+      "raw_C_RAQ_completion": null,
+      "raw_C_physical_inner_product": null,
+      "raw_C_rigging_map": null,
+      "raw_C_rigging_test_space": null,
+      "relational_observables_or_decoherence": null,
+      "selected_H_raw_C_unitary_intertwiner": null
+    }
+  }
+}
