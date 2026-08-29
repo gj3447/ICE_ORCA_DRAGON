@@ -13992,6 +13992,21 @@
       "id":"artifact:raw-c-nonzero-lambda-weyl-flambda-check-evidence-snapshot","type":"artifact","title":"Raw-C nonzero-lambda Weyl/F-lambda evidence snapshot","summary":"Schema-valid run snapshot preserving source, runner, result and check records.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/raw-c-nonzero-lambda-weyl-flambda-check-result.json","sha256":"cd4f9b502ed5ca579067d4d440c92ead3efb89fe4ba4a9572d4a9b8ea201d122"
     },
     {
+      "id":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","type":"concept","title":"Raw-C plus-end Liouville-Green tail bound","summary":"Uniform real positive-Q Liouville-Green tail error bound only; no transport to Q0, spectral construction or RAQ.","state":"COMPLETED_REAL_PLUS_ENDPOINT_TAIL_BOUND_ONLY"
+    },
+    {
+      "id":"claim:RAW_C_REAL_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_HOLDS","type":"claim","title":"Declared raw-C real plus-end Liouville-Green tail bound holds","summary":"Supported only on Q>=4, |lambda|<=1e-4 and 0<=kappa<=8. It gives the recorded DLMF tail V/E/log-derivative-difference bounds, not an endpoint-to-Q0 transform or spectral/RAQ data.","state":"SUPPORTED_REAL_PLUS_ENDPOINT_TAIL_BOUND_ONLY","claim_id":"RAW_C_REAL_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_HOLDS","statement":"The declared positive-real raw-C tail obeys the audited elementary Liouville-Green residual and DLMF error-control bounds.","epistemic_state":"SUPPORTED"
+    },
+    {
+      "id":"evidence:raw-c-plus-endpoint-liouville-green-tail-bound-result","type":"evidence","title":"Raw-C plus-end Liouville-Green tail-bound evidence","summary":"VALID_RUN with 22 exact checks and three source/scope guards; V, E and normalized log-derivative-difference bounds are tail-only and Q0 transport, m-function, spectral and RAQ outputs remain null.","state":"VALID_RUN_REAL_PLUS_ENDPOINT_TAIL_BOUND_ONLY","observed_status":"VALID_RUN_22_EXACT_PASS_3_GUARDS","check_ids":["P39.rawc.lg.coefficient","P39.rawc.lg.relative_delta","P39.rawc.lg.relative_delta_prime","P39.rawc.lg.relative_delta_second","P39.rawc.lg.wkb_residual","P39.rawc.lg.factored_residual","P39.rawc.lg.dlmf_control_integrand","P39.rawc.lg.lambda_kappa_zero_baseline","P39.rawc.lg.lambda_kappa_zero_control_integrand","P39.rawc.lg.lambda_kappa_zero_tail_antiderivative","P39.rawc.lg.lambda_shape_monotone","P39.rawc.lg.kappa_shape_monotone","P39.rawc.lg.lambda_corner_lt_rational","P39.rawc.lg.kappa_corner_lt_rational","P39.rawc.lg.d0_lt_eta","P39.rawc.lg.d1_le_2eta","P39.rawc.lg.d2_le_4eta","P39.rawc.lg.positivity","P39.rawc.lg.residual_envelope_algebra","P39.rawc.lg.residual_bound_sanity","P39.rawc.lg.tail_expression_le_elementary","P39.rawc.lg.error_budget_small"]
+    },
+    {
+      "id":"artifact:raw-c-plus-endpoint-liouville-green-tail-bound-result","type":"artifact","title":"Raw-C plus-end Liouville-Green tail-bound raw result","summary":"VALID_RUN result, payload digest 0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json","sha256":"ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39"
+    },
+    {
+      "id":"artifact:raw-c-plus-endpoint-liouville-green-tail-bound-evidence-snapshot","type":"artifact","title":"Raw-C plus-end Liouville-Green tail-bound evidence snapshot","summary":"Schema-valid run snapshot preserving source, runner, result and check records.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/raw-c-plus-endpoint-liouville-green-tail-bound-result.json","sha256":"74b83d4dd3f8687b6bb9035d6fc26b9e8cda16e75d850a2516f2ead74a537241"
+    },
+    {
       "id":"concept:closed-s3-zonal-conformal-trace-kinetic-cubic-vertex-ledger","type":"concept","title":"Closed-S3 zonal conformal trace-kinetic cubic vertex ledger","summary":"Restricted conformal-trace cotangent kinetic density through cubic order in zonal packets only; not a full ADM constraint or HDA calculation.","state":"COMPLETED_RESTRICTED_ZONAL_TRACE_KINETIC_VERTEX_ONLY"
     },
     {
@@ -33679,7 +33694,13 @@
     {"id":"edge:3222","from":"evidence:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger-result","relation":"DERIVED_FROM","to":"artifact:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger-result"},
     {"id":"edge:3223","from":"evidence:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger-result","relation":"RECORDED_IN","to":"artifact:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger-evidence-snapshot"},
     {"id":"edge:3224","from":"open:gate1-v0-classical-s3-hda-closure","relation":"FOLLOW_UP_TO","to":"concept:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger","note":"The restricted V=0 scalar normal-density packet omits the matter momentum/shift vertex, lapse/shift, metric scalar completion, nonzonal couplings and all constraint brackets; it does not establish full ADM cubic closure, HDA or Jacobi."},
-    {"id":"edge:3225","from":"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly","relation":"FOLLOW_UP_TO","to":"concept:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger","note":"No BFV charge, quantum nilpotency or anomaly calculation is contained in the restricted zonal V=0 scalar-matter ledger."}
+    {"id":"edge:3225","from":"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly","relation":"FOLLOW_UP_TO","to":"concept:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger","note":"No BFV charge, quantum nilpotency or anomaly calculation is contained in the restricted zonal V=0 scalar-matter ledger."},
+    {"id":"edge:3226","from":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3227","from":"claim:RAW_C_REAL_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_HOLDS","relation":"HAS_EVIDENCE","to":"evidence:raw-c-plus-endpoint-liouville-green-tail-bound-result","polarity":"SUPPORTS"},
+    {"id":"edge:3228","from":"evidence:raw-c-plus-endpoint-liouville-green-tail-bound-result","relation":"DERIVED_FROM","to":"artifact:raw-c-plus-endpoint-liouville-green-tail-bound-result"},
+    {"id":"edge:3229","from":"evidence:raw-c-plus-endpoint-liouville-green-tail-bound-result","relation":"RECORDED_IN","to":"artifact:raw-c-plus-endpoint-liouville-green-tail-bound-evidence-snapshot"},
+    {"id":"edge:3230","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"FOLLOW_UP_TO","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"A positive-real Q>=4 tail budget does not validate Q=4-to-Q0 transport, endpoint F/F_lambda, a nonreal m-function, raw-C spectral measure, rigging map, physical product or C-H quantum equivalence."},
+    {"id":"edge:3231","from":"open:gate1-v0-p-zero-p-negative-global-spectral-completion","relation":"FOLLOW_UP_TO","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"Although the coefficient audit covers both p signs through |p|, the tail box does not complete the p<0 global sector, p=0 origin data, global gluing or spectral classification."}
   ],
   "kg_bridges": [
     {

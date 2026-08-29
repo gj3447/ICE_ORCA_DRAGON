@@ -1,0 +1,49 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_20260829",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-29T09:36:55Z",
+  "command": "./ice run raw_c_plus_endpoint_liouville_green_tail_bound",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_plus_endpoint_liouville_green_tail_bound.py",
+    "sha256": "44723d8a98f71254b8b632137ea869d5f3221b2a1d85e1d7cdaea6215a3ee9d8",
+    "introduced_in_commit": "cab04e616b51e97863472fd6458eb532b55a9856"
+  },
+  "exact_checks": 22,
+  "checks": [
+    {"id": "P39.rawc.lg.coefficient", "status": "PASS", "statement": "The real raw-C fiber coefficient is exactly the declared A."},
+    {"id": "P39.rawc.lg.relative_delta", "status": "PASS", "statement": "The relative factor has the declared lambda and kappa terms."},
+    {"id": "P39.rawc.lg.relative_delta_prime", "status": "PASS", "statement": "The exact first relative-factor derivative fixes the envelope coefficients."},
+    {"id": "P39.rawc.lg.relative_delta_second", "status": "PASS", "statement": "The exact second relative-factor derivative fixes the envelope coefficients."},
+    {"id": "P39.rawc.lg.wkb_residual", "status": "PASS", "statement": "The declared Liouville-Green residual identity holds."},
+    {"id": "P39.rawc.lg.factored_residual", "status": "PASS", "statement": "The residual has the audited A=A0*(1+delta) factorization."},
+    {"id": "P39.rawc.lg.dlmf_control_integrand", "status": "PASS", "statement": "The DLMF error-control integrand identity holds for positive A."},
+    {"id": "P39.rawc.lg.lambda_kappa_zero_baseline", "status": "PASS", "statement": "The lambda=kappa=0 residual baseline is exactly one quarter."},
+    {"id": "P39.rawc.lg.lambda_kappa_zero_control_integrand", "status": "PASS", "statement": "The lambda=kappa=0 control integrand is exp(-Q)/(24*pi^2)."},
+    {"id": "P39.rawc.lg.lambda_kappa_zero_tail_antiderivative", "status": "PASS", "statement": "The lambda=kappa=0 tail variation is exactly exp(-Q)/(24*pi^2)."},
+    {"id": "P39.rawc.lg.lambda_shape_monotone", "status": "PASS", "statement": "The positive lambda envelope decreases on Q>=4."},
+    {"id": "P39.rawc.lg.kappa_shape_monotone", "status": "PASS", "statement": "The positive kappa envelope decreases on Q>=4."},
+    {"id": "P39.rawc.lg.lambda_corner_lt_rational", "status": "PASS", "statement": "The lambda corner is below its declared rational envelope."},
+    {"id": "P39.rawc.lg.kappa_corner_lt_rational", "status": "PASS", "statement": "The kappa corner is below its declared rational envelope."},
+    {"id": "P39.rawc.lg.d0_lt_eta", "status": "PASS", "statement": "The uniform relative-factor envelope is below eta_bar=1e-5."},
+    {"id": "P39.rawc.lg.d1_le_2eta", "status": "PASS", "statement": "The first-derivative envelope is at most 2 eta_bar."},
+    {"id": "P39.rawc.lg.d2_le_4eta", "status": "PASS", "statement": "The second-derivative envelope is at most 4 eta_bar."},
+    {"id": "P39.rawc.lg.positivity", "status": "PASS", "statement": "A is uniformly positive on the declared real tail box."},
+    {"id": "P39.rawc.lg.residual_envelope_algebra", "status": "PASS", "statement": "The audited derivative envelopes yield R_bar algebraically."},
+    {"id": "P39.rawc.lg.residual_bound_sanity", "status": "PASS", "statement": "R_bar is a conservative perturbation of the exact baseline residual."},
+    {"id": "P39.rawc.lg.tail_expression_le_elementary", "status": "PASS", "statement": "The analytic tail variation is bounded by elementary V_bar."},
+    {"id": "P39.rawc.lg.error_budget_small", "status": "PASS", "statement": "The DLMF E_bar and normalized log-derivative-difference bounds are finite and below their declared smallness threshold."}
+  ],
+  "payload": {
+    "exact_checks": 22,
+    "schema_transport": {"phase_field": "P39 required by legacy evidence schema; numbered_phase is null."},
+    "raw_result": {"path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json", "sha256": "ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39", "payload_sha256_without_self": "0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c", "verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY"},
+    "input_manifest": {"path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_INPUTS.json", "sha256": "f9245b6615e7cf2c00b072c0112da1632a10dd711984ed3f8c7ce36ffb649dc8"},
+    "computed_scope": "Uniform real Q>=4, |lambda|<=1e-4, 0<=kappa<=8 plus-end Liouville-Green tail only; zero ODE calls and no Q=4-to-Q0 transport.",
+    "analytic_result": {"exact_checks": 22, "theorem_guards": 3, "V_analytic_upper": "0.0000773284516076508838", "V_bar_elementary": "0.0000944888512660651928", "E_bar": "0.0000472455416684847094", "sqrt_A_normalized_log_derivative_difference_bound": "0.0000944955478303119221"},
+    "primary_sources": [{"source": "NIST Digital Library of Mathematical Functions, §2.7(iii), especially 2.7.23--2.7.25", "url": "https://dlmf.nist.gov/2.7.iii", "used_for": "positive-real-tail Liouville-Green error and derivative bounds", "not_used_for": "Q0 transport, m-function, spectral measure, rigging map, RAQ, or C-H equivalence"}],
+    "required_fail_closed_outputs": {"validated_Qplus_to_Q0_transport": null, "exact_plus_endpoint_to_Q0_boundary_transform": null, "endpoint_F_or_F_lambda": null, "nonreal_resolvent_or_weyl_m_function": null, "raw_C_spectral_measure": null, "global_delta_C_measure": null, "raw_C_rigging_test_space": null, "raw_C_rigging_map": null, "raw_C_physical_inner_product": null, "raw_C_RAQ_completion": null, "quantum_constraint_rescaling_equivalence": null, "selected_H_raw_C_unitary_intertwiner": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "physics_claim": null, "TOE_claim": null}
+  }
+}
