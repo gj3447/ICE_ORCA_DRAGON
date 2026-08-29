@@ -48,9 +48,30 @@ controls for the three pinned \(\phi_*\) rows.  It makes zero ODE calls.
 
 All trajectory initial-condition selection, integration, crossing evidence,
 complete observables, quantum clocks, BO/decoherence, likelihood, physics,
-and TOE fields remain null.  No result is included in this draft; after a
-clean commit it may only be run through:
+and TOE fields remain null.
+
+## Observed bounded result
+
+The committed unnumbered runner was executed through the repository control
+plane:
 
 ```text
 ./ice run homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger
 ```
+
+It produced a `VALID_RUN` with 10/10 exact checks, 36/36 high-precision
+representative checks, and three scope guards.  For the three pinned
+\(N_*=50,55,60\) decimal representatives, the two \(y=2\) branches had
+opposite nonzero
+
+\[
+|\dot y|=(5.08323,4.64902,4.28352)\times10^{-7},
+\]
+
+while every derived \(y=3,P=p=0\) representative had \(\dot y=0\) at that
+instant.  The largest relative constraint residual was
+\(8.06\times10^{-71}\).  These are local vector-field and construction
+checks only: no orbit was selected, integrated, or shown to cross a boundary.
+
+Result SHA-256:
+`47504e613a9386669b002d6781a873da7ddbfabf07fdfe8eb1230427adc0b6b5`.
