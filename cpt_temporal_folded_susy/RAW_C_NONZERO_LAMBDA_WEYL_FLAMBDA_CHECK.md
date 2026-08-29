@@ -96,9 +96,36 @@ raw-\(C\) RAQ completion, \(C\leftrightarrow H\) equivalence, BFV claims,
 inhomogeneous anomaly claims, phenomenology, physics claims, and TOE claims
 null.
 
-No result is included in this draft.  Once clean and committed, it may be
-executed only through the repository control plane:
+## Observed bounded result
+
+The committed runner was executed only through the repository control plane:
 
 ```text
 ./ice run raw_c_nonzero_lambda_weyl_flambda_check
 ```
+
+It produced a `VALID_RUN` with 4/4 exact algebra checks, 40/40 numerical
+checks, and four theorem/scope guards.  The normalized conditional
+predictions at the five roots were approximately
+
+\[
+(-0.198519,-0.585745,-0.959151,-1.336298,-1.719693),
+\]
+
+and the independently finite-differenced nonzero-\(\lambda\) solutions agreed
+with them to a worst relative error of \(2.66\times10^{-8}\).  Across all
+roots, the largest observed diagnostics were
+
+- \(|F(0)|=6.08\times10^{-10}\),
+- zero-energy Wronskian error \(9.28\times10^{-14}\),
+- delta-ladder shift \(2.70\times10^{-8}\),
+- plus-cutoff shift \(6.43\times10^{-8}\), and
+- minus-cutoff shift \(4.28\times10^{-8}\).
+
+The execution used exactly 4,305 of the predeclared 4,500 ODE calls.  These
+figures support this finite-cutoff local derivative check only; the endpoint
+limit, a global direct-integral operator domain, spectral measure, and RAQ
+construction remain null.
+
+Result SHA-256:
+`19f159792dccbbd75f3a98e313ab4bb4be5aada7fa18678ed60d0316c45b9e36`.
