@@ -124,11 +124,47 @@ The input hash-pins the prior operator-domain, direct-integral,
 zero-shell-census, and finite-cutoff local \(F_\lambda\) results precisely so
 this tail calculation cannot silently promote any of their open obligations.
 
-## Execution protocol
+## Observed bounded run
 
-The definition alone is not a scientific result.  A clean committed runner
-may be executed only through the repository control plane:
+The clean committed definition was executed once through the repository
+control plane:
 
 ```text
 ./ice run raw_c_plus_endpoint_liouville_green_tail_bound
 ```
+
+The run returned `VALID_RUN`: all 22 exact checks passed and all three
+theorem/scope guards were present.  At \(Q_+=4\), the independently audited
+values are
+
+\[
+\frac{e^{-4}}{24\pi^2}
+=7.73234254738408\times10^{-5}
+<V_{\rm analytic}
+=7.73284516076509\times10^{-5}
+<V_{\rm bar}
+=9.44888512660652\times10^{-5},
+\]
+
+\[
+E_{\rm bar}=4.72455416684847\times10^{-5},\qquad
+\frac{2E_{\rm bar}}{1-E_{\rm bar}}
+=9.44955478303119\times10^{-5}.
+\]
+
+These numbers certify only the declared real plus-tail error budget.  In
+particular, the last number remains a \(\sqrt A\)-normalized log-derivative
+difference bound; it is not an endpoint-to-\(Q_0\) transport error.
+
+Provenance:
+
+- input SHA-256: `f9245b6615e7cf2c00b072c0112da1632a10dd711984ed3f8c7ce36ffb649dc8`;
+- runner SHA-256: `44723d8a98f71254b8b632137ea869d5f3221b2a1d85e1d7cdaea6215a3ee9d8`;
+- result-file SHA-256: `ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39`;
+- canonical result payload SHA-256, excluding its self field:
+  `0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c`.
+
+An independent read-only audit recomputed the result and canonical payload
+hashes, checked all 22 identities and three guards, and confirmed that the
+fail-closed null outputs still include transport, endpoint data, spectral
+data, RAQ, physics, quantum-gravity, and TOE claims.
