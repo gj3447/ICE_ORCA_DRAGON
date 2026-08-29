@@ -163,6 +163,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
       "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_V0_SCALAR_MATTER_CUBIC_VERTEX_LEDGER_RESULT.json"
     ],
     [
+      "raw_c_plus_endpoint_liouville_green_tail_bound",
+      "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json"
+    ],
+    [
       "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
       "cpt_temporal_folded_susy/HOMOGENEOUS_CLOSED_FRW_STAROBINSKY_TIME_SYMMETRIC_CLOCK_BOUNDARY_LOCAL_LEDGER_RESULT.json"
     ]

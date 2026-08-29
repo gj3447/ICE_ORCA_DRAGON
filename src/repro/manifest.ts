@@ -465,6 +465,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "raw_c_plus_endpoint_liouville_green_tail_bound",
+    script:
+      "cpt_temporal_folded_susy/raw_c_plus_endpoint_liouville_green_tail_bound.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
     script:
       "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",
