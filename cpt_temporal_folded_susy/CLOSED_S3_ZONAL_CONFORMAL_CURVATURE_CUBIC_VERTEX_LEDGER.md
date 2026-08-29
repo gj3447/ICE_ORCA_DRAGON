@@ -87,13 +87,31 @@ If this bounded packet is later used, the next actual obstacle is not more
 zonal algebra.  It is an off-shell ADM expansion with canonical momenta,
 lapse/shift treatment, and nonzonal scalar plus SVT coupling data.
 
-## Intended execution
+## Observed bounded result
 
-After review and a clean commit, execute only through the repository control
-plane:
+The committed runner was executed through the repository control plane:
 
 ```text
 ./ice run closed_s3_zonal_conformal_curvature_cubic_vertex_ledger
 ```
 
-No runner was executed while preparing this draft.
+The result is `VALID_RUN` with 52/52 executable exact checks and three
+source/scope guards.  For the single-\(Q_2\) packet it gives
+
+\[
+(I_1,I_2,I_3)=\left(0,19,\frac{9\sqrt2}{2\pi}\right),
+\]
+
+and for the mixed \(Q_1+Q_2\) packet it gives
+
+\[
+(I_1,I_2,I_3)=\left(0,28,\frac{13\sqrt2}{\pi}\right).
+\]
+
+Both packets have nonzero exact quadratic and cubic tails beyond the declared
+\(N=2\) cutoff.  This is a concrete truncation diagnostic: nonlinear local
+curvature terms escape the retained zonal mode space.  It is still not an ADM
+constraint expansion or a measurement of HDA closure.
+
+Result SHA-256:
+`d76ce0feae39c2ecd7fb13455b22e26dc4e045d491e0f1b2c73434c9ac23dc53`.
