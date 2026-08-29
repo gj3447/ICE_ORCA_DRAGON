@@ -4,7 +4,7 @@
   "numbered_phase": null,
   "question": "On the unit round S3, what are the declared rough/Hodge/Lichnerowicz spectral conventions, degeneracies, exceptional modes, scalar-derived normalization shifts, and exact cumulative sector counts for scalar, transverse-vector, and TT-tensor harmonic sectors?",
   "kind": "EXACT_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_AND_WEYL_COUNT_LEDGER",
-  "epistemic_scope": "SPECTRAL_LABELS_DEGENERACIES_AND_DERIVED_HARMONIC_IDENTITIES_ON_UNIT_ROUND_S3_ONLY_NOT_EXPLICIT_COMPLETE_BASIS_FUNCTIONS_NOT_GAUNT_NOT_ADM_CONSTRAINTS_NOT_HDA",
+  "epistemic_scope": "SOURCE_PINNED_CONVENTION_TRANSPORT_AND_EXACT_LOW_MODE_COUNTING_FOR_ALL_THREE_SVT_SECTORS_ON_UNIT_ROUND_S3_ONLY_NOT_A_PROOF_OF_COMPLETENESS_NOT_EXPLICIT_BASIS_FUNCTIONS_NOT_GAUNT_NOT_ADM_CONSTRAINTS_NOT_HDA",
   "upstream_results": [
     {
       "path": "cpt_temporal_folded_susy/CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json",
@@ -23,20 +23,23 @@
   ],
   "primary_sources": [
     {
-      "source": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere, Gen. Rel. Grav. 49 (2017) 140, arXiv:1709.08020",
+      "source": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere, Gen. Rel. Grav. 49 (2017) 139, arXiv:1709.08020",
       "url": "https://arxiv.org/abs/1709.08020",
       "used_for": "unit-S3 scalar/vector/tensor Laplace, divergence, trace and normalization conventions including exceptional low-mode ranges",
       "not_used_for": "a complete numerical basis realization, Gaunt coefficients, ADM constraints, or a physical prediction"
     },
     {
-      "source": "A. Higuchi, Symmetric Tensor Spherical Harmonics on the N-Sphere and Their Application to the de Sitter Group SO(N,1), J. Math. Phys. 28 (1987) 1553",
+      "source": "A. Higuchi, Symmetric Tensor Spherical Harmonics on the N-Sphere and Their Application to the de Sitter Group SO(N,1), J. Math. Phys. 28 (1987) 1553; erratum J. Math. Phys. 43 (2002) 6385",
       "url": "https://doi.org/10.1063/1.527513",
+      "erratum_url": "https://doi.org/10.1063/1.1515382",
       "used_for": "transverse-traceless symmetric-tensor harmonic spectral context",
       "not_used_for": "the repository-local cutoff counts or any gravitational constraint algebra"
     }
   ],
   "declared_conventions": {
     "geometry": "unit round S3 with Ric_ab=2 gamma_ab and scalar curvature 6",
+    "riemann_and_lichnerowicz_definition": "R_ikjl=gamma_ij gamma_kl-gamma_il gamma_kj and (Delta_L h)_ij=-D^2 h_ij+R_i^k h_kj+R_j^k h_ik-2 R_ikjl h^kl; for tracefree h this is Delta_rough h+6h",
+    "full_label_meaning": "FULL_SVT means that scalar, transverse-vector and TT spectral sectors are all present in one bookkeeping packet; it does not assert explicit bases, chirality resolution, Gaunt data or a completeness proof",
     "scalar_sector": "n>=0; lambda_n=n(n+2); rough Delta_0=-D^2 eigenvalue lambda_n; degeneracy d_0=(n+1)^2",
     "transverse_vector_sector": "n>=1; D^aV_a=0; rough Delta_1=-D^2 eigenvalue lambda_n-1; Hodge Delta_H=Delta_1+2 eigenvalue lambda_n+1; combined degeneracy d_1=2n(n+2)",
     "tt_tensor_sector": "n>=2; D^aT_ab=0=T^a_a; rough Delta_2=-D^2 eigenvalue lambda_n-2; declared Delta_L=Delta_2+6 on tracefree symmetric tensors has eigenvalue lambda_n+4; combined degeneracy d_2=2(n-1)(n+3)",
@@ -46,11 +49,29 @@
     "exceptional_modes": "n=0 scalar is constant with vanishing gradient; n=1 scalar-derived TF Hessian vanishes; n=1 transverse vectors are Killing and their symmetrized gradients vanish; TT tensor sector starts at n=2",
     "cutoffs": [2, 3, 5, 8]
   },
+  "required_low_mode_rows": {
+    "scalar": [
+      {"n": 0, "rough_eigenvalue": 0, "degeneracy": 1},
+      {"n": 1, "rough_eigenvalue": 3, "degeneracy": 4},
+      {"n": 2, "rough_eigenvalue": 8, "degeneracy": 9},
+      {"n": 3, "rough_eigenvalue": 15, "degeneracy": 16}
+    ],
+    "transverse_vector": [
+      {"n": 1, "rough_eigenvalue": 2, "hodge_eigenvalue": 4, "combined_degeneracy": 6},
+      {"n": 2, "rough_eigenvalue": 7, "hodge_eigenvalue": 9, "combined_degeneracy": 16},
+      {"n": 3, "rough_eigenvalue": 14, "hodge_eigenvalue": 16, "combined_degeneracy": 30}
+    ],
+    "tt_tensor": [
+      {"n": 2, "rough_eigenvalue": 6, "declared_lichnerowicz_eigenvalue": 12, "combined_degeneracy": 10},
+      {"n": 3, "rough_eigenvalue": 13, "declared_lichnerowicz_eigenvalue": 19, "combined_degeneracy": 24},
+      {"n": 4, "rough_eigenvalue": 22, "declared_lichnerowicz_eigenvalue": 28, "combined_degeneracy": 42}
+    ]
+  },
   "exact_plan": [
     "hash-verify both prior harmonic results and retain their non-HDA boundaries",
-    "verify scalar, transverse-vector and TT-tensor eigenvalue/degeneracy polynomials and low-mode ranges",
-    "verify gradient scalar, tracefree-Hessian scalar, and symmetrized-gradient transverse-vector norm and rough/Lichnerowicz shift identities",
-    "verify n=0 and n=1 degeneracies and Killing/vanishing statements algebraically",
+    "record scalar, transverse-vector and TT-tensor eigenvalue/degeneracy theorems as source-pinned guards, then verify their transport against an independently fixed low-mode table",
+    "record gradient scalar, tracefree-Hessian scalar, and symmetrized-gradient transverse-vector norm and rough/Lichnerowicz identities as source-pinned guards, then verify only their algebraic consequences",
+    "verify declared n=0 and n=1 low-mode arithmetic while retaining constant/Killing/absence statements as theorem guards with explicit allowed ranges",
     "derive sector cumulative counts and leading cubic Weyl coefficients at the declared cutoffs",
     "keep rough, Hodge and declared Lichnerowicz Laplacians as distinct named expressions and test their shifts explicitly",
     "leave explicit basis functions, Gaunt data, ADM constraints, HDA/Jacobi/BFV and all physical outputs null"
@@ -60,7 +81,7 @@
       "condition": "both upstream pins and all spectral, normalization, exceptional-mode, count and convention-separation identities pass",
       "verdict": "KEEP_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_LEDGER_NOT_COMPLETE_BASIS_OR_HDA",
       "programme_impact": "FIX_SVT_SPECTRAL_AND_COUNTING_CONVENTIONS_FOR_A_SEPARATE_EXPLICIT_BASIS_GAUNT_AND_ADM_EXPANSION",
-      "meaning": "only the declared spectral bookkeeping convention is retained"
+      "meaning": "only the source-pinned spectral convention transport and exact arithmetic are retained; no completeness theorem is produced by the runner"
     },
     {
       "condition": "an upstream pin or any exact identity fails",
