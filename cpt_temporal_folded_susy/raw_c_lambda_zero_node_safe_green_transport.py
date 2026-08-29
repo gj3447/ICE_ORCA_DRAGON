@@ -305,7 +305,7 @@ def main() -> None:
     xplus_guard = c_guard * arb(4).exp()
     segment_ends_guard = [arb(value) for value in conventions["finite_subdivision_upper_endpoints"]]
     ordered_points = [x0_guard, *segment_ends_guard, xplus_guard]
-    cutoff_order_ok = bool(len(segment_ends_guard) == 6 and conventions["finite_subdivision_upper_endpoints"][-1] == conventions["finite_cutoff_X"] and x0_guard.lower() > 0 and all(left.upper() < right.lower() for left, right in zip(ordered_points, ordered_points[1:], strict=True)))
+    cutoff_order_ok = bool(len(segment_ends_guard) == 6 and conventions["finite_subdivision_upper_endpoints"][-1] == conventions["finite_cutoff_X"] and x0_guard.lower() > 0 and all(left.upper() < right.lower() for left, right in zip(ordered_points[:-1], ordered_points[1:], strict=True)))
     audit.ball_check("rawc.green.cutoff_order", cutoff_order_ok, "The outward balls certify 0<x0<1.5<2<4<8<16<X=32<xplus, so the six finite positive-real integration subsegments and the manual x>=X tail are ordered before the separately reconstructed plus endpoint.", x0=interval_record(x0_guard, int(conventions["ball_output_digits"])), subdivision_upper_endpoints=[interval_record(value, int(conventions["ball_output_digits"])) for value in segment_ends_guard], cutoff=interval_record(cutoff_guard, int(conventions["ball_output_digits"])), xplus=interval_record(xplus_guard, int(conventions["ball_output_digits"])))
     rows: list[dict[str, Any]] = []
     for index, (brow, hrow) in enumerate(zip(bessel_rows, h_rows, strict=True), start=1):
