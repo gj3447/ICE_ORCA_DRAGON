@@ -63,3 +63,38 @@ physical or TOE claims.  The runner accepts no arguments, pins all five
 current upstream result payloads, uses the standard 120-second resource cap,
 and writes its result only when explicitly run through `./ice run` after it is
 registered.
+
+## Observed bounded run
+
+The committed definition was run once with
+
+```text
+./ice run closed_s3_zonal_conformal_v0_scalar_matter_cubic_vertex_ledger
+```
+
+The result is `VALID_RUN` with 39/39 exact checks and three separately
+labelled source/scope guards.  The outer result SHA-256 is
+`5094729fcd141ccf8cd9d1273e5f7fc2ab1f624b15e2e2866fcc6f35d04b8f0c`;
+the canonical payload SHA-256 with its self field removed is
+`1ddd693747ad31f939ae2cf99f9709723687f3d46df51d39c3d119ca85e4c1b6`.
+An independent read-only audit recomputed the packet coefficients and both
+hashes.
+
+For the aligned packet, the discarded coefficients are
+
+\[
+(1-P_2)m_2=-\frac{\tfrac12+4a^4}{\sqrt{2\pi^2}}Q_4,
+\]
+
+and
+
+\[
+(1-P_2)m_3=\frac{3}{2\pi^2}Q_4
++\left(\frac{3}{4\pi^2}-\frac{2a^4}{\pi^2}\right)Q_6.
+\]
+
+The quadratic tail cannot vanish for (a>0); the cubic tail always retains
+its (Q_4) component, although its (Q_6) coefficient vanishes at one
+positive value of (a).  These are exact basis-truncation facts for this one
+packet.  They do not measure an ADM/HDA bracket remainder or establish an
+anomaly.
