@@ -1,0 +1,150 @@
+{
+  "schema_version": "ice.raw-c-lambda-zero-node-safe-green-transport.input.v1",
+  "calculation_id": "RawCLambdaZeroNodeSafeGreenTransport",
+  "numbered_phase": null,
+  "question": "At exactly lambda=0, can the smooth differentiated Wronskian endpoint J(Q0)=-W(u,partial_lambda u)(Q0)=u(Q0)^2 h(Q0) be certified on all five characteristic brackets by the exact Green integral without evolving the pole-prone quotient h through possible nodes?",
+  "kind": "EXACT_SMOOTH_GREEN_WRONSKIAN_TRANSPORT_WITH_ARBITRARY_PRECISION_BALL_QUADRATURE",
+  "epistemic_scope": "LAMBDA_ZERO_NODE_SAFE_SMOOTH_WRONSKIAN_AND_ENDPOINT_NORMALIZED_SENSITIVITY_BOXES_ON_FIVE_CERTIFIED_KAPPA_BRACKETS_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e",
+      "payload_sha256_without_self": "5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN",
+      "role": "pins the exact lambda-zero recessive Bessel direction, full root brackets, and nonzero endpoint K bands"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_RESULT.json",
+      "sha256": "7e1d3d74534392532ec800472a2a2bac8e2e87c5f5306ff3b2842d6a9d177ad6",
+      "payload_sha256_without_self": "a5ea98b1ec3c93173c5d8da2ce3ebafcb355737408db113d7d8f69b0882a90fc",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_SCALE_INVARIANT_H_QPLUS_ON_FIVE_ROOT_BRACKETS",
+      "role": "pins the normalization-invariant h(4) boxes used only to reconstruct the smooth plus-end Wronskian J(4)=u(4)^2h(4)"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified-Bessel order symmetry, derivative recurrence and integral representation, sections 10.27, 10.29 and 10.32",
+      "url": "https://dlmf.nist.gov/10",
+      "version": "DLMF 1.2.7, 2026-06-15",
+      "used_for": "the exact lambda-zero K representation, endpoint derivative formula, reality for imaginary order on positive x, and the K integral-representation tail majorant",
+      "not_used_for": "nonzero-lambda transport, an endpoint amplitude F_lambda, root uniqueness, spectral data or RAQ"
+    },
+    {
+      "source": "Fredrik Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+      "url": "https://arxiv.org/abs/1611.02831",
+      "version": "IEEE Transactions on Computers 66 (2017) 1281-1292",
+      "used_for": "outward-rounded ball inclusion semantics",
+      "not_used_for": "the Green/Wronskian identity or any raw-C operator conclusion"
+    },
+    {
+      "source": "python-flint acb complex-ball integration and special-function interface",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb.html#flint.acb.integral",
+      "version": "python-flint 0.9.0",
+      "used_for": "locked rigorous finite acb.integral enclosures of the smooth Bessel-square Green density",
+      "not_used_for": "unbounded numerical quadrature or treating precision repeats as independent validation"
+    }
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "lambda": "0 exactly",
+    "Q_0": "-4",
+    "Q_plus": "4",
+    "C": "6*pi^2",
+    "x": "x=C*exp(Q)",
+    "x_0": "C*exp(-4)",
+    "x_plus": "C*exp(4)",
+    "finite_cutoff_X": "64",
+    "fiber_equation": "u_QQ=A*u with A=36*pi^4*exp(2Q)+6*pi^2*lambda*exp(3Q/2)-kappa^2",
+    "lambda_zero_solution": "u(Q;kappa)=K_(i*kappa)(C*exp(Q))",
+    "smooth_transport_variable": "J(Q;kappa)=-W_Q(u,partial_lambda u)=u(Q)^2*h(Q;kappa)",
+    "smooth_transport_equation": "J_Q=-A_lambda*u^2 and J(Q)=integral_Q^infinity A_lambda(s)u(s)^2 ds",
+    "node_safe_endpoint_identity": "J(Q0)=C^(-1/2)*integral_x0^infinity sqrt(x)*K_(i*kappa)(x)^2 dx",
+    "plus_tail_magnitude_sanity": "J(Qplus)=u(Qplus)^2*h(Qplus), reconstructed only as a positive smooth-Wronskian scale sentinel and not as a Qplus-to-Q0 decomposition check",
+    "conditional_finite_Q0_proxy_identity": "if the finite-Q0 lambda-zero proxy F_0(kappa)=u_Q(Q0;kappa)=0, then partial_lambda F_0/u(Q0)=-J(Q0)/u(Q0)^2=-h(Q0); this is not identified with the declared raw-C Gamma_1(lambda) extension characteristic away from lambda=0",
+    "quadrature_variable": "x in [x0,64]",
+    "finite_integrand": "sqrt(x)*K_(i*kappa)(x)^2",
+    "improper_tail_majorant": "0<=C^(-1/2)*integral_X^infinity sqrt(x)*K_(i*kappa)(x)^2 dx <= pi*exp(-2X)/(4*sqrt(C*X))",
+    "precision_ladder_decimal_digits": [80, 120],
+    "quadrature_relative_tolerances": ["1e-16", "1e-22"],
+    "quadrature_absolute_tolerances": ["1e-22", "1e-30"],
+    "maximum_J_widths": ["1e-16", "1e-24"],
+    "maximum_endpoint_h_widths": ["1e-6", "1e-14"],
+    "tail_upper_target": "1e-50",
+    "ball_output_digits": 45,
+    "quadrature_options": {"deg_limit": 32, "eval_limit_each": 5000, "depth_limit": 30, "use_heap": true},
+    "execution": "exact SymPy identities plus python-flint/Arb Bessel balls and finite acb.integral on a positive-real segment; no ODE solve, root solve, finite difference, Riccati h evolution or unbounded numerical quadrature"
+  },
+  "assumptions": [
+    "Every result is exactly at lambda=0 and covers each full upstream exact-rational kappa bracket, not a midpoint or a unique root.",
+    "J=-W(u,partial_lambda u) is smooth through zeros of u. The runner does not evolve or divide by h on the open Q interval; it divides by u only at Q0 after a whole-band nonzero certificate.",
+    "For real kappa and positive x, K_(i*kappa)(x) is real by conjugation and order symmetry. Full complex balls are retained during finite quadrature.",
+    "DLMF 10.32.9 and cosh(t)>=1+t^2/2 give |K_(i*kappa)(x)|<=exp(-x)*sqrt(pi/(2x)), used only for the manual x>=64 tail.",
+    "The h(4) upstream boxes and independently evaluated K(4) balls are combined only as a positive J(4) magnitude sanity check against a coarse tail allowance. This is not a decomposition or propagation check; the endpoint J(Q0) certificate is the direct Green integral.",
+    "The two precision tiers use one locked backend and are consistency refinements, not independent implementations.",
+    "At a zero of the finite-Q0 lambda-zero proxy the ratio partial_lambda F_0/u(Q0) is normalization invariant, but it is not an eigenvalue slope for the declared raw-C extension: Gamma_1 is a minus-end Wronskian limit and its equality with u_Q(Q0) was pinned only at zero energy. The standalone amplitude, declared-extension derivative and all root velocities remain null."
+  ],
+  "tasks": [
+    "verify both upstream hashes, payload hashes, verdicts and VALID_RUN states; load all five full certified brackets and h(4) boxes",
+    "verify exactly the forced Wronskian equation, J=-W=u^2h, the x-density, the direct node-safe Green identity, and the conditional endpoint-root identity",
+    "for each full bracket at 80 and 120 decimal digits, certify K_(i*kappa)(x0) excludes zero, acb-integrate sqrt(x)K_(i*kappa)(x)^2 on [x0,64], and add the analytic improper-tail interval",
+    "reconstruct J(4)=K_(i*kappa)(xplus)^2*h(4) as a separately recorded positive magnitude sanity check without calling it a Qplus-to-Q0 decomposition or using it to replace the direct endpoint integral",
+    "form h(Q0)=J(Q0)/K_(i*kappa)(x0)^2 only after the endpoint denominator is certified nonzero; record its conditional finite-Q0-proxy interpretation without identifying it with a declared-extension eigenvalue slope",
+    "require positive finite integrals, finite positive tail, tier width limits, overlap and strict high-precision width refinement on every bracket",
+    "write raw h trajectory, endpoint F_lambda amplitude, root velocity, spectral, RAQ, BFV, physical and TOE outputs as explicit nulls"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 1000,
+    "ball_bessel_evaluations": 100000,
+    "quadrature_calls": 10,
+    "quadrature_callback_evaluations": 100000,
+    "root_brackets": 5,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "raw_h_trajectory_across_nodes": null,
+    "nonzero_lambda_node_safe_transport": null,
+    "endpoint_F_lambda_amplitude": null,
+    "declared_extension_lambda_derivative": null,
+    "endpoint_root_velocity": null,
+    "unique_or_complete_zero_shell_root_census": null,
+    "nonreal_resolvent_or_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all source pins, exact identities, full-band endpoint denominators, finite quadratures, analytic tails, plus-end magnitude sanity checks, tier widths and refinement intersections pass for all five brackets",
+      "verdict": "CERTIFY_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_ON_FIVE_ROOT_BRACKETS",
+      "programme_impact": "CLOSE_THE_DIRECT_LAMBDA_ZERO_SMOOTH_WRONSKIAN_GREEN_ENDPOINT_CONSTRUCTION_ON_FIVE_CERTIFIED_ROOT_BRACKETS_ONLY_AND_KEEP_DECLARED_EXTENSION_DERIVATIVES_OPEN_UNTIL_THE_NONZERO_LAMBDA_MINUS_END_GAMMA1_FUNCTIONAL_IS_VALIDATED"
+    },
+    {
+      "condition": "any source pin, identity, endpoint denominator, finite quadrature, analytic tail, plus-end magnitude sanity, width or refinement check fails",
+      "verdict": "LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_NOT_CERTIFIED",
+      "programme_impact": "KEEP_THE_EXACT_SMOOTH_GREEN_IDENTITY_BUT_LEAVE_EVERY_FAILED_ENDPOINT_CONSTRUCTION_BOX_UNRESOLVED"
+    }
+  ]
+}
