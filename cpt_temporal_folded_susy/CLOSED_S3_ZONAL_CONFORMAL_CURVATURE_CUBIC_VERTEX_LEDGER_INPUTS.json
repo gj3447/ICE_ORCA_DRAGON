@@ -1,0 +1,127 @@
+{
+  "schema_version": "ice.closed-s3-zonal-conformal-curvature-cubic-vertex-ledger.input.v1",
+  "calculation_id": "ClosedS3ZonalConformalCurvatureCubicVertexLedger",
+  "numbered_phase": null,
+  "question": "For a unit-S3 zonal scalar packet psi in q_ab(epsilon)=a^2 exp(2 epsilon psi) gamma_ab, what exact epsilon^1, epsilon^2 and epsilon^3 spatial-curvature-density coefficients and hard-cutoff tails occur in the declared zonal subspace?",
+  "kind": "EXACT_UNIT_S3_ZONAL_CONFORMAL_SPATIAL_CURVATURE_CUBIC_VERTEX_AND_CUTOFF_LEDGER",
+  "epistemic_scope": "UNIT_S3_ZONAL_CONFORMAL_SPATIAL_CURVATURE_DENSITY_AND_ITS_CUBIC_TAYLOR_VERTEX_ONLY_NOT_A_FULL_ADM_CONSTRAINT_OR_HDA",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
+      "sha256": "5d56bd94020ddebfda609ca8da3956cc75be5c74ad9b06cdb9ea3464ee616441",
+      "payload_sha256_without_self": "5178a20a464506595a02d25e97931e60eabfffb038902b977bc4737beaf8cdc1",
+      "required_verdict": "KEEP_CLOSED_S3_ADM_HOMOGENEOUS_AND_LINEAR_SCALAR_CONVENTION_BASELINE_NOT_HDA",
+      "role": "pins q_ab=a^2 gamma_ab, unit-S3 volume and curvature, and the explicit boundary that its linear gauge check was not a full constraint derivation"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
+      "sha256": "5b6713ff2ad47dcc9effd42e01c71c1ae408320634b1f81098302b14dc0cebd4",
+      "payload_sha256_without_self": "863c7bf217b7d32eb0fb658139612361369fc5730a1549d20fb6029c74fc0166",
+      "required_verdict": "KEEP_CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_AND_HARD_CUTOFF_REMAINDER_LEDGER_NOT_ADM_OR_HDA",
+      "role": "pins normalized zonal Q_n product and hard-projection convention; no full scalar or SVT Gaunt system is imported"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT.json",
+      "sha256": "1f114845629f7f3ee1ea609af81a8804b65d5443912593a52e23d892957dfac3",
+      "payload_sha256_without_self": "75a41075eb0a90f00e2d69ece7cf33508270c7ede986e612adcf8450e1d4f0d5",
+      "required_verdict": "KEEP_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_LEDGER_NOT_COMPLETE_BASIS_OR_HDA",
+      "role": "pins unit-S3 Laplacian and low-mode conventions while explicitly withholding a complete basis, Gaunt data and HDA"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "A. L. Besse, Einstein Manifolds, Springer (1987), Ch. 1 conformal scalar-curvature transformation",
+      "url": "https://doi.org/10.1007/978-3-642-61779-8",
+      "used_for": "the d=3 conformal transformation of scalar curvature under q_ab=a^2 exp(2 omega) gamma_ab",
+      "not_used_for": "a perturbative ADM Hamiltonian, lapse/shift elimination, constraint brackets or a physical prediction"
+    },
+    {
+      "source": "NIST Digital Library of Mathematical Functions, Chapter 18, Orthogonal Polynomials",
+      "url": "https://dlmf.nist.gov/18",
+      "used_for": "the Chebyshev-U zonal product convention already pinned by the upstream zonal ledger",
+      "not_used_for": "a full S3 scalar basis or nonzonal Clebsch-Gordan coefficients"
+    }
+  ],
+  "declared_conventions": {
+    "geometry": "unit round S3: R[gamma]=6, Ric_ab[gamma]=2 gamma_ab, Delta=D^aD_a, and integral_S3 1=2*pi^2",
+    "zonal_basis": "Q_n(chi)=U_n(cos chi)/sqrt(2*pi^2), Delta Q_n=-n(n+2)Q_n, and Q_a Q_b=(2*pi^2)^(-1/2) sum_{j=0}^{min(a,b)} Q_{a+b-2j}",
+    "metric_ansatz": "q_ab(epsilon)=a^2 exp(2 epsilon psi) gamma_ab with a spatial constant treated as an external positive factor",
+    "curvature_density": "sqrt(q) R[q]/(a sqrt(gamma))=exp(epsilon psi)[6-4 epsilon Delta psi-2 epsilon^2 |D psi|^2]",
+    "density_coefficients": "d1=6psi-4Delta psi; d2=3psi^2-4psi Delta psi-2|Dpsi|^2; d3=psi^3-2psi^2 Delta psi-2psi|Dpsi|^2",
+    "integrated_coefficients": "I1=6 integral psi; I2=3 integral psi^2+2 integral |Dpsi|^2; I3=integral psi^3+2 integral psi|Dpsi|^2",
+    "hard_cutoff": "P_N retains zonal Q_0 through Q_N after the declared local density coefficient is formed; a density tail is a truncation diagnostic, not an ADM algebra residual"
+  },
+  "coefficient_packets": [
+    {
+      "id": "single_Q2_at_N2",
+      "cutoff_N": 2,
+      "coefficients": {"2": "1"},
+      "purpose": "smallest zero-mean one-mode conformal packet whose quadratic and cubic curvature-density coefficients emit modes beyond N=2"
+    },
+    {
+      "id": "mixed_Q1_plus_Q2_at_N2",
+      "cutoff_N": 2,
+      "coefficients": {"1": "1", "2": "1"},
+      "purpose": "smallest mixed zero-mean packet exposing derivative and product cross-terms"
+    }
+  ],
+  "exact_plan": [
+    "hash-verify all three upstream results and preserve their non-ADM/non-HDA boundaries",
+    "use source-pinned conformal-curvature and closed-manifold integration-by-parts identities as theorem guards, and verify only their exact algebraic transport into the declared zonal packet conventions",
+    "form the local d1, d2 and d3 curvature-density coefficient vectors exactly from zonal products and Delta Q_n=-n(n+2)Q_n",
+    "verify the Taylor reconstruction of exp(epsilon psi)[6-4 epsilon Delta psi-2 epsilon^2 |Dpsi|^2 through order epsilon^3 and the integrated I1/I2/I3 formulas",
+    "record P_N density coefficients, discarded tails and exact tail norms separately at quadratic and cubic order",
+    "leave all lapse, shift, momenta, matter perturbations, nonzonal modes, ADM constraints, brackets, BFV and physical outputs null"
+  ],
+  "decision_table": [
+    {
+      "condition": "all upstream pins and exact zonal curvature-density, integration-by-parts, Taylor and cutoff-reconstruction checks pass",
+      "verdict": "KEEP_CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_NOT_ADM_CONSTRAINT_OR_HDA",
+      "programme_impact": "RECORD_A_SINGLE_ZONAL_SPATIAL_CURVATURE_VERTEX_PACKET_FOR_A_SEPARATE_OFF_SHELL_ADM_EXPANSION",
+      "meaning": "only the declared spatial-curvature density in a conformal zonal subspace is retained"
+    },
+    {
+      "condition": "an upstream pin or any exact convention, Taylor, integration or projection reconstruction check fails",
+      "verdict": "KILL_DECLARED_CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_VERTEX",
+      "programme_impact": "DO_NOT_USE_THIS_ZONAL_CURVATURE_PACKET_IN_A_CONSTRAINT_EXPANSION",
+      "meaning": "reject this bounded convention packet without an inference about GR closure or a quantum anomaly"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "explicit_complete_scalar_vector_tensor_basis_functions": null,
+    "full_gaunt_or_clebsch_gordan_ledger": null,
+    "nonzonal_scalar_mode_couplings": null,
+    "transverse_vector_tensor_mode_couplings": null,
+    "full_adm_linear_constraint_expansion": null,
+    "full_adm_cubic_constraint_expansion": null,
+    "adm_kinetic_momentum_vertex": null,
+    "matter_perturbation_vertex": null,
+    "lapse_shift_elimination": null,
+    "lapse_shift_constraint_brackets": null,
+    "classical_hypersurface_deformation_algebra_closure": null,
+    "classical_jacobi_closure": null,
+    "quantum_bfv_charge": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "raw_C_operator_domain": null,
+    "absolute_bfv_measure": null,
+    "relational_observables": null,
+    "born_oppenheimer_or_decoherence": null,
+    "empirical_likelihood": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
