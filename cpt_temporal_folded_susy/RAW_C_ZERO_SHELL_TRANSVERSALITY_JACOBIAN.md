@@ -118,12 +118,36 @@ rigging test space and rigging map; physical inner-product positivity and
 observable action; RAQ completion; raw-\(C\)/selected-\(H\) equivalence; and
 all BFV, inhomogeneous, observational, physics, and TOE outputs.
 
-## Intended execution
+## Observed execution
 
-After review and clean commit, execute only through the control plane:
+The reviewed definition was committed first and then executed only through the
+control plane:
 
 ```text
 ./ice run raw_c_zero_shell_transversality_jacobian
+VALID_RUN; 9/9 executable boolean checks; 3/3 numerical checks;
+4 analytic theorem/scope guards
+KEEP_DECLARED_RAW_C_FIVE_LOCAL_SIMPLE_ROOT_JACOBIANS_ONLY
 ```
 
-No runner was executed while preparing this draft.
+The result SHA-256 is
+`cfc2179c87d84b875060d05f8ff2466106af73fd18da723dfb89da5468e1647e`.
+The five positive-\(p\) branch values were
+
+| root | \(p>0\) | conditional \(\lambda'(p)\) | conditional \(1/|\lambda'|\) |
+|---:|---:|---:|---:|
+| 1 | 1.6513865754 | 13.3952860005 | 0.0746531280 |
+| 2 | 3.2146605875 | 15.5910214561 | 0.0641394794 |
+| 3 | 4.4149322571 | 15.5099449055 | 0.0644747616 |
+| 4 | 5.4814417905 | 15.2508585095 | 0.0655700792 |
+| 5 | 6.4692226902 | 14.9719946432 | 0.0667913677 |
+
+The maximum \(h\)-versus-\(h/2\) derivative difference was
+\(1.05\times10^{-42}\), the maximum Mellin/quadrature difference was
+\(4.36\times10^{-43}\), and the minimum \(|a(Q_0)|\) was
+\(3.52\times10^{-6}\).  The run used 15,735 Bessel evaluations and five
+quadratures, within the declared caps.
+
+These numbers remain conditional on the analytic moving-boundary Lagrange
+identity.  They do not fill any global spectral, \(\delta(C)\), rigging-map,
+physical-inner-product, or \(C\leftrightarrow H\) field.
