@@ -45,7 +45,8 @@ E_{\rm bar}=e^{V_{\rm bar}/2}-1
 
 여기서 \(w\)는 recessive Liouville--Green proxy다. 마지막 식은
 \(\sqrt A\)-정규화 로그미분 **차이**이지 \((\log w)'\)에 대한 상대오차가
-아니다. 이 해석은 [NIST DLMF §2.7(iii), 특히 2.7.23--2.7.25](https://dlmf.nist.gov/2.7.iii)의
+아니다. 전체 amplitude \((u,u')\) datum이나 그 \(\lambda\) 미분을 봉입한
+결과도 아니다. 이 해석은 [NIST DLMF §2.7(iii), 특히 2.7.23--2.7.25](https://dlmf.nist.gov/2.7.iii)의
 오차와 미분 오차 조항에 한정된다.
 
 즉, 무한대의 recessive 조건을 유한 \(Q_+=4\)의 초기 datum으로 바꿀 때
@@ -53,12 +54,40 @@ E_{\rm bar}=e^{V_{\rm bar}/2}-1
 같은 \(|p|=\sqrt{2/3}\,\kappa\) coefficient를 갖는다는 범위 밖의
 \(p\)-mixing extension 결론은 아니다.
 
+### 같은 날 추가된 \(\lambda=0\) exact anchor
+
+그 뒤 `python-flint==0.9.0`을 lock하고
+`raw_c_lambda_zero_bessel_ball_transport`를 clean committed source에서
+실행했다. 정확히 \(\lambda=0\)이면 \(x=6\pi^2e^Q\)에 대해 recessive 해가
+
+\[
+u_+(Q;\kappa)=K_{i\kappa}(x)
+\]
+
+이므로 수치 fundamental matrix 없이 \(+\infty\to Q_0=-4\) 방향을 exact
+special function으로 전달할 수 있다. 관측 결과는 exact 4/4, Arb ball
+35/35, theorem/scope guard 5개였고, 선언한 다섯 coarse bracket 각각에 적어도
+하나의 real sign-changing zero가 있음을 인증했다. 각 고정밀 bracket의 exact
+폭은
+
+\[
+1/20282409603651670423947251286016
+\]
+
+이다. bracket 전체에서 \(K_{i\kappa}(x_0)\)와 Wronskian은 0을 배제했고,
+후자는 1을 포함했다. 격리 재현은 `REPRO`, `needs-attention 0`이었다.
+
+이 결과는 아래 목록의 1번에서 **\(\lambda=0\) exact direction만** 닫는다.
+\(F_\lambda\), nonzero-\(\lambda\) validated transport와 비실수 resolvent는
+닫지 않는다.
+
 ## 아직 끊긴 연결부
 
 현재 결과에서 다음 결론으로 가는 논리적 연결은 모두 비어 있다.
 
-1. \(Q_+=4\to Q_0=-4\)의 검증된 fundamental-matrix 또는 projective
-   transport enclosure
+1. nonzero-\(\lambda\)의 \(Q_+=4\to Q_0=-4\) 검증 transport와
+   parameter-differentiated tail datum; \(\lambda=0\) direction은 exact Bessel로
+   좁게 완료
 2. 그 enclosure가 포함하는 endpoint \(F\)와 \(F_\lambda\)의 rigorous bound
 3. \(\operatorname{Im}z>0\)에서 선택한 자기수반 extension의 resolvent와
    Weyl--Titchmarsh \(m(z)\)
@@ -76,17 +105,21 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
 
 ## 다음 최소 인증 단위
 
-가장 가까운 독립 질문은 “tail bound가 주는 초기 interval을
-\([-4,4]\)에서 끝까지 전달해 endpoint datum과 그 \(\lambda\)-민감도를
-동시에 감쌀 수 있는가?”다. 다음 계산을 열 경우 최소 입력과 출력은 다음처럼
-고정한다.
+가장 가까운 독립 질문은 “현재 tail theorem을 \(\lambda\)로 미분해
+scale-invariant \(h=\partial_\lambda[-u'/u]\)의 \(Q_+=4\) datum 하나를
+감쌀 수 있는가?”다. node-safe \([-4,4]\) 전달과 정규화된
+\(F_\lambda\)는 그 다음의 별도 계산이다. 다음 계산을 열 경우 최소 입력과
+출력은 다음처럼 고정한다.
 
 ### 입력
 
 - 현재 결과의 input/result/runner hash와 \(Q_+=4\) tail error budget
 - 선택한 real parameter box와 endpoint/boundary convention
-- first-order system \(Y'=B(Q;\lambda,\kappa)Y\) 및
-  \(\partial_\lambda Y\) variational system
+- Riccati tail equation \(g'=g^2-A\)와 differentiated equation
+  \(h'=2gh-A_\lambda\), 그리고 differentiated
+  Volterra/Liouville--Green remainder
+- 후속 amplitude 계산을 위한 plus-end \(\lambda\)-normalization 후보; 이
+  계산은 normalization을 선택하지 않으면 \(h\)까지만 출력
 - overflow를 피하기 위한 scaling/projective chart와 chart-switch rule
 - coefficient·rounding·truncation을 모두 포함하는 interval/ball arithmetic
   convention
@@ -102,6 +135,8 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
   하되 finite difference를 인증 근거로 사용하지 않는 구분
 - endpoint \(F,F_\lambda\)가 tail uncertainty와 transport uncertainty를 모두
   포함하는지에 대한 fail-closed check
+- recessive direction만 고정한 상태에서 normalization-dependent
+  \(F_\lambda\) amplitude를 출력하지 않는 guard
 
 ### 가능한 좁은 결과
 
@@ -116,30 +151,36 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
 부호, conjugation symmetry, resolvent identity와 boundary-condition dependence를
 검사해야 한다.
 
-## 현재 구현 장애와 선택지
+## 현재 구현 상태와 남은 선택지
 
-잠금 파일을 감사한 결과, 직접 Python 의존성은 NumPy 2.5.2, SciPy 1.18.0,
-SymPy 1.14.0이고 mpmath 1.3.0은 SymPy의 전이 의존성이다. `pyproject.toml`과
-`uv.lock`에는 python-flint/Arb 또는 validated interval ODE backend가 없다.
-따라서 기존 SciPy ODE의 작은 tolerance나 두 cutoff의 일치는 **rigorous
-enclosure**로 승격할 수 없다.
+`python-flint==0.9.0`과 그 Linux wheel hash는 이제 `pyproject.toml`과
+`uv.lock`에 고정됐다. Arb complex-ball Bessel 평가를 사용한 \(\lambda=0\)
+certificate도 같은 backend의 80/120-digit nesting과 0 배제 조건을 통과했다.
+두 precision tier는 **같은 구현의 반복**이지 독립 backend 검산은 아니다.
 
-다음 구현은 둘 중 하나를 명시적으로 선택해야 한다.
+남은 장애물은 일반 ball arithmetic의 부재가 아니라 validated
+parameter-dependent ODE다. python-flint의 special-function inclusion만으로
+ODE truncation/wrapping과 chart switch가 자동 인증되지는 않는다. 다음 구현은
+둘 중 하나를 명시적으로 선택해야 한다.
 
-- 현재 잠금 안에서 rational/Taylor remainder와 directed bounds를 직접 구성해
-  작은 subbox를 인증한다.
-- 별도 dependency 변경으로 검증된 ball/interval backend를 도입하고 lock,
-  source/version, rounding semantics와 독립 회귀 검사를 함께 커밋한다.
+- Arb 위에 interval Taylor remainder와 Prüfer/projective chart 전환을 좁은
+  parameter subbox용으로 직접 구성한다.
+- CAPD::DynSys 또는 VNODE-LP 같은 validated ODE backend를 별도 도입하고,
+  lock/source/version/rounding semantics와 작은 analytic anchor 회귀를 함께
+  커밋한다.
 
-어느 선택도 아직 이루어지지 않았다. 패키지 설치, 대형 계산, descendant 실행은
+어느 경로도 differentiated tail datum을 대신하지 않는다. 해당 datum을 먼저
+해석적으로 봉입해야 한다. 새 dependency, 대형 계산 또는 descendant 실행은
 이 메모가 자동 승인하지 않는다.
 
 ## 이후 RAQ까지의 정확한 순서
 
 ```text
 real plus-tail bound                    완료(현재 좁은 범위)
-  -> validated [-4,4] transport         오픈
-    -> endpoint F/F_lambda enclosure    오픈
+  -> lambda=0 exact Bessel transport    완료(실수 direction과 5 existence brackets)
+    -> scale-invariant h tail datum     오픈
+      -> node-safe h transport          오픈
+        -> normalized F_lambda          오픈
       -> nonreal resolvent + Weyl m     오픈
         -> spectral measure/support     오픈
           -> test space + rigging form  오픈

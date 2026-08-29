@@ -83,7 +83,25 @@ result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. �
 해석과 분리된 명시적 seed protocol을 먼저 선언한 뒤에만 Starobinsky trajectory crossing을 적분할 것인가이다.
 어느 결과도 다른 질문의 실행 또는 물리적 승격을 자동 승인하지 않는다.
 
-raw-\(C\)의 정확한 남은 인증 순서와 현재 interval/ball ODE dependency 공백은
+### 2026-08-29 P1 exact-Bessel 추가 갱신
+
+`python-flint==0.9.0`을 lock한 뒤 번호 없는
+`raw_c_lambda_zero_bessel_ball_transport`를 clean committed source에서 실행하고
+격리 재현했다. 정확히 \(\lambda=0\)에서 modified-Bessel \(K_{i\kappa}\)가
+recessive 해이므로 \(+\infty\to Q_0=-4\)의 실수 direction을 수치 fundamental
+matrix 없이 고정했다. exact 4/4, Arb ball 35/35, theorem/scope guard 5개가
+통과했고, 다섯 disjoint bracket 각각에서 at-least-one real sign-changing zero를
+인증했다. `./ice repro --only raw_c_lambda_zero_bessel_ball_transport`는 `REPRO`,
+needs-attention 0이었다.
+
+이는 1.3의 \(\lambda=0\) anchor만 완료한다. 각 root의 uniqueness/completeness,
+differentiated plus-tail datum, node-safe \(F_\lambda\), nonreal Weyl \(m\), spectral
+measure, test space와 RAQ는 여전히 null이다. P1부터 P7까지의 가정·실패조건·문헌
+역할과 연결은
+[`ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md`](ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md)에
+분리했다.
+
+raw-\(C\)의 정확한 남은 인증 순서와 현재 validated ODE/differentiated-tail 공백은
 [`RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md`](RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md)에
 분리했다.
 

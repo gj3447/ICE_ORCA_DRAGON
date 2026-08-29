@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-28T16:19:02Z",
+  "updated_at_utc": "2026-08-29T12:50:00Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -505,6 +505,13 @@
         "claim:G1_V0_FINITE_POSITIVE_LAMBDA_ODD_PFAFFIAN_RELATIVE_ORIENTATION_TRANSPORTS",
         "claim:G1_V0_CLOSED_S3_L2_ZONAL_SUBSPACE_IS_PRODUCT_CLOSED",
         "claim:G1_V0_CLOSED_S3_L2_PROJECTED_ASSOCIATOR_IS_EXACT_DISCARDED_REMAINDER"
+      ]
+    },
+    {
+      "question": "What did the first-priority raw-C calculation actually close?",
+      "answer": "Only at exactly lambda=0: the exact modified-Bessel recessive direction and at least one real sign-changing characteristic zero in each of five disjoint inherited ball-certified brackets. Root uniqueness/completeness, the scale-invariant differentiated tail datum, node-safe nonzero-lambda transport, normalized F_lambda, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
+      "claim_ids": [
+        "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS"
       ]
     }
   ],
@@ -1242,6 +1249,28 @@
         "open:gate1-v0-relational-observables-bo-decoherence",
         "open:gate1-v0-empirical-likelihood-bridge",
         "artifact:gate1-v0-quantum-cosmology-ontology-map"
+      ]
+    },
+    {
+      "id": "reading-path:gate1-v0-metacognitive-priority-to-observation",
+      "title": "From the metacognitive priority map through the lambda-zero anchor to the observation gate",
+      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the completed lambda-zero ball anchor and its still-open differentiated endpoint step, then follow the independently startable nonreal spectral and S3/BFV lanes before relational and likelihood gates. Navigation only; it creates no automatic successor or physical promotion.",
+      "nodes": [
+        "concept:gate1-v0-six-bridge-metacognitive-priority-map",
+        "artifact:gate1-v0-six-bridge-metacognitive-priority-map",
+        "concept:raw-c-validated-transport-certification-contract",
+        "scope:gate1-v0-raw-c-validated-real-transport-p1",
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+        "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
+        "scope:raw-c-lambda-zero-bessel-ball-transport",
+        "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
+        "evidence:raw-c-lambda-zero-bessel-ball-transport-result",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+        "open:gate1-v0-classical-s3-hda-closure",
+        "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+        "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+        "open:gate1-v0-relational-observables-bo-decoherence",
+        "open:gate1-v0-empirical-likelihood-bridge"
       ]
     }
   ],
@@ -14050,6 +14079,328 @@
     },
     {
       "id":"artifact:closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger-evidence-snapshot","type":"artifact","title":"Closed-S3 zonal V=0 scalar-matter evidence snapshot","summary":"Schema-valid run snapshot preserving source, runner, result and check records.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/closed-s3-zonal-conformal-v0-scalar-matter-cubic-vertex-ledger-result.json","sha256":"f27d89cdd76df90b6a4864f9c0348f1ebad8462f542fdbd233f91288a063f6b5"
+    },
+    {
+      "id": "concept:gate1-v0-six-bridge-metacognitive-priority-map",
+      "type": "concept",
+      "title": "Gate-1 V0 six-bridge metacognitive priority map",
+      "summary": "Decision-complete local map of P1 raw-C differentiated endpoint work, P2 S3 cubic construction, P3 HDA/Jacobi, P4 nonreal raw-C spectral/RAQ/rescaling, P5 quantum BFV, P6 absolute BFV, and P7 clocks/BO/V-not-equal-zero likelihood. It records evidence, assumptions, falsifiers, gates and explicit nulls; navigation only, with no automatic execution or physical promotion.",
+      "state": "ACTIVE_LOCAL_PRIORITY_EPISTEMIC_LEDGER_NO_AUTOMATIC_EXECUTION_AUTHORITY"
+    },
+    {
+      "id": "concept:raw-c-validated-transport-certification-contract",
+      "type": "concept",
+      "title": "Raw-C validated transport certification contract",
+      "summary": "The priority-1 method separates a scale-invariant differentiated plus-tail enclosure for h=partial_lambda(-u'/u), an unwrapped node-safe projective transport, and any later normalization-dependent F_lambda amplitude. It fails closed on normalization drift, denominator-zero, non-nesting, remainder or width failure.",
+      "state": "ACTIVE_METHOD_CONTRACT_SCALE_INVARIANT_TAIL_BEFORE_NORMALIZED_AMPLITUDE"
+    },
+    {
+      "id": "scope:gate1-v0-raw-c-validated-real-transport-p1",
+      "type": "scope",
+      "title": "Priority-1 raw-C validated real transport scope",
+      "summary": "Real parameter and certification scope for the differentiated tail and later node-safe endpoint route.",
+      "state": "DECLARED_PRIORITY_1_REAL_VALIDATED_TRANSPORT_SCOPE",
+      "includes": [
+        "the declared real raw-C fiber and candidate self-adjoint boundary convention",
+        "Q>=4 differentiated scale-invariant h=partial_lambda(-u'/u) tail enclosure before compact transport",
+        "a later Q=4 to Q0=-4 unwrapped projective or Pruefer atlas with outward rounding",
+        "the declared compact real box |lambda|<=1e-4 and 0<=kappa<=8, with subboxes allowed",
+        "an explicit plus-end lambda normalization before any amplitude F_lambda output",
+        "fail-closed subdivision, precision nesting, Wronskian and chart-switch checks"
+      ],
+      "excludes": [
+        "a nonreal resolvent, Weyl m-function, spectral measure, test space, rigging map or RAQ",
+        "automatic equivalence of raw C and H=fC",
+        "root uniqueness or a complete root census unless separately certified",
+        "a physics, quantum-gravity or TOE claim",
+        "automatic execution of any successor"
+      ]
+    },
+    {
+      "id": "scope:raw-c-lambda-zero-bessel-ball-transport",
+      "type": "scope",
+      "title": "Lambda-zero raw-C Bessel ball transport scope",
+      "summary": "Exact special-function and ball-arithmetic scope for the completed lambda-zero anchor only.",
+      "state": "DECLARED_LAMBDA_ZERO_SPECIAL_FUNCTION_BALL_SCOPE",
+      "includes": [
+        "exactly lambda=0 and real kappa",
+        "Q from -4 to positive infinity through x=6*pi^2*exp(Q)",
+        "the K_(i*kappa) recessive direction",
+        "the five inherited disjoint sign-change brackets",
+        "python-flint 0.9.0 Arb balls at 80 and 120 decimal digits",
+        "exact-rational bracket nesting and endpoint checks at Q0=-4 and Qplus=4"
+      ],
+      "excludes": [
+        "F_lambda or any nonzero-lambda validated transport",
+        "root uniqueness, additional even-multiplicity roots or completeness on kappa in [0,8]",
+        "a numerical ODE fundamental matrix",
+        "a nonreal resolvent, Weyl m-function, spectral measure, RAQ or C-H equivalence",
+        "physics, quantum gravity or TOE"
+      ]
+    },
+    {
+      "id": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+      "type": "open_problem",
+      "title": "Raw-C differentiated plus-tail and node-safe endpoint transport",
+      "summary": "Priority 1 is only partially anchored: the lambda-zero exact Bessel direction and five existence brackets are complete, but a scale-invariant differentiated h tail datum, unwrapped node-safe compact transport, and explicitly normalized F_lambda amplitude remain missing. Nonreal spectral and RAQ outputs are separate open work.",
+      "state": "PRIORITY_1_PARTIALLY_ANCHORED_LAMBDA_ZERO_ONLY",
+      "question": "Can the declared raw-C real box first enclose h=partial_lambda[-u'/u] at Q=4 and then propagate it through every node and chart switch to Q=-4, before any explicitly normalized F_lambda amplitude is emitted?"
+    },
+    {
+      "id": "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
+      "type": "concept",
+      "title": "Raw-C lambda-zero Bessel ball transport anchor",
+      "summary": "Exact lambda-zero modified-Bessel recessive-direction representation and outward ball sign-bracket audit; no differentiated or nonzero-lambda transport.",
+      "state": "COMPLETED_LAMBDA_ZERO_EXACT_SPECIAL_FUNCTION_BALL_ANCHOR_ONLY"
+    },
+    {
+      "id": "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
+      "type": "claim",
+      "title": "Declared lambda-zero raw-C Bessel transport anchor and five real-root brackets hold",
+      "summary": "Supported only for the exact lambda-zero recessive direction and five inherited disjoint sign-changing brackets. It proves at least one real zero per bracket, not uniqueness, completeness, F_lambda, nonzero-lambda transport, nonreal spectral data, RAQ or equivalence.",
+      "state": "SUPPORTED_LAMBDA_ZERO_BESSEL_BALL_SCOPE_ONLY",
+      "claim_id": "RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
+      "statement": "For the declared lambda-zero raw-C fiber, K_(i*kappa)(6*pi^2*exp(Q)) gives the exact recessive direction from positive infinity to Q=-4, and each of five declared disjoint ball-certified sign-changing kappa brackets contains at least one real characteristic zero.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:raw-c-lambda-zero-bessel-ball-transport-result",
+      "type": "evidence",
+      "title": "Raw-C lambda-zero Bessel ball transport evidence",
+      "summary": "VALID_RUN with 4 exact and 35 Arb-ball checks plus five theorem/scope guards, no ODE/root-solver/quadrature calls, five existence brackets and isolated REPRO; lambda-zero only.",
+      "state": "VALID_RUN_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ONLY",
+      "observed_status": "VALID_RUN_4_EXACT_35_BALL_PASS_5_GUARDS_REPRO",
+      "check_ids": [
+        "P39.rawc.ball.change_of_variable",
+        "P39.rawc.ball.coefficient",
+        "P39.rawc.ball.p_parity",
+        "P39.rawc.ball.lambda_sensitivity_forcing",
+        "P39.rawc.ball.root1.tier1.opposite_signs",
+        "P39.rawc.ball.root1.tier2.opposite_signs",
+        "P39.rawc.ball.root1.precision_nesting",
+        "P39.rawc.ball.root1.K_Q0_nonzero",
+        "P39.rawc.ball.root1.wronskian",
+        "P39.rawc.ball.root1.scaled_K_Qplus_nonzero",
+        "P39.rawc.ball.root1.tail_containment",
+        "P39.rawc.ball.root2.tier1.opposite_signs",
+        "P39.rawc.ball.root2.tier2.opposite_signs",
+        "P39.rawc.ball.root2.precision_nesting",
+        "P39.rawc.ball.root2.K_Q0_nonzero",
+        "P39.rawc.ball.root2.wronskian",
+        "P39.rawc.ball.root2.scaled_K_Qplus_nonzero",
+        "P39.rawc.ball.root2.tail_containment",
+        "P39.rawc.ball.root3.tier1.opposite_signs",
+        "P39.rawc.ball.root3.tier2.opposite_signs",
+        "P39.rawc.ball.root3.precision_nesting",
+        "P39.rawc.ball.root3.K_Q0_nonzero",
+        "P39.rawc.ball.root3.wronskian",
+        "P39.rawc.ball.root3.scaled_K_Qplus_nonzero",
+        "P39.rawc.ball.root3.tail_containment",
+        "P39.rawc.ball.root4.tier1.opposite_signs",
+        "P39.rawc.ball.root4.tier2.opposite_signs",
+        "P39.rawc.ball.root4.precision_nesting",
+        "P39.rawc.ball.root4.K_Q0_nonzero",
+        "P39.rawc.ball.root4.wronskian",
+        "P39.rawc.ball.root4.scaled_K_Qplus_nonzero",
+        "P39.rawc.ball.root4.tail_containment",
+        "P39.rawc.ball.root5.tier1.opposite_signs",
+        "P39.rawc.ball.root5.tier2.opposite_signs",
+        "P39.rawc.ball.root5.precision_nesting",
+        "P39.rawc.ball.root5.K_Q0_nonzero",
+        "P39.rawc.ball.root5.wronskian",
+        "P39.rawc.ball.root5.scaled_K_Qplus_nonzero",
+        "P39.rawc.ball.root5.tail_containment"
+      ]
+    },
+    {
+      "id": "artifact:gate1-v0-six-bridge-metacognitive-priority-map",
+      "type": "artifact",
+      "title": "Gate-1 V0 six-bridge metacognitive priority map",
+      "summary": "Human-readable local priority, assumption, falsifier, success-gate, source-role and explicit-null ledger.",
+      "state": "TRACKED_RESEARCH_DECISION_MAP",
+      "artifact_kind": "research_decision_map",
+      "path": "docs/research/ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md",
+      "sha256": "766f18fdf89a04f7063d3dafdc28eb00106b21567951ce563c4ab9fb53a195aa"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-inputs",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero Bessel ball transport inputs",
+      "summary": "Pinned question, source roles, conventions, upstream hashes, resource caps and fail-closed null outputs.",
+      "state": "TRACKED_RUN_INPUTS",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_INPUTS.json",
+      "sha256": "ba09a1c7d85cd77830f816526991d6f2cc62562a6dd74efa94ef8bbc104486c4"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-runner",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero Bessel ball transport runner",
+      "summary": "Bounded unnumbered exact-special-function and Arb-ball certificate runner.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/raw_c_lambda_zero_bessel_ball_transport.py",
+      "sha256": "3944d549d8a31d4ab126206dfa77f2aaa669dc3fb24598040e7e6b7d662d131e"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-result",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero Bessel ball transport raw result",
+      "summary": "VALID_RUN result with payload digest 5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-report",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero Bessel ball transport report",
+      "summary": "Human-readable derivation, observed ball certificate, normalization caveat and remaining differentiated-tail boundary.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT.md",
+      "sha256": "dddb792c0115369dd0c2c7d3988d9162a7227d508e6b83a1ce63000016da64c5"
+    },
+    {
+      "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-evidence-snapshot",
+      "type": "artifact",
+      "title": "Raw-C lambda-zero Bessel ball transport evidence snapshot",
+      "summary": "Schema-valid run snapshot preserving runner, input, result, checks, source roles and explicit nulls.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/raw-c-lambda-zero-bessel-ball-transport-result.json",
+      "sha256": "4a13e519e1e33924afdbdb95bfe266c243df9c37e8c4b675d814d1b40e8d6e12"
+    },
+    {
+      "id": "source:nist-dlmf-modified-bessel-2026",
+      "type": "source",
+      "title": "NIST DLMF modified-Bessel equation, symmetry, Wronskians and recurrences",
+      "summary": "CITES-only theorem and convention source for the exact lambda-zero reduction, recessive K branch, order/conjugation reality, Wronskian and derivative formulas; it does not supply repository ball enclosures or a raw-C operator conclusion.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "NIST Digital Library of Mathematical Functions, sections 10.25 and 10.27--10.29.",
+      "uri": "https://dlmf.nist.gov/10",
+      "version": "DLMF 1.2.7, 2026-06-15"
+    },
+    {
+      "id": "source:johansson-arb-2017",
+      "type": "source",
+      "title": "Arb midpoint-radius interval arithmetic",
+      "summary": "CITES-only source for arbitrary-precision ball inclusion semantics; it does not prove the repository characteristic, ODE transport or operator claims.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "F. Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic, IEEE Transactions on Computers 66 (2017) 1281--1292.",
+      "uri": "https://arxiv.org/abs/1611.02831",
+      "version": "arXiv:1611.02831"
+    },
+    {
+      "id": "source:python-flint-acb-0-9-0",
+      "type": "source",
+      "title": "python-flint acb complex-ball interface",
+      "summary": "CITES-only locked software interface for FLINT/Arb complex-order Bessel balls; it is not a validated ODE theorem or evidence by itself.",
+      "state": "TECHNICAL_REFERENCE",
+      "citation": "python-flint acb complex-ball special-function interface.",
+      "uri": "https://python-flint.readthedocs.io/en/latest/acb.html",
+      "version": "python-flint 0.9.0"
+    },
+    {
+      "id": "source:kapela-et-al-2020-capd-dynsys",
+      "type": "source",
+      "title": "CAPD::DynSys rigorous ODE toolbox",
+      "summary": "CITES-only validated-ODE method candidate for computer-assisted dynamical-system proofs; it does not enclose the raw-C differentiated tail or choose its projective charts.",
+      "state": "PRIMARY_METHOD_REFERENCE",
+      "citation": "T. Kapela, M. Mrozek, D. Wilczak and P. Zgliczynski, CAPD::DynSys: a flexible C++ toolbox for rigorous numerical analysis of dynamical systems.",
+      "uri": "https://arxiv.org/abs/2010.07097",
+      "version": "arXiv:2010.07097v1"
+    },
+    {
+      "id": "source:vnode-lp-validated-ode",
+      "type": "source",
+      "title": "VNODE-LP validated ODE solver",
+      "summary": "CITES-only interval Taylor/Hermite--Obreshkoff solver candidate; it does not supply a parameter-differentiated raw-C tail theorem or a completed certificate.",
+      "state": "TECHNICAL_METHOD_REFERENCE",
+      "citation": "VNODE-LP, interval solver with verified Taylor and Hermite--Obreshkoff expansions.",
+      "uri": "https://vericomp.fiw.hs-wismar.de/solvers/view/VNODE-LP",
+      "version": "official solver description accessed 2026-08-29"
+    },
+    {
+      "id": "source:brown-mccormack-marletta-2000-singular-sl-bounds",
+      "type": "source",
+      "title": "Guaranteed eigenvalue bounds for singular Sturm--Liouville problems",
+      "summary": "CITES-only precedent combining singular oscillation theory, asymptotics and interval ODE integration; it does not prove the present raw-C characteristic or spectral measure.",
+      "state": "PRIMARY_METHOD_REFERENCE",
+      "citation": "B. M. Brown, D. K. R. McCormack and M. Marletta, Guaranteed Error Bounds for Eigenvalues of Singular Sturm--Liouville Problems, Math. Nachr. 213 (2000) 17--33.",
+      "uri": "https://onlinelibrary.wiley.com/doi/10.1002/%28SICI%291522-2616%28200005%29213%3A1%3C17%3A%3AAID-MANA17%3E3.0.CO%3B2-R",
+      "version": "Math. Nachr. 213 (2000)"
+    },
+    {
+      "id": "source:eckhardt-et-al-2012-singular-weyl-titchmarsh",
+      "type": "source",
+      "title": "Singular Weyl--Titchmarsh theory with distributional potentials",
+      "summary": "CITES-only operator-theoretic baseline for self-adjoint extensions, nonreal m-functions and spectral transforms; it does not construct the repository raw-C extension, m-function or RAQ.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "J. Eckhardt, F. Gesztesy, R. Nichols and G. Teschl, Weyl--Titchmarsh Theory for Sturm--Liouville Operators with Distributional Potentials.",
+      "uri": "https://arxiv.org/abs/1208.4677",
+      "version": "arXiv:1208.4677v2"
+    },
+    {
+      "id": "source:lindblom-taylor-zhang-2017-s3-harmonics",
+      "type": "source",
+      "title": "Scalar, vector and tensor harmonics on the three-sphere",
+      "summary": "CITES-only S3 harmonic definitions, eigenvalue, divergence, trace and orthonormality conventions; it does not construct the repository ADM constraints or HDA brackets.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere.",
+      "uri": "https://arxiv.org/abs/1709.08020",
+      "version": "arXiv:1709.08020v1"
+    },
+    {
+      "id": "source:nandi-shankaranarayanan-2015-hamiltonian-all-orders",
+      "type": "source",
+      "title": "Hamiltonian analysis of cosmological perturbations at all orders",
+      "summary": "CITES-only higher-order Hamiltonian perturbation procedure; it does not supply the closed-S3 full-sector coefficients, cutoff remainder or HDA closure used here.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "D. Nandi and S. Shankaranarayanan, Complete Hamiltonian analysis of cosmological perturbations at all orders.",
+      "uri": "https://arxiv.org/abs/1512.02539",
+      "version": "arXiv:1512.02539v2"
+    },
+    {
+      "id": "source:nandi-shankaranarayanan-2016-noncanonical-cubic-quartic",
+      "type": "source",
+      "title": "Higher-order Hamiltonian perturbations for noncanonical scalar fields",
+      "summary": "CITES-only third- and fourth-order interaction-Hamiltonian precedent; it does not establish the repository closed-S3 ADM/HDA calculation.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "D. Nandi and S. Shankaranarayanan, Complete Hamiltonian analysis of cosmological perturbations at all orders II: Non-canonical scalar field.",
+      "uri": "https://arxiv.org/abs/1606.05747",
+      "version": "arXiv:1606.05747v3"
+    },
+    {
+      "id": "source:rejzner-schiavina-2026-smoothened-boundary",
+      "type": "source",
+      "title": "Perturbative algebraic QFT with smoothened boundary",
+      "summary": "CITES-only 2026 pAQFT/BV-BFV source for modified master equations and renormalized boundary BFV operators. Its explicit leading recovery is Abelian Yang--Mills on causal cylinders, not an absolute gravity measure or anomaly-free gravity construction.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "K. Rejzner and M. Schiavina, Perturbative algebraic quantum field theory with smoothened boundary.",
+      "uri": "https://arxiv.org/abs/2607.13765",
+      "version": "arXiv:2607.13765v1, submitted 2026-07-15"
+    },
+    {
+      "id": "source:hoehn-smith-lock-2020-relational-trinity",
+      "type": "source",
+      "title": "Equivalence of relational quantum dynamics approaches",
+      "summary": "CITES-only frequency-sector relational Dirac/Page--Wootters/deparametrization equivalence framework; it does not construct the repository clocks, physical product or cosmological observables.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "P. A. Hoehn, A. R. H. Smith and M. P. E. Lock, Equivalence of approaches to relational quantum dynamics in relativistic settings.",
+      "uri": "https://arxiv.org/abs/2007.00580",
+      "version": "arXiv:2007.00580v1"
+    },
+    {
+      "id": "source:chataignier-kraemer-2020-bo-unitarity",
+      "type": "source",
+      "title": "Unitarity of Born--Oppenheimer quantum-gravitational corrections",
+      "summary": "CITES-only inner-product and time-gauge boundary for BO corrections to primordial fluctuations; it does not provide this repository model's clock map, spectrum or likelihood.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "L. Chataignier and M. Kraemer, Unitarity of quantum-gravitational corrections to primordial fluctuations in the Born--Oppenheimer approach.",
+      "uri": "https://arxiv.org/abs/2011.06426",
+      "version": "arXiv:2011.06426v2"
     }
   ],
   "edges": [
@@ -33700,7 +34051,69 @@
     {"id":"edge:3228","from":"evidence:raw-c-plus-endpoint-liouville-green-tail-bound-result","relation":"DERIVED_FROM","to":"artifact:raw-c-plus-endpoint-liouville-green-tail-bound-result"},
     {"id":"edge:3229","from":"evidence:raw-c-plus-endpoint-liouville-green-tail-bound-result","relation":"RECORDED_IN","to":"artifact:raw-c-plus-endpoint-liouville-green-tail-bound-evidence-snapshot"},
     {"id":"edge:3230","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"FOLLOW_UP_TO","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"A positive-real Q>=4 tail budget does not validate Q=4-to-Q0 transport, endpoint F/F_lambda, a nonreal m-function, raw-C spectral measure, rigging map, physical product or C-H quantum equivalence."},
-    {"id":"edge:3231","from":"open:gate1-v0-p-zero-p-negative-global-spectral-completion","relation":"FOLLOW_UP_TO","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"Although the coefficient audit covers both p signs through |p|, the tail box does not complete the p<0 global sector, p=0 origin data, global gluing or spectral classification."}
+    {"id":"edge:3231","from":"open:gate1-v0-p-zero-p-negative-global-spectral-completion","relation":"FOLLOW_UP_TO","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"Although the coefficient audit covers both p signs through |p|, the tail box does not complete the p<0 global sector, p=0 origin data, global gluing or spectral classification."},
+    {"id":"edge:3232","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3233","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"DOCUMENTED_BY","to":"artifact:gate1-v0-six-bridge-metacognitive-priority-map"},
+    {"id":"edge:3234","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"EXTENDS","to":"concept:gate1-v0-eight-stage-work-sequence","note":"The new map adds explicit priorities, assumptions, falsifiers, success gates and null outputs; it does not replace the existing execution DAG or authorize a successor."},
+    {"id":"edge:3235","from":"concept:raw-c-validated-transport-certification-contract","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3236","from":"concept:raw-c-validated-transport-certification-contract","relation":"DOCUMENTED_BY","to":"artifact:gate1-v0-six-bridge-metacognitive-priority-map"},
+    {"id":"edge:3237","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"ABOUT","to":"concept:raw-c-validated-transport-certification-contract"},
+    {"id":"edge:3238","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3239","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"VALID_WITHIN","to":"scope:gate1-v0-raw-c-validated-real-transport-p1"},
+    {"id":"edge:3240","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"ABOUT","to":"concept:raw-c-validated-transport-certification-contract"},
+    {"id":"edge:3241","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"DOCUMENTED_BY","to":"artifact:gate1-v0-six-bridge-metacognitive-priority-map"},
+    {"id":"edge:3242","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"FOLLOW_UP_TO","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"The existing theorem encloses a real normalized log-derivative difference only; it does not give h=partial_lambda(-u'/u), compact transport or a normalized amplitude."},
+    {"id":"edge:3243","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"FOLLOW_UP_TO","to":"concept:raw-c-nonzero-lambda-weyl-flambda-check","note":"The finite-cutoff SciPy F-lambda agreement is a comparison target, not an outward-rounded endpoint theorem or normalization-independent certificate."},
+    {"id":"edge:3244","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3245","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"EXTENDS","to":"concept:raw-c-plus-endpoint-liouville-green-tail-bound","note":"At exactly lambda=0 the exact Bessel representation reaches Q0 without a numerical fundamental matrix, but it does not differentiate the prior tail theorem."},
+    {"id":"edge:3246","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"EXTENDS","to":"concept:raw-c-zero-shell-characteristic-census","note":"The five inherited coarse brackets are upgraded to outward ball-certified existence brackets only; uniqueness and census completeness remain open."},
+    {"id":"edge:3247","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The completed lambda-zero anchor exposes the next independent scale-invariant differentiated-tail problem; it does not launch it automatically."},
+    {"id":"edge:3248","from":"claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS","relation":"ABOUT","to":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor"},
+    {"id":"edge:3249","from":"claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS","relation":"HAS_EVIDENCE","to":"evidence:raw-c-lambda-zero-bessel-ball-transport-result","polarity":"SUPPORTS"},
+    {"id":"edge:3250","from":"claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS","relation":"VALID_WITHIN","to":"scope:raw-c-lambda-zero-bessel-ball-transport"},
+    {"id":"edge:3251","from":"evidence:raw-c-lambda-zero-bessel-ball-transport-result","relation":"DEFINED_IN","to":"artifact:raw-c-lambda-zero-bessel-ball-transport-runner"},
+    {"id":"edge:3252","from":"evidence:raw-c-lambda-zero-bessel-ball-transport-result","relation":"DERIVED_FROM","to":"artifact:raw-c-lambda-zero-bessel-ball-transport-inputs"},
+    {"id":"edge:3253","from":"evidence:raw-c-lambda-zero-bessel-ball-transport-result","relation":"RECORDED_IN","to":"artifact:raw-c-lambda-zero-bessel-ball-transport-evidence-snapshot"},
+    {"id":"edge:3254","from":"evidence:raw-c-lambda-zero-bessel-ball-transport-result","relation":"RECORDED_IN","to":"artifact:raw-c-lambda-zero-bessel-ball-transport-result"},
+    {"id":"edge:3255","from":"claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-bessel-ball-transport-report"},
+    {"id":"edge:3256","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-bessel-ball-transport-report"},
+    {"id":"edge:3257","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"Exact reduction, recessive branch, order symmetry, real-characteristic, Wronskian and derivative conventions only."},
+    {"id":"edge:3258","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball inclusion semantics only; repository signs, brackets and endpoint checks are local evidence."},
+    {"id":"edge:3259","from":"concept:raw-c-lambda-zero-bessel-ball-transport-anchor","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked complex-ball Bessel interface only; not a validated ODE theorem."},
+    {"id":"edge:3260","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026"},
+    {"id":"edge:3261","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"CITES","to":"source:johansson-arb-2017"},
+    {"id":"edge:3262","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"CITES","to":"source:kapela-et-al-2020-capd-dynsys","note":"Validated ODE implementation candidate after a differentiated tail datum is proved."},
+    {"id":"edge:3263","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"CITES","to":"source:vnode-lp-validated-ode","note":"Alternative validated interval ODE candidate; no backend has yet been selected for the compact transport."},
+    {"id":"edge:3264","from":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","relation":"CITES","to":"source:brown-mccormack-marletta-2000-singular-sl-bounds","note":"Precedent for combining singular oscillation theory, asymptotics and interval ODE bounds; not a result for this fiber."},
+    {"id":"edge:3265","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"P1; priority memory only, not execution authority."},
+    {"id":"edge:3266","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-classical-s3-hda-closure","note":"P2-P3 construction and classical-closure lane; independently startable from P1."},
+    {"id":"edge:3267","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","note":"P4 nonreal spectral, RAQ and quantum-rescaling lane; nonreal resolvent work can start independently and later cross-check P1 real data."},
+    {"id":"edge:3268","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly","note":"P5 quantum BFV lane; classical charge first depends on actual P3 structure functions."},
+    {"id":"edge:3269","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure","note":"P6 boundary and absolute-measure lane; method work may run in parallel but gravity application meets the HDA/BFV construction."},
+    {"id":"edge:3270","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-relational-observables-bo-decoherence","note":"P7 clock, physical-product, BO and decoherence lane."},
+    {"id":"edge:3271","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-empirical-likelihood-bridge","note":"Final P7 observation gate after a V-not-equal-zero perturbation and reheating bridge."},
+    {"id":"edge:3272","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"CITES","to":"source:louko-martinez-pascual-2011","note":"Classical constraint rescaling does not automatically imply quantum equivalence."},
+    {"id":"edge:3273","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"CITES","to":"source:teitelboim-1973-hypersurface-deformation","note":"Classical HDA comparison baseline only."},
+    {"id":"edge:3274","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Perturbative boundary cutting/gluing framework only; no absolute gravity amplitude follows."},
+    {"id":"edge:3275","from":"open:gate1-v0-classical-s3-hda-closure","relation":"CITES","to":"source:lindblom-taylor-zhang-2017-s3-harmonics","note":"Full S3 harmonic conventions and numerical identities; no ADM bracket is imported."},
+    {"id":"edge:3276","from":"open:gate1-v0-classical-s3-hda-closure","relation":"CITES","to":"source:nandi-shankaranarayanan-2015-hamiltonian-all-orders","note":"Higher-order Hamiltonian perturbation procedure only."},
+    {"id":"edge:3277","from":"open:gate1-v0-classical-s3-hda-closure","relation":"CITES","to":"source:nandi-shankaranarayanan-2016-noncanonical-cubic-quartic","note":"Cubic and quartic interaction-Hamiltonian precedent only."},
+    {"id":"edge:3278","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"CITES","to":"source:eckhardt-et-al-2012-singular-weyl-titchmarsh","note":"Nonreal m-function and spectral-transform baseline for a selected self-adjoint extension."},
+    {"id":"edge:3279","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"CITES","to":"source:marolf-1995","note":"Single-constraint RAQ and auxiliary-structure boundary only."},
+    {"id":"edge:3280","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"CITES","to":"source:louko-martinez-pascual-2011","note":"Rescaling can yield equivalence, failure or extension ambiguity depending on the model; no repository result is imported."},
+    {"id":"edge:3281","from":"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly","relation":"CITES","to":"source:kamenshchik-lyakhovich-1997-closed-bfv"},
+    {"id":"edge:3282","from":"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly","relation":"CITES","to":"source:armendariz-picon-sengor-2016-brst-cosmological-perturbations"},
+    {"id":"edge:3283","from":"open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2012-classical-bvbfv","note":"Bulk-boundary and corner framework only."},
+    {"id":"edge:3284","from":"open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Perturbative cutting and gluing framework only."},
+    {"id":"edge:3285","from":"open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure","relation":"CITES","to":"source:rejzner-schiavina-2026-smoothened-boundary","note":"Modified master equations and renormalized boundary BFV framework; leading Abelian Yang-Mills recovery is not a gravity completion."},
+    {"id":"edge:3286","from":"open:gate1-v0-relational-observables-bo-decoherence","relation":"CITES","to":"source:hoehn-vanrietvelde-2020-clock-switching","note":"Clock-switching method through a clock-neutral Dirac theory; no repository quantum clock map follows."},
+    {"id":"edge:3287","from":"open:gate1-v0-relational-observables-bo-decoherence","relation":"CITES","to":"source:hoehn-smith-lock-2020-relational-trinity","note":"Frequency-sector equivalence framework only."},
+    {"id":"edge:3288","from":"open:gate1-v0-relational-observables-bo-decoherence","relation":"CITES","to":"source:chataignier-kraemer-2020-bo-unitarity","note":"Inner-product and time-gauge boundary for BO corrections only."},
+    {"id":"edge:3289","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"CITES","to":"source:class-2011-boltzmann-code","note":"Observable-spectrum solver after a model supplies primordial spectra and late-time inputs."},
+    {"id":"edge:3290","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"CITES","to":"source:cobaya-2021","note":"Likelihood/sampling interface only; it cannot supply missing model predictions."},
+    {"id":"edge:3291","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"CITES","to":"source:act-dr6-louis-et-al-2025","note":"Version-pinned observational comparison target, not support for the model."},
+    {"id":"edge:3292","from":"open:gate1-v0-empirical-likelihood-bridge","relation":"CITES","to":"source:spt3g-d1-2025","note":"Version-pinned observational comparison target, not support for the model."},
+    {"id":"edge:3293","from":"concept:gate1-v0-six-bridge-metacognitive-priority-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-inhomogeneous-perturbation-dirac-algebra-anomaly","note":"The older combined bridge remains an index; the map separates its classical HDA and quantum anomaly obligations."}
   ],
   "kg_bridges": [
     {

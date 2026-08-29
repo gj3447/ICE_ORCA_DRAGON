@@ -1,0 +1,283 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_20260829",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-29T12:37:00Z",
+  "command": "./ice run raw_c_lambda_zero_bessel_ball_transport",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_lambda_zero_bessel_ball_transport.py",
+    "sha256": "3944d549d8a31d4ab126206dfa77f2aaa669dc3fb24598040e7e6b7d662d131e",
+    "introduced_in_commit": "484c61d5fd6ac66d7587ea8de1bdd1d0321c30b8"
+  },
+  "exact_checks": 4,
+  "checks": [
+    {
+      "id": "P39.rawc.ball.change_of_variable",
+      "status": "PASS",
+      "statement": "The Q-to-x change converts the lambda-zero raw-C fiber to the imaginary-order modified-Bessel equation."
+    },
+    {
+      "id": "P39.rawc.ball.coefficient",
+      "status": "PASS",
+      "statement": "The exact lambda-zero Q coefficient equals x(Q)^2-kappa^2."
+    },
+    {
+      "id": "P39.rawc.ball.p_parity",
+      "status": "PASS",
+      "statement": "Both p signs have the same lambda-zero fiber coefficient."
+    },
+    {
+      "id": "P39.rawc.ball.lambda_sensitivity_forcing",
+      "status": "PASS",
+      "statement": "The differentiated equation has the declared nonzero forcing; the boundary datum and F_lambda remain open."
+    }
+  ],
+  "numerical_checks": 35,
+  "numerical": [
+    {
+      "id": "P39.rawc.ball.root1.tier1.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 1 has certified opposite characteristic signs at 80 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root1.tier2.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 1 has certified opposite characteristic signs at 120 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root1.precision_nesting",
+      "status": "PASS",
+      "statement": "The higher-precision root-1 bracket nests in the same-backend lower-precision bracket."
+    },
+    {
+      "id": "P39.rawc.ball.root1.K_Q0_nonzero",
+      "status": "PASS",
+      "statement": "K_(i*kappa)(x0) excludes zero on root bracket 1."
+    },
+    {
+      "id": "P39.rawc.ball.root1.wronskian",
+      "status": "PASS",
+      "statement": "The root-1 Wronskian ball contains one and excludes zero."
+    },
+    {
+      "id": "P39.rawc.ball.root1.scaled_K_Qplus_nonzero",
+      "status": "PASS",
+      "statement": "The scaled recessive K ball excludes zero at Qplus on root bracket 1."
+    },
+    {
+      "id": "P39.rawc.ball.root1.tail_containment",
+      "status": "PASS",
+      "statement": "The root-1 Bessel log-derivative discrepancy lies within the exactly reconstructed tail budget."
+    },
+    {
+      "id": "P39.rawc.ball.root2.tier1.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 2 has certified opposite characteristic signs at 80 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root2.tier2.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 2 has certified opposite characteristic signs at 120 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root2.precision_nesting",
+      "status": "PASS",
+      "statement": "The higher-precision root-2 bracket nests in the same-backend lower-precision bracket."
+    },
+    {
+      "id": "P39.rawc.ball.root2.K_Q0_nonzero",
+      "status": "PASS",
+      "statement": "K_(i*kappa)(x0) excludes zero on root bracket 2."
+    },
+    {
+      "id": "P39.rawc.ball.root2.wronskian",
+      "status": "PASS",
+      "statement": "The root-2 Wronskian ball contains one and excludes zero."
+    },
+    {
+      "id": "P39.rawc.ball.root2.scaled_K_Qplus_nonzero",
+      "status": "PASS",
+      "statement": "The scaled recessive K ball excludes zero at Qplus on root bracket 2."
+    },
+    {
+      "id": "P39.rawc.ball.root2.tail_containment",
+      "status": "PASS",
+      "statement": "The root-2 Bessel log-derivative discrepancy lies within the exactly reconstructed tail budget."
+    },
+    {
+      "id": "P39.rawc.ball.root3.tier1.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 3 has certified opposite characteristic signs at 80 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root3.tier2.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 3 has certified opposite characteristic signs at 120 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root3.precision_nesting",
+      "status": "PASS",
+      "statement": "The higher-precision root-3 bracket nests in the same-backend lower-precision bracket."
+    },
+    {
+      "id": "P39.rawc.ball.root3.K_Q0_nonzero",
+      "status": "PASS",
+      "statement": "K_(i*kappa)(x0) excludes zero on root bracket 3."
+    },
+    {
+      "id": "P39.rawc.ball.root3.wronskian",
+      "status": "PASS",
+      "statement": "The root-3 Wronskian ball contains one and excludes zero."
+    },
+    {
+      "id": "P39.rawc.ball.root3.scaled_K_Qplus_nonzero",
+      "status": "PASS",
+      "statement": "The scaled recessive K ball excludes zero at Qplus on root bracket 3."
+    },
+    {
+      "id": "P39.rawc.ball.root3.tail_containment",
+      "status": "PASS",
+      "statement": "The root-3 Bessel log-derivative discrepancy lies within the exactly reconstructed tail budget."
+    },
+    {
+      "id": "P39.rawc.ball.root4.tier1.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 4 has certified opposite characteristic signs at 80 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root4.tier2.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 4 has certified opposite characteristic signs at 120 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root4.precision_nesting",
+      "status": "PASS",
+      "statement": "The higher-precision root-4 bracket nests in the same-backend lower-precision bracket."
+    },
+    {
+      "id": "P39.rawc.ball.root4.K_Q0_nonzero",
+      "status": "PASS",
+      "statement": "K_(i*kappa)(x0) excludes zero on root bracket 4."
+    },
+    {
+      "id": "P39.rawc.ball.root4.wronskian",
+      "status": "PASS",
+      "statement": "The root-4 Wronskian ball contains one and excludes zero."
+    },
+    {
+      "id": "P39.rawc.ball.root4.scaled_K_Qplus_nonzero",
+      "status": "PASS",
+      "statement": "The scaled recessive K ball excludes zero at Qplus on root bracket 4."
+    },
+    {
+      "id": "P39.rawc.ball.root4.tail_containment",
+      "status": "PASS",
+      "statement": "The root-4 Bessel log-derivative discrepancy lies within the exactly reconstructed tail budget."
+    },
+    {
+      "id": "P39.rawc.ball.root5.tier1.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 5 has certified opposite characteristic signs at 80 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root5.tier2.opposite_signs",
+      "status": "PASS",
+      "statement": "Root bracket 5 has certified opposite characteristic signs at 120 decimal digits."
+    },
+    {
+      "id": "P39.rawc.ball.root5.precision_nesting",
+      "status": "PASS",
+      "statement": "The higher-precision root-5 bracket nests in the same-backend lower-precision bracket."
+    },
+    {
+      "id": "P39.rawc.ball.root5.K_Q0_nonzero",
+      "status": "PASS",
+      "statement": "K_(i*kappa)(x0) excludes zero on root bracket 5."
+    },
+    {
+      "id": "P39.rawc.ball.root5.wronskian",
+      "status": "PASS",
+      "statement": "The root-5 Wronskian ball contains one and excludes zero."
+    },
+    {
+      "id": "P39.rawc.ball.root5.scaled_K_Qplus_nonzero",
+      "status": "PASS",
+      "statement": "The scaled recessive K ball excludes zero at Qplus on root bracket 5."
+    },
+    {
+      "id": "P39.rawc.ball.root5.tail_containment",
+      "status": "PASS",
+      "statement": "The root-5 Bessel log-derivative discrepancy lies within the exactly reconstructed tail budget."
+    }
+  ],
+  "payload": {
+    "exact_checks": 4,
+    "numerical_checks": 35,
+    "schema_transport": {
+      "phase_field": "P39 is required by the legacy evidence schema; the calculation and raw result both have numbered_phase=null.",
+      "check_prefix": "P39 is a schema transport alias; authoritative raw check IDs begin rawc.ball."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e",
+      "payload_sha256_without_self": "5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92",
+      "verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_INPUTS.json",
+      "sha256": "ba09a1c7d85cd77830f816526991d6f2cc62562a6dd74efa94ef8bbc104486c4"
+    },
+    "computed_scope": "Exactly lambda=0, real kappa, Q0=-4 through the exact recessive K_(i*kappa) representation; five inherited disjoint sign-change brackets only.",
+    "certificate": {
+      "exact_checks": 4,
+      "ball_checks": 35,
+      "theorem_guards": 5,
+      "certified_sign_change_brackets": 5,
+      "each_high_precision_width_exact": "1/20282409603651670423947251286016",
+      "smallest_K_Q0_absolute_lower": "3.5203303417823225631422196998307420491510038409914e-6",
+      "weakest_wronskian_absolute_lower": "0.99999999999999999999999999999542011068119984759286",
+      "largest_Qplus_normalized_difference_absolute_upper": "1.1954629922086147383154548268725022708016944096884e-8",
+      "reconstructed_tail_budget_ball": "[9.4495547830311922124707965661135416500332894970265e-5 +/- 2.97e-55]",
+      "ball_backend": "python-flint 0.9.0 / FLINT-Arb",
+      "repro": "REPRO: structure/types exact; numeric values satisfy field policy"
+    },
+    "primary_sources": [
+      {
+        "source": "NIST DLMF sections 10.25, 10.27, 10.28 and 10.29",
+        "url": "https://dlmf.nist.gov/10",
+        "used_for": "modified-Bessel reduction, recessive K branch, order/conjugation reality, Wronskian and derivative formulas",
+        "not_used_for": "ball implementation correctness, F_lambda, spectral data, RAQ or quantum equivalence"
+      },
+      {
+        "source": "Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+        "url": "https://arxiv.org/abs/1611.02831",
+        "used_for": "ball inclusion semantics and outward-rounded special-function arithmetic",
+        "not_used_for": "a validated nonzero-lambda ODE theorem or operator/physics conclusion"
+      }
+    ],
+    "required_fail_closed_outputs": {
+      "endpoint_F_lambda": null,
+      "nonzero_lambda_validated_transport": null,
+      "unique_or_complete_zero_shell_root_census": null,
+      "nonreal_resolvent_or_weyl_m_function": null,
+      "raw_C_spectral_measure": null,
+      "raw_C_rigging_map": null,
+      "raw_C_physical_inner_product": null,
+      "raw_C_RAQ_completion": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "absolute_bfv_measure": null,
+      "inhomogeneous_constraint_closure": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "relational_observables_or_decoherence": null,
+      "empirical_likelihood": null,
+      "quantum_gravity_claim": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "global_promotion": "PROHIBITED",
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "automatic_next": null
+    }
+  }
+}

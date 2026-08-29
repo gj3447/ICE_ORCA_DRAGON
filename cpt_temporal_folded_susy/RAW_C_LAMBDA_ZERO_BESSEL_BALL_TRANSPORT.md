@@ -143,7 +143,8 @@ the 80-decimal bracket, and every accepted sign must exclude zero.
 
 ## Remaining first-priority gap
 
-Differentiating the fiber equation at \(\lambda=0\) gives
+After a \(\lambda\)-dependent plus-end amplitude normalization has been
+declared, differentiating the fiber equation at \(\lambda=0\) gives
 
 \[
 v''-A_0v=A_\lambda u,
@@ -153,12 +154,22 @@ A_0=36\pi^4e^{2Q}-\kappa^2,
 A_\lambda=6\pi^2e^{3Q/2}.
 \]
 
-The existing plus-tail theorem does not enclose the differentiated boundary
-datum. The next independent calculation must first derive a
-parameter-differentiated Volterra/Liouville--Green tail enclosure and then
-propagate \((u,u',v,v')\), or equivalent Prüfer/projective variables,
-through node crossings. Until that succeeds, \(F_\lambda\), nonreal Weyl
-data, the raw-\(C\) spectral measure, and RAQ remain explicit nulls.
+The recessive direction alone does not fix the magnitude of general
+\(F_\lambda\): under \(u_\lambda\mapsto c(\lambda)u_\lambda\), the sensitivity
+changes by \(c'(0)u\). The smallest next independent calculation should
+therefore use the scale-invariant variables
+
+\[
+g=-u'/u,\qquad h=\partial_\lambda g,
+\qquad h'=2gh-A_\lambda,
+\]
+
+and certify only the differentiated plus-tail enclosure for \(h(4)\). A
+later calculation can propagate that datum through node crossings with an
+unwrapped Prüfer/projective atlas. An amplitude \(F_\lambda\) requires an
+explicit plus-end normalization as well. Until those separate steps succeed,
+\(F_\lambda\), nonreal Weyl data, the raw-\(C\) spectral measure, and RAQ
+remain explicit nulls.
 
 ## Provenance
 
@@ -167,4 +178,3 @@ data, the raw-\(C\) spectral measure, and RAQ remain explicit nulls.
 - result-file SHA-256: `6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e`;
 - canonical result payload SHA-256, excluding its self field:
   `5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92`.
-
