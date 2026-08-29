@@ -1,0 +1,383 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_LEDGER_20260829",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-29T04:46:06Z",
+  "command": "./ice run closed_s3_zonal_conformal_curvature_cubic_vertex_ledger",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/closed_s3_zonal_conformal_curvature_cubic_vertex_ledger.py",
+    "sha256": "0cb08c70d8add9121ce01ea8c1a145391954d262ab8b0924707cc8a609d3a3de",
+    "introduced_in_commit": "d2bf858571f64ae531909e830548f62618aab95d"
+  },
+  "exact_checks": 52,
+  "checks": [
+    {
+      "id": "P39.CS3ZCC.normalization.constant_one",
+      "status": "PASS",
+      "statement": "In the orthonormal zonal basis, the constant function is sqrt(2*pi^2)Q_0 and acts as the convolution identity."
+    },
+    {
+      "id": "P39.CS3ZCC.harmonic.n0.laplacian",
+      "status": "PASS",
+      "statement": "The declared zonal harmonic has Delta Q_n=-n(n+2)Q_n."
+    },
+    {
+      "id": "P39.CS3ZCC.harmonic.n1.laplacian",
+      "status": "PASS",
+      "statement": "The declared zonal harmonic has Delta Q_n=-n(n+2)Q_n."
+    },
+    {
+      "id": "P39.CS3ZCC.harmonic.n2.laplacian",
+      "status": "PASS",
+      "statement": "The declared zonal harmonic has Delta Q_n=-n(n+2)Q_n."
+    },
+    {
+      "id": "P39.CS3ZCC.harmonic.n3.laplacian",
+      "status": "PASS",
+      "statement": "The declared zonal harmonic has Delta Q_n=-n(n+2)Q_n."
+    },
+    {
+      "id": "P39.CS3ZCC.harmonic.n4.laplacian",
+      "status": "PASS",
+      "statement": "The declared zonal harmonic has Delta Q_n=-n(n+2)Q_n."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U0.U0",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U0.U1",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U0.U2",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U0.U3",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U1.U0",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U1.U1",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U1.U2",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U1.U3",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U2.U0",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U2.U1",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U2.U2",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U2.U3",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U3.U0",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U3.U1",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U3.U2",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.product.U3.U3",
+      "status": "PASS",
+      "statement": "The finite zonal Chebyshev-U product identity holds exactly."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.taylor_order0",
+      "status": "PASS",
+      "statement": "The independently multiplied Taylor series has the correctly normalized constant curvature density 6."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.taylor_order1",
+      "status": "PASS",
+      "statement": "Independent zonal convolution of the exponential and curvature brackets reconstructs d1."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.taylor_order2",
+      "status": "PASS",
+      "statement": "Independent zonal convolution of the exponential and curvature brackets reconstructs d2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.taylor_order3",
+      "status": "PASS",
+      "statement": "Independent zonal convolution of the exponential and curvature brackets reconstructs d3."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.zero_mean",
+      "status": "PASS",
+      "statement": "The declared packet has no constant mode, so its integrated linear curvature coefficient vanishes."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.ibp_quadratic",
+      "status": "PASS",
+      "statement": "The zonal coefficients obey integral psi Delta psi=-integral |Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.ibp_cubic",
+      "status": "PASS",
+      "statement": "The zonal coefficients obey integral psi^2 Delta psi=-2 integral psi|Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.integrated_linear",
+      "status": "PASS",
+      "statement": "The integrated linear curvature coefficient equals 6 integral psi and vanishes for the declared zero-mean packet."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.integrated_quadratic",
+      "status": "PASS",
+      "statement": "The integrated quadratic curvature coefficient equals 3 integral psi^2+2 integral |Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.integrated_cubic",
+      "status": "PASS",
+      "statement": "The integrated cubic curvature coefficient equals integral psi^3+2 integral psi|Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.quadratic_projection",
+      "status": "PASS",
+      "statement": "The quadratic local density is retained plus its exact hard-cutoff tail."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.cubic_projection",
+      "status": "PASS",
+      "statement": "The cubic local density is retained plus its exact hard-cutoff tail."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.quadratic_tail_orthogonal",
+      "status": "PASS",
+      "statement": "The declared zonal P_N tail is orthogonal to the retained density coefficient."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.cubic_tail_orthogonal",
+      "status": "PASS",
+      "statement": "The declared zonal P_N tail is orthogonal to the retained density coefficient."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.single_Q2_at_N2.nonzero_declared_tails",
+      "status": "PASS",
+      "statement": "Both declared nonlinear density coefficients have a nonzero tail beyond N=2; this is a cutoff diagnostic only."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.taylor_order0",
+      "status": "PASS",
+      "statement": "The independently multiplied Taylor series has the correctly normalized constant curvature density 6."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.taylor_order1",
+      "status": "PASS",
+      "statement": "Independent zonal convolution of the exponential and curvature brackets reconstructs d1."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.taylor_order2",
+      "status": "PASS",
+      "statement": "Independent zonal convolution of the exponential and curvature brackets reconstructs d2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.taylor_order3",
+      "status": "PASS",
+      "statement": "Independent zonal convolution of the exponential and curvature brackets reconstructs d3."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.zero_mean",
+      "status": "PASS",
+      "statement": "The declared packet has no constant mode, so its integrated linear curvature coefficient vanishes."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.ibp_quadratic",
+      "status": "PASS",
+      "statement": "The zonal coefficients obey integral psi Delta psi=-integral |Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.ibp_cubic",
+      "status": "PASS",
+      "statement": "The zonal coefficients obey integral psi^2 Delta psi=-2 integral psi|Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.integrated_linear",
+      "status": "PASS",
+      "statement": "The integrated linear curvature coefficient equals 6 integral psi and vanishes for the declared zero-mean packet."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.integrated_quadratic",
+      "status": "PASS",
+      "statement": "The integrated quadratic curvature coefficient equals 3 integral psi^2+2 integral |Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.integrated_cubic",
+      "status": "PASS",
+      "statement": "The integrated cubic curvature coefficient equals integral psi^3+2 integral psi|Dpsi|^2."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.quadratic_projection",
+      "status": "PASS",
+      "statement": "The quadratic local density is retained plus its exact hard-cutoff tail."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.cubic_projection",
+      "status": "PASS",
+      "statement": "The cubic local density is retained plus its exact hard-cutoff tail."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.quadratic_tail_orthogonal",
+      "status": "PASS",
+      "statement": "The declared zonal P_N tail is orthogonal to the retained density coefficient."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.cubic_tail_orthogonal",
+      "status": "PASS",
+      "statement": "The declared zonal P_N tail is orthogonal to the retained density coefficient."
+    },
+    {
+      "id": "P39.CS3ZCC.packet.mixed_Q1_plus_Q2_at_N2.nonzero_declared_tails",
+      "status": "PASS",
+      "statement": "Both declared nonlinear density coefficients have a nonzero tail beyond N=2; this is a cutoff diagnostic only."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 52,
+    "numerical_checks": 0,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_LEDGER_RESULT.json",
+      "payload_sha256_without_self": "11bacaa277b221ee687bf8ec4125a91a6740082786621768dd548732b7fd0bf7",
+      "verdict": "KEEP_CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_NOT_ADM_CONSTRAINT_OR_HDA",
+      "programme_impact": "RECORD_A_SINGLE_ZONAL_SPATIAL_CURVATURE_VERTEX_PACKET_FOR_A_SEPARATE_OFF_SHELL_ADM_EXPANSION"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_LEDGER_INPUTS.json",
+      "sha256": "48053d5248550d8908f1dceb59860021d31f5c2ebc747b829b518e0c689f68c2"
+    },
+    "upstream_results": [
+      {
+        "path": "cpt_temporal_folded_susy/CLOSED_S3_ADM_LINEAR_SCALAR_CONVENTION_AUDIT_RESULT.json",
+        "payload_sha256_without_self": "5178a20a464506595a02d25e97931e60eabfffb038902b977bc4737beaf8cdc1",
+        "sha256": "5d56bd94020ddebfda609ca8da3956cc75be5c74ad9b06cdb9ea3464ee616441",
+        "verdict": "KEEP_CLOSED_S3_ADM_HOMOGENEOUS_AND_LINEAR_SCALAR_CONVENTION_BASELINE_NOT_HDA"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
+        "payload_sha256_without_self": "863c7bf217b7d32eb0fb658139612361369fc5730a1549d20fb6029c74fc0166",
+        "sha256": "5b6713ff2ad47dcc9effd42e01c71c1ae408320634b1f81098302b14dc0cebd4",
+        "verdict": "KEEP_CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_AND_HARD_CUTOFF_REMAINDER_LEDGER_NOT_ADM_OR_HDA"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT.json",
+        "payload_sha256_without_self": "75a41075eb0a90f00e2d69ece7cf33508270c7ede986e612adcf8450e1d4f0d5",
+        "sha256": "1f114845629f7f3ee1ea609af81a8804b65d5443912593a52e23d892957dfac3",
+        "verdict": "KEEP_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_LEDGER_NOT_COMPLETE_BASIS_OR_HDA"
+      }
+    ],
+    "primary_sources": [
+      {
+        "not_used_for": "a perturbative ADM Hamiltonian, lapse/shift elimination, constraint brackets or a physical prediction",
+        "source": "A. L. Besse, Einstein Manifolds, Springer (1987), Ch. 1 conformal scalar-curvature transformation",
+        "url": "https://doi.org/10.1007/978-3-642-61779-8",
+        "used_for": "the d=3 conformal transformation of scalar curvature under q_ab=a^2 exp(2 omega) gamma_ab"
+      },
+      {
+        "not_used_for": "a full S3 scalar basis or nonzonal Clebsch-Gordan coefficients",
+        "source": "NIST Digital Library of Mathematical Functions, Chapter 18, Orthogonal Polynomials",
+        "url": "https://dlmf.nist.gov/18",
+        "used_for": "the Chebyshev-U zonal product convention already pinned by the upstream zonal ledger"
+      }
+    ],
+    "theorem_guards": [
+      {
+        "conclusion_and_scope": "The stated local curvature-density identity is imported only for this conformal ansatz; it does not provide an ADM Hamiltonian constraint.",
+        "hypotheses": "q_ab=a^2 exp(2 omega) gamma_ab with spatially constant a, R[gamma]=6 and Delta=D^aD_a",
+        "id": "CS3ZCC.guard.conformal_curvature",
+        "theorem": "d=3 conformal scalar-curvature transformation",
+        "verification_mode": "SOURCE_PIN_AND_SCOPE_AUDIT_NOT_EXECUTABLE_PROOF",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "Integral psi Delta psi=-Integral |Dpsi|^2 and Integral psi^2 Delta psi=-2 Integral psi|Dpsi|^2; no bracket statement follows.",
+        "hypotheses": "psi is a smooth zonal scalar packet on the unit round S3",
+        "id": "CS3ZCC.guard.closed_integration_by_parts",
+        "theorem": "Stokes integration by parts on compact boundaryless S3",
+        "verification_mode": "SOURCE_PIN_AND_SCOPE_AUDIT_NOT_EXECUTABLE_PROOF",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "This is not a complete scalar basis or a full Gaunt/Clebsch-Gordan ledger.",
+        "hypotheses": "Only normalized zonal Q_n and the upstream product convention are used",
+        "id": "CS3ZCC.guard.zonal_product_scope",
+        "theorem": "Chebyshev-U zonal product identity",
+        "verification_mode": "SOURCE_PIN_AND_SCOPE_AUDIT_NOT_EXECUTABLE_PROOF",
+        "verified": true
+      }
+    ],
+    "computed_scope": "unit-S3 zonal conformal spatial-curvature density through cubic order only",
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "absolute_bfv_measure": null,
+      "adm_kinetic_momentum_vertex": null,
+      "automatic_next": null,
+      "born_oppenheimer_or_decoherence": null,
+      "classical_hypersurface_deformation_algebra_closure": null,
+      "classical_jacobi_closure": null,
+      "empirical_likelihood": null,
+      "explicit_complete_scalar_vector_tensor_basis_functions": null,
+      "full_adm_cubic_constraint_expansion": null,
+      "full_adm_linear_constraint_expansion": null,
+      "full_gaunt_or_clebsch_gordan_ledger": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "lapse_shift_constraint_brackets": null,
+      "lapse_shift_elimination": null,
+      "matter_perturbation_vertex": null,
+      "nonzonal_scalar_mode_couplings": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_bfv_charge": null,
+      "raw_C_operator_domain": null,
+      "relational_observables": null,
+      "transverse_vector_tensor_mode_couplings": null
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_20260829",
+  "phase": "P39",
+  "observed_at_utc": "2026-08-29T04:47:34Z",
+  "command": "./ice run raw_c_nonzero_lambda_weyl_flambda_check",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_nonzero_lambda_weyl_flambda_check.py",
+    "sha256": "864cb1e6bc42e1ba0208a541b00f11bfef621330b7f9b298e2d520ec0b14c345",
+    "introduced_in_commit": "dbff983b79778dc1502628b7e5a07cfe45ef6b05"
+  },
+  "exact_checks": 4,
+  "checks": [
+    {
+      "id": "P39.rawc.weyl.ode",
+      "status": "PASS",
+      "statement": "The declared fiber equation is algebraically the linear system u''=A(Q;p,lambda)u."
+    },
+    {
+      "id": "P39.rawc.weyl.boundary_sign",
+      "status": "PASS",
+      "statement": "At Q0 only, c=1 and c'=0 imply -W(u,c)=u'."
+    },
+    {
+      "id": "P39.rawc.weyl.normalization_conversion",
+      "status": "PASS",
+      "statement": "Dividing a solution with u(Q0)=a by a sends the conditional derivative to -N_f/(2a^2)."
+    },
+    {
+      "id": "P39.rawc.weyl.p_parity_coefficient",
+      "status": "PASS",
+      "statement": "The finite ODE coefficient is even under p to minus p."
+    }
+  ],
+  "numerical_checks": 40,
+  "numerical": [
+    {
+      "id": "P39.rawc.weyl.root1.normalization",
+      "status": "PASS",
+      "statement": "all finite-cutoff initial data have a nonzero Q0 normalization denominator"
+    },
+    {
+      "id": "P39.rawc.weyl.root1.lambda_zero",
+      "status": "PASS",
+      "statement": "lambda=0 finite characteristic is small at the main cutoffs"
+    },
+    {
+      "id": "P39.rawc.weyl.root1.lambda_zero_wronskian",
+      "status": "PASS",
+      "statement": "at lambda=0 the propagated finite-Qminus Wronskian agrees with -W=u' evaluated at Q0"
+    },
+    {
+      "id": "P39.rawc.weyl.root1.delta_plateau",
+      "status": "PASS",
+      "statement": "two smallest central-difference deltas agree"
+    },
+    {
+      "id": "P39.rawc.weyl.root1.plus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qplus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root1.minus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qminus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root1.conditional_prediction",
+      "status": "PASS",
+      "statement": "finite-cutoff derivative agrees with separately pinned conditional identity"
+    },
+    {
+      "id": "P39.rawc.weyl.root1.p_parity",
+      "status": "PASS",
+      "statement": "direct plus/minus-p finite difference agrees because the equation has p squared"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.normalization",
+      "status": "PASS",
+      "statement": "all finite-cutoff initial data have a nonzero Q0 normalization denominator"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.lambda_zero",
+      "status": "PASS",
+      "statement": "lambda=0 finite characteristic is small at the main cutoffs"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.lambda_zero_wronskian",
+      "status": "PASS",
+      "statement": "at lambda=0 the propagated finite-Qminus Wronskian agrees with -W=u' evaluated at Q0"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.delta_plateau",
+      "status": "PASS",
+      "statement": "two smallest central-difference deltas agree"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.plus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qplus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.minus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qminus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.conditional_prediction",
+      "status": "PASS",
+      "statement": "finite-cutoff derivative agrees with separately pinned conditional identity"
+    },
+    {
+      "id": "P39.rawc.weyl.root2.p_parity",
+      "status": "PASS",
+      "statement": "direct plus/minus-p finite difference agrees because the equation has p squared"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.normalization",
+      "status": "PASS",
+      "statement": "all finite-cutoff initial data have a nonzero Q0 normalization denominator"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.lambda_zero",
+      "status": "PASS",
+      "statement": "lambda=0 finite characteristic is small at the main cutoffs"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.lambda_zero_wronskian",
+      "status": "PASS",
+      "statement": "at lambda=0 the propagated finite-Qminus Wronskian agrees with -W=u' evaluated at Q0"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.delta_plateau",
+      "status": "PASS",
+      "statement": "two smallest central-difference deltas agree"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.plus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qplus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.minus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qminus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.conditional_prediction",
+      "status": "PASS",
+      "statement": "finite-cutoff derivative agrees with separately pinned conditional identity"
+    },
+    {
+      "id": "P39.rawc.weyl.root3.p_parity",
+      "status": "PASS",
+      "statement": "direct plus/minus-p finite difference agrees because the equation has p squared"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.normalization",
+      "status": "PASS",
+      "statement": "all finite-cutoff initial data have a nonzero Q0 normalization denominator"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.lambda_zero",
+      "status": "PASS",
+      "statement": "lambda=0 finite characteristic is small at the main cutoffs"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.lambda_zero_wronskian",
+      "status": "PASS",
+      "statement": "at lambda=0 the propagated finite-Qminus Wronskian agrees with -W=u' evaluated at Q0"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.delta_plateau",
+      "status": "PASS",
+      "statement": "two smallest central-difference deltas agree"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.plus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qplus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.minus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qminus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.conditional_prediction",
+      "status": "PASS",
+      "statement": "finite-cutoff derivative agrees with separately pinned conditional identity"
+    },
+    {
+      "id": "P39.rawc.weyl.root4.p_parity",
+      "status": "PASS",
+      "statement": "direct plus/minus-p finite difference agrees because the equation has p squared"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.normalization",
+      "status": "PASS",
+      "statement": "all finite-cutoff initial data have a nonzero Q0 normalization denominator"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.lambda_zero",
+      "status": "PASS",
+      "statement": "lambda=0 finite characteristic is small at the main cutoffs"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.lambda_zero_wronskian",
+      "status": "PASS",
+      "statement": "at lambda=0 the propagated finite-Qminus Wronskian agrees with -W=u' evaluated at Q0"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.delta_plateau",
+      "status": "PASS",
+      "statement": "two smallest central-difference deltas agree"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.plus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qplus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.minus_cutoff",
+      "status": "PASS",
+      "statement": "finite Qminus control agrees with main"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.conditional_prediction",
+      "status": "PASS",
+      "statement": "finite-cutoff derivative agrees with separately pinned conditional identity"
+    },
+    {
+      "id": "P39.rawc.weyl.root5.p_parity",
+      "status": "PASS",
+      "statement": "direct plus/minus-p finite difference agrees because the equation has p squared"
+    }
+  ],
+  "payload": {
+    "exact_checks": 4,
+    "numerical_checks": 40,
+    "schema_transport": {
+      "phase_field": "P39 required by legacy evidence schema; numbered_phase is null."
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_RESULT.json",
+      "payload_sha256_without_self": "0d6a606ee8c76bdaaaca86b1d0e014256fb5830dbb3222c964afc5a2d029e7fe",
+      "verdict": "KEEP_FINITE_CUTOFF_NONZERO_LAMBDA_CHECK_OF_DECLARED_RAW_C_LOCAL_FLAMBDA_ONLY",
+      "programme_impact": "RECORD_A_NUMERICAL_FINITE_CUTOFF_CHECK_OF_THE_DECLARED_LOCAL_IDENTITY_WITHOUT_PROMOTING_RAQ_OR_GLOBAL_SPECTRAL_DATA"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_INPUTS.json",
+      "sha256": "f98874eb7eda4a4e51649a29c50513fd6e6520ac96df057e11eb8f361e66e034"
+    },
+    "upstream_results": [
+      {
+        "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_CHARACTERISTIC_CENSUS_RESULT.json",
+        "payload_sha256_without_self": "88c246cc29f50da539c827e9d841c043cc60d7d6dc5e7c78c22b15b3e5d13ce7",
+        "sha256": "75404989d6e4cf8e5a9120a99d3cdcc3a1187a27478f358f1ad9a64f963d53ed",
+        "verdict": "CENSUS_DECLARED_RAW_C_ZERO_SHELL_SIGN_CHANGING_CHARACTERISTIC_ROOTS_ONLY"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/RAW_C_ZERO_SHELL_TRANSVERSALITY_JACOBIAN_RESULT.json",
+        "payload_sha256_without_self": "73d1a7e38a26cf3db0bed8de88728ba353d95895f9cac08c9818217e8f6f3970",
+        "sha256": "cfc2179c87d84b875060d05f8ff2466106af73fd18da723dfb89da5468e1647e",
+        "verdict": "KEEP_DECLARED_RAW_C_FIVE_LOCAL_SIMPLE_ROOT_JACOBIANS_ONLY"
+      }
+    ],
+    "primary_sources": [
+      {
+        "not_used_for": "turning a finite-cutoff numerical Weyl initialization into an exact endpoint theorem",
+        "source": "E. A. Coddington and N. Levinson, Theory of Ordinary Differential Equations (1955), chapters 1 and 3",
+        "url": "https://archive.org/details/theoryofordinary0000codd",
+        "used_for": "linear-system fundamental-solution existence and Wronskian/Lagrange bookkeeping on finite intervals"
+      },
+      {
+        "not_used_for": "a nonzero-lambda spectral measure, rigging map, or constraint-rescaling equivalence",
+        "source": "NIST Digital Library of Mathematical Functions, sections 10.25, 10.29 and 10.40",
+        "url": "https://dlmf.nist.gov/10",
+        "used_for": "the lambda=0 K_(i kappa) convention and large-positive-z derivative convention used only to calibrate the finite plus-end initialization"
+      },
+      {
+        "not_used_for": "proving an absolute spectral normalization or physical inner product",
+        "source": "I. S. Gradshteyn and I. M. Ryzhik, Table of Integrals, Series, and Products, 8th ed., formula 6.576(4)",
+        "url": "https://doi.org/10.1016/C2009-0-22509-0",
+        "used_for": "the already-pinned weighted K-square Mellin norm in the conditional F_lambda reference value"
+      }
+    ],
+    "theorem_guards": [
+      {
+        "conclusion_and_scope": "This seeds a finite-cutoff proxy only; agreement of two Qplus values is not an exact plus-end Weyl theorem.",
+        "hypotheses": "A(Qplus)>0 at each evaluated finite Qplus and lambda",
+        "id": "rawc.weyl.guard.finite_wkb",
+        "theorem": "leading Liouville-Green/WKB decaying datum with its first amplitude correction",
+        "verification_mode": "SOURCE_PIN_AND_ANALYTIC_HYPOTHESIS_SCOPE_AUDIT_NOT_AN_EXECUTABLE_PROOF",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "The computed characteristic is finite-Qminus data only and supplies no global spectral measure.",
+        "hypotheses": "u_lambda and the fixed lambda-zero reference pair are propagated on the same finite interval",
+        "id": "rawc.weyl.guard.finite_interval_wronskian",
+        "theorem": "linear ODE Wronskian/Lagrange identity",
+        "verification_mode": "SOURCE_PIN_AND_ANALYTIC_HYPOTHESIS_SCOPE_AUDIT_NOT_AN_EXECUTABLE_PROOF",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "Agreement checks one local derivative near lambda=0, not analytic continuation or a root classification.",
+        "hypotheses": "the declared three-delta ladder is used and the two smallest estimates satisfy the plateau tolerance",
+        "id": "rawc.weyl.guard.central_difference",
+        "theorem": "symmetric finite-difference consistency",
+        "verification_mode": "SOURCE_PIN_AND_ANALYTIC_HYPOTHESIS_SCOPE_AUDIT_NOT_AN_EXECUTABLE_PROOF",
+        "verified": true
+      },
+      {
+        "conclusion_and_scope": "The propagation divides by u only once at the declared Q0 normalization check; it is not a Riccati evolution and does not prove the absence of nodes elsewhere.",
+        "hypotheses": "segmentwise rescaling multiplies both components by the same nonzero scalar and retains the log amplitude",
+        "id": "rawc.weyl.guard.linear_node_safe_route",
+        "theorem": "fundamental solution of a two-component linear system",
+        "verification_mode": "SOURCE_PIN_AND_ANALYTIC_HYPOTHESIS_SCOPE_AUDIT_NOT_AN_EXECUTABLE_PROOF",
+        "verified": true
+      }
+    ],
+    "computed_scope": null,
+    "required_fail_closed_outputs": {
+      "TOE_claim": null,
+      "absolute_bfv_measure": null,
+      "automatic_next": null,
+      "canonical_p_zero_origin_sector": null,
+      "continuum_determinant_or_pfaffian_line": null,
+      "empirical_likelihood": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "general_p_mixing_extension_classification": null,
+      "global_delta_C_measure": null,
+      "global_promotion": "PROHIBITED",
+      "global_raw_C_spectral_measure": null,
+      "inhomogeneous_constraint_closure": null,
+      "physical_inner_product_positivity": null,
+      "physical_observable_action": null,
+      "physics_claim": null,
+      "quantum_bfv_anomaly_freedom": null,
+      "quantum_constraint_rescaling_equivalence": null,
+      "quantum_gravity_claim": null,
+      "raw_C_RAQ_completion": null,
+      "raw_C_physical_inner_product": null,
+      "raw_C_rigging_map": null,
+      "raw_C_rigging_test_space": null,
+      "relational_observables_or_decoherence": null,
+      "selected_H_raw_C_unitary_intertwiner": null
+    }
+  }
+}
