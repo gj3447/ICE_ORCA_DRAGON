@@ -93,8 +93,47 @@ SVT Gaunt data, full linear/cubic ADM constraints, \(DD\) or \(DH\) brackets,
 Jacobi closure, BFV charge, anomaly freedom, a physical inner product, or a
 physical/TOE claim.
 
-It is an implementation definition only until the controlled command below
-is run and its result is independently reproduced.
+## Observed bounded result
+
+The controlled run and isolated reproduction both completed:
+
+```text
+./ice run closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger
+VALID_RUN; 39/39 exact checks; 3 source/scope guards
+
+./ice repro --only closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger
+REPRO 1; needs-attention 0
+```
+
+For all three packets, the nonzero matter target and the ambient
+full-before-project bracket agree exactly:
+
+\[
+D_\phi[v_{12}]
+=\{H_\phi[Q_1],H_\phi[Q_2]\}_{\rm ambient}
+=\frac{5}{\pi^2a^2}.
+\]
+
+At \(L=2\), the projected bracket is zero.  Its entire difference from the
+ambient value is
+
+\[
+R_{L=2}=\frac{5}{\pi^2a^2},
+\]
+
+and the exact omitted canonical derivative-channel support is the single
+mode \(n=3\).  At \(L=3\) and \(L=4\), that channel is retained: the
+projected bracket equals \(5/(\pi^2a^2)\) and the recorded remainder is
+exactly zero for this packet.
+
+This shows a selected finite scalar-mode projection effect and its removal
+when the required channel is retained.  It does not demonstrate full ADM
+closure, a continuum HDA theorem, Jacobi closure, or anomaly freedom.
+
+The raw result SHA-256 is
+`cf2776e8bbf8b37fee7c289fab70535359e7e2f1cbc744c262c96cd991c40da4`;
+its self-omitted payload SHA-256 is
+`a3924801621f0dadf29da6aa9a5668b19551ccbe9c54496458f2d9c456eeb61d`.
 
 ```text
 ./ice run closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger

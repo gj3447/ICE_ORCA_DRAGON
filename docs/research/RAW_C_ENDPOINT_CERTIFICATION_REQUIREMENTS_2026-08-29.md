@@ -165,6 +165,33 @@ actual nonzero-\(\lambda\) plus-recessive solution, \(\Gamma_1\) value 또는 it
 remainder는 계산하지 않았으며, 따라서 root continuation/velocity, spectrum/RAQ,
 physics, quantum gravity와 TOE도 닫히지 않는다.
 
+### 2026-08-30 scoped update: actual nonzero-\(\lambda\) coarse enclosure
+
+번호 없는 `raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure`는 root bracket 1과
+두 punctured real \(\lambda\) box
+\([-10^{-4},-10^{-8}]\), \([10^{-8},10^{-4}]\)에 한해, actual recessive
+direction을 \(Q=4\)에서
+\(u_\lambda(4)=A_\lambda(4)^{-1/4}\)로 다시 정규화하고 coarse analytic
+enclosure를 만들었다. 이는 float ODE solve가 아니다. inherited
+Liouville--Green direction bound, \(x\ge3\) Riccati barrier, compact interval의
+node-safe scaled-state Gronwall bound, 그리고 \(Q<-4\) rotating-frame
+Volterra/Gronwall tail bound를 순서대로 썼다.
+
+clean run은 exact 14/14, Arb-ball 29/29, theorem/scope guard 6개와 isolated
+`REPRO`를 통과했다. 두 \(\lambda\) box 모두 complete left tail을 포함하는
+finite outward \(\Gamma_1\) interval을 냈지만, 폭은 각각 대략
+
+\[
+[-1.1140255896,1.1140255896]\times10^{1410},\qquad
+[-1.1140255266,1.1140255266]\times10^{1410}.
+\]
+
+따라서 0은 두 interval에 포함된다. 이것은 0의 존재나 부재, root continuation,
+endpoint의 sharp value를 말하지 않는다. 80/120-digit 결과는 같은 Arb backend의
+precision refinement이며 독립 backend 검산이 아니다. \(\lambda=0\)에서는 같은
+\(Q=4\) normalization의 exact \(K_{i\kappa}\) family가 coarse envelope에
+포함되는 regression만 통과했다.
+
 ## 아직 끊긴 연결부
 
 현재 결과에서 다음 결론으로 가는 논리적 연결은 모두 비어 있다.
@@ -191,13 +218,14 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
 
 ## 다음 최소 인증 단위
 
-2026-08-30 전의 가장 가까운 질문은 fixed-reference boundary identity와
-left contribution의 enclosure였다. 이는 이제 zero shell에서 좁게 닫혔다. 현재
-가장 가까운 독립 질문은 “동일한 declared domain convention에서 actual
-nonzero-\(\lambda\) plus-recessive \(u_\lambda\)를 validated하게 구성하고,
-\(\Gamma_1(u_\lambda)\) 및 its minus-end remainder를 outward-rounded enclosure로
-검증할 수 있는가?”다. generic normalized \(F_\lambda\), root continuation 또는
-velocity를 actual solution/remainder보다 먼저 선언하면 안 된다.
+fixed-reference boundary identity와 left contribution은 zero shell에서 좁게
+닫혔고, root bracket 1의 두 \(\lambda\) box에서는 actual family의 **coarse**
+existence/boundedness enclosure도 생겼다. 그러나 그 rectangle은 \(10^{1410}\)
+크기여서 endpoint sign, 0 exclusion, continuation에 쓸 수 없다. 현재 가장 가까운
+독립 질문은 “Bessel/Liouville--Green preconditioner를 넣은 validated interval
+Taylor (또는 동등한 sharp transfer enclosure)로 \(Q=4\to-4\) compact transport를
+실제로 좁힐 수 있는가?”다. generic normalized \(F_\lambda\), root continuation
+또는 velocity를 이 sharp transfer와 direct tail remainder보다 먼저 선언하면 안 된다.
 
 ### 입력
 
@@ -205,7 +233,9 @@ velocity를 actual solution/remainder보다 먼저 선언하면 안 된다.
 - \(\Gamma_{1,p}u=-\lim_{Q\to-\infty}W(u,c_p)\)의 selected reference field,
   normalization, maximal-domain convention과 measurable \(p\)-dependence
 - nonzero-\(\lambda\) plus-recessive solution의 declared normalization과
-  \(Q_0\) 왼쪽까지 포함하는 actual boundary remainder
+  \(Q_0\) 왼쪽까지 포함하는 actual boundary remainder; 현재 coarse bound를
+  sharp transfer로 대체할 Bessel/Liouville--Green preconditioner와 interval-Taylor
+  remainder budget
 - plus-end direction 또는 amplitude normalization을 어디에 쓰는지의 명시적
   구분
 - coefficient·rounding·minus-end truncation을 모두 포함하는 interval/ball
@@ -224,8 +254,9 @@ velocity를 actual solution/remainder보다 먼저 선언하면 안 된다.
 
 ### 가능한 좁은 결과
 
-- `CERTIFIED_NONZERO_LAMBDA_GAMMA1_VALUE_AND_REMAINDER`: 선언한 extension과 실수
-  box에서 constructed solution의 minus-end boundary value/remainder enclosure를 얻음
+- `CERTIFIED_SHARP_NONZERO_LAMBDA_GAMMA1_VALUE_AND_REMAINDER`: 선언한 extension과
+  실수 box에서 constructed solution의 usable-width minus-end boundary
+  value/remainder enclosure를 얻음
 - `SUBDIVISION_REQUIRED`: 일부 parameter subbox만 인증됨
 - `BOUNDARY_VARIATION_NOT_CERTIFIED`: minus-end remainder, domain dependence 또는
   precision budget 때문에 enclosure가 닫히지 않음
@@ -244,10 +275,14 @@ certificate도 같은 backend의 80/120-digit nesting과 0 배제 조건을 통�
 
 \(\lambda=0\) endpoint의 남은 장애물은 일반 ball arithmetic이나 node
 crossing이 아니다. exact Bessel Green route가 그 endpoint를 직접 닫았다.
-현재 장애물은 actual nonzero-\(\lambda\) plus-recessive solution과 그
-minus-end boundary remainder다. python-flint의 special-function inclusion만으로
-constructed solution의 \(Q\to-\infty\) remainder가 자동 인증되지는 않는다.
-다음 구현은 둘 중 하나를 명시적으로 선택해야 한다.
+현재 장애물은 actual solution의 존재 자체가 아니라, \(Q=4\to-4\) compact
+transport의 폭이다. coarse Gronwall rectangle은 finite tail bound를 닫았지만
+\(\Gamma_1\) interval이 \(10^{1410}\) 규모라 정보성 있는 endpoint statement가
+아니다. python-flint의 special-function inclusion만으로 constructed solution의
+\(Q\to-\infty\) remainder 또는 sharp compact transfer가 자동 인증되지는 않는다.
+다음 구현은 Bessel/Liouville--Green preconditioner를 쓴 interval Taylor transfer를
+직접 구축하거나, 동등한 validated ODE backend를 source/version/rounding semantics와
+작은 analytic-anchor regression까지 포함해 도입해야 한다.
 
 - Arb 위에 minus-end reference pair와 boundary variation의 interval Taylor
   remainder를 좁은 parameter subbox용으로 직접 구성한다.
@@ -268,7 +303,9 @@ real plus-tail bound                    완료(현재 좁은 범위)
     -> scale-invariant h tail datum     완료(lambda=0, 5 brackets의 h(4))
       -> direct smooth Green endpoint   완료(lambda=0, 5 brackets의 J(-4), endpoint h(-4))
         -> zero-shell declared Gamma1 identity/derivative 완료(5 brackets)
-          -> actual nonzero-lambda solution + Gamma1 remainder  오픈
+          -> actual nonzero-lambda coarse bounded enclosure      완료(root 1, two boxes; zero-contained, non-sharp)
+            -> preconditioned sharp compact transfer             오픈
+              -> usable Gamma1 value/remainder                   오픈
             -> declared F_lambda/slope  오픈
       -> nonreal resolvent + Weyl m     오픈
         -> spectral measure/support     오픈

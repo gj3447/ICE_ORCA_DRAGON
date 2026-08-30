@@ -56,9 +56,9 @@ derivative도 좁게 닫혔다. 이유는 다음과 같다.
 
 | 순위 | 목표 | 현재 상태 | 성공 게이트 | 실패·반증 출력 | 후속 연결 |
 |---:|---|---|---|---|---|
-| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **부분 돌파**: \(\lambda=0\) exact direction·실근 존재 구간 5개, 전체-bracket \(h(4)\), direct smooth \(J(-4)\)/endpoint \(h(-4)\), fixed-reference \(\Gamma_1\) left correction·zero-shell derivative와 per-unit minus-tail norm bound | 같은 declared domain에서 actual \(u_\lambda\)를 validated plus end부터 구성하고 그 \(\Gamma_1(u_\lambda)\) remainder를 outwardly enclose; 그 뒤에만 continuation/slope | actual \(u_\lambda\) 부재, minus-end remainder/domain dependence, left term 누락, enclosure 비중첩/폭발, normalization drift | P4 |
-| P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; 현재는 restricted zonal subvertices뿐 | scalar/vector/TT와 lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, 누락 sector, cutoff tail 미측정 | P3 |
-| P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | 오픈 | full-before-project bracket, Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
+| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **coarse 부분 돌파**: root bracket 1×두 \(\lambda\) box에서 LG-selected actual family, finite endpoint rectangle와 full minus-tail \(\Gamma_1\) interval을 구성했으나 반경 \(\sim10^{1410}\), zero-contained | compact Grönwall을 Bessel/LG-preconditioned validated interval transfer로 교체해 usable-width endpoint/\(\Gamma_1\) enclosure를 얻고, 그 뒤에만 continuation/slope | domain dependence, left term 누락, enclosure 비중첩·폭발, normalization drift 또는 sharp tier 실패 | P4 |
+| P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; restricted zonal subvertices와 fixed-background matter \(HH\) packet까지 있음 | scalar/vector/TT와 gravity·lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, 누락 sector, cutoff tail 미측정 | P3 |
+| P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | **scoped 부분 돌파**: zonal fixed-background matter \(HH\)에서 \(L=2\) omitted \(k=3\) remainder와 \(L=3,4\) 복구를 exact 분리 | full gravity+matter constraint의 \(DD,DH,HH\), Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
 | P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5 |
 | P5 | 고전 BFV charge와 quantum nilpotency/anomaly | 고전 charge는 P3에 의존; raw-\(C\) physical core 적용은 P4도 필요 | 실제 structure functions와 common invariant core에서 \(\Omega^2\) defect 분해 | ordering/domain/regulator/truncation defect를 구분해 기록 | P7 |
 | P6 | contour·Gribov·determinant line·gluing을 포함한 absolute BFV | 방법 연구는 병렬, gravity 적용은 P3/P5와 만남 | boundary QME, gauge coverage, absolute orientation, regulator removal과 gluing | contour/Gribov/gluing/line orientation 중 실패 위치를 분리 | P7 |
@@ -325,6 +325,25 @@ root continuation/velocity, root uniqueness, nonreal spectral data, RAQ, 물리�
 양자중력 또는 TOE 주장을 만들지 않는다. P1의 next blocker는 바로 그 actual
 solution과 remainder의 validated construction이다.
 
+### 2026-08-30 P1 actual nonzero-\(\lambda\) coarse enclosure
+
+번호 없는 `raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure`는 root bracket
+#1과 두 punctured \(\lambda\) box에서 그 actual-family 공백을 **coarse
+analytic enclosure** 수준으로 좁혔다. LG-selected actual recessive solution을
+\(u_\lambda(4)=A_\lambda(4)^{-1/4}\)로 rescale하고, \(x\ge3\) Riccati
+invariant region, \(x=3\to Q_0\) node-safe two-state Grönwall, \(Q<Q_0\)
+rotating-frame Volterra tail을 순서대로 결합했다. exact 14/14, Arb 29/29,
+guard 6개와 isolated `REPRO`가 통과했고 \(\lambda=0\) exact Bessel family도
+두 precision tier에서 envelope 안에 들었다.
+
+계산된 사실은 actual selected family와 전체 minus tail의 **유한 outward
+bound**다. 두 \(\Gamma_1\) interval은 모두 약 \(10^{1410}\) 규모이며 0을
+포함한다. 그러므로 P1은 `actual solution 없음`에서 `actual family의 coarse
+boundedness 있음`으로 이동했지만, sharp endpoint/sign/root continuation은
+아직 열려 있다. 다음 blocker는 compact Grönwall을 Bessel/LG-preconditioned
+validated interval Taylor 또는 동등한 sharp transfer enclosure로 교체하는
+것이다. 같은 backend의 80/120-digit overlap은 독립 구현 검증이 아니다.
+
 ## 3. P2–P3: closed-\(S^3\) ADM와 HDA
 
 현재 repository는 scalar-derived convention, full-sector **counting** ledger,
@@ -345,6 +364,14 @@ lapse와 shift가 같은 ADM convention에 있어야 한다. P3는 constraint를
 continuum에서 bracket한 뒤 project한 값과, projected constraint를 bracket한
 값의 차이를 기록해야 한다. 유한 cutoff에서 Jacobiator가 nonzero라는 사실만으로
 quantum anomaly를 선언할 수 없다.
+
+이번 `closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger`는 이 원칙을
+작은 nontrivial packet에서 실제로 확인했다. fixed-background matter 범위에서
+ambient \(HH\)와 momentum target은 \(5/(\pi^2a^2)\)로 같았다. \(L=2\)의
+projected bracket 0과의 차이는 정확히 omitted \(k=3\) canonical channel이고,
+\(L=3,4\)에서는 그 channel이 복구되어 remainder가 0이 됐다. 이는 scoped
+classical matter identity와 cutoff provenance의 진전이며, full ADM/HDA/Jacobi나
+quantum BFV anomaly freedom의 증거는 아니다.
 
 고전 hypersurface-deformation algebra의 기준선은 Teitelboim/HKT이고,
 repository의 성공 게이트는 그 continuum identity를 인용하는 것이 아니라

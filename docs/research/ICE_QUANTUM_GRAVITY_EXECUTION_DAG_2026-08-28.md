@@ -72,16 +72,20 @@ result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. �
 | 1 raw-\(C\) \(\lambda=0\) differentiated plus-tail | `raw_c_lambda_zero_differentiated_plus_tail` | 다섯 certified root bracket 전체에서 \(h(4)=\partial_\lambda[-u_Q/u]_{0}>0\); exact 9/9, Arb-ball 70/70, guard 6, 개별 폭 \(<4.62\times10^{-26}\), analytic tail \(<6.02\times10^{-28}\) | exact Bessel Green identity와 rigorous finite quadrature/analytic tail로 normalization-invariant \(h(4)\) datum을 좁게 인증 | node-safe \(Q=4\to-4\) sensitivity transport, nonzero-\(\lambda\) tail, normalized \(F_\lambda\), nonreal spectral data, RAQ는 null |
 | 1 raw-\(C\) \(\lambda=0\) direct Green endpoint | `raw_c_lambda_zero_node_safe_green_transport` | pole-prone \(h\)를 interior에서 전개하지 않고 smooth \(J=-W=u^2h\)의 direct Bessel Green 적분으로 다섯 bracket의 \(J(-4)>0\), endpoint \(h(-4)>0\); exact 7/7, Arb-ball 61/61, guard 6, REPRO | \(\lambda=0\) five-bracket node-safe endpoint construction을 좁게 닫음 | 기존 \(h(4)\)의 numerical propagation/decomposition, nonzero-\(\lambda\) minus-end \(\Gamma_1\), declared \(F_\lambda\)/root velocity, spectral/RAQ는 null |
 | 1 raw-\(C\) declared \(\Gamma_1\) boundary variation | `raw_c_declared_gamma1_boundary_variation` | selected fixed-reference \(\Gamma_1\) identity, zero-shell normalized/K-scaled derivative와 explicit left correction을 다섯 bracket에서 ball-certify; two punctured \(\lambda\) boxes에서는 per-unit declared minus-tail norm correction bound만 기록; exact 11/11, Arb-ball 60/60, guard 6 | \(\lambda=0\) declared-boundary derivative와 omitted left term을 좁게 닫음 | actual nonzero-\(\lambda\) plus-recessive solution, \(\Gamma_1\) value/remainder, continuation/root velocity, uniqueness, spectral/RAQ는 null |
+| 1 raw-\(C\) actual nonzero-\(\lambda\) coarse enclosure | `raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure` | root bracket 1과 두 punctured \(\lambda\) box에서 LG-selected actual recessive family를 \(u_\lambda(4)=A_\lambda(4)^{-1/4}\)로 고정하고, \(x\ge3\) Riccati barrier, compact two-state Grönwall, \(Q<-4\) rotating-frame Volterra bound를 결합; exact 14/14, Arb-ball 29/29, guard 6, REPRO | actual family의 존재·유한 endpoint rectangle·완전한 minus-tail remainder와 유한 \(\Gamma_1\) outward interval을 처음 구성 | 두 interval 반경이 약 \(1.1141\times10^{1410}\)이고 모두 0을 포함한다. numerical validated ODE, sharp value/sign, root continuation, spectrum/RAQ는 null |
 | 2 closed \(S^3\) all-sector bookkeeping | `closed_s3_full_svt_spectral_ledger` | source-pinned scalar/transverse-vector/TT low-mode transport와 cutoff count; exact 37/37, theorem guard 5; \(N=8\) 총 1,341 modes | 세 sector의 rough/Hodge/명시적 Lichnerowicz convention, 저차 예외와 count 범위를 한 packet에 고정 | `FULL_SVT`는 세 sector를 모두 기록했다는 뜻뿐이다. explicit basis, chirality resolution, Gaunt/Clebsch--Gordan, ADM/HDA는 null |
 | 2 closed \(S^3\) cubic curvature packet | `closed_s3_zonal_conformal_curvature_cubic_vertex_ledger` | \(Q_2\) 및 \(Q_1+Q_2\) conformal packet의 \(\sqrt qR\)를 cubic까지 exact 전개; exact 52/52. 두 packet 모두 \(N=2\) 밖 quadratic·cubic tail이 nonzero | 하나의 spatial-curvature subvertex와 비선형 hard-cutoff leakage를 정확한 계수로 고정 | zonal conformal sector 하나뿐이다. full kinetic/shear, matter, lapse/shift, nonzonal/SVT Gaunt, full ADM constraint와 HDA/Jacobi는 null |
 | 2 closed \(S^3\) restricted kinetic packet | `closed_s3_zonal_conformal_trace_kinetic_cubic_vertex_ledger` | fixed-\(a\) trace cotangent ansatz에서 canonical \(\Pi\)와 DeWitt factor \(-2\pi G/(3a^3)\)를 고정하고 두 packet을 cubic까지 전개; exact 42/42, 두 \(N=2\) tail 모두 nonzero | curvature packet과 별개인 pure-trace kinetic subvertex 및 cutoff leakage를 정확한 계수로 고정 | \((a,p_a)\), tracefree/shear, matter, lapse/shift와 nonzonal/SVT가 빠진 restricted submanifold다. 두 packet을 합쳐도 full ADM/HDA가 아니다 |
 | 2 closed \(S^3\) restricted \(V=0\) scalar-matter packet | `closed_s3_zonal_conformal_v0_scalar_matter_cubic_vertex_ledger` | fixed-\(a\) conformal metric과 scalar cotangent ansatz에서 normal-constraint matter density를 cubic까지 전개; exact 39/39, guard 3/3. aligned \(Q_2\) packet의 \(Q_4\) cubic tail은 항상 nonzero이고 \(Q_6\) tail도 일반적으로 nonzero | curvature·trace-kinetic과 구분된 한 \(V=0\) scalar-matter normal subvertex와 hard-cutoff leakage를 exact coefficient로 고정 | matter shift/momentum constraint, \((a,p_a)\), shear, lapse/shift, nonzonal SVT와 실제 ADM/HDA/Jacobi는 null |
+| 2 closed \(S^3\) fixed-background matter \(HH\) packet | `closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger` | \(N=Q_1,M=Q_2,\xi=Q_1,\theta=Q_2\)에서 ambient \(HH\)=matter momentum target=\(5/(\pi^2a^2)\); \(L=2\) projected bracket는 0이고 omitted \(k=3\) channel이 전 remainder를 공급, \(L=3,4\)에서는 remainder=0; exact 39/39, guard 3, REPRO | 처음으로 nontrivial fixed-background zonal matter \(HH\) identity와 finite projection defect의 source channel을 exact 분리 | gravity/metric variation, nonzonal SVT, \(DD/DH\), cubic full ADM, Jacobi와 BFV anomaly는 모두 null |
 | 5–6 \(V\ne0\) two-clock domain | `homogeneous_closed_frw_starobinsky_two_clock_fp_domain_audit` | \(C_V=0=P\)에서 real-\(p\) domain \(y=e^QV\le3\), scalar-clock zero \(y=3\), \(P\)-clock FP zero \(y=2\), \(Q\)-clock factor zero; exact 12/12 | 이전의 잘못된 informal \(y=3/2\) 값을 제거하고 두 clock chart의 서로 다른 고전 경계를 고정 | 실제 trajectory가 어느 locus를 통과하는지, complete observable, quantum clock map, physical product, BO/decoherence와 likelihood는 null |
 | 5–6 \(V\ne0\) local clock-boundary field | `homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger` | 세 pinned \(\phi_*\) decimal representative에서 \(y=2\)의 두 \(p\) branch는 반대 부호의 \(|\dot y|\approx(5.08,4.65,4.28)\times10^{-7}\), \(y=3,P=p=0\)은 \(\dot y=0\); exact 10/10, numerical 36/36 | \(P=0\) 제약면의 국소 transversality/tangency와 Hamilton vector field를 고정 | 대표점은 초기조건이 아니다. trajectory selection·integration·crossing, complete observable, quantum clock, BO/decoherence와 likelihood는 null |
 
-이 갱신은 세 갈래를 완성하지 않았다. 다음 독립 질문은 각각 (a) \(\lambda=0\) direct endpoint 뒤
-nonzero-\(\lambda\) minus-end \(\Gamma_1\) functional과 nonreal resolvent·전역 spectral/test-space 자료를 닫을 수 있는가,
-(b) 명시적 저차 nonzonal SVT representative와 Gaunt data, scale/shear·matter·lapse/shift 항을 합쳐
+이 갱신은 세 갈래를 완성하지 않았다. 다음 독립 질문은 각각 (a) coarse actual
+nonzero-\(\lambda\) \(\Gamma_1\) envelope를 Bessel/LG-preconditioned validated interval
+transport로 좁혀 sign/continuation을 판별하고 nonreal resolvent·전역 spectral/test-space 자료를 닫을 수 있는가,
+(b) fixed-background zonal matter \(HH\) control 위에 명시적 저차 nonzonal SVT representative와
+Gaunt data, scale/shear·gravity·lapse/shift 항을 합쳐
 실제 off-shell ADM coefficient를 구성하는가, (c) 물리적
 해석과 분리된 명시적 seed protocol을 먼저 선언한 뒤에만 Starobinsky trajectory crossing을 적분할 것인가이다.
 어느 결과도 다른 질문의 실행 또는 물리적 승격을 자동 승인하지 않는다.
@@ -138,6 +142,38 @@ continuation/velocity, uniqueness/completeness, nonreal Weyl data, spectral
 measure, raw-\(C\) RAQ, \(C/H\) equivalence와 모든 physics/quantum-gravity/TOE
 출력은 null이다. P1의 다음 독립 공백은 같은 fixed domain에서 actual
 \(u_\lambda\)와 minus-end remainder를 validated하게 구성하는 일이다.
+
+### 2026-08-30 P1 actual-family coarse-enclosure update
+
+`raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure`는 위 공백을 sharp
+validated ODE 없이도 한 단계 좁혔다. 기존 DLMF/LG bound가 선택한 실제
+recessive direction을 \(Q=4\)에서 명시적으로 renormalize하고, \(x\ge3\)에서
+\(\rho=-u_Q/u-x-1/2\in[-1,1]\)의 inward barrier를 인증했다. 그 아래에서는
+node를 허용하는 2성분 Grönwall rectangle을 \(Q=-4\)까지 운반했고, free-rotation
+Volterra comparison으로 \(( -\infty,-4]\)의 remainder를 직접 봉입했다.
+
+root bracket 1의 negative/positive \(\lambda\) box 모두에서 finite
+\(\Gamma_1\) interval이 나왔고, 80/120-digit same-backend tiers와 exact
+\(\lambda=0\) Bessel containment가 통과했다. 그러나 interval은 대략
+\([-1.1141\times10^{1410},1.1141\times10^{1410}]\)라서 0을 포함한다. 이는
+actual-family existence/boundedness 진전이지 eigenvalue 또는 spectral 발견이
+아니다. 다음 P1 계산은 이 폭의 주원인인 compact Grönwall step을
+Bessel/LG-preconditioned interval Taylor/transfer enclosure로 교체해야 한다.
+
+### 2026-08-30 P2 scoped matter-\(HH\) update
+
+`closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger`는 fixed background,
+zonal, \(V=0\) matter 범위에서 처음으로 nonzero \(HH\) packet을 계산했다.
+\(N=Q_1,M=Q_2,\xi=Q_1,\theta=Q_2\)에서 continuum/full-before-project 값과
+matter momentum target은 모두 \(5/(\pi^2a^2)\)이다. \(L=2\) projection은
+필요한 \(k=3\) canonical derivative channel을 잘라 bracket을 0으로 만들고,
+그 차이 전체가 exact projection remainder다. \(L=3,4\)에서는 그 channel이
+복구되어 remainder가 정확히 0이 된다.
+
+따라서 이 finite defect는 anomaly가 아니라 누락 mode의 provenance가 명시된
+cutoff artifact다. 동시에 이것은 gravity를 포함한 off-shell ADM/HDA closure가
+아니다. 다음 P2 단위는 gravitational Hamiltonian/momentum contributions와
+metric variation을 같은 packet에 추가한 뒤 \(DD,DH,HH\)를 비교하는 것이다.
 
 Starobinsky local ledger의 최초 `..._p0_...` 경로는 제어면의 numbered-phase token 검사에 의해 Python
 실행 전에 차단됐다. 이를 무번호 의미가 명백한 `..._time_symmetric_...`로 rename·commit한 뒤 실행했으며,
