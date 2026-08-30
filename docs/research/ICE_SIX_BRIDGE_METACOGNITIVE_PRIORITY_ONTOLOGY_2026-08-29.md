@@ -35,11 +35,14 @@
 ## 1. 우선순위 결론
 
 현재 가장 빠른 1순위는 raw-\(C\)의 **actual nonzero-\(\lambda\)
-plus-recessive Riccati direction을 \(Q=4\to Q_s\)에서 sharp하게 봉입하는 것**이다.
+sharp Riccati chart에서 전역 nonlinear remainder를 panelwise하게 좁히고
+validated \(\lambda\)-sensitivity로 sign separation 가능성을 시험하는 것**이다.
 scale-invariant differentiated plus-tail datum과 direct smooth Green endpoint는
 정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐고, 2026-08-30에는
 선언한 fixed-reference \(\Gamma_1\) identity의 left correction 및 zero-shell
-derivative도 좁게 닫혔다. 이유는 다음과 같다.
+derivative도 좁게 닫혔다. 이어 actual direction과 fixed \(1/4\) width gate도
+root bracket 1에서 닫혔지만 모든 endpoint interval은 아직 0을 포함한다. 이유는
+다음과 같다.
 
 - 이미 선언해 둔 candidate self-adjoint boundary line, coarse root, finite-cutoff
   \(F_\lambda\) 대조와 real plus-tail bound가 있다.
@@ -56,7 +59,7 @@ derivative도 좁게 닫혔다. 이유는 다음과 같다.
 
 | 순위 | 목표 | 현재 상태 | 성공 게이트 | 실패·반증 출력 | 후속 연결 |
 |---:|---|---|---|---|---|
-| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **outer-transfer 부분 돌파**: full \(\rho(Q_s)\in[-1,1]\) family에서 \(v(-4)>0\), finite scale-free tail과 Bessel regression은 닫혔으나 width \(1.2032\)–\(1.2034\), fixed \(1/4\) gate 0/6 | actual \(Q=4\to Q_s\) \(\rho\)를 \([-1,1]\)보다 충분히 좁게 LG-preconditioned validated 봉입한 뒤 같은 compact/tail map 재적용 | actual-direction box가 안 좁아짐, width gate 재실패, domain/reference/normalization drift, tier 비중첩 | P4 |
+| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **sharp-direction/width 부분 돌파**: exact backward-\(x\) variation-of-constants와 global \(0\le J_{\rho^2}\le J_0\) bound가 actual \(Q=4\to Q_s\) direction을 좁게 봉입했고 six scale-free width는 \(0.06370\)–\(0.06378<1/4\) | global nonlinear box의 panelwise Picard/affine refinement와 validated \(\lambda\)-sensitivity/sign separation; 0을 피할 때에만 continuation을 별도 검토 | sensitivity/sign separation 실패, domain/reference/normalization drift, tier 비중첩 | P4 |
 | P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; restricted zonal subvertices, fixed-background matter \(HH\), 그리고 scalar linear ADM momentum generator까지 있음 | scalar/vector/TT와 gravity·lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, transverse shift 누락, cutoff tail 미측정 | P3 |
 | P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | **scoped 부분 돌파**: zonal fixed-background matter \(HH\)에서 \(L=2\) omitted \(k=3\) remainder와 \(L=3,4\) 복구를 exact 분리 | full gravity+matter constraint의 \(DD,DH,HH\), Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
 | P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5 |
@@ -359,14 +362,30 @@ tail, precision overlap을 만족했다. \(\lambda=0\) Bessel inclusion도 두 t
 통과했다. width가 약 \(1.203\)으로 80/120 digits에서 거의 같다는 사실은 현재
 병목이 rounding이 아니라 switch-direction 폭임을 지목한다.
 
-따라서 P1의 다음 수는 `segment 수 증가`가 아니라 다음 한 문장이다.
+따라서 이 시점 P1의 다음 수는 `segment 수 증가`가 아니라 다음 한 문장이었다.
 
 > root bracket 1과 두 \(\lambda\) box에서 actual plus-recessive
 > \(\rho(Q_s;\kappa,\lambda)\)를 \([-1,1]\)보다 충분히 좁게 outward
 > certify할 수 있는가?
 
-이 질문을 LG-preconditioned Riccati/Volterra transport로 별도 실행한 뒤에만
-현재 compact/tail map을 sharp actual family에 다시 적용한다.
+이 질문은 아래 별도 계산으로 실행됐고, 현재 compact/tail map을 sharp actual
+family에 다시 적용했다.
+
+### 2026-08-30 P1 sharp actual-direction contraction
+
+그 별도 계산 raw_c_actual_direction_sharp_contraction_transfer는 exact
+backward-\(x\) variation-of-constants, global \(0\le J_{\rho^2}\le J_0\) nonlinear
+bound, monotone 512/1024-panel kernel-mass enclosure를 실제 plus-recessive
+direction에 적용했다. exact 18/18, Arb-ball 133/133, guard 6와 isolated REPRO가
+통과했다. 여섯 sharp-switch \(\rho\) width는 약 \(0.12778\),
+downstream scale-free \(\Gamma_1\) width는 \(0.06370\)–\(0.06378\)로 모두
+\(1/4\) 아래다.
+
+하지만 여섯 \(g\) interval은 모두 0을 포함한다. 따라서 이건 sharp direction과
+width의 workbench result이지 sign, root, spectrum, RAQ 또는 physics 결론이
+아니다. P1의 다음 명시적 blocker는 global nonlinear box의 panelwise
+Picard/affine refinement와 sharp chart 내부의 validated
+\(\lambda\)-sensitivity/sign separation이다.
 
 ## 3. P2–P3: closed-\(S^3\) ADM와 HDA
 

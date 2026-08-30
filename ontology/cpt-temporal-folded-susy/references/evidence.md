@@ -69,6 +69,22 @@ so this is an outer enclosure of the selected actual direction, not a newly
 sharp \(Q=4\to Q_s\) actual transport. Root continuation, spectrum, RAQ,
 physics, quantum gravity and TOE remain null.
 
+The succeeding non-numbered
+[`raw-c-actual-direction-sharp-contraction-transfer-result.json`](../evidence/raw-c-actual-direction-sharp-contraction-transfer-result.json)
+uses exact backward-\(x\) variation of constants, the global nonlinear bound
+\(0\leq J_{\rho^2}\leq J_0\), and monotone 512/1024-panel kernel-mass bounds to
+transport the actual plus-recessive direction from \(Q=4\) to the switch
+before reusing the validated Taylor/tail map. It returned VALID_RUN
+with 18/18 exact and 133/133 Arb-ball checks, six theorem/scope guards and
+isolated REPRO. All six switch-direction and scale-free width gates pass:
+the switch widths are about \(0.12778\), and the scale-free
+\(\Gamma_1\) widths about \(0.06370\)--\(0.06378\), below \(1/4\).
+Every resulting \(g\) interval nevertheless contains zero. It therefore
+does not establish a sign, root continuation, spectrum, RAQ, physics,
+quantum gravity or TOE.
+The next method is a panelwise Picard/affine nonlinear enclosure with
+validated \(\lambda\)-sensitivity; that method was not executed by this result.
+
 The independent non-numbered
 [`closed-s3-linear-scalar-adm-momentum-constraint-ledger-result.json`](../evidence/closed-s3-linear-scalar-adm-momentum-constraint-ledger-result.json)
 records 31/31 exact checks and three theorem/scope guards for the declared

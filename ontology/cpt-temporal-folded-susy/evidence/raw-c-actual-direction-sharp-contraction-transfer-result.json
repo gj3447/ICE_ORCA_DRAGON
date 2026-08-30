@@ -773,6 +773,8 @@
     }
   ],
   "payload": {
+    "exact_checks": 18,
+    "numerical_checks": 133,
     "numbered_phase": null,
     "run_status": "VALID_RUN",
     "verdict": "CERTIFY_ACTUAL_DIRECTION_SHARP_CONTRACTION_AND_SCALE_FREE_GAMMA1_WIDTH_BRACKET1_ONLY",

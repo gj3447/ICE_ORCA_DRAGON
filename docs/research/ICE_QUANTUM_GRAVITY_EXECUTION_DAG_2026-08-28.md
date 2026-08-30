@@ -74,6 +74,7 @@ result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. �
 | 1 raw-\(C\) declared \(\Gamma_1\) boundary variation | `raw_c_declared_gamma1_boundary_variation` | selected fixed-reference \(\Gamma_1\) identity, zero-shell normalized/K-scaled derivative와 explicit left correction을 다섯 bracket에서 ball-certify; two punctured \(\lambda\) boxes에서는 per-unit declared minus-tail norm correction bound만 기록; exact 11/11, Arb-ball 60/60, guard 6 | \(\lambda=0\) declared-boundary derivative와 omitted left term을 좁게 닫음 | actual nonzero-\(\lambda\) plus-recessive solution, \(\Gamma_1\) value/remainder, continuation/root velocity, uniqueness, spectral/RAQ는 null |
 | 1 raw-\(C\) actual nonzero-\(\lambda\) coarse enclosure | `raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure` | root bracket 1과 두 punctured \(\lambda\) box에서 LG-selected actual recessive family를 \(u_\lambda(4)=A_\lambda(4)^{-1/4}\)로 고정하고, \(x\ge3\) Riccati barrier, compact two-state Grönwall, \(Q<-4\) rotating-frame Volterra bound를 결합; exact 14/14, Arb-ball 29/29, guard 6, REPRO | actual family의 존재·유한 endpoint rectangle·완전한 minus-tail remainder와 유한 \(\Gamma_1\) outward interval을 처음 구성 | 두 interval 반경이 약 \(1.1141\times10^{1410}\)이고 모두 0을 포함한다. numerical validated ODE, sharp value/sign, root continuation, spectrum/RAQ는 null |
 | 1 raw-\(C\) barrier-admissible scale-free transfer | `raw_c_actual_nonzero_lambda_hybrid_validated_transfer` | root bracket 1과 ±\(\lambda\) box의 full \(\rho(Q_s)\in[-1,1]\) outer family를 16-step order-12 interval Taylor로 \(Q=-4\)까지 운반하고 complete quotient tail을 봉입; exact 14/14, Arb 113/119, guard 5, REPRO | 6/6 tier에서 \(v(-4)>0\), finite quotient tail, precision overlap; \(\lambda=0\) Bessel inclusion 2/2 | width \(1.2032\)–\(1.2034\)로 fixed \(1/4\) gate 0/6, 모두 zero-contained. sharp actual \(Q=4\to Q_s\) direction, sign/continuation, spectrum/RAQ는 null |
+| 1 raw-\(C\) sharp actual-direction contraction | `raw_c_actual_direction_sharp_contraction_transfer` | exact backward-\(x\) variation-of-constants와 \(0\le J_{\rho^2}\le J_0\) global nonlinear bound, monotone 512/1024-panel kernel-mass 봉입을 적용한 뒤 기존 Taylor/tail map 재사용; exact 18/18, Arb 133/133, guard 6, REPRO | 6/6 switch-direction 및 scale-free width gate 통과; switch width 약 \(0.12778\), endpoint width \(0.06370\)–\(0.06378<1/4\) | 여섯 \(g\) interval 모두 zero-contained. panelwise Picard/affine nonlinear refinement, validated \(\lambda\)-sensitivity, sign/continuation, spectrum/RAQ는 null |
 | 2 closed \(S^3\) all-sector bookkeeping | `closed_s3_full_svt_spectral_ledger` | source-pinned scalar/transverse-vector/TT low-mode transport와 cutoff count; exact 37/37, theorem guard 5; \(N=8\) 총 1,341 modes | 세 sector의 rough/Hodge/명시적 Lichnerowicz convention, 저차 예외와 count 범위를 한 packet에 고정 | `FULL_SVT`는 세 sector를 모두 기록했다는 뜻뿐이다. explicit basis, chirality resolution, Gaunt/Clebsch--Gordan, ADM/HDA는 null |
 | 2 closed \(S^3\) linear scalar ADM momentum generator | `closed_s3_linear_scalar_adm_momentum_constraint_ledger` | \(D_L^{(1)}=\sum_{n\ge2}L_n(\Pi_{E,n}-\lambda_n\Pi_{\zeta,n}/3)\), \(n=2,3\) symplectic normalization과 \(Q_1,Q_2\) projection을 exact 검사; 31/31, guard 3, REPRO | scalar-derived metric variation과 longitudinal coordinate convention을 실제 ADM momentum projection에 결속 | transverse-vector shift, Hamiltonian constraint, \(DD/DH/HH\), Jacobi, cubic full ADM, BFV/anomaly는 null |
 | 2 closed \(S^3\) cubic curvature packet | `closed_s3_zonal_conformal_curvature_cubic_vertex_ledger` | \(Q_2\) 및 \(Q_1+Q_2\) conformal packet의 \(\sqrt qR\)를 cubic까지 exact 전개; exact 52/52. 두 packet 모두 \(N=2\) 밖 quadratic·cubic tail이 nonzero | 하나의 spatial-curvature subvertex와 비선형 hard-cutoff leakage를 정확한 계수로 고정 | zonal conformal sector 하나뿐이다. full kinetic/shear, matter, lapse/shift, nonzonal/SVT Gaunt, full ADM constraint와 HDA/Jacobi는 null |
@@ -84,8 +85,9 @@ result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. �
 | 5–6 \(V\ne0\) local clock-boundary field | `homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger` | 세 pinned \(\phi_*\) decimal representative에서 \(y=2\)의 두 \(p\) branch는 반대 부호의 \(|\dot y|\approx(5.08,4.65,4.28)\times10^{-7}\), \(y=3,P=p=0\)은 \(\dot y=0\); exact 10/10, numerical 36/36 | \(P=0\) 제약면의 국소 transversality/tangency와 Hamilton vector field를 고정 | 대표점은 초기조건이 아니다. trajectory selection·integration·crossing, complete observable, quantum clock, BO/decoherence와 likelihood는 null |
 
 이 갱신은 세 갈래를 완성하지 않았다. 다음 독립 질문은 각각 (a) actual
-nonzero-\(\lambda\)의 \(Q=4\to Q_s\) Riccati direction을 full \([-1,1]\)보다 훨씬 좁게
-Bessel/LG-preconditioned validated하게 봉입한 뒤 이미 검산한 compact/tail map으로 sign/continuation을 판별할 수 있는가,
+nonzero-\(\lambda\)의 전역 \(0\le J_{\rho^2}\le J_0\) bound를 panelwise
+Picard/affine nonlinear enclosure로 좁히고 validated \(\lambda\)-sensitivity를 더해
+현재 zero-containing interval에서 sign separation 가능성을 판별할 수 있는가,
 (b) linear scalar ADM momentum generator와 fixed-background zonal matter \(HH\) control 위에 명시적 저차 nonzonal SVT representative와
 Gaunt data, scale/shear·gravity·lapse/shift 항을 합쳐
 실제 off-shell ADM coefficient를 구성하는가, (c) 물리적
@@ -180,6 +182,23 @@ Bessel/LG-preconditioned interval Taylor/transfer enclosure로 교체해야 한�
 아니다. 현재 runner가 입력한 full \(\rho(Q_s)\in[-1,1]\)는 actual direction을
 포함하는 outer family일 뿐이다. 다음 독립 계산은 \(Q=4\to Q_s\)에서 actual
 plus-recessive \(\rho\) 자체를 훨씬 좁게 certified enclosure로 만드는 일이다.
+
+### 2026-08-30 P1 sharp actual-direction contraction
+
+raw_c_actual_direction_sharp_contraction_transfer는 그 다음 독립 질문을
+exact backward-\(x\) variation-of-constants와 전역 nonlinear bound
+\(0\le J_{\rho^2}\le J_0\)로 수행했다. 두 양의 kernel mass는
+monotone 512/1024-panel bound와 analytic tail로 봉입하고, \(Q=4\)의 actual LG
+direction을 switch까지 좁게 옮긴 뒤 기존 validated Taylor/tail map을 재사용한다.
+exact 18/18, Arb-ball 133/133, guard 6, isolated REPRO가
+통과했다. 여섯 switch \(\rho\) width는 약 \(0.12778\), downstream scale-free
+\(\Gamma_1\) width는 \(0.06370\)--\(0.06378\)로 모두 \(1/4\) 아래다.
+
+그러나 여섯 \(g\) interval은 모두 0을 포함한다. 따라서 결과는 sharp actual
+direction과 usable width까지만이며 sign, root continuation, spectrum, RAQ,
+physics 및 TOE는 null이다. 다음 P1 blocker는 이 sharp chart 안에서
+global \(J_{\rho^2}\) box를 panelwise Picard/affine enclosure로 교체하고 validated
+\(\lambda\)-sensitivity와 sign separation을 구성하는 것이다.
 
 ### 2026-08-30 P2 scoped matter-\(HH\) update
 

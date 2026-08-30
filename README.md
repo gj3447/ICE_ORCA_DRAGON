@@ -537,6 +537,11 @@ case:
 
 ## Documentation
 
+The current raw-C P1 workbench record includes a sharp actual-direction
+contraction on one root bracket and two real lambda boxes: all six scale-free
+widths are below 1/4, but every enclosing interval still contains zero. This
+is not a sign, root, spectrum, RAQ, quantum-gravity, physics, or TOE result.
+
 | Document | Purpose |
 |---|---|
 | [`docs/index.md`](docs/index.md) | documentation map |
