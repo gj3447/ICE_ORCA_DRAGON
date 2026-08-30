@@ -501,6 +501,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "raw_c_declared_gamma1_boundary_variation",
+    script:
+      "cpt_temporal_folded_susy/raw_c_declared_gamma1_boundary_variation.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
     script:
       "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",
