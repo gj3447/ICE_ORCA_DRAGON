@@ -44,7 +44,11 @@ v_{NM}^a=a^{-2}(ND^aM-MD^aN).
 
 The selected lapses are \(N=Q_1\) and \(M=Q_2\).  They are the smallest
 distinct nonconstant zonal pair.  The three declared packets hold
-\(\theta=\xi=Q_2\) at scalar cutoffs \(L=2,3,4\).
+\(\theta=Q_2\) and \(\xi=Q_1\) at scalar cutoffs \(L=2,3,4\).  This
+asymmetric packet is selected because its continuum matter target is
+nonzero.  At \(L=2\), the ambient calculation also has a nonzero \(k=3\)
+canonical derivative channel which the projected calculation omits; at
+\(L\geq3\) that channel is retained.
 
 ## Exact cutoff comparison
 

@@ -27,9 +27,9 @@
   },
   "smearings": {"N_degree": 1, "M_degree": 2, "purpose": "smallest distinct nonconstant zonal lapse pair with a nonzero gradient deformation vector"},
   "field_packets": [
-    {"id": "Q2_scalar_momentum_at_L2", "cutoff_L": 2, "theta_coefficients": {"2": "1"}, "xi_coefficients": {"2": "1"}},
-    {"id": "Q2_scalar_momentum_at_L3", "cutoff_L": 3, "theta_coefficients": {"2": "1"}, "xi_coefficients": {"2": "1"}},
-    {"id": "Q2_scalar_momentum_at_L4", "cutoff_L": 4, "theta_coefficients": {"2": "1"}, "xi_coefficients": {"2": "1"}}
+    {"id": "Q1_momentum_Q2_scalar_at_L2", "cutoff_L": 2, "theta_coefficients": {"2": "1"}, "xi_coefficients": {"1": "1"}, "expected_target_exact": "5/(pi^2*a^2)", "expected_projected_exact": "0", "expected_remainder_exact": "5/(pi^2*a^2)", "expected_remainder_status": "NONZERO", "expected_discarded_channels": [3]},
+    {"id": "Q1_momentum_Q2_scalar_at_L3", "cutoff_L": 3, "theta_coefficients": {"2": "1"}, "xi_coefficients": {"1": "1"}, "expected_target_exact": "5/(pi^2*a^2)", "expected_projected_exact": "5/(pi^2*a^2)", "expected_remainder_exact": "0", "expected_remainder_status": "ZERO", "expected_discarded_channels": []},
+    {"id": "Q1_momentum_Q2_scalar_at_L4", "cutoff_L": 4, "theta_coefficients": {"2": "1"}, "xi_coefficients": {"1": "1"}, "expected_target_exact": "5/(pi^2*a^2)", "expected_projected_exact": "5/(pi^2*a^2)", "expected_remainder_exact": "0", "expected_remainder_status": "ZERO", "expected_discarded_channels": []}
   ],
   "exact_plan": [
     "hash-verify every upstream result and retain its scope boundaries",
@@ -37,6 +37,7 @@
     "derive exact zonal triple and gradient Gaunt identities and cross-check their low-mode values by direct chi integration",
     "evaluate the HH bracket in an ambient mode space before substituting the declared low-mode packet",
     "evaluate the separately projected L-only canonical bracket, compare each with D_phi[v_NM], and retain full-minus-projected support exactly",
+    "require the selected xi=Q1, theta=Q2 packet to have a nonzero continuum target and verify the preregistered k=3 remainder at L=2 disappears once L>=3",
     "leave full ADM, DD/DH brackets, Jacobi, BFV, anomaly, physical and TOE outputs null"
   ],
   "decision_table": [

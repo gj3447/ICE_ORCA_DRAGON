@@ -23,7 +23,7 @@ INPUT_NAME = "CLOSED_S3_ZONAL_V0_SCALAR_MATTER_HH_BRACKET_CUTOFF_LEDGER_INPUTS.j
 RESULT_NAME = "CLOSED_S3_ZONAL_V0_SCALAR_MATTER_HH_BRACKET_CUTOFF_LEDGER_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
 RUNNER_RELPATH = "cpt_temporal_folded_susy/closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger.py"
-EXPECTED_INPUT_SHA256 = "8955e45c9a4053a50ac994d9a2911e6a9058a0b9e7b688e8db134aec652c3f7b"
+EXPECTED_INPUT_SHA256 = "462c6fb5bf893d4110a4cc985039217aebf0a9ec8987b9aaeaa57aec5e5f8d81"
 CALCULATION_ID = "ClosedS3ZonalV0ScalarMatterHHBracketCutoffLedger"
 RESULT_SCHEMA = "ice.closed-s3-zonal-v0-scalar-matter-hh-bracket-cutoff-ledger.result.v1"
 RESULT_PREFIX = "CLOSED_S3_ZONAL_V0_SCALAR_MATTER_HH_BRACKET_CUTOFF_LEDGER_RESULT="
@@ -194,12 +194,26 @@ def run(payload: dict[str, Any], input_sha: str) -> dict[str, Any]:
         discarded_channels = [index for index in range(cutoff + 1, ambient + 1) if sp.simplify(ambient_channel_terms[index].subs(substitutions)) != 0]
         discarded_sum = sp.simplify(sum(ambient_channel_terms[index].subs(substitutions) for index in discarded_channels))
         remainder = sp.simplify(full_before_project - projected)
+        expression_locals = {"a": a, "pi": sp.pi}
+        expected_target = sp.sympify(packet["expected_target_exact"], locals=expression_locals)
+        expected_projected = sp.sympify(packet["expected_projected_exact"], locals=expression_locals)
+        expected_remainder = sp.sympify(packet["expected_remainder_exact"], locals=expression_locals)
+        expected_channels = [int(index) for index in packet["expected_discarded_channels"]]
+        expected_status = packet["expected_remainder_status"]
+        if expected_status not in {"NONZERO", "ZERO"}:
+            raise AssertionError("unknown preregistered remainder status")
 
         ledger.check(f"CS3V0HH.packet.{packet['id']}.ambient_target", full_before_project - target, "The ambient full-before-project finite-band canonical HH bracket equals the declared matter momentum functional on the low-mode packet.")
+        ledger.check(f"CS3V0HH.packet.{packet['id']}.target_nontrivial", target != 0, "The asymmetric xi=Q1, theta=Q2 packet exercises a nonzero matter momentum target instead of a zero-equals-zero identity.")
+        ledger.check(f"CS3V0HH.packet.{packet['id']}.target_preregistered", target - expected_target, "The exact matter target equals the preregistered nonzero coefficient 5/(pi^2*a^2).")
+        ledger.check(f"CS3V0HH.packet.{packet['id']}.projected_preregistered", projected - expected_projected, "The L-only bracket equals its preregistered exact coefficient.")
+        ledger.check(f"CS3V0HH.packet.{packet['id']}.remainder_preregistered", remainder - expected_remainder, "The projection remainder equals its preregistered exact coefficient.")
+        ledger.check(f"CS3V0HH.packet.{packet['id']}.remainder_status_preregistered", (remainder != 0) if expected_status == "NONZERO" else (remainder == 0), "The exact zero/nonzero classification matches the preregistered cutoff expectation.")
+        ledger.check(f"CS3V0HH.packet.{packet['id']}.discarded_channels_preregistered", discarded_channels == expected_channels, "The omitted canonical derivative-channel support matches the preregistered cutoff support.")
         ledger.check(f"CS3V0HH.packet.{packet['id']}.remainder_decomposition", remainder - discarded_sum, "The finite difference full-before-project minus L-only equals the sum of omitted ambient canonical derivative channels.")
         ledger.check(f"CS3V0HH.packet.{packet['id']}.projected_target_decomposition", projected - (target - remainder), "The L-only result is exactly target minus the separately retained projection remainder.")
         ledger.check(f"CS3V0HH.packet.{packet['id']}.ambient_bound", ambient - (cutoff + max(n_degree, m_degree)), "The ambient coefficient space is the declared smallest smear-degree enlargement for this quadratic scalar calculation.")
-        rows.append({"id": packet["id"], "cutoff_L": cutoff, "ambient_cutoff": ambient, "theta_coefficients": {str(key): str(value) for key, value in sorted(theta_coefficients.items())}, "xi_coefficients": {str(key): str(value) for key, value in sorted(xi_coefficients.items())}, "full_before_project_hh_exact": printable(full_before_project), "matter_momentum_target_exact": printable(target), "L_only_hh_exact": printable(projected), "full_minus_L_only_remainder_exact": printable(remainder), "discarded_canonical_channels": discarded_channels, "discarded_channel_sum_exact": printable(discarded_sum), "remainder_status": "NONZERO_UNCLASSIFIED_PROJECTION_REMAINDER" if remainder != 0 else "EXACT_ZERO_FOR_THIS_PACKET", "scope": "fixed-background zonal V=0 scalar-matter HH subidentity only; no gravitational or full ADM/HDA/Jacobi interpretation"})
+        rows.append({"id": packet["id"], "cutoff_L": cutoff, "ambient_cutoff": ambient, "theta_coefficients": {str(key): str(value) for key, value in sorted(theta_coefficients.items())}, "xi_coefficients": {str(key): str(value) for key, value in sorted(xi_coefficients.items())}, "full_before_project_hh_exact": printable(full_before_project), "matter_momentum_target_exact": printable(target), "L_only_hh_exact": printable(projected), "full_minus_L_only_remainder_exact": printable(remainder), "discarded_canonical_channels": discarded_channels, "discarded_channel_sum_exact": printable(discarded_sum), "preregistered_target_exact": packet["expected_target_exact"], "preregistered_projected_exact": packet["expected_projected_exact"], "preregistered_remainder_exact": packet["expected_remainder_exact"], "remainder_status": "NONZERO_UNCLASSIFIED_PROJECTION_REMAINDER" if remainder != 0 else "EXACT_ZERO_FOR_THIS_PACKET", "scope": "fixed-background zonal V=0 scalar-matter HH subidentity only; no gravitational or full ADM/HDA/Jacobi interpretation"})
 
     passed = all(check["passed"] for check in ledger.exact)
     verdict = "KEEP_FIXED_BACKGROUND_ZONAL_V0_SCALAR_MATTER_HH_IDENTITY_AND_CUTOFF_REMAINDER_NOT_FULL_ADM_HDA" if passed else "KILL_DECLARED_FIXED_BACKGROUND_ZONAL_V0_SCALAR_MATTER_HH_LEDGER"
