@@ -546,6 +546,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "raw_c_actual_direction_sharp_contraction_transfer",
+    script:
+      "cpt_temporal_folded_susy/raw_c_actual_direction_sharp_contraction_transfer.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_ACTUAL_DIRECTION_SHARP_CONTRACTION_TRANSFER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
     script:
       "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",
