@@ -45,7 +45,13 @@ class Ledger:
         if identifier in self.seen:
             raise AssertionError(f"duplicate check: {identifier}")
         self.seen.add(identifier)
-        passed = bool(residual) if isinstance(residual, bool) else sp.simplify(residual) == 0
+        reduced = sp.simplify(residual)
+        if reduced == sp.true:
+            passed = True
+        elif reduced == sp.false:
+            passed = False
+        else:
+            passed = bool(reduced == 0)
         self.exact.append({"id": identifier, "passed": passed, "statement": statement})
 
     def guard(self, identifier: str, theorem: str, hypotheses: str, scope: str) -> None:
