@@ -1,6 +1,6 @@
 # ICE 여섯 연결부 메타인지 우선순위 온톨로지
 
-> 기준일: 2026-08-29
+> 기준일: 2026-08-29; 2026-08-30 scoped update 포함
 > 지위: repository-local 계산 워크벤치의 의사결정·기억 지도. 물리학 이론,
 > 양자중력 완성, 외부 KG ratification 또는 TOE 주장이 아니다.
 
@@ -34,11 +34,12 @@
 
 ## 1. 우선순위 결론
 
-현재 가장 빠른 1순위는 raw-\(C\)의 **nonzero-\(\lambda\) minus-end
-\(\Gamma_1\) functional과 그 뒤의 declared \(F,F_\lambda\) 검증**이다.
+현재 가장 빠른 1순위는 raw-\(C\)의 **actual nonzero-\(\lambda\)
+plus-recessive solution과 그 minus-end \(\Gamma_1\) remainder** 검증이다.
 scale-invariant differentiated plus-tail datum과 direct smooth Green endpoint는
-정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐다. 이유는 다음과
-같다.
+정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐고, 2026-08-30에는
+선언한 fixed-reference \(\Gamma_1\) identity의 left correction 및 zero-shell
+derivative도 좁게 닫혔다. 이유는 다음과 같다.
 
 - 이미 선언해 둔 candidate self-adjoint boundary line, coarse root, finite-cutoff
   \(F_\lambda\) 대조와 real plus-tail bound가 있다.
@@ -55,7 +56,7 @@ scale-invariant differentiated plus-tail datum과 direct smooth Green endpoint�
 
 | 순위 | 목표 | 현재 상태 | 성공 게이트 | 실패·반증 출력 | 후속 연결 |
 |---:|---|---|---|---|---|
-| P1 | raw-\(C\) nonzero-\(\lambda\) minus-end \(\Gamma_1\)와 declared \(F,F_\lambda\) | **부분 돌파**: \(\lambda=0\) exact direction·실근 존재 구간 5개, 전체-bracket \(h(4)\), direct smooth \(J(-4)\)와 endpoint \(h(-4)\) ball 인증 | selected reference field와 left-boundary contribution을 포함한 nonzero-\(\lambda\) \(\Gamma_1\) variation; 그 뒤에만 declared derivative | minus-end remainder/domain dependence, left term 누락, enclosure 비중첩/폭발, normalization drift | P4 |
+| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **부분 돌파**: \(\lambda=0\) exact direction·실근 존재 구간 5개, 전체-bracket \(h(4)\), direct smooth \(J(-4)\)/endpoint \(h(-4)\), fixed-reference \(\Gamma_1\) left correction·zero-shell derivative와 per-unit minus-tail norm bound | 같은 declared domain에서 actual \(u_\lambda\)를 validated plus end부터 구성하고 그 \(\Gamma_1(u_\lambda)\) remainder를 outwardly enclose; 그 뒤에만 continuation/slope | actual \(u_\lambda\) 부재, minus-end remainder/domain dependence, left term 누락, enclosure 비중첩/폭발, normalization drift | P4 |
 | P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; 현재는 restricted zonal subvertices뿐 | scalar/vector/TT와 lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, 누락 sector, cutoff tail 미측정 | P3 |
 | P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | 오픈 | full-before-project bracket, Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
 | P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5 |
@@ -296,6 +297,33 @@ declared \(F_\lambda\), eigenvalue slope 또는 root velocity로 읽을 수 없�
 다음 계산은 selected reference field, normalization, minus-end remainder와
 measurable \(p\)-family를 고정한 뒤 이 boundary variation을 검증해야 한다.
 그 전까지 normalized/declared amplitude 출력은 `null`이다.
+
+### 2026-08-30 scoped update: declared \(\Gamma_1\) zero-shell variation
+
+번호 없는 `raw_c_declared_gamma1_boundary_variation`은 위의 fixed reference
+pair \(c_p,s_p\)와 declared \(\Gamma_{1,p}=0\) domain을 바꾸지 않았다. 이
+runner는 exact 11/11, Arb-ball 60/60, theorem/scope guard 6개를 통과해 다섯
+inherited full \(\kappa\) bracket에서 다음만 좁게 인증했다.
+
+\[
+\Gamma_{1,p}(u_\lambda)=u_{\lambda,Q}(Q_0)-\lambda
+\int_{-\infty}^{Q_0} A_\lambda(Q)u_\lambda(Q)c_p(Q)\,dQ,
+\]
+
+\(\lambda=0\) zero-shell root에서의 normalized declared derivative, explicit
+left correction, 그리고 K-scaled representative의 \(\partial_\lambda\Gamma_1\)
+box다. 두 punctured real \(\lambda\) box
+\([-10^{-4},-10^{-8}]\), \([10^{-8},10^{-4}]\)에서는 actual solution 값이 아니라
+declared minus-tail \(L^2(f\,dQ)\) norm **per unit** correction-functional operator
+bound만 봉입했다. 80/120-digit tier는 같은 backend refinement이지 독립 구현이
+아니다.
+
+따라서 old finite-\(Q_0\) proxy가 declared \(\Gamma_1\)와 \(\lambda\ne0\)에서도
+같다는 식은 이제 명시적으로 배제된다. 반대로 이 결과는 actual nonzero-\(\lambda\)
+plus-recessive \(u_\lambda\), \(\Gamma_1(u_\lambda)\) value 또는 its remainder,
+root continuation/velocity, root uniqueness, nonreal spectral data, RAQ, 물리학,
+양자중력 또는 TOE 주장을 만들지 않는다. P1의 next blocker는 바로 그 actual
+solution과 remainder의 validated construction이다.
 
 ## 3. P2–P3: closed-\(S^3\) ADM와 HDA
 

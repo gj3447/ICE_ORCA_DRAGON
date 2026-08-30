@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-29T16:55:00Z",
+  "updated_at_utc": "2026-08-30T12:25:45Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -509,11 +509,12 @@
     },
     {
       "question": "What did the first-priority raw-C calculation actually close?",
-      "answer": "Only at exactly lambda=0 and on five inherited brackets: the exact modified-Bessel recessive direction, at least one real sign-changing characteristic zero per bracket, a rigorous normalization-invariant h(4)=partial_lambda[-u_Q/u] enclosure, and a direct smooth Green construction of positive J(-4)=-W=u^2 h plus endpoint-only positive h(-4) on every full bracket. The endpoint result is not numerical propagation of the h(4) state. Root uniqueness/completeness, nonzero-lambda minus-end Gamma_1, declared F_lambda/root velocity, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
+      "answer": "On five inherited brackets, priority 1 now closes four narrow records: the exact lambda-zero modified-Bessel direction and at least one sign-changing root per bracket; normalization-invariant h(4); direct positive J(-4) and endpoint-only h(-4); and, for the selected fixed reference, the declared Gamma_1 boundary identity, its nonzero positive left correction and nonzero lambda-zero derivative. The last calculation also gives only a correction-functional operator bound per unit declared minus-tail L2(f) norm on two punctured nonzero-lambda boxes. It constructs no nonzero-lambda plus-recessive solution or actual Gamma_1 value/remainder. Root continuation/velocity, uniqueness/completeness, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
       "claim_ids": [
         "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
         "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
-        "claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS"
+        "claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS",
+        "claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD"
       ]
     }
   ],
@@ -1255,8 +1256,8 @@
     },
     {
       "id": "reading-path:gate1-v0-metacognitive-priority-to-observation",
-      "title": "From the metacognitive priority map through the lambda-zero Green endpoint to the observation gate",
-      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the completed lambda-zero ball anchor, differentiated h(4) tail and direct smooth Green endpoint, then stop at the still-open nonzero-lambda minus-end Gamma_1 functional before following the independently startable nonreal spectral and S3/BFV lanes toward relational and likelihood gates. Navigation only; it creates no automatic successor or physical promotion.",
+      "title": "From the metacognitive priority map through the declared Gamma_1 boundary variation to the observation gate",
+      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the completed lambda-zero ball anchor, differentiated h(4) tail, direct smooth Green endpoint and selected-reference Gamma_1 lambda-zero derivative/operator bound, then stop at the still-open validated nonzero-lambda plus-recessive solution and direct minus-end remainder before following the independently startable nonreal spectral and S3/BFV lanes toward relational and likelihood gates. Navigation only; it creates no automatic successor or physical promotion.",
       "nodes": [
         "concept:gate1-v0-six-bridge-metacognitive-priority-map",
         "artifact:gate1-v0-six-bridge-metacognitive-priority-map",
@@ -1274,6 +1275,10 @@
         "scope:raw-c-lambda-zero-node-safe-green-endpoint-five-root-brackets",
         "claim:RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_HOLDS",
         "evidence:raw-c-lambda-zero-node-safe-green-transport-result",
+        "concept:raw-c-declared-gamma1-boundary-variation",
+        "scope:raw-c-declared-gamma1-boundary-variation-five-root-brackets",
+        "claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD",
+        "evidence:raw-c-declared-gamma1-boundary-variation-result",
         "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
         "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
         "open:gate1-v0-classical-s3-hda-closure",
@@ -14152,10 +14157,10 @@
     {
       "id": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
       "type": "open_problem",
-      "title": "Raw-C nonzero-lambda minus-end Gamma_1 functional and extension derivative",
-      "summary": "Priority 1 now has closed-narrow lambda-zero h(4), direct smooth J(-4) and endpoint-only h(-4) boxes on five certified brackets. The Green endpoint is not numerical propagation of the h(4) state. The remaining declared-boundary problem is to define and validate the nonzero-lambda minus-end Gamma_1 functional with its reference-field and left-boundary contribution; only afterward may a finite-Q0 proxy derivative be related to a declared-extension F_lambda, slope or root velocity. Root uniqueness, nonreal spectral and RAQ outputs also remain open.",
-      "state": "PRIORITY_1_DIRECT_LAMBDA_ZERO_GREEN_ENDPOINT_CLOSED_MINUS_END_GAMMA1_OPEN",
-      "question": "Can the selected nonzero-lambda minus-end Gamma_1 functional, reference field, domain convention and left-boundary variation be outwardly certified before any finite-Q0 proxy derivative is promoted to a declared-extension F_lambda, slope or root velocity?"
+      "title": "Raw-C validated nonzero-lambda plus-recessive solution and Gamma_1 remainder",
+      "summary": "Priority 1 now has the selected fixed-reference Gamma_1 identity, five-bracket lambda-zero declared derivative and positive left correction, plus a uniform nonzero-lambda correction-functional bound per unit declared minus-tail norm. Those results construct no u_lambda. The remaining declared-boundary problem is to validate a plus-recessive solution on the compact real lambda boxes and directly enclose its Q-to-minus-infinity remainder in the same fixed domain before root continuation, spectrum or RAQ. Root uniqueness, nonreal spectral and RAQ outputs also remain open.",
+      "state": "PRIORITY_1_ZERO_SHELL_DECLARED_GAMMA1_DERIVATIVE_CLOSED_ACTUAL_NONZERO_LAMBDA_SOLUTION_OPEN",
+      "question": "Can a plus-recessive u_lambda be constructed with outward enclosures on the selected compact nonzero-lambda boxes and can the direct minus-end remainder in Gamma_1(u_lambda) be bounded in the same fixed domain before continuation, spectrum or RAQ?"
     },
     {
       "id": "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
@@ -14231,7 +14236,7 @@
       "state": "TRACKED_RESEARCH_DECISION_MAP",
       "artifact_kind": "research_decision_map",
       "path": "docs/research/ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md",
-      "sha256": "9e8ed44fe15dcb1714a86eed96eed65281eeda33a42d963a13ef1e67527fe112"
+      "sha256": "c0581ec0183d4dab8232ef5ca40bbdc002121f5d42436b501b3c26560f2e654e"
     },
     {
       "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-inputs",
@@ -14608,7 +14613,17 @@
       "artifact_kind": "evidence",
       "path": "ontology/cpt-temporal-folded-susy/evidence/raw-c-lambda-zero-node-safe-green-transport-result.json",
       "sha256": "1227c2d75a8b438dd2d98d7c6af80d2e0bd0eafd4ccf84385d62f733b4e6578f"
-    }
+    },
+    {"id":"source:gradshteyn-ryzhik-8e-6-576-4","type":"source","title":"Gradshteyn-Ryzhik modified-Bessel product integral 6.576(4)","summary":"CITES-only table source for the Mellin integral of the full weighted K_(i*kappa)^2 tail. The repository runner checks the selected parameters, conventions and outward enclosure; the table supplies no raw-C boundary, operator, spectral, RAQ or physics conclusion.","state":"PRIMARY_REFERENCE","citation":"I. S. Gradshteyn and I. M. Ryzhik, Table of Integrals, Series, and Products, 8th ed., formula 6.576(4).","uri":"https://www.sciencedirect.com/book/9780123849335/table-of-integrals-series-and-products","version":"8th edition"},
+    {"id":"concept:raw-c-declared-gamma1-boundary-variation","type":"concept","title":"Declared raw-C Gamma_1 left-boundary variation","summary":"For the selected lambda-independent reference at Q0=-4, the exact Wronskian identity retains the whole minus-tail correction. At lambda=0 on five inherited root brackets the omitted left term and declared derivative are enclosed, while nonzero lambda receives only a correction-functional bound per unit declared minus-tail norm.","state":"COMPLETED_NARROW_ZERO_SHELL_DERIVATIVE_AND_OPERATOR_BOUND_ONLY"},
+    {"id":"scope:raw-c-declared-gamma1-boundary-variation-five-root-brackets","type":"scope","title":"Declared raw-C Gamma_1 boundary-variation scope","summary":"Selected fixed-reference Gamma_1 boundary identity, five inherited lambda-zero root brackets, and two punctured real nonzero-lambda boxes.","state":"DECLARED_GAMMA1_ZERO_SHELL_DERIVATIVE_AND_NORM_RELATIVE_OPERATOR_BOUND_SCOPE","includes":["the selected left-weighted raw-C Gamma_(1,p)=0 reference line with lambda-independent c_p and Q0=-4","the exact identity Gamma_1(u_lambda)=u_(lambda,Q)(Q0)-lambda integral from minus infinity to Q0 of a*u_lambda*c_p","the five full inherited exact-rational kappa brackets, conditionally for any zero-shell root in each bracket without uniqueness","lambda-zero normalized declared derivative, explicit positive left correction and K-scaled derivative enclosures","the punctured boxes [-1e-4,-1e-8] and [1e-8,1e-4] with a correction bound per unit declared minus-tail L2(f) norm","p signs sharing the stated bound through kappa=|p|/hbar; this is not a measurable full-p family","80/120-digit same-backend Arb consistency tiers, 11 exact checks, 60 ball checks and six theorem/scope guards"],"excludes":["an actual nonzero-lambda plus-recessive or Weyl solution, its normalization, Gamma_1 value or direct minus-end remainder","a finite-Q0 proxy promoted to declared Gamma_1 away from zero","root continuation, root velocity, uniqueness or completeness","a global p/lambda measurable resolvent family, nonreal Weyl m-function, spectral measure, rigging data or RAQ","C-H quantum equivalence, BFV, observation, physics, quantum gravity, TOE or automatic successor execution"]},
+    {"id":"claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD","type":"claim","title":"Declared raw-C Gamma_1 left-boundary variation and zero-shell derivative hold","summary":"Supported only for the fixed-reference boundary identity, the five-bracket lambda-zero left correction and derivative, and the per-unit-minus-tail-norm correction bound on two punctured lambda boxes. It constructs no nonzero-lambda solution or Gamma_1 value.","state":"SUPPORTED_NARROW_ZERO_SHELL_DERIVATIVE_AND_OPERATOR_BOUND_ONLY","claim_id":"RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD","statement":"For any zero-shell root in each inherited bracket, the selected fixed-reference Gamma_1 boundary identity has the certified lambda-zero left correction and normalized/K-scaled derivative; on the stated punctured lambda boxes only a uniform correction-functional operator bound per unit declared minus-tail norm is established.","epistemic_state":"SUPPORTED"},
+    {"id":"evidence:raw-c-declared-gamma1-boundary-variation-result","type":"evidence","title":"Declared raw-C Gamma_1 boundary-variation evidence","summary":"VALID_RUN with 11 exact and 60 Arb-ball checks plus six theorem/scope guards, five full-bracket lambda-zero derivative/left-correction enclosures, two punctured-lambda per-unit-norm operator bounds and isolated REPRO. No u_lambda, actual Gamma_1 value or continuation is constructed.","state":"VALID_RUN_ZERO_SHELL_DERIVATIVE_AND_OPERATOR_BOUND_ONLY","observed_status":"VALID_RUN_11_EXACT_60_BALL_PASS_6_GUARDS_5_BRACKETS_REPRO","check_ids":["P39.rawc.gamma1.wronskian_derivative","P39.rawc.gamma1.integrated_boundary_identity","P39.rawc.gamma1.weight_conversion","P39.rawc.gamma1.reference_potential_integral","P39.rawc.gamma1.reference_weight_integral","P39.rawc.gamma1.free_rotation_skew","P39.rawc.gamma1.cauchy_schwarz_weight_conversion","P39.rawc.gamma1.normalized_left_split","P39.rawc.gamma1.root_reference_initial_data","P39.rawc.gamma1.K_scaled_derivative_at_zero","P39.rawc.gamma1.mellin_weight_coefficient","P39.rawc.gamma1.root1.band_coverage","P39.rawc.gamma1.root1.tier1.endpoint_and_mellin","P39.rawc.gamma1.root1.tier1.left_correction_and_derivative","P39.rawc.gamma1.root1.tier1.reference_tail_bound","P39.rawc.gamma1.root1.tier1.lambda_negative_operator_bound","P39.rawc.gamma1.root1.tier1.lambda_positive_operator_bound","P39.rawc.gamma1.root1.tier2.endpoint_and_mellin","P39.rawc.gamma1.root1.tier2.left_correction_and_derivative","P39.rawc.gamma1.root1.tier2.reference_tail_bound","P39.rawc.gamma1.root1.tier2.lambda_negative_operator_bound","P39.rawc.gamma1.root1.tier2.lambda_positive_operator_bound","P39.rawc.gamma1.root1.precision_refinement","P39.rawc.gamma1.root2.band_coverage","P39.rawc.gamma1.root2.tier1.endpoint_and_mellin","P39.rawc.gamma1.root2.tier1.left_correction_and_derivative","P39.rawc.gamma1.root2.tier1.reference_tail_bound","P39.rawc.gamma1.root2.tier1.lambda_negative_operator_bound","P39.rawc.gamma1.root2.tier1.lambda_positive_operator_bound","P39.rawc.gamma1.root2.tier2.endpoint_and_mellin","P39.rawc.gamma1.root2.tier2.left_correction_and_derivative","P39.rawc.gamma1.root2.tier2.reference_tail_bound","P39.rawc.gamma1.root2.tier2.lambda_negative_operator_bound","P39.rawc.gamma1.root2.tier2.lambda_positive_operator_bound","P39.rawc.gamma1.root2.precision_refinement","P39.rawc.gamma1.root3.band_coverage","P39.rawc.gamma1.root3.tier1.endpoint_and_mellin","P39.rawc.gamma1.root3.tier1.left_correction_and_derivative","P39.rawc.gamma1.root3.tier1.reference_tail_bound","P39.rawc.gamma1.root3.tier1.lambda_negative_operator_bound","P39.rawc.gamma1.root3.tier1.lambda_positive_operator_bound","P39.rawc.gamma1.root3.tier2.endpoint_and_mellin","P39.rawc.gamma1.root3.tier2.left_correction_and_derivative","P39.rawc.gamma1.root3.tier2.reference_tail_bound","P39.rawc.gamma1.root3.tier2.lambda_negative_operator_bound","P39.rawc.gamma1.root3.tier2.lambda_positive_operator_bound","P39.rawc.gamma1.root3.precision_refinement","P39.rawc.gamma1.root4.band_coverage","P39.rawc.gamma1.root4.tier1.endpoint_and_mellin","P39.rawc.gamma1.root4.tier1.left_correction_and_derivative","P39.rawc.gamma1.root4.tier1.reference_tail_bound","P39.rawc.gamma1.root4.tier1.lambda_negative_operator_bound","P39.rawc.gamma1.root4.tier1.lambda_positive_operator_bound","P39.rawc.gamma1.root4.tier2.endpoint_and_mellin","P39.rawc.gamma1.root4.tier2.left_correction_and_derivative","P39.rawc.gamma1.root4.tier2.reference_tail_bound","P39.rawc.gamma1.root4.tier2.lambda_negative_operator_bound","P39.rawc.gamma1.root4.tier2.lambda_positive_operator_bound","P39.rawc.gamma1.root4.precision_refinement","P39.rawc.gamma1.root5.band_coverage","P39.rawc.gamma1.root5.tier1.endpoint_and_mellin","P39.rawc.gamma1.root5.tier1.left_correction_and_derivative","P39.rawc.gamma1.root5.tier1.reference_tail_bound","P39.rawc.gamma1.root5.tier1.lambda_negative_operator_bound","P39.rawc.gamma1.root5.tier1.lambda_positive_operator_bound","P39.rawc.gamma1.root5.tier2.endpoint_and_mellin","P39.rawc.gamma1.root5.tier2.left_correction_and_derivative","P39.rawc.gamma1.root5.tier2.reference_tail_bound","P39.rawc.gamma1.root5.tier2.lambda_negative_operator_bound","P39.rawc.gamma1.root5.tier2.lambda_positive_operator_bound","P39.rawc.gamma1.root5.precision_refinement"]},
+    {"id":"artifact:raw-c-declared-gamma1-boundary-variation-inputs","type":"artifact","title":"Declared raw-C Gamma_1 boundary-variation inputs","summary":"Pinned fixed-reference identity, source roles, five inherited brackets, two punctured lambda boxes, precision/resource caps and fail-closed solution/spectrum/physics nulls.","state":"TRACKED_RUN_INPUTS","artifact_kind":"input_manifest","path":"cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_INPUTS.json","sha256":"d2d5ad19a36dff063b3bbbdaec55a5158931cd8eed4eca689b8399f6f70c5b32"},
+    {"id":"artifact:raw-c-declared-gamma1-boundary-variation-runner","type":"artifact","title":"Declared raw-C Gamma_1 boundary-variation runner","summary":"Bounded unnumbered symbolic identity and full-parameter Arb Bessel/gamma certificate runner; it executes no ODE, quadrature, root solve or finite difference.","state":"TRACKED_VALID_RUNNER","artifact_kind":"runner","path":"cpt_temporal_folded_susy/raw_c_declared_gamma1_boundary_variation.py","sha256":"f9cdf7a072bcef34abc732bf3ace329952996d696eb3bfc823e22deda82d3128"},
+    {"id":"artifact:raw-c-declared-gamma1-boundary-variation-result","type":"artifact","title":"Declared raw-C Gamma_1 boundary-variation raw result","summary":"VALID_RUN result with payload digest a112d2c9b0ba2409218c71e94afae16fd685e866e012c88b8694a1992919eebe.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json","sha256":"4225653c8f5a7a39c24823de0994902c4c68afc33485b7bba35e4421dc964c87"},
+    {"id":"artifact:raw-c-declared-gamma1-boundary-variation-report","type":"artifact","title":"Declared raw-C Gamma_1 boundary-variation report","summary":"Human-readable fixed-reference derivation, norm-relative operator bound, five full-bracket left-correction/derivative enclosures, honest first-run refinement failure, nulls, provenance and next actual-solution gap.","state":"TRACKED_VALID_RUN_REPORT","artifact_kind":"report","path":"cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION.md","sha256":"dda75d5b84ccdab12750c873c99723310cc065db757b40d0bf5f3577ad2d0d07"},
+    {"id":"artifact:raw-c-declared-gamma1-boundary-variation-evidence-snapshot","type":"artifact","title":"Declared raw-C Gamma_1 boundary-variation evidence snapshot","summary":"Schema-valid snapshot preserving 71 check aliases, runner/input/result pins, five interval records, two norm-relative operator-bound boxes, resource accounting and explicit nulls.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/raw-c-declared-gamma1-boundary-variation-result.json","sha256":"c459d7509b88eff638f005bc896cab57fb3287bae6460a06e25e2a74c291decb"}
   ],
   "edges": [
     {
@@ -34351,7 +34366,26 @@
     {"id":"edge:3321","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"DOCUMENTED_BY","to":"artifact:raw-c-lambda-zero-node-safe-green-transport-report"},
     {"id":"edge:3322","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"Exact K identities, real-order symmetry and 10.32.9 tail majorant only; the five endpoint boxes are repository calculations."},
     {"id":"edge:3323","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball inclusion semantics only; the two precision tiers use one backend and are not independent validation."},
-    {"id":"edge:3324","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked Bessel and rigorous finite acb.integral interface for six finite subsegments; the improper tail is bounded analytically."}
+    {"id":"edge:3324","from":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked Bessel and rigorous finite acb.integral interface for six finite subsegments; the improper tail is bounded analytically."},
+    {"id":"edge:3325","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3326","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"EXTENDS","to":"concept:raw-c-constant-boundary-direct-integral","note":"Uses the selected fixed extension reference and domain convention only; it neither classifies other extensions nor establishes a full measurable p family."},
+    {"id":"edge:3327","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"EXTENDS","to":"concept:raw-c-lambda-zero-node-safe-green-endpoint-construction","note":"Adds the full minus-tail left correction and declared lambda-zero Gamma_1 derivative to the earlier right Green endpoint datum."},
+    {"id":"edge:3328","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"EXTENDS","to":"concept:raw-c-zero-shell-transversality-jacobian","note":"Upgrades only the selected lambda-zero normalized/K-scaled Gamma_1 derivative and exposes the omitted left term; it does not upgrade the older conditional F_lambda, slope/Jacobian or root-velocity interpretation."},
+    {"id":"edge:3329","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"CONTRASTS_WITH","to":"concept:raw-c-nonzero-lambda-weyl-flambda-check","note":"The older finite-WKB-cutoff agreement remains a local numerical comparison. The new global correction-functional bound constructs no nonzero-lambda u_lambda or Gamma_1 value."},
+    {"id":"edge:3330","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The identity, zero-shell derivative and norm-relative bound are closed-narrow; the actual nonzero-lambda plus-recessive solution and its direct minus-end remainder are next."},
+    {"id":"edge:3331","from":"claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD","relation":"ABOUT","to":"concept:raw-c-declared-gamma1-boundary-variation"},
+    {"id":"edge:3332","from":"claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD","relation":"HAS_EVIDENCE","to":"evidence:raw-c-declared-gamma1-boundary-variation-result","polarity":"SUPPORTS"},
+    {"id":"edge:3333","from":"claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD","relation":"VALID_WITHIN","to":"scope:raw-c-declared-gamma1-boundary-variation-five-root-brackets"},
+    {"id":"edge:3334","from":"evidence:raw-c-declared-gamma1-boundary-variation-result","relation":"DEFINED_IN","to":"artifact:raw-c-declared-gamma1-boundary-variation-runner"},
+    {"id":"edge:3335","from":"evidence:raw-c-declared-gamma1-boundary-variation-result","relation":"DERIVED_FROM","to":"artifact:raw-c-declared-gamma1-boundary-variation-inputs"},
+    {"id":"edge:3336","from":"evidence:raw-c-declared-gamma1-boundary-variation-result","relation":"RECORDED_IN","to":"artifact:raw-c-declared-gamma1-boundary-variation-evidence-snapshot"},
+    {"id":"edge:3337","from":"evidence:raw-c-declared-gamma1-boundary-variation-result","relation":"RECORDED_IN","to":"artifact:raw-c-declared-gamma1-boundary-variation-result"},
+    {"id":"edge:3338","from":"claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD","relation":"DOCUMENTED_BY","to":"artifact:raw-c-declared-gamma1-boundary-variation-report"},
+    {"id":"edge:3339","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"DOCUMENTED_BY","to":"artifact:raw-c-declared-gamma1-boundary-variation-report"},
+    {"id":"edge:3340","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"Modified-Bessel equation, K branch and reality/convention support only; repository interval outputs are not literature results."},
+    {"id":"edge:3341","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"CITES","to":"source:gradshteyn-ryzhik-8e-6-576-4","note":"Formula 6.576(4) supplies the full weighted K-product integral identity only; parameter checks and outward enclosures are repository workbench calculations."},
+    {"id":"edge:3342","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball inclusion semantics only; the two precision tiers use one backend and are not independent validation."},
+    {"id":"edge:3343","from":"concept:raw-c-declared-gamma1-boundary-variation","relation":"USES_TOOLING","to":"source:python-flint-acb-0-9-0","note":"Locked complex-order Bessel and gamma ball interface; no validated nonzero-lambda ODE solution was executed."}
   ],
   "kg_bridges": [
     {
@@ -35020,6 +35054,16 @@
       "checked_at_utc": "2026-08-29T16:55:00Z",
       "lookup_key": "ICE raw C lambda zero direct node safe Green Wronskian endpoint J and h at Q0 on five root brackets",
       "note": "No authorized exact external correspondence or writer is available. The local result certifies only direct lambda-zero J(-4) and endpoint-only h(-4) boxes on five brackets. It is not h(4) propagation and supplies no nonzero-lambda Gamma_1 derivative, F_lambda, root velocity, spectral measure, RAQ, quantum-gravity, physics or TOE claim; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:RAW_C_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_HOLD",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-30T12:25:45Z",
+      "lookup_key": "ICE raw C selected fixed reference declared Gamma1 left boundary variation lambda zero derivative and norm relative operator bound",
+      "note": "No authorized exact external correspondence or writer is available. The local workbench result certifies only the fixed-reference identity, five-bracket lambda-zero left correction/derivative and a per-unit-minus-tail-norm operator bound. It constructs no nonzero-lambda solution or Gamma_1 value, spectrum, RAQ, quantum-gravity, physics or TOE claim; no external UID was invented."
     }
   ]
 }

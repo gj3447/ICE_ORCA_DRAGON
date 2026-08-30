@@ -112,9 +112,10 @@ DLMF 10.32.9의 integral representation으로부터 얻은 별도 analytic bound
 
 이 결과 자체는 **정확히 \(\lambda=0\), 다섯 bracket에서의 \(h(4)\)**만
 닫는다. 아래의 후속 Green endpoint 계산이 별도로 \(J(-4)\)와 endpoint-only
-\(h(-4)\)를 닫았지만, nonzero-\(\lambda\) tail, declared minus-end
-\(\Gamma_1\) derivative, 정규화된 \(F_\lambda\), spectral/RAQ 출력은 그대로
-열려 있다.
+\(h(-4)\)를 닫았고, 2026-08-30의 별도 bounded calculation은 declared
+minus-end \(\Gamma_1\)의 zero-shell left correction/derivative를 좁게 닫았다.
+actual nonzero-\(\lambda\) solution/value/remainder, root continuation, spectral/RAQ
+출력은 그대로 열려 있다.
 
 ### 같은 날 추가된 \(\lambda=0\) node-safe Green endpoint
 
@@ -152,14 +153,27 @@ endpoint construction이다. \(h(4)u(4)^2\)는 magnitude sentinel일 뿐
 \(J(-4)=\int_{-4}^4A_\lambda u^2+J(4)\)의 별도 numerical decomposition은
 검사하지 않았다.
 
+### 2026-08-30 scoped update: declared \(\Gamma_1\) variation
+
+`raw_c_declared_gamma1_boundary_variation`은 selected \(\Gamma_{1,p}=0\)
+domain의 \(\lambda\)-independent reference pair를 유지한 채 exact 11/11,
+Arb-ball 60/60, guard 6개를 통과했다. 다섯 inherited bracket에서 \(\lambda=0\)
+normalized/K-scaled declared derivative와 explicit left correction을 ball로
+감쌌고, 두 punctured \(|\lambda|\le10^{-4}\) box에서는 only per-unit declared
+minus-tail \(L^2(f\,dQ)\)-norm correction-functional operator bound를 냈다.
+actual nonzero-\(\lambda\) plus-recessive solution, \(\Gamma_1\) value 또는 its
+remainder는 계산하지 않았으며, 따라서 root continuation/velocity, spectrum/RAQ,
+physics, quantum gravity와 TOE도 닫히지 않는다.
+
 ## 아직 끊긴 연결부
 
 현재 결과에서 다음 결론으로 가는 논리적 연결은 모두 비어 있다.
 
-1. nonzero-\(\lambda\)에서 declared minus-end \(\Gamma_1\) functional과
-   reference-field boundary contribution; \(\lambda=0\) direction, \(h(4)\),
-   direct smooth \(J(-4)\)와 endpoint-only \(h(-4)\)는 다섯 bracket에서 좁게 완료
-2. 그 functional과 finite-\(Q_0\) proxy의 관계를 포함한 endpoint
+1. actual nonzero-\(\lambda\) plus-recessive solution의 declared minus-end
+   \(\Gamma_1\) value와 direct remainder; fixed-reference identity, \(\lambda=0\)
+   left correction/derivative 및 per-unit minus-tail-norm operator bound는 다섯
+   bracket에서 좁게 완료
+2. 그 actual functional과 finite-\(Q_0\) proxy의 관계를 포함한 endpoint
    \(F\), declared \(F_\lambda\)와 root-velocity bound
 3. \(\operatorname{Im}z>0\)에서 선택한 자기수반 extension의 resolvent와
    Weyl--Titchmarsh \(m(z)\)
@@ -177,20 +191,21 @@ Weyl \(m\)-함수는 단순히 실수축 characteristic root를 보간한 함수
 
 ## 다음 최소 인증 단위
 
-가장 가까운 독립 질문은 “nonzero-\(\lambda\)에서 선언한 minus-end
-\(\Gamma_1\) functional을 reference field와 같은 domain convention으로
-정의하고, finite-\(Q_0\) proxy에 빠진 left-boundary contribution까지
-outward-rounded enclosure로 검증할 수 있는가?”다. \(\lambda=0\) direct
-Green endpoint는 이미 닫혔으며, generic normalized \(F_\lambda\)나 root
-velocity를 이 boundary functional보다 먼저 선언하면 안 된다.
+2026-08-30 전의 가장 가까운 질문은 fixed-reference boundary identity와
+left contribution의 enclosure였다. 이는 이제 zero shell에서 좁게 닫혔다. 현재
+가장 가까운 독립 질문은 “동일한 declared domain convention에서 actual
+nonzero-\(\lambda\) plus-recessive \(u_\lambda\)를 validated하게 구성하고,
+\(\Gamma_1(u_\lambda)\) 및 its minus-end remainder를 outward-rounded enclosure로
+검증할 수 있는가?”다. generic normalized \(F_\lambda\), root continuation 또는
+velocity를 actual solution/remainder보다 먼저 선언하면 안 된다.
 
 ### 입력
 
 - 현재 \(J(-4),h(-4)\) 결과의 input/result/runner hash와 다섯 certified ball
 - \(\Gamma_{1,p}u=-\lim_{Q\to-\infty}W(u,c_p)\)의 selected reference field,
   normalization, maximal-domain convention과 measurable \(p\)-dependence
-- nonzero-\(\lambda\)에서 \(Q_0\) 왼쪽까지 포함하는 boundary variation
-  identity와 analytic/validated remainder
+- nonzero-\(\lambda\) plus-recessive solution의 declared normalization과
+  \(Q_0\) 왼쪽까지 포함하는 actual boundary remainder
 - plus-end direction 또는 amplitude normalization을 어디에 쓰는지의 명시적
   구분
 - coefficient·rounding·minus-end truncation을 모두 포함하는 interval/ball
@@ -209,8 +224,8 @@ velocity를 이 boundary functional보다 먼저 선언하면 안 된다.
 
 ### 가능한 좁은 결과
 
-- `CERTIFIED_NONZERO_LAMBDA_GAMMA1_VARIATION`: 선언한 extension과 실수 box에서
-  minus-end boundary variation enclosure를 얻음
+- `CERTIFIED_NONZERO_LAMBDA_GAMMA1_VALUE_AND_REMAINDER`: 선언한 extension과 실수
+  box에서 constructed solution의 minus-end boundary value/remainder enclosure를 얻음
 - `SUBDIVISION_REQUIRED`: 일부 parameter subbox만 인증됨
 - `BOUNDARY_VARIATION_NOT_CERTIFIED`: minus-end remainder, domain dependence 또는
   precision budget 때문에 enclosure가 닫히지 않음
@@ -229,10 +244,10 @@ certificate도 같은 backend의 80/120-digit nesting과 0 배제 조건을 통�
 
 \(\lambda=0\) endpoint의 남은 장애물은 일반 ball arithmetic이나 node
 crossing이 아니다. exact Bessel Green route가 그 endpoint를 직접 닫았다.
-현재 장애물은 nonzero-\(\lambda\) minus-end boundary functional이다.
-python-flint의 special-function inclusion만으로 moving-domain boundary
-variation과 \(Q\to-\infty\) remainder가 자동 인증되지는 않는다. 다음 구현은
-둘 중 하나를 명시적으로 선택해야 한다.
+현재 장애물은 actual nonzero-\(\lambda\) plus-recessive solution과 그
+minus-end boundary remainder다. python-flint의 special-function inclusion만으로
+constructed solution의 \(Q\to-\infty\) remainder가 자동 인증되지는 않는다.
+다음 구현은 둘 중 하나를 명시적으로 선택해야 한다.
 
 - Arb 위에 minus-end reference pair와 boundary variation의 interval Taylor
   remainder를 좁은 parameter subbox용으로 직접 구성한다.
@@ -252,8 +267,9 @@ real plus-tail bound                    완료(현재 좁은 범위)
   -> lambda=0 exact Bessel transport    완료(실수 direction과 5 existence brackets)
     -> scale-invariant h tail datum     완료(lambda=0, 5 brackets의 h(4))
       -> direct smooth Green endpoint   완료(lambda=0, 5 brackets의 J(-4), endpoint h(-4))
-        -> nonzero-lambda minus-end Gamma1 functional  오픈
-          -> declared F_lambda/slope    오픈
+        -> zero-shell declared Gamma1 identity/derivative 완료(5 brackets)
+          -> actual nonzero-lambda solution + Gamma1 remainder  오픈
+            -> declared F_lambda/slope  오픈
       -> nonreal resolvent + Weyl m     오픈
         -> spectral measure/support     오픈
           -> test space + rigging form  오픈

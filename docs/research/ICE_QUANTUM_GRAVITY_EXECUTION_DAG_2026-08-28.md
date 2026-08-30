@@ -71,6 +71,7 @@ result를 별도 임시 사본에서 `./ice repro --only ...`로 재현했다. �
 | 1 raw-\(C\) real plus-tail control | `raw_c_plus_endpoint_liouville_green_tail_bound` | \(Q\ge4\), \(|\lambda|\le10^{-4}\), \(0\le\kappa\le8\)에서 exact 22/22, guard 3/3; \(V_{\rm analytic}=7.73285\times10^{-5}<V_{\rm bar}=9.44889\times10^{-5}\), \(E_{\rm bar}=4.72455\times10^{-5}\) | 무한대 recessive 조건을 \(Q_+=4\) datum으로 바꾸는 실수축 Liouville--Green tail 오차에 처음으로 명시적 균일 예산을 부여 | \(Q=4\to Q_0=-4\) validated transport, endpoint \(F/F_\lambda\), nonreal resolvent/Weyl \(m\), spectral measure, test space와 RAQ는 모두 null |
 | 1 raw-\(C\) \(\lambda=0\) differentiated plus-tail | `raw_c_lambda_zero_differentiated_plus_tail` | 다섯 certified root bracket 전체에서 \(h(4)=\partial_\lambda[-u_Q/u]_{0}>0\); exact 9/9, Arb-ball 70/70, guard 6, 개별 폭 \(<4.62\times10^{-26}\), analytic tail \(<6.02\times10^{-28}\) | exact Bessel Green identity와 rigorous finite quadrature/analytic tail로 normalization-invariant \(h(4)\) datum을 좁게 인증 | node-safe \(Q=4\to-4\) sensitivity transport, nonzero-\(\lambda\) tail, normalized \(F_\lambda\), nonreal spectral data, RAQ는 null |
 | 1 raw-\(C\) \(\lambda=0\) direct Green endpoint | `raw_c_lambda_zero_node_safe_green_transport` | pole-prone \(h\)를 interior에서 전개하지 않고 smooth \(J=-W=u^2h\)의 direct Bessel Green 적분으로 다섯 bracket의 \(J(-4)>0\), endpoint \(h(-4)>0\); exact 7/7, Arb-ball 61/61, guard 6, REPRO | \(\lambda=0\) five-bracket node-safe endpoint construction을 좁게 닫음 | 기존 \(h(4)\)의 numerical propagation/decomposition, nonzero-\(\lambda\) minus-end \(\Gamma_1\), declared \(F_\lambda\)/root velocity, spectral/RAQ는 null |
+| 1 raw-\(C\) declared \(\Gamma_1\) boundary variation | `raw_c_declared_gamma1_boundary_variation` | selected fixed-reference \(\Gamma_1\) identity, zero-shell normalized/K-scaled derivative와 explicit left correction을 다섯 bracket에서 ball-certify; two punctured \(\lambda\) boxes에서는 per-unit declared minus-tail norm correction bound만 기록; exact 11/11, Arb-ball 60/60, guard 6 | \(\lambda=0\) declared-boundary derivative와 omitted left term을 좁게 닫음 | actual nonzero-\(\lambda\) plus-recessive solution, \(\Gamma_1\) value/remainder, continuation/root velocity, uniqueness, spectral/RAQ는 null |
 | 2 closed \(S^3\) all-sector bookkeeping | `closed_s3_full_svt_spectral_ledger` | source-pinned scalar/transverse-vector/TT low-mode transport와 cutoff count; exact 37/37, theorem guard 5; \(N=8\) 총 1,341 modes | 세 sector의 rough/Hodge/명시적 Lichnerowicz convention, 저차 예외와 count 범위를 한 packet에 고정 | `FULL_SVT`는 세 sector를 모두 기록했다는 뜻뿐이다. explicit basis, chirality resolution, Gaunt/Clebsch--Gordan, ADM/HDA는 null |
 | 2 closed \(S^3\) cubic curvature packet | `closed_s3_zonal_conformal_curvature_cubic_vertex_ledger` | \(Q_2\) 및 \(Q_1+Q_2\) conformal packet의 \(\sqrt qR\)를 cubic까지 exact 전개; exact 52/52. 두 packet 모두 \(N=2\) 밖 quadratic·cubic tail이 nonzero | 하나의 spatial-curvature subvertex와 비선형 hard-cutoff leakage를 정확한 계수로 고정 | zonal conformal sector 하나뿐이다. full kinetic/shear, matter, lapse/shift, nonzonal/SVT Gaunt, full ADM constraint와 HDA/Jacobi는 null |
 | 2 closed \(S^3\) restricted kinetic packet | `closed_s3_zonal_conformal_trace_kinetic_cubic_vertex_ledger` | fixed-\(a\) trace cotangent ansatz에서 canonical \(\Pi\)와 DeWitt factor \(-2\pi G/(3a^3)\)를 고정하고 두 packet을 cubic까지 전개; exact 42/42, 두 \(N=2\) tail 모두 nonzero | curvature packet과 별개인 pure-trace kinetic subvertex 및 cutoff leakage를 정확한 계수로 고정 | \((a,p_a)\), tracefree/shear, matter, lapse/shift와 nonzonal/SVT가 빠진 restricted submanifold다. 두 packet을 합쳐도 full ADM/HDA가 아니다 |
@@ -120,6 +121,23 @@ null이다. P1부터 P7까지의 가정·실패조건·문헌 역할과 연결�
 raw-\(C\)의 정확한 남은 인증 순서와 현재 nonzero-\(\lambda\) minus-end boundary 공백은
 [`RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md`](RAW_C_ENDPOINT_CERTIFICATION_REQUIREMENTS_2026-08-29.md)에
 분리했다.
+
+### 2026-08-30 P1 declared-\(\Gamma_1\) scoped update
+
+`raw_c_declared_gamma1_boundary_variation`은 selected \(\Gamma_{1,p}=0\)
+reference domain을 그대로 둔 번호 없는 bounded run이다. exact 11/11,
+Arb-ball 60/60, theorem/scope guard 6개가 통과했다. 다섯 inherited full
+\(\kappa\) bracket에서 zero-shell normalized/K-scaled declared
+\(\partial_\lambda\Gamma_1\)와 omitted left correction을 인증했고, 두
+punctured real \(\lambda\) box에서는 declared minus-tail \(L^2(f\,dQ)\) norm
+per unit correction-functional operator bound만 기록했다.
+
+이것은 actual nonzero-\(\lambda\) plus-recessive solution이나
+\(\Gamma_1(u_\lambda)\) value/remainder를 만든 결과가 아니다. 따라서 root
+continuation/velocity, uniqueness/completeness, nonreal Weyl data, spectral
+measure, raw-\(C\) RAQ, \(C/H\) equivalence와 모든 physics/quantum-gravity/TOE
+출력은 null이다. P1의 다음 독립 공백은 같은 fixed domain에서 actual
+\(u_\lambda\)와 minus-end remainder를 validated하게 구성하는 일이다.
 
 Starobinsky local ledger의 최초 `..._p0_...` 경로는 제어면의 numbered-phase token 검사에 의해 Python
 실행 전에 차단됐다. 이를 무번호 의미가 명백한 `..._time_symmetric_...`로 rename·commit한 뒤 실행했으며,
