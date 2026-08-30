@@ -1,0 +1,176 @@
+{
+  "schema_version": "ice.raw-c-declared-gamma1-boundary-variation.input.v1",
+  "calculation_id": "RawCDeclaredGamma1BoundaryVariation",
+  "numbered_phase": null,
+  "question": "For the one declared raw-C Gamma_1,p=0 extension, can the fixed-reference nonzero-lambda left-boundary correction be given a rigorous uniform operator bound, and can the full declared Gamma_1 lambda derivative at zero-shell roots be outward-ball certified on all five inherited kappa brackets rather than confused with the finite-Q0 proxy derivative?",
+  "kind": "EXACT_WRONSKIAN_BOUNDARY_VARIATION_WITH_ANALYTIC_TAIL_OPERATOR_BOUND_AND_ARBITRARY_PRECISION_MELLIN_BALL_CERTIFICATE",
+  "epistemic_scope": "ONE_DECLARED_FIXED_REFERENCE_RAW_C_EXTENSION_TWO_PUNCTURED_NONZERO_LAMBDA_BOXES_AND_LAMBDA_ZERO_DECLARED_GAMMA1_DERIVATIVE_AT_ANY_ROOT_IN_FIVE_INHERITED_KAPPA_BRACKETS_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json",
+      "sha256": "52d623524ed8a80f006374231c02267d4b5d9b4df1c636a8e7a7fc74b3672db7",
+      "payload_sha256_without_self": "8b629856847b646c6dbc0469f4da77177d61be520688b96d5923d4452f58806b",
+      "required_verdict": "CONSTRUCT_DECLARED_RAW_C_P_PRESERVING_DIRECT_INTEGRAL_EXTENSION_RAQ_OPEN",
+      "role": "pins the lambda-independent c_p,s_p reference pair at Q0=-4, the Wronskian boundary maps and the one declared Gamma_1,p=0 decomposable extension"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e",
+      "payload_sha256_without_self": "5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN",
+      "role": "pins the exact lambda-zero K_(i*kappa) plus-recessive normalization, five disjoint full sign-change brackets and nonzero K at Q0 on each bracket"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_RESULT.json",
+      "sha256": "e0d53cb50d8ad5bfb7afca67a7c5223d4ac4d2fdebf8718833acc58c2eee304b",
+      "payload_sha256_without_self": "9667d2ff56b0dfc41bfeb4d24e4c09ab2ba77ee4439906a5a8743bd5e0f43c4f",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_ON_FIVE_ROOT_BRACKETS",
+      "role": "pins the rigorous right-half normalized contribution h(Q0)=I_plus/u(Q0)^2 on the same five full brackets"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "I. S. Gradshteyn and I. M. Ryzhik, Table of Integrals, Series, and Products, 8th ed., formula 6.576(4)",
+      "url": "https://doi.org/10.1016/C2009-0-22509-0",
+      "used_for": "the full positive Mellin integral of x^(1/2) K_(i*kappa)(x)^2 at mu=3/2",
+      "not_used_for": "a nonzero-lambda Weyl solution, spectral measure, rigging map or physical normalization"
+    },
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified Bessel functions, sections 10.25, 10.27, 10.29 and 10.32",
+      "url": "https://dlmf.nist.gov/10",
+      "version": "DLMF 1.2.7, 2026-06-15",
+      "used_for": "the exact lambda-zero K_(i*kappa) convention, order conjugation symmetry and positive-real reality properties",
+      "not_used_for": "the raw-C boundary-map definition or a finite nonzero-lambda endpoint theorem"
+    },
+    {
+      "source": "Fredrik Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+      "url": "https://arxiv.org/abs/1611.02831",
+      "version": "IEEE Transactions on Computers 66 (2017) 1281-1292",
+      "used_for": "outward-rounded ball inclusion semantics for Bessel, gamma and elementary-function enclosures",
+      "not_used_for": "the Wronskian identity, free-rotation comparison or physical interpretation"
+    },
+    {
+      "source": "python-flint acb and arb special-function interface",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb.html",
+      "version": "python-flint 0.9.0",
+      "used_for": "locked arbitrary-precision complex-ball Bessel and gamma evaluations on full kappa bands",
+      "not_used_for": "unbounded quadrature, ODE propagation or independent validation between precision tiers"
+    }
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "Q_0": "-4",
+    "C": "6*pi^2",
+    "x": "x=C*exp(Q)",
+    "x_0": "C*exp(-4)",
+    "p_kappa_relation": "kappa=sqrt(3/2)*abs(p); both p signs share the same fixed reference bound",
+    "fiber_equation": "u_lambda,QQ=(A_0+lambda*a)u_lambda with A_0=36*pi^4*exp(2Q)-kappa^2 and a=6*pi^2*exp(3Q/2)=f/2",
+    "reference_equation": "c_p,QQ=A_0*c_p; c_p(-4)=1 and c_p,Q(-4)=0; c_p is lambda-independent",
+    "boundary_map": "Gamma_1,p(u)=-lim_(Q->-infinity) W(u,c_p)",
+    "exact_nonzero_lambda_identity": "Gamma_1,p(u_lambda)=u_lambda,Q(Q0)-lambda*integral_-infinity^Q0 a(Q)u_lambda(Q)c_p(Q)dQ",
+    "reference_tail_comparison": "for y=(c_p,c_p,Q/kappa), the free part is a norm-preserving rotation and the perturbation norm is at most V/kappa with V=36*pi^4*exp(2Q)",
+    "reference_tail_q": "q(kappa)=integral_-infinity^Q0 V(Q)/kappa dQ=18*pi^4*exp(-8)/kappa",
+    "reference_tail_norm_bound": "M_c(kappa)=||c_p||_L2(a;(-infinity,Q0]) <= 2*pi*exp(-3)*exp(q(kappa))",
+    "weighted_norm_conversion": "f=2a, so |Gamma_1-u_Q(Q0)| <= |lambda|*M_c*||u||_L2(a) = |lambda|*M_c/sqrt(2)*||u||_L2(f)",
+    "nonzero_lambda_boxes": [
+      {"label": "negative", "left": "-1e-4", "right": "-1e-8"},
+      {"label": "positive", "left": "1e-8", "right": "1e-4"}
+    ],
+    "lambda_absolute_cap": "1e-4",
+    "zero_shell_solution": "u_0(Q;kappa)=K_(i*kappa)(C*exp(Q))",
+    "root_reference_proportionality": "at any zero of u_0,Q(Q0), c_p(Q)=u_0(Q)/u_0(Q0)",
+    "mellin_total": "I_total=C^(-1/2)*integral_0^infinity sqrt(x)*K_(i*kappa)(x)^2 dx",
+    "mellin_closed_form": "integral_0^infinity x^(1/2)K_(i*kappa)(x)^2 dx=2^(-3/2)*Gamma(3/4)^2*Gamma(3/4+i*kappa)*Gamma(3/4-i*kappa)/Gamma(3/2)",
+    "normalized_declared_derivative": "at any zero-shell root, partial_lambda Gamma_1(u_lambda)|0/u_0(Q0)=-I_total/u_0(Q0)^2",
+    "finite_proxy_derivative": "partial_lambda u_lambda,Q(Q0)|0/u_0(Q0)=-I_plus/u_0(Q0)^2=-h(Q0)",
+    "normalized_left_correction": "I_minus/u_0(Q0)^2=I_total/u_0(Q0)^2-h(Q0)>0",
+    "K_scaled_partial_lambda_Gamma1_at_zero": "for the K-scaled zero-shell representative, partial_lambda Gamma_1|0=-u_0(Q0)*(I_total/u_0(Q0)^2); no finite nonzero-lambda K-normalized family is constructed",
+    "precision_ladder_decimal_digits": [80, 120],
+    "maximum_normalized_total_widths": ["1e-12", "1e-18"],
+    "maximum_normalized_left_widths": ["1e-10", "1e-16"],
+    "maximum_K_scaled_Gamma1_derivative_widths": ["1e-12", "1e-18"],
+    "maximum_reference_norm_bound_widths": ["1e-12", "1e-18"],
+    "maximum_nonzero_correction_per_unit_f_norm": "1e-3",
+    "ball_output_digits": 45,
+    "execution": "exact SymPy identities plus python-flint 0.9.0 Arb/acb elementary, Bessel and gamma balls; no ODE, quadrature, root solve, finite difference or unbounded numerical integration"
+  },
+  "assumptions": [
+    "The selected c_p,s_p reference pair and Gamma_1,p=0 line are fixed independently of lambda. Changing the reference pair with lambda would change the declared domain and is outside this calculation.",
+    "The nonzero-lambda operator bound is conditional only on u having finite declared minus-tail L2(f dQ) norm; it does not construct the plus-recessive u_lambda or evaluate its actual Gamma_1 value.",
+    "Each inherited kappa bracket contains at least one zero-shell characteristic root, but uniqueness is not assumed. Every zero-shell derivative enclosure is valid for any root lying in its full bracket.",
+    "At a zero-shell root, u_0,Q(Q0)=0 and u_0(Q0) is nonzero on the whole bracket, so ODE uniqueness gives c_p=u_0/u_0(Q0).",
+    "The Mellin identity and Bessel reality/order symmetry are analytic source guards. Complex balls are retained and their imaginary intervals must contain zero.",
+    "The right contribution h(Q0) is consumed from the prior direct Green endpoint result. Subtracting it from the independently ball-evaluated full Mellin total gives an outward but correlation-forgetting left-correction enclosure.",
+    "The two precision tiers use the same locked backend and are consistency refinements, not independent implementations.",
+    "A nonzero K-scaled partial_lambda Gamma_1 enclosure at zero is a local characteristic statement for one declared extension and one explicit zero-shell representative. It does not construct a finite nonzero-lambda K-normalized family and is not a physical spectral normalization, root velocity, global measure or RAQ result."
+  ],
+  "tasks": [
+    "verify all three upstream hashes, payload hashes, VALID_RUN states, verdicts and the alignment of five exact-rational kappa brackets",
+    "verify exactly the Wronskian derivative sign, integrated Gamma_1 identity, f=2a norm conversion, free-rotation comparison integrals, root proportionality, normalized derivative split and Mellin coefficient",
+    "on each full kappa bracket and at 80 and 120 digits, certify the endpoint K ball is real and excludes zero and the gamma-product Mellin total is finite, real-containing and positive",
+    "form the full normalized declared derivative magnitude I_total/u_0(Q0)^2, subtract the pinned right contribution h(Q0), and certify a strictly positive left-boundary correction on every bracket",
+    "form the explicitly K-scaled partial_lambda Gamma_1 enclosure at zero for any root in each bracket and certify that it excludes zero",
+    "certify the full minus-tail reference norm bound M_c and, on both punctured nonzero-lambda boxes, the correction-functional coefficient per unit L2(f) norm",
+    "require parameter-band coverage, width bounds, tier intersection and non-increasing high-precision widths; leave actual nonzero-lambda Weyl values, root continuation, spectral, RAQ, BFV, physics and TOE outputs null"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 1000,
+    "ball_bessel_evaluations": 20,
+    "ball_gamma_evaluations": 60,
+    "root_brackets": 5,
+    "nonzero_lambda_boxes": 2,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "actual_nonzero_lambda_plus_recessive_solution": null,
+    "actual_nonzero_lambda_Gamma1_value": null,
+    "nonzero_lambda_minus_end_remainder_for_a_constructed_solution": null,
+    "nonzero_lambda_root_continuation": null,
+    "finite_Q0_proxy_as_declared_Gamma1_away_from_zero": null,
+    "finite_Q0_endpoint_F_lambda_amplitude": null,
+    "root_velocity": null,
+    "unique_or_complete_zero_shell_root_census": null,
+    "nonreal_resolvent_or_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "general_p_mixing_extension_classification": null,
+    "canonical_p_zero_origin_sector": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all source pins, exact identities, full-band endpoint denominators, Mellin totals, positive left corrections, K-scaled zero-shell Gamma_1 derivatives, analytic reference-tail bounds, punctured lambda-box bounds, widths and tier intersections pass on all five brackets",
+      "verdict": "CERTIFY_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_ON_FIVE_BRACKETS",
+      "programme_impact": "CLOSE_THE_LAMBDA_ZERO_DECLARED_GAMMA1_DERIVATIVE_AND_EXPLICIT_LEFT_CORRECTION_ON_FIVE_BRACKETS_AND_BOUND_THE_NONZERO_LAMBDA_CORRECTION_FUNCTIONAL_WITHOUT_CLAIMING_AN_ACTUAL_NONZERO_LAMBDA_WEYL_SOLUTION_OR_RAQ"
+    },
+    {
+      "condition": "any source pin, identity, endpoint denominator, Mellin positivity, left-correction positivity, derivative nonzero, tail bound, lambda-box coverage, width or refinement check fails",
+      "verdict": "DECLARED_GAMMA1_BOUNDARY_VARIATION_NOT_CERTIFIED",
+      "programme_impact": "KEEP_THE_EXACT_FORMAL_IDENTITY_BUT_LEAVE_EVERY_FAILED_DECLARED_DERIVATIVE_OR_CORRECTION_BOUND_UNRESOLVED"
+    }
+  ]
+}
