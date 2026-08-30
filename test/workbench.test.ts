@@ -115,6 +115,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
       "cpt_temporal_folded_susy/CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json"
     ],
     [
+      "closed_s3_linear_scalar_adm_momentum_constraint_ledger",
+      "cpt_temporal_folded_susy/CLOSED_S3_LINEAR_SCALAR_ADM_MOMENTUM_CONSTRAINT_LEDGER_RESULT.json"
+    ],
+    [
       "v0_two_clock_relational_observable_comparison",
       "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json"
     ],
@@ -189,6 +193,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure",
       "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_GAMMA1_COARSE_ENCLOSURE_RESULT.json"
+    ],
+    [
+      "raw_c_actual_nonzero_lambda_hybrid_validated_transfer",
+      "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_HYBRID_VALIDATED_TRANSFER_RESULT.json"
     ],
     [
       "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",

@@ -357,6 +357,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "closed_s3_linear_scalar_adm_momentum_constraint_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_linear_scalar_adm_momentum_constraint_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_LINEAR_SCALAR_ADM_MOMENTUM_CONSTRAINT_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "v0_two_clock_relational_observable_comparison",
     script:
       "cpt_temporal_folded_susy/v0_two_clock_relational_observable_comparison.py",
@@ -524,6 +533,15 @@ export const reproCases = [
       "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure.py",
     output:
       "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_GAMMA1_COARSE_ENCLOSURE_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "raw_c_actual_nonzero_lambda_hybrid_validated_transfer",
+    script:
+      "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_hybrid_validated_transfer.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_HYBRID_VALIDATED_TRANSFER_RESULT.json",
     policy: "portable",
     compare: tight
   },
