@@ -2,7 +2,7 @@
   "schema_version": "ice.raw-c-actual-nonzero-lambda-hybrid-validated-transfer.input.v1",
   "calculation_id": "RawCActualNonzeroLambdaHybridValidatedTransfer",
   "numbered_phase": null,
-  "question": "Can the inherited actual plus-recessive direction and x>=3 Riccati barrier be joined to a theorem-grade local interval-Taylor transfer on a scale-free two-state system, closing a usable Gamma_1/u(-4) enclosure on root bracket 1 and both punctured real lambda boxes?",
+  "question": "Can the inherited x>=3 Riccati barrier be joined to a theorem-grade local interval-Taylor transfer of every barrier-admissible scale-free switch state, yielding an outer Gamma_1/u(-4) enclosure that necessarily contains the selected actual plus-recessive family on root bracket 1 and both punctured real lambda boxes?",
   "kind": "VALIDATED_RICCATI_BARRIER_LOCAL_INTERVAL_TAYLOR_AND_VOLTERRA_QUOTIENT_TRANSFER",
   "epistemic_scope": "ROOT_BRACKET_1_TWO_REAL_PUNCTURED_LAMBDA_BOXES_SCALE_FREE_GAMMA1_OVER_U_Q0_ONLY",
   "upstream_results": [
@@ -32,7 +32,7 @@
       "sha256": "add3bcf863d8c4e75092f308f206409b35aa8d7de04a0b613d50af1435d3645a",
       "payload_sha256_without_self": "b0e2ed530d1467e8b17d53ff6a99c1148774d435e5679029836b4d33fef1ea84",
       "required_verdict": "CERTIFY_COARSE_ACTUAL_NONZERO_LAMBDA_GAMMA1_ENCLOSURE_BRACKET1_ONLY",
-      "role": "pins the actual-family existence, barrier and complete rotating-frame tail bound that this calculation sharpens projectively"
+      "role": "pins actual-family existence, the barrier and the complete rotating-frame tail bound; this calculation transfers the full barrier-admissible outer switch box and does not newly sharpen the Q=4-to-switch actual direction"
     }
   ],
   "primary_sources": [
@@ -72,6 +72,7 @@
       {"label": "positive", "left": "1e-8", "right": "1e-4"}
     ],
     "plus_normalization": "The actual recessive direction selected upstream is rescaled at Q_switch so v(Q_switch)=1; the x>=3 rho barrier proves this divisor is positive.",
+    "switch_state_scope": "rho(Q_switch) is enclosed by the inherited full interval [-1,1]. The emitted state box therefore contains every barrier-admissible direction and only outer-encloses the selected actual direction; it is not a new sharp Q=4-to-Q_switch transport.",
     "switch_guard": "C*exp(Q_switch)>3, so rho=-u_Q/u-x-1/2 remains in [-1,1] and v_Q(Q_switch)=-(x+1/2+rho).",
     "compact_state": "Y=(v,v_Q), Y_Q=B(Q)Y, B=[[0,1],[A,0]], A=x^2+lambda*x^(3/2)/sqrt(C)-kappa^2.",
     "compact_partition": "16 exact-rational backward steps h=-11/160 from Q_switch=-29/10 to Q_0=-4.",
@@ -88,7 +89,7 @@
   "assumptions": [
     "Every conclusion is uniform only over the full inherited root bracket 1 and one displayed real lambda box at a time; root uniqueness is not assumed.",
     "The upstream actual-direction theorem and rho barrier are reused only on x>=3. The new local Taylor calculation starts at the exact rational Q_switch=-29/10 after an executable C*exp(Q_switch)>3 check.",
-    "The scale-free initial state discards only a nonzero common amplitude. It retains the full rho interval and therefore all selected actual directions admitted by the inherited barrier.",
+    "The scale-free initial state discards only a nonzero common amplitude. It retains the full rho interval, so the compact calculation validates an outer transfer for every barrier-admissible direction; the selected actual direction is contained in that outer family but is not separately localized at Q_switch.",
     "Every local Taylor remainder uses whole-step coefficient-derivative bounds, not a midpoint or floating-point residual.",
     "A useful scale-free enclosure does not make the Q=4-normalized absolute Gamma_1 narrow and does not by itself establish a root, spectrum, RAQ or physics."
   ],
@@ -142,8 +143,8 @@
   "decision_table": [
     {
       "condition": "all pins, exact identities, switch/barrier checks, 16 whole-step Taylor bounds, final amplitude exclusion, complete quotient-tail bound, lambda-zero Bessel regression, width gate and precision overlap pass",
-      "verdict": "CERTIFY_HYBRID_VALIDATED_ACTUAL_TRANSFER_SCALE_FREE_GAMMA1_BRACKET1_ONLY",
-      "programme_impact": "RECORD_A_USABLE_SCALE_FREE_ACTUAL_ENDPOINT_ENCLOSURE_AND_ITS_BOXWISE_ZERO_CONTAINMENT_WITHOUT_ROOT_CONTINUATION_SPECTRUM_RAQ_OR_PHYSICS"
+      "verdict": "CERTIFY_HYBRID_VALIDATED_BARRIER_ADMISSIBLE_OUTER_TRANSFER_SCALE_FREE_GAMMA1_BRACKET1_ONLY",
+      "programme_impact": "RECORD_A_USABLE_SCALE_FREE_OUTER_ENDPOINT_ENCLOSURE_CONTAINING_THE_ACTUAL_FAMILY_WITHOUT_CLAIMING_SHARP_Q4_TO_SWITCH_TRANSPORT_ROOT_CONTINUATION_SPECTRUM_RAQ_OR_PHYSICS"
     },
     {
       "condition": "any inclusion, remainder, denominator, width, regression or overlap check fails",

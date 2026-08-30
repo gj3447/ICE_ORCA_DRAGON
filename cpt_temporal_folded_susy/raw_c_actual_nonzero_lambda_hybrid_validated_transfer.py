@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Scale-free validated interval-Taylor transfer for the actual raw-C family.
+"""Scale-free validated interval-Taylor outer transfer for the raw-C family.
 
 The inherited Liouville--Green theorem selects the actual plus-recessive
 direction, and its Riccati barrier transports that direction to a rational
-switch with x>3.  This runner then removes the nonzero common amplitude,
-propagates the full two-component state by local Arb Taylor enclosures with
-whole-step remainders, and closes the Q<-4 quotient tail.  It is not a
-black-box numerical ODE solve, a root continuation, spectral data, or RAQ.
+switch with x>3.  This runner then removes the nonzero common amplitude and
+propagates the full barrier-admissible rho box by local Arb Taylor enclosures
+with whole-step remainders before closing the Q<-4 quotient tail.  The box
+contains the selected actual direction but does not newly localize that
+direction between Q=4 and the switch.  It is not a black-box numerical ODE
+solve, a root continuation, spectral data, or RAQ.
 """
 from __future__ import annotations
 
@@ -32,7 +34,7 @@ RUNNER_RELPATH = (
     "cpt_temporal_folded_susy/"
     "raw_c_actual_nonzero_lambda_hybrid_validated_transfer.py"
 )
-EXPECTED_INPUT_SHA256 = "6190adcb9cef9132100c8319fca6d6e1925f7e9f5792a91ec1b9bca0f95cc4d4"
+EXPECTED_INPUT_SHA256 = "131ffcbe20accf17ec65ed30a5ccbbc3d01fc0cb59386553da9953163cd77da0"
 CALCULATION_ID = "RawCActualNonzeroLambdaHybridValidatedTransfer"
 RESULT_SCHEMA = (
     "ice.raw-c-actual-nonzero-lambda-hybrid-validated-transfer.result.v1"
@@ -263,7 +265,9 @@ def complex_record(value: acb, digits: int) -> dict[str, Any]:
     }
 
 
-def verify_upstream(root: Path, item: dict[str, str]) -> dict[str, str]:
+def verify_upstream(
+    root: Path, item: dict[str, str]
+) -> tuple[dict[str, Any], dict[str, str]]:
     raw = (root / item["path"]).read_bytes()
     observed = sha256_bytes(raw)
     if observed != item["sha256"]:
@@ -278,7 +282,7 @@ def verify_upstream(root: Path, item: dict[str, str]) -> dict[str, str]:
             raise AssertionError(f"upstream {key} mismatch: {item['path']}")
     if result.get("numbered_phase") is not None:
         raise AssertionError("upstream numbered-phase convention drift")
-    return {
+    return result, {
         "path": item["path"],
         "sha256": observed,
         "payload_sha256_without_self": result["result_payload_sha256_without_self"],
@@ -454,7 +458,7 @@ def propagate_box(
     audit.ball_check(
         f"rawc.hybrid.{label}.tier{tier}.switch_barrier",
         switch_ok,
-        "The rational switch remains inside the inherited x>=3 no-node barrier and gives the full scale-free two-state entry box.",
+        "The rational switch remains inside the inherited x>=3 no-node barrier and gives the full barrier-admissible scale-free two-state outer box.",
         decimal_digits=dps,
         x_switch=interval_record(x_switch, digits),
         rho_switch=interval_record(rho_switch, digits),
@@ -639,6 +643,7 @@ def propagate_box(
             "Q": str(q_switch),
             "x": interval_record(x_switch, digits),
             "rho": interval_record(rho_switch, digits),
+            "state_scope": "FULL_INHERITED_BARRIER_ADMISSIBLE_OUTER_BOX_CONTAINING_SELECTED_ACTUAL_DIRECTION",
         },
         "compact_steps": step_records,
         "v_Q0": interval_record(v_zero, digits),
@@ -694,15 +699,28 @@ def main() -> None:
     ):
         raise AssertionError("resource, precision, topology or null-output drift")
 
+    expected_upstream_paths = [
+        "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json",
+        "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+        "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+        "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_GAMMA1_COARSE_ENCLOSURE_RESULT.json",
+    ]
+    if [item["path"] for item in config["upstream_results"]] != expected_upstream_paths:
+        raise AssertionError("upstream topology drift")
     root = Path(__file__).resolve().parent.parent
-    upstream = [verify_upstream(root, item) for item in config["upstream_results"]]
+    upstream: list[dict[str, str]] = []
+    upstream_payloads: dict[str, dict[str, Any]] = {}
+    for item in config["upstream_results"]:
+        payload, metadata = verify_upstream(root, item)
+        upstream.append(metadata)
+        upstream_payloads[item["path"]] = payload
     audit = Audit()
     exact_audit(audit)
     audit.guard(
         "rawc.hybrid.guard.actual_direction_and_barrier",
         "DLMF Liouville--Green actual recessive solution plus the pinned rho invariant-region proof",
         "The selected actual family is normalized at Q=4 and has rho in [-1,1] with u>0 while x>=3.",
-        "Only the direction at the rational switch is reused; no WKB proxy is substituted for the actual solution.",
+        "The full inherited rho box is reused at the rational switch. It outer-encloses the actual direction but neither substitutes a WKB proxy nor newly sharpens the Q=4-to-switch transport.",
     )
     audit.guard(
         "rawc.hybrid.guard.local_taylor_remainder",
@@ -713,7 +731,7 @@ def main() -> None:
     audit.guard(
         "rawc.hybrid.guard.scale_free_denominator",
         "Nonzero rescaling and quotient identity",
-        "The barrier makes the switch amplitude positive and the emitted Q0 amplitude interval must exclude zero before division.",
+        "The barrier makes the actual switch amplitude positive; the propagated full outer box must exclude zero at Q0 before division.",
         "The resulting g has the same zeros as Gamma_1 only within the certified parameter boxes; no root continuation is inferred.",
     )
     audit.guard(
@@ -725,12 +743,120 @@ def main() -> None:
     audit.guard(
         "rawc.hybrid.guard.scope",
         "Worktop scope separation",
-        "One inherited kappa bracket, two real lambda boxes, one fixed extension reference and same-backend 80/120-digit refinements.",
+        "One inherited kappa bracket, two real lambda boxes, the full barrier-admissible switch box, one fixed extension reference and same-backend 80/120-digit refinements.",
         "Absolute Q4-normalized Gamma_1 sharpness, global zeros, spectrum, RAQ, quantum gravity, physics and TOE remain null.",
     )
 
     conventions = config["declared_conventions"]
     bracket = conventions["root_bracket"]
+    bessel_result = upstream_payloads[expected_upstream_paths[1]]
+    root_row = bessel_result["certified_calculation"]["endpoint_characteristic"][
+        "root_rows"
+    ][0]
+    root_certificate = root_row["certified_high_precision_bracket"]
+    precision_120 = next(
+        item
+        for item in root_row["precision_runs"]
+        if item["decimal_digits"] == 120
+    )
+    bessel_root_linked = bool(
+        root_row["root_index"] == 1
+        and root_certificate["at_least_one_real_sign_changing_zero"] is True
+        and root_certificate["left_exact"] == bracket["left_exact"]
+        and root_certificate["right_exact"] == bracket["right_exact"]
+        and root_certificate["width_exact"]
+        == "1/20282409603651670423947251286016"
+        and precision_120["left_exact"] == root_certificate["left_exact"]
+        and precision_120["right_exact"] == root_certificate["right_exact"]
+        and precision_120["signs"] == [-1, 1]
+    )
+    audit.inequality(
+        "rawc.hybrid.upstream_bessel_root1_linkage",
+        bessel_root_linked,
+        "The configured root bracket is exactly the upstream root-1 120-digit sign-changing Bessel bracket, not merely a subinterval of (2,3).",
+        root_index=root_row["root_index"],
+        at_least_one_real_sign_changing_zero=root_certificate[
+            "at_least_one_real_sign_changing_zero"
+        ],
+        left_exact=root_certificate["left_exact"],
+        right_exact=root_certificate["right_exact"],
+        signs=precision_120["signs"],
+    )
+
+    plus_result = upstream_payloads[expected_upstream_paths[0]]
+    coarse_result = upstream_payloads[expected_upstream_paths[3]]
+    coarse_conventions = coarse_result["declared_conventions"]
+    coarse_scope = coarse_result["certified_calculation"]["parameter_scope"]
+    coarse_guards = {
+        item["id"]: item for item in coarse_result["theorem_guards"]
+    }
+    expected_coarse_normalization = (
+        "For each fixed real (kappa,lambda), rescale the actual DLMF recessive "
+        "solution so u_lambda(4)=A_lambda(4)^(-1/4)>0; this fixes amplitude and "
+        "leaves its logarithmic derivative unchanged."
+    )
+    expected_riccati_frame = (
+        "r=-u_Q/u and rho=r-x-1/2, used only on x>=3 where the barrier proves "
+        "rho in [-1,1] and u>0"
+    )
+    coarse_linked = bool(
+        plus_result["declared_conventions"]["Q_plus"]
+        == coarse_conventions["Q_plus"]
+        == conventions["Q_plus"]
+        == "4"
+        and coarse_conventions["Q_0"] == conventions["Q_0"] == "-4"
+        and coarse_conventions["C"] == conventions["C"] == "6*pi^2"
+        and coarse_conventions["x"] == "x=C*exp(Q)"
+        and coarse_conventions["barrier_switch_x"] == "3"
+        and coarse_conventions["root_bracket_index"] == 1
+        and coarse_conventions["lambda_boxes"] == conventions["lambda_boxes"]
+        and coarse_conventions["plus_normalization"]
+        == expected_coarse_normalization
+        and coarse_conventions["riccati_frame"] == expected_riccati_frame
+        and coarse_scope["root_index"] == 1
+        and coarse_scope["kappa_bracket"]["left_exact"]
+        == bracket["left_exact"]
+        and coarse_scope["kappa_bracket"]["right_exact"]
+        == bracket["right_exact"]
+        and coarse_guards["rawc.actual.guard.actual_recessive_normalization"][
+            "verified"
+        ]
+        is True
+        and coarse_guards["rawc.actual.guard.riccati_invariant_region"][
+            "verified"
+        ]
+        is True
+    )
+    audit.inequality(
+        "rawc.hybrid.upstream_actual_barrier_linkage",
+        coarse_linked,
+        "The compact outer transfer is bound to the upstream Q endpoints, root box, lambda boxes, actual-recessive normalization and x>=3 rho-barrier convention.",
+        Q_plus=coarse_conventions["Q_plus"],
+        Q_0=coarse_conventions["Q_0"],
+        barrier_switch_x=coarse_conventions["barrier_switch_x"],
+        root_index=coarse_scope["root_index"],
+        actual_recessive_normalization_guard=coarse_guards[
+            "rawc.actual.guard.actual_recessive_normalization"
+        ]["verified"],
+        riccati_invariant_region_guard=coarse_guards[
+            "rawc.actual.guard.riccati_invariant_region"
+        ]["verified"],
+    )
+
+    boundary_result = upstream_payloads[expected_upstream_paths[2]]
+    boundary_conventions = boundary_result["declared_conventions"]
+    audit.inequality(
+        "rawc.hybrid.upstream_gamma_boundary_linkage",
+        bool(
+            boundary_conventions["Q_0"] == conventions["Q_0"] == "-4"
+            and boundary_conventions["C"] == conventions["C"] == "6*pi^2"
+            and boundary_conventions["exact_nonzero_lambda_identity"]
+            == "Gamma_1,p(u_lambda)=u_lambda,Q(Q0)-lambda*integral_-infinity^Q0 a(Q)u_lambda(Q)c_p(Q)dQ"
+        ),
+        "The quotient-tail calculation uses the pinned nonzero-lambda Gamma_1 boundary identity at the same Q0 and C convention.",
+        Q_0=boundary_conventions["Q_0"],
+        identity=boundary_conventions["exact_nonzero_lambda_identity"],
+    )
     kappa_left = exact_rational(bracket["left_exact"])
     kappa_right = exact_rational(bracket["right_exact"])
     audit.inequality(
@@ -846,12 +972,12 @@ def main() -> None:
     ball_pass = all(item["passed"] for item in audit.ball)
     all_pass = bool(exact_pass and ball_pass)
     verdict = (
-        "CERTIFY_HYBRID_VALIDATED_ACTUAL_TRANSFER_SCALE_FREE_GAMMA1_BRACKET1_ONLY"
+        "CERTIFY_HYBRID_VALIDATED_BARRIER_ADMISSIBLE_OUTER_TRANSFER_SCALE_FREE_GAMMA1_BRACKET1_ONLY"
         if all_pass
         else "HYBRID_VALIDATED_TRANSFER_NOT_CERTIFIED"
     )
     programme_impact = (
-        "RECORD_A_USABLE_SCALE_FREE_ACTUAL_ENDPOINT_ENCLOSURE_AND_ITS_BOXWISE_ZERO_CONTAINMENT_WITHOUT_ROOT_CONTINUATION_SPECTRUM_RAQ_OR_PHYSICS"
+        "RECORD_A_USABLE_SCALE_FREE_OUTER_ENDPOINT_ENCLOSURE_CONTAINING_THE_ACTUAL_FAMILY_WITHOUT_CLAIMING_SHARP_Q4_TO_SWITCH_TRANSPORT_ROOT_CONTINUATION_SPECTRUM_RAQ_OR_PHYSICS"
         if all_pass
         else "RETAIN_THE_COARSE_ANALYTIC_ENCLOSURE_AND_RECORD_THE_FIRST_FAILED_CERTIFICATION_GATE"
     )
@@ -882,7 +1008,7 @@ def main() -> None:
             "parameter_tiers": tier_records,
             "precision_intersections": intersections,
             "interpretation": (
-                "The output is a scale-free actual-family endpoint and complete selected-reference quotient-tail enclosure. It does not make the Q4-normalized absolute Gamma_1 narrow and does not continue roots."
+                "The output is a scale-free endpoint and complete selected-reference quotient-tail outer enclosure for every barrier-admissible switch state. It contains the selected actual family but does not newly sharpen its Q4-to-switch direction, make Q4-normalized absolute Gamma_1 narrow, or continue roots."
             ),
         },
         "required_fail_closed_outputs": expected_nulls(),
