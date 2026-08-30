@@ -163,6 +163,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
       "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_CONFORMAL_V0_SCALAR_MATTER_CUBIC_VERTEX_LEDGER_RESULT.json"
     ],
     [
+      "closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger",
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_V0_SCALAR_MATTER_HH_BRACKET_CUTOFF_LEDGER_RESULT.json"
+    ],
+    [
       "raw_c_plus_endpoint_liouville_green_tail_bound",
       "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json"
     ],
@@ -181,6 +185,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
     [
       "raw_c_declared_gamma1_boundary_variation",
       "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json"
+    ],
+    [
+      "raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure",
+      "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_GAMMA1_COARSE_ENCLOSURE_RESULT.json"
     ],
     [
       "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",

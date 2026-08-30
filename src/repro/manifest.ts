@@ -465,6 +465,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_V0_SCALAR_MATTER_HH_BRACKET_CUTOFF_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "raw_c_plus_endpoint_liouville_green_tail_bound",
     script:
       "cpt_temporal_folded_susy/raw_c_plus_endpoint_liouville_green_tail_bound.py",
@@ -506,6 +515,15 @@ export const reproCases = [
       "cpt_temporal_folded_susy/raw_c_declared_gamma1_boundary_variation.py",
     output:
       "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure",
+    script:
+      "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_gamma1_coarse_enclosure.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_GAMMA1_COARSE_ENCLOSURE_RESULT.json",
     policy: "portable",
     compare: tight
   },
