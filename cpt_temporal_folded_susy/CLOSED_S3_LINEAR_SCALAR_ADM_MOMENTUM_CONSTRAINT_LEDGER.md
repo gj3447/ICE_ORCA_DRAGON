@@ -84,8 +84,34 @@ scalar-only \(DD\) closure.  It also leaves the Hamiltonian constraint,
 \(DH\), \(HH\), cubic contributions, Jacobi, BFV, anomaly and physics claims
 null.
 
-It is an implementation definition until executed through:
+## Observed result
+
+The controlled command
 
 ```text
 ./ice run closed_s3_linear_scalar_adm_momentum_constraint_ledger
 ```
+
+returned `VALID_RUN`, with 31/31 exact checks and three theorem/scope guards.
+The explicit mode results are
+
+\[
+n=2:\quad N_2^2=\frac{80}{3},\qquad
+D_{L_2}^{(1)}=L_2\left(\Pi_{E,2}-\frac83\Pi_{\zeta,2}\right),
+\]
+
+\[
+n=3:\quad N_3^2=120,\qquad
+D_{L_3}^{(1)}=L_3\left(\Pi_{E,3}-5\Pi_{\zeta,3}\right).
+\]
+
+Isolated reproduction returned `REPRO 1` with no item needing attention.  The
+final verdict is
+
+```text
+KEEP_UNIT_S3_LINEAR_SCALAR_ADM_MOMENTUM_CONSTRAINT_GENERATOR_NOT_FULL_HDA
+```
+
+The result establishes only the declared unit-\(S^3\) linear scalar
+momentum-generator projection.  All Hamiltonian, \(DD/DH/HH\), Jacobi,
+full-SVT, BFV, anomaly and physics outputs remain null.

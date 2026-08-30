@@ -35,7 +35,7 @@
 ## 1. 우선순위 결론
 
 현재 가장 빠른 1순위는 raw-\(C\)의 **actual nonzero-\(\lambda\)
-plus-recessive solution과 그 minus-end \(\Gamma_1\) remainder** 검증이다.
+plus-recessive Riccati direction을 \(Q=4\to Q_s\)에서 sharp하게 봉입하는 것**이다.
 scale-invariant differentiated plus-tail datum과 direct smooth Green endpoint는
 정확히 \(\lambda=0\), 다섯 root bracket에서 좁게 완료됐고, 2026-08-30에는
 선언한 fixed-reference \(\Gamma_1\) identity의 left correction 및 zero-shell
@@ -56,8 +56,8 @@ derivative도 좁게 닫혔다. 이유는 다음과 같다.
 
 | 순위 | 목표 | 현재 상태 | 성공 게이트 | 실패·반증 출력 | 후속 연결 |
 |---:|---|---|---|---|---|
-| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **coarse 부분 돌파**: root bracket 1×두 \(\lambda\) box에서 LG-selected actual family, finite endpoint rectangle와 full minus-tail \(\Gamma_1\) interval을 구성했으나 반경 \(\sim10^{1410}\), zero-contained | compact Grönwall을 Bessel/LG-preconditioned validated interval transfer로 교체해 usable-width endpoint/\(\Gamma_1\) enclosure를 얻고, 그 뒤에만 continuation/slope | domain dependence, left term 누락, enclosure 비중첩·폭발, normalization drift 또는 sharp tier 실패 | P4 |
-| P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; restricted zonal subvertices와 fixed-background matter \(HH\) packet까지 있음 | scalar/vector/TT와 gravity·lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, 누락 sector, cutoff tail 미측정 | P3 |
+| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **outer-transfer 부분 돌파**: full \(\rho(Q_s)\in[-1,1]\) family에서 \(v(-4)>0\), finite scale-free tail과 Bessel regression은 닫혔으나 width \(1.2032\)–\(1.2034\), fixed \(1/4\) gate 0/6 | actual \(Q=4\to Q_s\) \(\rho\)를 \([-1,1]\)보다 충분히 좁게 LG-preconditioned validated 봉입한 뒤 같은 compact/tail map 재적용 | actual-direction box가 안 좁아짐, width gate 재실패, domain/reference/normalization drift, tier 비중첩 | P4 |
+| P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; restricted zonal subvertices, fixed-background matter \(HH\), 그리고 scalar linear ADM momentum generator까지 있음 | scalar/vector/TT와 gravity·lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, transverse shift 누락, cutoff tail 미측정 | P3 |
 | P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | **scoped 부분 돌파**: zonal fixed-background matter \(HH\)에서 \(L=2\) omitted \(k=3\) remainder와 \(L=3,4\) 복구를 exact 분리 | full gravity+matter constraint의 \(DD,DH,HH\), Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
 | P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5 |
 | P5 | 고전 BFV charge와 quantum nilpotency/anomaly | 고전 charge는 P3에 의존; raw-\(C\) physical core 적용은 P4도 필요 | 실제 structure functions와 common invariant core에서 \(\Omega^2\) defect 분해 | ordering/domain/regulator/truncation defect를 구분해 기록 | P7 |
@@ -136,7 +136,7 @@ theorem/convention과 inclusion arithmetic의 1차 출처다. 실수성은 단�
 | `CLOSED_NARROW` | 같은 다섯 bracket 전체에서 scale-invariant \(h(4)=\partial_\lambda[-u'/u]_{\lambda=0}\) outward enclosure |
 | `CLOSED_NARROW` | 같은 다섯 bracket 전체에서 direct smooth \(J(-4)=-W(u,\partial_\lambda u)>0\)와 endpoint-only \(h(-4)>0\) outward enclosure |
 | `OPEN` | 각 bracket의 root uniqueness와 \([0,8]\) 전체 census completeness |
-| `OPEN_P1` | nonzero-\(\lambda\) minus-end \(\Gamma_1\) functional과 reference-field/left-boundary contribution |
+| `PARTIAL_P1` | nonzero-\(\lambda\) minus-end \(\Gamma_1/v(-4)\) outer functional과 reference tail은 finite하게 닫혔으나 sharp width/sign은 미완 |
 | `OPEN_P1` | 위 functional을 닫은 뒤의 declared endpoint \(F_\lambda\), eigenvalue slope 또는 root velocity |
 | `OPEN_P4` | nonreal Weyl \(m\), spectral measure, test space, rigging map, RAQ |
 | `NULL` | raw-\(C\)/selected-\(H\) quantum equivalence, physics, quantum gravity, TOE |
@@ -344,6 +344,30 @@ boundedness 있음`으로 이동했지만, sharp endpoint/sign/root continuation
 validated interval Taylor 또는 동등한 sharp transfer enclosure로 교체하는
 것이다. 같은 backend의 80/120-digit overlap은 독립 구현 검증이 아니다.
 
+### 2026-08-30 P1 barrier-outer interval-Taylor 판정
+
+`raw_c_actual_nonzero_lambda_hybrid_validated_transfer`는 compact Grönwall 대신
+16-step order-12 interval Taylor와 whole-step \(D_{13}|h|^{13}/13!\) remainder를
+실제로 적용했다. 단, \(Q_s=-29/10\) 입력은 actual trajectory의 sharp datum이
+아니라 inherited barrier 전체 \(\rho\in[-1,1]\)였다. 그러므로 이 계산은
+selected actual family를 포함하는 모든 barrier-admissible direction의 outer
+transfer다.
+
+관측 결과는 exact 14/14, Arb 113/119, guard 5, isolated `REPRO`다. 실패한 6개는
+모두 width \(<1/4\) gate이고, 나머지 여섯 tier는 \(v(-4)>0\), finite quotient
+tail, precision overlap을 만족했다. \(\lambda=0\) Bessel inclusion도 두 tier에서
+통과했다. width가 약 \(1.203\)으로 80/120 digits에서 거의 같다는 사실은 현재
+병목이 rounding이 아니라 switch-direction 폭임을 지목한다.
+
+따라서 P1의 다음 수는 `segment 수 증가`가 아니라 다음 한 문장이다.
+
+> root bracket 1과 두 \(\lambda\) box에서 actual plus-recessive
+> \(\rho(Q_s;\kappa,\lambda)\)를 \([-1,1]\)보다 충분히 좁게 outward
+> certify할 수 있는가?
+
+이 질문을 LG-preconditioned Riccati/Volterra transport로 별도 실행한 뒤에만
+현재 compact/tail map을 sharp actual family에 다시 적용한다.
+
 ## 3. P2–P3: closed-\(S^3\) ADM와 HDA
 
 현재 repository는 scalar-derived convention, full-sector **counting** ledger,
@@ -372,6 +396,14 @@ projected bracket 0과의 차이는 정확히 omitted \(k=3\) canonical channel�
 \(L=3,4\)에서는 그 channel이 복구되어 remainder가 0이 됐다. 이는 scoped
 classical matter identity와 cutoff provenance의 진전이며, full ADM/HDA/Jacobi나
 quantum BFV anomaly freedom의 증거는 아니다.
+
+별도 `closed_s3_linear_scalar_adm_momentum_constraint_ledger`는 unit-\(S^3\)
+scalar metric pair에 대해
+\(D_L^{(1)}=\sum L_n(\Pi_{E,n}-\lambda_n\Pi_{\zeta,n}/3)\)를 31/31 exact
+check로 고정했다. 이는 earlier longitudinal coordinate convention을 실제 ADM
+momentum projection과 연결한 진전이다. 그러나 gradient-shift commutator에 필요한
+transverse-vector sector, Hamiltonian constraint와 모든 \(DD/DH/HH\), Jacobi가
+빠져 있으므로 full HDA 진전으로 승격하지 않는다.
 
 고전 hypersurface-deformation algebra의 기준선은 Teitelboim/HKT이고,
 repository의 성공 게이트는 그 continuum identity를 인용하는 것이 아니라

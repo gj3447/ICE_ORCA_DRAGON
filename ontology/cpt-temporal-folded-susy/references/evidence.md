@@ -55,6 +55,30 @@ functional bound only: it constructs neither an actual nonzero-\(\lambda\) plus-
 \(u_\lambda\), nor its \(\Gamma_1\) value or minus-end remainder. Continuation/root velocity,
 spectrum/RAQ, physics, quantum gravity and TOE remain null.
 
+The non-numbered
+[`raw-c-actual-nonzero-lambda-hybrid-validated-transfer-result.json`](../evidence/raw-c-actual-nonzero-lambda-hybrid-validated-transfer-result.json)
+records the scale-free interval-Taylor outer pilot on root bracket 1. The raw
+run returned `VALID_RUN` with 14/14 exact and 113/119 Arb checks plus five
+theorem/scope guards, and isolated reproduction returned `REPRO`. All six
+parameter/precision tiers exclude zero from \(v(-4)\), close a finite complete
+quotient tail, and overlap across 80/120 digits; both exact \(\lambda=0\) Bessel
+containment regressions pass. The six failures are exactly the fixed width
+gate: widths \(1.2032\)–\(1.2034\) exceed \(1/4\), and every scale-free interval
+contains zero. The input is the full inherited \(\rho(Q_s)\in[-1,1]\) barrier box,
+so this is an outer enclosure of the selected actual direction, not a newly
+sharp \(Q=4\to Q_s\) actual transport. Root continuation, spectrum, RAQ,
+physics, quantum gravity and TOE remain null.
+
+The independent non-numbered
+[`closed-s3-linear-scalar-adm-momentum-constraint-ledger-result.json`](../evidence/closed-s3-linear-scalar-adm-momentum-constraint-ledger-result.json)
+records 31/31 exact checks and three theorem/scope guards for the declared
+unit-\(S^3\) linear scalar momentum generator. In the unnormalized
+scalar-derived tensor convention it obtains
+\(D_L^{(1)}=\sum_{n\ge2}L_n(\Pi_{E,n}-\lambda_n\Pi_{\zeta,n}/3)\) and fixes the
+\(n=2,3\), \(Q_1,Q_2\) projection ledger. Isolated reproduction returned
+`REPRO`. It contains no Hamiltonian constraint, transverse-vector shift,
+\(DD/DH/HH\), Jacobi, full SVT, BFV, anomaly or physics result.
+
 The same directory also contains the non-numbered [`gate1-straight-lift-end-admissibility-result.json`](../evidence/gate1-straight-lift-end-admissibility-result.json). Its schema-required `phase: P39` denotes inherited model provenance only; the payload records `numbered_phase=null` and creates no new phase. The later [`gate1-phase-locked-affine-field-end-analytic.json`](../evidence/gate1-phase-locked-affine-field-end-analytic.json) is explicitly execution-free analytic evidence, not a run snapshot: it records the exact phase-cancelled real-action identity, both uniform good-end limits, a smooth Phase-39-window-preserving connector, two independent algebra reviews, and strict full-cycle exclusions. The follow-up [`gate1-affine-phase-band-relative-class-analytic.json`](../evidence/gate1-affine-phase-band-relative-class-analytic.json) is also execution-free: it generalizes to continuous horizontal affine tails with a strict positive full-rate coefficient, proves their principal-band contraction, records the \(0<\lambda<2\) nonuniqueness family and the literal-real arm restriction as its oscillatory boundary, and preserves source-selection and global nulls after three independent read-only reviews. The consumed [`gate1-scalar-source-link-result.json`](../evidence/gate1-scalar-source-link-result.json) then records the one-shot exact comparison for a newly declared ordered scalar phase-space control on lapse tests supported away from \(N=0\); it does not create a numbered phase or recover a physical original cycle. The subsequent [`gate1-scalar-zero-lapse-invalid-run.json`](../evidence/gate1-scalar-zero-lapse-invalid-run.json) records a consumed `INVALID_RUN`: one exact check passed, the second hit a SymPy structural-equality false negative, no result was written, and no zero-lapse scientific verdict was promoted. The generic bounded [`gate1-bosonic-canonical-source-pushforward-result.json`](../evidence/gate1-bosonic-canonical-source-pushforward-result.json) then records the finite full-bosonic single-lateral obstruction and declared fiberwise complex-Gaussian branch without creating a numbered phase or closing Gate 1. The bounded [`gate1-trace-gauge-fp-admissibility-result.json`](../evidence/gate1-trace-gauge-fp-admissibility-result.json) records a genuine local simple-root trace reduction, kills only the unchanged-source static append, and redirects the open problem to a separately rederived gauge/action/endpoint/BFV source. Its bounded successor [`gate1-v0-trace-endpoint-action-result.json`](../evidence/gate1-v0-trace-endpoint-action-result.json) keeps one still narrower classical local on-shell fixed-\(\Phi_*\) relational endpoint action on a frozen closed-FRW \(V=0\) component. It keeps the raw-static, HTV improved-static, relational, and auxiliary mixed-polarization action ledgers distinct and leaves the off-shell, quantum endpoint-state, full BFV and full-real-lapse \(\delta(C)\) kernel construction open.
 
 The next bounded [`gate1-v0-offshell-darboux-chart-result.json`](../evidence/gate1-v0-offshell-darboux-chart-result.json) connects that shell result to an exact classical Darboux chart on the full open \(p>0,\ R>0\) component across arbitrary real \(c=C\). It recovers \(\Phi_*\) and \(B=P\) at \(c=0\), while keeping every other component, global atlas, normalized quantum endpoint transform, ghost/BFV source, full-real-lapse \(\delta(C)\) kernel and physical/global promotion open or null.
