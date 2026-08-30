@@ -1,0 +1,152 @@
+{
+  "schema_version": "ice.raw-c-actual-nonzero-lambda-gamma1-coarse-enclosure.input.v1",
+  "calculation_id": "RawCActualNonzeroLambdaGamma1CoarseEnclosure",
+  "numbered_phase": null,
+  "question": "For root bracket 1 and the two punctured real lambda boxes, can the actual plus-recessive raw-C solution normalized by u_lambda(4)=A_lambda(4)^(-1/4) be enclosed all the way to Q=-infinity, yielding a finite outward interval for the declared Gamma_1 without using an uncertified floating-point ODE solve?",
+  "kind": "BOUNDED_ANALYTIC_INTERVAL_ENCLOSURE_OF_ACTUAL_NONZERO_LAMBDA_RECESSIVE_SOLUTION_AND_DECLARED_GAMMA1",
+  "epistemic_scope": "ROOT_BRACKET_1_AND_TWO_PUNCTURED_LAMBDA_BOXES_ONLY; COARSE_EXISTENCE_AND_FINITE_OUTWARD_ENCLOSURE_NOT_ZERO_EXCLUSION_OR_SPECTRAL_DATA",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json",
+      "sha256": "ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39",
+      "payload_sha256_without_self": "0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c",
+      "required_verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY",
+      "role": "pins the uniform Q>=4 Liouville--Green existence and logarithmic-slope error budget"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e",
+      "payload_sha256_without_self": "5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN",
+      "role": "pins root bracket 1 and supplies the exact lambda=0 Bessel regression family"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+      "sha256": "4225653c8f5a7a39c24823de0994902c4c68afc33485b7bba35e4421dc964c87",
+      "payload_sha256_without_self": "a112d2c9b0ba2409218c71e94afae16fd685e866e012c88b8694a1992919eebe",
+      "required_verdict": "CERTIFY_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_ON_FIVE_BRACKETS",
+      "role": "pins the selected fixed-reference Gamma_1 identity and minus-tail convention"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, section 2.7(iii), Liouville--Green Approximation Theorem, equations 2.7.23--2.7.25",
+      "url": "https://dlmf.nist.gov/2.7.iii",
+      "used_for": "existence of the actual real recessive solution on Q>=4 and the inherited relative-amplitude and derivative error bound",
+      "not_used_for": "transport across the turning or oscillatory region, a narrow endpoint value, a zero of Gamma_1, a spectral measure or RAQ"
+    },
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified Bessel equation and derivative recurrences, sections 10.25 and 10.29",
+      "url": "https://dlmf.nist.gov/10",
+      "version": "DLMF 1.2.7, 2026-06-15",
+      "used_for": "the exact lambda=0 K_(i*kappa) regression solution and its Q derivative",
+      "not_used_for": "the nonzero-lambda solution or compact-interval enclosure theorem"
+    },
+    {
+      "source": "Fredrik Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+      "url": "https://arxiv.org/abs/1611.02831",
+      "version": "IEEE Transactions on Computers 66 (2017) 1281--1292",
+      "used_for": "outward-rounded elementary and complex Bessel ball inclusion semantics",
+      "not_used_for": "a validated numerical ODE backend; no ODE backend is used here"
+    }
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "Q_plus": "4",
+    "Q_0": "-4",
+    "C": "6*pi^2",
+    "x": "x=C*exp(Q)",
+    "fiber_equation": "u_lambda,QQ=A_lambda*u_lambda, A_lambda=x^2+lambda*x^(3/2)/sqrt(C)-kappa^2",
+    "root_bracket_index": 1,
+    "lambda_boxes": [
+      {"label": "negative", "left": "-1e-4", "right": "-1e-8"},
+      {"label": "positive", "left": "1e-8", "right": "1e-4"}
+    ],
+    "lambda_absolute_cap": "1e-4",
+    "plus_normalization": "For each fixed real (kappa,lambda), rescale the actual DLMF recessive solution so u_lambda(4)=A_lambda(4)^(-1/4)>0; this fixes amplitude and leaves its logarithmic derivative unchanged.",
+    "riccati_frame": "r=-u_Q/u and rho=r-x-1/2, used only on x>=3 where the barrier proves rho in [-1,1] and u>0",
+    "compact_transport": "Below x=3 use Z=(u,u_Q/kappa_min) and an outward matrix infinity-norm Gronwall envelope; this is analytic interval transport, not a numerical validated-ODE solver.",
+    "minus_tail": "For Q<=-4 use the free-rotation frame (u,u_Q/kappa), variation of constants and integrable potential/forcing norms to enclose the infinite tail directly.",
+    "Gamma_1": "Gamma_1(u_lambda)=u_lambda,Q(-4)-lambda*integral_-infinity^-4 a*u_lambda*c_p dQ, a=6*pi^2*exp(3Q/2), c_p(-4)=1, c_p,Q(-4)=0",
+    "precision_ladder_decimal_digits": [80, 120],
+    "ball_output_digits": 50,
+    "barrier_switch_x": "3",
+    "execution": "exact SymPy identities plus python-flint 0.9.0 Arb/acb outward balls; no floating-point ODE solve, root solve, quadrature, finite difference or sampling grid"
+  },
+  "assumptions": [
+    "Every statement is uniform only over the full inherited root bracket 1 and one displayed lambda box at a time; uniqueness of the lambda=0 root is not assumed.",
+    "The upstream Liouville--Green theorem is used to select the actual recessive solution direction. Rescaling it at Q=4 fixes amplitude but does not replace it with the WKB proxy.",
+    "The rho barrier is used only on x>=3. The later compact two-state bound remains valid through nodes and does not assume a sign for u.",
+    "The compact Gronwall enclosure is intentionally coarse. Finite outward enclosure, agreement of precision tiers and a closed infinite-tail remainder are success criteria; exclusion of zero is not.",
+    "The selected c_p and Gamma_1 convention is inherited verbatim. No other self-adjoint extension, p-mixing choice, spectral density, rigging map or physical interpretation is inferred."
+  ],
+  "tasks": [
+    "verify all pinned upstream hashes, payload hashes, verdicts and unnumbered VALID_RUN status",
+    "derive the x-form coefficient, Riccati/rho system, inward barrier signs, amplitude integral, compact two-state system, Volterra tail integrals and Gamma_1 identity exactly",
+    "for each precision tier and lambda box, prove the Q=4 actual-recessive slope interval lies inside rho in [-1,1] and prove both barrier boundaries point inward on 3<=x<=C*exp(4)",
+    "propagate an outward amplitude/state envelope through x=3 to Q=-4 without a numerical ODE call",
+    "enclose the complete Q<-4 tail and emit an actual finite Gamma_1 interval for each lambda box",
+    "check that the exact lambda=0 Bessel family under the same Q=4 amplitude normalization is contained by the zero-box envelope at Q=-4",
+    "require two precision tiers to overlap and retain their intersection without treating zero containment as failure",
+    "write root continuation, zero exclusion, sharp endpoint, spectral, RAQ and physics outputs as explicit nulls"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 2000,
+    "ball_bessel_evaluations": 12,
+    "precision_tiers": 2,
+    "root_brackets": 1,
+    "nonzero_lambda_boxes": 2,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "ode_calls": 0,
+    "sampling_points": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "validated_numerical_ODE_transport": null,
+    "sharp_actual_nonzero_lambda_endpoint_value": null,
+    "Gamma1_zero_exclusion": null,
+    "nonzero_lambda_root_continuation": null,
+    "root_velocity": null,
+    "unique_or_complete_zero_shell_root_census": null,
+    "nonreal_resolvent_or_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "general_p_mixing_extension_classification": null,
+    "canonical_p_zero_origin_sector": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all upstream pins, exact identities, LG start, barrier, finite compact/tail enclosure, lambda=0 regression and precision-overlap checks pass",
+      "verdict": "CERTIFY_COARSE_ACTUAL_NONZERO_LAMBDA_GAMMA1_ENCLOSURE_BRACKET1_ONLY",
+      "programme_impact": "RECORD_ACTUAL_RECESSIVE_FAMILY_EXISTENCE_AND_FINITE_OUTWARD_GAMMA1_INTERVALS_ON_BRACKET1_BOXES; DO_NOT_INFER_ZERO_EXCLUSION_ROOT_CONTINUATION_SPECTRAL_DATA_RAQ_OR_PHYSICS"
+    },
+    {
+      "condition": "any source pin, identity, positivity, barrier, finiteness, regression or precision-overlap check fails",
+      "verdict": "KILL_COARSE_ACTUAL_NONZERO_LAMBDA_GAMMA1_ENCLOSURE",
+      "programme_impact": "DO_NOT_USE_THIS_ANALYTIC_ENCLOSURE; RETAIN_ONLY_THE_PREVIOUS PLUS_TAIL_AND_LAMBDA_ZERO_RESULTS"
+    }
+  ]
+}
