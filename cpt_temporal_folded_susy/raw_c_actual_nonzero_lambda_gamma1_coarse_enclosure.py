@@ -381,7 +381,7 @@ def parse_lambda_boxes(cfg: dict[str, Any]) -> list[dict[str, Any]]:
     return boxes
 
 
-def lg_difference_bound(plus_data: dict[str, Any]) -> arb:
+def lg_budgets(plus_data: dict[str, Any]) -> tuple[arb, arb]:
     envelopes = plus_data["analytic_calculation"]["uniform_envelopes"]
     if envelopes["eta_bar"] != "1/100000":
         raise AssertionError("upstream eta drift")
@@ -391,7 +391,7 @@ def lg_difference_bound(plus_data: dict[str, Any]) -> arb:
         arb(6) * 9 * 7**2 * (arb(1) - arb(eta))
     )
     error = (v_bar / 2).exp() - 1
-    return 2 * error / (1 - error)
+    return error, 2 * error / (1 - error)
 
 
 def compute_envelope(
@@ -427,7 +427,7 @@ def compute_envelope(
     u4 = arb(1) / sqrt_a4.sqrt()
     r_w4 = sqrt_a4 + aq4 / (4 * a4)
     rho_w4 = r_w4 - x4 - arb(1) / 2
-    d_bound = lg_difference_bound(plus_data)
+    amplitude_error, d_bound = lg_budgets(plus_data)
     slope_error = arb((d_bound * sqrt_a4).upper())
     rho4 = interval_from_bounds(
         rho_w4.lower() - slope_error,
@@ -447,6 +447,7 @@ def compute_envelope(
         and a4.lower() > 0
         and u4.is_finite()
         and u4.lower() > 0
+        and amplitude_error.upper() < 1
         and rho4.lower() >= -1
         and rho4.upper() <= 1
         and abs(d_bound - upstream_decimal).upper() < arb("1e-20")
@@ -460,6 +461,9 @@ def compute_envelope(
         lambda_box=interval_record(lambda_band, digits),
         A_Qplus=interval_record(a4, digits),
         u_Qplus_normalized=interval_record(u4, digits),
+        inherited_relative_amplitude_error=interval_record(
+            amplitude_error, digits
+        ),
         rho_wkb_Qplus=interval_record(rho_w4, digits),
         inherited_log_slope_error=interval_record(symmetric_interval(slope_error), digits),
         actual_rho_Qplus=interval_record(rho4, digits),
@@ -811,7 +815,7 @@ def main() -> None:
         audit.ball_check(
             f"rawc.actual.{box['label']}.precision_overlap",
             overlap_ok,
-            "The independently evaluated 80- and 120-decimal-digit outward enclosures overlap in every retained state component and Gamma_1.",
+            "The same-backend 80- and 120-decimal-digit precision-refined outward enclosures overlap in every retained state component and Gamma_1.",
             intersections={
                 key: interval_record(value, digits) if value is not None else None
                 for key, value in intersections.items()
@@ -917,6 +921,14 @@ def main() -> None:
         "A finite numerical enclosure is not a raw-C spectrum, C/H quantum equivalence, quantum-gravity result, observation or TOE claim.",
     )
 
+    audit.inequality(
+        "rawc.actual.lambda_zero.bessel_call_count",
+        audit.bessel_evaluations
+        == expected_caps()["ball_bessel_evaluations"],
+        "Both lambda=0 precision tiers executed exactly the declared six K evaluations each.",
+        observed=audit.bessel_evaluations,
+        expected=expected_caps()["ball_bessel_evaluations"],
+    )
     passed = all(item["passed"] for item in audit.exact + audit.ball)
     verdict = (
         "CERTIFY_COARSE_ACTUAL_NONZERO_LAMBDA_GAMMA1_ENCLOSURE_BRACKET1_ONLY"
@@ -952,7 +964,7 @@ def main() -> None:
         },
         "certified_calculation": {
             "status": (
-                "CERTIFIED_COARSE_ACTUAL_RECESSIVE_FAMILY_AND_FINITE_GAMMA1_INTERVALS"
+                "CERTIFIED_COARSE_ANALYTIC_ENCLOSURE_FOR_LG_SELECTED_ACTUAL_FAMILY_AND_FINITE_GAMMA1_INTERVALS"
                 if passed
                 else "NOT_CERTIFIED"
             ),
@@ -989,7 +1001,7 @@ def main() -> None:
             },
             "scientific_readout": {
                 "computed_fact": "For every fixed real (kappa,lambda) in root bracket 1 times either punctured lambda box, the explicitly normalized actual plus-recessive solution has a finite outward Q=-4 state rectangle and a complete-half-line finite Gamma_1 interval.",
-                "interpretation": "This removes the prior actual-solution/existence-and-boundedness null only at a deliberately coarse local-box level.",
+                "interpretation": "Conditional on the pinned Liouville--Green theorem and selected Q=4 renormalization, this replaces the prior existence-and-boundedness null by a deliberately coarse analytic local-box enclosure; it is not a validated numerical ODE solution.",
                 "open_hypotheses": "Every nonzero-lambda Gamma_1 interval contains zero; no sign, zero, root continuation, uniqueness, spectral density, RAQ, C/H equivalence or physics conclusion follows.",
             },
             "next_mathematical_gap": "Replace the coarse compact Gronwall rectangle with a Bessel/Liouville--Green-preconditioned validated interval Taylor or equivalent sharp transfer enclosure before attempting Gamma_1 zero exclusion or continuation.",
