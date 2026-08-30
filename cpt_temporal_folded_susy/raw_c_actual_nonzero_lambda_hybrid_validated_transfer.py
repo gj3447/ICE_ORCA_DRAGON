@@ -595,7 +595,7 @@ def propagate_box(
     width_target = arb(
         exact_rational(config["declared_conventions"]["scale_free_width_target"])
     )
-    endpoint_ok = bool(
+    quotient_tail_closed = bool(
         denominator_ok
         and ratio is not None
         and correction is not None
@@ -604,12 +604,16 @@ def propagate_box(
         and correction.is_finite()
         and correction.lower() >= 0
         and scale_free_gamma.is_finite()
+    )
+    width_gate_passed = bool(
+        quotient_tail_closed
+        and scale_free_gamma is not None
         and interval_width(scale_free_gamma).upper() < width_target.lower()
     )
     audit.ball_check(
-        f"rawc.hybrid.{label}.tier{tier}.scale_free_gamma",
-        endpoint_ok,
-        "The Q0 amplitude excludes zero, the complete rotating-frame quotient tail is finite, and the scale-free Gamma_1 interval meets the preregistered absolute-width gate.",
+        f"rawc.hybrid.{label}.tier{tier}.quotient_tail_closure",
+        quotient_tail_closed,
+        "The Q0 amplitude excludes zero and the complete rotating-frame quotient tail gives a finite scale-free Gamma_1 outer interval.",
         v_Q0=interval_record(v_zero, digits),
         v_Q_Q0=interval_record(vq_zero, digits),
         Q0_amplitude_excludes_zero=denominator_ok,
@@ -631,6 +635,24 @@ def propagate_box(
             contains_zero(scale_free_gamma)
             if scale_free_gamma is not None
             else None
+        ),
+    )
+    audit.ball_check(
+        f"rawc.hybrid.{label}.tier{tier}.scale_free_width_gate",
+        width_gate_passed,
+        "The finite scale-free Gamma_1 outer interval meets the preregistered absolute-width target.",
+        scale_free_Gamma1=(
+            interval_record(scale_free_gamma, digits)
+            if scale_free_gamma is not None
+            else None
+        ),
+        observed_width=(
+            interval_record(interval_width(scale_free_gamma), digits)
+            if scale_free_gamma is not None
+            else None
+        ),
+        scale_free_width_target=str(
+            config["declared_conventions"]["scale_free_width_target"]
         ),
     )
 
@@ -665,7 +687,17 @@ def propagate_box(
             if scale_free_gamma is not None
             else None
         ),
-        "status": "CERTIFIED_TIER" if endpoint_ok else "TIER_NOT_CERTIFIED",
+        "quotient_tail_closed": quotient_tail_closed,
+        "width_gate_passed": width_gate_passed,
+        "status": (
+            "CERTIFIED_WIDTH_TIER"
+            if width_gate_passed
+            else (
+                "CERTIFIED_FINITE_OUTER_TIER_WIDTH_GATE_FAILED"
+                if quotient_tail_closed
+                else "TIER_NOT_CERTIFIED"
+            )
+        ),
     }
     return record, {
         "v": v_zero,
@@ -923,7 +955,7 @@ def main() -> None:
         kq_zero = -x_zero * (k_minus + k_plus) / 2
         bessel_ratio = kq_zero / k_zero
         regression_ok = bool(
-            zero_record["status"] == "CERTIFIED_TIER"
+            zero_record["quotient_tail_closed"] is True
             and k_zero.abs_lower() > 0
             and bessel_ratio.imag.lower() <= 0 <= bessel_ratio.imag.upper()
             and contains_interval(zero_balls["g"], bessel_ratio.real)
@@ -968,6 +1000,19 @@ def main() -> None:
         observed=audit.bessel_evaluations,
         expected=expected_caps()["ball_bessel_evaluations"],
     )
+    all_tier_records = [
+        record
+        for label in ("negative", "positive", "lambda_zero")
+        for record in tier_records[label]
+    ]
+    finite_outer_tiers = sum(
+        record["quotient_tail_closed"] for record in all_tier_records
+    )
+    width_gate_tiers = sum(record["width_gate_passed"] for record in all_tier_records)
+    bessel_regression_tiers = sum(
+        record["exact_Bessel_regression"]["status"] == "CONTAINED"
+        for record in tier_records["lambda_zero"]
+    )
     exact_pass = all(item["passed"] for item in audit.exact)
     ball_pass = all(item["passed"] for item in audit.ball)
     all_pass = bool(exact_pass and ball_pass)
@@ -1007,6 +1052,17 @@ def main() -> None:
         "validated_calculation": {
             "parameter_tiers": tier_records,
             "precision_intersections": intersections,
+            "partial_progress": {
+                "finite_outer_quotient_tail_tiers": finite_outer_tiers,
+                "finite_outer_quotient_tail_tier_total": len(all_tier_records),
+                "preregistered_width_gate_passed_tiers": width_gate_tiers,
+                "preregistered_width_gate_tier_total": len(all_tier_records),
+                "lambda_zero_Bessel_regression_contained_tiers": bessel_regression_tiers,
+                "lambda_zero_Bessel_regression_tier_total": len(
+                    tier_records["lambda_zero"]
+                ),
+                "scope": "Executable partial facts remain valid even when the aggregate preregistered width verdict fails.",
+            },
             "interpretation": (
                 "The output is a scale-free endpoint and complete selected-reference quotient-tail outer enclosure for every barrier-admissible switch state. It contains the selected actual family but does not newly sharpen its Q4-to-switch direction, make Q4-normalized absolute Gamma_1 narrow, or continue roots."
             ),
