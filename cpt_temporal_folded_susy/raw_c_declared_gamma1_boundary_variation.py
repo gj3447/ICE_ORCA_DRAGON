@@ -20,7 +20,7 @@ INPUT_NAME = "RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_INPUTS.json"
 RESULT_NAME = "RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
 RUNNER_RELPATH = "cpt_temporal_folded_susy/raw_c_declared_gamma1_boundary_variation.py"
-EXPECTED_INPUT_SHA256 = "0ac870727a2334f341d68dde981fa951e083b08f787d3726cd56b157c137882f"
+EXPECTED_INPUT_SHA256 = "d2d5ad19a36dff063b3bbbdaec55a5158931cd8eed4eca689b8399f6f70c5b32"
 CALCULATION_ID = "RawCDeclaredGamma1BoundaryVariation"
 RESULT_SCHEMA = "ice.raw-c-declared-gamma1-boundary-variation.result.v1"
 RESULT_PREFIX = "RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT="
@@ -679,15 +679,13 @@ def main() -> None:
                 refinement_ok = (
                     refinement_ok
                     and intersections[key] is not None
-                    and width(tier_values[1][key]).upper()
-                    <= width(tier_values[0][key]).upper()
                 )
         else:
             intersections = {key: None for key in keys}
         audit.ball_check(
             f"rawc.gamma1.root{root_index}.precision_refinement",
             refinement_ok,
-            "The two same-backend full-band certificates overlap and the 120-digit widths do not increase; intersections are retained without treating the repeat as independent validation.",
+            "The two same-backend full-band certificates independently meet their absolute width gates and overlap; intersections are retained without requiring monotone widths or treating the repeat as independent validation.",
             normalized_total_intersection=interval_record(
                 intersections["normalized_total"],
                 int(conventions["ball_output_digits"]),

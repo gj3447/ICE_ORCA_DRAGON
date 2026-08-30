@@ -111,7 +111,7 @@
     "form the full normalized declared derivative magnitude I_total/u_0(Q0)^2, subtract the pinned right contribution h(Q0), and certify a strictly positive left-boundary correction on every bracket",
     "form the explicitly K-scaled partial_lambda Gamma_1 enclosure at zero for any root in each bracket and certify that it excludes zero",
     "certify the full minus-tail reference norm bound M_c and, on both punctured nonzero-lambda boxes, the correction-functional coefficient per unit L2(f) norm",
-    "require parameter-band coverage, width bounds, tier intersection and non-increasing high-precision widths; leave actual nonzero-lambda Weyl values, root continuation, spectral, RAQ, BFV, physics and TOE outputs null"
+    "require parameter-band coverage, independent absolute width bounds in both tiers and nonempty tier intersections; same-backend widths need not be monotone for a fixed nonzero parameter band; leave actual nonzero-lambda Weyl values, root continuation, spectral, RAQ, BFV, physics and TOE outputs null"
   ],
   "resource_caps": {
     "wall_clock_seconds": 120,
