@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-28T07:31:00Z`; 1068 nodes, 3115 edges). Run and analytic-evidence details live in the
+`2026-08-30T16:05:00Z`; 1254 nodes, 3406 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 258/258 stored hashes (250 artifacts and 8 policies).
+verifies 339/339 stored hashes (331 artifacts and 8 policies).
 
 ## Quick answers
 
