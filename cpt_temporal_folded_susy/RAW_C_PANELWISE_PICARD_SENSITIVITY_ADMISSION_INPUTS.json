@@ -1,0 +1,57 @@
+{
+  "schema_version": "ice.raw-c-panelwise-picard-sensitivity-admission.input.v1",
+  "calculation_id": "RawCPanelwisePicardSensitivityAdmission",
+  "numbered_phase": null,
+  "question": "Do the committed sharp-direction and declared-Gamma_1 certificates contain the normalization-fixed nonzero-lambda sensitivity initial datum and panel tubes required to start a rigorous panelwise Picard/affine enclosure and make a sign-separation decision?",
+  "kind": "FAIL_CLOSED_PANELWISE_PICARD_AFFINE_SENSITIVITY_ADMISSION_AUDIT",
+  "epistemic_scope": "ROOT_BRACKET_1_TWO_PUNCTURED_REAL_LAMBDA_BOXES_PREREQUISITE_AUDIT_ONLY",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_ACTUAL_DIRECTION_SHARP_CONTRACTION_TRANSFER_RESULT.json",
+      "sha256": "3c02a76a45e8b8e054e03b6dabea7562b927b7d37585daa2a23cb442565c6453",
+      "payload_sha256_without_self": "f3c23fb49720a85a294493c0ba4e0f2f09caa6525186837248e490498fa23baa",
+      "required_verdict": "CERTIFY_ACTUAL_DIRECTION_SHARP_CONTRACTION_AND_SCALE_FREE_GAMMA1_WIDTH_BRACKET1_ONLY",
+      "role": "pins the six zero-containing scale-free endpoint intervals and records that the prior nonlinear term used only 0<=J_(rho^2)<=J_0"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+      "sha256": "4225653c8f5a7a39c24823de0994902c4c68afc33485b7bba35e4421dc964c87",
+      "payload_sha256_without_self": "a112d2c9b0ba2409218c71e94afae16fd685e866e012c88b8694a1992919eebe",
+      "required_verdict": "CERTIFY_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_ON_FIVE_BRACKETS",
+      "role": "pins the lambda-zero declared-boundary derivative while explicitly excluding an actual finite nonzero-lambda family"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json",
+      "sha256": "ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39",
+      "payload_sha256_without_self": "0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c",
+      "required_verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY",
+      "role": "pins the real plus-tail direction error, whose scope excludes a lambda derivative"
+    }
+  ],
+  "declared_conventions": {
+    "C": "6*pi^2",
+    "x": "C*exp(Q)",
+    "Q_plus": "4",
+    "Q_switch": "-29/10",
+    "riccati_equation": "rho_x=(2+1/x)*rho+(rho^2+kappa^2+1/4)/x-lambda*sqrt(x/C)",
+    "sensitivity_equation": "s_x=(2+(1+2*rho)/x)*s-sqrt(x/C), where s=partial_lambda rho under one fixed plus-end normalization",
+    "affine_panel_requirement": "Each x panel must carry an outward rho tube, a normalization-fixed s interval at its entering boundary, and a proved Picard remainder; endpoint sign is decided only from an actual declared Gamma_1 enclosure after the complete left-tail remainder.",
+    "execution": "exact SymPy identity audit and committed-result schema/payload checks only; no ODE solve, quadrature, root solve, finite difference, sampling or inferred sensitivity bound"
+  },
+  "required_prerequisites": [
+    {"id": "actual_nonzero_lambda_plus_normalized_sensitivity_at_Qplus", "description": "Outward partial_lambda rho(Q_plus) for the actual plus-recessive family under the panel normalization."},
+    {"id": "panelwise_actual_rho_tubes", "description": "Finite panel partition plus outward actual-rho tube on every panel, not merely global 0<=rho^2<=1."},
+    {"id": "actual_nonzero_lambda_declared_Gamma1_remainder", "description": "Sharp actual declared Gamma_1 endpoint functional with complete minus-tail remainder."}
+  ],
+  "primary_sources": [
+    {"source": "NIST DLMF, Liouville--Green approximation theorem", "url": "https://dlmf.nist.gov/2.7.iii", "used_for": "scope boundary of inherited real plus-tail direction control", "not_used_for": "a parameter derivative or panelwise Picard enclosure"},
+    {"source": "Eckhardt, Gesztesy, Nichols and Teschl, Weyl--Titchmarsh Theory for Sturm--Liouville Operators with Distributional Potentials", "url": "https://arxiv.org/abs/1208.4677", "used_for": "operator-theoretic boundary between real characteristic data and later spectral work", "not_used_for": "the repository-specific sensitivity certificate"},
+    {"source": "SymPy exact symbolic algebra", "url": "https://docs.sympy.org/", "used_for": "executable exact differentiation and algebraic residual checks", "not_used_for": "interval arithmetic or a validated ODE theorem"}
+  ],
+  "resource_caps": {"wall_clock_seconds": 120, "stdout_bytes": 262144, "stderr_bytes": 262144, "changed_artifact_files": 12, "changed_artifact_bytes": 1000000, "symbolic_operations": 64, "ode_calls": 0, "quadrature_calls": 0, "root_calls": 0, "finite_difference_calls": 0, "sampling_points": 0, "automatic_descendants": 0},
+  "required_fail_closed_outputs": {"panelwise_affine_rho_enclosure": null, "validated_nonzero_lambda_rho_sensitivity": null, "actual_declared_Gamma1_sign_separation": null, "nonzero_lambda_root_continuation": null, "root_velocity": null, "nonreal_resolvent_or_weyl_m_function": null, "raw_C_spectral_measure": null, "raw_C_RAQ_completion": null, "quantum_constraint_rescaling_equivalence": null, "physics_claim": null, "quantum_gravity_claim": null, "TOE_claim": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "automatic_next": null},
+  "decision_table": [
+    {"condition": "all three prerequisite objects are pinned with compatible normalization, complete remainders and outward arithmetic", "verdict": "PANELWISE_PICARD_AFFINE_SENSITIVITY_ADMISSION_READY", "programme_impact": "A separately specified bounded panelwise calculation may be formulated; this audit itself does not perform it."},
+    {"condition": "any prerequisite is absent, normalization-incompatible or only lambda-zero/functional data", "verdict": "PANELWISE_PICARD_AFFINE_SENSITIVITY_NOT_ADMITTED", "programme_impact": "Fail closed: retain the sharp direction result, emit no sensitivity, endpoint sign, continuation or spectral inference."}
+  ]
+}
