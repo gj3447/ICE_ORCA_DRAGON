@@ -1,0 +1,79 @@
+{
+  "schema_version": "ice.p7-closed-cosmology-likelihood-readiness-preflight.input.v1",
+  "calculation_id": "P7ClosedCosmologyLikelihoodReadinessPreflight",
+  "numbered_phase": null,
+  "question": "Do the pinned local P7 prerequisites support constructing a closed-universe primordial-to-CLASS/Cobaya likelihood adapter now?",
+  "kind": "PROVENANCE_PINNED_FAIL_CLOSED_READINESS_PREFLIGHT_NO_EXTERNAL_SOLVER",
+  "epistemic_scope": "READINESS_CLASSIFICATION_ONLY_NO_PRIMORDIAL_GENERATION_NO_CLASS_NO_COBAYA_NO_LIKELIHOOD",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/V0_TWO_CLOCK_RELATIONAL_OBSERVABLE_COMPARISON_RESULT.json",
+      "sha256": "f343f789f59299d1defac0a8d6ea8450236b2273459d00ee24453f679b68d58e",
+      "required_verdict": "KEEP_V0_CLASSICAL_SCALAR_AND_TRACE_MOMENTUM_CLOCKS_AGREE_ON_OVERLAP_Q_CLOCK_TURNS",
+      "payload_sha256_without_self": "4add4297e0aceef9bd1e8d49fa18537d14465a84899930ce238852907964c124"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT.json",
+      "sha256": "1f114845629f7f3ee1ea609af81a8804b65d5443912593a52e23d892957dfac3",
+      "required_verdict": "KEEP_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_LEDGER_NOT_COMPLETE_BASIS_OR_HDA",
+      "payload_sha256_without_self": "75a41075eb0a90f00e2d69ece7cf33508270c7ede986e612adcf8450e1d4f0d5"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_FULL_P_REGULAR_RAQ_COMPLETION_RESULT.json",
+      "sha256": "d9f789dfd38b9e719c016d0c1372c5a6d5c4c3198ce680a23fbc64178a474701",
+      "required_verdict": "KEEP_SELECTED_H_FULL_P_REGULAR_RAQ_DIRECT_SUM_NO_INHERITED_ORIGIN_ATOM",
+      "payload_sha256_without_self": "411a0bca48c89ce93de68fa09ecb25fd6c30699aa251e88b97d5b5298fb172d9"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/BFV_PARAMETRIZED_PARTICLE_GLUING_CALIBRATION_RESULT.json",
+      "sha256": "d373476f3e20f17c60431bb4fa21c22afda22087cb947e6257470f33c8c7ba3f",
+      "required_verdict": "CALIBRATED_PARAMETRIZED_PARTICLE_FINITE_BFV_NORMALIZATION_AND_GLUE_ONLY",
+      "payload_sha256_without_self": "32e0e3f018bf88ec6193b5edb4c3b9df2ff693727f676020b44291ccec8cd590"
+    }
+  ],
+  "supported_closed_s3_mode_convention": {
+    "scope": "Only source-pinned spectral bookkeeping inherited from CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT; not an explicit mode basis, a primordial spectrum, or a Boltzmann-code convention.",
+    "geometry": "unit round S3 with Ric_ab=2 gamma_ab and scalar curvature 6",
+    "scalar": "n>=0, lambda_n=n(n+2), degeneracy (n+1)^2",
+    "tensor": "TT n>=2, rough eigenvalue lambda_n-2, declared Lichnerowicz eigenvalue lambda_n+4, combined degeneracy 2(n-1)(n+3)",
+    "exceptional_modes": "scalar n=0 is constant; TT begins at n=2",
+    "primary_sources": [
+      {
+        "source": "Bonga, Gupt, Yokomizo, Inflation in the closed FLRW model and the CMB",
+        "url": "https://arxiv.org/abs/1605.07556",
+        "role": "navigation for closed-FLRW scalar perturbation conventions only"
+      },
+      {
+        "source": "Bonga, Gupt, Yokomizo, Tensor perturbations during inflation in a spatially closed Universe",
+        "url": "https://arxiv.org/abs/1612.07281",
+        "role": "navigation for closed-universe tensor perturbation conventions only"
+      }
+    ]
+  },
+  "readiness_gates": {
+    "common_raw_c_physical_product": {"status": "MISSING", "reason": "selected-H regular-shell RAQ is not a common raw-C physical product or raw-C rigging map"},
+    "quantum_clock_map": {"status": "MISSING", "reason": "V0 comparison is classical overlap only; its quantum clock map and clock-change unitarity are null"},
+    "v_nonzero_generation_model": {"status": "MISSING", "reason": "no selected V(phi), closed-FRW initial-data branch, or reproducible background export is pinned"},
+    "initial_quantum_state": {"status": "MISSING", "reason": "no vacuum/initial-state decision for discrete S3 scalar and tensor modes is pinned"},
+    "reheating": {"status": "MISSING", "reason": "no reheating parameterization or late-time transfer convention is pinned"},
+    "primordial_normalization": {"status": "MISSING", "reason": "no scalar/tensor spectrum table, Wronskian audit, or normalization map exists"},
+    "discrete_to_class_adapter": {"status": "MISSING", "reason": "no versioned discrete-n to CLASS primordial interface, interpolation policy, or non-flat benchmark exists"}
+  },
+  "official_navigation_pins_only": [
+    {"software": "CLASS", "version_pin": "v3.3.4", "commit_pin": "e858083", "checked_at_utc": "2026-08-31", "source_url": "https://github.com/lesgourg/class_public/tags", "role": "navigation only; this preflight must not import or invoke CLASS/classy"},
+    {"software": "Cobaya", "version_pin": "v3.6.2", "commit_pin": "899f30a", "checked_at_utc": "2026-08-31", "source_url": "https://github.com/CobayaSampler/cobaya/releases/tag/v3.6.2", "role": "navigation only; this preflight must not import or invoke Cobaya or a likelihood"}
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "numerical_samples": 0,
+    "external_solver_calls": 0,
+    "automatic_descendants": 0
+  }
+}
