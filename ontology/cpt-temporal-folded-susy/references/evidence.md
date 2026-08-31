@@ -162,6 +162,13 @@ bookkeeping. Four declared convention/scope guards are preserved in its payload,
 checks. No relative-homology class, physical/gravity lapse cycle, quantum pushforward, continuum
 determinant/Pfaffian line, or absolute measure is selected.
 
+The independent non-numbered
+[`closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-result.json`](../evidence/closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-result.json)
+preserves all 153 exact raw-result check IDs for a three-way zonal-scalar evaluator audit. For the frozen
+\(Q_1+Q_2\) packet, the declared \(N=2\) production grid folds \(Q_4\) into \(-Q_2\), while the separately
+exact tail-square factors over the \(N=2,3,4\) ladder are \(5,1,0\) in the declared units. This is an
+evaluator-versus-projection separation only: HDA, Jacobi, BFV, continuum and physics outputs remain null.
+
 [`RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md`](../../../cpt_temporal_folded_susy/RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md)
 is an execution-free blocker note, not a `research-run-evidence/v1` snapshot. It
 specifies why the finite double-precision nonreal proxy is not an actual recessive

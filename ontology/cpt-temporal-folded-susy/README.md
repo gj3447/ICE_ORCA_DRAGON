@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-31T03:49:35Z`; 1298 nodes, 3483 edges). Run and analytic-evidence details live in the
+`2026-08-31T04:21:13Z`; 1312 nodes, 3500 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 353/353 stored hashes (345 artifacts and 8 policies).
+verifies 359/359 stored hashes (351 artifacts and 8 policies).
 
 The 2026-08-31 bounded bridge snapshots add a fail-closed raw-\(C\) Picard-admission denial, a
 finite-cutoff nonreal-Weyl proxy, complex-scalar \(S^3\) SU(2) Gaunt golden data with a projection
@@ -16,6 +16,11 @@ selected relative-homology class, and a P7 likelihood preflight blocked by seven
 execution-free raw-\(C\) note also records why the finite nonreal proxy is not an interval endpoint
 certificate. None is a physical promotion: the remainder is neither HDA nor an anomaly, and no spectrum,
 CLASS/Cobaya likelihood, gravity BFV measure, or full HDA closure is claimed.
+
+The false-signal method map is separately indexed as a method boundary. Its first bounded zonal-scalar
+audit distinguishes the frozen \(N=2\) production alias \(Q_4\mapsto-Q_2\) from the independently exact
+hard-cutoff tail ladder \((5,1,0)\) at \(N=2,3,4\). That separation is not an HDA/Jacobi, anomaly,
+continuum, or physics result.
 
 ## Quick answers
 
