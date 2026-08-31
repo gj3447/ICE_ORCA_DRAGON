@@ -78,7 +78,7 @@ before the cutoff, so the deeper-cutoff state norm also made the nominal tail
 radius larger rather than smaller. This is an unresolved enclosure, not a
 Gamma_1 sign or root result.
 
-The raw first result is preserved with file SHA-256
+The raw first result is preserved in commit `76c5d1a` with file SHA-256
 `34453152467f2099f876992e99be9392686c6c32e6590b444a470d891368b67e`
 and payload SHA-256
 `859da3cac3545467147a7f751c151b17b26d3541b1e930a51be182553553add4`.
@@ -88,5 +88,37 @@ remain null.
 The narrow correction is to fix the symbolic audit typo and hand off to the
 already proved analytic rotating-frame tail at earlier cutoffs, before
 axis-aligned rotation wrapping dominates. This does not change the functional,
-root/lambda scope, width target or nonclaims. Any corrected runner and input
-must be committed before another controlled execution.
+root/lambda scope, width target or nonclaims. The corrected source and input
+were committed as `1d4eede` before the next controlled execution.
+
+## Corrected controlled execution: certified normalized functional
+
+The same control-plane command then returned `VALID_RUN` with verdict
+`CERTIFY_COMPLETE_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_FUNCTIONAL`.
+All 8 exact checks and all 541 executable controls passed; the three theorem
+guards were also recorded. The run used 480 compact Taylor steps, no black-box
+ODE solve, quadrature, root solve, finite difference, or sampling.
+
+The final intersections are:
+
+| lambda box | complete normalized \(g\) | local \(\partial_\lambda g\) |
+| --- | --- | --- |
+| \([-10^{-4},-10^{-8}]\) | \([-8.00901806745\times10^{-5},\ 9.89752287094\times10^{-5}]\) | \([-0.265406832808,-0.110106479154]\) |
+| \([10^{-8},10^{-4}]\) | \([-9.89742402344\times10^{-5},\ 8.00892542083\times10^{-5}]\) | \([-0.265404655305,-0.110106231584]\) |
+| \(\lambda=0\) regression | \([-5.56090587207\times10^{-10},\ 5.56089642650\times10^{-10}]\) | \([-0.265366343175,-0.110145226679]\) |
+
+Each displayed \(g\) enclosure contains zero. Each local derivative enclosure
+excludes zero and has width below the preregistered \(1/4\) target. This is a
+uniform interval fact on each displayed product box, but it does not establish
+an actual \(\Gamma_1\) sign, a correlated root curve, uniqueness, continuation,
+or root velocity. Those require a separately justified parameter/root
+localization rather than a mean-value inference across the puncture.
+
+The corrected raw result has file SHA-256
+`5568d2b857ed9f39385ec06c1cbe383b1cba8f3d133e9ba12a083d21c5202d2a`
+and payload SHA-256
+`7c11e75fea722c09ec58708ffb1943278d0b0b452a9fa622d707914953976413`.
+The input SHA-256 is
+`183a7c4fd1e2f5823338203ef9143212c572f5ca3a74f2e7450713e4a0b5dbdd`.
+All absolute-Gamma, sign, root, Weyl, spectral, RAQ, and physical outputs stay
+explicitly null.
