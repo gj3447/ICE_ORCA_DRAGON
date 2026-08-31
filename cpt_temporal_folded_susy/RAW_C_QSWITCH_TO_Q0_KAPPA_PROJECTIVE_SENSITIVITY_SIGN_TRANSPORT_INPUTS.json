@@ -1,0 +1,101 @@
+{
+  "schema_version": "ice.raw-c-qswitch-to-q0-kappa-projective-sensitivity-sign-transport.input.v1",
+  "calculation_id": "RawCQswitchToQ0KappaProjectiveSensitivitySignTransport",
+  "numbered_phase": null,
+  "kind": "bounded_exact_wronskian_sign_transport",
+  "question": "On the exact current correlated K times Lambda strip, does the selected actual projective kappa sensitivity h=partial_kappa rho have a uniform strictly negative one-sided bound at Q0=-4, using the hash-pinned Qswitch seed and Q0 endpoint chart only?",
+  "primary_sources": [
+    "Selection context inherited through the pinned upstream results: NIST DLMF section 2.7(iii), Liouville-Green approximation for the selected real plus-recessive family: https://dlmf.nist.gov/2.7#iii"
+  ],
+  "declared_conventions": {
+    "Q_switch": "-29/10",
+    "Q_0": "-4",
+    "x": "6*pi^2*exp(Q)",
+    "rho": "-U_Q/U-x-1/2",
+    "h": "partial_kappa rho at fixed lambda",
+    "actual_equation": "U_QQ=A*U",
+    "A": "36*pi^4*exp(2Q)+6*pi^2*lambda*exp(3Q/2)-kappa^2",
+    "variation": "Y=partial_kappa U; Y_QQ=A*Y-2*kappa*U",
+    "wronskian": "W=U*Y_Q-U_Q*Y; W_Q=-2*kappa*U^2",
+    "switch_normalization": "U(Qswitch)=1, Y(Qswitch)=0, Y_Q(Qswitch)=-h(Qswitch), hence W(Qswitch)=-h(Qswitch)=p_switch",
+    "Q0_projective_derivative": "h(Q0)=-W(Q0)/U(Q0)^2",
+    "kappa_corridor": {
+      "left_exact": "5125180435678962497905662710537123/2535301200456458802993406410752000",
+      "right_exact": "160320344939996106734739047604961/79228162514264337593543950336000"
+    },
+    "lambda_slab": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "analytic_Qswitch_p_floor": "kappa_left/20",
+    "Q0_amplitude_upper_strict": "7",
+    "Q0_amplitude_bound_provenance": "0<U(Q0)<7 from the hash-pinned full-corridor outward chart",
+    "Q0_h_one_sided_margin": "h(Q0)<-kappa_left/980<0",
+    "primary_source_scope": "The DLMF entry identifies the upstream selected-family context; this calculation's new step is the displayed exact Wronskian algebra over hash-pinned repository evidence and reuses no local method-source implementation.",
+    "derivative_scope": "two-sided partial_kappa derivative in the corridor interior and the corresponding one-sided derivative at each kappa face, at fixed lambda",
+    "execution": "exact SymPy identities and rational inequalities over two hash-pinned upstream results; no Bessel evaluation, ODE integration, quadrature, root solve, finite difference, sampling, panel, compact Taylor transfer or bisection"
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_QPLUS_TO_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_TRANSPORT_RESULT.json",
+      "sha256": "ea457a21883ca42c5759b145c997ba71a4af1f09a29fd6b813e8be47be007555",
+      "schema_version": "ice.raw-c-qplus-to-qswitch-kappa-projective-sensitivity-transport.result.v1",
+      "verdict": "CERTIFY_UNIFORM_NEGATIVE_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_ONLY",
+      "result_payload_sha256_without_self": "1bf352325b5e155a681700c66915469fb4431e0ef922f664bd77f29e5c8a0433",
+      "role": "pins the exact strip, selected-family linkage, finite-IVP derivative seed and exact analytic p_switch>kappa_left/20 floor"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json",
+      "sha256": "e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2",
+      "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1",
+      "verdict": "CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+      "result_payload_sha256_without_self": "277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee",
+      "role": "pins the same selected switch-normalized actual family, validated finite linear transfer and full-corridor nonzero U(Q0) endpoint chart; its Gamma face signs are not kappa-derivative evidence"
+    }
+  ],
+  "assumptions": [
+    "The Qswitch result supplies the existing fixed-lambda derivative seed and exact positive floor without imposing a new singular-endpoint C1 condition.",
+    "Standard smooth parameter dependence for the regular finite linear IVP propagates U and Y from Qswitch to Q0.",
+    "The sign-strip result supplies the same switch-normalized selected actual direction and a full-corridor outward Q0 amplitude interval strictly inside (0,7).",
+    "Possible intermediate zeros of U do not obstruct the regular linear U,Y,W evolution or this endpoint-only argument. Only U(Q0) is divided by; no pole-free projective chart on every interior Q is claimed.",
+    "The Wronskian identity supplies a one-sided sign margin only. It does not compute a two-sided numerical h(Q0) enclosure or any differentiated boundary functional."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_checks": 24,
+    "upstream_results": 2,
+    "method_sources": 0,
+    "kappa_corridors": 1,
+    "lambda_slabs": 1,
+    "ode_calls": 0,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "kernel_panels_evaluated": 0,
+    "compact_steps": 0,
+    "ball_bessel_evaluations": 0,
+    "bisection_steps": 0
+  },
+  "required_fail_closed_outputs": {
+    "two_sided_Q0_kappa_projective_sensitivity_enclosure": null,
+    "pole_free_projective_chart_on_open_Qswitch_Q0_leg": null,
+    "complete_normalized_G_kappa": null,
+    "reference_state_kappa_variation": null,
+    "complete_kappa_differentiated_minus_tail": null,
+    "kappa_lambda_mixed_derivative": null,
+    "root_transversality_or_uniqueness": null,
+    "continuous_root_selector_or_continuation": null,
+    "root_velocity": null,
+    "roots_outside_declared_corridor_or_global_census": null,
+    "absolute_actual_Gamma1_amplitude_or_sign": null,
+    "nonreal_weyl_m_function_or_spectral_measure": null,
+    "raw_C_RAQ_or_C_H_equivalence": null,
+    "BFV_or_physical_product": null,
+    "physics_claim": null
+  }
+}
