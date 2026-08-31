@@ -1,0 +1,94 @@
+{
+  "schema_version": "ice.raw-c-q0-normalized-differentiated-rotating-tail-gamma1.input.v1",
+  "calculation_id": "RawCQ0NormalizedDifferentiatedRotatingTailGamma1",
+  "numbered_phase": null,
+  "kind": "bounded_deterministic_interval_calculation",
+  "question": "For root bracket 1 and the two punctured real lambda boxes, can the Q0-normalized declared Gamma_1 quotient functional and its local lambda derivative be enclosed after a finite cutoff plus analytic rotating-frame tail?",
+  "primary_sources": [
+    "NIST DLMF, modified-Bessel and Wronskian conventions: https://dlmf.nist.gov/10",
+    "Johansson, Arb ball arithmetic: https://arxiv.org/abs/1611.02831"
+  ],
+  "declared_conventions": {
+    "C": "6*pi^2",
+    "Q_0": "-4",
+    "root_bracket": {
+      "left_exact": "41021725895035351653669248935583/20282409603651670423947251286016",
+      "right_exact": "1281928934219854739177164029237/633825300114114700748351602688"
+    },
+    "lambda_boxes": [
+      {"label": "negative", "left_exact": "-1/10000", "right_exact": "-1/100000000"},
+      {"label": "positive", "left_exact": "1/100000000", "right_exact": "1/10000"}
+    ],
+    "precision_ladder_decimal_digits": [80, 120],
+    "compact_taylor_order": 12,
+    "cutoff_segment_ladder": [
+      {"label": "cutoff_minus_10_coarse", "Q_cut": "-10", "segments": 24},
+      {"label": "cutoff_minus_10_refined", "Q_cut": "-10", "segments": 48},
+      {"label": "cutoff_minus_12", "Q_cut": "-12", "segments": 32}
+    ],
+    "boundary_map": "Gamma_1,p(u)=-lim_(Q->-infinity) W(u,c_p)",
+    "reference_equation": "c_p,QQ=A_0*c_p; c_p(-4)=1 and c_p,Q(-4)=0; c_p is lambda-independent",
+    "projective_normalization": "U=u/u(Q0), Z=partial_lambda U, so U(Q0)=1, U_Q(Q0)=r=-rho(Q0)-x0-1/2, Z(Q0)=0 and Z_Q(Q0)=-s(Q0)",
+    "functional": "g=Gamma_1,p(u)/u(Q0)=-W(U,c_p)(Q_cut)+tail; partial_lambda g=-W(Z,c_p)(Q_cut)+differentiated_tail",
+    "execution": "SymPy exact identities and python-flint Arb interval Taylor with analytic rotating-frame tail bounds; no black-box ODE, quadrature, root solve, finite difference or sampling",
+    "ball_output_digits": 45,
+    "local_derivative_width_target": "1/4"
+  },
+  "method_reuse": {
+    "path": "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_hybrid_validated_transfer.py",
+    "sha256": "662c372c6950666d9052d378ad1153e3e3a13f159a945ae25837fc8a309a49c3",
+    "role": "exact-rational parsing, outward interval primitives, coefficient-derivative and whole-step-majorant semantics only; no old result is evidence"
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_BESSEL_PRECONDITIONED_NODE_SAFE_SWITCH_TO_Q0_SENSITIVITY_TRANSFER_RESULT.json",
+      "sha256": "dd84bf217b119b910f7928a946f0133b0be5f6fd8e6061c7f2d9f844102c6d2a",
+      "payload_sha256_without_self": "0c7d40498a7f023a4c542d7da32f04febef9b004cd68473591dcb6e402e3c14d",
+      "required_verdict": "CERTIFY_FINITE_BESSEL_PRECONDITIONED_NODE_SAFE_SWITCH_TO_Q0_PROJECTIVE_SENSITIVITY_TRANSFER",
+      "role": "provides root-1 Q0-normalized rho and local projective sensitivity intersections"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+      "sha256": "4225653c8f5a7a39c24823de0994902c4c68afc33485b7bba35e4421dc964c87",
+      "payload_sha256_without_self": "a112d2c9b0ba2409218c71e94afae16fd685e866e012c88b8694a1992919eebe",
+      "required_verdict": "CERTIFY_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_ON_FIVE_BRACKETS",
+      "role": "pins the selected lambda-independent c_p reference and declared Gamma_1 Wronskian convention"
+    }
+  ],
+  "assumptions": [
+    "Every interval statement is uniform only on root bracket 1 and one displayed lambda box at a time; root uniqueness is not assumed.",
+    "The Q0 result supplies projective data only. The U(Q0)=1 normalization defines a quotient functional, not an absolute actual Gamma_1 amplitude.",
+    "The finite cutoff Taylor system is enlarged by a whole-step D13 bound on full parameter boxes. The omitted half-line is bounded analytically in rotating norms.",
+    "The lambda-zero row is a regression of the declared normalized derivative convention; no nonzero-lambda continuation through lambda=0 is inferred."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 768,
+    "compact_steps": 624,
+    "compact_taylor_order": 12,
+    "cutoff_segment_rows": 18,
+    "precision_tiers": 2,
+    "root_brackets": 1,
+    "nonzero_lambda_boxes": 2,
+    "ball_bessel_evaluations": 0,
+    "ode_calls": 0,
+    "root_calls": 0,
+    "quadrature_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0
+  },
+  "required_fail_closed_outputs": {
+    "actual_nonzero_lambda_declared_Gamma1_value": null,
+    "actual_declared_Gamma1_sign_separation": null,
+    "nonzero_lambda_root_continuation": null,
+    "root_velocity": null,
+    "nonreal_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_RAQ_completion": null,
+    "physical_or_empirical_claim": null
+  }
+}
