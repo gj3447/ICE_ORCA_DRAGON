@@ -71,6 +71,30 @@ No pole-free claim on every intermediate projective chart is needed or made:
 the linear $U,Y,W$ evolution remains regular through a possible intermediate
 zero, and only the already certified nonzero endpoint $U(Q_0)$ is divided by.
 
+## Observed result
+
+The controlled run returned `VALID_RUN` with verdict
+`CERTIFY_UNIFORM_NEGATIVE_Q0_KAPPA_PROJECTIVE_SENSITIVITY_ONLY`. All 9/9
+exact or structural checks and all three theorem-scope guards passed. The
+certified statement is exactly
+
+\[
+h(Q_0)<-\frac{\kappa_{\rm left}}{980}
+=-\frac{5125180435678962497905662710537123}
+        {2484595176447329626933538282536960000}<0.
+\]
+
+The endpoint chart reused by the proof is
+
+\[
+4.58064385278783566005740167935448502126555530
+<U(Q_0)<
+6.14669473244510418422732355435448502126555530.
+\]
+
+This closes the selected actual projective-sign leg to $Q_0$ only. It is a
+workbench calculation, not a model-level or empirical physics discovery.
+
 ## Explicit boundary
 
 Even a successful result is only a selected projective derivative sign at
@@ -84,9 +108,19 @@ spectral data, RAQ, BFV, physical product, likelihood or physics.
 
 The frozen input SHA-256 is
 `aec9d889b1a2a557bd0a3f8bd17d5224b1e29dae244403ff64b5a29d2addcab7` and
-the pre-run runner SHA-256 is
-`469a713097ccf64d1184e020d970ff1fab8977711045528b3a17316eab762d68`.
-Before the clean source commit, `jq empty`, `uv run python -m py_compile`,
-`git diff --check`, and `./ice status` passed. The source commit, first
-controlled `./ice run`, actual result hash and post-run validations remain to
-be recorded; this paragraph is not evidence that the calculation has run.
+the executed runner SHA-256 is
+`c821e103dbd65769ea478ea232230bc7ff42db35b96c68d9ff9375daf14e6272`.
+The clean source was introduced in commit
+`6d2a659475f5fbb787833e47d14c16e0e23f676b`. The first controlled
+`./ice run` stopped before writing a result because `python-flint` rejected a
+decimal string passed directly to `fmpq`; this parser defect carried no
+scientific result. Commit `e2c31f53124fc558aa530a108c2682dbc6b1f0b4`
+replaced it with the repository's exact `Fraction`-to-`fmpq` pattern. The
+second controlled run produced the 10,810-byte result with SHA-256
+`cf80dae45e381ecc92e0a5cff62c0255aba779637e511ab3942764d4ef0faaa3`
+and payload digest
+`7c89c3cdfd404b85374d1fc88896ea478678ad3c4088b931ef2172a40b117b9f`.
+Post-run `./ice ontology validate` passed with 1,525 nodes, 3,908
+edges, 429/429 verified hashes and zero errors; its 70 unresolved external
+bridge warnings were pre-existing. `npm run check` passed strict typechecking
+and all 69/69 tests.

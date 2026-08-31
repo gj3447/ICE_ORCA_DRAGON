@@ -1,0 +1,87 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_SIGN_TRANSPORT_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T16:16:05Z",
+  "command": "./ice run raw_c_qswitch_to_q0_kappa_projective_sensitivity_sign_transport",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_qswitch_to_q0_kappa_projective_sensitivity_sign_transport.py",
+    "sha256": "c821e103dbd65769ea478ea232230bc7ff42db35b96c68d9ff9375daf14e6272",
+    "introduced_in_commit": "6d2a659475f5fbb787833e47d14c16e0e23f676b"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "rawc.kappa_q0.wronskian_derivative",
+      "status": "PASS",
+      "statement": "For Y=partial_kappa U, W(U,Y)_Q=-2*kappa*U^2."
+    },
+    {
+      "id": "rawc.kappa_q0.projective_wronskian",
+      "status": "PASS",
+      "statement": "The endpoint projective derivative is h=partial_kappa rho=-W(U,Y)/U^2."
+    },
+    {
+      "id": "rawc.kappa_q0.switch_wronskian_seed",
+      "status": "PASS",
+      "statement": "With U(Qswitch)=1, Y(Qswitch)=0 and Y_Q(Qswitch)=-h_switch=p_s, W(Qswitch)=p_s."
+    },
+    {
+      "id": "rawc.kappa_q0.margin_factor",
+      "status": "PASS",
+      "statement": "The pinned p_switch>kappa_left/20 and 0<U(Q0)<7 imply the displayed strict negative margin -kappa_left/980."
+    },
+    {
+      "id": "rawc.kappa_q0.pinned_qswitch_sign_floor",
+      "status": "PASS",
+      "statement": "The hash-pinned Qswitch result matches the declared strip and supplies the selected-family sign floor and required finite-IVP/floor guards."
+    },
+    {
+      "id": "rawc.kappa_q0.pinned_selected_q0_chart",
+      "status": "PASS",
+      "statement": "The hash-pinned sign strip supplies the same selected family and validated full-corridor Q0 endpoint chart."
+    },
+    {
+      "id": "rawc.kappa_q0.q0_amplitude_margin",
+      "status": "PASS",
+      "statement": "The pinned outward full-corridor endpoint record has 0<U(Q0)<7, so the endpoint projective division is defined with the declared margin."
+    },
+    {
+      "id": "rawc.kappa_q0.strict_negative_margin",
+      "status": "PASS",
+      "statement": "The exact lower corridor endpoint makes kappa_left/980 strictly positive."
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "locator_policy": "Eight decision-bearing locators are indexed here; the authoritative raw result is the single source for all nine exact or structural checks and three theorem-scope guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_SIGN_TRANSPORT_RESULT.json",
+      "sha256": "cf80dae45e381ecc92e0a5cff62c0255aba779637e511ab3942764d4ef0faaa3",
+      "payload_sha256_without_self": "7c89c3cdfd404b85374d1fc88896ea478678ad3c4088b931ef2172a40b117b9f",
+      "exact_checks": 9,
+      "theorem_guards": 3,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_UNIFORM_NEGATIVE_Q0_KAPPA_PROJECTIVE_SENSITIVITY_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_SIGN_TRANSPORT_INPUTS.json",
+      "sha256": "aec9d889b1a2a557bd0a3f8bd17d5224b1e29dae244403ff64b5a29d2addcab7"
+    },
+    "executed_source_revision_commit": "e2c31f53124fc558aa530a108c2682dbc6b1f0b4",
+    "declared_scope": "The exact current correlated K times Lambda strip, fixed lambda, the same selected real plus-recessive projective family, Qswitch=-29/10 and the endpoint Q0=-4 only.",
+    "equation": "W=U*Y_Q-U_Q*Y with Y=partial_kappa U obeys W_Q=-2*kappa*U^2; h(Q0)=-W(Q0)/U(Q0)^2.",
+    "switch_floor": "W(Qswitch)=p_switch>kappa_left/20",
+    "endpoint_chart": {
+      "lower": "4.58064385278783566005740167935448502126555530",
+      "upper": "6.14669473244510418422732355435448502126555530"
+    },
+    "strict_h_Q0_upper_bound": {
+      "expression": "-kappa_left/980",
+      "exact": "-5125180435678962497905662710537123/2484595176447329626933538282536960000"
+    },
+    "boundary": "This is a selected real Q0 projective kappa-sensitivity sign and one-sided margin only. A two-sided h(Q0) enclosure, an interior pole-free chart, reference-state kappa variation, the complete differentiated minus tail, partial_kappa G, transversality, uniqueness, selector, velocity, global roots, absolute actual Gamma_1 amplitude/sign, nonreal Weyl data, spectral measure, RAQ, BFV and physics remain absent or null."
+  }
+}
