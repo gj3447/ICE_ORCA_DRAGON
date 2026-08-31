@@ -1,0 +1,137 @@
+{
+  "schema_version": "ice.closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit.input.v1",
+  "calculation_id": "ClosedS3ZonalScalarAliasingCutoffLadderAudit",
+  "numbered_phase": null,
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "primary_sources": [
+    {
+      "source": "G. S. Patterson and S. A. Orszag, Spectral Calculations of Isotropic Turbulence: Efficient Removal of Aliasing Interactions, Phys. Fluids 14 (1971) 2538",
+      "url": "https://doi.org/10.1063/1.1693365",
+      "used_for": "the distinction between transform-grid aliasing and the intended spectral convolution",
+      "not_used_for": "a theorem that Fourier dealiasing factors transfer unchanged to S3, or removal of a genuine Galerkin projection remainder"
+    },
+    {
+      "source": "S. A. Orszag, On the Elimination of Aliasing in Finite-Difference Schemes by Filtering High-Wavenumber Components, J. Atmos. Sci. 28 (1971) 1074",
+      "url": "https://doi.org/10.1175/1520-0469(1971)028%3C1074%3AOTEOAI%3E2.0.CO%3B2",
+      "used_for": "the historical high-mode filtering/dealiasing comparator",
+      "not_used_for": "a replacement for an exact basis-specific degree and quadrature certificate"
+    },
+    {
+      "source": "L. E. Kidder and L. S. Finn, Spectral Methods for Numerical Relativity: The Initial Data Problem, Phys. Rev. D 62 (2000) 084026",
+      "url": "https://arxiv.org/abs/gr-qc/9911014",
+      "used_for": "resolution-ladder and residual-convergence practice in a numerical-relativity constraint setting",
+      "not_used_for": "automatic exponential convergence, a full ADM constraint algebra, or an anomaly claim"
+    },
+    {
+      "source": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere, Gen. Rel. Grav. 49 (2017) 139",
+      "url": "https://arxiv.org/abs/1709.08020",
+      "used_for": "unit-S3 harmonic normalization and independent spectral identity context",
+      "not_used_for": "a complete repository real SVT basis, nonlinear Gaunt table, or HDA closure"
+    },
+    {
+      "source": "NIST Digital Library of Mathematical Functions, Chapter 18, Orthogonal Polynomials",
+      "url": "https://dlmf.nist.gov/18",
+      "used_for": "Chebyshev-U orthogonality and the exact Gauss-Chebyshev-U degree budget",
+      "not_used_for": "physical interpretation of a finite cutoff"
+    }
+  ],
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
+      "sha256": "5b6713ff2ad47dcc9effd42e01c71c1ae408320634b1f81098302b14dc0cebd4",
+      "payload_sha256_without_self": "863c7bf217b7d32eb0fb658139612361369fc5730a1549d20fb6029c74fc0166",
+      "required_verdict": "KEEP_CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_AND_HARD_CUTOFF_REMAINDER_LEDGER_NOT_ADM_OR_HDA",
+      "required_packet_id": "mixed_Q1_plus_Q2_at_N2",
+      "role": "pins the exact modal Q1+Q2 square and its true N=2 projection remainder"
+    }
+  ],
+  "declared_basis_and_evaluators": {
+    "basis": "Q_n(chi)=U_n(cos chi)/sqrt(2*pi^2), with integral_S3 Q_n Q_m=delta_nm",
+    "exact_modal_product": "Q_a Q_b=s sum_{j=0}^{min(a,b)} Q_{a+b-2j}, s=(2*pi^2)^(-1/2)",
+    "hard_cutoff": "P_N retains Q_0 through Q_N after the exact modal product is formed",
+    "grid_nodes": "x_j=cos(j*pi/(M+1)), j=1,...,M, with Gauss-Chebyshev-U weights",
+    "discrete_inner_product": "D_M(r,k)=2/(M+1) sum_j sin((r+1)theta_j) sin((k+1)theta_j)",
+    "overintegration_rule": "choose the smallest M with 2*M-1 >= N+2*d for a retained Q_k, k<=N, and a squared packet of maximum source degree d",
+    "production_rule": "M=N+1 nodes, audited rather than presumed dealiased",
+    "aliasing_defect": "grid-evaluated retained coefficient minus exact-modal retained coefficient",
+    "true_projection_remainder": "the exact-modal coefficients with degree greater than N"
+  },
+  "field_packet": {
+    "id": "frozen_Q1_plus_Q2",
+    "coefficients": {
+      "1": "1",
+      "2": "1"
+    },
+    "maximum_source_degree": 2,
+    "expected_full_square_factors_in_s_units": {
+      "0": "2",
+      "1": "2",
+      "2": "2",
+      "3": "2",
+      "4": "1"
+    }
+  },
+  "cutoff_ladder": [
+    {
+      "cutoff_N": 2,
+      "production_nodes_M": 3,
+      "overintegrated_nodes_M": 4,
+      "expected_true_projection_support": [3, 4],
+      "expected_true_projection_norm_squared_factor_in_s_squared_units": "5",
+      "expected_overintegrated_alias_factors_in_s_units": {},
+      "expected_production_alias_factors_in_s_units": {
+        "2": "-1"
+      },
+      "expected_production_alias_status": "NONZERO"
+    },
+    {
+      "cutoff_N": 3,
+      "production_nodes_M": 4,
+      "overintegrated_nodes_M": 4,
+      "expected_true_projection_support": [4],
+      "expected_true_projection_norm_squared_factor_in_s_squared_units": "1",
+      "expected_overintegrated_alias_factors_in_s_units": {},
+      "expected_production_alias_factors_in_s_units": {},
+      "expected_production_alias_status": "ZERO"
+    },
+    {
+      "cutoff_N": 4,
+      "production_nodes_M": 5,
+      "overintegrated_nodes_M": 5,
+      "expected_true_projection_support": [],
+      "expected_true_projection_norm_squared_factor_in_s_squared_units": "0",
+      "expected_overintegrated_alias_factors_in_s_units": {},
+      "expected_production_alias_factors_in_s_units": {},
+      "expected_production_alias_status": "ZERO"
+    }
+  ],
+  "required_fail_closed_outputs": {
+    "complete_real_scalar_basis_at_all_degrees": null,
+    "explicit_transverse_vector_basis": null,
+    "explicit_transverse_traceless_tensor_basis": null,
+    "full_scalar_vector_tensor_gaunt_ledger": null,
+    "full_adm_cubic_constraint_expansion": null,
+    "DD_DH_HH_constraint_brackets": null,
+    "classical_hypersurface_deformation_algebra_closure": null,
+    "classical_jacobi_closure": null,
+    "classical_bfv_charge": null,
+    "quantum_bfv_charge": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "continuum_limit": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
