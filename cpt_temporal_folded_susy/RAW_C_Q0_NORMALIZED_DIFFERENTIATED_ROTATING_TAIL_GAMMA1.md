@@ -39,8 +39,8 @@ none of that runner's result is evidence here.
 The six-state actual-derivative Taylor recurrence uses order 12 and complete
 \(D_{13}|h|^{13}/13!\) remainders on the full parameter boxes. It uses
 
-- \(Q_c=-10\) with 24 and 48 steps for discretization refinement;
-- \(Q_c=-12\) with 32 steps for a complete-tail cutoff control;
+- \(Q_c=-5\) with 16 and 32 steps for discretization refinement;
+- \(Q_c=-6\) with 32 steps for a complete-tail cutoff control;
 - 80- and 120-decimal Arb tiers.
 
 The left-tail radii bound both \(\lambda aUc_p\) and

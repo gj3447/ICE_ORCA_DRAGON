@@ -22,9 +22,9 @@
     "precision_ladder_decimal_digits": [80, 120],
     "compact_taylor_order": 12,
     "cutoff_segment_ladder": [
-      {"label": "cutoff_minus_10_coarse", "Q_cut": "-10", "segments": 24},
-      {"label": "cutoff_minus_10_refined", "Q_cut": "-10", "segments": 48},
-      {"label": "cutoff_minus_12", "Q_cut": "-12", "segments": 32}
+      {"label": "cutoff_minus_5_coarse", "Q_cut": "-5", "segments": 16},
+      {"label": "cutoff_minus_5_refined", "Q_cut": "-5", "segments": 32},
+      {"label": "cutoff_minus_6", "Q_cut": "-6", "segments": 32}
     ],
     "boundary_map": "Gamma_1,p(u)=-lim_(Q->-infinity) W(u,c_p)",
     "reference_equation": "c_p,QQ=A_0*c_p; c_p(-4)=1 and c_p,Q(-4)=0; c_p is lambda-independent",
@@ -68,7 +68,7 @@
     "changed_artifact_files": 12,
     "changed_artifact_bytes": 1000000,
     "symbolic_operations": 768,
-    "compact_steps": 624,
+    "compact_steps": 480,
     "compact_taylor_order": 12,
     "cutoff_segment_rows": 18,
     "precision_tiers": 2,
