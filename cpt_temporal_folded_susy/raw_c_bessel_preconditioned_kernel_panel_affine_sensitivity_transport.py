@@ -199,6 +199,25 @@ def interval_width(value: arb) -> arb:
     return arb(value.upper() - value.lower())
 
 
+def interval_product_hull(left: arb, right: arb) -> arb:
+    """Outward hull of the four endpoint products.
+
+    Arb's generic ball multiplication is rigorous but can be wider than the
+    real interval product when both operands have large off-zero radii.  The
+    endpoint hull retains the sign information needed by the MVT comparison.
+    """
+
+    products = [
+        arb(left.lower()) * arb(right.lower()),
+        arb(left.lower()) * arb(right.upper()),
+        arb(left.upper()) * arb(right.lower()),
+        arb(left.upper()) * arb(right.upper()),
+    ]
+    lower = min(value.lower() for value in products)
+    upper = max(value.upper() for value in products)
+    return interval_from_bounds(lower, upper)
+
+
 def contains_interval(outer: arb, inner: arb) -> bool:
     return bool(
         outer.lower() <= inner.lower() and outer.upper() >= inner.upper()
@@ -776,7 +795,9 @@ def main() -> None:
         rho0_switch, k_switch = bessel_rho(audit, x_switch, kappa_band)
         lambda_cap = exact_rational("1e-4")
         closed_lambda_band = bracket_band(-lambda_cap, lambda_cap)
-        closed_rho_plus = rho0_plus.real + closed_lambda_band * entering
+        closed_rho_plus = rho0_plus.real + interval_product_hull(
+            closed_lambda_band, entering
+        )
         sqrt_c = c_value.sqrt()
         t3 = arb(3) * arb(3).sqrt() / sqrt_c
         derivative_margin = (
@@ -844,8 +865,12 @@ def main() -> None:
         box_rows = []
         for item in lambda_boxes:
             lambda_band = bracket_band(item["left"], item["right"])
-            rho_plus = rho0_plus.real + lambda_band * entering
-            rho_switch = rho0_switch.real + lambda_band * refined_p_mvt
+            rho_plus = rho0_plus.real + interval_product_hull(
+                lambda_band, entering
+            )
+            rho_switch = rho0_switch.real + interval_product_hull(
+                lambda_band, refined_p_mvt
+            )
             if item["label"] == "negative":
                 side_ok = bool(
                     rho_plus.upper() < rho0_plus.real.lower()
