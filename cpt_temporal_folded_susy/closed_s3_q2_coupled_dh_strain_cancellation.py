@@ -15,12 +15,28 @@ def pin(root,x):
  return {k:x[k] for k in ("path","sha256","payload_sha256_without_self","required_verdict")}
 def D(s,n,t,x,a,c): return sp.expand(sum(x[i]*t[j]*z.gradient_triple(i,s,j,c) for i in range(n+1) for j in range(n+1)))
 def lieH(s,l,n,t,x,a,c): return sp.expand(sum(z.gradient_triple(k,s,l,c)*z.hamiltonian(k,n,t,x,a,c) for k in range(s+l+1)))
+def expected_nulls():
+ return {
+  "gravitational_hamiltonian_constraint":None,
+  "DD_bracket":None,
+  "HH_bracket":None,
+  "full_scalar_vector_tensor_completion":None,
+  "full_hypersurface_deformation_algebra":None,
+  "classical_jacobi_closure":None,
+  "classical_or_quantum_anomaly":None,
+  "BFV_or_BRST_charge":None,
+  "physics_claim":None,
+  "TOE_claim":None,
+  "global_promotion":"PROHIBITED",
+  "gate1":"OPEN_PARTIAL_PROGRESS",
+  "automatic_next":None,
+ }
 def main():
  if len(sys.argv)!=1: raise AssertionError("no args")
  raw=Path(__file__).with_name(I).read_bytes(); hs=sh(raw)
  if hs!=H: raise AssertionError("input hash")
  p=json.loads(raw)
- if p["schema_version"]!="ice.closed-s3-q2-coupled-dh-strain-cancellation.input.v1" or p["calculation_id"]!="ClosedS3Q2CoupledDHStrainCancellation" or p["numbered_phase"] is not None or p["resource_caps"]!={"wall_clock_seconds":120,"stdout_bytes":262144,"stderr_bytes":262144,"changed_artifact_files":12,"changed_artifact_bytes":1000000,"root_calls":0,"quadratures":0,"ode_calls":0,"automatic_descendants":0}: raise AssertionError("identity or cap drift")
+ if p["schema_version"]!="ice.closed-s3-q2-coupled-dh-strain-cancellation.input.v1" or p["calculation_id"]!="ClosedS3Q2CoupledDHStrainCancellation" or p["numbered_phase"] is not None or p["resource_caps"]!={"wall_clock_seconds":120,"stdout_bytes":262144,"stderr_bytes":262144,"changed_artifact_files":12,"changed_artifact_bytes":1000000,"root_calls":0,"quadratures":0,"ode_calls":0,"automatic_descendants":0} or len(p["controls"])!=3: raise AssertionError("identity, cap, or control-count drift")
  root=Path(__file__).resolve().parent.parent; pins=[pin(root,x) for x in p["upstream_results"]]
  for x in (p["reused_helper"],p["fixed_metric_provenance"]):
   if sh((root/x["path"]).read_bytes())!=x["sha256"]: raise AssertionError("helper pin")
@@ -46,7 +62,7 @@ def main():
   ck(rows,f"CS3Q2.L{n}.combined_identity",full+dg-lh,"Metric plus matter ambient bracket equals Lie transport.")
   ck(rows,f"CS3Q2.L{n}.projection",rem-sum(terms[k].subs(subs) for k in omitted),"Projection remainder is the omitted canonical-channel sum.")
   out.append({"cutoff_L":n,"ambient_cutoff":amb,"matter_bracket":str(sp.factor(full)),"lie_transport":str(sp.factor(lh)),"metric_bracket":str(sp.factor(dg)),"combined":str(sp.factor(full+dg)),"projection_remainder":str(sp.factor(rem)),"omitted_channels":omitted})
- ok=all(x["passed"] for x in rows); res={"schema_version":"ice.closed-s3-q2-coupled-dh-strain-cancellation.result.v1","calculation_id":p["calculation_id"],"numbered_phase":None,"run_status":"VALID_RUN","verdict":"KEEP_Q2_COUPLED_DH_STRAIN_CANCELLATION_NOT_FULL_ADM_HDA" if ok else "KILL_Q2_COUPLED_DH_PACKET","input_manifest":{"path":"cpt_temporal_folded_susy/"+I,"sha256":hs},"upstream_results":pins,"primary_sources":p["primary_sources"],"exact_checks":rows,"check_summary":{"exact_passed":sum(x["passed"] for x in rows),"exact_total":len(rows),"all_executable_checks_passed":ok},"rows":out,"metric_variation":{"H_zeta2":str(sp.factor(hz)),"H_E2":str(sp.factor(he)),"Dg_H":str(sp.factor(dg)),"direct_strain":str(sp.factor(strain))},"computed_scope":"selected Q2 metric-generator cancellation of selected fixed-metric scalar-matter DH strain only","non_claims":["gravitational Hamiltonian constraint","DD or HH brackets","full HDA or Jacobi","BFV/anomaly/physics"],"resource_accounting":{"root_calls":0,"quadratures":0,"ode_calls":0,"adjacent_result_files_written":1,"automatic_descendants":0},"runner":{"path":"cpt_temporal_folded_susy/closed_s3_q2_coupled_dh_strain_cancellation.py","sha256":sh(Path(__file__).read_bytes())},"environment":{"python":platform.python_version(),"sympy":sp.__version__}}
+ ok=all(x["passed"] for x in rows); res={"schema_version":"ice.closed-s3-q2-coupled-dh-strain-cancellation.result.v1","calculation_id":p["calculation_id"],"numbered_phase":None,"run_status":"VALID_RUN","verdict":"KEEP_Q2_COUPLED_DH_STRAIN_CANCELLATION_NOT_FULL_ADM_HDA" if ok else "KILL_Q2_COUPLED_DH_PACKET","input_manifest":{"path":"cpt_temporal_folded_susy/"+I,"sha256":hs},"upstream_results":pins,"primary_sources":p["primary_sources"],"declared_conventions":{"shift":"v^a=D_gamma^a Q2 with no a^-2 factor","lapse":"N=Q1","matter_packet":"theta=xi=Q1+Q2","metric_packet":"q_ab=a^2[gamma_ab+2 zeta2 Q2 gamma_ab+2 E2 S_ab(Q2)]","metric_generator":"D_g=Pi_E2-(8/3)Pi_zeta2","bracket_order":"{D_g+D_phi,H_phi[N]}"},"exact_checks":rows,"check_summary":{"exact_passed":sum(x["passed"] for x in rows),"exact_total":len(rows),"all_executable_checks_passed":ok},"rows":out,"metric_variation":{"H_zeta2":str(sp.factor(hz)),"H_E2":str(sp.factor(he)),"Dg_H":str(sp.factor(dg)),"direct_strain":str(sp.factor(strain))},"computed_scope":"selected Q2 metric-generator cancellation of selected fixed-metric scalar-matter DH strain only","non_claims":["gravitational Hamiltonian constraint","DD or HH brackets","full HDA or Jacobi","BFV/anomaly/physics"],"required_fail_closed_outputs":expected_nulls(),"resource_accounting":{"root_calls":0,"quadratures":0,"ode_calls":0,"adjacent_result_files_written":1,"automatic_descendants":0,"automatic_next":None},"runner":{"path":"cpt_temporal_folded_susy/closed_s3_q2_coupled_dh_strain_cancellation.py","sha256":sh(Path(__file__).read_bytes())},"environment":{"python":platform.python_version(),"sympy":sp.__version__}}
  res["result_payload_sha256_without_self"]=sh(cb(res)); encoded=cb(res)+b"\n";
  if len(encoded)>1000000: raise AssertionError("artifact cap")
  Path(__file__).with_name(R).write_bytes(encoded); print("CLOSED_S3_Q2_COUPLED_DH_STRAIN_CANCELLATION_RESULT="+json.dumps({"run_status":res["run_status"],"verdict":res["verdict"],"exact_passed":res["check_summary"]["exact_passed"],"exact_total":res["check_summary"]["exact_total"],"result":R},sort_keys=True))
