@@ -1,0 +1,48 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_S3_Q2_COUPLED_DH_STRAIN_CANCELLATION_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T07:16:43Z",
+  "command": "./ice run closed_s3_q2_coupled_dh_strain_cancellation",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/closed_s3_q2_coupled_dh_strain_cancellation.py",
+    "sha256": "8ccc862ee648055993d69bfa97456180a6747841fd2ebba2a86a0ef428ee8277",
+    "introduced_in_commit": "27bbddf4a694ee8e61a2333d4b1cb109e20467f7"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {"id": "CS3Q2.metric.action.lie", "status": "PASS", "statement": "The declared n=2 metric generator reconstructs the radial Lie metric variation."},
+    {"id": "CS3Q2.metric.bracket.minus_strain", "status": "PASS", "statement": "The canonical metric bracket is the negative of the separately computed fixed-metric matter strain."},
+    {"id": "CS3Q2.L2.combined_identity", "status": "PASS", "statement": "At L=2 the ambient metric-plus-matter bracket equals the declared Lie-lapse transport."},
+    {"id": "CS3Q2.L2.projection", "status": "PASS", "statement": "At L=2 the projected remainder is the separately reported omitted canonical-channel sum."},
+    {"id": "CS3Q2.L3.combined_identity", "status": "PASS", "statement": "At L=3 the ambient metric-plus-matter bracket equals the declared Lie-lapse transport."},
+    {"id": "CS3Q2.L3.projection", "status": "PASS", "statement": "At L=3 the projection remainder is the separately reported omitted canonical-channel sum, here zero."}
+  ],
+  "payload": {
+    "exact_checks": 6,
+    "locator_policy": "Six decision-bearing locators are indexed here; the authoritative raw result is the single source for all 13 exact checks.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_Q2_COUPLED_DH_STRAIN_CANCELLATION_RESULT.json",
+      "sha256": "18cf7bf3fc1ef05feee74091ffc6f360b6c3991e2c39466541ab1f09f6c7f7ef",
+      "payload_sha256_without_self": "65dd2b79b6a5a105369c258bf409fc123775fd0ca612d43595de3f839d2aa72c",
+      "exact_checks": 13,
+      "run_status": "VALID_RUN",
+      "verdict": "KEEP_Q2_COUPLED_DH_STRAIN_CANCELLATION_NOT_FULL_ADM_HDA"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_Q2_COUPLED_DH_STRAIN_CANCELLATION_INPUTS.json",
+      "sha256": "74be85e4fc3323d6b5807844a3994458b5c2ebb9fc33ff5cf9749dfe43b25b40"
+    },
+    "packet": "v=D_gamma Q2, N=Q1, theta=xi=Q1+Q2, D_g=Pi_E2-(8/3)Pi_zeta2, ambient-before-project L=2 and L=3",
+    "exact_decomposition": {
+      "combined_ambient_bracket_and_lie_transport": "(10*a^4+1)/(pi^2*a^3) at L=2 and L=3",
+      "matter_bracket": "-3*(2*a^4-3)/(pi^2*a^3)",
+      "metric_bracket": "8*(2*a^4-1)/(pi^2*a^3)",
+      "L2_projection_remainder": "5*(2*a^4+1)/(pi^2*a^3), omitted channel k=3",
+      "L3_projection_remainder": "0"
+    },
+    "boundary": "This supports only the selected Q2 coupled ambient DH cancellation after the fixed-metric strain is separated. It does not alter the prior fixed-metric matter-only contradiction or establish a gravitational Hamiltonian constraint, DD/HH, full HDA/Jacobi, BFV, anomaly, physics, or a successor calculation."
+  }
+}
