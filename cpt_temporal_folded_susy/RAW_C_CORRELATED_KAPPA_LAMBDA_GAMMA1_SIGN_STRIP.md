@@ -171,7 +171,7 @@ though the ball safely encloses the intended mathematical intersection. This
 is a control/representation defect, not a loss of the invariant theorem or a
 disjoint intersection.
 
-The corridor (Q_0) amplitude remained strictly positive,
+The corridor $Q_0$ amplitude remained strictly positive,
 
 \[
 v(Q_0)\in[4.5806438528,6.1466947325],
@@ -198,3 +198,54 @@ inside the exact set it safely encloses. The updated frozen input SHA-256 is
 the updated pre-run source SHA-256 is
 `fa47e78ffeda71ffd8867019cce0754fbc8e2c22c046465dc88597bd1df91b04`.
 No third execution is claimed before a clean source commit and bounded run.
+
+### Third execution: certified uniform IVT existence strip
+
+After control-fix commit `b1e9ed3`, the same bounded command returned
+`VALID_RUN` with verdict
+`CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA`.
+All 24 exact checks and all 66 numerical/structural controls passed; five
+theorem guards record the selected-family, Taylor, normalization, uniform-tail
+continuity, and fixed-lambda IVT scopes.
+
+The full corridor transfer certified
+
+\[
+v(Q_0)\in[4.58064385278784,6.14669473244511],
+\]
+
+so the switch-normalized amplitude stays nonzero on all of
+$K\times[-10^{-4},10^{-4}]$. The complete normalized face functionals are
+
+\[
+G(\kappa_L,\Lambda)\subset
+[-0.00234624000905,-0.00199293382730],
+\]
+
+\[
+G(\kappa_R,\Lambda)\subset
+[0.00199518991644,0.00235059807460].
+\]
+
+They have strict opposite signs for the same closed lambda slab. Joint real
+continuity and the fixed-lambda intermediate value theorem therefore certify
+
+\[
+\forall\lambda\in[-10^{-4},10^{-4}]\;\exists\kappa_\lambda\in
+(\kappa_L,\kappa_R):\Gamma_{1,\kappa_\lambda}(u_+)=0.
+\]
+
+The last equivalence uses only the uniformly nonzero $u_+(Q_0)$ chart. It
+does not determine an absolute amplitude. The final result file SHA-256 is
+`e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2`;
+its payload SHA-256 is
+`277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee`.
+The run used 3,072 kernel panels, 608 compact Taylor steps, and 24 Bessel-ball
+evaluations, with zero black-box ODE, quadrature, root, finite-difference,
+sampling, or bisection calls.
+
+This closes only strip-wise existence. Root uniqueness, a continuous root
+selector or continuation, kappa transversality, root velocity, roots outside
+the corridor, a global census, absolute Gamma_1 signs/amplitudes, nonreal
+Weyl data, spectral measure, RAQ, and every physics/empirical interpretation
+remain open or null.

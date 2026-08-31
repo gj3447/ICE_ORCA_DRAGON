@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-31T12:41:36Z",
+  "updated_at_utc": "2026-08-31T14:12:47Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -509,7 +509,7 @@
     },
     {
       "question": "What did the first-priority raw-C calculation actually close?",
-      "answer": "Priority 1 includes an exact backward-x sharp transfer whose six scale-free Gamma_1 proxy intervals are below 1/4 but still contain zero. The Bessel-anchored route then supplied a Q_switch certificate, a finite projective transfer to Q0=-4, and a separate complete rotating-tail enclosure of g=Gamma_1/u(Q0) and its local lambda derivative. On both punctured product boxes g has width below 1.80e-4 but contains zero, while gprime lies inside [-0.265407,-0.110106] and excludes zero. This is a normalized quotient result, not an absolute actual-Gamma_1 amplitude/sign or correlated-root result. Root existence/continuation/velocity, uniqueness/completeness, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
+      "answer": "Priority 1 includes an exact backward-x sharp transfer whose six scale-free Gamma_1 proxy intervals are below 1/4 but still contain zero. The Bessel-anchored route then supplied a Q_switch certificate, a finite projective transfer to Q0=-4, and a separate complete rotating-tail enclosure of g=Gamma_1/u(Q0) and its local lambda derivative. A later correlated sign-strip calculation keeps the selected Q0 chart nonzero and gives strictly negative/positive complete g face enclosures across lambda in [-1e-4,1e-4], so it certifies at least one zero of the selected declared Gamma_1 boundary functional in its open kappa corridor for every lambda in that slab. It is not an absolute actual-Gamma_1 amplitude/sign result or a unique/continuous correlated-root curve. Uniqueness, a selector, continuation/velocity, global completeness, nonreal m/spectral measure, RAQ and C-H equivalence remain open.",
       "claim_ids": [
         "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
         "claim:RAW_C_LAMBDA_ZERO_DIFFERENTIATED_PLUS_TAIL_H_QPLUS_HOLDS",
@@ -521,7 +521,8 @@
         "claim:RAW_C_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR_EXCLUDES_ZERO",
         "claim:RAW_C_BESSEL_PRECONDITIONED_KERNEL_PANEL_AFFINE_SWITCH_TRANSPORT_HOLDS",
         "claim:RAW_C_BESSEL_PRECONDITIONED_NODE_SAFE_Q0_PROJECTIVE_SENSITIVITY_TRANSFER_HOLDS",
-        "claim:RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_FUNCTIONAL_HOLDS"
+        "claim:RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_FUNCTIONAL_HOLDS",
+        "claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA"
       ]
     },
     {
@@ -547,11 +548,12 @@
     },
     {
       "question": "Why has this workbench not established new physics?",
-      "answer": "The newest records are scoped computational facts: a finite raw-C projective sensitivity transfer, a complete but zero-containing Q0-normalized Gamma_1 quotient with negative local derivative, a fixed-box nonreal branch precondition, an n=1 no-shear convention, and one selected Q2 coupled DH cancellation. They do not yet provide an absolute actual-Gamma_1 sign or correlated root, the nonreal m(z)-to-measure-to-RAQ chain, full S3 SVT/cubic DD-DH-HH/Jacobi closure, an operator common core and absolute BFV measure, or a physical product, clock, normalized V!=0 state, reheating map and comparison-ready observable. Computational novelty and consistency are therefore real progress, but no model-level or empirical physics discovery is established.",
+      "answer": "The newest records are scoped computational facts: a finite raw-C projective sensitivity transfer, a complete Q0-normalized Gamma_1 quotient with negative local derivative, and a uniform sign strip that gives at least one selected declared-boundary zero per lambda in one small real slab, plus a fixed-box nonreal branch precondition, an n=1 no-shear convention, and one selected Q2 coupled DH cancellation. They do not yet provide an absolute actual-Gamma_1 sign, a unique/continuous root selector or velocity, the nonreal m(z)-to-measure-to-RAQ chain, full S3 SVT/cubic DD-DH-HH/Jacobi closure, an operator common core and absolute BFV measure, or a physical product, clock, normalized V!=0 state, reheating map and comparison-ready observable. Computational novelty and consistency are therefore real progress, but no model-level or empirical physics discovery is established.",
       "claim_ids": [
         "claim:RAW_C_BESSEL_PRECONDITIONED_KERNEL_PANEL_AFFINE_SWITCH_TRANSPORT_HOLDS",
         "claim:RAW_C_BESSEL_PRECONDITIONED_NODE_SAFE_Q0_PROJECTIVE_SENSITIVITY_TRANSFER_HOLDS",
         "claim:RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_FUNCTIONAL_HOLDS",
+        "claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
         "claim:CLOSED_S3_N1_TRACE_ONLY_NO_INDEPENDENT_SHEAR_PAIR_HOLDS",
         "claim:CLOSED_S3_Q2_COUPLED_DH_METRIC_STRAIN_CANCELLATION_HOLDS",
         "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE"
@@ -1244,7 +1246,7 @@
     {
       "id": "reading-path:gate1-v0-formula-philosophy-to-quantum-gravity-frontier",
       "title": "From the selected V0 formula chain to the quantum-gravity frontier",
-      "summary": "Read the selected-H chain through the support-restricted spectral target and the finite relative Pfaffian orientation ledger, then distinguish the kinematic L=2 scalar remainder, scoped fixed-background matter-HH controls and the declared linear scalar momentum generator from full HDA closure. The raw-C lane proceeds from zero-containing sharp proxies through the Bessel-anchored Q_switch and Q0 projective certificates to a complete Q0-normalized rotating-tail quotient. Its g intervals still contain zero even though the local derivative intervals are negative; absolute actual-Gamma_1 sign and correlated roots remain open. Finish at raw-C/H equivalence, absolute BFV, full gravitational HDA/Jacobi, common-domain quantum anomaly, relational recovery and a V-not-equal-zero generation/reheating extension before likelihood. The path is navigation only and creates no automatic successor.",
+      "summary": "Read the selected-H chain through the support-restricted spectral target and the finite relative Pfaffian orientation ledger, then distinguish the kinematic L=2 scalar remainder, scoped fixed-background matter-HH controls and the declared linear scalar momentum generator from full HDA closure. The raw-C lane proceeds from zero-containing sharp proxies through the Bessel-anchored Q_switch and Q0 projective certificates to a complete Q0-normalized rotating-tail quotient and a small uniform sign strip: at least one selected declared-boundary zero per lambda, but no unique root selector, continuation or velocity. Absolute actual-Gamma_1 sign remains open. Finish at raw-C/H equivalence, absolute BFV, full gravitational HDA/Jacobi, common-domain quantum anomaly, relational recovery and a V-not-equal-zero generation/reheating extension before likelihood. The path is navigation only and creates no automatic successor.",
       "nodes": [
         "concept:gate1-v0-classical-positive-densitization",
         "concept:gate1-v0-densitized-flat-schrodinger-operator",
@@ -1302,6 +1304,9 @@
         "concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional",
         "claim:RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_FUNCTIONAL_HOLDS",
         "evidence:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional-result",
+        "concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip",
+        "claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+        "evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result",
         "claim:G1_V0_DIRECT_BEREZIN_AND_WEIGHTED_ZERO_GHOST_ELIMINATION_AGREE",
         "claim:G1_V0_UNWEIGHTED_ZERO_GHOST_DELETION_IS_A_VALID_TRAJECTORY_LEDGER",
         "concept:gate1-v0-classical-rescaling-versus-quantum-realization",
@@ -1326,7 +1331,7 @@
     {
       "id": "reading-path:gate1-v0-metacognitive-priority-to-observation",
       "title": "From the metacognitive priority map through the normalized raw-C tail functional to the observation gate",
-      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the lambda-zero endpoint controls, coarse family, sharp actual-direction contraction, the Q=4 and Q_switch anchors, the finite Q0 projective transfer, and the complete Q0-normalized rotating-tail quotient. The quotient g remains zero-containing while its local derivative is negative on both punctured boxes. Absolute actual-Gamma_1 sign, correlated roots and the nonreal spectral, S3/BFV and observational bridges remain open. Navigation only; it creates no automatic successor or physical promotion.",
+      "summary": "Read the local P1--P7 evidence/assumption/falsifier map, inspect the lambda-zero endpoint controls, coarse family, sharp actual-direction contraction, the Q=4 and Q_switch anchors, the finite Q0 projective transfer, the complete Q0-normalized rotating-tail quotient, and the uniform correlated sign strip. The strip establishes at least one selected declared-boundary zero per lambda in its stated small slab, not an absolute actual-Gamma_1 sign, a unique/continuous root selector or a velocity. The nonreal spectral, S3/BFV and observational bridges remain open. Navigation only; it creates no automatic successor or physical promotion.",
       "nodes": [
         "concept:gate1-v0-six-bridge-metacognitive-priority-map",
         "artifact:gate1-v0-six-bridge-metacognitive-priority-map",
@@ -1377,6 +1382,10 @@
         "scope:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional",
         "claim:RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_FUNCTIONAL_HOLDS",
         "evidence:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional-result",
+        "concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip",
+        "scope:raw-c-correlated-kappa-lambda-gamma1-sign-strip",
+        "claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+        "evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result",
         "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
         "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
         "open:gate1-v0-classical-s3-hda-closure",
@@ -1421,7 +1430,7 @@
     {
       "id": "reading-path:gate1-v0-current-physics-discovery-gap",
       "title": "From current computational facts to the still-open physics-discovery gate",
-      "summary": "Start with the current discovery-gap map, follow the P1 Q=4 sensitivity anchor through the Bessel-preconditioned Q_switch certificate, finite Q0 projective transfer and complete Q0-normalized rotating-tail quotient, then stop at its zero-containing g enclosure before any absolute-sign or correlated-root claim. Follow the P4 branch precondition and the n=1/Q2 S3 packets to their distinct endpoint obligations. Quantum BFV, absolute measure, relational state construction and empirical likelihood remain downstream. This is an epistemic dependency map only: it says that discovery is not established, not that new physics is absent.",
+      "summary": "Start with the current discovery-gap map, follow the P1 Q=4 sensitivity anchor through the Bessel-preconditioned Q_switch certificate, finite Q0 projective transfer, complete Q0-normalized rotating-tail quotient and the small correlated sign strip that gives at least one selected declared-boundary zero per lambda. Stop before an absolute-sign claim, a unique/continuous root selector, velocity or global root census. Follow the P4 branch precondition and the n=1/Q2 S3 packets to their distinct endpoint obligations. Quantum BFV, absolute measure, relational state construction and empirical likelihood remain downstream. This is an epistemic dependency map only: it says that discovery is not established, not that new physics is absent.",
       "nodes": [
         "concept:gate1-v0-current-physics-discovery-gap-map",
         "artifact:gate1-v0-current-physics-discovery-gap-map",
@@ -1437,6 +1446,9 @@
         "concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional",
         "claim:RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_FUNCTIONAL_HOLDS",
         "evidence:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional-result",
+        "concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip",
+        "claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+        "evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result",
         "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
         "concept:raw-c-fixed-box-nonreal-branch-audit",
         "evidence:raw-c-fixed-box-nonreal-branch-audit-result",
@@ -14323,10 +14335,10 @@
     {
       "id": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
       "type": "open_problem",
-      "title": "Raw-C absolute Gamma_1 sign and correlated-root localization",
-      "summary": "Priority 1 now reaches a complete Q0-normalized rotating-tail quotient g=Gamma_1/u(Q0) and local derivative on root bracket 1 and both punctured lambda boxes. The g enclosures have width below 1.80e-4 but contain zero; the local gprime enclosures are strictly negative. This does not determine the sign or amplitude of actual Gamma_1, correlate kappa with lambda on a characteristic root curve, transport a mean-value quotient across the puncture, or prove root existence, uniqueness, continuation or velocity. Those parameter/root localization and amplitude-orientation obligations remain active; nonreal spectral and RAQ outputs are separate open problems.",
-      "state": "PRIORITY_1_COMPLETE_Q0_NORMALIZED_TAIL_ZERO_CONTAINING_ABSOLUTE_GAMMA1_SIGN_AND_CORRELATED_ROOT_OPEN",
-      "question": "Can a separately justified kappa-lambda localization, together with any required absolute amplitude/orientation control, exclude zero for the actual Gamma_1 or establish a characteristic root before any continuation, spectrum or RAQ inference?"
+      "title": "Raw-C root selector, continuation and absolute Gamma_1 orientation",
+      "summary": "Priority 1 now has a complete Q0-normalized rotating-tail quotient g=Gamma_1/u(Q0), local derivative data, and a correlated sign strip on the declared open kappa corridor and lambda slab [-1e-4,1e-4]. The Q0 chart is uniformly nonzero and the complete g face enclosures have opposite strict signs, so the selected declared Gamma_1 boundary functional has at least one zero per lambda in that slab. This does not determine the sign or amplitude of actual Gamma_1 away from those zeros, a unique or continuous kappa(lambda) selector, a mean-value quotient across lambda=0, continuation/velocity, or a global root census. Those localization and amplitude-orientation obligations remain active; nonreal spectral and RAQ outputs are separate open problems.",
+      "state": "PRIORITY_1_UNIFORM_DECLARED_BOUNDARY_ZERO_STRIP_SUPPORTED_UNIQUENESS_SELECTOR_VELOCITY_ABSOLUTE_GAMMA1_AND_SPECTRAL_OPEN",
+      "question": "Can a separately justified transversality/injectivity or other selector argument turn the local at-least-one-zero-per-lambda strip into a unique continuous characteristic root with certified velocity, while keeping absolute-amplitude/orientation, global root census, spectrum and RAQ claims separate?"
     },
     {
       "id": "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
@@ -15001,8 +15013,16 @@
     {"id":"artifact:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional-runner","type":"artifact","title":"Raw-C Q0-normalized differentiated rotating-tail runner","summary":"Bounded exact/Arb six-state interval-Taylor and analytic complete-tail runner with no black-box ODE, quadrature, root solve, finite difference or sampling.","state":"TRACKED_VALID_RUNNER","artifact_kind":"runner","path":"cpt_temporal_folded_susy/raw_c_q0_normalized_differentiated_rotating_tail_gamma1.py","sha256":"3b5bc0c4c112208c84502aca38737b591ff0c9782cdea18ff95d9be751e174a3"},
     {"id":"artifact:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional-result","type":"artifact","title":"Raw-C Q0-normalized differentiated rotating-tail raw result","summary":"Raw-result SSOT: VALID_RUN complete normalized functional certificate with payload digest 7c11e75fea722c09ec58708ffb1943278d0b0b452a9fa622d707914953976413.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_RESULT.json","sha256":"5568d2b857ed9f39385ec06c1cbe383b1cba8f3d133e9ba12a083d21c5202d2a"},
     {"id":"artifact:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional-report","type":"artifact","title":"Raw-C Q0-normalized differentiated rotating-tail report","summary":"Human-readable equations, failed first enclosure, corrected early-tail handoff, certified quotient/derivative intervals, hashes and explicit nonclaims.","state":"TRACKED_VALID_RUN_REPORT","artifact_kind":"report","path":"cpt_temporal_folded_susy/RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1.md","sha256":"0f7a63499bae03be96c3e8c0b0e18717984161ece4e615172a3a17e28872a4a4"},
+    {"id":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip","type":"concept","title":"Raw-C correlated kappa-lambda Gamma_1 sign strip","summary":"A bounded correlated real parameter slab uses the nonzero selected Q0 chart and complete normalized rotating-tail evaluations on two kappa faces. Uniform opposite face signs give a projective intermediate-value existence statement for the selected declared Gamma_1 boundary functional only.","state":"COMPLETED_UNIFORM_NORMALIZED_SIGN_STRIP_IVT_EXISTENCE_ONLY"},
+    {"id":"scope:raw-c-correlated-kappa-lambda-gamma1-sign-strip","type":"scope","title":"Raw-C correlated kappa-lambda Gamma_1 sign-strip scope","summary":"Declared open kappa corridor formed by root bracket 1 enlarged by 1e-3 on each side, lambda slab [-1e-4,1e-4], selected Q0=-4 normalization and selected declared Gamma_1 boundary convention.","state":"DECLARED_CONNECTED_KAPPA_LAMBDA_SIGN_STRIP_SCOPE","includes":["uniform Q0 chart nonvanishing on the full declared kappa-lambda corridor","complete normalized G face enclosures with the rotating minus tail at the two declared kappa faces","continuity and intermediate-value hypotheses sufficient for at least one zero per lambda"],"excludes":["absolute actual Gamma_1 amplitude or sign away from a certified zero","uniqueness, a continuous root selector, transversality, continuation, velocity or global root census","a Q0 mean-value side comparison across lambda=0","nonreal Weyl m-function, spectral measure, raw-C RAQ, C-H equivalence or physical/empirical claims"]},
+    {"id":"claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA","type":"claim","title":"Correlated raw-C kappa-lambda Gamma_1 sign strip has at least one declared-boundary zero per lambda","summary":"Supported only in the declared real kappa-lambda strip and selected Q0 normalization. It is an at-least-one existence statement, not a root selector or actual-amplitude sign result.","state":"SUPPORTED_UNIFORM_IVT_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA_ONLY","claim_id":"RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA","statement":"For every lambda in [-1e-4,1e-4], the selected Q0-normalized G is strictly negative at the declared left kappa face and strictly positive at the declared right kappa face. With the certified nonzero selected u_plus(Q0) chart and continuity, at least one kappa in the open declared corridor has G=0 and therefore is a zero of the selected declared Gamma_1 boundary functional.","epistemic_state":"SUPPORTED"},
+    {"id":"evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result","type":"evidence","title":"Raw-C correlated kappa-lambda Gamma_1 sign-strip evidence","summary":"VALID_RUN with 24/24 exact checks, 66/66 outward controls and five theorem guards. The raw result is the SSOT ledger for the full-corridor Q0 chart, complete two-face tail intersections and uniform IVT hypotheses.","state":"VALID_RUN_UNIFORM_OPPOSITE_FACE_SIGNS_Q0_NONZERO_IVT_EXISTENCE","observed_status":"CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA","check_ids":["rawc.signstrip.normalized_zero_equivalence","rawc.signstrip.switch.tier2.closed_corridor_barrier","rawc.signstrip.q0.corridor.final_chart","rawc.signstrip.tail.left_face.tier2.cutoff_overlap_and_tail_decrease","rawc.signstrip.tail.right_face.tier2.cutoff_overlap_and_tail_decrease","rawc.signstrip.tail.left_face.strict_final_sign","rawc.signstrip.tail.right_face.strict_final_sign","rawc.signstrip.uniform_ivt_hypotheses"]},
+    {"id":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-inputs","type":"artifact","title":"Raw-C correlated kappa-lambda Gamma_1 sign-strip inputs","summary":"Pinned upstream Q0-normalized tail result, declared faces and lambda slab, selected boundary convention, caps, fail-closed outputs and nonclaims.","state":"TRACKED_RUN_INPUTS","artifact_kind":"input_manifest","path":"cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_INPUTS.json","sha256":"114c8e65013ce8c6a63b836cb2628088330ec6ec86f0e84e0eaa101efbb31452"},
+    {"id":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-runner","type":"artifact","title":"Raw-C correlated kappa-lambda Gamma_1 sign-strip runner","summary":"Bounded exact/Arb correlated sign-strip runner with finite corridor certification and complete normalized two-face tails; it has no black-box root solve or sampling.","state":"TRACKED_VALID_RUNNER","artifact_kind":"runner","path":"cpt_temporal_folded_susy/raw_c_correlated_kappa_lambda_gamma1_sign_strip.py","sha256":"fa47e78ffeda71ffd8867019cce0754fbc8e2c22c046465dc88597bd1df91b04"},
+    {"id":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result","type":"artifact","title":"Raw-C correlated kappa-lambda Gamma_1 sign-strip raw result","summary":"Raw-result SSOT: 24/24 exact and 66/66 control pass certificate for at-least-one declared-boundary zero per lambda; payload digest 277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json","sha256":"e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2"},
+    {"id":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-report","type":"artifact","title":"Raw-C correlated kappa-lambda Gamma_1 sign-strip report","summary":"Human-readable declared corridor, normalized face intervals, continuity argument, hashes and explicit nonclaims.","state":"TRACKED_VALID_RUN_REPORT","artifact_kind":"report","path":"cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP.md","sha256":"e548750be3471a0110c0dec716f8e209e9083721fa806d645b59eeefa75363f8"},
     {"id":"concept:gate1-v0-current-physics-discovery-gap-map","type":"concept","title":"Current Gate-1 V0 physics-discovery gap map","summary":"A current fact-to-interpretation-to-open-bridge map for P1, P4, closed-S3 P2-P3, quantum BFV P5, absolute-measure P6 and physical/empirical P7. It records why scoped computational progress has not yet established a model-level or empirical physics discovery; it is navigation only and does not assert that new physics is absent.","state":"CURRENT_COMPUTATIONAL_PROGRESS_NO_PHYSICS_DISCOVERY_ESTABLISHED_NAVIGATION_ONLY"},
-    {"id":"artifact:gate1-v0-current-physics-discovery-gap-map","type":"artifact","title":"Current Gate-1 V0 physics-discovery gap map","summary":"Human-readable separation of computed facts, allowed interpretations, ordered missing bridges and the model-level/empirical promotion boundary, with collection-wide programme boundaries retained.","state":"TRACKED_CURRENT_ONTOLOGY_NAVIGATION","artifact_kind":"research_status_map","path":"docs/research/ICE_CURRENT_PHYSICS_DISCOVERY_GAP_MAP_2026-08-31.md","sha256":"c304872c1ace0f1b944497ed5b716b6800dfaa6cb1f339766f7ab834d738a312"}
+    {"id":"artifact:gate1-v0-current-physics-discovery-gap-map","type":"artifact","title":"Current Gate-1 V0 physics-discovery gap map","summary":"Human-readable separation of computed facts, allowed interpretations, ordered missing bridges and the model-level/empirical promotion boundary, with collection-wide programme boundaries retained.","state":"TRACKED_CURRENT_ONTOLOGY_NAVIGATION","artifact_kind":"research_status_map","path":"docs/research/ICE_CURRENT_PHYSICS_DISCOVERY_GAP_MAP_2026-08-31.md","sha256":"c3b7598561e79a238da02deb77dbc18dd5418dbb3bbea9ddcb8f01dcd248f6c1"}
   ],
   "edges": [
     {
@@ -35131,7 +35151,20 @@
     {"id":"edge:3584","from":"concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional","relation":"EXTENDS","to":"concept:raw-c-declared-gamma1-boundary-variation","note":"Instantiates the selected lambda-independent c_p boundary convention and completes the normalized nonzero-lambda left tail on root bracket 1."},
     {"id":"edge:3585","from":"concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The normalized quotient is complete but zero-containing; actual-amplitude sign and correlated-root localization remain open without automatic successor execution."},
     {"id":"edge:3586","from":"concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"Modified-Bessel and Wronskian conventions anchor the lambda-zero comparison only; repository tail enclosures are local evidence."},
-    {"id":"edge:3587","from":"concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional","relation":"CITES","to":"source:johansson-arb-2017","note":"Arb supplies outward ball semantics only; the two precision tiers are one-backend refinements, not independent physical evidence."}
+    {"id":"edge:3587","from":"concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional","relation":"CITES","to":"source:johansson-arb-2017","note":"Arb supplies outward ball semantics only; the two precision tiers are one-backend refinements, not independent physical evidence."},
+    {"id":"edge:3588","from":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3589","from":"claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA","relation":"PART_OF","to":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip"},
+    {"id":"edge:3590","from":"claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA","relation":"VALID_WITHIN","to":"scope:raw-c-correlated-kappa-lambda-gamma1-sign-strip"},
+    {"id":"edge:3591","from":"claim:RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_HAS_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA","relation":"HAS_EVIDENCE","to":"evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result","polarity":"SUPPORTS"},
+    {"id":"edge:3592","from":"evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result","relation":"DOCUMENTS","to":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip"},
+    {"id":"edge:3593","from":"evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result","relation":"DERIVED_FROM","to":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-inputs"},
+    {"id":"edge:3594","from":"evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result","relation":"DERIVED_FROM","to":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-runner"},
+    {"id":"edge:3595","from":"evidence:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result","relation":"DERIVED_FROM","to":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-result"},
+    {"id":"edge:3596","from":"artifact:raw-c-correlated-kappa-lambda-gamma1-sign-strip-report","relation":"DOCUMENTS","to":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip"},
+    {"id":"edge:3597","from":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip","relation":"EXTENDS","to":"concept:raw-c-q0-normalized-differentiated-rotating-tail-gamma1-functional","note":"Reuses the selected Q0-normalized tail convention and then proves opposite face signs on a correlated corridor; it does not recover absolute solution amplitude."},
+    {"id":"edge:3598","from":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The result closes only at-least-one declared-boundary zero per lambda. Uniqueness, a selector, continuation/velocity, global census and absolute-amplitude orientation remain open without automatic successor execution."},
+    {"id":"edge:3599","from":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"The inherited modified-Bessel/Wronskian conventions support the selected lambda-zero comparison only; the sign strip is local workbench evidence."},
+    {"id":"edge:3600","from":"concept:raw-c-correlated-kappa-lambda-gamma1-sign-strip","relation":"CITES","to":"source:johansson-arb-2017","note":"Arb supplies outward ball semantics only; the two precision tiers remain one-backend refinements, not independent physical evidence."}
   ],
   "kg_bridges": [
     {
