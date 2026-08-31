@@ -21,12 +21,19 @@ CLASS adapter.  It imports and invokes neither CLASS/classy nor Cobaya; the
 official release pins in the input manifest (CLASS `v3.3.4`/`e858083`, Cobaya
 `v3.6.2`/`899f30a`, checked 2026-08-31) are navigation only.
 
-## Intended bounded invocation
+## Observed bounded invocation (2026-08-31 UTC)
 
 ```bash
 ./ice run closed_cosmology_likelihood_readiness_preflight
+VALID_RUN
+BLOCKED_P7_CLOSED_COSMOLOGY_LIKELIHOOD_NOT_READY_PREREQUISITES_ABSENT
 ```
 
-The expected successful execution status is `VALID_RUN` with verdict
-`BLOCKED_P7_CLOSED_COSMOLOGY_LIKELIHOOD_NOT_READY_PREREQUISITES_ABSENT`; it is
-not a likelihood result and authorizes no follow-on calculation.
+All seven named readiness gates were observed as `MISSING`: a common raw-`C`
+physical product, quantum clock map, nonzero-potential generation model,
+initial quantum state, reheating map, primordial normalization, and a
+versioned discrete-to-CLASS adapter.  CLASS/classy and Cobaya were neither
+imported nor invoked, so no likelihood or posterior was produced.  This
+successful preflight is a blocked readiness result and authorizes no follow-on
+calculation.  The result file SHA-256 is
+`c797745be08649a463cc3dbc82faf833cd6d02c09aaa1db367e01dc90e53032d`.
