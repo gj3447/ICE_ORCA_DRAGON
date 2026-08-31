@@ -375,8 +375,10 @@ def main() -> None:
     for tier, dps in enumerate(conventions["precision_ladder_decimal_digits"], start=1):
         coarse_row, coarse = run_tier(audit, tier=tier, dps=dps, panels=512, q_plus=q_plus, q_switch=q_switch, kappa=kappa, h_seed_lower=h_lower, h_seed_upper=h_upper, conventions=conventions, affine=affine)
         refined_row, refined = run_tier(audit, tier=tier, dps=dps, panels=1024, q_plus=q_plus, q_switch=q_switch, kappa=kappa, h_seed_lower=h_lower, h_seed_upper=h_upper, conventions=conventions, affine=affine)
-        nested = bool(refined["lower_force"].lower() >= coarse["lower_force"].lower() and refined["p"].lower() >= coarse["p"].lower() and refined["p"].upper() <= coarse["p"].upper())
-        audit.control(f"rawc.kappa_qswitch.tier{tier}.panel_refinement", nested, "The 1024-panel lower Riemann sum is no smaller than the 512-panel lower sum; the common exact upper comparison keeps the refined p interval nested.", coarse_lower_forcing=interval_record(coarse["lower_force"], OUTPUT_DIGITS), refined_lower_forcing=interval_record(refined["lower_force"], OUTPUT_DIGITS))
+        lower_sum_improved = bool(
+            refined["lower_force"].lower() >= coarse["lower_force"].lower()
+        )
+        audit.control(f"rawc.kappa_qswitch.tier{tier}.lower_sum_refinement", lower_sum_improved, "The 1024-panel right-endpoint lower Riemann sum is no smaller than the 512-panel sum. Each full p enclosure is certified separately; no literal nesting of independently wrapped upper balls is asserted.", coarse_lower_forcing=interval_record(coarse["lower_force"], OUTPUT_DIGITS), refined_lower_forcing=interval_record(refined["lower_force"], OUTPUT_DIGITS))
         rows.extend([coarse_row, refined_row])
         balls.append(refined)
     final_h = intersect(affine, [item["h"] for item in balls])

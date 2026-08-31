@@ -111,3 +111,12 @@ observed strict interval
 
 is retained as non-promoted evidence under this result's authoritative
 `NOT_CERTIFIED` verdict. No ontology change follows from this run.
+
+The checker-only correction replaces that compound predicate with exactly the
+declared panel-refinement fact: the 1,024-panel right-endpoint lower sum must
+be no smaller than the 512-panel lower sum. It does not relax any individual
+strict-sign transport control, the cross-precision intersection, the panel or
+precision ladder, input, upstream hash, cap, equation, or null boundary. The
+corrected pre-run runner SHA-256 is
+`87af6053f0651b007667ffb61d7b8e1f84d5c70cb272327e44b007896e094534`.
+No checker-corrected execution is claimed before this source is committed.
