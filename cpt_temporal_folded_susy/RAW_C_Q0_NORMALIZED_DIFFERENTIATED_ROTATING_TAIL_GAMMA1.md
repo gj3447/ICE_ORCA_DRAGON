@@ -54,15 +54,39 @@ not claim an absolute actual \(\Gamma_1\) value or sign, a zero/root,
 continuation or velocity. It also does not construct a Weyl function,
 spectral measure, RAQ object, or physical/empirical result.
 
-## Execution
+## First controlled execution: valid but not certified
 
-This is pre-run. After the runner and input are committed, the only allowed
-scientific execution is:
+The committed runner was executed through the bounded control plane:
 
 ```text
 ./ice run raw_c_q0_normalized_differentiated_rotating_tail_gamma1
 ```
 
-No result is recorded here yet. A result, if produced, must report the actual
-command output, input/runner/result hashes, every failed control if any, and
-the distinction between finite projective facts and all excluded claims.
+It returned `VALID_RUN` with verdict
+`Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_NOT_CERTIFIED`: 6/8 exact checks
+and 676/685 controls passed. The two exact failures have residuals
+`cq*uq*(cq - 1)` and `cq*zq*(cq - 1)`. They expose an extra `cq` factor in
+the executable symbolic chain-rule audit, not a counterexample to either
+Wronskian identity.
+
+The nine numerical failures are six cutoff-overlap/tail-decrease controls and
+the three final width controls. At the refined (Q_c=-10) row the punctured
+boxes already have (g) width about 4.935 and (g') width about 3139.6;
+the (Q_c=-12) boxes are much wider. The analytic tail formulas remained
+finite, but the axis-aligned six-state boxes accumulated oscillatory wrapping
+before the cutoff, so the deeper-cutoff state norm also made the nominal tail
+radius larger rather than smaller. This is an unresolved enclosure, not a
+Gamma_1 sign or root result.
+
+The raw first result is preserved with file SHA-256
+`34453152467f2099f876992e99be9392686c6c32e6590b444a470d891368b67e`
+and payload SHA-256
+`859da3cac3545467147a7f751c151b17b26d3541b1e930a51be182553553add4`.
+All absolute-Gamma, sign, root, Weyl, spectral, RAQ and physical outputs
+remain null.
+
+The narrow correction is to fix the symbolic audit typo and hand off to the
+already proved analytic rotating-frame tail at earlier cutoffs, before
+axis-aligned rotation wrapping dominates. This does not change the functional,
+root/lambda scope, width target or nonclaims. Any corrected runner and input
+must be committed before another controlled execution.
