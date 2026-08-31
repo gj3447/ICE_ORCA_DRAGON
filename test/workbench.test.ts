@@ -139,6 +139,10 @@ it("maps the V0 spectral-to-S3 controls as portable committed results", () => {
       "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json"
     ],
     [
+      "closed_s3_zonal_scalar_aliasing_cutoff_ladder_audit",
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_ALIASING_CUTOFF_LADDER_AUDIT_RESULT.json"
+    ],
+    [
       "closed_s3_full_svt_spectral_ledger",
       "cpt_temporal_folded_susy/CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT.json"
     ],

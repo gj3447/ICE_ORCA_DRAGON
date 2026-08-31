@@ -411,6 +411,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "closed_s3_zonal_scalar_aliasing_cutoff_ladder_audit",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_zonal_scalar_aliasing_cutoff_ladder_audit.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_ALIASING_CUTOFF_LADDER_AUDIT_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "closed_s3_full_svt_spectral_ledger",
     script:
       "cpt_temporal_folded_susy/closed_s3_full_svt_spectral_ledger.py",
