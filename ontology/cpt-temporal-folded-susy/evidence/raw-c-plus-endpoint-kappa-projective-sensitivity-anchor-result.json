@@ -1,0 +1,83 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_PLUS_ENDPOINT_KAPPA_PROJECTIVE_SENSITIVITY_ANCHOR_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T14:39:43Z",
+  "command": "./ice run raw_c_plus_endpoint_kappa_projective_sensitivity_anchor",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_plus_endpoint_kappa_projective_sensitivity_anchor.py",
+    "sha256": "7259aafee080dc9df96c341076856e23e01ef76e238e98a1d5e6c568a872a2c8",
+    "introduced_in_commit": "00049dc8d542065a7192be66eff476ed76efc231"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "rawc.kappa_anchor.two_parameter_wronskian_derivative",
+      "status": "PASS",
+      "statement": "The fixed-lambda cross-Wronskian has derivative -(kappa_b^2-kappa_a^2)u_a u_b."
+    },
+    {
+      "id": "rawc.kappa_anchor.two_parameter_log_derivative",
+      "status": "PASS",
+      "statement": "The selected logarithmic-direction difference equals the normalized cross-Wronskian with the declared sign."
+    },
+    {
+      "id": "rawc.kappa_anchor.pinned_full_strip_log_derivative_envelope",
+      "status": "PASS",
+      "statement": "The hash-pinned sign strip supplies the selected-family nonzero chart and full-strip 53 exp(Q) to 70 exp(Q) logarithmic envelope."
+    },
+    {
+      "id": "rawc.kappa_anchor.boundary_term_decay",
+      "status": "PASS",
+      "statement": "The product envelope dominates the logarithmic-direction difference and makes the normalized cross-Wronskian vanish at the recessive endpoint."
+    },
+    {
+      "id": "rawc.kappa_anchor.integral_upper_bound",
+      "status": "PASS",
+      "statement": "The normalized cross-product tail integral is strictly below 1/5194."
+    },
+    {
+      "id": "rawc.kappa_anchor.integral_lower_bound",
+      "status": "PASS",
+      "statement": "The normalized cross-product tail integral is strictly above 1/23940."
+    },
+    {
+      "id": "rawc.kappa_anchor.uniform_negative_secant_interval",
+      "status": "PASS",
+      "statement": "Every fixed-lambda kappa secant on the declared corridor has one uniform strictly negative enclosure."
+    },
+    {
+      "id": "rawc.kappa_anchor.uniform_negative_interval",
+      "status": "PASS",
+      "statement": "The common dominated diagonal limit gives a uniform strictly negative partial_kappa rho(4) interval."
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "locator_policy": "Eight decision-bearing checks are indexed here; the authoritative raw result is the single source for all 21 exact checks and three theorem guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_KAPPA_PROJECTIVE_SENSITIVITY_ANCHOR_RESULT.json",
+      "sha256": "adb89d5bba7e5abbc4870077ae1d4bd75ecb2547d0e02721769aef1fc390e2ca",
+      "payload_sha256_without_self": "152b077a8529df8f8189c875b43730ae9ec3adea47a45a3444ce35f551ca3f6e",
+      "exact_checks": 21,
+      "theorem_guards": 3,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_UNIFORM_NEGATIVE_PLUS_ENDPOINT_KAPPA_PROJECTIVE_SENSITIVITY_ANCHOR"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_KAPPA_PROJECTIVE_SENSITIVITY_ANCHOR_INPUTS.json",
+      "sha256": "55bc49884d678719eda2a0e02dbdc028e15b2e52b1d3ca8558b51cd1c5c5becd"
+    },
+    "declared_scope": "The exact current correlated K times Lambda strip at Qplus=4, at fixed lambda; two-sided kappa derivative in the corridor interior and the corresponding one-sided derivative at the faces.",
+    "two_parameter_secant": "[r_b(4)-r_a(4)]/[kappa_b-kappa_a]=-(kappa_a+kappa_b)*integral_4^infinity v_a(Q)*v_b(Q)dQ",
+    "strict_h_interval": {
+      "lower_exact": "-160320344939996106734739047604961/205755538049544484730433639022592000",
+      "upper_exact": "-5125180435678962497905662710537123/30347555369463811871831074736701440000",
+      "lower_decimal": "-0.000779178759705569123",
+      "upper_decimal": "-0.000168882810271960151"
+    },
+    "boundary": "This is a selected real plus-end projective kappa-sensitivity anchor only. Qswitch/Q0 transport, complete G_kappa including the reference variation and minus tail, transversality, uniqueness, selector, velocity, global roots, spectral data, RAQ and physics remain absent or null."
+  }
+}

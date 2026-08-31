@@ -80,6 +80,34 @@ sign, Weyl/spectral data, RAQ, and physics remain null.
   `55bc49884d678719eda2a0e02dbdc028e15b2e52b1d3ca8558b51cd1c5c5becd`
 - Frozen runner SHA-256:
   `7259aafee080dc9df96c341076856e23e01ef76e238e98a1d5e6c568a872a2c8`
-- Source commit: pending.
-- First bounded `./ice run`: pending; no result is claimed in this source
-  checkpoint.
+- Source commit:
+  `00049dc8d542065a7192be66eff476ed76efc231`
+- Command:
+  `./ice run raw_c_plus_endpoint_kappa_projective_sensitivity_anchor`
+- Exit code: `0`; run status: `VALID_RUN`; verdict:
+  `CERTIFY_UNIFORM_NEGATIVE_PLUS_ENDPOINT_KAPPA_PROJECTIVE_SENSITIVITY_ANCHOR`.
+- Checks: `21/21` exact checks and all three theorem guards passed. No ODE,
+  quadrature, root solve, finite difference, sample, panel, Bessel call or
+  bisection was used.
+- Result SHA-256:
+  `adb89d5bba7e5abbc4870077ae1d4bd75ecb2547d0e02721769aef1fc390e2ca`
+- Canonical payload SHA-256 without the self field:
+  `152b077a8529df8f8189c875b43730ae9ec3adea47a45a3444ce35f551ca3f6e`.
+
+The resulting strict uniform enclosure is
+
+\[
+-0.000779178759705569123<h(4)<-0.000168882810271960151.
+\]
+
+This is a repository-local exact analytic certificate for the declared strip,
+not a physics observation. The explicit boundary above remains unchanged.
+
+Post-run validation:
+
+- the canonical payload hash recomputed exactly;
+- `./ice ontology validate` returned `VALID`, `427/427` hashes, zero errors
+  and the 70 already-unresolved external bridge warnings;
+- the new claim's `ontology show` and `ontology trace` stop at the endpoint
+  anchor and retained open transport node;
+- `npm run check` passed strict TypeScript and all `69/69` Vitest tests.
