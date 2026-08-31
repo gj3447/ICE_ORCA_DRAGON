@@ -147,6 +147,7 @@ def main() -> None:
     analytic_delta_bound = arb(eta_bar)
     analytic_cut_bound = arb(cut_bar)
     tier_records: list[dict[str, Any]] = []
+    tier_bounds: list[tuple[arb, arb]] = []
     tier_passes: list[bool] = []
     for precision in cfg["declared_conventions"]["precision_bits"]:
         ctx.prec = int(precision)
@@ -171,6 +172,7 @@ def main() -> None:
             and re_sqrt_lower > arb(0)
         )
         tier_passes.append(passed)
+        tier_bounds.append((delta_upper, cut_lower))
         tier_records.append({
             "precision_bits": precision,
             "delta_at_Q4": complex_record(delta_4),
@@ -191,8 +193,8 @@ def main() -> None:
     )
 
     # |z| < 9/8, exp(-2) < 1/7, pi^2 > 9 imply |delta| < 1/336.
-    ball_eta_ok = all(arb(record["delta_absolute_upper"]) < analytic_delta_bound for record in tier_records)
-    ball_cut_ok = all(arb(record["cut_distance_lower"]) > analytic_cut_bound for record in tier_records)
+    ball_eta_ok = all(delta_upper < analytic_delta_bound for delta_upper, _ in tier_bounds)
+    ball_cut_ok = all(cut_lower > analytic_cut_bound for _, cut_lower in tier_bounds)
     halfline_re_lower = 6 * arb.pi() ** 2 * arb(4).exp() * (arb(1) - analytic_delta_bound).sqrt()
     audit.check(
         "rawc.nonreal.branch.control3.independent_elementary_separation",
