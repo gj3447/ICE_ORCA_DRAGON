@@ -1,8 +1,9 @@
 # Fixed real-S3 scalar derivative/Gaunt identity ledger
 
-This is a proposed bounded, unnumbered calculation.  Its runner is
-`closed_s3_real_scalar_derivative_gaunt_ledger.py`, to be launched only after
-commit through `./ice run closed_s3_real_scalar_derivative_gaunt_ledger`.
+This bounded, unnumbered calculation was run through
+`./ice run closed_s3_real_scalar_derivative_gaunt_ledger`. It passed 8/8 exact
+checks and two theorem/scope guards. The result SHA-256 is
+`e181fa311576d4198d6653f0b190e86c401676fe8648cb5cd0d779359ca30d10`.
 
 It reads the hash-pinned real `n<=2` scalar-basis result and only its selected
 `R_n1_mL-1_mR-1_cos` square.  For two output scalar labels it records
