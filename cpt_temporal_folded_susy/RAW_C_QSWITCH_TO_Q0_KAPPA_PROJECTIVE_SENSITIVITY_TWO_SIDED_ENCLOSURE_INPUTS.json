@@ -1,0 +1,119 @@
+{
+  "schema_version": "ice.raw-c-qswitch-to-q0-kappa-projective-sensitivity-two-sided-enclosure.input.v1",
+  "calculation_id": "RawCQswitchToQ0KappaProjectiveSensitivityTwoSidedEnclosure",
+  "numbered_phase": null,
+  "kind": "bounded_selected_projective_kappa_sensitivity_two_sided_endpoint_enclosure",
+  "question": "Can the selected real plus-recessive direction's finite two-sided Qswitch kappa-sensitivity box be transported to a finite two-sided projective h(Q0)=partial_kappa rho(Q0) enclosure by adjoining only J_Q=-U^2, without constructing Y pointwise or differentiating the Gamma_1 tail?",
+  "primary_sources": [
+    "Selection context inherited through the pinned upstream results: NIST DLMF section 2.7(iii), Liouville-Green approximation for the selected real plus-recessive family: https://dlmf.nist.gov/2.7#iii"
+  ],
+  "declared_conventions": {
+    "Q_plus": "4",
+    "Q_switch": "-29/10",
+    "Q_0": "-4",
+    "x": "6*pi^2*exp(Q)",
+    "A": "36*pi^4*exp(2Q)+6*pi^2*lambda*exp(3Q/2)-kappa^2",
+    "rho": "-U_Q/U-x-1/2",
+    "h": "partial_kappa rho at fixed lambda",
+    "switch_normalization": "U(Qswitch)=1; Y(Qswitch)=0; Y_Q(Qswitch)=-h(Qswitch)=p_switch",
+    "wronskian": "W=U*Y_Q-U_Q*Y; W_Q=-2*kappa*U^2; W(Qswitch)=p_switch",
+    "auxiliary_integral_state": "J_Q=-U^2 and J(Qswitch)=0, so J(Q0)=integral_Q0^Qswitch U(Q)^2 dQ",
+    "endpoint_formula": "W(Q0)=p_switch+2*kappa*J(Q0); h(Q0)=-W(Q0)/U(Q0)^2",
+    "normalized_tail_seed": "For Z=U/U(Q0), Z_kappa(Q0)=0 and Z_kappa,Q(Q0)=-h(Q0)",
+    "kappa_corridor": {
+      "left_exact": "5125180435678962497905662710537123/2535301200456458802993406410752000",
+      "right_exact": "160320344939996106734739047604961/79228162514264337593543950336000"
+    },
+    "lambda_slab": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "compact_taylor_order": 12,
+    "compact_q_segment_ladder": [16, 32],
+    "precision_ladder_decimal_digits": [80, 120],
+    "ball_output_digits": 45,
+    "execution": "hash-pinned interval-Taylor coefficient/whole-step majorants with one added exact J jet; no Bessel evaluation, black-box ODE integration, quadrature, root solve, finite difference, sampling, kernel panel or bisection"
+  },
+  "method_reuse": {
+    "path": "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_hybrid_validated_transfer.py",
+    "sha256": "662c372c6950666d9052d378ad1153e3e3a13f159a945ae25837fc8a309a49c3",
+    "used_for": "coefficient derivatives, full-step majorants and outward interval helpers only"
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_QPLUS_TO_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_TRANSPORT_RESULT.json",
+      "sha256": "ea457a21883ca42c5759b145c997ba71a4af1f09a29fd6b813e8be47be007555",
+      "schema_version": "ice.raw-c-qplus-to-qswitch-kappa-projective-sensitivity-transport.result.v1",
+      "verdict": "CERTIFY_UNIFORM_NEGATIVE_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_ONLY",
+      "result_payload_sha256_without_self": "1bf352325b5e155a681700c66915469fb4431e0ef922f664bd77f29e5c8a0433",
+      "role": "supplies the same selected-family finite two-sided p_switch=-h(Qswitch) box and its full-strip provenance"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json",
+      "sha256": "e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2",
+      "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1",
+      "verdict": "CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+      "result_payload_sha256_without_self": "277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee",
+      "role": "pins the exact corridor, selected switch rho seed, switch normalization and nonzero Q0 chart only; Gamma_1 face signs are unused"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_SIGN_TRANSPORT_RESULT.json",
+      "sha256": "cf80dae45e381ecc92e0a5cff62c0255aba779637e511ab3942764d4ef0faaa3",
+      "schema_version": "ice.raw-c-qswitch-to-q0-kappa-projective-sensitivity-sign-transport.result.v1",
+      "verdict": "CERTIFY_UNIFORM_NEGATIVE_Q0_KAPPA_PROJECTIVE_SENSITIVITY_ONLY",
+      "result_payload_sha256_without_self": "7c89c3cdfd404b85374d1fc88896ea478678ad3c4088b931ef2172a40b117b9f",
+      "role": "supplies an independently derived one-sided endpoint sign margin used only as a consistency check"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned Qswitch p and rho boxes refer to the same selected real plus-recessive projective family on the same exact closed K times Lambda strip; losing their parameter correlation by taking a product box is conservative.",
+    "Switch normalization U(Qswitch)=1 is finite and kappa-dependent normalization is fixed separately at each parameter, so Y(Qswitch)=0 and W(Qswitch)=p_switch.",
+    "The regular finite U IVP and the scalar J equation can be propagated backward from Qswitch to Q0 by full-box interval Taylor steps.",
+    "Only U(Q0), not U on the open leg, is divided by. Intermediate U zeros would not obstruct the regular U,J flow or Wronskian identity.",
+    "The resulting switch-normalized U and J boxes are auxiliary; only h(Q0) is scale invariant."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_checks": 18,
+    "upstream_results": 3,
+    "method_sources": 1,
+    "precision_tiers": 2,
+    "segment_ladder_rows": 2,
+    "transfer_rows": 4,
+    "compact_steps": 96,
+    "compact_taylor_order": 12,
+    "kappa_corridors": 1,
+    "lambda_slabs": 1,
+    "ode_calls": 0,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "kernel_panels_evaluated": 0,
+    "ball_bessel_evaluations": 0,
+    "bisection_steps": 0
+  },
+  "required_fail_closed_outputs": {
+    "absolute_actual_plus_amplitude_or_kappa_derivative": null,
+    "pointwise_actual_kappa_variation_on_open_Qswitch_Q0_leg": null,
+    "pole_free_or_no_node_chart_on_open_Qswitch_Q0_leg": null,
+    "actual_kappa_variation_full_minus_half_line": null,
+    "reference_kappa_variation_or_differentiated_reference_tail": null,
+    "complete_kappa_differentiated_minus_tail": null,
+    "complete_normalized_G_kappa_or_Gamma1_kappa_derivative": null,
+    "kappa_lambda_mixed_derivative": null,
+    "root_transversality_or_monotonicity_or_uniqueness": null,
+    "continuous_root_selector_or_continuation": null,
+    "root_velocity": null,
+    "roots_outside_declared_corridor_or_global_census": null,
+    "absolute_actual_Gamma1_amplitude_or_sign": null,
+    "nonreal_weyl_m_function_or_spectral_measure": null,
+    "raw_C_RAQ_or_C_H_equivalence": null,
+    "BFV_or_physical_product": null,
+    "physics_claim": null
+  }
+}
