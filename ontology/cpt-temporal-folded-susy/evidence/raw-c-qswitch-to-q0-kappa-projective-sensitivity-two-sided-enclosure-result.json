@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_TWO_SIDED_ENCLOSURE_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T17:35:46Z",
+  "command": "./ice run raw_c_qswitch_to_q0_kappa_projective_sensitivity_two_sided_enclosure",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_qswitch_to_q0_kappa_projective_sensitivity_two_sided_enclosure.py",
+    "sha256": "1f975e3a7206a27fb1db63d4fc4f7a5aa8eb9a3bdea05bf56316ed6b7d63e38a",
+    "introduced_in_commit": "a5bcb3583f47d71966ffe987c96575a24cebf2a0"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "rawc.kappa_q0_twosided.wronskian_derivative",
+      "status": "PASS",
+      "statement": "For Y=partial_kappa U, W(U,Y)_Q=-2*kappa*U^2."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.wronskian_J_conservation",
+      "status": "PASS",
+      "statement": "With J_Q=-U^2, W-2*kappa*J is constant and W(Q0)=p_switch+2*kappa*J(Q0)."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.projective_wronskian",
+      "status": "PASS",
+      "statement": "At the nonzero endpoint, h=partial_kappa rho=-W/U^2."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.normalized_tail_seed",
+      "status": "PASS",
+      "statement": "For Z=U/U(Q0), Z_kappa(Q0)=0 and Z_kappa,Q(Q0)=-h(Q0)."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.pinned_two_sided_qswitch_seed",
+      "status": "PASS",
+      "statement": "The selected two-sided p_switch seed and its exact-strip provenance are hash-pinned."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.pinned_selected_q0_chart",
+      "status": "PASS",
+      "statement": "The sign-strip evaluated exact corridor, declared rectangle, selected family and nonzero Q0 chart are all required."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.pinned_one_sided_crosscheck",
+      "status": "PASS",
+      "statement": "The independent one-sided Q0 Wronskian margin is used only as a consistency cross-check."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.seed_intervals",
+      "status": "PASS",
+      "statement": "The pinned p_switch, rho_switch and positive Q0 endpoint intervals are finite."
+    }
+  ],
+  "numerical_checks": 2,
+  "numerical": [
+    {
+      "id": "rawc.kappa_q0_twosided.final_transfer_intersection",
+      "status": "PASS",
+      "statement": "All four 16/32-segment and 80/120-digit U,U_Q,J rows intersect the pinned positive Q0 chart."
+    },
+    {
+      "id": "rawc.kappa_q0_twosided.two_sided_endpoint",
+      "status": "PASS",
+      "statement": "The resulting finite h(Q0) enclosure is strictly negative and lies below the prior one-sided margin."
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "numerical_checks": 2,
+    "locator_policy": "Eight decision-bearing exact or structural locators and two final interval controls are indexed here; the authoritative raw result is the single source for all fourteen exact checks, ten interval controls and three theorem-scope guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_TWO_SIDED_ENCLOSURE_RESULT.json",
+      "sha256": "871b7ab0fb2e76997b5b8bb39797abb48b18738fe0d73248c40e50187f7bc5e7",
+      "payload_sha256_without_self": "2ed6bc6abbb1fa9e0a3177ecf92ad3b1bbc70f700bd7c53b49e5acf5a189a2e6",
+      "exact_checks": 14,
+      "interval_controls": 10,
+      "theorem_guards": 3,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_FINITE_TWO_SIDED_Q0_KAPPA_PROJECTIVE_SENSITIVITY_ENCLOSURE_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_TWO_SIDED_ENCLOSURE_INPUTS.json",
+      "sha256": "18718b766da4cc7d4dc57163bb2d92236a882f5aa99b3eeaaa4a95934e8a27cb"
+    },
+    "executed_source_revision_commit": "f27ded9748e776dd529ac55178c410b13cf197f5",
+    "first_fail_closed_result_commit": "a2eb5d3dc627d15cb6aa3e6bebcfbafa84fe0b24",
+    "declared_scope": "The selected real plus-recessive fixed-lambda projective family at Q0=-4 on the exact current K times Lambda strip only.",
+    "equation": "J_Q=-U^2, J(Qswitch)=0, W(Q0)=p_switch+2*kappa*J(Q0), and h(Q0)=-W(Q0)/U(Q0)^2.",
+    "endpoint_intersections": {
+      "U_Q0": {
+        "lower": "4.58064384906254536159548761685448502126555530",
+        "upper": "6.14669473617039448268923761685448502126555530"
+      },
+      "J_Q0": {
+        "lower": "11.8864297143348725281612449379755776429162660",
+        "upper": "18.6645394734272034607784324379755776429162660"
+      },
+      "W_Q0": {
+        "lower": "48.4268546539333314143201494114810908976241765",
+        "upper": "76.1574373680141419611951494114810908976241765"
+      },
+      "h_Q0": {
+        "lower": "-3.85489381290972232818603515625000000000000000",
+        "upper": "-1.28174894489347934722900390625000000000000000"
+      },
+      "normalized_Z_kappa_Q0": "0",
+      "normalized_Z_kappa_Q_Q0": {
+        "lower": "1.28174894489347934722900390625000000000000000",
+        "upper": "3.85489381290972232818603515625000000000000000"
+      }
+    },
+    "boundary": "This closes only a finite two-sided selected-projective h(Q0) enclosure and normalized-tail initial seed. Pointwise actual variation on the open leg, an open-leg pole-free/no-node chart, the complete combined kappa-differentiated tail, partial_kappa g or G_kappa, mixed derivatives, transversality, monotonicity, uniqueness, selector, velocity, global roots, absolute Gamma_1 orientation, nonreal Weyl data, spectral measure, RAQ, BFV and physics remain absent or null."
+  }
+}

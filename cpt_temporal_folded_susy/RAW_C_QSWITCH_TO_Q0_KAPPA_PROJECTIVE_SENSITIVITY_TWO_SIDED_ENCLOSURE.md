@@ -133,3 +133,41 @@ verdict condition or null output changed. The corrected runner SHA-256 is
 `1f975e3a7206a27fb1db63d4fc4f7a5aa8eb9a3bdea05bf56316ed6b7d63e38a`;
 `uv run python -m py_compile` passed. A second controlled execution is withheld
 until this correction is committed.
+
+## Corrected controlled execution — certified endpoint seed
+
+The correction was committed as
+`f27ded9748e776dd529ac55178c410b13cf197f5`. Running the same command from
+that clean committed tree produced:
+
+- verdict:
+  `CERTIFY_FINITE_TWO_SIDED_Q0_KAPPA_PROJECTIVE_SENSITIVITY_ENCLOSURE_ONLY`;
+- exact/structural checks: 14/14; outward interval controls: 10/10;
+  theorem-scope guards: 3;
+- $U(Q_0)\in[4.58064384906254536159548761685448502126555530,
+  6.14669473617039448268923761685448502126555530]$;
+- $J(Q_0)\in[11.8864297143348725281612449379755776429162660,
+  18.6645394734272034607784324379755776429162660]$;
+- $W(Q_0)\in[48.4268546539333314143201494114810908976241765,
+  76.1574373680141419611951494114810908976241765]$;
+- $h(Q_0)\in[-3.85489381290972232818603515625,
+  -1.28174894489347934722900390625]$;
+- $Z_\kappa(Q_0)=0$ and
+  $Z_{\kappa,Q}(Q_0)\in[1.28174894489347934722900390625,
+  3.85489381290972232818603515625]$;
+- raw result SHA-256:
+  `871b7ab0fb2e76997b5b8bb39797abb48b18738fe0d73248c40e50187f7bc5e7`;
+- canonical payload SHA-256:
+  `2ed6bc6abbb1fa9e0a3177ecf92ad3b1bbc70f700bd7c53b49e5acf5a189a2e6`.
+
+An independent read-only audit recomputed the raw and canonical payload
+digests, all three upstream digests, the endpoint formula and the strict
+margin against $-\kappa_{\rm left}/980$. It found no remaining blocker. The
+first fail-closed result remains recoverable in commit
+`a2eb5d3dc627d15cb6aa3e6bebcfbafa84fe0b24`.
+
+This closes only a finite two-sided selected-projective endpoint enclosure and
+the normalized-tail initial seed. It does not construct pointwise $Y$ on the
+open leg, prove a pole-free/no-node chart there, complete the actual/reference
+kappa-differentiated minus tail, compute $G_\kappa$, or support any
+transversality, uniqueness, selector, spectral, RAQ, BFV or physics claim.
