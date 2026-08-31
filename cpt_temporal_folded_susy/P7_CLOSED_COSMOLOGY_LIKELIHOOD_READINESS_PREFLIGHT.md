@@ -24,7 +24,7 @@ official release pins in the input manifest (CLASS `v3.3.4`/`e858083`, Cobaya
 ## Intended bounded invocation
 
 ```bash
-./ice run p7_closed_cosmology_likelihood_readiness_preflight
+./ice run closed_cosmology_likelihood_readiness_preflight
 ```
 
 The expected successful execution status is `VALID_RUN` with verdict

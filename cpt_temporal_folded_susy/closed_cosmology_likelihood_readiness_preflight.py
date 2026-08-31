@@ -14,7 +14,7 @@ from typing import Any
 INPUT_NAME = "P7_CLOSED_COSMOLOGY_LIKELIHOOD_READINESS_PREFLIGHT_INPUTS.json"
 RESULT_NAME = "P7_CLOSED_COSMOLOGY_LIKELIHOOD_READINESS_PREFLIGHT_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
-RUNNER_RELPATH = "cpt_temporal_folded_susy/p7_closed_cosmology_likelihood_readiness_preflight.py"
+RUNNER_RELPATH = "cpt_temporal_folded_susy/closed_cosmology_likelihood_readiness_preflight.py"
 EXPECTED_INPUT_SHA256 = "e19eec909d32cb947b1c7e43289e987b61c05ca9ec3474bdb8f689c7ae087e1b"
 CALCULATION_ID = "P7ClosedCosmologyLikelihoodReadinessPreflight"
 RESULT_PREFIX = "P7_CLOSED_COSMOLOGY_LIKELIHOOD_READINESS_PREFLIGHT_RESULT="
