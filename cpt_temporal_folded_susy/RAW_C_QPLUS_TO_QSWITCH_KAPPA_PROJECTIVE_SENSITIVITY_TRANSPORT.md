@@ -79,4 +79,35 @@ required the dynamically loaded, hash-pinned helper module to be present in
 The loader-only compatibility fix leaves the input and mathematics unchanged.
 Its corrected pre-run runner SHA-256 is
 `82c34b981ea58abd8525b26c01ede0564562b0b9f360e96858baaee5e60ad2c7`.
-No corrected execution is claimed before this source is committed cleanly.
+
+After loader-fix commit `f1eb3bbc48213cea367b497a29535a856c6068b6`, the
+same control-plane command exited `0` with `VALID_RUN`, but correctly emitted
+`VALID_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_NOT_CERTIFIED`. All `22/22` exact
+checks and all three theorem guards passed; `6/8` interval controls passed.
+The raw result SHA-256 is
+`c3f38b4fe7cc9d12b681b317e8914b8b1663739cd3395a7c524070693af0a1e2`
+and its canonical payload SHA-256 without the self field is
+`b6770ab63e478fc3033bedfed286ff41425d2149ad5f65e70ea361bf9bd8ae64`.
+
+Both failed controls were the two precision copies of the same compound panel
+refinement predicate. The 1,024-panel lower forcing bounds did increase over
+the 512-panel bounds,
+
+\[
+0.368936766823655\ldots < 0.382928053028844\ldots,
+\]
+
+and all four individual transport rows plus the cross-precision strict-sign
+intersection passed. The unnecessary final conjunct required separately
+constructed outward `p` balls to be literally nested at their upper endpoints,
+even though that upper comparison is panel-independent. Their stored uppers
+differed by about $7.9\times10^{-11}$ from ball wrapping. Therefore the
+observed strict interval
+
+\[
+-0.621029251873584<h(Q_{\rm switch})
+<-0.382928052604288
+\]
+
+is retained as non-promoted evidence under this result's authoritative
+`NOT_CERTIFIED` verdict. No ontology change follows from this run.
