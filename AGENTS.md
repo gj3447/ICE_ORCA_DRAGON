@@ -16,11 +16,12 @@
   **erase 금지**다 (narrative-feedback-loop, Eilu va-Eilu). 격하가 아니라 층 분리다.
 - 이 둘을 동시에 지키는 것이 이 저장소에서 가장 자주 틀리는 지점이다.
 
-## Ragnarok 회로 차단기 — ACTIVE
+## 실행 차단기 — ACTIVE (Ragnarok 역사 경로에 한정)
 
-`docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`가 현재 core 연구의 실행 경계를
-정한다. `./ice status`는 현재 운영 경계만, `./ice status --history`는 동결된 receipt·이관 이력을
-보인다. 역사 상세는 provenance이지 새 작업의 절차가 아니다.
+`docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`는 killed route의 실행 경계만
+정한다. 새 연구 방법은 `docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md`가 정본이다.
+`./ice status`는 현재 운영 경계만, `./ice status --history`는 동결된 receipt·이관 이력을 보인다.
+역사 상세는 provenance이지 새 작업의 절차가 아니다.
 
 - Phase 51→56의 saved-backend/reconstructed-launch reconciliation 경로는 **KILL**이고 Phase 56
   terminal closeout은 소진됐다. Phase 57 이상, full replay, 번호를 낮춰 재사용한 후속 Phase와 같은
@@ -95,14 +96,26 @@ basis-dependent metric 때문에 `NONPORTABLE_FAIL`이며 tolerance로 숨기지
 
 ## Definition of Done
 
-이 저장소는 의무적인 연구 계약, tier 선언, 사전등록, Bayes/Lakatos/KG ratification을 요구하지
-않는다. 새 계산은 다음의 짧은 기준으로 끝낸다.
+새 번호 없는 계산의 방법 정본은
+`docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md`다. 의무적인 연구 계약, tier 선언,
+전면 사전등록, Bayes/Lakatos/KG ratification을 요구하지 않는다. 다음 여섯 규칙으로 끝낸다.
 
-- 사용한 primary source, 방정식, convention과 가정을 코드나 인접 메모에 남긴다.
-- 가장 작은 exact 또는 numerical calculation을 먼저 실행한다.
-- 명령, 환경, 입력, 실제 출력을 남기고 변경 위험에 비례한 독립 검산을 한다.
-- 계산으로 확인된 사실, 해석, 아직 열린 물리 가설을 명확히 분리한다.
-- null, basis dependence, 단위/부호 오류도 그대로 결과로 보고하며 원하는 결론에 맞춰 숨기지 않는다.
+1. 질문 하나, 출력 하나, 그리고 그 결과만으로는 하지 않는 주장 하나를 짧게 고정한다.
+2. primary source·방정식·convention·가정·입력·명령·환경·실제 출력과 실패를 raw result 또는
+   인접 메모 한 곳에 남긴다.
+3. `algebra`, `sign/unit`, `discretization`, `truncation`, `solver`, `spectrum`, `gauge`,
+   `inference` 중 주된 실패원인을 하나 고르고 관련 control 1--3개만 수행한다.
+4. 변경 위험과 주장 강도에 비례해 독립 검산한다. 같은 runner 재실행은 repeatability이지
+   독립 evidence가 아니다.
+5. finite 계산 사실, numerical error, model/continuum 해석, physical/empirical hypothesis를
+   분리한다.
+6. 결과는 다음 작업을 자동 승인하지 않는다. ontology는 claim/evidence/scope/open problem이
+   실질적으로 바뀔 때만, repro manifest는 장기 회귀 기준이 필요할 때만 쓴다.
+
+외부 자료를 쓰는 confirmatory empirical claim에만 observable, scan/cut/nuisance 범위와 stopping
+rule의 사전 고정 및 적절한 multiplicity/global calibration을 요구한다. 결정론적 탐색 계산은
+허용하되 탐색으로 표시한다. null, basis dependence, 단위/부호 오류도 그대로 결과로 보고하며
+원하는 결론에 맞춰 숨기지 않는다.
 
 과거 `*_RESEARCH_CONTRACT.json`, run receipt, replay receipt는 당시 결과의 재현 provenance일 뿐
 새 작업을 지배하지 않는다. 기존 실행기가 그것을 읽는 경우 역사적 재현을 위해 보존한다.

@@ -1242,6 +1242,10 @@ it("renders current status by default and preserves historical status on request
   expect(formatRagnarokStatus(false)).toContain(
     "New unnumbered core: bounded execution enabled; per-window receipts=false"
   )
+  expect(formatRagnarokStatus(false)).toContain(
+    "Research method: LEAN_FAILURE_DIRECTED (docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md)"
+  )
+  expect(currentRagnarokStatus.schema).toBe("ice-research-runtime/current-v2")
   expect(formatRagnarokStatus(false)).toContain("History: ./ice status --history")
   expect(formatRagnarokStatus(false)).toContain(
     "Rule debt: ACTIVE; raw result=SINGLE_SOURCE; automatic inheritance=false"

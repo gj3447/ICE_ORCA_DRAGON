@@ -36,36 +36,15 @@ The repository preserves speculative motivations while turning them into scoped 
 results, numerical controls, physical interpretations, failed constructions, and open conjectures are
 reported separately.
 
-> **Bounded research runtime (2026-08-26):** The Phase 51–56 saved-backend/reconstructed-launch
-> reconciliation route remains `KILL`, and the exact Phase 56 terminal closeout remains consumed.
-> One non-numbered, exact-hash Gate-1 end-admissibility calculation ran under strict caps and has also
-> been consumed. It kills the Phase-39 straight unbounded field completion and the constant-straight-line
-> model class on its declared slice, not Gate 1. A separate, non-numbered exact-hash fixed-\(a\), \(m=2\)
-> scalar phase-space/source-link discriminator has now completed its sole terminal invocation. It keeps the
-> declared reduced scalar source link with orientation \(+1\) on nonzero lapse arms, while the zero-including
-> full \(q\)-paired distribution and physical original joint cycle remain open. That window is consumed.
-> The further exact-hash, non-numbered, no-argument zero-lapse one-shot has also been consumed. Its sole
-> invocation exited `1` before writing a result because an asymmetric SymPy structural-equality guard gave
-> a false negative after the preceding square rewrite passed. This is not counterevidence to the square
-> identity, but it supplies no canonical-boundary or extension verdict: the zero-lapse distribution remains
-> open. The per-window one-shot mechanism is now retired for new work: clean committed, unnumbered core
-> calculations run under shared time/output/artifact caps without launch receipts. Consumed runners,
-> Phase 51–56 reconciliation, and all new numbered descendants remain blocked.
-> Under that generic runtime, a finite \(m=2\) bosonic canonical-source control has completed. No one
-> common \(N-i0\) or \(N+i0\) sign absolutely damps the unchanged real \(p_a,p_\phi\) axes; declared
-> centered complex momentum rays do reproduce the finite fiberwise Gaussian pushforward. The
-> negative-arm \(-1\) is established only in a frozen-\(A\) flat tangent ledger, while simultaneous
-> nonlinear configuration admissibility, gauge/FP/BFV completion, zero lapse and the physical original
-> cycle remain open.
-> Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
-> Inspect current constraints with `./ice status`; use `./ice status --history --json` for complete
-> consumed-receipt and transport provenance. The tracked 529 MB Phase-44 result has been migrated on
-> the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the
-> [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md),
-> the [bounded Gate-1 resume](docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md),
-> the [bounded scalar source-link resume](docs/decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md),
-> the [bounded scalar zero-lapse resume](docs/decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md), and the
-> [LFS migration ledger](docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
+> **Current research boundary (2026-08-31):** New work follows the
+> [lean research rules](docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md): one bounded question,
+> one raw result, and only the controls relevant to its principal failure mode. Clean committed,
+> unnumbered core calculations run through `./ice run` under shared time/output/artifact caps without
+> per-window receipts. Phase 51–56 reconciliation, all new numbered descendants, and three consumed
+> Gate-1 runner families remain blocked; this scoped execution KILL is not a Gate-1 or scientific no-go.
+> `./ice status` is the current authority and `./ice status --history` exposes the frozen one-shot and
+> transport provenance. See the [execution-containment record](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md)
+> and [LFS migration ledger](docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
 
 The programme's current philosophical synthesis is documented in
 [`docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md):
@@ -488,7 +467,8 @@ graphs: [hypercomplex](ontology/hypercomplex/README.md),
 [CPT × Temporal-Folded SUSY](ontology/cpt-temporal-folded-susy/README.md), plus the separate
 [IG-RUEQFT locality audit](ontology/igrueqft-locality/README.md). Cross-graph reading paths are
 explicitly navigation-only. The collection is a memory/index layer, not a research contract, external-KG
-write, or automatic physics verdict.
+write, or automatic physics verdict. Update it only when a claim status, direct evidence, scope, or open
+problem materially changes; `ontology validate` is required when the ontology changes, not after every run.
 
 ```bash
 ./ice ontology validate
@@ -548,6 +528,7 @@ is not a sign, root, spectrum, RAQ, quantum-gravity, physics, or TOE result.
 | [`docs/index.md`](docs/index.md) | documentation map |
 | [`docs/USERGUIDE.md`](docs/USERGUIDE.md) | CLI and runnable-catalog guide |
 | [`docs/STATUS.md`](docs/STATUS.md) | engineering status and bounded scientific ledger |
+| [`docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md) | active six-rule, failure-directed research method |
 | [`research/README.md`](research/README.md) | organized research-code and report map |
 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) | complete CPT phase index and current boundary |
 | [`ontology/README.md`](ontology/README.md) | research-graph format and CLI entry points |

@@ -148,7 +148,7 @@ Preserve the distinction between:
 - computed observables
 - thresholds or configuration
 - a script's own interpretation/verdict field
-- provenance and preregistration metadata
+- provenance and historical preregistration metadata only when it is present
 
 A stored verdict string is evidence about what that historical run reported. It does not independently
 ratify a Contract or change current confidence.
@@ -178,7 +178,9 @@ green. See [`audits/QUEUE03_PORTABILITY_AUDIT_2026-08-14.md`](audits/QUEUE03_POR
 
 ## Run a scientific task
 
-No tier declaration or preregistration contract is required. Use the smallest relevant checks. Examples:
+New unnumbered work follows the active [lean research rules](decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md).
+No tier declaration, universal preregistration contract, or KG ratification is required. Use the smallest
+relevant checks. Examples:
 
 ```bash
 npm run check                 # TypeScript/Effect control plane
@@ -187,10 +189,19 @@ uv sync --locked              # Python/lock change
 ./ice run <affected-name>     # numerical kernel change
 ```
 
-For a new calculation, record the source equations/conventions, command, environment, input, and actual
-output. Use an independent derivation, symbolic identity, limiting case, or precision sweep when it
-materially lowers error risk. Reproduction establishes repeatability, not truth. Keep computed facts,
-physical interpretation, and open hypotheses separate.
+For a new calculation, state one question, one output, and one non-claim; record the source
+equations/conventions, command, environment, input, actual output, and failures in one raw record or
+adjacent memo. Choose the relevant failure class—algebra/sign/unit, discretization/truncation,
+solver/spectrum, gauge, or inference—and use only its 1--3 most relevant controls. An independent
+derivation, symbolic identity, limiting case, precision/refinement sweep, basis/gauge variation, or
+certified enclosure is useful only when it lowers that risk. Reproduction establishes repeatability, not
+truth. Keep finite computed facts, numerical error, model interpretation, and open physical hypotheses
+separate.
+
+Preregistration and multiplicity/global-significance machinery are for confirmatory empirical work with
+external data, not for ordinary deterministic exploration. Record exploratory searches as exploratory;
+for a confirmatory likelihood, fix the primary observable and search/cut/nuisance/stopping choices before
+looking at the decisive result, then disclose changes.
 
 ## Adding a runnable kernel
 

@@ -344,8 +344,10 @@ The graph's `reading-path:closed-fold-holonomy-to-full-pfaffian-line` keeps loca
 
 ### Ordered five-gate reading path
 
-The graph's `reading-path:ordered-five-gate-global-cycle-to-pole-spectrum` decomposes the Phase-37
-omnibus frontier into five typed promotion gates:
+The graph's `reading-path:ordered-five-gate-global-cycle-to-pole-spectrum` is a historical
+dependency and navigation map for one Phase-37 promotion question. It is not an execution order,
+a research contract, or a prerequisite for unrelated bounded calculations. It decomposes that
+historical omnibus frontier into five typed conditional questions:
 
 1. `open:gate1-original-cycle-signed-global-intersections` transports one pre-specified regulated joint
    lapse--field--gauge relative cycle and fixes its complete oriented integer intersection vector;
@@ -359,12 +361,12 @@ omnibus frontier into five typed promotion gates:
 5. `open:gate5-persistent-order-and-pole-splitting` derives a finite-energy persistent order parameter
    and a nonzero late-time interacting boson--fermion retarded-pole difference against matched controls.
 
-The `BLOCKED_BY` chain is a claim-promotion dependency, not a ban on exploratory calculation. A later
-calculation performed early remains `CONDITIONAL` until every earlier gate supplies its compatible
-evidence-backed typed output. A complete stable zero vector, a proved obstruction, or another scoped
-negative answer can resolve a gate epistemically, but it unlocks the preferred downstream route only when
-the next gate's required input actually exists. This roadmap does not alter any Phase-37 claim or scope,
-and it stops before asserting a physical state, a completed quantum-cosmology model, or quantum gravity.
+The `BLOCKED_BY` chain describes the inputs needed for that particular promotion claim, not a ban on
+exploratory calculation or an automatic successor rule. A later calculation performed early is simply
+scoped to the inputs it actually has; it does not settle the wider claim without compatible evidence.
+A complete stable zero vector, a proved obstruction, or another scoped negative answer can resolve one
+question without authorizing a new run. This roadmap does not alter any Phase-37 claim or scope, and it
+stops before asserting a physical state, a completed quantum-cosmology model, or quantum gravity.
 
 ### Phase 38 reading path
 
@@ -1220,12 +1222,13 @@ gauge-reduced kernel, physical endpoint product, and trace-class state therefore
 | Closed conjugacy invariant vs sheet label | Local root names and off-diagonal phases are trivialization dependent; same-basepoint trace, determinant, characteristic polynomial, and central square survive constant rephasing, subject here to the sampled-lift caveat. |
 | Reduced bosonic half-form vs Pin/Pfaffian line | The sampled inverse square root of one endpoint-Jacobi block omits the fermion operator, spectral flow, Clifford reflection data, ghost and other modes, common domain, anomaly test, and BFV/BV quantum structure. |
 
-## Method policy — no privileged exception
+## Historical optional method map — no privileged exception
 
-`policy:recursive-self-application-audit` stores the user-requested lesson inspired by Greg Egan's
+`policy:recursive-self-application-audit` stores the historical user-requested lesson inspired by Greg Egan's
 recursive mode of thought. It does not treat the novel's ideas or their interpretation as physics
 evidence. Its self-audit verdict is `NARROW`: literal recursion is required only when type-correct;
-otherwise the policy audits the justification for a privilege-bearing edge. The active audit is:
+otherwise the map audits the justification for a privilege-bearing edge. It is optional analysis, not the
+active workflow; the preserved questions are:
 
 1. classify the proposed `A → B` bridge and quotient gauge/basis redundancy;
 2. freeze its exact conditions;
@@ -1242,19 +1245,20 @@ sector prior has no privileged status. The result may be one invariant cycle, a 
 physically distinct underweighted branches, or an observational equivalence class. The two concepts
 `concept:invariant-difference-amplitude-and-record` and
 `concept:recursive-objectivity-and-world-resistance` record this deeper boundary. The central philosophy
-and intuitive meditation document them without evidential polarity. The policy is attached to the
-programme through `GOVERNED_BY`; it cannot support or contradict a scientific claim. Its SYMPOSIUM bridge
-is deliberately `UNRESOLVED` because no authorized external UID or writer is available.
+and intuitive meditation document them without evidential polarity. Historical phase edges retain which
+calculations used this map at the time; the programme itself now follows `policy:lean-research-workflow`.
+The map cannot support or contradict a scientific claim. Its SYMPOSIUM bridge is deliberately `UNRESOLVED`
+because no authorized external UID or writer is available.
 
-## Programme policy — ordered five-gate advancement
+## Historical optional programme map — ordered five-gate advancement
 
 `policy:ordered-five-gate-advancement` hash-tracks the user-mandated route in
 [`ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md`](../../docs/decisions/ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md).
-It turns the large Phase-37 frontier into five explicit typed debts and records which output may support
-which later inference. It is workflow metadata, not preregistration, evidence, or a forecast that any gate
-will succeed. The policy is itself `GOVERNED_BY` the recursive self-application audit: if a more direct
-formulation changes the dependency structure, the order must be justified and revised rather than treated
-as a natural law. The five gate nodes stay `OPEN`; no scientific claim state changes in this integration.
+It decomposed the large Phase-37 frontier into five conditional questions and records which historical
+output could support which later inference. It is navigation metadata, not current governance,
+preregistration, evidence, an execution order, or a forecast that any gate will succeed. Its historical
+cross-reference to the recursive audit is retained only as provenance. The five gate nodes stay `OPEN`;
+no scientific claim state changes in this integration and no gate authorizes a successor calculation.
 
 ## IDs and claim states
 

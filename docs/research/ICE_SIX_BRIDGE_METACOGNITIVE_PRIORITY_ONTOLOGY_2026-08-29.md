@@ -1,19 +1,20 @@
 # ICE 여섯 연결부 메타인지 우선순위 온톨로지
 
 > 기준일: 2026-08-29; 2026-08-30 scoped update 포함
-> 지위: repository-local 계산 워크벤치의 의사결정·기억 지도. 물리학 이론,
-> 양자중력 완성, 외부 KG ratification 또는 TOE 주장이 아니다.
+> 지위: HISTORICAL NON-BINDING exploration/memory map. 현재 연구 규칙, 실행 순서,
+> 물리학 이론, 양자중력 완성, 외부 KG ratification 또는 TOE 주장이 아니다. 새 계산은
+> [`ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](../decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md)를 따른다.
 
-## 0. 여기서 “완전한 메타인지”가 뜻하는 것
+## 0. 이 지도가 기록하려던 것
 
-이 문서는 현 프로그램에 대해 다음 질문을 빠짐없이 답할 수 있다는 제한된
-의미에서 **decision-complete**다.
+이 문서는 당시 현 프로그램을 탐색하기 위해 다음 질문을 한 화면에 모았다. 완전성이나
+선행 의무를 주장하지 않으며, 새 계산마다 이 질문을 모두 답할 필요가 없다.
 
 1. 무엇을 실제로 계산했는가?
 2. 어느 방정식·가정·scope에서만 성립하는가?
 3. 무엇은 문헌에서 가져온 theorem/method이고, 무엇은 repository evidence인가?
 4. 어떤 반례·실패 출력이면 현재 경로를 멈추거나 바꿔야 하는가?
-5. 다음 계산이 성공해야만 어느 후속 주장이 열리는가?
+5. 어떤 입력이 있을 때 어느 후속 해석이 조건부로 가능해지는가?
 6. 여전히 명시적 `null`인 결론은 무엇인가?
 
 문헌 전체를 망라했다거나 프로그램을 물리적으로 완성했다는 뜻은 아니다.
@@ -29,8 +30,11 @@
 | 차단 | 선행 입력이 없어 지금 결론을 낼 수 없음 | `BLOCKED_BY` |
 | 금지된 승격 | 물리·양자중력·TOE 또는 자동 후속 | explicit null / policy |
 
-모든 우선순위는 사람이 고른 연구 순서일 뿐 실행 권한이 아니다. 한 계산의
-성공·실패가 다음 계산을 자동 생성하지 않는다.
+모든 우선순위와 P 표기는 사람이 고른 기억·탐색 지도일 뿐 실행 권한, tier, 또는
+순차 계약이 아니다. 한 계산의 성공·실패가 다음 계산을 자동 생성하지 않는다. 새
+bounded 계산은 현재 열린 과학적 장애물을 직접 겨냥하면 독립적으로 검토할 수 있으며,
+각 계산에는 관련된 실패 원인에 맞는 최소 control만 붙인다. `REPRO` 표기는 장기 회귀
+mapping에 등록된 역사적 결과일 뿐, 일반 계산의 완료 조건이 아니다.
 
 ## 1. 우선순위 결론
 
@@ -53,18 +57,18 @@ root bracket 1에서 닫혔지만 모든 endpoint interval은 아직 0을 포함
   경로는 spectral/RAQ 단계에서 교차검사되어야 한다.
 - 실패해도 어느 node/chart/tail assumption에서 막혔는지 좁게 남길 수 있다.
 
-운영 우선순위는 아래와 같다. 원래 여섯 연결부에서 closed-\(S^3\)의
+당시 탐색 우선순위는 아래와 같다. 원래 여섯 연결부에서 closed-\(S^3\)의
 “cubic construction”과 “HDA/Jacobi 판정”을 서로 다른 인식 단계로 분리했기
 때문에 일곱 행이다.
 
-| 순위 | 목표 | 현재 상태 | 성공 게이트 | 실패·반증 출력 | 후속 연결 |
+| 탐색 표지 | 목표 | 현재 상태 | 관련 성공 기준 | 실패·반증 출력 | 가능한 연결 |
 |---:|---|---|---|---|---|
-| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **sharp-direction/width 부분 돌파**: exact backward-\(x\) variation-of-constants와 global \(0\le J_{\rho^2}\le J_0\) bound가 actual \(Q=4\to Q_s\) direction을 좁게 봉입했고 six scale-free width는 \(0.06370\)–\(0.06378<1/4\) | global nonlinear box의 panelwise Picard/affine refinement와 validated \(\lambda\)-sensitivity/sign separation; 0을 피할 때에만 continuation을 별도 검토 | sensitivity/sign separation 실패, domain/reference/normalization drift, tier 비중첩 | P4 |
-| P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; restricted zonal subvertices, fixed-background matter \(HH\), 그리고 scalar linear ADM momentum generator까지 있음 | scalar/vector/TT와 gravity·lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, transverse shift 누락, cutoff tail 미측정 | P3 |
-| P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | **scoped 부분 돌파**: zonal fixed-background matter \(HH\)에서 \(L=2\) omitted \(k=3\) remainder와 \(L=3,4\) 복구를 exact 분리 | full gravity+matter constraint의 \(DD,DH,HH\), Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5 |
-| P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5 |
-| P5 | 고전 BFV charge와 quantum nilpotency/anomaly | 고전 charge는 P3에 의존; raw-\(C\) physical core 적용은 P4도 필요 | 실제 structure functions와 common invariant core에서 \(\Omega^2\) defect 분해 | ordering/domain/regulator/truncation defect를 구분해 기록 | P7 |
-| P6 | contour·Gribov·determinant line·gluing을 포함한 absolute BFV | 방법 연구는 병렬, gravity 적용은 P3/P5와 만남 | boundary QME, gauge coverage, absolute orientation, regulator removal과 gluing | contour/Gribov/gluing/line orientation 중 실패 위치를 분리 | P7 |
+| P1 | raw-\(C\) actual nonzero-\(\lambda\) plus-recessive solution과 minus-end \(\Gamma_1\) remainder | **sharp-direction/width 부분 돌파**: exact backward-\(x\) variation-of-constants와 global \(0\le J_{\rho^2}\le J_0\) bound가 actual \(Q=4\to Q_s\) direction을 좁게 봉입했고 six scale-free width는 \(0.06370\)–\(0.06378<1/4\) | global nonlinear box의 panelwise Picard/affine refinement와 validated \(\lambda\)-sensitivity/sign separation; 0을 피할 때에만 continuation을 별도 검토 | sensitivity/sign separation 실패, domain/reference/normalization drift, precision enclosure 비중첩 | P4를 포함한 별도 spectral 질문 |
+| P2 | full \(S^3\) SVT/Gaunt와 ADM cubic coefficient | 독립 착수 가능; restricted zonal subvertices, fixed-background matter \(HH\), 그리고 scalar linear ADM momentum generator까지 있음 | scalar/vector/TT와 gravity·lapse/shift·matter를 같은 convention으로 cubic까지 구성 | basis/convention 불일치, transverse shift 누락, cutoff tail 미측정 | P3의 별도 HDA 질문 |
+| P3 | 고전 HDA/Jacobi와 cutoff remainder 분리 | **scoped 부분 돌파**: zonal fixed-background matter \(HH\)에서 \(L=2\) omitted \(k=3\) remainder와 \(L=3,4\) 복구를 exact 분리 | full gravity+matter constraint의 \(DD,DH,HH\), Jacobiator, \(L\) scaling 및 analytic remainder | 유한 cutoff defect를 continuum anomaly로 오인하지 않는 `UNCLASSIFIED_REMAINDER` | P5의 별도 BFV 질문 |
+| P4 | nonreal Weyl \(m\), spectral measure, raw-\(C\) RAQ와 \(C/H\) 비교 | 독립 method 착수 가능; real-axis 일치는 P1과 만남 | self-adjoint domain·measurable \(p\)-family·test space·positive rigging form·observable intertwining | Herglotz 부호/positivity/domain map 실패 또는 extension dependence | equivalence 판정 및 raw-\(C\) representation을 쓸 경우 P5와 비교 |
+| P5 | 고전 BFV charge와 quantum nilpotency/anomaly | 고전 charge는 P3 자료와 비교 가능; raw-\(C\) physical core 적용은 P4 자료도 필요 | 실제 structure functions와 common invariant core에서 \(\Omega^2\) defect 분해 | ordering/domain/regulator/truncation defect를 구분해 기록 | P7과의 비교는 physical product가 있을 때만 |
+| P6 | contour·Gribov·determinant line·gluing을 포함한 absolute BFV | 방법 연구는 병렬, gravity 적용은 P3/P5와 만남 | boundary QME, gauge coverage, absolute orientation, regulator removal과 gluing | contour/Gribov/gluing/line orientation 중 실패 위치를 분리 | P7과의 비교는 physical product가 있을 때만 |
 | P7 | 두 clock relational observable → BO/decoherence → \(V\ne0\) CLASS/Cobaya likelihood | downstream | 동일 physical product의 clock 비교, primordial spectra, pinned likelihood | clock chart/inner-product/initial-state/reheating 부재면 likelihood 금지 | 관측 비교 |
 
 의존성은 다음과 같다.
@@ -197,8 +201,8 @@ clean bounded run에서 exact 9/9, Arb-ball 70/70, theorem/scope guard 6개가
 안에 있고, 개별 enclosure 폭은 \(3.34\times10^{-26}\)에서
 \(4.62\times10^{-26}\), analytic tail upper bound는 모두
 \(6.02\times10^{-28}\)보다 작다. 80/120-digit 결과는 같은 backend의
-precision refinement이지 독립 구현이 아니다. 격리 재현은 `REPRO`,
-needs-attention 0이다.
+precision refinement이지 독립 구현이 아니다. 이 결과는 장기 회귀 mapping에
+등록되어 당시 격리 재현이 `REPRO`였고 needs-attention은 0이었다.
 
 ### 이번에 추가로 닫힌 direct node-safe Green endpoint
 
@@ -212,8 +216,8 @@ J(-4;\kappa)=\frac1{\sqrt{6\pi^2}}
 \]
 
 를 직접 ball-certify할 수 있다. `raw_c_lambda_zero_node_safe_green_transport`의
-clean bounded run은 exact 7/7, Arb-ball 61/61, guard 6개, 다섯 bracket
-5/5와 격리 `REPRO`를 통과했다. bracket 전체의 endpoint \(h(-4)\)는 각각
+clean bounded run은 exact 7/7, Arb-ball 61/61, guard 6개와 다섯 bracket
+5/5를 통과했다. 당시 장기 회귀 mapping의 격리 재현은 `REPRO`였다. bracket 전체의 endpoint \(h(-4)\)는 각각
 
 \[
 0.1428500395,\quad0.5356890492,\quad0.9097203283,\quad
@@ -297,8 +301,8 @@ u=\rho\sin\theta,\qquad u'=\rho\cos\theta,
 
 의 left-boundary contribution이 생긴다. 따라서 direct \(h(-4)\)를
 declared \(F_\lambda\), eigenvalue slope 또는 root velocity로 읽을 수 없다.
-다음 계산은 selected reference field, normalization, minus-end remainder와
-measurable \(p\)-family를 고정한 뒤 이 boundary variation을 검증해야 한다.
+가능한 후속 질문은 selected reference field, normalization, minus-end remainder와
+measurable \(p\)-family를 고정한 뒤 이 boundary variation을 검증하는 것이다.
 그 전까지 normalized/declared amplitude 출력은 `null`이다.
 
 ### 2026-08-30 scoped update: declared \(\Gamma_1\) zero-shell variation
@@ -318,7 +322,7 @@ left correction, 그리고 K-scaled representative의 \(\partial_\lambda\Gamma_1
 box다. 두 punctured real \(\lambda\) box
 \([-10^{-4},-10^{-8}]\), \([10^{-8},10^{-4}]\)에서는 actual solution 값이 아니라
 declared minus-tail \(L^2(f\,dQ)\) norm **per unit** correction-functional operator
-bound만 봉입했다. 80/120-digit tier는 같은 backend refinement이지 독립 구현이
+bound만 봉입했다. 80/120-digit precision comparison은 같은 backend refinement이지 독립 구현이
 아니다.
 
 따라서 old finite-\(Q_0\) proxy가 declared \(\Gamma_1\)와 \(\lambda\ne0\)에서도
@@ -336,16 +340,17 @@ analytic enclosure** 수준으로 좁혔다. LG-selected actual recessive soluti
 \(u_\lambda(4)=A_\lambda(4)^{-1/4}\)로 rescale하고, \(x\ge3\) Riccati
 invariant region, \(x=3\to Q_0\) node-safe two-state Grönwall, \(Q<Q_0\)
 rotating-frame Volterra tail을 순서대로 결합했다. exact 14/14, Arb 29/29,
-guard 6개와 isolated `REPRO`가 통과했고 \(\lambda=0\) exact Bessel family도
-두 precision tier에서 envelope 안에 들었다.
+guard 6개가 통과했고 \(\lambda=0\) exact Bessel family도 두 precision
+comparison에서 envelope 안에 들었다. 당시 장기 회귀 mapping의 isolated run은
+`REPRO`였다.
 
 계산된 사실은 actual selected family와 전체 minus tail의 **유한 outward
 bound**다. 두 \(\Gamma_1\) interval은 모두 약 \(10^{1410}\) 규모이며 0을
 포함한다. 그러므로 P1은 `actual solution 없음`에서 `actual family의 coarse
 boundedness 있음`으로 이동했지만, sharp endpoint/sign/root continuation은
-아직 열려 있다. 다음 blocker는 compact Grönwall을 Bessel/LG-preconditioned
-validated interval Taylor 또는 동등한 sharp transfer enclosure로 교체하는
-것이다. 같은 backend의 80/120-digit overlap은 독립 구현 검증이 아니다.
+아직 열려 있다. 가능한 다음 질문은 compact Grönwall을 Bessel/LG-preconditioned
+validated interval Taylor 또는 동등한 sharp transfer enclosure로 교체하는 것이다.
+같은 backend의 80/120-digit overlap은 독립 구현 검증이 아니다.
 
 ### 2026-08-30 P1 barrier-outer interval-Taylor 판정
 
@@ -356,13 +361,14 @@ validated interval Taylor 또는 동등한 sharp transfer enclosure로 교체하
 selected actual family를 포함하는 모든 barrier-admissible direction의 outer
 transfer다.
 
-관측 결과는 exact 14/14, Arb 113/119, guard 5, isolated `REPRO`다. 실패한 6개는
-모두 width \(<1/4\) gate이고, 나머지 여섯 tier는 \(v(-4)>0\), finite quotient
-tail, precision overlap을 만족했다. \(\lambda=0\) Bessel inclusion도 두 tier에서
+관측 결과는 exact 14/14, Arb 113/119, guard 5다. 당시 isolated long-term
+regression mapping은 `REPRO`였다. 실패한 6개는 모두 width \(<1/4\) criterion이고,
+나머지 여섯 precision comparison은 \(v(-4)>0\), finite quotient tail, precision
+overlap을 만족했다. \(\lambda=0\) Bessel inclusion도 두 precision comparison에서
 통과했다. width가 약 \(1.203\)으로 80/120 digits에서 거의 같다는 사실은 현재
 병목이 rounding이 아니라 switch-direction 폭임을 지목한다.
 
-따라서 이 시점 P1의 다음 수는 `segment 수 증가`가 아니라 다음 한 문장이었다.
+따라서 이 시점 P1에서 유용했던 후속 질문은 `segment 수 증가`가 아니라 다음 한 문장이었다.
 
 > root bracket 1과 두 \(\lambda\) box에서 actual plus-recessive
 > \(\rho(Q_s;\kappa,\lambda)\)를 \([-1,1]\)보다 충분히 좁게 outward
@@ -383,9 +389,8 @@ downstream scale-free \(\Gamma_1\) width는 \(0.06370\)–\(0.06378\)로 모두
 
 하지만 여섯 \(g\) interval은 모두 0을 포함한다. 따라서 이건 sharp direction과
 width의 workbench result이지 sign, root, spectrum, RAQ 또는 physics 결론이
-아니다. P1의 다음 명시적 blocker는 global nonlinear box의 panelwise
-Picard/affine refinement와 sharp chart 내부의 validated
-\(\lambda\)-sensitivity/sign separation이다.
+아니다. P1에 남은 명시적 장애물은 global nonlinear box의 panelwise Picard/affine
+refinement와 sharp chart 내부의 validated \(\lambda\)-sensitivity/sign separation이다.
 
 ## 3. P2–P3: closed-\(S^3\) ADM와 HDA
 
@@ -425,7 +430,7 @@ transverse-vector sector, Hamiltonian constraint와 모든 \(DD/DH/HH\), Jacobi�
 빠져 있으므로 full HDA 진전으로 승격하지 않는다.
 
 고전 hypersurface-deformation algebra의 기준선은 Teitelboim/HKT이고,
-repository의 성공 게이트는 그 continuum identity를 인용하는 것이 아니라
+repository에서 관련 결론을 지지할 최소 기준은 그 continuum identity를 인용하는 것이 아니라
 선언한 \(S^3\) coefficients가 실제로 재현하는지와 discarded remainder가
 \(L\)에 따라 어떻게 줄어드는지를 계산하는 것이다.
 
@@ -483,7 +488,7 @@ Yang--Mills이고, 이 repository의 중력 absolute measure나 anomaly freedom�
 완성하지 않는다.
 
 현재 finite Ward/Pfaffian/toy-gluing 결과는 상대 determinant bookkeeping을
-줄였을 뿐이다. absolute BFV 성공 게이트는 한 regulator에서의 cancellation이
+줄였을 뿐이다. absolute BFV에 관한 관련 최소 기준은 한 regulator에서의 cancellation이
 아니라 다음 전체의 동시 성립이다.
 
 1. gauge slice의 orbit coverage와 Gribov boundary;
@@ -538,19 +543,21 @@ KG에서 먼저 `concept:gate1-v0-six-bridge-metacognitive-priority-map`을 읽�
 \(\lambda=0\) Bessel anchor, \(h(4)\) tail, direct Green endpoint의 세
 claim/evidence를 거쳐 retarget된 nonzero-\(\lambda\) \(\Gamma_1\) open
 problem과 나머지 P2–P7 open problem으로 따라간다. `CITES` edge는
-방법·정리 출처이지 claim support가 아니다. support는 오직 tracked result와
-evidence snapshot의 `HAS_EVIDENCE` edge가 담당한다.
+방법·정리 출처이지 claim support가 아니다. support는 raw result와, 그 artifact hash 및
+핵심 locator를 가리키는 `HAS_EVIDENCE` edge로 추적한다.
 
-상태는 다음 사건이 있을 때만 바꾼다.
+local graph의 상태는 다음 사건이 있을 때만 바꾼다.
 
 - 새로운 계산이 claim의 지위·scope 또는 직접 evidence를 실질적으로 바꿈;
 - 독립 재현이 기존 결과를 뒤집거나 scope를 좁힘;
 - primary source의 가정을 잘못 옮겼음이 확인됨;
-- 다음 open problem의 성공 게이트가 실제로 충족됨.
+- 다음 open problem의 입력·scope가 실질적으로 달라짐.
 
-문구 정리, 같은 backend의 precision 증가, 문헌 추가만으로 claim을 승격하지
-않는다. 외부 KG writer와 정확한 대응 UID가 없으므로 local graph가 정본이고,
-외부 bridge에는 UID를 만들지 않고 `UNRESOLVED`를 유지한다.
+문구 정리, 같은 backend의 precision 증가, 문헌 추가, 중간 verifier 결과만으로 claim을
+승격하거나 ontology를 의례적으로 갱신하지 않는다. raw `RESULT.json`이 실행 check ledger의
+정본이며, graph는 artifact hash와 결론을 찾는 데 필요한 핵심 locator만 보존한다. 외부 KG
+writer와 정확한 대응 UID가 없으므로 local graph가 정본이고, 외부 bridge에는 UID를 만들지 않고
+`UNRESOLVED`를 유지한다.
 
 ## 9. 이번 결과의 재현·검증 경로
 
@@ -558,8 +565,8 @@ evidence snapshot의 `HAS_EVIDENCE` edge가 담당한다.
 ./ice info raw_c_lambda_zero_bessel_ball_transport
 ./ice info raw_c_lambda_zero_differentiated_plus_tail
 ./ice info raw_c_lambda_zero_node_safe_green_transport
-./ice repro --only raw_c_lambda_zero_node_safe_green_transport
-./ice ontology validate
+./ice repro --only raw_c_lambda_zero_node_safe_green_transport # 장기 회귀 mapping을 점검할 때만
+./ice ontology validate # ontology를 실질적으로 갱신했을 때만
 ./ice ontology summary
 npm run check
 ```

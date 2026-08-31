@@ -1186,9 +1186,14 @@ export const decodeBoundedGate1ZeroLapseResult = (
  * immutable historical record and is available verbatim through --history.
  */
 export const currentRagnarokStatus = {
-  schema: "ice-ragnarok-status/current-v1",
+  schema: "ice-research-runtime/current-v2",
   effective_date: "2026-08-31",
   operational_state: ragnarokStatus.operational_state,
+  research_method: {
+    mode: "LEAN_FAILURE_DIRECTED",
+    decision:
+      "docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md"
+  },
   bounded_science_runtime: ragnarokStatus.bounded_science_runtime,
   killed_reconciliation: {
     state: "CLOSED",
@@ -1250,6 +1255,7 @@ export const formatRagnarokStatus = (
 
   return [
     `Research runtime: ${currentRagnarokStatus.operational_state}`,
+    `Research method: ${currentRagnarokStatus.research_method.mode} (${currentRagnarokStatus.research_method.decision})`,
     "New unnumbered core: bounded execution enabled; per-window receipts=false",
     `Generic caps: ${currentRagnarokStatus.bounded_science_runtime.caps.wall_clock_seconds}s, ${currentRagnarokStatus.bounded_science_runtime.caps.changed_artifact_files} changed files, ${currentRagnarokStatus.bounded_science_runtime.caps.changed_artifact_bytes} changed bytes`,
     `Historical reconciliation: closed (${currentRagnarokStatus.killed_reconciliation.scope}); numbered descendants blocked`,

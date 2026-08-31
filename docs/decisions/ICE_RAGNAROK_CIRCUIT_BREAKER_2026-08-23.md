@@ -1,53 +1,31 @@
-# ICE Ragnarok 회로 차단기
+# ICE killed-route 실행 차단기 — Ragnarok 역사 기록
 
-> **상태:** `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED` — Phase 51--56
-> reconciliation과 consumed runner는 닫고, 새 번호 없는 core 계산은 일반 bounded runtime으로 연다.
+> **현재 권한:** `EXECUTION_CONTAINMENT_ONLY`
+> **운영 상태:** `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED`
 > **발효:** 2026-08-23
-> **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
-> **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
+> **연구 방법 정본:** [`ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](ICE_LEAN_RESEARCH_RULES_2026-08-31.md)
+> **비권한:** 이 문서는 새 연구 계약, 재개 절차, 과학적 evidence, Gate 1 no-go, 물리학 주장 또는
+> TOE 판정이 아니다.
 
-> **2026-08-31 규칙 부채 차단:** 이 문서의 one-shot authorization, receipt, consumed window,
-> 2026-08-30 재개 조건과 이관 상세는 해당 역사 경로의 provenance이며 새 번호 없는 bounded 계산의
-> 절차가 아니다. 현재 운영 정본은 `./ice status`의 짧은 current view다. 역사 원문은
-> `./ice status --history`에서만 노출한다. 일반 계산은 중앙 runtime cap을 결과마다 복제하거나
-> Gate-1/global/numbered/automatic-next 필드, 대형 null matrix, 전체 check-ID ontology snapshot,
-> 수동 repro 등록을 기본 의무로 상속하지 않는다. raw result 하나가 check ledger의 정본이다.
+이 문서가 현재 강제하는 것은 좁은 실행 안전 경계뿐이다.
 
-> **2026-08-26 runtime 개정:** 세 one-shot window의 결과와 receipt는 역사 provenance로
-> 보존하되 더는 새 연구의 실행 모델로 복제하지 않는다. 새 번호 없는 core runner는 committed
-> clean source에서 실행하며 120초, stdout/stderr 각 262,144 bytes, 변경 artifact 12개 및 합계
-> 1,000,000 bytes의 공통 상한을 적용한다. 별도 launch receipt나 결과 선소진은 없다. 과거
-> consumed runner와 이름을 붙인 후손, 새 numbered Phase, Phase 51--56 reconciliation은 계속
-> 차단한다. 아래의 one-shot authorization과 receipt 설명은 해당 역사 실행의 기록이다.
+- Phase 51--56 saved-backend/reconstructed-launch reconciliation과 그 이름 바꾼 후손은 닫는다.
+- 새 numbered core Phase와 이미 소진된 세 Gate-1 runner 계보는 닫는다.
+- 새 번호 없는 core 계산은 clean committed runner를 `./ice run`으로 실행하며 120초,
+  stdout/stderr 각 262,144 bytes, 변경 artifact 12개·합계 1,000,000 bytes의 공통 상한을 쓴다.
+- path traversal, absolute path, dirty·untracked core와 직접 Python 우회는 허용하지 않는다.
 
-> **2026-08-25 국소 개정:** 사용자가 즉시 연구 재개를 명시 승인하여 예정 대기만 정확히
-> hash-pin된 번호 없는 Gate-1 end-admissibility 계산 한 개에 한해 면제했다. 그 계산은
-> `VALID_RUN`으로 끝나 window가 소진됐고, straight completion 및 declared slice의
-> constant-straight-line class만 `KILL`했다. Gate 1은 `OPEN_PARTIAL_PROGRESS`다. Phase 51--56
-> route `KILL`, Phase 57 차단과 `next_phase=null`은 바뀌지 않는다. 정본 범위·상한·receipt는
-> [`ICE_GATE1_BOUNDED_RESUME_2026-08-25.md`](ICE_GATE1_BOUNDED_RESUME_2026-08-25.md)다.
+과거 one-shot authorization, receipt, consumed window, 2026-08-30 검토일, 재개 checklist와 이관
+상세는 모두 **비운영 역사 provenance**다. 새 계산은 이를 복제하지 않으며 per-window receipt,
+대형 null matrix, 전 check-ID snapshot, 수동 repro/KG 등록을 요구하지 않는다. 현재 상태는
+`./ice status`, 원문 이력은 `./ice status --history`로 읽는다. 세 과거 window의 정본은 다음과
+같다.
 
-> **2026-08-26 국소 개정:** 사용자가 다음 연구 진행을 명시하여 예정 대기만 새로 선언한
-> fixed-\(a\), \(m=2\) scalar phase-space/source-link exact 계산 한 개에 한해 면제했다. 이 계산은
-> physical original cycle을 회수하지 않고 `NEW_BOUNDED_SCALAR_CONTROL`을 검사했다. `VALID_RUN`으로
-> 끝나 window가 소진됐으며, Phase 51--56 route `KILL`,
-> Phase 57/full replay 차단, `next_phase=null`은 바뀌지 않는다. 정본은
-> [`ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md)다.
+- [`ICE_GATE1_BOUNDED_RESUME_2026-08-25.md`](ICE_GATE1_BOUNDED_RESUME_2026-08-25.md)
+- [`ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md)
+- [`ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md)
 
-> **2026-08-26 zero-lapse 국소 개정:** 사용자의 계속 연구 지시는 직전 결과가 명시한 다음
-> 장애물, 즉 같은 fixed-\(a\), \(m=2\) scalar control의 full \(q\)-paired \(N=0\) canonical
-> boundary/contact 문제 한 개에 한해 예정 대기를 면제한다. exact-hash, one-shot, no-argument,
-> private receipt와 fail-closed null 경계는
-> [`ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`](ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md)에
-> 동결했다. 이것은 Phase 57, full replay, retry, 자동 후손 또는 TOE 권한이 아니다.
-
-> **2026-08-26 zero-lapse 실행 종결:** sole invocation은 Bash 기준 `2.349 s`, exit `1`로
-> 끝났고 result를 쓰지 못했다. 실패 지점은 `G1.zero.global_lower_offset`이며, 독립 감사는
-> asymmetric SymPy structural equality의 harness false negative로 판정했다. 이는 square identity의
-> 반증이 아니지만 canonical boundary/extension verdict의 증거도 아니다. exclusive receipt가
-> window를 소진했으며 retry, `repro`, 수정 runner 및 자동 후손은 승인되지 않는다.
-
-## 결정
+## 활성 실행 결정
 
 현재 판정은 다음 세 문장을 동시에 보존한다.
 
@@ -65,16 +43,9 @@ Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 
 - 운영 상태는 `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED`다. 새 번호 없는 계산은
   공통 bounded runtime에서 열리고, killed reconciliation containment는 계속 active다.
-- Phase 56의 유일한 terminal-closeout 예외는 실행·독립 재현을 완료해 소진됐다.
-- 2026-08-25의 번호 없는 Gate-1 exact window도 한 번의 `VALID_RUN` 뒤 소진됐으며 retry나
-  자동 후손을 허용하지 않는다.
-- 2026-08-26의 번호 없는 `gate1_scalar_source_link`는 runner/input SHA-256, exact basename 또는
-  relpath, 무인자, clean core, 30초/250,000-byte 상한 아래 한 번 실행되어 소진됐다. `.git` 내부
-  exclusive launch receipt가 재실행을 차단하며 retry/repro/rename은 허용하지 않는다.
-- `gate1_scalar_zero_lapse_extension`은 새 runner/input SHA-256과 upstream result hash에 묶인 sole
-  invocation에서 exact PASS 1개 뒤 structural-equality exact FAIL 1개로 중단됐다. result와 scientific
-  verdict는 없고 zero-lapse distribution은 `OPEN`이다. receipt가 window를 소진했으므로 수정 runner,
-  retry, `repro`, rename 또는 자동 descendant는 허용하지 않는다.
+- Phase 56 terminal closeout과 세 과거 Gate-1 one-shot root 및 이름 붙인 후손은 소진된 역사
+  경로로 분류해 재실행하지 않는다. hash, receipt, 결과와 실패 상세는 `--history`와 위 전용
+  결정문에만 둔다.
 - 정확히 동결된 Phase 11–50 실행체는 역사 검산용 allowlist로 허용한다. KILL 범위인 Phase
   51–55 재실행, Phase 56 변종과 모든 새 numbered descendant는 `./ice run`과 `./ice repro`에서
   `RESEARCH_PHASE_PAUSED`로 거부한다. 새 번호 없는 core 실행체는 위 공통 상한 아래 허용한다.
@@ -90,10 +61,12 @@ Phase로 다시 낳는 자동 연장은 허용하지 않는다.
   같은 reconciliation의 새 이름 붙이기는 자동으로 열리지 않는다.
 
 현재 정본 상태는 `./ice status`와 `./ice status --json`으로 읽는다. 아래 역사 상세와 기존 v3
-machine record는 `./ice status --history` 및 `./ice status --history --json`으로 읽는다. 7일 pause는
-Phase 56 실행 시각이 아니라 이 containment의 2026-08-23 발효일부터 계산한다.
+machine record는 `./ice status --history` 및 `./ice status --history --json`으로 읽는다. 과거
+2026-08-30 검토일은 만료된 provenance이며 현재 계산을 기다리게 하거나 route를 다시 열지 않는다.
 
-## Phase 56 terminal closeout
+## 역사적 closeout — 운영 규칙 아님
+
+### Phase 56 terminal closeout
 
 2026-08-23T19:32:42Z authoritative run과 19:36:16Z 독립 재현은 모두 exit `0`이었고 stdout
 321,195 bytes가 byte-identical했다. canonical result는 321,183 bytes, SHA-256
@@ -115,7 +88,7 @@ corner는 저장 endpoint/residual target을 회복했다. 이 분류는 single-
 `continuation_route=KILL`은 그대로다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
 `PROHIBITED`, physics/TOE claim은 `null`이다.
 
-## Gate-1 scalar source-link terminal result
+### Gate-1 scalar source-link terminal result
 
 2026-08-26T04:12:08Z exact command는 2.791651251초에 exit `0`으로 끝났다. canonical result는
 11,117 bytes, SHA-256
@@ -157,31 +130,18 @@ KILL의 적용 대상은 위의 방법 경로이며 Gate 1이나 CPT × Temporal
 아니다. 현재 증거가 core를 닫지 못했다는 사실과, 같은 채무 하네스가 계속 Phase를 생성하지
 못하게 하는 결정은 서로 다른 타입이다.
 
-## 역사적 numbered/Gate-1 경로의 재개 조건 — 새 unnumbered 계산에는 비적용
+## Numbered route 재개 절차 없음
 
-새 **numbered core Phase 또는 과거 Gate-1 one-shot 계보**에는 2026-08-30 이후에도 다음 조건을
-**모두** 만족하고 사용자가 명시적으로 승인해야 한다. 2026-08-25 국소 개정은 새 core Phase가
-아니라, saddle/intersection 계산보다
-앞선 necessary end-admissibility model-class reduction 한 개이므로 그 날짜 대기만 정확한
-runner/input hash와 fail-closed null 출력 아래 면제했다. 그 일회성 예외는 이미 소진됐다.
-2026-08-26 국소 개정 역시 일반 재개 조건을 충족했다고 주장하지 않는다. full cycle보다 앞선
-reduced scalar source-link discriminator 한 개만 같은 방식으로 면제하며 자동 후손은 없다.
+이 문서는 새 numbered Phase나 과거 one-shot 계보를 위한 재개 checklist를 제공하지 않는다.
+2026-08-30 날짜, 사전 serialization, full census, 결과별 decision table과 대형 null matrix는 새
+작업의 대기 조건이 아니다. 미래에 전혀 다른 numbered programme가 필요해지면 사용자가 그때
+별도 범위와 권한을 정해야 하며, 이 문서나 한 계산의 출력이 그 결정을 자동 생성하지 않는다.
 
-1. 같은 reconciliation이 아니라 Gate 1의 typed object를 직접 계산한다.
-2. original joint cycle, orientation, singular divisor, endpoint prescription, regulator, Stokes
-   chamber와 relative-end 입력을 실행 전에 완전히 serialize하고 hash-pin한다.
-3. 모든 saddle, upward cycle, complex sheet와 asymptotic end의 census를 실행 전에 고정한다.
-4. 새 counterexample, invariant, observable discriminator 또는 model-class reduction을 제시한다.
-5. 결과별 `KEEP / NARROW / BRANCH / EQUIVALENCE / KILL / OPEN` 표와 단일 Phase의 runtime·artifact
-   상한을 실행 전에 고정한다.
-6. 아래 ordinary-Git 대용량 객체 문제를 외부화하거나 해결한다.
+Phase 53이 저장하지 않은 authoritative saddle·factor·launch·initial-state bytes가 독립 출처에서
+hash 인증된 형태로 회수되는 경우에도 검토 가능한 것은 별도 승인된 **비번호 archival
+reproduction audit**뿐이다. 그것은 killed route, 다음 Phase 또는 물리 승격을 다시 열지 않는다.
 
-위 조건은 같은 reconciliation 경로의 재개 조건이 아니다. 그 경로는 새 numbered Phase로 다시
-열지 않는다. Phase 53이 저장하지 않은 authoritative saddle, factor, launch와 initial-state bytes가
-나중에 독립 출처에서 hash 인증된 형태로 회수되면, 사용자의 별도 승인 아래 **비번호 archival
-reproduction audit**만 검토할 수 있다. 그 감사는 route 재개, 다음 Phase 또는 승격 권한이 아니다.
-
-## 원격 전송 차단과 승인된 수습
+## 역사적 원격 전송 차단과 승인된 수습
 
 읽기 전용 검사에서 다음 사실을 확인했다.
 

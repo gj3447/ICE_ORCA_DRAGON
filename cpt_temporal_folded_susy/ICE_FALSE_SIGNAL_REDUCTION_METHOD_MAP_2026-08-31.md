@@ -17,11 +17,11 @@ Passing an earlier question never answers a later one automatically.
 
 ## Failure-mode control menu
 
-The numbering below is explanatory, not a seven-gate workflow. Select only the
-controls that can falsify the current calculation; do not emit empty records for
-the other entries.
+The entries below are an unnumbered menu, not a workflow. Name one principal
+failure class and normally select one to three controls that can falsify the
+current calculation; do not emit empty records for the other entries.
 
-### 1. Complete the smallest closed packet
+### Incomplete packet or convention drift
 
 Fix source equations, signs, density weights, reality/phase conventions,
 canonical pairs and exceptional modes.  For an \(S^3\) calculation, scalar,
@@ -34,7 +34,7 @@ golden identities ([xPert](https://arxiv.org/abs/0807.0824),
 [Cadabra](https://arxiv.org/abs/hep-th/0701238),
 [unit-\(S^3\) SVT harmonics](https://arxiv.org/abs/1709.08020)).
 
-### 2. Separate evaluator error from regulator leakage
+### Evaluator error or regulator leakage
 
 For a nonlinear term whose finite evaluator can alias, compare:
 
@@ -53,7 +53,7 @@ folded convolution terms, not the true Galerkin tail
 ([Patterson--Orszag](https://doi.org/10.1063/1.1693365),
 [Orszag](https://doi.org/10.1175/1520-0469(1971)028%3C1074%3AOTEOAI%3E2.0.CO%3B2)).
 
-### 3. Run a frozen-packet refinement ladder
+### Truncation or basis dependence
 
 Hold physical source modes, smearings, branch and conventions fixed while
 increasing \(N\).  Compare only common retained coefficients, per-channel tail
@@ -69,7 +69,7 @@ Classification:
 - drift, parity alternation or basis dependence: regulator-dependent;
 - only one cutoff: unresolved.
 
-### 4. Check gauge/constraint structure before interpreting a residual
+### Gauge or constraint misinterpretation
 
 Compute ambient-before-project and project-after-each-operation paths separately.
 For ADM, retain coefficientwise \(DD\), \(DH\) and \(HH\) residuals, structure
@@ -93,7 +93,7 @@ pushforward and gluing are independent checks
 ([classical BV--BFV](https://arxiv.org/abs/1201.0290),
 [quantum BV--BFV](https://arxiv.org/abs/1507.01221)).
 
-### 5. Certify numerical existence, roots and spectra
+### Solver, root or spectrum false positive
 
 Float agreement is evidence, not an enclosure.  High-impact roots, ODE/BVP
 transport and signs should use outward-rounded interval/ball arithmetic and an
@@ -111,7 +111,7 @@ eigenvalues ([Davies--Plum](https://arxiv.org/abs/math/0302145),
 Weyl proxy remains distinct from a singular-endpoint \(m\)-function and spectral
 measure.
 
-### 6. Demand independent implementations and provenance
+### Shared-implementation or provenance failure
 
 For important identities, implementation B must not read A's generated
 coefficients.  Useful pairs are hand/exact Gaunt versus a tensor CAS, exact modal
@@ -125,7 +125,7 @@ Lockfiles supply the shared environment. Preserve stdout/stderr only when it is
 diagnostic evidence, not as an empty field in every result. Comparison remains
 field-specific; no global epsilon is used.
 
-### 7. Separate exploration from empirical discovery
+### Inference and selection effects
 
 Record the complete scan family: modes, parameter boxes, branches, solvers,
 cutoffs, stopping rules, nulls and failures.  A selected panel is exploratory

@@ -1,6 +1,8 @@
 # Research ontology memory
 
-> This directory is a human-readable memory and index over repository evidence. It is **not** a preregistration, research contract, scientific verdict, or knowledge-graph (KG) ratification. The machine-readable graph and run snapshots remain the traceable records; the prose pages are navigation aids.
+> This directory is a human-readable memory and index over repository evidence. It is **not** a preregistration, research contract, scientific verdict, or knowledge-graph (KG) ratification. For an executed calculation, its raw `RESULT.json` is the single check-ledger source of truth; the graph retains the artifact hash, conclusion, and only the minimum check locators needed to find it. Run snapshots and prose pages are historical provenance and navigation aids, not duplicate ledgers.
+
+Update this index only when a calculation materially changes a claim's status, direct evidence, applicable scope, or a next open problem. Do not register ordinary intermediate work, wording changes, method notes, or a verifier result merely to satisfy a process step.
 
 ## Current collection
 

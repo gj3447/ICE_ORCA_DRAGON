@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-31T05:04:41Z",
+  "updated_at_utc": "2026-08-31T05:51:01Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -2560,37 +2560,37 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "ba467699cd232c5f2b360862b0c53e8f7618bcfb5846d4b16c9739f1802d5953",
+      "sha256": "7e0289052853f675d486a4276d6bb77c9949087494ce7eb4ea8e968e3ee1edc2",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
       "id": "policy:lean-research-workflow",
       "type": "policy",
-      "title": "Lean source-to-calculation workflow",
-      "summary": "New calculations require source, equations, observed output, proportionate checks and scoped interpretation, but no mandatory research contract, preregistration ritual, per-run governance payload, repro registration, full-check ontology copy, or KG ratification.",
+      "title": "Lean six-rule failure-directed workflow",
+      "summary": "New unnumbered calculations use one question/output/non-claim, one raw provenance packet, one principal failure class with one to three relevant controls, independent checking proportional to claim strength, explicit calculation/error/model/physics separation, and no automatic offspring. Ontology and repro registration are conditional rather than per-run rituals; confirmatory empirical work alone receives preregistration and multiplicity controls.",
       "state": "ACTIVE",
-      "path": "AGENTS.md",
-      "sha256": "ba467699cd232c5f2b360862b0c53e8f7618bcfb5846d4b16c9739f1802d5953",
+      "path": "docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md",
+      "sha256": "0169898ddb3d3e189d1bcc7bd75411df7a28ecf1458e7e7d92995c74b878fd85",
       "introduced_in_commit": "33d27c6ff67d1bded0bb96e30481700e8f989e81"
     },
     {
       "id": "policy:recursive-self-application-audit",
       "type": "policy",
-      "title": "No-privileged recursive self-application audit",
-      "summary": "When a principle or bridge privileges one otherwise comparable candidate, apply the same evidential burden to the differentiating rule. Literal self-application is required only when type-correct; otherwise perform a meta-audit of kind, conditions, counterexample, ablation, reversal, invariance, observables, and definition stability. The policy's own self-audit is NARROW: it is a revisable workflow tool, never a universal law or scientific evidence.",
-      "state": "ACTIVE",
+      "title": "Historical optional no-privileged analysis map",
+      "summary": "Preserved optional questions for analysing a privilege-bearing philosophical bridge or selection rule. It is not current workflow, a universal checklist, a research contract, or scientific evidence; new work uses the lean failure-directed rules.",
+      "state": "HISTORICAL_OPTIONAL_ANALYSIS_MAP",
       "path": "docs/decisions/ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md",
-      "sha256": "1f20c81bae626a3e58ae64bb6fd01839351819f542b73a00ebdc5bba4776e62b",
+      "sha256": "1a39afee8312e19e8ef9b72ea0de575ef26dd27deed6736072cf7048b66de1ae",
       "introduced_in_commit": "8a3aad8a3c3d0d7e035ba9732a02fcdb8d51fe71"
     },
     {
       "id": "policy:ordered-five-gate-advancement",
       "type": "policy",
-      "title": "Ordered five-gate advancement from the original cycle to the SUSY spectrum",
-      "summary": "The user-mandated core route advances in five typed gates: original joint relative cycle and signed global intersections, hard CFU coefficients, the full BFV/Pfaffian/Pin line, a conserved spinorial charge with common domain and constraint closure or a typed obstruction, and a persistent order parameter with interacting pole splitting. Later gates may be explored early but cannot be promoted or used as established downstream input before prior gates supply compatible evidence-backed outputs. This is a revisable workflow rule, never scientific evidence or a promised outcome.",
-      "state": "ACTIVE",
+      "title": "Historical optional five-question programme map",
+      "summary": "Preserved dependency and navigation map for one 2026-08-20 CPT promotion question, from original cycle through hard CFU, BFV/Pfaffian/Pin, physical charge/domain and persistent poles. It is not current governance, an execution order, an unlock mechanism, or scientific evidence.",
+      "state": "HISTORICAL_OPTIONAL_PROGRAMME_MAP",
       "path": "docs/decisions/ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md",
-      "sha256": "fc4d5fa3758faf32511f00648993a7563a93f10a2138738c1980163b286fffed",
+      "sha256": "6ea9b85d818fd8c71a312b4b48c519b708154918677e77063a10da06cbf0a35a",
       "introduced_in_commit": "1ab7b779cf6fbdc4343ba5200ea8efe6037243a9"
     },
     {
@@ -9999,11 +9999,11 @@
     {
       "id": "policy:ragnarok-circuit-breaker",
       "type": "policy",
-      "title": "Ragnarok bounded-pause circuit breaker",
-      "summary": "Operational containment for the recursive Phase-51→56 saved-backend/reconstructed-launch reconciliation loop and its rule debt. Default status exposes only current constraints; receipts and transport live behind history. Distinct clean committed unnumbered core calculations run under central caps without inheriting per-window receipts, governance null matrices, full-check ontology copies or automatic repro registration. Consumed runners, new numbered descendants, Phase 51–56 reconciliation and full replay stay blocked. This policy is not scientific evidence, a Gate-1 no-go, a physical-original-cycle claim, or a TOE verdict.",
+      "title": "Killed-route execution containment with Ragnarok history",
+      "summary": "Narrow execution containment for Phase 51–56 reconciliation, new numbered descendants and consumed Gate-1 roots. Clean committed unnumbered calculations remain open under common caps. One-shot receipts, reentry checklists and transport details are history-only and are not a research method or scientific evidence.",
       "state": "ACTIVE_BOUNDED_SCIENCE_KILLED_RECONCILIATION_CLOSED",
       "path": "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md",
-      "sha256": "22fb10246cfe37d5772c6e5c447bcc3d5a7f3f57d75081c2bfa71432b97b125c",
+      "sha256": "487f780a5cc5cc5da14a45ec696baecab5887aec16e8ae6bbf544ba10f0317ec",
       "introduced_in_commit": "2324afb51783149fddeccdf53f3b2d315c6857f8"
     },
     {
@@ -14299,12 +14299,12 @@
     {
       "id": "artifact:gate1-v0-six-bridge-metacognitive-priority-map",
       "type": "artifact",
-      "title": "Gate-1 V0 six-bridge metacognitive priority map",
-      "summary": "Human-readable local priority, assumption, falsifier, success-gate, source-role and explicit-null ledger.",
-      "state": "TRACKED_RESEARCH_DECISION_MAP",
+      "title": "Historical Gate-1 V0 six-bridge exploration map",
+      "summary": "Human-readable non-binding memory of historical priorities, assumptions, falsifiers, source roles and explicit nulls. It is not an execution order, tier, successor authorization, or current rule source.",
+      "state": "HISTORICAL_NON_BINDING_EXPLORATION_MAP",
       "artifact_kind": "research_decision_map",
       "path": "docs/research/ICE_SIX_BRIDGE_METACOGNITIVE_PRIORITY_ONTOLOGY_2026-08-29.md",
-      "sha256": "dd1da2f35f3a45aee31eb77fac7ddd4598de59da59bcc4c043c5ebc37296dcb9"
+      "sha256": "7d41eab446a8f11f7fef0f9a44b2dda88c4bc529c06d6143cf06669d440f7075"
     },
     {
       "id": "artifact:raw-c-lambda-zero-bessel-ball-transport-inputs",
@@ -14843,7 +14843,7 @@
     {"id":"evidence:bfv-relative-lapse-cycle-toy-audit-result","type":"evidence","title":"BFV open rapid-decay lapse-ray toy evidence","summary":"VALID_RUN with 3/3 derived exact checks; four declared convention/scope guards are preserved in the payload and are not check IDs.","state":"VALID_RUN_DECLARED_OPEN_RAY_TOY_ONLY","observed_status":"VALID_RUN_3_DERIVED_EXACT_PASS_4_DECLARED_SCOPE_GUARDS","check_ids":["bfv.lapse.toy.gamma_plus.endpoint_damping","bfv.lapse.toy.two_slab.coordinate_inverse_and_jacobian","bfv.lapse.toy.principal_branch.positive_product"]},
     {"id":"artifact:bfv-relative-lapse-cycle-toy-audit-evidence-snapshot","type":"artifact","title":"BFV relative lapse-cycle toy evidence snapshot","summary":"Schema-valid declared-open-ray toy snapshot.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/bfv-relative-lapse-cycle-toy-audit-result.json","sha256":"083b33235dd2fa387d91cfd7c15f2568fc48107fcc206da4987a36d9e0a5a354"},
     {"id":"concept:ice-false-signal-reduction-method-map","type":"concept","title":"ICE false-signal reduction method map","summary":"A routing map that separates finite evaluator correctness, regulator leakage, continuum/gauge representation, and physical inference. It is a method boundary, not a research contract or physics-ratification layer.","state":"DOCUMENTED_METHOD_BOUNDARY_NO_PHYSICS_PROMOTION"},
-    {"id":"artifact:ice-false-signal-reduction-method-map","type":"artifact","title":"ICE false-signal reduction method map","summary":"Human-readable optional control menu for separating aliasing, projection tails, gauge/discretization defects, numerical certificates and empirical false signals without imposing a seven-gate workflow.","state":"TRACKED_METHOD_DOCUMENTATION","artifact_kind":"documentation","path":"cpt_temporal_folded_susy/ICE_FALSE_SIGNAL_REDUCTION_METHOD_MAP_2026-08-31.md","sha256":"d437f2511e5cd0ba495cddb698617d43a1538c4c3b78347f18978b7b0a2eb14f"},
+    {"id":"artifact:ice-false-signal-reduction-method-map","type":"artifact","title":"ICE false-signal reduction method map","summary":"Human-readable unnumbered control menu for separating aliasing, projection tails, gauge/discretization defects, numerical certificates and empirical false signals without imposing a universal workflow.","state":"TRACKED_METHOD_DOCUMENTATION","artifact_kind":"documentation","path":"cpt_temporal_folded_susy/ICE_FALSE_SIGNAL_REDUCTION_METHOD_MAP_2026-08-31.md","sha256":"690be69952ac020fe50f8c12f6652bbec5661e1e907c06064735bd04821f5091"},
     {"id":"concept:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit","type":"concept","title":"Closed-S3 zonal scalar aliasing and cutoff-ladder audit","summary":"A three-way exact-modal, degree-certified overintegrated, and production-grid audit for one frozen zonal scalar packet. It separates transform-grid aliasing from the exact hard-cutoff tail only; it is not HDA, Jacobi, BFV, continuum or physics evidence.","state":"COMPLETED_FINITE_ALIASING_AND_PROJECTION_SEPARATION_ONLY"},
     {"id":"claim:CLOSED_S3_N2_ALIAS_Q4_TO_MINUS_Q2_AND_TRUE_TAIL_LADDER_HOLD","type":"claim","title":"N=2 production alias and exact zonal tail ladder are separated","summary":"Supported only for the frozen Q1+Q2 zonal scalar packet and declared transforms: the N=2 production grid aliases Q4 into -Q2, while the exact (1-P_N) tail-square factors at N=2,3,4 are 5,1,0. This is neither an HDA/Jacobi result nor an anomaly or physics claim.","state":"SUPPORTED_FINITE_ALIASING_TAIL_SEPARATION_ONLY","claim_id":"CLOSED_S3_N2_ALIAS_Q4_TO_MINUS_Q2_AND_TRUE_TAIL_LADDER_HOLD","statement":"For the declared frozen zonal scalar packet, the N=2 production evaluator folds Q4 into -Q2 and the separately exact projection-tail-square factors over the N=2,3,4 ladder are 5, 1 and 0 in the declared s-squared units.","epistemic_state":"SUPPORTED"},
     {"id":"evidence:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-result","type":"evidence","title":"Closed-S3 zonal scalar aliasing ladder evidence","summary":"The authoritative raw result records VALID_RUN with 153/153 exact checks and three theorem/scope guards. This graph retains seven decision-bearing locator IDs rather than duplicating the full check ledger.","state":"VALID_RUN_FINITE_ALIASING_TAIL_SEPARATION_NOT_HDA","observed_status":"VALID_RUN_153_EXACT_PASS_3_GUARDS_RAW_RESULT_HASH_TRACKED","check_ids":["CS3Alias.packet.exact_modal_square","CS3Alias.N2.overintegrated_alias","CS3Alias.N2.production_alias","CS3Alias.N2.production_alias_source_reconstruction","CS3Alias.N2.alias_projection_separation","CS3Alias.ladder.production_false_drift_detected","CS3Alias.ladder.true_projection_closes_at_selection_bound"]},
@@ -23106,9 +23106,9 @@
     {
       "id": "edge:1332",
       "from": "programme:cpt-temporal-folded-susy",
-      "relation": "GOVERNED_BY",
+      "relation": "CITES",
       "to": "policy:recursive-self-application-audit",
-      "note": "User-requested methodology lesson: recurse on the proposed bridge and its selection rule without treating the preferred construction as a privileged exception. Workflow only; not scientific evidence."
+      "note": "Historical optional analysis map for privilege-bearing philosophical bridges and selection rules; not current workflow or scientific evidence."
     },
     {
       "id": "edge:1333",
@@ -23494,8 +23494,9 @@
     {
       "id": "edge:1395",
       "from": "programme:cpt-temporal-folded-susy",
-      "relation": "GOVERNED_BY",
-      "to": "policy:ordered-five-gate-advancement"
+      "relation": "CITES",
+      "to": "policy:ordered-five-gate-advancement",
+      "note": "Historical dependency/navigation map for one promotion question; not current governance, execution order, or successor authorization."
     },
     {
       "id": "edge:1396",
@@ -23645,9 +23646,9 @@
     {
       "id": "edge:1419",
       "from": "policy:ordered-five-gate-advancement",
-      "relation": "GOVERNED_BY",
+      "relation": "CITES",
       "to": "policy:recursive-self-application-audit",
-      "note": "The ordering remains revisable under type, counterexample, ablation, reversal, and invariant-observable audit; neither policy is scientific evidence."
+      "note": "Historical cross-reference between two optional maps; neither is current workflow or scientific evidence."
     },
     {
       "id": "edge:1420",

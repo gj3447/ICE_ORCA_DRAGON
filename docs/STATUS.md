@@ -3,7 +3,7 @@
 > Current engineering/reproduction state followed by a bounded historical scientific ledger. This file
 > reports evidence; it does not authorize KG or canon mutation.
 
-## Current state — 2026-08-26
+## Current state — 2026-08-31
 
 | Component | State |
 |---|---|
@@ -14,8 +14,8 @@
 | Reproduction ledger | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` |
 | Local engineering gate | `npm run check` (strict typecheck + Vitest suite) |
 | Environment gate | `./ice doctor` |
-| Scientific workflow | lean source → calculation → independent check → scoped interpretation |
-| Ragnarok containment | `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED`; P51–56 reconciliation, numbered descendants, and consumed runners stay blocked, while clean committed unnumbered core calculations use generic runtime/output/artifact caps without one-shot receipts |
+| Scientific workflow | six lean rules + principal-failure controls; no universal gate/tier/contract |
+| Execution containment | `BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED`; P51–56 reconciliation, numbered descendants, and consumed runners stay blocked, while clean committed unnumbered core calculations use generic runtime/output/artifact caps without one-shot receipts |
 | Phase 56 closeout | `VALID_RUN`; fresh center/launch recovers the saved lambda-half target under both profiles; `next_phase=null` |
 | Gate 1 / promotion | `OPEN_PARTIAL_PROGRESS` / `PROHIBITED` — operational KILL is not a scientific no-go |
 | Remote transport | `PUSHED_WITH_GIT_LFS`; exact Phase-44 path is a 529,370,671-byte Git LFS object, with 76 rewritten unpublished commits, no force-push, and a verified fresh remote read-back |
@@ -32,31 +32,12 @@ work. Clean committed unnumbered core runners execute with one common policy: 12
 per-window launch receipt. The killed Phase-51→56 route, every new numbered descendant, and the three
 consumed Gate-1 runners remain closed.
 
-Phase 56 answered its frozen lambda-half
-launch-provenance/residual-conditioning question and set `next_phase = null`; the one-shot closeout
-permission is now consumed. The 2026-08-25 straight-lift window is also consumed. On 2026-08-26 the user
-separately authorized exactly one no-argument invocation of the hash-pinned, non-numbered
-`gate1_scalar_source_link` discriminator. It completed as a `VALID_RUN` and its exclusive private launch
-receipt consumed the window. It uses a newly declared fixed-\(a\), \(m=2\) scalar phase-space control and
-does not recover a physical original cycle. The user's continuation instruction authorized exactly one
-hash-pinned, no-argument invocation of `gate1_scalar_zero_lapse_extension`, aimed only at the full
-\(q\)-paired canonical boundary through \(N=0\). That invocation exited `1` after `2.349 s` at the second
-exact guard and wrote no result. The preceding square rewrite passed; independent read-only review identified
-an asymmetric SymPy structural comparison as a harness false negative, not scientific counterevidence.
-The exclusive receipt nevertheless consumed the one-shot. No retry or reproduction surface is authorized;
-the frozen Phase 11–50 historical allowlist remains hash-pinned, while distinct unnumbered science runs use
-the generic bounded path.
-The Phase-51→56 saved-backend/reconstructed-launch reconciliation route may not rerun Phase 51–55,
-substitute another Phase 56, generate Phase 57, perform a full replay, relax a threshold, or create
-another evaluator/dtype/solver/residual/provenance descendant.
-The former 2026-08-30 review date no longer gates distinct unnumbered calculations; it never reopens the
-killed numbered route.
-
-The exact source-link authorization, limit order, decision table, and null-output boundary are recorded in
-[`decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md`](decisions/ICE_GATE1_SCALAR_SOURCE_LINK_BOUNDED_RESUME_2026-08-26.md).
-The zero-lapse runner/input hashes, analytic theorem guards, decision table and stricter uniqueness qualifier
-are frozen in
-[`decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md`](decisions/ICE_GATE1_SCALAR_ZERO_LAPSE_BOUNDED_RESUME_2026-08-26.md).
+Phase 56 and the three Gate-1 one-shot roots are consumed historical paths. Their hashes, receipts,
+decision tables and outcomes remain available through `./ice status --history` and the
+[`execution-containment record`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md), but are not a
+template or reentry checklist for new work. The Phase-51→56 route may not be replayed, renamed, continued
+as Phase 57, or split into another evaluator/dtype/solver/residual/provenance descendant. The former
+2026-08-30 review date has no current authority.
 
 ### Gate-1 scalar zero-lapse invalid run
 
@@ -100,7 +81,7 @@ global/physics/TOE output remains null. See
 
 This containment does not erase real scoped progress or convert open science into a no-go. Gate 1 remains
 `OPEN_PARTIAL_PROGRESS`, required global/physics outputs remain null, and global promotion remains
-`PROHIBITED`. The exact scope and reopening conditions are recorded in
+`PROHIBITED`. The exact scoped containment and historical closeouts are recorded in
 [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md).
 The Phase-44 transport blocker has been migrated to Git LFS without changing its bytes; the pre-LFS
 commit namespace, 76-row object map, local recovery bundle, and validation boundary are recorded in
@@ -140,11 +121,13 @@ and [`audits/REPRODUCIBILITY_2026-06-08.md`](audits/REPRODUCIBILITY_2026-06-08.m
 
 ## Current scientific workflow
 
-New work has no mandatory tier, preregistration contract, Bayes/Lakatos form, or KG ratification step.
-Record the primary source, equations, conventions, assumptions, command, environment, and actual output;
-then apply an independent check proportional to the calculation's risk. Exact algebra, numerical output,
-physical interpretation, and open speculation must remain separate. Historical T2 labels and contract
-files below describe how those old results were produced; they do not govern new work.
+New work follows the
+[`six lean research rules`](decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md): one question/output/non-claim,
+one raw provenance packet, one principal failure class with one to three relevant controls, independent
+checking proportional to claim strength, explicit separation of calculation/error/model/physics, and no
+automatic next work. There is no mandatory tier, preregistration contract, Bayes/Lakatos form, KG
+ratification or per-run ontology/repro registration. Historical T2 labels and contract files below describe
+how those old results were produced; they do not govern new work.
 
 ## Current bounded T2 result — CPT × Temporal-Folded SUSY Phase 12
 

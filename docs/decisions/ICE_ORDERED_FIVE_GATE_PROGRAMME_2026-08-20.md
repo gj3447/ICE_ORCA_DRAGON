@@ -1,15 +1,20 @@
-# ICE 양자중력 후보의 순차적 다섯 관문
+# ICE 양자중력 후보의 다섯 조건부 질문 — 역사 지도
 
-> **상태:** ACTIVE programme workflow
+> **상태:** HISTORICAL OPTIONAL PROGRAMME MAP
 > **기원:** 2026-08-20 사용자 지정 연구 순서
-> **권한:** CPT × Temporal-Folded SUSY core route의 claim 승격 순서를 정한다.
+> **현재 적용:** 이 문서는 당시 named CPT × Temporal-Folded SUSY promotion programme의
+> 분석 지도다. 새 번호 없는 계산은
+> [`ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](ICE_LEAN_RESEARCH_RULES_2026-08-31.md)를 따르며,
+> 이 다섯 gate를 순차 실행하거나 unlock 기록을 남길 의무가 없다. Ragnarok 차단기는 새
+> numbered Phase와 killed reconciliation route를 계속 막는다.
 > **비권한:** 과학적 evidence, preregistration, 완성된 양자중력 이론의 선언, 또는 각
 > 관문의 성공을 미리 보증하는 문서가 아니다.
 
 ## 1. 결정
 
-ICE_ORCA_DRAGON의 현재 local-fold 결과를 물리적 SUSY spectrum 주장으로 승격하려면 다음
-다섯 typed gate를 순서대로 닫는다.
+2026-08-20의 named programme은 현재 local-fold 결과를 물리적 SUSY spectrum 주장으로
+승격할 경우 다음 다섯 typed gate를 순서대로 검토하는 지도로 정리했다. 이는 preserved
+analysis map이지 새 연구의 실행 승인 또는 universal workflow가 아니다.
 
 1. **원래 cycle과 signed global intersection**
    원래 lapse relative cycle을 fold 전체로 운반하여 signed intersection과 global contour를
@@ -166,9 +171,10 @@ Gate 4와 compatible한 branch에서 finite-energy persistent carrier를 유도�
 Free equal-mass bulk에서 state occupation만 달라지는 것은 Gate 5 성공이 아니다. Preserved-law
 branch라면 Ward identity, Goldstino와 spontaneous-breaking 조건도 함께 만족해야 한다.
 
-## 8. 승격 순서와 탐색 허용 범위
+## 8. 보존된 claim dependency와 탐색 범위
 
-Core claim promotion 순서는 엄격하다.
+당시 programme의 물리 claim 의존성은 다음처럼 기록됐다. 이는 실행 순서나 현재 승격
+절차가 아니라, downstream 문장이 어떤 미계산 입력을 가정하는지 읽는 역사 지도다.
 
 ```text
 Gate 1 typed cycle vector
@@ -183,10 +189,10 @@ Downstream 탐색 계산을 미리 실행하는 것은 허용한다. 그러나 �
 않고 `CONDITIONAL`로 표시한다. 순서는 계산 금지가 아니라 claim 의존성이다.
 
 Gate 4의 trivial 또는 obstructed 결과처럼, 질문을 완전히 답했지만 선호 경로에는 불리한
-결과도 epistemic resolution이다. 다만 다음 gate를 unlock하려면 단순 `RESOLVED`가 아니라 그
-gate가 요구하는 compatible typed output이 필요하다.
+결과도 epistemic resolution이다. 역사적 dependency에서 뒤 문장을 unconditional claim으로
+읽으려면 단순 `RESOLVED`가 아니라 그 문장이 가정한 compatible typed output이 필요했다.
 
-## 9. 실패, no-go와 상태 규칙
+## 9. 보존된 실패·no-go 분류어
 
 - 한 solver·ansatz·candidate의 실패: 해당 scoped claim만 `CONTRADICTED`; gate는 `OPEN`.
 - scope 전체의 완전한 obstruction/no-go: 별도 evidence-backed negative claim으로 gate를 닫고
@@ -207,11 +213,11 @@ gate가 요구하는 compatible typed output이 필요하다.
 | 4 | `open:p17-conserved-charge`, `open:p17-gluing-domain`, `open:p17-projector-charge-compatibility`, `open:p17-reality-positivity-junction`, `open:full-4d-sugra-interface` |
 | 5 | `open:p18-persistent-order-parameter`, `open:p18-interacting-wigner-self-energies`, `open:p18-frw-backreaction`, `open:p18-higgs-power-sensitivity` |
 
-새 gate nodes는 이 채무를 지우거나 복제하지 않고, 필요한 출력의 순서를 명시한다.
+기존 gate nodes는 이 채무를 지우거나 복제하지 않고, 역사적으로 가정했던 출력을 명시한다.
 
-## 11. 순서 자체의 재귀 감사
+## 11. 역사적 순서의 한계
 
-이 다섯 단계는 사용자 지정 core workflow이지 자연법칙이 아니다. 더 직접적인 formulation이
+이 다섯 단계는 당시 사용자 지정 programme map이지 자연법칙이나 현재 workflow가 아니다. 더 직접적인 formulation이
 hard CFU를 우회하거나, Gate 3 계산이 Gate 1의 contour class를 추가로 제한할 수 있다. 그런
 경우 계산은 병렬로 수행하되 최종 joint fixed point가 모든 typed consistency를 만족하는지
 검사하고 이 문서를 개정한다.
@@ -231,9 +237,10 @@ hard CFU를 우회하거나, Gate 3 계산이 Gate 1의 contour class를 추가�
 constraint algebra, regulator-independent continuum or UV completion, positive physical state,
 unitarity/causality, GR+QFT low-energy recovery와 독립 관측 discriminator가 추가로 필요하다.
 
-## 13. Phase evidence 통합 규칙
+## 13. Historical Phase evidence 통합 규칙
 
-각 후속 Phase는 최소한 다음을 기록한다.
+당시 named programme의 후속 Phase는 최소한 다음을 기록하도록 설계했다. 새 번호 없는
+계산에는 이 목록 대신 active lean rules의 원결과·실패원인별 control·범위 분리를 적용한다.
 
 - 어느 gate의 어떤 typed input/output을 시험했는가;
 - 계산 전 고정한 contour/domain/regulator와 결과 의존 선택의 분리;

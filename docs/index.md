@@ -28,7 +28,8 @@ npm run check
 | [`../README.md`](../README.md) | overview, repository layout, CLI, scientific scope, and current snapshot |
 | [`USERGUIDE.md`](USERGUIDE.md) | live-catalog usage and kernel workflow |
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
-| [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md) | frozen core allowlist through Phase 50, consumed Phase-56 terminal closeout, fail-closed Phase 51+ execution, scoped route KILL, and oversized-Git-object containment |
+| [`decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md) | active six-rule research method and failure-directed control menu |
+| [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md) | narrow killed-route execution containment plus frozen one-shot and transport history; not a research method |
 | [`decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md) | exact-path Phase-44 Git LFS migration, old/new commit map, recovery bundle identity, and remote transport receipt |
 | [`ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md) | philosophical synthesis of formal possibility, invariant physical difference, amplitude, persistent record, and evidence |
 | [`ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md) | intuitive meditation on invariance, non-privilege, seams, memory, and the limits of recursive consistency |
@@ -75,10 +76,10 @@ npm run check
 
 ## Scientific workflow
 
-There is no mandatory tier or preregistration contract. Record the source equations and conventions, run
-the smallest useful calculation, preserve its command/environment/output, and check high-risk algebra or
-numerics independently. Reports must distinguish computed facts, physical interpretation, and open
-speculation. See [`../AGENTS.md`](../AGENTS.md).
+There is no mandatory tier or universal preregistration contract. Use the
+[`six lean research rules`](decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md), select controls for the
+calculation's principal failure mode, and keep computed facts, numerical error, model interpretation and
+physical hypotheses separate. See [`../AGENTS.md`](../AGENTS.md).
 
 ## Current execution map
 
