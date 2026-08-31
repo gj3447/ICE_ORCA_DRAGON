@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-31T05:51:01Z",
+  "updated_at_utc": "2026-08-31T06:20:50Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -525,6 +525,13 @@
       "answer": "For one fixed-background zonal V=0 scalar-matter packet, the ambient HH bracket and matter momentum target are exactly 5/(pi^2 a^2). At cutoff L=2 the projected bracket is zero and the whole difference is the omitted canonical derivative channel k=3; at L=3 and L=4 that channel is retained and the remainder is exactly zero. This identifies one finite projection artifact, not full gravitational ADM/HDA or Jacobi closure and not quantum anomaly freedom.",
       "claim_ids": [
         "claim:CLOSED_S3_ZONAL_V0_SCALAR_MATTER_HH_CUTOFF_LEDGER_HOLDS"
+      ]
+    },
+    {
+      "question": "Does the fixed-metric scalar-matter DH bracket equal pure lapse transport?",
+      "answer": "No for the declared mixed-parity zonal packet as a functional identity. The ambient matter-only bracket equals H[L_v N] plus (3-a^4)/(pi^2 a^5); direct divergence/Hessian integration identifies this as the missing metric-strain action. At L=2 a separate omitted k=3 channel contributes 5(2a^4+1)/(2 pi^2 a^5), while the projection remainder vanishes at L=3. The full gravity-plus-matter ADM DH bracket remains open.",
+      "claim_ids": [
+        "claim:CLOSED_S3_FIXED_METRIC_MATTER_ONLY_DH_EQUALS_LAPSE_TRANSPORT"
       ]
     }
   ],
@@ -12747,8 +12754,8 @@
       "id": "open:gate1-v0-classical-s3-hda-closure",
       "type": "open_problem",
       "title": "Classical closed-S3 harmonic HDA and Jacobi closure",
-      "summary": "A homogeneous ADM-to-raw-C reduction, zonal-scalar and declared longitudinal-coordinate convention baseline, the L=2 kinematic projection ledger, one nontrivial fixed-background zonal V=0 matter HH packet, and the declared n=2,3 scalar-derived linear ADM momentum generator are complete. The matter packet identifies its L=2 defect as the omitted k=3 channel and restores exact closure at L=3,4. Gravitational Hamiltonian variation, full scalar/vector/tensor completeness, cubic constraints, DD/DH, full HH and projected Jacobi tests remain independently open.",
-      "state": "PARTIAL_LINEAR_SCALAR_MOMENTUM_AND_FIXED_BACKGROUND_MATTER_HH_COMPLETE_FULL_GRAVITY_SVT_HDA_JACOBI_OPEN",
+      "summary": "A homogeneous ADM-to-raw-C reduction, zonal-scalar and declared longitudinal-coordinate convention baseline, the L=2 kinematic projection ledger, one nontrivial fixed-background zonal V=0 matter HH packet, and the declared n=2,3 scalar-derived linear ADM momentum generator are complete. A mixed-parity fixed-metric matter-only DH falsifier now separates the nonzero omitted metric-strain term from an L=2 omitted k=3 projection channel, with the latter vanishing at L=3. This kills only naive fixed-metric matter-only DH closure; gravitational metric variation, full scalar/vector/tensor completeness, cubic constraints, combined DD/DH/full HH and projected Jacobi tests remain independently open.",
+      "state": "PARTIAL_FIXED_METRIC_MATTER_DH_FALSE_STRAIN_IDENTIFIED_FULL_GRAVITY_SVT_HDA_JACOBI_OPEN",
       "question": "Does the declared closed-S3 perturbative truncation satisfy the classical HDA and Jacobi identities after projection remainder is explicitly separated?"
     },
     {
@@ -13179,11 +13186,11 @@
       "id": "artifact:gate1-v0-quantum-cosmology-ontology-map",
       "type": "artifact",
       "title": "Gate-1 V0 formula, philosophy and ontology map",
-      "summary": "Human-readable synthesis of the selected model's main V0 formula chain, computed/interpretive/open layer separation, philosophical implications, and dependency-labelled research roadmap. It is an ontology map, not scientific evidence.",
+      "summary": "Human-readable synthesis of the selected model's main V0 formula chain, computed/interpretive/open layer separation, fixed-metric DH shortcut boundary, philosophical implications, and dependency-labelled research roadmap. It is an ontology map, not scientific evidence.",
       "state": "TRACKED_NON_EVIDENTIAL_ONTOLOGY_MAP",
       "artifact_kind": "ontology_map",
       "path": "cpt_temporal_folded_susy/GATE1_V0_QUANTUM_COSMOLOGY_ONTOLOGY_MAP.md",
-      "sha256": "ce02bde0e17ba881fd348f2443855b7852c7ae3c3993b97fe6eeec5c3455a661"
+      "sha256": "44f63a3ad5cd1575226d6f771b89d403e9beaa5138877033874262d00cdc8206"
     },
     {
       "id": "concept:gate1-v0-raw-c-weighted-operator-domain-audit",
@@ -14855,7 +14862,11 @@
     {"id":"source:bahr-dittrich-2009-breaking-restoring-diffeomorphism","type":"source","title":"Breaking and restoring of diffeomorphism symmetry in discrete gravity","summary":"CITES-only boundary: discretization can break diffeomorphism symmetry, while perfect actions can restore exact symmetries. It does not establish a repository cutoff defect as a gravity anomaly or closure result.","state":"PRIMARY_METHOD_REFERENCE","citation":"B. Bahr and B. Dittrich, Breaking and restoring of diffeomorphism symmetry in discrete gravity, arXiv:0909.5688.","uri":"https://arxiv.org/abs/0909.5688","version":"arXiv:0909.5688v1"},
     {"id":"source:bahr-dittrich-2009-broken-gauge-symmetries-regge","type":"source","title":"(Broken) Gauge Symmetries and Constraints in Regge Calculus","summary":"CITES-only comparator for the discrete pseudo-constraint distinction. It does not turn a repository truncation residual into a continuum HDA anomaly.","state":"PRIMARY_METHOD_REFERENCE","citation":"B. Bahr and B. Dittrich, (Broken) Gauge Symmetries and Constraints in Regge Calculus, arXiv:0905.1670.","uri":"https://arxiv.org/abs/0905.1670","version":"arXiv:0905.1670v1"},
     {"id":"source:patterson-orszag-1971-aliasing","type":"source","title":"Spectral calculations of isotropic turbulence: efficient removal of aliasing interactions","summary":"CITES-only comparator for separating transform-grid aliasing from an intended spectral convolution; its Fourier dealiasing factors are not imported as S3 theorems.","state":"PRIMARY_METHOD_REFERENCE","citation":"G. S. Patterson and S. A. Orszag, Phys. Fluids 14 (1971) 2538.","uri":"https://doi.org/10.1063/1.1693365","version":"DOI:10.1063/1.1693365"},
-    {"id":"source:orszag-1971-elimination-aliasing-filtering","type":"source","title":"On the elimination of aliasing in finite-difference schemes by filtering high-wavenumber components","summary":"CITES-only historical filtering/dealiasing comparator; it does not remove a declared exact Galerkin projection remainder.","state":"PRIMARY_METHOD_REFERENCE","citation":"S. A. Orszag, J. Atmos. Sci. 28 (1971) 1074.","uri":"https://doi.org/10.1175/1520-0469(1971)028%3C1074%3AOTEOAI%3E2.0.CO%3B2","version":"DOI:10.1175/1520-0469(1971)028%3C1074%3AOTEOAI%3E2.0.CO%3B2"}
+    {"id":"source:orszag-1971-elimination-aliasing-filtering","type":"source","title":"On the elimination of aliasing in finite-difference schemes by filtering high-wavenumber components","summary":"CITES-only historical filtering/dealiasing comparator; it does not remove a declared exact Galerkin projection remainder.","state":"PRIMARY_METHOD_REFERENCE","citation":"S. A. Orszag, J. Atmos. Sci. 28 (1971) 1074.","uri":"https://doi.org/10.1175/1520-0469(1971)028%3C1074%3AOTEOAI%3E2.0.CO%3B2","version":"DOI:10.1175/1520-0469(1971)028%3C1074%3AOTEOAI%3E2.0.CO%3B2"},
+    {"id":"concept:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier","type":"concept","title":"Closed-S3 fixed-metric scalar-matter DH falsifier","summary":"One mixed-parity zonal packet separates the matter-only DH lapse-transport term, the omitted metric-strain term and the finite projection remainder. It is not a combined gravity-plus-matter ADM/HDA result.","state":"COMPLETED_FIXED_METRIC_MATTER_DH_STRAIN_FALSIFIER_ONLY"},
+    {"id":"claim:CLOSED_S3_FIXED_METRIC_MATTER_ONLY_DH_EQUALS_LAPSE_TRANSPORT","type":"claim","title":"Fixed-metric matter-only DH equals pure lapse transport on the declared packet","summary":"Contradicted as an identity in positive a for the declared mixed-parity packet: the exact difference is (3-a^4)/(pi^2 a^5). Its kinetic and gradient pieces cancel only at a^4=3, which does not establish a functional identity. Full combined ADM DH remains open.","state":"CONTRADICTED_SELECTED_FIXED_METRIC_PACKET_FUNCTIONAL_IDENTITY_ONLY","claim_id":"CLOSED_S3_FIXED_METRIC_MATTER_ONLY_DH_EQUALS_LAPSE_TRANSPORT","statement":"For v=a^-2 DQ1, N=Q2 and theta=xi=Q1+Q2, the fixed-metric matter-only canonical bracket {D_phi[v],H_phi[N]} equals H_phi[L_v N] identically for positive a.","epistemic_state":"CONTRADICTED"},
+    {"id":"evidence:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier-result","type":"evidence","title":"Closed-S3 fixed-metric scalar-matter DH falsifier evidence","summary":"VALID_RUN with 20/20 exact checks. Three decision-bearing controls locate direct strain integration, L=2 omitted-channel decomposition and reverse-bracket sign; the raw result remains the single source for the full check ledger.","state":"VALID_RUN_FIXED_METRIC_MATTER_DH_FALSE_NOT_FULL_ADM_HDA","observed_status":"VALID_RUN_20_EXACT_PASS_STRAIN_NONIDENTITY_L2_K3_REMAINDER_L3_ZERO","check_ids":["CS3V0DH.L2.fixed_metric_residual_direct","CS3V0DH.L2.projection_decomposition","CS3V0DH.L3.reverse_sign"]},
+    {"id":"artifact:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier-evidence-snapshot","type":"artifact","title":"Closed-S3 fixed-metric scalar-matter DH evidence snapshot","summary":"Schema-valid compact locator snapshot; the authoritative 20-check ledger stays in the raw result.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier-result.json","sha256":"5b7494ce973602ce340af0d1d24b84c2076b8cf5be2cddac837b522b34b44c79"}
   ],
   "edges": [
     {
@@ -34899,7 +34910,14 @@
     {"id":"edge:3499","from":"evidence:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-result","relation":"DERIVED_FROM","to":"artifact:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-inputs"},
     {"id":"edge:3500","from":"evidence:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-result","relation":"DERIVED_FROM","to":"artifact:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-runner"},
     {"id":"edge:3501","from":"evidence:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-result","relation":"DERIVED_FROM","to":"artifact:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-result"},
-    {"id":"edge:3502","from":"artifact:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-report","relation":"DOCUMENTS","to":"concept:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit"}
+    {"id":"edge:3502","from":"artifact:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit-report","relation":"DOCUMENTS","to":"concept:closed-s3-zonal-scalar-aliasing-cutoff-ladder-audit"},
+    {"id":"edge:3503","from":"concept:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3504","from":"claim:CLOSED_S3_FIXED_METRIC_MATTER_ONLY_DH_EQUALS_LAPSE_TRANSPORT","relation":"PART_OF","to":"concept:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier"},
+    {"id":"edge:3505","from":"claim:CLOSED_S3_FIXED_METRIC_MATTER_ONLY_DH_EQUALS_LAPSE_TRANSPORT","relation":"HAS_EVIDENCE","to":"evidence:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier-result","polarity":"CONTRADICTS"},
+    {"id":"edge:3506","from":"evidence:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier-result","relation":"RECORDED_IN","to":"artifact:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier-evidence-snapshot"},
+    {"id":"edge:3507","from":"concept:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier","relation":"DERIVED_FROM","to":"concept:closed-s3-zonal-v0-scalar-matter-hh-bracket-cutoff-ledger","note":"The DH runner reuses the hash-pinned zonal products, gradient Gaunt coefficients, Hamiltonian and Poisson helpers, not the earlier HH conclusion."},
+    {"id":"edge:3508","from":"open:gate1-v0-classical-s3-hda-closure","relation":"FOLLOW_UP_TO","to":"concept:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier","note":"The fixed-metric falsifier identifies exactly why the matter-only DH shortcut fails; the gravitational metric action and combined ADM bracket remain open."},
+    {"id":"edge:3509","from":"concept:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier","relation":"CITES","to":"source:teitelboim-1973-hypersurface-deformation","note":"Continuum combined-constraint DH baseline only; the finite packet and strain decomposition are repository calculations."}
   ],
   "kg_bridges": [
     {
@@ -35637,6 +35655,16 @@
       "checked_at_utc": "2026-08-31T00:46:07Z",
       "lookup_key": "relational observables quantum clocks Born Oppenheimer decoherence",
       "note": "Read-only exact and keyword searches found no authorized external node matching the local common-product clock comparison, BO consistency and decoherence obligation. No UID was invented."
+    },
+    {
+      "local_node_id": "claim:CLOSED_S3_FIXED_METRIC_MATTER_ONLY_DH_EQUALS_LAPSE_TRANSPORT",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-31T06:20:50Z",
+      "lookup_key": "ICE closed S3 fixed metric scalar matter DH lapse transport strain residual omitted metric variation",
+      "note": "No authorized exact external correspondence or writer is available. The contradiction is restricted to one repository-local mixed-parity fixed-metric matter packet; full gravity-plus-matter ADM/HDA, anomaly, physics and TOE outputs remain open or null, and no UID was invented."
     }
   ]
 }

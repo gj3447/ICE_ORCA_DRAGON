@@ -1,0 +1,62 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_S3_ZONAL_V0_SCALAR_MATTER_DH_FIXED_METRIC_FALSIFIER_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T06:20:50Z",
+  "command": "./ice run closed_s3_zonal_v0_scalar_matter_dh_fixed_metric_falsifier",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/closed_s3_zonal_v0_scalar_matter_dh_fixed_metric_falsifier.py",
+    "sha256": "9de0a1be2f5cdf212346a859d15391ba7d4169ba531b7a625e4dbded57fe5178",
+    "introduced_in_commit": "9ae248f461373604a78fe9416980c0f3b76a915a"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {
+      "id": "CS3V0DH.L2.fixed_metric_residual_direct",
+      "status": "PASS",
+      "statement": "The modal bracket residual agrees with the independent direct divergence/Hessian strain integral."
+    },
+    {
+      "id": "CS3V0DH.L2.projection_decomposition",
+      "status": "PASS",
+      "statement": "The L=2 ambient-minus-projected remainder is exactly the omitted k=3 canonical-channel contribution."
+    },
+    {
+      "id": "CS3V0DH.L3.reverse_sign",
+      "status": "PASS",
+      "statement": "The L=3 reverse Poisson bracket is the exact negative of the tested bracket order."
+    }
+  ],
+  "payload": {
+    "exact_checks": 3,
+    "locator_policy": "Three decision-bearing controls are indexed here; the authoritative raw result is the single source for all 20 exact checks.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_V0_SCALAR_MATTER_DH_FIXED_METRIC_FALSIFIER_RESULT.json",
+      "sha256": "907a5518e6ffc82edbd34dca1c75e0c5ecf179ac70a7100897319a7f77fe04fd",
+      "payload_sha256_without_self": "2480e620239eadc43d140119c6beb808bba48265cc42622943e64892057a7ec7",
+      "exact_checks": 20,
+      "run_status": "VALID_RUN",
+      "verdict": "KILL_FIXED_METRIC_MATTER_ONLY_DH_CLOSURE_RETAIN_EXACT_STRAIN_DECOMPOSITION_NOT_FULL_ADM_HDA"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_V0_SCALAR_MATTER_DH_FIXED_METRIC_FALSIFIER_INPUTS.json",
+      "sha256": "837b06609fabc4926ebd9dd8b1c3f7177f261c619ef2c188337c1e9482ad6a13"
+    },
+    "packet": "v=a^-2 DQ1, N=Q2, theta=xi=Q1+Q2, L=2 and L=3",
+    "exact_decomposition": {
+      "lapse_transport": "(10*a^4+1)/(pi^2*a^5)",
+      "fixed_metric_strain_residual": "(3-a^4)/(pi^2*a^5)",
+      "matter_only_ambient_bracket": "(9*a^4+4)/(pi^2*a^5)",
+      "strain_components": {
+        "kinetic": "3/(pi^2*a^5)",
+        "gradient": "-1/(pi^2*a)"
+      },
+      "isolated_packet_cancellation": "a^4=3 does not restore the functional identity",
+      "L2_projection_remainder": "5*(2*a^4+1)/(2*pi^2*a^5), omitted channel k=3",
+      "L3_projection_remainder": "0"
+    },
+    "boundary": "The result contradicts only the selected fixed-metric matter-only DH identity. The missing gravitational metric variation, full ADM/HDA, Jacobi, BFV, anomaly and physics outputs remain open or null."
+  }
+}

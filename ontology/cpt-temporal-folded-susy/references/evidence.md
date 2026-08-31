@@ -3513,4 +3513,23 @@ historical declared M_c spectral domain + frozen static pairing
      absolute BFV measure, full trajectory, physics and TOE remain open or null.
 ```
 
+The closed-\(S^3\) lane now also has one bounded fixed-metric \(DH\) negative
+control:
+
+```text
+claim:CLOSED_S3_FIXED_METRIC_MATTER_ONLY_DH_EQUALS_LAPSE_TRANSPORT
+  → HAS_EVIDENCE {polarity: CONTRADICTS}
+      → evidence:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier-result
+  → PART_OF → concept:closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier
+```
+
+The raw result is the single source for 20 exact checks; the ontology snapshot
+keeps only three decision-bearing locators. On the declared mixed-parity
+packet, lapse transport is \((10a^4+1)/(\pi^2a^5)\) and the fixed-metric strain
+residual is \((3-a^4)/(\pi^2a^5)\). The \(L=2\) projection loses only channel
+\(k=3\), while the projection remainder is zero at \(L=3\). This contradicts
+only the matter-only fixed-metric shortcut. The gravitational metric action,
+combined ADM \(DH\), full HDA/Jacobi, BFV/anomaly and physics remain open or
+null.
+
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.

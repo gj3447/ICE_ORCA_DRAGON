@@ -644,7 +644,7 @@ domain, absolute BFV data and actual classical-closure results.
 | 3 `open:gate1-v0-exact-endpoint-mc-intertwiner-and-full-symbol` | the classical Darboux chart and principal FIO; a raw-\(C\) exact map additionally needs a selected global raw domain | **observed partial:** the selected-\(H\) spectral map is exact to \(c<3p^2\); remaining success requires a raw-domain endpoint map or a deliberately restricted physical target | **observed obstruction:** no \(p\)-preserving exact unitary reaches the declared unrestricted \(M_c\); old-\(W\) full symbol and global edge stay open |
 | 4 `open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure` | the relative quartet and repaired zero-ghost Ward ledger | **observed partial:** one finite relative odd orientation transports on \([1/2,2]\); remaining success requires contour, endpoint, Gribov, determinant-line and gluing data to define an absolute measure | \(\lambda=0\) degeneracy, contour/orientation/normalization dependence or gluing failure persists |
 | 5A `concept:gate1-v0-closed-s3-scalar-projection-remainder-ledger` | unit-\(S^3\) zonal convention and \(L=2\) projection | **observed:** exact product, parity, discarded-mode norms and associator/remainder identity | this row cannot pass or fail HDA closure because no canonical constraints are present |
-| 5B `open:gate1-v0-classical-s3-hda-closure` | full ADM+matter action, perturbative order, scalar/vector/tensor variables, projected Poisson brackets and the 5A remainder baseline | projected HDA and Jacobi identities close with the projection remainder separately bounded | a genuine classical remainder survives after cutoff error is removed |
+| 5B `open:gate1-v0-classical-s3-hda-closure` | full ADM+matter action, perturbative order, scalar/vector/tensor variables, projected Poisson brackets and the 5A remainder baseline | **observed negative control:** fixed-metric matter-only \(DH\) leaves an exact strain term; remaining success requires the gravitational metric action and combined projected HDA/Jacobi identities | a genuine classical remainder survives after both cutoff and omitted-metric effects are removed |
 | 6 `open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly` | Stages 2, 4 and 5 plus a common operator domain | \(\widehat\Omega^2\) vanishes to declared perturbative, \(\hbar\) and cutoff orders | a regulator-stable operator anomaly or domain leakage remains |
 | 7 `open:gate1-v0-relational-observables-bo-decoherence` | physical product, Stage 6 modes, clocks and a selected contour | clock-cross-checked observables and BO/Ehrenfest/decoherence residuals meet fixed errors | observables or classical recovery remain clock/domain/contour dependent |
 | 8 `open:gate1-v0-empirical-likelihood-bridge` | Stage 7 plus an explicit \(V\ne0\) or alternative generation/reheating extension | discrete closed-universe spectra propagate through non-flat transfer to posterior-predictive tests | no primordial/late-time map or empirical discriminator exists |
@@ -687,6 +687,8 @@ unit-S3 zonal scalar ledger
   -> L=2 exact product and projection
   -> explicit discarded Z3/Z4 remainder
   -> projected associator reconstructed from remainder
+  -> fixed-metric matter-only DH shortcut KILL
+     (strain residual separate from L=2 omitted k=3 channel; L=3 projection closes)
   -> full ADM+matter HDA/Jacobi closure still open
 
 computed formula ledgers
@@ -722,6 +724,9 @@ ratification or automatic successor receipt.
 - [`GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER.md`](GATE1_V0_CLOSED_S3_SCALAR_HARMONIC_PROJECTION_LEDGER.md)
   records the unit-\(S^3\), \(L=2\) scalar projection remainder and its strict
   non-HDA/non-anomaly boundary.
+- [`CLOSED_S3_ZONAL_V0_SCALAR_MATTER_DH_FIXED_METRIC_FALSIFIER.md`](CLOSED_S3_ZONAL_V0_SCALAR_MATTER_DH_FIXED_METRIC_FALSIFIER.md)
+  records the mixed-parity fixed-metric \(DH\) strain falsifier, the separate
+  \(L=2\) omitted-channel remainder, and the still-open combined ADM boundary.
 - `evidence:gate1-v0-densitized-liouville-raq-result`,
   `evidence:gate1-v0-densitized-raq-p-zero-boundary-result`, and
   `evidence:gate1-v0-full-p-regular-raq-completion-result`,
