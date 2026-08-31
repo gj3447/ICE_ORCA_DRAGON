@@ -75,6 +75,56 @@ The frozen input SHA-256 is
 the pre-run source SHA-256 is
 `998de91dcf68033acc457cac37b535555fa401df32d893e63a47cfb2c77d63a2`.
 The common control-plane wall/stdout/stderr/artifact caps are 120 seconds,
-262,144 bytes, 262,144 bytes, and 12 files/1,000,000 bytes. There is no result
-yet. The first bounded `./ice run` output will be recorded only after these
-source files are committed.
+262,144 bytes, 262,144 bytes, and 12 files/1,000,000 bytes.
+
+### First execution: valid run, sign strip not certified
+
+After source commit `8bf680d`, the runner was executed exactly through
+
+```text
+./ice run raw_c_correlated_kappa_lambda_gamma1_sign_strip
+```
+
+It finished in about 2.6 seconds with `VALID_RUN` and verdict
+`CORRELATED_GAMMA1_SIGN_STRIP_NOT_CERTIFIED`. All 24 exact checks passed;
+62/66 controls passed. The four failures were the two precision copies of
+the closed-corridor barrier and domain-seed controls. The broad-kappa
+Bessel/affine switch enclosure was
+
+\[
+[-1.1050280244,-1.50338\times10^{-5}],
+\]
+
+so its lower endpoint missed the analytic barrier $[-1,1]$ by about 0.105.
+This is interval wrapping across the full kappa corridor, not a certified
+barrier violation: the newly evaluated $Q=4$ start lies inside
+$[-0.009224,0.007882]$, and all inward vector-field margins are strictly
+positive. The runner nevertheless failed closed because it had required the
+raw switch enclosure itself to lie in $[-1,1]$, rather than intersecting it
+with the independently proved invariant barrier.
+
+The downstream finite calculations were informative but do not override the
+failed verdict. The whole-corridor switch-normalized $Q_0$ amplitude was
+strictly positive,
+
+\[
+v(Q_0)\in[4.4433575664,6.1722302344],
+\]
+
+and the completed face functionals had strict opposite signs,
+
+\[
+G(\kappa_L,\Lambda)\subset
+[-0.00234624001,-0.00199293383],\qquad
+G(\kappa_R,\Lambda)\subset
+[0.00199518992,0.00235059808].
+\]
+
+The raw result file SHA-256 is
+`7afdc98aa14dfaa21629735701a015015034ab4bde8f306db34d3b2d68803105`;
+its payload SHA-256 is
+`5c69d48209a258e6429b7932425b2f7cb9e35fb5652fa780eb13f9f1bef66ca1`.
+No root-existence output is certified by this first execution. The narrow
+same-question correction is to use the intersection of the raw affine switch
+enclosure with the already audited invariant barrier before the $Q_0$
+transfer; it has not yet been executed here.
