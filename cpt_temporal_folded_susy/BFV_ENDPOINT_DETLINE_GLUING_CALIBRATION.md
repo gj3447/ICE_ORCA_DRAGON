@@ -24,11 +24,21 @@ Primary method references are Cattaneo--Mnev--Reshetikhin,
 and Cattaneo--Mnev,
 [*A note on gluing via fiber products in the (classical) BV-BFV formalism*](https://arxiv.org/abs/2208.11211).
 
-## Intended bounded invocation
+## Observed bounded invocation (2026-08-31 UTC)
 
 ```bash
 ./ice run bfv_endpoint_detline_gluing_calibration
+VALID_RUN; exact 7/7; theorem guard 1
+CALIBRATED_FINITE_ENDPOINT_DETLINE_GLUE_WITH_LAPSE_CYCLE_OPEN
 ```
 
-No execution is recorded by this document.  A successful toy calibration must
-not be read as selecting a lapse contour or as promoting an absolute measure.
+The calculation retained the common fixed-`x` endpoint/interface
+polarization, two nondegenerate ordered ghost blocks with concatenated relative
+Pfaffian orientation `+1`, exact phase completion, and the squared Fresnel
+prefactor identity.  The common `+i0` continuation is an explicit branch
+hypothesis rather than a dynamically selected cycle.
+
+The recorded lapse state is `OPEN_UNSELECTED_INPUT_NOT_A_RESULT`.  Therefore
+this successful toy calibration does not select a lapse contour or promote an
+absolute measure.  The result file SHA-256 is
+`4b87d8f456b75613bf4a11725c86697db7bf15631ec3981a055c769380e2f773`.
