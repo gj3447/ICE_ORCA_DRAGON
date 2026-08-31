@@ -56,3 +56,25 @@ solver comparison leaves P4 at the selected-extension result.
 
 The observed result is intentionally filled only after a clean committed runner
 is executed through the workbench control plane.
+
+## Observed result (2026-08-31 UTC)
+
+```text
+./ice run raw_c_nonreal_weyl_proxy
+VALID_RUN; exact 5/5; numerical 72/72; theorem guards 4; ODE calls 54
+KEEP_FINITE_CUTOFF_NONREAL_WEYL_PROXY_ONLY_SPECTRAL_MEASURE_RAQ_OPEN
+```
+
+Across the nine declared \((p,z)\) samples, every main proxy had positive
+imaginary part, ranging from about `0.11832595` to `0.90739238`.  The maximum
+finite Green--Lagrange relative residual was `4.2996e-11`; the maximum DOP853
+versus tighter-RK45 shift was `3.0602e-10`; the maximum minus-cutoff shift was
+`3.0229e-4`; the maximum plus-cutoff shift was `2.1124e-11`; and direct
+\(p\leftrightarrow-p\) differences were zero at the recorded precision.
+
+These controls support retaining the finite proxy only.  They do not validate
+the singular endpoint limit or authorize Stieltjes inversion.  The next P4
+question, if separately undertaken, is an interval-validated nonreal endpoint
+construction followed by a separately controlled boundary-value/inversion
+calculation.  The result file SHA-256 is
+`bc14d2f0936c4e616be17d1bc8452411a322b1dcf2870d2016b2c701480801a4`.
