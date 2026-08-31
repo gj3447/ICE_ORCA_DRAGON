@@ -27,13 +27,16 @@ model-specific endpoint enclosure.
 
 ## Three controls
 
-1. Exact factorization and monotonicity of (e^{-Q/2}) show that the
+1. Exact factorization and the strictly negative derivative
+   \(d e^{-Q/2}/dQ=-e^{-Q/2}/2\) show that the
    (Q=4) box bounds all (Q\ge4).
 2. `python-flint==0.9.0` evaluates outward `acb` rectangles at 128 and 256
    bits; each must be finite, remain inside the unit relative-perturbation
    disc, have positive cut distance, and give positive
-   (operatorname{Re}\sqrt A).
-3. Independently, (|z|<9/8), (e^{-2}<1/7), and (pi^2>9) give
+   \(\operatorname{Re}\sqrt A\).  Their overlap is same-backend
+   consistency, not independent evidence.
+3. Executable exact SymPy inequalities
+   \(\sqrt{290}/16<9/8\), \(e^{-2}<1/7\), and \(\pi^2>9\) give
    (|\delta|<1/336), hence distance from (1+\delta) to the nonpositive
    real axis exceeds (335/336).  Both ball tiers must be at least as sharp.
 
@@ -43,6 +46,12 @@ The corresponding half-line lower bound is
 \operatorname{Re}\sqrt{A(Q,z)}
 \ge6\pi^2e^4\sqrt{335/336}>0.
 \]
+
+The recorded analytic guard uses the principal-branch identity
+\(\operatorname{Re}\sqrt w^2=(|w|+\operatorname{Re}w)/2\).  Since
+\(\operatorname{Re}w\ge1-|\delta|\), it gives
+\(\operatorname{Re}\sqrt w\ge\sqrt{1-|\delta|}\).  This is elementary
+branch algebra, not a complex-tail or endpoint theorem.
 
 ## Fail-closed boundary
 

@@ -20,7 +20,7 @@ INPUT_NAME = "RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_INPUTS.json"
 RESULT_NAME = "RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
 RUNNER_RELPATH = "cpt_temporal_folded_susy/raw_c_fixed_box_nonreal_branch_audit.py"
-EXPECTED_INPUT_SHA256 = "332055b17292d2793d702528b58f94ebf544608b42b0f5f96950f719857f5a15"
+EXPECTED_INPUT_SHA256 = "40a2ecfdeacdf040c8687243657b7c0c386a3fb2f304e789bc4d2883d1342fdf"
 CALCULATION_ID = "RawCFixedBoxNonrealBranchAudit"
 RESULT_SCHEMA = "ice.raw-c-fixed-box-nonreal-branch-audit.result.v1"
 RESULT_PREFIX = "RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_RESULT="
@@ -112,6 +112,14 @@ def finite_complex(value: acb) -> bool:
     return "nan" not in text and "inf" not in text
 
 
+def intervals_overlap(left: arb, right: arb) -> bool:
+    return bool(left.lower() <= right.upper() and right.lower() <= left.upper())
+
+
+def rectangles_overlap(left: acb, right: acb) -> bool:
+    return intervals_overlap(left.real, right.real) and intervals_overlap(left.imag, right.imag)
+
+
 def main() -> None:
     if len(sys.argv) != 1:
         raise AssertionError("this bounded audit accepts no command-line arguments")
@@ -136,10 +144,18 @@ def main() -> None:
     delta = z * sp.exp(-Q / 2) / (6 * sp.pi**2)
     A = 36 * sp.pi**4 * sp.exp(2 * Q) + 6 * sp.pi**2 * z * sp.exp(sp.Rational(3, 2) * Q)
     factor = 36 * sp.pi**4 * sp.exp(2 * Q) * (1 + delta)
+    decay_shape = sp.exp(-Q / 2)
+    decay_derivative = sp.diff(decay_shape, Q)
     audit.check(
         "rawc.nonreal.branch.control1.factorization_and_halfline_envelope",
-        bool(sp.simplify(A - factor) == 0 and sp.simplify(sp.diff(sp.exp(-Q / 2), Q) + sp.exp(-Q / 2) / 2) == 0),
-        "Exact factorization and the decreasing exp(-Q/2) factor make the Q=4 z box a bound for all Q>=4.",
+        bool(
+            sp.simplify(A - factor) == 0
+            and sp.simplify(decay_derivative + decay_shape / 2) == 0
+            and decay_shape.is_positive is True
+            and (-decay_shape / 2).is_negative is True
+        ),
+        "Exact factorization and the strictly negative derivative d exp(-Q/2)/dQ=-exp(-Q/2)/2 make the Q=4 z box a bound for all Q>=4.",
+        decay_derivative=str(decay_derivative),
     )
 
     eta_bar = exact_rational(cfg["declared_conventions"]["analytic_eta_bar"])
@@ -148,6 +164,8 @@ def main() -> None:
     analytic_cut_bound = arb(cut_bar)
     tier_records: list[dict[str, Any]] = []
     tier_bounds: list[tuple[arb, arb]] = []
+    tier_relative_factors: list[acb] = []
+    tier_square_roots: list[acb] = []
     tier_passes: list[bool] = []
     for precision in cfg["declared_conventions"]["precision_bits"]:
         ctx.prec = int(precision)
@@ -173,6 +191,8 @@ def main() -> None:
         )
         tier_passes.append(passed)
         tier_bounds.append((delta_upper, cut_lower))
+        tier_relative_factors.append(relative)
+        tier_square_roots.append(sqrt_A_4)
         tier_records.append({
             "precision_bits": precision,
             "delta_at_Q4": complex_record(delta_4),
@@ -185,25 +205,48 @@ def main() -> None:
             "finite": finite,
             "passed": passed,
         })
+    same_backend_overlap = bool(
+        len(tier_relative_factors) == 2
+        and rectangles_overlap(tier_relative_factors[0], tier_relative_factors[1])
+        and rectangles_overlap(tier_square_roots[0], tier_square_roots[1])
+    )
     audit.check(
         "rawc.nonreal.branch.control2.two_tier_outward_acb",
-        all(tier_passes),
-        "At both precision tiers, outward acb rectangles are finite, stay inside the unit branch disc, have positive cut distance, and give Re principal sqrt(A)>0 at Q=4.",
+        all(tier_passes) and same_backend_overlap,
+        "At both precision tiers, same-backend outward acb rectangles are finite, stay inside the unit branch disc, have positive cut distance, give Re principal sqrt(A)>0 at Q=4, and overlap between tiers. This is consistency only, not independent evidence.",
         tiers=tier_records,
+        same_backend_overlap=same_backend_overlap,
     )
 
     # |z| < 9/8, exp(-2) < 1/7, pi^2 > 9 imply |delta| < 1/336.
     ball_eta_ok = all(delta_upper < analytic_delta_bound for delta_upper, _ in tier_bounds)
     ball_cut_ok = all(cut_lower > analytic_cut_bound for _, cut_lower in tier_bounds)
     halfline_re_lower = 6 * arb.pi() ** 2 * arb(4).exp() * (arb(1) - analytic_delta_bound).sqrt()
+    elementary_inequalities = {
+        "sqrt_290_over_16_lt_9_over_8": bool(sp.sqrt(290) / 16 < sp.Rational(9, 8)),
+        "exp_minus_2_lt_1_over_7": bool(sp.exp(-2) < sp.Rational(1, 7)),
+        "pi_squared_gt_9": bool(sp.pi**2 > 9),
+    }
     audit.check(
         "rawc.nonreal.branch.control3.independent_elementary_separation",
-        bool(eta_bar < fmpq(1, 1) and cut_bar == fmpq(1, 1) - eta_bar and ball_eta_ok and ball_cut_ok and halfline_re_lower > arb(0)),
-        "The independent elementary eta and cut-distance bounds agree with both ball tiers and give a strictly positive all-Q>=4 lower bound for Re principal sqrt(A).",
+        bool(all(elementary_inequalities.values()) and eta_bar < fmpq(1, 1) and cut_bar == fmpq(1, 1) - eta_bar and ball_eta_ok and ball_cut_ok and halfline_re_lower > arb(0)),
+        "The executable elementary inequalities imply eta<1/336 and cut distance>335/336; both ball tiers meet those bounds and the resulting all-Q>=4 real-part lower bound is positive.",
         eta_bar=str(eta_bar),
         cut_distance_lower_bar=str(cut_bar),
+        elementary_inequalities=elementary_inequalities,
         Re_principal_sqrt_A_lower_all_Q_ge_4=halfline_re_lower.str(36, radius=False),
     )
+
+    a, b = sp.symbols("a b", real=True)
+    principal_sqrt_identity = sp.simplify((a**2 + b**2 + (a**2 - b**2)) / 2 - a**2)
+    analytic_guards = [{
+        "id": "rawc.nonreal.branch.guard.principal_sqrt_real_part",
+        "verified": bool(principal_sqrt_identity == 0),
+        "verification_mode": "EXACT_IDENTITY_AND_DECLARED_BRANCH_SCOPE",
+        "theorem": "For the principal square root s=sqrt(w), Re(s)^2=(|w|+Re(w))/2.",
+        "hypotheses": "w=1+delta, |delta|<=eta<1, so Re(w)>=1-eta>0 and the principal branch has Re(s)>0.",
+        "conclusion_and_scope": "Because |w|>=Re(w), Re sqrt(w)>=sqrt(Re(w))>=sqrt(1-eta). Multiplication by positive 6*pi^2*exp(Q) gives the recorded all-Q>=4 lower bound. This is branch precondition algebra only, not a complex-tail, endpoint, m(z), spectral, or RAQ theorem.",
+    }]
 
     passed = all(control["passed"] for control in audit.controls)
     verdict = "KEEP_FIXED_UHP_BOX_BRANCH_PRECONDITION_ONLY" if passed else "UNRESOLVED_FIXED_BOX"
@@ -221,6 +264,7 @@ def main() -> None:
         "primary_sources": cfg["primary_sources"],
         "declared_conventions": cfg["declared_conventions"],
         "controls": audit.controls,
+        "analytic_guards": analytic_guards,
         "check_summary": {"controls_passed": sum(item["passed"] for item in audit.controls), "controls_total": 3, "all_controls_passed": passed},
         "branch_precondition": {
             "scope": "fixed UHP box branch separation and principal-square-root real-part positivity only",

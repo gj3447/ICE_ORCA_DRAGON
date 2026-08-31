@@ -31,9 +31,9 @@
     "execution": "outward python-flint acb/arb elementary arithmetic at Q=4 plus exact half-line envelope; no ODE, root solver, quadrature, sample grid, boundary map, or characteristic equation"
   },
   "controls": [
-    "Exact factorization and the decreasing exp(-Q/2) envelope prove that the Q=4 box bounds every Q>=4.",
-    "At both 128 and 256 bits, outward acb arithmetic must give finite delta, relative-factor, A and principal-sqrt rectangles with |delta|<1, cut distance positive, and Re sqrt(A)>0.",
-    "The independent elementary bound |z|<9/8, exp(-2)<1/7 and pi^2>9 gives |delta|<1/336 and cut distance >335/336; every ball bound must be no weaker than this sufficient separation test."
+    "Exact factorization and the strictly negative derivative d exp(-Q/2)/dQ=-exp(-Q/2)/2 prove that the Q=4 box bounds every Q>=4.",
+    "At both 128 and 256 bits, same-backend outward acb arithmetic must give finite delta, relative-factor, A and principal-sqrt rectangles with |delta|<1, cut distance positive, and Re sqrt(A)>0; the two rectangles must overlap as a consistency check, not independent evidence.",
+    "Executable exact SymPy inequalities sqrt(290)/16<9/8, exp(-2)<1/7 and pi^2>9 give |delta|<1/336 and cut distance >335/336; every ball bound must be no weaker than this sufficient separation test."
   ],
   "resource_caps": {
     "wall_clock_seconds": 120,
