@@ -77,4 +77,4 @@ the singular endpoint limit or authorize Stieltjes inversion.  The next P4
 question, if separately undertaken, is an interval-validated nonreal endpoint
 construction followed by a separately controlled boundary-value/inversion
 calculation.  The result file SHA-256 is
-`bc14d2f0936c4e616be17d1bc8452411a322b1dcf2870d2016b2c701480801a4`.
+`b8d61b098128dde72aa2a9805b122dc4e2dd235efe9ca1c71d2b19da108d8ce3`.
