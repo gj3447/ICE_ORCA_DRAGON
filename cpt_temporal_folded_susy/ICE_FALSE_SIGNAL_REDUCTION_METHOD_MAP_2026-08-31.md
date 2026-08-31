@@ -15,15 +15,20 @@ questions separate:
 
 Passing an earlier question never answers a later one automatically.
 
-## Falsification funnel
+## Failure-mode control menu
+
+The numbering below is explanatory, not a seven-gate workflow. Select only the
+controls that can falsify the current calculation; do not emit empty records for
+the other entries.
 
 ### 1. Complete the smallest closed packet
 
 Fix source equations, signs, density weights, reality/phase conventions,
 canonical pairs and exceptional modes.  For an \(S^3\) calculation, scalar,
 transverse-vector and TT sectors must be included whenever the selected bracket
-can generate them.  Positive, exact-null and deliberately failing fixtures are
-all required.  xPert or another tensor CAS is a generator/checker only; its
+can generate them. Use positive, exact-null or deliberately failing fixtures when
+they exercise a failure mode of the selected packet. xPert or another tensor CAS
+is a generator/checker only; its
 output must be translated into the repository convention and pass low-mode
 golden identities ([xPert](https://arxiv.org/abs/0807.0824),
 [Cadabra](https://arxiv.org/abs/hep-th/0701238),
@@ -31,7 +36,7 @@ golden identities ([xPert](https://arxiv.org/abs/0807.0824),
 
 ### 2. Separate evaluator error from regulator leakage
 
-For every nonlinear term, compare:
+For a nonlinear term whose finite evaluator can alias, compare:
 
 1. exact modal/Gaunt convolution;
 2. a basis-specific overintegrated transform certified by a polynomial-degree or
@@ -114,9 +119,11 @@ versus overintegrated grid, ordinary float versus ball arithmetic, and two
 different formulations of the same invariant.  Agreement only establishes a
 cross-check because both implementations can share a wrong model.
 
-Each result retains runner/input/upstream hashes, source/version/convention,
-lockfiles, command, precision, seeds/threads, environment, stdout/stderr and
-artifact digests.  Comparison remains field-specific; no global epsilon is used.
+A durable raw result retains the command, runner and material input/upstream
+hashes plus the precision or seed information that can change the conclusion.
+Lockfiles supply the shared environment. Preserve stdout/stderr only when it is
+diagnostic evidence, not as an empty field in every result. Comparison remains
+field-specific; no global epsilon is used.
 
 ### 7. Separate exploration from empirical discovery
 

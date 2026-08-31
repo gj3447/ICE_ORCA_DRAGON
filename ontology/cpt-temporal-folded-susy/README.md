@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-31T04:21:13Z`; 1312 nodes, 3500 edges). Run and analytic-evidence details live in the
+`2026-08-31T05:04:41Z`; 1311 nodes, 3499 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 359/359 stored hashes (351 artifacts and 8 policies).
+verifies 358/358 stored hashes (350 artifacts and 8 policies).
 
 The 2026-08-31 bounded bridge snapshots add a fail-closed raw-\(C\) Picard-admission denial, a
 finite-cutoff nonreal-Weyl proxy, complex-scalar \(S^3\) SU(2) Gaunt golden data with a projection

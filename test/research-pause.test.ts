@@ -31,6 +31,7 @@ import {
   boundedGate1ZeroLapseUpstreamResultSha256,
   canonicalResearchRelpath,
   corePhaseNumbersFromRelpath,
+  currentRagnarokStatus,
   decodeBoundedGate1SourceLinkResult,
   decodeBoundedGate1ZeroLapseResult,
   formatRagnarokStatus,
@@ -1234,21 +1235,41 @@ it("keeps operational containment distinct from the scientific verdict", () => {
   ).toBe(true)
 })
 
-it("renders stable human and machine-readable status", () => {
+it("renders current status by default and preserves historical status on request", () => {
   expect(formatRagnarokStatus(false)).toContain(
     "Research runtime: BOUNDED_SCIENCE_OPEN_KILLED_RECONCILIATION_CLOSED"
   )
   expect(formatRagnarokStatus(false)).toContain(
     "New unnumbered core: bounded execution enabled; per-window receipts=false"
   )
+  expect(formatRagnarokStatus(false)).toContain("History: ./ice status --history")
   expect(formatRagnarokStatus(false)).toContain(
-    "Scalar source link: CONSUMED"
+    "Rule debt: ACTIVE; raw result=SINGLE_SOURCE; automatic inheritance=false"
   )
-  expect(formatRagnarokStatus(false)).toContain(
-    "Scalar zero-lapse extension: CONSUMED"
-  )
-  expect(formatRagnarokStatus(false)).toContain(
+  expect(formatRagnarokStatus(false)).not.toContain("Scalar source link")
+  expect(currentRagnarokStatus).not.toHaveProperty("gate1_window")
+  expect(currentRagnarokStatus).not.toHaveProperty("repository_transport")
+  expect(formatRagnarokStatus(true).length).toBeLessThan(4_000)
+  expect(JSON.parse(formatRagnarokStatus(true))).toEqual(currentRagnarokStatus)
+  expect(JSON.parse(formatRagnarokStatus(true, true))).toEqual(ragnarokStatus)
+  expect(formatRagnarokStatus(false, true)).toContain(
     "Scalar zero-lapse closeout: INVALID_RUN; result artifact=ABSENT; retry/repro blocked"
   )
-  expect(JSON.parse(formatRagnarokStatus(true))).toEqual(ragnarokStatus)
+})
+
+it("selects historical detail only when the status CLI is explicitly asked", () => {
+  const current = spawnSync(join(process.cwd(), "ice"), ["status", "--json"], {
+    cwd: process.cwd(),
+    encoding: "utf8"
+  })
+  const history = spawnSync(
+    join(process.cwd(), "ice"),
+    ["status", "--history", "--json"],
+    { cwd: process.cwd(), encoding: "utf8" }
+  )
+
+  expect(current.status).toBe(0)
+  expect(history.status).toBe(0)
+  expect(JSON.parse(current.stdout)).toEqual(currentRagnarokStatus)
+  expect(JSON.parse(history.stdout)).toEqual(ragnarokStatus)
 })

@@ -19,7 +19,8 @@
 ## Ragnarok 회로 차단기 — ACTIVE
 
 `docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`가 현재 core 연구의 실행 경계를
-정한다. `./ice status`가 기계 판독 가능한 정본이다.
+정한다. `./ice status`는 현재 운영 경계만, `./ice status --history`는 동결된 receipt·이관 이력을
+보인다. 역사 상세는 provenance이지 새 작업의 절차가 아니다.
 
 - Phase 51→56의 saved-backend/reconstructed-launch reconciliation 경로는 **KILL**이고 Phase 56
   terminal closeout은 소진됐다. Phase 57 이상, full replay, 번호를 낮춰 재사용한 후속 Phase와 같은
@@ -33,8 +34,12 @@
   Phase 토큰을 붙인 새 descendant, traversal/absolute path, dirty·untracked core tree는 계속
   차단한다.
 - generic bounded 계산 하나의 결과는 다음 계산을 자동 생성하거나 승인하지 않는다. 새 질문은 이전
-  evidence가 실질적으로 남긴 과학적 장애물을 직접 겨냥하고, 입력·소스·가정·상한·null 출력을
-  고정한 독립 작업 단위여야 한다.
+  evidence가 실질적으로 남긴 과학적 장애물을 직접 겨냥하고, 입력·소스·가정과 실제로 관련된
+  제외 범위만 고정한 독립 작업 단위여야 한다. 중앙 runtime 상한, `Gate 1`, `global_promotion`,
+  `numbered_phase`, `automatic_next`와 무관한 일반 계산은 이 governance 필드를 결과에 복제하지 않는다.
+- **규칙 부채 차단기도 active다.** 과거 one-shot authorization, receipt, 재개 조건, 대형 null matrix,
+  전 check-ID 복제, 계산마다의 수동 repro/KG 등록을 새 번호 없는 계산의 기본 형식으로 이식하지
+  않는다. false-signal map은 순차 gate가 아니라 실패 원인별 선택 메뉴이며 관련 control만 사용한다.
 - 2026-08-30은 더 이상 서로 다른 번호 없는 계산의 대기 조건이 아니며, numbered route를 자동으로
   다시 여는 날짜도 아니다.
 - 이는 과학적 Gate 1 KILL이 아니다. Gate 1은 `OPEN_PARTIAL_PROGRESS`, global promotion은
@@ -60,7 +65,8 @@ uv sync --locked
 ```
 
 - 환경 진단: `./ice doctor` (동일 명령: `npm run ice -- doctor`)
-- 연구 중단 상태: `./ice status` (`--json` 지원)
+- 현재 연구 상태: `./ice status` (`--json` 지원)
+- 동결된 상세 이력: `./ice status --history` (`--json`과 병용 가능)
 - 실행 가능한 스크립트 열거: `./ice list` (`--json` 지원)
 - 스크립트 실행: `./ice run <name|relpath> [-- args...]`
   (해당 스크립트의 *자기 디렉토리*에서 실행되고 exit code 를 그대로 전파한다)
@@ -74,6 +80,9 @@ uv sync --locked
   (과거 P01–P15 산출물 재현용이며 새 연구의 필수 게이트가 아니다)
 
 `name` 은 stem 또는 relpath, unique-prefix 매칭이 된다.
+
+`repro` manifest는 장기 회귀 기준으로 승격한 결과만 등록한다. 일반 bounded 계산마다 manifest와
+전용 테스트를 추가하지 않는다. 새 계산의 1차 재현 기록은 raw result의 command·hash와 인접 보고서다.
 
 `test/`에는 Effect/Vitest 제어면 계약 검사가 있다 (`npm run check` = strict typecheck +
 Vitest suite). 자동 GitHub Actions CI는 아직 없다.
@@ -101,20 +110,23 @@ basis-dependent metric 때문에 `NONPORTABLE_FAIL`이며 tolerance로 숨기지
 ## 연구 온톨로지
 
 - 계산이 기존 claim의 지위, 직접 evidence, 적용 scope, 또는 다음 open problem을 실질적으로
-  바꾸면 `ontology/`의 repository-local research graph와 evidence snapshot을 함께 갱신하고
-  `./ice ontology validate`로 검증한다. 문구 수정이나 중간 실험마다 의례적으로 갱신하지 않는다.
+  바꾸면 `ontology/`의 repository-local research graph를 갱신하고 `./ice ontology validate`로
+  검증한다. 문구 수정, 방법 메모, 중간 실험, 단순 verifier 결과마다 의례적으로 갱신하지 않는다.
 - 온톨로지는 연구 내용을 찾고 추적하기 위한 **기억·색인 계층**이다. 연구 계약, 사전등록,
   물리적 ratification, 또는 외부 KG 승격을 뜻하지 않는다. 외부 KG에 쓸 권한이나 정확한 대응
   노드가 없으면 local graph에 `UNRESOLVED` bridge로 남기고 임의로 새 UID를 만들지 않는다.
-- claim은 계산된 사실, 해석, 열린 가설을 구분하고, evidence는 재현 명령·script hash·개별 check
-  ID를 보존한다. 사람이 먼저 읽을 수 있는 개념 지도와 기계가 검사하는 JSON을 함께 유지한다.
+- raw `RESULT.json`을 실행 check ledger의 단일 정본으로 둔다. 온톨로지는 그 artifact hash와 결론을
+  찾는 데 필요한 핵심 check locator만 보존하며, 전체 check 배열을 evidence snapshot과 graph에
+  복제하지 않는다. 별도 snapshot은 raw result가 안정된 정본이 될 수 없는 경우에만 둔다.
 
 ## 커밋 규율
 
 - 사용자 요청의 완료된 작업 단위마다 관련 검증을 끝낸 뒤 **같은 턴에서 로컬 Git commit까지**
   만든다. 완료된 source·test·문서 변경을 handoff 시 unstaged/uncommitted로 남기지 않는다.
 - 한 요청 안에 독립 deliverable이 여러 개면 의미 단위별로 커밋을 나눈다. 사소한 중간 patch마다
-  커밋하지 말고, 검증 가능한 coherent unit이 완성되는 시점을 경계로 삼는다.
+  커밋하지 말고, 검증 가능한 coherent unit이 완성되는 시점을 경계로 삼는다. clean runner를 위한
+  실행 전 source/input commit 뒤에는 result·report와 실제로 필요한 색인 변경을 한 completion
+  commit으로 묶으며, repro 등록과 ontology 등록만을 각각 별도 commit으로 만들지 않는다.
 - 작업 시작과 커밋 직전에 `git status`를 확인한다. 기존 dirty 변경은 사용자 소유로 간주하고
   보존하며, 이번 작업에서 만든 정확한 경로만 stage한다. 다른 사람의 변경을 몰래 섞지 않는다.
 - 커밋 메시지는 무엇을 계산·수정했는지 드러내고, 산출 결과를 포함하면 실행 명령이나 핵심

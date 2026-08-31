@@ -6,6 +6,13 @@
 > **재검토 가능일:** 2026-08-30 — 재검토 자격일일 뿐 자동 재개일이 아니다.
 > **비권한:** 이 문서는 과학적 evidence, Gate 1 no-go, 물리학 주장 또는 TOE 판정이 아니다.
 
+> **2026-08-31 규칙 부채 차단:** 이 문서의 one-shot authorization, receipt, consumed window,
+> 2026-08-30 재개 조건과 이관 상세는 해당 역사 경로의 provenance이며 새 번호 없는 bounded 계산의
+> 절차가 아니다. 현재 운영 정본은 `./ice status`의 짧은 current view다. 역사 원문은
+> `./ice status --history`에서만 노출한다. 일반 계산은 중앙 runtime cap을 결과마다 복제하거나
+> Gate-1/global/numbered/automatic-next 필드, 대형 null matrix, 전체 check-ID ontology snapshot,
+> 수동 repro 등록을 기본 의무로 상속하지 않는다. raw result 하나가 check ledger의 정본이다.
+
 > **2026-08-26 runtime 개정:** 세 one-shot window의 결과와 receipt는 역사 provenance로
 > 보존하되 더는 새 연구의 실행 모델로 복제하지 않는다. 새 번호 없는 core runner는 committed
 > clean source에서 실행하며 120초, stdout/stderr 각 262,144 bytes, 변경 artifact 12개 및 합계
@@ -82,8 +89,9 @@ Phase로 다시 낳는 자동 연장은 허용하지 않는다.
 - Phase 56 결과와 무관하게 `next_phase = null`이다. full replay, Phase 57, threshold 완화 또는
   같은 reconciliation의 새 이름 붙이기는 자동으로 열리지 않는다.
 
-정본 상태는 `./ice status`와 `./ice status --json`으로 읽는다. 7일 pause는 Phase 56 실행
-시각이 아니라 이 containment의 2026-08-23 발효일부터 계산한다.
+현재 정본 상태는 `./ice status`와 `./ice status --json`으로 읽는다. 아래 역사 상세와 기존 v3
+machine record는 `./ice status --history` 및 `./ice status --history --json`으로 읽는다. 7일 pause는
+Phase 56 실행 시각이 아니라 이 containment의 2026-08-23 발효일부터 계산한다.
 
 ## Phase 56 terminal closeout
 
@@ -149,10 +157,11 @@ KILL의 적용 대상은 위의 방법 경로이며 Gate 1이나 CPT × Temporal
 아니다. 현재 증거가 core를 닫지 못했다는 사실과, 같은 채무 하네스가 계속 Phase를 생성하지
 못하게 하는 결정은 서로 다른 타입이다.
 
-## 재개 조건
+## 역사적 numbered/Gate-1 경로의 재개 조건 — 새 unnumbered 계산에는 비적용
 
-일반 새 core Phase에는 2026-08-30 이후에도 다음 조건을 **모두** 만족하고 사용자가 명시적으로
-승인해야 한다. 2026-08-25 국소 개정은 새 core Phase가 아니라, saddle/intersection 계산보다
+새 **numbered core Phase 또는 과거 Gate-1 one-shot 계보**에는 2026-08-30 이후에도 다음 조건을
+**모두** 만족하고 사용자가 명시적으로 승인해야 한다. 2026-08-25 국소 개정은 새 core Phase가
+아니라, saddle/intersection 계산보다
 앞선 necessary end-admissibility model-class reduction 한 개이므로 그 날짜 대기만 정확한
 runner/input hash와 fail-closed null 출력 아래 면제했다. 그 일회성 예외는 이미 소진됐다.
 2026-08-26 국소 개정 역시 일반 재개 조건을 충족했다고 주장하지 않는다. full cycle보다 앞선

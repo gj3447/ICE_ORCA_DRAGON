@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-08-31T04:21:13Z",
+  "updated_at_utc": "2026-08-31T05:04:41Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "hypercomplex",
   "graphs": [

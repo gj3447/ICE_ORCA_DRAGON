@@ -359,8 +359,9 @@ export const scriptInfo = (
 export const doctorCommand: typeof doctor = doctor
 
 export const researchStatusCommand = (
-  json: boolean
-): Effect.Effect<void> => Console.log(formatRagnarokStatus(json))
+  json: boolean,
+  history = false
+): Effect.Effect<void> => Console.log(formatRagnarokStatus(json, history))
 
 export const reproCommand = (
   options: ReproOptions & { readonly list: boolean }

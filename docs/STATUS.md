@@ -25,8 +25,9 @@ count or rough “N+” inventory as the runnable catalog.
 
 ### Bounded research runtime and retained containment
 
-`./ice status` is the typed operational authority. The one-shot mechanism is now historical rather than
-the template for new work. Clean committed unnumbered core runners execute with one common policy: 120 s,
+`./ice status` is the concise typed authority for current constraints; `./ice status --history` exposes
+the immutable one-shot, receipt, allowlist and transport record. That history is not the template for new
+work. Clean committed unnumbered core runners execute with one common policy: 120 s,
 262,144 bytes each for stdout/stderr, at most 12 changed artifacts and 1,000,000 changed bytes. There is no
 per-window launch receipt. The killed Phase-51→56 route, every new numbered descendant, and the three
 consumed Gate-1 runners remain closed.

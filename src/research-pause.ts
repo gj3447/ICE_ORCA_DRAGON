@@ -1180,12 +1180,43 @@ export const decodeBoundedGate1ZeroLapseResult = (
     )
   )
 
-export const formatRagnarokStatus = (json: boolean): string => {
-  if (json) {
-    return JSON.stringify(ragnarokStatus, null, 2)
-  }
+/**
+ * The default `ice status` projection deliberately contains only constraints
+ * that apply to a new calculation.  `ragnarokStatus` above remains the
+ * immutable historical record and is available verbatim through --history.
+ */
+export const currentRagnarokStatus = {
+  schema: "ice-ragnarok-status/current-v1",
+  effective_date: "2026-08-31",
+  operational_state: ragnarokStatus.operational_state,
+  bounded_science_runtime: ragnarokStatus.bounded_science_runtime,
+  killed_reconciliation: {
+    state: "CLOSED",
+    scope: ragnarokStatus.containment.kill_scope,
+    blocked_from_core_phase: ragnarokStatus.containment.blocked_from_core_phase,
+    numbered_descendants_allowed:
+      ragnarokStatus.bounded_science_runtime.numbered_descendants_allowed,
+    direct_python_bypass_authorized:
+      ragnarokStatus.containment.direct_python_bypass_authorized
+  },
+  scientific_state: {
+    gate1: ragnarokStatus.scientific_state.gate1,
+    global_promotion: ragnarokStatus.scientific_state.global_promotion,
+    scientific_route: ragnarokStatus.scientific_state.scientific_route
+  },
+  rule_debt_containment: {
+    state: "ACTIVE",
+    raw_result_check_ledger: "SINGLE_SOURCE",
+    full_check_ontology_copy_allowed: false,
+    automatic_procedure_inheritance: false
+  },
+  history_command: "./ice status --history",
+  decision:
+    "docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md"
+} as const
 
-  return [
+const formatHistoricalRagnarokStatus = (): string =>
+  [
     `Research runtime: ${ragnarokStatus.operational_state}`,
     `Continuation route: ${ragnarokStatus.containment.continuation_route}`,
     `Kill scope: ${ragnarokStatus.containment.kill_scope}`,
@@ -1203,5 +1234,28 @@ export const formatRagnarokStatus = (json: boolean): string => {
     `Historical one-shot windows remain immutable evidence; new calculations do not consume launch receipts`,
     `Repository push: ${ragnarokStatus.repository_transport.push_status}`,
     "Decision: docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md"
+  ].join("\n")
+
+export const formatRagnarokStatus = (
+  json: boolean,
+  history = false
+): string => {
+  if (json) {
+    return JSON.stringify(history ? ragnarokStatus : currentRagnarokStatus, null, 2)
+  }
+
+  if (history) {
+    return formatHistoricalRagnarokStatus()
+  }
+
+  return [
+    `Research runtime: ${currentRagnarokStatus.operational_state}`,
+    "New unnumbered core: bounded execution enabled; per-window receipts=false",
+    `Generic caps: ${currentRagnarokStatus.bounded_science_runtime.caps.wall_clock_seconds}s, ${currentRagnarokStatus.bounded_science_runtime.caps.changed_artifact_files} changed files, ${currentRagnarokStatus.bounded_science_runtime.caps.changed_artifact_bytes} changed bytes`,
+    `Historical reconciliation: closed (${currentRagnarokStatus.killed_reconciliation.scope}); numbered descendants blocked`,
+    `Scientific route: ${currentRagnarokStatus.scientific_state.scientific_route}; global promotion=${currentRagnarokStatus.scientific_state.global_promotion}`,
+    `Rule debt: ${currentRagnarokStatus.rule_debt_containment.state}; raw result=${currentRagnarokStatus.rule_debt_containment.raw_result_check_ledger}; automatic inheritance=${String(currentRagnarokStatus.rule_debt_containment.automatic_procedure_inheritance)}`,
+    `History: ${currentRagnarokStatus.history_command}`,
+    `Decision: ${currentRagnarokStatus.decision}`
   ].join("\n")
 }

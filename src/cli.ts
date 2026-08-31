@@ -17,16 +17,19 @@ import { WorkspaceLive } from "./workspace.ts"
 const json = Options.boolean("json").pipe(
   Options.withDescription("emit machine-readable JSON")
 )
+const history = Options.boolean("history").pipe(
+  Options.withDescription("include immutable historical containment and receipt detail")
+)
 
 const list = Command.make("list", { json }, ({ json }) => listScripts(json)).pipe(
   Command.withDescription("list runnable numerical-kernel scripts")
 )
 
-const status = Command.make("status", { json }, ({ json }) =>
-  researchStatusCommand(json)
+const status = Command.make("status", { json, history }, ({ json, history }) =>
+  researchStatusCommand(json, history)
 ).pipe(
   Command.withDescription(
-    "show the operational research pause separately from scientific status"
+    "show current bounded-runtime status; use --history for immutable historical detail"
   )
 )
 

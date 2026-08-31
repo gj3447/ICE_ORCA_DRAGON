@@ -58,7 +58,8 @@ reported separately.
 > nonlinear configuration admissibility, gauge/FP/BFV completion, zero lapse and the physical original
 > cycle remain open.
 > Gate 1 remains `OPEN_PARTIAL_PROGRESS`; this is not a scientific no-go.
-> Inspect the typed state with `./ice status`. The tracked 529 MB Phase-44 result has been migrated on
+> Inspect current constraints with `./ice status`; use `./ice status --history --json` for complete
+> consumed-receipt and transport provenance. The tracked 529 MB Phase-44 result has been migrated on
 > the unpublished tail to an exact-path Git LFS object and verified by a fresh remote read-back. See the
 > [Ragnarok circuit-breaker decision](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md),
 > the [bounded Gate-1 resume](docs/decisions/ICE_GATE1_BOUNDED_RESUME_2026-08-25.md),
@@ -386,7 +387,7 @@ Canonical commands:
 
 ```bash
 ./ice doctor
-./ice status [--json]
+./ice status [--json] [--history]
 ./ice list [--json]
 ./ice info <name>
 ./ice run <name> [-- <kernel args>]

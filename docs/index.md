@@ -84,7 +84,8 @@ speculation. See [`../AGENTS.md`](../AGENTS.md).
 
 | Need | Command |
 |---|---|
-| inspect operational research pause | `./ice status` or `./ice status --json` |
+| inspect current operational constraints | `./ice status` or `./ice status --json` |
+| inspect frozen receipts/transport history | `./ice status --history` or `./ice status --history --json` |
 | inspect environment | `./ice doctor` |
 | list runnable kernels | `./ice list` or `./ice list --json` |
 | inspect one entry | `./ice info <name>` |
