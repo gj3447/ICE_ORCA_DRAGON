@@ -81,11 +81,16 @@ def exact_identities() -> list[dict[str, Any]]:
 
 def endpoint_rows(sharp: dict[str, Any]) -> list[dict[str, Any]]:
     rows = []
-    for tier in sharp["validated_calculation"]["parameter_tiers"]:
-        for entry in tier["entries"]:
+    tiers = sharp["validated_calculation"]["parameter_tiers"]
+    if not isinstance(tiers, dict):
+        raise AssertionError("parameter_tiers must be a label-to-entry-list mapping")
+    for tier_label, entries in tiers.items():
+        if not isinstance(entries, list):
+            raise AssertionError(f"parameter tier is not a list: {tier_label}")
+        for entry in entries:
             interval = entry["downstream"]["scale_free_Gamma1"]
             lower, upper = float(interval["lower"]), float(interval["upper"])
-            rows.append({"label": entry["direction"]["label"], "decimal_digits": entry["direction"]["decimal_digits"], "lower": interval["lower"], "upper": interval["upper"], "contains_zero": lower <= 0 <= upper})
+            rows.append({"tier": tier_label, "label": entry["direction"]["label"], "decimal_digits": entry["direction"]["decimal_digits"], "lower": interval["lower"], "upper": interval["upper"], "contains_zero": lower <= 0 <= upper})
     return rows
 
 
