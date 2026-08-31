@@ -581,6 +581,15 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "closed_s3_real_scalar_harmonic_basis_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_real_scalar_harmonic_basis_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_REAL_SCALAR_HARMONIC_BASIS_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "bfv_endpoint_detline_gluing_calibration",
     script:
       "cpt_temporal_folded_susy/bfv_endpoint_detline_gluing_calibration.py",
