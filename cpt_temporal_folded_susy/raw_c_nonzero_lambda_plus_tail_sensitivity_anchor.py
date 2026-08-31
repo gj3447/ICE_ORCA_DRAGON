@@ -76,6 +76,9 @@ def main() -> None:
     s = (uq*v-u*vq)/u**2
     def dq(expr: sp.Expr) -> sp.Expr:
         return sp.expand(sp.diff(expr,u)*uq + sp.diff(expr,uq)*A*u + sp.diff(expr,v)*vq + sp.diff(expr,vq)*(A*v+Al*u))
+    root1 = zero["certified_calculation"]["root_bracket_rows"][0]["kappa_bracket"]
+    kappa_left, kappa_right = sp.Rational(root1["left_exact"]), sp.Rational(root1["right_exact"])
+    lambda_endpoints = [sp.Rational(part) for box in cfg["declared_conventions"]["lambda_boxes"] for part in box.strip("[]").split(",")]
     exact = [
         check("rawc.s_anchor.riccati_sensitivity", sp.simplify(dq(s)-(2*g*s-Al)) == 0, "The normalized log-derivative sensitivity obeys s_Q=2gs-A_lambda."),
         check("rawc.s_anchor.forced_wronskian", sp.simplify(dq(u**2*s)+Al*u**2) == 0, "The scale-invariant endpoint condition gives s(4)=integral_4^infty A_lambda(t)[u(t)/u(4)]^2 dt."),
@@ -83,8 +86,11 @@ def main() -> None:
         check("rawc.s_anchor.lambda_forcing_positive", bool(Al.subs(Q,4) > 0), "A_lambda=6*pi^2 exp(3Q/2) is strictly positive."),
         check("rawc.s_anchor.elementary_bounds", bool(sp.E**2 > 7 and sp.E**2 < sp.Rational(15,2) and sp.pi**2 > 9 and sp.pi**2 < 10), "Declared elementary bounds used for the coarse outward interval hold."),
         check("rawc.s_anchor.g_lower_from_lg", bool((1-b)*6*9*sp.Rational(99999,100000) > alpha), "The pinned relative LG log-derivative envelope, A>=A0(1-1e-5), pi^2>9 and sqrt(1-1e-5)>99999/100000 imply g>=53 exp(Q)."),
-        check("rawc.s_anchor.g_upper_from_lg", bool((1+b)*6*10*sp.Rational(101,100) + sp.Rational(1,54) < beta), "The same envelope, A<=A0(1+1e-5), sqrt(1+1e-5)<101/100 and 0<A'/(4A)<1<=exp(Q)/54 imply g<=70 exp(Q)."),
-        check("rawc.s_anchor.lambda_kappa_box_coverage", True, "Both pinned lambda boxes lie in |lambda|<=1e-4 and bracket-1 kappa lies in [0,8], exactly the domain of the pinned LG envelope."),
+        check("rawc.s_anchor.coefficient_positive", bool(1-sp.Rational(1,100000)>0), "Using the pinned |lambda-term|+kappa^2<=1e-5 A0 envelope, A>=A0(1-1e-5)>0 uniformly."),
+        check("rawc.s_anchor.coefficient_derivative_positive", bool(2-sp.Rational(3,200000)>0), "A'=2A0+(3/2)lambda-term >= A0(2-3/(2e5))>0 uniformly."),
+        check("rawc.s_anchor.coefficient_four_A_minus_Aprime", bool(2-sp.Rational(4,100000)>0), "4A-A'=2A0+(5/2)lambda-term-4kappa^2 >= A0(2-4e-5)>0, hence 0<A'/(4A)<1 uniformly."),
+        check("rawc.s_anchor.g_upper_from_lg", bool((1+b)*6*10*sp.Rational(101,100) + sp.Rational(1,54) < beta), "The checked coefficient inequalities plus the LG envelope imply g<=70 exp(Q)."),
+        check("rawc.s_anchor.lambda_kappa_box_coverage", bool(all(abs(value) <= sp.Rational(1,10000) for value in lambda_endpoints) and 0 <= kappa_left <= kappa_right <= 8), "Parsed input lambda endpoints and pinned bracket-1 exact kappa endpoints lie in the LG real-box domain.", kappa_left=str(kappa_left), kappa_right=str(kappa_right), lambda_endpoints=[str(value) for value in lambda_endpoints]),
         check("rawc.s_anchor.lower_integral_derivation", bool((6*9*7)/(2*beta) >= lower), "With x=e^Q and y=x-x0, g<=70x gives s>=6*pi^2*sqrt(x0)*integral_0^infty exp(-140y)dy >= 6*9*7/140 = 27/10."),
         check("rawc.s_anchor.upper_integral_derivation", bool(60*(sp.Rational(15,2)/(2*alpha)+sp.Rational(1,14*(2*alpha)**2)) < upper), "With y=x-x0, g>=53x and sqrt(x0+y)<=sqrt(x0)+y/(2sqrt(x0))<15/2+y/14, the full tail is below the reported upper bound."),
         check("rawc.s_anchor.lower_upper_order", bool(lower > 0 and lower < upper), "The derived rational interval is nonempty and strictly positive.", lower=str(lower), upper=str(upper)),
