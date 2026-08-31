@@ -33,6 +33,7 @@
       "derivation": "rechecked here from the pinned Liouville-Green real box and forced-Wronskian sensitivity identity; no old root-bracket-only sensitivity result is treated as corridor evidence"
     },
     "switch_seed_intersection": "first prove the selected actual rho invariant barrier [-1,1] from the Qplus seed and inward vector-field margins, then intersect that independently proved barrier with the raw Bessel/affine Qswitch enclosure before the Qswitch-to-Q0 transfer",
+    "outward_storage_semantics": "the Arb ball stored for exact [-1,1], and the ball reconstructed around a nonempty mathematical intersection, may extend slightly outside their exact endpoint sets; certification requires barrier provenance, nonempty intersection and finite outward seed, not literal stored-endpoint containment",
     "kernel_panel_ladder": [512, 1024],
     "kernel_tail_y": "24",
     "precision_ladder_decimal_digits": [80, 120],

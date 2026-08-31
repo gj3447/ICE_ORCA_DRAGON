@@ -35,7 +35,7 @@ RUNNER_RELPATH = (
     "cpt_temporal_folded_susy/"
     "raw_c_correlated_kappa_lambda_gamma1_sign_strip.py"
 )
-EXPECTED_INPUT_SHA256 = "175372c15b21d9c3082e8befdc3cf79e5c99e8f0685850552d343163cd6ffd3e"
+EXPECTED_INPUT_SHA256 = "114c8e65013ce8c6a63b836cb2628088330ec6ec86f0e84e0eaa101efbb31452"
 CALCULATION_ID = "RawCCorrelatedKappaLambdaGamma1SignStrip"
 RESULT_SCHEMA = "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1"
 RESULT_PREFIX = "RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT="
@@ -1201,16 +1201,23 @@ def main() -> None:
             "left_face": (arb(kappa_left), rho_switch_left),
             "right_face": (arb(kappa_right), rho_switch_right),
         }
-        switch_domain_ok = all(
-            rho_value.lower() >= -1 and rho_value.upper() <= 1
-            for _, rho_value in switch_domains.values()
+        switch_domain_ok = bool(
+            barrier_ok
+            and all(
+                rho_value.is_finite()
+                for _, rho_value in switch_domains.values()
+            )
         )
         audit.control(
             f"rawc.signstrip.switch.tier{tier}.domain_seeds",
             switch_domain_ok,
             "The raw Bessel/affine and independently proved invariant-barrier enclosures have nonempty intersections; only these intersections seed the full corridor and exact-face Qswitch-to-Q0 transfers.",
             decimal_digits=dps,
-            invariant_barrier=interval_record(invariant_barrier, digits),
+            exact_invariant_set="[-1,1]",
+            invariant_barrier_outward_ball=interval_record(
+                invariant_barrier, digits
+            ),
+            outward_storage_scope="The returned balls outwardly enclose the mathematical intersections and are not required to be literal subsets of the exact invariant set.",
             raw_affine={
                 "corridor": interval_record(rho_switch_corridor_raw, digits),
                 "left_face": interval_record(rho_switch_left_raw, digits),
@@ -1235,7 +1242,10 @@ def main() -> None:
                     "left_face": interval_record(rho_switch_left_raw, digits),
                     "right_face": interval_record(rho_switch_right_raw, digits),
                 },
-                "invariant_barrier": interval_record(invariant_barrier, digits),
+                "exact_invariant_set": "[-1,1]",
+                "invariant_barrier_outward_ball": interval_record(
+                    invariant_barrier, digits
+                ),
                 "transfer_seed_intersection": {
                     "corridor": interval_record(rho_switch_corridor, digits),
                     "left_face": interval_record(rho_switch_left, digits),

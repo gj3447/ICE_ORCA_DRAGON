@@ -186,3 +186,15 @@ The result still certifies no root-existence output. The narrow correction is
 to test the already constructed nonempty intersections for finiteness and
 barrier provenance, rather than require an outward storage ball to be a
 literal subset of the exact interval it encloses.
+
+### Outward-storage control correction prepared
+
+The control now distinguishes the exact analytic invariant set from its Arb
+outward representation. A transfer seed is admitted only after the invariant
+barrier control passes, the raw/barrier intersection is nonempty, and the
+resulting outward ball is finite. It is not required to have stored endpoints
+inside the exact set it safely encloses. The updated frozen input SHA-256 is
+`114c8e65013ce8c6a63b836cb2628088330ec6ec86f0e84e0eaa101efbb31452`;
+the updated pre-run source SHA-256 is
+`fa47e78ffeda71ffd8867019cce0754fbc8e2c22c046465dc88597bd1df91b04`.
+No third execution is claimed before a clean source commit and bounded run.
