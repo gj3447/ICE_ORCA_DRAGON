@@ -1,6 +1,6 @@
 # Gate-1 V0 six-bridge literature map
 
-Date: 2026-08-28 UTC
+Date: 2026-08-28 UTC; anti-reinvention audit refreshed 2026-08-31 UTC
 
 Scope: literature and source-provenance work only; no new physical calculation, runner, Phase, or execution authority
 
@@ -74,6 +74,52 @@ This map classifies papers as follows:
 
 The inventory is broad and primary-source led, but it is not a bibliometric claim that every paper ever
 written on these subjects has been found.
+
+## Anti-reinvention reuse registry (2026-08-31)
+
+The repository already contains the open-problem nodes and calculation evidence for these bridges. The
+point of this registry is therefore not to create a second roadmap. It records, bridge by bridge, which
+general theorem or implementation should be reused, which assumptions must be checked before transfer,
+and which residue is genuinely specific to the ICE workbench. A `CITES` edge is method navigation, never
+calculation evidence and never a claim-state promotion.
+
+| Priority | Current repository boundary | Reuse instead of rebuilding | ICE-specific residue | Fail-closed boundary |
+| --- | --- | --- | --- | --- |
+| P1 raw-\(C\) endpoint | The actual nonzero-\(\lambda\) direction and sub-quarter scale-free widths are enclosed, but every endpoint interval still contains zero. | Use [Eckhardt--Gesztesy--Nichols--Teschl](https://arxiv.org/abs/1208.4677v2) for singular Sturm--Liouville extensions and [CAPD::DynSys](https://arxiv.org/abs/2010.07097v1) or an equivalent validated-ODE backend for compact propagation. | Panelwise nonlinear Picard/affine enclosure, validated \(\lambda\)-sensitivity and actual sign separation for the declared \(\Gamma_1\) line. | No root continuation, spectrum or RAQ inference while zero remains in the interval. |
+| P2 full \(S^3\) cubic data | Scalar/vector/tensor spectrum and counting, zonal scalar products, selected cubic subvertices and one scalar momentum generator exist; a full interacting basis does not. | Reuse [Lindblom--Taylor--Zhang](https://arxiv.org/abs/1709.08020v1) for \(S^3\) SVT conventions, SU(2) Clebsch--Gordan product algebra, and [xPert](https://arxiv.org/abs/0807.0824v1) only as an independent tensor-algebra generator/checker. | One explicit real/complex phase ledger; all Gaunt and derivative couplings; gravity, lapse, shift and matter cubic constraints; exact low-mode golden tests. | Symbolic output is not imported until translated into repository conventions and checked against exact low modes. |
+| P3 HDA/Jacobi | One fixed-background matter \(HH\) cutoff remainder is separated; full gravitational \(DD,DH,HH\) and Jacobi are absent. | Reuse ADM plus the [Teitelboim](https://doi.org/10.1016/0003-4916(73)90096-1) and [Hojman--Kuchař--Teitelboim](https://doi.org/10.1016/0003-4916(76)90112-3) deformation-algebra baselines. | Evaluate the full brackets and Jacobiator with both \(P\) and \((1-P)\) outputs and a declared cutoff-tail estimate. | A projection defect is `UNCLASSIFIED_REMAINDER`, not a continuum anomaly. |
+| P4 nonreal spectrum and RAQ | One selected constant-boundary decomposable raw-\(C\) extension exists. Its nonreal Weyl data, spectral measure and rigging form do not. | Reuse the singular Weyl--Titchmarsh construction above, [Nussbaum](https://doi.org/10.1215/S0012-7094-64-03103-5)/[Lennon](https://doi.org/10.7146/math.scand.a-11449) direct-integral theory, and the cited RAQ/group-averaging results. | Construct the plus-end nonreal Weyl solution, \(m(z)\), measure and multiplicity; prove measurable \(p\)-dependence; define a positive zero-fiber rigging form; then compare selected \(C\) and \(H=fC\) domains, boundary lines, measures and observables. | A real characteristic root is not a Weyl \(m\)-function, and formal \(\delta(C)\) is not a rigging map. |
+| P5 classical/quantum BFV | Full classical charge and common-core quantum nilpotency are both absent. | Reuse classical/quantum BV--BFV, the explicit [GR ADM BV--BFV construction](https://arxiv.org/abs/1509.05762v2), and the closed-model BFV comparator already cited. Treat [smoothened-boundary pAQFT](https://arxiv.org/abs/2607.13765v1) as a method frontier, not a gravity result. | Insert the actual \(S^3\) structure functions into \(\Omega\); only then define ordering, regulator and a common invariant domain for \(\widehat\Omega^2\). | Classical HDA closure and quantum \(\widehat\Omega^2=0\) are distinct gates; an Abelian Yang--Mills boundary recovery is not gravity closure. |
+| P6 absolute BFV/gluing | The finite positive-\(\lambda\) result transports only a relative odd-Pfaffian orientation. | Reuse BV--BFV endpoint polarization and [fiber-product gluing](https://arxiv.org/abs/2208.11211v1), determinant-line theory, gauge-slice admissibility and Picard--Lefschetz relative homology. | Fix endpoint polarization, zero modes, determinant/Pfaffian line, gauge-orbit coverage, starting lapse cycle and two-slab composition in one regulator. | Picard--Lefschetz theory does not choose the initial contour; relative sign does not define an absolute measure. |
+| P7 clocks to likelihood | Relational clocks, BO/decoherence and the empirical adapter are downstream and unconstructed. | Reuse Dittrich-style complete observables; closed-universe scalar/tensor mode treatments by [Bonga--Gupt--Yokomizo](https://arxiv.org/abs/1605.07556v2) and [their tensor companion](https://arxiv.org/abs/1612.07281v2); BO calculations plus the [documented solution ambiguity](https://arxiv.org/abs/1303.0531v2); and the official [CLASS](https://github.com/lesgourg/class_public) and [Cobaya](https://github.com/CobayaSampler/cobaya) implementations. | Build two clocks on one physical product; supply a \(V\ne0\) or alternative generation model, initial state, reheating and normalized discrete \(S^3\) spectra; then make a pinned CLASS adapter and one-point Cobaya smoke test. | Missing clock chart, physical product, initial state, reheating, normalization or discrete-to-solver map blocks the likelihood call. |
+
+The dependency structure is deliberately not one automatic pipeline:
+
+```mermaid
+flowchart LR
+  P1["P1 real endpoint certificate"] --> X["P1/P4 spectral cross-check"]
+  P4["P4 nonreal m / measure / RAQ"] --> X
+  P2["P2 full S3 basis + cubic constraints"] --> P3["P3 HDA + Jacobi + cutoff remainder"]
+  P3 --> P5C["P5 classical BFV charge"]
+  P5C --> P5Q["P5 quantum common-core audit"]
+  P4 -. "only if raw-C physical product is used" .-> P5Q
+  P6["P6 boundary / determinant / contour / gluing"] --> P7["P7 clocks + semiclassical observables"]
+  P5Q --> P7
+  P4 --> P7
+  P7 --> S["closed S3 primordial spectra"]
+  S --> C["CLASS adapter"]
+  C --> L["Cobaya one-point likelihood smoke"]
+```
+
+Operationally, four rules prevent wheel reinvention:
+
+1. Reuse abstract extension, direct-integral, RAQ, HDA, BV--BFV, relational-observable and Boltzmann-code
+   machinery through versioned sources; calculate only the model-specific hypotheses and residues.
+2. Keep paper results on `CITES` edges. Only committed repository output can enter `HAS_EVIDENCE`.
+3. Use xPert, validated-ODE libraries, CLASS and Cobaya as independently pinned implementations with
+   convention adapters and golden tests, not as opaque authorities.
+4. Treat every proposed calculation as one bounded, unnumbered question. Its output does not authorize
+   the next row, reopen the killed numbered route, or promote a physical claim.
 
 ## Bridge 1 — raw (C\leftrightarrow H=fC) quantum equivalence
 
@@ -341,6 +387,11 @@ under the active workbench and circuit-breaker rules.
 Fifty-four pinned arXiv PDFs were retrieved into the local-only directory
 `output/pdf/gate1-v0-six-bridges/` (about 99 MiB). They are deliberately ignored by Git. Their exact arXiv
 versions, URLs, local paths and SHA-256 hashes are tracked in the companion TSV manifest.
+
+The 2026-08-31 anti-reinvention audit also checked primary pages for singular Weyl theory, validated ODEs,
+xPert, GR BV--BFV, fiber-product gluing, closed-universe scalar/tensor spectra and BO solution ambiguity.
+Those additions are version-pinned as graph source nodes or direct primary links, but were **not** copied into
+the original 54-PDF cache and therefore do not silently change the companion manifest's scope.
 
 The files can be reconstructed one at a time with the manifest fields, for example:
 

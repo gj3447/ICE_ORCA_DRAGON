@@ -122,6 +122,28 @@ model, or an observational likelihood into repository calculation evidence.
 Every source represented above has a `PRIMARY*` source state in the local graph. That is a source
 classification, not a claim that this inventory exhausts the literature.
 
+### Anti-reinvention audit (2026-08-31)
+
+The refresh searched the raw-\(C\), closed-\(S^3\), HDA, BV--BFV, relational and observational lanes for
+standard constructions that should be reused rather than rebuilt. It adds one local reuse-contract concept
+and the following source nodes; all remain `CITES`-only.
+
+| Source node | Reuse role | Boundary |
+| --- | --- | --- |
+| `source:eckhardt-et-al-2012-singular-weyl-titchmarsh`; `source:nussbaum-1964-unbounded-reduction`; `source:lennon-1973-direct-integrals` | Selected-extension nonreal Weyl data, spectral transform and measurable direct-integral operator field | The theorems do not choose the repository boundary line, construct its \(m(z)\), prove its zero-fiber positivity or compare \(C\) with \(H=fC\) |
+| `source:brizuela-martin-garcia-mena-marugan-2008-xpert` | Independent symbolic generator/checker for high-order metric perturbations | Generated formulas must be translated into the declared ADM, \(S^3\), real/complex and phase conventions and pass exact low-mode golden tests |
+| `source:cattaneo-schiavina-2016-gr-bvbfv` | Direct GR example of an ADM BV--BFV construction | It does not provide the repository truncated structure functions, quantum common core, absolute determinant line or lapse cycle |
+| `source:cattaneo-mnev-2022-bvbfv-gluing-fiber-products` | Classical BV--BFV gluing by fiber products | It supplies the gluing framework, not a two-slab V0 kernel identity or a regulator-independent measure |
+| `source:bonga-gupt-yokomizo-2016-closed-flrw-cmb`; `source:bonga-gupt-yokomizo-2017-closed-tensor-perturbations` | Closed-FLRW scalar and tensor mode conventions and spectrum comparators | Their inflationary background, state and normalization are not inherited by frozen \(V=0\) |
+| `source:kiefer-kramer-2011-quantum-gravitational-cmb`; `source:bini-et-al-2013-bo-cmb-ambiguity` | Born--Oppenheimer correction pipeline and explicit solution-ambiguity warning | Neither paper selects the repository physical product, clock, factor ordering, initial state or correction branch |
+
+The audit also checked the external Symposium KG. The programme's exact Lakatos-tree bridge already exists.
+One existing FoundationRequirement has a genuine `RELATED` overlap with full graded/quantum BFV seam
+closure; the local P5 open problem records that UID without importing evidence. Searches for a matching
+raw-RAQ/Weyl, closed-\(S^3\) HDA or relational-observable node found no exact correspondence, so those
+bridges remain `UNRESOLVED` and no UID was invented. The creative/world ICE character node stays in the
+narrative layer and is not scientific evidence for this graph.
+
 ## Claim-family coverage
 
 | Claim family | Graph sources | Coverage type |

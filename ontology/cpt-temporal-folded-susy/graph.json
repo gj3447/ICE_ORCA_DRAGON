@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-08-30T18:22:00Z",
+  "updated_at_utc": "2026-08-31T00:46:07Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1322,6 +1322,38 @@
         "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
         "open:gate1-v0-relational-observables-bo-decoherence",
         "open:gate1-v0-empirical-likelihood-bridge"
+      ]
+    },
+    {
+      "id": "reading-path:gate1-v0-core-bridge-reuse-without-reinvention",
+      "title": "Reuse established machinery while isolating the ICE-specific bridge residues",
+      "summary": "Start at the source-backed anti-reinvention contract, then follow P1 through validated endpoint sensitivity, P4 through nonreal Weyl/direct-integral/RAQ data, P2-P3 through full S3 cubic HDA/Jacobi, P5-P6 through classical and common-core quantum BFV plus absolute boundary gluing, and P7 through relational clocks to a closed-universe CLASS/Cobaya smoke test. Sources are method navigation only; no paper edge is evidence, no row authorizes the next, and the killed numbered route stays closed.",
+      "nodes": [
+        "concept:gate1-v0-core-bridge-reuse-contract",
+        "artifact:gate1-v0-six-bridge-literature-map",
+        "concept:gate1-v0-six-bridge-metacognitive-priority-map",
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+        "source:kapela-et-al-2020-capd-dynsys",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+        "source:eckhardt-et-al-2012-singular-weyl-titchmarsh",
+        "source:nussbaum-1964-unbounded-reduction",
+        "source:lennon-1973-direct-integrals",
+        "open:gate1-v0-classical-s3-hda-closure",
+        "source:lindblom-taylor-zhang-2017-s3-harmonics",
+        "source:brizuela-martin-garcia-mena-marugan-2008-xpert",
+        "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+        "source:cattaneo-schiavina-2016-gr-bvbfv",
+        "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+        "source:cattaneo-mnev-2022-bvbfv-gluing-fiber-products",
+        "open:gate1-v0-relational-observables-bo-decoherence",
+        "source:kiefer-kramer-2011-quantum-gravitational-cmb",
+        "source:bini-et-al-2013-bo-cmb-ambiguity",
+        "open:gate1-v0-empirical-likelihood-bridge",
+        "source:bonga-gupt-yokomizo-2016-closed-flrw-cmb",
+        "source:bonga-gupt-yokomizo-2017-closed-tensor-perturbations",
+        "source:class-2011-boltzmann-code",
+        "source:cobaya-2021",
+        "policy:ragnarok-circuit-breaker"
       ]
     }
   ],
@@ -13127,11 +13159,11 @@
       "id": "artifact:gate1-v0-six-bridge-literature-map",
       "type": "artifact",
       "title": "Gate-1 V0 six-bridge literature map",
-      "summary": "Human-readable primary-source-led map of the six research bridges, decisive boundaries, current observational releases and non-automatic work units. It is literature navigation, not calculation evidence.",
+      "summary": "Human-readable primary-source-led map of the six research bridges, decisive boundaries, anti-reinvention reuse contracts, current observational releases and non-automatic work units. It is literature navigation, not calculation evidence.",
       "state": "TRACKED_NON_EVIDENTIAL_LITERATURE_MAP",
       "artifact_kind": "literature_map",
       "path": "cpt_temporal_folded_susy/GATE1_V0_SIX_BRIDGE_LITERATURE_MAP_2026-08-28.md",
-      "sha256": "4f26caa43b7bd40fec25609ec5425331ca721ba850667d9b2e122766f57b02da"
+      "sha256": "fb51f42abf57e8dff10ef36f126a4493ad87cb19388fe039702c2218aa2e1264"
     },
     {
       "id": "artifact:gate1-v0-six-bridge-paper-manifest",
@@ -14706,7 +14738,84 @@
     {"id":"artifact:raw-c-actual-direction-sharp-contraction-transfer-runner","type":"artifact","title":"Raw-C sharp contraction runner","summary":"Bounded backward-x variation-of-constants contraction, monotone kernel-mass, interval-Taylor and quotient-tail runner.","state":"TRACKED_VALID_RUNNER","artifact_kind":"runner","path":"cpt_temporal_folded_susy/raw_c_actual_direction_sharp_contraction_transfer.py","sha256":"a6324cd9120c29ae16064aec3872151efb4aacdd3378022d773a933cf19e275e"},
     {"id":"artifact:raw-c-actual-direction-sharp-contraction-transfer-result","type":"artifact","title":"Raw-C sharp contraction raw result","summary":"VALID_RUN result, payload digest f3c23fb49720a85a294493c0ba4e0f2f09caa6525186837248e490498fa23baa.","state":"TRACKED_VALID_RUN_RESULT","artifact_kind":"result","path":"cpt_temporal_folded_susy/RAW_C_ACTUAL_DIRECTION_SHARP_CONTRACTION_TRANSFER_RESULT.json","sha256":"3c02a76a45e8b8e054e03b6dabea7562b927b7d37585daa2a23cb442565c6453"},
     {"id":"artifact:raw-c-actual-direction-sharp-contraction-transfer-report","type":"artifact","title":"Raw-C sharp contraction report","summary":"Human-readable sharp direction, scale-free width result, zero-containing sign boundary and next sensitivity blocker.","state":"TRACKED_VALID_RUN_REPORT","artifact_kind":"report","path":"cpt_temporal_folded_susy/RAW_C_ACTUAL_DIRECTION_SHARP_CONTRACTION_TRANSFER.md","sha256":"67037472bf3de12207612bd90ddcb169cd1e77bba76a7bc3aab5851c38397e76"},
-    {"id":"artifact:raw-c-actual-direction-sharp-contraction-transfer-evidence-snapshot","type":"artifact","title":"Raw-C sharp contraction evidence snapshot","summary":"Schema-valid snapshot preserving 18 exact, 133 ball checks, six guards, pins and REPRO.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/raw-c-actual-direction-sharp-contraction-transfer-result.json","sha256":"97201a03ac68bcee68d12a0388167ce117598d3e8f4e8189979d2c32166b1b8c"}
+    {"id":"artifact:raw-c-actual-direction-sharp-contraction-transfer-evidence-snapshot","type":"artifact","title":"Raw-C sharp contraction evidence snapshot","summary":"Schema-valid snapshot preserving 18 exact, 133 ball checks, six guards, pins and REPRO.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/raw-c-actual-direction-sharp-contraction-transfer-result.json","sha256":"97201a03ac68bcee68d12a0388167ce117598d3e8f4e8189979d2c32166b1b8c"},
+    {
+      "id": "concept:gate1-v0-core-bridge-reuse-contract",
+      "type": "concept",
+      "title": "Gate-1 V0 core-bridge anti-reinvention contract",
+      "summary": "Source-backed split between reusable singular-operator, direct-integral, RAQ, S3/HDA, BV-BFV, relational-observable and public-likelihood machinery and the genuinely repository-specific endpoint, cubic-bracket, common-domain, absolute-measure, clock and adapter residues. It is navigation only: CITES is not HAS_EVIDENCE, no result authorizes the next work unit, and no physics promotion follows.",
+      "state": "ACTIVE_LOCAL_METHOD_REUSE_LEDGER_NO_CLAIM_PROMOTION_OR_EXECUTION_AUTHORITY"
+    },
+    {
+      "id": "source:brizuela-martin-garcia-mena-marugan-2008-xpert",
+      "type": "source",
+      "title": "xPert: Computer algebra for metric perturbation theory",
+      "summary": "Independent symbolic generator/checker candidate for high-order metric perturbations. Repository ADM, S3, phase and real/complex conventions plus exact low-mode golden tests remain mandatory.",
+      "state": "PRIMARY_METHOD_REFERENCE",
+      "citation": "D. Brizuela, J. M. Martín-García and G. A. Mena Marugán, Gen. Rel. Grav. 41 (2009) 2415-2431, DOI 10.1007/s10714-009-0773-2.",
+      "uri": "https://arxiv.org/abs/0807.0824v1",
+      "version": "arXiv:0807.0824v1"
+    },
+    {
+      "id": "source:cattaneo-schiavina-2016-gr-bvbfv",
+      "type": "source",
+      "title": "BV-BFV approach to General Relativity, Einstein-Hilbert action",
+      "summary": "Direct ADM BV-BFV construction for general relativity. It supplies a framework comparator, not the repository S3 structure functions, quantum common core, absolute determinant line or lapse cycle.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "A. S. Cattaneo and M. Schiavina, J. Math. Phys. 57, 023515 (2016), DOI 10.1063/1.4941410.",
+      "uri": "https://arxiv.org/abs/1509.05762v2",
+      "version": "arXiv:1509.05762v2"
+    },
+    {
+      "id": "source:cattaneo-mnev-2022-bvbfv-gluing-fiber-products",
+      "type": "source",
+      "title": "A note on gluing via fiber products in the (classical) BV-BFV formalism",
+      "summary": "Primary classical BV-BFV gluing construction by fiber products. It does not establish the repository two-slab kernel identity or a regulator-independent absolute measure.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "A. S. Cattaneo and P. Mnev, J. Geom. Phys. 192, 104956 (2023), DOI 10.1016/j.geomphys.2023.104956.",
+      "uri": "https://arxiv.org/abs/2208.11211v1",
+      "version": "arXiv:2208.11211v1"
+    },
+    {
+      "id": "source:bonga-gupt-yokomizo-2016-closed-flrw-cmb",
+      "type": "source",
+      "title": "Inflation in the closed FLRW model and the CMB",
+      "summary": "Primary closed-FLRW scalar perturbation and CMB comparator. Its inflationary background, initial state and normalization are not inherited by the frozen V0 model.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "B. Bonga, B. Gupt and N. Yokomizo, JCAP 10 (2016) 031, DOI 10.1088/1475-7516/2016/10/031.",
+      "uri": "https://arxiv.org/abs/1605.07556v2",
+      "version": "arXiv:1605.07556v2"
+    },
+    {
+      "id": "source:bonga-gupt-yokomizo-2017-closed-tensor-perturbations",
+      "type": "source",
+      "title": "Tensor perturbations during inflation in a spatially closed Universe",
+      "summary": "Primary spatially closed tensor-mode and spectrum comparator. It does not supply the repository background, vacuum, reheating or scalar/tensor normalization.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "B. Bonga, B. Gupt and N. Yokomizo, JCAP 05 (2017) 021, DOI 10.1088/1475-7516/2017/05/021.",
+      "uri": "https://arxiv.org/abs/1612.07281v2",
+      "version": "arXiv:1612.07281v2"
+    },
+    {
+      "id": "source:kiefer-kramer-2011-quantum-gravitational-cmb",
+      "type": "source",
+      "title": "Quantum Gravitational Contributions to the CMB Anisotropy Spectrum",
+      "summary": "Primary Born-Oppenheimer/Wheeler-DeWitt correction pipeline in a specific inflationary setting. It does not choose the repository physical product, clock, ordering or state.",
+      "state": "PRIMARY_REFERENCE",
+      "citation": "C. Kiefer and M. Krämer, Phys. Rev. Lett. 108, 021301 (2012), DOI 10.1103/PhysRevLett.108.021301.",
+      "uri": "https://arxiv.org/abs/1103.4967v3",
+      "version": "arXiv:1103.4967v3"
+    },
+    {
+      "id": "source:bini-et-al-2013-bo-cmb-ambiguity",
+      "type": "source",
+      "title": "On the modification of the cosmic microwave background anisotropy spectrum from canonical quantum gravity",
+      "summary": "Primary warning that the Born-Oppenheimer quantum-gravitational correction admits solution ambiguity. No repository correction branch or physical interpretation follows.",
+      "state": "PRIMARY_BOUNDARY_REFERENCE",
+      "citation": "D. Bini, G. Esposito, C. Kiefer, M. Krämer and F. Pessina, Phys. Rev. D 87, 104008 (2013), DOI 10.1103/PhysRevD.87.104008.",
+      "uri": "https://arxiv.org/abs/1303.0531v2",
+      "version": "arXiv:1303.0531v2"
+    }
   ],
   "edges": [
     {
@@ -34547,7 +34656,152 @@
     {"id":"edge:3419","from":"evidence:raw-c-actual-direction-sharp-contraction-transfer-result","relation":"RECORDED_IN","to":"artifact:raw-c-actual-direction-sharp-contraction-transfer-evidence-snapshot"},
     {"id":"edge:3420","from":"artifact:raw-c-actual-direction-sharp-contraction-transfer-report","relation":"DOCUMENTS","to":"concept:raw-c-actual-direction-sharp-contraction-transfer"},
     {"id":"edge:3421","from":"concept:raw-c-actual-direction-sharp-contraction-transfer","relation":"CITES","to":"source:nist-dlmf-modified-bessel-2026","note":"Plus-end recessive and lambda-zero Bessel regression conventions only; the contraction calculation is repository-local."},
-    {"id":"edge:3422","from":"concept:raw-c-actual-direction-sharp-contraction-transfer","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball arithmetic backend only; 80/120 digits are same-backend refinement, not an independent implementation."}
+    {"id":"edge:3422","from":"concept:raw-c-actual-direction-sharp-contraction-transfer","relation":"CITES","to":"source:johansson-arb-2017","note":"Ball arithmetic backend only; 80/120 digits are same-backend refinement, not an independent implementation."},
+    {
+      "id": "edge:3423",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:3424",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:gate1-v0-six-bridge-literature-map"
+    },
+    {
+      "id": "edge:3425",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "EXTENDS",
+      "to": "concept:gate1-v0-six-bridge-metacognitive-priority-map",
+      "note": "Adds theorem/software reuse boundaries and repository-specific residues without replacing the existing priority, evidence or falsifier ledger."
+    },
+    {
+      "id": "edge:3426",
+      "from": "artifact:gate1-v0-six-bridge-literature-map",
+      "relation": "DOCUMENTS",
+      "to": "concept:gate1-v0-core-bridge-reuse-contract",
+      "note": "Primary-source-led anti-reinvention registry only; it creates no calculation evidence or automatic successor."
+    },
+    {
+      "id": "edge:3427",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "GOVERNED_BY",
+      "to": "policy:ragnarok-circuit-breaker",
+      "note": "Reuse navigation does not reopen numbered reconciliation descendants or bypass the generic bounded unnumbered control plane."
+    },
+    {
+      "id": "edge:3428",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+      "note": "P1: reuse validated ODE machinery only after the declared equations and tail data are fixed; the model-specific sign certificate remains local work."
+    },
+    {
+      "id": "edge:3429",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-classical-s3-hda-closure",
+      "note": "P2-P3: reuse S3/SU(2), ADM and HDA machinery while retaining full cubic coefficients, cutoff remainder and Jacobi as repository obligations."
+    },
+    {
+      "id": "edge:3430",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "note": "P4: reuse nonreal Weyl, direct-integral and RAQ theory; construct the selected extension's data and C/H comparison locally."
+    },
+    {
+      "id": "edge:3431",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "note": "P5: classical charge and common-domain quantum nilpotency remain separate local gates."
+    },
+    {
+      "id": "edge:3432",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "note": "P6: boundary polarization, determinant line, gauge coverage, initial relative cycle and gluing must meet in one declared regulator."
+    },
+    {
+      "id": "edge:3433",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-relational-observables-bo-decoherence",
+      "note": "P7a: clock comparison, BO and decoherence require one selected physical product and explicit error ledgers."
+    },
+    {
+      "id": "edge:3434",
+      "from": "concept:gate1-v0-core-bridge-reuse-contract",
+      "relation": "FOLLOW_UP_TO",
+      "to": "open:gate1-v0-empirical-likelihood-bridge",
+      "note": "P7b: likelihood is downstream of a generated, normalized closed-universe spectrum plus reheating and a pinned solver adapter."
+    },
+    {
+      "id": "edge:3435",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "CITES",
+      "to": "source:nussbaum-1964-unbounded-reduction",
+      "note": "Measurable decomposable closed-operator framework; it does not choose the raw-C extension."
+    },
+    {
+      "id": "edge:3436",
+      "from": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "relation": "CITES",
+      "to": "source:lennon-1973-direct-integrals",
+      "note": "Direct-integral measurability framework; the repository p-family and rigging form still require construction."
+    },
+    {
+      "id": "edge:3437",
+      "from": "open:gate1-v0-classical-s3-hda-closure",
+      "relation": "CITES",
+      "to": "source:brizuela-martin-garcia-mena-marugan-2008-xpert",
+      "note": "Independent symbolic generator/checker only; repository conventions and exact low-mode tests remain authoritative."
+    },
+    {
+      "id": "edge:3438",
+      "from": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "relation": "CITES",
+      "to": "source:cattaneo-schiavina-2016-gr-bvbfv",
+      "note": "Direct GR ADM BV-BFV comparator; no S3 truncation, common quantum core or anomaly result is imported."
+    },
+    {
+      "id": "edge:3439",
+      "from": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+      "relation": "CITES",
+      "to": "source:cattaneo-mnev-2022-bvbfv-gluing-fiber-products",
+      "note": "Classical gluing framework only; the repository two-slab identity and absolute measure remain open."
+    },
+    {
+      "id": "edge:3440",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
+      "relation": "CITES",
+      "to": "source:kiefer-kramer-2011-quantum-gravitational-cmb",
+      "note": "Born-Oppenheimer correction pipeline in a different inflationary setting; no repository correction is imported."
+    },
+    {
+      "id": "edge:3441",
+      "from": "open:gate1-v0-relational-observables-bo-decoherence",
+      "relation": "CITES",
+      "to": "source:bini-et-al-2013-bo-cmb-ambiguity",
+      "note": "Explicit solution-ambiguity boundary for BO corrections; output schema must retain branch dependence."
+    },
+    {
+      "id": "edge:3442",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
+      "relation": "CITES",
+      "to": "source:bonga-gupt-yokomizo-2016-closed-flrw-cmb",
+      "note": "Closed-FLRW scalar spectrum comparator; background, state, reheating and normalization are not inherited."
+    },
+    {
+      "id": "edge:3443",
+      "from": "open:gate1-v0-empirical-likelihood-bridge",
+      "relation": "CITES",
+      "to": "source:bonga-gupt-yokomizo-2017-closed-tensor-perturbations",
+      "note": "Closed-universe tensor comparator; no repository tensor prediction follows."
+    }
   ],
   "kg_bridges": [
     {
@@ -35246,6 +35500,45 @@
       "checked_at_utc": "2026-08-30T16:05:00Z",
       "lookup_key": "ICE closed S3 zonal V0 scalar matter Hamiltonian Hamiltonian bracket cutoff omitted k3 channel",
       "note": "No authorized exact external correspondence or writer is available. This is one fixed-background matter subidentity and cutoff ledger, not full gravitational ADM/HDA, Jacobi closure, quantum anomaly freedom, physics or TOE; no external UID was invented."
+    },
+    {
+      "local_node_id": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+      "system": "SYMPOSIUM",
+      "external_uid": "sym:FoundationRequirement:lakatostree_cpttemporalfoldedsusy_20260809/f34-full-graded-and-quantum-bfv-seam-closure",
+      "relation": "RELATED",
+      "status": "RESOLVED",
+      "checked_at_utc": "2026-08-31T00:46:07Z",
+      "note": "The external FoundationRequirement genuinely overlaps full graded and quantum BFV seam closure. The relation is RELATED, not EXACT: the local P5 node still requires actual closed-S3 structure functions, regulator and a common invariant operator domain, and no external evidence is imported."
+    },
+    {
+      "local_node_id": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-31T00:46:07Z",
+      "lookup_key": "refined algebraic quantization Weyl m function raw constraint rescaling",
+      "note": "Read-only exact and keyword searches found no authorized external node matching the local nonreal Weyl, spectral-measure, zero-fiber RAQ and C/H domain-comparison obligation. No UID was invented."
+    },
+    {
+      "local_node_id": "open:gate1-v0-classical-s3-hda-closure",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-31T00:46:07Z",
+      "lookup_key": "hypersurface deformation algebra closed S3 harmonic ADM Jacobi",
+      "note": "Read-only exact and keyword searches found no authorized external node matching the local full-S3 cubic DD/DH/HH, Jacobi and cutoff-remainder obligation. No UID was invented."
+    },
+    {
+      "local_node_id": "open:gate1-v0-relational-observables-bo-decoherence",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-08-31T00:46:07Z",
+      "lookup_key": "relational observables quantum clocks Born Oppenheimer decoherence",
+      "note": "Read-only exact and keyword searches found no authorized external node matching the local common-product clock comparison, BO consistency and decoherence obligation. No UID was invented."
     }
   ]
 }
