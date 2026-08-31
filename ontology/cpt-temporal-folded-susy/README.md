@@ -3,18 +3,19 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-31T03:36:14Z`; 1292 nodes, 3473 edges). Run and analytic-evidence details live in the
+`2026-08-31T03:49:35Z`; 1298 nodes, 3483 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 351/351 stored hashes (343 artifacts and 8 policies).
+verifies 353/353 stored hashes (345 artifacts and 8 policies).
 
 The 2026-08-31 bounded bridge snapshots add a fail-closed raw-\(C\) Picard-admission denial, a
 finite-cutoff nonreal-Weyl proxy, complex-scalar \(S^3\) SU(2) Gaunt golden data with a projection
-remainder, its finite \(n\leq2\) real-scalar convention translation, a finite BFV
-endpoint/determinant-line toy with lapse cycle open, and a P7 likelihood preflight blocked by seven
-prerequisites. An execution-free raw-\(C\) note also records why the finite nonreal proxy is not an
-interval endpoint certificate. None is a physical promotion: the remainder is neither HDA nor an
-anomaly, and no spectrum, CLASS/Cobaya likelihood, gravity BFV measure, or full HDA closure is claimed.
+remainder, its finite \(n\leq2\) real-scalar convention translation and two fixed scalar-derivative
+identities, a finite BFV endpoint/determinant-line toy plus a declared rapid-decay lapse-ray toy with no
+selected relative-homology class, and a P7 likelihood preflight blocked by seven prerequisites. An
+execution-free raw-\(C\) note also records why the finite nonreal proxy is not an interval endpoint
+certificate. None is a physical promotion: the remainder is neither HDA nor an anomaly, and no spectrum,
+CLASS/Cobaya likelihood, gravity BFV measure, or full HDA closure is claimed.
 
 ## Quick answers
 

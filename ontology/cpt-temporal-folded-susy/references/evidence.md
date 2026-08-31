@@ -148,6 +148,20 @@ its retained-versus-discarded hard-projection bookkeeping. It derives from the
 separate complex SU(2) scalar golden seed but remains finite convention data:
 scalar derivatives, vector/TT, ADM/HDA/Jacobi, BFV and quantum outputs are null.
 
+The independent non-numbered
+[`closed-s3-real-scalar-derivative-gaunt-ledger-result.json`](../evidence/closed-s3-real-scalar-derivative-gaunt-ledger-result.json)
+records 8/8 exact checks for two fixed real-scalar gradient-triple packets, using the pinned upstream
+real product, \(\lambda_n=n(n+2)\), and the selected integration-by-parts identity. Its two theorem/scope
+guards are payload metadata rather than executable check IDs. It leaves a complete derivative basis, full
+SVT, ADM constraints, HDA/Jacobi, BFV and quantum outputs open.
+
+The independent non-numbered
+[`bfv-relative-lapse-cycle-toy-audit-result.json`](../evidence/bfv-relative-lapse-cycle-toy-audit-result.json)
+records 3/3 derived exact checks for a declared open rapid-decay toy ray and positive two-slab coordinate
+bookkeeping. Four declared convention/scope guards are preserved in its payload, not promoted into exact
+checks. No relative-homology class, physical/gravity lapse cycle, quantum pushforward, continuum
+determinant/Pfaffian line, or absolute measure is selected.
+
 [`RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md`](../../../cpt_temporal_folded_susy/RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md)
 is an execution-free blocker note, not a `research-run-evidence/v1` snapshot. It
 specifies why the finite double-precision nonreal proxy is not an actual recessive

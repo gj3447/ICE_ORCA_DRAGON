@@ -1,0 +1,58 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:BFV_RELATIVE_LAPSE_CYCLE_TOY_AUDIT_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T03:49:35Z",
+  "command": "./ice run bfv_relative_lapse_cycle_toy_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/bfv_relative_lapse_cycle_toy_audit.py",
+    "sha256": "6965b4742189bdabb7ad9438278134ca4bd54cdc216409727c6e18182e4d49b0",
+    "introduced_in_commit": "4d282830a41a5081beeabe1c4f45444be1ffb570"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {
+      "id": "bfv.lapse.toy.gamma_plus.endpoint_damping",
+      "status": "PASS",
+      "statement": "On the declared ray, exp(-(a/r+b*r)) decays at both stated ends for a,b>0."
+    },
+    {
+      "id": "bfv.lapse.toy.two_slab.coordinate_inverse_and_jacobian",
+      "status": "PASS",
+      "statement": "The forward and inverse coordinate formulas compose algebraically and det(partial(r_1,r_2)/partial(T,s))=-T."
+    },
+    {
+      "id": "bfv.lapse.toy.principal_branch.positive_product",
+      "status": "PASS",
+      "statement": "The principal square-root product and its (T,s) coordinate form agree on the declared positive domain without crossing the cut."
+    }
+  ],
+  "payload": {
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/BFV_RELATIVE_LAPSE_CYCLE_TOY_AUDIT_RESULT.json",
+      "sha256": "96aff2e2040ae0085c27ecf7a55ef1de9b1cca107f435e3fc71fd22fb766132e",
+      "payload_sha256_without_self": "0aab22dda5b90d8e16842735ff3b3da4a8b30ce9f28634972cfb0ec54a2613c7",
+      "verdict": "CALIBRATED_DECLARED_OPEN_RAPID_DECAY_LAPSE_TOY_RAY_ONLY",
+      "run_status": "VALID_RUN"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/BFV_RELATIVE_LAPSE_CYCLE_TOY_AUDIT_INPUTS.json",
+      "sha256": "83622c4902ea43adbf82be7e0204fbaac7b5300d6e5e1575c0a4bda235d18d17"
+    },
+    "upstream_finite_endpoint_toy_result": {
+      "path": "cpt_temporal_folded_susy/BFV_ENDPOINT_DETLINE_GLUING_CALIBRATION_RESULT.json",
+      "sha256": "79574d86339933beeff00fdf2bef2ea03fe06103c9c40e89eaed43da579ca411",
+      "payload_sha256_without_self": "48bbaf5df13977e99f7d2a855285851ba061bbc7d55f8c3fa945205c060ea686"
+    },
+    "declared_scope_guards": [
+      "bfv.lapse.toy.guard.ray_orientation_is_declared",
+      "bfv.lapse.toy.guard.positive_two_slab_domain_is_declared",
+      "bfv.lapse.toy.guard.no_relative_homology_or_gravity_transfer",
+      "bfv.lapse.toy.guard.classical_bv_bfv_sources_only"
+    ],
+    "scope": "three derived exact toy checks; four declared convention/scope guards are recorded here, not exact checks. No relative-homology class, physical or gravity lapse cycle, quantum pushforward, continuum determinant/Pfaffian line or absolute measure is selected.",
+    "exact_checks": 3
+  }
+}

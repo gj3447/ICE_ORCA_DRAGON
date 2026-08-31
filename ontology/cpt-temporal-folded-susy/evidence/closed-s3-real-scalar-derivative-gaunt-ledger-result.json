@@ -1,0 +1,81 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_S3_REAL_SCALAR_DERIVATIVE_GAUNT_LEDGER_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T03:49:24Z",
+  "command": "./ice run closed_s3_real_scalar_derivative_gaunt_ledger",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/closed_s3_real_scalar_derivative_gaunt_ledger.py",
+    "sha256": "6f21b279763188dbd8099fa07366f0827bd2b0551b116fc3ac0fb1226c16a83f",
+    "introduced_in_commit": "1677323009258ac3e3e57cd75bfb1dc75a7648e3"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "CS3Derivative.constant_n1_n1.gaunt_pin",
+      "status": "PASS",
+      "statement": "The fixed scalar Gaunt coefficient equals the preregistered entry read from the pinned upstream real product."
+    },
+    {
+      "id": "CS3Derivative.constant_n1_n1.eigenvalue",
+      "status": "PASS",
+      "statement": "The a-mode eigenvalue uses the declared unit-S3 scalar convention lambda_n=n(n+2)."
+    },
+    {
+      "id": "CS3Derivative.constant_n1_n1.gradient_from_gaunt",
+      "status": "PASS",
+      "statement": "The scalar gradient-triple coefficient equals (lambda_b+lambda_c-lambda_a)G_abc/2 exactly."
+    },
+    {
+      "id": "CS3Derivative.constant_n1_n1.integration_by_parts",
+      "status": "PASS",
+      "statement": "The cyclic scalar coefficients satisfy D_bac+D_cab=lambda_a G_abc exactly, the selected integration-by-parts identity."
+    },
+    {
+      "id": "CS3Derivative.n2_n1_n1.gaunt_pin",
+      "status": "PASS",
+      "statement": "The fixed scalar Gaunt coefficient equals the preregistered entry read from the pinned upstream real product."
+    },
+    {
+      "id": "CS3Derivative.n2_n1_n1.eigenvalue",
+      "status": "PASS",
+      "statement": "The a-mode eigenvalue uses the declared unit-S3 scalar convention lambda_n=n(n+2)."
+    },
+    {
+      "id": "CS3Derivative.n2_n1_n1.gradient_from_gaunt",
+      "status": "PASS",
+      "statement": "The scalar gradient-triple coefficient equals (lambda_b+lambda_c-lambda_a)G_abc/2 exactly."
+    },
+    {
+      "id": "CS3Derivative.n2_n1_n1.integration_by_parts",
+      "status": "PASS",
+      "statement": "The cyclic scalar coefficients satisfy D_bac+D_cab=lambda_a G_abc exactly, the selected integration-by-parts identity."
+    }
+  ],
+  "payload": {
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_REAL_SCALAR_DERIVATIVE_GAUNT_LEDGER_RESULT.json",
+      "sha256": "e181fa311576d4198d6653f0b190e86c401676fe8648cb5cd0d779359ca30d10",
+      "payload_sha256_without_self": "876417bc7e5aef26b71b495f22169a7591131fd64d7044cc605923a21e5d7dc2",
+      "verdict": "KEEP_FIXED_REAL_S3_SCALAR_DERIVATIVE_GAUNT_IDENTITIES_NOT_ADM_HDA",
+      "run_status": "VALID_RUN"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_REAL_SCALAR_DERIVATIVE_GAUNT_LEDGER_INPUTS.json",
+      "sha256": "32794735a914f04869ba438a51e81ef1e85e02da1e5bfbe1d8070ef40ec32f7d"
+    },
+    "upstream_real_scalar_basis_result": {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_REAL_SCALAR_HARMONIC_BASIS_LEDGER_RESULT.json",
+      "sha256": "d98fe880c4830c5275b6a3ad35debf5e3b353ca47f46b918ead84f06493d2f3c",
+      "payload_sha256_without_self": "0ea62eb663c69d5fbb23ea6138af9ecc2c6ae8e43de32e55c13ffd47c30ad9bb"
+    },
+    "theorem_guards": [
+      "CS3Derivative.guard.closed_scalar_identity",
+      "CS3Derivative.guard.fixed_packet_scope"
+    ],
+    "scope": "two fixed-mode real scalar gradient-triple identities only; complete derivative basis, full SVT, ADM constraints, HDA/Jacobi, BFV and quantum outputs remain open",
+    "exact_checks": 8
+  }
+}
