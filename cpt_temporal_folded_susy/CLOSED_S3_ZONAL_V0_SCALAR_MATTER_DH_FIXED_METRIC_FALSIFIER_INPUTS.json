@@ -1,0 +1,72 @@
+{
+  "schema_version": "ice.closed-s3-zonal-v0-scalar-matter-dh-fixed-metric-falsifier.input.v1",
+  "calculation_id": "ClosedS3ZonalV0ScalarMatterDHFixedMetricFalsifier",
+  "numbered_phase": null,
+  "question": "For a fixed q_ab=a^2 gamma_ab, does the matter-only bracket {D_phi[v],H_phi[N]} equal H_phi[L_v N], and how much of the observed difference is the omitted metric-strain variation rather than a cutoff effect?",
+  "one_output": "An exact L=2,3 decomposition into lapse transport, fixed-metric strain residual, and finite projection remainder for one nonzero zonal packet.",
+  "primary_failure_class": "model_omission",
+  "non_claims": [
+    "full gravity-plus-matter ADM DH closure",
+    "the full hypersurface-deformation algebra or Jacobi identity",
+    "a classical or quantum anomaly",
+    "BFV/BRST nilpotency or a physical prediction"
+  ],
+  "primary_sources": [
+    {
+      "source": "R. Arnowitt, S. Deser and C. W. Misner, The Dynamics of General Relativity",
+      "url": "https://arxiv.org/abs/gr-qc/0405109",
+      "used_for": "the canonical gravity setting in which metric and matter parts jointly generate spatial diffeomorphisms",
+      "not_used_for": "an executable proof of the selected finite S3 coefficient identity"
+    },
+    {
+      "source": "T. Thiemann, Introduction to Modern Canonical Quantum General Relativity",
+      "url": "https://arxiv.org/abs/gr-qc/0110034",
+      "used_for": "the continuum DH reference relation {D[v],H[N]}=H[L_v N] for the combined constraints",
+      "not_used_for": "permission to omit the gravitational metric generator"
+    },
+    {
+      "source": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere",
+      "url": "https://arxiv.org/abs/1709.08020",
+      "used_for": "S3 Laplace-eigenfunction, normalization and exceptional-mode convention checks",
+      "not_used_for": "a complete Gaunt ledger or this DH calculation"
+    }
+  ],
+  "reused_local_implementation": {
+    "path": "cpt_temporal_folded_susy/closed_s3_zonal_v0_scalar_matter_hh_bracket_cutoff_ledger.py",
+    "sha256": "357a8e0d4054d9b42664107f7dfbccc52da0e2d092648628ffb260e6c26d51c4",
+    "used_for": "the already checked normalized zonal product, gradient-Gaunt, direct-integration, Hamiltonian and Poisson helpers",
+    "not_used_for": "the DH result or its interpretation"
+  },
+  "declared_conventions": {
+    "geometry": "unit round S3 with Vol=2*pi^2, Q_n=U_n(cos chi)/sqrt(2*pi^2), Delta Q_n=-n(n+2)Q_n and q_ab=a^2 gamma_ab",
+    "canonical_fields": "phi=sum theta_n Q_n, pi_phi=sqrt(gamma) sum xi_n Q_n, and {theta_i,xi_j}=delta_ij",
+    "matter_constraints": "H_phi[N]=(1/2) integral sqrt(gamma) N[a^(-3)xi^2+a|D theta|^2] and D_phi[v]=integral sqrt(gamma) xi v^a D_a theta",
+    "bracket_order": "The tested order is {D_phi[v],H_phi[N]}; with the stated canonical sign, the continuum combined-constraint target is +H_phi[L_v N].",
+    "fixed_metric_boundary": "The canonical bracket varies theta and xi but not q_ab. For a non-Killing v, any strain residual is an omitted-metric diagnostic, not an HDA anomaly.",
+    "projection_boundary": "Ambient-before-project and L-only brackets are distinct; their difference is reported separately from the fixed-metric residual."
+  },
+  "packet": {
+    "shift_degree": 1,
+    "lapse_degree": 2,
+    "cutoffs": [2, 3],
+    "theta_coefficients": {"1": "1", "2": "1"},
+    "xi_coefficients": {"1": "1", "2": "1"},
+    "selection_reason": "The pure theta=Q2, xi=Q1 packet is parity-protected zero=zero; Q1+Q2 mixes parities so both lapse transport and fixed-metric strain can be tested nontrivially."
+  },
+  "controls": [
+    "independent direct chi integration of both lapse transport and the fixed-metric divergence/Hessian strain term",
+    "reverse Poisson-bracket antisymmetry",
+    "ambient-channel decomposition of the L-only projection remainder"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  }
+}
