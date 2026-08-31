@@ -19,24 +19,31 @@ The latter is deliberately named
 `NONZERO_UNCLASSIFIED_PROJECTION_REMAINDER_NOT_CONSTRAINT_OR_QUANTUM_ANOMALY`.
 It is not a (DD), (DH), or (HH) residual: no ADM constraint is formed.
 
-## Intended controlled command
+## Observed controlled command (2026-08-31 UTC)
 
 ```text
 ./ice run closed_s3_su2_scalar_gaunt_golden_ledger
+VALID_RUN; exact 9/9; theorem guards 3
+KEEP_UNIT_S3_SU2_COMPLEX_SCALAR_GAUNT_GOLDEN_DATA_AND_PROJECTION_REMAINDER_NOT_ADM_HDA
 ```
 
-It accepts no arguments and writes only its adjacent result JSON. The new
-runner is presently uncommitted, so it must first be reviewed, committed, and
-accepted by `./ice list` before this command is authorized by the workbench.
+The `one_times_one` packet gives the preregistered coefficients
+\(1/(\sqrt2\pi)\) in degree zero and \(1/(\sqrt6\pi)\) in degree two.  The
+selected unprojected triple product is exactly associative.  With repeated
+hard projection at \(L=1\), the recorded associator is the degree-one term
+\(1/(2\pi^2)\); its two parenthesizations retain different pieces because
+their degree-two intermediate components were explicitly discarded.  The
+result file SHA-256 is
+`595e6c83a32ea8f70c2bc1fdd90754de3cb025853616851861cd6d9f5676768e`.
 
 ## What this leaves open
 
 Before a classical BFV seed can be a classical BFV **charge**, the programme
 still needs a real-basis convention bridge; scalar/vector/TT and derivative
 Gaunt data; gravity, lapse, shift, and matter constraints in one cubic ADM
-convention; (DD,DH,HH); the Jacobiator; and cutoff scaling/analytic-tail
-separation. Only then can a classical (Ω) be tested.
+convention; \(DD,DH,HH\); the Jacobiator; and cutoff scaling/analytic-tail
+separation. Only then can a classical \(\Omega\) be tested.
 
-Before any quantum (\hat\Omega^2) conclusion it additionally needs a fixed
+Before any quantum \(\widehat\Omega^2\) conclusion it additionally needs a fixed
 ordering, regulator removal, and common invariant operator core. This ledger
 supplies none of those choices or conclusions.
