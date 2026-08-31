@@ -541,6 +541,13 @@ negative-arm ratio는 \(-1\)이지만 simultaneous nonlinear configuration cycle
 `next_phase = null`은 유지되고 Phase 57이나 full replay를 열지 않는다. 2026-08-30은 distinct
 번호 없는 계산의 대기 조건도, killed numbered route의 자동 재개일도 아니다.
 
+2026-08-31 bounded bridge 기록에는 complex SU(2) scalar golden seed를 \(n\leq2\)의
+conjugation-paired real scalar convention으로 번역한 별도 exact ledger도 포함된다. 이는 선택된
+real scalar product와 hard-projection remainder만 보존하며 derivative, vector/TT, ADM/HDA/Jacobi,
+BFV 및 quantum 결론을 열지 않는다. 또한 raw-C nonreal finite proxy에 대해서는 complex-tail
+theorem과 outward endpoint enclosure가 없다는 실행 전 blocker를 기록했다. 따라서 endpoint
+certificate, singular Weyl function, spectral measure 및 RAQ로 읽지 않는다.
+
 동일한 번호 없는 runtime에서 selected densitized \(V=0\) Liouville/KL/RAQ model의
 \(p=0\) boundary control도 완료됐다. `GATE1_V0_DENSITIZED_RAQ_P_ZERO_BOUNDARY_INPUTS.json`,
 `gate1_v0_densitized_raq_p_zero_boundary.py`,

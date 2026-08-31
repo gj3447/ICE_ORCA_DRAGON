@@ -141,6 +141,20 @@ the displayed projected associator. Because no ADM+matter constraint or
 Poisson bracket was included, this is truncation evidence, not HDA closure or
 quantum anomaly evidence.
 
+The non-numbered [`closed-s3-real-scalar-harmonic-basis-ledger-result.json`](../evidence/closed-s3-real-scalar-harmonic-basis-ledger-result.json)
+records 9/9 exact checks and three scope guards for one conjugation-paired real
+scalar-harmonic translation through \(n\leq2\), one selected real Gaunt product, and
+its retained-versus-discarded hard-projection bookkeeping. It derives from the
+separate complex SU(2) scalar golden seed but remains finite convention data:
+scalar derivatives, vector/TT, ADM/HDA/Jacobi, BFV and quantum outputs are null.
+
+[`RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md`](../../../cpt_temporal_folded_susy/RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md)
+is an execution-free blocker note, not a `research-run-evidence/v1` snapshot. It
+specifies why the finite double-precision nonreal proxy is not an actual recessive
+endpoint certificate: a complex-tail theorem, normalization-fixed Volterra
+contraction and outward complex endpoint enclosure remain absent. It contains no
+certificate, singular Weyl function, spectral measure or RAQ result.
+
 ## Historical Phase 11–15R evidence backfill
 
 These phases predate the current typed evidence-snapshot convention. The graph therefore points to
