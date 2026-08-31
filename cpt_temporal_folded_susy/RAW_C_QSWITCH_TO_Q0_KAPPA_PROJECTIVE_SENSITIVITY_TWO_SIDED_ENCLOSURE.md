@@ -83,6 +83,38 @@ The pre-run source freeze is:
   a tautological W check by the conserved identity $W_Q-2\kappa J_Q=0$,
   tightened the prior-margin comparison, and added exact Q0-sign scope checks.
 
-No calculation is run before a clean source-only commit. The source commit,
-first `./ice run`, actual outward intervals and all failed or passed
-validations will be added after controlled execution.
+No calculation was run before clean source-only commit
+`a5bcb3583f47d71966ffe987c96575a24cebf2a0`.
+
+## First controlled execution — fail closed
+
+Command:
+
+```text
+./ice run raw_c_qswitch_to_q0_kappa_projective_sensitivity_two_sided_enclosure
+```
+
+The first committed-source execution exited zero and wrote a `VALID_RUN`, but
+correctly refused certification:
+
+- verdict:
+  `VALID_TWO_SIDED_Q0_KAPPA_PROJECTIVE_SENSITIVITY_NOT_CERTIFIED`;
+- exact/structural checks: 13/14; outward interval controls: 10/10;
+  theorem-scope guards: 3;
+- failed check: `rawc.kappa_q0_twosided.pinned_selected_q0_chart`;
+- provisional outward endpoint box:
+  $-3.85489381290972232818603515625\le h(Q_0)
+  \le-1.28174894489347934722900390625$;
+- raw result SHA-256:
+  `62f5f26bb2a7f2a7b526d75159653d1f41eca61f2dbf6a56200267f59b1a5d21`;
+- canonical payload SHA-256:
+  `24235f660f6a501090a56332be3025e0bbe133eef8ff10848323934726d0aa3b`,
+  independently recomputed from the stored JSON.
+
+The failed item is a provenance-convention comparison, not an interval-row
+failure: this runner compared the current exact corridor object literally to
+the older sign-strip object's *definition* object. The sign-strip stores the
+corridor as `root_bracket_1` padded by exactly `1/1000`, whereas the current
+manifest stores the resulting exact endpoints. Until that definitional
+equivalence is checked exactly by a new committed runner, the provisional box
+is not promoted and the ontology remains unchanged.
