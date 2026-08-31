@@ -590,11 +590,29 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "closed_s3_real_scalar_derivative_gaunt_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_real_scalar_derivative_gaunt_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_REAL_SCALAR_DERIVATIVE_GAUNT_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "bfv_endpoint_detline_gluing_calibration",
     script:
       "cpt_temporal_folded_susy/bfv_endpoint_detline_gluing_calibration.py",
     output:
       "cpt_temporal_folded_susy/BFV_ENDPOINT_DETLINE_GLUING_CALIBRATION_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "bfv_relative_lapse_cycle_toy_audit",
+    script:
+      "cpt_temporal_folded_susy/bfv_relative_lapse_cycle_toy_audit.py",
+    output:
+      "cpt_temporal_folded_susy/BFV_RELATIVE_LAPSE_CYCLE_TOY_AUDIT_RESULT.json",
     policy: "portable",
     compare: tight
   },
