@@ -11,10 +11,11 @@ const DateTime = Schema.String.pipe(
 )
 const Sha256 = Schema.String.pipe(Schema.pattern(/^[a-f0-9]{64}$/))
 const CommitHash = Schema.String.pipe(Schema.pattern(/^[a-f0-9]{40}$/))
+const NumberedCheckId = /^P[0-9]+[A-Z]?\./
 
 const RunCheckSchema = Schema.Struct({
   id: Schema.String.pipe(
-    Schema.pattern(/^P[0-9]+[A-Z]?\.[A-Za-z0-9_.-]+$/)
+    Schema.pattern(/^[A-Za-z][A-Za-z0-9_-]*(?:\.[A-Za-z0-9_-]+)+$/)
   ),
   status: Schema.Literal("PASS", "FAIL", "INCONCLUSIVE"),
   statement: NonEmptyString
@@ -34,7 +35,9 @@ export const ResearchRunEvidenceSchema = Schema.Struct({
   result_id: Schema.String.pipe(
     Schema.pattern(/^result:[A-Za-z0-9_.:-]+$/)
   ),
-  phase: Schema.String.pipe(Schema.pattern(/^P[0-9]+[A-Z]?$/)),
+  phase: Schema.NullOr(
+    Schema.String.pipe(Schema.pattern(/^P[0-9]+[A-Z]?$/))
+  ),
   observed_at_utc: DateTime,
   command: NonEmptyString,
   exit_code: Schema.Int,
@@ -110,6 +113,29 @@ export const validateEvidenceSnapshot = (
     ...snapshot.checks.map((check) => check.id),
     ...numericalRecords.map((check) => check.id)
   ]
+
+  for (const checkId of snapshotIds) {
+    if (snapshot.phase === null && NumberedCheckId.test(checkId)) {
+      issues.push(
+        issue(
+          "EVIDENCE_UNNUMBERED_CHECK_ID_HAS_PHASE_ALIAS",
+          `unnumbered snapshot check id '${checkId}' must retain its semantic raw id without a phase alias`,
+          artifact.id
+        )
+      )
+    } else if (
+      snapshot.phase !== null &&
+      !checkId.startsWith(`${snapshot.phase}.`)
+    ) {
+      issues.push(
+        issue(
+          "EVIDENCE_NUMBERED_CHECK_ID_PHASE_MISMATCH",
+          `numbered snapshot check id '${checkId}' does not match phase '${snapshot.phase}'`,
+          artifact.id
+        )
+      )
+    }
+  }
 
   if (snapshot.exact_checks !== snapshot.checks.length) {
     issues.push(

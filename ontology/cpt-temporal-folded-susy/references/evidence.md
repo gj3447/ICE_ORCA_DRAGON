@@ -4,6 +4,10 @@
 
 Machine-readable records: [`graph.json`](../graph.json) and the Phase 16–56 snapshots in [`../evidence/`](../evidence/), including [`phase32-result.json`](../evidence/phase32-result.json), [`phase33-result.json`](../evidence/phase33-result.json), [`phase34-result.json`](../evidence/phase34-result.json), [`phase35-result.json`](../evidence/phase35-result.json), [`phase36-result.json`](../evidence/phase36-result.json), [`phase37-result.json`](../evidence/phase37-result.json), [`phase38-result.json`](../evidence/phase38-result.json), [`phase39-result.json`](../evidence/phase39-result.json), [`phase40-result.json`](../evidence/phase40-result.json), [`phase41-result.json`](../evidence/phase41-result.json), [`phase42-result.json`](../evidence/phase42-result.json), [`phase43-result.json`](../evidence/phase43-result.json), [`phase44-result.json`](../evidence/phase44-result.json), [`phase45-result.json`](../evidence/phase45-result.json), [`phase46-result.json`](../evidence/phase46-result.json), [`phase47-result.json`](../evidence/phase47-result.json), [`phase48-result.json`](../evidence/phase48-result.json), [`phase49-result.json`](../evidence/phase49-result.json), [`phase50-result.json`](../evidence/phase50-result.json), [`phase51-result.json`](../evidence/phase51-result.json), [`phase52-result.json`](../evidence/phase52-result.json), [`phase53-result.json`](../evidence/phase53-result.json), [`phase54-result.json`](../evidence/phase54-result.json), [`phase55-result.json`](../evidence/phase55-result.json), and [`phase56-result.json`](../evidence/phase56-result.json).
 
+The evidence schema now represents new independent calculations directly with `phase: null` and
+their authoritative semantic check IDs. Older non-numbered snapshots that used `P39` transport
+aliases remain historical provenance; the alias does not turn them into numbered executions.
+
 The [`V0 formula, philosophy, and ontology map`](../../../cpt_temporal_folded_susy/GATE1_V0_QUANTUM_COSMOLOGY_ONTOLOGY_MAP.md)
 is a non-evidential navigation artifact over existing snapshots. It introduces no run, check, support,
 contradiction, physics verdict, or external KG ratification.

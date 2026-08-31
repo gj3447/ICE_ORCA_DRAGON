@@ -3,10 +3,17 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-08-31T00:46:07Z`; 1272 nodes, 3443 edges). Run and analytic-evidence details live in the
+`2026-08-31T03:19:46Z`; 1287 nodes, 3464 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 344/344 stored hashes (336 artifacts and 8 policies).
+verifies 349/349 stored hashes (341 artifacts and 8 policies).
+
+The 2026-08-31 bounded bridge snapshots add a fail-closed raw-\(C\) Picard-admission denial, a
+finite-cutoff nonreal-Weyl proxy, complex-scalar \(S^3\) SU(2) Gaunt golden data with a projection
+remainder, a finite BFV endpoint/determinant-line toy with lapse cycle open, and a P7 likelihood
+preflight blocked by seven prerequisites. None is a physical promotion: the remainder is neither HDA
+nor an anomaly, and no spectrum, CLASS/Cobaya likelihood, gravity BFV measure, or full HDA closure is
+claimed.
 
 ## Quick answers
 

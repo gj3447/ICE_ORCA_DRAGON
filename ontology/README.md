@@ -14,7 +14,9 @@
 The [collection manifest](./collection.json) uses
 [`research-collection/v1`](./schema/research-collection-v1.schema.json); each independent graph uses
 [`research-graph/v1`](./schema/research-graph-v1.schema.json). The Phase 16–56 and non-numbered Gate-1 run snapshots use
-[`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json).
+[`research-run-evidence/v1`](./schema/research-run-evidence-v1.schema.json). Historical numbered
+snapshots carry a `P…` phase label; independent unnumbered calculations use `phase: null` and retain
+their authoritative semantic check IDs without a fabricated phase prefix.
 
 At the recorded `2026-08-28T07:31:00Z` collection update, the four graphs have 1,210 nodes, 3,402 edges,
 and 283 claims: 160 supported, 112 contradicted, and 11 inconclusive. Validation verifies all 303 stored

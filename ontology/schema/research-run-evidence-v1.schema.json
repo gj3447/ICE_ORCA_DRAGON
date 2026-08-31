@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "research-run-evidence-v1.schema.json",
   "title": "Research run evidence snapshot",
-  "description": "A durable snapshot of one research executable run. Exact checks are required; an optional typed numerical ledger preserves bounded numerical controls. The payload remains phase-specific.",
+  "description": "A durable snapshot of one research executable run. Exact checks are required; an optional typed numerical ledger preserves bounded numerical controls. Numbered historical runs carry a phase label; independent unnumbered runs use null.",
   "type": "object",
   "required": [
     "schema_version",
@@ -28,8 +28,15 @@
       "pattern": "^result:[A-Za-z0-9_.:-]+$"
     },
     "phase": {
-      "type": "string",
-      "pattern": "^P[0-9]+[A-Z]?$"
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^P[0-9]+[A-Z]?$"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "observed_at_utc": {
       "type": "string",
@@ -104,7 +111,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^P[0-9]+[A-Z]?\\.[A-Za-z0-9_.-]+$"
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*(?:\\.[A-Za-z0-9_-]+)+$"
         },
         "status": {
           "enum": [

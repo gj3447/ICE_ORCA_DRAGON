@@ -263,6 +263,42 @@ it.effect("decodes compact research-run-evidence/v1 snapshots strictly", () =>
     expect(numerical.numerical?.map((check) => check.id)).toEqual([
       "P16.numeric.control"
     ])
+
+    const unnumbered = yield* decodeResearchRunEvidence(
+      JSON.stringify({
+        ...raw,
+        result_id: "result:rawc-unnumbered-fixture",
+        phase: null,
+        checks: [
+          {
+            id: "rawc.unnumbered.control",
+            status: "PASS",
+            statement: "The independent unnumbered control passed."
+          }
+        ]
+      }),
+      "unnumbered fixture"
+    )
+    expect(unnumbered.phase).toBeNull()
+    expect(unnumbered.checks.map((check) => check.id)).toEqual([
+      "rawc.unnumbered.control"
+    ])
+
+    const invalidPhaseAlias = yield* decodeResearchRunEvidence(
+      JSON.stringify({ ...raw, phase: "UNNUMBERED" }),
+      "invalid unnumbered phase alias"
+    ).pipe(Effect.either)
+    expect(invalidPhaseAlias._tag).toBe("Left")
+
+    const invalidSemanticCheck = yield* decodeResearchRunEvidence(
+      JSON.stringify({
+        ...raw,
+        phase: null,
+        checks: [{ ...raw.checks[0], id: "rawc..control" }]
+      }),
+      "invalid semantic check id"
+    ).pipe(Effect.either)
+    expect(invalidSemanticCheck._tag).toBe("Left")
   })
 )
 
@@ -284,6 +320,22 @@ it.effect("cross-checks snapshot counts, uniqueness, and graph evidence groups",
       "valid evidence fixture"
     )
     expect(validateEvidenceSnapshot(graph, artifact, valid)).toEqual([])
+
+    const unnumberedAliasCodes = validateEvidenceSnapshot(graph, artifact, {
+      ...valid,
+      phase: null
+    }).map((entry) => entry.code)
+    expect(unnumberedAliasCodes).toContain(
+      "EVIDENCE_UNNUMBERED_CHECK_ID_HAS_PHASE_ALIAS"
+    )
+
+    const numberedMismatchCodes = validateEvidenceSnapshot(graph, artifact, {
+      ...valid,
+      phase: "P17"
+    }).map((entry) => entry.code)
+    expect(numberedMismatchCodes).toContain(
+      "EVIDENCE_NUMBERED_CHECK_ID_PHASE_MISMATCH"
+    )
 
     const raw = runEvidenceFixture()
     const broken = yield* decodeResearchRunEvidence(
