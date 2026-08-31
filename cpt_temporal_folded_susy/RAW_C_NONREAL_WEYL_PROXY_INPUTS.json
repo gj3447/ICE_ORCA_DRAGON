@@ -1,0 +1,114 @@
+{
+  "schema_version": "ice.raw-c-nonreal-weyl-proxy.input.v1",
+  "calculation_id": "RawCNonrealWeylProxy",
+  "numbered_phase": null,
+  "question": "Does the selected Gamma_1,p=0 raw-C extension admit a numerically stable finite-cutoff nonreal Weyl proxy with the expected upper-half-plane sign and Green-Lagrange identity on the declared sample set?",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CONSTANT_BOUNDARY_DIRECT_INTEGRAL_RESULT.json",
+      "sha256": "52d623524ed8a80f006374231c02267d4b5d9b4df1c636a8e7a7fc74b3672db7",
+      "payload_sha256_without_self": "8b629856847b646c6dbc0469f4da77177d61be520688b96d5923d4452f58806b",
+      "required_verdict": "CONSTRUCT_DECLARED_RAW_C_P_PRESERVING_DIRECT_INTEGRAL_EXTENSION_RAQ_OPEN"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_WEYL_FLAMBDA_CHECK_RESULT.json",
+      "sha256": "19f159792dccbbd75f3a98e313ab4bb4be5aada7fa18678ed60d0316c45b9e36",
+      "payload_sha256_without_self": "0d6a606ee8c76bdaaaca86b1d0e014256fb5830dbb3222c964afc5a2d029e7fe",
+      "required_verdict": "KEEP_FINITE_CUTOFF_NONZERO_LAMBDA_CHECK_OF_DECLARED_RAW_C_LOCAL_FLAMBDA_ONLY"
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "arXiv:1208.4677v2",
+      "title": "Weyl-Titchmarsh Theory for Sturm-Liouville Operators with Distributional Potentials",
+      "url": "https://arxiv.org/abs/1208.4677v2",
+      "role": "operator-theoretic definition and upper-half-plane scope; no theorem is treated as an ICE fiber computation"
+    }
+  ],
+  "declared_conventions": {
+    "hbar": "1",
+    "weight": "f(Q)=12*pi^2*exp(3Q/2)",
+    "fiber_equation": "u''=[36*pi^4*exp(2Q)+6*pi^2*z*exp(3Q/2)-3*p^2/2]u",
+    "reference_normalization": "Q_0=-4; c_p(-4)=1,c_p'(-4)=0,s_p(-4)=0,s_p'(-4)=1",
+    "boundary_maps": "Gamma_0=W(u,s_p), Gamma_1=-W(u,c_p)",
+    "proxy_definition": "M_cut(z;p)=-Gamma_1(u_plus,z)/Gamma_0(u_plus,z)",
+    "selected_boundary_line": "Gamma_1,p=0",
+    "main_Q_plus": "1.6",
+    "control_Q_plus": "1.4",
+    "main_Q_minus": "-14",
+    "control_Q_minus": "-12",
+    "p_samples": ["0", "1", "2"],
+    "z_samples": [
+      {"real": "0", "imag": "0.5"},
+      {"real": "0", "imag": "1"},
+      {"real": "1", "imag": "0.5"}
+    ],
+    "main_method": "DOP853",
+    "independent_method": "RK45",
+    "main_rtol": "1e-10",
+    "main_atol": "1e-12",
+    "independent_rtol": "2e-11",
+    "independent_atol": "2e-13"
+  },
+  "tolerances": {
+    "reference_wronskian_absolute": "2e-8",
+    "green_lagrange_relative": "2e-7",
+    "independent_method_relative": "2e-5",
+    "minus_cutoff_relative": "5e-2",
+    "plus_cutoff_relative": "2e-1",
+    "p_parity_relative": "2e-8",
+    "minimum_abs_gamma0": "1e-12",
+    "minimum_imag_M": "1e-8"
+  },
+  "assumptions": [
+    "The selected constant Gamma_1=0 extension and measurable p-preserving fiber field are inherited only in their recorded scope.",
+    "The finite Q_plus WKB datum is a proxy for the recessive direction; the two-cutoff comparison is numerical control, not an endpoint theorem.",
+    "The finite Q_minus boundary coefficients approximate the singular boundary maps; the two-cutoff comparison does not prove the limit.",
+    "The sign convention M=-Gamma_1/Gamma_0 converts the plus-second-derivative raw-C convention to the upper-half-plane positive sign checked here.",
+    "Double-precision solver agreement is a calibration and not an interval enclosure or a spectral theorem."
+  ],
+  "decision_table": [
+    {
+      "when": "all executable checks pass",
+      "verdict": "KEEP_FINITE_CUTOFF_NONREAL_WEYL_PROXY_ONLY_SPECTRAL_MEASURE_RAQ_OPEN",
+      "programme_impact": "ADVANCE_P4_TO_A_VALIDATED_NONREAL_ENDPOINT_AND_STIELTJES_INVERSION_WORK_UNIT"
+    },
+    {
+      "when": "any executable check fails",
+      "verdict": "FAIL_CLOSED_NONREAL_WEYL_PROXY_NOT_STABLE_ON_DECLARED_GRID",
+      "programme_impact": "KEEP_P4_AT_SELECTED_EXTENSION_AND_REVISE_NONREAL_ENDPOINT_CONTROL"
+    }
+  ],
+  "required_fail_closed_outputs": {
+    "singular_endpoint_nonreal_weyl_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_spectral_multiplicity": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "general_p_mixing_extension_classification": null,
+    "absolute_bfv_measure": null,
+    "inhomogeneous_constraint_closure": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "relational_observables_or_decoherence": null,
+    "empirical_likelihood": null,
+    "quantum_gravity_claim": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "ode_calls": 80,
+    "automatic_descendants": 0
+  }
+}
