@@ -57,4 +57,30 @@ The source and input are committed before execution.  The controlled command is
 ./ice run closed_s3_zonal_scalar_aliasing_cutoff_ladder_audit
 ```
 
-The observed result is added only after that clean committed run.
+## Observed bounded result
+
+The clean committed runner returned
+
+```text
+VALID_RUN; 153/153 exact checks; 3 source/scope guards
+KEEP_EXACT_ZONAL_S3_ALIASING_SEPARATED_FROM_TRUE_CUTOFF_REMAINDER_NOT_HDA
+```
+
+The three-way comparison was:
+
+| \(N\) | production \(M\) / degree | certified \(M\) | production alias | true tail \(\|(1-P_N)\phi^2\|^2\) |
+|---:|---:|---:|---:|---:|
+| 2 | 3 / 5 | 4 | \(-sQ_2\) from \(Q_4\mapsto-Q_2\) | \(5/(2\pi^2)\) |
+| 3 | 4 / 7 | 4 | \(0\) | \(1/(2\pi^2)\) |
+| 4 | 5 / 9 | 5 | \(0\) | \(0\) |
+
+At \(N=2\), the retained \(Q_2\) coefficient is therefore \(s\) on the
+underresolved production grid but \(2s\) in both the exact modal and certified
+overintegrated evaluations.  This is a concrete false low-mode drift.  It is
+separate from the exact discarded \(2sQ_3+sQ_4\) tail.  For the same frozen
+degree-two packet, the exact tail closes when \(N=4\); this finite selection-rule
+closure is not a statement about general SVT products or the ADM constraint
+algebra.
+
+The result artifact SHA-256 is
+`57502f4c4879aaa4af97a345cba8be6e563a93c675c3e67c8a21d94e42fd7cef`.
