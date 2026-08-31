@@ -31,6 +31,11 @@ Even a passing result leaves null: the physical initial lapse relative cycle,
 relative-homology class for the declared ray, global relative-homology basis
 and Picard--Lefschetz coefficients, quantum
 BV--BFV pushforward, V=0/gravity absolute BFV measure, continuum
-determinant/Pfaffian line, and a gravity two-slab gluing theorem. No result has
-been generated: a clean committed runner must be launched explicitly through
-`./ice run bfv_relative_lapse_cycle_toy_audit`.
+determinant/Pfaffian line, and a gravity two-slab gluing theorem.
+
+The controlled execution passed 3/3 derived exact checks and four declared
+convention/scope guards. It records
+`dr_1_wedge_dr_2 = -T*dT_wedge_ds = T*ds_wedge_dT`; this is orientation
+bookkeeping, not a pushforward theorem. The result SHA-256 is
+`96aff2e2040ae0085c27ecf7a55ef1de9b1cca107f435e3fc71fd22fb766132e`.
+The reproduction command is `./ice run bfv_relative_lapse_cycle_toy_audit`.
