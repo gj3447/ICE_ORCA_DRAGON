@@ -1,0 +1,117 @@
+{
+  "schema_version": "ice.raw-c-qplus-to-qswitch-kappa-projective-sensitivity-transport.input.v1",
+  "calculation_id": "RawCQplusToQswitchKappaProjectiveSensitivityTransport",
+  "numbered_phase": null,
+  "kind": "bounded_validated_comparison_transport",
+  "question": "On the exact current correlated K times Lambda strip, does the selected real plus-recessive projective kappa sensitivity h=partial_kappa rho remain uniformly strictly negative after finite transport from Qplus=4 to Qswitch=-29/10?",
+  "primary_sources": [
+    "NIST DLMF section 2.7(iii), Liouville-Green approximation for the pinned selected real plus-recessive family: https://dlmf.nist.gov/2.7#iii"
+  ],
+  "declared_conventions": {
+    "Q_plus": "4",
+    "Q_switch": "-29/10",
+    "x": "6*pi^2*exp(Q)",
+    "rho": "-u_Q/u-x-1/2",
+    "h": "partial_kappa rho",
+    "positive_state": "p=-h",
+    "rho_x_equation": "rho_x=2*rho+(rho+rho^2+kappa^2+1/4)/x-lambda*sqrt(x/(6*pi^2))",
+    "h_x_equation": "h_x=[2+(1+2*rho)/x]*h+2*kappa/x",
+    "p_x_equation": "p_x=[2+(1+2*rho)/x]*p-2*kappa/x",
+    "selected_family": "the same real plus-recessive direction and exact correlated strip pinned by the upstream anchor and sign-strip results",
+    "kappa_corridor": {
+      "left_exact": "5125180435678962497905662710537123/2535301200456458802993406410752000",
+      "right_exact": "160320344939996106734739047604961/79228162514264337593543950336000"
+    },
+    "lambda_slab": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "exact_rho_barrier": "-1<=rho<=1 from Qplus through Qswitch on the full declared strip",
+    "comparison_coefficient": "2-1/x<=2+(1+2*rho)/x<=2+3/x",
+    "lower_kernel": "exp(-2*(t-a))*(a/t)^3",
+    "upper_kernel": "exp(-2*(t-a))*(t/a)",
+    "kappa_forcing": "2*kappa/t",
+    "precision_ladder_decimal_digits": [80, 120],
+    "kernel_panel_ladder": [512, 1024],
+    "kernel_tail_y": "24",
+    "analytic_sign_floor": "p(Qswitch)>kappa_left/20 from the first delta_Q=1/10 window",
+    "analytic_floor_relaxations": [
+      "pi^2<10",
+      "exp(29/10)>16, hence x_switch<15/4",
+      "exp(1/10)-1<1/9",
+      "exp(17/15)<4"
+    ],
+    "derivative_scope": "two-sided partial_kappa derivative in the corridor interior and the corresponding one-sided derivative at each kappa face, at fixed lambda",
+    "execution": "exact SymPy identities plus python-flint Arb monotone positive-kernel panels; no Bessel evaluation, black-box ODE, quadrature, root solve, finite difference, sampling, compact Taylor transfer or bisection"
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_KAPPA_PROJECTIVE_SENSITIVITY_ANCHOR_RESULT.json",
+      "sha256": "adb89d5bba7e5abbc4870077ae1d4bd75ecb2547d0e02721769aef1fc390e2ca",
+      "schema_version": "ice.raw-c-plus-endpoint-kappa-projective-sensitivity-anchor.result.v1",
+      "verdict": "CERTIFY_UNIFORM_NEGATIVE_PLUS_ENDPOINT_KAPPA_PROJECTIVE_SENSITIVITY_ANCHOR",
+      "result_payload_sha256_without_self": "152b077a8529df8f8189c875b43730ae9ec3adea47a45a3444ce35f551ca3f6e",
+      "role": "pins the exact Qplus h interval and the two-parameter diagonal derivative construction"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json",
+      "sha256": "e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2",
+      "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1",
+      "verdict": "CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+      "result_payload_sha256_without_self": "277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee",
+      "role": "pins the exact current strip, selected-family linkage and independently certified rho in [-1,1] barrier through Qswitch; its face signs are not derivative evidence"
+    }
+  ],
+  "method_sources": [
+    {
+      "path": "cpt_temporal_folded_susy/raw_c_bessel_preconditioned_kernel_panel_affine_sensitivity_transport.py",
+      "sha256": "a87af1f9450016027e5e6e54b93904ed65e8ebf2b7118d238f9959133626f6d4",
+      "role": "real Arb interval construction, intersection, containment and record primitives only; the kappa forcing comparison is implemented and audited locally"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned endpoint anchor supplies p(4)=-h(4)>0 on the entire exact strip without using a finite difference.",
+    "The hash-pinned sign strip supplies the same selected family and an independently certified rho in [-1,1] barrier on the whole Qplus-to-Qswitch leg.",
+    "The endpoint anchor supplies an existing pointwise kappa derivative seed. Standard smooth parameter dependence of the finite Riccati IVP on the certified finite rho tube propagates it; no singular-endpoint C1 condition is assumed.",
+    "Variation of constants and coefficient comparison are applied only to the scalar linear p equation with positive forcing. The panel ladder bounds its monotone lower comparison kernel, while the upper comparison forcing integral is elementary.",
+    "A strict Qswitch sign remains a projective endpoint fact. It does not transport h to Q0 or differentiate the complete declared boundary functional."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_checks": 24,
+    "upstream_results": 2,
+    "method_sources": 1,
+    "precision_tiers": 2,
+    "kernel_panels_evaluated": 3072,
+    "kappa_corridors": 1,
+    "lambda_slabs": 1,
+    "ode_calls": 0,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "compact_steps": 0,
+    "ball_bessel_evaluations": 0,
+    "bisection_steps": 0
+  },
+  "required_fail_closed_outputs": {
+    "Q0_kappa_projective_sensitivity": null,
+    "complete_normalized_G_kappa": null,
+    "reference_state_kappa_variation": null,
+    "complete_kappa_differentiated_minus_tail": null,
+    "kappa_lambda_mixed_derivative": null,
+    "root_transversality_or_uniqueness": null,
+    "continuous_root_selector_or_continuation": null,
+    "root_velocity": null,
+    "absolute_actual_Gamma1_amplitude_or_sign": null,
+    "roots_outside_declared_corridor_or_global_census": null,
+    "nonreal_weyl_m_function_or_spectral_measure": null,
+    "raw_C_RAQ_or_C_H_equivalence": null,
+    "BFV_or_physical_product": null,
+    "physics_claim": null
+  }
+}
