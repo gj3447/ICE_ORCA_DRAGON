@@ -555,6 +555,50 @@ export const reproCases = [
     compare: tight
   },
   {
+    name: "raw_c_panelwise_picard_sensitivity_admission",
+    script:
+      "cpt_temporal_folded_susy/raw_c_panelwise_picard_sensitivity_admission.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_PANELWISE_PICARD_SENSITIVITY_ADMISSION_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "raw_c_nonreal_weyl_proxy",
+    script: "cpt_temporal_folded_susy/raw_c_nonreal_weyl_proxy.py",
+    output:
+      "cpt_temporal_folded_susy/RAW_C_NONREAL_WEYL_PROXY_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "closed_s3_su2_scalar_gaunt_golden_ledger",
+    script:
+      "cpt_temporal_folded_susy/closed_s3_su2_scalar_gaunt_golden_ledger.py",
+    output:
+      "cpt_temporal_folded_susy/CLOSED_S3_SU2_SCALAR_GAUNT_GOLDEN_LEDGER_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "bfv_endpoint_detline_gluing_calibration",
+    script:
+      "cpt_temporal_folded_susy/bfv_endpoint_detline_gluing_calibration.py",
+    output:
+      "cpt_temporal_folded_susy/BFV_ENDPOINT_DETLINE_GLUING_CALIBRATION_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
+    name: "closed_cosmology_likelihood_readiness_preflight",
+    script:
+      "cpt_temporal_folded_susy/closed_cosmology_likelihood_readiness_preflight.py",
+    output:
+      "cpt_temporal_folded_susy/P7_CLOSED_COSMOLOGY_LIKELIHOOD_READINESS_PREFLIGHT_RESULT.json",
+    policy: "portable",
+    compare: tight
+  },
+  {
     name: "homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger",
     script:
       "cpt_temporal_folded_susy/homogeneous_closed_frw_starobinsky_time_symmetric_clock_boundary_local_ledger.py",
