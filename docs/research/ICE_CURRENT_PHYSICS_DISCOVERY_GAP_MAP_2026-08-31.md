@@ -42,7 +42,7 @@ graphs is not mutual confirmation.
 
 | Lane | Computed fact | Allowed interpretation | Missing bridge before promotion |
 | --- | --- | --- | --- |
-| P1 real raw-C | On root bracket 1 and both punctured real lambda boxes, the actual plus-recessive entering sensitivity at Q=4 obeys `27/10 <= s(4) <= 240/53`; zero is excluded. | One input to a panelwise sensitivity proof is now available. | Validated panelwise rho tubes from Q=4 to Q0; the actual declared Gamma_1 value including the complete minus-tail remainder; sign/zero separation; root continuation and velocity. |
+| P1 real raw-C | On root bracket 1 and both punctured real lambda boxes, the actual plus-recessive entering sensitivity at Q=4 obeys `27/10 <= s(4) <= 240/53`. A Bessel-preconditioned 512/1024-kernel-panel comparison then encloses both the actual sensitivity and mean-value quotient at `Q_switch=-29/10` in `[0.08636945814095967975, 0.14690505220523634520]`. The negative/positive-lambda actual directions lie strictly below/above the lambda-zero Bessel direction, with widths below `1e-4`. | The entering sensitivity remains positive through the switch, and common-direction wrapping has been removed for this finite Bessel-relative endpoint comparison. This is not a panel-specific absolute-rho Picard tube or a Gamma_1 result. | Panel-specific absolute-rho Picard tubes where required; differentiated node-safe transfer from `Q_switch` to `Q0=-4`; the actual declared Gamma_1 value including the complete minus-tail remainder; sign/zero separation; root continuation and velocity. |
 | P4 nonreal raw-C | One fixed upper-half-plane box is separated from the principal square-root cut and has a positive real-part lower bound. | The chosen branch is safe for a later complex-tail construction on that box. | A normalization-fixed complex-tail/Volterra certificate for the actual recessive endpoint; selected-extension singular Weyl m(z); boundary values and spectral measure/multiplicity; raw-C test space, rigging form and RAQ; raw-C/H comparison. |
 | P2--P3 closed S3 | The n=1 scalar-derived tracefree Hessian vanishes, so no independent E1 shear pair is admitted.  One selected Q2 metric-plus-matter DH packet cancels the separately identified fixed-metric strain at L=2 and L=3, with the L=2 omitted k=3 remainder retained. | These results fix one exceptional-mode convention and one local covariance-consistency packet. | Complete scalar/vector/TT basis and derivative/Gaunt data; the gravitational Hamiltonian constraint and its metric variation; cubic constraints; combined DD, general DH and full HH; a projection-remainder theorem; projected Jacobi closure. |
 | P5 quantum BFV | No new P5 result follows from the scoped Q2 packet. | Quantum work remains downstream of actual classical structure functions and domains. | A regulated classical BFV charge; compatible regulator and cutoff bookkeeping; a common invariant operator core; an operator-level nilpotency/anomaly audit. |
@@ -55,7 +55,9 @@ The active logical dependencies are:
 
 ```text
 P1: Q=4 s anchor
-  -> panel tubes + actual Gamma_1/minus-tail
+  -> Bessel-relative positive-sensitivity and side certificate at Q_switch
+  -> panel-specific rho control + differentiated Q_switch-to-Q0 transfer
+  -> actual Gamma_1/minus-tail
   -> sign/root continuation
 
 P4: nonreal branch precondition

@@ -71,5 +71,56 @@ Inspection localized the failure to generic symmetric-ball multiplication of
 the sign-fixed lambda interval by positive `p`. It was rigorous but wider than
 the four-endpoint real interval product and crossed the lambda-zero Bessel
 base artificially. Commit `ddeba15` replaces only this multiplication with
-the outward endpoint-product hull. A clean rerun is pending; the unresolved
-result remains a historical finite-enclosure outcome, not a physics result.
+the outward endpoint-product hull.
+
+The clean committed rerun of the same command then returned `VALID_RUN` and
+
+```text
+CERTIFY_BESSEL_PRECONDITIONED_KERNEL_PANEL_AFFINE_SWITCH_SENSITIVITY_AND_DIRECTION_SIGN
+```
+
+All 7 exact identities, 13 outward controls and 3 theorem-scope guards passed.
+The 80/120-decimal intersection gives, separately for both punctured lambda
+boxes,
+
+```text
+s(Q_switch), p(Q_switch)
+  in [0.0863694581409596797514691277026974,
+      0.1469050522052363452006115837573849].
+```
+
+The lambda-zero Bessel direction at the switch is enclosed by
+
+```text
+[-0.5525229389240662628288325668436928,
+ -0.5525229389240662628288325667475361].
+```
+
+For the negative lambda box the actual direction lies in
+
+```text
+[-0.5525376294293425688154136669149152,
+ -0.5525229397877114750515509303917638],
+```
+
+strictly below the Bessel box. For the positive lambda box it lies in
+
+```text
+[-0.5525229380604210506061142031994651,
+ -0.5525082484187899568422514666763137],
+```
+
+strictly above it. Both actual-direction widths are
+`1.4689641631093763863e-5`, below the declared `1e-4` target.
+
+The final result SHA-256 is
+`d326398ac06e36b55dfe49a565f72de223fabe68a68907d6aa128ea09a4aef3b`;
+the runner and input hashes recorded inside it are respectively
+`a87af1f9450016027e5e6e54b93904ed65e8ebf2b7118d238f9959133626f6d4`
+and `194b219f1b5b8740acd6ffa36c7d6980e02285a89a7b14eb8bb77c49e32010e9`.
+
+This closes only the Bessel-relative switch certificate. Panel-specific
+absolute-rho Picard tubes, differentiated node-safe transfer from
+`Q_switch` to `Q0=-4`, the complete declared minus-tail Gamma_1 functional,
+Gamma_1 sign, root continuation and every spectral, RAQ or physical output
+remain null.
