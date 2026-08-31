@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_REFERENCE_KAPPA_VARIATION_WEIGHTED_ENVELOPE_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T16:52:34Z",
+  "command": "./ice run raw_c_reference_kappa_variation_weighted_envelope",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_reference_kappa_variation_weighted_envelope.py",
+    "sha256": "3a8696d3c0034ed0d57a7e601d1c5ef899129563c94389be640e0d3a824f7efa",
+    "introduced_in_commit": "617ba23041654b487925bc6fbd4000c2e1ddb82f"
+  },
+  "exact_checks": 8,
+  "checks": [
+    {
+      "id": "rawc.refkappa.forced_variation_equation",
+      "status": "PASS",
+      "statement": "D=partial_kappa c obeys D_QQ=A0*D-2*kappa*c."
+    },
+    {
+      "id": "rawc.refkappa.fixed_initial_value",
+      "status": "PASS",
+      "statement": "The fixed c(Q0)=1 normalization gives D(Q0)=0."
+    },
+    {
+      "id": "rawc.refkappa.free_rotation_skew",
+      "status": "PASS",
+      "statement": "The free rotating-state matrix is exactly Euclidean skew."
+    },
+    {
+      "id": "rawc.refkappa.perturbation_operator_norm",
+      "status": "PASS",
+      "statement": "For positive V and kappa, the rank-one perturbation has Euclidean operator norm V/kappa."
+    },
+    {
+      "id": "rawc.refkappa.forcing_norm",
+      "status": "PASS",
+      "statement": "The variation forcing (0,-2*c) has Euclidean norm 2*abs(c), without a sign premise on c."
+    },
+    {
+      "id": "rawc.refkappa.reference_potential_antiderivative",
+      "status": "PASS",
+      "statement": "The full backward perturbation mass is q_left=18*pi^4*exp(-8)/kappa_left."
+    },
+    {
+      "id": "rawc.refkappa.weighted_second_moment",
+      "status": "PASS",
+      "statement": "The exponential second moment controlling the linearly growing variation is 16/27."
+    },
+    {
+      "id": "rawc.refkappa.variation_L2_factor",
+      "status": "PASS",
+      "statement": "The pointwise bound 2*B^2*t gives the displayed full L2(a) envelope for D."
+    }
+  ],
+  "numerical_checks": 3,
+  "numerical": [
+    {
+      "id": "rawc.refkappa.tier1.uniform_weighted_envelope",
+      "status": "PASS",
+      "statement": "The 80-digit outward elementary balls give finite positive uniform base and reference-kappa-variation bounds at kappa_left."
+    },
+    {
+      "id": "rawc.refkappa.tier2.uniform_weighted_envelope",
+      "status": "PASS",
+      "statement": "The 120-digit outward elementary balls give finite positive uniform base and reference-kappa-variation bounds at kappa_left."
+    },
+    {
+      "id": "rawc.refkappa.cross_precision_overlap",
+      "status": "PASS",
+      "statement": "The 80- and 120-digit outward elementary evaluations overlap for q_left and all three displayed reference bounds."
+    }
+  ],
+  "payload": {
+    "exact_checks": 8,
+    "numerical_checks": 3,
+    "locator_policy": "Eight decision-bearing exact or structural locators and three interval controls are indexed here; the authoritative raw result is the single source for all sixteen exact or structural checks and three theorem-scope guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_REFERENCE_KAPPA_VARIATION_WEIGHTED_ENVELOPE_RESULT.json",
+      "sha256": "b6f5b60018142d53537955393e4e660528d905583f10161fa014bb5fe52a8c33",
+      "payload_sha256_without_self": "bb50111f524a965aa1f7595aa42f9db93c5b01787da29563ffff05f5ef1fa6e6",
+      "exact_checks": 16,
+      "interval_controls": 3,
+      "theorem_guards": 3,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_UNIFORM_REFERENCE_KAPPA_VARIATION_WEIGHTED_ENVELOPE_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_REFERENCE_KAPPA_VARIATION_WEIGHTED_ENVELOPE_INPUTS.json",
+      "sha256": "6267420934202ce75e61230d7875cfcae74e460e52562a12d359fc7565fc4bd3"
+    },
+    "executed_source_revision_commit": "617ba23041654b487925bc6fbd4000c2e1ddb82f",
+    "declared_scope": "The declared fixed reference on the exact current real kappa corridor only. The pinned lambda slab is context only because c_kappa, D and this envelope are lambda-independent.",
+    "equation": "D_QQ=(V-kappa^2)D-2*kappa*c_kappa with D(Q0)=D_Q(Q0)=0.",
+    "pointwise_comparison": "||(D,D_Q/kappa)||(Q)<=2*exp(2*q_left)*(Q0-Q) for Q<=Q0; this is a magnitude comparison, not a pointwise value or sign enclosure.",
+    "full_minus_half_line_intersections": {
+      "q_left": {
+        "lower": "0.290962180742840827552040829801635884038757170",
+        "upper": "0.290962180742840827552040829801635884038757170"
+      },
+      "base_pointwise": {
+        "lower": "1.33771399164390410687468914054144215751538829",
+        "upper": "1.33771399164390410687468914054144215751538829"
+      },
+      "base_L2_a": {
+        "lower": "0.418465532171176100466048575415978980246723075",
+        "upper": "0.418465532171176100466048575415978980246723075"
+      },
+      "variation_L2_a": {
+        "lower": "1.05554486215269862345786236329806936644506481",
+        "upper": "1.05554486215269862345786236329806936644506481"
+      }
+    },
+    "boundary": "This closes only a uniform full-minus-half-line L2(a dQ) magnitude envelope for the fixed-reference derivative. Pointwise D values/sign, an actual-plus derivative, a two-sided Q0 projective seed, the complete differentiated tail, partial_kappa G, mixed derivatives, transversality, uniqueness, selector, velocity, global roots, absolute Gamma_1 orientation, nonreal Weyl data, spectral measure, RAQ, BFV and physics remain absent or null."
+  }
+}

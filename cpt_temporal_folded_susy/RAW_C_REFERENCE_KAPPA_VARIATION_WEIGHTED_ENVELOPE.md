@@ -98,6 +98,56 @@ The pre-run source freeze is:
   positive symbolic state values, one counted DLMF source, and lambda as a
   context-only label) are incorporated in this freeze.
 
-No calculation was executed before the source-only commit. The clean source
-commit, first `./ice run`, actual outward envelope and post-run validations
-will be added only after that controlled run.
+No calculation was executed before source-only commit
+`617ba23041654b487925bc6fbd4000c2e1ddb82f`.
+
+The first result-producing command was
+
+```text
+./ice run raw_c_reference_kappa_variation_weighted_envelope
+```
+
+It exited zero in 1.96 seconds and reported `VALID_RUN`, verdict
+`CERTIFY_UNIFORM_REFERENCE_KAPPA_VARIATION_WEIGHTED_ENVELOPE_ONLY`, exact or
+structural checks 16/16, outward controls 3/3 and three theorem guards.
+
+## Result
+
+The intersection of the 80- and 120-digit outward evaluations gives
+
+| quantity | enclosed value shown to 45 digits |
+| --- | ---: |
+| $q_{\rm left}$ | 0.290962180742840827552040829801635884038757170 |
+| $B_c$ | 1.33771399164390410687468914054144215751538829 |
+| $\|c_\kappa\|_{L^2(a)}$ envelope | 0.418465532171176100466048575415978980246723075 |
+| $\|D\|_{L^2(a)}$ envelope | 1.05554486215269862345786236329806936644506481 |
+
+The last row therefore safely implies the rounded uniform statement
+$\|D\|_{L^2(a)}\le 1.055544862153$. The underlying final intersection width
+is below $3.88\times10^{-120}$; equal printed endpoints above reflect the
+45-digit display, not a claim of exact rational equality.
+
+The raw result is 17,875 bytes with SHA-256
+`b6f5b60018142d53537955393e4e660528d905583f10161fa014bb5fe52a8c33`.
+Deleting its self-digest field and canonicalizing with sorted compact JSON
+independently reproduces payload SHA-256
+`bb50111f524a965aa1f7595aa42f9db93c5b01787da29563ffff05f5ef1fa6e6`.
+An independent `jq` assertion also confirmed all 16 exact/structural checks,
+all three controls, all three guards and every required fail-closed output.
+
+The first ontology validation correctly failed because the compact snapshot
+omitted `payload.numerical_checks` while declaring three numerical controls at
+top level. Adding that matching count changed no calculation or raw result.
+The next validation passed: 1,530 nodes, 3,917 edges and 430/430 stored hashes
+collection-wide; the CPT graph has 1,388 nodes, 3,630 edges and 385/385 hashes.
+The 70 unresolved external-bridge warnings predate this result and remain
+warnings, not hidden errors.
+
+## Workbench interpretation
+
+This calculation removes only the fixed-reference weighted-envelope subproblem
+from the current P1 gap. It does not produce a new physical effect. The next
+scientific obstruction is a finite two-sided actual-plus kappa-variation seed
+and the complete combined kappa-differentiated minus tail. Until those exist,
+`partial_kappa g`, transversality, uniqueness, a correlated-root selector and
+root velocity remain prohibited interpretations.
