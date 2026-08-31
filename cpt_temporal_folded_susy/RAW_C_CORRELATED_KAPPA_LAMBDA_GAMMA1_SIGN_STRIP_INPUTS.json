@@ -1,0 +1,149 @@
+{
+  "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.input.v1",
+  "calculation_id": "RawCCorrelatedKappaLambdaGamma1SignStrip",
+  "numbered_phase": null,
+  "kind": "bounded_deterministic_interval_calculation",
+  "question": "On one predeclared connected kappa-lambda rectangle around root bracket 1, can a uniformly nonzero Q0 chart and opposite complete-tail face signs certify at least one selected declared-boundary zero for every lambda in the closed slab?",
+  "primary_sources": [
+    "NIST DLMF section 2.7(iii), Liouville-Green approximation: https://dlmf.nist.gov/2.7.iii",
+    "NIST DLMF chapter 10, modified-Bessel functions and recurrences: https://dlmf.nist.gov/10",
+    "Johansson, Arb ball arithmetic: https://arxiv.org/abs/1611.02831"
+  ],
+  "declared_conventions": {
+    "C": "6*pi^2",
+    "Q_plus": "4",
+    "Q_switch": "-29/10",
+    "Q_0": "-4",
+    "root_bracket_1": {
+      "left_exact": "41021725895035351653669248935583/20282409603651670423947251286016",
+      "right_exact": "1281928934219854739177164029237/633825300114114700748351602688"
+    },
+    "kappa_corridor": {
+      "left_definition": "root_bracket_1.left_exact-1/1000",
+      "right_definition": "root_bracket_1.right_exact+1/1000",
+      "padding_exact": "1/1000"
+    },
+    "lambda_slab": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "plus_tail_sensitivity_Qplus": {
+      "lower_exact": "27/10",
+      "upper_exact": "240/53",
+      "derivation": "rechecked here from the pinned Liouville-Green real box and forced-Wronskian sensitivity identity; no old root-bracket-only sensitivity result is treated as corridor evidence"
+    },
+    "kernel_panel_ladder": [512, 1024],
+    "kernel_tail_y": "24",
+    "precision_ladder_decimal_digits": [80, 120],
+    "compact_taylor_order": 12,
+    "switch_to_Q0_segment_ladder": [16, 32],
+    "cutoff_segment_ladder": [
+      {"label": "cutoff_minus_5_coarse", "Q_cut": "-5", "segments": 16},
+      {"label": "cutoff_minus_5_refined", "Q_cut": "-5", "segments": 32},
+      {"label": "cutoff_minus_6", "Q_cut": "-6", "segments": 32}
+    ],
+    "selected_actual_family": "the same real plus-recessive family selected by the pinned Q>=4 Liouville-Green construction; its common nonzero switch amplitude is divided out",
+    "boundary_map": "Gamma_1,p(u)=-lim_(Q->-infinity) W(u,c_p)",
+    "reference_equation": "c_p,QQ=A_0*c_p; c_p(-4)=1 and c_p,Q(-4)=0; c_p is lambda-independent",
+    "reference_instantiation": "p^2=(2/3)kappa^2 and A_0=x^2-kappa^2; write the same pinned reference as c_kappa on the real kappa corridor",
+    "projective_functional": "G(kappa,lambda)=Gamma_1,kappa(u_plus)/u_plus(Q0)=-lim_(Q->-infinity)W(U,c_kappa), U=u_plus/u_plus(Q0)",
+    "execution": "exact SymPy identities, python-flint Arb Bessel balls, monotone kernel panels, whole-step interval Taylor bounds and analytic rotating-frame tails; no black-box ODE, quadrature, root solve, finite difference, sampling or bisection",
+    "ball_output_digits": 45
+  },
+  "method_reuse": [
+    {
+      "path": "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_hybrid_validated_transfer.py",
+      "sha256": "662c372c6950666d9052d378ad1153e3e3a13f159a945ae25837fc8a309a49c3",
+      "role": "exact-rational interval primitives and two-state coefficient-derivative/whole-step-majorant semantics only"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/raw_c_bessel_preconditioned_kernel_panel_affine_sensitivity_transport.py",
+      "sha256": "a87af1f9450016027e5e6e54b93904ed65e8ebf2b7118d238f9959133626f6d4",
+      "role": "modified-Bessel logarithmic direction and monotone affine comparison-kernel implementation only"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/raw_c_q0_normalized_differentiated_rotating_tail_gamma1.py",
+      "sha256": "3b5bc0c4c112208c84502aca38737b591ff0c9782cdea18ff95d9be751e174a3",
+      "role": "hash-pinned semantic reference only for the declared Wronskian and analytic rotating-frame bound; this runner reimplements a four-state specialization with its own Wronskian, rotating-energy and tail-mass audits, and the old microscopic result is not corridor evidence"
+    }
+  ],
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json",
+      "sha256": "ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39",
+      "schema_version": "ice.raw-c-plus-endpoint-liouville-green-tail-bound.result.v1",
+      "required_verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY",
+      "payload_sha256_without_self": "0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c",
+      "role": "pins the selected real plus-recessive family and its Q>=4, abs(lambda)<=1e-4, 0<=kappa<=8 uniform domain"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e",
+      "schema_version": "ice.raw-c-lambda-zero-bessel-ball-transport.result.v1",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN",
+      "payload_sha256_without_self": "5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92",
+      "role": "pins root bracket 1 and the lambda-zero selected modified-Bessel family; the expanded corridor is newly evaluated"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+      "sha256": "4225653c8f5a7a39c24823de0994902c4c68afc33485b7bba35e4421dc964c87",
+      "schema_version": "ice.raw-c-declared-gamma1-boundary-variation.result.v1",
+      "required_verdict": "CERTIFY_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_ON_FIVE_BRACKETS",
+      "payload_sha256_without_self": "a112d2c9b0ba2409218c71e94afae16fd685e866e012c88b8694a1992919eebe",
+      "role": "pins the selected lambda-independent reference and declared Gamma_1 Wronskian convention"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_GAMMA1_RESULT.json",
+      "sha256": "5568d2b857ed9f39385ec06c1cbe383b1cba8f3d133e9ba12a083d21c5202d2a",
+      "schema_version": "ice.raw-c-q0-normalized-differentiated-rotating-tail-gamma1.result.v1",
+      "required_verdict": "CERTIFY_COMPLETE_Q0_NORMALIZED_DIFFERENTIATED_ROTATING_TAIL_FUNCTIONAL",
+      "payload_sha256_without_self": "7c11e75fea722c09ec58708ffb1943278d0b0b452a9fa622d707914953976413",
+      "role": "pins the preceding zero-containing microscopic product-box result and its explicit sign-strip gap; it supplies no expanded-corridor endpoint data"
+    }
+  ],
+  "assumptions": [
+    "The calculation concerns only the displayed closed K times Lambda rectangle and the same selected real plus-recessive family. The expanded corridor is recomputed rather than inherited from a microscopic root-bracket endpoint result.",
+    "The forced-Wronskian sensitivity bound at Q=4 is rechecked uniformly from the pinned Liouville-Green domain because the older sensitivity result stated only the microscopic root bracket.",
+    "A common nonzero switch amplitude is divided out. Uniform exclusion of zero from the propagated Q0 amplitude is required before the projective functional is evaluated.",
+    "Strict opposite complete-tail intervals on the two kappa faces and joint real continuity imply only that every lambda in Lambda has at least one interior kappa zero by the intermediate value theorem.",
+    "No derivative with respect to kappa, interval Newton step, root selection, root count, or inference from a product-box interval containing zero is used."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_checks": 32,
+    "kernel_panels_evaluated": 3072,
+    "compact_steps": 608,
+    "compact_taylor_order": 12,
+    "q0_segment_rows": 12,
+    "cutoff_segment_rows": 12,
+    "ball_bessel_evaluations": 24,
+    "precision_tiers": 2,
+    "lambda_slabs": 1,
+    "kappa_faces": 2,
+    "root_brackets": 1,
+    "ode_calls": 0,
+    "root_calls": 0,
+    "quadrature_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "bisection_steps": 0
+  },
+  "required_fail_closed_outputs": {
+    "root_uniqueness_in_corridor": null,
+    "continuous_root_selector_or_nonzero_lambda_continuation": null,
+    "root_velocity_or_kappa_derivative": null,
+    "global_or_complete_root_census": null,
+    "roots_outside_declared_corridor": null,
+    "absolute_actual_Gamma1_amplitude": null,
+    "actual_Gamma1_sign_away_from_two_certified_faces_or_roots": null,
+    "Q0_lambda_side_separation": null,
+    "nonreal_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_RAQ_completion": null,
+    "physics_claim": null
+  }
+}
