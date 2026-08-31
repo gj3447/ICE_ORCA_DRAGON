@@ -1,0 +1,92 @@
+{
+  "schema_version": "ice.raw-c-plus-endpoint-kappa-projective-sensitivity-anchor.input.v1",
+  "calculation_id": "RawCPlusEndpointKappaProjectiveSensitivityAnchor",
+  "numbered_phase": null,
+  "kind": "bounded_exact_analytic_calculation",
+  "question": "On the already declared correlated K times Lambda strip, does the selected real plus-recessive family have a uniform strictly negative projective kappa sensitivity h=partial_kappa rho at Qplus=4?",
+  "primary_sources": [
+    "NIST DLMF section 2.7(iii), Liouville-Green approximation: https://dlmf.nist.gov/2.7#iii"
+  ],
+  "declared_conventions": {
+    "Q_plus": "4",
+    "fiber_equation": "u_QQ=A*u, A=36*pi^4*exp(2Q)+6*pi^2*lambda*exp(3Q/2)-kappa^2",
+    "projective_direction": "rho=-u_Q/u-6*pi^2*exp(Q)-1/2",
+    "kappa_sensitivity": "h=partial_kappa rho=partial_kappa(-u_Q/u)",
+    "selected_family": "the same real plus-recessive family selected and linked on the certified correlated sign strip; h is invariant under a nonzero kappa-dependent common amplitude",
+    "normalized_selected_direction": "v_kappa(Q)=u_kappa(Q)/u_kappa(4)=exp(-integral_4^Q r_kappa(s) ds), r_kappa=-u_kappa,Q/u_kappa",
+    "two_parameter_secant": "at fixed lambda and for kappa_a<kappa_b, [r_b(4)-r_a(4)]/[kappa_b-kappa_a]=-(kappa_a+kappa_b)*integral_4^infinity v_a(Q)*v_b(Q) dQ",
+    "derivative_scope": "two-sided partial_kappa derivative at every corridor-interior kappa and the corresponding one-sided derivative at each kappa face, uniformly for lambda in the closed slab",
+    "kappa_corridor": {
+      "left_exact": "5125180435678962497905662710537123/2535301200456458802993406410752000",
+      "right_exact": "160320344939996106734739047604961/79228162514264337593543950336000"
+    },
+    "lambda_slab": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "plus_log_derivative_envelope": "53*exp(Q)<=r=-u_Q/u<=70*exp(Q) for Q>=4 on the full declared strip",
+    "integral_bounds": {
+      "lower_exact": "1/23940",
+      "upper_exact": "1/5194",
+      "definition": "I_ab=integral_4^infinity v_a(Q)*v_b(Q) dQ; I_kk=u_kappa(4)^(-2)*integral_4^infinity u_kappa(Q)^2 dQ",
+      "tail_substitution": "y=exp(Q)-exp(4), dQ=dy/(exp(4)+y)"
+    },
+    "execution": "exact SymPy identities and rational inequalities only; no Arb evaluation, Bessel call, ODE solve, quadrature, root solve, finite difference, sampling, panel transport or bisection"
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json",
+      "sha256": "ee9e74b8a4d73a8b42ac2a9c75beaea6e585f43055a819d62f8c308d71dccc39",
+      "schema_version": "ice.raw-c-plus-endpoint-liouville-green-tail-bound.result.v1",
+      "required_verdict": "KEEP_REAL_RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_ONLY",
+      "payload_sha256_without_self": "0d728a67bab8a836414c8ddc24f17a5185ee4a5fa8a5395dd873b99caf30cd6c",
+      "role": "pins the selected real plus-recessive construction and its full Q>=4, abs(lambda)<=1e-4, 0<=kappa<=8 Liouville-Green error bound"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json",
+      "sha256": "e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2",
+      "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1",
+      "required_verdict": "CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+      "payload_sha256_without_self": "277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee",
+      "role": "pins the exact current K times Lambda scope, the selected actual-family linkage, and the already audited full-strip plus log-derivative envelope; it does not supply a kappa derivative"
+    }
+  ],
+  "assumptions": [
+    "For every point of the compact declared strip, the hash-pinned sign-strip result supplies the same selected real plus-recessive direction and the executable full-strip derivation of 53*exp(Q)<=-u_Q/u<=70*exp(Q). No face difference or root result is used to infer a derivative.",
+    "Parameter differentiability at Qplus is not assumed: at each fixed lambda, the two-parameter Wronskian secant identity first gives finite-Q local Lipschitz continuity in kappa; normalized-direction convergence and uniform tail domination then give both diagonal limits by dominated convergence.",
+    "The elementary integral bounds deliberately sacrifice sharpness. They are sufficient only to establish a finite strictly negative Qplus kappa-sensitivity interval.",
+    "This endpoint anchor alone does not transport h to Qswitch or Q0 and does not evaluate partial_kappa G, prove root uniqueness, construct a selector, or determine root velocity."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_checks": 24,
+    "upstream_results": 2,
+    "kappa_corridors": 1,
+    "lambda_slabs": 1,
+    "ode_calls": 0,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "panel_evaluations": 0,
+    "ball_bessel_evaluations": 0,
+    "bisection_steps": 0
+  },
+  "required_fail_closed_outputs": {
+    "Qswitch_kappa_projective_sensitivity": null,
+    "Q0_kappa_projective_sensitivity": null,
+    "complete_normalized_G_kappa": null,
+    "root_uniqueness_in_corridor": null,
+    "continuous_root_selector": null,
+    "root_velocity": null,
+    "absolute_actual_Gamma1_amplitude_or_sign": null,
+    "roots_outside_declared_corridor_or_global_census": null,
+    "nonreal_weyl_m_function_or_spectral_measure": null,
+    "raw_C_RAQ_completion": null,
+    "physics_claim": null
+  }
+}
