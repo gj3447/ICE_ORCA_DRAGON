@@ -20,9 +20,9 @@ The [collection manifest](./collection.json) uses
 snapshots carry a `P…` phase label; independent unnumbered calculations use `phase: null` and retain
 their authoritative semantic check IDs without a fabricated phase prefix.
 
-At the recorded `2026-08-31T06:20:50Z` collection update, the four graphs have 1,457 nodes, 3,793 edges,
-and 313 claims: 188 supported, 114 contradicted, and 11 inconclusive. Validation verifies all 404 stored
-hashes (394 artifacts and 10 policies); 70 unresolved external bridges remain explicit warnings. The
+At the recorded `2026-08-31T07:50:05Z` collection update, the four graphs have 1,478 nodes, 3,831 edges,
+and 316 claims: 191 supported, 114 contradicted, and 11 inconclusive. Validation verifies all 410 stored
+hashes (400 artifacts and 10 policies); 70 unresolved external bridges remain explicit warnings. The
 CPT graph now also hash-indexes the Phase 11–15R historical lead-in, with Phase 15A kept strictly as an
 invalid-sequence provenance break rather than scientific evidence. The independent IG-RUEQFT graph
 records one finite (N=64) free-U(1) locality oracle: its registered bulk-volume predicate is
@@ -32,8 +32,12 @@ candidate now has a fixed-\(p\) limit-circle/limit-point classification and \((1
 its measurable global domain and \(C/H\) equivalence remain open. The later selected-\(H\) exact map is
 support-restricted, the finite BFV sign transport remains relative, and the closed-\(S^3\) lane now
 separates a fixed-metric matter-only \(DH\) strain obstruction from its finite projection remainder.
-The combined ADM \(DH\), HDA/Jacobi and anomaly problems remain open. None of these results is a
-physics or TOE promotion.
+One selected \(Q_2\) metric-plus-matter ambient \(DH\) packet cancels that strain while retaining its
+\(L=2\) omitted \(k=3\) remainder. The graph separately indexes the \(n=1\) trace-only convention, the
+raw-\(C\) \(Q=4\) entering-sensitivity anchor, and the fixed-box nonreal branch precondition. General
+ADM \(DD/DH/HH\), HDA/Jacobi, the actual nonreal endpoint-to-Weyl-to-measure chain, raw-\(C\) RAQ and
+anomaly problems remain open. The current physics-discovery gap map records those dependencies without
+treating them as automatic successors. None of these results is a physics or TOE promotion.
 
 The Phase 16–56 run
 snapshots contain 498 named exact checks, all `PASS`, and 360 typed numerical-ledger checks: 343

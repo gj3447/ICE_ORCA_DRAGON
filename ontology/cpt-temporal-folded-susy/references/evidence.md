@@ -3532,4 +3532,31 @@ only the matter-only fixed-metric shortcut. The gravitational metric action,
 combined ADM \(DH\), full HDA/Jacobi, BFV/anomaly and physics remain open or
 null.
 
+The latest scoped bridge records refine, but do not erase, that boundary:
+
+```text
+claim:RAW_C_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR_EXCLUDES_ZERO
+  -> HAS_EVIDENCE -> evidence:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor-result
+  -> VALID_WITHIN -> scope:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor
+  -> P1 still needs panel tubes plus actual Gamma_1/minus-tail sign
+
+concept:raw-c-fixed-box-nonreal-branch-audit
+  -> DOCUMENTED_BY -> evidence:raw-c-fixed-box-nonreal-branch-audit-result
+  -> open:raw-c-fixed-box-nonreal-endpoint-certificate
+     still orders actual endpoint -> m(z) -> measure/multiplicity -> raw-C RAQ
+
+claim:CLOSED_S3_N1_TRACE_ONLY_NO_INDEPENDENT_SHEAR_PAIR_HOLDS
+  -> HAS_EVIDENCE -> evidence:closed-s3-n1-trace-gauge-convention-result
+
+claim:CLOSED_S3_Q2_COUPLED_DH_METRIC_STRAIN_CANCELLATION_HOLDS
+  -> HAS_EVIDENCE -> evidence:closed-s3-q2-coupled-dh-strain-cancellation-result
+  -> open:gate1-v0-classical-s3-hda-closure
+     still requires full SVT/cubic DD-DH-HH and projected Jacobi
+```
+
+The [current physics-discovery gap map](../../../docs/research/ICE_CURRENT_PHYSICS_DISCOVERY_GAP_MAP_2026-08-31.md)
+carries these lanes through quantum BFV, absolute measure, relational state
+construction and the empirical gate. It is navigation rather than scientific
+promotion.
+
 The [programme guide](../README.md) lists every scope and open problem; the [source inventory](./source-inventory.md) explains what the literature edges do and do not cover.
