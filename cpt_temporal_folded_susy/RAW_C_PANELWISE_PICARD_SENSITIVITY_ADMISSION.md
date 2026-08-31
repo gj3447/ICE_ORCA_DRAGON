@@ -20,3 +20,19 @@ The existing lambda-zero declared-boundary derivative and direction-only
 Liouville--Green tail do not supply those inputs. The runner records that
 absence and returns a fail-closed verdict; it never infers a sensitivity, sign,
 root continuation, spectrum, RAQ, or physics result.
+
+## Observed result (2026-08-31 UTC)
+
+```text
+./ice run raw_c_panelwise_picard_sensitivity_admission
+VALID_RUN; exact 3/3; admitted=false
+PANELWISE_PICARD_AFFINE_SENSITIVITY_NOT_ADMITTED
+```
+
+All six inherited endpoint intervals still contain zero.  The result names
+three absent prerequisites: an actual nonzero-\(\lambda\) normalized
+\(\partial_\lambda\rho(Q_+)\) enclosure, actual-\(\rho\) panel tubes with
+Picard remainders, and a sharp actual declared-\(\Gamma_1\) remainder including
+the complete minus tail.  No ODE, quadrature, root solve, finite difference or
+sampling call was made.  The result file SHA-256 is
+`de1b14a7a7e17c1629c40a14345df9a4f2086b3a079d821f9767e05bfcd0e209`.
