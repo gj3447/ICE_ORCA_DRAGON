@@ -1,0 +1,68 @@
+{
+  "schema_version": "ice.bfv-endpoint-detline-gluing-calibration.input.v1",
+  "calculation_id": "BfvEndpointDetlineGluingCalibration",
+  "numbered_phase": null,
+  "question": "Does one explicitly finite parametrized-particle calibration jointly preserve an endpoint polarization pairing, an ordered finite ghost Pfaffian line, and a same-polarization two-slab Gaussian gluing identity while leaving the lapse relative cycle unselected?",
+  "kind": "EXACT_SYMBOLIC_FINITE_BFV_ENDPOINT_DETLINE_GLUE_CALIBRATION",
+  "epistemic_scope": "FINITE_PARAMETRIZED_PARTICLE_CALIBRATION_ONLY_NOT_A_V0_OR_GRAVITY_ABSOLUTE_MEASURE",
+  "primary_sources": [
+    {
+      "source": "Cattaneo, Mnev, Reshetikhin, Classical and quantum Lagrangian field theories with boundary (2012)",
+      "url": "https://arxiv.org/abs/1207.0239",
+      "used_for": "the distinction between bulk/boundary BFV data and boundary pairing",
+      "not_used_for": "an absolute measure or a lapse contour for V=0 gravity"
+    },
+    {
+      "source": "Cattaneo and Mnev, A note on gluing via fiber products in the (classical) BV-BFV formalism (2023)",
+      "url": "https://arxiv.org/abs/2208.11211",
+      "used_for": "the requirement that gluing retain compatible boundary data",
+      "not_used_for": "a quantum continuum gluing theorem for this toy"
+    }
+  ],
+  "declared_model": {
+    "constraint": "C=p_t+p_x^2/(2*m)",
+    "endpoint_polarization": "fixed x_i,x_f with interface x_m in the same x-polarization",
+    "boundary_pairing": "integral_R dx psi_out_conjugate(x)*psi_in(x) on Schwartz test functions",
+    "ghost_order_per_slab": "(bar_c,c)",
+    "ghost_block_per_slab": "A_gh=[[0,1],[-1,0]]",
+    "determinant_line_reference_orientation": "Pf(A_gh,slab_1)*Pf(A_gh,slab_2)=+1 in the concatenated declared order",
+    "gluing_window": "m>0,hbar>0,T_1>0,T_2>0; use the same +i0 Fresnel branch on both slabs",
+    "initial_lapse_relative_cycle": {
+      "status": "OPEN",
+      "selected_contour": null,
+      "picard_lefschetz_selection": null,
+      "meaning": "the calibration does not choose a relative lapse cycle, a thimble coefficient, or an above/below-origin class"
+    }
+  },
+  "assumptions": [
+    "the endpoint pairing is a Schwartz-space calibration, not a physical Hilbert-space product",
+    "each finite ghost block is nondegenerate and its Berezin order is the declared convention",
+    "the interface integration and both endpoint kernels use the same x-polarization and +i0 branch",
+    "the initial lapse relative cycle remains OPEN; no Picard-Lefschetz, contour, Stokes, or global intersection data are supplied",
+    "this toy result cannot orient a continuum determinant/Pfaffian line or define a V=0/gravity absolute BFV measure"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "numerical_samples": 0,
+    "automatic_descendants": 0
+  },
+  "decision_table": [
+    {
+      "condition": "all endpoint-pairing, finite Pfaffian, nonzero-mode, orientation, and gluing checks pass while the lapse cycle remains OPEN",
+      "verdict": "CALIBRATED_FINITE_ENDPOINT_DETLINE_GLUE_WITH_LAPSE_CYCLE_OPEN",
+      "programme_impact": "KEEP_FINITE_TOY_COMPATIBILITY_ONLY_NO_V0_ABSOLUTE_MEASURE"
+    },
+    {
+      "condition": "a zero mode, non-antisymmetric block, orientation mismatch, polarization mismatch, or gluing mismatch occurs",
+      "verdict": "KILL_FINITE_ENDPOINT_DETLINE_GLUE_CALIBRATION",
+      "programme_impact": "DO_NOT_TRANSFER_THE_TOY_CONVENTION"
+    }
+  ]
+}
