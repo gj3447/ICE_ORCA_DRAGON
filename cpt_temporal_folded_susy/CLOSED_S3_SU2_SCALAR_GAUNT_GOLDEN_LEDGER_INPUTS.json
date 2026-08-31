@@ -1,0 +1,117 @@
+{
+  "schema_version": "ice.closed-s3-su2-scalar-gaunt-golden-ledger.input.v1",
+  "calculation_id": "ClosedS3SU2ScalarGauntGoldenLedger",
+  "numbered_phase": null,
+  "question": "In a declared complex scalar-harmonic realization of unit S3 as SU(2), do exact low-degree Clebsch--Gordan product coefficients, full associativity, and a separately classified hard-projection associator provide golden data for a later full SVT/ADM expansion?",
+  "kind": "EXACT_LOW_MODE_SU2_SCALAR_GAUNT_GOLDEN_DATA_AND_PROJECTED_PRODUCT_REMAINDER_LEDGER",
+  "epistemic_scope": "COMPLEX_SCALAR_HARMONICS_ONLY_ON_UNIT_S3_WITH_FIXED_HAAR_VOLUME_AND_WIGNER_PHASE_CONVENTION_NOT_A_REAL_BASIS_NOT_VECTOR_OR_TENSOR_GAUNT_NOT_ADM_CONSTRAINTS_NOT_HDA_NOT_JACOBI_NOT_BFV",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_FULL_SVT_SPECTRAL_LEDGER_RESULT.json",
+      "sha256": "1f114845629f7f3ee1ea609af81a8804b65d5443912593a52e23d892957dfac3",
+      "payload_sha256_without_self": "75a41075eb0a90f00e2d69ece7cf33508270c7ede986e612adcf8450e1d4f0d5",
+      "required_verdict": "KEEP_UNIT_CLOSED_S3_SVT_SPECTRAL_DEGENERACY_EXCEPTIONAL_MODE_LEDGER_NOT_COMPLETE_BASIS_OR_HDA",
+      "role": "pins the unit-S3 scalar spectral label lambda_n=n(n+2), degeneracy (n+1)^2, and the pre-existing boundary that FULL_SVT is not an explicit Gaunt or HDA calculation"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_CUTOFF_LEDGER_RESULT.json",
+      "sha256": "5b6713ff2ad47dcc9effd42e01c71c1ae408320634b1f81098302b14dc0cebd4",
+      "payload_sha256_without_self": "863c7bf217b7d32eb0fb658139612361369fc5730a1549d20fb6029c74fc0166",
+      "required_verdict": "KEEP_CLOSED_S3_ZONAL_SCALAR_CONVOLUTION_AND_HARD_CUTOFF_REMAINDER_LEDGER_NOT_ADM_OR_HDA",
+      "role": "pins the prior hard-projection vocabulary: discarded harmonic components are a separately reported finite projection remainder, not an anomaly"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere, Gen. Rel. Grav. 49 (2017) 139, arXiv:1709.08020",
+      "url": "https://arxiv.org/abs/1709.08020",
+      "used_for": "unit-S3 scalar spectral convention lambda_n=n(n+2) and degeneracy (n+1)^2",
+      "not_used_for": "the Wigner-D phase convention, full Gaunt coefficients, ADM constraints, HDA or BFV"
+    },
+    {
+      "source": "A. P. Stone, Some properties of Wigner coefficients and hyperspherical harmonics, Math. Proc. Cambridge Philos. Soc. 52 (1956) 424--430",
+      "url": "https://doi.org/10.1017/S030500410003142X",
+      "used_for": "the SU(2)/hyperspherical-harmonic representation-theory route underlying a Wigner-D Clebsch--Gordan product realization",
+      "not_used_for": "the repository's normalization, projected-remainder classification, or any constraint-algebra conclusion"
+    }
+  ],
+  "declared_conventions": {
+    "geometry": "unit round S3 identified with SU(2), Haar volume Vol(S3)=2*pi^2",
+    "basis": "Q^(n)_(mL,mR)=sqrt((n+1)/(2*pi^2)) D^(n/2)_(mL,mR), with n nonnegative integer and doubled labels 2*mL,2*mR in {-n,-n+2,...,n}",
+    "laplacian": "-Delta Q^(n)=n(n+2) Q^(n)",
+    "product": "Q_a Q_b=sum_c sqrt((n_a+1)(n_b+1)/(2*pi^2*(n_c+1))) CG(j_a,mLa;j_b,mLb|j_c,mLc) CG(j_a,mRa;j_b,mRb|j_c,mRc) Q_c",
+    "phase": "SymPy Condon--Shortley Clebsch--Gordan convention; outputs are convention-specific complex-basis golden data and must be translated before comparison with a real basis",
+    "projection": "P_L retains scalar degrees n<=L after the full product. (1-P_L) is reported as a finite algebraic projection remainder only."
+  },
+  "golden_packets": [
+    {
+      "id": "one_times_one",
+      "left": [1, 1, 1],
+      "right": [1, -1, -1],
+      "expected_full_terms": [
+        {"mode": [0, 0, 0], "coefficient": "1/(sqrt(2)*pi)"},
+        {"mode": [2, 0, 0], "coefficient": "1/(sqrt(6)*pi)"}
+      ]
+    },
+    {
+      "id": "one_times_two",
+      "left": [1, 1, -1],
+      "right": [2, -2, 2],
+      "expected_degrees": [1, 3]
+    }
+  ],
+  "associativity_packet": {
+    "left": [1, 1, 1],
+    "middle": [1, -1, -1],
+    "right": [1, 1, -1],
+    "projection_cutoff_L": 1,
+    "expected_full_associator_zero": true,
+    "expected_projected_associator_nonzero": true
+  },
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "real_scalar_harmonic_basis_translation": null,
+    "complete_scalar_vector_tensor_gaunt_ledger": null,
+    "vector_or_tensor_derivative_couplings": null,
+    "gravitational_hamiltonian_constraint": null,
+    "gravitational_momentum_constraint": null,
+    "full_adm_cubic_constraint_expansion": null,
+    "DD_DH_HH_constraint_brackets": null,
+    "classical_hypersurface_deformation_algebra_closure": null,
+    "classical_jacobi_closure": null,
+    "classical_bfv_charge": null,
+    "quantum_bfv_charge": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "quantum_common_invariant_core": null,
+    "absolute_bfv_measure": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "upstream pins, low-mode product golden data, full associativity and explicit projected-remainder decomposition all pass",
+      "verdict": "KEEP_UNIT_S3_SU2_COMPLEX_SCALAR_GAUNT_GOLDEN_DATA_AND_PROJECTION_REMAINDER_NOT_ADM_HDA",
+      "programme_impact": "FIX_A_CONVENTION_CHECKED_COMPLEX_SCALAR_GAUNT_SEED_FOR_A_LATER_FULL_SVT_COUPLING_AND_ADM_EXPANSION",
+      "meaning": "the output is reusable coefficient data only; it neither tests constraint brackets nor provides a BFV charge"
+    },
+    {
+      "condition": "an upstream pin, exact coefficient, associativity identity or remainder decomposition fails",
+      "verdict": "KILL_DECLARED_UNIT_S3_SU2_SCALAR_GAUNT_GOLDEN_PACKET",
+      "programme_impact": "DO_NOT_USE_THIS_COMPLEX_BASIS_CONVENTION_FOR_LATER_SVT_OR_ADM_WORK",
+      "meaning": "reject this convention packet without inferring a failure of continuum GR or a quantum anomaly"
+    }
+  ]
+}
