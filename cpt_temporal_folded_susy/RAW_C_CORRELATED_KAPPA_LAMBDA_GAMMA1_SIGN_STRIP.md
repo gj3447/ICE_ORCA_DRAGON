@@ -147,3 +147,42 @@ the corrected pre-run source SHA-256 is
 `9820a8786502cbf9584cfd4dbb703bd35a490fe52d5f34c31a4a0e1161639bf3`.
 No corrected execution is claimed until these changes are committed and run
 through `./ice run`.
+
+### Second execution: mathematical intersections built, storage control failed
+
+After correction commit `9192bdd`, the same bounded command returned
+`VALID_RUN` but again failed closed: 24/24 exact checks and 64/66 controls
+passed. Both remaining failures were the two precision copies of
+`domain_seeds`.
+
+The mathematical switch intersections were nonempty and were used by every
+downstream transfer. The failed control instead compared their stored Arb
+ball endpoints literally with (-1) and (1). Arb stores a radius as an
+outward magnitude, so the exact barrier request `[-1,1]` was represented as
+approximately
+
+\[
+[-1.00000000186265,1.00000000186265],
+\]
+
+and the outward ball enclosing the corridor intersection began at about
+(-1.00000000207783). The comparison `lower >= -1` therefore failed even
+though the ball safely encloses the intended mathematical intersection. This
+is a control/representation defect, not a loss of the invariant theorem or a
+disjoint intersection.
+
+The corridor (Q_0) amplitude remained strictly positive,
+
+\[
+v(Q_0)\in[4.5806438528,6.1466947325],
+\]
+
+and the strict face intervals were unchanged. The second raw result file
+SHA-256 is
+`b4f475a82286684afbe012193ffd1ae94e8d8e80cfcc11f7f4f5b98e888cf93f`;
+its payload SHA-256 is
+`e09aa34a670f44825902817c41020d0db2b561f1e3cc4fc73f8462f1bd7359df`.
+The result still certifies no root-existence output. The narrow correction is
+to test the already constructed nonempty intersections for finiteness and
+barrier provenance, rather than require an outward storage ball to be a
+literal subset of the exact interval it encloses.
