@@ -61,7 +61,7 @@ roots, nonreal Weyl/spectral data, RAQ, BFV, a physical product, or physics.
 
 - Frozen input SHA-256:
   `dff13b4a24cd8ea3f5ff76bd72778815dc3a608ec155463b8ee31e0fdbde446e`
-- Frozen runner SHA-256:
+- Initial runner SHA-256:
   `cf2b2171ef0a9029d220195e0cbd0b0c0bd4ce5b5e3974894589dd6a25c031b3`
 - Common caps: 120 seconds; 262,144 bytes each for stdout/stderr; at most
   12 changed artifacts and 1,000,000 changed bytes.
@@ -69,5 +69,14 @@ roots, nonreal Weyl/spectral data, RAQ, BFV, a physical product, or physics.
   precision tiers, and zero Bessel, ODE, quadrature, root, finite-difference,
   sampling, compact-transfer or bisection calls.
 
-This is the pre-run source record. No result is claimed before the frozen
-runner is committed cleanly and invoked through `./ice run`.
+After source commit `6542b38a57e6554f367b8fcea6e05a3c89f51d11`, the
+first invocation through
+`./ice run raw_c_qplus_to_qswitch_kappa_projective_sensitivity_transport`
+exited `1` before any scientific calculation or result artifact. Python 3.13
+required the dynamically loaded, hash-pinned helper module to be present in
+`sys.modules` while its `@dataclass` decorators ran.
+
+The loader-only compatibility fix leaves the input and mathematics unchanged.
+Its corrected pre-run runner SHA-256 is
+`82c34b981ea58abd8525b26c01ede0564562b0b9f360e96858baaee5e60ad2c7`.
+No corrected execution is claimed before this source is committed cleanly.

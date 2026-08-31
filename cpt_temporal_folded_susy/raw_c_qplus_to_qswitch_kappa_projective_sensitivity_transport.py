@@ -152,7 +152,14 @@ def load_affine(root: Path, source: dict[str, str]) -> Any:
     if spec is None or spec.loader is None:
         raise AssertionError("cannot load affine helper")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    # Python 3.13 dataclasses resolve annotations through sys.modules while
+    # the class decorator runs, so the dynamic module must already be visible.
+    sys.modules[spec.name] = module
+    try:
+        spec.loader.exec_module(module)
+    except BaseException:
+        sys.modules.pop(spec.name, None)
+        raise
     return module
 
 
