@@ -1,0 +1,105 @@
+{
+  "schema_version": "ice.raw-c-reference-kappa-variation-weighted-envelope.input.v1",
+  "calculation_id": "RawCReferenceKappaVariationWeightedEnvelope",
+  "numbered_phase": null,
+  "kind": "bounded_exact_reference_variation_weighted_envelope",
+  "question": "On the exact current real kappa corridor, does the declared kappa-dependent reference c_kappa have a uniform full-minus-half-line L2(a dQ) envelope for D=partial_kappa c_kappa, without differentiating the selected actual solution or the boundary functional? The pinned lambda slab is context only because c_kappa and D are lambda-independent.",
+  "primary_sources": [
+    "NIST DLMF 10.25.1, modified Bessel equation; with nu=i*kappa and x=6*pi^2*exp(Q) it gives the inherited reference coefficient x^2-kappa^2: https://dlmf.nist.gov/10.25.E1"
+  ],
+  "declared_conventions": {
+    "C": "6*pi^2",
+    "Q_0": "-4",
+    "x": "C*exp(Q)",
+    "a": "6*pi^2*exp(3Q/2)",
+    "V": "36*pi^4*exp(2Q)=x^2",
+    "A_reference": "V-kappa^2",
+    "reference_equation": "c_kappa,QQ=(V-kappa^2)*c_kappa; c_kappa(Q0)=1 and c_kappa,Q(Q0)=0",
+    "reference_kappa_variation": "D=partial_kappa c_kappa; D_QQ=(V-kappa^2)*D-2*kappa*c_kappa; D(Q0)=D_Q(Q0)=0",
+    "base_rotating_state": "y=(c_kappa,c_kappa,Q/kappa); the free part is skew and the perturbation norm is at most V/kappa",
+    "variation_rotating_state": "d=(D,D_Q/kappa); its forcing has rotating norm 2*abs(c_kappa)",
+    "q_left": "q_left=18*pi^4*exp(-8)/kappa_left",
+    "base_pointwise_bound": "||(c_kappa,c_kappa,Q/kappa)||(Q)<=B_c=exp(q_left) for Q<=Q0",
+    "variation_pointwise_bound": "||(D,D_Q/kappa)||(Q)<=2*B_c^2*(Q0-Q) for Q<=Q0",
+    "base_L2_a_bound": "||c_kappa||_L2(a;(-infinity,Q0])<=2*pi*exp(-3)*B_c",
+    "variation_L2_a_bound": "||D||_L2(a;(-infinity,Q0])<=(8*sqrt(2)*pi/3)*exp(-3)*B_c^2",
+    "kappa_corridor": {
+      "left_exact": "5125180435678962497905662710537123/2535301200456458802993406410752000",
+      "right_exact": "160320344939996106734739047604961/79228162514264337593543950336000"
+    },
+    "lambda_slab_context_only": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "precision_ladder_decimal_digits": [80, 120],
+    "maximum_widths": ["1e-50", "1e-90"],
+    "derivative_scope": "two-sided partial_kappa in the corridor interior and the corresponding one-sided derivative at each kappa face; the fixed Q0 reference initial data are kappa-independent",
+    "execution": "exact SymPy identities plus python-flint Arb elementary balls at two precisions; no Bessel evaluation, ODE integration, quadrature, root solve, finite difference, sampling, panel or compact Taylor transfer"
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json",
+      "sha256": "e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2",
+      "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1",
+      "verdict": "CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+      "result_payload_sha256_without_self": "277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee",
+      "role": "pins the exact current corridor and the declared c_kappa instantiation only; its actual-family Gamma_1 face signs are not reference-variation evidence"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json",
+      "sha256": "4225653c8f5a7a39c24823de0994902c4c68afc33485b7bba35e4421dc964c87",
+      "schema_version": "ice.raw-c-declared-gamma1-boundary-variation.result.v1",
+      "verdict": "CERTIFY_DECLARED_GAMMA1_LEFT_BOUNDARY_VARIATION_AND_ZERO_SHELL_DERIVATIVE_ON_FIVE_BRACKETS",
+      "result_payload_sha256_without_self": "a112d2c9b0ba2409218c71e94afae16fd685e866e012c88b8694a1992919eebe",
+      "role": "pins the selected fixed reference, Wronskian boundary convention and the base rotating-frame reference bound; its lambda derivative is not reused as kappa evidence"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned reference convention fixes c_kappa(Q0)=1 and c_kappa,Q(Q0)=0 independently of kappa, so its finite-IVP kappa derivative has zero Q0 data.",
+    "The exact corridor has kappa_left>0, allowing the rotating state scaled by 1/kappa and a uniform worst-case q_left.",
+    "Standard smooth parameter dependence for a regular finite linear IVP gives D=partial_kappa c_kappa on every finite interval; the reported full-half-line statement is then a weighted envelope derived from the displayed comparison.",
+    "The backward rotating-frame propagator is bounded by exp(integral V/kappa), while the D forcing has norm 2*abs(c_kappa).",
+    "Linear growth of the D comparison is square-integrable against a=6*pi^2*exp(3Q/2). The envelope is a magnitude bound, not an actual tail value or a sign."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_checks": 16,
+    "upstream_results": 2,
+    "method_sources": 1,
+    "precision_tiers": 2,
+    "elementary_ball_rows": 2,
+    "kappa_corridors": 1,
+    "lambda_slabs": 1,
+    "ode_calls": 0,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "ball_bessel_evaluations": 0,
+    "ball_gamma_evaluations": 0,
+    "kernel_panels_evaluated": 0,
+    "compact_steps": 0
+  },
+  "required_fail_closed_outputs": {
+    "pointwise_reference_kappa_variation_enclosure": null,
+    "reference_kappa_variation_tail_value_or_sign": null,
+    "two_sided_Q0_kappa_projective_sensitivity_enclosure": null,
+    "actual_plus_kappa_variation": null,
+    "complete_kappa_differentiated_minus_tail": null,
+    "complete_normalized_G_kappa": null,
+    "kappa_lambda_mixed_derivative": null,
+    "root_transversality_or_uniqueness": null,
+    "continuous_root_selector_or_continuation": null,
+    "root_velocity": null,
+    "roots_outside_declared_corridor_or_global_census": null,
+    "absolute_actual_Gamma1_amplitude_or_sign": null,
+    "nonreal_weyl_m_function_or_spectral_measure": null,
+    "raw_C_RAQ_or_C_H_equivalence": null,
+    "BFV_or_physical_product": null,
+    "physics_claim": null
+  }
+}
