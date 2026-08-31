@@ -42,4 +42,4 @@ hypothesis rather than a dynamically selected cycle.
 The recorded lapse state is `OPEN_UNSELECTED_INPUT_NOT_A_RESULT`.  Therefore
 this successful toy calibration does not select a lapse contour or promote an
 absolute measure.  The result file SHA-256 is
-`4b87d8f456b75613bf4a11725c86697db7bf15631ec3981a055c769380e2f773`.
+`79574d86339933beeff00fdf2bef2ea03fe06103c9c40e89eaed43da579ca411`.
