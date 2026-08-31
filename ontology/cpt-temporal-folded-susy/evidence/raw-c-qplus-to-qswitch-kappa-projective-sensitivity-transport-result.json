@@ -1,0 +1,88 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_QPLUS_TO_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_TRANSPORT_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T15:39:49Z",
+  "command": "./ice run raw_c_qplus_to_qswitch_kappa_projective_sensitivity_transport",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_qplus_to_qswitch_kappa_projective_sensitivity_transport.py",
+    "sha256": "87af6053f0651b007667ffb61d7b8e1f84d5c70cb272327e44b007896e094534",
+    "introduced_in_commit": "6542b38a57e6554f367b8fcea6e05a3c89f51d11"
+  },
+  "exact_checks": 5,
+  "checks": [
+    {
+      "id": "rawc.kappa_qswitch.riccati_kappa_sensitivity",
+      "status": "PASS",
+      "statement": "Differentiating the exact x-Riccati field at fixed lambda gives h_x=[2+(1+2rho)/x]h+2kappa/x."
+    },
+    {
+      "id": "rawc.kappa_qswitch.lower_forcing_monotonicity",
+      "status": "PASS",
+      "statement": "The positive lower forcing integrand has logarithmic derivative -2-4/(a+y), so right-endpoint panels are rigorous lower sums."
+    },
+    {
+      "id": "rawc.kappa_qswitch.analytic_floor_factor",
+      "status": "PASS",
+      "statement": "The comparison kernel exceeds exp(-17/15)>1/4, so the first-window forcing mass kappa/5 gives p(Qswitch)>kappa/20."
+    },
+    {
+      "id": "rawc.kappa_qswitch.upstream_anchor_dependencies",
+      "status": "PASS",
+      "statement": "The hash-pinned endpoint anchor passed the two exact dependencies and selected-family secant-limit guard used here."
+    },
+    {
+      "id": "rawc.kappa_qswitch.upstream_selected_family",
+      "status": "PASS",
+      "statement": "The hash-pinned sign strip verifies that the transported barrier belongs to the same selected actual family."
+    }
+  ],
+  "numerical_checks": 3,
+  "numerical": [
+    {
+      "id": "rawc.kappa_qswitch.pinned_rho_barrier",
+      "status": "PASS",
+      "statement": "Both precision tiers of the hash-pinned correlated sign strip certify the same selected actual rho invariant barrier [-1,1] from Qplus to Qswitch on the full declared rectangle."
+    },
+    {
+      "id": "rawc.kappa_qswitch.tier2.lower_sum_refinement",
+      "status": "PASS",
+      "statement": "The 1024-panel right-endpoint lower Riemann sum is no smaller than the 512-panel sum; each full p enclosure is certified separately."
+    },
+    {
+      "id": "rawc.kappa_qswitch.cross_precision_intersection",
+      "status": "PASS",
+      "statement": "The refined 80- and 120-digit outward enclosures overlap in one finite strict-sign interval."
+    }
+  ],
+  "payload": {
+    "exact_checks": 5,
+    "numerical_checks": 3,
+    "locator_policy": "Eight decision-bearing locators are indexed here; the authoritative raw result is the single source for all 22 exact checks, eight interval controls and three theorem guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_QPLUS_TO_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_TRANSPORT_RESULT.json",
+      "sha256": "ea457a21883ca42c5759b145c997ba71a4af1f09a29fd6b813e8be47be007555",
+      "payload_sha256_without_self": "1bf352325b5e155a681700c66915469fb4431e0ef922f664bd77f29e5c8a0433",
+      "exact_checks": 22,
+      "interval_controls": 8,
+      "theorem_guards": 3,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_UNIFORM_NEGATIVE_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_QPLUS_TO_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_TRANSPORT_INPUTS.json",
+      "sha256": "dff13b4a24cd8ea3f5ff76bd72778815dc3a608ec155463b8ee31e0fdbde446e"
+    },
+    "executed_source_revision_commit": "634b874a6eb29cd92c73a83af565f97a4b43dec0",
+    "declared_scope": "The exact current correlated K times Lambda strip, fixed lambda, and the same selected real plus-recessive projective family, transported only from Qplus=4 to Qswitch=-29/10.",
+    "equation": "h_x=[2+(1+2rho)/x]h+2kappa/x; with p=-h and rho in [-1,1], positive variation-of-constants comparison bounds p(Qswitch).",
+    "analytic_floor": "p(Qswitch)>kappa_left/20>0",
+    "strict_h_Qswitch_interval": {
+      "lower": "-0.621029251873583121962236119111221119349690711",
+      "upper": "-0.382928052604288383192704869111221119349690711"
+    },
+    "boundary": "This is a selected real Qswitch projective kappa-sensitivity sign only. Qswitch-to-Q0 transport, reference-state kappa variation, the complete differentiated minus tail, partial_kappa G, transversality, uniqueness, selector, velocity, global roots, absolute actual Gamma_1 amplitude/sign, nonreal Weyl data, spectral measure, RAQ, BFV and physics remain absent or null."
+  }
+}

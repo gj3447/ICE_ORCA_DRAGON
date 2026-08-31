@@ -119,4 +119,32 @@ strict-sign transport control, the cross-precision intersection, the panel or
 precision ladder, input, upstream hash, cap, equation, or null boundary. The
 corrected pre-run runner SHA-256 is
 `87af6053f0651b007667ffb61d7b8e1f84d5c70cb272327e44b007896e094534`.
-No checker-corrected execution is claimed before this source is committed.
+
+After checker-correction commit
+`634b874a6eb29cd92c73a83af565f97a4b43dec0`, the exact command
+
+```text
+./ice run raw_c_qplus_to_qswitch_kappa_projective_sensitivity_transport
+```
+
+exited `0` with `VALID_RUN` and verdict
+`CERTIFY_UNIFORM_NEGATIVE_QSWITCH_KAPPA_PROJECTIVE_SENSITIVITY_ONLY`.
+All `22/22` exact checks, `8/8` interval controls and three theorem guards
+passed. The run used 3,072 positive-kernel panels and zero Bessel, ODE,
+quadrature, root, finite-difference, sampling, compact-transfer or bisection
+calls. The result SHA-256 is
+`ea457a21883ca42c5759b145c997ba71a4af1f09a29fd6b813e8be47be007555`;
+its canonical payload SHA-256 without the self field is
+`1bf352325b5e155a681700c66915469fb4431e0ef922f664bd77f29e5c8a0433`.
+
+The final outward intersection is
+
+\[
+-0.621029251873583121962236119111221119349690711
+< h(Q_{\rm switch})
+< -0.382928052604288383192704869111221119349690711.
+\]
+
+This closes only the selected projective derivative sign at
+$Q_{\rm switch}$. The explicit boundary above, including the $Q_0$,
+complete $G_\kappa$, root, spectral, RAQ, BFV and physics nulls, is unchanged.
