@@ -246,7 +246,7 @@ def run(payload: dict[str, Any], input_sha: str) -> dict[str, Any]:
     complex_modes = modes_through(maximum_n)
     gram = sp.Matrix([[inner(rows[left], rows[right]) for right in labels] for left in labels])
     ledger.check("CS3Real.transform.square_and_cardinality", len(labels) == len(complex_modes) == sum((n + 1) ** 2 for n in range(maximum_n + 1)), "The finite real and complex basis lists have the same declared n<=2 cardinality.")
-    ledger.check("CS3Real.transform.unitarity", gram - sp.eye(len(labels)), "The declared finite complex-to-real transform is unitary with respect to the pinned complex-basis inner product.")
+    ledger.check("CS3Real.transform.unitarity", gram == sp.eye(len(labels)), "The declared finite complex-to-real transform is unitary with respect to the pinned complex-basis inner product.")
     reality_holds = True
     for row in rows.values():
         conjugated: Expansion = {}
