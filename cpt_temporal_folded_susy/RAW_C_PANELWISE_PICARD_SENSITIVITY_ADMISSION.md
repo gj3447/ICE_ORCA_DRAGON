@@ -35,4 +35,4 @@ three absent prerequisites: an actual nonzero-\(\lambda\) normalized
 Picard remainders, and a sharp actual declared-\(\Gamma_1\) remainder including
 the complete minus tail.  No ODE, quadrature, root solve, finite difference or
 sampling call was made.  The result file SHA-256 is
-`de1b14a7a7e17c1629c40a14345df9a4f2086b3a079d821f9767e05bfcd0e209`.
+`086efedecc034e10e36ce2f306e2daf8255236aa3c67ea3e062c1e733f9883c4`.
