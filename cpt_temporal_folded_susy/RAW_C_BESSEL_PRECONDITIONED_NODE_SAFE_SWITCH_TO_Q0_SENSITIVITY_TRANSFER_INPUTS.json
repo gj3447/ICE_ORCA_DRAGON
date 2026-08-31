@@ -1,0 +1,122 @@
+{
+  "schema_version": "ice.raw-c-bessel-preconditioned-node-safe-switch-to-q0-sensitivity-transfer.input.v1",
+  "calculation_id": "RawCBesselPreconditionedNodeSafeSwitchToQ0SensitivityTransfer",
+  "numbered_phase": null,
+  "question": "Can the certified actual rho and parameter-sensitivity boxes at Q_switch=-29/10 be transported to Q0=-4 in a smooth four-state chart with a usable finite projective sensitivity enclosure?",
+  "method_reuse": {
+    "path": "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_hybrid_validated_transfer.py",
+    "sha256": "662c372c6950666d9052d378ad1153e3e3a13f159a945ae25837fc8a309a49c3",
+    "role": "Hash-pinned reuse of the exact-rational partition, coefficient-derivative convention, outward interval primitives and whole-step Taylor-majorant semantics only; the historical failed-width verdict and inherited rho=[-1,1] box are not reused as evidence."
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_BESSEL_PRECONDITIONED_KERNEL_PANEL_AFFINE_SENSITIVITY_TRANSPORT_RESULT.json",
+      "sha256": "d326398ac06e36b55dfe49a565f72de223fabe68a68907d6aa128ea09a4aef3b",
+      "payload_sha256_without_self": "1f46d70d062ed318d8df411c60dc5784037c8aaad20fda6d67d83abb74e825ba",
+      "required_verdict": "CERTIFY_BESSEL_PRECONDITIONED_KERNEL_PANEL_AFFINE_SWITCH_SENSITIVITY_AND_DIRECTION_SIGN",
+      "role": "Actual rho(Q_switch), actual s(Q_switch), lambda-zero Bessel direction, root bracket and lambda boxes."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_RESULT.json",
+      "sha256": "e0d53cb50d8ad5bfb7afca67a7c5223d4ac4d2fdebf8718833acc58c2eee304b",
+      "payload_sha256_without_self": "9667d2ff56b0dfc41bfeb4d24e4c09ab2ba77ee4439906a5a8743bd5e0f43c4f",
+      "required_verdict": "CERTIFY_LAMBDA_ZERO_NODE_SAFE_GREEN_WRONSKIAN_ENDPOINT_CONSTRUCTION_ON_FIVE_ROOT_BRACKETS",
+      "role": "Independent lambda-zero Green h(Q0) regression on the same first root bracket."
+    }
+  ],
+  "primary_sources": [
+    {
+      "citation": "NIST Digital Library of Mathematical Functions, sections 10.25 and 10.29.",
+      "uri": "https://dlmf.nist.gov/10",
+      "version": "DLMF 1.2.7, 2026-06-15",
+      "use": "Modified-Bessel lambda-zero solution and derivative recurrence for the endpoint regression only."
+    },
+    {
+      "citation": "F. Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic, IEEE Transactions on Computers 66 (2017) 1281-1292.",
+      "uri": "https://arxiv.org/abs/1611.02831",
+      "version": "arXiv:1611.02831",
+      "use": "Outward midpoint-radius inclusion arithmetic; not independent physical evidence."
+    }
+  ],
+  "declared_conventions": {
+    "C": "6*pi^2",
+    "x": "x=C*exp(Q)",
+    "Q_switch": "-29/10",
+    "Q_0": "-4",
+    "switch_result_path": "cpt_temporal_folded_susy/RAW_C_BESSEL_PRECONDITIONED_KERNEL_PANEL_AFFINE_SENSITIVITY_TRANSPORT_RESULT.json",
+    "green_result_path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_NODE_SAFE_GREEN_TRANSPORT_RESULT.json",
+    "root_bracket": {
+      "left_exact": "41021725895035351653669248935583/20282409603651670423947251286016",
+      "right_exact": "1281928934219854739177164029237/633825300114114700748351602688"
+    },
+    "lambda_boxes": [
+      {
+        "label": "negative",
+        "left": "-1e-4",
+        "right": "-1e-8"
+      },
+      {
+        "label": "positive",
+        "left": "1e-8",
+        "right": "1e-4"
+      }
+    ],
+    "compact_state": "Y=(v,v_Q,w,w_Q), w=partial_lambda v after the parameter-dependent scale choice v(Q_switch)=1.",
+    "compact_system": "Y_Q=M Y with rows (v_Q,A v,w_Q,a v+A w), A=x^2+lambda*a-kappa^2 and a=x^(3/2)/sqrt(C).",
+    "switch_seed": "v=1, v_Q=-(x+1/2+rho), w=0, w_Q=-s using the hash-pinned actual switch boxes; the projective sensitivity is invariant under this lambda-dependent nonzero rescaling.",
+    "endpoint_outputs": "Only after v(Q0) excludes zero, rho(Q0)=-v_Q/v-x0-1/2 and s(Q0)=(v_Q*w-v*w_Q)/v^2 are formed.",
+    "node_safety": "No division by v is performed on the open compact interval; the smooth four-state system is propagated through any interior node chart singularity.",
+    "compact_q_segment_ladder": [
+      16,
+      32
+    ],
+    "compact_taylor_order": 12,
+    "precision_ladder_decimal_digits": [
+      80,
+      120
+    ],
+    "ball_output_digits": 45,
+    "projective_sensitivity_width_target": "1/4",
+    "execution": "SymPy exact identities plus python-flint Arb four-state interval Taylor with whole-step D13 remainders; no black-box ODE, root solve, quadrature, finite difference or sampling grid."
+  },
+  "assumptions": [
+    "The hash-pinned switch result uniformly encloses the actual rho and actual partial_lambda rho on root bracket 1 and both declared punctured lambda boxes; its closed-parameter theorem also covers lambda zero for regression.",
+    "For each fixed parameter, rescaling the selected nonzero actual solution to v(Q_switch)=1 is differentiable and nonzero, and the projective rho and s outputs are invariant under that lambda-dependent amplitude choice.",
+    "The 16- and 32-subinterval order-12 Taylor enclosures use coefficient and state derivative majorants over the full parameter boxes and whole backward steps.",
+    "Treating the switch rho and s intervals as an uncorrelated Cartesian box is conservative and may widen the result; no hidden correlation is used to force a sign."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 512,
+    "compact_q_segment_ladder": [
+      16,
+      32
+    ],
+    "compact_taylor_order": 12,
+    "precision_tiers": 2,
+    "ball_bessel_evaluations": 12,
+    "root_brackets": 1,
+    "nonzero_lambda_boxes": 2,
+    "ode_calls": 0,
+    "root_calls": 0,
+    "quadrature_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0
+  },
+  "required_fail_closed_outputs": {
+    "panel_specific_absolute_rho_picard_tubes": null,
+    "actual_nonzero_lambda_declared_Gamma1": null,
+    "complete_minus_tail_remainder": null,
+    "actual_declared_Gamma1_sign_separation": null,
+    "nonzero_lambda_root_continuation": null,
+    "root_velocity": null,
+    "nonreal_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_RAQ_completion": null,
+    "physical_or_empirical_claim": null
+  }
+}
