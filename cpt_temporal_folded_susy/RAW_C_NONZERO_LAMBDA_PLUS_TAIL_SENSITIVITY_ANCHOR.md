@@ -18,8 +18,10 @@ The pinned LG envelope is reduced deliberately to coarse elementary bounds
 53e^Q\le g(Q)\le70e^Q\quad(Q\ge4),
 \]
 
-then integrated directly in this identity.  The output interval is therefore
-outward but intentionally broad.  It is checked to contain the independent
+then integrated directly in this identity.  With (x=e^Q), the lower bound
+uses (g\le70x) and \(\sqrt{x_0}>7\); the upper bound uses (g\ge53x) and
+\(\sqrt{x_0+y}<15/2+y/14\).  The output interval is therefore outward but
+intentionally broad.  It is checked to contain the independent
 exact-(\lambda=0) Bessel/Green (h(4)) certificate for root bracket 1.
 
 It does not provide panelwise rho tubes, transport from (Q=4) to (Q_0), a
