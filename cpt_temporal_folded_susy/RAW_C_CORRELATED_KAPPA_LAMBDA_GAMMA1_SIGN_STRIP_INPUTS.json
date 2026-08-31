@@ -32,6 +32,7 @@
       "upper_exact": "240/53",
       "derivation": "rechecked here from the pinned Liouville-Green real box and forced-Wronskian sensitivity identity; no old root-bracket-only sensitivity result is treated as corridor evidence"
     },
+    "switch_seed_intersection": "first prove the selected actual rho invariant barrier [-1,1] from the Qplus seed and inward vector-field margins, then intersect that independently proved barrier with the raw Bessel/affine Qswitch enclosure before the Qswitch-to-Q0 transfer",
     "kernel_panel_ladder": [512, 1024],
     "kernel_tail_y": "24",
     "precision_ladder_decimal_digits": [80, 120],
@@ -104,6 +105,7 @@
   "assumptions": [
     "The calculation concerns only the displayed closed K times Lambda rectangle and the same selected real plus-recessive family. The expanded corridor is recomputed rather than inherited from a microscopic root-bracket endpoint result.",
     "The forced-Wronskian sensitivity bound at Q=4 is rechecked uniformly from the pinned Liouville-Green domain because the older sensitivity result stated only the microscopic root bracket.",
+    "The raw broad-kappa affine switch enclosure is not required to be a subset of [-1,1]. The independently proved invariant barrier and the raw enclosure contain the same selected actual direction, so their nonempty intersection is the rigorous Q0 transfer seed.",
     "A common nonzero switch amplitude is divided out. Uniform exclusion of zero from the propagated Q0 amplitude is required before the projective functional is evaluated.",
     "Strict opposite complete-tail intervals on the two kappa faces and joint real continuity imply only that every lambda in Lambda has at least one interior kappa zero by the intermediate value theorem.",
     "No derivative with respect to kappa, interval Newton step, root selection, root count, or inference from a product-box interval containing zero is used."

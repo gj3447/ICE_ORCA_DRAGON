@@ -127,4 +127,23 @@ its payload SHA-256 is
 No root-existence output is certified by this first execution. The narrow
 same-question correction is to use the intersection of the raw affine switch
 enclosure with the already audited invariant barrier before the $Q_0$
-transfer; it has not yet been executed here.
+transfer. The first failed result is preserved in commit `f546af6`.
+
+### Barrier-intersection correction prepared
+
+The corrected runner proves the invariant barrier from the $Q=4$ selected
+actual-family seed and the strict inward vector-field margins alone. It then
+records the raw affine switch enclosure separately and sends only
+
+\[
+I_{\rm switch}^{\rm raw}\cap[-1,1]
+\]
+
+to the switch-to-$Q_0$ transfer. This is an intersection of two independently
+valid enclosures of the same actual direction, not clipping an unwanted
+endpoint. The corrected frozen input SHA-256 is
+`175372c15b21d9c3082e8befdc3cf79e5c99e8f0685850552d343163cd6ffd3e`;
+the corrected pre-run source SHA-256 is
+`9820a8786502cbf9584cfd4dbb703bd35a490fe52d5f34c31a4a0e1161639bf3`.
+No corrected execution is claimed until these changes are committed and run
+through `./ice run`.

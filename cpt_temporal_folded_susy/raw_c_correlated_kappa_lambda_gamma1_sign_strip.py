@@ -35,7 +35,7 @@ RUNNER_RELPATH = (
     "cpt_temporal_folded_susy/"
     "raw_c_correlated_kappa_lambda_gamma1_sign_strip.py"
 )
-EXPECTED_INPUT_SHA256 = "d622cc761786dc0197578ce2b6d9e0cb8a2783d062f4881a942c4300d3ae56e9"
+EXPECTED_INPUT_SHA256 = "175372c15b21d9c3082e8befdc3cf79e5c99e8f0685850552d343163cd6ffd3e"
 CALCULATION_ID = "RawCCorrelatedKappaLambdaGamma1SignStrip"
 RESULT_SCHEMA = "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1"
 RESULT_PREFIX = "RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT="
@@ -1107,13 +1107,13 @@ def main() -> None:
         rho_plus = rho0_plus.real + affine.interval_product_hull(
             lambda_slab, entering
         )
-        rho_switch_corridor = rho0_switch.real + affine.interval_product_hull(
+        rho_switch_corridor_raw = rho0_switch.real + affine.interval_product_hull(
             lambda_slab, refined_p
         )
-        rho_switch_left = rho0_left.real + affine.interval_product_hull(
+        rho_switch_left_raw = rho0_left.real + affine.interval_product_hull(
             lambda_slab, refined_p
         )
-        rho_switch_right = rho0_right.real + affine.interval_product_hull(
+        rho_switch_right_raw = rho0_right.real + affine.interval_product_hull(
             lambda_slab, refined_p
         )
         lambda_cap = arb(lambda_right)
@@ -1136,8 +1136,6 @@ def main() -> None:
             x_switch.lower() > 3
             and rho_plus.lower() >= -1
             and rho_plus.upper() <= 1
-            and rho_switch_corridor.lower() >= -1
-            and rho_switch_corridor.upper() <= 1
             and derivative_margin.lower() > 0
             and lower_barrier_margin.lower() > 0
             and upper_barrier_bracket.lower() > 0
@@ -1145,12 +1143,13 @@ def main() -> None:
         audit.control(
             f"rawc.signstrip.switch.tier{tier}.closed_corridor_barrier",
             barrier_ok,
-            "The newly evaluated Bessel/MVT start and exact worst-case margins keep the selected actual rho inside [-1,1] from Q=4 through the rational switch on the full expanded rectangle.",
+            "The newly evaluated Qplus actual-family seed and exact worst-case inward vector-field margins independently prove the backward-flow invariant barrier rho in [-1,1] through the rational switch on the full expanded rectangle; no raw Qswitch interval containment is assumed.",
             decimal_digits=dps,
             rho_actual_Qplus=interval_record(rho_plus, digits),
-            rho_actual_Qswitch_corridor=interval_record(
-                rho_switch_corridor, digits
+            raw_affine_rho_Qswitch_corridor=interval_record(
+                rho_switch_corridor_raw, digits
             ),
+            backward_flow_orientation="rho_x at rho=-1 is strictly negative and rho_x at rho=+1 is strictly positive, so -rho_x points inward as x decreases",
             derivative_margin=interval_record(derivative_margin, digits),
             lower_barrier_margin=interval_record(lower_barrier_margin, digits),
             upper_barrier_bracket=interval_record(
@@ -1181,6 +1180,22 @@ def main() -> None:
                 for label, rho_value, value in bessel_items
             },
         )
+        invariant_barrier = interval_from_bounds(arb(-1), arb(1))
+        rho_switch_corridor = intersection(
+            rho_switch_corridor_raw, invariant_barrier
+        )
+        rho_switch_left = intersection(rho_switch_left_raw, invariant_barrier)
+        rho_switch_right = intersection(
+            rho_switch_right_raw, invariant_barrier
+        )
+        if (
+            rho_switch_corridor is None
+            or rho_switch_left is None
+            or rho_switch_right is None
+        ):
+            raise AssertionError(
+                "raw affine and independently proved invariant switch enclosures are disjoint"
+            )
         switch_domains = {
             "corridor": (kappa_corridor, rho_switch_corridor),
             "left_face": (arb(kappa_left), rho_switch_left),
@@ -1193,11 +1208,19 @@ def main() -> None:
         audit.control(
             f"rawc.signstrip.switch.tier{tier}.domain_seeds",
             switch_domain_ok,
-            "The full corridor and both exact kappa faces have finite barrier-contained actual-family projective seeds at Qswitch.",
+            "The raw Bessel/affine and independently proved invariant-barrier enclosures have nonempty intersections; only these intersections seed the full corridor and exact-face Qswitch-to-Q0 transfers.",
             decimal_digits=dps,
-            corridor=interval_record(rho_switch_corridor, digits),
-            left_face=interval_record(rho_switch_left, digits),
-            right_face=interval_record(rho_switch_right, digits),
+            invariant_barrier=interval_record(invariant_barrier, digits),
+            raw_affine={
+                "corridor": interval_record(rho_switch_corridor_raw, digits),
+                "left_face": interval_record(rho_switch_left_raw, digits),
+                "right_face": interval_record(rho_switch_right_raw, digits),
+            },
+            transfer_seed_intersection={
+                "corridor": interval_record(rho_switch_corridor, digits),
+                "left_face": interval_record(rho_switch_left, digits),
+                "right_face": interval_record(rho_switch_right, digits),
+            },
         )
         switch_records.append(
             {
@@ -1205,15 +1228,19 @@ def main() -> None:
                 "decimal_digits": dps,
                 "MVT_p_Qswitch": interval_record(refined_p, digits),
                 "rho_actual_Qplus_corridor": interval_record(rho_plus, digits),
-                "rho_actual_Qswitch_corridor": interval_record(
-                    rho_switch_corridor, digits
-                ),
-                "rho_actual_Qswitch_left_face": interval_record(
-                    rho_switch_left, digits
-                ),
-                "rho_actual_Qswitch_right_face": interval_record(
-                    rho_switch_right, digits
-                ),
+                "raw_affine_rho_Qswitch": {
+                    "corridor": interval_record(
+                        rho_switch_corridor_raw, digits
+                    ),
+                    "left_face": interval_record(rho_switch_left_raw, digits),
+                    "right_face": interval_record(rho_switch_right_raw, digits),
+                },
+                "invariant_barrier": interval_record(invariant_barrier, digits),
+                "transfer_seed_intersection": {
+                    "corridor": interval_record(rho_switch_corridor, digits),
+                    "left_face": interval_record(rho_switch_left, digits),
+                    "right_face": interval_record(rho_switch_right, digits),
+                },
                 "certified": bool(
                     kernel_refinement_ok
                     and barrier_ok
