@@ -28,6 +28,17 @@
       "role": "pins the real plus-tail direction error, whose scope excludes a lambda derivative"
     }
   ],
+  "authoritative_upstream_schemas": {
+    "cpt_temporal_folded_susy/RAW_C_ACTUAL_DIRECTION_SHARP_CONTRACTION_TRANSFER_RESULT.json": "ice.raw-c-actual-direction-sharp-contraction-transfer.result.v1",
+    "cpt_temporal_folded_susy/RAW_C_DECLARED_GAMMA1_BOUNDARY_VARIATION_RESULT.json": "ice.raw-c-declared-gamma1-boundary-variation.result.v1",
+    "cpt_temporal_folded_susy/RAW_C_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_RESULT.json": "ice.raw-c-plus-endpoint-liouville-green-tail-bound.result.v1"
+  },
+  "authoritative_admission_paths": {
+    "actual_nonzero_lambda_plus_normalized_sensitivity_at_Qplus": ["validated_calculation", "panelwise_picard_affine_sensitivity", "actual_nonzero_lambda_plus_normalized_sensitivity_at_Qplus"],
+    "panelwise_actual_rho_tubes": ["validated_calculation", "panelwise_picard_affine_sensitivity", "panelwise_actual_rho_tubes"],
+    "actual_nonzero_lambda_Gamma1_value": ["required_fail_closed_outputs", "actual_nonzero_lambda_Gamma1_value"],
+    "actual_nonzero_lambda_minus_tail_remainder": ["required_fail_closed_outputs", "nonzero_lambda_minus_end_remainder_for_a_constructed_solution"]
+  },
   "declared_conventions": {
     "C": "6*pi^2",
     "x": "C*exp(Q)",
@@ -39,9 +50,9 @@
     "execution": "exact SymPy identity audit and committed-result schema/payload checks only; no ODE solve, quadrature, root solve, finite difference, sampling or inferred sensitivity bound"
   },
   "required_prerequisites": [
-    {"id": "actual_nonzero_lambda_plus_normalized_sensitivity_at_Qplus", "description": "Outward partial_lambda rho(Q_plus) for the actual plus-recessive family under the panel normalization."},
-    {"id": "panelwise_actual_rho_tubes", "description": "Finite panel partition plus outward actual-rho tube on every panel, not merely global 0<=rho^2<=1."},
-    {"id": "actual_nonzero_lambda_declared_Gamma1_remainder", "description": "Sharp actual declared Gamma_1 endpoint functional with complete minus-tail remainder."}
+    {"id": "actual_nonzero_lambda_plus_normalized_sensitivity_at_Qplus", "description": "Outward partial_lambda rho(Q_plus) for the actual plus-recessive family under the panel normalization; checked at the pinned authoritative schema path."},
+    {"id": "panelwise_actual_rho_tubes", "description": "Finite panel partition plus outward actual-rho tube on every panel, not merely global 0<=rho^2<=1; checked at the pinned authoritative schema path."},
+    {"id": "actual_nonzero_lambda_declared_Gamma1_remainder", "description": "Sharp actual declared Gamma_1 endpoint functional with complete minus-tail remainder; requires both explicit nonnull boundary-value and minus-tail fields in the pinned boundary-variation schema."}
   ],
   "primary_sources": [
     {"source": "NIST DLMF, Liouville--Green approximation theorem", "url": "https://dlmf.nist.gov/2.7.iii", "used_for": "scope boundary of inherited real plus-tail direction control", "not_used_for": "a parameter derivative or panelwise Picard enclosure"},

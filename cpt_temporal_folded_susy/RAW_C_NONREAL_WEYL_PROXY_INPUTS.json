@@ -71,7 +71,7 @@
     {
       "when": "all executable checks pass",
       "verdict": "KEEP_FINITE_CUTOFF_NONREAL_WEYL_PROXY_ONLY_SPECTRAL_MEASURE_RAQ_OPEN",
-      "programme_impact": "ADVANCE_P4_TO_A_VALIDATED_NONREAL_ENDPOINT_AND_STIELTJES_INVERSION_WORK_UNIT"
+      "programme_impact": "RECORD_FINITE_NONREAL_PROXY_AND_IDENTIFY_INTERVAL_VALIDATED_ENDPOINT_WORK_UNIT"
     },
     {
       "when": "any executable check fails",

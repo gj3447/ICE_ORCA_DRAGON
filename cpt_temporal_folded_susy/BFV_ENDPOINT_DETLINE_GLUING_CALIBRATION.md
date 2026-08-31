@@ -3,7 +3,8 @@
 This unnumbered runner is a deliberately finite parametrized-free-particle
 calibration for the P6 method lane.  It checks one compatible package only:
 
-1. a fixed- `x` endpoint polarization and same- `x` interface pairing;
+1. declaration and preservation of one fixed-`x` endpoint polarization and
+   same-`x` interface pairing;
 2. two ordered, nondegenerate finite ghost blocks and their relative Pfaffian
    reference orientation; and
 3. the two-slab phase and squared-prefactor identities, with the remaining

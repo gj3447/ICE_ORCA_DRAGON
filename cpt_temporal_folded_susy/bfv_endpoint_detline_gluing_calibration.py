@@ -67,12 +67,19 @@ def load_input() -> tuple[dict[str, Any], str]:
     return payload, observed
 
 
-def exact_checks() -> list[dict[str, Any]]:
+def exact_checks(payload: dict[str, Any]) -> list[dict[str, Any]]:
     m, hbar, t1, t2 = sp.symbols("m hbar T_1 T_2", positive=True, real=True)
     xi, xm, xf = sp.symbols("x_i x_m x_f", real=True)
     ghost_1 = sp.Matrix([[0, 1], [-1, 0]])
     ghost_2 = sp.Matrix([[0, 1], [-1, 0]])
     pf_1, pf_2 = pfaffian_2x2(ghost_1), pfaffian_2x2(ghost_2)
+    model = payload["declared_model"]
+    endpoint_convention_preserved = (
+        model["endpoint_polarization"]
+        == "fixed x_i,x_f with interface x_m in the same x-polarization"
+        and model["boundary_pairing"]
+        == "integral_R dx psi_out_conjugate(x)*psi_in(x) on Schwartz test functions"
+    )
     total = t1 + t2
     completed = sp.simplify(
         (xf - xm) ** 2 / t2 + (xm - xi) ** 2 / t1
@@ -86,8 +93,8 @@ def exact_checks() -> list[dict[str, Any]]:
         - m / (2 * sp.pi * sp.I * hbar * total)
     )
     return [
-        {"id": "bfv.endpoint.polarization.same_x_interface", "passed": True,
-         "statement": "both slabs and their interface use the declared fixed-x polarization; the interface pairing is the same-x Schwartz pairing by input convention"},
+        {"id": "bfv.endpoint.polarization.same_x_interface", "passed": endpoint_convention_preserved,
+         "statement": "the hash-pinned input preserves one declared fixed-x endpoint/interface polarization and Schwartz pairing; this is a convention audit, not a derived gravity polarization"},
         {"id": "bfv.detline.slab_one.antisymmetric_nonzero", "passed": ghost_1 + ghost_1.T == sp.zeros(2) and ghost_1.det() != 0,
          "statement": "slab 1 ordered ghost block is antisymmetric and nondegenerate"},
         {"id": "bfv.detline.slab_two.antisymmetric_nonzero", "passed": ghost_2 + ghost_2.T == sp.zeros(2) and ghost_2.det() != 0,
@@ -105,7 +112,7 @@ def exact_checks() -> list[dict[str, Any]]:
 
 def main() -> int:
     payload, input_sha = load_input()
-    checks = exact_checks()
+    checks = exact_checks(payload)
     all_passed = all(item["passed"] for item in checks)
     verdict = (
         "CALIBRATED_FINITE_ENDPOINT_DETLINE_GLUE_WITH_LAPSE_CYCLE_OPEN"
