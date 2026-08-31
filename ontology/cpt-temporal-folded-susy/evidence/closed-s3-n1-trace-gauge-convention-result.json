@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:CLOSED_S3_N1_TRACE_GAUGE_CONVENTION_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T00:00:00Z",
+  "command": "./ice run closed_s3_n1_trace_gauge_convention",
+  "exit_code": 0,
+  "script": {"path":"cpt_temporal_folded_susy/closed_s3_n1_trace_gauge_convention.py","sha256":"4a0502a814483c39442462bab05797e04bf466c75028b2958e5c5734fbdc5bd6","introduced_in_commit":"8c9bcf165ada8e18319ff6b366c4920a7a7ffed5"},
+  "exact_checks": 10,
+  "checks": [
+    {"id":"CS3N1.hessian.radial","status":"PASS","statement":"The zonal radial Hessian is -Q1."},
+    {"id":"CS3N1.hessian.tangential","status":"PASS","statement":"The tangential Hessian is -Q1 times the tangential metric."},
+    {"id":"CS3N1.shear.norm_degenerate","status":"PASS","statement":"The n=1 scalar-derived shear norm is zero."},
+    {"id":"CS3N1.generator.pb_trace_shift","status":"PASS","statement":"The trace generator gives delta zeta1=-L1."},
+    {"id":"CS3N1.generator.radial_lie_match","status":"PASS","statement":"The canonical trace variation matches the radial Lie metric variation."},
+    {"id":"CS3N1.generator.tangential_lie_match","status":"PASS","statement":"The canonical trace variation matches the tangential Lie metric variation."}
+  ],
+  "payload": {"raw_result":{"path":"cpt_temporal_folded_susy/CLOSED_S3_N1_TRACE_GAUGE_CONVENTION_RESULT.json","sha256":"a7f3e13bf0d9bba9432cb31b5f1e420ffe336a5116b2d14d37fff0f69b74a601","payload_sha256_without_self":"61acea0ac042439295495888fa5976a19bff650ad47da84c70f25139162dbb42"},"input":{"path":"cpt_temporal_folded_susy/CLOSED_S3_N1_TRACE_GAUGE_CONVENTION_INPUTS.json","sha256":"66b9c74f97f4857f3b7f2d399f2a04fee5ba9481b60189a5a0a9e782e746fffa","introduced_in_commit":"b9c1116df9ace62cbbf61c78b5f12b5c50b793b2"},"scope":"n=1 trace-only gauge convention; no independent E1 shear pair, full gauge reduction, Hamiltonian constraint or HDA claim"}
+}
