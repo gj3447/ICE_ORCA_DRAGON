@@ -9,7 +9,7 @@
   "script": {
     "path": "cpt_temporal_folded_susy/closed_s3_q2_coupled_dh_strain_cancellation.py",
     "sha256": "8ccc862ee648055993d69bfa97456180a6747841fd2ebba2a86a0ef428ee8277",
-    "introduced_in_commit": "27bbddf4a694ee8e61a2333d4b1cb109e20467f7"
+    "introduced_in_commit": "dc295a50cb031c5325e144280f992e3a2883de25"
   },
   "exact_checks": 6,
   "checks": [

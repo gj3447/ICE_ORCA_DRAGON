@@ -9,7 +9,7 @@
   "script": {
     "path": "cpt_temporal_folded_susy/raw_c_fixed_box_nonreal_branch_audit.py",
     "sha256": "b79e4c6b7f9ed026bca5a60d687cb6ff60162442d65ec71a8f8d13787be8d44b",
-    "introduced_in_commit": "ac331f67a2c36003a08a76c445e597952abafc59"
+    "introduced_in_commit": "7221d220591bf69ad0e66bbab46833a0c5c34ec6"
   },
   "exact_checks": 3,
   "checks": [
