@@ -13,6 +13,7 @@ import json
 import platform
 import sys
 from dataclasses import dataclass, field
+from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
@@ -40,10 +41,8 @@ def canonical_bytes(value: object) -> bytes:
 
 
 def exact_rational(text: str) -> fmpq:
-    if "e" in text.lower():
-        coefficient, exponent = text.lower().split("e", 1)
-        return fmpq(coefficient) * fmpq(10) ** int(exponent)
-    return fmpq(text)
+    value = Fraction(text)
+    return fmpq(value.numerator, value.denominator)
 
 
 def expected_caps() -> dict[str, int]:
