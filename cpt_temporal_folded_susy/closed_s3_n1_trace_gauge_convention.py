@@ -13,7 +13,10 @@ EXPECTED_INPUT_SHA256="66b9c74f97f4857f3b7f2d399f2a04fee5ba9481b60189a5a0a9e782e
 
 def canon(x): return json.dumps(x,sort_keys=True,separators=(",",":"),ensure_ascii=False,allow_nan=False).encode()
 def sha(b): return hashlib.sha256(b).hexdigest()
-def check(rows,id,value,statement): rows.append({"id":id,"passed":bool(sp.simplify(value)==0) if not isinstance(value,bool) else value,"statement":statement})
+def check(rows,id,value,statement):
+ reduced=sp.simplify(value)
+ passed=bool(reduced) if isinstance(reduced,(bool,sp.logic.boolalg.Boolean)) else bool(reduced==0)
+ rows.append({"id":id,"passed":passed,"statement":statement})
 def verify(root,item):
  raw=(root/item["path"]).read_bytes(); value=json.loads(raw)
  if sha(raw)!=item["sha256"] or value.get("result_payload_sha256_without_self")!=item["payload_sha256_without_self"] or value.get("verdict")!=item["required_verdict"]: raise AssertionError(f"upstream pin mismatch: {item['path']}")
@@ -23,9 +26,9 @@ def main():
  raw=Path(__file__).with_name(INPUT_NAME).read_bytes(); input_sha=sha(raw)
  if input_sha!=EXPECTED_INPUT_SHA256: raise AssertionError(f"input hash mismatch: {input_sha}")
  p=json.loads(raw)
- if p["schema_version"]!="ice.closed-s3-n1-trace-gauge-convention.input.v1" or p["numbered_phase"] is not None: raise AssertionError("identity drift")
+ if p["schema_version"]!="ice.closed-s3-n1-trace-gauge-convention.input.v1" or p["calculation_id"]!="ClosedS3N1TraceGaugeConvention" or p["numbered_phase"] is not None or p["resource_caps"]!={"wall_clock_seconds":120,"stdout_bytes":262144,"stderr_bytes":262144,"changed_artifact_files":12,"changed_artifact_bytes":1000000,"root_calls":0,"quadratures":0,"ode_calls":0,"automatic_descendants":0}: raise AssertionError("identity or cap drift")
  root=Path(__file__).resolve().parent.parent; upstream=[verify(root,x) for x in p["upstream_results"]]
- chi,L,a=sp.symbols("chi L a", real=True, positive=True); c=1/sp.sqrt(2*sp.pi**2); q=2*c*sp.cos(chi); lam=sp.Integer(3); rows=[]
+ chi,L=sp.symbols("chi L", real=True); a=sp.symbols("a", real=True, positive=True); c=1/sp.sqrt(2*sp.pi**2); q=2*c*sp.cos(chi); lam=sp.Integer(3); rows=[]
  radial=sp.diff(q,chi,2); tangential=sp.sin(chi)*sp.cos(chi)*sp.diff(q,chi)
  tracefree_radial=radial+q; tracefree_tangential=tangential+q*sp.sin(chi)**2
  norm2=sp.Rational(2,3)*lam*(lam-3); piz=sp.symbols("Pi_zeta_1", real=True)
@@ -39,6 +42,7 @@ def main():
  check(rows,"CS3N1.shear.zero_tangential",tracefree_tangential,"The n=1 tracefree Hessian tangential component vanishes.")
  check(rows,"CS3N1.shear.norm_degenerate",norm2,"The integrated scalar-derived shear norm is zero at lambda_1=3.")
  check(rows,"CS3N1.generator.no_shear_pair",True,"No E1/Pi_E1 pair is admitted because the scalar-derived tensor is zero.")
+ check(rows,"CS3N1.coordinate_bridge.zeta_equals_psi_minus_E",-sp.Integer(1)+lam/3,"At n=1, zeta_1=psi_1+Delta E_1/3=psi_1-E_1 is only a coordinate bridge; E1 is not independent.")
  check(rows,"CS3N1.generator.pb_trace_shift",delta_zeta+L,"D_L1=-L Pi_zeta,1 gives delta zeta_1=-L.")
  check(rows,"CS3N1.generator.radial_lie_match",canonical_metric-lie_metric_radial,"The trace canonical variation equals the radial Lie metric variation.")
  check(rows,"CS3N1.generator.tangential_lie_match",canonical_metric-lie_metric_tangent,"The trace canonical variation equals the tangential Lie metric variation.")

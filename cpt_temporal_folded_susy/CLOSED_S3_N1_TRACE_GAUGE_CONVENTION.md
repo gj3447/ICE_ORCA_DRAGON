@@ -10,7 +10,9 @@ The bounded convention retains only an unreduced trace pair
 \[
 D_{L_1}^{(1)}=-L_1\Pi_{\zeta,1},\qquad \delta\zeta_1=-L_1.
 \]
-It checks that \(\delta q_{ab}=-2a^2L_1Q_1\gamma_{ab}) equals
+In the historical scalar-coordinate labels, \(\zeta_1=\psi_1-E_1\) is a
+coordinate bridge only: \(E_1\) is not an independent canonical shear coordinate.
+It checks that \(\delta q_{ab}=-2a^2L_1Q_1\gamma_{ab}\) equals
 \(2a^2D_aD_b(L_1Q_1)\).  This refines the earlier n=2,3 scalar-derived
 packet; it is neither a full gauge reduction nor an ADM/HDA/Jacobi result.
 
