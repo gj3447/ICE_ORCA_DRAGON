@@ -1,0 +1,82 @@
+{
+  "schema_version": "ice.raw-c-fixed-box-nonreal-branch-audit.input.v1",
+  "calculation_id": "RawCFixedBoxNonrealBranchAudit",
+  "numbered_phase": null,
+  "question": "On one fixed upper-half-plane z box and Q>=4 at p=0, do the raw-C coefficient and its principal square-root branch remain separated from the nonpositive-real cut with a strictly positive real-part lower bound?",
+  "kind": "BOUNDED_NONREAL_BRANCH_PRECONDITION_AUDIT",
+  "primary_failure": "branch/domain",
+  "convention_provenance": {
+    "path": "cpt_temporal_folded_susy/RAW_C_NONREAL_WEYL_PROXY_INPUTS.json",
+    "sha256": "a4ddbe579cf3f39704e043cd3ecbe174708e8df199f0e4d1abe3a359ecf176ce",
+    "role": "pins the raw-C nonreal fiber coefficient convention only; it is not evidence for this outward branch audit"
+  },
+  "primary_sources": [
+    {
+      "id": "arXiv:1208.4677v2",
+      "title": "Weyl-Titchmarsh Theory for Sturm-Liouville Operators with Distributional Potentials",
+      "url": "https://arxiv.org/abs/1208.4677v2",
+      "role": "singular Weyl--Titchmarsh definition and nonreal-domain scope only; no model-specific endpoint or spectral theorem is imported"
+    }
+  ],
+  "declared_conventions": {
+    "p": "0",
+    "Q_domain": "Q>=4",
+    "z_box": "Re z in [-1/16,1/16], Im z in [15/16,17/16]",
+    "coefficient": "A(Q,z)=36*pi^4*exp(2Q)+6*pi^2*z*exp(3Q/2)=36*pi^4*exp(2Q)*(1+delta(Q,z))",
+    "relative_perturbation": "delta(Q,z)=z*exp(-Q/2)/(6*pi^2)",
+    "square_root": "principal sqrt(A)",
+    "precision_bits": [128, 256],
+    "analytic_eta_bar": "1/336",
+    "analytic_cut_distance_lower": "335/336",
+    "execution": "outward python-flint acb/arb elementary arithmetic at Q=4 plus exact half-line envelope; no ODE, root solver, quadrature, sample grid, boundary map, or characteristic equation"
+  },
+  "controls": [
+    "Exact factorization and the decreasing exp(-Q/2) envelope prove that the Q=4 box bounds every Q>=4.",
+    "At both 128 and 256 bits, outward acb arithmetic must give finite delta, relative-factor, A and principal-sqrt rectangles with |delta|<1, cut distance positive, and Re sqrt(A)>0.",
+    "The independent elementary bound |z|<9/8, exp(-2)<1/7 and pi^2>9 gives |delta|<1/336 and cut distance >335/336; every ball bound must be no weaker than this sufficient separation test."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 100,
+    "ball_evaluations": 16,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "sampling_points": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "actual_recessive_endpoint_data": null,
+    "singular_endpoint_nonreal_weyl_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_spectral_multiplicity": null,
+    "stieltjes_inversion": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all three controls pass",
+      "verdict": "KEEP_FIXED_UHP_BOX_BRANCH_PRECONDITION_ONLY",
+      "programme_impact": "RECORD_BRANCH_SEPARATION_ONLY; COMPLEX_TAIL_LEMMA_AND_ENDPOINT_ENCLOSURE_REMAIN_OPEN"
+    },
+    {
+      "condition": "any control fails",
+      "verdict": "UNRESOLVED_FIXED_BOX",
+      "programme_impact": "DO_NOT_USE_THIS_BOX_AS_A_COMPLEX_WKB_OR_VOLTERRA_PRECONDITION"
+    }
+  ]
+}
