@@ -118,3 +118,18 @@ corridor as `root_bracket_1` padded by exactly `1/1000`, whereas the current
 manifest stores the resulting exact endpoints. Until that definitional
 equivalence is checked exactly by a new committed runner, the provisional box
 is not promoted and the ontology remains unchanged.
+
+## Minimal provenance correction
+
+A read-only failure audit found the already evaluated exact corridor at
+`certified_calculation.kappa_corridor` in the pinned sign-strip result. The
+corrected runner therefore requires both exact endpoint strings from that
+record and the passed `rawc.signstrip.declared_rectangle` check. It continues
+to require the same declared $Q_{\rm switch}$, $Q_0$, lambda slab, selected
+family controls and theorem guards.
+
+No equation, input, resource cap, interval propagation, endpoint formula,
+verdict condition or null output changed. The corrected runner SHA-256 is
+`1f975e3a7206a27fb1db63d4fc4f7a5aa8eb9a3bdea05bf56316ed6b7d63e38a`;
+`uv run python -m py_compile` passed. A second controlled execution is withheld
+until this correction is committed.

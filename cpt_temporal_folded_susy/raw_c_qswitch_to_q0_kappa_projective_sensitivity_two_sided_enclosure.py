@@ -362,11 +362,14 @@ def main() -> None:
     sign_required_controls = ["rawc.signstrip.q0.corridor.tier1.segment_refinement_overlap", "rawc.signstrip.q0.corridor.tier2.segment_refinement_overlap", "rawc.signstrip.q0.corridor.segments16.precision_overlap", "rawc.signstrip.q0.corridor.segments32.precision_overlap", "rawc.signstrip.q0.corridor.final_chart"]
     sign_required_guards = ["rawc.signstrip.guard.selected_actual_family", "rawc.signstrip.guard.whole_step_transfer", "rawc.signstrip.guard.projective_normalization"]
     sign_conventions = signstrip.get("declared_conventions", {})
+    sign_certified_corridor = signstrip.get("certified_calculation", {}).get("kappa_corridor", {})
     sign_ok = bool(
         sign_conventions.get("Q_switch") == conventions["Q_switch"]
         and sign_conventions.get("Q_0") == conventions["Q_0"]
-        and sign_conventions.get("kappa_corridor") == conventions["kappa_corridor"]
+        and sign_certified_corridor.get("left_exact") == conventions["kappa_corridor"]["left_exact"]
+        and sign_certified_corridor.get("right_exact") == conventions["kappa_corridor"]["right_exact"]
         and sign_conventions.get("lambda_slab") == conventions["lambda_slab"]
+        and required_pass(signstrip, "exact_checks", "rawc.signstrip.declared_rectangle", "passed")
         and all(required_pass(signstrip, "controls", identifier, "passed") for identifier in sign_required_controls)
         and all(required_pass(signstrip, "theorem_guards", identifier, "verified") for identifier in sign_required_guards)
     )
