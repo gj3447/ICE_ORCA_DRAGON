@@ -1,0 +1,43 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_20260831",
+  "phase": null,
+  "observed_at_utc": "2026-08-31T07:02:15Z",
+  "command": "./ice run raw_c_fixed_box_nonreal_branch_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_fixed_box_nonreal_branch_audit.py",
+    "sha256": "b79e4c6b7f9ed026bca5a60d687cb6ff60162442d65ec71a8f8d13787be8d44b",
+    "introduced_in_commit": "ac331f67a2c36003a08a76c445e597952abafc59"
+  },
+  "exact_checks": 3,
+  "checks": [
+    {"id": "rawc.nonreal.branch.control1.factorization_and_halfline_envelope", "status": "PASS", "statement": "Exact factorization and the strictly negative exp(-Q/2) derivative make Q=4 a bound for the declared Q>=4 box."},
+    {"id": "rawc.nonreal.branch.control2.two_tier_outward_acb", "status": "PASS", "statement": "Both same-backend acb precision tiers are finite, branch-separated and overlap as consistency only."},
+    {"id": "rawc.nonreal.branch.control3.independent_elementary_separation", "status": "PASS", "statement": "The executable elementary bounds give eta<1/336, cut distance>335/336 and a positive all-Q>=4 real-part lower bound."}
+  ],
+  "payload": {
+    "exact_checks": 3,
+    "locator_policy": "Three decision-bearing controls are indexed here; the authoritative raw result is the single source for all branch boxes, tier rectangles and analytic guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_RESULT.json",
+      "sha256": "2149698af3841b3b11f77fc9e17ba8e15a5aba3dcd3122a9a12d1298e3c717ed",
+      "payload_sha256_without_self": "6d08d3dd19ff863aef5e83451a5cd6f5aa1e847e3379ed3a37270ea65cfaf333",
+      "exact_checks": 3,
+      "run_status": "VALID_RUN",
+      "verdict": "KEEP_FIXED_UHP_BOX_BRANCH_PRECONDITION_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_INPUTS.json",
+      "sha256": "40a2ecfdeacdf040c8687243657b7c0c386a3fb2f304e789bc4d2883d1342fdf"
+    },
+    "fixed_box": "p=0, Q>=4, Re z in [-1/16,1/16], Im z in [15/16,17/16]",
+    "branch_precondition": {
+      "eta_bar": "1/336",
+      "cut_distance_lower_bar": "335/336",
+      "Re_principal_sqrt_A_lower_all_Q_ge_4": "3228.35799687663970"
+    },
+    "boundary": "This records branch separation and principal-square-root positivity only. A complex-tail Volterra theorem, normalization-fixed actual recessive endpoint enclosure, singular Weyl m(z), spectral measure/multiplicity, Stieltjes inversion, RAQ and C/H comparison remain absent."
+  }
+}
