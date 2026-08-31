@@ -1,0 +1,124 @@
+{
+  "schema_version": "ice.raw-c-bessel-preconditioned-kernel-panel-affine-sensitivity-transport.input.v1",
+  "calculation_id": "RawCBesselPreconditionedKernelPanelAffineSensitivityTransport",
+  "numbered_phase": null,
+  "question": "For raw-C root bracket 1 and the two punctured real lambda boxes, does the exact lambda-zero Bessel direction plus the normalization-invariant Q=4 sensitivity anchor give a rigorous positive sensitivity and a sign-separated, narrow actual-direction tube at Q_switch=-29/10 under an affine backward-x comparison?",
+  "one_output": "One BESSEL_PRECONDITIONED_SWITCH_TRANSPORT verdict whose fields are the outward Q_switch intervals for actual s, mean-value p, and the Bessel-relative actual rho on each declared lambda box.",
+  "non_claim": "This transport does not evaluate the declared Gamma_1, its nonzero-lambda derivative or sign, continue a root, construct a Weyl m-function, spectral measure, RAQ object, or physical prediction.",
+  "primary_failure_class": "truncation",
+  "controls": [
+    "check the delta/lambda and sensitivity equations and the closed 0-to-lambda mean-value segment independently with exact algebra and theorem-scope guards",
+    "require the 1024-panel monotone exponential-kernel enclosure to be contained in the 512-panel enclosure, with the omitted positive tail bounded analytically",
+    "require 80/120-decimal Arb/acb overlap, nonzero Bessel denominators, real-residue containment, and the expected side of the lambda-zero Bessel direction"
+  ],
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_RESULT.json",
+      "sha256": "6f4d9ecf358dcef6826907058699c83a6e60c300d531e86197097d6cb5bfde2e",
+      "schema_version": "ice.raw-c-lambda-zero-bessel-ball-transport.result.v1",
+      "verdict": "CERTIFY_LAMBDA_ZERO_EXACT_BESSEL_TRANSPORT_AND_FIVE_SIGN_CHANGE_BRACKETS_F_LAMBDA_OPEN",
+      "result_payload_sha256_without_self": "5bd3f7b3b435b693da95c7d3b2c528c63328a45964683f011eac191b1827ff92",
+      "role": "pins the exact root-1 kappa bracket and the lambda-zero Bessel family used as the affine preconditioner"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR_RESULT.json",
+      "sha256": "769d2fd1f06c709dafb4fbbb52d87f31d048126b1a360cc89826053b3046e9ad",
+      "schema_version": "ice.raw-c-nonzero-lambda-plus-tail-sensitivity-anchor.result.v1",
+      "verdict": "CERTIFY_COARSE_NORMALIZATION_INVARIANT_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR",
+      "result_payload_sha256_without_self": "66c16e93f3f164a97762b4aa942977ca1c84357eed1d371f1491f343aaecf0e3",
+      "role": "pins s(4) in [27/10,240/53] and its scale-invariant forced-Wronskian derivation"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_ACTUAL_NONZERO_LAMBDA_GAMMA1_COARSE_ENCLOSURE_RESULT.json",
+      "sha256": "add3bcf863d8c4e75092f308f206409b35aa8d7de04a0b613d50af1435d3645a",
+      "schema_version": "ice.raw-c-actual-nonzero-lambda-gamma1-coarse-enclosure.result.v1",
+      "verdict": "CERTIFY_COARSE_ACTUAL_NONZERO_LAMBDA_GAMMA1_ENCLOSURE_BRACKET1_ONLY",
+      "result_payload_sha256_without_self": "b0e2ed530d1467e8b17d53ff6a99c1148774d435e5679029836b4d33fef1ea84",
+      "role": "pins the actual plus-recessive family and the invariant rho in [-1,1] barrier on x>=3"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "NIST Digital Library of Mathematical Functions, modified-Bessel equation and recurrences, sections 10.25 and 10.29",
+      "url": "https://dlmf.nist.gov/10",
+      "used_for": "the exact lambda-zero K_(i kappa) direction at Q=4 and Q_switch",
+      "not_used_for": "the nonzero-lambda solution, Gamma_1, spectral data, or RAQ"
+    },
+    {
+      "source": "Fredrik Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+      "url": "https://arxiv.org/abs/1611.02831",
+      "version": "IEEE Transactions on Computers 66 (2017) 1281--1292",
+      "used_for": "outward elementary and complex-Bessel ball arithmetic",
+      "not_used_for": "a black-box validated ODE solver"
+    }
+  ],
+  "declared_conventions": {
+    "C": "6*pi^2",
+    "x": "C*exp(Q)",
+    "Q_plus": "4",
+    "Q_switch": "-29/10",
+    "root_bracket": {
+      "left_exact": "41021725895035351653669248935583/20282409603651670423947251286016",
+      "right_exact": "1281928934219854739177164029237/633825300114114700748351602688"
+    },
+    "lambda_boxes": [
+      {"label": "negative", "left": "-1e-4", "right": "-1e-8"},
+      {"label": "positive", "left": "1e-8", "right": "1e-4"}
+    ],
+    "closed_mean_value_segments": ["[-1e-4,0]", "[0,1e-4]"],
+    "rho_equation": "rho_x=2*rho+(rho+rho^2+kappa^2+1/4)/x-lambda*sqrt(x/C)",
+    "sensitivity_equation": "s_x=(2+(1+2*rho)/x)*s-sqrt(x/C)",
+    "bessel_preconditioned_difference": "delta=rho_lambda-rho_0 and p=delta/lambda obey p_x=(2+(1+rho_lambda+rho_0)/x)*p-sqrt(x/C)",
+    "coefficient_envelope": "rho_lambda,rho_0 in [-1,1] imply 2-1/x <= 2+(1+rho_lambda+rho_0)/x, 2+(1+2*rho_lambda)/x <= 2+3/x",
+    "backward_comparison_kernels": {
+      "lower": "exp(-2(t-a))*(a/t)^3",
+      "upper": "exp(-2(t-a))*(t/a)"
+    },
+    "s_Qplus_interval": ["27/10", "240/53"],
+    "Qswitch_actual_rho_width_target": "1e-4",
+    "kernel_panel_ladder": [512, 1024],
+    "kernel_tail_y": "24",
+    "precision_ladder_decimal_digits": [80, 120],
+    "ball_output_digits": 45,
+    "execution": "SymPy exact identities plus python-flint Arb/acb finite monotone exponential-kernel panel sums and analytic positive-tail bounds; no ODE, root, black-box quadrature, finite difference, or sampling grid"
+  },
+  "assumptions": [
+    "The pinned actual-family invariant barrier applies uniformly to the closed |lambda|<=1e-4 segment and root bracket 1 while x>=3.",
+    "The sensitivity-anchor proof uses only uniform |lambda|<=1e-4 coefficient bounds, so its displayed interval also controls every intermediate parameter on the closed segment from zero to a declared punctured-box point.",
+    "For each fixed parameter, the plus-recessive family is differentiable in lambda and its logarithmic direction is invariant under lambda-dependent positive amplitude rescaling.",
+    "The lambda-zero K_(i kappa)(x) denominator balls exclude zero at both evaluated endpoints; imaginary balls are residue diagnostics and must contain zero.",
+    "The affine coefficient envelope intentionally retains the full invariant rho barrier. It can certify a narrow Bessel-relative endpoint tube but is not advertised as the later complete differentiated Gamma_1 transport."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 256,
+    "kernel_panels_coarse": 512,
+    "kernel_panels_refined": 1024,
+    "ball_bessel_evaluations": 12,
+    "precision_tiers": 2,
+    "root_brackets": 1,
+    "nonzero_lambda_boxes": 2,
+    "ode_calls": 0,
+    "root_calls": 0,
+    "quadrature_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0
+  },
+  "required_fail_closed_outputs": {
+    "panel_specific_absolute_rho_picard_tubes": null,
+    "differentiated_Qswitch_to_Q0_transport": null,
+    "actual_nonzero_lambda_declared_Gamma1": null,
+    "actual_declared_Gamma1_sign_separation": null,
+    "nonzero_lambda_root_continuation": null,
+    "root_velocity": null,
+    "nonreal_weyl_m_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_RAQ_completion": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "physical_or_empirical_claim": null
+  }
+}
