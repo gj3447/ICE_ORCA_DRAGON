@@ -1,0 +1,102 @@
+{
+  "schema_version": "ice.closed-s3-real-scalar-harmonic-basis-ledger.input.v1",
+  "calculation_id": "ClosedS3RealScalarHarmonicBasisLedger",
+  "numbered_phase": null,
+  "question": "Starting from the pinned complex SU(2) scalar Gaunt seed on unit S3, does the declared conjugation-paired real scalar basis through degree n=2 give an exact unitary translation, real orthonormal modes, and a checked transformed low-mode product while keeping full products distinct from hard-projected remainders?",
+  "kind": "EXACT_FINITE_COMPLEX_TO_REAL_UNIT_S3_SCALAR_HARMONIC_BASIS_AND_GAUNT_TRANSLATION_LEDGER",
+  "epistemic_scope": "FINITE_REAL_SCALAR_HARMONIC_BASIS_THROUGH_N2_ON_UNIT_S3_AND_SELECTED_TRANSFORMED_GAUNT_PRODUCT_ONLY_NOT_COMPLETE_SVT_NOT_DERIVATIVE_GAUNT_NOT_ADM_CONSTRAINTS_NOT_HDA_NOT_JACOBI_NOT_BFV",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/CLOSED_S3_SU2_SCALAR_GAUNT_GOLDEN_LEDGER_RESULT.json",
+      "sha256": "595e6c83a32ea8f70c2bc1fdd90754de3cb025853616851861cd6d9f5676768e",
+      "payload_sha256_without_self": "bfbdcdef3f24c865301e6f83061d7f2fc2de6e8f2b5d193745116555166032ba",
+      "required_verdict": "KEEP_UNIT_S3_SU2_COMPLEX_SCALAR_GAUNT_GOLDEN_DATA_AND_PROJECTION_REMAINDER_NOT_ADM_HDA",
+      "role": "pins the preceding complex Wigner-D scalar convention and its explicit finite-projection-remainder classification"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere, Gen. Rel. Grav. 49 (2017) 139, arXiv:1709.08020",
+      "url": "https://arxiv.org/abs/1709.08020",
+      "used_for": "unit-S3 scalar spectral label lambda_n=n(n+2) and the context in which real scalar harmonics are convention dependent",
+      "not_used_for": "a complete real SVT implementation, derivative couplings, ADM constraints, HDA, Jacobi, BFV, or quantum claims"
+    },
+    {
+      "source": "A. P. Stone, Some properties of Wigner coefficients and hyperspherical harmonics, Math. Proc. Cambridge Philos. Soc. 52 (1956) 424--430",
+      "url": "https://doi.org/10.1017/S030500410003142X",
+      "used_for": "the SU(2)/hyperspherical-harmonic representation route underlying the pinned complex Wigner-D realization",
+      "not_used_for": "the repository-specific real-basis ordering, selected coefficient golden value, or any constraint-algebra conclusion"
+    }
+  ],
+  "declared_conventions": {
+    "geometry": "unit round S3 identified with SU(2), Haar volume Vol(S3)=2*pi^2",
+    "complex_basis": "Q^(n)_(mL,mR)=sqrt((n+1)/(2*pi^2)) D^(n/2)_(mL,mR), with doubled labels 2*mL,2*mR in {-n,-n+2,...,n}",
+    "conjugation": "conj(Q^(n)_(mL,mR))=(-1)^((mL-mR)/2) Q^(n)_(-mL,-mR), where mL and mR are doubled labels and the exponent is integral",
+    "real_transform": "For each lexicographically first nonself conjugate pair a=(-mL,-mR) <= b=(mL,mR), with s=(-1)^((a_mL-a_mR)/2), R_a_cos=(Q_a+s Q_b)/sqrt(2) and R_a_sin=-I*(Q_a-s Q_b)/sqrt(2). Self-conjugate Q_(0,0) is retained as R.",
+    "ordering": "degrees n=0,1,2; within each degree, conjugation orbits are ordered by their lexicographically least doubled-label mode, with a self orbit retained at its lexicographic position and each nonself pair emitting cos then sin",
+    "product": "the pinned two-Clebsch--Gordan complex product is expanded first, then converted with Q_a=sum_r conj(U_ra) R_r for R_r=sum_a U_ra Q_a",
+    "projection": "P_L retains real scalar degrees n<=L only after a full product. A removed component is a finite algebraic projection remainder, not a constraint residual or anomaly."
+  },
+  "basis_degree_max": 2,
+  "selected_product_packet": {
+    "id": "n1_diagonal_cos_square",
+    "left_real_label": "R_n1_mL-1_mR-1_cos",
+    "right_real_label": "R_n1_mL-1_mR-1_cos",
+    "expected_real_terms": [
+      {"label": "R_n0_mL0_mR0", "coefficient": "1/(sqrt(2)*pi)"},
+      {"label": "R_n2_mL-2_mR-2_cos", "coefficient": "1/(sqrt(3)*pi)"},
+      {"label": "R_n2_mL0_mR0", "coefficient": "1/(sqrt(6)*pi)"}
+    ]
+  },
+  "projection_packet": {
+    "cutoff_L": 1,
+    "source_real_label": "R_n1_mL-1_mR-1_cos"
+  },
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "complete_real_scalar_harmonic_basis": null,
+    "complete_scalar_vector_tensor_gaunt_ledger": null,
+    "scalar_derivative_gaunt_ledger": null,
+    "vector_or_tensor_derivative_couplings": null,
+    "gravitational_hamiltonian_constraint": null,
+    "gravitational_momentum_constraint": null,
+    "full_adm_cubic_constraint_expansion": null,
+    "DD_DH_HH_constraint_brackets": null,
+    "classical_hypersurface_deformation_algebra_closure": null,
+    "classical_jacobi_closure": null,
+    "classical_bfv_charge": null,
+    "quantum_bfv_charge": null,
+    "quantum_bfv_anomaly_freedom": null,
+    "quantum_common_invariant_core": null,
+    "absolute_bfv_measure": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "the upstream pin, conjugation, finite transform unitarity, real orthonormality, selected transformed Gaunt coefficient, and full-versus-projected reconstruction all pass",
+      "verdict": "KEEP_FINITE_REAL_S3_SCALAR_BASIS_TRANSLATION_AND_SELECTED_GAUNT_LEDGER_NOT_ADM_HDA",
+      "programme_impact": "RECORD_FINITE_REAL_SCALAR_CONVENTION_BRIDGE_ONLY_AND_IDENTIFY_A_SEPARATE_SCALAR_DERIVATIVE_WORK_UNIT",
+      "meaning": "this is a finite scalar convention bridge only; it neither constructs ADM constraints nor tests HDA, Jacobi, BFV, or quantum closure"
+    },
+    {
+      "condition": "an upstream pin, conjugation identity, finite transform, selected coefficient, or projection reconstruction fails",
+      "verdict": "KILL_DECLARED_FINITE_REAL_S3_SCALAR_BASIS_TRANSLATION",
+      "programme_impact": "DO_NOT_USE_THIS_REAL_BASIS_ORDERING_OR_COEFFICIENT_PACKET_FOR_LATER_SVT_OR_CONSTRAINT_WORK",
+      "meaning": "reject this finite convention packet without inferring a continuum-GR failure or quantum anomaly"
+    }
+  ]
+}
