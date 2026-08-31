@@ -1,0 +1,19 @@
+{
+  "schema_version": "ice.closed-s3-n1-trace-gauge-convention.input.v1",
+  "calculation_id": "ClosedS3N1TraceGaugeConvention",
+  "numbered_phase": null,
+  "question": "For the unit-S3 n=1 scalar harmonic, does omitting the degenerate scalar-derived shear pair while retaining (zeta_1, Pi_zeta,1) with D_L1=-L_1 Pi_zeta,1 reproduce the infinitesimal Lie variation of the metric?",
+  "one_output": "The exact n=1 trace-only gauge convention and its three control identities.",
+  "primary_failure_class": "gauge",
+  "primary_sources": [
+    {"source":"L. Lindblom, N. W. Taylor and F. Zhang, Scalar, Vector and Tensor Harmonics on the Three-Sphere","url":"https://arxiv.org/abs/1709.08020","used_for":"unit-S3 scalar eigenvalue and the k=1 scalar-derived tensor lower bound","not_used_for":"a full ADM constraint or gauge reduction"},
+    {"source":"R. Arnowitt, S. Deser and C. W. Misner, The Dynamics of General Relativity","url":"https://arxiv.org/abs/gr-qc/0405109","used_for":"the canonical spatial-diffeomorphism generator convention","not_used_for":"a perturbative HDA closure proof"}
+  ],
+  "upstream_results": [
+    {"path":"cpt_temporal_folded_susy/CLOSED_S3_SCALAR_DERIVED_HARMONIC_LEDGER_RESULT.json","sha256":"3d67333d30b5baa4a24533993b93d9028367373f8195c7bdfde4e99885cfc66f","payload_sha256_without_self":"42750a31c83f27ffaa5fe5f4c18c408f2ff4ca82f7f0b3f909ece56d1c40a57e","required_verdict":"KEEP_CLOSED_S3_SCALAR_DERIVED_HARMONIC_NORMALIZATION_LEDGER_NOT_SVT_COMPLETENESS_OR_HDA"},
+    {"path":"cpt_temporal_folded_susy/CLOSED_S3_LINEAR_SCALAR_ADM_MOMENTUM_CONSTRAINT_LEDGER_RESULT.json","sha256":"c0a6388df5b9f2239aeacbca0d58a0689de65ce3b7c2715cec3346d3be565f6d","payload_sha256_without_self":"5d7f5afad0cd5678a5a2af580c630575000bc01f2f756125515473064aacaf54","required_verdict":"KEEP_UNIT_S3_LINEAR_SCALAR_ADM_MOMENTUM_CONSTRAINT_GENERATOR_NOT_FULL_HDA"}
+  ],
+  "declared_conventions": {"geometry":"unit round S3, Q1=2 cos(chi)/sqrt(2*pi^2), Delta Q1=-3 Q1","metric":"delta q_ab=2 a^2 delta zeta_1 Q1 gamma_ab; no E1/Pi_E1 pair is introduced because its tracefree tensor is zero","canonical_pair":"{zeta_1,Pi_zeta,1}=1","generator":"D_L1=-L1 Pi_zeta,1, hence delta_L zeta_1=-L1","boundary":"This is an unreduced trace-gauge convention only; it does not determine a physical mode, a lapse constraint, Hamiltonian constraint, full gauge reduction, HDA, Jacobi, BFV or anomaly."},
+  "controls": ["explicit zonal Q1 radial and tangential Hessian", "integrated tracefree-Hessian norm/degeneracy", "canonical PB action reconstructed as the Lie metric variation"],
+  "resource_caps": {"wall_clock_seconds":120,"stdout_bytes":262144,"stderr_bytes":262144,"changed_artifact_files":12,"changed_artifact_bytes":1000000,"root_calls":0,"quadratures":0,"ode_calls":0,"automatic_descendants":0}
+}
