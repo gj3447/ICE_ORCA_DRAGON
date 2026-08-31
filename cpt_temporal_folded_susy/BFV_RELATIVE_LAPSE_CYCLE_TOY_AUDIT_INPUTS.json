@@ -1,0 +1,84 @@
+{
+  "schema_version": "ice.bfv-relative-lapse-cycle-toy-audit.input.v1",
+  "calculation_id": "BfvRelativeLapseCycleToyAudit",
+  "numbered_phase": null,
+  "question": "For one independently declared finite lapse toy integrand on C*, does the positive-real open ray have endpoint damping and retain the principal square-root branch under positive two-slab coordinate bookkeeping, without being promoted to a relative-homology class or gravity cycle?",
+  "kind": "EXACT_SYMBOLIC_OPEN_RAPID_DECAY_LAPSE_TOY_DOMAIN_AND_BRANCH_AUDIT",
+  "epistemic_scope": "DECLARED_CSTAR_OPEN_RAPID_DECAY_RAY_ONLY_NOT_A_RELATIVE_HOMOLOGY_CLASS_NOT_A_GLOBAL_OR_GRAVITY_LAPSE_CYCLE",
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/BFV_ENDPOINT_DETLINE_GLUING_CALIBRATION_RESULT.json",
+      "sha256": "79574d86339933beeff00fdf2bef2ea03fe06103c9c40e89eaed43da579ca411",
+      "payload_sha256_without_self": "48bbaf5df13977e99f7d2a855285851ba061bbc7d55f8c3fa945205c060ea686",
+      "required_verdict": "CALIBRATED_FINITE_ENDPOINT_DETLINE_GLUE_WITH_LAPSE_CYCLE_OPEN",
+      "role": "pins the preceding finite endpoint/determinant-line toy and its explicitly open lapse-cycle field; it does not select the present toy ray"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Cattaneo and Schiavina, BV-BFV approach to General Relativity, Einstein-Hilbert action (2016)",
+      "url": "https://arxiv.org/abs/1509.05762",
+      "used_for": "the bulk-to-boundary BV/BFV compatibility distinction",
+      "not_used_for": "a selected lapse relative cycle, a quantum measure, or a continuum determinant line"
+    },
+    {
+      "source": "Cattaneo and Mnev, A note on gluing via fiber products in the (classical) BV-BFV formalism (2023)",
+      "url": "https://arxiv.org/abs/2208.11211",
+      "used_for": "the requirement to keep compatible boundary data under a classical gluing model",
+      "not_used_for": "a quantum contour theorem or a gravity absolute measure"
+    }
+  ],
+  "declared_toy": {
+    "lapse_space": "C_star = C minus {0}",
+    "integrand_weight": "exp(-(a/N+b*N)) with a>0,b>0",
+    "declared_open_rapid_decay_ray": "Gamma_plus: N=r for r in (0,infinity), oriented from 0_plus to +infinity; no relative-homology group or class is asserted",
+    "branch": "principal Log on C minus (-infinity,0]; principal sqrt(N)=exp(Log(N)/2)",
+    "two_slab_domain": "N_1=r_1>0,N_2=r_2>0; T=r_1+r_2>0,s=r_1/T in (0,1)",
+    "endpoint_data": "only the two decay ends 0_plus and +infinity of the declared ray; no Stokes coefficients or global relative-homology basis"
+  },
+  "assumptions": [
+    "a and b are strictly positive real constants in this finite analytic toy",
+    "Gamma_plus is a declared open rapid-decay toy ray, not an element of a specified relative-homology group and not a derived physical initial lapse cycle",
+    "the principal branch cut is excluded by the positive two-slab domain",
+    "the coordinate map (r_1,r_2) to (T,s) is used only for positive-domain bookkeeping and has no claim of a BV-BFV quantum pushforward",
+    "no gravitational field, ghost continuum, conformal factor, endpoint polarization, or absolute measure is supplied"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "numerical_samples": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "relative_homology_class_of_declared_ray": null,
+    "physical_initial_lapse_relative_cycle": null,
+    "global_relative_homology_basis": null,
+    "picard_lefschetz_thimble_coefficients": null,
+    "quantum_bv_bfv_pushforward": null,
+    "v0_or_gravity_absolute_bfv_measure": null,
+    "continuum_determinant_or_pfaffian_line": null,
+    "gravity_two_slab_gluing_theorem": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all derived positive-ray endpoint, branch, and two-slab coordinate checks pass and the declared scope guards remain pinned",
+      "verdict": "CALIBRATED_DECLARED_OPEN_RAPID_DECAY_LAPSE_TOY_RAY_ONLY",
+      "programme_impact": "RECORD_TOY_RAPID_DECAY_RAY_AND_POSITIVE_DOMAIN_BOOKKEEPING_WITHOUT_SELECTING_A_RELATIVE_HOMOLOGY_CLASS_OR_GRAVITY_CYCLE"
+    },
+    {
+      "condition": "an endpoint-damping, branch, orientation, or coordinate-domain check fails",
+      "verdict": "KILL_DECLARED_OPEN_RAPID_DECAY_LAPSE_TOY_RAY_AUDIT",
+      "programme_impact": "DO_NOT_USE_THE_DECLARED_TOY_RAY_AS_POSITIVE_DOMAIN_BOOKKEEPING"
+    }
+  ]
+}
