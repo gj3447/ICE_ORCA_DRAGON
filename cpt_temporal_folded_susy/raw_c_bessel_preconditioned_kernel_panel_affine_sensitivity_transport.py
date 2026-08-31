@@ -577,13 +577,15 @@ def main() -> None:
     if (
         [row.get("label") for row in coarse_rows] != ["negative", "positive"]
         or any(
-        exact_rational(row["certified_intersection"]["rho4"]["lower"])
-        < -1
-        or exact_rational(
-            row["certified_intersection"]["rho4"]["upper"]
-        )
-        > 1
-        for row in coarse_rows
+            sp.Rational(
+                row["certified_intersection"]["rho4"]["lower"]
+            )
+            < -1
+            or sp.Rational(
+                row["certified_intersection"]["rho4"]["upper"]
+            )
+            > 1
+            for row in coarse_rows
         )
     ):
         raise AssertionError("coarse actual-family row drift")
