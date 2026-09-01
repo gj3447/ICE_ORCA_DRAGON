@@ -3,6 +3,7 @@ import * as Path from "@effect/platform/Path"
 import { createHash } from "node:crypto"
 import { Effect, Stream } from "effect"
 import { iceError, type IceError } from "../errors.ts"
+import { capture } from "../process.ts"
 import { Workspace } from "../workspace.ts"
 import {
   makeCollectionValidationReport,
@@ -38,6 +39,8 @@ export const ONTOLOGY_GRAPH_RELPATH =
   "ontology/cpt-temporal-folded-susy/graph.json"
 export const ONTOLOGY_COLLECTION_RELPATH = "ontology/collection.json"
 const MAX_ONTOLOGY_DOCUMENT_BYTES = 16n * 1024n * 1024n
+const MAX_ONTOLOGY_GIT_CAPTURE_CHARACTERS =
+  Number(MAX_ONTOLOGY_DOCUMENT_BYTES) + 1
 const COLLECTION_GRAPH_LOAD_BLOCKING_CODES = new Set([
   "COLLECTION_DUPLICATE_GRAPH_KEY",
   "COLLECTION_DUPLICATE_GRAPH_ID",
@@ -181,6 +184,13 @@ const hashContainedWorkspaceFile = (
     )
   })
 
+export const hashOntologyDocumentAt = (relpath: string) =>
+  hashContainedWorkspaceFile(
+    relpath,
+    "ONTOLOGY_DOCUMENT_HASH_FAILED",
+    "ONTOLOGY_DOCUMENT_PATH_ESCAPES_WORKSPACE"
+  )
+
 const isEvidenceSnapshotArtifact = (
   node: ResearchNode
 ): node is ArtifactNode =>
@@ -203,6 +213,74 @@ export const loadResearchGraphAt = (relpath: string) =>
       "ONTOLOGY_GRAPH_PATH_ESCAPES_WORKSPACE"
     )
     return yield* decodeResearchGraph(source, relpath)
+  })
+
+const isSafeGitRevision = (revision: string): boolean =>
+  revision.length > 0 &&
+  revision.length <= 256 &&
+  !revision.startsWith("-") &&
+  !revision.includes(":") &&
+  !/[\u0000-\u0020\u007f]/.test(revision)
+
+export const loadResearchGraphAtRevision = (
+  revision: string,
+  relpath: string
+) =>
+  Effect.gen(function* () {
+    if (!isSafeGitRevision(revision)) {
+      return yield* Effect.fail(
+        iceError(
+          "ONTOLOGY_GIT_REVISION_UNSAFE",
+          `revision must be a bounded git revision without options, whitespace, or ':'; received '${revision}'`,
+          2
+        )
+      )
+    }
+    if (!isSafeArtifactPath(relpath)) {
+      return yield* Effect.fail(
+        iceError(
+          "ONTOLOGY_GIT_PATH_UNSAFE",
+          `unsafe repository-relative graph path '${relpath}'`,
+          2
+        )
+      )
+    }
+    const workspace = yield* Workspace
+    const result = yield* capture(
+      {
+        command: "git",
+        args: ["show", `${revision}:${relpath}`],
+        cwd: workspace.root,
+        captureLimitCharacters: MAX_ONTOLOGY_GIT_CAPTURE_CHARACTERS
+      },
+      10
+    )
+    if (result.exitCode !== 0) {
+      return yield* Effect.fail(
+        iceError(
+          "ONTOLOGY_GIT_READ_FAILED",
+          `cannot read ${relpath} at ${revision}: ${result.stderr.trim() || `git exited ${result.exitCode}`}`,
+          2
+        )
+      )
+    }
+    const sourceBytes = new TextEncoder().encode(result.stdout).byteLength
+    if (
+      result.stdout.length >= MAX_ONTOLOGY_GIT_CAPTURE_CHARACTERS ||
+      sourceBytes > Number(MAX_ONTOLOGY_DOCUMENT_BYTES)
+    ) {
+      return yield* Effect.fail(
+        iceError(
+          "ONTOLOGY_GIT_DOCUMENT_TOO_LARGE",
+          `${relpath} at ${revision} exceeds the ${String(MAX_ONTOLOGY_DOCUMENT_BYTES)}-byte ontology limit`,
+          2
+        )
+      )
+    }
+    return yield* decodeResearchGraph(
+      result.stdout,
+      `${relpath} at ${revision}`
+    )
   })
 
 export const loadResearchGraph = loadResearchGraphAt(ONTOLOGY_GRAPH_RELPATH)

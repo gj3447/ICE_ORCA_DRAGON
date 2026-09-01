@@ -9,6 +9,7 @@ export interface ProcessSpec {
   readonly command: string
   readonly args?: ReadonlyArray<string>
   readonly cwd?: string
+  readonly captureLimitCharacters?: number
 }
 
 export interface ProcessResult {
@@ -17,7 +18,8 @@ export interface ProcessResult {
   readonly stderr: string
 }
 
-const captureLimitCharacters = 4 * 1024 * 1024
+const defaultCaptureLimitCharacters = 4 * 1024 * 1024
+const maximumCaptureLimitCharacters = 32 * 1024 * 1024
 
 const makeCommand = (spec: ProcessSpec): Command.Command => {
   const command = Command.make(spec.command, ...(spec.args ?? []))
@@ -27,7 +29,8 @@ const makeCommand = (spec: ProcessSpec): Command.Command => {
 }
 
 const collectText = (
-  stream: EffectStream<Uint8Array, PlatformError>
+  stream: EffectStream<Uint8Array, PlatformError>,
+  captureLimitCharacters: number
 ): Effect.Effect<string, PlatformError> =>
   Effect.suspend(() => {
     const decoder = new TextDecoder("utf-8")
@@ -55,6 +58,20 @@ export const capture = (
   const operation = [spec.command, ...(spec.args ?? [])].join(" ")
   return Effect.scoped(
     Effect.gen(function* () {
+      const captureLimitCharacters =
+        spec.captureLimitCharacters ?? defaultCaptureLimitCharacters
+      if (
+        !Number.isSafeInteger(captureLimitCharacters) ||
+        captureLimitCharacters < 1 ||
+        captureLimitCharacters > maximumCaptureLimitCharacters
+      ) {
+        return yield* Effect.fail(
+          iceError(
+            "PROCESS_CAPTURE_LIMIT_INVALID",
+            `${operation}: captureLimitCharacters must be a positive safe integer no greater than ${maximumCaptureLimitCharacters}`
+          )
+        )
+      }
       const child = yield* Command.start(makeCommand(spec)).pipe(
         mapPlatformError(operation)
       )
@@ -72,7 +89,11 @@ export const capture = (
       )
 
       const collect = Effect.all(
-        [collectText(child.stdout), collectText(child.stderr), child.exitCode],
+        [
+          collectText(child.stdout, captureLimitCharacters),
+          collectText(child.stderr, captureLimitCharacters),
+          child.exitCode
+        ],
         { concurrency: "unbounded" }
       ).pipe(
         Effect.map(([stdout, stderr, exitCode]) => ({

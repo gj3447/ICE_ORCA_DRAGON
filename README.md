@@ -374,6 +374,8 @@ Canonical commands:
 ./ice ontology validate
 ./ice ontology summary
 ./ice ontology guide [--graph <key>] [--path <id>]
+./ice ontology review [--graph <key>] [--base <revision>] [--json]
+./ice ontology export --format jsonld [--graph <key>]
 ./ice harness context <node-id> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness check [--graph <key>]
@@ -383,6 +385,13 @@ Canonical commands:
 `ontology validate` streams every recorded artifact for the full hash gate. The read-only ontology
 commands (`summary`, `show`, `trace`, and `guide`) validate graph structure and semantics without
 reopening large artifact payloads.
+
+`ontology review` is the read-only authoring diff: it compares decoded working graph JSON with a
+committed Git revision, reports deterministic node/edge/navigation/bridge changes, and warns about
+timestamp-only edits or newly changed evidence records that lack `RECORDED_IN`. `ontology export`
+writes an embedded-context JSON-LD 1.1 projection to stdout. The projection is never imported or
+merged back; see the [interoperability boundary](ontology/standards/README.md). Use `npm run
+graph:check` for the TypeScript/test suite plus the full ontology hash/evidence gate.
 
 `harness` is the graph-aware engineering surface: `context` exposes bounded evidence/scope/policy/open
 problem context for a selected node, `impact` maps an exact registered repository path to that context,
@@ -488,6 +497,8 @@ problem materially changes; `ontology validate` is required when the ontology ch
 ```bash
 ./ice ontology validate
 ./ice ontology summary
+./ice ontology review --graph cpt --base HEAD
+./ice ontology export --format jsonld --graph cpt
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph igrueqft --path igrueqft-negative-result-to-open-theory
@@ -505,6 +516,13 @@ problem materially changes; `ontology validate` is required when the ontology ch
 The graph-aware harness adds provenance and change-impact engineering around this memory layer. It is
 human-directed: a graph context is review input, a full raw result remains the check ledger, and no graph
 edge can auto-authorize a successor calculation.
+
+The standard graph-engineering workflow keeps [`ontology/collection.json`](ontology/collection.json)
+and its registered `graph.json` files as the only authored records: inspect impact, edit the native JSON,
+review graph records with `ontology review` (and collection-manifest edits with normal Git diff), run
+`graph:check`, and generate JSON-LD only for downstream consumption. Generated exports are not committed
+as a second graph source. The architecture and non-claims are recorded in the
+[standard graph-engineering decision](docs/decisions/ICE_STANDARD_GRAPH_ENGINEERING_2026-09-01.md).
 
 ## Scientific scope
 

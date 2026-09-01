@@ -177,9 +177,36 @@ The read commands (`summary`, `show`, `trace`, and `guide`) perform structural a
 validation without reopening artifact payloads; intuitive lookup therefore does not depend on the
 529 MB Phase-44 LFS object.
 
+For graph authoring, use the repository JSON as the only editable form and review its graph records
+against a committed base before the full integrity gate:
+
+```bash
+./ice harness impact <registered-repository-path>
+# edit one registered graph.json; inspect collection.json changes with git diff
+./ice ontology review --graph cpt --base HEAD
+npm run graph:check
+./ice ontology export --format jsonld --graph cpt > /tmp/ice-cpt.jsonld
+```
+
+`review` is read-only and reports registered graph node, edge, reading-path, quick-answer, and KG-bridge deltas. It does
+not create IDs, timestamps, patches, or successor calculations. `graph:check` runs the control-plane
+tests and the authoritative full hash/evidence validation. `export` performs structural/semantic
+validation and emits a generated JSON-LD 1.1 view to stdout; run the full validation before sharing an
+export. The collection JSON and graph JSON remain canonical, so generated JSON-LD is never imported,
+merged, or committed as another authored graph.
+
+Collection-manifest additions, removals, renames, and navigation edits remain ordinary Git-review items;
+`ontology review` does not claim to diff them.
+
+The [standards profile](./standards/README.md) fixes repository-local URNs, reifies native edge records
+so their IDs and polarity survive projection, and supplies optional downstream SHACL Core shapes. The
+repository does not bundle a SHACL processor, graph database, SPARQL endpoint, or external-KG writer.
+
 ```bash
 ./ice ontology validate
 ./ice ontology summary
+./ice ontology review --graph all --base HEAD
+./ice ontology export --format jsonld --graph cpt
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph legacy --path legacy-preregistration-provenance

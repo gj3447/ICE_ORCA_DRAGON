@@ -11,6 +11,9 @@
   "scripts": {
     "ice": "tsx src/cli.ts",
     "mcp": "tsx src/mcp-server.ts",
+    "graph:review": "tsx src/cli.ts ontology review --graph all --base HEAD",
+    "graph:export": "tsx src/cli.ts ontology export --format jsonld --graph all",
+    "graph:check": "npm run check && npm run ice -- ontology validate",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "check": "npm run typecheck && npm test"

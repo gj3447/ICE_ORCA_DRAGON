@@ -3,6 +3,8 @@ import { Console, Effect } from "effect"
 import { setExitCode } from "../commands.ts"
 import {
   ontologyGuideCommand,
+  ontologyExportCommand,
+  ontologyReviewCommand,
   ontologyShowCommand,
   ontologySummaryCommand,
   ontologyTraceCommand,
@@ -78,6 +80,36 @@ const guideCommand = Command.make(
   )
 )
 
+const base = Options.text("base").pipe(
+  Options.withDefault("HEAD"),
+  Options.withDescription("committed git revision to compare with the working graph")
+)
+
+const reviewCommand = Command.make(
+  "review",
+  { json, graph, base },
+  ({ json, graph, base }) => ontologyReviewCommand(json, graph, base)
+).pipe(
+  Command.withDescription(
+    "review deterministic canonical-graph changes against a committed revision"
+  )
+)
+
+const format = Options.choice("format", ["jsonld"] as const).pipe(
+  Options.withDefault("jsonld"),
+  Options.withDescription("one-way graph projection format")
+)
+
+const exportCommand = Command.make(
+  "export",
+  { format, graph },
+  ({ format, graph }) => ontologyExportCommand(format, graph)
+).pipe(
+  Command.withDescription(
+    "write a read-only standards projection to stdout; native JSON stays canonical"
+  )
+)
+
 export const ontologyCommand = Command.make("ontology", {}, () =>
   Console.log("Use `ice ontology --help` to inspect ontology commands.")
 ).pipe(
@@ -86,6 +118,8 @@ export const ontologyCommand = Command.make("ontology", {}, () =>
     validateCommand,
     summaryCommand,
     guideCommand,
+    reviewCommand,
+    exportCommand,
     showCommand,
     traceCommand
   ])

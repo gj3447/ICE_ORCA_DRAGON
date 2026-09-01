@@ -21,7 +21,18 @@ import {
   type ValidationReport
 } from "./core.ts"
 import {
+  diffResearchGraphs,
+  makeResearchGraphReviewWarnings,
+  type ResearchGraphReviewWarning,
+  type ResearchGraphDiff
+} from "./diff.ts"
+import { projectCollectionToJsonLd } from "./jsonld.ts"
+import {
+  hashOntologyDocumentAt,
   loadOntologyCollectionValidation,
+  loadResearchCollection,
+  loadResearchGraphAt,
+  loadResearchGraphAtRevision,
   loadValidOntologyCollectionStructure
 } from "./repository.ts"
 
@@ -201,6 +212,50 @@ const renderTrace = (key: string, trace: TraceResult): string =>
               }`
           )
         ])
+  ].join("\n")
+
+interface OntologyGraphReview {
+  readonly graph: string
+  readonly graph_id: string
+  readonly path: string
+  readonly base: string
+  readonly warnings: ReadonlyArray<ResearchGraphReviewWarning>
+  readonly diff: ResearchGraphDiff
+}
+
+interface OntologyReview {
+  readonly base: string
+  readonly target: "working-tree"
+  readonly graph_count: number
+  readonly total_changes: number
+  readonly has_changes: boolean
+  readonly warning_count: number
+  readonly graphs: ReadonlyArray<OntologyGraphReview>
+}
+
+const renderReviewCounts = (
+  counts: ResearchGraphDiff["summary"]["nodes"]
+): string => `+${counts.added} -${counts.removed} ~${counts.changed}`
+
+const renderReview = (review: OntologyReview): string =>
+  [
+    `ONTOLOGY REVIEW ${review.base} -> ${review.target}`,
+    `graphs: ${review.graph_count}`,
+    `changes: ${review.total_changes}`,
+    `warnings: ${review.warning_count}`,
+    ...review.graphs.flatMap((entry) => [
+      `graph ${entry.graph}: ${entry.diff.summary.total_changes} change(s)`,
+      `  metadata: ${entry.diff.summary.metadata_changes}`,
+      `  nodes: ${renderReviewCounts(entry.diff.summary.nodes)}`,
+      `  edges: ${renderReviewCounts(entry.diff.summary.edges)}`,
+      `  reading paths: ${renderReviewCounts(entry.diff.summary.reading_paths)}`,
+      `  quick answers: ${renderReviewCounts(entry.diff.summary.quick_answers)}`,
+      `  KG bridges: ${renderReviewCounts(entry.diff.summary.kg_bridges)}`,
+      ...entry.warnings.map(
+        (warning) =>
+          `  [WARN] ${warning.code}${warning.subject === undefined ? "" : ` (${warning.subject})`}: ${warning.message}`
+      )
+    ])
   ].join("\n")
 
 const selectGraph = (
@@ -489,4 +544,117 @@ export const ontologyGuideCommand = (
     yield* (json
       ? printJson(guide)
       : Console.log(renderGraphGuide(selected, paths)))
+  })
+
+export const ontologyReviewCommand = (
+  json: boolean,
+  graphKey = "all",
+  base = "HEAD"
+) =>
+  Effect.gen(function* () {
+    const collection = yield* loadResearchCollection
+    const descriptors =
+      graphKey === "all"
+        ? collection.graphs
+        : collection.graphs.filter(({ key }) => key === graphKey)
+    if (descriptors.length === 0) {
+      return yield* Effect.fail(
+        iceError(
+          "ONTOLOGY_GRAPH_NOT_FOUND",
+          `no ontology graph is registered as '${graphKey}'`,
+          2
+        )
+      )
+    }
+    const graphs = yield* Effect.forEach(
+      descriptors,
+      (descriptor) =>
+        Effect.gen(function* () {
+          const [before, current] = yield* Effect.all(
+            [
+              loadResearchGraphAtRevision(base, descriptor.path),
+              loadResearchGraphAt(descriptor.path)
+            ],
+            { concurrency: 2 }
+          )
+          const diff = diffResearchGraphs(before, current)
+          return {
+            graph: descriptor.key,
+            graph_id: current.graph_id,
+            path: descriptor.path,
+            base,
+            warnings: makeResearchGraphReviewWarnings(before, current, diff),
+            diff
+          } satisfies OntologyGraphReview
+        }),
+      { concurrency: 2 }
+    )
+    const review: OntologyReview = {
+      base,
+      target: "working-tree",
+      graph_count: graphs.length,
+      total_changes: graphs.reduce(
+        (total, entry) => total + entry.diff.summary.total_changes,
+        0
+      ),
+      has_changes: graphs.some(({ diff }) => diff.summary.has_changes),
+      warning_count: graphs.reduce(
+        (total, entry) => total + entry.warnings.length,
+        0
+      ),
+      graphs
+    }
+    yield* (json ? printJson(review) : Console.log(renderReview(review)))
+    return review
+  })
+
+export const ontologyExportCommand = (
+  format: "jsonld",
+  graphKey = "all"
+) =>
+  Effect.gen(function* () {
+    if (format !== "jsonld") {
+      return yield* Effect.fail(
+        iceError(
+          "ONTOLOGY_EXPORT_FORMAT_UNSUPPORTED",
+          `unsupported ontology export format '${String(format)}'`,
+          2
+        )
+      )
+    }
+    const loaded = yield* loadValidOntologyCollectionStructure
+    if (
+      graphKey !== "all" &&
+      !loaded.collection.graphs.some(({ key }) => key === graphKey)
+    ) {
+      return yield* Effect.fail(
+        iceError(
+          "ONTOLOGY_GRAPH_NOT_FOUND",
+          `no ontology graph is registered as '${graphKey}'`,
+          2
+        )
+      )
+    }
+    const projection = projectCollectionToJsonLd(
+      loaded.collection,
+      loaded.graphs,
+      {
+        ...(graphKey === "all" ? {} : { graphKeys: [graphKey] }),
+        sourceDocuments: yield* Effect.forEach(
+          [
+            loaded.collection.canonical_file,
+            ...loaded.collection.graphs
+              .filter(({ key }) => graphKey === "all" || key === graphKey)
+              .map(({ path }) => path)
+          ],
+          (path) =>
+            hashOntologyDocumentAt(path).pipe(
+              Effect.map((sha256) => ({ path, sha256 }))
+            ),
+          { concurrency: 4 }
+        )
+      }
+    )
+    yield* printJson(projection)
+    return projection
   })

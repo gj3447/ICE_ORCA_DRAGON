@@ -1,5 +1,8 @@
 import { expect, it } from "vitest"
-import { diffResearchGraphs } from "../src/ontology/diff.ts"
+import {
+  diffResearchGraphs,
+  makeResearchGraphReviewWarnings
+} from "../src/ontology/diff.ts"
 import type { ResearchGraph } from "../src/ontology/model.ts"
 
 const graph = (): ResearchGraph => ({
@@ -137,4 +140,37 @@ it("is order-independent and disambiguates ID-less duplicates by canonical occur
   const delta = diffResearchGraphs(base, changed)
   expect(delta.quick_answers.changed).toHaveLength(1)
   expect(delta.quick_answers.changed[0]).toMatchObject({ key: "Duplicate?", index: 1 })
+})
+
+it("adds focused authoring warnings without treating them as validation", () => {
+  const base = graph()
+  const changedEvidence: ResearchGraph = {
+    ...base,
+    nodes: base.nodes.map((node) =>
+      node.id === "evidence:base"
+        ? { ...node, summary: "Changed but not snapshot-linked." }
+        : node
+    )
+  }
+  const evidenceDiff = diffResearchGraphs(base, changedEvidence)
+  expect(
+    makeResearchGraphReviewWarnings(base, changedEvidence, evidenceDiff).map(
+      ({ code }) => code
+    )
+  ).toEqual([
+    "ONTOLOGY_REVIEW_UPDATED_AT_UNCHANGED",
+    "ONTOLOGY_REVIEW_EVIDENCE_NOT_RECORDED"
+  ])
+
+  const timestampOnly: ResearchGraph = {
+    ...base,
+    updated_at_utc: "2026-09-01T03:00:00Z"
+  }
+  expect(
+    makeResearchGraphReviewWarnings(
+      base,
+      timestampOnly,
+      diffResearchGraphs(base, timestampOnly)
+    ).map(({ code }) => code)
+  ).toEqual(["ONTOLOGY_REVIEW_TIMESTAMP_ONLY"])
 })

@@ -16,6 +16,19 @@ layer(NodeContext.layer)("scoped process runner", (it) => {
       expect(result).toEqual({ exitCode: 7, stdout: "out", stderr: "err" })
     })
   )
+
+  it.effect("rejects an unbounded capture request before spawning", () =>
+    Effect.gen(function* () {
+      const result = yield* capture({
+        command: process.execPath,
+        captureLimitCharacters: 32 * 1024 * 1024 + 1
+      }).pipe(Effect.either)
+      expect(result._tag).toBe("Left")
+      if (result._tag === "Left") {
+        expect(result.left.code).toBe("PROCESS_CAPTURE_LIMIT_INVALID")
+      }
+    })
+  )
 })
 
 it.live("hard-kills a SIGTERM-resistant process group on timeout", () => {

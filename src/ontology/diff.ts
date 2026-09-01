@@ -72,6 +72,12 @@ export interface ResearchGraphDiff {
   readonly summary: ResearchGraphDiffSummary
 }
 
+export interface ResearchGraphReviewWarning {
+  readonly code: string
+  readonly message: string
+  readonly subject?: string | undefined
+}
+
 const compare = (left: string, right: string): number =>
   left < right ? -1 : left > right ? 1 : 0
 
@@ -244,4 +250,77 @@ export const diffResearchGraphs = (
       has_changes: total_changes > 0
     }
   }
+}
+
+const warning = (
+  code: string,
+  message: string,
+  subject?: string
+): ResearchGraphReviewWarning => ({ code, message, subject })
+
+/** Focused authoring warnings; authoritative validity remains in core.ts. */
+export const makeResearchGraphReviewWarnings = (
+  base: ResearchGraph,
+  current: ResearchGraph,
+  diff: ResearchGraphDiff
+): ReadonlyArray<ResearchGraphReviewWarning> => {
+  const warnings: Array<ResearchGraphReviewWarning> = []
+  const timestampChanged = base.updated_at_utc !== current.updated_at_utc
+  const changesWithoutTimestamp =
+    diff.summary.total_changes -
+    diff.metadata.filter(({ field }) => field === "updated_at_utc").length
+
+  if (changesWithoutTimestamp > 0 && !timestampChanged) {
+    warnings.push(
+      warning(
+        "ONTOLOGY_REVIEW_UPDATED_AT_UNCHANGED",
+        "graph content changed but updated_at_utc did not"
+      )
+    )
+  }
+  if (changesWithoutTimestamp === 0 && timestampChanged) {
+    warnings.push(
+      warning(
+        "ONTOLOGY_REVIEW_TIMESTAMP_ONLY",
+        "updated_at_utc changed without another graph change"
+      )
+    )
+  }
+
+  const changedCurrentNodes: ReadonlyArray<ResearchNode> = [
+    ...diff.nodes.added,
+    ...diff.nodes.changed.map(({ after }) => after)
+  ]
+  for (const node of changedCurrentNodes) {
+    if (
+      node.type === "evidence" &&
+      !current.edges.some(
+        (edge) => edge.from === node.id && edge.relation === "RECORDED_IN"
+      )
+    ) {
+      warnings.push(
+        warning(
+          "ONTOLOGY_REVIEW_EVIDENCE_NOT_RECORDED",
+          "new or changed evidence has no outgoing RECORDED_IN edge",
+          node.id
+        )
+      )
+    }
+    if (
+      node.type === "artifact" &&
+      node.artifact_kind === "evidence" &&
+      !current.edges.some(
+        (edge) => edge.to === node.id && edge.relation === "RECORDED_IN"
+      )
+    ) {
+      warnings.push(
+        warning(
+          "ONTOLOGY_REVIEW_EVIDENCE_ARTIFACT_UNREFERENCED",
+          "new or changed evidence artifact has no incoming RECORDED_IN edge",
+          node.id
+        )
+      )
+    }
+  }
+  return warnings
 }

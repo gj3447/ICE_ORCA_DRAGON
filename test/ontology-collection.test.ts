@@ -22,6 +22,7 @@ import { decodeResearchGraph } from "../src/ontology/model.ts"
 import {
   loadOntologyCollectionValidation,
   loadResearchGraphAt,
+  loadResearchGraphAtRevision,
   loadResearchCollection
 } from "../src/ontology/repository.ts"
 import {
@@ -406,6 +407,28 @@ it.effect("detects duplicate descriptors, broken references, and cross-graph has
 const AppLayer = Layer.mergeAll(NodeContext.layer, WorkspaceLive)
 
 layer(AppLayer)("canonical ontology collection", (it) => {
+  it.effect("bounds committed graph reads and rejects unsafe revision syntax", () =>
+    Effect.gen(function* () {
+      const unsafe = yield* loadResearchGraphAtRevision(
+        "HEAD:alternate-path",
+        "ontology/cpt-temporal-folded-susy/graph.json"
+      ).pipe(Effect.either)
+      expect(unsafe._tag).toBe("Left")
+      if (unsafe._tag === "Left") {
+        expect(unsafe.left.code).toBe("ONTOLOGY_GIT_REVISION_UNSAFE")
+      }
+
+      const missing = yield* loadResearchGraphAtRevision(
+        "definitely-missing-ontology-revision",
+        "ontology/cpt-temporal-folded-susy/graph.json"
+      ).pipe(Effect.either)
+      expect(missing._tag).toBe("Left")
+      if (missing._tag === "Left") {
+        expect(missing.left.code).toBe("ONTOLOGY_GIT_READ_FAILED")
+      }
+    })
+  )
+
   it.effect("rejects a graph symlink that resolves outside the workspace", () =>
     Effect.scoped(
       Effect.gen(function* () {

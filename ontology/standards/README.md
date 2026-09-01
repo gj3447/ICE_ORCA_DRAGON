@@ -19,6 +19,19 @@ record:
 - Keep source paths and SHA-256 values as projected values from the native
   record.  A JSON-LD serialization or RDF normalization is not a replacement
   for the native artifact hash, path, command, environment, or check ledger.
+- The export manifest records the working-tree SHA-256 of the canonical
+  collection document and each selected graph document. It binds an export to
+  its input bytes but does not certify the artifacts referenced by those
+  documents; `./ice ontology validate` remains that integrity gate.
+
+`--graph <key>` selects the graph-specific bodies (nodes, edges, graph reading
+paths, and bridges) but deliberately retains the complete collection envelope,
+including its descriptors and navigation metadata. It is a contextual query,
+not an access-control or redaction boundary. The selected body keys and only
+the selected canonical graph-document hashes are listed explicitly.
+
+The embedded `dcterms` and `prov` prefixes are reserved names only. Version
+1.0 of the exporter emits no DCMI Terms or PROV-O statements.
 
 The projection reifies every graph edge as a `project:ResearchEdge` resource.
 The native edge has its own stable `localId` and may carry metadata such as
