@@ -7,10 +7,12 @@ Status: active navigation policy
 ## Decision
 
 The user-declared north star of the CPT x Temporal-Folded SUSY programme is to
-construct, or decisively falsify, an evidence-backed candidate theory of
-everything.  This objective is a routing target, not an established physics
-claim.  The repository remains a computational workbench, and a numerical or
-formal match does not by itself become physics evidence.
+construct, or decisively resolve or falsify, the declared candidate route toward
+an evidence-backed theory of everything.  This objective is a routing target,
+not an established physics claim.  A negative result closes only its proved
+scope or this candidate route, never every possible TOE.  The repository remains
+a computational workbench, and a numerical or formal match does not by itself
+become physics evidence.
 
 Work may be called **core TOE progress** only after a human reviewer can name:
 
@@ -49,8 +51,10 @@ negative resolution.
 The arrows are claim prerequisites, not a ban on exploratory downstream work.
 G2--G5 calculations performed before compatible upstream typed inputs exist are
 `CONDITIONAL` or `SUPPORTING_METHOD`.  They cannot be reported as core TOE
-progress.  P1--P7 are enabling lanes under this rule, not independent success
-counters.  In particular, local root refinements, finite Weyl proxies,
+progress.  P1--P7 are supporting by default, not independent success counters;
+a P-lane task becomes a core-routing candidate only when human review identifies
+the exact G1--G5 missing object and evidence edge that its output would change.
+In particular, local root refinements, finite Weyl proxies,
 selected-H-only RAQ, finite harmonic packets, toy BFV gluing, likelihood work,
 historical Phase replay, numerology, other independent ontology graphs, and
 graph tooling do not advance the core path unless a named missing typed object
@@ -82,6 +86,11 @@ declared model scope has independent support for all of the following:
 7. comparison with data under an explicit likelihood and independent
    reproducibility review.
 
+Item 7 is an intentional repository-level empirical completion requirement that
+is stronger than the observational-discriminator wording in the historical
+five-gate map.  Before data exist, the narrower theoretical status may be
+reported explicitly, but it is not the terminal repository label.
+
 This is a workbench completion predicate, not permission to claim that a TOE has
 been discovered.  Scientific acceptance remains external.  A rigorous no-go or
 stable null may close this candidate route without satisfying the user's TOE
@@ -106,7 +115,9 @@ proposal when any of these holds:
 - it creates a successor task merely because the preceding bounded calculation
   finished.
 
-`./ice agent plan` is a navigation and handoff aid only.  It cannot approve a
-core-progress label, mutate the graph, persist its checkpoint, or authorize
-`./ice run`.  Human review and the lean one-question/one-output/non-claim rules
-remain mandatory.
+`./ice agent plan` is a core-labelled navigation and handoff aid only.  It blocks
+its own calculation-design path for downstream or supporting work; that does not
+ban a separately reviewed bounded supporting calculation under the lean rules.
+It cannot approve a core-progress label, mutate the graph, persist its checkpoint,
+or authorize `./ice run`.  Human review and the lean
+one-question/one-output/non-claim rules remain mandatory.

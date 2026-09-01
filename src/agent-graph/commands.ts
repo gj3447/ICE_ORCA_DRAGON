@@ -1,7 +1,9 @@
 import { Console, Effect } from "effect"
 import { iceError } from "../errors.ts"
-import { graphRagSearchData } from "../graphrag/commands.ts"
+import { graphRagIndexData } from "../graphrag/commands.ts"
+import { searchGraphRag } from "../graphrag/core.ts"
 import { planResearchAgentWorkflow } from "./core.ts"
+import { assertToeNavigationProfile } from "./toe-route.ts"
 
 const printJson = (value: unknown): Effect.Effect<void> =>
   Console.log(JSON.stringify(value, null, 2))
@@ -12,10 +14,14 @@ export const researchAgentPlanData = (
   limit: number,
   depth: number
 ) =>
-  graphRagSearchData(question, { graph, limit, depth }).pipe(
-    Effect.flatMap((retrieval) =>
+  graphRagIndexData.pipe(
+    Effect.flatMap((index) =>
       Effect.try({
-        try: () => planResearchAgentWorkflow(question, retrieval),
+        try: () => {
+          assertToeNavigationProfile(index.units)
+          const retrieval = searchGraphRag(index, question, { graph, limit, depth })
+          return planResearchAgentWorkflow(question, retrieval)
+        },
         catch: (error) =>
           iceError(
             "RESEARCH_AGENT_PLAN_FAILED",
@@ -41,8 +47,12 @@ export const researchAgentPlanCommand = (
             [
               `research agent checkpoint: ${plan.checkpoint.id}`,
               `state: ${plan.checkpoint.state}`,
+              `objective: ${plan.objective_routing.objective.status}`,
+              `route: ${plan.objective_routing.classification}`,
+              `selected lane: ${plan.objective_routing.selected_lane_id ?? "NONE"}`,
+              `decision: ${plan.objective_routing.decision}`,
               `retrieved records: ${plan.checkpoint.graph_retrieval_ids.length}`,
-              "execution: NOT AUTHORIZED; human review is required"
+              "execution/core-progress: NOT AUTHORIZED; human route review is required"
             ].join("\n")
           )
     )

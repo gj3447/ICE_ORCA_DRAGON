@@ -46,6 +46,19 @@ it("exposes a bounded read-only MCP capability surface", async () => {
     expect(JSON.stringify(graphRagSummary.content)).toContain(
       "ice-evidence-graph-rag-summary/v1"
     )
+
+    const toePlan = await client.callTool({
+      name: "ice_research_workflow_plan",
+      arguments: {
+        question: "Gate 1 original joint cycle and signed global intersection vector",
+        graph: "cpt"
+      }
+    })
+    expect(toePlan.isError).not.toBe(true)
+    expect(JSON.stringify(toePlan.content)).toContain("CURRENT_BLOCKER_CANDIDATE")
+    expect(JSON.stringify(toePlan.content)).toContain(
+      "TOE_CANDIDATE_READY_FOR_EXTERNAL_REVIEW"
+    )
   } finally {
     await client.close()
     await server.close()

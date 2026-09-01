@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-01T06:23:24Z",
+  "updated_at_utc": "2026-09-01T09:57:27Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -2767,7 +2767,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "7e0289052853f675d486a4276d6bb77c9949087494ce7eb4ea8e968e3ee1edc2",
+      "sha256": "f3524b9c0d07e7698c3a5afc6d991319fb56e2369af7dbaf3008acfbe22d96de",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -2799,6 +2799,16 @@
       "path": "docs/decisions/ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md",
       "sha256": "6ea9b85d818fd8c71a312b4b48c519b708154918677e77063a10da06cbf0a35a",
       "introduced_in_commit": "1ab7b779cf6fbdc4343ba5200ea8efe6037243a9"
+    },
+    {
+      "id": "policy:toe-directed-critical-path-routing",
+      "type": "policy",
+      "title": "TOE-directed critical-path and anti-meandering routing",
+      "summary": "Active navigation policy for the user-declared CPT TOE objective. Core progress must reduce a canonical current blocker with a bounded typed output and an explicit dependency path; downstream, enabling, infrastructure and unrelated work remains conditional or supporting. The terminal label is external-review readiness, not a TOE discovery claim.",
+      "state": "ACTIVE_NAVIGATION_POLICY_NON_EVIDENCE",
+      "path": "docs/decisions/ICE_TOE_CRITICAL_PATH_ROUTING_2026-09-01.md",
+      "sha256": "d037a45a87201118f25fa8c3e6cbe3f2f8aeebd1eb7cbb424c17e1ebbf140569",
+      "introduced_in_commit": "0aada817f9b5366dba0ff17f75292189b3698886"
     },
     {
       "id": "concept:invariant-difference-amplitude-and-record",
@@ -35375,7 +35385,8 @@
     {"id":"edge:3674","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:giulini-2000-group-averaging-raq","note":"Supplies group-averaging and rigging-map obligations; convergence, positivity and test-space control remain model-specific."},
     {"id":"edge:3675","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"Supplies the RAQ domain framework without selecting the raw-C extension, spectral representation or physical product."},
     {"id":"edge:3676","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:giulini-marolf-1999-uniqueness","note":"Conditional rigging-map uniqueness does not substitute for constructing a convergent positive raw-C rigging map."},
-    {"id":"edge:3677","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:louko-martinez-pascual-2011","note":"Constraint-rescaling examples justify withholding C/H equivalence until domains, extensions, spectral data, test spaces and rigging maps are intertwined."}
+    {"id":"edge:3677","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:louko-martinez-pascual-2011","note":"Constraint-rescaling examples justify withholding C/H equivalence until domains, extensions, spectral data, test spaces and rigging maps are intertwined."},
+    {"id":"edge:3678","from":"programme:cpt-temporal-folded-susy","relation":"GOVERNED_BY","to":"policy:toe-directed-critical-path-routing","note":"Active user-objective navigation and anti-meandering policy only; it is neither scientific evidence nor execution authority."}
   ],
   "kg_bridges": [
     {

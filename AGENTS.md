@@ -16,6 +16,34 @@
   **erase 금지**다 (narrative-feedback-loop, Eilu va-Eilu). 격하가 아니라 층 분리다.
 - 이 둘을 동시에 지키는 것이 이 저장소에서 가장 자주 틀리는 지점이다.
 
+## TOE 북극성과 삼천포 차단 — ACTIVE
+
+`docs/decisions/ICE_TOE_CRITICAL_PATH_ROUTING_2026-09-01.md`가 core 연구의 현재 navigation
+정본이다. 사용자 목표는 evidence-backed TOE를 향한 선언된 CPT candidate route의 구성·해소 또는
+반증이지만, 이는 목표이지 성립한 물리 claim이 아니다. scoped negative result는 해당 route만 닫으며
+모든 가능한 TOE를 반증하지 않는다.
+
+- 현재 첫 병목은 `open:gate1-original-cycle-signed-global-intersections`다. 기본 core 연구는
+  source-defined regulated joint relative class, 완전한 saddle/sheet/singular·Stokes/good-end census,
+  oriented global intersection vector, homotopy·gauge·regulator 안정성 중 하나를 직접 줄여야 한다.
+  완전하고 안정적인 zero vector도 유효한 negative resolution이다.
+- CPT core 작업을 설계하기 전에 `./ice agent plan "<한 질문>" --graph cpt --json`을 실행한다. 질문은
+  canonical open-problem node, 아직 없는 typed object, bounded falsifiable output, 다음 gate에서 TOE
+  종료조건까지의 dependency path를 명시해야 한다. planner의 `CURRENT_BLOCKER_CANDIDATE`는 검토
+  후보일 뿐 승인이나 evidence가 아니며, 사람이 같은 네 항목을 확인해야 한다.
+- G1→G2→G3→G4→G5→full-theory/empirical review는 claim dependency다. upstream compatible typed
+  input 없이 수행한 downstream 계산은 허용되더라도 `CONDITIONAL`/`SUPPORTING_METHOD`이며 core TOE
+  진전으로 세지 않는다. P1--P7은 기본 supporting이며, 사람이 정확한 G1--G5 missing object와 바뀔
+  evidence edge를 확인한 경우에만 core-routing 후보가 된다.
+- blocker/path가 없거나, 이미 충분한 local lemma를 반복하거나, named consumer 없는 tooling을 만들거나,
+  backend·dtype·solver·tolerance만 바꾸거나, 다른 독립 ontology graph를 근거 없이 합치면
+  `STOP_OR_REFRAME`, `MAINTENANCE`, 또는 `ARCHIVE`로 격리한다. 한 결과가 후속 작업을 자동 생성하지
+  않는다.
+- 저장소 내부의 최종 허용 표시는 `TOE_CANDIDATE_READY_FOR_EXTERNAL_REVIEW`다. G1--G5뿐 아니라 full
+  3+1 local modes, arbitrary-background closure, regulator-independent continuum/UV completion, positive
+  physical state, unitarity/causality, GR+QFT low-energy recovery, normalized discriminator, data likelihood와
+  독립 재현 검토가 모두 필요하다. 이는 TOE 발견 선언이 아니며 과학적 수용은 외부 검토 사항이다.
+
 ## 실행 차단기 — ACTIVE (Ragnarok 역사 경로에 한정)
 
 `docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`는 killed route의 실행 경계만
@@ -77,6 +105,10 @@ uv sync --locked
 - 스크립트 정보: `./ice info <name>` (경로 / 독스트링 / 산출 result JSON)
 - 연구 그래프 검사·조회: `./ice ontology validate`, `./ice ontology summary`,
   `./ice ontology show <node-id>`, `./ice ontology trace <node-id>`
+- core 경로 사전검토: `./ice agent plan "<question>" --graph cpt --json`
+- evidence 문맥·영향·무결성: `./ice harness context <node-id>`, `./ice harness impact <path>`,
+  `./ice harness check`
+- bounded graph retrieval: `./ice graphrag search "<question>" --graph cpt --depth 0..3`
 - 기존 numerology 검산(선택): `./ice run ice_prereg_check`
   (과거 P01–P15 산출물 재현용이며 새 연구의 필수 게이트가 아니다)
 
@@ -159,8 +191,11 @@ rule의 사전 고정 및 적절한 multiplicity/global calibration을 요구한
 
 ## Workflow
 
-1. 관련 기존 산출물을 먼저 본다. 계산 작업일 때만 `./ice list`로 가장 비슷한 스크립트를 찾는다.
-2. source/convention을 확인하고 가장 작은 계산 또는 변경을 만든다.
-3. 변경에 맞는 최소 검증을 실행한다. 계산을 바꿨다면 `./ice run <name>`, 기존 산출물의
+1. CPT core 연구면 `./ice agent plan "<question>" --graph cpt --json`으로 현재 blocker와 TOE dependency
+   path를 먼저 검토한다. `CURRENT_BLOCKER_CANDIDATE`가 아니면 core 계산을 설계하지 않고 질문을
+   재구성하거나 supporting/maintenance로 분류한다.
+2. 관련 기존 산출물을 먼저 본다. 계산 작업일 때만 `./ice list`로 가장 비슷한 스크립트를 찾는다.
+3. source/convention을 확인하고 가장 작은 계산 또는 변경을 만든다.
+4. 변경에 맞는 최소 검증을 실행한다. 계산을 바꿨다면 `./ice run <name>`, 기존 산출물의
    재현이면 `./ice repro --only <name>`을 사용한다.
-4. 실행한 명령과 실제 출력을 보고한다. 관측하지 않은 그린을 보고하지 않는다.
+5. 실행한 명령과 실제 출력을 보고한다. 관측하지 않은 그린을 보고하지 않는다.

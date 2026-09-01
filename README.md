@@ -511,11 +511,19 @@ problem materially changes; `ontology validate` is required when the ontology ch
 ./ice harness context cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
 ./ice harness impact docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md
 ./ice harness check
+./ice agent plan "Gate 1 original joint cycle and signed global intersection vector" --graph cpt --json
 ```
 
 The graph-aware harness adds provenance and change-impact engineering around this memory layer. It is
 human-directed: a graph context is review input, a full raw result remains the check ledger, and no graph
 edge can auto-authorize a successor calculation.
+
+For core TOE-directed work, the active
+[critical-path routing policy](docs/decisions/ICE_TOE_CRITICAL_PATH_ROUTING_2026-09-01.md) makes the
+original joint-cycle/signed-global-intersection problem the current first blocker. `agent plan` must
+return a specifically anchored `CURRENT_BLOCKER_CANDIDATE` before calculation design can receive human
+review; downstream or enabling-lane work remains conditional/supporting and cannot be counted as core
+progress. The planner grants neither a physics claim nor execution authority.
 
 The standard graph-engineering workflow keeps [`ontology/collection.json`](ontology/collection.json)
 and its registered `graph.json` files as the only authored records: inspect impact, edit the native JSON,
@@ -569,6 +577,7 @@ is not a sign, root, spectrum, RAQ, quantum-gravity, physics, or TOE result.
 | [`docs/USERGUIDE.md`](docs/USERGUIDE.md) | CLI and runnable-catalog guide |
 | [`docs/STATUS.md`](docs/STATUS.md) | engineering status and bounded scientific ledger |
 | [`docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md) | active six-rule, failure-directed research method |
+| [`docs/decisions/ICE_TOE_CRITICAL_PATH_ROUTING_2026-09-01.md`](docs/decisions/ICE_TOE_CRITICAL_PATH_ROUTING_2026-09-01.md) | active TOE north-star, current-blocker, anti-meandering, and terminal review policy |
 | [`research/README.md`](research/README.md) | organized research-code and report map |
 | [`cpt_temporal_folded_susy/README.md`](cpt_temporal_folded_susy/README.md) | complete CPT phase index and current boundary |
 | [`ontology/README.md`](ontology/README.md) | research-graph format and CLI entry points |

@@ -27,9 +27,11 @@ The available components are:
    time-stamped, read-only OpenAlex requests rather than crawling the literature
    graph.
 4. `./ice agent plan <question>` creates a serializable workflow checkpoint. The
-   only completed automatic work is bounded local retrieval. Source expansion,
-   evidence review, calculation design, and every `./ice run` decision remain
-   explicitly human-reviewed; its execution step is `NOT_AUTHORIZED`.
+   v2 plan applies the active TOE navigation profile after bounded local
+   retrieval. Only a specifically anchored current-blocker question can reach
+   human calculation-design review; downstream, supporting, and unanchored
+   questions emit `STOP_OR_REFRAME`. Core-progress and execution authorization
+   both remain `NOT_GRANTED`.
 5. The same surfaces are available over local stdio MCP as
    `ice_graphrag_summary`, `ice_graphrag_search`,
    `ice_literature_neighbors`, and `ice_research_workflow_plan`.
@@ -65,7 +67,9 @@ current model and agent guidance](https://developers.openai.com/api/docs/guides/
 `evaluateGraphRag` is a deterministic retrieval evaluator for a deliberately
 small set of stable, predeclared canonical node locators. It reports retrieval
 recall only. `evaluateResearchAgentRouting` checks that an emitted workflow
-still requires human review and cannot authorize execution. Neither assesses a
+requires blocker-route review, cannot bypass an upstream dependency into
+calculation design, and cannot authorize either execution or a core-progress
+label. Neither assesses a
 physical conclusion, citation correctness, scientific truth, or model reasoning.
 
 Before enabling learned embeddings, LLM entity/relation extraction, hierarchical
@@ -90,10 +94,11 @@ and the [RO-Crate specification](https://www.researchobject.org/ro-crate/specifi
 ./ice graphrag summary --json
 ./ice graphrag search "bounded provenance evidence" --graph cpt --limit 12 --depth 1
 ./ice literature neighbors W2741809807 --limit 10 --json
-./ice agent plan "Which primary source constrains this finite result?" --graph cpt --json
+./ice agent plan "Gate 1 original joint cycle and signed global intersection vector" --graph cpt --json
 npm run --silent mcp
 ```
 
-All output is retrieval, discovery, or human-review planning context. It does
-not change a claim, add an ontology record, run a numerical kernel, persist an
-agent checkpoint, approve a calculation, or create a successor task.
+All output is retrieval, discovery, or human-review planning context. The TOE
+objective profile is navigation policy rather than evidence. Output does not
+change a claim, add an ontology record, run a numerical kernel, persist an agent
+checkpoint, approve core progress or a calculation, or create a successor task.

@@ -73,7 +73,7 @@ const capabilities = {
     },
     {
       name: "ice_research_workflow_plan",
-      purpose: "Create a human-review-only durable research workflow checkpoint."
+      purpose: "Create a human-review-only TOE critical-path workflow checkpoint."
     }
   ],
   boundaries: [
@@ -244,10 +244,10 @@ export const createIceResearchMcpServer = (): McpServer => {
     {
       title: "Human-review research workflow plan",
       description:
-        "Create a serializable durable workflow checkpoint from local GraphRAG context. It does not persist automatically, call models, or authorize ./ice run.",
+        "Create a serializable TOE critical-path checkpoint from local GraphRAG context. It does not persist automatically, call models, approve core progress, or authorize ./ice run.",
       inputSchema: {
         question: z.string().min(1).max(500),
-        graph: z.string().min(1).max(128).default("all"),
+        graph: z.string().min(1).max(128).default("cpt"),
         limit: z.number().int().min(1).max(50).default(12),
         depth: z.number().int().min(0).max(3).default(1)
       },
