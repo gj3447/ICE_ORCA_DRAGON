@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-01T09:57:27Z",
+  "updated_at_utc": "2026-09-01T14:24:48Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1562,6 +1562,35 @@
         "concept:p7-closed-cosmology-likelihood-readiness-preflight",
         "open:gate1-v0-empirical-likelihood-bridge"
       ]
+    },
+    {
+      "id": "reading-path:toe-current-critical-path",
+      "title": "Current TOE candidate critical path",
+      "summary": "Read the active routing policy and then the canonical G1 through G5 claim-prerequisite spine. G1 is the current first blocker. Later gates remain conditional until compatible upstream typed objects exist. This is navigation toward external-review readiness, not evidence that a TOE or new physics has been established.",
+      "nodes": [
+        "policy:toe-directed-critical-path-routing",
+        "open:gate1-original-cycle-signed-global-intersections",
+        "open:gate2-hard-cfu-airy-coefficients",
+        "open:gate3-full-bfv-pfaffian-pin-holonomy",
+        "open:gate4-spinorial-charge-domain-constraint-closure",
+        "open:gate5-persistent-order-and-pole-splitting"
+      ]
+    },
+    {
+      "id": "reading-path:v0-supporting-bridge-portfolio",
+      "title": "V0 supporting bridge portfolio",
+      "summary": "Read the current discovery-gap map and the canonical P1 through P7 open obligations as a supporting portfolio. These lanes do not automatically unblock G1 through G5; one becomes a core-routing candidate only after human review identifies the exact missing typed object and evidence edge it changes.",
+      "nodes": [
+        "concept:gate1-v0-current-physics-discovery-gap-map",
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+        "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+        "open:gate1-v0-classical-s3-hda-closure",
+        "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+        "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+        "open:gate1-v0-relational-observables-bo-decoherence",
+        "open:gate1-v0-empirical-likelihood-bridge"
+      ]
     }
   ],
   "node_type_legend": {
@@ -2767,7 +2796,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "f3524b9c0d07e7698c3a5afc6d991319fb56e2369af7dbaf3008acfbe22d96de",
+      "sha256": "f22e5187cc2bd436e036b165ff6c3fa430120a749b6eb4e6ecedfd3f9c7172be",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {
@@ -35386,7 +35415,24 @@
     {"id":"edge:3675","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"Supplies the RAQ domain framework without selecting the raw-C extension, spectral representation or physical product."},
     {"id":"edge:3676","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:giulini-marolf-1999-uniqueness","note":"Conditional rigging-map uniqueness does not substitute for constructing a convergent positive raw-C rigging map."},
     {"id":"edge:3677","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"CITES","to":"source:louko-martinez-pascual-2011","note":"Constraint-rescaling examples justify withholding C/H equivalence until domains, extensions, spectral data, test spaces and rigging maps are intertwined."},
-    {"id":"edge:3678","from":"programme:cpt-temporal-folded-susy","relation":"GOVERNED_BY","to":"policy:toe-directed-critical-path-routing","note":"Active user-objective navigation and anti-meandering policy only; it is neither scientific evidence nor execution authority."}
+    {"id":"edge:3678","from":"programme:cpt-temporal-folded-susy","relation":"GOVERNED_BY","to":"policy:toe-directed-critical-path-routing","note":"Active user-objective navigation and anti-meandering policy only; it is neither scientific evidence nor execution authority."},
+    {"id":"edge:3679","from":"claim:CLOSED_S3_SCALAR_DERIVED_HARMONIC_NORMALIZATIONS_HOLD","relation":"MOTIVATES","to":"open:gate1-v0-classical-s3-hda-closure","note":"Scoped harmonic normalization is an input ledger for the still-open full S3 constraint calculation; it neither closes nor automatically advances HDA/Jacobi."},
+    {"id":"edge:3680","from":"claim:CLOSED_S3_ZONAL_PRODUCTS_AND_CUTOFF_REMAINDERS_HOLD","relation":"MOTIVATES","to":"open:gate1-v0-classical-s3-hda-closure","note":"The zonal product and discarded-mode ledger is calibration for the full S3 closure problem, not evidence of closure."},
+    {"id":"edge:3681","from":"claim:CLOSED_S3_SVT_SPECTRAL_CONVENTIONS_AND_COUNTS_HOLD","relation":"MOTIVATES","to":"open:gate1-v0-classical-s3-hda-closure","note":"The convention-checked spectral count is a generator audit for the still-missing full SVT/HDA calculation, not a constraint result."},
+    {"id":"edge:3682","from":"claim:CLOSED_S3_ZONAL_CONFORMAL_CURVATURE_CUBIC_VERTEX_HOLDS","relation":"MOTIVATES","to":"open:gate1-v0-classical-s3-hda-closure","note":"This restricted curvature vertex is one calibration packet inside the open full gravitational HDA/Jacobi obligation."},
+    {"id":"edge:3683","from":"claim:CLOSED_S3_ZONAL_CONFORMAL_TRACE_KINETIC_CUBIC_VERTEX_HOLDS","relation":"MOTIVATES","to":"open:gate1-v0-classical-s3-hda-closure","note":"This restricted trace-kinetic vertex is one calibration packet inside the open full gravitational HDA/Jacobi obligation."},
+    {"id":"edge:3684","from":"claim:CLOSED_S3_ZONAL_CONFORMAL_V0_SCALAR_MATTER_CUBIC_VERTEX_HOLDS","relation":"MOTIVATES","to":"open:gate1-v0-classical-s3-hda-closure","note":"This restricted matter vertex is one calibration packet inside the open combined gravity-plus-matter HDA/Jacobi obligation."},
+    {"id":"edge:3685","from":"claim:V0_TWO_CLASSICAL_CLOCKS_AGREE_ON_OVERLAP","relation":"MOTIVATES","to":"open:gate1-v0-relational-observables-bo-decoherence","note":"Classical chart agreement is a scoped clock calibration; the common physical product, quantum clock change, BO control and decoherence remain open."},
+    {"id":"edge:3686","from":"claim:HOMOGENEOUS_STAROBINSKY_TWO_CLOCK_FP_LOCI_HOLD","relation":"MOTIVATES","to":"open:gate1-v0-relational-observables-bo-decoherence","note":"The homogeneous FP loci delimit a clock chart only; they do not construct relational quantum observables or a physical product."},
+    {"id":"edge:3687","from":"claim:HOMOGENEOUS_STAROBINSKY_LOCAL_P0_CLOCK_BOUNDARY_VECTORS_HOLD","relation":"MOTIVATES","to":"open:gate1-v0-relational-observables-bo-decoherence","note":"The local boundary vectors are chart diagnostics only and leave trajectory, quantum clock and state obligations open."},
+    {"id":"edge:3688","from":"claim:PARAMETRIZED_PARTICLE_FINITE_BFV_GLUE_HOLDS","relation":"MOTIVATES","to":"open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure","note":"The finite toy gluing identity is a method calibration only; gravitational polarization, cycle, determinant line and absolute measure remain open."},
+    {"id":"edge:3689","from":"claim:CLOSED_STAROBINSKY_LEADING_SLOW_ROLL_EXPORT_IS_REPRODUCIBLE","relation":"MOTIVATES","to":"open:gate1-v0-empirical-likelihood-bridge","note":"The background export is a downstream convention check only; no physical state, transfer function, normalization or likelihood follows."},
+    {"id":"edge:3690","from":"claim:RAW_C_ZERO_SHELL_FIVE_SIGN_CHANGING_ROOTS_AND_P_ZERO_NONROOT","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The finite real-root census is local input to the open global selector census; it is not a Weyl function, spectral measure or RAQ result."},
+    {"id":"edge:3691","from":"claim:RAW_C_FIVE_DECLARED_LOCAL_SIMPLE_ROOT_JACOBIANS_HOLD","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The five local Jacobians calibrate real-root transversality only; selector regularity, velocity and the global census remain open."},
+    {"id":"edge:3692","from":"claim:RAW_C_NONZERO_LAMBDA_LOCAL_FLAMBDA_CHECK_HOLDS","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The finite-cutoff F_lambda check calibrates real sensitivity only and is not nonreal Weyl, measure or RAQ evidence."},
+    {"id":"edge:3693","from":"claim:RAW_C_REAL_PLUS_ENDPOINT_LIOUVILLE_GREEN_TAIL_BOUND_HOLDS","relation":"MOTIVATES","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"The real plus-end tail bound is a scoped transport input; it does not complete the global real census or the separate nonreal spectral chain."},
+    {"id":"edge:3694","from":"concept:airy-uniformization-versus-soft-determinant-double-counting","relation":"MOTIVATES","to":"open:gate2-hard-cfu-airy-coefficients","note":"The double-counting distinction belongs to the still-open hard CFU coefficient problem; this navigation edge supplies no coefficient or cycle evidence."},
+    {"id":"edge:3695","from":"evidence:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor-result","relation":"RECORDED_IN","to":"artifact:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor-result","note":"Links the already recorded raw result artifact into its evidence component; the evidence snapshot remains the compact hash-pinned provenance record."}
   ],
   "kg_bridges": [
     {

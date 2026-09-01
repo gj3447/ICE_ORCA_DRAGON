@@ -10,6 +10,12 @@ import {
 } from "./collection-core.ts"
 import type { ResearchCollection } from "./collection.ts"
 import {
+  diffResearchCollections,
+  makeResearchCollectionReviewWarnings,
+  type ResearchCollectionDiff,
+  type ResearchCollectionReviewWarning
+} from "./collection-diff.ts"
+import {
   resolveNode,
   showNode,
   summarizeGraph,
@@ -31,6 +37,7 @@ import {
   hashOntologyDocumentAt,
   loadOntologyCollectionValidation,
   loadResearchCollection,
+  loadResearchCollectionAtRevision,
   loadResearchGraphAt,
   loadResearchGraphAtRevision,
   loadValidOntologyCollectionStructure
@@ -116,6 +123,8 @@ const renderSummary = (summary: OntologySummary): string =>
     `claims: ${renderCounts(summary.claims_by_epistemic_state)}`,
     `open problems: ${summary.open_problem_count}`,
     `artifacts: ${summary.artifact_count}`,
+    `weak components: ${summary.weak_component_count}`,
+    `nodes outside programme components: ${summary.nodes_outside_programme_components}`,
     `KG bridges: ${renderCounts(summary.kg_bridges_by_status)}`,
     `validation warnings: ${summary.validation_warning_count}`
   ].join("\n")
@@ -125,11 +134,12 @@ const renderCollectionSummary = (summary: CollectionSummary): string =>
     `${summary.title} (${summary.collection_id})`,
     `schema: ${summary.schema_version}`,
     `updated: ${summary.updated_at_utc}`,
+    `default graph: ${summary.default_graph}`,
     `graphs: ${summary.graph_count}`,
     `totals: nodes=${summary.totals.nodes}, edges=${summary.totals.edges}, claims=${summary.totals.claims}, evidence=${summary.totals.evidence}, open_problems=${summary.totals.open_problems}, artifacts=${summary.totals.artifacts}, unresolved_bridges=${summary.totals.unresolved_bridges}`,
     ...summary.graphs.map(
       (graph) =>
-        `graph ${graph.key} [${graph.coverage}]: nodes=${graph.node_count}, edges=${graph.edge_count}, claims=${renderCounts(graph.claims_by_epistemic_state)}`
+        `graph ${graph.key} [${graph.coverage}]: nodes=${graph.node_count}, edges=${graph.edge_count}, weak_components=${graph.weak_component_count}, outside_programme=${graph.nodes_outside_programme_components}, claims=${renderCounts(graph.claims_by_epistemic_state)}`
     ),
     "coverage:",
     ...summary.coverage.map(
@@ -223,6 +233,13 @@ interface OntologyGraphReview {
   readonly diff: ResearchGraphDiff
 }
 
+interface OntologyCollectionReview {
+  readonly path: string
+  readonly base: string
+  readonly warnings: ReadonlyArray<ResearchCollectionReviewWarning>
+  readonly diff: ResearchCollectionDiff
+}
+
 interface OntologyReview {
   readonly base: string
   readonly target: "working-tree"
@@ -230,6 +247,7 @@ interface OntologyReview {
   readonly total_changes: number
   readonly has_changes: boolean
   readonly warning_count: number
+  readonly collection: OntologyCollectionReview
   readonly graphs: ReadonlyArray<OntologyGraphReview>
 }
 
@@ -243,6 +261,16 @@ const renderReview = (review: OntologyReview): string =>
     `graphs: ${review.graph_count}`,
     `changes: ${review.total_changes}`,
     `warnings: ${review.warning_count}`,
+    `collection: ${review.collection.diff.summary.total_changes} change(s)`,
+    `  metadata: ${review.collection.diff.summary.metadata_changes}`,
+    `  graph descriptors: ${renderReviewCounts(review.collection.diff.summary.graph_descriptors)}`,
+    `  reading paths: ${renderReviewCounts(review.collection.diff.summary.reading_paths)}`,
+    `  quick answers: ${renderReviewCounts(review.collection.diff.summary.quick_answers)}`,
+    `  coverage ledger: ${renderReviewCounts(review.collection.diff.summary.coverage_ledger)}`,
+    ...review.collection.warnings.map(
+      (warning) =>
+        `  [WARN] ${warning.code}${warning.subject === undefined ? "" : ` (${warning.subject})`}: ${warning.message}`
+    ),
     ...review.graphs.flatMap((entry) => [
       `graph ${entry.graph}: ${entry.diff.summary.total_changes} change(s)`,
       `  metadata: ${entry.diff.summary.metadata_changes}`,
@@ -552,7 +580,21 @@ export const ontologyReviewCommand = (
   base = "HEAD"
 ) =>
   Effect.gen(function* () {
-    const collection = yield* loadResearchCollection
+    const [baseCollection, collection] = yield* Effect.all(
+      [loadResearchCollectionAtRevision(base), loadResearchCollection],
+      { concurrency: 2 }
+    )
+    const collectionDiff = diffResearchCollections(baseCollection, collection)
+    const collectionReview: OntologyCollectionReview = {
+      path: collection.canonical_file,
+      base,
+      warnings: makeResearchCollectionReviewWarnings(
+        baseCollection,
+        collection,
+        collectionDiff
+      ),
+      diff: collectionDiff
+    }
     const descriptors =
       graphKey === "all"
         ? collection.graphs
@@ -593,15 +635,19 @@ export const ontologyReviewCommand = (
       base,
       target: "working-tree",
       graph_count: graphs.length,
-      total_changes: graphs.reduce(
-        (total, entry) => total + entry.diff.summary.total_changes,
-        0
-      ),
-      has_changes: graphs.some(({ diff }) => diff.summary.has_changes),
-      warning_count: graphs.reduce(
-        (total, entry) => total + entry.warnings.length,
-        0
-      ),
+      total_changes:
+        collectionReview.diff.summary.total_changes +
+        graphs.reduce(
+          (total, entry) => total + entry.diff.summary.total_changes,
+          0
+        ),
+      has_changes:
+        collectionReview.diff.summary.has_changes ||
+        graphs.some(({ diff }) => diff.summary.has_changes),
+      warning_count:
+        collectionReview.warnings.length +
+        graphs.reduce((total, entry) => total + entry.warnings.length, 0),
+      collection: collectionReview,
       graphs
     }
     yield* (json ? printJson(review) : Console.log(renderReview(review)))

@@ -222,7 +222,7 @@ const isSafeGitRevision = (revision: string): boolean =>
   !revision.includes(":") &&
   !/[\u0000-\u0020\u007f]/.test(revision)
 
-export const loadResearchGraphAtRevision = (
+const readOntologyDocumentAtRevision = (
   revision: string,
   relpath: string
 ) =>
@@ -240,7 +240,7 @@ export const loadResearchGraphAtRevision = (
       return yield* Effect.fail(
         iceError(
           "ONTOLOGY_GIT_PATH_UNSAFE",
-          `unsafe repository-relative graph path '${relpath}'`,
+          `unsafe repository-relative ontology path '${relpath}'`,
           2
         )
       )
@@ -277,11 +277,18 @@ export const loadResearchGraphAtRevision = (
         )
       )
     }
-    return yield* decodeResearchGraph(
-      result.stdout,
-      `${relpath} at ${revision}`
-    )
+    return result.stdout
   })
+
+export const loadResearchGraphAtRevision = (
+  revision: string,
+  relpath: string
+) =>
+  readOntologyDocumentAtRevision(revision, relpath).pipe(
+    Effect.flatMap((source) =>
+      decodeResearchGraph(source, `${relpath} at ${revision}`)
+    )
+  )
 
 export const loadResearchGraph = loadResearchGraphAt(ONTOLOGY_GRAPH_RELPATH)
 
@@ -293,6 +300,16 @@ export const loadResearchCollection = Effect.gen(function* () {
   )
   return yield* decodeResearchCollection(source, ONTOLOGY_COLLECTION_RELPATH)
 })
+
+export const loadResearchCollectionAtRevision = (revision: string) =>
+  readOntologyDocumentAtRevision(revision, ONTOLOGY_COLLECTION_RELPATH).pipe(
+    Effect.flatMap((source) =>
+      decodeResearchCollection(
+        source,
+        `${ONTOLOGY_COLLECTION_RELPATH} at ${revision}`
+      )
+    )
+  )
 
 export const auditCollectionDescriptorPaths = (
   collection: ResearchCollection

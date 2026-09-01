@@ -29,9 +29,47 @@ The [collection manifest](./collection.json) uses
 snapshots carry a `P…` phase label; independent unnumbered calculations use `phase: null` and retain
 their authoritative semantic check IDs without a fabricated phase prefix.
 
-At the recorded `2026-08-31T07:50:05Z` collection update, the four graphs have 1,478 nodes, 3,831 edges,
-and 316 claims: 191 supported, 114 contradicted, and 11 inconclusive. Validation verifies all 410 stored
-hashes (400 artifacts and 10 policies); 70 unresolved external bridges remain explicit warnings. The
+## Default navigation and cohesion
+
+Start with live collection scope and counts, rather than copying a dated total into prose:
+
+```bash
+./ice ontology summary --json
+./ice ontology guide --path current-status-in-five-stops
+./ice ontology guide --graph cpt --path toe-current-critical-path
+./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
+```
+
+The four registered graphs are independent evidence boundaries. Collection paths are a cross-graph
+reading aid only: they do not merge evidence, infer a shared theory, or turn one programme's result into
+support for another.
+
+For the CPT candidate route, begin with the active TOE routing policy and its current blocker:
+
+```bash
+./ice agent plan "<one bounded CPT question>" --graph cpt --json
+./ice ontology show cpt::policy:toe-directed-critical-path-routing
+./ice ontology show cpt::open:gate1-original-cycle-signed-global-intersections
+```
+
+The G1--G5 route is the default core-navigation path. The V0 P1--P7 gap map is a separate supporting
+portfolio: it may supply a bounded method or conditional result, but becomes core progress only when a
+reviewer identifies the exact canonical blocker, missing typed object, and evidence edge it changes.
+Do not join the portfolio to the gate route by implication.
+
+Use collection-aware review whenever an edit affects graph navigation, a policy, or more than one graph:
+
+```bash
+./ice ontology review --graph all --base HEAD
+```
+
+The cohesion rule is: preserve one canonical node for each material blocker or policy, retain explicit
+edge semantics, and add a reading path or quick answer instead of duplicating a claim in another graph.
+Validation rejects any graph component that is not anchored to a programme node, and summary reports the
+weak-component count. This is an engineering invariant, not an inferred scientific relation. Historical
+records remain provenance: do not delete, rename, or reinterpret them merely to make the current path
+look simpler.
+
 CPT graph now also hash-indexes the Phase 11–15R historical lead-in, with Phase 15A kept strictly as an
 invalid-sequence provenance break rather than scientific evidence. The independent IG-RUEQFT graph
 records one finite (N=64) free-U(1) locality oracle: its registered bulk-volume predicate is
@@ -177,13 +215,14 @@ The read commands (`summary`, `show`, `trace`, and `guide`) perform structural a
 validation without reopening artifact payloads; intuitive lookup therefore does not depend on the
 529 MB Phase-44 LFS object.
 
-For graph authoring, use the repository JSON as the only editable form and review its graph records
-against a committed base before the full integrity gate:
+For graph authoring, use the repository JSON as the only editable form and review the relevant graph or
+the full collection against a committed base before the full integrity gate:
 
 ```bash
 ./ice harness impact <registered-repository-path>
-# edit one registered graph.json; inspect collection.json changes with git diff
+# edit one registered graph.json and, when navigation changes, collection.json
 ./ice ontology review --graph cpt --base HEAD
+./ice ontology review --graph all --base HEAD  # policy, navigation, or multi-graph edit
 npm run graph:check
 ./ice ontology export --format jsonld --graph cpt > /tmp/ice-cpt.jsonld
 ```

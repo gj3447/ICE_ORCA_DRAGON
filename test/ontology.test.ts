@@ -7,6 +7,7 @@ import { createHash } from "node:crypto"
 import {
   makeValidationReport,
   resolveNode,
+  summarizeGraph,
   traceGraph,
   validateGraphSemantics
 } from "../src/ontology/core.ts"
@@ -435,6 +436,71 @@ it.effect("allows unresolved external bridges as explicit warnings", () =>
     expect(report.warnings.map((issue) => issue.code)).toEqual([
       "EXTERNAL_BRIDGE_UNRESOLVED"
     ])
+  })
+)
+
+it.effect("requires every weak component to contain a programme when present", () =>
+  Effect.gen(function* () {
+    const graph = yield* decodeResearchGraph(JSON.stringify(fixture()), "fixture")
+    const programme: ResearchNode = {
+      id: "programme:test",
+      type: "programme",
+      title: "Fixture programme",
+      summary: "Programme anchor for the fixture.",
+      state: "ACTIVE"
+    }
+    const partiallyConnected: ResearchGraph = {
+      ...graph,
+      node_type_legend: { ...graph.node_type_legend, programme: "programme" },
+      relation_legend: { ...graph.relation_legend, PART_OF: "programme membership" },
+      nodes: [...graph.nodes, programme],
+      edges: [
+        ...graph.edges,
+        {
+          id: "edge:002",
+          from: "claim:TEST_CLAIM",
+          relation: "PART_OF",
+          to: "programme:test"
+        }
+      ]
+    }
+    const partialIssues = validateGraphSemantics(partiallyConnected)
+    expect(
+      partialIssues.filter(
+        (issue) => issue.code === "GRAPH_COMPONENT_WITHOUT_PROGRAMME"
+      )
+    ).toMatchObject([{ subject: "artifact:test" }])
+
+    const connected: ResearchGraph = {
+      ...partiallyConnected,
+      edges: [
+        ...partiallyConnected.edges,
+        {
+          id: "edge:003",
+          from: "artifact:test",
+          relation: "PART_OF",
+          to: "programme:test"
+        }
+      ]
+    }
+    const validation = makeValidationReport(
+      connected,
+      validateGraphSemantics(connected)
+    )
+    expect(validation.errors).toHaveLength(0)
+    expect(summarizeGraph(connected, validation)).toMatchObject({
+      weak_component_count: 1,
+      nodes_outside_programme_components: 0
+    })
+
+    const noProgrammeValidation = makeValidationReport(
+      graph,
+      validateGraphSemantics(graph)
+    )
+    expect(summarizeGraph(graph, noProgrammeValidation)).toMatchObject({
+      weak_component_count: 2,
+      nodes_outside_programme_components: 0
+    })
   })
 )
 

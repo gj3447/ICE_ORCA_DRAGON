@@ -105,6 +105,9 @@ uv sync --locked
 - 스크립트 정보: `./ice info <name>` (경로 / 독스트링 / 산출 result JSON)
 - 연구 그래프 검사·조회: `./ice ontology validate`, `./ice ontology summary`,
   `./ice ontology show <node-id>`, `./ice ontology trace <node-id>`
+- 현재 core/support 탐색: `./ice ontology guide --graph cpt --path toe-current-critical-path`,
+  `./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio`
+- graph+collection 변경 검토: `./ice ontology review --graph all --base HEAD`
 - core 경로 사전검토: `./ice agent plan "<question>" --graph cpt --json`
 - evidence 문맥·영향·무결성: `./ice harness context <node-id>`, `./ice harness impact <path>`,
   `./ice harness check`
@@ -163,6 +166,10 @@ rule의 사전 고정 및 적절한 multiplicity/global calibration을 요구한
 - raw `RESULT.json`을 실행 check ledger의 단일 정본으로 둔다. 온톨로지는 그 artifact hash와 결론을
   찾는 데 필요한 핵심 check locator만 보존하며, 전체 check 배열을 evidence snapshot과 graph에
   복제하지 않는다. 별도 snapshot은 raw result가 안정된 정본이 될 수 없는 경우에만 둔다.
+- collection의 기본 graph는 CPT다. G1--G5 core path와 P1--P7 supporting path를 별도로 읽고,
+  hypercomplex·legacy·IG-RUEQFT를 CPT evidence로 합치지 않는다. 새 node 묶음은 실제 의미를 가진
+  typed edge로 programme component에 연결해야 하며, `ontology validate`의 component 오류를
+  reading path만 추가해서 숨기지 않는다.
 
 ## 커밋 규율
 

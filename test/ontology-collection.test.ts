@@ -23,7 +23,8 @@ import {
   loadOntologyCollectionValidation,
   loadResearchGraphAt,
   loadResearchGraphAtRevision,
-  loadResearchCollection
+  loadResearchCollection,
+  loadResearchCollectionAtRevision
 } from "../src/ontology/repository.ts"
 import {
   Workspace,
@@ -425,6 +426,21 @@ layer(AppLayer)("canonical ontology collection", (it) => {
       expect(missing._tag).toBe("Left")
       if (missing._tag === "Left") {
         expect(missing.left.code).toBe("ONTOLOGY_GIT_READ_FAILED")
+      }
+    })
+  )
+
+  it.effect("uses the same bounded revision reader for the collection manifest", () =>
+    Effect.gen(function* () {
+      const committed = yield* loadResearchCollectionAtRevision("HEAD")
+      expect(committed.collection_id).toBe("research-collection:ice-orca-dragon")
+
+      const unsafe = yield* loadResearchCollectionAtRevision(
+        "HEAD:alternate-path"
+      ).pipe(Effect.either)
+      expect(unsafe._tag).toBe("Left")
+      if (unsafe._tag === "Left") {
+        expect(unsafe.left.code).toBe("ONTOLOGY_GIT_REVISION_UNSAFE")
       }
     })
   )

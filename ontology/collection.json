@@ -4,9 +4,9 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-09-01T06:23:24Z",
+  "updated_at_utc": "2026-09-01T14:24:48Z",
   "canonical_file": "ontology/collection.json",
-  "default_graph": "hypercomplex",
+  "default_graph": "cpt",
   "graphs": [
     {
       "key": "hypercomplex",
@@ -351,6 +351,36 @@
           "node": "programme:igrueqft-locality-audit"
         }
       ]
+    },
+    {
+      "question": "What is the single active TOE route, and where do the other workstreams belong?",
+      "answer": "For the user-declared objective, CPT is the default navigation graph and G1 through G5 is the only core claim-prerequisite spine; G1 is the current first blocker. P1 through P7 remain a supporting bridge portfolio unless a reviewed output changes a named G1-G5 typed object and evidence edge. Hypercomplex, legacy and IG-RUEQFT remain independent context or negative-control graphs and are not evidence for the CPT route.",
+      "refs": [
+        {
+          "graph": "cpt",
+          "node": "policy:toe-directed-critical-path-routing"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections"
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:gate1-v0-current-physics-discovery-gap-map"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "programme:hypercomplex-hypothesis-testbench"
+        },
+        {
+          "graph": "legacy",
+          "node": "programme:ice-legacy-predictions"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "programme:igrueqft-locality-audit"
+        }
+      ]
     }
   ],
   "reading_paths": [
@@ -567,6 +597,70 @@
         {
           "graph": "cpt",
           "node": "open:gate1-original-cycle-signed-global-intersections"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:toe-critical-path-and-supporting-portfolio",
+      "title": "TOE critical path and supporting portfolio",
+      "summary": "Read the active CPT routing policy, the G1-G5 core prerequisite spine, and then representative P1-P7 supporting obligations. The second half is a portfolio, not a continuation arrow: no supporting lane advances a gate until a reviewed typed object and evidence edge actually change. Other collection graphs remain independent and do not corroborate this route.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "cpt",
+          "node": "policy:toe-directed-critical-path-routing",
+          "why": "Defines core progress, support labels and external-review terminal criteria"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections",
+          "why": "Current first core blocker"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate2-hard-cfu-airy-coefficients"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate3-full-bfv-pfaffian-pin-holonomy"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate4-spinorial-charge-domain-constraint-closure"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate5-persistent-order-and-pole-splitting"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+          "why": "P1 real-corridor portfolio"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+          "why": "P4 nonreal Weyl, spectral-measure and RAQ portfolio"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-classical-s3-hda-closure",
+          "why": "P2-P3 classical S3/HDA/Jacobi portfolio"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+          "why": "P5 common-core quantum BFV portfolio"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+          "why": "P6 polarization, cycle, determinant line and gluing portfolio"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
+          "why": "P7 relational-to-empirical umbrella; likelihood remains gated"
         }
       ]
     }

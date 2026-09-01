@@ -42,6 +42,8 @@ export interface OntologySummary {
   readonly claims_by_epistemic_state: Readonly<Record<string, number>>
   readonly open_problem_count: number
   readonly artifact_count: number
+  readonly weak_component_count: number
+  readonly nodes_outside_programme_components: number
   readonly kg_bridges_by_status: Readonly<Record<string, number>>
   readonly validation_warning_count: number
 }
@@ -146,6 +148,74 @@ const expectedPolarity = (
     return "CONTRADICTS"
   }
   return undefined
+}
+
+interface WeakComponentSummary {
+  readonly count: number
+  readonly nodes_outside_programme_components: number
+  readonly components_without_programme: ReadonlyArray<ReadonlyArray<string>>
+}
+
+const summarizeWeakComponents = (graph: ResearchGraph): WeakComponentSummary => {
+  const nodeIds = new Set(graph.nodes.map((node) => node.id))
+  const programmeIds = new Set(
+    graph.nodes
+      .filter((node) => node.type === "programme")
+      .map((node) => node.id)
+  )
+  const adjacency = new Map<string, Set<string>>(
+    graph.nodes.map((node) => [node.id, new Set<string>()])
+  )
+
+  for (const edge of graph.edges) {
+    if (!nodeIds.has(edge.from) || !nodeIds.has(edge.to)) {
+      continue
+    }
+    adjacency.get(edge.from)?.add(edge.to)
+    adjacency.get(edge.to)?.add(edge.from)
+  }
+
+  const remaining = new Set(nodeIds)
+  const components: Array<ReadonlyArray<string>> = []
+  while (remaining.size > 0) {
+    const start = [...remaining].sort()[0]
+    if (start === undefined) {
+      break
+    }
+    const component = new Set<string>([start])
+    const queue = [start]
+    let cursor = 0
+    remaining.delete(start)
+    while (cursor < queue.length) {
+      const current = queue[cursor]
+      cursor += 1
+      if (current === undefined) {
+        continue
+      }
+      for (const adjacent of adjacency.get(current) ?? []) {
+        if (remaining.delete(adjacent)) {
+          component.add(adjacent)
+          queue.push(adjacent)
+        }
+      }
+    }
+    components.push([...component].sort())
+  }
+
+  const componentsWithoutProgramme =
+    programmeIds.size === 0
+      ? []
+      : components.filter(
+          (component) => !component.some((id) => programmeIds.has(id))
+        )
+  return {
+    count: components.length,
+    nodes_outside_programme_components: componentsWithoutProgramme.reduce(
+      (total, component) => total + component.length,
+      0
+    ),
+    components_without_programme: componentsWithoutProgramme
+  }
 }
 
 export const validateGraphSemantics = (
@@ -443,6 +513,18 @@ export const validateGraphSemantics = (
     }
   }
 
+  const weakComponents = summarizeWeakComponents(graph)
+  for (const component of weakComponents.components_without_programme) {
+    issues.push(
+      makeIssue(
+        "error",
+        "GRAPH_COMPONENT_WITHOUT_PROGRAMME",
+        `weakly connected component has no programme node: ${component.join(", ")}`,
+        component[0]
+      )
+    )
+  }
+
   return issues
 }
 
@@ -496,25 +578,35 @@ const countBy = (
 export const summarizeGraph = (
   graph: ResearchGraph,
   validation: ValidationReport
-): OntologySummary => ({
-  graph_id: graph.graph_id,
-  title: graph.title,
-  schema_version: graph.schema_version,
-  updated_at_utc: graph.updated_at_utc,
-  node_count: graph.nodes.length,
-  edge_count: graph.edges.length,
-  nodes_by_type: countBy(graph.nodes.map((node) => node.type)),
-  claims_by_epistemic_state: countBy(
-    graph.nodes.flatMap((node) =>
-      node.type === "claim" ? [node.epistemic_state] : []
-    )
-  ),
-  open_problem_count: graph.nodes.filter((node) => node.type === "open_problem")
-    .length,
-  artifact_count: graph.nodes.filter((node) => node.type === "artifact").length,
-  kg_bridges_by_status: countBy(graph.kg_bridges.map((bridge) => bridge.status)),
-  validation_warning_count: validation.warnings.length
-})
+): OntologySummary => {
+  const weakComponents = summarizeWeakComponents(graph)
+  return {
+    graph_id: graph.graph_id,
+    title: graph.title,
+    schema_version: graph.schema_version,
+    updated_at_utc: graph.updated_at_utc,
+    node_count: graph.nodes.length,
+    edge_count: graph.edges.length,
+    nodes_by_type: countBy(graph.nodes.map((node) => node.type)),
+    claims_by_epistemic_state: countBy(
+      graph.nodes.flatMap((node) =>
+        node.type === "claim" ? [node.epistemic_state] : []
+      )
+    ),
+    open_problem_count: graph.nodes.filter(
+      (node) => node.type === "open_problem"
+    ).length,
+    artifact_count: graph.nodes.filter((node) => node.type === "artifact")
+      .length,
+    weak_component_count: weakComponents.count,
+    nodes_outside_programme_components:
+      weakComponents.nodes_outside_programme_components,
+    kg_bridges_by_status: countBy(
+      graph.kg_bridges.map((bridge) => bridge.status)
+    ),
+    validation_warning_count: validation.warnings.length
+  }
+}
 
 export const resolveNode = (
   graph: ResearchGraph,

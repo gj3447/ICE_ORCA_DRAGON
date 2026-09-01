@@ -46,6 +46,32 @@ reported separately.
 > transport provenance. See the [execution-containment record](docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md)
 > and [LFS migration ledger](docs/decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md).
 
+## Research graph navigation
+
+The repository-local ontology is the standard navigation layer; raw result files remain the execution
+check ledgers. Obtain live graph scope and totals from `./ice ontology summary --json`, rather than from
+copied counts in documentation. The Hypercomplex, legacy, CPT, and IG-RUEQFT graphs are independent
+evidence boundaries: collection-level paths aid reading but do not merge their evidence or establish a
+unified theory.
+
+For a CPT core proposal, first run:
+
+```bash
+./ice agent plan "<one bounded CPT question>" --graph cpt --json
+./ice ontology guide --graph cpt --path toe-current-critical-path
+./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
+```
+
+The default TOE-candidate route begins at the current G1 original-cycle blocker and proceeds through
+G2--G5 only when compatible typed inputs exist. The P1--P7 V0 lanes are a supporting portfolio, not
+independent TOE success counters; they need a named blocker and changed evidence edge before they can be
+counted as core progress. Review graph, policy, navigation, or multi-graph edits collection-wide with
+`./ice ontology review --graph all --base HEAD`. The cohesion rule is to extend canonical nodes and
+explicit edges, then add reading paths/quick answers for navigation—never duplicate claims across graphs
+or infer links from topical proximity. This is research organization, not a new-physics result.
+
+See [the ontology guide](ontology/README.md) and the [standard graph-engineering decision](docs/decisions/ICE_STANDARD_GRAPH_ENGINEERING_2026-09-01.md).
+
 The programme's current philosophical synthesis is documented in
 [`docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md):
 mathematical structure supplies candidate possibilities; physical content requires quotienting

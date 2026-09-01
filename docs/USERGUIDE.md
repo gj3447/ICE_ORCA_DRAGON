@@ -52,6 +52,37 @@ including the 529 MB Phase-44 LFS object. `summary`, `show`, `trace`, and `guide
 collection schema, graph semantics, and repository paths without reopening artifact payloads, so normal
 navigation still works before that large LFS object is hydrated.
 
+### Default CPT/TOE route and collection cohesion
+
+Use the live summary rather than a copied node, edge, or hash total:
+
+```bash
+./ice ontology summary --json
+./ice agent plan "<one bounded CPT question>" --graph cpt --json
+./ice ontology show cpt::policy:toe-directed-critical-path-routing
+./ice ontology show cpt::open:gate1-original-cycle-signed-global-intersections
+./ice ontology guide --graph cpt --path toe-current-critical-path
+./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
+```
+
+For core CPT work, the current G1 blocker is the default path; G2--G5 require compatible upstream typed
+outputs. The P1--P7 V0 map is a supporting portfolio and does not automatically unblock the gate path.
+A proposal is core-labelled only after human review identifies its canonical blocker, missing typed
+object, bounded falsifiable output, and changed evidence edge. The planner is a review aid and never
+authorizes execution or a physics claim.
+
+For a policy, navigation, or multi-graph change, inspect the complete collection:
+
+```bash
+./ice ontology review --graph all --base HEAD
+```
+
+Keep the four graphs as independent evidence boundaries. The cohesion rule is to update the existing
+canonical record and its explicit relations, then expose it through a reading path or quick answer; do
+not duplicate a claim across graphs or infer corroboration from nearby topics. Validation rejects a
+component with no programme anchor, and summary reports weak-component cohesion. Historical records
+remain provenance and are not deleted or reinterpreted to simplify a route.
+
 ### Use the graph-aware harness for research engineering context
 
 ```bash

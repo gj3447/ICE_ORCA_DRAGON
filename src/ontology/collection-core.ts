@@ -40,6 +40,7 @@ export interface CollectionSummary {
   readonly title: string
   readonly schema_version: "research-collection/v1"
   readonly updated_at_utc: string
+  readonly default_graph: string
   readonly graph_count: number
   readonly graphs: ReadonlyArray<
     OntologySummary & {
@@ -515,6 +516,7 @@ export const summarizeCollection = (
     title: collection.title,
     schema_version: "research-collection/v1",
     updated_at_utc: collection.updated_at_utc,
+    default_graph: collection.default_graph,
     graph_count: summaries.length,
     graphs: summaries,
     totals: {
