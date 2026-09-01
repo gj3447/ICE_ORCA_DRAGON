@@ -138,7 +138,9 @@ const renderImpact = (impact: ReturnType<typeof graphHarnessImpact>): string =>
     `  execution authorization: ${impact.contract.execution_authorization}`
   ].join("\n")
 
-const checkReport = (report: ValidationReport | CollectionValidationReport) => ({
+export const graphHarnessCheckReport = (
+  report: ValidationReport | CollectionValidationReport
+) => ({
   schema: "ice-graph-harness-check/v1",
   contract: graphHarnessContract,
   valid: report.valid,
@@ -149,7 +151,7 @@ const checkReport = (report: ValidationReport | CollectionValidationReport) => (
   ]
 })
 
-const renderCheck = (check: ReturnType<typeof checkReport>): string => {
+const renderCheck = (check: ReturnType<typeof graphHarnessCheckReport>): string => {
   const report = check.graph_validation
   const subject =
     "graph_id" in report ? report.graph_id : report.collection_id
@@ -164,11 +166,10 @@ const renderCheck = (check: ReturnType<typeof checkReport>): string => {
   ].join("\n")
 }
 
-export const graphHarnessContextCommand = (
+export const graphHarnessContextData = (
   id: string,
   depth: number,
   limit: number,
-  json: boolean,
   graphKey = "all"
 ) => {
   if (!Number.isSafeInteger(depth) || depth < 0 || depth > 32) {
@@ -190,17 +191,27 @@ export const graphHarnessContextCommand = (
         iceError("ONTOLOGY_NODE_NOT_FOUND", `no ontology node matches '${id}'`, 2)
       )
     }
-    const context = graphHarnessContext(resolved.graph, target, depth, limit)
-    yield* (json ? printJson(context) : Console.log(renderContext(context)))
-    return context
+    return graphHarnessContext(resolved.graph, target, depth, limit)
   })
 }
 
-export const graphHarnessImpactCommand = (
-  path: string,
+export const graphHarnessContextCommand = (
+  id: string,
   depth: number,
   limit: number,
   json: boolean,
+  graphKey = "all"
+) =>
+  graphHarnessContextData(id, depth, limit, graphKey).pipe(
+    Effect.tap((context) =>
+      json ? printJson(context) : Console.log(renderContext(context))
+    )
+  )
+
+export const graphHarnessImpactData = (
+  path: string,
+  depth: number,
+  limit: number,
   graphKey = "all"
 ) => {
   if (!isSafeArtifactPath(path)) {
@@ -225,19 +236,30 @@ export const graphHarnessImpactCommand = (
   return Effect.gen(function* () {
     const loaded = yield* loadValidOntologyCollectionStructure
     const graphs = yield* selectGraph(loaded.graphs, graphKey)
-    const impact = graphHarnessImpact(
+    return graphHarnessImpact(
       graphs,
       path,
       depth,
       limit,
       path === "ontology/collection.json"
     )
-    yield* (json ? printJson(impact) : Console.log(renderImpact(impact)))
-    return impact
   })
 }
 
-export const graphHarnessCheckCommand = (json: boolean, graphKey = "all") =>
+export const graphHarnessImpactCommand = (
+  path: string,
+  depth: number,
+  limit: number,
+  json: boolean,
+  graphKey = "all"
+) =>
+  graphHarnessImpactData(path, depth, limit, graphKey).pipe(
+    Effect.tap((impact) =>
+      json ? printJson(impact) : Console.log(renderImpact(impact))
+    )
+  )
+
+export const graphHarnessCheckData = (graphKey = "all") =>
   Effect.gen(function* () {
     const loaded = yield* loadOntologyCollectionValidation
     const report =
@@ -254,7 +276,10 @@ export const graphHarnessCheckCommand = (json: boolean, graphKey = "all") =>
         )
       )
     }
-    const check = checkReport(report)
-    yield* (json ? printJson(check) : Console.log(renderCheck(check)))
-    return check
+    return graphHarnessCheckReport(report)
   })
+
+export const graphHarnessCheckCommand = (json: boolean, graphKey = "all") =>
+  graphHarnessCheckData(graphKey).pipe(
+    Effect.tap((check) => json ? printJson(check) : Console.log(renderCheck(check)))
+  )

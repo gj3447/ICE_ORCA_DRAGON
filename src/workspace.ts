@@ -14,7 +14,9 @@ export interface Workspace {
         | "@effect/platform-node"
         | "@effect/printer"
         | "@effect/printer-ansi"
-        | "tsx",
+        | "@modelcontextprotocol/server"
+        | "tsx"
+        | "zod",
         string
       >
     >
@@ -39,6 +41,8 @@ export const workspaceFromRoot = (root: string): Workspace => ({
       "@effect/platform-node": "0.108.1",
       "@effect/printer": "0.51.0",
       "@effect/printer-ansi": "0.51.0",
+      "@modelcontextprotocol/server": "2.0.0",
+      zod: "4.5.4",
       tsx: "4.23.12"
     },
     pythonMajorMinor: "3.13",

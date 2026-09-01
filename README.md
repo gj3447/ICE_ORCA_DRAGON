@@ -377,6 +377,7 @@ Canonical commands:
 ./ice harness context <node-id> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness check [--graph <key>]
+./ice literature search <query> [--limit 1..20] [--json]
 ```
 
 `ontology validate` streams every recorded artifact for the full hash gate. The read-only ontology
@@ -387,6 +388,12 @@ reopening large artifact payloads.
 problem context for a selected node, `impact` maps an exact registered repository path to that context,
 and `check` runs the full hash/evidence integrity gate. It never authorizes a run or generates a follow-up
 experiment; see the [graph-aware harness decision](docs/decisions/ICE_GRAPH_AWARE_HARNESS_2026-09-01.md).
+
+`literature search` is a bounded, read-only OpenAlex works-graph lookup for time-stamped source discovery.
+It is not a substitute for reading a primary source and it never authorizes a run. `npm run --silent mcp`
+exposes the same graph-harness and literature-discovery surface to compatible agents through local stdio;
+see the
+[MCP and skill integration decision](docs/decisions/ICE_RESEARCH_MCP_SKILL_INTEGRATION_2026-09-01.md).
 
 `npm run ice -- <command>` is the package-script equivalent. `./ice` is the repository entry point.
 

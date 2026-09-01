@@ -13,6 +13,7 @@ import {
 import { type IceError } from "./errors.ts"
 import { ontologyCommand } from "./ontology/cli.ts"
 import { harnessCommand } from "./harness/cli.ts"
+import { literatureCommand } from "./literature/cli.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const json = Options.boolean("json").pipe(
@@ -92,7 +93,8 @@ const root = Command.make("ice", {}, () =>
     doctor,
     repro,
     ontologyCommand,
-    harnessCommand
+    harnessCommand,
+    literatureCommand
   ])
 )
 

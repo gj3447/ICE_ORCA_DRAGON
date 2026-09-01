@@ -1,0 +1,64 @@
+# Read-only research MCP and skill integration (2026-09-01)
+
+## Decision
+
+Adopt the MCP TypeScript SDK v2 through a repository-local **stdio, read-only** server and install the
+`ice-research-workbench` Codex skill. This extends the graph-aware harness with bounded agent-facing
+research context and public scholarly discovery, without turning the graph or an agent loop into a
+research authority.
+
+The implementation is deliberately small:
+
+- `ice_research_context`, `ice_research_impact`, and `ice_research_check` expose the existing local
+  graph-harness queries and integrity check;
+- `ice_literature_search` calls the public [OpenAlex works API](https://help.openalex.org/api/) with a
+  10-second timeout and a 20-work maximum;
+- `ice_research_capabilities` makes the tool and non-authorization boundaries machine-readable;
+- `./ice literature search` is the matching human CLI; and
+- `skills/ice-research-workbench/` is the versioned source for the installed Codex skill at
+  `~/.codex/skills/ice-research-workbench`.
+
+The server uses the current [`@modelcontextprotocol/server` v2
+SDK](https://ts.sdk.modelcontextprotocol.io/v2/) `serveStdio` entry point, which serves the current
+protocol revision and legacy clients on stdio. Standard stdio requires that the protocol owns stdout;
+startup and error diagnostics therefore use stderr only.
+
+## Why this boundary
+
+The local ontology already provides graph structure, hash-backed evidence locators, and scope/open-problem
+context. OpenAlex adds a public citation-aware scholarly graph suitable for source discovery. Together,
+they cover the useful research-engineering gap without granting a language model arbitrary notebook,
+shell, file-write, or third-party account permission.
+
+The selected server is a local implementation rather than an unreviewed registry server. The MCP Registry
+is metadata discovery, not a trust decision; each server still requires separate permission and
+dependency review. The current [MCP Registry guidance](https://modelcontextprotocol.io/registry/about)
+supports that posture.
+
+## Explicit non-goals
+
+- No automatic task graph, recursive research loop, swarm, or autonomous acceptance rule is added.
+- No tool may run a Python kernel, write a result, mutate the ontology, stage/commit, or push.
+- A passing graph check validates graph/provenance structure, not a scientific interpretation.
+- An OpenAlex record is discovery metadata, not independent evidence. A primary source must be read and
+  cited before it informs a research statement.
+- Wolfram, Jupyter, Zotero, Semantic Scholar, and third-party MCP servers remain disconnected. They either
+  require unavailable credentials/runtimes or add broader execution/file/network/account scopes than this
+  use case needs.
+
+## Operating guidance
+
+Run the server from the repository root with `npm run --silent mcp`; the `--silent` flag prevents npm's
+own stdout banner from corrupting stdio protocol messages. Configure an MCP host to launch that command
+with this repository as its working directory. Use `./ice literature search "<query>" --json` for the
+same OpenAlex discovery surface without an MCP host.
+
+The installed skill routes material graph changes through the harness, source discovery through OpenAlex,
+and numerical work through the existing lean bounded-runner rules. It does not apply to unrelated coding,
+does not create ontology records by default, and does not change the active execution circuit breaker.
+
+## Validation
+
+- Typecheck and Vitest cover OpenAlex input/output bounds and an in-memory MCP client/server handshake.
+- `./ice harness check` remains the full repository graph/hash/evidence integrity gate.
+- The skill source and installed copy pass the skill-creator structural validator.

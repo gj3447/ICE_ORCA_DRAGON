@@ -63,6 +63,8 @@ Installed under `~/.codex/skills`:
 - official: `jupyter-notebook`, `pdf`
 - individually reviewed from K-Dense's scientific collection: `sympy`, `astropy`,
   `uncertainty-and-units`
+- repository-specific: `ice-research-workbench` (versioned source:
+  [`skills/ice-research-workbench/`](../skills/ice-research-workbench/))
 
 The large third-party scientific skill collection was not installed wholesale. Individual skill files
 can contain procedural instructions or shell actions, so additions should remain explicit and reviewable.
@@ -70,14 +72,20 @@ Newly installed skills become available after a Codex restart/new turn.
 
 ## MCP status
 
+- `npm run --silent mcp` launches the repository-local `ice-orca-dragon-research` MCP v2 server over stdio.
+  `--silent` suppresses npm's own stdout banner, leaving stdout exclusively for MCP messages. It is
+  read-only and exposes bounded graph context/impact/integrity plus a maximum-20-result OpenAlex works
+  search. It never executes kernels, writes files, mutates the ontology, or authorizes a next task.
+  `./ice literature search "<query>" --json` provides the same public literature-discovery path without an
+  MCP host.
 - The existing ontology MCP is a read-only SYMPOSIUM knowledge-graph/schema service. Its
   `ontology_contract_get` name refers to a graph schema contract, not research preregistration, and it
   does not gate calculations.
 - [Wolfram Research AgentTools](https://github.com/WolframResearch/AgentTools) is the strongest official
   calculation MCP found. It was not connected because this host has no activated Wolfram runtime.
-- Community Jupyter, arXiv, OpenAlex, Semantic Scholar, and Zotero MCP servers were not auto-connected.
-  They add broad notebook/file/network or arbitrary-code permissions while the current shell, web search,
-  and arXiv API already cover the immediate work.
+- Community Jupyter, arXiv, Semantic Scholar, and Zotero MCP servers remain disconnected. They add broad
+  notebook/file/network, arbitrary-code, credentials, or account permissions. OpenAlex is used only through
+  the reviewed, local read-only adapter above.
 
 MCPs should be connected only for a concrete missing capability, with a pinned package/repository and the
 smallest permissions possible.

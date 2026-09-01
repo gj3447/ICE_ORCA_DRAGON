@@ -67,6 +67,20 @@ of these commands authorizes a kernel, promotes a scientific claim, or generates
 the raw result remains the complete ledger. The operating design is documented in
 [the graph-aware harness decision](decisions/ICE_GRAPH_AWARE_HARNESS_2026-09-01.md).
 
+### Discover literature without widening execution permissions
+
+```bash
+./ice literature search "constrained quantization rigging map" --limit 10
+./ice literature search "CPT symmetric universe" --json
+npm run --silent mcp
+```
+
+`literature search` queries OpenAlex's public works graph and returns a time-stamped, maximum-20-result
+discovery record. Read and cite the relevant primary source before using it in a research statement. It
+does not run a kernel, write a raw result, add an ontology node, or authorize further work. `npm run --silent
+mcp` starts the same bounded harness and discovery surface for an MCP host over stdio; it keeps stdout
+exclusively for protocol data. See [the MCP and skill integration decision](decisions/ICE_RESEARCH_MCP_SKILL_INTEGRATION_2026-09-01.md).
+
 ## Run one kernel
 
 ```bash
