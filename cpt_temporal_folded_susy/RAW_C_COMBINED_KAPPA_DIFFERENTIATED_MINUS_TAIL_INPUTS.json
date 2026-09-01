@@ -1,0 +1,145 @@
+{
+  "schema_version": "ice.raw-c-combined-kappa-differentiated-minus-tail.input.v1",
+  "calculation_id": "RawCCombinedKappaDifferentiatedMinusTail",
+  "numbered_phase": null,
+  "kind": "bounded_exact_global_rotating_envelope",
+  "question": "On the exact current real K times Lambda rectangle, do the certified Q0 projective kappa-sensitivity seed and the fixed-reference variation close the entire differentiated minus-end Wronskian tail and give a complete outward interval for partial_kappa G?",
+  "primary_sources": [
+    {
+      "source": "Eckhardt, Gesztesy, Nichols and Teschl, Weyl-Titchmarsh Theory for Sturm-Liouville Operators with Distributional Potentials",
+      "url": "https://arxiv.org/abs/1208.4677",
+      "used_for": "singular Sturm-Liouville boundary values through Wronskian limits and the scope distinction between a real boundary functional and a singular Weyl m-function",
+      "not_used_for": "the repository-specific kappa derivative, rotating-envelope constants, nonreal m(z), spectral measure or RAQ"
+    },
+    {
+      "source": "NIST DLMF 10.25.1, modified Bessel equation",
+      "url": "https://dlmf.nist.gov/10.25.E1",
+      "used_for": "the inherited reference coefficient V-kappa^2 after nu=i*kappa and x=6*pi^2*exp(Q)",
+      "not_used_for": "the differentiated Wronskian sign or a nonzero-lambda tail theorem"
+    },
+    {
+      "source": "Fredrik Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic",
+      "url": "https://arxiv.org/abs/1611.02831",
+      "used_for": "outward-rounded elementary ball inclusion semantics at two precisions",
+      "not_used_for": "the analytic Gronwall, Duhamel or dominated-convergence argument"
+    }
+  ],
+  "declared_conventions": {
+    "C": "6*pi^2",
+    "Q_0": "-4",
+    "x": "C*exp(Q)",
+    "a": "6*pi^2*exp(3Q/2)",
+    "V": "36*pi^4*exp(2Q)=x^2",
+    "actual_equation": "U_QQ=(V+lambda*a-kappa^2)*U",
+    "actual_kappa_variation": "Z=partial_kappa U; Z_QQ=(V+lambda*a-kappa^2)*Z-2*kappa*U",
+    "reference_equation": "c_kappa,QQ=(V-kappa^2)*c_kappa; c_kappa(Q0)=1 and c_kappa,Q(Q0)=0",
+    "reference_kappa_variation": "D=partial_kappa c_kappa; D_QQ=(V-kappa^2)*D-2*kappa*c_kappa; D(Q0)=D_Q(Q0)=0",
+    "wronskian": "W(f,g)=f*g_Q-f_Q*g",
+    "boundary_map": "Gamma_1,kappa(u)=-lim_(Q->-infinity) W(u,c_kappa)",
+    "projective_functional": "G(kappa,lambda)=Gamma_1,kappa(u_plus)/u_plus(Q0)=-lim_(Q->-infinity)W(U,c_kappa)",
+    "combined_derivative_wronskian": "H=W(Z,c_kappa)+W(U,D)=partial_kappa W(U,c_kappa)",
+    "combined_derivative_identity": "H_Q=-lambda*a*(Z*c_kappa+U*D)",
+    "Q0_seed": "U=1, U_Q=-rho-x0-1/2, Z=0, Z_Q=-h, c=1, c_Q=0, D=0, D_Q=0; therefore H(Q0)=h",
+    "complete_derivative_identity": "partial_kappa G=-h(Q0)-lambda*I_signed, I_signed=integral_(-infinity)^Q0 a*(Z*c_kappa+U*D)dQ",
+    "a_tail_mass": "A0=integral a dQ=4*pi^2*exp(3*Q0/2)",
+    "a_tail_first_moment": "A1=integral a*(Q0-Q)dQ=(2/3)*A0",
+    "V_tail_mass": "V0=integral V dQ=18*pi^4*exp(2*Q0)",
+    "rotating_norm": "R_y=sqrt(y^2+(y_Q/kappa)^2)",
+    "uniform_base_bounds": "R_U<=RU0*exp((V0+abs(lambda)*A0)/kappa_left)=RU and R_c<=exp(V0/kappa_left)=RC",
+    "uniform_variation_bounds": "with t=Q0-Q, abs(Z)<=exp(qU)*RZ0+2*RU*t and abs(D)<=2*RC*t",
+    "combined_integral_bound": "abs(I_signed)<=RC*(exp(qU)*RZ0*A0+2*RU*A1)+RU*min(2*RC*A1,sqrt(A0)*D_L2_a)",
+    "complete_interval": "partial_kappa G belongs to -h(Q0)+[-abs(lambda)*B,+abs(lambda)*B]",
+    "kappa_corridor": {
+      "left_exact": "5125180435678962497905662710537123/2535301200456458802993406410752000",
+      "right_exact": "160320344939996106734739047604961/79228162514264337593543950336000"
+    },
+    "lambda_slab": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "precision_ladder_decimal_digits": [
+      80,
+      120
+    ],
+    "ball_output_digits": 45,
+    "derivative_scope": "ordinary fixed-lambda partial_kappa on the corridor interior and the corresponding one-sided derivative at each kappa face",
+    "execution": "exact SymPy identities plus python-flint Arb elementary balls at two precisions; no cutoff ODE propagation, Bessel evaluation, quadrature, root solve, finite difference, sampling or compact Taylor step"
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json",
+      "sha256": "e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2",
+      "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1",
+      "verdict": "CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+      "payload_sha256_without_self": "277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee",
+      "role": "pins the exact current K times Lambda rectangle, selected Q0-normalized actual family, rho(Q0) chart, reference and projective boundary convention; its root-existence conclusion is not composed here"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_QSWITCH_TO_Q0_KAPPA_PROJECTIVE_SENSITIVITY_TWO_SIDED_ENCLOSURE_RESULT.json",
+      "sha256": "871b7ab0fb2e76997b5b8bb39797abb48b18738fe0d73248c40e50187f7bc5e7",
+      "schema_version": "ice.raw-c-qswitch-to-q0-kappa-projective-sensitivity-two-sided-enclosure.result.v1",
+      "verdict": "CERTIFY_FINITE_TWO_SIDED_Q0_KAPPA_PROJECTIVE_SENSITIVITY_ENCLOSURE_ONLY",
+      "payload_sha256_without_self": "2ed6bc6abbb1fa9e0a3177ecf92ad3b1bbc70f700bd7c53b49e5acf5a189a2e6",
+      "role": "pins h(Q0)=partial_kappa rho(Q0) and Z(Q0)=0, Z_Q(Q0)=-h(Q0) on the same selected real K times Lambda family"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_REFERENCE_KAPPA_VARIATION_WEIGHTED_ENVELOPE_RESULT.json",
+      "sha256": "b6f5b60018142d53537955393e4e660528d905583f10161fa014bb5fe52a8c33",
+      "schema_version": "ice.raw-c-reference-kappa-variation-weighted-envelope.result.v1",
+      "verdict": "CERTIFY_UNIFORM_REFERENCE_KAPPA_VARIATION_WEIGHTED_ENVELOPE_ONLY",
+      "payload_sha256_without_self": "bb50111f524a965aa1f7595aa42f9db93c5b01787da29563ffff05f5ef1fa6e6",
+      "role": "pins the D equation, zero Q0 data and independent uniform L2(a dQ) envelope used as a second bound for the U*D contribution"
+    }
+  ],
+  "method_reuse": {
+    "path": "cpt_temporal_folded_susy/raw_c_actual_nonzero_lambda_hybrid_validated_transfer.py",
+    "sha256": "662c372c6950666d9052d378ad1153e3e3a13f159a945ae25837fc8a309a49c3",
+    "role": "exact-rational interval construction and outward interval-record primitives only; no transfer or solver routine is invoked"
+  },
+  "assumptions": [
+    "The hash-pinned Q0 sensitivity is the fixed-lambda projective kappa derivative of the same selected actual family on the same exact K times Lambda rectangle. Discarding its correlation with rho into a Cartesian interval hull is conservative.",
+    "Regular finite-IVP parameter dependence gives Z and D on every finite subinterval. The displayed uniform rotating bounds dominate U and c by constants and Z and D by a constant plus a linear function of Q0-Q.",
+    "Because a(Q) decays as exp(3Q/2), a(Q)*(1+Q0-Q) is integrable on the complete minus half-line. This uniform dominator makes H converge and permits the fixed-lambda kappa derivative to pass through the improper Wronskian limit.",
+    "The exact corridor has kappa_left>0, so every rotating state scaled by 1/kappa is uniform. At the two corridor faces only the corresponding one-sided derivative is claimed.",
+    "The signed tail integral is not assigned a sign. Only its magnitude is bounded, and the lambda factor is enclosed symmetrically.",
+    "The singular Weyl-Titchmarsh source fixes boundary/Wronskian scope only. This real projective boundary derivative is not called a Weyl m-function, spectral measure or RAQ object."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_checks": 24,
+    "upstream_results": 3,
+    "method_sources": 1,
+    "precision_tiers": 2,
+    "elementary_ball_rows": 2,
+    "kappa_corridors": 1,
+    "lambda_slabs": 1,
+    "ode_calls": 0,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "ball_bessel_evaluations": 0,
+    "ball_gamma_evaluations": 0,
+    "kernel_panels_evaluated": 0,
+    "compact_steps": 0
+  },
+  "required_fail_closed_outputs": {
+    "absolute_actual_Gamma1_amplitude_or_sign": null,
+    "absolute_actual_plus_kappa_derivative": null,
+    "pointwise_actual_kappa_variation_values_or_sign": null,
+    "pointwise_reference_kappa_variation_values_or_sign": null,
+    "kappa_lambda_mixed_derivative": null,
+    "root_transversality_or_monotonicity_or_uniqueness": null,
+    "continuous_root_selector_or_continuation": null,
+    "root_velocity": null,
+    "roots_outside_declared_corridor_or_global_census": null,
+    "nonreal_weyl_m_function_or_spectral_measure": null,
+    "raw_C_RAQ_or_C_H_equivalence": null,
+    "BFV_or_physical_product": null,
+    "physics_claim": null
+  }
+}
