@@ -2,8 +2,10 @@ import { Console, Effect } from "effect"
 import { iceError } from "../errors.ts"
 import {
   OpenAlexSearchError,
+  getOpenAlexWorkNeighborhood,
   searchOpenAlexWorks,
-  type OpenAlexSearchResult
+  type OpenAlexSearchResult,
+  type OpenAlexWorkNeighborhood
 } from "./openalex.ts"
 
 const printJson = (value: unknown): Effect.Effect<void> =>
@@ -48,5 +50,37 @@ export const openAlexSearchCommand = (
   }).pipe(
     Effect.tap((result) =>
       json ? printJson(result) : Console.log(renderSearch(result))
+    )
+  )
+
+const renderNeighborhood = (result: OpenAlexWorkNeighborhood): string =>
+  [
+    `OpenAlex citation neighborhood: ${result.target.title ?? result.work_id}`,
+    `retrieved: ${result.retrieved_at_utc}`,
+    `incoming citations returned: ${result.incoming_citations.length}`,
+    `outgoing reference ids returned: ${result.outgoing_reference_ids.length}`,
+    `related work ids returned: ${result.related_work_ids.length}`,
+    ...result.incoming_citations.flatMap((work, index) => [
+      `incoming ${index + 1}. ${renderWork(work)}`
+    ]),
+    "boundary: discovery metadata only; verify primary sources and citation context"
+  ].join("\n")
+
+export const openAlexNeighborhoodCommand = (
+  workId: string,
+  limit: number,
+  json: boolean
+) =>
+  Effect.tryPromise({
+    try: () => getOpenAlexWorkNeighborhood(workId, limit),
+    catch: (error) =>
+      iceError(
+        "OPENALEX_NEIGHBORHOOD_FAILED",
+        error instanceof OpenAlexSearchError ? error.message : String(error),
+        2
+      )
+  }).pipe(
+    Effect.tap((result) =>
+      json ? printJson(result) : Console.log(renderNeighborhood(result))
     )
   )

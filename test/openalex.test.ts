@@ -1,5 +1,6 @@
 import { expect, it } from "vitest"
 import {
+  getOpenAlexWorkNeighborhood,
   OpenAlexSearchError,
   searchOpenAlexWorks
 } from "../src/literature/openalex.ts"
@@ -67,4 +68,56 @@ it("reports an upstream non-success response without treating it as evidence", a
   await expect(searchOpenAlexWorks("valid", 1, { fetch: fetcher })).rejects.toMatchObject({
     message: "OpenAlex request failed with HTTP 503"
   })
+})
+
+it("bounds one OpenAlex citation neighborhood without crawling the literature graph", async () => {
+  const requested: URL[] = []
+  const fetcher: typeof fetch = async (input) => {
+    const url = new URL(input.toString())
+    requested.push(url)
+    const payload = url.pathname.endsWith("/W2741809807")
+      ? {
+          id: "https://openalex.org/W2741809807",
+          title: "Target primary work",
+          publication_date: "2025-01-01",
+          doi: null,
+          cited_by_count: 12,
+          primary_location: {},
+          open_access: {},
+          authorships: [],
+          referenced_works: ["https://openalex.org/W2", "https://openalex.org/W3"],
+          related_works: ["https://openalex.org/W4"]
+        }
+      : {
+          results: [
+            {
+              id: "https://openalex.org/W5",
+              title: "Incoming citing work",
+              publication_date: "2026-01-01",
+              doi: null,
+              cited_by_count: 2,
+              primary_location: {},
+              open_access: {},
+              authorships: []
+            }
+          ]
+        }
+    return new Response(JSON.stringify(payload), { status: 200 })
+  }
+
+  const result = await getOpenAlexWorkNeighborhood("https://openalex.org/W2741809807", 2, {
+    fetch: fetcher,
+    now: () => new Date("2026-09-01T00:00:00.000Z")
+  })
+
+  expect(requested).toHaveLength(2)
+  expect(requested[1]?.searchParams.get("filter")).toBe("cites:W2741809807")
+  expect(result).toMatchObject({
+    schema: "ice-openalex-work-neighborhood/v1",
+    work_id: "W2741809807",
+    outgoing_reference_ids: ["https://openalex.org/W2", "https://openalex.org/W3"],
+    related_work_ids: ["https://openalex.org/W4"],
+    incoming_citations: [{ id: "https://openalex.org/W5" }]
+  })
+  expect(result.guidance.join(" ")).toContain("not a citation-accuracy guarantee")
 })

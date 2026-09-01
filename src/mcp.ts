@@ -7,7 +7,12 @@ import {
   graphHarnessContextData,
   graphHarnessImpactData
 } from "./harness/commands.ts"
-import { searchOpenAlexWorks } from "./literature/openalex.ts"
+import { researchAgentPlanData } from "./agent-graph/commands.ts"
+import { graphRagSearchData, graphRagSummaryData } from "./graphrag/commands.ts"
+import {
+  getOpenAlexWorkNeighborhood,
+  searchOpenAlexWorks
+} from "./literature/openalex.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const AppLayer = Layer.mergeAll(NodeContext.layer, WorkspaceLive)
@@ -53,6 +58,22 @@ const capabilities = {
     {
       name: "ice_literature_search",
       purpose: "Search OpenAlex's public scholarly works graph (maximum 20 works)."
+    },
+    {
+      name: "ice_literature_neighbors",
+      purpose: "Read one bounded OpenAlex citation neighborhood (maximum 20 works per direction)."
+    },
+    {
+      name: "ice_graphrag_summary",
+      purpose: "Describe the deterministic local evidence GraphRAG index."
+    },
+    {
+      name: "ice_graphrag_search",
+      purpose: "Hybrid-search local ontology TextUnits with bounded graph expansion."
+    },
+    {
+      name: "ice_research_workflow_plan",
+      purpose: "Create a human-review-only durable research workflow checkpoint."
     }
   ],
   boundaries: [
@@ -82,7 +103,7 @@ export const createIceResearchMcpServer = (): McpServer => {
         depth: z.number().int().min(0).max(32).default(2),
         limit: z.number().int().min(1).max(256).default(64)
       },
-      annotations: { readOnlyHint: true, destructiveHint: false }
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
     },
     async ({ id, graph, depth, limit }) => {
       try {
@@ -111,7 +132,7 @@ export const createIceResearchMcpServer = (): McpServer => {
         depth: z.number().int().min(0).max(32).default(2),
         limit: z.number().int().min(1).max(256).default(64)
       },
-      annotations: { readOnlyHint: true, destructiveHint: false }
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
     },
     async ({ path, graph, depth, limit }) => {
       try {
@@ -135,12 +156,111 @@ export const createIceResearchMcpServer = (): McpServer => {
       description:
         "Validate local graph structure, tracked hashes, and evidence snapshots. A passing check is not a scientific validation or an execution authorization.",
       inputSchema: { graph: z.string().min(1).max(128).default("all") },
-      annotations: { readOnlyHint: true, destructiveHint: false }
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
     },
     async ({ graph }) => {
       try {
         return asToolResult(
           await Effect.runPromise(graphHarnessCheckData(graph).pipe(Effect.provide(AppLayer)))
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_literature_neighbors",
+    {
+      title: "OpenAlex citation neighborhood",
+      description:
+        "Read a bounded incoming, outgoing, and related-work neighborhood for one OpenAlex work. It is external discovery metadata; verify primary sources and citation context before interpretation.",
+      inputSchema: {
+        work_id: z.string().min(1).max(256),
+        limit: z.number().int().min(1).max(20).default(10)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: true }
+    },
+    async ({ work_id, limit }) => {
+      try {
+        return asToolResult(await getOpenAlexWorkNeighborhood(work_id, limit))
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_graphrag_summary",
+    {
+      title: "Local evidence GraphRAG summary",
+      description:
+        "Describe the deterministic repository-local TextUnit, structural-community, and hybrid-retrieval index. Read-only; no model extraction, no automatic follow-up, and no execution authorization.",
+      inputSchema: {},
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async () => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(graphRagSummaryData.pipe(Effect.provide(AppLayer)))
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_graphrag_search",
+    {
+      title: "Local evidence GraphRAG search",
+      description:
+        "Search canonical ontology TextUnits using BM25, deterministic lexical hash vectors, and bounded graph expansion. Retrieved context is not independent evidence or an execution permit.",
+      inputSchema: {
+        query: z.string().min(1).max(500),
+        graph: z.string().min(1).max(128).default("all"),
+        limit: z.number().int().min(1).max(50).default(12),
+        depth: z.number().int().min(0).max(3).default(1)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ query, graph, limit, depth }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            graphRagSearchData(query, { graph, limit, depth }).pipe(
+              Effect.provide(AppLayer)
+            )
+          )
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_research_workflow_plan",
+    {
+      title: "Human-review research workflow plan",
+      description:
+        "Create a serializable durable workflow checkpoint from local GraphRAG context. It does not persist automatically, call models, or authorize ./ice run.",
+      inputSchema: {
+        question: z.string().min(1).max(500),
+        graph: z.string().min(1).max(128).default("all"),
+        limit: z.number().int().min(1).max(50).default(12),
+        depth: z.number().int().min(0).max(3).default(1)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ question, graph, limit, depth }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            researchAgentPlanData(question, graph, limit, depth).pipe(
+              Effect.provide(AppLayer)
+            )
+          )
         )
       } catch (error) {
         return asToolError(error)
@@ -176,7 +296,7 @@ export const createIceResearchMcpServer = (): McpServer => {
       description:
         "Describe this MCP server's bounded read-only tool surface and non-authorization guarantees.",
       inputSchema: {},
-      annotations: { readOnlyHint: true, destructiveHint: false }
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
     },
     () => asToolResult(capabilities)
   )

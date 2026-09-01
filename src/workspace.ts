@@ -15,6 +15,8 @@ export interface Workspace {
         | "@effect/printer"
         | "@effect/printer-ansi"
         | "@modelcontextprotocol/server"
+        | "graphology"
+        | "graphology-communities-louvain"
         | "tsx"
         | "zod",
         string
@@ -42,6 +44,8 @@ export const workspaceFromRoot = (root: string): Workspace => ({
       "@effect/printer": "0.51.0",
       "@effect/printer-ansi": "0.51.0",
       "@modelcontextprotocol/server": "2.0.0",
+      graphology: "0.26.0",
+      "graphology-communities-louvain": "2.0.2",
       zod: "4.5.4",
       tsx: "4.23.12"
     },

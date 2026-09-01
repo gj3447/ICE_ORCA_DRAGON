@@ -14,6 +14,8 @@ import { type IceError } from "./errors.ts"
 import { ontologyCommand } from "./ontology/cli.ts"
 import { harnessCommand } from "./harness/cli.ts"
 import { literatureCommand } from "./literature/cli.ts"
+import { graphRagCommand } from "./graphrag/cli.ts"
+import { researchAgentCommand } from "./agent-graph/cli.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const json = Options.boolean("json").pipe(
@@ -94,7 +96,9 @@ const root = Command.make("ice", {}, () =>
     repro,
     ontologyCommand,
     harnessCommand,
-    literatureCommand
+    literatureCommand,
+    graphRagCommand,
+    researchAgentCommand
   ])
 )
 

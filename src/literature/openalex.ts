@@ -39,6 +39,19 @@ export interface OpenAlexSearchOptions {
   readonly now?: () => Date
 }
 
+export interface OpenAlexWorkNeighborhood {
+  readonly schema: "ice-openalex-work-neighborhood/v1"
+  readonly provider: "OpenAlex"
+  readonly work_id: string
+  readonly retrieved_at_utc: string
+  readonly target: OpenAlexWork
+  readonly outgoing_reference_ids: ReadonlyArray<string>
+  readonly related_work_ids: ReadonlyArray<string>
+  readonly incoming_citations: ReadonlyArray<OpenAlexWork>
+  readonly request_urls: ReadonlyArray<string>
+  readonly guidance: ReadonlyArray<string>
+}
+
 type JsonRecord = Readonly<Record<string, unknown>>
 
 const asRecord = (value: unknown): JsonRecord | undefined =>
@@ -51,6 +64,11 @@ const asString = (value: unknown): string | null =>
 
 const asNumber = (value: unknown): number | null =>
   typeof value === "number" && Number.isFinite(value) ? value : null
+
+const readStringArray = (value: unknown, limit: number): ReadonlyArray<string> =>
+  Array.isArray(value)
+    ? value.flatMap((item) => (typeof item === "string" ? [item] : [])).slice(0, limit)
+    : []
 
 const readAuthors = (value: unknown): ReadonlyArray<string> => {
   if (!Array.isArray(value)) return []
@@ -98,6 +116,55 @@ const validateQuery = (query: string, limit: number): string => {
     )
   }
   return trimmed
+}
+
+const validateWorkId = (workId: string, limit: number): string => {
+  if (!Number.isSafeInteger(limit) || limit < 1 || limit > MAX_OPENALEX_RESULTS) {
+    throw new OpenAlexSearchError(
+      `limit must be an integer from 1 through ${MAX_OPENALEX_RESULTS}`
+    )
+  }
+  const trimmed = workId.trim()
+  const match = /^(?:https:\/\/openalex\.org\/)?(W\d+)$/i.exec(trimmed)
+  if (match?.[1] === undefined) {
+    throw new OpenAlexSearchError(
+      "work id must be an OpenAlex work identifier such as W2741809807"
+    )
+  }
+  return match[1].toUpperCase()
+}
+
+const requestOpenAlex = async (
+  requestUrl: URL,
+  fetcher: typeof fetch
+): Promise<JsonRecord> => {
+  let response: Response
+  try {
+    response = await fetcher(requestUrl, {
+      headers: { accept: "application/json" },
+      signal: AbortSignal.timeout(OPENALEX_TIMEOUT_MS)
+    })
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    throw new OpenAlexSearchError(`OpenAlex request failed: ${message}`)
+  }
+  if (!response.ok) {
+    throw new OpenAlexSearchError(
+      `OpenAlex request failed with HTTP ${response.status}`
+    )
+  }
+  try {
+    const payload: unknown = await response.json()
+    const record = asRecord(payload)
+    if (record === undefined) {
+      throw new OpenAlexSearchError("OpenAlex returned an invalid JSON object")
+    }
+    return record
+  } catch (error) {
+    if (error instanceof OpenAlexSearchError) throw error
+    const message = error instanceof Error ? error.message : String(error)
+    throw new OpenAlexSearchError(`OpenAlex returned invalid JSON: ${message}`)
+  }
 }
 
 /**
@@ -162,6 +229,66 @@ export const searchOpenAlexWorks = async (
       "This is a time-stamped discovery result from OpenAlex, not independent scientific evidence.",
       "Read and cite the relevant primary source before using any work to support a research statement.",
       "A literature search neither authorizes execution nor creates a follow-up task."
+    ]
+  }
+}
+
+/**
+ * Reads a bounded, time-stamped citation neighborhood from OpenAlex. The
+ * outgoing and related links are identifiers only so this tool remains two
+ * small read-only requests rather than an uncontrolled graph crawl.
+ */
+export const getOpenAlexWorkNeighborhood = async (
+  workId: string,
+  limit: number,
+  options: OpenAlexSearchOptions = {}
+): Promise<OpenAlexWorkNeighborhood> => {
+  const normalizedWorkId = validateWorkId(workId, limit)
+  const targetUrl = new URL(`${OPENALEX_WORKS_URL}/${normalizedWorkId}`)
+  targetUrl.searchParams.set(
+    "select",
+    "id,title,publication_date,doi,cited_by_count,primary_location,open_access,authorships,referenced_works,related_works"
+  )
+  const incomingUrl = new URL(OPENALEX_WORKS_URL)
+  incomingUrl.searchParams.set("filter", `cites:${normalizedWorkId}`)
+  incomingUrl.searchParams.set("per-page", String(limit))
+  incomingUrl.searchParams.set("sort", "cited_by_count:desc")
+  incomingUrl.searchParams.set(
+    "select",
+    "id,title,publication_date,doi,cited_by_count,primary_location,open_access,authorships"
+  )
+
+  const fetcher = options.fetch ?? fetch
+  const [targetPayload, incomingPayload] = await Promise.all([
+    requestOpenAlex(targetUrl, fetcher),
+    requestOpenAlex(incomingUrl, fetcher)
+  ])
+  const target = decodeWork(targetPayload)
+  if (target === undefined) {
+    throw new OpenAlexSearchError("OpenAlex target work response was incomplete")
+  }
+  const incomingResults = incomingPayload.results
+  if (!Array.isArray(incomingResults)) {
+    throw new OpenAlexSearchError("OpenAlex citation response did not contain a works list")
+  }
+  const now = options.now ?? (() => new Date())
+  return {
+    schema: "ice-openalex-work-neighborhood/v1",
+    provider: "OpenAlex",
+    work_id: normalizedWorkId,
+    retrieved_at_utc: now().toISOString(),
+    target,
+    outgoing_reference_ids: readStringArray(targetPayload.referenced_works, limit),
+    related_work_ids: readStringArray(targetPayload.related_works, limit),
+    incoming_citations: incomingResults.slice(0, limit).flatMap((work) => {
+      const decoded = decodeWork(work)
+      return decoded === undefined ? [] : [decoded]
+    }),
+    request_urls: [targetUrl.toString(), incomingUrl.toString()],
+    guidance: [
+      "This is a bounded, time-stamped discovery neighborhood from OpenAlex, not a citation-accuracy guarantee or independent scientific evidence.",
+      "Read the cited primary sources and verify the claim-to-citation relationship before using it in a research statement.",
+      "The result is read-only and neither authorizes execution nor creates a follow-up task."
     ]
   }
 }
