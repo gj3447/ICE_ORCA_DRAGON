@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_20260901",
+  "phase": null,
+  "observed_at_utc": "2026-09-01T05:49:33Z",
+  "command": "./ice run raw_c_fixed_lambda_root_theorem_composition",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_fixed_lambda_root_theorem_composition.py",
+    "sha256": "d24f76446bc28697fb9c3a3ac2d324bf5bfa57b53cc681f89754211f196659cc",
+    "introduced_in_commit": "ad9012d7365f7d781db60c35b1b6452721b692b4"
+  },
+  "exact_checks": 12,
+  "checks": [
+    {
+      "id": "rawc.root_theorem.upstream.sign_strip",
+      "status": "PASS",
+      "statement": "The hash-pinned sign strip is a valid unnumbered run with the required schema, verdict and canonical payload digest."
+    },
+    {
+      "id": "rawc.root_theorem.upstream.complete_kappa_derivative",
+      "status": "PASS",
+      "statement": "The hash-pinned complete kappa derivative is a valid unnumbered run with the required schema, verdict and canonical payload digest."
+    },
+    {
+      "id": "rawc.root_theorem.scope.kappa_corridor",
+      "status": "PASS",
+      "statement": "The sign strip and complete derivative use the identical exact expanded root-1 kappa corridor."
+    },
+    {
+      "id": "rawc.root_theorem.scope.lambda_slab",
+      "status": "PASS",
+      "statement": "The two certificates use the identical exact closed lambda slab."
+    },
+    {
+      "id": "rawc.root_theorem.scope.projective_functional",
+      "status": "PASS",
+      "statement": "The explicit sign-strip normalization and derivative base formula define exactly the same selected Q0-normalized G."
+    },
+    {
+      "id": "rawc.root_theorem.scope.selected_family_and_chart",
+      "status": "PASS",
+      "statement": "The same selected real plus family has one uniformly nonzero Q0 projective chart throughout the rectangle."
+    },
+    {
+      "id": "rawc.root_theorem.scope.reference_instantiation",
+      "status": "PASS",
+      "statement": "The sign-strip c_p notation is exactly instantiated as the same c_kappa reference after p^2=(2/3)kappa^2."
+    },
+    {
+      "id": "rawc.root_theorem.hypothesis.joint_continuity",
+      "status": "PASS",
+      "statement": "The sign-strip certificate supplies joint real continuity of this same complete normalized G on the closed rectangle."
+    },
+    {
+      "id": "rawc.root_theorem.hypothesis.opposite_face_signs",
+      "status": "PASS",
+      "statement": "For every lambda in the shared slab, the complete left face is strictly negative and the complete right face is strictly positive."
+    },
+    {
+      "id": "rawc.root_theorem.hypothesis.interior_kappa_differentiability",
+      "status": "PASS",
+      "statement": "For each fixed lambda, the same G is ordinarily kappa-differentiable throughout the open corridor."
+    },
+    {
+      "id": "rawc.root_theorem.hypothesis.uniform_positive_kappa_derivative",
+      "status": "PASS",
+      "statement": "The complete fixed-lambda kappa derivative has a uniform strictly positive lower bound on the shared open corridor."
+    },
+    {
+      "id": "rawc.root_theorem.composition.all_hypotheses",
+      "status": "PASS",
+      "statement": "All scope, continuity, sign and differentiability hypotheses needed by the declared calculus composition hold simultaneously."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 12,
+    "numerical_checks": 0,
+    "locator_policy": "Twelve decision-bearing provenance, scope and theorem-hypothesis locators are indexed here; the authoritative raw result remains the source of truth for all fifteen structural checks and six theorem guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_RESULT.json",
+      "sha256": "fe13b337b4fe4b70b78d4f35d3d330b38e38278a640fdc8d79fc5295e155c30f",
+      "payload_sha256_without_self": "e496fa6f76b789fae5a6fbf84cdcccc90d41ab1d9b54ff695bddc6fe49d9476b",
+      "structural_checks": 15,
+      "theorem_guards": 6,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_UNIQUE_KAPPA_TRANSVERSE_NORMALIZED_G_ZERO_AND_CONTINUOUS_SELECTOR_PER_LAMBDA_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_INPUTS.json",
+      "sha256": "ad549c523fb5f06d43eeccd5a7299478fd0ca3a3bff445d6cbc13cfe2b4758a5"
+    },
+    "executed_source_revision_commit": "ad9012d7365f7d781db60c35b1b6452721b692b4",
+    "declared_scope": "The exact real K times Lambda rectangle for the same selected Q0-normalized plus family, with a fixed-lambda ordinary kappa derivative in the corridor interior.",
+    "certified_conclusion": "For every lambda in the closed declared slab, normalized G has exactly one zero in the open kappa corridor; that normalized-G zero is kappa-simple/transverse, and the unique zeros define a continuous selector on the slab.",
+    "selected_gamma1_zero_bridge": "Because the selected u_plus(Q0) chart excludes zero, normalized G and the selected declared Gamma_1 have the same unique zero. Simplicity/transversality is asserted only for normalized G.",
+    "partial_kappa_G": {
+      "lower": "1.28166841529309749603271484375000000000000000",
+      "upper": "3.85497434251010417938232421875000000000000000",
+      "strict_sign": "POSITIVE"
+    },
+    "boundary": "No C1/differentiable/analytic selector, partial_lambda G, mixed derivative, root velocity or locations, roots outside the corridor, absolute Gamma_1 amplitude/orientation, selected measurable raw-C extension, nonreal Weyl m-function, spectral measure, raw-C RAQ, C/H equivalence, BFV or physics result is supplied."
+  }
+}

@@ -83,9 +83,11 @@ it is simple and transverse with respect to the \(\kappa\) direction.
 
 There is also one immediate topological corollary. If
 \(\lambda_n\to\lambda\), compactness gives a convergent subsequence of the
-unique roots. Joint continuity makes its limit a root at \(\lambda\), and
-uniqueness forces that limit to be the unique root there. Every subsequence has
-the same limit, so the unique roots define a continuous selector
+unique roots. Joint continuity makes its limit a root at \(\lambda\); the
+strict nonzero face values exclude either corridor face, and uniqueness forces
+that limit to be the unique interior root there. Every subsequence has a
+subsequence with this same limit, so the full root sequence converges and the
+unique roots define a continuous selector
 \(\kappa_*(\lambda)\) on the closed slab. This is continuity only. No
 \(C^1\), differentiable or analytic selector and no velocity formula is
 claimed.
@@ -104,18 +106,37 @@ root locations. In particular, it does not supply
   \(m(z)\), spectral measure/multiplicity, RAQ, \(C/H\) quantum equivalence,
   BFV, empirical or physics result.
 
-## Frozen execution
+## Frozen execution and observed result
 
 The input manifest SHA-256 is
 `ad549c523fb5f06d43eeccd5a7299478fd0ca3a3bff445d6cbc13cfe2b4758a5`;
 the source-only runner SHA-256 is
 `d24f76446bc28697fb9c3a3ac2d324bf5bfa57b53cc681f89754211f196659cc`.
-`uv run python -m py_compile` and `git diff --check` pass. The controlled
-command
+`uv run python -m py_compile` and `git diff --check` passed. The input, runner
+and scope report were frozen first in source-only commit `ad9012d`. The
+controlled command
 
 ```text
 ./ice run raw_c_fixed_lambda_root_theorem_composition
 ```
 
-is withheld until the input, runner and this scope report are committed from a
-clean core tree.
+then produced a `VALID_RUN` with 15/15 structural checks and all six theorem
+guards verified. Its verdict is
+
+```text
+CERTIFY_UNIQUE_KAPPA_TRANSVERSE_NORMALIZED_G_ZERO_AND_CONTINUOUS_SELECTOR_PER_LAMBDA_ONLY
+```
+
+The result is 14,802 bytes with raw SHA-256
+`fe13b337b4fe4b70b78d4f35d3d330b38e38278a640fdc8d79fc5295e155c30f`.
+Deleting its self-digest and canonicalizing compact sorted JSON reproduces
+payload SHA-256
+`e496fa6f76b789fae5a6fbf84cdcccc90d41ab1d9b54ff695bddc6fe49d9476b`.
+
+Thus, for every fixed \(\lambda\) in the declared closed slab, the selected
+normalized \(G\) has exactly one zero in the declared open kappa corridor; the
+normalized-\(G\) zero is simple and \(\kappa\)-transverse, and the unique zeros
+form a continuous selector over the slab. The selected declared \(\Gamma_1\)
+has the same unique zero because its \(u_+(Q_0)\) factor never vanishes, but no
+unnormalized-\(\Gamma_1\) transversality or orientation is claimed. All
+fail-closed outputs listed above remain `null`.

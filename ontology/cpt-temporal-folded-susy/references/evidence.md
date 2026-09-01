@@ -3538,7 +3538,16 @@ The latest scoped bridge records refine, but do not erase, that boundary:
 claim:RAW_C_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR_EXCLUDES_ZERO
   -> HAS_EVIDENCE -> evidence:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor-result
   -> VALID_WITHIN -> scope:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor
-  -> P1 still needs panel tubes plus actual Gamma_1/minus-tail sign
+  -> later panelwise/sign-strip and differentiated-tail records close the
+     declared real rectangle only
+
+claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS
+  -> HAS_EVIDENCE -> evidence:raw-c-fixed-lambda-root-theorem-composition-result
+  -> VALID_WITHIN -> scope:raw-c-fixed-lambda-root-theorem-composition
+  -> exactly one kappa-transverse normalized-G zero per fixed lambda
+     + one continuous selector on the closed slab
+  -> joint-C1 selector regularity, partial_lambda G, velocity, global roots,
+     unnormalized-Gamma_1 transversality and absolute orientation remain open
 
 concept:raw-c-fixed-box-nonreal-branch-audit
   -> DOCUMENTED_BY -> evidence:raw-c-fixed-box-nonreal-branch-audit-result
