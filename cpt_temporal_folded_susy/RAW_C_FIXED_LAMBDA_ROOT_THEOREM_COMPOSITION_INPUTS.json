@@ -1,0 +1,104 @@
+{
+  "schema_version": "ice.raw-c-fixed-lambda-root-theorem-composition.input.v1",
+  "calculation_id": "RawCFixedLambdaRootTheoremComposition",
+  "numbered_phase": null,
+  "kind": "bounded_exact_scope_and_calculus_theorem_audit",
+  "question": "Do the independently certified opposite-face sign strip and complete positive partial_kappa G interval concern exactly the same selected normalized real functional on the same rectangle, so that IVT and MVT certify one unique kappa-transverse root for every fixed lambda and a continuous unique selector on the closed lambda slab?",
+  "upstream_results": [
+    {
+      "key": "sign_strip",
+      "path": "cpt_temporal_folded_susy/RAW_C_CORRELATED_KAPPA_LAMBDA_GAMMA1_SIGN_STRIP_RESULT.json",
+      "sha256": "e1a3245b6d00799ce378c2b4f509e6e6d1452e95998937421d0a8dc6696f6dc2",
+      "schema_version": "ice.raw-c-correlated-kappa-lambda-gamma1-sign-strip.result.v1",
+      "verdict": "CERTIFY_CONNECTED_LAMBDA_SLAB_AT_LEAST_ONE_DECLARED_BOUNDARY_ZERO_PER_LAMBDA",
+      "payload_sha256_without_self": "277a9697698799fb1255a4bebcf51561046df21e17bfdf881a28656b83876fee",
+      "role": "supplies joint continuity of the selected normalized G, a uniformly nonzero Q0 chart and strict negative/positive complete-tail values on the left/right kappa faces"
+    },
+    {
+      "key": "complete_kappa_derivative",
+      "path": "cpt_temporal_folded_susy/RAW_C_COMBINED_KAPPA_DIFFERENTIATED_MINUS_TAIL_RESULT.json",
+      "sha256": "ad61dee6f84f9f1edf409f26d9f78dfeb1ebd47142bd3e39f2a5f5fe78dbc6a8",
+      "schema_version": "ice.raw-c-combined-kappa-differentiated-minus-tail.result.v1",
+      "verdict": "CERTIFY_COMPLETE_UNIFORM_POSITIVE_NORMALIZED_G_KAPPA_INTERVAL_ONLY",
+      "payload_sha256_without_self": "eb38cbdd6e30c56c6c7acfe408ec3ac461ab19ff0b7fcd24508a8ff051c3d24d",
+      "role": "supplies ordinary fixed-lambda differentiability in the corridor interior and a uniform strict-positive complete partial_kappa G interval"
+    }
+  ],
+  "declared_scope": {
+    "Q_0": "-4",
+    "kappa_corridor": {
+      "left_exact": "5125180435678962497905662710537123/2535301200456458802993406410752000",
+      "right_exact": "160320344939996106734739047604961/79228162514264337593543950336000"
+    },
+    "lambda_slab": {
+      "left_exact": "-1/10000",
+      "right_exact": "1/10000"
+    },
+    "projective_functional": "G(kappa,lambda)=Gamma_1,kappa(u_plus)/u_plus(Q0)=-lim_(Q->-infinity)W(U,c_kappa)",
+    "signstrip_projective_functional": "G(kappa,lambda)=Gamma_1,kappa(u_plus)/u_plus(Q0)=-lim_(Q->-infinity)W(U,c_kappa), U=u_plus/u_plus(Q0)",
+    "selected_actual_family": "the same real plus-recessive family selected by the pinned Q>=4 Liouville-Green construction; its common nonzero switch amplitude is divided out",
+    "signstrip_reference_instantiation": "p^2=(2/3)kappa^2 and A_0=x^2-kappa^2; write the same pinned reference as c_kappa on the real kappa corridor",
+    "combined_reference_equation": "c_kappa,QQ=(V-kappa^2)*c_kappa; c_kappa(Q0)=1 and c_kappa,Q(Q0)=0",
+    "wronskian": "W(f,g)=f*g_Q-f_Q*g",
+    "signstrip_boundary_map": "Gamma_1,p(u)=-lim_(Q->-infinity) W(u,c_p)",
+    "boundary_map": "Gamma_1,kappa(u)=-lim_(Q->-infinity) W(u,c_kappa)",
+    "derivative_scope": "ordinary fixed-lambda partial_kappa on the corridor interior and the corresponding one-sided derivative at each kappa face"
+  },
+  "calculus_theorem": {
+    "hypotheses": [
+      "G is jointly continuous on the closed K times Lambda rectangle",
+      "G(kappa_left,lambda)<0<G(kappa_right,lambda) for every lambda in Lambda",
+      "for every fixed lambda, G is differentiable in kappa on the open corridor",
+      "partial_kappa G is uniformly bounded below by a strictly positive constant on the open corridor"
+    ],
+    "conclusions": [
+      "IVT gives at least one open-corridor zero for every fixed lambda",
+      "MVT makes kappa maps to G(kappa,lambda) strictly increasing, so that zero is unique",
+      "the unique normalized G zero is simple and transverse with respect to kappa",
+      "joint continuity, compactness and uniqueness give one continuous selector kappa_star(lambda) on the closed lambda slab"
+    ],
+    "not_used": "No root solve, interval Newton step, implicit-function derivative, partial_lambda G, mixed derivative, spectral argument or RAQ argument is used."
+  },
+  "assumptions": [
+    "The sign-strip p notation is bridged to the positive real kappa notation only through its exact p^2=(2/3)kappa^2 reference instantiation; no raw string equality between c_p and c_kappa is assumed.",
+    "The ordinary derivative is required only in the open kappa corridor. The one-sided face derivatives are not used by IVT or MVT.",
+    "The uniformly nonzero u_plus(Q0) chart makes zeros of normalized G and the selected declared Gamma_1 equivalent on this rectangle, but supplies no absolute Gamma_1 amplitude or orientation.",
+    "The continuous selector conclusion uses only joint continuity, compactness and uniqueness. No C1, differentiable or analytic lambda dependence is claimed.",
+    "The claim is one root per fixed lambda inside this declared corridor, not a global root census and not a nonreal spectral statement."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "upstream_results": 2,
+    "structural_checks": 15,
+    "theorem_guards": 6,
+    "ode_calls": 0,
+    "quadrature_calls": 0,
+    "root_calls": 0,
+    "finite_difference_calls": 0,
+    "sampling_points": 0,
+    "bisection_steps": 0,
+    "ball_function_evaluations": 0,
+    "interval_rows": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "C1_or_differentiable_root_selector": null,
+    "root_velocity_or_partial_lambda_G": null,
+    "kappa_lambda_mixed_derivative": null,
+    "root_location_intervals_or_samples": null,
+    "roots_outside_declared_corridor_or_global_census": null,
+    "absolute_actual_Gamma1_amplitude_or_orientation": null,
+    "nonreal_weyl_m_function": null,
+    "raw_C_spectral_measure_or_multiplicity": null,
+    "selected_measurable_raw_C_self_adjoint_extension": null,
+    "raw_C_rigging_test_space_or_RAQ": null,
+    "raw_C_to_selected_H_quantum_equivalence": null,
+    "BFV_or_physical_product": null,
+    "physics_claim": null,
+    "automatic_next": null
+  }
+}
