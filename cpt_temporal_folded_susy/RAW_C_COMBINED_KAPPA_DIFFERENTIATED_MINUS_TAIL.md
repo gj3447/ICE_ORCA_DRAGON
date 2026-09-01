@@ -158,7 +158,7 @@ If $B\ge|I_{\rm signed}|$, the computed interval is
 At $\lambda=0$, this reduces exactly to the independent regression
 $\partial_\kappa G=-h(Q_0)$.
 
-## Controlled source freeze
+## Initial controlled source freeze
 
 Before any result-producing execution:
 
@@ -173,8 +173,49 @@ Before any result-producing execution:
   global $Q_0$ shortcut, corrected the Wronskian sign, unified the coefficient
   notation, and required full upstream execution-scope/self-hash checks.
 
-The first result-producing command is deliberately withheld until these
-source files are committed from a clean core tree.
+The source-only freeze was committed as `24b95cf`. No result-producing command
+ran before that commit.
+
+## First controlled execution — fail closed
+
+The first command
+
+```text
+./ice run raw_c_combined_kappa_differentiated_minus_tail
+```
+
+exited zero and wrote a `VALID_RUN`, but correctly refused certification:
+
+- verdict: `COMBINED_KAPPA_DIFFERENTIATED_MINUS_TAIL_NOT_CERTIFIED`;
+- exact/structural checks: 18/18;
+- outward controls: 4/6;
+- theorem guards: 5;
+- raw result SHA-256:
+  `615ee6de1cb9377f85a85e36e8bb985256d29aab842fae18509ef79999640254`;
+- canonical payload SHA-256:
+  `f9ccb1cafc14aa2a83cb3b769b8b854ac96ba46b0e9e3e36c46dda9e56dd89b2`.
+
+Both elementary rows were finite and gave the same displayed strict-positive
+complete interval. The failed controls were bookkeeping: scalar radii that
+are *one-sided upper bounds* had been treated as set enclosures and required
+to intersect across precisions. Their tiny precision-dependent outward
+rounding balls need not intersect, even though each upper endpoint is valid.
+This also made the aggregate radius `null` and forced the final control false.
+The failure result is preserved in commit `969e33c` rather than overwritten in
+history.
+
+## Minimal control correction
+
+The corrected runner requires cross-precision overlap only for the actual set
+enclosures, namely $-h$ and the completed $\partial_\kappa G$ interval. For
+one-sided magnitude bounds it records the conservative maximum of the two
+valid upper endpoints. No equation, analytic bound, input, upstream pin,
+resource cap, row value, verdict logic or fail-closed output changed.
+
+The corrected runner SHA-256 is
+`715e3c91cd22963c484671b421dad9f77630813d7befdf415780995562f11c41`;
+`uv run python -m py_compile` and `git diff --check` pass. A second controlled
+execution is withheld until this correction is committed.
 
 ## Explicit boundary
 

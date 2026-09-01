@@ -334,6 +334,11 @@ def all_intersection(values: list[arb]) -> arb | None:
     return result
 
 
+def common_upper_bound(values: list[arb]) -> arb:
+    """Return one conservative scalar upper bound valid for every tier."""
+    return arb(max(value.upper() for value in values))
+
+
 def strict_sign(value: arb) -> str:
     if value.lower() > 0:
         return "POSITIVE"
@@ -691,14 +696,7 @@ def main() -> None:
             selected_bound=row["UD_selected_bound"],
         )
 
-    overlap_keys = (
-        "partial_kappa_G",
-        "tail_radius",
-        "combined_integral_bound",
-        "UD_pointwise",
-        "UD_L2",
-        "minus_h",
-    )
+    overlap_keys = ("partial_kappa_G", "minus_h")
     overlap_ok = all(
         intersection(balls[0][key], balls[1][key]) is not None
         for key in overlap_keys
@@ -706,20 +704,22 @@ def main() -> None:
     audit.control(
         "rawc.kappa_tail.precision_overlap",
         overlap_ok,
-        "The 80- and 120-digit outward elementary evaluations overlap for every reported bound and complete derivative interval.",
+        "The 80- and 120-digit outward set enclosures overlap for minus h and the complete derivative interval; scalar magnitude radii are one-sided upper bounds and are combined by their conservative maximum, not by set intersection.",
     )
     final_gk = all_intersection([row["partial_kappa_G"] for row in balls])
-    final_tail_radius = all_intersection([row["tail_radius"] for row in balls])
-    final_integral_bound = all_intersection(
+    final_tail_radius = common_upper_bound([row["tail_radius"] for row in balls])
+    final_integral_bound = common_upper_bound(
         [row["combined_integral_bound"] for row in balls]
     )
     final_minus_h = all_intersection([row["minus_h"] for row in balls])
     final_ok = bool(
         final_gk is not None
-        and final_tail_radius is not None
-        and final_integral_bound is not None
         and final_minus_h is not None
         and final_gk.is_finite()
+        and final_tail_radius.is_finite()
+        and final_tail_radius.lower() >= 0
+        and final_integral_bound.is_finite()
+        and final_integral_bound.lower() >= 0
     )
     digits = int(conventions["ball_output_digits"])
     audit.control(
@@ -785,13 +785,9 @@ def main() -> None:
             ),
             "combined_signed_integral_magnitude_bound": (
                 interval_record(final_integral_bound, digits)
-                if final_integral_bound is not None
-                else None
             ),
             "lambda_times_complete_tail_radius": (
                 interval_record(final_tail_radius, digits)
-                if final_tail_radius is not None
-                else None
             ),
             "partial_kappa_G_complete": (
                 interval_record(final_gk, digits) if final_gk is not None else None
