@@ -1,0 +1,54 @@
+# Research-graph interoperability boundary
+
+The repository-local JSON collection, its runtime Effect schemas, and the
+repository semantic validator are authoritative.  In particular, raw result
+artifacts remain the authoritative check ledgers described in
+[`../README.md`](../README.md).  Nothing in this directory changes the native
+schema or validator.
+
+Any JSON-LD is a generated, read-only, one-way projection of that native
+record:
+
+- Native JSON is the only import source.  JSON-LD/RDF is never imported or
+  merged back into it.
+- A projection does not promote a local node to an external identity and does
+  not resolve, mint, or merge external KG identifiers.
+- Use `urn:ice-orca-dragon:ontology:` for projected ontology resources and
+  `urn:ice-orca-dragon:resource:` for projected repository resources.  These
+  are local namespace bases, not assertions of external identity.
+- Keep source paths and SHA-256 values as projected values from the native
+  record.  A JSON-LD serialization or RDF normalization is not a replacement
+  for the native artifact hash, path, command, environment, or check ledger.
+
+The projection reifies every graph edge as a `project:ResearchEdge` resource.
+The native edge has its own stable `localId` and may carry metadata such as
+`polarity` and `note`; representing only its relation as an RDF predicate
+would not retain that record as a resource with its metadata.  The edge shape
+therefore requires exactly one `from`, `relation`, and `to` value.
+
+`research-graph-shapes.ttl` is a minimal SHACL Core contract for a downstream
+RDF/JSON-LD projection.  It is projection QA only; it does not replace the
+local semantic validator or add an execution or research gate.  This
+repository does **not** bundle a SHACL processor.  A consumer that elects to
+validate an exported projection must supply its own SHACL Core processor.
+
+RDF has no JSON `null`.  For an unresolved KG bridge, a projection must retain
+the explicit native nulls by emitting one value for both `externalUid` and
+`relation`: use `project:NoExternalUid` and `project:NoRelation`, respectively.
+The bridge shape requires those properties to be present, rather than allowing
+the missing values to be silently dropped.
+
+## Standards used by this boundary
+
+- [RDF 1.1 Concepts and Abstract Syntax — W3C Recommendation, 25 February 2014](https://www.w3.org/TR/rdf11-concepts/)
+- [JSON-LD 1.1 — W3C Recommendation, 16 July 2020](https://www.w3.org/TR/2020/REC-json-ld11-20200716/)
+- [Shapes Constraint Language (SHACL) — W3C Recommendation, 20 July 2017](https://www.w3.org/TR/shacl/)
+- [PROV-O: The PROV Ontology — W3C Recommendation, 30 April 2013](https://www.w3.org/TR/prov-o/)
+
+The shapes reserve PROV-O for a future projection that needs explicit artifact
+lineage.  They do not assert that provenance is complete or that a provenance
+relation establishes a scientific conclusion.
+
+SKOS and DCAT are deliberately not part of this minimal contract.  Add SKOS
+only for a frozen controlled vocabulary shared with another consumer; add DCAT
+only for a stable, explicitly released dataset catalogue.

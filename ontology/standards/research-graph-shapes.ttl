@@ -1,0 +1,58 @@
+@prefix project: <urn:ice-orca-dragon:ontology:> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+project:ResearchNodeShape
+  a sh:NodeShape ;
+  sh:targetClass project:ResearchNode ;
+  sh:property [ sh:path project:localId ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:title ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:state ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+project:ResearchEdgeShape
+  a sh:NodeShape ;
+  sh:targetClass project:ResearchEdge ;
+  sh:property [ sh:path project:localId ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:from ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path project:relation ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:to ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+project:ClaimShape
+  a sh:NodeShape ;
+  sh:targetClass project:Claim ;
+  sh:property [ sh:path project:claimId ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:epistemicState ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+project:EvidenceShape
+  a sh:NodeShape ;
+  sh:targetClass project:Evidence ;
+  sh:property [ sh:path project:observedStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+project:ArtifactShape
+  a sh:NodeShape ;
+  sh:targetClass project:Artifact ;
+  sh:property [ sh:path project:path ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:sha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[a-f0-9]{64}$" ] .
+
+project:PolicyShape
+  a sh:NodeShape ;
+  sh:targetClass project:Policy ;
+  sh:property [ sh:path project:path ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:sha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[a-f0-9]{64}$" ] .
+
+project:KgBridgeShape
+  a sh:NodeShape ;
+  sh:targetClass project:KgBridge ;
+  sh:property [ sh:path project:localNode ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path project:status ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [
+    sh:path project:externalUid ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:or ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:string ] )
+  ] ;
+  sh:property [
+    sh:path project:relation ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:or ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:string ] )
+  ] .
+
+# A native JSON null is projected explicitly as project:NoExternalUid or
+# project:NoRelation.  Both properties remain required by KgBridgeShape.
