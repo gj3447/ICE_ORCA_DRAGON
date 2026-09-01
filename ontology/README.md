@@ -4,6 +4,15 @@
 
 Update this index only when a calculation materially changes a claim's status, direct evidence, applicable scope, or a next open problem. Do not register ordinary intermediate work, wording changes, method notes, or a verifier result merely to satisfy a process step.
 
+## Graph-aware harness
+
+The graph is also the bounded context source for `./ice harness`: `context <node>` groups the nearby
+claims, evidence, scope, source, artifact, policy, and open-problem records; `impact <path>` locates an
+exact registered artifact/policy or graph path before it is changed; and `check` runs full collection
+integrity validation. The harness is human-directed and does not grant execution authorization, create
+an automatic next task, or duplicate a raw result's check ledger. See the active
+[graph-aware harness decision](../docs/decisions/ICE_GRAPH_AWARE_HARNESS_2026-09-01.md).
+
 ## Current collection
 
 | Programme | Human entry point | Machine record | Evidence and sources |

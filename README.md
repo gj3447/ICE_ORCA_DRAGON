@@ -374,11 +374,19 @@ Canonical commands:
 ./ice ontology validate
 ./ice ontology summary
 ./ice ontology guide [--graph <key>] [--path <id>]
+./ice harness context <node-id> [--graph <key>] [--depth 0..32] [--limit 1..256]
+./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
+./ice harness check [--graph <key>]
 ```
 
 `ontology validate` streams every recorded artifact for the full hash gate. The read-only ontology
 commands (`summary`, `show`, `trace`, and `guide`) validate graph structure and semantics without
 reopening large artifact payloads.
+
+`harness` is the graph-aware engineering surface: `context` exposes bounded evidence/scope/policy/open
+problem context for a selected node, `impact` maps an exact registered repository path to that context,
+and `check` runs the full hash/evidence integrity gate. It never authorizes a run or generates a follow-up
+experiment; see the [graph-aware harness decision](docs/decisions/ICE_GRAPH_AWARE_HARNESS_2026-09-01.md).
 
 `npm run ice -- <command>` is the package-script equivalent. `./ice` is the repository entry point.
 
@@ -482,7 +490,14 @@ problem materially changes; `ontology validate` is required when the ontology ch
 ./ice ontology show cpt::claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES
 ./ice ontology trace cpt::claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD --depth 2
 ./ice ontology trace cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
+./ice harness context cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
+./ice harness impact docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md
+./ice harness check
 ```
+
+The graph-aware harness adds provenance and change-impact engineering around this memory layer. It is
+human-directed: a graph context is review input, a full raw result remains the check ledger, and no graph
+edge can auto-authorize a successor calculation.
 
 ## Scientific scope
 

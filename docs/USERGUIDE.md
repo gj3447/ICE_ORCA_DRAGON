@@ -52,6 +52,21 @@ including the 529 MB Phase-44 LFS object. `summary`, `show`, `trace`, and `guide
 collection schema, graph semantics, and repository paths without reopening artifact payloads, so normal
 navigation still works before that large LFS object is hydrated.
 
+### Use the graph-aware harness for research engineering context
+
+```bash
+./ice harness context cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
+./ice harness impact docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md
+./ice harness check
+```
+
+`context` gives a bounded evidence/scope/policy/open-problem neighborhood for review before a material
+change. `impact` maps an exact registered path to its graph context and explicitly reports unregistered
+paths without forcing ontology registration. `check` is the full graph hash/evidence integrity gate. None
+of these commands authorizes a kernel, promotes a scientific claim, or generates the next calculation;
+the raw result remains the complete ledger. The operating design is documented in
+[the graph-aware harness decision](decisions/ICE_GRAPH_AWARE_HARNESS_2026-09-01.md).
+
 ## Run one kernel
 
 ```bash
