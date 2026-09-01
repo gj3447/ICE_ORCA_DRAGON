@@ -214,8 +214,48 @@ resource cap, row value, verdict logic or fail-closed output changed.
 
 The corrected runner SHA-256 is
 `715e3c91cd22963c484671b421dad9f77630813d7befdf415780995562f11c41`;
-`uv run python -m py_compile` and `git diff --check` pass. A second controlled
-execution is withheld until this correction is committed.
+`uv run python -m py_compile` and `git diff --check` passed. The second
+controlled execution was withheld until this correction was committed.
+
+## Corrected controlled execution — complete positive interval
+
+The correction was committed as `f591484`. Running the same command from that
+clean committed source produced:
+
+- verdict:
+  `CERTIFY_COMPLETE_UNIFORM_POSITIVE_NORMALIZED_G_KAPPA_INTERVAL_ONLY`;
+- exact or structural checks: 18/18;
+- outward controls: 6/6;
+- theorem guards: 5;
+- selected direct first-moment $UD$ bound:
+  $0.235658847388127281023384253040$;
+- independent $L^2$ Cauchy--Schwarz $UD$ bound:
+  $0.445822534577852224868895031531$;
+- complete signed-integral magnitude bound:
+  $|I_{\rm signed}|\le0.805246826915456777116778778611$;
+- lambda-multiplied complete-tail radius:
+  $|\lambda I_{\rm signed}|\le8.0524682691545678\times10^{-5}$;
+- complete normalized derivative interval:
+
+  \[
+  1.28166841529309749603271484375
+  \le \partial_\kappa G \le
+  3.85497434251010417938232421875.
+  \]
+
+The interval is strictly positive on the corridor interior, with the
+corresponding one-sided derivative intervals at the two faces. The raw result
+is 32,191 bytes with SHA-256
+`ad61dee6f84f9f1edf409f26d9f78dfeb1ebd47142bd3e39f2a5f5fe78dbc6a8`.
+Deleting its self-digest and canonicalizing compact sorted JSON reproduces
+payload SHA-256
+`eb38cbdd6e30c56c6c7acfe408ec3ac461ab19ff0b7fcd24508a8ff051c3d24d`.
+
+This closes the complete combined-tail/$G_\kappa$ calculation only. The
+independently supported at-least-one-root strip was not consumed as a theorem
+hypothesis by this runner. A separate scope-and-theorem audit is the next open
+question before transversality or uniqueness; no automatic descendant was
+started.
 
 ## Explicit boundary
 
@@ -228,3 +268,19 @@ the earlier existence strip into transversality, monotonicity, uniqueness, a
 root selector, continuation or velocity. It also supplies no absolute actual
 $\Gamma_1$ amplitude/sign, roots outside the corridor, nonreal Weyl
 $m$-function, spectral measure, RAQ, BFV, empirical or physical result.
+
+## Completion audit
+
+The completion bundle was checked independently against the input, runner,
+raw result and compact ontology evidence. The result self-payload digest was
+recomputed as
+`eb38cbdd6e30c56c6c7acfe408ec3ac461ab19ff0b7fcd24508a8ff051c3d24d`;
+all 18 exact or structural checks, all six controls and all five theorem guards
+pass, and every required out-of-scope output remains `null`.
+
+`./ice ontology validate` reports a valid four-graph collection with 432/432
+stored hashes verified; its 70 warnings are the already-recorded unresolved
+external bridges. `npm run check` passes strict TypeScript and all 69 Vitest
+tests. `uv run python -m py_compile
+cpt_temporal_folded_susy/raw_c_combined_kappa_differentiated_minus_tail.py`
+and `git diff --check` also pass.

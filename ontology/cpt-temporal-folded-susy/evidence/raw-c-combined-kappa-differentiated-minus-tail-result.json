@@ -1,0 +1,135 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_COMBINED_KAPPA_DIFFERENTIATED_MINUS_TAIL_20260901",
+  "phase": null,
+  "observed_at_utc": "2026-09-01T01:41:57Z",
+  "command": "./ice run raw_c_combined_kappa_differentiated_minus_tail",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_combined_kappa_differentiated_minus_tail.py",
+    "sha256": "715e3c91cd22963c484671b421dad9f77630813d7befdf415780995562f11c41",
+    "introduced_in_commit": "f591484bf6ccec87739cdfb8afe029b620043bd1"
+  },
+  "exact_checks": 11,
+  "checks": [
+    {
+      "id": "rawc.kappa_tail.wronskian_derivative",
+      "status": "PASS",
+      "statement": "The declared W(U,c)_Q is -lambda*a*U*c in the repository Wronskian convention."
+    },
+    {
+      "id": "rawc.kappa_tail.combined_wronskian_derivative",
+      "status": "PASS",
+      "statement": "The actual and reference -2*kappa forcing terms cancel and H_Q=-lambda*a*(Z*c+U*D)."
+    },
+    {
+      "id": "rawc.kappa_tail.Q0_combined_seed",
+      "status": "PASS",
+      "statement": "The normalized Q0 data give H(Q0)=h(Q0)."
+    },
+    {
+      "id": "rawc.kappa_tail.improper_integral_orientation",
+      "status": "PASS",
+      "statement": "H(Q0)-H(-infinity)=-lambda*I_signed fixes H(-infinity)=h+lambda*I_signed."
+    },
+    {
+      "id": "rawc.kappa_tail.a_mass",
+      "status": "PASS",
+      "statement": "The complete a-tail mass at Q0=-4 is A0=4*pi^2*exp(-6)."
+    },
+    {
+      "id": "rawc.kappa_tail.a_first_moment",
+      "status": "PASS",
+      "statement": "The complete a-tail first moment is A1=(2/3)*A0."
+    },
+    {
+      "id": "rawc.kappa_tail.rotating_energy",
+      "status": "PASS",
+      "statement": "The free rotating part is skew and only the perturbation contributes to the rotating-energy derivative."
+    },
+    {
+      "id": "rawc.kappa_tail.duhamel_exponent_composition",
+      "status": "PASS",
+      "statement": "The propagator and base-solution exponents compose across each Duhamel split without an extra full-tail factor."
+    },
+    {
+      "id": "rawc.kappa_tail.lambda_zero_regression",
+      "status": "PASS",
+      "statement": "At lambda=0 the complete differentiated tail vanishes exactly and partial_kappa G=-h(Q0)."
+    },
+    {
+      "id": "rawc.kappa_tail.selected_Q0_seed",
+      "status": "PASS",
+      "statement": "The same selected nonzero Q0 chart supplies rho, fixed-lambda h and the normalized Z seed on the full rectangle."
+    },
+    {
+      "id": "rawc.kappa_tail.reference_envelope_scope",
+      "status": "PASS",
+      "statement": "The reference result supplies the zero-data D equation and a finite full-half-line L2(a) upper bound only."
+    }
+  ],
+  "numerical_checks": 6,
+  "numerical": [
+    {
+      "id": "rawc.kappa_tail.tier1.finite_global_envelope",
+      "status": "PASS",
+      "statement": "The 80-digit global masses, rotating norms, variation integral bounds and complete derivative interval are finite and outward."
+    },
+    {
+      "id": "rawc.kappa_tail.tier1.independent_UD_bounds",
+      "status": "PASS",
+      "statement": "At 80 digits the selected U*D radius is no larger than both the direct first-moment and L2 Cauchy-Schwarz radii."
+    },
+    {
+      "id": "rawc.kappa_tail.tier2.finite_global_envelope",
+      "status": "PASS",
+      "statement": "The 120-digit global masses, rotating norms, variation integral bounds and complete derivative interval are finite and outward."
+    },
+    {
+      "id": "rawc.kappa_tail.tier2.independent_UD_bounds",
+      "status": "PASS",
+      "statement": "At 120 digits the selected U*D radius is no larger than both the direct first-moment and L2 Cauchy-Schwarz radii."
+    },
+    {
+      "id": "rawc.kappa_tail.precision_overlap",
+      "status": "PASS",
+      "statement": "The two outward set enclosures overlap for minus h and the completed partial_kappa G interval; scalar radii use a conservative common upper bound."
+    },
+    {
+      "id": "rawc.kappa_tail.final_complete_intersection",
+      "status": "PASS",
+      "statement": "Both precision tiers have a common complete normalized partial_kappa G interval on the exact real rectangle."
+    }
+  ],
+  "payload": {
+    "exact_checks": 11,
+    "numerical_checks": 6,
+    "locator_policy": "Eleven decision-bearing exact or structural locators and all six compact interval controls are indexed here; the authoritative raw result remains the single source for all eighteen exact or structural checks and five theorem-scope guards.",
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_COMBINED_KAPPA_DIFFERENTIATED_MINUS_TAIL_RESULT.json",
+      "sha256": "ad61dee6f84f9f1edf409f26d9f78dfeb1ebd47142bd3e39f2a5f5fe78dbc6a8",
+      "payload_sha256_without_self": "eb38cbdd6e30c56c6c7acfe408ec3ac461ab19ff0b7fcd24508a8ff051c3d24d",
+      "exact_checks": 18,
+      "interval_controls": 6,
+      "theorem_guards": 5,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_COMPLETE_UNIFORM_POSITIVE_NORMALIZED_G_KAPPA_INTERVAL_ONLY"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_COMBINED_KAPPA_DIFFERENTIATED_MINUS_TAIL_INPUTS.json",
+      "sha256": "d5f8798e06087056baa4f62721a2c7b0509471a84f224893b42b67147d3146dc"
+    },
+    "executed_source_revision_commit": "f591484bf6ccec87739cdfb8afe029b620043bd1",
+    "declared_scope": "The exact current real K times Lambda rectangle, the same selected Q0-normalized actual family and the declared fixed c_kappa reference; ordinary fixed-lambda derivative in the corridor interior and corresponding one-sided derivatives at its faces.",
+    "combined_identity": "H=W(partial_kappa U,c_kappa)+W(U,partial_kappa c_kappa), H_Q=-lambda*a*(Z*c_kappa+U*D), H(Q0)=h(Q0), and partial_kappa G=-h(Q0)-lambda*I_signed.",
+    "combined_signed_integral_magnitude_upper": "0.805246826915456777116778778610482019286246509",
+    "lambda_times_complete_tail_radius_upper": "8.05246826915456777116778778610482019286246509e-5",
+    "partial_kappa_G_complete": {
+      "lower": "1.28166841529309749603271484375000000000000000",
+      "upper": "3.85497434251010417938232421875000000000000000",
+      "strict_sign": "POSITIVE"
+    },
+    "boundary": "This closes only the complete real normalized kappa-differentiated boundary-functional interval on the declared rectangle. The result does not itself compose the existing root-existence strip into transversality, monotonicity, uniqueness, selector, continuation or velocity, and it supplies no absolute Gamma_1 amplitude/sign, global root census, nonreal Weyl m-function, spectral measure, RAQ, BFV or physics claim."
+  }
+}
