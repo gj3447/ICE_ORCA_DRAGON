@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-02T15:27:46Z",
+  "updated_at_utc": "2026-09-02T16:56:31Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -601,9 +601,10 @@
     },
     {
       "question": "이 효과는 어떤 선택을 바꿔도 남으며, 다른 관측 영역에서도 같은 이유로 나타나는가?",
-      "answer": "아직 model/physics scope에서 두 조건을 모두 통과한 CPT 결과는 없다. G1은 source-derived global intersection vector 자체가 열려 있고, P1은 작은 real corridor의 normalized-root 정리에 머물며, P4의 actual nonreal endpoint-to-m-to-measure-to-positive-RAQ chain도 열려 있다. P2-P6은 closure, anomaly, gluing의 calibration 또는 open obligation이고 P7은 normalized physical observable 전에는 likelihood로 갈 수 없다. 허용 선택군 아래 안정적인 zero/no-go도 유효한 결과이며, 다른 graph의 비슷한 결과는 독립 consumer나 evidence가 아니다.",
+      "answer": "아직 model/physics scope에서 두 조건을 모두 통과한 CPT 결과는 없다. 새 frozen-m=2 감사는 현재 local source의 C/|N|와 C/N이 음의 arm에서 달라 zero-supported contact로 수선되지 않으며, branch를 고른 뒤에도 같은 scaling degree의 c delta 자유도가 남음을 보였다. 이는 유일한 local glue/contact라는 지름길만 제거한다. G1의 source-derived global intersection vector와 P4의 actual nonreal endpoint-to-m-to-measure-to-positive-RAQ chain은 계속 열려 있다. 허용 선택군 아래 안정적인 zero/no-go도 유효한 결과이며, 다른 graph의 비슷한 결과는 독립 consumer나 evidence가 아니다.",
       "claim_ids": [
         "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+        "claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION",
         "claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS",
         "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE"
       ]
@@ -6169,8 +6170,8 @@
       "id": "concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet",
       "type": "concept",
       "title": "Real-lapse Maslov gluing versus one holomorphic sheet",
-      "summary": "The identity-normalized signature-minus-plus kernel has a 1/abs(N) real-axis prefactor, whereas a scalar 1/N sheet changes sign across zero and therefore needs additional determinant-line or Maslov gluing data.",
-      "state": "ACTIVE"
+      "summary": "The identity-normalized signature-minus-plus kernel has a 1/abs(N) real-axis prefactor, whereas a scalar 1/N sheet changes sign across zero. The frozen-m=2 punctured-distribution audit now separates this negative-arm glue mismatch from the later zero-supported contact freedom: a delta term cannot repair an off-zero sign difference, and either critical-scaling branch retains a same-scaling-degree c delta extension family unless extra source data select it.",
+      "state": "ACTIVE_EXACTLY_SEPARATED_PUNCTURED_GLUE_AND_CONTACT"
     },
     {
       "id": "claim:P30_FINITE_CUTOFF_LOCAL_COUPLED_FIELD_LAPSE_CYCLE_EXISTS",
@@ -7148,7 +7149,7 @@
       "id": "open:p34-full-joint-dual-determinant-and-global-census",
       "type": "open_problem",
       "title": "Connect the stationary branches and construct the full joint dual census",
-      "summary": "The recorded incoming segment and outgoing branch pair do not determine their oriented connection across the degenerate T chart, nor do they supply the joint field--lapse metric or cycle. The relative cycle and Airy connection must determine which outgoing arm, if either, carries the incoming cycle; the determinant line must separately orient the semiclassical prefactor. Every joint dual arm and good end must then be continued and all local intersections oriented before assigning global n_sigma or a physical kernel.",
+      "summary": "The recorded incoming segment and outgoing branch pair do not determine their oriented connection across the degenerate T chart, nor do they supply the joint field--lapse metric or cycle. The frozen-m=2 punctured-distribution audit additionally proves that the current local C/abs(N) record and a transported C/N sheet disagree away from zero and that a contact term cannot repair that glue; it supplies no source selection. The relative cycle and Airy connection must determine which outgoing arm, if either, carries the incoming cycle; the determinant line must separately orient the semiclassical prefactor. Every joint dual arm and good end must then be continued and all local intersections oriented before assigning global n_sigma or a physical kernel.",
       "state": "OPEN",
       "question": "Can the relative cycle and Airy connection determine which outgoing arm, if either, carries the recorded incoming cycle, can the determinant line orient its prefactor, and can that construction be lifted to a complete joint field--lapse relative cycle with enumerated sheets, good ends, signed global n_sigma, and a gauge-reduced trace-class WDW/seam state?"
     },
@@ -7652,7 +7653,7 @@
       "id": "open:gate1-original-cycle-signed-global-intersections",
       "type": "open_problem",
       "title": "Gate 1 — transport the original cycle and fix signed global intersections",
-      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The later finite bosonic canonical control proves that one common N-i0 or N+i0 cannot absolutely damp unchanged real p_a,p_phi axes; its declared centered complex rays reproduce the finite Gaussian pushforward with momentum cap glue +1 and configuration glue -1, but no source-to-thimble deformation or physical determinant line follows. The closed-FRW V=0 trace follow-up now supplies one classical local on-shell relational endpoint action on a frozen p-positive component, but no off-shell chart, quantum endpoint state, full BFV source, full-real-lapse delta(C) kernel or old fixed-a equality. A source-derived original class must still specify those local-to-source debts plus zero lapse, scale-factor and mixed ends, regulator removal, connector intersections, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
+      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The finite bosonic canonical control proves that one common N-i0 or N+i0 cannot absolutely damp unchanged real p_a,p_phi axes; its declared centered complex rays reproduce the finite Gaussian pushforward with momentum cap glue +1 and configuration glue -1, but no source-to-thimble deformation or physical determinant line follows. A new audit of those frozen flat punctured kernels proves that C/abs(N) and C/N differ on the negative arm away from zero, so contact data cannot reconcile their glue, and that either selected critical branch retains a same-scaling-degree c delta family. This kills only the unique-current-local-source glue/contact shortcut and supplies no source-defined choice. The closed-FRW V=0 trace follow-up supplies one classical local on-shell relational endpoint action on a frozen p-positive component, but no off-shell chart, quantum endpoint state, full BFV source, full-real-lapse delta(C) kernel or old fixed-a equality. A source-derived original class must still specify those local-to-source debts plus zero lapse, scale-factor and mixed ends, regulator removal, connector intersections, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
       "state": "OPEN",
       "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
     },
@@ -7846,7 +7847,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded, non-numbered straight-lift audit closes one previously listed debt negatively: the Phase-39 conjugate straight rays have an exact bad negative-phi subsequence, and no anchor-through homogeneous field line delta=qy with constant q and no affine intercept has two relative-good ends on the fixed-a, pure-imaginary-lapse m=2 slice. That scoped completion class is KILL, not the local signs or Gate 1. A subsequent execution-free exact construction supplies one fixed-a, finite-[r,R], lower-bypass scalar-fiber family with phase-locked affine tails and a smooth compact curved connector whose two scalar ends are uniformly relative-good. It does not select an original or source-derived joint cycle and does not compute connector or cap reintersections. The remaining debt includes source selection, the scale-factor and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
+      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded, non-numbered straight-lift audit closes one previously listed debt negatively: the Phase-39 conjugate straight rays have an exact bad negative-phi subsequence, and no anchor-through homogeneous field line delta=qy with constant q and no affine intercept has two relative-good ends on the fixed-a, pure-imaginary-lapse m=2 slice. That scoped completion class is KILL, not the local signs or Gate 1. A subsequent execution-free exact construction supplies one fixed-a, finite-[r,R], lower-bypass scalar-fiber family with phase-locked affine tails and a smooth compact curved connector whose two scalar ends are uniformly relative-good. The frozen-m=2 punctured glue/contact audit further kills an inverse shortcut: current C/abs(N) local data do not choose the negative-arm C/N sheet or the critical c delta contact. Neither result selects an original or source-derived joint cycle or computes connector or cap reintersections. The remaining debt includes source selection, the scale-factor and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -11044,8 +11045,8 @@
       "id": "source:brunetti-fredenhagen-2000-scaling-degree",
       "type": "source",
       "title": "Microlocal Analysis and Interacting Quantum Field Theories: Renormalization on Physical Backgrounds",
-      "summary": "Primary mathematical-physics source for scaling-degree-preserving distribution extension. It was predeclared for the one-dimensional lapse contact analysis, but the invalid runner produced no boundary distribution or scaling-degree evidence to which the theorem could be applied.",
-      "state": "PRIMARY_CITES_ONLY_NOT_REACHED_BY_INVALID_RUN",
+      "summary": "Primary mathematical-physics source for scaling-degree-preserving distribution extension. The consumed full-q scalar runner remains invalid and supplied no application evidence. A distinct clean frozen-m=2 flat-tangent audit now applies Theorem 5.2 only after fixing a punctured branch: at omega=d=1, same-scaling-degree extensions retain one c delta parameter. The theorem neither chooses the absolute-versus-signed glue nor selects a physical contact coefficient.",
+      "state": "PRIMARY_APPLIED_TO_FROZEN_M2_CRITICAL_SCALING_CONTACT_AUDIT_ONLY",
       "citation": "R. Brunetti and K. Fredenhagen, Microlocal Analysis and Interacting Quantum Field Theories: Renormalization on Physical Backgrounds",
       "uri": "https://arxiv.org/abs/math-ph/9903028",
       "version": "arXiv:math-ph/9903028"
@@ -15386,6 +15387,86 @@
       "summary": "A spectral measure alone is not RAQ. The missing typed object is a dense invariant test space and a convergent or distributionally controlled group-average/zero-fiber form with justified Fubini and disintegration, separate treatment of zero-energy atoms or singular components, p-to-zero control, reality, positivity, constraint annihilation, observable intertwining, null quotient and completion. An unregularized average over a zero-energy atom may diverge rather than add a finite sector.",
       "state": "OPEN_NO_RAW_C_RAQ_MAP_OR_PHYSICAL_PRODUCT",
       "question": "On the assembled raw-C spectral representation, can one construct a positive, real, constraint-annihilating and observable-intertwining rigging map on a declared dense invariant test space, including the zero-energy atomic and p-to-zero cases?"
+    },
+    {
+      "id": "scope:gate1-m2-punctured-glue-contact-selection-family",
+      "type": "scope",
+      "title": "Gate-1 frozen-m=2 punctured glue and contact selection family",
+      "summary": "The frozen positive-A, m=2, x=q=0 flat-tangent source record and its declared absolute/signed punctured kernels, finite-part scales and signed lateral prescriptions. It isolates negative-arm glue from same-scaling-degree zero-contact freedom without importing a physical cycle.",
+      "state": "CLOSED_COMPUTED_CURRENT_LOCAL_SOURCE_SELECTION_SCOPE",
+      "includes": [
+        "the inherited real C/abs(N) and transported single-sheet C/N kernels on the punctured real lapse line",
+        "absolute versus signed negative-arm glue and a smooth negative-support discriminator",
+        "four finite-part scales and lower, upper and principal-value signed prescriptions",
+        "same-scaling-degree extensions at omega=d=1"
+      ],
+      "excludes": [
+        "the consumed full-q scalar zero-lapse calculation or any retry of its runner",
+        "additional parity, homogeneity, causality, determinant-line, BFV or physical-cycle selection premises",
+        "source-to-thimble deformation, a full joint relative cycle, global intersections, good-end census or absolute measure",
+        "nonreal Weyl endpoint data, spectral measure, RAQ, empirical, physics or TOE claims"
+      ]
+    },
+    {
+      "id": "claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION",
+      "type": "claim",
+      "title": "The current frozen-m=2 local source underdetermines punctured glue and zero-lapse contact",
+      "summary": "Supported only in the declared frozen local scope. C/abs(N) and C/N agree on the positive arm but differ on the negative arm away from zero, so no point-supported contact reconciles them. After either critical punctured branch is chosen, same-scaling-degree extensions retain a c delta parameter. This removes a unique-current-local-source shortcut; it is not a no-go for selection by a complete source-defined joint cycle.",
+      "state": "SUPPORTED_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINATION_ONLY",
+      "claim_id": "G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION",
+      "statement": "Within the current frozen positive-A, m=2, x=q=0 local source record, the punctured negative-arm glue and the same-scaling-degree zero-lapse contact coefficient are not uniquely selected: C/abs(N) differs from C/N away from zero, and each fixed critical branch admits a c delta extension family.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:gate1-m2-punctured-glue-contact-audit-result",
+      "type": "evidence",
+      "title": "Gate-1 frozen-m=2 punctured glue/contact audit evidence",
+      "summary": "One clean unnumbered VALID_RUN records 7/7 exact checks, 4/4 numerical controls and 3/3 theorem guards. A negative-support bump separates the punctured kernels where every zero-supported contact vanishes; independent finite-part scale, cutoff and lower/upper lateral checks reproduce the declared factors and signs. All physical-cycle, Weyl, spectral, RAQ and physics outputs remain null.",
+      "state": "VALID_RUN_INDEPENDENTLY_REVIEWED_SCOPED_UNDERDETERMINATION",
+      "observed_status": "VALID_RUN_7_EXACT_4_NUMERICAL_3_THEOREM_GUARDS",
+      "check_ids": [
+        "G1.m2.glue.source_coefficient",
+        "G1.m2.glue.positive_arm_agreement",
+        "G1.m2.glue.negative_arm_opposition",
+        "G1.m2.glue.lateral_algebra",
+        "G1.m2.contact.critical_scaling_order",
+        "G1.m2.contact.finite_part_scale_shift",
+        "G1.m2.contact.lateral_orientation_mutation",
+        "G1.m2.glue.negative_support_separation",
+        "G1.m2.contact.scale_family_on_compact_bump",
+        "G1.m2.contact.cutoff_limit_cross_check",
+        "G1.m2.contact.lower_upper_lateral_gaussian"
+      ]
+    },
+    {
+      "id": "artifact:gate1-m2-punctured-glue-contact-audit-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 frozen-m=2 punctured glue/contact evidence snapshot",
+      "summary": "Schema-valid typed extract of the clean audit, including exact and numerical check ledgers, source and runner hashes, independent review, null outputs and strict local scope.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-m2-punctured-glue-contact-audit-result.json",
+      "sha256": "b69464d1d75936dce84e6524e69e1917cb9bea8e5ea214cf66995a1b786b63ce"
+    },
+    {
+      "id": "artifact:gate1-m2-punctured-glue-contact-audit-report",
+      "type": "artifact",
+      "title": "Gate-1 frozen-m=2 punctured glue/contact audit report",
+      "summary": "Human-readable separation of off-zero negative-arm glue from critical zero-contact extension freedom, with theorem boundaries, independent checks and explicit non-promotion guards.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_PUNCTURED_GLUE_CONTACT_AUDIT.md",
+      "sha256": "fb1761fd546e7ddf877d7d537308e2574fcfe8ad2bd132c9856b549fae882ccb"
+    },
+    {
+      "id": "source:dang-2014-distribution-extension",
+      "type": "source",
+      "title": "Extension of distributions, scalings and renormalization of QFT on Riemannian manifolds",
+      "summary": "Primary mathematical source for Hadamard finite-part extensions and the fact that two extensions of one punctured distribution differ by a distribution supported on the singular set. It classifies extension freedom but supplies no model-specific glue, contact coefficient or physical-cycle selection.",
+      "state": "PRIMARY_APPLIED_AS_EXTENSION_CLASSIFICATION_GUARD_ONLY",
+      "citation": "N. V. Dang, Extension of distributions, scalings and renormalization of QFT on Riemannian manifolds",
+      "uri": "https://arxiv.org/abs/1411.3670",
+      "version": "arXiv:1411.3670"
     }
   ],
   "edges": [
@@ -35647,7 +35728,20 @@
     {"id":"edge:3716","from":"open:raw-c-raq-rigging-map-physical-product","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"Supplies the RAQ domain framework without selecting the raw-C extension, test space or observable algebra."},
     {"id":"edge:3717","from":"open:raw-c-raq-rigging-map-physical-product","relation":"CITES","to":"source:giulini-marolf-1999-uniqueness","note":"Conditional uniqueness does not substitute for constructing a convergent positive rigging map."},
     {"id":"edge:3718","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"BLOCKED_BY","to":"open:raw-c-raq-rigging-map-physical-product","note":"A domain-, observable- and rigging-map-preserving raw-C/selected-H comparison requires the raw-C rigging map and physical product, not merely an extension or spectral measure."},
-    {"id":"edge:3719","from":"programme:cpt-temporal-folded-susy","relation":"GOVERNED_BY","to":"policy:choice-invariance-cross-domain-promotion","note":"Single repository-wide broader-interpretation review boundary; not scientific evidence, a cross-graph link, an execution permit, or an automatic successor rule."}
+    {"id":"edge:3719","from":"programme:cpt-temporal-folded-susy","relation":"GOVERNED_BY","to":"policy:choice-invariance-cross-domain-promotion","note":"Single repository-wide broader-interpretation review boundary; not scientific evidence, a cross-graph link, an execution permit, or an automatic successor rule."},
+    {"id":"edge:3720","from":"scope:gate1-m2-punctured-glue-contact-selection-family","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"The scope is a frozen local workbench selection family, not a physical original-cycle class."},
+    {"id":"edge:3721","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"ABOUT","to":"concept:real-lapse-maslov-gluing-versus-single-holomorphic-sheet"},
+    {"id":"edge:3722","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"VALID_WITHIN","to":"scope:gate1-m2-punctured-glue-contact-selection-family","note":"Support is restricted to the inherited frozen-A, m=2, x=q=0 local punctured kernels and declared extension families."},
+    {"id":"edge:3723","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-punctured-glue-contact-audit-result","polarity":"SUPPORTS"},
+    {"id":"edge:3724","from":"evidence:gate1-m2-punctured-glue-contact-audit-result","relation":"RECORDED_IN","to":"artifact:gate1-m2-punctured-glue-contact-audit-evidence-snapshot"},
+    {"id":"edge:3725","from":"evidence:gate1-m2-punctured-glue-contact-audit-result","relation":"DERIVED_FROM","to":"evidence:gate1-bosonic-canonical-source-pushforward","note":"Inherits only the hash-pinned frozen flat C/abs(N) and transported C/z kernels; no physical source deformation or orientation is imported."},
+    {"id":"edge:3726","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-punctured-glue-contact-audit-report"},
+    {"id":"edge:3727","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The audit removes a unique-local-source shortcut but leaves a complete source-defined regulated joint relative cycle and its orientation-stable vector open."},
+    {"id":"edge:3728","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"A joint source and transported determinant line must supply selection data that the frozen punctured kernels do not contain."},
+    {"id":"edge:3729","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"MOTIVATES","to":"open:p34-full-joint-dual-determinant-and-global-census","note":"The local sign/contact family does not choose an outgoing arm, orient its prefactor or complete the joint end census."},
+    {"id":"edge:3730","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"CITES","to":"source:brunetti-fredenhagen-2000-scaling-degree","note":"Theorem 5.2 classifies same-scaling-degree extensions after a punctured branch is fixed; at omega=d=1 it leaves point-support order zero and does not choose its coefficient."},
+    {"id":"edge:3731","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"CITES","to":"source:dang-2014-distribution-extension","note":"Hadamard finite-part and singular-set-supported extension freedom are used as classification guards, not as a model-specific selection rule."},
+    {"id":"edge:3732","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"CITES","to":"source:banihashemi-jacobson-2025","note":"The below-origin lapse contour is a comparator under its own integration order and conventions; it is not imported as this workbench's source cycle or determinant orientation."}
   ],
   "kg_bridges": [
     {

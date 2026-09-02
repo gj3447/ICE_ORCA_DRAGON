@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_M2_PUNCTURED_GLUE_CONTACT_AUDIT_20260902",
+  "phase": null,
+  "observed_at_utc": "2026-09-02T16:46:43Z",
+  "command": "./ice run gate1_m2_punctured_glue_contact_audit",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_m2_punctured_glue_contact_audit.py",
+    "sha256": "f4d21da8cce590233e84748e5d57f944e486144807c294c3911539f049c42c8d",
+    "introduced_in_commit": "9276d32520a33d3106c56edf648b1f79b0c3566c"
+  },
+  "exact_checks": 7,
+  "checks": [
+    {
+      "id": "G1.m2.glue.source_coefficient",
+      "status": "PASS",
+      "statement": "The frozen-A source coefficient is C=sqrt(mu_g*mu_s)/(2*pi*hbar)=sqrt(6)*pi*A^2/hbar>0."
+    },
+    {
+      "id": "G1.m2.glue.positive_arm_agreement",
+      "status": "PASS",
+      "statement": "C/|N| and C/N agree on the positive punctured arm."
+    },
+    {
+      "id": "G1.m2.glue.negative_arm_opposition",
+      "status": "PASS",
+      "statement": "C/|N| and C/N are opposite on the negative punctured arm, where their difference is 2*C/|N|."
+    },
+    {
+      "id": "G1.m2.glue.lateral_algebra",
+      "status": "PASS",
+      "statement": "The lower lateral decomposes into the odd PV approximant plus i times the positive Poisson-kernel delta approximant."
+    },
+    {
+      "id": "G1.m2.contact.critical_scaling_order",
+      "status": "PASS",
+      "statement": "Both degree-minus-one punctured kernels have scaling degree omega=1 in d=1, so same-degree extension data have point-support order zero only."
+    },
+    {
+      "id": "G1.m2.contact.finite_part_scale_shift",
+      "status": "PASS",
+      "statement": "With the declared finite-part convention, changing mu to mu' shifts the extension by +2*C*log(mu'/mu)*delta(N)."
+    },
+    {
+      "id": "G1.m2.contact.lateral_orientation_mutation",
+      "status": "PASS",
+      "statement": "After signed punctured glue is chosen, lower and upper lateral prescriptions select opposite delta coefficients."
+    }
+  ],
+  "numerical_checks": 4,
+  "numerical": [
+    {
+      "id": "G1.m2.glue.negative_support_separation",
+      "status": "PASS",
+      "statement": "A smooth nonnegative probe supported in (-2,-1) gives pairing 80.20857954120878 with K_abs-K_signed while every zero-supported contact pairs to zero."
+    },
+    {
+      "id": "G1.m2.contact.scale_family_on_compact_bump",
+      "status": "PASS",
+      "statement": "Four finite-part scales reproduce the +2*log(mu'/mu) normalized shift with maximum residual 2.220446049250313e-16."
+    },
+    {
+      "id": "G1.m2.contact.cutoff_limit_cross_check",
+      "status": "PASS",
+      "statement": "Three decreasing cutoffs converge monotonically to the independently evaluated subtracted finite part, ending at absolute error 4.3402779148493664e-8."
+    },
+    {
+      "id": "G1.m2.contact.lower_upper_lateral_gaussian",
+      "status": "PASS",
+      "statement": "Poisson-kernel quadrature on an even Gaussian approaches opposite plus/minus pi contact pairings and matches its analytic formula within 3.1086244689504383e-15."
+    }
+  ],
+  "payload": {
+    "exact_checks": 7,
+    "numerical_checks": 4,
+    "calculation": {
+      "calculation_id": "Gate1M2PuncturedGlueContactAudit",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION",
+      "epistemic_status": "SCOPED_INCONCLUSIVE_SUPPORTING_METHOD",
+      "programme_impact": "NARROW; KILL_UNIQUE_GLUE_OR_CONTACT_FROM_CURRENT_LOCAL_SOURCE_SHORTCUT_ONLY"
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_M2_PUNCTURED_GLUE_CONTACT_AUDIT_INPUTS.json",
+      "input_manifest_sha256": "627340c5d861f940b2ada36809c917f6c090ae2d8c970c578fd49ef67d5cd55f",
+      "upstream_result_path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_RESULT.json",
+      "upstream_result_sha256": "f7d64a09eeb4132e4975b056ee76eedfa32b75c7d29ca1a78bede5b052a66bc6",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_M2_PUNCTURED_GLUE_CONTACT_AUDIT_RESULT.json",
+      "raw_result_outer_sha256": "52a63f1fc686d003501d961b566562fac157af8fbd79f43e35de5da549491a8a",
+      "raw_result_payload_sha256_without_self": "255520fc4694ef9f12f8df5b3f09c722228270fb0d2d39bcde31bcbb3e246a5e",
+      "raw_result_size_bytes": 13229,
+      "report_path": "cpt_temporal_folded_susy/GATE1_M2_PUNCTURED_GLUE_CONTACT_AUDIT.md",
+      "report_sha256": "fb1761fd546e7ddf877d7d537308e2574fcfe8ad2bd132c9856b549fae882ccb",
+      "runner_definition_commit": "9276d32520a33d3106c56edf648b1f79b0c3566c",
+      "harness_fix_commit": "6e73c4d7d0e52abfeab6709fa07056db4fc7f366"
+    },
+    "scope": {
+      "status": "CURRENT_FROZEN_M2_LOCAL_SOURCE_RECORD_ONLY",
+      "includes": [
+        "frozen positive A, m=2, x=q=0 flat tangent",
+        "the inherited real C/|N| and transported single-sheet C/N punctured kernels",
+        "absolute versus signed negative-arm glue, four finite-part scales and lower/upper/PV signed prescriptions",
+        "same-scaling-degree distribution extensions at omega=d=1"
+      ],
+      "excludes": [
+        "the consumed full-q scalar zero-lapse boundary question or any retry of its runner",
+        "an additional parity, causality, determinant-line, BFV or physical-cycle selection",
+        "source-to-thimble deformation, full joint relative cycle, global intersections or absolute measure",
+        "nonreal Weyl data, spectral measure, RAQ, empirical, physics or TOE claims"
+      ]
+    },
+    "computed_facts": {
+      "positive_arm_relation": "K_abs=K_signed",
+      "negative_arm_relation": "K_abs=-K_signed",
+      "contact_can_reconcile_punctured_branches": false,
+      "absolute_extension_family": "Pf_mu(C/|N|)+c*delta(N)",
+      "signed_extension_family": "PV(C/N)+c*delta(N)",
+      "source_selected_glue": null,
+      "source_selected_contact": null
+    },
+    "theorem_guards": [
+      "Brunetti-Fredenhagen Theorem 5.2 applies only after fixing one punctured distribution and gives a delta-parameter family at omega=d=1; it does not select the parameter.",
+      "A point-supported distribution vanishes on the negative-support probe, so it cannot change the punctured negative-arm glue.",
+      "Sokhotski-Plemelj laterals select opposite contact coefficients only after the signed C/N punctured branch is supplied."
+    ],
+    "independent_read_only_review": {
+      "status": "PASS",
+      "payload_digest_recomputed_with_python_canonical_json": true,
+      "runner_input_upstream_hashes_verified": true,
+      "check_and_resource_counts_verified": true,
+      "finite_part_sign_and_factor_verified": true,
+      "negative_support_and_lateral_controls_verified": true,
+      "verdict_scope_restriction_required": "CURRENT_FROZEN_M2_LOCAL_SOURCE_RECORD_ONLY"
+    },
+    "runtime": {
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "scipy": "1.18.0",
+      "exact_checks": 7,
+      "numerical_checks": 4,
+      "theorem_guards": 3,
+      "quadratures": 16,
+      "sampling_points": 12,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "automatic_descendants": 0
+    },
+    "promoted_outputs": {
+      "source_defined_joint_relative_cycle": null,
+      "physical_original_cycle": null,
+      "absolute_determinant_pfaffian_line": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "singular_endpoint_nonreal_weyl_m": null,
+      "spectral_measure": null,
+      "RAQ_completion": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    }
+  }
+}
