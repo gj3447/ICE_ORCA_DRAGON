@@ -22,7 +22,8 @@ export interface Workspace {
         | "jsonld"
         | "rdf-ext"
         | "rdf-validate-shacl"
-        | "sparqljs"
+        | "@traqula/parser-sparql-1-1"
+        | "@traqula/rules-sparql-1-1"
         | "tsx"
         | "zod",
         string
@@ -57,9 +58,10 @@ export const workspaceFromRoot = (root: string): Workspace => ({
       jsonld: "9.0.0",
       "rdf-ext": "2.6.0",
       "rdf-validate-shacl": "0.6.5",
-      sparqljs: "3.7.4",
+      "@traqula/parser-sparql-1-1": "1.2.1",
+      "@traqula/rules-sparql-1-1": "1.2.1",
       zod: "4.5.4",
-      tsx: "4.23.12"
+      tsx: "4.23.13"
     },
     pythonMajorMinor: "3.13",
     packages: {

@@ -7,7 +7,7 @@ Status: accepted
 ## Decision
 
 Three least-privilege GitHub Actions workflows give this repository a clean
-revision check, dependency-change review, and reproducible package inventory.
+revision check, dependency-change review, and lockfile-based package inventory.
 They do not ingest external knowledge, write the research ontology, publish an
 artifact outside GitHub Actions, deploy a service, or authorize research work.
 
@@ -27,7 +27,9 @@ based CycloneDX SBOM through npm's built-in `npm sbom` command. It verifies the
 SBOM JSON marker and retains it as a 30-day GitHub Actions artifact. The audit
 is time-dependent registry evidence and the SBOM is an inventory of the Node
 dependency closure; neither is an attestation, a scientific result, or a
-release publication.
+release publication. npm includes a generation timestamp and serial number, so
+the SBOM is reconstructible from the pinned lockfile and npm toolchain but is
+not claimed to be byte-for-byte reproducible.
 
 ## Pinned action sources
 

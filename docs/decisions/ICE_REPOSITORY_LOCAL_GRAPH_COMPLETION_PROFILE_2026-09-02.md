@@ -42,8 +42,10 @@ npm run graph:release-check
 It runs strict TypeScript and the complete test suite, native ontology and
 artifact validation, SHACL, fixed GraphRAG retrieval/boundary/abstention cases,
 architecture competency questions, agent-routing controls, declared-root
-coverage and the current npm production advisory check. The release workflow
-then generates and verifies a lockfile-only CycloneDX SBOM.
+coverage, the current npm production advisory check, and an in-memory
+lockfile-only CycloneDX 1.5 SBOM check. The release workflow generates the same
+inventory as a retained artifact; its timestamp and serial number mean byte
+identity is not claimed.
 
 ## Standards policy
 
@@ -59,6 +61,18 @@ after the full gate. Node type declarations stay on the Node 24 line, while
 TypeScript and Vitest major upgrades require a separate compatibility change;
 an `npm outdated` major-version number is not itself evidence that changing the
 project toolchain is safe.
+
+The repository's direct SPARQL syntax dependency is the maintained Traqula
+SPARQL 1.1 parser rather than the archived SPARQL.js package. SPARQL.js remains
+in the current latest Comunica dependency closure, while `rdf-dataset-ext` and
+`node-domexception` remain below the current latest SHACL and RDF packages.
+These are recorded upstream transitive deprecation debts, not direct runtime
+choices or known production advisories; the audit gate must continue to expose
+any registry security finding rather than hiding it with lockfile overrides.
+This follows the SPARQL.js repository's own archive notice and migration
+direction:
+https://github.com/RubenVerborgh/SPARQL.js/ and
+https://github.com/comunica/traqula/blob/master/docs/sparqlJSMigration.md .
 
 ## Deliberate non-goals
 

@@ -12,6 +12,12 @@ it("executes bounded offline SPARQL and rejects remote/update forms", async () =
     head: { vars: ["node"] },
       results: { bindings: [{ node: { type: "uri" } }] }
   })
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      "PREFIX ice: <urn:ice-orca-dragon:ontology:> SELECT ?node WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:demo> { ?node a ice:ResearchNode } }"
+    )
+  ).resolves.toMatchObject({ form: "SELECT", row_count: 1 })
   const ask = await queryRdfDataset(
     built.dataset,
     "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:demo> { ?node a <urn:ice-orca-dragon:ontology:ResearchNode> } }"
@@ -46,7 +52,31 @@ it("executes bounded offline SPARQL and rejects remote/update forms", async () =
     )
   ).rejects.toThrow("not allowed")
   await expect(
+    queryRdfDataset(
+      built.dataset,
+      "SELECT * FROM NAMED <https://example.invalid/data> WHERE { GRAPH ?graph { ?s ?p ?o } }"
+    )
+  ).rejects.toThrow("not allowed")
+  await expect(
     queryRdfDataset(built.dataset, "INSERT DATA { <urn:a> <urn:b> <urn:c> }")
+  ).rejects.toThrow("not allowed")
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      "BASE <https://example.invalid/> SELECT ?node WHERE { ?node ?predicate ?object }"
+    )
+  ).rejects.toThrow("BASE")
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      "SELECT ?node WHERE { ?node ?predicate ?object } VALUES ?node { <urn:a> }"
+    )
+  ).rejects.toThrow("VALUES")
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      "SELECT ?node WHERE { VALUES ?node { <urn:a> } ?node ?predicate ?object }"
+    )
   ).rejects.toThrow("not allowed")
   await expect(
     queryRdfDataset(built.dataset, 'SELECT ?node WHERE { ?node ?predicate "SERVICE" }')
@@ -67,6 +97,40 @@ it("executes bounded offline SPARQL and rejects remote/update forms", async () =
   await expect(
     queryRdfDataset(built.dataset, "SELECT ?node WHERE { ?node ?predicate ?object } ORDER BY ?node")
   ).rejects.toThrow("ordering")
+  await expect(
+    queryRdfDataset(built.dataset, "ASK WHERE { ?node ?predicate ?object } LIMIT 1")
+  ).rejects.toThrow("pagination")
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      "CONSTRUCT { ?node ?predicate ?object } WHERE { ?node ?predicate ?object } LIMIT 1"
+    )
+  ).rejects.toThrow("pagination")
+  await expect(
+    queryRdfDataset(built.dataset, "DESCRIBE <urn:node> LIMIT 1")
+  ).rejects.toThrow("pagination")
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      "SELECT (COUNT(?node) AS ?count) WHERE { ?node ?predicate ?object }"
+    )
+  ).rejects.toThrow("expression projections")
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      "SELECT ?node WHERE { ?node ?predicate [ <urn:nested> ?value ] }"
+    )
+  ).rejects.toThrow("blank-node shorthand")
+  const shorthandTriples = Array.from(
+    { length: 13 },
+    (_, index) => `?object${index}`
+  ).join(", ")
+  await expect(
+    queryRdfDataset(
+      built.dataset,
+      `SELECT ?subject WHERE { ?subject <urn:predicate> ${shorthandTriples} }`
+    )
+  ).rejects.toThrow("triple patterns")
   await expect(
     queryRdfDataset(
       built.dataset,

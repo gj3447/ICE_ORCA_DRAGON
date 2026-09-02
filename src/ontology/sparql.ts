@@ -1,7 +1,13 @@
 import { QueryEngine } from "@comunica/query-sparql-rdfjs"
 import type { Bindings, DatasetCore, Quad, Term } from "@rdfjs/types"
-import { Parser } from "sparqljs"
-import type { Pattern, Query, SparqlQuery, Triple } from "sparqljs"
+import { Parser } from "@traqula/parser-sparql-1-1"
+import type {
+  Pattern,
+  Query,
+  SparqlQuery,
+  TripleCollection,
+  TripleNesting
+} from "@traqula/rules-sparql-1-1"
 import { serializeQuadsAsNQuads } from "./rdf.ts"
 
 export type SparqlQueryForm = "SELECT" | "ASK" | "CONSTRUCT" | "DESCRIBE"
@@ -49,18 +55,34 @@ const MAX_TRIPLES = 12
 const MAX_GRAPH_NESTING = 2
 const MAX_DESCRIBE_TERMS = 4
 const MAX_DISTINCT_VARIABLES = 24
+const sparqlParser = new Parser()
 
 const isVariableTerm = (value: unknown): boolean =>
-  typeof value === "object" && value !== null && "termType" in value && value.termType === "Variable"
+  typeof value === "object" &&
+  value !== null &&
+  "type" in value &&
+  value.type === "term" &&
+  "subType" in value &&
+  value.subType === "variable"
 
 const isExplicitDescribeTerm = (value: unknown): boolean =>
   typeof value === "object" &&
   value !== null &&
-  "termType" in value &&
-  (value.termType === "NamedNode" || value.termType === "Variable")
+  "type" in value &&
+  value.type === "term" &&
+  "subType" in value &&
+  (value.subType === "namedNode" || value.subType === "variable")
 
-const assertPlainTriple = (triple: Triple): void => {
-  if (!("termType" in triple.predicate)) {
+function assertPlainTriple(
+  triple: TripleNesting | TripleCollection
+): asserts triple is TripleNesting {
+  if (triple.type !== "triple") {
+    throw new Error("SPARQL collection and blank-node shorthand are not allowed in the local subset")
+  }
+  if (triple.subject.type !== "term" || triple.object.type !== "term") {
+    throw new Error("SPARQL collection and blank-node shorthand are not allowed in the local subset")
+  }
+  if (triple.predicate.type !== "term") {
     throw new Error("SPARQL property paths are not allowed in the local subset")
   }
 }
@@ -74,19 +96,20 @@ interface PatternBudget {
 const variableName = (value: unknown): string | undefined =>
   typeof value === "object" &&
   value !== null &&
-  "termType" in value &&
-  value.termType === "Variable" &&
+  "type" in value &&
+  value.type === "term" &&
+  "subType" in value &&
+  value.subType === "variable" &&
   "value" in value &&
   typeof value.value === "string"
     ? value.value
     : undefined
 
 const recordTriple = (
-  triple: Triple,
+  triple: TripleNesting,
   graphVariables: ReadonlyArray<string>,
   budget: PatternBudget
 ): void => {
-  assertPlainTriple(triple)
   budget.triples += 1
   if (budget.triples > MAX_TRIPLES) {
     throw new Error(`SPARQL query exceeds ${MAX_TRIPLES} triple patterns`)
@@ -116,13 +139,14 @@ const inspectPatterns = (
     throw new Error(`SPARQL graph nesting exceeds ${MAX_GRAPH_NESTING}`)
   }
   for (const pattern of patterns ?? []) {
-    if (pattern.type === "bgp") {
+    if (pattern.type === "pattern" && pattern.subType === "bgp") {
       for (const triple of pattern.triples) {
+        assertPlainTriple(triple)
         recordTriple(triple, graphVariables, budget)
       }
       continue
     }
-    if (pattern.type === "graph") {
+    if (pattern.type === "pattern" && pattern.subType === "graph") {
       const graphVariable = variableName(pattern.name)
       inspectPatterns(
         pattern.patterns,
@@ -134,12 +158,13 @@ const inspectPatterns = (
       )
       continue
     }
-    if (pattern.type === "group") {
+    if (pattern.type === "pattern" && pattern.subType === "group") {
       inspectPatterns(pattern.patterns, budget, depth + 1, graphVariables)
       continue
     }
+    const patternName = pattern.type === "pattern" ? pattern.subType : pattern.type
     throw new Error(
-      `SPARQL pattern '${pattern.type}' is not allowed in the bounded local subset`
+      `SPARQL pattern '${patternName}' is not allowed in the bounded local subset`
     )
   }
 }
@@ -166,14 +191,18 @@ const assertConnectedJoins = (variableSets: ReadonlyArray<Set<string>>): void =>
 const parseBoundedLocalQuery = (source: string): Query => {
   let parsed: SparqlQuery
   try {
-    parsed = new Parser().parse(source)
+    parsed = sparqlParser.parse(source)
   } catch (error) {
     throw new Error(`invalid SPARQL query: ${error instanceof Error ? error.message : String(error)}`)
   }
   if (parsed.type !== "query") {
     throw new Error("SPARQL update operations are not allowed")
   }
-  if (parsed.base !== undefined || parsed.from !== undefined || parsed.values !== undefined) {
+  if (
+    parsed.context.some((definition) => definition.subType === "base") ||
+    parsed.datasets.clauses.length > 0 ||
+    parsed.values !== undefined
+  ) {
     throw new Error("SPARQL BASE, dataset clauses, and VALUES are not allowed in the local subset")
   }
   const budget: PatternBudget = {
@@ -181,30 +210,29 @@ const parseBoundedLocalQuery = (source: string): Query => {
     variables: new Set<string>(),
     variableSets: []
   }
-  inspectPatterns(parsed.where, budget)
+  inspectPatterns(parsed.where?.patterns, budget)
   assertConnectedJoins(budget.variableSets)
-  if (parsed.queryType === "SELECT") {
+  if (
+    parsed.solutionModifiers.group !== undefined ||
+    parsed.solutionModifiers.having !== undefined ||
+    parsed.solutionModifiers.order !== undefined ||
+    parsed.solutionModifiers.limitOffset !== undefined
+  ) {
+    throw new Error("SPARQL grouping, ordering, and query-side pagination are not allowed in the local subset")
+  }
+  if (parsed.subType === "select") {
     if (!parsed.variables.every(isVariableTerm)) {
       throw new Error("SPARQL expression projections are not allowed in the local subset")
     }
-    if (
-      parsed.group !== undefined ||
-      parsed.having !== undefined ||
-      parsed.order !== undefined ||
-      parsed.limit !== undefined ||
-      parsed.offset !== undefined
-    ) {
-      throw new Error("SPARQL grouping, ordering, and query-side pagination are not allowed in the local subset")
-    }
   }
-  if (parsed.queryType === "CONSTRUCT") {
-    const template = parsed.template ?? []
+  if (parsed.subType === "construct") {
+    const template = parsed.template.triples
     for (const triple of template) assertPlainTriple(triple)
     if (template.length > MAX_TRIPLES) {
       throw new Error(`SPARQL CONSTRUCT template exceeds ${MAX_TRIPLES} triples`)
     }
   }
-  if (parsed.queryType === "DESCRIBE") {
+  if (parsed.subType === "describe") {
     if (
       parsed.variables.length > MAX_DESCRIBE_TERMS ||
       parsed.variables.some((term) => !isExplicitDescribeTerm(term))
@@ -301,7 +329,7 @@ export const queryRdfDataset = async (
     throw new Error(`SPARQL query must contain from 1 through ${MAX_QUERY_CHARACTERS} characters`)
   }
   const parsed = parseBoundedLocalQuery(query)
-  const form = parsed.queryType as SparqlQueryForm
+  const form = parsed.subType.toUpperCase() as SparqlQueryForm
   const bounds = queryBounds(limitOrOptions)
   return withTimeout(bounds.timeoutMs, async (signal) => {
     const engine = new QueryEngine()
