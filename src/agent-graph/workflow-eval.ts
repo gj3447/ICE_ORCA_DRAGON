@@ -42,6 +42,20 @@ const suite: ReadonlyArray<WorkflowSuiteCase> = [
     approveCurrentRoute: false
   },
   {
+    id: "classical-hda-and-quantum-bfv-supporting-stop",
+    question: "P2 P3 closed S3 HDA Jacobi closure before P5 quantum BFV common-core anomaly",
+    expectedClassification: "SUPPORTING_ONLY",
+    expectedStatus: "STOPPED",
+    approveCurrentRoute: false
+  },
+  {
+    id: "physical-product-and-likelihood-supporting-stop",
+    question: "P7 physical clock normalized state reheating empirical likelihood discriminator",
+    expectedClassification: "SUPPORTING_ONLY",
+    expectedStatus: "STOPPED",
+    approveCurrentRoute: false
+  },
+  {
     id: "unanchored-question-stops",
     question: "zzzxxyy unregistered graph object",
     expectedClassification: "INSUFFICIENT_ROUTE_EVIDENCE",
@@ -54,7 +68,7 @@ export interface ResearchAgentWorkflowEvaluationReport {
   readonly schema: "ice-research-agent-workflow-evaluation/v1"
   readonly suite: {
     readonly id: "canonical-cpt-human-handoff"
-    readonly version: "1.0.0"
+    readonly version: "1.1.0"
     readonly case_count: number
   }
   readonly passed: boolean
@@ -159,7 +173,7 @@ export const evaluateResearchAgentWorkflowSuite = (
     schema: "ice-research-agent-workflow-evaluation/v1",
     suite: {
       id: "canonical-cpt-human-handoff",
-      version: "1.0.0",
+      version: "1.1.0",
       case_count: cases.length
     },
     passed: cases.every(({ passed }) => passed),

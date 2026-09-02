@@ -67,6 +67,7 @@ Use the live summary rather than a copied node, edge, or hash total:
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
 ./ice ontology guide --graph cpt --path p1-exact-real-root-handoff
 ./ice ontology guide --graph cpt --path p4-weyl-measure-raq-handoff
+./ice ontology guide --path choice-invariance-cross-domain-audit
 ```
 
 For core CPT work, the current G1 blocker is the default path; G2--G5 require compatible upstream typed
@@ -77,6 +78,13 @@ exact zero-evaluation bridge, while P4 is blocked at the complex-tail theorem be
 A proposal is core-labelled only after human review identifies its canonical blocker, missing typed
 object, bounded falsifiable output, and changed evidence edge. The planner is a review aid and never
 authorizes execution or a physics claim.
+
+For any proposed broad model, physics, empirical, or TOE interpretation, also read the
+choice-invariance path. Promotion requires predeclared admissible choices, a mechanism-carrying typed
+object, and two independent consumers inside the same graph. Reusing one residual or pointing to another
+graph is not independence; a scoped result remains valid when this broader test is not met. There are no
+current passing results. The authoritative policy is
+[ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md](decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md).
 
 For a policy, navigation, or multi-graph change, inspect the complete collection:
 

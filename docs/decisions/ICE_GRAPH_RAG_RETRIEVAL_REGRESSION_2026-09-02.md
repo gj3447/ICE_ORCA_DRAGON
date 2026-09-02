@@ -13,10 +13,11 @@ locator, optional graph selector and bounded expansion depth. The suite is a
 control for navigation quality: it does not test scientific truth, citation
 entailment, model reasoning, or a calculation result.
 
-The baseline contains twelve stable locators rather than one generic case per
+The baseline contains thirteen stable locators rather than one generic case per
 graph. It covers the current G1 blocker, P1/P4 separation, a result-to-artifact
 provenance lookup, the singular-Weyl source, the Ragnarok boundary, all four
-programme graphs, and one Korean G1 query. This is deliberately a small
+programme graphs, one Korean G1 query, and the choice-invariance promotion
+policy locator. This is deliberately a small
 architecture sample, not a benchmark made from every historical calculation.
 
 Two read-only commands use that suite:

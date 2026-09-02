@@ -1,4 +1,8 @@
 import type { ResearchAgentWorkflowPlan } from "./core.ts"
+import {
+  promotionBoundaryCanonicalQuestion,
+  promotionBoundaryPolicyNodeId
+} from "./toe-route.ts"
 
 export interface ResearchAgentRoutingEval {
   readonly schema: "ice-research-agent-routing-eval/v2"
@@ -24,6 +28,7 @@ export const evaluateResearchAgentRouting = (
   const evidenceReview = plan.steps.find(({ id }) => id === "evidence_review")
   const calculationDesign = plan.steps.find(({ id }) => id === "calculation_design")
   const runRoute = plan.tool_routes.find(({ tool }) => tool === "./ice run")
+  const promotionBoundary = plan.objective_routing.promotion_boundary
   const currentBlockerCandidate =
     plan.objective_routing.classification === "CURRENT_BLOCKER_CANDIDATE"
   const checks = [
@@ -91,6 +96,38 @@ export const evaluateResearchAgentRouting = (
       id: "run-route-human-decision",
       passed: runRoute?.authorization === "HUMAN_DECISION_REQUIRED",
       detail: "The ./ice run route must require a separate human decision."
+    },
+    {
+      id: "promotion-boundary-is-emitted-and-complete",
+      passed:
+        promotionBoundary?.policy_node_id ===
+          promotionBoundaryPolicyNodeId &&
+        promotionBoundary?.canonical_question ===
+          promotionBoundaryCanonicalQuestion &&
+        promotionBoundary?.interpretation ===
+          "BROADER_INTERPRETATION_ONLY" &&
+        promotionBoundary?.review_status ===
+          "HUMAN_REVIEW_REQUIRED" &&
+        promotionBoundary?.selection_family === "REQUIRED" &&
+        promotionBoundary?.mechanism_typed_object === "REQUIRED" &&
+        promotionBoundary?.invariance_null === "REQUIRED" &&
+        promotionBoundary?.independent_checks === "REQUIRED" &&
+        promotionBoundary?.false_signal_control === "REQUIRED",
+      detail: "Every route must emit the complete invariance and cross-domain human-review boundary."
+    },
+    {
+      id: "promotion-boundary-is-in-graph-and-nonpassing",
+      passed:
+        promotionBoundary?.two_in_graph_consumers.minimum === 2 &&
+        promotionBoundary?.two_in_graph_consumers.scope ===
+          "IN_GRAPH_ONLY" &&
+        promotionBoundary?.two_in_graph_consumers.status ===
+          "REQUIRED" &&
+        promotionBoundary?.cross_graph_evidence === "PROHIBITED" &&
+        promotionBoundary?.passed === false &&
+        promotionBoundary?.nonpass_disposition ===
+          "STAY_SCOPED_OR_STOP",
+      detail: "Cross-graph records cannot supply independence; until human review passes all requirements, the result stays scoped or stops."
     }
   ] as const
   return {

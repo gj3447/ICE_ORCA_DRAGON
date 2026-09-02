@@ -58,6 +58,11 @@ rule does not invent an evidence edge, authorize a successor calculation, or tur
 into a blocker. `BLOCKED_BY` is added only when the downstream question literally cannot be evaluated
 without the upstream object.
 
+This is a theory-mechanism promotion rule, not a universal definition of discovery. A single directly
+observed anomaly may still be reported at its measured scope when independently replicated and globally
+calibrated. Without the cross-domain link it remains an empirical anomaly; the common new-physics
+mechanism is not yet established. The rule must never be used to hide a null result or real measurement.
+
 ## Repository-wide audit map
 
 | Graph | Admissible choices to expose | Candidate invariant | Independent in-graph consumers | Current boundary / kill condition |

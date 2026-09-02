@@ -30,6 +30,7 @@ npm run check
 | [`STATUS.md`](STATUS.md) | current engineering state and bounded historical scientific ledger |
 | [`decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md) | active six-rule research method and failure-directed control menu |
 | [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md) | narrow killed-route execution containment plus frozen one-shot and transport history; not a research method |
+| [`decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md`](decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md) | active boundary for widening scoped results: declared choices, one typed mechanism and two independent in-graph consumers; no current passing result |
 | [`decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md) | exact-path Phase-44 Git LFS migration, old/new commit map, recovery bundle identity, and remote transport receipt |
 | [`ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md) | philosophical synthesis of formal possibility, invariant physical difference, amplitude, persistent record, and evidence |
 | [`ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md) | intuitive meditation on invariance, non-privilege, seams, memory, and the limits of recursive consistency |
@@ -97,6 +98,7 @@ physical hypotheses separate. See [`../AGENTS.md`](../AGENTS.md).
 | validate research graph | `./ice ontology validate` |
 | read current research summary | `./ice ontology summary` |
 | inspect core/support/history role bands | `./ice ontology guide --path cpt-role-bands-no-promotion` |
+| inspect choice-invariance promotion boundary | `./ice ontology guide --path choice-invariance-cross-domain-audit` |
 | run architecture competency questions | `./ice ontology competency --json` |
 | trace one claim | `./ice ontology trace <node-id>` |
 

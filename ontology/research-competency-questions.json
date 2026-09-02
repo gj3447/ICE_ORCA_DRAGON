@@ -102,6 +102,27 @@
       "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:igrueqft> { ?claim <urn:ice-orca-dragon:ontology:localId> \"claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME\" . ?claim <urn:ice-orca-dragon:ontology:epistemicState> \"INCONCLUSIVE\" . } }",
       "expected_boolean": true,
       "rationale": "One finite oracle does not decide all interacting or continuum realizations."
+    },
+    {
+      "id": "choice-invariance-policy-governs-cpt",
+      "question": "Does the single choice-invariance promotion policy govern the CPT programme?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?programme <urn:ice-orca-dragon:ontology:localId> \"programme:cpt-temporal-folded-susy\" . ?policy <urn:ice-orca-dragon:ontology:localId> \"policy:choice-invariance-cross-domain-promotion\" . ?edge <urn:ice-orca-dragon:ontology:from> ?programme . ?edge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/GOVERNED_BY> . ?edge <urn:ice-orca-dragon:ontology:to> ?policy . } }",
+      "expected_boolean": true,
+      "rationale": "One policy governs the CPT programme without creating cross-graph evidence links."
+    },
+    {
+      "id": "p1-does-not-directly-block-empirical-likelihood",
+      "question": "Is the empirical likelihood bridge not directly blocked by the P1 real-root supporting problem?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?empirical <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-empirical-likelihood-bridge\" . ?p1 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport\" . ?edge <urn:ice-orca-dragon:ontology:from> ?empirical . ?edge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?edge <urn:ice-orca-dragon:ontology:to> ?p1 . } }",
+      "expected_boolean": false,
+      "rationale": "P1 cannot be made an inferred direct prerequisite of likelihood work."
+    },
+    {
+      "id": "p4-does-not-directly-block-empirical-likelihood",
+      "question": "Is the empirical likelihood bridge not directly blocked by the P4 operator/RAQ umbrella?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?empirical <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-empirical-likelihood-bridge\" . ?p4 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion\" . ?edge <urn:ice-orca-dragon:ontology:from> ?empirical . ?edge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?edge <urn:ice-orca-dragon:ontology:to> ?p4 . } }",
+      "expected_boolean": false,
+      "rationale": "P4 remains a separate supporting operator chain, not a direct likelihood prerequisite."
     }
   ],
   "guidance": [

@@ -9,12 +9,14 @@
 - [`ICE_EVIDENCE_GRAPHRAG_AGENT_ORCHESTRATION_2026-09-01.md`](ICE_EVIDENCE_GRAPHRAG_AGENT_ORCHESTRATION_2026-09-01.md) adds deterministic ontology TextUnit retrieval, structural communities, bounded OpenAlex citation neighborhoods, and a durable human-review-only agent workflow; it does not introduce model-extracted facts or execution authority.
 - [`ICE_GRAPH_RAG_RETRIEVAL_REGRESSION_2026-09-02.md`](ICE_GRAPH_RAG_RETRIEVAL_REGRESSION_2026-09-02.md) makes a versioned canonical-locator suite, working-tree evaluation and committed-revision retrieval diff the standard quality control for material graph-navigation changes; it does not assess scientific truth or authorize research work.
 - [`ICE_TOE_CRITICAL_PATH_ROUTING_2026-09-01.md`](ICE_TOE_CRITICAL_PATH_ROUTING_2026-09-01.md) makes the user-declared TOE objective an active navigation target: core progress must reduce a canonical blocker on the G1-to-terminal dependency path, while downstream, infrastructure, and unrelated work is labelled conditional or supporting rather than promoted.
+- [`ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md`](ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md) is the repository-wide human-review boundary for widening a scoped result: declare the admissible choices, typed mechanism, invariant or null, independent checks, two same-graph consumers, and dominant false-signal control; it is not evidence or execution authority.
 - [`ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md`](ICE_RECURSIVE_SELF_APPLICATION_POLICY_2026-08-20.md) is a preserved optional analysis map for philosophical or selection-rule proposals; it is not a universal execution checklist.
 - [`ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md`](ICE_ORDERED_FIVE_GATE_PROGRAMME_2026-08-20.md) is a preserved historical map for interpreting the named CPT promotion programme; it does not gate new unnumbered work.
 - [`ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md) kills the Phase-51→56 reconciliation continuation route and new numbered descendants, freezes executable core history through Phase 50, permits clean committed unnumbered cores under shared bounded caps, and records historical closeouts and transport without making a scientific no-go claim.
 - [`ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md) records the approved exact-path Git LFS rewrite of the unpublished Phase-44→56 tail, preserves the old commit namespace through a map and local bundle, and separates repository transport from scientific evidence.
 
-The workbench reframe and lean rules govern current interpretation and method. The Ragnarok decision
+The workbench reframe and lean rules govern current interpretation and method; the choice-invariance
+boundary governs any proposed widening beyond a scoped result. The Ragnarok decision
 governs whether a CPT core kernel is allowed through the repository control plane. The recursive and
 ordered-gate documents remain available as historical, optional analysis maps. The LFS migration decision
 governs transport and provenance mapping only.

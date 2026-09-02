@@ -699,4 +699,27 @@ layer(AppLayer)("canonical ontology collection", (it) => {
       expect(path?.summary).toContain("neither create evidence links nor authorize execution")
     })
   )
+
+  it.effect("keeps choice invariance and cross-domain consumers navigation-only", () =>
+    Effect.gen(function* () {
+      const collection = yield* loadResearchCollection
+      const path = collection.reading_paths.find(
+        ({ id }) => id === "collection-path:choice-invariance-cross-domain-audit"
+      )
+
+      expect(path?.navigation_only).toBe(true)
+      expect(path?.stops).toHaveLength(12)
+      expect(path?.stops[0]).toMatchObject({
+        graph: "cpt",
+        node: "policy:choice-invariance-cross-domain-promotion"
+      })
+      expect(path?.summary).toContain("does not merge graphs")
+
+      const answer = collection.quick_answers.find(
+        ({ question }) => question === "When may a candidate effect be considered beyond its local scope?"
+      )
+      expect(answer?.answer).toContain("None of the current programme graphs passes a physics-scope promotion")
+      expect(answer?.answer).toContain("two independently defined in-graph downstream consumers")
+    })
+  )
 })

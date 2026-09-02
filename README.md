@@ -64,6 +64,7 @@ For a CPT core proposal, first run:
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
 ./ice ontology guide --graph cpt --path p1-exact-real-root-handoff
 ./ice ontology guide --graph cpt --path p4-weyl-measure-raq-handoff
+./ice ontology guide --path choice-invariance-cross-domain-audit
 ```
 
 The default TOE-candidate route begins at the current G1 original-cycle blocker and proceeds through
@@ -75,6 +76,11 @@ navigation, or multi-graph edits collection-wide with
 `./ice ontology review --graph all --base HEAD`. The cohesion rule is to extend canonical nodes and
 explicit edges, then add reading paths/quick answers for navigation—never duplicate claims across graphs
 or infer links from topical proximity. This is research organization, not a new-physics result.
+
+Before widening any scoped result, use the choice-invariance audit path. It requires predeclared admissible
+choices, one mechanism-carrying typed object, and at least two independent in-graph downstream consumers;
+another graph or reuse of the same residual is not independent evidence. No current result passes this
+promotion test. See the [active promotion boundary](docs/decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md).
 
 See the [research graph atlas](docs/research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md),
 [ontology guide](ontology/README.md), and

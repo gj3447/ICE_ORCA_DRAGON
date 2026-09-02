@@ -124,6 +124,16 @@
         "cpt::open:gate1-original-cycle-signed-global-intersections"
       ],
       "rationale": "Korean project navigation should retrieve the same canonical current Gate-1 blocker."
+    },
+    {
+      "id": "cpt-choice-invariance-promotion-policy",
+      "query": "admissible choice invariance same mechanism two independent in graph consumers promotion boundary",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::policy:choice-invariance-cross-domain-promotion"
+      ],
+      "rationale": "The repository-wide promotion boundary must be retrievable as policy rather than evidence for an effect."
     }
   ],
   "guidance": [

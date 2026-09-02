@@ -42,6 +42,7 @@ Start with live collection scope and counts, rather than copying a dated total i
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
 ./ice ontology guide --graph cpt --path p1-exact-real-root-handoff
 ./ice ontology guide --graph cpt --path p4-weyl-measure-raq-handoff
+./ice ontology guide --path choice-invariance-cross-domain-audit
 ```
 
 The four registered graphs are independent evidence boundaries. Collection paths are a cross-graph
@@ -54,6 +55,12 @@ the P4 complex-tail theorem through endpoint, Weyl field, measure, threshold and
 They do not connect either supporting lane to G1 by implication or authorize a calculation. The
 [research graph atlas](../docs/research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md) is the human entry point
 for the complete content topology.
+
+The collection-level choice-invariance path is the entry point before proposing broad interpretation.
+It requires a predeclared admissible selection family, a mechanism-carrying typed object, and two
+independent consumers within one graph; reused residuals and other graphs are not independent evidence.
+No present record passes that promotion test, although scoped facts remain valid. Its authoritative policy
+is [the choice-invariance promotion boundary](../docs/decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md).
 
 For the CPT candidate route, begin with the active TOE routing policy and its current blocker:
 

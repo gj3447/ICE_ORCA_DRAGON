@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-02T14:19:04Z",
+  "updated_at_utc": "2026-09-02T14:45:31Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -597,6 +597,15 @@
       "claim_ids": [
         "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
         "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
+      ]
+    },
+    {
+      "question": "이 효과는 어떤 선택을 바꿔도 남으며, 다른 관측 영역에서도 같은 이유로 나타나는가?",
+      "answer": "아직 model/physics scope에서 두 조건을 모두 통과한 CPT 결과는 없다. G1은 source-derived global intersection vector 자체가 열려 있고, P1은 작은 real corridor의 normalized-root 정리에 머물며, P4의 actual nonreal endpoint-to-m-to-measure-to-positive-RAQ chain도 열려 있다. P2-P6은 closure, anomaly, gluing의 calibration 또는 open obligation이고 P7은 normalized physical observable 전에는 likelihood로 갈 수 없다. 허용 선택군 아래 안정적인 zero/no-go도 유효한 결과이며, 다른 graph의 비슷한 결과는 독립 consumer나 evidence가 아니다.",
+      "claim_ids": [
+        "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+        "claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS",
+        "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE"
       ]
     }
   ],
@@ -1682,6 +1691,25 @@
         "open:raw-c-p-zero-threshold-global-spectral-assembly",
         "open:raw-c-raq-rigging-map-physical-product",
         "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+      ]
+    },
+    {
+      "id": "reading-path:choice-invariance-to-observable-promotion-audit",
+      "title": "CPT choice-invariance to same-mechanism consumer audit",
+      "summary": "Start at the repository-wide human-review boundary, then inspect the G1-G5 core spine and every supporting P1-P7 lane without inferring evidence between them. A broad mechanism interpretation needs a predeclared admissible choice family, a stable typed invariant or null, independent checks, the dominant false-signal discriminator, and at least two independently defined consumers inside this CPT graph. G1 still lacks its global oriented intersection vector; P1 is only a scoped real-root handoff; P4 lacks the actual endpoint-to-m-to-measure-to-positive-RAQ chain; P2-P5 lack full closure or a non-removable anomaly class; P6 lacks an absolute gluing measure; P7 lacks the relational product and normalized observable required before likelihood. A stable zero/no-go is valid, no present result passes at physics scope, and this path neither authorizes execution nor creates a physics claim.",
+      "nodes": [
+        "policy:choice-invariance-cross-domain-promotion",
+        "open:gate1-original-cycle-signed-global-intersections",
+        "open:gate2-hard-cfu-airy-coefficients",
+        "open:gate3-full-bfv-pfaffian-pin-holonomy",
+        "open:gate4-spinorial-charge-domain-constraint-closure",
+        "open:gate5-persistent-order-and-pole-splitting",
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+        "open:gate1-v0-classical-s3-hda-closure",
+        "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+        "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+        "open:gate1-v0-empirical-likelihood-bridge"
       ]
     }
   ],
@@ -2888,8 +2916,18 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "3509d4a08f452c2a96fae053c9c5a49958fe04fa5ba8b3aef43adf8137749c93",
+      "sha256": "3c5756cc0d09e81d2007acc5f7da0ea5cf80d1bb480cec3615c0422a1a6b77fd",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
+    },
+    {
+      "id": "policy:choice-invariance-cross-domain-promotion",
+      "type": "policy",
+      "title": "Choice-invariance and same-mechanism cross-domain promotion boundary",
+      "summary": "Repository-wide human-review boundary for broader interpretation: expose a predeclared admissible selection family, a mechanism-carrying typed object, an invariance or null criterion, independent checks, at least two independently defined consumers inside one graph, and the dominant false-signal control. Cross-graph similarity is navigation only, a stable zero or no-go is valid, and no current result passes at physics scope. This policy is neither scientific evidence nor execution authority.",
+      "state": "ACTIVE_REPOSITORY_WIDE_PROMOTION_BOUNDARY_NON_EVIDENCE",
+      "path": "docs/decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md",
+      "sha256": "a73a26497e56923b2d86c458340c549a3ccfdea294c58058f967d1961768b40e",
+      "introduced_in_commit": "3ed968e2f5dc4818082d5696d696a3fbeb3fbb50"
     },
     {
       "id": "policy:lean-research-workflow",
@@ -35608,7 +35646,8 @@
     {"id":"edge:3715","from":"open:raw-c-raq-rigging-map-physical-product","relation":"CITES","to":"source:giulini-2000-group-averaging-raq","note":"Group-averaging obligations only; no raw-C convergence, positivity or physical product is imported."},
     {"id":"edge:3716","from":"open:raw-c-raq-rigging-map-physical-product","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"Supplies the RAQ domain framework without selecting the raw-C extension, test space or observable algebra."},
     {"id":"edge:3717","from":"open:raw-c-raq-rigging-map-physical-product","relation":"CITES","to":"source:giulini-marolf-1999-uniqueness","note":"Conditional uniqueness does not substitute for constructing a convergent positive rigging map."},
-    {"id":"edge:3718","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"BLOCKED_BY","to":"open:raw-c-raq-rigging-map-physical-product","note":"A domain-, observable- and rigging-map-preserving raw-C/selected-H comparison requires the raw-C rigging map and physical product, not merely an extension or spectral measure."}
+    {"id":"edge:3718","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"BLOCKED_BY","to":"open:raw-c-raq-rigging-map-physical-product","note":"A domain-, observable- and rigging-map-preserving raw-C/selected-H comparison requires the raw-C rigging map and physical product, not merely an extension or spectral measure."},
+    {"id":"edge:3719","from":"programme:cpt-temporal-folded-susy","relation":"GOVERNED_BY","to":"policy:choice-invariance-cross-domain-promotion","note":"Single repository-wide broader-interpretation review boundary; not scientific evidence, a cross-graph link, an execution permit, or an automatic successor rule."}
   ],
   "kg_bridges": [
     {

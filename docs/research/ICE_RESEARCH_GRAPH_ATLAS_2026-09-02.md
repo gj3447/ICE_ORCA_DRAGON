@@ -16,6 +16,7 @@ Use the route-role view before entering a research lane:
 
 ```bash
 ./ice ontology guide --path cpt-role-bands-no-promotion
+./ice ontology guide --path choice-invariance-cross-domain-audit
 ```
 
 That view separates four operational roles:
@@ -109,6 +110,17 @@ P1 and P4 remain supporting. They become core-relevant only if a human review na
 typed object, the canonical blocker and the evidence edge changed by the result. No direct P1/P4-to-G1
 edge is inferred.
 
+### Choice-invariance boundary
+
+No current result reaches broader model, physics, empirical, or TOE promotion. Such a widening would need
+predeclared admissible choices, a mechanism-carrying typed object that persists across them, and at least
+two independent in-graph consumers. Reuse of one residual or a match in another graph is not independent
+evidence. In particular, G1 needs a deformation-stable global intersection vector (a stable zero is also
+informative); P1 remains a scoped real-root handoff; P4 needs actual endpoint-to-m-to-measure-to-positive-RAQ
+objects; P2–P5 need unprojected closure or a non-removable anomaly class; P6 needs an absolute gluing
+measure; and P7 needs a normalized, choice-robust observable before likelihood. See the active
+[choice-invariance promotion boundary](../decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md).
+
 ### Historical provenance
 
 Phase 38–56 records explain why local continuation and backend reconciliation did not determine the
@@ -148,6 +160,7 @@ For a fresh session or reviewer:
 ./ice status --json
 ./ice ontology summary --json
 ./ice ontology guide --path cpt-role-bands-no-promotion
+./ice ontology guide --path choice-invariance-cross-domain-audit
 ./ice ontology guide --graph cpt --path gate1-typed-object-handoff
 ./ice graphrag eval --limit 12 --json
 ./ice ontology competency --json

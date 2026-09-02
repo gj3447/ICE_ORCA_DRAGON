@@ -69,10 +69,28 @@ it("creates a durable checkpoint without automatic execution or persistence", ()
   )
   expect(first.steps.find(({ id }) => id === "execution")?.state).toBe("NOT_AUTHORIZED")
   expect(first.guidance.join(" ")).toContain("does not persist it automatically")
+  expect(first.objective_routing.promotion_boundary).toMatchObject({
+    policy_node_id: "policy:choice-invariance-cross-domain-promotion",
+    interpretation: "BROADER_INTERPRETATION_ONLY",
+    review_status: "HUMAN_REVIEW_REQUIRED",
+    selection_family: "REQUIRED",
+    mechanism_typed_object: "REQUIRED",
+    invariance_null: "REQUIRED",
+    independent_checks: "REQUIRED",
+    false_signal_control: "REQUIRED",
+    cross_graph_evidence: "PROHIBITED",
+    passed: false,
+    nonpass_disposition: "STAY_SCOPED_OR_STOP"
+  })
+  expect(first.objective_routing.promotion_boundary.two_in_graph_consumers).toEqual({
+    minimum: 2,
+    scope: "IN_GRAPH_ONLY",
+    status: "REQUIRED"
+  })
 
   const evaluation = evaluateResearchAgentRouting(first)
   expect(evaluation.passed).toBe(true)
-  expect(evaluation.checks).toHaveLength(11)
+  expect(evaluation.checks).toHaveLength(13)
   expect(evaluation.guidance.join(" ")).toContain("not scientific correctness")
 })
 
@@ -171,6 +189,30 @@ it("keeps a Weyl and RAQ enabling lane outside core progress", () => {
   )
 })
 
+it("keeps the invariance and empirical bridge lanes outside core progress", () => {
+  const hdaPlan = planResearchAgentWorkflow(
+    "P2 P3 closed S3 HDA Jacobi closure before P5 quantum BFV anomaly",
+    retrieval([
+      hit("open:gate1-v0-classical-s3-hda-closure", "Classical closed-S3 HDA closure"),
+      hit("open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly", "Quantum BFV anomaly")
+    ])
+  )
+  const likelihoodPlan = planResearchAgentWorkflow(
+    "P7 physical clock normalized state reheating empirical likelihood discriminator",
+    retrieval([
+      hit("open:gate1-v0-empirical-likelihood-bridge", "Empirical likelihood bridge")
+    ])
+  )
+
+  for (const plan of [hdaPlan, likelihoodPlan]) {
+    expect(plan.objective_routing.classification).toBe("SUPPORTING_ONLY")
+    expect(plan.objective_routing.core_progress_eligibility).toBe("NOT_ELIGIBLE")
+    expect(plan.steps.find(({ id }) => id === "calculation_design")?.state).toBe(
+      "NOT_AUTHORIZED"
+    )
+  }
+})
+
 it("rejects a plan mutation that bypasses a blocked route", () => {
   const base = planResearchAgentWorkflow(
     "Gate 4 common domain and anomaly free constraint closure",
@@ -195,6 +237,52 @@ it("rejects a plan mutation that bypasses a blocked route", () => {
   expect(
     evaluation.checks.find(
       ({ id }) => id === "noncritical-route-cannot-design-calculation"
+    )?.passed
+  ).toBe(false)
+})
+
+it("rejects a mutation that weakens the promotion boundary", () => {
+  const plan = planResearchAgentWorkflow("Which source constrains the bound?", retrieval())
+  const mutated = {
+    ...plan,
+    objective_routing: {
+      ...plan.objective_routing,
+      promotion_boundary: {
+        ...plan.objective_routing.promotion_boundary,
+        cross_graph_evidence: "ALLOWED" as unknown as "PROHIBITED",
+        passed: true as false
+      }
+    }
+  }
+
+  const evaluation = evaluateResearchAgentRouting(mutated)
+  expect(evaluation.passed).toBe(false)
+  expect(
+    evaluation.checks.find(
+      ({ id }) => id === "promotion-boundary-is-in-graph-and-nonpassing"
+    )?.passed
+  ).toBe(false)
+})
+
+it("rejects removal of a required promotion-boundary field", () => {
+  const plan = planResearchAgentWorkflow("Which source constrains the bound?", retrieval())
+  const { false_signal_control: _removed, ...incompleteBoundary } =
+    plan.objective_routing.promotion_boundary
+  const mutated = {
+    ...plan,
+    objective_routing: {
+      ...plan.objective_routing,
+      promotion_boundary: incompleteBoundary
+    }
+  }
+
+  const evaluation = evaluateResearchAgentRouting(
+    mutated as unknown as typeof plan
+  )
+  expect(evaluation.passed).toBe(false)
+  expect(
+    evaluation.checks.find(
+      ({ id }) => id === "promotion-boundary-is-emitted-and-complete"
     )?.passed
   ).toBe(false)
 })

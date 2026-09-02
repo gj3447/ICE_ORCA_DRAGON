@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-09-02T14:19:04Z",
+  "updated_at_utc": "2026-09-02T14:41:16Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "cpt",
   "graphs": [
@@ -435,6 +435,32 @@
           "node": "programme:igrueqft-locality-audit"
         }
       ]
+    },
+    {
+      "question": "When may a candidate effect be considered beyond its local scope?",
+      "answer": "None of the current programme graphs passes a physics-scope promotion. A candidate must first persist across a predeclared admissible family of choices relevant to its mechanism, then reach two independently defined in-graph downstream consumers through the same typed mechanism. A local numerical match, graph proximity, or a result in another collection graph is not a second consumer or evidence. Failure is a scoped boundary result, not a verdict on another graph or all theories.",
+      "refs": [
+        {
+          "graph": "cpt",
+          "node": "policy:choice-invariance-cross-domain-promotion"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "open:hyper-basis-invariant-projected-diagnostic"
+        },
+        {
+          "graph": "legacy",
+          "node": "open:legacy-genuine-preregistration-and-source-refresh"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "open:igrueqft-continuum-interacting-locality-discriminator"
+        }
+      ]
     }
   ],
   "reading_paths": [
@@ -783,6 +809,74 @@
           "graph": "cpt",
           "node": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
           "why": "HISTORICAL_NONEXECUTABLE: frozen reconciliation provenance; no numbered successor"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:choice-invariance-cross-domain-audit",
+      "title": "Choice invariance and in-graph cross-domain audit",
+      "summary": "Use the single CPT policy as a repository-wide promotion boundary: no current graph has passed physics-scope promotion. Each programme must state an admissible choice family and two independent in-graph consumers of the same typed mechanism. This navigation path does not merge graphs, create evidence, authorize execution, or turn a null into a universal verdict.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "cpt",
+          "node": "policy:choice-invariance-cross-domain-promotion",
+          "why": "RULE: predeclared choice invariance plus two same-mechanism in-graph consumers"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "open:hyper-basis-invariant-projected-diagnostic",
+          "why": "HYPER_CHOICE: basis, projection and automorphism-action robustness"
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "open:hyper-algebra-to-physics-discriminator",
+          "why": "HYPER_CONSUMER: independently defined algebra-to-observable discriminator"
+        },
+        {
+          "graph": "legacy",
+          "node": "claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL",
+          "why": "LEGACY_BOUNDARY: stored signal gate is contradicted under its declared selection"
+        },
+        {
+          "graph": "legacy",
+          "node": "open:legacy-genuine-preregistration-and-source-refresh",
+          "why": "LEGACY_CONSUMER: independent preregistration and refreshed-source gate"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections",
+          "why": "CPT_CORE: cycle, sheet, Stokes, gauge and regulator stability before G2"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+          "why": "CPT_P1_BOUNDARY: local real root data are not cross-domain physical evidence"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+          "why": "CPT_P4_BOUNDARY: endpoint, Weyl and RAQ remain a separate operator chain"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+          "why": "CPT_P5_CONSUMER: quantum common-core/anomaly obligation"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+          "why": "CPT_P6_CONSUMER: polarization, determinant line, cycle and gluing obligation"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-empirical-likelihood-bridge",
+          "why": "CPT_P7_CONSUMER: normalized observable before likelihood"
+        },
+        {
+          "graph": "igrueqft",
+          "node": "open:igrueqft-continuum-interacting-locality-discriminator",
+          "why": "IGRUEQFT_BOUNDARY: subsystem, averaging and continuum choices stay in this graph"
         }
       ]
     }

@@ -329,6 +329,7 @@ export const researchAgentWorkflowEvaluateData = Effect.gen(function* () {
   )
   const question =
     "Gate 1 original joint cycle and signed global intersection vector"
+  assertToeNavigationProfile(index.units)
   const plan = planResearchAgentWorkflow(
     question,
     searchGraphRag(index, question, { graph: "cpt", limit: 12, depth: 1 })

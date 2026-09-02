@@ -706,6 +706,53 @@ layer(AppLayer)("canonical ontology", (it) => {
     })
   )
 
+  it.effect("keeps the choice-invariance promotion lens policy-only and navigation-only", () =>
+    Effect.gen(function* () {
+      const graph = yield* loadResearchGraph
+      const policyId = "policy:choice-invariance-cross-domain-promotion"
+      const policy = graph.nodes.find(({ id }) => id === policyId)
+      const path = graph.reading_paths.find(
+        ({ id }) => id === "reading-path:choice-invariance-to-observable-promotion-audit"
+      )
+      const answer = graph.quick_answers.find(
+        ({ question }) =>
+          question ===
+          "이 효과는 어떤 선택을 바꿔도 남으며, 다른 관측 영역에서도 같은 이유로 나타나는가?"
+      )
+
+      expect(policy).toMatchObject({
+        type: "policy",
+        state: "ACTIVE_REPOSITORY_WIDE_PROMOTION_BOUNDARY_NON_EVIDENCE",
+        path: "docs/decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md"
+      })
+      expect(
+        graph.edges.some(
+          ({ from, relation, to }) =>
+            from === "programme:cpt-temporal-folded-susy" &&
+            relation === "GOVERNED_BY" &&
+            to === policyId
+        )
+      ).toBe(true)
+      expect(path?.nodes).toHaveLength(12)
+      expect(path?.nodes.slice(0, 6)).toEqual([
+        policyId,
+        "open:gate1-original-cycle-signed-global-intersections",
+        "open:gate2-hard-cfu-airy-coefficients",
+        "open:gate3-full-bfv-pfaffian-pin-holonomy",
+        "open:gate4-spinorial-charge-domain-constraint-closure",
+        "open:gate5-persistent-order-and-pole-splitting"
+      ])
+      expect(path?.summary).toContain("no present result passes at physics scope")
+      expect(answer?.answer).toContain("아직 model/physics scope에서 두 조건을 모두 통과한 CPT 결과는 없다")
+      expect(
+        graph.edges.some(
+          ({ from, relation, to }) =>
+            (from === policyId || to === policyId) && relation === "HAS_EVIDENCE"
+        )
+      ).toBe(false)
+    })
+  )
+
   it.effect("audits every graph-registered evidence snapshot", () =>
     Effect.gen(function* () {
       const graph = yield* loadResearchGraph

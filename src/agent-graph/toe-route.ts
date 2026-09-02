@@ -196,7 +196,7 @@ const supportingLanes: ReadonlyArray<SupportingLane> = [
 export const toeNavigationProfile = {
   schema: "ice-toe-navigation-policy/v1",
   profile_id: "cpt-toe-critical-path",
-  version: "2026-09-01",
+  version: "2026-09-02",
   source_boundary: "NAVIGATION_POLICY_NOT_SCIENTIFIC_EVIDENCE",
   objective: "RESOLVE_DECLARED_CPT_CANDIDATE_ROUTE_TOWARD_TOE",
   objective_status: "USER_DECLARED_NOT_ESTABLISHED",
@@ -222,6 +222,57 @@ export type ToeRouteClassification =
   | "SUPPORTING_ONLY"
   | "PROFILE_SCOPE_MISMATCH"
   | "INSUFFICIENT_ROUTE_EVIDENCE"
+
+export const promotionBoundaryPolicyNodeId =
+  "policy:choice-invariance-cross-domain-promotion" as const
+
+export const promotionBoundaryCanonicalQuestion =
+  "이 효과는 어떤 선택을 바꿔도 남으며, 다른 관측 영역에서도 같은 이유로 나타나는가?" as const
+
+/**
+ * A stable human-review boundary for broader interpretation.  It is emitted
+ * with every route, including a current G1 candidate, so route selection can
+ * never itself be mistaken for a discovery or promotion decision.
+ */
+export interface PromotionBoundary {
+  readonly policy_node_id: typeof promotionBoundaryPolicyNodeId
+  readonly canonical_question: typeof promotionBoundaryCanonicalQuestion
+  readonly interpretation: "BROADER_INTERPRETATION_ONLY"
+  readonly review_status: "HUMAN_REVIEW_REQUIRED"
+  readonly selection_family: "REQUIRED"
+  readonly mechanism_typed_object: "REQUIRED"
+  readonly invariance_null: "REQUIRED"
+  readonly independent_checks: "REQUIRED"
+  readonly false_signal_control: "REQUIRED"
+  readonly two_in_graph_consumers: {
+    readonly minimum: 2
+    readonly scope: "IN_GRAPH_ONLY"
+    readonly status: "REQUIRED"
+  }
+  readonly cross_graph_evidence: "PROHIBITED"
+  readonly passed: false
+  readonly nonpass_disposition: "STAY_SCOPED_OR_STOP"
+}
+
+export const promotionBoundary: PromotionBoundary = {
+  policy_node_id: promotionBoundaryPolicyNodeId,
+  canonical_question: promotionBoundaryCanonicalQuestion,
+  interpretation: "BROADER_INTERPRETATION_ONLY",
+  review_status: "HUMAN_REVIEW_REQUIRED",
+  selection_family: "REQUIRED",
+  mechanism_typed_object: "REQUIRED",
+  invariance_null: "REQUIRED",
+  independent_checks: "REQUIRED",
+  false_signal_control: "REQUIRED",
+  two_in_graph_consumers: {
+    minimum: 2,
+    scope: "IN_GRAPH_ONLY",
+    status: "REQUIRED"
+  },
+  cross_graph_evidence: "PROHIBITED",
+  passed: false,
+  nonpass_disposition: "STAY_SCOPED_OR_STOP"
+}
 
 export interface ToeObjectiveRouting {
   readonly schema: "ice-toe-objective-routing/v1"
@@ -249,6 +300,7 @@ export interface ToeObjectiveRouting {
   }
   readonly critical_path_gate_ids: ReadonlyArray<GateId>
   readonly terminal_review_criteria: ReadonlyArray<string>
+  readonly promotion_boundary: PromotionBoundary
   readonly core_progress_eligibility: "HUMAN_REVIEW_REQUIRED" | "NOT_ELIGIBLE"
   readonly decision: "REVIEW_CURRENT_BLOCKER" | "STOP_OR_REFRAME"
   readonly anti_meandering: {
@@ -342,6 +394,16 @@ export const validateToeNavigationProfile = (
   )
   if (current === undefined || !current.state.startsWith("OPEN")) {
     errors.push("the declared current G1 blocker must exist in an OPEN state")
+  }
+  const promotionPolicies = units.filter(
+    (unit) =>
+      unit.graph === toeNavigationProfile.scope_graph &&
+      unit.node_id === promotionBoundaryPolicyNodeId
+  )
+  if (promotionPolicies.length !== 1) {
+    errors.push(`${promotionBoundaryPolicyNodeId} must resolve exactly once in the CPT graph`)
+  } else if (promotionPolicies[0]?.node_type !== "policy") {
+    errors.push(`${promotionBoundaryPolicyNodeId} must resolve to a policy`)
   }
   return {
     schema: "ice-toe-navigation-profile-validation/v1",
@@ -515,6 +577,7 @@ export const routeToeObjective = (
     },
     critical_path_gate_ids: gates.map(({ id }) => id),
     terminal_review_criteria: toeNavigationProfile.terminal_review_criteria,
+    promotion_boundary: promotionBoundary,
     core_progress_eligibility: isCurrent ? "HUMAN_REVIEW_REQUIRED" : "NOT_ELIGIBLE",
     decision: isCurrent ? "REVIEW_CURRENT_BLOCKER" : "STOP_OR_REFRAME",
     anti_meandering: {

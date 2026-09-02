@@ -44,6 +44,26 @@
   physical state, unitarity/causality, GR+QFT low-energy recovery, normalized discriminator, data likelihood와
   독립 재현 검토가 모두 필요하다. 이는 TOE 발견 선언이 아니며 과학적 수용은 외부 검토 사항이다.
 
+## 발견 승격 관조 — ACTIVE
+
+`docs/decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md`가 모든 연구 graph의
+scope 확대와 물리 해석에 적용되는 정본 질문이다.
+
+> 이 효과는 어떤 선택을 바꿔도 남으며, 다른 관측 영역에서도 같은 이유로 나타나는가?
+
+- 여기서 선택은 임의의 다른 이론이 아니라, 같은 물리 내용을 나타내야 하는 **사전 선언된 허용
+  선택군**이다. broader model/physics/new-physics/TOE 승격을 검토할 때 selection family,
+  mechanism-carrying typed object, invariance/null criterion, independent checks, 같은 graph 안의 독립
+  downstream consumer 최소 2개, dominant false-signal control을 사람이 명시한다.
+- 다른 ontology graph의 비슷한 숫자·문구, 같은 residual의 재표현, 한 backend의 tolerance sweep은
+  독립 consumer/evidence가 아니다. graph 사이 evidence 경계는 그대로 유지한다.
+- 조건을 못 채워도 scoped 계산 사실은 유효하다. `SCOPED`/`INCONCLUSIVE`/`SUPPORTING_METHOD`로
+  남기며 evidence edge나 다음 계산을 만들지 않는다. 안정적인 zero/no-go도 동등한 결론이다.
+- 독립 재현·global calibration을 통과한 단일 직접 관측 이상은 측정 scope에서 보고할 수 있다.
+  다만 cross-domain 연결 전에는 공통 새-물리 mechanism이 성립했다고 쓰지 않는다.
+- 새 연구를 잡기 전에 `./ice ontology guide --path choice-invariance-cross-domain-audit`로 네 graph의
+  현재 selection/invariant/consumer/kill 경계를 읽는다. 이 path는 navigation이지 실행 승인이 아니다.
+
 ## 실행 차단기 — ACTIVE (Ragnarok 역사 경로에 한정)
 
 `docs/decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`는 killed route의 실행 경계만
@@ -107,6 +127,8 @@ uv sync --locked
   `./ice ontology show <node-id>`, `./ice ontology trace <node-id>`
 - 전체 연구 역할 지도: `./ice ontology guide --path cpt-role-bands-no-promotion`
   (`TOE_CORE`, `G1_SUBBLOCKER`, `SUPPORTING_P1`–`P7`, `HISTORICAL_NONEXECUTABLE` 분리)
+- 발견 승격 관조: `./ice ontology guide --path choice-invariance-cross-domain-audit`
+  (허용 선택군·불변량·같은 graph의 독립 consumer·kill 조건; physics verdict가 아님)
 - 현재 core/support 탐색: `./ice ontology guide --graph cpt --path toe-current-critical-path`,
   `./ice ontology guide --graph cpt --path gate1-typed-object-handoff`,
   `./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio`
@@ -209,8 +231,11 @@ rule의 사전 고정 및 적절한 multiplicity/global calibration을 요구한
 1. CPT core 연구면 `./ice agent plan "<question>" --graph cpt --json`으로 현재 blocker와 TOE dependency
    path를 먼저 검토한다. `CURRENT_BLOCKER_CANDIDATE`가 아니면 core 계산을 설계하지 않고 질문을
    재구성하거나 supporting/maintenance로 분류한다.
-2. 관련 기존 산출물을 먼저 본다. 계산 작업일 때만 `./ice list`로 가장 비슷한 스크립트를 찾는다.
-3. source/convention을 확인하고 가장 작은 계산 또는 변경을 만든다.
-4. 변경에 맞는 최소 검증을 실행한다. 계산을 바꿨다면 `./ice run <name>`, 기존 산출물의
+2. broader physical interpretation 후보라면 choice-invariance/cross-domain path를 읽고 selection
+   family, invariant/null, mechanism object, independent in-graph consumers와 false-signal control을
+   명시한다. 없으면 scoped/supporting으로 둔다.
+3. 관련 기존 산출물을 먼저 본다. 계산 작업일 때만 `./ice list`로 가장 비슷한 스크립트를 찾는다.
+4. source/convention을 확인하고 가장 작은 계산 또는 변경을 만든다.
+5. 변경에 맞는 최소 검증을 실행한다. 계산을 바꿨다면 `./ice run <name>`, 기존 산출물의
    재현이면 `./ice repro --only <name>`을 사용한다.
-5. 실행한 명령과 실제 출력을 보고한다. 관측하지 않은 그린을 보고하지 않는다.
+6. 실행한 명령과 실제 출력을 보고한다. 관측하지 않은 그린을 보고하지 않는다.

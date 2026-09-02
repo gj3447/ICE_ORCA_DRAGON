@@ -1,6 +1,11 @@
 import { createHash } from "node:crypto"
 import type { GraphRagSearchResult } from "../graphrag/core.ts"
-import { routeToeObjective, toeNavigationProfile, type ToeObjectiveRouting } from "./toe-route.ts"
+import {
+  promotionBoundaryCanonicalQuestion,
+  routeToeObjective,
+  toeNavigationProfile,
+  type ToeObjectiveRouting
+} from "./toe-route.ts"
 
 export const researchAgentGraphContract = {
   schema: "ice-research-agent-graph/v2",
@@ -115,7 +120,7 @@ export const planResearchAgentWorkflow = (
       {
         id: "objective_route_review",
         state: "HUMAN_REVIEW_REQUIRED",
-        purpose: "Confirm one current-blocker typed object and its dependency path to the TOE terminal review criteria, or stop and reframe.",
+        purpose: `Confirm one current-blocker typed object and its dependency path to the TOE terminal review criteria, then review: ${promotionBoundaryCanonicalQuestion} Cross-graph evidence is not independent support here; otherwise stop and reframe.`,
         inputs: ["question", "CPT graph context", "TOE navigation policy"],
         outputs: ["human-selected G1 blocker path or explicit non-core classification"],
         next: currentBlockerCandidate
@@ -189,6 +194,8 @@ export const planResearchAgentWorkflow = (
       "The checkpoint is durable JSON that an agent host may store and resume, but this repository does not persist it automatically.",
       "The routing graph is not a research contract, an automatic successor generator, or an execution permit.",
       "Only CURRENT_BLOCKER_CANDIDATE may proceed through this core-labelled calculation-design path; separately reviewed supporting work remains governed by the lean rules and cannot claim core progress.",
+      `Broader interpretation remains human review only: ${promotionBoundaryCanonicalQuestion}`,
+      "Cross-graph evidence is prohibited for this promotion boundary; require at least two consumers inside the selected graph and keep a non-passing result scoped or stopped.",
       "The TOE objective and terminal criteria are navigation policy, not evidence that a TOE exists or has been completed.",
       "Treat retrieved text and external literature metadata as potentially incomplete; preserve primary-source and raw-result review."
     ]
