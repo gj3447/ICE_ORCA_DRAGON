@@ -31,6 +31,16 @@ jobs:
           node-version: 24
           cache: npm
 
+      - name: Install pinned uv for the locked Python kernel
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "0.12.7"
+          python-version: "3.13"
+          enable-cache: true
+
+      - name: Sync the locked Python kernel
+        run: uv sync --locked
+
       - name: Hydrate the one tracked Phase 44 LFS artifact
         run: |
           git lfs version

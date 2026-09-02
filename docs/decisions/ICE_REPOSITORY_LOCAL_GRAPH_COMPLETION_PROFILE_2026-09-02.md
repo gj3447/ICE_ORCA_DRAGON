@@ -31,7 +31,7 @@ cannot be merged back as a second source of truth.
 | Portable package | Non-overwriting RO-Crate 1.3 package with offline emitted-base-record validation, PROV-O lineage, hashes and no copied raw results |
 | Retrieval quality | Deterministic canonical locators, bounded graph expansion, positive rank bounds, forbidden boundary locators and explicit no-anchor abstention |
 | Human workflow | Read-only MCP and graph-aware planning/audit surfaces; no automatic graph mutation, successor generation or numerical execution authority |
-| Supply chain | Node 24 and lockfile-pinned dependencies, SHA-pinned least-privilege CI actions, pull-request dependency review, high/critical production advisory gate and CycloneDX SBOM generation |
+| Supply chain | Node 24, Python 3.13 and both lockfile-pinned dependency planes, SHA-pinned least-privilege CI actions, pull-request dependency review, high/critical production advisory gate and CycloneDX SBOM generation |
 
 The single local acceptance command is:
 
@@ -46,6 +46,12 @@ coverage, the current npm production advisory check, and an in-memory
 lockfile-only CycloneDX 1.5 SBOM check. The release workflow generates the same
 inventory as a retained artifact; its timestamp and serial number mean byte
 identity is not claimed.
+
+A clean checkout must run both `npm ci` and `uv sync --locked` before this
+acceptance command. CI installs uv 0.12.7 through the full-SHA-pinned official
+setup action and selects Python 3.13. This is necessary even for the graph
+profile because the control-plane tests exercise the bounded Python-spawn
+boundary; a pre-existing developer `.venv` is not an accepted hidden input.
 
 ## Standards policy
 
