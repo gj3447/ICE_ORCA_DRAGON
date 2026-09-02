@@ -16,6 +16,7 @@ import { harnessCommand } from "./harness/cli.ts"
 import { literatureCommand } from "./literature/cli.ts"
 import { graphRagCommand } from "./graphrag/cli.ts"
 import { researchAgentCommand } from "./agent-graph/cli.ts"
+import { intuitionCommand } from "./intuition/cli.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const json = Options.boolean("json").pipe(
@@ -98,7 +99,8 @@ const root = Command.make("ice", {}, () =>
     harnessCommand,
     literatureCommand,
     graphRagCommand,
-    researchAgentCommand
+    researchAgentCommand,
+    intuitionCommand
   ])
 )
 

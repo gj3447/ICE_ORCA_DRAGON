@@ -424,6 +424,8 @@ Canonical commands:
 ./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness check [--graph <key>]
 ./ice literature search <query> [--limit 1..20] [--json]
+./ice intuition validate [--json]
+./ice intuition search <query> --target <graph>::<open:node> [--limit 1..50] [--depth 0..3] [--json]
 ./ice graphrag eval --limit 12 --json
 ./ice graphrag diff --base HEAD --limit 12 --json
 ./ice agent eval [--json]
@@ -459,9 +461,13 @@ and `check` runs the full hash/evidence integrity gate. It never authorizes a ru
 experiment; see the [graph-aware harness decision](docs/decisions/ICE_GRAPH_AWARE_HARNESS_2026-09-01.md).
 
 `literature search` is a bounded, read-only OpenAlex works-graph lookup for time-stamped source discovery.
-It is not a substitute for reading a primary source and it never authorizes a run. `npm run --silent mcp`
+It is not a substitute for reading a primary source and it never authorizes a run. `intuition search`
+federates exact canonical context with source-linked, non-authoritative question lenses while leaving the
+canonical ontology and planner unchanged. Its explicit links are navigation only, and
+`UNRESOLVED`, `OUT_OF_SCOPE`, and computed zero remain distinct. `npm run --silent mcp`
 exposes the graph harness, GraphRAG regression, SHACL, SPARQL, RO-Crate preview, durable-run audit,
-and literature-discovery surfaces through local stdio. The stdio entry negotiates MCP 2026-07-28 and
+scientific-intuition search, and literature-discovery surfaces through local stdio. The stdio entry
+negotiates MCP 2026-07-28 and
 retains 2025-era host compatibility. MCP remains read-only; explicit durable-run
 creation and review are CLI-only local writes, and numerical execution remains outside the agent
 state machine. The fixed `./ice agent eval` suite checks current-blocker, downstream, supporting,

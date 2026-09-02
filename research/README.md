@@ -10,6 +10,7 @@ moved.
 | [`legacy_predictions/`](legacy_predictions) | dimensional estimates, preregistration controls, numerology diagnostics, and adjacent result JSON |
 | [`reports/thothsaem/`](reports/thothsaem) | historical Thothsaem analysis reports |
 | [`reports/furey/`](reports/furey) | historical Furey programme scaffold |
+| [`intuition/`](intuition) | source-linked, non-authoritative question lenses federated to canonical open problems; never claims or execution authority |
 
 The two kernel directories intentionally remain flat. Several scripts import `cd_core.py` or
 `numerology_mc_judge.py` as a sibling module, and many write output beside `__file__`. Splitting them

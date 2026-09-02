@@ -27,6 +27,7 @@ import {
   ontologyShaclData,
   ontologySparqlData
 } from "./ontology/commands.ts"
+import { scientificIntuitionSearchData } from "./intuition/commands.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const AppLayer = Layer.mergeAll(NodeContext.layer, WorkspaceLive)
@@ -54,7 +55,7 @@ const asToolError = (error: unknown) => ({
 })
 
 const capabilities = {
-  schema: "ice-research-mcp-capabilities/v3",
+  schema: "ice-research-mcp-capabilities/v4",
   mode: "READ_ONLY_GRAPH_INTEROP_RESEARCH_ORCHESTRATION",
   protocol: {
     transport: "stdio",
@@ -128,6 +129,10 @@ const capabilities = {
       purpose: "Read and audit one explicitly persisted local run and its revision drift."
     },
     {
+      name: "ice_scientific_intuition_search",
+      purpose: "Read source-backed hypothesis-generation lenses with canonical local context."
+    },
+    {
       name: "ice_research_capabilities",
       purpose: "Describe this exact tool catalog, protocol support, and non-authorization boundaries."
     }
@@ -135,6 +140,7 @@ const capabilities = {
   boundaries: [
     "All tools are read-only: they do not change files, run numerical kernels, or write ontology records.",
     "Graph context and literature discovery are review inputs, not independent scientific evidence.",
+    "Scientific-intuition signals are non-authoritative hypothesis-generation lenses, never claims or evidence.",
     "Tool results never authorize execution and never create a follow-up task automatically.",
     "Use ./ice run only for a clean committed bounded numerical runner under the repository's research rules."
   ]
@@ -509,6 +515,35 @@ export const createIceResearchMcpServer = (): McpServer => {
     async ({ query, limit }) => {
       try {
         return asToolResult(await searchOpenAlexWorks(query, limit))
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_scientific_intuition_search",
+    {
+      title: "Scientific intuition lens search",
+      description:
+        "Return bounded source-backed hypothesis-generation lenses federated with canonical local context for one canonical open problem. Signals are not claims or evidence; this closed-world read-only tool never modifies the KG or authorizes execution.",
+      inputSchema: {
+        query: z.string().min(1).max(500),
+        target: z.string().min(1).max(384),
+        limit: z.number().int().min(1).max(20).default(8),
+        depth: z.number().int().min(0).max(3).default(1)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ query, target, limit, depth }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            scientificIntuitionSearchData(query, target, limit, depth).pipe(
+              Effect.provide(AppLayer)
+            )
+          )
+        )
       } catch (error) {
         return asToolError(error)
       }

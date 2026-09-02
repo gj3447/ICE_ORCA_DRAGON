@@ -1,0 +1,292 @@
+{
+  "$schema": "../../ontology/schema/scientific-intuition-flow-v1.schema.json",
+  "schema_version": "scientific-intuition-flow/v1",
+  "graph_id": "intuition-flow:gate1",
+  "title": "Gate-1 scientific-intuition signals",
+  "description": "Source-linked candidate lenses for separating and testing unresolved Gate-1 objects. This sidecar is a hypothesis-generation aid, not a fifth canonical research graph or a scientific-claim ledger.",
+  "updated_at_utc": "2026-09-02T00:00:00Z",
+  "authority": "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
+  "canonical_graph_unchanged": true,
+  "does_not_authorize_execution": true,
+  "standards_alignment": [
+    {
+      "id": "standard:rdf11-named-graphs",
+      "standard": "RDF 1.1 Concepts and Abstract Syntax",
+      "uri": "https://www.w3.org/TR/rdf11-concepts/",
+      "status": "W3C Recommendation",
+      "boundary": "A future exchange projection may put assertion and provenance in separate named graphs; this JSON sidecar is not itself the canonical RDF graph."
+    },
+    {
+      "id": "standard:jsonld11-exchange",
+      "standard": "JSON-LD 1.1",
+      "uri": "https://www.w3.org/TR/json-ld11/",
+      "status": "W3C Recommendation",
+      "boundary": "JSON-LD is an exchange option only; it does not confer semantics or scientific acceptance on any signal."
+    },
+    {
+      "id": "standard:prov-o-provenance",
+      "standard": "PROV-O: The PROV Ontology",
+      "uri": "https://www.w3.org/TR/prov-o/",
+      "status": "W3C Recommendation",
+      "boundary": "Primary-source and future artifact provenance may be expressed with PROV-O; provenance records origin, not truth."
+    },
+    {
+      "id": "standard:shacl-validation",
+      "standard": "Shapes Constraint Language (SHACL)",
+      "uri": "https://www.w3.org/TR/shacl/",
+      "status": "W3C Recommendation",
+      "boundary": "A future RDF projection requires separate SHACL shapes; this JSON sidecar uses JSON Schema plus semantic checks, and neither form of conformance is scientific evidence."
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-ref:chamberlin-1890",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Chamberlin, T. C. (1890). The Method of Multiple Working Hypotheses. Science, 15(366), 92-96.",
+      "uri": "https://doi.org/10.1126/science.ns-15.366.92",
+      "version": "published 1890",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "pp. 92-96",
+      "role": "Methodological source for retaining alternatives rather than treating a candidate lens as a conclusion.",
+      "boundary": "Historical methodology, not domain evidence for CPT physics."
+    },
+    {
+      "id": "source-ref:platt-1964",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Platt, J. R. (1964). Strong Inference. Science, 146(3642), 347-353.",
+      "uri": "https://doi.org/10.1126/science.146.3642.347",
+      "version": "published 1964; PubMed PMID 17739513",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "pp. 347-353",
+      "role": "Methodological source for discriminator and stop-condition language.",
+      "boundary": "Method guidance only; it does not validate any modeled alternative."
+    },
+    {
+      "id": "source-ref:ninds-rigor",
+      "kind": "OFFICIAL_GUIDANCE",
+      "citation": "National Institute of Neurological Disorders and Stroke. Rigorous Study Design and Transparent Reporting.",
+      "uri": "https://www.ninds.nih.gov/funding/preparing-your-application/preparing-research-plan/rigorous-study-design-and-transparent-reporting",
+      "version": "web guidance retrieved 2026-09-02",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "Supporting Data, Experimental Design, and Interpretation sections",
+      "role": "Official guidance for explicit assumptions, controls, and transparent reporting.",
+      "boundary": "Biomedical funder guidance; imported only as general reporting discipline."
+    },
+    {
+      "id": "source-ref:gelman-shalizi-2013",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Gelman, A., & Shalizi, C. R. (2013). Philosophy and the practice of Bayesian statistics. British Journal of Mathematical and Statistical Psychology, 66(1), 8-38.",
+      "uri": "https://arxiv.org/abs/1006.3868",
+      "version": "arXiv:1006.3868",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§2 and §4",
+      "role": "Methodological source for separating model checking from model construction.",
+      "boundary": "Statistical philosophy, not a license to assign a posterior or confidence to a signal."
+    },
+    {
+      "id": "source-ref:nasem-2019",
+      "kind": "OFFICIAL_GUIDANCE",
+      "citation": "National Academies of Sciences, Engineering, and Medicine. (2019). Reproducibility and Replicability in Science.",
+      "uri": "https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science",
+      "version": "2019",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "Summary and Chapter 3",
+      "role": "Official source for distinguishing repeatability, reproducibility, and independent replication.",
+      "boundary": "General research-practice guidance; not evidence for a CPT result."
+    },
+    {
+      "id": "source-ref:witten-2010",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Witten, E. (2010). Analytic Continuation Of Chern-Simons Theory.",
+      "uri": "https://arxiv.org/abs/1001.2933",
+      "version": "arXiv:1001.2933v4",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§§2.2, 3.1.1, and 3.1.5; Eqs. (2.15)-(2.16) and (3.22)-(3.23)",
+      "role": "Primary mathematical source for treating integration cycles, Stokes phenomena, and intersection data as explicit objects rather than inferred labels.",
+      "boundary": "A mathematical analogy only; it neither supplies the CPT action nor establishes a CPT cycle.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:witten-2010-picard-lefschetz"
+      }
+    },
+    {
+      "id": "source-ref:feldbrugge-lehners-turok-2017",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Feldbrugge, J., Lehners, J.-L., & Turok, N. (2017). Lorentzian Quantum Cosmology. Physical Review D, 95, 103508.",
+      "uri": "https://arxiv.org/abs/1703.02076",
+      "version": "arXiv:1703.02076v1; Phys. Rev. D 95, 103508",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§II and the minisuperspace contour analysis",
+      "role": "Domain-adjacent primary example of using a separately specified Lorentzian contour and upward flows to identify contributing saddles.",
+      "boundary": "A model-specific minisuperspace application; it does not select the ICE original cycle, action, regulator, or physical state.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:feldbrugge-lehners-turok-2017"
+      }
+    },
+    {
+      "id": "source-ref:gottweis-2025",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Gottweis, J. et al. (2026). Accelerating scientific discovery with Co-Scientist.",
+      "uri": "https://arxiv.org/abs/2502.18864",
+      "version": "arXiv:2502.18864v2 (2026-06-29); related Nature DOI 10.1038/s41586-026-10644-y",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§1; scientist-in-the-loop framing",
+      "role": "Contemporary precedent for generate, debate, and evolve hypothesis generation as a non-authoritative workflow stage.",
+      "boundary": "Biomedical-focused system and results; Auto-Elo is not independent ground truth, and its scientist-in-the-loop framing does not validate physics hypotheses, ranking, or automated execution in this repository."
+    },
+    {
+      "id": "source-ref:rdf11",
+      "kind": "STANDARD",
+      "citation": "W3C. RDF 1.1 Concepts and Abstract Syntax.",
+      "uri": "https://www.w3.org/TR/rdf11-concepts/",
+      "version": "W3C Recommendation 2014",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§1.6 Working with Multiple RDF Graphs and §4 RDF Datasets",
+      "role": "Standard data-model reference for eventual assertion/provenance graph separation.",
+      "boundary": "Serialization architecture only."
+    },
+    {
+      "id": "source-ref:jsonld11",
+      "kind": "STANDARD",
+      "citation": "W3C. JSON-LD 1.1.",
+      "uri": "https://www.w3.org/TR/json-ld11/",
+      "version": "W3C Recommendation 2020",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§4.9 Named Graphs and §10 Relationship to RDF",
+      "role": "Standard exchange reference.",
+      "boundary": "Exchange syntax only."
+    },
+    {
+      "id": "source-ref:prov-o",
+      "kind": "STANDARD",
+      "citation": "W3C. PROV-O: The PROV Ontology.",
+      "uri": "https://www.w3.org/TR/prov-o/",
+      "version": "W3C Recommendation 2013",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§3 PROV-O Classes and Properties",
+      "role": "Standard provenance reference.",
+      "boundary": "Provenance describes derivation and association, not validity."
+    },
+    {
+      "id": "source-ref:shacl",
+      "kind": "STANDARD",
+      "citation": "W3C. Shapes Constraint Language (SHACL).",
+      "uri": "https://www.w3.org/TR/shacl/",
+      "version": "W3C Recommendation 2017",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§3 Validation and Graphs",
+      "role": "Standard constraint-validation reference for a future RDF projection.",
+      "boundary": "Not implemented for this JSON sidecar; structural conformance would still not establish validity."
+    }
+  ],
+  "signals": [
+    {
+      "id": "intuition:gate1-regulated-relative-class-inventory",
+      "status": "CANDIDATE",
+      "kind": "MISSING_TYPED_OBJECT",
+      "target": {
+        "graph": "cpt",
+        "node": "open:gate1-original-cycle-signed-global-intersections"
+      },
+      "lens": "Can a source-defined regulated joint relative-class inventory make each candidate original cycle, sheet, singularity, Stokes boundary, and good end explicit enough to distinguish compatible completions?",
+      "why_relevant": "The canonical open problem asks for a complete oriented global intersection vector; an inventory is a candidate way to expose which typed objects are absent before any global inference is attempted.",
+      "source_refs": ["source-ref:chamberlin-1890", "source-ref:platt-1964", "source-ref:ninds-rigor", "source-ref:witten-2010"],
+      "assumptions": ["The regulated joint relative class can be described without changing the declared CPT conventions.", "A finite inventory has an explicit completeness boundary."],
+      "discriminating_observation": "Compare two admissible completions: a useful signal occurs only if the same inventory rules either uniquely separate them or make their unresolved typed-object difference explicit; otherwise the lens remains inconclusive.",
+      "stop_condition": "Stop if the inventory requires an unstated physical completion, suppresses a singular/Stokes/good-end alternative, or cannot state a bounded completeness boundary.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is an alternative-design question, not a claim that a global cycle, intersection vector, or physical state exists or has any value.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:gate1-explicit-incidence-unknowns",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "target": {
+        "graph": "cpt",
+        "node": "open:gate1-original-cycle-signed-global-intersections"
+      },
+      "lens": "Can a typed original-cycle-by-upward-cycle incidence ledger distinguish INTEGER, UNRESOLVED, and OUT_OF_SCOPE entries so that missing global intersections cannot be silently collapsed into zero?",
+      "why_relevant": "Gate 1 permits a stable all-zero vector as a genuine negative result but still lacks a complete vector; an explicit three-state ledger separates a computed zero from an uncomputed or excluded intersection.",
+      "source_refs": [
+        "source-ref:witten-2010",
+        "source-ref:feldbrugge-lehners-turok-2017",
+        "source-ref:platt-1964",
+        "source-ref:ninds-rigor"
+      ],
+      "assumptions": [
+        "The original regulated cycle and every candidate upward cycle are independently specified before recording an incidence entry.",
+        "The enumeration boundary names all sheets, singularities, Stokes chambers, orientations, and good ends that are included or excluded."
+      ],
+      "discriminating_observation": "A useful ledger assigns every pre-enumerated cycle pair exactly one typed state and supplies a locator for each integer; any absent locator remains UNRESOLVED rather than becoming numerical zero.",
+      "stop_condition": "Stop if the original cycle is inferred from the same local thimble data being tested, if the census is not bounded, or if UNRESOLVED, OUT_OF_SCOPE, and integer zero are conflated.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is a data-shape and discriminator question, not a computation or claim that any intersection number, original cycle, or complete census is known.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:p38-cycle-versus-local-saddle-separation",
+      "status": "CANDIDATE",
+      "kind": "METHOD_ANALOGY",
+      "target": {
+        "graph": "cpt",
+        "node": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+      },
+      "lens": "Could an explicit finite-cutoff action keep original-cycle candidates, saddle-local thimbles, transported frames, and end classifications as separately typed inputs so their possible non-equivalence is testable?",
+      "why_relevant": "The canonical P38 problem already separates admissible original-cycle candidates from local saddle data; the lens asks for a discriminator rather than an inverse reconstruction assumption.",
+      "source_refs": ["source-ref:witten-2010", "source-ref:feldbrugge-lehners-turok-2017", "source-ref:gelman-shalizi-2013", "source-ref:nasem-2019", "source-ref:gottweis-2025"],
+      "assumptions": ["A finite-cutoff surrogate can be labeled as conditional and non-physical.", "Any map from an original-cycle candidate to local arms records its injectivity assumptions."],
+      "discriminating_observation": "Construct or rule out two admissible original-cycle candidates with indistinguishable declared local saddle data but different transported-frame or end labels; either outcome tests the separation without inferring the physical cycle.",
+      "stop_condition": "Stop if the surrogate is represented as a relative-homology theorem, if local agreement is relabeled as global injectivity, or if regulator dependence is omitted.",
+      "principal_failure_class": "gauge",
+      "non_claim": "This is a conditional method analogy, not a claim that any CPT cycle map is non-injective, complete, or physically admissible.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:p34-dual-determinant-census-separation",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "target": {
+        "graph": "cpt",
+        "node": "open:p34-full-joint-dual-determinant-and-global-census"
+      },
+      "lens": "Can fold-arm connection, determinant-line transport, and full joint sheet/end census be specified as three independent deliverables with disagreement preserved as an outcome?",
+      "why_relevant": "The P34 open problem names all three debts; separating them prevents a local fold result from being used as a substitute for a global census.",
+      "source_refs": ["source-ref:platt-1964", "source-ref:gelman-shalizi-2013", "source-ref:ninds-rigor", "source-ref:nasem-2019"],
+      "assumptions": ["Each deliverable has a declared input, output, and excluded scope.", "Agreement between two deliverables is not treated as evidence that the third is complete."],
+      "discriminating_observation": "Record whether independently specified fold-arm and determinant-line procedures agree while a separately bounded census either closes or remains incomplete; disagreement or incompleteness remains a retained result.",
+      "stop_condition": "Stop if a relative phase is reported as an absolute orientation, if the census boundary changes after inspection, or if a missing good-end class is silently excluded.",
+      "principal_failure_class": "sign/unit",
+      "non_claim": "This is a decomposition of possible tests, not a claim that the determinant line is orientable, that an arm carries the cycle, or that a global coefficient is known.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:p35-absolute-orientation-discriminator",
+      "status": "CANDIDATE",
+      "kind": "DISCRIMINATOR",
+      "target": {
+        "graph": "cpt",
+        "node": "open:p35-absolute-detline-full-bfv-and-global-cycle"
+      },
+      "lens": "What source-defined comparison could distinguish an absolute determinant/Maslov orientation from a merely relative endpoint transport while retaining alternative measure and cycle conventions?",
+      "why_relevant": "The P35 open problem explicitly keeps absolute orientation, physical block/measure, BFV/SUGRA determinant, and global cycle unresolved; this lens asks what observation would separate alternatives.",
+      "source_refs": ["source-ref:chamberlin-1890", "source-ref:platt-1964", "source-ref:witten-2010", "source-ref:nasem-2019"],
+      "assumptions": ["The compared conventions and endpoint measures are written before examining the outcome.", "A zero-free continuum lift, if invoked, has a separately stated domain and regulator boundary."],
+      "discriminating_observation": "A useful outcome would be a convention-explicit comparison whose predicted orientation labels differ across alternatives and remain distinguishable under the declared regulator controls; otherwise it is inconclusive.",
+      "stop_condition": "Stop if an endpoint-relative phase is converted into an absolute sign without an independent reference, if the physical block is assumed rather than identified, or if the full global cycle is omitted.",
+      "principal_failure_class": "gauge",
+      "non_claim": "This is not a claim that an absolute Maslov orientation, physical measure, BFV/SUGRA superdeterminant, global cycle, or physical state has been obtained.",
+      "does_not_authorize_execution": true
+    }
+  ],
+  "boundaries": [
+    "This file is a non-authoritative hypothesis-generation sidecar and is not a fifth canonical graph.",
+    "A CANDIDATE signal is neither a claim nor evidence that its target is true, solvable, or physically meaningful.",
+    "No signal authorizes a runner, a computation, a graph promotion, a downstream task, or external publication.",
+    "Canonical CPT nodes, edges, evidence status, and TOE routing remain authoritative only in the existing canonical graph and its approved evidence artifacts.",
+    "Methodological and mathematical sources provide design constraints or analogies only; they do not supply CPT-domain evidence.",
+    "Read-only federation must label results as non-authoritative, retain source boundaries, and preserve canonical-graph separation.",
+    "RDF 1.2 and SHACL 1.2 are tracked as evolving W3C work, not used as this sidecar's operational baseline."
+  ]
+}

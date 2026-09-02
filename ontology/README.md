@@ -29,6 +29,12 @@ The [collection manifest](./collection.json) uses
 snapshots carry a `P…` phase label; independent unnumbered calculations use `phase: null` and retain
 their authoritative semantic check IDs without a fabricated phase prefix.
 
+The separate [`scientific-intuition-flow/v1`](./schema/scientific-intuition-flow-v1.schema.json)
+schema validates source-linked question lenses under [`research/intuition/`](../research/intuition/).
+That sidecar is intentionally absent from `collection.json`: `./ice intuition search` federates it at
+read time to an exact canonical open problem and emits explicit navigation links without creating a
+fifth authoritative graph, changing evidence status, or authorizing execution.
+
 ## Default navigation and cohesion
 
 Start with live collection scope and counts, rather than copying a dated total into prose:

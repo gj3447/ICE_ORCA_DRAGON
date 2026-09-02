@@ -19,6 +19,7 @@ const expectedTools = [
   "ice_graphrag_evaluate",
   "ice_graphrag_diff",
   "ice_literature_search",
+  "ice_scientific_intuition_search",
   "ice_research_capabilities"
 ] as const
 
@@ -41,8 +42,14 @@ it("exposes a bounded read-only MCP capability surface", async () => {
 
     const localSearch = listed.tools.find(({ name }) => name === "ice_graphrag_search")
     const externalSearch = listed.tools.find(({ name }) => name === "ice_literature_search")
+    const scientificIntuitionSearch = listed.tools.find(
+      ({ name }) => name === "ice_scientific_intuition_search"
+    )
     expect(localSearch?.annotations?.openWorldHint).toBe(false)
     expect(externalSearch?.annotations?.openWorldHint).toBe(true)
+    expect(scientificIntuitionSearch?.annotations?.openWorldHint).toBe(false)
+    expect(JSON.stringify(scientificIntuitionSearch)).toContain("hypothesis-generation lenses")
+    expect(JSON.stringify(scientificIntuitionSearch)).toContain("never modifies the KG")
 
     const result = await client.callTool({
       name: "ice_research_capabilities",
@@ -54,6 +61,7 @@ it("exposes a bounded read-only MCP capability surface", async () => {
       throw new Error("capability tool did not return text content")
     }
     const capabilityPayload = JSON.parse(capabilityText.text) as {
+      readonly schema: string
       readonly mode: string
       readonly protocol: {
         readonly modern_revision: string
@@ -61,10 +69,38 @@ it("exposes a bounded read-only MCP capability surface", async () => {
       }
       readonly boundaries: ReadonlyArray<string>
     }
+    expect(capabilityPayload.schema).toBe("ice-research-mcp-capabilities/v4")
     expect(capabilityPayload.mode).toBe("READ_ONLY_GRAPH_INTEROP_RESEARCH_ORCHESTRATION")
     expect(capabilityPayload.protocol.modern_revision).toBe("2026-07-28")
     expect(capabilityPayload.protocol.extensions.skills_over_mcp).toBe(false)
     expect(capabilityPayload.boundaries.join(" ")).toContain("never authorize execution")
+    expect(capabilityPayload.boundaries.join(" ")).toContain(
+      "non-authoritative hypothesis-generation lenses"
+    )
+
+    const scientificIntuition = await client.callTool({
+      name: "ice_scientific_intuition_search",
+      arguments: {
+        query: "Which bounded discriminator reduces the signed global-intersection blocker?",
+        target: "cpt::open:gate1-original-cycle-signed-global-intersections"
+      }
+    })
+    expect(scientificIntuition.isError).not.toBe(true)
+    expect(JSON.stringify(scientificIntuition.content)).toContain(
+      "scientific-intuition-flow-search/v1"
+    )
+    expect(JSON.stringify(scientificIntuition.content)).toContain(
+      "Signals are source-backed hypothesis-generation lenses, not claims, evidence"
+    )
+    expect(JSON.stringify(scientificIntuition.content)).toContain(
+      "TARGETS_CANONICAL_OPEN_PROBLEM"
+    )
+    expect(JSON.stringify(scientificIntuition.content)).toContain(
+      "cpt::open:gate1-original-cycle-signed-global-intersections"
+    )
+    expect(JSON.stringify(scientificIntuition.content)).toContain(
+      "MIRRORS_CANONICAL_SOURCE"
+    )
 
     const graphRagSummary = await client.callTool({
       name: "ice_graphrag_summary",

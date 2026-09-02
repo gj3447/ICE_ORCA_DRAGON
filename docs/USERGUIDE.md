@@ -153,6 +153,21 @@ mcp` starts the same bounded harness and discovery surface for an MCP host over 
 2026-07-28 with 2025-era compatibility and keeps stdout exclusively for protocol data. See [the MCP and
 skill integration decision](decisions/ICE_RESEARCH_MCP_SKILL_INTEGRATION_2026-09-01.md).
 
+### Turn source reading into bounded intuition data
+
+```bash
+./ice intuition validate --json
+./ice intuition search "Which typed object separates unresolved intersections from zero?" \
+  --target cpt::open:gate1-original-cycle-signed-global-intersections --json
+```
+
+`intuition search` federates one exact canonical open problem and bounded canonical GraphRAG context
+with matching source-linked question lenses. Its explicit links are navigation data only: the sidecar is
+not registered in the canonical ontology, is never ranked as evidence, and cannot authorize a runner.
+Inspect the primary source and retain at most one bounded falsifiable question for `agent plan`. Keep
+`UNRESOLVED`, `OUT_OF_SCOPE`, and a computed integer zero distinct. See the
+[scientific-intuition signal-layer decision](decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md).
+
 ## Run one kernel
 
 ```bash
