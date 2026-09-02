@@ -1,0 +1,138 @@
+{
+  "schema_version": "ice.gate1-m2-scale-half-angle-end-admissibility.input.v1",
+  "calculation_id": "Gate1M2ScaleHalfAngleEndAdmissibility",
+  "numbered_phase": null,
+  "question": "Does the existing Phase-39 half-angle scale-factor line have two relative-good infinite ends over the declared finite nonzero-lapse domain, or does its q=0 central slice contain an exact bad scale-factor end that kills only the natural product completion retaining that slice?",
+  "kind": "BOUNDED_EXACT_SCALE_FACTOR_END_ADMISSIBILITY_FALSIFIER",
+  "primary_failure": "scale-factor and mixed-end completion of the finite m=2 local chain",
+  "ragnarok_boundary": {
+    "distinct_question": "This audit does not rerun Phase 39 or any consumed runner. It uses the committed exact m=2 action and declared half-angle embedding to test an uncomputed infinite product scale-factor completion retaining one central scalar slice.",
+    "does_not_execute_historical_runner": true,
+    "does_not_rename_or_retry_consumed_runner": true,
+    "does_not_reopen_killed_reconciliation": true,
+    "generic_bounded_core_calculation": true,
+    "automatic_next": null
+  },
+  "upstream_evidence": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4",
+      "role": "Frozen m=2 action, half-angle cap embedding, finite lapse bounds and explicit non-physical-cycle scope."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70",
+      "role": "Durable report for the two local +1 witnesses and the unproved field-face, good-end and global-cycle obligations."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_PHASE_LOCKED_AFFINE_FIELD_END_CONSTRUCTION.md",
+      "sha256": "be9d0583a7ff3599f04bf0f8c92c3dea694cf1595b15c9a5c438e789b150cd6c",
+      "role": "Exact fixed-a scalar-tail construction whose compact bend preserves the Phase-39 central field window, including q=0."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_ORIGINAL_CYCLE_INTERSECTION_INCIDENCE_LEDGER_RESULT.json",
+      "sha256": "ddfd366af3bf8dba308c8299ac690a9aaf64d0983447b6e6a2cdf52771a18d17",
+      "role": "Fail-closed ledger recording that all twelve physical/local incidence candidates still lack the source, global dual, orientation, census and stability prerequisites."
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "arXiv:1001.2933v4",
+      "title": "Analytic Continuation Of Chern-Simons Theory",
+      "url": "https://arxiv.org/abs/1001.2933",
+      "pinpoint": "sections 3.1.1 and 3.1.5",
+      "role": "Relative-cycle and upward/downward-cycle framework: for the exp(-S) convention, noncompact integration-chain ends must enter regions where Re(S) tends to positive infinity. The paper does not supply this model's action or original cycle."
+    },
+    {
+      "id": "arXiv:2405.10307v3",
+      "title": "On the lapse contour in the gravitational path integral",
+      "url": "https://arxiv.org/abs/2405.10307v3",
+      "role": "Comparator for the below-origin lapse prescription in its stated integration order; it does not select the Phase-39 scale-factor lift or repair a bad field end."
+    }
+  ],
+  "declared_conventions": {
+    "integrand": "exp(-S_2)",
+    "model": "equal-endpoint two-segment midpoint Starobinsky configuration action with h=1/2",
+    "boundary_values": {
+      "a_boundary": "3.5668031935672753",
+      "phi_boundary": "1.0185809464006637"
+    },
+    "variables": "x=a_1-a_boundary, q=phi_1-phi_boundary, A=a_boundary+x/2, T=rho*exp(i*psi)",
+    "central_scalar_slice": "q=0, obtained at y_phi=0 in the Phase-39 cap and retained by the compact-bent phase-locked scalar contour",
+    "tested_scale_line": "x=exp(i*(psi/2-pi/2))*y with y real",
+    "lapse_domain": "rho in [1/5,6/5] and psi in [-pi/2,pi/2]",
+    "potential_on_slice": "V_0=(3/4)*(1-exp(-sqrt(2/3)*phi_boundary))^2, hence 0<V_0<3/4",
+    "good_end": "Re(S_2) tends to positive infinity",
+    "bad_end": "Re(S_2) tends to negative infinity",
+    "selection_family": [
+      "the exact Phase-39 half-angle scale line, without a new scale-tail phase or intercept",
+      "the finite nonzero-lapse regulator rho in [1/5,6/5]",
+      "the q=0 central scalar slice only; no mixed-corner exhaustiveness claim"
+    ],
+    "numerical_cross_check": {
+      "precision_digits": 80,
+      "rho_values": ["1/5", "3/10", "6/5"],
+      "arm_psi_values": ["-pi/2", "pi/2"],
+      "interior_psi_values_at_rho_3_over_10": ["-pi/4", "pi/4"],
+      "t_values": [10000, 40000, 160000],
+      "maximum_final_relative_coefficient_error": "5e-4"
+    }
+  },
+  "controls": [
+    "Rebuild the two-element action and reduce it exactly on q=0 without importing a fitted asymptotic coefficient.",
+    "Derive the signed cubic coefficient L(psi,rho)=pi^2*[12*sin(psi/2)/rho-(V_0*rho/4)*sin(5*psi/2)].",
+    "Use the exact identity 5*sin(u)-sin(5*u)=4*sin(u)^3*(5-4*sin(u)^2) and the pinned V_0,rho bounds to prove sign(L)=sign(psi) for every nonzero declared psi.",
+    "At psi=0, verify separately that the cubic real part vanishes and both scale ends have a strictly positive quadratic coefficient; this isolated slice does not rescue the surrounding cap.",
+    "Evaluate the original two-element complex action directly at high precision on both lapse arms and two interior cap phases, without using the reduced cubic polynomial as the numerical implementation.",
+    "Reject the mutation that copies a local +1 sign into a global intersection integer when the tested scale completion has a bad end."
+  ],
+  "decision_table": [
+    {
+      "condition": "the exact cubic coefficient has sign psi for every nonzero declared psi, so y tending opposite that sign gives Re(S_2) tending to negative infinity on the q=0 slice",
+      "verdict": "KILL_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_COMPLETION_ON_DECLARED_FINITE_LAPSE_DOMAIN",
+      "programme_impact": "NARROW; REQUIRE_AN_ASYMMETRIC_OR_FIBERED_SCALE_END_REDESIGN"
+    },
+    {
+      "condition": "both y ends are uniformly relative-good for every declared rho and psi on the q=0 slice",
+      "verdict": "KEEP_SCOPED_HALF_ANGLE_SCALE_RAY_COMPLETION",
+      "programme_impact": "NARROW_ONLY; MIXED_ENDS_AND_SOURCE_SELECTION_STILL_OPEN"
+    },
+    {
+      "condition": "the exact coefficient or independent direct-action controls fail to decide the two-ended limit",
+      "verdict": "INCONCLUSIVE_SCALE_HALF_ANGLE_END_AUDIT",
+      "programme_impact": "OPEN; DO_NOT_INFER_AN_ADMISSIBLE_SCALE_COMPLETION"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 128,
+    "quadratures": 0,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "sampling_points": 32,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "admissible_full_joint_completion": null,
+    "source_defined_joint_relative_cycle": null,
+    "source_to_thimble_deformation": null,
+    "physical_original_cycle": null,
+    "mixed_end_census": null,
+    "full_joint_orientation": null,
+    "absolute_determinant_pfaffian_line": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "singular_endpoint_nonreal_weyl_m": null,
+    "spectral_measure": null,
+    "RAQ_completion": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
