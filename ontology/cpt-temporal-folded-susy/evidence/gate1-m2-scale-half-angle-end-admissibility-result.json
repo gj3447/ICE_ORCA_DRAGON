@@ -1,0 +1,178 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_M2_SCALE_HALF_ANGLE_END_ADMISSIBILITY_20260902",
+  "phase": null,
+  "observed_at_utc": "2026-09-02T17:56:26Z",
+  "command": "./ice run gate1_m2_scale_half_angle_end_admissibility",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_m2_scale_half_angle_end_admissibility.py",
+    "sha256": "91fee2af3ca78fb6f06134613b11751eb242644d5542fc8eee7665032072f30c",
+    "introduced_in_commit": "f2dd4d1efa6ff160d0c0b0eb1e26b7b4dc7e06e3"
+  },
+  "exact_checks": 10,
+  "checks": [
+    {
+      "id": "G1.m2.scale.upstream_hashes_and_scope",
+      "status": "PASS",
+      "statement": "The committed Phase-39 action/candidate, scalar central-window construction and fail-closed incidence ledger match their exact hashes and scoped states."
+    },
+    {
+      "id": "G1.m2.scale.two_element_action_reduction",
+      "status": "PASS",
+      "statement": "The original equal-endpoint two-element action reduces exactly on q=0 to the single midpoint polynomial used for the asymptotic audit."
+    },
+    {
+      "id": "G1.m2.scale.central_q_zero_slice",
+      "status": "PASS",
+      "statement": "The q=0 slice is exactly y_phi=0 in the Phase-39 cap and lies in the central window retained by the compact-bent scalar contour."
+    },
+    {
+      "id": "G1.m2.scale.cubic_real_coefficient",
+      "status": "PASS",
+      "statement": "The real action has the declared cubic scale coefficient L(psi,rho)."
+    },
+    {
+      "id": "G1.m2.scale.cubic_coefficient_oddness",
+      "status": "PASS",
+      "statement": "The cubic coefficient is odd in the lapse phase, so the bad scale end is exchanged by conjugation."
+    },
+    {
+      "id": "G1.m2.scale.five_angle_sign_identity",
+      "status": "PASS",
+      "statement": "The exact five-angle identity bounds sin(5u) by 5 sin(u) on 0<u<=pi/4 without a sampled trigonometric sign inference."
+    },
+    {
+      "id": "G1.m2.scale.uniform_positive_phase_margin",
+      "status": "PASS",
+      "statement": "The pinned rho and potential bounds leave a strict 71/8 coefficient margin in the positive-phase cubic sign proof."
+    },
+    {
+      "id": "G1.m2.scale.center_quadratic_goodness",
+      "status": "PASS",
+      "statement": "At psi=0 the cubic real part vanishes, but both scale ends are quadratically good with a uniform bracket margin 373/20."
+    },
+    {
+      "id": "G1.m2.scale.opposite_arm_bad_ends",
+      "status": "PASS",
+      "statement": "On the positive lapse arm y->-infinity is bad, while on the negative arm y->+infinity is bad, with the same strict cubic magnitude."
+    },
+    {
+      "id": "G1.m2.scale.local_sign_not_global_integer",
+      "status": "PASS",
+      "statement": "A failed scale-end prerequisite leaves every recorded local +1 separate from a global intersection integer."
+    }
+  ],
+  "numerical_checks": 3,
+  "numerical": [
+    {
+      "id": "G1.m2.scale.benchmark_potential_bound",
+      "status": "PASS",
+      "statement": "The frozen positive boundary field gives V_0=0.2391454048557675 strictly between zero and 3/4."
+    },
+    {
+      "id": "G1.m2.scale.direct_action_bad_end_asymptotics",
+      "status": "PASS",
+      "statement": "Eight 80-digit original-action sequences are negative in the predicted bad direction, improve with scale, and end below the declared 5e-4 relative tolerance."
+    },
+    {
+      "id": "G1.m2.scale.arm_conjugation_control",
+      "status": "PASS",
+      "statement": "Conjugate lapse arms with opposite bad y directions agree to maximum absolute residual 1.0795210693868056e-78."
+    }
+  ],
+  "payload": {
+    "exact_checks": 10,
+    "numerical_checks": 3,
+    "calculation": {
+      "calculation_id": "Gate1M2ScaleHalfAngleEndAdmissibility",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "KILL_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_COMPLETION_ON_DECLARED_FINITE_LAPSE_DOMAIN",
+      "epistemic_status": "SCOPED_FALSIFIER_OF_ONE_NATURAL_SCALE_COMPLETION",
+      "programme_impact": "NARROW; REQUIRE_AN_ASYMMETRIC_OR_FIBERED_SCALE_END_REDESIGN"
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_M2_SCALE_HALF_ANGLE_END_ADMISSIBILITY_INPUTS.json",
+      "input_manifest_sha256": "09c9e20caad28dcde82e2b7bde318f2fb9901b850786ea9b2238af0ce156234c",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_M2_SCALE_HALF_ANGLE_END_ADMISSIBILITY_RESULT.json",
+      "raw_result_outer_sha256": "ea0aa4ec3c7e9965e0d9e1f4a4731d848fd9d7b8ac6ccc48729070332b3f46de",
+      "raw_result_payload_sha256_without_self": "8dc8fb867819a57c45972e48c5a6b27d0c2e49f9db399c183c2809f99763356e",
+      "raw_result_size_bytes": 16127,
+      "report_path": "cpt_temporal_folded_susy/GATE1_M2_SCALE_HALF_ANGLE_END_ADMISSIBILITY.md",
+      "report_sha256": "89f706ca8fe4f0dbb1f3d9462636b5b6e4a8d1e20961f2c87ce778183fc3faee",
+      "runner_definition_commit": "f2dd4d1efa6ff160d0c0b0eb1e26b7b4dc7e06e3"
+    },
+    "scope": {
+      "status": "Q0_RETAINING_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_ONLY",
+      "includes": [
+        "the inherited equal-endpoint m=2 action and exp(-S_2) convention",
+        "the Phase-39 half-angle scale line on q=0",
+        "the finite nonzero-lapse envelope 1/5<=rho<=6/5 and -pi/2<=psi<=pi/2",
+        "the central scalar window retained by the compact-bent phase-locked scalar construction"
+      ],
+      "excludes": [
+        "asymmetric cubic-sector rays or q-dependent fibered scale tails",
+        "a complete scale-scalar mixed-corner census or regulator removal",
+        "zero-lapse contact, source-derived gauge/BFV cycle or determinant/Pfaffian orientation",
+        "global intersections, Weyl data, spectral measure, RAQ, empirical, physics or TOE claims"
+      ]
+    },
+    "computed_facts": {
+      "cubic_real_coefficient": "pi^2*(12*sin(psi/2)/rho-(V_0*rho/4)*sin(5*psi/2))",
+      "positive_phase_margin": "71/8",
+      "zero_phase_quadratic_bracket_margin": "373/20",
+      "positive_phase_bad_end": "y->-infinity",
+      "negative_phase_bad_end": "y->+infinity",
+      "uniform_two_good_product_scale_ends": false,
+      "phase39_local_intersection_signs_retained": [1, 1],
+      "alternative_asymmetric_or_fibered_scale_tails": "OPEN_NOT_TESTED"
+    },
+    "theorem_guards": [
+      "The exact five-angle identity and pinned rho,V_0 bounds prove sign(L)=sign(psi) only for the declared half-angle q=0 line.",
+      "For exp(-S_2), a noncompact chain end with Re(S_2)->-infinity is not relative-good.",
+      "A q=0-retaining product completion fails on its bad central slice; arbitrary q-dependent or mixed fibers remain untested.",
+      "The scoped counterexample does not alter local +1 records or prove that no source-defined joint relative cycle exists."
+    ],
+    "independent_read_only_review": {
+      "status": "PASS",
+      "raw_result_and_payload_digests_recomputed": true,
+      "runner_input_and_four_upstream_hashes_verified": true,
+      "algebra_margins_and_bad_end_directions_verified": true,
+      "all_eight_direct_action_error_sequences_verified": true,
+      "fail_closed_outputs_verified": true,
+      "verdict_scope_restriction": "Q0_RETAINING_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_ONLY"
+    },
+    "runtime": {
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "exact_checks": 10,
+      "numerical_checks": 3,
+      "theorem_guards": 4,
+      "sampling_points": 24,
+      "quadratures": 0,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "automatic_descendants": 0
+    },
+    "promoted_outputs": {
+      "source_defined_joint_relative_cycle": null,
+      "physical_original_cycle": null,
+      "mixed_end_census": null,
+      "absolute_determinant_pfaffian_line": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "singular_endpoint_nonreal_weyl_m": null,
+      "spectral_measure": null,
+      "RAQ_completion": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    }
+  }
+}

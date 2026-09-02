@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-02T16:56:31Z",
+  "updated_at_utc": "2026-09-02T17:59:03Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -260,7 +260,7 @@
     },
     {
       "question": "Does Phase 39 compute the cap-chain pairing or close Gate 1?",
-      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A one-shot ordered scalar control links the newly declared real scalar measure to the declared 0<lambda<=1 Gamma_lambda representatives on nonzero lapse arms, while its zero-lapse successor was an INVALID_RUN with no verdict. The new full bosonic m=2 control then contradicts only the hypothesis that one common N-i0 or N+i0 makes unchanged real p_a,p_phi axes absolutely convergent; its declared complex rays reproduce the finite Gaussian pushforward but are not a physical source deformation. The physical joint cycle, zero lapse, p_a gauge/FP/BFV completion, scale-factor/mixed ends, regulator removal, complete census/intersection vector, physics, and TOE remain open or null. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
+      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared scalar rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A separate exact q=0 scale audit now contradicts only the Phase-39 half-angle product scale-ray completion: every nonzero lapse phase has one cubic bad scale end. Asymmetric or q-dependent fibered scale tails and the mixed-end census remain open. The ordered scalar, full bosonic and punctured glue/contact controls still do not supply a physical source deformation. The physical joint cycle, zero lapse, p_a gauge/FP/BFV completion, regulator removal, complete census/intersection vector, physics, and TOE remain open or null. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
       "claim_ids": [
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
@@ -273,7 +273,8 @@
         "claim:G1_DECLARED_SCALAR_SOURCE_LINK_MATCHES_ON_NONZERO_LAPSE_ARMS_WITH_ZERO_LAPSE_EXTENSION_OPEN",
         "claim:G1_ZERO_LAPSE_ONE_SHOT_INVALID_AND_DOES_NOT_ESTABLISH_EXTENSION",
         "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES",
-        "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD"
+        "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD",
+        "claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS"
       ]
     },
     {
@@ -7653,7 +7654,7 @@
       "id": "open:gate1-original-cycle-signed-global-intersections",
       "type": "open_problem",
       "title": "Gate 1 — transport the original cycle and fix signed global intersections",
-      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The finite bosonic canonical control proves that one common N-i0 or N+i0 cannot absolutely damp unchanged real p_a,p_phi axes; its declared centered complex rays reproduce the finite Gaussian pushforward with momentum cap glue +1 and configuration glue -1, but no source-to-thimble deformation or physical determinant line follows. A new audit of those frozen flat punctured kernels proves that C/abs(N) and C/N differ on the negative arm away from zero, so contact data cannot reconcile their glue, and that either selected critical branch retains a same-scaling-degree c delta family. This kills only the unique-current-local-source glue/contact shortcut and supplies no source-defined choice. The closed-FRW V=0 trace follow-up supplies one classical local on-shell relational endpoint action on a frozen p-positive component, but no off-shell chart, quantum endpoint state, full BFV source, full-real-lapse delta(C) kernel or old fixed-a equality. A source-derived original class must still specify those local-to-source debts plus zero lapse, scale-factor and mixed ends, regulator removal, connector intersections, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
+      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared scalar rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The new q=0 scale audit separately kills the unchanged Phase-39 half-angle product scale-ray completion: every nonzero lapse phase has one exact cubic bad scale end. It does not test asymmetric cubic-sector or q-dependent fibered scale tails, mixed corners or zero lapse. The finite bosonic canonical and punctured glue/contact controls likewise remove common-lateral and unique-local-source shortcuts without supplying a source-to-thimble deformation or physical determinant line. A source-derived original class must still specify those local-to-source debts plus alternative scale/mixed ends, zero lapse, regulator removal, connector intersections, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
       "state": "OPEN",
       "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
     },
@@ -7847,7 +7848,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded, non-numbered straight-lift audit closes one previously listed debt negatively: the Phase-39 conjugate straight rays have an exact bad negative-phi subsequence, and no anchor-through homogeneous field line delta=qy with constant q and no affine intercept has two relative-good ends on the fixed-a, pure-imaginary-lapse m=2 slice. That scoped completion class is KILL, not the local signs or Gate 1. A subsequent execution-free exact construction supplies one fixed-a, finite-[r,R], lower-bypass scalar-fiber family with phase-locked affine tails and a smooth compact curved connector whose two scalar ends are uniformly relative-good. The frozen-m=2 punctured glue/contact audit further kills an inverse shortcut: current C/abs(N) local data do not choose the negative-arm C/N sheet or the critical c delta contact. Neither result selects an original or source-derived joint cycle or computes connector or cap reintersections. The remaining debt includes source selection, the scale-factor and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
+      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded straight-lift audit kills the Phase-39 unbounded scalar rays and every anchor-through homogeneous delta=qy line on its fixed-a slice, while an exact phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The new q=0 scale audit now kills the unchanged Phase-39 half-angle product scale-ray completion because every nonzero lapse phase has one cubic bad end. That result is conditional on retaining q=0 and does not test asymmetric cubic-sector or q-dependent fibered scale tails or the complete mixed-corner census. The frozen-m=2 punctured glue/contact audit further shows that current local data do not choose the negative-arm sheet or critical contact. None selects an original/source-derived joint cycle or changes the local +1 records. The remaining debt includes source selection, alternative scale-factor and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, zero lapse, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -15467,6 +15468,78 @@
       "citation": "N. V. Dang, Extension of distributions, scalings and renormalization of QFT on Riemannian manifolds",
       "uri": "https://arxiv.org/abs/1411.3670",
       "version": "arXiv:1411.3670"
+    },
+    {
+      "id": "scope:gate1-m2-phase39-half-angle-product-scale-ray-q0",
+      "type": "scope",
+      "title": "Gate-1 Phase-39 half-angle product scale ray on the q=0 slice",
+      "summary": "The inherited equal-endpoint m=2 action, exp(-S_2) convention and unchanged Phase-39 half-angle scale line, tested only on the q=0 central scalar slice over the finite nonzero-lapse envelope. It is a product-completion falsifier, not a census of general mixed contours.",
+      "state": "COMPLETED_NARROW_Q0_RETAINING_SCALE_END_FALSIFIER_SCOPE",
+      "includes": [
+        "the Phase-39 scale embedding x=exp(i*(psi/2-pi/2))*y with real y",
+        "q=0 as the central y_phi=0 slice retained by the compact-bent phase-locked scalar contour",
+        "1/5<=rho<=6/5 and -pi/2<=psi<=pi/2",
+        "exact leading scale asymptotics and independent original-action controls"
+      ],
+      "excludes": [
+        "asymmetric cubic-sector rays and q-dependent fibered scale tails",
+        "the complete scale-scalar mixed-corner census and regulator removal",
+        "zero-lapse contact, source-derived gauge/BFV cycle and determinant/Pfaffian orientation",
+        "global intersections, Weyl data, spectral measure, RAQ, empirical, physics and TOE claims"
+      ]
+    },
+    {
+      "id": "claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS",
+      "type": "claim",
+      "title": "The Phase-39 half-angle product scale ray has two relative-good scale ends",
+      "summary": "Contradicted only in the declared q=0-retaining finite nonzero-lapse product scope. The exact cubic real coefficient has sign psi, so y tends to negative infinity badly for positive psi and to positive infinity badly for negative psi. The isolated psi=0 slice is quadratically good. This kills the unchanged product ray, not asymmetric or q-dependent fibers, the local +1 records, or Gate 1.",
+      "state": "CONTRADICTED_ON_DECLARED_Q0_RETAINING_FINITE_LAPSE_DOMAIN",
+      "claim_id": "G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS",
+      "statement": "The unchanged Phase-39 half-angle scale ray, extended as a product while retaining q=0, has two relative-good infinite scale ends throughout the declared finite nonzero-lapse domain.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:gate1-m2-scale-half-angle-end-admissibility-result",
+      "type": "evidence",
+      "title": "Gate-1 m=2 half-angle product scale-end admissibility evidence",
+      "summary": "One clean unnumbered VALID_RUN records 10/10 exact checks, 3/3 numerical controls and 4/4 theorem guards. The exact coefficient, 71/8 and 373/20 margins, 24 original-action samples and conjugation control contradict two good product scale ends while retaining Phase-39 local signs and all global/physics nulls.",
+      "state": "VALID_RUN_EXACT_Q0_SCALE_END_FALSIFIER_INDEPENDENTLY_REVIEWED",
+      "observed_status": "VALID_RUN_10_EXACT_3_NUMERICAL_4_THEOREM_GUARDS",
+      "check_ids": [
+        "G1.m2.scale.upstream_hashes_and_scope",
+        "G1.m2.scale.two_element_action_reduction",
+        "G1.m2.scale.central_q_zero_slice",
+        "G1.m2.scale.cubic_real_coefficient",
+        "G1.m2.scale.cubic_coefficient_oddness",
+        "G1.m2.scale.five_angle_sign_identity",
+        "G1.m2.scale.uniform_positive_phase_margin",
+        "G1.m2.scale.center_quadratic_goodness",
+        "G1.m2.scale.opposite_arm_bad_ends",
+        "G1.m2.scale.local_sign_not_global_integer",
+        "G1.m2.scale.benchmark_potential_bound",
+        "G1.m2.scale.direct_action_bad_end_asymptotics",
+        "G1.m2.scale.arm_conjugation_control"
+      ]
+    },
+    {
+      "id": "artifact:gate1-m2-scale-half-angle-end-admissibility-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 m=2 half-angle product scale-end evidence snapshot",
+      "summary": "Schema-valid typed extract of the clean bounded audit, including exact and numerical check ledgers, hashes, independent review, strict q=0 product scope and fail-closed promoted outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-m2-scale-half-angle-end-admissibility-result.json",
+      "sha256": "dc5c9bde20b4d25a2c23e606022c115f15665180720d250d855ced099cee1ed8"
+    },
+    {
+      "id": "artifact:gate1-m2-scale-half-angle-end-admissibility-report",
+      "type": "artifact",
+      "title": "Gate-1 m=2 half-angle product scale-end audit report",
+      "summary": "Human-readable derivation of the exact cubic bad end, isolated quadratic-good center, direct-action controls, narrow product-only KILL and the asymmetric, mixed, zero-lapse and global problems that remain open.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_SCALE_HALF_ANGLE_END_ADMISSIBILITY.md",
+      "sha256": "89f706ca8fe4f0dbb1f3d9462636b5b6e4a8d1e20961f2c87ce778183fc3faee"
     }
   ],
   "edges": [
@@ -35741,7 +35814,19 @@
     {"id":"edge:3729","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"MOTIVATES","to":"open:p34-full-joint-dual-determinant-and-global-census","note":"The local sign/contact family does not choose an outgoing arm, orient its prefactor or complete the joint end census."},
     {"id":"edge:3730","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"CITES","to":"source:brunetti-fredenhagen-2000-scaling-degree","note":"Theorem 5.2 classifies same-scaling-degree extensions after a punctured branch is fixed; at omega=d=1 it leaves point-support order zero and does not choose its coefficient."},
     {"id":"edge:3731","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"CITES","to":"source:dang-2014-distribution-extension","note":"Hadamard finite-part and singular-set-supported extension freedom are used as classification guards, not as a model-specific selection rule."},
-    {"id":"edge:3732","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"CITES","to":"source:banihashemi-jacobson-2025","note":"The below-origin lapse contour is a comparator under its own integration order and conventions; it is not imported as this workbench's source cycle or determinant orientation."}
+    {"id":"edge:3732","from":"claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION","relation":"CITES","to":"source:banihashemi-jacobson-2025","note":"The below-origin lapse contour is a comparator under its own integration order and conventions; it is not imported as this workbench's source cycle or determinant orientation."},
+    {"id":"edge:3733","from":"scope:gate1-m2-phase39-half-angle-product-scale-ray-q0","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"The scope is one bounded product-completion falsifier, not a physical original-cycle class."},
+    {"id":"edge:3734","from":"claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS","relation":"VALID_WITHIN","to":"scope:gate1-m2-phase39-half-angle-product-scale-ray-q0","note":"The contradiction is conditional on retaining q=0 and the unchanged half-angle scale ray over the declared finite nonzero-lapse envelope."},
+    {"id":"edge:3735","from":"claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-scale-half-angle-end-admissibility-result","polarity":"CONTRADICTS"},
+    {"id":"edge:3736","from":"evidence:gate1-m2-scale-half-angle-end-admissibility-result","relation":"RECORDED_IN","to":"artifact:gate1-m2-scale-half-angle-end-admissibility-evidence-snapshot"},
+    {"id":"edge:3737","from":"evidence:gate1-m2-scale-half-angle-end-admissibility-result","relation":"DERIVED_FROM","to":"evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards","note":"Inherits only the hash-pinned m=2 action, cap embedding, finite lapse data and fail-closed scope; no Phase-39 runner is re-executed."},
+    {"id":"edge:3738","from":"evidence:gate1-m2-scale-half-angle-end-admissibility-result","relation":"DERIVED_FROM","to":"evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census","note":"Retains the two recorded local +1 candidates as local provenance only; the failed end prerequisite supplies no global integer."},
+    {"id":"edge:3739","from":"evidence:gate1-m2-scale-half-angle-end-admissibility-result","relation":"DERIVED_FROM","to":"evidence:gate1-phase-locked-affine-field-end-analytic-proof","note":"Uses only the exact fact that the compact-bent scalar contour retains the q=0 central window; its fixed-a scalar good-end theorem remains unchanged."},
+    {"id":"edge:3740","from":"claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-scale-half-angle-end-admissibility-report"},
+    {"id":"edge:3741","from":"claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"The unchanged product ray is closed negatively; asymmetric or q-dependent scale fibers and the complete mixed-end census remain to be constructed without automatic execution authority."},
+    {"id":"edge:3742","from":"claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"A source-defined regulated joint cycle must choose admissible alternative scale/mixed ends before any complete orientation-stable vector can be computed."},
+    {"id":"edge:3743","from":"claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Relative-cycle good-end framing only; the m=2 coefficient and counterexample are repository calculations."},
+    {"id":"edge:3744","from":"claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS","relation":"CITES","to":"source:banihashemi-jacobson-2025","note":"The below-origin lapse contour is a comparator under its own integration order; it neither selects nor repairs the Phase-39 scale lift."}
   ],
   "kg_bridges": [
     {
@@ -36489,6 +36574,16 @@
       "checked_at_utc": "2026-08-31T06:20:50Z",
       "lookup_key": "ICE closed S3 fixed metric scalar matter DH lapse transport strain residual omitted metric variation",
       "note": "No authorized exact external correspondence or writer is available. The contradiction is restricted to one repository-local mixed-parity fixed-metric matter packet; full gravity-plus-matter ADM/HDA, anomaly, physics and TOE outputs remain open or null, and no UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-09-02T17:59:03Z",
+      "lookup_key": "ICE Gate 1 Phase39 half-angle product scale ray q0 relative good ends cubic obstruction",
+      "note": "No authorized exact external correspondence or writer is available. The local result contradicts only one q=0-retaining finite-regulator product completion and supplies no physical cycle, global intersection, Weyl, RAQ, physics or TOE claim; no external UID was invented."
     }
   ]
 }
