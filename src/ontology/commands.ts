@@ -57,9 +57,26 @@ import {
   loadResearchGraphAtRevision,
   loadValidOntologyCollectionStructure
 } from "./repository.ts"
+import {
+  auditDeclaredResearchCoverage,
+  type CoverageAuditReport
+} from "./coverage.ts"
 
 const printJson = (value: unknown): Effect.Effect<void> =>
   Console.log(JSON.stringify(value, null, 2))
+
+const renderCoverageAudit = (report: CoverageAuditReport): string =>
+  [
+    `RESEARCH COVERAGE ${report.valid ? "VALID" : "INVALID"}`,
+    `declared corpus roots: ${report.roots.length}`,
+    `files: ${report.files}; mapped: ${report.mapped_files}`,
+    `coverage statuses: ${renderCounts(report.by_status)}`,
+    `issues: ${report.issues.length}`,
+    ...report.issues.map(
+      (issue) => `[ERROR] ${issue.code} (${issue.path}): ${issue.message}`
+    ),
+    "scope: declared research roots only; archive/output are not discovered implicitly"
+  ].join("\n")
 
 const failedCollectionValidationReport = (
   error: IceError
@@ -846,6 +863,27 @@ export const ontologyCompetencyCommand = (json: boolean) =>
   ontologyCompetencyData.pipe(
     Effect.tap((report) =>
       json ? printJson(report) : Console.log(renderCompetencyReport(report))
+    )
+  )
+
+export const ontologyCoverageData = Effect.gen(function* () {
+  const workspace = yield* Workspace
+  const collection = yield* loadResearchCollection
+  return yield* Effect.tryPromise({
+    try: () => auditDeclaredResearchCoverage(workspace.root, collection),
+    catch: (error) =>
+      iceError(
+        "ONTOLOGY_COVERAGE_AUDIT_FAILED",
+        error instanceof Error ? error.message : String(error),
+        2
+      )
+  })
+})
+
+export const ontologyCoverageCommand = (json: boolean) =>
+  ontologyCoverageData.pipe(
+    Effect.tap((report) =>
+      json ? printJson(report) : Console.log(renderCoverageAudit(report))
     )
   )
 

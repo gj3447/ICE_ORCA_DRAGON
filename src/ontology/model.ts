@@ -1,5 +1,6 @@
 import { Effect, Schema } from "effect"
 import { iceError, type IceError } from "../errors.ts"
+import { assertSupportedResearchSchemaVersion } from "./lifecycle.ts"
 
 const NonEmptyString = Schema.NonEmptyString
 const GraphId = Schema.String.pipe(
@@ -214,7 +215,23 @@ export const decodeResearchGraph = (
   source: string,
   label: string
 ): Effect.Effect<ResearchGraph, IceError> =>
-  Schema.decodeUnknown(ResearchGraphFromString)(source, {
+  Effect.try({
+    try: () => {
+      let parsed: { schema_version?: unknown }
+      try {
+        parsed = JSON.parse(source) as { schema_version?: unknown }
+      } catch {
+        return
+      }
+      if (typeof parsed.schema_version === "string") {
+        assertSupportedResearchSchemaVersion(
+          "research-graph",
+          parsed.schema_version
+        )
+      }
+    },
+    catch: (error) => iceError("ONTOLOGY_SCHEMA_VERSION_UNSUPPORTED", `${label}: ${error instanceof Error ? error.message : String(error)}`)
+  }).pipe(Effect.flatMap(() => Schema.decodeUnknown(ResearchGraphFromString)(source, {
     errors: "all",
     onExcessProperty: "error"
   }).pipe(
@@ -224,4 +241,4 @@ export const decodeResearchGraph = (
         `${label} does not satisfy research-graph/v1: ${String(error)}`
       )
     )
-  )
+  )))

@@ -1,5 +1,6 @@
 import { Effect, Schema } from "effect"
 import { iceError, type IceError } from "../errors.ts"
+import { assertSupportedResearchSchemaVersion } from "./lifecycle.ts"
 
 const NonEmptyString = Schema.NonEmptyString
 const CollectionId = Schema.String.pipe(
@@ -98,7 +99,23 @@ export const decodeResearchCollection = (
   source: string,
   label: string
 ): Effect.Effect<ResearchCollection, IceError> =>
-  Schema.decodeUnknown(ResearchCollectionFromString)(source, {
+  Effect.try({
+    try: () => {
+      let parsed: { schema_version?: unknown }
+      try {
+        parsed = JSON.parse(source) as { schema_version?: unknown }
+      } catch {
+        return
+      }
+      if (typeof parsed.schema_version === "string") {
+        assertSupportedResearchSchemaVersion(
+          "research-collection",
+          parsed.schema_version
+        )
+      }
+    },
+    catch: (error) => iceError("ONTOLOGY_COLLECTION_SCHEMA_VERSION_UNSUPPORTED", `${label}: ${error instanceof Error ? error.message : String(error)}`)
+  }).pipe(Effect.flatMap(() => Schema.decodeUnknown(ResearchCollectionFromString)(source, {
     errors: "all",
     onExcessProperty: "error"
   }).pipe(
@@ -108,4 +125,4 @@ export const decodeResearchCollection = (
         `${label} does not satisfy research-collection/v1: ${String(error)}`
       )
     )
-  )
+  )))

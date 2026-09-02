@@ -3,6 +3,7 @@ import { Console, Effect } from "effect"
 import { setExitCode } from "../commands.ts"
 import {
   ontologyCompetencyCommand,
+  ontologyCoverageCommand,
   ontologyCrateCommand,
   ontologyExportCommand,
   ontologyGuideCommand,
@@ -166,6 +167,19 @@ const competencyCommand = Command.make(
   )
 )
 
+const coverageCommand = Command.make(
+  "coverage",
+  { json },
+  ({ json }) =>
+    ontologyCoverageCommand(json).pipe(
+      Effect.flatMap((report) => setExitCode(report.valid ? 0 : 1))
+    )
+).pipe(
+  Command.withDescription(
+    "audit declared research corpus roots against the longest-prefix coverage ledger"
+  )
+)
+
 const crateOutput = Args.text({ name: "output-directory" })
 const crateCommand = Command.make(
   "crate",
@@ -191,6 +205,7 @@ export const ontologyCommand = Command.make("ontology", {}, () =>
     shaclCommand,
     sparqlCommand,
     competencyCommand,
+    coverageCommand,
     crateCommand,
     showCommand,
     traceCommand

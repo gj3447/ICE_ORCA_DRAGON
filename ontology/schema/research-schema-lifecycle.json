@@ -1,0 +1,17 @@
+{
+  "$schema": "./research-schema-lifecycle-v1.schema.json",
+  "schema": "ice-research-schema-lifecycle/v1",
+  "version": 1,
+  "families": {
+    "research-collection": {
+      "current": "research-collection/v1",
+      "supported": ["research-collection/v1"],
+      "migrations": []
+    },
+    "research-graph": {
+      "current": "research-graph/v1",
+      "supported": ["research-graph/v1"],
+      "migrations": []
+    }
+  }
+}
