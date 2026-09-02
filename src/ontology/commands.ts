@@ -1,5 +1,6 @@
 import { Console, Effect } from "effect"
 import { iceError, type IceError } from "../errors.ts"
+import { Workspace } from "../workspace.ts"
 import {
   findCollectionNodes,
   summarizeCollection,
@@ -32,7 +33,16 @@ import {
   type ResearchGraphReviewWarning,
   type ResearchGraphDiff
 } from "./diff.ts"
-import { projectCollectionToJsonLd } from "./jsonld.ts"
+import {
+  createOntologyInteropCrate,
+  prepareOntologyInteropCrate
+} from "./crate.ts"
+import { buildRdfDataset, serializeDatasetAsNQuads } from "./rdf.ts"
+import {
+  loadStandardShaclShapes,
+  validateRdfDatasetWithShacl
+} from "./shacl.ts"
+import { queryRdfDataset } from "./sparql.ts"
 import {
   hashOntologyDocumentAt,
   loadOntologyCollectionValidation,
@@ -654,20 +664,8 @@ export const ontologyReviewCommand = (
     return review
   })
 
-export const ontologyExportCommand = (
-  format: "jsonld",
-  graphKey = "all"
-) =>
+const loadOntologyInteropInputs = (graphKey = "all") =>
   Effect.gen(function* () {
-    if (format !== "jsonld") {
-      return yield* Effect.fail(
-        iceError(
-          "ONTOLOGY_EXPORT_FORMAT_UNSUPPORTED",
-          `unsupported ontology export format '${String(format)}'`,
-          2
-        )
-      )
-    }
     const loaded = yield* loadValidOntologyCollectionStructure
     if (
       graphKey !== "all" &&
@@ -681,26 +679,194 @@ export const ontologyExportCommand = (
         )
       )
     }
-    const projection = projectCollectionToJsonLd(
-      loaded.collection,
-      loaded.graphs,
-      {
-        ...(graphKey === "all" ? {} : { graphKeys: [graphKey] }),
-        sourceDocuments: yield* Effect.forEach(
-          [
-            loaded.collection.canonical_file,
-            ...loaded.collection.graphs
-              .filter(({ key }) => graphKey === "all" || key === graphKey)
-              .map(({ path }) => path)
-          ],
-          (path) =>
-            hashOntologyDocumentAt(path).pipe(
-              Effect.map((sha256) => ({ path, sha256 }))
-            ),
-          { concurrency: 4 }
-        )
-      }
+    const sourceDocuments = yield* Effect.forEach(
+      [
+        loaded.collection.canonical_file,
+        ...loaded.collection.graphs
+          .filter(({ key }) => graphKey === "all" || key === graphKey)
+          .map(({ path }) => path)
+      ],
+      (path) =>
+        hashOntologyDocumentAt(path).pipe(
+          Effect.map((sha256) => ({ path, sha256 }))
+        ),
+      { concurrency: 4 }
     )
-    yield* printJson(projection)
-    return projection
+    return {
+      loaded,
+      options: {
+        ...(graphKey === "all" ? {} : { graphKeys: [graphKey] }),
+        sourceDocuments
+      }
+    }
+  })
+
+export const ontologyRdfData = (graphKey = "all") =>
+  loadOntologyInteropInputs(graphKey).pipe(
+    Effect.flatMap(({ loaded, options }) =>
+      Effect.tryPromise({
+        try: () => buildRdfDataset(loaded.collection, loaded.graphs, options),
+        catch: (error) =>
+          iceError(
+            "ONTOLOGY_RDF_BUILD_FAILED",
+            error instanceof Error ? error.message : String(error),
+            2
+          )
+      })
+    )
+  )
+
+export const ontologyExportCommand = (
+  format: "jsonld" | "dataset-jsonld" | "nquads",
+  graphKey = "all"
+) =>
+  ontologyRdfData(graphKey).pipe(
+    Effect.tap((built) =>
+      format === "jsonld"
+        ? printJson(built.projection)
+        : format === "dataset-jsonld"
+          ? printJson(built.datasetProjection)
+        : Console.log(serializeDatasetAsNQuads(built.dataset).trimEnd())
+    ),
+    Effect.map((built) =>
+      format === "jsonld"
+        ? built.projection
+        : format === "dataset-jsonld"
+          ? built.datasetProjection
+        : serializeDatasetAsNQuads(built.dataset)
+    )
+  )
+
+export const ontologyShaclData = (graphKey = "all") =>
+  Effect.gen(function* () {
+    const workspace = yield* Workspace
+    const built = yield* ontologyRdfData(graphKey)
+    return yield* Effect.tryPromise({
+      try: async () =>
+        validateRdfDatasetWithShacl(
+          built.dataset,
+          await loadStandardShaclShapes(workspace.root)
+        ),
+      catch: (error) =>
+        iceError(
+          "ONTOLOGY_SHACL_VALIDATION_FAILED",
+          error instanceof Error ? error.message : String(error),
+          2
+        )
+    })
+  })
+
+export const ontologyShaclCommand = (
+  json: boolean,
+  graphKey = "all"
+) =>
+  ontologyShaclData(graphKey).pipe(
+    Effect.tap((report) =>
+      json
+        ? printJson(report)
+        : Console.log(
+            [
+              `SHACL ${report.conforms ? "CONFORMS" : "NONCONFORMING"}`,
+              `violations: ${report.violations.length}`,
+              ...report.violations.map(
+                (violation) =>
+                  `${violation.focus_node} ${violation.path}: ${violation.message.join("; ")}`
+              ),
+              "boundary: projection-shape QA only; native hash/evidence validation remains separate"
+            ].join("\n")
+          )
+    )
+  )
+
+export const ontologySparqlData = (
+  query: string,
+  graphKey = "all",
+  limit = 100,
+  timeoutMs = 5_000
+) =>
+  ontologyRdfData(graphKey).pipe(
+    Effect.flatMap((built) =>
+      Effect.tryPromise({
+        try: () =>
+          queryRdfDataset(built.dataset, query, { limit, timeoutMs }),
+        catch: (error) =>
+          iceError(
+            "ONTOLOGY_SPARQL_QUERY_FAILED",
+            error instanceof Error ? error.message : String(error),
+            2
+          )
+      })
+    )
+  )
+
+export const ontologySparqlCommand = (
+  query: string,
+  graphKey: string,
+  limit: number,
+  timeoutMs: number
+) =>
+  ontologySparqlData(query, graphKey, limit, timeoutMs).pipe(
+    Effect.tap(printJson)
+  )
+
+export const ontologyCratePreviewData = (graphKey = "all") =>
+  Effect.gen(function* () {
+    const workspace = yield* Workspace
+    const { loaded, options } = yield* loadOntologyInteropInputs(graphKey)
+    const prepared = yield* Effect.tryPromise({
+      try: () =>
+        prepareOntologyInteropCrate(loaded.collection, loaded.graphs, {
+          ...options,
+          workspaceRoot: workspace.root
+        }),
+      catch: (error) =>
+        iceError(
+          "ONTOLOGY_RO_CRATE_PREVIEW_FAILED",
+          error instanceof Error ? error.message : String(error),
+          2
+        )
+    })
+    return {
+      schema: prepared.schema,
+      metadata: prepared.metadata,
+      manifest: prepared.manifest,
+      shacl: prepared.shacl,
+      boundary:
+        "read-only preview; raw results are not bundled and no file has been written"
+    }
+  })
+
+export const ontologyCrateCommand = (
+  outputDirectory: string,
+  graphKey: string,
+  json: boolean
+) =>
+  Effect.gen(function* () {
+    const workspace = yield* Workspace
+    const { loaded, options } = yield* loadOntologyInteropInputs(graphKey)
+    const result = yield* Effect.tryPromise({
+      try: () =>
+        createOntologyInteropCrate(loaded.collection, loaded.graphs, {
+          ...options,
+          workspaceRoot: workspace.root,
+          outputDirectory
+        }),
+      catch: (error) =>
+        iceError(
+          "ONTOLOGY_RO_CRATE_CREATE_FAILED",
+          error instanceof Error ? error.message : String(error),
+          2
+        )
+    })
+    yield* (json
+      ? printJson(result)
+      : Console.log(
+          [
+            `RO-Crate created: ${result.directory}`,
+            `files: ${result.files.length}`,
+            `manifest sha256: ${result.manifest_sha256}`,
+            "scope: metadata and graph export only; raw results were not copied"
+          ].join("\n")
+        ))
+    return result
   })

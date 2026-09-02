@@ -7,7 +7,11 @@ import {
   graphHarnessContextData,
   graphHarnessImpactData
 } from "./harness/commands.ts"
-import { researchAgentPlanData } from "./agent-graph/commands.ts"
+import {
+  researchAgentPlanData,
+  researchAgentRunAuditData,
+  researchAgentWorkflowEvaluateData
+} from "./agent-graph/commands.ts"
 import {
   graphRagDiffData,
   graphRagEvaluateData,
@@ -18,6 +22,11 @@ import {
   getOpenAlexWorkNeighborhood,
   searchOpenAlexWorks
 } from "./literature/openalex.ts"
+import {
+  ontologyCratePreviewData,
+  ontologyShaclData,
+  ontologySparqlData
+} from "./ontology/commands.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const AppLayer = Layer.mergeAll(NodeContext.layer, WorkspaceLive)
@@ -45,8 +54,8 @@ const asToolError = (error: unknown) => ({
 })
 
 const capabilities = {
-  schema: "ice-research-mcp-capabilities/v1",
-  mode: "READ_ONLY_GRAPH_AWARE_RESEARCH_DISCOVERY",
+  schema: "ice-research-mcp-capabilities/v2",
+  mode: "READ_ONLY_GRAPH_INTEROP_RESEARCH_ORCHESTRATION",
   tools: [
     {
       name: "ice_research_context",
@@ -59,6 +68,18 @@ const capabilities = {
     {
       name: "ice_research_check",
       purpose: "Validate graph structure, tracked hashes, and evidence snapshots."
+    },
+    {
+      name: "ice_ontology_shacl_validate",
+      purpose: "Run SHACL 1.0 Core against the generated RDF named dataset."
+    },
+    {
+      name: "ice_ontology_sparql_query",
+      purpose: "Run the structurally bounded read-only local SPARQL 1.1 subset over the in-memory dataset."
+    },
+    {
+      name: "ice_ontology_ro_crate_preview",
+      purpose: "Preview RO-Crate 1.3 metadata, manifest, and SHACL status without writing files."
     },
     {
       name: "ice_literature_search",
@@ -87,6 +108,14 @@ const capabilities = {
     {
       name: "ice_research_workflow_plan",
       purpose: "Create a human-review-only TOE critical-path workflow checkpoint."
+    },
+    {
+      name: "ice_research_workflow_evaluate",
+      purpose: "Run the fixed routing, durable handoff, and non-authorization suite."
+    },
+    {
+      name: "ice_research_run_audit",
+      purpose: "Read and audit one explicitly persisted local run and its revision drift."
     }
   ],
   boundaries: [
@@ -175,6 +204,83 @@ export const createIceResearchMcpServer = (): McpServer => {
       try {
         return asToolResult(
           await Effect.runPromise(graphHarnessCheckData(graph).pipe(Effect.provide(AppLayer)))
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_ontology_shacl_validate",
+    {
+      title: "ICE ontology SHACL validation",
+      description:
+        "Run the bundled SHACL 1.0 Core processor over a generated RDF 1.1 named dataset. Projection QA only; native hash/evidence validation remains separate.",
+      inputSchema: {
+        graph: z.string().min(1).max(128).default("all")
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ graph }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            ontologyShaclData(graph).pipe(Effect.provide(AppLayer))
+          )
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_ontology_sparql_query",
+    {
+      title: "ICE ontology bounded SPARQL query",
+      description:
+        "Run the restricted local SELECT, ASK, CONSTRUCT, or DESCRIBE subset against the in-memory RDF dataset. Disconnected joins, complex algebra, SERVICE, remote datasets, and updates are rejected.",
+      inputSchema: {
+        query: z.string().min(1).max(16 * 1024),
+        graph: z.string().min(1).max(128).default("all"),
+        limit: z.number().int().min(1).max(500).default(100),
+        timeout_ms: z.number().int().min(1).max(30_000).default(5_000)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ query, graph, limit, timeout_ms }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            ontologySparqlData(query, graph, limit, timeout_ms).pipe(
+              Effect.provide(AppLayer)
+            )
+          )
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_ontology_ro_crate_preview",
+    {
+      title: "ICE ontology RO-Crate preview",
+      description:
+        "Return the RO-Crate 1.3 descriptor, hashed manifest, and SHACL report that would be packaged. Read-only and never copies raw result files.",
+      inputSchema: {
+        graph: z.string().min(1).max(128).default("all")
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ graph }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            ontologyCratePreviewData(graph).pipe(Effect.provide(AppLayer))
+          )
         )
       } catch (error) {
         return asToolError(error)
@@ -273,6 +379,52 @@ export const createIceResearchMcpServer = (): McpServer => {
             researchAgentPlanData(question, graph, limit, depth).pipe(
               Effect.provide(AppLayer)
             )
+          )
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_research_workflow_evaluate",
+    {
+      title: "Research-agent workflow evaluation",
+      description:
+        "Run the fixed CPT routing, finite human-handoff, event-chain self-consistency, and non-authorization suite. It does not persist a run or assess scientific truth.",
+      inputSchema: {},
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async () => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            researchAgentWorkflowEvaluateData.pipe(Effect.provide(AppLayer))
+          )
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_research_run_audit",
+    {
+      title: "Durable research-agent run audit",
+      description:
+        "Read one explicitly created local run and check event-chain self-consistency plus current HEAD, control-plane, ontology, and local-source revision pins. Read-only; the chain is not a signature and CLOSED is not execution approval.",
+      inputSchema: {
+        run_id: z.string().regex(/^[a-z0-9][a-z0-9_-]{2,127}$/)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ run_id }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            researchAgentRunAuditData(run_id).pipe(Effect.provide(AppLayer))
           )
         )
       } catch (error) {

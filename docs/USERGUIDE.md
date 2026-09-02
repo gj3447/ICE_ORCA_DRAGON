@@ -86,6 +86,24 @@ not duplicate a claim across graphs or infer corroboration from nearby topics. V
 component with no programme anchor, and summary reports weak-component cohesion. Historical records
 remain provenance and are not deleted or reinterpreted to simplify a route.
 
+### Export and inspect the standards interoperability view
+
+```bash
+./ice ontology export --format dataset-jsonld --graph cpt > /tmp/cpt-research-dataset.jsonld
+./ice ontology export --format nquads --graph cpt > /tmp/cpt-research-graph.nq
+./ice ontology shacl --graph cpt --json
+./ice ontology sparql 'ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?node a <urn:ice-orca-dragon:ontology:ResearchNode> } }' --graph cpt
+./ice ontology crate output/cpt-review-crate --graph cpt --json
+```
+
+The native collection and graph JSON remain authoritative. The generated named RDF dataset adds
+source-to-export PROV-O lineage and is checked with the bundled SHACL 1.0 Core shapes. SPARQL is a
+restricted local 1.1 subset with structural, row, byte, and time bounds; it is not a general endpoint.
+RO-Crate creation reserves one new direct child under `output/`, never overwrites an existing target,
+packages RDF-equivalent enriched JSON-LD/N-Quads plus the explicitly digested compatibility JSON-LD,
+and does not copy raw result files. These views improve interchange and
+review; they do not ratify a claim or authorize a calculation.
+
 ### Use the graph-aware harness for research engineering context
 
 ```bash

@@ -23,11 +23,11 @@ Two read-only engineering surfaces are added around that authority:
    graph-qualified resource IRIs. Every native edge is a separate
    `ice:ResearchEdge`, preserving its local ID, endpoints, relation, polarity,
    and note. The package includes source-document SHA-256 values, SHACL 1.0
-   Core validation, a bounded read-only SPARQL 1.1 query surface, PROV-O
+   Core validation, a structurally bounded read-only local SPARQL 1.1 subset, PROV-O
    lineage, and RO-Crate 1.3 metadata.
 
-`npm run graph:check` runs strict TypeScript checks, the Vitest suite, and the
-full repository ontology validation. `npm run graph:review` and `npm run
+`npm run graph:check` runs strict TypeScript checks, the Vitest suite, the
+full repository ontology validation, and all-graph SHACL projection validation. `npm run graph:review` and `npm run
 graph:export` provide collection-wide shortcuts.
 
 ## Current navigation and cohesion rule
@@ -76,15 +76,19 @@ redaction filter. The export lists selected graph keys and source-document
 hashes so a consumer can distinguish the envelope from the selected bodies.
 
 The accompanying [SHACL 1.0 Core](https://www.w3.org/TR/shacl/) shapes are
-executed offline against the generated projection and package. They validate
-projection structure and package lineage, not native research validity.
+executed offline against the generated RDF dataset used by the projection and
+package. They validate projection structure and export lineage, not native
+research validity or RO-Crate metadata/files.
 The package also exposes a bounded, read-only
-[SPARQL 1.1](https://www.w3.org/TR/sparql11-query/) query interface and uses
+[restricted local SPARQL 1.1 subset](https://www.w3.org/TR/sparql11-query/)
+query interface and uses
 [PROV-O](https://www.w3.org/TR/prov-o/) only for source-to-export lineage:
 no generic provenance edge is substituted for the repository's scientific
 `HAS_EVIDENCE` relation. An [RO-Crate 1.3](https://w3id.org/ro/crate/1.3),
 published as a community Recommendation on 2026-06-22, packages the generated
-materials and their metadata.
+materials and their metadata. Its enriched JSON-LD and N-Quads members are
+RDF-equivalent; a separate compatibility JSON-LD member is the exact byte
+payload identified by the embedded projection-output digest.
 
 The stable interoperability target is RDF 1.1, JSON-LD 1.1, SHACL 1.0,
 SPARQL 1.1, PROV-O, and RO-Crate 1.3. RDF 1.2, SHACL 1.2, and SPARQL 1.2 are
@@ -102,6 +106,11 @@ the [MCP 2025-11-25 specification](https://modelcontextprotocol.io/specification
 ./ice graphrag diff --base HEAD --limit 12 --json
 npm run graph:check
 ./ice ontology export --format jsonld --graph <key> > /tmp/research-graph.jsonld
+./ice ontology export --format dataset-jsonld --graph <key> > /tmp/research-dataset.jsonld
+./ice ontology export --format nquads --graph <key> > /tmp/research-graph.nq
+./ice ontology shacl --graph <key> --json
+./ice ontology sparql '<bounded SELECT|ASK|CONSTRUCT|DESCRIBE>' --graph <key>
+./ice ontology crate output/<new-name> --graph <key> --json
 ```
 
 The versioned retrieval suite and revision-diff interpretation are defined in
@@ -117,9 +126,9 @@ changes.
 
 - A projected IRI is a repository-local identifier, not an external KG match.
 - JSON-LD/RDF serialization does not make a scientific claim true.
-- SHACL conformance would check projection shape, not artifact hashes,
+- SHACL conformance checks projection shape, not artifact hashes,
   evidence polarity, or physical validity.
-- PROV metadata would describe lineage, not turn policy or citation into
+- PROV metadata describes export lineage; it does not turn policy or citation into
   evidence.
 - An RO-Crate, SHACL report, or SPARQL result is an interoperability artifact,
   not a GraphRAG reference implementation, a physical ratification, or an

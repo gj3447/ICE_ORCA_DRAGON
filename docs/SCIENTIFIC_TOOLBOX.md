@@ -72,10 +72,12 @@ Newly installed skills become available after a Codex restart/new turn.
 
 ## MCP status
 
-- `npm run --silent mcp` launches the repository-local `ice-orca-dragon-research` MCP v2 server over stdio.
+- `npm run --silent mcp` launches the repository-local `ice-orca-dragon-research` server over stdio, built with MCP TypeScript SDK v2 and targeting MCP 2025-11-25.
   `--silent` suppresses npm's own stdout banner, leaving stdout exclusively for MCP messages. It is
-  read-only and exposes bounded graph context/impact/integrity plus a maximum-20-result OpenAlex works
-  search. It never executes kernels, writes files, mutates the ontology, or authorizes a next task.
+  read-only and exposes bounded graph context/impact/integrity, GraphRAG retrieval/evaluation,
+  SHACL validation, restricted local SPARQL queries, RO-Crate preview, durable-run audit, and a maximum-20-result
+  OpenAlex works search. It never executes kernels, writes files, mutates the ontology, or authorizes
+  a next task. Explicit durable-run creation/review and RO-Crate output remain CLI-only operations.
   `./ice literature search "<query>" --json` provides the same public literature-discovery path without an
   MCP host.
 - The existing ontology MCP is a read-only SYMPOSIUM knowledge-graph/schema service. Its

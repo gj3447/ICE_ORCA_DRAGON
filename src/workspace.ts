@@ -14,9 +14,15 @@ export interface Workspace {
         | "@effect/platform-node"
         | "@effect/printer"
         | "@effect/printer-ansi"
+        | "@comunica/query-sparql-rdfjs"
+        | "@rdfjs/parser-n3"
         | "@modelcontextprotocol/server"
         | "graphology"
         | "graphology-communities-louvain"
+        | "jsonld"
+        | "rdf-ext"
+        | "rdf-validate-shacl"
+        | "sparqljs"
         | "tsx"
         | "zod",
         string
@@ -43,9 +49,15 @@ export const workspaceFromRoot = (root: string): Workspace => ({
       "@effect/platform-node": "0.108.1",
       "@effect/printer": "0.51.0",
       "@effect/printer-ansi": "0.51.0",
+      "@comunica/query-sparql-rdfjs": "5.3.0",
+      "@rdfjs/parser-n3": "2.2.0",
       "@modelcontextprotocol/server": "2.0.0",
       graphology: "0.26.0",
       "graphology-communities-louvain": "2.0.2",
+      jsonld: "9.0.0",
+      "rdf-ext": "2.6.0",
+      "rdf-validate-shacl": "0.6.5",
+      sparqljs: "3.7.4",
       zod: "4.5.4",
       tsx: "4.23.12"
     },

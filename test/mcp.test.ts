@@ -16,6 +16,9 @@ it("exposes a bounded read-only MCP capability surface", async () => {
         "ice_research_context",
         "ice_research_impact",
         "ice_research_check",
+        "ice_ontology_shacl_validate",
+        "ice_ontology_sparql_query",
+        "ice_ontology_ro_crate_preview",
         "ice_literature_search",
         "ice_literature_neighbors",
         "ice_graphrag_summary",
@@ -23,6 +26,8 @@ it("exposes a bounded read-only MCP capability surface", async () => {
         "ice_graphrag_evaluate",
         "ice_graphrag_diff",
         "ice_research_workflow_plan",
+        "ice_research_workflow_evaluate",
+        "ice_research_run_audit",
         "ice_research_capabilities"
       ])
     )
@@ -37,7 +42,9 @@ it("exposes a bounded read-only MCP capability surface", async () => {
       arguments: {}
     })
     expect(result.isError).not.toBe(true)
-    expect(JSON.stringify(result.content)).toContain("READ_ONLY_GRAPH_AWARE_RESEARCH_DISCOVERY")
+    expect(JSON.stringify(result.content)).toContain(
+      "READ_ONLY_GRAPH_INTEROP_RESEARCH_ORCHESTRATION"
+    )
     expect(JSON.stringify(result.content)).toContain("never authorize execution")
 
     const graphRagSummary = await client.callTool({
@@ -79,8 +86,45 @@ it("exposes a bounded read-only MCP capability surface", async () => {
     expect(JSON.stringify(toePlan.content)).toContain(
       "TOE_CANDIDATE_READY_FOR_EXTERNAL_REVIEW"
     )
+
+    const shacl = await client.callTool({
+      name: "ice_ontology_shacl_validate",
+      arguments: { graph: "cpt" }
+    })
+    expect(shacl.isError).not.toBe(true)
+    expect(JSON.stringify(shacl.content)).toContain('\\"conforms\\": true')
+
+    const sparql = await client.callTool({
+      name: "ice_ontology_sparql_query",
+      arguments: {
+        graph: "cpt",
+        limit: 10,
+        query:
+          "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?node a <urn:ice-orca-dragon:ontology:ResearchNode> } }"
+      }
+    })
+    expect(sparql.isError).not.toBe(true)
+    expect(JSON.stringify(sparql.content)).toContain('\\"boolean\\": true')
+
+    const crate = await client.callTool({
+      name: "ice_ontology_ro_crate_preview",
+      arguments: { graph: "cpt" }
+    })
+    expect(crate.isError).not.toBe(true)
+    expect(JSON.stringify(crate.content)).toContain(
+      "https://w3id.org/ro/crate/1.3/context"
+    )
+
+    const workflowEvaluation = await client.callTool({
+      name: "ice_research_workflow_evaluate",
+      arguments: {}
+    })
+    expect(workflowEvaluation.isError).not.toBe(true)
+    expect(JSON.stringify(workflowEvaluation.content)).toContain(
+      '\\"passed\\": true'
+    )
   } finally {
     await client.close()
     await server.close()
   }
-})
+}, 30_000)

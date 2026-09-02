@@ -45,11 +45,11 @@ would not retain that record as a resource with its metadata.  The edge shape
 therefore requires exactly one `from`, `relation`, and `to` value.
 
 `research-graph-shapes.ttl` is a minimal SHACL 1.0 Core contract for the
-offline RDF/JSON-LD projection and package: it checks the projection
-collection, source documents, export activity, output entity, native records,
-and reified edges. The offline validator emits a validation result for the
-generated package; it is projection QA only. It does not replace the local
-semantic validator or add an execution or research gate.
+offline RDF dataset used by the projection and package: it checks the
+projection collection, source documents, export activity, output entity,
+native records, and reified edges. The offline validator emits a validation
+result for that generated RDF dataset; it is projection QA only. It does not
+replace the local semantic validator or add an execution or research gate.
 
 RDF has no JSON `null`.  For an unresolved KG bridge, a projection must retain
 the explicit native nulls by emitting one value for both `externalUid` and
@@ -68,11 +68,33 @@ the missing values to be silently dropped.
 - [Model Context Protocol, version 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25)
 
 The offline package contains RDF/JSON-LD, SHACL validation material, a
-read-only SPARQL 1.1 query surface, PROV-O lineage, and an RO-Crate 1.3
-metadata descriptor. It is a portable inspection and validation boundary, not
-a GraphRAG reference implementation, a graph database, an agent runtime, or
-an authorization to execute research work. MCP is the separate read-only
-transport for bounded inspection tools; its protocol version is pinned above.
+read-only restricted local SPARQL 1.1 query subset, PROV-O lineage, and an
+RO-Crate 1.3 metadata descriptor. It is a portable inspection and validation
+boundary, not a GraphRAG reference implementation, a graph database, an agent
+runtime, or an authorization to execute research work. MCP is the separate
+read-only transport for bounded inspection tools; its protocol version is
+pinned above.
+
+## Local operating surface
+
+```bash
+./ice ontology export --format jsonld --graph <key|all>
+./ice ontology export --format dataset-jsonld --graph <key|all>
+./ice ontology export --format nquads --graph <key|all>
+./ice ontology shacl --graph <key|all> --json
+./ice ontology sparql '<SELECT|ASK|CONSTRUCT|DESCRIBE>' --graph <key|all> --limit 100 --timeout-ms 5000
+./ice ontology crate output/<new-name> --graph <key|all> --json
+```
+
+SPARQL operates only on the generated in-memory dataset and caps output at 500
+rows/quads and 1 MiB. It is a restricted local SPARQL 1.1 subset: `SERVICE`,
+remote `FROM`, and all update forms are rejected. RO-Crate creation accepts
+one new direct child of `output/`, refuses overwrite, writes through a
+temporary directory, includes equivalent enriched JSON-LD/N-Quads, the exact
+compatibility JSON-LD whose digest is named by the embedded PROV record, the
+checked-in shape file, and a hash manifest, and never copies referenced raw
+results. The matching MCP operations validate,
+query, and preview package metadata only; they do not write a crate.
 
 RDF 1.2, SHACL 1.2, and SPARQL 1.2 are deliberately not conformance targets:
 their current W3C publications are still pre-Recommendation. The stable

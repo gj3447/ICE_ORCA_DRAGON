@@ -21,6 +21,7 @@ build/
 dist/
 node_modules/
 coverage/
+.ice/agent-runs/
 
 # Local-only test scratch
 .pytest_cache/

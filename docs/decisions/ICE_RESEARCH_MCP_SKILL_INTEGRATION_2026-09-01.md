@@ -11,6 +11,11 @@ The implementation is deliberately small:
 
 - `ice_research_context`, `ice_research_impact`, and `ice_research_check` expose the existing local
   graph-harness queries and integrity check;
+- `ice_ontology_shacl_validate`, `ice_ontology_sparql_query`, and
+  `ice_ontology_ro_crate_preview` expose offline graph interoperability without file writes;
+- `ice_graphrag_*`, `ice_research_workflow_plan`,
+  `ice_research_workflow_evaluate`, and `ice_research_run_audit` expose bounded
+  retrieval regression plus non-executing workflow inspection;
 - `ice_literature_search` calls the public [OpenAlex works API](https://help.openalex.org/api/) with a
   10-second timeout and a 20-work maximum;
 - `ice_research_capabilities` makes the tool and non-authorization boundaries machine-readable;
@@ -18,10 +23,10 @@ The implementation is deliberately small:
 - `skills/ice-research-workbench/` is the versioned source for the installed Codex skill at
   `~/.codex/skills/ice-research-workbench`.
 
-The server uses the current [`@modelcontextprotocol/server` v2
-SDK](https://ts.sdk.modelcontextprotocol.io/v2/) `serveStdio` entry point, which serves the current
-protocol revision and legacy clients on stdio. Standard stdio requires that the protocol owns stdout;
-startup and error diagnostics therefore use stderr only.
+The server uses the [`@modelcontextprotocol/server` v2
+SDK](https://ts.sdk.modelcontextprotocol.io/v2/) `serveStdio` entry point and targets
+[MCP 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25) over stdio. Standard stdio
+requires that the protocol owns stdout; startup and error diagnostics therefore use stderr only.
 
 ## Why this boundary
 
@@ -37,7 +42,7 @@ supports that posture.
 
 ## Explicit non-goals
 
-- No automatic task graph, recursive research loop, swarm, or autonomous acceptance rule is added.
+- No automatic successor graph, recursive research loop, swarm, or autonomous acceptance rule is added.
 - No tool may run a Python kernel, write a result, mutate the ontology, stage/commit, or push.
 - A passing graph check validates graph/provenance structure, not a scientific interpretation.
 - An OpenAlex record is discovery metadata, not independent evidence. A primary source must be read and
@@ -54,11 +59,17 @@ with this repository as its working directory. Use `./ice literature search "<qu
 same OpenAlex discovery surface without an MCP host.
 
 The installed skill routes material graph changes through the harness, source discovery through OpenAlex,
-and numerical work through the existing lean bounded-runner rules. It does not apply to unrelated coding,
-does not create ontology records by default, and does not change the active execution circuit breaker.
+interoperability through the offline RDF/SHACL/SPARQL/PROV-O/RO-Crate layer, durable handoffs through
+explicit CLI-only state transitions, and numerical work through the existing lean bounded-runner rules.
+It does not apply to unrelated coding, does not create ontology records by default, and does not change
+the active execution circuit breaker. MCP 2025-11-25 Tasks stay disabled because that facility is
+experimental and these tools do not represent deferred execution jobs.
 
 ## Validation
 
-- Typecheck and Vitest cover OpenAlex input/output bounds and an in-memory MCP client/server handshake.
+- Typecheck and Vitest cover OpenAlex bounds, graph interoperability, durable state/self-consistency handling,
+  routing evaluation, and an in-memory MCP client/server handshake.
 - `./ice harness check` remains the full repository graph/hash/evidence integrity gate.
+- `./ice ontology shacl --graph all` is the projection-shape gate; `./ice agent eval` is the
+  routing/handoff boundary regression.
 - The skill source and installed copy pass the skill-creator structural validator.

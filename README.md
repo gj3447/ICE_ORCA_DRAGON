@@ -404,11 +404,20 @@ Canonical commands:
 ./ice ontology summary
 ./ice ontology guide [--graph <key>] [--path <id>]
 ./ice ontology review [--graph <key>] [--base <revision>] [--json]
-./ice ontology export --format jsonld [--graph <key>]
+./ice ontology export --format <jsonld|dataset-jsonld|nquads> [--graph <key>]
+./ice ontology shacl [--graph <key>] [--json]
+./ice ontology sparql '<SELECT|ASK|CONSTRUCT|DESCRIBE query>' [--graph <key>] [--limit 1..500]
+./ice ontology crate output/<new-name> [--graph <key>] [--json]
 ./ice harness context <node-id> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness check [--graph <key>]
 ./ice literature search <query> [--limit 1..20] [--json]
+./ice graphrag eval --limit 12 --json
+./ice graphrag diff --base HEAD --limit 12 --json
+./ice agent eval [--json]
+./ice agent run create <question> --id <run-id> [--graph cpt] [--json]
+./ice agent run review <run-id> --stage <route|evidence|design> --decision <approve|stop> --rationale <text> --tip <sha256>
+./ice agent run audit <run-id> [--json]
 ```
 
 `ontology validate` streams every recorded artifact for the full hash gate. The read-only ontology
@@ -418,9 +427,17 @@ reopening large artifact payloads.
 `ontology review` is the read-only authoring diff: it compares decoded working graph JSON with a
 committed Git revision, reports deterministic node/edge/navigation/bridge changes, and warns about
 timestamp-only edits or newly changed evidence records that lack `RECORDED_IN`. `ontology export`
-writes an embedded-context JSON-LD 1.1 projection to stdout. The projection is never imported or
-merged back; see the [interoperability boundary](ontology/standards/README.md). Use `npm run
-graph:check` for the TypeScript/test suite plus the full ontology hash/evidence gate.
+writes the compatibility JSON-LD 1.1 view, the enriched named-dataset JSON-LD view, or canonicalized
+N-Quads to stdout; the latter two preserve each selected research graph as a named graph and add
+source-to-export PROV-O lineage. `ontology shacl` runs the bundled
+SHACL 1.0 Core processor against the generated RDF dataset, and `ontology sparql` accepts only a
+bounded restricted local SPARQL 1.1 subset—remote datasets, `SERVICE`, and updates are rejected.
+`ontology crate` explicitly creates one
+non-overwriting RO-Crate 1.3 metadata/export package under `output/`; referenced raw results are
+not copied. The package includes RDF-equivalent enriched JSON-LD/N-Quads plus the exact compatibility
+JSON-LD payload named by its embedded provenance digest. These projections are never imported or merged back; see the
+[interoperability boundary](ontology/standards/README.md). `npm run graph:check` covers strict
+TypeScript/tests, the full native hash/evidence gate, and SHACL projection validation.
 
 `harness` is the graph-aware engineering surface: `context` exposes bounded evidence/scope/policy/open
 problem context for a selected node, `impact` maps an exact registered repository path to that context,
@@ -429,8 +446,11 @@ experiment; see the [graph-aware harness decision](docs/decisions/ICE_GRAPH_AWAR
 
 `literature search` is a bounded, read-only OpenAlex works-graph lookup for time-stamped source discovery.
 It is not a substitute for reading a primary source and it never authorizes a run. `npm run --silent mcp`
-exposes the same graph-harness and literature-discovery surface to compatible agents through local stdio;
-see the
+exposes the graph harness, GraphRAG regression, SHACL, SPARQL, RO-Crate preview, durable-run audit,
+and literature-discovery surfaces through local stdio. MCP remains read-only; explicit durable-run
+creation and review are CLI-only local writes, and numerical execution remains outside the agent
+state machine. The fixed `./ice agent eval` suite checks current-blocker, downstream, supporting,
+and unanchored routing plus finite human handoffs and non-authorization. See the
 [MCP and skill integration decision](docs/decisions/ICE_RESEARCH_MCP_SKILL_INTEGRATION_2026-09-01.md).
 
 `npm run ice -- <command>` is the package-script equivalent. `./ice` is the repository entry point.
@@ -528,6 +548,11 @@ problem materially changes; `ontology validate` is required when the ontology ch
 ./ice ontology summary
 ./ice ontology review --graph cpt --base HEAD
 ./ice ontology export --format jsonld --graph cpt
+./ice ontology export --format dataset-jsonld --graph cpt > /tmp/cpt-research-dataset.jsonld
+./ice ontology export --format nquads --graph cpt > /tmp/cpt-research-graph.nq
+./ice ontology shacl --graph cpt --json
+./ice ontology sparql 'ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?node a <urn:ice-orca-dragon:ontology:ResearchNode> } }' --graph cpt
+./ice ontology crate output/cpt-graph-crate --graph cpt --json
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph igrueqft --path igrueqft-negative-result-to-open-theory
@@ -540,6 +565,7 @@ problem materially changes; `ontology validate` is required when the ontology ch
 ./ice harness context cpt::open:gate1-original-cycle-signed-global-intersections --depth 2
 ./ice harness impact docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md
 ./ice harness check
+./ice agent eval --json
 ./ice agent plan "Gate 1 original joint cycle and signed global intersection vector" --graph cpt --json
 ```
 
@@ -554,11 +580,21 @@ return a specifically anchored `CURRENT_BLOCKER_CANDIDATE` before calculation de
 review; downstream or enabling-lane work remains conditional/supporting and cannot be counted as core
 progress. The planner grants neither a physics claim nor execution authority.
 
+When a review must survive process boundaries, `agent run create` writes a revision-pinned record only
+after an explicit CLI request. Each `review` appends one typed human decision under an optimistic trace-tip
+check; `audit` verifies SHA-256 event-chain self-consistency and current HEAD/control-plane/
+ontology/retrieved-local-source hashes. The chain catches accidental or partial rewrites but is not a
+signature against a writer who can recompute it.
+The only terminal states are `STOPPED` and `CLOSED`, and `CLOSED` means design review recorded—not
+permission to call `./ice run`. These local records live under ignored `.ice/agent-runs/`; MCP can audit
+them but cannot create or mutate them.
+
 The standard graph-engineering workflow keeps [`ontology/collection.json`](ontology/collection.json)
 and its registered `graph.json` files as the only authored records: inspect impact, edit the native JSON,
 review graph records with `ontology review` (and collection-manifest edits with normal Git diff), run
-`graph:check`, and generate JSON-LD only for downstream consumption. Generated exports are not committed
-as a second graph source. The architecture and non-claims are recorded in the
+`graph:check`, and generate JSON-LD, named-graph N-Quads, SHACL reports, bounded SPARQL results, or an
+RO-Crate only for downstream inspection. Generated exports are not committed as a second graph source.
+The architecture and non-claims are recorded in the
 [standard graph-engineering decision](docs/decisions/ICE_STANDARD_GRAPH_ENGINEERING_2026-09-01.md).
 
 ## Scientific scope

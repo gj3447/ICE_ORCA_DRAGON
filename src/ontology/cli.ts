@@ -2,10 +2,13 @@ import { Args, Command, Options } from "@effect/cli"
 import { Console, Effect } from "effect"
 import { setExitCode } from "../commands.ts"
 import {
-  ontologyGuideCommand,
+  ontologyCrateCommand,
   ontologyExportCommand,
+  ontologyGuideCommand,
   ontologyReviewCommand,
+  ontologyShaclCommand,
   ontologyShowCommand,
+  ontologySparqlCommand,
   ontologySummaryCommand,
   ontologyTraceCommand,
   ontologyValidateCommand
@@ -95,9 +98,14 @@ const reviewCommand = Command.make(
   )
 )
 
-const format = Options.choice("format", ["jsonld"] as const).pipe(
+const format = Options.choice(
+  "format",
+  ["jsonld", "dataset-jsonld", "nquads"] as const
+).pipe(
   Options.withDefault("jsonld"),
-  Options.withDescription("one-way graph projection format")
+  Options.withDescription(
+    "one-way compatibility JSON-LD, named-dataset JSON-LD, or N-Quads format"
+  )
 )
 
 const exportCommand = Command.make(
@@ -107,6 +115,52 @@ const exportCommand = Command.make(
 ).pipe(
   Command.withDescription(
     "write a read-only standards projection to stdout; native JSON stays canonical"
+  )
+)
+
+const shaclCommand = Command.make(
+  "shacl",
+  { json, graph },
+  ({ json, graph }) =>
+    ontologyShaclCommand(json, graph).pipe(
+      Effect.flatMap((report) => setExitCode(report.conforms ? 0 : 1))
+    )
+).pipe(
+  Command.withDescription(
+    "run the bundled SHACL 1.0 Core processor against the generated RDF dataset"
+  )
+)
+
+const sparqlQuery = Args.text({ name: "query" })
+const sparqlLimit = Options.integer("limit").pipe(
+  Options.withDefault(100),
+  Options.withDescription("maximum SELECT rows or RDF quads (1-500)")
+)
+const timeoutMs = Options.integer("timeout-ms").pipe(
+  Options.withDefault(5_000),
+  Options.withDescription("in-memory query timeout in milliseconds (1-30000)")
+)
+
+const sparqlCommand = Command.make(
+  "sparql",
+  { query: sparqlQuery, graph, limit: sparqlLimit, timeoutMs },
+  ({ query, graph, limit, timeoutMs }) =>
+    ontologySparqlCommand(query, graph, limit, timeoutMs)
+).pipe(
+  Command.withDescription(
+    "run bounded read-only SPARQL 1.1 over the generated in-memory RDF dataset"
+  )
+)
+
+const crateOutput = Args.text({ name: "output-directory" })
+const crateCommand = Command.make(
+  "crate",
+  { outputDirectory: crateOutput, graph, json },
+  ({ outputDirectory, graph, json }) =>
+    ontologyCrateCommand(outputDirectory, graph, json)
+).pipe(
+  Command.withDescription(
+    "create one non-overwriting RO-Crate 1.3 metadata/export package under output/"
   )
 )
 
@@ -120,6 +174,9 @@ export const ontologyCommand = Command.make("ontology", {}, () =>
     guideCommand,
     reviewCommand,
     exportCommand,
+    shaclCommand,
+    sparqlCommand,
+    crateCommand,
     showCommand,
     traceCommand
   ])
