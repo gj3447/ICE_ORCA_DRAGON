@@ -38,11 +38,17 @@ Start with live collection scope and counts, rather than copying a dated total i
 ./ice ontology guide --path current-status-in-five-stops
 ./ice ontology guide --graph cpt --path toe-current-critical-path
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
+./ice ontology guide --graph cpt --path raw-c-next-bounded-work
 ```
 
 The four registered graphs are independent evidence boundaries. Collection paths are a cross-graph
 reading aid only: they do not merge evidence, infer a shared theory, or turn one programme's result into
 support for another.
+
+The raw-C handoff path is the current bounded supporting-work index. It records the exact P1
+root-location composition first, keeps a full-slab location tube optional, and exposes the P4
+complex-tail theorem through endpoint, Weyl field, measure, threshold and RAQ as typed blockers. It
+does not connect either lane to G1 by implication or authorize a calculation.
 
 For the CPT candidate route, begin with the active TOE routing policy and its current blocker:
 

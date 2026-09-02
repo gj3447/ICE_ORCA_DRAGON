@@ -107,6 +107,8 @@ uv sync --locked
   `./ice ontology show <node-id>`, `./ice ontology trace <node-id>`
 - 현재 core/support 탐색: `./ice ontology guide --graph cpt --path toe-current-critical-path`,
   `./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio`
+- raw-C 다음 bounded 작업: `./ice ontology guide --graph cpt --path raw-c-next-bounded-work`
+  (P1/P4 supporting handoff이며 실행 승인이나 G1 진전 표시는 아님)
 - graph+collection 변경 검토: `./ice ontology review --graph all --base HEAD`
 - core 경로 사전검토: `./ice agent plan "<question>" --graph cpt --json`
 - evidence 문맥·영향·무결성: `./ice harness context <node-id>`, `./ice harness impact <path>`,

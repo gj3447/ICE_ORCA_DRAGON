@@ -585,6 +585,97 @@ layer(AppLayer)("canonical ontology", (it) => {
     })
   )
 
+  it.effect("keeps the raw-C handoff ordered, typed, and separate from G1", () =>
+    Effect.gen(function* () {
+      const graph = yield* loadResearchGraph
+      const blockerChain = [
+        [
+          "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+          "open:raw-c-p0-complex-tail-theorem-prerequisite"
+        ],
+        [
+          "open:raw-c-nonzero-p-uniform-weyl-field",
+          "open:raw-c-fixed-box-nonreal-endpoint-certificate"
+        ],
+        [
+          "open:raw-c-fiber-spectral-measure-transform",
+          "open:raw-c-nonzero-p-uniform-weyl-field"
+        ],
+        [
+          "open:raw-c-p-zero-threshold-global-spectral-assembly",
+          "open:raw-c-fiber-spectral-measure-transform"
+        ],
+        [
+          "open:raw-c-raq-rigging-map-physical-product",
+          "open:raw-c-p-zero-threshold-global-spectral-assembly"
+        ],
+        [
+          "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion",
+          "open:raw-c-raq-rigging-map-physical-product"
+        ]
+      ] as const
+
+      for (const [downstream, prerequisite] of blockerChain) {
+        expect(
+          graph.nodes.find((node) => node.id === downstream)?.type
+        ).toBe("open_problem")
+        expect(
+          graph.nodes.find((node) => node.id === prerequisite)?.type
+        ).toBe("open_problem")
+        expect(
+          graph.edges.some(
+            (edge) =>
+              edge.from === downstream &&
+              edge.relation === "BLOCKED_BY" &&
+              edge.to === prerequisite
+          )
+        ).toBe(true)
+      }
+
+      const handoff = graph.reading_paths.find(
+        (path) => path.id === "reading-path:raw-c-next-bounded-work"
+      )
+      expect(handoff?.nodes.slice(0, 2)).toEqual([
+        "policy:toe-directed-critical-path-routing",
+        "open:gate1-original-cycle-signed-global-intersections"
+      ])
+      expect(handoff?.nodes).toContain(
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport"
+      )
+      expect(handoff?.nodes.slice(-7)).toEqual([
+        "open:raw-c-p0-complex-tail-theorem-prerequisite",
+        "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+        "open:raw-c-nonzero-p-uniform-weyl-field",
+        "open:raw-c-fiber-spectral-measure-transform",
+        "open:raw-c-p-zero-threshold-global-spectral-assembly",
+        "open:raw-c-raq-rigging-map-physical-product",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+      ])
+
+      const supportingNodes = new Set<string>([
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+        ...blockerChain.flat()
+      ])
+      const g1 = "open:gate1-original-cycle-signed-global-intersections"
+      expect(
+        graph.edges.filter(
+          (edge) =>
+            (supportingNodes.has(edge.from) && edge.to === g1) ||
+            (edge.from === g1 && supportingNodes.has(edge.to))
+        )
+      ).toEqual([])
+      expect(
+        graph.edges.some(
+          (edge) =>
+            edge.from ===
+              "artifact:raw-c-nonreal-endpoint-interval-certificate-blocker" &&
+            edge.relation === "DOCUMENTS" &&
+            edge.to === "open:raw-c-p0-complex-tail-theorem-prerequisite"
+        )
+      ).toBe(true)
+    })
+  )
+
   it.effect("audits every graph-registered evidence snapshot", () =>
     Effect.gen(function* () {
       const graph = yield* loadResearchGraph

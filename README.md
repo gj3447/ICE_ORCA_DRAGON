@@ -60,12 +60,15 @@ For a CPT core proposal, first run:
 ./ice agent plan "<one bounded CPT question>" --graph cpt --json
 ./ice ontology guide --graph cpt --path toe-current-critical-path
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
+./ice ontology guide --graph cpt --path raw-c-next-bounded-work
 ```
 
 The default TOE-candidate route begins at the current G1 original-cycle blocker and proceeds through
 G2--G5 only when compatible typed inputs exist. The P1--P7 V0 lanes are a supporting portfolio, not
 independent TOE success counters; they need a named blocker and changed evidence edge before they can be
-counted as core progress. Review graph, policy, navigation, or multi-graph edits collection-wide with
+counted as core progress. The raw-C handoff path separates the P1 exact root bridge from the P4
+complex-tail-to-RAQ blocker chain and grants neither one execution authority. Review graph, policy,
+navigation, or multi-graph edits collection-wide with
 `./ice ontology review --graph all --base HEAD`. The cohesion rule is to extend canonical nodes and
 explicit edges, then add reading paths/quick answers for navigation—never duplicate claims across graphs
 or infer links from topical proximity. This is research organization, not a new-physics result.

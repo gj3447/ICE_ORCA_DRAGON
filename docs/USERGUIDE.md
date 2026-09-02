@@ -63,10 +63,13 @@ Use the live summary rather than a copied node, edge, or hash total:
 ./ice ontology show cpt::open:gate1-original-cycle-signed-global-intersections
 ./ice ontology guide --graph cpt --path toe-current-critical-path
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
+./ice ontology guide --graph cpt --path raw-c-next-bounded-work
 ```
 
 For core CPT work, the current G1 blocker is the default path; G2--G5 require compatible upstream typed
 outputs. The P1--P7 V0 map is a supporting portfolio and does not automatically unblock the gate path.
+A fresh raw-C handoff should read `raw-c-next-bounded-work`: P1 starts with an exact zero-evaluation
+bridge, while P4 is blocked at the complex-tail theorem before any endpoint runner.
 A proposal is core-labelled only after human review identifies its canonical blocker, missing typed
 object, bounded falsifiable output, and changed evidence edge. The planner is a review aid and never
 authorizes execution or a physics claim.
