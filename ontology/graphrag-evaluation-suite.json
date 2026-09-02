@@ -1,0 +1,54 @@
+{
+  "schema": "ice-graphrag-evaluation-suite/v1",
+  "id": "canonical-four-graph-navigation",
+  "title": "Canonical four-graph retrieval regression suite",
+  "description": "Stable locator checks for the repository-local GraphRAG layer. Each case checks retrieval of an existing canonical graph record, not the truth of the record's scientific content.",
+  "version": "2026-09-02",
+  "cases": [
+    {
+      "id": "cpt-current-g1-blocker",
+      "query": "original joint relative cycle signed global intersection vector",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::open:gate1-original-cycle-signed-global-intersections"
+      ],
+      "rationale": "The active CPT navigation policy names this canonical Gate-1 open problem as the present blocker; retrieval must keep the locator discoverable."
+    },
+    {
+      "id": "hyper-basis-invariant-diagnostic",
+      "query": "basis invariant projected diagnostic",
+      "graph": "hypercomplex",
+      "depth": 1,
+      "expected_unit_ids": [
+        "hypercomplex::open:hyper-basis-invariant-projected-diagnostic"
+      ],
+      "rationale": "The hypercomplex graph's basis-invariant diagnostic remains an explicit open problem and should be retrieved by its documented language."
+    },
+    {
+      "id": "legacy-preregistration-provenance",
+      "query": "independent Git preregistration timestamp provenance",
+      "graph": "legacy",
+      "depth": 1,
+      "expected_unit_ids": [
+        "legacy::claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS"
+      ],
+      "rationale": "The legacy graph distinguishes independently timestamped records from retrospective integrity claims; the canonical claim locator must remain findable."
+    },
+    {
+      "id": "igrueqft-group-averaging-locality",
+      "query": "group averaging locality entanglement",
+      "graph": "igrueqft",
+      "depth": 1,
+      "expected_unit_ids": [
+        "igrueqft::claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL"
+      ],
+      "rationale": "The locality audit keeps this finite-model claim separate from broader theory; retrieval must retain the scoped canonical claim locator."
+    }
+  ],
+  "guidance": [
+    "This suite is a retrieval regression baseline, not a scientific evaluation, citation-entailment audit, or execution authorization.",
+    "Add a case only when its expected locator and wording are stable, source-backed, and useful for future graph-navigation review.",
+    "Run the revision diff before accepting a material ontology or retrieval change, then inspect rank movement and raw graph context manually."
+  ]
+}

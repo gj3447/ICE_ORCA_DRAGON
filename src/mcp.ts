@@ -8,7 +8,12 @@ import {
   graphHarnessImpactData
 } from "./harness/commands.ts"
 import { researchAgentPlanData } from "./agent-graph/commands.ts"
-import { graphRagSearchData, graphRagSummaryData } from "./graphrag/commands.ts"
+import {
+  graphRagDiffData,
+  graphRagEvaluateData,
+  graphRagSearchData,
+  graphRagSummaryData
+} from "./graphrag/commands.ts"
 import {
   getOpenAlexWorkNeighborhood,
   searchOpenAlexWorks
@@ -70,6 +75,14 @@ const capabilities = {
     {
       name: "ice_graphrag_search",
       purpose: "Hybrid-search local ontology TextUnits with bounded graph expansion."
+    },
+    {
+      name: "ice_graphrag_evaluate",
+      purpose: "Run the fixed canonical retrieval-regression suite."
+    },
+    {
+      name: "ice_graphrag_diff",
+      purpose: "Compare fixed-suite retrieval movement with a committed graph revision."
     },
     {
       name: "ice_research_workflow_plan",
@@ -260,6 +273,53 @@ export const createIceResearchMcpServer = (): McpServer => {
             researchAgentPlanData(question, graph, limit, depth).pipe(
               Effect.provide(AppLayer)
             )
+          )
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_graphrag_evaluate",
+    {
+      title: "GraphRAG retrieval regression evaluation",
+      description:
+        "Run the versioned repository-local retrieval suite. It measures canonical locator retrieval only; it does not evaluate scientific truth, citation entailment, or authorize a graph change.",
+      inputSchema: {
+        limit: z.number().int().min(1).max(50).default(12)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ limit }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(graphRagEvaluateData(limit).pipe(Effect.provide(AppLayer)))
+        )
+      } catch (error) {
+        return asToolError(error)
+      }
+    }
+  )
+
+  server.registerTool(
+    "ice_graphrag_diff",
+    {
+      title: "GraphRAG retrieval revision diff",
+      description:
+        "Compare the fixed retrieval suite against one safe committed Git revision and the working ontology. Read-only; rank movement requires human review and never authorizes a graph or research change.",
+      inputSchema: {
+        base: z.string().min(1).max(256).default("HEAD"),
+        limit: z.number().int().min(1).max(50).default(12)
+      },
+      annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false }
+    },
+    async ({ base, limit }) => {
+      try {
+        return asToolResult(
+          await Effect.runPromise(
+            graphRagDiffData(base, limit).pipe(Effect.provide(AppLayer))
           )
         )
       } catch (error) {

@@ -6,7 +6,7 @@ import {
   buildGraphRagIndex,
   searchGraphRag
 } from "../src/graphrag/core.ts"
-import { evaluateGraphRag } from "../src/graphrag/eval.ts"
+import { diffGraphRagEvaluations, evaluateGraphRag } from "../src/graphrag/eval.ts"
 
 const fixture = (): CollectionGraph => {
   const graph: ResearchGraph = {
@@ -125,5 +125,26 @@ it("has deterministic communities and a declared retrieval evaluation boundary",
 
   expect(first.communities).toEqual(second.communities)
   expect(evaluation.recall_at_limit).toBe(1)
+  expect(evaluation.cases[0]?.first_expected_rank).toBe(3)
+  expect(evaluation.mean_reciprocal_rank).toBeCloseTo(1 / 3, 12)
   expect(evaluation.guidance.join(" ")).toContain("does not evaluate scientific truth")
+})
+
+it("reports rank movement without treating it as a research verdict", () => {
+  const index = buildGraphRagIndex([fixture()])
+  const cases = [
+    {
+      id: "orbit-source-path",
+      query: "orbital bound",
+      expected_unit_ids: ["graphrag-test::source:ORBIT"],
+      depth: 2
+    }
+  ]
+  const base = evaluateGraphRag(index, cases, 1)
+  const workingTree = evaluateGraphRag(index, cases, 6)
+  const diff = diffGraphRagEvaluations(base, workingTree)
+
+  expect(diff.schema).toBe("ice-evidence-graph-rag-evaluation-diff/v1")
+  expect(diff.cases).toHaveLength(1)
+  expect(diff.guidance.join(" ")).toContain("does not validate a scientific interpretation")
 })

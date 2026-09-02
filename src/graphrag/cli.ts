@@ -1,6 +1,11 @@
 import { Args, Command, Options } from "@effect/cli"
 import { Console } from "effect"
-import { graphRagSearchCommand, graphRagSummaryCommand } from "./commands.ts"
+import {
+  graphRagDiffCommand,
+  graphRagEvaluateCommand,
+  graphRagSearchCommand,
+  graphRagSummaryCommand
+} from "./commands.ts"
 
 const json = Options.boolean("json").pipe(
   Options.withDescription("emit machine-readable JSON")
@@ -18,6 +23,10 @@ const depth = Options.integer("depth").pipe(
   Options.withDescription("bounded explicit-relation expansion depth (0-3)")
 )
 const query = Args.text({ name: "query" })
+const base = Options.text("base").pipe(
+  Options.withDefault("HEAD"),
+  Options.withDescription("committed git revision to compare with the working ontology")
+)
 
 const summary = Command.make("summary", { json }, ({ json }) =>
   graphRagSummaryCommand(json)
@@ -34,11 +43,29 @@ const search = Command.make(
   )
 )
 
+const evaluate = Command.make("eval", { limit, json }, ({ limit, json }) =>
+  graphRagEvaluateCommand(limit, json)
+).pipe(
+  Command.withDescription(
+    "run the versioned canonical retrieval-regression suite; never evaluates scientific truth"
+  )
+)
+
+const diff = Command.make(
+  "diff",
+  { base, limit, json },
+  ({ base, limit, json }) => graphRagDiffCommand(base, limit, json)
+).pipe(
+  Command.withDescription(
+    "compare fixed-suite retrieval ranks between a committed revision and the working ontology"
+  )
+)
+
 export const graphRagCommand = Command.make("graphrag", {}, () =>
   Console.log("Use `ice graphrag --help` to inspect evidence-first GraphRAG commands.")
 ).pipe(
   Command.withDescription(
     "deterministic local GraphRAG retrieval over canonical ontology records; never executes research"
   ),
-  Command.withSubcommands([summary, search])
+  Command.withSubcommands([summary, search, evaluate, diff])
 )

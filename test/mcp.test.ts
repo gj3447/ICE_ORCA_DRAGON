@@ -20,6 +20,8 @@ it("exposes a bounded read-only MCP capability surface", async () => {
         "ice_literature_neighbors",
         "ice_graphrag_summary",
         "ice_graphrag_search",
+        "ice_graphrag_evaluate",
+        "ice_graphrag_diff",
         "ice_research_workflow_plan",
         "ice_research_capabilities"
       ])
@@ -45,6 +47,24 @@ it("exposes a bounded read-only MCP capability surface", async () => {
     expect(graphRagSummary.isError).not.toBe(true)
     expect(JSON.stringify(graphRagSummary.content)).toContain(
       "ice-evidence-graph-rag-summary/v1"
+    )
+
+    const graphRagEvaluation = await client.callTool({
+      name: "ice_graphrag_evaluate",
+      arguments: { limit: 12 }
+    })
+    expect(graphRagEvaluation.isError).not.toBe(true)
+    expect(JSON.stringify(graphRagEvaluation.content)).toContain(
+      "canonical-four-graph-navigation"
+    )
+
+    const graphRagDiff = await client.callTool({
+      name: "ice_graphrag_diff",
+      arguments: { base: "HEAD", limit: 12 }
+    })
+    expect(graphRagDiff.isError).not.toBe(true)
+    expect(JSON.stringify(graphRagDiff.content)).toContain(
+      "ice-graphrag-revision-diff/v1"
     )
 
     const toePlan = await client.callTool({

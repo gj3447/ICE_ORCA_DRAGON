@@ -86,9 +86,14 @@ substituted for the repository's scientific `HAS_EVIDENCE` relation.
 ./ice harness impact <registered-repository-path>
 # edit a registered graph JSON and, when navigation changes, collection.json
 ./ice ontology review --graph <key> --base HEAD
+./ice graphrag eval --limit 12 --json
+./ice graphrag diff --base HEAD --limit 12 --json
 npm run graph:check
 ./ice ontology export --format jsonld --graph <key> > /tmp/research-graph.jsonld
 ```
+
+The versioned retrieval suite and revision-diff interpretation are defined in
+[`ICE_GRAPH_RAG_RETRIEVAL_REGRESSION_2026-09-02.md`](ICE_GRAPH_RAG_RETRIEVAL_REGRESSION_2026-09-02.md).
 
 The export is stdout-only by design. A downstream consumer may store it, but a
 generated export is not committed here as another canonical graph. The review
