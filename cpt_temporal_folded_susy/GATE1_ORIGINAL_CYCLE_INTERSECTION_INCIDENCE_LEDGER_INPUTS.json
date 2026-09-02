@@ -1,0 +1,724 @@
+{
+  "schema_version": "ice.gate1-original-cycle-intersection-incidence-ledger.input.v1",
+  "calculation_id": "Gate1OriginalCycleIntersectionIncidenceLedger",
+  "numbered_phase": null,
+  "question": "For canonical anchor open:gate1-original-cycle-signed-global-intersections, how must the fourteen predeclared P38-P41 recorded incidence candidates be typed as INTEGER, UNRESOLVED, or OUT_OF_SCOPE when no original joint cycle is inferred and local orientation signs are not promoted?",
+  "one_output": "One machine-readable finite audit ledger over exactly fourteen predeclared recorded candidates, with each candidate assigned exactly one of INTEGER, UNRESOLVED, or OUT_OF_SCOPE.",
+  "non_claim": "This audit does not construct or infer an original physical joint cycle, complete a saddle/upward-cycle/sheet/end census, compute a global Picard-Lefschetz vector or n_sigma, close Gate 1, or establish a physics, empirical, quantum-gravity, or TOE claim.",
+  "principal_failure_class": "inference",
+  "graph_contract": {
+    "graph": "cpt",
+    "anchor_node_id": "open:gate1-original-cycle-signed-global-intersections",
+    "intended_consumer_node_ids": [
+      "open:gate1-original-cycle-signed-global-intersections",
+      "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+    ],
+    "status_change_claimed": false,
+    "ontology_write_requested": false,
+    "reason": "The ledger makes the already-recorded incompleteness machine-readable; it does not add a new intersection result or change the canonical open state."
+  },
+  "intuition_signal": {
+    "path": "research/intuition/scientific-intuition-signals.v1.json",
+    "sha256": "5f347af1d795743f03c4c096a14c34bcb18ee436ee32b7c968ad97c57c373781",
+    "signal_id": "intuition:gate1-explicit-incidence-unknowns",
+    "required_status": "CANDIDATE",
+    "required_principal_failure_class": "inference",
+    "required_does_not_authorize_execution": true
+  },
+  "primary_sources": [
+    {
+      "canonical_node_id": "source:witten-2010-picard-lefschetz",
+      "citation": "Witten, E. (2010). Analytic Continuation Of Chern-Simons Theory.",
+      "uri": "https://arxiv.org/abs/1001.2933",
+      "version": "arXiv:1001.2933v4",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "sections 2.2, 3.1.1, and 3.1.5; equations (2.15)-(2.16) and (3.22)-(3.23)",
+      "role": "Primary mathematical source for treating an integration cycle and its upward-cycle intersection coefficients as separately specified typed objects.",
+      "boundary": "This mathematical source does not supply the ICE action, original cycle, regulator, or any ICE intersection integer."
+    },
+    {
+      "canonical_node_id": "source:feldbrugge-lehners-turok-2017",
+      "citation": "Feldbrugge, J., Lehners, J.-L., and Turok, N. (2017). Lorentzian Quantum Cosmology.",
+      "uri": "https://arxiv.org/abs/1703.02076",
+      "version": "arXiv:1703.02076v1; Phys. Rev. D 95, 103508",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "section II and the minisuperspace contour analysis",
+      "role": "Domain-adjacent example in which a separately specified Lorentzian contour and upward flows determine contributing saddles.",
+      "boundary": "This model-specific example does not select the ICE original cycle, action, regulator, or physical state."
+    }
+  ],
+  "equation_and_conventions": {
+    "global_coefficient": "n_sigma = <Gamma_original^joint, K_sigma> = sum_{x in Gamma_original^joint intersect K_sigma} sgn det_R[V_Gamma(x), V_K(x)]",
+    "integrand_convention": "exp(-S)",
+    "integer_semantics": "A signed integer, including zero, is emitted only for a separately specified original joint relative cycle paired with a globally specified oriented upward cycle after the declared census and stability prerequisites pass.",
+    "local_sign_semantics": "A recorded local chart orientation sign is retained as local_orientation_sign and is never copied into global_intersection_integer.",
+    "null_semantics": "null means not computed or not defined in the recorded scope; it is not integer zero.",
+    "out_of_scope_semantics": "OUT_OF_SCOPE is reserved for a predeclared record that is not a physical/global incidence candidate in the audit domain; it is not integer zero.",
+    "evidence_locator_semantics": "Each evidence locator is a human-readable section handle backed by the exact whole-file SHA-256 and required-marker checks; it is not a parsed JSON Pointer."
+  },
+  "assumptions": [
+    "The committed P38-P41 reports are the durable summaries of the historical stdout-only calculations and are audited without rerunning those historical runners.",
+    "The enumeration is exhaustive only over the fourteen explicitly listed records, not over physical saddles, upward components, sheets, singularities, Stokes chambers, orientations, or good ends.",
+    "A local full-real-coordinate transversality sign can be valid in its recorded chart while the corresponding global intersection integer remains unresolved.",
+    "No omitted record, missing locator, null value, or excluded sector is assigned numerical zero."
+  ],
+  "eligibility_prerequisites": [
+    {
+      "id": "original_cycle_source_defined",
+      "description": "A separately source-defined admissible original joint relative cycle is supplied."
+    },
+    {
+      "id": "global_upward_cycle_specified",
+      "description": "The relevant full upward cycle/component is globally specified, not only a local chart patch."
+    },
+    {
+      "id": "full_joint_orientation_line_fixed",
+      "description": "The full joint cycle and upward-cycle orientation line is fixed in a common convention."
+    },
+    {
+      "id": "saddle_sheet_component_census_complete",
+      "description": "The relevant saddle, sheet, root, and upward-component census is complete in the declared domain."
+    },
+    {
+      "id": "good_end_stokes_singularity_census_complete",
+      "description": "Relative good ends, singular divisors, reintersections, and Stokes data are completely classified."
+    },
+    {
+      "id": "regulator_cutoff_stability_established",
+      "description": "The pairing is stable under the declared regulator/cutoff and orientation transport."
+    }
+  ],
+  "source_artifacts": [
+    {
+      "id": "cpt_graph",
+      "path": "ontology/cpt-temporal-folded-susy/graph.json",
+      "sha256": "d53d5479dd91b61cdaa9588a5133de0ef9c37f165188966bf88f360bece079e5",
+      "role": "CANONICAL_GRAPH_BINDINGS",
+      "required_markers": [
+        "open:gate1-original-cycle-signed-global-intersections",
+        "a complete stable zero vector remains a valid future negative resolution"
+      ]
+    },
+    {
+      "id": "p38_report",
+      "path": "cpt_temporal_folded_susy/PHASE38_JOINT_CYCLE_IDENTIFIABILITY.md",
+      "sha256": "c275687bd73e7e18442e73619f75585f2cfdbab4cf80d9c7c2a65e3a2ecc52cf",
+      "role": "GLOBAL_PAIRING_TYPE_AND_COMPLETENESS_GUARD",
+      "required_markers": [
+        "The gate is **not closed**.",
+        "\"full_joint_local_sign\": null",
+        "\"complete_global_signed_vector\": null",
+        "\"global_n_sigma\": null",
+        "This is a representation in the declared local cycle basis, not a computed",
+        "This is exact algebra inside the declared finite surrogate. It is **not** a"
+      ]
+    },
+    {
+      "id": "p38_runner",
+      "path": "cpt_temporal_folded_susy/phase38_joint_cycle_identifiability.py",
+      "sha256": "4df1c5e59404019d8fb6e278ca70b1cfee87a40d77d7288ce2720360376915a8",
+      "role": "HISTORICAL_EXECUTABLE_PROVENANCE_ONLY",
+      "required_markers": [
+        "complete_global_signed_vector",
+        "global_n_sigma"
+      ]
+    },
+    {
+      "id": "p39_report",
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70",
+      "role": "M2_LOCAL_WITNESS_AND_GLOBAL_NULL_BOUNDARY",
+      "required_markers": [
+        "configuration-only coordinate signs for two local intersection",
+        "are not a global",
+        "The bounded-chain signed sum is therefore also null.",
+        "global vector null"
+      ]
+    },
+    {
+      "id": "p39_input",
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4",
+      "role": "M2_FROZEN_INPUT_PROVENANCE_ONLY",
+      "required_markers": [
+        "complete_global_signed_intersection_vector",
+        "global_n_sigma"
+      ]
+    },
+    {
+      "id": "p39_runner",
+      "path": "cpt_temporal_folded_susy/phase39_finite_joint_intersection.py",
+      "sha256": "0af21171e44a688a9dd0b19b2491954467c5ceb881a97852d0eb6135ea8fce54",
+      "role": "M2_HISTORICAL_EXECUTABLE_PROVENANCE_ONLY",
+      "required_markers": [
+        "recorded_local_pairing",
+        "configuration_only_orientation"
+      ]
+    },
+    {
+      "id": "p40_report",
+      "path": "cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION.md",
+      "sha256": "ede77a67fa98adf224c76c5f2e22dac9c00f3650fa10ff7420aa6ee760ef8a42",
+      "role": "M3_LOCAL_WITNESSES_AND_GLOBAL_NULL_BOUNDARY",
+      "required_markers": [
+        "At every sampled value",
+        "This is a local finite-cutoff result.",
+        "bounded_chain_signed_sum = null",
+        "complete_global_signed_intersection_vector = null",
+        "global_n_sigma = null"
+      ]
+    },
+    {
+      "id": "p40_input",
+      "path": "cpt_temporal_folded_susy/PHASE40_M3_REFLECTION_ODD_INTERSECTION_INPUTS.json",
+      "sha256": "60dfc9c31e45408c92b5fbcd1e1487bcd53b02a62ccf4ee71272f7c3dcc382ae",
+      "role": "M3_FROZEN_INPUT_PROVENANCE_ONLY",
+      "required_markers": [
+        "complete_global_signed_intersection_vector",
+        "global_n_sigma"
+      ]
+    },
+    {
+      "id": "p40_runner",
+      "path": "cpt_temporal_folded_susy/phase40_m3_reflection_odd_intersection.py",
+      "sha256": "d7e71ed8a7561a586e7035366a92a3033dcb029bb9aa88ea595b38d4d7dacbc3",
+      "role": "M3_HISTORICAL_EXECUTABLE_PROVENANCE_ONLY",
+      "required_markers": [
+        "primary_local_candidates",
+        "bounded_chain_signed_sum"
+      ]
+    },
+    {
+      "id": "p41_report",
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION.md",
+      "sha256": "9d67451e26838da1ee7e644bbbc4b619600391a96e0762d56aa8f164763f6e52",
+      "role": "M4_LOCAL_WITNESSES_TANGENT_FAILURE_AND_GLOBAL_NULL_BOUNDARY",
+      "required_markers": [
+        "TANGENT_CONTROL_FAILED",
+        "All five primary full-",
+        "bounded_chain_signed_sum = null",
+        "complete_global_signed_intersection_vector = null",
+        "global_n_sigma = null",
+        "canonical cross-cutoff equality or convergence result."
+      ]
+    },
+    {
+      "id": "p41_input",
+      "path": "cpt_temporal_folded_susy/PHASE41_M4_TWO_SOURCE_INTERSECTION_INPUTS.json",
+      "sha256": "dc17f4d25e758946fe00fec0bb209462294d4d982b1f86b59c099b8de064c92e",
+      "role": "M4_FROZEN_INPUT_PROVENANCE_ONLY",
+      "required_markers": [
+        "complete_global_signed_intersection_vector",
+        "global_n_sigma"
+      ]
+    },
+    {
+      "id": "p41_runner",
+      "path": "cpt_temporal_folded_susy/phase41_m4_two_source_intersection.py",
+      "sha256": "377506ed838b88e2c88c33bbb7c4bb7829fbdd8ae0329635b0587a2b8425d530",
+      "role": "M4_HISTORICAL_EXECUTABLE_PROVENANCE_ONLY",
+      "required_markers": [
+        "TANGENT_CONTROL_FAILED",
+        "primary_local_candidates",
+        "bounded_chain_signed_sum"
+      ]
+    }
+  ],
+  "graph_bindings": [
+    {
+      "node_id": "open:gate1-original-cycle-signed-global-intersections",
+      "type": "open_problem",
+      "state": "OPEN"
+    },
+    {
+      "node_id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+      "type": "open_problem",
+      "state": "OPEN"
+    },
+    {
+      "node_id": "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION",
+      "type": "claim",
+      "state": "SUPPORTED_AS_RECORDED_DATA_SUFFICIENCY_BOUNDARY"
+    },
+    {
+      "node_id": "claim:P38_BOUNDED_LEDGER_SUFFICES_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "type": "claim",
+      "state": "CONTRADICTED_BY_INCOMPLETE_JOINT_ORIENTATION_AND_END_CENSUS"
+    },
+    {
+      "node_id": "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+      "type": "claim",
+      "state": "SUPPORTED_FOR_TWO_CAP_PIECES_ON_ONE_FROZEN_LOCAL_K_PATCH"
+    },
+    {
+      "node_id": "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR",
+      "type": "claim",
+      "state": "CONTRADICTED_BY_INCOMPLETE_CHAIN_K_CENSUS_AND_STOKES_DATA"
+    },
+    {
+      "node_id": "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+      "type": "claim",
+      "state": "SUPPORTED_ON_FIVE_SAMPLED_DELTAS_WITH_THREE_FULL_FD_AND_FLOW_AUDITS"
+    },
+    {
+      "node_id": "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "type": "claim",
+      "state": "SUPPORTED_AS_RECORDED_COMPLETION_AND_INFERENCE_BOUNDARY"
+    },
+    {
+      "node_id": "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+      "type": "claim",
+      "state": "SUPPORTED_FOR_FIVE_PRIMARY_POINTS_WITHOUT_TANGENT_ROBUSTNESS"
+    },
+    {
+      "node_id": "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+      "type": "claim",
+      "state": "SUPPORTED_AS_TYPED_AUDIT_AND_INFERENCE_BOUNDARY"
+    },
+    {
+      "node_id": "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE",
+      "type": "claim",
+      "state": "SUPPORTED_AS_CROSS_CUTOFF_AND_GLOBAL_PROMOTION_BOUNDARY"
+    }
+  ],
+  "enumeration_boundary": {
+    "declared_record_count": 14,
+    "included": [
+      "two P38 diagnostic non-global constructions",
+      "two P39 m=2 local cap candidates",
+      "five P40 m=3 local cap candidates",
+      "five P41 m=4 local cap candidates"
+    ],
+    "excluded_from_global_census": [
+      "unrecorded saddles and roots",
+      "unrecorded upward components and sheets",
+      "momenta, ghosts, BFV fields, fermions, and inhomogeneous modes not present in the recorded configuration-only candidates",
+      "unclassified cap and field-box reintersections",
+      "singular divisors, good ends, and Stokes jumps outside the recorded local charts",
+      "regulator removal, cutoff stability, and continuum completion"
+    ],
+    "global_census_complete": false,
+    "exhaustiveness_claim": "EXHAUSTIVE_ONLY_OVER_THE_FOURTEEN_PREDECLARED_RECORDED_ITEMS_NOT_A_GLOBAL_CENSUS"
+  },
+  "entries": [
+    {
+      "id": "p38_finite_surrogate_projection_pair",
+      "source_artifact_id": "p38_report",
+      "evidence_locator": "section 2, Exact finite surrogate",
+      "evidence_node_ids": [
+        "claim:P38_RECORDED_DATA_DO_NOT_LICENSE_INVERSE_JOINT_CYCLE_RECONSTRUCTION"
+      ],
+      "candidate_kind": "FINITE_SURROGATE_LABEL_PAIR_NOT_A_PHYSICAL_CYCLE_PAIR",
+      "declared_model_scope": "P38 finite projection-warning surrogate j=(l,c_U,c_L)",
+      "scope_relation": "OUTSIDE_GLOBAL_INCIDENCE_DOMAIN",
+      "out_of_scope_reason": "The declared finite surrogate is not the physical projection map and its labels are not admissible gravitational original/upward cycles.",
+      "local_orientation_sign": null,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "surrogate label pair only",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p38_conditional_gamma0_local_basis_map",
+      "source_artifact_id": "p38_report",
+      "evidence_locator": "Outcome and section 3, conditional c_in=(1,0)^T local cycle map",
+      "evidence_node_ids": [
+        "claim:P38_CONDITIONAL_GAMMA0_INPUT_MAPS_TO_BOTH_LOCAL_ARMS"
+      ],
+      "candidate_kind": "CONDITIONAL_LOCAL_BASIS_COEFFICIENT_NOT_A_GLOBAL_PAIRING",
+      "declared_model_scope": "P38 declared local Airy-cycle basis representation",
+      "scope_relation": "OUTSIDE_GLOBAL_INCIDENCE_DOMAIN",
+      "out_of_scope_reason": "The conditional (-1,-1) local basis representation assumes Gamma_original=Gamma_0 and is explicitly not a computed physical thimble vector or global coefficient.",
+      "local_orientation_sign": null,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "conditional Gamma_0 basis map",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p39_m2_cap_r_0p3",
+      "source_artifact_id": "p39_report",
+      "evidence_locator": "Outcome; section 6, Direct six-real-dimensional intersections; cap radius r=0.3",
+      "evidence_node_ids": [
+        "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+        "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=2 configuration-only finite cap and one frozen local upward-chart patch",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P39 positive-T discrete saddle, local candidate at r=0.3",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p39_m2_cap_r_0p2",
+      "source_artifact_id": "p39_report",
+      "evidence_locator": "Outcome; section 6, Direct six-real-dimensional intersections; cap radius r=0.2",
+      "evidence_node_ids": [
+        "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
+        "claim:P39_TWO_FROZEN_CAP_LOCAL_CANDIDATES_SUFFICE_TO_FIX_GLOBAL_INTERSECTION_VECTOR"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=2 configuration-only finite cap and one frozen local upward-chart patch",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P39 positive-T discrete saddle, local candidate at r=0.2",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p40_m3_delta_n0p001",
+      "source_artifact_id": "p40_report",
+      "evidence_locator": "Outcome and section 4 local-candidate table, delta=-0.001",
+      "evidence_node_ids": [
+        "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+        "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=3 configuration-only finite R10 cap chart with rank-one phi source",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P40 delta=-0.001 local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p40_m3_delta_n0p0005",
+      "source_artifact_id": "p40_report",
+      "evidence_locator": "Outcome and section 4 local-candidate table, delta=-0.0005",
+      "evidence_node_ids": [
+        "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+        "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=3 configuration-only finite R10 cap chart with rank-one phi source",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P40 delta=-0.0005 local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p40_m3_delta_zero",
+      "source_artifact_id": "p40_report",
+      "evidence_locator": "Outcome and section 4 local-candidate table, delta=0",
+      "evidence_node_ids": [
+        "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+        "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=3 configuration-only finite R10 cap chart with rank-one phi source",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P40 delta=0 local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p40_m3_delta_p0p0005",
+      "source_artifact_id": "p40_report",
+      "evidence_locator": "Outcome and section 4 local-candidate table, delta=+0.0005",
+      "evidence_node_ids": [
+        "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+        "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=3 configuration-only finite R10 cap chart with rank-one phi source",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P40 delta=+0.0005 local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p40_m3_delta_p0p001",
+      "source_artifact_id": "p40_report",
+      "evidence_locator": "Outcome and section 4 local-candidate table, delta=+0.001",
+      "evidence_node_ids": [
+        "claim:P40_FIVE_SAMPLED_M3_CAP_CANDIDATES_HAVE_LOCAL_FULL_R10_SIGN_PLUS_ONE",
+        "claim:P40_RECORDED_LOCAL_M3_DATA_DO_NOT_LICENSE_BOUNDED_CHAIN_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=3 configuration-only finite R10 cap chart with rank-one phi source",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P40 delta=+0.001 local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p41_m4_shared_zero",
+      "source_artifact_id": "p41_report",
+      "evidence_locator": "section 5, shared_zero; section 6 retained tangent-control failure",
+      "evidence_node_ids": [
+        "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=4 configuration-only finite R14 cap chart with two endpoint-source directions; retained tangent-control failure",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P41 shared_zero local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p41_m4_phi_minus",
+      "source_artifact_id": "p41_report",
+      "evidence_locator": "section 5, phi_minus; section 6 retained tangent-control failure",
+      "evidence_node_ids": [
+        "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=4 configuration-only finite R14 cap chart with two endpoint-source directions; retained tangent-control failure",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P41 phi_minus local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p41_m4_phi_plus",
+      "source_artifact_id": "p41_report",
+      "evidence_locator": "section 5, phi_plus; section 6 retained tangent-control failure",
+      "evidence_node_ids": [
+        "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=4 configuration-only finite R14 cap chart with two endpoint-source directions; retained tangent-control failure",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P41 phi_plus local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p41_m4_a_minus",
+      "source_artifact_id": "p41_report",
+      "evidence_locator": "section 5, a_minus; section 6 retained tangent-control failure",
+      "evidence_node_ids": [
+        "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=4 configuration-only finite R14 cap chart with two endpoint-source directions; retained tangent-control failure",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P41 a_minus local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    },
+    {
+      "id": "p41_m4_a_plus",
+      "source_artifact_id": "p41_report",
+      "evidence_locator": "section 5, a_plus; section 6 retained tangent-control failure",
+      "evidence_node_ids": [
+        "claim:P41_FIVE_PRIMARY_M4_CAP_CANDIDATES_HAVE_LOCAL_FULL_R14_SIGN_PLUS_ONE",
+        "claim:P41_RETAINED_TANGENT_CONTROL_FAILURE_LEAVES_BOTH_SOURCE_ROBUSTNESS_CLAIMS_INCONCLUSIVE",
+        "claim:P41_RECORDED_LOCAL_M4_DATA_DO_NOT_LICENSE_CANONICAL_CROSS_CUTOFF_OR_GLOBAL_INTERSECTION_INFERENCE"
+      ],
+      "candidate_kind": "RECORDED_LOCAL_INTERSECTION_WITNESS",
+      "declared_model_scope": "m=4 configuration-only finite R14 cap chart with two endpoint-source directions; retained tangent-control failure",
+      "scope_relation": "IN_SCOPE_RECORDED_CANDIDATE",
+      "out_of_scope_reason": null,
+      "local_orientation_sign": 1,
+      "declared_global_intersection_integer": null,
+      "original_cycle_ref": null,
+      "global_upward_cycle_ref": null,
+      "saddle_or_candidate_ref": "P41 a_plus local candidate",
+      "sheet_ref": null,
+      "prerequisites": {
+        "original_cycle_source_defined": false,
+        "global_upward_cycle_specified": false,
+        "full_joint_orientation_line_fixed": false,
+        "saddle_sheet_component_census_complete": false,
+        "good_end_stokes_singularity_census_complete": false,
+        "regulator_cutoff_stability_established": false
+      }
+    }
+  ],
+  "false_signal_controls": [
+    {
+      "id": "classification_exhaustiveness",
+      "description": "Every predeclared record has one unique ID and exactly one typed state."
+    },
+    {
+      "id": "null_and_local_sign_are_not_integer_zero",
+      "description": "A mutation that copies local +1 or replaces an unresolved null by integer zero must be rejected unless every global prerequisite and locator is present."
+    },
+    {
+      "id": "out_of_scope_requires_explicit_reason",
+      "description": "A non-global construction is OUT_OF_SCOPE only with an explicit bounded reason; deleting that reason must be rejected."
+    }
+  ],
+  "required_fail_closed_outputs": {
+    "bounded_chain_signed_sum": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "original_physical_joint_cycle": null,
+    "gate1_closure": null,
+    "cutoff_or_continuum_limit": null,
+    "physics_claim": null,
+    "empirical_claim": null,
+    "quantum_gravity_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED"
+  },
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "numerical_samples": 0
+  }
+}
