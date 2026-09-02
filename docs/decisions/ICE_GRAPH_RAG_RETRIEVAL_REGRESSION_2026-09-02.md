@@ -13,6 +13,12 @@ locator, optional graph selector and bounded expansion depth. The suite is a
 control for navigation quality: it does not test scientific truth, citation
 entailment, model reasoning, or a calculation result.
 
+The baseline contains twelve stable locators rather than one generic case per
+graph. It covers the current G1 blocker, P1/P4 separation, a result-to-artifact
+provenance lookup, the singular-Weyl source, the Ragnarok boundary, all four
+programme graphs, and one Korean G1 query. This is deliberately a small
+architecture sample, not a benchmark made from every historical calculation.
+
 Two read-only commands use that suite:
 
 ```bash
@@ -54,6 +60,9 @@ navigation regression before accepting the edit:
 ./ice graphrag diff --base HEAD --limit 12 --json
 npm run graph:check
 ```
+
+`npm run graph:check` executes the current suite in addition to its unit tests,
+so a checked-in query/locator drift cannot be hidden behind parser coverage.
 
 Use `./ice ontology export --format jsonld` only when a generated interchange
 view is actually needed. It remains derived output, not a second graph source.

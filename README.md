@@ -58,22 +58,27 @@ For a CPT core proposal, first run:
 
 ```bash
 ./ice agent plan "<one bounded CPT question>" --graph cpt --json
+./ice ontology guide --path cpt-role-bands-no-promotion
 ./ice ontology guide --graph cpt --path toe-current-critical-path
+./ice ontology guide --graph cpt --path gate1-typed-object-handoff
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
-./ice ontology guide --graph cpt --path raw-c-next-bounded-work
+./ice ontology guide --graph cpt --path p1-exact-real-root-handoff
+./ice ontology guide --graph cpt --path p4-weyl-measure-raq-handoff
 ```
 
 The default TOE-candidate route begins at the current G1 original-cycle blocker and proceeds through
 G2--G5 only when compatible typed inputs exist. The P1--P7 V0 lanes are a supporting portfolio, not
 independent TOE success counters; they need a named blocker and changed evidence edge before they can be
-counted as core progress. The raw-C handoff path separates the P1 exact root bridge from the P4
-complex-tail-to-RAQ blocker chain and grants neither one execution authority. Review graph, policy,
+counted as core progress. The compact raw-C handoffs separate the P1 exact root bridge from the P4
+complex-tail-to-RAQ blocker chain and grant neither one execution authority. Review graph, policy,
 navigation, or multi-graph edits collection-wide with
 `./ice ontology review --graph all --base HEAD`. The cohesion rule is to extend canonical nodes and
 explicit edges, then add reading paths/quick answers for navigation—never duplicate claims across graphs
 or infer links from topical proximity. This is research organization, not a new-physics result.
 
-See [the ontology guide](ontology/README.md) and the [standard graph-engineering decision](docs/decisions/ICE_STANDARD_GRAPH_ENGINEERING_2026-09-01.md).
+See the [research graph atlas](docs/research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md),
+[ontology guide](ontology/README.md), and
+[standard graph-engineering decision](docs/decisions/ICE_STANDARD_GRAPH_ENGINEERING_2026-09-01.md).
 
 The programme's current philosophical synthesis is documented in
 [`docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](docs/ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md):
@@ -367,8 +372,8 @@ supersymmetry, CPT-symmetric cosmology, or hypercomplex algebra.
 | discovered Python kernels | 92 | `./ice list --json` |
 | mapped reproduction cases | 14 | `./ice repro --list` |
 | reproduction result | 12 `REPRO`, 1 `NONPORTABLE_FAIL`, 1 `SUPERSEDED` | `./ice repro` |
-| research ontology collection | 4 independent graphs; 1045 nodes, 2957 edges, 263 claims: 149 `SUPPORTED`, 103 `CONTRADICTED`, 11 `INCONCLUSIVE` | `./ice ontology summary` |
-| hash-tracked ontology records | 137 evidence nodes, 77 open problems, 251 artifacts, 10 policies; 261/261 recorded hashes verified; 44 explicit unresolved-bridge warnings | `./ice ontology validate` |
+| research ontology collection | Four independent evidence graphs; obtain current node, edge, claim and open-problem counts live | `./ice ontology summary --json` |
+| hash-tracked ontology records | Obtain current artifact/policy hash verification and unresolved-bridge diagnostics live | `./ice ontology validate --json` |
 | named exact checks in the CPT Phase 16--56 snapshots | 498, all `PASS` | CPT phase result payloads in the ontology |
 | typed numerical checks in those snapshots | 360 = 343 `PASS` + 14 `FAIL` + 3 `INCONCLUSIVE` | CPT phase result payloads in the ontology |
 | latest CPT direct calculation | non-numbered closed-FRW V0 principal endpoint FIO and one-term exact-unitarity discriminator | [`GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md`](cpt_temporal_folded_susy/GATE1_V0_PRINCIPAL_ENDPOINT_FIO.md) |
@@ -407,6 +412,7 @@ Canonical commands:
 ./ice ontology export --format <jsonld|dataset-jsonld|nquads> [--graph <key>]
 ./ice ontology shacl [--graph <key>] [--json]
 ./ice ontology sparql '<SELECT|ASK|CONSTRUCT|DESCRIBE query>' [--graph <key>] [--limit 1..500]
+./ice ontology competency [--json]
 ./ice ontology crate output/<new-name> [--graph <key>] [--json]
 ./ice harness context <node-id> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
@@ -436,8 +442,10 @@ bounded restricted local SPARQL 1.1 subset—remote datasets, `SERVICE`, and upd
 non-overwriting RO-Crate 1.3 metadata/export package under `output/`; referenced raw results are
 not copied. The package includes RDF-equivalent enriched JSON-LD/N-Quads plus the exact compatibility
 JSON-LD payload named by its embedded provenance digest. These projections are never imported or merged back; see the
-[interoperability boundary](ontology/standards/README.md). `npm run graph:check` covers strict
-TypeScript/tests, the full native hash/evidence gate, and SHACL projection validation.
+[interoperability boundary](ontology/standards/README.md). `ontology competency` runs the fixed
+ASK-only architecture suite over the generated named RDF dataset. `npm run graph:check` covers strict
+TypeScript/tests, the full native hash/evidence gate, SHACL projection validation, canonical-locator
+GraphRAG regression, and the architecture competency suite.
 
 `harness` is the graph-aware engineering surface: `context` exposes bounded evidence/scope/policy/open
 problem context for a selected node, `impact` maps an exact registered repository path to that context,
@@ -553,8 +561,11 @@ problem materially changes; `ontology validate` is required when the ontology ch
 ./ice ontology export --format nquads --graph cpt > /tmp/cpt-research-graph.nq
 ./ice ontology shacl --graph cpt --json
 ./ice ontology sparql 'ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?node a <urn:ice-orca-dragon:ontology:ResearchNode> } }' --graph cpt
+./ice ontology competency --json
 ./ice ontology crate output/cpt-graph-crate --graph cpt --json
 ./ice ontology guide --path current-status-in-five-stops
+./ice ontology guide --path cpt-role-bands-no-promotion
+./ice ontology guide --graph cpt --path gate1-typed-object-handoff
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph igrueqft --path igrueqft-negative-result-to-open-theory
 ./ice ontology show igrueqft::claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL
@@ -595,7 +606,9 @@ and its registered `graph.json` files as the only authored records: inspect impa
 review graph records with `ontology review` (and collection-manifest edits with normal Git diff), run
 `graph:check`, and generate JSON-LD, named-graph N-Quads, SHACL reports, bounded SPARQL results, or an
 RO-Crate only for downstream inspection. Generated exports are not committed as a second graph source.
-The architecture and non-claims are recorded in the
+The research-content topology is summarized in the
+[research graph atlas](docs/research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md); the implementation
+architecture and non-claims are recorded in the
 [standard graph-engineering decision](docs/decisions/ICE_STANDARD_GRAPH_ENGINEERING_2026-09-01.md).
 
 ## Scientific scope

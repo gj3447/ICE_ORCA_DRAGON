@@ -36,19 +36,24 @@ Start with live collection scope and counts, rather than copying a dated total i
 ```bash
 ./ice ontology summary --json
 ./ice ontology guide --path current-status-in-five-stops
+./ice ontology guide --path cpt-role-bands-no-promotion
 ./ice ontology guide --graph cpt --path toe-current-critical-path
+./ice ontology guide --graph cpt --path gate1-typed-object-handoff
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
-./ice ontology guide --graph cpt --path raw-c-next-bounded-work
+./ice ontology guide --graph cpt --path p1-exact-real-root-handoff
+./ice ontology guide --graph cpt --path p4-weyl-measure-raq-handoff
 ```
 
 The four registered graphs are independent evidence boundaries. Collection paths are a cross-graph
 reading aid only: they do not merge evidence, infer a shared theory, or turn one programme's result into
 support for another.
 
-The raw-C handoff path is the current bounded supporting-work index. It records the exact P1
-root-location composition first, keeps a full-slab location tube optional, and exposes the P4
-complex-tail theorem through endpoint, Weyl field, measure, threshold and RAQ as typed blockers. It
-does not connect either lane to G1 by implication or authorize a calculation.
+The compact role-band path separates the G1--G5 core, G1's two direct subblockers, supporting work and
+frozen non-executable history. The two raw-C handoffs then split the exact P1 real-root corridor from
+the P4 complex-tail theorem through endpoint, Weyl field, measure, threshold and RAQ typed blockers.
+They do not connect either supporting lane to G1 by implication or authorize a calculation. The
+[research graph atlas](../docs/research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md) is the human entry point
+for the complete content topology.
 
 For the CPT candidate route, begin with the active TOE routing policy and its current blocker:
 
@@ -244,15 +249,19 @@ Collection-manifest additions, removals, renames, and navigation edits remain or
 `ontology review` does not claim to diff them.
 
 The [standards profile](./standards/README.md) fixes repository-local URNs, reifies native edge records
-so their IDs and polarity survive projection, and supplies optional downstream SHACL Core shapes. The
-repository does not bundle a SHACL processor, graph database, SPARQL endpoint, or external-KG writer.
+so their IDs and polarity survive projection, and supplies an offline SHACL Core processor plus a
+bounded in-memory SPARQL subset. The repository intentionally has no persistent graph database, remote
+SPARQL endpoint, RDF import path, or external-KG writer.
 
 ```bash
 ./ice ontology validate
 ./ice ontology summary
 ./ice ontology review --graph all --base HEAD
 ./ice ontology export --format jsonld --graph cpt
+./ice ontology competency --json
 ./ice ontology guide --path current-status-in-five-stops
+./ice ontology guide --path cpt-role-bands-no-promotion
+./ice ontology guide --graph cpt --path gate1-typed-object-handoff
 ./ice ontology guide --graph hypercomplex --path hyper-projection-failure
 ./ice ontology guide --graph legacy --path legacy-preregistration-provenance
 ./ice ontology guide --graph igrueqft --path igrueqft-negative-result-to-open-theory

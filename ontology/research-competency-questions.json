@@ -1,0 +1,112 @@
+{
+  "schema": "ice-ontology-competency-suite/v1",
+  "id": "ice-research-architecture",
+  "title": "ICE ORCA DRAGON research architecture competency questions",
+  "description": "Stable ASK queries over the generated named RDF dataset. They protect programme boundaries, epistemic chains, route dependencies, and non-promotion invariants without evaluating scientific truth.",
+  "version": "2026-09-02",
+  "cases": [
+    {
+      "id": "four-programme-boundaries",
+      "question": "Are the four programme descriptors separately addressable inside one collection?",
+      "query": "ASK WHERE { ?hyper a <urn:ice-orca-dragon:ontology:ResearchGraphDescriptor> . ?hyper <urn:ice-orca-dragon:ontology:key> \"hypercomplex\" . ?hyper <urn:ice-orca-dragon:ontology:collection> ?collection . ?legacy a <urn:ice-orca-dragon:ontology:ResearchGraphDescriptor> . ?legacy <urn:ice-orca-dragon:ontology:key> \"legacy\" . ?legacy <urn:ice-orca-dragon:ontology:collection> ?collection . ?cpt a <urn:ice-orca-dragon:ontology:ResearchGraphDescriptor> . ?cpt <urn:ice-orca-dragon:ontology:key> \"cpt\" . ?cpt <urn:ice-orca-dragon:ontology:collection> ?collection . ?igrueqft a <urn:ice-orca-dragon:ontology:ResearchGraphDescriptor> . ?igrueqft <urn:ice-orca-dragon:ontology:key> \"igrueqft\" . ?igrueqft <urn:ice-orca-dragon:ontology:collection> ?collection . }",
+      "expected_boolean": true,
+      "rationale": "The project is a collection of four independent evidence graphs, not one undifferentiated theory graph."
+    },
+    {
+      "id": "g1-two-direct-subblockers",
+      "question": "Does Gate 1 retain both the explicit joint-cycle and source-derived-cycle subblockers?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?g1 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-original-cycle-signed-global-intersections\" . ?joint <urn:ice-orca-dragon:ontology:localId> \"open:p38-explicit-joint-action-cycle-and-oriented-intersections\" . ?source <urn:ice-orca-dragon:ontology:localId> \"open:gate1-phase-locked-fiber-to-source-derived-joint-cycle\" . ?left <urn:ice-orca-dragon:ontology:from> ?g1 . ?left <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?left <urn:ice-orca-dragon:ontology:to> ?joint . ?right <urn:ice-orca-dragon:ontology:from> ?g1 . ?right <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?right <urn:ice-orca-dragon:ontology:to> ?source . } }",
+      "expected_boolean": true,
+      "rationale": "The two distinct G1 inputs must remain explicit rather than being flattened into a local solver task."
+    },
+    {
+      "id": "g2-remains-blocked-by-g1",
+      "question": "Is the hard CFU gate still blocked by Gate 1?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?g1 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-original-cycle-signed-global-intersections\" . ?g2 <urn:ice-orca-dragon:ontology:localId> \"open:gate2-hard-cfu-airy-coefficients\" . ?edge <urn:ice-orca-dragon:ontology:from> ?g2 . ?edge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?edge <urn:ice-orca-dragon:ontology:to> ?g1 . } }",
+      "expected_boolean": true,
+      "rationale": "The ordered TOE-candidate spine must not silently bypass the current first gate."
+    },
+    {
+      "id": "p1-does-not-unblock-g1",
+      "question": "Is a direct G1 BLOCKED_BY edge to the P1 real-root supporting problem absent?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?g1 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-original-cycle-signed-global-intersections\" . ?p1 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport\" . ?edge <urn:ice-orca-dragon:ontology:from> ?g1 . ?edge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?edge <urn:ice-orca-dragon:ontology:to> ?p1 . } }",
+      "expected_boolean": false,
+      "rationale": "P1 remains supporting until a separately reviewed typed source-to-cycle bridge exists."
+    },
+    {
+      "id": "p4-dependency-order",
+      "question": "Does P4 preserve the complex-tail-before-endpoint and Weyl-field-before-measure order?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?tail <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-p0-complex-tail-theorem-prerequisite\" . ?endpoint <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-fixed-box-nonreal-endpoint-certificate\" . ?field <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-nonzero-p-uniform-weyl-field\" . ?endpointEdge <urn:ice-orca-dragon:ontology:from> ?endpoint . ?endpointEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?endpointEdge <urn:ice-orca-dragon:ontology:to> ?tail . ?fieldEdge <urn:ice-orca-dragon:ontology:from> ?field . ?fieldEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?fieldEdge <urn:ice-orca-dragon:ontology:to> ?endpoint . ?measureEdge <urn:ice-orca-dragon:ontology:from> <urn:ice-orca-dragon:resource:graph:cpt:node:open%3Araw-c-fiber-spectral-measure-transform> . ?measureEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?measureEdge <urn:ice-orca-dragon:ontology:to> ?field . } }",
+      "expected_boolean": true,
+      "rationale": "A finite real-root or endpoint proxy must not be mistaken for nonreal Weyl and spectral-measure completion."
+    },
+    {
+      "id": "p4-does-not-unblock-g1",
+      "question": "Is a direct G1 BLOCKED_BY edge to the P4 RAQ umbrella absent?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?g1 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-original-cycle-signed-global-intersections\" . ?p4 <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion\" . ?edge <urn:ice-orca-dragon:ontology:from> ?g1 . ?edge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?edge <urn:ice-orca-dragon:ontology:to> ?p4 . } }",
+      "expected_boolean": false,
+      "rationale": "P4 is a supporting operator programme and not an inferred original-cycle prerequisite."
+    },
+    {
+      "id": "p5-remains-downstream-of-classical-hda",
+      "question": "Does quantum BFV common-core work remain blocked by classical closed-S3 HDA closure?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?classical <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-classical-s3-hda-closure\" . ?quantum <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly\" . ?edge <urn:ice-orca-dragon:ontology:from> ?quantum . ?edge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?edge <urn:ice-orca-dragon:ontology:to> ?classical . } }",
+      "expected_boolean": true,
+      "rationale": "P2-P3 must produce classical structure functions and closure data before P5 can audit a quantum BFV charge on a common core."
+    },
+    {
+      "id": "p7-remains-downstream-of-p5",
+      "question": "Does the P7 likelihood lane remain downstream of quantum anomaly control and relational-observable construction?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?quantum <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly\" . ?relational <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-relational-observables-bo-decoherence\" . ?likelihood <urn:ice-orca-dragon:ontology:localId> \"open:gate1-v0-empirical-likelihood-bridge\" . ?relationalEdge <urn:ice-orca-dragon:ontology:from> ?relational . ?relationalEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?relationalEdge <urn:ice-orca-dragon:ontology:to> ?quantum . ?likelihoodEdge <urn:ice-orca-dragon:ontology:from> ?likelihood . ?likelihoodEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?likelihoodEdge <urn:ice-orca-dragon:ontology:to> ?relational . } }",
+      "expected_boolean": true,
+      "rationale": "Likelihood must not be called before the physical-product, clock, state, generation, reheating and observable chain is available."
+    },
+    {
+      "id": "p1-claim-evidence-scope-chain",
+      "question": "Does the fixed-lambda P1 claim retain both supporting evidence polarity and its narrow scope?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?claim <urn:ice-orca-dragon:ontology:localId> \"claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS\" . ?evidence <urn:ice-orca-dragon:ontology:localId> \"evidence:raw-c-fixed-lambda-root-theorem-composition-result\" . ?scope <urn:ice-orca-dragon:ontology:localId> \"scope:raw-c-fixed-lambda-root-theorem-composition\" . ?support <urn:ice-orca-dragon:ontology:from> ?claim . ?support <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/HAS_EVIDENCE> . ?support <urn:ice-orca-dragon:ontology:to> ?evidence . ?support <urn:ice-orca-dragon:ontology:polarity> \"SUPPORTS\" . ?scoping <urn:ice-orca-dragon:ontology:from> ?claim . ?scoping <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/VALID_WITHIN> . ?scoping <urn:ice-orca-dragon:ontology:to> ?scope . } }",
+      "expected_boolean": true,
+      "rationale": "Computed support is meaningful only with its explicit evidence record, polarity and corridor scope."
+    },
+    {
+      "id": "no-phase-fifty-seven-node",
+      "question": "Is a Phase 57 ontology node absent from the frozen numbered route?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?node <urn:ice-orca-dragon:ontology:localId> \"phase:p57\" . } }",
+      "expected_boolean": false,
+      "rationale": "The Ragnarok circuit breaker preserves Phase 51–56 provenance without minting a numbered descendant."
+    },
+    {
+      "id": "hypercomplex-physics-referent-unestablished",
+      "question": "Does the hypercomplex graph retain the Standard Model referent claim as inconclusive?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:hypercomplex> { ?claim <urn:ice-orca-dragon:ontology:localId> \"claim:HYPER_ALGEBRA_ESTABLISHES_SM_REFERENTS\" . ?claim <urn:ice-orca-dragon:ontology:epistemicState> \"INCONCLUSIVE\" . } }",
+      "expected_boolean": true,
+      "rationale": "Finite algebraic structure is not automatically a demonstrated physical interpretation."
+    },
+    {
+      "id": "legacy-signal-gate-contradicted",
+      "question": "Does the legacy graph retain the declared P15 genuine-signal claim as contradicted?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:legacy> { ?claim <urn:ice-orca-dragon:ontology:localId> \"claim:DECLARED_P15_SET_HAS_GENUINE_PDG_SIGNAL\" . ?claim <urn:ice-orca-dragon:ontology:epistemicState> \"CONTRADICTED\" . } }",
+      "expected_boolean": true,
+      "rationale": "Narrative preservation must not erase the stored negative signal audit."
+    },
+    {
+      "id": "igrueqft-finite-shortcut-contradicted",
+      "question": "Does the IG-RUEQFT graph retain the finite group-averaging bulk-locality shortcut as contradicted?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:igrueqft> { ?claim <urn:ice-orca-dragon:ontology:localId> \"claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL\" . ?claim <urn:ice-orca-dragon:ontology:epistemicState> \"CONTRADICTED\" . } }",
+      "expected_boolean": true,
+      "rationale": "The scoped finite negative result must remain visible."
+    },
+    {
+      "id": "igrueqft-universal-refutation-unestablished",
+      "question": "Does the IG-RUEQFT graph keep universal programme refutation inconclusive?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:igrueqft> { ?claim <urn:ice-orca-dragon:ontology:localId> \"claim:IGRUEQFT_SINGLE_FREE_ORACLE_REFUTES_FULL_PROGRAMME\" . ?claim <urn:ice-orca-dragon:ontology:epistemicState> \"INCONCLUSIVE\" . } }",
+      "expected_boolean": true,
+      "rationale": "One finite oracle does not decide all interacting or continuum realizations."
+    }
+  ],
+  "guidance": [
+    "These questions protect stable graph architecture and epistemic boundaries; they do not test the truth of the underlying physics.",
+    "A false-expected case encodes a deliberate absent relation or record and must be reviewed before changing it.",
+    "Do not add a competency case for every calculation; reserve the suite for durable collection, route and evidence invariants."
+  ]
+}

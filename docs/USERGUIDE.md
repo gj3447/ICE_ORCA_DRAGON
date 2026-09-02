@@ -61,15 +61,19 @@ Use the live summary rather than a copied node, edge, or hash total:
 ./ice agent plan "<one bounded CPT question>" --graph cpt --json
 ./ice ontology show cpt::policy:toe-directed-critical-path-routing
 ./ice ontology show cpt::open:gate1-original-cycle-signed-global-intersections
+./ice ontology guide --path cpt-role-bands-no-promotion
 ./ice ontology guide --graph cpt --path toe-current-critical-path
+./ice ontology guide --graph cpt --path gate1-typed-object-handoff
 ./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio
-./ice ontology guide --graph cpt --path raw-c-next-bounded-work
+./ice ontology guide --graph cpt --path p1-exact-real-root-handoff
+./ice ontology guide --graph cpt --path p4-weyl-measure-raq-handoff
 ```
 
 For core CPT work, the current G1 blocker is the default path; G2--G5 require compatible upstream typed
 outputs. The P1--P7 V0 map is a supporting portfolio and does not automatically unblock the gate path.
-A fresh raw-C handoff should read `raw-c-next-bounded-work`: P1 starts with an exact zero-evaluation
-bridge, while P4 is blocked at the complex-tail theorem before any endpoint runner.
+The role-band view separates TOE core, the two G1 subblockers, supporting P1--P7 work and frozen
+non-executable history. A fresh raw-C handoff should use the compact P1 and P4 paths: P1 starts with an
+exact zero-evaluation bridge, while P4 is blocked at the complex-tail theorem before any endpoint runner.
 A proposal is core-labelled only after human review identifies its canonical blocker, missing typed
 object, bounded falsifiable output, and changed evidence edge. The planner is a review aid and never
 authorizes execution or a physics claim.
@@ -93,6 +97,7 @@ remain provenance and are not deleted or reinterpreted to simplify a route.
 ./ice ontology export --format nquads --graph cpt > /tmp/cpt-research-graph.nq
 ./ice ontology shacl --graph cpt --json
 ./ice ontology sparql 'ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?node a <urn:ice-orca-dragon:ontology:ResearchNode> } }' --graph cpt
+./ice ontology competency --json
 ./ice ontology crate output/cpt-review-crate --graph cpt --json
 ```
 
@@ -103,6 +108,12 @@ RO-Crate creation reserves one new direct child under `output/`, never overwrite
 packages RDF-equivalent enriched JSON-LD/N-Quads plus the explicitly digested compatibility JSON-LD,
 and does not copy raw result files. These views improve interchange and
 review; they do not ratify a claim or authorize a calculation.
+
+`ontology competency` runs a small versioned ASK-only suite for durable content invariants: four graph
+boundaries, the G1 dependency spine, P1/P4 non-promotion, one scoped claim/evidence chain, the absence of
+Phase 57, and the retained negative or inconclusive boundaries in the other programmes. It tests the
+graph representation, not the truth of the physics. The current human-oriented map is the
+[research graph atlas](research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md).
 
 ### Use the graph-aware harness for research engineering context
 

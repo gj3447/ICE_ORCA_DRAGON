@@ -11,6 +11,11 @@ import {
 } from "./collection-core.ts"
 import type { ResearchCollection } from "./collection.ts"
 import {
+  evaluateOntologyCompetencySuite,
+  loadOntologyCompetencySuite,
+  type OntologyCompetencyReport
+} from "./competency.ts"
+import {
   diffResearchCollections,
   makeResearchCollectionReviewWarnings,
   type ResearchCollectionDiff,
@@ -807,6 +812,41 @@ export const ontologySparqlCommand = (
 ) =>
   ontologySparqlData(query, graphKey, limit, timeoutMs).pipe(
     Effect.tap(printJson)
+  )
+
+export const ontologyCompetencyData = Effect.gen(function* () {
+  const [built, suite] = yield* Effect.all(
+    [ontologyRdfData("all"), loadOntologyCompetencySuite],
+    { concurrency: 2 }
+  )
+  return yield* Effect.tryPromise({
+    try: () => evaluateOntologyCompetencySuite(built.dataset, suite),
+    catch: (error) =>
+      iceError(
+        "ONTOLOGY_COMPETENCY_EVALUATION_FAILED",
+        error instanceof Error ? error.message : String(error),
+        2
+      )
+  })
+})
+
+const renderCompetencyReport = (report: OntologyCompetencyReport): string =>
+  [
+    `ONTOLOGY COMPETENCY ${report.passed ? "PASS" : "FAIL"}`,
+    `suite: ${report.suite.id}@${report.suite.version}`,
+    `cases: ${report.passed_cases}/${report.total_cases} passed`,
+    ...report.cases.map(
+      (entry) =>
+        `${entry.passed ? "PASS" : "FAIL"} ${entry.id}: expected=${String(entry.expected_boolean)} observed=${String(entry.observed_boolean)}`
+    ),
+    "boundary: graph-architecture regression only; no scientific truth or execution authority"
+  ].join("\n")
+
+export const ontologyCompetencyCommand = (json: boolean) =>
+  ontologyCompetencyData.pipe(
+    Effect.tap((report) =>
+      json ? printJson(report) : Console.log(renderCompetencyReport(report))
+    )
   )
 
 export const ontologyCratePreviewData = (graphKey = "all") =>

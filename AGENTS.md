@@ -105,10 +105,16 @@ uv sync --locked
 - 스크립트 정보: `./ice info <name>` (경로 / 독스트링 / 산출 result JSON)
 - 연구 그래프 검사·조회: `./ice ontology validate`, `./ice ontology summary`,
   `./ice ontology show <node-id>`, `./ice ontology trace <node-id>`
+- 전체 연구 역할 지도: `./ice ontology guide --path cpt-role-bands-no-promotion`
+  (`TOE_CORE`, `G1_SUBBLOCKER`, `SUPPORTING_P1`–`P7`, `HISTORICAL_NONEXECUTABLE` 분리)
 - 현재 core/support 탐색: `./ice ontology guide --graph cpt --path toe-current-critical-path`,
+  `./ice ontology guide --graph cpt --path gate1-typed-object-handoff`,
   `./ice ontology guide --graph cpt --path v0-supporting-bridge-portfolio`
-- raw-C 다음 bounded 작업: `./ice ontology guide --graph cpt --path raw-c-next-bounded-work`
-  (P1/P4 supporting handoff이며 실행 승인이나 G1 진전 표시는 아님)
+- raw-C 다음 bounded 작업: `./ice ontology guide --graph cpt --path p1-exact-real-root-handoff`,
+  `./ice ontology guide --graph cpt --path p4-weyl-measure-raq-handoff`
+  (둘 다 supporting handoff이며 실행 승인이나 G1 진전 표시는 아님)
+- 그래프 의미 회귀: `./ice ontology competency --json`, `./ice graphrag eval --limit 12 --json`
+  (구조·검색 회귀이며 물리적 진실성 검증이 아님)
 - graph+collection 변경 검토: `./ice ontology review --graph all --base HEAD`
 - core 경로 사전검토: `./ice agent plan "<question>" --graph cpt --json`
 - evidence 문맥·영향·무결성: `./ice harness context <node-id>`, `./ice harness impact <path>`,

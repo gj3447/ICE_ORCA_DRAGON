@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-09-02T01:00:25Z",
+  "updated_at_utc": "2026-09-02T14:19:04Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "cpt",
   "graphs": [
@@ -354,7 +354,7 @@
     },
     {
       "question": "What is the next bounded raw-C supporting work?",
-      "answer": "Use the CPT graph path raw-c-next-bounded-work. P1 first composes the existing lambda-zero Bessel root-1 bracket with the later normalized-G uniqueness theorem; a full-slab tube is optional and is not C1, velocity or a global census. P4 must first close the p=0 complex-tail theorem blocker, then proceed through actual endpoint, nonzero-p Weyl field, spectral measure/transform, p-to-zero assembly and raw-C RAQ before any C/H comparison. This portfolio remains separate from the G1 core blocker unless new source-derived saddle, Stokes or oriented-intersection evidence creates an explicit reviewed bridge.",
+      "answer": "Start with the collection path cpt-role-bands-no-promotion, then use the compact CPT paths p1-exact-real-root-handoff and p4-weyl-measure-raq-handoff; raw-c-next-bounded-work remains the combined detailed view. P1 first composes the lambda-zero Bessel root-1 bracket with the normalized-G uniqueness theorem; a full-slab tube is optional and is not C1, velocity or a global census. P4 must first close the p=0 complex-tail theorem blocker, then proceed through actual endpoint, nonzero-p Weyl field, spectral measure/transform, p-to-zero assembly and raw-C RAQ before any C/H comparison. This portfolio remains separate from the G1 core blocker unless new source-derived saddle, Stokes or oriented-intersection evidence creates an explicit reviewed bridge.",
       "refs": [
         {
           "graph": "cpt",
@@ -715,6 +715,74 @@
           "graph": "cpt",
           "node": "open:gate1-v0-relational-observables-semiclassical-and-empirical-bridge",
           "why": "P7 relational-to-empirical umbrella; likelihood remains gated"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:cpt-role-bands-no-promotion",
+      "title": "CPT role bands: core, blockers, support and frozen history",
+      "summary": "A compact navigation view of the active CPT work structure. Role prefixes classify attention only: they neither create evidence links nor authorize execution, a successor task, a physics claim, or TOE promotion. The other three collection graphs remain independent.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "cpt",
+          "node": "policy:toe-directed-critical-path-routing",
+          "why": "TOE_CORE: active ordered G1-G5 navigation policy, not scientific evidence"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections",
+          "why": "TOE_CORE: current first claim-prerequisite blocker"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+          "why": "G1_SUBBLOCKER: source joint action, original cycle and orientations"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+          "why": "G1_SUBBLOCKER: source-to-joint-cycle extension remains open"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+          "why": "SUPPORTING_P1: real selector regularity, velocity and census"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+          "why": "SUPPORTING_P4: actual nonreal endpoint before m, measure and RAQ"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-classical-s3-hda-closure",
+          "why": "SUPPORTING_P2_P3: full SVT/cubic constraints and classical HDA/Jacobi closure"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
+          "why": "SUPPORTING_P5: quantum common-core and anomaly work after classical closure"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
+          "why": "SUPPORTING_P6: endpoint polarization, cycle, determinant line, gluing and absolute measure"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-relational-observables-bo-decoherence",
+          "why": "SUPPORTING_P7: physical product, clock, normalized state, BO and decoherence"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-v0-empirical-likelihood-bridge",
+          "why": "SUPPORTING_P7: generation, reheating, normalization and observable before likelihood"
+        },
+        {
+          "graph": "cpt",
+          "node": "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+          "why": "HISTORICAL_NONEXECUTABLE: frozen reconciliation provenance; no numbered successor"
         }
       ]
     }

@@ -672,4 +672,31 @@ layer(AppLayer)("canonical ontology collection", (it) => {
       )
     })
   )
+
+  it.effect("keeps the CPT role bands explicit and navigation-only", () =>
+    Effect.gen(function* () {
+      const collection = yield* loadResearchCollection
+      const path = collection.reading_paths.find(
+        ({ id }) => id === "collection-path:cpt-role-bands-no-promotion"
+      )
+
+      expect(path?.navigation_only).toBe(true)
+      expect(path?.stops).toHaveLength(12)
+      const roles = path?.stops.map(({ why }) => why?.split(":", 1)[0]) ?? []
+      expect(new Set(roles)).toEqual(
+        new Set([
+          "TOE_CORE",
+          "G1_SUBBLOCKER",
+          "SUPPORTING_P1",
+          "SUPPORTING_P4",
+          "SUPPORTING_P2_P3",
+          "SUPPORTING_P5",
+          "SUPPORTING_P6",
+          "SUPPORTING_P7",
+          "HISTORICAL_NONEXECUTABLE"
+        ])
+      )
+      expect(path?.summary).toContain("neither create evidence links nor authorize execution")
+    })
+  )
 })

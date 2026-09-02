@@ -14,7 +14,7 @@
     "graph:review": "tsx src/cli.ts ontology review --graph all --base HEAD",
     "graph:export": "tsx src/cli.ts ontology export --format jsonld --graph all",
     "graph:interop-check": "npm run typecheck && vitest run test/ontology-rdf.test.ts test/ontology-shacl.test.ts test/ontology-sparql.test.ts test/ontology-crate.test.ts && npm run ice -- ontology shacl --graph all",
-    "graph:check": "npm run check && npm run ice -- ontology validate && npm run ice -- ontology shacl --graph all",
+    "graph:check": "npm run check && npm run ice -- ontology validate && npm run ice -- ontology shacl --graph all && npm run ice -- graphrag eval --limit 12 --json && npm run ice -- ontology competency --json",
     "agent:eval": "tsx src/cli.ts agent eval --json",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

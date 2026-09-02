@@ -37,6 +37,7 @@ npm run check
 | [`SCIENTIFIC_TOOLBOX.md`](SCIENTIFIC_TOOLBOX.md) | installed symbolic, numerical, workflow, and formal-verification tools |
 | [`SCIENTIFIC_CLI_MANUAL.md`](SCIENTIFIC_CLI_MANUAL.md) | version-specific commands, examples, official documentation, and offline-manual index |
 | [`../ontology/README.md`](../ontology/README.md) | typed research graph, evidence snapshots, validation, and lookup commands |
+| [`research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md`](research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md) | current programme boundaries, TOE/core/support/history roles, epistemic chain, and full-stack graph handoff |
 | [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md) | readable CPT × Temporal-Folded SUSY concept and evidence map |
 | [`../ontology/igrueqft-locality/README.md`](../ontology/igrueqft-locality/README.md) | finite free-U(1) IG-RUEQFT locality audit, scoped negative result, and open continuum boundary |
 | [`../cpt_temporal_folded_susy/README.md`](../cpt_temporal_folded_susy/README.md) | CPT × Temporal-Folded SUSY phase index, current boundary, and sequencing gates |
@@ -95,6 +96,8 @@ physical hypotheses separate. See [`../AGENTS.md`](../AGENTS.md).
 | run isolated ledger | `./ice repro` |
 | validate research graph | `./ice ontology validate` |
 | read current research summary | `./ice ontology summary` |
+| inspect core/support/history role bands | `./ice ontology guide --path cpt-role-bands-no-promotion` |
+| run architecture competency questions | `./ice ontology competency --json` |
 | trace one claim | `./ice ontology trace <node-id>` |
 
 The mapped ledger currently reports 12 `REPRO`, queue03 `NONPORTABLE_FAIL`, and queue06

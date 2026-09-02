@@ -65,7 +65,7 @@ the missing values to be silently dropped.
 - [SPARQL 1.1 Query Language — W3C Recommendation, 21 March 2013](https://www.w3.org/TR/sparql11-query/)
 - [PROV-O: The PROV Ontology — W3C Recommendation, 30 April 2013](https://www.w3.org/TR/prov-o/)
 - [RO-Crate Metadata Specification 1.3 — community Recommendation, 22 June 2026](https://w3id.org/ro/crate/1.3)
-- [Model Context Protocol, version 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25)
+- [Model Context Protocol, version 2026-07-28](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
 
 The offline package contains RDF/JSON-LD, SHACL validation material, a
 read-only restricted local SPARQL 1.1 query subset, PROV-O lineage, and an
@@ -83,6 +83,7 @@ pinned above.
 ./ice ontology export --format nquads --graph <key|all>
 ./ice ontology shacl --graph <key|all> --json
 ./ice ontology sparql '<SELECT|ASK|CONSTRUCT|DESCRIBE>' --graph <key|all> --limit 100 --timeout-ms 5000
+./ice ontology competency --json
 ./ice ontology crate output/<new-name> --graph <key|all> --json
 ```
 
@@ -95,6 +96,10 @@ compatibility JSON-LD whose digest is named by the embedded PROV record, the
 checked-in shape file, and a hash manifest, and never copies referenced raw
 results. The matching MCP operations validate,
 query, and preview package metadata only; they do not write a crate.
+
+The versioned competency suite executes ASK-only questions over the same generated local dataset. It
+protects stable programme, dependency and non-promotion invariants; it is not a new RDF authority,
+SHACL replacement, scientific truth test, or execution gate.
 
 RDF 1.2, SHACL 1.2, and SPARQL 1.2 are deliberately not conformance targets:
 their current W3C publications are still pre-Recommendation. The stable

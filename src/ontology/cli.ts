@@ -2,6 +2,7 @@ import { Args, Command, Options } from "@effect/cli"
 import { Console, Effect } from "effect"
 import { setExitCode } from "../commands.ts"
 import {
+  ontologyCompetencyCommand,
   ontologyCrateCommand,
   ontologyExportCommand,
   ontologyGuideCommand,
@@ -152,6 +153,19 @@ const sparqlCommand = Command.make(
   )
 )
 
+const competencyCommand = Command.make(
+  "competency",
+  { json },
+  ({ json }) =>
+    ontologyCompetencyCommand(json).pipe(
+      Effect.flatMap((report) => setExitCode(report.passed ? 0 : 1))
+    )
+).pipe(
+  Command.withDescription(
+    "run fixed ASK regressions for research-graph architecture and boundaries"
+  )
+)
+
 const crateOutput = Args.text({ name: "output-directory" })
 const crateCommand = Command.make(
   "crate",
@@ -176,6 +190,7 @@ export const ontologyCommand = Command.make("ontology", {}, () =>
     exportCommand,
     shaclCommand,
     sparqlCommand,
+    competencyCommand,
     crateCommand,
     showCommand,
     traceCommand

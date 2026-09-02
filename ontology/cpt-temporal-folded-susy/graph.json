@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-02T01:00:25Z",
+  "updated_at_utc": "2026-09-02T14:19:04Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -581,6 +581,22 @@
         "claim:CLOSED_S3_N1_TRACE_ONLY_NO_INDEPENDENT_SHEAR_PAIR_HOLDS",
         "claim:CLOSED_S3_Q2_COUPLED_DH_METRIC_STRAIN_CANCELLATION_HOLDS",
         "claim:G1_V0_CLASSICAL_H_EQUALS_FC_AUTOMATICALLY_ESTABLISHES_QUANTUM_EQUIVALENCE"
+      ]
+    },
+    {
+      "question": "Which CPT work is core, supporting, or historical non-executable?",
+      "answer": "Only the policy-directed G1 through G5 claim-prerequisite spine is the current TOE core route, with original-cycle G1 first. The P1 real-root, P4 Weyl/measure/RAQ, S3/HDA, BFV, relational and empirical lanes are supporting obligations unless a reviewed result changes a named G1-G5 typed object and evidence edge. Phase 51-56 reconciliation remains preserved historical provenance and does not authorize a numbered successor. These labels are navigation only, not scientific evidence or execution authority.",
+      "claim_ids": [
+        "claim:P56_BOUNDED_RECOVERY_DOES_NOT_AUTHORIZE_FULL_REPLAY_PHASE57_OR_GLOBAL_PROMOTION",
+        "claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS"
+      ]
+    },
+    {
+      "question": "What must a G1 handoff contain before later gates can use it?",
+      "answer": "The handoff must identify a source-defined regulated joint relative class, complete the relevant saddle, sheet, singular/Stokes and good-end census, compute the oriented global intersection vector, and test the declared homotopy, gauge and regulator stability. A stable zero vector is a valid negative resolution. Local roots, finite endpoint proxies, selected-H-only RAQ, or bounded local crossings do not substitute for that object.",
+      "claim_ids": [
+        "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
+        "claim:G1_STRAIGHT_LINE_KILL_CLOSES_ONLY_DECLARED_MODEL_CLASS_NOT_GATE1"
       ]
     }
   ],
@@ -1628,6 +1644,44 @@
         "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
         "open:gate1-v0-relational-observables-bo-decoherence",
         "open:gate1-v0-empirical-likelihood-bridge"
+      ]
+    },
+    {
+      "id": "reading-path:g1-typed-object-handoff",
+      "title": "G1 typed-object handoff to the CFU gate",
+      "summary": "Use this compact handoff only to identify the missing G1 object: source-defined joint action and original relative cycle, source extension through zero lapse and joint ends, complete global saddle/sheet/singular-Stokes/good-end census, oriented intersection vector, and declared stability. A stable zero vector is a valid negative resolution. This path is navigation, not evidence or execution authority.",
+      "nodes": [
+        "policy:toe-directed-critical-path-routing",
+        "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+        "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+        "open:gate1-original-cycle-signed-global-intersections",
+        "open:gate2-hard-cfu-airy-coefficients"
+      ]
+    },
+    {
+      "id": "reading-path:p1-exact-real-root-handoff",
+      "title": "P1 exact real-root handoff",
+      "summary": "Read the existing Bessel anchor and normalized-G theorem before the remaining P1 question: certify selector regularity or velocity, a bounded global root census, or absolute Gamma_1 amplitude/orientation. This is a real supporting corridor; it does not identify a physical saddle, select the original cycle, construct nonreal m, spectral measure or RAQ, or advance G1 without a separately reviewed typed bridge.",
+      "nodes": [
+        "concept:raw-c-lambda-zero-bessel-ball-transport-anchor",
+        "concept:raw-c-fixed-lambda-root-theorem-composition",
+        "scope:raw-c-fixed-lambda-root-theorem-composition",
+        "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport"
+      ]
+    },
+    {
+      "id": "reading-path:p4-weyl-measure-raq-handoff",
+      "title": "P4 actual endpoint to Weyl, measure and RAQ handoff",
+      "summary": "P4 begins with the complex-tail prerequisite, then an actual recessive endpoint ratio M(z), selected singular Weyl m(z), nonzero-p field, fiber spectral measure/transform, p-to-zero assembly and raw-C RAQ/product. The design and fixed-box branch audit are prerequisites or conventions only. This remains supporting operator work and does not supply the original G1 cycle or global intersections.",
+      "nodes": [
+        "concept:raw-c-weyl-spectral-raq-bridge-design",
+        "open:raw-c-p0-complex-tail-theorem-prerequisite",
+        "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+        "open:raw-c-nonzero-p-uniform-weyl-field",
+        "open:raw-c-fiber-spectral-measure-transform",
+        "open:raw-c-p-zero-threshold-global-spectral-assembly",
+        "open:raw-c-raq-rigging-map-physical-product",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
       ]
     }
   ],
@@ -2834,7 +2888,7 @@
       "summary": "After verification, each completed user-requested work unit is committed locally; push remains separately authorized.",
       "state": "ACTIVE",
       "path": "AGENTS.md",
-      "sha256": "7d3b89458ae0d9daf400be00b87ed2fa2709df72cbfa312044c16786c0eefed2",
+      "sha256": "3509d4a08f452c2a96fae053c9c5a49958fe04fa5ba8b3aef43adf8137749c93",
       "introduced_in_commit": "a023f25db8f28bcf4ae266eae1851562e020fe1d"
     },
     {

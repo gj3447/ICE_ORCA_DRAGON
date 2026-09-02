@@ -673,6 +673,36 @@ layer(AppLayer)("canonical ontology", (it) => {
             edge.to === "open:raw-c-p0-complex-tail-theorem-prerequisite"
         )
       ).toBe(true)
+
+      expect(
+        graph.reading_paths.find(
+          ({ id }) => id === "reading-path:g1-typed-object-handoff"
+        )?.nodes
+      ).toEqual([
+        "policy:toe-directed-critical-path-routing",
+        "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
+        "open:gate1-phase-locked-fiber-to-source-derived-joint-cycle",
+        "open:gate1-original-cycle-signed-global-intersections",
+        "open:gate2-hard-cfu-airy-coefficients"
+      ])
+      expect(
+        graph.reading_paths.find(
+          ({ id }) => id === "reading-path:p1-exact-real-root-handoff"
+        )?.nodes
+      ).toHaveLength(4)
+      expect(
+        graph.reading_paths.find(
+          ({ id }) => id === "reading-path:p4-weyl-measure-raq-handoff"
+        )?.nodes.slice(1)
+      ).toEqual([
+        "open:raw-c-p0-complex-tail-theorem-prerequisite",
+        "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+        "open:raw-c-nonzero-p-uniform-weyl-field",
+        "open:raw-c-fiber-spectral-measure-transform",
+        "open:raw-c-p-zero-threshold-global-spectral-assembly",
+        "open:raw-c-raq-rigging-map-physical-product",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+      ])
     })
   )
 

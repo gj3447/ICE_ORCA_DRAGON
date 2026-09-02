@@ -44,6 +44,86 @@
         "igrueqft::claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL"
       ],
       "rationale": "The locality audit keeps this finite-model claim separate from broader theory; retrieval must retain the scoped canonical claim locator."
+    },
+    {
+      "id": "cpt-p1-real-root-exact-handoff",
+      "query": "real corridor kappa transverse unique continuous selector",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS"
+      ],
+      "rationale": "The P1 handoff is the scoped real fixed-lambda root theorem, not a nonreal Weyl or RAQ result."
+    },
+    {
+      "id": "cpt-p4-complex-tail-prerequisite",
+      "query": "p zero complex tail enclosure Volterra prerequisite actual recessive endpoint",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::open:raw-c-p0-complex-tail-theorem-prerequisite"
+      ],
+      "rationale": "P4 must locate the theorem prerequisite before any endpoint solver or spectral promotion."
+    },
+    {
+      "id": "cpt-p4-spectral-measure-after-actual-m",
+      "query": "actual selected nonzero p m boundary values Stieltjes Livsic spectral measure unitary fiber transform",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::open:raw-c-fiber-spectral-measure-transform"
+      ],
+      "rationale": "The spectral-measure locator records that a finite proxy is not a spectral theorem."
+    },
+    {
+      "id": "cpt-ragnarok-nonexecution-policy",
+      "query": "Ragnarok killed numbered phase execution containment historical runner",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::policy:ragnarok-circuit-breaker"
+      ],
+      "rationale": "The circuit breaker must remain retrievable as an execution boundary rather than research evidence."
+    },
+    {
+      "id": "cpt-nonreal-proxy-evidence-provenance",
+      "query": "finite cutoff nonreal Weyl proxy VALID_RUN Green Lagrange evidence",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::evidence:raw-c-nonreal-weyl-proxy-result"
+      ],
+      "rationale": "The result evidence is a stable provenance locator for the finite proxy only."
+    },
+    {
+      "id": "cpt-nonreal-proxy-evidence-snapshot-artifact",
+      "query": "raw c nonreal Weyl proxy evidence snapshot sha256 artifact provenance",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::artifact:raw-c-nonreal-weyl-proxy-evidence-snapshot"
+      ],
+      "rationale": "The evidence snapshot artifact provides the hash-pinned compact provenance record."
+    },
+    {
+      "id": "cpt-singular-weyl-primary-source",
+      "query": "Singular Weyl Titchmarsh theory distributional potentials Eckhardt Gesztesy Nichols Teschl",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::source:eckhardt-et-al-2012-singular-weyl-titchmarsh"
+      ],
+      "rationale": "The primary operator-theory source must be locatable without conflating it with a local endpoint proof."
+    },
+    {
+      "id": "cpt-korean-current-g1-blocker",
+      "query": "현재 Gate 1 병목 원래 joint relative cycle 부호 있는 global intersection vector",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::open:gate1-original-cycle-signed-global-intersections"
+      ],
+      "rationale": "Korean project navigation should retrieve the same canonical current Gate-1 blocker."
     }
   ],
   "guidance": [
