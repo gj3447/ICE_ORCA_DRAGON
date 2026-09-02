@@ -1,0 +1,43 @@
+name: graph-control-plane
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: graph-control-plane-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  graph-check:
+    name: Node 24 graph check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout without broad LFS hydration
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          lfs: false
+          persist-credentials: false
+
+      - name: Install Node 24 from the repository toolchain declaration
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Hydrate the one tracked Phase 44 LFS artifact
+        run: |
+          git lfs version
+          git lfs pull --include="cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json"
+
+      - name: Install lockfile-pinned dependencies
+        run: npm ci
+
+      - name: Validate the graph control plane
+        run: npm run graph:check

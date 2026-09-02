@@ -1,0 +1,60 @@
+name: release-readiness
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-readiness-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cyclonedx-sbom:
+    name: Reproducible CycloneDX SBOM
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          lfs: false
+          persist-credentials: false
+
+      - name: Install Node 24 from the repository toolchain declaration
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install lockfile-pinned dependencies
+        run: npm ci
+
+      - name: Hydrate the one graph-check LFS artifact
+        run: |
+          git lfs version
+          git lfs pull --include="cpt_temporal_folded_susy/PHASE44_M4_NUMPY64_LOCAL_RHS_ERROR_DECOMPOSITION_RESULT.json"
+
+      - name: Re-run the complete repository-local readiness gate
+        run: npm run graph:release-check
+
+      - name: Generate a package-lock-only CycloneDX SBOM
+        run: npm sbom --sbom-format cyclonedx --package-lock-only > ice-orca-dragon.cdx.json
+
+      - name: Verify the generated SBOM is CycloneDX JSON
+        run: |
+          node --input-type=module -e 'import { readFileSync } from "node:fs"; const sbom = JSON.parse(readFileSync("ice-orca-dragon.cdx.json", "utf8")); if (sbom.bomFormat !== "CycloneDX" || typeof sbom.specVersion !== "string") process.exit(1);'
+
+      - name: Retain SBOM as a CI artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cyclonedx-sbom-${{ github.sha }}
+          path: ice-orca-dragon.cdx.json
+          if-no-files-found: error
+          retention-days: 30

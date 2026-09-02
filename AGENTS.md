@@ -137,6 +137,9 @@ uv sync --locked
   (둘 다 supporting handoff이며 실행 승인이나 G1 진전 표시는 아님)
 - 그래프 의미 회귀: `./ice ontology competency --json`, `./ice graphrag eval --limit 12 --json`
   (구조·검색 회귀이며 물리적 진실성 검증이 아님)
+- 선언된 연구 corpus coverage: `./ice ontology coverage --json`
+- repository-local graph release gate: `npm run graph:release-check`
+  (전체 graph 검사 + coverage + production dependency advisory; 물리 연구 완료 판정이 아님)
 - graph+collection 변경 검토: `./ice ontology review --graph all --base HEAD`
 - core 경로 사전검토: `./ice agent plan "<question>" --graph cpt --json`
 - evidence 문맥·영향·무결성: `./ice harness context <node-id>`, `./ice harness impact <path>`,
@@ -151,7 +154,8 @@ uv sync --locked
 전용 테스트를 추가하지 않는다. 새 계산의 1차 재현 기록은 raw result의 command·hash와 인접 보고서다.
 
 `test/`에는 Effect/Vitest 제어면 계약 검사가 있다 (`npm run check` = strict typecheck +
-Vitest suite). 자동 GitHub Actions CI는 아직 없다.
+Vitest suite). `.github/workflows/`의 SHA-pinned, least-privilege CI가 `main`/PR graph gate,
+dependency review, release-readiness/SBOM을 수행한다.
 이 검사는 도구 회귀만 막는다. "단위검사가 통과했다"는 물리 연구 완료 근거가 아니며,
 계산 결과와 물리적 해석은 분리해서 보고한다.
 
@@ -160,6 +164,11 @@ semantic compare, queue04 optimizer angle 경로만 `atol=1e-6`이다. queue03 l
 basis-dependent metric 때문에 `NONPORTABLE_FAIL`이며 tolerance로 숨기지 않는다.
 
 ## Definition of Done
+
+그래프 인프라 자체의 유한한 완료 기준은
+`docs/decisions/ICE_REPOSITORY_LOCAL_GRAPH_COMPLETION_PROFILE_2026-09-02.md`와
+`npm run graph:release-check`다. 이는 repository-local workbench의 공학 기준이며 아래의 개별
+계산 완료, Gate 1, 새 물리 또는 TOE 완료를 대신하지 않는다.
 
 새 번호 없는 계산의 방법 정본은
 `docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md`다. 의무적인 연구 계약, tier 선언,

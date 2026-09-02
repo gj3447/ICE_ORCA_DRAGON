@@ -85,6 +85,7 @@ Use collection-aware review whenever an edit affects graph navigation, a policy,
 
 ```bash
 ./ice ontology review --graph all --base HEAD
+./ice ontology coverage --json
 ```
 
 The cohesion rule is: preserve one canonical node for each material blocker or policy, retain explicit
@@ -248,6 +249,8 @@ the full collection against a committed base before the full integrity gate:
 ./ice ontology review --graph cpt --base HEAD
 ./ice ontology review --graph all --base HEAD  # policy, navigation, or multi-graph edit
 npm run graph:check
+<!-- release gate: graph checks + declared-root coverage + dependency advisories -->
+npm run graph:release-check
 ./ice ontology export --format jsonld --graph cpt > /tmp/ice-cpt.jsonld
 ```
 

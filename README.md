@@ -419,6 +419,7 @@ Canonical commands:
 ./ice ontology shacl [--graph <key>] [--json]
 ./ice ontology sparql '<SELECT|ASK|CONSTRUCT|DESCRIBE query>' [--graph <key>] [--limit 1..500]
 ./ice ontology competency [--json]
+./ice ontology coverage [--json]
 ./ice ontology crate output/<new-name> [--graph <key>] [--json]
 ./ice harness context <node-id> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
@@ -454,6 +455,12 @@ JSON-LD payload named by its embedded provenance digest. These projections are n
 ASK-only architecture suite over the generated named RDF dataset. `npm run graph:check` covers strict
 TypeScript/tests, the full native hash/evidence gate, SHACL projection validation, canonical-locator
 GraphRAG regression, and the architecture competency suite.
+`ontology coverage` performs a bounded, symlink-rejecting inventory of every
+file below the collection's declared research corpus roots and fails when a
+file has no longest-prefix coverage-ledger classification. `npm run
+graph:release-check` adds that inventory and a high/critical production
+dependency advisory gate to `graph:check`; release CI also emits a CycloneDX
+SBOM from the lockfile.
 
 `harness` is the graph-aware engineering surface: `context` exposes bounded evidence/scope/policy/open
 problem context for a selected node, `impact` maps an exact registered repository path to that context,
@@ -622,6 +629,9 @@ The research-content topology is summarized in the
 [research graph atlas](docs/research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md); the implementation
 architecture and non-claims are recorded in the
 [standard graph-engineering decision](docs/decisions/ICE_STANDARD_GRAPH_ENGINEERING_2026-09-01.md).
+The finite repository-local completion contract and its deliberate non-goals
+are recorded in the
+[graph completion profile](docs/decisions/ICE_REPOSITORY_LOCAL_GRAPH_COMPLETION_PROFILE_2026-09-02.md).
 
 ## Scientific scope
 

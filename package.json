@@ -15,6 +15,7 @@
     "graph:export": "tsx src/cli.ts ontology export --format jsonld --graph all",
     "graph:interop-check": "npm run typecheck && vitest run test/ontology-rdf.test.ts test/ontology-shacl.test.ts test/ontology-sparql.test.ts test/ontology-crate.test.ts && npm run ice -- ontology shacl --graph all",
     "graph:check": "npm run check && npm run ice -- ontology validate && npm run ice -- ontology shacl --graph all && npm run ice -- graphrag eval --limit 12 --json && npm run ice -- ontology competency --json && npm run agent:eval",
+    "graph:release-check": "npm run graph:check && npm run ice -- ontology coverage --json && npm audit --omit=dev --audit-level=high",
     "agent:eval": "tsx src/cli.ts agent eval --json",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -47,7 +48,7 @@
     "@types/rdf-ext": "2.5.2",
     "@types/rdfjs__parser-n3": "2.0.6",
     "@types/sparqljs": "3.1.12",
-    "tsx": "4.23.12",
+    "tsx": "4.23.13",
     "typescript": "5.9.3",
     "vitest": "3.2.7"
   }
