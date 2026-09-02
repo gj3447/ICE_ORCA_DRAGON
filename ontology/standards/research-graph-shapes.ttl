@@ -1,4 +1,5 @@
 @prefix project: <urn:ice-orca-dragon:ontology:> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -53,6 +54,36 @@ project:KgBridgeShape
     sh:path project:relation ; sh:minCount 1 ; sh:maxCount 1 ;
     sh:or ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:string ] )
   ] .
+
+# These shapes describe the offline interoperability package around the
+# one-way projection.  They deliberately describe lineage and file identity,
+# not scientific support or physical interpretation.
+project:ProjectionCollectionShape
+  a sh:NodeShape ;
+  sh:targetClass project:ResearchCollection ;
+  sh:property [ sh:path project:collectionId ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:profileVersion ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:canonicalAuthority ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+project:SourceDocumentShape
+  a sh:NodeShape ;
+  sh:targetClass project:SourceDocument ;
+  sh:property [ sh:path project:path ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:sha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[a-f0-9]{64}$" ] .
+
+project:ProjectionExportActivityShape
+  a sh:NodeShape ;
+  sh:targetClass project:ProjectionExportActivity ;
+  sh:property [ sh:path prov:used ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path project:profileVersion ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:format ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+project:ProjectionOutputShape
+  a sh:NodeShape ;
+  sh:targetClass project:ProjectionOutput ;
+  sh:property [ sh:path prov:wasGeneratedBy ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path project:format ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path project:sha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[a-f0-9]{64}$" ] .
 
 # A native JSON null is projected explicitly as project:NoExternalUid or
 # project:NoRelation.  Both properties remain required by KgBridgeShape.

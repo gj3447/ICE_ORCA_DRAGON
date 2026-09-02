@@ -18,12 +18,13 @@ Two read-only engineering surfaces are added around that authority:
    tree. The result is a deterministic record-level diff for collection
    metadata, descriptors, coverage, collection paths and answers, plus graph
    nodes, edges, paths, answers and KG bridges, with focused authoring warnings.
-2. `./ice ontology export --format jsonld --graph <key|all>` emits a generated
-   JSON-LD 1.1 projection to stdout. It uses fixed repository-local URNs and
+2. The offline interoperability export emits a generated JSON-LD 1.1/RDF 1.1
+   projection and package. It uses fixed repository-local URNs and
    graph-qualified resource IRIs. Every native edge is a separate
    `ice:ResearchEdge`, preserving its local ID, endpoints, relation, polarity,
-   and note. The projection manifest includes working-tree SHA-256 values for
-   the canonical collection document and selected graph documents.
+   and note. The package includes source-document SHA-256 values, SHACL 1.0
+   Core validation, a bounded read-only SPARQL 1.1 query surface, PROV-O
+   lineage, and RO-Crate 1.3 metadata.
 
 `npm run graph:check` runs strict TypeScript checks, the Vitest suite, and the
 full repository ontology validation. `npm run graph:review` and `npm run
@@ -58,9 +59,9 @@ and `ontology review` includes the collection manifest as well as graph records.
 [RDF 1.1](https://www.w3.org/TR/rdf11-concepts/) defines graphs as sets of
 subject-predicate-object triples and datasets as collections of graphs.
 [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/) supplies a JSON serialization
-and an explicit context that maps compact terms to IRIs. The export therefore
-gives standards-aware consumers a graph view without introducing a graph
-database or a second hand-edited serialization.
+and an explicit context that maps compact terms to IRIs. The offline export
+therefore gives standards-aware consumers a graph view without introducing a
+graph database or a second hand-edited serialization.
 
 Native edges must be reified because they carry identity and optional metadata;
 a bare RDF shortcut triple would lose that record boundary. Ordered native
@@ -74,11 +75,22 @@ envelope remains present for navigation context. It is not a disclosure or
 redaction filter. The export lists selected graph keys and source-document
 hashes so a consumer can distinguish the envelope from the selected bodies.
 
-The accompanying [SHACL Core](https://www.w3.org/TR/shacl/) shapes are an
-optional downstream projection contract. They do not replace the native
-validator, and no SHACL processor is bundled. [PROV-O](https://www.w3.org/TR/prov-o/)
-is reserved for a future named lineage consumer; no generic provenance edge is
-substituted for the repository's scientific `HAS_EVIDENCE` relation.
+The accompanying [SHACL 1.0 Core](https://www.w3.org/TR/shacl/) shapes are
+executed offline against the generated projection and package. They validate
+projection structure and package lineage, not native research validity.
+The package also exposes a bounded, read-only
+[SPARQL 1.1](https://www.w3.org/TR/sparql11-query/) query interface and uses
+[PROV-O](https://www.w3.org/TR/prov-o/) only for source-to-export lineage:
+no generic provenance edge is substituted for the repository's scientific
+`HAS_EVIDENCE` relation. An [RO-Crate 1.3](https://w3id.org/ro/crate/1.3),
+published as a community Recommendation on 2026-06-22, packages the generated
+materials and their metadata.
+
+The stable interoperability target is RDF 1.1, JSON-LD 1.1, SHACL 1.0,
+SPARQL 1.1, PROV-O, and RO-Crate 1.3. RDF 1.2, SHACL 1.2, and SPARQL 1.2 are
+not claimed as completed conformance targets because their current W3C
+publications are pre-Recommendation drafts. The read-only MCP boundary follows
+the [MCP 2025-11-25 specification](https://modelcontextprotocol.io/specification/2025-11-25): it carries bounded inspection capabilities but is neither agent execution orchestration nor research authorization.
 
 ## Authoring workflow
 
@@ -95,11 +107,11 @@ npm run graph:check
 The versioned retrieval suite and revision-diff interpretation are defined in
 [`ICE_GRAPH_RAG_RETRIEVAL_REGRESSION_2026-09-02.md`](ICE_GRAPH_RAG_RETRIEVAL_REGRESSION_2026-09-02.md).
 
-The export is stdout-only by design. A downstream consumer may store it, but a
-generated export is not committed here as another canonical graph. The review
-command does not write patches, mint IDs, update timestamps, modify the
-collection manifest, or approve a calculation. Normal Git review remains
-responsible for interpreting the diff and reviewing prose changes.
+Generated interoperability material is produced offline and is not a second
+canonical graph. The review command does not write patches, mint IDs, update
+timestamps, modify the collection manifest, or approve a calculation. Normal
+Git review remains responsible for interpreting the diff and reviewing prose
+changes.
 
 ## Explicit non-claims
 
@@ -109,6 +121,9 @@ responsible for interpreting the diff and reviewing prose changes.
   evidence polarity, or physical validity.
 - PROV metadata would describe lineage, not turn policy or citation into
   evidence.
+- An RO-Crate, SHACL report, or SPARQL result is an interoperability artifact,
+  not a GraphRAG reference implementation, a physical ratification, or an
+  agent authorization.
 - No import, merge, inference, external UID minting, graph-database write, or
   automatic successor calculation is authorized.
 
