@@ -44,6 +44,11 @@ The native edge has its own stable `localId` and may carry metadata such as
 would not retain that record as a resource with its metadata.  The edge shape
 therefore requires exactly one `from`, `relation`, and `to` value.
 
+The enriched RDF dataset is canonicalized with the explicit W3C RDF Dataset
+Canonicalization 1.0 (`RDFC-1.0`) algorithm supplied by the locked `jsonld`
+9 implementation. The compatibility JSON-LD remains an exact separately
+digested byte payload; it is not itself canonical RDF.
+
 `research-graph-shapes.ttl` is a minimal SHACL 1.0 Core contract for the
 offline RDF dataset used by the projection and package: it checks the
 projection collection, source documents, export activity, output entity,
@@ -60,6 +65,7 @@ the missing values to be silently dropped.
 ## Standards used by this boundary
 
 - [RDF 1.1 Concepts and Abstract Syntax — W3C Recommendation, 25 February 2014](https://www.w3.org/TR/rdf11-concepts/)
+- [RDF Dataset Canonicalization 1.0 — W3C Recommendation, 21 May 2024](https://www.w3.org/TR/rdf-canon/)
 - [JSON-LD 1.1 — W3C Recommendation, 16 July 2020](https://www.w3.org/TR/2020/REC-json-ld11-20200716/)
 - [Shapes Constraint Language (SHACL) — W3C Recommendation, 20 July 2017](https://www.w3.org/TR/shacl/)
 - [SPARQL 1.1 Query Language — W3C Recommendation, 21 March 2013](https://www.w3.org/TR/sparql11-query/)
@@ -94,7 +100,10 @@ one new direct child of `output/`, refuses overwrite, writes through a
 temporary directory, includes equivalent enriched JSON-LD/N-Quads, the exact
 compatibility JSON-LD whose digest is named by the embedded PROV record, the
 checked-in shape file, and a hash manifest, and never copies referenced raw
-results. The matching MCP operations validate,
+results. It also writes an offline RO-Crate 1.3 base-profile report checking
+the context, metadata descriptor, root Dataset, and declared `hasPart` file
+references. This is not remote-context resolution, validation of optional
+RO-Crate profiles, or a general RO-Crate validator. The matching MCP operations validate,
 query, and preview package metadata only; they do not write a crate.
 
 The versioned competency suite executes ASK-only questions over the same generated local dataset. It

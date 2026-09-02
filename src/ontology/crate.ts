@@ -12,6 +12,12 @@ import { basename, join, relative, resolve } from "node:path"
 import type { CollectionGraph } from "./collection-core.ts"
 import type { ResearchCollection } from "./collection.ts"
 import {
+  RO_CRATE_13_CONTEXT,
+  RO_CRATE_13_SPECIFICATION,
+  validateRoCrate13BaseProfile,
+  type RoCrateBaseProfileReport
+} from "./crate-validation.ts"
+import {
   buildRdfDataset,
   serializeDatasetAsNQuads,
   type RdfBuildOptions
@@ -23,8 +29,7 @@ import {
   type ShaclReport
 } from "./shacl.ts"
 
-export const RO_CRATE_CONTEXT =
-  "https://w3id.org/ro/crate/1.3/context" as const
+export const RO_CRATE_CONTEXT = RO_CRATE_13_CONTEXT
 
 const crateMembers = [
   "research-graph.jsonld",
@@ -32,6 +37,7 @@ const crateMembers = [
   "research-graph.nq",
   "research-graph-shapes.ttl",
   "shacl-report.json",
+  "ro-crate-base-profile-report.json",
   "manifest.json"
 ] as const
 
@@ -70,6 +76,7 @@ export interface PreparedInteropCrate {
   readonly metadata: Readonly<Record<string, unknown>>
   readonly manifest: InteropCrateManifest
   readonly shacl: ShaclReport
+  readonly ro_crate: RoCrateBaseProfileReport
   readonly files: Readonly<Record<CrateMember, string>>
 }
 
@@ -79,6 +86,7 @@ export interface InteropCrateResult {
   readonly files: ReadonlyArray<string>
   readonly manifest_sha256: string
   readonly shacl_conforms: true
+  readonly ro_crate_conforms: true
 }
 
 const stableJson = (value: unknown): string => `${JSON.stringify(value, null, 2)}\n`
@@ -99,11 +107,12 @@ const assertTimestamp = (value: string): void => {
 }
 
 const mediaTypeFor = (
-  path: Exclude<CrateMember, "manifest.json">
+  path: CrateMember
 ): string => {
   if (path.endsWith(".jsonld")) return "application/ld+json"
   if (path === "research-graph.nq") return "application/n-quads"
   if (path === "research-graph-shapes.ttl") return "text/turtle"
+  if (path === "ro-crate-base-profile-report.json") return "application/json"
   return "application/json"
 }
 
@@ -133,29 +142,7 @@ export const prepareOntologyInteropCrate = async (
     "research-graph-shapes.ttl": normalizedShapes,
     "shacl-report.json": shaclJson
   } as const
-  const manifest: InteropCrateManifest = {
-    schema: "ice-ontology-interop-manifest/v1",
-    canonical_authority: "repository-json",
-    package_scope: "METADATA_AND_GRAPH_EXPORT_NO_RAW_RESULTS",
-    selected_graph_keys: built.projection["ice:selectedGraphKeys"],
-    source_documents: [...options.sourceDocuments],
-    files: (Object.keys(payloads) as Array<keyof typeof payloads>).map((path) => ({
-      path,
-      media_type: mediaTypeFor(path),
-      bytes: bytes(payloads[path]),
-      sha256: sha256(payloads[path])
-    }))
-  }
-  const manifestJson = stableJson(manifest)
-  const memberDetails = [
-    ...manifest.files,
-    {
-      path: "manifest.json" as const,
-      media_type: "application/json",
-      bytes: bytes(manifestJson),
-      sha256: sha256(manifestJson)
-    }
-  ]
+  const reportPlaceholder = "ro-crate-base-profile-report.json"
   const sourceDocuments = options.sourceDocuments
   const metadata = {
     "@context": [
@@ -169,7 +156,7 @@ export const prepareOntologyInteropCrate = async (
       {
         "@id": "ro-crate-metadata.json",
         "@type": "CreativeWork",
-        conformsTo: { "@id": "https://w3id.org/ro/crate/1.3" },
+        conformsTo: { "@id": RO_CRATE_13_SPECIFICATION },
         about: { "@id": "./" }
       },
       {
@@ -182,13 +169,11 @@ export const prepareOntologyInteropCrate = async (
         license: { "@id": "https://spdx.org/licenses/AGPL-3.0-or-later" },
         hasPart: crateMembers.map((id) => ({ "@id": id }))
       },
-      ...memberDetails.map((file) => ({
-        "@id": file.path,
+      ...crateMembers.map((path) => ({
+        "@id": path,
         "@type": "File",
-        name: file.path,
-        encodingFormat: file.media_type,
-        contentSize: String(file.bytes),
-        sha256: file.sha256,
+        name: path,
+        encodingFormat: path === reportPlaceholder ? "application/json" : mediaTypeFor(path),
         "prov:wasGeneratedBy": { "@id": "#export-action" }
       })),
       ...sourceDocuments.map((source) => ({
@@ -218,13 +203,60 @@ export const prepareOntologyInteropCrate = async (
       }
     ]
   }
+  const roCrate = validateRoCrate13BaseProfile(metadata)
+  const roCrateJson = stableJson(roCrate)
+  const completePayloads = {
+    ...payloads,
+    "ro-crate-base-profile-report.json": roCrateJson
+  } as const
+  const manifest: InteropCrateManifest = {
+    schema: "ice-ontology-interop-manifest/v1",
+    canonical_authority: "repository-json",
+    package_scope: "METADATA_AND_GRAPH_EXPORT_NO_RAW_RESULTS",
+    selected_graph_keys: built.projection["ice:selectedGraphKeys"],
+    source_documents: [...options.sourceDocuments],
+    files: (Object.keys(completePayloads) as Array<keyof typeof completePayloads>).map((path) => ({
+      path,
+      media_type: mediaTypeFor(path),
+      bytes: bytes(completePayloads[path]),
+      sha256: sha256(completePayloads[path])
+    }))
+  }
+  const manifestJson = stableJson(manifest)
+  const memberDetails = [
+    ...manifest.files,
+    {
+      path: "manifest.json" as const,
+      media_type: "application/json",
+      bytes: bytes(manifestJson),
+      sha256: sha256(manifestJson)
+    }
+  ]
+  const metadataWithFileDetails = {
+    ...metadata,
+    "@graph": metadata["@graph"].map((entry) => {
+      const id = typeof entry["@id"] === "string" ? entry["@id"] : undefined
+      const detail = memberDetails.find((member) => member.path === id)
+      return detail === undefined
+        ? entry
+        : {
+            ...entry,
+            contentSize: String(detail.bytes),
+            sha256: detail.sha256
+          }
+    })
+  }
+  const finalRoCrate = validateRoCrate13BaseProfile(metadataWithFileDetails)
+  const finalRoCrateJson = stableJson(finalRoCrate)
   return {
     schema: "ice-ontology-ro-crate-preview/v1",
-    metadata,
+    metadata: metadataWithFileDetails,
     manifest,
     shacl,
+    ro_crate: finalRoCrate,
     files: {
-      ...payloads,
+      ...completePayloads,
+      "ro-crate-base-profile-report.json": finalRoCrateJson,
       "manifest.json": manifestJson
     }
   }
@@ -281,6 +313,11 @@ export const createOntologyInteropCrate = async (
       `cannot create RO-Crate from a nonconforming RDF projection (${prepared.shacl.violations.length} violation(s))`
     )
   }
+  if (!prepared.ro_crate.conforms) {
+    throw new Error(
+      `cannot create a nonconforming RO-Crate 1.3 base profile (${prepared.ro_crate.violations.length} violation(s))`
+    )
+  }
   const { target, outputRoot } = await resolveSafeTarget(
     options.workspaceRoot,
     options.outputDirectory
@@ -325,7 +362,8 @@ export const createOntologyInteropCrate = async (
     directory: options.outputDirectory,
     files: ["ro-crate-metadata.json", ...crateMembers],
     manifest_sha256: sha256(prepared.files["manifest.json"]),
-    shacl_conforms: true
+    shacl_conforms: true,
+    ro_crate_conforms: true
   }
 }
 

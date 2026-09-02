@@ -32,8 +32,19 @@ it("creates a non-overwriting RO-Crate 1.3 metadata/export package", async () =>
       "research-graph.nq",
       "research-graph-shapes.ttl",
       "shacl-report.json",
+      "ro-crate-base-profile-report.json",
       "manifest.json"
     ])
+    expect(result.ro_crate_conforms).toBe(true)
+    expect(
+      JSON.parse(
+        await readFile(join(root, "output", "crate", "ro-crate-base-profile-report.json"), "utf8")
+      )
+    ).toMatchObject({
+      schema: "ice-ro-crate-1.3-base-profile-report/v1",
+      conforms: true,
+      violations: []
+    })
     expect(JSON.stringify(metadata)).toContain("prov:used")
     const packagedJsonLd = JSON.parse(
       await readFile(join(root, "output", "crate", "research-graph.jsonld"), "utf8")

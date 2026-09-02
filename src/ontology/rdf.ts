@@ -14,6 +14,9 @@ import {
   type JsonLdProjectionOptions
 } from "./jsonld.ts"
 
+/** W3C RDF Dataset Canonicalization 1.0, provided by jsonld 9/rdf-canonize. */
+export const RDF_CANONICALIZATION_ALGORITHM = "RDFC-1.0" as const
+
 export interface RdfBuildOptions extends JsonLdProjectionOptions {
   readonly sourceDocuments: ReadonlyArray<{
     readonly path: string
@@ -207,10 +210,12 @@ export const buildRdfDataset = async (
   }
   const projection = projectCollectionToJsonLd(collection, graphs, options)
   const built = buildDatasetProjection(projection)
-  const nquads = await jsonld.canonize(
-    built.document as JsonLdDocument,
-    { algorithm: "URDNA2015", format: "application/n-quads" }
-  )
+  // jsonld 9 delegates this option to rdf-canonize, but the installed
+  // DefinitelyTyped surface has not yet declared canonizeOptions.
+  const nquads = await jsonld.canonize(built.document as JsonLdDocument, {
+    canonizeOptions: { algorithm: RDF_CANONICALIZATION_ALGORITHM },
+    format: "application/n-quads"
+  } as any)
   const parsed = new ParserN3<QuadExt>({ factory: rdf }).import(
     Readable.from([nquads])
   )

@@ -1,6 +1,10 @@
 import { createHash } from "node:crypto"
 import { expect, it } from "vitest"
-import { buildRdfDataset, serializeDatasetAsNQuads } from "../src/ontology/rdf.ts"
+import {
+  RDF_CANONICALIZATION_ALGORITHM,
+  buildRdfDataset,
+  serializeDatasetAsNQuads
+} from "../src/ontology/rdf.ts"
 
 const fixture = () => {
   const descriptor = { key: "demo", graph_id: "research-graph:demo", path: "ontology/demo/graph.json", guide: "ontology/demo/README.md", entry_node: "programme:demo", coverage: "DETAILED", corpus_roots: ["demo"], includes: [], excludes: [] }
@@ -10,6 +14,7 @@ const fixture = () => {
 }
 
 it("reuses JSON-LD projection while emitting named graphs and PROV export records", async () => {
+  expect(RDF_CANONICALIZATION_ALGORITHM).toBe("RDFC-1.0")
   const input = fixture()
   const first = await buildRdfDataset(input.collection, input.graphs, { sourceDocuments: input.sourceDocuments })
   const second = await buildRdfDataset(input.collection, input.graphs, { sourceDocuments: input.sourceDocuments })
