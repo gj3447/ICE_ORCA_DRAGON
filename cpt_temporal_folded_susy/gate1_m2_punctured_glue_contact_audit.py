@@ -499,7 +499,7 @@ def main() -> None:
             and all(
                 later < earlier
                 for earlier, later in zip(
-                    lateral_distances, lateral_distances[1:], strict=True
+                    lateral_distances, lateral_distances[1:]
                 )
             )
             and lateral_records[-1]["lower_imaginary_pairing_over_C"] > 0.0
