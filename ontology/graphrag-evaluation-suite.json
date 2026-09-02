@@ -1,5 +1,5 @@
 {
-  "schema": "ice-graphrag-evaluation-suite/v1",
+  "schema": "ice-graphrag-evaluation-suite/v2",
   "id": "canonical-four-graph-navigation",
   "title": "Canonical four-graph retrieval regression suite",
   "description": "Stable locator checks for the repository-local GraphRAG layer. Each case checks retrieval of an existing canonical graph record, not the truth of the record's scientific content.",
@@ -8,137 +8,186 @@
     {
       "id": "cpt-current-g1-blocker",
       "query": "original joint relative cycle signed global intersection vector",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::open:gate1-original-cycle-signed-global-intersections"
       ],
+      "max_first_expected_rank": 8,
       "rationale": "The active CPT navigation policy names this canonical Gate-1 open problem as the present blocker; retrieval must keep the locator discoverable."
     },
     {
       "id": "hyper-basis-invariant-diagnostic",
       "query": "basis invariant projected diagnostic",
+      "expectation": "RETRIEVE",
       "graph": "hypercomplex",
       "depth": 1,
       "expected_unit_ids": [
         "hypercomplex::open:hyper-basis-invariant-projected-diagnostic"
       ],
+      "max_first_expected_rank": 4,
       "rationale": "The hypercomplex graph's basis-invariant diagnostic remains an explicit open problem and should be retrieved by its documented language."
     },
     {
       "id": "legacy-preregistration-provenance",
       "query": "independent Git preregistration timestamp provenance",
+      "expectation": "RETRIEVE",
       "graph": "legacy",
       "depth": 1,
       "expected_unit_ids": [
         "legacy::claim:LEGACY_PREDICTION_SETS_HAVE_INDEPENDENT_GIT_PREREG_TIMESTAMPS"
       ],
+      "max_first_expected_rank": 6,
       "rationale": "The legacy graph distinguishes independently timestamped records from retrospective integrity claims; the canonical claim locator must remain findable."
     },
     {
       "id": "igrueqft-group-averaging-locality",
       "query": "group averaging locality entanglement",
+      "expectation": "RETRIEVE",
       "graph": "igrueqft",
       "depth": 1,
       "expected_unit_ids": [
         "igrueqft::claim:IGRUEQFT_GROUP_AVERAGING_MAKES_RECORDED_ENTANGLEMENT_BULK_LOCAL"
       ],
+      "max_first_expected_rank": 4,
       "rationale": "The locality audit keeps this finite-model claim separate from broader theory; retrieval must retain the scoped canonical claim locator."
     },
     {
       "id": "cpt-p1-real-root-exact-handoff",
       "query": "real corridor kappa transverse unique continuous selector",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS"
       ],
+      "forbidden_unit_ids": [
+        "cpt::open:raw-c-fiber-spectral-measure-transform"
+      ],
+      "max_first_expected_rank": 3,
       "rationale": "The P1 handoff is the scoped real fixed-lambda root theorem, not a nonreal Weyl or RAQ result."
     },
     {
       "id": "cpt-p4-complex-tail-prerequisite",
       "query": "p zero complex tail enclosure Volterra prerequisite actual recessive endpoint",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::open:raw-c-p0-complex-tail-theorem-prerequisite"
       ],
+      "forbidden_unit_ids": [
+        "cpt::claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS"
+      ],
+      "max_first_expected_rank": 3,
       "rationale": "P4 must locate the theorem prerequisite before any endpoint solver or spectral promotion."
     },
     {
       "id": "cpt-p4-spectral-measure-after-actual-m",
       "query": "actual selected nonzero p m boundary values Stieltjes Livsic spectral measure unitary fiber transform",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::open:raw-c-fiber-spectral-measure-transform"
       ],
+      "forbidden_unit_ids": [
+        "cpt::claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS"
+      ],
+      "max_first_expected_rank": 3,
       "rationale": "The spectral-measure locator records that a finite proxy is not a spectral theorem."
     },
     {
       "id": "cpt-ragnarok-nonexecution-policy",
       "query": "Ragnarok killed numbered phase execution containment historical runner",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::policy:ragnarok-circuit-breaker"
       ],
+      "max_first_expected_rank": 3,
       "rationale": "The circuit breaker must remain retrievable as an execution boundary rather than research evidence."
     },
     {
       "id": "cpt-nonreal-proxy-evidence-provenance",
       "query": "finite cutoff nonreal Weyl proxy VALID_RUN Green Lagrange evidence",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::evidence:raw-c-nonreal-weyl-proxy-result"
       ],
+      "forbidden_unit_ids": [
+        "cpt::open:raw-c-fiber-spectral-measure-transform"
+      ],
+      "max_first_expected_rank": 3,
       "rationale": "The result evidence is a stable provenance locator for the finite proxy only."
     },
     {
       "id": "cpt-nonreal-proxy-evidence-snapshot-artifact",
       "query": "raw c nonreal Weyl proxy evidence snapshot sha256 artifact provenance",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::artifact:raw-c-nonreal-weyl-proxy-evidence-snapshot"
       ],
+      "max_first_expected_rank": 3,
       "rationale": "The evidence snapshot artifact provides the hash-pinned compact provenance record."
     },
     {
       "id": "cpt-singular-weyl-primary-source",
       "query": "Singular Weyl Titchmarsh theory distributional potentials Eckhardt Gesztesy Nichols Teschl",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::source:eckhardt-et-al-2012-singular-weyl-titchmarsh"
       ],
+      "max_first_expected_rank": 3,
       "rationale": "The primary operator-theory source must be locatable without conflating it with a local endpoint proof."
     },
     {
       "id": "cpt-korean-current-g1-blocker",
       "query": "현재 Gate 1 병목 원래 joint relative cycle 부호 있는 global intersection vector",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::open:gate1-original-cycle-signed-global-intersections"
       ],
+      "max_first_expected_rank": 8,
       "rationale": "Korean project navigation should retrieve the same canonical current Gate-1 blocker."
     },
     {
       "id": "cpt-choice-invariance-promotion-policy",
       "query": "admissible choice invariance same mechanism two independent in graph consumers promotion boundary",
+      "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
         "cpt::policy:choice-invariance-cross-domain-promotion"
       ],
+      "forbidden_unit_ids": [
+        "cpt::claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS"
+      ],
+      "max_first_expected_rank": 3,
       "rationale": "The repository-wide promotion boundary must be retrievable as policy rather than evidence for an effect."
+    },
+    {
+      "id": "cpt-no-lexical-anchor-abstention",
+      "query": "zzzxxyy qqqvvv nnnjjj",
+      "expectation": "ABSTAIN",
+      "graph": "cpt",
+      "depth": 1,
+      "rationale": "Tokens absent from the selected graph must produce an explicit abstention, not token-hash collision results."
     }
   ],
   "guidance": [
-    "This suite is a retrieval regression baseline, not a scientific evaluation, citation-entailment audit, or execution authorization.",
-    "Add a case only when its expected locator and wording are stable, source-backed, and useful for future graph-navigation review.",
+    "This suite is a retrieval, boundary, and abstention regression baseline, not a scientific evaluation, citation-entailment audit, or execution authorization.",
+    "Add a positive case only when its locator, rank bound, forbidden boundaries, and wording are stable and source-backed; add a negative case only for a reviewed failure mode.",
     "Run the revision diff before accepting a material ontology or retrieval change, then inspect rank movement and raw graph context manually."
   ]
 }

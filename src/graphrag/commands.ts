@@ -25,6 +25,9 @@ const renderSearch = (result: ReturnType<typeof searchGraphRag>): string =>
   [
     `evidence GraphRAG search: ${result.query}`,
     `graph: ${result.graph}; hits: ${result.hits.length}; depth: ${result.depth}`,
+    ...(result.abstention.abstained
+      ? [`abstained: ${result.abstention.reason}`]
+      : [`lexical anchors: ${result.abstention.lexical_anchor_count}`]),
     ...result.hits.flatMap((hit) => [
       `${hit.rank}. [${hit.match}] ${hit.unit.id} — ${hit.unit.title}`,
       `   score=${hit.scores.combined.toFixed(4)} community=${hit.community_id}`,
@@ -182,8 +185,11 @@ export const graphRagEvaluateCommand = (limit: number, json: boolean) =>
             [
               `GraphRAG evaluation suite: ${report.suite.id} (${report.suite.version})`,
               `passed: ${report.evaluation.passed_cases}/${report.evaluation.total_cases}`,
-              `recall@${report.evaluation.limit}: ${report.evaluation.recall_at_limit.toFixed(3)}`,
+              `locator recall@${report.evaluation.limit}: ${report.evaluation.recall_at_limit.toFixed(3)}`,
               `MRR: ${report.evaluation.mean_reciprocal_rank.toFixed(3)}`,
+              `abstention accuracy: ${report.evaluation.abstention_accuracy.toFixed(3)}`,
+              `boundary violations: ${report.evaluation.boundary_violation_cases}`,
+              `invalid suite locators: ${report.evaluation.invalid_locator_cases}`,
               "boundary: retrieval regression only; inspect graph context and sources manually"
             ].join("\n")
           )
@@ -201,6 +207,8 @@ export const graphRagDiffCommand = (base: string, limit: number, json: boolean) 
               `suite: ${report.suite.id} (${report.suite.version})`,
               `ranking changes: ${report.evaluation.summary.ranking_changed_cases}`,
               `pass-status changes: ${report.evaluation.summary.pass_status_changed_cases}`,
+              `abstention changes: ${report.evaluation.summary.abstention_changed_cases}`,
+              `boundary-status changes: ${report.evaluation.summary.boundary_status_changed_cases}`,
               `MRR delta: ${report.evaluation.summary.mean_reciprocal_rank_delta.toFixed(3)}`,
               "boundary: review-only; rank movement does not authorize a graph or research change"
             ].join("\n")

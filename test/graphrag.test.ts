@@ -116,7 +116,9 @@ it("has deterministic communities and a declared retrieval evaluation boundary",
       {
         id: "orbit-source-path",
         query: "orbital bound",
+        expectation: "RETRIEVE",
         expected_unit_ids: ["graphrag-test::source:ORBIT"],
+        max_first_expected_rank: 3,
         depth: 2
       }
     ],
@@ -125,8 +127,10 @@ it("has deterministic communities and a declared retrieval evaluation boundary",
 
   expect(first.communities).toEqual(second.communities)
   expect(evaluation.recall_at_limit).toBe(1)
+  expect(evaluation.passed).toBe(true)
   expect(evaluation.cases[0]?.first_expected_rank).toBe(3)
   expect(evaluation.mean_reciprocal_rank).toBeCloseTo(1 / 3, 12)
+  expect(evaluation.rank_bound_pass_rate).toBe(1)
   expect(evaluation.guidance.join(" ")).toContain("does not evaluate scientific truth")
 })
 
@@ -136,7 +140,9 @@ it("reports rank movement without treating it as a research verdict", () => {
     {
       id: "orbit-source-path",
       query: "orbital bound",
+      expectation: "RETRIEVE" as const,
       expected_unit_ids: ["graphrag-test::source:ORBIT"],
+      max_first_expected_rank: 3,
       depth: 2
     }
   ]
@@ -144,7 +150,71 @@ it("reports rank movement without treating it as a research verdict", () => {
   const workingTree = evaluateGraphRag(index, cases, 6)
   const diff = diffGraphRagEvaluations(base, workingTree)
 
-  expect(diff.schema).toBe("ice-evidence-graph-rag-evaluation-diff/v1")
+  expect(diff.schema).toBe("ice-evidence-graph-rag-evaluation-diff/v2")
   expect(diff.cases).toHaveLength(1)
   expect(diff.guidance.join(" ")).toContain("does not validate a scientific interpretation")
+})
+
+it("abstains without a lexical anchor and scores negative and boundary controls", () => {
+  const index = buildGraphRagIndex([fixture()])
+  const search = searchGraphRag(index, "zzzxxyy qqqvvv", { limit: 6 })
+  const evaluation = evaluateGraphRag(
+    index,
+    [
+      {
+        id: "unknown-token-abstention",
+        query: "zzzxxyy qqqvvv",
+        expectation: "ABSTAIN"
+      },
+      {
+        id: "bounded-orbit",
+        query: "orbital bound",
+        expectation: "RETRIEVE",
+        expected_unit_ids: ["graphrag-test::claim:ORBIT"],
+        forbidden_unit_ids: ["graphrag-test::source:ORBIT"],
+        max_first_expected_rank: 1,
+        depth: 0
+      }
+    ],
+    1
+  )
+
+  expect(search).toMatchObject({
+    schema: "ice-evidence-graph-rag-search/v2",
+    abstention: {
+      abstained: true,
+      reason: "NO_LEXICAL_ANCHOR",
+      lexical_anchor_count: 0
+    },
+    hits: []
+  })
+  expect(evaluation.passed_cases).toBe(2)
+  expect(evaluation.abstention_accuracy).toBe(1)
+  expect(evaluation.boundary_violation_cases).toBe(0)
+  expect(evaluation.invalid_locator_cases).toBe(0)
+})
+
+it("does not let an unknown forbidden locator create a vacuous boundary pass", () => {
+  const evaluation = evaluateGraphRag(
+    buildGraphRagIndex([fixture()]),
+    [
+      {
+        id: "invalid-negative-control",
+        query: "orbital bound",
+        expectation: "RETRIEVE",
+        expected_unit_ids: ["graphrag-test::claim:ORBIT"],
+        forbidden_unit_ids: ["graphrag-test::claim:DOES_NOT_EXIST"],
+        max_first_expected_rank: 1,
+        depth: 0
+      }
+    ],
+    1
+  )
+
+  expect(evaluation.passed_cases).toBe(0)
+  expect(evaluation.passed).toBe(false)
+  expect(evaluation.invalid_locator_cases).toBe(1)
+  expect(evaluation.cases[0]?.unknown_forbidden_unit_ids).toEqual([
+    "graphrag-test::claim:DOES_NOT_EXIST"
+  ])
 })

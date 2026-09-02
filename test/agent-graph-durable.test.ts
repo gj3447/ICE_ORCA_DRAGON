@@ -48,7 +48,7 @@ const hit: GraphRagHit = {
 }
 
 const retrieval = (hits: ReadonlyArray<GraphRagHit>): GraphRagSearchResult => ({
-  schema: "ice-evidence-graph-rag-search/v1",
+  schema: "ice-evidence-graph-rag-search/v2",
   contract: {
     schema: "ice-evidence-graph-rag/v1",
     mode: "DETERMINISTIC_EVIDENCE_FIRST_HUMAN_DIRECTED",
@@ -61,7 +61,12 @@ const retrieval = (hits: ReadonlyArray<GraphRagHit>): GraphRagSearchResult => ({
   graph: "cpt",
   limit: 12,
   depth: 1,
-  index: { text_units: 1, communities: 1, retrieval: "BM25 + deterministic lexical hash vector + bounded graph expansion" },
+  index: { text_units: 1, communities: 1, retrieval: "BM25 lexical anchors + deterministic token-hash reranking + bounded graph expansion" },
+  abstention: {
+    abstained: hits.length === 0,
+    reason: hits.length === 0 ? "NO_LEXICAL_ANCHOR" : null,
+    lexical_anchor_count: hits.length
+  },
   hits,
   communities: [],
   guidance: []

@@ -99,7 +99,7 @@ export interface GraphRagHit {
 }
 
 export interface GraphRagSearchResult {
-  readonly schema: "ice-evidence-graph-rag-search/v1"
+  readonly schema: "ice-evidence-graph-rag-search/v2"
   readonly contract: typeof graphRagContract
   readonly query: string
   readonly graph: string
@@ -108,7 +108,12 @@ export interface GraphRagSearchResult {
   readonly index: {
     readonly text_units: number
     readonly communities: number
-    readonly retrieval: "BM25 + deterministic lexical hash vector + bounded graph expansion"
+    readonly retrieval: "BM25 lexical anchors + deterministic token-hash reranking + bounded graph expansion"
+  }
+  readonly abstention: {
+    readonly abstained: boolean
+    readonly reason: "NO_LEXICAL_ANCHOR" | null
+    readonly lexical_anchor_count: number
   }
   readonly hits: ReadonlyArray<GraphRagHit>
   readonly communities: ReadonlyArray<GraphRagCommunity>
@@ -411,11 +416,17 @@ export const searchGraphRag = (
   if (graph !== "all" && candidates.length === 0) {
     throw new Error(`no graph is registered as '${graph}'`)
   }
-  const preliminary = candidates.map((unit) => ({
-    unit,
-    bm25: bm25(unit, queryFrequency, index),
-    vector: cosine(unit.vector, queryVector)
-  }))
+  // The token-hash vector is a cheap reranker, not a semantic embedding.  A
+  // hash collision without any exact query-token overlap is therefore not a
+  // retrieval seed.  Requiring a positive BM25 anchor prevents unrelated
+  // queries from manufacturing confident-looking results through collisions.
+  const preliminary = candidates
+    .map((unit) => ({
+      unit,
+      bm25: bm25(unit, queryFrequency, index),
+      vector: cosine(unit.vector, queryVector)
+    }))
+    .filter(({ bm25: score }) => score > 0)
   const maxBm25 = Math.max(...preliminary.map(({ bm25: score }) => score), 0)
   const direct = preliminary
     .map(({ unit, bm25: bm25Score, vector }) => ({
@@ -510,7 +521,7 @@ export const searchGraphRag = (
     return community === undefined ? [] : [community]
   })
   return {
-    schema: "ice-evidence-graph-rag-search/v1",
+    schema: "ice-evidence-graph-rag-search/v2",
     contract: graphRagContract,
     query: normalizedQuery,
     graph,
@@ -519,14 +530,22 @@ export const searchGraphRag = (
     index: {
       text_units: candidates.length,
       communities: matchingCommunities.length,
-      retrieval: "BM25 + deterministic lexical hash vector + bounded graph expansion"
+      retrieval: "BM25 lexical anchors + deterministic token-hash reranking + bounded graph expansion"
+    },
+    abstention: {
+      abstained: preliminary.length === 0,
+      reason: preliminary.length === 0 ? "NO_LEXICAL_ANCHOR" : null,
+      lexical_anchor_count: preliminary.length
     },
     hits,
     communities: matchingCommunities,
     guidance: [
       "This is retrieval context, not an LLM-generated answer or a scientific claim.",
       "Each TextUnit retains a canonical ontology graph/node locator; inspect raw artifacts and primary sources before interpretation.",
-      "The local hash vector is deterministic and inexpensive, not a learned semantic embedding; benchmark a learned embedding path before treating it as an upgrade.",
+      "The local hash vector is deterministic and inexpensive, not a learned semantic embedding; it may rerank exact lexical anchors but cannot seed retrieval by itself.",
+      ...(preliminary.length === 0
+        ? ["No exact lexical anchor was present, so retrieval abstained instead of returning token-hash collisions."]
+        : []),
       "A retrieval result neither authorizes execution nor creates a follow-up task."
     ]
   }
@@ -541,6 +560,6 @@ export const summarizeGraphRagIndex = (index: GraphRagIndex) => ({
   structural_communities: index.communities.length,
   text_unit_source: "canonical ontology node text",
   community_algorithm: "deterministic Louvain over explicit ontology relations",
-  retrieval: "BM25 + deterministic lexical hash vector + bounded graph expansion",
+  retrieval: "BM25 lexical anchors + deterministic token-hash reranking + bounded graph expansion",
   notes: index.index_notes
 })

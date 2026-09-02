@@ -11,12 +11,12 @@ export const GRAPH_RAG_EVAL_SUITE_RELPATH = "ontology/graphrag-evaluation-suite.
 const MAX_SUITE_BYTES = 512n * 1024n
 const MAX_CASES = 128
 
-export interface GraphRagEvaluationSuiteCase extends GraphRagEvalCase {
+export type GraphRagEvaluationSuiteCase = GraphRagEvalCase & {
   readonly rationale: string
 }
 
 export interface GraphRagEvaluationSuite {
-  readonly schema: "ice-graphrag-evaluation-suite/v1"
+  readonly schema: "ice-graphrag-evaluation-suite/v2"
   readonly id: string
   readonly title: string
   readonly description: string
@@ -103,6 +103,17 @@ const stringArray = (
   return result
 }
 
+const optionalStringArray = (
+  record: JsonRecord,
+  field: string,
+  label: string,
+  maximumItems: number,
+  maximumLength: number
+): ReadonlyArray<string> => {
+  if (record[field] === undefined) return []
+  return stringArray(record, field, label, maximumItems, maximumLength)
+}
+
 const isQualifiedUnitId = (value: string): boolean =>
   /^[a-z0-9-]+::[a-z_]+:[A-Za-z0-9_.:-]+$/.test(value)
 
@@ -114,7 +125,17 @@ const parseCase = (value: unknown, index: number): GraphRagEvaluationSuiteCase =
   }
   rejectUnknownFields(
     record,
-    ["id", "query", "expected_unit_ids", "graph", "depth", "rationale"],
+    [
+      "id",
+      "query",
+      "expectation",
+      "expected_unit_ids",
+      "forbidden_unit_ids",
+      "max_first_expected_rank",
+      "graph",
+      "depth",
+      "rationale"
+    ],
     label
   )
   const id = requiredString(record, "id", label, 128)
@@ -123,13 +144,40 @@ const parseCase = (value: unknown, index: number): GraphRagEvaluationSuiteCase =
       `${label}.id must use lowercase letters, digits, and hyphens`
     )
   }
-  const expectedUnitIds = stringArray(record, "expected_unit_ids", label, 16, 512)
-  for (const unitId of expectedUnitIds) {
+  const expectation = record.expectation
+  if (expectation !== "RETRIEVE" && expectation !== "ABSTAIN") {
+    throw new GraphRagEvaluationSuiteError(
+      `${label}.expectation must be 'RETRIEVE' or 'ABSTAIN'`
+    )
+  }
+  const expectedUnitIds = expectation === "RETRIEVE"
+    ? stringArray(record, "expected_unit_ids", label, 16, 512)
+    : []
+  const forbiddenUnitIds = expectation === "RETRIEVE"
+    ? optionalStringArray(record, "forbidden_unit_ids", label, 16, 512)
+    : []
+  if (
+    expectation === "ABSTAIN" &&
+    (record.expected_unit_ids !== undefined ||
+      record.forbidden_unit_ids !== undefined ||
+      record.max_first_expected_rank !== undefined)
+  ) {
+    throw new GraphRagEvaluationSuiteError(
+      `${label} ABSTAIN cases must omit expected, forbidden, and rank-bound fields`
+    )
+  }
+  for (const unitId of [...expectedUnitIds, ...forbiddenUnitIds]) {
     if (!isQualifiedUnitId(unitId)) {
       throw new GraphRagEvaluationSuiteError(
-        `${label}.expected_unit_ids contains invalid graph-qualified unit id '${unitId}'`
+        `${label} contains invalid graph-qualified unit id '${unitId}'`
       )
     }
+  }
+  const overlap = expectedUnitIds.filter((unitId) => forbiddenUnitIds.includes(unitId))
+  if (overlap.length > 0) {
+    throw new GraphRagEvaluationSuiteError(
+      `${label} cannot both expect and forbid '${overlap[0]}'`
+    )
   }
   const graph = record.graph
   if (graph !== undefined && (typeof graph !== "string" || !/^[a-z0-9-]{1,128}$/.test(graph))) {
@@ -148,13 +196,43 @@ const parseCase = (value: unknown, index: number): GraphRagEvaluationSuiteCase =
     throw new GraphRagEvaluationSuiteError(`${label}.depth must be an integer from 0 through 3`)
   }
   const depth = depthValue === undefined ? undefined : depthValue
-  return {
+  const common = {
     id,
     query: requiredString(record, "query", label, 500),
-    expected_unit_ids: expectedUnitIds,
     ...(graph === undefined ? {} : { graph }),
     ...(depth === undefined ? {} : { depth }),
     rationale: requiredString(record, "rationale", label, 1_500)
+  }
+  if (expectation === "ABSTAIN") {
+    return { ...common, expectation }
+  }
+  const maxRank = record.max_first_expected_rank
+  if (
+    typeof maxRank !== "number" ||
+    !Number.isSafeInteger(maxRank) ||
+    maxRank < 1 ||
+    maxRank > 50
+  ) {
+    throw new GraphRagEvaluationSuiteError(
+      `${label}.max_first_expected_rank must be an integer from 1 through 50`
+    )
+  }
+  if (graph !== undefined) {
+    const wrongGraph = [...expectedUnitIds, ...forbiddenUnitIds].find(
+      (unitId) => !unitId.startsWith(`${graph}::`)
+    )
+    if (wrongGraph !== undefined) {
+      throw new GraphRagEvaluationSuiteError(
+        `${label} locator '${wrongGraph}' does not match graph '${graph}'`
+      )
+    }
+  }
+  return {
+    ...common,
+    expectation,
+    expected_unit_ids: expectedUnitIds,
+    ...(forbiddenUnitIds.length === 0 ? {} : { forbidden_unit_ids: forbiddenUnitIds }),
+    max_first_expected_rank: maxRank
   }
 }
 
@@ -179,9 +257,9 @@ export const decodeGraphRagEvaluationSuite = (
     ["schema", "id", "title", "description", "version", "cases", "guidance"],
     label
   )
-  if (record.schema !== "ice-graphrag-evaluation-suite/v1") {
+  if (record.schema !== "ice-graphrag-evaluation-suite/v2") {
     throw new GraphRagEvaluationSuiteError(
-      `${label}.schema must be 'ice-graphrag-evaluation-suite/v1'`
+      `${label}.schema must be 'ice-graphrag-evaluation-suite/v2'`
     )
   }
   const cases = record.cases
@@ -195,7 +273,7 @@ export const decodeGraphRagEvaluationSuite = (
     throw new GraphRagEvaluationSuiteError(`${label}.cases must have unique ids`)
   }
   return {
-    schema: "ice-graphrag-evaluation-suite/v1",
+    schema: "ice-graphrag-evaluation-suite/v2",
     id: requiredString(record, "id", label, 128),
     title: requiredString(record, "title", label, 500),
     description: requiredString(record, "description", label, 1_500),

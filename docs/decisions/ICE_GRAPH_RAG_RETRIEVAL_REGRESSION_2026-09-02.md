@@ -9,12 +9,15 @@ Status: accepted
 `ontology/graphrag-evaluation-suite.json` is the reviewable, versioned
 retrieval-regression suite for the repository-local GraphRAG surface. Each case
 fixes a stable natural-language query, expected graph-qualified canonical node
-locator, optional graph selector and bounded expansion depth. The suite is a
+locator, maximum acceptable first rank, optional forbidden boundary locators,
+graph selector and bounded expansion depth. Explicit `ABSTAIN` cases record
+reviewed no-match failures. The suite is a
 control for navigation quality: it does not test scientific truth, citation
 entailment, model reasoning, or a calculation result.
 
-The baseline contains thirteen stable locators rather than one generic case per
-graph. It covers the current G1 blocker, P1/P4 separation, a result-to-artifact
+The baseline contains thirteen stable positive locators and one no-anchor
+negative control rather than one generic case per graph. It covers the current
+G1 blocker, P1/P4 separation, a result-to-artifact
 provenance lookup, the singular-Weyl source, the Ragnarok boundary, all four
 programme graphs, one Korean G1 query, and the choice-invariance promotion
 policy locator. This is deliberately a small
@@ -28,8 +31,14 @@ Two read-only commands use that suite:
 ```
 
 `eval` evaluates the semantically valid working ontology. It reports
-expected-locator pass rate, mean reciprocal rank, mean expected-locator recall
-and per-case ranks.
+expected-locator recall, mean reciprocal rank, mean expected-locator recall,
+rank-bound pass rate, abstention accuracy, forbidden-boundary violations and
+unknown-suite-locator failures plus per-case outcomes. A positive case passes only when every expected locator is
+present, its first expected locator meets the declared rank bound, and no
+forbidden locator is returned. Expected and forbidden locators must both exist
+in the evaluated index, so a misspelled negative control cannot pass vacuously.
+The CLI exits nonzero when any case fails, making the suite an effective CI
+gate rather than a report that can stay green after a regression.
 `diff` evaluates the same current suite over one committed ontology revision and
 the semantically valid working ontology, then reports rank, retrieved-unit and pass-status
 movement. Its historical index retains any semantic-validation error as report
@@ -90,3 +99,14 @@ case, graph record, agent checkpoint or repro manifest.
 This standard adds an auditable quality control around the native graph without
 introducing a vector database, model-extracted facts, an external graph write or
 an autonomous research loop.
+
+## Lexical-anchor abstention
+
+The deterministic token-hash vector is now a reranker only. A candidate must
+first share at least one exact normalized token with the query and therefore
+receive positive BM25 score. If the selected graph contains no lexical anchor,
+search returns zero hits with `NO_LEXICAL_ANCHOR`; graph expansion cannot begin
+from a hash collision. This deliberately favors inspectable precision and
+honest abstention over pretending that a local hash projection is a semantic
+embedding. It does not solve synonym recall, multilingual semantic retrieval,
+or citation entailment; those require a separately benchmarked retrieval path.

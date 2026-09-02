@@ -294,7 +294,7 @@ const assertSafePlan = (plan: ResearchAgentWorkflowPlan): void => {
     "plan execution step is not blocked"
   )
   const reconstruction: GraphRagSearchResult = {
-    schema: "ice-evidence-graph-rag-search/v1",
+    schema: "ice-evidence-graph-rag-search/v2",
     contract: graphRagContract,
     query: plan.retrieval.query,
     graph: plan.retrieval.graph,
@@ -304,7 +304,12 @@ const assertSafePlan = (plan: ResearchAgentWorkflowPlan): void => {
       text_units: plan.retrieval.hits.length,
       communities: plan.retrieval.communities.length,
       retrieval:
-        "BM25 + deterministic lexical hash vector + bounded graph expansion"
+        "BM25 lexical anchors + deterministic token-hash reranking + bounded graph expansion"
+    },
+    abstention: {
+      abstained: plan.retrieval.hits.length === 0,
+      reason: plan.retrieval.hits.length === 0 ? "NO_LEXICAL_ANCHOR" : null,
+      lexical_anchor_count: plan.retrieval.hits.length
     },
     hits: plan.retrieval.hits,
     communities: plan.retrieval.communities,

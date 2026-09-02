@@ -1,5 +1,6 @@
 import { Args, Command, Options } from "@effect/cli"
-import { Console } from "effect"
+import { Console, Effect } from "effect"
+import { setExitCode } from "../commands.ts"
 import {
   graphRagDiffCommand,
   graphRagEvaluateCommand,
@@ -44,10 +45,12 @@ const search = Command.make(
 )
 
 const evaluate = Command.make("eval", { limit, json }, ({ limit, json }) =>
-  graphRagEvaluateCommand(limit, json)
+  graphRagEvaluateCommand(limit, json).pipe(
+    Effect.flatMap((report) => setExitCode(report.evaluation.passed ? 0 : 1))
+  )
 ).pipe(
   Command.withDescription(
-    "run the versioned canonical retrieval-regression suite; never evaluates scientific truth"
+    "run the versioned retrieval/boundary/abstention suite; never evaluates scientific truth"
   )
 )
 
