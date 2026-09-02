@@ -93,8 +93,10 @@ payload identified by the embedded projection-output digest.
 The stable interoperability target is RDF 1.1, JSON-LD 1.1, SHACL 1.0,
 SPARQL 1.1, PROV-O, and RO-Crate 1.3. RDF 1.2, SHACL 1.2, and SPARQL 1.2 are
 not claimed as completed conformance targets because their current W3C
-publications are pre-Recommendation drafts. The read-only MCP boundary follows
-the [MCP 2025-11-25 specification](https://modelcontextprotocol.io/specification/2025-11-25): it carries bounded inspection capabilities but is neither agent execution orchestration nor research authorization.
+publications are pre-Recommendation drafts. The read-only MCP boundary negotiates
+the [MCP 2026-07-28 revision](https://blog.modelcontextprotocol.io/posts/2026-07-28/), with 2025-era
+stdio compatibility: it carries bounded inspection capabilities but is neither agent execution
+orchestration nor research authorization.
 
 ## Authoring workflow
 

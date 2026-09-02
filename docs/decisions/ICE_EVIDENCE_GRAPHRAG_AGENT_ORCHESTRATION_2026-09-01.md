@@ -71,9 +71,8 @@ evaluation before added orchestration complexity. It does not call a model API
 or require an API key. See [OpenAI's
 current model and agent guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.5).
 
-MCP 2025-11-25 Tasks are intentionally not used. They are an experimental
-deferred-result protocol for long-running requests, while this repository needs
-a local human-review record that cannot become an execution request. The
+The MCP Tasks extension is intentionally not used. It serves deferred work,
+while this repository needs a local human-review record that cannot become an execution request. The
 durable run state therefore stays an explicit CLI-owned file; every MCP tool
 remains synchronous and read-only.
 

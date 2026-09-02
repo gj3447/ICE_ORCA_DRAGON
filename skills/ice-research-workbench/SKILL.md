@@ -27,7 +27,7 @@ Treat this repository as a computational workbench, not as an automatic physics-
 - `TOE_CANDIDATE_READY_FOR_EXTERNAL_REVIEW` is the strongest repository completion label. It requires the full theory and empirical criteria in the active TOE routing decision and is not a claim that a TOE has been discovered or accepted.
 - OpenAlex results are discovery metadata. They are not independent evidence, a substitute for the cited paper, or permission to infer a physical conclusion.
 - GraphRAG retrieval is also review context, not a synthesized conclusion. Add learned embeddings, model extraction, or additional agent automation only after a benchmark and explicit review.
-- The MCP surface is read-only. It may validate/query/preview/audit, but it does not execute Python, create/review durable runs, write crates, create ontology nodes, or call arbitrary notebook/code tools. MCP Tasks remain unused because the current standard marks them experimental and this repository exposes no deferred execution job.
+- The MCP surface is read-only. It may validate/query/preview/audit, but it does not execute Python, create/review durable runs, write crates, create ontology nodes, or call arbitrary notebook/code tools. Its stdio entry negotiates MCP 2026-07-28 with legacy compatibility. The Tasks extension remains unused because this repository exposes no deferred execution job and never authorizes an automatic successor run.
 - Historical numbered Phase 51--56 descendants remain blocked. Do not bypass `./ice` with direct Python execution.
 
 When a task changes files, preserve unrelated dirty changes, perform proportionate validation, and make the repository-local commit required by its worktree rules. Do not push unless the user explicitly asks.

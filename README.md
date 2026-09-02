@@ -447,7 +447,8 @@ experiment; see the [graph-aware harness decision](docs/decisions/ICE_GRAPH_AWAR
 `literature search` is a bounded, read-only OpenAlex works-graph lookup for time-stamped source discovery.
 It is not a substitute for reading a primary source and it never authorizes a run. `npm run --silent mcp`
 exposes the graph harness, GraphRAG regression, SHACL, SPARQL, RO-Crate preview, durable-run audit,
-and literature-discovery surfaces through local stdio. MCP remains read-only; explicit durable-run
+and literature-discovery surfaces through local stdio. The stdio entry negotiates MCP 2026-07-28 and
+retains 2025-era host compatibility. MCP remains read-only; explicit durable-run
 creation and review are CLI-only local writes, and numerical execution remains outside the agent
 state machine. The fixed `./ice agent eval` suite checks current-blocker, downstream, supporting,
 and unanchored routing plus finite human handoffs and non-authorization. See the

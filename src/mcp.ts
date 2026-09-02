@@ -54,8 +54,18 @@ const asToolError = (error: unknown) => ({
 })
 
 const capabilities = {
-  schema: "ice-research-mcp-capabilities/v2",
+  schema: "ice-research-mcp-capabilities/v3",
   mode: "READ_ONLY_GRAPH_INTEROP_RESEARCH_ORCHESTRATION",
+  protocol: {
+    transport: "stdio",
+    modern_revision: "2026-07-28",
+    legacy_compatibility: "2024-10-07 through 2025-11-25",
+    negotiation: "serveStdio connection-era negotiation",
+    extensions: {
+      tasks: false,
+      skills_over_mcp: false
+    }
+  },
   tools: [
     {
       name: "ice_research_context",
@@ -116,6 +126,10 @@ const capabilities = {
     {
       name: "ice_research_run_audit",
       purpose: "Read and audit one explicitly persisted local run and its revision drift."
+    },
+    {
+      name: "ice_research_capabilities",
+      purpose: "Describe this exact tool catalog, protocol support, and non-authorization boundaries."
     }
   ],
   boundaries: [

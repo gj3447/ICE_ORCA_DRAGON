@@ -23,10 +23,16 @@ The implementation is deliberately small:
 - `skills/ice-research-workbench/` is the versioned source for the installed Codex skill at
   `~/.codex/skills/ice-research-workbench`.
 
+The skill is a native filesystem-installed Codex skill, not a claim of support for the still-in-review
+[Skills Over MCP extension](https://modelcontextprotocol.io/community/working-groups/skills-over-mcp).
+The MCP server and skill are connected by the skill workflow and the host configuration, not by an
+experimental protocol advertisement.
+
 The server uses the [`@modelcontextprotocol/server` v2
-SDK](https://ts.sdk.modelcontextprotocol.io/v2/) `serveStdio` entry point and targets
-[MCP 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25) over stdio. Standard stdio
-requires that the protocol owns stdout; startup and error diagnostics therefore use stderr only.
+SDK](https://ts.sdk.modelcontextprotocol.io/v2/) `serveStdio` entry point. It negotiates the modern
+[MCP 2026-07-28](https://blog.modelcontextprotocol.io/posts/2026-07-28/) era and retains negotiated
+2025-era compatibility for existing stdio hosts. Standard stdio requires that the protocol owns stdout;
+startup and error diagnostics therefore use stderr only.
 
 ## Why this boundary
 
@@ -55,20 +61,28 @@ supports that posture.
 
 Run the server from the repository root with `npm run --silent mcp`; the `--silent` flag prevents npm's
 own stdout banner from corrupting stdio protocol messages. Configure an MCP host to launch that command
-with this repository as its working directory. Use `./ice literature search "<query>" --json` for the
+with this repository as its working directory. For Codex, register the absolute current repository path
+from the repository root with:
+
+```bash
+codex mcp add ice-research -- npm --prefix "$PWD" run --silent mcp
+```
+
+Use `./ice literature search "<query>" --json` for the
 same OpenAlex discovery surface without an MCP host.
 
 The installed skill routes material graph changes through the harness, source discovery through OpenAlex,
 interoperability through the offline RDF/SHACL/SPARQL/PROV-O/RO-Crate layer, durable handoffs through
 explicit CLI-only state transitions, and numerical work through the existing lean bounded-runner rules.
 It does not apply to unrelated coding, does not create ontology records by default, and does not change
-the active execution circuit breaker. MCP 2025-11-25 Tasks stay disabled because that facility is
-experimental and these tools do not represent deferred execution jobs.
+the active execution circuit breaker. The MCP Tasks extension stays disabled because these tools do not
+represent deferred execution jobs and a task protocol would not authorize an automatic successor run.
 
 ## Validation
 
 - Typecheck and Vitest cover OpenAlex bounds, graph interoperability, durable state/self-consistency handling,
-  routing evaluation, and an in-memory MCP client/server handshake.
+  routing evaluation, exact tool discovery, a legacy in-memory MCP handshake, and pinned modern
+  `2026-07-28` stdio negotiation.
 - `./ice harness check` remains the full repository graph/hash/evidence integrity gate.
 - `./ice ontology shacl --graph all` is the projection-shape gate; `./ice agent eval` is the
   routing/handoff boundary regression.

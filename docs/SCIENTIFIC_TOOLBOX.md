@@ -66,13 +66,18 @@ Installed under `~/.codex/skills`:
 - repository-specific: `ice-research-workbench` (versioned source:
   [`skills/ice-research-workbench/`](../skills/ice-research-workbench/))
 
+`ice-research-workbench` is installed through Codex's native skill discovery. It is not advertised as
+the still-in-review Skills Over MCP extension.
+
 The large third-party scientific skill collection was not installed wholesale. Individual skill files
 can contain procedural instructions or shell actions, so additions should remain explicit and reviewable.
 Newly installed skills become available after a Codex restart/new turn.
 
 ## MCP status
 
-- `npm run --silent mcp` launches the repository-local `ice-orca-dragon-research` server over stdio, built with MCP TypeScript SDK v2 and targeting MCP 2025-11-25.
+- `npm run --silent mcp` launches the repository-local `ice-orca-dragon-research` server over stdio,
+  built with MCP TypeScript SDK v2. Its `serveStdio` entry negotiates the modern MCP 2026-07-28 era
+  and retains 2025-era compatibility for existing hosts.
   `--silent` suppresses npm's own stdout banner, leaving stdout exclusively for MCP messages. It is
   read-only and exposes bounded graph context/impact/integrity, GraphRAG retrieval/evaluation,
   SHACL validation, restricted local SPARQL queries, RO-Crate preview, durable-run audit, and a maximum-20-result
