@@ -328,7 +328,7 @@ def main() -> None:
         audit.count_ball()
         p_4 = A_4.sqrt()
         audit.count_ball()
-        u0_4 = p_4.sqrt().inv()
+        u0_4 = acb(1) / p_4.sqrt()
         audit.count_ball()
         ell_4 = acb(1) - delta_4 / (4 * relative_4)
         audit.count_ball()
