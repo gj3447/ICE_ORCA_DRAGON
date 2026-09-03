@@ -1,0 +1,15 @@
+import { Console, Effect } from "effect"
+import { iceError } from "../errors.ts"
+import { loadValidOntologyCollectionStructure } from "../ontology/repository.ts"
+import { validateSidecarCollection } from "./core.ts"
+import { SIDECAR_DOCUMENT_PATHS, loadSidecarCollection, readFixedSidecarText } from "./repository.ts"
+
+const inputs = Effect.all({ collection: loadSidecarCollection, v1: readFixedSidecarText(SIDECAR_DOCUMENT_PATHS[0]), v2: readFixedSidecarText(SIDECAR_DOCUMENT_PATHS[1]), comparator: readFixedSidecarText(SIDECAR_DOCUMENT_PATHS[2]), ontology: loadValidOntologyCollectionStructure })
+export const sidecarCollectionValidateData = inputs.pipe(Effect.map(({ collection, v1, v2, comparator, ontology }) => validateSidecarCollection(collection, { SCIENTIFIC_INTUITION_V1: v1, SCIENTIFIC_INTUITION_V2: v2, COMPARATOR_PROTOCOL_V1: comparator }, ontology.graphs)))
+const validated = inputs.pipe(Effect.flatMap(({ collection, v1, v2, comparator, ontology }) => { const report = validateSidecarCollection(collection, { SCIENTIFIC_INTUITION_V1: v1, SCIENTIFIC_INTUITION_V2: v2, COMPARATOR_PROTOCOL_V1: comparator }, ontology.graphs); return report.valid ? Effect.succeed({ collection, report }) : Effect.fail(iceError("SIDECAR_COLLECTION_SEMANTICS_INVALID", report.errors.map(({ code }) => code).join(", "))) }))
+export const sidecarCollectionSummaryData = validated.pipe(Effect.map(({ collection, report }) => ({ schema: "non-authoritative-sidecar-collection-summary/v1" as const, collection_id: collection.collection_id, contract: { authority: collection.authority, canonical_graph_unchanged: collection.canonical_graph_unchanged, does_not_authorize_execution: collection.does_not_authorize_execution }, counts: report.counts, entries: collection.entries.map(({ id, kind, title, state, path, document_sha256 }) => ({ id, kind, title, state, path, document_sha256 })), boundaries: collection.boundaries })))
+export const sidecarCollectionShowData = (id: string) => validated.pipe(Effect.flatMap(({ collection }) => { const entry = collection.entries.find((candidate) => candidate.id === id); return entry === undefined ? Effect.fail(iceError("SIDECAR_COLLECTION_TARGET_NOT_FOUND", `sidecar '${id}' was not found`, 2)) : Effect.succeed({ schema: "non-authoritative-sidecar-collection-show/v1" as const, entry, contract: { authority: collection.authority, canonical_graph_unchanged: true as const, does_not_authorize_execution: true as const }, boundary: "This registry entry is a locator and integrity record only; it is not a canonical graph node, evidence edge, or execution authority." }) }))
+const print = (value: unknown) => Console.log(JSON.stringify(value, null, 2))
+export const sidecarCollectionValidateCommand = () => sidecarCollectionValidateData.pipe(Effect.tap(print))
+export const sidecarCollectionSummaryCommand = () => sidecarCollectionSummaryData.pipe(Effect.tap(print))
+export const sidecarCollectionShowCommand = (id: string) => sidecarCollectionShowData(id).pipe(Effect.tap(print))

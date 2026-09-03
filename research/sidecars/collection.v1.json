@@ -1,0 +1,63 @@
+{
+  "$schema": "../../ontology/schema/non-authoritative-sidecar-collection-v1.schema.json",
+  "schema_version": "non-authoritative-sidecar-collection/v1",
+  "collection_id": "sidecar-collection:ice-orca-dragon",
+  "title": "ICE_ORCA_DRAGON non-authoritative research sidecars",
+  "description": "Fixed-path integrity registry for hypothesis-generation and comparator-method sidecars outside the canonical research ontology.",
+  "updated_at_utc": "2026-09-03T00:00:00Z",
+  "authority": "NON_AUTHORITATIVE_SIDECAR_REGISTRY",
+  "canonical_graph_unchanged": true,
+  "does_not_authorize_execution": true,
+  "entries": [
+    {
+      "id": "sidecar:scientific-intuition-gate1-v1",
+      "title": "Scientific intuition Gate-1 frozen snapshot v1",
+      "kind": "SCIENTIFIC_INTUITION_V1",
+      "path": "research/intuition/scientific-intuition-signals.v1.json",
+      "schema_path": "ontology/schema/scientific-intuition-flow-v1.schema.json",
+      "schema_version": "scientific-intuition-flow/v1",
+      "document_sha256": "5f347af1d795743f03c4c096a14c34bcb18ee436ee32b7c968ad97c57c373781",
+      "state": "FROZEN_SNAPSHOT",
+      "authority": "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
+      "canonical_graph_unchanged": true,
+      "does_not_authorize_execution": true,
+      "non_claim": "A frozen hypothesis-generation snapshot is not evidence or a physical claim.",
+      "boundary": "This entry is a noncanonical locator and does not create ontology nodes or edges."
+    },
+    {
+      "id": "sidecar:scientific-intuition-ice-v2",
+      "title": "Scientific intuition ICE hypothesis flow v2",
+      "kind": "SCIENTIFIC_INTUITION_V2",
+      "path": "research/intuition/scientific-intuition-signals.v2.json",
+      "schema_path": "ontology/schema/scientific-intuition-flow-v2.schema.json",
+      "schema_version": "scientific-intuition-flow/v2",
+      "document_sha256": "24c0e51674caf32817e7bb41afab1427af12ec82aca5988577352b4ef0ed424e",
+      "state": "ACTIVE_HYPOTHESIS_GENERATION",
+      "authority": "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
+      "canonical_graph_unchanged": true,
+      "does_not_authorize_execution": true,
+      "non_claim": "An active hypothesis-generation flow is not evidence, a prediction, or a physics claim.",
+      "boundary": "This entry may reference canonical targets but cannot alter their status or authorize work."
+    },
+    {
+      "id": "sidecar:external-comparator-v1",
+      "title": "External comparator protocol v1",
+      "kind": "COMPARATOR_PROTOCOL_V1",
+      "path": "research/benchmarks/ice-comparator-protocol.v1.json",
+      "schema_path": "ontology/schema/ice-comparator-protocol-v1.schema.json",
+      "schema_version": "ice-comparator-protocol/v1",
+      "document_sha256": "0a44aff2a232384e81def287860257723b5d70a6b69a438fe808b62eec84763e",
+      "state": "ACTIVE_METHOD_PROTOCOL",
+      "authority": "NON_AUTHORITATIVE_METHOD_PROTOCOL",
+      "canonical_graph_unchanged": true,
+      "does_not_authorize_execution": true,
+      "non_claim": "A comparator protocol defines method lanes and kill criteria; it is not empirical evidence.",
+      "boundary": "This entry cannot promote a comparator output into the canonical ontology or authorize execution."
+    }
+  ],
+  "boundaries": [
+    "This registry is not a canonical ontology collection or graph.",
+    "It is excluded from RDF/JSON-LD, SHACL, SPARQL, GraphRAG, planner, and MCP canonical interfaces.",
+    "Validation checks fixed paths, bytes, schemas, and existing sidecar semantic contracts only."
+  ]
+}
