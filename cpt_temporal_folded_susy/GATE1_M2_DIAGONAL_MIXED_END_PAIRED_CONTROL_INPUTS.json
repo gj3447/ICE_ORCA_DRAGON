@@ -1,0 +1,180 @@
+{
+  "schema_version": "ice.gate1-m2-diagonal-mixed-end-paired-control.input.v1",
+  "calculation_id": "Gate1M2DiagonalMixedEndPairedControl",
+  "numbered_phase": null,
+  "question": "For open:gate1-original-cycle-signed-global-intersections, does one declared m=2 diagonal scale-scalar infinity ray supply a uniform good-action boundary component needed by the mixed-end census, while a sign-flipped ray acts as a false-signal control and the source cycle and signed global intersection vector remain null?",
+  "kind": "BOUNDED_EXACT_ONE_MIXED_END_CERTIFICATE_WITH_PAIRED_SIGN_CONTROL",
+  "primary_obstacle": "One explicitly tested scale-scalar projective direction in the still-open Gate-1 mixed-end boundary census.",
+  "graph_route_review": {
+    "planner_checkpoint_id": "research-agent:ba782db61c0f82ed34b3",
+    "planner_classification": "CURRENT_BLOCKER_CANDIDATE",
+    "selected_anchor": "open:gate1-original-cycle-signed-global-intersections",
+    "anti_meandering_checks_passed": true,
+    "missing_typed_object": "One declared mixed-infinity action-decay candidate record, including its sign and scope, for the incomplete Gate-1 end census.",
+    "bounded_output": "An exact uniform real-action bound for one positive diagonal mixed tail plus direct original-action samples.",
+    "false_signal_control": "The same scalar/lapse correlation with x=-s must have the opposite leading sign and a uniform bad-action bound.",
+    "human_review_basis": "The user explicitly requested continuation of the next realistic task; this design keeps that work on the retrieved current Gate-1 blocker.",
+    "planner_grants_execution_authority": false
+  },
+  "ragnarok_boundary": {
+    "distinct_question": "This one-ray mixed-infinity certificate does not rerun or repair Phase 39 or the preceding scale-tail runner and does not compute a numbered descendant.",
+    "does_not_execute_historical_runner": true,
+    "does_not_rename_or_retry_consumed_runner": true,
+    "does_not_reopen_killed_reconciliation": true,
+    "generic_bounded_core_calculation": true,
+    "automatic_next": null
+  },
+  "upstream_evidence": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4",
+      "role": "Frozen equal-endpoint m=2 action, boundary values and finite nonzero-lapse envelope."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70",
+      "role": "Durable statement that all scale, scalar and mixed ends and the global cycle remain open."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_INPUTS.json",
+      "sha256": "aa7021ec68c1910ae458bfbab7cdf13e4d3234ade93fbdbaf9484f6586c270ce",
+      "role": "General-q action conventions and the preceding compact-q scale-only selection family."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_RESULT.json",
+      "sha256": "36fdf578fc249b154d626b8baa341907c27998562c53d346402009bad45d2930",
+      "role": "Executed compact-q scale-tail result whose scalar-infinity and mixed-end outputs remain null."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR.md",
+      "sha256": "1faccd21e39c464fe12b5c1c16b887d96a898c3958680e4071673d21242ae563",
+      "role": "Human-readable boundary separating compact-q scale ends from untested mixed infinity."
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "arXiv:1001.2933v4",
+      "title": "Analytic Continuation Of Chern-Simons Theory",
+      "url": "https://arxiv.org/abs/1001.2933",
+      "pinpoint": "section 3",
+      "role": "Relative good-end language only. With I=-S_2, the declared tail must satisfy Re(S_2) tending uniformly to positive infinity. This source does not supply the model, tail, full relative pair, thimble basis or original cycle."
+    },
+    {
+      "id": "arXiv:math/0505474",
+      "title": "Periods for rank 1 irregular singular connections on surfaces",
+      "url": "https://arxiv.org/abs/math/0505474",
+      "role": "Boundary comparator only. Its rapid-decay homology requires compactification, a normal-crossing divisor and a good meromorphic irregular connection, none of which is constructed here."
+    }
+  ],
+  "declared_conventions": {
+    "integrand": "exp(-S_2)",
+    "model": "equal-endpoint two-segment midpoint Starobinsky configuration action with h=1/2",
+    "boundary_values": {
+      "a_boundary": "3.5668031935672753",
+      "phi_boundary": "1.0185809464006637"
+    },
+    "variables": "x=a_1-a_boundary, q=phi_1-phi_boundary, A=a_boundary+x/2, Phi=phi_boundary+q/2, T=rho*exp(i*psi)",
+    "finite_lapse_envelope": "rho in [1/5,6/5], psi in [-pi/2,pi/2]",
+    "positive_diagonal_tail": "s>=48, x=+s, q=s*exp(i*psi/2)",
+    "sign_flipped_control_tail": "s>=36, x=-s, q=s*exp(i*psi/2)",
+    "phase_cancellation": "q^2/T=s^2/rho is exactly positive real on both tails",
+    "good_action_end": "Re(S_2) tends uniformly to positive infinity along the declared positive diagonal tail",
+    "bad_action_end": "Re(S_2) tends uniformly to negative infinity along the declared sign-flipped control",
+    "potential_bound": "Since phi_boundary>1, cos(psi/2)>=1/sqrt(2), sqrt(2/3)>4/5 and exp(4/5)>2, |exp(-sqrt(2/3)*Phi)|<1/2 and |V(Phi)|<27/16.",
+    "newton_polyhedron_exclusion": "The Starobinsky exponential makes the phase non-polynomial in the original scalar coordinate; no complex cover, logarithmic branch, toric compactification or divisor data are supplied, so Newton-polyhedron criteria are not invoked.",
+    "selection_family": [
+      "one correlated positive diagonal x=s and q=s*exp(i*psi/2)",
+      "one sign-flipped x=-s false-signal control with the same q and T",
+      "the prior finite nonzero-lapse envelope only",
+      "action decay only, without amplitude, measure, determinant or connector data",
+      "no other scale-scalar ratio, scalar phase, coordinate face, lapse endpoint, source cycle or global intersection"
+    ],
+    "numerical_cross_check": {
+      "precision_digits": 80,
+      "rho_values": [
+        "1/5",
+        "7/10",
+        "6/5"
+      ],
+      "psi_over_pi_values": [
+        "-1/2",
+        "0",
+        "1/2"
+      ],
+      "tail_parameter_values": [
+        2000,
+        8000,
+        32000
+      ],
+      "maximum_final_relative_leading_coefficient_error": "2e-3",
+      "maximum_conjugation_residual": "1e-65"
+    }
+  },
+  "controls": [
+    "Rebuild the exact two-element action before substituting either mixed ray.",
+    "Prove q^2/T=s^2/rho exactly and extract the positive and sign-flipped s^5 coefficients without a fitted asymptotic.",
+    "Prove the uniform Starobinsky potential modulus bound |V|<27/16 on the full declared lapse-phase range.",
+    "Bound every non-scalar-kinetic term directly and prove Re(S_2)>0 for all s>=48 on the positive diagonal tail.",
+    "Independently prove Re(S_2)<0 for all s>=36 on the sign-flipped control, preventing a phase-cancellation sign bug from passing unnoticed.",
+    "Evaluate the original two-element complex action, not the extracted leading polynomial, at 54 predeclared points.",
+    "Check conjugation symmetry between psi and -psi and convergence to both opposite exact leading coefficients.",
+    "Keep attachment, amplitude/measure convergence, all other ends, the complete census, source/relative cycle, global vector and every physical output null."
+  ],
+  "decision_table": [
+    {
+      "condition": "the declared positive diagonal has a uniform positive exact bound, its sign-flipped control has a uniform negative exact bound, and both original-action numerical controls converge to the corresponding leading coefficients",
+      "verdict": "KEEP_SCOPED_DIAGONAL_MIXED_ACTION_END_WITH_SIGN_CONTROL",
+      "control_verdict": "KILL_SIGN_FLIPPED_DIAGONAL_MIXED_ACTION_END",
+      "programme_impact": "ONE_SCOPED_MIXED_ACTION_DECAY_RECORD_SUPPORTED; COMPLETE_CENSUS_AND_SOURCE_CYCLE_OPEN"
+    },
+    {
+      "condition": "the positive diagonal bound is nonpositive or its direct-action sequence approaches a nonpositive leading coefficient",
+      "verdict": "KILL_DECLARED_POSITIVE_DIAGONAL_MIXED_ACTION_END",
+      "programme_impact": "NARROW_ONE_DIRECTION_ONLY; COMPLETE_CENSUS_OPEN"
+    },
+    {
+      "condition": "the exact bounds and original-action controls disagree or the sign-flipped control does not detect the opposite sign",
+      "verdict": "INVALID_OR_INCONCLUSIVE_PAIRED_CONTROL",
+      "programme_impact": "NO SCIENTIFIC INFERENCE"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 160,
+    "quadratures": 0,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "sampling_points": 54,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "connection_to_compact_phase39_chain": null,
+    "tail_amplitude_or_measure_absolute_convergence": null,
+    "complete_mixed_end_census": null,
+    "all_ratio_or_phase_end_admissibility": null,
+    "q_dependent_scale_tail_family": null,
+    "admissible_full_joint_completion": null,
+    "full_relative_homology_class": null,
+    "source_defined_joint_relative_cycle": null,
+    "source_to_thimble_deformation": null,
+    "physical_original_cycle": null,
+    "lapse_infinite_end_admissibility": null,
+    "zero_lapse_extension": null,
+    "full_joint_orientation": null,
+    "absolute_determinant_pfaffian_line": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "singular_endpoint_nonreal_weyl_m": null,
+    "spectral_measure": null,
+    "RAQ_completion": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
