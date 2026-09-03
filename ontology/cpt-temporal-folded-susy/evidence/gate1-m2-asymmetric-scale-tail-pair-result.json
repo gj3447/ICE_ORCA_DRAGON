@@ -1,0 +1,198 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_20260903",
+  "phase": null,
+  "observed_at_utc": "2026-09-03T01:21:32Z",
+  "command": "./ice run gate1_m2_asymmetric_scale_tail_pair",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_m2_asymmetric_scale_tail_pair.py",
+    "sha256": "49f6c48dd1acb311d95f26e320a0f029666815197d826035875a5d4ecb653b2d",
+    "introduced_in_commit": "e2d61f9df86325e56abb13413ae5164b3866ea6f"
+  },
+  "exact_checks": 11,
+  "checks": [
+    {
+      "id": "G1.m2.asym.input_hashes_scope_and_breaker",
+      "status": "PASS",
+      "statement": "The input, all upstream records, unnumbered scope and fail-closed global outputs are hash-pinned."
+    },
+    {
+      "id": "G1.m2.asym.general_two_element_action",
+      "status": "PASS",
+      "statement": "The original equal-endpoint two-element action reduces exactly to the declared general bounded-q expression."
+    },
+    {
+      "id": "G1.m2.asym.general_x_cubic_coefficient",
+      "status": "PASS",
+      "statement": "The x-cubic coefficient is extracted from the general two-element action before any ray is substituted."
+    },
+    {
+      "id": "G1.m2.asym.two_rays_share_cubic_direction",
+      "status": "PASS",
+      "statement": "The two non-antipodal rays differ by 2*pi/3 and have the same cube -exp(i*psi)."
+    },
+    {
+      "id": "G1.m2.asym.compact_face_attachment",
+      "status": "PASS",
+      "statement": "The two affine outgoing rays meet the right and left Phase-39 scale faces exactly at |y_a|=1/4; no smooth-tangent match is claimed."
+    },
+    {
+      "id": "G1.m2.asym.conjugation_exchanges_tail_faces",
+      "status": "PASS",
+      "statement": "Complex conjugation exchanges the right tail at psi with the left tail at -psi, including their compact face anchors."
+    },
+    {
+      "id": "G1.m2.asym.uniform_potential_modulus_bound",
+      "status": "PASS",
+      "statement": "On |q|<=1/4, Re(Phi)>7/8 and sqrt(2/3)>4/5; a positive Taylor lower sum proves exp(7/10)>2, hence |V(Phi)|<27/16."
+    },
+    {
+      "id": "G1.m2.asym.uniform_positive_cubic_margin",
+      "status": "PASS",
+      "statement": "Both ray cubes give Re(S_2)/(pi^2*r^3)>9089/960 uniformly over the declared lapse and compact scalar window."
+    },
+    {
+      "id": "G1.m2.asym.action_domain_along_face_attachments",
+      "status": "PASS",
+      "statement": "For every declared rho>0 the action is polynomial in x and q; the piecewise-smooth face attachments introduce no divisor beyond the excluded T=0 locus."
+    },
+    {
+      "id": "G1.m2.asym.cubic_scale_polynomial_with_lower_orders",
+      "status": "PASS",
+      "statement": "At fixed q and nonzero T the exact action is a cubic scale polynomial, so only bounded quadratic and lower coefficients remain below the proved leading term."
+    },
+    {
+      "id": "G1.m2.asym.antipodal_shortcut_not_reused",
+      "status": "PASS",
+      "statement": "The new end directions are separated by 2*pi/3, not the antipodal pi separation that forced opposite cubic signs on the killed straight line."
+    }
+  ],
+  "numerical_checks": 4,
+  "numerical": [
+    {
+      "id": "G1.m2.asym.direct_coefficients_clear_exact_floor",
+      "status": "PASS",
+      "statement": "Every independently evaluated complex leading coefficient clears the exact pi^2*9089/960 floor on the sampled boundary and central points."
+    },
+    {
+      "id": "G1.m2.asym.direct_action_scale_ends_positive",
+      "status": "PASS",
+      "statement": "All 108 original-action samples on both affine tails have positive scaled real action."
+    },
+    {
+      "id": "G1.m2.asym.direct_action_converges_to_cubic",
+      "status": "PASS",
+      "statement": "Every original-action sequence moves closer to its independently computed cubic coefficient, and every final relative error is below the predeclared cap."
+    },
+    {
+      "id": "G1.m2.asym.direct_action_conjugation_exchange",
+      "status": "PASS",
+      "statement": "The original-action evaluations confirm that conjugation exchanges the right psi tail with the left -psi tail."
+    }
+  ],
+  "payload": {
+    "exact_checks": 11,
+    "numerical_checks": 4,
+    "calculation": {
+      "calculation_id": "Gate1M2AsymmetricScaleTailPair",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "KEEP_SCOPED_ASYMMETRIC_SCALE_TAIL_PAIR_ON_DECLARED_FINITE_WINDOW",
+      "epistemic_status": "SCOPED_CONSTRUCTIVE_SCALE_END_CERTIFICATE",
+      "programme_impact": "NARROW_PROGRESS; SCALE_ENDS_ONLY; MIXED_ENDS_AND_SOURCE_SELECTION_OPEN"
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_INPUTS.json",
+      "input_manifest_sha256": "aa7021ec68c1910ae458bfbab7cdf13e4d3234ade93fbdbaf9484f6586c270ce",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_RESULT.json",
+      "raw_result_outer_sha256": "36fdf578fc249b154d626b8baa341907c27998562c53d346402009bad45d2930",
+      "raw_result_payload_sha256_without_self": "6ae298ae5dc2ab3d989415cb90940db646f7ff6a250a66a12f86485e4a83c8ce",
+      "raw_result_size_bytes": 44620,
+      "report_path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR.md",
+      "report_sha256": "1faccd21e39c464fe12b5c1c16b887d96a898c3958680e4071673d21242ae563",
+      "runner_definition_commit": "e2d61f9df86325e56abb13413ae5164b3866ea6f"
+    },
+    "scope": {
+      "status": "PHASE39_SCALE_FACES_OVER_PRIOR_FINITE_LAPSE_AND_COMPACT_Q_WINDOW_ONLY",
+      "includes": [
+        "the inherited equal-endpoint m=2 action and exp(-S_2) convention",
+        "the two Phase-39 scale faces |y_a|=1/4 and compact q=exp(i*psi/2)*y_phi with |y_phi|<=1/4",
+        "the prior finite nonzero-lapse envelope 1/5<=rho<=6/5 and -pi/2<=psi<=pi/2",
+        "two explicit conjugation-compatible asymmetric affine scale rays with a piecewise-smooth face attachment"
+      ],
+      "excludes": [
+        "scalar infinity, unbounded q-dependent scale fibers and every scale-scalar mixed corner",
+        "a full relative chain, source-defined original cycle or source-to-thimble deformation",
+        "zero lapse, lapse infinity, determinant/Pfaffian orientation or a global signed intersection vector",
+        "Weyl data, spectral measure, RAQ, empirical, physics or TOE claims"
+      ]
+    },
+    "computed_facts": {
+      "general_x_cubic_coefficient": "pi^2*((-12+q^2/2)/T+T*V(phi_boundary+q/2)/4)",
+      "right_asymptotic_angle": "psi/3-pi/3",
+      "left_asymptotic_angle": "psi/3+pi/3",
+      "common_ray_cube": "-exp(i*psi)",
+      "potential_modulus_upper_bound": "27/16",
+      "normalized_real_cubic_margin": "9089/960",
+      "exact_coefficient_floor": "93.4425358348970630068611",
+      "sampled_predicted_minimum": "97.6210513170750137669871",
+      "sampled_scaled_action_minimum": "97.641721878976818803781",
+      "maximum_final_relative_error": "0.0003918199932560427",
+      "uniform_two_good_scale_ends": true,
+      "half_angle_straight_line_kill_retained": true
+    },
+    "theorem_guards": [
+      "A uniform positive cubic real coefficient plus bounded lower coefficients on the compact parameter window gives one common sufficiently large scale radius with Re(S_2)>0 growth.",
+      "The face attachment is continuous and piecewise smooth; no smooth-tangent connector is claimed.",
+      "The compact-q scale result does not decide scalar infinity, mixed corners, lapse endpoints or a complete joint chain.",
+      "A sectorially good pair does not supply the source class, relative homology, orientation or global intersection coefficients.",
+      "All spectral, RAQ, empirical, physics and TOE outputs remain null."
+    ],
+    "independent_read_only_review": {
+      "status": "PASS",
+      "raw_result_and_payload_digests_recomputed": true,
+      "runner_input_and_four_upstream_hashes_verified": true,
+      "general_q_algebra_potential_bound_and_margin_verified": true,
+      "all_108_direct_action_samples_and_36_error_sequences_verified": true,
+      "conjugation_and_fail_closed_outputs_verified": true,
+      "verdict_scope_restriction": "FINITE_LAPSE_COMPACT_Q_SCALE_ENDS_ONLY"
+    },
+    "runtime": {
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "observed_wall_clock_seconds": 3.293,
+      "exact_checks": 11,
+      "numerical_checks": 4,
+      "theorem_guards": 5,
+      "sampling_points": 108,
+      "quadratures": 0,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "automatic_descendants": 0
+    },
+    "promoted_outputs": {
+      "full_relative_homology_class": null,
+      "source_defined_joint_relative_cycle": null,
+      "physical_original_cycle": null,
+      "unbounded_q_dependent_scale_fiber": null,
+      "scalar_infinite_end_admissibility": null,
+      "mixed_end_census": null,
+      "zero_lapse_extension": null,
+      "absolute_determinant_pfaffian_line": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "singular_endpoint_nonreal_weyl_m": null,
+      "spectral_measure": null,
+      "RAQ_completion": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    }
+  }
+}
