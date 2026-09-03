@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_20260903",
+  "phase": null,
+  "observed_at_utc": "2026-09-03T02:36:46Z",
+  "command": "./ice run gate1_m2_safe_projective_mixed_phase_chart",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_m2_safe_projective_mixed_phase_chart.py",
+    "sha256": "377c671e89ac7b956e9153b02d12de29152640328a2b25f56d648553e8c21996",
+    "introduced_in_commit": "57e978fc8f81c2f371dfd990b7f74c9a3da21809"
+  },
+  "exact_checks": 5,
+  "checks": [
+    {"id": "G1.m2.safe_chart.action_and_actual_s5_leading", "status": "PASS", "statement": "Raw-result locator: exact substituted x^3 q^2 s^5 leading coefficient."},
+    {"id": "G1.m2.safe_chart.representative_cells", "status": "PASS", "statement": "Raw-result locator: G/B/Z representatives have leading cosine +1/-1/0."},
+    {"id": "G1.m2.safe_chart.exponential_sector_bound", "status": "PASS", "statement": "Raw-result locator: safe phase interval controls Re(q) and the Starobinsky modulus."},
+    {"id": "G1.m2.safe_chart.uniform_remainder_constants", "status": "PASS", "statement": "Raw-result locator: correction ledger and uniform remainder threshold."},
+    {"id": "G1.m2.safe_chart.cosine_partition", "status": "PASS", "statement": "Raw-result locator: exact finite G/B/Z interval union and disjointness."}
+  ],
+  "numerical_checks": 4,
+  "numerical": [
+    {"id": "G1.m2.safe_chart.direct_phase_control", "status": "PASS", "statement": "Raw-result locator: direct element inputs preserve q^2/T."},
+    {"id": "G1.m2.safe_chart.good_bad_direct_signs_and_bounds", "status": "PASS", "statement": "Raw-result locator: every G/B sample has its sign and one-sided margin."},
+    {"id": "G1.m2.safe_chart.transition_band_is_not_classified", "status": "PASS", "statement": "Raw-result locator: Z direct samples remain unclassified leading-transition controls."},
+    {"id": "G1.m2.safe_chart.conjugation_and_caps", "status": "PASS", "statement": "Raw-result locator: actual conjugation partners and bounded call count."}
+  ],
+  "payload": {
+    "exact_checks": 5,
+    "numerical_checks": 4,
+    "theorem_guards": 3,
+    "calculation": {"calculation_id": "Gate1M2SafeProjectiveMixedPhaseChart", "numbered_phase": null, "run_status": "VALID_RUN", "verdict": "KEEP_SCOPED_SAFE_PROJECTIVE_MIXED_PHASE_SIGN_CHART", "epistemic_status": "SCOPED_SAFE_PROJECTIVE_ACTION_SIGN_CHART_ONLY"},
+    "evidence_transport": {"input_manifest_path": "cpt_temporal_folded_susy/GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_INPUTS.json", "input_manifest_sha256": "2dcab3066903a855bdb85ead8add9e0f46defdaeb9e3171939f5f1bf9d694fec", "raw_result_path": "cpt_temporal_folded_susy/GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_RESULT.json", "raw_result_outer_sha256": "7c8ee7416b9837d52f3d21c152c5d78a109706c4949125cc94473cf7cfdf9124", "raw_result_payload_sha256_without_digest_and_timestamp": "aadb0a4521c6e35b6196b08d6d06a763505a7ccca397ff28b3796864483d650c", "report_path": "cpt_temporal_folded_susy/GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART.md", "report_sha256": "d023eed92c67ae37584d68222e96a2fc46bb9c0948cc32c94d9b0a2be223faa8", "runner_definition_commit": "57e978fc8f81c2f371dfd990b7f74c9a3da21809"},
+    "computed_facts": {"leading_coefficient": "L=pi^2*r^2*cos(3*alpha+2*theta)/(2*rho)", "uniform_remainder_constant": "1315433/160", "threshold_S0": 157852, "normalized_strict_margin": "1/75768960", "G_action_decay": true, "B_action_growth_false_signal_control": true, "Z_status": "UNRESOLVED_LEADING_TRANSITION_BAND; Stokes data uncomputed"},
+    "theorem_guard_locators": ["G1.m2.safe_chart.partition_and_null_transition_band", "G1.m2.safe_chart.uniform_good_bad_only", "G1.m2.safe_chart.fail_closed_global_outputs"],
+    "independent_shell_audit": {"status": "PASS", "g_min": "4.11244517712733092914286", "b_max": "-4.11239017106762003796487", "minimum_bound_margin": "3.69977642616300379434887", "maximum_final_error": "0.0000267512624915577388678245", "maximum_conjugation_residual": "0", "records": 27, "sequences": 54, "conjugate_partners": 12, "direct_action_calls": 66, "fail_closed_null_count": 18},
+    "primary_source_boundaries": {"Witten_arXiv_1001_2933": "Relative good-end language only; it supplies neither this model nor a source cycle.", "Hien_arXiv_math_0505474": "Comparator for missing compactification/divisor prerequisites only; no rapid-decay homology is imported."},
+    "scope": {"includes": ["one compact coordinate-ratio/phase chart with unbounded radial s-tail", "G action decay, B false-signal action growth, and Z unresolved leading transition"], "excludes": ["compactification or relative boundary component", "Stokes data", "complete end census", "source-defined cycle, connector, orientation, or global intersection vector", "spectral, RAQ, physical, and TOE claims"]},
+    "promoted_outputs": {"connection_to_compact_phase39_chain": null, "tail_amplitude_or_measure_absolute_convergence": null, "complete_mixed_end_census": null, "all_ratio_or_phase_end_admissibility": null, "stokes_band_resolution": null, "admissible_full_joint_completion": null, "full_relative_homology_class": null, "source_defined_joint_relative_cycle": null, "source_to_thimble_deformation": null, "physical_original_cycle": null, "complete_global_signed_intersection_vector": null, "global_n_sigma": null, "singular_endpoint_nonreal_weyl_m": null, "spectral_measure": null, "RAQ_completion": null, "physics_claim": null, "TOE_claim": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "automatic_next": null}
+  }
+}

@@ -1,0 +1,951 @@
+{
+  "schema_version": "ice.gate1-m2-safe-projective-mixed-phase-chart.result.v1",
+  "result_id": "GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART",
+  "calculation_id": "Gate1M2SafeProjectiveMixedPhaseChart",
+  "numbered_phase": null,
+  "generated_at_utc": "2026-09-03T02:36:46.470088+00:00",
+  "run_status": "VALID_RUN",
+  "verdict": "KEEP_SCOPED_SAFE_PROJECTIVE_MIXED_PHASE_SIGN_CHART",
+  "scientific_status": {
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_promotion": "PROHIBITED",
+    "new_physics": false
+  },
+  "scope": {
+    "included": [
+      "one declared compact safe projective ratio/phase chart",
+      "G/B action-sign labels and the unresolved Z leading-transition band",
+      "66 direct original-action calls including 12 conjugate partners"
+    ],
+    "excluded": [
+      "a compactification or relative boundary component",
+      "connector/source cycle",
+      "complete end, Stokes, or singularity census",
+      "global intersections, Weyl data, RAQ, physics or TOE"
+    ]
+  },
+  "exact_calculation": {
+    "action": "2*pi**2*T*(V*(a + x/2)**3 - 3*a - 3*x/2) + 4*pi**2*q**2*(a + x/2)**3/T - 24*pi**2*x**2*(a + x/2)/T",
+    "leading_real_coefficient": "pi^2*r^2*cos(3*alpha+2*theta)/(2*rho)",
+    "remainder_constant": "1315433/160",
+    "threshold": "157852",
+    "normalized_sign_margin": "1/75768960"
+  },
+  "chart": {
+    "G": "cos(Theta)>=1/2: uniformly positive for s>=157852",
+    "B": "cos(Theta)<=-1/2: uniformly negative for s>=157852",
+    "Z": "abs(cos(Theta))<1/2: UNRESOLVED_LEADING_TRANSITION_BAND; Stokes data uncomputed"
+  },
+  "checks": {
+    "exact": [
+      {
+        "id": "G1.m2.safe_chart.action_and_actual_s5_leading",
+        "passed": true,
+        "statement": "Exact q^2/T phase and the actual substituted x^3*q^2 s^5 coefficient are rebuilt before chart labels.",
+        "leading_coefficient": "pi**2*r**2*exp(I*(3*alpha + 2*theta))/(2*rho)",
+        "action": "2*pi**2*T*(V*(a + x/2)**3 - 3*a - 3*x/2) + 4*pi**2*q**2*(a + x/2)**3/T - 24*pi**2*x**2*(a + x/2)/T"
+      },
+      {
+        "id": "G1.m2.safe_chart.representative_cells",
+        "passed": true,
+        "statement": "G, B and Z representatives have exact leading cosine +1, -1 and 0."
+      },
+      {
+        "id": "G1.m2.safe_chart.exponential_sector_bound",
+        "passed": true,
+        "statement": "The exact interval bound |psi/2+theta|<=pi/3 gives Re(q)>=r*s/2 and Re(Phi)>1, hence |V|<27/16 without a Newton-polyhedron assertion.",
+        "potential_upper": "27/16",
+        "phase_upper": "pi/3",
+        "real_q_lower": "r*s/2"
+      },
+      {
+        "id": "G1.m2.safe_chart.uniform_remainder_constants",
+        "passed": true,
+        "statement": "The correction ledger is 240+1920+5120=7280 from the nonleading scalar kinetic powers; the prior scale/potential bound is 150633/160 using |A|<9s/2. The total is pi^2*(1315433/160)*s^4.",
+        "remainder": "1315433/160",
+        "normalized_margin": "1/75768960",
+        "midpoint_bound": "|A|<9*s/2"
+      },
+      {
+        "id": "G1.m2.safe_chart.cosine_partition",
+        "passed": true,
+        "statement": "For every cosine c in [-1,1], the closed B interval, open Z interval, and closed G interval have union [-1,1] and pairwise-disjoint endpoints.",
+        "cells": "B=[-1,-1/2], Z=(-1/2,1/2), G=[1/2,1]"
+      }
+    ],
+    "numerical": [
+      {
+        "id": "G1.m2.safe_chart.direct_phase_control",
+        "passed": true,
+        "statement": "Direct inputs preserve the exact q^2/T phase.",
+        "maximum_residual": "1.4183070433665367168514e-81"
+      },
+      {
+        "id": "G1.m2.safe_chart.good_bad_direct_signs_and_bounds",
+        "passed": true,
+        "statement": "Every G/B original-action sample has its declared sign, clears its certified one-sided bound, and approaches the correct leading coefficient.",
+        "max_final_error": "0.0000267512624915577388678245",
+        "minimum_bound_margin": "3.69977642616300379434887"
+      },
+      {
+        "id": "G1.m2.safe_chart.transition_band_is_not_classified",
+        "passed": true,
+        "statement": "Z samples are retained as unclassified leading-transition controls; neither a numerical zero string nor uncomputed Stokes data is used to infer their sign."
+      },
+      {
+        "id": "G1.m2.safe_chart.conjugation_and_caps",
+        "passed": true,
+        "statement": "The actual conjugation map is checked with 12 separately evaluated B/Z partners; all direct-action calls stay within the cap.",
+        "samples": 66,
+        "conjugate_partners": 12,
+        "maximum_residual": "0.0"
+      }
+    ],
+    "theorem_guards": [
+      {
+        "id": "G1.m2.safe_chart.partition_and_null_transition_band",
+        "verified": true,
+        "conclusion_and_scope": "On this declared compact chart only, Z is UNRESOLVED_LEADING_TRANSITION_BAND: vanishing/near-vanishing s^5 data do not compute Stokes data or imply a sign conclusion."
+      },
+      {
+        "id": "G1.m2.safe_chart.uniform_good_bad_only",
+        "verified": true,
+        "conclusion_and_scope": "For G, Re(S)>=pi^2*(5/96*s^5-C*s^4)>0; for B the corresponding upper bound is negative. This classifies action signs only, not relative boundary components."
+      },
+      {
+        "id": "G1.m2.safe_chart.fail_closed_global_outputs",
+        "verified": true,
+        "conclusion_and_scope": "Source cycle, connector, complete census, Stokes resolution, global intersections, physics and TOE outputs remain null."
+      }
+    ],
+    "counts": {
+      "exact": 5,
+      "numerical": 4,
+      "guards": 3,
+      "samples": 66
+    }
+  },
+  "numerical_control": {
+    "precision_digits": 80,
+    "records": [
+      {
+        "rho": "1/5",
+        "psi_over_pi": "-1/2",
+        "cell": "G",
+        "expected_leading": "24.6740110027233965470862",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "24.6766513171332547614199",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007912477901924998212",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "24.5683220251850020711488"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "24.6746710636684499844381",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512624915577388678245",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "24.2620573187638337408221"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "-1/2",
+        "cell": "B",
+        "expected_leading": "-24.6740110027233965470862",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-24.6753310657547283014418",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000535001395268103049942479",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "24.5670017738064756111707"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-24.6743410273101736317902",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753927053310548367993",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "24.2617272824055573881742"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "-1/2",
+        "cell": "Z",
+        "expected_leading": "6.52448560565220817246426e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.00132020648875301485362671",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.000330033552717995306912303",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "0",
+        "cell": "G",
+        "expected_leading": "24.6740110027233965470862",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "24.6766513023375738599786",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007312831541233653982",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "24.5683220103893211697075"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "24.6746710627437446337508",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512250146614780505563",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "24.2620573178391283901348"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "0",
+        "cell": "B",
+        "expected_leading": "-24.6740110027233965470862",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-24.675331050959769083959",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000534995399096983628055142",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "24.5670017590115163936879"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-24.674341026385479557415",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753552288918057346048",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "24.261727281480863313799"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "0",
+        "cell": "Z",
+        "expected_leading": "6.52448560565220817246426e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.00132019167437197512661789",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.000330032626853009259789411",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "1/2",
+        "cell": "G",
+        "expected_leading": "24.6740110027233965470862",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "24.6766513171332547614199",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007912477901924998212",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "24.5683220251850020711488"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "24.6746710636684499844381",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512624915577388678245",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "24.2620573187638337408221"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "1/2",
+        "cell": "B",
+        "expected_leading": "-24.6740110027233965470862",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-24.6753310657556446154888",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000535001395639471145235144",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "24.5670017738073919252177"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-24.6743410273101879491966",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753927059113174596883",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "24.2617272824055717055806"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "1/2",
+        "cell": "Z",
+        "expected_leading": "6.52448560565220817246426e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.00132017686051798930971961",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.000330031700996258430653672",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "-1/2",
+        "cell": "G",
+        "expected_leading": "7.04971742934954187059606",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "7.05047180489521564611997",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007912477901924998212",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "6.94214251294696295584888"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "7.04990601819098570983945",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512624915577388678245",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "6.63729227328636946622346"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "-1/2",
+        "cell": "B",
+        "expected_leading": "-7.04971742934954187059606",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-7.05009459021563390142036",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.000053500139526419348267313",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "6.94176529826738121114927"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-7.04981172208862099459078",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753927053249462842237",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "6.63719797718400475097479"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "-1/2",
+        "cell": "Z",
+        "expected_leading": "1.86413874447205947784693e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.000377201883673184317649044",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.0000942953026354253639302776",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "0",
+        "cell": "G",
+        "expected_leading": "7.04971742934954187059606",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "7.05047180069762242362319",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007317050742671597188",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "6.9421425087493697333521"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "7.04990601792864304300999",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512252783404065995042",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "6.63729227302402679939399"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "0",
+        "cell": "B",
+        "expected_leading": "-7.04971742934954187059606",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-7.05009458601824803911815",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000534995441286740673630314",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "6.94176529406999534884706"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-7.04981172182628156776518",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753554925672074527743",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "6.63719797692166532414918"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "0",
+        "cell": "Z",
+        "expected_leading": "1.86413874447205947784693e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.000377197621250727042624209",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.0000942950362437417942771681",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "1/2",
+        "cell": "G",
+        "expected_leading": "7.04971742934954187059606",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "7.05047180489521564611997",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007912477901924998212",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "6.94214251294696295584888"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "7.04990601819098570983945",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512624915577388678245",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "6.63729227328636946622346"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "1/2",
+        "cell": "B",
+        "expected_leading": "-7.04971742934954187059606",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-7.05009459021590121770267",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000535001395643380712504493",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "6.94176529826764852743158"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-7.04981172208862517140544",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753927059174260122639",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "6.63719797718400892778945"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "1/2",
+        "cell": "Z",
+        "expected_leading": "1.86413874447205947784693e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.00037719335897567401473562",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.0000942947698543614182314296",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "-1/2",
+        "cell": "G",
+        "expected_leading": "4.11233516712056609118104",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "4.11277521952220912690332",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007912477901924998212",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "4.00444592757395643663223"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "4.11244517727807499740635",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512624915577388678245",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "3.69983143237345875379035"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "-1/2",
+        "cell": "B",
+        "expected_leading": "-4.11233516712056609118104",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-4.11255517762578304836667",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000535001395255939951771171",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "4.00422588567753035809558"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-4.11239017121836219381263",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753927053120504510085",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "3.69977642631374595019664"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "-1/2",
+        "cell": "Z",
+        "expected_leading": "1.08741426760870136207738e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.000220034468771570016864792",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.0000550055954931439784043229",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "0",
+        "cell": "G",
+        "expected_leading": "4.11233516712056609118104",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "4.11277521711024248473108",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007325957945707255067",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "4.00444592516198979445999"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "4.11244517712733092914286",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512258349959224250609",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "3.69983143222271468552687"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "0",
+        "cell": "B",
+        "expected_leading": "-4.11233516712056609118104",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-4.11255517521393880071031",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000534995530354005547622345",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "4.00422588326568611043922"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-4.11239017106762003796487",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753560492152777466878",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "3.69977642616300379434887"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "0",
+        "cell": "Z",
+        "expected_leading": "1.08741426760870136207738e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.000220031945731550421693196",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.0000550054378088799982067346",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "1/2",
+        "cell": "G",
+        "expected_leading": "4.11233516712056609118104",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "4.11277521952220912690332",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.000107007912477901924998212",
+            "certified_one_sided_bound": "0.108329291948252690271089",
+            "one_sided_bound_margin": "4.00444592757395643663223"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "4.11244517727807499740635",
+            "leading_cosine": "1.0",
+            "relative_leading_error": "0.0000267512624915577388678245",
+            "certified_one_sided_bound": "0.412613744904616243615994",
+            "one_sided_bound_margin": "3.69983143237345875379035"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "1/2",
+        "cell": "B",
+        "expected_leading": "-4.11233516712056609118104",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "-4.11255517762594577112176",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000535001395651634243406451",
+            "certified_one_sided_bound": "-0.108329291948252690271089",
+            "one_sided_bound_margin": "4.00422588567769308085067"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "-4.11239017121836473635183",
+            "leading_cosine": "-1.0",
+            "relative_leading_error": "0.0000133753927059303218454791",
+            "certified_one_sided_bound": "-0.412613744904616243615994",
+            "one_sided_bound_margin": "3.69977642631374849273584"
+          }
+        ],
+        "errors_strictly_decrease": true
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "1/2",
+        "cell": "Z",
+        "expected_leading": "1.08741426760870136207738e-80",
+        "sequence": [
+          {
+            "s": 200000,
+            "scaled_real_action_over_s5": "0.000220029422773597343692929",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          },
+          {
+            "s": 800000,
+            "scaled_real_action_over_s5": "0.0000550052801258983111900063",
+            "leading_cosine": "2.64427441688830704939463e-81",
+            "classification": "UNRESOLVED_LEADING_TRANSITION_BAND"
+          }
+        ],
+        "errors_strictly_decrease": null
+      }
+    ],
+    "conjugate_partners": [
+      {
+        "rho": "1/5",
+        "cell": "B",
+        "s": 200000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "1/5",
+        "cell": "B",
+        "s": 800000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "1/5",
+        "cell": "Z",
+        "s": 200000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "1/5",
+        "cell": "Z",
+        "s": 800000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "7/10",
+        "cell": "B",
+        "s": 200000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "7/10",
+        "cell": "B",
+        "s": 800000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "7/10",
+        "cell": "Z",
+        "s": 200000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "7/10",
+        "cell": "Z",
+        "s": 800000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "6/5",
+        "cell": "B",
+        "s": 200000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "6/5",
+        "cell": "B",
+        "s": 800000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "6/5",
+        "cell": "Z",
+        "s": 200000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      },
+      {
+        "rho": "6/5",
+        "cell": "Z",
+        "s": 800000,
+        "map": "(psi,alpha,theta)->(-psi,-alpha,-theta)",
+        "relative_residual": "0.0"
+      }
+    ]
+  },
+  "computed_facts": [
+    "The declared compact chart has an exact exhaustive G/B/Z leading-cosine partition.",
+    "G and B have opposite uniform action-real-part signs above the stated finite threshold.",
+    "Z is retained only as an unresolved leading-transition band."
+  ],
+  "interpretation": [
+    "This is one scoped action-sign chart record for an incomplete end census.",
+    "It does not supply Stokes data, a compactification, a relative boundary component, a source cycle, or intersections."
+  ],
+  "open_problems": [
+    "classify the Z leading-transition band with the required lower-order and Stokes/singularity data",
+    "cover other ratio/phase charts and coordinate faces",
+    "give a separately specified source-defined regulated cycle and attachment/homotopy",
+    "complete the orientation-stable signed global intersection vector"
+  ],
+  "primary_sources": [
+    {
+      "id": "arXiv:1001.2933v4",
+      "url": "https://arxiv.org/abs/1001.2933",
+      "role": "Relative good-end convention only: for exp(-S_2), Re(S_2) must tend to positive infinity. No original cycle or chart is imported."
+    },
+    {
+      "id": "arXiv:math/0505474",
+      "url": "https://arxiv.org/abs/math/0505474",
+      "role": "Comparator only: no compactification, normal-crossing divisor, or rapid-decay homology is claimed."
+    }
+  ],
+  "required_fail_closed_outputs": {
+    "connection_to_compact_phase39_chain": null,
+    "tail_amplitude_or_measure_absolute_convergence": null,
+    "complete_mixed_end_census": null,
+    "all_ratio_or_phase_end_admissibility": null,
+    "stokes_band_resolution": null,
+    "admissible_full_joint_completion": null,
+    "full_relative_homology_class": null,
+    "source_defined_joint_relative_cycle": null,
+    "source_to_thimble_deformation": null,
+    "physical_original_cycle": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "singular_endpoint_nonreal_weyl_m": null,
+    "spectral_measure": null,
+    "RAQ_completion": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "provenance": {
+    "command": "./ice run gate1_m2_safe_projective_mixed_phase_chart",
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_INPUTS.json",
+      "sha256": "2dcab3066903a855bdb85ead8add9e0f46defdaeb9e3171939f5f1bf9d694fec"
+    },
+    "runner": {
+      "path": "cpt_temporal_folded_susy/gate1_m2_safe_projective_mixed_phase_chart.py",
+      "sha256": "377c671e89ac7b956e9153b02d12de29152640328a2b25f56d648553e8c21996"
+    },
+    "upstream_evidence": [
+      {
+        "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+        "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL_RESULT.json",
+        "sha256": "089962d1f2452e4906eb103ab647bf305aeec72cf02d621727d977829d5f7ca9"
+      }
+    ],
+    "environment": {
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0"
+    },
+    "resource_caps": {
+      "wall_clock_seconds": 120,
+      "stdout_bytes": 262144,
+      "stderr_bytes": 262144,
+      "changed_artifact_files": 12,
+      "changed_artifact_bytes": 1000000,
+      "symbolic_operations": 180,
+      "quadratures": 0,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "sampling_points": 72,
+      "automatic_descendants": 0
+    }
+  },
+  "automatic_next": null,
+  "integrity": {
+    "canonicalization": "UTF-8 JSON, sorted keys, compact separators, allow_nan=false; execution timestamp excluded from digest",
+    "canonical_payload_sha256_excluding_digest_and_timestamp": "aadb0a4521c6e35b6196b08d6d06a763505a7ccca397ff28b3796864483d650c"
+  }
+}

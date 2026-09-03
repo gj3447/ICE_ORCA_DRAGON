@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-03T02:11:56Z",
+  "updated_at_utc": "2026-09-03T02:58:07Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -260,7 +260,7 @@
     },
     {
       "question": "Does Phase 39 compute the cap-chain pairing or close Gate 1?",
-      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared scalar rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A separate q=0 scale audit contradicts only the antipodal Phase-39 half-angle product line. A later calculation constructs a different conjugation-compatible asymmetric pair, separated by 2*pi/3, and proves two uniform good scale ends over the Phase-39 compact scalar window and prior finite nonzero-lapse envelope. The newest current-blocker calculation classifies one correlated scale-scalar direction: x=s and q=s*exp(i*psi/2) has a uniform positive action bound, while the x=-s false-signal control has a uniform negative bound. This is one action-decay candidate record only, not an attachment, amplitude/measure result, complete mixed-end census or relative chain. The ordered scalar, full bosonic and punctured glue/contact controls still do not supply a physical source deformation. The physical joint cycle, zero lapse, p_a gauge/FP/BFV completion, regulator removal, complete census/intersection vector, physics, and TOE remain open or null. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
+      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared scalar rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A separate q=0 scale audit contradicts only the antipodal Phase-39 half-angle product line. A later calculation constructs a different conjugation-compatible asymmetric pair, separated by 2*pi/3, and proves two uniform good scale ends over the Phase-39 compact scalar window and prior finite nonzero-lapse envelope. One diagonal mixed action-decay candidate and its sign control are separately classified. The latest current-blocker result classifies G and B action-sign cells on one compact coordinate-ratio/phase parameter chart with an unbounded radial s-tail; its Z cells remain an unresolved leading-action transition band with Stokes data uncomputed. These are scoped action records only, not attachment, amplitude/measure, complete mixed-end census or relative chain. The ordered scalar, full bosonic and punctured glue/contact controls still do not supply a physical source deformation. The physical joint cycle, zero lapse, p_a gauge/FP/BFV completion, regulator removal, complete census/intersection vector, physics, and TOE remain open or null. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
       "claim_ids": [
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
@@ -277,7 +277,8 @@
         "claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS",
         "claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW",
         "claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE",
-        "claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND"
+        "claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND",
+        "claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS"
       ]
     },
     {
@@ -7657,7 +7658,7 @@
       "id": "open:gate1-original-cycle-signed-global-intersections",
       "type": "open_problem",
       "title": "Gate 1 — transport the original cycle and fix signed global intersections",
-      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared scalar rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The q=0 scale audit separately kills the unchanged antipodal Phase-39 half-angle product line. The later asymmetric-tail calculation proves that a different conjugation-compatible pair, separated by 2*pi/3, has two uniform good scale ends over the compact Phase-39 scalar window and prior finite nonzero-lapse envelope. A current-blocker calculation now adds exactly one scoped action-decay candidate for the correlated x=s, q=s*exp(i*psi/2) mixed direction and rejects its x=-s sign control. It supplies no connector, amplitude/measure or boundary compactification; scalar infinity, q-dependent fibers and every other mixed ratio, phase and face remain uncensused. The finite bosonic canonical and punctured glue/contact controls likewise remove common-lateral and unique-local-source shortcuts without supplying a source-to-thimble deformation or physical determinant line. A source-derived original class must still specify those local-to-source debts plus mixed ends, zero lapse, regulator removal, face/intersection compatibility, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
+      "summary": "Current Gate-1 blocker: specify and transport one original joint relative cycle and compute its complete orientation-stable signed global intersection vector. Gate 1 remains OPEN_PARTIAL_PROGRESS. Scoped audits kill the Phase-39 straight scalar rays and unchanged antipodal half-angle scale line, retain a non-equivalent two-ended scalar fiber and a different two-ended asymmetric scale pair, and classify one diagonal mixed action-decay candidate against its sign-flipped control. The latest calculation widens that ray only to one compact coordinate-ratio/phase parameter chart with an unbounded radial s-tail: G and B have opposite uniform action-real-part signs above a finite threshold, while Z and its Stokes data remain unresolved. Here projective means coordinate ratios, not compactification. None of these records supplies attachment, amplitude or measure, source-to-thimble deformation, physical determinant line, or a complete scalar/mixed-end census. A source-derived original class must still cover zero lapse, regulator removal, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, good end, face/intersection compatibility and orientation line. Global, physical-cycle, physics and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
       "state": "OPEN",
       "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
     },
@@ -7851,7 +7852,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded straight-lift audit kills the Phase-39 unbounded scalar rays and every anchor-through homogeneous delta=qy line on its fixed-a slice, while an exact phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The q=0 scale audit kills only the unchanged antipodal Phase-39 half-angle product line. A later exact calculation constructs a distinct conjugation-compatible asymmetric scale pair and proves two uniform good scale ends over the compact Phase-39 scalar window and prior finite nonzero-lapse envelope. A separate current-blocker calculation classifies one diagonal x=s, q=s*exp(i*psi/2) direction as a uniform positive action-decay candidate and its x=-s sign control as uniformly bad. These results supply no attachment, amplitude/measure, complete scalar-infinity or mixed-corner census, unbounded q-dependent fiber, full relative chain, source selection or orientation. The frozen-m=2 punctured glue/contact audit further shows that current local data do not choose the negative-arm sheet or critical contact. None selects an original/source-derived joint cycle or changes the local +1 records. The remaining debt includes source selection, scalar and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, zero lapse, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
+      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded straight-lift audit kills the Phase-39 unbounded scalar rays and every anchor-through homogeneous delta=qy line on its fixed-a slice, while an exact phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The q=0 scale audit kills only the unchanged antipodal Phase-39 half-angle product line. A later exact calculation constructs a distinct conjugation-compatible asymmetric scale pair and proves two uniform good scale ends over the compact Phase-39 scalar window and prior finite nonzero-lapse envelope. A separate current-blocker calculation classifies one diagonal x=s, q=s*exp(i*psi/2) direction as a uniform positive action-decay candidate and its x=-s sign control as uniformly bad. The latest chart calculation widens that ray only to one compact coordinate-ratio/phase parameter chart with an unbounded radial s-tail: G and B have opposite uniform action-real-part signs above the certified threshold, while Z remains unclassified and Stokes data are uncomputed. Here projective means coordinate ratios, not compactification. These results supply no attachment, amplitude/measure, complete scalar-infinity or mixed-corner census, unbounded q-dependent fiber, full relative chain, source selection or orientation. The frozen-m=2 punctured glue/contact audit further shows that current local data do not choose the negative-arm sheet or critical contact. None selects an original/source-derived joint cycle or changes the local +1 records. The remaining debt includes source selection, scalar and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, zero lapse, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -15703,6 +15704,76 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL.md",
       "sha256": "b78c31298846926cae24aa8bd7a677dc4ab88f4d3224daae8894db51e7285c1b"
+    },
+    {
+      "id": "scope:gate1-m2-safe-projective-mixed-phase-chart-finite-lapse",
+      "type": "scope",
+      "title": "Gate-1 m=2 safe projective mixed ratio/phase action-sign chart",
+      "summary": "One declared compact coordinate-ratio/phase parameter chart for the equal-endpoint m=2 action and exp(-S_2) convention: r in [1/2,2], |theta|<=pi/12, alpha modulo 2*pi, the finite nonzero-lapse envelope, and the unbounded radial tail s>=157852. Here projective means coordinate ratios only. It classifies leading-action G/B/Z cells, not a compactification or relative boundary component.",
+      "state": "COMPLETED_SCOPED_SAFE_PROJECTIVE_MIXED_ACTION_SIGN_CHART_SCOPE",
+      "includes": [
+        "the hash-pinned equal-endpoint m=2 action and exp(-S_2) convention",
+        "the compact coordinate-ratio/phase parameters 1/2<=r<=2, |theta|<=pi/12 and alpha modulo 2*pi",
+        "the finite nonzero-lapse envelope and unbounded radial tail s>=157852",
+        "exact G/B action-sign bounds, unclassified Z cells and 66 direct original-action calls"
+      ],
+      "excludes": [
+        "a compactification, boundary divisor or relative boundary component",
+        "attachment, homotopy, amplitude, determinant, measure or absolute integral convergence",
+        "other ratio/phase charts, coordinate faces or a complete end census",
+        "singularity or Stokes data and classification of the Z transition band",
+        "a source-defined cycle, orientation, complete intersection vector or global promotion",
+        "Weyl data, spectral measure, RAQ, empirical, physics and TOE claims"
+      ]
+    },
+    {
+      "id": "claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS",
+      "type": "claim",
+      "title": "One safe-projective m=2 mixed phase chart classifies declared good and bad action cells",
+      "summary": "Supported only on the declared compact coordinate-ratio/phase parameter chart, unbounded radial s-tail and finite lapse envelope. For s>=157852, G: cos(3*alpha+2*theta)>=1/2 has a positive action-real-part bound and B: cos(3*alpha+2*theta)<=-1/2 has a negative bound. Z: |cos(3*alpha+2*theta)|<1/2 remains an unresolved leading-action transition band; Stokes data are uncomputed. This is neither a compactification, relative good-end, source-cycle nor global-intersection claim.",
+      "state": "SUPPORTED_ON_DECLARED_SAFE_PROJECTIVE_MIXED_ACTION_CHART_SCOPE",
+      "claim_id": "G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS",
+      "statement": "On the declared compact coordinate-ratio/phase parameter chart with an unbounded radial s-tail, G and B have opposite uniform action-real-part signs for s>=157852, while Z remains unclassified as an unresolved leading-action transition band.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:gate1-m2-safe-projective-mixed-phase-chart-result",
+      "type": "evidence",
+      "title": "Gate-1 m=2 safe projective mixed phase chart evidence",
+      "summary": "One clean unnumbered VALID_RUN records 5/5 exact checks, 4/4 numerical controls and 3/3 theorem guards. Exact G/B/Z partition on the compact coordinate-ratio/phase parameter chart with unbounded radial tail, uniform action bounds, 66 direct original-action calls and 12 separately evaluated conjugate partners support the scoped chart while Z and every global output remain unresolved or null.",
+      "state": "VALID_RUN_SCOPED_SAFE_PROJECTIVE_MIXED_PHASE_CHART",
+      "observed_status": "VALID_RUN_5_EXACT_4_NUMERICAL_3_GUARDS_66_SAMPLES",
+      "check_ids": [
+        "G1.m2.safe_chart.action_and_actual_s5_leading",
+        "G1.m2.safe_chart.representative_cells",
+        "G1.m2.safe_chart.exponential_sector_bound",
+        "G1.m2.safe_chart.uniform_remainder_constants",
+        "G1.m2.safe_chart.cosine_partition",
+        "G1.m2.safe_chart.direct_phase_control",
+        "G1.m2.safe_chart.good_bad_direct_signs_and_bounds",
+        "G1.m2.safe_chart.transition_band_is_not_classified",
+        "G1.m2.safe_chart.conjugation_and_caps"
+      ]
+    },
+    {
+      "id": "artifact:gate1-m2-safe-projective-mixed-phase-chart-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 m=2 safe projective mixed phase chart evidence snapshot",
+      "summary": "Schema-valid typed extract of the clean bounded parameter-chart calculation, including raw-result, input and runner hashes, check locators, explicit unbounded radial-tail scope and fail-closed outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-m2-safe-projective-mixed-phase-chart-result.json",
+      "sha256": "1e55650c0dfb93e3582511fd4704f84de05616a5d281f129db53f67c4b25a419"
+    },
+    {
+      "id": "artifact:gate1-m2-safe-projective-mixed-phase-chart-report",
+      "type": "artifact",
+      "title": "Gate-1 m=2 safe projective mixed phase chart report",
+      "summary": "Human-readable derivation of the safe chart, G/B action bounds, unresolved leading-action transition band, direct-action controls and the source/global obligations that remain open.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART.md",
+      "sha256": "d023eed92c67ae37584d68222e96a2fc46bb9c0948cc32c94d9b0a2be223faa8"
     }
   ],
   "edges": [
@@ -36012,7 +36083,17 @@
     {"id":"edge:3764","from":"claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-diagonal-mixed-end-paired-control-report"},
     {"id":"edge:3765","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"One mixed action-decay candidate is classified; all other ratios, phases, faces, connectors, amplitudes and oriented pairings remain to be exhausted."},
     {"id":"edge:3766","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The current blocker gains one scoped candidate record only. A source-defined complete relative cycle and orientation-stable global vector remain missing."},
-    {"id":"edge:3767","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the action-decay criterion motivating relative good ends is reused. No full relative pair, thimble basis or source cycle is imported."}
+    {"id":"edge:3767","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the action-decay criterion motivating relative good ends is reused. No full relative pair, thimble basis or source cycle is imported."},
+    {"id":"edge:3768","from":"scope:gate1-m2-safe-projective-mixed-phase-chart-finite-lapse","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"One compact coordinate-ratio/phase parameter chart with an unbounded radial tail only; it is not a compactification, complete end census or physical cycle."},
+    {"id":"edge:3769","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"VALID_WITHIN","to":"scope:gate1-m2-safe-projective-mixed-phase-chart-finite-lapse","note":"Support is restricted to the declared compact r/theta/alpha parameter chart, finite lapse envelope and unbounded radial tail s>=157852; Z remains unresolved."},
+    {"id":"edge:3770","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-safe-projective-mixed-phase-chart-result","polarity":"SUPPORTS"},
+    {"id":"edge:3771","from":"evidence:gate1-m2-safe-projective-mixed-phase-chart-result","relation":"RECORDED_IN","to":"artifact:gate1-m2-safe-projective-mixed-phase-chart-evidence-snapshot"},
+    {"id":"edge:3772","from":"evidence:gate1-m2-safe-projective-mixed-phase-chart-result","relation":"DERIVED_FROM","to":"evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards","note":"Inherits only the hash-pinned equal-endpoint m=2 action, boundary values and finite lapse envelope; no Phase-39 runner or local intersection is re-executed."},
+    {"id":"edge:3773","from":"evidence:gate1-m2-safe-projective-mixed-phase-chart-result","relation":"DERIVED_FROM","to":"evidence:gate1-m2-diagonal-mixed-end-paired-control-result","note":"The parameter chart contains the prior diagonal r=1, theta=0 direction but classifies a distinct compact coordinate-ratio/phase family with unbounded radial tail; it does not attach that direction to a chain."},
+    {"id":"edge:3774","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-safe-projective-mixed-phase-chart-report"},
+    {"id":"edge:3775","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"One compact coordinate-ratio/phase parameter chart is classified on an unbounded radial tail; other charts, faces, Z, source attachment and oriented intersections remain open."},
+    {"id":"edge:3776","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The current blocker gains one scoped chart record only; a source-defined relative cycle and orientation-stable global vector remain missing."},
+    {"id":"edge:3777","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the action-decay criterion is reused. No relative pair, thimble basis, source cycle or Stokes datum is imported."}
   ],
   "kg_bridges": [
     {
@@ -36800,6 +36881,16 @@
       "checked_at_utc": "2026-09-03T02:11:56Z",
       "lookup_key": "ICE Gate 1 m2 sign flipped diagonal mixed action tail negative false signal control",
       "note": "No authorized exact external correspondence or writer is available. The contradicted proposition is a repository-local sign control through negative midpoint scale, not an admissible physical branch or general mixed-end no-go; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-09-03T02:43:56Z",
+      "lookup_key": "ICE Gate 1 m2 safe projective mixed phase chart good bad action cells unresolved transition band",
+      "note": "No authorized exact external correspondence or writer is available. The repository-local chart classifies only finite action-real-part cells; it supplies no compactification, Stokes datum, relative/source cycle, global intersection, Weyl, RAQ, physics or TOE claim, and no external UID was invented."
     }
   ]
 }
