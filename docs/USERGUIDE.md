@@ -74,7 +74,8 @@ For core CPT work, the current G1 blocker is the default path; G2--G5 require co
 outputs. The P1--P7 V0 map is a supporting portfolio and does not automatically unblock the gate path.
 The role-band view separates TOE core, the two G1 subblockers, supporting P1--P7 work and frozen
 non-executable history. A fresh raw-C handoff should use the compact P1 and P4 paths: P1 starts with an
-exact zero-evaluation bridge, while P4 is blocked at the complex-tail theorem before any endpoint runner.
+exact zero-evaluation bridge. P4 has closed its fixed-UHP complex-tail prerequisite and actual \(Q_+\)
+pair; the next blocker is validated \(Q_+\!\to Q_0\) transport plus endpoint classification and maps.
 A proposal is core-labelled only after human review identifies its canonical blocker, missing typed
 object, bounded falsifiable output, and changed evidence edge. The planner is a review aid and never
 authorizes execution or a physics claim.

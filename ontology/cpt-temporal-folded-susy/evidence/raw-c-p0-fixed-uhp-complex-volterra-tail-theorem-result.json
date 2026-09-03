@@ -1,0 +1,127 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_20260903",
+  "phase": null,
+  "observed_at_utc": "2026-09-03T03:40:10Z",
+  "command": "./ice run raw_c_fixed_uhp_complex_volterra_tail_theorem",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/raw_c_fixed_uhp_complex_volterra_tail_theorem.py",
+    "sha256": "d207e4a6493f689f69cf8106a6a05963a26f896c76abf5d342aabf2f5b666401",
+    "introduced_in_commit": "949cb4b91beacb361faeef07215df15d77f46708"
+  },
+  "exact_checks": 6,
+  "checks": [
+    {
+      "id": "rawc.p4.volterra.control.coefficient_factorization",
+      "status": "PASS",
+      "statement": "The p=0 coefficient, relative perturbation and both declared derivatives agree exactly."
+    },
+    {
+      "id": "rawc.p4.volterra.control.wkb_residual_identity",
+      "status": "PASS",
+      "statement": "The exact Liouville-Green transform gives W_XX=(1+psi)W with psi=-r/A and the declared residual."
+    },
+    {
+      "id": "rawc.p4.volterra.control.kernel_majorant_closed_form",
+      "status": "PASS",
+      "statement": "The exact r(delta) identity yields a monotone exp(-Q) majorant whose half-line integral is closed form."
+    },
+    {
+      "id": "rawc.p4.volterra.control.contraction_strictly_below_one",
+      "status": "PASS",
+      "statement": "The exact rational operator-norm bound V_bar is below 1/10000 and therefore strictly below one."
+    },
+    {
+      "id": "rawc.p4.volterra.control.branch_halfline_lower_bound",
+      "status": "PASS",
+      "statement": "The target box lies in an open holomorphy disk where the principal momentum has uniformly positive real part along Q>=4, making the real-Q tail progressive."
+    },
+    {
+      "id": "rawc.p4.volterra.control.normalization_fixed_uniqueness",
+      "status": "PASS",
+      "statement": "The self-contained Banach-Volterra proof gives one normalized recessive solution in the bounded-H class and fixes its scalar by u/u0 tending to one."
+    }
+  ],
+  "numerical_checks": 2,
+  "numerical": [
+    {
+      "id": "rawc.p4.volterra.control.two_tier_acb_outward_constants",
+      "status": "PASS",
+      "statement": "The 128- and 256-bit outward boxes for Q=4 constants are finite and overlap as same-backend consistency only."
+    },
+    {
+      "id": "rawc.p4.volterra.control.endpoint_value_derivative_correction_enclosures_finite",
+      "status": "PASS",
+      "statement": "The proved absolute correction radii give finite conservative rectangles for the actual normalized recessive value and derivative at Q+=4."
+    }
+  ],
+  "payload": {
+    "exact_checks": 6,
+    "numerical_checks": 2,
+    "theorem_guards": 2,
+    "locator_policy": "Six analytic or exact and two outward-arithmetic decision locators are indexed here; the authoritative raw result is the single source for the complete control data, proof steps and rectangles.",
+    "calculation": {
+      "calculation_id": "RawCP0FixedUhpComplexVolterraTailTheorem",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "CERTIFY_P0_FIXED_UHP_COMPLEX_TAIL_CONTRACTION_AND_RECESSIVE_QPLUS_ENCLOSURE",
+      "programme_impact": "CLOSE_COMPLEX_TAIL_THEOREM_PREREQUISITE_ONLY; COMPACT_TRANSPORT_AND_WEYL_MEASURE_RAQ_REMAIN_OPEN"
+    },
+    "raw_result": {
+      "path": "cpt_temporal_folded_susy/RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_RESULT.json",
+      "sha256": "bcb823fe4857b196f01001bc15fe5a1122116e8f887b633b4e687669d297d32f",
+      "payload_sha256_without_self": "a257f2efe4e8cd0b98f8fd2e17608a7f13f67d36f24c90033be33958b3e65e51"
+    },
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_INPUTS.json",
+      "sha256": "d17b1f1c4c6434bf233e6d4e14b6d3081d6412352193b7936c3dcb4650bd00de"
+    },
+    "upstream_branch_audit": {
+      "path": "cpt_temporal_folded_susy/RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_RESULT.json",
+      "sha256": "2149698af3841b3b11f77fc9e17ba8e15a5aba3dcd3122a9a12d1298e3c717ed",
+      "payload_sha256_without_self": "6d08d3dd19ff863aef5e83451a5cd6f5aa1e847e3379ed3a37270ea65cfaf333",
+      "verdict": "KEEP_FIXED_UHP_BOX_BRANCH_PRECONDITION_ONLY"
+    },
+    "computed_facts": {
+      "target": "p=0, Q>=4, Q_plus=4, Re z in [-1/16,1/16], Im z in [15/16,17/16]",
+      "holomorphy_neighborhood": "open disk |z|<9/8",
+      "eta_bar": "1/336",
+      "V_bar": "120871/1263204600",
+      "q_bar": "120871/1263083729",
+      "actual_endpoint_status": "ACTUAL_INFINITY_NORMALIZED_RECESSIVE_SOLUTION_ENCLOSED_AT_QPLUS_ONLY",
+      "same_backend_precision_tiers": [128, 256],
+      "ball_evaluations": 28,
+      "ode_calls": 0,
+      "quadratures": 0,
+      "root_calls": 0,
+      "sampling_points": 0
+    },
+    "scope": {
+      "includes": [
+        "one principal branch and progressive real-Q tail on the declared p=0 fixed UHP box",
+        "one infinity-normalized recessive solution unique in the bounded-H class",
+        "outward value and derivative rectangles at Q_plus=4"
+      ],
+      "excludes": [
+        "Q_plus-to-Q0 compact transport or endpoint boundary maps",
+        "Gamma_0 or Gamma_1 limits, a boundary ratio M or singular Weyl m(z)",
+        "spectral measure or multiplicity, Stieltjes inversion, nonzero-p or p-to-zero assembly",
+        "rigging test space or map, physical product, RAQ, C/H equivalence, Gate-1 core progress, physics or TOE"
+      ]
+    },
+    "promoted_outputs": {
+      "validated_Qplus_to_Q0_transport": null,
+      "singular_endpoint_nonreal_weyl_function": null,
+      "raw_C_spectral_measure": null,
+      "raw_C_spectral_multiplicity": null,
+      "raw_C_RAQ_completion": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1_core_progress": false,
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    }
+  }
+}

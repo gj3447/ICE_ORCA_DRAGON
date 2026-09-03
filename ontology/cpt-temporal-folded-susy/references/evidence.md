@@ -177,11 +177,15 @@ tail-square factors over the \(N=2,3,4\) ladder are \(5,1,0\) in the declared un
 evaluator-versus-projection separation only: HDA, Jacobi, BFV, continuum and physics outputs remain null.
 
 [`RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md`](../../../cpt_temporal_folded_susy/RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md)
-is an execution-free blocker note, not a `research-run-evidence/v1` snapshot. It
-specifies why the finite double-precision nonreal proxy is not an actual recessive
-endpoint certificate: a complex-tail theorem, normalization-fixed Volterra
-contraction and outward complex endpoint enclosure remain absent. It contains no
-certificate, singular Weyl function, spectral measure or RAQ result.
+is an execution-free historical blocker note, not a `research-run-evidence/v1`
+snapshot. Its warning that the finite double-precision nonreal proxy is not an
+actual recessive endpoint certificate remains active. Its then-current missing-tail
+statement is superseded, without modifying the hash-pinned input, by
+[`raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result.json`](../evidence/raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result.json).
+That independent run records six analytic/exact checks, two outward-arithmetic
+checks and two scope guards for a normalized p=0 recessive solution and its actual
+\(Q_+=4\) value/derivative rectangles. It does not supply \(Q_+\!\to Q_0\)
+transport, endpoint maps, \(M\), singular \(m(z)\), spectral measure or RAQ.
 
 ## Historical Phase 11–15R evidence backfill
 
@@ -3561,8 +3565,13 @@ claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_S
 
 concept:raw-c-fixed-box-nonreal-branch-audit
   -> DOCUMENTED_BY -> evidence:raw-c-fixed-box-nonreal-branch-audit-result
+  -> concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem
+     -> DOCUMENTED_BY -> evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result
+     -> closes only the fixed-UHP p=0 tail contraction, normalized uniqueness
+        and actual Q_plus pair enclosure
   -> open:raw-c-fixed-box-nonreal-endpoint-certificate
-     still orders actual endpoint -> m(z) -> measure/multiplicity -> raw-C RAQ
+     now begins at Q_plus-to-Q0 transport and endpoint maps, then orders
+     selected M -> m(z) -> measure/multiplicity -> raw-C RAQ
 
 claim:CLOSED_S3_N1_TRACE_ONLY_NO_INDEPENDENT_SHEAR_PAIR_HOLDS
   -> HAS_EVIDENCE -> evidence:closed-s3-n1-trace-gauge-convention-result

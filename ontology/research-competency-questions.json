@@ -3,7 +3,7 @@
   "id": "ice-research-architecture",
   "title": "ICE ORCA DRAGON research architecture competency questions",
   "description": "Stable ASK queries over the generated named RDF dataset. They protect programme boundaries, epistemic chains, route dependencies, and non-promotion invariants without evaluating scientific truth.",
-  "version": "2026-09-02",
+  "version": "2026-09-03",
   "cases": [
     {
       "id": "four-programme-boundaries",
@@ -35,10 +35,10 @@
     },
     {
       "id": "p4-dependency-order",
-      "question": "Does P4 preserve the complex-tail-before-endpoint and Weyl-field-before-measure order?",
-      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?tail <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-p0-complex-tail-theorem-prerequisite\" . ?endpoint <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-fixed-box-nonreal-endpoint-certificate\" . ?field <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-nonzero-p-uniform-weyl-field\" . ?endpointEdge <urn:ice-orca-dragon:ontology:from> ?endpoint . ?endpointEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?endpointEdge <urn:ice-orca-dragon:ontology:to> ?tail . ?fieldEdge <urn:ice-orca-dragon:ontology:from> ?field . ?fieldEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?fieldEdge <urn:ice-orca-dragon:ontology:to> ?endpoint . ?measureEdge <urn:ice-orca-dragon:ontology:from> <urn:ice-orca-dragon:resource:graph:cpt:node:open%3Araw-c-fiber-spectral-measure-transform> . ?measureEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?measureEdge <urn:ice-orca-dragon:ontology:to> ?field . } }",
+      "question": "Does P4 record the resolved complex-tail result before the open endpoint and preserve Weyl-field-before-measure order?",
+      "query": "ASK WHERE { GRAPH <urn:ice-orca-dragon:resource:graph:cpt> { ?endpoint <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-fixed-box-nonreal-endpoint-certificate\" . ?theorem <urn:ice-orca-dragon:ontology:localId> \"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem\" . ?field <urn:ice-orca-dragon:ontology:localId> \"open:raw-c-nonzero-p-uniform-weyl-field\" . ?endpointEdge <urn:ice-orca-dragon:ontology:from> ?endpoint . ?endpointEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/FOLLOW_UP_TO> . ?endpointEdge <urn:ice-orca-dragon:ontology:to> ?theorem . ?fieldEdge <urn:ice-orca-dragon:ontology:from> ?field . ?fieldEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?fieldEdge <urn:ice-orca-dragon:ontology:to> ?endpoint . ?measureEdge <urn:ice-orca-dragon:ontology:from> <urn:ice-orca-dragon:resource:graph:cpt:node:open%3Araw-c-fiber-spectral-measure-transform> . ?measureEdge <urn:ice-orca-dragon:ontology:relation> <urn:ice-orca-dragon:ontology:relation/BLOCKED_BY> . ?measureEdge <urn:ice-orca-dragon:ontology:to> ?field . } }",
       "expected_boolean": true,
-      "rationale": "A finite real-root or endpoint proxy must not be mistaken for nonreal Weyl and spectral-measure completion."
+      "rationale": "The completed fixed-UHP tail theorem must remain distinct from compact endpoint transport, nonreal Weyl and spectral-measure completion."
     },
     {
       "id": "p4-does-not-unblock-g1",

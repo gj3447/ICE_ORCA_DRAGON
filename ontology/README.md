@@ -57,7 +57,8 @@ support for another.
 
 The compact role-band path separates the G1--G5 core, G1's two direct subblockers, supporting work and
 frozen non-executable history. The two raw-C handoffs then split the exact P1 real-root corridor from
-the P4 complex-tail theorem through endpoint, Weyl field, measure, threshold and RAQ typed blockers.
+the P4 chain. Its fixed-UHP complex-tail theorem and actual \(Q_+\) pair are closed; validated
+\(Q_+\!\to Q_0\) transport, endpoint maps, Weyl field, measure, threshold and RAQ remain typed blockers.
 They do not connect either supporting lane to G1 by implication or authorize a calculation. The
 [research graph atlas](../docs/research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md) is the human entry point
 for the complete content topology.
@@ -106,8 +107,9 @@ support-restricted, the finite BFV sign transport remains relative, and the clos
 separates a fixed-metric matter-only \(DH\) strain obstruction from its finite projection remainder.
 One selected \(Q_2\) metric-plus-matter ambient \(DH\) packet cancels that strain while retaining its
 \(L=2\) omitted \(k=3\) remainder. The graph separately indexes the \(n=1\) trace-only convention, the
-raw-\(C\) \(Q=4\) entering-sensitivity anchor, and the fixed-box nonreal branch precondition. General
-ADM \(DD/DH/HH\), HDA/Jacobi, the actual nonreal endpoint-to-Weyl-to-measure chain, raw-\(C\) RAQ and
+raw-\(C\) \(Q=4\) entering-sensitivity anchor, and the fixed-box nonreal branch precondition. The later
+fixed-UHP Volterra result adds the normalized p=0 recessive pair at \(Q_+=4\), but not compact transport
+or a boundary ratio. General ADM \(DD/DH/HH\), HDA/Jacobi, the \(Q_+\!\to Q_0\)-to-Weyl-to-measure chain, raw-\(C\) RAQ and
 anomaly problems remain open. The current physics-discovery gap map records those dependencies without
 treating them as automatic successors. None of these results is a physics or TOE promotion.
 

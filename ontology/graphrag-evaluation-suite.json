@@ -3,7 +3,7 @@
   "id": "canonical-four-graph-navigation",
   "title": "Canonical four-graph retrieval regression suite",
   "description": "Stable locator checks for the repository-local GraphRAG layer. Each case checks retrieval of an existing canonical graph record, not the truth of the record's scientific content.",
-  "version": "2026-09-02",
+  "version": "2026-09-03",
   "cases": [
     {
       "id": "cpt-current-g1-blocker",
@@ -69,19 +69,20 @@
       "rationale": "The P1 handoff is the scoped real fixed-lambda root theorem, not a nonreal Weyl or RAQ result."
     },
     {
-      "id": "cpt-p4-complex-tail-prerequisite",
-      "query": "p zero complex tail enclosure Volterra prerequisite actual recessive endpoint",
+      "id": "cpt-p4-fixed-uhp-tail-result",
+      "query": "fixed UHP p zero complex Volterra tail theorem normalized recessive Q plus pair enclosure",
       "expectation": "RETRIEVE",
       "graph": "cpt",
       "depth": 1,
       "expected_unit_ids": [
-        "cpt::open:raw-c-p0-complex-tail-theorem-prerequisite"
+        "cpt::concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem",
+        "cpt::evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result"
       ],
       "forbidden_unit_ids": [
         "cpt::claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS"
       ],
       "max_first_expected_rank": 3,
-      "rationale": "P4 must locate the theorem prerequisite before any endpoint solver or spectral promotion."
+      "rationale": "P4 must retrieve the completed fixed-UHP tail theorem and its evidence without confusing the result with a real-root or spectral completion."
     },
     {
       "id": "cpt-p4-spectral-measure-after-actual-m",

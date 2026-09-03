@@ -590,10 +590,6 @@ layer(AppLayer)("canonical ontology", (it) => {
       const graph = yield* loadResearchGraph
       const blockerChain = [
         [
-          "open:raw-c-fixed-box-nonreal-endpoint-certificate",
-          "open:raw-c-p0-complex-tail-theorem-prerequisite"
-        ],
-        [
           "open:raw-c-nonzero-p-uniform-weyl-field",
           "open:raw-c-fixed-box-nonreal-endpoint-certificate"
         ],
@@ -632,6 +628,54 @@ layer(AppLayer)("canonical ontology", (it) => {
         ).toBe(true)
       }
 
+      const resolvedTailPrerequisite =
+        "open:raw-c-p0-complex-tail-theorem-prerequisite"
+      const completedTail =
+        "concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem"
+      const completedTailEvidence =
+        "evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result"
+      expect(
+        graph.nodes.find(({ id }) => id === resolvedTailPrerequisite)?.state
+      ).toBe(
+        "RESOLVED_BY_RAW_C_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_ON_DECLARED_BOX_ONLY"
+      )
+      expect(
+        graph.edges.some(
+          (edge) =>
+            edge.from === resolvedTailPrerequisite &&
+            edge.relation === "FOLLOW_UP_TO" &&
+            edge.to === completedTail
+        )
+      ).toBe(true)
+      expect(
+        graph.edges.some(
+          (edge) =>
+            edge.from === completedTail &&
+            edge.relation === "DOCUMENTED_BY" &&
+            edge.to === completedTailEvidence
+        )
+      ).toBe(true)
+      expect(
+        graph.edges.some(
+          (edge) =>
+            edge.from === "open:raw-c-fixed-box-nonreal-endpoint-certificate" &&
+            edge.relation === "BLOCKED_BY" &&
+            edge.to === resolvedTailPrerequisite
+        )
+      ).toBe(false)
+
+      const p4HandoffSuffix = [
+        resolvedTailPrerequisite,
+        completedTail,
+        completedTailEvidence,
+        "open:raw-c-fixed-box-nonreal-endpoint-certificate",
+        "open:raw-c-nonzero-p-uniform-weyl-field",
+        "open:raw-c-fiber-spectral-measure-transform",
+        "open:raw-c-p-zero-threshold-global-spectral-assembly",
+        "open:raw-c-raq-rigging-map-physical-product",
+        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
+      ]
+
       const handoff = graph.reading_paths.find(
         (path) => path.id === "reading-path:raw-c-next-bounded-work"
       )
@@ -642,18 +686,15 @@ layer(AppLayer)("canonical ontology", (it) => {
       expect(handoff?.nodes).toContain(
         "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport"
       )
-      expect(handoff?.nodes.slice(-7)).toEqual([
-        "open:raw-c-p0-complex-tail-theorem-prerequisite",
-        "open:raw-c-fixed-box-nonreal-endpoint-certificate",
-        "open:raw-c-nonzero-p-uniform-weyl-field",
-        "open:raw-c-fiber-spectral-measure-transform",
-        "open:raw-c-p-zero-threshold-global-spectral-assembly",
-        "open:raw-c-raq-rigging-map-physical-product",
-        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
-      ])
+      expect(handoff?.nodes.slice(-p4HandoffSuffix.length)).toEqual(
+        p4HandoffSuffix
+      )
 
       const supportingNodes = new Set<string>([
         "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
+        resolvedTailPrerequisite,
+        completedTail,
+        completedTailEvidence,
         ...blockerChain.flat()
       ])
       const g1 = "open:gate1-original-cycle-signed-global-intersections"
@@ -694,15 +735,7 @@ layer(AppLayer)("canonical ontology", (it) => {
         graph.reading_paths.find(
           ({ id }) => id === "reading-path:p4-weyl-measure-raq-handoff"
         )?.nodes.slice(1)
-      ).toEqual([
-        "open:raw-c-p0-complex-tail-theorem-prerequisite",
-        "open:raw-c-fixed-box-nonreal-endpoint-certificate",
-        "open:raw-c-nonzero-p-uniform-weyl-field",
-        "open:raw-c-fiber-spectral-measure-transform",
-        "open:raw-c-p-zero-threshold-global-spectral-assembly",
-        "open:raw-c-raq-rigging-map-physical-product",
-        "open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion"
-      ])
+      ).toEqual(p4HandoffSuffix)
     })
   )
 

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-03T02:58:07Z",
+  "updated_at_utc": "2026-09-03T03:45:23Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -461,7 +461,7 @@
     },
     {
       "question": "How far did the trace-gauge V0 spectral-to-m2 BFV chain get?",
-      "answer": "The chain now contains a selected-H p-positive exact coordinate unitary only to c<3p^2; the positive-measure complement obstructs a p-preserving intertwiner to declared unrestricted M_c. This is separate from the old W(c,P,p) FIO. Raw C has one declared measurable p-preserving Gamma_1=0 extension, but no actual nonreal endpoint M, selected m=-1/(2*hbar^2*M), measurable spectral field, p-to-zero threshold, RAQ or C/H equivalence. A finite positive-lambda odd-Pfaffian transport is KEEP only as a relative orientation identity: absolute BFV measure remains open. The L=2 S3 zonal scalar ledger is kinematic only: product closure fails and its projected associator is exactly the discarded remainder, not HDA or anomaly. HDA/Jacobi, quantum anomaly, relational recovery, V!=0 generation/reheating and likelihood all remain open; physics and TOE are null.",
+      "answer": "The chain now contains a selected-H p-positive exact coordinate unitary only to c<3p^2; the positive-measure complement obstructs a p-preserving intertwiner to declared unrestricted M_c. This is separate from the old W(c,P,p) FIO. Raw C has one declared measurable p-preserving Gamma_1=0 extension and now one p=0 fixed-UHP complex-tail theorem with an actual infinity-normalized recessive pair enclosed at Q_plus=4. It still has no validated Q_plus-to-Q0 transport, endpoint ratio M, selected m=-1/(2*hbar^2*M), measurable spectral field, p-to-zero threshold, RAQ or C/H equivalence. A finite positive-lambda odd-Pfaffian transport is KEEP only as a relative orientation identity: absolute BFV measure remains open. The L=2 S3 zonal scalar ledger is kinematic only: product closure fails and its projected associator is exactly the discarded remainder, not HDA or anomaly. HDA/Jacobi, quantum anomaly, relational recovery, V!=0 generation/reheating and likelihood all remain open; physics and TOE are null.",
       "claim_ids": [
         "claim:G1_HOMOGENEOUS_TRACE_PAIR_GIVES_LOCAL_SIMPLE_ROOT_CONSTRAINT_REDUCTION",
         "claim:G1_STATIC_TRACE_FP_GAUGE_CAN_BE_APPENDED_TO_UNCHANGED_PROPER_TIME_M2_SOURCE",
@@ -560,7 +560,7 @@
     },
     {
       "question": "What is the next bounded raw-C work, and how is it kept off the TOE core path?",
-      "answer": "P1 remains supporting work. Its smallest next output is an execution-free exact composition that proves the existing lambda-zero Bessel characteristic F and the selected normalized G have the same root-1 zero, using the already certified nonzero K(Q0) factor and the fixed-lambda uniqueness theorem; a full-lambda slab location tube is optional and must use strict outward face signs rather than residuals or samples. P4 starts earlier than an endpoint solver: first prove a source-checked or self-contained complex-tail/Volterra enclosure on the fixed p=0 UHP box. Only then may work proceed through the actual endpoint, nonzero-p Weyl field, spectral transform and measure, p-to-zero/global assembly, raw-C RAQ, and finally C/H comparison. Neither supporting lane changes G1 without a separate source-derived saddle, Stokes or oriented-intersection evidence edge, and no node authorizes execution or physics promotion.",
+      "answer": "P1 remains supporting work. Its root-1 F-to-normalized-G bridge and fixed-lambda uniqueness theorem are already composed on one real corridor; optional broader work must still use strict outward face signs rather than residuals or samples. P4 has now closed its first prerequisite on the declared p=0 UHP box: a self-contained complex Volterra contraction encloses the actual infinity-normalized recessive pair at Q_plus=4. The next independent object is validated Q_plus-to-Q0 transport together with p=0 endpoint classification and boundary maps; only after a nonzero endpoint ratio M exists may work proceed to selected m, nonzero-p Weyl field, spectral transform and measure, p-to-zero/global assembly, raw-C RAQ and C/H comparison. Neither supporting lane changes G1 without a separately reviewed source-derived saddle, Stokes or oriented-intersection evidence edge, and no node authorizes automatic execution or physics promotion.",
       "claim_ids": [
         "claim:RAW_C_LAMBDA_ZERO_BESSEL_BALL_TRANSPORT_ANCHOR_HOLDS",
         "claim:RAW_C_FIXED_LAMBDA_ROOT_THEOREM_COMPOSITION_UNIQUE_TRANSVERSE_CONTINUOUS_SELECTOR_HOLDS",
@@ -570,7 +570,7 @@
     },
     {
       "question": "Why has this workbench not established new physics?",
-      "answer": "The newest computational facts are a complete Q0-normalized Gamma_1 quotient, a uniform sign strip, a complete strict-positive normalized partial_kappa G interval, and their theorem-level composition into one unique kappa-transverse normalized-G zero per fixed lambda plus a continuous selector on one small real rectangle. This remains a local real characteristic theorem, not a spectral or physical result. One declared measurable raw-C extension exists, and a non-evidential convention design identifies the selected Herglotz target conditional on an actual endpoint ratio, but there is still no actual nonreal endpoint-to-m-to-measure-to-RAQ chain, p-to-zero threshold or C/H equivalence. The work also provides no absolute actual-Gamma_1 amplitude/orientation, C1 selector or velocity, roots outside the corridor, full S3 SVT/cubic DD-DH-HH/Jacobi closure, operator common core and absolute BFV measure, or physical product, clock, normalized V!=0 state, reheating map and comparison-ready observable. Computational novelty and consistency are real progress, but no model-level or empirical physics discovery is established.",
+      "answer": "The newest supporting fact is a self-contained p=0 fixed-UHP complex Volterra contraction that encloses the actual infinity-normalized recessive value and derivative at Q_plus=4. The real lane separately has a complete Q0-normalized Gamma_1 quotient, a uniform sign strip, a strict-positive normalized partial_kappa G interval, and one unique kappa-transverse normalized-G zero per fixed lambda with a continuous selector on a small rectangle. These are scoped operator and characteristic results, not spectral or physical results. There is still no validated complex transport to Q0, endpoint ratio M, selected m, spectral measure/transform, p-to-zero threshold, raw-C RAQ or C/H equivalence. The work also provides no absolute actual-Gamma_1 amplitude/orientation, C1 selector or velocity, roots outside the corridor, full S3 SVT/cubic DD-DH-HH/Jacobi closure, operator common core and absolute BFV measure, or physical product, clock, normalized V!=0 state, reheating map and comparison-ready observable. Computational novelty and consistency are real progress, but no model-level or empirical physics discovery is established.",
       "claim_ids": [
         "claim:RAW_C_BESSEL_PRECONDITIONED_KERNEL_PANEL_AFFINE_SWITCH_TRANSPORT_HOLDS",
         "claim:RAW_C_BESSEL_PRECONDITIONED_NODE_SAFE_Q0_PROJECTIVE_SENSITIVITY_TRANSFER_HOLDS",
@@ -606,7 +606,7 @@
     },
     {
       "question": "이 효과는 어떤 선택을 바꿔도 남으며, 다른 관측 영역에서도 같은 이유로 나타나는가?",
-      "answer": "아직 model/physics scope에서 두 조건을 모두 통과한 CPT 결과는 없다. 새 frozen-m=2 감사는 현재 local source의 C/|N|와 C/N이 음의 arm에서 달라 zero-supported contact로 수선되지 않으며, branch를 고른 뒤에도 같은 scaling degree의 c delta 자유도가 남음을 보였다. 이는 유일한 local glue/contact라는 지름길만 제거한다. G1의 source-derived global intersection vector와 P4의 actual nonreal endpoint-to-m-to-measure-to-positive-RAQ chain은 계속 열려 있다. 허용 선택군 아래 안정적인 zero/no-go도 유효한 결과이며, 다른 graph의 비슷한 결과는 독립 consumer나 evidence가 아니다.",
+      "answer": "아직 model/physics scope에서 두 조건을 모두 통과한 CPT 결과는 없다. 새 frozen-m=2 감사는 현재 local source의 C/|N|와 C/N이 음의 arm에서 달라 zero-supported contact로 수선되지 않으며, branch를 고른 뒤에도 같은 scaling degree의 c delta 자유도가 남음을 보였다. 이는 유일한 local glue/contact라는 지름길만 제거한다. P4에서는 p=0 fixed-UHP complex tail과 Q_plus=4 recessive pair까지만 선택 독립적으로 고정됐고, Q0 transport, endpoint ratio M, m, measure와 positive RAQ는 계속 열려 있다. G1의 source-derived global intersection vector도 여전히 없다. 허용 선택군 아래 안정적인 zero/no-go도 유효한 결과이며, 다른 graph의 비슷한 결과는 독립 consumer나 evidence가 아니다.",
       "claim_ids": [
         "claim:G1_CURRENT_RECORDS_DO_NOT_ESTABLISH_PHASE_LOCKED_JOINT_CYCLE",
         "claim:G1_CURRENT_FROZEN_M2_LOCAL_SOURCE_UNDERDETERMINES_PUNCTURED_GLUE_AND_ZERO_LAPSE_EXTENSION",
@@ -1607,7 +1607,7 @@
     {
       "id": "reading-path:raw-c-next-bounded-work",
       "title": "Next bounded raw-C supporting work",
-      "summary": "Start with the TOE routing policy and G1 blocker so the two raw-C lanes remain supporting by default. For P1, combine the existing lambda-zero Bessel bracket and fixed-lambda normalized-G uniqueness theorem into one exact F-to-G root-location bridge before considering an optional full-slab tube; neither output supplies C1 regularity, velocity, roots outside the corridor, a global census or a physical saddle. For P4, stop before any endpoint runner until the fixed-box complex-tail theorem prerequisite is proved, then follow the typed blockers through the actual endpoint, nonzero-p Weyl field, fiber measure/transform, p-to-zero global assembly, RAQ and C/H comparison. This is a human-review handoff and dependency map only: it creates no automatic task, execution authority, core-progress label, physics claim or TOE promotion.",
+      "summary": "Start with the TOE routing policy and G1 blocker so the two raw-C lanes remain supporting by default. P1 has one exact fixed-lambda normalized-G root theorem but still lacks C1 regularity, velocity, roots outside the corridor, a global census and a physical saddle. P4 has closed only the p=0 fixed-UHP complex-tail prerequisite and enclosed the actual normalized recessive pair at Q_plus=4. Its next independent object is validated Q_plus-to-Q0 transport plus endpoint classification and boundary maps; then follow the typed blockers through M and selected m, nonzero-p Weyl field, fiber measure/transform, p-to-zero global assembly, RAQ and C/H comparison. This is a human-review handoff and dependency map only: it creates no automatic task, execution authority, core-progress label, physics claim or TOE promotion.",
       "nodes": [
         "policy:toe-directed-critical-path-routing",
         "open:gate1-original-cycle-signed-global-intersections",
@@ -1619,6 +1619,8 @@
         "concept:raw-c-weyl-spectral-raq-bridge-design",
         "artifact:raw-c-nonreal-endpoint-interval-certificate-blocker",
         "open:raw-c-p0-complex-tail-theorem-prerequisite",
+        "concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem",
+        "evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result",
         "open:raw-c-fixed-box-nonreal-endpoint-certificate",
         "open:raw-c-nonzero-p-uniform-weyl-field",
         "open:raw-c-fiber-spectral-measure-transform",
@@ -1643,11 +1645,13 @@
     {
       "id": "reading-path:v0-supporting-bridge-portfolio",
       "title": "V0 supporting bridge portfolio",
-      "summary": "Read the current discovery-gap map and the canonical P1 through P7 open obligations as a supporting portfolio. P4 is expanded into its actual blocker chain from complex-tail theorem through endpoint, Weyl field, measure, threshold and RAQ. These lanes do not automatically unblock G1 through G5; one becomes a core-routing candidate only after human review identifies the exact missing typed object and evidence edge it changes.",
+      "summary": "Read the current discovery-gap map and the canonical P1 through P7 obligations as a supporting portfolio. P4 now records the completed p=0 fixed-UHP complex-tail theorem and Q_plus pair before the still-open transport, endpoint ratio, Weyl field, measure, threshold and RAQ chain. These lanes do not automatically unblock G1 through G5; one becomes a core-routing candidate only after human review identifies the exact missing typed object and evidence edge it changes.",
       "nodes": [
         "concept:gate1-v0-current-physics-discovery-gap-map",
         "open:gate1-v0-raw-c-differentiated-tail-node-safe-transport",
         "open:raw-c-p0-complex-tail-theorem-prerequisite",
+        "concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem",
+        "evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result",
         "open:raw-c-fixed-box-nonreal-endpoint-certificate",
         "open:raw-c-nonzero-p-uniform-weyl-field",
         "open:raw-c-fiber-spectral-measure-transform",
@@ -1686,11 +1690,13 @@
     },
     {
       "id": "reading-path:p4-weyl-measure-raq-handoff",
-      "title": "P4 actual endpoint to Weyl, measure and RAQ handoff",
-      "summary": "P4 begins with the complex-tail prerequisite, then an actual recessive endpoint ratio M(z), selected singular Weyl m(z), nonzero-p field, fiber spectral measure/transform, p-to-zero assembly and raw-C RAQ/product. The design and fixed-box branch audit are prerequisites or conventions only. This remains supporting operator work and does not supply the original G1 cycle or global intersections.",
+      "title": "P4 complex tail to endpoint, Weyl, measure and RAQ handoff",
+      "summary": "P4 now begins with a completed p=0 fixed-UHP Volterra theorem and actual normalized recessive pair at Q_plus=4. The next missing object is validated transport to Q0 with endpoint classification and boundary maps, followed by a nonzero ratio M(z), selected singular Weyl m(z), nonzero-p field, fiber spectral measure/transform, p-to-zero assembly and raw-C RAQ/product. The design and branch audit remain prerequisites or conventions only. This is supporting operator work and supplies neither the original G1 cycle nor global intersections.",
       "nodes": [
         "concept:raw-c-weyl-spectral-raq-bridge-design",
         "open:raw-c-p0-complex-tail-theorem-prerequisite",
+        "concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem",
+        "evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result",
         "open:raw-c-fixed-box-nonreal-endpoint-certificate",
         "open:raw-c-nonzero-p-uniform-weyl-field",
         "open:raw-c-fiber-spectral-measure-transform",
@@ -15225,8 +15231,8 @@
     {"id":"concept:closed-s3-real-scalar-harmonic-basis-ledger","type":"concept","title":"Closed-S3 finite real scalar harmonic-basis ledger","summary":"The pinned complex Wigner-D scalar seed is translated to a finite real n<=2 convention, with one selected exact real scalar product and explicit projection bookkeeping. It does not provide derivatives, vector/TT data, ADM, HDA, Jacobi, BFV or quantum closure.","state":"COMPLETED_FINITE_REAL_SCALAR_TRANSLATION_ONLY"},
     {"id":"evidence:closed-s3-real-scalar-harmonic-basis-ledger-result","type":"evidence","title":"Closed-S3 real scalar harmonic-basis evidence","summary":"VALID_RUN with 9/9 exact checks and three guards for the finite n<=2 real scalar translation and selected product only.","state":"VALID_RUN_FINITE_REAL_SCALAR_TRANSLATION_NOT_ADM_HDA","observed_status":"VALID_RUN_9_EXACT_PASS_3_GUARDS_FINITE_REAL_SCALAR_ONLY","check_ids":["CS3Real.transform.square_and_cardinality","CS3Real.transform.unitarity","CS3Real.transform.reality","CS3Real.transform.inverse_roundtrip","CS3Real.gaunt.selected_coefficient","CS3Real.gaunt.real_coefficients","CS3Real.gaunt.inverse_reconstruction","CS3Real.projection.discarded_support","CS3Real.projection.full_reconstruction"]},
     {"id":"artifact:closed-s3-real-scalar-harmonic-basis-ledger-evidence-snapshot","type":"artifact","title":"Closed-S3 real scalar harmonic-basis evidence snapshot","summary":"Schema-valid finite real-scalar translation snapshot.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/closed-s3-real-scalar-harmonic-basis-ledger-result.json","sha256":"1ed1e0b2d423399695a98c0b1796503360e638c91d258dd726cc66fe3e520748"},
-    {"id":"artifact:raw-c-nonreal-endpoint-interval-certificate-blocker","type":"artifact","title":"Raw-C nonreal endpoint interval-certificate blocker","summary":"Execution-free design note: the locked complex-ball dependency does not supply a validated complex tail lemma or transport enclosure for the actual recessive endpoint datum.","state":"TRACKED_EXECUTION_FREE_BLOCKER_NOTE","artifact_kind":"documentation","path":"cpt_temporal_folded_susy/RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md","sha256":"fa68311fb5ef1a865587fc7cec59cc6ce489cf79626c05abe29cf4244824dce3"},
-    {"id":"open:raw-c-fixed-box-nonreal-endpoint-certificate","type":"open_problem","title":"Raw-C fixed-box nonreal recessive endpoint certificate","summary":"The p=0 fixed UHP box has outward principal-branch separation and a positive real-part lower bound. The declared Gamma_1=0 direct-integral extension is an a.e.-p result and supplies boundary-line provenance at the null singleton, not a fixed-p=0 theorem; the endpoint classification and maps must be re-established there. The convention design pins the selected Herglotz target to m=-1/(2*hbar^2*M) only after an actual endpoint ratio M exists. The ordered missing chain remains: the p=0 classification/maps, a normalization-fixed complex-tail/Volterra contraction, outward plus-recessive data, complete minus-end Gamma_0/Gamma_1 limits, denominator separation and analytic/Herglotz endpoint identities; then compact nonzero-p bands, spectral transforms/measures, the p-to-zero threshold and raw-C RAQ. The finite proxy, branch precondition and design note discharge none of those calculations.","state":"OPEN_BRANCH_PRECONDITION_PASSED_ENDPOINT_M_FUNCTION_MEASURE_RAQ_CHAIN_MISSING","question":"Can one independently establish the p=0 endpoint classification/maps and actual endpoint coordinate on the declared box with the pinned reciprocal/leading-coefficient convention, then separately extend it uniformly to compact nonzero-p bands without relabelling the a.e. extension, finite M_cut proxy, branch precondition or method design as a p=0 endpoint, spectral-measure or RAQ result?"},
+    {"id":"artifact:raw-c-nonreal-endpoint-interval-certificate-blocker","type":"artifact","title":"Raw-C nonreal endpoint interval-certificate blocker","summary":"Input-pinned historical design note that prevented a finite WKB/proxy datum from being relabelled as an actual endpoint certificate. Its missing-tail statement is superseded by the fixed-UHP Volterra result, while its warning against inferring Q_plus-to-Q0 transport, M, m, measure or RAQ remains active.","state":"TRACKED_HISTORICAL_BLOCKER_NOTE_TAIL_PREREQUISITE_SUPERSEDED","artifact_kind":"documentation","path":"cpt_temporal_folded_susy/RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md","sha256":"fa68311fb5ef1a865587fc7cec59cc6ce489cf79626c05abe29cf4244824dce3"},
+    {"id":"open:raw-c-fixed-box-nonreal-endpoint-certificate","type":"open_problem","title":"Raw-C fixed-box nonreal recessive endpoint certificate","summary":"The p=0 fixed UHP box now has outward branch separation, a self-contained complex Volterra contraction and an actual infinity-normalized recessive value/derivative enclosure at Q_plus=4. The declared Gamma_1=0 direct-integral extension remains an a.e.-p result and supplies boundary-line provenance at the null singleton, not the missing fixed-p=0 endpoint classification or maps. The next chain is validated compact transport from Q_plus to Q0, endpoint classification and Gamma_0/Gamma_1 boundary maps, a nonzero ratio M, denominator separation and analytic/Herglotz identities. Only then may the selected m=-1/(2*hbar^2*M), compact nonzero-p bands, spectral measures/transforms, p-to-zero assembly and raw-C RAQ be attempted. The finite proxy and the Q_plus enclosure discharge none of those later calculations.","state":"OPEN_QPLUS_PAIR_ENCLOSED_Q0_TRANSPORT_ENDPOINT_M_FUNCTION_MEASURE_RAQ_CHAIN_MISSING","question":"Can one validate the Q_plus-to-Q0 transport on the declared p=0 box, establish the endpoint classification and boundary maps, and prove a nonzero analytic ratio M with the pinned reciprocal convention before any selected m, spectral-measure or RAQ construction?"},
     {"id":"concept:closed-s3-real-scalar-derivative-gaunt-ledger","type":"concept","title":"Closed-S3 fixed real scalar derivative Gaunt ledger","summary":"Two fixed-mode real scalar gradient-triple identities follow from the pinned real-scalar product convention. This is not a complete derivative basis, full SVT ledger, ADM constraint expansion, HDA/Jacobi, BFV or quantum result.","state":"COMPLETED_TWO_FIXED_MODE_SCALAR_DERIVATIVE_IDENTITIES_ONLY"},
     {"id":"evidence:closed-s3-real-scalar-derivative-gaunt-ledger-result","type":"evidence","title":"Closed-S3 real scalar derivative Gaunt evidence","summary":"VALID_RUN with 8/8 exact checks and two separately recorded theorem/scope guards for two fixed scalar derivative packets only.","state":"VALID_RUN_FIXED_SCALAR_DERIVATIVE_IDENTITIES_NOT_ADM_HDA","observed_status":"VALID_RUN_8_EXACT_PASS_2_SCOPE_GUARDS_FIXED_SCALAR_ONLY","check_ids":["CS3Derivative.constant_n1_n1.gaunt_pin","CS3Derivative.constant_n1_n1.eigenvalue","CS3Derivative.constant_n1_n1.gradient_from_gaunt","CS3Derivative.constant_n1_n1.integration_by_parts","CS3Derivative.n2_n1_n1.gaunt_pin","CS3Derivative.n2_n1_n1.eigenvalue","CS3Derivative.n2_n1_n1.gradient_from_gaunt","CS3Derivative.n2_n1_n1.integration_by_parts"]},
     {"id":"artifact:closed-s3-real-scalar-derivative-gaunt-ledger-evidence-snapshot","type":"artifact","title":"Closed-S3 real scalar derivative Gaunt evidence snapshot","summary":"Schema-valid fixed-mode real scalar derivative snapshot.","state":"TRACKED_VALID_RUN_EVIDENCE","artifact_kind":"evidence","path":"ontology/cpt-temporal-folded-susy/evidence/closed-s3-real-scalar-derivative-gaunt-ledger-result.json","sha256":"8395637ab4edeee2486afb67eea1ad200fa785628b0065cbf77fb1c8e65dc647"},
@@ -15336,8 +15342,8 @@
       "id": "scope:raw-c-p0-fixed-uhp-complex-tail-theorem",
       "type": "scope",
       "title": "Raw-C p=0 fixed-UHP-box complex-tail theorem scope",
-      "summary": "The first P4 work unit is restricted to a normalization-fixed complex-tail theorem on the already audited p=0 upper-half-plane box; it does not include compact transport, endpoint boundary limits or spectral conclusions.",
-      "state": "DECLARED_P0_FIXED_UHP_COMPLEX_TAIL_THEOREM_SCOPE",
+      "summary": "The completed first P4 work unit is restricted to a normalization-fixed complex-tail theorem and actual Q_plus=4 recessive pair on the already audited p=0 upper-half-plane box; it does not include compact transport, endpoint boundary limits or spectral conclusions.",
+      "state": "COMPLETED_P0_FIXED_UHP_COMPLEX_TAIL_AND_QPLUS_ENCLOSURE_SCOPE",
       "includes": [
         "p=0, Q_plus=4 and Q>=4",
         "Re z in [-1/16,1/16] and Im z in [15/16,17/16]",
@@ -15350,16 +15356,16 @@
         "compact complex transport from Q_plus to Q0",
         "minus-end Gamma_0 or Gamma_1 limits and the actual endpoint ratio M",
         "selected m, spectral measure or multiplicity, p-to-zero assembly, RAQ, C/H equivalence, BFV, physics or TOE",
-        "creation or execution of an endpoint-certification runner before this theorem closes"
+        "any inference from the Q_plus pair to a Q0 endpoint ratio, Weyl function, spectral measure or RAQ"
       ]
     },
     {
       "id": "open:raw-c-p0-complex-tail-theorem-prerequisite",
       "type": "open_problem",
-      "title": "Prove the raw-C p=0 complex-tail enclosure prerequisite",
-      "summary": "The fixed-box branch audit proves only cut separation and a positive principal-square-root real part. The repository still lacks either a source-checked complex Volterra/Liouville-Green theorem specialized to the declared coefficient or a validated complex interval flow that encloses the actual normalization-fixed recessive solution. Until this typed object exists, an acb WKB datum or the finite double-precision proxy cannot be promoted to endpoint evidence and no endpoint-certification runner should be created or run.",
-      "state": "OPEN_NO_VALIDATED_COMPLEX_TAIL_OR_TRANSPORT_THEOREM",
-      "question": "On the declared p=0 UHP box, can one prove a normalization-fixed complex-tail contraction or equivalent validated enclosure for the actual recessive solution, with strict branch, contraction and outward value/derivative error gates?"
+      "title": "Historical raw-C p=0 complex-tail enclosure prerequisite (resolved on the fixed UHP box)",
+      "summary": "Resolved only on the declared p=0 fixed UHP box. A self-contained progressive-path Banach-Volterra theorem now fixes the infinity normalization, proves uniqueness in the bounded-H class, and encloses the actual recessive value and derivative at Q_plus=4 with outward arithmetic. This does not provide Q_plus-to-Q0 transport, endpoint classification or maps, M, m(z), spectral measure, nonzero-p assembly or RAQ.",
+      "state": "RESOLVED_BY_RAW_C_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_ON_DECLARED_BOX_ONLY",
+      "question": "Resolved for the declared box by the normalization-fixed complex Volterra contraction; retain this node as the historical prerequisite and continue only through the separate Q_plus-to-Q0 endpoint problem."
     },
     {
       "id": "open:raw-c-nonzero-p-uniform-weyl-field",
@@ -15774,6 +15780,51 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART.md",
       "sha256": "d023eed92c67ae37584d68222e96a2fc46bb9c0948cc32c94d9b0a2be223faa8"
+    },
+    {
+      "id": "concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem",
+      "type": "concept",
+      "title": "Raw-C p=0 fixed-UHP complex Volterra tail theorem",
+      "summary": "A self-contained progressive-path Banach-Volterra construction on Q>=4 fixes the infinity-normalized recessive raw-C solution on the declared p=0 UHP box and gives outward rectangles for its value and derivative at Q_plus=4. It is not compact transport, an endpoint ratio, m(z), spectral measure or RAQ.",
+      "state": "COMPLETED_P0_FIXED_UHP_COMPLEX_TAIL_AND_QPLUS_RECESSIVE_PAIR_ONLY"
+    },
+    {
+      "id": "evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result",
+      "type": "evidence",
+      "title": "Raw-C p=0 fixed-UHP complex Volterra tail evidence",
+      "summary": "One clean unnumbered VALID_RUN records six analytic or exact controls, two outward-arithmetic controls and two theorem/scope guards. The exact V_bar is below 1e-4, both acb tiers overlap as same-backend consistency, and the actual normalized recessive Q_plus pair is enclosed while transport, M, m, measure, RAQ, Gate-1 progress, physics and TOE remain null or false.",
+      "state": "VALID_RUN_P0_FIXED_UHP_COMPLEX_TAIL_AND_QPLUS_RECESSIVE_PAIR",
+      "observed_status": "VALID_RUN_6_ANALYTIC_OR_EXACT_2_OUTWARD_2_GUARDS",
+      "check_ids": [
+        "rawc.p4.volterra.control.coefficient_factorization",
+        "rawc.p4.volterra.control.wkb_residual_identity",
+        "rawc.p4.volterra.control.kernel_majorant_closed_form",
+        "rawc.p4.volterra.control.contraction_strictly_below_one",
+        "rawc.p4.volterra.control.branch_halfline_lower_bound",
+        "rawc.p4.volterra.control.normalization_fixed_uniqueness",
+        "rawc.p4.volterra.control.two_tier_acb_outward_constants",
+        "rawc.p4.volterra.control.endpoint_value_derivative_correction_enclosures_finite"
+      ]
+    },
+    {
+      "id": "artifact:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-evidence-snapshot",
+      "type": "artifact",
+      "title": "Raw-C p=0 fixed-UHP complex Volterra tail evidence snapshot",
+      "summary": "Schema-valid compact run snapshot with the final runner revision, six analytic or exact and two outward check locators, raw-result hashes, scope and fail-closed outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result.json",
+      "sha256": "6a080707aa56947eb76e7cab444f20898f0ef90e61eba1bfb8a29cb7e147d283"
+    },
+    {
+      "id": "artifact:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-report",
+      "type": "artifact",
+      "title": "Raw-C p=0 fixed-UHP complex Volterra tail report",
+      "summary": "Human-readable self-contained proof, progressive-path and branch bounds, outward Q_plus enclosure, observed command and failed implementation preflights, with the Weyl/measure/RAQ boundary kept explicit.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM.md",
+      "sha256": "c0340ca7dbbc2beb041bd2b93deb15cf315d379cba971e43d0a0fbb6ceac268d"
     }
   ],
   "edges": [
@@ -35790,7 +35841,7 @@
     {"id":"edge:3469","from":"open:gate1-v0-classical-s3-hda-closure","relation":"FOLLOW_UP_TO","to":"concept:closed-s3-real-scalar-harmonic-basis-ledger","note":"The finite n<=2 real scalar translation leaves scalar derivatives, full SVT, ADM brackets and Jacobi open."},
     {"id":"edge:3470","from":"artifact:raw-c-nonreal-endpoint-interval-certificate-blocker","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
     {"id":"edge:3471","from":"artifact:raw-c-nonreal-endpoint-interval-certificate-blocker","relation":"DOCUMENTS","to":"concept:raw-c-nonreal-weyl-proxy","note":"The note records why the finite double-precision proxy cannot be relabelled as an endpoint certificate."},
-    {"id":"edge:3472","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"FOLLOW_UP_TO","to":"concept:raw-c-nonreal-weyl-proxy","note":"A fixed-box certificate requires a complex-tail theorem and outward endpoint enclosure beyond the finite proxy."},
+    {"id":"edge:3472","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"FOLLOW_UP_TO","to":"concept:raw-c-nonreal-weyl-proxy","note":"The finite proxy remains only a comparator. The fixed-box route now has an actual Q_plus pair but still requires validated transport, endpoint maps and a nonzero ratio before m(z)."},
     {"id":"edge:3473","from":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","relation":"BLOCKED_BY","to":"open:raw-c-fixed-box-nonreal-endpoint-certificate","note":"No singular Weyl function, spectral measure, multiplicity or RAQ can be inferred before the separate fixed-box endpoint certificate exists."},
     {"id":"edge:3474","from":"concept:closed-s3-real-scalar-derivative-gaunt-ledger","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
     {"id":"edge:3475","from":"evidence:closed-s3-real-scalar-derivative-gaunt-ledger-result","relation":"RECORDED_IN","to":"artifact:closed-s3-real-scalar-derivative-gaunt-ledger-evidence-snapshot"},
@@ -35842,7 +35893,7 @@
     {"id":"edge:3523","from":"concept:raw-c-fixed-box-nonreal-branch-audit","relation":"EXTENDS","to":"concept:raw-c-nonreal-weyl-proxy","note":"Replaces no finite proxy result: it adds an outward branch precondition on one fixed UHP box only."},
     {"id":"edge:3524","from":"concept:raw-c-fixed-box-nonreal-branch-audit","relation":"DOCUMENTED_BY","to":"evidence:raw-c-fixed-box-nonreal-branch-audit-result"},
     {"id":"edge:3525","from":"evidence:raw-c-fixed-box-nonreal-branch-audit-result","relation":"RECORDED_IN","to":"artifact:raw-c-fixed-box-nonreal-branch-audit-evidence-snapshot"},
-    {"id":"edge:3526","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"FOLLOW_UP_TO","to":"concept:raw-c-fixed-box-nonreal-branch-audit","note":"Branch separation and Re sqrt(A)>0 are passed preconditions only. They do not supply the complex-tail Volterra theorem, actual endpoint, selected-extension m(z), spectral measure/multiplicity or raw-C RAQ."},
+    {"id":"edge:3526","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"FOLLOW_UP_TO","to":"concept:raw-c-fixed-box-nonreal-branch-audit","note":"Branch separation and Re sqrt(A)>0 supplied a precondition for the completed tail theorem. They still do not supply Q_plus-to-Q0 transport, endpoint maps, M, selected m(z), spectral measure/multiplicity or raw-C RAQ."},
     {"id":"edge:3527","from":"claim:RAW_C_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR_EXCLUDES_ZERO","relation":"PART_OF","to":"concept:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor"},
     {"id":"edge:3528","from":"claim:RAW_C_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR_EXCLUDES_ZERO","relation":"VALID_WITHIN","to":"scope:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor"},
     {"id":"edge:3529","from":"claim:RAW_C_NONZERO_LAMBDA_PLUS_TAIL_SENSITIVITY_ANCHOR_EXCLUDES_ZERO","relation":"HAS_EVIDENCE","to":"evidence:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor-result","polarity":"SUPPORTS"},
@@ -35857,7 +35908,7 @@
     {"id":"edge:3538","from":"artifact:gate1-v0-current-physics-discovery-gap-map","relation":"DOCUMENTS","to":"concept:gate1-v0-current-physics-discovery-gap-map"},
     {"id":"edge:3539","from":"concept:gate1-v0-current-physics-discovery-gap-map","relation":"EXTENDS","to":"concept:gate1-v0-six-bridge-metacognitive-priority-map","note":"Adds a current fact/interpretation/open-bridge and discovery-promotion view without replacing the historical priority memory or authorizing execution."},
     {"id":"edge:3540","from":"concept:gate1-v0-current-physics-discovery-gap-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-raw-c-differentiated-tail-node-safe-transport","note":"P1 now reaches a complete Q0-normalized quotient, but g remains zero-containing. Absolute actual-Gamma_1 sign, correlated root localization, roots and downstream spectral obligations remain open."},
-    {"id":"edge:3541","from":"concept:gate1-v0-current-physics-discovery-gap-map","relation":"FOLLOW_UP_TO","to":"open:raw-c-fixed-box-nonreal-endpoint-certificate","note":"P4 stops at branch separation before actual endpoint, m(z), measure and raw-C RAQ."},
+    {"id":"edge:3541","from":"concept:gate1-v0-current-physics-discovery-gap-map","relation":"FOLLOW_UP_TO","to":"open:raw-c-fixed-box-nonreal-endpoint-certificate","note":"P4 now stops at an actual p=0 Q_plus recessive pair before validated Q0 transport, M, m(z), measure and raw-C RAQ."},
     {"id":"edge:3542","from":"concept:gate1-v0-current-physics-discovery-gap-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-raw-constraint-rescaling-and-p-zero-completion","note":"Raw-C/H quantum comparison still requires the selected extension's spectral and RAQ data plus domain control."},
     {"id":"edge:3543","from":"concept:gate1-v0-current-physics-discovery-gap-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-classical-s3-hda-closure","note":"The n=1 convention and one Q2 DH packet do not supply full SVT/cubic DD-DH-HH/Jacobi closure."},
     {"id":"edge:3544","from":"concept:gate1-v0-current-physics-discovery-gap-map","relation":"FOLLOW_UP_TO","to":"open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly","note":"P5 remains downstream of actual classical structure functions, regulator control and a common invariant operator core."},
@@ -36014,10 +36065,9 @@
     {"id":"edge:3695","from":"evidence:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor-result","relation":"RECORDED_IN","to":"artifact:raw-c-nonzero-lambda-plus-tail-sensitivity-anchor-result","note":"Links the already recorded raw result artifact into its evidence component; the evidence snapshot remains the compact hash-pinned provenance record."},
     {"id":"edge:3696","from":"open:raw-c-p0-complex-tail-theorem-prerequisite","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
     {"id":"edge:3697","from":"open:raw-c-p0-complex-tail-theorem-prerequisite","relation":"VALID_WITHIN","to":"scope:raw-c-p0-fixed-uhp-complex-tail-theorem","note":"Fixes the first P4 unit to the already audited p=0 UHP box and tail half-line; compact endpoint transport and spectral conclusions remain excluded."},
-    {"id":"edge:3698","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"MOTIVATES","to":"open:raw-c-p0-complex-tail-theorem-prerequisite","note":"The design identifies a validated complex tail as the first missing typed object; it does not authorize an endpoint runner or supply the theorem."},
-    {"id":"edge:3699","from":"concept:raw-c-fixed-box-nonreal-branch-audit","relation":"MOTIVATES","to":"open:raw-c-p0-complex-tail-theorem-prerequisite","note":"Branch separation is a necessary precondition only; the actual normalization-fixed recessive solution still needs a complex contraction or validated interval-flow theorem."},
-    {"id":"edge:3700","from":"artifact:raw-c-nonreal-endpoint-interval-certificate-blocker","relation":"DOCUMENTS","to":"open:raw-c-p0-complex-tail-theorem-prerequisite","note":"Records the exact no-run boundary and the missing complex Volterra or interval-Taylor enclosure."},
-    {"id":"edge:3701","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"BLOCKED_BY","to":"open:raw-c-p0-complex-tail-theorem-prerequisite","note":"An outward WKB seed cannot become actual endpoint data until the normalization-fixed complex tail is enclosed."},
+    {"id":"edge:3698","from":"concept:raw-c-weyl-spectral-raq-bridge-design","relation":"MOTIVATES","to":"open:raw-c-p0-complex-tail-theorem-prerequisite","note":"Historical design edge: it identified the complex tail as the first missing typed object. The recorded fixed-UHP theorem later resolved that prerequisite only in its declared p=0 scope; execution authority never followed automatically."},
+    {"id":"edge:3699","from":"concept:raw-c-fixed-box-nonreal-branch-audit","relation":"MOTIVATES","to":"open:raw-c-p0-complex-tail-theorem-prerequisite","note":"The branch audit supplied the strict nonvanishing and positive-real-part precondition used by the now-completed complex Volterra theorem."},
+    {"id":"edge:3700","from":"artifact:raw-c-nonreal-endpoint-interval-certificate-blocker","relation":"DOCUMENTS","to":"open:raw-c-p0-complex-tail-theorem-prerequisite","note":"Preserves the input-pinned historical no-run boundary that prevented a WKB/proxy relabelling. Its missing-tail statement is superseded by the recorded theorem result."},
     {"id":"edge:3702","from":"open:raw-c-nonzero-p-uniform-weyl-field","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
     {"id":"edge:3703","from":"open:raw-c-nonzero-p-uniform-weyl-field","relation":"BLOCKED_BY","to":"open:raw-c-fixed-box-nonreal-endpoint-certificate","note":"The p=0 method and boundary-map audit must exist before it can be generalized uniformly to compact nonzero-p bands; the singleton result alone will not prove the field."},
     {"id":"edge:3704","from":"open:raw-c-nonzero-p-uniform-weyl-field","relation":"CITES","to":"source:eckhardt-et-al-2012-singular-weyl-titchmarsh","note":"Supplies singular Weyl framework only; joint p measurability, model endpoint bounds and the selected normalization remain local obligations."},
@@ -36093,7 +36143,16 @@
     {"id":"edge:3774","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-safe-projective-mixed-phase-chart-report"},
     {"id":"edge:3775","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"One compact coordinate-ratio/phase parameter chart is classified on an unbounded radial tail; other charts, faces, Z, source attachment and oriented intersections remain open."},
     {"id":"edge:3776","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The current blocker gains one scoped chart record only; a source-defined relative cycle and orientation-stable global vector remain missing."},
-    {"id":"edge:3777","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the action-decay criterion is reused. No relative pair, thimble basis, source cycle or Stokes datum is imported."}
+    {"id":"edge:3777","from":"claim:G1_M2_SAFE_PROJECTIVE_MIXED_PHASE_CHART_CLASSIFIES_DECLARED_GOOD_BAD_ACTION_CELLS","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the action-decay criterion is reused. No relative pair, thimble basis, source cycle or Stokes datum is imported."},
+    {"id":"edge:3778","from":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"One P4 supporting theorem only; it creates no G1 core progress or automatic successor."},
+    {"id":"edge:3779","from":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","relation":"EXTENDS","to":"concept:raw-c-fixed-box-nonreal-branch-audit","note":"Uses the audited fixed-box branch separation and adds the missing progressive-path contraction, normalization and actual Q_plus pair enclosure."},
+    {"id":"edge:3780","from":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","relation":"VALID_WITHIN","to":"scope:raw-c-p0-fixed-uhp-complex-tail-theorem","note":"Restricted to p=0, Q>=4 and the declared fixed UHP z box; transport and spectral conclusions remain excluded."},
+    {"id":"edge:3781","from":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","relation":"DOCUMENTED_BY","to":"evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result","note":"The evidence indexes six analytic or exact and two outward controls; the raw result remains the complete ledger."},
+    {"id":"edge:3782","from":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","relation":"DOCUMENTED_BY","to":"artifact:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-report","note":"Human-readable proof, observed command, implementation-failure history and non-conclusion boundary."},
+    {"id":"edge:3783","from":"evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result","relation":"RECORDED_IN","to":"artifact:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-evidence-snapshot"},
+    {"id":"edge:3784","from":"evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result","relation":"DERIVED_FROM","to":"evidence:raw-c-fixed-box-nonreal-branch-audit-result","note":"Inherits only the hash-pinned branch precondition; the Volterra theorem and endpoint correction bounds are newly derived self-contained controls."},
+    {"id":"edge:3785","from":"open:raw-c-p0-complex-tail-theorem-prerequisite","relation":"FOLLOW_UP_TO","to":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","note":"Resolves this prerequisite only on the declared p=0 fixed UHP box."},
+    {"id":"edge:3786","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"FOLLOW_UP_TO","to":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","note":"The theorem supplies actual Q_plus data; the open endpoint problem now begins at p=0 classification/maps and validated Q_plus-to-Q0 transport before M and m(z)."}
   ],
   "kg_bridges": [
     {

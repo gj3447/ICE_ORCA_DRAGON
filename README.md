@@ -71,7 +71,8 @@ The default TOE-candidate route begins at the current G1 original-cycle blocker 
 G2--G5 only when compatible typed inputs exist. The P1--P7 V0 lanes are a supporting portfolio, not
 independent TOE success counters; they need a named blocker and changed evidence edge before they can be
 counted as core progress. The compact raw-C handoffs separate the P1 exact root bridge from the P4
-complex-tail-to-RAQ blocker chain and grant neither one execution authority. Review graph, policy,
+Weyl-to-RAQ chain. P4's fixed-UHP complex tail and actual \(Q_+\) pair are now closed; its active blocker
+begins at validated \(Q_+\!\to Q_0\) transport and endpoint maps. Neither handoff grants execution authority. Review graph, policy,
 navigation, or multi-graph edits collection-wide with
 `./ice ontology review --graph all --base HEAD`. The cohesion rule is to extend canonical nodes and
 explicit edges, then add reading paths/quick answers for navigation—never duplicate claims across graphs

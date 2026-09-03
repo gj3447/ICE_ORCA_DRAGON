@@ -94,7 +94,7 @@ Neither local signs nor a supporting Weyl calculation supplies the global intege
 | P1 | Real raw-C normalized-root corridor | Exact F↔G handoff first; then only if needed C1 selector, lambda derivative/velocity, global census and absolute Gamma1 data |
 | P2 | Full unit-S3 scalar/vector/tensor basis and cubic constraints | Complete convention-checked SVT and untruncated gravitational vertices |
 | P3 | Projected HDA/Jacobi and cutoff-remainder control, then classical BFV | General DD/DH/HH closure and a controlled regulator limit |
-| P4 | Nonreal raw-C Weyl theory | Complex tail, actual endpoint, nonzero-p Weyl field, spectral measures, p-to-zero assembly and RAQ physical product |
+| P4 | Fixed-UHP p=0 complex tail theorem and actual \(Q_+\) recessive pair | Validated \(Q_+\!\to Q_0\) transport, endpoint classification/maps, selected \(M\) and \(m(z)\), nonzero-p Weyl field, spectral measures, p-to-zero assembly and RAQ physical product |
 | P5 | Quantum BFV common-core audit | Nilpotency/anomaly control on a declared common domain after cutoff remainder separation |
 | P6 | Endpoint polarization, determinant/Pfaffian line, lapse cycle and gluing | Absolute measure/orientation and compatible two-slab fiber-product gluing |
 | P7 | Clock, state, reheating/transfer and likelihood | A physical product, clock, normalized state and generation model; likelihood is forbidden before these exist |
@@ -116,7 +116,8 @@ No current result reaches broader model, physics, empirical, or TOE promotion. S
 predeclared admissible choices, a mechanism-carrying typed object that persists across them, and at least
 two independent in-graph consumers. Reuse of one residual or a match in another graph is not independent
 evidence. In particular, G1 needs a deformation-stable global intersection vector (a stable zero is also
-informative); P1 remains a scoped real-root handoff; P4 needs actual endpoint-to-m-to-measure-to-positive-RAQ
+informative); P1 remains a scoped real-root handoff; P4 has only the actual \(Q_+\) pair and still needs
+validated compact transport plus endpoint-map-to-\(m\)-to-measure-to-positive-RAQ
 objects; P2–P5 need unprojected closure or a non-removable anomaly class; P6 needs an absolute gluing
 measure; and P7 needs a normalized, choice-robust observable before likelihood. See the active
 [choice-invariance promotion boundary](../decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md).

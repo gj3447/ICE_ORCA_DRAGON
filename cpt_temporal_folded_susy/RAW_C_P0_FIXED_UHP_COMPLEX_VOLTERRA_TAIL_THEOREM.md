@@ -254,21 +254,96 @@ consistency check.
   remains the singular Weyl--Titchmarsh terminology baseline.  It does not turn
   this tail pair into \(m(z)\), a spectral measure, or RAQ.
 
-## Run state and non-conclusions
+## Observed bounded run
 
-The source definition has not yet entered Python execution.  An initial
-control-plane attempt under the old stem
-`raw_c_p0_fixed_uhp_complex_volterra_tail_theorem` was rejected with exit 2:
-the `_p0_` substring matched the repository's numbered-Phase token guard.
-No result was created.  The neutral runner stem below removes that naming
-collision without changing the calculation.  After this rename is committed
-cleanly, it must be run only through:
+The clean committed definition at
+`949cb4b91beacb361faeef07215df15d77f46708` was executed through the repository
+control plane:
 
 ```text
 ./ice run raw_c_fixed_uhp_complex_volterra_tail_theorem
 ```
 
-Even a passing run cannot establish any of the following:
+It exited 0 and printed:
+
+```text
+RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_RESULT={"automatic_next":null,"controls_passed":8,"controls_total":8,"result_sha256":"bcb823fe4857b196f01001bc15fe5a1122116e8f887b633b4e687669d297d32f","result_size_bytes":32782,"run_status":"VALID_RUN","theorem_guards_verified":2,"verdict":"CERTIFY_P0_FIXED_UHP_COMPLEX_TAIL_CONTRACTION_AND_RECESSIVE_QPLUS_ENCLOSURE"}
+```
+
+All eight controls and both theorem/scope guards passed.  The exact rational
+bounds are
+
+\[
+V_{\rm bar}=\frac{120871}{1263204600}
+=9.568600367668\ldots\times10^{-5},
+\qquad
+q_{\rm bar}=\frac{120871}{1263083729}
+=9.569516036415\ldots\times10^{-5}.
+\]
+
+Both outward precision tiers returned the same displayed enclosure.  For the
+whole declared \(z\) box,
+
+\[
+\operatorname{Re}u(4)\in
+[0.01758442059068738,\ 0.01758904669168299],
+\]
+
+\[
+\operatorname{Im}u(4)\in
+[-1.23610560771409\times10^{-5},\ -7.73530591911376\times10^{-6}],
+\]
+
+\[
+\operatorname{Re}u'(4)\in
+[-56.88681021695615,\ -56.85282377603820],
+\]
+
+\[
+\operatorname{Im}u'(4)\in
+[-0.04946956370148212,\ -0.01548514480126426].
+\]
+
+The uniform correction radii used to enlarge the WKB box were
+\(1.68302589657929\times10^{-6}\) for the value and
+\(0.0108846625976797\) for the derivative.  These are enclosures of the
+actual infinity-normalized recessive tail pair at \(Q_+=4\), not transport to
+\(Q_0\) and not a boundary ratio.
+
+Provenance:
+
+- input SHA-256:
+  `d17b1f1c4c6434bf233e6d4e14b6d3081d6412352193b7936c3dcb4650bd00de`;
+- runner SHA-256:
+  `d207e4a6493f689f69cf8106a6a05963a26f896c76abf5d342aabf2f5b666401`;
+- result-file SHA-256:
+  `bcb823fe4857b196f01001bc15fe5a1122116e8f887b633b4e687669d297d32f`;
+- canonical payload SHA-256 with its self field removed:
+  `a257f2efe4e8cd0b98f8fd2e17608a7f13f67d36f24c90033be33958b3e65e51`;
+- runtime: Python 3.13.5, SymPy 1.14.0 and `python-flint==0.9.0`.
+
+An independent read-only audit recomputed both result hashes, matched the
+committed runner and input, checked all eight controls, both guards, the two
+precision tiers and every null boundary, and found no scientific mismatch.
+It identified the stale pre-run prose that this observed-run section now
+replaces.
+
+Two failed attempts are retained as implementation history, not scientific
+evidence.  The old `_p0_` runner stem was rejected by the Phase-token guard
+with exit 2 before Python execution.  The first neutral-stem run at commit
+`e23fc58164ec3b636a78536a30913728051f5bd9` entered Python but exited 1 before
+writing a result because `python-flint` 0.9 has no `acb.inv()` method.  Commit
+`949cb4b` replaced it with `acb(1) / value`; only the subsequent exit-0 run is
+evidence.
+
+The earlier blocker note is intentionally retained at its input-pinned hash
+as the historical no-run boundary.  This result supersedes its missing-tail
+statement, but not its warning against calling an untransported WKB or
+\(Q_+=4\) pair a Weyl endpoint certificate.
+
+## Non-conclusions
+
+This passing run does not establish any of the following:
 
 - validated \(Q_+=4\to Q_0=-4\) transport or a boundary map;
 - a nonzero denominator for a boundary ratio or a singular Weyl \(m(z)\);
