@@ -1,6 +1,8 @@
 /** Strict, non-authoritative source-backed research-navigation cue records. */
-export const SCIENTIFIC_INTUITION_FLOW_RELPATH =
+export const SCIENTIFIC_INTUITION_FLOW_V1_RELPATH =
   "research/intuition/scientific-intuition-signals.v1.json"
+export const SCIENTIFIC_INTUITION_FLOW_RELPATH =
+  "research/intuition/scientific-intuition-signals.v2.json"
 
 export type IntuitionSourceKind = "PRIMARY_PAPER" | "OFFICIAL_GUIDANCE" | "STANDARD"
 export type IntuitionSignalStatus = "CANDIDATE" | "REJECTED" | "RETIRED"
@@ -79,6 +81,54 @@ export interface ScientificIntuitionFlow {
   readonly boundaries: ReadonlyArray<string>
 }
 
+export type IntuitionTopicLinkRelation =
+  | "DISTINCT_FROM"
+  | "MAY_SHARE_UNRESOLVED_ACTION_WITH"
+
+export interface ScientificIntuitionTopic {
+  readonly id: string
+  readonly title: string
+  readonly question: string
+  readonly scope: string
+  readonly non_claim: string
+  readonly does_not_authorize_execution: true
+}
+
+export interface ScientificIntuitionTopicLink {
+  readonly id: string
+  readonly from: string
+  readonly relation: IntuitionTopicLinkRelation
+  readonly to: string
+  readonly rationale: string
+  readonly stop_condition: string
+  readonly non_claim: string
+  readonly does_not_authorize_execution: true
+}
+
+export interface ScientificIntuitionSignalV2
+  extends Omit<ScientificIntuitionSignal, "target"> {
+  readonly topic: string
+  readonly canonical_target?: IntuitionTarget
+}
+
+export interface ScientificIntuitionFlowV2 {
+  readonly $schema?: string
+  readonly schema_version: "scientific-intuition-flow/v2"
+  readonly graph_id: "intuition-flow:ice"
+  readonly title: string
+  readonly description: string
+  readonly updated_at_utc: string
+  readonly authority: "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION"
+  readonly canonical_graph_unchanged: true
+  readonly does_not_authorize_execution: true
+  readonly standards_alignment: ReadonlyArray<IntuitionStandardsAlignment>
+  readonly topics: ReadonlyArray<ScientificIntuitionTopic>
+  readonly topic_links: ReadonlyArray<ScientificIntuitionTopicLink>
+  readonly sources: ReadonlyArray<IntuitionSourceReference>
+  readonly signals: ReadonlyArray<ScientificIntuitionSignalV2>
+  readonly boundaries: ReadonlyArray<string>
+}
+
 export class ScientificIntuitionFlowError extends Error {
   constructor(message: string) {
     super(message)
@@ -110,6 +160,10 @@ const failureClasses = new Set<PrincipalFailureClass>([
   "spectrum",
   "gauge",
   "inference"
+])
+const topicLinkRelations = new Set<IntuitionTopicLinkRelation>([
+  "DISTINCT_FROM",
+  "MAY_SHARE_UNRESOLVED_ACTION_WITH"
 ])
 const dateTime = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/
 
@@ -332,9 +386,160 @@ const signal = (value: unknown, label: string): ScientificIntuitionSignal => {
   }
 }
 
+const intuitionTopic = (value: unknown, label: string): ScientificIntuitionTopic => {
+  const item = record(value, label)
+  exactKeys(
+    item,
+    ["id", "title", "question", "scope", "non_claim", "does_not_authorize_execution"],
+    label
+  )
+  const id = string(item.id, `${label}.id`)
+  if (!/^topic:[A-Za-z0-9_.:-]+$/.test(id)) {
+    throw new ScientificIntuitionFlowError(`${label}.id must match ^topic:`)
+  }
+  const question = string(item.question, `${label}.question`)
+  if (!question.endsWith("?")) {
+    throw new ScientificIntuitionFlowError(`${label}.question must end with '?'`)
+  }
+  return {
+    id,
+    title: string(item.title, `${label}.title`),
+    question,
+    scope: string(item.scope, `${label}.scope`),
+    non_claim: string(item.non_claim, `${label}.non_claim`),
+    does_not_authorize_execution: truth(
+      item.does_not_authorize_execution,
+      `${label}.does_not_authorize_execution`
+    )
+  }
+}
+
+const intuitionTopicLink = (
+  value: unknown,
+  label: string
+): ScientificIntuitionTopicLink => {
+  const item = record(value, label)
+  exactKeys(
+    item,
+    [
+      "id",
+      "from",
+      "relation",
+      "to",
+      "rationale",
+      "stop_condition",
+      "non_claim",
+      "does_not_authorize_execution"
+    ],
+    label
+  )
+  const id = string(item.id, `${label}.id`)
+  if (!/^intuition-link:[A-Za-z0-9_.:-]+$/.test(id)) {
+    throw new ScientificIntuitionFlowError(`${label}.id must match ^intuition-link:`)
+  }
+  const relation = string(item.relation, `${label}.relation`) as IntuitionTopicLinkRelation
+  if (!topicLinkRelations.has(relation)) {
+    throw new ScientificIntuitionFlowError(`${label}.relation is invalid`)
+  }
+  const from = string(item.from, `${label}.from`)
+  const to = string(item.to, `${label}.to`)
+  if (!/^topic:[A-Za-z0-9_.:-]+$/.test(from) || !/^topic:[A-Za-z0-9_.:-]+$/.test(to)) {
+    throw new ScientificIntuitionFlowError(`${label} endpoints must match ^topic:`)
+  }
+  return {
+    id,
+    from,
+    relation,
+    to,
+    rationale: string(item.rationale, `${label}.rationale`),
+    stop_condition: string(item.stop_condition, `${label}.stop_condition`),
+    non_claim: string(item.non_claim, `${label}.non_claim`),
+    does_not_authorize_execution: truth(
+      item.does_not_authorize_execution,
+      `${label}.does_not_authorize_execution`
+    )
+  }
+}
+
+const signalV2 = (value: unknown, label: string): ScientificIntuitionSignalV2 => {
+  const item = record(value, label)
+  exactKeys(
+    item,
+    [
+      "id",
+      "status",
+      "kind",
+      "topic",
+      "canonical_target",
+      "lens",
+      "why_relevant",
+      "source_refs",
+      "assumptions",
+      "discriminating_observation",
+      "stop_condition",
+      "principal_failure_class",
+      "non_claim",
+      "does_not_authorize_execution"
+    ],
+    label
+  )
+  const id = string(item.id, `${label}.id`)
+  if (!/^intuition:[A-Za-z0-9_.:-]+$/.test(id)) {
+    throw new ScientificIntuitionFlowError(`${label}.id must match ^intuition:`)
+  }
+  const status = string(item.status, `${label}.status`) as IntuitionSignalStatus
+  if (!signalStatuses.has(status)) throw new ScientificIntuitionFlowError(`${label}.status is invalid`)
+  const kind = string(item.kind, `${label}.kind`) as IntuitionSignalKind
+  if (!signalKinds.has(kind)) throw new ScientificIntuitionFlowError(`${label}.kind is invalid`)
+  const topic = string(item.topic, `${label}.topic`)
+  if (!/^topic:[A-Za-z0-9_.:-]+$/.test(topic)) {
+    throw new ScientificIntuitionFlowError(`${label}.topic must match ^topic:`)
+  }
+  const lens = string(item.lens, `${label}.lens`)
+  if (!lens.endsWith("?")) {
+    throw new ScientificIntuitionFlowError(`${label}.lens must end with '?'`)
+  }
+  const failure = string(
+    item.principal_failure_class,
+    `${label}.principal_failure_class`
+  ) as PrincipalFailureClass
+  if (!failureClasses.has(failure)) {
+    throw new ScientificIntuitionFlowError(`${label}.principal_failure_class is invalid`)
+  }
+  return {
+    id,
+    status,
+    kind,
+    topic,
+    ...(item.canonical_target === undefined
+      ? {}
+      : {
+          canonical_target: canonicalReference(
+            item.canonical_target,
+            `${label}.canonical_target`
+          )
+        }),
+    lens,
+    why_relevant: string(item.why_relevant, `${label}.why_relevant`),
+    source_refs: stringArray(item.source_refs, `${label}.source_refs`),
+    assumptions: stringArray(item.assumptions, `${label}.assumptions`),
+    discriminating_observation: string(
+      item.discriminating_observation,
+      `${label}.discriminating_observation`
+    ),
+    stop_condition: string(item.stop_condition, `${label}.stop_condition`),
+    principal_failure_class: failure,
+    non_claim: string(item.non_claim, `${label}.non_claim`),
+    does_not_authorize_execution: truth(
+      item.does_not_authorize_execution,
+      `${label}.does_not_authorize_execution`
+    )
+  }
+}
+
 export const decodeScientificIntuitionFlow = (
   sourceText: string,
-  label = SCIENTIFIC_INTUITION_FLOW_RELPATH
+  label = SCIENTIFIC_INTUITION_FLOW_V1_RELPATH
 ): ScientificIntuitionFlow => {
   let raw: unknown
   try {
@@ -426,6 +631,123 @@ export const decodeScientificIntuitionFlow = (
     ),
     signals: flow.signals.map((entry, index) =>
       signal(entry, `${label}.signals[${index}]`)
+    ),
+    boundaries: stringArray(flow.boundaries, `${label}.boundaries`)
+  }
+}
+
+export const decodeScientificIntuitionFlowV2 = (
+  sourceText: string,
+  label = SCIENTIFIC_INTUITION_FLOW_RELPATH
+): ScientificIntuitionFlowV2 => {
+  let raw: unknown
+  try {
+    raw = JSON.parse(sourceText)
+  } catch (error) {
+    throw new ScientificIntuitionFlowError(`${label} is not valid JSON: ${String(error)}`)
+  }
+  rejectForbiddenFieldsRecursively(raw, label)
+  const flow = record(raw, label)
+  exactKeys(
+    flow,
+    [
+      "$schema",
+      "schema_version",
+      "graph_id",
+      "title",
+      "description",
+      "updated_at_utc",
+      "authority",
+      "canonical_graph_unchanged",
+      "does_not_authorize_execution",
+      "standards_alignment",
+      "topics",
+      "topic_links",
+      "sources",
+      "signals",
+      "boundaries"
+    ],
+    label
+  )
+  if (flow.schema_version !== "scientific-intuition-flow/v2") {
+    throw new ScientificIntuitionFlowError(`${label}.schema_version must be scientific-intuition-flow/v2`)
+  }
+  if (flow.graph_id !== "intuition-flow:ice") {
+    throw new ScientificIntuitionFlowError(`${label}.graph_id must be intuition-flow:ice`)
+  }
+  const updatedAt = string(flow.updated_at_utc, `${label}.updated_at_utc`)
+  if (!dateTime.test(updatedAt)) {
+    throw new ScientificIntuitionFlowError(`${label}.updated_at_utc must be UTC ISO-8601`)
+  }
+  if (flow.authority !== "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION") {
+    throw new ScientificIntuitionFlowError(`${label}.authority is invalid`)
+  }
+  if (
+    !Array.isArray(flow.standards_alignment) ||
+    flow.standards_alignment.length !== 4
+  ) {
+    throw new ScientificIntuitionFlowError(
+      `${label}.standards_alignment must contain exactly four entries`
+    )
+  }
+  if (!Array.isArray(flow.topics) || flow.topics.length < 1 || flow.topics.length > 64) {
+    throw new ScientificIntuitionFlowError(`${label}.topics must contain 1 through 64 entries`)
+  }
+  if (
+    !Array.isArray(flow.topic_links) ||
+    flow.topic_links.length < 1 ||
+    flow.topic_links.length > 64
+  ) {
+    throw new ScientificIntuitionFlowError(`${label}.topic_links must contain 1 through 64 entries`)
+  }
+  if (
+    !Array.isArray(flow.sources) ||
+    flow.sources.length < 1 ||
+    flow.sources.length > 128
+  ) {
+    throw new ScientificIntuitionFlowError(
+      `${label}.sources must contain 1 through 128 entries`
+    )
+  }
+  if (
+    !Array.isArray(flow.signals) ||
+    flow.signals.length < 1 ||
+    flow.signals.length > 64
+  ) {
+    throw new ScientificIntuitionFlowError(
+      `${label}.signals must contain 1 through 64 entries`
+    )
+  }
+  return {
+    ...(flow.$schema === undefined ? {} : { $schema: string(flow.$schema, `${label}.$schema`) }),
+    schema_version: "scientific-intuition-flow/v2",
+    graph_id: "intuition-flow:ice",
+    title: string(flow.title, `${label}.title`),
+    description: string(flow.description, `${label}.description`),
+    updated_at_utc: updatedAt,
+    authority: "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
+    canonical_graph_unchanged: truth(
+      flow.canonical_graph_unchanged,
+      `${label}.canonical_graph_unchanged`
+    ),
+    does_not_authorize_execution: truth(
+      flow.does_not_authorize_execution,
+      `${label}.does_not_authorize_execution`
+    ),
+    standards_alignment: flow.standards_alignment.map((entry, index) =>
+      standardsAlignment(entry, `${label}.standards_alignment[${index}]`)
+    ),
+    topics: flow.topics.map((entry, index) =>
+      intuitionTopic(entry, `${label}.topics[${index}]`)
+    ),
+    topic_links: flow.topic_links.map((entry, index) =>
+      intuitionTopicLink(entry, `${label}.topic_links[${index}]`)
+    ),
+    sources: flow.sources.map((entry, index) =>
+      source(entry, `${label}.sources[${index}]`)
+    ),
+    signals: flow.signals.map((entry, index) =>
+      signalV2(entry, `${label}.signals[${index}]`)
     ),
     boundaries: stringArray(flow.boundaries, `${label}.boundaries`)
   }

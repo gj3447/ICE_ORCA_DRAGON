@@ -130,7 +130,7 @@ const capabilities = {
     },
     {
       name: "ice_scientific_intuition_search",
-      purpose: "Read source-backed hypothesis-generation lenses with canonical local context."
+      purpose: "Read source-backed hypothesis-generation lenses by sidecar topic or canonical local context."
     },
     {
       name: "ice_research_capabilities",
@@ -526,7 +526,7 @@ export const createIceResearchMcpServer = (): McpServer => {
     {
       title: "Scientific intuition lens search",
       description:
-        "Return bounded source-backed hypothesis-generation lenses federated with canonical local context for one canonical open problem. Signals are not claims or evidence; this closed-world read-only tool never modifies the KG or authorizes execution.",
+        "Return bounded source-backed hypothesis-generation lenses for an intuition::topic:id or exact cpt::open:id target. Sidecar topics and canonical context remain distinct. Signals are not claims or evidence; this closed-world read-only tool never modifies the KG or authorizes execution.",
       inputSchema: {
         query: z.string().min(1).max(500),
         target: z.string().min(1).max(384),

@@ -1,6 +1,44 @@
 # Scientific intuition signal layer — 2026-09-02
 
-## Decision
+## Amendment — 2026-09-03
+
+Keep `research/intuition/scientific-intuition-signals.v1.json` byte-for-byte as the Gate-1 snapshot. An
+existing result records its SHA-256, so broadening or rewriting v1 would corrupt durable provenance.
+
+Add `research/intuition/scientific-intuition-signals.v2.json` as the active general ICE intuition graph,
+validated by `ontology/schema/scientific-intuition-flow-v2.schema.json`. V2 copies the five v1 lenses
+with their original canonical targets, then adds:
+
+- local, non-authoritative `topic:*` nodes for idea-space organization;
+- explicit topic-to-topic links whose relations are limited to `DISTINCT_FROM` and
+  `MAY_SHARE_UNRESOLVED_ACTION_WITH`;
+- a required topic on every signal; and
+- an optional `canonical_target` that must resolve to a scope-matched CPT `open_problem`.
+
+This split prevents two false graph implications. A discussion topic is not a canonical research node,
+and topical similarity is not a dependency. In particular, the geometry–energy topic has no canonical
+target: the existing V=0 closed-FRW empirical bridge concerns primordial generation, reheating,
+non-flat transfer, and likelihood, not a generic modified-gravity action. The CPT/Pin-versus-supercharge
+and persistent-spectrum signals may point to Gate 4 and Gate 5 because those scopes match exactly.
+
+The active read-only query surface accepts either a sidecar topic or a canonical open problem:
+
+```bash
+./ice intuition search "geometry versus effective fluid" \
+  --target intuition::topic:geometry-energy-unification --json
+./ice intuition search "CPT sewing versus fermion-odd charge" \
+  --target cpt::open:gate4-spinorial-charge-domain-constraint-closure --json
+```
+
+For a topic query, `canonical_target` and `canonical_context` are `null`. For a canonical query,
+GraphRAG context remains a read-only locator. Derived `BELONGS_TO_SIDECAR_TOPIC`,
+`TARGETS_CANONICAL_OPEN_PROBLEM`, `CITES_SOURCE`, and `MIRRORS_CANONICAL_SOURCE` links never enter the
+canonical collection. V2 does not change the authority, promotion, ranking, or execution boundaries
+below.
+
+The remainder records the original v1 decision and its still-valid Gate-1 provenance rationale.
+
+## Original 2026-09-02 decision
 
 Add `research/intuition/scientific-intuition-signals.v1.json` as a versioned,
 source-linked **non-authoritative hypothesis-generation sidecar** for the CPT

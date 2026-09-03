@@ -8,6 +8,12 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
 verifies 401/401 stored hashes.
 
+The non-authoritative
+[geometry–CPT–SUSY intuition map](../../research/intuition/ICE_GEOMETRY_CPT_SUSY_INTUITION_MAP_2026-09-03.md)
+organizes the proposed geometry–energy and opposite-sheet ideas as source-linked separation tests, with
+canonical open-problem links only where scope matches. It is a navigation sidecar only and does not
+change this canonical graph.
+
 The 2026-08-31 bounded bridge snapshots add a fail-closed raw-\(C\) Picard-admission denial, a
 finite-cutoff nonreal-Weyl proxy, complex-scalar \(S^3\) SU(2) Gaunt golden data with a projection
 remainder, its finite \(n\leq2\) real-scalar convention translation and two fixed scalar-derivative

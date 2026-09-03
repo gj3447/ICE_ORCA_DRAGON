@@ -160,13 +160,17 @@ skill integration decision](decisions/ICE_RESEARCH_MCP_SKILL_INTEGRATION_2026-09
 ./ice intuition validate --json
 ./ice intuition search "Which typed object separates unresolved intersections from zero?" \
   --target cpt::open:gate1-original-cycle-signed-global-intersections --json
+./ice intuition search "Which invariant separates geometry from an effective fluid?" \
+  --target intuition::topic:geometry-energy-unification --json
 ```
 
-`intuition search` federates one exact canonical open problem and bounded canonical GraphRAG context
-with matching source-linked question lenses. Its explicit links are navigation data only: the sidecar is
-not registered in the canonical ontology, is never ranked as evidence, and cannot authorize a runner.
-Inspect the primary source and retain at most one bounded falsifiable question for `agent plan`. Keep
-`UNRESOLVED`, `OUT_OF_SCOPE`, and a computed integer zero distinct. See the
+`intuition search` retrieves matching source-linked question lenses by either one sidecar `topic:*` or
+one exact canonical open problem. A topic query returns null canonical target/context; a canonical query
+adds bounded canonical GraphRAG context. Its explicit topic/source/target links are navigation data only:
+the sidecar is not registered in the canonical ontology, is never ranked as evidence, and cannot
+authorize a runner. Inspect the primary source and retain at most one bounded falsifiable question. Only
+a separately reviewed canonical blocker question may proceed to `agent plan`. Keep `UNRESOLVED`,
+`OUT_OF_SCOPE`, and a computed integer zero distinct. See the
 [scientific-intuition signal-layer decision](decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md).
 
 ## Run one kernel

@@ -87,7 +87,7 @@ it("exposes a bounded read-only MCP capability surface", async () => {
     })
     expect(scientificIntuition.isError).not.toBe(true)
     expect(JSON.stringify(scientificIntuition.content)).toContain(
-      "scientific-intuition-flow-search/v1"
+      "scientific-intuition-flow-search/v2"
     )
     expect(JSON.stringify(scientificIntuition.content)).toContain(
       "Signals are source-backed hypothesis-generation lenses, not claims, evidence"
@@ -101,6 +101,22 @@ it("exposes a bounded read-only MCP capability surface", async () => {
     expect(JSON.stringify(scientificIntuition.content)).toContain(
       "MIRRORS_CANONICAL_SOURCE"
     )
+
+    const scientificIntuitionTopic = await client.callTool({
+      name: "ice_scientific_intuition_search",
+      arguments: {
+        query: "Which invariant separates geometry from an effective fluid?",
+        target: "intuition::topic:geometry-energy-unification"
+      }
+    })
+    expect(scientificIntuitionTopic.isError).not.toBe(true)
+    expect(JSON.stringify(scientificIntuitionTopic.content)).toContain(
+      "BELONGS_TO_SIDECAR_TOPIC"
+    )
+    expect(JSON.stringify(scientificIntuitionTopic.content)).toContain(
+      "canonical_target"
+    )
+    expect(JSON.stringify(scientificIntuitionTopic.content)).toContain("SIDECAR_TOPIC")
 
     const graphRagSummary = await client.callTool({
       name: "ice_graphrag_summary",

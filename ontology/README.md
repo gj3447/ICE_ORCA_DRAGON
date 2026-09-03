@@ -29,11 +29,13 @@ The [collection manifest](./collection.json) uses
 snapshots carry a `P…` phase label; independent unnumbered calculations use `phase: null` and retain
 their authoritative semantic check IDs without a fabricated phase prefix.
 
-The separate [`scientific-intuition-flow/v1`](./schema/scientific-intuition-flow-v1.schema.json)
-schema validates source-linked question lenses under [`research/intuition/`](../research/intuition/).
-That sidecar is intentionally absent from `collection.json`: `./ice intuition search` federates it at
-read time to an exact canonical open problem and emits explicit navigation links without creating a
-fifth authoritative graph, changing evidence status, or authorizing execution.
+The separate [`scientific-intuition-flow/v2`](./schema/scientific-intuition-flow-v2.schema.json)
+schema validates source-linked question lenses, local `topic:*` nodes, topic links, and optional exact
+canonical open-problem targets under [`research/intuition/`](../research/intuition/). The
+[`v1` schema](./schema/scientific-intuition-flow-v1.schema.json) and hash-pinned Gate-1 snapshot remain
+unchanged for provenance. Both sidecars are intentionally absent from `collection.json`:
+`./ice intuition search` reads active v2 topics or exact canonical targets without creating a fifth
+authoritative graph, changing evidence status, or authorizing execution.
 
 ## Default navigation and cohesion
 

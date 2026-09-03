@@ -4,6 +4,22 @@ This directory carries source-linked questions that may help a human sharpen a
 canonical open problem. It is deliberately outside `ontology/collection.json`:
 none of its records is a claim, evidence, a score, or execution authority.
 
+The [geometry–CPT–SUSY intuition map](./ICE_GEOMETRY_CPT_SUSY_INTUITION_MAP_2026-09-03.md)
+connects the discussed “curvature is energy” and “SUSY on the other side” ideas
+without identifying them. It keeps equation-side relabeling, vacuum Weyl
+curvature, CPT/Pin sewing, a physical fermion-odd charge, state asymmetry, pole
+splitting, and cross-domain observables as separately typed tests. The map is a
+human view over this sidecar and existing canonical open problems; it does not
+add canonical evidence.
+
+[`scientific-intuition-signals.v1.json`](./scientific-intuition-signals.v1.json)
+is the immutable Gate-1 snapshot pinned by an existing result hash. The active
+[`scientific-intuition-signals.v2.json`](./scientific-intuition-signals.v2.json)
+copies those lenses into a general ICE sidecar, adds typed `topic:*` nodes and
+topic links, and permits an optional `canonical_target` only where an existing
+`open_problem` has matching scope. In particular, the geometry–energy topic has
+no fabricated link to the V=0 closed-FRW likelihood lane.
+
 Validate the strict file and resolve every target/source bridge against the
 current canonical collection:
 
@@ -20,13 +36,25 @@ question lenses:
   --limit 8 --depth 1 --json
 ```
 
-The response contains an exact `canonical_target`, retrieval-only
-`canonical_context`, `non_authoritative_signals`, and derived
-`federated_links`. The stored `target`, `source_refs`, and optional exact
+The broader candidate lenses can be retrieved by exact canonical target:
+
+```bash
+./ice intuition search "Which invariant separates geometry from an effective fluid?" \
+  --target intuition::topic:geometry-energy-unification --json
+./ice intuition search "Is CPT sewing distinct from a physical fermion-odd charge?" \
+  --target cpt::open:gate4-spinorial-charge-domain-constraint-closure --json
+./ice intuition search "What survives dilution and moves an interacting retarded pole?" \
+  --target cpt::open:gate5-persistent-order-and-pole-splitting --json
+```
+
+The response contains either an exact `sidecar_target` or `canonical_target`,
+`non_authoritative_signals`, typed topic context, and derived
+`federated_links`. `canonical_context` is `null` for a sidecar-topic query. The
+stored `topic`, optional `canonical_target`, `source_refs`, and optional exact
 `canonical_source` bridge remain authoritative for sidecar linkage. A consumer
 must preserve these distinctions. Signal selection is exact target matching in
 file order and is capped at 20; the free-text query ranks canonical context
-only, never the intuition records:
+only for a canonical-target query, never the intuition records:
 
 - `INTEGER` is a located computed intersection value.
 - `UNRESOLVED` means the value or required object is missing.

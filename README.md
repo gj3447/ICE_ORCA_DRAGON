@@ -427,7 +427,7 @@ Canonical commands:
 ./ice harness check [--graph <key>]
 ./ice literature search <query> [--limit 1..20] [--json]
 ./ice intuition validate [--json]
-./ice intuition search <query> --target <graph>::<open:node> [--limit 1..50] [--depth 0..3] [--json]
+./ice intuition search <query> --target <intuition::topic:node|cpt::open:node> [--limit 1..50] [--depth 0..3] [--json]
 ./ice graphrag eval --limit 12 --json
 ./ice graphrag diff --base HEAD --limit 12 --json
 ./ice agent eval [--json]
@@ -470,8 +470,9 @@ experiment; see the [graph-aware harness decision](docs/decisions/ICE_GRAPH_AWAR
 
 `literature search` is a bounded, read-only OpenAlex works-graph lookup for time-stamped source discovery.
 It is not a substitute for reading a primary source and it never authorizes a run. `intuition search`
-federates exact canonical context with source-linked, non-authoritative question lenses while leaving the
-canonical ontology and planner unchanged. Its explicit links are navigation only, and
+retrieves source-linked, non-authoritative question lenses by a sidecar `topic:*` or an exact canonical
+open problem. Topic queries keep canonical target/context null; canonical queries add bounded GraphRAG
+context. Its explicit links are navigation only, leave the canonical ontology and planner unchanged, and
 `UNRESOLVED`, `OUT_OF_SCOPE`, and computed zero remain distinct. `npm run --silent mcp`
 exposes the graph harness, GraphRAG regression, SHACL, SPARQL, RO-Crate preview, durable-run audit,
 scientific-intuition search, and literature-discovery surfaces through local stdio. The stdio entry

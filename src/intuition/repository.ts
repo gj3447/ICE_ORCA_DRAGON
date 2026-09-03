@@ -5,7 +5,7 @@ import { iceError } from "../errors.ts"
 import { isSafeArtifactPath } from "../ontology/core.ts"
 import { Workspace } from "../workspace.ts"
 import {
-  decodeScientificIntuitionFlow,
+  decodeScientificIntuitionFlowV2,
   SCIENTIFIC_INTUITION_FLOW_RELPATH
 } from "./model.ts"
 
@@ -39,7 +39,7 @@ export const loadScientificIntuitionFlow = Effect.gen(function* () {
     Effect.mapError((error) => iceError("INTUITION_READ_FAILED", `cannot read intuition sidecar: ${String(error)}`))
   )
   return yield* Effect.try({
-    try: () => decodeScientificIntuitionFlow(contents),
+    try: () => decodeScientificIntuitionFlowV2(contents),
     catch: (error) => iceError("INTUITION_SCHEMA_INVALID", error instanceof Error ? error.message : String(error))
   })
 })

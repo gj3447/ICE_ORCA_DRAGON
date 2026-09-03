@@ -130,6 +130,33 @@ Phase 51–56 and the consumed Gate-1 one-shots stay searchable but their execut
 reading paths are explanatory archives, not default task queues. New science, if any, is a clean,
 committed, unnumbered and independently bounded question run only through `./ice run`.
 
+## Scientific-intuition sidecar
+
+Source-linked hypothesis questions remain outside the four canonical evidence graphs. The strict
+[`scientific-intuition-signals.v2.json`](../../research/intuition/scientific-intuition-signals.v2.json)
+sidecar separates local `topic:*` nodes from optional, scope-matched canonical `open_problem` targets and
+derives read-only source/target federation links. The hash-pinned Gate-1 v1 snapshot remains unchanged.
+Neither version can add a claim, change evidence, rank truth, or authorize a calculation.
+
+The human-readable
+[geometry–CPT–SUSY intuition map](../../research/intuition/ICE_GEOMETRY_CPT_SUSY_INTUITION_MAP_2026-09-03.md)
+keeps two candidate lanes separate. The geometry–energy lane must pass an action, degree-of-freedom,
+vacuum-Weyl, field-redefinition and cross-domain-observable audit. The temporal-folded-SUSY lane must
+distinguish CPT/Pin history sewing from a fermion-odd charge, then pass the common-domain Gate 4 and
+persistent interacting-spectrum Gate 5 audits. The lanes meet only at an unresolved common-action
+question; diagram adjacency is not a mechanism or evidence edge. The geometry topic deliberately has no
+canonical V=0 likelihood target because that existing node has a narrower closed-FRW primordial scope.
+
+```bash
+./ice intuition validate --json
+./ice intuition search "Which invariant separates geometry from an effective fluid?" \
+  --target intuition::topic:geometry-energy-unification --json
+./ice intuition search "Is CPT sewing distinct from a physical fermion-odd charge?" \
+  --target cpt::open:gate4-spinorial-charge-domain-constraint-closure --json
+./ice intuition search "What survives dilution and moves an interacting retarded pole?" \
+  --target cpt::open:gate5-persistent-order-and-pole-splitting --json
+```
+
 ## Full-stack graph surfaces
 
 | Concern | Repository surface | Authority boundary |

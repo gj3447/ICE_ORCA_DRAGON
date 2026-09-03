@@ -1,0 +1,599 @@
+{
+  "$schema": "../../ontology/schema/scientific-intuition-flow-v2.schema.json",
+  "schema_version": "scientific-intuition-flow/v2",
+  "graph_id": "intuition-flow:ice",
+  "title": "ICE scientific-intuition graph",
+  "description": "Versioned source-linked question graph. Sidecar topics organize discussion-level ideas; optional canonical_target links are permitted only when an existing open problem has matching scope. No topic, link, or signal is a scientific claim or execution authority.",
+  "updated_at_utc": "2026-09-03T05:29:11Z",
+  "authority": "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
+  "canonical_graph_unchanged": true,
+  "does_not_authorize_execution": true,
+  "standards_alignment": [
+    {
+      "id": "standard:rdf11-named-graphs",
+      "standard": "RDF 1.1 Concepts and Abstract Syntax",
+      "uri": "https://www.w3.org/TR/rdf11-concepts/",
+      "status": "W3C Recommendation",
+      "boundary": "A future exchange projection may put assertion and provenance in separate named graphs; this JSON sidecar is not itself the canonical RDF graph."
+    },
+    {
+      "id": "standard:jsonld11-exchange",
+      "standard": "JSON-LD 1.1",
+      "uri": "https://www.w3.org/TR/json-ld11/",
+      "status": "W3C Recommendation",
+      "boundary": "JSON-LD is an exchange option only; it does not confer semantics or scientific acceptance on any signal."
+    },
+    {
+      "id": "standard:prov-o-provenance",
+      "standard": "PROV-O: The PROV Ontology",
+      "uri": "https://www.w3.org/TR/prov-o/",
+      "status": "W3C Recommendation",
+      "boundary": "Primary-source and future artifact provenance may be expressed with PROV-O; provenance records origin, not truth."
+    },
+    {
+      "id": "standard:shacl-validation",
+      "standard": "Shapes Constraint Language (SHACL)",
+      "uri": "https://www.w3.org/TR/shacl/",
+      "status": "W3C Recommendation",
+      "boundary": "A future RDF projection requires separate SHACL shapes; this JSON sidecar uses JSON Schema plus semantic checks, and neither form of conformance is scientific evidence."
+    }
+  ],
+  "topics": [
+    {
+      "id": "topic:gate1-cycle-and-orientation-methods",
+      "title": "Gate-1 cycle and orientation method questions",
+      "question": "Which typed ledgers and separation tests keep local saddle data distinct from a source-defined global cycle and orientation?",
+      "scope": "Compatibility topic for the five v1 Gate-1 lenses; it does not alter their canonical targets or the hash-pinned v1 snapshot.",
+      "non_claim": "This topic is an index, not evidence that a global cycle or orientation exists.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "topic:geometry-energy-unification",
+      "title": "Geometry-energy unification candidate",
+      "question": "Can one explicit geometric or supergeometric action derive matter-energy content and a choice-robust cross-domain observable beyond effective-fluid relabeling?",
+      "scope": "Discussion-level ICE idea with no canonical CPT dependency or empirical target until a matching action and observable lane are constructed.",
+      "non_claim": "This topic does not assert that curvature is energy, that modified gravity is favored, or that a canonical ICE route contains this mechanism.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "topic:cpt-folded-susy-synthesis",
+      "title": "CPT-folded supersymmetry synthesis candidate",
+      "question": "Can a temporal or internal two-sheet action keep CPT or Pin sewing distinct from a physical fermion-odd charge and derive persistent observable supersymmetry breaking?",
+      "scope": "Discussion-level synthesis whose only canonical contexts are the explicitly linked Gate-4 and Gate-5 open problems; it is not a spatial far-side model.",
+      "non_claim": "This topic does not assert a sheet-exchanging supercharge, a superpartner spectrum, or a discovered phenomenon.",
+      "does_not_authorize_execution": true
+    }
+  ],
+  "topic_links": [
+    {
+      "id": "intuition-link:geometry-and-folded-susy-are-distinct",
+      "from": "topic:geometry-energy-unification",
+      "relation": "DISTINCT_FROM",
+      "to": "topic:cpt-folded-susy-synthesis",
+      "rationale": "A geometric ontology and a CPT or SUSY operator algebra answer different questions and require independently typed objects.",
+      "stop_condition": "Stop if shared vocabulary or diagram proximity is used as a derivation.",
+      "non_claim": "This separation edge is conceptual hygiene, not evidence against a future common construction.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition-link:common-supergeometric-action-candidate",
+      "from": "topic:geometry-energy-unification",
+      "relation": "MAY_SHARE_UNRESOLVED_ACTION_WITH",
+      "to": "topic:cpt-folded-susy-synthesis",
+      "rationale": "The lanes could meet only if one declared action derives both the geometric field content and the distinct CPT, Pin, and fermion-odd charge structures.",
+      "stop_condition": "Stop if no common variational object, physical domain, degree-of-freedom inventory, or cross-domain observable is derived.",
+      "non_claim": "This is an unresolved bridge question, not a dependency, equivalence, evidence edge, or theory claim.",
+      "does_not_authorize_execution": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-ref:chamberlin-1890",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Chamberlin, T. C. (1890). The Method of Multiple Working Hypotheses. Science, 15(366), 92-96.",
+      "uri": "https://doi.org/10.1126/science.ns-15.366.92",
+      "version": "published 1890",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "pp. 92-96",
+      "role": "Methodological source for retaining alternatives rather than treating a candidate lens as a conclusion.",
+      "boundary": "Historical methodology, not domain evidence for CPT physics."
+    },
+    {
+      "id": "source-ref:platt-1964",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Platt, J. R. (1964). Strong Inference. Science, 146(3642), 347-353.",
+      "uri": "https://doi.org/10.1126/science.146.3642.347",
+      "version": "published 1964; PubMed PMID 17739513",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "pp. 347-353",
+      "role": "Methodological source for discriminator and stop-condition language.",
+      "boundary": "Method guidance only; it does not validate any modeled alternative."
+    },
+    {
+      "id": "source-ref:ninds-rigor",
+      "kind": "OFFICIAL_GUIDANCE",
+      "citation": "National Institute of Neurological Disorders and Stroke. Rigorous Study Design and Transparent Reporting.",
+      "uri": "https://www.ninds.nih.gov/funding/preparing-your-application/preparing-research-plan/rigorous-study-design-and-transparent-reporting",
+      "version": "web guidance retrieved 2026-09-02",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "Supporting Data, Experimental Design, and Interpretation sections",
+      "role": "Official guidance for explicit assumptions, controls, and transparent reporting.",
+      "boundary": "Biomedical funder guidance; imported only as general reporting discipline."
+    },
+    {
+      "id": "source-ref:gelman-shalizi-2013",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Gelman, A., & Shalizi, C. R. (2013). Philosophy and the practice of Bayesian statistics. British Journal of Mathematical and Statistical Psychology, 66(1), 8-38.",
+      "uri": "https://arxiv.org/abs/1006.3868",
+      "version": "arXiv:1006.3868",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§2 and §4",
+      "role": "Methodological source for separating model checking from model construction.",
+      "boundary": "Statistical philosophy, not a license to assign a posterior or confidence to a signal."
+    },
+    {
+      "id": "source-ref:nasem-2019",
+      "kind": "OFFICIAL_GUIDANCE",
+      "citation": "National Academies of Sciences, Engineering, and Medicine. (2019). Reproducibility and Replicability in Science.",
+      "uri": "https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science",
+      "version": "2019",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "Summary and Chapter 3",
+      "role": "Official source for distinguishing repeatability, reproducibility, and independent replication.",
+      "boundary": "General research-practice guidance; not evidence for a CPT result."
+    },
+    {
+      "id": "source-ref:witten-2010",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Witten, E. (2010). Analytic Continuation Of Chern-Simons Theory.",
+      "uri": "https://arxiv.org/abs/1001.2933",
+      "version": "arXiv:1001.2933v4",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§§2.2, 3.1.1, and 3.1.5; Eqs. (2.15)-(2.16) and (3.22)-(3.23)",
+      "role": "Primary mathematical source for treating integration cycles, Stokes phenomena, and intersection data as explicit objects rather than inferred labels.",
+      "boundary": "A mathematical analogy only; it neither supplies the CPT action nor establishes a CPT cycle.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:witten-2010-picard-lefschetz"
+      }
+    },
+    {
+      "id": "source-ref:feldbrugge-lehners-turok-2017",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Feldbrugge, J., Lehners, J.-L., & Turok, N. (2017). Lorentzian Quantum Cosmology. Physical Review D, 95, 103508.",
+      "uri": "https://arxiv.org/abs/1703.02076",
+      "version": "arXiv:1703.02076v1; Phys. Rev. D 95, 103508",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§II and the minisuperspace contour analysis",
+      "role": "Domain-adjacent primary example of using a separately specified Lorentzian contour and upward flows to identify contributing saddles.",
+      "boundary": "A model-specific minisuperspace application; it does not select the ICE original cycle, action, regulator, or physical state.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:feldbrugge-lehners-turok-2017"
+      }
+    },
+    {
+      "id": "source-ref:gottweis-2025",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Gottweis, J. et al. (2026). Accelerating scientific discovery with Co-Scientist.",
+      "uri": "https://arxiv.org/abs/2502.18864",
+      "version": "arXiv:2502.18864v2 (2026-06-29); related Nature DOI 10.1038/s41586-026-10644-y",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§1; scientist-in-the-loop framing",
+      "role": "Contemporary precedent for generate, debate, and evolve hypothesis generation as a non-authoritative workflow stage.",
+      "boundary": "Biomedical-focused system and results; Auto-Elo is not independent ground truth, and its scientist-in-the-loop framing does not validate physics hypotheses, ranking, or automated execution in this repository."
+    },
+    {
+      "id": "source-ref:rdf11",
+      "kind": "STANDARD",
+      "citation": "W3C. RDF 1.1 Concepts and Abstract Syntax.",
+      "uri": "https://www.w3.org/TR/rdf11-concepts/",
+      "version": "W3C Recommendation 2014",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§1.6 Working with Multiple RDF Graphs and §4 RDF Datasets",
+      "role": "Standard data-model reference for eventual assertion/provenance graph separation.",
+      "boundary": "Serialization architecture only."
+    },
+    {
+      "id": "source-ref:jsonld11",
+      "kind": "STANDARD",
+      "citation": "W3C. JSON-LD 1.1.",
+      "uri": "https://www.w3.org/TR/json-ld11/",
+      "version": "W3C Recommendation 2020",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§4.9 Named Graphs and §10 Relationship to RDF",
+      "role": "Standard exchange reference.",
+      "boundary": "Exchange syntax only."
+    },
+    {
+      "id": "source-ref:prov-o",
+      "kind": "STANDARD",
+      "citation": "W3C. PROV-O: The PROV Ontology.",
+      "uri": "https://www.w3.org/TR/prov-o/",
+      "version": "W3C Recommendation 2013",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§3 PROV-O Classes and Properties",
+      "role": "Standard provenance reference.",
+      "boundary": "Provenance describes derivation and association, not validity."
+    },
+    {
+      "id": "source-ref:shacl",
+      "kind": "STANDARD",
+      "citation": "W3C. Shapes Constraint Language (SHACL).",
+      "uri": "https://www.w3.org/TR/shacl/",
+      "version": "W3C Recommendation 2017",
+      "retrieved_at_utc": "2026-09-02T00:00:00Z",
+      "pinpoint": "§3 Validation and Graphs",
+      "role": "Standard constraint-validation reference for a future RDF projection.",
+      "boundary": "Not implemented for this JSON sidecar; structural conformance would still not establish validity."
+    },
+    {
+      "id": "source-ref:carroll-duvvuri-trodden-turner-2004",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Carroll, S. M., Duvvuri, V., Trodden, M., & Turner, M. S. (2004). Is Cosmic Speed-Up Due to New Gravitational Physics? Physical Review D, 70, 043528.",
+      "uri": "https://arxiv.org/abs/astro-ph/0306438",
+      "version": "arXiv:astro-ph/0306438v2; Phys. Rev. D 70, 043528",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "Abstract and the curvature-corrected gravitational action",
+      "role": "Primary comparator showing how an explicit modification of the gravitational action can mimic an accelerating component.",
+      "boundary": "A modified-gravity comparator, not evidence that ICE identifies energy with curvature or that this historical model is viable."
+    },
+    {
+      "id": "source-ref:lovelock-1971",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Lovelock, D. (1971). The Einstein Tensor and Its Generalizations. Journal of Mathematical Physics, 12(3), 498-501.",
+      "uri": "https://doi.org/10.1063/1.1665613",
+      "version": "J. Math. Phys. 12, 498 (1971)",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "Classification theorem under the paper's locality, metric, dimension, and differential-order assumptions",
+      "role": "Primary restriction benchmark for asking what assumption a proposed purely geometric field equation changes.",
+      "boundary": "The theorem constrains only its stated class; it does not rule out extra fields, higher derivatives, torsion, nonlocality, or higher dimensions."
+    },
+    {
+      "id": "source-ref:bellini-sawicki-2014",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Bellini, E., & Sawicki, I. (2014). Maximal freedom at minimum cost: linear large-scale structure in general modifications of gravity. JCAP, 07, 050.",
+      "uri": "https://arxiv.org/abs/1404.3713",
+      "version": "arXiv:1404.3713v3; JCAP 07 (2014) 050",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "Abstract and the background-plus-four-functions linear scalar-tensor parameterization",
+      "role": "Primary comparator for requiring one gravitational sector to make correlated background, clustering, anisotropic-stress, and tensor predictions.",
+      "boundary": "A single-field scalar-tensor parameterization, not an ICE derivation and not a test of a fully geometric matter ontology."
+    },
+    {
+      "id": "source-ref:schwarzschild-1916",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Schwarzschild, K. (1916). On the gravitational field of a mass point according to Einstein's theory.",
+      "uri": "https://arxiv.org/abs/physics/9905030",
+      "version": "Sitzungsberichte 1916 original; arXiv:physics/9905030v1 English translation",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "Vacuum exterior solution",
+      "role": "Primary vacuum benchmark for testing whether a proposed energy-curvature identity loses nonzero tidal curvature when Ricci curvature vanishes.",
+      "boundary": "The solution is a countercheck on an underspecified Ricci-only identity, not evidence for an ICE energy definition."
+    },
+    {
+      "id": "source-ref:boyle-finn-turok-2018",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Boyle, L., Finn, K., & Turok, N. (2018). CPT-Symmetric Universe. Physical Review Letters, 121, 251301.",
+      "uri": "https://arxiv.org/abs/1803.08928",
+      "version": "arXiv:1803.08928; Phys. Rev. Lett. 121, 251301",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "CPT-related pre- and post-bang histories and field content",
+      "role": "Primary comparator for a temporal CPT pairing across the bang.",
+      "boundary": "It does not identify the paired histories as particle superpartners or provide an ICE sheet-exchanging supercharge.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:boyle-finn-turok-2018"
+      }
+    },
+    {
+      "id": "source-ref:boyle-turok-2021",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Boyle, L., & Turok, N. (2021). Two-Sheeted Universe, Analyticity and the Arrow of Time.",
+      "uri": "https://arxiv.org/abs/2109.06204",
+      "version": "arXiv:2109.06204",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "Two-sheeted analytic continuation and time-orientation construction",
+      "role": "Primary comparator for distinguishing a two-history analytic sheet structure from a spatially remote sector.",
+      "boundary": "It supplies neither a supersymmetry algebra nor a proof that sheet exchange is a physical supercharge.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:boyle-turok-2021"
+      }
+    },
+    {
+      "id": "source-ref:wess-zumino-1974",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Wess, J., & Zumino, B. (1974). A Lagrangian model invariant under supergauge transformations. Physics Letters B, 49(1), 52-54.",
+      "uri": "https://doi.org/10.1016/0370-2693(74)90578-4",
+      "version": "Physics Letters B 49 (1974) 52-54",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "Supersymmetric Lagrangian and boson-fermion transformations",
+      "role": "Primary comparator for the fermion-odd boson-to-fermion content that a genuine supercharge must retain.",
+      "boundary": "A local supersymmetric model, not a temporal-fold or gravity construction.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:wess-zumino-1974"
+      }
+    },
+    {
+      "id": "source-ref:girardello-grisaru-1982",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Girardello, L., & Grisaru, M. T. (1982). Soft breaking of supersymmetry. Nuclear Physics B, 194(1), 65-76.",
+      "uri": "https://doi.org/10.1016/0550-3213(82)90512-0",
+      "version": "Nuclear Physics B 194 (1982) 65-76",
+      "retrieved_at_utc": "2026-09-03T05:29:11Z",
+      "pinpoint": "Classification of soft supersymmetry-breaking terms",
+      "role": "Primary comparator for separating a persistent soft spectrum from a state-only or hard-breaking effect.",
+      "boundary": "The classification does not derive an ICE breaking carrier, seam action, mass scale, or spectrum.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:girardello-grisaru-1982"
+      }
+    }
+  ],
+  "signals": [
+    {
+      "id": "intuition:gate1-regulated-relative-class-inventory",
+      "status": "CANDIDATE",
+      "kind": "MISSING_TYPED_OBJECT",
+      "topic": "topic:gate1-cycle-and-orientation-methods",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate1-original-cycle-signed-global-intersections"
+      },
+      "lens": "Can a source-defined regulated joint relative-class inventory make each candidate original cycle, sheet, singularity, Stokes boundary, and good end explicit enough to distinguish compatible completions?",
+      "why_relevant": "The canonical open problem asks for a complete oriented global intersection vector; an inventory is a candidate way to expose which typed objects are absent before any global inference is attempted.",
+      "source_refs": [
+        "source-ref:chamberlin-1890",
+        "source-ref:platt-1964",
+        "source-ref:ninds-rigor",
+        "source-ref:witten-2010"
+      ],
+      "assumptions": [
+        "The regulated joint relative class can be described without changing the declared CPT conventions.",
+        "A finite inventory has an explicit completeness boundary."
+      ],
+      "discriminating_observation": "Compare two admissible completions: a useful signal occurs only if the same inventory rules either uniquely separate them or make their unresolved typed-object difference explicit; otherwise the lens remains inconclusive.",
+      "stop_condition": "Stop if the inventory requires an unstated physical completion, suppresses a singular/Stokes/good-end alternative, or cannot state a bounded completeness boundary.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is an alternative-design question, not a claim that a global cycle, intersection vector, or physical state exists or has any value.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:gate1-explicit-incidence-unknowns",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:gate1-cycle-and-orientation-methods",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate1-original-cycle-signed-global-intersections"
+      },
+      "lens": "Can a typed original-cycle-by-upward-cycle incidence ledger distinguish INTEGER, UNRESOLVED, and OUT_OF_SCOPE entries so that missing global intersections cannot be silently collapsed into zero?",
+      "why_relevant": "Gate 1 permits a stable all-zero vector as a genuine negative result but still lacks a complete vector; an explicit three-state ledger separates a computed zero from an uncomputed or excluded intersection.",
+      "source_refs": [
+        "source-ref:witten-2010",
+        "source-ref:feldbrugge-lehners-turok-2017",
+        "source-ref:platt-1964",
+        "source-ref:ninds-rigor"
+      ],
+      "assumptions": [
+        "The original regulated cycle and every candidate upward cycle are independently specified before recording an incidence entry.",
+        "The enumeration boundary names all sheets, singularities, Stokes chambers, orientations, and good ends that are included or excluded."
+      ],
+      "discriminating_observation": "A useful ledger assigns every pre-enumerated cycle pair exactly one typed state and supplies a locator for each integer; any absent locator remains UNRESOLVED rather than becoming numerical zero.",
+      "stop_condition": "Stop if the original cycle is inferred from the same local thimble data being tested, if the census is not bounded, or if UNRESOLVED, OUT_OF_SCOPE, and integer zero are conflated.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is a data-shape and discriminator question, not a computation or claim that any intersection number, original cycle, or complete census is known.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:p38-cycle-versus-local-saddle-separation",
+      "status": "CANDIDATE",
+      "kind": "METHOD_ANALOGY",
+      "topic": "topic:gate1-cycle-and-orientation-methods",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:p38-explicit-joint-action-cycle-and-oriented-intersections"
+      },
+      "lens": "Could an explicit finite-cutoff action keep original-cycle candidates, saddle-local thimbles, transported frames, and end classifications as separately typed inputs so their possible non-equivalence is testable?",
+      "why_relevant": "The canonical P38 problem already separates admissible original-cycle candidates from local saddle data; the lens asks for a discriminator rather than an inverse reconstruction assumption.",
+      "source_refs": [
+        "source-ref:witten-2010",
+        "source-ref:feldbrugge-lehners-turok-2017",
+        "source-ref:gelman-shalizi-2013",
+        "source-ref:nasem-2019",
+        "source-ref:gottweis-2025"
+      ],
+      "assumptions": [
+        "A finite-cutoff surrogate can be labeled as conditional and non-physical.",
+        "Any map from an original-cycle candidate to local arms records its injectivity assumptions."
+      ],
+      "discriminating_observation": "Construct or rule out two admissible original-cycle candidates with indistinguishable declared local saddle data but different transported-frame or end labels; either outcome tests the separation without inferring the physical cycle.",
+      "stop_condition": "Stop if the surrogate is represented as a relative-homology theorem, if local agreement is relabeled as global injectivity, or if regulator dependence is omitted.",
+      "principal_failure_class": "gauge",
+      "non_claim": "This is a conditional method analogy, not a claim that any CPT cycle map is non-injective, complete, or physically admissible.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:p34-dual-determinant-census-separation",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:gate1-cycle-and-orientation-methods",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:p34-full-joint-dual-determinant-and-global-census"
+      },
+      "lens": "Can fold-arm connection, determinant-line transport, and full joint sheet/end census be specified as three independent deliverables with disagreement preserved as an outcome?",
+      "why_relevant": "The P34 open problem names all three debts; separating them prevents a local fold result from being used as a substitute for a global census.",
+      "source_refs": [
+        "source-ref:platt-1964",
+        "source-ref:gelman-shalizi-2013",
+        "source-ref:ninds-rigor",
+        "source-ref:nasem-2019"
+      ],
+      "assumptions": [
+        "Each deliverable has a declared input, output, and excluded scope.",
+        "Agreement between two deliverables is not treated as evidence that the third is complete."
+      ],
+      "discriminating_observation": "Record whether independently specified fold-arm and determinant-line procedures agree while a separately bounded census either closes or remains incomplete; disagreement or incompleteness remains a retained result.",
+      "stop_condition": "Stop if a relative phase is reported as an absolute orientation, if the census boundary changes after inspection, or if a missing good-end class is silently excluded.",
+      "principal_failure_class": "sign/unit",
+      "non_claim": "This is a decomposition of possible tests, not a claim that the determinant line is orientable, that an arm carries the cycle, or that a global coefficient is known.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:p35-absolute-orientation-discriminator",
+      "status": "CANDIDATE",
+      "kind": "DISCRIMINATOR",
+      "topic": "topic:gate1-cycle-and-orientation-methods",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:p35-absolute-detline-full-bfv-and-global-cycle"
+      },
+      "lens": "What source-defined comparison could distinguish an absolute determinant/Maslov orientation from a merely relative endpoint transport while retaining alternative measure and cycle conventions?",
+      "why_relevant": "The P35 open problem explicitly keeps absolute orientation, physical block/measure, BFV/SUGRA determinant, and global cycle unresolved; this lens asks what observation would separate alternatives.",
+      "source_refs": [
+        "source-ref:chamberlin-1890",
+        "source-ref:platt-1964",
+        "source-ref:witten-2010",
+        "source-ref:nasem-2019"
+      ],
+      "assumptions": [
+        "The compared conventions and endpoint measures are written before examining the outcome.",
+        "A zero-free continuum lift, if invoked, has a separately stated domain and regulator boundary."
+      ],
+      "discriminating_observation": "A useful outcome would be a convention-explicit comparison whose predicted orientation labels differ across alternatives and remain distinguishable under the declared regulator controls; otherwise it is inconclusive.",
+      "stop_condition": "Stop if an endpoint-relative phase is converted into an absolute sign without an independent reference, if the physical block is assumed rather than identified, or if the full global cycle is omitted.",
+      "principal_failure_class": "gauge",
+      "non_claim": "This is not a claim that an absolute Maslov orientation, physical measure, BFV/SUGRA superdeterminant, global cycle, or physical state has been obtained.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:ice-geometric-action-versus-effective-fluid-relabeling",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:geometry-energy-unification",
+      "lens": "Can an explicit covariant ICE action produce an invariant prediction that survives moving a geometric correction between the two sides of the field equation and applying admissible invertible field redefinitions?",
+      "why_relevant": "Writing a geometric term as an effective stress tensor can be bookkeeping-equivalent; a usable theory needs a mechanism and observable that are not created by that relabeling.",
+      "source_refs": [
+        "source-ref:carroll-duvvuri-trodden-turner-2004",
+        "source-ref:lovelock-1971",
+        "source-ref:bellini-sawicki-2014"
+      ],
+      "assumptions": [
+        "The candidate declares one covariant action, independent fields, gauge symmetries, matter coupling, and boundary terms.",
+        "The comparison quotient fixes which invertible field redefinitions and equation-side rearrangements count as the same theory."
+      ],
+      "discriminating_observation": "Two representations in the declared equivalence class give the same observables, while the ICE candidate yields at least one finite-parameter correlated prediction that differs from its general-relativity-plus-effective-fluid comparator.",
+      "stop_condition": "Stop if the proposal is only G plus H equals stress energy rewritten as G equals stress energy plus an effective H term, or if no action, conservation identity, degree-of-freedom inventory, and invariant observable are supplied.",
+      "principal_failure_class": "inference",
+      "non_claim": "This question does not establish that energy is curvature, that a new degree of freedom exists, or that any cosmological data favor ICE.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:ice-vacuum-weyl-and-degree-of-freedom-check",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:geometry-energy-unification",
+      "lens": "Which explicitly typed geometric object could represent energy without erasing Ricci-flat but tidally curved vacuum solutions, and what propagating degrees of freedom does its action contain?",
+      "why_relevant": "A slogan using only the Ricci scalar or Einstein tensor cannot by itself distinguish absence of matter stress from absence of all spacetime curvature; a candidate must say which invariant or relational object carries the proposed identification.",
+      "source_refs": [
+        "source-ref:schwarzschild-1916",
+        "source-ref:lovelock-1971",
+        "source-ref:carroll-duvvuri-trodden-turner-2004"
+      ],
+      "assumptions": [
+        "Vacuum and matter-coupled sectors are evaluated with the same geometric definition.",
+        "The linearized spectrum, constraints, signs, and boundary data are counted rather than hidden in an effective source."
+      ],
+      "discriminating_observation": "The proposed map remains well defined on a Ricci-flat tidal-curvature benchmark and yields a closed, stable degree-of-freedom count with an explicit conservation identity.",
+      "stop_condition": "Stop if curvature is left undefined, if Ricci-flat is silently equated with geometrically empty, or if higher-derivative, ghost, constraint, or extra-field content is omitted.",
+      "principal_failure_class": "algebra",
+      "non_claim": "This is a counterexample and degree-of-freedom filter; it neither rules out every geometric unification nor constructs one.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:ice-geometric-sector-cross-domain-correlation",
+      "status": "CANDIDATE",
+      "kind": "DISCRIMINATOR",
+      "topic": "topic:geometry-energy-unification",
+      "lens": "Does one fixed ICE coupling set predict a correlated pattern in background expansion, structure growth, lensing or anisotropic stress, and tensor propagation that survives admissible convention and parameter choices?",
+      "why_relevant": "An expansion-history fit alone is degenerate with an effective dark component; multiple consumers of the same mechanism are needed before a geometric interpretation becomes informative.",
+      "source_refs": [
+        "source-ref:bellini-sawicki-2014",
+        "source-ref:carroll-duvvuri-trodden-turner-2004"
+      ],
+      "assumptions": [
+        "A concrete ICE action and perturbation sector exist before any data comparison is proposed.",
+        "The same predeclared parameters and coupling prescription are used across all observable sectors."
+      ],
+      "discriminating_observation": "A single mechanism produces a choice-robust correlated deviation across at least two independent observable domains, with a matched null comparator and posterior-predictive failure condition.",
+      "stop_condition": "Stop if each observable is fitted with an independent free function, if only background expansion is computed, or if likelihood work begins without a state, transfer model, data map, and normalization.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is an empirical discriminator design with no asserted dependency on the canonical V=0 closed-FRW lane; it is not a prediction, likelihood result, or claim of modified gravity.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:ice-cpt-pin-sewing-versus-physical-cross-sheet-charge",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:cpt-folded-susy-synthesis",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate4-spinorial-charge-domain-constraint-closure"
+      },
+      "lens": "Can one doubled-sheet action distinguish bosonic CPT or Pin sewing from a fermion-odd physical supercharge by constructing both on the same positive inner product, common domain, and constraint algebra?",
+      "why_relevant": "CPT pairs histories while supersymmetry maps bosonic and fermionic states; calling a temporal or spatial opposite sheet a superpartner skips the operator that must connect those roles.",
+      "source_refs": [
+        "source-ref:boyle-finn-turok-2018",
+        "source-ref:boyle-turok-2021",
+        "source-ref:wess-zumino-1974"
+      ],
+      "assumptions": [
+        "The two sheets are a declared internal or temporal structure, not an unspecified spatial far side.",
+        "Each sheet contains a complete boson-fermion multiplet and a basis-independent observable fixes the sheet projectors."
+      ],
+      "discriminating_observation": "On one common physical domain, a Pin lift and a fermion-odd charge have distinct typed actions, the cross-sheet block P_minus Q P_plus is invariantly nonzero if claimed, the adjoint algebra closes on the physical Hamiltonian, and all constraints remain anomaly free.",
+      "stop_condition": "Stop if sheet sign is identified with fermion parity, if CPT reflection is renamed Q, if cross-sheet mixing is removable by a basis change, or if positivity, domains, conservation, and constraint closure are missing.",
+      "principal_failure_class": "algebra",
+      "non_claim": "This does not claim that the repository has constructed a physical sheet-exchanging supercharge or that a universe on another sheet contains superpartners.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:ice-persistent-breaking-to-cross-domain-observable",
+      "status": "CANDIDATE",
+      "kind": "DISCRIMINATOR",
+      "topic": "topic:cpt-folded-susy-synthesis",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate5-persistent-order-and-pole-splitting"
+      },
+      "lens": "Can a Gate-4-compatible sheet or seam mechanism derive a persistent finite-energy supersymmetry-breaking order parameter whose same couplings produce both an interacting boson-fermion pole split and an independent cosmological observable?",
+      "why_relevant": "The repository's free seam changes occupations without moving retarded poles; a new-physics route therefore needs a persistent carrier and two independent consequences rather than a state-only asymmetry.",
+      "source_refs": [
+        "source-ref:wess-zumino-1974",
+        "source-ref:girardello-grisaru-1982",
+        "source-ref:boyle-finn-turok-2018"
+      ],
+      "assumptions": [
+        "Gate 4 has already supplied a physical product, common domain, conserved fermion-odd charge, Pin lift, and anomaly-free constraints.",
+        "Pole masses are defined from renormalized interacting retarded functions with matched seam-off, trivial-holonomy, dilution, regulator, and backreaction controls."
+      ],
+      "discriminating_observation": "A gauge-invariant order parameter remains nonzero after state dilution, generates a finite nonzero late-time interacting pole difference, preserves the declared soft ultraviolet behavior, and fixes a second observable with the same parameters.",
+      "stop_condition": "Stop if the effect is only an occupation or Wightman difference, if the free retarded poles remain equal, if the order parameter dilutes away, or if the proposed remote sector is too disconnected to enter visible-sector Ward identities and loops.",
+      "principal_failure_class": "spectrum",
+      "non_claim": "This is a Gate-5 discriminator, not evidence of SUSY breaking, a superpartner spectrum, naturalness cancellation, or a cosmological signal.",
+      "does_not_authorize_execution": true
+    }
+  ],
+  "boundaries": [
+    "This v2 file is a non-authoritative hypothesis-generation graph and is not a fifth canonical evidence graph.",
+    "The hash-pinned v1 Gate-1 sidecar remains unchanged; v2 copies its lenses with explicit provenance-compatible canonical targets.",
+    "A sidecar topic is an idea-space index. It creates no canonical claim, evidence edge, dependency, route, or external KG identifier.",
+    "A canonical_target is optional and may be present only when the signal's scope matches an existing canonical open_problem.",
+    "No signal or topic link authorizes a runner, computation, graph promotion, downstream task, likelihood, or publication.",
+    "Domain-physics sources provide constraints, counterchecks, or comparators only; they do not supply ICE evidence.",
+    "Read-only federation labels sidecar topics and canonical context separately and never infers a link from topical similarity."
+  ]
+}

@@ -2,7 +2,7 @@ import { Console, Effect } from "effect"
 import { iceError } from "../errors.ts"
 import { graphRagSearchData } from "../graphrag/commands.ts"
 import { loadValidOntologyCollectionStructure } from "../ontology/repository.ts"
-import { validateScientificIntuitionFlow } from "./core.ts"
+import { validateScientificIntuitionFlowV2 } from "./core.ts"
 import { loadScientificIntuitionFlow } from "./repository.ts"
 
 const qualifiedTarget = /^([a-z0-9-]+)::([a-z_]+:[A-Za-z0-9_.:-]+)$/
@@ -15,7 +15,7 @@ const loadedValidatedFlow = Effect.all({
   ontology: loadValidOntologyCollectionStructure
 }).pipe(
   Effect.flatMap(({ flow, ontology }) => {
-    const report = validateScientificIntuitionFlow(flow, ontology.graphs)
+    const report = validateScientificIntuitionFlowV2(flow, ontology.graphs)
     return report.valid
       ? Effect.succeed({ flow, ontology, report })
       : Effect.fail(
@@ -45,27 +45,37 @@ export const scientificIntuitionSearchData = (
       return yield* Effect.fail(
         iceError(
           "INTUITION_TARGET_INVALID",
-          "target must be graph::open_problem-id",
+          "target must be cpt::open:id or intuition::topic:id",
           2
         )
       )
     }
     const { flow, ontology } = yield* loadedValidatedFlow
-    const targetGraph = ontology.graphs.find(({ descriptor }) => descriptor.key === graph)
+    const topicTarget = graph === "intuition"
+      ? flow.topics.find(({ id }) => id === node)
+      : undefined
+    const targetGraph = graph === "cpt"
+      ? ontology.graphs.find(({ descriptor }) => descriptor.key === graph)
+      : undefined
     const targetNode = targetGraph?.graph.nodes.find(({ id }) => id === node)
-    if (targetNode?.type !== "open_problem") {
+    const isSidecarTopic = topicTarget !== undefined
+    if (!isSidecarTopic && targetNode?.type !== "open_problem") {
       return yield* Effect.fail(
         iceError(
           "INTUITION_TARGET_INVALID",
-          "target must identify a canonical open_problem",
+          "target must identify a sidecar topic or canonical open_problem",
           2
         )
       )
     }
-    const canonicalContext = yield* graphRagSearchData(query, { graph, limit, depth })
+    const canonicalContext = isSidecarTopic
+      ? null
+      : yield* graphRagSearchData(query, { graph, limit, depth })
     const sources = new Map(flow.sources.map((source) => [source.id, source]))
-    const matchingSignals = flow.signals.filter(
-      (signal) => signal.target.graph === graph && signal.target.node === node
+    const matchingSignals = flow.signals.filter((signal) =>
+      isSidecarTopic
+        ? signal.topic === node
+        : signal.canonical_target?.graph === graph && signal.canonical_target.node === node
     )
     const signals = matchingSignals
       .slice(0, MAX_RETURNED_SIGNALS)
@@ -80,10 +90,18 @@ export const scientificIntuitionSearchData = (
     const federatedLinks = signals.flatMap((signal) => [
       {
         from: signal.id,
-        relation: "TARGETS_CANONICAL_OPEN_PROBLEM" as const,
-        to: `${graph}::${node}`,
+        relation: "BELONGS_TO_SIDECAR_TOPIC" as const,
+        to: `intuition::${signal.topic}`,
         layer: flow.authority
       },
+      ...(signal.canonical_target === undefined
+        ? []
+        : [{
+            from: signal.id,
+            relation: "TARGETS_CANONICAL_OPEN_PROBLEM" as const,
+            to: `${signal.canonical_target.graph}::${signal.canonical_target.node}`,
+            layer: flow.authority
+          }]),
       ...signal.source_refs.map((sourceId) => ({
         from: signal.id,
         relation: "CITES_SOURCE" as const,
@@ -104,25 +122,41 @@ export const scientificIntuitionSearchData = (
             }
           ]
     )
+    const relevantTopicIds = new Set(signals.map(({ topic }) => topic))
+    if (topicTarget !== undefined) relevantTopicIds.add(topicTarget.id)
+    const sidecarTopics = flow.topics.filter(({ id }) => relevantTopicIds.has(id))
+    const topicLinks = flow.topic_links.filter(
+      (link) => relevantTopicIds.has(link.from) || relevantTopicIds.has(link.to)
+    )
     return {
-      schema: "scientific-intuition-flow-search/v1" as const,
+      schema: "scientific-intuition-flow-search/v2" as const,
       contract: {
         authority: flow.authority,
         canonical_graph_unchanged: flow.canonical_graph_unchanged,
         does_not_authorize_execution: flow.does_not_authorize_execution
       },
-      target: { graph, node },
-      canonical_target: {
-        id: `${graph}::${targetNode.id}`,
-        type: targetNode.type,
-        title: targetNode.title,
-        state: targetNode.state,
-        question: targetNode.question
+      target: {
+        graph,
+        node,
+        layer: isSidecarTopic ? "SIDECAR_TOPIC" as const : "CANONICAL_OPEN_PROBLEM" as const
       },
+      canonical_target: targetNode?.type === "open_problem"
+        ? {
+            id: `${graph}::${targetNode.id}`,
+            type: targetNode.type,
+            title: targetNode.title,
+            state: targetNode.state,
+            question: targetNode.question
+          }
+        : null,
+      sidecar_target: topicTarget ?? null,
       canonical_context: canonicalContext,
+      sidecar_topics: sidecarTopics,
+      topic_links: topicLinks,
       signal_selection: {
         mode: "EXACT_TARGET_FILE_ORDER" as const,
         query_ranking: false,
+        matched_by: isSidecarTopic ? "TOPIC" as const : "CANONICAL_TARGET" as const,
         matched: matchingSignals.length,
         returned: signals.length,
         limit: MAX_RETURNED_SIGNALS
@@ -132,7 +166,8 @@ export const scientificIntuitionSearchData = (
       standards_alignment: flow.standards_alignment,
       boundary: [
         "Signals are source-backed hypothesis-generation lenses, not claims, evidence, probabilities, or scores.",
-        "Signal selection is exact target matching in file order; the query ranks canonical context only.",
+        "Signal selection is exact topic or canonical-target matching in file order; the query ranks canonical context only when the target is canonical.",
+        "Sidecar topic links are conceptual navigation only and create no canonical dependency or evidence edge.",
         "The canonical ontology, GraphRAG index, and TOE planner are unchanged by this read-only sidecar.",
         "Read the cited primary source and retain one bounded falsifiable question before any human research decision."
       ]

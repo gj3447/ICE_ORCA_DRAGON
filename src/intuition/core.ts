@@ -1,5 +1,5 @@
 import type { CollectionGraph } from "../ontology/collection-core.ts"
-import type { ScientificIntuitionFlow } from "./model.ts"
+import type { ScientificIntuitionFlow, ScientificIntuitionFlowV2 } from "./model.ts"
 
 export interface IntuitionValidationIssue {
   readonly code: string
@@ -15,6 +15,24 @@ export interface IntuitionValidationReport {
   readonly does_not_authorize_execution: true
   readonly counts: {
     readonly standards_alignment: number
+    readonly sources: number
+    readonly signals: number
+    readonly candidates: number
+  }
+  readonly errors: ReadonlyArray<IntuitionValidationIssue>
+  readonly boundaries: ReadonlyArray<string>
+}
+
+export interface IntuitionValidationReportV2 {
+  readonly schema: "scientific-intuition-flow-validation/v2"
+  readonly valid: boolean
+  readonly authority: "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION"
+  readonly canonical_graph_unchanged: true
+  readonly does_not_authorize_execution: true
+  readonly counts: {
+    readonly standards_alignment: number
+    readonly topics: number
+    readonly topic_links: number
     readonly sources: number
     readonly signals: number
     readonly candidates: number
@@ -145,6 +163,185 @@ export const validateScientificIntuitionFlow = (
     does_not_authorize_execution: flow.does_not_authorize_execution,
     counts: {
       standards_alignment: flow.standards_alignment.length,
+      sources: flow.sources.length,
+      signals: flow.signals.length,
+      candidates
+    },
+    errors,
+    boundaries: flow.boundaries
+  }
+}
+
+export const validateScientificIntuitionFlowV2 = (
+  flow: ScientificIntuitionFlowV2,
+  graphs: ReadonlyArray<CollectionGraph>
+): IntuitionValidationReportV2 => {
+  const errors: IntuitionValidationIssue[] = []
+  for (const id of duplicateIds(flow.standards_alignment.map(({ id }) => id))) {
+    errors.push({
+      code: "DUPLICATE_STANDARD_ID",
+      message: `standard id '${id}' is not unique`,
+      subject: id
+    })
+  }
+  for (const id of duplicateIds(flow.topics.map(({ id }) => id))) {
+    errors.push({
+      code: "DUPLICATE_TOPIC_ID",
+      message: `topic id '${id}' is not unique`,
+      subject: id
+    })
+  }
+  for (const id of duplicateIds(flow.topic_links.map(({ id }) => id))) {
+    errors.push({
+      code: "DUPLICATE_TOPIC_LINK_ID",
+      message: `topic link id '${id}' is not unique`,
+      subject: id
+    })
+  }
+  for (const id of duplicateIds(flow.sources.map(({ id }) => id))) {
+    errors.push({
+      code: "DUPLICATE_SOURCE_ID",
+      message: `source id '${id}' is not unique`,
+      subject: id
+    })
+  }
+  for (const id of duplicateIds(flow.signals.map(({ id }) => id))) {
+    errors.push({
+      code: "DUPLICATE_SIGNAL_ID",
+      message: `signal id '${id}' is not unique`,
+      subject: id
+    })
+  }
+
+  const topicIds = new Set(flow.topics.map(({ id }) => id))
+  for (const link of flow.topic_links) {
+    if (!topicIds.has(link.from)) {
+      errors.push({
+        code: "TOPIC_LINK_FROM_NOT_FOUND",
+        message: `topic link source '${link.from}' is not defined`,
+        subject: link.id
+      })
+    }
+    if (!topicIds.has(link.to)) {
+      errors.push({
+        code: "TOPIC_LINK_TO_NOT_FOUND",
+        message: `topic link target '${link.to}' is not defined`,
+        subject: link.id
+      })
+    }
+    if (link.from === link.to) {
+      errors.push({
+        code: "TOPIC_LINK_SELF_REFERENCE",
+        message: "topic links must connect two distinct topics",
+        subject: link.id
+      })
+    }
+  }
+
+  const sourceIds = new Set(flow.sources.map(({ id }) => id))
+  const graphByKey = new Map(graphs.map(({ descriptor, graph }) => [descriptor.key, graph]))
+  for (const source of flow.sources) {
+    if (source.canonical_source === undefined) continue
+    const graph = graphByKey.get(source.canonical_source.graph)
+    const node = graph?.nodes.find(({ id }) => id === source.canonical_source?.node)
+    if (graph === undefined) {
+      errors.push({
+        code: "CANONICAL_SOURCE_GRAPH_NOT_FOUND",
+        message: `source graph '${source.canonical_source.graph}' is not canonical`,
+        subject: source.id
+      })
+    } else if (node === undefined) {
+      errors.push({
+        code: "CANONICAL_SOURCE_NODE_NOT_FOUND",
+        message: `source node '${source.canonical_source.node}' is not canonical`,
+        subject: source.id
+      })
+    } else if (node.type !== "source") {
+      errors.push({
+        code: "CANONICAL_SOURCE_NODE_NOT_SOURCE",
+        message: "canonical_source must identify a canonical source node",
+        subject: source.id
+      })
+    } else if (node.uri !== source.uri) {
+      errors.push({
+        code: "CANONICAL_SOURCE_URI_MISMATCH",
+        message: `sidecar URI does not match canonical source '${source.canonical_source.node}'`,
+        subject: source.id
+      })
+    }
+  }
+
+  for (const signal of flow.signals) {
+    if (!topicIds.has(signal.topic)) {
+      errors.push({
+        code: "SIGNAL_TOPIC_NOT_FOUND",
+        message: `signal topic '${signal.topic}' is not defined`,
+        subject: signal.id
+      })
+    }
+    for (const sourceId of duplicateIds(signal.source_refs)) {
+      errors.push({
+        code: "DUPLICATE_SOURCE_REF",
+        message: `signal repeats source '${sourceId}'`,
+        subject: signal.id
+      })
+    }
+    for (const sourceId of signal.source_refs) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push({
+          code: "SOURCE_REF_NOT_FOUND",
+          message: `signal references missing source '${sourceId}'`,
+          subject: signal.id
+        })
+      }
+    }
+    if (signal.canonical_target === undefined) continue
+    const graph = graphByKey.get(signal.canonical_target.graph)
+    const target = graph?.nodes.find(({ id }) => id === signal.canonical_target?.node)
+    if (signal.canonical_target.graph !== "cpt") {
+      errors.push({
+        code: "TARGET_GRAPH_NOT_CPT",
+        message: "v2 canonical targets must belong to the cpt graph",
+        subject: signal.id
+      })
+    } else if (graph === undefined) {
+      errors.push({
+        code: "TARGET_GRAPH_NOT_FOUND",
+        message: `target graph '${signal.canonical_target.graph}' is not canonical`,
+        subject: signal.id
+      })
+    } else if (target === undefined) {
+      errors.push({
+        code: "TARGET_NODE_NOT_FOUND",
+        message: `target node '${signal.canonical_target.node}' is not canonical`,
+        subject: signal.id
+      })
+    } else if (target.type !== "open_problem") {
+      errors.push({
+        code: "TARGET_NODE_NOT_OPEN_PROBLEM",
+        message: "canonical_target must identify a canonical open_problem node",
+        subject: signal.id
+      })
+    }
+  }
+
+  const candidates = flow.signals.filter(({ status }) => status === "CANDIDATE").length
+  if (candidates < 2) {
+    errors.push({
+      code: "CANDIDATE_SIGNAL_COUNT_TOO_SMALL",
+      message: "the sidecar requires at least two CANDIDATE signals"
+    })
+  }
+  return {
+    schema: "scientific-intuition-flow-validation/v2",
+    valid: errors.length === 0,
+    authority: flow.authority,
+    canonical_graph_unchanged: flow.canonical_graph_unchanged,
+    does_not_authorize_execution: flow.does_not_authorize_execution,
+    counts: {
+      standards_alignment: flow.standards_alignment.length,
+      topics: flow.topics.length,
+      topic_links: flow.topic_links.length,
       sources: flow.sources.length,
       signals: flow.signals.length,
       candidates

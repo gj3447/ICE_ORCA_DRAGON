@@ -85,9 +85,10 @@ Newly installed skills become available after a Codex restart/new turn.
   executes kernels, writes files, mutates the ontology, or authorizes
   a next task. Explicit durable-run creation/review and RO-Crate output remain CLI-only operations.
   `./ice literature search "<query>" --json` provides the same public literature-discovery path without an
-  MCP host. `./ice intuition search "<query>" --target cpt::open:<id> --json` provides the same
-  non-authoritative intuition path without an MCP host; it joins exact canonical context and source-linked
-  question lenses in the response without adding them to the canonical ontology.
+  MCP host. `./ice intuition search "<query>" --target intuition::topic:<id> --json` retrieves a
+  sidecar-only idea topic, while `--target cpt::open:<id>` adds exact canonical context only when that
+  scope matches. Both paths return source-linked, non-authoritative question lenses without adding them
+  to the canonical ontology.
 - The existing ontology MCP is a read-only SYMPOSIUM knowledge-graph/schema service. Its
   `ontology_contract_get` name refers to a graph schema contract, not research preregistration, and it
   does not gate calculations.

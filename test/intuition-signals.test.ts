@@ -6,9 +6,13 @@ import {
   scientificIntuitionSearchData,
   scientificIntuitionValidateData
 } from "../src/intuition/commands.ts"
-import { validateScientificIntuitionFlow } from "../src/intuition/core.ts"
+import {
+  validateScientificIntuitionFlow,
+  validateScientificIntuitionFlowV2
+} from "../src/intuition/core.ts"
 import {
   decodeScientificIntuitionFlow,
+  decodeScientificIntuitionFlowV2,
   ScientificIntuitionFlowError
 } from "../src/intuition/model.ts"
 import { WorkspaceLive } from "../src/workspace.ts"
@@ -101,6 +105,55 @@ const fixture = {
   boundaries: ["No signal is canonical evidence, a claim, or execution authority."]
 } as const
 
+const fixtureV2 = {
+  schema_version: "scientific-intuition-flow/v2",
+  graph_id: "intuition-flow:ice",
+  title: "Fixture intuition graph",
+  description: "A strictly bounded topic and canonical-context fixture.",
+  updated_at_utc: "2026-09-03T00:00:00Z",
+  authority: "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
+  canonical_graph_unchanged: true,
+  does_not_authorize_execution: true,
+  standards_alignment: fixture.standards_alignment,
+  topics: [
+    {
+      id: "topic:first",
+      title: "First topic",
+      question: "Which typed object is missing?",
+      scope: "Sidecar-only fixture scope.",
+      non_claim: "This topic is not a claim.",
+      does_not_authorize_execution: true
+    },
+    {
+      id: "topic:second",
+      title: "Second topic",
+      question: "Which discriminator separates the alternatives?",
+      scope: "Sidecar-only comparison scope.",
+      non_claim: "This topic is not evidence.",
+      does_not_authorize_execution: true
+    }
+  ],
+  topic_links: [
+    {
+      id: "intuition-link:first-second",
+      from: "topic:first",
+      relation: "DISTINCT_FROM",
+      to: "topic:second",
+      rationale: "The fixture checks typed topic endpoints.",
+      stop_condition: "Stop if an endpoint is unresolved.",
+      non_claim: "This link is not a canonical relation.",
+      does_not_authorize_execution: true
+    }
+  ],
+  sources: fixture.sources,
+  signals: fixture.signals.map(({ target, ...signal }, index) => ({
+    ...signal,
+    topic: index === 0 ? "topic:first" : "topic:second",
+    canonical_target: target
+  })),
+  boundaries: ["No topic, link, or signal is canonical evidence or execution authority."]
+} as const
+
 const cptFixture = [{
   descriptor: { key: "cpt" },
   graph: {
@@ -121,6 +174,47 @@ it("strictly decodes a non-authoritative source-backed intuition flow", () => {
     does_not_authorize_execution: true,
     counts: { standards_alignment: 4, sources: 1, signals: 2, candidates: 2 }
   })
+})
+
+it("strictly decodes v2 topic separation and optional canonical targets", () => {
+  const flow = decodeScientificIntuitionFlowV2(JSON.stringify(fixtureV2), "fixture-v2")
+  const report = validateScientificIntuitionFlowV2(flow, cptFixture)
+  expect(report).toMatchObject({
+    valid: true,
+    authority: "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
+    canonical_graph_unchanged: true,
+    does_not_authorize_execution: true,
+    counts: {
+      standards_alignment: 4,
+      topics: 2,
+      topic_links: 1,
+      sources: 1,
+      signals: 2,
+      candidates: 2
+    }
+  })
+
+  const missingTopic = decodeScientificIntuitionFlowV2(
+    JSON.stringify({
+      ...fixtureV2,
+      signals: [{ ...fixtureV2.signals[0], topic: "topic:missing" }, fixtureV2.signals[1]]
+    }),
+    "fixture-v2"
+  )
+  expect(validateScientificIntuitionFlowV2(missingTopic, cptFixture).errors).toEqual(
+    expect.arrayContaining([expect.objectContaining({ code: "SIGNAL_TOPIC_NOT_FOUND" })])
+  )
+
+  const missingLinkTarget = decodeScientificIntuitionFlowV2(
+    JSON.stringify({
+      ...fixtureV2,
+      topic_links: [{ ...fixtureV2.topic_links[0], to: "topic:missing" }]
+    }),
+    "fixture-v2"
+  )
+  expect(validateScientificIntuitionFlowV2(missingLinkTarget, cptFixture).errors).toEqual(
+    expect.arrayContaining([expect.objectContaining({ code: "TOPIC_LINK_TO_NOT_FOUND" })])
+  )
 })
 
 it("rejects unknown and recursively claim-like fields", () => {
@@ -218,13 +312,20 @@ it("rejects repeated graph identifiers and false canonical-source bridges", () =
 
 const AppLayer = Layer.mergeAll(NodeContext.layer, WorkspaceLive)
 
-layer(AppLayer)("canonical scientific-intuition federation", (it) => {
+layer(AppLayer)("scientific-intuition topic and canonical federation", (it) => {
   it.effect("resolves exact targets, source bridges, and non-authoritative links", () =>
     Effect.gen(function* () {
       const report = yield* scientificIntuitionValidateData
       expect(report).toMatchObject({
         valid: true,
-        counts: { standards_alignment: 4, sources: 12, signals: 5, candidates: 5 }
+        counts: {
+          standards_alignment: 4,
+          topics: 3,
+          topic_links: 2,
+          sources: 20,
+          signals: 10,
+          candidates: 10
+        }
       })
 
       const result = yield* scientificIntuitionSearchData(
@@ -244,6 +345,7 @@ layer(AppLayer)("canonical scientific-intuition federation", (it) => {
       expect(result.signal_selection).toEqual({
         mode: "EXACT_TARGET_FILE_ORDER",
         query_ranking: false,
+        matched_by: "CANONICAL_TARGET",
         matched: 2,
         returned: 2,
         limit: 20
@@ -260,6 +362,72 @@ layer(AppLayer)("canonical scientific-intuition federation", (it) => {
         canonical_graph_unchanged: true,
         does_not_authorize_execution: true
       })
+
+      const geometry = yield* scientificIntuitionSearchData(
+        "Which invariant separates geometry from an effective fluid?",
+        "intuition::topic:geometry-energy-unification",
+        8,
+        1
+      )
+      expect(geometry.canonical_target).toBeNull()
+      expect(geometry.canonical_context).toBeNull()
+      expect(geometry.sidecar_target).toMatchObject({
+        id: "topic:geometry-energy-unification",
+        does_not_authorize_execution: true
+      })
+      expect(geometry.non_authoritative_signals.map(({ id }) => id)).toEqual([
+        "intuition:ice-geometric-action-versus-effective-fluid-relabeling",
+        "intuition:ice-vacuum-weyl-and-degree-of-freedom-check",
+        "intuition:ice-geometric-sector-cross-domain-correlation"
+      ])
+      expect(geometry.signal_selection).toMatchObject({
+        mode: "EXACT_TARGET_FILE_ORDER",
+        query_ranking: false,
+        matched_by: "TOPIC",
+        matched: 3,
+        returned: 3
+      })
+      expect(geometry.federated_links).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ relation: "BELONGS_TO_SIDECAR_TOPIC" }),
+          expect.objectContaining({ relation: "CITES_SOURCE" })
+        ])
+      )
+      expect(geometry.federated_links).not.toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ relation: "TARGETS_CANONICAL_OPEN_PROBLEM" })
+        ])
+      )
+
+      const crossSheetCharge = yield* scientificIntuitionSearchData(
+        "Is CPT sewing distinct from a physical fermion-odd charge?",
+        "cpt::open:gate4-spinorial-charge-domain-constraint-closure",
+        8,
+        1
+      )
+      expect(crossSheetCharge.non_authoritative_signals.map(({ id }) => id)).toEqual([
+        "intuition:ice-cpt-pin-sewing-versus-physical-cross-sheet-charge"
+      ])
+
+      const persistentSpectrum = yield* scientificIntuitionSearchData(
+        "What survives dilution and moves an interacting retarded pole?",
+        "cpt::open:gate5-persistent-order-and-pole-splitting",
+        8,
+        1
+      )
+      expect(persistentSpectrum.non_authoritative_signals.map(({ id }) => id)).toEqual([
+        "intuition:ice-persistent-breaking-to-cross-domain-observable"
+      ])
+      expect([
+        ...geometry.non_authoritative_signals,
+        ...crossSheetCharge.non_authoritative_signals,
+        ...persistentSpectrum.non_authoritative_signals
+      ]).toEqual(expect.arrayContaining([
+        expect.objectContaining({
+          status: "CANDIDATE",
+          does_not_authorize_execution: true
+        })
+      ]))
     })
   )
 })
