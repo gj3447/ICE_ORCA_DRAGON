@@ -1,0 +1,167 @@
+{
+  "schema_version": "ice.gate1-m2-asymmetric-scale-tail-pair.input.v1",
+  "calculation_id": "Gate1M2AsymmetricScaleTailPair",
+  "numbered_phase": null,
+  "question": "Can one explicit conjugation-compatible asymmetric pair of scale rays attach to both Phase-39 scale faces and give uniform exp(-S_2) good scale ends over the already declared finite nonzero-lapse and compact scalar window?",
+  "kind": "BOUNDED_EXACT_ASYMMETRIC_SCALE_END_CONSTRUCTION",
+  "primary_obstacle": "scale-factor ends of the finite m=2 local cap over its compact scalar window",
+  "ragnarok_boundary": {
+    "distinct_question": "This construction does not rerun or repair Phase 39. It uses the committed exact action to test a new unnumbered asymmetric tail pair outside the finite scale window.",
+    "does_not_execute_historical_runner": true,
+    "does_not_rename_or_retry_consumed_runner": true,
+    "does_not_reopen_killed_reconciliation": true,
+    "generic_bounded_core_calculation": true,
+    "automatic_next": null
+  },
+  "upstream_evidence": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4",
+      "role": "Frozen m=2 action, finite field window, half-angle cap embedding and finite nonzero-lapse bounds."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70",
+      "role": "Durable local-intersection report that leaves every field face, good end and global-cycle obligation open."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_SCALE_HALF_ANGLE_END_ADMISSIBILITY_RESULT.json",
+      "sha256": "ea0aa4ec3c7e9965e0d9e1f4a4731d848fd9d7b8ac6ccc48729070332b3f46de",
+      "role": "Scoped KILL of the antipodal half-angle scale line; explicitly leaves asymmetric cubic-sector tails open."
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_SCALE_HALF_ANGLE_END_ADMISSIBILITY.md",
+      "sha256": "89f706ca8fe4f0dbb1f3d9462636b5b6e4a8d1e20961f2c87ce778183fc3faee",
+      "role": "Human-readable derivation and claim boundary for the immediately preceding scale-end falsifier."
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "arXiv:1001.2933v4",
+      "title": "Analytic Continuation Of Chern-Simons Theory",
+      "url": "https://arxiv.org/abs/1001.2933",
+      "pinpoint": "sections 3.1.1 and 3.1.5",
+      "role": "Relative-cycle and good-end framework only. With I=-S_2, the exp(-S_2) chain ends must enter Re(S_2) tending to positive infinity. The paper does not supply this model's original cycle."
+    },
+    {
+      "id": "Pham:Asterisque-130-1985",
+      "title": "La descente des cols par les onglets de Lefschetz, avec vues sur Gauss-Manin",
+      "url": "https://www.numdam.org/item/AST_1985__130__11_0.pdf",
+      "role": "Comparator warning that polynomial Laplace integrals require control of singular behavior at infinity; no complete infinity census is imported here."
+    },
+    {
+      "id": "arXiv:math/0505474",
+      "title": "Periods for rank 1 irregular singular connections on surfaces",
+      "url": "https://arxiv.org/abs/math/0505474",
+      "role": "Comparator for rapid-decay homology requiring compactification and divisor data in meromorphic problems; this local scale-fiber calculation does not claim those data."
+    }
+  ],
+  "declared_conventions": {
+    "integrand": "exp(-S_2)",
+    "model": "equal-endpoint two-segment midpoint Starobinsky configuration action with h=1/2",
+    "boundary_values": {
+      "a_boundary": "3.5668031935672753",
+      "phi_boundary": "1.0185809464006637"
+    },
+    "variables": "x=a_1-a_boundary, q=phi_1-phi_boundary, A=a_boundary+x/2, Phi=phi_boundary+q/2, T=rho*exp(i*psi)",
+    "finite_window": "rho in [1/5,6/5], psi in [-pi/2,pi/2], q=exp(i*psi/2)*y_phi with y_phi in [-1/4,1/4]",
+    "phase39_local_scale_line": "x=exp(i*beta)*y_a, beta=psi/2-pi/2, y_a in [-1/4,1/4]",
+    "right_tail": "for r>=1/4, x=(1/4)*exp(i*beta)+exp(i*alpha_R)*(r-1/4), alpha_R=psi/3-pi/3; a piecewise-smooth corner at the face is permitted",
+    "left_tail": "for r>=1/4, x=-(1/4)*exp(i*beta)+exp(i*alpha_L)*(r-1/4), alpha_L=psi/3+pi/3; a piecewise-smooth corner at the face is permitted",
+    "tail_relation": "alpha_L-alpha_R=2*pi/3, so both ray cubes equal -exp(i*psi); conjugation exchanges right at psi with left at -psi",
+    "good_end": "Re(S_2) tends to positive infinity along r tending to positive infinity",
+    "selection_family": [
+      "the exact Phase-39 compact scalar window only",
+      "two explicit asymmetric affine scale rays continuously attached at the two Phase-39 scale faces, with no smooth-tangent claim",
+      "the finite nonzero-lapse regulator rho in [1/5,6/5]",
+      "no scalar infinity, mixed corner, lapse infinity or zero-lapse limit"
+    ],
+    "numerical_cross_check": {
+      "precision_digits": 80,
+      "rho_values": [
+        "1/5",
+        "6/5"
+      ],
+      "psi_over_pi_values": [
+        "-1/2",
+        "0",
+        "1/2"
+      ],
+      "y_phi_values": [
+        "-1/4",
+        "0",
+        "1/4"
+      ],
+      "tail_radius_values": [
+        1000,
+        4000,
+        16000
+      ],
+      "maximum_final_relative_coefficient_error": "5e-3"
+    }
+  },
+  "controls": [
+    "Rebuild the exact two-element action for general bounded q and extract its x-cubic coefficient without importing the preceding q=0 reduction.",
+    "Prove both declared asymmetric ray cubes equal -exp(i*psi), while their directions differ by 2*pi/3 rather than the antipodal pi of a straight line.",
+    "Use phi_boundary>1, |q|<=1/4, sqrt(2/3)>4/5 and a rational lower Taylor bound for exp(7/10)>2 to prove |V(Phi)|<27/16.",
+    "Prove the normalized real cubic coefficient on both tails exceeds 9089/960 uniformly on the entire declared finite window.",
+    "Verify that the affine outgoing rays meet the two Phase-39 scale faces exactly as a continuous piecewise-smooth attachment and never touch the sole T=0 action divisor.",
+    "Record that the remaining coefficients are continuous and bounded on the compact parameter window, so the positive leading margin implies one common sufficiently large tail radius.",
+    "Evaluate the original two-element complex action directly at high precision on boundary and central samples without using the extracted cubic polynomial as the numerical evaluator.",
+    "Keep scalar infinity, mixed corners, source selection, relative homology, orientation and every global or physical output null."
+  ],
+  "decision_table": [
+    {
+      "condition": "both explicit ray cubes share a strictly positive uniform real cubic coefficient over the full declared finite lapse and compact scalar window, the outgoing rays attach exactly at the scale faces, and independent direct-action controls converge to that coefficient",
+      "verdict": "KEEP_SCOPED_ASYMMETRIC_SCALE_TAIL_PAIR_ON_DECLARED_FINITE_WINDOW",
+      "programme_impact": "NARROW_PROGRESS; SCALE_ENDS_ONLY; MIXED_ENDS_AND_SOURCE_SELECTION_OPEN"
+    },
+    {
+      "condition": "the declared pair contains a nonpositive leading sector or fails conjugation-compatible attachment on the stated window",
+      "verdict": "KILL_DECLARED_ASYMMETRIC_SCALE_TAIL_PAIR",
+      "programme_impact": "NARROW_ONLY; TRY_A_DIFFERENT_PREDECLARED_TAIL_FAMILY"
+    },
+    {
+      "condition": "the exact uniform bound or independent direct-action controls do not decide the declared pair",
+      "verdict": "INCONCLUSIVE_ASYMMETRIC_SCALE_TAIL_PAIR",
+      "programme_impact": "OPEN; DO_NOT_INFER_A_SCALE_END_COMPLETION"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 160,
+    "quadratures": 0,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "sampling_points": 128,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "admissible_full_joint_completion": null,
+    "full_relative_homology_class": null,
+    "source_defined_joint_relative_cycle": null,
+    "source_to_thimble_deformation": null,
+    "physical_original_cycle": null,
+    "unbounded_q_dependent_scale_fiber": null,
+    "scalar_infinite_end_admissibility": null,
+    "mixed_end_census": null,
+    "lapse_infinite_end_admissibility": null,
+    "zero_lapse_extension": null,
+    "full_joint_orientation": null,
+    "absolute_determinant_pfaffian_line": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "singular_endpoint_nonreal_weyl_m": null,
+    "spectral_measure": null,
+    "RAQ_completion": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  }
+}
