@@ -4,7 +4,7 @@
   "graph_id": "research-graph:hypercomplex",
   "title": "ICE hypercomplex hypothesis-testbench research graph",
   "description": "A repository-local memory and index graph for the finite Cayley-Dickson and sedenion calculations. It separates computed algebraic facts, interpretation, invalid or superseded methods, and open physical hypotheses without promoting the corpus to a Standard Model embedding or TOE.",
-  "updated_at_utc": "2026-08-27T06:40:59Z",
+  "updated_at_utc": "2026-09-03T12:00:00Z",
   "canonical_file": "ontology/hypercomplex/graph.json",
   "source_inventory": "ontology/hypercomplex/references/source-inventory.md",
   "quick_answers": [
@@ -159,6 +159,7 @@
     "HAS_EVIDENCE": "claim points to supporting or contradicting evidence; see polarity",
     "DEFINED_IN": "an evidence distinction is implemented by a hash-pinned source",
     "RECORDED_IN": "evidence is persisted or explained in a tracked artifact",
+    "DOCUMENTED_BY": "programme has a hash-pinned navigation or provenance record",
     "DERIVED_FROM": "evidence is separately reconstructed by a hash-pinned implementation",
     "VALID_WITHIN": "claim is limited by the declared workbench scope",
     "FOLLOW_UP_TO": "open problem is a distinct follow-up to a scoped claim",
@@ -885,6 +886,16 @@
       "introduced_in_commit": "6e0724dca68d03d175f756ed1835bca069addb0c"
     },
     {
+      "id": "artifact:hypercomplex-research-family-index",
+      "type": "artifact",
+      "title": "Hypercomplex PARTIAL-corpus research family index",
+      "summary": "Hash-audited navigation over the hypercomplex core, Avenue-3, Claim B, direct-action, and Wilmot roots, grouping decisive result bundles without turning every producer file into evidence.",
+      "state": "HASH_PINNED_NAVIGATION_ONLY",
+      "artifact_kind": "research_family_index",
+      "path": "ontology/research-family-index.v1.json",
+      "sha256": "a713d75545f89b9fe750578df7767c5741d3179fb67fea445b9355085f7df9f7"
+    },
+    {
       "id": "open:hyper-infinite-tower-continuum-observable-map",
       "type": "open_problem",
       "title": "Define the infinite tower and an observable map",
@@ -1056,7 +1067,8 @@
     { "id": "edge:147", "from": "claim:HYPER_CLAIMB_FINITE_LOOP_ESTABLISHES_INFINITE_TOWER_GRAVITY", "relation": "BLOCKED_BY", "to": "open:hyper-infinite-tower-continuum-observable-map" },
     { "id": "edge:148", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "BLOCKED_BY", "to": "open:hyper-wilmot-cross-primary-realization" },
     { "id": "edge:149", "from": "claim:HYPER_DIRECT_ACTION_TEST_PROVES_FULL_AUT_S_DECOMPOSITION", "relation": "CONTRASTS_WITH", "to": "claim:HYPER_S3_ACTION_CENTRALIZES_COMPUTED_DERIVATION_SPACE", "note": "The local centralization result survives while completeness of the global decomposition is not established." },
-    { "id": "edge:150", "from": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA", "relation": "CONTRASTS_WITH", "to": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "note": "The direct tensor test and source correction replace the obsolete refutation framing." }
+    { "id": "edge:150", "from": "claim:HYPER_RECORDED_S3_PRESERVES_WILMOT_EQ9_THETA", "relation": "CONTRASTS_WITH", "to": "claim:HYPER_QUEUE09_REFUTES_WILMOT", "note": "The direct tensor test and source correction replace the obsolete refutation framing." },
+    { "id": "edge:151", "from": "programme:hypercomplex-hypothesis-testbench", "relation": "DOCUMENTED_BY", "to": "artifact:hypercomplex-research-family-index", "note": "Navigation and provenance only; decisive-unit membership does not create additional evidence." }
   ],
   "kg_bridges": [
     {

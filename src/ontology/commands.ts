@@ -61,6 +61,11 @@ import {
   auditDeclaredResearchCoverage,
   type CoverageAuditReport
 } from "./coverage.ts"
+import {
+  auditResearchFamilyIndex,
+  loadResearchFamilyIndex,
+  type ResearchFamilyIndexAuditReport
+} from "./family-index.ts"
 
 const printJson = (value: unknown): Effect.Effect<void> =>
   Console.log(JSON.stringify(value, null, 2))
@@ -76,6 +81,30 @@ const renderCoverageAudit = (report: CoverageAuditReport): string =>
       (issue) => `[ERROR] ${issue.code} (${issue.path}): ${issue.message}`
     ),
     "scope: declared research roots only; archive/output are not discovered implicitly"
+  ].join("\n")
+
+const renderResearchFamilyIndexAudit = (
+  report: ResearchFamilyIndexAuditReport
+): string =>
+  [
+    `RESEARCH FAMILY INDEX ${report.valid ? "VALID" : "INVALID"}`,
+    `index: ${report.index_id}`,
+    `files observed: ${report.totals.filesystem_files}`,
+    `generated caches excluded: ${report.totals.excluded_generated_files}`,
+    `ordinary files: ${report.totals.ordinary_files}`,
+    `decisive files: ${report.totals.decisive_files}`,
+    `archival/support files: ${report.totals.unassigned_ordinary_files}`,
+    ...report.families.map(
+      (family) =>
+        `${family.id} -> ${family.graph_key}: ordinary=${family.ordinary_files}, decisive_units=${family.decisive_units}, decisive_files=${family.decisive_files}, support=${family.unassigned_ordinary_files}`
+    ),
+    `errors: ${report.errors.length}`,
+    ...report.errors.map(
+      (error) =>
+        `[ERROR] ${error.code}${error.subject === undefined ? "" : ` (${error.subject})`}: ${error.message}`
+    ),
+    `coverage status: ${report.coverage_status_remains}`,
+    `boundary: ${report.boundary}`
   ].join("\n")
 
 const failedCollectionValidationReport = (
@@ -884,6 +913,38 @@ export const ontologyCoverageCommand = (json: boolean) =>
   ontologyCoverageData.pipe(
     Effect.tap((report) =>
       json ? printJson(report) : Console.log(renderCoverageAudit(report))
+    )
+  )
+
+export const ontologyFamilyIndexData = Effect.gen(function* () {
+  const workspace = yield* Workspace
+  const [index, loaded] = yield* Effect.all(
+    [loadResearchFamilyIndex, loadValidOntologyCollectionStructure],
+    { concurrency: 2 }
+  )
+  return yield* Effect.tryPromise({
+    try: () =>
+      auditResearchFamilyIndex(
+        workspace.root,
+        index,
+        loaded.collection,
+        loaded.graphs
+      ),
+    catch: (error) =>
+      iceError(
+        "RESEARCH_FAMILY_INDEX_AUDIT_FAILED",
+        error instanceof Error ? error.message : String(error),
+        2
+      )
+  })
+})
+
+export const ontologyFamilyIndexCommand = (json: boolean) =>
+  ontologyFamilyIndexData.pipe(
+    Effect.tap((report) =>
+      json
+        ? printJson(report)
+        : Console.log(renderResearchFamilyIndexAudit(report))
     )
   )
 

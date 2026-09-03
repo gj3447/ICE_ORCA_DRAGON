@@ -25,3 +25,23 @@ repository artifacts are authoritative for the graph's present distinctions.
 No new external KG UID is invented. Collision-free historical Wilmot, automorphism-dispute, and
 infinite-tower records are linked only as `RELATED`; the Claim B result itself and programme root remain
 `UNRESOLVED` because the live connector has no matching record or write surface.
+
+## PARTIAL corpus family index
+
+[`ontology/research-family-index.v1.json`](../../research-family-index.v1.json) cryptographically
+indexes the five PARTIAL roots owned by this graph. Its digest covers every ordinary file, while the
+listed decisive units point only to existing evidence ledgers. Generated Python bytecode is counted
+separately and no producer, duplicate run, or debug script becomes independent evidence merely by
+appearing in the family inventory.
+
+| Research family | Root | Ordinary / generated-cache files | Decisive units | Existing evidence target |
+|---|---|---:|---:|---|
+| finite hypercomplex core | `research/hypercomplex` | 53 / 32 | 4 | finite structure; projection/portability; toy/g2; S3 lifecycle ledgers |
+| Avenue-3 finite test | `avenue3_decisive_test_2026-06-05` | 23 / 1 | 1 | `evidence:hyper-finite-structural-ledger` |
+| Claim B sealed loop | `claimB_loop` | 20 / 1 | 2 | `evidence:hyper-claimb-sealed-finite-level-ledger` |
+| direct S3 action | `aut_direct_product_test_2026-07-12` | 2 / 0 | 1 | `evidence:hyper-s3-direct-action-ledger` |
+| Wilmot theta lifecycle | `wilmot_theta_preservation_test_2026-07-12` | 5 / 1 | 1 | `evidence:hyper-wilmot-theta-lifecycle` |
+
+Run `./ice ontology families --json` to verify root ownership, decisive paths, evidence references,
+counts, and normalized tree hashes. Coverage remains `PARTIAL`: this is a provenance-density
+improvement, not exhaustive file-node mirroring or a physics promotion.

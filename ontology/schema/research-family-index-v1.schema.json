@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ice-orca-dragon.local/schema/research-family-index-v1.schema.json",
+  "title": "ICE research family index v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "index_id",
+    "title",
+    "description",
+    "updated_at_utc",
+    "authority",
+    "coverage_status_remains",
+    "inventory_algorithm",
+    "generated_cache_policy",
+    "observed_totals",
+    "families"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "schema/research-family-index-v1.schema.json"
+    },
+    "schema_version": {
+      "const": "research-family-index/v1"
+    },
+    "index_id": {
+      "type": "string",
+      "pattern": "^research-family-index:[a-z0-9-]+$"
+    },
+    "title": { "$ref": "#/$defs/nonEmptyString" },
+    "description": { "$ref": "#/$defs/nonEmptyString" },
+    "updated_at_utc": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+    },
+    "authority": {
+      "const": "NAVIGATION_AND_PROVENANCE_ONLY"
+    },
+    "coverage_status_remains": {
+      "const": "PARTIAL"
+    },
+    "inventory_algorithm": {
+      "const": "sha256(sorted UTF-8 lines: repository-relative-path<TAB>file-sha256<LF>)"
+    },
+    "generated_cache_policy": {
+      "const": "EXCLUDE_ONLY_PATHS_WITH___pycache___SEGMENT_OR_PYC_SUFFIX"
+    },
+    "observed_totals": {
+      "$ref": "#/$defs/counts"
+    },
+    "families": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": { "$ref": "#/$defs/family" }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "safePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filesystem_files",
+        "excluded_generated_files",
+        "ordinary_files"
+      ],
+      "properties": {
+        "filesystem_files": { "type": "integer", "minimum": 0 },
+        "excluded_generated_files": { "type": "integer", "minimum": 0 },
+        "ordinary_files": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "decisiveUnit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "unit_kind",
+        "paths",
+        "canonical_evidence_refs",
+        "boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^decisive-unit:[a-z0-9-]+$"
+        },
+        "title": { "$ref": "#/$defs/nonEmptyString" },
+        "unit_kind": {
+          "enum": [
+            "RESULT_LEDGER",
+            "RESULT_AND_CHECK_BUNDLE",
+            "NEGATIVE_CONTROL_BUNDLE",
+            "SOURCE_AND_SCOPE_BUNDLE"
+          ]
+        },
+        "paths": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/safePath" }
+        },
+        "canonical_evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^evidence:[A-Za-z0-9_.:-]+$"
+          }
+        },
+        "boundary": { "$ref": "#/$defs/nonEmptyString" }
+      }
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "graph_key",
+        "roots",
+        "observed_counts",
+        "inventory_sha256",
+        "decisive_units",
+        "unassigned_files_disposition",
+        "boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^research-family:[a-z0-9-]+$"
+        },
+        "title": { "$ref": "#/$defs/nonEmptyString" },
+        "graph_key": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "roots": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/safePath" }
+        },
+        "observed_counts": { "$ref": "#/$defs/counts" },
+        "inventory_sha256": { "$ref": "#/$defs/sha256" },
+        "decisive_units": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": { "$ref": "#/$defs/decisiveUnit" }
+        },
+        "unassigned_files_disposition": {
+          "const": "ARCHIVAL_SUPPORT_ONLY_NOT_INDEPENDENT_EVIDENCE"
+        },
+        "boundary": { "$ref": "#/$defs/nonEmptyString" }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import {
   ontologyCoverageCommand,
   ontologyCrateCommand,
   ontologyExportCommand,
+  ontologyFamilyIndexCommand,
   ontologyGuideCommand,
   ontologyReviewCommand,
   ontologyShaclCommand,
@@ -180,6 +181,19 @@ const coverageCommand = Command.make(
   )
 )
 
+const familiesCommand = Command.make(
+  "families",
+  { json },
+  ({ json }) =>
+    ontologyFamilyIndexCommand(json).pipe(
+      Effect.flatMap((report) => setExitCode(report.valid ? 0 : 1))
+    )
+).pipe(
+  Command.withDescription(
+    "verify PARTIAL corpus family digests and decisive-result mappings"
+  )
+)
+
 const crateOutput = Args.text({ name: "output-directory" })
 const crateCommand = Command.make(
   "crate",
@@ -206,6 +220,7 @@ export const ontologyCommand = Command.make("ontology", {}, () =>
     sparqlCommand,
     competencyCommand,
     coverageCommand,
+    familiesCommand,
     crateCommand,
     showCommand,
     traceCommand

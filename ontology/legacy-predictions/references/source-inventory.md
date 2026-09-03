@@ -29,3 +29,16 @@ available. No claim is made that later paraphrases are verbatim lines from the f
 
 The local `MIND/lean_formalization/` tree is Git-ignored in its owning sibling repository. It is an open
 formalization lead, not durable proof evidence in this repository.
+
+## PARTIAL corpus family index
+
+The legacy record in [`ontology/research-family-index.v1.json`](../../research-family-index.v1.json)
+covers the complete normalized inventory of `research/legacy_predictions`: 37 ordinary tracked files
+plus 15 excluded generated Python-bytecode files observed on 2026-09-03. Four decisive units group the
+derived/null controls, P01-P15 provenance, gravity controls, and hidden-scan semantics under their
+existing evidence ledgers. Remaining producer scripts and reports—including `orca_friedmann.py`—stay
+archival support unless a canonical verdict consumes them.
+
+`./ice ontology families --json` verifies the file count, tree digest, decisive paths, graph ownership,
+and evidence references. This does not upgrade the graph from `PARTIAL`, create corroboration from
+duplicate outputs, or alter any scientific claim.

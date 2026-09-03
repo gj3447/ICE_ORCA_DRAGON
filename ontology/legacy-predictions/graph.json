@@ -4,7 +4,7 @@
   "graph_id": "research-graph:legacy-predictions",
   "title": "ICE legacy predictions and narrative research graph",
   "description": "A repository-local memory graph that preserves user-primary ICE narrative sources while separating them from historical L2/L3 prediction calculations, null controls, provenance limitations, and open formalization work. It records scoped computational outcomes without promoting them to physics or TOE claims.",
-  "updated_at_utc": "2026-08-25T09:32:41Z",
+  "updated_at_utc": "2026-09-03T12:00:00Z",
   "canonical_file": "ontology/legacy-predictions/graph.json",
   "source_inventory": "ontology/legacy-predictions/references/source-inventory.md",
   "quick_answers": [
@@ -947,6 +947,16 @@
       "artifact_kind": "report",
       "path": "research/legacy_predictions/reports/ESCAPE_LANE_MB1_MB3_MB4_SYNTHESIS_2026-05-19.md",
       "sha256": "aa9a8769d31413dd0e3a6e43f73f17586bd92e0dc81da9776eab88c3860bb0d9"
+    },
+    {
+      "id": "artifact:legacy-research-family-index",
+      "type": "artifact",
+      "title": "Legacy PARTIAL-corpus research family index",
+      "summary": "Hash-audited navigation over the legacy prediction, null-control, and provenance family, with decisive result bundles separated from archival producers.",
+      "state": "HASH_PINNED_NAVIGATION_ONLY",
+      "artifact_kind": "research_family_index",
+      "path": "ontology/research-family-index.v1.json",
+      "sha256": "a713d75545f89b9fe750578df7767c5741d3179fb67fea445b9355085f7df9f7"
     }
   ],
   "edges": [
@@ -1621,6 +1631,13 @@
       "from": "programme:ice-legacy-predictions",
       "relation": "DOCUMENTED_BY",
       "to": "artifact:legacy-provenance-source-map"
+    },
+    {
+      "id": "edge:109",
+      "from": "programme:ice-legacy-predictions",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:legacy-research-family-index",
+      "note": "Navigation and provenance only; decisive-unit membership does not create additional evidence."
     }
   ],
   "kg_bridges": []

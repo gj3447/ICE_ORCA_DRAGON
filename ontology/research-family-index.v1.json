@@ -1,0 +1,332 @@
+{
+  "$schema": "schema/research-family-index-v1.schema.json",
+  "schema_version": "research-family-index/v1",
+  "index_id": "research-family-index:partial-corpus",
+  "title": "ICE partial-corpus research family index",
+  "description": "A hash-audited family and decisive-result index for the six PARTIAL corpus roots. It is navigation and provenance metadata, not an exhaustive set of file nodes or new scientific evidence.",
+  "updated_at_utc": "2026-09-03T12:00:00Z",
+  "authority": "NAVIGATION_AND_PROVENANCE_ONLY",
+  "coverage_status_remains": "PARTIAL",
+  "inventory_algorithm": "sha256(sorted UTF-8 lines: repository-relative-path<TAB>file-sha256<LF>)",
+  "generated_cache_policy": "EXCLUDE_ONLY_PATHS_WITH___pycache___SEGMENT_OR_PYC_SUFFIX",
+  "observed_totals": {
+    "filesystem_files": 190,
+    "excluded_generated_files": 50,
+    "ordinary_files": 140
+  },
+  "families": [
+    {
+      "id": "research-family:hypercomplex-core",
+      "title": "Finite Cayley-Dickson and sedenion calculation core",
+      "graph_key": "hypercomplex",
+      "roots": [
+        "research/hypercomplex"
+      ],
+      "observed_counts": {
+        "filesystem_files": 85,
+        "excluded_generated_files": 32,
+        "ordinary_files": 53
+      },
+      "inventory_sha256": "4d1ef25505632a29f95128831067ec2efc61c5d106e153661d21627f2aa26fe5",
+      "decisive_units": [
+        {
+          "id": "decisive-unit:hyper-finite-structure",
+          "title": "Finite structure, embedding, and XOR ledger",
+          "unit_kind": "RESULT_AND_CHECK_BUNDLE",
+          "paths": [
+            "research/hypercomplex/cd_core.py",
+            "research/hypercomplex/cd_embedding_verify_results.json",
+            "research/hypercomplex/cd_final_quick_results.json",
+            "research/hypercomplex/queue_11_xor_results.json"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-finite-structural-ledger"
+          ],
+          "boundary": "Finite implemented identities and counts only; no unique continuum, particle, Standard Model, or TOE interpretation follows."
+        },
+        {
+          "id": "decisive-unit:hyper-projection-portability",
+          "title": "Projected closure and basis-portability controls",
+          "unit_kind": "NEGATIVE_CONTROL_BUNDLE",
+          "paths": [
+            "research/hypercomplex/queue_01_orbit_results.json",
+            "research/hypercomplex/queue_02_custodial_results.json",
+            "research/hypercomplex/queue_03_rep_results.json",
+            "research/hypercomplex/queue_03_threshold_sensitivity_results.json"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-projection-and-portability-ledger"
+          ],
+          "boundary": "The frozen projection and nonportable Queue-03 metric are scoped diagnostics, not universal no-go results."
+        },
+        {
+          "id": "decisive-unit:hyper-toy-g2-lifecycle",
+          "title": "Toy-vacuum and projected-g2 lifecycle",
+          "unit_kind": "RESULT_LEDGER",
+          "paths": [
+            "research/hypercomplex/queue_04_hosotani_results.json",
+            "research/hypercomplex/queue_05_cw_results.json",
+            "research/hypercomplex/queue_06_coop_results.json",
+            "research/hypercomplex/queue_08_g2_diagnostic_results.json",
+            "research/hypercomplex/queue_08_g2_aut_octonion_results.json"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-toy-and-g2-lifecycle"
+          ],
+          "boundary": "Finite toy potentials and partial representation checks do not establish a physical vacuum or a complete g2 derivation."
+        },
+        {
+          "id": "decisive-unit:hyper-s3-lifecycle",
+          "title": "Explicit S3 subgroup and interpretation lifecycle",
+          "unit_kind": "RESULT_AND_CHECK_BUNDLE",
+          "paths": [
+            "research/hypercomplex/queue_09_SS3TG.py",
+            "research/hypercomplex/queue_09_SS3TG_results.json",
+            "research/hypercomplex/queue_09_s3_results.json"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-s3-three-gate-lifecycle"
+          ],
+          "boundary": "The finite subgroup computation survives; its obsolete Wilmot-refutation framing does not."
+        }
+      ],
+      "unassigned_files_disposition": "ARCHIVAL_SUPPORT_ONLY_NOT_INDEPENDENT_EVIDENCE",
+      "boundary": "The family digest covers every ordinary file in the root, while only the named units identify decisive result bundles."
+    },
+    {
+      "id": "research-family:avenue3-decisive",
+      "title": "Avenue-3 finite automorphism and S3 decisive-test family",
+      "graph_key": "hypercomplex",
+      "roots": [
+        "avenue3_decisive_test_2026-06-05"
+      ],
+      "observed_counts": {
+        "filesystem_files": 24,
+        "excluded_generated_files": 1,
+        "ordinary_files": 23
+      },
+      "inventory_sha256": "0db213bbe64da6bb84d5d9261d24182faf31e4bc37b1cd1bc97dd68f43bd1913",
+      "decisive_units": [
+        {
+          "id": "decisive-unit:avenue3-finite-verdict",
+          "title": "Avenue-3 declared finite verdict and independent checks",
+          "unit_kind": "RESULT_AND_CHECK_BUNDLE",
+          "paths": [
+            "avenue3_decisive_test_2026-06-05/AVENUE3_PHASE1_PREREG_2026-06-05.md",
+            "avenue3_decisive_test_2026-06-05/RESULTS.md",
+            "avenue3_decisive_test_2026-06-05/avenue3_phase1_SUMMARY.py",
+            "avenue3_decisive_test_2026-06-05/avenue3_phase1_groundtruth.py",
+            "avenue3_decisive_test_2026-06-05/avenue3_phase2_decisive.py",
+            "avenue3_decisive_test_2026-06-05/avenue3_verified_s3.json",
+            "avenue3_decisive_test_2026-06-05/naesengmoon_indep_s3.py",
+            "avenue3_decisive_test_2026-06-05/naesengmoon_indep_sedenion.py"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-finite-structural-ledger"
+          ],
+          "boundary": "This is a finite convention-bound calculation family; filenames containing phase or decisive do not grant current execution or physics authority."
+        }
+      ],
+      "unassigned_files_disposition": "ARCHIVAL_SUPPORT_ONLY_NOT_INDEPENDENT_EVIDENCE",
+      "boundary": "Debug, search, decomposition, and alternate producer scripts remain provenance support rather than separate corroborating evidence."
+    },
+    {
+      "id": "research-family:claimb-finite-loop",
+      "title": "Claim B sealed finite-level falsification loop",
+      "graph_key": "hypercomplex",
+      "roots": [
+        "claimB_loop"
+      ],
+      "observed_counts": {
+        "filesystem_files": 21,
+        "excluded_generated_files": 1,
+        "ordinary_files": 20
+      },
+      "inventory_sha256": "9b8d78eb6bf147e7491c38a9108fce0bdd11ad2a27a76a091177a93e192de3c9",
+      "decisive_units": [
+        {
+          "id": "decisive-unit:claimb-sealed-ledger",
+          "title": "Claim B preregistered finite result ledger",
+          "unit_kind": "RESULT_LEDGER",
+          "paths": [
+            "claimB_loop/CLAIMB_LOOP_FINAL_REPORT_2026-07-24.md",
+            "claimB_loop/prereg_claimB_loop_20260724.json",
+            "claimB_loop/results_c1_zd_nullity_spectrum.json",
+            "claimB_loop/results_c2_associator_distribution.json",
+            "claimB_loop/results_c3_truncation_stability.json"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-claimb-sealed-finite-level-ledger"
+          ],
+          "boundary": "The registered finite stability route is killed; no infinite measure, action, gravity map, or universal impossibility theorem is supplied."
+        },
+        {
+          "id": "decisive-unit:claimb-scope-controls",
+          "title": "Claim B scope, repeatability, and discriminator controls",
+          "unit_kind": "SOURCE_AND_SCOPE_BUNDLE",
+          "paths": [
+            "claimB_loop/CLAIMB_TOWER_DISCRIMINATORS_RESEARCH_2026-07-24.md",
+            "claimB_loop/INFINITE_CD_TOWER_VS_SEDENION_TRUNCATION_SCOPE_CORRECTION_2026-05-19.md",
+            "claimB_loop/LOOP_PROTOCOL.md",
+            "claimB_loop/results_c3_truncation_stability_run1.json"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-claimb-sealed-finite-level-ledger"
+          ],
+          "boundary": "The repeated output is repeatability provenance, not statistically independent evidence."
+        }
+      ],
+      "unassigned_files_disposition": "ARCHIVAL_SUPPORT_ONLY_NOT_INDEPENDENT_EVIDENCE",
+      "boundary": "Helper scripts and older proof-path notes are retained without promotion beyond the sealed finite ledger."
+    },
+    {
+      "id": "research-family:automorphism-direct-product",
+      "title": "S3 action on the reconstructed derivation-space family",
+      "graph_key": "hypercomplex",
+      "roots": [
+        "aut_direct_product_test_2026-07-12"
+      ],
+      "observed_counts": {
+        "filesystem_files": 2,
+        "excluded_generated_files": 0,
+        "ordinary_files": 2
+      },
+      "inventory_sha256": "3c55e0aa3c3ea1093755a5e6191f54cecaeae5cabf69d21d6fc13520f8000a42",
+      "decisive_units": [
+        {
+          "id": "decisive-unit:automorphism-direct-action",
+          "title": "Direct finite action script and result",
+          "unit_kind": "RESULT_AND_CHECK_BUNDLE",
+          "paths": [
+            "aut_direct_product_test_2026-07-12/RESULT.json",
+            "aut_direct_product_test_2026-07-12/aut_s3_direct_product_test.py"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-s3-direct-action-ledger"
+          ],
+          "boundary": "The result concerns the reconstructed 14-dimensional derivation space and is not a complete classification of Aut(S)."
+        }
+      ],
+      "unassigned_files_disposition": "ARCHIVAL_SUPPORT_ONLY_NOT_INDEPENDENT_EVIDENCE",
+      "boundary": "Every ordinary file is in the decisive unit; the family remains finite and convention-bound."
+    },
+    {
+      "id": "research-family:wilmot-theta",
+      "title": "Wilmot theta-preservation and competing-interpretation family",
+      "graph_key": "hypercomplex",
+      "roots": [
+        "wilmot_theta_preservation_test_2026-07-12"
+      ],
+      "observed_counts": {
+        "filesystem_files": 6,
+        "excluded_generated_files": 1,
+        "ordinary_files": 5
+      },
+      "inventory_sha256": "0331675e1cb90fe2b3e9616db633e95ab253006d1ce9f49c684913001defd307",
+      "decisive_units": [
+        {
+          "id": "decisive-unit:wilmot-theta-lifecycle",
+          "title": "Theta criterion, implementations, result, and interpretation correction",
+          "unit_kind": "RESULT_AND_CHECK_BUNDLE",
+          "paths": [
+            "wilmot_theta_preservation_test_2026-07-12/OQ1_WILMOT_DISPUTE_COMPETING_VERDICT_2026-05-19.md",
+            "wilmot_theta_preservation_test_2026-07-12/RESULT.json",
+            "wilmot_theta_preservation_test_2026-07-12/WILMOT_3FORM_CRITERION_TEST_2026-07-12.md",
+            "wilmot_theta_preservation_test_2026-07-12/theta_discrimination_2026-07-12.py",
+            "wilmot_theta_preservation_test_2026-07-12/wilmot_theta_preservation_test.py"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:hyper-wilmot-theta-lifecycle"
+          ],
+          "boundary": "Same-primary alignment and preservation are recorded; the cross-primary realization remains open."
+        }
+      ],
+      "unassigned_files_disposition": "ARCHIVAL_SUPPORT_ONLY_NOT_INDEPENDENT_EVIDENCE",
+      "boundary": "The family preserves both the calculation and the corrected interpretation without creating a new physical claim."
+    },
+    {
+      "id": "research-family:legacy-predictions",
+      "title": "Legacy prediction, null-control, and provenance family",
+      "graph_key": "legacy",
+      "roots": [
+        "research/legacy_predictions"
+      ],
+      "observed_counts": {
+        "filesystem_files": 52,
+        "excluded_generated_files": 15,
+        "ordinary_files": 37
+      },
+      "inventory_sha256": "22be31fdf64cd2e04d9d2c66455416d278794e9846c6eaa9126a30973679ccfc",
+      "decisive_units": [
+        {
+          "id": "decisive-unit:legacy-derived-null-controls",
+          "title": "Derived-candidate outputs and look-elsewhere controls",
+          "unit_kind": "NEGATIVE_CONTROL_BUNDLE",
+          "paths": [
+            "research/legacy_predictions/derive_Lstar_results.json",
+            "research/legacy_predictions/derive_dimensionless_results.json",
+            "research/legacy_predictions/derive_epsilon_results.json",
+            "research/legacy_predictions/derive_mass_ratios_results.json",
+            "research/legacy_predictions/numerology_mc_results.json",
+            "research/legacy_predictions/verify_mp_mW_results.json"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:legacy-derived-output-audit",
+            "evidence:legacy-numerology-null-audit"
+          ],
+          "boundary": "Recorded arithmetic candidates remain null or non-unique under their stated search families; this is not a universal model-selection theorem."
+        },
+        {
+          "id": "decisive-unit:legacy-prereg-provenance",
+          "title": "P01-P15 payload, comparison, and Git-provenance bundle",
+          "unit_kind": "SOURCE_AND_SCOPE_BUNDLE",
+          "paths": [
+            "research/legacy_predictions/ice_prereg_check_results.json",
+            "research/legacy_predictions/ice_prereg_predictions_2026-05-18.json",
+            "research/legacy_predictions/reports/PREREG_CHECK_REPORT_2026-05-18.md"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:legacy-p15-check-audit",
+            "evidence:legacy-git-prereg-provenance-audit"
+          ],
+          "boundary": "Integrity hashes are preserved, but the repository history does not establish an independent pre-comparison timestamp."
+        },
+        {
+          "id": "decisive-unit:legacy-gravity-controls",
+          "title": "Historical gravity classifier and P-G03 quick-control bundle",
+          "unit_kind": "NEGATIVE_CONTROL_BUNDLE",
+          "paths": [
+            "research/legacy_predictions/gravity_prereg_predictions_2026-05-19.json",
+            "research/legacy_predictions/mb3_PG03_cosmology_check_2026-05-19.json",
+            "research/legacy_predictions/mb3_verdict_2026-05-19.json",
+            "research/legacy_predictions/reports/ESCAPE_LANE_MB1_MB3_MB4_SYNTHESIS_2026-05-19.md"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:legacy-gravity-ledger-audit",
+            "evidence:legacy-pg03-quick-control-audit"
+          ],
+          "boundary": "The stored classifier contains no genuine signal, and the P-G03 quick control is not a full source-backed cosmology fit."
+        },
+        {
+          "id": "decisive-unit:legacy-hidden-scan-semantics",
+          "title": "Hidden-scan and registry-expansion semantics audit",
+          "unit_kind": "NEGATIVE_CONTROL_BUNDLE",
+          "paths": [
+            "research/legacy_predictions/numerology_hidden_scan_results.json",
+            "research/legacy_predictions/numerology_hidden_scan_v2_results_2026-05-20.json",
+            "research/legacy_predictions/numerology_mc_judge_v3_results_2026-05-20.json",
+            "research/legacy_predictions/numerology_registry_expansion_results.json",
+            "research/legacy_predictions/reports/NUMEROLOGY_HIDDEN_MC_SCAN_2026-05-18.md",
+            "research/legacy_predictions/reports/NUMEROLOGY_REGISTRY_EXPANSION_2026-05-18.md"
+          ],
+          "canonical_evidence_refs": [
+            "evidence:legacy-hidden-scan-semantics-audit"
+          ],
+          "boundary": "Raw machine labels are not promoted without null-reachability and search-space interpretation."
+        }
+      ],
+      "unassigned_files_disposition": "ARCHIVAL_SUPPORT_ONLY_NOT_INDEPENDENT_EVIDENCE",
+      "boundary": "Producer scripts, legacy reports, and the unused Friedmann sketch remain provenance or archival support unless a canonical verdict directly consumes them."
+    }
+  ]
+}
