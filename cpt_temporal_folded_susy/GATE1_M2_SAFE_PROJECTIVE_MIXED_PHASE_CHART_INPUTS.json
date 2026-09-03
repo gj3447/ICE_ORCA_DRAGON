@@ -1,0 +1,51 @@
+{
+  "schema_version": "ice.gate1-m2-safe-projective-mixed-phase-chart.input.v1",
+  "calculation_id": "Gate1M2SafeProjectiveMixedPhaseChart",
+  "numbered_phase": null,
+  "question": "On one compact safe projective m=2 mixed scale-scalar chart, which ratio/phase cells have a uniform action-decay sign, and which leading-transition band must remain unresolved before any source-defined relative cycle or signed global intersection can be considered?",
+  "kind": "BOUNDED_EXACT_SAFE_PROJECTIVE_MIXED_PHASE_SIGN_CHART",
+  "graph_route_review": {
+    "planner_checkpoint_id": "research-agent:31a0eaaa8d9105888447",
+    "planner_classification": "CURRENT_BLOCKER_CANDIDATE",
+    "selected_anchor": "open:gate1-original-cycle-signed-global-intersections",
+    "missing_typed_object": "A finite safe-projective mixed ratio/phase action-sign chart with an explicitly unresolved leading-transition band; Stokes data remain uncomputed.",
+    "bounded_output": "One exact G/B/Z chart record and direct original-action controls only.",
+    "false_signal_control": "A bad cell with the same positive-Re(q) exponential control must have the opposite leading action sign.",
+    "anti_meandering_checks_passed": true,
+    "human_review_basis": "The user requested the next bounded current-blocker unit after the diagonal mixed-tail certificate; this chart records a finite typed end-census input without asserting a cycle or global vector.",
+    "planner_grants_execution_authority": false
+  },
+  "ragnarok_boundary": {
+    "does_not_execute_historical_runner": true,
+    "does_not_rename_or_retry_consumed_runner": true,
+    "does_not_reopen_killed_reconciliation": true,
+    "generic_bounded_core_calculation": true,
+    "automatic_next": null
+  },
+  "upstream_evidence": [
+    {"path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json", "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"},
+    {"path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL_RESULT.json", "sha256": "089962d1f2452e4906eb103ab647bf305aeec72cf02d621727d977829d5f7ca9"}
+  ],
+  "primary_sources": [
+    {"id": "arXiv:1001.2933v4", "url": "https://arxiv.org/abs/1001.2933", "role": "Relative good-end convention only: for exp(-S_2), Re(S_2) must tend to positive infinity. No original cycle or chart is imported."},
+    {"id": "arXiv:math/0505474", "url": "https://arxiv.org/abs/math/0505474", "role": "Comparator only: no compactification, normal-crossing divisor, or rapid-decay homology is claimed."}
+  ],
+  "declared_conventions": {
+    "integrand": "exp(-S_2)",
+    "boundary_values": {"a_boundary": "3.5668031935672753", "phi_boundary": "1.0185809464006637"},
+    "chart": "T=rho*exp(i*psi), x=s*exp(i*alpha), q=r*s*exp(i*(psi/2+theta)); rho in [1/5,6/5], |psi|<=pi/2, r in [1/2,2], |theta|<=pi/12, alpha modulo 2*pi, s>=1",
+    "leading_phase": "Theta=3*alpha+2*theta",
+    "cells": {"G": "cos(Theta)>=1/2", "B": "cos(Theta)<=-1/2", "Z": "abs(cos(Theta))<1/2; UNRESOLVED_LEADING_TRANSITION_BAND"},
+    "potential_control": "Re(q)>=r*s/2>0, hence |exp(-sqrt(2/3)*Phi)|<1/2 and |V(Phi)|<27/16; no Newton-polyhedron claim.",
+    "uniform_constants": {"remainder_after_s5_leading": "1315433/160", "minimum_absolute_leading_without_pi2": "5/96", "threshold": 157852},
+    "numerical_cross_check": {"precision_digits": 80, "rho_values": ["1/5", "7/10", "6/5"], "psi_over_pi_values": ["-1/2", "0", "1/2"], "representatives": {"G": {"alpha_over_pi": "0", "theta_over_pi": "0"}, "B": {"alpha_over_pi": "1/3", "theta_over_pi": "0"}, "Z": {"alpha_over_pi": "1/6", "theta_over_pi": "0"}}, "r": "1", "s_values": [200000, 800000], "maximum_final_relative_error": "2e-3", "maximum_conjugation_residual": "1e-65"}
+  },
+  "principal_failure_class": "sign/unit",
+  "decision_table": [
+    {"condition": "exact G/B/Z partition, exponential-sector and uniform sign bounds pass; every G/B direct sample clears its one-sided bound; Z is retained unclassified", "verdict": "KEEP_SCOPED_SAFE_PROJECTIVE_MIXED_PHASE_SIGN_CHART"},
+    {"condition": "a G or B exact/direct-action sign or certified bound disagrees", "verdict": "KILL_DECLARED_SAFE_PROJECTIVE_MIXED_PHASE_CHART"},
+    {"condition": "partition, source hash, conjugation, null scope, or numerical control fails", "verdict": "INVALID_RUN"}
+  ],
+  "resource_caps": {"wall_clock_seconds": 120, "stdout_bytes": 262144, "stderr_bytes": 262144, "changed_artifact_files": 12, "changed_artifact_bytes": 1000000, "symbolic_operations": 180, "quadratures": 0, "root_calls": 0, "ode_calls": 0, "sampling_points": 72, "automatic_descendants": 0},
+  "required_fail_closed_outputs": {"connection_to_compact_phase39_chain": null, "tail_amplitude_or_measure_absolute_convergence": null, "complete_mixed_end_census": null, "all_ratio_or_phase_end_admissibility": null, "stokes_band_resolution": null, "admissible_full_joint_completion": null, "full_relative_homology_class": null, "source_defined_joint_relative_cycle": null, "source_to_thimble_deformation": null, "physical_original_cycle": null, "complete_global_signed_intersection_vector": null, "global_n_sigma": null, "singular_endpoint_nonreal_weyl_m": null, "spectral_measure": null, "RAQ_completion": null, "physics_claim": null, "TOE_claim": null, "global_promotion": "PROHIBITED", "gate1": "OPEN_PARTIAL_PROGRESS", "automatic_next": null}
+}
