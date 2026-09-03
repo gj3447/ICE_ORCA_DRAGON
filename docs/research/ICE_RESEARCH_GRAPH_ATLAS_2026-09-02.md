@@ -157,6 +157,13 @@ canonical V=0 likelihood target because that existing node has a narrower closed
   --target cpt::open:gate5-persistent-order-and-pole-splitting --json
 ```
 
+The separate [geometry–energy minimal verification route](ICE_GEOMETRY_ENERGY_MINIMAL_VERIFICATION_ROUTE_2026-09-03.md)
+is encoded as a strict, source-pinned `DESIGN_ONLY` DAG at
+[`ice-comparator-protocol.v1.json`](../../research/benchmarks/ice-comparator-protocol.v1.json).
+`./ice comparator validate|summary|show|trace` exposes it without registering any node or edge in the
+canonical collection. Its JBD calibration, Hu–Sawicki (n=1) comparator, background/scalar/tensor
+consumers, and folded-SUSY classification remain planned method objects with no execution authority.
+
 ## Full-stack graph surfaces
 
 | Concern | Repository surface | Authority boundary |

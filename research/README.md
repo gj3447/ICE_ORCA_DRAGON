@@ -11,6 +11,7 @@ moved.
 | [`reports/thothsaem/`](reports/thothsaem) | historical Thothsaem analysis reports |
 | [`reports/furey/`](reports/furey) | historical Furey programme scaffold |
 | [`intuition/`](intuition) | source-linked, non-authoritative topic/question graph with optional scope-matched canonical context; never claims or execution authority |
+| [`benchmarks/`](benchmarks) | source-pinned, design-only external-comparator DAG; no solver installation, result, canonical evidence, or execution authority |
 
 The two kernel directories intentionally remain flat. Several scripts import `cd_core.py` or
 `numerology_mc_judge.py` as a sibling module, and many write output beside `__file__`. Splitting them

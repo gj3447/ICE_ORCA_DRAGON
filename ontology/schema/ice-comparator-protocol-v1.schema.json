@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ice-comparator-protocol-v1.schema.json",
+  "title": "Non-authoritative ICE external comparator protocol",
+  "description": "A design-only, source-pinned comparator and classification protocol. It cannot alter a canonical graph, establish a claim or evidence, or authorize execution.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "title",
+    "description",
+    "updated_at_utc",
+    "authority",
+    "canonical_graph_unchanged",
+    "does_not_authorize_execution",
+    "result_status",
+    "selected_strategy",
+    "source_pins",
+    "tools",
+    "models",
+    "consumers",
+    "steps",
+    "edges",
+    "boundaries"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "schema_version": { "const": "ice-comparator-protocol/v1" },
+    "protocol_id": { "const": "comparator-protocol:ice-choice-robust-cross-domain" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "updated_at_utc": { "$ref": "#/$defs/utcDateTime" },
+    "authority": { "const": "NON_AUTHORITATIVE_METHOD_PROTOCOL" },
+    "canonical_graph_unchanged": { "const": true },
+    "does_not_authorize_execution": { "const": true },
+    "result_status": { "const": "DESIGN_ONLY" },
+    "selected_strategy": { "$ref": "#/$defs/selectedStrategy" },
+    "source_pins": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": { "$ref": "#/$defs/sourcePin" }
+    },
+    "tools": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 16,
+      "items": { "$ref": "#/$defs/toolPin" }
+    },
+    "models": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 16,
+      "items": { "$ref": "#/$defs/model" }
+    },
+    "consumers": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 16,
+      "items": { "$ref": "#/$defs/consumer" }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 32,
+      "items": { "$ref": "#/$defs/step" }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": { "$ref": "#/$defs/edge" }
+    },
+    "boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/nonEmptyString" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nonEmptyString": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "utcDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?Z$"
+    },
+    "httpUri": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "sourcePin": {
+      "type": "object",
+      "required": ["id", "kind", "citation", "uri", "version", "retrieved_at_utc", "pinpoint", "role", "boundary"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^source-pin:" },
+        "kind": { "enum": ["PRIMARY_PAPER", "OFFICIAL_COLLABORATION_PAPER"] },
+        "citation": { "$ref": "#/$defs/nonEmptyString" },
+        "uri": { "$ref": "#/$defs/httpUri" },
+        "version": { "$ref": "#/$defs/nonEmptyString" },
+        "retrieved_at_utc": { "$ref": "#/$defs/utcDateTime" },
+        "pinpoint": { "$ref": "#/$defs/nonEmptyString" },
+        "role": { "$ref": "#/$defs/nonEmptyString" },
+        "boundary": { "$ref": "#/$defs/nonEmptyString" }
+      },
+      "additionalProperties": false
+    },
+    "toolPin": {
+      "type": "object",
+      "required": ["id", "name", "repository_uri", "observed_commit", "observed_at_utc", "paper_source_ref", "role", "license_status", "installation_status", "boundary"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^route-tool:" },
+        "name": { "$ref": "#/$defs/nonEmptyString" },
+        "repository_uri": { "$ref": "#/$defs/httpUri" },
+        "observed_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "observed_at_utc": { "$ref": "#/$defs/utcDateTime" },
+        "paper_source_ref": { "$ref": "#/$defs/nonEmptyString" },
+        "role": { "$ref": "#/$defs/nonEmptyString" },
+        "license_status": { "$ref": "#/$defs/nonEmptyString" },
+        "installation_status": { "const": "NOT_INSTALLED" },
+        "boundary": { "$ref": "#/$defs/nonEmptyString" }
+      },
+      "additionalProperties": false
+    },
+    "model": {
+      "type": "object",
+      "required": ["id", "role", "name", "action", "convention", "parameter_lock", "matter_coupling", "boundary_domain", "source_refs", "non_claim"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^route-model:" },
+        "role": { "enum": ["CALIBRATION_ONLY", "CANDIDATE_MODEL", "PARALLEL_CLASSIFICATION"] },
+        "name": { "$ref": "#/$defs/nonEmptyString" },
+        "action": { "$ref": "#/$defs/nonEmptyString" },
+        "convention": { "$ref": "#/$defs/nonEmptyString" },
+        "parameter_lock": { "$ref": "#/$defs/nonEmptyString" },
+        "matter_coupling": { "$ref": "#/$defs/nonEmptyString" },
+        "boundary_domain": { "$ref": "#/$defs/nonEmptyString" },
+        "source_refs": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "non_claim": { "$ref": "#/$defs/nonEmptyString" }
+      },
+      "additionalProperties": false
+    },
+    "consumer": {
+      "type": "object",
+      "required": ["id", "domain", "observable", "independence_boundary", "non_claim"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^route-consumer:" },
+        "domain": { "enum": ["BACKGROUND", "SCALAR_GROWTH_LENSING", "TENSOR_PROPAGATION"] },
+        "observable": { "$ref": "#/$defs/nonEmptyString" },
+        "independence_boundary": { "$ref": "#/$defs/nonEmptyString" },
+        "non_claim": { "$ref": "#/$defs/nonEmptyString" }
+      },
+      "additionalProperties": false
+    },
+    "plannedInput": {
+      "type": "object",
+      "required": ["id", "kind", "specification", "state", "not_a_result"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^route-input:" },
+        "kind": { "$ref": "#/$defs/nonEmptyString" },
+        "specification": { "$ref": "#/$defs/nonEmptyString" },
+        "state": { "const": "PLANNED" },
+        "not_a_result": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "plannedOutput": {
+      "type": "object",
+      "required": ["id", "kind", "specification", "state", "not_a_result"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^route-output:" },
+        "kind": { "$ref": "#/$defs/nonEmptyString" },
+        "specification": { "$ref": "#/$defs/nonEmptyString" },
+        "state": { "const": "PLANNED" },
+        "not_a_result": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "contextReference": {
+      "type": "object",
+      "required": ["graph", "node", "relation"],
+      "properties": {
+        "graph": { "const": "cpt" },
+        "node": { "type": "string", "minLength": 1, "pattern": "^open:" },
+        "relation": { "const": "CONTEXTUALIZES_NONAUTHORITATIVELY" }
+      },
+      "additionalProperties": false
+    },
+    "step": {
+      "type": "object",
+      "required": ["id", "title", "kind", "state", "lane", "topic_refs", "context_refs", "model_refs", "source_refs", "tool_refs", "prerequisite_outputs", "inputs", "outputs", "choice_dimensions", "mechanism_object", "parameter_lock", "consumer_refs", "independent_check", "acceptance_criterion", "null_outcome", "kill_criterion", "principal_failure_class", "non_claim", "does_not_authorize_execution"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^route-step:" },
+        "title": { "$ref": "#/$defs/nonEmptyString" },
+        "kind": { "enum": ["CALIBRATION", "ANALYTIC_AUDIT", "CROSS_DOMAIN_TEST", "ADMISSION_DECISION", "CLASSIFICATION"] },
+        "state": { "const": "PLANNED" },
+        "lane": { "enum": ["GEOMETRY_COMPARATOR", "FOLDED_SUSY_CLASSIFICATION"] },
+        "topic_refs": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "context_refs": { "type": "array", "items": { "$ref": "#/$defs/contextReference" } },
+        "model_refs": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "source_refs": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "tool_refs": { "$ref": "#/$defs/stringArray" },
+        "prerequisite_outputs": { "$ref": "#/$defs/stringArray" },
+        "inputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/plannedInput" } },
+        "outputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/plannedOutput" } },
+        "choice_dimensions": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "mechanism_object": { "$ref": "#/$defs/nonEmptyString" },
+        "parameter_lock": { "$ref": "#/$defs/nonEmptyString" },
+        "consumer_refs": { "$ref": "#/$defs/stringArray" },
+        "independent_check": { "$ref": "#/$defs/nonEmptyString" },
+        "acceptance_criterion": { "$ref": "#/$defs/nonEmptyString" },
+        "null_outcome": { "$ref": "#/$defs/nonEmptyString" },
+        "kill_criterion": { "$ref": "#/$defs/nonEmptyString" },
+        "principal_failure_class": { "enum": ["algebra", "sign/unit", "discretization", "truncation", "solver", "spectrum", "gauge", "inference"] },
+        "non_claim": { "$ref": "#/$defs/nonEmptyString" },
+        "does_not_authorize_execution": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "from", "relation", "to", "rationale", "non_claim", "does_not_authorize_execution"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^route-edge:" },
+        "from": { "$ref": "#/$defs/nonEmptyString" },
+        "relation": { "enum": ["CALIBRATES", "PREREQUISITE_FOR", "INFORMS", "INDEPENDENT_PARALLEL_TO"] },
+        "to": { "$ref": "#/$defs/nonEmptyString" },
+        "rationale": { "$ref": "#/$defs/nonEmptyString" },
+        "non_claim": { "$ref": "#/$defs/nonEmptyString" },
+        "does_not_authorize_execution": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "selectedStrategy": {
+      "type": "object",
+      "required": ["calibration_step", "first_comparator_model", "cross_domain_step", "ice_admission_step", "parallel_classification_step", "rationale"],
+      "properties": {
+        "calibration_step": { "$ref": "#/$defs/nonEmptyString" },
+        "first_comparator_model": { "$ref": "#/$defs/nonEmptyString" },
+        "cross_domain_step": { "$ref": "#/$defs/nonEmptyString" },
+        "ice_admission_step": { "$ref": "#/$defs/nonEmptyString" },
+        "parallel_classification_step": { "$ref": "#/$defs/nonEmptyString" },
+        "rationale": { "$ref": "#/$defs/nonEmptyString" }
+      },
+      "additionalProperties": false
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/nonEmptyString" }
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/nonEmptyString" }
+    }
+  }
+}

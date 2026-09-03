@@ -428,6 +428,10 @@ Canonical commands:
 ./ice literature search <query> [--limit 1..20] [--json]
 ./ice intuition validate [--json]
 ./ice intuition search <query> --target <intuition::topic:node|cpt::open:node> [--limit 1..50] [--depth 0..3] [--json]
+./ice comparator validate [--json]
+./ice comparator summary [--json]
+./ice comparator show <route-entity-id> [--json]
+./ice comparator trace <route-step-id> [--json]
 ./ice graphrag eval --limit 12 --json
 ./ice graphrag diff --base HEAD --limit 12 --json
 ./ice agent eval [--json]
@@ -473,7 +477,13 @@ It is not a substitute for reading a primary source and it never authorizes a ru
 retrieves source-linked, non-authoritative question lenses by a sidecar `topic:*` or an exact canonical
 open problem. Topic queries keep canonical target/context null; canonical queries add bounded GraphRAG
 context. Its explicit links are navigation only, leave the canonical ontology and planner unchanged, and
-`UNRESOLVED`, `OUT_OF_SCOPE`, and computed zero remain distinct. `npm run --silent mcp`
+`UNRESOLVED`, `OUT_OF_SCOPE`, and computed zero remain distinct. `comparator` validates and reads the
+separate `DESIGN_ONLY` JBD → Hu–Sawicki → same-coupling cross-domain route. It also keeps the folded
+Wess–Zumino operator-classification lane explicitly independent. Its pinned sources and uninstalled
+solver revisions are method inputs, not results, canonical evidence, or execution authority. See the
+[minimal geometry–energy verification route](docs/research/ICE_GEOMETRY_ENERGY_MINIMAL_VERIFICATION_ROUTE_2026-09-03.md)
+and [protocol decision](docs/decisions/ICE_EXTERNAL_COMPARATOR_PROTOCOL_2026-09-03.md).
+`npm run --silent mcp`
 exposes the graph harness, GraphRAG regression, SHACL, SPARQL, RO-Crate preview, durable-run audit,
 scientific-intuition search, and literature-discovery surfaces through local stdio. The stdio entry
 negotiates MCP 2026-07-28 and
@@ -495,6 +505,7 @@ legal documents. Research code and historical reports live in named areas.
 | [`ice`](ice), [`src/`](src), [`test/`](test) | Effect control plane and its tests | control plane |
 | [`research/hypercomplex/`](research/hypercomplex) | Cayley–Dickson/sedenion kernels and adjacent JSON results | included |
 | [`research/legacy_predictions/`](research/legacy_predictions) | dimensional, preregistration, and numerology-era kernels/results | included |
+| [`research/benchmarks/`](research/benchmarks) | source-pinned, non-authoritative comparator-route DAGs; design only | excluded |
 | [`cpt_temporal_folded_susy/`](cpt_temporal_folded_susy) | current phase scripts, reports, and frozen inputs | included |
 | [`igrueqft_locality_falsifier_2026-07-12/`](igrueqft_locality_falsifier_2026-07-12) | finite external-theory locality oracle and result | included |
 | [`claimB_loop/`](claimB_loop) and named experiment directories | focused research programmes | included when a script has a main guard |

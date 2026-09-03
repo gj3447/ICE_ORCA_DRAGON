@@ -32,6 +32,7 @@ npm run check
 | [`decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md`](decisions/ICE_RAGNAROK_CIRCUIT_BREAKER_2026-08-23.md) | narrow killed-route execution containment plus frozen one-shot and transport history; not a research method |
 | [`decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md`](decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md) | active boundary for widening scoped results: declared choices, one typed mechanism and two independent in-graph consumers; no current passing result |
 | [`decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md`](decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md) | source-linked, non-authoritative topic/question graph with optional scope-matched canonical context through CLI/MCP |
+| [`decisions/ICE_EXTERNAL_COMPARATOR_PROTOCOL_2026-09-03.md`](decisions/ICE_EXTERNAL_COMPARATOR_PROTOCOL_2026-09-03.md) | design-only external-comparator authority boundary, immutable tool pins, and lane separation |
 | [`decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md) | exact-path Phase-44 Git LFS migration, old/new commit map, recovery bundle identity, and remote transport receipt |
 | [`ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md) | philosophical synthesis of formal possibility, invariant physical difference, amplitude, persistent record, and evidence |
 | [`ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md) | intuitive meditation on invariance, non-privilege, seams, memory, and the limits of recursive consistency |
@@ -40,6 +41,7 @@ npm run check
 | [`SCIENTIFIC_CLI_MANUAL.md`](SCIENTIFIC_CLI_MANUAL.md) | version-specific commands, examples, official documentation, and offline-manual index |
 | [`../ontology/README.md`](../ontology/README.md) | typed research graph, evidence snapshots, validation, and lookup commands |
 | [`research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md`](research/ICE_RESEARCH_GRAPH_ATLAS_2026-09-02.md) | current programme boundaries, TOE/core/support/history roles, epistemic chain, and full-stack graph handoff |
+| [`research/ICE_GEOMETRY_ENERGY_MINIMAL_VERIFICATION_ROUTE_2026-09-03.md`](research/ICE_GEOMETRY_ENERGY_MINIMAL_VERIFICATION_ROUTE_2026-09-03.md) | JBD-calibrated Hu–Sawicki route for choice controls and same-coupling background/scalar/tensor comparison |
 | [`../ontology/cpt-temporal-folded-susy/README.md`](../ontology/cpt-temporal-folded-susy/README.md) | readable CPT × Temporal-Folded SUSY concept and evidence map |
 | [`../ontology/igrueqft-locality/README.md`](../ontology/igrueqft-locality/README.md) | finite free-U(1) IG-RUEQFT locality audit, scoped negative result, and open continuum boundary |
 | [`../cpt_temporal_folded_susy/README.md`](../cpt_temporal_folded_susy/README.md) | CPT × Temporal-Folded SUSY phase index, current boundary, and sequencing gates |
@@ -103,6 +105,8 @@ physical hypotheses separate. See [`../AGENTS.md`](../AGENTS.md).
 | run architecture competency questions | `./ice ontology competency --json` |
 | trace one claim | `./ice ontology trace <node-id>` |
 | inspect source-linked intuition by local topic or matching open problem | `./ice intuition search <query> --target <intuition::topic:id\|cpt::open:id> --json` |
+| validate the design-only external comparator DAG | `./ice comparator validate --json` |
+| inspect or trace one comparator entity | `./ice comparator show <route-entity-id> --json`; `./ice comparator trace <route-step-id> --json` |
 
 The mapped ledger currently reports 12 `REPRO`, queue03 `NONPORTABLE_FAIL`, and queue06
 `SUPERSEDED`. A nonzero overall exit is expected while those explicit statuses remain.

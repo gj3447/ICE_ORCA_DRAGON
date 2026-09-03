@@ -17,6 +17,7 @@ import { literatureCommand } from "./literature/cli.ts"
 import { graphRagCommand } from "./graphrag/cli.ts"
 import { researchAgentCommand } from "./agent-graph/cli.ts"
 import { intuitionCommand } from "./intuition/cli.ts"
+import { comparatorProtocolCommand } from "./comparator-protocol/cli.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const json = Options.boolean("json").pipe(
@@ -100,7 +101,8 @@ const root = Command.make("ice", {}, () =>
     literatureCommand,
     graphRagCommand,
     researchAgentCommand,
-    intuitionCommand
+    intuitionCommand,
+    comparatorProtocolCommand
   ])
 )
 

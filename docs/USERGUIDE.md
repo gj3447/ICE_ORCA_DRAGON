@@ -173,6 +173,25 @@ a separately reviewed canonical blocker question may proceed to `agent plan`. Ke
 `OUT_OF_SCOPE`, and a computed integer zero distinct. See the
 [scientific-intuition signal-layer decision](decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md).
 
+### Inspect the external comparator route
+
+```bash
+./ice comparator validate --json
+./ice comparator summary --json
+./ice comparator show route-step:hu-sawicki-n1-cross-domain --json
+./ice comparator trace route-step:geometry-ice-admission-decision --json
+```
+
+This read-only sidecar turns one literature-backed idea into an inspectable design DAG: JBD is a
+calibration, Hu–Sawicki (n=1) is the first actual comparator, and one locked coupling set must reach
+background, scalar growth/lensing, and tensor propagation through two pinned implementations. All
+objects and outputs are `PLANNED`; the external solvers are `NOT_INSTALLED`. The folded Wess–Zumino seam
+classification is an independent parallel lane with one context-only Gate-4 reference, not a geometry
+dependency. The sidecar is absent from canonical ontology, GraphRAG, the agent planner, MCP, and runner
+authorization. Read the [human route](research/ICE_GEOMETRY_ENERGY_MINIMAL_VERIFICATION_ROUTE_2026-09-03.md)
+and [authority decision](decisions/ICE_EXTERNAL_COMPARATOR_PROTOCOL_2026-09-03.md) before proposing an
+implementation.
+
 ## Run one kernel
 
 ```bash
