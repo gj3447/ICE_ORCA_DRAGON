@@ -1,0 +1,47 @@
+{
+  "$schema": "../../ontology/schema/ice-kg-bridge-resolution-audit-v1.schema.json",
+  "schema_version": "ice-kg-bridge-resolution-audit/v1",
+  "audit_id": "audit:ice-unresolved-kg-bridges-2026-09-03",
+  "checked_at_utc": "2026-09-03T07:45:00Z",
+  "authority": "READ_ONLY_AUDIT_SIDECAR",
+  "result_status": "ZERO_RESOLVED_MATCHES",
+  "does_not_alter_canonical_bridge_status": true,
+  "scope": {
+    "canonical_graphs": [
+      "ontology/cpt-temporal-folded-susy/graph.json",
+      "ontology/hypercomplex/graph.json",
+      "ontology/igrueqft-locality/graph.json",
+      "ontology/legacy-predictions/graph.json"
+    ],
+    "expected_unresolved_count": 75,
+    "expected_keyset_sha256": "d9b148b398b2501d69c59764c6e81dfc88877153858e00b9422bcaead7e9033f",
+    "keyset_encoding": "one lexicographically sorted UTF-8 line per unresolved bridge: graph_path<TAB>local_node_id<TAB>system<TAB>lookup_key<LF>"
+  },
+  "outcomes": {
+    "NO_MATCH": "No collision-free external node UID or source locator was found for this local bridge.",
+    "ID_COLLISION": "An external identifier exists but is a semantically different historical record; it must not be reused as EXACT or RELATED.",
+    "REGISTRY_UNAVAILABLE": "The named external registry has no verified readable lookup surface in this audit; no UID is inferred."
+  },
+  "rules": [
+    {
+      "id": "rule:cpt-symposium-number-collision",
+      "outcome": "ID_COLLISION",
+      "graph": "ontology/cpt-temporal-folded-susy/graph.json",
+      "system": "SYMPOSIUM",
+      "local_node_ids": ["phase:p24", "phase:p25", "phase:p26", "phase:p27", "phase:p28", "phase:p29", "phase:p30", "phase:p31", "phase:p32", "phase:p33", "phase:p34", "phase:p35", "phase:p36", "phase:p37", "phase:p38", "phase:p39", "phase:p40", "phase:p44", "phase:p46", "phase:p47", "phase:p51", "phase:p52", "phase:p53"],
+      "registry_locator": {
+        "repository": "https://github.com/gj3447/symposium",
+        "commit": "5434d26348312dbed8d084c3a63a775dd0fc6547",
+        "blob_oid": "46195f1ccf400828a4531e03cffc994b24d44317",
+        "path": "FINDINGS/cpt-temporal-folded-susy-2026-08-09/LAKATOTREE_PHASE7_MANIFEST.json",
+        "url": "https://github.com/gj3447/symposium/blob/5434d26348312dbed8d084c3a63a775dd0fc6547/FINDINGS/cpt-temporal-folded-susy-2026-08-09/LAKATOTREE_PHASE7_MANIFEST.json",
+        "access_verification": "GH_API_AND_GIT_LS_REMOTE",
+        "anchors": {"phase:p24": "L4001", "phase:p25": "L4008", "phase:p26": "L4015", "phase:p27": "L4022", "phase:p28": "L4029", "phase:p29": "L4183", "phase:p30": "L4190", "phase:p31": "L4197", "phase:p32": "L4204", "phase:p33": "L4211", "phase:p34": "L4218", "phase:p35": "L4225", "phase:p36": "L4400", "phase:p37": "L4407", "phase:p38": "L4414", "phase:p39": "L4421", "phase:p40": "L4428", "phase:p44": "L4456", "phase:p46": "L4575", "phase:p47": "L4582", "phase:p51": "L4610", "phase:p52": "L4617", "phase:p53": "L4624"},
+        "boundary": "The locator documents semantic nonidentity only. It is not an external_uid and creates no evidential relation."
+      }
+    },
+    {"id": "rule:hypercomplex-external-registry-unavailable", "outcome": "REGISTRY_UNAVAILABLE", "graph": "ontology/hypercomplex/graph.json", "system": "external-research-kg", "local_node_ids": ["programme:hypercomplex-hypothesis-testbench"]}
+  ],
+  "default_outcome": "NO_MATCH",
+  "non_claim": "This audit records lookup outcomes only. It does not add, resolve, alter, or ratify any canonical graph bridge, result, physical claim, or external knowledge-graph record."
+}

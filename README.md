@@ -421,6 +421,7 @@ Canonical commands:
 ./ice ontology sparql '<SELECT|ASK|CONSTRUCT|DESCRIBE query>' [--graph <key>] [--limit 1..500]
 ./ice ontology competency [--json]
 ./ice ontology coverage [--json]
+./ice ontology families [--json]
 ./ice ontology crate output/<new-name> [--graph <key>] [--json]
 ./ice harness context <node-id> [--graph <key>] [--depth 0..32] [--limit 1..256]
 ./ice harness impact <repository-relative-path> [--graph <key>] [--depth 0..32] [--limit 1..256]
@@ -438,6 +439,17 @@ Canonical commands:
 ./ice agent run create <question> --id <run-id> [--graph cpt] [--json]
 ./ice agent run review <run-id> --stage <route|evidence|design> --decision <approve|stop> --rationale <text> --tip <sha256>
 ./ice agent run audit <run-id> [--json]
+```
+
+Non-authoritative sidecar commands (excluded from the canonical ontology and its graph interfaces):
+
+```bash
+./ice sidecars validate [--json]
+./ice sidecars summary [--json]
+./ice sidecars show <sidecar-id> [--json]
+./ice bridges validate [--json]
+./ice bridges summary [--json]
+./ice bridges show <local-node-id> [--json]
 ```
 
 `ontology validate` streams every recorded artifact for the full hash gate. The read-only ontology
@@ -466,6 +478,16 @@ file has no longest-prefix coverage-ledger classification. `npm run
 graph:release-check` adds that inventory and a high/critical production
 dependency advisory gate to `graph:check`; release CI also emits a CycloneDX
 SBOM from the lockfile.
+
+`ontology families` verifies the PARTIAL-root family index: all six roots must be owned exactly once,
+their ordinary-file count and normalized SHA-256 inventory must match, and every decisive-result bundle
+must point to an existing evidence node. It reports generated Python bytecode separately and leaves the
+coverage status `PARTIAL`.
+
+`sidecars` registers the intuition and comparator documents as a separate non-authoritative integrity
+collection. `bridges` audits the exact unresolved-bridge key set and distinguishes `NO_MATCH`,
+`ID_COLLISION`, and `REGISTRY_UNAVAILABLE`; it never converts an audit outcome into an external UID.
+Both checks are part of `npm run graph:check` but remain outside canonical evidence and execution.
 
 `harness` is the graph-aware engineering surface: `context` exposes bounded evidence/scope/policy/open
 problem context for a selected node, `impact` maps an exact registered repository path to that context,

@@ -33,6 +33,9 @@ npm run check
 | [`decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md`](decisions/ICE_CHOICE_INVARIANCE_CROSS_DOMAIN_PROMOTION_2026-09-02.md) | active boundary for widening scoped results: declared choices, one typed mechanism and two independent in-graph consumers; no current passing result |
 | [`decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md`](decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md) | source-linked, non-authoritative topic/question graph with optional scope-matched canonical context through CLI/MCP |
 | [`decisions/ICE_EXTERNAL_COMPARATOR_PROTOCOL_2026-09-03.md`](decisions/ICE_EXTERNAL_COMPARATOR_PROTOCOL_2026-09-03.md) | design-only external-comparator authority boundary, immutable tool pins, and lane separation |
+| [`decisions/ICE_NONAUTHORITATIVE_SIDECAR_COLLECTION_2026-09-03.md`](decisions/ICE_NONAUTHORITATIVE_SIDECAR_COLLECTION_2026-09-03.md) | fixed-path integrity registry for noncanonical intuition and comparator sidecars |
+| [`decisions/ICE_PARTIAL_CORPUS_RESEARCH_FAMILY_INDEX_2026-09-03.md`](decisions/ICE_PARTIAL_CORPUS_RESEARCH_FAMILY_INDEX_2026-09-03.md) | hash-audited family and decisive-result index for all PARTIAL corpus roots |
+| [`decisions/ICE_EXTERNAL_KG_BRIDGE_RESOLUTION_AUDIT_2026-09-03.md`](decisions/ICE_EXTERNAL_KG_BRIDGE_RESOLUTION_AUDIT_2026-09-03.md) | exact 75-key external bridge audit with collision-safe zero-match result |
 | [`decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md`](decisions/ICE_PHASE44_GIT_LFS_HISTORY_MIGRATION_2026-08-24.md) | exact-path Phase-44 Git LFS migration, old/new commit map, recovery bundle identity, and remote transport receipt |
 | [`ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md`](ICE_CENTRAL_CLAIM_PHILOSOPHY_2026-08-20.md) | philosophical synthesis of formal possibility, invariant physical difference, amplitude, persistent record, and evidence |
 | [`ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md`](ICE_RECURSIVE_TRUTH_MEDITATION_2026-08-20.md) | intuitive meditation on invariance, non-privilege, seams, memory, and the limits of recursive consistency |
@@ -107,6 +110,9 @@ physical hypotheses separate. See [`../AGENTS.md`](../AGENTS.md).
 | inspect source-linked intuition by local topic or matching open problem | `./ice intuition search <query> --target <intuition::topic:id\|cpt::open:id> --json` |
 | validate the design-only external comparator DAG | `./ice comparator validate --json` |
 | inspect or trace one comparator entity | `./ice comparator show <route-entity-id> --json`; `./ice comparator trace <route-step-id> --json` |
+| validate non-authoritative sidecar byte and semantic contracts | `./ice sidecars validate --json` |
+| verify PARTIAL research-family inventories | `./ice ontology families --json` |
+| audit unresolved external KG bridge outcomes | `./ice bridges summary --json` |
 
 The mapped ledger currently reports 12 `REPRO`, queue03 `NONPORTABLE_FAIL`, and queue06
 `SUPERSEDED`. A nonzero overall exit is expected while those explicit statuses remain.

@@ -192,6 +192,42 @@ authorization. Read the [human route](research/ICE_GEOMETRY_ENERGY_MINIMAL_VERIF
 and [authority decision](decisions/ICE_EXTERNAL_COMPARATOR_PROTOCOL_2026-09-03.md) before proposing an
 implementation.
 
+### Inspect the aggregate non-authoritative sidecar registry
+
+```bash
+./ice sidecars validate --json
+./ice sidecars summary --json
+./ice sidecars show sidecar:external-comparator-v1 --json
+```
+
+This fixed-path registry checks sidecar bytes and delegates to each document's existing semantic
+validator. It is a locator and integrity layer only: it is excluded from canonical ontology,
+GraphRAG, planner, MCP, and execution authority.
+
+### Audit unresolved external KG bridges
+
+```bash
+./ice bridges validate --json
+./ice bridges summary --json
+./ice bridges show phase:p24 --json
+```
+
+The audit locks the exact 75 unresolved bridge keys and lookup strings. Its current checked result is
+zero safe UID matches: 51 `NO_MATCH`, 23 `ID_COLLISION`, and one `REGISTRY_UNAVAILABLE`. A collision
+locator documents why an old same-number SYMPOSIUM phase is a different record; it is never reused as
+`EXACT`, `RELATED`, or an `external_uid`.
+
+### Verify PARTIAL research families
+
+```bash
+./ice ontology families --json
+```
+
+This verifies all six PARTIAL roots as family-level inventories. Of 190 observed files, 50 are generated
+Python bytecode and 140 are ordinary tracked files. The command checks normalized file hashes, decisive
+result bundles, and their existing evidence references without creating file nodes or upgrading the
+coverage status.
+
 ## Run one kernel
 
 ```bash

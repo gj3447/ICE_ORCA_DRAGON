@@ -18,6 +18,7 @@ import { graphRagCommand } from "./graphrag/cli.ts"
 import { researchAgentCommand } from "./agent-graph/cli.ts"
 import { intuitionCommand } from "./intuition/cli.ts"
 import { comparatorProtocolCommand } from "./comparator-protocol/cli.ts"
+import { bridgeAuditCommand } from "./bridges/cli.ts"
 import { sidecarCollectionCommand } from "./sidecars/cli.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
@@ -104,7 +105,8 @@ const root = Command.make("ice", {}, () =>
     researchAgentCommand,
     intuitionCommand,
     comparatorProtocolCommand,
-    sidecarCollectionCommand
+    sidecarCollectionCommand,
+    bridgeAuditCommand
   ])
 )
 

@@ -21,7 +21,7 @@ export const readFixedSidecarText = (relativePath: typeof SIDECAR_COLLECTION_REL
   if (!isSafeArtifactPath(relativePath)) return yield* Effect.fail(iceError("SIDECAR_PATH_UNSAFE", "fixed sidecar path is unsafe"))
   const root = yield* fs.realPath(workspace.root).pipe(Effect.mapError((error) => iceError("SIDECAR_READ_FAILED", `cannot resolve workspace root: ${String(error)}`)))
   const target = yield* fs.realPath(path.resolve(workspace.root, relativePath)).pipe(Effect.mapError((error) => iceError("SIDECAR_READ_FAILED", `cannot resolve sidecar: ${String(error)}`)))
-  if (!isSafeArtifactPath(path.relative(root, target))) return yield* Effect.fail(iceError("SIDECAR_PATH_ESCAPES_WORKSPACE", "sidecar resolves outside workspace"))
+  if (path.relative(root, target) !== relativePath) return yield* Effect.fail(iceError("SIDECAR_PATH_SUBSTITUTED", "sidecar must resolve to its exact fixed repository path"))
   const info = yield* fs.stat(target).pipe(Effect.mapError((error) => iceError("SIDECAR_READ_FAILED", `cannot inspect sidecar: ${String(error)}`)))
   if (info.type !== "File" || info.size > MAX_BYTES) return yield* Effect.fail(iceError("SIDECAR_READ_FAILED", "sidecar must be a bounded regular file"))
   const contents = yield* fs.readFileString(target).pipe(Effect.mapError((error) => iceError("SIDECAR_READ_FAILED", `cannot read sidecar: ${String(error)}`)))
