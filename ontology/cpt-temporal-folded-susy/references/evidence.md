@@ -2029,6 +2029,34 @@ cap reintersections, continuous direction coverage, root/component exhaustion, a
 all good ends, the physical original cycle, metric homotopy, and BFV/Pfaffian/Pin orientation remain
 uncomputed. Gate 1 is `OPEN_PARTIAL_PROGRESS`.
 
+## Gate-1 recorded P38-P41 incidence eligibility audit (unnumbered)
+
+The authoritative [raw incidence ledger](../../../cpt_temporal_folded_susy/GATE1_ORIGINAL_CYCLE_INTERSECTION_INCIDENCE_LEDGER_RESULT.json)
+is a clean unnumbered `VALID_RUN` with a scientific `ledger_verdict` of `INCOMPLETE`. It audits
+exactly fourteen predeclared historical records without rerunning any numbered runner:
+
+- two P38 diagnostic constructions are `OUT_OF_SCOPE` for a physical/global incidence pairing;
+- two P39, five P40, and five P41 local candidates are `UNRESOLVED` as global pairings;
+- all twelve recorded local orientation signs remain `+1` only in their declared local charts;
+- the count of eligible `INTEGER` entries is zero, while every per-entry global integer, the complete
+  vector, `global_n_sigma`, original physical joint cycle, Gate-1 closure, and promoted claim remain
+  `null` or prohibited.
+
+Six exact audit checks pass, including source/graph binding, the exhaustive typed partition over the
+declared fourteen-record boundary, local/global sign separation, null-not-zero semantics, and global
+fail-closed outputs. A separate result-reader path passes and rejects four mutations: duplicate ID,
+unresolved-null to integer zero, local `+1` to global integer, and missing `OUT_OF_SCOPE` reason. These
+are software integrity controls, not independent scientific evidence for an intersection number.
+
+The graph directly hash-indexes the [input](../../../cpt_temporal_folded_susy/GATE1_ORIGINAL_CYCLE_INTERSECTION_INCIDENCE_LEDGER_INPUTS.json),
+[runner](../../../cpt_temporal_folded_susy/gate1_original_cycle_intersection_incidence_ledger.py), and
+raw result as the single source of truth; it does not duplicate the full check ledger into another
+snapshot. The run pinned the pre-registration graph bytes, so this later indexing change is historical
+provenance rather than a retroactive rerun. The audit is exhaustive only over the fourteen listed
+records, not over saddles, sheets, upward components, singularities, Stokes chambers, good ends,
+orientations, regulators, or cutoffs. It therefore records the existing Gate-1 information gap and
+does not close or advance the global intersection claim.
+
 ## Phase 42 check ledger
 
 ### Frozen artifacts, immutable roots, exact maps, retention, and global guards — 8 exact PASS

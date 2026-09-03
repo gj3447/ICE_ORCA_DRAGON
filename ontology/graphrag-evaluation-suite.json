@@ -163,6 +163,18 @@
       "rationale": "Korean project navigation should retrieve the same canonical current Gate-1 blocker."
     },
     {
+      "id": "cpt-gate1-recorded-incidence-three-state-audit",
+      "query": "Gate 1 recorded incidence ledger INTEGER UNRESOLVED OUT_OF_SCOPE local plus one null global vector",
+      "expectation": "RETRIEVE",
+      "graph": "cpt",
+      "depth": 1,
+      "expected_unit_ids": [
+        "cpt::evidence:gate1-original-cycle-intersection-incidence-ledger-audit"
+      ],
+      "max_first_expected_rank": 3,
+      "rationale": "The typed P38-P41 audit must be retrievable as an incomplete evidence-shape ledger without turning zero eligible entries into a computed zero vector."
+    },
+    {
       "id": "cpt-choice-invariance-promotion-policy",
       "query": "admissible choice invariance same mechanism two independent in graph consumers promotion boundary",
       "expectation": "RETRIEVE",

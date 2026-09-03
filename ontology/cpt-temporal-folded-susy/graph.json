@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-03T03:45:23Z",
+  "updated_at_utc": "2026-09-03T04:11:20Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -15825,6 +15825,79 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM.md",
       "sha256": "c0340ca7dbbc2beb041bd2b93deb15cf315d379cba971e43d0a0fbb6ceac268d"
+    },
+    {
+      "id": "concept:gate1-recorded-incidence-eligibility-audit",
+      "type": "concept",
+      "title": "Gate-1 recorded original-cycle/upward-cycle incidence eligibility audit",
+      "summary": "A clean unnumbered audit classifies exactly fourteen predeclared P38-P41 records as INTEGER, UNRESOLVED, or OUT_OF_SCOPE. It preserves twelve recorded local +1 orientation signs as local-only data, places two P38 diagnostic constructions outside the global-incidence domain, emits no global INTEGER entry, and leaves the complete vector and n_sigma null. This is a fail-closed evidence-shape audit, not a global census or a new physical intersection calculation.",
+      "state": "COMPLETED_FAIL_CLOSED_RECORDED_INCIDENCE_CLASSIFICATION_ONLY"
+    },
+    {
+      "id": "scope:gate1-recorded-p38-p41-incidence-items",
+      "type": "scope",
+      "title": "Gate-1 fourteen-record P38-P41 incidence-audit scope",
+      "summary": "Exactly two P38 diagnostic non-global constructions, two P39 m=2 local cap candidates, five P40 m=3 local candidates, and five P41 m=4 local candidates. Exhaustiveness applies only to these fourteen recorded items and never to the physical saddle, sheet, upward-component, singularity, Stokes, good-end, orientation, regulator, or cutoff census.",
+      "state": "DECLARED_COMPLETE_FOURTEEN_RECORDED_ITEM_SCOPE_NOT_GLOBAL_CENSUS",
+      "includes": [
+        "the P38 finite-surrogate projection pair and conditional Gamma_0 local-basis map as non-global diagnostic constructions",
+        "the two P39 local m=2 cap candidates with their recorded configuration-coordinate signs",
+        "the five P40 local m=3 candidates and five P41 local m=4 candidates with their recorded local signs",
+        "three-state INTEGER, UNRESOLVED and OUT_OF_SCOPE classification plus null-versus-zero mutation guards"
+      ],
+      "excludes": [
+        "an inferred or constructed original physical joint relative cycle",
+        "a complete saddle, root, upward-component, sheet, singularity, Stokes, reintersection or good-end census",
+        "a common full-joint orientation line, regulator or cutoff stability, bounded-chain sum, global vector or n_sigma",
+        "a physical, empirical, quantum-gravity or TOE claim and any automatic successor"
+      ]
+    },
+    {
+      "id": "evidence:gate1-original-cycle-intersection-incidence-ledger-audit",
+      "type": "evidence",
+      "title": "Gate-1 original-cycle intersection incidence ledger audit evidence",
+      "summary": "One clean unnumbered VALID_RUN records 6/6 exact audit checks, an independent software-reader pass, and rejection of 4/4 false-signal mutations. The bounded partition is INTEGER=0, UNRESOLVED=12 and OUT_OF_SCOPE=2; each of the twelve local +1 signs remains separate from the null global integer field. The scientific ledger verdict is INCOMPLETE, not a zero vector, and every global, Gate-1, physics and TOE output remains null or prohibited.",
+      "state": "VALID_RUN_INCOMPLETE_RECORDED_INCIDENCE_AUDIT",
+      "observed_status": "VALID_RUN_6_EXACT_4_MUTATION_GUARDS_INTEGER_0_UNRESOLVED_12_OUT_OF_SCOPE_2",
+      "check_ids": [
+        "gate1.incidence.entries.exhaustive_typed_partition",
+        "gate1.incidence.local_sign.separate_from_global_integer",
+        "gate1.incidence.null.never_collapsed_to_zero",
+        "gate1.incidence.global_outputs.fail_closed"
+      ]
+    },
+    {
+      "id": "artifact:gate1-original-cycle-intersection-incidence-ledger-input",
+      "type": "artifact",
+      "title": "Gate-1 original-cycle intersection incidence ledger input",
+      "summary": "Hash-pinned fourteen-record enumeration, source and graph bindings, global-integer prerequisites, three-state semantics, inference controls, resource caps and fail-closed outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/GATE1_ORIGINAL_CYCLE_INTERSECTION_INCIDENCE_LEDGER_INPUTS.json",
+      "sha256": "a17978a38b5e0c6df0f2788022681f0e402a0fe9bec6b02f0a3bb60e095c306f",
+      "introduced_in_commit": "f6717039718a901572ad43c9ed45d643d644f5cc"
+    },
+    {
+      "id": "artifact:gate1-original-cycle-intersection-incidence-ledger-runner",
+      "type": "artifact",
+      "title": "Gate-1 original-cycle intersection incidence ledger runner",
+      "summary": "Bounded unnumbered fail-closed audit runner. It reads committed P38-P41 records, classifies the fixed enumeration, and tests null/local-sign promotion mutations without rerunning any historical numbered runner. Its execution provenance pins the pre-registration graph bytes.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_original_cycle_intersection_incidence_ledger.py",
+      "sha256": "52272e0d72d1173c6ff0cf2db0e01fbe769663bceff23044c30a3dfdde9ecc02",
+      "introduced_in_commit": "f6717039718a901572ad43c9ed45d643d644f5cc"
+    },
+    {
+      "id": "artifact:gate1-original-cycle-intersection-incidence-ledger-result",
+      "type": "artifact",
+      "title": "Gate-1 original-cycle intersection incidence ledger raw result",
+      "summary": "Raw-result SSOT: VALID_RUN with scientific ledger verdict INCOMPLETE, typed counts 0/12/2, and payload digest d8721c8e0b1e01940d60f021625fe9cc651a46f361957cd5a2c880ee8be72047.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_ORIGINAL_CYCLE_INTERSECTION_INCIDENCE_LEDGER_RESULT.json",
+      "sha256": "ddfd366af3bf8dba308c8299ac690a9aaf64d0983447b6e6a2cdf52771a18d17",
+      "introduced_in_commit": "5a8ff4a366d2d1246b21a135001185209ce0f936"
     }
   ],
   "edges": [
@@ -36152,7 +36225,22 @@
     {"id":"edge:3783","from":"evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result","relation":"RECORDED_IN","to":"artifact:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-evidence-snapshot"},
     {"id":"edge:3784","from":"evidence:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem-result","relation":"DERIVED_FROM","to":"evidence:raw-c-fixed-box-nonreal-branch-audit-result","note":"Inherits only the hash-pinned branch precondition; the Volterra theorem and endpoint correction bounds are newly derived self-contained controls."},
     {"id":"edge:3785","from":"open:raw-c-p0-complex-tail-theorem-prerequisite","relation":"FOLLOW_UP_TO","to":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","note":"Resolves this prerequisite only on the declared p=0 fixed UHP box."},
-    {"id":"edge:3786","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"FOLLOW_UP_TO","to":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","note":"The theorem supplies actual Q_plus data; the open endpoint problem now begins at p=0 classification/maps and validated Q_plus-to-Q0 transport before M and m(z)."}
+    {"id":"edge:3786","from":"open:raw-c-fixed-box-nonreal-endpoint-certificate","relation":"FOLLOW_UP_TO","to":"concept:raw-c-p0-fixed-uhp-complex-volterra-tail-theorem","note":"The theorem supplies actual Q_plus data; the open endpoint problem now begins at p=0 classification/maps and validated Q_plus-to-Q0 transport before M and m(z)."},
+    {"id":"edge:3787","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"A bounded research-memory audit of existing G1-local records; it is not a new physical intersection computation."},
+    {"id":"edge:3788","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"VALID_WITHIN","to":"scope:gate1-recorded-p38-p41-incidence-items","note":"Exhaustive only over the fourteen predeclared P38-P41 record items, not over a physical global cycle or dual census."},
+    {"id":"edge:3789","from":"scope:gate1-recorded-p38-p41-incidence-items","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"The scope preserves the exact boundary between recorded local witnesses and missing global typed objects."},
+    {"id":"edge:3790","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"PART_OF","to":"concept:gate1-recorded-incidence-eligibility-audit"},
+    {"id":"edge:3791","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"DERIVED_FROM","to":"artifact:gate1-original-cycle-intersection-incidence-ledger-input","note":"The input fixes the fourteen-item enumeration, evidence hashes, eligibility prerequisites and three-state semantics."},
+    {"id":"edge:3792","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"DEFINED_IN","to":"artifact:gate1-original-cycle-intersection-incidence-ledger-runner","note":"The runner performs the classification and independent software mutation checks only; historical numbered runners are not re-executed."},
+    {"id":"edge:3793","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"RECORDED_IN","to":"artifact:gate1-original-cycle-intersection-incidence-ledger-result","note":"The raw result is the single source of truth for the full ledger, provenance and controls; no duplicate evidence snapshot is created."},
+    {"id":"edge:3794","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"DERIVED_FROM","to":"evidence:p38-exact-joint-cycle-identifiability-and-map-guards","note":"Re-expresses the finite-surrogate and conditional-local-basis boundaries without treating either as a physical global pairing."},
+    {"id":"edge:3795","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"DERIVED_FROM","to":"evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census","note":"Indexes the two recorded m=2 local +1 witnesses while retaining their global coefficients as unresolved nulls."},
+    {"id":"edge:3796","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"DERIVED_FROM","to":"evidence:p40-numerical-signed-saddles-odd-response-local-r10-and-mutations","note":"Indexes five recorded m=3 local +1 witnesses without a bounded-chain or global-intersection inference."},
+    {"id":"edge:3797","from":"evidence:gate1-original-cycle-intersection-incidence-ledger-audit","relation":"DERIVED_FROM","to":"evidence:p41-numerical-two-source-response-local-r14-and-controls","note":"Indexes five recorded m=4 local +1 witnesses while preserving the retained tangent-control failure and missing global prerequisites."},
+    {"id":"edge:3798","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"The typed ledger makes the missing source-defined cycle, global K components, common orientation, census and stability fields explicit; it does not resolve them."},
+    {"id":"edge:3799","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"INTEGER=0 counts eligible recorded entries only. It is not a computed zero vector, so Gate 1 remains OPEN_PARTIAL_PROGRESS."},
+    {"id":"edge:3800","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Supplies the mathematical separation between an original integration cycle and upward-cycle intersection coefficients; it supplies no ICE cycle or integer."},
+    {"id":"edge:3801","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"CITES","to":"source:feldbrugge-lehners-turok-2017","note":"Provides a domain-adjacent contour example only; it does not select the ICE action, regulator, original cycle or physical state."}
   ],
   "kg_bridges": [
     {
