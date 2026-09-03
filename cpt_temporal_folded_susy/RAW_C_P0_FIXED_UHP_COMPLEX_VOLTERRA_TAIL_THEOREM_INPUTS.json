@@ -1,0 +1,135 @@
+{
+  "schema_version": "ice.raw-c-p0-fixed-uhp-complex-volterra-tail-theorem.input.v1",
+  "calculation_id": "RawCP0FixedUhpComplexVolterraTailTheorem",
+  "numbered_phase": null,
+  "question": "For p=0, Q>=4 and the fixed upper-half-plane z box, does a self-contained complex Volterra argument define a unique infinity-normalized recessive raw-C solution and give outward enclosures of its value and derivative at Q+=4?",
+  "kind": "BOUNDED_SUPPORTING_COMPLEX_TAIL_THEOREM",
+  "primary_failure": "complex-tail-theorem",
+  "route_review": {
+    "planner_checkpoint": "research-agent:8670d6e3d2cfc1a141c1",
+    "classification": "SUPPORTING_ONLY",
+    "core_gate1_progress": false,
+    "authorization": "user requested continued P4 work; this independent unnumbered unit closes only an explicit supporting prerequisite",
+    "automatic_descendant": false
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/RAW_C_FIXED_BOX_NONREAL_BRANCH_AUDIT_RESULT.json",
+      "sha256": "2149698af3841b3b11f77fc9e17ba8e15a5aba3dcd3122a9a12d1298e3c717ed",
+      "payload_sha256_without_self": "6d08d3dd19ff863aef5e83451a5cd6f5aa1e847e3379ed3a37270ea65cfaf333",
+      "required_verdict": "KEEP_FIXED_UHP_BOX_BRANCH_PRECONDITION_ONLY",
+      "role": "pins the already checked coefficient branch separation; it does not prove the Volterra theorem"
+    }
+  ],
+  "convention_provenance": {
+    "path": "cpt_temporal_folded_susy/RAW_C_NONREAL_WEYL_PROXY_INPUTS.json",
+    "sha256": "a4ddbe579cf3f39704e043cd3ecbe174708e8df199f0e4d1abe3a359ecf176ce",
+    "role": "pins only the raw-C nonreal coefficient convention; no proxy result is used as theorem evidence"
+  },
+  "design_boundary": {
+    "path": "cpt_temporal_folded_susy/RAW_C_NONREAL_ENDPOINT_INTERVAL_CERTIFICATE_BLOCKER.md",
+    "sha256": "fa68311fb5ef1a865587fc7cec59cc6ce489cf79626c05abe29cf4244824dce3",
+    "role": "pins the prior no-run boundary and its list of missing hypotheses"
+  },
+  "primary_sources": [
+    {
+      "id": "NIST:DLMF:2.7(iii)",
+      "title": "Liouville-Green (WKBJ) Approximation",
+      "url": "https://dlmf.nist.gov/2.7#iii",
+      "role": "official real-positive Liouville-Green comparator and terminology only; its theorem is not transferred to this complex coefficient"
+    },
+    {
+      "id": "Olver:AsymptoticsAndSpecialFunctions:1997:Ch6:11-13",
+      "title": "Asymptotics and Special Functions, Chapter 6, sections 11-13",
+      "url": "https://math.nist.gov/opsf/books/olver.html",
+      "role": "standard complex progressive-path comparison; the model-specific Volterra identity and bounds are proved self-contained in the adjacent report"
+    },
+    {
+      "id": "arXiv:1208.4677v2",
+      "title": "Weyl-Titchmarsh Theory for Sturm-Liouville Operators with Distributional Potentials",
+      "url": "https://arxiv.org/abs/1208.4677v2",
+      "role": "singular Weyl-Titchmarsh terminology and nonreal-domain scope only; no m-function, measure, or endpoint theorem is imported"
+    }
+  ],
+  "declared_conventions": {
+    "p": "0",
+    "Q_plus": "4",
+    "Q_domain": "Q>=4 along the real half-line",
+    "z_box": "Re z in [-1/16,1/16], Im z in [15/16,17/16]",
+    "holomorphy_neighborhood": "open disk |z|<9/8, which contains the closed z box",
+    "coefficient": "A(Q,z)=36*pi^4*exp(2Q)+6*pi^2*z*exp(3Q/2)=36*pi^4*exp(2Q)*(1+delta(Q,z))",
+    "relative_perturbation": "delta(Q,z)=z*exp(-Q/2)/(6*pi^2)",
+    "momentum_branch": "p_A(Q,z)=sqrt(A(Q,z))=6*pi^2*exp(Q)*principal_sqrt(1+delta(Q,z)), with Re p_A>0",
+    "liouville_coordinate": "X(Q,z)=integral from 4 to Q of p_A(t,z) dt, so X(4,z)=0",
+    "wkb_recessive_proxy": "u_0(Q,z)=p_A(Q,z)^(-1/2)*exp(-X(Q,z)), using the principal square root of p_A",
+    "normalization": "lim as Q tends to infinity of u(Q,z)/u_0(Q,z)=1",
+    "lg_residual": "r=(p_A^(-1/2))''/p_A^(-1/2)=5*A'^2/(16*A^2)-A''/(4*A)",
+    "volterra_coefficient": "psi=-r/A=(4*A*A''-5*A'^2)/(16*A^3)",
+    "transformed_unknown": "u=p_A^(-1/2)*W(X), H=exp(X)*W",
+    "volterra_equation": "H(Q)=1+(1/2)*integral_Q^infinity [1-exp(-2*(X(s)-X(Q)))]*psi(s)*p_A(s)*H(s) ds",
+    "analytic_eta_bar": "1/336",
+    "residual_majorant": "R_bar=(16+20*eta_bar+9*eta_bar^2)/(64*(1-eta_bar)^2)",
+    "contraction_majorant": "V_bar=R_bar/(6*9*49*(1-eta_bar))",
+    "fixed_point_error_majorant": "q_bar=V_bar/(1-V_bar)",
+    "precision_bits": [128, 256],
+    "execution": "exact SymPy identities and monotone half-line majorants, followed only by outward python-flint acb/arb evaluation of fixed-box Q=4 constants and endpoint rectangles; no ODE, quadrature, root solver, finite-difference, or sampling grid"
+  },
+  "controls": [
+    "Check exact coefficient factorization and the delta derivative identities.",
+    "Prove the fixed real-Q half-line is progressive from a strict principal-branch real-part lower bound uniform on the open parameter disk.",
+    "Check the exact Liouville-Green transform and residual identity.",
+    "Check the exact residual rational form and closed-form L1 kernel majorant.",
+    "Require the rational Volterra operator norm bound V_bar to be strictly below 1 and 1/10000.",
+    "At 128 and 256 bits, outwardly enclose the fixed-box Q=4 branch, WKB pair, V_bar and q_bar; tier overlap is consistency only.",
+    "Apply the self-contained Banach-Volterra proof only after every analytic hypothesis passes, fixing uniqueness in the bounded-H normalized recessive class.",
+    "Outwardly enlarge each WKB component by the proved complex correction radius and require finite value and derivative rectangles."
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 300,
+    "ball_evaluations": 32,
+    "root_calls": 0,
+    "quadratures": 0,
+    "ode_calls": 0,
+    "sampling_points": 0,
+    "finite_difference_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "validated_Qplus_to_Q0_transport": null,
+    "exact_plus_endpoint_to_Q0_boundary_transform": null,
+    "singular_endpoint_nonreal_weyl_function": null,
+    "raw_C_spectral_measure": null,
+    "raw_C_spectral_multiplicity": null,
+    "stieltjes_inversion": null,
+    "raw_C_rigging_test_space": null,
+    "raw_C_rigging_map": null,
+    "raw_C_physical_inner_product": null,
+    "raw_C_RAQ_completion": null,
+    "nonzero_p_uniform_weyl_field": null,
+    "p_to_zero_direct_integral_assembly": null,
+    "quantum_constraint_rescaling_equivalence": null,
+    "selected_H_raw_C_unitary_intertwiner": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "gate1_core_progress": false,
+    "global_promotion": "PROHIBITED",
+    "automatic_next": null
+  },
+  "decision_table": [
+    {
+      "condition": "all eight controls and both scope guards pass",
+      "verdict": "CERTIFY_P0_FIXED_UHP_COMPLEX_TAIL_CONTRACTION_AND_RECESSIVE_QPLUS_ENCLOSURE",
+      "programme_impact": "CLOSE_COMPLEX_TAIL_THEOREM_PREREQUISITE_ONLY; COMPACT_TRANSPORT_AND_WEYL_MEASURE_RAQ_REMAIN_OPEN"
+    },
+    {
+      "condition": "any branch, progressive-path, integrability, contraction, normalization, outward-arithmetic, or scope gate fails",
+      "verdict": "UNRESOLVED_P0_FIXED_UHP_COMPLEX_TAIL",
+      "programme_impact": "DO_NOT_PROMOTE_WKB_OR_PROXY_DATA_TO_AN_ACTUAL_RECESSIVE_ENDPOINT_CERTIFICATE"
+    }
+  ]
+}
