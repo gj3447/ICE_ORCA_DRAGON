@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-03T01:26:22Z",
+  "updated_at_utc": "2026-09-03T02:11:56Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -260,7 +260,7 @@
     },
     {
       "question": "Does Phase 39 compute the cap-chain pairing or close Gate 1?",
-      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared scalar rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A separate q=0 scale audit contradicts only the antipodal Phase-39 half-angle product line. The newest bounded calculation then constructs a different conjugation-compatible asymmetric pair, separated by 2*pi/3, and proves two uniform good scale ends over the Phase-39 compact scalar window and prior finite nonzero-lapse envelope. This narrows the scale-face debt but does not cover scalar infinity, q-dependent mixed corners or a full chain. The ordered scalar, full bosonic and punctured glue/contact controls still do not supply a physical source deformation. The physical joint cycle, zero lapse, p_a gauge/FP/BFV completion, regulator removal, complete census/intersection vector, physics, and TOE remain open or null. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
+      "answer": "No. Phase 39 retains one positive-T saddle and two finite-window local cap-piece candidates with direct declared signs +1. A later non-numbered bounded Gate-1 audit contradicts the unbounded declared scalar rays and excludes every anchor-through homogeneous line delta=q*y on the inherited fixed-a, pure-imaginary-lapse m=2 slice. Exact follow-ups construct and classify a non-equivalent affine scalar family. A separate q=0 scale audit contradicts only the antipodal Phase-39 half-angle product line. A later calculation constructs a different conjugation-compatible asymmetric pair, separated by 2*pi/3, and proves two uniform good scale ends over the Phase-39 compact scalar window and prior finite nonzero-lapse envelope. The newest current-blocker calculation classifies one correlated scale-scalar direction: x=s and q=s*exp(i*psi/2) has a uniform positive action bound, while the x=-s false-signal control has a uniform negative bound. This is one action-decay candidate record only, not an attachment, amplitude/measure result, complete mixed-end census or relative chain. The ordered scalar, full bosonic and punctured glue/contact controls still do not supply a physical source deformation. The physical joint cycle, zero lapse, p_a gauge/FP/BFV completion, regulator removal, complete census/intersection vector, physics, and TOE remain open or null. Gate 1 stays OPEN_PARTIAL_PROGRESS and global promotion is PROHIBITED.",
       "claim_ids": [
         "claim:P39_FROZEN_M2_ACTION_HAS_GENUINE_POSITIVE_T_DISCRETE_JOINT_SADDLE",
         "claim:P39_DECLARED_M2_CAP_PIECES_HAVE_LOCAL_SIX_REAL_PLUS_ONE_CANDIDATES_ON_ONE_FROZEN_K_PATCH",
@@ -275,7 +275,9 @@
         "claim:G1_SINGLE_COMMON_LATERAL_ABSOLUTELY_DAMPS_UNCHANGED_REAL_PA_PPHI_AXES",
         "claim:G1_DECLARED_COMPLEX_BOSONIC_MOMENTUM_RAYS_REPRODUCE_FINITE_M2_PUSHFORWARD",
         "claim:G1_PHASE39_HALF_ANGLE_PRODUCT_SCALE_RAY_HAS_TWO_RELATIVE_GOOD_SCALE_ENDS",
-        "claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW"
+        "claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW",
+        "claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE",
+        "claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND"
       ]
     },
     {
@@ -7655,7 +7657,7 @@
       "id": "open:gate1-original-cycle-signed-global-intersections",
       "type": "open_problem",
       "title": "Gate 1 — transport the original cycle and fix signed global intersections",
-      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared scalar rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The q=0 scale audit separately kills the unchanged antipodal Phase-39 half-angle product line. The later asymmetric-tail calculation proves that a different conjugation-compatible pair, separated by 2*pi/3, has two uniform good scale ends over the compact Phase-39 scalar window and prior finite nonzero-lapse envelope. This narrows only the two scale faces: scalar infinity, unbounded q-dependent fibers and all mixed corners remain uncensused. The finite bosonic canonical and punctured glue/contact controls likewise remove common-lateral and unique-local-source shortcuts without supplying a source-to-thimble deformation or physical determinant line. A source-derived original class must still specify those local-to-source debts plus mixed ends, zero lapse, regulator removal, face/intersection compatibility, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
+      "summary": "Gate 1 remains OPEN_PARTIAL_PROGRESS. The straight-lift audit kills the Phase-39 unbounded declared scalar rays and anchor-through homogeneous delta=q*y class on its fixed-a m=2 slice, while the phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The q=0 scale audit separately kills the unchanged antipodal Phase-39 half-angle product line. The later asymmetric-tail calculation proves that a different conjugation-compatible pair, separated by 2*pi/3, has two uniform good scale ends over the compact Phase-39 scalar window and prior finite nonzero-lapse envelope. A current-blocker calculation now adds exactly one scoped action-decay candidate for the correlated x=s, q=s*exp(i*psi/2) mixed direction and rejects its x=-s sign control. It supplies no connector, amplitude/measure or boundary compactification; scalar infinity, q-dependent fibers and every other mixed ratio, phase and face remain uncensused. The finite bosonic canonical and punctured glue/contact controls likewise remove common-lateral and unique-local-source shortcuts without supplying a source-to-thimble deformation or physical determinant line. A source-derived original class must still specify those local-to-source debts plus mixed ends, zero lapse, regulator removal, face/intersection compatibility, every relevant saddle, upward cycle, sheet, singular divisor, Stokes jump, orientation line, and good end before a complete integer vector can be computed. Global, physical-cycle, physics, and TOE outputs remain null and promotion is PROHIBITED; a complete stable zero vector remains a valid future negative resolution.",
       "state": "OPEN",
       "question": "Does one separately specified regulated original joint relative cycle define a complete orientation-stable signed global intersection vector over all relevant saddles, upward cycles, sheets, singularities, Stokes jumps, and good ends?"
     },
@@ -7849,7 +7851,7 @@
       "id": "open:p38-explicit-joint-action-cycle-and-oriented-intersections",
       "type": "open_problem",
       "title": "Construct the explicit joint action, original cycle, and oriented intersections",
-      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded straight-lift audit kills the Phase-39 unbounded scalar rays and every anchor-through homogeneous delta=qy line on its fixed-a slice, while an exact phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The q=0 scale audit kills only the unchanged antipodal Phase-39 half-angle product line. A later exact calculation constructs a distinct conjugation-compatible asymmetric scale pair and proves two uniform good scale ends over the compact Phase-39 scalar window and prior finite nonzero-lapse envelope. It supplies no scalar-infinity or mixed-corner census, unbounded q-dependent fiber, full relative chain, source selection or orientation. The frozen-m=2 punctured glue/contact audit further shows that current local data do not choose the negative-arm sheet or critical contact. None selects an original/source-derived joint cycle or changes the local +1 records. The remaining debt includes source selection, scalar and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, zero lapse, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
+      "summary": "Phases 39--41 retain frozen m=2, m=3, and m=4 finite-cutoff actions and scoped local cap-piece candidates; the Phase-39 local candidates and signs remain valid in their recorded patch. The later bounded straight-lift audit kills the Phase-39 unbounded scalar rays and every anchor-through homogeneous delta=qy line on its fixed-a slice, while an exact phase-locked construction supplies a non-equivalent scalar fiber with two good ends. The q=0 scale audit kills only the unchanged antipodal Phase-39 half-angle product line. A later exact calculation constructs a distinct conjugation-compatible asymmetric scale pair and proves two uniform good scale ends over the compact Phase-39 scalar window and prior finite nonzero-lapse envelope. A separate current-blocker calculation classifies one diagonal x=s, q=s*exp(i*psi/2) direction as a uniform positive action-decay candidate and its x=-s sign control as uniformly bad. These results supply no attachment, amplitude/measure, complete scalar-infinity or mixed-corner census, unbounded q-dependent fiber, full relative chain, source selection or orientation. The frozen-m=2 punctured glue/contact audit further shows that current local data do not choose the negative-arm sheet or critical contact. None selects an original/source-derived joint cycle or changes the local +1 records. The remaining debt includes source selection, scalar and mixed ends, root/upward-component and boundary exhaustion, exact nonlinear K, a non-Stokes chamber, zero lapse, and cutoff, metric, regulator, anchor, and orientation stability before any bounded-chain sum or global vector. Full-joint extension and the original physical cycle remain unidentified.",
       "state": "OPEN",
       "question": "Can an explicit finite-cutoff joint action and separately specified admissible original cycles be used to compute oriented full-space intersections and a complete, regulator-stable end census without inferring the missing joint data from their lapse projection?"
     },
@@ -15615,6 +15617,92 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR.md",
       "sha256": "1faccd21e39c464fe12b5c1c16b887d96a898c3958680e4071673d21242ae563"
+    },
+    {
+      "id": "scope:gate1-m2-diagonal-mixed-action-tail-paired-control-finite-lapse",
+      "type": "scope",
+      "title": "Gate-1 m=2 diagonal mixed action tail with paired sign control",
+      "summary": "The exact equal-endpoint m=2 action and exp(-S_2) convention on one correlated x=s, q=s*exp(i*psi/2) tail and one x=-s false-signal control over the prior finite nonzero-lapse envelope. This is an action-real-part scope, not an attached relative boundary component or complete end census.",
+      "state": "COMPLETED_SCOPED_ONE_MIXED_ACTION_TAIL_PAIRED_CONTROL_SCOPE",
+      "includes": [
+        "x=s, q=s*exp(i*psi/2) and s>=48 as one positive action-decay candidate",
+        "x=-s with the same q and T and s>=36 as one sign-flipped false-signal control",
+        "1/5<=rho<=6/5 and -pi/2<=psi<=pi/2",
+        "exact uniform real-action bounds and 54 direct original-action controls"
+      ],
+      "excludes": [
+        "attachment or homotopy to the compact Phase-39 chain",
+        "amplitude, determinant, measure or absolute integral convergence",
+        "all other projective ratios, phases, coordinate faces and lapse endpoints",
+        "a complete end, singularity or Stokes census, source/relative cycle, orientation or global vector",
+        "Weyl data, spectral measure, RAQ, empirical, physics and TOE claims"
+      ]
+    },
+    {
+      "id": "claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE",
+      "type": "claim",
+      "title": "One declared m=2 diagonal mixed tail has a uniform positive action bound",
+      "summary": "Supported only for x=s, q=s*exp(i*psi/2), s>=48 and the finite lapse envelope. Exact phase cancellation gives q^2/T=s^2/rho, and direct remainder bounds prove Re(S_2)/s^5>=989*pi^2/122880. This is one action-decay candidate record without a connector, measure, complete census or relative/source cycle.",
+      "state": "SUPPORTED_ON_DECLARED_SINGLE_MIXED_ACTION_TAIL_SCOPE",
+      "claim_id": "G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE",
+      "statement": "For x=s, q=s*exp(i*psi/2), s>=48, 1/5<=rho<=6/5 and |psi|<=pi/2, the exact m=2 action satisfies Re(S_2)>=989*pi^2*s^5/122880>0.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND",
+      "type": "claim",
+      "title": "The sign-flipped m=2 diagonal mixed control has a uniform good action bound",
+      "summary": "Contradicted only for the declared x=-s control with q=s*exp(i*psi/2), s>=36 and the finite lapse envelope. The exact upper bound is Re(S_2)/s^5<=-181*pi^2/69120<0. This tail crosses negative midpoint scale and is a false-signal sign control, not an admissible physical branch.",
+      "state": "CONTRADICTED_ON_DECLARED_SIGN_FLIPPED_CONTROL_SCOPE",
+      "claim_id": "G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND",
+      "statement": "For x=-s, q=s*exp(i*psi/2), s>=36 and the declared finite lapse envelope, the sign-flipped control has a uniform exp(-S_2) good action bound.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:gate1-m2-diagonal-mixed-end-paired-control-result",
+      "type": "evidence",
+      "title": "Gate-1 m=2 diagonal mixed action-end paired-control evidence",
+      "summary": "One clean unnumbered VALID_RUN records 10/10 exact checks, 6/6 numerical controls and 5/5 theorem guards. Exact opposite s^5 coefficients, uniform potential/remainder bounds, 54 original-action samples, one-sided margins and conjugation support one positive action-decay candidate and contradict the sign-flipped good-action proposition while every global output remains null.",
+      "state": "VALID_RUN_SCOPED_MIXED_ACTION_DECAY_CERTIFICATE_INDEPENDENTLY_REVIEWED",
+      "observed_status": "VALID_RUN_10_EXACT_6_NUMERICAL_5_THEOREM_GUARDS",
+      "check_ids": [
+        "G1.m2.diagonal_mixed.input_hashes_route_scope_and_breaker",
+        "G1.m2.diagonal_mixed.general_two_element_action",
+        "G1.m2.diagonal_mixed.scalar_kinetic_phase_cancellation",
+        "G1.m2.diagonal_mixed.opposite_exact_s5_coefficients",
+        "G1.m2.diagonal_mixed.scalar_kinetic_polynomials",
+        "G1.m2.diagonal_mixed.uniform_potential_modulus_bound",
+        "G1.m2.diagonal_mixed.uniform_remainder_component_ledger",
+        "G1.m2.diagonal_mixed.uniform_positive_bound_constants",
+        "G1.m2.diagonal_mixed.uniform_negative_control_constants",
+        "G1.m2.diagonal_mixed.bounds_are_uniform_in_lapse_envelope",
+        "G1.m2.diagonal_mixed.direct_phase_cancellation",
+        "G1.m2.diagonal_mixed.sampled_potential_clears_exact_bound",
+        "G1.m2.diagonal_mixed.positive_tail_direct_action",
+        "G1.m2.diagonal_mixed.sign_flipped_direct_action",
+        "G1.m2.diagonal_mixed.one_sided_bounds_and_convergence",
+        "G1.m2.diagonal_mixed.conjugation_and_resource_counts"
+      ]
+    },
+    {
+      "id": "artifact:gate1-m2-diagonal-mixed-end-paired-control-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 m=2 diagonal mixed action-end paired-control evidence snapshot",
+      "summary": "Schema-valid typed extract of the clean bounded result, including exact and numerical check locators, hashes, independent review, one-tail action-only scope and fail-closed promoted outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-m2-diagonal-mixed-end-paired-control-result.json",
+      "sha256": "9ebb280fe434109021295c3125a9b9dfdb4d5d3ee70f76c143d6e0dd49b09255"
+    },
+    {
+      "id": "artifact:gate1-m2-diagonal-mixed-end-paired-control-report",
+      "type": "artifact",
+      "title": "Gate-1 m=2 diagonal mixed action-end paired-control report",
+      "summary": "Human-readable derivation of the exact phase cancellation, opposite s^5 coefficients, uniform remainder bounds, direct-action controls, graph route and the connector, measure, full-census, source-cycle and global obligations that remain open.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL.md",
+      "sha256": "b78c31298846926cae24aa8bd7a677dc4ab88f4d3224daae8894db51e7285c1b"
     }
   ],
   "edges": [
@@ -35911,7 +35999,20 @@
     {"id":"edge:3751","from":"claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-asymmetric-scale-tail-pair-report"},
     {"id":"edge:3752","from":"claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"The two compact-q scale faces are narrowed positively, while scalar infinity, q-dependent mixed corners, the complete boundary census and every oriented global pairing remain open."},
     {"id":"edge:3753","from":"claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"A sectorially good pair is only candidate end geometry; a source-derived relative class, zero-lapse selection, determinant line and complete dual census are still required."},
-    {"id":"edge:3754","from":"claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the relative good-end framing is reused. The m=2 action, explicit angles and uniform bound are repository calculations, and no thimble basis or original cycle is imported."}
+    {"id":"edge:3754","from":"claim:G1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_HAS_TWO_UNIFORM_GOOD_SCALE_ENDS_ON_COMPACT_Q_WINDOW","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the relative good-end framing is reused. The m=2 action, explicit angles and uniform bound are repository calculations, and no thimble basis or original cycle is imported."},
+    {"id":"edge:3755","from":"scope:gate1-m2-diagonal-mixed-action-tail-paired-control-finite-lapse","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"The scope is one action-decay candidate and one false-signal control for the current G1 end-census blocker, not a complete relative boundary or physical cycle."},
+    {"id":"edge:3756","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"VALID_WITHIN","to":"scope:gate1-m2-diagonal-mixed-action-tail-paired-control-finite-lapse","note":"Support is restricted to x=s, q=s*exp(i*psi/2), s>=48 and the prior finite lapse envelope."},
+    {"id":"edge:3757","from":"claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND","relation":"VALID_WITHIN","to":"scope:gate1-m2-diagonal-mixed-action-tail-paired-control-finite-lapse","note":"The contradiction is restricted to the x=-s sign control with s>=36; it is not a physical negative-scale branch claim."},
+    {"id":"edge:3758","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-diagonal-mixed-end-paired-control-result","polarity":"SUPPORTS"},
+    {"id":"edge:3759","from":"claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-diagonal-mixed-end-paired-control-result","polarity":"CONTRADICTS"},
+    {"id":"edge:3760","from":"evidence:gate1-m2-diagonal-mixed-end-paired-control-result","relation":"RECORDED_IN","to":"artifact:gate1-m2-diagonal-mixed-end-paired-control-evidence-snapshot"},
+    {"id":"edge:3761","from":"evidence:gate1-m2-diagonal-mixed-end-paired-control-result","relation":"DERIVED_FROM","to":"evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards","note":"Inherits only the hash-pinned equal-endpoint m=2 action, boundary values and finite lapse envelope; no Phase-39 runner or local intersection is re-executed."},
+    {"id":"edge:3762","from":"evidence:gate1-m2-diagonal-mixed-end-paired-control-result","relation":"DERIVED_FROM","to":"evidence:gate1-m2-asymmetric-scale-tail-pair-result","note":"Uses the independently rebuilt general-q action and the prior compact-q versus mixed-infinity scope boundary; it does not extend the compact face-attached rays."},
+    {"id":"edge:3763","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-diagonal-mixed-end-paired-control-report"},
+    {"id":"edge:3764","from":"claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-diagonal-mixed-end-paired-control-report"},
+    {"id":"edge:3765","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"One mixed action-decay candidate is classified; all other ratios, phases, faces, connectors, amplitudes and oriented pairings remain to be exhausted."},
+    {"id":"edge:3766","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The current blocker gains one scoped candidate record only. A source-defined complete relative cycle and orientation-stable global vector remain missing."},
+    {"id":"edge:3767","from":"claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Only the action-decay criterion motivating relative good ends is reused. No full relative pair, thimble basis or source cycle is imported."}
   ],
   "kg_bridges": [
     {
@@ -36679,6 +36780,26 @@
       "checked_at_utc": "2026-09-03T01:26:22Z",
       "lookup_key": "ICE Gate 1 m2 asymmetric scale tail pair compact q finite lapse uniform good ends",
       "note": "No authorized exact external correspondence or writer is available. The repository-local result supports only two explicit scale ends over a compact scalar and finite-lapse window; it supplies no full relative chain, global intersection, Weyl, RAQ, physics or TOE claim, and no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_M2_DECLARED_DIAGONAL_MIXED_TAIL_HAS_UNIFORM_GOOD_ACTION_BOUND_ON_FINITE_LAPSE_ENVELOPE",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-09-03T02:11:56Z",
+      "lookup_key": "ICE Gate 1 m2 diagonal scale scalar mixed tail finite lapse uniform positive action bound",
+      "note": "No authorized exact external correspondence or writer is available. The repository-local result supports one action-decay candidate direction only and supplies no connector, measure, complete end census, relative/source cycle, global intersection, Weyl, RAQ, physics or TOE claim; no external UID was invented."
+    },
+    {
+      "local_node_id": "claim:G1_M2_SIGN_FLIPPED_DIAGONAL_MIXED_CONTROL_HAS_UNIFORM_GOOD_ACTION_BOUND",
+      "system": "SYMPOSIUM",
+      "external_uid": null,
+      "relation": null,
+      "status": "UNRESOLVED",
+      "checked_at_utc": "2026-09-03T02:11:56Z",
+      "lookup_key": "ICE Gate 1 m2 sign flipped diagonal mixed action tail negative false signal control",
+      "note": "No authorized exact external correspondence or writer is available. The contradicted proposition is a repository-local sign control through negative midpoint scale, not an admissible physical branch or general mixed-end no-go; no external UID was invented."
     }
   ]
 }

@@ -1,0 +1,946 @@
+{
+  "schema_version": "ice.gate1-m2-diagonal-mixed-end-paired-control.result.v1",
+  "result_id": "GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL_20260903",
+  "calculation_id": "Gate1M2DiagonalMixedEndPairedControl",
+  "numbered_phase": null,
+  "generated_at_utc": "2026-09-03T02:05:47.462348+00:00",
+  "run_status": "VALID_RUN",
+  "verdict": "KEEP_SCOPED_DIAGONAL_MIXED_ACTION_END_WITH_SIGN_CONTROL",
+  "control_verdict": "KILL_SIGN_FLIPPED_DIAGONAL_MIXED_ACTION_END",
+  "programme_impact": "ONE_SCOPED_MIXED_ACTION_DECAY_RECORD_SUPPORTED; COMPLETE_CENSUS_AND_SOURCE_CYCLE_OPEN",
+  "scientific_status": {
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_promotion": "PROHIBITED",
+    "new_physics": false
+  },
+  "graph_route_review": {
+    "planner_checkpoint_id": "research-agent:ba782db61c0f82ed34b3",
+    "planner_classification": "CURRENT_BLOCKER_CANDIDATE",
+    "selected_anchor": "open:gate1-original-cycle-signed-global-intersections",
+    "anti_meandering_checks_passed": true,
+    "missing_typed_object": "One declared mixed-infinity action-decay candidate record, including its sign and scope, for the incomplete Gate-1 end census.",
+    "bounded_output": "An exact uniform real-action bound for one positive diagonal mixed tail plus direct original-action samples.",
+    "false_signal_control": "The same scalar/lapse correlation with x=-s must have the opposite leading sign and a uniform bad-action bound.",
+    "human_review_basis": "The user explicitly requested continuation of the next realistic task; this design keeps that work on the retrieved current Gate-1 blocker.",
+    "planner_grants_execution_authority": false
+  },
+  "scope": {
+    "included": [
+      "the exact equal-endpoint m=2 action",
+      "rho in [1/5,6/5] and psi in [-pi/2,pi/2]",
+      "one positive diagonal x=s, q=s*exp(i*psi/2), s>=48",
+      "one sign-flipped x=-s control with identical q and T, s>=36",
+      "action real-part decay and 54 original-action control samples"
+    ],
+    "excluded": [
+      "attachment or homotopy to the compact Phase-39 chain",
+      "amplitude, determinant, measure or absolute integral convergence",
+      "all other projective ratios, phases, coordinate faces and lapse endpoints",
+      "the complete mixed/end/singularity/Stokes census",
+      "a full relative/source cycle, orientation or signed global intersections",
+      "Weyl m(z), spectral measure, RAQ, physics or TOE"
+    ]
+  },
+  "exact_calculation": {
+    "action": "2*pi**2*T*(V_Phi*(a + x/2)**3 - 3*a - 3*x/2) + 4*pi**2*q**2*(a + x/2)**3/T - 24*pi**2*x**2*(a + x/2)/T",
+    "phase_cancellation": "q^2/T=s^2/rho",
+    "positive_scalar_kinetic_polynomial": "4*pi**2*a**3*s**2/rho + 6*pi**2*a**2*s**3/rho + 3*pi**2*a*s**4/rho + pi**2*s**5/(2*rho)",
+    "negative_scalar_kinetic_polynomial": "4*pi**2*a**3*s**2/rho - 6*pi**2*a**2*s**3/rho + 3*pi**2*a*s**4/rho - pi**2*s**5/(2*rho)",
+    "positive_leading_coefficient": "pi**2/(2*rho)",
+    "negative_control_leading_coefficient": "-pi**2/(2*rho)",
+    "potential_modulus_strict_upper": "27/16",
+    "positive_tail_bound": "Re(S_2)/s^5 >= pi^2*(5/12-(150633/160)/s^2) >= 989*pi^2/122880 for s>=48",
+    "negative_control_bound": "Re(S_2)/s^5 <= pi^2*(-5/96+(10257/160)/s^2) <= -181*pi^2/69120 for s>=36"
+  },
+  "checks": {
+    "exact": [
+      {
+        "id": "G1.m2.diagonal_mixed.input_hashes_route_scope_and_breaker",
+        "passed": true,
+        "statement": "The input, upstream evidence, current-blocker route, unnumbered scope and fail-closed outputs are hash-pinned.",
+        "input_sha256": "ed4d7835c3672832b522c50b2e774afab161df45163bdd361651ea3ffdc94057",
+        "upstream_count": 5,
+        "planner_checkpoint_id": "research-agent:ba782db61c0f82ed34b3"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.general_two_element_action",
+        "passed": true,
+        "statement": "The general-q equal-endpoint action is rebuilt from its two elements before a tail is substituted.",
+        "action": "2*pi**2*T*(V_Phi*(a + x/2)**3 - 3*a - 3*x/2) + 4*pi**2*q**2*(a + x/2)**3/T - 24*pi**2*x**2*(a + x/2)/T"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.scalar_kinetic_phase_cancellation",
+        "passed": true,
+        "statement": "The declared q and T phases cancel exactly: q^2/T=s^2/rho>0.",
+        "q_squared_over_T": "s**2/rho"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.opposite_exact_s5_coefficients",
+        "passed": true,
+        "statement": "The positive diagonal and sign-flipped control have exact opposite s^5 coefficients.",
+        "positive_diagonal_s5": "pi**2/(2*rho)",
+        "sign_flipped_s5": "-pi**2/(2*rho)"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.scalar_kinetic_polynomials",
+        "passed": true,
+        "statement": "The full scalar-kinetic polynomials are recorded, so the leading signs are not fitted from samples."
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.uniform_potential_modulus_bound",
+        "passed": true,
+        "statement": "On the declared sector Re(Phi)>1; exact rational inequalities give |exp(-kappa*Phi)|<1/2 and hence |V(Phi)|<27/16.",
+        "exp_4_over_5_series_lower": "1389/625",
+        "potential_modulus_strict_upper": "27/16"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.uniform_remainder_component_ledger",
+        "passed": true,
+        "statement": "Every scale-kinetic, lapse-linear and bounded-potential remainder constant is reconstructed from the declared envelope and midpoint bounds.",
+        "plus_scale": "540",
+        "plus_lapse_linear": "162/5",
+        "plus_lapse_potential": "59049/160",
+        "minus_scale": "60",
+        "minus_lapse": "657/160"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.uniform_positive_bound_constants",
+        "passed": true,
+        "statement": "For s>=48, Re(S_2)/s^5 exceeds the uniform positive floor 989*pi^2/122880.",
+        "remainder_bound": "|Re(S_2-P_plus)| < pi^2*(150633/160)*s^3",
+        "normalized_real_action_floor": "989/122880",
+        "threshold": "48"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.uniform_negative_control_constants",
+        "passed": true,
+        "statement": "For s>=36, Re(S_2)/s^5 is below the uniform negative ceiling -181*pi^2/69120 on the sign-flipped control.",
+        "remainder_bound": "|Re(S_2-P_minus)| < pi^2*(10257/160)*s^3",
+        "normalized_real_action_ceiling": "-181/69120",
+        "threshold": "36"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.bounds_are_uniform_in_lapse_envelope",
+        "passed": true,
+        "statement": "The proof uses only rho in [1/5,6/5], |psi|<=pi/2, a_boundary<4 and the two displayed tail thresholds."
+      }
+    ],
+    "numerical": [
+      {
+        "id": "G1.m2.diagonal_mixed.direct_phase_cancellation",
+        "passed": true,
+        "statement": "Every sampled original-action input has q^2/T=s^2/rho to high precision.",
+        "maximum_relative_residual": "9.9083850895212503405e-82"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.sampled_potential_clears_exact_bound",
+        "passed": true,
+        "statement": "Every directly evaluated Starobinsky midpoint potential clears the exact 27/16 modulus bound.",
+        "maximum_modulus": "0.75"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.positive_tail_direct_action",
+        "passed": true,
+        "statement": "All positive-diagonal original-action samples are positive and converge to pi^2/(2rho).",
+        "minimum_scaled_real_action": "4.11508591544112058025796322457",
+        "maximum_final_relative_error": "0.00066892469680612297771"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.sign_flipped_direct_action",
+        "passed": true,
+        "statement": "All sign-flipped original-action samples are negative and converge to -pi^2/(2rho).",
+        "maximum_scaled_real_action": "-4.06846422556604781654090956654",
+        "maximum_final_relative_error": "0.00066864994057497594712"
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.one_sided_bounds_and_convergence",
+        "passed": true,
+        "statement": "Every original-action sample lies on the certified side of its one-sided bound and every leading-coefficient error decreases strictly.",
+        "minimum_bound_margin": "0.00275982234472288076",
+        "sequences": 18
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.conjugation_and_resource_counts",
+        "passed": true,
+        "statement": "The two lapse arms are conjugate within the predeclared tolerance and exactly 54 original-action samples are used.",
+        "maximum_relative_conjugation_residual": "0.0",
+        "sampling_points": 54
+      }
+    ],
+    "theorem_guards": [
+      {
+        "id": "G1.m2.diagonal_mixed.guard.positive_tail_uniform_good_action_end",
+        "verified": true,
+        "theorem": "Uniform direct real-action lower bound",
+        "hypotheses": "x=s, q=s*exp(i*psi/2), T=rho*exp(i*psi), s>=48, rho in [1/5,6/5], |psi|<=pi/2 and exp(-S_2).",
+        "conclusion_and_scope": "Re(S_2)>=(989*pi^2/122880)*s^5>0, so this one declared action tail is uniformly good."
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.guard.sign_flipped_control_uniformly_bad",
+        "verified": true,
+        "theorem": "Uniform direct real-action upper bound",
+        "hypotheses": "x=-s with the same q, T and lapse envelope, s>=36; the midpoint scale is negative but the polynomial action has no T-nonzero divisor there.",
+        "conclusion_and_scope": "Re(S_2)<=(-181*pi^2/69120)*s^5<0, so the paired control is uniformly bad and detects the expected sign reversal."
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.guard.bound_derivation_scope",
+        "verified": true,
+        "theorem": "Dominant term plus uniform remainder comparison",
+        "hypotheses": "The scalar kinetic term is kept exactly. The scale kinetic and Starobinsky terms are bounded using the finite lapse envelope, |V|<27/16 and the declared midpoint-scale inequalities.",
+        "conclusion_and_scope": "Only the two declared one-parameter tails are classified; no other projective ratio, scalar phase or coordinate face is exhausted."
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.guard.not_newton_or_full_relative_homology",
+        "verified": true,
+        "theorem": "Direct tail bound without imported global homology",
+        "hypotheses": "The phase contains the Starobinsky exponential and no compactification, normal-crossing divisor, good meromorphic connection or source cycle is supplied.",
+        "conclusion_and_scope": "The words good action end describe the proved real-part bound only; no Newton theorem, Hien rapid-decay group or Witten thimble basis is inferred."
+      },
+      {
+        "id": "G1.m2.diagonal_mixed.guard.current_blocker_but_no_global_promotion",
+        "verified": true,
+        "theorem": "Fail-closed current-blocker contribution",
+        "hypotheses": "The graph route identifies one scoped action-decay candidate record for the current G1 blocker.",
+        "conclusion_and_scope": "The complete census, connector, amplitude/measure, source/relative cycle, global intersections and all downstream physics outputs remain null."
+      }
+    ],
+    "counts": {
+      "exact_passed": 10,
+      "numerical_passed": 6,
+      "theorem_guards_verified": 5,
+      "sampling_points": 54
+    }
+  },
+  "numerical_control": {
+    "precision_digits": 80,
+    "records": [
+      {
+        "rho": "1/5",
+        "psi_over_pi": "-1/2",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "24.6740110027233965470862274997",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "24.9389758606855627734264618737",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.010738621212940235068",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "20.828963643752104953"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "24.7400753833120314820095503189",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.0026774884951353499843",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "20.627885400578159658"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "24.6905160580523842375151127926",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.00066892469680612297771",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "20.578189964955986538"
+          }
+        ]
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "-1/2",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-24.6740110027233965470862274997",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-24.4109295739560397417691774305",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.010662288702810384784",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "23.897045853897753314"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-24.6080643364594372009768536995",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.0026727177132522343415",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "24.09403232655885296"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-24.6575133045397010809582140204",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.00066862652293842825004",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "24.143472026523973227"
+          }
+        ]
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "0",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "24.6740110027233965470862274997",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "24.938827382096287024575483304",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.010732603602375849711",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "20.828815165162829204"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "24.7400661281056709401712347341",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.0026771133957500283074",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "20.627876145371799116"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "24.690515479988011833082560337",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.00066890126873954958481",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "20.578189386891614134"
+          }
+        ]
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "0",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-24.6740110027233965470862274997",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-24.4107821494746879694375186956",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.010668263591989752514",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "23.896898429416401542"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-24.6080550977235130556035325606",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.0026730921451159117002",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "24.094023087822928815"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-24.6575127267326792453027824547",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.00066864994057497594712",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "24.143471448716951391"
+          }
+        ]
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "1/2",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "24.6740110027233965470862274997",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "24.9389758606855627734264618737",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.010738621212940235068",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "20.828963643752104953"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "24.7400753833120314820095503189",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.0026774884951353499843",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "20.627885400578159658"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "24.6905160580523842375151127926",
+            "expected_leading_coefficient": "24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.00066892469680612297771",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "20.578189964955986538"
+          }
+        ]
+      },
+      {
+        "rho": "1/5",
+        "psi_over_pi": "1/2",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-24.6740110027233965470862274997",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-24.4109295739560397417691774305",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.010662288702810384784",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "23.897045853897753314"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-24.6080643364594372009768536995",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.0026727177132522343415",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "24.09403232655885296"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-24.6575133045397010809582140204",
+            "expected_leading_coefficient": "-24.6740110027233965470862274997",
+            "relative_leading_coefficient_error": "0.00066862652293842825004",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "24.143472026523973227"
+          }
+        ]
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "-1/2",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "7.04971742934954187059606499991",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "7.12542167448158936383613196393",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.010738621212940235068",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "3.0154094575481315435"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "7.06859296666058042343130009113",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.0026774884951353499843",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "2.9564029839267085992"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "7.05443315944353835357574651218",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.00066892469680612297771",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "2.9421070663471406541"
+          }
+        ]
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "-1/2",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-7.04971742934954187059606499991",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-6.974551306844582783362622123",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.010662288702810384784",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "6.4606675867862963556"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-7.03087552470269634313624391414",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.0026727177132522343415",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "6.5168435148021121026"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-7.04500380129705745170234686298",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.00066862652293842825004",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "6.5309625232813295979"
+          }
+        ]
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "0",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "7.04971742934954187059606499991",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "7.1253795526300435876148910118",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.010732646242742080234",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "3.0153673356965857673"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "7.06859034095379294304385147773",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.0026771160395279026579",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "2.9564003582199211188"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "7.0544329954448238383928434748",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.00066890143364470427747",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "2.9421069023484261389"
+          }
+        ]
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "0",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-7.04971742934954187059606499991",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-6.97450947980189442359716297765",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.010668221854473205266",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "6.4606257597436079959"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-7.03087290360229755504249714874",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.0026730895154450252",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "6.5168408937017133145"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-7.0450036373703177601247766477",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.00066864977589024290208",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "6.5309623593545899063"
+          }
+        ]
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "1/2",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "7.04971742934954187059606499991",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "7.12542167448158936383613196393",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.010738621212940235068",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "3.0154094575481315435"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "7.06859296666058042343130009113",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.0026774884951353499843",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "2.9564029839267085992"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "7.05443315944353835357574651218",
+            "expected_leading_coefficient": "7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.00066892469680612297771",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "2.9421070663471406541"
+          }
+        ]
+      },
+      {
+        "rho": "7/10",
+        "psi_over_pi": "1/2",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-7.04971742934954187059606499991",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-6.974551306844582783362622123",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.010662288702810384784",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "6.4606675867862963556"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-7.03087552470269634313624391414",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.0026727177132522343415",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "6.5168435148021121026"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-7.04500380129705745170234686298",
+            "expected_leading_coefficient": "-7.04971742934954187059606499991",
+            "relative_leading_coefficient_error": "0.00066862652293842825004",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "6.5309625232813295979"
+          }
+        ]
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "-1/2",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "4.11233516712056609118103791662",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "4.15649597678092712890441031229",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.010738621212940235068",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "0.046483759847469308593"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "4.12334589721867191366825838649",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.0026774884951353499843",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "0.011155914484800089417"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "4.11508600967539737291918546544",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.00066892469680612297771",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "0.0027599165789996734212"
+          }
+        ]
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "-1/2",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-4.11233516712056609118103791662",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-4.06848826232600662362819623842",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.010662288702810384784",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "3.5546045422677201959"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-4.10134405607657286682947561658",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.0026727177132522343415",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "3.5873120461759886263"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-4.10958555075661684682636900341",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.00066862652293842825004",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "3.595544272740888993"
+          }
+        ]
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "0",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "4.11233516712056609118103791662",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "4.15647177588731144665416919223",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.010732736261293011337",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "0.046459558953853626343"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "4.12334438850859186213044416424",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.0026771216208367485091",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "0.011154405774720037879"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "4.11508591544112058025796322457",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.00066890178177780862863",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "0.00275982234472288076"
+          }
+        ]
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "0",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-4.11233516712056609118103791662",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-4.06846422556604781654090956654",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.010668133741938272186",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "3.5545805055077613888"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-4.10134254993108170995736299861",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.0026730839639175981442",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "3.5873105400304974694"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-4.10958545656241175613843045991",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.00066864942822247314033",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "3.5955441785466839023"
+          }
+        ]
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "1/2",
+        "tail": "positive_diagonal",
+        "x_sign": 1,
+        "expected_leading_coefficient": "4.11233516712056609118103791662",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "4.15649597678092712890441031229",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.010738621212940235068",
+            "certified_one_sided_bound": "4.1100122169334578203109896418",
+            "one_sided_bound_margin": "0.046483759847469308593"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "4.12334589721867191366825838649",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.0026774884951353499843",
+            "certified_one_sided_bound": "4.11218998273387182425165989944",
+            "one_sided_bound_margin": "0.011155914484800089417"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "4.11508600967539737291918546544",
+            "expected_leading_coefficient": "4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.00066892469680612297771",
+            "certified_one_sided_bound": "4.11232609309639769949795179054",
+            "one_sided_bound_margin": "0.0027599165789996734212"
+          }
+        ]
+      },
+      {
+        "rho": "6/5",
+        "psi_over_pi": "1/2",
+        "tail": "sign_flipped",
+        "x_sign": -1,
+        "expected_leading_coefficient": "-4.11233516712056609118103791662",
+        "errors_strictly_decrease": true,
+        "sequence": [
+          {
+            "tail_parameter": 2000,
+            "scaled_real_action_over_s5": "-4.06848826232600662362819623842",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.010662288702810384784",
+            "certified_one_sided_bound": "-0.51388372005828642772364007493",
+            "one_sided_bound_margin": "3.5546045422677201959"
+          },
+          {
+            "tail_parameter": 8000,
+            "scaled_real_action_over_s5": "-4.10134405607657286682947561658",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.0026727177132522343415",
+            "certified_one_sided_bound": "-0.514032009900584240543005385536",
+            "one_sided_bound_margin": "3.5873120461759886263"
+          },
+          {
+            "tail_parameter": 32000,
+            "scaled_real_action_over_s5": "-4.10958555075661684682636900341",
+            "expected_leading_coefficient": "-4.11233516712056609118103791662",
+            "relative_leading_coefficient_error": "0.00066862652293842825004",
+            "certified_one_sided_bound": "-0.514041278015727853844215717449",
+            "one_sided_bound_margin": "3.595544272740888993"
+          }
+        ]
+      }
+    ]
+  },
+  "computed_facts": [
+    "The declared positive diagonal has a uniform Re(S_2)>0 lower bound growing as s^5 on the finite lapse envelope.",
+    "The sign-flipped diagonal has a uniform Re(S_2)<0 upper bound decreasing as -s^5 on the same envelope.",
+    "The paired direct original-action evaluator reproduces the opposite leading coefficients and lapse-arm conjugation."
+  ],
+  "interpretation": [
+    "One scoped action-decay candidate can be recorded for the incomplete mixed-end census.",
+    "The opposite-sign control reduces the chance that phase cancellation or complex-real-part bookkeeping created a false positive.",
+    "One direction is not a connector, a complete census, a relative chain or an intersection number."
+  ],
+  "open_problems": [
+    "enumerate all weighted scale-scalar ratios, scalar phases and coordinate-face escapes",
+    "construct attachments and a homotopy from a source-defined regulated original cycle",
+    "include amplitude, determinant/Pfaffian line, measure and lapse endpoint data",
+    "complete saddle, singularity, Stokes, upward-cycle and oriented intersection census",
+    "keep Weyl, spectral measure, RAQ, observable, likelihood, physics and TOE claims separate"
+  ],
+  "required_fail_closed_outputs": {
+    "connection_to_compact_phase39_chain": null,
+    "tail_amplitude_or_measure_absolute_convergence": null,
+    "complete_mixed_end_census": null,
+    "all_ratio_or_phase_end_admissibility": null,
+    "q_dependent_scale_tail_family": null,
+    "admissible_full_joint_completion": null,
+    "full_relative_homology_class": null,
+    "source_defined_joint_relative_cycle": null,
+    "source_to_thimble_deformation": null,
+    "physical_original_cycle": null,
+    "lapse_infinite_end_admissibility": null,
+    "zero_lapse_extension": null,
+    "full_joint_orientation": null,
+    "absolute_determinant_pfaffian_line": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "singular_endpoint_nonreal_weyl_m": null,
+    "spectral_measure": null,
+    "RAQ_completion": null,
+    "physics_claim": null,
+    "TOE_claim": null,
+    "global_promotion": "PROHIBITED",
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "automatic_next": null
+  },
+  "provenance": {
+    "command": "./ice run gate1_m2_diagonal_mixed_end_paired_control",
+    "input_manifest": {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL_INPUTS.json",
+      "sha256": "ed4d7835c3672832b522c50b2e774afab161df45163bdd361651ea3ffdc94057"
+    },
+    "runner": {
+      "path": "cpt_temporal_folded_susy/gate1_m2_diagonal_mixed_end_paired_control.py",
+      "sha256": "55172b2dc4324660ebfd734fda2b841d5966cacc187f0089ed919d0e0de19ea5"
+    },
+    "upstream_evidence": [
+      {
+        "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+        "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+        "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_INPUTS.json",
+        "sha256": "aa7021ec68c1910ae458bfbab7cdf13e4d3234ade93fbdbaf9484f6586c270ce"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR_RESULT.json",
+        "sha256": "36fdf578fc249b154d626b8baa341907c27998562c53d346402009bad45d2930"
+      },
+      {
+        "path": "cpt_temporal_folded_susy/GATE1_M2_ASYMMETRIC_SCALE_TAIL_PAIR.md",
+        "sha256": "1faccd21e39c464fe12b5c1c16b887d96a898c3958680e4071673d21242ae563"
+      }
+    ],
+    "environment": {
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41"
+    },
+    "resource_caps": {
+      "wall_clock_seconds": 120,
+      "stdout_bytes": 262144,
+      "stderr_bytes": 262144,
+      "changed_artifact_files": 12,
+      "changed_artifact_bytes": 1000000,
+      "symbolic_operations": 160,
+      "quadratures": 0,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "sampling_points": 54,
+      "automatic_descendants": 0
+    }
+  },
+  "primary_sources": [
+    {
+      "id": "arXiv:1001.2933v4",
+      "title": "Analytic Continuation Of Chern-Simons Theory",
+      "url": "https://arxiv.org/abs/1001.2933",
+      "pinpoint": "section 3",
+      "role": "Relative good-end language only. With I=-S_2, the declared tail must satisfy Re(S_2) tending uniformly to positive infinity. This source does not supply the model, tail, full relative pair, thimble basis or original cycle."
+    },
+    {
+      "id": "arXiv:math/0505474",
+      "title": "Periods for rank 1 irregular singular connections on surfaces",
+      "url": "https://arxiv.org/abs/math/0505474",
+      "role": "Boundary comparator only. Its rapid-decay homology requires compactification, a normal-crossing divisor and a good meromorphic irregular connection, none of which is constructed here."
+    }
+  ],
+  "automatic_next": null,
+  "integrity": {
+    "canonicalization": "UTF-8 JSON, sorted keys, compact separators, allow_nan=false",
+    "canonical_payload_sha256_excluding_digest": "d932d09a115246eb0974f2e4530a5bd104160986e98be7db06558c863ee18647"
+  }
+}

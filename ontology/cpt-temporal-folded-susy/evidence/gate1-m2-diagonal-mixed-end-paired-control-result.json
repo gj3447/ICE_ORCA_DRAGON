@@ -1,0 +1,218 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL_20260903",
+  "phase": null,
+  "observed_at_utc": "2026-09-03T02:05:47Z",
+  "command": "./ice run gate1_m2_diagonal_mixed_end_paired_control",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_m2_diagonal_mixed_end_paired_control.py",
+    "sha256": "55172b2dc4324660ebfd734fda2b841d5966cacc187f0089ed919d0e0de19ea5",
+    "introduced_in_commit": "65344030ea690c08ec046aa408d36eb0cef6c0c3"
+  },
+  "exact_checks": 10,
+  "checks": [
+    {
+      "id": "G1.m2.diagonal_mixed.input_hashes_route_scope_and_breaker",
+      "status": "PASS",
+      "statement": "The input, upstream evidence, current-blocker route, unnumbered scope and fail-closed outputs are hash-pinned."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.general_two_element_action",
+      "status": "PASS",
+      "statement": "The general-q equal-endpoint action is rebuilt from its two elements before a tail is substituted."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.scalar_kinetic_phase_cancellation",
+      "status": "PASS",
+      "statement": "The declared q and T phases cancel exactly: q^2/T=s^2/rho>0."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.opposite_exact_s5_coefficients",
+      "status": "PASS",
+      "statement": "The positive diagonal and sign-flipped control have exact opposite s^5 coefficients."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.scalar_kinetic_polynomials",
+      "status": "PASS",
+      "statement": "The full scalar-kinetic polynomials are recorded, so the leading signs are not fitted from samples."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.uniform_potential_modulus_bound",
+      "status": "PASS",
+      "statement": "On the declared sector Re(Phi)>1; exact rational inequalities give |exp(-kappa*Phi)|<1/2 and hence |V(Phi)|<27/16."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.uniform_remainder_component_ledger",
+      "status": "PASS",
+      "statement": "Every scale-kinetic, lapse-linear and bounded-potential remainder constant is reconstructed from the declared envelope and midpoint bounds."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.uniform_positive_bound_constants",
+      "status": "PASS",
+      "statement": "For s>=48, Re(S_2)/s^5 exceeds the uniform positive floor 989*pi^2/122880."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.uniform_negative_control_constants",
+      "status": "PASS",
+      "statement": "For s>=36, Re(S_2)/s^5 is below the uniform negative ceiling -181*pi^2/69120 on the sign-flipped control."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.bounds_are_uniform_in_lapse_envelope",
+      "status": "PASS",
+      "statement": "The proof uses only rho in [1/5,6/5], |psi|<=pi/2, a_boundary<4 and the two displayed tail thresholds."
+    }
+  ],
+  "numerical_checks": 6,
+  "numerical": [
+    {
+      "id": "G1.m2.diagonal_mixed.direct_phase_cancellation",
+      "status": "PASS",
+      "statement": "Every sampled original-action input has q^2/T=s^2/rho to high precision."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.sampled_potential_clears_exact_bound",
+      "status": "PASS",
+      "statement": "Every directly evaluated Starobinsky midpoint potential clears the exact 27/16 modulus bound."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.positive_tail_direct_action",
+      "status": "PASS",
+      "statement": "All positive-diagonal original-action samples are positive and converge to pi^2/(2rho)."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.sign_flipped_direct_action",
+      "status": "PASS",
+      "statement": "All sign-flipped original-action samples are negative and converge to -pi^2/(2rho)."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.one_sided_bounds_and_convergence",
+      "status": "PASS",
+      "statement": "Every original-action sample lies on the certified side of its one-sided bound and every leading-coefficient error decreases strictly."
+    },
+    {
+      "id": "G1.m2.diagonal_mixed.conjugation_and_resource_counts",
+      "status": "PASS",
+      "statement": "The two lapse arms are conjugate within the predeclared tolerance and exactly 54 original-action samples are used."
+    }
+  ],
+  "payload": {
+    "exact_checks": 10,
+    "numerical_checks": 6,
+    "calculation": {
+      "calculation_id": "Gate1M2DiagonalMixedEndPairedControl",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "KEEP_SCOPED_DIAGONAL_MIXED_ACTION_END_WITH_SIGN_CONTROL",
+      "control_verdict": "KILL_SIGN_FLIPPED_DIAGONAL_MIXED_ACTION_END",
+      "epistemic_status": "SCOPED_ONE_MIXED_ACTION_DECAY_CANDIDATE_WITH_FALSE_SIGNAL_CONTROL",
+      "programme_impact": "ONE_SCOPED_MIXED_ACTION_DECAY_RECORD_SUPPORTED; COMPLETE_CENSUS_AND_SOURCE_CYCLE_OPEN"
+    },
+    "graph_route_review": {
+      "planner_checkpoint_id": "research-agent:ba782db61c0f82ed34b3",
+      "planner_classification": "CURRENT_BLOCKER_CANDIDATE",
+      "selected_anchor": "open:gate1-original-cycle-signed-global-intersections",
+      "anti_meandering_checks_passed": true,
+      "planner_granted_execution_authority": false
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL_INPUTS.json",
+      "input_manifest_sha256": "ed4d7835c3672832b522c50b2e774afab161df45163bdd361651ea3ffdc94057",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL_RESULT.json",
+      "raw_result_outer_sha256": "089962d1f2452e4906eb103ab647bf305aeec72cf02d621727d977829d5f7ca9",
+      "raw_result_payload_sha256_without_self": "d932d09a115246eb0974f2e4530a5bd104160986e98be7db06558c863ee18647",
+      "raw_result_size_bytes": 45126,
+      "report_path": "cpt_temporal_folded_susy/GATE1_M2_DIAGONAL_MIXED_END_PAIRED_CONTROL.md",
+      "report_sha256": "b78c31298846926cae24aa8bd7a677dc4ab88f4d3224daae8894db51e7285c1b",
+      "runner_definition_commit": "65344030ea690c08ec046aa408d36eb0cef6c0c3"
+    },
+    "scope": {
+      "status": "ONE_DIAGONAL_MIXED_ACTION_TAIL_AND_SIGN_FLIPPED_CONTROL_ON_FINITE_LAPSE_ENVELOPE_ONLY",
+      "includes": [
+        "the exact equal-endpoint m=2 action and exp(-S_2) convention",
+        "rho in [1/5,6/5] and psi in [-pi/2,pi/2]",
+        "x=s, q=s*exp(i*psi/2), s>=48 as one positive action-decay candidate",
+        "x=-s with the same q and T, s>=36 as a false-signal sign control",
+        "exact uniform bounds and 54 independent original-action controls"
+      ],
+      "excludes": [
+        "attachment or homotopy to the compact Phase-39 chain",
+        "amplitude, determinant, measure or absolute integral convergence",
+        "all other projective ratios, phases, faces and lapse endpoints",
+        "a complete end/singularity/Stokes census, source/relative cycle, orientation or global intersection vector",
+        "Weyl data, spectral measure, RAQ, empirical, physics and TOE claims"
+      ]
+    },
+    "computed_facts": {
+      "exact_phase_cancellation": "q^2/T=s^2/rho",
+      "positive_leading_coefficient": "+pi^2/(2*rho)",
+      "negative_control_leading_coefficient": "-pi^2/(2*rho)",
+      "potential_modulus_strict_upper": "27/16",
+      "positive_uniform_bound": "Re(S_2)/s^5>=989*pi^2/122880 for s>=48",
+      "negative_control_uniform_bound": "Re(S_2)/s^5<=-181*pi^2/69120 for s>=36",
+      "sampled_positive_minimum": "4.11508591544112058025796322457",
+      "sampled_negative_maximum": "-4.06846422556604781654090956654",
+      "minimum_one_sided_bound_margin": "0.00275982234472288076",
+      "maximum_final_relative_error": "0.00066892469680612297771",
+      "maximum_conjugation_residual": "0.0",
+      "positive_action_decay_candidate_supported": true,
+      "sign_flipped_good_action_proposition_contradicted": true
+    },
+    "theorem_guards": [
+      "The positive conclusion is a direct one-tail action-real-part bound, not a full relative-homology or amplitude/measure statement.",
+      "The sign-flipped tail is a false-signal control through negative midpoint scale, not a second physical or admissible branch.",
+      "The potential and every remainder term are bounded uniformly over the declared finite lapse envelope.",
+      "No Newton-polyhedron or Hien rapid-decay-homology theorem is applied without its polynomial or compactification/divisor hypotheses.",
+      "The current-blocker route does not promote one candidate record into a complete census, source cycle, global vector, physics result or TOE."
+    ],
+    "independent_read_only_review": {
+      "status": "PASS",
+      "raw_result_and_payload_digests_recomputed": true,
+      "runner_input_and_five_upstream_hashes_verified": true,
+      "exact_action_phase_cancellation_bounds_and_thresholds_verified": true,
+      "all_54_direct_action_samples_and_18_error_sequences_verified": true,
+      "conjugation_false_signal_control_and_fail_closed_outputs_verified": true,
+      "verdict_scope_restriction": "ONE_MIXED_ACTION_DECAY_CANDIDATE_AND_ONE_SIGN_CONTROL_ONLY",
+      "digest_caveat": "The internally valid payload digest includes the execution timestamp and is not a run-invariant computation identifier."
+    },
+    "runtime": {
+      "python": "3.13.5",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "observed_command_batch_wall_clock_seconds": 6.3,
+      "exact_checks": 10,
+      "numerical_checks": 6,
+      "theorem_guards": 5,
+      "sampling_points": 54,
+      "quadratures": 0,
+      "root_calls": 0,
+      "ode_calls": 0,
+      "automatic_descendants": 0
+    },
+    "promoted_outputs": {
+      "connection_to_compact_phase39_chain": null,
+      "tail_amplitude_or_measure_absolute_convergence": null,
+      "complete_mixed_end_census": null,
+      "all_ratio_or_phase_end_admissibility": null,
+      "q_dependent_scale_tail_family": null,
+      "full_relative_homology_class": null,
+      "source_defined_joint_relative_cycle": null,
+      "physical_original_cycle": null,
+      "lapse_infinite_end_admissibility": null,
+      "zero_lapse_extension": null,
+      "absolute_determinant_pfaffian_line": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "singular_endpoint_nonreal_weyl_m": null,
+      "spectral_measure": null,
+      "RAQ_completion": null,
+      "physics_claim": null,
+      "TOE_claim": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "automatic_next": null
+    }
+  }
+}
