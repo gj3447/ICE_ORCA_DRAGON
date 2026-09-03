@@ -19,7 +19,7 @@ from flint import acb, arb, ctx, fmpq
 INPUT_NAME = "RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_INPUTS.json"
 RESULT_NAME = "RAW_C_P0_FIXED_UHP_COMPLEX_VOLTERRA_TAIL_THEOREM_RESULT.json"
 INPUT_RELPATH = f"cpt_temporal_folded_susy/{INPUT_NAME}"
-RUNNER_RELPATH = "cpt_temporal_folded_susy/raw_c_p0_fixed_uhp_complex_volterra_tail_theorem.py"
+RUNNER_RELPATH = "cpt_temporal_folded_susy/raw_c_fixed_uhp_complex_volterra_tail_theorem.py"
 EXPECTED_INPUT_SHA256 = "d17b1f1c4c6434bf233e6d4e14b6d3081d6412352193b7936c3dcb4650bd00de"
 CALCULATION_ID = "RawCP0FixedUhpComplexVolterraTailTheorem"
 RESULT_SCHEMA = "ice.raw-c-p0-fixed-uhp-complex-volterra-tail-theorem.result.v1"

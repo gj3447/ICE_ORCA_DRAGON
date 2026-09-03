@@ -256,11 +256,16 @@ consistency check.
 
 ## Run state and non-conclusions
 
-The source definition has not yet been executed.  It must first be committed
-cleanly and then run only through:
+The source definition has not yet entered Python execution.  An initial
+control-plane attempt under the old stem
+`raw_c_p0_fixed_uhp_complex_volterra_tail_theorem` was rejected with exit 2:
+the `_p0_` substring matched the repository's numbered-Phase token guard.
+No result was created.  The neutral runner stem below removes that naming
+collision without changing the calculation.  After this rename is committed
+cleanly, it must be run only through:
 
 ```text
-./ice run raw_c_p0_fixed_uhp_complex_volterra_tail_theorem
+./ice run raw_c_fixed_uhp_complex_volterra_tail_theorem
 ```
 
 Even a passing run cannot establish any of the following:
