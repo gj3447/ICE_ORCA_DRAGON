@@ -1,0 +1,223 @@
+{
+  "schema_version": "ice.gate1-m2-starobinsky-midpoint-hj-identity-audit.input.v1",
+  "calculation_id": "Gate1M2StarobinskyMidpointHJIdentityAudit",
+  "numbered_phase": null,
+  "question": "Does the frozen Starobinsky m=2 midpoint element obey the exact fixed-time Euclidean Hamilton-Jacobi endpoint identity required to identify it pointwise with the exact fixed-time Hamilton principal function of the declared H_E?",
+  "kind": "COMPUTER_ASSISTED_EXACT_SCOPED_HAMILTON_JACOBI_IDENTITY_OBSTRUCTION",
+  "epistemic_scope": "POINTWISE_EXACT_IDENTITY_TEST_FOR_THE_FROZEN_STAROBINSKY_MIDPOINT_ELEMENT_ON_ITS_EQUAL_ENDPOINT_DIAGONAL_WITH_ONE_EXACT_ALGEBRAIC_WITNESS_AND_ONE_FROZEN_BOUNDARY_ARB_CERTIFICATE",
+  "primary_failure": "discretization",
+  "planner": {
+    "checkpoint": "research-agent:81450cde454365a52f6a",
+    "classification": "CURRENT_BLOCKER_CANDIDATE",
+    "anchor_open_problem": "open:gate1-original-cycle-signed-global-intersections",
+    "selected_lane": "G1",
+    "dependency_path": ["G1", "G2", "G3", "G4", "G5"],
+    "planner_question": "Gate 1 original joint relative cycle and signed global intersection vector: test its missing same-model source prerequisite by asking whether the frozen Starobinsky m=2 midpoint element obeys the exact Euclidean Hamilton-Jacobi endpoint identity of a gauge-preserving perfect element. Output a scoped exact-identity obstruction or inconclusive; BFV, N=0, atlas, ends, and global vector stay null on the G1-to-G5 external-review path.",
+    "audit_narrowing": "the planner wording is operationally narrowed here to the exact fixed-time Hamilton principal function of the declared H_E; no necessary condition for every constrained or gauge-preserving perfect action is asserted",
+    "source_boundary": "PLANNER_IS_NAVIGATION_NOT_EXECUTION_OR_EVIDENCE"
+  },
+  "human_review": {
+    "bounded_output": "one exact scoped verdict on pointwise identification of the frozen midpoint element with an exact fixed-time Hamilton principal function",
+    "principal_false_signal": "promoting a nonzero pointwise Hamilton-Jacobi residual into a no-go theorem for every perfect, improved, continuum-first, constrained-principal-function, or BFV construction",
+    "independent_control": "derive the diagonal residual symbolically, verify a nonzero exact algebraic Starobinsky witness, certify the frozen-boundary residual with Arb, and verify an exactly solvable constant-flat-metric control has zero residual",
+    "user_authorization_context": "the user directed the research trajectory through an exact gauge-preserving Starobinsky element-source prerequisite before BFV, zero-lapse, cover, end and completeness work"
+  },
+  "fixed_time_continuum_convention": {
+    "configuration": ["a", "phi"],
+    "domain": "a>0 and t>0 on the two real witnesses",
+    "euclidean_action": "I_E=2*pi^2*integral dtau[-3*a*(a_prime^2+1)+a^3*(phi_prime^2/2+V(phi))]",
+    "configuration_metric": "G_AB=diag(-6*a,a^3)",
+    "potential_factor": "U(a,phi)=-3*a+a^3*V(phi)",
+    "starobinsky_potential": "V(phi)=3/4*(1-exp(-sqrt(2/3)*phi))^2",
+    "canonical_momenta": "p_A=2*pi^2*G_AB*q_prime^B",
+    "hamiltonian": "H_E=p_A*G^AB*p_B/(4*pi^2)-2*pi^2*U=-p_a^2/(24*pi^2*a)+p_phi^2/(4*pi^2*a^3)+6*pi^2*a-2*pi^2*a^3*V",
+    "exact_fixed_time_hj_identity": "partial_t W(q0,q1;t)+H_E(q1,partial_q1 W)=0",
+    "scope_boundary": "this fixed-time identity is a necessary identity test for the declared exact equality map; it is not itself a constrained BFV source or a proof of a gauge orbit"
+  },
+  "candidate_midpoint_element": {
+    "name": "one frozen Starobinsky midpoint element",
+    "endpoints": ["q0=(a0,phi0)", "q1=(a1,phi1)"],
+    "midpoint": "q_m=(q0+q1)/2",
+    "increment": "Delta_q=q1-q0",
+    "element_duration": "t",
+    "action": "S_mid=2*pi^2*((G_AB(q_m)*Delta_q^A*Delta_q^B)/(2*t)+t*U(q_m))",
+    "relation_to_frozen_m2_action": "setting t=T/2 and taking two algebraic copies of the same full endpoint increment reconstructs the frozen m=2 convention on its equal-endpoint symmetric slice; this is not a sequential continuum trajectory, composition law, or phase-space lift",
+    "tested_map": "S_mid equals the exact fixed-time Hamilton principal function of the declared H_E pointwise",
+    "not_tested": [
+      "existence of a different exact Hamilton principal function or perfect action",
+      "a controlled approximation or deformation bound from S_mid to such an action",
+      "a constrained principal function after lapse extremization",
+      "a first-order constraint lattice, BFV charge, gauge fermion, ghosts or endpoint state",
+      "zero-lapse distributions, overlap transport, end census, orientations or relative cycles"
+    ]
+  },
+  "diagonal_identity": {
+    "restriction": "q0=q1=q=(a,phi)",
+    "endpoint_momentum": "partial_q1^A S_mid=pi^2*t*U_A",
+    "time_derivative": "partial_t S_mid=2*pi^2*U",
+    "inverse_metric_contraction": "D=G^AB*U_A*U_B=-U_a^2/(6*a)+U_phi^2/a^3",
+    "residual": "R_HJ=partial_t S_mid+H_E(q1,partial_q1 S_mid)=pi^2*t^2*D/4",
+    "logical_use": "one admissible point with R_HJ nonzero refutes only the declared pointwise exact-equality map"
+  },
+  "exact_algebraic_witness": {
+    "a": "2",
+    "phi": "sqrt(3/2)*log(2)",
+    "t": "1/2",
+    "expected": {
+      "exp_minus_s_phi": "1/2",
+      "V": "3/16",
+      "U_a": "-3/4",
+      "U_phi": "3*sqrt(2/3)",
+      "D": "45/64",
+      "R_HJ": "45*pi^2/1024"
+    }
+  },
+  "frozen_boundary_witness": {
+    "a": "3.5668031935672753",
+    "phi": "1.0185809464006637",
+    "element_duration_t": "2/5",
+    "corresponding_two_element_total_T": "4/5",
+    "precision_bits": 300,
+    "required_certificates": [
+      "a and t are strictly positive",
+      "D excludes zero and is strictly positive",
+      "R_HJ excludes zero and is strictly positive"
+    ],
+    "interpretation": "an admissible pointwise witness on the frozen boundary slice, not a stationary-saddle or global-domain claim"
+  },
+  "flat_constant_control": {
+    "metric": "G=1",
+    "potential": "U=U0 constant",
+    "action": "S_flat=pi^2*(q1-q0)^2/t+2*pi^2*t*U0",
+    "hamiltonian": "H_flat=p^2/(4*pi^2)-2*pi^2*U0",
+    "required_identity": "partial_t S_flat+H_flat(q1,partial_q1 S_flat)=0",
+    "purpose": "exact sign and normalization control for the Hamilton-Jacobi residual"
+  },
+  "scoped_deformation_hint": {
+    "candidate": "formal off-diagonal ansatz Delta_S(q0,q1;t)=-pi^2*t^3*D(q_m)/12 with q_m=(q0+q1)/2",
+    "verified_scope": "on the diagonal its explicit t derivative cancels the displayed order-t^2 residual; the declared off-diagonal ansatz gives partial_q1^A Delta_S=-pi^2*t^3*partial_A D/24 there, so its cross contribution with the order-t base momentum changes the Hamiltonian only from order t^4",
+    "status": "LEADING_DIAGONAL_COUNTERTERM_CANDIDATE_NO_UNIFORM_BOUND",
+    "not_a_claim": "not a full off-diagonal perfect action, source equality, deformation theorem, convergence result, or BFV source"
+  },
+  "decision_table": [
+    {
+      "verdict": "KILL_FROZEN_MIDPOINT_AS_EXACT_FIXED_TIME_HJ_ELEMENT",
+      "condition": "the midpoint and Hamiltonian conventions reconstruct exactly, the diagonal residual identity and flat control pass symbolically, the exact Starobinsky witness has R_HJ=45*pi^2/1024>0, and the frozen-boundary Arb residual is certified strictly positive",
+      "programme_impact": "RETIRE_EXACT_FIXED_TIME_HJ_IDENTITY_MAP_REQUIRE_CONTROLLED_HJ_OR_PERFECT_ACTION_DEFORMATION"
+    },
+    {
+      "verdict": "INCONCLUSIVE_MIDPOINT_HJ_IDENTITY_AUDIT",
+      "condition": "the scoped symbolic setup remains internally consistent but one or more required exact or Arb witness obligations do not establish a nonzero residual; failure to certify is not an exact-HJ result",
+      "programme_impact": "KEEP_EXACT_IDENTITY_MAP_UNRESOLVED_WITHOUT_BFV_SOURCE_OR_DOWNSTREAM_TRANSPORT"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "B. Bahr, B. Dittrich, and S. Steinhaus, Perfect discretization of reparametrization invariant path integrals, arXiv:1101.4775v1",
+      "url": "https://arxiv.org/abs/1101.4775v1",
+      "used_for": "the distinction between ordinary discretization and a perfect discretization that restores reparametrization symmetry",
+      "not_used_for": "the repository-specific Starobinsky residual, a concrete Starobinsky perfect element, or a BFV source"
+    },
+    {
+      "source": "B. Dittrich and P. A. Hoehn, Constraint analysis for variational discrete systems, arXiv:1303.4294v3",
+      "url": "https://arxiv.org/abs/1303.4294v3",
+      "used_for": "the boundary that a variational discrete action does not automatically provide the continuum gauge symmetry or first-class constraints",
+      "not_used_for": "the repository-specific exact witness or any global relative-cycle conclusion"
+    },
+    {
+      "source": "B. Dittrich, From the discrete to the continuous: Towards a cylindrically consistent dynamics, arXiv:1205.6127v1",
+      "url": "https://arxiv.org/abs/1205.6127v1",
+      "used_for": "the perfect-action and Hamilton-Jacobi/coarse-consistency motivation",
+      "not_used_for": "a claim that the frozen midpoint element is or is not perfect without the displayed audit"
+    },
+    {
+      "source": "F. Johansson, Arb: efficient arbitrary-precision midpoint-radius interval arithmetic, arXiv:1611.02831v1",
+      "url": "https://arxiv.org/abs/1611.02831v1",
+      "used_for": "rigorous real-ball evaluation of the frozen-boundary witness",
+      "not_used_for": "the analytic Hamilton-Jacobi theorem or its physical interpretation"
+    }
+  ],
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_NAIVE_LOCAL_LAPSE_GAUGE_TEST_RESULT.json",
+      "sha256": "547856814bbb430a52d37ccbd1c660d2b098d0ff7dd0568a2205ddb566226fcc",
+      "payload_sha256_without_self": "005dd1f4fda97b71a084914d1f52e4692835972611c7afef41f7a99fb8910808",
+      "required_verdict": "KILL_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_AT_CERTIFIED_M2_SADDLE"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY_RESULT.json",
+      "sha256": "38ae973ae85c380913cb038a6c495a7db78f331e9eec38bb2ab5e34f3d7c028e",
+      "payload_sha256_without_self": "5411e04686348f4f18fa5a3c8261955b317cfa9f4ac24f35ca229ce75285017d",
+      "required_verdict": "KILL_DIRECT_V0_BFV_TO_STAROBINSKY_M2_SOURCE_IDENTIFICATION"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_RESULT.json",
+      "sha256": "f7d64a09eeb4132e4975b056ee76eedfa32b75c7d29ca1a78bede5b052a66bc6",
+      "payload_sha256_without_self": "4c6be750b82009eb987a087d6e51f35bb520c9cf8052b9835aa396d6253d4ba4",
+      "required_verdict": "CONFORMAL_PRESCRIPTION_AND_DETLINE_GLUE_REQUIRED"
+    }
+  ],
+  "upstream_files": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_INPUTS.json",
+      "sha256": "fc3f1061a053639665c87c0b9f6badddda49e6d63dc93d183c3aadfec89f9eaf"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/gate1_bosonic_canonical_source_pushforward.py",
+      "sha256": "fe557b1d86522bf1966513f32edb7555b8ddad770095d3c2412ab4571bbd1533"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD.md",
+      "sha256": "31c267819fae11c089de5b0ba833bf093b25965ad5ecf369703ef564934f79b3"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE25_CONNECTED_LAPSE_SCAN.md",
+      "sha256": "921ffbb741f7a33f06bc01b1b68684ee4851e2db2bc67f6b61cd840e0e5b97a9"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE27_LORENTZIAN_LAPSE_ENDPOINT.md",
+      "sha256": "9db755b61a526fc650875b12c3e92d3b1bf1913fff5f68b4434c5d363af66572"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 100,
+    "interval_certificates": 1,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "exact_fixed_time_hj_element_action": null,
+    "starobinsky_finite_m2_bfv_trajectory_source": null,
+    "first_order_constraint_lattice": null,
+    "bfv_charge_and_gauge_fermion": null,
+    "endpoint_state_transform": null,
+    "source_equality_deformation_or_approximation_bound": null,
+    "zero_lapse_distribution": null,
+    "U0_U1_U1prime_Uf_descent": null,
+    "complete_end_divisor_census": null,
+    "candidate_set_completeness": null,
+    "absolute_bfv_orientation": null,
+    "physical_original_cycle": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_promotion": "PROHIBITED",
+    "physics_claim": null,
+    "TOE_claim": null,
+    "automatic_next": null
+  }
+}
