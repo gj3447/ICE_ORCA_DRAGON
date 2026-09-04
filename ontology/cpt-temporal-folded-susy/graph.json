@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-03T04:11:20Z",
+  "updated_at_utc": "2026-09-04T01:28:14Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -15898,6 +15898,156 @@
       "path": "cpt_temporal_folded_susy/GATE1_ORIGINAL_CYCLE_INTERSECTION_INCIDENCE_LEDGER_RESULT.json",
       "sha256": "ddfd366af3bf8dba308c8299ac690a9aaf64d0983447b6e6a2cdf52771a18d17",
       "introduced_in_commit": "5a8ff4a366d2d1246b21a135001185209ce0f936"
+    },
+    {
+      "id": "concept:gate1-m2-v0-bfv-source-type-compatibility-audit",
+      "type": "concept",
+      "title": "Gate-1 Starobinsky m=2 versus V0 BFV source-type compatibility audit",
+      "summary": "A clean unnumbered symbolic audit compares the exact frozen Starobinsky finite-m2 bosonic action with the local V0 U_plus improved-static BFV zero-mode algebra. It retires only their direct cross-scope identification and changes the next discriminator to a same-model Starobinsky replacement source before zero lapse, cover descent, end census or source-to-fold transport.",
+      "state": "COMPLETED_SCOPED_DIRECT_SOURCE_IDENTIFICATION_NEGATIVE_RESULT"
+    },
+    {
+      "id": "concept:gate1-pham-witten-relative-singular-chain-candidate",
+      "type": "concept",
+      "title": "Gate-1 Pham--Witten relative singular-chain candidate type",
+      "summary": "Working candidate H_3(X_2,X_good,M; Z tensor L_G1) for the frozen three-complex-dimensional bosonic action. This names a type only: the same-model BFV source, local system, good-end pair, tameness, finite Morse basis, regulator stability and completeness hypotheses remain unproved; Hien rapid-decay homology remains an alternative hypotheses-open lane.",
+      "state": "SELECTED_TYPE_HYPOTHESES_OPEN_NOT_PRODUCTION_CHAIN"
+    },
+    {
+      "id": "scope:gate1-m2-v0-bfv-direct-source-identification",
+      "type": "scope",
+      "title": "Gate-1 direct V0-to-Starobinsky m=2 source-identification scope",
+      "summary": "Exact comparison of one frozen Starobinsky finite-m2 bosonic action and one local V0 U_plus improved-static BFV zero-mode algebra; only the proposition that they already share one source type is tested.",
+      "state": "CLOSED_DIRECT_IDENTIFICATION_SCOPE_REPLACEMENT_SOURCE_OPEN",
+      "includes": [
+        "the exact Starobinsky and V0 constraints, scalar-momentum brackets and potential-dependent trace bracket",
+        "the exact frozen Starobinsky and V0 finite-m2 configuration actions and an independent canonical momentum pushforward",
+        "model, bulk-action, clock/lapse role, endpoint-polarization, finite-lattice, source-deformation and orientation compatibility fields",
+        "one scoped mechanism disposition and one changed-selection proposal"
+      ],
+      "excludes": [
+        "a no-go theorem for any newly derived Starobinsky BFV source",
+        "a finite-m2 BFV trajectory measure, zero-lapse distribution or U0/U1/U1-prime/Uf descent",
+        "a complete end, divisor, Stokes, candidate or orientation census and any final lateral verdict",
+        "a physical original cycle, global intersection vector, Gate-1 closure, physics or TOE claim"
+      ]
+    },
+    {
+      "id": "claim:G1_V0_BFV_SOURCE_DIRECTLY_INHABITS_STAROBINSKY_M2_SOURCE_TYPE",
+      "type": "claim",
+      "title": "The local V0 BFV source directly inhabits the Starobinsky m=2 source type",
+      "summary": "Contradicted only for direct identification: explicit potential-dependent bulk terms, nonconservation of the old scalar momentum, distinct proper-time/Darboux-clock/BFV-multiplier roles, different endpoint polarizations and missing finite-m2 source, deformation and absolute orientation prevent a typed transplant.",
+      "state": "CONTRADICTED_DIRECT_CROSS_SCOPE_IDENTIFICATION_ONLY",
+      "claim_id": "G1_V0_BFV_SOURCE_DIRECTLY_INHABITS_STAROBINSKY_M2_SOURCE_TYPE",
+      "statement": "The kept local V0 U_plus improved-static BFV zero-mode source may be directly reused or relabelled as the source for the frozen Starobinsky finite-m2 joint action.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:gate1-m2-v0-bfv-source-type-compatibility",
+      "type": "evidence",
+      "title": "Gate-1 Starobinsky m=2 / V0 BFV source-type compatibility evidence",
+      "summary": "One clean VALID_RUN records 17/17 exact symbolic checks and 3/3 conditional theorem/scope guards. It verifies the constraint, Poisson-bracket, trace-bracket, constraint-root, finite-action, canonical-pushforward and Wick identities, then leaves the finite BFV source, zero lapse, cover descent, end census, orientation, global vector and physics outputs null. Independent read-only review found no verdict-blocking algebra, sign, hash or scope error.",
+      "state": "VALID_RUN_SCOPED_DIRECT_SOURCE_IDENTIFICATION_KILLED",
+      "observed_status": "VALID_RUN_17_EXACT_3_CONDITIONAL_GUARDS_INDEPENDENT_READ_ONLY_REVIEW",
+      "check_ids": [
+        "G1.source_type.starobinsky_constraint_bulk_delta",
+        "G1.source_type.starobinsky_potential_and_derivative_form",
+        "G1.source_type.old_scalar_momentum_not_invariant",
+        "G1.source_type.trace_fp_identity_retained",
+        "G1.source_type.constraint_root_equations_differ",
+        "G1.source_type.starobinsky_configuration_bulk_delta",
+        "G1.source_type.bulk_delta_not_fixed_endpoint_term",
+        "G1.source_type.independent_canonical_pushforward",
+        "G1.source_type.wick_and_configuration_identity",
+        "G1.source_type.model_tags_are_distinct",
+        "G1.source_type.clock_and_lapse_roles_are_distinct",
+        "G1.source_type.endpoint_polarizations_are_distinct",
+        "G1.source_type.finite_m2_bfv_trajectory_is_absent",
+        "G1.source_type.old_source_equivalence_is_absent",
+        "G1.source_type.append_shortcut_remains_killed",
+        "G1.source_type.bosonic_target_still_requires_bfv_glue",
+        "G1.source_type.all_pinned_upstream_entries_present"
+      ]
+    },
+    {
+      "id": "open:gate1-starobinsky-finite-m2-replacement-bfv-source",
+      "type": "open_problem",
+      "title": "Derive or falsify a same-model Starobinsky finite-m2 replacement BFV source",
+      "summary": "Direct reuse of the local V0 source is retired. A new construction must derive either a Starobinsky constraint-adapted improved-static source or a time-dependent trace source with endpoint action, finite-m2 trajectory measure, typed proper-time-kernel comparison and common determinant/orientation line before zero-lapse or relative-cycle transport work.",
+      "state": "OPEN_SELECTED_NEXT_DISCRIMINATOR_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Can one regular Starobinsky V(phi) nonzero component derive its own endpoint-improved constraint-adapted BFV finite-m2 trajectory source and a typed equality or deformation to the frozen proper-time kernel?"
+    },
+    {
+      "id": "artifact:gate1-m2-v0-bfv-source-type-compatibility-input",
+      "type": "artifact",
+      "title": "Gate-1 source-type compatibility input manifest",
+      "summary": "Hash-pinned model, action, endpoint, clock/lapse and source-scope comparison with one bounded verdict and fail-closed global outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY_INPUTS.json",
+      "sha256": "c36e4d0a5b173b967d092a6daa05dac3c7a872c00e9eb332fb108f59753d4cfa",
+      "introduced_in_commit": "e27e0f0017d93c6ff76e7ad10541c4db97a25b8a"
+    },
+    {
+      "id": "artifact:gate1-m2-v0-bfv-source-type-compatibility-runner",
+      "type": "artifact",
+      "title": "Gate-1 source-type compatibility runner",
+      "summary": "Bounded symbolic runner that verifies all pinned upstream bytes, reconstructs the exact constraint/action comparisons and canonical pushforward, and emits one fail-closed source-type verdict.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_m2_v0_bfv_source_type_compatibility.py",
+      "sha256": "67eaf2cdf6c6e1d9132c688ac9a65685f51d9a9af3d26df3537782315f144d02",
+      "introduced_in_commit": "e27e0f0017d93c6ff76e7ad10541c4db97a25b8a"
+    },
+    {
+      "id": "artifact:gate1-m2-v0-bfv-source-type-compatibility-result",
+      "type": "artifact",
+      "title": "Gate-1 source-type compatibility raw result",
+      "summary": "Raw-result SSOT: VALID_RUN, scoped direct-identification kill verdict, 17/17 exact checks, 3/3 guards and payload digest 5411e04686348f4f18fa5a3c8261955b317cfa9f4ac24f35ca229ce75285017d.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY_RESULT.json",
+      "sha256": "38ae973ae85c380913cb038a6c495a7db78f331e9eec38bb2ab5e34f3d7c028e"
+    },
+    {
+      "id": "artifact:gate1-m2-v0-bfv-source-type-compatibility-evidence-snapshot",
+      "type": "artifact",
+      "title": "Gate-1 source-type compatibility evidence snapshot",
+      "summary": "Schema-valid compact run extract preserving hashes, exact checks, scope, research transition, independent-review status, conditional chain type and fail-closed outputs.",
+      "state": "TRACKED_VALID_RUN_EVIDENCE",
+      "artifact_kind": "evidence",
+      "path": "ontology/cpt-temporal-folded-susy/evidence/gate1-m2-v0-bfv-source-type-compatibility-result.json",
+      "sha256": "659669dc3e1b505b24157a1d9466600f57a722965e86d8c7d8fe1036904619a8"
+    },
+    {
+      "id": "artifact:gate1-m2-v0-bfv-source-type-compatibility-report",
+      "type": "artifact",
+      "title": "Gate-1 source-type compatibility report",
+      "summary": "Human-readable exact action and mismatch derivation, named conditional chain type, construction-order table, outcome-bound route change, review scope and null global outputs.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY.md",
+      "sha256": "3c677d11e3e73cfb8d270ad7a3d1239fc075341686070141497fd90773ce0220"
+    },
+    {
+      "id": "source:hien-2008-rapid-decay",
+      "type": "source",
+      "title": "Periods for flat algebraic connections",
+      "summary": "Primary mathematical source for rapid-decay homology and period pairing on surfaces; it supplies hypotheses and a framework, not an ICE compactification, BFV coefficient line, source cycle or verdict.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "M. Hien, Periods for flat algebraic connections",
+      "uri": "https://arxiv.org/abs/0803.3463",
+      "version": "arXiv:0803.3463v1"
+    },
+    {
+      "id": "source:matsubara-heo-2017-pham-comparison",
+      "type": "source",
+      "title": "On the rapid decay homology of F. Pham",
+      "summary": "Primary comparison source relating Pham-type rapid-decay constructions to a sheaf-theoretic rapid-decay framework under stated hypotheses; it supplies no ICE chain, completeness proof or orientation.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "S.-J. Matsubara-Heo, On the rapid decay homology of F. Pham",
+      "uri": "https://arxiv.org/abs/1705.06052",
+      "version": "arXiv:1705.06052v1"
     }
   ],
   "edges": [
@@ -36240,7 +36390,28 @@
     {"id":"edge:3798","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"MOTIVATES","to":"open:p38-explicit-joint-action-cycle-and-oriented-intersections","note":"The typed ledger makes the missing source-defined cycle, global K components, common orientation, census and stability fields explicit; it does not resolve them."},
     {"id":"edge:3799","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"INTEGER=0 counts eligible recorded entries only. It is not a computed zero vector, so Gate 1 remains OPEN_PARTIAL_PROGRESS."},
     {"id":"edge:3800","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Supplies the mathematical separation between an original integration cycle and upward-cycle intersection coefficients; it supplies no ICE cycle or integer."},
-    {"id":"edge:3801","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"CITES","to":"source:feldbrugge-lehners-turok-2017","note":"Provides a domain-adjacent contour example only; it does not select the ICE action, regulator, original cycle or physical state."}
+    {"id":"edge:3801","from":"concept:gate1-recorded-incidence-eligibility-audit","relation":"CITES","to":"source:feldbrugge-lehners-turok-2017","note":"Provides a domain-adjacent contour example only; it does not select the ICE action, regulator, original cycle or physical state."},
+    {"id":"edge:3802","from":"concept:gate1-m2-v0-bfv-source-type-compatibility-audit","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"One bounded Gate-1 source-type discriminator only; no physical or global promotion follows."},
+    {"id":"edge:3803","from":"concept:gate1-m2-v0-bfv-source-type-compatibility-audit","relation":"VALID_WITHIN","to":"scope:gate1-m2-v0-bfv-direct-source-identification","note":"Only direct cross-scope identification of the two existing objects is tested."},
+    {"id":"edge:3804","from":"claim:G1_V0_BFV_SOURCE_DIRECTLY_INHABITS_STAROBINSKY_M2_SOURCE_TYPE","relation":"VALID_WITHIN","to":"scope:gate1-m2-v0-bfv-direct-source-identification"},
+    {"id":"edge:3805","from":"claim:G1_V0_BFV_SOURCE_DIRECTLY_INHABITS_STAROBINSKY_M2_SOURCE_TYPE","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-v0-bfv-source-type-compatibility","polarity":"CONTRADICTS","note":"Contradiction is limited to direct reuse or relabelling; newly derived same-model sources remain open."},
+    {"id":"edge:3806","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"PART_OF","to":"concept:gate1-m2-v0-bfv-source-type-compatibility-audit"},
+    {"id":"edge:3807","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"DERIVED_FROM","to":"artifact:gate1-m2-v0-bfv-source-type-compatibility-input","note":"The manifest pins model, action, endpoint, clock/lapse and source-scope comparison fields plus the one-verdict boundary."},
+    {"id":"edge:3808","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"DEFINED_IN","to":"artifact:gate1-m2-v0-bfv-source-type-compatibility-runner","note":"The committed runner performs the exact symbolic reconstruction and fail-closed type audit."},
+    {"id":"edge:3809","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"RECORDED_IN","to":"artifact:gate1-m2-v0-bfv-source-type-compatibility-result","note":"The raw result is the complete machine-readable source of truth."},
+    {"id":"edge:3810","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"RECORDED_IN","to":"artifact:gate1-m2-v0-bfv-source-type-compatibility-evidence-snapshot","note":"Compact schema-valid extract; it does not replace the raw result bytes."},
+    {"id":"edge:3811","from":"claim:G1_V0_BFV_SOURCE_DIRECTLY_INHABITS_STAROBINSKY_M2_SOURCE_TYPE","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-v0-bfv-source-type-compatibility-report"},
+    {"id":"edge:3812","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"DERIVED_FROM","to":"evidence:gate1-bosonic-canonical-source-pushforward","note":"Keeps the exact Starobinsky bosonic target and its missing same-model BFV glue."},
+    {"id":"edge:3813","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"DERIVED_FROM","to":"evidence:gate1-trace-gauge-fp-admissibility","note":"Keeps the local trace reduction while preserving the killed unchanged-source append shortcut."},
+    {"id":"edge:3814","from":"evidence:gate1-m2-v0-bfv-source-type-compatibility","relation":"DERIVED_FROM","to":"evidence:gate1-v0-improved-static-bfv-source","note":"Keeps the local V0 U_plus BFV algebra while testing only its direct identification with the Starobinsky target."},
+    {"id":"edge:3815","from":"concept:gate1-m2-v0-bfv-source-type-compatibility-audit","relation":"MOTIVATES","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"The unexpected type obstruction selects a same-model replacement-source derivation as the next discriminator."},
+    {"id":"edge:3816","from":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","relation":"FOLLOW_UP_TO","to":"claim:G1_V0_BFV_SOURCE_DIRECTLY_INHABITS_STAROBINSKY_M2_SOURCE_TYPE","note":"The open problem is the scoped replacement selected after the direct-transplant proposition was contradicted."},
+    {"id":"edge:3817","from":"open:gate1-original-cycle-signed-global-intersections","relation":"BLOCKED_BY","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"Zero lapse, cover descent, end census and orientation transport require a same-model source before a global intersection vector."},
+    {"id":"edge:3818","from":"concept:gate1-pham-witten-relative-singular-chain-candidate","relation":"BLOCKED_BY","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"The named relative group remains a type placeholder until one common BFV source and coefficient/orientation line are constructed."},
+    {"id":"edge:3819","from":"concept:gate1-pham-witten-relative-singular-chain-candidate","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Framework only; no ICE cycle, thimble basis, orientation or coefficient is imported."},
+    {"id":"edge:3820","from":"concept:gate1-pham-witten-relative-singular-chain-candidate","relation":"CITES","to":"source:hien-2008-rapid-decay","note":"Alternative rapid-decay lane remains hypotheses-open because no suitable ICE compactification, divisor and meromorphic coefficient system are supplied."},
+    {"id":"edge:3821","from":"concept:gate1-pham-witten-relative-singular-chain-candidate","relation":"CITES","to":"source:matsubara-heo-2017-pham-comparison","note":"Comparison framework only; its hypotheses do not construct the ICE source or prove candidate completeness."},
+    {"id":"edge:3822","from":"concept:gate1-m2-v0-bfv-source-type-compatibility-audit","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The current blocker gains a scoped route retirement and next discriminator, not a cycle, census, vector or Gate-1 closure."}
   ],
   "kg_bridges": [
     {

@@ -3610,6 +3610,32 @@ claim:CLOSED_S3_Q2_COUPLED_DH_METRIC_STRAIN_CANCELLATION_HOLDS
      still requires full SVT/cubic DD-DH-HH and projected Jacobi
 ```
 
+The current Gate-1 source route now has one exact type obstruction and a
+changed discriminator:
+
+```text
+claim:G1_V0_BFV_SOURCE_DIRECTLY_INHABITS_STAROBINSKY_M2_SOURCE_TYPE
+  -> HAS_EVIDENCE {polarity: CONTRADICTS}
+     -> evidence:gate1-m2-v0-bfv-source-type-compatibility
+        (17/17 exact; 3/3 conditional guards; independent read-only audit)
+  -> VALID_WITHIN -> scope:gate1-m2-v0-bfv-direct-source-identification
+
+unexpected: valid local V0 BFV algebra is the wrong type for Starobinsky m=2
+  -> retire DIRECT_V0_TRANSPLANT in that exact scope only
+  -> open:gate1-starobinsky-finite-m2-replacement-bfv-source
+  -> before N=0, U1/U1-prime, end census or source-to-fold transport
+
+concept:gate1-pham-witten-relative-singular-chain-candidate
+  -> SELECTED_TYPE_HYPOTHESES_OPEN_NOT_PRODUCTION_CHAIN
+  -> H_3(X_2,X_good,M; Z tensor L_G1) is notation for a candidate type only
+  -> same-model source, L_G1, good-end pair, tameness, basis and completeness
+     remain null; Hien rapid decay remains an alternative hypotheses-open lane
+```
+
+This is a scoped ICE negative result and route-selection change. It is not a
+full BFV source, a zero-lapse extension, a relative cycle, a global
+intersection vector, Gate-1 closure, a physics result, or a TOE claim.
+
 The [current physics-discovery gap map](../../../docs/research/ICE_CURRENT_PHYSICS_DISCOVERY_GAP_MAP_2026-08-31.md)
 carries these lanes through quantum BFV, absolute measure, relational state
 construction and the empirical gate. It is navigation rather than scientific

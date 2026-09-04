@@ -1,0 +1,198 @@
+{
+  "$schema": "../../schema/research-run-evidence-v1.schema.json",
+  "schema_version": "research-run-evidence/v1",
+  "result_id": "result:GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY_20260904",
+  "phase": null,
+  "observed_at_utc": "2026-09-04T01:21:12Z",
+  "command": "./ice run gate1_m2_v0_bfv_source_type_compatibility",
+  "exit_code": 0,
+  "script": {
+    "path": "cpt_temporal_folded_susy/gate1_m2_v0_bfv_source_type_compatibility.py",
+    "sha256": "67eaf2cdf6c6e1d9132c688ac9a65685f51d9a9af3d26df3537782315f144d02",
+    "introduced_in_commit": "e27e0f0017d93c6ff76e7ad10541c4db97a25b8a"
+  },
+  "exact_checks": 17,
+  "checks": [
+    {
+      "id": "G1.source_type.starobinsky_constraint_bulk_delta",
+      "status": "PASS",
+      "statement": "The Starobinsky and V=0 constraints differ by the nonzero-potential bulk term 2*pi^2*a^3*V(phi)."
+    },
+    {
+      "id": "G1.source_type.starobinsky_potential_and_derivative_form",
+      "status": "PASS",
+      "statement": "The exact Starobinsky potential derivative is nonzero on the frozen positive-real endpoint neighborhood."
+    },
+    {
+      "id": "G1.source_type.old_scalar_momentum_not_invariant",
+      "status": "PASS",
+      "statement": "The old scalar momentum is nonconserved for nonzero V'(phi) and cannot serve as the V=0 cyclic invariant without a new Starobinsky canonical transform."
+    },
+    {
+      "id": "G1.source_type.trace_fp_identity_retained",
+      "status": "PASS",
+      "statement": "The general-potential trace bracket exposes the potential-dependent FP horizon."
+    },
+    {
+      "id": "G1.source_type.constraint_root_equations_differ",
+      "status": "PASS",
+      "statement": "The V=0 constraint-root equation acquires the exact correction F_Star-F_V0=-24*pi^4*a^6*V(phi)."
+    },
+    {
+      "id": "G1.source_type.starobinsky_configuration_bulk_delta",
+      "status": "PASS",
+      "statement": "The finite m=2 Starobinsky and V=0 configuration actions differ by the interior term 2*pi^2*T_prop*A^3*V(Phi)."
+    },
+    {
+      "id": "G1.source_type.bulk_delta_not_fixed_endpoint_term",
+      "status": "PASS",
+      "statement": "At fixed old endpoints the action correction depends on q and T_prop, so it is not an endpoint-only constant."
+    },
+    {
+      "id": "G1.source_type.independent_canonical_pushforward",
+      "status": "PASS",
+      "statement": "Independent stationary substitution reconstructs the exact finite m=2 Starobinsky canonical momentum pushforward."
+    },
+    {
+      "id": "G1.source_type.wick_and_configuration_identity",
+      "status": "PASS",
+      "statement": "Under T_prop=i*z, the pushed canonical action equals the frozen configuration action with the declared Wick sign."
+    },
+    {
+      "id": "G1.source_type.model_tags_are_distinct",
+      "status": "PASS",
+      "statement": "The frozen target is Starobinsky while the candidate BFV algebra is explicitly V=0."
+    },
+    {
+      "id": "G1.source_type.clock_and_lapse_roles_are_distinct",
+      "status": "PASS",
+      "statement": "T_prop, T_clock and N are distinct typed objects."
+    },
+    {
+      "id": "G1.source_type.endpoint_polarizations_are_distinct",
+      "status": "PASS",
+      "statement": "Fixed old (a,phi) endpoints differ from the endpoint-improved (T_clock,Phi) polarization, with no exact transform supplied."
+    },
+    {
+      "id": "G1.source_type.finite_m2_bfv_trajectory_is_absent",
+      "status": "PASS",
+      "statement": "The kept V=0 result leaves every finite-m2 BFV trajectory measure null."
+    },
+    {
+      "id": "G1.source_type.old_source_equivalence_is_absent",
+      "status": "PASS",
+      "statement": "No equality or deformation from the V=0 BFV source to the fixed-(a,phi) proper-time source is proved."
+    },
+    {
+      "id": "G1.source_type.append_shortcut_remains_killed",
+      "status": "PASS",
+      "statement": "Appending an extra trace-gauge delta and FP factor to the unchanged proper-time source remains outside the replacement-source class."
+    },
+    {
+      "id": "G1.source_type.bosonic_target_still_requires_bfv_glue",
+      "status": "PASS",
+      "statement": "The exact bosonic m=2 source still requires a same-model gauge/BFV determinant-line completion."
+    },
+    {
+      "id": "G1.source_type.all_pinned_upstream_entries_present",
+      "status": "PASS",
+      "statement": "All three required upstream result ledgers are byte-pinned in the input manifest."
+    }
+  ],
+  "numerical_checks": 0,
+  "numerical": [],
+  "payload": {
+    "exact_checks": 17,
+    "numerical_checks": 0,
+    "calculation": {
+      "calculation_id": "Gate1M2V0BfvSourceTypeCompatibility",
+      "numbered_phase": null,
+      "run_status": "VALID_RUN",
+      "verdict": "KILL_DIRECT_V0_BFV_TO_STAROBINSKY_M2_SOURCE_IDENTIFICATION",
+      "epistemic_status": "SCOPED_NEGATIVE_RESULT_FOR_ONE_DIRECT_SOURCE_IDENTIFICATION",
+      "primary_failure": "type",
+      "programme_impact": "RETIRE_DIRECT_SCOPE_IDENTIFICATION_AND_SELECT_A_STAROBINSKY_COMPATIBLE_REPLACEMENT_SOURCE"
+    },
+    "graph_route_review": {
+      "planner_checkpoint_id": "research-agent:f44657ec45f0f3b68244",
+      "planner_classification": "CURRENT_BLOCKER_CANDIDATE",
+      "selected_anchor": "open:gate1-original-cycle-signed-global-intersections",
+      "planner_granted_execution_authority": false
+    },
+    "evidence_transport": {
+      "snapshot_kind": "compact_typed_extract",
+      "input_manifest_path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY_INPUTS.json",
+      "input_manifest_sha256": "c36e4d0a5b173b967d092a6daa05dac3c7a872c00e9eb332fb108f59753d4cfa",
+      "raw_result_path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY_RESULT.json",
+      "raw_result_outer_sha256": "38ae973ae85c380913cb038a6c495a7db78f331e9eec38bb2ab5e34f3d7c028e",
+      "raw_result_payload_sha256_without_self": "5411e04686348f4f18fa5a3c8261955b317cfa9f4ac24f35ca229ce75285017d",
+      "raw_result_size_bytes": 15308,
+      "report_path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY.md",
+      "report_sha256": "3c677d11e3e73cfb8d270ad7a3d1239fc075341686070141497fd90773ce0220",
+      "runner_definition_commit": "e27e0f0017d93c6ff76e7ad10541c4db97a25b8a"
+    },
+    "scope": {
+      "status": "DIRECT_CROSS_SCOPE_SOURCE_IDENTIFICATION_ONLY",
+      "killed_shortcut_only": "Directly reuse or relabel the local V=0 U_plus BFV zero-mode source as the source for the frozen Starobinsky finite-m2 joint action.",
+      "preserved": [
+        "the local V=0 U_plus improved-static BFV zero-mode algebra in its own scope",
+        "the exact frozen Starobinsky finite-m2 bosonic action in its own scope",
+        "a newly derived Starobinsky constraint-adapted improved-static source",
+        "a newly derived Starobinsky time-dependent trace source"
+      ],
+      "mismatch_fields": [
+        "model potential",
+        "constraint and bulk action",
+        "cyclic scalar invariant without a new canonical transform",
+        "proper-time, Darboux-clock and BFV-multiplier roles",
+        "endpoint polarization and boundary action",
+        "finite-m2 BFV source lattice",
+        "source equality or deformation",
+        "absolute BFV orientation"
+      ],
+      "mismatch_witness_count_note": "The raw count 7 includes MISMATCH* and exact MISSING values; MISSING_IN_CANDIDATE_SOURCE is an eighth typed compatibility field."
+    },
+    "research_transition": {
+      "unexpected_outcome": "The most developed replacement BFV source is a valid V=0 local zero-mode algebra but does not share the Starobinsky finite-m2 source type.",
+      "retired_mechanism": "DIRECT_V0_TRANSPLANT within exact cross-scope identification only",
+      "live_unconstructed_mechanisms": [
+        "STAROBINSKY_CONSTRAINT_ADAPTED_IMPROVED_STATIC_SOURCE",
+        "STAROBINSKY_TIME_DEPENDENT_TRACE_SOURCE"
+      ],
+      "discriminating_question": "Can one regular Starobinsky V(phi) nonzero component derive its own endpoint-improved constraint-adapted BFV source with a finite m=2 trajectory measure and a typed comparison to the proper-time kernel?",
+      "changed_future_selection": "Construct or falsify one same-model Starobinsky replacement-source chart before N=0, U1/U1-prime, end-census or source-to-fold transport work."
+    },
+    "chain_type_boundary": {
+      "working_type": "PHAM_WITTEN_RELATIVE_SINGULAR_CHAIN",
+      "status": "SELECTED_TYPE_HYPOTHESES_OPEN",
+      "candidate_group": "H_3(X_2,X_good,M;Z tensor L_G1)",
+      "hien_rapid_decay_lane": "ALTERNATIVE_HYPOTHESES_OPEN",
+      "production_chain_selected": false
+    },
+    "independent_read_only_review": {
+      "status": "PASS_WITH_NON_BLOCKING_WORDING_RESTRICTIONS",
+      "raw_result_and_payload_digests_recomputed": true,
+      "runner_input_and_three_upstream_hashes_verified": true,
+      "constraint_poisson_trace_root_action_and_pushforward_identities_verified": true,
+      "verdict_blocking_algebra_sign_hash_or_scope_error": false,
+      "human_custody_or_mathematical_signoff": false
+    },
+    "promoted_outputs": {
+      "starobinsky_finite_m2_bfv_trajectory_source": null,
+      "zero_lapse_distribution": null,
+      "U0_U1_U1prime_Uf_descent": null,
+      "complete_end_divisor_census": null,
+      "candidate_set_completeness": null,
+      "named_chain_theory_hypotheses_satisfied": null,
+      "absolute_bfv_orientation": null,
+      "source_defined_joint_relative_cycle": null,
+      "complete_global_signed_intersection_vector": null,
+      "global_n_sigma": null,
+      "gate1": "OPEN_PARTIAL_PROGRESS",
+      "global_promotion": "PROHIBITED",
+      "physics_claim": null,
+      "TOE_claim": null,
+      "automatic_next": null
+    }
+  }
+}
