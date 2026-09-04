@@ -3636,6 +3636,26 @@ This is a scoped ICE negative result and route-selection change. It is not a
 full BFV source, a zero-lapse extension, a relative cycle, a global
 intersection vector, Gate-1 closure, a physics result, or a TOE claim.
 
+The successor tests one distinct same-model mechanism while keeping the raw
+result as the source of truth:
+
+```text
+claim:G1_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_IS_EXACT_GAUGE_ACTION
+  -> HAS_EVIDENCE {polarity: CONTRADICTS}
+     -> evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test
+        (raw result is SSOT; strict Arb/Krawczyk saddle enclosure)
+  -> VALID_WITHIN -> scope:gate1-m2-starobinsky-naive-local-lapse-unfixing-positive-real-saddle
+
+unexpected: the naive two-local-lapse extension has no required relative-lapse Hessian null direction
+  -> retire NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING in this exact scope only
+  -> open:gate1-starobinsky-exact-gauge-preserving-element-source
+  -> before BFV source, N=0, U1/U1-prime transport, end/divisor census or global intersection
+```
+
+This is a scoped configuration-discretization negative result, not a no-go for
+reparametrization symmetry, perfect/improved discretization, continuum BFV, or
+any physical claim.
+
 The [current physics-discovery gap map](../../../docs/research/ICE_CURRENT_PHYSICS_DISCOVERY_GAP_MAP_2026-08-31.md)
 carries these lanes through quantum BFV, absolute measure, relational state
 construction and the empirical gate. It is navigation rather than scientific

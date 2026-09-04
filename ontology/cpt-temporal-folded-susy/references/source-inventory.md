@@ -547,4 +547,14 @@ keeps only that finite local algebra. A normalized endpoint-state transform, spe
 \(\delta(\hat C)\), two-endpoint/full-trajectory BFV kernel, absolute functional measure, old-kernel
 equality, global cycle, physics, and TOE remain open or null.
 
+The naive local-lapse gauge discriminator adds Bahr--Dittrich--Steinhaus (2011),
+Dittrich--Höhn (2013), and Krawczyk--Neumaier (1986) as `CITES`-only boundaries. The
+first two distinguish a discretization's broken pseudo-symmetry from an exact or
+perfect gauge construction; the third frames the strict root enclosure. None derives
+the ICE midpoint action, selects a Starobinsky BFV source, or upgrades one
+nonsingular extended Hessian into a continuum or global no-go. The repository result
+therefore retires only the named naive midpoint unfixing at its certified saddle;
+exact gauge-preserving source construction, zero lapse, cover/orientation, end
+completeness, and global pairing remain open.
+
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-04T01:28:14Z",
+  "updated_at_utc": "2026-09-04T02:03:10Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -16048,6 +16048,136 @@
       "citation": "S.-J. Matsubara-Heo, On the rapid decay homology of F. Pham",
       "uri": "https://arxiv.org/abs/1705.06052",
       "version": "arXiv:1705.06052v1"
+    },
+    {
+      "id": "concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test",
+      "type": "concept",
+      "title": "Gate-1 Starobinsky m=2 naive two-local-lapse gauge test",
+      "summary": "A clean unnumbered symbolic and Arb-certified audit tests one explicit configuration-space extension N0=T+r, N1=T-r of the frozen equal-endpoint Starobinsky midpoint action. The extension restricts exactly to the proper-time action at r=0 but has an invertible full Hessian at one certified positive-real saddle, retiring only its interpretation as an exact relative-lapse gauge unfixing.",
+      "state": "COMPLETED_SCOPED_NAIVE_DISCRETE_GAUGE_NEGATIVE_RESULT"
+    },
+    {
+      "id": "scope:gate1-m2-starobinsky-naive-local-lapse-unfixing-positive-real-saddle",
+      "type": "scope",
+      "title": "Gate-1 naive midpoint local-lapse unfixing at one certified m=2 saddle",
+      "summary": "The natural two-local-lapse substitution in the frozen equal-endpoint midpoint configuration action, evaluated on the strict radius-1e-55 Arb/Krawczyk box around one positive-real stationary point; only the necessary Hessian-null condition for the declared endpoint-preserving relative-lapse generator is tested.",
+      "state": "CLOSED_NAIVE_CONFIGURATION_UNFIXING_SCOPE_OTHER_SOURCE_CONSTRUCTIONS_OPEN",
+      "includes": [
+        "the exact Starobinsky m=2 proper-time action and its two-local-lapse T,r extension",
+        "the exact r=0 restriction, relative-lapse derivatives, divisor factorization and Hessian block identity",
+        "one strict Arb/Krawczyk stationary-point enclosure and nonzero determinant enclosures",
+        "the differentiated off-shell Noether identity as a necessary gauge-null condition"
+      ],
+      "excludes": [
+        "a first-order canonical constraint lattice, auxiliary fields, BRST charge, gauge fermion or BFV measure",
+        "a perfect or improved gauge-preserving action and a continuum-first time-dependent trace source",
+        "endpoint-state transforms, source equality or deformation, absolute determinant or orientation data",
+        "N=0 distributions, cover descent, all-end census, relative-cycle verdicts, Gate-1 closure, physics or TOE claims"
+      ]
+    },
+    {
+      "id": "claim:G1_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_IS_EXACT_GAUGE_ACTION",
+      "type": "claim",
+      "title": "The naive Starobinsky midpoint two-local-lapse extension is an exact gauge unfixing",
+      "summary": "Contradicted near one certified positive-real m=2 saddle: although the extension equals the frozen action on r=0, its full x,q,T,r Hessian is certified invertible while the proposed endpoint-preserving relative-lapse generator has nonzero r component. This does not constrain different first-order, perfect, improved or continuum-first constructions.",
+      "state": "CONTRADICTED_SCOPED_NAIVE_CONFIGURATION_UNFIXING_ONLY",
+      "claim_id": "G1_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_IS_EXACT_GAUGE_ACTION",
+      "statement": "Replacing the common proper time by N0=T+r and N1=T-r in the two midpoint elements restores an exact endpoint-preserving relative-lapse gauge mode near the selected positive-real saddle.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test",
+      "type": "evidence",
+      "title": "Gate-1 Starobinsky m=2 naive local-lapse gauge-test evidence",
+      "summary": "One clean VALID_RUN records 10/10 exact identities, 6/6 Arb interval certificates and 3/3 theorem/scope guards. A strict Krawczyk inclusion certifies one stationary point within the frozen box; K, the relative-lapse curvature, det(H_S2) and the full extended determinant all exclude zero. Three independent read-only reviews found no algebra, interval, hash, citation or scope blocker.",
+      "state": "VALID_RUN_SCOPED_NAIVE_LOCAL_LAPSE_GAUGE_MECHANISM_KILLED",
+      "observed_status": "VALID_RUN_10_EXACT_6_ARB_CERTIFICATES_3_GUARDS_INDEPENDENT_READ_ONLY_REVIEW",
+      "check_ids": [
+        "G1.local_lapse.exact.proper_time_restriction",
+        "G1.local_lapse.exact.hessian_cross_block",
+        "G1.local_lapse.certificate.krawczyk_strict_inclusion",
+        "G1.local_lapse.certificate.full_extended_hessian_invertible"
+      ]
+    },
+    {
+      "id": "open:gate1-starobinsky-exact-gauge-preserving-element-source",
+      "type": "open_problem",
+      "title": "Construct an exact gauge-preserving Starobinsky element source",
+      "summary": "The direct V0 transplant and the naive two-local-lapse unfixing are retired in their exact scopes. The next source discriminator must derive an exact Hamilton-principal-function, perfect/improved, or otherwise proved gauge-preserving same-model element action with first-order constraints, endpoint states, BFV data and a controlled map to the frozen midpoint kernel before N=0 or relative-chain work.",
+      "state": "OPEN_SELECTED_REFINED_SOURCE_DISCRIMINATOR_NO_AUTOMATIC_EXECUTION_AUTHORITY",
+      "question": "Can one exact gauge-preserving Starobinsky element action produce a same-model finite BFV source and a controlled equality, deformation or approximation map to the frozen m=2 midpoint kernel?"
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-input",
+      "type": "artifact",
+      "title": "Gate-1 naive local-lapse gauge-test input manifest",
+      "summary": "Hash-pinned action, local-lapse candidate, certified box, decision terminals, primary-source boundaries, resource caps and fail-closed outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_NAIVE_LOCAL_LAPSE_GAUGE_TEST_INPUTS.json",
+      "sha256": "3f7382a5ceb00ec58e8187235312eebfafc0168cd196110d82dcf1a3bb602477",
+      "introduced_in_commit": "daa52c4fb6e0796032dada4cee4caceac5757448"
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-runner",
+      "type": "artifact",
+      "title": "Gate-1 naive local-lapse gauge-test runner",
+      "summary": "Bounded runner deriving the exact action and Hessian identities, performing the 300-bit Arb/Krawczyk proof, and selecting KILL only on complete certification or otherwise INCONCLUSIVE.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_m2_starobinsky_naive_local_lapse_gauge_test.py",
+      "sha256": "7fb2b6f3a4a5af59dc01306092bb42e663d8c2761fffd64a78972ff0225f79c9",
+      "introduced_in_commit": "daa52c4fb6e0796032dada4cee4caceac5757448"
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-result",
+      "type": "artifact",
+      "title": "Gate-1 naive local-lapse gauge-test raw result",
+      "summary": "Raw-result SSOT: VALID_RUN, scoped naive-unfixing kill verdict, 10 exact checks, 6 Arb certificates, 3 guards, and canonical payload digest 005dd1f4fda97b71a084914d1f52e4692835972611c7afef41f7a99fb8910808.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_NAIVE_LOCAL_LAPSE_GAUGE_TEST_RESULT.json",
+      "sha256": "547856814bbb430a52d37ccbd1c660d2b098d0ff7dd0568a2205ddb566226fcc"
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-report",
+      "type": "artifact",
+      "title": "Gate-1 naive local-lapse gauge-test report",
+      "summary": "Human-readable candidate definition, exact Hessian factorization, computer-assisted enclosure, Noether necessary condition, scoped mechanism disposition and changed source-selection question.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_NAIVE_LOCAL_LAPSE_GAUGE_TEST.md",
+      "sha256": "d7200775e3d578e8415b6292140b7665a41f73acf595f357e6beba0fb1bde549"
+    },
+    {
+      "id": "source:bahr-dittrich-steinhaus-2011-perfect-reparametrization",
+      "type": "source",
+      "title": "Perfect discretization of reparametrization invariant path integrals",
+      "summary": "Primary source for generic reparametrization-symmetry breaking by discretization and the stronger discretization-independent perfect-path-integral construction. It supplies no ICE stationary point, source or unique replacement method.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "B. Bahr, B. Dittrich, and S. Steinhaus, Perfect discretization of reparametrization invariant path integrals",
+      "uri": "https://arxiv.org/abs/1101.4775",
+      "version": "arXiv:1101.4775v1"
+    },
+    {
+      "id": "source:dittrich-hoehn-2013-variational-discrete-constraints",
+      "type": "source",
+      "title": "Constraint analysis for variational discrete systems",
+      "summary": "Primary source distinguishing variational discrete evolution from proved first-class constraints and symmetry generators. It supplies the analysis boundary, not the repository-specific classification.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "B. Dittrich and P. A. Hoehn, Constraint analysis for variational discrete systems",
+      "uri": "https://arxiv.org/abs/1303.4294",
+      "version": "arXiv:1303.4294v3"
+    },
+    {
+      "id": "source:krawczyk-neumaier-1986-interval-newton",
+      "type": "source",
+      "title": "An improved interval Newton operator",
+      "summary": "Primary interval-analysis source for existence and uniqueness enclosures produced by interval operators. It supplies no gauge or physical interpretation of the certified root.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "R. Krawczyk and A. Neumaier, An improved interval Newton operator, J. Math. Anal. Appl. 118 (1986) 194-207",
+      "uri": "https://doi.org/10.1016/0022-247X(86)90303-3",
+      "version": "published article"
     }
   ],
   "edges": [
@@ -36411,7 +36541,27 @@
     {"id":"edge:3819","from":"concept:gate1-pham-witten-relative-singular-chain-candidate","relation":"CITES","to":"source:witten-2010-picard-lefschetz","note":"Framework only; no ICE cycle, thimble basis, orientation or coefficient is imported."},
     {"id":"edge:3820","from":"concept:gate1-pham-witten-relative-singular-chain-candidate","relation":"CITES","to":"source:hien-2008-rapid-decay","note":"Alternative rapid-decay lane remains hypotheses-open because no suitable ICE compactification, divisor and meromorphic coefficient system are supplied."},
     {"id":"edge:3821","from":"concept:gate1-pham-witten-relative-singular-chain-candidate","relation":"CITES","to":"source:matsubara-heo-2017-pham-comparison","note":"Comparison framework only; its hypotheses do not construct the ICE source or prove candidate completeness."},
-    {"id":"edge:3822","from":"concept:gate1-m2-v0-bfv-source-type-compatibility-audit","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The current blocker gains a scoped route retirement and next discriminator, not a cycle, census, vector or Gate-1 closure."}
+    {"id":"edge:3822","from":"concept:gate1-m2-v0-bfv-source-type-compatibility-audit","relation":"MOTIVATES","to":"open:gate1-original-cycle-signed-global-intersections","note":"The current blocker gains a scoped route retirement and next discriminator, not a cycle, census, vector or Gate-1 closure."},
+    {"id":"edge:3823","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"One bounded source-construction discriminator only; no Gate-1, physical or global promotion follows."},
+    {"id":"edge:3824","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"VALID_WITHIN","to":"scope:gate1-m2-starobinsky-naive-local-lapse-unfixing-positive-real-saddle","note":"Only the displayed configuration midpoint extension near one certified saddle is tested."},
+    {"id":"edge:3825","from":"claim:G1_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_IS_EXACT_GAUGE_ACTION","relation":"VALID_WITHIN","to":"scope:gate1-m2-starobinsky-naive-local-lapse-unfixing-positive-real-saddle"},
+    {"id":"edge:3826","from":"claim:G1_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_IS_EXACT_GAUGE_ACTION","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","polarity":"CONTRADICTS","note":"The contradiction uses a certified exact stationary point and invertible full Hessian; different first-order or gauge-preserving actions remain open."},
+    {"id":"edge:3827","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"PART_OF","to":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test"},
+    {"id":"edge:3828","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"DERIVED_FROM","to":"artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-input","note":"The manifest freezes the action, candidate, certified box, decision terminals and claim ceilings."},
+    {"id":"edge:3829","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"DEFINED_IN","to":"artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-runner","note":"The committed runner derives the symbolic identities and executes the Arb/Krawczyk certificate."},
+    {"id":"edge:3830","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"RECORDED_IN","to":"artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-result","note":"The raw result is the machine-readable source of truth for all checks and interval enclosures."},
+    {"id":"edge:3831","from":"claim:G1_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_IS_EXACT_GAUGE_ACTION","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-report"},
+    {"id":"edge:3832","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"DERIVED_FROM","to":"evidence:gate1-m2-v0-bfv-source-type-compatibility","note":"Consumes the prior direct-transplant retirement and tests a distinct same-model finite-action mechanism."},
+    {"id":"edge:3833","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"DERIVED_FROM","to":"evidence:gate1-trace-gauge-fp-admissibility","note":"Uses the endpoint-preserving two-element lapse variation while preserving the earlier append-only kill boundary."},
+    {"id":"edge:3834","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"DERIVED_FROM","to":"evidence:p39-exact-frozen-input-action-cycle-and-fail-closed-guards","note":"Uses the frozen equal-endpoint m=2 midpoint action only; no Phase-39 cycle or orientation is promoted."},
+    {"id":"edge:3835","from":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"DERIVED_FROM","to":"evidence:p39-numerical-m2-saddle-local-candidates-and-bounded-census","note":"Replaces the prior approximate root status within one tiny box by a new strict stationary-point certificate without extending the saddle census."},
+    {"id":"edge:3836","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"MOTIVATES","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"The missing discrete gauge null direction changes selection from naive unfixing to an exact gauge-preserving source construction."},
+    {"id":"edge:3837","from":"open:gate1-starobinsky-exact-gauge-preserving-element-source","relation":"FOLLOW_UP_TO","to":"claim:G1_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_IS_EXACT_GAUGE_ACTION","note":"The refined question follows the scoped retirement of the natural midpoint local-lapse mechanism."},
+    {"id":"edge:3838","from":"open:gate1-starobinsky-exact-gauge-preserving-element-source","relation":"EXTENDS","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"Refines the broad same-model replacement-source problem by requiring a proved exact discrete gauge construction or controlled continuum-first map."},
+    {"id":"edge:3839","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"CITES","to":"source:bahr-dittrich-steinhaus-2011-perfect-reparametrization","note":"Supplies the generic discretization-symmetry boundary and perfect-action precedent only; the ICE certificate and replacement choice remain local."},
+    {"id":"edge:3840","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"CITES","to":"source:dittrich-hoehn-2013-variational-discrete-constraints","note":"Supplies the distinction between a variational discretization and a proved first-class symmetry generator."},
+    {"id":"edge:3841","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"CITES","to":"source:krawczyk-neumaier-1986-interval-newton","note":"Supplies the strict interval existence-and-uniqueness framework only; no gauge or physical conclusion is imported."},
+    {"id":"edge:3842","from":"open:gate1-original-cycle-signed-global-intersections","relation":"BLOCKED_BY","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"The refined source obstruction must be resolved before N=0, cover, end, orientation or global-intersection transport can be admitted."}
   ],
   "kg_bridges": [
     {
