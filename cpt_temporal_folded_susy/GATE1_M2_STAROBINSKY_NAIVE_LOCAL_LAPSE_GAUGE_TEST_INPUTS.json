@@ -1,0 +1,164 @@
+{
+  "schema_version": "ice.gate1-m2-starobinsky-naive-local-lapse-gauge-test.input.v1",
+  "calculation_id": "Gate1M2StarobinskyNaiveLocalLapseGaugeTest",
+  "numbered_phase": null,
+  "question": "Does the natural two-local-lapse extension of the frozen equal-endpoint Starobinsky m=2 midpoint action possess the exact finite-dimensional gauge null direction required to treat its relative lapse as a BFV gauge mode?",
+  "kind": "COMPUTER_ASSISTED_EXACT_SCOPED_DISCRETE_GAUGE_NECESSARY_CONDITION_TEST",
+  "epistemic_scope": "ONE_NAIVE_TWO_LOCAL_LAPSE_EXTENSION_OF_ONE_FROZEN_EQUAL_ENDPOINT_STAROBINSKY_M2_MIDPOINT_ACTION_AT_ONE_CERTIFIED_POSITIVE_REAL_SADDLE",
+  "primary_failure": "discretization",
+  "planner": {
+    "checkpoint": "research-agent:ca0690e93d5ecb927655",
+    "classification": "CURRENT_BLOCKER_CANDIDATE",
+    "anchor_open_problem": "open:gate1-original-cycle-signed-global-intersections",
+    "missing_typed_object": "source-defined regulated joint relative class with a same-model finite-m2 BFV source",
+    "dependency_path": ["G1", "G2", "G3", "G4", "G5"],
+    "source_boundary": "PLANNER_IS_NAVIGATION_NOT_EXECUTION_OR_EVIDENCE"
+  },
+  "human_review": {
+    "bounded_output": "one exact scoped verdict on the naive midpoint two-local-lapse unfixing only",
+    "principal_false_signal": "mistaking a numerical Hessian sample for a certified stationary point, or promoting failure of this one configuration-space extension to a no-go for every first-order, perfect, improved, or continuum-first BFV construction",
+    "independent_control": "certify a unique exact stationary point by a strict Krawczyk inclusion using Arb ball arithmetic, then certify the full extended Hessian determinant excludes zero",
+    "user_authorization_context": "the user directed sequential construction and independent mathematical review of the Starobinsky m=2 FP/BFV source before downstream zero-lapse, cover, end and completeness work"
+  },
+  "frozen_model": {
+    "name": "equal-endpoint two-segment midpoint Starobinsky minisuperspace configuration regulator",
+    "segment_count": 2,
+    "h": "1/2",
+    "boundary": {
+      "a_b": "3.5668031935672753",
+      "phi_b": "1.0185809464006637"
+    },
+    "interior_variables": ["x=a_1-a_b", "q=phi_1-phi_b"],
+    "midpoints": ["A=a_b+x/2", "Phi=phi_b+q/2"],
+    "potential": "V(Phi)=3/4*(1-exp(-sqrt(2/3)*Phi))^2",
+    "kinetic_numerator": "K=-6*A*x^2+A^3*q^2",
+    "potential_factor": "W=-3*A+A^3*V(Phi)",
+    "proper_time_action": "S2=4*pi^2*K/T+2*pi^2*W*T",
+    "proper_time_domain": "T in C-star"
+  },
+  "candidate_extension": {
+    "mechanism_id": "NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING",
+    "local_lapses": ["N0=T+r", "N1=T-r"],
+    "action": "S_loc=2*pi^2*(K*(1/N0+1/N1)+(W/2)*(N0+N1))=4*pi^2*K*T/(T^2-r^2)+2*pi^2*W*T",
+    "domain": "T^2-r^2 nonzero",
+    "restriction": "S_loc(x,q,T,0)=S2(x,q,T)",
+    "endpoint_preserving_lapse_variation": "delta(N0,N1)=(2*epsilon,-2*epsilon), hence delta(T)=0 and delta(r)=2*epsilon",
+    "necessary_gauge_condition": "an off-shell differentiable gauge identity with a nonzero generator at an exact stationary point requires a Hessian null vector there",
+    "not_present": [
+      "canonical momenta or a first-order constraint lattice",
+      "BFV ghosts, multiplier pair, charge or gauge fermion",
+      "endpoint-state transform or determinant/Pfaffian line",
+      "source equality or deformation to a physical original cycle"
+    ]
+  },
+  "certificate": {
+    "method": "strict Krawczyk inclusion for grad(S2)=0 followed by Arb interval determinant exclusion",
+    "arithmetic": "python-flint Arb ball arithmetic",
+    "precision_bits": 300,
+    "center_order": ["x", "q", "T"],
+    "center": [
+      "0.0236688369074702269682774014574800709571954294264750849239483",
+      "-0.0251183141963413803838389432132798317422952401980562213133411",
+      "0.816050882198965292374365861002243412362617790046994654691017"
+    ],
+    "uniform_radius": "1e-55",
+    "required_tests": [
+      "Krawczyk image is strictly inside the frozen box",
+      "det(H_S2) excludes zero throughout the frozen box",
+      "K and 8*pi^2*K/T^3 exclude zero throughout the frozen box",
+      "det(H_Sloc at r=0) excludes zero throughout the frozen box"
+    ]
+  },
+  "decision_table": [
+    {
+      "verdict": "KILL_NAIVE_MIDPOINT_TWO_LOCAL_LAPSE_UNFIXING_AT_CERTIFIED_M2_SADDLE",
+      "condition": "the local-lapse restriction and Hessian block identities are exact, the Krawczyk operator certifies one unique stationary point, the full extended Hessian is certified invertible there, and the declared relative-lapse generator has nonzero r component",
+      "programme_impact": "RETIRE_ONLY_THIS_NAIVE_CONFIGURATION_MIDPOINT_UNFIXING_AND_SELECT_AN_EXACT_GAUGE_PRESERVING_SOURCE_CONSTRUCTION"
+    },
+    {
+      "verdict": "INCONCLUSIVE_NAIVE_LOCAL_LAPSE_GAUGE_TEST",
+      "condition": "the frozen algebra remains valid but the interval certificate does not establish the nondegeneracy required for the scoped KILL row; failure to certify is not evidence of a gauge null direction",
+      "programme_impact": "KEEP_THIS_MECHANISM_OPEN_WITHOUT_BFV_SOURCE_OR_DOWNSTREAM_TRANSPORT"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "B. Bahr, B. Dittrich, and S. Steinhaus, Perfect discretization of reparametrization invariant path integrals, arXiv:1101.4775",
+      "url": "https://arxiv.org/abs/1101.4775",
+      "used_for": "the boundary that naive discretizations generically break reparametrization symmetry and that an exactly invariant discrete path integral is a stronger construction",
+      "not_used_for": "the repository-specific action, stationary point, Hessian certificate, or a claim that perfect actions are the only possible construction"
+    },
+    {
+      "source": "B. Dittrich and P. A. Hoehn, Constraint analysis for variational discrete systems, arXiv:1303.4294",
+      "url": "https://arxiv.org/abs/1303.4294",
+      "used_for": "the distinction between a variational discretization and a proved discrete first-class symmetry generator",
+      "not_used_for": "classifying this repository-specific candidate without the displayed calculation"
+    },
+    {
+      "source": "R. Krawczyk and A. Neumaier, An improved interval Newton operator, J. Math. Anal. Appl. 118 (1986) 194-207",
+      "url": "https://doi.org/10.1016/0022-247X(86)90303-3",
+      "used_for": "the strict interval inclusion existence-and-uniqueness certificate",
+      "not_used_for": "the physical or gauge interpretation of the certified stationary point"
+    }
+  ],
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_M2_V0_BFV_SOURCE_TYPE_COMPATIBILITY_RESULT.json",
+      "sha256": "38ae973ae85c380913cb038a6c495a7db78f331e9eec38bb2ab5e34f3d7c028e",
+      "payload_sha256_without_self": "5411e04686348f4f18fa5a3c8261955b317cfa9f4ac24f35ca229ce75285017d",
+      "required_verdict": "KILL_DIRECT_V0_BFV_TO_STAROBINSKY_M2_SOURCE_IDENTIFICATION"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json",
+      "sha256": "b6215136abf6d4018456024789ad4160dac1c28af20bd32078bf8edfc0e0d5fe",
+      "payload_sha256_without_self": "c9f8878e27a9d20d92d2807f60232aa03e1efaaa87b9c3c8e75d527d541f059e",
+      "required_verdict": "LOCAL_TRACE_GAUGE_FIBER_KEEP_UNCHANGED_PROPER_TIME_M2_APPEND_KILLED"
+    }
+  ],
+  "upstream_files": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875"
+    }
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 100,
+    "interval_certificates": 1,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "automatic_descendants": 0
+  },
+  "required_fail_closed_outputs": {
+    "starobinsky_finite_m2_bfv_trajectory_source": null,
+    "first_order_constraint_lattice": null,
+    "bfv_charge_and_gauge_fermion": null,
+    "endpoint_state_transform": null,
+    "source_equivalence_or_deformation": null,
+    "zero_lapse_distribution": null,
+    "U0_U1_U1prime_Uf_descent": null,
+    "complete_end_divisor_census": null,
+    "candidate_set_completeness": null,
+    "absolute_bfv_orientation": null,
+    "physical_original_cycle": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_promotion": "PROHIBITED",
+    "physics_claim": null,
+    "TOE_claim": null,
+    "automatic_next": null
+  }
+}
