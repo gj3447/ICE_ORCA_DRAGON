@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-04T02:03:10Z",
+  "updated_at_utc": "2026-09-04T02:55:43Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -14761,8 +14761,8 @@
       "summary": "CITES-only source for arbitrary-precision ball inclusion semantics; it does not prove the repository characteristic, ODE transport or operator claims.",
       "state": "PRIMARY_REFERENCE",
       "citation": "F. Johansson, Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic, IEEE Transactions on Computers 66 (2017) 1281--1292.",
-      "uri": "https://arxiv.org/abs/1611.02831",
-      "version": "arXiv:1611.02831"
+      "uri": "https://arxiv.org/abs/1611.02831v1",
+      "version": "arXiv:1611.02831v1"
     },
     {
       "id": "source:python-flint-acb-0-9-0",
@@ -16103,9 +16103,9 @@
       "id": "open:gate1-starobinsky-exact-gauge-preserving-element-source",
       "type": "open_problem",
       "title": "Construct an exact gauge-preserving Starobinsky element source",
-      "summary": "The direct V0 transplant and the naive two-local-lapse unfixing are retired in their exact scopes. The next source discriminator must derive an exact Hamilton-principal-function, perfect/improved, or otherwise proved gauge-preserving same-model element action with first-order constraints, endpoint states, BFV data and a controlled map to the frozen midpoint kernel before N=0 or relative-chain work.",
+      "summary": "The direct V0 transplant, naive two-local-lapse unfixing and frozen-midpoint fixed-time-HJ equality map are retired in separate scopes. The next discriminator must use one named Starobinsky continuum branch to construct a different local constrained principal function or controlled HJ/perfect deformation, prove composition and one internal-vertex gauge-null mode, and control its map to the frozen kernel before first-order BFV, N=0 or relative-chain work.",
       "state": "OPEN_SELECTED_REFINED_SOURCE_DISCRIMINATOR_NO_AUTOMATIC_EXECUTION_AUTHORITY",
-      "question": "Can one exact gauge-preserving Starobinsky element action produce a same-model finite BFV source and a controlled equality, deformation or approximation map to the frozen m=2 midpoint kernel?"
+      "question": "Can one named Starobinsky continuum branch yield a local constrained principal function with an exact composition law and one internal-vertex gauge-null mode, together with a controlled projection or deformation bound to the frozen m=2 kernel?"
     },
     {
       "id": "artifact:gate1-m2-starobinsky-naive-local-lapse-gauge-test-input",
@@ -16156,7 +16156,7 @@
       "summary": "Primary source for generic reparametrization-symmetry breaking by discretization and the stronger discretization-independent perfect-path-integral construction. It supplies no ICE stationary point, source or unique replacement method.",
       "state": "PRIMARY_CITES_ONLY",
       "citation": "B. Bahr, B. Dittrich, and S. Steinhaus, Perfect discretization of reparametrization invariant path integrals",
-      "uri": "https://arxiv.org/abs/1101.4775",
+      "uri": "https://arxiv.org/abs/1101.4775v1",
       "version": "arXiv:1101.4775v1"
     },
     {
@@ -16166,7 +16166,7 @@
       "summary": "Primary source distinguishing variational discrete evolution from proved first-class constraints and symmetry generators. It supplies the analysis boundary, not the repository-specific classification.",
       "state": "PRIMARY_CITES_ONLY",
       "citation": "B. Dittrich and P. A. Hoehn, Constraint analysis for variational discrete systems",
-      "uri": "https://arxiv.org/abs/1303.4294",
+      "uri": "https://arxiv.org/abs/1303.4294v3",
       "version": "arXiv:1303.4294v3"
     },
     {
@@ -16178,6 +16178,108 @@
       "citation": "R. Krawczyk and A. Neumaier, An improved interval Newton operator, J. Math. Anal. Appl. 118 (1986) 194-207",
       "uri": "https://doi.org/10.1016/0022-247X(86)90303-3",
       "version": "published article"
+    },
+    {
+      "id": "concept:gate1-m2-starobinsky-midpoint-hj-identity-audit",
+      "type": "concept",
+      "title": "Gate-1 Starobinsky m=2 midpoint fixed-time HJ identity audit",
+      "summary": "A clean unnumbered symbolic and Arb-certified audit tests whether the sealed midpoint element is pointwise equal to the exact fixed-time Euclidean Hamilton principal function of the declared H_E. Its equal-endpoint HJ residual is strictly positive at one exact algebraic witness and one frozen-boundary witness, retiring only that equality map.",
+      "state": "COMPLETED_SCOPED_FIXED_TIME_HJ_IDENTITY_NEGATIVE_RESULT"
+    },
+    {
+      "id": "scope:gate1-m2-starobinsky-midpoint-fixed-time-hj-identity",
+      "type": "scope",
+      "title": "Gate-1 frozen midpoint fixed-time HJ identity scope",
+      "summary": "One pointwise exact-equality test for the frozen Starobinsky midpoint formula under the declared fixed-time Euclidean Hamiltonian, restricted to the equal-endpoint diagonal and witnessed at one exact algebraic point plus the frozen Phase-39 boundary point.",
+      "state": "CLOSED_FIXED_TIME_IDENTITY_SCOPE_CONSTRAINED_AND_DEFORMED_ROUTES_OPEN",
+      "includes": [
+        "the exact midpoint-to-frozen-m2 algebraic two-copy factorization",
+        "the diagonal residual R_HJ=pi^2*t^2*G^AB*U_A*U_B/4",
+        "the exact Starobinsky witness R_HJ=45*pi^2/1024>0",
+        "one 300-bit Arb frozen-boundary positivity certificate and an exact flat control"
+      ],
+      "excludes": [
+        "a lapse-extremized constrained principal function or any general perfect-action no-go",
+        "a controlled off-diagonal HJ/perfect deformation or uniform error bound",
+        "a local branch, validated flow, composition theorem or internal-vertex gauge-null construction",
+        "first-order constraints, BFV data, N=0, cover, end, orientation, relative-cycle, global, physics or TOE conclusions"
+      ]
+    },
+    {
+      "id": "claim:G1_FROZEN_MIDPOINT_IS_EXACT_FIXED_TIME_HJ_ELEMENT",
+      "type": "claim",
+      "title": "The frozen Starobinsky midpoint is an exact fixed-time HJ element",
+      "summary": "Contradicted in the declared pointwise fixed-time scope: the exact diagonal residual is nonzero at an algebraic witness and is independently certified positive at the frozen boundary. This does not constrain a different constrained, perfect, improved, deformed or BFV construction.",
+      "state": "CONTRADICTED_SCOPED_FIXED_TIME_IDENTITY_ONLY",
+      "claim_id": "G1_FROZEN_MIDPOINT_IS_EXACT_FIXED_TIME_HJ_ELEMENT",
+      "statement": "The sealed frozen Starobinsky midpoint formula is pointwise equal to the exact fixed-time Euclidean Hamilton principal function of the declared H_E on a domain containing the tested equal-endpoint witnesses.",
+      "epistemic_state": "CONTRADICTED"
+    },
+    {
+      "id": "evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit",
+      "type": "evidence",
+      "title": "Gate-1 midpoint fixed-time HJ identity evidence",
+      "summary": "Raw-result SSOT records one VALID_RUN with 16/16 exact checks, 4/4 Arb certificates and 5/5 theorem/scope guards. It proves the exact residual formula, R_HJ=45*pi^2/1024>0 at the algebraic witness and R_HJ approximately 0.9311492454 with a strictly positive 300-bit enclosure at the frozen witness. Three post-run read-only audits found no hash, algebra, interval, source or scope blocker.",
+      "state": "VALID_RUN_SCOPED_FIXED_TIME_HJ_IDENTITY_MAP_KILLED",
+      "observed_status": "VALID_RUN_16_EXACT_4_ARB_CERTIFICATES_5_GUARDS_INDEPENDENT_READ_ONLY_REVIEW",
+      "check_ids": [
+        "G1.midpoint_hj.exact.diagonal_residual",
+        "G1.midpoint_hj.exact.witness_residual",
+        "G1.midpoint_hj.certificate.frozen_residual_positive",
+        "G1.midpoint_hj.certificate.direct_formula_consistency"
+      ]
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-input",
+      "type": "artifact",
+      "title": "Gate-1 midpoint HJ identity input manifest",
+      "summary": "Hash-pinned fixed-time convention, midpoint candidate, exact and frozen witnesses, decision terminals, primary-source boundaries, resource caps and fail-closed outputs.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_MIDPOINT_HJ_IDENTITY_AUDIT_INPUTS.json",
+      "sha256": "6c2ab273fd8d3c95e4b85337cf7f55c84eb961117c3db5982d65a260e4ba0696",
+      "introduced_in_commit": "6ed8ce69e50adace61f2fe673dc20647bac256a9"
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-runner",
+      "type": "artifact",
+      "title": "Gate-1 midpoint HJ identity runner",
+      "summary": "Bounded runner deriving the exact diagonal HJ residual, algebraic and flat controls, and one 300-bit Arb frozen-boundary certificate before selecting the scoped KILL or an inconclusive terminal.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/gate1_m2_starobinsky_midpoint_hj_identity_audit.py",
+      "sha256": "287c142e1221ec8289f73be7e7054044773e47d6096c769c514db91f53c658ae",
+      "introduced_in_commit": "6ed8ce69e50adace61f2fe673dc20647bac256a9"
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-result",
+      "type": "artifact",
+      "title": "Gate-1 midpoint HJ identity raw result",
+      "summary": "Raw-result SSOT: VALID_RUN, scoped fixed-time-HJ equality-map kill verdict, 16 exact checks, 4 Arb certificates, 5 guards and canonical payload digest 7eca45eb80add06c27eef2578049e657bba2f106dd5f5b10b1f2b42f341d0550.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_MIDPOINT_HJ_IDENTITY_AUDIT_RESULT.json",
+      "sha256": "8defcaaccc03dc88251758815003592016b4b4cedb538d5426289c97f4d99325"
+    },
+    {
+      "id": "artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-report",
+      "type": "artifact",
+      "title": "Gate-1 midpoint HJ identity report",
+      "summary": "Human-readable fixed-time convention, exact residual derivation, algebraic and Arb witnesses, flat control, counterterm nonpromotion, construction-order status and outcome-bound route change.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_MIDPOINT_HJ_IDENTITY_AUDIT.md",
+      "sha256": "5d0c24b9bc37124c7c9b5477737ed4280b3c9a4fcb0b215e48d8b9b23e127579"
+    },
+    {
+      "id": "source:dittrich-2012-cylindrical-consistency",
+      "type": "source",
+      "title": "From the discrete to the continuous: Towards a cylindrically consistent dynamics",
+      "summary": "Primary CITES-only source for Hamilton-principal-function, perfect-action and coarse/cylindrical-consistency motivation. It supplies no ICE Starobinsky residual, local branch, perfect element, controlled deformation or BFV source.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "B. Dittrich, From the discrete to the continuous: Towards a cylindrically consistent dynamics",
+      "uri": "https://arxiv.org/abs/1205.6127v1",
+      "version": "arXiv:1205.6127v1"
     }
   ],
   "edges": [
@@ -36561,7 +36663,24 @@
     {"id":"edge:3839","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"CITES","to":"source:bahr-dittrich-steinhaus-2011-perfect-reparametrization","note":"Supplies the generic discretization-symmetry boundary and perfect-action precedent only; the ICE certificate and replacement choice remain local."},
     {"id":"edge:3840","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"CITES","to":"source:dittrich-hoehn-2013-variational-discrete-constraints","note":"Supplies the distinction between a variational discretization and a proved first-class symmetry generator."},
     {"id":"edge:3841","from":"concept:gate1-m2-starobinsky-naive-local-lapse-gauge-test","relation":"CITES","to":"source:krawczyk-neumaier-1986-interval-newton","note":"Supplies the strict interval existence-and-uniqueness framework only; no gauge or physical conclusion is imported."},
-    {"id":"edge:3842","from":"open:gate1-original-cycle-signed-global-intersections","relation":"BLOCKED_BY","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"The refined source obstruction must be resolved before N=0, cover, end, orientation or global-intersection transport can be admitted."}
+    {"id":"edge:3842","from":"open:gate1-original-cycle-signed-global-intersections","relation":"BLOCKED_BY","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"The refined source obstruction must be resolved before N=0, cover, end, orientation or global-intersection transport can be admitted."},
+    {"id":"edge:3843","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"One bounded fixed-time identity discriminator only; no Gate-1, BFV, physical or global promotion follows."},
+    {"id":"edge:3844","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"VALID_WITHIN","to":"scope:gate1-m2-starobinsky-midpoint-fixed-time-hj-identity","note":"Only the sealed midpoint formula and declared fixed-time H_E are tested on the equal-endpoint diagonal."},
+    {"id":"edge:3845","from":"claim:G1_FROZEN_MIDPOINT_IS_EXACT_FIXED_TIME_HJ_ELEMENT","relation":"VALID_WITHIN","to":"scope:gate1-m2-starobinsky-midpoint-fixed-time-hj-identity"},
+    {"id":"edge:3846","from":"claim:G1_FROZEN_MIDPOINT_IS_EXACT_FIXED_TIME_HJ_ELEMENT","relation":"HAS_EVIDENCE","to":"evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit","polarity":"CONTRADICTS","note":"The exact and interval-certified counterexamples retire only the pointwise fixed-time equality map; constrained, perfect, deformed and BFV routes remain open."},
+    {"id":"edge:3847","from":"evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"PART_OF","to":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit"},
+    {"id":"edge:3848","from":"evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"DERIVED_FROM","to":"artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-input","note":"The manifest freezes the fixed-time convention, candidate, two witnesses, decision terminals and claim ceilings."},
+    {"id":"edge:3849","from":"evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"DEFINED_IN","to":"artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-runner","note":"The committed runner derives the exact residual and executes the one Arb certificate."},
+    {"id":"edge:3850","from":"evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"RECORDED_IN","to":"artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-result","note":"The raw result is the machine-readable source of truth; no duplicate evidence snapshot is created."},
+    {"id":"edge:3851","from":"claim:G1_FROZEN_MIDPOINT_IS_EXACT_FIXED_TIME_HJ_ELEMENT","relation":"DOCUMENTED_BY","to":"artifact:gate1-m2-starobinsky-midpoint-hj-identity-audit-report"},
+    {"id":"edge:3852","from":"evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"DERIVED_FROM","to":"evidence:gate1-bosonic-canonical-source-pushforward","note":"Uses the same frozen Starobinsky configuration action while making no conformal-cycle or determinant-line promotion."},
+    {"id":"edge:3853","from":"evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"DERIVED_FROM","to":"evidence:gate1-m2-starobinsky-naive-local-lapse-gauge-test","note":"Follows the prior scoped local-lapse retirement but tests a distinct fixed-time equality map rather than another lapse Hessian."},
+    {"id":"edge:3854","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"MOTIVATES","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"The nonzero fixed-time residual changes selection from exact midpoint equality to a different constrained principal function or controlled HJ/perfect deformation."},
+    {"id":"edge:3855","from":"open:gate1-starobinsky-exact-gauge-preserving-element-source","relation":"FOLLOW_UP_TO","to":"claim:G1_FROZEN_MIDPOINT_IS_EXACT_FIXED_TIME_HJ_ELEMENT","note":"The refined construction question follows the scoped retirement of the frozen fixed-time equality map."},
+    {"id":"edge:3856","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:bahr-dittrich-steinhaus-2011-perfect-reparametrization","note":"Perfect-discretization motivation only; it supplies no ICE element or residual."},
+    {"id":"edge:3857","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:dittrich-hoehn-2013-variational-discrete-constraints","note":"Supplies the variational-discretization versus proved-gauge-structure boundary only."},
+    {"id":"edge:3858","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:dittrich-2012-cylindrical-consistency","note":"Hamilton-principal-function and coarse-consistency motivation only; the repository residual remains local evidence."},
+    {"id":"edge:3859","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:johansson-arb-2017","note":"Arb supplies outward ball semantics only; it does not supply the HJ theorem or physical interpretation."}
   ],
   "kg_bridges": [
     {

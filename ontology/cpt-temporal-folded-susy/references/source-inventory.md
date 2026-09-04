@@ -212,6 +212,7 @@ narrative layer and is not scientific evidence for this graph.
 | Bounded P1/P4/P2/P6/P7 bridge snapshots (2026-08-31) | Weyl (1910) and Eckhardt et al. for singular-Weyl scope; Lindblom--Taylor--Zhang (2017) and Wigner/hyperspherical representation for finite real-\(S^3\) scalar conventions; Teitelboim/Hojman--Kuchař--Teitelboim for the HDA boundary; Kamenshchik--Lyakhovich and Cattaneo--Mnev--Reshetikhin for BFV/BV--BFV framing; CLASS/Cobaya for downstream likelihood machinery | The repository records only an admission denial, a finite nonreal proxy, complex SU(2) scalar golden coefficients, a finite \(n\leq2\) real-scalar translation, two fixed real-scalar derivative identities, a finite endpoint-gluing toy and a declared rapid-decay lapse-ray toy without a selected relative-homology class. The execution-free fixed-box endpoint note identifies the missing complex-tail certificate theorem. These sources neither turn a remainder into HDA/an anomaly nor supply an actual endpoint certificate, absolute gravity measure, common physical product, primordial spectrum, or likelihood. |
 | False-signal reduction map and zonal aliasing ladder (2026-08-31) | Bahr--Dittrich on discrete diffeomorphism breaking/pseudo-constraints; Patterson--Orszag and Orszag on dealiasing | `CITES`-only method boundaries. Repository evidence separates one N=2 production-grid alias channel from the independently exact hard-cutoff tail for a frozen zonal scalar packet. The sources do not transfer Fourier rules unchanged to \(S^3\), establish HDA/Jacobi, classify a quantum anomaly, or supply a continuum tail theorem. |
 | Declared raw-\(C\) \(\Gamma_1\) boundary variation (2026-08-30) | Gradshteyn--Ryzhik 6.576(4); NIST DLMF modified-Bessel sections 10.25, 10.27, 10.29 and 10.32; Johansson (Arb); python-flint 0.9 | These sources frame the \(\lambda=0\) Bessel/Mellin identity, reality conventions and outward ball arithmetic. Repository evidence supplies the fixed-reference Wronskian identity, five-bracket \(\lambda=0\) left correction and normalized/K-scaled derivative enclosures, plus a Cauchy--Schwarz correction-functional bound per unit declared minus-tail norm on two punctured \(\lambda\) boxes. They do not construct a nonzero-\(\lambda\) plus-recessive solution, actual \(\Gamma_1\) value or remainder, root continuation/velocity, spectral/RAQ result, physics, quantum gravity or TOE conclusion. |
+| Gate-1 frozen-midpoint fixed-time HJ identity audit (2026-09-04) | Bahr--Dittrich--Steinhaus, `arXiv:1101.4775v1`; Dittrich--Höhn, `arXiv:1303.4294v3`; Dittrich, `arXiv:1205.6127v1`; Johansson, `arXiv:1611.02831v1` | `CITES`-only boundaries for perfect/reparametrization-invariant discretization, discrete constraint analysis, HJ/coarse consistency and outward ball arithmetic. The papers do not derive the repository's diagonal residual or witnesses and do not supply a Starobinsky constrained principal function, perfect deformation, BFV source or relative cycle. |
 
 Phase 15R remains a historical **scoped census**, not a duplicated or literature-wide source ledger.
 Its Hohl v1/Kallosh v3 hashes, locators, conventions, and role restrictions remain authoritative in
@@ -556,5 +557,16 @@ nonsingular extended Hessian into a continuum or global no-go. The repository re
 therefore retires only the named naive midpoint unfixing at its certified saddle;
 exact gauge-preserving source construction, zero lapse, cover/orientation, end
 completeness, and global pairing remain open.
+
+The midpoint fixed-time HJ successor adds Dittrich (2012) and reuses
+Bahr--Dittrich--Steinhaus, Dittrich--Höhn and Johansson as `CITES`-only
+boundaries.  The first three motivate exact/perfect/HJ construction and the
+need to test discrete gauge structure; Johansson supplies rigorous ball
+semantics only.  None derives the ICE residual or selects a replacement
+Starobinsky element.  The repository result retires only pointwise equality
+of the frozen midpoint formula with the declared fixed-time Hamilton principal
+function.  A lapse-extremized constrained principal function, controlled
+HJ/perfect deformation, first-order BFV source, zero lapse, overlap/orientation,
+end completeness and global pairing remain open.
 
 These are represented as open-problem nodes, not hidden assumptions or implied literature results.

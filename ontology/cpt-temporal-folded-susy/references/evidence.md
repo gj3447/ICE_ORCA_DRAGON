@@ -3656,6 +3656,34 @@ This is a scoped configuration-discretization negative result, not a no-go for
 reparametrization symmetry, perfect/improved discretization, continuum BFV, or
 any physical claim.
 
+The next discriminator tests the exact fixed-time identity map without
+duplicating the raw result into an ontology snapshot:
+
+```text
+claim:G1_FROZEN_MIDPOINT_IS_EXACT_FIXED_TIME_HJ_ELEMENT
+  -> HAS_EVIDENCE {polarity: CONTRADICTS}
+     -> evidence:gate1-m2-starobinsky-midpoint-hj-identity-audit
+        (raw result is SSOT; 16/16 exact, 4/4 Arb, 5/5 guards)
+  -> VALID_WITHIN -> scope:gate1-m2-starobinsky-midpoint-fixed-time-hj-identity
+
+unexpected: the exact equal-endpoint residual is nonzero at both an algebraic
+            witness and the frozen-boundary Arb witness
+  -> retire FROZEN_MIDPOINT_AS_EXACT_FIXED_TIME_HJ_ELEMENT only
+  -> keep constrained/perfect/deformed/BFV routes open
+  -> open:gate1-starobinsky-exact-gauge-preserving-element-source
+     now asks for a named continuum branch, exact composition, one
+     internal-vertex gauge-null mode and a controlled map to the frozen kernel
+```
+
+The [raw result](../../../cpt_temporal_folded_susy/GATE1_M2_STAROBINSKY_MIDPOINT_HJ_IDENTITY_AUDIT_RESULT.json)
+is the source of truth for the exact formula and complete Arb enclosures.  No
+first-order constraint lattice, local branch/flow, composition law,
+internal-vertex gauge-null mode, BFV source, zero-lapse prescription, atlas,
+end census, orientation, relative cycle or global vector is produced.
+`UNIQUE_LATERAL`, `STOKES_SPLIT`, and `NO_ADMISSIBLE_LIFT` remain unevaluated.
+This fixed-time counterexample is not a no-go for a lapse-extremized constrained
+principal function or a different perfect/improved element.
+
 The [current physics-discovery gap map](../../../docs/research/ICE_CURRENT_PHYSICS_DISCOVERY_GAP_MAP_2026-08-31.md)
 carries these lanes through quantum BFV, absolute measure, relational state
 construction and the empirical gate. It is navigation rather than scientific
