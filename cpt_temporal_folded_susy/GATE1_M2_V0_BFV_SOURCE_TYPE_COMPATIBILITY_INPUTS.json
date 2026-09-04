@@ -1,0 +1,162 @@
+{
+  "schema_version": "ice.gate1-m2-v0-bfv-source-type-compatibility.input.v1",
+  "calculation_id": "Gate1M2V0BfvSourceTypeCompatibility",
+  "numbered_phase": null,
+  "question": "Can the validated closed-FRW V=0 U_plus improved-static BFV zero-mode source inhabit the source type of the frozen Starobinsky finite m=2 joint action, or is there an exact model/action/domain/endpoint obstruction?",
+  "kind": "EXACT_CROSS_SCOPE_SOURCE_TYPE_COMPATIBILITY_AUDIT",
+  "epistemic_scope": "FINITE_M2_STAROBINSKY_BOSONIC_SOURCE_VERSUS_LOCAL_V0_UPLUS_BFV_ZERO_MODE_SOURCE_ONLY",
+  "primary_failure": "type",
+  "planner": {
+    "checkpoint": "research-agent:f44657ec45f0f3b68244",
+    "classification": "CURRENT_BLOCKER_CANDIDATE",
+    "anchor_open_problem": "open:gate1-original-cycle-signed-global-intersections",
+    "dependency_path": ["G1", "G2", "G3", "G4", "G5"],
+    "source_boundary": "PLANNER_IS_NAVIGATION_NOT_EXECUTION_OR_EVIDENCE"
+  },
+  "human_review": {
+    "missing_typed_object": "one source-defined regulated joint relative class whose action, model, endpoint polarization, lapse variables, BFV measure and orientation all share one scope",
+    "bounded_output": "one direct source-type compatibility or exact scoped-obstruction verdict",
+    "principal_false_signal": "equating the proper-time modulus T of the Starobinsky m=2 action with the Darboux clock coordinate T of the V=0 BFV chart, or silently extending a V=0 cyclic-scalar construction to V(phi) nonzero",
+    "independent_control": "reconstruct the Starobinsky canonical momentum pushforward and configuration action independently, then compare model, bulk action, endpoint and source-scope invariants"
+  },
+  "target_type": {
+    "model": "closed-FRW homogeneous gravity plus Starobinsky scalar potential",
+    "potential": "V(phi)=3/4*(1-exp(-sqrt(2/3)*phi))^2",
+    "finite_cutoff": "m=2 with h=1/2 and equal fixed (a,phi) endpoints",
+    "configuration_space": "X2=C_(a1) x C_(phi1) x C_(T_prop)^*",
+    "endpoint_polarization": ["a", "phi"],
+    "lapse_object": {
+      "symbol": "T_prop",
+      "role": "GLOBAL_PROPER_TIME_OR_CONSTANT_LAPSE_MODULUS",
+      "domain": "C^*",
+      "zero_status": "EXCLUDED_SIMPLE_ACTION_POLE"
+    },
+    "source_requirement": "a derived finite-m2 BFV trajectory source in this same Starobinsky model and endpoint problem"
+  },
+  "candidate_source_type": {
+    "model": "closed-FRW V=0 on the local U_plus Darboux component",
+    "component": "U_plus={p>0,3*p^2-2*P^2>0}",
+    "endpoint_polarization": ["T_clock", "Phi"],
+    "clock_object": {
+      "symbol": "T_clock",
+      "role": "DARBOUX_CLOCK_COORDINATE_W_c",
+      "gauge_condition": "T_clock=0"
+    },
+    "multiplier_object": {
+      "symbol": "N",
+      "role": "FULL_REAL_BFV_ZERO_MODE_MULTIPLIER",
+      "pair": "(N,Pi)"
+    },
+    "bfv_charge": "Omega=c_g*c+rho*Pi",
+    "gauge_fermion": "Psi=bar_c*T_clock+bar_rho*N",
+    "source_scope": "LOCAL_ZERO_MODE_ENDPOINT_ALGEBRA_NOT_FINITE_M2_TRAJECTORY"
+  },
+  "compatibility_fields": [
+    "model_potential",
+    "constraint_and_bulk_action",
+    "canonical_physical_pair",
+    "lapse_and_clock_roles",
+    "endpoint_polarization_and_boundary_action",
+    "finite_m2_source_lattice",
+    "source_equivalence_or_deformation",
+    "absolute_bfv_orientation"
+  ],
+  "resource_caps": {
+    "wall_clock_seconds": 120,
+    "stdout_bytes": 262144,
+    "stderr_bytes": 262144,
+    "changed_artifact_files": 12,
+    "changed_artifact_bytes": 1000000,
+    "symbolic_operations": 200,
+    "quadratures": 0,
+    "root_calls": 0,
+    "ode_calls": 0,
+    "numerical_samples": 0,
+    "automatic_descendants": 0
+  },
+  "upstream_results": [
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_BOSONIC_CANONICAL_SOURCE_PUSHFORWARD_RESULT.json",
+      "sha256": "f7d64a09eeb4132e4975b056ee76eedfa32b75c7d29ca1a78bede5b052a66bc6",
+      "payload_sha256_without_self": "4c6be750b82009eb987a087d6e51f35bb520c9cf8052b9835aa396d6253d4ba4",
+      "required_verdict": "CONFORMAL_PRESCRIPTION_AND_DETLINE_GLUE_REQUIRED"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_TRACE_GAUGE_FP_ADMISSIBILITY_RESULT.json",
+      "sha256": "b6215136abf6d4018456024789ad4160dac1c28af20bd32078bf8edfc0e0d5fe",
+      "payload_sha256_without_self": "c9f8878e27a9d20d92d2807f60232aa03e1efaaa87b9c3c8e75d527d541f059e",
+      "required_verdict": "LOCAL_TRACE_GAUGE_FIBER_KEEP_UNCHANGED_PROPER_TIME_M2_APPEND_KILLED"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/GATE1_V0_IMPROVED_STATIC_BFV_SOURCE_RESULT.json",
+      "sha256": "62f3c2fb2cb5574b495d64c4566e196e96fde4fca332636a2891999eefef9b55",
+      "payload_sha256_without_self": "c62f45cf0bb0bedaf1f74a94d1ad96e5138ea50825f253c9a426293279e19925",
+      "required_verdict": "KEEP_V0_LOCAL_IMPROVED_STATIC_BFV_ENDPOINT_SOURCE_ALGEBRA"
+    }
+  ],
+  "upstream_files": [
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION.md",
+      "sha256": "0872eda0d526a707c3eb28a700ff1209d78a94a600419ee09609ac67d0047b70"
+    },
+    {
+      "path": "cpt_temporal_folded_susy/PHASE39_FINITE_JOINT_INTERSECTION_INPUTS.json",
+      "sha256": "b9c36c3bfeaa63722d90d931b2e961fefd00d9b6c334f4d7e519344d467abab4"
+    }
+  ],
+  "decision_table": [
+    {
+      "verdict": "KEEP_V0_BFV_AS_STAROBINSKY_M2_SOURCE_TYPE",
+      "condition": "all compatibility fields are proved equal in one model and a full finite-m2 BFV trajectory source plus source deformation is present",
+      "programme_impact": "ALLOW_SOURCE_TO_FOLD_TYPE_CONSTRUCTION_TO_CONTINUE_WITHOUT_CLAIM_PROMOTION"
+    },
+    {
+      "verdict": "KILL_DIRECT_V0_BFV_TO_STAROBINSKY_M2_SOURCE_IDENTIFICATION",
+      "condition": "at least one exact model, action, canonical-pair, clock/lapse, endpoint or finite-source type mismatch is proved while both upstream results retain their own scoped validity",
+      "programme_impact": "RETIRE_DIRECT_SCOPE_IDENTIFICATION_AND_SELECT_A_STAROBINSKY_COMPATIBLE_REPLACEMENT_SOURCE"
+    },
+    {
+      "verdict": "INCONCLUSIVE_SOURCE_TYPE_COMPATIBILITY",
+      "condition": "the pinned evidence does not decide compatibility and no exact mismatch witness is available",
+      "programme_impact": "KEEP_TYPE_COMPATIBILITY_OPEN_WITHOUT_SOURCE_TO_FOLD_TRANSPORT"
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "M. Henneaux, C. Teitelboim, and J. D. Vergara, Gauge invariance for generally covariant systems, Nucl. Phys. B 387 (1992) 391-418",
+      "url": "https://arxiv.org/abs/hep-th/9205092",
+      "used_for": "endpoint-improved canonical-gauge framework boundary",
+      "not_used_for": "equating two repository actions, endpoint problems, or source measures"
+    },
+    {
+      "source": "J. A. Garcia, J. D. Vergara, and L. F. Urrutia, BRST-BFV quantization and the Schwinger action principle",
+      "url": "https://arxiv.org/abs/hep-th/9511092",
+      "used_for": "BFV multiplier, ghost and endpoint framework boundary",
+      "not_used_for": "deriving the repository Starobinsky finite-m2 source"
+    },
+    {
+      "source": "E. Witten, Analytic Continuation Of Chern-Simons Theory, arXiv:1001.2933v4",
+      "url": "https://arxiv.org/abs/1001.2933v4",
+      "used_for": "relative-cycle and Picard-Lefschetz interpretation boundary",
+      "not_used_for": "selecting an ICE source, gauge, chain, or global intersection coefficient"
+    }
+  ],
+  "required_fail_closed_outputs": {
+    "named_chain_theory_hypotheses_satisfied": null,
+    "starobinsky_finite_m2_bfv_trajectory_source": null,
+    "source_equivalence_or_deformation": null,
+    "zero_lapse_distribution": null,
+    "U0_U1_U1prime_Uf_descent": null,
+    "complete_end_divisor_census": null,
+    "candidate_set_completeness": null,
+    "absolute_bfv_orientation": null,
+    "physical_original_cycle": null,
+    "complete_global_signed_intersection_vector": null,
+    "global_n_sigma": null,
+    "gate1": "OPEN_PARTIAL_PROGRESS",
+    "global_promotion": "PROHIBITED",
+    "physics_claim": null,
+    "TOE_claim": null,
+    "automatic_next": null
+  }
+}
