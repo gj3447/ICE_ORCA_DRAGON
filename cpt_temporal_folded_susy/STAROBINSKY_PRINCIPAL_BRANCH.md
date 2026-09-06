@@ -1,8 +1,86 @@
 # Local Starobinsky constrained principal-action interface
 
 This bounded construction is a **supporting classical method**, not a quantum
-source, an original relative cycle, a new physical effect or a discovery. The
-result section is to be completed from the committed runner's actual output.
+source, an original relative cycle, a new physical effect or a discovery.
+
+The first execution returned
+`CERTIFIED_LOCAL_CONSTRAINED_PRINCIPAL_COMPOSITION_INTERFACE`, with **22/22
+controls true**. It constructed the declared endpoint-family representation,
+not just a single action value. The midpoint pullback differs from that action
+in both value and all four first endpoint derivatives. Thus this result supplies
+a usable local classical comparison while preserving the earlier retirement of
+midpoint-as-exact-action claims.
+
+## Observed result
+
+The four external endpoint coordinates vary independently about
+\((a_b,\phi_b)=(3.5668031935672753,1.0185809464006637)\), with declared radius
+\(2^{-38}\) in each coordinate. The raw record gives exact rational outer
+enclosures, including the outward-rounded imports. The interior vertex box
+has declared radius \(2^{-26}\) about the dyadic centers selected by the
+fixed construction. These are small local neighborhoods, not global domains.
+
+| Uniform constrained BVP | Weighted Krawczyk defect norm | Result |
+|---|---:|---|
+| Full interval | 0.000035104067631280026 | Strict inclusion, unique regular branch |
+| Left one-third interval | 0.004035316503924701 | Strict inclusion over independent endpoint product |
+| Right two-thirds interval | 0.002431922726433432 | Strict inclusion over independent endpoint product |
+
+The exact rational bounds in the raw JSON are authoritative. The following
+are its deliberately rounded enclosing displays, in the declared dimensionless
+action normalization:
+
+```text
+S_C                   in [ 1.4066905 +/- 5.03e-8 ]
+midpoint pullback      in [ 1.5858861 +/- 5.57e-8 ]
+S_C - midpoint         in [-0.1791955 +/- 2.64e-8 ]
+```
+
+The midpoint discrepancy is plainly larger than the numerical enclosure
+width. The four endpoint-gradient defects, ordered
+\((a_L,\phi_L,a_R,\phi_R)\), are enclosed by
+
+```text
+[-5.435 +/- 2.68e-4], [-12.32 +/- 3.30e-3],
+[-5.435 +/- 9.31e-5], [-12.317 +/- 5.22e-4].
+```
+
+All exclude zero. This is a finite nonidentity result for the declared
+pullback, not a lower bound on the error of every possible improved action.
+The characteristic components on the independent cell product box are
+
+```text
+R_a   in [ 0.0326 +/- 5.61e-5 ]
+R_phi in [-0.0353 +/- 5.06e-5 ].
+```
+
+Both exclude zero. The exact characteristic identity is derived below;
+the action-additivity interval \([+/-1.80\times10^{-8}]\) and first-variation
+overlaps are consistency controls. They do not by themselves prove identities.
+
+Execution used the command in the build section, exited **0**, invoked eleven
+bounded child integrations and took **0.216462 seconds inside the runner**.
+There was no radius change, retry or failure suppression.
+
+| Provenance | Recorded value |
+|---|---|
+| Source commit | `d3ff23d834b889b198750adb3ebeb4c1d6776e2a` |
+| Runner SHA-256 | `cb5e9b6f5c9db7a81808478210d493974950941d04e732b44d9e1f1e2d13140c` |
+| Input SHA-256 | `91f33533364ae18277230f24663479291d481c645b1b2033a94afc84661b0315` |
+| Raw result SHA-256 | `6d827aafc613202cd49403465e0651e8ae6a7bb74432c0b722eee90c15b1a0e3` |
+| Raw result size | 204,089 bytes |
+
+The raw ledger is
+[`STAROBINSKY_PRINCIPAL_BRANCH_RESULT.json`](STAROBINSKY_PRINCIPAL_BRANCH_RESULT.json).
+It records all commands, interval endpoints, three certificates, controls and
+environment details. Independent read-only reviews checked the algebra,
+parameter-box argument and interpretation before and after execution; these
+reviews are not an independent ODE integration or experimental replication.
+
+No canonical claim/evidence or open-problem status is changed by this
+supporting-method result. The remaining source task still requires a compatible
+quantum/BFV construction, boundary prescription and original relative class.
+No automatic successor or physical discovery label is created.
 
 ## Question and named consumer
 
@@ -56,8 +134,8 @@ Each cell uses one fixed shooting box. CAPD encloses the full C1 flow over that
 box and over the entire independent endpoint parameter box. A single exact
 rational Krawczyk calculation encloses \(F(c;b)\) for all parameters and
 \(D_yF\) for all shooting/parameter values. Strict inclusion and a weighted
-defect norm below one establish existence and uniqueness for every endpoint
-choice, as well as nonsingularity. Smoothness follows locally from the analytic
+defect norm below one establish existence and uniqueness within the declared
+shooting box for every endpoint choice, as well as nonsingularity. Smoothness follows locally from the analytic
 flow and the implicit function theorem. No interval sample grid substitutes for
 that universal parameter enclosure.
 
