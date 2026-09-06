@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "boundary": {
+    "a": "3.5668031935672753",
+    "phi": "1.0185809464006637"
+  },
+  "centre_decimal": {
+    "u": "0.09984512855",
+    "v": "-0.10663777161",
+    "T": "0.7"
+  },
+  "radius_binary_exponents": [
+    -24,
+    -24,
+    -20
+  ],
+  "taylor_order": 20,
+  "max_steps": 128,
+  "child_timeout_seconds": 60,
+  "child_stream_limit_bytes": 262144,
+  "arb_precision_bits": 192,
+  "backend": {
+    "source_sha256": "e10661f470dce792390e38dc5411420c3237b0f9d9e4500429a632337a833575",
+    "binary_sha256": "39809e3c4fd5c24a8992e432230427d8df921f6a745a2d1e53e7484f588eee9f",
+    "capd_revision": "693998cd6d73a0c4e1b141bfb79fcad1c40c3cbe",
+    "capd_static_sha256": "10aaa2b78fbb54f8258e8a9d790b37f790565d79270c2cbfeb00dbdbefb2741e",
+    "filib_static_sha256": "90a1d0c3919f3739f4b189f7e662fb1a3dd79050df124504dd5411bdbbccea71",
+    "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+    "build_recipe": "docs/research/ICE_CAPD_CONTINUUM_BACKEND_BUILD_2026-09-06.md"
+  }
+}
