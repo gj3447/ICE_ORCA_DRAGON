@@ -31,7 +31,7 @@
       "path": "research/intuition/scientific-intuition-signals.v2.json",
       "schema_path": "ontology/schema/scientific-intuition-flow-v2.schema.json",
       "schema_version": "scientific-intuition-flow/v2",
-      "document_sha256": "24c0e51674caf32817e7bb41afab1427af12ec82aca5988577352b4ef0ed424e",
+      "document_sha256": "cbfcc8c3839b12658092ff60f667fe2c07627cec87b776a13007b9594f27d8a2",
       "state": "ACTIVE_HYPOTHESIS_GENERATION",
       "authority": "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
       "canonical_graph_unchanged": true,

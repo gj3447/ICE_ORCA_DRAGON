@@ -8,6 +8,11 @@ signals live in [`scientific-intuition-signals.v2.json`](./scientific-intuition-
 hash-pinned Gate-1 v1 snapshot remains unchanged. Their authority boundary is fixed by the
 [scientific-intuition sidecar decision](../../docs/decisions/ICE_SCIENTIFIC_INTUITION_SIGNAL_LAYER_2026-09-02.md).
 
+For a complementary reading route from one local continuum branch through boundary action, global
+cycle, amplitude, physical state, and full-parent questions, see the
+[abstraction connectivity map](./ICE_ABSTRACTION_CONNECTIVITY_MAP_2026-09-06.md). It does not identify
+the geometry and CPT/SUSY lanes or add an evidence bridge between them.
+
 ## Answer first
 
 The useful ICE intuition is not the sentence “curvature is energy” by itself. It is the more demanding

@@ -4,7 +4,7 @@
   "graph_id": "intuition-flow:ice",
   "title": "ICE scientific-intuition graph",
   "description": "Versioned source-linked question graph. Sidecar topics organize discussion-level ideas; optional canonical_target links are permitted only when an existing open problem has matching scope. No topic, link, or signal is a scientific claim or execution authority.",
-  "updated_at_utc": "2026-09-03T05:29:11Z",
+  "updated_at_utc": "2026-09-06T12:20:00Z",
   "authority": "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
   "canonical_graph_unchanged": true,
   "does_not_authorize_execution": true,
@@ -62,6 +62,30 @@
       "scope": "Discussion-level synthesis whose only canonical contexts are the explicitly linked Gate-4 and Gate-5 open problems; it is not a spatial far-side model.",
       "non_claim": "This topic does not assert a sheet-exchanging supercharge, a superpartner spectrum, or a discovered phenomenon.",
       "does_not_authorize_execution": true
+    },
+    {
+      "id": "topic:local-continuum-branch-to-source-structure",
+      "title": "Local continuum branch to source structure",
+      "question": "What additional constrained action, composition, and gauge data would turn one local continuum branch into a candidate element source without confusing it with an original global cycle?",
+      "scope": "One declared local real continuum endpoint branch and the still-open exact gauge-preserving Starobinsky element-source question. It does not select a contour, construct a BFV source, or extend the certified box.",
+      "non_claim": "This topic does not assert that a locally certified root defines a Hamilton principal function, exact gauge mode, BFV source, original cycle, or global intersection.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "topic:boundary-amplitude-and-physical-state",
+      "title": "Boundary amplitude and physical state",
+      "question": "Which distinct data must pass from a classical boundary action through a globally selected amplitude and measure before a physical state or charge can be defined?",
+      "scope": "Discussion-level handoff questions between the existing G1 global-cycle, G2 hard-CFU, G3 Pfaffian/Pin, and later physical-state objects. It does not identify any of those objects.",
+      "non_claim": "This topic does not claim that a classical action, bosonic determinant, local root, or relative phase already defines a quantum amplitude or physical state.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "topic:reduced-model-versus-full-theory",
+      "title": "Reduced model versus full theory",
+      "question": "What distinguishes a structure in a reduced homogeneous model from a full parent theory with local modes, arbitrary-background constraints, and observables?",
+      "scope": "A general parent-scope question with no scope-matched canonical target. It compares declared reduction boundaries and full-theory requirements without identifying any existing reduced result with a parent theory.",
+      "non_claim": "This topic does not assert that any reduced ICE model has a unique parent, a full 3+1 completion, a low-energy limit, or an observable prediction.",
+      "does_not_authorize_execution": true
     }
   ],
   "topic_links": [
@@ -83,6 +107,46 @@
       "rationale": "The lanes could meet only if one declared action derives both the geometric field content and the distinct CPT, Pin, and fermion-odd charge structures.",
       "stop_condition": "Stop if no common variational object, physical domain, degree-of-freedom inventory, or cross-domain observable is derived.",
       "non_claim": "This is an unresolved bridge question, not a dependency, equivalence, evidence edge, or theory claim.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition-link:local-source-is-distinct-from-global-cycle",
+      "from": "topic:local-continuum-branch-to-source-structure",
+      "relation": "DISTINCT_FROM",
+      "to": "topic:gate1-cycle-and-orientation-methods",
+      "rationale": "A local constrained source construction and a source-defined global relative-cycle selection require different typed objects, even when a named branch may be an input to both questions.",
+      "stop_condition": "Stop if a local branch, endpoint box, or boundary action is relabeled as a selected original cycle or global intersection vector.",
+      "non_claim": "This separation is conceptual hygiene and does not deny that a future source construction could contribute to a global-cycle analysis.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition-link:boundary-and-amplitude-may-share-action",
+      "from": "topic:local-continuum-branch-to-source-structure",
+      "relation": "MAY_SHARE_UNRESOLVED_ACTION_WITH",
+      "to": "topic:boundary-amplitude-and-physical-state",
+      "rationale": "The classical boundary and quantum-amplitude questions may share one declared variational action only if its boundary terms, gauge treatment, measure, and composition map are explicitly derived.",
+      "stop_condition": "Stop if a common action is assumed from terminology alone or if a classical composition identity is treated as a quantum measure, state, or Pfaffian construction.",
+      "non_claim": "This is an unresolved common-action question, not a dependency, equivalence, evidence edge, or amplitude claim.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition-link:boundary-amplitude-is-distinct-from-cpt-susy-state",
+      "from": "topic:boundary-amplitude-and-physical-state",
+      "relation": "DISTINCT_FROM",
+      "to": "topic:cpt-folded-susy-synthesis",
+      "rationale": "A globally defined amplitude and measure are distinct from the additional common-domain, charge, constraint-closure, and persistent-spectrum requirements of a physical CPT-folded SUSY state.",
+      "stop_condition": "Stop if an amplitude, determinant, relative phase, or state asymmetry alone is treated as a physical supercharge, positive state, or interacting spectrum.",
+      "non_claim": "This distinction does not deny a future handoff; it records that the required physical-state structure is not supplied by an amplitude question alone.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition-link:reduced-branch-is-distinct-from-full-parent",
+      "from": "topic:reduced-model-versus-full-theory",
+      "relation": "DISTINCT_FROM",
+      "to": "topic:local-continuum-branch-to-source-structure",
+      "rationale": "A local solution in a declared reduction does not determine the parent theory's local degrees of freedom, arbitrary-background constraints, continuum limit, or observables.",
+      "stop_condition": "Stop if a shared reduced equation or local root is used to select a unique parent theory or full-theory conclusion.",
+      "non_claim": "This distinction does not exclude a future derived embedding; it records that no such embedding is supplied here.",
       "does_not_authorize_execution": true
     }
   ],
@@ -330,6 +394,66 @@
         "graph": "cpt",
         "node": "source:girardello-grisaru-1982"
       }
+    },
+    {
+      "id": "source-ref:kapela-mrozek-wilczak-zgliczynski-2020",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Kapela, T., Mrozek, M., Wilczak, D., & Zgliczynski, P. (2021). CAPD::DynSys: a flexible C++ toolbox for rigorous numerical analysis of dynamical systems. Communications in Nonlinear Science and Numerical Simulation, 101, 105578.",
+      "uri": "https://arxiv.org/abs/2010.07097",
+      "version": "arXiv:2010.07097v1; CNSNS 101 (2021) 105578",
+      "retrieved_at_utc": "2026-09-06T00:00:00Z",
+      "pinpoint": "§§2 and 4: rigorous C0/C1 flow and variational enclosures",
+      "role": "Primary technical comparator for validated flow and variational enclosures in the local continuum certificate question.",
+      "boundary": "A numerical-analysis toolbox reference; it does not supply the ICE action, source, gauge structure, contour, or physical interpretation.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:kapela-et-al-2020-capd-dynsys"
+      }
+    },
+    {
+      "id": "source-ref:bahr-dittrich-steinhaus-2011",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Bahr, B., Dittrich, B., & Steinhaus, S. (2011). Perfect discretization of reparametrization invariant path integrals.",
+      "uri": "https://arxiv.org/abs/1101.4775v1",
+      "version": "arXiv:1101.4775v1",
+      "retrieved_at_utc": "2026-09-06T00:00:00Z",
+      "pinpoint": "Abstract and §§2-3: reparametrization invariance, discretization independence, and physical-state projector boundary",
+      "role": "Primary method comparator for distinguishing a local discretization identity from a derived reparametrization-invariant or perfect construction.",
+      "boundary": "A toy-system perfect-discretization method source; it does not construct an ICE element, source, measure, or physical projector.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:bahr-dittrich-steinhaus-2011-perfect-reparametrization"
+      }
+    },
+    {
+      "id": "source-ref:dittrich-hoehn-2013",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Dittrich, B., & Hoehn, P. A. (2013). Constraint analysis for variational discrete systems.",
+      "uri": "https://arxiv.org/abs/1303.4294v3",
+      "version": "arXiv:1303.4294v3",
+      "retrieved_at_utc": "2026-09-06T00:00:00Z",
+      "pinpoint": "§§3.3 and 5.3: null directions/free parameters versus gauge symmetry generators",
+      "role": "Primary method comparator for keeping a variational null direction or local degeneracy distinct from a proved gauge generator and constraint structure.",
+      "boundary": "A general discrete-variational analysis; it does not classify the ICE continuum branch or establish its gauge algebra.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:dittrich-hoehn-2013-variational-discrete-constraints"
+      }
+    },
+    {
+      "id": "source-ref:dittrich-2012",
+      "kind": "PRIMARY_PAPER",
+      "citation": "Dittrich, B. (2012). From the discrete to the continuous: Towards a cylindrically consistent dynamics.",
+      "uri": "https://arxiv.org/abs/1205.6127v1",
+      "version": "arXiv:1205.6127v1",
+      "retrieved_at_utc": "2026-09-06T00:00:00Z",
+      "pinpoint": "Abstract and §2: transition amplitudes, Hamilton principal functions, and dynamics-selected embedding maps",
+      "role": "Primary method comparator for treating boundary composition and coarse/continuum consistency as extra structure rather than a consequence of one local root.",
+      "boundary": "A coarse-graining and cylindrical-consistency proposal; it does not prove an ICE Hamilton principal function, continuum completion, or parent-theory embedding.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:dittrich-2012-cylindrical-consistency"
+      }
     }
   ],
   "signals": [
@@ -558,6 +682,153 @@
       "stop_condition": "Stop if sheet sign is identified with fermion parity, if CPT reflection is renamed Q, if cross-sheet mixing is removable by a basis change, or if positivity, domains, conservation, and constraint closure are missing.",
       "principal_failure_class": "algebra",
       "non_claim": "This does not claim that the repository has constructed a physical sheet-exchanging supercharge or that a universe on another sheet contains superpartners.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:continuum-root-to-boundary-action",
+      "status": "CANDIDATE",
+      "kind": "MISSING_TYPED_OBJECT",
+      "topic": "topic:local-continuum-branch-to-source-structure",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate1-starobinsky-exact-gauge-preserving-element-source"
+      },
+      "lens": "What boundary action or constrained principal-function object, defined on a neighborhood of the certified branch, would contain more information than one regular endpoint root?",
+      "why_relevant": "The certificate gives one local real branch seed in a declared box, whereas the refined source question requires a named constrained construction with a controlled relation to the frozen kernel.",
+      "source_refs": [
+        "source-ref:kapela-mrozek-wilczak-zgliczynski-2020",
+        "source-ref:dittrich-2012"
+      ],
+      "assumptions": [
+        "The branch, boundary polarization, constraint convention, and neighborhood are declared separately from its numerical enclosure.",
+        "A proposed action or principal function specifies its domain, boundary terms, and map to the frozen kernel rather than inferring them from root existence."
+      ],
+      "discriminating_observation": "The candidate either yields a declared local constrained boundary object with an explicit composition or deformation test, or the necessary map/domain data cannot be defined in the stated scope.",
+      "stop_condition": "Stop if the unique-root certificate, an interval enclosure, or a shooting residual is relabeled as a Hamilton principal function, BFV source, original contour, or global cycle.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is a source-structure question and does not assert that the certified branch already supplies an action, principal function, gauge mode, source, or global object.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:boundary-composition-and-gauge",
+      "status": "CANDIDATE",
+      "kind": "DISCRIMINATOR",
+      "topic": "topic:local-continuum-branch-to-source-structure",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate1-starobinsky-exact-gauge-preserving-element-source"
+      },
+      "lens": "When two continuum boundary intervals are composed, which constrained data, lapse variation, and internal-vertex null direction must be preserved for the result to be an exact gauge-preserving element?",
+      "why_relevant": "The refined open problem explicitly requires a local constrained principal function or controlled deformation together with composition and one internal-vertex gauge-null mode; these are not consequences of a fixed-time root.",
+      "source_refs": [
+        "source-ref:bahr-dittrich-steinhaus-2011",
+        "source-ref:dittrich-hoehn-2013",
+        "source-ref:dittrich-2012"
+      ],
+      "assumptions": [
+        "The interval split, endpoint data, internal variables, gauge convention, and allowed deformations are specified before testing composition.",
+        "A null direction is distinguished from a numerical near-null direction and from an unconstrained free parameter."
+      ],
+      "discriminating_observation": "A proposed element passes a declared composition identity and exposes one internal-vertex gauge-null mode on the same stated domain, or a controlled counterexample separates the two requirements.",
+      "stop_condition": "Stop if fixed-time midpoint equality, an accidental Hessian degeneracy, or a variational discretization alone is treated as an exact gauge symmetry or physical projector.",
+      "principal_failure_class": "gauge",
+      "non_claim": "This is a discriminator design, not a claim that an ICE composition law, gauge-null mode, perfect action, or physical projector has been constructed.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:midpoint-counterexample-to-source-alternatives",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:local-continuum-branch-to-source-structure",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate1-starobinsky-exact-gauge-preserving-element-source"
+      },
+      "lens": "Which source-construction alternatives remain after the scoped naive local-lapse and frozen-midpoint Hamilton-Jacobi counterexamples, and what exact assumption does each alternative change?",
+      "why_relevant": "The two existing negative results retire particular midpoint mechanisms, not every constrained continuum-first, controlled-deformation, or gauge-preserving construction.",
+      "source_refs": [
+        "source-ref:bahr-dittrich-steinhaus-2011",
+        "source-ref:dittrich-hoehn-2013"
+      ],
+      "assumptions": [
+        "Each proposed alternative names the action, degrees of freedom, boundary convention, and gauge claim that differ from the retired midpoint candidates.",
+        "The existing counterexamples are retained with their exact finite scopes instead of generalized by analogy."
+      ],
+      "discriminating_observation": "An alternative is either shown to change a named retired assumption while meeting its own declared necessary condition, or it reduces to the already contradicted scope.",
+      "stop_condition": "Stop if a counterexample to one fixed-time or naive-unfixing map is treated as a no-go for all continuum, perfect, deformed, or BFV source constructions.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is a bounded alternative-classification lens and does not assert that any remaining source construction succeeds.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:global-selection-to-uniform-amplitude",
+      "status": "CANDIDATE",
+      "kind": "MISSING_TYPED_OBJECT",
+      "topic": "topic:boundary-amplitude-and-physical-state",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate2-hard-cfu-airy-coefficients"
+      },
+      "lens": "How does a source-defined oriented global intersection vector, rather than local saddle existence, select the saddle combination and phase data needed for uniform hard CFU coefficients?",
+      "why_relevant": "G2 consumes a selected global cycle vector and its orientation/Stokes data; a local root or separate saddle amplitude does not determine which contribution enters a uniform kernel.",
+      "source_refs": [
+        "source-ref:witten-2010",
+        "source-ref:feldbrugge-lehners-turok-2017"
+      ],
+      "assumptions": [
+        "The original relative class, upward cycles, orientations, Stokes chamber, and regulator boundary are specified independently of the local saddle calculation.",
+        "The hard coefficient convention keeps soft fold factors and absolute phase data explicit."
+      ],
+      "discriminating_observation": "A stated global vector and phase convention either produce compatible hard coefficients across an overlap region or reveal an unresolved cycle, orientation, Stokes, or matching obstruction.",
+      "stop_condition": "Stop if a local saddle, root permutation, Airy regularity, or separate determinant is converted into a nonzero global coefficient without the original-cycle intersection data.",
+      "principal_failure_class": "inference",
+      "non_claim": "This question does not assert a global cycle, intersection vector, CFU coefficient, amplitude, or physical state.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:classical-action-versus-quantum-measure",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:boundary-amplitude-and-physical-state",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:gate3-full-bfv-pfaffian-pin-holonomy"
+      },
+      "lens": "Beyond a classical action and bosonic composition rule, which gauge, ghost, fermionic, orientation, and regulator data are required to define a physical BFV/Pfaffian line and Pin holonomy?",
+      "why_relevant": "G3 requires the complete boson-fermion-ghost construction on the selected saddle combination; neither a bosonic determinant nor a relative endpoint phase supplies that line.",
+      "source_refs": [
+        "source-ref:bahr-dittrich-steinhaus-2011",
+        "source-ref:dittrich-hoehn-2013"
+      ],
+      "assumptions": [
+        "The selected saddle combination, boundary conditions, regulator, zero-mode treatment, and orientation convention are all named.",
+        "Physical-ratio invariance under the declared gauge-fermion and regulator choices is tested separately from classical stationarity."
+      ],
+      "discriminating_observation": "A candidate either defines a common determinant/Pfaffian line with a basis-independent closed-loop holonomy under declared controls, or identifies which gauge, ghost, fermion, or orientation input is missing.",
+      "stop_condition": "Stop if a classical action, a finite bosonic sign, or an endpoint Jacobian is called a full Pfaffian line, Pin lift, physical measure, or state.",
+      "principal_failure_class": "gauge",
+      "non_claim": "This is a missing-data separation question and does not claim a BFV measure, Pfaffian line, Pin holonomy, physical product, or charge.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:reduced-solution-to-parent-scope",
+      "status": "CANDIDATE",
+      "kind": "DISCRIMINATOR",
+      "topic": "topic:reduced-model-versus-full-theory",
+      "lens": "What parent-theory information distinguishes two candidates that share a reduced homogeneous equation or local solution but differ in local modes, constraint algebra, continuum behavior, or observables?",
+      "why_relevant": "A reduced model can preserve useful structure while leaving its parent degrees of freedom, arbitrary-background closure, low-energy limit, and measurable predictions underdetermined.",
+      "source_refs": [
+        "source-ref:dittrich-hoehn-2013",
+        "source-ref:dittrich-2012"
+      ],
+      "assumptions": [
+        "Each parent candidate declares its fields, gauge redundancies, reduction map, boundary conditions, and observable coupling rather than sharing only a reduced equation.",
+        "Comparison includes local degrees of freedom, arbitrary-background constraints, regulator/continuum behavior, and a proposed observable map."
+      ],
+      "discriminating_observation": "At least one typed parent-level structure or observable differs under a common reduction, or the comparison remains explicitly underdetermined rather than selecting a parent from reduced data alone.",
+      "stop_condition": "Stop if a common minisuperspace equation, local branch, fitted number, or terminology is used to infer a unique full 3+1 theory, UV completion, or empirical prediction.",
+      "principal_failure_class": "inference",
+      "non_claim": "This is a parent-scope discriminator with no canonical target; it does not assert a parent theory, embedding, UV completion, GR-plus-QFT recovery, or observable.",
       "does_not_authorize_execution": true
     },
     {

@@ -302,3 +302,29 @@ source target에 의도한 세 질문이 반환되고 topic-only query의 `canon
   수행했다. active v2/registry/schema/runtime을 바꾸지 않은 계획 문서 작업이므로
   미래 구현용 `npm run graph:check`는 이번 계획 작성에서 실행하지 않았다.
 - 이번 산출물은 이 계획과 README의 진입 링크다. 위 B–D 구현과 계산 증명은 수행하지 않았다.
+
+## 11. 구현 완료 기록 — 2026-09-06 후속 작업
+
+위 10절은 계획 작성 시점의 기록이다. 이후 사용자 요청에 따라 A–D를 구현했다.
+[추상화 연결 지도](../../research/intuition/ICE_ABSTRACTION_CONNECTIVITY_MAP_2026-09-06.md)와
+active v2가 현재 진입점이다. 새 topic 3개, signal 6개, topic link 4개, primary method
+source 4개를 추가했고 기존 v2의 모든 객체와 frozen v1 bytes를 보존했다.
+registry에는 실제 v2 SHA-256
+`cbfcc8c3839b12658092ff60f667fe2c07627cec87b776a13007b9594f27d8a2`만 갱신했다.
+
+Q1–Q8은 지도·source·exact-target 조회를 대조해 확인했다. source target은 새 질문 3개,
+local/amplitude/parent topic은 각각 3/2/1개, 기존 G1 target은 기존 질문 2개를 반환했다.
+topic-only query의 canonical target/context는 모두 null이었다. 기존 G4/G5 lens는 유지했고,
+parent scope와 geometry를 별도 evidence로 합치지 않았다. 독립 read-only 검토에서도
+target 오류나 scope 확대는 발견하지 못했다.
+
+실행한 검증은 9절 명령들이다. `ontology review`는 네 graph와 collection 변경 0건,
+`graphrag diff`는 15개 case의 순위·통과·abstention·boundary 변경 0건이었다.
+첫 `npm run graph:check`는 기존 live-content test에 고정된 예전 3/2/20/10/10 count 때문에
+162개 중 1개가 실패했다. `test/intuition-signals.test.ts`의 그 기대값만 현재
+6/6/24/16/16으로 갱신했고, 두 번째 전체 실행은 strict typecheck, 162개 test,
+ontology/family/sidecar/bridge/SHACL 검사와 GraphRAG/competency/agent 평가까지 exit 0이었다.
+새 test나 runtime/schema 변경은 없었다. local link와 `git diff --check`도 통과했다.
+
+이 완료는 직관을 위한 내용·조회 연결의 완료다. 새 계산 결과, 원래 적분 cycle, global
+intersection, 물리 발견 또는 TOE 지위를 추가하지 않았다.

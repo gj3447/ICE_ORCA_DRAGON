@@ -320,11 +320,11 @@ layer(AppLayer)("scientific-intuition topic and canonical federation", (it) => {
         valid: true,
         counts: {
           standards_alignment: 4,
-          topics: 3,
-          topic_links: 2,
-          sources: 20,
-          signals: 10,
-          candidates: 10
+          topics: 6,
+          topic_links: 6,
+          sources: 24,
+          signals: 16,
+          candidates: 16
         }
       })
 

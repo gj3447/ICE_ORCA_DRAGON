@@ -4,10 +4,12 @@ This directory carries source-linked questions that may help a human sharpen a
 canonical open problem. It is deliberately outside `ontology/collection.json`:
 none of its records is a claim, evidence, a score, or execution authority.
 
-The [abstraction and intuition connectivity plan](../../docs/research/ICE_ABSTRACTION_INTUITION_CONNECTIVITY_PLAN_2026-09-06.md)
-proposes a bounded content extension on top of v2, with local-root-to-source,
-boundary-amplitude, and reduced-versus-full-theory reading paths. It is a
-design document; its proposed topics and signals are not implemented yet.
+The [abstraction and intuition connectivity map](./ICE_ABSTRACTION_CONNECTIVITY_MAP_2026-09-06.md)
+now provides three human reading routes: local root to boundary/source structure,
+boundary amplitude to physical state, and reduced model to full-parent scope. It
+explains the six implemented v2 question lenses without turning their links into
+canonical evidence. The earlier [implementation plan](../../docs/research/ICE_ABSTRACTION_INTUITION_CONNECTIVITY_PLAN_2026-09-06.md)
+remains provenance for the bounded design.
 
 The [geometry–CPT–SUSY intuition map](./ICE_GEOMETRY_CPT_SUSY_INTUITION_MAP_2026-09-03.md)
 connects the discussed “curvature is energy” and “SUSY on the other side” ideas
