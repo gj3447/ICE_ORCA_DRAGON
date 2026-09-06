@@ -116,6 +116,12 @@ continuum limit 전체의 universal no-go로 바꾸지 않는다.
 첫 조건을 확인했다고 두 번째 조건을 생략하거나, 두 번째 조건을 확인했다고 양자 measure를
 얻었다고 읽지 않는다. 이 연결은 새 source family의 실행 지시가 아니다.
 
+[CPT 접합 원문 감사](../../docs/research/ICE_STAROBINSKY_ORIGINAL_SOURCE_SELECTION_AUDIT_2026-09-06.md)는
+이 지점의 실제 입력도 확인한다. 기존 projector와 다른 모델의 free seam map은 현재
+Starobinsky 경계 작용을 정하지 않는다. 따라서 원문에서 선언된 source를 찾는 일과,
+추가 가정을 붙여 새 source candidate를 정의하는 일을 구별한다. 복소 시간 평면에서
+한 saddle을 계속하는 경로도 off-shell field·lapse·ghost 전체의 적분 cycle은 아니다.
+
 ### C. amplitude, state, full parent를 한 줄로 섞지 않기
 
 G1의 global coefficient는 saddle가 적분에 기여하는가의 질문이다. G2/G3는 선택된
