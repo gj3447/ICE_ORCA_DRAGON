@@ -1,0 +1,255 @@
+{
+  "classification": "FINITE_CANONICAL_POLYNOMIAL_BFV_CHART",
+  "controls": [
+    {
+      "name": "liouville_du",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "liouville_dv",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "liouville_dn",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "liouville_dC",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "liouville_dR",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "densitized_hamiltonian",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "charge_is_original_pullback",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "gauge_fermion_is_original_pullback",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "starobinsky_slope_cancels_pv_squared",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "wick_HL_i_pE_equals_minus_HE",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "old_pa_a_bracket",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "old_pa_c_cross_bracket",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "old_pa_rho_cross_bracket",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "old_N_Pi_bracket",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "old_c_barrho_bracket",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "old_rho_barc_bracket",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "strong_BFV_nilpotency",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "gauge_fixed_action_density",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "gauge_fixed_density_BRST_closed",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "name": "wrong_shift_has_predicted_defect",
+      "passed": true,
+      "residual": []
+    },
+    {
+      "defect": [
+        {
+          "coefficient": "12*pi_n*(2*P_u*u + 2*P_v*v - 3*n*pi_n)",
+          "monomial": "c_g*rho"
+        }
+      ],
+      "name": "wrong_shift_is_not_nilpotent",
+      "passed": true
+    },
+    {
+      "name": "charge_matches_hand_expansion",
+      "passed": true,
+      "residual": []
+    }
+  ],
+  "convention": {
+    "even_pairs": [
+      [
+        "u",
+        "P_u"
+      ],
+      [
+        "v",
+        "P_v"
+      ],
+      [
+        "n",
+        "pi_n"
+      ]
+    ],
+    "gauge_fixed_hamiltonian": "-{Omega,Psi}",
+    "ghost_names": {
+      "B": "bar_rho",
+      "C": "c_g",
+      "D": "bar_c",
+      "R": "rho"
+    },
+    "odd_bracket": "symmetric +1; right derivative on left argument, left derivative on right",
+    "odd_pairs": [
+      [
+        "c_g",
+        "bar_rho"
+      ],
+      [
+        "rho",
+        "bar_c"
+      ]
+    ],
+    "old_gauge_fermion": "-N*bar_rho"
+  },
+  "map": {
+    "N": "f*n",
+    "Pi": "pi_n/f",
+    "bar_c": "D/f",
+    "bar_rho": "B/f",
+    "c": "f*C",
+    "f": "24*pi**2*u**(3/2)",
+    "k": [
+      {
+        "coefficient": "P_u*u - 3*n*pi_n/2",
+        "monomial": "1"
+      },
+      {
+        "coefficient": "-3/2",
+        "monomial": "bar_c*rho"
+      },
+      {
+        "coefficient": "3/2",
+        "monomial": "c_g*bar_rho"
+      }
+    ],
+    "p_a": [
+      {
+        "coefficient": "(2*P_u*u + 2*P_v*v - 3*n*pi_n)/sqrt(u)",
+        "monomial": "1"
+      },
+      {
+        "coefficient": "-3/sqrt(u)",
+        "monomial": "bar_c*rho"
+      },
+      {
+        "coefficient": "3/sqrt(u)",
+        "monomial": "c_g*bar_rho"
+      }
+    ],
+    "p_phi": "-sqrt(6)*P_v*v/3",
+    "rho": "f*R",
+    "u": "a**2",
+    "v": "a**2*exp(-sqrt(2/3)*phi)"
+  },
+  "non_claim": "No original relative cycle, boundary completion, quantum path measure or physical discovery.",
+  "polynomials": {
+    "Omega": [
+      {
+        "coefficient": "-144*pi**4*u**2 + 36*pi**4*u*(u - v)**2 - (2*P_u*u - 3*n*pi_n)*(2*P_u*u + 4*P_v*v - 3*n*pi_n)",
+        "monomial": "c_g"
+      },
+      {
+        "coefficient": "pi_n",
+        "monomial": "rho"
+      },
+      {
+        "coefficient": "12*P_u*u + 12*P_v*v - 18*n*pi_n",
+        "monomial": "c_g*bar_c*rho"
+      }
+    ],
+    "Psi": [
+      {
+        "coefficient": "-n",
+        "monomial": "bar_rho"
+      }
+    ],
+    "gauge_fixed_hamiltonian": [
+      {
+        "coefficient": "-n*(144*pi**4*u**2 - 36*pi**4*u*(u - v)**2 + (2*P_u*u - 3*n*pi_n)*(2*P_u*u + 4*P_v*v - 3*n*pi_n))",
+        "monomial": "1"
+      },
+      {
+        "coefficient": "6*n*(2*P_u*u + 2*P_v*v - 3*n*pi_n)",
+        "monomial": "bar_c*rho"
+      },
+      {
+        "coefficient": "6*n*(-2*P_u*u - 2*P_v*v + 3*n*pi_n)",
+        "monomial": "c_g*bar_rho"
+      },
+      {
+        "coefficient": "-1",
+        "monomial": "rho*bar_rho"
+      },
+      {
+        "coefficient": "18*n",
+        "monomial": "c_g*bar_c*rho*bar_rho"
+      }
+    ],
+    "maximum_even_degrees": [
+      4,
+      1,
+      5
+    ]
+  },
+  "provenance": {
+    "algebra_helper_scope": "Pure exterior multiplication and graded differentiation only; no V=0 physical input.",
+    "algebra_helper_sha256": "62f52d079c62b9b84ccea6562e44b952067cd6c8e10f7d1a9673cc124b949ccf",
+    "command": "./ice run starobinsky_polynomial_bfv_chart",
+    "python": "3.13.5",
+    "runner_sha256": "ee80055501bf4807040c1fb109265b5d911b601449af71887c8bc0e1277e3f3b",
+    "sympy": "1.14.0"
+  },
+  "question": "Exact same-Starobinsky polynomial extended BFV coordinate pushforward?",
+  "scope": "Classical interior chart u>0,v>0; a fixed square-root/log lift is required after complexification."
+}
