@@ -9,6 +9,8 @@ It uses Lean `4.33.0` and mathlib commit
 Prepare the pinned dependencies in this directory with `lake update`. Lake's
 mathlib hook downloads its official compiled dependency cache. If necessary,
 `lake exe cache get` restores it. `.lake/` and generated binaries are local caches.
+The research coverage inventory skips `.lake/` directories while retaining the
+project's Lean sources, toolchain and dependency manifest.
 No sibling checkout is required.
 
 From the repository root, perform the recorded proof verification with:

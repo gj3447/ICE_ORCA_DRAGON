@@ -1,17 +1,17 @@
 {
   "schema": "ice-lean-boundary-sewing-result/v1",
   "question": "Does the declared real bosonic reflection cancel the sum boundary primitive?",
-  "status": "FAILED",
+  "status": "LEAN_KERNEL_ACCEPTED_SCOPED_REAL_BOUNDARY_SEWING",
   "scope": "real coordinate boundary algebra; fixed Starobinsky Hamiltonian convention",
   "non_claim": "No full BFV/CPT lift, boundary state, original relative cycle or physical discovery.",
   "reproduction_command": "./ice run cpt_boundary_sewing_lean",
-  "started_at_utc": "2026-09-06T17:12:10.841949+00:00",
+  "started_at_utc": "2026-09-06T17:12:49.287955+00:00",
   "allowed_axioms": [
     "Classical.choice",
     "Quot.sound",
     "propext"
   ],
-  "source_commit": "b0e20b06b8b922273742a4f674f29001caa40368",
+  "source_commit": "6ee232b16e22c2c5b6966bac2d4d1658512e49c6",
   "inputs": {
     "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
       "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
@@ -34,8 +34,8 @@
       "bytes": 26
     },
     "formal/cpt_sewing/CptSewing/Boundary.lean": {
-      "sha256": "5cc86d3ac72e6370447559b4c0e4aa9da511b13a951f0cdff9c4533720913a49",
-      "bytes": 7085
+      "sha256": "b5bbb07693be9362045fe9cf14026f57fbd58e3f161a2290a0c2688ba656d42a",
+      "bytes": 7067
     },
     "formal/cpt_sewing/proof-index.json": {
       "sha256": "9316464fa22a600d6e510fffee9db6759d1d54060945115aa1c5de39ea26a0db",
@@ -99,123 +99,24 @@
       "-DwarningAsError=true",
       "<temporary>/BoundaryAudit.lean"
     ],
-    "exit_code": 1,
+    "exit_code": 0,
     "stderr": "",
-    "payload_sha256": "bc2a3a26cde7fdc736b1ac22a639db054fe55eabeb04e68c53831d2f603db5ec",
+    "payload_sha256": "8a542e0034641c1743af4d5bb927799a670c74457a164bb8448cc852642ce166",
     "messages": [
-      {
-        "caption": "",
-        "data": "\n'Mathlib.Data.Real.Sqrt' has been deprecated: please replace this import by\n\nimport Mathlib.Analysis.Real.Sqrt\n",
-        "endPos": null,
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
-        "isSilent": false,
-        "keepFullRange": false,
-        "kind": "Lean.deprecatedModuleExt",
-        "pos": {
-          "column": 0,
-          "line": 1
-        },
-        "severity": "warning"
-      },
-      {
-        "caption": "",
-        "data": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
-        "endPos": {
-          "column": 59,
-          "line": 75
-        },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
-        "isSilent": false,
-        "keepFullRange": false,
-        "kind": "linter.unnecessarySeqFocus",
-        "pos": {
-          "column": 56,
-          "line": 75
-        },
-        "severity": "error"
-      },
-      {
-        "caption": "",
-        "data": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
-        "endPos": {
-          "column": 39,
-          "line": 81
-        },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
-        "isSilent": false,
-        "keepFullRange": false,
-        "kind": "linter.unnecessarySeqFocus",
-        "pos": {
-          "column": 36,
-          "line": 81
-        },
-        "severity": "error"
-      },
-      {
-        "caption": "",
-        "data": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
-        "endPos": {
-          "column": 46,
-          "line": 111
-        },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
-        "isSilent": false,
-        "keepFullRange": false,
-        "kind": "linter.unnecessarySeqFocus",
-        "pos": {
-          "column": 43,
-          "line": 111
-        },
-        "severity": "error"
-      },
-      {
-        "caption": "",
-        "data": "Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
-        "endPos": {
-          "column": 58,
-          "line": 130
-        },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
-        "isSilent": false,
-        "keepFullRange": false,
-        "kind": "linter.unusedTactic",
-        "pos": {
-          "column": 54,
-          "line": 130
-        },
-        "severity": "error"
-      },
-      {
-        "caption": "",
-        "data": "Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
-        "endPos": {
-          "column": 51,
-          "line": 174
-        },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
-        "isSilent": false,
-        "keepFullRange": false,
-        "kind": "linter.unusedTactic",
-        "pos": {
-          "column": 47,
-          "line": 174
-        },
-        "severity": "error"
-      },
       {
         "caption": "",
         "data": "CptSewing.momentumReflection_involutive (z : CptSewing.Phase) :\n  CptSewing.momentumReflection (CptSewing.momentumReflection z) = z",
         "endPos": {
           "column": 6,
-          "line": 190
+          "line": 193
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 190
+          "line": 193
         },
         "severity": "information"
       },
@@ -224,15 +125,15 @@
         "data": "'CptSewing.momentumReflection_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 191
+          "line": 194
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 191
+          "line": 194
         },
         "severity": "information"
       },
@@ -241,15 +142,15 @@
         "data": "CptSewing.dMomentumReflection_involutive (v : CptSewing.Tangent) :\n  CptSewing.dMomentumReflection (CptSewing.dMomentumReflection v) = v",
         "endPos": {
           "column": 6,
-          "line": 192
+          "line": 195
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 192
+          "line": 195
         },
         "severity": "information"
       },
@@ -258,15 +159,15 @@
         "data": "'CptSewing.dMomentumReflection_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 193
+          "line": 196
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 193
+          "line": 196
         },
         "severity": "information"
       },
@@ -275,15 +176,15 @@
         "data": "CptSewing.alpha_momentumReflection (z : CptSewing.Phase) (v : CptSewing.Tangent) :\n  CptSewing.alpha (CptSewing.momentumReflection z) (CptSewing.dMomentumReflection v) = -CptSewing.alpha z v",
         "endPos": {
           "column": 6,
-          "line": 194
+          "line": 197
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 194
+          "line": 197
         },
         "severity": "information"
       },
@@ -292,15 +193,15 @@
         "data": "'CptSewing.alpha_momentumReflection' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 195
+          "line": 198
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 195
+          "line": 198
         },
         "severity": "information"
       },
@@ -309,15 +210,15 @@
         "data": "CptSewing.omega_momentumReflection (v w : CptSewing.Tangent) :\n  CptSewing.omega (CptSewing.dMomentumReflection v) (CptSewing.dMomentumReflection w) = -CptSewing.omega v w",
         "endPos": {
           "column": 6,
-          "line": 196
+          "line": 199
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 196
+          "line": 199
         },
         "severity": "information"
       },
@@ -326,15 +227,15 @@
         "data": "'CptSewing.omega_momentumReflection' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 197
+          "line": 200
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 197
+          "line": 200
         },
         "severity": "information"
       },
@@ -343,15 +244,15 @@
         "data": "CptSewing.sum_seam_zero (z : CptSewing.Phase) (v : CptSewing.Tangent) :\n  CptSewing.alpha z v + CptSewing.alpha (CptSewing.momentumReflection z) (CptSewing.dMomentumReflection v) = 0",
         "endPos": {
           "column": 6,
-          "line": 198
+          "line": 201
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 198
+          "line": 201
         },
         "severity": "information"
       },
@@ -360,15 +261,15 @@
         "data": "'CptSewing.sum_seam_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 199
+          "line": 202
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 199
+          "line": 202
         },
         "severity": "information"
       },
@@ -377,15 +278,15 @@
         "data": "CptSewing.identity_difference_seam_zero (z : CptSewing.Phase) (v : CptSewing.Tangent) :\n  CptSewing.alpha z v - CptSewing.alpha z v = 0",
         "endPos": {
           "column": 6,
-          "line": 200
+          "line": 203
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 200
+          "line": 203
         },
         "severity": "information"
       },
@@ -394,15 +295,15 @@
         "data": "'CptSewing.identity_difference_seam_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 201
+          "line": 204
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 201
+          "line": 204
         },
         "severity": "information"
       },
@@ -411,15 +312,15 @@
         "data": "CptSewing.sumPrimitive_forall_iff (z₁ z₂ : CptSewing.Phase) :\n  (∀ (v : CptSewing.Tangent), CptSewing.sumPrimitive z₁ z₂ v = 0) ↔ z₂.pa = -z₁.pa ∧ z₂.pphi = -z₁.pphi",
         "endPos": {
           "column": 6,
-          "line": 202
+          "line": 205
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 202
+          "line": 205
         },
         "severity": "information"
       },
@@ -428,15 +329,15 @@
         "data": "'CptSewing.sumPrimitive_forall_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 203
+          "line": 206
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 203
+          "line": 206
         },
         "severity": "information"
       },
@@ -445,15 +346,15 @@
         "data": "CptSewing.differencePrimitive_forall_iff (z₁ z₂ : CptSewing.Phase) :\n  (∀ (v : CptSewing.Tangent), CptSewing.differencePrimitive z₁ z₂ v = 0) ↔ z₂.pa = z₁.pa ∧ z₂.pphi = z₁.pphi",
         "endPos": {
           "column": 6,
-          "line": 204
+          "line": 207
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 204
+          "line": 207
         },
         "severity": "information"
       },
@@ -462,15 +363,15 @@
         "data": "'CptSewing.differencePrimitive_forall_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 205
+          "line": 208
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 205
+          "line": 208
         },
         "severity": "information"
       },
@@ -479,15 +380,15 @@
         "data": "CptSewing.momentumReflection_preserves_physicalChart (z : CptSewing.Phase) (hz : CptSewing.InPhysicalChart z) :\n  CptSewing.InPhysicalChart (CptSewing.momentumReflection z)",
         "endPos": {
           "column": 6,
-          "line": 206
+          "line": 209
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 206
+          "line": 209
         },
         "severity": "information"
       },
@@ -496,15 +397,15 @@
         "data": "'CptSewing.momentumReflection_preserves_physicalChart' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 207
+          "line": 210
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 207
+          "line": 210
         },
         "severity": "information"
       },
@@ -513,15 +414,15 @@
         "data": "CptSewing.witness_in_physicalChart : CptSewing.InPhysicalChart CptSewing.witnessPhase",
         "endPos": {
           "column": 6,
-          "line": 208
+          "line": 211
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 208
+          "line": 211
         },
         "severity": "information"
       },
@@ -530,15 +431,15 @@
         "data": "'CptSewing.witness_in_physicalChart' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 209
+          "line": 212
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 209
+          "line": 212
         },
         "severity": "information"
       },
@@ -547,15 +448,15 @@
         "data": "CptSewing.wrong_orientation_sum_identity :\n  CptSewing.sumPrimitive CptSewing.witnessPhase CptSewing.witnessPhase CptSewing.witnessTangent = 2",
         "endPos": {
           "column": 6,
-          "line": 210
+          "line": 213
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 210
+          "line": 213
         },
         "severity": "information"
       },
@@ -564,15 +465,15 @@
         "data": "'CptSewing.wrong_orientation_sum_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 211
+          "line": 214
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 211
+          "line": 214
         },
         "severity": "information"
       },
@@ -581,15 +482,15 @@
         "data": "CptSewing.wrong_orientation_difference_reflection :\n  CptSewing.alpha CptSewing.witnessPhase CptSewing.witnessTangent -\n      CptSewing.alpha (CptSewing.momentumReflection CptSewing.witnessPhase)\n        (CptSewing.dMomentumReflection CptSewing.witnessTangent) =\n    2",
         "endPos": {
           "column": 6,
-          "line": 212
+          "line": 215
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 212
+          "line": 215
         },
         "severity": "information"
       },
@@ -598,15 +499,15 @@
         "data": "'CptSewing.wrong_orientation_difference_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 213
+          "line": 216
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 213
+          "line": 216
         },
         "severity": "information"
       },
@@ -615,15 +516,15 @@
         "data": "CptSewing.starobinskyHL_momentumReflection (z : CptSewing.Phase) (_hz : CptSewing.InPhysicalChart z) :\n  CptSewing.starobinskyHL (CptSewing.momentumReflection z) = CptSewing.starobinskyHL z",
         "endPos": {
           "column": 6,
-          "line": 214
+          "line": 217
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 214
+          "line": 217
         },
         "severity": "information"
       },
@@ -632,15 +533,15 @@
         "data": "'CptSewing.starobinskyHL_momentumReflection' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 215
+          "line": 218
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 215
+          "line": 218
         },
         "severity": "information"
       },
@@ -649,15 +550,15 @@
         "data": "CptSewing.starobinskyHL_momentumReflection_onPhysicalChart (z : CptSewing.Phase) (hz : CptSewing.InPhysicalChart z) :\n  CptSewing.InPhysicalChart (CptSewing.momentumReflection z) ∧\n    CptSewing.starobinskyHL (CptSewing.momentumReflection z) = CptSewing.starobinskyHL z",
         "endPos": {
           "column": 6,
-          "line": 216
+          "line": 219
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 216
+          "line": 219
         },
         "severity": "information"
       },
@@ -666,15 +567,15 @@
         "data": "'CptSewing.starobinskyHL_momentumReflection_onPhysicalChart' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "endPos": {
           "column": 6,
-          "line": 217
+          "line": 220
         },
-        "fileName": "/var/tmp/orca/ice-cpt-lean-bn9dmxzl/BoundaryAudit.lean",
+        "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/BoundaryAudit.lean",
         "isSilent": false,
         "keepFullRange": false,
         "kind": "[anonymous]",
         "pos": {
           "column": 0,
-          "line": 217
+          "line": 220
         },
         "severity": "information"
       }
@@ -794,6 +695,93 @@
       "accepted": true
     }
   },
-  "failure": "ValueError: Lean compilation or transitive axiom audit failed",
-  "elapsed_seconds": 5.582949115894735
+  "acceptance_controls": {
+    "custom_axiom_rejected": true,
+    "admitted_proof_rejected": true
+  },
+  "control_diagnostics": {
+    "custom_axiom": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--json",
+        "-DwarningAsError=true",
+        "<temporary>/CustomAxiomControl.lean"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "payload_sha256": "34511b98f4daf729c8646dcc302b425ebf153eff7bf95b6031ae30b94c5ed754",
+      "messages": [
+        {
+          "caption": "",
+          "data": "'controlTheorem' depends on axioms: [controlAssumption]",
+          "endPos": {
+            "column": 6,
+            "line": 3
+          },
+          "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/CustomAxiomControl.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 3
+          },
+          "severity": "information"
+        }
+      ]
+    },
+    "admission": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--json",
+        "-DwarningAsError=true",
+        "<temporary>/AdmissionControl.lean"
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "payload_sha256": "89da65500bda3a2727ef476f8d9f48a547ee0ead61426016aa0552f8ef57b823",
+      "messages": [
+        {
+          "caption": "",
+          "data": "declaration uses `sorry`",
+          "endPos": {
+            "column": 23,
+            "line": 1
+          },
+          "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/AdmissionControl.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "hasSorry",
+          "pos": {
+            "column": 8,
+            "line": 1
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "'controlAdmitted' depends on axioms: [sorryAx]",
+          "endPos": {
+            "column": 6,
+            "line": 2
+          },
+          "fileName": "/var/tmp/orca/ice-cpt-lean-56rx8f5_/AdmissionControl.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 2
+          },
+          "severity": "information"
+        }
+      ]
+    }
+  },
+  "theorem_count": 14,
+  "elapsed_seconds": 4.830409268382937
 }

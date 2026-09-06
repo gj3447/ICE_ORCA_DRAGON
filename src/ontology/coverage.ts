@@ -1,5 +1,5 @@
 import { lstat, readdir, realpath } from "node:fs/promises"
-import { resolve, relative, sep } from "node:path"
+import { basename, resolve, relative, sep } from "node:path"
 import type { ResearchCollection } from "./collection.ts"
 import { isSafeArtifactPath } from "./core.ts"
 
@@ -38,7 +38,7 @@ const bestCoverage = (collection: ResearchCollection, path: string) =>
     .filter(({ path: prefix }) => path === prefix || path.startsWith(`${prefix}/`))
     .sort((left, right) => right.path.length - left.path.length)[0]
 
-/** Audits only declared corpus roots; archive/output paths are never discovered implicitly. */
+/** Audits declared corpus roots, excluding generated Lake dependency/build directories. */
 export const auditDeclaredResearchCoverage = async (
   workspaceRoot: string,
   collection: ResearchCollection
@@ -67,6 +67,9 @@ export const auditDeclaredResearchCoverage = async (
       return
     }
     if (stat.isDirectory()) {
+      // Lake dependencies and compiled caches are not repository research sources.
+      // Keep the symlink and containment checks above this exclusion.
+      if (basename(relpath) === ".lake") return
       directories += 1
       for (const name of (await readdir(absolute)).sort()) {
         await visit(resolve(absolute, name), `${relpath}/${name}`, depth + 1)

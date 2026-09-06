@@ -134,6 +134,12 @@ Starobinsky 경계 작용을 정하지 않는다. 따라서 원문에서 선언�
 실제 BFV 접합과 양자 source는 아직 없다. CPT symmetry가 여러 상태를 허용한다는 문헌과,
 경계 상태·lapse 처방을 바꾸면 계산 대상도 바뀐다는 구별을 함께 읽는다.
 
+이 설계의 [실수 경계 대수는 Lean 4로 검증했다](../../cpt_temporal_folded_susy/CPT_BOUNDARY_SEWING_LEAN.md).
+공유 configuration 변분에서 plus/minus primitive가 사라질 momentum 조건을 필요충분으로
+증명했고, orientation을 잘못 결합하면 residual이 남는 반례도 포함한다. 이것이 제공하는
+연결은 **명시한 경계 부호 → 형식 검증된 항등식**까지다. Full BFV source, 양자 상태와
+original joint cycle의 빈칸은 별도 객체로 남는다.
+
 ### C. amplitude, state, full parent를 한 줄로 섞지 않기
 
 G1의 global coefficient는 saddle가 적분에 기여하는가의 질문이다. G2/G3는 선택된

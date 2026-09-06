@@ -54,11 +54,32 @@ describe("declared research coverage audit", () => {
     }
   })
 
-  it("fails closed for unmapped files and symlinks", async () => {
+  it("counts Lean sources without traversing generated Lake dependencies", async () => {
+    const root = await mkdtemp(join(tmpdir(), "ice-coverage-lean-"))
+    try {
+      await mkdir(join(root, "formal", "CptSewing"), { recursive: true })
+      await mkdir(join(root, "formal", ".lake", "packages", "mathlib"), { recursive: true })
+      await writeFile(join(root, "formal", "CptSewing", "Boundary.lean"), "-- research source")
+      await writeFile(join(root, "formal", ".lake", "packages", "mathlib", "Generated.lean"), "-- dependency")
+      const report = await auditDeclaredResearchCoverage(
+        root,
+        coverageCollection(["formal"], [
+          { path: "formal/CptSewing", status: "INDEXED", reason: "formal research source" }
+        ])
+      )
+      expect(report).toMatchObject({ valid: true, files: 1, mapped_files: 1, issues: [] })
+      expect(report.by_status).toEqual({ INDEXED: 1 })
+    } finally {
+      await rm(root, { recursive: true, force: true })
+    }
+  })
+
+  it("fails closed for unmapped files and symlinks, including Lake paths", async () => {
     const root = await mkdtemp(join(tmpdir(), "ice-coverage-"))
     try {
       await mkdir(join(root, "research"), { recursive: true })
       await writeFile(join(root, "research", "note.md"), "fixture")
+      await symlink("note.md", join(root, "research", ".lake"))
       await symlink("note.md", join(root, "research", "link.md"))
       const report = await auditDeclaredResearchCoverage(
         root,
@@ -66,6 +87,7 @@ describe("declared research coverage audit", () => {
       )
       expect(report.valid).toBe(false)
       expect(report.issues.map(({ code }) => code)).toEqual([
+        "COVERAGE_SYMLINK_REJECTED",
         "COVERAGE_SYMLINK_REJECTED",
         "COVERAGE_UNMAPPED_FILE"
       ])

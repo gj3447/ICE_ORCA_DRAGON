@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-06T14:10:01Z",
+  "updated_at_utc": "2026-09-06T17:12:49Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -16468,6 +16468,94 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/STAROBINSKY_MORSE_FIBER_POSITIVITY.md",
       "sha256": "b9717c5b5de28c310a34efbd5c38995457ea7dae6dcc463f8ec0c0e8b1d2a69e"
+    },
+    {
+      "id": "claim:CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES",
+      "type": "claim",
+      "claim_id": "CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES",
+      "title": "Real bosonic momentum reflection cancels the sum seam primitive",
+      "statement": "For the declared real homogeneous boundary phase space with alpha=p_a da+p_phi dphi, the graph of T(a,phi;p_a,p_phi)=(a,phi;-p_a,-p_phi) has vanishing pullback of alpha_1+alpha_2.",
+      "summary": "Lean-kernel-accepted exact boundary algebra in the declared real bosonic sum convention only; it does not construct a BFV source, boundary state, relative cycle, or global intersection.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_LEAN_REAL_BOUNDARY_IDENTITY"
+    },
+    {
+      "id": "scope:cpt-real-bosonic-boundary-sewing-lean",
+      "type": "scope",
+      "title": "Lean real bosonic CPT boundary-sewing scope",
+      "summary": "A real finite-dimensional homogeneous boundary algebra for the stated momentum reflection and the stated sum/difference primitive conventions.",
+      "state": "DECLARED_FORMAL_REAL_BOUNDARY_SCOPE",
+      "includes": [
+        "real coordinates (a,phi,p_a,p_phi), the coordinate evaluation of alpha=p_a da+p_phi dphi, and the coordinate pairing representing d alpha",
+        "the declared momentum reflection T(a,phi;p_a,p_phi)=(a,phi;-p_a,-p_phi)",
+        "the sum primitive alpha_1+alpha_2 on Graph(T), the difference primitive on the identity graph, and explicit wrong-orientation controls",
+        "the stated Starobinsky Hamiltonian momentum-reflection identity on the formalized physical chart"
+      ],
+      "excludes": [
+        "a choice between oriented-boundary conventions or a physical CPT implementation",
+        "a formal manifold exterior-calculus derivation, bulk/GHY variation, or inference of configuration matching from the shared-tangent momentum iff tests",
+        "BFV ghosts, lapse primary pair, BRST charge, gauge fermion, boundary polarization, half-density or Berezin measure",
+        "a complex or anti-linear lift, seam path integral, boundary state, quantum pushforward or defect dynamics",
+        "an original relative chain, regulator removal, saddle or Stokes census, global intersection vector, physics or TOE claim"
+      ]
+    },
+    {
+      "id": "evidence:cpt-real-bosonic-boundary-sewing-lean-result",
+      "type": "evidence",
+      "title": "Lean real bosonic CPT boundary-sewing evidence",
+      "summary": "One clean pinned Lean run accepted fourteen declared theorems with only the recorded standard axioms, and rejected custom-axiom and admitted-proof controls. The raw result is the complete proof and control ledger.",
+      "state": "VALID_RUN_SCOPED_LEAN_REAL_BOUNDARY_SEWING",
+      "observed_status": "LEAN_KERNEL_ACCEPTED_SCOPED_REAL_BOUNDARY_SEWING",
+      "check_ids": [
+        "theorems.CptSewing.alpha_momentumReflection",
+        "theorems.CptSewing.omega_momentumReflection",
+        "theorems.CptSewing.sum_seam_zero",
+        "theorems.CptSewing.starobinskyHL_momentumReflection_onPhysicalChart",
+        "acceptance_controls.custom_axiom_rejected",
+        "acceptance_controls.admitted_proof_rejected"
+      ]
+    },
+    {
+      "id": "artifact:cpt-real-bosonic-boundary-sewing-lean-source",
+      "type": "artifact",
+      "title": "Lean real bosonic CPT boundary-sewing source",
+      "summary": "Pinned Lean source formalizing the declared real boundary phase algebra and the stated Starobinsky momentum-reflection identity; the raw result separately pins the Lean project and dependency manifest.",
+      "state": "TRACKED_FORMAL_PROOF_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/Boundary.lean",
+      "sha256": "b5bbb07693be9362045fe9cf14026f57fbd58e3f161a2290a0c2688ba656d42a",
+      "introduced_in_commit": "6ee232b16e22c2c5b6966bac2d4d1658512e49c6"
+    },
+    {
+      "id": "artifact:cpt-real-bosonic-boundary-sewing-lean-runner",
+      "type": "artifact",
+      "title": "Lean real bosonic CPT boundary-sewing runner",
+      "summary": "Clean bounded runner that checks pinned Lean project inputs, elaborates the audit under warning-as-error, records theorem axiom reports, and exercises custom-axiom and admitted-proof rejection controls.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py",
+      "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+      "introduced_in_commit": "b0e20b06b8b922273742a4f674f29001caa40368"
+    },
+    {
+      "id": "artifact:cpt-real-bosonic-boundary-sewing-lean-result",
+      "type": "artifact",
+      "title": "Lean real bosonic CPT boundary-sewing raw result",
+      "summary": "Raw-result SSOT for the pinned Lean 4.33.0 elaboration, fourteen theorem axiom reports, two negative controls, source hashes and declared non-claim.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/CPT_BOUNDARY_SEWING_LEAN_RESULT.json",
+      "sha256": "26478a1d48a8de7ab305f36b2f2db4d159397fb9fc490100bc2cd2baf4045c38"
+    },
+    {
+      "id": "artifact:cpt-real-bosonic-boundary-sewing-lean-report",
+      "type": "artifact",
+      "title": "Lean real bosonic CPT boundary-sewing report",
+      "summary": "Question, declared coordinate conventions, fourteen accepted theorem groups, shared-tangent and physical-chart limits, actual command and failure history, axiom controls and the open BFV/source/cycle boundary.",
+      "state": "TRACKED_SCOPED_FORMALIZATION_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/CPT_BOUNDARY_SEWING_LEAN.md",
+      "sha256": "abb446b236aa69c4b0289f3c38db6343b60672bac7864c134df64a2828ad757b"
     }
   ],
   "edges": [
@@ -36891,7 +36979,16 @@
     {"id":"edge:3879","from":"claim:STAROBINSKY_LB_WHOLE_FIBER_HAS_NONNEGATIVE_D_AT_SOME_POSITIVE_SCALE","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-morse-fiber-positivity-report"},
     {"id":"edge:3880","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"CITES","to":"source:mcguigan-2023-starobinsky-morse","note":"Prior Starobinsky--Morse connection only; the all-scale declared-ordering discriminator remains repository-local."},
     {"id":"edge:3881","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"CITES","to":"source:mostafazadeh-2004-kg-quantum-cosmology","note":"Frames the positive-D square-root premise and its alternatives only; it does not select this ordering, domain, source or physical state."},
-    {"id":"edge:3882","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"CONTRASTS_WITH","to":"scope:p23-supplied-bridge-compact-density","note":"The supplied compact positive operator of P23 remains a distinct input; this result rules out only its direct replacement by the declared whole-fiber D_a."}
+    {"id":"edge:3882","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"CONTRASTS_WITH","to":"scope:p23-supplied-bridge-compact-density","note":"The supplied compact positive operator of P23 remains a distinct input; this result rules out only its direct replacement by the declared whole-fiber D_a."},
+    {"id":"edge:3883","from":"claim:CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES","relation":"ABOUT","to":"concept:cpt-pin-sewing","note":"The formal identity concerns the declared real bosonic boundary representative of CPT/Pin sewing only."},
+    {"id":"edge:3884","from":"claim:CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES","relation":"VALID_WITHIN","to":"scope:cpt-real-bosonic-boundary-sewing-lean"},
+    {"id":"edge:3885","from":"claim:CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES","relation":"HAS_EVIDENCE","to":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","polarity":"SUPPORTS","note":"The Lean kernel accepted the declared boundary identities under the pinned source and standard-axiom policy."},
+    {"id":"edge:3886","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"This is a formal real-boundary method result; it neither completes nor selects a CPT source."},
+    {"id":"edge:3887","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"DERIVED_FROM","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-source","note":"The source encodes the finite real phase algebra; the raw result pins the project toolchain and dependency manifest."},
+    {"id":"edge:3888","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"DEFINED_IN","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-runner","note":"The runner verifies hashes, invokes Lean with warning-as-error, records theorem axioms and rejects the two negative controls."},
+    {"id":"edge:3889","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"RECORDED_IN","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-result","note":"The raw result is the complete machine-readable source of truth for theorem acceptance, standard axioms, controls and provenance."},
+    {"id":"edge:3890","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"MOTIVATES","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"The checked real ghost-number-zero boundary lemma leaves the required BFV/source extension, constrained composition, gauge-null mode and original-cycle construction open."},
+    {"id":"edge:3891","from":"claim:CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES","relation":"DOCUMENTED_BY","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-report","note":"The report separates the accepted real boundary algebra from the unconstructed BFV sewing, physical state and original joint relative cycle."}
   ],
   "kg_bridges": [
     {
