@@ -128,6 +128,12 @@ Starobinsky 경계 작용을 정하지 않는다. 따라서 원문에서 선언�
 있다. 한 구간의 양끝은 \(p_R-p_L\), 두 cap의 바깥 경계는 \(p_1+p_2\)로 변분된다는
 구별이 그 차이를 설명한다. 후자는 다른 기하의 방법 대조이며 Starobinsky source의 증거가 아니다.
 
+[CPT 접합·original cycle 구성 설계](../../docs/research/ICE_CPT_SEWING_ORIGINAL_CYCLE_CONSTRUCTION_DESIGN_2026-09-06.md)는
+이제 **경계 대응 관계 → 남는 경계 변분 → seam kernel·상태 → 규제된 joint cycle**로
+질문을 연결한다. Real bosonic reflection에는 추가 작용이 0인 경계 관계 후보가 있지만,
+실제 BFV 접합과 양자 source는 아직 없다. CPT symmetry가 여러 상태를 허용한다는 문헌과,
+경계 상태·lapse 처방을 바꾸면 계산 대상도 바뀐다는 구별을 함께 읽는다.
+
 ### C. amplitude, state, full parent를 한 줄로 섞지 않기
 
 G1의 global coefficient는 saddle가 적분에 기여하는가의 질문이다. G2/G3는 선택된
