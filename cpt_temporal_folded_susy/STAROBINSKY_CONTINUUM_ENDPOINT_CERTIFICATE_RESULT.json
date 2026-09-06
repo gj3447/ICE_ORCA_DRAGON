@@ -1,0 +1,1004 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-06T11:46:17.741645+00:00",
+  "question": "Does one declared box contain a unique regular zero of the constrained continuum endpoint map?",
+  "scope": "SUPPORTING_METHOD; fixed exact real boundary data and one local shooting box",
+  "non_claim": "No original integration cycle, global saddle census/intersection, gauge/FP/BFV source, continuum quantum measure or physical/empirical claim.",
+  "dominant_failure_class": "solver",
+  "inputs": {
+    "schema_version": 1,
+    "boundary": {
+      "a": "3.5668031935672753",
+      "phi": "1.0185809464006637"
+    },
+    "centre_decimal": {
+      "u": "0.09984512855",
+      "v": "-0.10663777161",
+      "T": "0.7"
+    },
+    "radius_binary_exponents": [
+      -24,
+      -24,
+      -20
+    ],
+    "taylor_order": 20,
+    "max_steps": 128,
+    "child_timeout_seconds": 60,
+    "child_stream_limit_bytes": 262144,
+    "arb_precision_bits": 192,
+    "backend": {
+      "source_sha256": "e10661f470dce792390e38dc5411420c3237b0f9d9e4500429a632337a833575",
+      "binary_sha256": "39809e3c4fd5c24a8992e432230427d8df921f6a745a2d1e53e7484f588eee9f",
+      "capd_revision": "693998cd6d73a0c4e1b141bfb79fcad1c40c3cbe",
+      "capd_static_sha256": "10aaa2b78fbb54f8258e8a9d790b37f790565d79270c2cbfeb00dbdbefb2741e",
+      "filib_static_sha256": "90a1d0c3919f3739f4b189f7e662fb1a3dd79050df124504dd5411bdbbccea71",
+      "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+      "build_recipe": "docs/research/ICE_CAPD_CONTINUUM_BACKEND_BUILD_2026-09-06.md"
+    }
+  },
+  "provenance": {
+    "source_commit": "1d2c63c0f3fdb0a0a02ca99f04e44bb67058bb75",
+    "runner_sha256": "457bd2aaaa125b770643ebe3f7e7ba8e51ed69ad4d5c3dcac0714bc867201814",
+    "helper_source_sha256": "e10661f470dce792390e38dc5411420c3237b0f9d9e4500429a632337a833575",
+    "inputs_sha256": "1e210ce76a8de2a5d70ecc9c896085a259ae3b2d5e54cf70225b4036162ea026",
+    "uv_lock_sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "packages": {
+      "numpy": "2.5.2",
+      "python-flint": "0.9.0"
+    },
+    "entry_command": "ICE_CAPD_BVP_BINARY=<pinned external binary> ./ice run starobinsky_continuum_endpoint_certificate",
+    "actual_backend_argv": [
+      "/home/lagyeongjun/.cache/ice-capd/693998cd6d73a0c4e1b141bfb79fcad1c40c3cbe/ice-helper/starobinsky_continuum_endpoint_certificate",
+      "3.5668031935672753",
+      "1.0185809464006637",
+      "0.09984512855",
+      "-0.10663777161",
+      "0.7",
+      "-24",
+      "-24",
+      "-20",
+      "20",
+      "128"
+    ],
+    "binary_sha256": "39809e3c4fd5c24a8992e432230427d8df921f6a745a2d1e53e7484f588eee9f"
+  },
+  "backend_execution": {
+    "returncode": 0,
+    "elapsed_seconds": 0.009337148163467646,
+    "stdout_bytes": 9548,
+    "stderr_bytes": 0,
+    "stdout_sha256": "500882068a623740d9aa7c3ddeb75cba48d82fb25fdf9b924ee99d3a4e758f96",
+    "stderr": ""
+  },
+  "validated_flow": {
+    "status": "FLOW_ENCLOSURES_COMPUTED",
+    "interval_format": "EXACT_BINARY64_HEX_ENDPOINTS",
+    "field": "par:b;var:a,u,phi,v,T;fun:T*u,T*((1-u^2)/(2*a)-a*v^2/4-3*a*(1-exp(-b*phi))^2/8),T*v,T*(3*b*exp(-b*phi)*(1-exp(-b*phi))/2-3*u*v/a),0;",
+    "boundary_enclosures": [
+      {
+        "lower_hex": "0x1.c88d01cdd1e5p+1",
+        "upper_hex": "0x1.c88d01cdd1e53p+1"
+      },
+      {
+        "lower_hex": "0x1.04c1b88d1e9cbp+0",
+        "upper_hex": "0x1.04c1b88d1e9cdp+0"
+      }
+    ],
+    "centre": [
+      {
+        "lower_hex": "0x1.98f7349c983b4p-4",
+        "upper_hex": "0x1.98f7349c983b4p-4"
+      },
+      {
+        "lower_hex": "-0x1.b4c9ced955101p-4",
+        "upper_hex": "-0x1.b4c9ced955101p-4"
+      },
+      {
+        "lower_hex": "0x1.6666666666666p-1",
+        "upper_hex": "0x1.6666666666666p-1"
+      }
+    ],
+    "radii": [
+      {
+        "lower_hex": "0x1p-24",
+        "upper_hex": "0x1p-24"
+      },
+      {
+        "lower_hex": "0x1p-24",
+        "upper_hex": "0x1p-24"
+      },
+      {
+        "lower_hex": "0x1p-20",
+        "upper_hex": "0x1p-20"
+      }
+    ],
+    "box": [
+      {
+        "lower_hex": "0x1.98f7249c983b4p-4",
+        "upper_hex": "0x1.98f7449c983b4p-4"
+      },
+      {
+        "lower_hex": "-0x1.b4c9ded955101p-4",
+        "upper_hex": "-0x1.b4c9bed955101p-4"
+      },
+      {
+        "lower_hex": "0x1.6666466666666p-1",
+        "upper_hex": "0x1.6666866666666p-1"
+      }
+    ],
+    "initial_augmented_jacobian": [
+      [
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x1.6666666666666p-1",
+          "upper_hex": "0x1.6666666666666p-1"
+        },
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x1.98f7349c983b4p-4",
+          "upper_hex": "0x1.98f7349c983b4p-4"
+        }
+      ],
+      [
+        {
+          "lower_hex": "-0x1.ce8d763b03c89p-4",
+          "upper_hex": "-0x1.ce8d763b03c68p-4"
+        },
+        {
+          "lower_hex": "-0x1.410b7b8c40a8ap-6",
+          "upper_hex": "-0x1.410b7b8c40a86p-6"
+        },
+        {
+          "lower_hex": "-0x1.80dc87804f5b5p-2",
+          "upper_hex": "-0x1.80dc87804f58ap-2"
+        },
+        {
+          "lower_hex": "0x1.10a39ebce75d4p-3",
+          "upper_hex": "0x1.10a39ebce75d7p-3"
+        },
+        {
+          "lower_hex": "-0x1.30ff252617ab8p-2",
+          "upper_hex": "-0x1.30ff252617a8dp-2"
+        }
+      ],
+      [
+        {
+          "lower_hex": "-0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "-0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "-0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x1.6666666666666p-1",
+          "upper_hex": "0x1.6666666666666p-1"
+        },
+        {
+          "lower_hex": "-0x1.b4c9ced955101p-4",
+          "upper_hex": "-0x1.b4c9ced955101p-4"
+        }
+      ],
+      [
+        {
+          "lower_hex": "-0x1.ccb8cf0079fd7p-10",
+          "upper_hex": "-0x1.ccb8cf0079fccp-10"
+        },
+        {
+          "lower_hex": "0x1.012a221e4085bp-4",
+          "upper_hex": "0x1.012a221e4085fp-4"
+        },
+        {
+          "lower_hex": "-0x1.42e8fb924498ap-5",
+          "upper_hex": "-0x1.42e8fb924486ep-5"
+        },
+        {
+          "lower_hex": "-0x1.e191395260fcfp-5",
+          "upper_hex": "-0x1.e191395260fc7p-5"
+        },
+        {
+          "lower_hex": "0x1.3d7569ca8b87bp-2",
+          "upper_hex": "0x1.3d7569ca8b89bp-2"
+        }
+      ],
+      [
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        },
+        {
+          "lower_hex": "0x0p+0",
+          "upper_hex": "0x0p+0"
+        }
+      ]
+    ],
+    "point_flow": {
+      "endpoint": [
+        {
+          "lower_hex": "0x1.c88d01cdd24f7p+1",
+          "upper_hex": "0x1.c88d01cdd2506p+1"
+        },
+        {
+          "lower_hex": "-0x1.98f7349c72315p-4",
+          "upper_hex": "-0x1.98f7349c7226bp-4"
+        },
+        {
+          "lower_hex": "0x1.04c1b88d1e971p+0",
+          "upper_hex": "0x1.04c1b88d1e981p+0"
+        },
+        {
+          "lower_hex": "0x1.b4c9ced953b78p-4",
+          "upper_hex": "0x1.b4c9ced953bdep-4"
+        },
+        {
+          "lower_hex": "0x1.6666666666666p-1",
+          "upper_hex": "0x1.6666666666666p-1"
+        }
+      ],
+      "derivative": [
+        [
+          {
+            "lower_hex": "0x1.ec5d7e694ba31p-1",
+            "upper_hex": "0x1.ec5d7e694ba44p-1"
+          },
+          {
+            "lower_hex": "0x1.60954e6bfa28dp-1",
+            "upper_hex": "0x1.60954e6bfa29fp-1"
+          },
+          {
+            "lower_hex": "-0x1.0c8e3c6330104p-3",
+            "upper_hex": "-0x1.0c8e3c63300dp-3"
+          },
+          {
+            "lower_hex": "-0x1.f47367671c94dp-7",
+            "upper_hex": "-0x1.f47367671c7fp-7"
+          },
+          {
+            "lower_hex": "-0x1.98f7349c72316p-4",
+            "upper_hex": "-0x1.98f7349c72266p-4"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x1.bf3e33a8ee7fp-4",
+            "upper_hex": "-0x1.bf3e33a8ee7aep-4"
+          },
+          {
+            "lower_hex": "0x1.eba9f2c2da0cbp-1",
+            "upper_hex": "0x1.eba9f2c2da0e5p-1"
+          },
+          {
+            "lower_hex": "-0x1.7cbc35331b72ap-2",
+            "upper_hex": "-0x1.7cbc35331b6d7p-2"
+          },
+          {
+            "lower_hex": "-0x1.0c0e6802503bcp-3",
+            "upper_hex": "-0x1.0c0e680250357p-3"
+          },
+          {
+            "lower_hex": "-0x1.30ff252617d71p-2",
+            "upper_hex": "-0x1.30ff252617d1bp-2"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x1.a5f73b047582fp-13",
+            "upper_hex": "-0x1.a5f73b04755aep-13"
+          },
+          {
+            "lower_hex": "0x1.d80bc7c02a229p-8",
+            "upper_hex": "0x1.d80bc7c02a2dfp-8"
+          },
+          {
+            "lower_hex": "0x1.f95f1055c8c26p-1",
+            "upper_hex": "0x1.f95f1055c8c3cp-1"
+          },
+          {
+            "lower_hex": "0x1.61862e409addbp-1",
+            "upper_hex": "0x1.61862e409adedp-1"
+          },
+          {
+            "lower_hex": "0x1.b4c9ced953b6ap-4",
+            "upper_hex": "0x1.b4c9ced953bedp-4"
+          }
+        ],
+        [
+          {
+            "lower_hex": "0x1.2b75f36666692p-11",
+            "upper_hex": "0x1.2b75f36666989p-11"
+          },
+          {
+            "lower_hex": "0x1.49b55fded84p-14",
+            "upper_hex": "0x1.49b55fdee368p-14"
+          },
+          {
+            "lower_hex": "-0x1.1120d72f4a1f5p-5",
+            "upper_hex": "-0x1.1120d72f4a062p-5"
+          },
+          {
+            "lower_hex": "0x1.fa129bfc387c1p-1",
+            "upper_hex": "0x1.fa129bfc387e2p-1"
+          },
+          {
+            "lower_hex": "0x1.3d7569ca8aa41p-2",
+            "upper_hex": "0x1.3d7569ca8aa81p-2"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "0x1p+0",
+            "upper_hex": "0x1p+0"
+          }
+        ]
+      ],
+      "whole_time_tube": [
+        {
+          "lower_hex": "0x1.c88d01cdd1e4fp+1",
+          "upper_hex": "0x1.cc0b9e90e8725p+1"
+        },
+        {
+          "lower_hex": "-0x1.98f7349c72315p-4",
+          "upper_hex": "0x1.98f7349c983b5p-4"
+        },
+        {
+          "lower_hex": "0x1.fa958b484f91p-1",
+          "upper_hex": "0x1.04c1b88d1e9cep+0"
+        },
+        {
+          "lower_hex": "-0x1.b4c9ced955102p-4",
+          "upper_hex": "0x1.b4c9ced953bdep-4"
+        },
+        {
+          "lower_hex": "0x1.6666666666666p-1",
+          "upper_hex": "0x1.6666666666666p-1"
+        }
+      ],
+      "step_end_times": [
+        {
+          "lower_hex": "0x1.9p-2",
+          "upper_hex": "0x1.9p-2"
+        },
+        {
+          "lower_hex": "0x1.a8p-1",
+          "upper_hex": "0x1.a8p-1"
+        },
+        {
+          "lower_hex": "0x1p+0",
+          "upper_hex": "0x1p+0"
+        }
+      ]
+    },
+    "box_flow": {
+      "endpoint": [
+        {
+          "lower_hex": "0x1.c88d00a73cap+1",
+          "upper_hex": "0x1.c88d02f467ffcp+1"
+        },
+        {
+          "lower_hex": "-0x1.98f79251b15b5p-4",
+          "upper_hex": "-0x1.98f6d6e732fc8p-4"
+        },
+        {
+          "lower_hex": "0x1.04c1b625b8f9dp+0",
+          "upper_hex": "0x1.04c1baf484355p+0"
+        },
+        {
+          "lower_hex": "0x1.b4c96fab0e625p-4",
+          "upper_hex": "0x1.b4ca2e0799131p-4"
+        },
+        {
+          "lower_hex": "0x1.6666466666666p-1",
+          "upper_hex": "0x1.6666866666666p-1"
+        }
+      ],
+      "derivative": [
+        [
+          {
+            "lower_hex": "0x1.ec5d7ab1384e4p-1",
+            "upper_hex": "0x1.ec5d82215ea1bp-1"
+          },
+          {
+            "lower_hex": "0x1.60952d351c3d8p-1",
+            "upper_hex": "0x1.60956fa2d8168p-1"
+          },
+          {
+            "lower_hex": "-0x1.0c8e6f24eb1bdp-3",
+            "upper_hex": "-0x1.0c8e09a179bb9p-3"
+          },
+          {
+            "lower_hex": "-0x1.f475c7213cb53p-7",
+            "upper_hex": "-0x1.f47107ad09699p-7"
+          },
+          {
+            "lower_hex": "-0x1.98f7a0e06bf6cp-4",
+            "upper_hex": "-0x1.98f6c8587a328p-4"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x1.bf3e625b2fd58p-4",
+            "upper_hex": "-0x1.bf3e04f6adb4ep-4"
+          },
+          {
+            "lower_hex": "0x1.eba9ec73fa927p-1",
+            "upper_hex": "0x1.eba9f911b8cc8p-1"
+          },
+          {
+            "lower_hex": "-0x1.7cbc5df384d83p-2",
+            "upper_hex": "-0x1.7cbc0c72b20d9p-2"
+          },
+          {
+            "lower_hex": "-0x1.0c0ed921cf47dp-3",
+            "upper_hex": "-0x1.0c0df6e2d564cp-3"
+          },
+          {
+            "lower_hex": "-0x1.30ff37126357cp-2",
+            "upper_hex": "-0x1.30ff1339ccfffp-2"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x1.a5fa33c6a832bp-13",
+            "upper_hex": "-0x1.a5f4424270a3fp-13"
+          },
+          {
+            "lower_hex": "0x1.d80a75d4cb244p-8",
+            "upper_hex": "0x1.d80d19abb93b2p-8"
+          },
+          {
+            "lower_hex": "0x1.f95f0e7836367p-1",
+            "upper_hex": "0x1.f95f12335b1e6p-1"
+          },
+          {
+            "lower_hex": "0x1.61860bbba87c8p-1",
+            "upper_hex": "0x1.618650c58d79cp-1"
+          },
+          {
+            "lower_hex": "0x1.b4c965e3eb33cp-4",
+            "upper_hex": "0x1.b4ca37cebd84fp-4"
+          }
+        ],
+        [
+          {
+            "lower_hex": "0x1.2b730fdc28ae6p-11",
+            "upper_hex": "0x1.2b78d6f0cf8dep-11"
+          },
+          {
+            "lower_hex": "0x1.48d9952cc7bp-14",
+            "upper_hex": "0x1.4a912a94d79p-14"
+          },
+          {
+            "lower_hex": "-0x1.1121222380faep-5",
+            "upper_hex": "-0x1.11208c3b11c8bp-5"
+          },
+          {
+            "lower_hex": "0x1.fa1292440ca96p-1",
+            "upper_hex": "0x1.fa12a5b464639p-1"
+          },
+          {
+            "lower_hex": "0x1.3d755fd5afb6ap-2",
+            "upper_hex": "0x1.3d7573bf66248p-2"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "0x1p+0",
+            "upper_hex": "0x1p+0"
+          }
+        ]
+      ],
+      "whole_time_tube": [
+        {
+          "lower_hex": "0x1.c88d00a700d99p+1",
+          "upper_hex": "0x1.cc0b9f03c8bdbp+1"
+        },
+        {
+          "lower_hex": "-0x1.98f79342bc6c1p-4",
+          "upper_hex": "0x1.98f7449c983b5p-4"
+        },
+        {
+          "lower_hex": "0x1.fa95896711daep-1",
+          "upper_hex": "0x1.04c1baf4e9dc7p+0"
+        },
+        {
+          "lower_hex": "-0x1.b4c9ded955102p-4",
+          "upper_hex": "0x1.b4ca2e9dcf897p-4"
+        },
+        {
+          "lower_hex": "0x1.6666466666666p-1",
+          "upper_hex": "0x1.6666866666666p-1"
+        }
+      ],
+      "step_end_times": [
+        {
+          "lower_hex": "0x1.9p-2",
+          "upper_hex": "0x1.9p-2"
+        },
+        {
+          "lower_hex": "0x1.a8p-1",
+          "upper_hex": "0x1.a8p-1"
+        },
+        {
+          "lower_hex": "0x1p+0",
+          "upper_hex": "0x1p+0"
+        }
+      ]
+    },
+    "free_flow_control": {
+      "endpoint": [
+        {
+          "lower_hex": "0x1.1p+1",
+          "upper_hex": "0x1.1p+1"
+        },
+        {
+          "lower_hex": "0x1p-2",
+          "upper_hex": "0x1p-2"
+        },
+        {
+          "lower_hex": "0x1.ep-1",
+          "upper_hex": "0x1.ep-1"
+        },
+        {
+          "lower_hex": "-0x1p-3",
+          "upper_hex": "-0x1p-3"
+        },
+        {
+          "lower_hex": "0x1p-1",
+          "upper_hex": "0x1p-1"
+        }
+      ],
+      "derivative": [
+        [
+          {
+            "lower_hex": "0x1p+0",
+            "upper_hex": "0x1p+0"
+          },
+          {
+            "lower_hex": "0x1p-1",
+            "upper_hex": "0x1p-1"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "0x1p-2",
+            "upper_hex": "0x1p-2"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "0x1p+0",
+            "upper_hex": "0x1p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "0x1p+0",
+            "upper_hex": "0x1p+0"
+          },
+          {
+            "lower_hex": "0x1p-1",
+            "upper_hex": "0x1p-1"
+          },
+          {
+            "lower_hex": "-0x1p-3",
+            "upper_hex": "-0x1p-3"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "0x1p+0",
+            "upper_hex": "0x1p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          }
+        ],
+        [
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "-0x0p+0",
+            "upper_hex": "0x0p+0"
+          },
+          {
+            "lower_hex": "0x1p+0",
+            "upper_hex": "0x1p+0"
+          }
+        ]
+      ],
+      "whole_time_tube": [
+        {
+          "lower_hex": "0x1p+1",
+          "upper_hex": "0x1.1p+1"
+        },
+        {
+          "lower_hex": "0x1p-2",
+          "upper_hex": "0x1p-2"
+        },
+        {
+          "lower_hex": "0x1.ep-1",
+          "upper_hex": "0x1p+0"
+        },
+        {
+          "lower_hex": "-0x1p-3",
+          "upper_hex": "-0x1p-3"
+        },
+        {
+          "lower_hex": "0x1p-1",
+          "upper_hex": "0x1p-1"
+        }
+      ],
+      "step_end_times": [
+        {
+          "lower_hex": "0x1p+0",
+          "upper_hex": "0x1p+0"
+        }
+      ]
+    }
+  },
+  "verdict": "CERTIFIED_UNIQUE_REGULAR_REAL_CONSTRAINED_ENDPOINT_ROOT_IN_DECLARED_BOX",
+  "controls": {
+    "declared_input_enclosures_match": true,
+    "all_flows_reach_s_one": true,
+    "positive_a_whole_time_and_positive_T": true,
+    "analytic_initial_Dg_overlap_25_entries": true,
+    "autonomous_T_sensitivity_overlap_8_entries": true,
+    "exact_free_flow_endpoint_and_C1_30_entries": true
+  },
+  "certificate": {
+    "shooting_order": [
+      "u_minus",
+      "v_minus",
+      "T"
+    ],
+    "residual_order": [
+      "a_endpoint-a_boundary",
+      "phi_endpoint-phi_boundary",
+      "C_initial"
+    ],
+    "declared_box_exact_rational": [
+      {
+        "lower_exact": "1798648861188333/18014398509481984",
+        "upper_exact": "1798651008671981/18014398509481984"
+      },
+      {
+        "lower_exact": "-7684065550749953/72057594037927936",
+        "upper_exact": "-7684056960815361/72057594037927936"
+      },
+      {
+        "lower_exact": "3152515444192051/4503599627370496",
+        "upper_exact": "3152524034126643/4503599627370496"
+      }
+    ],
+    "constraint_gradient_arb_outer_enclosure": [
+      {
+        "lower_exact": "1798648861188331/18014398509481984",
+        "upper_exact": "1798651008671983/18014398509481984",
+        "display_only": "[0.0998451 +/- 8.82e-8]"
+      },
+      {
+        "lower_exact": "-7684065550749961/72057594037927936",
+        "upper_exact": "-7684056960815353/72057594037927936",
+        "display_only": "[-0.1066378 +/- 8.80e-8]"
+      },
+      {
+        "lower_exact": "3152515444192043/4503599627370496",
+        "upper_exact": "3152524034126651/4503599627370496",
+        "display_only": "[0.70000 +/- 9.54e-7]"
+      }
+    ],
+    "enclosure_scope": "The Krawczyk domain is the exact declared box. Only the constraint-gradient row uses its displayed Arb outer enclosure; the CAPD flow derivative encloses derivatives over the exact declared box.",
+    "F_at_centre": [
+      {
+        "lower_exact": "1185369458067824050251434403463080414603945209/1569275433846670190958947355801916604025588861116008628224",
+        "upper_exact": "1195822932400404467283168581917506319376753913/1569275433846670190958947355801916604025588861116008628224",
+        "display_only": "[7.6e-13 +/- 4.64e-15]"
+      },
+      {
+        "lower_exact": "-15888965630127280535003620265473388540674123/784637716923335095479473677900958302012794430558004314112",
+        "upper_exact": "-13101372469926358925242000224331350693986379/784637716923335095479473677900958302012794430558004314112",
+        "display_only": "[-2e-14 +/- 3.31e-15]"
+      },
+      {
+        "lower_exact": "42687251698344429832858077165555362021236760886901191/210624583337114373395836055367340864637790190801098222508621955072",
+        "upper_exact": "42687251698344429832858077165555362021236762023560761/210624583337114373395836055367340864637790190801098222508621955072",
+        "display_only": "[2.02669845190964779e-13 +/- 9.75e-32]"
+      }
+    ],
+    "DF_enclosure_over_declared_box": [
+      [
+        {
+          "lower_exact": "387668801559613/562949953421312",
+          "upper_exact": "387669916047383/562949953421312",
+          "display_only": "[0.68864 +/- 1.88e-6]"
+        },
+        {
+          "lower_exact": "-4402093327246843/288230376151711744",
+          "upper_exact": "-4401930191784699/288230376151711744",
+          "display_only": "[-0.015273 +/- 7.37e-7]"
+        },
+        {
+          "lower_exact": "-3597314400935877/36028797018963968",
+          "upper_exact": "-3597285338632581/36028797018963968",
+          "display_only": "[-0.099845 +/- 5.32e-7]"
+        }
+      ],
+      [
+        {
+          "lower_exact": "8304230637810171/1152921504606846976",
+          "upper_exact": "8304412057113595/1152921504606846976",
+          "display_only": "[0.007203 +/- 2.29e-7]"
+        },
+        {
+          "lower_exact": "3109626616562657/4503599627370496",
+          "upper_exact": "3109635882773457/4503599627370496",
+          "display_only": "[0.69048 +/- 4.19e-6]"
+        },
+        {
+          "lower_exact": "15368066162320971/144115188075855872",
+          "upper_exact": "15368178860798155/144115188075855872",
+          "display_only": "[0.106638 +/- 6.20e-7]"
+        }
+      ],
+      [
+        {
+          "lower_exact": "1798648861188325/9007199254740992",
+          "upper_exact": "1798651008671989/9007199254740992",
+          "display_only": "[0.199690 +/- 3.77e-7]"
+        },
+        {
+          "lower_exact": "2838618473433598127151372309428187356640341947040440837609/6277101735386680763835789423207666416102355444464034512896",
+          "upper_exact": "2838621646698372116634194469494032932819807830139060413929/6277101735386680763835789423207666416102355444464034512896",
+          "display_only": "[0.452218 +/- 5.19e-7]"
+        },
+        {
+          "lower_exact": "0",
+          "upper_exact": "0",
+          "display_only": "0"
+        }
+      ]
+    ],
+    "B_exact_binary64_hex": [
+      [
+        "0x1.3336a11dc1b0ap+1",
+        "0x1.1fa4f959d4f7ep+1",
+        "-0x1.acd1b8d010dcap+1"
+      ],
+      [
+        "-0x1.0f51754b3a4e5p+0",
+        "-0x1.fc124649c3387p-1",
+        "0x1.d8682984a0570p+1"
+      ],
+      [
+        "0x1.acd1b8d0384b0p+2",
+        "0x1.f4d55843f7d49p+3",
+        "-0x1.7abb73bc3db6cp+4"
+      ]
+    ],
+    "K_arb": [
+      {
+        "lower_exact": "313369014835266578629324940184743822457061205329776540915/3138550867693340381917894711603833208051177722232017256448",
+        "upper_exact": "313369014848936976652725905469176604759443976105867148531/3138550867693340381917894711603833208051177722232017256448",
+        "display_only": "[0.09984512855 +/- 3.28e-12]"
+      },
+      {
+        "lower_exact": "-5355009129896054176053615484034673124329183544174399513143/50216813883093446110686315385661331328818843555712276103168",
+        "upper_exact": "-5355009129794545053941263079327547503711498524099045548599/50216813883093446110686315385661331328818843555712276103168",
+        "display_only": "[-0.10663777161 +/- 1.05e-12]"
+      },
+      {
+        "lower_exact": "2196985607352299812536121028343941136850969765009387631753/3138550867693340381917894711603833208051177722232017256448",
+        "upper_exact": "2196985607418395406143738469503635270320844635385868792969/3138550867693340381917894711603833208051177722232017256448",
+        "display_only": "[0.7000000000 +/- 1.06e-11]"
+      }
+    ],
+    "strict_inclusion_arb": [
+      true,
+      true,
+      true
+    ],
+    "K_independent_exact_rational": [
+      {
+        "lower_exact": "23677493318847096105679742697149236188612203484302545414492682259133856096704477/237142198758023568227473377297792835283496928595231875152809132048206089502588928",
+        "upper_exact": "23677493319880002167685379894285183885054768816143689179152688458813310078036003/237142198758023568227473377297792835283496928595231875152809132048206089502588928"
+      },
+      {
+        "lower_exact": "-3161039453810258555270838086536295510177370475683282269497652327075515536128257/29642774844752946028434172162224104410437116074403984394101141506025761187823616",
+        "upper_exact": "-3161039453750338146274101507150361132343756295061529087663165708839873701332735/29642774844752946028434172162224104410437116074403984394101141506025761187823616"
+      },
+      {
+        "lower_exact": "10374971195507511420163086610586171819006262161575144759506112938796874947956707/14821387422376473014217086081112052205218558037201992197050570753012880593911808",
+        "upper_exact": "10374971195819639032411676125605906015172809414626962173619886436017476782977053/14821387422376473014217086081112052205218558037201992197050570753012880593911808"
+      }
+    ],
+    "strict_margin_exact_rational": [
+      "14133999101956381118671276825276423834027977736947717640152286214118168541/237142198758023568227473377297792835283496928595231875152809132048206089502588928",
+      "1766815985024979871450762151738685943776747388423458518361803425640728319/29642774844752946028434172162224104410437116074403984394101141506025761187823616",
+      "14134620409646413097869070119609840634808345405376172831810509204634275811/14821387422376473014217086081112052205218558037201992197050570753012880593911808"
+    ],
+    "strict_margin_over_radius_display": [
+      0.9999449997479839,
+      0.9999824094829575,
+      0.9999889557093131
+    ],
+    "weighted_defect_norm_upper_exact_rational": "256805343321862082455867645786584574460450245817789595043211067416723/7067388259113537318333190002971674063309935587502475832486424805170479104",
+    "weighted_defect_norm_upper_display": 3.633666835704215e-05,
+    "regularity_criterion": "||D^-1(I-B[DF])D||_infinity < 1; D=diag(radii)",
+    "positive_a_whole_time": {
+      "point_flow": {
+        "lower_exact": "4015863383353693/1125899906842624",
+        "upper_exact": "4046602029721949/1125899906842624",
+        "display_only": "[3.6 +/- 0.0332]"
+      },
+      "box_flow": {
+        "lower_exact": "4015863228786269/1125899906842624",
+        "upper_exact": "4046602089948765/1125899906842624",
+        "display_only": "[3.6 +/- 0.0332]"
+      }
+    }
+  },
+  "diagnostics": {
+    "time_sensitivity_difference": {
+      "point_flow": [
+        {
+          "lower_exact": "-717225985/302231454903657293676544",
+          "upper_exact": "734003201/302231454903657293676544",
+          "display_only": "[+/- 2.43e-15]"
+        },
+        {
+          "lower_exact": "-24308994370845373316178048155715513649349455/6277101735386680763835789423207666416102355444464034512896",
+          "upper_exact": "26481308383973923364203262296370237021994161/6277101735386680763835789423207666416102355444464034512896",
+          "display_only": "[+/- 4.22e-15]"
+        },
+        {
+          "lower_exact": "-486539265/302231454903657293676544",
+          "upper_exact": "490733569/302231454903657293676544",
+          "display_only": "[+/- 1.63e-15]"
+        },
+        {
+          "lower_exact": "-33727482053357113578138386069148691316954551/12554203470773361527671578846415332832204710888928069025792",
+          "upper_exact": "34648967912427408783781979129056229036829257/12554203470773361527671578846415332832204710888928069025792",
+          "display_only": "[+/- 2.76e-15]"
+        }
+      ],
+      "box_flow": [
+        {
+          "lower_exact": "-108433710999/144115188075855872",
+          "upper_exact": "108433696105/144115188075855872",
+          "display_only": "[+/- 7.53e-7]"
+        },
+        {
+          "lower_exact": "-10367102919054175482131894282864723198040401/23384026197294446691258957323460528314494920687616",
+          "upper_exact": "10367099296543638348633194374555038083360431/23384026197294446691258957323460528314494920687616",
+          "display_only": "[+/- 4.44e-7]"
+        },
+        {
+          "lower_exact": "-107449007179/144115188075855872",
+          "upper_exact": "107449017525/144115188075855872",
+          "display_only": "[+/- 7.46e-7]"
+        },
+        {
+          "lower_exact": "-1708668495812043667557433796133388384416169900332025/6277101735386680763835789423207666416102355444464034512896",
+          "upper_exact": "1708656938223752408305052730058173699717526491802631/6277101735386680763835789423207666416102355444464034512896",
+          "display_only": "[+/- 2.73e-7]"
+        }
+      ]
+    },
+    "jacobian_overlap_is_consistency_only": true,
+    "rational_check_reuses_CAPD_flow_enclosures": true
+  },
+  "elapsed_seconds": 0.043637472204864025
+}

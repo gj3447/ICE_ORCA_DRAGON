@@ -4,6 +4,10 @@
 [현재 연구 적대적 검토](ICE_CURRENT_RESEARCH_ADVERSARIAL_REVIEW_2026-09-06.md).
 지위: `SUPPORTING_METHOD`, 문헌 검토와 미실행 설계.
 
+후속 실행은 [국소 연속 endpoint certificate 결과](ICE_STAROBINSKY_CONTINUUM_ENDPOINT_CERTIFICATE_2026-09-06.md)에
+기록했다. 아래는 그 실행 전에 고정한 문헌·설계 기록이며, 설치·실행 여부에 관한 문장은
+이 설계 시점의 상태를 뜻한다.
+
 **보완 결론:** 제안한 constrained shooting 인증에는 문헌상 구체적인 구현 경로가 있다.
 다만 `F`의 근사 root에 interval 연산을 덧붙이는 것으로 끝나지 않는다. 연속 flow와
 그 미분 자체의 enclosure, 미지의 proper length `T`에 대한 미분, 전 구간의 `a>0`

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-04T02:55:43Z",
+  "updated_at_utc": "2026-09-06T11:50:04.678Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -16098,6 +16098,101 @@
         "G1.local_lapse.certificate.krawczyk_strict_inclusion",
         "G1.local_lapse.certificate.full_extended_hessian_invertible"
       ]
+    },
+    {
+      "id": "concept:gate1-starobinsky-continuum-constrained-endpoint-certificate",
+      "type": "concept",
+      "title": "Gate-1 Starobinsky continuum constrained endpoint certificate",
+      "summary": "One clean unnumbered supporting computation uses a validated full off-shell continuum flow and variational enclosure with strict Krawczyk inclusion to certify one regular real constrained endpoint root in one declared finite shooting box. It supplies only one named local continuum branch seed; it does not construct a holomorphic continuation, constrained principal function, composition law, gauge-null mode, BFV source, measure, original relative cycle or global intersection.",
+      "state": "COMPLETED_SCOPED_CONTINUUM_ENDPOINT_CERTIFICATE_ONLY"
+    },
+    {
+      "id": "scope:gate1-starobinsky-continuum-constrained-endpoint-declared-box",
+      "type": "scope",
+      "title": "Gate-1 Starobinsky continuum constrained endpoint declared shooting box",
+      "summary": "Fixed real boundaries a=3.5668031935672753 and phi=1.0185809464006637. The domain is the exact rational box obtained from the input's round-to-nearest binary64 centre for decimal (u_minus,v_minus,T)=(0.09984512855,-0.10663777161,0.7), with radii (2^-24,2^-24,2^-20). The certificate's Arb constraint-gradient outer enclosure is explicitly not the declared box.",
+      "state": "DECLARED_FIXED_REAL_CONTINUUM_SHOOTING_BOX_SCOPE",
+      "includes": [
+        "the fixed boundary values, exact binary64-centred rational shooting box and stated radius exponents from the hash-pinned input",
+        "the declared autonomous full off-shell continuum a,u,phi,v,T flow and augmented variational flow through s=1, subject to the stated Taylor order and step cap",
+        "positive a over the validated time tube and positive T, the constraint-gradient enclosure, and the strict Krawczyk/regularity criteria over the declared box",
+        "the declared-input, analytic initial-Dg, autonomous T-sensitivity and exact free-flow endpoint/C1 controls"
+      ],
+      "excludes": [
+        "existence, uniqueness, regularity or continuation outside this one finite real box",
+        "a holomorphic germ, caustic or conjugate-point census, constrained Hamilton principal function, exact composition law or internal-vertex gauge-null mode",
+        "a Starobinsky FP/BFV source or measure, a controlled map to the frozen m=2 kernel, N=0 data, cover descent or orientation transport",
+        "an original integration cycle, global saddle, sheet, singularity, Stokes, good-end or intersection census/vector, Gate-1 closure, physical or empirical claim"
+      ]
+    },
+    {
+      "id": "claim:G1_STAROBINSKY_CONTINUUM_CONSTRAINED_ENDPOINT_DECLARED_BOX_HAS_UNIQUE_REGULAR_REAL_ROOT",
+      "type": "claim",
+      "title": "The declared Starobinsky continuum endpoint box has one regular real constrained root",
+      "summary": "Supported only within the hash-pinned fixed-boundary, binary64-centred rational shooting box: the validated flow reaches s=1, the stated positivity controls pass, and strict Krawczyk inclusion with the stated regularity criterion certifies one real constrained endpoint root. This finite local fact does not complete any source, cycle or Gate-1 object.",
+      "state": "SUPPORTED_DECLARED_FINITE_REAL_CONTINUUM_ENDPOINT_BOX_ONLY",
+      "claim_id": "G1_STAROBINSKY_CONTINUUM_CONSTRAINED_ENDPOINT_DECLARED_BOX_HAS_UNIQUE_REGULAR_REAL_ROOT",
+      "statement": "For the fixed boundaries and exact declared rational shooting box recorded in STAROBINSKY_CONTINUUM_ENDPOINT_CERTIFICATE_INPUTS.json, the declared continuum constrained endpoint map has exactly one regular real zero.",
+      "epistemic_state": "SUPPORTED"
+    },
+    {
+      "id": "evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate",
+      "type": "evidence",
+      "title": "Gate-1 Starobinsky continuum constrained endpoint certificate evidence",
+      "summary": "One clean bounded run records the declared-box equality, full-flow completion, positive-a/positive-T, analytic initial-Dg, autonomous-T sensitivity and exact free-flow controls, followed by strict Krawczyk inclusion and the q regularity criterion. The raw result remains the complete ledger of interval enclosures, exact rational bounds and execution provenance.",
+      "state": "VALID_RUN_SCOPED_UNIQUE_REGULAR_REAL_CONTINUUM_ENDPOINT_ROOT",
+      "observed_status": "CERTIFIED_UNIQUE_REGULAR_REAL_CONSTRAINED_ENDPOINT_ROOT_IN_DECLARED_BOX",
+      "check_ids": [
+        "controls.declared_input_enclosures_match",
+        "controls.all_flows_reach_s_one",
+        "controls.positive_a_whole_time_and_positive_T",
+        "certificate.strict_inclusion_arb",
+        "certificate.strict_margin_exact_rational",
+        "certificate.weighted_defect_norm_upper_exact_rational"
+      ]
+    },
+    {
+      "id": "artifact:gate1-starobinsky-continuum-endpoint-certificate-input",
+      "type": "artifact",
+      "title": "Gate-1 Starobinsky continuum endpoint certificate input manifest",
+      "summary": "Hash-pinned fixed real boundaries, decimal centre strings, exact binary radius exponents, backend source/binary bindings, numerical bounds and resource limits. It defines the declared box separately from every outward interval representation.",
+      "state": "TRACKED_INPUT_MANIFEST",
+      "artifact_kind": "input_manifest",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_CONTINUUM_ENDPOINT_CERTIFICATE_INPUTS.json",
+      "sha256": "1e210ce76a8de2a5d70ecc9c896085a259ae3b2d5e54cf70225b4036162ea026",
+      "introduced_in_commit": "57f0f3e94d3070d148dd41def5a8dc79f10f1d6f"
+    },
+    {
+      "id": "artifact:gate1-starobinsky-continuum-endpoint-certificate-runner",
+      "type": "artifact",
+      "title": "Gate-1 Starobinsky continuum endpoint certificate runner",
+      "summary": "Clean bounded Python runner that verifies the hash-pinned input and helper source, invokes the pinned external CAPD helper, validates the exact and interval certificate fields, and fails closed on missing provenance or controls.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_continuum_endpoint_certificate.py",
+      "sha256": "457bd2aaaa125b770643ebe3f7e7ba8e51ed69ad4d5c3dcac0714bc867201814",
+      "introduced_in_commit": "1d2c63c0f3fdb0a0a02ca99f04e44bb67058bb75"
+    },
+    {
+      "id": "artifact:gate1-starobinsky-continuum-endpoint-certificate-helper-source",
+      "type": "artifact",
+      "title": "Gate-1 Starobinsky continuum endpoint certificate CAPD helper source",
+      "summary": "Tracked C++ source for the externally built CAPD/Filib interval-flow helper. The raw result records its matching source hash and the pinned external binary provenance; the graph does not treat the untracked external binary as a repository artifact.",
+      "state": "TRACKED_PINNED_HELPER_SOURCE",
+      "artifact_kind": "helper_source",
+      "path": "cpt_temporal_folded_susy/starobinsky_continuum_endpoint_certificate.cpp",
+      "sha256": "e10661f470dce792390e38dc5411420c3237b0f9d9e4500429a632337a833575",
+      "introduced_in_commit": "57f0f3e94d3070d148dd41def5a8dc79f10f1d6f"
+    },
+    {
+      "id": "artifact:gate1-starobinsky-continuum-endpoint-certificate-result",
+      "type": "artifact",
+      "title": "Gate-1 Starobinsky continuum endpoint certificate raw result",
+      "summary": "Raw-result SSOT: a scoped certified unique regular real constrained endpoint root in the exact declared box, including exact rational box data distinct from the Arb constraint-gradient enclosure.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_CONTINUUM_ENDPOINT_CERTIFICATE_RESULT.json",
+      "sha256": "e007401f24694a2371ecd82231f5216e0d13ae88cd2c3c3a2ebe2fead4b9b75c"
     },
     {
       "id": "open:gate1-starobinsky-exact-gauge-preserving-element-source",
@@ -36680,7 +36775,19 @@
     {"id":"edge:3856","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:bahr-dittrich-steinhaus-2011-perfect-reparametrization","note":"Perfect-discretization motivation only; it supplies no ICE element or residual."},
     {"id":"edge:3857","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:dittrich-hoehn-2013-variational-discrete-constraints","note":"Supplies the variational-discretization versus proved-gauge-structure boundary only."},
     {"id":"edge:3858","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:dittrich-2012-cylindrical-consistency","note":"Hamilton-principal-function and coarse-consistency motivation only; the repository residual remains local evidence."},
-    {"id":"edge:3859","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:johansson-arb-2017","note":"Arb supplies outward ball semantics only; it does not supply the HJ theorem or physical interpretation."}
+    {"id":"edge:3859","from":"concept:gate1-m2-starobinsky-midpoint-hj-identity-audit","relation":"CITES","to":"source:johansson-arb-2017","note":"Arb supplies outward ball semantics only; it does not supply the HJ theorem or physical interpretation."},
+    {"id":"edge:3860","from":"concept:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"One supporting local continuum endpoint certificate; it neither resolves nor changes a Gate-1 global object."},
+    {"id":"edge:3861","from":"concept:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"VALID_WITHIN","to":"scope:gate1-starobinsky-continuum-constrained-endpoint-declared-box","note":"The exact declared input box, rather than its displayed Arb outer enclosure, fixes the entire claim domain."},
+    {"id":"edge:3862","from":"scope:gate1-starobinsky-continuum-constrained-endpoint-declared-box","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"The scope retains the finite local continuum boundary and all excluded source/cycle objects."},
+    {"id":"edge:3863","from":"claim:G1_STAROBINSKY_CONTINUUM_CONSTRAINED_ENDPOINT_DECLARED_BOX_HAS_UNIQUE_REGULAR_REAL_ROOT","relation":"VALID_WITHIN","to":"scope:gate1-starobinsky-continuum-constrained-endpoint-declared-box"},
+    {"id":"edge:3864","from":"claim:G1_STAROBINSKY_CONTINUUM_CONSTRAINED_ENDPOINT_DECLARED_BOX_HAS_UNIQUE_REGULAR_REAL_ROOT","relation":"HAS_EVIDENCE","to":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","polarity":"SUPPORTS","note":"Evidence supports exactly the declared finite real-box endpoint proposition and no source, global-cycle or Gate-1 conclusion."},
+    {"id":"edge:3865","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"PART_OF","to":"concept:gate1-starobinsky-continuum-constrained-endpoint-certificate"},
+    {"id":"edge:3866","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"DERIVED_FROM","to":"artifact:gate1-starobinsky-continuum-endpoint-certificate-input","note":"The manifest fixes the exact declared box, flow bounds and backend bindings."},
+    {"id":"edge:3867","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"DEFINED_IN","to":"artifact:gate1-starobinsky-continuum-endpoint-certificate-runner","note":"The runner checks the declared-box distinction and fail-closed certificate controls."},
+    {"id":"edge:3868","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"USES_TOOLING","to":"artifact:gate1-starobinsky-continuum-endpoint-certificate-helper-source","note":"The runner invokes a pinned external binary built from this tracked helper source; matching source and binary provenance are recorded in the raw result."},
+    {"id":"edge:3869","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"RECORDED_IN","to":"artifact:gate1-starobinsky-continuum-endpoint-certificate-result","note":"The raw result is the complete machine-readable source of truth for the exact rational bounds, interval enclosures and execution provenance."},
+    {"id":"edge:3870","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"DERIVED_FROM","to":"evidence:p24-action-benchmark-and-saddle","note":"Reuses only the named Starobinsky real-branch/boundary seed as a supporting convention; it does not promote P24 into a BFV source, original cycle or global intersection result."},
+    {"id":"edge:3871","from":"concept:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"MOTIVATES","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"A named local continuum branch seed is now available for the still-open constrained-principal-function or controlled deformation discriminator; no composition law, gauge-null mode or source has been proved."}
   ],
   "kg_bridges": [
     {
