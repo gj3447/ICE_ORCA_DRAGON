@@ -107,6 +107,11 @@ manifest의 prerequisite Boolean을 읽는다. hash와 독립 result-reader는 �
 
 **제안일 뿐 실행하거나 존재를 주장하지 않는다.**
 
+같은 날 후속 [인터넷 1차 문헌 보완](ICE_CONTINUUM_CERTIFICATE_LITERATURE_SUPPLEMENT_2026-09-06.md)에서
+CAPD의 validated C1 flow와 Rump의 inclusion 정리에 맞춰 미지의 `T` 미분 및 인증식을
+구체화했다. Phase 24 중앙의 turning point에서는 좌표만의 시계가 횡단성을 잃는다는 점도
+추가했다. 아래 BVP 인증은 그 시계나 original relative cycle을 구성하는 작업이 아니다.
+
 질문: Phase 24의 continuum seed에 대응하는, 아래 정확한 경계값을 잇는 constrained
 shooting 문제는 사전에 정한 유한 box 안에서 유일한 regular zero를 가지는가?
 
