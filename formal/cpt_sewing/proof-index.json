@@ -1,0 +1,21 @@
+{
+  "schema": "ice-lean-proof-index/v1",
+  "source": "CptSewing/Boundary.lean",
+  "namespace": "CptSewing",
+  "theorems": [
+    "momentumReflection_involutive",
+    "dMomentumReflection_involutive",
+    "alpha_momentumReflection",
+    "omega_momentumReflection",
+    "sum_seam_zero",
+    "identity_difference_seam_zero",
+    "sumPrimitive_forall_iff",
+    "differencePrimitive_forall_iff",
+    "momentumReflection_preserves_physicalChart",
+    "witness_in_physicalChart",
+    "wrong_orientation_sum_identity",
+    "wrong_orientation_difference_reflection",
+    "starobinskyHL_momentumReflection",
+    "starobinskyHL_momentumReflection_onPhysicalChart"
+  ]
+}
