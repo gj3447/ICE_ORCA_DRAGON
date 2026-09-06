@@ -122,6 +122,12 @@ Starobinsky 경계 작용을 정하지 않는다. 따라서 원문에서 선언�
 추가 가정을 붙여 새 source candidate를 정의하는 일을 구별한다. 복소 시간 평면에서
 한 saddle을 계속하는 경로도 off-shell field·lapse·ghost 전체의 적분 cycle은 아니다.
 
+[면적 seam 후보 검사](../../docs/research/ICE_STAROBINSKY_AREA_SEAM_JUNCTION_OBSTRUCTION_2026-09-06.md)는
+추가 가정을 붙인 예다. 현재 실수 구간의 양끝을 닫는 비음수 면적항은 중력 운동량 조건과
+양립하지 않는다. 반면 상수 potential의 두 작은 de Sitter cap은 양의 면적항으로 접합할 수
+있다. 한 구간의 양끝은 \(p_R-p_L\), 두 cap의 바깥 경계는 \(p_1+p_2\)로 변분된다는
+구별이 그 차이를 설명한다. 후자는 다른 기하의 방법 대조이며 Starobinsky source의 증거가 아니다.
+
 ### C. amplitude, state, full parent를 한 줄로 섞지 않기
 
 G1의 global coefficient는 saddle가 적분에 기여하는가의 질문이다. G2/G3는 선택된
