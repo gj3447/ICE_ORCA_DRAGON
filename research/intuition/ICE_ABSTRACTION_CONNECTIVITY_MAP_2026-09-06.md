@@ -27,14 +27,15 @@ minisuperspace와 full 3+1 parent는 각각 다른 질문이다.
 flowchart LR
   R["기존 사실<br/>한 local constrained root"]
   W["질문 연결<br/>boundary action W(qL,qR;T)"]
-  H["질문 연결<br/>S_C, HJ, lapse/extended gauge"]
+  H["기존 사실 · 국소 범위<br/>S_C, composition, vertex characteristic"]
   C["별도 G1<br/>원래 relative cycle · global n_sigma"]
   A["별도 G2/G3<br/>CFU kernel · determinant/measure"]
   P["별도 G4/G5<br/>physical product · persistent effect"]
   F["별도 full parent<br/>3+1 closure · observable · likelihood"]
   N["범위 반례<br/>naive lapse / midpoint fixed-time HJ"]
   M["방법 비유<br/>perfect action · variational composition"]
-  R -. 질문 .-> W -. 질문 .-> H
+  R -. fixed-time 질문 .-> W
+  R -. 후속 constrained 구성 .-> H
   H -. 별도 source 입력 .-> C -. 선택된 기여 .-> A -. 물리 상태 조건 .-> P -. parent/관측 조건 .-> F
   N -. 실패한 후보의 범위 .-> H
   M -. 방법의 형식 .-> W
@@ -48,13 +49,16 @@ root를 인증한다. 따라서 이 root는 “한 연속 branch를 이름 붙�
 **기존 사실**이다. fixed boundary 하나에서의 3차원 constrained shooting regularity는,
 바로 \(W(q_L,q_R;T)\)가 경계 근방에서 존재한다는 뜻은 아니다.
 
-다음 질문 연결은 fixed \(T\)에서 양끝 configuration을 바꾸어도 full Euler–Lagrange
-해가 유일하게 계속되는지, on-shell Dirichlet action이 \(W\)를 이루는지다. 여기에는
-fixed-\(T\) \(2\times2\) endpoint regularity, action/momentum variation, no-conjugate-point
-control이 필요하다. 그 뒤에만 lapse stationary branch를 통해 constrained principal
-function \(S_C\), endpoint Hamilton–Jacobi constraint, interface momentum matching을 물을
-수 있다. 두 구간을 붙이는 것은 “같은 궤적을 두 번 그리기”가 아니라, interface의
-configuration·momentum·lapse 정보를 어떤 quotient에서 extremize하는지 정하는 일이다.
+후속 [principal-branch 구성](../../cpt_temporal_folded_susy/STAROBINSKY_PRINCIPAL_BRANCH.md)은
+경계 근방의 constrained BVP를 직접 풀어 국소 \(S_C\)를 정의했다. 선언한 근방 안에서
+composition과 비영 internal-vertex characteristic을 확인하고, continuum-selected lapse에서
+frozen midpoint와의 값·일차 미분 차이를 감쌌다. 따라서 이제 이 국소 객체는 **기존 사실**로
+읽는다. 별도의 fixed-\(T\) principal-action family \(W\), 양자 amplitude, 전역 source와 동일시하지
+않는다. fixed-time regularity를 먼저 증명하는 경로만 가능한 것도 아니다.
+
+두 구간을 붙이는 핵심은 interface의 configuration과 canonical momentum을 함께 맞추는
+것이다. 양끝 configuration이 같은 Dirichlet 해는 그 조건만으로 periodic trace saddle이
+되지 않는다. 아래의 경계항 검사가 그 차이를 같은 Starobinsky 모델에서 드러낸다.
 
 그래도 \(S_C\)나 local gauge identity가 original cycle을 선택하지는 않는다. G1의
 [`open:gate1-original-cycle-signed-global-intersections`](../../ontology/cpt-temporal-folded-susy/graph.json)는
@@ -74,15 +78,16 @@ closure, continuum/UV, normalized observable, likelihood가 있어야 관측으�
 ### A. 한 local 결과에서 더 큰 객체를 묻기
 
 1. certificate에서 정확히 무엇이 root로 인증되었는지 읽는다.
-2. \(W(q_L,q_R;T)\)를 정의하려면 무엇이 추가로 필요한지 묻는다.
-3. \(S_C\), composition, extended gauge identity가 각각 어떤 별도 interface인지 구별한다.
+2. 후속 \(S_C\)가 실제로 구성된 근방과 composition 가정을 원문에서 확인한다.
+3. fixed-time \(W\), 국소 \(S_C\), quantum kernel, extended gauge source를 구별한다.
 4. local saddle data와 G1 original-cycle selection을 분리한다.
 
 이 경로의 질문 signal은
 `intuition:continuum-root-to-boundary-action` 및
 `intuition:boundary-composition-and-gauge`다. 둘은
 `open:gate1-starobinsky-exact-gauge-preserving-element-source`를 향한 후보 lens이며,
-그 open problem의 해답이나 action의 존재 주장이 아니다.
+그 signal 자체가 action 존재의 증거는 아니다. 후속 구성의 증거는 링크된 원래 보고서와
+raw result에 있다.
 
 ### B. 반례에서 남는 대안을 정확히 고르기
 
@@ -96,6 +101,20 @@ closure, continuum/UV, normalized observable, likelihood가 있어야 관측으�
 이 경로의 signal `intuition:midpoint-counterexample-to-source-alternatives`는 “어떤
 후보가 배제됐고 무엇은 아직 질문으로 남는가?”를 묻는다. 반례를 perfect action이나
 continuum limit 전체의 universal no-go로 바꾸지 않는다.
+
+같은 방식으로 두 가지 후속 경계를 읽는다.
+
+- [Morse fiber 검사](../../cpt_temporal_folded_susy/STAROBINSKY_MORSE_FIBER_POSITIVITY.md)는
+  선언한 양자화의 전체 scalar fiber가 양수라는 전제를 배제한다. 다른 상태 구성이나
+  Wheeler–DeWitt 해의 존재 전체를 배제하지 않는다.
+- [실수 compact closure 검사](../../docs/research/ICE_STAROBINSKY_REAL_COMPACT_CLOSURE_OBSTRUCTION_2026-09-06.md)는
+  매끈한 실수 periodic/regular-cap completion에서 scalar 경계항을 0으로 둘 수 있는지를
+  묻는다. 현재 비자명한 Dirichlet 해는 이 경계항을 버려서 닫을 수 없다. 복소 saddle이나
+  명시적 seam 작용은 별도 입력이며 이 반증으로 판정되지 않는다.
+
+여기서 직관은 **끝점 값의 일치 → 운동량의 일치 → quantum gluing** 사이의 차이에 있다.
+첫 조건을 확인했다고 두 번째 조건을 생략하거나, 두 번째 조건을 확인했다고 양자 measure를
+얻었다고 읽지 않는다. 이 연결은 새 source family의 실행 지시가 아니다.
 
 ### C. amplitude, state, full parent를 한 줄로 섞지 않기
 
@@ -126,7 +145,7 @@ lane을 Starobinsky 또는 전체 TOE의 parent 증거로 바꾸지 않는다.
 
 | Signal | 읽을 연결 | canonical status를 바꾸지 않는 이유 |
 | --- | --- | --- |
-| `intuition:continuum-root-to-boundary-action` | one-root certificate와 boundary action germ의 차이 | local root는 boundary neighborhood/action 데이터를 포함하지 않음 |
+| `intuition:continuum-root-to-boundary-action` | one-root certificate와 후속 boundary action germ의 차이 | 원래 root certificate만으로 후속 구성의 데이터를 대신할 수 없음 |
 | `intuition:boundary-composition-and-gauge` | interface composition, lapse, gauge quotient | fixed-time action, constrained action, full gauge는 다른 객체 |
 | `intuition:midpoint-counterexample-to-source-alternatives` | 두 historical counterexample의 정확한 exclusion scope | scoped failure는 universal no-go가 아님 |
 | `intuition:global-selection-to-uniform-amplitude` | G1 cycle selection에서 G2 uniform amplitude로 넘길 정보 | local saddle와 global coefficient는 별도 |
