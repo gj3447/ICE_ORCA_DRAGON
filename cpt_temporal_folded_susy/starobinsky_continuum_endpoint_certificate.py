@@ -263,7 +263,15 @@ def certify(raw, inputs):
         "certificate": {
             "shooting_order": ["u_minus", "v_minus", "T"],
             "residual_order": ["a_endpoint-a_boundary", "phi_endpoint-phi_boundary", "C_initial"],
-            "Y": array_records(Y), "F_at_centre": array_records(F), "DF_over_Y": array_records(J),
+            "declared_box_exact_rational": [
+                R(c-r, c+r).record() for c, r in zip(centre_q, radius_q)],
+            "constraint_gradient_arb_outer_enclosure": array_records(Y),
+            "enclosure_scope": (
+                "The Krawczyk domain is the exact declared box. Only the constraint-gradient "
+                "row uses its displayed Arb outer enclosure; the CAPD flow derivative "
+                "encloses derivatives over the exact declared box."),
+            "F_at_centre": array_records(F),
+            "DF_enclosure_over_declared_box": array_records(J),
             "B_exact_binary64_hex": [[float(x).hex() for x in row] for row in B_float],
             "K_arb": array_records(K), "strict_inclusion_arb": strict_ball,
             "K_independent_exact_rational": [x.record() for x in rk],
