@@ -41,6 +41,11 @@
     "rdf-validate-shacl": "0.6.5",
     "zod": "4.5.4"
   },
+  "overrides": {
+    "@effect/cli": {
+      "toml": "4.2.0"
+    }
+  },
   "devDependencies": {
     "@effect/vitest": "0.30.0",
     "@modelcontextprotocol/client": "2.0.0",
