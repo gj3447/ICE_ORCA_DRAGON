@@ -1,6 +1,6 @@
 import Mathlib.Analysis.SpecialFunctions.ExpDeriv
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Real.Sqrt
+import Mathlib.Analysis.Real.Sqrt
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
@@ -72,13 +72,15 @@ theorem alpha_momentumReflection (z : Phase) (v : Tangent) :
     alpha (momentumReflection z) (dMomentumReflection v) = -alpha z v := by
   cases z
   cases v
-  simp [alpha, momentumReflection, dMomentumReflection] <;> ring
+  simp [alpha, momentumReflection, dMomentumReflection]
+  ring
 
 theorem omega_momentumReflection (v w : Tangent) :
     omega (dMomentumReflection v) (dMomentumReflection w) = -omega v w := by
   cases v
   cases w
-  simp [omega, dMomentumReflection] <;> ring
+  simp [omega, dMomentumReflection]
+  ring
 
 /-- The plus primitive vanishes on the graph of momentum reflection. -/
 theorem sum_seam_zero (z : Phase) (v : Tangent) :
@@ -108,7 +110,8 @@ theorem sumPrimitive_forall_iff (z₁ z₂ : Phase) :
     · simp [sumPrimitive, alpha] at hpphi
       linarith
   · rintro ⟨hpa, hpphi⟩ v
-    simp [sumPrimitive, alpha, hpa, hpphi] <;> ring
+    simp [sumPrimitive, alpha, hpa, hpphi]
+    ring
 
 /--
 The minus primitive vanishes in every configuration tangent direction exactly
@@ -127,7 +130,7 @@ theorem differencePrimitive_forall_iff (z₁ z₂ : Phase) :
     · simp [differencePrimitive, alpha] at hpphi
       linarith
   · rintro ⟨hpa, hpphi⟩ v
-    simp [differencePrimitive, alpha, hpa, hpphi] <;> ring
+    simp [differencePrimitive, alpha, hpa, hpphi]
 
 /-- The physical real chart used by the Starobinsky coordinate convention. -/
 def InPhysicalChart (z : Phase) : Prop := 0 < z.a
@@ -171,7 +174,7 @@ noncomputable def starobinskyHL (z : Phase) : ℝ :=
 /-- Momentum reflection preserves the Lorentzian Hamiltonian on the physical chart. -/
 theorem starobinskyHL_momentumReflection (z : Phase) (_hz : InPhysicalChart z) :
     starobinskyHL (momentumReflection z) = starobinskyHL z := by
-  simp [starobinskyHL, momentumReflection] <;> ring
+  simp [starobinskyHL, momentumReflection]
 
 /--
 The Hamiltonian equality is algebraic in Lean's total real division.  This
