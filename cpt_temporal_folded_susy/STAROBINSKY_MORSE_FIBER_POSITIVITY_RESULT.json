@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-06T14:05:28.253511+00:00",
+  "question": "Does the declared same-Starobinsky LB scalar fiber admit the positive-D reference-scale premise anywhere at a>0?",
+  "scope": "SCOPED_QUANTUM_OPERATOR_DISCRIMINATOR; SUPPORTING, no original G1 source class",
+  "non_claim": "No full WDW spectrum/self-adjoint extension, physical instability, universal Hilbert-space no-go, BFV measure/cycle, choice invariance, TOE or empirical discovery.",
+  "dominant_failure_class": "spectrum",
+  "controls": "Exact LB/Morse algebra; independent compact negative-form witness; ground normalizability and spectral thresholds.",
+  "provenance": {
+    "source_commit": "02085d3b19963b9ce51779227156acdedda1d6ba",
+    "runner_sha256": "f8a3f5bcedcd4ab139636a09ce3b6c5c61b1f64188045edc16a1f35edf6907f3",
+    "uv_lock_sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+    "classical_source_path": "cpt_temporal_folded_susy/STAROBINSKY_POLYNOMIAL_BFV_CHART.md",
+    "classical_source_sha256": "c40c63bd2e3f6a3495133c4668ebdd421f90a85edca3cfeda901d56b32bd745d",
+    "entry_command": "./ice run starobinsky_morse_fiber_positivity",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-7.0.14-5-pve-x86_64-with-glibc2.41",
+    "packages": {
+      "sympy": "1.14.0",
+      "python-flint": "0.9.0"
+    }
+  },
+  "primary_sources": [
+    "https://doi.org/10.1103/PhysRev.34.57",
+    "https://arxiv.org/html/2102.05102",
+    "https://arxiv.org/abs/gr-qc/0306003"
+  ],
+  "verdict": "EXACT_SCOPED_NEGATIVE_SPECTRUM_IN_EVERY_POSITIVE_SCALE_FIBER",
+  "symbolic_checks": {
+    "laplace_beltrami_density": true,
+    "raw_LB_to_alpha_fiber_equation": true,
+    "morse_kinetic_coefficient": true,
+    "morse_potential_coefficient": true,
+    "laguerre_differential_equation_reduction": true,
+    "ground_eigenfunction": true,
+    "ground_factorization": true,
+    "essential_threshold_factorization": true,
+    "ground_energy_map": true,
+    "large_a_negative_energy_factorization": true,
+    "compact_packet_norm": true,
+    "compact_packet_kinetic": true,
+    "compact_packet_negative_bound": true,
+    "ground_normalization_gamma": true
+  },
+  "symbolic_residuals": {
+    "laplace_beltrami_density": "0",
+    "raw_LB_to_alpha_fiber_equation": "0",
+    "morse_kinetic_coefficient": "0",
+    "morse_potential_coefficient": "0",
+    "laguerre_differential_equation_reduction": "0",
+    "ground_eigenfunction": "0",
+    "ground_factorization": "0",
+    "essential_threshold_factorization": "0",
+    "ground_energy_map": "0",
+    "large_a_negative_energy_factorization": "0",
+    "compact_packet_norm": "0",
+    "compact_packet_kinetic": "0",
+    "compact_packet_negative_bound": "0",
+    "ground_normalization_gamma": "0"
+  },
+  "analytic_guards": {
+    "pi_greater_than_3": true,
+    "ground_exists_for_all_a_ge_2": true,
+    "one_minus_12_pi2_a_negative_for_all_a_ge_2": true,
+    "diagnostic_a_above_2": true,
+    "diagnostic_ground_strictly_negative": true,
+    "diagnostic_essential_threshold_positive": true
+  },
+  "operator": {
+    "ordering": "Laplace-Beltrami on G=diag(-6a,a^3)",
+    "hbar": "1",
+    "fiber_space": "L2(R,dphi), fixed a>0; unique semibounded closure of C_c^infinity",
+    "D_a": "-6 d_phi^2 + 36*pi^4*a^6*(1-exp(-sqrt(2/3)*phi))^2 - 144*pi^4*a^4",
+    "x": "sqrt(2/3)*phi",
+    "lambda": "3*pi^2*a^3",
+    "equation_boundary": "Multiplying the raw WDW equation by 24*pi^2*a^3 is not a RAQ/domain equivalence theorem."
+  },
+  "spectrum": {
+    "essential": "[36*pi^4*a^4*(a^2-4), infinity)",
+    "discrete": "E_n=4*(lambda^2-(lambda-n-1/2)^2)-144*pi^4*a^4",
+    "index_domain": "n integer >=0, n < lambda-1/2, strictly",
+    "ground_wavefunction": "sqrt(beta/Gamma(2*lambda-1))*z^(lambda-1/2)*exp(-z/2), z=2*lambda*exp(-beta*phi), lambda>1/2"
+  },
+  "all_scale_proof": [
+    {
+      "domain": "0<a<2",
+      "gap": "144*pi^4*a^4-36*pi^4*a^6 > 0",
+      "witness": "sqrt(2/L)*sin(pi*(phi-1)/L) on [1,1+L], zero elsewhere; H1 form-domain state",
+      "L": "sqrt(12*pi^2/gap)",
+      "rayleigh_upper_bound": "-gap/2 < 0",
+      "reason": "On phi>=1, (1-exp(-beta*phi))^2 <= 1. This form witness needs no bound-state formula or finite spectral cutoff."
+    },
+    {
+      "domain": "a>=2",
+      "witness": "normalizable exact Morse ground state",
+      "energy": "12*pi^2*a^3*(1-12*pi^2*a)-1 < 0",
+      "reason": "lambda>=24*pi^2>1/2 and 1-12*pi^2*a<0."
+    }
+  ],
+  "boundary_cases": {
+    "a_zero": "excluded singular geometry, not an endpoint limit theorem",
+    "a_two": "essential threshold 0; ground energy strictly negative",
+    "n_equals_lambda_minus_half": "non-normalizable continuum threshold, excluded from bound-state count"
+  },
+  "diagnostic": {
+    "a_exact_decimal": "3.5668031935672753",
+    "lambda": {
+      "lower_exact": "128687889198306826765741198301302249709925503932922862203/95780971304118053647396689196894323976171195136475136",
+      "upper_exact": "1029503113586454614125929586410417997679404031463382897627/766247770432944429179173513575154591809369561091801088",
+      "display_only": "[1343.56425338081696 +/- 1.31e-15]"
+    },
+    "essential_threshold": {
+      "lower_exact": "3704317146038306182724385462642558051560813654103711155751/748288838313422294120286634350736906063837462003712",
+      "upper_exact": "3704317146038306182724385462642558051560813654103711155789/748288838313422294120286634350736906063837462003712",
+      "display_only": "[4950384.07146031149 +/- 3.08e-12]"
+    },
+    "ground_energy": {
+      "lower_exact": "-3389602197043445781851826697204099437461937871321945028283/1496577676626844588240573268701473812127674924007424",
+      "upper_exact": "-3389602197043445781851826697204099437461937871321945028267/1496577676626844588240573268701473812127674924007424",
+      "display_only": "[-2264902.28337717370 +/- 3.19e-12]"
+    },
+    "bound_state_count": {
+      "count": 1344,
+      "exclusive_upper_index": {
+        "lower_exact": "128639998712654767738917499956703802547937418335354624635/95780971304118053647396689196894323976171195136475136",
+        "upper_exact": "1029119989701238141911339999653630420383499346682836997083/766247770432944429179173513575154591809369561091801088",
+        "display_only": "[1343.06425338081696 +/- 1.31e-15]"
+      },
+      "strict_separation_from_adjacent_integers": true
+    },
+    "negative_bound_state_count": {
+      "count": 231,
+      "exclusive_upper_index": {
+        "lower_exact": "5654082820833566000688759743851988255098065248066330459665/24519928653854221733733552434404946937899825954937634816",
+        "upper_exact": "5654082820833566000688759743851988255098065248066330459903/24519928653854221733733552434404946937899825954937634816",
+        "display_only": "[230.591324332618558 +/- 1.22e-16]"
+      },
+      "strict_separation_from_adjacent_integers": true
+    },
+    "scope": "A scalar-fiber diagnostic at the old boundary scale; not a WDW solution or the full constraint spectrum."
+  },
+  "logical_output": "No a>0 makes this full scalar fiber nonnegative; no positive self-adjoint square root with square D_a on that full fiber.",
+  "remaining_choices": "Other clock/order/domain/spectral restrictions and Mostafazadeh's positive replacement operator remain possible; no state preparation or source cycle has been selected.",
+  "elapsed_seconds": 0.6798145729117095
+}

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-06T11:50:04.678Z",
+  "updated_at_utc": "2026-09-06T14:10:01Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -16375,6 +16375,99 @@
       "citation": "B. Dittrich, From the discrete to the continuous: Towards a cylindrically consistent dynamics",
       "uri": "https://arxiv.org/abs/1205.6127v1",
       "version": "arXiv:1205.6127v1"
+    },
+    {
+      "id": "concept:starobinsky-lb-morse-fiber-positivity-discriminator",
+      "type": "concept",
+      "title": "Starobinsky LB Morse-fiber positivity discriminator",
+      "summary": "A fixed-scale scalar-fiber test of whether the declared Laplace--Beltrami Starobinsky Wheeler--DeWitt equation permits the whole-fiber nonnegative operator required by a direct alpha-clock square-root construction.",
+      "state": "COMPLETED_SCOPED_WHOLE_FIBER_POSITIVITY_NEGATIVE_RESULT"
+    },
+    {
+      "id": "scope:starobinsky-lb-hbar-one-whole-rphi-fiber",
+      "type": "scope",
+      "title": "Declared hbar=1 LB whole scalar-fiber scope",
+      "summary": "The raw Lorentzian homogeneous Starobinsky constraint with Laplace--Beltrami ordering on G=diag(-6a,a^3), hbar=1, fixed a>0 and the full scalar Hilbert space L2(R,dphi).",
+      "state": "DECLARED_SCOPED_OPERATOR_DOMAIN",
+      "includes": [
+        "the equation-level positive multiplier 24 pi^2 a^3 and alpha=log(a) rewrite",
+        "the semibounded fixed-a scalar Morse fiber D_a on L2(R,dphi)",
+        "the direct whole-fiber positive square-root premise"
+      ],
+      "excludes": [
+        "a self-adjoint realization or spectrum of the full alpha-dependent two-variable WDW operator",
+        "quantum equivalence under constraint rescaling, factor-ordering or clock independence",
+        "spectral restrictions, alternative positive replacements, RAQ/group averaging, BFV measure or source cycle",
+        "physical instability, Gate-1 closure, physics or TOE claims"
+      ]
+    },
+    {
+      "id": "claim:STAROBINSKY_LB_WHOLE_FIBER_HAS_NONNEGATIVE_D_AT_SOME_POSITIVE_SCALE",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_LB_WHOLE_FIBER_HAS_NONNEGATIVE_D_AT_SOME_POSITIVE_SCALE",
+      "title": "Some positive scale has a nonnegative declared LB whole scalar fiber",
+      "statement": "For the declared hbar=1 Laplace--Beltrami ordering, there exists a>0 for which the full fixed-a scalar fiber D_a is nonnegative and hence admits the direct real positive self-adjoint square-root premise.",
+      "summary": "Contradicted in the declared whole-fiber scope: a compact negative-form witness covers 0<a<2 and a normalizable negative Morse ground state covers a>=2.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_SCOPED_ORDERING_AND_WHOLE_FIBER_ONLY"
+    },
+    {
+      "id": "evidence:starobinsky-morse-fiber-positivity-result",
+      "type": "evidence",
+      "title": "Starobinsky LB Morse-fiber positivity evidence",
+      "summary": "One clean unnumbered run records 14 exact symbolic identities and six analytic/Arb guards. The raw result is the complete ledger for the LB reduction, Morse/Laguerre form, compact negative witness, ground-state normalization and old-boundary diagnostic.",
+      "state": "VALID_RUN_SCOPED_EVERY_POSITIVE_SCALE_FIBER_HAS_NEGATIVE_SPECTRUM",
+      "observed_status": "EXACT_SCOPED_NEGATIVE_SPECTRUM_IN_EVERY_POSITIVE_SCALE_FIBER",
+      "check_ids": [
+        "symbolic_checks.raw_LB_to_alpha_fiber_equation",
+        "symbolic_checks.laguerre_differential_equation_reduction",
+        "symbolic_checks.compact_packet_negative_bound",
+        "symbolic_checks.large_a_negative_energy_factorization",
+        "symbolic_checks.ground_normalization_gamma",
+        "analytic_guards.ground_exists_for_all_a_ge_2",
+        "analytic_guards.one_minus_12_pi2_a_negative_for_all_a_ge_2"
+      ]
+    },
+    {
+      "id": "artifact:starobinsky-morse-fiber-positivity-runner",
+      "type": "artifact",
+      "title": "Starobinsky Morse-fiber positivity runner",
+      "summary": "Bounded symbolic and Arb runner for the declared LB fixed-fiber positivity discriminator.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_morse_fiber_positivity.py",
+      "sha256": "f8a3f5bcedcd4ab139636a09ce3b6c5c61b1f64188045edc16a1f35edf6907f3",
+      "introduced_in_commit": "02085d3b19963b9ce51779227156acdedda1d6ba"
+    },
+    {
+      "id": "artifact:starobinsky-morse-fiber-positivity-result",
+      "type": "artifact",
+      "title": "Starobinsky Morse-fiber positivity raw result",
+      "summary": "Raw-result SSOT: exact scoped negative-spectrum verdict, 14 symbolic checks and six analytic/Arb guards.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_MORSE_FIBER_POSITIVITY_RESULT.json",
+      "sha256": "3ab023ee0ac955d24c49086788697d07b01d9e6d39b3fa66592a95eaddd1caaf"
+    },
+    {
+      "id": "source:mcguigan-2023-starobinsky-morse",
+      "type": "source",
+      "title": "Quantum Cosmology and Black Hole Interiors in Nonsupersymmetric String Theory and Canonical Gravity",
+      "summary": "CITES-only prior Starobinsky--Morse/SUSYQM connection. It does not establish this declared LB ordering, all-scale whole-fiber positivity result, source domain, or physical interpretation.",
+      "state": "PRIMARY_CITES_ONLY",
+      "citation": "M. McGuigan, Quantum Cosmology and Black Hole Interiors in Nonsupersymmetric String Theory and Canonical Gravity",
+      "uri": "https://arxiv.org/abs/2309.15021",
+      "version": "arXiv:2309.15021"
+    },
+    {
+      "id": "artifact:starobinsky-morse-fiber-positivity-report",
+      "type": "artifact",
+      "title": "Starobinsky Morse-fiber positivity report",
+      "summary": "Human-readable declared-ordering reduction, all-positive-scale negative-spectrum proof, limits and actual run provenance.",
+      "state": "TRACKED_VALID_RUN_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_MORSE_FIBER_POSITIVITY.md",
+      "sha256": "b9717c5b5de28c310a34efbd5c38995457ea7dae6dcc463f8ec0c0e8b1d2a69e"
     }
   ],
   "edges": [
@@ -36787,7 +36880,18 @@
     {"id":"edge:3868","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"USES_TOOLING","to":"artifact:gate1-starobinsky-continuum-endpoint-certificate-helper-source","note":"The runner invokes a pinned external binary built from this tracked helper source; matching source and binary provenance are recorded in the raw result."},
     {"id":"edge:3869","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"RECORDED_IN","to":"artifact:gate1-starobinsky-continuum-endpoint-certificate-result","note":"The raw result is the complete machine-readable source of truth for the exact rational bounds, interval enclosures and execution provenance."},
     {"id":"edge:3870","from":"evidence:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"DERIVED_FROM","to":"evidence:p24-action-benchmark-and-saddle","note":"Reuses only the named Starobinsky real-branch/boundary seed as a supporting convention; it does not promote P24 into a BFV source, original cycle or global intersection result."},
-    {"id":"edge:3871","from":"concept:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"MOTIVATES","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"A named local continuum branch seed is now available for the still-open constrained-principal-function or controlled deformation discriminator; no composition law, gauge-null mode or source has been proved."}
+    {"id":"edge:3871","from":"concept:gate1-starobinsky-continuum-constrained-endpoint-certificate","relation":"MOTIVATES","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"A named local continuum branch seed is now available for the still-open constrained-principal-function or controlled deformation discriminator; no composition law, gauge-null mode or source has been proved."},
+    {"id":"edge:3872","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"One declared-ordering whole-fiber discriminator only; no source-cycle, Gate-1, physical or global promotion follows."},
+    {"id":"edge:3873","from":"scope:starobinsky-lb-hbar-one-whole-rphi-fiber","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy"},
+    {"id":"edge:3874","from":"claim:STAROBINSKY_LB_WHOLE_FIBER_HAS_NONNEGATIVE_D_AT_SOME_POSITIVE_SCALE","relation":"VALID_WITHIN","to":"scope:starobinsky-lb-hbar-one-whole-rphi-fiber"},
+    {"id":"edge:3875","from":"claim:STAROBINSKY_LB_WHOLE_FIBER_HAS_NONNEGATIVE_D_AT_SOME_POSITIVE_SCALE","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-morse-fiber-positivity-result","polarity":"CONTRADICTS","note":"The two analytic scale ranges cover every a>0 only for the declared LB ordering and full scalar fiber."},
+    {"id":"edge:3876","from":"evidence:starobinsky-morse-fiber-positivity-result","relation":"PART_OF","to":"concept:starobinsky-lb-morse-fiber-positivity-discriminator"},
+    {"id":"edge:3877","from":"evidence:starobinsky-morse-fiber-positivity-result","relation":"DEFINED_IN","to":"artifact:starobinsky-morse-fiber-positivity-runner","note":"The committed runner checks the symbolic LB/Morse identities and bounded diagnostic guards."},
+    {"id":"edge:3878","from":"evidence:starobinsky-morse-fiber-positivity-result","relation":"RECORDED_IN","to":"artifact:starobinsky-morse-fiber-positivity-result","note":"The raw result is the complete machine-readable source of truth for the check ledger and exact/Arb records."},
+    {"id":"edge:3879","from":"claim:STAROBINSKY_LB_WHOLE_FIBER_HAS_NONNEGATIVE_D_AT_SOME_POSITIVE_SCALE","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-morse-fiber-positivity-report"},
+    {"id":"edge:3880","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"CITES","to":"source:mcguigan-2023-starobinsky-morse","note":"Prior Starobinsky--Morse connection only; the all-scale declared-ordering discriminator remains repository-local."},
+    {"id":"edge:3881","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"CITES","to":"source:mostafazadeh-2004-kg-quantum-cosmology","note":"Frames the positive-D square-root premise and its alternatives only; it does not select this ordering, domain, source or physical state."},
+    {"id":"edge:3882","from":"concept:starobinsky-lb-morse-fiber-positivity-discriminator","relation":"CONTRASTS_WITH","to":"scope:p23-supplied-bridge-compact-density","note":"The supplied compact positive operator of P23 remains a distinct input; this result rules out only its direct replacement by the declared whole-fiber D_a."}
   ],
   "kg_bridges": [
     {

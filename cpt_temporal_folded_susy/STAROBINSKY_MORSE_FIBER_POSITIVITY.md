@@ -192,6 +192,9 @@ expectation is \(6\pi^2/L^2=\Delta(a)/2\), and hence
 
 This is enough to exclude nonnegativity.  Equivalently, (11) identifies the
 negative essential threshold.
+The expectation in (13) denotes the closed quadratic form: the zero-extended
+sine packet is an admissible form-domain vector, without asserting that its
+piecewise second derivative belongs to the operator domain.
 
 ### 3.2 \(a\ge2\): an exact normalizable ground state
 
@@ -263,6 +266,8 @@ In particular, this note does **not** establish any of the following:
   densitizations, or boundary domains;
 - a rigging map, positive trace-class state, BFV boundary condition, lapse or
   field contour, relative cycle, or signed global intersection;
+- a tachyon, ghost, observed negative energy, or cosmological instability:
+  the eigenvalues here belong to an auxiliary fixed-scale constraint fiber;
 - a refutation of Mostafazadeh's general Hilbert-space framework or of every
   positive-\(D'\) construction.
 
@@ -270,12 +275,54 @@ It therefore remains supporting evidence for the open same-model source and
 state questions, rather than a physics discovery or a change to the Gate-1
 global-cycle status.
 
-## 5. Pending bounded-run record
+## 5. Actual bounded-run record
 
-The companion bounded runner is responsible for pinning its own input, source
-hash, environment, exact checks, and actual output.  Insert the actual result
-identifier, command, runner hash, result SHA-256, and check summary here only
-after that run has completed.
+The first run returned
+`EXACT_SCOPED_NEGATIVE_SPECTRUM_IN_EVERY_POSITIVE_SCALE_FIBER` and exited **0**.
+All **14 symbolic checks** and **6 interval inequality guards** passed, with
+no execution error. Runtime inside the runner was **0.6798145729 seconds**.
+The all-scale conclusion uses the two analytic witnesses in §3; it is not
+inferred from sampled scale values or from the number of passing checks.
+
+```bash
+./ice run starobinsky_morse_fiber_positivity
+```
+
+| Provenance | Recorded value |
+|---|---|
+| Source commit | `02085d3b19963b9ce51779227156acdedda1d6ba` |
+| Runner SHA-256 | `f8a3f5bcedcd4ab139636a09ce3b6c5c61b1f64188045edc16a1f35edf6907f3` |
+| Raw result SHA-256 | `3ab023ee0ac955d24c49086788697d07b01d9e6d39b3fa66592a95eaddd1caaf` |
+| Python / packages | Python 3.13.5; SymPy 1.14.0; python-flint 0.9.0 |
+| Dominant failure class | `spectrum` |
+
+The adjacent [raw result](STAROBINSKY_MORSE_FIBER_POSITIVITY_RESULT.json)
+is the single check ledger. The [runner](starobinsky_morse_fiber_positivity.py)
+records its source convention, exact identities, analytic witness domains,
+normalizability boundaries, environment and original command. Independent
+read-only reviews checked the hand derivation and code before execution and
+the actual output afterward; these are not experimental reproduction.
+
+As an illustrative diagnostic, use only the old declared boundary scale
+\(a_b=3.5668031935672753\). The strict Morse index bounds give **1,344 bound
+states**, of which **231 have negative fiber eigenvalues**. The corresponding
+raw enclosing displays are
+
+```text
+essential threshold: [ 4950384.07146031149 +/- 3.08e-12 ]
+ground eigenvalue:    [-2264902.28337717370 +/- 3.19e-12 ].
+```
+
+This illustrates why inspecting only the positive asymptotic plateau would
+miss negative states localized near the potential well. These are eigenvalues
+in the declared dimensionless operator normalization, not measured particle
+energies. Their finite count is not used to establish the theorem for all
+\(a>0\), and the eigenfunctions are not full Wheeler--DeWitt solutions.
+
+The only disposition is to retire the direct all-fiber positive-\(D_a\)
+premise in this ordering. The missing full source and the G1 global relative
+class stay open; no calculation or discovery promotion is automatically
+authorized by this result.
 
 ## References and limited roles
 
