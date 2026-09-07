@@ -1,0 +1,11 @@
+{
+  "schema": "ice-lean-proof-index/v1",
+  "source": "CptSewing/DualState.lean",
+  "namespace": "CptSewing.DualState",
+  "theorems": [
+    "rankOne_hermitian",
+    "rankOne_diag_positive_definite",
+    "rankOne_conj_covariant",
+    "rankOne_left_zero"
+  ]
+}
