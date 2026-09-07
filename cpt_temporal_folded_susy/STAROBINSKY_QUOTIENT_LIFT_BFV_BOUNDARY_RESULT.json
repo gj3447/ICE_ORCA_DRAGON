@@ -1,0 +1,917 @@
+{
+  "schema": "ice-starobinsky-quotient-lift-bfv-boundary/v1",
+  "status": "SCOPED_QUOTIENT_LIFT_ADJOINT_OBSTRUCTION_AND_CANONICAL_ENDPOINT",
+  "started_at_utc": "2026-09-07T09:03:25.117487+00:00",
+  "question": "Can a quotient-only lift on the actual compact-N carrier be a star observable, and does the declared canonical BFV charge preserve a fixed-a endpoint?",
+  "scope": "SUPPORTING_METHOD: actual finite quotient lifts and finite canonical boundary classification; G1 unchanged",
+  "non_claim": "No full physical observable algebra, selected positive metric, BFV/CPT sewing or G1 original cycle.",
+  "reproduction_command": "./ice run starobinsky_quotient_lift_bfv_boundary",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "modules": [
+    {
+      "source": "CptSewing/QuotientLift.lean",
+      "scope": "Abstract split quotient identities and same-carrier symmetric-injective adjoint obstruction; actual PDE construction remains analytic",
+      "expected_theorem_count": 8,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/QuotientLiftAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "91476feaef7041e47a3ad04d5c4dcec983a7bc001865659ecacc324277ae1d2a",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.quotientLift_action.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (A : Module.End ℂ E) (hRJ : R ∘ₗ J = LinearMap.id) :\n  R ∘ₗ CptSewing.QuotientLift.quotientLift R J A = A ∘ₗ R",
+            "endPos": {
+              "column": 6,
+              "line": 143
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 143
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.quotientLift_action' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 144
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 144
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.quotientLift_kills_right.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (A : Module.End ℂ E) (p : Module.End ℂ V)\n  (hp : R ∘ₗ p = 0) : CptSewing.QuotientLift.quotientLift R J A ∘ₗ p = 0",
+            "endPos": {
+              "column": 6,
+              "line": 145
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 145
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.quotientLift_kills_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 146
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 146
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.quotientLift_sandwich.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (A : Module.End ℂ E) (hRJ : R ∘ₗ J = LinearMap.id) :\n  (R ∘ₗ CptSewing.QuotientLift.quotientLift R J A) ∘ₗ J = A",
+            "endPos": {
+              "column": 6,
+              "line": 147
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 147
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.quotientLift_sandwich' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 148
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 148
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.quotientLift_ne_zero.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (A : Module.End ℂ E) (hRJ : R ∘ₗ J = LinearMap.id)\n  (hA : A ≠ 0) : CptSewing.QuotientLift.quotientLift R J A ≠ 0",
+            "endPos": {
+              "column": 6,
+              "line": 149
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 149
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.quotientLift_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 150
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 150
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.correction_killed_by_quotient.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V]\n  [Module ℂ V] [AddCommGroup E] [Module ℂ E] (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (A : Module.End ℂ E) (O : Module.End ℂ V)\n  (hRJ : R ∘ₗ J = LinearMap.id) (hRO : R ∘ₗ O = A ∘ₗ R) : R ∘ₗ (O - CptSewing.QuotientLift.quotientLift R J A) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 151
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 151
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.correction_killed_by_quotient' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 152
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 152
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.zero_of_injective_commutes_kills_right.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (p O : Module.End ℂ V) (hpInjective : Function.Injective ⇑p) (hOp : O ∘ₗ p = 0) (hComm : p ∘ₗ O = O ∘ₗ p) : O = 0",
+            "endPos": {
+              "column": 6,
+              "line": 153
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 153
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.zero_of_injective_commutes_kills_right' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 154
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 154
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.adjoint_zero_of_injective_symmetric_kills_right.{u_3} {W : Type u_3} [NormedAddCommGroup W]\n  [InnerProductSpace ℂ W] (p O Ostar : Module.End ℂ W) (hpInjective : Function.Injective ⇑p)\n  (hpSymmetric : ∀ (u v : W), inner ℂ (p u) v = inner ℂ u (p v))\n  (hAdjoint : ∀ (u v : W), inner ℂ (O u) v = inner ℂ u (Ostar v)) (hOp : O ∘ₗ p = 0) : Ostar = 0",
+            "endPos": {
+              "column": 6,
+              "line": 155
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 155
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.adjoint_zero_of_injective_symmetric_kills_right' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 156
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 156
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.QuotientLift.zero_of_injective_symmetric_adjoint_kills_right.{u_3} {W : Type u_3} [NormedAddCommGroup W]\n  [InnerProductSpace ℂ W] (p O Ostar : Module.End ℂ W) (hpInjective : Function.Injective ⇑p)\n  (hpSymmetric : ∀ (u v : W), inner ℂ (p u) v = inner ℂ u (p v))\n  (hAdjoint : ∀ (u v : W), inner ℂ (O u) v = inner ℂ u (Ostar v)) (hOp : O ∘ₗ p = 0) : O = 0",
+            "endPos": {
+              "column": 6,
+              "line": 157
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 157
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.QuotientLift.zero_of_injective_symmetric_adjoint_kills_right' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 158
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-aa06cp8v/QuotientLiftAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 158
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.QuotientLift.quotientLift_action": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.QuotientLift.quotientLift_kills_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.QuotientLift.quotientLift_sandwich": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.QuotientLift.quotientLift_ne_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.QuotientLift.correction_killed_by_quotient": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.QuotientLift.zero_of_injective_commutes_kills_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.QuotientLift.adjoint_zero_of_injective_symmetric_kills_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.QuotientLift.zero_of_injective_symmetric_adjoint_kills_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 8
+    },
+    {
+      "source": "CptSewing/CanonicalBoundary.lean",
+      "scope": "Finite real-polynomial impossibility for the normalized actual fixed-a/free-ghost equations; Hamiltonian-to-equation map is CAS/analytic",
+      "expected_theorem_count": 3,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/CanonicalBoundaryAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "511a293829f03a7f3a891268154d32e565750d70b5bb07c3b7cb4db00e9c78fd",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.CanonicalBoundary.potential_eq_two_thirds {p z : ℝ} (hH : p ^ 2 / 32 - 12 + 12 * (1 - z) ^ 2 = 0)\n  (hHa : -3 * p ^ 2 / 64 - 6 + 18 * (1 - z) ^ 2 = 0) : (1 - z) ^ 2 = 2 / 3",
+            "endPos": {
+              "column": 6,
+              "line": 57
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-ikkf6zd3/CanonicalBoundaryAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 57
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.CanonicalBoundary.potential_eq_two_thirds' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 58
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-ikkf6zd3/CanonicalBoundaryAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 58
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.CanonicalBoundary.momentum_sq_eq_128 {p z : ℝ} (hH : p ^ 2 / 32 - 12 + 12 * (1 - z) ^ 2 = 0)\n  (hHa : -3 * p ^ 2 / 64 - 6 + 18 * (1 - z) ^ 2 = 0) : p ^ 2 = 128",
+            "endPos": {
+              "column": 6,
+              "line": 59
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-ikkf6zd3/CanonicalBoundaryAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 59
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.CanonicalBoundary.momentum_sq_eq_128' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 60
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-ikkf6zd3/CanonicalBoundaryAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 60
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.CanonicalBoundary.no_real_free_ghost_full_tangency {p z : ℝ} (hH : p ^ 2 / 32 - 12 + 12 * (1 - z) ^ 2 = 0)\n  (hHa : -3 * p ^ 2 / 64 - 6 + 18 * (1 - z) ^ 2 = 0) (hz : 0 < z) (hnext : p * z * (1 - z) = 0) : False",
+            "endPos": {
+              "column": 6,
+              "line": 61
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-ikkf6zd3/CanonicalBoundaryAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 61
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.CanonicalBoundary.no_real_free_ghost_full_tangency' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 62
+            },
+            "fileName": "/var/tmp/orca/ice-quotient-boundary-ikkf6zd3/CanonicalBoundaryAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 62
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.CanonicalBoundary.potential_eq_two_thirds": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.CanonicalBoundary.momentum_sq_eq_128": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.CanonicalBoundary.no_real_free_ghost_full_tangency": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 3
+    }
+  ],
+  "provenance": {
+    "source_commit": "64ed777d472ed1efbbb3b8b2119a40ec190bcef9",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_quotient_lift_bfv_boundary.py": {
+        "sha256": "4ee1a08fc310a10db491173c697dee60a33f5b4690bb8a74bda1d82cc8fd5342",
+        "bytes": 13713
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md": {
+        "sha256": "b3674f79572814940239297982fd44fc391c15439b32c1fb063c40a22a5e3355",
+        "bytes": 12466
+      },
+      "formal/cpt_sewing/quotient-lift-bfv-boundary-proof-index.json": {
+        "sha256": "36d709da4170a816b65aef6920258bba3056bbc1a015d9179558d0426ab46302",
+        "bytes": 1104
+      },
+      "formal/cpt_sewing/CptSewing/QuotientLift.lean": {
+        "sha256": "24b52ca16085ffa66bc05285142e37721c38575ea1bb4dc77814da8eb4063c29",
+        "bytes": 5872
+      },
+      "formal/cpt_sewing/CptSewing/CanonicalBoundary.lean": {
+        "sha256": "c45c1a15484baaa39a10fa26763f75a8810eb4bfc69ccaaa0278f73cb121b45a",
+        "bytes": 2077
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SEWING_SOURCE_REVIEW.md": {
+        "sha256": "2699facacfd7ef54c469084338745d0d187ebc3426ec616cea2bd2f9dfacd434",
+        "bytes": 17664
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_POLYNOMIAL_BFV_CHART.md": {
+        "sha256": "c40c63bd2e3f6a3495133c4668ebdd421f90a85edca3cfeda901d56b32bd745d",
+        "bytes": 8730
+      },
+      "cpt_temporal_folded_susy/gate1_v0_improved_static_bfv_source.py": {
+        "sha256": "62f52d079c62b9b84ccea6562e44b952067cd6c8e10f7d1a9673cc124b949ccf",
+        "bytes": 50420
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md": {
+        "sha256": "4c5ff22a482d2bbcebad04e7de2f30a612777cb38136386a330189487550249c",
+        "bytes": 9385
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_RESULT.json": {
+        "sha256": "9cc9d9533d105de6bd2be58e93a789581846d0d67d4efc80166825936af84f2d",
+        "bytes": 14172
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md": {
+        "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6",
+        "bytes": 8392
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      },
+      "docs/research/ICE_BFV_CPT_SEAM_WARD_SOURCE_PROPOSAL_2026-09-07.md": {
+        "sha256": "ccfcbd3a71f439716ffb7cc97ddc4ccdeda9f186225eeb6d6f499ead64be0f0e",
+        "bytes": 12977
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ]
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "even_q_p_sign",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "even_p_q_sign",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "odd_c_bar_rho_sign",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "odd_bar_rho_c_sign",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "odd_rho_bar_c_sign",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "odd_bar_c_rho_sign",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_a",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_phi",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_N",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_p_a",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_p_phi",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_Pi",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_c",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_rho",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_bar_rho",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Q_bar_c",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "canonical_master_bracket",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "constraint_elimination_H",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "constraint_elimination_Ha",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_constraint_body_witness",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_fixed_a_tangency_witness",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_free_ghost_defect_coefficient",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_free_ghost_defect_nonzero",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "defect": [
+          {
+            "monomial": "c_g",
+            "coefficient": "-24*pi**2"
+          }
+        ]
+      },
+      {
+        "id": "exceptional_root_next_tangency_coefficient",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "normalized_actual_H",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "normalized_actual_Ha",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "normalized_next_tangency",
+        "group": "canonical_sign_and_free_ghost",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_endpoint_charge",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_endpoint_Q_a",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_endpoint_Q_phi",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_endpoint_Q_N",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_endpoint_Q_c",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_endpoint_Q_rho",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_free_bar_rho_direction",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_fixed_free_bar_c_direction",
+        "group": "ghost_fixed_endpoint",
+        "passed": true,
+        "residual": []
+      }
+    ],
+    "actual_classical_H": "3*pi**2*a**3*(1 - exp(-sqrt(6)*phi/3))**2/2 - 6*pi**2*a - p_a**2/(24*pi**2*a) + p_phi**2/(4*pi**2*a**3)",
+    "Q_convention": "QF={Omega,F}; {q,p}=+1; symmetric odd brackets +1",
+    "actual_Q_table": {
+      "a": [
+        {
+          "monomial": "c_g",
+          "coefficient": "p_a/(12*pi**2*a)"
+        }
+      ],
+      "phi": [
+        {
+          "monomial": "c_g",
+          "coefficient": "-p_phi/(2*pi**2*a**3)"
+        }
+      ],
+      "N": [
+        {
+          "monomial": "rho",
+          "coefficient": "-1"
+        }
+      ],
+      "p_a": [
+        {
+          "monomial": "c_g",
+          "coefficient": "9*pi**2*a**2*(1 - exp(sqrt(6)*phi/3))**2*exp(-2*sqrt(6)*phi/3)/2 - 6*pi**2 + p_a**2/(24*pi**2*a**2) - 3*p_phi**2/(4*pi**2*a**4)"
+        }
+      ],
+      "p_phi": [
+        {
+          "monomial": "c_g",
+          "coefficient": "sqrt(6)*pi**2*a**3*(exp(sqrt(6)*phi/3) - 1)*exp(-2*sqrt(6)*phi/3)"
+        }
+      ],
+      "Pi": [],
+      "c": [],
+      "rho": [],
+      "bar_rho": [
+        {
+          "monomial": "1",
+          "coefficient": "3*pi**2*a**3*(1 - exp(sqrt(6)*phi/3))**2*exp(-2*sqrt(6)*phi/3)/2 - 6*pi**2*a - p_a**2/(24*pi**2*a) + p_phi**2/(4*pi**2*a**3)"
+        }
+      ],
+      "bar_c": [
+        {
+          "monomial": "1",
+          "coefficient": "Pi"
+        }
+      ]
+    },
+    "analytic_proof": "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md",
+    "actual_finite_lift": "R_i=T_{s_i}, J from compact-bump Gram inverse, O_A=J A R exists on the original test carrier; PDE/bump existence is analytic, not numerically evaluated",
+    "adjoint_obstruction": "Nonzero right-killing O p_N=0 cannot have a same-carrier adjoint when p_N is symmetric and injective; split lifts fail this necessary observable condition",
+    "general_lift_boundary": "O=J A R+B, RB=0; nonzero compatible O requires B p_N !=0. No general lift or all-observable no-go is claimed",
+    "fixed_a_free_ghost": "Exact a=2, undeformed classical charge, real H=0 body, independent free c: no fully tangent locus, including the exceptional root",
+    "ghost_fixed_endpoint": "a,phi,N fixed and c=rho=0 gives a finite canonical Q-tangent Lagrangian with zero primitive/charge pullback; dimension/primitive proof analytic",
+    "remaining": "Full self-adjoint H+p_N realization, kernel-active star observable, selected positive metric, bulk-induced BFV/quantum state map, CPT/sewing and original joint cycle"
+  },
+  "theorem_count": 11,
+  "elapsed_seconds": 24.033045112155378
+}

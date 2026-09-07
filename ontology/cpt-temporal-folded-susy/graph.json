@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T08:32:28Z",
+  "updated_at_utc": "2026-09-07T09:07:10Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1727,7 +1727,7 @@
     {
       "id": "reading-path:starobinsky-seam-ward-regulator-removal",
       "title": "Gaussian 접합: 경계상태에 작용시킨 잔여항과 규제 제거",
-      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다.",
+      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다. The later quotient-lift review distinguishes an actual finite quotient lift from a same-carrier star observable and contrasts a failed free-ghost fixed-a ansatz with one ghost-fixed finite canonical endpoint; neither supplies a bulk/quantum BFV map.",
       "nodes": [
         "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
         "scope:starobinsky-gaussian-seam-ward-flat-core",
@@ -1766,6 +1766,13 @@
         "claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED",
         "evidence:starobinsky-observable-sewing-source-review",
         "artifact:starobinsky-observable-sewing-source-review",
+        "scope:starobinsky-quotient-lift-and-finite-canonical-boundary",
+        "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+        "concept:starobinsky-finite-canonical-endpoint-versus-quantum-cauchy-data",
+        "claim:STAROBINSKY_FIXED_A2_FREE_GHOST_CLASSICAL_ANSATZ_HAS_NO_REAL_Q_INVARIANT_LOCUS",
+        "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+        "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+        "artifact:starobinsky-quotient-lift-bfv-boundary-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16697,7 +16704,7 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing transported through declared full-line compact-seed lifts. A scalar-phase domain comparison shows the compact-N carrier does not supply finite gauge-domain or extension-independent spectral-zero data, and label positivity/exchange leaves a smooth weight unselected. These scoped facts do not settle a physical carrier/product, identified BFV boundary data, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged.",
+      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing transported through declared full-line compact-seed lifts. A scalar-phase domain comparison shows the compact-N carrier does not supply finite gauge-domain or extension-independent spectral-zero data, and label positivity/exchange leaves a smooth weight unselected. These scoped facts do not settle a physical carrier/product, identified BFV boundary data, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged. The quotient-only lift now has an exact same-carrier adjoint-domain obstruction, while a separate finite ghost-fixed canonical endpoint is Q-tangent; a kernel-active observable, finite gauge-domain and bulk/quantum BFV boundary correspondence remain open.",
       "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_DUAL_FAMILY_EXISTS_PHYSICAL_CARRIER_PRODUCT_CPT_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
@@ -17420,7 +17427,149 @@
     "citation": "G. Bonneau, J. Faraut and G. Valent, Am. J. Phys. 69 (2001) 322–331",
     "uri": "https://arxiv.org/abs/quant-ph/0103153",
     "version": "arXiv:quant-ph/0103153"
-}
+},
+    {
+      "id": "scope:starobinsky-quotient-lift-and-finite-canonical-boundary",
+      "type": "scope",
+      "title": "Starobinsky quotient-lift and finite canonical-boundary scope",
+      "summary": "The repaired compact-N test carrier with finite Cauchy-dual quotient lifts, and the separately declared finite classical Starobinsky BFV chart at a fixed endpoint.",
+      "state": "DECLARED_SUPPORTING_QUOTIENT_DOMAIN_AND_FINITE_BFV_BOUNDARY_SCOPE",
+      "includes": [
+        "Finite compact-seed Cauchy duals, an exact interior-bump Gram section and L2-bounded finite-rank quotient lifts on the declared test carrier",
+        "The declared finite canonical BFV charge, one fixed-a=2 free-ghost tangency ansatz and one ghost-fixed endpoint candidate"
+      ],
+      "excludes": [
+        "A self-adjoint H+p_N realization, a kernel-active observable lift, selected positive physical product, bulk-induced BFV boundary map, quantum CPT/sewing, source cycle, G1 closure or physical/TOE claim"
+      ]
+    },
+    {
+      "id": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "title": "A nonzero quotient-only lift fails the same-carrier star condition",
+      "summary": "The declared compact-seed dual quotient admits exact L2-bounded finite-rank lifts, but any nonzero lift that kills p_N on the right cannot have a carrier-preserving adjoint when p_N is symmetric and injective.",
+      "statement": "On the declared repaired compact-N carrier, nonzero finite-rank quotient-only lifts O_A=JAR exist, but O_A p_N=0 forces failure of strong p_N commutation and of any same-carrier adjoint condition under the stated symmetric-injective p_N hypotheses.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_QUOTIENT_LIFT_AND_ADJOINT_DOMAIN_OBSTRUCTION"
+    },
+    {
+      "id": "claim:STAROBINSKY_FIXED_A2_FREE_GHOST_CLASSICAL_ANSATZ_HAS_NO_REAL_Q_INVARIANT_LOCUS",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_FIXED_A2_FREE_GHOST_CLASSICAL_ANSATZ_HAS_NO_REAL_Q_INVARIANT_LOCUS",
+      "title": "The fixed-a=2 free-ghost classical ansatz has no real Q-invariant locus",
+      "summary": "For the declared undeformed finite canonical charge, the exact real constrained fixed-a=2 body with independent free c fails tangency, including its exceptional algebraic candidate.",
+      "statement": "Within the declared real a=2, H_L=0, independent-free-c classical boundary ansatz, no locus is tangent to the undeformed canonical BFV differential Q.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_FIXED_A_FREE_GHOST_TANGENCY_OBSTRUCTION"
+    },
+    {
+      "id": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "title": "A ghost-fixed finite canonical endpoint is Q-tangent and Lagrangian",
+      "summary": "Fixing (a,phi,N,c,rho) and leaving their conjugate momenta/antighosts free gives a finite canonical Lagrangian endpoint with zero pulled-back primitive and charge, tangent to the declared Q.",
+      "statement": "In the declared finite canonical BFV chart, L_q0={a=a0, phi=phi0, N=N0, c=rho=0} is a Q-tangent graded Lagrangian endpoint with vanishing pullbacks of alpha and Omega.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT"
+    },
+    {
+      "id": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "type": "evidence",
+      "title": "Starobinsky quotient-lift/BFV-boundary evidence",
+      "summary": "One accepted run combines 35 exact controls and 11 Lean theorems with the pinned analytic Gram/domain and finite-canonical boundary derivation. The raw result is the sole full check ledger.",
+      "state": "VALID_RUN_ANALYTIC_DERIVATION_AND_FINITE_LEAN_CONTROLS",
+      "observed_status": "SCOPED_QUOTIENT_LIFT_ADJOINT_OBSTRUCTION_AND_CANONICAL_ENDPOINT",
+      "check_ids": [
+        "symbolic.checks.actual_free_ghost_defect_nonzero",
+        "symbolic.checks.exceptional_root_next_tangency_coefficient",
+        "symbolic.checks.ghost_fixed_endpoint_charge",
+        "modules[0].theorems.CptSewing.QuotientLift.zero_of_injective_symmetric_adjoint_kills_right",
+        "modules[1].theorems.CptSewing.CanonicalBoundary.no_real_free_ghost_full_tangency"
+      ],
+      "source_anchors": [
+        "STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md#1-현재-carrier를-유지한-실제-유한-lift",
+        "STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md#2-이-lift는-왜-관측가능량-조건을-통과하지-못하는가",
+        "STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md#5-free-ghost를-둔-정확한-fixed-a-제약면의-접성-실패",
+        "STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md#6-구성-가능한-ghost-fixed-canonical-endpoint"
+      ]
+    },
+    {
+      "id": "artifact:starobinsky-quotient-lift-bfv-boundary-runner",
+      "type": "artifact",
+      "title": "Starobinsky quotient-lift/BFV-boundary runner",
+      "summary": "Clean bounded runner for actual finite quotient lifts and canonical fixed-a boundary controls.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_quotient_lift_bfv_boundary.py",
+      "sha256": "4ee1a08fc310a10db491173c697dee60a33f5b4690bb8a74bda1d82cc8fd5342"
+    },
+    {
+      "id": "artifact:starobinsky-quotient-lift-bfv-boundary-derivation",
+      "type": "artifact",
+      "title": "Analytic quotient-lift/BFV-boundary derivation",
+      "summary": "Pinned same-carrier lift, adjoint-domain obstruction and finite canonical boundary derivation.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "analytic_derivation",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md",
+      "sha256": "b3674f79572814940239297982fd44fc391c15439b32c1fb063c40a22a5e3355"
+    },
+    {
+      "id": "artifact:starobinsky-quotient-lift-bfv-boundary-proof-index",
+      "type": "artifact",
+      "title": "Quotient-lift/BFV-boundary Lean proof index",
+      "summary": "Pinned inventory for the quotient-lift and fixed-a/free-ghost Lean modules.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "proof_index",
+      "path": "formal/cpt_sewing/quotient-lift-bfv-boundary-proof-index.json",
+      "sha256": "36d709da4170a816b65aef6920258bba3056bbc1a015d9179558d0426ab46302"
+    },
+    {
+      "id": "artifact:starobinsky-quotient-lift-lean",
+      "type": "artifact",
+      "title": "Quotient-lift Lean module",
+      "summary": "Finite split-quotient and abstract symmetric-injective adjoint-obstruction theorems; actual PDE/domain inputs remain analytic.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/QuotientLift.lean",
+      "sha256": "24b52ca16085ffa66bc05285142e37721c38575ea1bb4dc77814da8eb4063c29"
+    },
+    {
+      "id": "artifact:starobinsky-canonical-boundary-lean",
+      "type": "artifact",
+      "title": "Canonical-boundary Lean module",
+      "summary": "Finite real polynomial impossibility for the declared fixed-a/free-ghost equations; Hamiltonian reduction remains analytic/CAS.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/CanonicalBoundary.lean",
+      "sha256": "c45c1a15484baaa39a10fa26763f75a8810eb4bfc69ccaaa0278f73cb121b45a"
+    },
+    {
+      "id": "artifact:starobinsky-quotient-lift-bfv-boundary-result",
+      "type": "artifact",
+      "title": "Starobinsky quotient-lift/BFV-boundary raw result",
+      "summary": "Raw SSOT for the completed exact controls, Lean audits, provenance and scoped status.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_RESULT.json",
+      "sha256": "4e57d2535694d1c1bfb174ca04ae4819b085ca8a5d9ea2023bf7f4f80e7aaeb7"
+    },
+    {
+      "id": "artifact:starobinsky-quotient-lift-bfv-boundary-report",
+      "type": "artifact",
+      "title": "Starobinsky quotient-lift/BFV-boundary report",
+      "summary": "Completed scoped quotient-lift obstruction and finite canonical endpoint result with quantum/BFV boundaries retained.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY.md",
+      "sha256": "5cb3826fb8c2aac6f1f9f93f4ac1cdcd33b7cbb8a7c80ae52d05c51b8a76a743"
+    },
+    {
+      "id": "concept:starobinsky-finite-canonical-endpoint-versus-quantum-cauchy-data",
+      "type": "concept",
+      "title": "Finite canonical BFV endpoints versus quantum Cauchy data",
+      "summary": "A Q-tangent classical endpoint in the declared canonical chart and a Neumann/Dirichlet Weyl-Cauchy state are different typed objects. A bulk-induced boundary reduction and quantization/polarization map are missing; neither tangency nor a bosonic pairing supplies them.",
+      "state": "SUPPORTING_TYPED_BOUNDARY_DISTINCTION"
+    }
   ],
   "edges": [
     {
@@ -37981,7 +38130,188 @@
     {"id":"edge:4017","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"CITES","to":"source:bonneau-faraut-valent-2001-self-adjoint-momentum","note":"Finite-interval scalar-phase extension method context only; it neither selects this model's lapse domain nor supplies group averaging."},
     {"id":"edge:4018","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"CITES","to":"source:baer-ginoux-pfaeffle-2007-wave-equations","note":"Global compact-seed Cauchy-lift and propagation context only; it does not identify a BFV polarization."},
     {"id":"edge:4019","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Boundary polarization and graded gluing method context only; it does not turn this label-space example into BFV data."},
-    {"id":"edge:4020","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"RAQ common-domain and observable-algebra method context only; it does not construct a rigging map here."}
+    {"id":"edge:4020","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"RAQ common-domain and observable-algebra method context only; it does not construct a rigging map here."},
+    {
+      "id": "edge:4021",
+      "from": "concept:starobinsky-finite-canonical-endpoint-versus-quantum-cauchy-data",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy",
+      "note": "Supporting distinction only; no quantum boundary identification."
+    },
+    {
+      "id": "edge:4022",
+      "from": "scope:starobinsky-quotient-lift-and-finite-canonical-boundary",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy",
+      "note": "Supporting quotient/domain and finite-boundary result only; no source/cycle promotion."
+    },
+    {
+      "id": "edge:4023",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "ABOUT",
+      "to": "concept:starobinsky-test-carrier-versus-physical-state-carrier"
+    },
+    {
+      "id": "edge:4024",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "VALID_WITHIN",
+      "to": "scope:starobinsky-quotient-lift-and-finite-canonical-boundary"
+    },
+    {
+      "id": "edge:4025",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:4026",
+      "from": "claim:STAROBINSKY_FIXED_A2_FREE_GHOST_CLASSICAL_ANSATZ_HAS_NO_REAL_Q_INVARIANT_LOCUS",
+      "relation": "ABOUT",
+      "to": "concept:starobinsky-finite-canonical-endpoint-versus-quantum-cauchy-data"
+    },
+    {
+      "id": "edge:4027",
+      "from": "claim:STAROBINSKY_FIXED_A2_FREE_GHOST_CLASSICAL_ANSATZ_HAS_NO_REAL_Q_INVARIANT_LOCUS",
+      "relation": "VALID_WITHIN",
+      "to": "scope:starobinsky-quotient-lift-and-finite-canonical-boundary"
+    },
+    {
+      "id": "edge:4028",
+      "from": "claim:STAROBINSKY_FIXED_A2_FREE_GHOST_CLASSICAL_ANSATZ_HAS_NO_REAL_Q_INVARIANT_LOCUS",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:4029",
+      "from": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "relation": "ABOUT",
+      "to": "concept:starobinsky-finite-canonical-endpoint-versus-quantum-cauchy-data"
+    },
+    {
+      "id": "edge:4030",
+      "from": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "relation": "VALID_WITHIN",
+      "to": "scope:starobinsky-quotient-lift-and-finite-canonical-boundary"
+    },
+    {
+      "id": "edge:4031",
+      "from": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:4032",
+      "from": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "relation": "DEFINED_IN",
+      "to": "artifact:starobinsky-quotient-lift-bfv-boundary-runner"
+    },
+    {
+      "id": "edge:4033",
+      "from": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:starobinsky-quotient-lift-bfv-boundary-derivation",
+      "note": "The Gram-section/domain and finite-canonical geometric arguments remain analytic."
+    },
+    {
+      "id": "edge:4034",
+      "from": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:starobinsky-quotient-lift-bfv-boundary-proof-index",
+      "note": "Pins the 8+3 Lean module/theorem inventory."
+    },
+    {
+      "id": "edge:4035",
+      "from": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:starobinsky-quotient-lift-lean",
+      "note": "Abstract split quotient and symmetric-injective obstruction only."
+    },
+    {
+      "id": "edge:4036",
+      "from": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:starobinsky-canonical-boundary-lean",
+      "note": "Finite real polynomial contradiction only; it does not derive the Hamiltonian map."
+    },
+    {
+      "id": "edge:4037",
+      "from": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:starobinsky-quotient-lift-bfv-boundary-result",
+      "note": "Raw result is the sole complete 35-check/11-theorem ledger."
+    },
+    {
+      "id": "edge:4038",
+      "from": "evidence:starobinsky-quotient-lift-bfv-boundary-result",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:starobinsky-quotient-lift-bfv-boundary-report"
+    },
+    {
+      "id": "edge:4039",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN",
+      "note": "Builds an actual finite quotient lift while retaining the distinction between a dual solution and a same-carrier star observable."
+    },
+    {
+      "id": "edge:4040",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM",
+      "note": "A quotient-only seed action is made concrete and shown to fail the stronger p_N/domain condition; all kernel-active lifts remain open."
+    },
+    {
+      "id": "edge:4041",
+      "from": "claim:STAROBINSKY_FIXED_A2_FREE_GHOST_CLASSICAL_ANSATZ_HAS_NO_REAL_Q_INVARIANT_LOCUS",
+      "relation": "CONTRASTS_WITH",
+      "to": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "note": "The free-c fixed-a ansatz fails tangency, whereas the ghost-fixed finite canonical endpoint is tangent; neither identifies a bulk-induced boundary condition."
+    },
+    {
+      "id": "edge:4042",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "MOTIVATES",
+      "to": "open:starobinsky-seam-ward-boundary-state-limit",
+      "note": "A kernel-active observable and compatible carrier/product remain required; no automatic successor work."
+    },
+    {
+      "id": "edge:4043",
+      "from": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "relation": "MOTIVATES",
+      "to": "open:starobinsky-seam-ward-boundary-state-limit",
+      "note": "A bulk-to-boundary/quantum state correspondence is still required; no automatic successor work."
+    },
+    {
+      "id": "edge:4044",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "CITES",
+      "to": "source:giulini-marolf-1999-generality",
+      "note": "Observable-star common-domain method context only; no rigging map is constructed."
+    },
+    {
+      "id": "edge:4045",
+      "from": "claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION",
+      "relation": "CITES",
+      "to": "source:bonneau-faraut-valent-2001-self-adjoint-momentum",
+      "note": "Finite interval domain context only; it does not select the model's lapse realization."
+    },
+    {
+      "id": "edge:4046",
+      "from": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "relation": "CITES",
+      "to": "source:cattaneo-mnev-reshetikhin-2012-classical-bvbfv",
+      "note": "Classical adapted boundary-condition method context only; no bulk boundary map is supplied."
+    },
+    {
+      "id": "edge:4047",
+      "from": "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
+      "relation": "CITES",
+      "to": "source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv",
+      "note": "Quantum sewing method context only; no state module or kernel is constructed."
+    }
   ],
   "kg_bridges": [
     {
