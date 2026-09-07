@@ -1,0 +1,36 @@
+{
+  "schema": "ice-lean-multimodule-proof-index/v1",
+  "modules": [
+    {
+      "source": "CptSewing/FiniteRankCorrection.lean",
+      "namespace": "CptSewing.FiniteRankCorrection",
+      "scope": "Abstract adjoint range-separation obstruction and rank-one kernel correction identities; finite-rank closure and actual carrier/PDE inputs remain analytic",
+      "theorems": [
+        "adjoint_intertwining_of_quotient_action",
+        "label_adjoint_zero_of_range_separation",
+        "label_zero_of_adjoint_zero",
+        "label_zero_of_star_preserving_separated_correction",
+        "rankOneCorrection_self_adjoint",
+        "quotient_kills_rankOneCorrection",
+        "rankOneCorrection_comp_constraint_ne_zero"
+      ]
+    },
+    {
+      "source": "CptSewing/TopGhostSupport.lean",
+      "namespace": "CptSewing.TopGhostSupport",
+      "scope": "Abstract two-ghost top cohomology detectors, exactness and algebraic-dual hypotheses; actual support/endpoint and physical degree selection remain analytic/open",
+      "theorems": [
+        "q1_q0",
+        "top_closed",
+        "detector_kills_q1",
+        "not_in_range_of_detector",
+        "section_combination_exact_implies_zero",
+        "section_combination_not_exact",
+        "exact_of_p_preimage",
+        "all_top_exact_of_surjective_p",
+        "dual_constraints_commute",
+        "all_top_exact_in_algebraic_dual"
+      ]
+    }
+  ]
+}
