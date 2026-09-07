@@ -1,0 +1,1168 @@
+{
+  "schema": "ice-starobinsky-primary-reduction-graded-sewing/v1",
+  "status": "SCOPED_PRIMARY_CHAIN_EQUIVALENCE_AND_NONZERO_GRADED_PAIRING",
+  "started_at_utc": "2026-09-07T12:10:32.872988+00:00",
+  "question": "Can the actual compact-primary complex be reduced by a cohomology-preserving homotopy and paired with its correctly graded dual?",
+  "scope": "SUPPORTING_METHOD: actual test-space contraction and graded evaluation; original source/cycle/physical product remain open",
+  "non_claim": "No source-selected physical state, full quantum BFV/CPT amplitude or G1 original cycle.",
+  "reproduction_command": "./ice run starobinsky_primary_reduction_graded_sewing",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "modules": [
+    {
+      "source": "CptSewing/PrimaryReduction.lean",
+      "scope": "Generic chain maps, primary homotopy and reduced exactness; smooth integral/PDE realization is analytic",
+      "expected_theorem_count": 11,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/PrimaryReductionAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "dde7983892d4b24b6d22d16e42cfe3e95dcb9b12ffd07aa66098769dde9b6272",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.project_q0.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (H p : Module.End ℂ V) (R : V →ₗ[ℂ] E) (hRp : ∀ (u : V), R (p u) = 0) (u : V) :\n  R (CptSewing.PrimaryReduction.q0 H p u).2 = 0",
+            "endPos": {
+              "column": 6,
+              "line": 100
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 100
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.project_q0' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 101
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 101
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.project_q1.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (H p : Module.End ℂ V) (h : Module.End ℂ E) (R : V →ₗ[ℂ] E)\n  (hRp : ∀ (u : V), R (p u) = 0) (hRH : ∀ (u : V), R (H u) = h (R u)) (xy : V × V) :\n  R (CptSewing.PrimaryReduction.q1 H p xy) = h (R xy.2)",
+            "endPos": {
+              "column": 6,
+              "line": 102
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 102
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.project_q1' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 103
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 103
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.include_chain.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (H p : Module.End ℂ V) (h : Module.End ℂ E) (J : E →ₗ[ℂ] V)\n  (hHJ : ∀ (e : E), H (J e) = J (h e)) (e : E) : CptSewing.PrimaryReduction.q1 H p (0, J e) = J (h e)",
+            "endPos": {
+              "column": 6,
+              "line": 104
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 104
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.include_chain' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 105
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 105
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.projection_section.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (hRJ : ∀ (e : E), R (J e) = e) (e : E) : R (J e) = e",
+            "endPos": {
+              "column": 6,
+              "line": 106
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 106
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.projection_section' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 107
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 107
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.homotopy_degree_zero.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (H p K : Module.End ℂ V) (hKp : ∀ (u : V), K (p u) = u) (u : V) : K (CptSewing.PrimaryReduction.q0 H p u).2 = u",
+            "endPos": {
+              "column": 6,
+              "line": 108
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 108
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.homotopy_degree_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 109
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 109
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.homotopy_degree_one.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (H p K : Module.End ℂ V) (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (hKp : ∀ (u : V), K (p u) = u)\n  (hpK : ∀ (u : V), p (K u) = u - J (R u)) (hHK : ∀ (u : V), H (K u) = K (H u)) (xy : V × V) :\n  CptSewing.PrimaryReduction.q0 H p (K xy.2) + (-K (CptSewing.PrimaryReduction.q1 H p xy), 0) = xy - (0, J (R xy.2))",
+            "endPos": {
+              "column": 6,
+              "line": 110
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 110
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.homotopy_degree_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 111
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 111
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.homotopy_degree_two.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (H p K : Module.End ℂ V) (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V)\n  (hpK : ∀ (u : V), p (K u) = u - J (R u)) (z : V) : CptSewing.PrimaryReduction.q1 H p (-K z, 0) = z - J (R z)",
+            "endPos": {
+              "column": 6,
+              "line": 112
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 112
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.homotopy_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 113
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 113
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.closed_degree_one_exact_of_reduced_injective.{u_1, u_2} {V : Type u_1} {E : Type u_2}\n  [AddCommGroup V] [Module ℂ V] [AddCommGroup E] [Module ℂ E] (H p K : Module.End ℂ V) (h : Module.End ℂ E)\n  (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V) (hRp : ∀ (u : V), R (p u) = 0) (hRH : ∀ (u : V), R (H u) = h (R u))\n  (hKp : ∀ (u : V), K (p u) = u) (hpK : ∀ (u : V), p (K u) = u - J (R u)) (hHK : ∀ (u : V), H (K u) = K (H u))\n  (hh : Function.Injective ⇑h) (xy : V × V) (hc : CptSewing.PrimaryReduction.q1 H p xy = 0) :\n  CptSewing.PrimaryReduction.q0 H p (K xy.2) = xy",
+            "endPos": {
+              "column": 6,
+              "line": 114
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 114
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.closed_degree_one_exact_of_reduced_injective' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 115
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 115
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.top_exact_iff_reduced_exact.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V]\n  [Module ℂ V] [AddCommGroup E] [Module ℂ E] (H p K : Module.End ℂ V) (h : Module.End ℂ E) (R : V →ₗ[ℂ] E)\n  (J : E →ₗ[ℂ] V) (hRp : ∀ (u : V), R (p u) = 0) (hRH : ∀ (u : V), R (H u) = h (R u))\n  (hHJ : ∀ (e : E), H (J e) = J (h e)) (hpK : ∀ (u : V), p (K u) = u - J (R u)) (z : V) :\n  (∃ xy, CptSewing.PrimaryReduction.q1 H p xy = z) ↔ ∃ e, h e = R z",
+            "endPos": {
+              "column": 6,
+              "line": 116
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 116
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.top_exact_iff_reduced_exact' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 117
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 117
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.same_projection_diff_exact.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V]\n  [Module ℂ V] [AddCommGroup E] [Module ℂ E] (H p K : Module.End ℂ V) (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V)\n  (hpK : ∀ (u : V), p (K u) = u - J (R u)) (z w : V) (he : R z = R w) :\n  CptSewing.PrimaryReduction.q1 H p (-K (z - w), 0) = z - w",
+            "endPos": {
+              "column": 6,
+              "line": 118
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 118
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.same_projection_diff_exact' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 119
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 119
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.PrimaryReduction.dual_primary_right_inverse.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (p K : Module.End ℂ V) (hKp : ∀ (u : V), K (p u) = u) (T : Module.Dual ℂ V) : (T ∘ₗ K) ∘ₗ p = T",
+            "endPos": {
+              "column": 6,
+              "line": 120
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 120
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.PrimaryReduction.dual_primary_right_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 121
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-hya6k2tc/PrimaryReductionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 121
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.PrimaryReduction.project_q0": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.project_q1": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.include_chain": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.projection_section": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.homotopy_degree_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.homotopy_degree_one": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.homotopy_degree_two": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.closed_degree_one_exact_of_reduced_injective": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.top_exact_iff_reduced_exact": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.same_projection_diff_exact": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.PrimaryReduction.dual_primary_right_inverse": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 11
+    },
+    {
+      "source": "CptSewing/GradedDualSewing.lean",
+      "scope": "Degree-reversed algebraic dual, signed Ward evaluation and nonboundary detectors; no positive or quantum CPT pairing",
+      "expected_theorem_count": 7,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/GradedDualSewingAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "47fd9ee39fd51b594700325274147a2660942a9c03c48ed100da427eaff39413",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.GradedDualSewing.dual_differential_square.{u_1, u_2, u_3} {C0 : Type u_1} {C1 : Type u_2} {C2 : Type u_3}\n  [AddCommGroup C0] [Module ℂ C0] [AddCommGroup C1] [Module ℂ C1] [AddCommGroup C2] [Module ℂ C2] (q0 : C0 →ₗ[ℂ] C1)\n  (q1 : C1 →ₗ[ℂ] C2) (hSquare : q1 ∘ₗ q0 = 0) :\n  CptSewing.GradedDualSewing.dualDifferential1 q0 ∘ₗ CptSewing.GradedDualSewing.dualDifferential0 q1 = 0",
+            "endPos": {
+              "column": 6,
+              "line": 106
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 106
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.GradedDualSewing.dual_differential_square' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 107
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 107
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.GradedDualSewing.ward_degree_zero.{u_1, u_2} {C0 : Type u_1} {C1 : Type u_2} [AddCommGroup C0] [Module ℂ C0]\n  [AddCommGroup C1] [Module ℂ C1] (q0 : C0 →ₗ[ℂ] C1) (lambda : CptSewing.GradedDualSewing.Dual C1) (u : C0) :\n  ((CptSewing.GradedDualSewing.dualDifferential1 q0) lambda) u + lambda (q0 u) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 108
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 108
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.GradedDualSewing.ward_degree_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 109
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 109
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.GradedDualSewing.ward_degree_one.{u_2, u_3} {C1 : Type u_2} {C2 : Type u_3} [AddCommGroup C1] [Module ℂ C1]\n  [AddCommGroup C2] [Module ℂ C2] (q1 : C1 →ₗ[ℂ] C2) (lambda : CptSewing.GradedDualSewing.Dual C2) (v : C1) :\n  lambda (q1 v) - ((CptSewing.GradedDualSewing.dualDifferential0 q1) lambda) v = 0",
+            "endPos": {
+              "column": 6,
+              "line": 110
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 110
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.GradedDualSewing.ward_degree_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 111
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 111
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.GradedDualSewing.top_detector_closed_iff.{u_2, u_3} {C1 : Type u_2} {C2 : Type u_3} [AddCommGroup C1]\n  [Module ℂ C1] [AddCommGroup C2] [Module ℂ C2] (q1 : C1 →ₗ[ℂ] C2) (lambda : CptSewing.GradedDualSewing.Dual C2) :\n  (CptSewing.GradedDualSewing.dualDifferential0 q1) lambda = 0 ↔ ∀ (v : C1), lambda (q1 v) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 112
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 112
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.GradedDualSewing.top_detector_closed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 113
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 113
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.GradedDualSewing.detector_witnesses_top_nonboundary.{u_2, u_3} {C1 : Type u_2} {C2 : Type u_3}\n  [AddCommGroup C1] [Module ℂ C1] [AddCommGroup C2] [Module ℂ C2] (q1 : C1 →ₗ[ℂ] C2)\n  (lambda : CptSewing.GradedDualSewing.Dual C2) (z : C2)\n  (hClosed : (CptSewing.GradedDualSewing.dualDifferential0 q1) lambda = 0) (hDetect : lambda z ≠ 0) : z ∉ q1.range",
+            "endPos": {
+              "column": 6,
+              "line": 114
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 114
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.GradedDualSewing.detector_witnesses_top_nonboundary' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 115
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 115
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.GradedDualSewing.section_evaluation.{u_3, u_4} {C2 : Type u_3} {E : Type u_4} [AddCommGroup C2] [Module ℂ C2]\n  [AddCommGroup E] [Module ℂ E] (R : C2 →ₗ[ℂ] E) (J : E →ₗ[ℂ] C2) (hRJ : R ∘ₗ J = LinearMap.id)\n  (lambda : CptSewing.GradedDualSewing.Dual E) (e : E) : (lambda ∘ₗ R) (J e) = lambda e",
+            "endPos": {
+              "column": 6,
+              "line": 116
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 116
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.GradedDualSewing.section_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 117
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 117
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.GradedDualSewing.section_detector_witnesses_top_nonboundary.{u_2, u_3, u_4} {C1 : Type u_2} {C2 : Type u_3}\n  {E : Type u_4} [AddCommGroup C1] [Module ℂ C1] [AddCommGroup C2] [Module ℂ C2] [AddCommGroup E] [Module ℂ E]\n  (q1 : C1 →ₗ[ℂ] C2) (R : C2 →ₗ[ℂ] E) (J : E →ₗ[ℂ] C2) (hRJ : R ∘ₗ J = LinearMap.id)\n  (lambda : CptSewing.GradedDualSewing.Dual E) (e : E)\n  (hClosed : (CptSewing.GradedDualSewing.dualDifferential0 q1) (lambda ∘ₗ R) = 0) (hDetect : lambda e ≠ 0) :\n  J e ∉ q1.range",
+            "endPos": {
+              "column": 6,
+              "line": 118
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 118
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.GradedDualSewing.section_detector_witnesses_top_nonboundary' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 119
+            },
+            "fileName": "/var/tmp/orca/ice-primary-graded-sewing-u16t2x0c/GradedDualSewingAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 119
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.GradedDualSewing.dual_differential_square": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.GradedDualSewing.ward_degree_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.GradedDualSewing.ward_degree_one": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.GradedDualSewing.top_detector_closed_iff": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.GradedDualSewing.detector_witnesses_top_nonboundary": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.GradedDualSewing.section_evaluation": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.GradedDualSewing.section_detector_witnesses_top_nonboundary": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 7
+    }
+  ],
+  "provenance": {
+    "source_commit": "c6923b7d3f3338f60ded489f90ebd2e257f1ecd1",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_primary_reduction_graded_sewing.py": {
+        "sha256": "12e57ffab0f903dadcda06f84f4c824ae56142ad81568d20facbd2145e0fccb5",
+        "bytes": 15777
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_PRIMARY_REDUCTION_DERIVATION.md": {
+        "sha256": "f1e5a0f180c48c73ea0aa037fa537cf7fff86b08ad2e11443f13b813533c1a09",
+        "bytes": 8005
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_GRADED_DUAL_SEWING_DERIVATION.md": {
+        "sha256": "63821dcd24e96fe3acb233f03a00fe94d7b78fdb654f02df5a321fe6a6d88e6b",
+        "bytes": 5423
+      },
+      "docs/research/ICE_STAROBINSKY_SOURCE_INDUCED_INTERVAL_BVBFV_2026-09-07.md": {
+        "sha256": "9b23db904839f4a68ccf7e569297d3d94825aa18784fcfffe3c0463bded3eb7a",
+        "bytes": 13800
+      },
+      "docs/research/ICE_STAROBINSKY_GRADED_SEAM_ADVERSARIAL_REVIEW_2026-09-07.md": {
+        "sha256": "4c9e5f9aa6a6c2d18484300955a9f19e6b4138cd64c86d19a79d49527a2cff7b",
+        "bytes": 8304
+      },
+      "formal/cpt_sewing/primary-reduction-graded-sewing-proof-index.json": {
+        "sha256": "f5bf2adb6a221be1c3a3114b5f5c67dea563e90f01c0b7e7bd51d9197012d79e",
+        "bytes": 1230
+      },
+      "formal/cpt_sewing/CptSewing/PrimaryReduction.lean": {
+        "sha256": "c9433d6cc3457416918574223ec77681461b59a5dff0641d245dc681169de244",
+        "bytes": 4101
+      },
+      "formal/cpt_sewing/CptSewing/GradedDualSewing.lean": {
+        "sha256": "b91c1d209954f6fa7a1dd17a8e019cbbe9ba9c70f5e45b10dffe9c94adecc098",
+        "bytes": 4113
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_RESULT.json": {
+        "sha256": "4e57d2535694d1c1bfb174ca04ae4819b085ca8a5d9ea2023bf7f4f80e7aaeb7",
+        "bytes": 32367
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md": {
+        "sha256": "b3674f79572814940239297982fd44fc391c15439b32c1fb063c40a22a5e3355",
+        "bytes": 12466
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SEWING_SOURCE_REVIEW.md": {
+        "sha256": "2699facacfd7ef54c469084338745d0d187ebc3426ec616cea2bd2f9dfacd434",
+        "bytes": 17664
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_POLYNOMIAL_BFV_CHART.md": {
+        "sha256": "c40c63bd2e3f6a3495133c4668ebdd421f90a85edca3cfeda901d56b32bd745d",
+        "bytes": 8730
+      },
+      "cpt_temporal_folded_susy/gate1_v0_improved_static_bfv_source.py": {
+        "sha256": "62f52d079c62b9b84ccea6562e44b952067cd6c8e10f7d1a9673cc124b949ccf",
+        "bytes": 50420
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md": {
+        "sha256": "4c5ff22a482d2bbcebad04e7de2f30a612777cb38136386a330189487550249c",
+        "bytes": 9385
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_RESULT.json": {
+        "sha256": "9cc9d9533d105de6bd2be58e93a789581846d0d67d4efc80166825936af84f2d",
+        "bytes": 14172
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md": {
+        "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6",
+        "bytes": 8392
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_RESULT.json": {
+        "sha256": "ba863b486d6503193776e35cc29e317b8036f7583d2efa6264d8e0a73e304496",
+        "bytes": 41503
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md": {
+        "sha256": "8611a354760296d16a211dddb91b2127dd68e9e2da1a73bcb15bc7200a375366",
+        "bytes": 11299
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      },
+      "docs/research/ICE_BFV_CPT_SEAM_WARD_SOURCE_PROPOSAL_2026-09-07.md": {
+        "sha256": "ccfcbd3a71f439716ffb7cc97ddc4ccdeda9f186225eeb6d6f499ead64be0f0e",
+        "bytes": 12977
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ]
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "actual_pK_is_identity_minus_section",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_H_commutes_primary",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_H_commutes_section",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_H_commutes_corrected_primitive_integrand",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "R_p_is_endpoint_traces",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "R_p_vanishes_on_two_collars",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "K_p_recovers_u_on_lower_collar",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "corrected_total_integral_zero",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "bare_primitive_upper_trace_generically_nonzero",
+        "group": "actual_primary_and_support",
+        "passed": true,
+        "expression": "I*R_u",
+        "scope": "formal trace diagnostic; actual compact support justified in derivation"
+      },
+      {
+        "id": "ordered_Berezin_dual_left_evaluation",
+        "group": "graded_dual_and_Ward",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "swapping_Berezin_factors_changes_middle_signs",
+        "group": "graded_dual_and_Ward",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_ghost_q1_orientation",
+        "group": "graded_dual_and_Ward",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "graded_transpose_square",
+        "group": "graded_dual_and_Ward",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "Ward_degree_zero_matrix",
+        "group": "graded_dual_and_Ward",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "Ward_degree_one_matrix",
+        "group": "graded_dual_and_Ward",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "antilinear_coordinate_ghost_flip_covariance",
+        "group": "graded_dual_and_Ward",
+        "passed": true,
+        "residual_matrix": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "id": "source_charge_master",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "source_gauge_hamiltonian_sign",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "source_primary_BRST_sign",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "CMW_full_primary_component_bridge",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "CMW_zero_second_multiplier_leaves_primary_kinetic",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "CMW_boundary_master_cancellation",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "CMW_primary_bulk_split",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "CMW_odd_boundary_split_sign",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "CMW_cotangent_boundary_primitive",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "source_momentum_elimination",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "classical_seam_charge_flips",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "coordinate_antilinear_charge_preserved",
+        "group": "source_and_orientation",
+        "passed": true,
+        "residual": []
+      }
+    ],
+    "primary_failure_class": "inference",
+    "control_groups": [
+      "actual_primary_and_support",
+      "graded_dual_and_Ward",
+      "source_and_orientation"
+    ],
+    "analytic_derivation": "cpt_temporal_folded_susy/STAROBINSKY_PRIMARY_REDUCTION_DERIVATION.md",
+    "actual_contraction": "R_N=integral_N, J_chi=chi*, K_chi=i integral_lower^N(1-J_chi R_N); FI=1 and Id-IF=qh+hq",
+    "cohomology": "H0=H1=0; H2 is isomorphic to Psi/H Psi and infinite-dimensional by actual Cauchy/Gram detectors; no physical degree reassignment",
+    "graded_pairing": "T_g[z]=t_g[R_N z], closed dual degree -2; explicit Ward and dual-left Berezin signs; selected actual detectors continuous",
+    "choice_scope": "normalized real compact N bump changes representatives by exact terms; no gauge/contour/physics promotion",
+    "source_scope": "CMW component action splits into a minimal bulk source and formal doublet sectors with action boundary -[sigma_plus*rho] and cotangent boundary [sigma_plus*deltaN]; endpoint and global cycle equivalence remain separate",
+    "continuous_coefficient_dual": "For the stated ambient C-infinity continuous dual, V=T composed with K is continuous and p-transpose V=T; hence its coefficient-only top cohomology is zero, unlike correctly graded top detectors",
+    "noncomputed": "No numerical PDE data, full continuous-dual cohomology, nonperturbative BV integral, quantum CPT kernel, positive norm or G1 cycle"
+  },
+  "theorem_count": 18,
+  "elapsed_seconds": 15.45730352634564
+}

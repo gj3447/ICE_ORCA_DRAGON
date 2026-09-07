@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T09:36:55Z",
+  "updated_at_utc": "2026-09-07T12:13:30Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1727,7 +1727,7 @@
     {
       "id": "reading-path:starobinsky-seam-ward-regulator-removal",
       "title": "Gaussian 접합: 경계상태에 작용시킨 잔여항과 규제 제거",
-      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다. The later quotient-lift review distinguishes an actual finite quotient lift from a same-carrier star observable and contrasts a failed free-ghost fixed-a ansatz with one ghost-fixed finite canonical endpoint; neither supplies a bulk/quantum BFV map. The later kernel/top-ghost result separates kernel-active noncommuting corrections, finite-rank quotient nonselection, compact-test top support, coefficient-algebraic-dual exactness and endpoint-trace exactness; it constructs no physical state or quantum BFV boundary object.",
+      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다. The later quotient-lift review distinguishes an actual finite quotient lift from a same-carrier star observable and contrasts a failed free-ghost fixed-a ansatz with one ghost-fixed finite canonical endpoint; neither supplies a bulk/quantum BFV map. The later kernel/top-ghost result separates kernel-active noncommuting corrections, finite-rank quotient nonselection, compact-test top support, coefficient-algebraic-dual exactness and endpoint-trace exactness; it constructs no physical state or quantum BFV boundary object. The primary-reduction/graded-pairing result locates test support and preserves declared detector pairing without constructing a physical state or quantum BFV seam.",
       "nodes": [
         "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
         "scope:starobinsky-gaussian-seam-ward-flat-core",
@@ -1781,6 +1781,14 @@
         "claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL",
         "evidence:starobinsky-kernel-correction-ghost-support-result",
         "artifact:starobinsky-kernel-correction-ghost-support-report",
+        "scope:starobinsky-primary-reduction-and-graded-dual-sewing",
+        "concept:starobinsky-primary-contraction-and-right-graded-pairing",
+        "claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2",
+        "claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS",
+        "claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY",
+        "claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS",
+        "evidence:starobinsky-primary-reduction-graded-sewing-result",
+        "artifact:starobinsky-primary-reduction-graded-sewing-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16712,7 +16720,7 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing transported through declared full-line compact-seed lifts. A scalar-phase domain comparison shows the compact-N carrier does not supply finite gauge-domain or extension-independent spectral-zero data, and label positivity/exchange leaves a smooth weight unselected. These scoped facts do not settle a physical carrier/product, identified BFV boundary data, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged. The quotient-only lift now has an exact same-carrier adjoint-domain obstruction, while a separate finite ghost-fixed canonical endpoint is Q-tangent; a kernel-active observable, finite gauge-domain and bulk/quantum BFV boundary correspondence remain open. A kernel-active finite-rank correction now exists but fails strong p_N commutation; finite-rank same-carrier star corrections cannot act on the declared Cauchy quotient, and compact-test top classes differ from a separate coefficient-algebraic-dual comparison. Physical ghost-degree-zero states, a kernel-active strong observable and BFV boundary state data remain open.",
+      "summary": "The fixed-box Ward face limit and repaired compact-N test carrier are established in their declared scope. The actual primary contraction now gives H0=H1=0 and infinite-dimensional H2=Psi/H Psi; correct graded-dual evaluation preserves the Cauchy detectors, while the specified same-degree continuous coefficient dual has zero top cohomology. The local CMW primary split retains an action and BV-cotangent endpoint term. Missing are a source-compatible boundary quantization map, allowed support/topology and half-density module, quantum interval kernel with residual pushforward, a justified positive physical product, and CPT/gauge/regulator/cycle compatibility. These supporting results do not resolve the original joint cycle or G1 intersections.",
       "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_DUAL_FAMILY_EXISTS_PHYSICAL_CARRIER_PRODUCT_CPT_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
@@ -17732,6 +17740,204 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT.md",
       "sha256": "1dce00d54cab003d92e839818d451045f1c3d646875433c40e62365eec2d734e"
+    },
+    {
+      "id": "scope:starobinsky-primary-reduction-and-graded-dual-sewing",
+      "type": "scope",
+      "title": "Starobinsky primary reduction and graded-dual sewing scope",
+      "summary": "The declared compact-N repaired test carrier, its primary contraction to the reduced Neumann carrier, and one right graded dual-pairing convention.",
+      "state": "DECLARED_SUPPORTING_PRIMARY_CONTRACTION_AND_GRADED_PAIRING_SCOPE",
+      "includes": [
+        "Exact N-direction homotopy with product collars and reduced H complex",
+        "A declared ordered Berezin evaluation and compact-seed Cauchy dual detectors",
+        "The specified smooth continuous coefficient dual and a local CMW primary source decomposition with explicit endpoint terms"
+      ],
+      "excludes": [
+        "A self-adjoint group domain, physical ghost-degree-zero state, selected product, full AKSZ/BV-BFV quantization, quantum CPT seam, source cycle, G1 closure or physical/TOE claim"
+      ]
+    },
+    {
+      "id": "concept:starobinsky-primary-contraction-and-right-graded-pairing",
+      "type": "concept",
+      "title": "Primary contraction and right graded pairing versus physical state selection",
+      "summary": "A chain contraction and a nonzero graded dual pairing can preserve test-complex information without selecting a physical carrier, measure or CPT seam.",
+      "state": "SCOPED_PRIMARY_REDUCTION_AND_RIGHT_GRADED_PAIRING_DISTINCTION"
+    },
+    {
+      "id": "claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2",
+      "title": "The primary-reduced chain has H0=H1=0 and infinite-dimensional H2",
+      "summary": "The compact-N primary contraction reduces the coordinate-ghost complex to the Neumann H complex; Cauchy uniqueness kills its kernel while declared dual detectors give arbitrarily many top classes.",
+      "statement": "For the declared primary contraction, H0 and H1 vanish and H2 is isomorphic to Psi/H Psi with infinite dimension.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_PRIMARY_CHAIN_EQUIVALENCE"
+    },
+    {
+      "id": "claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS",
+      "title": "The right graded dual pairing preserves declared Cauchy dual detectors",
+      "summary": "With the declared ordered Berezin convention and correct right graded differential, the nonzero Cauchy dual detector pairing survives the primary reduction.",
+      "statement": "The declared right graded dual pairing is a chain pairing and preserves the stated compact-seed Cauchy dual detectors.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_NONZERO_GRADED_PAIRING"
+    },
+    {
+      "id": "claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY",
+      "title": "The specified smooth continuous coefficient dual still has zero top cohomology",
+      "summary": "The actual continuous primary left inverse K gives p-transpose(T K)=T without algebraic extension, so coefficient-only top classes vanish in this declared continuous dual.",
+      "statement": "For the ambient C-infinity topology on Phi, K is continuous and Kp=id; therefore the coefficient-only complex on Phi-prime has H2=0. This does not apply to the degree-reversed dual.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_CONTINUOUS_COEFFICIENT_DUAL_TOP_VANISHING"
+    },
+    {
+      "id": "claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS",
+      "title": "The primary bulk-doublet split retains both an action and a BV-cotangent endpoint term",
+      "summary": "The local jet change sigma=e2-Ndot splits the CMW source into its minimal constrained bulk and formal auxiliary sectors, retaining -[sigma-plus rho] and [sigma-plus delta N] at the endpoints.",
+      "statement": "In the declared CMW local component convention the primary bulk rewriting leaves action boundary -[sigma-plus rho] and cotangent boundary [sigma-plus delta N]; dropping the bulk doublets does not establish a boundary or integration-cycle equivalence.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_LOCAL_SOURCE_RELATIVE_BOUNDARY_SPLIT"
+    },
+    {
+      "id": "source:cattaneo-mnev-wernli-2022-constrained-interval",
+      "type": "source",
+      "title": "Constrained Systems, Generalized Hamilton-Jacobi Actions, and Quantization",
+      "summary": "Primary constrained interval component BV action and oriented endpoint mCME, sections 8 and 9.1; applied here only to the declared finite homogeneous source.",
+      "state": "PRIMARY",
+      "citation": "A. S. Cattaneo, P. Mnev and K. Wernli, J. Geom. Mech. 14 (2022), doi:10.3934/jgm.2022010",
+      "uri": "https://arxiv.org/html/2012.13270",
+      "version": "arXiv:2012.13270v3"
+    },
+    {
+      "id": "evidence:starobinsky-primary-reduction-graded-sewing-result",
+      "type": "evidence",
+      "title": "Starobinsky primary-reduction/graded-sewing evidence",
+      "summary": "One accepted run supplies 28 observed exact checks and 18 Lean theorems; analytic collar, support and PDE statements remain in pinned derivations. Raw is the full check ledger.",
+      "state": "VALID_RUN_ANALYTIC_DERIVATION_AND_FINITE_LEAN_CONTROLS",
+      "observed_status": "SCOPED_PRIMARY_CHAIN_EQUIVALENCE_AND_NONZERO_GRADED_PAIRING",
+      "check_ids": [
+        "symbolic.checks.actual_pK_is_identity_minus_section",
+        "symbolic.checks.corrected_total_integral_zero",
+        "symbolic.checks.ordered_Berezin_dual_left_evaluation",
+        "symbolic.checks.CMW_primary_bulk_split",
+        "symbolic.checks.CMW_odd_boundary_split_sign",
+        "symbolic.checks.CMW_cotangent_boundary_primitive",
+        "modules[0].theorems.CptSewing.PrimaryReduction.homotopy_degree_one",
+        "modules[0].theorems.CptSewing.PrimaryReduction.closed_degree_one_exact_of_reduced_injective",
+        "modules[0].theorems.CptSewing.PrimaryReduction.top_exact_iff_reduced_exact",
+        "modules[0].theorems.CptSewing.PrimaryReduction.dual_primary_right_inverse",
+        "modules[1].theorems.CptSewing.GradedDualSewing.ward_degree_one"
+      ],
+      "source_anchors": [
+        "cpt_temporal_folded_susy/STAROBINSKY_PRIMARY_REDUCTION_DERIVATION.md sections 1-4",
+        "cpt_temporal_folded_susy/STAROBINSKY_GRADED_DUAL_SEWING_DERIVATION.md sections 2-4",
+        "docs/research/ICE_STAROBINSKY_SOURCE_INDUCED_INTERVAL_BVBFV_2026-09-07.md section 3.1"
+      ]
+    },
+    {
+      "id": "artifact:starobinsky-primary-reduction-graded-sewing-runner",
+      "type": "artifact",
+      "title": "Starobinsky primary-reduction/graded-sewing runner",
+      "summary": "Clean bounded runner for primary contraction and graded dual pairing controls.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_primary_reduction_graded_sewing.py",
+      "sha256": "12e57ffab0f903dadcda06f84f4c824ae56142ad81568d20facbd2145e0fccb5"
+    },
+    {
+      "id": "artifact:starobinsky-primary-reduction-derivation",
+      "type": "artifact",
+      "title": "Analytic primary-reduction derivation",
+      "summary": "Pinned compact-N contraction, reduced complex and Cauchy uniqueness argument.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "derivation",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_PRIMARY_REDUCTION_DERIVATION.md",
+      "sha256": "f1e5a0f180c48c73ea0aa037fa537cf7fff86b08ad2e11443f13b813533c1a09"
+    },
+    {
+      "id": "artifact:starobinsky-graded-dual-sewing-derivation",
+      "type": "artifact",
+      "title": "Analytic graded-dual sewing derivation",
+      "summary": "Pinned primal-first graded-dual Ward evaluation, dual-left Berezin order and physical scope boundary.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "derivation",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_GRADED_DUAL_SEWING_DERIVATION.md",
+      "sha256": "63821dcd24e96fe3acb233f03a00fe94d7b78fdb654f02df5a321fe6a6d88e6b"
+    },
+    {
+      "id": "artifact:starobinsky-primary-reduction-graded-sewing-proof-index",
+      "type": "artifact",
+      "title": "Primary-reduction/graded-sewing Lean proof index",
+      "summary": "Pinned theorem inventory for primary reduction and graded dual sewing modules.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "proof_index",
+      "path": "formal/cpt_sewing/primary-reduction-graded-sewing-proof-index.json",
+      "sha256": "f5bf2adb6a221be1c3a3114b5f5c67dea563e90f01c0b7e7bd51d9197012d79e"
+    },
+    {
+      "id": "artifact:starobinsky-primary-reduction-lean",
+      "type": "artifact",
+      "title": "Primary reduction Lean module",
+      "summary": "Abstract primary contraction and reduced cohomology identities; actual support/PDE inputs remain analytic.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/PrimaryReduction.lean",
+      "sha256": "c9433d6cc3457416918574223ec77681461b59a5dff0641d245dc681169de244"
+    },
+    {
+      "id": "artifact:starobinsky-graded-dual-sewing-lean",
+      "type": "artifact",
+      "title": "Graded dual sewing Lean module",
+      "summary": "Abstract degree-reversed dual Ward evaluation and nonboundary detectors; ordered Berezin multiplication is checked symbolically outside Lean.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/GradedDualSewing.lean",
+      "sha256": "b91c1d209954f6fa7a1dd17a8e019cbbe9ba9c70f5e45b10dffe9c94adecc098"
+    },
+    {
+      "id": "artifact:starobinsky-primary-reduction-graded-sewing-result",
+      "type": "artifact",
+      "title": "Starobinsky primary-reduction/graded-sewing raw result",
+      "summary": "Raw SSOT for actual symbolic checks, Lean audits and scoped status.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_PRIMARY_REDUCTION_GRADED_SEWING_RESULT.json",
+      "sha256": "fecbb49e6c188259414de60083776f914151d0bff010ab0eb012b718b00a841b"
+    },
+    {
+      "id": "artifact:starobinsky-primary-reduction-graded-sewing-report",
+      "type": "artifact",
+      "title": "Starobinsky primary-reduction/graded-sewing report",
+      "summary": "Completed scoped primary chain equivalence and nonzero graded-pairing result.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_PRIMARY_REDUCTION_GRADED_SEWING.md",
+      "sha256": "0d40cc6f1366595f21cbd1ea56e80370b6654169cc621d0d709e2f204201e89c"
+    },
+    {
+      "id": "artifact:ice-starobinsky-source-induced-interval-bvbfv",
+      "type": "artifact",
+      "title": "Starobinsky constrained interval BV source derivation",
+      "summary": "Explicit CMW component source and oriented boundary terms; quantum and global cycle equivalence remain open.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "research_review",
+      "path": "docs/research/ICE_STAROBINSKY_SOURCE_INDUCED_INTERVAL_BVBFV_2026-09-07.md",
+      "sha256": "9b23db904839f4a68ccf7e569297d3d94825aa18784fcfffe3c0463bded3eb7a"
+    },
+    {
+      "id": "artifact:ice-starobinsky-graded-seam-adversarial-review",
+      "type": "artifact",
+      "title": "Starobinsky graded seam adversarial review",
+      "summary": "Polarization, graded-dual and anti-linear seam review; no established AKSZ or quantum claim.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "research_review",
+      "path": "docs/research/ICE_STAROBINSKY_GRADED_SEAM_ADVERSARIAL_REVIEW_2026-09-07.md",
+      "sha256": "4c9e5f9aa6a6c2d18484300955a9f19e6b4138cd64c86d19a79d49527a2cff7b"
     }
   ],
   "edges": [
@@ -38504,7 +38710,46 @@
     {"id":"edge:4074","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Kernel-active strong observable/domain construction remains open; no automatic successor work."},
     {"id":"edge:4075","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"An actual BFV state module, pairing and bulk correspondence remain open; no automatic successor work."},
     {"id":"edge:4076","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"Observable-star carrier method context only; no physical observable algebra is constructed."},
-    {"id":"edge:4077","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Boundary state/cohomology method context only; no quantum BFV kernel follows."}
+    {"id":"edge:4077","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Boundary state/cohomology method context only; no quantum BFV kernel follows."},
+    {"id":"edge:4078","from":"scope:starobinsky-primary-reduction-and-graded-dual-sewing","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Supporting chain/pairing result only; no source/cycle promotion."},
+    {"id":"edge:4079","from":"concept:starobinsky-primary-contraction-and-right-graded-pairing","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Method distinction only; no physical state claim."},
+    {"id":"edge:4080","from":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","relation":"ABOUT","to":"concept:starobinsky-primary-contraction-and-right-graded-pairing"},
+    {"id":"edge:4081","from":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","relation":"VALID_WITHIN","to":"scope:starobinsky-primary-reduction-and-graded-dual-sewing"},
+    {"id":"edge:4082","from":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-primary-reduction-graded-sewing-result","polarity":"SUPPORTS"},
+    {"id":"edge:4083","from":"claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS","relation":"ABOUT","to":"concept:starobinsky-primary-contraction-and-right-graded-pairing"},
+    {"id":"edge:4084","from":"claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS","relation":"VALID_WITHIN","to":"scope:starobinsky-primary-reduction-and-graded-dual-sewing"},
+    {"id":"edge:4085","from":"claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-primary-reduction-graded-sewing-result","polarity":"SUPPORTS"},
+    {"id":"edge:4086","from":"claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY","relation":"ABOUT","to":"concept:starobinsky-primary-contraction-and-right-graded-pairing"},
+    {"id":"edge:4087","from":"claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY","relation":"VALID_WITHIN","to":"scope:starobinsky-primary-reduction-and-graded-dual-sewing"},
+    {"id":"edge:4088","from":"claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-primary-reduction-graded-sewing-result","polarity":"SUPPORTS"},
+    {"id":"edge:4089","from":"claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS","relation":"ABOUT","to":"concept:starobinsky-primary-contraction-and-right-graded-pairing"},
+    {"id":"edge:4090","from":"claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS","relation":"VALID_WITHIN","to":"scope:starobinsky-primary-reduction-and-graded-dual-sewing"},
+    {"id":"edge:4091","from":"claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-primary-reduction-graded-sewing-result","polarity":"SUPPORTS"},
+    {"id":"edge:4092","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DEFINED_IN","to":"artifact:starobinsky-primary-reduction-graded-sewing-runner"},
+    {"id":"edge:4093","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-primary-reduction-derivation"},
+    {"id":"edge:4094","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-graded-dual-sewing-derivation"},
+    {"id":"edge:4095","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-primary-reduction-graded-sewing-proof-index"},
+    {"id":"edge:4096","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-primary-reduction-lean"},
+    {"id":"edge:4097","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-graded-dual-sewing-lean"},
+    {"id":"edge:4098","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"RECORDED_IN","to":"artifact:starobinsky-primary-reduction-graded-sewing-result","note":"Raw result is the sole complete ledger."},
+    {"id":"edge:4099","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-primary-reduction-graded-sewing-report"},
+    {"id":"edge:4100","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DERIVED_FROM","to":"artifact:ice-starobinsky-source-induced-interval-bvbfv"},
+    {"id":"edge:4101","from":"evidence:starobinsky-primary-reduction-graded-sewing-result","relation":"DERIVED_FROM","to":"artifact:ice-starobinsky-graded-seam-adversarial-review"},
+    {"id":"edge:4102","from":"concept:starobinsky-primary-contraction-and-right-graded-pairing","relation":"EXTENDS","to":"concept:starobinsky-test-top-ghost-versus-coefficient-dual-support","note":"Supplies an explicit homotopy equivalence instead of the prior non-quasi-isomorphic coefficient-dual embedding."},
+    {"id":"edge:4103","from":"concept:starobinsky-primary-contraction-and-right-graded-pairing","relation":"CONTRASTS_WITH","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier","note":"A preserved test cohomology does not select a positive physical state."},
+    {"id":"edge:4104","from":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO","note":"Refines the top-support result through the primary contraction without changing physical-state scope."},
+    {"id":"edge:4105","from":"claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","note":"Carries declared Cauchy dual detectors through a right graded pairing, not a physical product."},
+    {"id":"edge:4106","from":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"A finite gauge domain and physical carrier remain open; no automatic successor work."},
+    {"id":"edge:4107","from":"claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"A BFV state module, kernel and CPT covariance remain open; no automatic successor work."},
+    {"id":"edge:4108","from":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"Test carrier/dual method context only."},
+    {"id":"edge:4109","from":"claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Polarization/pairing method context only; no full quantum BV-BFV claim."},
+    {"id":"edge:4110","from":"claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY","relation":"EXTENDS","to":"claim:STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES","note":"Constructs an explicit continuous transpose preimage for one stated topology; not every distributional completion."},
+    {"id":"edge:4111","from":"claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY","relation":"CONTRASTS_WITH","to":"claim:STAROBINSKY_GRADED_DUAL_PAIRING_PRESERVES_DECLARED_CAUCHY_DUAL_DETECTORS","note":"Coefficient-only top degree and actual reversed-dual degree -2 are different objects."},
+    {"id":"edge:4112","from":"claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS","relation":"CITES","to":"source:cattaneo-mnev-wernli-2022-constrained-interval","note":"CMW sections 8-9.1 supply component and endpoint conventions; the primary split is derived in the local note."},
+    {"id":"edge:4113","from":"claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS","relation":"DOCUMENTED_BY","to":"artifact:ice-starobinsky-source-induced-interval-bvbfv","note":"The two relative boundary terms are retained, with no quantum cycle assertion."},
+    {"id":"edge:4114","from":"claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS","relation":"CONTRASTS_WITH","to":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","note":"Bulk formal doublets cannot remove compact boundary cohomology without a compatible boundary map."},
+    {"id":"edge:4115","from":"claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"The explicit relative endpoint terms identify missing boundary-domain and quantization input."},
+    {"id":"edge:4116","from":"claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2","relation":"CITES","to":"source:baer-ginoux-pfaeffle-2007-wave-equations","note":"Cauchy uniqueness on the existing log-a normally hyperbolic extension is the analytic input for H1=0."}
   ],
   "kg_bridges": [
     {
