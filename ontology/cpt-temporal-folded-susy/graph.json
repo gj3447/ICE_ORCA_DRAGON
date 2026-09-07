@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T07:00:58Z",
+  "updated_at_utc": "2026-09-07T07:28:55Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -17127,6 +17127,95 @@
     "artifact_kind": "report",
     "path": "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY.md",
     "sha256": "74a88bc78b8e97f2e457b2c54fdd48d668485355f5702cad83e7a1d644478f34"
+},
+{
+    "id": "evidence:starobinsky-bfv-dual-structure-lean-result",
+    "type": "evidence",
+    "title": "Conditional Lean BFV carrier, constrained-dual and quotient evidence",
+    "summary": "One clean multi-module Lean audit accepts 36 theorems: algebraic repaired-carrier/minimal-complex implications, constrained-dual implications under explicit Green/on-shell/witness hypotheses, and quotient-form implications under declared covariance. Actual Weyl/PDE/Green/N-collar/KG/CPT hypotheses remain analytic inputs; the raw result is the complete proof ledger.",
+    "state": "VALID_RUN_CONDITIONAL_LEAN_ALGEBRA_WITH_EXPLICIT_ANALYTIC_INPUTS",
+    "observed_status": "SCOPED_LEAN_BFV_DUAL_STRUCTURE_WITH_EXPLICIT_ANALYTIC_HYPOTHESES",
+    "check_ids": [
+        "modules[0].theorems.CptSewing.BFVCore.degree_zero_trivial_of_primary_injective",
+        "modules[1].theorems.CptSewing.ConstrainedDual.pairing_onShell_nonzero_constrainedDual",
+        "modules[2].theorems.CptSewing.DualQuotient.quotientForm_diag_eq_zero_iff",
+        "modules[2].theorems.CptSewing.DualQuotient.quotientForm_quotientK_covariant"
+    ]
+},
+{
+    "id": "artifact:starobinsky-bfv-dual-structure-lean-runner",
+    "type": "artifact",
+    "title": "Multi-module BFV dual-structure Lean runner",
+    "summary": "Clean bounded runner that audits all three Lean modules and records explicit unformalized analytic inputs.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "runner",
+    "path": "cpt_temporal_folded_susy/starobinsky_bfv_dual_structure_lean.py",
+    "sha256": "fab2f50c3bf8e53458dc62c9f16560e2f18bdc143d2111c8ba741f12a3ac9a10",
+    "introduced_in_commit": "c95d64bc2087f90781f04666c4116f1e7250543d"
+},
+{
+    "id": "artifact:starobinsky-bfv-dual-structure-proof-index",
+    "type": "artifact",
+    "title": "Multi-module BFV dual-structure Lean proof index",
+    "summary": "Pinned theorem/module inventory for the conditional carrier, constrained-dual and quotient audit.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "proof_index",
+    "path": "formal/cpt_sewing/bfv-dual-structure-proof-index.json",
+    "sha256": "38e1c80ea63ccddb149a70e6dd6dc4b48d05b2f6e2ba07fe30339448bb425164",
+    "introduced_in_commit": "c95d64bc2087f90781f04666c4116f1e7250543d"
+},
+{
+    "id": "artifact:starobinsky-bfv-core-lean",
+    "type": "artifact",
+    "title": "Abstract repaired carrier and minimal-complex Lean module",
+    "summary": "Seven conditional algebraic carrier/minimal-complex theorems; primary injectivity and any differential realization remain hypotheses.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "lean_source",
+    "path": "formal/cpt_sewing/CptSewing/BFVCore.lean",
+    "sha256": "c3df20e92b9de7b8fecf44b8d8d749c822cb14f9b2320b6f5ede4251b2f9807b",
+    "introduced_in_commit": "c0e57c8d33f5ce578be215acc7bc0768c56ef168"
+},
+{
+    "id": "artifact:starobinsky-constrained-dual-lean",
+    "type": "artifact",
+    "title": "Abstract constrained-dual Lean module",
+    "summary": "Twelve conditional range-annihilation, selected Green/on-shell witness and rank-one form theorems; actual analytic hypotheses remain external inputs.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "lean_source",
+    "path": "formal/cpt_sewing/CptSewing/ConstrainedDual.lean",
+    "sha256": "1db47de8cb724d3250928cb92c8f56442ffec3d3c3429030e5fe504e31ae7c64",
+    "introduced_in_commit": "c95d64bc2087f90781f04666c4116f1e7250543d"
+},
+{
+    "id": "artifact:starobinsky-dual-quotient-lean",
+    "type": "artifact",
+    "title": "Abstract dual-quotient Lean module",
+    "summary": "Seventeen quotient, positive form and conditional kinematic-conjugation theorems; no antilinear CPT or physical-state realization.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "lean_source",
+    "path": "formal/cpt_sewing/CptSewing/DualQuotient.lean",
+    "sha256": "f40109c178d7b1d79867dfc7b37694e196f9f297d876bd3bc1beca59fab011a3",
+    "introduced_in_commit": "c0e57c8d33f5ce578be215acc7bc0768c56ef168"
+},
+{
+    "id": "artifact:starobinsky-bfv-dual-structure-lean-result",
+    "type": "artifact",
+    "title": "Multi-module BFV dual-structure Lean raw result",
+    "summary": "Raw SSOT for 36 accepted theorems, module pins, standard-axiom audit, environment and explicit analytic-input exclusions.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "result",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_DUAL_STRUCTURE_LEAN_RESULT.json",
+    "sha256": "9c4bfb637d0a4d576e40da546b6d018658bbdb4882e1de42fe60bf6aa27369bb"
+},
+{
+    "id": "artifact:starobinsky-bfv-dual-structure-lean-report",
+    "type": "artifact",
+    "title": "Multi-module BFV dual-structure Lean report",
+    "summary": "Completed conditional formalization report separating kernel-checked algebra from actual analytic and physical hypotheses.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "report",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_DUAL_STRUCTURE_LEAN.md",
+    "sha256": "a3b99ac844bd8bc9b57387b5266761c15bcc35da8119bfb86147e46a60ab7d82"
 }
   ],
   "edges": [
@@ -37643,7 +37732,18 @@
     {"id":"edge:3972","from":"evidence:starobinsky-dual-cauchy-result","relation":"RECORDED_IN","to":"artifact:starobinsky-dual-cauchy-result","note":"Raw result is the sole complete check ledger."},
     {"id":"edge:3973","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-dual-cauchy-report"},
     {"id":"edge:3974","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","note":"The dual construction resolves the test-versus-dual contrast without changing the minimal test-complex H0 result."},
-    {"id":"edge:3975","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Positivity and kinematic K covariance leave seed, normalization, physical carrier/product and full CPT sewing open; no automatic successor work."}
+    {"id":"edge:3975","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Positivity and kinematic K covariance leave seed, normalization, physical carrier/product and full CPT sewing open; no automatic successor work."},
+    {"id":"edge:3976","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"PART_OF","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier","note":"Conditional formal support only; it adds no physical-state or CPT-sewing construction."},
+    {"id":"edge:3977","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"DEFINED_IN","to":"artifact:starobinsky-bfv-dual-structure-lean-runner"},
+    {"id":"edge:3978","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-bfv-dual-structure-proof-index","note":"The pinned index fixes the exact 7+12+17 module/theorem inventory."},
+    {"id":"edge:3979","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-bfv-core-lean","note":"Carrier/minimal-complex consequences remain conditional on primary injectivity and differential realization."},
+    {"id":"edge:3980","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-constrained-dual-lean","note":"Green, on-shell and nonzero-witness facts remain explicit analytic hypotheses."},
+    {"id":"edge:3981","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-dual-quotient-lean","note":"K covariance is conditional and does not formalize an antilinear CPT lift."},
+    {"id":"edge:3982","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"RECORDED_IN","to":"artifact:starobinsky-bfv-dual-structure-lean-result","note":"Raw result is the sole complete 36-theorem check ledger."},
+    {"id":"edge:3983","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-bfv-dual-structure-lean-report"},
+    {"id":"edge:3984","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-dual-structure-lean-result","polarity":"SUPPORTS","note":"Supports the conditional primary-injectivity implication only; the compact-N collar proof remains analytic."},
+    {"id":"edge:3985","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-dual-structure-lean-result","polarity":"SUPPORTS","note":"Supports the conditional Green/on-shell/witness implication only; actual Cauchy, Green and witness inputs remain analytic."},
+    {"id":"edge:3986","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-dual-structure-lean-result","polarity":"SUPPORTS","note":"Supports the abstract quotient and declared covariance implication only; it does not formalize kinematic K or full CPT."}
   ],
   "kg_bridges": [
     {

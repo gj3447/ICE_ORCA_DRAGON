@@ -1,0 +1,1692 @@
+{
+  "schema": "ice-bfv-dual-structure-lean/v1",
+  "status": "SCOPED_LEAN_BFV_DUAL_STRUCTURE_WITH_EXPLICIT_ANALYTIC_HYPOTHESES",
+  "started_at_utc": "2026-09-07T07:26:23.535452+00:00",
+  "question": "Which carrier, constrained-dual and positive-quotient consequences follow in Lean from explicit algebraic and analytic hypotheses?",
+  "scope": "SUPPORTING_METHOD: abstract algebraic formalization of the existing fixed-Neumann analysis",
+  "non_claim": "No Lean PDE existence/Green integral proof, physical inner-product selection, full BFV/CPT lift or original cycle.",
+  "reproduction_command": "./ice run starobinsky_bfv_dual_structure_lean",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "analytic_inputs_not_formalized": [
+    "Actual Weyl differential realization and commutation on the smooth carrier",
+    "Cauchy existence, uniqueness, propagation, seed injectivity and interior nonzero witness",
+    "Green cancellation for the selected bulk state and actual boundary tests",
+    "Full-R_phi KG current conservation/degeneracy and N-collar primary injectivity",
+    "Actual conjugation covariance and seed separator witnesses"
+  ],
+  "modules": [
+    {
+      "source": "CptSewing/BFVCore.lean",
+      "scope": "Algebraic iterated-boundary carrier and minimal coefficient complex; no closed operator realization",
+      "expected_theorem_count": 7,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/BFVCoreAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "f6062548c46e27dfa5a16ad07b66629a0ec0409b6502c625090d0cd609272011",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.BFVCore.core_boundary.{u_1, u_2} {V : Type u_1} {B : Type u_2} (H p : V → V) (boundary : V → B) (z : B)\n  {v : V} (hv : v ∈ CptSewing.BFVCore.repairedCore H p boundary z) : boundary v = z",
+            "endPos": {
+              "column": 6,
+              "line": 91
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 91
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.BFVCore.core_boundary' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 92
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 92
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.BFVCore.core_primary_stable.{u_1, u_2} {V : Type u_1} {B : Type u_2} (H p : V → V) (boundary : V → B)\n  (z : B) : Set.MapsTo p (CptSewing.BFVCore.repairedCore H p boundary z) (CptSewing.BFVCore.repairedCore H p boundary z)",
+            "endPos": {
+              "column": 6,
+              "line": 93
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 93
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.BFVCore.core_primary_stable' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 94
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 94
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.BFVCore.core_H_stable.{u_1, u_2} {V : Type u_1} {B : Type u_2} (H p : V → V) (boundary : V → B) (z : B)\n  (commute : Function.Commute H p) :\n  Set.MapsTo H (CptSewing.BFVCore.repairedCore H p boundary z) (CptSewing.BFVCore.repairedCore H p boundary z)",
+            "endPos": {
+              "column": 6,
+              "line": 95
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 95
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.BFVCore.core_H_stable' depends on axioms: [propext]",
+            "endPos": {
+              "column": 6,
+              "line": 96
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 96
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.BFVCore.stable_boundary_carrier_subset_core.{u_1, u_2} {V : Type u_1} {B : Type u_2} (H p : V → V)\n  (boundary : V → B) (z : B) (D : Set V) (stableH : Set.MapsTo H D D) (stableP : Set.MapsTo p D D)\n  (traceZero : ∀ v ∈ D, boundary v = z) : D ⊆ CptSewing.BFVCore.repairedCore H p boundary z",
+            "endPos": {
+              "column": 6,
+              "line": 97
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 97
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.BFVCore.stable_boundary_carrier_subset_core' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 98
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 98
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.BFVCore.minimal_complex_square_zero.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (H p : V →ₗ[ℂ] V)\n  (commute : Function.Commute ⇑H ⇑p) (v : V) : CptSewing.BFVCore.d1 H p (CptSewing.BFVCore.d0 H p v) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 99
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 99
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.BFVCore.minimal_complex_square_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 100
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 100
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.BFVCore.degree_zero_closed_iff.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (H p : V →ₗ[ℂ] V) (v : V) :\n  CptSewing.BFVCore.d0 H p v = 0 ↔ H v = 0 ∧ p v = 0",
+            "endPos": {
+              "column": 6,
+              "line": 101
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 101
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.BFVCore.degree_zero_closed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 102
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 102
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.BFVCore.degree_zero_trivial_of_primary_injective.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (H p : V →ₗ[ℂ] V) (primaryInjective : Function.Injective ⇑p) (v : V) : CptSewing.BFVCore.d0 H p v = 0 ↔ v = 0",
+            "endPos": {
+              "column": 6,
+              "line": 103
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 103
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.BFVCore.degree_zero_trivial_of_primary_injective' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 104
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-x6xpmy_n/BFVCoreAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 104
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.BFVCore.core_boundary": {
+          "axioms": [],
+          "accepted": true
+        },
+        "CptSewing.BFVCore.core_primary_stable": {
+          "axioms": [],
+          "accepted": true
+        },
+        "CptSewing.BFVCore.core_H_stable": {
+          "axioms": [
+            "propext"
+          ],
+          "accepted": true
+        },
+        "CptSewing.BFVCore.stable_boundary_carrier_subset_core": {
+          "axioms": [],
+          "accepted": true
+        },
+        "CptSewing.BFVCore.minimal_complex_square_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.BFVCore.degree_zero_closed_iff": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.BFVCore.degree_zero_trivial_of_primary_injective": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 7
+    },
+    {
+      "source": "CptSewing/ConstrainedDual.lean",
+      "scope": "Constraint-range annihilation and Green/on-shell/witness implications; actual analytic hypotheses remain inputs",
+      "expected_theorem_count": 12,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/ConstrainedDualAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "c1adbce975e1347d56d68cd6ad1890245f400c23ffb4f27e51ce78df19eaff98",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.mem_constrainedDual_iff.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (H p : Module.End ℂ V) (T : Module.Dual ℂ V) :\n  T ∈ CptSewing.ConstrainedDual.constrainedDual H p ↔ T ∘ₗ H = 0 ∧ T ∘ₗ p = 0",
+            "endPos": {
+              "column": 6,
+              "line": 147
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 147
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.mem_constrainedDual_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 148
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 148
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.constrainedDual_apply_H.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  {H p : Module.End ℂ V} {T : Module.Dual ℂ V} (hT : T ∈ CptSewing.ConstrainedDual.constrainedDual H p) (u : V) :\n  T (H u) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 149
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 149
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.constrainedDual_apply_H' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 150
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 150
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.constrainedDual_apply_p.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  {H p : Module.End ℂ V} {T : Module.Dual ℂ V} (hT : T ∈ CptSewing.ConstrainedDual.constrainedDual H p) (u : V) :\n  T (p u) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 151
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 151
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.constrainedDual_apply_p' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 152
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 152
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.constraint_span_le_ker.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  {H p : Module.End ℂ V} {T : Module.Dual ℂ V} (hT : T ∈ CptSewing.ConstrainedDual.constrainedDual H p) :\n  Submodule.span ℂ (Set.range ⇑H ∪ Set.range ⇑p) ≤ LinearMap.ker T",
+            "endPos": {
+              "column": 6,
+              "line": 153
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 153
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.constraint_span_le_ker' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 154
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 154
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.inducedForm_H_left.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] {H p : Module.End ℂ V}\n  {T : Module.Dual ℂ V} (hT : T ∈ CptSewing.ConstrainedDual.constrainedDual H p) (u v : V) :\n  CptSewing.ConstrainedDual.inducedForm T (H u) v = 0",
+            "endPos": {
+              "column": 6,
+              "line": 155
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 155
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.inducedForm_H_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 156
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 156
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.inducedForm_H_right.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] {H p : Module.End ℂ V}\n  {T : Module.Dual ℂ V} (hT : T ∈ CptSewing.ConstrainedDual.constrainedDual H p) (u v : V) :\n  CptSewing.ConstrainedDual.inducedForm T u (H v) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 157
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 157
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.inducedForm_H_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 158
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 158
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.inducedForm_p_left.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] {H p : Module.End ℂ V}\n  {T : Module.Dual ℂ V} (hT : T ∈ CptSewing.ConstrainedDual.constrainedDual H p) (u v : V) :\n  CptSewing.ConstrainedDual.inducedForm T (p u) v = 0",
+            "endPos": {
+              "column": 6,
+              "line": 159
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 159
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.inducedForm_p_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 160
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 160
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.inducedForm_p_right.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] {H p : Module.End ℂ V}\n  {T : Module.Dual ℂ V} (hT : T ∈ CptSewing.ConstrainedDual.constrainedDual H p) (u v : V) :\n  CptSewing.ConstrainedDual.inducedForm T u (p v) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 161
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 161
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.inducedForm_p_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 162
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 162
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.inducedForm_diag_pos.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] {T : Module.Dual ℂ V}\n  {w : V} (hw : T w ≠ 0) : 0 < (CptSewing.ConstrainedDual.inducedForm T w w).re",
+            "endPos": {
+              "column": 6,
+              "line": 163
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 163
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.inducedForm_diag_pos' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 164
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 164
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.kernels_ne_of_separator.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (T U : Module.Dual ℂ V) (w : V) (hTw : T w = 0) (hUw : U w ≠ 0) : LinearMap.ker T ≠ LinearMap.ker U",
+            "endPos": {
+              "column": 6,
+              "line": 165
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 165
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.kernels_ne_of_separator' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 166
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 166
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.pairing_mem_constrainedDual.{u_1, u_2} {V : Type u_1} {S : Type u_2} [AddCommGroup V]\n  [Module ℂ V] [AddCommGroup S] [Module ℂ S] (H p : Module.End ℂ V) (A B : Module.End ℂ S)\n  (pair : S →ₗ[ℂ] Module.Dual ℂ V) (s : S) (greenH : ∀ (u : V), (pair s) (H u) = (pair (A s)) u)\n  (greenP : ∀ (u : V), (pair s) (p u) = -(pair (B s)) u) (onShellH : A s = 0) (onShellP : B s = 0) :\n  pair s ∈ CptSewing.ConstrainedDual.constrainedDual H p",
+            "endPos": {
+              "column": 6,
+              "line": 167
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 167
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.pairing_mem_constrainedDual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 168
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 168
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ConstrainedDual.pairing_onShell_nonzero_constrainedDual.{u_1, u_2} {V : Type u_1} {S : Type u_2}\n  [AddCommGroup V] [Module ℂ V] [AddCommGroup S] [Module ℂ S] (H p : Module.End ℂ V) (A B : Module.End ℂ S)\n  (pair : S →ₗ[ℂ] Module.Dual ℂ V) (s : S) (w : V) (greenH : ∀ (u : V), (pair s) (H u) = (pair (A s)) u)\n  (greenP : ∀ (u : V), (pair s) (p u) = -(pair (B s)) u) (onShellH : A s = 0) (onShellP : B s = 0)\n  (witness : (pair s) w ≠ 0) : ∃ T ∈ CptSewing.ConstrainedDual.constrainedDual H p, T ≠ 0",
+            "endPos": {
+              "column": 6,
+              "line": 169
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 169
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ConstrainedDual.pairing_onShell_nonzero_constrainedDual' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 170
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-w6lo_zmh/ConstrainedDualAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 170
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.ConstrainedDual.mem_constrainedDual_iff": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.constrainedDual_apply_H": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.constrainedDual_apply_p": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.constraint_span_le_ker": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.inducedForm_H_left": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.inducedForm_H_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.inducedForm_p_left": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.inducedForm_p_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.inducedForm_diag_pos": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.kernels_ne_of_separator": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.pairing_mem_constrainedDual": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ConstrainedDual.pairing_onShell_nonzero_constrainedDual": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 12
+    },
+    {
+      "source": "CptSewing/DualQuotient.lean",
+      "scope": "Actual kernel quotient, positive sesquilinear form and conditional kinematic conjugation; no physical selection or full CPT",
+      "expected_theorem_count": 17,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/DualQuotientAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "a96ebb501021340e3e7363ce42cdd3445bd139a9b54bcb9e58603661c229ca1d",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientFunctional_mk.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (v : V) : (CptSewing.DualQuotient.quotientFunctional T) (Submodule.Quotient.mk v) = T v",
+            "endPos": {
+              "column": 6,
+              "line": 183
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 183
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientFunctional_mk' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 184
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 184
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientFunctional_injective.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ) :\n  Function.Injective ⇑(CptSewing.DualQuotient.quotientFunctional T)",
+            "endPos": {
+              "column": 6,
+              "line": 185
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 185
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientFunctional_injective' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 186
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 186
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.functional_surjective_of_ne_zero.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0) : Function.Surjective ⇑T",
+            "endPos": {
+              "column": 6,
+              "line": 187
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 187
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.functional_surjective_of_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 188
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 188
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientEquivComplex_mk.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (hT : T ≠ 0) (v : V) : (CptSewing.DualQuotient.quotientEquivComplex T hT) (Submodule.Quotient.mk v) = T v",
+            "endPos": {
+              "column": 6,
+              "line": 189
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 189
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientEquivComplex_mk' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 190
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 190
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_hermitian.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (q r : CptSewing.DualQuotient.StateQuotient T) :\n  (starRingEnd ℂ) (CptSewing.DualQuotient.quotientForm T q r) = CptSewing.DualQuotient.quotientForm T r q",
+            "endPos": {
+              "column": 6,
+              "line": 191
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 191
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 192
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 192
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_add_right.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (q r s : CptSewing.DualQuotient.StateQuotient T) :\n  CptSewing.DualQuotient.quotientForm T q (r + s) =\n    CptSewing.DualQuotient.quotientForm T q r + CptSewing.DualQuotient.quotientForm T q s",
+            "endPos": {
+              "column": 6,
+              "line": 193
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 193
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 194
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 194
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_smul_right.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (c : ℂ) (q r : CptSewing.DualQuotient.StateQuotient T) :\n  CptSewing.DualQuotient.quotientForm T q (c • r) = c • CptSewing.DualQuotient.quotientForm T q r",
+            "endPos": {
+              "column": 6,
+              "line": 195
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 195
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_smul_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 196
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 196
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_add_left.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (q r s : CptSewing.DualQuotient.StateQuotient T) :\n  CptSewing.DualQuotient.quotientForm T (q + r) s =\n    CptSewing.DualQuotient.quotientForm T q s + CptSewing.DualQuotient.quotientForm T r s",
+            "endPos": {
+              "column": 6,
+              "line": 197
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 197
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 198
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 198
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_smul_left.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ) (c : ℂ)\n  (q r : CptSewing.DualQuotient.StateQuotient T) :\n  CptSewing.DualQuotient.quotientForm T (c • q) r = (starRingEnd ℂ) c • CptSewing.DualQuotient.quotientForm T q r",
+            "endPos": {
+              "column": 6,
+              "line": 199
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 199
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_smul_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 200
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 200
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_diag_real.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (q : CptSewing.DualQuotient.StateQuotient T) :\n  (CptSewing.DualQuotient.quotientForm T q q).re = Complex.normSq ((CptSewing.DualQuotient.quotientFunctional T) q)",
+            "endPos": {
+              "column": 6,
+              "line": 201
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 201
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_diag_real' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 202
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 202
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_diag_nonneg.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (q : CptSewing.DualQuotient.StateQuotient T) : 0 ≤ (CptSewing.DualQuotient.quotientForm T q q).re",
+            "endPos": {
+              "column": 6,
+              "line": 203
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 203
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_diag_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 204
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 204
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_diag_eq_zero_iff.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (q : CptSewing.DualQuotient.StateQuotient T) : (CptSewing.DualQuotient.quotientForm T q q).re = 0 ↔ q = 0",
+            "endPos": {
+              "column": 6,
+              "line": 205
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 205
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_diag_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 206
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 206
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.covariance_preserves_kernel.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (K : V → V) (hCov : ∀ (v : V), T (K v) = (starRingEnd ℂ) (T v)) ⦃x y : V⦄ : x - y ∈ T.ker → K x - K y ∈ T.ker",
+            "endPos": {
+              "column": 6,
+              "line": 207
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 207
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.covariance_preserves_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 208
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 208
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientK_mk.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ) (K : V → V)\n  (hK : ∀ ⦃x y : V⦄, x - y ∈ T.ker → K x - K y ∈ T.ker) (v : V) :\n  CptSewing.DualQuotient.quotientK T K hK (Submodule.Quotient.mk v) = Submodule.Quotient.mk (K v)",
+            "endPos": {
+              "column": 6,
+              "line": 209
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 209
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientK_mk' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 210
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 210
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientK_involutive.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (K : V → V) (hK : ∀ ⦃x y : V⦄, x - y ∈ T.ker → K x - K y ∈ T.ker) (hInv : Function.Involutive K) :\n  Function.Involutive (CptSewing.DualQuotient.quotientK T K hK)",
+            "endPos": {
+              "column": 6,
+              "line": 211
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 211
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientK_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 212
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 212
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientFunctional_quotientK.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (K : V → V) (hK : ∀ ⦃x y : V⦄, x - y ∈ T.ker → K x - K y ∈ T.ker) (hCov : ∀ (v : V), T (K v) = (starRingEnd ℂ) (T v))\n  (q : CptSewing.DualQuotient.StateQuotient T) :\n  (CptSewing.DualQuotient.quotientFunctional T) (CptSewing.DualQuotient.quotientK T K hK q) =\n    (starRingEnd ℂ) ((CptSewing.DualQuotient.quotientFunctional T) q)",
+            "endPos": {
+              "column": 6,
+              "line": 213
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 213
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientFunctional_quotientK' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 214
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 214
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.DualQuotient.quotientForm_quotientK_covariant.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (T : V →ₗ[ℂ] ℂ) (K : V → V) (hK : ∀ ⦃x y : V⦄, x - y ∈ T.ker → K x - K y ∈ T.ker)\n  (hCov : ∀ (v : V), T (K v) = (starRingEnd ℂ) (T v)) (q r : CptSewing.DualQuotient.StateQuotient T) :\n  CptSewing.DualQuotient.quotientForm T (CptSewing.DualQuotient.quotientK T K hK q)\n      (CptSewing.DualQuotient.quotientK T K hK r) =\n    (starRingEnd ℂ) (CptSewing.DualQuotient.quotientForm T q r)",
+            "endPos": {
+              "column": 6,
+              "line": 215
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 215
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.DualQuotient.quotientForm_quotientK_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 216
+            },
+            "fileName": "/var/tmp/orca/ice-bfv-dual-structure-7k7iq31t/DualQuotientAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 216
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.DualQuotient.quotientFunctional_mk": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientFunctional_injective": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.functional_surjective_of_ne_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientEquivComplex_mk": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_hermitian": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_add_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_smul_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_add_left": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_smul_left": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_diag_real": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_diag_nonneg": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_diag_eq_zero_iff": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.covariance_preserves_kernel": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientK_mk": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientK_involutive": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientFunctional_quotientK": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.DualQuotient.quotientForm_quotientK_covariant": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 17
+    }
+  ],
+  "provenance": {
+    "source_commit": "c0e57c8d33f5ce578be215acc7bc0768c56ef168",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_bfv_dual_structure_lean.py": {
+        "sha256": "fab2f50c3bf8e53458dc62c9f16560e2f18bdc143d2111c8ba741f12a3ac9a10",
+        "bytes": 7547
+      },
+      "formal/cpt_sewing/bfv-dual-structure-proof-index.json": {
+        "sha256": "38e1c80ea63ccddb149a70e6dd6dc4b48d05b2f6e2ba07fe30339448bb425164",
+        "bytes": 2138
+      },
+      "formal/cpt_sewing/CptSewing/BFVCore.lean": {
+        "sha256": "c3df20e92b9de7b8fecf44b8d8d749c822cb14f9b2320b6f5ede4251b2f9807b",
+        "bytes": 3482
+      },
+      "formal/cpt_sewing/CptSewing/ConstrainedDual.lean": {
+        "sha256": "1db47de8cb724d3250928cb92c8f56442ffec3d3c3429030e5fe504e31ae7c64",
+        "bytes": 5797
+      },
+      "formal/cpt_sewing/CptSewing/DualQuotient.lean": {
+        "sha256": "f40109c178d7b1d79867dfc7b37694e196f9f297d876bd3bc1beca59fab011a3",
+        "bytes": 7795
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md": {
+        "sha256": "4c5ff22a482d2bbcebad04e7de2f30a612777cb38136386a330189487550249c",
+        "bytes": 9385
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_RESULT.json": {
+        "sha256": "9cc9d9533d105de6bd2be58e93a789581846d0d67d4efc80166825936af84f2d",
+        "bytes": 14172
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md": {
+        "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6",
+        "bytes": 8392
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      }
+    },
+    "python": "3.13.5",
+    "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ]
+  },
+  "theorem_count": 36,
+  "elapsed_seconds": 7.45957423793152
+}
