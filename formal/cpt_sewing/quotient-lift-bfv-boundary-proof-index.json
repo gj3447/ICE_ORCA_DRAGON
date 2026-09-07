@@ -1,0 +1,30 @@
+{
+  "schema": "ice-lean-multimodule-proof-index/v1",
+  "modules": [
+    {
+      "source": "CptSewing/QuotientLift.lean",
+      "namespace": "CptSewing.QuotientLift",
+      "scope": "Abstract split quotient identities and same-carrier symmetric-injective adjoint obstruction; actual PDE construction remains analytic",
+      "theorems": [
+        "quotientLift_action",
+        "quotientLift_kills_right",
+        "quotientLift_sandwich",
+        "quotientLift_ne_zero",
+        "correction_killed_by_quotient",
+        "zero_of_injective_commutes_kills_right",
+        "adjoint_zero_of_injective_symmetric_kills_right",
+        "zero_of_injective_symmetric_adjoint_kills_right"
+      ]
+    },
+    {
+      "source": "CptSewing/CanonicalBoundary.lean",
+      "namespace": "CptSewing.CanonicalBoundary",
+      "scope": "Finite real-polynomial impossibility for the normalized actual fixed-a/free-ghost equations; Hamiltonian-to-equation map is CAS/analytic",
+      "theorems": [
+        "potential_eq_two_thirds",
+        "momentum_sq_eq_128",
+        "no_real_free_ghost_full_tangency"
+      ]
+    }
+  ]
+}
