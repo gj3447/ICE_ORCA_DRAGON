@@ -1,0 +1,420 @@
+{
+  "schema": "ice-starobinsky-dual-cauchy/v1",
+  "status": "SCOPED_NEUMANN_CAUCHY_DUAL_FAMILY_WITH_DEGENERATE_KG_FORM",
+  "started_at_utc": "2026-09-07T06:59:18.886413+00:00",
+  "question": "Does the repaired Neumann test-space dual contain nonzero simultaneous actual H and p_N solutions, and what do KG and chosen rank-one forms show?",
+  "scope": "SUPPORTING_METHOD: fixed Weyl ordering, finite a slab, explicit Neumann choice",
+  "non_claim": "No selected physical Hilbert/RAQ product, full BFV/CPT sewing, original cycle or new physics.",
+  "reproduction_command": "./ice run starobinsky_dual_cauchy",
+  "provenance": {
+    "source_commit": "bba3ed8702d5c4e929cd65f2a531bf1147f004ec",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_dual_cauchy.py": {
+        "sha256": "295d921d0be7602173ae2cf40a43fce8ace1cae2af204d2caeb8c03e80eb2cb3",
+        "bytes": 11960
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md": {
+        "sha256": "4c5ff22a482d2bbcebad04e7de2f30a612777cb38136386a330189487550249c",
+        "bytes": 9385
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN_DERIVATION.md": {
+        "sha256": "a7a62e4084554eba5f1dd5b9100903f1ea689c448c9952062d69686daa2f098f",
+        "bytes": 8142
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN_RESULT.json": {
+        "sha256": "929bc9d5acdf583e7335efa57255a2cca48665dced009b3fe4f6e35c9305c5e9",
+        "bytes": 15748
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md": {
+        "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6",
+        "bytes": 8392
+      },
+      "formal/cpt_sewing/CptSewing/DualState.lean": {
+        "sha256": "daf277427a6455a0cbbfd24c04382c68e3bd4c4914ec39b2723386053655f506",
+        "bytes": 1518
+      },
+      "formal/cpt_sewing/dual-state-proof-index.json": {
+        "sha256": "5b4bf5f676da4c768eb91a4701337bf7afdb326261e0e569243a909bc9611372",
+        "bytes": 258
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "actual_Weyl_log_rescale_PDE",
+        "group": "actual_Weyl_Cauchy_transform",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "Weyl_correction_scaled_before_rescale",
+        "group": "actual_Weyl_Cauchy_transform",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "terminal_s_trace_is_g",
+        "group": "actual_Weyl_Cauchy_transform",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "terminal_Neumann_derivative_zero",
+        "group": "actual_Weyl_Cauchy_transform",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "general_Robin_transformed_trace",
+        "group": "actual_Weyl_Cauchy_transform",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_H_bilinear_Green_divergence",
+        "group": "Green_primary_current",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "N_independent_state_primary_zero",
+        "group": "Green_primary_current",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "Neumann_upper_Green_face_zero",
+        "group": "Green_primary_current",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "on_shell_full_phi_current_divergence",
+        "group": "Green_primary_current",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "common_real_Robin_KG_terminal_zero",
+        "group": "Green_primary_current",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "original_a_Green_current_rescaling",
+        "group": "Green_primary_current",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "rank_one_Hermitian",
+        "group": "rank_one_form_scope",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "rank_one_diagonal_sum_of_squares",
+        "group": "rank_one_form_scope",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "rank_one_K_covariance",
+        "group": "rank_one_form_scope",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "rank_one_left_constraint_kernel",
+        "group": "rank_one_form_scope",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "rank_one_right_constraint_kernel",
+        "group": "rank_one_form_scope",
+        "passed": true,
+        "residual": "0"
+      }
+    ],
+    "operator": {
+      "f": "-1/(24*pi**2*a)",
+      "b": "1/(4*pi**2*a**3)",
+      "W": "3*pi**2*a**3*(1 - exp(-sqrt(6)*phi/3))**2/2 - 6*pi**2*a + 1/(48*pi**2*a**3)",
+      "P_potential": "36*pi**4*(1 - exp(-sqrt(6)*phi/3))**2*exp(6*x) - 144*pi**4*exp(4*x) - 1/2",
+      "ordering_density": "actual Weyl; hbar=1; flat auxiliary density"
+    },
+    "domain": {
+      "box": "[1/2,2] x [-1,2] x [1/4,2]",
+      "test_space": "smooth collar-zero except a=2; partial_a H^k p_N^m u|_2=0 for all k,m>=0",
+      "PDE_extension": "open R_x x R_phi, metric -dx^2+dphi^2/6; then restrict"
+    },
+    "analytic_construction": {
+      "proof_kind": "source-theorem application and analytic Green/injectivity proof; NOT executed PDE or Lean existence proof",
+      "source": "https://arxiv.org/pdf/0806.1036v1",
+      "locator": "Theorems 3.2.11-12, printed pp.85-87",
+      "Cauchy_data": "chi(log 2,phi)=g/2, chi_x(log 2,phi)=-g/2, g in C_c^infty((-1,2))",
+      "dual": "T_g[u]=integral_B a chi_g(log a,phi) u; injective in g; T_g H=T_g p_N=0",
+      "KG": "i integral over all R_phi (bar chi_1 chi_2,x-bar chi_1,x chi_2)=0 for all pairs in this family",
+      "current_scope": "conservation over whole R_phi, not a truncated box",
+      "positive_form": "real nonzero seed; F_T(u,v)=bar T[u] T[v]; Phi/ker T is a positive one-dimensional quotient",
+      "noncanonical": "independent real seeds give different kernels; arbitrary positive rescaling",
+      "K_scope": "conjugation antiunitary involution on chosen quotient, not full CPT"
+    },
+    "analytic_proof": "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md",
+    "remaining": "observable-* compatible physical product/RAQ, full BFV ghosts, mQME/sewing kernel and original cycle"
+  },
+  "lean": {
+    "version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ],
+    "elaboration": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--json",
+        "-DwarningAsError=true",
+        "<temporary>/DualStateAudit.lean"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "payload_sha256": "b33ad7fb3e94ad7d9f633554ada203ccb365d264c38e93e10cea8d140cbcaa20",
+      "messages": [
+        {
+          "caption": "",
+          "data": "CptSewing.DualState.rankOne_hermitian (z w : ℂ) :\n  (starRingEnd ℂ) (CptSewing.DualState.rankOne z w) = CptSewing.DualState.rankOne w z",
+          "endPos": {
+            "column": 6,
+            "line": 47
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 47
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.DualState.rankOne_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 48
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 48
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.DualState.rankOne_diag_positive_definite (z : ℂ) :\n  0 ≤ (CptSewing.DualState.rankOne z z).re ∧ ((CptSewing.DualState.rankOne z z).re = 0 ↔ z = 0)",
+          "endPos": {
+            "column": 6,
+            "line": 49
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 49
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.DualState.rankOne_diag_positive_definite' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 50
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 50
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.DualState.rankOne_conj_covariant (z w : ℂ) :\n  CptSewing.DualState.rankOne ((starRingEnd ℂ) z) ((starRingEnd ℂ) w) =\n    (starRingEnd ℂ) (CptSewing.DualState.rankOne z w)",
+          "endPos": {
+            "column": 6,
+            "line": 51
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 51
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.DualState.rankOne_conj_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 52
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 52
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.DualState.rankOne_left_zero (w : ℂ) : CptSewing.DualState.rankOne 0 w = 0",
+          "endPos": {
+            "column": 6,
+            "line": 53
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 53
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.DualState.rankOne_left_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 54
+          },
+          "fileName": "/var/tmp/orca/ice-dual-cauchy-i_uym1ck/DualStateAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 54
+          },
+          "severity": "information"
+        }
+      ]
+    },
+    "scope": "finite rank-one coefficient algebra only; no PDE existence, dual injectivity or physical product theorem",
+    "theorems": {
+      "CptSewing.DualState.rankOne_hermitian": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.DualState.rankOne_diag_positive_definite": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.DualState.rankOne_conj_covariant": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.DualState.rankOne_left_zero": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      }
+    },
+    "theorem_count": 4,
+    "accepted": true
+  },
+  "elapsed_seconds": 3.026246475055814
+}

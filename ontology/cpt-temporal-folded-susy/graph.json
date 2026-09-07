@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T06:38:30Z",
+  "updated_at_utc": "2026-09-07T07:00:58Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1748,6 +1748,13 @@
         "scope:starobinsky-repaired-minimal-compact-n-bfv-complex",
         "evidence:starobinsky-bfv-state-criterion-analytic-audit",
         "artifact:starobinsky-bfv-state-criterion-audit",
+        "concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms",
+        "claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN",
+        "claim:STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO",
+        "claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL",
+        "scope:starobinsky-neumann-cauchy-dual-fixed-slab",
+        "evidence:starobinsky-dual-cauchy-result",
+        "artifact:starobinsky-dual-cauchy-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16679,8 +16686,8 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; and its repaired minimal compact-N coordinate-ghost test complex is algebraically nilpotent but has trivial degree-zero cohomology. These local diagnostics do not settle a dual/rigging or physical state carrier, a quantum CPT lift, or joint regulator removal; the finite-width contradiction is unchanged.",
-      "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_MINIMAL_COMPACT_N_H0_TRIVIAL_PHYSICAL_CARRIER_OPEN",
+      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The dual family, its degenerate common-Neumann KG form and noncanonical rank-one positive quotient do not settle a physical carrier/product, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged.",
+      "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_DUAL_FAMILY_EXISTS_PHYSICAL_CARRIER_PRODUCT_CPT_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
         "The declared homogeneous Starobinsky Weyl operator, graded kernel and flat-density convention; compare the same model and pairing throughout",
@@ -16988,6 +16995,138 @@
     "artifact_kind": "analytic_memo",
     "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md",
     "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6"
+},
+{
+    "id": "source:baer-ginoux-pfaeffle-2007-wave-equations",
+    "type": "source",
+    "title": "Wave Equations on Lorentzian Manifolds and Quantization",
+    "summary": "Primary normally-hyperbolic Cauchy existence, uniqueness and finite-propagation framework; it does not provide the Starobinsky operator, a physical product or CPT sewing.",
+    "state": "PRIMARY",
+    "citation": "C. Bär, N. Ginoux and F. Pfäffle, Wave Equations on Lorentzian Manifolds and Quantization, EMS (2007); arXiv:0806.1036",
+    "uri": "https://arxiv.org/abs/0806.1036v1",
+    "version": "arXiv:0806.1036v1"
+},
+{
+    "id": "concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms",
+    "type": "concept",
+    "title": "Neumann Cauchy dual carriers versus degenerate KG and noncanonical rank-one forms",
+    "summary": "Actual Weyl Cauchy duals can annihilate the two constraints on the repaired test carrier even when minimal degree-zero test cohomology is trivial. Their common-Neumann KG form vanishes, while a declared positive rank-one quotient is seed-dependent and kinematic-K covariant only.",
+    "state": "SCOPED_DUAL_CARRIER_KG_AND_POSITIVE_FORM_DISTINCTION"
+},
+{
+    "id": "scope:starobinsky-neumann-cauchy-dual-fixed-slab",
+    "type": "scope",
+    "title": "Starobinsky fixed-slab Neumann Cauchy dual scope",
+    "summary": "The flat-density Weyl Starobinsky constraint on a in [1/2,2], r=0 repaired carrier, compact smooth terminal scalar seed at a=2, full real phi Cauchy evolution and N-independent dual functional.",
+    "state": "DECLARED_SUPPORTING_FIXED_SLAB_NEUMANN_DUAL_SCOPE",
+    "includes": [
+        "Exact x=log(a), s=a chi normally-hyperbolic Weyl equation, smooth compact terminal data and finite causal propagation on the open globally hyperbolic extension",
+        "Complex-linear simultaneous dual functionals T_g annihilating H and p_N on the declared repaired carrier",
+        "The common-Neumann-family full-R_phi KG degeneracy and a separately declared seed-dependent rank-one positive quotient with kinematic K"
+    ],
+    "excludes": [
+        "A closed/self-adjoint constraint realization, rigging map, group average, observable-star algebra, full ghost/nonminimal product or other ghost-degree cohomology",
+        "A canonical positive physical product, quantum CPT lift, BV-BFV gluing kernel, bulk source, original relative cycle, G1 closure or physical/TOE claim"
+    ]
+},
+{
+    "id": "claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN",
+    "title": "A Neumann Cauchy dual family simultaneously annihilates H and p_N",
+    "statement": "For each declared nonzero compact smooth terminal seed g, the actual flat-density Weyl Cauchy solution s_g defines a nonzero complex-linear T_g on the same repaired r=0 carrier with T_g∘H=T_g∘p_N=0. The family is an injective dual-carrier family, not a physical-state or rigging-map construction.",
+    "summary": "The analytic Cauchy/Green argument uses the full real scalar line and the actual Weyl correction; finite symbolic and Lean controls check its local algebraic identities only.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_ANALYTIC_NEUMANN_CAUCHY_SIMULTANEOUS_DUAL_FAMILY"
+},
+{
+    "id": "claim:STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO",
+    "title": "The common-Neumann Cauchy dual family has identically zero KG form",
+    "statement": "For the declared common real Neumann terminal relation, the conserved Klein-Gordon form integrated over the full real scalar line vanishes for every pair of Cauchy dual solutions. It therefore cannot normalize this family, without excluding other polarizations or positive-product constructions.",
+    "summary": "The statement uses full-line current conservation and compact propagation, not a finite phi-box lateral-flux assumption.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_FULL_RPHI_KG_DEGENERACY_ON_COMMON_NEUMANN_FAMILY"
+},
+{
+    "id": "claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL",
+    "title": "A declared rank-one dual quotient is positive and K-covariant but noncanonical",
+    "statement": "A chosen real Neumann seed yields the positive rank-one form overline(T[u])T[v] and a one-dimensional quotient on which kinematic K descends as conjugation. Rescaling or changing the seed changes the form, so positivity and K covariance do not select a physical state or CPT sewing.",
+    "summary": "This is an explicit nonselection contrast, not RAQ, a physical Hilbert space, an observable representation or a full CPT lift.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_NONCANONICAL_RANK_ONE_POSITIVE_K_COVARIANT_QUOTIENT"
+},
+{
+    "id": "evidence:starobinsky-dual-cauchy-result",
+    "type": "evidence",
+    "title": "Starobinsky Neumann Cauchy dual evidence",
+    "summary": "One clean run checks exact Weyl rescaling, terminal/Green/current identities and finite rank-one K algebra; the pinned analytic derivation supplies the global Cauchy, dual-injectivity and quotient arguments. The raw result is the complete check ledger.",
+    "state": "VALID_RUN_ANALYTIC_DERIVATION_AND_FINITE_LEAN_CONTROLS",
+    "observed_status": "SCOPED_NEUMANN_CAUCHY_DUAL_FAMILY_WITH_DEGENERATE_KG_FORM",
+    "check_ids": [
+        "symbolic.checks.actual_Weyl_log_rescale_PDE",
+        "symbolic.checks.terminal_Neumann_derivative_zero",
+        "symbolic.checks.on_shell_full_phi_current_divergence",
+        "symbolic.checks.common_real_Robin_KG_terminal_zero",
+        "symbolic.checks.rank_one_K_covariance",
+        "lean.theorems.CptSewing.DualState.rankOne_diag_positive_definite"
+    ]
+},
+{
+    "id": "artifact:starobinsky-dual-cauchy-runner",
+    "type": "artifact",
+    "title": "Starobinsky dual-Cauchy symbolic and Lean runner",
+    "summary": "Clean bounded runner for exact local rescaling, Green/current and rank-one algebra controls; it does not solve a numerical PDE or construct a physical product.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "runner",
+    "path": "cpt_temporal_folded_susy/starobinsky_dual_cauchy.py",
+    "sha256": "295d921d0be7602173ae2cf40a43fce8ace1cae2af204d2caeb8c03e80eb2cb3",
+    "introduced_in_commit": "bba3ed8702d5c4e929cd65f2a531bf1147f004ec"
+},
+{
+    "id": "artifact:starobinsky-dual-cauchy-derivation",
+    "type": "artifact",
+    "title": "Analytic Starobinsky Neumann Cauchy dual derivation",
+    "summary": "Pinned actual-Weyl Cauchy construction, full-line KG proof, simultaneous dual functional and noncanonical rank-one contrast.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "analytic_derivation",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md",
+    "sha256": "4c5ff22a482d2bbcebad04e7de2f30a612777cb38136386a330189487550249c",
+    "introduced_in_commit": "bba3ed8702d5c4e929cd65f2a531bf1147f004ec"
+},
+{
+    "id": "artifact:starobinsky-dual-cauchy-lean",
+    "type": "artifact",
+    "title": "Finite rank-one dual-state Lean proofs",
+    "summary": "Four finite Hermitian, positivity, K-covariance and constraint-annihilation identities; no PDE existence or physical-state theorem.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "lean_source",
+    "path": "formal/cpt_sewing/CptSewing/DualState.lean",
+    "sha256": "daf277427a6455a0cbbfd24c04382c68e3bd4c4914ec39b2723386053655f506",
+    "introduced_in_commit": "bba3ed8702d5c4e929cd65f2a531bf1147f004ec"
+},
+{
+    "id": "artifact:starobinsky-dual-cauchy-result",
+    "type": "artifact",
+    "title": "Starobinsky dual-Cauchy raw result",
+    "summary": "Raw SSOT for 16 symbolic controls, four Lean theorem audits, actual source/environment pins and scoped result status.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "result",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_RESULT.json",
+    "sha256": "9cc9d9533d105de6bd2be58e93a789581846d0d67d4efc80166825936af84f2d"
+},
+{
+    "id": "artifact:starobinsky-dual-cauchy-report",
+    "type": "artifact",
+    "title": "Starobinsky Neumann Cauchy dual report",
+    "summary": "Completed scoped dual-family result, KG degeneracy, explicit rank-one nonselection contrast and proof boundaries.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "report",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY.md",
+    "sha256": "74a88bc78b8e97f2e457b2c54fdd48d668485355f5702cad83e7a1d644478f34"
 }
   ],
   "edges": [
@@ -37483,7 +37622,28 @@
     {"id":"edge:3951","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","note":"The repaired test-set analysis follows the prior same-space ansatz failure without repairing a physical state or closed domain."},
     {"id":"edge:3952","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Trivial H0 makes the remaining carrier/dual/physical-product distinction explicit; no automatic successor work is created."},
     {"id":"edge:3953","from":"concept:starobinsky-test-carrier-versus-physical-state-carrier","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"RAQ test-space, algebraic-dual and physical-product distinction is method context only; it does not construct a rigging map here."},
-    {"id":"edge:3954","from":"concept:starobinsky-test-carrier-versus-physical-state-carrier","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"BV-BFV state, boundary pairing and pushforward distinction is method context only; it does not provide this cutoff's quantum sewing."}
+    {"id":"edge:3954","from":"concept:starobinsky-test-carrier-versus-physical-state-carrier","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"BV-BFV state, boundary pairing and pushforward distinction is method context only; it does not provide this cutoff's quantum sewing."},
+    {"id":"edge:3955","from":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"Supporting dual-carrier distinction only; it does not construct a quantum CPT source."},
+    {"id":"edge:3956","from":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms","relation":"CONTRASTS_WITH","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier","note":"A dual carrier can be nonzero although the named minimal test complex has trivial degree-zero cohomology."},
+    {"id":"edge:3957","from":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms","relation":"CITES","to":"source:baer-ginoux-pfaeffle-2007-wave-equations","note":"Cauchy existence/uniqueness and finite propagation are method context; the source does not choose the Weyl operator, seed, physical product or CPT sewing."},
+    {"id":"edge:3958","from":"scope:starobinsky-neumann-cauchy-dual-fixed-slab","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Fixed-slab supporting scope only; no source/cycle promotion."},
+    {"id":"edge:3959","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"ABOUT","to":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms"},
+    {"id":"edge:3960","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"VALID_WITHIN","to":"scope:starobinsky-neumann-cauchy-dual-fixed-slab"},
+    {"id":"edge:3961","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-dual-cauchy-result","polarity":"SUPPORTS"},
+    {"id":"edge:3962","from":"claim:STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO","relation":"ABOUT","to":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms"},
+    {"id":"edge:3963","from":"claim:STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO","relation":"VALID_WITHIN","to":"scope:starobinsky-neumann-cauchy-dual-fixed-slab"},
+    {"id":"edge:3964","from":"claim:STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-dual-cauchy-result","polarity":"SUPPORTS"},
+    {"id":"edge:3965","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"ABOUT","to":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms"},
+    {"id":"edge:3966","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"VALID_WITHIN","to":"scope:starobinsky-neumann-cauchy-dual-fixed-slab"},
+    {"id":"edge:3967","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-dual-cauchy-result","polarity":"SUPPORTS"},
+    {"id":"edge:3968","from":"evidence:starobinsky-dual-cauchy-result","relation":"PART_OF","to":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms"},
+    {"id":"edge:3969","from":"evidence:starobinsky-dual-cauchy-result","relation":"DEFINED_IN","to":"artifact:starobinsky-dual-cauchy-runner"},
+    {"id":"edge:3970","from":"evidence:starobinsky-dual-cauchy-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-dual-cauchy-derivation","note":"The analytic derivation supplies the global Cauchy, dual and quotient arguments; finite checks do not replace them."},
+    {"id":"edge:3971","from":"evidence:starobinsky-dual-cauchy-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-dual-cauchy-lean","note":"Lean proves four finite rank-one identities only."},
+    {"id":"edge:3972","from":"evidence:starobinsky-dual-cauchy-result","relation":"RECORDED_IN","to":"artifact:starobinsky-dual-cauchy-result","note":"Raw result is the sole complete check ledger."},
+    {"id":"edge:3973","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-dual-cauchy-report"},
+    {"id":"edge:3974","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","note":"The dual construction resolves the test-versus-dual contrast without changing the minimal test-complex H0 result."},
+    {"id":"edge:3975","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Positivity and kinematic K covariance leave seed, normalization, physical carrier/product and full CPT sewing open; no automatic successor work."}
   ],
   "kg_bridges": [
     {
