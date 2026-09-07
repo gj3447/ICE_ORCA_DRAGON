@@ -1,0 +1,12 @@
+{
+  "schema": "ice-lean-proof-index/v1",
+  "source": "CptSewing/WardFace.lean",
+  "namespace": "CptSewing.WardFace",
+  "theorems": [
+    "faceFlux_antisymmetric",
+    "faceFlux_common_dirichlet",
+    "faceFlux_common_robin",
+    "scaleUpperFace_witness_value",
+    "scaleUpperFace_witness_nonzero"
+  ]
+}
