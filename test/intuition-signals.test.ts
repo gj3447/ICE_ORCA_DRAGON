@@ -322,9 +322,9 @@ layer(AppLayer)("scientific-intuition topic and canonical federation", (it) => {
           standards_alignment: 4,
           topics: 6,
           topic_links: 6,
-          sources: 24,
-          signals: 16,
-          candidates: 16
+          sources: 27,
+          signals: 19,
+          candidates: 19
         }
       })
 
@@ -362,6 +362,31 @@ layer(AppLayer)("scientific-intuition topic and canonical federation", (it) => {
         canonical_graph_unchanged: true,
         does_not_authorize_execution: true
       })
+
+      // Boundary-state questions stay at this exact supporting target, even when
+      // query text mentions G1; the earlier G1 assertion excludes these lenses.
+      const seamState = yield* scientificIntuitionSearchData(
+        "Does G1 follow from carrier cohomology and boundary sewing?",
+        "cpt::open:starobinsky-seam-ward-boundary-state-limit",
+        8,
+        1
+      )
+      expect(seamState.canonical_target).toMatchObject({
+        id: "cpt::open:starobinsky-seam-ward-boundary-state-limit",
+        type: "open_problem"
+      })
+      expect(seamState.non_authoritative_signals.map(({ id }) => id)).toEqual([
+        "intuition:carrier-comparison-preserves-which-cohomology",
+        "intuition:bulk-doublets-retain-endpoint-memory",
+        "intuition:same-carrier-observable-and-positive-product"
+      ])
+      expect(seamState.non_authoritative_signals.every((signal) =>
+        signal.status === "CANDIDATE" && signal.does_not_authorize_execution
+      )).toBe(true)
+      expect(seamState.federated_links).toEqual(expect.arrayContaining([
+        expect.objectContaining({ relation: "MIRRORS_CANONICAL_SOURCE" }),
+        expect.objectContaining({ relation: "TARGETS_CANONICAL_OPEN_PROBLEM" })
+      ]))
 
       const geometry = yield* scientificIntuitionSearchData(
         "Which invariant separates geometry from an effective fluid?",

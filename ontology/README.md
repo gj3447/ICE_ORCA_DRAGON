@@ -39,6 +39,14 @@ authoritative graph, changing evidence status, or authorizing execution.
 
 ## Default navigation and cohesion
 
+The Korean [whole-research intuition map](../docs/research/ICE_RESEARCH_INTUITION_KG_MAP_2026-09-07.md)
+connects the four programme roles and explains why the recent CPT counterexamples require more
+precise carriers, maps and products. Start with
+`./ice ontology guide --path research-intuition-and-typed-handoffs`, then read the CPT paths
+`state-sewing-typed-handoffs`, `counterexamples-to-state-space-repair` and
+`choice-preservation-and-physical-selection`. The added concept definitions organize existing
+scoped results; they do not change scientific claim, evidence or gate status.
+
 Start with live collection scope and counts, rather than copying a dated total into prose:
 
 ```bash

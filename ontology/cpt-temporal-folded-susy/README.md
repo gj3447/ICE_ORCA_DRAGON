@@ -3,10 +3,17 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-09-07T12:13:30Z`; 1622 nodes, 4112 edges). Run and analytic-evidence details live in the
+`2026-09-07T14:15:18Z`; 1631 nodes, 4164 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
 verifies stored artifact and policy hashes; use the current validator output for counts.
+
+The [whole-research intuition map](../../docs/research/ICE_RESEARCH_INTUITION_KG_MAP_2026-09-07.md)
+connects source, boundary carrier, cohomology, observables/product and sewing through eight
+explicit distinctions and three reading paths. Read `state-sewing-typed-handoffs` forward,
+`counterexamples-to-state-space-repair` through the failed inferences, or
+`choice-preservation-and-physical-selection` to compare allowed choices. These are
+conceptual navigation over existing scoped results; no claim or evidence status changes.
 
 The 2026-09-07 user-requested Gaussian seam questions are indexed in
 `reading-path:starobinsky-seam-ward-regulator-removal`:

@@ -4,7 +4,7 @@
   "graph_id": "intuition-flow:ice",
   "title": "ICE scientific-intuition graph",
   "description": "Versioned source-linked question graph. Sidecar topics organize discussion-level ideas; optional canonical_target links are permitted only when an existing open problem has matching scope. No topic, link, or signal is a scientific claim or execution authority.",
-  "updated_at_utc": "2026-09-06T12:20:00Z",
+  "updated_at_utc": "2026-09-07T14:15:18Z",
   "authority": "NON_AUTHORITATIVE_HYPOTHESIS_GENERATION",
   "canonical_graph_unchanged": true,
   "does_not_authorize_execution": true,
@@ -454,6 +454,51 @@
         "graph": "cpt",
         "node": "source:dittrich-2012-cylindrical-consistency"
       }
+    },
+    {
+      "id": "source-ref:giulini-marolf-generality",
+      "kind": "PRIMARY_PAPER",
+      "citation": "D. Giulini and D. Marolf, Class. Quantum Grav. 16 (1999) 2479-2488",
+      "uri": "https://arxiv.org/abs/gr-qc/9812024v2",
+      "version": "arXiv:gr-qc/9812024v2",
+      "retrieved_at_utc": "2026-09-07T14:15:18Z",
+      "pinpoint": "Section II.1: common test space for observables and adjoints; physical product as extra input",
+      "role": "Compare carrier, observable algebra and positive product without identifying a bilinear evaluation with a physical inner product.",
+      "boundary": "Primary method context only; does not establish a repository-specific physical state, full CPT sewing or G1 resolution.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:giulini-marolf-1999-generality"
+      }
+    },
+    {
+      "id": "source-ref:cmr-quantum-bvbfv",
+      "kind": "PRIMARY_PAPER",
+      "citation": "A. S. Cattaneo, P. Mnev and N. Reshetikhin, arXiv:1507.01221",
+      "uri": "https://arxiv.org/abs/1507.01221v2",
+      "version": "arXiv:1507.01221v2",
+      "retrieved_at_utc": "2026-09-07T14:15:18Z",
+      "pinpoint": "Section 2.3: boundary quantization, states and gluing",
+      "role": "Compare declared boundary state modules and gluing inputs; a formal pairing is not a constructed quantum interval amplitude.",
+      "boundary": "Primary method context only; does not establish a repository-specific physical state, full CPT sewing or G1 resolution.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv"
+      }
+    },
+    {
+      "id": "source-ref:cmw-constrained-interval",
+      "kind": "PRIMARY_PAPER",
+      "citation": "A. S. Cattaneo, P. Mnev and K. Wernli, J. Geom. Mech. 14 (2022), doi:10.3934/jgm.2022010",
+      "uri": "https://arxiv.org/html/2012.13270",
+      "version": "arXiv:2012.13270v3",
+      "retrieved_at_utc": "2026-09-07T14:15:18Z",
+      "pinpoint": "Sections 8 and 9.1: interval BV component action and oriented endpoint terms",
+      "role": "Keep local bulk reduction and relative boundary data separate; the source supplies no ICE integration cycle or physical boundary choice.",
+      "boundary": "Primary method context only; does not establish a repository-specific physical state, full CPT sewing or G1 resolution.",
+      "canonical_source": {
+        "graph": "cpt",
+        "node": "source:cattaneo-mnev-wernli-2022-constrained-interval"
+      }
     }
   ],
   "signals": [
@@ -855,6 +900,81 @@
       "stop_condition": "Stop if the effect is only an occupation or Wightman difference, if the free retarded poles remain equal, if the order parameter dilutes away, or if the proposed remote sector is too disconnected to enter visible-sector Ward identities and loops.",
       "principal_failure_class": "spectrum",
       "non_claim": "This is a Gate-5 discriminator, not evidence of SUSY breaking, a superpartner spectrum, naturalness cancellation, or a cosmological signal.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:carrier-comparison-preserves-which-cohomology",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:boundary-amplitude-and-physical-state",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:starobinsky-seam-ward-boundary-state-limit"
+      },
+      "lens": "공간을 넓히는 사상이 chain map이라는 것에 더해, 어떤 차수·support·topology의 코호몰로지를 실제로 보존하는가?",
+      "why_relevant": "The recorded compact primary contraction preserves top classes, whereas the same-degree coefficient dual kills them and the degree-reversed dual retains detectors. A nonzero functional alone cannot identify these constructions.",
+      "source_refs": [
+        "source-ref:cmr-quantum-bvbfv",
+        "source-ref:giulini-marolf-generality"
+      ],
+      "assumptions": [
+        "State both complexes, ghost-degree conventions, allowed supports and topologies before comparing them.",
+        "Distinguish an injection from a quasi-isomorphism; do not relabel degree -2 as a physical ghost-zero result."
+      ],
+      "discriminating_observation": "An explicit comparison with chain homotopies or an induced-cohomology argument preserves the declared detector pairing in the intended degree and topology.",
+      "stop_condition": "Stop the identification if the image becomes exact, the required primitive leaves the carrier, or a degree/topology change silently changes the question.",
+      "principal_failure_class": "inference",
+      "non_claim": "A supporting question lens only, not a new result, a selected physical state, quantum CPT sewing, a G1 evidence edge or an authorized next calculation.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:bulk-doublets-retain-endpoint-memory",
+      "status": "CANDIDATE",
+      "kind": "MISSING_TYPED_OBJECT",
+      "topic": "topic:boundary-amplitude-and-physical-state",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:starobinsky-seam-ward-boundary-state-limit"
+      },
+      "lens": "Bulk doublet을 없앤 뒤 끝점 작용과 BV one-form을 함께 보존하는 실제 경계 사상은 무엇인가?",
+      "why_relevant": "The recorded source rewriting leaves both -[sigma-plus rho] and [sigma-plus delta N]. This is a concrete missing handoff between a local bulk simplification and a boundary-compatible state construction.",
+      "source_refs": [
+        "source-ref:cmw-constrained-interval",
+        "source-ref:cmr-quantum-bvbfv"
+      ],
+      "assumptions": [
+        "Specify endpoint variations, support and polarization; retain both boundary terms with the declared orientation.",
+        "Keep source-time N(s) separate from integration over the compact boundary coordinate N."
+      ],
+      "discriminating_observation": "A declared relative boundary map transports both endpoint structures and the BFV action into a compatible boundary module before any interval-kernel claim.",
+      "stop_condition": "Stop if dropping the terms requires an undeclared endpoint restriction, if only bulk equations match, or if local jets are substituted for the compact boundary carrier.",
+      "principal_failure_class": "inference",
+      "non_claim": "A supporting question lens only, not a new result, a selected physical state, quantum CPT sewing, a G1 evidence edge or an authorized next calculation.",
+      "does_not_authorize_execution": true
+    },
+    {
+      "id": "intuition:same-carrier-observable-and-positive-product",
+      "status": "CANDIDATE",
+      "kind": "SEPARATION_TEST",
+      "topic": "topic:boundary-amplitude-and-physical-state",
+      "canonical_target": {
+        "graph": "cpt",
+        "node": "open:starobinsky-seam-ward-boundary-state-limit"
+      },
+      "lens": "같은 허용 공간에서 관측가능량과 수반이 작용하고, 살아남는 상태의 양의 내적과 양립하는가?",
+      "why_relevant": "The quotient-only lift fails its same-carrier adjoint condition, while local strong observables and positive label-weight families leave state data unselected. These are distinct obstructions; nonuniqueness alone is not inconsistency.",
+      "source_refs": [
+        "source-ref:giulini-marolf-generality",
+        "source-ref:cmr-quantum-bvbfv"
+      ],
+      "assumptions": [
+        "Declare the observable class, common test domain, induced state action and sesquilinear product.",
+        "Separate equivalent representation choices from physically different states or operator extensions; uniqueness is required only if the proposed source or observable claim demands it."
+      ],
+      "discriminating_observation": "One explicit observable representation preserves the allowed constrained states and common adjoint domain and satisfies the positive-product relation, with any remaining state freedom stated.",
+      "stop_condition": "Stop the proposed identification if only a quotient action, bilinear nondegeneracy or formal conjugation is checked, or if the adjoint leaves the declared carrier.",
+      "principal_failure_class": "inference",
+      "non_claim": "A supporting question lens only, not a new result, a selected physical state, quantum CPT sewing, a G1 evidence edge or an authorized next calculation.",
       "does_not_authorize_execution": true
     }
   ],

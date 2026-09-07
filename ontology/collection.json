@@ -4,7 +4,7 @@
   "collection_id": "research-collection:ice-orca-dragon",
   "title": "ICE ORCA DRAGON research memory collection",
   "description": "Catalog of independent repository-local research graphs. It preserves programme boundaries and adds qualified navigation paths without turning cross-programme proximity into evidence, derivation, or physics promotion.",
-  "updated_at_utc": "2026-09-06T17:12:49Z",
+  "updated_at_utc": "2026-09-07T14:15:18Z",
   "canonical_file": "ontology/collection.json",
   "default_graph": "cpt",
   "graphs": [
@@ -462,6 +462,28 @@
           "node": "open:igrueqft-continuum-interacting-locality-discriminator"
         }
       ]
+    },
+    {
+      "question": "전체 연구에서 추상화가 왜 필요한지, 어떤 연결부터 읽으면 직관이 생기는가?",
+      "answer": "Use research-intuition-and-typed-handoffs for the four separate programme roles, then the CPT state-sewing-typed-handoffs, counterexamples-to-state-space-repair and choice-preservation-and-physical-selection paths. Each asks what object, domain, grading or invariant must survive the next map. A useful map preserves failed inferences and missing handoffs; graph proximity does not establish physics or resolve G1.",
+      "refs": [
+        {
+          "graph": "cpt",
+          "node": "artifact:ice-research-intuition-kg-map"
+        },
+        {
+          "graph": "legacy",
+          "node": "concept:ice-three-layer-disclosure"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections"
+        },
+        {
+          "graph": "cpt",
+          "node": "open:starobinsky-seam-ward-boundary-state-limit"
+        }
+      ]
     }
   ],
   "reading_paths": [
@@ -878,6 +900,69 @@
           "graph": "igrueqft",
           "node": "open:igrueqft-continuum-interacting-locality-discriminator",
           "why": "IGRUEQFT_BOUNDARY: subsystem, averaging and continuum choices stay in this graph"
+        }
+      ]
+    },
+    {
+      "id": "collection-path:research-intuition-and-typed-handoffs",
+      "title": "전체 연구 직관: 네 graph의 역할과 CPT 추상화 연결",
+      "summary": "Narrative, algebra, the declared CPT candidate and locality diagnostics remain separately addressable. This is a reading map, not a common theory, evidence transfer or execution path. The CPT case study distinguishes source, carrier, cohomology, observable/product and sewing handoffs from the original-cycle G1 blocker.",
+      "navigation_only": true,
+      "stops": [
+        {
+          "graph": "legacy",
+          "node": "concept:ice-three-layer-disclosure",
+          "why": "Start from the distinction between preserved user narrative, formal model and testable claim."
+        },
+        {
+          "graph": "legacy",
+          "node": "programme:ice-legacy-predictions",
+          "why": "Inspect historical predictions and their own controls without transferring their status to other graphs."
+        },
+        {
+          "graph": "hypercomplex",
+          "node": "programme:hypercomplex-hypothesis-testbench",
+          "why": "Read the algebraic structure and basis/invariance questions in their own testbench."
+        },
+        {
+          "graph": "igrueqft",
+          "node": "programme:igrueqft-locality-audit",
+          "why": "Read subsystem/locality diagnostics in their finite declared model."
+        },
+        {
+          "graph": "cpt",
+          "node": "programme:cpt-temporal-folded-susy",
+          "why": "Enter the declared CPT candidate route, distinguishing its core and supporting methods."
+        },
+        {
+          "graph": "cpt",
+          "node": "open:gate1-original-cycle-signed-global-intersections",
+          "why": "Locate the still-open source-defined original joint cycle and signed global intersections before interpreting downstream work."
+        },
+        {
+          "graph": "cpt",
+          "node": "artifact:ice-research-intuition-kg-map",
+          "why": "Use the human map to read counterexamples as explanations of the next missing typed object."
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:starobinsky-cohomology-preserving-carrier-comparison",
+          "why": "Specify support, topology, grading and comparison maps before asking whether states survive."
+        },
+        {
+          "graph": "cpt",
+          "node": "concept:starobinsky-observable-common-domain-and-star-product",
+          "why": "Require compatible state action, common domain and product/adjoint data."
+        },
+        {
+          "graph": "cpt",
+          "node": "open:starobinsky-seam-ward-boundary-state-limit",
+          "why": "Keep the source-compatible physical carrier, positive product and actual quantum sewing construction explicitly open."
+        },
+        {
+          "graph": "cpt",
+          "node": "policy:choice-invariance-cross-domain-promotion",
+          "why": "Audit admissible choices and independent in-graph consumers before broad interpretation."
         }
       ]
     }

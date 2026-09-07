@@ -4,6 +4,19 @@ This directory carries source-linked questions that may help a human sharpen a
 canonical open problem. It is deliberately outside `ontology/collection.json`:
 none of its records is a claim, evidence, a score, or execution authority.
 
+The [whole-research intuition map](../../docs/research/ICE_RESEARCH_INTUITION_KG_MAP_2026-09-07.md)
+adds a recent CPT case study: carrier comparison and cohomology, bulk reduction and endpoint
+data, and common-domain observables with a positive product. Three new question lenses reuse
+the existing boundary-amplitude topic and target the current seam-state open problem:
+
+```bash
+./ice intuition search "Which state and endpoint data survive a carrier change?" \
+  --target cpt::open:starobinsky-seam-ward-boundary-state-limit --json
+```
+
+The canonical concept links in that guide are separately reviewed navigation changes; the
+sidecar itself still creates no canonical claim or evidence.
+
 The [abstraction and intuition connectivity map](./ICE_ABSTRACTION_CONNECTIVITY_MAP_2026-09-06.md)
 now provides three human reading routes: local root to boundary/source structure,
 boundary amplitude to physical state, and reduced model to full-parent scope. It
