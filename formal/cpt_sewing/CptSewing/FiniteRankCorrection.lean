@@ -95,6 +95,7 @@ noncomputable def rankOneCorrection (w : W) : Module.End ℂ W where
   map_smul' := by
     intro c u
     rw [inner_smul_right, smul_smul]
+    rfl
 
 /-- The rank-one correction is self-adjoint for the declared inner product. -/
 theorem rankOneCorrection_self_adjoint (w u v : W) :

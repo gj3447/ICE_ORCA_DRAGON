@@ -39,6 +39,7 @@ theorem q1_q0 (H p : Module.End ℂ V) (u : V)
   exact sub_eq_zero.mpr (by simpa [LinearMap.comp_apply] using h)
 
 /-- Every top-ghost coefficient is closed in the two-ghost complex. -/
+omit [Module ℂ V] in
 theorem top_closed (z : V) : q2 z = 0 := rfl
 
 /-- A common constraint-annihilating functional kills every top exact term. -/
