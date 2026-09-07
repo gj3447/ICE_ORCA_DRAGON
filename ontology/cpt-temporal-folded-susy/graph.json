@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T09:07:10Z",
+  "updated_at_utc": "2026-09-07T09:36:55Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1727,7 +1727,7 @@
     {
       "id": "reading-path:starobinsky-seam-ward-regulator-removal",
       "title": "Gaussian 접합: 경계상태에 작용시킨 잔여항과 규제 제거",
-      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다. The later quotient-lift review distinguishes an actual finite quotient lift from a same-carrier star observable and contrasts a failed free-ghost fixed-a ansatz with one ghost-fixed finite canonical endpoint; neither supplies a bulk/quantum BFV map.",
+      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다. The later quotient-lift review distinguishes an actual finite quotient lift from a same-carrier star observable and contrasts a failed free-ghost fixed-a ansatz with one ghost-fixed finite canonical endpoint; neither supplies a bulk/quantum BFV map. The later kernel/top-ghost result separates kernel-active noncommuting corrections, finite-rank quotient nonselection, compact-test top support, coefficient-algebraic-dual exactness and endpoint-trace exactness; it constructs no physical state or quantum BFV boundary object.",
       "nodes": [
         "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
         "scope:starobinsky-gaussian-seam-ward-flat-core",
@@ -1773,6 +1773,14 @@
         "claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN",
         "evidence:starobinsky-quotient-lift-bfv-boundary-result",
         "artifact:starobinsky-quotient-lift-bfv-boundary-report",
+        "scope:starobinsky-kernel-correction-and-top-ghost-support",
+        "concept:starobinsky-test-top-ghost-versus-coefficient-dual-support",
+        "claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT",
+        "claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO",
+        "claim:STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES",
+        "claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL",
+        "evidence:starobinsky-kernel-correction-ghost-support-result",
+        "artifact:starobinsky-kernel-correction-ghost-support-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16704,7 +16712,7 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing transported through declared full-line compact-seed lifts. A scalar-phase domain comparison shows the compact-N carrier does not supply finite gauge-domain or extension-independent spectral-zero data, and label positivity/exchange leaves a smooth weight unselected. These scoped facts do not settle a physical carrier/product, identified BFV boundary data, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged. The quotient-only lift now has an exact same-carrier adjoint-domain obstruction, while a separate finite ghost-fixed canonical endpoint is Q-tangent; a kernel-active observable, finite gauge-domain and bulk/quantum BFV boundary correspondence remain open.",
+      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing transported through declared full-line compact-seed lifts. A scalar-phase domain comparison shows the compact-N carrier does not supply finite gauge-domain or extension-independent spectral-zero data, and label positivity/exchange leaves a smooth weight unselected. These scoped facts do not settle a physical carrier/product, identified BFV boundary data, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged. The quotient-only lift now has an exact same-carrier adjoint-domain obstruction, while a separate finite ghost-fixed canonical endpoint is Q-tangent; a kernel-active observable, finite gauge-domain and bulk/quantum BFV boundary correspondence remain open. A kernel-active finite-rank correction now exists but fails strong p_N commutation; finite-rank same-carrier star corrections cannot act on the declared Cauchy quotient, and compact-test top classes differ from a separate coefficient-algebraic-dual comparison. Physical ghost-degree-zero states, a kernel-active strong observable and BFV boundary state data remain open.",
       "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_DUAL_FAMILY_EXISTS_PHYSICAL_CARRIER_PRODUCT_CPT_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
@@ -17569,6 +17577,161 @@
       "title": "Finite canonical BFV endpoints versus quantum Cauchy data",
       "summary": "A Q-tangent classical endpoint in the declared canonical chart and a Neumann/Dirichlet Weyl-Cauchy state are different typed objects. A bulk-induced boundary reduction and quantization/polarization map are missing; neither tangency nor a bosonic pairing supplies them.",
       "state": "SUPPORTING_TYPED_BOUNDARY_DISTINCTION"
+    },
+    {
+      "id": "scope:starobinsky-kernel-correction-and-top-ghost-support",
+      "type": "scope",
+      "title": "Starobinsky kernel correction and top-ghost support scope",
+      "summary": "The declared repaired compact-N test carrier, finite-rank L2 corrections, coordinate-ghost test complex, coefficient-degree algebraic dual comparison and one a=2 endpoint trace primitive.",
+      "state": "DECLARED_SUPPORTING_KERNEL_DOMAIN_AND_GHOST_SUPPORT_SCOPE",
+      "includes": [
+        "A same-carrier rank-one kernel correction and bounded finite-rank star-correction class",
+        "Actual compact-test top-ghost cohomology and a separate coefficient-degree algebraic-dual comparison",
+        "A C-infinity-continuous endpoint trace and its noncompact-N primitive"
+      ],
+      "excludes": [
+        "A physical ghost-number-zero state, selected product, self-adjoint completion, usual graded dual identification, BFV boundary state/module, quantum CPT sewing, source cycle, G1 closure or physical/TOE claim"
+      ]
+    },
+    {
+      "id": "concept:starobinsky-test-top-ghost-versus-coefficient-dual-support",
+      "type": "concept",
+      "title": "Test top-ghost support versus coefficient algebraic-dual support",
+      "summary": "The compact test complex and the coefficient-degree algebraic dual have different support, continuity and ghost-duality structures; their top cohomologies need not agree.",
+      "state": "SCOPED_TEST_VERSUS_COEFFICIENT_DUAL_GHOST_SUPPORT_DISTINCTION"
+    },
+    {
+      "id": "claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT",
+      "title": "Kernel-active and finite-rank star corrections do not select the declared Cauchy quotient",
+      "summary": "A real interior rank-one correction preserves the carrier and its L2 adjoint but fails strong p_N commutation; more generally every bounded finite-rank K with K,K-dagger preserving Phi and RK=AR has A=0.",
+      "statement": "On the declared repaired carrier, K_w is bounded, self-adjoint and kernel-active but [p_N,K_w] is nonzero; any bounded finite-rank same-carrier star correction implementing RK=AR has A=0.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_NONSELECTION"
+    },
+    {
+      "id": "claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO",
+      "title": "The compact test complex has infinite-dimensional top-ghost cohomology while H0 remains zero",
+      "summary": "Actual compact-seed Cauchy duals and Gram bumps detect arbitrarily large independent degree-two test classes, while p_N injectivity leaves degree zero trivial.",
+      "statement": "The declared coordinate-ghost test complex has infinite-dimensional H2 and unchanged H0=0.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_TEST_TOP_GHOST_SUPPORT"
+    },
+    {
+      "id": "claim:STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES",
+      "title": "The coefficient algebraic dual has vanishing top-ghost cohomology",
+      "summary": "Injectivity of p_N makes its algebraic transpose surjective, so the coefficient-degree algebraic-dual top quotient vanishes; this is neither the usual graded dual nor a continuous-dual theorem.",
+      "statement": "In the separately declared coefficient-degree algebraic dual complex, H2=0 because algebraic p_N transpose is surjective.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_ALGEBRAIC_DUAL_TOP_GHOST_VANISHING"
+    },
+    {
+      "id": "claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL",
+      "title": "The a=2 endpoint top-ghost trace candidate is exact in the coefficient algebraic dual",
+      "summary": "The C-infinity-continuous endpoint trace has an explicit N-to-upper-face primitive, hence its top-ghost candidate is exact in the separate coefficient algebraic dual.",
+      "statement": "For the stated a=2 endpoint and N collar, the top-ghost trace candidate equals Q-hat of an explicit C-infinity-continuous, L2-unbounded primitive.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_ENDPOINT_TRACE_EXACTNESS"
+    },
+    {
+      "id": "evidence:starobinsky-kernel-correction-ghost-support-result",
+      "type": "evidence",
+      "title": "Starobinsky kernel-correction/top-ghost evidence",
+      "summary": "One accepted run supplies 23 observed exact checks and 7+10 Lean audits; analytic support, density, Green and continuity arguments remain in the pinned derivation. Raw is the full check ledger.",
+      "state": "VALID_RUN_ANALYTIC_DERIVATION_AND_FINITE_LEAN_CONTROLS",
+      "observed_status": "SCOPED_KERNEL_CORRECTION_NONSELECTION_AND_TOP_GHOST_SUPPORT_CONTRAST",
+      "check_ids": [
+        "symbolic.checks.actual_Weyl_bilinear_Green_divergence",
+        "symbolic.checks.unflipped_ghost_embedding_defect_nonzero",
+        "symbolic.checks.endpoint_top_candidate_is_exact",
+        "modules[0].theorems.CptSewing.FiniteRankCorrection.label_zero_of_star_preserving_separated_correction",
+        "modules[0].theorems.CptSewing.FiniteRankCorrection.rankOneCorrection_comp_constraint_ne_zero",
+        "modules[1].theorems.CptSewing.TopGhostSupport.section_combination_not_exact",
+        "modules[1].theorems.CptSewing.TopGhostSupport.all_top_exact_in_algebraic_dual"
+      ],
+      "source_anchors": [
+        "STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md#1-실제로-작동하는-kernel-보정은-만들-수-있다",
+        "STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md#3-실제-시험복합체에는-비영-top-ghost-class가-존재한다",
+        "STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md#4-계수만-algebraic-dual로-바꾼-복합체에서는-top-class가-사라진다",
+        "STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md#5-고전-endpoint의-직접적인-분포-후보는-명시적으로-exact다"
+      ]
+    },
+    {
+      "id": "artifact:starobinsky-kernel-correction-ghost-support-runner",
+      "type": "artifact",
+      "title": "Starobinsky kernel-correction/top-ghost runner",
+      "summary": "Clean bounded runner for kernel correction, ghost-support and endpoint-primitive controls.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_kernel_correction_ghost_support.py",
+      "sha256": "e3ffbc4300e0b019e9b6229b30072afc7599b6dfd62f973eaaed4dbef7c4558c"
+    },
+    {
+      "id": "artifact:starobinsky-kernel-correction-ghost-support-derivation",
+      "type": "artifact",
+      "title": "Analytic kernel-correction/top-ghost derivation",
+      "summary": "Pinned finite-rank, top-ghost, coefficient-dual and endpoint-trace derivation.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "analytic_derivation",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md",
+      "sha256": "8611a354760296d16a211dddb91b2127dd68e9e2da1a73bcb15bc7200a375366"
+    },
+    {
+      "id": "artifact:starobinsky-kernel-correction-ghost-support-proof-index",
+      "type": "artifact",
+      "title": "Kernel-correction/top-ghost Lean proof index",
+      "summary": "Pinned inventory for finite-rank correction and top-ghost support Lean modules.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "proof_index",
+      "path": "formal/cpt_sewing/kernel-correction-ghost-support-proof-index.json",
+      "sha256": "c293824bb9fa00d6efed23c6f9726fd472672fc5e215c1a97b52d4fdf8f0f329"
+    },
+    {
+      "id": "artifact:starobinsky-finite-rank-correction-lean",
+      "type": "artifact",
+      "title": "Finite-rank correction Lean module",
+      "summary": "Abstract finite-rank same-carrier star-correction theorem; actual dense-domain application remains analytic.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/FiniteRankCorrection.lean",
+      "sha256": "073647d262529fd6f1ad83b3de8a2cb051edd4fc172c6e60396d00125f92dd6b"
+    },
+    {
+      "id": "artifact:starobinsky-top-ghost-support-lean",
+      "type": "artifact",
+      "title": "Top-ghost support Lean module",
+      "summary": "Abstract ghost-complex, detectors and algebraic-dual exactness; actual support and C-infinity continuity remain analytic.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/TopGhostSupport.lean",
+      "sha256": "eb57b15b08f346d58149dd833459f8f1d54a86277521e14d874f3fd5094fb3e2"
+    },
+    {
+      "id": "artifact:starobinsky-kernel-correction-ghost-support-result",
+      "type": "artifact",
+      "title": "Starobinsky kernel-correction/top-ghost raw result",
+      "summary": "Raw SSOT for exact controls, 7+10 Lean audits, provenance and scoped result status.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_RESULT.json",
+      "sha256": "ba863b486d6503193776e35cc29e317b8036f7583d2efa6264d8e0a73e304496"
+    },
+    {
+      "id": "artifact:starobinsky-kernel-correction-ghost-support-report",
+      "type": "artifact",
+      "title": "Starobinsky kernel-correction/top-ghost report",
+      "summary": "Completed scoped kernel correction, support cohomology and endpoint-trace contrast with physical/BFV boundaries retained.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT.md",
+      "sha256": "1dce00d54cab003d92e839818d451045f1c3d646875433c40e62365eec2d734e"
     }
   ],
   "edges": [
@@ -38311,7 +38474,37 @@
       "relation": "CITES",
       "to": "source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv",
       "note": "Quantum sewing method context only; no state module or kernel is constructed."
-    }
+    },
+    {"id":"edge:4048","from":"scope:starobinsky-kernel-correction-and-top-ghost-support","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Supporting kernel/domain and ghost-support result only; no source/cycle promotion."},
+    {"id":"edge:4049","from":"concept:starobinsky-test-top-ghost-versus-coefficient-dual-support","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Support/cohomology distinction only; no physical state claim."},
+    {"id":"edge:4050","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"ABOUT","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier"},
+    {"id":"edge:4051","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"VALID_WITHIN","to":"scope:starobinsky-kernel-correction-and-top-ghost-support"},
+    {"id":"edge:4052","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-kernel-correction-ghost-support-result","polarity":"SUPPORTS"},
+    {"id":"edge:4053","from":"claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO","relation":"ABOUT","to":"concept:starobinsky-test-top-ghost-versus-coefficient-dual-support"},
+    {"id":"edge:4054","from":"claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO","relation":"VALID_WITHIN","to":"scope:starobinsky-kernel-correction-and-top-ghost-support"},
+    {"id":"edge:4055","from":"claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-kernel-correction-ghost-support-result","polarity":"SUPPORTS"},
+    {"id":"edge:4056","from":"claim:STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES","relation":"ABOUT","to":"concept:starobinsky-test-top-ghost-versus-coefficient-dual-support"},
+    {"id":"edge:4057","from":"claim:STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES","relation":"VALID_WITHIN","to":"scope:starobinsky-kernel-correction-and-top-ghost-support"},
+    {"id":"edge:4058","from":"claim:STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-kernel-correction-ghost-support-result","polarity":"SUPPORTS"},
+    {"id":"edge:4059","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"ABOUT","to":"concept:starobinsky-test-top-ghost-versus-coefficient-dual-support"},
+    {"id":"edge:4060","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"VALID_WITHIN","to":"scope:starobinsky-kernel-correction-and-top-ghost-support"},
+    {"id":"edge:4061","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-kernel-correction-ghost-support-result","polarity":"SUPPORTS"},
+    {"id":"edge:4062","from":"evidence:starobinsky-kernel-correction-ghost-support-result","relation":"DEFINED_IN","to":"artifact:starobinsky-kernel-correction-ghost-support-runner"},
+    {"id":"edge:4063","from":"evidence:starobinsky-kernel-correction-ghost-support-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-kernel-correction-ghost-support-derivation"},
+    {"id":"edge:4064","from":"evidence:starobinsky-kernel-correction-ghost-support-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-kernel-correction-ghost-support-proof-index"},
+    {"id":"edge:4065","from":"evidence:starobinsky-kernel-correction-ghost-support-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-finite-rank-correction-lean"},
+    {"id":"edge:4066","from":"evidence:starobinsky-kernel-correction-ghost-support-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-top-ghost-support-lean"},
+    {"id":"edge:4067","from":"evidence:starobinsky-kernel-correction-ghost-support-result","relation":"RECORDED_IN","to":"artifact:starobinsky-kernel-correction-ghost-support-result","note":"Raw result is the sole complete ledger."},
+    {"id":"edge:4068","from":"evidence:starobinsky-kernel-correction-ghost-support-result","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-kernel-correction-ghost-support-report"},
+    {"id":"edge:4069","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_NONZERO_QUOTIENT_ONLY_LIFT_FAILS_SAME_CARRIER_STAR_CONDITION","note":"Adds an actual kernel correction and strengthens quotient-only obstruction to every bounded finite-rank same-carrier star correction implementing a finite label action."},
+    {"id":"edge:4070","from":"claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","note":"The actual common duals detect nonexact top coefficients; abstract detectors are not substituted for the PDE construction."},
+    {"id":"edge:4071","from":"claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","note":"Adds top-degree test support while preserving the prior trivial-H0 result."},
+    {"id":"edge:4072","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_GHOST_FIXED_FINITE_CANONICAL_ENDPOINT_IS_Q_TANGENT_LAGRANGIAN","note":"Tests a coordinate trace associated with the finite endpoint without identifying a quantum boundary state."},
+    {"id":"edge:4073","from":"claim:STAROBINSKY_COEFFICIENT_ALGEBRAIC_DUAL_TOP_GHOST_COHOMOLOGY_VANISHES","relation":"CONTRASTS_WITH","to":"claim:STAROBINSKY_COMPACT_TEST_COMPLEX_HAS_INFINITE_DIMENSIONAL_TOP_GHOST_COHOMOLOGY_WHILE_H0_REMAINS_ZERO","note":"Coefficient algebraic-dual top exactness does not erase compact-test top classes or establish graded-dual equivalence."},
+    {"id":"edge:4074","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Kernel-active strong observable/domain construction remains open; no automatic successor work."},
+    {"id":"edge:4075","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"An actual BFV state module, pairing and bulk correspondence remain open; no automatic successor work."},
+    {"id":"edge:4076","from":"claim:STAROBINSKY_KERNEL_ACTIVE_AND_FINITE_RANK_STAR_CORRECTIONS_DO_NOT_SELECT_DECLARED_CAUCHY_QUOTIENT","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"Observable-star carrier method context only; no physical observable algebra is constructed."},
+    {"id":"edge:4077","from":"claim:STAROBINSKY_A2_ENDPOINT_TOP_GHOST_TRACE_CANDIDATE_IS_EXACT_IN_COEFFICIENT_ALGEBRAIC_DUAL","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Boundary state/cohomology method context only; no quantum BFV kernel follows."}
   ],
   "kg_bridges": [
     {

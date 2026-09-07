@@ -1,0 +1,1057 @@
+{
+  "schema": "ice-starobinsky-kernel-correction-ghost-support/v1",
+  "status": "SCOPED_KERNEL_CORRECTION_NONSELECTION_AND_TOP_GHOST_SUPPORT_CONTRAST",
+  "started_at_utc": "2026-09-07T09:33:08.408793+00:00",
+  "question": "Do finite-rank star-preserving kernel corrections and the direct coefficient-dual endpoint candidate provide a nontrivial selector, and which top-ghost classes survive the stated carriers?",
+  "scope": "SUPPORTING_METHOD: actual kernel correction, finite-rank nonselection and carrier-dependent top-ghost classes; G1 unchanged",
+  "non_claim": "No full physical observable algebra, selected positive metric, BFV/CPT sewing or G1 original cycle.",
+  "reproduction_command": "./ice run starobinsky_kernel_correction_ghost_support",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "modules": [
+    {
+      "source": "CptSewing/FiniteRankCorrection.lean",
+      "scope": "Abstract adjoint range-separation obstruction and rank-one kernel correction identities; finite-rank closure and actual carrier/PDE inputs remain analytic",
+      "expected_theorem_count": 7,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/FiniteRankCorrectionAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "12d55af81a8539d3abb7621d777c6c2fe4115a91b91dedc601a54ee95ddee9fd",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.FiniteRankCorrection.adjoint_intertwining_of_quotient_action.{u_1, u_2} {W : Type u_1} {E : Type u_2}\n  [NormedAddCommGroup W] [InnerProductSpace ℂ W] [NormedAddCommGroup E] [InnerProductSpace ℂ E] (R : W →ₗ[ℂ] E)\n  (Rstar : E →ₗ[ℂ] W) (K Kstar : Module.End ℂ W) (A Astar : Module.End ℂ E)\n  (hRAdjoint : ∀ (u : W) (e : E), inner ℂ (R u) e = inner ℂ u (Rstar e))\n  (hKAdjoint : ∀ (u v : W), inner ℂ (K u) v = inner ℂ u (Kstar v))\n  (hAAdjoint : ∀ (x e : E), inner ℂ (A x) e = inner ℂ x (Astar e)) (hRK : R ∘ₗ K = A ∘ₗ R) :\n  Kstar ∘ₗ Rstar = Rstar ∘ₗ Astar",
+            "endPos": {
+              "column": 6,
+              "line": 139
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 139
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.FiniteRankCorrection.adjoint_intertwining_of_quotient_action' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 140
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 140
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.FiniteRankCorrection.label_adjoint_zero_of_range_separation.{u_1, u_2} {W : Type u_1} {E : Type u_2}\n  [NormedAddCommGroup W] [InnerProductSpace ℂ W] [NormedAddCommGroup E] [InnerProductSpace ℂ E] (P : Submodule ℂ W)\n  (R : W →ₗ[ℂ] E) (Rstar : E →ₗ[ℂ] W) (K Kstar : Module.End ℂ W) (A Astar : Module.End ℂ E)\n  (hRAdjoint : ∀ (u : W) (e : E), inner ℂ (R u) e = inner ℂ u (Rstar e))\n  (hKAdjoint : ∀ (u v : W), inner ℂ (K u) v = inner ℂ u (Kstar v))\n  (hAAdjoint : ∀ (x e : E), inner ℂ (A x) e = inner ℂ x (Astar e)) (hRK : R ∘ₗ K = A ∘ₗ R)\n  (hRange : ∀ (e : E), Kstar (Rstar e) ∈ P) (hSeparated : ∀ (e : E), Rstar e ∈ P → e = 0) : Astar = 0",
+            "endPos": {
+              "column": 6,
+              "line": 141
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 141
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.FiniteRankCorrection.label_adjoint_zero_of_range_separation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 142
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 142
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.FiniteRankCorrection.label_zero_of_adjoint_zero.{u_2} {E : Type u_2} [NormedAddCommGroup E]\n  [InnerProductSpace ℂ E] (A Astar : Module.End ℂ E) (hAAdjoint : ∀ (x e : E), inner ℂ (A x) e = inner ℂ x (Astar e))\n  (hAstar : Astar = 0) : A = 0",
+            "endPos": {
+              "column": 6,
+              "line": 143
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 143
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.FiniteRankCorrection.label_zero_of_adjoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 144
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 144
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.FiniteRankCorrection.label_zero_of_star_preserving_separated_correction.{u_1, u_2} {W : Type u_1}\n  {E : Type u_2} [NormedAddCommGroup W] [InnerProductSpace ℂ W] [NormedAddCommGroup E] [InnerProductSpace ℂ E]\n  (P : Submodule ℂ W) (R : W →ₗ[ℂ] E) (Rstar : E →ₗ[ℂ] W) (K Kstar : Module.End ℂ W) (A Astar : Module.End ℂ E)\n  (hRAdjoint : ∀ (u : W) (e : E), inner ℂ (R u) e = inner ℂ u (Rstar e))\n  (hKAdjoint : ∀ (u v : W), inner ℂ (K u) v = inner ℂ u (Kstar v))\n  (hAAdjoint : ∀ (x e : E), inner ℂ (A x) e = inner ℂ x (Astar e)) (hRK : R ∘ₗ K = A ∘ₗ R)\n  (hRange : ∀ (e : E), Kstar (Rstar e) ∈ P) (hSeparated : ∀ (e : E), Rstar e ∈ P → e = 0) : A = 0",
+            "endPos": {
+              "column": 6,
+              "line": 145
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 145
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.FiniteRankCorrection.label_zero_of_star_preserving_separated_correction' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 146
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 146
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.FiniteRankCorrection.rankOneCorrection_self_adjoint.{u_1} {W : Type u_1} [NormedAddCommGroup W]\n  [InnerProductSpace ℂ W] (w u v : W) :\n  inner ℂ ((CptSewing.FiniteRankCorrection.rankOneCorrection w) u) v =\n    inner ℂ u ((CptSewing.FiniteRankCorrection.rankOneCorrection w) v)",
+            "endPos": {
+              "column": 6,
+              "line": 147
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 147
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.FiniteRankCorrection.rankOneCorrection_self_adjoint' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 148
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 148
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.FiniteRankCorrection.quotient_kills_rankOneCorrection.{u_1, u_2} {W : Type u_1} {E : Type u_2}\n  [NormedAddCommGroup W] [InnerProductSpace ℂ W] [NormedAddCommGroup E] [InnerProductSpace ℂ E] (R : W →ₗ[ℂ] E) (w : W)\n  (hw : R w = 0) : R ∘ₗ CptSewing.FiniteRankCorrection.rankOneCorrection w = 0",
+            "endPos": {
+              "column": 6,
+              "line": 149
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 149
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.FiniteRankCorrection.quotient_kills_rankOneCorrection' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 150
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 150
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.FiniteRankCorrection.rankOneCorrection_comp_constraint_ne_zero.{u_1} {W : Type u_1} [NormedAddCommGroup W]\n  [InnerProductSpace ℂ W] (p : Module.End ℂ W) (w : W) (hpInjective : Function.Injective ⇑p)\n  (hpSymmetric : ∀ (u v : W), inner ℂ (p u) v = inner ℂ u (p v)) (hw : w ≠ 0) :\n  CptSewing.FiniteRankCorrection.rankOneCorrection w ∘ₗ p ≠ 0",
+            "endPos": {
+              "column": 6,
+              "line": 151
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 151
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.FiniteRankCorrection.rankOneCorrection_comp_constraint_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 152
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-44cj7lls/FiniteRankCorrectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 152
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.FiniteRankCorrection.adjoint_intertwining_of_quotient_action": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.FiniteRankCorrection.label_adjoint_zero_of_range_separation": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.FiniteRankCorrection.label_zero_of_adjoint_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.FiniteRankCorrection.label_zero_of_star_preserving_separated_correction": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.FiniteRankCorrection.rankOneCorrection_self_adjoint": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.FiniteRankCorrection.quotient_kills_rankOneCorrection": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.FiniteRankCorrection.rankOneCorrection_comp_constraint_ne_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 7
+    },
+    {
+      "source": "CptSewing/TopGhostSupport.lean",
+      "scope": "Abstract two-ghost top cohomology detectors, exactness and algebraic-dual hypotheses; actual support/endpoint and physical degree selection remain analytic/open",
+      "expected_theorem_count": 10,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/TopGhostSupportAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "a4c69c69d5596dea50a342eeb233a034aacd183fac41b4b5874170819def6e70",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.q1_q0.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (H p : Module.End ℂ V) (u : V)\n  (hComm : H ∘ₗ p = p ∘ₗ H) : CptSewing.TopGhostSupport.q1 H p (CptSewing.TopGhostSupport.q0 H p u) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 128
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 128
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.q1_q0' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 129
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 129
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.top_closed.{u_1} {V : Type u_1} [AddCommGroup V] (z : V) : CptSewing.TopGhostSupport.q2 z = 0",
+            "endPos": {
+              "column": 6,
+              "line": 130
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 130
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.top_closed' depends on axioms: [propext]",
+            "endPos": {
+              "column": 6,
+              "line": 131
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 131
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.detector_kills_q1.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V] [Module ℂ V]\n  [AddCommGroup E] [Module ℂ E] (H p : Module.End ℂ V) (T : V →ₗ[ℂ] E) (hTH : T ∘ₗ H = 0) (hTp : T ∘ₗ p = 0)\n  (xy : V × V) : T (CptSewing.TopGhostSupport.q1 H p xy) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 132
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 132
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.detector_kills_q1' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 133
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 133
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.not_in_range_of_detector.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V]\n  [Module ℂ V] [AddCommGroup E] [Module ℂ E] (H p : Module.End ℂ V) (T : V →ₗ[ℂ] E) (hTH : T ∘ₗ H = 0)\n  (hTp : T ∘ₗ p = 0) (z : V) (hTz : T z ≠ 0) : ¬∃ xy, CptSewing.TopGhostSupport.q1 H p xy = z",
+            "endPos": {
+              "column": 6,
+              "line": 134
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 134
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.not_in_range_of_detector' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 135
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 135
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.section_combination_exact_implies_zero.{u_1, u_2} {V : Type u_1} {E : Type u_2}\n  [AddCommGroup V] [Module ℂ V] [AddCommGroup E] [Module ℂ E] (H p : Module.End ℂ V) (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V)\n  (hRJ : R ∘ₗ J = LinearMap.id) (hRH : R ∘ₗ H = 0) (hRp : R ∘ₗ p = 0) (v : E)\n  (hExact : ∃ xy, CptSewing.TopGhostSupport.q1 H p xy = J v) : v = 0",
+            "endPos": {
+              "column": 6,
+              "line": 136
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 136
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.section_combination_exact_implies_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 137
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 137
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.section_combination_not_exact.{u_1, u_2} {V : Type u_1} {E : Type u_2} [AddCommGroup V]\n  [Module ℂ V] [AddCommGroup E] [Module ℂ E] (H p : Module.End ℂ V) (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V)\n  (hRJ : R ∘ₗ J = LinearMap.id) (hRH : R ∘ₗ H = 0) (hRp : R ∘ₗ p = 0) (v : E) (hv : v ≠ 0) :\n  ¬∃ xy, CptSewing.TopGhostSupport.q1 H p xy = J v",
+            "endPos": {
+              "column": 6,
+              "line": 138
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 138
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.section_combination_not_exact' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 139
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 139
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.exact_of_p_preimage.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (H p : Module.End ℂ V)\n  (v z : V) (hpv : p v = z) : CptSewing.TopGhostSupport.q1 H p (-v, 0) = z",
+            "endPos": {
+              "column": 6,
+              "line": 140
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 140
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.exact_of_p_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 141
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 141
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.all_top_exact_of_surjective_p.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (H p : Module.End ℂ V) (hpSurjective : Function.Surjective ⇑p) (z : V) : ∃ xy, CptSewing.TopGhostSupport.q1 H p xy = z",
+            "endPos": {
+              "column": 6,
+              "line": 142
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 142
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.all_top_exact_of_surjective_p' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 143
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 143
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.dual_constraints_commute.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (H p : Module.End ℂ V) (hComm : H ∘ₗ p = p ∘ₗ H) :\n  LinearMap.dualMap H ∘ₗ LinearMap.dualMap p = LinearMap.dualMap p ∘ₗ LinearMap.dualMap H",
+            "endPos": {
+              "column": 6,
+              "line": 144
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 144
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.dual_constraints_commute' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 145
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 145
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.TopGhostSupport.all_top_exact_in_algebraic_dual.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (H p : Module.End ℂ V) (hpInjective : Function.Injective ⇑p) (z : Module.Dual ℂ V) :\n  ∃ xy, CptSewing.TopGhostSupport.q1 (LinearMap.dualMap H) (LinearMap.dualMap p) xy = z",
+            "endPos": {
+              "column": 6,
+              "line": 146
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 146
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.TopGhostSupport.all_top_exact_in_algebraic_dual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 147
+            },
+            "fileName": "/var/tmp/orca/ice-kernel-ghost-support-tbaixg3g/TopGhostSupportAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 147
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.TopGhostSupport.q1_q0": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.top_closed": {
+          "axioms": [
+            "propext"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.detector_kills_q1": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.not_in_range_of_detector": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.section_combination_exact_implies_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.section_combination_not_exact": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.exact_of_p_preimage": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.all_top_exact_of_surjective_p": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.dual_constraints_commute": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.TopGhostSupport.all_top_exact_in_algebraic_dual": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 10
+    }
+  ],
+  "provenance": {
+    "source_commit": "c0372dbc5e171ac3176a93dc48831a0e848112a7",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_kernel_correction_ghost_support.py": {
+        "sha256": "e3ffbc4300e0b019e9b6229b30072afc7599b6dfd62f973eaaed4dbef7c4558c",
+        "bytes": 14059
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md": {
+        "sha256": "8611a354760296d16a211dddb91b2127dd68e9e2da1a73bcb15bc7200a375366",
+        "bytes": 11299
+      },
+      "formal/cpt_sewing/kernel-correction-ghost-support-proof-index.json": {
+        "sha256": "c293824bb9fa00d6efed23c6f9726fd472672fc5e215c1a97b52d4fdf8f0f329",
+        "bytes": 1397
+      },
+      "formal/cpt_sewing/CptSewing/FiniteRankCorrection.lean": {
+        "sha256": "073647d262529fd6f1ad83b3de8a2cb051edd4fc172c6e60396d00125f92dd6b",
+        "bytes": 5959
+      },
+      "formal/cpt_sewing/CptSewing/TopGhostSupport.lean": {
+        "sha256": "eb57b15b08f346d58149dd833459f8f1d54a86277521e14d874f3fd5094fb3e2",
+        "bytes": 5696
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_RESULT.json": {
+        "sha256": "4e57d2535694d1c1bfb174ca04ae4819b085ca8a5d9ea2023bf7f4f80e7aaeb7",
+        "bytes": 32367
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_QUOTIENT_LIFT_BFV_BOUNDARY_DERIVATION.md": {
+        "sha256": "b3674f79572814940239297982fd44fc391c15439b32c1fb063c40a22a5e3355",
+        "bytes": 12466
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SEWING_SOURCE_REVIEW.md": {
+        "sha256": "2699facacfd7ef54c469084338745d0d187ebc3426ec616cea2bd2f9dfacd434",
+        "bytes": 17664
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_POLYNOMIAL_BFV_CHART.md": {
+        "sha256": "c40c63bd2e3f6a3495133c4668ebdd421f90a85edca3cfeda901d56b32bd745d",
+        "bytes": 8730
+      },
+      "cpt_temporal_folded_susy/gate1_v0_improved_static_bfv_source.py": {
+        "sha256": "62f52d079c62b9b84ccea6562e44b952067cd6c8e10f7d1a9673cc124b949ccf",
+        "bytes": 50420
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md": {
+        "sha256": "4c5ff22a482d2bbcebad04e7de2f30a612777cb38136386a330189487550249c",
+        "bytes": 9385
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_RESULT.json": {
+        "sha256": "9cc9d9533d105de6bd2be58e93a789581846d0d67d4efc80166825936af84f2d",
+        "bytes": 14172
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md": {
+        "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6",
+        "bytes": 8392
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      },
+      "docs/research/ICE_BFV_CPT_SEAM_WARD_SOURCE_PROPOSAL_2026-09-07.md": {
+        "sha256": "ccfcbd3a71f439716ffb7cc97ddc4ccdeda9f186225eeb6d6f499ead64be0f0e",
+        "bytes": 12977
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ]
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "actual_rank_one_primary_w",
+        "group": "actual_carrier_and_transpose",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_rank_one_primary_squared_w",
+        "group": "actual_carrier_and_transpose",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "real_rank_one_moment_is_collar_boundary",
+        "group": "actual_carrier_and_transpose",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_Weyl_bilinear_Green_divergence",
+        "group": "actual_carrier_and_transpose",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_primary_bilinear_transpose_sign",
+        "group": "actual_carrier_and_transpose",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_H_primary_for_coordinate_complex",
+        "group": "actual_carrier_and_transpose",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "shared_Neumann_Green_face_vanishes",
+        "group": "actual_carrier_and_transpose",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "coordinate_ghost_order",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "actual_two_ghost_q1_sign",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "top_ghost_is_closed",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_delta_c_annihilation",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_delta_rho_annihilation",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "coefficient_dual_chain_degree_zero",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "coefficient_dual_chain_degree_one",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "unflipped_ghost_embedding_defect",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "unflipped_ghost_embedding_defect_nonzero",
+        "group": "ghost_degree_and_chain_sign",
+        "passed": true,
+        "defect": [
+          {
+            "monomial": "rho",
+            "coefficient": "-2*p_z"
+          }
+        ],
+        "scope": "formal coefficient identity; actual p is nonzero on the carrier"
+      },
+      {
+        "id": "endpoint_transpose_primitive_with_upper_trace",
+        "group": "endpoint_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "endpoint_transpose_primitive_collar",
+        "group": "endpoint_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "endpoint_V_transpose_maps_to_delta",
+        "group": "endpoint_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "endpoint_top_candidate_is_exact",
+        "group": "endpoint_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "ghost_free_endpoint_primary_is_not_identically_zero",
+        "group": "endpoint_support",
+        "passed": true,
+        "expression": "-I*Derivative(u_trace(N_0), N_0)",
+        "scope": "nonzero trace-derivative functional; actual repaired-carrier witnesses supplied analytically"
+      },
+      {
+        "id": "ket_versus_transpose_Heaviside_sign",
+        "group": "endpoint_support",
+        "passed": true,
+        "residual": []
+      },
+      {
+        "id": "bra_density_Heaviside_primitive",
+        "group": "endpoint_support",
+        "passed": true,
+        "residual": []
+      }
+    ],
+    "analytic_proof": "cpt_temporal_folded_susy/STAROBINSKY_KERNEL_CORRECTION_GHOST_SUPPORT_DERIVATION.md",
+    "actual_kernel_correction": "w=d_N(F*chi) real interior bump; K_w u=<w,u>w is bounded, self-adjoint, carrier-preserving, R K_w=0 and K_w p_N!=0, but [p_N,K_w]w!=0",
+    "finite_rank_result": "Bounded finite-rank K and K-adjoint preserving Phi, with R K=A R, force A=0; lambda I+K induces only lambda I on that finite quotient",
+    "compact_test_top_cohomology": "Actual constrained-dual Gram sections yield n independent H^2(Phi tensor Lambda(c,rho)) classes for every finite n; H^0 remains zero; no physical degree reassignment",
+    "coefficient_algebraic_dual": "Phi_alg* tensor Lambda(c,rho), with H^t T=T H and p^t T=T p, has top cohomology zero because p is injective and its algebraic transpose is surjective",
+    "embedding": "Bilinear inclusion plus c->c,rho->-rho is a chain injection, not a quasi-isomorphism; it is not the full graded dual or a selected quantum BFV equivalence",
+    "endpoint": "D[u]=u(2,phi0,N0); S[u]=integral_N0^2 u(2,phi0,N)dN; p^t(-iS)=D; c rho D=Qhat(-c*(-iS)); explicit C-infinity-continuous primitive, not an L2-bounded or compact-N primitive",
+    "remaining": "Infinite-rank/unbounded or other justified observable realization; physical ghost degree, support/topology and half-density module; positive metric; bulk BFV/quantum state/CPT sewing and original cycle"
+  },
+  "theorem_count": 17,
+  "elapsed_seconds": 7.143708890303969
+}
