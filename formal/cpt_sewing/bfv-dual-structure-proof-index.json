@@ -1,0 +1,62 @@
+{
+  "schema": "ice-lean-multimodule-proof-index/v1",
+  "modules": [
+    {
+      "source": "CptSewing/BFVCore.lean",
+      "namespace": "CptSewing.BFVCore",
+      "scope": "Algebraic iterated-boundary carrier and minimal coefficient complex; no closed operator realization",
+      "theorems": [
+        "core_boundary",
+        "core_primary_stable",
+        "core_H_stable",
+        "stable_boundary_carrier_subset_core",
+        "minimal_complex_square_zero",
+        "degree_zero_closed_iff",
+        "degree_zero_trivial_of_primary_injective"
+      ]
+    },
+    {
+      "source": "CptSewing/ConstrainedDual.lean",
+      "namespace": "CptSewing.ConstrainedDual",
+      "scope": "Constraint-range annihilation and Green/on-shell/witness implications; actual analytic hypotheses remain inputs",
+      "theorems": [
+        "mem_constrainedDual_iff",
+        "constrainedDual_apply_H",
+        "constrainedDual_apply_p",
+        "constraint_span_le_ker",
+        "inducedForm_H_left",
+        "inducedForm_H_right",
+        "inducedForm_p_left",
+        "inducedForm_p_right",
+        "inducedForm_diag_pos",
+        "kernels_ne_of_separator",
+        "pairing_mem_constrainedDual",
+        "pairing_onShell_nonzero_constrainedDual"
+      ]
+    },
+    {
+      "source": "CptSewing/DualQuotient.lean",
+      "namespace": "CptSewing.DualQuotient",
+      "scope": "Actual kernel quotient, positive sesquilinear form and conditional kinematic conjugation; no physical selection or full CPT",
+      "theorems": [
+        "quotientFunctional_mk",
+        "quotientFunctional_injective",
+        "functional_surjective_of_ne_zero",
+        "quotientEquivComplex_mk",
+        "quotientForm_hermitian",
+        "quotientForm_add_right",
+        "quotientForm_smul_right",
+        "quotientForm_add_left",
+        "quotientForm_smul_left",
+        "quotientForm_diag_real",
+        "quotientForm_diag_nonneg",
+        "quotientForm_diag_eq_zero_iff",
+        "covariance_preserves_kernel",
+        "quotientK_mk",
+        "quotientK_involutive",
+        "quotientFunctional_quotientK",
+        "quotientForm_quotientK_covariant"
+      ]
+    }
+  ]
+}
