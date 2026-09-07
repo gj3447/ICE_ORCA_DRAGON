@@ -8,6 +8,24 @@ Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, upd
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
 verifies 419/419 stored hashes.
 
+The 2026-09-07 user-requested Gaussian seam questions are indexed in
+`reading-path:starobinsky-seam-ward-regulator-removal`:
+
+| 미해결 질문 | Canonical open problem |
+| --- | --- |
+| 허용한 경계상태에 작용시켰을 때 규제를 제거하며 실제 Ward 잔여항이 사라지는가? | `open:starobinsky-seam-ward-boundary-state-limit` |
+| 고정된 상자의 경계에는 무엇이 남으며, 경계조건이나 상자 제거가 결과를 바꾸는가? | `open:starobinsky-seam-ward-cutoff-boundary-limit` |
+| 남는 항이 정규화된 물리 관측량에 연결되고, 허용 규제·게이지 선택 아래 유지되는가? | `open:starobinsky-seam-ward-physical-effect-bridge` |
+
+Read the [existing finite-width report](../../cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md)
+first. Its nonzero defect/Gaussian quotient does not answer these limit questions. The graph records
+them as supporting or conditional open problems, with test-state, boundary-domain and physical-source
+dependencies; it adds no computational evidence or claim that BRST breaking caused the Big Bang.
+
+```bash
+./ice ontology guide --graph cpt --path starobinsky-seam-ward-regulator-removal
+```
+
 The non-authoritative
 [geometry–CPT–SUSY intuition map](../../research/intuition/ICE_GEOMETRY_CPT_SUSY_INTUITION_MAP_2026-09-03.md)
 organizes the proposed geometry–energy and opposite-sheet ideas as source-linked separation tests, with

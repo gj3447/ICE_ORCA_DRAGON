@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T00:27:47Z",
+  "updated_at_utc": "2026-09-07T00:55:17Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1722,6 +1722,22 @@
         "open:gate1-v0-quantum-inhomogeneous-bfv-nilpotency-anomaly",
         "open:gate1-v0-lapse-modulus-contour-and-absolute-bfv-measure",
         "open:gate1-v0-empirical-likelihood-bridge"
+      ]
+    },
+    {
+      "id": "reading-path:starobinsky-seam-ward-regulator-removal",
+      "title": "Gaussian 접합: 경계상태에 작용시킨 잔여항과 규제 제거",
+      "summary": "사용자 질문: 비영인가에서 더 나아가, 허용한 경계상태에 작용시켰을 때 규제를 제거하며 사라지는가, 경계에 무엇이 남는가? 기존 finite-width 반례와 raw face ledger를 읽고, test-state pairing과 극한 위상, 내부와 경계의 제거 순서, 물리적 해석 조건을 별도 미해결 질문으로 추적한다. 세 질문은 SUPPORTING/CONDITIONAL이며 새 계산 결과나 실행 승인이 아니다. 기존 Gaussian의 exact nonclosure를 뒤집거나 G1 해소, 양자 anomaly, CPT 위반, 빅뱅 원인 또는 TOE 발견을 주장하지 않는다.",
+      "nodes": [
+        "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
+        "scope:starobinsky-gaussian-seam-ward-flat-core",
+        "evidence:starobinsky-gaussian-seam-ward-result",
+        "artifact:starobinsky-bfv-seam-ward-report",
+        "open:starobinsky-seam-ward-boundary-state-limit",
+        "open:starobinsky-seam-ward-cutoff-boundary-limit",
+        "open:starobinsky-seam-ward-physical-effect-bridge",
+        "open:gate1-starobinsky-finite-m2-replacement-bfv-source",
+        "policy:choice-invariance-cross-domain-promotion"
       ]
     }
   ],
@@ -16643,6 +16659,63 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md",
       "sha256": "3ca7116ae89d2b52d2dba8e6cbd9224dd9be4446a0930999d8f3da071f41b811"
+    },
+    {
+      "id": "open:starobinsky-seam-ward-boundary-state-limit",
+      "type": "open_problem",
+      "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
+      "summary": "Every-positive-width nonclosure leaves the state-paired regulator-removal question open. The value -3*pi^2/8 is the off-diagonal defect/Gaussian quotient, not a surviving physical amplitude. Declare the boundary test space, graded pairing and measure, convergence topology and cutoff-removal order before classifying the actual paired defect. Smooth compact interior test functions are a possible starting domain, not an already constructed physical BFV state space.",
+      "state": "OPEN_SUPPORTING_BOUNDARY_STATE_PAIRING_AND_LIMIT_UNRESOLVED",
+      "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
+      "includes": [
+        "The declared homogeneous Starobinsky Weyl operator, graded kernel and flat-density convention; compare the same model and pairing throughout",
+        "A named boundary test-state class and normalization, with interior compact support separated from states reaching a cutoff face; physical BRST cohomology requires an additional construction",
+        "The actual Ward functional obtained by pairing (Omega1+Omega2)K_tau, retaining separate interior and face contributions and declaring weak versus stronger convergence",
+        "A declared order for tau down to zero and any box or other regulator removal; zero, a nonzero limit, nonconvergence and presently unresolved are distinct outcomes"
+      ],
+      "excludes": [
+        "Inferring the limit from a pointwise defect/Gaussian quotient, one off-diagonal witness, or nonzero values at every positive tau",
+        "Assuming uniform pointwise or operator-norm convergence from compact-test convergence",
+        "A proved physical state, full trajectory source, original relative cycle, G1 progress or automatic next calculation"
+      ]
+    },
+    {
+      "id": "open:starobinsky-seam-ward-cutoff-boundary-limit",
+      "type": "open_problem",
+      "title": "Determine what remains on the hard-box boundary in the Gaussian seam limit",
+      "summary": "The existing raw result specifies twelve finite-width face distributions, but their action and limit on a declared boundary-state class remain untested. Distinguish removing Gaussian smoothing with the hard box fixed from changing or removing the box. A formal [H,chi] boundary commutator is a target for domain-aware verification, not an established physical source or a complete operator-limit theorem.",
+      "state": "OPEN_SUPPORTING_CUTOFF_FACE_PAIRING_AND_LIMIT_UNRESOLVED",
+      "question": "규제를 제거하면 경계에 무엇이 남는가? 같은 허용 경계상태에 대해 고정된 hard box의 열두 face 항이 상쇄되는가, 비영 경계 함수로 남는가, 아니면 극한이 존재하지 않는가? 경계조건 또는 상자 제거 순서를 바꾸면 어떤 항이 달라지는가?",
+      "includes": [
+        "The twelve a, phi and N lower/upper face terms in symbolic.defect.box_face_ledger of the existing raw result, with their signs and delta-prime terms retained",
+        "The same declared test pairing and topology as the boundary-state limit question; boundary traces and any admissible domain/cancellation prescription must be explicit",
+        "Separate fixed-box tau removal from admissible box/domain changes and joint limits; determine zero, nonzero boundary functional, nonconvergence or an undefined pairing without forcing cancellation",
+        "Compare surviving boundary terms with the candidate constraint and primary commutators [H,chi] and [partial_N,chi] only in a stated distributional or operator domain"
+      ],
+      "excludes": [
+        "Treating the N=1/4 and N=2 box faces as N=0 contact and infinite lapse, or treating the a in [1/2,2] box as an a=0 Big-Bang calculation",
+        "Cancelling a smooth nonzero interior defect solely by boundary-supported terms",
+        "A proved self-adjoint extension, full continuum boundary condition, physical edge mode, anomaly or original-cycle construction"
+      ]
+    },
+    {
+      "id": "open:starobinsky-seam-ward-physical-effect-bridge",
+      "type": "open_problem",
+      "title": "Test whether a remaining seam contribution has a choice-independent physical effect",
+      "summary": "Conditional interpretation question requested after the Gaussian Ward audit. A Ward failure changes the kernel's ghost degree and is not itself an energy density or an observable. A physical interpretation needs a same-model full source and physical state/product, a map to a normalized observable and a declared admissible regulator/gauge family. None is supplied by the finite-width counterexample; a stable null is equally informative.",
+      "state": "OPEN_CONDITIONAL_PHYSICAL_SOURCE_STATE_AND_OBSERVABLE_MISSING",
+      "question": "남는 접합 항이 있다면, 같은 물리 내용을 나타내야 하는 허용 규제·게이지 선택을 바꿔도 정규화된 물리 관측량에 같은 효과가 남는가? 잔여항에서 실제 경계 작용 또는 상태 변화로 가는 사상을 구성할 수 있는가, 아니면 선택 의존성이나 안정적인 null로 해당 해석이 닫히는가?",
+      "includes": [
+        "A constructed same-model BFV source, physical boundary state and product, plus a degree-compatible map from the Ward diagnostic to an effective boundary contribution or normalized observable",
+        "A predeclared family of choices representing the same intended physical content, its invariant/null criterion and relevant independent checks; changing the theory is not a gauge/regulator control",
+        "Before broader mechanism promotion, name the typed mechanism, at least two independently defined consumers in this CPT graph, and the dominant false-signal control; these consumers remain unconstructed here",
+        "Keep the user's Big-Bang intuition as a speculative question only: a link would additionally require a controlled cosmological boundary limit and a derived initial-state or backreaction effect"
+      ],
+      "excludes": [
+        "Identifying the smoothing variance tau with physical cosmic time, an initial thickness or a fundamental scale without dynamics fixing that identification",
+        "Calling finite Gaussian BRST nonclosure a physical CPT violation, non-removable anomaly, Big-Bang cause, established physical mechanism or TOE result",
+        "Treating graph neighbors, two representations of one residual, or evidence from another ontology graph as independent physical consumers"
+      ]
     }
   ],
   "edges": [
@@ -37084,7 +37157,17 @@
     {"id":"edge:3897","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"DEFINED_IN","to":"artifact:starobinsky-gaussian-seam-ward-runner","note":"The runner performs the symbolic interior, Berezin and twelve-face checks and invokes the pinned Lean audit."},
     {"id":"edge:3898","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"RECORDED_IN","to":"artifact:starobinsky-gaussian-seam-ward-result","note":"The raw result is the complete machine-readable source of truth for the regulator, exact checks, Lean acceptance and limits."},
     {"id":"edge:3899","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"MOTIVATES","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"The declared Gaussian cannot serve as an exactly BFV-closed finite-width seam. A controlled regulator-removal limit is not excluded; the same-model finite trajectory source and relative-cycle data remain missing."},
-    {"id":"edge:3900","from":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-bfv-seam-ward-report"}
+    {"id":"edge:3900","from":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-bfv-seam-ward-report"},
+    {"id":"edge:3901","from":"open:starobinsky-seam-ward-boundary-state-limit","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","note":"User-requested limit question; the finite-width contradiction does not settle convergence on allowed boundary states."},
+    {"id":"edge:3902","from":"open:starobinsky-seam-ward-boundary-state-limit","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"Supporting compatibility question for this declared seam; other regulators may bypass this candidate."},
+    {"id":"edge:3903","from":"open:starobinsky-seam-ward-cutoff-boundary-limit","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","note":"The existing face ledger motivates asking what remains after pairing and regulator removal; it is not evidence of the uncomputed limit."},
+    {"id":"edge:3904","from":"open:starobinsky-seam-ward-cutoff-boundary-limit","relation":"PART_OF","to":"concept:cpt-pin-sewing"},
+    {"id":"edge:3905","from":"open:starobinsky-seam-ward-cutoff-boundary-limit","relation":"BLOCKED_BY","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Face limits use its declared test-state pairing and topology; this does not require a zero interior result before boundary analysis."},
+    {"id":"edge:3906","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"Conditional interpretation of this seam candidate, not a newly established mechanism or G1 blocker."},
+    {"id":"edge:3907","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"BLOCKED_BY","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"A candidate physical contribution must be separated from smoothing and pairing artifacts."},
+    {"id":"edge:3908","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"BLOCKED_BY","to":"open:starobinsky-seam-ward-cutoff-boundary-limit","note":"The candidate's boundary contribution and domain dependence must be resolved before assigning a physical effect."},
+    {"id":"edge:3909","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"BLOCKED_BY","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"The existing boundary regulator supplies no full same-model source, physical state/product or normalized observable."},
+    {"id":"edge:3910","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"GOVERNED_BY","to":"policy:choice-invariance-cross-domain-promotion","note":"Selection invariance and independent in-graph consumers are conditions for broader interpretation, never evidence supplied by this question."}
   ],
   "kg_bridges": [
     {
