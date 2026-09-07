@@ -53,7 +53,7 @@ theorem seamFlux_neumann_dirichlet (k : ℝ) {x y : Jet}
     seamFlux k x y = (k : ℂ) * x.q * y.p := by
   simp only [IsNeumann] at hx
   simp only [IsDirichlet] at hy
-  simp [seamFlux, hx, hy]
+  simp [seamFlux, hx, hy, mul_assoc]
 
 /-- The actual upper-face coefficient for the fixed Weyl operator. -/
 noncomputable def upperFaceK : ℝ := -1 / (48 * Real.pi ^ 2)

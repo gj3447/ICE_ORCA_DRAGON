@@ -34,7 +34,7 @@ theorem exists_nonzero_witness (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0) :
 /-- Kernel preservation is exactly the common-eigenfunctional condition. -/
 theorem preservesKernel_iff_exists_eigenvalue (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0)
     (O : Module.End ℂ V) :
-    PreservesKernel T O ↔ ∃ λ : ℂ, ∀ v : V, T (O v) = λ * T v := by
+    PreservesKernel T O ↔ ∃ eigenvalue : ℂ, ∀ v : V, T (O v) = eigenvalue * T v := by
   constructor
   · intro h
     obtain ⟨w, hw⟩ := exists_nonzero_witness T hT
@@ -54,9 +54,9 @@ theorem preservesKernel_iff_exists_eigenvalue (T : V →ₗ[ℂ] ℂ) (hT : T �
     calc
       T (O v) = (T v * (T w)⁻¹) * T (O w) := sub_eq_zero.mp hzero
       _ = (T (O w) * (T w)⁻¹) * T v := by ring
-  · rintro ⟨λ, hλ⟩ v hv
+  · rintro ⟨eigenvalue, heigenvalue⟩ v hv
     change T (O v) = 0
-    rw [hλ v, hv]
+    rw [heigenvalue v, hv]
     simp
 
 /-- An explicit witness that the selected quotient kernel is not preserved. -/
@@ -95,8 +95,8 @@ theorem scalar_commutator_forces_functional_zero
 /-- If a constraint already annihilates the functional, its only possible
 eigenvalue on a nonzero selected quotient is zero. -/
 theorem constraint_eigenvalue_eq_zero (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0)
-    (p : Module.End ℂ V) (λ : ℂ) (hp : T.comp p = 0)
-    (hEigen : ∀ v : V, T (p v) = λ * T v) : λ = 0 := by
+    (p : Module.End ℂ V) (eigenvalue : ℂ) (hp : T.comp p = 0)
+    (hEigen : ∀ v : V, T (p v) = eigenvalue * T v) : eigenvalue = 0 := by
   obtain ⟨w, hw⟩ := exists_nonzero_witness T hT
   have hpw : T (p w) = 0 := by
     have := LinearMap.congr_fun hp w
@@ -109,14 +109,14 @@ def rankOneForm (T : V →ₗ[ℂ] ℂ) (u v : V) : ℂ :=
   starRingEnd ℂ (T u) * T v
 
 theorem rankOneForm_eigen_right (T : V →ₗ[ℂ] ℂ) (O : Module.End ℂ V)
-    (λ : ℂ) (hEigen : ∀ v : V, T (O v) = λ * T v) (u v : V) :
-    rankOneForm T u (O v) = λ * rankOneForm T u v := by
+    (eigenvalue : ℂ) (hEigen : ∀ v : V, T (O v) = eigenvalue * T v) (u v : V) :
+    rankOneForm T u (O v) = eigenvalue * rankOneForm T u v := by
   simp only [rankOneForm, hEigen]
   ring
 
 theorem rankOneForm_eigen_left (T : V →ₗ[ℂ] ℂ) (O : Module.End ℂ V)
-    (λ : ℂ) (hEigen : ∀ v : V, T (O v) = λ * T v) (u v : V) :
-    rankOneForm T (O u) v = starRingEnd ℂ λ * rankOneForm T u v := by
+    (eigenvalue : ℂ) (hEigen : ∀ v : V, T (O v) = eigenvalue * T v) (u v : V) :
+    rankOneForm T (O u) v = starRingEnd ℂ eigenvalue * rankOneForm T u v := by
   simp only [rankOneForm, hEigen, map_mul]
   ring
 
