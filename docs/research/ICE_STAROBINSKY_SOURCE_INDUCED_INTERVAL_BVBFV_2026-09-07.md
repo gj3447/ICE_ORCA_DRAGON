@@ -168,6 +168,78 @@ These signs follow from CMW's component/Koszul convention. The actual target dat
 (3)--(4) make (5)--(11) an explicit homogeneous Starobinsky extended-system
 candidate; this does not derive them from covariant gravity plus GHY.
 
+### 3.1 Primary pair를 분리할 때 남는 relative boundary 자료
+
+식 (7)의 primary sector가 (1)에 맞추어지는 방식을, 경계 항까지 포함하여
+local jet algebra에서 직접 쓸 수 있다. 다음은 bulk의 형식적 변수변환이지
+경계 상태공간의 quasi-isomorphism 주장이 아니다. (E=e^1) 및
+
+\[
+ \sigma=e^2-\dot N,\qquad \sigma^+=e^+_2,\qquad
+ N^+_{\rm new}=N^+-\dot e^+_2
+ \tag{12}
+\]
+
+로 둔다. (7)을 현재 Abelian constraints에 전개하면 relevant terms are
+
+\[
+ \begin{split}
+ S_{\rm BV}=\int_I ds\,[&p_a\dot a+p_\phi\dot\phi+\Pi\dot N
+ -E H_L-e^2\Pi-e^+_1\dot c-e^+_2\dot\rho\\
+ &+c(q_i^+\partial_{p_i}H_L-p_+^i\partial_{q^i}H_L)+\rho N^+] .
+ \end{split}
+ \tag{13}
+\]
+
+여기서 \(H_L\)은 \(N\)에 독립이므로 \(c\)-항에는 \(N\)-antifield
+derivative가 없다. 적분 부분적분과 odd coefficient 순서를 포함하면
+
+\[
+ \begin{split}
+ \int_I(\Pi\dot N-e^2\Pi)&=-\int_I\Pi\sigma,\\
+ -\int_I\sigma^+\dot\rho+\int_I\rho N^+
+ &=\int_I\rho N^+_{\rm new}-[\sigma^+\rho]_{s_-}^{s_+}.
+ \end{split}
+ \tag{14}
+\]
+
+두 번째 줄의 마지막 적분에서는 \(\rho\dot\sigma^+=-\dot\sigma^+\rho\)를
+썼다. 따라서 exact bulk rewriting은
+
+\[
+ S_{\rm BV}=S_{\rm min}(E,c)
+ +\int_I ds\,[-\Pi\sigma+\rho N^+_{\rm new}]
+ -[\sigma^+\rho]_{s_-}^{s_+},
+ \tag{15}
+\]
+
+이다. 여기서 \(S_{\rm min}(E,c)\)는 (13)에서 \(\Pi,e^2,\rho,N^+\)와
+그 plus partners를 뺀 one-constraint \(H_L\) CMW action이다. 동시에 BV
+cotangent one-form의 해당 부분은
+
+\[
+ \int_I(N^+\delta N+e^+_2\delta e^2)
+ =\int_I(N^+_{\rm new}\delta N+\sigma^+\delta\sigma)
+   +[\sigma^+\delta N]_{s_-}^{s_+}.
+ \tag{16}
+\]
+
+즉 unrestricted local jet algebra 또는 compactly supported variations에서는
+\((\Pi,\sigma;\Pi^+,\sigma^+)\)가 algebraic auxiliary quartet이고
+\((N^+_{\rm new},\rho;N,\rho^+)\)는 formal contractible jet sector라는
+유용한 bulk bookkeeping을 얻는다. 하지만 interval endpoint jets를 보존하면
+(15)의 \(-[\sigma^+\rho]\)와 (16)의 \([\sigma^+\delta N]\)를 함께 유지해야
+한다. \(\rho=0\) 또는 \(\sigma^+=0\)가 action boundary term을 없앨 수 있어도,
+BV primitive는 allowed variations에서 따로 0이어야 한다; \(\sigma^+=0\)는
+그 두 조건을 함께 충족하는 한 충분한 endpoint restriction이다.
+
+따라서 \(E=N,\sigma=0\), 곧 (9)의 \(e^1=N,e^2=\dot N\),는 bosonic
+component bridge를 다시 준다. 이것만으로 full BV Lagrangian, endpoint
+polarization, 또는 허용된 full path-integration cycle이 정해지지는 않는다.
+특히 compact-\(N\) boundary carrier에서 발견된 nontrivial top-ghost
+cohomology를 이 local/compact-support bulk contraction으로 없앴다고 결론낼 수
+없다.
+
 ## 4. The separate declared BFV gauge-fixed phase-space source
 
 The CMW BV action (7) and the following gauge-fixed BFV component action are distinct.
@@ -176,7 +248,7 @@ For the already declared gauge fermion
 \[
  \Psi=-N\bar\rho,
  \qquad H_\Psi=-\{\Omega,\Psi\}=NH_L+\bar\rho\rho,
- \tag{13}
+ \tag{17}
 \]
 
 the declared BFV gauge-fixed trajectory action is
@@ -184,7 +256,7 @@ the declared BFV gauge-fixed trajectory action is
 \[
  S^{(0)}_\Psi=\int_I ds\,[p_a\dot a+p_\phi\dot\phi+\Pi\dot N
  +\bar\rho\dot c+\bar c\dot\rho-NH_L-\bar\rho\rho].
- \tag{14}
+ \tag{18}
 \]
 
 On the bosonic slice \(\Pi=c=\rho=\bar\rho=\bar c=0\), this **separate
@@ -195,7 +267,7 @@ there gives the configuration form
  S_L=\int_I ds\left[-\frac{6\pi^2a\dot a^2}{N}
  +\frac{\pi^2a^3\dot\phi^2}{N}+6\pi^2aN
  -\frac32\pi^2a^3N(1-e^{-\sqrt{2/3}\phi})^2\right].
- \tag{15}
+ \tag{19}
 \]
 
 This verifies the actual \(S_L\) relation for the declared Hamiltonian BFV
@@ -203,20 +275,20 @@ action, not for (7) without the component bridge (9). It does **not** select a
 path-integral measure or establish that either gauge-fixing Lagrangian is
 admissible on the desired complex cycle. In particular, the positive-lapse
 ray, a full-real group average, and a finite \(\Pi\) Fourier integral are
-different source choices; none follows from (6) or (14).
+different source choices; none follows from (6) or (18).
 
 The previously constructed finite canonical endpoint
 
 \[
  L_{q_0}=\{a=a_0,\phi=\phi_0,N=N_0,c=\rho=0\}
- \tag{16}
+ \tag{20}
 \]
 
 has \(\alpha_{\rm BFV}|_{L_{q_0}}=0\) and \(\Omega|_{L_{q_0}}=0\), and is
 \(Q_\partial\)-tangent in the finite canonical model because the unconstrained
 momenta and antighost momenta remain free. Hence it is a possible classical
 adapted endpoint condition for the BFV target (3). It is not a proof that a
-covariant bulk selects (16), nor an identification with the Weyl Cauchy jet condition at
+covariant bulk selects (20), nor an identification with the Weyl Cauchy jet condition at
 \(a=2\).
 
 ## 5. What classical gluing now means

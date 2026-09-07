@@ -174,6 +174,14 @@ def derive() -> dict:
     eq("CMW_zero_second_multiplier_leaves_primary_kinetic",extended.subs({e1:n,e2:0})-lag,Pi*nd,"source_and_orientation")
     bp_in,bp_out=s.symbols("alpha_in alpha_out")
     eq("CMW_boundary_master_cancellation",(bp_out-bp_in)+(bp_in-bp_out),group="source_and_orientation")
+    sigma=s.Symbol("sigma")
+    eq("CMW_primary_bulk_split",Pi*nd-(sigma+nd)*Pi,-Pi*sigma,"source_and_orientation")
+    # Here br=sigma_plus, bc=d_s sigma_plus, c=d_s rho; all are odd.
+    total_odd_derivative=bc*rho+br*c
+    eq("CMW_odd_boundary_split_sign",-br*c,-rho*bc-total_odd_derivative,"source_and_orientation")
+    st=s.Symbol("s",real=True)
+    sp=s.Function("sigma_plus")(st); dn=s.Function("delta_N")(st)
+    eq("CMW_cotangent_boundary_primitive",sp*s.diff(dn,st),s.diff(sp*dn,st)-s.diff(sp,st)*dn,"source_and_orientation")
     eq("source_momentum_elimination",lag.subs({pa:pa_sol,pp:pp_sol}),-6*s.pi**2*a*ad**2/n+s.pi**2*a**3*pd**2/n-n*U,"source_and_orientation")
     def transform(poly, signs):
         return E({m: coefficient.subs({pa:-pa,pp:-pp,Pi:-Pi}, simultaneous=True)*s.prod(signs.get(g,1) for g in m) for m,coefficient in poly.terms.items()})
@@ -187,7 +195,8 @@ def derive() -> dict:
         "cohomology":"H0=H1=0; H2 is isomorphic to Psi/H Psi and infinite-dimensional by actual Cauchy/Gram detectors; no physical degree reassignment",
         "graded_pairing":"T_g[z]=t_g[R_N z], closed dual degree -2; explicit Ward and dual-left Berezin signs; selected actual detectors continuous",
         "choice_scope":"normalized real compact N bump changes representatives by exact terms; no gauge/contour/physics promotion",
-        "source_scope":"finite canonical bracket and bosonic source signs checked; extended AKSZ-to-actual-source equivalence must be derived separately",
+        "source_scope":"CMW component action splits into a minimal bulk source and formal doublet sectors with action boundary -[sigma_plus*rho] and cotangent boundary [sigma_plus*deltaN]; endpoint and global cycle equivalence remain separate",
+        "continuous_coefficient_dual":"For the stated ambient C-infinity continuous dual, V=T composed with K is continuous and p-transpose V=T; hence its coefficient-only top cohomology is zero, unlike correctly graded top detectors",
         "noncomputed":"No numerical PDE data, full continuous-dual cohomology, nonperturbative BV integral, quantum CPT kernel, positive norm or G1 cycle"}
 
 

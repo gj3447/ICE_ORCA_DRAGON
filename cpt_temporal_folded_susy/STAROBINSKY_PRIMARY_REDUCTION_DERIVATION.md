@@ -124,7 +124,20 @@ T_g[z]=t_g[R_Nz]다. 축소 전후 같은 값을 주고 q₁-exact 대표를 소
 Thus dual transfer F^t and I^t preserves this pairing; algebraic transpose of (5) gives
 the dual chain homotopy with the declared degree signs. T_g는 선택한 C∞ topology에도
 연속이므로 적어도 이 실제 family에는 algebraic-only existence 문제도 없다.
-전체 continuous dual의 exactness/closed-range 정리를 추정하지 않는다.
+전체 continuous dual의 closed-range 또는 smooth-seed 완전성 정리를 추정하지 않는다.
+
+한편 이번 K는 **앞선 coefficient-only dual의 한 미해결 범위도 결정한다**.
+Φ에 위 ambient C∞ topology를 주고 Φ′를 그 continuous dual로 택하면 H,p,K가 모두
+continuous다. 모든 T∈Φ′에 대해 V=T∘K∈Φ′이고
+\[
+ p^tV=V\circ p=T\circ Kp=T.
+ \tag{9}
+\]
+따라서 coefficient-only complex Φ′⊗Λ(c,ρ)에서는 모든 cρT가
+\(\widehat Q(-cV)\)로 exact다. 이 **명시한 continuous-dual topology**에서도 H²=0이다.
+이는 임의의 distribution space에 대한 주장이 아니다. 올바른 degree-reversed dual에서
+T_g가 degree −2의 closed non-exact detector로 남는 결과와 구별해야 한다.
+K의 L² boundedness만으로 H^t가 모든 L² coefficient를 다시 L²로 보낸다고 추정하지 않는다.
 
 Nonzero pairing은 bilinear이며 positive norm이 아니다. Ghost degree 2와 반대쪽
 degree −2를 짝짓는다; 단순 degree shift는 물리 ghost-number-zero 선언이 아니다.

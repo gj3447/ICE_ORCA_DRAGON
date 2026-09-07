@@ -40,7 +40,7 @@ theorem homotopy_degree_one (H p K : Module.End ℂ V)
     (hHK : ∀ u, H (K u) = K (H u)) (xy : V × V) :
     q0 H p (K xy.2) + (-K (q1 H p xy), 0) = xy - (0, J (R xy.2)) := by
   apply Prod.ext
-  · simp [q0, q1, hHK, hKp, sub_eq_add_neg, add_comm, add_left_comm, add_assoc]
+  · simp [q0, q1, hHK, hKp, sub_eq_add_neg, add_comm, add_left_comm]
   · simp [q0, hpK]
 
 theorem homotopy_degree_two (H p K : Module.End ℂ V)
@@ -60,7 +60,9 @@ theorem closed_degree_one_exact_of_reduced_injective
     have hz := project_q1 H p h R hRp hRH xy
     simpa [hc] using hz.symm
   have he := homotopy_degree_one H p K R J hKp hpK hHK xy
-  simpa [hc, hRy] using he
+  rw [hc, hRy, map_zero, map_zero, neg_zero] at he
+  change q0 H p (K xy.2) + 0 = xy - 0 at he
+  simpa only [add_zero, sub_zero] using he
 
 theorem top_exact_iff_reduced_exact
     (H p K : Module.End ℂ V) (h : Module.End ℂ E)
@@ -76,12 +78,21 @@ theorem top_exact_iff_reduced_exact
   · rintro ⟨e, he⟩
     refine ⟨(-K z, J e), ?_⟩
     simp only [q1, hHJ, he, map_neg, hpK, sub_neg_eq_add]
-    simp [sub_eq_add_neg, add_comm, add_left_comm, add_assoc]
+    simp [sub_eq_add_neg, add_left_comm]
 
 theorem same_projection_diff_exact (H p K : Module.End ℂ V)
     (R : V →ₗ[ℂ] E) (J : E →ₗ[ℂ] V)
     (hpK : ∀ u, p (K u) = u - J (R u))
     (z w : V) (he : R z = R w) : q1 H p (-K (z - w), 0) = z - w := by
   simpa [map_sub, he] using homotopy_degree_two H p K R J hpK (z - w)
+
+/-- A primary left inverse gives an explicit transpose preimage. Analytic
+continuity of K, when available, makes this construction preserve continuous
+functionals as well; continuity is not a hypothesis formalized here. -/
+theorem dual_primary_right_inverse (p K : Module.End ℂ V)
+    (hKp : ∀ u, K (p u) = u) (T : Module.Dual ℂ V) :
+    (T.comp K).comp p = T := by
+  ext u
+  simp [LinearMap.comp_apply, hKp]
 
 end CptSewing.PrimaryReduction

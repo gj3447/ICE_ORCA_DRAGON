@@ -15,7 +15,8 @@
         "homotopy_degree_two",
         "closed_degree_one_exact_of_reduced_injective",
         "top_exact_iff_reduced_exact",
-        "same_projection_diff_exact"
+        "same_projection_diff_exact",
+        "dual_primary_right_inverse"
       ]
     },
     {
