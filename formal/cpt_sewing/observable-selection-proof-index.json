@@ -1,0 +1,35 @@
+{
+  "schema": "ice-lean-multimodule-proof-index/v1",
+  "modules": [
+    {
+      "source": "CptSewing/ObservableSelection.lean",
+      "namespace": "CptSewing.ObservableSelection",
+      "scope": "finite conditional kernel/eigenfunctional, commutator and rank-one form algebra; no physical observable construction",
+      "theorems": [
+        "exists_nonzero_witness",
+        "preservesKernel_iff_exists_eigenvalue",
+        "kernel_failure_of_witness",
+        "commutator_killed_of_common_eigenfunctional",
+        "scalar_commutator_forces_functional_zero",
+        "constraint_eigenvalue_eq_zero",
+        "rankOneForm_eigen_right",
+        "rankOneForm_eigen_left"
+      ]
+    },
+    {
+      "source": "CptSewing/SeamPolarization.lean",
+      "namespace": "CptSewing.SeamPolarization",
+      "scope": "finite complementary bosonic boundary jets; no PDE integral or full BFV/CPT gluing",
+      "theorems": [
+        "seamFlux_neumann_neumann",
+        "seamFlux_dirichlet_dirichlet",
+        "seamFlux_neumann_dirichlet",
+        "upperFace_unit_witness",
+        "upperFace_unit_witness_nonzero",
+        "K_preserves_neumann",
+        "K_preserves_dirichlet",
+        "seamFlux_K_covariant"
+      ]
+    }
+  ]
+}
