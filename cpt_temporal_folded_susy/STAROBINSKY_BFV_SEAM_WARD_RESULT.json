@@ -1,13 +1,13 @@
 {
   "schema": "ice-starobinsky-bfv-seam-ward/v1",
-  "started_at_utc": "2026-09-07T00:24:47.596090+00:00",
-  "status": "FAILED",
+  "started_at_utc": "2026-09-07T00:25:32.717074+00:00",
+  "status": "SCOPED_GAUSSIAN_SEAM_HAS_NONZERO_BFV_WARD_DEFECT",
   "question": "Is the declared Gaussian-regulated Starobinsky boundary sewing exactly BFV closed at finite width?",
   "scope": "Supporting quantum boundary-pairing discriminator only, not a finite bulk path integral",
   "non_claim": "No full trajectory source, original relative class, self-adjoint completion, physical CPT or discovery.",
   "reproduction_command": "./ice run starobinsky_bfv_seam_ward",
   "provenance": {
-    "source_commit": "5682720899ffa2b8f7390e4789758e3c4e37d49d",
+    "source_commit": "c2213b335d1c4ff0dbb5ac5bd2f0bf06bb593ee8",
     "inputs": {
       "cpt_temporal_folded_susy/starobinsky_bfv_seam_ward.py": {
         "sha256": "2b10fc919422bb25dbf75fec346fcfc71b38b08f93f107c1fe6fedaad410adbf",
@@ -18,8 +18,8 @@
         "bytes": 9149
       },
       "formal/cpt_sewing/CptSewing/SeamWard.lean": {
-        "sha256": "e87432af89a256faa49b52970351ad5e2c8bc1b7b437130ffe4133c9a55c073b",
-        "bytes": 4605
+        "sha256": "0615f27a37286abbda7445fa905d8591b0688b5bacf5b82a37c730ee11ce085b",
+        "bytes": 4633
       },
       "formal/cpt_sewing/seam-ward-proof-index.json": {
         "sha256": "09c6ee13499de467b570bfef2542c8c406b1e765727bac0c136ccb509de1e8e1",
@@ -278,44 +278,10 @@
         "-DwarningAsError=true",
         "<temporary>/SeamWardAudit.lean"
       ],
-      "exit_code": 1,
+      "exit_code": 0,
       "stderr": "",
-      "payload_sha256": "69955293323c4a9f7cef2d1a3f500e2bf9675f9750a73ac82795cc7a0892c4a1",
+      "payload_sha256": "abae55d0d5c534b556f94158a07c441c134a0488f11b494bcf61648d04ed59f4",
       "messages": [
-        {
-          "caption": "",
-          "data": "failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'",
-          "endPos": {
-            "column": 16,
-            "line": 116
-          },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
-          "isSilent": false,
-          "keepFullRange": false,
-          "kind": "lean.dependsOnNoncomputable._namedError",
-          "pos": {
-            "column": 4,
-            "line": 116
-          },
-          "severity": "error"
-        },
-        {
-          "caption": "",
-          "data": "failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.pi', which is 'noncomputable'",
-          "endPos": {
-            "column": 25,
-            "line": 119
-          },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
-          "isSilent": false,
-          "keepFullRange": false,
-          "kind": "lean.dependsOnNoncomputable._namedError",
-          "pos": {
-            "column": 4,
-            "line": 119
-          },
-          "severity": "error"
-        },
         {
           "caption": "",
           "data": "CptSewing.SeamWard.g3_ext (x y : CptSewing.SeamWard.G3) (h123 : x.c1c2r1 = y.c1c2r1) (h124 : x.c1c2r2 = y.c1c2r2)\n  (h134 : x.c1r1r2 = y.c1r1r2) (h234 : x.c2r1r2 = y.c2r1r2) : x = y",
@@ -323,7 +289,7 @@
             "column": 6,
             "line": 129
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -340,7 +306,7 @@
             "column": 6,
             "line": 130
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -357,7 +323,7 @@
             "column": 6,
             "line": 131
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -374,7 +340,7 @@
             "column": 6,
             "line": 132
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -391,7 +357,7 @@
             "column": 6,
             "line": 133
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -408,7 +374,7 @@
             "column": 6,
             "line": 134
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -425,7 +391,7 @@
             "column": 6,
             "line": 135
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -442,7 +408,7 @@
             "column": 6,
             "line": 136
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -459,7 +425,7 @@
             "column": 6,
             "line": 137
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -476,7 +442,7 @@
             "column": 6,
             "line": 138
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -493,7 +459,7 @@
             "column": 6,
             "line": 139
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -510,7 +476,7 @@
             "column": 6,
             "line": 140
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -527,7 +493,7 @@
             "column": 6,
             "line": 141
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -544,7 +510,7 @@
             "column": 6,
             "line": 142
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -556,8 +522,66 @@
         }
       ]
     },
-    "accepted": false
+    "theorems": {
+      "CptSewing.SeamWard.g3_ext": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.SeamWard.cSum_wedge_kernel_zero": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.SeamWard.r1_minus_r2_wedge_kernel_zero": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.SeamWard.c1_wedge_kernel_nonzero": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.SeamWard.constraintGhost_wedge_kernel": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.SeamWard.differenceRegulator_diagonal_shift": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.SeamWard.potential_witness_difference": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      }
+    },
+    "theorem_count": 7,
+    "accepted": true
   },
-  "failure": "ValueError: symbolic or Lean audit failed; see raw diagnostics",
-  "elapsed_seconds": 4.102208922151476
+  "elapsed_seconds": 3.8321376480162144
 }

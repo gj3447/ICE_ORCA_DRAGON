@@ -171,6 +171,28 @@ def derive() -> dict:
     equal("hard_face_first_derivative", s.diff(interval,x), s.DiracDelta(x-lower)-s.DiracDelta(x-upper))
     equal("hard_face_second_derivative", s.diff(interval,x,2), s.DiracDelta(x-lower,1)-s.DiracDelta(x-upper,1))
 
+    # Canonical delta/delta-prime coefficients at every face of the declared box.
+    # A(x) delta'_b = A(b) delta'_b - A'(b) delta_b. The f' terms cancel.
+    fx=s.Function("f")(x); dx=s.Function("D")(x)
+    equal("canonical_face_delta_coefficient", s.diff(fx*dx,x)-(2*fx*s.diff(dx,x)+s.diff(fx,x)*dx), -fx*s.diff(dx,x))
+    box_faces=[]
+    for copy, aa, pp, nn, orientation in [(1,a1,p1,n1,1),(2,a2,p2,n2,-1)]:
+        for variable, bounds, coefficient in [(aa,(s.Rational(1,2),s.Integer(2)),f(aa)),
+                                               (pp,(s.Integer(-1),s.Integer(2)),b(aa))]:
+            for face_name, location, sign in [("lower",bounds[0],1),("upper",bounds[1],-1)]:
+                delta_prime=(-orientation*sign*coefficient*kernel).subs(variable,location)
+                delta=(-orientation*sign*coefficient*s.diff(kernel,variable)).subs(variable,location)
+                box_faces.append({"copy":copy,"coordinate":str(variable),"face":face_name,
+                                  "location":str(location),"ghost_factor":"c1*g",
+                                  "delta_coefficient":str(delta),"delta_prime_coefficient":str(delta_prime),
+                                  "other_windows":"product of the other five declared coordinate indicators"})
+        for face_name, location, sign in [("lower",s.Rational(1,4),1),("upper",s.Integer(2),-1)]:
+            box_faces.append({"copy":copy,"coordinate":str(nn),"face":face_name,
+                              "location":str(location),"ghost_factor":"-i*rho1*g",
+                              "delta_coefficient":str((sign*kernel).subs(nn,location)),
+                              "delta_prime_coefficient":"0",
+                              "other_windows":"product of the other five declared coordinate indicators"})
+
     c1,c2,r1,r2=({1:1},{2:1},{4:1},{8:1})
     ghost=wedge(add(c2,c1),add(r2,scale(-1,r1)))
     def ghost_equal(name, actual, expected):
@@ -210,6 +232,8 @@ def derive() -> dict:
                   "window_commutator_copy1":str(collar),"copy2_rule":"swap copy indices; subtract for H1-H2",
                   "hard_window_derivatives":["chi'=delta(x-lower)-delta(x-upper)","chi''=delta'(x-lower)-delta'(x-upper)"],
                   "primary_flux":"D_tau*(chi2*d_N1 chi1 + chi1*d_N2 chi2)",
+                  "box_face_ledger":box_faces,
+                  "box_decomposition":"interior chi1*chi2*D_tau*difference times c1*g plus all twelve face distributions; no mixed-normal derivatives or corner delta products",
                   "lapse_lower_face":"N=1/4, positive delta coefficient in derivative of zero extension; not N=0 contact",
                   "lapse_upper_face":"N=2, negative delta coefficient in derivative of zero extension; not infinity",
                   "zero_lapse_contact":"UNRESOLVED: no trajectory kernel or nu->0 identity limit constructed",
