@@ -61,7 +61,7 @@ noncomputable def quotientEquivComplex (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0) :
 @[simp]
 theorem quotientEquivComplex_mk (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0) (v : V) :
     quotientEquivComplex T hT (Submodule.Quotient.mk v) = T v :=
-  LinearMap.quotKerEquivOfSurjective_apply_mk _ _
+  LinearMap.quotKerEquivOfSurjective_apply_mk T _ v
 
 /-- The rank-one form induced by the quotient functional. -/
 noncomputable def quotientForm (T : V →ₗ[ℂ] ℂ)
@@ -83,7 +83,7 @@ theorem quotientForm_add_right (T : V →ₗ[ℂ] ℂ)
 theorem quotientForm_smul_right (T : V →ₗ[ℂ] ℂ)
     (c : ℂ) (q r : StateQuotient T) :
     quotientForm T q (c • r) = c • quotientForm T q r := by
-  simp [quotientForm, smul_eq_mul, mul_assoc, mul_comm, mul_left_comm]
+  simp [quotientForm, smul_eq_mul, mul_left_comm]
 
 /-- The quotient form is conjugate-additive in its left slot. -/
 theorem quotientForm_add_left (T : V →ₗ[ℂ] ℂ)
@@ -96,7 +96,7 @@ theorem quotientForm_smul_left (T : V →ₗ[ℂ] ℂ)
     (c : ℂ) (q r : StateQuotient T) :
     quotientForm T (c • q) r =
       starRingEnd ℂ c • quotientForm T q r := by
-  simp [quotientForm, smul_eq_mul, mul_assoc, mul_comm, mul_left_comm]
+  simp [quotientForm, smul_eq_mul, mul_comm, mul_left_comm]
 
 /-- Its diagonal is the ordinary complex norm square of the induced coordinate. -/
 theorem quotientForm_diag_real (T : V →ₗ[ℂ] ℂ) (q : StateQuotient T) :
@@ -143,7 +143,7 @@ theorem covariance_preserves_kernel (T : V →ₗ[ℂ] ℂ) (K : V → V)
   calc
     T (K x - K y) = T (K x) - T (K y) := by rw [map_sub]
     _ = starRingEnd ℂ (T x) - starRingEnd ℂ (T y) := by rw [hCov, hCov]
-    _ = starRingEnd ℂ (T (x - y)) := by rw [map_sub]
+    _ = starRingEnd ℂ (T (x - y)) := by simp only [map_sub]
     _ = starRingEnd ℂ 0 := by rw [hxy_zero]
     _ = 0 := by simp
 

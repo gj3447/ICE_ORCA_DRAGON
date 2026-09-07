@@ -34,7 +34,6 @@ theorem core_H_stable (H p : V → V) (boundary : V → B) (z : B)
     (commute : Function.Commute H p) :
     Set.MapsTo H (repairedCore H p boundary z) (repairedCore H p boundary z) := by
   intro v hv k m
-  change boundary ((H^[k]) ((p^[m]) (H v))) = z
   rw [← commute.iterate_right m v]
   simpa only [Function.iterate_succ_apply] using hv (k + 1) m
 
