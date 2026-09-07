@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T07:28:55Z",
+  "updated_at_utc": "2026-09-07T08:09:28Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1755,6 +1755,12 @@
         "scope:starobinsky-neumann-cauchy-dual-fixed-slab",
         "evidence:starobinsky-dual-cauchy-result",
         "artifact:starobinsky-dual-cauchy-report",
+        "artifact:starobinsky-bfv-dual-structure-lean-report",
+        "claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM",
+        "claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING",
+        "scope:starobinsky-first-order-strong-observable-and-complementary-bosonic-pairing",
+        "evidence:starobinsky-observable-selection-result",
+        "artifact:starobinsky-observable-selection-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16686,7 +16692,7 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The dual family, its degenerate common-Neumann KG form and noncanonical rank-one positive quotient do not settle a physical carrier/product, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged.",
+      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing. These scoped facts do not settle a physical carrier/product, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged.",
       "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_DUAL_FAMILY_EXISTS_PHYSICAL_CARRIER_PRODUCT_CPT_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
@@ -17216,6 +17222,133 @@
     "artifact_kind": "report",
     "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_DUAL_STRUCTURE_LEAN.md",
     "sha256": "a3b99ac844bd8bc9b57387b5266761c15bcc35da8119bfb86147e46a60ab7d82"
+},
+{
+    "id": "scope:starobinsky-first-order-strong-observable-and-complementary-bosonic-pairing",
+    "type": "scope",
+    "title": "Starobinsky first-order strong observable and complementary bosonic-pairing scope",
+    "summary": "The unscaled flat-density Weyl H and p_N on the repaired Neumann/Dirichlet smooth carriers, smooth N-independent first-order local strong differential operators, and full-real-scalar Cauchy dual families.",
+    "state": "DECLARED_SUPPORTING_FIRST_ORDER_STRONG_AND_COMPLEMENTARY_BOSONIC_SCOPE",
+    "includes": [
+        "Exact similarity-coordinate analysis of the actual Weyl ordering and the stated strong [H,O]=[p_N,O]=0 first-order local class",
+        "Constraint-polynomial action on the declared dual family and its rank-one quotient kernel/form",
+        "Complementary Neumann/Dirichlet Cauchy families with full-R_phi complex-bilinear Green pairing"
+    ],
+    "excludes": [
+        "Higher-order, weak/normalizer, BRST-cohomological, relational or nonlocal observables",
+        "A self-adjoint observable-star realization, positive physical product, K polarization exchange, full BFV/CPT sewing, BV pushforward, bulk source, original cycle, G1 closure or physical/TOE claim"
+    ]
+},
+{
+    "id": "claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM",
+    "title": "The declared first-order local strong commutant does not select a dual seed or rank-one form",
+    "statement": "For the declared unscaled Weyl H, p_N and N-independent first-order local strong class, every commutant is cI+d p_N. Its constraint-polynomial extension acts by P(0,0) on every T_g, so it preserves the selected quotient but cannot distinguish seeds or select rank-one normalization.",
+    "summary": "This is a complete analytic classification only in the stated first-order strong local class. It leaves higher-order, weak, BRST, relational and nonlocal observable constructions open.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_FIRST_ORDER_LOCAL_STRONG_OBSERVABLE_NONSELECTION"
+},
+{
+    "id": "claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING",
+    "title": "Complementary Neumann/Dirichlet dual families have a nondegenerate bosonic pairing",
+    "statement": "The actual Weyl Neumann and Dirichlet Cauchy dual families have a conserved full-R_phi complex-bilinear pairing W_ND=−integral(g h)/(48*pi^2), with nondegenerate complementary pairing and W_NN=W_DD=0. This does not provide a positive physical inner product, K polarization exchange or full BFV/CPT seam.",
+    "summary": "The finite Lean module checks boundary-jet algebra only; Cauchy existence and full-line Green/current/nondegeneracy are analytic derivation inputs.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_COMPLEMENTARY_BOSONIC_PAIRING_WITHOUT_FULL_CPT"
+},
+{
+    "id": "evidence:starobinsky-observable-selection-result",
+    "type": "evidence",
+    "title": "Starobinsky observable-selection and complementary-pairing evidence",
+    "summary": "One clean run checks 30 exact Weyl-coordinate, commutator, seed-action and boundary-current identities plus 16 finite Lean theorems. The analytic derivation supplies strong-class completeness, Cauchy families and full-line pairing/nondegeneracy; the raw result is the complete check ledger.",
+    "state": "VALID_RUN_ANALYTIC_DERIVATION_AND_FINITE_LEAN_CONTROLS",
+    "observed_status": "SCOPED_FIRST_ORDER_OBSERVABLE_NONSELECTION_AND_COMPLEMENTARY_BOSONIC_PAIRING",
+    "check_ids": [
+        "symbolic.checks.actual_Weyl_residual_potential",
+        "symbolic.checks.actual_potential_Killing_derivative",
+        "symbolic.checks.naive_phi_is_not_a_strong_observable",
+        "symbolic.checks.actual_Neumann_Dirichlet_Green_coefficient",
+        "symbolic.checks.full_line_bilinear_current_divergence",
+        "modules[1].theorems.CptSewing.SeamPolarization.upperFace_unit_witness_nonzero"
+    ]
+},
+{
+    "id": "artifact:starobinsky-observable-selection-runner",
+    "type": "artifact",
+    "title": "Starobinsky observable-selection symbolic and Lean runner",
+    "summary": "Clean bounded runner for exact local strong-class coefficient controls and finite seam-jet Lean audits.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "runner",
+    "path": "cpt_temporal_folded_susy/starobinsky_observable_selection.py",
+    "sha256": "544aff58c73588988e73586e53b57b140e85b0a28f22634d655308e9515dbe1e",
+    "introduced_in_commit": "3f18c1d1a391cab9b5746891027848272ed3b29b"
+},
+{
+    "id": "artifact:starobinsky-observable-selection-derivation",
+    "type": "artifact",
+    "title": "Analytic Starobinsky observable-selection derivation",
+    "summary": "Pinned actual-Weyl strong-class classification, seed-lift boundary, full-line complementary bosonic pairing and exclusions.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "analytic_derivation",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SELECTION_DERIVATION.md",
+    "sha256": "9d62342753968c5dfe9c574462755e267b99c9965f464bba8f6f8a11b36af2a0",
+    "introduced_in_commit": "3f18c1d1a391cab9b5746891027848272ed3b29b"
+},
+{
+    "id": "artifact:starobinsky-observable-selection-proof-index",
+    "type": "artifact",
+    "title": "Observable-selection Lean proof index",
+    "summary": "Pinned two-module inventory for abstract quotient obstruction and finite complementary seam jets.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "proof_index",
+    "path": "formal/cpt_sewing/observable-selection-proof-index.json",
+    "sha256": "5cdac94edca3001b656f2ab33e91a448d81fd61a0c39ce3428afc9a28408f6fc",
+    "introduced_in_commit": "3f18c1d1a391cab9b5746891027848272ed3b29b"
+},
+{
+    "id": "artifact:starobinsky-observable-selection-lean",
+    "type": "artifact",
+    "title": "Observable-selection quotient-obstruction Lean module",
+    "summary": "Eight abstract kernel/eigenfunctional and scalar-commutator theorems; no actual differential observable realization.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "lean_source",
+    "path": "formal/cpt_sewing/CptSewing/ObservableSelection.lean",
+    "sha256": "96db673a780b7b5583708886cae7788e69d27b89fa22d0e1aedf7728097d9f69",
+    "introduced_in_commit": "b84a70e2db1fb5b15a96661a7cb84b966b66e6e8"
+},
+{
+    "id": "artifact:starobinsky-seam-polarization-lean",
+    "type": "artifact",
+    "title": "Complementary seam-polarization Lean module",
+    "summary": "Eight finite complex-bilinear Neumann/Dirichlet boundary-jet and K-covariance theorems; no Cauchy/Green/BFV/CPT construction.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "lean_source",
+    "path": "formal/cpt_sewing/CptSewing/SeamPolarization.lean",
+    "sha256": "2922a4c6617986b2d8c289c7b63289de04c8dca923df3fb43896bfa3e38dcc97",
+    "introduced_in_commit": "b84a70e2db1fb5b15a96661a7cb84b966b66e6e8"
+},
+{
+    "id": "artifact:starobinsky-observable-selection-result",
+    "type": "artifact",
+    "title": "Starobinsky observable-selection raw result",
+    "summary": "Raw SSOT for 30 symbolic controls, 16 Lean theorem audits, source/environment pins and scoped nonselection/pairing result.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "result",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SELECTION_RESULT.json",
+    "sha256": "a7215425f605d8ae104ddb2ec43a7a6a2c2ffa08568c426f39d18e892be719d7"
+},
+{
+    "id": "artifact:starobinsky-observable-selection-report",
+    "type": "artifact",
+    "title": "Starobinsky observable-selection report",
+    "summary": "Completed scoped first-order strong nonselection and complementary bosonic-pairing result with physical/BFV/CPT boundaries.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "report",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SELECTION.md",
+    "sha256": "ec0c462ff45b29d625e4097a9d0a61c7f2811c4fe78409386bc2150d30c60614"
 }
   ],
   "edges": [
@@ -37743,7 +37876,25 @@
     {"id":"edge:3983","from":"evidence:starobinsky-bfv-dual-structure-lean-result","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-bfv-dual-structure-lean-report"},
     {"id":"edge:3984","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-dual-structure-lean-result","polarity":"SUPPORTS","note":"Supports the conditional primary-injectivity implication only; the compact-N collar proof remains analytic."},
     {"id":"edge:3985","from":"claim:STAROBINSKY_NEUMANN_CAUCHY_DUAL_FAMILY_SIMULTANEOUSLY_ANNIHILATES_H_AND_PN","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-dual-structure-lean-result","polarity":"SUPPORTS","note":"Supports the conditional Green/on-shell/witness implication only; actual Cauchy, Green and witness inputs remain analytic."},
-    {"id":"edge:3986","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-dual-structure-lean-result","polarity":"SUPPORTS","note":"Supports the abstract quotient and declared covariance implication only; it does not formalize kinematic K or full CPT."}
+    {"id":"edge:3986","from":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-dual-structure-lean-result","polarity":"SUPPORTS","note":"Supports the abstract quotient and declared covariance implication only; it does not formalize kinematic K or full CPT."},
+    {"id":"edge:3987","from":"scope:starobinsky-first-order-strong-observable-and-complementary-bosonic-pairing","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Supporting observable/pairing scope only; no source/cycle promotion."},
+    {"id":"edge:3988","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"ABOUT","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier"},
+    {"id":"edge:3989","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"VALID_WITHIN","to":"scope:starobinsky-first-order-strong-observable-and-complementary-bosonic-pairing"},
+    {"id":"edge:3990","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-observable-selection-result","polarity":"SUPPORTS","note":"analytic completeness is confined to the declared first-order local strong class; Lean checks only abstract quotient consequences."},
+    {"id":"edge:3991","from":"claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING","relation":"ABOUT","to":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms"},
+    {"id":"edge:3992","from":"claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING","relation":"VALID_WITHIN","to":"scope:starobinsky-first-order-strong-observable-and-complementary-bosonic-pairing"},
+    {"id":"edge:3993","from":"claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-observable-selection-result","polarity":"SUPPORTS","note":"finite Lean proves boundary jets only; Cauchy existence and full-line Green/current nondegeneracy remain analytic."},
+    {"id":"edge:3994","from":"evidence:starobinsky-observable-selection-result","relation":"PART_OF","to":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms","note":"One same-model supporting observable/pairing discriminator only."},
+    {"id":"edge:3995","from":"evidence:starobinsky-observable-selection-result","relation":"DEFINED_IN","to":"artifact:starobinsky-observable-selection-runner"},
+    {"id":"edge:3996","from":"evidence:starobinsky-observable-selection-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-observable-selection-derivation","note":"The derivation supplies strong-class completeness and full-line analytic pairing claims."},
+    {"id":"edge:3997","from":"evidence:starobinsky-observable-selection-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-observable-selection-proof-index","note":"Pins the exact 8+8 Lean theorem/module inventory."},
+    {"id":"edge:3998","from":"evidence:starobinsky-observable-selection-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-observable-selection-lean","note":"Abstract quotient obstruction only; no actual observable lift."},
+    {"id":"edge:3999","from":"evidence:starobinsky-observable-selection-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-seam-polarization-lean","note":"Finite seam jets only; no full-line Cauchy/Green/BFV/CPT proof."},
+    {"id":"edge:4000","from":"evidence:starobinsky-observable-selection-result","relation":"RECORDED_IN","to":"artifact:starobinsky-observable-selection-result","note":"Raw result is the sole complete 30-check/16-theorem ledger."},
+    {"id":"edge:4001","from":"evidence:starobinsky-observable-selection-result","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-observable-selection-report"},
+    {"id":"edge:4002","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","note":"The declared strong local algebra is tested as a potential selector and fails to select the previously noncanonical seed/form."},
+    {"id":"edge:4003","from":"claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO","note":"Complementary polarization gives a distinct bilinear pairing; it does not reverse KG degeneracy or construct a physical norm."},
+    {"id":"edge:4004","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"The remaining selection problem requires a broader declared observable/state/product construction; no automatic successor work."}
   ],
   "kg_bridges": [
     {

@@ -1,0 +1,1033 @@
+{
+  "schema": "ice-starobinsky-observable-selection/v1",
+  "status": "SCOPED_FIRST_ORDER_OBSERVABLE_NONSELECTION_AND_COMPLEMENTARY_BOSONIC_PAIRING",
+  "started_at_utc": "2026-09-07T08:06:13.477461+00:00",
+  "question": "Does the actual first-order strong observable algebra select the current dual quotient, and what bosonic seam survives a polarization test?",
+  "scope": "SUPPORTING_METHOD: local first-order strong commutant and complementary bosonic Cauchy pairing",
+  "non_claim": "No full physical observable algebra, selected positive metric, BFV/CPT sewing or G1 original cycle.",
+  "reproduction_command": "./ice run starobinsky_observable_selection",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "modules": [
+    {
+      "source": "CptSewing/ObservableSelection.lean",
+      "scope": "finite conditional kernel/eigenfunctional, commutator and rank-one form algebra; no physical observable construction",
+      "expected_theorem_count": 8,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/ObservableSelectionAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "b6bfe55f9457982c7838c823515018fda7918cf20149cfe590775a9bef01670e",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.exists_nonzero_witness.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (hT : T ≠ 0) : ∃ w, T w ≠ 0",
+            "endPos": {
+              "column": 6,
+              "line": 125
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 125
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.exists_nonzero_witness' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 126
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 126
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.preservesKernel_iff_exists_eigenvalue.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0) (O : Module.End ℂ V) :\n  CptSewing.ObservableSelection.PreservesKernel T O ↔ ∃ eigenvalue, ∀ (v : V), T (O v) = eigenvalue * T v",
+            "endPos": {
+              "column": 6,
+              "line": 127
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 127
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.preservesKernel_iff_exists_eigenvalue' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 128
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 128
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.kernel_failure_of_witness.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (T : V →ₗ[ℂ] ℂ) (O : Module.End ℂ V) {u : V} (hu : T u = 0) (hOu : T (O u) ≠ 0) :\n  ¬CptSewing.ObservableSelection.PreservesKernel T O",
+            "endPos": {
+              "column": 6,
+              "line": 129
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 129
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.kernel_failure_of_witness' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 130
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 130
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.commutator_killed_of_common_eigenfunctional.{u_1} {V : Type u_1} [AddCommGroup V]\n  [Module ℂ V] (T : V →ₗ[ℂ] ℂ) (A B : Module.End ℂ V) (α β : ℂ) (hA : ∀ (v : V), T (A v) = α * T v)\n  (hB : ∀ (v : V), T (B v) = β * T v) (v : V) : T ((A * B - B * A) v) = 0",
+            "endPos": {
+              "column": 6,
+              "line": 131
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 131
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.commutator_killed_of_common_eigenfunctional' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 132
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 132
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.scalar_commutator_forces_functional_zero.{u_1} {V : Type u_1} [AddCommGroup V]\n  [Module ℂ V] (T : V →ₗ[ℂ] ℂ) (A B : Module.End ℂ V) (α β z : ℂ) (hA : ∀ (v : V), T (A v) = α * T v)\n  (hB : ∀ (v : V), T (B v) = β * T v) (hComm : ∀ (v : V), (A * B - B * A) v = z • v) (hz : z ≠ 0) : T = 0",
+            "endPos": {
+              "column": 6,
+              "line": 133
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 133
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.scalar_commutator_forces_functional_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 134
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 134
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.constraint_eigenvalue_eq_zero.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V]\n  (T : V →ₗ[ℂ] ℂ) (hT : T ≠ 0) (p : Module.End ℂ V) (eigenvalue : ℂ) (hp : T ∘ₗ p = 0)\n  (hEigen : ∀ (v : V), T (p v) = eigenvalue * T v) : eigenvalue = 0",
+            "endPos": {
+              "column": 6,
+              "line": 135
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 135
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.constraint_eigenvalue_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 136
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 136
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.rankOneForm_eigen_right.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (O : Module.End ℂ V) (eigenvalue : ℂ) (hEigen : ∀ (v : V), T (O v) = eigenvalue * T v) (u v : V) :\n  CptSewing.ObservableSelection.rankOneForm T u (O v) = eigenvalue * CptSewing.ObservableSelection.rankOneForm T u v",
+            "endPos": {
+              "column": 6,
+              "line": 137
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 137
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.rankOneForm_eigen_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 138
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 138
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.ObservableSelection.rankOneForm_eigen_left.{u_1} {V : Type u_1} [AddCommGroup V] [Module ℂ V] (T : V →ₗ[ℂ] ℂ)\n  (O : Module.End ℂ V) (eigenvalue : ℂ) (hEigen : ∀ (v : V), T (O v) = eigenvalue * T v) (u v : V) :\n  CptSewing.ObservableSelection.rankOneForm T (O u) v =\n    (starRingEnd ℂ) eigenvalue * CptSewing.ObservableSelection.rankOneForm T u v",
+            "endPos": {
+              "column": 6,
+              "line": 139
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 139
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.ObservableSelection.rankOneForm_eigen_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 140
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-y0iv0r3q/ObservableSelectionAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 140
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.ObservableSelection.exists_nonzero_witness": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ObservableSelection.preservesKernel_iff_exists_eigenvalue": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ObservableSelection.kernel_failure_of_witness": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ObservableSelection.commutator_killed_of_common_eigenfunctional": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ObservableSelection.scalar_commutator_forces_functional_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ObservableSelection.constraint_eigenvalue_eq_zero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ObservableSelection.rankOneForm_eigen_right": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.ObservableSelection.rankOneForm_eigen_left": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 8
+    },
+    {
+      "source": "CptSewing/SeamPolarization.lean",
+      "scope": "finite complementary bosonic boundary jets; no PDE integral or full BFV/CPT gluing",
+      "expected_theorem_count": 8,
+      "elaboration": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--json",
+          "-DwarningAsError=true",
+          "<temporary>/SeamPolarizationAudit.lean"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "payload_sha256": "eaf8c5384f64f051399fc2d1373b8f26265aab23fae3cae846137204adc434ce",
+        "messages": [
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.seamFlux_neumann_neumann (k : ℝ) {x y : CptSewing.SeamPolarization.Jet}\n  (hx : CptSewing.SeamPolarization.IsNeumann x) (hy : CptSewing.SeamPolarization.IsNeumann y) :\n  CptSewing.SeamPolarization.seamFlux k x y = 0",
+            "endPos": {
+              "column": 6,
+              "line": 95
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 95
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.seamFlux_neumann_neumann' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 96
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 96
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.seamFlux_dirichlet_dirichlet (k : ℝ) {x y : CptSewing.SeamPolarization.Jet}\n  (hx : CptSewing.SeamPolarization.IsDirichlet x) (hy : CptSewing.SeamPolarization.IsDirichlet y) :\n  CptSewing.SeamPolarization.seamFlux k x y = 0",
+            "endPos": {
+              "column": 6,
+              "line": 97
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 97
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.seamFlux_dirichlet_dirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 98
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 98
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.seamFlux_neumann_dirichlet (k : ℝ) {x y : CptSewing.SeamPolarization.Jet}\n  (hx : CptSewing.SeamPolarization.IsNeumann x) (hy : CptSewing.SeamPolarization.IsDirichlet y) :\n  CptSewing.SeamPolarization.seamFlux k x y = ↑k * x.q * y.p",
+            "endPos": {
+              "column": 6,
+              "line": 99
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 99
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.seamFlux_neumann_dirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 100
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 100
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.upperFace_unit_witness :\n  CptSewing.SeamPolarization.seamFlux CptSewing.SeamPolarization.upperFaceK { q := 1, p := 0 } { q := 0, p := 1 } =\n    ↑(-1 / (48 * Real.pi ^ 2))",
+            "endPos": {
+              "column": 6,
+              "line": 101
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 101
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.upperFace_unit_witness' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 102
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 102
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.upperFace_unit_witness_nonzero :\n  CptSewing.SeamPolarization.seamFlux CptSewing.SeamPolarization.upperFaceK { q := 1, p := 0 } { q := 0, p := 1 } ≠ 0",
+            "endPos": {
+              "column": 6,
+              "line": 103
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 103
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.upperFace_unit_witness_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 104
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 104
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.K_preserves_neumann (x : CptSewing.SeamPolarization.Jet)\n  (hx : CptSewing.SeamPolarization.IsNeumann x) : CptSewing.SeamPolarization.IsNeumann (CptSewing.SeamPolarization.K x)",
+            "endPos": {
+              "column": 6,
+              "line": 105
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 105
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.K_preserves_neumann' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 106
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 106
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.K_preserves_dirichlet (x : CptSewing.SeamPolarization.Jet)\n  (hx : CptSewing.SeamPolarization.IsDirichlet x) :\n  CptSewing.SeamPolarization.IsDirichlet (CptSewing.SeamPolarization.K x)",
+            "endPos": {
+              "column": 6,
+              "line": 107
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 107
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.K_preserves_dirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 108
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 108
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "CptSewing.SeamPolarization.seamFlux_K_covariant (k : ℝ) (x y : CptSewing.SeamPolarization.Jet) :\n  CptSewing.SeamPolarization.seamFlux k (CptSewing.SeamPolarization.K x) (CptSewing.SeamPolarization.K y) =\n    (starRingEnd ℂ) (CptSewing.SeamPolarization.seamFlux k x y)",
+            "endPos": {
+              "column": 6,
+              "line": 109
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 109
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'CptSewing.SeamPolarization.seamFlux_K_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 110
+            },
+            "fileName": "/var/tmp/orca/ice-observable-selection-nv2xkqzw/SeamPolarizationAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 110
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "accepted": true,
+      "theorems": {
+        "CptSewing.SeamPolarization.seamFlux_neumann_neumann": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.SeamPolarization.seamFlux_dirichlet_dirichlet": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.SeamPolarization.seamFlux_neumann_dirichlet": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.SeamPolarization.upperFace_unit_witness": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.SeamPolarization.upperFace_unit_witness_nonzero": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.SeamPolarization.K_preserves_neumann": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.SeamPolarization.K_preserves_dirichlet": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        },
+        "CptSewing.SeamPolarization.seamFlux_K_covariant": {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "accepted": true
+        }
+      },
+      "theorem_count": 8
+    }
+  ],
+  "provenance": {
+    "source_commit": "b84a70e2db1fb5b15a96661a7cb84b966b66e6e8",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_observable_selection.py": {
+        "sha256": "544aff58c73588988e73586e53b57b140e85b0a28f22634d655308e9515dbe1e",
+        "bytes": 14023
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SELECTION_DERIVATION.md": {
+        "sha256": "9d62342753968c5dfe9c574462755e267b99c9965f464bba8f6f8a11b36af2a0",
+        "bytes": 14646
+      },
+      "formal/cpt_sewing/observable-selection-proof-index.json": {
+        "sha256": "5cdac94edca3001b656f2ab33e91a448d81fd61a0c39ce3428afc9a28408f6fc",
+        "bytes": 1218
+      },
+      "formal/cpt_sewing/CptSewing/ObservableSelection.lean": {
+        "sha256": "96db673a780b7b5583708886cae7788e69d27b89fa22d0e1aedf7728097d9f69",
+        "bytes": 4968
+      },
+      "formal/cpt_sewing/CptSewing/SeamPolarization.lean": {
+        "sha256": "2922a4c6617986b2d8c289c7b63289de04c8dca923df3fb43896bfa3e38dcc97",
+        "bytes": 3477
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_DERIVATION.md": {
+        "sha256": "4c5ff22a482d2bbcebad04e7de2f30a612777cb38136386a330189487550249c",
+        "bytes": 9385
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_DUAL_CAUCHY_RESULT.json": {
+        "sha256": "9cc9d9533d105de6bd2be58e93a789581846d0d67d4efc80166825936af84f2d",
+        "bytes": 14172
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md": {
+        "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6",
+        "bytes": 8392
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ]
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "actual_radial_second_order_coefficient",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_radial_first_order_coefficient",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_angular_second_order_coefficient",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "similarity_not_constraint_rescaling",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_Weyl_residual_potential",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_angular_exponent",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_potential_r_squared_coefficient",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_Weyl_barrier_coefficient",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "principal_rr_Killing_equation",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "principal_rtheta_Killing_equation",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "principal_thetatheta_Killing_equation",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "translation_one_wave_commutator",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "translation_two_wave_commutator",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "boost_wave_commutator",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "multiplication_first_order_remainder",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "primary_mixed_derivative_remainder",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_potential_Killing_derivative",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "finite_open_interval_polynomial_coefficient_0",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "finite_open_interval_polynomial_coefficient_8",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "finite_open_interval_polynomial_coefficient_12",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "finite_open_interval_polynomial_coefficient_15",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "radial_polynomial_has_only_declared_powers",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "powers": [
+          15,
+          12,
+          8,
+          0
+        ]
+      },
+      {
+        "id": "translation_basis_Wronskian",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "boost_potential_nonzero_witness",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "naive_phi_is_not_a_strong_observable",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "naive_scalar_momentum_is_not_a_strong_observable",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_primary_commutes_H",
+        "group": "actual_strong_commutant",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "declared_scalar_star_compatibility",
+        "group": "rank_one_and_bosonic_seam",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "actual_Neumann_Dirichlet_Green_coefficient",
+        "group": "rank_one_and_bosonic_seam",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "full_line_bilinear_current_divergence",
+        "group": "rank_one_and_bosonic_seam",
+        "passed": true,
+        "residual": "0"
+      }
+    ],
+    "analytic_proof": "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SELECTION_DERIVATION.md",
+    "operator_convention": "unscaled Starobinsky Weyl H; flat density; hbar=1; fixed finite box",
+    "classification": "All smooth first-order local O with [H,O]=[p_N,O]=0 are c I+d p_N",
+    "scope": "Analytic completeness in the stated local strong class; not all physical observables",
+    "selected_dual_action": "T_g P(H,p_N)=P(0,0) T_g: kernel and star compatibility pass, seed/normalization remain unselected",
+    "seed_QP_boundary": "Cauchy seed-label Q,P are not established test-space/BFV observables; a lift would fail the fixed bump rank-one kernel",
+    "bosonic_seam": "Actual complementary Neumann/Dirichlet families: W_ND= -integral_R(g h)/(48*pi^2); nondegenerate bilinear pairing; W_NN=W_DD=0",
+    "remaining": "Higher-order/weak/nonlocal observable realization; oriented ghost/CPT exchange; actual BFV kernel, residual BV/mQME/pushforward and original joint cycle"
+  },
+  "theorem_count": 16,
+  "elapsed_seconds": 6.00739132007584
+}
