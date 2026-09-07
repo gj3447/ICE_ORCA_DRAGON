@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T06:15:32Z",
+  "updated_at_utc": "2026-09-07T06:38:30Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1743,6 +1743,11 @@
         "scope:starobinsky-ward-domain-all-ghost-smooth-robin-ansatz",
         "evidence:starobinsky-ward-domain-result",
         "artifact:starobinsky-ward-domain-report",
+        "concept:starobinsky-test-carrier-versus-physical-state-carrier",
+        "claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL",
+        "scope:starobinsky-repaired-minimal-compact-n-bfv-complex",
+        "evidence:starobinsky-bfv-state-criterion-analytic-audit",
+        "artifact:starobinsky-bfv-state-criterion-audit",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16674,8 +16679,8 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth a=2 pairing is resolved, and the same-space all-ghost smooth Robin/Dirichlet ansatz is now shown not invariant under the declared BFV H and p_N. These are local diagnostics only: complex/physical products, a closed graded domain, a quantum CPT lift and joint regulator-removal orders remain open; the finite-width contradiction is unchanged.",
-      "state": "OPEN_PARTIAL_A2_REAL_TEST_AND_LOCAL_ALL_GHOST_DOMAIN_ANSATZ_DIAGNOSTICS_PHYSICAL_STATES_OPEN",
+      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; and its repaired minimal compact-N coordinate-ghost test complex is algebraically nilpotent but has trivial degree-zero cohomology. These local diagnostics do not settle a dual/rigging or physical state carrier, a quantum CPT lift, or joint regulator removal; the finite-width contradiction is unchanged.",
+      "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_MINIMAL_COMPACT_N_H0_TRIVIAL_PHYSICAL_CARRIER_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
         "The declared homogeneous Starobinsky Weyl operator, graded kernel and flat-density convention; compare the same model and pairing throughout",
@@ -16932,6 +16937,57 @@
     "artifact_kind": "report",
     "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN.md",
     "sha256": "97d7c7282d5ff5ce7de944b266d40f729111961d85ed4fa72aa9465b7ea82b99"
+},
+{
+    "id": "concept:starobinsky-test-carrier-versus-physical-state-carrier",
+    "type": "concept",
+    "title": "BFV test carrier versus a physical-state carrier",
+    "summary": "An algebraically invariant dense smooth test complex and a nontrivial physical BRST/constraint state space are separate objects. The former can have trivial degree-zero cohomology while its algebraic dual contains a primary-constraint functional; neither fact constructs a rigging map, physical product or CPT sewing.",
+    "state": "SCOPED_TEST_VERSUS_PHYSICAL_CARRIER_DISTINCTION"
+},
+{
+    "id": "scope:starobinsky-repaired-minimal-compact-n-bfv-complex",
+    "type": "scope",
+    "title": "Repaired minimal compact-N Starobinsky BFV test-complex scope",
+    "summary": "The repaired smooth space Phi with both N-face collars removed, minimal coordinate ghosts Lambda(c,rho) in degrees 0 through 2, and Omega=cH+rho p_N as an algebraic differential.",
+    "state": "DECLARED_SUPPORTING_MINIMAL_COMPACT_N_TEST_COMPLEX_SCOPE",
+    "includes": [
+        "The D_{r,infinity} smooth invariant-set ansatz and H,p_N commutator on its declared local Weyl chart",
+        "The degree-zero cohomology calculation using independent c,rho components and compact-N collar support",
+        "A primary-only algebraic-dual functional T_g, explicitly distinguished from a full constrained or physical state"
+    ],
+    "excludes": [
+        "Negative-degree antighost/nonminimal polarizations, other ghost-degree cohomology, a closed/graph-core realization, a rigging map or group average",
+        "A positive physical inner product, quantum CPT lift, BFV/BV gluing kernel, bulk source, original relative cycle, G1 closure or physical/TOE claim"
+    ]
+},
+{
+    "id": "claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL",
+    "title": "The repaired minimal compact-N BFV test complex is nilpotent but has trivial degree-zero cohomology",
+    "statement": "On the declared repaired Phi tensor Lambda(c,rho), Omega=cH+rho p_N is algebraically nilpotent, but H^0=0: Omega u=0 in degree zero forces p_Nu=0, and a smooth N-constant test function vanishing on an N-face collar is zero. This is not a no-go for dual/rigging states, nonminimal complexes, other lapse treatments or physical CPT sewing.",
+    "summary": "Supported by an analytic carrier distinction and direct compact-N support argument. A primary-only dual functional exists but is not generally annihilated by H, so it does not supply a full physical state.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_ANALYTIC_MINIMAL_COMPACT_N_NILPOTENCY_WITH_TRIVIAL_H0"
+},
+{
+    "id": "evidence:starobinsky-bfv-state-criterion-analytic-audit",
+    "type": "evidence",
+    "title": "Starobinsky BFV state-criterion analytic audit",
+    "summary": "Analytic audit of the repaired minimal complex, compact-N degree-zero argument and primary-only dual contrast. It reuses prior conventions without a new runner or check ledger.",
+    "state": "ANALYTIC_SCOPED_CARRIER_AND_DEGREE_ZERO_AUDIT",
+    "observed_status": "ANALYTIC_MINIMAL_COMPACT_N_COMPLEX_NILPOTENT_H0_TRIVIAL"
+},
+{
+    "id": "artifact:starobinsky-bfv-state-criterion-audit",
+    "type": "artifact",
+    "title": "Starobinsky BFV state-criterion audit memo",
+    "summary": "Scoped analytic memo separating the repaired test carrier, degree-zero cohomology, a primary-only dual functional and still-missing physical/CPT sewing data.",
+    "state": "TRACKED_SCOPED_ANALYTIC_MEMO",
+    "artifact_kind": "analytic_memo",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md",
+    "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6"
 }
   ],
   "edges": [
@@ -37415,7 +37471,19 @@
     {"id":"edge:3939","from":"evidence:starobinsky-ward-domain-result","relation":"DERIVED_FROM","to":"evidence:starobinsky-ward-face-limit-result","note":"Reuses the same local Weyl/box convention and preceding flux context; this is not independent physical evidence."},
     {"id":"edge:3940","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Narrows the still-open state question: local flux cancellation does not by itself supply a closed graded test/domain or physical state; no automatic successor run."},
     {"id":"edge:3941","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-ward-domain-report"},
-    {"id":"edge:3942","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","note":"The same-space domain test follows the paired a=2 flux result; it neither reverses that limit nor selects a closed domain."}
+    {"id":"edge:3942","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","note":"The same-space domain test follows the paired a=2 flux result; it neither reverses that limit nor selects a closed domain."},
+    {"id":"edge:3943","from":"concept:starobinsky-test-carrier-versus-physical-state-carrier","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"A supporting state-space distinction; it does not supply a quantum CPT source."},
+    {"id":"edge:3944","from":"concept:starobinsky-test-carrier-versus-physical-state-carrier","relation":"CONTRASTS_WITH","to":"concept:starobinsky-local-ward-cancellation-versus-invariant-bfv-common-test-space","note":"Common-domain invariance is distinct from the existence of physical-state representatives or a physical carrier."},
+    {"id":"edge:3945","from":"scope:starobinsky-repaired-minimal-compact-n-bfv-complex","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Local supporting test-complex scope only; no source/cycle promotion."},
+    {"id":"edge:3946","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"ABOUT","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier"},
+    {"id":"edge:3947","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"VALID_WITHIN","to":"scope:starobinsky-repaired-minimal-compact-n-bfv-complex"},
+    {"id":"edge:3948","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-bfv-state-criterion-analytic-audit","polarity":"SUPPORTS","note":"Analytic support is restricted to this compact-N minimal coordinate complex; it is not a full physical-state no-go."},
+    {"id":"edge:3949","from":"evidence:starobinsky-bfv-state-criterion-analytic-audit","relation":"PART_OF","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier"},
+    {"id":"edge:3950","from":"evidence:starobinsky-bfv-state-criterion-analytic-audit","relation":"RECORDED_IN","to":"artifact:starobinsky-bfv-state-criterion-audit","note":"This analytic memo is the source of the argument; no new raw runner ledger exists."},
+    {"id":"edge:3951","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","note":"The repaired test-set analysis follows the prior same-space ansatz failure without repairing a physical state or closed domain."},
+    {"id":"edge:3952","from":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Trivial H0 makes the remaining carrier/dual/physical-product distinction explicit; no automatic successor work is created."},
+    {"id":"edge:3953","from":"concept:starobinsky-test-carrier-versus-physical-state-carrier","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"RAQ test-space, algebraic-dual and physical-product distinction is method context only; it does not construct a rigging map here."},
+    {"id":"edge:3954","from":"concept:starobinsky-test-carrier-versus-physical-state-carrier","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"BV-BFV state, boundary pairing and pushforward distinction is method context only; it does not provide this cutoff's quantum sewing."}
   ],
   "kg_bridges": [
     {

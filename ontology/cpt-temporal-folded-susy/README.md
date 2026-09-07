@@ -3,7 +3,7 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-09-07T06:15:32Z`; 1535 nodes, 3938 edges). Run and analytic-evidence details live in the
+`2026-09-07T06:38:30Z`; 1540 nodes, 3950 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
 verifies stored artifact and policy hashes; use the current validator output for counts.
@@ -24,7 +24,7 @@ bound. A normalized smooth witness gives -1/(48*pi^2); interior, common Dirichle
 Robin pairs give zero. The analytic distribution proof is separate from the 18 symbolic checks and
 five finite Lean boundary-jet proofs. Other faces, physical products and full BFV sources remain open.
 
-The follow-up [Ward-domain result](../../cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN.md) separates that local flux cancellation from a stronger all-ghost same-smooth-space BFV-domain ansatz. Its complex Robin, primary and full Weyl-jet controls show that $H$ fails to preserve this ansatz, while $p_N$ preservation requires $\partial_N r=0$. This is an inference/domain diagnostic only: it does not rule out self-adjoint Robin extensions, differently graded domains, a quantum CPT lift, or a physical state.
+The follow-up [Ward-domain result](../../cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN.md) separates that local flux cancellation from a stronger all-ghost same-smooth-space BFV-domain ansatz. Its complex Robin, primary and full Weyl-jet controls show that $H$ fails to preserve this ansatz, while $p_N$ preservation requires $\partial_N r=0$. This is an inference/domain diagnostic only: it does not rule out self-adjoint Robin extensions, differently graded domains, a quantum CPT lift, or a physical state. The [state-criterion audit](../../cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md) further shows that the repaired minimal compact-$N$ coordinate-ghost test complex is algebraically nilpotent but has trivial degree-zero cohomology; a primary-only dual functional is not a full constrained state. A dual/rigging or physical carrier and a compatible CPT pairing remain unknown.
 
 Read the [existing finite-width report](../../cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md)
 first. Its nonzero defect/Gaussian quotient alone does not answer the limit questions. The new
