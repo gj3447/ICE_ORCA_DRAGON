@@ -252,3 +252,8 @@ kernel은 서로 다른 객체이므로 입력을 소급해 동일시하지 않�
   주된 실패 위험은 `inference`; 관련 부호는 손으로 대입했다. 새 runner는 실행하지 않았다.
 
 이 문서는 연구 설계와 직관 연결이다. Canonical evidence edge와 repro manifest는 변경하지 않는다.
+
+2026-09-07 [후속 BFV/Ward source 제안](ICE_BFV_CPT_SEAM_WARD_SOURCE_PROPOSAL_2026-09-07.md)은
+ghost/lapse까지의 고전 경계 반사 후보, positive-lapse source의 CPT covariance,
+독립 lapse 적분과 접합 순서, 실제 cutoff/regulator의 Ward defect를 구체화한다.
+다음 출력은 하나의 finite sewn source의 경계 defect이며, original class는 여전히 미해결이다.
