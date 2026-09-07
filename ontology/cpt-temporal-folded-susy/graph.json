@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T08:09:28Z",
+  "updated_at_utc": "2026-09-07T08:32:28Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1761,6 +1761,11 @@
         "scope:starobinsky-first-order-strong-observable-and-complementary-bosonic-pairing",
         "evidence:starobinsky-observable-selection-result",
         "artifact:starobinsky-observable-selection-report",
+        "scope:starobinsky-observable-sewing-source-review",
+        "claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO",
+        "claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED",
+        "evidence:starobinsky-observable-sewing-source-review",
+        "artifact:starobinsky-observable-sewing-source-review",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16692,7 +16697,7 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing. These scoped facts do not settle a physical carrier/product, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged.",
+      "summary": "A declared real compact-smooth a=2 pairing is resolved; the same-space all-ghost smooth Robin/Dirichlet ansatz is not invariant; its repaired minimal compact-N coordinate-ghost test complex has trivial degree-zero cohomology; and a separate Neumann Cauchy construction supplies nonzero simultaneous dual functionals. The declared first-order local strong class is nonselecting, while complementary Neumann/Dirichlet families have a bosonic bilinear pairing transported through declared full-line compact-seed lifts. A scalar-phase domain comparison shows the compact-N carrier does not supply finite gauge-domain or extension-independent spectral-zero data, and label positivity/exchange leaves a smooth weight unselected. These scoped facts do not settle a physical carrier/product, identified BFV boundary data, quantum CPT lift or joint regulator removal; the finite-width contradiction is unchanged.",
       "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_DUAL_FAMILY_EXISTS_PHYSICAL_CARRIER_PRODUCT_CPT_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
@@ -17227,16 +17232,16 @@
     "id": "scope:starobinsky-first-order-strong-observable-and-complementary-bosonic-pairing",
     "type": "scope",
     "title": "Starobinsky first-order strong observable and complementary bosonic-pairing scope",
-    "summary": "The unscaled flat-density Weyl H and p_N on the repaired Neumann/Dirichlet smooth carriers, smooth N-independent first-order local strong differential operators, and full-real-scalar Cauchy dual families.",
+    "summary": "The unscaled flat-density Weyl H and p_N on the repaired Neumann/Dirichlet smooth carriers, smooth N-independent first-order local strong differential operators, and compact-seed full-real-scalar Cauchy dual lifts whose images are injective in the declared finite box.",
     "state": "DECLARED_SUPPORTING_FIRST_ORDER_STRONG_AND_COMPLEMENTARY_BOSONIC_SCOPE",
     "includes": [
         "Exact similarity-coordinate analysis of the actual Weyl ordering and the stated strong [H,O]=[p_N,O]=0 first-order local class",
         "Constraint-polynomial action on the declared dual family and its rank-one quotient kernel/form",
-        "Complementary Neumann/Dirichlet Cauchy families with full-R_phi complex-bilinear Green pairing"
+        "Complementary Neumann/Dirichlet Cauchy families with a full-R_phi complex-bilinear Green pairing transported through declared compact-seed full-line lifts"
     ],
     "excludes": [
         "Higher-order, weak/normalizer, BRST-cohomological, relational or nonlocal observables",
-        "A self-adjoint observable-star realization, positive physical product, K polarization exchange, full BFV/CPT sewing, BV pushforward, bulk source, original cycle, G1 closure or physical/TOE claim"
+        "An intrinsic pairing on all finite-box duals, a self-adjoint observable-star realization, positive physical product, K polarization exchange, identified BFV polarization, full BFV/CPT sewing, BV pushforward, bulk source, original cycle, G1 closure or physical/TOE claim"
     ]
 },
 {
@@ -17349,6 +17354,72 @@
     "artifact_kind": "report",
     "path": "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SELECTION.md",
     "sha256": "ec0c462ff45b29d625e4097a9d0a61c7f2811c4fe78409386bc2150d30c60614"
+},
+{
+    "id": "scope:starobinsky-observable-sewing-source-review",
+    "type": "scope",
+    "title": "Starobinsky observable/sewing source-review scope",
+    "summary": "The declared finite compact-N collar carriers, scalar-phase lapse extensions used as a comparison family, and compact-seed full-line Neumann/Dirichlet Cauchy lifts with their label-space pairing.",
+    "state": "DECLARED_SUPPORTING_ANALYTIC_DOMAIN_AND_LABEL_SELECTION_SCOPE",
+    "includes": [
+      "A finite-interval scalar phase family for p_N as a domain/inference discriminator, not an identified physical gauge realization",
+      "Positive Cauchy-label forms and antilinear N/D exchange maps defined from declared full-line compact-seed lifts"
+    ],
+    "excludes": [
+      "A classification of all self-adjoint coupled constraints, a group-averaging construction, a physical inner product, an identified BFV boundary polarization, a quantum CPT lift, source cycle, G1 closure or physical/TOE claim"
+    ]
+},
+{
+    "id": "claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO",
+    "title": "Compact-N collar dual annihilation does not fix an extension-independent spectral zero",
+    "statement": "For p_N=-i*d/dN on I=[1/4,2], compact-N collar functions are neither a graph core nor a nonzero full-unitary-group-invariant space for any scalar-phase self-adjoint extension P_theta. Their integral dual annihilates the restricted differential operator, while P_theta has a spectral zero only at theta=0 modulo 2*pi.",
+    "summary": "For the compared scalar-phase self-adjoint extensions of p_N on the finite lapse interval, the collar carrier is neither a graph core nor invariant under the full unitary group; its differential dual annihilation therefore cannot be read as an extension-independent spectral-zero or group-average statement.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_ANALYTIC_DOMAIN_INFERENCE_LIMIT"
+},
+{
+    "id": "claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED",
+    "title": "Positive Cauchy-label exchange leaves an arbitrary smooth weight unselected",
+    "statement": "Every real smooth strictly positive w on an open neighborhood of [-1,2] gives Theta_w(s_g)=t_(w*conj(g)), Theta_w(t_h)=s_(conj(h)/w), with Theta_w^2=I and W(Theta_w*x,Theta_w*y)=-conj(W(x,y)); the induced compact-seed Neumann form is F_w(g,h)=integral(w*conj(g)*h)/(48*pi^2). These label-level conditions leave w unselected and do not construct physical CPT or a physical inner product.",
+    "summary": "On the declared compact-seed Neumann/Dirichlet Cauchy label spaces, positivity, antilinear exchange involution and W covariance admit every smooth strictly positive weight w; these conditions do not select a Cauchy-label form.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_ANALYTIC_NONSELECTION"
+},
+{
+    "id": "evidence:starobinsky-observable-sewing-source-review",
+    "type": "evidence",
+    "title": "Starobinsky observable/sewing analytic source-review evidence",
+    "summary": "Analytic comparison of finite-interval lapse domains and Cauchy-label weights against primary RAQ, self-adjoint-extension, hyperbolic-Cauchy and BV-BFV sources. It is not a runner or Lean result.",
+    "state": "ANALYTIC_SOURCE_REVIEW",
+    "observed_status": "ANALYTIC_SCOPED_DOMAIN_AND_LABEL_SELECTION_REVIEW",
+    "source_anchors": [
+      "STAROBINSKY_OBSERVABLE_SEWING_SOURCE_REVIEW.md §3, equations (1)-(2), graph-core and unitary-group proofs",
+      "STAROBINSKY_OBSERVABLE_SEWING_SOURCE_REVIEW.md §4, equations (3)-(5), weighted Cauchy-label exchange proof"
+    ]
+},
+{
+    "id": "artifact:starobinsky-observable-sewing-source-review",
+    "type": "artifact",
+    "title": "Starobinsky observable/sewing source-review report",
+    "summary": "Pinned analytic review of compact-N domain limits, Cauchy-label weight nonselection and the missing BFV boundary-data correspondence.",
+    "state": "TRACKED_ANALYTIC_REVIEW",
+    "artifact_kind": "report",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_OBSERVABLE_SEWING_SOURCE_REVIEW.md",
+    "sha256": "2699facacfd7ef54c469084338745d0d187ebc3426ec616cea2bd2f9dfacd434"
+},
+{
+    "id": "source:bonneau-faraut-valent-2001-self-adjoint-momentum",
+    "type": "source",
+    "title": "Self-adjoint extensions of operators and the teaching of quantum mechanics",
+    "summary": "Primary finite-interval self-adjoint-extension context; it does not select a lapse realization or physical gauge group in this model.",
+    "state": "PRIMARY",
+    "citation": "G. Bonneau, J. Faraut and G. Valent, Am. J. Phys. 69 (2001) 322–331",
+    "uri": "https://arxiv.org/abs/quant-ph/0103153",
+    "version": "arXiv:quant-ph/0103153"
 }
   ],
   "edges": [
@@ -37894,7 +37965,23 @@
     {"id":"edge:4001","from":"evidence:starobinsky-observable-selection-result","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-observable-selection-report"},
     {"id":"edge:4002","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_DECLARED_RANK_ONE_DUAL_QUOTIENT_IS_POSITIVE_K_COVARIANT_AND_NONCANONICAL","note":"The declared strong local algebra is tested as a potential selector and fails to select the previously noncanonical seed/form."},
     {"id":"edge:4003","from":"claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_COMMON_NEUMANN_CAUCHY_DUAL_FAMILY_KG_FORM_IS_IDENTICALLY_ZERO","note":"Complementary polarization gives a distinct bilinear pairing; it does not reverse KG degeneracy or construct a physical norm."},
-    {"id":"edge:4004","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"The remaining selection problem requires a broader declared observable/state/product construction; no automatic successor work."}
+    {"id":"edge:4004","from":"claim:STAROBINSKY_FIRST_ORDER_LOCAL_STRONG_COMMUTANT_DOES_NOT_SELECT_DUAL_SEED_OR_RANK_ONE_FORM","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"The remaining selection problem requires a broader declared observable/state/product construction; no automatic successor work."},
+    {"id":"edge:4005","from":"scope:starobinsky-observable-sewing-source-review","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"Supporting analytic domain/label-selection review only; no source/cycle promotion."},
+    {"id":"edge:4006","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"ABOUT","to":"concept:starobinsky-test-carrier-versus-physical-state-carrier"},
+    {"id":"edge:4007","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"VALID_WITHIN","to":"scope:starobinsky-observable-sewing-source-review"},
+    {"id":"edge:4008","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-observable-sewing-source-review","polarity":"SUPPORTS"},
+    {"id":"edge:4009","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"ABOUT","to":"concept:starobinsky-neumann-cauchy-dual-carriers-versus-kg-and-rank-one-forms"},
+    {"id":"edge:4010","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"VALID_WITHIN","to":"scope:starobinsky-observable-sewing-source-review"},
+    {"id":"edge:4011","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-observable-sewing-source-review","polarity":"SUPPORTS"},
+    {"id":"edge:4012","from":"evidence:starobinsky-observable-sewing-source-review","relation":"RECORDED_IN","to":"artifact:starobinsky-observable-sewing-source-review","note":"The report records the analytic proofs and primary-source audit; there is no new execution ledger or Lean result."},
+    {"id":"edge:4013","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_REPAIRED_MINIMAL_COMPACT_N_BFV_COMPLEX_IS_NILPOTENT_BUT_H0_TRIVIAL","note":"The analytic domain comparison leaves the repaired test-complex nilpotency/H0 result unchanged while blocking its spectral or finite-gauge-group promotion."},
+    {"id":"edge:4014","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_COMPLEMENTARY_NEUMANN_DIRICHLET_DUAL_FAMILIES_HAVE_NONDEGENERATE_BOSONIC_PAIRING","note":"The declared full-line compact-seed pairing remains nondegenerate, but positivity and exchange do not select a form or identify a BFV polarization."},
+    {"id":"edge:4015","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"A finite gauge-domain and physical-carrier construction remains required; no automatic successor work."},
+    {"id":"edge:4016","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"A declared BFV boundary polarization and graded pairing are still required; no automatic successor work."},
+    {"id":"edge:4017","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"CITES","to":"source:bonneau-faraut-valent-2001-self-adjoint-momentum","note":"Finite-interval scalar-phase extension method context only; it neither selects this model's lapse domain nor supplies group averaging."},
+    {"id":"edge:4018","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"CITES","to":"source:baer-ginoux-pfaeffle-2007-wave-equations","note":"Global compact-seed Cauchy-lift and propagation context only; it does not identify a BFV polarization."},
+    {"id":"edge:4019","from":"claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Boundary polarization and graded gluing method context only; it does not turn this label-space example into BFV data."},
+    {"id":"edge:4020","from":"claim:STAROBINSKY_COMPACT_N_COLLAR_DUAL_ANNIHILATION_DOES_NOT_FIX_EXTENSION_INDEPENDENT_SPECTRAL_ZERO","relation":"CITES","to":"source:giulini-marolf-1999-generality","note":"RAQ common-domain and observable-algebra method context only; it does not construct a rigging map here."}
   ],
   "kg_bridges": [
     {
