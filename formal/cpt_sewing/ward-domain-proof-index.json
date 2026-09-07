@@ -1,0 +1,12 @@
+{
+  "schema": "ice-lean-proof-index/v1",
+  "source": "CptSewing/WardDomain.lean",
+  "namespace": "CptSewing.WardDomain",
+  "theorems": [
+    "sesquiFlux_robin_formula",
+    "sesquiFlux_real_robin",
+    "scalarH0_dirichlet_quadratic",
+    "robinResidual_cubic_zerojet",
+    "robinResidual_cubic_zerojet_nonzero"
+  ]
+}
